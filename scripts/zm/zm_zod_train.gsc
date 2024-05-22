@@ -42,7 +42,7 @@ class class_df2b89fb {
         self.var_65323906 = 0;
         self.var_597ffbe8 = 0;
         self.var_c2e30cf8 = [];
-        self.var_dfffc7fc = [];
+        self.m_a_mdl_doors = [];
         self.var_5d231abf = undefined;
         self.var_aced8be7 = undefined;
         self.var_27e5d923 = [];
@@ -516,16 +516,16 @@ class class_df2b89fb {
     // Checksum 0x870caa11, Offset: 0x6738
     // Size: 0x252
     function function_9211290c() {
-        foreach (e_door in self.var_dfffc7fc) {
+        foreach (e_door in self.m_a_mdl_doors) {
             v_pos = function_93ea71d6(e_door);
             e_door unlink();
             e_door moveto(v_pos, 0.3);
             e_door.e_clip unlink();
             e_door.e_clip moveto(e_door.e_clip.var_b620e1b1.origin, 0.3);
         }
-        self.var_dfffc7fc[0] waittill(#"movedone");
+        self.m_a_mdl_doors[0] waittill(#"movedone");
         util::wait_network_frame();
-        foreach (e_door in self.var_dfffc7fc) {
+        foreach (e_door in self.m_a_mdl_doors) {
             v_pos = function_93ea71d6(e_door);
             e_door.origin = v_pos;
             e_door.angles = e_door.script_origin.angles;
@@ -540,16 +540,16 @@ class class_df2b89fb {
     // Size: 0x27c
     function close_doors() {
         self.var_36e768e4 function_285f0f0b();
-        foreach (e_door in self.var_dfffc7fc) {
+        foreach (e_door in self.m_a_mdl_doors) {
             v_pos = function_93ea71d6(e_door);
             e_door unlink();
             e_door moveto(v_pos, 0.3);
             e_door.e_clip unlink();
             e_door.e_clip moveto(e_door.e_clip.var_b620e1b1.origin, 0.3);
         }
-        self.var_dfffc7fc[0] waittill(#"movedone");
+        self.m_a_mdl_doors[0] waittill(#"movedone");
         util::wait_network_frame();
-        foreach (e_door in self.var_dfffc7fc) {
+        foreach (e_door in self.m_a_mdl_doors) {
             v_pos = function_93ea71d6(e_door);
             e_door.origin = v_pos;
             e_door.angles = e_door.script_origin.angles;
@@ -588,7 +588,7 @@ class class_df2b89fb {
         self.var_36e768e4 function_59722edc(str_side);
         var_7631d55c = (0, 0, 300);
         var_cfdb047c = [];
-        foreach (e_door in self.var_dfffc7fc) {
+        foreach (e_door in self.m_a_mdl_doors) {
             if (str_side == "right" && (str_side == "left" && (!isdefined(str_side) || e_door.script_string == "train_rear_door") || e_door.script_string == "train_front_door")) {
                 v_pos = function_f573c4ae(e_door);
                 e_door unlink();
@@ -960,8 +960,8 @@ class class_df2b89fb {
     // Checksum 0x3a33b794, Offset: 0x49c0
     // Size: 0x1aa
     function function_6f6ab7a4() {
-        for (i = 0; i < self.var_dfffc7fc.size; i++) {
-            e_door = self.var_dfffc7fc[i];
+        for (i = 0; i < self.m_a_mdl_doors.size; i++) {
+            e_door = self.m_a_mdl_doors[i];
             e_door hide();
             if (e_door.script_string == "train_front_door") {
                 e_door.e_clip = getent("train_front_clip", "script_string");
@@ -1026,12 +1026,12 @@ class class_df2b89fb {
                         e_ent.script_origin.angles = self.var_36e768e4.angles;
                         e_ent.script_origin linkto(self.var_36e768e4);
                     }
-                    if (!isdefined(self.var_dfffc7fc)) {
-                        self.var_dfffc7fc = [];
-                    } else if (!isarray(self.var_dfffc7fc)) {
-                        self.var_dfffc7fc = array(self.var_dfffc7fc);
+                    if (!isdefined(self.m_a_mdl_doors)) {
+                        self.m_a_mdl_doors = [];
+                    } else if (!isarray(self.m_a_mdl_doors)) {
+                        self.m_a_mdl_doors = array(self.m_a_mdl_doors);
                     }
-                    self.var_dfffc7fc[self.var_dfffc7fc.size] = e_ent;
+                    self.m_a_mdl_doors[self.m_a_mdl_doors.size] = e_ent;
                 }
                 e_ent linkto(self.var_36e768e4);
                 continue;
@@ -1464,7 +1464,7 @@ class class_df2b89fb {
             /#
                 line(var_bba032ca, var_bba032ca - var_4dc5a359 * forward + var_4dc5a359 * right, (1, 0, 0), 1, 1, duration);
             #/
-            foreach (e_door in self.var_dfffc7fc) {
+            foreach (e_door in self.m_a_mdl_doors) {
                 var_d4280494 = e_door.origin;
                 open = function_39fb130f(e_door);
                 str_state = "closed";

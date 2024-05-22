@@ -12,6 +12,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("critter");
+#using_animtree("a_water_buffalo_run_b");
+
 #namespace namespace_bb5d050c;
 
 // Namespace namespace_bb5d050c

@@ -14,11 +14,7 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export namespace_64276cf9::function_58f5574a
-
-// Can't decompile export namespace_64276cf9::sensory_overload
-
-// Can't decompile export namespace_64276cf9::function_e01b8059
+#using_animtree("generic");
 
 #namespace namespace_64276cf9;
 
@@ -212,6 +208,133 @@ function function_a110c616(slot, weapon) {
 }
 
 // Namespace namespace_64276cf9
+// Params 2, eflags: 0x1 linked
+// Checksum 0xad4d11e5, Offset: 0x11b0
+// Size: 0x2e2
+function function_58f5574a(target, var_9bc2efcb) {
+    if (!isdefined(var_9bc2efcb)) {
+        var_9bc2efcb = 1;
+    }
+    if (!isdefined(target)) {
+        return;
+    }
+    if (self.archetype != "human") {
+        return;
+    }
+    validtargets = [];
+    if (isarray(target)) {
+        foreach (guy in target) {
+            if (!function_602b28e9(guy)) {
+                continue;
+            }
+            validtargets[validtargets.size] = guy;
+        }
+    } else {
+        if (!function_602b28e9(target)) {
+            return;
+        }
+        validtargets[validtargets.size] = target;
+    }
+    if (isdefined(var_9bc2efcb) && var_9bc2efcb) {
+        type = self cybercom::function_5e3d3aa();
+        self orientmode("face default");
+        self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate", "normal", generic%root, 1, 0.3);
+        self waittillmatch(#"hash_39fa7e38", "fire");
+    }
+    weapon = getweapon("gadget_sensory_overload");
+    foreach (guy in validtargets) {
+        if (!cybercom::function_7a7d1608(guy, weapon)) {
+            continue;
+        }
+        guy thread sensory_overload(self);
+        wait(0.05);
+    }
+}
+
+// Namespace namespace_64276cf9
+// Params 2, eflags: 0x1 linked
+// Checksum 0x2fce7356, Offset: 0x14a0
+// Size: 0x7b8
+function sensory_overload(attacker, var_7d4fd98c) {
+    self endon(#"death");
+    weapon = getweapon("gadget_sensory_overload");
+    self notify(#"hash_f8c5dd60", weapon, attacker);
+    if (isdefined(attacker.cybercom) && isdefined(attacker.cybercom.var_bf39536d)) {
+        loops = attacker.cybercom.var_bf39536d;
+    } else {
+        loops = 1;
+    }
+    wait(randomfloatrange(0, 0.75));
+    if (!attacker cybercom::function_7a7d1608(self, weapon)) {
+        return;
+    }
+    if (self cybercom::function_421746e0()) {
+        self kill(self.origin, isdefined(attacker) ? attacker : undefined, undefined, weapon);
+        return;
+    }
+    self orientmode("face default");
+    self.is_disabled = 1;
+    self.ignoreall = 1;
+    if (isdefined(var_7d4fd98c)) {
+        if (var_7d4fd98c == "cybercom_smokescreen") {
+            self.var_d90f9ddb = 1;
+        }
+    }
+    if (isplayer(attacker) && attacker function_1a9006bd("cybercom_sensoryoverload") == 2) {
+        self playsound("gdt_sensory_feedback_start");
+        self playloopsound("gdt_sensory_feedback_lp_upg", 0.5);
+        self clientfield::set("sensory_overload", 2);
+    } else {
+        self playsound("gdt_sensory_feedback_start");
+        self playloopsound("gdt_sensory_feedback_lp", 0.5);
+        self clientfield::set("sensory_overload", 1);
+    }
+    self notify(#"bhtn_action_notify", "reactSensory");
+    if (self.archetype == "warlord") {
+        self dodamage(2, self.origin, isdefined(attacker) ? attacker : undefined, undefined, "none", "MOD_UNKNOWN", 0, weapon, -1, 1);
+        self waittillmatch(#"bhtn_action_terminate", "specialpain");
+        self clientfield::set("sensory_overload", 0);
+    } else if (self.archetype == "human_riotshield") {
+        while (loops) {
+            self dodamage(2, self.origin, isdefined(attacker) ? attacker : undefined, undefined, "none", "MOD_UNKNOWN", 0, weapon, -1, 1);
+            self waittillmatch(#"bhtn_action_terminate", "specialpain");
+            loops--;
+        }
+        self clientfield::set("sensory_overload", 0);
+    } else {
+        /#
+            assert(self.archetype == "scr_sensory_overload_loops");
+        #/
+        base = "base_rifle";
+        if (isdefined(self.voiceprefix) && getsubstr(self.voiceprefix, 7) == "f") {
+            base = "fem_rifle";
+        }
+        type = self cybercom::function_5e3d3aa();
+        variant = attacker cybercom::function_e06423b6(base + "_" + type);
+        self animscripted("intro_anim", self.origin, self.angles, "ai_" + base + "_" + type + "_exposed_sens_overload_react_intro" + variant, "normal", generic%root, 1, 0.3);
+        self thread cybercom::function_cf64f12c("damage_pain", "intro_anim", 1, attacker, weapon);
+        self thread cybercom::function_cf64f12c("notify_melee_damage", "intro_anim", 1, attacker, weapon);
+        self waittillmatch(#"hash_7fba22d3", "end");
+        function_58831b5a(loops, attacker, weapon, variant, base, type);
+        if (isalive(self) && !self isragdoll()) {
+            self clientfield::set("sensory_overload", 0);
+            self animscripted("restart_anim", self.origin, self.angles, "ai_" + base + "_" + type + "_exposed_sens_overload_react_outro" + variant, "normal", generic%root, 1, 0.3);
+            self thread cybercom::function_cf64f12c("damage_pain", "restart_anim", 1, attacker, weapon);
+            self thread cybercom::function_cf64f12c("notify_melee_damage", "restart_anim", 1, attacker, weapon);
+            self waittillmatch(#"hash_82518b16", "end");
+        }
+    }
+    self stoploopsound(0.75);
+    self.is_disabled = undefined;
+    self.ignoreall = 0;
+    if (isdefined(var_7d4fd98c)) {
+        if (var_7d4fd98c == "cybercom_smokescreen") {
+            self.var_d90f9ddb = 0;
+        }
+    }
+}
+
+// Namespace namespace_64276cf9
 // Params 6, eflags: 0x1 linked
 // Checksum 0xbe413c76, Offset: 0x1c60
 // Size: 0x8e
@@ -222,6 +345,19 @@ function function_58831b5a(loops, attacker, weapon, variant, base, type) {
         self function_e01b8059(attacker, weapon, variant, base, type);
         loops--;
     }
+}
+
+// Namespace namespace_64276cf9
+// Params 5, eflags: 0x1 linked
+// Checksum 0xf79030d3, Offset: 0x1cf8
+// Size: 0x15a
+function function_e01b8059(attacker, weapon, variant, base, type) {
+    self endon(#"death");
+    self animscripted("sens_loop_anim", self.origin, self.angles, "ai_" + base + "_" + type + "_exposed_sens_overload_react_loop" + variant, "normal", generic%body, 1, 0.2);
+    self thread cybercom::function_cf64f12c("damage_pain", "sens_loop_anim", 1, attacker, weapon);
+    self thread cybercom::function_cf64f12c("breakout_overload_loop", "sens_loop_anim", 0, attacker, weapon);
+    self thread cybercom::function_cf64f12c("notify_melee_damage", "sens_loop_anim", 1, attacker, weapon);
+    self waittillmatch(#"hash_3b87dc07", "end");
 }
 
 // Namespace namespace_64276cf9

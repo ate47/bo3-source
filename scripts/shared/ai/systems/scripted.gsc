@@ -1,3 +1,5 @@
+#using_animtree("generic");
+
 #namespace scripted;
 
 // Namespace scripted

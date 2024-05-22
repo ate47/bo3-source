@@ -9,6 +9,8 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("mp_vehicles");
+
 #namespace helicopter;
 
 // Namespace helicopter

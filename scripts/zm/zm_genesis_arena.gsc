@@ -54,6 +54,8 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("zm_genesis");
+
 #namespace namespace_f153ce01;
 
 // Namespace namespace_f153ce01

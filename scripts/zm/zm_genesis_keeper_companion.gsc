@@ -27,6 +27,8 @@
 #using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_bf6feb71;
 
 // Namespace namespace_bf6feb71

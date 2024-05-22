@@ -17,7 +17,8 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export scene::_play_instance
+#using_animtree("all_player");
+#using_animtree("generic");
 
 #namespace scene;
 
@@ -3850,6 +3851,54 @@ function play(arg1, arg2, arg3, b_test_run, str_state, str_mode) {
     for (i = 0; i < s_tracker.n_scene_count; i++) {
         s_tracker waittill(#"scene_done");
     }
+}
+
+// Namespace scene
+// Params 6, eflags: 0x1 linked
+// Checksum 0x3269b728, Offset: 0x13128
+// Size: 0x2ac
+function _play_instance(s_tracker, str_scenedef, a_ents, b_test_run, str_state, str_mode) {
+    if (!isdefined(b_test_run)) {
+        b_test_run = 0;
+    }
+    /#
+        if (array().size && !isinarray(array(), str_scenedef)) {
+            return;
+        }
+    #/
+    if (!isdefined(str_scenedef)) {
+        str_scenedef = self.scriptbundlename;
+    }
+    if (self.scriptbundlename === str_scenedef) {
+        if (!(isdefined(self.script_play_multiple) && self.script_play_multiple)) {
+            if (isdefined(self.scene_played) && self.scene_played && !b_test_run) {
+                waittillframeend();
+                while (is_playing(str_scenedef)) {
+                    wait(0.05);
+                }
+                s_tracker notify(#"scene_done");
+                return;
+            }
+        }
+        self.scene_played = 1;
+    }
+    o_scene = _init_instance(str_scenedef, a_ents, b_test_run);
+    if (isdefined(o_scene)) {
+        if ((!isdefined(str_mode) || str_mode == "") && [[ o_scene ]]->function_76654644()) {
+            skip_scene(o_scene._s.name, 0, 0, 1);
+        }
+        thread [[ o_scene ]]->play(str_state, a_ents, b_test_run, str_mode);
+    }
+    self waittillmatch(#"scene_done", str_scenedef);
+    if (isdefined(self)) {
+        if (isdefined(get_scenedef(self.scriptbundlename).looping) && isdefined(self.scriptbundlename) && get_scenedef(self.scriptbundlename).looping) {
+            self.scene_played = 0;
+        }
+        if (isdefined(self.script_flag_set)) {
+            level flag::set(self.script_flag_set);
+        }
+    }
+    s_tracker notify(#"scene_done");
 }
 
 // Namespace scene

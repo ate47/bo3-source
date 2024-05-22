@@ -15,6 +15,8 @@
 #using scripts/shared/math_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace parasite;
 
 // Namespace parasite

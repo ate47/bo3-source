@@ -14,6 +14,8 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("zm_genesis");
+
 #namespace namespace_175db697;
 
 // Namespace namespace_175db697

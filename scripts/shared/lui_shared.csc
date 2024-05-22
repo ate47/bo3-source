@@ -6,6 +6,8 @@
 #using scripts/shared/_character_customization;
 #using scripts/codescripts/struct;
 
+#using_animtree("all_player");
+
 #namespace lui;
 
 // Namespace lui

@@ -32,10 +32,6 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export namespace_63b4601c::function_7c486b8c
-
-// Can't decompile export namespace_63b4601c::function_1095f52e
-
 #namespace namespace_63b4601c;
 
 // Namespace namespace_63b4601c
@@ -392,6 +388,27 @@ function function_8a63fd6b(e_trigger, str_objective, var_ae801398, str_ender, va
     if (isdefined(var_ca0e9b65)) {
         var_ca0e9b65 gameobjects::enable_object();
     }
+}
+
+// Namespace namespace_63b4601c
+// Params 0, eflags: 0x0
+// Checksum 0x56df57a1, Offset: 0x2448
+// Size: 0x36
+function function_7c486b8c() {
+    self endon(#"death");
+    self waittillmatch(#"hash_d501c77c");
+    self.var_d501c77c = 1;
+    self.var_2d1c9600 = undefined;
+}
+
+// Namespace namespace_63b4601c
+// Params 0, eflags: 0x0
+// Checksum 0xf7cd391, Offset: 0x2488
+// Size: 0x2c
+function function_1095f52e() {
+    self endon(#"death");
+    self waittillmatch(#"hash_7bbfb522");
+    self.var_2d1c9600 = 1;
 }
 
 // Namespace namespace_63b4601c

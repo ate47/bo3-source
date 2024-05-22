@@ -25,6 +25,8 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_4c73eafb;
 
 // Namespace namespace_4c73eafb

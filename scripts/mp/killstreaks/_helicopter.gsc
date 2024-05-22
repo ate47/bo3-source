@@ -24,9 +24,7 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/challenges_shared;
 
-// Can't decompile export helicopter::heli_leave
-
-// Can't decompile export helicopter::heli_fly
+#using_animtree("mp_vehicles");
 
 #namespace helicopter;
 
@@ -1840,6 +1838,132 @@ function clear_client_flags() {
     self clientfield::set("heli_warn_fired", 0);
     self clientfield::set("heli_warn_targeted", 0);
     self clientfield::set("heli_warn_locked", 0);
+}
+
+// Namespace helicopter
+// Params 0, eflags: 0x1 linked
+// Checksum 0xedd27a21, Offset: 0x8348
+// Size: 0x2bc
+function heli_leave() {
+    self notify(#"hash_df1f87c9");
+    self notify(#"leaving");
+    hardpointtype = self.hardpointtype;
+    self.leaving = 1;
+    if (!(isdefined(self.var_7f031ea3) && self.var_7f031ea3)) {
+        self killstreaks::play_pilot_dialog_on_owner("timeout", hardpointtype);
+        self killstreaks::play_taacom_dialog_response_on_owner("timeoutConfirmed", hardpointtype);
+    }
+    leavenode = getvalidrandomleavenode(self.origin);
+    heli_reset();
+    self clearlookatent();
+    exitangles = vectortoangles(leavenode.origin - self.origin);
+    self setgoalyaw(exitangles[1]);
+    wait(1.5);
+    if (!isdefined(self)) {
+        return;
+    }
+    self setspeed(-76, 65);
+    /#
+        self util::debug_slow_heli_speed();
+    #/
+    self set_goal_pos(self.origin + (leavenode.origin - self.origin) / 2 + (0, 0, 1000), 0);
+    self waittill(#"near_goal");
+    if (isdefined(self)) {
+        self set_goal_pos(leavenode.origin, 1);
+        self waittillmatch(#"goal");
+        if (isdefined(self)) {
+            self stoploopsound(1);
+            self util::death_notify_wrapper();
+            if (isdefined(self.alarm_snd_ent)) {
+                self.alarm_snd_ent stoploopsound();
+                self.alarm_snd_ent delete();
+                self.alarm_snd_ent = undefined;
+            }
+            /#
+                assert(isdefined(self.destroyfunc));
+            #/
+            self [[ self.destroyfunc ]]();
+        }
+    }
+}
+
+// Namespace helicopter
+// Params 3, eflags: 0x1 linked
+// Checksum 0x12905098, Offset: 0x8610
+// Size: 0x51c
+function heli_fly(currentnode, startwait, hardpointtype) {
+    self endon(#"death");
+    self endon(#"leaving");
+    self notify(#"flying");
+    self endon(#"flying");
+    self endon(#"abandoned");
+    self.reached_dest = 0;
+    heli_reset();
+    pos = self.origin;
+    wait(startwait);
+    while (isdefined(currentnode.target)) {
+        nextnode = getent(currentnode.target, "targetname");
+        /#
+            assert(isdefined(nextnode), "evt_helicopter_spin_start");
+        #/
+        pos = nextnode.origin + (0, 0, 30);
+        if (isdefined(currentnode.script_airspeed) && isdefined(currentnode.script_accel)) {
+            heli_speed = currentnode.script_airspeed;
+            heli_accel = currentnode.script_accel;
+        } else {
+            heli_speed = 30 + randomint(20);
+            heli_accel = 10 + randomint(5);
+        }
+        if (isdefined(self.pathspeedscale)) {
+            heli_speed *= self.pathspeedscale;
+            heli_accel *= self.pathspeedscale;
+        }
+        if (!isdefined(nextnode.target)) {
+            stop = 1;
+        } else {
+            stop = 0;
+        }
+        airsupport::debug_line(currentnode.origin, nextnode.origin, (1, 0.5, 0.5), -56);
+        if (self.currentstate == "heavy smoke" || self.currentstate == "light smoke") {
+            self setspeed(heli_speed, heli_accel);
+            self set_goal_pos(pos, stop);
+            self waittill(#"near_goal");
+            self notify(#"hash_df5908ac");
+        } else {
+            if (isdefined(nextnode.script_delay) && !isdefined(self.donotstop)) {
+                stop = 1;
+            }
+            self setspeed(heli_speed, heli_accel);
+            self set_goal_pos(pos, stop);
+            if (!isdefined(nextnode.script_delay) || isdefined(self.donotstop)) {
+                self waittill(#"near_goal");
+                self notify(#"hash_df5908ac");
+            } else {
+                self setgoalyaw(nextnode.angles[1]);
+                self waittillmatch(#"goal");
+                heli_wait(nextnode.script_delay);
+            }
+        }
+        for (index = 0; index < level.heli_loop_paths.size; index++) {
+            if (level.heli_loop_paths[index].origin == nextnode.origin) {
+                self.loopcount++;
+            }
+        }
+        if (self.loopcount >= level.heli_loopmax) {
+            self thread heli_leave();
+            return;
+        }
+        currentnode = nextnode;
+    }
+    self setgoalyaw(currentnode.angles[1]);
+    self.reached_dest = 1;
+    self notify(#"hash_9b1f1e2d");
+    if (isdefined(self.waittime) && self.waittime > 0) {
+        heli_wait(self.waittime);
+    }
+    if (isdefined(self)) {
+        self thread heli_evasive(hardpointtype);
+    }
 }
 
 // Namespace helicopter

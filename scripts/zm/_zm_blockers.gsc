@@ -21,8 +21,6 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export zm_blockers::door_solid_thread_anim
-
 #namespace zm_blockers;
 
 // Namespace zm_blockers
@@ -843,6 +841,30 @@ function physics_launch_door(door_trig) {
 // Size: 0xf0
 function door_solid_thread() {
     self util::waittill_either("rotatedone", "movedone");
+    self.door_moving = undefined;
+    while (true) {
+        players = getplayers();
+        player_touching = 0;
+        for (i = 0; i < players.size; i++) {
+            if (players[i] istouching(self)) {
+                player_touching = 1;
+                break;
+            }
+        }
+        if (!player_touching) {
+            self solid();
+            return;
+        }
+        wait(1);
+    }
+}
+
+// Namespace zm_blockers
+// Params 0, eflags: 0x1 linked
+// Checksum 0x7fc7e268, Offset: 0x3878
+// Size: 0xd8
+function door_solid_thread_anim() {
+    self waittillmatch(#"door_anim", "end");
     self.door_moving = undefined;
     while (true) {
         players = getplayers();

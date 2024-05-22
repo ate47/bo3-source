@@ -12,6 +12,8 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("critter");
+
 #namespace namespace_5e6c5d1f;
 
 // Namespace namespace_5e6c5d1f

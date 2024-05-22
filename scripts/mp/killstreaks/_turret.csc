@@ -4,6 +4,8 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("mp_autoturret");
+
 #namespace autoturret;
 
 // Namespace autoturret

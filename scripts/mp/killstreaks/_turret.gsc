@@ -26,6 +26,8 @@
 #using scripts/mp/_util;
 #using scripts/codescripts/struct;
 
+#using_animtree("mp_autoturret");
+
 #namespace turret;
 
 // Namespace turret

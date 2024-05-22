@@ -11,6 +11,8 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace vehicle_ai;
 
 // Namespace vehicle_ai

@@ -7,6 +7,8 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("bouncing_betty");
+
 #namespace bouncingbetty;
 
 // Namespace bouncingbetty

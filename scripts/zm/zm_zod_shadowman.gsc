@@ -31,6 +31,8 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_331b1e91;
 
 // Namespace namespace_331b1e91

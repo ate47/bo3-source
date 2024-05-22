@@ -1,3 +1,5 @@
+#using_animtree("generic");
+
 #namespace archetype_secondary_animations;
 
 // Namespace archetype_secondary_animations

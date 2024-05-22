@@ -19,6 +19,8 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace quadtank;
 
 // Namespace quadtank

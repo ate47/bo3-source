@@ -20,9 +20,7 @@
 #using scripts/shared/math_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export namespace_63d98895::function_e4f42bf7
-
-// Can't decompile export namespace_63d98895::function_9eb4d79d
+#using_animtree("generic");
 
 #namespace namespace_63d98895;
 
@@ -317,6 +315,19 @@ function function_311d046a(upgraded, secondary, attacker, weapon) {
 }
 
 // Namespace namespace_63d98895
+// Params 3, eflags: 0x1 linked
+// Checksum 0x641f9c54, Offset: 0x16b0
+// Size: 0xbe
+function function_e4f42bf7(attacker, weapon, var_a360d6f5) {
+    self endon(#"hash_147d6ee");
+    self endon(#"death");
+    self thread function_c1b2cc5a(var_a360d6f5);
+    self dodamage(2, self.origin, isdefined(attacker) ? attacker : undefined, undefined, "none", "MOD_UNKNOWN", 0, weapon, -1, 1);
+    self waittillmatch(#"bhtn_action_terminate", "specialpain");
+    self notify(#"hash_a738dd0");
+}
+
+// Namespace namespace_63d98895
 // Params 1, eflags: 0x1 linked
 // Checksum 0x46ca84d9, Offset: 0x1778
 // Size: 0x36
@@ -511,6 +522,53 @@ function function_d09562d9(target, time, tag) {
         self moveto(self.origin + v_to_target, 0.05);
         self waittill(#"movedone");
         dest = target gettagorigin(tag);
+    }
+}
+
+// Namespace namespace_63d98895
+// Params 3, eflags: 0x1 linked
+// Checksum 0x24c73710, Offset: 0x2428
+// Size: 0x2d2
+function function_9eb4d79d(target, var_9bc2efcb, upgraded) {
+    if (!isdefined(var_9bc2efcb)) {
+        var_9bc2efcb = 1;
+    }
+    if (!isdefined(upgraded)) {
+        upgraded = 0;
+    }
+    if (!isdefined(target)) {
+        return;
+    }
+    if (self.archetype != "human") {
+        return;
+    }
+    validtargets = [];
+    if (isarray(target)) {
+        foreach (guy in target) {
+            if (!function_602b28e9(guy)) {
+                continue;
+            }
+            validtargets[validtargets.size] = guy;
+        }
+    } else {
+        if (!function_602b28e9(target)) {
+            return;
+        }
+        validtargets[validtargets.size] = target;
+    }
+    if (isdefined(var_9bc2efcb) && var_9bc2efcb) {
+        type = self cybercom::function_5e3d3aa();
+        self orientmode("face default");
+        self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
+        self waittillmatch(#"hash_39fa7e38", "fire");
+    }
+    weapon = getweapon("gadget_surge");
+    foreach (guy in validtargets) {
+        if (!cybercom::function_7a7d1608(guy, weapon)) {
+            continue;
+        }
+        guy thread function_311d046a(self, upgraded);
+        wait(0.05);
     }
 }
 

@@ -8,6 +8,8 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace vehicle;
 
 // Namespace vehicle

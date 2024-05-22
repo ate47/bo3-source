@@ -5,8 +5,6 @@
 #using scripts/shared/audio_shared;
 #using scripts/shared/array_shared;
 
-// Can't decompile export callback::finishcustomtraversallistener
-
 #namespace callback;
 
 // Namespace callback
@@ -637,6 +635,22 @@ function codecallback_vehicledamage(einflictor, eattacker, idamage, idflags, sme
 // Size: 0xb0
 function codecallback_vehicleradiusdamage(einflictor, eattacker, idamage, finnerdamage, fouterdamage, idflags, smeansofdeath, weapon, vpoint, fradius, fconeanglecos, vconedir, timeoffset) {
     [[ level.callbackvehicleradiusdamage ]](einflictor, eattacker, idamage, finnerdamage, fouterdamage, idflags, smeansofdeath, weapon, vpoint, fradius, fconeanglecos, vconedir, timeoffset);
+}
+
+// Namespace callback
+// Params 0, eflags: 0x1 linked
+// Checksum 0xac8c0a8d, Offset: 0x1a08
+// Size: 0x8a
+function finishcustomtraversallistener() {
+    self endon(#"death");
+    self waittillmatch(#"custom_traversal_anim_finished", "end");
+    self finishtraversal();
+    self unlink();
+    self.usegoalanimweight = 0;
+    self.blockingpain = 0;
+    self.customtraverseendnode = undefined;
+    self.customtraversestartnode = undefined;
+    self notify(#"custom_traversal_cleanup");
 }
 
 // Namespace callback

@@ -14,6 +14,8 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_de48615;
 
 // Namespace namespace_de48615

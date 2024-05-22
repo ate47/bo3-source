@@ -17,8 +17,6 @@
 #using scripts/shared/array_shared;
 #using scripts/shared/ai_shared;
 
-// Can't decompile export util::function_ba7c6f5d
-
 #namespace util;
 
 // Namespace util
@@ -1367,6 +1365,17 @@ function function_c748c2d6(n_zone, var_a6cc0cd9) {
         }
         printtoprightln("leave_trigger_" + string::function_8e23acba(gettime(), 6, "leave_trigger_"), (1, 1, 1));
     #/
+}
+
+// Namespace util
+// Params 1, eflags: 0x1 linked
+// Checksum 0xe0ce45fb, Offset: 0x43a0
+// Size: 0x48
+function function_ba7c6f5d(n_zone) {
+    self endon(#"disconnect");
+    level endon(#"hash_d8eaed3d");
+    self waittillmatch(#"streamer", n_zone);
+    self notify("streamer" + n_zone);
 }
 
 // Namespace util

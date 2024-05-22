@@ -5,6 +5,8 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("mp_trophy_system");
+
 #namespace trophy_system;
 
 // Namespace trophy_system

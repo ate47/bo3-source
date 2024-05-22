@@ -2,6 +2,8 @@
 #using scripts/zm/_zm_utility;
 #using scripts/codescripts/struct;
 
+#using_animtree("zm_ally");
+
 #namespace zm_clone;
 
 // Namespace zm_clone

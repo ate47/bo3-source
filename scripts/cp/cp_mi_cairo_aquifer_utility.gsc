@@ -43,15 +43,7 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export namespace_786319bb::function_e34692a9
-
-// Can't decompile export namespace_786319bb::function_e1fcf95
-
-// Can't decompile export namespace_786319bb::function_6a1f4649
-
-// Can't decompile export namespace_786319bb::function_2b89d912
-
-// Can't decompile export namespace_786319bb::function_af376a0e
+#using_animtree("generic");
 
 #namespace namespace_786319bb;
 
@@ -1684,6 +1676,147 @@ function function_5739554b(var_e8e62a06, time) {
 }
 
 // Namespace namespace_786319bb
+// Params 3, eflags: 0x0
+// Checksum 0x85c467ec, Offset: 0x94e8
+// Size: 0x5fc
+function function_e34692a9(zone, teleport, var_acaabf08) {
+    if (!isdefined(var_acaabf08)) {
+        var_acaabf08 = 1;
+    }
+    self endon(#"disconnect");
+    self.var_8fedf36c endon(#"hash_c38e4003");
+    var_74df67ae = -1;
+    var_f561e15e = 120;
+    if (isdefined(zone)) {
+        var_74df67ae = zone;
+        var_dda84f1a = getentarray("landing_zone_" + zone, "script_noteworthy");
+        foreach (landing_zone in var_dda84f1a) {
+            if (landing_zone.targetname === "landing_zone_player_" + self.player_num) {
+                var_72ae61b3 = landing_zone;
+                break;
+            }
+        }
+    } else {
+        var_72ae61b3 = self function_e3fab6a1();
+    }
+    if (isdefined(var_72ae61b3)) {
+        if (isdefined(teleport) && teleport) {
+            self.var_8fedf36c.origin = var_72ae61b3.origin + (0, 0, var_f561e15e);
+            self.var_8fedf36c.angles = var_72ae61b3.angles;
+            self.var_8fedf36c dontinterpolate();
+            wait(0.05);
+        } else {
+            if (isdefined(self.var_719c336f) && self.var_719c336f > 0.05) {
+                self.var_8fedf36c ghost();
+                wait(self.var_719c336f);
+                self.var_719c336f = undefined;
+                self.var_8fedf36c show();
+            }
+            anim_rate = 1;
+            if (isdefined(self.var_23a61090)) {
+                anim_rate = self.var_23a61090;
+            }
+            self.var_8fedf36c clientfield::set("vtol_engines_state", 1);
+            self.var_8fedf36c thread animation::play("v_aqu_vtol_land_enter", var_72ae61b3.origin, var_72ae61b3.angles, anim_rate, 0, 0.01, 0);
+            self.var_8fedf36c waittillmatch(#"hash_5d9bca70", "wash_fx");
+            self.var_8fedf36c clientfield::set("vtol_enable_wash_fx", 1);
+            self.var_8fedf36c waittillmatch(#"hash_5d9bca70", "open_canopy");
+            self.var_8fedf36c clientfield::set("vtol_canopy_state", 1);
+            self.var_8fedf36c waittillmatch(#"hash_5d9bca70", "end");
+            self.var_8fedf36c stopanimscripted(0);
+            self.var_8fedf36c clientfield::set("vtol_engines_state", 0);
+            self.var_8fedf36c setvehgoalpos(var_72ae61b3.origin + (0, 0, 120), 1);
+            self.var_8fedf36c settargetyaw(var_72ae61b3.angles[1]);
+            self.var_8fedf36c setspeed(25, 25, 25);
+            self.var_8fedf36c setyawspeed(59, 360, 360);
+            self.var_8fedf36c sethoverparams(28, 24, 24);
+        }
+    }
+    if (!var_acaabf08 && self isplayinganimscripted()) {
+        while (self isplayinganimscripted()) {
+            wait(0.05);
+        }
+    } else {
+        self thread function_e267ae99();
+        while (!isalive(self) || !self isonground() || self laststand::player_is_in_laststand() || distance2dsquared(self.origin, self.var_8fedf36c gettagorigin("tag_driver_camera")) > 62500) {
+            wait(0.05);
+        }
+    }
+    self thread function_22a0413d("enter", var_acaabf08, var_74df67ae);
+}
+
+// Namespace namespace_786319bb
+// Params 2, eflags: 0x0
+// Checksum 0x6ccbc994, Offset: 0x9af0
+// Size: 0x684
+function function_e1fcf95(play_anim, var_74df67ae) {
+    self endon(#"disconnect");
+    self endon(#"death");
+    self.var_8fedf36c endon(#"hash_c38e4003");
+    if (self function_5c971cb7()) {
+        return;
+    }
+    self.var_8fedf36c.state = "enter";
+    self.var_8fedf36c clientfield::set("vtol_set_active_landing_zone_num", 0);
+    self enableinvulnerability();
+    self.var_8fedf36c endon(#"death");
+    if (isdefined(play_anim) && play_anim) {
+        self.var_8fedf36c vehicle::god_on();
+        self.var_8fedf36c sethoverparams(0);
+        self.var_8fedf36c setspeedimmediate(0.01);
+        self.var_8fedf36c setspeed(0.01, 100, 100);
+        self.var_8fedf36c setyawspeed(0.01, 100, 100);
+        self.var_8fedf36c clearvehgoalpos();
+        self.var_8fedf36c cleartargetyaw();
+        angle_diff = angleclamp180(self.var_8fedf36c.angles[1] - vectortoangles(self.origin - self.var_8fedf36c gettagorigin("tag_driver_camera"))[1]);
+        side = "r";
+        if (angle_diff < 0) {
+            side = "l";
+            angle_diff *= -1;
+        }
+        angle = 90;
+        if (angle_diff < 5) {
+            angle = 0;
+        } else if (angle_diff < 15) {
+            angle = 15;
+        } else if (angle_diff < 45) {
+            angle = 45;
+        }
+        var_c94a0984 = "r";
+        if (angle >= 45 && side == "l") {
+            var_c94a0984 = "l";
+        }
+        anim_name = "pb_aqu_vtol_enter_jump_start_" + side;
+        self thread animation::play(anim_name, self.origin, self.angles, 1, 0.2, 0, 0.2);
+        self waittillmatch(anim_name, "end");
+        var_bfa4502a = spawn("script_model", self.origin);
+        var_bfa4502a setmodel("tag_origin");
+        var_bfa4502a.angles = self.angles;
+        var_bfa4502a dontinterpolate();
+        var_8f8a1689 = "pb_aqu_vtol_enter_" + angle + "_" + var_c94a0984;
+        if (angle == 0) {
+            var_8f8a1689 = "pb_aqu_vtol_enter";
+        }
+        target_origin = getstartorigin(self.var_8fedf36c.origin, self.var_8fedf36c.angles, var_8f8a1689);
+        var_544bbb55 = getstartangles(self.var_8fedf36c.origin, self.var_8fedf36c.angles, var_8f8a1689);
+        anim_name = "pb_aqu_vtol_enter_jump_loop_" + var_c94a0984;
+        lerp_time = 0.5;
+        anim_time = getanimlength(anim_name);
+        anim_rate = anim_time / lerp_time;
+        self thread animation::play(anim_name, var_bfa4502a, "tag_origin", anim_rate, 0.2, 0, 0);
+        var_bfa4502a moveto(target_origin, lerp_time, 0, 0);
+        var_bfa4502a rotateto(var_544bbb55, lerp_time, 0, 0);
+        wait(lerp_time - 0.05);
+        self thread animation::play(var_8f8a1689, self.var_8fedf36c, "tag_origin", 1, 0.2, 0.1, 0, 0, 0, 0);
+        self waittillmatch(var_8f8a1689, "end");
+        self playsoundtoplayer("veh_vtol_close", self);
+        var_bfa4502a delete();
+        self.var_8fedf36c vehicle::god_off();
+    }
+    self thread function_22a0413d("piloted", var_74df67ae);
+}
+
+// Namespace namespace_786319bb
 // Params 0, eflags: 0x0
 // Checksum 0xf708de12, Offset: 0xa180
 // Size: 0x1a8
@@ -1951,6 +2084,87 @@ function function_da487b0c() {
 }
 
 // Namespace namespace_786319bb
+// Params 3, eflags: 0x0
+// Checksum 0x48f5182e, Offset: 0xb5d0
+// Size: 0x654
+function function_6a1f4649(landing_zone, var_e8e0644c, var_fe173168) {
+    if (!isdefined(var_e8e0644c)) {
+        var_e8e0644c = 1;
+    }
+    if (!isdefined(var_fe173168)) {
+        var_fe173168 = 0;
+    }
+    self endon(#"disconnect");
+    self endon(#"death");
+    if (!self function_5c971cb7()) {
+        self notify(#"hash_4936a0ca", "end");
+        if (isdefined(self.var_6f5c6fa1) && self.var_6f5c6fa1 && self flagsys::get("scriptedanim") && !isdefined(self.current_scene) && !isdefined(self.var_dd686719)) {
+            self thread animation::stop();
+        }
+        return;
+    }
+    self.var_8fedf36c clientfield::set("vtol_set_active_landing_zone_num", 0);
+    self.var_8fedf36c.state = "exit";
+    self notify(#"hash_6a1f4649");
+    self enableinvulnerability();
+    self.var_8fedf36c vehicle::god_on();
+    self.var_8fedf36c cleartargetyaw();
+    self.var_8fedf36c clearvehgoalpos();
+    self.var_8fedf36c makevehicleusable();
+    self.var_8fedf36c usevehicle(self, self.var_8fedf36c getoccupantseat(self));
+    self.var_8fedf36c makevehicleunusable();
+    self.var_1b9475b4 = 0;
+    self.var_8fedf36c thread audio::sndupdatevehiclecontext(0);
+    self.var_8fedf36c.var_ac442e94 = 0;
+    self clientfield::set_to_player("hijack_static_effect", 0);
+    if (var_e8e0644c) {
+        self thread animation::play("pb_aqu_vtol_exit", self.var_8fedf36c, "tag_origin", 1, 0.2, 0.05);
+        self.var_6f5c6fa1 = 1;
+        self waittillmatch(#"hash_4936a0ca", "end");
+    }
+    self.var_6f5c6fa1 = 0;
+    var_cd4db992 = -1;
+    if (isdefined(landing_zone) && isdefined(landing_zone.script_noteworthy)) {
+        var_cd4db992 = int(strtok(landing_zone.script_noteworthy, "landing_zone_")[0]);
+    }
+    level notify(#"hash_2e0c12cd", self, var_cd4db992);
+    self.var_8fedf36c cleartargetyaw();
+    self.var_8fedf36c clearvehgoalpos();
+    self enableweaponcycling();
+    self disableinvulnerability();
+    self.var_8fedf36c vehicle::god_off();
+    self.var_1e983b11 = 1;
+    self.var_32218fc7 = 0;
+    level notify(#"enable_cybercom", self);
+    self gadgetpowerset(0, 100);
+    self gadgetpowerset(1, 100);
+    self gadgetpowerset(2, 100);
+    self.var_d829fe9f = 1;
+    self oed::function_fc1750c9(1);
+    self.var_8fedf36c sethoverparams(24, 24, 24);
+    var_15f4ba8b = 1;
+    foreach (player in level.players) {
+        if (isdefined(player.var_8fedf36c) && player islinkedto(player.var_8fedf36c)) {
+            var_15f4ba8b = 0;
+            break;
+        }
+    }
+    if (var_15f4ba8b) {
+        setsaveddvar("bulletrange", 8192);
+    }
+    self.var_8fedf36c clientfield::set("vtol_canopy_state", 0);
+    wait(2);
+    self setthreatbiasgroup("players_ground");
+    if (!var_fe173168) {
+        self thread function_22a0413d("autopilot", landing_zone);
+        return;
+    }
+    self thread function_22a0413d("idle");
+    self.var_8fedf36c setvehvelocity((0, 0, 0));
+    self.var_8fedf36c setangularvelocity((0, 0, 0));
+}
+
+// Namespace namespace_786319bb
 // Params 1, eflags: 0x0
 // Checksum 0xedf2e408, Offset: 0xbc30
 // Size: 0xf4
@@ -1988,6 +2202,31 @@ function function_5c971cb7() {
         return true;
     }
     return false;
+}
+
+// Namespace namespace_786319bb
+// Params 1, eflags: 0x0
+// Checksum 0x8877f0dd, Offset: 0xbe18
+// Size: 0x230
+function function_2b89d912(landing_zone) {
+    self endon(#"death");
+    self endon(#"disconnect");
+    self.var_8fedf36c endon(#"hash_c38e4003");
+    self.var_8fedf36c.state = "autopilot";
+    self.var_8fedf36c sethoverparams(0);
+    self.var_8fedf36c clearvehgoalpos();
+    self.var_8fedf36c cleartargetyaw();
+    self.var_8fedf36c notsolid();
+    safeheight = self.var_8fedf36c.origin[2];
+    self.var_8fedf36c thread animation::play("v_aqu_vtol_land_exit", self.var_8fedf36c.origin, self.var_8fedf36c.angles, 1, 0.5, 0.5, 0.5);
+    wait(1);
+    self.var_8fedf36c clientfield::set("vtol_enable_wash_fx", 0);
+    self.var_8fedf36c waittillmatch(#"hash_fce0770a", "end");
+    self.var_8fedf36c stopanimscripted(0);
+    self.var_8fedf36c ghost();
+    self.var_8fedf36c.origin = (self.var_8fedf36c.origin[0], self.var_8fedf36c.origin[1], safeheight);
+    self.var_8fedf36c setvehgoalpos(self.var_8fedf36c.origin, 1);
+    self.var_8fedf36c notify(#"hash_7b977278");
 }
 
 /#
@@ -2869,6 +3108,47 @@ function play_intro(var_24223342) {
 // Size: 0x2c
 function function_f005cfe(a_ents) {
     level flag::set("flying_main_scene_done");
+}
+
+// Namespace namespace_786319bb
+// Params 4, eflags: 0x0
+// Checksum 0xab5d29bf, Offset: 0xf5d8
+// Size: 0x3ac
+function function_af376a0e(animname, index, section, var_84fe82cd) {
+    self endon(#"disconnect");
+    self thread function_22a0413d("scripted");
+    self.var_8fedf36c clientfield::set("vtol_show_missile_lock", 0);
+    self.var_8fedf36c waittillmatch(animname, "spawn_dogfight");
+    self.var_8fedf36c clientfield::set("vtol_engines_state", 1);
+    thread function_14f37b59(section, 0, self, undefined, "flight_path_spawner" + index + 1);
+    while (!isdefined(self.var_1d195e2c)) {
+        wait(0.05);
+    }
+    self weaponlockstart(self.var_1d195e2c);
+    self thread function_9d40b42c();
+    self.var_8fedf36c waittillmatch(animname, "attach_dogfight");
+    self.var_8fedf36c sethelidogfighting(1);
+    level flag::set("dogfighting");
+    self setvehiclefocusentity(self.var_1d195e2c);
+    self.var_1d195e2c.var_8f9e6a04 = self;
+    self function_d683f26a();
+    self thread function_22a0413d("piloted");
+    self enableinvulnerability();
+    self.var_8fedf36c vehicle::god_on();
+    self.var_8fedf36c stopanimscripted(0);
+    self.var_8fedf36c disabledriverfiring(0);
+    self.var_8fedf36c disablegunnerfiring(0, 0);
+    self.var_8fedf36c returnplayercontrol();
+    self allowads(0);
+    self flagsys::set("dogfighting");
+    self.var_8fedf36c clientfield::set("vtol_dogfighting", 1);
+    self.var_8fedf36c vehicle::toggle_exhaust_fx(0);
+    self clientfield::set_player_uimodel("vehicle.weaponIndex", 2);
+    self.var_8fedf36c setvehicletype("veh_bo3_mil_vtol_fighter_player_dogfight");
+    self oob::disableplayeroob(1);
+    self thread function_c5a27940(var_84fe82cd);
+    util::wait_network_frame();
+    self.var_8fedf36c vehicle::toggle_exhaust_fx(1);
 }
 
 // Namespace namespace_786319bb

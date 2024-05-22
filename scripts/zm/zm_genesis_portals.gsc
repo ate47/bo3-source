@@ -22,6 +22,8 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_766d6099;
 
 // Namespace namespace_766d6099

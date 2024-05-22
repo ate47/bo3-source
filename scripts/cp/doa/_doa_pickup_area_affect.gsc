@@ -12,6 +12,8 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("zombie_cymbal_monkey");
+
 #namespace namespace_4f1562f7;
 
 // Namespace namespace_4f1562f7

@@ -7,7 +7,8 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/array_shared;
 
-// Can't decompile export util::function_d18b0f46
+#using_animtree("generic");
+#using_animtree("all_player");
 
 #namespace util;
 
@@ -160,6 +161,14 @@ function streamer_wait(n_stream_request_id, n_wait_frames, n_timeout, var_9636cf
     }
 
 #/
+
+// Namespace util
+// Params 1, eflags: 0x0
+// Checksum 0x160f1e6a, Offset: 0x1168
+// Size: 0x1e
+function function_d18b0f46(msg) {
+    self waittillmatch(msg, "end");
+}
 
 // Namespace util
 // Params 1, eflags: 0x0

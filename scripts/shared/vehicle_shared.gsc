@@ -14,6 +14,8 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace vehicle;
 
 // Namespace vehicle

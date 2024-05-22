@@ -7,7 +7,7 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export vehicle_death::death_jolt
+#using_animtree("generic");
 
 #namespace vehicle_death;
 
@@ -786,6 +786,30 @@ function death_make_badplace(type) {
         return;
     }
     badplace_box("vehicle_kill_badplace", struct.duration, self.origin, struct.radius, "all");
+}
+
+// Namespace vehicle_death
+// Params 1, eflags: 0x1 linked
+// Checksum 0x9b380fa3, Offset: 0x33a0
+// Size: 0x174
+function death_jolt(type) {
+    self endon(#"death");
+    if (isdefined(self.ignore_death_jolt) && self.ignore_death_jolt) {
+        return;
+    }
+    self joltbody(self.origin + (23, 33, 64), 3);
+    if (isdefined(self.death_anim)) {
+        self animscripted("death_anim", self.origin, self.angles, self.death_anim, "normal", generic%root, 1, 0);
+        self waittillmatch(#"death_anim", "end");
+        return;
+    }
+    if (self.isphysicsvehicle) {
+        num_launch_multiplier = 1;
+        if (isdefined(self.physicslaunchdeathscale)) {
+            num_launch_multiplier = self.physicslaunchdeathscale;
+        }
+        self launchvehicle((0, 0, 180) * num_launch_multiplier, (randomfloatrange(5, 10), randomfloatrange(-5, 5), 0), 1, 0, 1);
+    }
 }
 
 // Namespace vehicle_death

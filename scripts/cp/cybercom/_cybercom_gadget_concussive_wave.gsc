@@ -14,7 +14,7 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export namespace_687c8387::function_73688d2e
+#using_animtree("generic");
 
 #namespace namespace_687c8387;
 
@@ -135,6 +135,23 @@ function _off(slot, weapon) {
 // Size: 0x14
 function function_4135a1c4(slot, weapon) {
     
+}
+
+// Namespace namespace_687c8387
+// Params 2, eflags: 0x1 linked
+// Checksum 0x4c5460a0, Offset: 0xaf8
+// Size: 0xe4
+function function_73688d2e(damage, var_9bc2efcb) {
+    if (!isdefined(var_9bc2efcb)) {
+        var_9bc2efcb = 1;
+    }
+    if (isdefined(var_9bc2efcb) && var_9bc2efcb) {
+        type = self cybercom::function_5e3d3aa();
+        self orientmode("face default");
+        self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
+        self waittillmatch(#"hash_39fa7e38", "fire");
+    }
+    self function_9ba0286c(damage);
 }
 
 // Namespace namespace_687c8387

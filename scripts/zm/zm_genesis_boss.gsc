@@ -39,6 +39,8 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_175db697;
 
 // Namespace namespace_175db697

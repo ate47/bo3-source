@@ -6,6 +6,8 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("all_player");
+
 #namespace end_game_flow;
 
 // Namespace end_game_flow

@@ -110,6 +110,8 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_9d0831d9;
 
 // Namespace namespace_9d0831d9

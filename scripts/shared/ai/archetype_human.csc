@@ -5,6 +5,8 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/ai_shared;
 
+#using_animtree("generic");
+
 #namespace archetype_human;
 
 // Namespace archetype_human

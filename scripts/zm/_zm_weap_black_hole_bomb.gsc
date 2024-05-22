@@ -19,6 +19,8 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("zombie_cymbal_monkey");
+
 #namespace namespace_d6b63386;
 
 // Namespace namespace_d6b63386

@@ -23,6 +23,8 @@
 #using scripts/shared/ai/zombie_utility;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_6b38abe3;
 
 // Namespace namespace_6b38abe3

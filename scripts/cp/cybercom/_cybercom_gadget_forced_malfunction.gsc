@@ -14,13 +14,7 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export namespace_9c3956fd::function_586fec95
-
-// Can't decompile export namespace_9c3956fd::function_609fcb0a
-
-// Can't decompile export namespace_9c3956fd::function_91adcf0e
-
-// Can't decompile export namespace_9c3956fd::function_638ad739
+#using_animtree("generic");
 
 #namespace namespace_9c3956fd;
 
@@ -213,5 +207,159 @@ function function_da7fe5ea(slot, weapon) {
         }
     }
     cybercom::function_adc40f11(weapon, fired);
+}
+
+// Namespace namespace_9c3956fd
+// Params 3, eflags: 0x5 linked
+// Checksum 0x34930fab, Offset: 0x1028
+// Size: 0xe4
+function function_586fec95(attacker, var_8e113fac, weapon) {
+    self endon(#"death");
+    self clientfield::set("forced_malfunction", 1);
+    self.is_disabled = 1;
+    self dodamage(5, self.origin, isdefined(attacker) ? attacker : undefined, undefined, "none", "MOD_UNKNOWN", 0, weapon, -1, 1);
+    self waittillmatch(#"bhtn_action_terminate", "specialpain");
+    self.is_disabled = 0;
+    self clientfield::set("forced_malfunction", 0);
+}
+
+// Namespace namespace_9c3956fd
+// Params 3, eflags: 0x5 linked
+// Checksum 0x6ecf571a, Offset: 0x1118
+// Size: 0x1d0
+function function_609fcb0a(attacker, var_8e113fac, weapon) {
+    self endon(#"death");
+    if (!cybercom::function_76e3026d(self)) {
+        self kill(self.origin, isdefined(attacker) ? attacker : undefined);
+        return;
+    }
+    self clientfield::set("forced_malfunction", 1);
+    self.is_disabled = 1;
+    var_c1972f81 = 100;
+    while (isalive(self) && gettime() < var_8e113fac) {
+        if (getdvarint("scr_malfunction_rate_of_failure", 25) + var_c1972f81 > randomint(100)) {
+            var_c1972f81 = 0;
+            self dodamage(5, self.origin, isdefined(attacker) ? attacker : undefined, undefined, "none", "MOD_UNKNOWN", 0, weapon, -1, 1);
+            self waittillmatch(#"bhtn_action_terminate", "specialpain");
+            continue;
+        }
+        var_c1972f81 += 10;
+        wait(randomintrange(1, 3));
+    }
+    self clientfield::set("forced_malfunction", 0);
+    self.is_disabled = 0;
+}
+
+// Namespace namespace_9c3956fd
+// Params 2, eflags: 0x5 linked
+// Checksum 0xfa12ee08, Offset: 0x12f0
+// Size: 0x55c
+function function_91adcf0e(attacker, var_ba115ce0) {
+    self endon(#"death");
+    weapon = getweapon("gadget_forced_malfunction");
+    self notify(#"hash_f8c5dd60", weapon, attacker);
+    if (isdefined(var_ba115ce0)) {
+        disabletime = var_ba115ce0;
+    } else {
+        disabletime = getdvarint("scr_malfunction_duration", 15) * 1000;
+    }
+    if (!attacker cybercom::function_7a7d1608(self, weapon)) {
+        return;
+    }
+    if (self cybercom::function_421746e0()) {
+        self kill(self.origin, isdefined(attacker) ? attacker : undefined, undefined, weapon);
+        return;
+    }
+    var_8e113fac = gettime() + disabletime + randomint(4000);
+    if (self.archetype == "robot") {
+        self thread function_609fcb0a(attacker, var_8e113fac, weapon);
+        return;
+    }
+    if (self.archetype == "warlord") {
+        self thread function_586fec95(attacker, var_8e113fac, weapon);
+        return;
+    }
+    /#
+        assert(self.archetype == "riotshield" || self.archetype == "riotshield");
+    #/
+    type = self cybercom::function_5e3d3aa();
+    self clientfield::set("forced_malfunction", 1);
+    goalpos = self.goalpos;
+    goalradius = self.goalradius;
+    self.goalradius = 32;
+    if (self isactorshooting()) {
+        base = "base_rifle";
+        if (isdefined(self.voiceprefix) && getsubstr(self.voiceprefix, 7) == "f") {
+            base = "fem_rifle";
+        } else if (self.archetype == "human_riotshield") {
+            base = "riotshield";
+        }
+        type = self cybercom::function_5e3d3aa();
+        variant = attacker cybercom::function_e06423b6(base);
+        self animscripted("malfunction_intro_anim", self.origin, self.angles, "ai_" + base + "_" + type + "_exposed_rifle_malfunction" + variant);
+        self thread cybercom::function_cf64f12c("damage_pain", "malfunction_intro_anim", 1, attacker, weapon);
+        self thread cybercom::function_cf64f12c("notify_melee_damage", "malfunction_intro_anim", 1, attacker, weapon);
+        self waittillmatch(#"hash_8a1e1e3e", "end");
+    }
+    var_ac712236 = 0;
+    while (isalive(self) && gettime() < var_8e113fac) {
+        if (gettime() > var_ac712236) {
+            var_ac712236 = gettime() + randomfloatrange(getdvarfloat("scr_malfunction_duration_min_wait", 2), getdvarfloat("scr_malfunction_duration_max_wait", 3.25)) * 1000;
+            if (getdvarint("scr_malfunction_rate_of_failure", 90) > randomint(100)) {
+                self.malfunctionreaction = 1;
+            } else {
+                self.malfunctionreaction = 0;
+            }
+        }
+        wait(0.2);
+    }
+    self clientfield::set("forced_malfunction", 0);
+    self.malfunctionreaction = undefined;
+    self.var_31da95f4 = undefined;
+    self.goalradius = goalradius;
+    self setgoal(goalpos, 1);
+}
+
+// Namespace namespace_9c3956fd
+// Params 2, eflags: 0x1 linked
+// Checksum 0x948cf286, Offset: 0x1858
+// Size: 0x2a2
+function function_638ad739(target, var_9bc2efcb) {
+    if (!isdefined(var_9bc2efcb)) {
+        var_9bc2efcb = 1;
+    }
+    if (!isdefined(target)) {
+        return;
+    }
+    if (self.archetype != "human") {
+        return;
+    }
+    validtargets = [];
+    if (isarray(target)) {
+        foreach (guy in target) {
+            if (!function_602b28e9(guy)) {
+                continue;
+            }
+            validtargets[validtargets.size] = guy;
+        }
+    } else {
+        if (!function_602b28e9(target)) {
+            return;
+        }
+        validtargets[validtargets.size] = target;
+    }
+    if (isdefined(var_9bc2efcb) && var_9bc2efcb) {
+        type = self cybercom::function_5e3d3aa();
+        self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
+        self waittillmatch(#"hash_39fa7e38", "fire");
+    }
+    weapon = getweapon("gadget_forced_malfunction");
+    foreach (guy in validtargets) {
+        if (!cybercom::function_7a7d1608(guy, weapon)) {
+            continue;
+        }
+        guy thread function_91adcf0e(self);
+        wait(0.05);
+    }
 }
 

@@ -13,7 +13,7 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export scene::waittill_instance_scene_done
+#using_animtree("generic");
 
 #namespace scene;
 
@@ -1606,6 +1606,15 @@ function _play_instance(s_tracker, str_scenedef, a_ents, b_test_run, str_mode) {
         }
     }
     s_tracker notify(#"scene_done");
+}
+
+// Namespace scene
+// Params 1, eflags: 0x5 linked
+// Checksum 0x6867a7da, Offset: 0x7960
+// Size: 0x2a
+function waittill_instance_scene_done(str_scenedef) {
+    level endon(#"demo_jump");
+    self waittillmatch(#"scene_done", str_scenedef);
 }
 
 // Namespace scene

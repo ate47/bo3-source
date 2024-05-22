@@ -27,6 +27,8 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("mp_microwaveturret");
+
 #namespace microwave_turret;
 
 // Namespace microwave_turret

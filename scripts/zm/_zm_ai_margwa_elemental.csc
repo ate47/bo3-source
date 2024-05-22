@@ -4,6 +4,8 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/audio_shared;
 
+#using_animtree("generic");
+
 #namespace namespace_3de4ab6f;
 
 // Namespace namespace_3de4ab6f

@@ -31,6 +31,8 @@
 #using scripts/shared/_oob;
 #using scripts/codescripts/struct;
 
+#using_animtree("mp_vehicles");
+
 #namespace ai_tank;
 
 // Namespace ai_tank

@@ -16,6 +16,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+#using_animtree("chicken_mech");
+
 #namespace namespace_2848f8c2;
 
 // Namespace namespace_2848f8c2

@@ -13,6 +13,8 @@
 #using scripts/cp/_load;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_786319bb;
 
 // Namespace namespace_786319bb

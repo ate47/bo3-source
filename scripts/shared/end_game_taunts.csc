@@ -11,6 +11,8 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("all_player");
+
 #namespace namespace_3cadf69b;
 
 // Namespace namespace_3cadf69b

@@ -2,18 +2,6 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export gibclientutils::_handlegibannihilate
-
-// Can't decompile export gibclientutils::_handlegibhead
-
-// Can't decompile export gibclientutils::_handlegibrightarm
-
-// Can't decompile export gibclientutils::_handlegibleftarm
-
-// Can't decompile export gibclientutils::_handlegibrightleg
-
-// Can't decompile export gibclientutils::_handlegibleftleg
-
 #namespace gibclientutils;
 
 // Namespace gibclientutils
@@ -383,6 +371,72 @@ function _handlegibcallbacks(localclientnum, entity, gibflag) {
             [[ callback ]](localclientnum, entity, gibflag);
         }
     }
+}
+
+// Namespace gibclientutils
+// Params 1, eflags: 0x5 linked
+// Checksum 0x2230dba5, Offset: 0x1d00
+// Size: 0x5c
+function _handlegibannihilate(localclientnum) {
+    entity = self;
+    entity endon(#"entityshutdown");
+    entity waittillmatch(#"_anim_notify_", "gib_annihilate");
+    cliententgibannihilate(localclientnum, entity);
+}
+
+// Namespace gibclientutils
+// Params 1, eflags: 0x5 linked
+// Checksum 0x12a546e0, Offset: 0x1d68
+// Size: 0x5c
+function _handlegibhead(localclientnum) {
+    entity = self;
+    entity endon(#"entityshutdown");
+    entity waittillmatch(#"_anim_notify_", "gib = \"head\"");
+    cliententgibhead(localclientnum, entity);
+}
+
+// Namespace gibclientutils
+// Params 1, eflags: 0x5 linked
+// Checksum 0xcc7feb5c, Offset: 0x1dd0
+// Size: 0x5c
+function _handlegibrightarm(localclientnum) {
+    entity = self;
+    entity endon(#"entityshutdown");
+    entity waittillmatch(#"_anim_notify_", "gib = \"arm_right\"");
+    cliententgibrightarm(localclientnum, entity);
+}
+
+// Namespace gibclientutils
+// Params 1, eflags: 0x5 linked
+// Checksum 0x45fd21e3, Offset: 0x1e38
+// Size: 0x5c
+function _handlegibleftarm(localclientnum) {
+    entity = self;
+    entity endon(#"entityshutdown");
+    entity waittillmatch(#"_anim_notify_", "gib = \"arm_left\"");
+    cliententgibleftarm(localclientnum, entity);
+}
+
+// Namespace gibclientutils
+// Params 1, eflags: 0x5 linked
+// Checksum 0x9c070701, Offset: 0x1ea0
+// Size: 0x5c
+function _handlegibrightleg(localclientnum) {
+    entity = self;
+    entity endon(#"entityshutdown");
+    entity waittillmatch(#"_anim_notify_", "gib = \"leg_right\"");
+    cliententgibrightleg(localclientnum, entity);
+}
+
+// Namespace gibclientutils
+// Params 1, eflags: 0x5 linked
+// Checksum 0xcee07666, Offset: 0x1f08
+// Size: 0x5c
+function _handlegibleftleg(localclientnum) {
+    entity = self;
+    entity endon(#"entityshutdown");
+    entity waittillmatch(#"_anim_notify_", "gib = \"leg_left\"");
+    cliententgibleftleg(localclientnum, entity);
 }
 
 // Namespace gibclientutils

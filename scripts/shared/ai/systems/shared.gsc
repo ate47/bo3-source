@@ -8,6 +8,8 @@
 #using scripts/shared/math_shared;
 #using scripts/shared/ai_shared;
 
+#using_animtree("generic");
+
 #namespace shared;
 
 // Namespace shared

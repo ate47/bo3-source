@@ -24,7 +24,7 @@
 #using scripts/cp/_dialog;
 #using scripts/codescripts/struct;
 
-// Can't decompile export namespace_79e1cd97::function_4f96504c
+#using_animtree("generic");
 
 #namespace namespace_79e1cd97;
 
@@ -2107,6 +2107,19 @@ function function_5d4fc658() {
             e_corpse delete();
         }
     }
+}
+
+// Namespace namespace_79e1cd97
+// Params 1, eflags: 0x0
+// Checksum 0x9d8af911, Offset: 0x8648
+// Size: 0x102
+function function_4f96504c(ai_target) {
+    type = self cybercom::function_5e3d3aa();
+    var_1eba5cf1 = vectortoangles(ai_target.origin - self.origin);
+    var_1eba5cf1 = (0, var_1eba5cf1[1], 0);
+    self animscripted("ai_cybercom_anim", self.origin, var_1eba5cf1, "ai_base_rifle_" + type + "_exposed_cybercom_activate", "normal", undefined, undefined, 0.3, 0.3);
+    self cybercom::function_f8669cbf(0);
+    self waittillmatch(#"hash_39fa7e38", "fire");
 }
 
 // Namespace namespace_79e1cd97

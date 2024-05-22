@@ -10,6 +10,9 @@
 #using scripts/codescripts/struct;
 #using scripts/core/_multi_extracam;
 
+#using_animtree("all_player");
+#using_animtree("generic");
+
 #namespace character_customization;
 
 // Namespace character_customization

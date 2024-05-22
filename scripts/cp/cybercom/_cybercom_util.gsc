@@ -17,8 +17,6 @@
 #using scripts/shared/ai/systems/blackboard;
 #using scripts/shared/flag_shared;
 
-// Can't decompile export cybercom::function_28d7b2ad
-
 #namespace cybercom;
 
 // Namespace cybercom
@@ -1373,6 +1371,17 @@ function function_e4588dde() {
     if (!isdefined(self.cybercom.var_6f227ef9)) {
         self.cybercom.var_6f227ef9 = 0;
     }
+}
+
+// Namespace cybercom
+// Params 2, eflags: 0x1 linked
+// Checksum 0x179c50d2, Offset: 0x5bd0
+// Size: 0x44
+function function_28d7b2ad(note, animname) {
+    self endon(note);
+    self endon(#"death");
+    self waittillmatch(animname, "end");
+    self notify(note);
 }
 
 // Namespace cybercom

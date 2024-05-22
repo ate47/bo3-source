@@ -13,6 +13,8 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_ded850b0;
 
 // Namespace namespace_ded850b0

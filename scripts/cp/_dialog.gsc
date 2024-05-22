@@ -9,10 +9,6 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export dialog::say
-
-// Can't decompile export dialog::function_263a2879
-
 #namespace dialog;
 
 // Namespace dialog
@@ -95,6 +91,81 @@ function function_9fc88ab6(var_e8800af4) {
         return 0;
     }
     return strendswith(str_alias, "plyr");
+}
+
+// Namespace dialog
+// Params 5, eflags: 0x1 linked
+// Checksum 0xcd48912e, Offset: 0x6a0
+// Size: 0x164
+function say(str_vo_line, n_delay, var_57b7ba95, e_to_player, var_43937b21) {
+    if (!isdefined(var_57b7ba95)) {
+        var_57b7ba95 = 0;
+    }
+    ent = self;
+    if (self == level) {
+        if (isdefined(var_43937b21) && var_43937b21) {
+            ent = spawn("script_model", (0, 0, 0));
+            level.e_speaker = ent;
+        } else {
+            ent = spawn("script_origin", (0, 0, 0));
+        }
+        waittillframeend();
+        level notify(#"hash_120cde7f", ent);
+        var_57b7ba95 = 1;
+    }
+    ent endon(#"death");
+    ent thread function_263a2879(str_vo_line, n_delay, var_57b7ba95, e_to_player);
+    ent waittillmatch(#"hash_90f83311", str_vo_line);
+    if (self == level) {
+        ent delete();
+        if (isdefined(level.e_speaker)) {
+            level.e_speaker delete();
+        }
+    }
+}
+
+// Namespace dialog
+// Params 4, eflags: 0x5 linked
+// Checksum 0xe81d3e10, Offset: 0x810
+// Size: 0x2a6
+function function_263a2879(str_vo_line, n_delay, var_57b7ba95, e_to_player) {
+    if (!isdefined(var_57b7ba95)) {
+        var_57b7ba95 = 0;
+    }
+    self endon(#"death");
+    self.var_f3995442 = 1;
+    self thread function_665c78f1(str_vo_line);
+    level endon(#"hash_3962ec94");
+    self endon(#"hash_3962ec94");
+    if (isdefined(n_delay) && n_delay > 0) {
+        wait(n_delay);
+    }
+    if (self.classname === "script_origin") {
+        var_57b7ba95 = 1;
+    }
+    if (!var_57b7ba95) {
+        if (!isdefined(self.health) || self.health <= 0) {
+            if (!isplayer(self) || !(isdefined(self.laststand) && self.laststand)) {
+                /#
+                    assertmsg("human");
+                #/
+                self.var_f3995442 = undefined;
+                self notify(#"hash_90f83311", str_vo_line);
+                return;
+            }
+        }
+    }
+    self.is_talking = 1;
+    if (self.archetype == "human" || self.archetype == "human_riotshield" || self.archetype == "human_rpg" || isdefined(self.archetype) && self.archetype == "civilian") {
+        self clientfield::set("facial_dial", 1);
+    }
+    self face::sayspecificdialogue(0, str_vo_line, 1, undefined, undefined, undefined, e_to_player);
+    self waittillmatch(#"hash_90f83311", str_vo_line);
+    if (self.archetype == "human" || self.archetype == "human_riotshield" || self.archetype == "human_rpg" || isdefined(self.archetype) && self.archetype == "civilian") {
+        self clientfield::set("facial_dial", 0);
+    }
+    self.is_talking = undefined;
+    self.var_f3995442 = undefined;
 }
 
 // Namespace dialog

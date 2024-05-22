@@ -18,6 +18,8 @@
 #using scripts/codescripts/struct;
 #using scripts/core/gametypes/frontend_zm_bgb_chance;
 
+#using_animtree("all_player");
+
 #namespace frontend;
 
 // Namespace frontend

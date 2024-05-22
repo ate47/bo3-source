@@ -16,6 +16,8 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/array_shared;
 
+#using_animtree("generic");
+
 #namespace namespace_d8d03071;
 
 // Namespace namespace_d8d03071

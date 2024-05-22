@@ -27,8 +27,6 @@
 #using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export namespace_ba7e0f70::function_78edc502
-
 #namespace namespace_ba7e0f70;
 
 // Namespace namespace_ba7e0f70
@@ -1008,6 +1006,62 @@ function enemyislocking(heli) {
 // Size: 0x2e
 function enemylockedon(heli) {
     return isdefined(heli.locked_on) && heli.locked_on;
+}
+
+// Namespace namespace_ba7e0f70
+// Params 2, eflags: 0x1 linked
+// Checksum 0x4b93c7a7, Offset: 0x5068
+// Size: 0x442
+function function_78edc502(startnode, destnodes) {
+    self notify(#"flying");
+    self endon(#"flying");
+    self endon(#"death");
+    self endon(#"crashing");
+    self endon(#"leaving");
+    nextnode = getent(startnode.target, "targetname");
+    /#
+        assert(isdefined(nextnode), "threatHelicopterGunner");
+    #/
+    self setspeed(-106, 80);
+    self setvehgoalpos(nextnode.origin + (0, 0, 2000), 1);
+    self waittill(#"near_goal");
+    firstpass = 1;
+    if (!self.playermovedrecently) {
+        node = self updateareanodes(destnodes, 0);
+        level.vtol.currentnode = node;
+        targetnode = getent(node.target, "targetname");
+        traveltonode(targetnode);
+        if (isdefined(targetnode.script_airspeed) && isdefined(targetnode.script_accel)) {
+            heli_speed = targetnode.script_airspeed;
+            heli_accel = targetnode.script_accel;
+        } else {
+            heli_speed = -106 + randomint(20);
+            heli_accel = 40 + randomint(10);
+        }
+        self setspeed(heli_speed, heli_accel);
+        self setvehgoalpos(targetnode.origin + (0, 0, 2000), 1);
+        self setgoalyaw(targetnode.angles[1] + 0);
+    }
+    if (0 != 0) {
+        self waittill(#"near_goal");
+        waittime = 0;
+    } else if (!isdefined(targetnode.script_delay)) {
+        self waittill(#"near_goal");
+        waittime = 10 + randomint(5);
+    } else {
+        self waittillmatch(#"goal");
+        waittime = targetnode.script_delay;
+    }
+    if (firstpass) {
+        self.killstreak_duration = self.killstreak_timer_start_using_hacked_time === 1 ? self killstreak_hacking::get_hacked_timeout_duration_ms() : 60000;
+        self.killstreak_end_time = gettime() + self.killstreak_duration;
+        self.killstreakendtime = int(self.killstreak_end_time);
+        self thread killstreaks::waitfortimeout("helicopter_gunner", self.killstreak_duration, &ontimeoutcallback, "delete", "death");
+        self.killstreak_timer_started = 1;
+        self updatedrivabletimeforalloccupants(self.killstreak_duration, self.killstreak_end_time);
+        firstpass = 0;
+    }
+    wait(waittime);
 }
 
 // Namespace namespace_ba7e0f70

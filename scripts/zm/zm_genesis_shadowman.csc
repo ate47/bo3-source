@@ -14,6 +14,8 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_553efdc;
 
 // Namespace namespace_553efdc

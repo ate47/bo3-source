@@ -6,6 +6,8 @@
 #using scripts/shared/name_shared;
 #using scripts/shared/gameskill_shared;
 
+#using_animtree("generic");
+
 #namespace init;
 
 // Namespace init

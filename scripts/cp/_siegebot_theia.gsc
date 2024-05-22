@@ -20,6 +20,8 @@
 #using scripts/shared/gameskill_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_a28cc5ab;
 
 // Namespace namespace_a28cc5ab

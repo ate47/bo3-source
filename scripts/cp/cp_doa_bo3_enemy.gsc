@@ -27,8 +27,6 @@
 #using scripts/shared/flagsys_shared;
 #using scripts/shared/ai_shared;
 
-// Can't decompile export namespace_51bd792::function_57aea19e
-
 #namespace namespace_51bd792;
 
 // Namespace namespace_51bd792
@@ -1440,6 +1438,31 @@ function function_43f48136(var_bbd280b0) {
         return 0;
     }
     return var_bbd280b0 isatgoal();
+}
+
+// Namespace namespace_51bd792
+// Params 0, eflags: 0x1 linked
+// Checksum 0xe13c372a, Offset: 0x6828
+// Size: 0x1be
+function function_57aea19e() {
+    self endon(#"death");
+    waittillframeend();
+    if (isalive(self) && !self isragdoll()) {
+        self.var_30fc80e6 = 1;
+        self animscripted("plant_anim", self.origin, self.angles, "ai_wrlrd_stn_combat_doa_plant_mine");
+        self waittillmatch(#"hash_eecd4c04", "planted");
+    }
+    self.var_55361ee6 -= 1;
+    bomb = spawn("script_model", self.origin);
+    bomb.targetname = "doWarlordPlantAnimation";
+    bomb setmodel("zombietron_Warlord_mine");
+    bomb playsound("zmb_bomb_initialized");
+    bomb playloopsound("zmb_bomb_looper", 1);
+    bomb thread namespace_eaa992c::function_285a2999("explo_warning_light");
+    bomb thread function_97fb783(5);
+    bomb.takedamage = 1;
+    self waittillmatch(#"hash_eecd4c04", "end");
+    self.var_30fc80e6 = undefined;
 }
 
 // Namespace namespace_51bd792

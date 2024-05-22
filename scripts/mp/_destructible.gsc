@@ -6,6 +6,8 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/challenges_shared;
 
+#using_animtree("mp_vehicles");
+
 #namespace destructible;
 
 // Namespace destructible

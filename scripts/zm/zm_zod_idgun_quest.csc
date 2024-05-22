@@ -5,6 +5,8 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_54bf13f5;
 
 // Namespace namespace_54bf13f5

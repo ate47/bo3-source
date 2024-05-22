@@ -27,10 +27,6 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export namespace_6f44bbbf::function_958f5757
-
-// Can't decompile export namespace_6f44bbbf::function_cf5fc4c7
-
 #namespace namespace_6f44bbbf;
 
 // Namespace namespace_6f44bbbf
@@ -132,6 +128,42 @@ function function_5b72d473() {
     self endon(#"death");
     self thread function_958f5757();
     self thread function_cf5fc4c7();
+}
+
+// Namespace namespace_6f44bbbf
+// Params 0, eflags: 0x0
+// Checksum 0xb2f15d44, Offset: 0x1038
+// Size: 0x80
+function function_958f5757() {
+    self endon(#"death");
+    while (true) {
+        self waittillmatch(#"hash_7f1f9f3c");
+        level util::clientnotify("qt_fire_missile");
+        thread namespace_7c587e3e::function_b3768e28();
+        thread namespace_7c587e3e::function_2afbdce();
+        self fireweapon(0);
+    }
+}
+
+// Namespace namespace_6f44bbbf
+// Params 0, eflags: 0x0
+// Checksum 0xa2a44df6, Offset: 0x10c0
+// Size: 0x122
+function function_cf5fc4c7() {
+    self endon(#"death");
+    while (true) {
+        self waittillmatch(#"hash_870f582c");
+        level util::clientnotify("qt_fire_mg");
+        self playloopsound("wpn_qt_mg_loop");
+        thread namespace_7c587e3e::function_2afbdce();
+        self thread turret::fire_for_time(-1, 1);
+        self thread turret::fire_for_time(-1, 2);
+        self waittillmatch(#"hash_c6db257a");
+        playsoundatposition("wpn_qt_mg_tail", self.origin);
+        self stoploopsound(0.2);
+        self notify(#"hash_c7d626");
+        self notify(#"hash_dac55bbd");
+    }
 }
 
 // Namespace namespace_6f44bbbf

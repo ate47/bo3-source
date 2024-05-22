@@ -20,11 +20,7 @@
 #using scripts/shared/math_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export namespace_a56eec64::function_ce51c2a1
-
-// Can't decompile export namespace_a56eec64::function_f8956516
-
-// Can't decompile export namespace_a56eec64::function_9eebfb7
+#using_animtree("generic");
 
 #namespace namespace_a56eec64;
 
@@ -316,6 +312,68 @@ function function_1ed56488(tag, count, attacker, weapon) {
 
 // Namespace namespace_a56eec64
 // Params 3, eflags: 0x1 linked
+// Checksum 0xebeb8db3, Offset: 0x17c0
+// Size: 0x4ac
+function function_ce51c2a1(attacker, upgraded, immediate) {
+    if (!isdefined(immediate)) {
+        immediate = 0;
+    }
+    self endon(#"death");
+    weapon = getweapon("gadget_immolation");
+    self clientfield::set("cybercom_immolate", 1);
+    if (immediate) {
+        self.ignoreall = 1;
+        self clientfield::set("arch_actor_fire_fx", 1);
+        self thread function_369d3494();
+        util::wait_network_frame();
+        self thread function_1ed56488("tag_weapon_chest", undefined, attacker, weapon);
+        self kill(self.origin, isdefined(attacker) ? attacker : undefined, undefined, weapon);
+        return;
+    }
+    wait(randomfloatrange(0.1, 0.75));
+    if (!attacker cybercom::function_7a7d1608(self, weapon, 0)) {
+        return;
+    }
+    self.is_disabled = 1;
+    self.ignoreall = 1;
+    tag = undefined;
+    var_17ca86c6 = undefined;
+    if (self.archetype != "human_riotshield" && self cybercom::getentitypose() == "stand" && randomint(100) < getdvarint("scr_immolation_specialanimchance", 15)) {
+        self notify(#"bhtn_action_notify", "reactImmolationLong");
+        self thread function_1ed56488("tag_inhand", 1, attacker, weapon);
+        self animscripted("immo_anim", self.origin, self.angles, "ai_base_rifle_stn_exposed_immolate_explode_midthrow");
+        self thread cybercom::function_cf64f12c("damage_pain", "immo_anim", 1, attacker, weapon);
+        self waittillmatch(#"hash_9670a76d", "grenade_right");
+        self.var_c4da69e3 = spawn("script_model", self gettagorigin("tag_inhand"));
+        self.var_c4da69e3 setmodel("wpn_t7_grenade_frag_world");
+        self.var_c4da69e3 enablelinkto();
+        self.var_c4da69e3 linkto(self, "tag_inhand");
+        playfxontag("light/fx_ability_light_chest_immolation", self.var_c4da69e3, "tag_origin");
+        self waittillmatch(#"hash_9670a76d", "explode");
+        self stopsound("gdt_immolation_human_countdown");
+        self notify(#"explode");
+        return;
+    }
+    self notify(#"bhtn_action_notify", "reactImmolation");
+    self dodamage(5, self.origin, isdefined(attacker) ? attacker : undefined, undefined, "none", "MOD_UNKNOWN", 0, weapon, -1, 1);
+    playfxontag("light/fx_ability_light_chest_immolation", self, "tag_weapon_chest");
+    self thread function_f8956516();
+    self thread function_1ed56488("tag_weapon_chest", undefined, attacker, weapon);
+}
+
+// Namespace namespace_a56eec64
+// Params 0, eflags: 0x1 linked
+// Checksum 0x412b751c, Offset: 0x1c78
+// Size: 0x52
+function function_f8956516() {
+    self endon(#"death");
+    self waittillmatch(#"bhtn_action_terminate", "specialpain");
+    self stopsound("gdt_immolation_human_countdown");
+    self notify(#"explode");
+}
+
+// Namespace namespace_a56eec64
+// Params 3, eflags: 0x1 linked
 // Checksum 0x76293f08, Offset: 0x1cd8
 // Size: 0x524
 function function_c7fa793a(attacker, upgraded, immediate) {
@@ -490,6 +548,50 @@ function function_ed100874() {
     }
     tag = level.cybercom.immolation.var_d4d82e00[randomint(level.cybercom.immolation.var_d4d82e00.size)];
     return self gettagorigin(tag);
+}
+
+// Namespace namespace_a56eec64
+// Params 3, eflags: 0x1 linked
+// Checksum 0x41e07c47, Offset: 0x2a18
+// Size: 0x2da
+function function_9eebfb7(target, var_9bc2efcb, upgraded) {
+    if (!isdefined(var_9bc2efcb)) {
+        var_9bc2efcb = 1;
+    }
+    if (!isdefined(target)) {
+        return;
+    }
+    if (self.archetype != "human") {
+        return;
+    }
+    validtargets = [];
+    if (isarray(target)) {
+        foreach (guy in target) {
+            if (!function_602b28e9(guy)) {
+                continue;
+            }
+            validtargets[validtargets.size] = guy;
+        }
+    } else {
+        if (!function_602b28e9(target)) {
+            return;
+        }
+        validtargets[validtargets.size] = target;
+    }
+    if (isdefined(var_9bc2efcb) && var_9bc2efcb) {
+        type = self cybercom::function_5e3d3aa();
+        self orientmode("face default");
+        self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
+        self waittillmatch(#"hash_39fa7e38", "fire");
+    }
+    weapon = getweapon("gadget_immolation");
+    foreach (guy in validtargets) {
+        if (!self cybercom::function_7a7d1608(guy, weapon)) {
+            continue;
+        }
+        guy thread function_9e65a7de(self, upgraded, 0, getweapon("gadget_immolation"));
+        wait(0.05);
+    }
 }
 
 // Namespace namespace_a56eec64

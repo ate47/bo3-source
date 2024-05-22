@@ -4,8 +4,6 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export array::_waitlogic_match
-
 #namespace array;
 
 // Namespace array
@@ -355,6 +353,16 @@ function wait_till_match(&array, str_notify, str_match, n_timeout) {
     if (s_tracker._array_wait_count > 0) {
         s_tracker waittill(#"array_wait");
     }
+}
+
+// Namespace array
+// Params 3, eflags: 0x1 linked
+// Checksum 0xc6a73a2a, Offset: 0x18c0
+// Size: 0x4c
+function _waitlogic_match(s_tracker, str_notify, str_match) {
+    self endon(#"death");
+    self waittillmatch(str_notify, str_match);
+    update_waitlogic_tracker(s_tracker);
 }
 
 // Namespace array

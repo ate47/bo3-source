@@ -10,6 +10,8 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("mp_vehicles");
+
 #namespace vehicle;
 
 // Namespace vehicle

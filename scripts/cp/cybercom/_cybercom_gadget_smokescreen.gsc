@@ -15,8 +15,6 @@
 #using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export namespace_11fb1f28::function_d25acb0
-
 #namespace namespace_11fb1f28;
 
 // Namespace namespace_11fb1f28
@@ -364,6 +362,26 @@ function function_2f3c403b(time) {
         level thread cybercom::debug_sphere(self.origin, self.currentradius);
         wait(0.05);
     }
+}
+
+// Namespace namespace_11fb1f28
+// Params 2, eflags: 0x1 linked
+// Checksum 0xad1bba24, Offset: 0x16a0
+// Size: 0xfc
+function function_d25acb0(var_9bc2efcb, upgraded) {
+    if (!isdefined(var_9bc2efcb)) {
+        var_9bc2efcb = 1;
+    }
+    if (!isdefined(upgraded)) {
+        upgraded = 0;
+    }
+    if (isdefined(var_9bc2efcb) && var_9bc2efcb) {
+        type = self cybercom::function_5e3d3aa();
+        self orientmode("face default");
+        self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
+        self waittillmatch(#"hash_39fa7e38", "fire");
+    }
+    level thread function_8810da3c(self, upgraded);
 }
 
 // Namespace namespace_11fb1f28

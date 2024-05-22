@@ -21,7 +21,7 @@
 #using scripts/shared/math_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export namespace_4bc37cb1::function_b1101fa6
+#using_animtree("generic");
 
 #namespace namespace_4bc37cb1;
 
@@ -315,6 +315,50 @@ function servo_shortout(attacker, weapon, upgraded, var_66a2f0cf, damage) {
         self clientfield::set("cybercom_shortout", 2);
         self ai::set_behavior_attribute("force_crawler", "gib_legs");
         self.is_disabled = 0;
+    }
+}
+
+// Namespace namespace_4bc37cb1
+// Params 2, eflags: 0x1 linked
+// Checksum 0xf5ef8e7a, Offset: 0x16e8
+// Size: 0x2ba
+function function_b1101fa6(target, var_9bc2efcb) {
+    if (!isdefined(var_9bc2efcb)) {
+        var_9bc2efcb = 1;
+    }
+    if (!isdefined(target)) {
+        return;
+    }
+    if (self.archetype != "human") {
+        return;
+    }
+    validtargets = [];
+    if (isarray(target)) {
+        foreach (guy in target) {
+            if (!function_602b28e9(guy)) {
+                continue;
+            }
+            validtargets[validtargets.size] = guy;
+        }
+    } else {
+        if (!function_602b28e9(target)) {
+            return;
+        }
+        validtargets[validtargets.size] = target;
+    }
+    if (isdefined(var_9bc2efcb) && var_9bc2efcb) {
+        type = self cybercom::function_5e3d3aa();
+        self orientmode("face default");
+        self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
+        self waittillmatch(#"hash_39fa7e38", "fire");
+    }
+    weapon = getweapon("gadget_servo_shortout");
+    foreach (guy in validtargets) {
+        if (!cybercom::function_7a7d1608(guy, weapon)) {
+            continue;
+        }
+        guy thread servo_shortout(self);
+        wait(0.05);
     }
 }
 

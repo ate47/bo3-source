@@ -33,6 +33,8 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_1f61c67f;
 
 // Namespace namespace_1f61c67f

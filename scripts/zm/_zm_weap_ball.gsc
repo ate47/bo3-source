@@ -29,6 +29,8 @@
 #using scripts/shared/ai/systems/gib;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace ball;
 
 // Namespace ball

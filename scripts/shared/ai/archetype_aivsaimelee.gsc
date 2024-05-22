@@ -5,8 +5,6 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export archetype_aivsaimelee::playscriptedmeleeanimations
-
 #namespace archetype_aivsaimelee;
 
 // Namespace archetype_aivsaimelee
@@ -431,6 +429,58 @@ function aivsaimeleeinitialize(behaviortreeentity, asmstatename) {
         behaviortreeentity thread playscriptedmeleeanimations();
     }
     return 5;
+}
+
+// Namespace archetype_aivsaimelee
+// Params 0, eflags: 0x1 linked
+// Checksum 0x600f4c53, Offset: 0x2378
+// Size: 0x564
+function playscriptedmeleeanimations() {
+    self endon(#"death");
+    /#
+        assert(isdefined(self._ai_melee_opponent));
+    #/
+    opponent = self._ai_melee_opponent;
+    if (!(isalive(self) && isalive(opponent))) {
+        /#
+            record3dtext("AIvsAIMeleeAction", self.origin, (1, 0.5, 0), "AIvsAIMeleeAction", self, 0.4);
+        #/
+        return 0;
+    }
+    if (isdefined(opponent._ai_melee_attacker_loser) && opponent._ai_melee_attacker_loser) {
+        opponent animscripted("aivsaimeleeloser", self gettagorigin("tag_sync"), self gettagangles("tag_sync"), opponent._ai_melee_animname, "normal", undefined, 1, 0.2, 0.3);
+        self animscripted("aivsaimeleewinner", self gettagorigin("tag_sync"), self gettagangles("tag_sync"), self._ai_melee_animname, "normal", undefined, 1, 0.2, 0.3);
+        /#
+            recordcircle(self gettagorigin("AIvsAIMeleeAction"), 2, (1, 0.5, 0), "AIvsAIMeleeAction");
+            recordline(self gettagorigin("AIvsAIMeleeAction"), opponent.origin, (1, 0.5, 0), "AIvsAIMeleeAction");
+        #/
+    } else {
+        self animscripted("aivsaimeleewinner", opponent gettagorigin("tag_sync"), opponent gettagangles("tag_sync"), self._ai_melee_animname, "normal", undefined, 1, 0.2, 0.3);
+        opponent animscripted("aivsaimeleeloser", opponent gettagorigin("tag_sync"), opponent gettagangles("tag_sync"), opponent._ai_melee_animname, "normal", undefined, 1, 0.2, 0.3);
+        /#
+            recordcircle(opponent gettagorigin("AIvsAIMeleeAction"), 2, (1, 0.5, 0), "AIvsAIMeleeAction");
+            recordline(opponent gettagorigin("AIvsAIMeleeAction"), self.origin, (1, 0.5, 0), "AIvsAIMeleeAction");
+        #/
+    }
+    opponent thread handledeath(opponent._ai_melee_animname, self);
+    if (getdvarint("tu1_aivsaiMeleeDisableGib", 1)) {
+        if (opponent ai::has_behavior_attribute("can_gib")) {
+            opponent ai::set_behavior_attribute("can_gib", 0);
+        }
+    }
+    self thread processinterrupteddeath();
+    opponent thread processinterrupteddeath();
+    self waittillmatch(#"aivsaimeleewinner", "end");
+    self.fixedlinkyawonly = 0;
+    aiutility::cleanupchargemeleeattack(self);
+    if (isdefined(self._ai_melee_attachedknife) && self._ai_melee_attachedknife) {
+        self detach("t6_wpn_knife_melee", "TAG_WEAPON_LEFT");
+        self._ai_melee_attachedknife = 0;
+    }
+    self.blockingpain = 0;
+    self._ai_melee_initiator = undefined;
+    self notify(#"meleecompleted");
+    self pathmode("move delayed", 1, 3);
 }
 
 // Namespace archetype_aivsaimelee

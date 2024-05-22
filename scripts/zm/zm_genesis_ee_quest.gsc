@@ -40,6 +40,8 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("zm_genesis");
+
 #namespace namespace_fdab22a5;
 
 // Namespace namespace_fdab22a5

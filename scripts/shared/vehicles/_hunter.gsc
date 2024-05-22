@@ -15,6 +15,8 @@
 #using scripts/shared/gameskill_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace hunter;
 
 // Namespace hunter

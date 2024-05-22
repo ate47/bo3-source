@@ -5,6 +5,8 @@
 #using scripts/shared/challenges_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("mp_vehicles");
+
 #namespace destructible;
 
 // Namespace destructible

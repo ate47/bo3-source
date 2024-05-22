@@ -14,6 +14,8 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_8e2647d0;
 
 // Namespace namespace_8e2647d0

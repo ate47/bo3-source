@@ -6,6 +6,8 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("mp_riotshield");
+
 #namespace riotshield;
 
 // Namespace riotshield

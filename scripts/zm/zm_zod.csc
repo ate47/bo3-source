@@ -66,6 +66,8 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace zm_zod;
 
 // Namespace zm_zod

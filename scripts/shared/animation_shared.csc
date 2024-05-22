@@ -6,8 +6,6 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/animation_debug_shared;
 
-// Can't decompile export animation::waittill_end
-
 #namespace animation;
 
 // Namespace animation
@@ -115,6 +113,15 @@ function _play(animation, v_origin_or_ent, v_angles_or_tag, n_rate, n_blend_in, 
     flagsys::clear("firstframe");
     waittillframeend();
     flagsys::clear("scripted_anim_this_frame");
+}
+
+// Namespace animation
+// Params 0, eflags: 0x5 linked
+// Checksum 0xc638e379, Offset: 0x990
+// Size: 0x26
+function waittill_end() {
+    level endon(#"demo_jump");
+    self waittillmatch(#"_anim_notify_", "end");
 }
 
 // Namespace animation

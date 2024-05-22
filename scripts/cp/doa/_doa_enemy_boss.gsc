@@ -16,9 +16,7 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export namespace_4973e019::function_555608c7
-
-// Can't decompile export namespace_4973e019::function_ce73145c
+#using_animtree("generic");
 
 #namespace namespace_4973e019;
 
@@ -91,6 +89,61 @@ function function_d95d34bd(spawner) {
 }
 
 // Namespace namespace_4973e019
+// Params 0, eflags: 0x5 linked
+// Checksum 0xf576030c, Offset: 0x9b0
+// Size: 0x452
+function function_555608c7() {
+    self endon(#"death");
+    self.takedamage = 1;
+    while (true) {
+        amount, attacker = self waittill(#"damage");
+        if (isdefined(attacker) && isplayer(attacker)) {
+            break;
+        }
+    }
+    self thread namespace_1a381543::function_90118d8c("zmb_simianaut_roar");
+    self.health = 999999;
+    self.takedamage = 0;
+    waittillframeend();
+    self clearforcedgoal();
+    self clearpath();
+    self setgoal(self.origin, 1);
+    self.var_88168473 = 1;
+    if (isdefined(attacker) && isplayer(attacker)) {
+        self.ignoreall = 0;
+        self.favoriteenemy = attacker;
+        self setentitytarget(attacker);
+        self orientmode("face enemy");
+    }
+    self.anchor = spawn("script_origin", self.origin);
+    self.anchor thread namespace_49107f3a::function_981c685d(self);
+    self.anchor.angles = self.angles;
+    self linkto(self.anchor);
+    anim_ang = vectortoangles(attacker.origin - self.origin);
+    self.anchor rotateto((0, anim_ang[1], 0), 0.5);
+    self.anchor waittill(#"rotatedone");
+    self thread namespace_1a381543::function_90118d8c("zmb_simianaut_roar");
+    self forceteleport(self.origin, (0, anim_ang[1], 0));
+    self unlink();
+    self orientmode("face enemy");
+    self animscripted("pissedoff", self.origin, self.angles, "ai_zombie_doa_simianaut_ground_pound");
+    self waittillmatch(#"hash_3cc81578", "zombie_melee");
+    playfx(level._effect["ground_pound"], self.origin);
+    self waittillmatch(#"hash_3cc81578", "end");
+    self.anchor delete();
+    self.var_faa677d7 = gettime() + 10000;
+    self thread namespace_1a381543::function_90118d8c("zmb_simianaut_roar");
+    self.zombie_move_speed = "run";
+    if (isdefined(attacker) && isplayer(attacker)) {
+        self setgoal(attacker.origin, 1);
+        self.ignoreall = 0;
+        self.favoriteenemy = attacker;
+        self waittill(#"goal");
+    }
+    self.var_88168473 = undefined;
+}
+
+// Namespace namespace_4973e019
 // Params 1, eflags: 0x5 linked
 // Checksum 0x3e01cd2c, Offset: 0xe10
 // Size: 0x2c
@@ -121,6 +174,55 @@ function function_a2756e92() {
     self.var_88168473 = undefined;
     self.zombie_move_speed = "run";
     self thread function_4e81959(20);
+}
+
+// Namespace namespace_4973e019
+// Params 0, eflags: 0x1 linked
+// Checksum 0xee2fcf87, Offset: 0xfa8
+// Size: 0x316
+function function_ce73145c() {
+    trigger = spawn("trigger_radius", self.origin, 2, 32, 50);
+    trigger.targetname = "_doaBossDamageShield";
+    trigger enablelinkto();
+    trigger linkto(self, "tag_origin");
+    trigger endon(#"death");
+    trigger thread namespace_49107f3a::function_783519c1("exit_taken", 1);
+    trigger thread namespace_49107f3a::function_981c685d(self);
+    trigger.silverback = 1;
+    while (isdefined(self)) {
+        guy = trigger waittill(#"trigger");
+        if (!isdefined(guy)) {
+            continue;
+        }
+        if (isdefined(level.var_a7749866)) {
+            continue;
+        }
+        if (isdefined(self)) {
+            if (!isplayer(guy)) {
+                self animscripted("pissedoff", self.origin, self.angles, "ai_zombie_doa_simianaut_attack_v1");
+                self waittillmatch(#"hash_3cc81578", "zombie_melee");
+                if (isdefined(guy)) {
+                    playfx(level._effect["ground_pound"], guy.origin);
+                    if (isdefined(guy)) {
+                        guy dodamage(guy.health + 107, self.origin, undefined, undefined, "MOD_EXPLOSIVE");
+                    }
+                }
+                continue;
+            }
+            if (!isdefined(guy.doa)) {
+                continue;
+            }
+            if (isdefined(guy.doa.var_1db1e638) && gettime() < guy.doa.var_1db1e638) {
+                continue;
+            }
+            guy dodamage(666, guy.origin, self, self);
+            if (isdefined(guy.doa)) {
+                guy.doa.var_1db1e638 = gettime() + 10000;
+                self animscripted("pissedoff", self.origin, self.angles, "ai_zombie_doa_simianaut_chestbeat");
+                self waittillmatch(#"hash_3cc81578", "end");
+            }
+        }
+    }
 }
 
 // Namespace namespace_4973e019

@@ -11,6 +11,8 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_f76f5b63;
 
 // Namespace namespace_f76f5b63

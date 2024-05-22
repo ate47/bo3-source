@@ -15,6 +15,8 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic_human");
+
 #namespace namespace_3f3eaecb;
 
 // Namespace namespace_3f3eaecb

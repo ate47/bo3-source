@@ -11,6 +11,8 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_d8d03071;
 
 // Namespace namespace_d8d03071

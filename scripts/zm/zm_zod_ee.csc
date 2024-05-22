@@ -18,6 +18,8 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace namespace_ba13c715;
 
 // Namespace namespace_ba13c715

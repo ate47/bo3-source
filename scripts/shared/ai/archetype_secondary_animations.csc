@@ -3,6 +3,8 @@
 #using scripts/shared/array_shared;
 #using scripts/shared/ai_shared;
 
+#using_animtree("generic");
+
 #namespace archetype_secondary_animations;
 
 // Namespace archetype_secondary_animations

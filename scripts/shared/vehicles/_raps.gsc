@@ -10,6 +10,8 @@
 #using scripts/shared/math_shared;
 #using scripts/codescripts/struct;
 
+#using_animtree("generic");
+
 #namespace raps;
 
 // Namespace raps

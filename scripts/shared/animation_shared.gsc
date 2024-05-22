@@ -8,8 +8,6 @@
 #using scripts/shared/animation_debug_shared;
 #using scripts/shared/ai_shared;
 
-// Can't decompile export animation::_play
-
 #namespace animation;
 
 // Namespace animation
@@ -117,6 +115,93 @@ function stop(n_blend) {
     }
 
 #/
+
+// Namespace animation
+// Params 10, eflags: 0x1 linked
+// Checksum 0x2c4a6fc7, Offset: 0x8d8
+// Size: 0x64c
+function _play(animation, v_origin_or_ent, v_angles_or_tag, n_rate, n_blend_in, n_blend_out, n_lerp, n_start_time, b_show_player_firstperson_weapon, b_unlink_after_completed) {
+    self endon(#"death");
+    self notify(#"new_scripted_anim");
+    self endon(#"new_scripted_anim");
+    /#
+        debug_print(animation, "end");
+    #/
+    flagsys::set_val("firstframe", n_rate == 0);
+    flagsys::set("scripted_anim_this_frame");
+    flagsys::set("scriptedanim");
+    if (!isdefined(v_origin_or_ent)) {
+        v_origin_or_ent = self;
+    }
+    b_link = 0;
+    if (isdefined(self.n_script_anim_rate)) {
+        n_rate = self.n_script_anim_rate;
+    }
+    if (isvec(v_origin_or_ent) && isvec(v_angles_or_tag)) {
+        self animscripted(animation, v_origin_or_ent, v_angles_or_tag, animation, "normal", undefined, n_rate, n_blend_in, n_lerp, n_start_time, 1, b_show_player_firstperson_weapon);
+    } else if (isstring(v_angles_or_tag)) {
+        /#
+            assert(isdefined(v_origin_or_ent.model), "end" + animation + "end" + v_angles_or_tag + "end");
+        #/
+        v_pos = v_origin_or_ent gettagorigin(v_angles_or_tag);
+        v_ang = v_origin_or_ent gettagangles(v_angles_or_tag);
+        if (n_lerp > 0) {
+            prevorigin = self.origin;
+            prevangles = self.angles;
+        }
+        if (!isdefined(v_pos)) {
+            v_pos = v_origin_or_ent.origin;
+            v_ang = v_origin_or_ent.angles;
+        }
+        if (isactor(self)) {
+            self forceteleport(v_pos, v_ang);
+        } else {
+            self.origin = v_pos;
+            self.angles = v_ang;
+        }
+        b_link = 1;
+        self linkto(v_origin_or_ent, v_angles_or_tag, (0, 0, 0), (0, 0, 0));
+        if (n_lerp > 0) {
+            if (isactor(self)) {
+                self forceteleport(prevorigin, prevangles);
+            } else {
+                self.origin = prevorigin;
+                self.angles = prevangles;
+            }
+        }
+        self animscripted(animation, v_pos, v_ang, animation, "normal", undefined, n_rate, n_blend_in, n_lerp, n_start_time, 1, b_show_player_firstperson_weapon);
+    } else {
+        v_angles = isdefined(v_origin_or_ent.angles) ? v_origin_or_ent.angles : (0, 0, 0);
+        self animscripted(animation, v_origin_or_ent.origin, v_angles, animation, "normal", undefined, n_rate, n_blend_in, n_lerp, n_start_time, 1, b_show_player_firstperson_weapon);
+    }
+    if (isplayer(self)) {
+        set_player_clamps();
+    }
+    /#
+        self thread anim_info_render_thread(animation, v_origin_or_ent, v_angles_or_tag, n_rate, n_blend_in, n_blend_out, n_lerp);
+    #/
+    if (!isanimlooping(animation) && n_blend_out > 0 && n_rate > 0 && n_start_time < 1) {
+        if (!animhasnotetrack(animation, "start_ragdoll")) {
+            self thread _blend_out(animation, n_blend_out, n_rate, n_start_time);
+        }
+    }
+    self thread handle_notetracks(animation);
+    if (getanimframecount(animation) > 1 || isanimlooping(animation)) {
+        self waittillmatch(animation, "end");
+    } else {
+        wait(0.05);
+    }
+    if (isdefined(b_unlink_after_completed) && b_link && b_unlink_after_completed) {
+        self unlink();
+    }
+    flagsys::clear("scriptedanim");
+    flagsys::clear("firstframe");
+    /#
+        debug_print(animation, "end");
+    #/
+    waittillframeend();
+    flagsys::clear("scripted_anim_this_frame");
+}
 
 // Namespace animation
 // Params 4, eflags: 0x1 linked

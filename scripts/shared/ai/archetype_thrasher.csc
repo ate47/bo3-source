@@ -5,6 +5,8 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/ai_shared;
 
+#using_animtree("generic");
+
 #namespace namespace_88aa1b1a;
 
 // Namespace namespace_88aa1b1a

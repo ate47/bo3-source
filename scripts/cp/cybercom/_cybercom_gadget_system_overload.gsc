@@ -15,9 +15,7 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-// Can't decompile export namespace_528b4613::function_5839c4ac
-
-// Can't decompile export namespace_528b4613::system_overload
+#using_animtree("generic");
 
 #namespace namespace_528b4613;
 
@@ -231,6 +229,133 @@ function function_b4223599(attacker, weapon) {
     }
     self dodamage(damage, self.origin, attacker, undefined, "none", "MOD_GRENADE_SPLASH", 0, getweapon("emp_grenade"), -1, 1);
     self.var_7c04bee3 = gettime() + getdvarint("scr_system_overload_vehicle_cooldown_seconds", 5) * 1000;
+}
+
+// Namespace namespace_528b4613
+// Params 3, eflags: 0x1 linked
+// Checksum 0x49c03469, Offset: 0x1138
+// Size: 0x2c2
+function function_5839c4ac(target, var_9bc2efcb, var_ba115ce0) {
+    if (!isdefined(var_9bc2efcb)) {
+        var_9bc2efcb = 1;
+    }
+    if (!isdefined(target)) {
+        return;
+    }
+    if (self.archetype != "human") {
+        return;
+    }
+    validtargets = [];
+    if (isarray(target)) {
+        foreach (guy in target) {
+            if (!function_602b28e9(guy)) {
+                continue;
+            }
+            validtargets[validtargets.size] = guy;
+        }
+    } else {
+        if (!function_602b28e9(target)) {
+            return;
+        }
+        validtargets[validtargets.size] = target;
+    }
+    if (isdefined(var_9bc2efcb) && var_9bc2efcb) {
+        type = self cybercom::function_5e3d3aa();
+        self orientmode("face default");
+        self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
+        self waittillmatch(#"hash_39fa7e38", "fire");
+    }
+    weapon = getweapon("gadget_system_overload");
+    foreach (guy in validtargets) {
+        if (!cybercom::function_7a7d1608(guy, weapon)) {
+            continue;
+        }
+        guy thread system_overload(self, var_ba115ce0);
+        wait(0.05);
+    }
+}
+
+// Namespace namespace_528b4613
+// Params 4, eflags: 0x1 linked
+// Checksum 0x7ede5a05, Offset: 0x1408
+// Size: 0x716
+function system_overload(attacker, var_ba115ce0, weapon, var_9caedf97) {
+    if (!isdefined(var_9caedf97)) {
+        var_9caedf97 = 1;
+    }
+    self endon(#"death");
+    if (!isdefined(weapon)) {
+        weapon = getweapon("gadget_system_overload");
+    }
+    self notify(#"hash_f8c5dd60", weapon, attacker);
+    if (isvehicle(self)) {
+        self thread function_b4223599(attacker, weapon);
+        return;
+    }
+    if (!cybercom::function_76e3026d(self)) {
+        self kill(self.origin, isdefined(attacker) ? attacker : undefined, undefined, weapon);
+        return;
+    }
+    if (self cybercom::function_421746e0()) {
+        self kill(self.origin, isdefined(attacker) ? attacker : undefined, undefined, weapon);
+        return;
+    }
+    self.is_disabled = 1;
+    if (isdefined(var_ba115ce0)) {
+        disabletime = var_ba115ce0;
+    } else if (isdefined(attacker.cybercom) && isdefined(attacker.cybercom.var_2515cbbf)) {
+        disabletime = attacker.cybercom.var_2515cbbf;
+    } else {
+        disabletime = getdvarfloat("scr_system_overload_lifetime", 6.3) * 1000;
+    }
+    self clientfield::set("cybercom_sysoverload", 1);
+    wait(randomfloatrange(0, 0.75));
+    var_8e113fac = gettime() + disabletime + randomint(3000);
+    type = self cybercom::function_5e3d3aa();
+    var_c60a5dd5 = type == "crc";
+    var_fea6d69a = 0;
+    var_243ca3e3 = self.pathgoalpos;
+    if (self ai::has_behavior_attribute("move_mode")) {
+        var_fea6d69a = self ai::get_behavior_attribute("move_mode") == "marching";
+    }
+    self thread function_53cfe88a();
+    self orientmode("face default");
+    self ai::set_behavior_attribute("robot_lights", 1);
+    self animscripted("shutdown_anim", self.origin, self.angles, "ai_robot_base_" + type + "_shutdown", "normal", generic%root, 1, 0.2);
+    self thread cybercom::function_cf64f12c("damage_pain", "shutdown_anim", 1, attacker, weapon);
+    self thread cybercom::function_cf64f12c("notify_melee_damage", "shutdown_anim", 1, attacker, weapon);
+    self thread cybercom::function_cf64f12c("breakout_sysoverload_loop", "shutdown_anim", 0, attacker, weapon);
+    self waittillmatch(#"hash_a2645c65", "end");
+    waittillframeend();
+    self ai::set_behavior_attribute("robot_lights", 2);
+    self.ignoreall = 1;
+    while (gettime() < var_8e113fac) {
+        if (var_c60a5dd5) {
+            blackboard::setblackboardattribute(self, "_stance", "crouch");
+        }
+        self dodamage(2, self.origin, isdefined(attacker) ? attacker : undefined, undefined, "none", "MOD_UNKNOWN", 0, weapon, -1, 1);
+        self waittillmatch(#"bhtn_action_terminate", "specialpain");
+    }
+    if (isalive(self) && !self isragdoll()) {
+        self ai::set_behavior_attribute("robot_lights", 0);
+        self.ignoreall = 0;
+        self clientfield::set("cybercom_sysoverload", 2);
+        self animscripted("restart_anim", self.origin, self.angles, "ai_robot_base_" + type + "_shutdown_2_alert");
+        self thread cybercom::function_cf64f12c("damage_pain", "restart_anim", 1, attacker, weapon);
+        self thread cybercom::function_cf64f12c("notify_melee_damage", "restart_anim", 1, attacker, weapon);
+        self waittillmatch(#"hash_82518b16", "end");
+        if (var_c60a5dd5) {
+            blackboard::setblackboardattribute(self, "_stance", "crouch");
+        }
+        if (var_fea6d69a) {
+            self ai::set_behavior_attribute("move_mode", "marching");
+        }
+        if (isdefined(var_243ca3e3)) {
+            self useposition(var_243ca3e3);
+            self clearpath();
+        }
+        self.is_disabled = undefined;
+    }
 }
 
 // Namespace namespace_528b4613
