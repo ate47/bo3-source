@@ -42,7 +42,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x92a36df9, Offset: 0xeb0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("prop", &__init__, undefined, undefined);
 }
 

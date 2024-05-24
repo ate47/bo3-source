@@ -24,7 +24,7 @@
 // Params 0, eflags: 0x5 linked
 // Checksum 0x4cc458c9, Offset: 0x450
 // Size: 0x2b8
-function function_542758d0() {
+function private function_542758d0() {
     level.doa.var_f5e35752 = [];
     level.doa.var_5a609640 = [];
     challenges = struct::get_array("doa_challenge_def");
@@ -75,7 +75,7 @@ function function_8c6e89b4(round) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x231ca1ce, Offset: 0x798
 // Size: 0x1e8
-function function_5f5d09ae() {
+function private function_5f5d09ae() {
     def = function_8c6e89b4(level.doa.round_number);
     if (!isdefined(def)) {
         level.doa.var_d0cde02c = undefined;
@@ -236,7 +236,7 @@ function main() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x8a8c1534, Offset: 0x13b0
 // Size: 0xc4
-function function_d87cb356() {
+function private function_d87cb356() {
     self notify(#"hash_d87cb356");
     self endon(#"hash_d87cb356");
     level endon(#"hash_24d3a44");
@@ -359,7 +359,7 @@ function function_55762a85(spawn_origin) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe853d736, Offset: 0x1a78
 // Size: 0x94
-function function_ff7f941a(def) {
+function private function_ff7f941a(def) {
     num = namespace_49107f3a::function_2f0d697f(def.spawner);
     if (num >= def.var_84aef63e) {
         return false;
@@ -524,7 +524,7 @@ function function_87703158(var_372a8daa) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xe3dca043, Offset: 0x2748
 // Size: 0x184
-function function_da304666(wave_number, round_number) {
+function private function_da304666(wave_number, round_number) {
     wave = spawnstruct();
     wave.var_b051bab1 = 1 + randomfloatrange(0, 1 + wave_number * 0.3) + randomfloatrange(0, 1 + round_number * 0.2);
     wave.spawn_side = namespace_49107f3a::function_5b4fbaef();
@@ -561,7 +561,7 @@ function function_703bb8b2(round_number) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x332873f7, Offset: 0x2ae8
 // Size: 0x46a
-function function_d9345c74() {
+function private function_d9345c74() {
     foreach (player in getplayers()) {
         if (isdefined(player.doa) && player.doa.var_e1956fd2 > 0) {
             player globallogic_score::incpersstat("score", player.doa.var_e1956fd2, 1, 1);

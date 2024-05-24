@@ -20,7 +20,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd56f9a47, Offset: 0x308
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_bonus_points_player", &__init__, undefined, undefined);
 }
 

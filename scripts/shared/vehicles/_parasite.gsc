@@ -23,7 +23,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x5e487077, Offset: 0x480
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("parasite", &__init__, undefined, undefined);
 }
 
@@ -60,7 +60,7 @@ function function_5f6cf4b2() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xa9e4aac1, Offset: 0x6d0
 // Size: 0x118
-function is_target_valid(target) {
+function private is_target_valid(target) {
     if (!isdefined(target)) {
         return 0;
     }
@@ -141,7 +141,7 @@ function function_61692488(enemy) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x30175cb4, Offset: 0xa48
 // Size: 0x118
-function function_ec393181() {
+function private function_ec393181() {
     self endon(#"change_state");
     self endon(#"death");
     for (;;) {

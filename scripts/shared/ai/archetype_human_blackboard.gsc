@@ -50,7 +50,7 @@ function function_31efa8fd() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x79234b33, Offset: 0x580
 // Size: 0x36
-function bb_getarrivaltype() {
+function private bb_getarrivaltype() {
     if (self ai::get_behavior_attribute("disablearrivals")) {
         return "dont_arrive_at_goal";
     }
@@ -61,7 +61,7 @@ function bb_getarrivaltype() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x8de58aa4, Offset: 0x5c0
 // Size: 0x3a
-function bb_gettacticalarrivalfacingyaw() {
+function private bb_gettacticalarrivalfacingyaw() {
     return angleclamp180(self.angles[1] - self.node.angles[1]);
 }
 
@@ -69,7 +69,7 @@ function bb_gettacticalarrivalfacingyaw() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x3714cb1b, Offset: 0x608
 // Size: 0x1ba
-function bb_getlocomotionmovementtype() {
+function private bb_getlocomotionmovementtype() {
     if (!ai::getaiattribute(self, "disablesprint")) {
         if (ai::getaiattribute(self, "sprint")) {
             return "human_locomotion_movement_sprint";
@@ -102,7 +102,7 @@ function bb_getlocomotionmovementtype() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xafbb2988, Offset: 0x7d0
 // Size: 0x1ce
-function bb_getcoverflankability() {
+function private bb_getcoverflankability() {
     if (self asmistransitionrunning()) {
         return "unflankable";
     }

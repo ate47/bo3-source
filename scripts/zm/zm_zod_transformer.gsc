@@ -21,12 +21,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0xcfe6ee67, Offset: 0x318
 // Size: 0x2c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_zod_transformer", undefined, &__main__, undefined);
 }
 
 // Namespace namespace_ded850b0
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x896f7415, Offset: 0x350
 // Size: 0x74
 function __main__() {
@@ -36,7 +36,7 @@ function __main__() {
 }
 
 // Namespace namespace_ded850b0
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb15d153a, Offset: 0x3d0
 // Size: 0x132
 function init_transformers() {
@@ -51,12 +51,12 @@ function init_transformers() {
 }
 
 // Namespace namespace_ded850b0
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd720bc3b, Offset: 0x510
 // Size: 0x14c
 function function_7734548b(var_b46b59df) {
     /#
-        assert(isdefined(self.script_int), "bminteract" + self.origin);
+        assert(isdefined(self.script_int), "<unknown string>" + self.origin);
     #/
     n_power_index = self.script_int;
     self thread namespace_215602b6::function_c5c7aef3(var_b46b59df);

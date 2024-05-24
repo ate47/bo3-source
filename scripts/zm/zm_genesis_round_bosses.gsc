@@ -42,12 +42,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc9782b84, Offset: 0x578
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_genesis_round_bosses", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_6929903c
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf0124328, Offset: 0x5b8
 // Size: 0x3c
 function __init__() {
@@ -56,7 +56,7 @@ function __init__() {
 }
 
 // Namespace namespace_6929903c
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x81f48886, Offset: 0x600
 // Size: 0xf0
 function function_755b4548() {
@@ -78,7 +78,7 @@ function function_755b4548() {
 }
 
 // Namespace namespace_6929903c
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1e4a799, Offset: 0x6f8
 // Size: 0x36e
 function function_c68599fd() {
@@ -151,7 +151,7 @@ function function_c68599fd() {
 }
 
 // Namespace namespace_6929903c
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x27a5f2dc, Offset: 0xa70
 // Size: 0x244
 function spawn_boss(str_enemy, v_pos) {
@@ -192,7 +192,7 @@ function spawn_boss(str_enemy, v_pos) {
 }
 
 // Namespace namespace_6929903c
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe2cb723a, Offset: 0xcc0
 // Size: 0x1ba
 function function_830cdf99() {
@@ -222,7 +222,7 @@ function function_830cdf99() {
 }
 
 // Namespace namespace_6929903c
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x814b8784, Offset: 0xe88
 // Size: 0x2e
 function function_26f9f957(var_9c967ca3, e_attacker) {

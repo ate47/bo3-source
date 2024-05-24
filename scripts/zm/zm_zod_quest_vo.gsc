@@ -10,7 +10,7 @@
 #namespace namespace_6294c69f;
 
 // Namespace namespace_6294c69f
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1b0
 // Size: 0x4
 function function_ba281e3f() {
@@ -32,7 +32,7 @@ function function_3e539ffc() {
 function function_16d66993(convo) {
     self endon(#"disconnect");
     /#
-        assert(isdefined(convo), "plr_1");
+        assert(isdefined(convo), "<unknown string>");
     #/
     if (!level flag::get("story_vo_playing")) {
         level flag::set("story_vo_playing");
@@ -60,7 +60,7 @@ function function_16d66993(convo) {
 }
 
 // Namespace namespace_6294c69f
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xfb29d215, Offset: 0x3e8
 // Size: 0x3c
 function function_b80e4987() {
@@ -75,7 +75,7 @@ function function_b80e4987() {
 // Size: 0x704
 function function_b1c2ac2a(convo) {
     /#
-        assert(isdefined(convo), "plr_1");
+        assert(isdefined(convo), "<unknown string>");
     #/
     players = getplayers();
     if (players.size == 4 && !level flag::get("story_vo_playing")) {

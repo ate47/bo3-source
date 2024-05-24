@@ -22,7 +22,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa60efe9, Offset: 0x778
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("vehicle_shared", &__init__, &__main__, undefined);
 }
 
@@ -690,7 +690,7 @@ function get_on_path(path_start, str_key) {
 }
 
 // Namespace vehicle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5d764080, Offset: 0x30f0
 // Size: 0x34
 function get_off_path() {
@@ -1857,7 +1857,7 @@ function unload_node_helicopter(node) {
 }
 
 // Namespace vehicle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7f7f9e4d, Offset: 0x69d0
 // Size: 0x7c
 function detach_path() {
@@ -1941,7 +1941,7 @@ function simple_spawn_single(name, b_supress_assert) {
 }
 
 // Namespace vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd2315509, Offset: 0x6ec8
 // Size: 0x9c
 function simple_spawn_single_and_drive(name) {
@@ -2282,7 +2282,7 @@ function should_update_damage_fx_level(currenthealth, damage, maxhealth) {
 }
 
 // Namespace vehicle
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x2d151fa6, Offset: 0x7f08
 // Size: 0x74
 function update_damage_fx_level(currenthealth, damage, maxhealth) {
@@ -2593,7 +2593,7 @@ function is_on(vehicle) {
 }
 
 // Namespace vehicle
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x8e6c9390, Offset: 0x8aa0
 // Size: 0x158
 function add_spawn_function(veh_targetname, spawn_func, param1, param2, param3, param4) {
@@ -2615,7 +2615,7 @@ function add_spawn_function(veh_targetname, spawn_func, param1, param2, param3, 
 }
 
 // Namespace vehicle
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x94639992, Offset: 0x8c00
 // Size: 0x158
 function add_spawn_function_by_type(veh_type, spawn_func, param1, param2, param3, param4) {
@@ -2637,7 +2637,7 @@ function add_spawn_function_by_type(veh_type, spawn_func, param1, param2, param3
 }
 
 // Namespace vehicle
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0x76a27c14, Offset: 0x8d60
 // Size: 0x158
 function add_hijack_function(veh_targetname, spawn_func, param1, param2, param3, param4) {
@@ -2662,7 +2662,7 @@ function add_hijack_function(veh_targetname, spawn_func, param1, param2, param3,
 // Params 0, eflags: 0x5 linked
 // Checksum 0x566bf525, Offset: 0x8ec0
 // Size: 0x18e
-function _watch_for_hijacked_vehicles() {
+function private _watch_for_hijacked_vehicles() {
     while (true) {
         clone = level waittill(#"clonedentity");
         str_targetname = clone.targetname;
@@ -2863,7 +2863,7 @@ function monitor_damage_as_occupant(player) {
 }
 
 // Namespace vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x99a00f9, Offset: 0x9828
 // Size: 0x74
 function kill_vehicle(attacker) {
@@ -2872,7 +2872,7 @@ function kill_vehicle(attacker) {
 }
 
 // Namespace vehicle
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3b9c13ca, Offset: 0x98a8
 // Size: 0x8e
 function player_is_driver() {

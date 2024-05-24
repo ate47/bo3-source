@@ -27,12 +27,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0xad6dad33, Offset: 0x4a8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_shadow_zombie", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_df1a4a92
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x95da11f4, Offset: 0x4e8
 // Size: 0x5c
 function __init__() {
@@ -46,10 +46,10 @@ function __init__() {
 }
 
 // Namespace namespace_df1a4a92
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xd04281e1, Offset: 0x550
 // Size: 0xc4
-function register_clientfields() {
+function private register_clientfields() {
     clientfield::register("actor", "shadow_zombie_clientfield_aura_fx", 15000, 1, "int");
     clientfield::register("actor", "shadow_zombie_clientfield_death_fx", 15000, 1, "int");
     clientfield::register("actor", "shadow_zombie_clientfield_damaged_fx", 15000, 1, "counter");
@@ -57,7 +57,7 @@ function register_clientfields() {
 }
 
 // Namespace namespace_df1a4a92
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc1f1e85d, Offset: 0x620
 // Size: 0x12c
 function function_1b2b62b() {
@@ -76,7 +76,7 @@ function function_1b2b62b() {
 }
 
 // Namespace namespace_df1a4a92
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6857e524, Offset: 0x758
 // Size: 0x78
 function function_9632763f() {
@@ -92,7 +92,7 @@ function function_9632763f() {
 }
 
 // Namespace namespace_df1a4a92
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa834f1a7, Offset: 0x7d8
 // Size: 0x114
 function function_32a2f099() {
@@ -112,7 +112,7 @@ function function_32a2f099() {
 }
 
 // Namespace namespace_df1a4a92
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xa63440ea, Offset: 0x8f8
 // Size: 0x130
 function function_ada13668(v_origin, n_duration, var_526fc172) {
@@ -136,10 +136,10 @@ function function_ada13668(v_origin, n_duration, var_526fc172) {
 }
 
 // Namespace namespace_df1a4a92
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xc3161b04, Offset: 0xa30
 // Size: 0x5c
-function function_57b55fe1(n_duration) {
+function private function_57b55fe1(n_duration) {
     wait(n_duration);
     if (isdefined(self)) {
         if (isdefined(self.trigger)) {
@@ -150,10 +150,10 @@ function function_57b55fe1(n_duration) {
 }
 
 // Namespace namespace_df1a4a92
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x9011c59a, Offset: 0xa98
 // Size: 0x1a2
-function function_48fccb59(var_7478a6b4) {
+function private function_48fccb59(var_7478a6b4) {
     if (!isdefined(var_7478a6b4)) {
         var_7478a6b4 = undefined;
     }
@@ -181,7 +181,7 @@ function function_48fccb59(var_7478a6b4) {
 }
 
 // Namespace namespace_df1a4a92
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa1c4d687, Offset: 0xc48
 // Size: 0xda
 function function_ab84e253(v_origin, n_radius) {
@@ -197,35 +197,35 @@ function function_ab84e253(v_origin, n_radius) {
 /#
 
     // Namespace namespace_df1a4a92
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xed321119, Offset: 0xd30
     // Size: 0x228
     function function_71c88f2b() {
         wait(0.05);
         level waittill(#"start_zombie_round_logic");
         wait(0.05);
-        str_cmd = "shadow_zombie_clientfield_damaged_fx";
+        str_cmd = "<unknown string>";
         adddebugcommand(str_cmd);
-        str_cmd = "shadow_zombie_clientfield_damaged_fx";
+        str_cmd = "<unknown string>";
         adddebugcommand(str_cmd);
         while (true) {
-            string = getdvarstring("shadow_zombie_clientfield_damaged_fx");
-            if (string == "shadow_zombie_clientfield_damaged_fx") {
+            string = getdvarstring("<unknown string>");
+            if (string == "<unknown string>") {
                 a_zombies = namespace_57695b4d::function_d41418b8();
                 if (a_zombies.size > 0) {
                     foreach (zombie in a_zombies) {
                         zombie function_1b2b62b();
                     }
                 }
-                setdvar("shadow_zombie_clientfield_damaged_fx", "shadow_zombie_clientfield_damaged_fx");
+                setdvar("<unknown string>", "<unknown string>");
             }
-            if (string == "shadow_zombie_clientfield_damaged_fx") {
+            if (string == "<unknown string>") {
                 a_zombies = namespace_57695b4d::function_d41418b8();
                 if (a_zombies.size > 0) {
                     a_zombies = arraysortclosest(a_zombies, level.players[0].origin);
                     a_zombies[0] function_1b2b62b();
                 }
-                setdvar("shadow_zombie_clientfield_damaged_fx", "shadow_zombie_clientfield_damaged_fx");
+                setdvar("<unknown string>", "<unknown string>");
             }
             wait(0.05);
         }

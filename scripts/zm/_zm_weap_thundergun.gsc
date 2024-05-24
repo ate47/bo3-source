@@ -16,15 +16,15 @@
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x2
-// Checksum 0x40c4a654, Offset: 0x560
+// Checksum 0x2c68e14d, Offset: 0x560
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_weap_thundergun", &__init__, &__main__, undefined);
 }
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// Checksum 0xc67f9863, Offset: 0x5a8
+// Checksum 0xdf106bd1, Offset: 0x5a8
 // Size: 0x44
 function __init__() {
     level.var_65cd3ef2 = getweapon("thundergun");
@@ -33,7 +33,7 @@ function __init__() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// Checksum 0xb7fe73b3, Offset: 0x5f8
+// Checksum 0xe7a8636e, Offset: 0x5f8
 // Size: 0x1c4
 function __main__() {
     level._effect["thundergun_knockdown_ground"] = "zombie/fx_thundergun_knockback_ground";
@@ -62,7 +62,7 @@ function __main__() {
 
     // Namespace zm_weap_thundergun
     // Params 0, eflags: 0x1 linked
-    // Checksum 0x83cda97e, Offset: 0x7c8
+    // Checksum 0x1dd000fc, Offset: 0x7c8
     // Size: 0x21c
     function thundergun_devgui_dvar_think() {
         if (!zm_weapons::is_weapon_included(level.var_65cd3ef2)) {
@@ -89,7 +89,7 @@ function __main__() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// Checksum 0x80b1ccb6, Offset: 0x9f0
+// Checksum 0xdce0c8b1, Offset: 0x9f0
 // Size: 0x1c
 function thundergun_on_player_connect() {
     self thread wait_for_thundergun_fired();
@@ -97,7 +97,7 @@ function thundergun_on_player_connect() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// Checksum 0x4d1f5a07, Offset: 0xa18
+// Checksum 0xf87bf045, Offset: 0xa18
 // Size: 0x140
 function wait_for_thundergun_fired() {
     self endon(#"disconnect");
@@ -116,7 +116,7 @@ function wait_for_thundergun_fired() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x0
-// Checksum 0x6b520414, Offset: 0xb60
+// Checksum 0xe3906625, Offset: 0xb60
 // Size: 0x4c
 function thundergun_network_choke() {
     level.thundergun_network_choke_count++;
@@ -129,7 +129,7 @@ function thundergun_network_choke() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// Checksum 0x770bb3de, Offset: 0xbb8
+// Checksum 0x4ac0fde7, Offset: 0xbb8
 // Size: 0x44
 function thundergun_fired() {
     physicsexplosioncylinder(self.origin, 600, -16, 1);
@@ -138,7 +138,7 @@ function thundergun_fired() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// Checksum 0xb7482fb5, Offset: 0xc08
+// Checksum 0x20fa565b, Offset: 0xc08
 // Size: 0x144
 function thundergun_affect_ais() {
     if (!isdefined(level.thundergun_knockdown_enemies)) {
@@ -163,7 +163,7 @@ function thundergun_affect_ais() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// Checksum 0x643dc5c1, Offset: 0xd58
+// Checksum 0x4e22f80f, Offset: 0xd58
 // Size: 0x6ae
 function thundergun_get_enemies_in_range() {
     view_pos = self getweaponmuzzlepoint();
@@ -237,7 +237,7 @@ function thundergun_get_enemies_in_range() {
 
 // Namespace zm_weap_thundergun
 // Params 2, eflags: 0x1 linked
-// Checksum 0x3874b81, Offset: 0x1410
+// Checksum 0xd731606, Offset: 0x1410
 // Size: 0x8c
 function thundergun_debug_print(msg, color) {
     /#
@@ -253,7 +253,7 @@ function thundergun_debug_print(msg, color) {
 
 // Namespace zm_weap_thundergun
 // Params 3, eflags: 0x1 linked
-// Checksum 0x8c4f5405, Offset: 0x14a8
+// Checksum 0x8ef260ee, Offset: 0x14a8
 // Size: 0x188
 function thundergun_fling_zombie(player, fling_vec, index) {
     if (!isdefined(self) || !isalive(self)) {
@@ -284,7 +284,7 @@ function thundergun_fling_zombie(player, fling_vec, index) {
 
 // Namespace zm_weap_thundergun
 // Params 2, eflags: 0x1 linked
-// Checksum 0x52c5207c, Offset: 0x1638
+// Checksum 0x60991e4c, Offset: 0x1638
 // Size: 0x12c
 function zombie_knockdown(player, gib) {
     if (gib && !self.gibbed) {
@@ -304,7 +304,7 @@ function zombie_knockdown(player, gib) {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// Checksum 0xf9e2b555, Offset: 0x1770
+// Checksum 0xeb9451dd, Offset: 0x1770
 // Size: 0x23c
 function playthundergunpainanim() {
     self notify(#"end_play_thundergun_pain_anim");
@@ -346,7 +346,7 @@ function playthundergunpainanim() {
 
 // Namespace zm_weap_thundergun
 // Params 2, eflags: 0x1 linked
-// Checksum 0x764211f6, Offset: 0x19b8
+// Checksum 0x5269231b, Offset: 0x19b8
 // Size: 0x88
 function thundergun_knockdown_zombie(player, gib) {
     self endon(#"death");
@@ -361,7 +361,7 @@ function thundergun_knockdown_zombie(player, gib) {
 
 // Namespace zm_weap_thundergun
 // Params 1, eflags: 0x1 linked
-// Checksum 0x2a3bd6d0, Offset: 0x1a48
+// Checksum 0x16883d66, Offset: 0x1a48
 // Size: 0x94
 function handle_thundergun_pain_notetracks(note) {
     if (note == "zombie_knockdown_ground_impact") {
@@ -372,7 +372,7 @@ function handle_thundergun_pain_notetracks(note) {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x0
-// Checksum 0x2613c131, Offset: 0x1ae8
+// Checksum 0xc69eacb0, Offset: 0x1ae8
 // Size: 0x50
 function is_thundergun_damage() {
     return self.damagemod != "MOD_GRENADE" && (self.damageweapon == level.var_65cd3ef2 || self.damageweapon == level.var_15a75be2) && self.damagemod != "MOD_GRENADE_SPLASH";
@@ -380,7 +380,7 @@ function is_thundergun_damage() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x0
-// Checksum 0xa996c165, Offset: 0x1b40
+// Checksum 0xdd8a143c, Offset: 0x1b40
 // Size: 0x16
 function enemy_killed_by_thundergun() {
     return isdefined(self.thundergun_death) && self.thundergun_death;
@@ -388,7 +388,7 @@ function enemy_killed_by_thundergun() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x0
-// Checksum 0xdacb7170, Offset: 0x1b60
+// Checksum 0xdec31bb9, Offset: 0x1b60
 // Size: 0x118
 function thundergun_sound_thread() {
     self endon(#"disconnect");
@@ -409,7 +409,7 @@ function thundergun_sound_thread() {
 
 // Namespace zm_weap_thundergun
 // Params 4, eflags: 0x1 linked
-// Checksum 0x3afe3d84, Offset: 0x1c80
+// Checksum 0xae630ff9, Offset: 0x1c80
 // Size: 0xd4
 function setup_thundergun_vox(player, fling, gib, knockdown) {
     if (!isdefined(self) || !isalive(self)) {
@@ -428,7 +428,7 @@ function setup_thundergun_vox(player, fling, gib, knockdown) {
 
 // Namespace zm_weap_thundergun
 // Params 2, eflags: 0x1 linked
-// Checksum 0xfc474fd0, Offset: 0x1d60
+// Checksum 0x1d632cb6, Offset: 0x1d60
 // Size: 0x2c
 function override_thundergun_damage_func(player, gib) {
     self zombie_utility::setup_zombie_knockdown(player);

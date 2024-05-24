@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x3a7d22bd, Offset: 0x240
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("gadget_hero_weapon", &__init__, undefined, undefined);
 }
 

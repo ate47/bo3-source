@@ -9,7 +9,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x511f18cd, Offset: 0x130
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_genesis_traps", &__init__, &__main__, undefined);
 }
 

@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x36894620, Offset: 0x290
 // Size: 0xac
-function registerdefaultanimationmocomps() {
+function autoexec registerdefaultanimationmocomps() {
     animationstatenetwork::registeranimationmocomp("adjust_to_cover", &mocompadjusttocoverinit, &mocompadjusttocoverupdate, &mocompadjusttocoverterminate);
     animationstatenetwork::registeranimationmocomp("locomotion_explosion_death", &mocomplocoexplosioninit, undefined, undefined);
     animationstatenetwork::registeranimationmocomp("mocomp_flank_stand", &mocompflankstandinit, undefined, undefined);
@@ -20,7 +20,7 @@ function registerdefaultanimationmocomps() {
 // Params 0, eflags: 0x2
 // Checksum 0x60266a62, Offset: 0x348
 // Size: 0x694
-function initadjusttocoverparams() {
+function autoexec initadjusttocoverparams() {
     _addadjusttocover("human", "cover_any", "stance_any", 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.9, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8);
     _addadjusttocover("human", "cover_stand", "stance_any", 0.4, 0.8, 0.6, 0.4, 0.6, 0.3, 0.3, 0.6, 0.9, 0.6, 0.3, 0.4, 0.7, 0.6, 0.6, 0.6);
     _addadjusttocover("human", "cover_crouch", "stance_any", 0.4, 0.4, 0.4, 0.4, 0.8, 0.5, 0.2, 0.7, 0.9, 0.4, 0.2, 0.4, 0.5, 0.5, 0.5, 0.5);
@@ -37,7 +37,7 @@ function initadjusttocoverparams() {
 // Params 19, eflags: 0x5 linked
 // Checksum 0x57fed533, Offset: 0x9e8
 // Size: 0x236
-function _addadjusttocover(archetype, node, stance, rot2, rot32, rot3, rot36, rot6, rot69, rot9, rot98, rot8, rot87, rot7, rot47, rot4, rot14, rot1, rot21) {
+function private _addadjusttocover(archetype, node, stance, rot2, rot32, rot3, rot36, rot6, rot69, rot9, rot98, rot8, rot87, rot7, rot47, rot4, rot14, rot1, rot21) {
     if (!isdefined(level.adjusttocover)) {
         level.adjusttocover = [];
     }
@@ -71,7 +71,7 @@ function _addadjusttocover(archetype, node, stance, rot2, rot32, rot3, rot36, ro
 // Params 4, eflags: 0x5 linked
 // Checksum 0xf2da7e91, Offset: 0xc28
 // Size: 0x3ee
-function _getadjusttocoverrotation(archetype, node, stance, angletonode) {
+function private _getadjusttocoverrotation(archetype, node, stance, angletonode) {
     /#
         assert(isarray(level.adjusttocover[archetype]));
     #/
@@ -140,7 +140,7 @@ function _getadjusttocoverrotation(archetype, node, stance, angletonode) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd8db1be4, Offset: 0x1020
 // Size: 0x180
-function debuglocoexplosion(entity) {
+function private debuglocoexplosion(entity) {
     entity endon(#"death");
     /#
         startorigin = entity.origin;
@@ -160,7 +160,7 @@ function debuglocoexplosion(entity) {
 // Params 5, eflags: 0x5 linked
 // Checksum 0x5d486610, Offset: 0x11a8
 // Size: 0xfc
-function mocompflankstandinit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
+function private mocompflankstandinit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
     entity animmode("nogravity", 0);
     entity orientmode("face angle", entity.angles[1]);
     entity pathmode("move delayed", 0, randomfloatrange(0.5, 1));
@@ -174,7 +174,7 @@ function mocompflankstandinit(entity, mocompanim, mocompanimblendouttime, mocomp
 // Params 5, eflags: 0x5 linked
 // Checksum 0xdd0d7f58, Offset: 0x12b0
 // Size: 0xbc
-function mocomplocoexplosioninit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
+function private mocomplocoexplosioninit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
     entity animmode("nogravity", 0);
     entity orientmode("face angle", entity.angles[1]);
     /#
@@ -188,7 +188,7 @@ function mocomplocoexplosioninit(entity, mocompanim, mocompanimblendouttime, moc
 // Params 5, eflags: 0x5 linked
 // Checksum 0x87174ec9, Offset: 0x1378
 // Size: 0x2a8
-function mocompadjusttocoverinit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
+function private mocompadjusttocoverinit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
     entity orientmode("face angle", entity.angles[1]);
     entity animmode("angle deltas", 0);
     entity.blockingpain = 1;
@@ -212,7 +212,7 @@ function mocompadjusttocoverinit(entity, mocompanim, mocompanimblendouttime, moc
 // Params 5, eflags: 0x5 linked
 // Checksum 0xeaaced7d, Offset: 0x1628
 // Size: 0x38c
-function mocompadjusttocoverupdate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
+function private mocompadjusttocoverupdate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
     if (!isdefined(entity.adjustnode)) {
         return;
     }
@@ -242,7 +242,7 @@ function mocompadjusttocoverupdate(entity, mocompanim, mocompanimblendouttime, m
 // Params 5, eflags: 0x5 linked
 // Checksum 0xc5349406, Offset: 0x19c0
 // Size: 0x11a
-function mocompadjusttocoverterminate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
+function private mocompadjusttocoverterminate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
     entity.blockingpain = 0;
     entity.mocompanglestarttime = undefined;
     entity.nodeoffsetangle = undefined;

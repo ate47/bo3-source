@@ -395,7 +395,7 @@ function function_dd1b6b0b(player, upgraded) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x4c4b954b, Offset: 0x1c20
 // Size: 0x1a4
-function function_12d22808(target, player, upgraded) {
+function private function_12d22808(target, player, upgraded) {
     if (!isdefined(self) || !isdefined(target)) {
         return;
     }

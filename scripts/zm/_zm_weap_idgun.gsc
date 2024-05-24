@@ -26,12 +26,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0xfad59313, Offset: 0x2f8
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("idgun", &init, &main, undefined);
 }
 
 // Namespace namespace_42517170
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x74e324f9, Offset: 0x340
 // Size: 0x44
 function init() {
@@ -40,7 +40,7 @@ function init() {
 }
 
 // Namespace namespace_42517170
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x67009005, Offset: 0x390
 // Size: 0xac
 function main() {
@@ -56,7 +56,7 @@ function main() {
 }
 
 // Namespace namespace_42517170
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdd04d39a, Offset: 0x448
 // Size: 0x3e
 function is_idgun_damage(weapon) {
@@ -69,7 +69,7 @@ function is_idgun_damage(weapon) {
 }
 
 // Namespace namespace_42517170
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x5e7ebeb, Offset: 0x490
 // Size: 0x46
 function function_9b7ac6a9(weapon) {
@@ -80,7 +80,7 @@ function function_9b7ac6a9(weapon) {
 }
 
 // Namespace namespace_42517170
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4da0a6df, Offset: 0x4e0
 // Size: 0x94
 function function_6fbe2b2c(v_vortex_origin) {
@@ -95,7 +95,7 @@ function function_6fbe2b2c(v_vortex_origin) {
 }
 
 // Namespace namespace_42517170
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd7829532, Offset: 0x580
 // Size: 0x170
 function function_2bd571b9() {
@@ -117,7 +117,7 @@ function function_2bd571b9() {
 }
 
 // Namespace namespace_42517170
-// Params 10, eflags: 0x1 linked
+// Params 10, eflags: 0x0
 // Checksum 0x2cda0760, Offset: 0x6f8
 // Size: 0x76
 function function_b618ee82(einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon, vpoint, vdir, shitloc, psoffsettime) {
@@ -128,7 +128,7 @@ function function_b618ee82(einflictor, eattacker, idamage, idflags, smeansofdeat
 }
 
 // Namespace namespace_42517170
-// Params 15, eflags: 0x1 linked
+// Params 15, eflags: 0x0
 // Checksum 0xa6c1fe18, Offset: 0x778
 // Size: 0xc4
 function function_61f631bc(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {

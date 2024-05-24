@@ -8,15 +8,15 @@
 
 // Namespace zm_trap_electric
 // Params 0, eflags: 0x2
-// Checksum 0x3fe6e817, Offset: 0x170
+// Checksum 0x26a0fac0, Offset: 0x170
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_trap_electric", &__init__, undefined, undefined);
 }
 
 // Namespace zm_trap_electric
 // Params 0, eflags: 0x0
-// Checksum 0x93d83f5f, Offset: 0x1b0
+// Checksum 0x7fceb13d, Offset: 0x1b0
 // Size: 0x10a
 function __init__() {
     visionset_mgr::register_overlay_info_style_electrified("zm_trap_electric", 1, 15, 1.25);
@@ -28,7 +28,7 @@ function __init__() {
 
 // Namespace zm_trap_electric
 // Params 7, eflags: 0x0
-// Checksum 0x391f671f, Offset: 0x2c8
+// Checksum 0x4b16959a, Offset: 0x2c8
 // Size: 0x172
 function trap_fx_monitor(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     exploder_name = "trap_electric_" + fieldname;
@@ -51,7 +51,7 @@ function trap_fx_monitor(localclientnum, oldval, newval, bnewent, binitialsnap, 
 
 // Namespace zm_trap_electric
 // Params 0, eflags: 0x0
-// Checksum 0x6f0dfd00, Offset: 0x448
+// Checksum 0xf5fac119, Offset: 0x448
 // Size: 0x12c
 function function_1fc3f4ef() {
     ang = self.angles;
@@ -71,7 +71,7 @@ function function_1fc3f4ef() {
 
 // Namespace zm_trap_electric
 // Params 0, eflags: 0x0
-// Checksum 0x8e1b876c, Offset: 0x580
+// Checksum 0xc2cffc0c, Offset: 0x580
 // Size: 0x88
 function function_dc960b46() {
     players = getlocalplayers();

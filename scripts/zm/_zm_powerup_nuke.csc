@@ -8,15 +8,15 @@
 
 // Namespace zm_powerup_nuke
 // Params 0, eflags: 0x2
-// Checksum 0x5e9e7c69, Offset: 0x150
+// Checksum 0x73611491, Offset: 0x150
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_nuke", &__init__, undefined, undefined);
 }
 
 // Namespace zm_powerup_nuke
 // Params 0, eflags: 0x0
-// Checksum 0x77a0de5e, Offset: 0x190
+// Checksum 0x730244fa, Offset: 0x190
 // Size: 0xc4
 function __init__() {
     zm_powerups::include_zombie_powerup("nuke");
@@ -27,7 +27,7 @@ function __init__() {
 
 // Namespace zm_powerup_nuke
 // Params 7, eflags: 0x0
-// Checksum 0x77e5dfa3, Offset: 0x260
+// Checksum 0xed743393, Offset: 0x260
 // Size: 0x54
 function zombie_nuked(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self zombie_death::flame_death_fx(localclientnum);

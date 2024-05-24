@@ -32,7 +32,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x213594a4, Offset: 0x7c0
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("bgb", &__init__, &__main__, undefined);
 }
 
@@ -40,7 +40,7 @@ function function_2dc19561() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x37dc04e3, Offset: 0x808
 // Size: 0x1fc
-function __init__() {
+function private __init__() {
     callback::on_spawned(&on_player_spawned);
     if (!(isdefined(level.bgb_in_use) && level.bgb_in_use)) {
         return;
@@ -62,7 +62,7 @@ function __init__() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x29f60e58, Offset: 0xa10
 // Size: 0x5e
-function __main__() {
+function private __main__() {
     if (!(isdefined(level.bgb_in_use) && level.bgb_in_use)) {
         return;
     }
@@ -77,7 +77,7 @@ function __main__() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x4420286e, Offset: 0xa78
 // Size: 0x5c
-function on_player_spawned() {
+function private on_player_spawned() {
     self.bgb = "none";
     if (!(isdefined(level.bgb_in_use) && level.bgb_in_use)) {
         return;
@@ -90,7 +90,7 @@ function on_player_spawned() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xfe8c66bc, Offset: 0xae0
 // Size: 0x50
-function function_52dbea8c() {
+function private function_52dbea8c() {
     if (!(isdefined(self.var_c2d95bad) && self.var_c2d95bad)) {
         self.var_c2d95bad = 1;
         self globallogic_score::initpersstat("bgb_tokens_gained_this_game", 0);
@@ -102,7 +102,7 @@ function function_52dbea8c() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xa7559f80, Offset: 0xb38
 // Size: 0x1ec
-function bgb_player_init() {
+function private bgb_player_init() {
     if (isdefined(self.bgb_pack)) {
         return;
     }
@@ -131,7 +131,7 @@ function bgb_player_init() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x9dfca1c2, Offset: 0xd30
 // Size: 0x20c
-function bgb_end_game() {
+function private bgb_end_game() {
     self endon(#"disconnect");
     if (!level flag::exists("consumables_reported")) {
         level flag::init("consumables_reported");
@@ -156,7 +156,7 @@ function bgb_end_game() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x9290e1bb, Offset: 0xf48
 // Size: 0x2d6
-function bgb_finalize() {
+function private bgb_finalize() {
     var_a804a5cf = util::function_bc37a245();
     keys = getarraykeys(level.bgb);
     for (i = 0; i < keys.size; i++) {
@@ -181,7 +181,7 @@ function bgb_finalize() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xe1e0d6b1, Offset: 0x1228
 // Size: 0xd8
-function bgb_player_monitor() {
+function private bgb_player_monitor() {
     self endon(#"disconnect");
     while (true) {
         str_return = level util::waittill_any_return("between_round_over", "restart_round");
@@ -205,7 +205,7 @@ function bgb_player_monitor() {
     // Params 0, eflags: 0x5 linked
     // Checksum 0x795c8a15, Offset: 0x1308
     // Size: 0x264
-    function setup_devgui() {
+    function private setup_devgui() {
         waittillframeend();
         setdvar("bgb_timer", "bgb_timer");
         setdvar("bgb_timer", -1);
@@ -227,7 +227,7 @@ function bgb_player_monitor() {
     // Params 0, eflags: 0x5 linked
     // Checksum 0x286d0311, Offset: 0x1578
     // Size: 0x80
-    function bgb_devgui_think() {
+    function private bgb_devgui_think() {
         for (;;) {
             var_fe9a7d67 = getdvarstring("bgb_timer");
             if (var_fe9a7d67 != "bgb_timer") {
@@ -242,7 +242,7 @@ function bgb_player_monitor() {
     // Params 1, eflags: 0x5 linked
     // Checksum 0xab92deaa, Offset: 0x1600
     // Size: 0x11e
-    function bgb_devgui_acquire(bgb_name) {
+    function private bgb_devgui_acquire(bgb_name) {
         playerid = getdvarint("bgb_timer");
         players = getplayers();
         for (i = 0; i < players.size; i++) {
@@ -263,7 +263,7 @@ function bgb_player_monitor() {
     // Params 0, eflags: 0x4
     // Checksum 0x852d87d8, Offset: 0x1728
     // Size: 0x144
-    function bgb_debug_text_display_init() {
+    function private bgb_debug_text_display_init() {
         self.bgb_debug_text = newclienthudelem(self);
         self.bgb_debug_text.elemtype = "bgb_timer";
         self.bgb_debug_text.font = "bgb_timer";
@@ -286,7 +286,7 @@ function bgb_player_monitor() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xaf0b2d35, Offset: 0x1878
 // Size: 0x1f0
-function bgb_set_debug_text(name, activations_remaining) {
+function private bgb_set_debug_text(name, activations_remaining) {
     /#
         if (!isdefined(self.bgb_debug_text)) {
             return;
@@ -338,7 +338,7 @@ function bgb_set_debug_text(name, activations_remaining) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x147b9851, Offset: 0x1b70
 // Size: 0x66
-function has_consumable_bgb(bgb) {
+function private has_consumable_bgb(bgb) {
     if (!isdefined(self.bgb_stats[bgb]) || !(isdefined(level.bgb[bgb].consumable) && level.bgb[bgb].consumable)) {
         return 0;
     }
@@ -386,7 +386,7 @@ function get_bgb_available(bgb) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xd1a78e06, Offset: 0x1dd8
 // Size: 0xc4
-function function_c3e0b2ba(bgb, var_aad41617) {
+function private function_c3e0b2ba(bgb, var_aad41617) {
     if (!(isdefined(level.bgb[bgb].var_7ca0e2a7) && level.bgb[bgb].var_7ca0e2a7)) {
         return;
     }
@@ -454,7 +454,7 @@ function bgb_gumball_anim(bgb, var_aad41617) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4953f724, Offset: 0x2288
 // Size: 0xa4
-function run_activation_func(bgb) {
+function private run_activation_func(bgb) {
     self endon(#"disconnect");
     self set_active(1);
     self do_one_shot_use();
@@ -468,7 +468,7 @@ function run_activation_func(bgb) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xb2c38a9f, Offset: 0x2338
 // Size: 0x2a
-function bgb_get_gumball_anim_weapon(bgb, var_aad41617) {
+function private bgb_get_gumball_anim_weapon(bgb, var_aad41617) {
     if (var_aad41617) {
         return level.var_c92b3b33;
     }
@@ -479,7 +479,7 @@ function bgb_get_gumball_anim_weapon(bgb, var_aad41617) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xc3775db, Offset: 0x2370
 // Size: 0x158
-function function_bb702b0a(bgb, var_aad41617) {
+function private function_bb702b0a(bgb, var_aad41617) {
     self zm_utility::increment_is_drinking();
     self zm_utility::disable_player_move_states(1);
     w_original = self getcurrentweapon();
@@ -499,7 +499,7 @@ function function_bb702b0a(bgb, var_aad41617) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xca8bf35f, Offset: 0x24d0
 // Size: 0x254
-function function_a4493f0e(w_original, bgb, var_aad41617) {
+function private function_a4493f0e(w_original, bgb, var_aad41617) {
     /#
         assert(!w_original.isperkbottle);
     #/
@@ -535,7 +535,7 @@ function function_a4493f0e(w_original, bgb, var_aad41617) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x5d3eb4bd, Offset: 0x2730
 // Size: 0x74
-function bgb_clear_monitors_and_clientfields() {
+function private bgb_clear_monitors_and_clientfields() {
     self notify(#"bgb_limit_monitor");
     self notify(#"bgb_activation_monitor");
     self clientfield::set_player_uimodel("bgb_display", 0);
@@ -547,7 +547,7 @@ function bgb_clear_monitors_and_clientfields() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x3651469, Offset: 0x27b0
 // Size: 0x524
-function bgb_limit_monitor() {
+function private bgb_limit_monitor() {
     self endon(#"disconnect");
     self endon(#"bgb_update");
     self notify(#"bgb_limit_monitor");
@@ -614,7 +614,7 @@ function bgb_limit_monitor() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xb19d48fe, Offset: 0x2ce0
 // Size: 0x6c
-function bgb_bled_out_monitor() {
+function private bgb_bled_out_monitor() {
     self endon(#"disconnect");
     self endon(#"bgb_update");
     self notify(#"bgb_bled_out_monitor");
@@ -629,7 +629,7 @@ function bgb_bled_out_monitor() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xb16e64c3, Offset: 0x2d58
 // Size: 0xb6
-function bgb_activation_monitor() {
+function private bgb_activation_monitor() {
     self endon(#"disconnect");
     self notify(#"bgb_activation_monitor");
     self endon(#"bgb_activation_monitor");
@@ -651,7 +651,7 @@ function bgb_activation_monitor() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x17fbd8b1, Offset: 0x2e18
 // Size: 0x144
-function function_b616fe7a(var_5827b083) {
+function private function_b616fe7a(var_5827b083) {
     if (!isdefined(var_5827b083)) {
         var_5827b083 = 0;
     }
@@ -669,7 +669,7 @@ function function_b616fe7a(var_5827b083) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x542a2377, Offset: 0x2f68
 // Size: 0xa4
-function function_5fc6d844(bgb) {
+function private function_5fc6d844(bgb) {
     self endon(#"disconnect");
     self endon(#"bled_out");
     self endon(#"bgb_update");
@@ -725,7 +725,7 @@ function do_one_shot_use(skip_demo_bookmark) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xa8be8a8a, Offset: 0x3148
 // Size: 0x10
-function activation_start() {
+function private activation_start() {
     self.bgb_activation_in_progress = 1;
 }
 
@@ -733,7 +733,7 @@ function activation_start() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x3430d9a, Offset: 0x3160
 // Size: 0x1e
-function activation_complete() {
+function private activation_complete() {
     self.bgb_activation_in_progress = 0;
     self notify(#"activation_complete");
 }
@@ -742,7 +742,7 @@ function activation_complete() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x33259947, Offset: 0x3188
 // Size: 0x18
-function set_active(b_is_active) {
+function private set_active(b_is_active) {
     self.bgb_active = b_is_active;
 }
 
@@ -807,7 +807,7 @@ function decrement_ref_count(name) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xaf7d7b74, Offset: 0x3390
 // Size: 0x92
-function calc_remaining_duration_lerp(start_time, end_time) {
+function private calc_remaining_duration_lerp(start_time, end_time) {
     if (0 >= end_time - start_time) {
         return 0;
     }
@@ -820,7 +820,7 @@ function calc_remaining_duration_lerp(start_time, end_time) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xcde8a8e, Offset: 0x3430
 // Size: 0xd8
-function function_f9fad8b3(var_eeab9300, percent) {
+function private function_f9fad8b3(var_eeab9300, percent) {
     self endon(#"disconnect");
     self endon(#"hash_f9fad8b3");
     start_time = gettime();
@@ -837,7 +837,7 @@ function function_f9fad8b3(var_eeab9300, percent) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x90df0bdf, Offset: 0x3510
 // Size: 0xac
-function bgb_set_timer_clientfield(percent) {
+function private bgb_set_timer_clientfield(percent) {
     self notify(#"hash_f9fad8b3");
     var_eeab9300 = self clientfield::get_player_uimodel("bgb_timer");
     if (percent < var_eeab9300 && 0.1 <= var_eeab9300 - percent) {
@@ -851,7 +851,7 @@ function bgb_set_timer_clientfield(percent) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x84f0b914, Offset: 0x35c8
 // Size: 0x1c
-function function_497386b0() {
+function private function_497386b0() {
     self bgb_set_timer_clientfield(1);
 }
 
@@ -1057,7 +1057,7 @@ function function_f132da9c(name) {
 }
 
 // Namespace bgb
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0xa8e2effa, Offset: 0x4078
 // Size: 0x4c
 function function_d35f60a1(name) {
@@ -1338,7 +1338,7 @@ function add_to_player_score_override(n_points, str_awarded_by) {
 }
 
 // Namespace bgb
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x5fcf4fae, Offset: 0x51d8
 // Size: 0xc4
 function function_d51db887() {
@@ -1393,7 +1393,7 @@ function function_4ed517b9(n_max_distance, var_98a3e738, var_287a7adb) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x6c2a4f72, Offset: 0x54c0
 // Size: 0x7e
-function function_2469cfe8(n_distance, var_d21815c4, var_441f84ff) {
+function private function_2469cfe8(n_distance, var_d21815c4, var_441f84ff) {
     var_31dc18aa = n_distance * n_distance;
     var_2931dc75 = distancesquared(var_d21815c4.origin, var_441f84ff.origin);
     if (var_2931dc75 <= var_31dc18aa) {
@@ -1412,7 +1412,7 @@ function function_ca189700() {
 }
 
 // Namespace bgb
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0xbb0ca501, Offset: 0x5598
 // Size: 0x24
 function suspend_weapon_cycling() {
@@ -1420,7 +1420,7 @@ function suspend_weapon_cycling() {
 }
 
 // Namespace bgb
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x5e7c3417, Offset: 0x55c8
 // Size: 0x24
 function resume_weapon_cycling() {

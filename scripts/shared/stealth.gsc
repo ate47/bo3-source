@@ -18,7 +18,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x5afa4435, Offset: 0x2e8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("stealth", &__init__, undefined, undefined);
 }
 
@@ -454,7 +454,7 @@ function function_9aa26b41() {
 // Params 0, eflags: 0x4
 // Checksum 0xdc155143, Offset: 0x16d0
 // Size: 0x292
-function function_762607ad() {
+function private function_762607ad() {
     level notify(#"hash_762607ad");
     level endon(#"hash_762607ad");
     level endon(#"save_restore");
@@ -496,7 +496,7 @@ function function_762607ad() {
 // Params 0, eflags: 0x4
 // Checksum 0xf43ef3aa, Offset: 0x1970
 // Size: 0xcc
-function function_fd413bf3() {
+function private function_fd413bf3() {
     if (!savegame::function_147f4ca3()) {
         return false;
     }
@@ -513,7 +513,7 @@ function function_fd413bf3() {
 // Params 0, eflags: 0x4
 // Checksum 0x8600dd5b, Offset: 0x1a48
 // Size: 0x96
-function function_d0a01dc8() {
+function private function_d0a01dc8() {
     var_e0fabc1 = self savegame::function_2808d83d();
     if (var_e0fabc1 > 1000 || var_e0fabc1 < 0) {
         return true;
@@ -529,7 +529,7 @@ function function_d0a01dc8() {
 // Params 0, eflags: 0x4
 // Checksum 0xd87f0e0c, Offset: 0x1ae8
 // Size: 0x94
-function function_ed8df2f() {
+function private function_ed8df2f() {
     foreach (player in level.activeplayers) {
         if (self cansee(player)) {
             return true;

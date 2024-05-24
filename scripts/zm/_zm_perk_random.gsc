@@ -17,15 +17,15 @@
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x2
-// Checksum 0xb7ad8442, Offset: 0x6d0
+// Checksum 0x4d68262a, Offset: 0x6d0
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_perk_random", &__init__, &__main__, undefined);
 }
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0xb925eb8b, Offset: 0x718
+// Checksum 0x206aede0, Offset: 0x718
 // Size: 0x24c
 function __init__() {
     level._random_zombie_perk_cost = 1500;
@@ -47,7 +47,7 @@ function __init__() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0x66600c8c, Offset: 0x970
+// Checksum 0x6d3d518b, Offset: 0x970
 // Size: 0x6c
 function __main__() {
     if (!isdefined(level.perk_random_machine_count)) {
@@ -64,9 +64,9 @@ function __main__() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x5 linked
-// Checksum 0x9288dc70, Offset: 0x9e8
+// Checksum 0x29725061, Offset: 0x9e8
 // Size: 0x7c
-function setup_perk_random_machines() {
+function private setup_perk_random_machines() {
     waittillframeend();
     level.perk_bottle_weapon_array = arraycombine(level.machine_assets, level._custom_perks, 0, 1);
     level.perk_random_machines = getentarray("perk_random_machine", "targetname");
@@ -76,7 +76,7 @@ function setup_perk_random_machines() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0x2dbd806f, Offset: 0xa70
+// Checksum 0xff6f285f, Offset: 0xa70
 // Size: 0x14c
 function perk_random_machine_init() {
     foreach (machine in level.perk_random_machines) {
@@ -96,9 +96,9 @@ function perk_random_machine_init() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x5 linked
-// Checksum 0x5f342c73, Offset: 0xbc8
+// Checksum 0x5368a774, Offset: 0xbc8
 // Size: 0x13e
-function init_starting_perk_random_machine_location() {
+function private init_starting_perk_random_machine_location() {
     b_starting_machine_found = 0;
     for (i = 0; i < level.perk_random_machines.size; i++) {
         if (isdefined(level.perk_random_machines[i].script_noteworthy) && issubstr(level.perk_random_machines[i].script_noteworthy, "start_perk_random_machine") && !(isdefined(b_starting_machine_found) && b_starting_machine_found)) {
@@ -114,7 +114,7 @@ function init_starting_perk_random_machine_location() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0x7d0582bf, Offset: 0xd10
+// Checksum 0x9eec7698, Offset: 0xd10
 // Size: 0x184
 function create_perk_random_machine_unitrigger_stub() {
     self.unitrigger_stub = spawnstruct();
@@ -133,7 +133,7 @@ function create_perk_random_machine_unitrigger_stub() {
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// Checksum 0x716d8030, Offset: 0xea0
+// Checksum 0xd97ebdea, Offset: 0xea0
 // Size: 0x90
 function perk_random_machine_trigger_update_prompt(player) {
     can_use = self perk_random_machine_stub_update_prompt(player);
@@ -149,7 +149,7 @@ function perk_random_machine_trigger_update_prompt(player) {
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// Checksum 0x3fbd6f53, Offset: 0xf38
+// Checksum 0xc8e560f2, Offset: 0xf38
 // Size: 0x278
 function perk_random_machine_stub_update_prompt(player) {
     self setcursorhint("HINT_NOICON");
@@ -200,7 +200,7 @@ function perk_random_machine_stub_update_prompt(player) {
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// Checksum 0xe11cbfd5, Offset: 0x11b8
+// Checksum 0x94d5f785, Offset: 0x11b8
 // Size: 0x128
 function trigger_visible_to_player(player) {
     self setinvisibletoplayer(player);
@@ -224,7 +224,7 @@ function trigger_visible_to_player(player) {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0xace15d04, Offset: 0x12e8
+// Checksum 0x562888af, Offset: 0x12e8
 // Size: 0x58
 function player_has_all_available_perks() {
     for (i = 0; i < level._random_perk_machine_perk_list.size; i++) {
@@ -237,7 +237,7 @@ function player_has_all_available_perks() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0x75d1c177, Offset: 0x1348
+// Checksum 0xeb038d85, Offset: 0x1348
 // Size: 0xa4
 function can_buy_perk() {
     if (isdefined(self.is_drinking) && self.is_drinking > 0) {
@@ -258,7 +258,7 @@ function can_buy_perk() {
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// Checksum 0xadb532a2, Offset: 0x13f8
+// Checksum 0xae8bbd88, Offset: 0x13f8
 // Size: 0x54
 function perk_random_unitrigger_think(player) {
     self endon(#"kill_trigger");
@@ -270,7 +270,7 @@ function perk_random_unitrigger_think(player) {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0x743fddc0, Offset: 0x1458
+// Checksum 0x731ed4dd, Offset: 0x1458
 // Size: 0x670
 function machine_think() {
     level notify(#"machine_think");
@@ -358,7 +358,7 @@ function machine_think() {
 
 // Namespace zm_perk_random
 // Params 2, eflags: 0x1 linked
-// Checksum 0x5f4c4060, Offset: 0x1ad0
+// Checksum 0x55e29fc7, Offset: 0x1ad0
 // Size: 0x264
 function grab_check(player, random_perk) {
     self endon(#"time_out_check");
@@ -398,7 +398,7 @@ function grab_check(player, random_perk) {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0xa17a8478, Offset: 0x1d40
+// Checksum 0xdd421cc, Offset: 0x1d40
 // Size: 0x54
 function monitor_when_player_acquires_perk() {
     self util::waittill_any("perk_acquired", "death_or_disconnect", "player_downed");
@@ -407,7 +407,7 @@ function monitor_when_player_acquires_perk() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0x5a2ca737, Offset: 0x1da0
+// Checksum 0x12de3ca4, Offset: 0x1da0
 // Size: 0x44
 function time_out_check() {
     self endon(#"grab_check");
@@ -418,7 +418,7 @@ function time_out_check() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0x91447581, Offset: 0x1df0
+// Checksum 0x8046828, Offset: 0x1df0
 // Size: 0xb4
 function wait_for_power() {
     if (isdefined(self.script_int)) {
@@ -434,7 +434,7 @@ function wait_for_power() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0xfcc1dd61, Offset: 0x1eb0
+// Checksum 0xfab2b03e, Offset: 0x1eb0
 // Size: 0xc4
 function machine_selector() {
     if (level.perk_random_machines.size == 1) {
@@ -453,7 +453,7 @@ function machine_selector() {
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// Checksum 0xd33c1e36, Offset: 0x1f80
+// Checksum 0x4c75a994, Offset: 0x1f80
 // Size: 0x92
 function include_perk_in_random_rotation(perk) {
     if (!isdefined(level._random_perk_machine_perk_list)) {
@@ -469,7 +469,7 @@ function include_perk_in_random_rotation(perk) {
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// Checksum 0xa0402282, Offset: 0x2020
+// Checksum 0x16337b5b, Offset: 0x2020
 // Size: 0x14c
 function get_weighted_random_perk(player) {
     keys = array::randomize(getarraykeys(level._random_perk_machine_perk_list));
@@ -493,7 +493,7 @@ function get_weighted_random_perk(player) {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0x16aaed41, Offset: 0x2178
+// Checksum 0xe0a1d78c, Offset: 0x2178
 // Size: 0x204
 function perk_bottle_motion() {
     putouttime = 3;
@@ -513,7 +513,7 @@ function perk_bottle_motion() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0x2e2a3537, Offset: 0x2388
+// Checksum 0x960585fd, Offset: 0x2388
 // Size: 0x132
 function start_perk_bottle_cycling() {
     self endon(#"done_cycling");
@@ -534,7 +534,7 @@ function start_perk_bottle_cycling() {
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// Checksum 0xf9136c84, Offset: 0x24c8
+// Checksum 0x9e78a539, Offset: 0x24c8
 // Size: 0x92
 function get_perk_weapon_model(perk) {
     weapon = level.machine_assets[perk].weapon;
@@ -546,7 +546,7 @@ function get_perk_weapon_model(perk) {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0xe0dbe065, Offset: 0x2568
+// Checksum 0x56780c85, Offset: 0x2568
 // Size: 0xcc
 function perk_random_vending() {
     self clientfield::set("client_stone_emmissive_blink", 1);
@@ -560,7 +560,7 @@ function perk_random_vending() {
 
 // Namespace zm_perk_random
 // Params 3, eflags: 0x1 linked
-// Checksum 0x7084a613, Offset: 0x2640
+// Checksum 0xaee353e3, Offset: 0x2640
 // Size: 0xe4
 function perk_random_loop_anim(n_piece, s_anim_1, s_anim_2) {
     self endon(#"zbarrier_state_change");
@@ -579,7 +579,7 @@ function perk_random_loop_anim(n_piece, s_anim_1, s_anim_2) {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0xd81f35ba, Offset: 0x2730
+// Checksum 0xd893acd1, Offset: 0x2730
 // Size: 0x7c
 function perk_random_vend_sfx() {
     self playloopsound("zmb_rand_perk_sparks");
@@ -591,7 +591,7 @@ function perk_random_vend_sfx() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x0
-// Checksum 0xf960e2d3, Offset: 0x27b8
+// Checksum 0x5710d19, Offset: 0x27b8
 // Size: 0x24
 function perk_random_initial() {
     self setzbarrierpiecestate(3, "opening");
@@ -599,7 +599,7 @@ function perk_random_initial() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0x814200de, Offset: 0x27e8
+// Checksum 0x6b4e25ad, Offset: 0x27e8
 // Size: 0xa4
 function perk_random_idle() {
     self clientfield::set("client_stone_emmissive_blink", 0);
@@ -616,7 +616,7 @@ function perk_random_idle() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0x7f775c4a, Offset: 0x2898
+// Checksum 0xaf77b5b, Offset: 0x2898
 // Size: 0x42
 function perk_random_arrive() {
     while (self getzbarrierpiecestate(0) == "opening") {
@@ -627,7 +627,7 @@ function perk_random_arrive() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// Checksum 0xccee8675, Offset: 0x28e8
+// Checksum 0xcbe865e, Offset: 0x28e8
 // Size: 0x5c
 function perk_random_leaving() {
     while (self getzbarrierpiecestate(0) == "closing") {
@@ -639,7 +639,7 @@ function perk_random_leaving() {
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// Checksum 0x29bb5e4f, Offset: 0x2950
+// Checksum 0x4c476de6, Offset: 0x2950
 // Size: 0x88
 function set_perk_random_machine_state(state) {
     wait(0.1);
@@ -652,7 +652,7 @@ function set_perk_random_machine_state(state) {
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// Checksum 0x9bfdee5e, Offset: 0x29e0
+// Checksum 0x9e554a56, Offset: 0x29e0
 // Size: 0x49a
 function process_perk_random_machine_state(state) {
     switch (state) {
@@ -719,7 +719,7 @@ function process_perk_random_machine_state(state) {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x0
-// Checksum 0x2abbd8d0, Offset: 0x2e88
+// Checksum 0x7b4656cf, Offset: 0x2e88
 // Size: 0xe8
 function machine_sounds() {
     level endon(#"machine_think");
@@ -737,7 +737,7 @@ function machine_sounds() {
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// Checksum 0xddd3ef09, Offset: 0x2f78
+// Checksum 0xbbb789e8, Offset: 0x2f78
 // Size: 0x1a
 function getweaponmodel(weapon) {
     return weapon.worldmodel;
@@ -745,7 +745,7 @@ function getweaponmodel(weapon) {
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// Checksum 0x8b046f65, Offset: 0x2fa0
+// Checksum 0x1c2efd0a, Offset: 0x2fa0
 // Size: 0xb4
 function is_power_on(n_power_index) {
     if (isdefined(n_power_index)) {
@@ -763,7 +763,7 @@ function is_power_on(n_power_index) {
 
     // Namespace zm_perk_random
     // Params 0, eflags: 0x1 linked
-    // Checksum 0x8af16108, Offset: 0x3060
+    // Checksum 0x596226e0, Offset: 0x3060
     // Size: 0x1c
     function setup_devgui() {
         level.perk_random_devgui_callback = &wunderfizz_devgui_callback;
@@ -771,7 +771,7 @@ function is_power_on(n_power_index) {
 
     // Namespace zm_perk_random
     // Params 1, eflags: 0x1 linked
-    // Checksum 0x505c0b03, Offset: 0x3088
+    // Checksum 0xaf975650, Offset: 0x3088
     // Size: 0x1d6
     function wunderfizz_devgui_callback(cmd) {
         players = getplayers();

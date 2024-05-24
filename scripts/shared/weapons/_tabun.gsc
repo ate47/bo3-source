@@ -5,7 +5,7 @@
 #namespace tabun;
 
 // Namespace tabun
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6be7c8be, Offset: 0x390
 // Size: 0x2fc
 function init_shared() {

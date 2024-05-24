@@ -16,7 +16,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf37ef3f8, Offset: 0x5f8
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("bzm_collectibles", &__init__, &__main__, undefined);
 }
 
@@ -82,7 +82,7 @@ function function_ab60ef67() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe2c8ec89, Offset: 0x938
 // Size: 0xe4
-function function_b963f25(mdl_collectible) {
+function private function_b963f25(mdl_collectible) {
     mdl_collectible.radius = 60;
     mdl_collectible.offset = (0, 0, 5);
     mdl_collectible.origin += (0, 0, 35);

@@ -23,7 +23,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x2db8b2c1, Offset: 0x538
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("lightning_chain", &init, undefined, undefined);
 }
 
@@ -114,7 +114,7 @@ function create_lightning_chain_params(max_arcs, max_enemies_killed, radius_star
 // Params 0, eflags: 0x5 linked
 // Checksum 0x3a5425b0, Offset: 0x9e0
 // Size: 0x5c
-function on_player_connect() {
+function private on_player_connect() {
     self endon(#"disconnect");
     self endon(#"death");
     self waittill(#"spawned_player");
@@ -181,7 +181,7 @@ function arc_damage_ent(player, arc_num, params) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xa4970aa8, Offset: 0xdb8
 // Size: 0xe4
-function lc_end_arc_damage(arc_num, enemies_hit_num, params) {
+function private lc_end_arc_damage(arc_num, enemies_hit_num, params) {
     if (arc_num >= params.max_arcs) {
         zm_utility::debug_print("TESLA: Ending arcing. Max arcs hit");
         return true;
@@ -202,7 +202,7 @@ function lc_end_arc_damage(arc_num, enemies_hit_num, params) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x79f02624, Offset: 0xea8
 // Size: 0x290
-function lc_get_enemies_in_area(origin, distance, player) {
+function private lc_get_enemies_in_area(origin, distance, player) {
     /#
         level thread lc_debug_arc(origin, distance);
     #/
@@ -249,7 +249,7 @@ function lc_get_enemies_in_area(origin, distance, player) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xc9f7e4cb, Offset: 0x1140
 // Size: 0xac
-function lc_flag_hit(enemy, hit) {
+function private lc_flag_hit(enemy, hit) {
     if (isdefined(enemy)) {
         if (isarray(enemy)) {
             for (i = 0; i < enemy.size; i++) {
@@ -269,7 +269,7 @@ function lc_flag_hit(enemy, hit) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0x18c16f91, Offset: 0x11f8
 // Size: 0x49c
-function lc_do_damage(source_enemy, arc_num, player, params) {
+function private lc_do_damage(source_enemy, arc_num, player, params) {
     player endon(#"disconnect");
     if (arc_num > 1) {
         wait(randomfloatrange(0.2, 0.6) * arc_num);
@@ -416,7 +416,7 @@ function lc_play_arc_fx(target, params) {
     // Params 2, eflags: 0x5 linked
     // Checksum 0x95031da7, Offset: 0x1b40
     // Size: 0x6c
-    function lc_debug_arc(origin, distance) {
+    function private lc_debug_arc(origin, distance) {
         if (getdvarint("zombie/fx_tesla_shock_eyes_zmb") != 3) {
             return;
         }

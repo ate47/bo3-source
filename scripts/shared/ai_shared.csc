@@ -4,7 +4,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x92d15211, Offset: 0x78
 // Size: 0x1c
-function main() {
+function autoexec main() {
     level._customactorcbfunc = &ai::spawned_callback;
 }
 

@@ -20,7 +20,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x3caff76, Offset: 0x268
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_genesis_minor_ee", &__init__, &__main__, undefined);
 }
 

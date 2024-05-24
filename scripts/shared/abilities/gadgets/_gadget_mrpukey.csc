@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf0ebcaf2, Offset: 0x1e8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("gadget_es_strike", &__init__, undefined, undefined);
 }
 

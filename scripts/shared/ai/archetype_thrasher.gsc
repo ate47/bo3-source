@@ -33,7 +33,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x29456890, Offset: 0x9a0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("thrasher", &__init__, undefined, undefined);
 }
 
@@ -62,7 +62,7 @@ function __init__() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xd3f9fa18, Offset: 0xc38
 // Size: 0x374
-function function_d83c7355() {
+function private function_d83c7355() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherRageService", &function_db7ff69e);
     behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherTargetService", &function_bc6753c6);
     behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherKnockdownService", &function_e4c4feab);
@@ -91,7 +91,7 @@ function function_d83c7355() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x678177c, Offset: 0xfb8
 // Size: 0x1ec
-function function_66ddd4b8() {
+function private function_66ddd4b8() {
     entity = self;
     blackboard::createblackboardforentity(entity);
     entity aiutility::function_89e1fc16();
@@ -128,7 +128,7 @@ function function_66ddd4b8() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x87e960e4, Offset: 0x11b0
 // Size: 0x34
-function function_5215214e(entity) {
+function private function_5215214e(entity) {
     entity.__blackboard = undefined;
     entity function_66ddd4b8();
 }
@@ -137,7 +137,7 @@ function function_5215214e(entity) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xf825ea8, Offset: 0x11f0
 // Size: 0x164
-function function_44ca600a() {
+function private function_44ca600a() {
     entity = self;
     entity.health = 1000;
     entity.maxhealth = entity.health;
@@ -162,7 +162,7 @@ function function_44ca600a() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xe46124ef, Offset: 0x1360
 // Size: 0x4a
-function bb_getshouldturn() {
+function private bb_getshouldturn() {
     entity = self;
     if (isdefined(entity.should_turn) && entity.should_turn) {
         return "should_turn";
@@ -174,7 +174,7 @@ function bb_getshouldturn() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x8127ba64, Offset: 0x13b8
 // Size: 0x218
-function function_a035ff2a() {
+function private function_a035ff2a() {
     entity = self;
     /#
         assert(array("sndPlayerConsumed", "sndPlayerConsumed", "sndPlayerConsumed").size == array(1, 2, 4).size);
@@ -199,7 +199,7 @@ function function_a035ff2a() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe71fad1, Offset: 0x15d8
 // Size: 0xd4
-function function_cb3596fd(entity) {
+function private function_cb3596fd(entity) {
     if (isdefined(entity.var_f92f6f15)) {
         entity thread [[ entity.var_f92f6f15 ]]();
     }
@@ -218,7 +218,7 @@ function function_cb3596fd(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xf48c2413, Offset: 0x16b8
 // Size: 0x212
-function function_62caf126(entity) {
+function private function_62caf126(entity) {
     if (entity.var_9aee6feb) {
         return;
     }
@@ -249,7 +249,7 @@ function function_62caf126(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xdf486965, Offset: 0x18d8
 // Size: 0x74
-function function_db7ff69e(entity) {
+function private function_db7ff69e(entity) {
     entity.var_1bb31a5a += entity.var_e1f82635 * 1 + 1;
     if (entity.var_1bb31a5a >= -56) {
         namespace_5d6075c6::function_6c2bbf66(entity);
@@ -260,7 +260,7 @@ function function_db7ff69e(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x1302c530, Offset: 0x1958
 // Size: 0x428
-function function_bc6753c6(entity) {
+function private function_bc6753c6(entity) {
     if (isdefined(entity.ignoreall) && entity.ignoreall) {
         return 0;
     }
@@ -319,7 +319,7 @@ function function_bc6753c6(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4cc09f9, Offset: 0x1d88
 // Size: 0x3a
-function function_57d6d5c4(entity) {
+function private function_57d6d5c4(entity) {
     if (isdefined(entity.var_67a1573a)) {
         return [[ entity.var_67a1573a ]](entity);
     }
@@ -330,7 +330,7 @@ function function_57d6d5c4(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xf8674b3f, Offset: 0x1dd0
 // Size: 0x1ba
-function function_e4c4feab(entity) {
+function private function_e4c4feab(entity) {
     velocity = entity getvelocity();
     var_43502fbc = 0.3;
     predicted_pos = entity.origin + velocity * var_43502fbc;
@@ -351,7 +351,7 @@ function function_e4c4feab(entity) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x1ff6c4d4, Offset: 0x1f98
 // Size: 0x1ac
-function function_ae899104(zombie, thrasher, predicted_pos) {
+function private function_ae899104(zombie, thrasher, predicted_pos) {
     if (zombie.knockdown === 1) {
         return false;
     }
@@ -402,7 +402,7 @@ function function_4fdbf15(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x231b7965, Offset: 0x2248
 // Size: 0xe
-function function_56b22ed8(entity) {
+function private function_56b22ed8(entity) {
     return false;
 }
 
@@ -410,7 +410,7 @@ function function_56b22ed8(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xc3065116, Offset: 0x2260
 // Size: 0x2c
-function function_3d0c02cc(entity) {
+function private function_3d0c02cc(entity) {
     return entity.var_5fedb470 && !entity.var_5b105946;
 }
 
@@ -418,7 +418,7 @@ function function_3d0c02cc(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xfc1b23e8, Offset: 0x2298
 // Size: 0xec
-function function_ab95703e(entity) {
+function private function_ab95703e(entity) {
     if (!isdefined(entity.favoriteenemy)) {
         return false;
     }
@@ -439,7 +439,7 @@ function function_ab95703e(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xbcd705a9, Offset: 0x2390
 // Size: 0x124
-function function_3bcfda18(entity) {
+function private function_3bcfda18(entity) {
     if (!isdefined(entity.favoriteenemy)) {
         return false;
     }
@@ -466,7 +466,7 @@ function function_3bcfda18(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd09001f7, Offset: 0x24c0
 // Size: 0x12a
-function function_fdcdd8a5(entity) {
+function private function_fdcdd8a5(entity) {
     if (entity.var_a54844b5 >= entity.var_3a60f862) {
         return 0;
     }
@@ -493,7 +493,7 @@ function function_fdcdd8a5(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x11dc2b78, Offset: 0x25f8
 // Size: 0x54
-function function_f8c0f4f7(entity) {
+function private function_f8c0f4f7(entity) {
     if (isplayer(entity.favoriteenemy)) {
         entity thread namespace_5d6075c6::function_aaaf7923(entity, entity.favoriteenemy);
     }
@@ -503,7 +503,7 @@ function function_f8c0f4f7(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x1720b8f9, Offset: 0x2658
 // Size: 0x24
-function function_506069f4(entity) {
+function private function_506069f4(entity) {
     gibserverutils::annihilate(entity);
 }
 
@@ -511,7 +511,7 @@ function function_506069f4(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb2b27cf3, Offset: 0x2688
 // Size: 0x58
-function function_394b19ee(entity) {
+function private function_394b19ee(entity) {
     if (isdefined(entity.var_c1f12967)) {
         if ([[ entity.var_c1f12967 ]](entity)) {
             entity.var_a54844b5++;
@@ -524,7 +524,7 @@ function function_394b19ee(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe89546dc, Offset: 0x26e8
 // Size: 0x2a
-function function_b4e95fd(entity) {
+function private function_b4e95fd(entity) {
     return entity ai::get_behavior_attribute("stunned");
 }
 
@@ -586,7 +586,7 @@ function function_6c2bbf66(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x1fb02543, Offset: 0x2a98
 // Size: 0xc4
-function function_2284c497(entity) {
+function private function_2284c497(entity) {
     entity.var_5b105946 = 1;
     meleeweapon = getweapon("thrasher_melee_enraged");
     entity.meleeweapon = getweapon("thrasher_melee_enraged");
@@ -639,7 +639,7 @@ function function_55ee3ac(inflictor, attacker, damage, dflags, mod, weapon, poin
 // Params 1, eflags: 0x5 linked
 // Checksum 0x87ec0de0, Offset: 0x2e28
 // Size: 0x7c
-function function_5aaa10f7(n_time) {
+function private function_5aaa10f7(n_time) {
     entity = self;
     entity endon(#"death");
     entity notify(#"hash_59b1cbf8");
@@ -704,7 +704,7 @@ function function_c411135f(inflictor, attacker, damage, dflags, mod, weapon, poi
 // Params 1, eflags: 0x5 linked
 // Checksum 0x2935c7b9, Offset: 0x32c0
 // Size: 0x3c
-function function_3e5b31b1(entity) {
+function private function_3e5b31b1(entity) {
     if (isdefined(entity.var_5622f976)) {
         entity thread [[ entity.var_5622f976 ]](entity);
     }
@@ -776,7 +776,7 @@ function function_28290043(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4e326dad, Offset: 0x36e8
 // Size: 0x1c
-function function_32c6ffcc(entity) {
+function private function_32c6ffcc(entity) {
     entity.var_e2dee6f5 = gettime();
 }
 
@@ -784,7 +784,7 @@ function function_32c6ffcc(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x666e896e, Offset: 0x3710
 // Size: 0x58
-function function_1d49555(entity) {
+function private function_1d49555(entity) {
     if (entity.var_e2dee6f5 + 1000 < gettime()) {
         entity ai::set_behavior_attribute("stunned", 0);
         entity.var_ef0082a4 = 3000;
@@ -795,7 +795,7 @@ function function_1d49555(entity) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x8c74bc8, Offset: 0x3770
 // Size: 0xde
-function function_7c8ed1a3(entity, hide) {
+function private function_7c8ed1a3(entity, hide) {
     for (index = 1; index <= 24; index++) {
         tag = "j_spike";
         if (index < 10) {
@@ -843,7 +843,7 @@ function function_1e849801(entity) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x4d0617a0, Offset: 0x3a30
 // Size: 0x194
 function function_15256ff0(entity) {
@@ -897,7 +897,7 @@ function function_fc5c5afd(thrasher, player) {
 }
 
 // Namespace namespace_5d6075c6
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0xd3ea8f13, Offset: 0x3db8
 // Size: 0x3a
 function function_8259f2c4(revivee) {
@@ -911,7 +911,7 @@ function function_8259f2c4(revivee) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xf65daaf4, Offset: 0x3e00
 // Size: 0x74
-function function_1db90449(thrasher, playerclone) {
+function private function_1db90449(thrasher, playerclone) {
     thrasher endon(#"hash_d48cf67e");
     thrasher waittill(#"death");
     if (isdefined(thrasher)) {
@@ -926,7 +926,7 @@ function function_1db90449(thrasher, playerclone) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x581a335c, Offset: 0x3e80
 // Size: 0xdc
-function function_cf9a26c1(thrasher, playerclone) {
+function private function_cf9a26c1(thrasher, playerclone) {
     thrasher endon(#"death");
     thrasher thread function_1db90449(thrasher, playerclone);
     thrasher scene::play("scene_zm_dlc2_thrasher_eat_player", array(thrasher, playerclone));

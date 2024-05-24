@@ -9,15 +9,15 @@
 
 // Namespace zm_perk_widows_wine
 // Params 0, eflags: 0x2
-// Checksum 0x161da8af, Offset: 0x2d8
+// Checksum 0x95c9efcf, Offset: 0x2d8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_perk_widows_wine", &__init__, undefined, undefined);
 }
 
 // Namespace zm_perk_widows_wine
 // Params 0, eflags: 0x0
-// Checksum 0xe8fbfbe9, Offset: 0x318
+// Checksum 0x42b776b7, Offset: 0x318
 // Size: 0xcc
 function __init__() {
     zm_perks::register_perk_clientfields("specialty_widowswine", &widows_wine_client_field_func, &widows_wine_code_callback_func);
@@ -28,7 +28,7 @@ function __init__() {
 
 // Namespace zm_perk_widows_wine
 // Params 0, eflags: 0x0
-// Checksum 0x5c2c6724, Offset: 0x3f0
+// Checksum 0x6d7c4be6, Offset: 0x3f0
 // Size: 0x52
 function init_widows_wine() {
     if (isdefined(level.enable_magic) && level.enable_magic) {
@@ -39,7 +39,7 @@ function init_widows_wine() {
 
 // Namespace zm_perk_widows_wine
 // Params 0, eflags: 0x0
-// Checksum 0xf49ecce6, Offset: 0x450
+// Checksum 0xfc8467a9, Offset: 0x450
 // Size: 0xcc
 function widows_wine_client_field_func() {
     clientfield::register("clientuimodel", "hudItems.perks.widows_wine", 1, 2, "int", undefined, 0, 1);
@@ -57,7 +57,7 @@ function widows_wine_code_callback_func() {
 
 // Namespace zm_perk_widows_wine
 // Params 7, eflags: 0x0
-// Checksum 0xd5322eef, Offset: 0x538
+// Checksum 0x9f6e86a5, Offset: 0x538
 // Size: 0x194
 function function_c48acb49(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
@@ -84,7 +84,7 @@ function function_c48acb49(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_perk_widows_wine
 // Params 7, eflags: 0x0
-// Checksum 0x69629b7e, Offset: 0x6d8
+// Checksum 0x6b737327, Offset: 0x6d8
 // Size: 0x9c
 function function_bb108b89(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     owner = self getowner(localclientnum);
@@ -95,7 +95,7 @@ function function_bb108b89(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_perk_widows_wine
 // Params 1, eflags: 0x0
-// Checksum 0xb96b5ff0, Offset: 0x780
+// Checksum 0x2c27dd78, Offset: 0x780
 // Size: 0xbc
 function function_617a36aa(localclientnum) {
     tag = "tag_flash";

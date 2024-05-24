@@ -4,7 +4,7 @@
 #namespace namespace_6e97c459;
 
 // Namespace namespace_6e97c459
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0xef1a64ca, Offset: 0xf0
 // Size: 0xac
 function function_225a92d6(var_f814e008, var_6f3d2f15) {

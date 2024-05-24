@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x5d2a0d9f, Offset: 0x3a0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("gadget_flashback", &__init__, undefined, undefined);
 }
 

@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x935eb484, Offset: 0x770
 // Size: 0x21c
-function init() {
+function autoexec init() {
     if (!sessionmodeiscampaignzombiesgame()) {
         return;
     }

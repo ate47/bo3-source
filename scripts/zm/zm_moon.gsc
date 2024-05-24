@@ -98,7 +98,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc0dfa5f8, Offset: 0x1dc8
 // Size: 0x28
-function opt_in() {
+function autoexec opt_in() {
     level.aat_in_use = 1;
     level.bgb_in_use = 1;
     level.pack_a_punch_camo_index = -124;

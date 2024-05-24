@@ -8,15 +8,15 @@
 
 // Namespace zombie_vortex
 // Params 0, eflags: 0x2
-// Checksum 0x8a20e7d8, Offset: 0x2a8
+// Checksum 0x1cbd2039, Offset: 0x2a8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("vortex", &__init__, undefined, undefined);
 }
 
 // Namespace zombie_vortex
-// Params 0, eflags: 0x0
-// Checksum 0xbfd24842, Offset: 0x2e8
+// Params 0, eflags: 0x1 linked
+// Checksum 0xba566e20, Offset: 0x2e8
 // Size: 0x114
 function __init__() {
     visionset_mgr::register_visionset_info("zm_idgun_vortex" + "_visionset", 1, 30, undefined, "zm_idgun_vortex");
@@ -26,8 +26,8 @@ function __init__() {
 }
 
 // Namespace zombie_vortex
-// Params 7, eflags: 0x0
-// Checksum 0xabc4ab6, Offset: 0x408
+// Params 7, eflags: 0x1 linked
+// Checksum 0xdbd2da2b, Offset: 0x408
 // Size: 0x1f4
 function start_vortex(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"entityshutdown");
@@ -56,8 +56,8 @@ function start_vortex(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 }
 
 // Namespace zombie_vortex
-// Params 2, eflags: 0x0
-// Checksum 0xadb9578f, Offset: 0x608
+// Params 2, eflags: 0x1 linked
+// Checksum 0x3c61a525, Offset: 0x608
 // Size: 0x50
 function vortex_shake_and_rumble(localclientnum, v_vortex_origin) {
     self endon(#"vortex_stop");
@@ -68,8 +68,8 @@ function vortex_shake_and_rumble(localclientnum, v_vortex_origin) {
 }
 
 // Namespace zombie_vortex
-// Params 7, eflags: 0x0
-// Checksum 0xec471a75, Offset: 0x660
+// Params 7, eflags: 0x1 linked
+// Checksum 0x4a5a0d84, Offset: 0x660
 // Size: 0x8c
 function vision_blur(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
@@ -80,8 +80,8 @@ function vision_blur(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 }
 
 // Namespace zombie_vortex
-// Params 5, eflags: 0x0
-// Checksum 0x51ff5b85, Offset: 0x6f8
+// Params 5, eflags: 0x1 linked
+// Checksum 0x1a0adf4d, Offset: 0x6f8
 // Size: 0x244
 function function_69096485(localclientnum, vortex_fx_handle, vposition, fx_vortex_explosion, n_vortex_time) {
     e_player = getlocalplayer(localclientnum);

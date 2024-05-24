@@ -29,7 +29,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe4a9e2c8, Offset: 0x6c8
 // Size: 0xbc
-function init() {
+function autoexec init() {
     spawner::add_archetype_spawn_function("human", &archetypehumanblackboardinit);
     spawner::add_archetype_spawn_function("human", &archetypehumaninit);
     humaninterface::registerhumaninterfaceattributes();
@@ -43,7 +43,7 @@ function init() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x80472732, Offset: 0x790
 // Size: 0x124
-function archetypehumaninit() {
+function private archetypehumaninit() {
     entity = self;
     aiutility::addaioverridedamagecallback(entity, &damageoverride);
     aiutility::addaioverridekilledcallback(entity, &humangibkilledoverride);
@@ -59,7 +59,7 @@ function archetypehumaninit() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xb6638b53, Offset: 0x8c0
 // Size: 0x12c
-function archetypehumanblackboardinit() {
+function private archetypehumanblackboardinit() {
     blackboard::createblackboardforentity(self);
     ai::createinterfaceforentity(self);
     self aiutility::function_89e1fc16();
@@ -82,7 +82,7 @@ function archetypehumanblackboardinit() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x48a413f9, Offset: 0x9f8
 // Size: 0xdc
-function archetypehumanonbehavecallback(entity) {
+function private archetypehumanonbehavecallback(entity) {
     if (aiutility::function_f09741fa(entity)) {
         blackboard::setblackboardattribute(entity, "_previous_cover_mode", "cover_alert");
         blackboard::setblackboardattribute(entity, "_cover_mode", "cover_mode_none");
@@ -96,7 +96,7 @@ function archetypehumanonbehavecallback(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7c317abd, Offset: 0xae0
 // Size: 0x84
-function archetypehumanonanimscriptedcallback(entity) {
+function private archetypehumanonanimscriptedcallback(entity) {
     entity.__blackboard = undefined;
     entity archetypehumanblackboardinit();
     vignettemode = ai::getaiattribute(entity, "vignette_mode");
@@ -107,7 +107,7 @@ function archetypehumanonanimscriptedcallback(entity) {
 // Params 8, eflags: 0x5 linked
 // Checksum 0xcb3b9b1b, Offset: 0xb70
 // Size: 0x310
-function humangibkilledoverride(inflictor, attacker, damage, meansofdeath, weapon, dir, hitloc, offsettime) {
+function private humangibkilledoverride(inflictor, attacker, damage, meansofdeath, weapon, dir, hitloc, offsettime) {
     entity = self;
     if (math::cointoss()) {
         return damage;
@@ -141,7 +141,7 @@ function humangibkilledoverride(inflictor, attacker, damage, meansofdeath, weapo
 // Params 4, eflags: 0x4
 // Checksum 0x8bbf3326, Offset: 0xe88
 // Size: 0x9c
-function trygibbinghead(entity, damage, hitloc, isexplosive) {
+function private trygibbinghead(entity, damage, hitloc, isexplosive) {
     if (isexplosive) {
         gibserverutils::gibhead(entity);
         return;
@@ -155,7 +155,7 @@ function trygibbinghead(entity, damage, hitloc, isexplosive) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0x47a97bbe, Offset: 0xf30
 // Size: 0x1cc
-function trygibbinglimb(entity, damage, hitloc, isexplosive) {
+function private trygibbinglimb(entity, damage, hitloc, isexplosive) {
     if (isexplosive) {
         randomchance = randomfloatrange(0, 1);
         if (randomchance < 0.5) {
@@ -186,7 +186,7 @@ function trygibbinglimb(entity, damage, hitloc, isexplosive) {
 // Params 5, eflags: 0x5 linked
 // Checksum 0x6553b96b, Offset: 0x1108
 // Size: 0x1fc
-function trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) {
+function private trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) {
     if (isexplosive) {
         randomchance = randomfloatrange(0, 1);
         if (randomchance < 0.33) {

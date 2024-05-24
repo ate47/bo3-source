@@ -8,15 +8,15 @@
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 0, eflags: 0x2
-// Checksum 0x1f6b8835, Offset: 0x1e0
+// Checksum 0xaef8fcba, Offset: 0x1e0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_perk_additionalprimaryweapon", &__init__, undefined, undefined);
 }
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 0, eflags: 0x0
-// Checksum 0x7576ac66, Offset: 0x220
+// Checksum 0xc88eeab7, Offset: 0x220
 // Size: 0x14
 function __init__() {
     enable_additional_primary_weapon_perk_for_level();
@@ -24,7 +24,7 @@ function __init__() {
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 0, eflags: 0x0
-// Checksum 0x723b1d32, Offset: 0x240
+// Checksum 0xcd616e89, Offset: 0x240
 // Size: 0x84
 function enable_additional_primary_weapon_perk_for_level() {
     zm_perks::register_perk_clientfields("specialty_additionalprimaryweapon", &additional_primary_weapon_client_field_func, &additional_primary_weapon_code_callback_func);
@@ -34,7 +34,7 @@ function enable_additional_primary_weapon_perk_for_level() {
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 0, eflags: 0x0
-// Checksum 0xff994f5c, Offset: 0x2d0
+// Checksum 0x4c31119d, Offset: 0x2d0
 // Size: 0x36
 function init_additional_primary_weapon() {
     if (isdefined(level.enable_magic) && level.enable_magic) {
@@ -44,7 +44,7 @@ function init_additional_primary_weapon() {
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 0, eflags: 0x0
-// Checksum 0xdc49a1c6, Offset: 0x310
+// Checksum 0x2b630b33, Offset: 0x310
 // Size: 0x3c
 function additional_primary_weapon_client_field_func() {
     clientfield::register("clientuimodel", "hudItems.perks.additional_primary_weapon", 1, 2, "int", undefined, 0, 1);

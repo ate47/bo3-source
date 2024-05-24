@@ -8,7 +8,7 @@
 #namespace namespace_8e578893;
 
 // Namespace namespace_8e578893
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7873f0d8, Offset: 0x180
 // Size: 0x276
 function function_f118a0e7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -50,7 +50,7 @@ function function_f118a0e7(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace namespace_8e578893
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xdaf0a5d6, Offset: 0x400
 // Size: 0x180
 function function_878b1e6c(localclientnum, var_4be1e559, var_d2e77e71) {

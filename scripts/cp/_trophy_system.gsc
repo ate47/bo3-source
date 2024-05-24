@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x792a3c3a, Offset: 0x148
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("trophy_system", &__init__, undefined, undefined);
 }
 

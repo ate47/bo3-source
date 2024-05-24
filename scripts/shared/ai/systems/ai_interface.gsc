@@ -6,7 +6,7 @@
     // Params 0, eflags: 0x2
     // Checksum 0x493a47d0, Offset: 0xe8
     // Size: 0x2c
-    function main() {
+    function autoexec main() {
         level.__ai_debuginterface = getdvarint("_interface_vector");
     }
 
@@ -14,7 +14,7 @@
     // Params 3, eflags: 0x5 linked
     // Checksum 0x85fdf085, Offset: 0x120
     // Size: 0x2d6
-    function _checkvalue(archetype, attributename, value) {
+    function private _checkvalue(archetype, attributename, value) {
         attribute = level.__ai_interface[archetype][attributename];
         switch (attribute["_interface_vector"]) {
         case 8:
@@ -52,7 +52,7 @@
     // Params 2, eflags: 0x5 linked
     // Checksum 0x7b801fce, Offset: 0x400
     // Size: 0x2b4
-    function _checkprerequisites(entity, attribute) {
+    function private _checkprerequisites(entity, attribute) {
         /#
             assert(isentity(entity), "_interface_vector");
         #/
@@ -85,7 +85,7 @@
     // Params 3, eflags: 0x5 linked
     // Checksum 0x758169d8, Offset: 0x6c0
     // Size: 0xcc
-    function _checkregistrationprerequisites(archetype, attribute, callbackfunction) {
+    function private _checkregistrationprerequisites(archetype, attribute, callbackfunction) {
         /#
             assert(isstring(archetype), "_interface_vector");
         #/
@@ -103,7 +103,7 @@
 // Params 1, eflags: 0x5 linked
 // Checksum 0xc53888b5, Offset: 0x798
 // Size: 0x46
-function _initializelevelinterface(archetype) {
+function private _initializelevelinterface(archetype) {
     if (!isdefined(level.__ai_interface)) {
         level.__ai_interface = [];
     }

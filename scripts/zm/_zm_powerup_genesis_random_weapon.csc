@@ -9,7 +9,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x8b64d9ee, Offset: 0x188
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_genesis_random_weapon", &__init__, undefined, undefined);
 }
 

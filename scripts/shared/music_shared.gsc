@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x77f7b329, Offset: 0xf0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("music", &__init__, undefined, undefined);
 }
 

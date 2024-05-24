@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xfddb2fcd, Offset: 0x190
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("burnplayer", &__init__, undefined, undefined);
 }
 

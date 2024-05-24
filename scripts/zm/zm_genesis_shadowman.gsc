@@ -31,12 +31,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0x39f22b80, Offset: 0x448
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_genesis_shadowman", &__init__, &__main__, undefined);
 }
 
 // Namespace namespace_553efdc
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1a15fb5e, Offset: 0x490
 // Size: 0x6c
 function __init__() {
@@ -46,7 +46,7 @@ function __init__() {
 }
 
 // Namespace namespace_553efdc
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x508
 // Size: 0x4
 function __main__() {
@@ -54,7 +54,7 @@ function __main__() {
 }
 
 // Namespace namespace_553efdc
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x113788f1, Offset: 0x518
 // Size: 0x1cc
 function function_8888a532(var_5b35973a, var_d250bd20, var_2c1a0d8f, var_32a5629a) {

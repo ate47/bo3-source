@@ -16,7 +16,7 @@
     // Params 0, eflags: 0x2
     // Checksum 0x90cc8e04, Offset: 0x1a8
     // Size: 0x34
-    function function_2dc19561() {
+    function autoexec function_2dc19561() {
         system::register("<unknown string>", &__init__, undefined, undefined);
     }
 

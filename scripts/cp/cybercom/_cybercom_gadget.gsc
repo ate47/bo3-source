@@ -354,7 +354,7 @@ function function_eb512967(name, var_a67a6c08) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xffa8b90b, Offset: 0x19a0
 // Size: 0x64
-function function_cae3643b() {
+function private function_cae3643b() {
     waittillframeend();
     self gadgetpowerset(0, 100);
     self gadgetpowerset(1, 100);

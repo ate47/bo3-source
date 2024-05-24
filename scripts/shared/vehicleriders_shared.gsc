@@ -22,7 +22,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x740b637c, Offset: 0x390
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("vehicleriders", &__init__, undefined, undefined);
 }
 
@@ -128,7 +128,7 @@ function function_d3fa882a(vh, str_pos) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x310e2164, Offset: 0xab0
 // Size: 0x5c
-function function_86bcb302(vh, str_pos) {
+function private function_86bcb302(vh, str_pos) {
     vh endon(#"death");
     vh endon(str_pos + "occupied");
     self waittill(#"death");
@@ -564,7 +564,7 @@ function function_63b86466() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x48433335, Offset: 0x23f0
 // Size: 0x64
-function handle_falling_death() {
+function private handle_falling_death() {
     self endon(#"landed");
     self waittill(#"death");
     if (isactor(self)) {
@@ -577,7 +577,7 @@ function handle_falling_death() {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x83c8381b, Offset: 0x2460
 // Size: 0x18e
-function forward_euler_integration(e_move, v_target_landing, n_initial_speed) {
+function private forward_euler_integration(e_move, v_target_landing, n_initial_speed) {
     landed = 0;
     var_af0234d7 = 0.1;
     position = self.origin;
@@ -701,7 +701,7 @@ function get_robot_bundle() {
 }
 
 // Namespace vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6cee42b7, Offset: 0x2c98
 // Size: 0xb8
 function function_ad4ec07a(str_pos) {
@@ -718,7 +718,7 @@ function function_ad4ec07a(str_pos) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xbb12bcb5, Offset: 0x2d58
 // Size: 0xd4
-function function_ce794bff(vh, str_pos) {
+function private function_ce794bff(vh, str_pos) {
     /#
         assert(isdefined(self.vehicle) || isdefined(vh), "_enter");
     #/

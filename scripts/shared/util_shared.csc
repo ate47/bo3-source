@@ -521,7 +521,7 @@ function timeout(n_time, func, arg1, arg2, arg3, arg4, arg5, arg6) {
 }
 
 // Namespace util
-// Params 9, eflags: 0x1 linked
+// Params 9, eflags: 0x0
 // Checksum 0x1e8a8113, Offset: 0x1c08
 // Size: 0x84
 function delay(time_or_notify, str_endon, func, arg1, arg2, arg3, arg4, arg5, arg6) {

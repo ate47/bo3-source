@@ -431,7 +431,7 @@ function turnplayershieldon(var_f8ae67a3) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x88f5327a, Offset: 0x22c8
 // Size: 0x24
-function function_6b0da7ff() {
+function private function_6b0da7ff() {
     self endon(#"death");
     while (true) {
         wait(0.05);
@@ -523,7 +523,7 @@ function function_93739933(vel) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd1405de7, Offset: 0x27e8
 // Size: 0x11c
-function function_ab9cf24b(player) {
+function private function_ab9cf24b(player) {
     self endon(#"death");
     if (!isdefined(level.doa) || !isdefined(level.doa.var_7817fe3c)) {
         return;
@@ -684,7 +684,7 @@ function function_f3748dcb(count) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xf619789b, Offset: 0x3080
 // Size: 0xd4
-function function_3f041ff1() {
+function private function_3f041ff1() {
     self endon(#"disconnect");
     self util::waittill_any("new_speed_pickup", "player_died", "speed_expired", "disconnect");
     self thread namespace_eaa992c::turnofffx("boots");
@@ -720,7 +720,7 @@ function function_832d21c2() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xc5606a64, Offset: 0x32d0
 // Size: 0x114
-function function_af5211c2() {
+function private function_af5211c2() {
     self endon(#"disconnect");
     self util::waittill_any("new_speed_pickup", "player_died", "speed_expired", "snare_broken", "disconnect");
     self thread namespace_eaa992c::turnofffx("slow_feet");
@@ -981,7 +981,7 @@ function function_7d7a7fde() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xbb818606, Offset: 0x4198
 // Size: 0x4c
-function function_9fc6e261() {
+function private function_9fc6e261() {
     corpse = self waittill(#"actor_corpse");
     wait(0.05);
     if (isdefined(corpse)) {
@@ -993,7 +993,7 @@ function function_9fc6e261() {
 // Params 4, eflags: 0x5 linked
 // Checksum 0xd237bd29, Offset: 0x41f0
 // Size: 0x344
-function function_d392db04(var_adc420e5, origin, player, updir) {
+function private function_d392db04(var_adc420e5, origin, player, updir) {
     self endon(#"death");
     /#
         assert(!(isdefined(self.boss) && self.boss));
@@ -1610,7 +1610,7 @@ function function_3682cfe4(einflictor, attacker, idamage, smeansofdeath, sweapon
 // Params 0, eflags: 0x5 linked
 // Checksum 0xfe014027, Offset: 0x6b78
 // Size: 0x4a
-function function_fdf74b3() {
+function private function_fdf74b3() {
     self notify(#"new_ignore_attacker");
     self endon(#"new_ignore_attacker");
     self endon(#"disconnect");
@@ -1751,7 +1751,7 @@ function function_68ece679(entnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x78bc9f28, Offset: 0x73f8
 // Size: 0xf4
-function function_161ce9cd(delay) {
+function private function_161ce9cd(delay) {
     if (!isdefined(delay)) {
         delay = 2;
     }
@@ -1775,7 +1775,7 @@ function function_161ce9cd(delay) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x2ee44434, Offset: 0x74f8
 // Size: 0x382
-function function_ad1d5fcb(var_243f32c0) {
+function private function_ad1d5fcb(var_243f32c0) {
     if (!isdefined(var_243f32c0)) {
         var_243f32c0 = 0;
     }
@@ -1836,7 +1836,7 @@ function function_ad1d5fcb(var_243f32c0) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xfcf66629, Offset: 0x7888
 // Size: 0xc2
-function function_bbdc9bc0() {
+function private function_bbdc9bc0() {
     self endon(#"disconnect");
     self endon(#"hash_c274fd90");
     level endon(#"doa_game_is_over");
@@ -2082,7 +2082,7 @@ function function_c7471371() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xac6d5bda, Offset: 0x88f8
 // Size: 0x66
-function function_79489c4c(time) {
+function private function_79489c4c(time) {
     self endon(#"disconnect");
     level endon(#"doa_game_is_over");
     self notify(#"hash_79489c4c");
@@ -2096,7 +2096,7 @@ function function_79489c4c(time) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x8fa9e227, Offset: 0x8968
 // Size: 0x210
-function function_c240f40e(source, dest, orb) {
+function private function_c240f40e(source, dest, orb) {
     self endon(#"disconnect");
     dest endon(#"disconnect");
     level endon(#"doa_game_is_over");
@@ -2126,7 +2126,7 @@ function function_c240f40e(source, dest, orb) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x9668880e, Offset: 0x8b80
 // Size: 0xa9c
-function function_2f150493(source, dest) {
+function private function_2f150493(source, dest) {
     self endon(#"disconnect");
     level endon(#"doa_game_is_over");
     if (dest.doa.lives > 0) {

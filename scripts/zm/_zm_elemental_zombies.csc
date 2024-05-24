@@ -10,15 +10,15 @@
 
 // Namespace namespace_57695b4d
 // Params 0, eflags: 0x2
-// Checksum 0x9ee85906, Offset: 0x460
+// Checksum 0xf94b5e8d, Offset: 0x460
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_elemental_zombie", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_57695b4d
 // Params 0, eflags: 0x0
-// Checksum 0xf650f3dd, Offset: 0x4a0
+// Checksum 0x6ed37b1c, Offset: 0x4a0
 // Size: 0x24
 function __init__() {
     init_fx();
@@ -27,7 +27,7 @@ function __init__() {
 
 // Namespace namespace_57695b4d
 // Params 0, eflags: 0x0
-// Checksum 0xcc4092a1, Offset: 0x4d0
+// Checksum 0x52286618, Offset: 0x4d0
 // Size: 0xaa
 function init_fx() {
     level._effect["elemental_zombie_sparky"] = "electric/fx_ability_elec_surge_short_robot_optim";
@@ -40,7 +40,7 @@ function init_fx() {
 
 // Namespace namespace_57695b4d
 // Params 0, eflags: 0x0
-// Checksum 0xf020ca59, Offset: 0x588
+// Checksum 0x305769ef, Offset: 0x588
 // Size: 0x1b4
 function register_clientfields() {
     clientfield::register("actor", "sparky_zombie_spark_fx", 1, 1, "int", &function_de563d9b, 0, 0);
@@ -53,7 +53,7 @@ function register_clientfields() {
 
 // Namespace namespace_57695b4d
 // Params 7, eflags: 0x0
-// Checksum 0x60e3aa95, Offset: 0x748
+// Checksum 0x8ed8958d, Offset: 0x748
 // Size: 0xd4
 function function_56ad3a27(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self util::waittill_dobj(localclientnum);
@@ -68,7 +68,7 @@ function function_56ad3a27(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_57695b4d
 // Params 7, eflags: 0x0
-// Checksum 0x6b19976b, Offset: 0x828
+// Checksum 0x6ed3dfa, Offset: 0x828
 // Size: 0x144
 function function_16467cb6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"entityshutdown");
@@ -88,7 +88,7 @@ function function_16467cb6(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_57695b4d
 // Params 7, eflags: 0x0
-// Checksum 0x39fd6108, Offset: 0x978
+// Checksum 0x6fa79339, Offset: 0x978
 // Size: 0x84
 function function_b542950d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
@@ -100,7 +100,7 @@ function function_b542950d(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_57695b4d
 // Params 7, eflags: 0x0
-// Checksum 0x97c34110, Offset: 0xa08
+// Checksum 0xc7d0424f, Offset: 0xa08
 // Size: 0x1bc
 function function_de563d9b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (!isdefined(newval)) {
@@ -131,7 +131,7 @@ function function_de563d9b(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_57695b4d
 // Params 7, eflags: 0x0
-// Checksum 0xdf73ad0d, Offset: 0xbd0
+// Checksum 0x5d70c624, Offset: 0xbd0
 // Size: 0xb4
 function function_d0886efe(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (oldval !== newval && newval === 1) {
@@ -142,7 +142,7 @@ function function_d0886efe(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_57695b4d
 // Params 7, eflags: 0x0
-// Checksum 0xdf8aa709, Offset: 0xc90
+// Checksum 0xf088265f, Offset: 0xc90
 // Size: 0x12c
 function function_86aaed61(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"entityshutdown");

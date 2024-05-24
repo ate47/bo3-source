@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x27e12fd6, Offset: 0x578
 // Size: 0x1c4
-function init() {
+function autoexec init() {
     if (!sessionmodeiscampaignzombiesgame()) {
         return;
     }
@@ -44,7 +44,7 @@ function init() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xfa2cf363, Offset: 0x748
 // Size: 0x24
-function function_1c8c2a72() {
+function private function_1c8c2a72() {
     callback::on_spawned(&function_2aefb731);
 }
 

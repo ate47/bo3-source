@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf63bfe3b, Offset: 0x1d0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("spike_charge", &__init__, undefined, undefined);
 }
 

@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x80e118d8, Offset: 0x328
 // Size: 0x2c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("clientfaceanim_shared", undefined, &main, undefined);
 }
 
@@ -27,7 +27,7 @@ function main() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xbbe2c022, Offset: 0x3a8
 // Size: 0x5c
-function on_player_spawned(localclientnum) {
+function private on_player_spawned(localclientnum) {
     function_4f353102(localclientnum);
     self callback::on_shutdown(&on_player_shutdown);
     self thread on_player_death(localclientnum);
@@ -37,7 +37,7 @@ function on_player_spawned(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x313d414b, Offset: 0x410
 // Size: 0xd8
-function on_player_shutdown(localclientnum) {
+function private on_player_shutdown(localclientnum) {
     if (self isplayer()) {
         self notify(#"stopfacialthread");
         corpse = self getplayercorpse();
@@ -59,7 +59,7 @@ function on_player_shutdown(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xf32c995, Offset: 0x4f0
 // Size: 0xe8
-function on_player_death(localclientnum) {
+function private on_player_death(localclientnum) {
     self endon(#"entityshutdown");
     self waittill(#"death");
     if (self isplayer()) {
@@ -80,7 +80,7 @@ function on_player_death(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xfa166f08, Offset: 0x5e0
 // Size: 0x54
-function function_4f353102(localclientnum) {
+function private function_4f353102(localclientnum) {
     buildandvalidatefacialanimationlist(localclientnum);
     if (self isplayer()) {
         self thread function_48af690b(localclientnum);
@@ -117,7 +117,7 @@ function buildandvalidatefacialanimationlist(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x5cbb042c, Offset: 0x908
 // Size: 0x170
-function facialanimationthink_getwaittime(localclientnum) {
+function private facialanimationthink_getwaittime(localclientnum) {
     if (!isdefined(localclientnum)) {
         return 1;
     }
@@ -147,7 +147,7 @@ function facialanimationthink_getwaittime(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb6d6ef24, Offset: 0xa80
 // Size: 0xf2
-function function_48af690b(localclientnum) {
+function private function_48af690b(localclientnum) {
     self endon(#"entityshutdown");
     self notify(#"stopfacialthread");
     self endon(#"stopfacialthread");
@@ -173,7 +173,7 @@ function function_48af690b(localclientnum) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x4e24a182, Offset: 0xb80
 // Size: 0x2a8
-function updatefacialanimforplayer(localclientnum, player) {
+function private updatefacialanimforplayer(localclientnum, player) {
     if (!isdefined(player)) {
         return;
     }
@@ -220,7 +220,7 @@ function updatefacialanimforplayer(localclientnum, player) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x962f22e9, Offset: 0xe30
 // Size: 0x7c
-function applynewfaceanim(localclientnum, animation) {
+function private applynewfaceanim(localclientnum, animation) {
     clearallfacialanims(localclientnum);
     if (isdefined(animation)) {
         self._currentfaceanim = animation;
@@ -232,7 +232,7 @@ function applynewfaceanim(localclientnum, animation) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4e830b8d, Offset: 0xeb8
 // Size: 0xa4
-function applydeathanim(localclientnum) {
+function private applydeathanim(localclientnum) {
     if (isdefined(self._currentfacestate) && self._currentfacestate == "death") {
         return;
     }
@@ -246,7 +246,7 @@ function applydeathanim(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x87d8f06a, Offset: 0xf68
 // Size: 0x66
-function clearallfacialanims(localclientnum) {
+function private clearallfacialanims(localclientnum) {
     if (isdefined(self._currentfaceanim) && self hasdobj(localclientnum)) {
         self clearanim(self._currentfaceanim, 0.2);
     }

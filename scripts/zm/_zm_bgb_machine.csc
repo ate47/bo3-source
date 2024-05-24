@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe3ea3e58, Offset: 0x980
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("bgb_machine", &__init__, undefined, undefined);
 }
 
@@ -78,7 +78,7 @@ function __init__() {
 // Params 7, eflags: 0x5 linked
 // Checksum 0xf86e5c92, Offset: 0xe88
 // Size: 0x3cc
-function function_62051f89(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function private function_62051f89(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(self.var_16139ac9)) {
         return;
     }
@@ -132,7 +132,7 @@ function function_62051f89(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x5 linked
 // Checksum 0x221f43a3, Offset: 0x1260
 // Size: 0x62
-function function_3bb1978f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function private function_3bb1978f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (!newval) {
         return;
     }
@@ -143,7 +143,7 @@ function function_3bb1978f(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 3, eflags: 0x5 linked
 // Checksum 0x5162026d, Offset: 0x12d0
 // Size: 0x100
-function function_8711c7b2(localclientnum, fx, piece) {
+function private function_8711c7b2(localclientnum, fx, piece) {
     piece endon(#"opened");
     piece endon(#"closed");
     self.var_6860c69f = array::randomize(self.var_6860c69f);
@@ -162,7 +162,7 @@ function function_8711c7b2(localclientnum, fx, piece) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x568d4594, Offset: 0x13d8
 // Size: 0x170
-function function_7cf480af(localclientnum, notifyname, fx) {
+function private function_7cf480af(localclientnum, notifyname, fx) {
     var_3af6034f = self zbarriergetpiece(3);
     var_6b3a8684 = self zbarriergetpiece(5);
     for (;;) {
@@ -179,7 +179,7 @@ function function_7cf480af(localclientnum, notifyname, fx) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4a3f6cb9, Offset: 0x1550
 // Size: 0x314
-function function_25c29799(localclientnum) {
+function private function_25c29799(localclientnum) {
     var_f3eb485b = self zbarriergetpiece(4);
     var_6b3a8684 = self zbarriergetpiece(5);
     for (;;) {
@@ -231,7 +231,7 @@ function function_5885778a(piece) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x9eb4133d, Offset: 0x18b8
 // Size: 0x180
-function function_f27e16f6(localclientnum) {
+function private function_f27e16f6(localclientnum) {
     piece = self zbarriergetpiece(2);
     while (isdefined(self)) {
         function_36a807de(piece);
@@ -269,7 +269,7 @@ function function_36a807de(piece) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x329cc8e6, Offset: 0x1a70
 // Size: 0x78
-function function_3939ad2f(localclientnum) {
+function private function_3939ad2f(localclientnum) {
     piece = self zbarriergetpiece(1);
     for (;;) {
         piece waittill(#"opening");
@@ -282,7 +282,7 @@ function function_3939ad2f(localclientnum) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x830dbc28, Offset: 0x1af0
 // Size: 0xe4
-function function_9b51ab0() {
+function private function_9b51ab0() {
     var_286fd1ed = self clientfield::get("zm_bgb_machine_selection");
     bgb = level.bgb_item_index_to_name[var_286fd1ed];
     switch (level.bgb[bgb].limit_type) {
@@ -302,7 +302,7 @@ function function_9b51ab0() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x93521bb0, Offset: 0x1be0
 // Size: 0xe4
-function function_43d950d2() {
+function private function_43d950d2() {
     var_286fd1ed = self clientfield::get("zm_bgb_machine_selection");
     bgb = level.bgb_item_index_to_name[var_286fd1ed];
     switch (level.bgb[bgb].limit_type) {
@@ -322,7 +322,7 @@ function function_43d950d2() {
 // Params 5, eflags: 0x5 linked
 // Checksum 0xb1e36f70, Offset: 0x1cd0
 // Size: 0xd8
-function function_42630d5e(localclientnum, piece, tag, fx, deleteimmediate) {
+function private function_42630d5e(localclientnum, piece, tag, fx, deleteimmediate) {
     if (!isdefined(deleteimmediate)) {
         deleteimmediate = 1;
     }
@@ -339,7 +339,7 @@ function function_42630d5e(localclientnum, piece, tag, fx, deleteimmediate) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x57f88f67, Offset: 0x1db0
 // Size: 0x44
-function function_e5bc89d2(localclientnum, piece, fx) {
+function private function_e5bc89d2(localclientnum, piece, fx) {
     function_42630d5e(localclientnum, piece, "tag_fx_light_top_jnt", fx);
 }
 
@@ -347,7 +347,7 @@ function function_e5bc89d2(localclientnum, piece, fx) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xe976fe0c, Offset: 0x1e00
 // Size: 0x6c
-function function_cb90ea4e(localclientnum, piece, fx) {
+function private function_cb90ea4e(localclientnum, piece, fx) {
     function_42630d5e(localclientnum, piece, "tag_fx_light_side_lft_top_jnt", fx);
     function_42630d5e(localclientnum, piece, "tag_fx_light_side_rt_top_jnt", fx);
 }
@@ -356,7 +356,7 @@ function function_cb90ea4e(localclientnum, piece, fx) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x46228ca6, Offset: 0x1e78
 // Size: 0x6c
-function function_47c2c4a1(localclientnum, piece, fx) {
+function private function_47c2c4a1(localclientnum, piece, fx) {
     function_42630d5e(localclientnum, piece, "tag_fx_light_side_lft_mid_jnt", fx);
     function_42630d5e(localclientnum, piece, "tag_fx_light_side_rt_mid_jnt", fx);
 }
@@ -365,7 +365,7 @@ function function_47c2c4a1(localclientnum, piece, fx) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x15ac5003, Offset: 0x1ef0
 // Size: 0x6c
-function function_3c131c80(localclientnum, piece, fx) {
+function private function_3c131c80(localclientnum, piece, fx) {
     function_42630d5e(localclientnum, piece, "tag_fx_light_side_lft_btm_jnt", fx);
     function_42630d5e(localclientnum, piece, "tag_fx_light_side_rt_btm_jnt", fx);
 }
@@ -374,7 +374,7 @@ function function_3c131c80(localclientnum, piece, fx) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x4404dcd8, Offset: 0x1f68
 // Size: 0x9c
-function function_38aeb872(localclientnum, piece, fx) {
+function private function_38aeb872(localclientnum, piece, fx) {
     function_e5bc89d2(localclientnum, piece, fx);
     function_cb90ea4e(localclientnum, piece, fx);
     function_47c2c4a1(localclientnum, piece, fx);
@@ -385,7 +385,7 @@ function function_38aeb872(localclientnum, piece, fx) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xb691eef7, Offset: 0x2010
 // Size: 0x64
-function function_8bca2811(localclientnum, entity, alias) {
+function private function_8bca2811(localclientnum, entity, alias) {
     origin = entity gettagorigin("tag_fx_light_top_jnt");
     playsound(localclientnum, alias, origin);
 }
@@ -394,7 +394,7 @@ function function_8bca2811(localclientnum, entity, alias) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7740ebf, Offset: 0x2080
 // Size: 0x44
-function function_d5f882d0(localclientnum) {
+function private function_d5f882d0(localclientnum) {
     self function_42630d5e(localclientnum, self zbarriergetpiece(5), "tag_origin", undefined);
 }
 
@@ -402,7 +402,7 @@ function function_d5f882d0(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x62d16d2, Offset: 0x20d0
 // Size: 0xa4
-function function_eb5b80c5(localclientnum) {
+function private function_eb5b80c5(localclientnum) {
     self notify(#"hash_fff2ccd6");
     self endon(#"hash_fff2ccd6");
     self function_38aeb872(localclientnum, self zbarriergetpiece(5), undefined);
@@ -413,7 +413,7 @@ function function_eb5b80c5(localclientnum) {
 // Params 5, eflags: 0x5 linked
 // Checksum 0xa9376d4b, Offset: 0x2180
 // Size: 0xce
-function function_63a14f25(localclientnum, piece, fx, var_9bde339b, alias) {
+function private function_63a14f25(localclientnum, piece, fx, var_9bde339b, alias) {
     self notify(#"hash_fff2ccd6");
     self endon(#"hash_fff2ccd6");
     function_d5f882d0(localclientnum);
@@ -432,7 +432,7 @@ function function_63a14f25(localclientnum, piece, fx, var_9bde339b, alias) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd4f806f1, Offset: 0x2258
 // Size: 0x64
-function function_d0281a17(localclientnum) {
+function private function_d0281a17(localclientnum) {
     self thread function_63a14f25(localclientnum, self zbarriergetpiece(5), self function_43d950d2(), 0.4, "zmb_bgb_machine_light_ready");
 }
 
@@ -440,7 +440,7 @@ function function_d0281a17(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x47301ea5, Offset: 0x22c8
 // Size: 0x64
-function function_5f830538(localclientnum) {
+function private function_5f830538(localclientnum) {
     self thread function_63a14f25(localclientnum, self zbarriergetpiece(5), level._effect["zm_bgb_machine_bulb_available"], 0.2, "zmb_bgb_machine_light_click");
 }
 
@@ -448,7 +448,7 @@ function function_5f830538(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb3a8ed9e, Offset: 0x2338
 // Size: 0x64
-function function_9e064c6(localclientnum) {
+function private function_9e064c6(localclientnum) {
     self thread function_63a14f25(localclientnum, self zbarriergetpiece(1), level._effect["zm_bgb_machine_bulb_away"], 0.4, "zmb_bgb_machine_light_leaving");
 }
 
@@ -456,7 +456,7 @@ function function_9e064c6(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7ac62f10, Offset: 0x23a8
 // Size: 0x74
-function function_dec3df0b(localclientnum) {
+function private function_dec3df0b(localclientnum) {
     self notify(#"hash_fff2ccd6");
     function_d5f882d0(localclientnum);
     function_38aeb872(localclientnum, self zbarriergetpiece(5), level._effect["zm_bgb_machine_bulb_away"]);
@@ -466,7 +466,7 @@ function function_dec3df0b(localclientnum) {
 // Params 7, eflags: 0x5 linked
 // Checksum 0x43aa040d, Offset: 0x2428
 // Size: 0x38c
-function function_f312291b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function private function_f312291b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_62051f89(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump);
     if (!isdefined(self)) {
         return;
@@ -548,7 +548,7 @@ function function_b90b22b6() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6eb53440, Offset: 0x28e8
 // Size: 0xfc
-function on_player_spawned(localclientnum) {
+function private on_player_spawned(localclientnum) {
     if (!isdefined(level.var_bb2b3f61[localclientnum])) {
         level.var_bb2b3f61[localclientnum] = 0;
     }
@@ -568,7 +568,7 @@ function on_player_spawned(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x67486d7a, Offset: 0x29f0
 // Size: 0xce
-function function_763ef0fd(localclientnum) {
+function private function_763ef0fd(localclientnum) {
     self notify(#"hash_763ef0fd");
     self endon(#"hash_763ef0fd");
     self endon(#"entityshutdown");
@@ -586,7 +586,7 @@ function function_763ef0fd(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xcd47f3d6, Offset: 0x2ac8
 // Size: 0xc0
-function function_5d9d13da(localclientnum) {
+function private function_5d9d13da(localclientnum) {
     self notify(#"hash_5d9d13da");
     self endon(#"hash_5d9d13da");
     self endon(#"entityshutdown");
@@ -603,7 +603,7 @@ function function_5d9d13da(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xf65eae22, Offset: 0x2b90
 // Size: 0x16e
-function function_fda54943(localclientnum) {
+function private function_fda54943(localclientnum) {
     self endon(#"entityshutdown");
     var_89caac36 = 160000;
     while (true) {
@@ -625,7 +625,7 @@ function function_fda54943(localclientnum) {
 // Params 7, eflags: 0x5 linked
 // Checksum 0x717f7168, Offset: 0x2d08
 // Size: 0x8c
-function function_27a93844(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function private function_27a93844(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level.var_32948a58[localclientnum] = newval;
     function_725214c(localclientnum, level.var_bb2b3f61[localclientnum], level.var_32948a58[localclientnum], level.var_f26edb66[localclientnum]);
 }
@@ -634,7 +634,7 @@ function function_27a93844(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 4, eflags: 0x5 linked
 // Checksum 0x1935a457, Offset: 0x2da0
 // Size: 0x8c
-function function_725214c(localclientnum, rounds, var_ee234f6e, firesale) {
+function private function_725214c(localclientnum, rounds, var_ee234f6e, firesale) {
     var_11e155aa = 500;
     if (firesale) {
         var_11e155aa = 10;

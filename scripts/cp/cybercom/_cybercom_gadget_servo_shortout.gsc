@@ -135,7 +135,7 @@ function function_4135a1c4(slot, weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xddb3e14d, Offset: 0xa20
 // Size: 0x268
-function function_602b28e9(target) {
+function private function_602b28e9(target) {
     if (target cybercom::function_8fd8f5b1("cybercom_servoshortout")) {
         self cybercom::function_29bf9dee(target, 2);
         return false;
@@ -173,7 +173,7 @@ function function_602b28e9(target) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xf135bfad, Offset: 0xc90
 // Size: 0x52
-function function_8aac802c(weapon) {
+function private function_8aac802c(weapon) {
     return arraycombine(getaiteamarray("axis"), getaiteamarray("team3"), 0, 0);
 }
 
@@ -181,7 +181,7 @@ function function_8aac802c(weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xbe0267f1, Offset: 0xcf0
 // Size: 0x394
-function function_febcf072(slot, weapon) {
+function private function_febcf072(slot, weapon) {
     var_98c55a0e = 0;
     upgraded = self function_1a9006bd("cybercom_servoshortout") == 2;
     aborted = 0;
@@ -225,7 +225,7 @@ function function_febcf072(slot, weapon) {
 // Params 0, eflags: 0x4
 // Checksum 0xb1ee8c00, Offset: 0x1090
 // Size: 0x38
-function function_a380ee8e() {
+function private function_a380ee8e() {
     level.cybercom.servo_shortout.var_acbe0f3f++;
     return level.cybercom.servo_shortout.var_acbe0f3f % 3;
 }

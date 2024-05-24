@@ -705,7 +705,7 @@ function limited_weapon_below_quota(weapon, ignore_player, var_10f9c82c) {
 }
 
 // Namespace zm_weapons
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x855ae8a0, Offset: 0x2730
 // Size: 0x3a
 function add_custom_limited_weapon_check(callback) {
@@ -1942,7 +1942,7 @@ function function_11a37a(var_d074477d) {
 }
 
 // Namespace zm_weapons
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0xc1dc143d, Offset: 0x76c0
 // Size: 0x2e0
 function get_pack_a_punch_weapon_options(weapon) {
@@ -2493,7 +2493,7 @@ function weapondata_take(weapondata) {
 }
 
 // Namespace zm_weapons
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x7e6772e1, Offset: 0x9aa0
 // Size: 0x1ae
 function create_loadout(weapons) {
@@ -2569,7 +2569,7 @@ function player_give_loadout(loadout, replace_existing, immediate_switch) {
 }
 
 // Namespace zm_weapons
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x3ed37bba, Offset: 0x9f70
 // Size: 0x9a
 function player_take_loadout(loadout) {
@@ -2612,7 +2612,7 @@ function clear_stowed_weapon() {
 }
 
 // Namespace zm_weapons
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x39fb5d74, Offset: 0xa100
 // Size: 0x64
 function suppress_stowed_weapon(onoff) {

@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc79d156b, Offset: 0x290
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("weapon_customization_icon", &__init__, undefined, undefined);
 }
 

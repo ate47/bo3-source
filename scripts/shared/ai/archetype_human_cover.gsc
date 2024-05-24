@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x11fd381e, Offset: 0x568
 // Size: 0x2d4
-function registerbehaviorscriptfunctions() {
+function autoexec registerbehaviorscriptfunctions() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("shouldReturnToCoverCondition", &shouldreturntocovercondition);
     behaviortreenetworkutility::registerbehaviortreescriptapi("shouldReturnToSuppressedCover", &shouldreturntosuppressedcover);
     behaviortreenetworkutility::registerbehaviortreescriptapi("shouldAdjustToCover", &shouldadjusttocover);
@@ -120,7 +120,7 @@ function shouldthrowgrenadeatcovercondition(behaviortreeentity, throwifpossible)
 // Params 1, eflags: 0x5 linked
 // Checksum 0x3a98b8d7, Offset: 0x10d8
 // Size: 0x15a
-function sensenearbyplayers(entity) {
+function private sensenearbyplayers(entity) {
     players = getplayers();
     foreach (player in players) {
         distancesq = distancesquared(player.origin, entity.origin);
@@ -138,7 +138,7 @@ function sensenearbyplayers(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6fd0db0c, Offset: 0x1240
 // Size: 0x190
-function coverpreparetothrowgrenade(behaviortreeentity) {
+function private coverpreparetothrowgrenade(behaviortreeentity) {
     aiutility::keepclaimednodeandchoosecoverdirection(behaviortreeentity);
     if (isdefined(behaviortreeentity.enemy)) {
         behaviortreeentity.grenadethrowposition = behaviortreeentity lastknownpos(behaviortreeentity.enemy);
@@ -158,7 +158,7 @@ function coverpreparetothrowgrenade(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x8d8a6813, Offset: 0x13d8
 // Size: 0x21c
-function covercleanuptothrowgrenade(behaviortreeentity) {
+function private covercleanuptothrowgrenade(behaviortreeentity) {
     aiutility::resetcoverparameters(behaviortreeentity);
     if (behaviortreeentity.preparegrenadeammo == behaviortreeentity.grenadeammo) {
         if (behaviortreeentity.health <= 0) {
@@ -181,7 +181,7 @@ function covercleanuptothrowgrenade(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb37ed1eb, Offset: 0x1600
 // Size: 0x9c
-function canchangestanceatcovercondition(behaviortreeentity) {
+function private canchangestanceatcovercondition(behaviortreeentity) {
     switch (blackboard::getblackboardattribute(behaviortreeentity, "_stance")) {
     case 34:
         return aiutility::isstanceallowedatnode("crouch", behaviortreeentity.node);
@@ -195,7 +195,7 @@ function canchangestanceatcovercondition(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4847ede1, Offset: 0x16a8
 // Size: 0x2e
-function shouldreturntosuppressedcover(entity) {
+function private shouldreturntosuppressedcover(entity) {
     if (!entity isatgoal()) {
         return true;
     }
@@ -206,7 +206,7 @@ function shouldreturntosuppressedcover(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x584b1f1, Offset: 0x16e0
 // Size: 0x1a6
-function shouldreturntocovercondition(behaviortreeentity) {
+function private shouldreturntocovercondition(behaviortreeentity) {
     if (behaviortreeentity asmistransitionrunning()) {
         return false;
     }
@@ -240,7 +240,7 @@ function shouldreturntocovercondition(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x858e187c, Offset: 0x1890
 // Size: 0x156
-function shouldadjusttocover(behaviortreeentity) {
+function private shouldadjusttocover(behaviortreeentity) {
     if (!isdefined(behaviortreeentity.node)) {
         return false;
     }
@@ -264,7 +264,7 @@ function shouldadjusttocover(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xff83653a, Offset: 0x19f0
 // Size: 0x1c2
-function shouldvantageatcovercondition(behaviortreeentity) {
+function private shouldvantageatcovercondition(behaviortreeentity) {
     if (!isdefined(behaviortreeentity.node) || !isdefined(behaviortreeentity.node.type) || !isdefined(behaviortreeentity.enemy) || !isdefined(behaviortreeentity.enemy.origin)) {
         return 0;
     }
@@ -282,7 +282,7 @@ function shouldvantageatcovercondition(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7623dba2, Offset: 0x1bc0
 // Size: 0xe
-function supportsvantagecovercondition(behaviortreeentity) {
+function private supportsvantagecovercondition(behaviortreeentity) {
     return false;
 }
 
@@ -290,7 +290,7 @@ function supportsvantagecovercondition(behaviortreeentity) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x1af350a3, Offset: 0x1bd8
 // Size: 0x54
-function covervantageinitialize(behaviortreeentity, asmstatename) {
+function private covervantageinitialize(behaviortreeentity, asmstatename) {
     aiutility::keepclaimnode(behaviortreeentity);
     blackboard::setblackboardattribute(behaviortreeentity, "_cover_mode", "cover_vantage");
 }
@@ -299,7 +299,7 @@ function covervantageinitialize(behaviortreeentity, asmstatename) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xa4c580a3, Offset: 0x1c38
 // Size: 0x6c
-function coverblindfireshootactionstart(behaviortreeentity, asmstatename) {
+function private coverblindfireshootactionstart(behaviortreeentity, asmstatename) {
     aiutility::keepclaimnode(behaviortreeentity);
     blackboard::setblackboardattribute(behaviortreeentity, "_cover_mode", "cover_blind");
     aiutility::choosecoverdirection(behaviortreeentity);
@@ -309,7 +309,7 @@ function coverblindfireshootactionstart(behaviortreeentity, asmstatename) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x7e67ccb5, Offset: 0x1cb0
 // Size: 0x54
-function preparetochangestancetostand(behaviortreeentity, asmstatename) {
+function private preparetochangestancetostand(behaviortreeentity, asmstatename) {
     aiutility::cleanupcovermode(behaviortreeentity);
     blackboard::setblackboardattribute(behaviortreeentity, "_desired_stance", "stand");
 }
@@ -318,7 +318,7 @@ function preparetochangestancetostand(behaviortreeentity, asmstatename) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xb664f0d0, Offset: 0x1d10
 // Size: 0x3c
-function cleanupchangestancetostand(behaviortreeentity, asmstatename) {
+function private cleanupchangestancetostand(behaviortreeentity, asmstatename) {
     aiutility::releaseclaimnode(behaviortreeentity);
     behaviortreeentity.newenemyreaction = 0;
 }
@@ -327,7 +327,7 @@ function cleanupchangestancetostand(behaviortreeentity, asmstatename) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x1b2f02da, Offset: 0x1d58
 // Size: 0x54
-function preparetochangestancetocrouch(behaviortreeentity, asmstatename) {
+function private preparetochangestancetocrouch(behaviortreeentity, asmstatename) {
     aiutility::cleanupcovermode(behaviortreeentity);
     blackboard::setblackboardattribute(behaviortreeentity, "_desired_stance", "crouch");
 }
@@ -336,7 +336,7 @@ function preparetochangestancetocrouch(behaviortreeentity, asmstatename) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x41c91cee, Offset: 0x1db8
 // Size: 0x3c
-function cleanupchangestancetocrouch(behaviortreeentity, asmstatename) {
+function private cleanupchangestancetocrouch(behaviortreeentity, asmstatename) {
     aiutility::releaseclaimnode(behaviortreeentity);
     behaviortreeentity.newenemyreaction = 0;
 }
@@ -345,7 +345,7 @@ function cleanupchangestancetocrouch(behaviortreeentity, asmstatename) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x67c54587, Offset: 0x1e00
 // Size: 0x7c
-function prepareforadjusttocover(behaviortreeentity, asmstatename) {
+function private prepareforadjusttocover(behaviortreeentity, asmstatename) {
     aiutility::keepclaimnode(behaviortreeentity);
     highestsupportedstance = aiutility::gethighestnodestance(behaviortreeentity.node);
     blackboard::setblackboardattribute(behaviortreeentity, "_desired_stance", highestsupportedstance);
@@ -355,7 +355,7 @@ function prepareforadjusttocover(behaviortreeentity, asmstatename) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x396022ea, Offset: 0x1e88
 // Size: 0xde
-function coverchangestanceactionstart(behaviortreeentity, asmstatename) {
+function private coverchangestanceactionstart(behaviortreeentity, asmstatename) {
     blackboard::setblackboardattribute(behaviortreeentity, "_cover_mode", "cover_alert");
     aiutility::keepclaimnode(behaviortreeentity);
     switch (blackboard::getblackboardattribute(behaviortreeentity, "_stance")) {

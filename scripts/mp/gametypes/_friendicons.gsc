@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xbf04a5ef, Offset: 0x120
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("friendicons", &__init__, undefined, undefined);
 }
 

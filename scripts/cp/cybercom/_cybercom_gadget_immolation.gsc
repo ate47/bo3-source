@@ -137,7 +137,7 @@ function function_4135a1c4(slot, weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x550be, Offset: 0xd08
 // Size: 0x308
-function function_602b28e9(target) {
+function private function_602b28e9(target) {
     if (target cybercom::function_8fd8f5b1("cybercom_immolation")) {
         self cybercom::function_29bf9dee(target, 2);
         return false;
@@ -181,7 +181,7 @@ function function_602b28e9(target) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x28541bbd, Offset: 0x1018
 // Size: 0x52
-function function_8aac802c(weapon) {
+function private function_8aac802c(weapon) {
     return arraycombine(getaiteamarray("axis"), getaiteamarray("team3"), 0, 0);
 }
 
@@ -189,7 +189,7 @@ function function_8aac802c(weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x28055ef7, Offset: 0x1078
 // Size: 0x314
-function function_24d3045f(slot, weapon) {
+function private function_24d3045f(slot, weapon) {
     upgraded = self function_1a9006bd("cybercom_immolation") == 2;
     aborted = 0;
     fired = 0;
@@ -228,7 +228,7 @@ function function_24d3045f(slot, weapon) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xd6daf44a, Offset: 0x1398
 // Size: 0x8e
-function function_a2f96b90() {
+function private function_a2f96b90() {
     if (!isdefined(self.vehicletype)) {
         return false;
     }
@@ -248,7 +248,7 @@ function function_a2f96b90() {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xc4afa14f, Offset: 0x1430
 // Size: 0xc4
-function function_972e7bf2(attacker, upgraded, immediate) {
+function private function_972e7bf2(attacker, upgraded, immediate) {
     if (!isdefined(immediate)) {
         immediate = 0;
     }
@@ -267,7 +267,7 @@ function function_972e7bf2(attacker, upgraded, immediate) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0x3dbf409b, Offset: 0x1500
 // Size: 0x17c
-function function_9e65a7de(attacker, upgraded, immediate, weapon) {
+function private function_9e65a7de(attacker, upgraded, immediate, weapon) {
     if (!isdefined(immediate)) {
         immediate = 0;
     }
@@ -431,7 +431,7 @@ function function_c7fa793a(attacker, upgraded, immediate) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x9db6324e, Offset: 0x2208
 // Size: 0x54
-function function_369d3494() {
+function private function_369d3494() {
     archetype = self.archetype;
     corpse = self waittill(#"actor_corpse");
     corpse clientfield::set("arch_actor_fire_fx", 2);
@@ -441,7 +441,7 @@ function function_369d3494() {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x9b9c19b0, Offset: 0x2268
 // Size: 0x2c8
-function function_843196fe(guy, chance, var_d9346487) {
+function private function_843196fe(guy, chance, var_d9346487) {
     if (!isdefined(chance)) {
         chance = getdvarint("scr_immolation_gchance", 100);
     }
@@ -491,7 +491,7 @@ function function_2905cb0a() {
 // Params 2, eflags: 0x4
 // Checksum 0x5530daba, Offset: 0x2590
 // Size: 0x1b2
-function function_e531a31b(player, rangemax) {
+function private function_e531a31b(player, rangemax) {
     weapon = getweapon("gadget_immolation");
     enemies = arraycombine(getaispeciesarray("axis", "robot"), getaispeciesarray("team3", "robot"), 0, 0);
     var_d9574143 = arraysortclosest(enemies, self.origin, enemies.size, 0, rangemax);
@@ -542,7 +542,7 @@ function function_5a760e8b(attacker, upgraded) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x24dd27fd, Offset: 0x2958
 // Size: 0xb2
-function function_ed100874() {
+function private function_ed100874() {
     if (isdefined(self.archetype) && self.archetype == "human") {
         return self gettagorigin("tag_weapon_chest");
     }

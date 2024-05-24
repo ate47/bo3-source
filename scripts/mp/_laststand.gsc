@@ -21,7 +21,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x18dc050f, Offset: 0x340
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("laststand", &__init__, undefined, undefined);
 }
 

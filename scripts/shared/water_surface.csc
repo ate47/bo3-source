@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe5937b7, Offset: 0x1c8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("water_surface", &__init__, undefined, undefined);
 }
 
@@ -153,7 +153,7 @@ function startwaterdive() {
 }
 
 // Namespace water_surface
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x8e79a9e6, Offset: 0x948
 // Size: 0x214
 function startwatersheeting() {

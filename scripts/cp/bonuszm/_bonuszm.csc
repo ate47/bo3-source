@@ -32,7 +32,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xaf343790, Offset: 0x1040
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("bonuszm", &__init__, undefined, undefined);
 }
 
@@ -67,7 +67,7 @@ function function_938d1a68(localclientnum) {
 // Params 0, eflags: 0x2
 // Checksum 0x99ec1590, Offset: 0x11a8
 // Size: 0x4
-function function_4d5aa4f3() {
+function autoexec function_4d5aa4f3() {
     
 }
 
@@ -75,7 +75,7 @@ function function_4d5aa4f3() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x991479e1, Offset: 0x11b8
 // Size: 0x5c
-function on_player_spawned(localclientnum) {
+function private on_player_spawned(localclientnum) {
     self tmodeenable(0);
     setdvar("r_bloomUseLutALT", 1);
     function_8cf4b0ee(localclientnum);
@@ -695,7 +695,7 @@ function function_e4d833e(localclientnum, oldval, newval, bnewent, binitialsnap,
 // Params 2, eflags: 0x5 linked
 // Checksum 0xfe64b1bd, Offset: 0x3c98
 // Size: 0x54
-function function_10dcbf51(localclientnum, fxobj) {
+function private function_10dcbf51(localclientnum, fxobj) {
     fxobj playsound(localclientnum, "evt_ai_insta_explode");
     wait(1);
     fxobj delete();

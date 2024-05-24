@@ -17,7 +17,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x9a7de1d3, Offset: 0x280
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("melee_weapon", &__init__, &__main__, undefined);
 }
 
@@ -25,7 +25,7 @@ function function_2dc19561() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xea98a32d, Offset: 0x2c8
 // Size: 0x1c
-function __init__() {
+function private __init__() {
     if (!isdefined(level._melee_weapons)) {
         level._melee_weapons = [];
     }
@@ -35,7 +35,7 @@ function __init__() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x99ec1590, Offset: 0x2f0
 // Size: 0x4
-function __main__() {
+function private __main__() {
     
 }
 
@@ -497,7 +497,7 @@ function melee_weapon_show(player) {
 }
 
 // Namespace zm_melee_weapon
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0xc586c5b5, Offset: 0x1cb0
 // Size: 0xbc
 function award_melee_weapon(weapon_name) {

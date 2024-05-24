@@ -10,7 +10,7 @@
 #namespace challenges;
 
 // Namespace challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1140
 // Size: 0x4
 function init_shared() {
@@ -395,7 +395,7 @@ function perkkills(victim, isstunned, time) {
 }
 
 // Namespace challenges
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xeefcaae0, Offset: 0x2400
 // Size: 0x84
 function flakjacketprotected(weapon, attacker) {
@@ -595,7 +595,7 @@ function blockedsatellite() {
 }
 
 // Namespace challenges
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6b89390d, Offset: 0x2bc0
 // Size: 0x64
 function longdistancekill() {

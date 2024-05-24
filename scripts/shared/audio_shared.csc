@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x54eb2526, Offset: 0x8c0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("audio", &__init__, undefined, undefined);
 }
 
@@ -737,7 +737,7 @@ function closest_point_on_line_to_point(point, linestart, lineend) {
 }
 
 // Namespace audio
-// Params 9, eflags: 0x0
+// Params 9, eflags: 0x1 linked
 // Checksum 0x877405e1, Offset: 0x2d90
 // Size: 0x84
 function snd_play_auto_fx(fxid, alias, offsetx, offsety, offsetz, onground, area, threshold, alias_override) {
@@ -1024,7 +1024,7 @@ function isplayerinfected() {
 }
 
 // Namespace audio
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2bc52004, Offset: 0x3960
 // Size: 0x33e
 function function_e1ab476f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

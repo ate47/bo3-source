@@ -23,7 +23,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe96a82b8, Offset: 0x598
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("hunter", &__init__, undefined, undefined);
 }
 

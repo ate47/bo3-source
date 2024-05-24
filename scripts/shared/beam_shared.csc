@@ -60,7 +60,7 @@ function kill(ent_1, str_tag1, ent_2, str_tag2, str_beam_type) {
 // Params 5, eflags: 0x5 linked
 // Checksum 0x5e65883a, Offset: 0x478
 // Size: 0x136
-function _new_beam(ent_1, str_tag1, ent_2, str_tag2, str_beam_type) {
+function private _new_beam(ent_1, str_tag1, ent_2, str_tag2, str_beam_type) {
     if (!isdefined(self.active_beams)) {
         self.active_beams = [];
     }
@@ -83,7 +83,7 @@ function _new_beam(ent_1, str_tag1, ent_2, str_tag2, str_beam_type) {
 // Params 5, eflags: 0x5 linked
 // Checksum 0x589db238, Offset: 0x5b8
 // Size: 0x124
-function _get_beam(ent_1, str_tag1, ent_2, str_tag2, str_beam_type) {
+function private _get_beam(ent_1, str_tag1, ent_2, str_tag2, str_beam_type) {
     if (isdefined(self.active_beams)) {
         foreach (s_beam in self.active_beams) {
             if (s_beam.ent_1 == ent_1 && s_beam.str_tag1 == str_tag1 && s_beam.ent_2 == ent_2 && s_beam.str_tag2 == str_tag2 && s_beam.str_beam_type == str_beam_type) {
@@ -97,7 +97,7 @@ function _get_beam(ent_1, str_tag1, ent_2, str_tag2, str_beam_type) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xaf2af332, Offset: 0x6e8
 // Size: 0xbc
-function _kill_on_ent_death(s_beam, ent_1, ent_2) {
+function private _kill_on_ent_death(s_beam, ent_1, ent_2) {
     s_beam endon(#"kill");
     self endon(#"death");
     util::waittill_any_ents(ent_1, "entityshutdown", ent_2, "entityshutdown", s_beam, "kill", self, "death");

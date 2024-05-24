@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd48d2f3e, Offset: 0x170
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_flavor_hexed", &__init__, undefined, undefined);
 }
 

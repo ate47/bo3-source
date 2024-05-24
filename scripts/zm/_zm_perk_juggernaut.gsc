@@ -17,23 +17,23 @@
 
 // Namespace namespace_b1eac770
 // Params 0, eflags: 0x2
-// Checksum 0x624289cf, Offset: 0x3a8
+// Checksum 0xe44b6d1f, Offset: 0x3a8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_perk_juggernaut", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_b1eac770
-// Params 0, eflags: 0x0
-// Checksum 0xcebfdb7a, Offset: 0x3e8
+// Params 0, eflags: 0x1 linked
+// Checksum 0x30bb4274, Offset: 0x3e8
 // Size: 0x14
 function __init__() {
     function_242d42bd();
 }
 
 // Namespace namespace_b1eac770
-// Params 0, eflags: 0x0
-// Checksum 0x214cb9b9, Offset: 0x408
+// Params 0, eflags: 0x1 linked
+// Checksum 0xe08c117b, Offset: 0x408
 // Size: 0x13c
 function function_242d42bd() {
     zm_perks::register_perk_basic_info("specialty_armorvest", "juggernog", 2500, %ZOMBIE_PERK_JUGGERNAUT, getweapon("zombie_perk_bottle_jugg"));
@@ -45,8 +45,8 @@ function function_242d42bd() {
 }
 
 // Namespace namespace_b1eac770
-// Params 0, eflags: 0x0
-// Checksum 0xdc387bb, Offset: 0x550
+// Params 0, eflags: 0x1 linked
+// Checksum 0xe55e9c63, Offset: 0x550
 // Size: 0x44
 function init_juggernaut() {
     zombie_utility::set_zombie_var("zombie_perk_juggernaut_health", 100);
@@ -54,8 +54,8 @@ function init_juggernaut() {
 }
 
 // Namespace namespace_b1eac770
-// Params 0, eflags: 0x0
-// Checksum 0xb2b7ff61, Offset: 0x5a0
+// Params 0, eflags: 0x1 linked
+// Checksum 0xc7ab15d2, Offset: 0x5a0
 // Size: 0xe0
 function function_9e164b07() {
     if (isdefined(level.var_9cbce143)) {
@@ -70,24 +70,24 @@ function function_9e164b07() {
 }
 
 // Namespace namespace_b1eac770
-// Params 0, eflags: 0x0
-// Checksum 0x6c27ba94, Offset: 0x688
+// Params 0, eflags: 0x1 linked
+// Checksum 0xa76a22ba, Offset: 0x688
 // Size: 0x34
 function function_d361c845() {
     clientfield::register("clientuimodel", "hudItems.perks.juggernaut", 1, 2, "int");
 }
 
 // Namespace namespace_b1eac770
-// Params 1, eflags: 0x0
-// Checksum 0x6138896a, Offset: 0x6c8
+// Params 1, eflags: 0x1 linked
+// Checksum 0x571e18f0, Offset: 0x6c8
 // Size: 0x2c
 function function_ea578652(state) {
     self clientfield::set_player_uimodel("hudItems.perks.juggernaut", state);
 }
 
 // Namespace namespace_b1eac770
-// Params 4, eflags: 0x0
-// Checksum 0xed014fd3, Offset: 0x700
+// Params 4, eflags: 0x1 linked
+// Checksum 0x6d167924, Offset: 0x700
 // Size: 0xd0
 function function_d5821244(use_trigger, perk_machine, bump_trigger, collision) {
     use_trigger.script_sound = "mus_perks_jugganog_jingle";
@@ -103,16 +103,16 @@ function function_d5821244(use_trigger, perk_machine, bump_trigger, collision) {
 }
 
 // Namespace namespace_b1eac770
-// Params 0, eflags: 0x0
-// Checksum 0x9779d03a, Offset: 0x7d8
+// Params 0, eflags: 0x1 linked
+// Checksum 0xdbbf2ef, Offset: 0x7d8
 // Size: 0x24
 function function_c54b4a8c() {
     self zm_perks::function_78f42790("specialty_armorvest", 1, 0);
 }
 
 // Namespace namespace_b1eac770
-// Params 3, eflags: 0x0
-// Checksum 0x86bc1d2d, Offset: 0x808
+// Params 3, eflags: 0x1 linked
+// Checksum 0xafa819fe, Offset: 0x808
 // Size: 0x44
 function function_9c9dac0a(b_pause, str_perk, str_result) {
     self zm_perks::function_78f42790("health_reboot", 1, 1);

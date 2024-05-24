@@ -170,7 +170,7 @@ function function_4135a1c4(slot, weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x32af010, Offset: 0xfa8
 // Size: 0x1d4
-function function_602b28e9(target) {
+function private function_602b28e9(target) {
     if (target cybercom::function_8fd8f5b1("cybercom_hijack")) {
         if (isdefined(target.var_406cec76) && target.var_406cec76) {
             self cybercom::function_29bf9dee(target, 4);
@@ -205,7 +205,7 @@ function function_602b28e9(target) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x735fcc3, Offset: 0x1188
 // Size: 0xa2
-function function_8aac802c(weapon) {
+function private function_8aac802c(weapon) {
     enemy = arraycombine(getaiteamarray("axis"), getaiteamarray("team3"), 0, 0);
     ally = getaiteamarray("allies");
     return arraycombine(enemy, ally, 0, 0);
@@ -215,7 +215,7 @@ function function_8aac802c(weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x2f866c60, Offset: 0x1238
 // Size: 0x324
-function function_7c96ae94(slot, weapon) {
+function private function_7c96ae94(slot, weapon) {
     aborted = 0;
     fired = 0;
     foreach (item in self.cybercom.var_d1460543) {
@@ -256,7 +256,7 @@ function function_7c96ae94(slot, weapon) {
 // Params 5, eflags: 0x5 linked
 // Checksum 0x109f5f2b, Offset: 0x1568
 // Size: 0xec
-function function_cc8d5ab0(player, setname, delay, direction, duration) {
+function private function_cc8d5ab0(player, setname, delay, direction, duration) {
     wait(delay);
     if (direction > 0) {
         visionset_mgr::activate("visionset", setname, player, duration, 0, 0);
@@ -271,7 +271,7 @@ function function_cc8d5ab0(player, setname, delay, direction, duration) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x8a9f6750, Offset: 0x1660
 // Size: 0x82
-function function_637db461(player, weapon) {
+function private function_637db461(player, weapon) {
     if (isdefined(self.hijacked) && self.hijacked) {
         player cybercom::function_29bf9dee(self, 4);
         return false;
@@ -287,7 +287,7 @@ function function_637db461(player, weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x47545dc0, Offset: 0x16f0
 // Size: 0x61c
-function function_ecfa108e(player, weapon) {
+function private function_ecfa108e(player, weapon) {
     wait(getdvarfloat("scr_security_breach_activate_delay", 0.5));
     if (!isdefined(self)) {
         return;
@@ -488,7 +488,7 @@ function function_1233641() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xf0189ef0, Offset: 0x24c0
 // Size: 0x410
-function function_4b91c7e5(player, anchor) {
+function private function_4b91c7e5(player, anchor) {
     self endon(#"death");
     player endon(#"hash_c68b15c8");
     player endon(#"hash_ac145594");
@@ -553,7 +553,7 @@ function function_4b91c7e5(player, anchor) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xc1ee1fe1, Offset: 0x28d8
 // Size: 0x6c
-function function_3dcfd0d8(time, player) {
+function private function_3dcfd0d8(time, player) {
     self endon(#"death");
     self.takedamage = 0;
     player util::waittill_any_timeout(time, "return_to_body");
@@ -564,7 +564,7 @@ function function_3dcfd0d8(time, player) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x115576b7, Offset: 0x2950
 // Size: 0x194
-function function_6adcb22e(vehicle) {
+function private function_6adcb22e(vehicle) {
     self endon(#"spawned");
     self util::freeze_player_controls(1);
     self clientfield::set_to_player("hijack_static_ramp_up", 1);
@@ -586,7 +586,7 @@ function function_6adcb22e(vehicle) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x884dac14, Offset: 0x2af0
 // Size: 0x21c
-function function_5d471974(vehicle) {
+function private function_5d471974(vehicle) {
     forward = anglestoforward(vehicle.angles);
     moveamount = vectorscale(forward, -200);
     moveamount = (moveamount[0], moveamount[1], vehicle.origin[2] + 72);
@@ -612,7 +612,7 @@ function function_5d471974(vehicle) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6d9b32e1, Offset: 0x2d18
 // Size: 0xa8
-function function_1a1b4f00(player) {
+function private function_1a1b4f00(player) {
     player endon(#"hash_c68b15c8");
     self waittill(#"death");
     player thread function_6adcb22e(self);
@@ -629,7 +629,7 @@ function function_1a1b4f00(player) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xdcc93333, Offset: 0x2dc8
 // Size: 0x10c
-function function_5c5ecd44(player) {
+function private function_5c5ecd44(player) {
     self endon(#"death");
     player endon(#"hash_c68b15c8");
     self util::waittill_any("unlink", "exit_vehicle");
@@ -650,7 +650,7 @@ function function_5c5ecd44(player) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x99f3e9a8, Offset: 0x2ee0
 // Size: 0x192
-function function_7da5b5d4(player) {
+function private function_7da5b5d4(player) {
     self thread function_1a1b4f00(player);
     self thread function_5c5ecd44(player);
     var_d2f6fb2e = player.origin;

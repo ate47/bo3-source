@@ -36,7 +36,7 @@ function set_timeout(n_timeout_s) {
 }
 
 // Namespace zm_pap_util
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x96194044, Offset: 0x2d8
 // Size: 0x30
 function set_interaction_height(n_height) {
@@ -45,7 +45,7 @@ function set_interaction_height(n_height) {
 }
 
 // Namespace zm_pap_util
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x4c8f716f, Offset: 0x310
 // Size: 0x30
 function function_5e0cf34(n_radius) {
@@ -63,7 +63,7 @@ function set_interaction_trigger_height(n_height) {
 }
 
 // Namespace zm_pap_util
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0xedbb23f2, Offset: 0x380
 // Size: 0x30
 function function_82c7ef16(var_f4786758) {
@@ -72,7 +72,7 @@ function function_82c7ef16(var_f4786758) {
 }
 
 // Namespace zm_pap_util
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0xe67b1492, Offset: 0x3b8
 // Size: 0x30
 function function_b92a53ad(var_ddf33d7) {
@@ -112,7 +112,7 @@ function function_cb7546b2() {
 }
 
 // Namespace zm_pap_util
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0xcb916bec, Offset: 0x4b0
 // Size: 0x28
 function function_def6ee85() {
@@ -152,7 +152,7 @@ function update_hint_string(player) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0xbd47d2ac, Offset: 0x5f0
 // Size: 0x3c
-function function_3fe26769(player, trigger, origin_offset, angles_offset) {
+function private function_3fe26769(player, trigger, origin_offset, angles_offset) {
     level endon(#"pack_a_punch_off");
     trigger endon(#"pap_player_disconnected");
 }
@@ -161,7 +161,7 @@ function function_3fe26769(player, trigger, origin_offset, angles_offset) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0xfd97fa57, Offset: 0x638
 // Size: 0x3c
-function function_f65ac400(player, trigger, origin_offset, interact_offset) {
+function private function_f65ac400(player, trigger, origin_offset, interact_offset) {
     level endon(#"pack_a_punch_off");
     trigger endon(#"pap_player_disconnected");
 }

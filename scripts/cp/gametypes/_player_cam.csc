@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xae0096d6, Offset: 0x200
 // Size: 0xdc
-function main() {
+function autoexec main() {
     clientfield::register("toplayer", "player_cam_blur", 1, 1, "int", &player_cam_blur, 0, 1);
     clientfield::register("toplayer", "player_cam_bubbles", 1, 1, "int", &player_cam_bubbles, 0, 1);
     clientfield::register("toplayer", "player_cam_fire", 1, 1, "int", &player_cam_fire, 0, 1);

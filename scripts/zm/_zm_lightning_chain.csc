@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x31266cca, Offset: 0x258
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("lightning_chain", &init, undefined, undefined);
 }
 

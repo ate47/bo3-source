@@ -14,7 +14,7 @@ function clamp(val, val_min, val_max) {
 }
 
 // Namespace math
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x20f0638c, Offset: 0xd0
 // Size: 0x6a
 function linear_map(num, min_a, max_a, min_b, max_b) {
@@ -119,7 +119,7 @@ function sign(x) {
 }
 
 // Namespace math
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xbd395a9d, Offset: 0x5e0
 // Size: 0x20
 function cointoss() {

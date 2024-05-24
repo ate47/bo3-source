@@ -29,7 +29,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc2ecb0d4, Offset: 0xdc0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("ctf", &__init__, undefined, undefined);
 }
 

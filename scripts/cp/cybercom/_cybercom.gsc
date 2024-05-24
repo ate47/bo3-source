@@ -33,7 +33,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x87d74700, Offset: 0x978
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("cybercom", &init, &main, undefined);
 }
 
@@ -252,7 +252,7 @@ function on_player_spawned() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7775f832, Offset: 0x18c0
 // Size: 0x20
-function function_b1497851(menu) {
+function private function_b1497851(menu) {
     self.cybercom.var_5e76d31b = 1;
 }
 
@@ -260,7 +260,7 @@ function function_b1497851(menu) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x27de017b, Offset: 0x18e8
 // Size: 0x28
-function function_4d11675a(menu, response) {
+function private function_4d11675a(menu, response) {
     self.cybercom.var_5e76d31b = 0;
 }
 

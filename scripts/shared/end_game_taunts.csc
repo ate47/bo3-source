@@ -19,7 +19,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x807e8586, Offset: 0x20d0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("end_game_taunts", &__init__, undefined, undefined);
 }
 

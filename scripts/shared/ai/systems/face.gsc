@@ -31,7 +31,7 @@ function saygenericdialogue(typestring) {
         break;
     default:
         /#
-            println(" " + typestring);
+            println("<unknown string>" + typestring);
         #/
         importance = 0.3;
         break;
@@ -40,7 +40,7 @@ function saygenericdialogue(typestring) {
 }
 
 // Namespace face
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x7d7ea58a, Offset: 0x2b8
 // Size: 0xb4
 function saygenericdialoguewithimportance(typestring, importance) {
@@ -49,7 +49,7 @@ function saygenericdialoguewithimportance(typestring, importance) {
         soundalias += self.dds_characterid;
     } else {
         /#
-            println(" ");
+            println("<unknown string>");
         #/
         return;
     }
@@ -80,7 +80,7 @@ function setidleface(facialanimationarray) {
 }
 
 // Namespace face
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xcda62950, Offset: 0x3f0
 // Size: 0x6c
 function sayspecificdialogue(facialanim, soundalias, importance, notifystring, waitornot, timetowait, toplayer) {
@@ -88,7 +88,7 @@ function sayspecificdialogue(facialanim, soundalias, importance, notifystring, w
 }
 
 // Namespace face
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x1787f7b3, Offset: 0x468
 // Size: 0x4
 function playidleface() {
@@ -96,7 +96,7 @@ function playidleface() {
 }
 
 // Namespace face
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x2c36f57b, Offset: 0x478
 // Size: 0x6a8
 function playfacethread(facialanim, str_script_alias, importance, notifystring, waitornot, timetowait, toplayer) {
@@ -136,7 +136,7 @@ function playfacethread(facialanim, str_script_alias, importance, notifystring, 
                     return;
                 }
                 /#
-                    println(" " + self.a.facialsoundalias + " " + str_script_alias);
+                    println("<unknown string>" + self.a.facialsoundalias + "<unknown string>" + str_script_alias);
                 #/
                 while (self.istalking) {
                     self waittill(#"hash_90f83311");
@@ -144,7 +144,7 @@ function playfacethread(facialanim, str_script_alias, importance, notifystring, 
             }
         } else {
             /#
-                println(" " + self.a.facialsoundalias + " " + str_script_alias);
+                println("<unknown string>" + self.a.facialsoundalias + "<unknown string>" + str_script_alias);
             #/
             self stopsound(self.a.facialsoundalias);
             self notify(#"hash_ad4a3c97");
@@ -179,7 +179,7 @@ function playfacethread(facialanim, str_script_alias, importance, notifystring, 
     }
     /#
         if (level.numberofimportantpeopletalking > 1) {
-            println(" " + str_script_alias);
+            println("<unknown string>" + str_script_alias);
         }
     #/
     uniquenotify = notifystring + " " + level.talknotifyseed;
@@ -198,7 +198,7 @@ function playfacethread(facialanim, str_script_alias, importance, notifystring, 
             }
         } else {
             /#
-                println(" " + str_script_alias + " ");
+                println("<unknown string>" + str_script_alias + "<unknown string>");
                 self thread _missing_dialog(str_script_alias, str_vox_file, uniquenotify);
             #/
         }
@@ -223,7 +223,7 @@ function playfacethread(facialanim, str_script_alias, importance, notifystring, 
 }
 
 // Namespace face
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x8d055a2a, Offset: 0xb28
 // Size: 0xaa
 function _play_sound_to_player_with_notify(soundalias, toplayer, uniquenotify) {
@@ -240,10 +240,10 @@ function _play_sound_to_player_with_notify(soundalias, toplayer, uniquenotify) {
 }
 
 // Namespace face
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0x9ffd662d, Offset: 0xbe0
 // Size: 0x33e
-function _temp_dialog(str_line, uniquenotify, b_missing_vo) {
+function private _temp_dialog(str_line, uniquenotify, b_missing_vo) {
     if (!isdefined(b_missing_vo)) {
         b_missing_vo = 0;
     }
@@ -275,10 +275,10 @@ function _temp_dialog(str_line, uniquenotify, b_missing_vo) {
 }
 
 // Namespace face
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0x9d9fde07, Offset: 0xf28
 // Size: 0x54
-function _missing_dialog(str_script_alias, str_vox_file, uniquenotify) {
+function private _missing_dialog(str_script_alias, str_vox_file, uniquenotify) {
     _temp_dialog("script id: " + str_script_alias + " sound alias: " + str_vox_file, uniquenotify, 1);
 }
 

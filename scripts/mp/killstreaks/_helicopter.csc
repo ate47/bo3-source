@@ -17,7 +17,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x3a1fa0d2, Offset: 0x830
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("helicopter", &__init__, undefined, undefined);
 }
 

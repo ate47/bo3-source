@@ -1,0 +1,170 @@
+#using scripts/mp/mp_spire_fx;
+#using scripts/mp/mp_spire_amb;
+#using scripts/mp/_util;
+#using scripts/mp/_load;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/compass;
+#using scripts/shared/clientfield_shared;
+#using scripts/mp/gametypes/_spawning;
+#using scripts/codescripts/struct;
+
+#namespace namespace_5a98f96a;
+
+// Namespace namespace_5a98f96a
+// Params 0, eflags: 0x1 linked
+// Checksum 0x6ff256db, Offset: 0x3b0
+// Size: 0xc2c
+function main() {
+    clientfield::register("world", "mpSpireExteriorBillboard", 1, 2, "int");
+    namespace_d4c614ff::main();
+    level.var_c9aa825e = &function_c9aa825e;
+    load::main();
+    compass::setupminimap("compass_map_mp_spire");
+    spawncollision("collision_clip_ramp_64x24", "collider", (4168.34, 708.791, -12.0068), (0, 0, 0));
+    spawncollision("collision_clip_ramp_64x24", "collider", (4105.71, 708.791, -12.0068), (0, 0, 0));
+    spawncollision("collision_clip_wall_256x256x10", "collider", (2424.57, -1527.01, 263.799), (2, 0, 0));
+    spawncollision("collision_clip_wall_64x64x10", "collider", (2970.36, -1757.79, -21.7815), (342, 0, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (1604.54, -1050.26, -120.822), (31, 270, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (1478.62, -1050.26, -120.822), (31, 270, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (1353.01, -1050.26, -120.822), (31, 270, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (1265.75, -1142.36, -120.822), (31, 360, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (1265.75, -1268.28, -120.822), (31, 360, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (1265.75, -1393.89, -120.822), (31, 360, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (1265.75, -1514.1, -120.822), (31, 360, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (1265.75, -1640.02, -120.822), (31, 360, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (1265.75, -1730.95, -120.822), (31, 360, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (3653.42, -1756.59, -75.2497), (24, 90, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (3744.35, -1756.59, -75.2497), (24, 90, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (3867.22, -1756.58, -75.2495), (24, 90, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (3932.69, -1756.58, -75.2495), (24, 90, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (4023.62, -1756.58, -75.2495), (24, 90, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (4101.56, -1679.67, -75.2495), (24, -76, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (4101.56, -1598.22, -75.2495), (24, -76, 0));
+    spawncollision("collision_clip_wall_128x128x10", "collider", (4101.56, -1507.29, -75.2495), (24, -76, 0));
+    spawncollision("collision_clip_wall_64x64x10", "collider", (1261.61, 86.0638, 179.294), (0, 0, 0));
+    spawncollision("collision_clip_wall_64x64x10", "collider", (1261.61, 79.3592, 179.294), (0, 0, 0));
+    spawncollision("collision_clip_wall_64x64x10", "collider", (1261.61, 86.0638, 241.08), (0, 0, 0));
+    spawncollision("collision_clip_wall_64x64x10", "collider", (1261.61, 79.3592, 241.08), (0, 0, 0));
+    spawncollision("collision_clip_wall_64x64x10", "collider", (1261.61, 86.0638, 300.684), (0, 0, 0));
+    spawncollision("collision_clip_wall_64x64x10", "collider", (1261.61, 79.3592, 300.684), (0, 0, 0));
+    spawncollision("collision_clip_ramp_64x24", "collider", (3792, -1413, -116), (0, 0, -90));
+    spawncollision("collision_clip_ramp_64x24", "collider", (3792, -1413, -52), (0, -76, 90));
+    spawncollision("collision_clip_ramp_64x24", "collider", (3728, -1413, -116), (0, 0, -90));
+    spawncollision("collision_clip_ramp_64x24", "collider", (3728, -1413, -52), (0, -76, 90));
+    spawncollision("collision_clip_ramp_64x24", "collider", (3664, -1413, -116), (0, 0, -90));
+    spawncollision("collision_clip_ramp_64x24", "collider", (3664, -1413, -52), (0, -76, 90));
+    spawncollision("collision_clip_ramp_64x24", "collider", (2994, -892, -52), (0, -76, 90));
+    spawncollision("collision_clip_ramp_64x24", "collider", (2726, -892, -52), (0, -76, 90));
+    if (util::isprophuntgametype()) {
+        spawncollision("collision_clip_wall_256x256x10", "collider", (1641, -796, 76), (0, 0, 0));
+    }
+    namespace_69104eab::main();
+    setdvar("compassmaxrange", "2100");
+    game["strings"]["war_callsign_a"] = %MPUI_CALLSIGN_MAPNAME_A;
+    game["strings"]["war_callsign_b"] = %MPUI_CALLSIGN_MAPNAME_B;
+    game["strings"]["war_callsign_c"] = %MPUI_CALLSIGN_MAPNAME_C;
+    game["strings"]["war_callsign_d"] = %MPUI_CALLSIGN_MAPNAME_D;
+    game["strings"]["war_callsign_e"] = %MPUI_CALLSIGN_MAPNAME_E;
+    game["strings_menu"]["war_callsign_a"] = "@MPUI_CALLSIGN_MAPNAME_A";
+    game["strings_menu"]["war_callsign_b"] = "@MPUI_CALLSIGN_MAPNAME_B";
+    game["strings_menu"]["war_callsign_c"] = "@MPUI_CALLSIGN_MAPNAME_C";
+    game["strings_menu"]["war_callsign_d"] = "@MPUI_CALLSIGN_MAPNAME_D";
+    game["strings_menu"]["war_callsign_e"] = "@MPUI_CALLSIGN_MAPNAME_E";
+    level thread function_6abc7e64();
+    level.cleandepositpoints = array((2870.59, -134.119, 1.81104), (4107.7, 1370.67, 90.1926), (2856.95, -1234.69, -62.1478), (1233.53, 930.651, 2.22752), (3844.93, -603.359, 139.234));
+    level spawnkilltrigger();
+}
+
+// Namespace namespace_5a98f96a
+// Params 0, eflags: 0x1 linked
+// Checksum 0x5f225608, Offset: 0xfe8
+// Size: 0x7a
+function function_6abc7e64() {
+    for (var_70fb23df = randomint(4); true; var_70fb23df = 0) {
+        level clientfield::set("mpSpireExteriorBillboard", var_70fb23df);
+        wait(6);
+        var_70fb23df++;
+        if (var_70fb23df >= 4) {
+        }
+    }
+}
+
+// Namespace namespace_5a98f96a
+// Params 1, eflags: 0x1 linked
+// Checksum 0xdb01e8ae, Offset: 0x1070
+// Size: 0x214
+function function_c9aa825e(&var_6480c733) {
+    if (!isdefined(var_6480c733)) {
+        var_6480c733 = [];
+    } else if (!isarray(var_6480c733)) {
+        var_6480c733 = array(var_6480c733);
+    }
+    var_6480c733[var_6480c733.size] = (2480, 1269, 67);
+    if (!isdefined(var_6480c733)) {
+        var_6480c733 = [];
+    } else if (!isarray(var_6480c733)) {
+        var_6480c733 = array(var_6480c733);
+    }
+    var_6480c733[var_6480c733.size] = (2609, 1440, 67);
+    if (!isdefined(var_6480c733)) {
+        var_6480c733 = [];
+    } else if (!isarray(var_6480c733)) {
+        var_6480c733 = array(var_6480c733);
+    }
+    var_6480c733[var_6480c733.size] = (3089, 1437, 69);
+    if (!isdefined(var_6480c733)) {
+        var_6480c733 = [];
+    } else if (!isarray(var_6480c733)) {
+        var_6480c733 = array(var_6480c733);
+    }
+    var_6480c733[var_6480c733.size] = (3223, 1224, 69);
+    if (!isdefined(var_6480c733)) {
+        var_6480c733 = [];
+    } else if (!isarray(var_6480c733)) {
+        var_6480c733 = array(var_6480c733);
+    }
+    var_6480c733[var_6480c733.size] = (2434, 1093, 67);
+}
+
+// Namespace namespace_5a98f96a
+// Params 0, eflags: 0x1 linked
+// Checksum 0x434201cd, Offset: 0x1290
+// Size: 0x324
+function spawnkilltrigger() {
+    trigger = spawn("trigger_radius", (4303, 1421, 88), 0, 8, 72);
+    trigger thread watchkilltrigger();
+    trigger = spawn("trigger_radius", (4303, 1449, 88), 0, 8, 72);
+    trigger thread watchkilltrigger();
+    trigger = spawn("trigger_radius", (4303, 1477, 88), 0, 8, 72);
+    trigger thread watchkilltrigger();
+    trigger = spawn("trigger_radius", (4303, 1505, 88), 0, 8, 72);
+    trigger thread watchkilltrigger();
+    trigger = spawn("trigger_radius", (3776, -1472, 114), 0, 40, -128);
+    trigger thread watchkilltrigger();
+    trigger = spawn("trigger_radius", (3700, -1472, 114), 0, 40, -128);
+    trigger thread watchkilltrigger();
+    trigger = spawn("trigger_radius", (3624, -1472, 114), 0, 40, -128);
+    trigger thread watchkilltrigger();
+    trigger = spawn("trigger_radius", (3060, -992, -24), 0, 40, 72);
+    trigger thread watchkilltrigger();
+    trigger = spawn("trigger_radius", (2660, -992, -24), 0, 40, 72);
+    trigger thread watchkilltrigger();
+    trigger = spawn("trigger_radius", (4052, -544, 88), 0, 16, 256);
+    trigger thread watchkilltrigger();
+    trigger = spawn("trigger_radius", (4084, -512, 88), 0, 48, 256);
+    trigger thread watchkilltrigger();
+}
+
+// Namespace namespace_5a98f96a
+// Params 0, eflags: 0x1 linked
+// Checksum 0x28f59f8b, Offset: 0x15c0
+// Size: 0x90
+function watchkilltrigger() {
+    level endon(#"game_ended");
+    trigger = self;
+    while (true) {
+        player = trigger waittill(#"trigger");
+        player dodamage(1000, trigger.origin + (0, 0, 0), trigger, trigger, "none", "MOD_SUICIDE", 0);
+    }
+}
+

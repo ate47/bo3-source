@@ -14,15 +14,15 @@
 
 // Namespace zm_powerup_double_points
 // Params 0, eflags: 0x2
-// Checksum 0x9fda549a, Offset: 0x2f8
+// Checksum 0x768014ed, Offset: 0x2f8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_double_points", &__init__, undefined, undefined);
 }
 
 // Namespace zm_powerup_double_points
 // Params 0, eflags: 0x1 linked
-// Checksum 0xfb088df, Offset: 0x338
+// Checksum 0x6cb17b5f, Offset: 0x338
 // Size: 0xbc
 function __init__() {
     zm_powerups::register_powerup("double_points", &grab_double_points);
@@ -33,7 +33,7 @@ function __init__() {
 
 // Namespace zm_powerup_double_points
 // Params 1, eflags: 0x1 linked
-// Checksum 0x38b3762, Offset: 0x400
+// Checksum 0x936785bb, Offset: 0x400
 // Size: 0x44
 function grab_double_points(player) {
     level thread double_points_powerup(self, player);
@@ -42,7 +42,7 @@ function grab_double_points(player) {
 
 // Namespace zm_powerup_double_points
 // Params 2, eflags: 0x1 linked
-// Checksum 0x93606323, Offset: 0x450
+// Checksum 0x376db927, Offset: 0x450
 // Size: 0x2a6
 function double_points_powerup(drop_item, player) {
     level notify("powerup points scaled_" + player.team);

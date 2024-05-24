@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd7c6f9f5, Offset: 0x198
 // Size: 0x3e6
-function main() {
+function autoexec main() {
     clientfield::register("actor", "destructible_character_state", 1, 21, "int", &destructclientutils::_destructhandler, 0, 0);
     destructibles = struct::get_script_bundles("destructiblecharacterdef");
     processedbundles = [];
@@ -41,7 +41,7 @@ function main() {
 // Params 7, eflags: 0x5 linked
 // Checksum 0xacfac1d4, Offset: 0x588
 // Size: 0x138
-function _destructhandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private _destructhandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     entity = self;
     destructflags = oldvalue ^ newvalue;
     shouldspawngibs = newvalue & 1;
@@ -65,7 +65,7 @@ function _destructhandler(localclientnum, oldvalue, newvalue, bnewent, binitials
 // Params 4, eflags: 0x5 linked
 // Checksum 0x521f25b2, Offset: 0x6c8
 // Size: 0x164
-function _destructpiece(localclientnum, entity, piecenumber, shouldspawngibs) {
+function private _destructpiece(localclientnum, entity, piecenumber, shouldspawngibs) {
     if (!isdefined(entity.destructibledef)) {
         return;
     }
@@ -85,7 +85,7 @@ function _destructpiece(localclientnum, entity, piecenumber, shouldspawngibs) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x557f08af, Offset: 0x838
 // Size: 0x3a
-function _getdestructstate(localclientnum, entity) {
+function private _getdestructstate(localclientnum, entity) {
     if (isdefined(entity._destruct_state)) {
         return entity._destruct_state;
     }
@@ -96,7 +96,7 @@ function _getdestructstate(localclientnum, entity) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xe0d458c6, Offset: 0x880
 // Size: 0xf4
-function _handledestructcallbacks(localclientnum, entity, piecenumber) {
+function private _handledestructcallbacks(localclientnum, entity, piecenumber) {
     if (isdefined(entity._destructcallbacks) && isdefined(entity._destructcallbacks[piecenumber])) {
         foreach (callback in entity._destructcallbacks[piecenumber]) {
             if (isfunctionptr(callback)) {

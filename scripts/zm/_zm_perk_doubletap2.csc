@@ -8,15 +8,15 @@
 
 // Namespace namespace_f95f1bc4
 // Params 0, eflags: 0x2
-// Checksum 0xbf2ee2ff, Offset: 0x1a0
+// Checksum 0xcddc133c, Offset: 0x1a0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_perk_doubletap2", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_f95f1bc4
 // Params 0, eflags: 0x0
-// Checksum 0x894ec6dd, Offset: 0x1e0
+// Checksum 0x431ac83f, Offset: 0x1e0
 // Size: 0x14
 function __init__() {
     function_67e7f8cd();
@@ -24,7 +24,7 @@ function __init__() {
 
 // Namespace namespace_f95f1bc4
 // Params 0, eflags: 0x0
-// Checksum 0x170b5263, Offset: 0x200
+// Checksum 0xc6ed04e1, Offset: 0x200
 // Size: 0x84
 function function_67e7f8cd() {
     zm_perks::register_perk_clientfields("specialty_doubletap2", &function_4cff622d, &function_cc3fec48);
@@ -34,7 +34,7 @@ function function_67e7f8cd() {
 
 // Namespace namespace_f95f1bc4
 // Params 0, eflags: 0x0
-// Checksum 0x7dc4a5d, Offset: 0x290
+// Checksum 0x6aff0331, Offset: 0x290
 // Size: 0x36
 function function_a6e30992() {
     if (isdefined(level.enable_magic) && level.enable_magic) {
@@ -44,7 +44,7 @@ function function_a6e30992() {
 
 // Namespace namespace_f95f1bc4
 // Params 0, eflags: 0x0
-// Checksum 0xa156c99b, Offset: 0x2d0
+// Checksum 0x5f8fc1e9, Offset: 0x2d0
 // Size: 0x3c
 function function_4cff622d() {
     clientfield::register("clientuimodel", "hudItems.perks.doubletap2", 1, 2, "int", undefined, 0, 1);

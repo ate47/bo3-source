@@ -59,7 +59,7 @@ function set(str_flag) {
 }
 
 // Namespace flag
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x1486e9a4, Offset: 0x2a8
 // Size: 0x3c
 function delay_set(n_delay, str_flag, str_cancel) {
@@ -95,7 +95,7 @@ function set_val(str_flag, b_val) {
 }
 
 // Namespace flag
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x8d443d9, Offset: 0x3d0
 // Size: 0x6c
 function set_for_time(n_time, str_flag) {
@@ -145,7 +145,7 @@ function get(str_flag) {
 }
 
 // Namespace flag
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0xb956e6ef, Offset: 0x5a0
 // Size: 0x9c
 function get_any(&array) {
@@ -224,7 +224,7 @@ function wait_till_any(a_flags) {
 }
 
 // Namespace flag
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5a0b8ba7, Offset: 0x908
 // Size: 0x84
 function wait_till_any_timeout(n_timeout, a_flags) {
@@ -248,7 +248,7 @@ function wait_till_clear(str_flag) {
 }
 
 // Namespace flag
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x5c0b5b60, Offset: 0x9e0
 // Size: 0x84
 function wait_till_clear_timeout(n_timeout, str_flag) {
@@ -305,7 +305,7 @@ function wait_till_clear_any(a_flags) {
 }
 
 // Namespace flag
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf6d4d6b1, Offset: 0xc60
 // Size: 0x84
 function wait_till_clear_any_timeout(n_timeout, a_flags) {
@@ -318,7 +318,7 @@ function wait_till_clear_any_timeout(n_timeout, a_flags) {
 }
 
 // Namespace flag
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0xd99b4579, Offset: 0xcf0
 // Size: 0x54
 function delete(str_flag) {

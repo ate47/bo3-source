@@ -134,7 +134,7 @@ function function_4135a1c4(slot, weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7b4492c0, Offset: 0xb08
 // Size: 0x208
-function function_602b28e9(target) {
+function private function_602b28e9(target) {
     if (target cybercom::function_8fd8f5b1("cybercom_exosuitbreakdown")) {
         self cybercom::function_29bf9dee(target, 2);
         return false;
@@ -164,7 +164,7 @@ function function_602b28e9(target) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe7d8b03d, Offset: 0xd18
 // Size: 0x52
-function function_8aac802c(weapon) {
+function private function_8aac802c(weapon) {
     return arraycombine(getaiteamarray("axis"), getaiteamarray("team3"), 0, 0);
 }
 
@@ -253,7 +253,7 @@ function function_2e537afb(target, var_9bc2efcb) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xb9cd7e04, Offset: 0x12f0
 // Size: 0x10a
-function function_69246d49(attacker, loops, weapon) {
+function private function_69246d49(attacker, loops, weapon) {
     self endon(#"death");
     self.is_disabled = 1;
     self.ignoreall = 1;
@@ -276,7 +276,7 @@ function function_69246d49(attacker, loops, weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe3c24fb4, Offset: 0x1408
 // Size: 0x58e
-function function_585970ba(attacker) {
+function private function_585970ba(attacker) {
     self endon(#"death");
     weapon = getweapon("gadget_exo_breakdown");
     self notify(#"hash_f8c5dd60", weapon, attacker);

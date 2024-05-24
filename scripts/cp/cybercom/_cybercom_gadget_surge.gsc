@@ -130,7 +130,7 @@ function function_4135a1c4(slot, weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x515dc37c, Offset: 0xa90
 // Size: 0x2e8
-function function_602b28e9(target, secondary) {
+function private function_602b28e9(target, secondary) {
     if (!isdefined(secondary)) {
         secondary = 0;
     }
@@ -183,7 +183,7 @@ function function_602b28e9(target, secondary) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xfec0fed2, Offset: 0xd80
 // Size: 0x52
-function function_8aac802c(weapon) {
+function private function_8aac802c(weapon) {
     return arraycombine(getaiteamarray("axis"), getaiteamarray("team3"), 0, 0);
 }
 
@@ -191,7 +191,7 @@ function function_8aac802c(weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x2ed9e693, Offset: 0xde0
 // Size: 0x2e4
-function function_d015f498(slot, weapon) {
+function private function_d015f498(slot, weapon) {
     upgraded = self function_1a9006bd("cybercom_surge") == 2;
     aborted = 0;
     fired = 0;
@@ -229,7 +229,7 @@ function function_d015f498(slot, weapon) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xbab35f0e, Offset: 0x10d0
 // Size: 0x17e
-function function_dd7268a3(upgraded, secondary, attacker) {
+function private function_dd7268a3(upgraded, secondary, attacker) {
     if (!isdefined(upgraded)) {
         upgraded = 0;
     }
@@ -260,7 +260,7 @@ function function_dd7268a3(upgraded, secondary, attacker) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0x84e29fd8, Offset: 0x1258
 // Size: 0x44c
-function function_311d046a(upgraded, secondary, attacker, weapon) {
+function private function_311d046a(upgraded, secondary, attacker, weapon) {
     if (!isdefined(upgraded)) {
         upgraded = 0;
     }
@@ -352,7 +352,7 @@ function function_b8a5c1a6(attacker) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x82c80eaa, Offset: 0x1800
 // Size: 0xbc
-function function_a405f422() {
+function private function_a405f422() {
     self endon(#"death");
     starttime = gettime();
     while (true) {
@@ -371,7 +371,7 @@ function function_a405f422() {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x5f57a097, Offset: 0x18c8
 // Size: 0x11c
-function function_d007b404(upgraded, enemy, attacker) {
+function private function_d007b404(upgraded, enemy, attacker) {
     self endon(#"death");
     enemy endon(#"death");
     traveltime = distancesquared(enemy.origin, self.origin) / -128 * -128 * getdvarfloat("scr_surge_arc_travel_time", 0.05);
@@ -388,7 +388,7 @@ function function_d007b404(upgraded, enemy, attacker) {
 // Params 2, eflags: 0x4
 // Checksum 0xcb0ac028, Offset: 0x19f0
 // Size: 0x12a
-function function_3e26e5ce(upgraded, attacker) {
+function private function_3e26e5ce(upgraded, attacker) {
     self endon(#"death");
     enemies = self function_3e621fd5(self.origin + (0, 0, 50), getdvarint("scr_surge_radius", -36), getdvarint("scr_surge_count", 4));
     foreach (enemy in enemies) {
@@ -403,7 +403,7 @@ function function_3e26e5ce(upgraded, attacker) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x75193563, Offset: 0x1b28
 // Size: 0x34c
-function function_2a105d32(attacker) {
+function private function_2a105d32(attacker) {
     self notify(#"hash_2a105d32");
     self endon(#"hash_2a105d32");
     origin = self.origin;
@@ -433,7 +433,7 @@ function function_2a105d32(attacker) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x283d39ab, Offset: 0x1e80
 // Size: 0x224
-function function_3e621fd5(origin, distance, max) {
+function private function_3e621fd5(origin, distance, max) {
     weapon = getweapon("gadget_surge");
     distance_squared = distance * distance;
     enemies = [];
@@ -471,7 +471,7 @@ function function_3e621fd5(origin, distance, max) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x6b16f424, Offset: 0x20b0
 // Size: 0x17c
-function function_abaf736(target, traveltime) {
+function private function_abaf736(target, traveltime) {
     if (!isdefined(self) || !isdefined(target)) {
         return;
     }
@@ -493,7 +493,7 @@ function function_abaf736(target, traveltime) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x7ca3e49f, Offset: 0x2238
 // Size: 0x1e4
-function function_d09562d9(target, time, tag) {
+function private function_d09562d9(target, time, tag) {
     self endon(#"disconnect");
     self endon(#"death");
     self notify(#"hash_d09562d9");
@@ -576,7 +576,7 @@ function function_9eb4d79d(target, var_9bc2efcb, upgraded) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x9df30db5, Offset: 0x2708
 // Size: 0x15e
-function function_4d02229e(&enemies, maxattempts) {
+function private function_4d02229e(&enemies, maxattempts) {
     if (!isdefined(maxattempts)) {
         maxattempts = 3;
     }

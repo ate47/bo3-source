@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x9457f723, Offset: 0xd8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("mp_devgui", &__init__, undefined, undefined);
 }
 

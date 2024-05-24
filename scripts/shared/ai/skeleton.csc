@@ -9,7 +9,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xb77616bf, Offset: 0x138
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("skeleton", &__init__, undefined, undefined);
 }
 
@@ -17,7 +17,7 @@ function function_2dc19561() {
 // Params 0, eflags: 0x2
 // Checksum 0x99ec1590, Offset: 0x178
 // Size: 0x4
-function precache() {
+function autoexec precache() {
     
 }
 
@@ -56,7 +56,7 @@ function zombiehandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap
 // Params 3, eflags: 0x5 linked
 // Checksum 0x3ac2300a, Offset: 0x388
 // Size: 0xa6
-function _gibcallback(localclientnum, entity, gibflag) {
+function private _gibcallback(localclientnum, entity, gibflag) {
     switch (gibflag) {
     case 8:
         playsound(0, "zmb_zombie_head_gib", self.origin);

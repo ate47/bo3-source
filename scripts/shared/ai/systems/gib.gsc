@@ -10,7 +10,7 @@
 // Params 2, eflags: 0x5 linked
 // Checksum 0x42d702e7, Offset: 0x388
 // Size: 0x5c
-function function_501ebf93(var_a426eb03, var_321f7bc8) {
+function private function_501ebf93(var_a426eb03, var_321f7bc8) {
     if (!isdefined(var_a426eb03) && !isdefined(var_321f7bc8)) {
         return true;
     }
@@ -24,7 +24,7 @@ function function_501ebf93(var_a426eb03, var_321f7bc8) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xe3e8b332, Offset: 0x3f0
 // Size: 0x136
-function function_5eb8a046(var_79390ec7, gibstruct) {
+function private function_5eb8a046(var_79390ec7, gibstruct) {
     if (!function_501ebf93(level.var_ee3edcd4.var_5ce61d20[var_79390ec7].gibdynentfx, gibstruct.gibdynentfx)) {
         return false;
     }
@@ -44,7 +44,7 @@ function function_5eb8a046(var_79390ec7, gibstruct) {
 // Params 0, eflags: 0x2
 // Checksum 0x2643ffa5, Offset: 0x530
 // Size: 0x9b0
-function main() {
+function autoexec main() {
     clientfield::register("actor", "gib_state", 1, 9, "int");
     clientfield::register("playercorpse", "gib_state", 1, 15, "int");
     var_19c51405 = struct::get_script_bundles("gibcharacterdef");
@@ -127,7 +127,7 @@ function main() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x5dbfca45, Offset: 0xee8
 // Size: 0x2c
-function _annihilate(entity) {
+function private _annihilate(entity) {
     if (isdefined(entity)) {
         entity notsolid();
     }
@@ -137,7 +137,7 @@ function _annihilate(entity) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x479c7b20, Offset: 0xf20
 // Size: 0xcc
-function _getgibextramodel(entity, gibflag) {
+function private _getgibextramodel(entity, gibflag) {
     if (gibflag == 4) {
         return (isdefined(entity.gib_data) ? entity.gib_data.hatmodel : entity.hatmodel);
     }
@@ -153,7 +153,7 @@ function _getgibextramodel(entity, gibflag) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xa2f9d2fe, Offset: 0xff8
 // Size: 0x78
-function _gibextra(entity, gibflag) {
+function private _gibextra(entity, gibflag) {
     if (isgibbed(entity, gibflag)) {
         return false;
     }
@@ -168,7 +168,7 @@ function _gibextra(entity, gibflag) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xdaa335d6, Offset: 0x1078
 // Size: 0x1f4
-function _gibextrainternal(entity, gibflag) {
+function private _gibextrainternal(entity, gibflag) {
     if (entity.gib_time !== gettime()) {
         [[ level.gib_throttle ]]->waitinqueue(entity);
     }
@@ -199,7 +199,7 @@ function _gibextrainternal(entity, gibflag) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x52fd8a3f, Offset: 0x1278
 // Size: 0x98
-function _gibentity(entity, gibflag) {
+function private _gibentity(entity, gibflag) {
     if (isgibbed(entity, gibflag) || !_hasgibpieces(entity, gibflag)) {
         return false;
     }
@@ -214,7 +214,7 @@ function _gibentity(entity, gibflag) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xdbe849ce, Offset: 0x1318
 // Size: 0x1a4
-function _gibentityinternal(entity, gibflag) {
+function private _gibentityinternal(entity, gibflag) {
     if (entity.gib_time !== gettime()) {
         [[ level.gib_throttle ]]->waitinqueue(entity);
     }
@@ -242,7 +242,7 @@ function _gibentityinternal(entity, gibflag) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb30d77f3, Offset: 0x14c8
 // Size: 0x176
-function _getgibbedlegmodel(entity) {
+function private _getgibbedlegmodel(entity) {
     gibstate = _getgibbedstate(entity);
     rightleggibbed = gibstate & -128;
     leftleggibbed = gibstate & 256;
@@ -260,7 +260,7 @@ function _getgibbedlegmodel(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb55c6c41, Offset: 0x1648
 // Size: 0x32
-function _getgibbedstate(entity) {
+function private _getgibbedstate(entity) {
     if (isdefined(entity.gib_state)) {
         return entity.gib_state;
     }
@@ -271,7 +271,7 @@ function _getgibbedstate(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb5a41075, Offset: 0x1688
 // Size: 0x176
-function _getgibbedtorsomodel(entity) {
+function private _getgibbedtorsomodel(entity) {
     gibstate = _getgibbedstate(entity);
     rightarmgibbed = gibstate & 16;
     leftarmgibbed = gibstate & 32;
@@ -289,7 +289,7 @@ function _getgibbedtorsomodel(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x157917ad, Offset: 0x1808
 // Size: 0x1c
-function _hasgibdef(entity) {
+function private _hasgibdef(entity) {
     return isdefined(entity.gibdef);
 }
 
@@ -297,7 +297,7 @@ function _hasgibdef(entity) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xb07614ef, Offset: 0x1830
 // Size: 0xc0
-function _hasgibpieces(entity, gibflag) {
+function private _hasgibpieces(entity, gibflag) {
     hasgibpieces = 0;
     gibstate = _getgibbedstate(entity);
     entity.gib_state = gibstate | gibflag & 512 - 1;
@@ -312,7 +312,7 @@ function _hasgibpieces(entity, gibflag) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x7df5d939, Offset: 0x18f8
 // Size: 0x144
-function _setgibbed(entity, gibflag, gibdir) {
+function private _setgibbed(entity, gibflag, gibdir) {
     if (isdefined(gibdir)) {
         angles = vectortoangles(gibdir);
         yaw = angles[1];

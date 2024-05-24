@@ -17,7 +17,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa551afe6, Offset: 0x3f8
 // Size: 0x13c
-function registerbehaviorscriptfunctions() {
+function autoexec registerbehaviorscriptfunctions() {
     spawner::add_archetype_spawn_function("zombie_dog", &archetypezombiedogblackboardinit);
     behaviortreenetworkutility::registerbehaviortreescriptapi("zombieDogTargetService", &zombiedogtargetservice);
     behaviortreenetworkutility::registerbehaviortreescriptapi("zombieDogShouldMelee", &zombiedogshouldmelee);
@@ -65,7 +65,7 @@ function archetypezombiedogblackboardinit() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xa802fde6, Offset: 0x700
 // Size: 0x34
-function archetypezombiedogonanimscriptedcallback(entity) {
+function private archetypezombiedogonanimscriptedcallback(entity) {
     entity.__blackboard = undefined;
     entity archetypezombiedogblackboardinit();
 }
@@ -171,7 +171,7 @@ function need_to_run() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x51d4d9a5, Offset: 0xbd8
 // Size: 0x1ec
-function is_target_valid(dog, target) {
+function private is_target_valid(dog, target) {
     if (!isdefined(target)) {
         return 0;
     }
@@ -214,7 +214,7 @@ function is_target_valid(dog, target) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x58636a97, Offset: 0xdd0
 // Size: 0x26e
-function get_favorite_enemy(dog) {
+function private get_favorite_enemy(dog) {
     dog_targets = [];
     if (sessionmodeiszombiesgame()) {
         if (self.team == "allies") {

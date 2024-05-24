@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x5394aadd, Offset: 0x138
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("ballistic_knife", &__init__, undefined, undefined);
 }
 

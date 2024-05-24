@@ -23,7 +23,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa139f5f, Offset: 0x560
 // Size: 0x74
-function main() {
+function autoexec main() {
     spawner::add_archetype_spawn_function("human_riotshield", &namespace_6e11afc3::function_bd56fc7d);
     spawner::add_archetype_spawn_function("human_riotshield", &namespace_4cdbfe2b::function_6cd135fd);
     namespace_6e11afc3::registerbehaviorscriptfunctions();
@@ -53,7 +53,7 @@ function registerbehaviorscriptfunctions() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xe0d85ede, Offset: 0x780
 // Size: 0xf4
-function function_bd56fc7d() {
+function private function_bd56fc7d() {
     entity = self;
     blackboard::createblackboardforentity(entity);
     ai::createinterfaceforentity(entity);
@@ -74,7 +74,7 @@ function function_bd56fc7d() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x5cb4a3a3, Offset: 0x880
 // Size: 0x34
-function function_b589481b(entity) {
+function private function_b589481b(entity) {
     entity.__blackboard = undefined;
     entity function_bd56fc7d();
 }
@@ -83,7 +83,7 @@ function function_b589481b(entity) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xca29d82, Offset: 0x8c0
 // Size: 0x46
-function function_ef5bd70a() {
+function private function_ef5bd70a() {
     entity = self;
     if (entity ai::get_behavior_attribute("phalanx")) {
         return "marching";
@@ -95,7 +95,7 @@ function function_ef5bd70a() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x2bb56f5a, Offset: 0x910
 // Size: 0xc4
-function function_d32282d7(entity) {
+function private function_d32282d7(entity) {
     if (entity haspath() && entity ai::get_behavior_attribute("phalanx")) {
         return true;
     }
@@ -112,7 +112,7 @@ function function_d32282d7(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xeb7efa1c, Offset: 0x9e0
 // Size: 0x2c
-function function_23fe9c46(entity) {
+function private function_23fe9c46(entity) {
     entity.var_33646074++;
     entity.var_b6532634 = gettime();
 }
@@ -121,7 +121,7 @@ function function_23fe9c46(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe64dadaf, Offset: 0xa18
 // Size: 0x2c
-function function_64075986(entity) {
+function private function_64075986(entity) {
     entity.var_b6532634 = gettime();
     entity.var_33646074 = 0;
 }
@@ -130,7 +130,7 @@ function function_64075986(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x5854faad, Offset: 0xa50
 // Size: 0x10
-function function_5e70f8d(behaviortreeentity) {
+function private function_5e70f8d(behaviortreeentity) {
     return true;
 }
 
@@ -138,7 +138,7 @@ function function_5e70f8d(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6d867ab7, Offset: 0xa68
 // Size: 0x70
-function function_97d02621(behaviortreeentity) {
+function private function_97d02621(behaviortreeentity) {
     if (isdefined(behaviortreeentity.enemy)) {
         if (distancesquared(behaviortreeentity.origin, behaviortreeentity lastknownpos(behaviortreeentity.enemy)) > 490000) {
             return true;
@@ -151,7 +151,7 @@ function function_97d02621(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x279d9f40, Offset: 0xae0
 // Size: 0x38e
-function function_8ff24c5c(behaviortreeentity) {
+function private function_8ff24c5c(behaviortreeentity) {
     itsbeenawhile = gettime() > behaviortreeentity.nextfindbestcovertime;
     isatscriptgoal = behaviortreeentity isatgoal();
     var_89889720 = 0;
@@ -204,7 +204,7 @@ function function_8ff24c5c(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xbd03ad94, Offset: 0xe78
 // Size: 0x84
-function function_32695b48(behaviortreeentity) {
+function private function_32695b48(behaviortreeentity) {
     aiutility::resetcoverparameters(behaviortreeentity);
     aiutility::setcanbeflanked(behaviortreeentity, 0);
     blackboard::setblackboardattribute(behaviortreeentity, "_stance", "stand");
@@ -215,7 +215,7 @@ function function_32695b48(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x82351f01, Offset: 0xf08
 // Size: 0x31c
-function function_e8d37bce(behaviortreeentity) {
+function private function_e8d37bce(behaviortreeentity) {
     if (!aiutility::shouldmutexmelee(behaviortreeentity)) {
         return false;
     }
@@ -267,7 +267,7 @@ function function_e8d37bce(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x11bcfcc0, Offset: 0x1230
 // Size: 0x13e
-function function_27823c66(behaviortreeentity) {
+function private function_27823c66(behaviortreeentity) {
     if (gettime() < behaviortreeentity.nextfindbestcovertime) {
         return false;
     }
@@ -289,7 +289,7 @@ function function_27823c66(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x273d3683, Offset: 0x1378
 // Size: 0x54
-function function_6bf49b30(behaviortreeentity) {
+function private function_6bf49b30(behaviortreeentity) {
     blackboard::setblackboardattribute(behaviortreeentity, "_stance", "stand");
     behaviortreeentity orientmode("face enemy");
 }
@@ -298,7 +298,7 @@ function function_6bf49b30(behaviortreeentity) {
 // Params 8, eflags: 0x5 linked
 // Checksum 0xcf029325, Offset: 0x13d8
 // Size: 0x70
-function function_f6b6cd67(inflictor, attacker, damage, meansofdeath, weapon, dir, hitloc, offsettime) {
+function private function_f6b6cd67(inflictor, attacker, damage, meansofdeath, weapon, dir, hitloc, offsettime) {
     entity = self;
     aiutility::dropriotshield(entity);
     return damage;
@@ -308,7 +308,7 @@ function function_f6b6cd67(inflictor, attacker, damage, meansofdeath, weapon, di
 // Params 12, eflags: 0x5 linked
 // Checksum 0xdc26b4e2, Offset: 0x1450
 // Size: 0xf8
-function function_b12197(einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon, vpoint, vdir, shitloc, psoffsettime, boneindex, modelindex) {
+function private function_b12197(einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon, vpoint, vdir, shitloc, psoffsettime, boneindex, modelindex) {
     entity = self;
     if (shitloc == "riotshield") {
         function_23fe9c46(entity);

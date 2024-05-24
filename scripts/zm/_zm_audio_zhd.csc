@@ -11,15 +11,15 @@
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x2
-// Checksum 0x39a5373e, Offset: 0x5f0
+// Checksum 0xb5103422, Offset: 0x5f0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_audio_zhd", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x0
-// Checksum 0xb711be6e, Offset: 0x630
+// Checksum 0x839bd7d2, Offset: 0x630
 // Size: 0xfc
 function __init__() {
     clientfield::register("scriptmover", "snd_zhdegg", 21000, 2, "int", &function_97d247be, 0, 0);
@@ -32,7 +32,7 @@ function __init__() {
 
 // Namespace namespace_52adc03e
 // Params 7, eflags: 0x0
-// Checksum 0x8d8db0e7, Offset: 0x738
+// Checksum 0xf6f1245, Offset: 0x738
 // Size: 0x10c
 function function_97d247be(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
@@ -48,7 +48,7 @@ function function_97d247be(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_52adc03e
 // Params 7, eflags: 0x0
-// Checksum 0xde6633d9, Offset: 0x850
+// Checksum 0x4d78cb81, Offset: 0x850
 // Size: 0x7c
 function function_e312f684(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
@@ -58,7 +58,7 @@ function function_e312f684(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x0
-// Checksum 0xfe859ccd, Offset: 0x8d8
+// Checksum 0x43dc65dd, Offset: 0x8d8
 // Size: 0x4da
 function setup_personality_character_exerts() {
     util::waitforclient(0);

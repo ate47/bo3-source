@@ -191,7 +191,7 @@ function is_spawner_targeted_by_blocker(ent) {
 }
 
 // Namespace zm_spawner
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x238c77e2, Offset: 0x1bc8
 // Size: 0x3a
 function add_custom_zombie_spawn_logic(func) {
@@ -942,7 +942,7 @@ function zombie_boardtear_offset_fx_horizontle(chunk, node) {
 }
 
 // Namespace zm_spawner
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x81f82b71, Offset: 0x48c8
 // Size: 0x38c
 function zombie_boardtear_offset_fx_verticle(chunk, node) {
@@ -1376,7 +1376,7 @@ function check_zombie_death_animscript_callbacks() {
 }
 
 // Namespace zm_spawner
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0xf16fff1a, Offset: 0x65d0
 // Size: 0x3a
 function register_zombie_death_animscript_callback(func) {

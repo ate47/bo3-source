@@ -21,7 +21,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x10d4fc6b, Offset: 0x340
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_beast_mana", &__init__, undefined, undefined);
 }
 

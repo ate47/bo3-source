@@ -27,7 +27,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd7fdd2d3, Offset: 0xa08
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_blockers", &__init__, &__main__, undefined);
 }
 

@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x3506da05, Offset: 0x210
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("hud_message", &__init__, undefined, undefined);
 }
 

@@ -705,7 +705,7 @@ function function_45a6577f(target) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x96299d04, Offset: 0x33b0
 // Size: 0xba
-function function_edd19e27(swarm, var_5b928902, weapon) {
+function private function_edd19e27(swarm, var_5b928902, weapon) {
     self endon(#"death");
     if (isdefined(swarm)) {
         self dodamage(5, self.origin, swarm.owner, swarm, "none", "MOD_BURNED", 0, weapon, -1, 1);
@@ -720,7 +720,7 @@ function function_edd19e27(swarm, var_5b928902, weapon) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x6a605b37, Offset: 0x3478
 // Size: 0x3c
-function function_6fffd543() {
+function private function_6fffd543() {
     corpse = self waittill(#"actor_corpse");
     corpse clientfield::set("arch_actor_fire_fx", 2);
 }
@@ -729,7 +729,7 @@ function function_6fffd543() {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xdec40ca7, Offset: 0x34c0
 // Size: 0x344
-function function_4c41b2f7(swarm, var_5b928902, weapon) {
+function private function_4c41b2f7(swarm, var_5b928902, weapon) {
     self endon(#"death");
     self.ignoreall = 1;
     self.is_disabled = 1;
@@ -770,7 +770,7 @@ function function_4c41b2f7(swarm, var_5b928902, weapon) {
 // Params 1, eflags: 0x4
 // Checksum 0x188338f0, Offset: 0x3810
 // Size: 0x72
-function function_77e5963a(swarm) {
+function private function_77e5963a(swarm) {
     while (isdefined(swarm)) {
         self util::waittill_any_timeout(1, "damage");
         if (isdefined(self) && self.health <= 0) {
@@ -784,7 +784,7 @@ function function_77e5963a(swarm) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x88c1f5d2, Offset: 0x3890
 // Size: 0x54
-function function_369d3494(swarm) {
+function private function_369d3494(swarm) {
     swarm endon(#"death");
     corpse = self waittill(#"actor_corpse");
     corpse clientfield::set("firefly_state", 10);
@@ -820,7 +820,7 @@ function function_963f8ef6(match, note, var_1ccbc268, end) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xa0b31d42, Offset: 0x39b0
 // Size: 0x46c
-function function_34de18ba(swarm, var_5b928902, weapon) {
+function private function_34de18ba(swarm, var_5b928902, weapon) {
     self endon(#"death");
     self thread function_369d3494(swarm);
     var_ee89044a = self.badplaceawareness;
@@ -952,7 +952,7 @@ function function_4a163234(params) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x378bf8f3, Offset: 0x4250
 // Size: 0xf2
-function function_8aac802c() {
+function private function_8aac802c() {
     humans = arraycombine(getaispeciesarray(self getenemyteam(), "human"), getaispeciesarray("team3", "human"), 0, 0);
     zombies = arraycombine(getaispeciesarray(self getenemyteam(), "zombie"), getaispeciesarray("team3", "zombie"), 0, 0);
     return arraycombine(humans, zombies, 0, 0);
@@ -962,7 +962,7 @@ function function_8aac802c() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xcd42bbf, Offset: 0x4350
 // Size: 0x1c8
-function function_602b28e9(target) {
+function private function_602b28e9(target) {
     if (isdefined(self.owner) && !self.owner cybercom::function_7a7d1608(target, getweapon("gadget_firefly_swarm"))) {
         return false;
     }

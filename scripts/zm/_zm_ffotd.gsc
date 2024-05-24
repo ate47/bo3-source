@@ -24,7 +24,7 @@ function main_end() {
 }
 
 // Namespace zm_ffotd
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0xcbcb8c24, Offset: 0x1a8
 // Size: 0x50
 function optimize_for_splitscreen() {

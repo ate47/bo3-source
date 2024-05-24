@@ -9,7 +9,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x6c0ca5e3, Offset: 0x158
 // Size: 0x124
-function init() {
+function autoexec init() {
     level.laststands = [];
     for (i = 0; i < 4; i++) {
         level.laststands[i] = spawnstruct();

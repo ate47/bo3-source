@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc0c4313b, Offset: 0x198
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_sword_flay", &__init__, undefined, "bgb");
 }
 

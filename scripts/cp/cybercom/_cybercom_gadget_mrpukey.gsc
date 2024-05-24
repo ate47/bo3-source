@@ -141,7 +141,7 @@ function function_4135a1c4(slot, weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x13c08c9b, Offset: 0xb60
 // Size: 0x200
-function function_602b28e9(target) {
+function private function_602b28e9(target) {
     if (target cybercom::function_8fd8f5b1("cybercom_mrpukey")) {
         self cybercom::function_29bf9dee(target, 2);
         return false;
@@ -171,7 +171,7 @@ function function_602b28e9(target) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xa7fa5be3, Offset: 0xd68
 // Size: 0x52
-function function_8aac802c(weapon) {
+function private function_8aac802c(weapon) {
     return arraycombine(getaiteamarray("axis"), getaiteamarray("team3"), 0, 0);
 }
 
@@ -179,7 +179,7 @@ function function_8aac802c(weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xd3560dcd, Offset: 0xdc8
 // Size: 0x2e4
-function function_2de61c3f(slot, weapon) {
+function private function_2de61c3f(slot, weapon) {
     upgraded = self function_1a9006bd("cybercom_mrpukey") == 2;
     aborted = 0;
     fired = 0;
@@ -217,7 +217,7 @@ function function_2de61c3f(slot, weapon) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0xbdb74fcd, Offset: 0x10b8
 // Size: 0x1ec
-function function_25411db1(upgraded, secondary, attacker, weapon) {
+function private function_25411db1(upgraded, secondary, attacker, weapon) {
     if (!isdefined(upgraded)) {
         upgraded = 0;
     }

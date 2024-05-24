@@ -88,7 +88,7 @@ function function_59ae49d2(type) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd565a0e, Offset: 0x6f0
 // Size: 0x208
-function function_13a66a32(weapon) {
+function private function_13a66a32(weapon) {
     self notify(#"hash_9fd8f9c4");
     self endon(#"hash_9fd8f9c4");
     self endon(#"hash_59ae49d2");
@@ -116,7 +116,7 @@ function function_13a66a32(weapon) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x8bfe5da9, Offset: 0x900
 // Size: 0x280
-function function_170e07a2() {
+function private function_170e07a2() {
     self endon(#"hash_59ae49d2");
     self endon(#"death");
     self endon(#"disconnect");
@@ -177,7 +177,7 @@ function function_1542f1f0(threat) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x7c2e6eff, Offset: 0xd30
 // Size: 0x84
-function function_934364a2(grenade, var_d355aea1) {
+function private function_934364a2(grenade, var_d355aea1) {
     if (isdefined(grenade)) {
         self thread function_1542f1f0(grenade);
         grenade playsound("gdt_cybercore_rig_repulse_jawawawa_missile");

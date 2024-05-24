@@ -14,15 +14,15 @@
 
 // Namespace zm_trap_electric
 // Params 0, eflags: 0x2
-// Checksum 0xccbdbf67, Offset: 0x340
+// Checksum 0xc1b3b3d1, Offset: 0x340
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_trap_electric", &__init__, undefined, undefined);
 }
 
 // Namespace zm_trap_electric
 // Params 0, eflags: 0x1 linked
-// Checksum 0x45ee33e8, Offset: 0x380
+// Checksum 0x357c8cf, Offset: 0x380
 // Size: 0x1aa
 function __init__() {
     zm_traps::register_trap_basic_info("electric", &trap_activate_electric, &trap_audio);
@@ -40,7 +40,7 @@ function __init__() {
 
 // Namespace zm_trap_electric
 // Params 0, eflags: 0x1 linked
-// Checksum 0x46335108, Offset: 0x538
+// Checksum 0x75835fe, Offset: 0x538
 // Size: 0x174
 function trap_activate_electric() {
     self._trap_duration = 40;
@@ -64,7 +64,7 @@ function trap_activate_electric() {
 
 // Namespace zm_trap_electric
 // Params 1, eflags: 0x1 linked
-// Checksum 0x292c81d9, Offset: 0x6b8
+// Checksum 0xde349fec, Offset: 0x6b8
 // Size: 0x11c
 function trap_audio(trap) {
     sound_origin = spawn("script_origin", self.origin);
@@ -82,7 +82,7 @@ function trap_audio(trap) {
 
 // Namespace zm_trap_electric
 // Params 1, eflags: 0x1 linked
-// Checksum 0xf9bffa6, Offset: 0x7e0
+// Checksum 0x60302e5, Offset: 0x7e0
 // Size: 0x68
 function play_electrical_sound(trap) {
     trap endon(#"trap_done");
@@ -94,7 +94,7 @@ function play_electrical_sound(trap) {
 
 // Namespace zm_trap_electric
 // Params 0, eflags: 0x1 linked
-// Checksum 0xd752971d, Offset: 0x850
+// Checksum 0x5acaab79, Offset: 0x850
 // Size: 0x2c
 function player_damage() {
     if (!(isdefined(self.b_no_trap_damage) && self.b_no_trap_damage)) {
@@ -104,7 +104,7 @@ function player_damage() {
 
 // Namespace zm_trap_electric
 // Params 1, eflags: 0x1 linked
-// Checksum 0x8e730648, Offset: 0x888
+// Checksum 0xcf0fb80d, Offset: 0x888
 // Size: 0x3ac
 function damage(trap) {
     self endon(#"death");

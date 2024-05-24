@@ -98,7 +98,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x74c9e6e2, Offset: 0x1900
 // Size: 0x3b4
-function ignore_systems() {
+function autoexec ignore_systems() {
     system::ignore("gadget_clone");
     system::ignore("gadget_heat_wave");
     system::ignore("gadget_resurrect");

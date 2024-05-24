@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x4fed97ab, Offset: 0x180
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("weaponobjects", &__init__, undefined, undefined);
 }
 

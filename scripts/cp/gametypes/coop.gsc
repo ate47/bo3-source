@@ -33,7 +33,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x1019faed, Offset: 0x8a0
 // Size: 0x64
-function init() {
+function autoexec init() {
     clientfield::register("playercorpse", "hide_body", 1, 1, "int");
     clientfield::register("toplayer", "killcam_menu", 1, 1, "int");
 }

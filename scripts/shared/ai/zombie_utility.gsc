@@ -1244,7 +1244,7 @@ function iscqbwalking() {
 }
 
 // Namespace zombie_utility
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x4056df3, Offset: 0x3b50
 // Size: 0x16
 function squared(value) {
@@ -1288,7 +1288,7 @@ function function_ef2e22f8() {
 }
 
 // Namespace zombie_utility
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x9698d414, Offset: 0x3c58
 // Size: 0x22
 function is_zombie() {
@@ -2647,7 +2647,7 @@ function gib_random_parts() {
 // Params 0, eflags: 0x2
 // Checksum 0x415512d4, Offset: 0x78a8
 // Size: 0x10
-function init_ignore_player_handler() {
+function autoexec init_ignore_player_handler() {
     level._ignore_player_handler = [];
 }
 

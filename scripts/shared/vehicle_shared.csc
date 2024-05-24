@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x806484a3, Offset: 0x6b8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("vehicle_shared", &__init__, undefined, undefined);
 }
 
@@ -105,7 +105,7 @@ function spawned_callback(localclientnum) {
 }
 
 // Namespace vehicle
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x63f580cd, Offset: 0x15c8
 // Size: 0x2a8
 function rumble(localclientnum) {
@@ -1229,7 +1229,7 @@ function field_gib_spawn_dynents(localclientnum, oldval, newval, bnewent, biniti
 // Params 0, eflags: 0x2
 // Checksum 0xd4fe13f6, Offset: 0x6448
 // Size: 0x8e
-function build_damage_filter_list() {
+function autoexec build_damage_filter_list() {
     if (!isdefined(level.vehicle_damage_filters)) {
         level.vehicle_damage_filters = [];
     }

@@ -151,7 +151,7 @@ function function_4135a1c4(slot, weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x1e7f2914, Offset: 0xbe8
 // Size: 0xfc
-function function_f1ec3062(team, attacker) {
+function private function_f1ec3062(team, attacker) {
     self endon(#"death");
     self waittill(#"iff_override_reverted");
     self clientfield::set("cybercom_setiffname", 4);
@@ -170,7 +170,7 @@ function function_f1ec3062(team, attacker) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xabea9f68, Offset: 0xcf0
 // Size: 0x1dc
-function function_2458babe(entity) {
+function private function_2458babe(entity) {
     if (!isplayer(self)) {
         return;
     }
@@ -199,7 +199,7 @@ function function_2458babe(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x8926bf29, Offset: 0xed8
 // Size: 0x334
-function function_602b28e9(target) {
+function private function_602b28e9(target) {
     if (target cybercom::function_8fd8f5b1("cybercom_iffoverride")) {
         if (isdefined(target.var_406cec76) && target.var_406cec76) {
             self cybercom::function_29bf9dee(target, 4);
@@ -244,7 +244,7 @@ function function_602b28e9(target) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x180c8120, Offset: 0x1218
 // Size: 0x104
-function function_8aac802c(weapon) {
+function private function_8aac802c(weapon) {
     var_594dffdc = getaiteamarray("axis");
     valid = [];
     foreach (enemy in var_594dffdc) {
@@ -259,7 +259,7 @@ function function_8aac802c(weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x66cfcfb, Offset: 0x1328
 // Size: 0x2ac
-function function_fa8ba566(slot, weapon) {
+function private function_fa8ba566(slot, weapon) {
     aborted = 0;
     fired = 0;
     foreach (item in self.cybercom.var_d1460543) {
@@ -296,7 +296,7 @@ function function_fa8ba566(slot, weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x23e31e68, Offset: 0x15e0
 // Size: 0xe8
-function function_c9023ee5(owner) {
+function private function_c9023ee5(owner) {
     self endon(#"death");
     self endon(#"iff_override_reverted");
     if (isplayer(owner)) {
@@ -335,7 +335,7 @@ function function_e6827c94(isactive) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xe2cac318, Offset: 0x17b8
 // Size: 0x3c
-function function_384a3bfb() {
+function private function_384a3bfb() {
     self endon(#"death");
     self waittill(#"iff_override_reverted");
     self clientfield::set("cybercom_setiffname", 4);
@@ -345,7 +345,7 @@ function function_384a3bfb() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x1746f94b, Offset: 0x1800
 // Size: 0xa4
-function function_9a7de8fc(var_92d97fe6) {
+function private function_9a7de8fc(var_92d97fe6) {
     self endon(#"death");
     wait(randomfloatrange(0, 0.75));
     if (isplayer(var_92d97fe6)) {
@@ -360,7 +360,7 @@ function function_9a7de8fc(var_92d97fe6) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x14eab942, Offset: 0x18b0
 // Size: 0x3c
-function function_2b203db0() {
+function private function_2b203db0() {
     self endon(#"death");
     self waittill(#"iff_override_revert_warn");
     self clientfield::set("cybercom_setiffname", 3);
@@ -455,7 +455,7 @@ function iff_notifymeinnsec(time, note) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x8bc27bc3, Offset: 0x1e78
 // Size: 0x8a
-function function_f2c8aa66(timesec, attacker) {
+function private function_f2c8aa66(timesec, attacker) {
     self endon(#"death");
     wait(timesec - 6);
     self notify(#"iff_override_revert_warn");

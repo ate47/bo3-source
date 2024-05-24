@@ -251,7 +251,7 @@ function function_4f6daa65(b_on) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x4f0ff879, Offset: 0xee0
 // Size: 0x5c
-function function_dbc35f5e(var_c2dc2b72, delay) {
+function private function_dbc35f5e(var_c2dc2b72, delay) {
     self setluimenudata(var_c2dc2b72, "close_current_menu", 1);
     wait(delay);
     self closeluimenu(var_c2dc2b72);

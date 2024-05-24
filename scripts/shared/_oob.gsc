@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xae8c057d, Offset: 0x200
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("out_of_bounds", &__init__, undefined, undefined);
 }
 
@@ -307,7 +307,7 @@ function watchforhostmigration(trigger, entity) {
 }
 
 // Namespace oob
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6cf93ae2, Offset: 0x1290
 // Size: 0x48
 function disableplayeroob(disabled) {

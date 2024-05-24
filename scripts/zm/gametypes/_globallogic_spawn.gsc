@@ -24,7 +24,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe463dd58, Offset: 0x630
 // Size: 0x24
-function init() {
+function autoexec init() {
     if (!isdefined(level.givestartloadout)) {
         level.givestartloadout = &givestartloadout;
     }

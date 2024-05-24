@@ -22,15 +22,15 @@
 
 // Namespace namespace_e0df0f6f
 // Params 0, eflags: 0x2
-// Checksum 0x470d412a, Offset: 0x368
+// Checksum 0x6072768, Offset: 0x368
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_ww_grenade", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_e0df0f6f
 // Params 0, eflags: 0x1 linked
-// Checksum 0x8a3d045d, Offset: 0x3a8
+// Checksum 0x3361d814, Offset: 0x3a8
 // Size: 0xdc
 function __init__() {
     zm_powerups::register_powerup("ww_grenade", &function_61dfda23);
@@ -45,7 +45,7 @@ function __init__() {
 
 // Namespace namespace_e0df0f6f
 // Params 1, eflags: 0x1 linked
-// Checksum 0x6a09c1e3, Offset: 0x490
+// Checksum 0x5ca451f5, Offset: 0x490
 // Size: 0x44
 function function_61dfda23(player) {
     level thread function_13ccb255(self, player);
@@ -54,7 +54,7 @@ function function_61dfda23(player) {
 
 // Namespace namespace_e0df0f6f
 // Params 2, eflags: 0x1 linked
-// Checksum 0x55fb1d02, Offset: 0x4e0
+// Checksum 0x6bd72d27, Offset: 0x4e0
 // Size: 0x144
 function function_13ccb255(item, player) {
     if (!player laststand::player_is_in_laststand() && !(player.sessionstate == "spectator")) {
@@ -72,7 +72,7 @@ function function_13ccb255(item, player) {
 
     // Namespace namespace_e0df0f6f
     // Params 0, eflags: 0x1 linked
-    // Checksum 0x909aabdd, Offset: 0x630
+    // Checksum 0x5787ea35, Offset: 0x630
     // Size: 0x7c
     function function_39ac3091() {
         level flagsys::wait_till("specialty_widowswine");
@@ -84,7 +84,7 @@ function function_13ccb255(item, player) {
 
     // Namespace namespace_e0df0f6f
     // Params 0, eflags: 0x1 linked
-    // Checksum 0xd90921b8, Offset: 0x6b8
+    // Checksum 0x2f4519cf, Offset: 0x6b8
     // Size: 0x38
     function function_2449723c() {
         if (isdefined(self.var_2654b40c)) {
@@ -98,7 +98,7 @@ function function_13ccb255(item, player) {
 
     // Namespace namespace_e0df0f6f
     // Params 1, eflags: 0x1 linked
-    // Checksum 0x3ef104c3, Offset: 0x6f8
+    // Checksum 0x534e7a40, Offset: 0x6f8
     // Size: 0x110
     function function_dcedd7b5(cmd) {
         players = getplayers();

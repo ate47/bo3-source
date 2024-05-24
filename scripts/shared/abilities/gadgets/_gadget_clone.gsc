@@ -22,7 +22,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc858ee47, Offset: 0x520
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("gadget_clone", &__init__, undefined, undefined);
 }
 
@@ -300,7 +300,7 @@ function function_33fadcbd(slot, weapon) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x23acf5c, Offset: 0x15b8
 // Size: 0x3a4
-function _updateclonepathing() {
+function private _updateclonepathing() {
     self endon(#"death");
     while (true) {
         if (getdvarint("tu1_gadgetCloneSwimming", 1)) {
@@ -369,7 +369,7 @@ function function_c030222c(endpos, traveltime) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xbf1a8227, Offset: 0x1ac0
 // Size: 0x16c
-function function_d0fe4d5e(clone, player) {
+function private function_d0fe4d5e(clone, player) {
     if (getdvarint("tu1_gadgetCloneCopyLook", 1)) {
         if (isplayer(player) && isai(clone)) {
             bodymodel = player getcharacterbodymodel();
@@ -395,7 +395,7 @@ function function_d0fe4d5e(clone, player) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0x635ab461, Offset: 0x1c38
 // Size: 0x4ac
-function function_27c360b(clone, player, forward, spawntime) {
+function private function_27c360b(clone, player, forward, spawntime) {
     clone.isaiclone = 1;
     clone.propername = "";
     clone.ignoretriggerdamage = 1;
@@ -446,7 +446,7 @@ function function_27c360b(clone, player, forward, spawntime) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xe71f0388, Offset: 0x20f0
 // Size: 0x6c
-function function_d3a63808() {
+function private function_d3a63808() {
     if (isdefined(self)) {
         fx = playfx("player/fx_plyr_clone_vanish", self.origin);
         fx.team = self.team;
@@ -458,7 +458,7 @@ function function_d3a63808() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x1f51bcf0, Offset: 0x2168
 // Size: 0x74
-function function_f8ba2c36() {
+function private function_f8ba2c36() {
     self waittill(#"death");
     if (isdefined(self)) {
         self stoploopsound();
@@ -472,7 +472,7 @@ function function_f8ba2c36() {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x1b359ba2, Offset: 0x21e8
 // Size: 0xc4
-function _configurecloneteam(clone, player, ishacked) {
+function private _configurecloneteam(clone, player, ishacked) {
     if (ishacked == 0) {
         clone.originalteam = player.team;
     }
@@ -487,7 +487,7 @@ function _configurecloneteam(clone, player, ishacked) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x1157f09f, Offset: 0x22b8
 // Size: 0xdc
-function function_6e8f41cb(spawntime) {
+function private function_6e8f41cb(spawntime) {
     self endon(#"death");
     wait(spawntime);
     self show();
@@ -515,7 +515,7 @@ function function_e4fe20c9(slot, weapon) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xa0d08ff8, Offset: 0x2470
 // Size: 0x5c
-function function_faa3553c() {
+function private function_faa3553c() {
     self endon(#"death");
     self clientfield::set("clone_damaged", 1);
     util::wait_network_frame();
@@ -702,7 +702,7 @@ function function_d935b10c(player) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xa01e260a, Offset: 0x2f10
 // Size: 0xaa
-function function_ae40491f(player) {
+function private function_ae40491f(player) {
     classnum = randomint(10);
     for (i = 0; i < 10; i++) {
         weapon = player getloadoutweapon((i + classnum) % 10, "primary");
@@ -717,7 +717,7 @@ function function_ae40491f(player) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x1381ec34, Offset: 0x2fc8
 // Size: 0x9e
-function function_3898b1bf(playerweapon, items) {
+function private function_3898b1bf(playerweapon, items) {
     if (!isdefined(items) || !items.size || !isdefined(playerweapon)) {
         return false;
     }

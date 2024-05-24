@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xfc3a56c3, Offset: 0x148
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_on_the_house", &__init__, undefined, undefined);
 }
 

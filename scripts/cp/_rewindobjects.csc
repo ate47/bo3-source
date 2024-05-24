@@ -7,7 +7,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x44424142, Offset: 0xd8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("rewindobjects", &__init__, undefined, undefined);
 }
 

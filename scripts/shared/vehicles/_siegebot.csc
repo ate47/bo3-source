@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x17543661, Offset: 0x178
 // Size: 0x2c
-function main() {
+function autoexec main() {
     vehicle::add_vehicletype_callback("siegebot", &_setup_);
 }
 

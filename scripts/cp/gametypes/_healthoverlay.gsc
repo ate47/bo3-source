@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x7f994d6d, Offset: 0x1b8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("healthoverlay", &__init__, undefined, undefined);
 }
 

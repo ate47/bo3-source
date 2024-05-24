@@ -16,23 +16,23 @@
 
 // Namespace zm_perk_deadshot
 // Params 0, eflags: 0x2
-// Checksum 0xb834edd5, Offset: 0x350
+// Checksum 0x592e8a9e, Offset: 0x350
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_perk_deadshot", &__init__, undefined, undefined);
 }
 
 // Namespace zm_perk_deadshot
-// Params 0, eflags: 0x0
-// Checksum 0x24448ebb, Offset: 0x390
+// Params 0, eflags: 0x1 linked
+// Checksum 0x32da6f01, Offset: 0x390
 // Size: 0x14
 function __init__() {
     enable_deadshot_perk_for_level();
 }
 
 // Namespace zm_perk_deadshot
-// Params 0, eflags: 0x0
-// Checksum 0xf087f415, Offset: 0x3b0
+// Params 0, eflags: 0x1 linked
+// Checksum 0x7da16b18, Offset: 0x3b0
 // Size: 0x12c
 function enable_deadshot_perk_for_level() {
     zm_perks::register_perk_basic_info("specialty_deadshot", "deadshot", 1500, %ZOMBIE_PERK_DEADSHOT, getweapon("zombie_perk_bottle_deadshot"));
@@ -44,8 +44,8 @@ function enable_deadshot_perk_for_level() {
 }
 
 // Namespace zm_perk_deadshot
-// Params 0, eflags: 0x0
-// Checksum 0x91d167a7, Offset: 0x4e8
+// Params 0, eflags: 0x1 linked
+// Checksum 0x3b0dc8b3, Offset: 0x4e8
 // Size: 0xe0
 function deadshot_precache() {
     if (isdefined(level.var_72a62e0d)) {
@@ -60,8 +60,8 @@ function deadshot_precache() {
 }
 
 // Namespace zm_perk_deadshot
-// Params 0, eflags: 0x0
-// Checksum 0x5c3103be, Offset: 0x5d0
+// Params 0, eflags: 0x1 linked
+// Checksum 0x75d87402, Offset: 0x5d0
 // Size: 0x64
 function deadshot_register_clientfield() {
     clientfield::register("toplayer", "deadshot_perk", 1, 1, "int");
@@ -69,16 +69,16 @@ function deadshot_register_clientfield() {
 }
 
 // Namespace zm_perk_deadshot
-// Params 1, eflags: 0x0
-// Checksum 0x21080251, Offset: 0x640
+// Params 1, eflags: 0x1 linked
+// Checksum 0x8ac41090, Offset: 0x640
 // Size: 0x2c
 function deadshot_set_clientfield(state) {
     self clientfield::set_player_uimodel("hudItems.perks.dead_shot", state);
 }
 
 // Namespace zm_perk_deadshot
-// Params 4, eflags: 0x0
-// Checksum 0xb9efe08a, Offset: 0x678
+// Params 4, eflags: 0x1 linked
+// Checksum 0x85426269, Offset: 0x678
 // Size: 0xbc
 function deadshot_perk_machine_setup(use_trigger, perk_machine, bump_trigger, collision) {
     use_trigger.script_sound = "mus_perks_deadshot_jingle";
@@ -93,16 +93,16 @@ function deadshot_perk_machine_setup(use_trigger, perk_machine, bump_trigger, co
 }
 
 // Namespace zm_perk_deadshot
-// Params 0, eflags: 0x0
-// Checksum 0x6f00c6fb, Offset: 0x740
+// Params 0, eflags: 0x1 linked
+// Checksum 0xb467ca57, Offset: 0x740
 // Size: 0x24
 function give_deadshot_perk() {
     self clientfield::set_to_player("deadshot_perk", 1);
 }
 
 // Namespace zm_perk_deadshot
-// Params 3, eflags: 0x0
-// Checksum 0x772728a0, Offset: 0x770
+// Params 3, eflags: 0x1 linked
+// Checksum 0xc1c76470, Offset: 0x770
 // Size: 0x3c
 function take_deadshot_perk(b_pause, str_perk, str_result) {
     self clientfield::set_to_player("deadshot_perk", 0);

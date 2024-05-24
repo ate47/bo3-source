@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x79a307f1, Offset: 0x208
 // Size: 0x434
-function main() {
+function autoexec main() {
     clientfield::register("actor", "gib_state", 1, 9, "int", &_gibhandler, 0, 0);
     clientfield::register("playercorpse", "gib_state", 1, 15, "int", &_gibhandler, 0, 0);
     var_19c51405 = struct::get_script_bundles("gibcharacterdef");
@@ -44,7 +44,7 @@ function main() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x19fdf876, Offset: 0x648
 // Size: 0x1f8
-function _annihilatecorpse() {
+function private _annihilatecorpse() {
     while (true) {
         localclientnum, body, origin = level waittill(#"corpse_explode");
         if (!util::is_mature() || util::is_gib_restricted_build()) {
@@ -73,7 +73,7 @@ function _annihilatecorpse() {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x41014bcc, Offset: 0x848
 // Size: 0x20c
-function _clonegibdata(localclientnum, entity, clone) {
+function private _clonegibdata(localclientnum, entity, clone) {
     clone.gib_data = spawnstruct();
     clone.gib_data.gib_state = entity.gib_state;
     clone.gib_data.gibdef = entity.gibdef;
@@ -94,7 +94,7 @@ function _clonegibdata(localclientnum, entity, clone) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x51917e21, Offset: 0xa60
 // Size: 0x92
-function function_e2149f4f(entity) {
+function private function_e2149f4f(entity) {
     if (entity isplayer() || entity isplayercorpse()) {
         return entity getplayergibdef();
     } else if (isdefined(entity.gib_data)) {
@@ -107,7 +107,7 @@ function function_e2149f4f(entity) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xf077f9c0, Offset: 0xb00
 // Size: 0x86
-function _getgibbedstate(localclientnum, entity) {
+function private _getgibbedstate(localclientnum, entity) {
     if (isdefined(entity.gib_data) && isdefined(entity.gib_data.gib_state)) {
         return entity.gib_data.gib_state;
     } else if (isdefined(entity.gib_state)) {
@@ -120,7 +120,7 @@ function _getgibbedstate(localclientnum, entity) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xb4c565c0, Offset: 0xb90
 // Size: 0x17e
-function _getgibbedlegmodel(localclientnum, entity) {
+function private _getgibbedlegmodel(localclientnum, entity) {
     gibstate = _getgibbedstate(localclientnum, entity);
     rightleggibbed = gibstate & -128;
     leftleggibbed = gibstate & 256;
@@ -138,7 +138,7 @@ function _getgibbedlegmodel(localclientnum, entity) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xfe07e53d, Offset: 0xd18
 // Size: 0xd4
-function _getgibextramodel(localclientnumm, entity, gibflag) {
+function private _getgibextramodel(localclientnumm, entity, gibflag) {
     if (gibflag == 4) {
         return (isdefined(entity.gib_data) ? entity.gib_data.hatmodel : entity.hatmodel);
     }
@@ -154,7 +154,7 @@ function _getgibextramodel(localclientnumm, entity, gibflag) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xf5514252, Offset: 0xdf8
 // Size: 0x17e
-function _getgibbedtorsomodel(localclientnum, entity) {
+function private _getgibbedtorsomodel(localclientnum, entity) {
     gibstate = _getgibbedstate(localclientnum, entity);
     rightarmgibbed = gibstate & 16;
     leftarmgibbed = gibstate & 32;
@@ -172,7 +172,7 @@ function _getgibbedtorsomodel(localclientnum, entity) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xc9277a10, Offset: 0xf80
 // Size: 0xb4
-function _gibpiecetag(localclientnum, entity, gibflag) {
+function private _gibpiecetag(localclientnum, entity, gibflag) {
     if (!_hasgibdef(self)) {
         return;
     }
@@ -187,7 +187,7 @@ function _gibpiecetag(localclientnum, entity, gibflag) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x227fac2a, Offset: 0x1040
 // Size: 0x2a0
-function _gibentity(localclientnum, gibflags, shouldspawngibs) {
+function private _gibentity(localclientnum, gibflags, shouldspawngibs) {
     entity = self;
     if (!_hasgibdef(entity)) {
         return;
@@ -224,7 +224,7 @@ function _gibentity(localclientnum, gibflags, shouldspawngibs) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xc67cd0a3, Offset: 0x12e8
 // Size: 0x98
-function _setgibbed(localclientnum, entity, gibflag) {
+function private _setgibbed(localclientnum, entity, gibflag) {
     gib_state = _getgibbedstate(localclientnum, entity) | gibflag & 512 - 1;
     if (isdefined(entity.gib_data)) {
         entity.gib_data.gib_state = gib_state;
@@ -237,7 +237,7 @@ function _setgibbed(localclientnum, entity, gibflag) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x9b25048b, Offset: 0x1388
 // Size: 0x1c4
-function _gibcliententityinternal(localclientnum, entity, gibflag) {
+function private _gibcliententityinternal(localclientnum, entity, gibflag) {
     if (!util::is_mature() || util::is_gib_restricted_build()) {
         return;
     }
@@ -264,7 +264,7 @@ function _gibcliententityinternal(localclientnum, entity, gibflag) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xa71976e1, Offset: 0x1558
 // Size: 0x1ec
-function _gibclientextrainternal(localclientnum, entity, gibflag) {
+function private _gibclientextrainternal(localclientnum, entity, gibflag) {
     if (!util::is_mature() || util::is_gib_restricted_build()) {
         return;
     }
@@ -294,7 +294,7 @@ function _gibclientextrainternal(localclientnum, entity, gibflag) {
 // Params 7, eflags: 0x5 linked
 // Checksum 0x8f4d523d, Offset: 0x1750
 // Size: 0x1b0
-function _gibhandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private _gibhandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     entity = self;
     if (entity isplayer() || entity isplayercorpse()) {
         if (!util::is_mature() || util::is_gib_restricted_build()) {
@@ -365,7 +365,7 @@ function _gibpiece(localclientnum, entity, gibmodel, gibtag, gibfx, gibdir) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x9789438d, Offset: 0x1c18
 // Size: 0xde
-function _handlegibcallbacks(localclientnum, entity, gibflag) {
+function private _handlegibcallbacks(localclientnum, entity, gibflag) {
     if (isdefined(entity._gibcallbacks) && isdefined(entity._gibcallbacks[gibflag])) {
         foreach (callback in entity._gibcallbacks[gibflag]) {
             [[ callback ]](localclientnum, entity, gibflag);
@@ -377,7 +377,7 @@ function _handlegibcallbacks(localclientnum, entity, gibflag) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x2230dba5, Offset: 0x1d00
 // Size: 0x5c
-function _handlegibannihilate(localclientnum) {
+function private _handlegibannihilate(localclientnum) {
     entity = self;
     entity endon(#"entityshutdown");
     entity waittillmatch(#"_anim_notify_", "gib_annihilate");
@@ -388,7 +388,7 @@ function _handlegibannihilate(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x12a546e0, Offset: 0x1d68
 // Size: 0x5c
-function _handlegibhead(localclientnum) {
+function private _handlegibhead(localclientnum) {
     entity = self;
     entity endon(#"entityshutdown");
     entity waittillmatch(#"_anim_notify_", "gib = \"head\"");
@@ -399,7 +399,7 @@ function _handlegibhead(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xcc7feb5c, Offset: 0x1dd0
 // Size: 0x5c
-function _handlegibrightarm(localclientnum) {
+function private _handlegibrightarm(localclientnum) {
     entity = self;
     entity endon(#"entityshutdown");
     entity waittillmatch(#"_anim_notify_", "gib = \"arm_right\"");
@@ -410,7 +410,7 @@ function _handlegibrightarm(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x45fd21e3, Offset: 0x1e38
 // Size: 0x5c
-function _handlegibleftarm(localclientnum) {
+function private _handlegibleftarm(localclientnum) {
     entity = self;
     entity endon(#"entityshutdown");
     entity waittillmatch(#"_anim_notify_", "gib = \"arm_left\"");
@@ -421,7 +421,7 @@ function _handlegibleftarm(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x9c070701, Offset: 0x1ea0
 // Size: 0x5c
-function _handlegibrightleg(localclientnum) {
+function private _handlegibrightleg(localclientnum) {
     entity = self;
     entity endon(#"entityshutdown");
     entity waittillmatch(#"_anim_notify_", "gib = \"leg_right\"");
@@ -432,7 +432,7 @@ function _handlegibrightleg(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xcee07666, Offset: 0x1f08
 // Size: 0x5c
-function _handlegibleftleg(localclientnum) {
+function private _handlegibleftleg(localclientnum) {
     entity = self;
     entity endon(#"entityshutdown");
     entity waittillmatch(#"_anim_notify_", "gib = \"leg_left\"");
@@ -443,7 +443,7 @@ function _handlegibleftleg(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xc685497c, Offset: 0x1f70
 // Size: 0x6c
-function _hasgibdef(entity) {
+function private _hasgibdef(entity) {
     return isdefined(entity.gib_data) && isdefined(entity.gib_data.gibdef) || isdefined(entity.gibdef) || entity getplayergibdef() != "unknown";
 }
 
@@ -555,7 +555,7 @@ function cliententgibrightleg(localclientnum, entity) {
 }
 
 // Namespace gibclientutils
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x6e4c48b6, Offset: 0x2480
 // Size: 0x378
 function createscriptmodelofentity(localclientnum, entity) {
@@ -613,7 +613,7 @@ function gibentity(localclientnum, gibflags) {
 }
 
 // Namespace gibclientutils
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x85465374, Offset: 0x28e8
 // Size: 0xac
 function handlegibnotetracks(localclientnum) {

@@ -17,7 +17,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x3503196b, Offset: 0x418
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("spawner", &__init__, &__main__, undefined);
 }
 
@@ -2012,7 +2012,7 @@ function spawn_failed(spawn) {
 }
 
 // Namespace spawner
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x93e61a03, Offset: 0x6b78
 // Size: 0xb2
 function kill_spawnernum(number) {
@@ -2059,7 +2059,7 @@ function waittill_ai_group_cleared(aigroup) {
 }
 
 // Namespace spawner
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x10748141, Offset: 0x6d40
 // Size: 0x6c
 function waittill_ai_group_count(aigroup, count) {
@@ -2069,7 +2069,7 @@ function waittill_ai_group_count(aigroup, count) {
 }
 
 // Namespace spawner
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xeab9fe90, Offset: 0x6db8
 // Size: 0x50
 function waittill_ai_group_ai_count(aigroup, count) {
@@ -2089,7 +2089,7 @@ function waittill_ai_group_spawner_count(aigroup, count) {
 }
 
 // Namespace spawner
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xf497b943, Offset: 0x6e68
 // Size: 0x50
 function waittill_ai_group_amount_killed(aigroup, amount_killed) {
@@ -2099,7 +2099,7 @@ function waittill_ai_group_amount_killed(aigroup, amount_killed) {
 }
 
 // Namespace spawner
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x773f74a4, Offset: 0x6ec0
 // Size: 0x3c
 function get_ai_group_count(aigroup) {
@@ -2107,7 +2107,7 @@ function get_ai_group_count(aigroup) {
 }
 
 // Namespace spawner
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xef932398, Offset: 0x6f08
 // Size: 0x22
 function get_ai_group_sentient_count(aigroup) {
@@ -2129,7 +2129,7 @@ function get_ai_group_spawner_count(aigroup) {
 }
 
 // Namespace spawner
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfc936176, Offset: 0x7008
 // Size: 0xbc
 function get_ai_group_ai(aigroup) {
@@ -2255,7 +2255,7 @@ function remove_spawn_function(func) {
 }
 
 // Namespace spawner
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0x56d7c2da, Offset: 0x7740
 // Size: 0x10c
 function add_spawn_function_group(str_value, str_key, func_spawn, param_1, param_2, param_3, param_4, param_5) {
@@ -2273,7 +2273,7 @@ function add_spawn_function_group(str_value, str_key, func_spawn, param_1, param
 }
 
 // Namespace spawner
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x4defd897, Offset: 0x7858
 // Size: 0xf4
 function add_spawn_function_ai_group(str_aigroup, func_spawn, param_1, param_2, param_3, param_4, param_5) {
@@ -2288,7 +2288,7 @@ function add_spawn_function_ai_group(str_aigroup, func_spawn, param_1, param_2, 
 }
 
 // Namespace spawner
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x1caf5be3, Offset: 0x7958
 // Size: 0xdc
 function remove_spawn_function_ai_group(str_aigroup, func_spawn, param_1, param_2, param_3, param_4, param_5) {
@@ -2409,7 +2409,7 @@ function function_74f0a2dc(var_8ac7bd04) {
     // Params 0, eflags: 0x2
     // Checksum 0x54b03394, Offset: 0x8000
     // Size: 0x13c
-    function function_63a40f84() {
+    function autoexec function_63a40f84() {
         level.var_d4b93527 = [];
         level.var_50c49a7f = "team3";
         callback::add_callback(#"hash_8c38c12e", &function_1fe733b8);
@@ -2635,7 +2635,7 @@ function function_74f0a2dc(var_8ac7bd04) {
 // Params 0, eflags: 0x2
 // Checksum 0x432f6d00, Offset: 0x8dd0
 // Size: 0x24
-function init_female_spawn() {
+function autoexec init_female_spawn() {
     level.female_percent = 0;
     set_female_percent(30);
 }

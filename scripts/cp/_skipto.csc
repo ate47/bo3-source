@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf6497cb8, Offset: 0x2f0
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("skipto", &__init__, &__main__, undefined);
 }
 
@@ -588,7 +588,7 @@ function set_last_map_dvar(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 2, eflags: 0x5 linked
 // Checksum 0x27dddc59, Offset: 0x27f0
 // Size: 0x14
-function function_b342abc7(objective, starting) {
+function private function_b342abc7(objective, starting) {
     
 }
 
@@ -596,7 +596,7 @@ function function_b342abc7(objective, starting) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x281598c5, Offset: 0x2810
 // Size: 0x14
-function function_77ff537d(objective, starting) {
+function private function_77ff537d(objective, starting) {
     
 }
 

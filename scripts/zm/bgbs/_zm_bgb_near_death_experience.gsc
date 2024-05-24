@@ -20,7 +20,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd4499142, Offset: 0x358
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_near_death_experience", &__init__, undefined, "bgb");
 }
 

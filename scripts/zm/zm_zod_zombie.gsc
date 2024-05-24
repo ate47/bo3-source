@@ -21,7 +21,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x706b7615, Offset: 0x358
 // Size: 0xac
-function init() {
+function autoexec init() {
     function_3606a81c();
     level.zombie_init_done = &function_e4da8c4d;
     setdvar("scr_zm_use_code_enemy_selection", 0);
@@ -33,16 +33,16 @@ function init() {
 }
 
 // Namespace namespace_99cd1d55
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xa71748a2, Offset: 0x410
 // Size: 0x5c
-function function_3606a81c() {
+function private function_3606a81c() {
     animationstatenetwork::registeranimationmocomp("mocomp_teleport_traversal@zombie", &function_5683b5d5, undefined, undefined);
     behaviortreenetworkutility::registerbehaviortreescriptapi("zodShouldMove", &function_d0ef2cea);
 }
 
 // Namespace namespace_99cd1d55
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x40247a63, Offset: 0x478
 // Size: 0x104
 function function_5683b5d5(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -57,7 +57,7 @@ function function_5683b5d5(entity, mocompanim, mocompanimblendouttime, mocompani
 }
 
 // Namespace namespace_99cd1d55
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc0a8f5b0, Offset: 0x588
 // Size: 0x192
 function function_d0ef2cea(entity) {
@@ -95,7 +95,7 @@ function function_d0ef2cea(entity) {
 }
 
 // Namespace namespace_99cd1d55
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xcfab10c5, Offset: 0x728
 // Size: 0x1c
 function function_e4da8c4d() {
@@ -103,10 +103,10 @@ function function_e4da8c4d() {
 }
 
 // Namespace namespace_99cd1d55
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x47ab5626, Offset: 0x750
 // Size: 0xfa
-function function_8e555efc(players) {
+function private function_8e555efc(players) {
     if (isdefined(self.last_closest_player.am_i_valid) && isdefined(self.last_closest_player) && self.last_closest_player.am_i_valid) {
         return;
     }
@@ -121,10 +121,10 @@ function function_8e555efc(players) {
 }
 
 // Namespace namespace_99cd1d55
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x8502ecf4, Offset: 0x858
 // Size: 0x282
-function function_e33b6e60(origin, players) {
+function private function_e33b6e60(origin, players) {
     if (players.size == 0) {
         return undefined;
     }
@@ -178,10 +178,10 @@ function function_e33b6e60(origin, players) {
 }
 
 // Namespace namespace_99cd1d55
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x47f0106f, Offset: 0xae8
 // Size: 0x1ec
-function function_72e6c1d6() {
+function private function_72e6c1d6() {
     level waittill(#"start_of_round");
     while (true) {
         reset_closest_player = 1;

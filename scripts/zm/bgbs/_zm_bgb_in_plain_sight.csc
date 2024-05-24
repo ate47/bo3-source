@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x58a2df9b, Offset: 0x190
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_in_plain_sight", &__init__, undefined, undefined);
 }
 

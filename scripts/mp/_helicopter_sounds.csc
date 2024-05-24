@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x6122946d, Offset: 0x650
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("helicopter_sounds", &__init__, undefined, undefined);
 }
 

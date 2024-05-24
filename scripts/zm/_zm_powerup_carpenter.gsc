@@ -15,15 +15,15 @@
 
 // Namespace zm_powerup_carpenter
 // Params 0, eflags: 0x2
-// Checksum 0x8a31df09, Offset: 0x2d8
+// Checksum 0x6f65eba2, Offset: 0x2d8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_carpenter", &__init__, undefined, undefined);
 }
 
 // Namespace zm_powerup_carpenter
 // Params 0, eflags: 0x1 linked
-// Checksum 0x97fc3a3c, Offset: 0x318
+// Checksum 0xe83bfb6c, Offset: 0x318
 // Size: 0xb4
 function __init__() {
     zm_powerups::register_powerup("carpenter", &grab_carpenter);
@@ -35,7 +35,7 @@ function __init__() {
 
 // Namespace zm_powerup_carpenter
 // Params 1, eflags: 0x1 linked
-// Checksum 0x4fd446a2, Offset: 0x3d8
+// Checksum 0x56f49635, Offset: 0x3d8
 // Size: 0x9c
 function grab_carpenter(player) {
     if (zm_utility::is_classic()) {
@@ -51,7 +51,7 @@ function grab_carpenter(player) {
 
 // Namespace zm_powerup_carpenter
 // Params 1, eflags: 0x1 linked
-// Checksum 0x71dab0f1, Offset: 0x480
+// Checksum 0xa77760ca, Offset: 0x480
 // Size: 0x324
 function start_carpenter(origin) {
     window_boards = struct::get_array("exterior_goal", "targetname");
@@ -97,7 +97,7 @@ function start_carpenter(origin) {
 
 // Namespace zm_powerup_carpenter
 // Params 2, eflags: 0x1 linked
-// Checksum 0x5110dc51, Offset: 0x7b0
+// Checksum 0xbb715fe8, Offset: 0x7b0
 // Size: 0x13e
 function get_closest_window_repair(windows, origin) {
     current_window = undefined;
@@ -121,7 +121,7 @@ function get_closest_window_repair(windows, origin) {
 
 // Namespace zm_powerup_carpenter
 // Params 1, eflags: 0x1 linked
-// Checksum 0x19803083, Offset: 0x8f8
+// Checksum 0xa2666c73, Offset: 0x8f8
 // Size: 0x492
 function function_8cf31031(origin) {
     level.carpenter_powerup_active = 1;
@@ -189,7 +189,7 @@ function function_8cf31031(origin) {
 
 // Namespace zm_powerup_carpenter
 // Params 1, eflags: 0x1 linked
-// Checksum 0x5df7cab1, Offset: 0xd98
+// Checksum 0x23cf1427, Offset: 0xd98
 // Size: 0x166
 function get_near_boards(windows) {
     players = getplayers();
@@ -217,7 +217,7 @@ function get_near_boards(windows) {
 
 // Namespace zm_powerup_carpenter
 // Params 1, eflags: 0x1 linked
-// Checksum 0xd6b80218, Offset: 0xf08
+// Checksum 0x6ef7041a, Offset: 0xf08
 // Size: 0x166
 function get_far_boards(windows) {
     players = getplayers();
@@ -245,7 +245,7 @@ function get_far_boards(windows) {
 
 // Namespace zm_powerup_carpenter
 // Params 2, eflags: 0x1 linked
-// Checksum 0xfb37f39b, Offset: 0x1078
+// Checksum 0xea39f32e, Offset: 0x1078
 // Size: 0x2ee
 function repair_far_boards(barriers, upgrade) {
     for (i = 0; i < barriers.size; i++) {
@@ -286,7 +286,7 @@ function repair_far_boards(barriers, upgrade) {
 
 // Namespace zm_powerup_carpenter
 // Params 0, eflags: 0x1 linked
-// Checksum 0xff5a2e97, Offset: 0x1370
+// Checksum 0xe0d6046e, Offset: 0x1370
 // Size: 0x24
 function func_should_drop_carpenter() {
     if (get_num_window_destroyed() < 5) {
@@ -297,7 +297,7 @@ function func_should_drop_carpenter() {
 
 // Namespace zm_powerup_carpenter
 // Params 0, eflags: 0x1 linked
-// Checksum 0x16f53437, Offset: 0x13a0
+// Checksum 0x37bb78a1, Offset: 0x13a0
 // Size: 0x8c
 function get_num_window_destroyed() {
     num = 0;

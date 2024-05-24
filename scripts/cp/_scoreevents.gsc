@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x752dafb8, Offset: 0x6b8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("scoreevents", &__init__, undefined, undefined);
 }
 

@@ -24,7 +24,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x88e3f9c8, Offset: 0x540
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("bgb_machine", &__init__, &__main__, undefined);
 }
 
@@ -32,7 +32,7 @@ function function_2dc19561() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xcf3111bf, Offset: 0x588
 // Size: 0x17c
-function __init__() {
+function private __init__() {
     if (!(isdefined(level.bgb_in_use) && level.bgb_in_use)) {
         return;
     }
@@ -53,7 +53,7 @@ function __init__() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x8a8d9f59, Offset: 0x710
 // Size: 0x12c
-function __main__() {
+function private __main__() {
     if (!(isdefined(level.bgb_in_use) && level.bgb_in_use)) {
         return;
     }
@@ -94,7 +94,7 @@ function __main__() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xad8b048a, Offset: 0x848
 // Size: 0x34
-function on_player_connect() {
+function private on_player_connect() {
     if (!(isdefined(level.bgb_in_use) && level.bgb_in_use)) {
         return;
     }
@@ -105,7 +105,7 @@ function on_player_connect() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x6935e52b, Offset: 0x888
 // Size: 0x34
-function on_player_disconnect() {
+function private on_player_disconnect() {
     if (!(isdefined(level.bgb_in_use) && level.bgb_in_use)) {
         return;
     }
@@ -118,7 +118,7 @@ function on_player_disconnect() {
     // Params 0, eflags: 0x5 linked
     // Checksum 0xcc01b82c, Offset: 0x8c8
     // Size: 0x254
-    function setup_devgui() {
+    function private setup_devgui() {
         waittillframeend();
         setdvar("toplayer", 0);
         setdvar("toplayer", 0);
@@ -142,7 +142,7 @@ function on_player_disconnect() {
     // Params 0, eflags: 0x5 linked
     // Checksum 0x71fb99e9, Offset: 0xb28
     // Size: 0x3a8
-    function function_95dc1528() {
+    function private function_95dc1528() {
         for (;;) {
             arrive = getdvarint("toplayer");
             move = getdvarint("toplayer");
@@ -198,7 +198,7 @@ function on_player_disconnect() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xa7b45725, Offset: 0xed8
 // Size: 0x3c
-function function_8115371() {
+function private function_8115371() {
     waittillframeend();
     level.var_5081bd63 = getentarray("bgb_machine_use", "targetname");
     function_62051f89();
@@ -208,7 +208,7 @@ function function_8115371() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xe939dd37, Offset: 0xf20
 // Size: 0x1f4
-function function_62051f89() {
+function private function_62051f89() {
     if (!level.var_5081bd63.size) {
         return;
     }
@@ -236,7 +236,7 @@ function function_62051f89() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xc5b5ebc5, Offset: 0x1120
 // Size: 0x214
-function function_a5bbc4ee() {
+function private function_a5bbc4ee() {
     var_ed3848d8 = 0;
     var_ff664010 = [];
     for (i = 0; i < level.var_5081bd63.size; i++) {
@@ -431,7 +431,7 @@ function function_3f75d3b(var_4600cfd0) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xbccb4055, Offset: 0x1b60
 // Size: 0x1ca
-function function_5bd3a49b(player) {
+function private function_5bd3a49b(player) {
     if (!player.bgb_pack_randomized.size) {
         player.bgb_pack_randomized = array::randomize(player.bgb_pack);
     }
@@ -606,7 +606,7 @@ function function_d9f9a9c1() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x1913383e, Offset: 0x2760
 // Size: 0xa4
-function function_d8680cd2() {
+function private function_d8680cd2() {
     /#
         if (getdvarint("toplayer")) {
             return false;
@@ -631,7 +631,7 @@ function function_d8680cd2() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x7584fcb8, Offset: 0x2810
 // Size: 0xca
-function function_d83737d3() {
+function private function_d83737d3() {
     if (isdefined(level.var_cfc8eddf)) {
         [[ level.var_cfc8eddf ]]();
         return;
@@ -689,7 +689,7 @@ function function_3364cc51() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xf0dcde0f, Offset: 0x2ac0
 // Size: 0x84
-function function_348263ec() {
+function private function_348263ec() {
     while (isdefined(self.var_bc4509eb) && (isdefined(self.var_492b876) || self.var_bc4509eb)) {
         util::wait_network_frame();
     }
@@ -870,7 +870,7 @@ function function_ed2e5150() {
 }
 
 // Namespace namespace_c92f7448
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x33cc9153, Offset: 0x34c8
 // Size: 0x50
 function function_b56ef180() {

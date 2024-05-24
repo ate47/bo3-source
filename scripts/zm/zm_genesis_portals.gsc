@@ -30,12 +30,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa22642ac, Offset: 0x8f0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_genesis_portals", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_766d6099
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3ef0fd2b, Offset: 0x930
 // Size: 0x2f4
 function __init__() {
@@ -58,7 +58,7 @@ function __init__() {
 }
 
 // Namespace namespace_766d6099
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xef055a8a, Offset: 0xc30
 // Size: 0x1c4
 function function_16616103() {
@@ -77,7 +77,7 @@ function function_16616103() {
 }
 
 // Namespace namespace_766d6099
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x195f9407, Offset: 0xe00
 // Size: 0x44
 function function_e4ff383e(var_49e3dd2e, var_d16ec704) {
@@ -100,7 +100,7 @@ function function_ff160813() {
 }
 
 // Namespace namespace_766d6099
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xb7fd06aa, Offset: 0xef8
 // Size: 0x1f8
 function create_portal(str_id, var_776628b2) {
@@ -152,7 +152,7 @@ function function_a90ab0d7() {
 }
 
 // Namespace namespace_766d6099
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdf02baf4, Offset: 0x11d0
 // Size: 0x296
 function portal_activate(var_d42f02cf) {
@@ -189,7 +189,7 @@ function portal_activate(var_d42f02cf) {
 }
 
 // Namespace namespace_766d6099
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x8e9b3e1e, Offset: 0x1470
 // Size: 0xb6
 function function_7fa2f44(var_d42f02cf) {
@@ -210,7 +210,7 @@ function function_7fa2f44(var_d42f02cf) {
 }
 
 // Namespace namespace_766d6099
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x3092c855, Offset: 0x1530
 // Size: 0x422
 function portal_open(var_d42f02cf) {
@@ -245,7 +245,7 @@ function portal_open(var_d42f02cf) {
 }
 
 // Namespace namespace_766d6099
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9aa5a641, Offset: 0x1960
 // Size: 0xd2
 function function_4a4784d4(var_d42f02cf, b_enabled) {
@@ -256,7 +256,7 @@ function function_4a4784d4(var_d42f02cf, b_enabled) {
 }
 
 // Namespace namespace_766d6099
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x71421e9, Offset: 0x1a40
 // Size: 0x1f0
 function portal_think(var_60dd615c) {
@@ -290,7 +290,7 @@ function portal_think(var_60dd615c) {
 }
 
 // Namespace namespace_766d6099
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x28a715cc, Offset: 0x1c38
 // Size: 0x97c
 function function_d0ff7e09(show_fx, var_71abf438, str_zone, v_portal, var_759fb311) {
@@ -413,7 +413,7 @@ function function_d0ff7e09(show_fx, var_71abf438, str_zone, v_portal, var_759fb3
     if (isdefined(var_759fb311)) {
         self clientfield::set_to_player("hint_" + var_759fb311, 0);
         /#
-            streamerskiptodebug("power_pad_prison" + var_759fb311);
+            streamerskiptodebug("sheffield_power_door2" + var_759fb311);
         #/
     }
     self.b_teleporting = 0;
@@ -421,7 +421,7 @@ function function_d0ff7e09(show_fx, var_71abf438, str_zone, v_portal, var_759fb3
 }
 
 // Namespace namespace_766d6099
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc8a2633, Offset: 0x25c0
 // Size: 0x46
 function function_bfba39d8() {
@@ -433,7 +433,7 @@ function function_bfba39d8() {
 }
 
 // Namespace namespace_766d6099
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xd820df84, Offset: 0x2610
 // Size: 0x464
 function function_483df985(s_pos) {
@@ -486,7 +486,7 @@ function function_483df985(s_pos) {
 }
 
 // Namespace namespace_766d6099
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb81affa0, Offset: 0x2a80
 // Size: 0x72
 function function_7807150a() {
@@ -503,7 +503,7 @@ function function_7807150a() {
 }
 
 // Namespace namespace_766d6099
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaf790690, Offset: 0x2b00
 // Size: 0x2c4
 function function_eb1242c8(var_5ee55fde) {
@@ -538,7 +538,7 @@ function function_eb1242c8(var_5ee55fde) {
 }
 
 // Namespace namespace_766d6099
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb88e4cf4, Offset: 0x2dd0
 // Size: 0x464
 function function_cfc89ca() {
@@ -596,7 +596,7 @@ function function_cfc89ca() {
 }
 
 // Namespace namespace_766d6099
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xe219447f, Offset: 0x3240
 // Size: 0x9e
 function function_eec1f014(str_name, n_value, b_toggle) {
@@ -612,7 +612,7 @@ function function_eec1f014(str_name, n_value, b_toggle) {
 }
 
 // Namespace namespace_766d6099
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x59da525d, Offset: 0x32e8
 // Size: 0x6e
 function function_b64d33a7() {

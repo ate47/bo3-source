@@ -19,7 +19,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x559395f0, Offset: 0x440
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("gadget_heat_wave", &__init__, undefined, undefined);
 }
 

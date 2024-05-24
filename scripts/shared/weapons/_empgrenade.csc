@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xb225a7f3, Offset: 0x2f8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("empgrenade", &__init__, undefined, undefined);
 }
 

@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf1a5b2f1, Offset: 0x708
 // Size: 0x40a
-function init() {
+function autoexec init() {
     callback::add_weapon_type("launcher_shadow_margwa", &function_894980af);
     clientfield::register("actor", "margwa_elemental_type", 15000, 3, "int", &function_1fb4e300, 0, 0);
     clientfield::register("actor", "margwa_defense_actor_appear_disappear_fx", 15000, 1, "int", &function_345693f6, 0, 0);
@@ -46,7 +46,7 @@ function init() {
 // Params 7, eflags: 0x4
 // Checksum 0xdecc5c06, Offset: 0xb20
 // Size: 0xfe
-function function_1fb4e300(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function private function_1fb4e300(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self util::waittill_dobj(localclientnum);
     switch (newval) {
     case 1:
@@ -112,7 +112,7 @@ function function_51adc559(localclientnum) {
 // Params 1, eflags: 0x4
 // Checksum 0x123f4fc3, Offset: 0xe10
 // Size: 0x6c
-function function_fd0bfd3(localclientnum) {
+function private function_fd0bfd3(localclientnum) {
     self.var_6eaba533 = level._effect["margwa_fire_roar"];
     self.var_12c4e9d2 = level._effect["margwa_fire_spawn"];
     self.var_5373c806 = level._effect["margwa_fire_head_hit"];
@@ -123,7 +123,7 @@ function function_fd0bfd3(localclientnum) {
 // Params 1, eflags: 0x4
 // Checksum 0x2d004102, Offset: 0xe88
 // Size: 0x3c
-function function_8a262a34(localclientnum) {
+function private function_8a262a34(localclientnum) {
     self.var_6eaba533 = level._effect["margwa_electric_roar"];
     self.var_12c4e9d2 = level._effect["margwa_electric_spawn"];
 }
@@ -132,7 +132,7 @@ function function_8a262a34(localclientnum) {
 // Params 1, eflags: 0x4
 // Checksum 0xafe35aa0, Offset: 0xed0
 // Size: 0x6c
-function function_ec63e97f(localclientnum) {
+function private function_ec63e97f(localclientnum) {
     self.var_6eaba533 = level._effect["margwa_shadow_roar"];
     self.var_12c4e9d2 = level._effect["margwa_shadow_spawn"];
     self.var_5373c806 = level._effect["margwa_shadow_head_hit"];
@@ -143,7 +143,7 @@ function function_ec63e97f(localclientnum) {
 // Params 1, eflags: 0x4
 // Checksum 0x323cd0e, Offset: 0xf48
 // Size: 0x3c
-function function_78f9b77d(localclientnum) {
+function private function_78f9b77d(localclientnum) {
     self.var_6eaba533 = level._effect["margwa_light_roar"];
     self.var_12c4e9d2 = level._effect["margwa_light_spawn"];
 }
@@ -152,7 +152,7 @@ function function_78f9b77d(localclientnum) {
 // Params 1, eflags: 0x4
 // Checksum 0x2eb17811, Offset: 0xf90
 // Size: 0x34
-function function_740a099a(localclientnum) {
+function private function_740a099a(localclientnum) {
     playfxontag(localclientnum, self.var_12c4e9d2, self, "tag_origin");
 }
 
@@ -160,7 +160,7 @@ function function_740a099a(localclientnum) {
 // Params 7, eflags: 0x4
 // Checksum 0x9a1bc5ab, Offset: 0xfd0
 // Size: 0x64
-function function_c46381fc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function private function_c46381fc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     playfxontag(localclientnum, "dlc4/genesis/fx_margwa_attack_fire", self, "tag_origin");
 }
 
@@ -168,7 +168,7 @@ function function_c46381fc(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x4
 // Checksum 0xf5a8f9a5, Offset: 0x1040
 // Size: 0x94
-function function_345693f6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function private function_345693f6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         playfx(localclientnum, level._effect["margwa_fire_defense_disappear"], self gettagorigin("j_spine_1"));
     }
@@ -178,7 +178,7 @@ function function_345693f6(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x4
 // Checksum 0xe4975a6, Offset: 0x10e0
 // Size: 0x2e4
-function function_abb174cf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function private function_abb174cf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         playfxontag(localclientnum, level._effect["margwa_fire_defense_appear"], self, "tag_origin");
         self.var_aeae71fc = playfxontag(localclientnum, level._effect["margwa_fire_defense_fireball"], self, "tag_origin");
@@ -211,7 +211,7 @@ function function_abb174cf(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x4
 // Checksum 0x6ab63b7c, Offset: 0x13d0
 // Size: 0x294
-function function_a9580308(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function private function_a9580308(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         vector = anglestoforward(self.angles);
         var_7c934a6c = self.origin + vector * 96 + (0, 0, 72);

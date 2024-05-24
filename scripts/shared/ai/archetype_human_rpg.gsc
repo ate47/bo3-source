@@ -23,7 +23,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xacb3173c, Offset: 0x388
 // Size: 0x4c
-function main() {
+function autoexec main() {
     spawner::add_archetype_spawn_function("human_rpg", &humanrpgbehavior::archetypehumanrpgblackboardinit);
     humanrpgbehavior::registerbehaviorscriptfunctions();
     humanrpginterface::registerhumanrpginterfaceattributes();
@@ -43,7 +43,7 @@ function registerbehaviorscriptfunctions() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x71e239a7, Offset: 0x3f0
 // Size: 0xa4
-function archetypehumanrpgblackboardinit() {
+function private archetypehumanrpgblackboardinit() {
     entity = self;
     blackboard::createblackboardforentity(entity);
     ai::createinterfaceforentity(entity);
@@ -59,7 +59,7 @@ function archetypehumanrpgblackboardinit() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x90e3a80c, Offset: 0x4a0
 // Size: 0x34
-function archetypehumanrpgonanimscriptedcallback(entity) {
+function private archetypehumanrpgonanimscriptedcallback(entity) {
     entity.__blackboard = undefined;
     entity archetypehumanrpgblackboardinit();
 }

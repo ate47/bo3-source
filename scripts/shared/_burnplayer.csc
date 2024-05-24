@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x2c5a3fb8, Offset: 0x5c8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("burnplayer", &__init__, undefined, undefined);
 }
 
@@ -153,7 +153,7 @@ function burn_on_postfx() {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x4ca29fa9, Offset: 0xe20
 // Size: 0x9c
-function _burntag(localclientnum, tag, postfix) {
+function private _burntag(localclientnum, tag, postfix) {
     if (isdefined(self) && self hasdobj(localclientnum)) {
         fxname = "burn_" + tag + postfix;
         if (isdefined(level._effect[fxname])) {
@@ -166,7 +166,7 @@ function _burntag(localclientnum, tag, postfix) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x4d43a99b, Offset: 0xec8
 // Size: 0x12c
-function _burntagson(localclientnum, tags) {
+function private _burntagson(localclientnum, tags) {
     if (!isdefined(self)) {
         return;
     }
@@ -187,7 +187,7 @@ function _burntagson(localclientnum, tags) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xdde1af08, Offset: 0x1000
 // Size: 0x34
-function _burnbody(localclientnum) {
+function private _burnbody(localclientnum) {
     self endon(#"entityshutdown");
     self thread _burntagson(localclientnum, level.burntags);
 }
@@ -196,7 +196,7 @@ function _burnbody(localclientnum) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xf6f2bf4c, Offset: 0x1040
 // Size: 0xf2
-function _burntagswatchend(localclientnum, fxarray, burnsound) {
+function private _burntagswatchend(localclientnum, fxarray, burnsound) {
     self endon(#"entityshutdown");
     self waittill(#"burn_off");
     if (isdefined(burnsound)) {
@@ -213,7 +213,7 @@ function _burntagswatchend(localclientnum, fxarray, burnsound) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xac4de82a, Offset: 0x1140
 // Size: 0xea
-function _burntagswatchclear(localclientnum, fxarray, burnsound) {
+function private _burntagswatchclear(localclientnum, fxarray, burnsound) {
     self endon(#"burn_off");
     self waittill(#"entityshutdown");
     if (isdefined(burnsound)) {

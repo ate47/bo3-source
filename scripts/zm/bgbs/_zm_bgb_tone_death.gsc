@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x4e9009c1, Offset: 0x200
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_tone_death", &__init__, undefined, "bgb");
 }
 

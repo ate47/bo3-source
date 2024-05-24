@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x99ec1590, Offset: 0x3c0
 // Size: 0x4
-function precache() {
+function autoexec precache() {
     
 }
 
@@ -16,7 +16,7 @@ function precache() {
 // Params 0, eflags: 0x2
 // Checksum 0x2fc1badc, Offset: 0x3d0
 // Size: 0xd4
-function main() {
+function autoexec main() {
     level._effect["zombie_special_day_effect"] = "zombie/fx_val_chest_burst";
     ai::add_archetype_spawn_function("zombie", &zombieclientutils::zombie_override_burn_fx);
     clientfield::register("actor", "zombie", 1, 1, "int", &zombieclientutils::zombiehandler, 0, 0);
@@ -48,7 +48,7 @@ function zombiehandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap
 // Params 3, eflags: 0x5 linked
 // Checksum 0x1d4b1da8, Offset: 0x640
 // Size: 0xc6
-function _gibcallback(localclientnum, entity, gibflag) {
+function private _gibcallback(localclientnum, entity, gibflag) {
     switch (gibflag) {
     case 8:
         playsound(0, "zmb_zombie_head_gib", self.origin + (0, 0, 60));

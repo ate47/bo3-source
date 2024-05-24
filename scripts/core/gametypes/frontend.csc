@@ -33,7 +33,7 @@ class class_513a44f6 {
     // Params 3, eflags: 0x5 linked
     // Checksum 0x2a8b145a, Offset: 0xd2f8
     // Size: 0xc2
-    function function_376191fe(localclientnum, str_fx, str_tag) {
+    function private function_376191fe(localclientnum, str_fx, str_tag) {
         fx_id = playfxontag(localclientnum, str_fx, self.var_fb7ce594[2], str_tag);
         if (!isdefined(self.var_bbdd2958)) {
             self.var_bbdd2958 = [];
@@ -1117,7 +1117,7 @@ class class_67b49468 {
     // Params 4, eflags: 0x5 linked
     // Checksum 0xd705a08d, Offset: 0xb850
     // Size: 0x94
-    function function_c857e43f(localclientnum, str_fx, str_tag, var_40276d2a) {
+    function private function_c857e43f(localclientnum, str_fx, str_tag, var_40276d2a) {
         if (!isdefined(var_40276d2a)) {
             var_40276d2a = 2;
         }
@@ -1154,7 +1154,7 @@ class class_67b49468 {
     // Params 4, eflags: 0x5 linked
     // Checksum 0x827522e1, Offset: 0xb470
     // Size: 0x1d6
-    function function_376191fe(localclientnum, str_fx, str_tag, var_bda11dad) {
+    function private function_376191fe(localclientnum, str_fx, str_tag, var_bda11dad) {
         fx_id = playfxontag(localclientnum, str_fx, self.var_1b7928a0, str_tag);
         switch (var_bda11dad) {
         case 2:
@@ -1357,7 +1357,7 @@ class class_cc6fa95d {
     // Params 2, eflags: 0x5 linked
     // Checksum 0xcbc36598, Offset: 0xa530
     // Size: 0xe0
-    function function_a77a3e55(var_75e21c4d, n_count) {
+    function private function_a77a3e55(var_75e21c4d, n_count) {
         var_7b513c34 = int(pow(10, var_75e21c4d));
         var_ed58ab6f = int(pow(10, var_75e21c4d - 1));
         var_70ae6ae6 = n_count % var_7b513c34;
@@ -1456,7 +1456,7 @@ class class_7c51d14d {
     // Params 1, eflags: 0x5 linked
     // Checksum 0x4ca323bd, Offset: 0xbe48
     // Size: 0x98
-    function function_5cfdd76b(var_9bcca82d) {
+    function private function_5cfdd76b(var_9bcca82d) {
         if (!isdefined(self.var_526762bf[var_9bcca82d])) {
             return;
         }
@@ -1471,7 +1471,7 @@ class class_7c51d14d {
     // Params 2, eflags: 0x5 linked
     // Checksum 0x21186df, Offset: 0xbdf0
     // Size: 0x4e
-    function function_37558b34(var_9bcca82d, str_model) {
+    function private function_37558b34(var_9bcca82d, str_model) {
         self.var_165c359f attach(str_model, "tag_ball_" + var_9bcca82d);
         self.var_526762bf[var_9bcca82d] = str_model;
     }

@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf6c90615, Offset: 0x438
 // Size: 0x43c
-function registerdefaultnotetrackhandlerfunctions() {
+function autoexec registerdefaultnotetrackhandlerfunctions() {
     registernotetrackhandlerfunction("fire", &notetrackfirebullet);
     registernotetrackhandlerfunction("gib_disable", &notetrackgibdisable);
     registernotetrackhandlerfunction("gib = \"head\"", &gibserverutils::gibhead);
@@ -49,7 +49,7 @@ function registerdefaultnotetrackhandlerfunctions() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x15562793, Offset: 0x880
 // Size: 0x64
-function notetrackanimmovementstop(entity) {
+function private notetrackanimmovementstop(entity) {
     if (entity haspath()) {
         entity pathmode("move delayed", 1, randomfloatrange(2, 4));
     }
@@ -59,7 +59,7 @@ function notetrackanimmovementstop(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xae971b2d, Offset: 0x8f0
 // Size: 0x5c
-function notetrackstaircasestep1(entity) {
+function private notetrackstaircasestep1(entity) {
     numsteps = blackboard::getblackboardattribute(entity, "_staircase_num_steps");
     numsteps++;
     blackboard::setblackboardattribute(entity, "_staircase_num_steps", numsteps);
@@ -69,7 +69,7 @@ function notetrackstaircasestep1(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xc0e3500, Offset: 0x958
 // Size: 0x6c
-function notetrackstaircasestep2(entity) {
+function private notetrackstaircasestep2(entity) {
     numsteps = blackboard::getblackboardattribute(entity, "_staircase_num_steps");
     numsteps += 2;
     blackboard::setblackboardattribute(entity, "_staircase_num_steps", numsteps);
@@ -79,7 +79,7 @@ function notetrackstaircasestep2(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xbe7e929d, Offset: 0x9d0
 // Size: 0x94
-function notetrackdropguninternal(entity) {
+function private notetrackdropguninternal(entity) {
     if (entity.weapon == level.weaponnone) {
         return;
     }
@@ -93,7 +93,7 @@ function notetrackdropguninternal(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xc300680f, Offset: 0xa70
 // Size: 0x68
-function notetrackattachknife(entity) {
+function private notetrackattachknife(entity) {
     if (!(isdefined(entity._ai_melee_attachedknife) && entity._ai_melee_attachedknife)) {
         entity attach("t6_wpn_knife_melee", "TAG_WEAPON_LEFT");
         entity._ai_melee_attachedknife = 1;
@@ -104,7 +104,7 @@ function notetrackattachknife(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xa3bb392a, Offset: 0xae0
 // Size: 0x64
-function notetrackdetachknife(entity) {
+function private notetrackdetachknife(entity) {
     if (isdefined(entity._ai_melee_attachedknife) && entity._ai_melee_attachedknife) {
         entity detach("t6_wpn_knife_melee", "TAG_WEAPON_LEFT");
         entity._ai_melee_attachedknife = 0;
@@ -115,7 +115,7 @@ function notetrackdetachknife(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xca0aadc8, Offset: 0xb50
 // Size: 0x24
-function notetrackhideweapon(entity) {
+function private notetrackhideweapon(entity) {
     entity ai::gun_remove();
 }
 
@@ -123,7 +123,7 @@ function notetrackhideweapon(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x2ebcf9de, Offset: 0xb80
 // Size: 0x24
-function notetrackshowweapon(entity) {
+function private notetrackshowweapon(entity) {
     entity ai::gun_recall();
 }
 
@@ -131,7 +131,7 @@ function notetrackshowweapon(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x2d0caf1b, Offset: 0xbb0
 // Size: 0x24
-function notetrackhideai(entity) {
+function private notetrackhideai(entity) {
     entity hide();
 }
 
@@ -139,7 +139,7 @@ function notetrackhideai(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6038f3bc, Offset: 0xbe0
 // Size: 0x24
-function notetrackshowai(entity) {
+function private notetrackshowai(entity) {
     entity show();
 }
 
@@ -147,7 +147,7 @@ function notetrackshowai(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xcc16f3ea, Offset: 0xc10
 // Size: 0xb4
-function notetrackstartragdoll(entity) {
+function private notetrackstartragdoll(entity) {
     if (isactor(entity) && entity isinscriptedstate()) {
         entity.overrideactordamage = undefined;
         entity.allowdeath = 1;
@@ -184,7 +184,7 @@ function notetrackstartragdollnodeath(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x989220d0, Offset: 0xd88
 // Size: 0x104
-function notetrackfirebullet(animationentity) {
+function private notetrackfirebullet(animationentity) {
     if (isactor(animationentity) && animationentity isinscriptedstate()) {
         if (animationentity.weapon != level.weaponnone) {
             animationentity notify(#"about_to_shoot");
@@ -201,7 +201,7 @@ function notetrackfirebullet(animationentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x1b2c6e95, Offset: 0xe98
 // Size: 0x24
-function notetrackdropgun(animationentity) {
+function private notetrackdropgun(animationentity) {
     notetrackdropguninternal(animationentity);
 }
 
@@ -209,7 +209,7 @@ function notetrackdropgun(animationentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xfda9364, Offset: 0xec8
 // Size: 0x24
-function notetrackdropshield(animationentity) {
+function private notetrackdropshield(animationentity) {
     aiutility::dropriotshield(animationentity);
 }
 
@@ -217,7 +217,7 @@ function notetrackdropshield(animationentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6729fe6e, Offset: 0xef8
 // Size: 0xd4
-function notetrackgrenadethrow(animationentity) {
+function private notetrackgrenadethrow(animationentity) {
     if (archetype_human_cover::shouldthrowgrenadeatcovercondition(animationentity, 1)) {
         animationentity grenadethrow();
         return;
@@ -235,7 +235,7 @@ function notetrackgrenadethrow(animationentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x81c1a10b, Offset: 0xfd8
 // Size: 0x74
-function notetrackmeleeunsync(animationentity) {
+function private notetrackmeleeunsync(animationentity) {
     if (isdefined(animationentity) && isdefined(animationentity.enemy)) {
         if (isdefined(animationentity.enemy._ai_melee_markeddead) && animationentity.enemy._ai_melee_markeddead) {
             animationentity unlink();
@@ -247,7 +247,7 @@ function notetrackmeleeunsync(animationentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe786be4e, Offset: 0x1058
 // Size: 0x4c
-function notetrackgibdisable(animationentity) {
+function private notetrackgibdisable(animationentity) {
     if (animationentity ai::has_behavior_attribute("can_gib")) {
         animationentity ai::set_behavior_attribute("can_gib", 0);
     }

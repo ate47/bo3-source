@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xff147ca8, Offset: 0x2a8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("menus", &__init__, undefined, undefined);
 }
 

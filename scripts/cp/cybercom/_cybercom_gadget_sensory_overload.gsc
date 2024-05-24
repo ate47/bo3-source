@@ -136,7 +136,7 @@ function function_4135a1c4(slot, weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x35e46bcc, Offset: 0xc90
 // Size: 0x208
-function function_602b28e9(target) {
+function private function_602b28e9(target) {
     if (target cybercom::function_8fd8f5b1("cybercom_sensoryoverload")) {
         self cybercom::function_29bf9dee(target, 2);
         return false;
@@ -166,7 +166,7 @@ function function_602b28e9(target) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7053633b, Offset: 0xea0
 // Size: 0x52
-function function_8aac802c(weapon) {
+function private function_8aac802c(weapon) {
     return arraycombine(getaiteamarray("axis"), getaiteamarray("team3"), 0, 0);
 }
 
@@ -174,7 +174,7 @@ function function_8aac802c(weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x3fe204f4, Offset: 0xf00
 // Size: 0x2a4
-function function_a110c616(slot, weapon) {
+function private function_a110c616(slot, weapon) {
     aborted = 0;
     fired = 0;
     foreach (item in self.cybercom.var_d1460543) {

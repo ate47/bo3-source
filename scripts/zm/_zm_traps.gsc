@@ -23,7 +23,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x6cc2b4bc, Offset: 0x760
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_traps", &__init__, &__main__, undefined);
 }
 
@@ -269,7 +269,7 @@ function trap_use_think(trap) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x5c77df64, Offset: 0x1568
 // Size: 0xfc
-function update_trigger_visibility() {
+function private update_trigger_visibility() {
     self endon(#"death");
     while (true) {
         for (i = 0; i < level.players.size; i++) {

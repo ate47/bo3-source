@@ -15,7 +15,7 @@ class class_a17e6f03 {
 // Params 0, eflags: 0x2
 // Checksum 0x30387a33, Offset: 0x248
 // Size: 0x154
-function function_58d5283a() {
+function autoexec function_58d5283a() {
     if (!sessionmodeiscampaignzombiesgame()) {
         return;
     }

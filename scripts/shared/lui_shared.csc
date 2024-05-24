@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x9856002, Offset: 0x228
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("lui_shared", &__init__, undefined, undefined);
 }
 
@@ -414,7 +414,7 @@ function screen_close_menu() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xeefc9064, Offset: 0x1be8
 // Size: 0xf0
-function _screen_close_menu() {
+function private _screen_close_menu() {
     self notify(#"_screen_fade");
     self endon(#"_screen_fade");
     self endon(#"disconnect");
@@ -436,7 +436,7 @@ function _screen_close_menu() {
 // Params 5, eflags: 0x5 linked
 // Checksum 0xbca20e54, Offset: 0x1ce0
 // Size: 0x3d8
-function _screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_force_close_menu) {
+function private _screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_force_close_menu) {
     self notify(#"_screen_fade");
     self endon(#"_screen_fade");
     self endon(#"disconnect");

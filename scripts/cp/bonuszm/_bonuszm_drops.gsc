@@ -57,7 +57,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x883da939, Offset: 0xb18
 // Size: 0x6c
-function main() {
+function autoexec main() {
     if (!sessionmodeiscampaignzombiesgame()) {
         return;
     }
@@ -489,7 +489,7 @@ function function_da35c458(var_663ac88a, var_638b7f73) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xb82755b2, Offset: 0x2368
 // Size: 0x258
-function function_be188509() {
+function private function_be188509() {
     level.var_5a1513c4 = 1;
     closestplayer = arraygetclosest(self.origin, level.players);
     playerforward = anglestoforward(closestplayer.angles);
@@ -565,7 +565,7 @@ function function_2beeb3b3(upgraded) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xf4a6af22, Offset: 0x28f8
 // Size: 0xb6
-function function_8435cfdc(var_b5725157, upgraded) {
+function private function_8435cfdc(var_b5725157, upgraded) {
     self endon(#"death");
     self notify(#"hash_8435cfdc");
     self.var_cc7a6101 = 0;
@@ -587,7 +587,7 @@ function function_8435cfdc(var_b5725157, upgraded) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x71515410, Offset: 0x29b8
 // Size: 0x172
-function function_1c087aac(upgraded) {
+function private function_1c087aac(upgraded) {
     self endon(#"death");
     self endon(#"hash_8435cfdc");
     self notify(#"hash_1c087aac");
@@ -613,7 +613,7 @@ function function_1c087aac(upgraded) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x8709eab1, Offset: 0x2b38
 // Size: 0x16a
-function function_2d73d3d9(upgraded) {
+function private function_2d73d3d9(upgraded) {
     self endon(#"death");
     self endon(#"hash_8435cfdc");
     self notify(#"hash_2d73d3d9");
@@ -640,7 +640,7 @@ function function_2d73d3d9(upgraded) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xce4ea774, Offset: 0x2cb0
 // Size: 0x60
-function function_26432505(player) {
+function private function_26432505(player) {
     /#
         assert(isplayer(player));
     #/

@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x7c192381, Offset: 0x310
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("lui_shared", &__init__, undefined, undefined);
 }
 
@@ -29,7 +29,7 @@ function __init__() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x156ebb14, Offset: 0x380
 // Size: 0x130
-function refresh_menu_values() {
+function private refresh_menu_values() {
     if (!isdefined(level.lui_script_globals)) {
         return;
     }
@@ -198,7 +198,7 @@ function play_movie(str_movie, str_type, show_black_screen, b_looping, str_key) 
 // Params 5, eflags: 0x5 linked
 // Checksum 0xa6f7e2b, Offset: 0xd60
 // Size: 0x2ce
-function _play_movie_for_player(str_movie, str_type, show_black_screen, b_looping, str_key) {
+function private _play_movie_for_player(str_movie, str_type, show_black_screen, b_looping, str_key) {
     self endon(#"disconnect");
     str_menu = undefined;
     switch (str_type) {
@@ -242,7 +242,7 @@ function _play_movie_for_player(str_movie, str_type, show_black_screen, b_loopin
 }
 
 // Namespace lui
-// Params 6, eflags: 0x0
+// Params 6, eflags: 0x1 linked
 // Checksum 0x77729e83, Offset: 0x1038
 // Size: 0x272
 function function_be38d8cd(str_movie, str_type, timeout, show_black_screen, b_looping, str_key) {
@@ -282,7 +282,7 @@ function function_be38d8cd(str_movie, str_type, timeout, show_black_screen, b_lo
 // Params 6, eflags: 0x5 linked
 // Checksum 0x55f86ea1, Offset: 0x12b8
 // Size: 0x292
-function function_adc333e0(str_movie, str_type, timeout, show_black_screen, b_looping, str_key) {
+function private function_adc333e0(str_movie, str_type, timeout, show_black_screen, b_looping, str_key) {
     self endon(#"disconnect");
     str_menu = undefined;
     switch (str_type) {
@@ -386,7 +386,7 @@ function screen_fade_in(n_time, v_color, str_menu_id) {
 }
 
 // Namespace lui
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa3a594ad, Offset: 0x18d8
 // Size: 0xb4
 function screen_close_menu() {
@@ -403,7 +403,7 @@ function screen_close_menu() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x3dec8ba6, Offset: 0x1998
 // Size: 0xd6
-function _screen_close_menu() {
+function private _screen_close_menu() {
     self notify(#"_screen_fade");
     self endon(#"_screen_fade");
     self endon(#"disconnect");
@@ -419,7 +419,7 @@ function _screen_close_menu() {
 // Params 6, eflags: 0x5 linked
 // Checksum 0x6d24d048, Offset: 0x1a78
 // Size: 0x54e
-function _screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_force_close_menu, str_menu_id) {
+function private _screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_force_close_menu, str_menu_id) {
     if (!isdefined(str_menu_id)) {
         str_menu_id = "default";
     }
@@ -496,7 +496,7 @@ function _screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_force_cl
 // Params 1, eflags: 0x5 linked
 // Checksum 0x47e2b193, Offset: 0x1fd0
 // Size: 0x54
-function _one_screen_fade_per_network_frame(s_menu) {
+function private _one_screen_fade_per_network_frame(s_menu) {
     while (s_menu.screen_fade_network_frame === level.network_frame) {
         util::wait_network_frame();
     }

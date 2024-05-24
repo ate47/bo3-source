@@ -15,15 +15,15 @@
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x2
-// Checksum 0xd52afd09, Offset: 0x368
+// Checksum 0xbca9ef29, Offset: 0x368
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_auto_turret", &__init__, &__main__, undefined);
 }
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x1 linked
-// Checksum 0xb14c68a4, Offset: 0x3b0
+// Checksum 0x26e38224, Offset: 0x3b0
 // Size: 0x3c
 function __init__() {
     level._effect["auto_turret_light"] = "dlc4/genesis/fx_light_turret_auto";
@@ -32,7 +32,7 @@ function __init__() {
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x1 linked
-// Checksum 0x9cd934a0, Offset: 0x3f8
+// Checksum 0xa1f67b7e, Offset: 0x3f8
 // Size: 0x17e
 function __main__() {
     level.var_c261c043 = getentarray("auto_turret_trigger", "script_noteworthy");
@@ -61,7 +61,7 @@ function __main__() {
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x1 linked
-// Checksum 0x30377acf, Offset: 0x580
+// Checksum 0x7717f804, Offset: 0x580
 // Size: 0x3f8
 function function_88738224() {
     if (!isdefined(self.target)) {
@@ -125,7 +125,7 @@ function function_88738224() {
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x0
-// Checksum 0xc4dd1ca6, Offset: 0x980
+// Checksum 0x1c8ec4b3, Offset: 0x980
 // Size: 0xa4
 function function_87d3b877() {
     if (isdefined(self.handle)) {
@@ -140,7 +140,7 @@ function function_87d3b877() {
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x1 linked
-// Checksum 0xbc3e1a80, Offset: 0xa30
+// Checksum 0x66943774, Offset: 0xa30
 // Size: 0x2c
 function function_f422b6a2() {
     self zm_audio::create_and_play_dialog("general", "outofmoney");
@@ -148,7 +148,7 @@ function function_f422b6a2() {
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x1 linked
-// Checksum 0x676abeee, Offset: 0xa68
+// Checksum 0x930e354, Offset: 0xa68
 // Size: 0x29c
 function function_7b9aea27() {
     self endon(#"hash_d7f84474");
@@ -193,7 +193,7 @@ function function_7b9aea27() {
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x1 linked
-// Checksum 0x17f6601c, Offset: 0xd10
+// Checksum 0xe2b63765, Offset: 0xd10
 // Size: 0x72
 function function_ea0dbe46() {
     self.var_980af03c = 0;
@@ -206,7 +206,7 @@ function function_ea0dbe46() {
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x1 linked
-// Checksum 0xf9baf30a, Offset: 0xd90
+// Checksum 0x8569ee95, Offset: 0xd90
 // Size: 0x30
 function function_2eb14263() {
     self endon(#"hash_d7f84474");
@@ -218,7 +218,7 @@ function function_2eb14263() {
 
 // Namespace namespace_d1591a8d
 // Params 1, eflags: 0x1 linked
-// Checksum 0x4cd5deee, Offset: 0xdc8
+// Checksum 0xced52821, Offset: 0xdc8
 // Size: 0x6c
 function death_check_for_challenge_updates(e_attacker) {
     if (!isdefined(e_attacker)) {

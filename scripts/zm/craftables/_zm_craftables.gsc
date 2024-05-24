@@ -21,7 +21,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x66117b17, Offset: 0x850
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_craftables", &__init__, &__main__, undefined);
 }
 
@@ -220,7 +220,7 @@ function function_8421d708(var_9967ff1, var_d6fd6d9d, var_69ab0bb, var_6cabc9d6,
 }
 
 // Namespace namespace_f37770c8
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0xd2ca9b18, Offset: 0x1158
 // Size: 0x44
 function function_21cc3865(var_9967ff1, var_d983bb0b) {
@@ -241,7 +241,7 @@ function function_b98972f1(var_9967ff1) {
 }
 
 // Namespace namespace_f37770c8
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0xd0a73503, Offset: 0x1208
 // Size: 0x44
 function function_a44e7016(var_9967ff1, build_time) {
@@ -1824,7 +1824,7 @@ function function_f481b8a7(craftablespawn) {
 }
 
 // Namespace namespace_f37770c8
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x65302734, Offset: 0x6e40
 // Size: 0x138
 function function_682ff7f7(var_7d7d7875) {
@@ -2779,7 +2779,7 @@ function function_b7c96663(player) {
 }
 
 // Namespace namespace_f37770c8
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0xa01af2ff, Offset: 0xaa50
 // Size: 0x94
 function function_30b74486() {
@@ -2879,7 +2879,7 @@ function function_d8f2a087(var_9967ff1, var_90757d31, slot) {
 }
 
 // Namespace namespace_f37770c8
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0xd928cde1, Offset: 0xae58
 // Size: 0x19e
 function function_ad26d97f(var_9967ff1, var_90757d31) {
@@ -3222,7 +3222,7 @@ function function_43f48dc7(var_deec1671, str_piece) {
 }
 
 // Namespace namespace_f37770c8
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0xc7399e7a, Offset: 0xc010
 // Size: 0x5c
 function function_95ab081(var_deec1671, str_piece) {
@@ -3250,7 +3250,7 @@ function function_ec15c9de(var_4da9ab3a) {
 }
 
 // Namespace namespace_f37770c8
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0xbd666105, Offset: 0xc198
 // Size: 0x162
 function function_1f5d26ed(var_deec1671, str_piece) {

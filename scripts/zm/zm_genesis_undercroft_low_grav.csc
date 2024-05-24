@@ -218,7 +218,7 @@ function function_a81107fc(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 2, eflags: 0x4
 // Checksum 0x8a9829e4, Offset: 0x1158
 // Size: 0x54
-function function_10dcbf51(localclientnum, var_e6ddb5de) {
+function private function_10dcbf51(localclientnum, var_e6ddb5de) {
     var_e6ddb5de playsound(localclientnum, "evt_ai_explode");
     wait(1);
     var_e6ddb5de delete();

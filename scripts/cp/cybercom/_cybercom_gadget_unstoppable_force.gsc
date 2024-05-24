@@ -122,7 +122,7 @@ function _off(slot, weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x2b856617, Offset: 0x940
 // Size: 0x44
-function function_1852a14f(slot, weapon) {
+function private function_1852a14f(slot, weapon) {
     self endon(#"weapon_melee_juke");
     wait(0.5);
     self gadgetpowerchange(slot, -100);
@@ -132,7 +132,7 @@ function function_1852a14f(slot, weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x1292c7b8, Offset: 0x990
 // Size: 0x54
-function function_6c3ee126(slot, weapon) {
+function private function_6c3ee126(slot, weapon) {
     self endon(#"disconnect");
     self endon(#"hash_1f17ce9a");
     self waittill(#"weapon_melee_juke_end");
@@ -143,7 +143,7 @@ function function_6c3ee126(slot, weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xf2827496, Offset: 0x9f0
 // Size: 0xbc
-function function_98296a6a(slot, weapon) {
+function private function_98296a6a(slot, weapon) {
     self endon(#"death");
     self endon(#"disconnect");
     endreason = self waittill(#"weapon_juke_end_requested");
@@ -166,7 +166,7 @@ function function_4135a1c4(slot, weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x40fa9ea2, Offset: 0xad8
 // Size: 0x114
-function function_875f1595(slot, weapon) {
+function private function_875f1595(slot, weapon) {
     self endon(#"death");
     self endon(#"disconnect");
     self endon(#"hash_1f17ce9a");
@@ -186,7 +186,7 @@ function function_875f1595(slot, weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6e8607a5, Offset: 0xbf8
 // Size: 0x1b0
-function function_2c971ed8(target) {
+function private function_2c971ed8(target) {
     if (!isdefined(target)) {
         return false;
     }
@@ -222,7 +222,7 @@ function function_2c971ed8(target) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xc43471f1, Offset: 0xdb0
 // Size: 0x106
-function function_8aac802c() {
+function private function_8aac802c() {
     enemies = arraycombine(getaiteamarray("axis"), getaiteamarray("team3"), 0, 0);
     valid = [];
     foreach (var_8ae1cd80 in enemies) {
@@ -238,7 +238,7 @@ function function_8aac802c() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xf18a0b83, Offset: 0xec0
 // Size: 0x2a
-function function_40b93b78() {
+function private function_40b93b78() {
     self stopjukemove();
     self notify(#"hash_13da8804");
 }
@@ -247,7 +247,7 @@ function function_40b93b78() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xcfcb6134, Offset: 0xef8
 // Size: 0x304
-function hit_vehicle(enemy, weapon) {
+function private hit_vehicle(enemy, weapon) {
     if (enemy cybercom::islinked()) {
         enemy unlink();
     }

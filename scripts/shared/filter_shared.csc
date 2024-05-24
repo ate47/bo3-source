@@ -306,7 +306,7 @@ function function_a32e572b(player, filterid) {
 }
 
 // Namespace filter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2bfa8d48, Offset: 0x1480
 // Size: 0x3c
 function function_5c4aeccd(player) {
@@ -797,7 +797,7 @@ function set_filter_ev_interference_amount(player, filterid, amount) {
 }
 
 // Namespace filter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x3cc8efaa, Offset: 0x2a38
 // Size: 0x3c
 function disable_filter_ev_interference(player, filterid) {
@@ -840,7 +840,7 @@ function function_18e6d33a(player, filterid, amount) {
 }
 
 // Namespace filter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x87ac373b, Offset: 0x2c08
 // Size: 0x3c
 function init_filter_vehicle_hijack_oor(player) {
@@ -849,7 +849,7 @@ function init_filter_vehicle_hijack_oor(player) {
 }
 
 // Namespace filter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa01627fa, Offset: 0x2c50
 // Size: 0x134
 function enable_filter_vehicle_hijack_oor(player, filterid) {
@@ -870,7 +870,7 @@ function set_filter_vehicle_hijack_oor_noblack(player, filterid) {
 }
 
 // Namespace filter
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x1c4dd1ca, Offset: 0x2de0
 // Size: 0x74
 function set_filter_vehicle_hijack_oor_amount(player, filterid, amount) {
@@ -879,7 +879,7 @@ function set_filter_vehicle_hijack_oor_amount(player, filterid, amount) {
 }
 
 // Namespace filter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xcad63941, Offset: 0x2e60
 // Size: 0x3c
 function disable_filter_vehicle_hijack_oor(player, filterid) {
@@ -1402,7 +1402,7 @@ function function_4a86fcb7(localclientnum, filterid, passid) {
 }
 
 // Namespace filter
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x96a0d660, Offset: 0x4540
 // Size: 0x3c
 function init_filter_sprite_rain(player) {
@@ -1411,7 +1411,7 @@ function init_filter_sprite_rain(player) {
 }
 
 // Namespace filter
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x11e36924, Offset: 0x4588
 // Size: 0x9c
 function enable_filter_sprite_rain(player, filterid) {
@@ -1453,7 +1453,7 @@ function disable_filter_sprite_rain(player, filterid) {
 }
 
 // Namespace filter
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1d5f42bb, Offset: 0x4778
 // Size: 0x3c
 function function_e4987221(player) {
@@ -1462,7 +1462,7 @@ function function_e4987221(player) {
 }
 
 // Namespace filter
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x8286419c, Offset: 0x47c0
 // Size: 0x9c
 function function_cd327356(player, filterid) {

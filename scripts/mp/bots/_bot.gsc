@@ -38,7 +38,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf459461a, Offset: 0x650
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("bot_mp", &__init__, undefined, undefined);
 }
 

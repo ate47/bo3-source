@@ -120,7 +120,7 @@ function barrelupdate() {
 // Params 6, eflags: 0x5 linked
 // Checksum 0xe52df30f, Offset: 0x1020
 // Size: 0x270
-function function_80bf1f40(player, note, sfx, var_5e61e69d, mod, var_aa78744e) {
+function private function_80bf1f40(player, note, sfx, var_5e61e69d, mod, var_aa78744e) {
     if (!isdefined(mod)) {
         mod = "MOD_CRUSH";
     }
@@ -161,7 +161,7 @@ function function_80bf1f40(player, note, sfx, var_5e61e69d, mod, var_aa78744e) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0xaeee4fbc, Offset: 0x1298
 // Size: 0x11e
-function function_3c5a0d64(org, note, var_3587f608, var_eaac4dd5) {
+function private function_3c5a0d64(org, note, var_3587f608, var_eaac4dd5) {
     self endon(note);
     self endon(#"disconnect");
     if (isdefined(var_3587f608)) {
@@ -185,7 +185,7 @@ function function_3c5a0d64(org, note, var_3587f608, var_eaac4dd5) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x5db8301b, Offset: 0x13c0
 // Size: 0x1dc
-function function_121caed2(player) {
+function private function_121caed2(player) {
     self endon(#"death");
     player waittill(#"disconnect");
     if (isdefined(self.trigger1)) {
@@ -228,7 +228,7 @@ function function_121caed2(player) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xb745ff56, Offset: 0x15a8
 // Size: 0x564
-function function_6143f535(org, note) {
+function private function_6143f535(org, note) {
     self util::waittill_any(note, "player_died", "kill_shield", "doa_playerVehiclePickup", "kill_duplicate_shields", "disconnect");
     if (isdefined(self)) {
         self notify(note);
@@ -300,7 +300,7 @@ function function_6143f535(org, note) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x6d81e761, Offset: 0x1b18
 // Size: 0x8c
-function function_a0a646c2() {
+function private function_a0a646c2() {
     self endon(#"death");
     self.doa.stunned = 1;
     self thread namespace_eaa992c::function_285a2999("stunbear_affected");
@@ -313,7 +313,7 @@ function function_a0a646c2() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x329a811a, Offset: 0x1bb0
 // Size: 0x138
-function function_5f0b5579(player) {
+function private function_5f0b5579(player) {
     player endon(#"hash_792240f4");
     player endon(#"disconnect");
     self endon(#"death");
@@ -338,7 +338,7 @@ function function_5f0b5579(player) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xc083a8ac, Offset: 0x1cf0
 // Size: 0xb2
-function function_813e9dbd() {
+function private function_813e9dbd() {
     self endon(#"hash_792240f4");
     self endon(#"disconnect");
     self endon(#"death");
@@ -354,7 +354,7 @@ function function_813e9dbd() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x9fdf37ff, Offset: 0x1db0
 // Size: 0x144
-function function_e6abac68(trigger) {
+function private function_e6abac68(trigger) {
     self util::waittill_any("end_teddybear_stun", "disconnect", "player_died", "kill_shield", "disconnect");
     if (isdefined(self)) {
         self notify(#"hash_792240f4");
@@ -455,7 +455,7 @@ function sawbladeupdate() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd9bc99f7, Offset: 0x2518
 // Size: 0x198
-function function_92374630(player) {
+function private function_92374630(player) {
     player endon(#"hash_1d724bbf");
     player endon(#"disconnect");
     while (true) {
@@ -485,7 +485,7 @@ function function_92374630(player) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x6491f1ad, Offset: 0x26b8
 // Size: 0xe6
-function function_f797c54(org, note) {
+function private function_f797c54(org, note) {
     self endon(note);
     self endon(#"disconnect");
     level namespace_49107f3a::function_c8f4d63a();
@@ -504,7 +504,7 @@ function function_f797c54(org, note) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x228dfcf4, Offset: 0x27a8
 // Size: 0x22a
-function function_595842c5(org, note) {
+function private function_595842c5(org, note) {
     self util::waittill_any(note, "player_died", "kill_shield", "disconnect");
     if (isdefined(self)) {
         self notify(note);

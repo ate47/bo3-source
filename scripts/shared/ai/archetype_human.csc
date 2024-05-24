@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x99ec1590, Offset: 0x170
 // Size: 0x4
-function precache() {
+function autoexec precache() {
     
 }
 
@@ -21,7 +21,7 @@ function precache() {
 // Params 0, eflags: 0x2
 // Checksum 0xd88af5a1, Offset: 0x180
 // Size: 0x4c
-function main() {
+function autoexec main() {
     clientfield::register("actor", "facial_dial", 1, 1, "int", &humanclientutils::facialdialoguehandler, 0, 1);
 }
 

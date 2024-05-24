@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd606ca34, Offset: 0x548
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("achievements", &__init__, undefined, undefined);
 }
 
@@ -205,7 +205,7 @@ function on_player_death(s_params) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x31717bfd, Offset: 0xeb0
 // Size: 0x16c
-function function_1121f26a(var_c856ad1d, evictim) {
+function private function_1121f26a(var_c856ad1d, evictim) {
     if (isdefined(var_c856ad1d.hijacked_vehicle_entity)) {
         var_1efe785f = distance(var_c856ad1d.hijacked_vehicle_entity.origin, evictim.origin);
     } else {
@@ -229,7 +229,7 @@ function function_1121f26a(var_c856ad1d, evictim) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0x82e2b9b4, Offset: 0x1028
 // Size: 0x48c
-function function_914b8688(player, evictim, weapon, einflictor) {
+function private function_914b8688(player, evictim, weapon, einflictor) {
     if (!isdefined(weapon)) {
         return;
     }
@@ -290,7 +290,7 @@ function function_914b8688(player, evictim, weapon, einflictor) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x4f15c880, Offset: 0x14c0
 // Size: 0x17c
-function function_2b2fb40b(player, var_aae1ed0d, weapon) {
+function private function_2b2fb40b(player, var_aae1ed0d, weapon) {
     player.var_75cf9e2e.var_940a9f6e++;
     currentindex = player.var_75cf9e2e.var_ac197c3f;
     player.var_75cf9e2e.kills[currentindex] = gettime();
@@ -310,7 +310,7 @@ function function_2b2fb40b(player, var_aae1ed0d, weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x25e2b1f9, Offset: 0x1648
 // Size: 0x18c
-function function_b1d71bd3(player, weapon) {
+function private function_b1d71bd3(player, weapon) {
     baseindex = getbaseweaponitemindex(weapon);
     if (baseindex < 1 || !isdefined(baseindex) || baseindex > 60) {
         return;
@@ -335,7 +335,7 @@ function function_b1d71bd3(player, weapon) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x727cb614, Offset: 0x17e0
 // Size: 0x24c
-function function_307b3ac3(eplayer, evictim, eweapon) {
+function private function_307b3ac3(eplayer, evictim, eweapon) {
     if (!evictim util::function_d9c13489() || evictim.team !== "axis") {
         return;
     }
@@ -364,7 +364,7 @@ function function_307b3ac3(eplayer, evictim, eweapon) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xc41a2fc8, Offset: 0x1a38
 // Size: 0xec
-function function_c4f2de38(player, victim, inflictor) {
+function private function_c4f2de38(player, victim, inflictor) {
     if (!isdefined(inflictor.weapon) || !isdefined(self.scriptvehicletype) || self.scriptvehicletype != "wasp" || inflictor.weapon.type != "grenade") {
         return;
     }
@@ -450,7 +450,7 @@ function function_632712d7(n_count) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xf271b138, Offset: 0x1ec0
 // Size: 0x60
-function function_9dab90e7(player) {
+function private function_9dab90e7(player) {
     if (!isdefined(player.var_75cf9e2e.var_a4fb0163)) {
         player.var_75cf9e2e.var_a4fb0163 = 1;
         return;
@@ -462,7 +462,7 @@ function function_9dab90e7(player) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x3d213abf, Offset: 0x1f28
 // Size: 0xac
-function function_e587e1f2() {
+function private function_e587e1f2() {
     self endon(#"disconnect");
     while (true) {
         rewardxp, attachmentindex, itemindex, rankid, islastrank = self waittill(#"gun_level_complete");

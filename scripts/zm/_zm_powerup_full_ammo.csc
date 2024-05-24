@@ -6,15 +6,15 @@
 
 // Namespace zm_powerup_full_ammo
 // Params 0, eflags: 0x2
-// Checksum 0xbf63b52d, Offset: 0x108
+// Checksum 0xf8c0504e, Offset: 0x108
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_full_ammo", &__init__, undefined, undefined);
 }
 
 // Namespace zm_powerup_full_ammo
 // Params 0, eflags: 0x0
-// Checksum 0x6db31c5f, Offset: 0x148
+// Checksum 0x465f7bca, Offset: 0x148
 // Size: 0x6c
 function __init__() {
     zm_powerups::include_zombie_powerup("full_ammo");

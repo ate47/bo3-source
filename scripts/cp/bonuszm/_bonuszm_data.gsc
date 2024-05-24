@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xca21c695, Offset: 0x5d8
 // Size: 0x9c
-function function_dc036a7c() {
+function autoexec function_dc036a7c() {
     if (!sessionmodeiscampaignzombiesgame()) {
         return;
     }
@@ -430,7 +430,7 @@ function function_15c7079(index) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x44553725, Offset: 0x2658
 // Size: 0x194
-function function_4542e087() {
+function private function_4542e087() {
     if (!level.var_a9e78bf7["zombifyenabled"]) {
         return;
     }
@@ -454,7 +454,7 @@ function function_4542e087() {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xee8dc0e0, Offset: 0x27f8
 // Size: 0xd2
-function function_e9d4a03e(var_68d35041, var_dbe80e3b, var_5a7ff9f0) {
+function private function_e9d4a03e(var_68d35041, var_dbe80e3b, var_5a7ff9f0) {
     if (!level.var_a9e78bf7["zombifyenabled"]) {
         return;
     }
@@ -471,7 +471,7 @@ function function_e9d4a03e(var_68d35041, var_dbe80e3b, var_5a7ff9f0) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x43fb351e, Offset: 0x28d8
 // Size: 0x7a
-function function_fd2d1f37(var_52292ab5, var_d3cfcdb3, var_dd13b525) {
+function private function_fd2d1f37(var_52292ab5, var_d3cfcdb3, var_dd13b525) {
     if (!level.var_a9e78bf7["zombifyenabled"]) {
         return;
     }
@@ -484,7 +484,7 @@ function function_fd2d1f37(var_52292ab5, var_d3cfcdb3, var_dd13b525) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6139457d, Offset: 0x2960
 // Size: 0x52
-function function_27fb20e1(chance) {
+function private function_27fb20e1(chance) {
     if (!level.var_a9e78bf7["zombifyenabled"]) {
         return;
     }
@@ -498,7 +498,7 @@ function function_27fb20e1(chance) {
 // Params 1, eflags: 0x4
 // Checksum 0xb3f5ed5, Offset: 0x29c0
 // Size: 0x52
-function function_481f94(chance) {
+function private function_481f94(chance) {
     if (!level.var_a9e78bf7["zombifyenabled"]) {
         return;
     }

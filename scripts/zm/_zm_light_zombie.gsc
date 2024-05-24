@@ -27,12 +27,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd7e28d21, Offset: 0x418
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_light_zombie", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_6727c59c
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xaf548679, Offset: 0x458
 // Size: 0x2c
 function __init__() {
@@ -43,17 +43,17 @@ function __init__() {
 }
 
 // Namespace namespace_6727c59c
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x660078b6, Offset: 0x490
 // Size: 0x94
-function register_clientfields() {
+function private register_clientfields() {
     clientfield::register("actor", "light_zombie_clientfield_aura_fx", 15000, 1, "int");
     clientfield::register("actor", "light_zombie_clientfield_death_fx", 15000, 1, "int");
     clientfield::register("actor", "light_zombie_clientfield_damaged_fx", 15000, 1, "counter");
 }
 
 // Namespace namespace_6727c59c
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xdcea95c4, Offset: 0x530
 // Size: 0x11c
 function function_a35db70f() {
@@ -72,7 +72,7 @@ function function_a35db70f() {
 }
 
 // Namespace namespace_6727c59c
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3b185d59, Offset: 0x658
 // Size: 0x34
 function function_cb744db7() {
@@ -82,7 +82,7 @@ function function_cb744db7() {
 }
 
 // Namespace namespace_6727c59c
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb0d7002a, Offset: 0x698
 // Size: 0x78
 function function_68da949() {
@@ -98,7 +98,7 @@ function function_68da949() {
 }
 
 // Namespace namespace_6727c59c
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xd1349829, Offset: 0x718
 // Size: 0x1fc
 function function_95a7ea4f() {
@@ -123,7 +123,7 @@ function function_95a7ea4f() {
 }
 
 // Namespace namespace_6727c59c
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7d16cc23, Offset: 0x920
 // Size: 0x194
 function function_4745b0a9(var_ed7f4cc6) {
@@ -150,7 +150,7 @@ function function_4745b0a9(var_ed7f4cc6) {
 }
 
 // Namespace namespace_6727c59c
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc3b9d835, Offset: 0xac0
 // Size: 0x7c
 function function_2335214f(var_9bde339b) {
@@ -166,35 +166,35 @@ function function_2335214f(var_9bde339b) {
 /#
 
     // Namespace namespace_6727c59c
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x9b395481, Offset: 0xb48
     // Size: 0x228
     function function_ff8b7145() {
         wait(0.05);
         level waittill(#"start_zombie_round_logic");
         wait(0.05);
-        str_cmd = "MOD_EXPLOSIVE";
+        str_cmd = "<unknown string>";
         adddebugcommand(str_cmd);
-        str_cmd = "MOD_EXPLOSIVE";
+        str_cmd = "<unknown string>";
         adddebugcommand(str_cmd);
         while (true) {
-            string = getdvarstring("MOD_EXPLOSIVE");
-            if (string == "MOD_EXPLOSIVE") {
+            string = getdvarstring("<unknown string>");
+            if (string == "<unknown string>") {
                 a_zombies = namespace_57695b4d::function_d41418b8();
                 if (a_zombies.size > 0) {
                     foreach (zombie in a_zombies) {
                         zombie function_a35db70f();
                     }
                 }
-                setdvar("MOD_EXPLOSIVE", "MOD_EXPLOSIVE");
+                setdvar("<unknown string>", "<unknown string>");
             }
-            if (string == "MOD_EXPLOSIVE") {
+            if (string == "<unknown string>") {
                 a_zombies = namespace_57695b4d::function_d41418b8();
                 if (a_zombies.size > 0) {
                     a_zombies = arraysortclosest(a_zombies, level.players[0].origin);
                     a_zombies[0] function_a35db70f();
                 }
-                setdvar("MOD_EXPLOSIVE", "MOD_EXPLOSIVE");
+                setdvar("<unknown string>", "<unknown string>");
             }
             wait(0.05);
         }

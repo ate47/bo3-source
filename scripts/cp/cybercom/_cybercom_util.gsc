@@ -481,7 +481,7 @@ function function_f5c296aa(weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x944238d, Offset: 0x25e8
 // Size: 0x18c
-function function_7806352d(weapon) {
+function private function_7806352d(weapon) {
     self endon(#"disconnect");
     self endon(#"death");
     self endon(#"hash_e9579630");
@@ -502,7 +502,7 @@ function function_7806352d(weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x9030ed22, Offset: 0x2780
 // Size: 0x570
-function function_9c5e5a9b(target, var_b3464abe) {
+function private function_9c5e5a9b(target, var_b3464abe) {
     if (!isdefined(var_b3464abe)) {
         var_b3464abe = 1;
     }
@@ -762,7 +762,7 @@ function function_d23326c3(slot, note, var_86abddd9) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x139ccee0, Offset: 0x35d8
 // Size: 0xb4
-function function_27fa88d6(player) {
+function private function_27fa88d6(player) {
     self endon(#"ccom_lost_lock");
     self notify(#"hash_27fa88d6");
     self endon(#"hash_27fa88d6");

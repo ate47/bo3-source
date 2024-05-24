@@ -71,7 +71,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x3d6a879a, Offset: 0x11e0
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("bonuszm", &__init__, &__main__, undefined);
 }
 
@@ -188,7 +188,7 @@ function function_5143a242() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xac5a375, Offset: 0x1a90
 // Size: 0x30
-function function_44a35094() {
+function private function_44a35094() {
     while (true) {
         battlechatter::function_d9f49fba(0);
         wait(0.2);
@@ -199,7 +199,7 @@ function function_44a35094() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x1376206a, Offset: 0x1ac8
 // Size: 0x394
-function function_13eef9b9() {
+function private function_13eef9b9() {
     clientfield::register("actor", "zombie_riser_fx", 1, 1, "int");
     clientfield::register("actor", "bonus_zombie_eye_color", 1, 3, "int");
     clientfield::register("actor", "zombie_has_eyes", 1, 1, "int");
@@ -865,7 +865,7 @@ function function_d0d9ed35() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x85c072cb, Offset: 0x41e0
 // Size: 0xf6
-function function_470f7d28() {
+function private function_470f7d28() {
     self endon(#"death");
     var_8a7e27c8 = self.zombie_move_speed;
     if (var_8a7e27c8 == "sprint") {
@@ -886,7 +886,7 @@ function function_470f7d28() {
 // Params 13, eflags: 0x5 linked
 // Checksum 0xf7c61e3, Offset: 0x42e0
 // Size: 0x3f6
-function function_48cb1ad1(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, damagefromunderneath, modelindex, partname) {
+function private function_48cb1ad1(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, damagefromunderneath, modelindex, partname) {
     /#
         assert(self.archetype == "run");
     #/
@@ -939,7 +939,7 @@ function function_48cb1ad1(einflictor, eattacker, idamage, idflags, smeansofdeat
 // Params 1, eflags: 0x5 linked
 // Checksum 0x49f5324b, Offset: 0x46e0
 // Size: 0xf4
-function function_f10fd3d1(weapon) {
+function private function_f10fd3d1(weapon) {
     self endon(#"death");
     if (isdefined(self.var_82253adf) && self.var_82253adf) {
         return;
@@ -959,7 +959,7 @@ function function_f10fd3d1(weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd9c8164a, Offset: 0x47e0
 // Size: 0x1fc
-function function_2bc18574(params) {
+function private function_2bc18574(params) {
     if (isdefined(params.eattacker.forceanhilateondeath) && isplayer(params.eattacker) && params.eattacker.forceanhilateondeath) {
         if (isdefined(level.bzm_worldpaused) && level.bzm_worldpaused) {
             self setignorepauseworld(1);
@@ -981,7 +981,7 @@ function function_2bc18574(params) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x212a79c4, Offset: 0x49e8
 // Size: 0x64
-function function_285b856c(params) {
+function private function_285b856c(params) {
     if (isdefined(self.archetype) && self.archetype == "raps" && self.team == "axis") {
         self clientfield::set("bonuszm_meatball_death", 1);
     }
@@ -1699,7 +1699,7 @@ function function_c4dba52c() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x2baf712e, Offset: 0x76e8
 // Size: 0x31c
-function function_9b15c7b() {
+function private function_9b15c7b() {
     level notify(#"hash_11692fba");
     level endon(#"hash_11692fba");
     while (true) {
@@ -1832,7 +1832,7 @@ function function_5abd553b() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xc81cc05, Offset: 0x7f18
 // Size: 0x52c
-function function_fcf02f23() {
+function private function_fcf02f23() {
     /#
         assert(isplayer(self));
     #/
@@ -1895,7 +1895,7 @@ function function_fcf02f23() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x8d114811, Offset: 0x8450
 // Size: 0x8a
-function function_f22c67b() {
+function private function_f22c67b() {
     foreach (player in level.activeplayers) {
         player thread function_fcf02f23();
     }
@@ -1905,7 +1905,7 @@ function function_f22c67b() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xf64e29c8, Offset: 0x84e8
 // Size: 0xb4
-function function_203903e(player, timeout) {
+function private function_203903e(player, timeout) {
     player endon(#"disconnect");
     player endon(#"death");
     /#

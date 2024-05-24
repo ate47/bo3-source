@@ -16,7 +16,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc2d5bb97, Offset: 0x4d8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("blackjack_challenges", &__init__, undefined, undefined);
 }
 

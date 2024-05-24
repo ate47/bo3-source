@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc7f9612d, Offset: 0x3a0
 // Size: 0x222
-function main() {
+function autoexec main() {
     meleebundles = struct::get_script_bundles("aiassassination");
     level._aivsai_meleebundles = [];
     foreach (meleebundle in meleebundles) {
@@ -86,7 +86,7 @@ function iscloseenoughforaivsaimelee(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x74863fed, Offset: 0x818
 // Size: 0x114
-function shouldaquiremutexonenemyforaivsaimelee(behaviortreeentity) {
+function private shouldaquiremutexonenemyforaivsaimelee(behaviortreeentity) {
     if (isplayer(behaviortreeentity.enemy)) {
         return false;
     }
@@ -110,7 +110,7 @@ function shouldaquiremutexonenemyforaivsaimelee(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd30d861c, Offset: 0x938
 // Size: 0xcae
-function hasaivsaienemy(behaviortreeentity) {
+function private hasaivsaienemy(behaviortreeentity) {
     enemy = behaviortreeentity.enemy;
     if (getdvarint("disable_aivsai_melee", 0)) {
         /#
@@ -261,7 +261,7 @@ function hasaivsaienemy(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6e2b8799, Offset: 0x15f0
 // Size: 0x58
-function decideinitiator(behaviortreeentity) {
+function private decideinitiator(behaviortreeentity) {
     if (!isdefined(behaviortreeentity._ai_melee_initiator)) {
         if (!isdefined(behaviortreeentity.enemy._ai_melee_initiator)) {
             behaviortreeentity._ai_melee_initiator = 1;
@@ -275,7 +275,7 @@ function decideinitiator(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x5db14e7, Offset: 0x1650
 // Size: 0x3a
-function isinitiator(behaviortreeentity) {
+function private isinitiator(behaviortreeentity) {
     if (!(isdefined(behaviortreeentity._ai_melee_initiator) && behaviortreeentity._ai_melee_initiator)) {
         return false;
     }
@@ -286,7 +286,7 @@ function isinitiator(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb0798a2e, Offset: 0x1698
 // Size: 0x40c
-function hascloseaivsaienemy(behaviortreeentity) {
+function private hascloseaivsaienemy(behaviortreeentity) {
     if (!(isdefined(behaviortreeentity._ai_melee_animname) && isdefined(behaviortreeentity.enemy._ai_melee_animname))) {
         /#
             record3dtext("AIvsAIMeleeAction", behaviortreeentity.origin, (1, 0.5, 0), "AIvsAIMeleeAction", behaviortreeentity, 0.4);
@@ -322,7 +322,7 @@ function hascloseaivsaienemy(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x35d2fe1, Offset: 0x1ab0
 // Size: 0x584
-function chooseaivsaimeleeanimations(behaviortreeentity) {
+function private chooseaivsaimeleeanimations(behaviortreeentity) {
     anglestoenemy = vectortoangles(behaviortreeentity.enemy.origin - behaviortreeentity.origin);
     yawtoenemy = angleclamp180(behaviortreeentity.enemy.angles[1] - anglestoenemy[1]);
     /#
@@ -381,7 +381,7 @@ function chooseaivsaimeleeanimations(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x72193fa9, Offset: 0x2040
 // Size: 0xee
-function choosearchetypevariant(entity) {
+function private choosearchetypevariant(entity) {
     if (entity.archetype == "robot") {
         robot_state = entity ai::get_behavior_attribute("rogue_control");
         if (isinarray(array("forced_level_1", "level_1", "level_0"), robot_state)) {
@@ -398,7 +398,7 @@ function choosearchetypevariant(entity) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xf96d9184, Offset: 0x2138
 // Size: 0x104
-function aivsaimeleebundleexists(behaviortreeentity, attacker_variant, defender_variant) {
+function private aivsaimeleebundleexists(behaviortreeentity, attacker_variant, defender_variant) {
     if (!isdefined(level._aivsai_meleebundles[behaviortreeentity.archetype])) {
         return false;
     } else if (!isdefined(level._aivsai_meleebundles[behaviortreeentity.archetype][behaviortreeentity.enemy.archetype])) {
@@ -487,7 +487,7 @@ function playscriptedmeleeanimations() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x141df37e, Offset: 0x28e8
 // Size: 0x15c
-function chooseaivsaimeleefrontflipanimations(behaviortreeentity, animbundle) {
+function private chooseaivsaimeleefrontflipanimations(behaviortreeentity, animbundle) {
     /#
         record3dtext("AIvsAIMeleeAction", behaviortreeentity.origin, (1, 0.5, 0), "AIvsAIMeleeAction", behaviortreeentity, 0.4);
     #/
@@ -509,7 +509,7 @@ function chooseaivsaimeleefrontflipanimations(behaviortreeentity, animbundle) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xb584cd90, Offset: 0x2a50
 // Size: 0x154
-function chooseaivsaimeleefrontwrestleanimations(behaviortreeentity, animbundle) {
+function private chooseaivsaimeleefrontwrestleanimations(behaviortreeentity, animbundle) {
     /#
         record3dtext("AIvsAIMeleeAction", behaviortreeentity.origin, (1, 0.5, 0), "AIvsAIMeleeAction", behaviortreeentity, 0.4);
     #/
@@ -531,7 +531,7 @@ function chooseaivsaimeleefrontwrestleanimations(behaviortreeentity, animbundle)
 // Params 2, eflags: 0x5 linked
 // Checksum 0x6d6f2a6c, Offset: 0x2bb0
 // Size: 0x15c
-function chooseaivsaimeleebackanimations(behaviortreeentity, animbundle) {
+function private chooseaivsaimeleebackanimations(behaviortreeentity, animbundle) {
     /#
         record3dtext("AIvsAIMeleeAction", behaviortreeentity.origin, (1, 0.5, 0), "AIvsAIMeleeAction", behaviortreeentity, 0.4);
     #/
@@ -553,7 +553,7 @@ function chooseaivsaimeleebackanimations(behaviortreeentity, animbundle) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x6009560d, Offset: 0x2d18
 // Size: 0x15c
-function chooseaivsaimeleerightanimations(behaviortreeentity, animbundle) {
+function private chooseaivsaimeleerightanimations(behaviortreeentity, animbundle) {
     /#
         record3dtext("AIvsAIMeleeAction", behaviortreeentity.origin, (1, 0.5, 0), "AIvsAIMeleeAction", behaviortreeentity, 0.4);
     #/
@@ -575,7 +575,7 @@ function chooseaivsaimeleerightanimations(behaviortreeentity, animbundle) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xa4b31d2a, Offset: 0x2e80
 // Size: 0x15c
-function chooseaivsaimeleeleftanimations(behaviortreeentity, animbundle) {
+function private chooseaivsaimeleeleftanimations(behaviortreeentity, animbundle) {
     /#
         record3dtext("AIvsAIMeleeAction", behaviortreeentity.origin, (1, 0.5, 0), "AIvsAIMeleeAction", behaviortreeentity, 0.4);
     #/
@@ -597,7 +597,7 @@ function chooseaivsaimeleeleftanimations(behaviortreeentity, animbundle) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6428b321, Offset: 0x2fe8
 // Size: 0xfc
-function debug_chosenmeleeanimations(behaviortreeentity) {
+function private debug_chosenmeleeanimations(behaviortreeentity) {
     /#
         if (isdefined(behaviortreeentity._ai_melee_animname) && isdefined(behaviortreeentity.enemy._ai_melee_animname)) {
             record3dtext("AIvsAIMeleeAction" + behaviortreeentity._ai_melee_animname, behaviortreeentity.origin, (1, 0.5, 0), "AIvsAIMeleeAction", behaviortreeentity, 0.4);

@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x5a958bed, Offset: 0x248
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("globallogic_ui", &__init__, undefined, undefined);
 }
 

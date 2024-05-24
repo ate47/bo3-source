@@ -474,7 +474,7 @@ function remove_keys(array) {
 }
 
 // Namespace array
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xc64da545, Offset: 0x1da0
 // Size: 0xaa
 function swap(&array, index1, index2) {

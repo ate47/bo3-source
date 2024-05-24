@@ -113,7 +113,7 @@ class class_1f041243 {
 // Params 0, eflags: 0x2
 // Checksum 0xd1f51ee3, Offset: 0x330
 // Size: 0x2c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_zod_bridges", undefined, &__main__, undefined);
 }
 

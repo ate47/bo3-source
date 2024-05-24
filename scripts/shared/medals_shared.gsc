@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa3ec32e4, Offset: 0xf0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("medals", &__init__, undefined, undefined);
 }
 

@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xbea295cf, Offset: 0x168
 // Size: 0x2d6
-function main() {
+function autoexec main() {
     fxbundles = struct::get_script_bundles("fxcharacterdef");
     processedfxbundles = [];
     foreach (fxbundlename, fxbundle in fxbundles) {
@@ -38,7 +38,7 @@ function main() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xd069e952, Offset: 0x448
 // Size: 0x156
-function _configentity(localclientnum, entity) {
+function private _configentity(localclientnum, entity) {
     if (!isdefined(entity._fxcharacter)) {
         entity._fxcharacter = [];
         handledgibs = array(8, 16, 32, -128, 256);
@@ -55,7 +55,7 @@ function _configentity(localclientnum, entity) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xedc6aabf, Offset: 0x5a8
 // Size: 0x166
-function _destructhandler(localclientnum, entity, piecenumber) {
+function private _destructhandler(localclientnum, entity, piecenumber) {
     if (!isdefined(entity._fxcharacter)) {
         return;
     }
@@ -74,7 +74,7 @@ function _destructhandler(localclientnum, entity, piecenumber) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xa16325ff, Offset: 0x718
 // Size: 0x166
-function _gibhandler(localclientnum, entity, gibflag) {
+function private _gibhandler(localclientnum, entity, gibflag) {
     if (!isdefined(entity._fxcharacter)) {
         return;
     }
@@ -93,7 +93,7 @@ function _gibhandler(localclientnum, entity, gibflag) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb67e2208, Offset: 0x888
 // Size: 0x6e
-function _gibpartnametogibflag(gibpartname) {
+function private _gibpartnametogibflag(gibpartname) {
     if (isdefined(gibpartname)) {
         switch (gibpartname) {
         case 6:
@@ -114,7 +114,7 @@ function _gibpartnametogibflag(gibpartname) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x9c83d894, Offset: 0x900
 // Size: 0x4a
-function _isgibbed(localclientnum, entity, stopongibflag) {
+function private _isgibbed(localclientnum, entity, stopongibflag) {
     if (!isdefined(stopongibflag)) {
         return 0;
     }
@@ -125,7 +125,7 @@ function _isgibbed(localclientnum, entity, stopongibflag) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x4227efd6, Offset: 0x958
 // Size: 0x4a
-function _ispiecedestructed(localclientnum, entity, stoponpiecedestroyed) {
+function private _ispiecedestructed(localclientnum, entity, stoponpiecedestroyed) {
     if (!isdefined(stoponpiecedestroyed)) {
         return 0;
     }
@@ -136,7 +136,7 @@ function _ispiecedestructed(localclientnum, entity, stoponpiecedestroyed) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x53bf3b0a, Offset: 0x9b0
 // Size: 0x7e
-function _shouldplayfx(localclientnum, entity, fxstruct) {
+function private _shouldplayfx(localclientnum, entity, fxstruct) {
     if (_isgibbed(localclientnum, entity, fxstruct.stopongib)) {
         return false;
     }

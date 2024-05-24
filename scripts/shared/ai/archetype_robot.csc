@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe5edbcd0, Offset: 0x2b0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("robot", &__init__, undefined, undefined);
 }
 
@@ -20,7 +20,7 @@ function function_2dc19561() {
 // Params 0, eflags: 0x2
 // Checksum 0xbf78174c, Offset: 0x2f0
 // Size: 0x3a
-function precache() {
+function autoexec precache() {
     level._effect["fx_ability_elec_surge_short_robot"] = "electric/fx_ability_elec_surge_short_robot";
     level._effect["fx_exp_robot_stage3_evb"] = "explosions/fx_exp_robot_stage3_evb";
 }
@@ -45,7 +45,7 @@ function __init__() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x49e782e8, Offset: 0x4a8
 // Size: 0x1c
-function robotsoldierspawnsetup(localclientnum) {
+function private robotsoldierspawnsetup(localclientnum) {
     entity = self;
 }
 
@@ -53,7 +53,7 @@ function robotsoldierspawnsetup(localclientnum) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0xcad85f8b, Offset: 0x4d0
 // Size: 0x346
-function robotlighting(localclientnum, entity, flicker, mindcontrolstate) {
+function private robotlighting(localclientnum, entity, flicker, mindcontrolstate) {
     switch (mindcontrolstate) {
     case 0:
         entity tmodeclearflag(0);
@@ -104,7 +104,7 @@ function robotlighting(localclientnum, entity, flicker, mindcontrolstate) {
 // Params 7, eflags: 0x5 linked
 // Checksum 0xe77a3cfe, Offset: 0x820
 // Size: 0x164
-function robotlightshandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private robotlightshandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     entity = self;
     if (isdefined(entity.archetype) && (!isdefined(entity) || !entity isai() || entity.archetype != "robot")) {
         return;
@@ -124,7 +124,7 @@ function robotlightshandler(localclientnum, oldvalue, newvalue, bnewent, binitia
 // Params 7, eflags: 0x5 linked
 // Checksum 0xebb2d757, Offset: 0x990
 // Size: 0x13a
-function robotemphandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private robotemphandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     entity = self;
     if (isdefined(entity.archetype) && (!isdefined(entity) || !entity isai() || entity.archetype != "robot")) {
         return;
@@ -145,7 +145,7 @@ function robotemphandler(localclientnum, oldvalue, newvalue, bnewent, binitialsn
 // Params 7, eflags: 0x5 linked
 // Checksum 0xbbb3210f, Offset: 0xad8
 // Size: 0x114
-function robotmindcontrolhandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private robotmindcontrolhandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     entity = self;
     if (isdefined(entity.archetype) && (!isdefined(entity) || !entity isai() || entity.archetype != "robot")) {
         return;

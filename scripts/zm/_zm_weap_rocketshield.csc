@@ -11,23 +11,23 @@
 
 // Namespace namespace_c94f8120
 // Params 0, eflags: 0x2
-// Checksum 0x153a0478, Offset: 0x1c8
+// Checksum 0x51325ec6, Offset: 0x1c8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_weap_rocketshield", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_c94f8120
-// Params 0, eflags: 0x1 linked
-// Checksum 0x4b86e06, Offset: 0x208
+// Params 0, eflags: 0x0
+// Checksum 0xb06da0d2, Offset: 0x208
 // Size: 0x4c
 function __init__() {
     clientfield::register("allplayers", "rs_ammo", 1, 1, "int", &function_fddc5fe6, 0, 0);
 }
 
 // Namespace namespace_c94f8120
-// Params 7, eflags: 0x1 linked
-// Checksum 0x947e0947, Offset: 0x260
+// Params 7, eflags: 0x0
+// Checksum 0x4fd71d43, Offset: 0x260
 // Size: 0xa4
 function function_fddc5fe6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {

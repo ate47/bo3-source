@@ -377,7 +377,7 @@ function function_183e3618(...) {
 }
 
 // Namespace util
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x49ba8c12, Offset: 0x1b40
 // Size: 0x118
 function function_ec87322b(a_notifies) {
@@ -548,7 +548,7 @@ function waittill_any_ents_two(ent1, string1, ent2, string2) {
 }
 
 // Namespace util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2ebc088d, Offset: 0x23e0
 // Size: 0x20
 function isflashed() {
@@ -1029,7 +1029,7 @@ function _delay(time_or_notify, str_endon, func, arg1, arg2, arg3, arg4, arg5, a
 }
 
 // Namespace util
-// Params 9, eflags: 0x1 linked
+// Params 9, eflags: 0x0
 // Checksum 0xc439c538, Offset: 0x3730
 // Size: 0x84
 function delay_network_frames(n_frames, str_endon, func, arg1, arg2, arg3, arg4, arg5, arg6) {
@@ -1398,7 +1398,7 @@ function waittillendonthreaded(waitcondition, callback, endcondition1, endcondit
 }
 
 // Namespace util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xabe50925, Offset: 0x46a8
 // Size: 0x50
 function new_timer(n_timer_length) {
@@ -1675,7 +1675,7 @@ function debug_magic_bullet_shield_death(guy) {
 }
 
 // Namespace util
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd6051e10, Offset: 0x5078
 // Size: 0x258
 function spawn_player_clone(player, animname) {
@@ -1866,7 +1866,7 @@ function stance_button_held() {
 }
 
 // Namespace util
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x2cbe4896, Offset: 0x5808
 // Size: 0x54
 function ads_button_held() {
@@ -1879,7 +1879,7 @@ function ads_button_held() {
 }
 
 // Namespace util
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x7e75347a, Offset: 0x5868
 // Size: 0x54
 function attack_button_held() {
@@ -1905,7 +1905,7 @@ function button_right_held() {
 }
 
 // Namespace util
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x9a819cd3, Offset: 0x5928
 // Size: 0x2c
 function waittill_use_button_pressed() {
@@ -2603,7 +2603,7 @@ function set_sun_shadow_split_distance(f_distance) {
 }
 
 // Namespace util
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xf9b150a4, Offset: 0x7468
 // Size: 0x49c
 function auto_delete(n_mode, n_min_time_alive, n_dist_horizontal, n_dist_vertical) {
@@ -2685,7 +2685,7 @@ function auto_delete(n_mode, n_min_time_alive, n_dist_horizontal, n_dist_vertica
 }
 
 // Namespace util
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x20a20f9b, Offset: 0x7910
 // Size: 0x3f2
 function query_ents(&a_kvps_match, b_match_all, &a_kvps_ingnore, b_ignore_spawners, b_match_substrings) {
@@ -3240,7 +3240,7 @@ function ground_position(v_start, n_max_dist, n_ground_offset, e_ignore, b_ignor
 }
 
 // Namespace util
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x4884d367, Offset: 0x9450
 // Size: 0x2c
 function delayed_notify(str_notify, f_delay_seconds) {
@@ -3265,7 +3265,7 @@ function delayed_delete(str_notify, f_delay_seconds) {
 }
 
 // Namespace util
-// Params 11, eflags: 0x1 linked
+// Params 11, eflags: 0x0
 // Checksum 0x964edc9, Offset: 0x9508
 // Size: 0x1ac
 function function_46d3a558(var_5b9e7d6a, var_b6f6ffa9, var_8e6b5bc3, var_9817cc42, var_e68fbbe4, var_838069df, var_b1a5ab8d, var_8f247060, var_fea4654e, var_bd4a51b5, n_duration) {
@@ -3336,7 +3336,7 @@ function function_9155d925(var_5b9e7d6a, var_b6f6ffa9, var_8e6b5bc3, var_9817cc4
 }
 
 // Namespace util
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4a8ad5a0, Offset: 0x9a50
 // Size: 0x2e
 function function_3eb32a89(str_next_map) {
@@ -3355,7 +3355,7 @@ function function_3eb32a89(str_next_map) {
 }
 
 // Namespace util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf7ed560f, Offset: 0x9ac8
 // Size: 0x70
 function is_safehouse() {
@@ -3649,7 +3649,7 @@ function str_strip_lh(str) {
 }
 
 // Namespace util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x332f1b1e, Offset: 0xa500
 // Size: 0x168
 function trackwallrunningdistance() {
@@ -3670,7 +3670,7 @@ function trackwallrunningdistance() {
 }
 
 // Namespace util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf475eed6, Offset: 0xa670
 // Size: 0x168
 function tracksprintdistance() {
@@ -3691,7 +3691,7 @@ function tracksprintdistance() {
 }
 
 // Namespace util
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6157e4de, Offset: 0xa7e0
 // Size: 0x168
 function trackdoublejumpdistance() {

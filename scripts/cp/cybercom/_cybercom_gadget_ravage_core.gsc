@@ -147,7 +147,7 @@ function function_677ed44f(weapon) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xb50b5c32, Offset: 0x930
 // Size: 0x44
-function function_369d3494() {
+function private function_369d3494() {
     corpse = self waittill(#"actor_corpse");
     if (isdefined(corpse)) {
         corpse hidepart("j_chest_door");

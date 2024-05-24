@@ -18,7 +18,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x941de505, Offset: 0x348
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("save", &__init__, undefined, undefined);
 }
 
@@ -128,7 +128,7 @@ function function_18a1a0fe() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x40514082, Offset: 0x740
 // Size: 0xa
-function function_1f201c0b() {
+function private function_1f201c0b() {
     return self.playername;
 }
 
@@ -260,7 +260,7 @@ function function_fb150717() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x7b915531, Offset: 0xda0
 // Size: 0x8c
-function function_74fcb9ca() {
+function private function_74fcb9ca() {
     level notify(#"checkpoint_save");
     level endon(#"checkpoint_save");
     level endon(#"save_restore");
@@ -371,7 +371,7 @@ function function_319d38eb() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x46adfa6b, Offset: 0x12e0
 // Size: 0x13c
-function function_1add9d4a(var_c36855a9) {
+function private function_1add9d4a(var_c36855a9) {
     level notify(#"hash_1add9d4a");
     level endon(#"hash_1add9d4a");
     level endon(#"hash_7be398c7");
@@ -446,7 +446,7 @@ function function_147f4ca3() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xf56b5c4e, Offset: 0x1620
 // Size: 0x266
-function function_2c89c30c() {
+function private function_2c89c30c() {
     var_f839d525 = 1;
     if (isdefined(self.health) && isdefined(self.maxhealth) && self.maxhealth > 0) {
         var_f839d525 = self.health / self.maxhealth;
@@ -504,7 +504,7 @@ function function_2c89c30c() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x640ece73, Offset: 0x1890
 // Size: 0x184
-function function_a3a9b003() {
+function private function_a3a9b003() {
     if (!getdvarint("tu1_saveGameAiProximityCheck", 1)) {
         return true;
     }
@@ -534,7 +534,7 @@ function function_a3a9b003() {
 // Params 0, eflags: 0x4
 // Checksum 0x800e3ba6, Offset: 0x1a20
 // Size: 0x126
-function function_f70dd749() {
+function private function_f70dd749() {
     if (!isdefined(self.enemy)) {
         return true;
     }
@@ -574,7 +574,7 @@ function function_2808d83d() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xde2a5e1f, Offset: 0x1c38
 // Size: 0x182
-function function_8dc86b60() {
+function private function_8dc86b60() {
     var_db6b9d9f = 0;
     foreach (grenade in getentarray("grenade", "classname")) {
         foreach (player in level.activeplayers) {

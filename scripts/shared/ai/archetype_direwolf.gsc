@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xec7ca82e, Offset: 0x220
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("direwolf", &__init__, undefined, undefined);
 }
 
@@ -39,7 +39,7 @@ function __init__() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x61639958, Offset: 0x438
 // Size: 0xe4
-function function_722f5b6f() {
+function private function_722f5b6f() {
     self setteam("team3");
     self allowpitchangle(1);
     self setpitchorient();

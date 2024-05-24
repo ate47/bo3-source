@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd888c374, Offset: 0x3c0
 // Size: 0xa4
-function main() {
+function autoexec main() {
     if (sessionmodeiszombiesgame() && getdvarint("splitscreen_playerCount") > 2) {
         return;
     }
@@ -24,7 +24,7 @@ function main() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xf3450d01, Offset: 0x470
 // Size: 0x64
-function secondaryanimationsinit(localclientnum) {
+function private secondaryanimationsinit(localclientnum) {
     if (!isdefined(level.__facialanimationslist)) {
         buildandvalidatefacialanimationlist(localclientnum);
     }
@@ -36,7 +36,7 @@ function secondaryanimationsinit(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xf119293a, Offset: 0x4e0
 // Size: 0x5c
-function on_entity_spawn(localclientnum) {
+function private on_entity_spawn(localclientnum) {
     if (self hasdobj(localclientnum)) {
         self clearanim(generic%faces, 0);
     }
@@ -47,7 +47,7 @@ function on_entity_spawn(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x14a1909c, Offset: 0x548
 // Size: 0x60
-function on_entity_shutdown(localclientnum) {
+function private on_entity_shutdown(localclientnum) {
     if (isdefined(self)) {
         self notify(#"stopfacialthread");
         if (isdefined(self.facialdeathanimstarted) && self.facialdeathanimstarted) {
@@ -101,7 +101,7 @@ function buildandvalidatefacialanimationlist(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7c0b2a0e, Offset: 0xb60
 // Size: 0x18e
-function getfacialanimoverride(localclientnum) {
+function private getfacialanimoverride(localclientnum) {
     if (sessionmodeiscampaigngame()) {
         primarydeltaanim = self getprimarydeltaanim();
         if (isdefined(primarydeltaanim)) {
@@ -127,7 +127,7 @@ function getfacialanimoverride(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7caae203, Offset: 0xcf8
 // Size: 0x5fc
-function secondaryfacialanimationthink(localclientnum) {
+function private secondaryfacialanimationthink(localclientnum) {
     /#
         assert(self.archetype == "ai_face_male_aim_idle_3" || isdefined(self.archetype) && self.archetype == "ai_face_male_aim_idle_3");
     #/
@@ -224,7 +224,7 @@ function secondaryfacialanimationthink(localclientnum) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xcbc5a89f, Offset: 0x1300
 // Size: 0xfc
-function applynewfaceanim(localclientnum, animation, clearoncompletion) {
+function private applynewfaceanim(localclientnum, animation, clearoncompletion) {
     if (!isdefined(clearoncompletion)) {
         clearoncompletion = 0;
     }
@@ -245,7 +245,7 @@ function applynewfaceanim(localclientnum, animation, clearoncompletion) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xed6696ad, Offset: 0x1408
 // Size: 0x134
-function applydeathanim(localclientnum) {
+function private applydeathanim(localclientnum) {
     if (isdefined(self._currentfacestate) && self._currentfacestate == "death") {
         return;
     }
@@ -267,7 +267,7 @@ function applydeathanim(localclientnum) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xa313c959, Offset: 0x1548
 // Size: 0x7e
-function clearcurrentfacialanim(localclientnum) {
+function private clearcurrentfacialanim(localclientnum) {
     if (isdefined(self._currentfaceanim) && self hasdobj(localclientnum) && self hasanimtree()) {
         self clearanim(self._currentfaceanim, 0.2);
     }

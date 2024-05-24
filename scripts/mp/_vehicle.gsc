@@ -18,7 +18,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x118588f, Offset: 0xc98
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("vehicle", &__init__, undefined, undefined);
 }
 
@@ -1532,7 +1532,7 @@ function follow_path(node) {
 }
 
 // Namespace vehicle
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0xbabac715, Offset: 0x5b20
 // Size: 0xac
 function initvehiclemap() {

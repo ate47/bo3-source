@@ -63,7 +63,7 @@ function main() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xd083c13b, Offset: 0xf68
 // Size: 0x32c
-function _load() {
+function private _load() {
     timeout = gettime() + 5000;
     while (getnumexpectedplayers() == 0 && gettime() < timeout) {
         wait(0.05);
@@ -243,7 +243,7 @@ function initialblack(time) {
 // Params 2, eflags: 0x4
 // Checksum 0x6dac3bea, Offset: 0x22a8
 // Size: 0x74
-function function_154ab047(currentround, idx) {
+function private function_154ab047(currentround, idx) {
     self endon(#"hash_437a340d");
     while (isdefined(self) && isdefined(idx)) {
         if (level.doa.round_number != currentround) {

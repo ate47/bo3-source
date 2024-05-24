@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xbed0694b, Offset: 0x168
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("visionset_mgr", &__init__, undefined, undefined);
 }
 
@@ -137,7 +137,7 @@ function timeout_lerp_thread(timeout, opt_param_2, opt_param_3) {
 }
 
 // Namespace visionset_mgr
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x1b592607, Offset: 0x910
 // Size: 0x6c
 function timeout_lerp_thread_per_player(player, timeout, opt_param_2, opt_param_3) {

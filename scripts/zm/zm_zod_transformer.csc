@@ -9,12 +9,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0x603e7bf9, Offset: 0x148
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_zod_transformer", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_ded850b0
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x15052c5a, Offset: 0x188
 // Size: 0x6c
 function __init__() {
@@ -23,7 +23,7 @@ function __init__() {
 }
 
 // Namespace namespace_ded850b0
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x41f0c6d2, Offset: 0x200
 // Size: 0x64
 function function_cd5514be(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

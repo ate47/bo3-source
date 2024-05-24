@@ -4,7 +4,7 @@
 #namespace namespace_170b115c;
 
 // Namespace namespace_170b115c
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5fd19cff, Offset: 0x108
 // Size: 0x3c
 function function_e7b6b58c() {

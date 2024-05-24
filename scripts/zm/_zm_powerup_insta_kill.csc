@@ -6,15 +6,15 @@
 
 // Namespace zm_powerup_insta_kill
 // Params 0, eflags: 0x2
-// Checksum 0x4cd72d70, Offset: 0x120
+// Checksum 0x9c94a492, Offset: 0x120
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_insta_kill", &__init__, undefined, undefined);
 }
 
 // Namespace zm_powerup_insta_kill
 // Params 0, eflags: 0x0
-// Checksum 0x46fc899e, Offset: 0x160
+// Checksum 0x97362a4d, Offset: 0x160
 // Size: 0x74
 function __init__() {
     zm_powerups::include_zombie_powerup("insta_kill");

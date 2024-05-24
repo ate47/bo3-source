@@ -6,7 +6,7 @@
 #namespace events;
 
 // Namespace events
-// Params 3, eflags: 0x0
+// Params 3, eflags: 0x1 linked
 // Checksum 0xd51a2c92, Offset: 0x100
 // Size: 0x6c
 function add_timed_event(seconds, notify_string, client_notify_string) {
@@ -19,7 +19,7 @@ function add_timed_event(seconds, notify_string, client_notify_string) {
 }
 
 // Namespace events
-// Params 3, eflags: 0x0
+// Params 3, eflags: 0x1 linked
 // Checksum 0x4ff4517e, Offset: 0x178
 // Size: 0x9a
 function timed_event_monitor(seconds, notify_string, client_notify_string) {
@@ -38,7 +38,7 @@ function timed_event_monitor(seconds, notify_string, client_notify_string) {
 }
 
 // Namespace events
-// Params 3, eflags: 0x0
+// Params 3, eflags: 0x1 linked
 // Checksum 0x67f395e3, Offset: 0x220
 // Size: 0x9c
 function add_score_event(score, notify_string, client_notify_string) {
@@ -55,7 +55,7 @@ function add_score_event(score, notify_string, client_notify_string) {
 }
 
 // Namespace events
-// Params 3, eflags: 0x0
+// Params 3, eflags: 0x1 linked
 // Checksum 0x9fdf7685, Offset: 0x2c8
 // Size: 0xc4
 function add_round_score_event(score, notify_string, client_notify_string) {
@@ -73,7 +73,7 @@ function add_round_score_event(score, notify_string, client_notify_string) {
 }
 
 // Namespace events
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x38156e6c, Offset: 0x398
 // Size: 0xa0
 function any_team_reach_score(score) {
@@ -86,7 +86,7 @@ function any_team_reach_score(score) {
 }
 
 // Namespace events
-// Params 3, eflags: 0x0
+// Params 3, eflags: 0x1 linked
 // Checksum 0xa5e0a35d, Offset: 0x440
 // Size: 0x62
 function score_team_event_monitor(score, notify_string, client_notify_string) {
@@ -100,7 +100,7 @@ function score_team_event_monitor(score, notify_string, client_notify_string) {
 }
 
 // Namespace events
-// Params 3, eflags: 0x0
+// Params 3, eflags: 0x1 linked
 // Checksum 0x5076a8f, Offset: 0x4b0
 // Size: 0xbc
 function score_event_monitor(score, notify_string, client_notify_string) {
@@ -117,7 +117,7 @@ function score_event_monitor(score, notify_string, client_notify_string) {
 }
 
 // Namespace events
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x1d70fbda, Offset: 0x578
 // Size: 0x4c
 function event_notify(notify_string, client_notify_string) {

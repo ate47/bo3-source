@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x6ef44c6d, Offset: 0x1c0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("ability_gadgets", &__init__, undefined, undefined);
 }
 

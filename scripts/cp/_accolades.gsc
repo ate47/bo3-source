@@ -18,7 +18,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd63ec753, Offset: 0x388
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("accolades", &__init__, &__main__, undefined);
 }
 
@@ -235,7 +235,7 @@ function function_77b3b4d1() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xb55daa3, Offset: 0xea0
 // Size: 0x88
-function function_9ba543a3(var_5ba0c4e7, var_eb856299) {
+function private function_9ba543a3(var_5ba0c4e7, var_eb856299) {
     var_51ccabeb = tablelookuprownum("gamedata/stats/cp/statsmilestones1.csv", 4, var_5ba0c4e7);
     var_35cb50ff = tablelookupcolumnforrow("gamedata/stats/cp/statsmilestones1.csv", var_51ccabeb, 2);
     return int(var_35cb50ff) <= var_eb856299;
@@ -245,7 +245,7 @@ function function_9ba543a3(var_5ba0c4e7, var_eb856299) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x440f2787, Offset: 0xf30
 // Size: 0x2a
-function function_214e644a() {
+function private function_214e644a() {
     return isdefined(level.var_837b3a61) && level.var_837b3a61 || sessionmodeiscampaignzombiesgame();
 }
 
@@ -418,7 +418,7 @@ function increment(var_5ba0c4e7, n_val, var_50f65478) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xfc9ceb9d, Offset: 0x19b8
 // Size: 0xc0
-function function_35e3d94b(var_5ba0c4e7, str_notify) {
+function private function_35e3d94b(var_5ba0c4e7, str_notify) {
     self endon(#"hash_115de864");
     self endon(#"disconnect");
     if (!isdefined(self.var_4fbad7c0)) {
@@ -438,7 +438,7 @@ function function_35e3d94b(var_5ba0c4e7, str_notify) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xcdac2e41, Offset: 0x1a80
 // Size: 0x454
-function function_115de864() {
+function private function_115de864() {
     self notify(#"hash_115de864");
     accolades = [];
     self savegame::set_player_data("accolades", accolades);

@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xccdc7de3, Offset: 0x288
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("spawnlogic", &__init__, undefined, undefined);
 }
 
@@ -1872,7 +1872,7 @@ function get_random_intermission_point() {
 }
 
 // Namespace spawnlogic
-// Params 4, eflags: 0x0
+// Params 4, eflags: 0x1 linked
 // Checksum 0x9d50abb0, Offset: 0x77a0
 // Size: 0x12c
 function move_spawn_point(targetname, start_point, new_point, new_angles) {

@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x5c5c62ec, Offset: 0x288
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_killing_time", &__init__, undefined, "bgb");
 }
 
@@ -61,7 +61,7 @@ function validation() {
 // Params 13, eflags: 0x5 linked
 // Checksum 0xaafc20f0, Offset: 0x478
 // Size: 0x1fe
-function actor_damage_override(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, damagefromunderneath, modelindex, partname) {
+function private actor_damage_override(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, damagefromunderneath, modelindex, partname) {
     if (self.archetype !== "zombie") {
         return idamage;
     }
@@ -93,7 +93,7 @@ function actor_damage_override(einflictor, eattacker, idamage, idflags, smeansof
 // Params 15, eflags: 0x5 linked
 // Checksum 0xb76ca299, Offset: 0x680
 // Size: 0x19e
-function vehicle_damage_override(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
+function private vehicle_damage_override(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
     if (isdefined(self.var_a0e2dfff) && self.var_a0e2dfff) {
         return idamage;
     }

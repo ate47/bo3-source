@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x7a1f1815, Offset: 0x150
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("aat", &__init__, undefined, undefined);
 }
 
@@ -18,7 +18,7 @@ function function_2dc19561() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x79f2846a, Offset: 0x190
 // Size: 0x84
-function __init__() {
+function private __init__() {
     level.aat_initializing = 1;
     level.aat_default_info_name = "none";
     level.aat_default_info_icon = "blacktransparent";

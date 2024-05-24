@@ -89,7 +89,7 @@ function function_b6c845e8() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x9d176e31, Offset: 0x9e0
 // Size: 0x220
-function function_cf0834db(spawner) {
+function private function_cf0834db(spawner) {
     if (isdefined(spawner.targetname) && (isdefined(spawner.targetname) && (spawner.archetype == "direwolf" || spawner.archetype == "civilian" || issubstr(spawner.classname, "hero") || issubstr(spawner.classname, "boss") || issubstr(spawner.targetname, "hakim")) || issubstr(spawner.targetname, "chase_bomber")) || spawner.targetname === "comm_relay_igc_robot" || spawner.targetname === "robot_wrestles_maretti" || spawner.targetname === "cin_lot_09_02_pursuit_vign_wallsmash_robot" || spawner.targetname === "cin_gen_hendricksmoment_riphead_robot" || spawner.targetname === "standdown_robot01" || spawner.targetname === "standdown_robot02" || spawner.targetname === "standdown_robot03" || spawner.targetname === "rainman" || spawner.targetname === "balcony_bash_robot") {
         return false;
     }
@@ -103,7 +103,7 @@ function function_cf0834db(spawner) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xc01f17ff, Offset: 0xc08
 // Size: 0x64
-function function_aa71a1e8(spawner) {
+function private function_aa71a1e8(spawner) {
     if (!isdefined(spawner.targetname)) {
         return true;
     }

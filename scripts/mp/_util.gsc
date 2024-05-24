@@ -548,7 +548,7 @@ function trigger_thread_death_monitor(ent, ender) {
 }
 
 // Namespace util
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x8a6d7ff6, Offset: 0x1b90
 // Size: 0x1a6
 function trigger_thread(ent, on_enter_payload, on_exit_payload) {
@@ -782,7 +782,7 @@ function isflashbanged() {
 }
 
 // Namespace util
-// Params 5, eflags: 0x0
+// Params 5, eflags: 0x1 linked
 // Checksum 0x874c0072, Offset: 0x24b8
 // Size: 0xbc
 function domaxdamage(origin, attacker, inflictor, headshot, mod) {
@@ -1003,7 +1003,7 @@ function waittill_use_button_pressed() {
 }
 
 // Namespace util
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x48caf6c2, Offset: 0x2eb8
 // Size: 0x184
 function show_hint_text(str_text_to_show, b_should_blink, str_turn_off_notify, n_display_time) {

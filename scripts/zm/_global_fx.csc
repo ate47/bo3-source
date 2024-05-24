@@ -7,7 +7,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x3da3d744, Offset: 0x138
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("global_fx", &__init__, &main, undefined);
 }
 

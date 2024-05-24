@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd76e2ed8, Offset: 0x4e0
 // Size: 0x3ae
-function main() {
+function autoexec main() {
     ai::add_archetype_spawn_function("keeper_companion", &function_bfd27b96);
     clientfield::register("allplayers", "being_keeper_revived", 15000, 1, "int", &function_802744a7, 0, 0);
     clientfield::register("actor", "keeper_reviving", 15000, 1, "int", &function_a9b854ea, 0, 0);
@@ -144,7 +144,7 @@ function function_4b50c64(localclientnum, oldval, newval, bnewent, binitialsnap,
 // Params 7, eflags: 0x4
 // Checksum 0xa2bf5ce5, Offset: 0xe78
 // Size: 0xe4
-function function_a9b854ea(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function private function_a9b854ea(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(self.var_a9b854ea) && oldval == 1 && newval == 0) {
         stopfx(localclientnum, self.var_a9b854ea);
     }
@@ -158,7 +158,7 @@ function function_a9b854ea(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x4
 // Checksum 0x2d7e6419, Offset: 0xf68
 // Size: 0xdc
-function function_802744a7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function private function_802744a7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(self.var_b4d5098) && oldval == 1 && newval == 0) {
         stopfx(localclientnum, self.var_b4d5098);
     }

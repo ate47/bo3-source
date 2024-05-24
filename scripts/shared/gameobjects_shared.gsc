@@ -16,7 +16,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x2a163b6c, Offset: 0x440
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("gameobjects", &__init__, undefined, undefined);
 }
 
@@ -2298,7 +2298,7 @@ function function_700c62d(relativeteam, showicon) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x599f0506, Offset: 0x87e0
 // Size: 0x8c
 function hide_waypoint(e_player) {
@@ -2313,7 +2313,7 @@ function hide_waypoint(e_player) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xcc2ea3b4, Offset: 0x8878
 // Size: 0x8c
 function show_waypoint(e_player) {
@@ -2405,7 +2405,7 @@ function function_c4eb1d69() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xcfff5854, Offset: 0x8c38
 // Size: 0xb6
-function _set_team(team) {
+function private _set_team(team) {
     self.ownerteam = team;
     if (team != "any") {
         self.team = team;
@@ -2474,7 +2474,7 @@ function set_team_use_text(relativeteam, text) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2af8ea43, Offset: 0x8e90
 // Size: 0x2c
 function set_use_hint_text(text) {
@@ -2691,7 +2691,7 @@ function get_objective_ids(str_team) {
 }
 
 // Namespace gameobjects
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xe4955daa, Offset: 0x9858
 // Size: 0x1f8
 function function_e0e2d0fe(v_color, var_ea9602c1, var_9c1499b4, ignore_ent) {
@@ -2853,7 +2853,7 @@ function get_visible_carrier_model() {
 }
 
 // Namespace gameobjects
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x50039fd8, Offset: 0x9fa8
 // Size: 0x18a
 function destroy_object(deletetrigger, forcehide, b_connect_paths) {
@@ -2906,7 +2906,7 @@ function disable_object(forcehide) {
 }
 
 // Namespace gameobjects
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x97d77f34, Offset: 0xa290
 // Size: 0xfc
 function enable_object(forceshow) {

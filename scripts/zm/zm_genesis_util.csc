@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x7caed6f5, Offset: 0x400
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_genesis_util", &__init__, &__main__, undefined);
 }
 

@@ -88,7 +88,7 @@ function function_116bb43() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x63c8de46, Offset: 0x970
 // Size: 0xa4
-function function_65192900() {
+function private function_65192900() {
     if (isdefined(self.trigger)) {
         self.trigger delete();
     }
@@ -228,7 +228,7 @@ function function_7a8a936b() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xdeaebfbb, Offset: 0x13a8
 // Size: 0xa0
-function _rotatevec(vector, angle) {
+function private _rotatevec(vector, angle) {
     return (vector[0] * cos(angle) - vector[1] * sin(angle), vector[0] * sin(angle) + vector[1] * cos(angle), vector[2]);
 }
 
@@ -281,7 +281,7 @@ function function_1cb931df(def, var_3d19d2b1) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x66ac16e, Offset: 0x1750
 // Size: 0x94
-function function_fb78d226(triggervolume) {
+function private function_fb78d226(triggervolume) {
     self endon(#"death");
     self asmsetanimationrate(0.8);
     self.in_water = 1;
@@ -295,7 +295,7 @@ function function_fb78d226(triggervolume) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x80a1b57f, Offset: 0x17f0
 // Size: 0x158
-function function_323a3e31() {
+function private function_323a3e31() {
     self notify(#"hash_323a3e31");
     self endon(#"hash_323a3e31");
     self endon(#"hash_3c011e06");
@@ -317,7 +317,7 @@ function function_323a3e31() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x6459a13, Offset: 0x1950
 // Size: 0x1c8
-function function_6ec8176a() {
+function private function_6ec8176a() {
     self notify(#"hash_6ec8176a");
     self endon(#"hash_6ec8176a");
     self endon(#"hash_3c011e06");
@@ -349,7 +349,7 @@ function function_6ec8176a() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x7e274c57, Offset: 0x1b20
 // Size: 0x240
-function function_70dbf276() {
+function private function_70dbf276() {
     self notify(#"hash_70dbf276");
     self endon(#"hash_70dbf276");
     self endon(#"hash_3c011e06");
@@ -391,7 +391,7 @@ function function_70dbf276() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x99e29feb, Offset: 0x1d68
 // Size: 0xf4
-function function_a4d53f1f(type) {
+function private function_a4d53f1f(type) {
     spawn_locations = [];
     var_1be21036 = namespace_3ca3c537::function_d2d75f5d() + "_doa_hazard";
     spawn_locations = struct::get_array(var_1be21036);
@@ -411,7 +411,7 @@ function function_a4d53f1f(type) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x664e5649, Offset: 0x1e68
 // Size: 0x110
-function function_40c555dc(type) {
+function private function_40c555dc(type) {
     spawn_locations = [];
     var_1be21036 = namespace_3ca3c537::function_d2d75f5d() + "_doa_hazard";
     spawn_locations = struct::get_array(var_1be21036);
@@ -494,7 +494,7 @@ function function_3341776e(origin, var_891d7d80, var_ba2a535c) {
 // Params 1, eflags: 0x4
 // Checksum 0x2dea5705, Offset: 0x23c8
 // Size: 0x88
-function function_993013cd(trigger) {
+function private function_993013cd(trigger) {
     self endon(#"death");
     while (true) {
         if (isdefined(self.active) && self.active && isdefined(trigger)) {
@@ -508,7 +508,7 @@ function function_993013cd(trigger) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x872d5dd5, Offset: 0x2458
 // Size: 0x240
-function function_8a97d2c0(trigger) {
+function private function_8a97d2c0(trigger) {
     self endon(#"death");
     trigger endon(#"death");
     while (true) {
@@ -611,7 +611,7 @@ function function_193a95a6() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xbd2509a2, Offset: 0x29b8
 // Size: 0x34
-function function_2a738695() {
+function private function_2a738695() {
     self waittill(#"death");
     arrayremovevalue(level.doa.var_7817fe3c, self);
 }
@@ -672,7 +672,7 @@ function function_d8d20160() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x25ed5f68, Offset: 0x2dd0
 // Size: 0x44
-function function_d8c94716() {
+function private function_d8c94716() {
     self thread namespace_49107f3a::function_783519c1("exit_taken", 1);
     self thread namespace_49107f3a::function_783519c1("doa_game_is_over", 1);
 }
@@ -681,7 +681,7 @@ function function_d8c94716() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xede91e96, Offset: 0x2e20
 // Size: 0x12c
-function function_441547f1() {
+function private function_441547f1() {
     self endon(#"death");
     while (true) {
         var_6792dc08 = getentarray("a_pickup_item", "script_noteworthy");

@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x41c61abb, Offset: 0x1c8
 // Size: 0x214
-function init() {
+function autoexec init() {
     level.zm_variant_type_max = [];
     level.zm_variant_type_max["walk"] = [];
     level.zm_variant_type_max["run"] = [];
@@ -55,7 +55,7 @@ function mannequinspawnsetup(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xeb636fa1, Offset: 0x4a8
 // Size: 0x18c
-function mannequinshouldmelee(entity) {
+function private mannequinshouldmelee(entity) {
     if (!isdefined(entity.enemy)) {
         return false;
     }

@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf3a6087f, Offset: 0x400
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("animation", &__init__, undefined, undefined);
 }
 
@@ -274,7 +274,7 @@ function _get_align_pos(v_origin_or_ent, v_angles_or_tag) {
 }
 
 // Namespace animation
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x36569c1d, Offset: 0x12a8
 // Size: 0x130
 function teleport(animation, v_origin_or_ent, v_angles_or_tag, time) {

@@ -18,12 +18,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0x34716b07, Offset: 0x2c0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_zod_robot", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_2cce1885
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe94728a4, Offset: 0x300
 // Size: 0xbc
 function __init__() {
@@ -33,16 +33,16 @@ function __init__() {
 }
 
 // Namespace namespace_2cce1885
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x25ba1c5c, Offset: 0x3c8
 // Size: 0x3c
-function function_a0b7ccbf(localclientnum) {
+function private function_a0b7ccbf(localclientnum) {
     entity = self;
     entity setdrawname(%ZM_ZOD_ROBOT_NAME);
 }
 
 // Namespace namespace_2cce1885
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x82129aed, Offset: 0x410
 // Size: 0x64
 function function_16e00222(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -50,7 +50,7 @@ function function_16e00222(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace namespace_2cce1885
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xcc0e75ea, Offset: 0x480
 // Size: 0x1a6
 function robot_lights(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

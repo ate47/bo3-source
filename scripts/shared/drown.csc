@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa963c19b, Offset: 0x220
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("drown", &__init__, undefined, undefined);
 }
 

@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x8d6f6560, Offset: 0x2e8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("pickup_items", &__init__, undefined, undefined);
 }
 
@@ -349,7 +349,7 @@ function respawn_pickup() {
 }
 
 // Namespace pickup_items
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2f3069cc, Offset: 0x1288
 // Size: 0x8a
 function respawn_all_pickups() {

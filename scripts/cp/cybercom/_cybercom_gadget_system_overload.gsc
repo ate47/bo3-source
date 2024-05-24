@@ -133,7 +133,7 @@ function function_4135a1c4(slot, weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x5e11d271, Offset: 0xaa8
 // Size: 0x238
-function function_602b28e9(target) {
+function private function_602b28e9(target) {
     if (!isdefined(target)) {
         return false;
     }
@@ -170,7 +170,7 @@ function function_602b28e9(target) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6b564225, Offset: 0xce8
 // Size: 0x52
-function function_8aac802c(weapon) {
+function private function_8aac802c(weapon) {
     return arraycombine(getaiteamarray("axis"), getaiteamarray("team3"), 0, 0);
 }
 
@@ -178,7 +178,7 @@ function function_8aac802c(weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x80f2e8f1, Offset: 0xd48
 // Size: 0x2ac
-function function_35d3d1a2(slot, weapon) {
+function private function_35d3d1a2(slot, weapon) {
     aborted = 0;
     fired = 0;
     foreach (item in self.cybercom.var_d1460543) {
@@ -215,7 +215,7 @@ function function_35d3d1a2(slot, weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x7edeb03f, Offset: 0x1000
 // Size: 0x12c
-function function_b4223599(attacker, weapon) {
+function private function_b4223599(attacker, weapon) {
     if (isdefined(self.var_7c04bee3) && gettime() < self.var_7c04bee3) {
         return;
     }

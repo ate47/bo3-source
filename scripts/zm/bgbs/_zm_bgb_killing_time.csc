@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc0fa76bd, Offset: 0x1d8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_killing_time", &__init__, undefined, undefined);
 }
 
@@ -74,7 +74,7 @@ function function_a81107fc(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 2, eflags: 0x5 linked
 // Checksum 0x4d0d7ef4, Offset: 0x490
 // Size: 0x54
-function function_10dcbf51(localclientnum, fxobj) {
+function private function_10dcbf51(localclientnum, fxobj) {
     fxobj playsound(localclientnum, "evt_ai_explode");
     wait(1);
     fxobj delete();

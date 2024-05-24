@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xb33a4207, Offset: 0x608
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("thrasher", &__init__, undefined, undefined);
 }
 
@@ -41,7 +41,7 @@ function __init__() {
 // Params 0, eflags: 0x2
 // Checksum 0x19bf02cf, Offset: 0x8d0
 // Size: 0x18a
-function precache() {
+function autoexec precache() {
     level._effect["fx_mech_foot_step"] = "dlc1/castle/fx_mech_foot_step";
     level._effect["fx_thrash_pustule_burst"] = "dlc2/island/fx_thrash_pustule_burst";
     level._effect["fx_thrash_pustule_spore_exp"] = "dlc2/island/fx_thrash_pustule_spore_exp";
@@ -64,7 +64,7 @@ function precache() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7cea4e7f, Offset: 0xa68
 // Size: 0x7c
-function function_eb999617(localclientnum) {
+function private function_eb999617(localclientnum) {
     entity = self;
     entity.ignoreragdoll = 1;
     level._footstepcbfuncs[entity.archetype] = &function_5bcd6fbb;
@@ -75,7 +75,7 @@ function function_eb999617(localclientnum) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xe3631728, Offset: 0xaf0
 // Size: 0x128
-function function_2f3aacf4() {
+function private function_2f3aacf4() {
     while (true) {
         var_1dec125a = level.var_978978e9;
         level.var_978978e9 = [];
@@ -128,7 +128,7 @@ function function_5bcd6fbb(localclientnum, pos, surface, notetrack, bone) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x83a90997, Offset: 0xe78
 // Size: 0x3c
-function function_f67a63e2(localclientnum, effect) {
+function private function_f67a63e2(localclientnum, effect) {
     if (isdefined(effect)) {
         stopfx(localclientnum, effect);
     }
@@ -138,7 +138,7 @@ function function_f67a63e2(localclientnum, effect) {
 // Params 7, eflags: 0x5 linked
 // Checksum 0xf7490221, Offset: 0xec0
 // Size: 0x12c
-function function_6291f979(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_6291f979(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     entity = self;
     if (!isdefined(entity) || entity.archetype !== "thrasher" || !entity hasdobj(localclientnum)) {
         return;
@@ -157,7 +157,7 @@ function function_6291f979(localclientnum, oldvalue, newvalue, bnewent, binitial
 // Params 7, eflags: 0x5 linked
 // Checksum 0x13de531f, Offset: 0xff8
 // Size: 0x302
-function function_d5c67375(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_d5c67375(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     entity = self;
     if (!isdefined(entity) || entity.archetype !== "thrasher" || !entity hasdobj(localclientnum)) {
         return;
@@ -192,7 +192,7 @@ function function_d5c67375(localclientnum, oldvalue, newvalue, bnewent, binitial
 // Params 7, eflags: 0x5 linked
 // Checksum 0xd3bb5bb1, Offset: 0x1308
 // Size: 0x370
-function function_15e61dc(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_15e61dc(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     entity = self;
     var_dc3c7a86 = array(1, 2, 4);
     var_f9d13adf = array("tag_spore_chest", "tag_spore_back", "tag_spore_leg");
@@ -229,7 +229,7 @@ function function_15e61dc(localclientnum, oldvalue, newvalue, bnewent, binitials
 // Params 7, eflags: 0x5 linked
 // Checksum 0x6754384, Offset: 0x1680
 // Size: 0x184
-function function_4b871d5b(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_4b871d5b(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     entity = self;
     var_4d368c9c = undefined;
     var_dc3c7a86 = array(1, 2, 4);
@@ -251,7 +251,7 @@ function function_4b871d5b(localclientnum, oldvalue, newvalue, bnewent, binitial
 // Params 3, eflags: 0x5 linked
 // Checksum 0xd48cd263, Offset: 0x1810
 // Size: 0x92
-function function_1ce9e0de(localclientnum, entity, gibflag) {
+function private function_1ce9e0de(localclientnum, entity, gibflag) {
     if (!isdefined(entity) || entity.archetype !== "thrasher" || !entity hasdobj(localclientnum)) {
         return;
     }
@@ -263,7 +263,7 @@ function function_1ce9e0de(localclientnum, entity, gibflag) {
 // Params 7, eflags: 0x5 linked
 // Checksum 0x10d145c6, Offset: 0x18b0
 // Size: 0x1dc
-function function_358dc87b(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_358dc87b(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue) {
         if (!isdefined(self.var_e7618574)) {
             self.var_e7618574 = self playloopsound("zmb_thrasher_consumed_lp", 5);

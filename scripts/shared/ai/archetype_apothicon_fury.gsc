@@ -34,7 +34,7 @@
 class class_7d30a04a {
 
     // Namespace namespace_7d30a04a
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xbc354e48, Offset: 0x18d8
     // Size: 0x1c
     function constructor() {
@@ -55,7 +55,7 @@ class jukeinfo {
 class class_f62488b9 {
 
     // Namespace namespace_f62488b9
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xaf212837, Offset: 0x19a0
     // Size: 0x10
     function constructor() {
@@ -68,7 +68,7 @@ class class_f62488b9 {
 // Params 0, eflags: 0x2
 // Checksum 0xeae8cb7b, Offset: 0xb08
 // Size: 0x1b4
-function init() {
+function autoexec init() {
     function_951f2929();
     namespace_55e12b83::function_dbcea833();
     spawner::add_archetype_spawn_function("apothicon_fury", &function_cc9eaa0f);
@@ -84,10 +84,10 @@ function init() {
 }
 
 // Namespace namespace_53429ee4
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xd5fdb009, Offset: 0xcc8
 // Size: 0x464
-function function_951f2929() {
+function private function_951f2929() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconCanJuke", &function_d56a72a7);
     behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconJukeInit", &function_5d6a8bf3);
     behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconPreemptiveJukeService", &function_9148e6d9);
@@ -117,33 +117,33 @@ function function_951f2929() {
 }
 
 // Namespace namespace_53429ee4
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xba9f0669, Offset: 0x1138
 // Size: 0x1fc
-function function_cc9eaa0f() {
+function private function_cc9eaa0f() {
     blackboard::createblackboardforentity(self);
     blackboard::registerblackboardattribute(self, "_locomotion_speed", "locomotion_speed_run", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("juke_active");
+            self trackblackboardattribute("zombie");
         #/
     }
     blackboard::registerblackboardattribute(self, "_apothicon_bamf_distance", undefined, &function_a6019ee6);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("juke_active");
+            self trackblackboardattribute("left");
         #/
     }
     blackboard::registerblackboardattribute(self, "_idgun_damage_direction", "back", &bb_idgungetdamagedirection);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("juke_active");
+            self trackblackboardattribute("right_arm_upper");
         #/
     }
     blackboard::registerblackboardattribute(self, "_variant_type", 0, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("juke_active");
+            self trackblackboardattribute("<unknown string>");
         #/
     }
     self aiutility::function_89e1fc16();
@@ -155,10 +155,10 @@ function function_cc9eaa0f() {
 }
 
 // Namespace namespace_53429ee4
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x3c5afc7b, Offset: 0x1340
 // Size: 0x164
-function function_ae84bd66() {
+function private function_ae84bd66() {
     self.entityradius = 30;
     self.jukemaxdistance = 1500;
     self.updatesight = 0;
@@ -179,16 +179,16 @@ function function_ae84bd66() {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x989fec2e, Offset: 0x14b0
 // Size: 0x34
-function function_e4af4799(entity) {
+function private function_e4af4799(entity) {
     entity.__blackboard = undefined;
     entity function_cc9eaa0f();
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x64760ec8, Offset: 0x14f0
 // Size: 0x132
 function function_1ff8e5b1(entity) {
@@ -205,7 +205,7 @@ function function_1ff8e5b1(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe4aaa393, Offset: 0x1630
 // Size: 0xc
 function function_5e2acc67(entity) {
@@ -213,10 +213,10 @@ function function_5e2acc67(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0xe9349e80, Offset: 0x1648
 // Size: 0x188
-function function_ada7c6a6(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
+function private function_ada7c6a6(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
     entity orientmode("face angle", entity.angles[1]);
     entity setrepairpaths(0);
     locomotionspeed = blackboard::getblackboardattribute(entity, "_locomotion_speed");
@@ -237,10 +237,10 @@ function function_ada7c6a6(entity, mocompanim, mocompanimblendouttime, mocompani
 }
 
 // Namespace namespace_53429ee4
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0x13a9b20a, Offset: 0x17d8
 // Size: 0xf4
-function function_c5c85a6d(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
+function private function_c5c85a6d(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
     if (!isdefined(entity.traverseendnode)) {
         return;
     }
@@ -254,7 +254,7 @@ function function_c5c85a6d(entity, mocompanim, mocompanimblendouttime, mocompani
 }
 
 // Namespace namespace_53429ee4
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x9589d02b, Offset: 0x1a58
 // Size: 0x824
 function function_f7b15804(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -274,39 +274,39 @@ function function_f7b15804(entity, mocompanim, mocompanimblendouttime, mocompani
     velocity = entity getvelocity();
     predictedpos = entity.origin + velocity * 0.1;
     /#
-        recordcircle(landpos, 8, (0, 0, 1), "juke_active", entity);
-        record3dtext("juke_active" + distance(predictedpos, landpos), landpos, (0, 0, 1), "juke_active");
+        recordcircle(landpos, 8, (0, 0, 1), "<unknown string>", entity);
+        record3dtext("<unknown string>" + distance(predictedpos, landpos), landpos, (0, 0, 1), "<unknown string>");
     #/
     var_c23f776 = entity.jukeinfo.var_c23f776;
     heightdiff = var_c23f776[2] - landpos[2];
     /#
-        recordcircle(var_c23f776, 8, (0, 1, 0), "juke_active", entity);
-        recordline(landpos, var_c23f776, (0, 1, 0), "juke_active", entity);
+        recordcircle(var_c23f776, 8, (0, 1, 0), "<unknown string>", entity);
+        recordline(landpos, var_c23f776, (0, 1, 0), "<unknown string>", entity);
     #/
     /#
-        assert(animhasnotetrack(mocompanim, "juke_active"));
+        assert(animhasnotetrack(mocompanim, "<unknown string>"));
     #/
     starttime = getnotetracktimes(mocompanim, "start_effect")[0];
     var_df235bea = getmovedelta(mocompanim, 0, starttime, entity);
     startpos = entity localtoworldcoords(var_df235bea);
     /#
-        assert(animhasnotetrack(mocompanim, "juke_active"));
+        assert(animhasnotetrack(mocompanim, "<unknown string>"));
     #/
     stoptime = getnotetracktimes(mocompanim, "end_effect")[0];
     var_5becc98c = getmovedelta(mocompanim, 0, stoptime, entity);
     stoppos = entity localtoworldcoords(var_5becc98c);
     /#
-        recordsphere(startpos, 3, (0, 0, 1), "juke_active", entity);
-        recordsphere(stoppos, 3, (0, 0, 1), "juke_active", entity);
-        recordline(predictedpos, startpos, (0, 0, 1), "juke_active", entity);
-        recordline(startpos, stoppos, (0, 0, 1), "juke_active", entity);
-        recordline(stoppos, landpos, (0, 0, 1), "juke_active", entity);
+        recordsphere(startpos, 3, (0, 0, 1), "<unknown string>", entity);
+        recordsphere(stoppos, 3, (0, 0, 1), "<unknown string>", entity);
+        recordline(predictedpos, startpos, (0, 0, 1), "<unknown string>", entity);
+        recordline(startpos, stoppos, (0, 0, 1), "<unknown string>", entity);
+        recordline(stoppos, landpos, (0, 0, 1), "<unknown string>", entity);
     #/
     var_bf7e71d5 = stoppos + (0, 0, heightdiff);
     /#
-        recordline(startpos, var_bf7e71d5, (1, 1, 0), "juke_active", entity);
-        recordline(var_bf7e71d5, var_c23f776, (1, 1, 0), "juke_active", entity);
-        recordsphere(var_bf7e71d5, 3, (1, 1, 0), "juke_active", entity);
+        recordline(startpos, var_bf7e71d5, (1, 1, 0), "<unknown string>", entity);
+        recordline(var_bf7e71d5, var_c23f776, (1, 1, 0), "<unknown string>", entity);
+        recordsphere(var_bf7e71d5, 3, (1, 1, 0), "<unknown string>", entity);
     #/
     entity.var_7d30a04a = undefined;
     entity.var_7d30a04a = new class_7d30a04a();
@@ -323,15 +323,15 @@ function function_f7b15804(entity, mocompanim, mocompanimblendouttime, mocompani
     entity.var_7d30a04a.var_c23f776 = var_c23f776;
     /#
         if (heightdiff < 0) {
-            record3dtext("juke_active" + distance(landpos, var_c23f776) + "juke_active" + entity.var_7d30a04a.stepsize + "juke_active" + adjustduration, var_c23f776, (1, 0.5, 0), "juke_active");
+            record3dtext("<unknown string>" + distance(landpos, var_c23f776) + "<unknown string>" + entity.var_7d30a04a.stepsize + "<unknown string>" + adjustduration, var_c23f776, (1, 0.5, 0), "<unknown string>");
             return;
         }
-        record3dtext("juke_active" + distance(landpos, var_c23f776) + "juke_active" + entity.var_7d30a04a.stepsize + "juke_active" + adjustduration, var_c23f776, (1, 0.5, 0), "juke_active");
+        record3dtext("<unknown string>" + distance(landpos, var_c23f776) + "<unknown string>" + entity.var_7d30a04a.stepsize + "<unknown string>" + adjustduration, var_c23f776, (1, 0.5, 0), "<unknown string>");
     #/
 }
 
 // Namespace namespace_53429ee4
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x867838a, Offset: 0x2288
 // Size: 0x224
 function function_9a6bdbed(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -352,12 +352,12 @@ function function_9a6bdbed(entity, mocompanim, mocompanimblendouttime, mocompani
         entity orientmode("face direction", entity.enemy.origin - entity.origin);
     }
     /#
-        recordcircle(entity.var_7d30a04a.var_c23f776, 8, (0, 1, 0), "juke_active", entity);
+        recordcircle(entity.var_7d30a04a.var_c23f776, 8, (0, 1, 0), "<unknown string>", entity);
     #/
 }
 
 // Namespace namespace_53429ee4
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0xa17e420b, Offset: 0x24b8
 // Size: 0x13c
 function function_7db60953(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -369,7 +369,7 @@ function function_7db60953(entity, mocompanim, mocompanimblendouttime, mocompani
     entity.pushable = 1;
     entity.jukeinfo = undefined;
     /#
-        recordcircle(entity.var_7d30a04a.var_c23f776, 8, (0, 1, 0), "juke_active", entity);
+        recordcircle(entity.var_7d30a04a.var_c23f776, 8, (0, 1, 0), "<unknown string>", entity);
     #/
     if (isdefined(entity.enemy)) {
         entity orientmode("face direction", entity.enemy.origin - entity.origin);
@@ -377,10 +377,10 @@ function function_7db60953(entity, mocompanim, mocompanimblendouttime, mocompani
 }
 
 // Namespace namespace_53429ee4
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0x7cd58a24, Offset: 0x2600
 // Size: 0x9c0
-function function_f6c42fd2(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
+function private function_f6c42fd2(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
     /#
         assert(isdefined(entity.var_7d30a04a.adjustmentstarted) && entity.var_7d30a04a.adjustmentstarted);
     #/
@@ -425,8 +425,8 @@ function function_f6c42fd2(entity, mocompanim, mocompanimblendouttime, mocompani
         }
         landpos = entity.var_7d30a04a.var_c23f776;
         /#
-            recordcircle(var_5288fe83, 8, (0, 1, 1), "juke_active", entity);
-            recordcircle(landpos, 8, (0, 0, 1), "juke_active", entity);
+            recordcircle(var_5288fe83, 8, (0, 1, 1), "<unknown string>", entity);
+            recordcircle(landpos, 8, (0, 0, 1), "<unknown string>", entity);
         #/
         zdiff = landpos[2] - var_5288fe83[2];
         tracestart = undefined;
@@ -447,8 +447,8 @@ function function_f6c42fd2(entity, mocompanim, mocompanimblendouttime, mocompani
             return;
         }
         /#
-            recordcircle(var_c23f776, 8, (0, 1, 0), "juke_active", entity);
-            recordline(landpos, var_c23f776, (0, 1, 0), "juke_active", entity);
+            recordcircle(var_c23f776, 8, (0, 1, 0), "<unknown string>", entity);
+            recordline(landpos, var_c23f776, (0, 1, 0), "<unknown string>", entity);
         #/
         /#
             assert(isdefined(entity.var_7d30a04a));
@@ -469,9 +469,9 @@ function function_f6c42fd2(entity, mocompanim, mocompanimblendouttime, mocompani
         entity.var_31fe535c.stepsize = heightdiff / adjustduration;
         /#
             if (heightdiff < 0) {
-                record3dtext("juke_active" + entity.var_31fe535c.stepsize + "juke_active" + adjustduration, var_c23f776, (1, 0.5, 0), "juke_active");
+                record3dtext("<unknown string>" + entity.var_31fe535c.stepsize + "<unknown string>" + adjustduration, var_c23f776, (1, 0.5, 0), "<unknown string>");
             } else {
-                record3dtext("juke_active" + entity.var_31fe535c.stepsize + "juke_active" + adjustduration, var_c23f776, (1, 0.5, 0), "juke_active");
+                record3dtext("<unknown string>" + entity.var_31fe535c.stepsize + "<unknown string>" + adjustduration, var_c23f776, (1, 0.5, 0), "<unknown string>");
             }
         #/
         var_5288fe83 = (var_5288fe83[0], var_5288fe83[1], landpos[2]);
@@ -484,14 +484,14 @@ function function_f6c42fd2(entity, mocompanim, mocompanimblendouttime, mocompani
         entity.var_f62488b9.var_cc809cdf = var_cc809cdf;
         entity.var_f62488b9.adjustmentstarted = 1;
         /#
-            record3dtext("juke_active" + var_74b721bd + "juke_active" + entity.var_f62488b9.stepsize + "juke_active", var_5288fe83, (0, 0, 1), "juke_active");
+            record3dtext("<unknown string>" + var_74b721bd + "<unknown string>" + entity.var_f62488b9.stepsize + "<unknown string>", var_5288fe83, (0, 0, 1), "<unknown string>");
         #/
         entity.var_7d30a04a.var_dfd59afa = 1;
     }
 }
 
 // Namespace namespace_53429ee4
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x52bd3b23, Offset: 0x2fc8
 // Size: 0xa84
 function function_7e253d5(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -515,10 +515,10 @@ function function_7e253d5(entity, mocompanim, mocompanimblendouttime, mocompanim
     var_26689e5d = getmovedelta(mocompanim, 0, 1, entity);
     landpos = entity localtoworldcoords(var_26689e5d);
     /#
-        recordcircle(entity.enemy.origin, 8, (0, 1, 1), "juke_active", entity);
-        recordline(landpos, entity.enemy.origin, (0, 1, 1), "juke_active", entity);
-        recordcircle(landpos, 8, (0, 0, 1), "juke_active", entity);
-        record3dtext("juke_active" + distance(entity.origin, landpos), landpos, (0, 0, 1), "juke_active");
+        recordcircle(entity.enemy.origin, 8, (0, 1, 1), "<unknown string>", entity);
+        recordline(landpos, entity.enemy.origin, (0, 1, 1), "<unknown string>", entity);
+        recordcircle(landpos, 8, (0, 0, 1), "<unknown string>", entity);
+        record3dtext("<unknown string>" + distance(entity.origin, landpos), landpos, (0, 0, 1), "<unknown string>");
     #/
     zdiff = entity.origin[2] - entity.enemy.origin[2];
     tracestart = undefined;
@@ -539,34 +539,34 @@ function function_7e253d5(entity, mocompanim, mocompanimblendouttime, mocompanim
         var_c23f776 = entity.enemy.origin;
     }
     /#
-        recordcircle(var_c23f776, 8, (0, 1, 0), "juke_active", entity);
-        recordline(landpos, var_c23f776, (0, 1, 0), "juke_active", entity);
+        recordcircle(var_c23f776, 8, (0, 1, 0), "<unknown string>", entity);
+        recordline(landpos, var_c23f776, (0, 1, 0), "<unknown string>", entity);
     #/
     heightdiff = var_c23f776[2] - landpos[2];
     /#
-        assert(animhasnotetrack(mocompanim, "juke_active"));
+        assert(animhasnotetrack(mocompanim, "<unknown string>"));
     #/
     starttime = getnotetracktimes(mocompanim, "start_effect")[0];
     var_df235bea = getmovedelta(mocompanim, 0, starttime, entity);
     startpos = entity localtoworldcoords(var_df235bea);
     /#
-        assert(animhasnotetrack(mocompanim, "juke_active"));
+        assert(animhasnotetrack(mocompanim, "<unknown string>"));
     #/
     stoptime = getnotetracktimes(mocompanim, "end_effect")[0];
     var_5becc98c = getmovedelta(mocompanim, 0, stoptime, entity);
     stoppos = entity localtoworldcoords(var_5becc98c);
     /#
-        recordsphere(startpos, 3, (0, 0, 1), "juke_active", entity);
-        recordsphere(stoppos, 3, (0, 0, 1), "juke_active", entity);
-        recordline(entity.origin, startpos, (0, 0, 1), "juke_active", entity);
-        recordline(startpos, stoppos, (0, 0, 1), "juke_active", entity);
-        recordline(stoppos, landpos, (0, 0, 1), "juke_active", entity);
+        recordsphere(startpos, 3, (0, 0, 1), "<unknown string>", entity);
+        recordsphere(stoppos, 3, (0, 0, 1), "<unknown string>", entity);
+        recordline(entity.origin, startpos, (0, 0, 1), "<unknown string>", entity);
+        recordline(startpos, stoppos, (0, 0, 1), "<unknown string>", entity);
+        recordline(stoppos, landpos, (0, 0, 1), "<unknown string>", entity);
     #/
     var_bf7e71d5 = stoppos + (0, 0, heightdiff);
     /#
-        recordline(startpos, var_bf7e71d5, (0, 1, 0), "juke_active", entity);
-        recordline(var_bf7e71d5, var_c23f776, (0, 1, 0), "juke_active", entity);
-        recordsphere(var_bf7e71d5, 3, (0, 1, 0), "juke_active", entity);
+        recordline(startpos, var_bf7e71d5, (0, 1, 0), "<unknown string>", entity);
+        recordline(var_bf7e71d5, var_c23f776, (0, 1, 0), "<unknown string>", entity);
+        recordsphere(var_bf7e71d5, 3, (0, 1, 0), "<unknown string>", entity);
     #/
     entity.var_7d30a04a = new class_7d30a04a();
     entity.var_7d30a04a.starttime = starttime;
@@ -582,15 +582,15 @@ function function_7e253d5(entity, mocompanim, mocompanimblendouttime, mocompanim
     entity.var_7d30a04a.var_c23f776 = var_c23f776;
     /#
         if (heightdiff < 0) {
-            record3dtext("juke_active" + distance(landpos, var_c23f776) + "juke_active" + entity.var_7d30a04a.stepsize + "juke_active" + adjustduration, var_c23f776, (1, 0.5, 0), "juke_active");
+            record3dtext("<unknown string>" + distance(landpos, var_c23f776) + "<unknown string>" + entity.var_7d30a04a.stepsize + "<unknown string>" + adjustduration, var_c23f776, (1, 0.5, 0), "<unknown string>");
             return;
         }
-        record3dtext("juke_active" + distance(landpos, var_c23f776) + "juke_active" + entity.var_7d30a04a.stepsize + "juke_active" + adjustduration, var_c23f776, (1, 0.5, 0), "juke_active");
+        record3dtext("<unknown string>" + distance(landpos, var_c23f776) + "<unknown string>" + entity.var_7d30a04a.stepsize + "<unknown string>" + adjustduration, var_c23f776, (1, 0.5, 0), "<unknown string>");
     #/
 }
 
 // Namespace namespace_53429ee4
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x40a8a313, Offset: 0x3a58
 // Size: 0x2b4
 function function_320356b8(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -626,7 +626,7 @@ function function_320356b8(entity, mocompanim, mocompanimblendouttime, mocompani
 }
 
 // Namespace namespace_53429ee4
-// Params 5, eflags: 0x1 linked
+// Params 5, eflags: 0x0
 // Checksum 0x2b9201a7, Offset: 0x3d18
 // Size: 0x1b4
 function function_2dbbd110(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -650,7 +650,7 @@ function function_2dbbd110(entity, mocompanim, mocompanimblendouttime, mocompani
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2bb21308, Offset: 0x3ed8
 // Size: 0x3a
 function function_e28d10bc(entity) {
@@ -658,7 +658,7 @@ function function_e28d10bc(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa2bba148, Offset: 0x3f20
 // Size: 0x164
 function function_846947d8(behaviortreeentity) {
@@ -685,7 +685,7 @@ function function_846947d8(behaviortreeentity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xad513294, Offset: 0x4090
 // Size: 0x22
 function function_dfb1e4f7(entity) {
@@ -693,7 +693,7 @@ function function_dfb1e4f7(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x1fea1b65, Offset: 0x40c0
 // Size: 0x22
 function function_6faf5c02(entity) {
@@ -701,7 +701,7 @@ function function_6faf5c02(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4eef90df, Offset: 0x40f0
 // Size: 0x4da
 function function_d0f50cb1(entity, var_9f9b11ec) {
@@ -781,7 +781,7 @@ function function_d0f50cb1(entity, var_9f9b11ec) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc0e1f14e, Offset: 0x45d8
 // Size: 0x44
 function function_a6019ee6(entity) {
@@ -790,7 +790,7 @@ function function_a6019ee6(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x95fa6968, Offset: 0x4628
 // Size: 0xf4
 function function_97e56cce(entity) {
@@ -806,7 +806,7 @@ function function_97e56cce(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x37f2eead, Offset: 0x4728
 // Size: 0x4c
 function function_3926ee39(entity) {
@@ -818,7 +818,7 @@ function function_3926ee39(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe69994ed, Offset: 0x4780
 // Size: 0x7c
 function function_f5222bfe(entity) {
@@ -829,7 +829,7 @@ function function_f5222bfe(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5d2be2cc, Offset: 0x4808
 // Size: 0x2a
 function bb_idgungetdamagedirection() {
@@ -840,7 +840,7 @@ function bb_idgungetdamagedirection() {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xc391199c, Offset: 0x4840
 // Size: 0x17c
 function function_eac19177(entity) {
@@ -858,7 +858,7 @@ function function_eac19177(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x15902495, Offset: 0x49c8
 // Size: 0x38
 function function_29c4b423(entity) {
@@ -867,7 +867,7 @@ function function_29c4b423(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xdcf170d, Offset: 0x4a08
 // Size: 0x138
 function function_f9d34dc6(entity) {
@@ -890,7 +890,7 @@ function function_f9d34dc6(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe5457c01, Offset: 0x4b48
 // Size: 0x20a
 function function_556629b3(entity) {
@@ -917,10 +917,10 @@ function function_556629b3(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0x529e817e, Offset: 0x4d60
 // Size: 0x1d4
-function function_9babb92c(zombie, thrasher, predicted_pos) {
+function private function_9babb92c(zombie, thrasher, predicted_pos) {
     if (zombie.knockdown === 1) {
         return false;
     }
@@ -947,7 +947,7 @@ function function_9babb92c(zombie, thrasher, predicted_pos) {
 }
 
 // Namespace namespace_53429ee4
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9a05aa64, Offset: 0x4f40
 // Size: 0x2b4
 function function_6a78ff68(entity, zombie) {
@@ -985,7 +985,7 @@ function function_6a78ff68(entity, zombie) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2f7a1da2, Offset: 0x5200
 // Size: 0x18c
 function function_fca24ca2(entity) {
@@ -1013,7 +1013,7 @@ function function_fca24ca2(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa45e8cb6, Offset: 0x5398
 // Size: 0x140
 function function_ee6717e6(entity) {
@@ -1032,7 +1032,7 @@ function function_ee6717e6(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x7b68c4df, Offset: 0x5590
 // Size: 0xf8
 function function_9148e6d9(entity) {
@@ -1056,7 +1056,7 @@ function function_9148e6d9(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaf69401, Offset: 0x5690
 // Size: 0x2e
 function function_741eeaa1(entity) {
@@ -1064,7 +1064,7 @@ function function_741eeaa1(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4dcf272b, Offset: 0x56c8
 // Size: 0x1c
 function function_6ca3d080(entity) {
@@ -1072,7 +1072,7 @@ function function_6ca3d080(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2052786d, Offset: 0x56f0
 // Size: 0x37a
 function function_d56a72a7(entity) {
@@ -1121,7 +1121,7 @@ function function_d56a72a7(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x49f6c65e, Offset: 0x5a78
 // Size: 0x1dc
 function function_5d6a8bf3(entity) {
@@ -1146,7 +1146,7 @@ function function_5d6a8bf3(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x263b8263, Offset: 0x5c60
 // Size: 0x2e4
 function function_13fcf9f0(entity, entityradius, var_e7c0926f) {
@@ -1167,21 +1167,21 @@ function function_13fcf9f0(entity, entityradius, var_e7c0926f) {
         return undefined;
     }
     /#
-        recordline(entity.origin, predictedpos, (0, 1, 0), "juke_active", entity);
+        recordline(entity.origin, predictedpos, (0, 1, 0), "<unknown string>", entity);
     #/
     /#
-        recordsphere(var_a7e9532d, 2, (1, 0, 0), "juke_active", entity);
+        recordsphere(var_a7e9532d, 2, (1, 0, 0), "<unknown string>", entity);
     #/
     /#
-        recordline(predictedpos, var_a7e9532d, (1, 0, 0), "juke_active", entity);
+        recordline(predictedpos, var_a7e9532d, (1, 0, 0), "<unknown string>", entity);
     #/
     if (ispointonnavmesh(var_c23f776, entity.entityradius * 2.5) && tracepassedonnavmesh(predictedpos, var_c23f776, entity.entityradius)) {
         if (!entity isposinclaimedlocation(var_c23f776) && entity maymovefrompointtopoint(predictedpos, var_c23f776, 0, 0)) {
             /#
-                recordsphere(var_c23f776, 2, (0, 1, 0), "juke_active", entity);
+                recordsphere(var_c23f776, 2, (0, 1, 0), "<unknown string>", entity);
             #/
             /#
-                recordline(predictedpos, var_c23f776, (0, 1, 0), "juke_active", entity);
+                recordline(predictedpos, var_c23f776, (0, 1, 0), "<unknown string>", entity);
             #/
             return var_c23f776;
         }
@@ -1190,10 +1190,10 @@ function function_13fcf9f0(entity, entityradius, var_e7c0926f) {
 }
 
 // Namespace namespace_53429ee4
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x5c33436, Offset: 0x5f50
 // Size: 0xb4
-function function_66a87965(entity, var_414ee8c3) {
+function private function_66a87965(entity, var_414ee8c3) {
     var_59868845 = entity animmappingsearch(istring(var_414ee8c3));
     localdeltavector = getmovedelta(var_59868845, 0, 1, entity);
     endpoint = entity localtoworldcoords(localdeltavector);
@@ -1201,10 +1201,10 @@ function function_66a87965(entity, var_414ee8c3) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x26f833fa, Offset: 0x6010
 // Size: 0x540
-function function_e01b0078(entity) {
+function private function_e01b0078(entity) {
     if (isdefined(entity.jukeinfo)) {
         return entity.jukeinfo;
     }
@@ -1280,7 +1280,7 @@ function function_e01b0078(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa0a94412, Offset: 0x6558
 // Size: 0x182
 function function_76192844(entity) {
@@ -1300,7 +1300,7 @@ function function_76192844(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xfe1494fb, Offset: 0x66e8
 // Size: 0x29a
 function function_59f30845(entity) {
@@ -1333,7 +1333,7 @@ function function_59f30845(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xa5c82bb0, Offset: 0x6990
 // Size: 0x64
 function function_dbc8bb18(entity) {
@@ -1343,7 +1343,7 @@ function function_dbc8bb18(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf2a9c16, Offset: 0x6a00
 // Size: 0xc
 function function_3640f9c1(entity) {
@@ -1351,7 +1351,7 @@ function function_3640f9c1(entity) {
 }
 
 // Namespace namespace_53429ee4
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x9c467609, Offset: 0x6a18
 // Size: 0x21c
 function function_f4720f1b(entity, shitloc) {
@@ -1375,7 +1375,7 @@ function function_f4720f1b(entity, shitloc) {
 }
 
 // Namespace namespace_53429ee4
-// Params 13, eflags: 0x1 linked
+// Params 13, eflags: 0x0
 // Checksum 0xc3c3e5fa, Offset: 0x6c40
 // Size: 0x120
 function function_b68605e4(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, damagefromunderneath, modelindex, partname) {
@@ -1395,7 +1395,7 @@ function function_b68605e4(einflictor, eattacker, idamage, idflags, smeansofdeat
 }
 
 // Namespace namespace_53429ee4
-// Params 8, eflags: 0x1 linked
+// Params 8, eflags: 0x0
 // Checksum 0xc2ee274f, Offset: 0x6d68
 // Size: 0x80
 function function_9bed87a9(inflictor, attacker, damage, meansofdeath, weapon, dir, hitloc, var_3c7e9356) {
@@ -1407,7 +1407,7 @@ function function_9bed87a9(inflictor, attacker, damage, meansofdeath, weapon, di
 #namespace namespace_1be547d;
 
 // Namespace namespace_1be547d
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xa8a8f42d, Offset: 0x6df0
 // Size: 0x12a
 function function_20a7d744(entity, attribute, oldvalue, value) {

@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x9c49652d, Offset: 0x238
 // Size: 0x144
-function registerbehaviorscriptfunctions() {
+function autoexec registerbehaviorscriptfunctions() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("hasCloseEnemy", &hascloseenemy);
     behaviortreenetworkutility::registerbehaviortreescriptapi("noCloseEnemyService", &nocloseenemyservice);
     behaviortreenetworkutility::registerbehaviortreescriptapi("tryReacquireService", &tryreacquireservice);
@@ -25,7 +25,7 @@ function registerbehaviorscriptfunctions() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd6dd1c1, Offset: 0x388
 // Size: 0x54
-function preparetoreacttoenemy(behaviortreeentity) {
+function private preparetoreacttoenemy(behaviortreeentity) {
     behaviortreeentity.newenemyreaction = 0;
     behaviortreeentity.malfunctionreaction = 0;
     behaviortreeentity pathmode("move delayed", 1, 3);
@@ -35,7 +35,7 @@ function preparetoreacttoenemy(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd030ff30, Offset: 0x3e8
 // Size: 0x2c
-function resetreactiontoenemy(behaviortreeentity) {
+function private resetreactiontoenemy(behaviortreeentity) {
     behaviortreeentity.newenemyreaction = 0;
     behaviortreeentity.malfunctionreaction = 0;
 }
@@ -44,7 +44,7 @@ function resetreactiontoenemy(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x67ea8f08, Offset: 0x420
 // Size: 0x54
-function nocloseenemyservice(behaviortreeentity) {
+function private nocloseenemyservice(behaviortreeentity) {
     if (isdefined(behaviortreeentity.enemy) && aiutility::hascloseenemytomelee(behaviortreeentity)) {
         behaviortreeentity clearpath();
         return true;
@@ -56,7 +56,7 @@ function nocloseenemyservice(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x8b3129d4, Offset: 0x480
 // Size: 0x64
-function hascloseenemy(behaviortreeentity) {
+function private hascloseenemy(behaviortreeentity) {
     if (!isdefined(behaviortreeentity.enemy)) {
         return false;
     }
@@ -70,7 +70,7 @@ function hascloseenemy(behaviortreeentity) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x6bf7e00b, Offset: 0x4f0
 // Size: 0x38
-function function_672e0d90(entity, neighbor) {
+function private function_672e0d90(entity, neighbor) {
     return isdefined(neighbor) && entity.team === neighbor.team;
 }
 
@@ -78,7 +78,7 @@ function function_672e0d90(entity, neighbor) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe945a739, Offset: 0x530
 // Size: 0x152
-function function_5a7b478e(entity) {
+function private function_5a7b478e(entity) {
     actors = getaiarray();
     if (!isdefined(entity.attacker)) {
         return;
@@ -94,7 +94,7 @@ function function_5a7b478e(entity) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x49ffb7c3, Offset: 0x690
 // Size: 0x4c
-function setpathmovedelayedrandom(behaviortreeentity, asmstatename) {
+function private setpathmovedelayedrandom(behaviortreeentity, asmstatename) {
     behaviortreeentity pathmode("move delayed", 0, randomfloatrange(1, 3));
 }
 
@@ -102,7 +102,7 @@ function setpathmovedelayedrandom(behaviortreeentity, asmstatename) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x5500c47a, Offset: 0x6e8
 // Size: 0x7c
-function exposedsetdesiredstancetostand(behaviortreeentity, asmstatename) {
+function private exposedsetdesiredstancetostand(behaviortreeentity, asmstatename) {
     aiutility::keepclaimnode(behaviortreeentity);
     currentstance = blackboard::getblackboardattribute(behaviortreeentity, "_stance");
     blackboard::setblackboardattribute(behaviortreeentity, "_desired_stance", "stand");
@@ -112,7 +112,7 @@ function exposedsetdesiredstancetostand(behaviortreeentity, asmstatename) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xa0542659, Offset: 0x770
 // Size: 0x2d2
-function tryreacquireservice(behaviortreeentity) {
+function private tryreacquireservice(behaviortreeentity) {
     if (!isdefined(behaviortreeentity.reacquire_state)) {
         behaviortreeentity.reacquire_state = 0;
     }

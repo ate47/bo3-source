@@ -718,7 +718,7 @@ function function_ac410a13() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x6130a89b, Offset: 0x4798
 // Size: 0x11a
-function function_c41b5928() {
+function private function_c41b5928() {
     if (isdefined(level.doa.var_2d09b979) && level.doa.var_2d09b979) {
         level.doa.var_2d09b979 = undefined;
         return 1;
@@ -1930,7 +1930,7 @@ function function_9615d68f() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xf34251c9, Offset: 0x8e90
 // Size: 0x58
-function function_972fe17c() {
+function private function_972fe17c() {
     if (self.def.type == 23 || self.def.type == 36) {
         return false;
     }
@@ -1964,7 +1964,7 @@ function function_fd16eeab(type) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x448e66fb, Offset: 0x8f78
 // Size: 0x154
-function function_f56a2ab() {
+function private function_f56a2ab() {
     if (self.def.type == 32) {
         return true;
     }
@@ -1991,7 +1991,7 @@ function function_f56a2ab() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd8648516, Offset: 0x90d8
 // Size: 0x3be
-function function_5441452b(maxdistsq) {
+function private function_5441452b(maxdistsq) {
     self notify(#"hash_c42bb828");
     self endon(#"hash_c42bb828");
     self endon(#"picked_up");

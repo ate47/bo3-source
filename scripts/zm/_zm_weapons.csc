@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x3aa1875c, Offset: 0x2b0
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_weapons", &__init__, &__main__, undefined);
 }
 
@@ -38,7 +38,7 @@ function __main__() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4d6c5ac0, Offset: 0x378
 // Size: 0x16a
-function on_player_connect(localclientnum) {
+function private on_player_connect(localclientnum) {
     if (getmigrationstatus(localclientnum)) {
         return;
     }

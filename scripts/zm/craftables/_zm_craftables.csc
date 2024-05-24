@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa9be9630, Offset: 0x148
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_craftables", &__init__, undefined, undefined);
 }
 
@@ -63,7 +63,7 @@ function function_8421d708(var_9967ff1) {
 }
 
 // Namespace namespace_f37770c8
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x9420ddf2, Offset: 0x2d0
 // Size: 0x44
 function function_5654f132() {

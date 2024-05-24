@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x3ec97383, Offset: 0x3c8
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("colors", &__init__, &__main__, undefined);
 }
 
@@ -573,7 +573,7 @@ function get_colorcodes_and_activate_trigger(color_team, team) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xa11f33b2, Offset: 0x2590
 // Size: 0x250
-function is_target_visible(target) {
+function private is_target_visible(target) {
     var_88d27997 = getdvarfloat("cg_fov");
     n_dot_check = cos(var_88d27997);
     v_pos = target;

@@ -147,7 +147,7 @@ function loop_on_entity(alias, offset) {
 }
 
 // Namespace sound
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x43cf5034, Offset: 0x790
 // Size: 0xcc
 function loop_in_space(alias, origin, ender) {

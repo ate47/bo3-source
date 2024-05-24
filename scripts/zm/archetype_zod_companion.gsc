@@ -36,7 +36,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x17284b84, Offset: 0xa08
 // Size: 0xa4
-function main() {
+function autoexec main() {
     clientfield::register("allplayers", "being_robot_revived", 1, 1, "int");
     spawner::add_archetype_spawn_function("zod_companion", &zodcompanionbehavior::archetypezodcompanionblackboardinit);
     spawner::add_archetype_spawn_function("zod_companion", &zodcompanionserverutils::zodcompanionsoldierspawnsetup);
@@ -47,7 +47,7 @@ function main() {
 #namespace zodcompanionbehavior;
 
 // Namespace zodcompanionbehavior
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x436cef15, Offset: 0xab8
 // Size: 0x2ac
 function registerbehaviorscriptfunctions() {
@@ -74,7 +74,7 @@ function registerbehaviorscriptfunctions() {
 // Params 5, eflags: 0x4
 // Checksum 0x555de963, Offset: 0xd70
 // Size: 0x7c
-function mocompignorepainfaceenemyinit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
+function private mocompignorepainfaceenemyinit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
     entity.blockingpain = 1;
     entity orientmode("face enemy");
     entity animmode("pos deltas");
@@ -84,15 +84,15 @@ function mocompignorepainfaceenemyinit(entity, mocompanim, mocompanimblendouttim
 // Params 5, eflags: 0x4
 // Checksum 0x483b0f5b, Offset: 0xdf8
 // Size: 0x3c
-function mocompignorepainfaceenemyterminate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
+function private mocompignorepainfaceenemyterminate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
     entity.blockingpain = 0;
 }
 
 // Namespace zodcompanionbehavior
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x2becaace, Offset: 0xe40
 // Size: 0x1a4
-function archetypezodcompanionblackboardinit() {
+function private archetypezodcompanionblackboardinit() {
     entity = self;
     entity.pushable = 1;
     blackboard::createblackboardforentity(entity);
@@ -101,19 +101,19 @@ function archetypezodcompanionblackboardinit() {
     blackboard::registerblackboardattribute(self, "_locomotion_speed", "locomotion_speed_sprint", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zodCompanionDelayMovement");
+            self trackblackboardattribute("parasite");
         #/
     }
     blackboard::registerblackboardattribute(self, "_move_mode", "normal", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zodCompanionDelayMovement");
+            self trackblackboardattribute("left_leg_lower");
         #/
     }
     blackboard::registerblackboardattribute(self, "_gibbed_limbs", undefined, &function_c82dd93c);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zodCompanionDelayMovement");
+            self trackblackboardattribute("double_points");
         #/
     }
     /#
@@ -122,10 +122,10 @@ function archetypezodcompanionblackboardinit() {
 }
 
 // Namespace zodcompanionbehavior
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x592af342, Offset: 0xff0
 // Size: 0xa6
-function function_c82dd93c() {
+function private function_c82dd93c() {
     entity = self;
     rightarmgibbed = gibserverutils::isgibbed(entity, 16);
     leftarmgibbed = gibserverutils::isgibbed(entity, 32);
@@ -140,25 +140,25 @@ function function_c82dd93c() {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x81c474f3, Offset: 0x10a0
 // Size: 0x44
-function zodcompaniondelaymovement(entity) {
+function private zodcompaniondelaymovement(entity) {
     entity pathmode("move delayed", 0, randomfloatrange(1, 2));
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x97ffad11, Offset: 0x10f0
 // Size: 0x5c
-function zodcompanionmovement(entity) {
+function private zodcompanionmovement(entity) {
     if (blackboard::getblackboardattribute(entity, "_stance") != "stand") {
         blackboard::setblackboardattribute(entity, "_desired_stance", "stand");
     }
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x4d3ca24a, Offset: 0x1158
 // Size: 0x156
 function zodcompanioncanjuke(entity) {
@@ -176,7 +176,7 @@ function zodcompanioncanjuke(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x18865039, Offset: 0x12b8
 // Size: 0x31e
 function zodcompanioncanpreemptivejuke(entity) {
@@ -198,7 +198,7 @@ function zodcompanioncanpreemptivejuke(entity) {
     if (distancesquared(entity.origin, entity.enemy.origin) < 360000) {
         angledifference = absangleclamp180(entity.angles[1] - entity.enemy.angles[1]);
         /#
-            record3dtext(angledifference, entity.origin + (0, 0, 5), (0, 1, 0), "zodCompanionDelayMovement");
+            record3dtext(angledifference, entity.origin + (0, 0, 5), (0, 1, 0), "<unknown string>");
         #/
         if (angledifference > -121) {
             enemyangles = entity.enemy getgunangles();
@@ -206,7 +206,7 @@ function zodcompanioncanpreemptivejuke(entity) {
             forward = anglestoforward(enemyangles);
             dotproduct = abs(vectordot(vectornormalize(toenemy), forward));
             /#
-                record3dtext(acos(dotproduct), entity.origin + (0, 0, 10), (0, 1, 0), "zodCompanionDelayMovement");
+                record3dtext(acos(dotproduct), entity.origin + (0, 0, 10), (0, 1, 0), "<unknown string>");
             #/
             if (dotproduct > 0.9848) {
                 return zodcompanioncanjuke(entity);
@@ -217,10 +217,10 @@ function zodcompanioncanpreemptivejuke(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xe9bbcb3d, Offset: 0x15e0
 // Size: 0xae
-function _isvalidplayer(player) {
+function private _isvalidplayer(player) {
     if (!isdefined(player) || !isalive(player) || !isplayer(player) || player.sessionstate == "spectator" || player.sessionstate == "intermission" || player laststand::player_is_in_laststand() || player.ignoreme) {
         return false;
     }
@@ -228,10 +228,10 @@ function _isvalidplayer(player) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 2, eflags: 0x5 linked
+// Params 2, eflags: 0x4
 // Checksum 0x84d9cf2a, Offset: 0x1698
 // Size: 0x142
-function _findclosest(entity, entities) {
+function private _findclosest(entity, entities) {
     closest = spawnstruct();
     if (entities.size > 0) {
         closest.entity = entities[0];
@@ -248,10 +248,10 @@ function _findclosest(entity, entities) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x12b9842d, Offset: 0x17e8
 // Size: 0x434
-function zodcompaniontargetservice(entity) {
+function private zodcompaniontargetservice(entity) {
     if (zodcompanionabletoshootcondition(entity)) {
         return 0;
     }
@@ -303,26 +303,26 @@ function zodcompaniontargetservice(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xfd51892b, Offset: 0x1c28
 // Size: 0x2c
-function zodcompaniontacticalwalkactionstart(entity) {
+function private zodcompaniontacticalwalkactionstart(entity) {
     entity orientmode("face enemy");
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xebfc955b, Offset: 0x1c60
 // Size: 0x54
-function zodcompanionabletoshootcondition(entity) {
+function private zodcompanionabletoshootcondition(entity) {
     return entity.weapon.name != level.weaponnone.name && !gibserverutils::isgibbed(entity, 16);
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xe4b8c005, Offset: 0x1cc0
 // Size: 0x2e
-function zodcompanionshouldtacticalwalk(entity) {
+function private zodcompanionshouldtacticalwalk(entity) {
     if (!entity haspath()) {
         return false;
     }
@@ -330,10 +330,10 @@ function zodcompanionshouldtacticalwalk(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xfc2fb338, Offset: 0x1cf8
 // Size: 0xac
-function zodcompanionjukeinitialize(entity) {
+function private zodcompanionjukeinitialize(entity) {
     aiutility::choosejukedirection(entity);
     entity clearpath();
     jukeinfo = spawnstruct();
@@ -343,19 +343,19 @@ function zodcompanionjukeinitialize(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xce04fbd1, Offset: 0x1db0
 // Size: 0x68
-function zodcompanionpreemptivejuketerminate(entity) {
+function private zodcompanionpreemptivejuketerminate(entity) {
     entity.nextpreemptivejuke = gettime() + randomintrange(4000, 6000);
     entity.nextpreemptivejukeads = randomfloatrange(0.5, 0.95);
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x913ad5f5, Offset: 0x1e20
 // Size: 0x2f2
-function zodcompaniontryreacquireservice(entity) {
+function private zodcompaniontryreacquireservice(entity) {
     if (!isdefined(entity.reacquire_state)) {
         entity.reacquire_state = 0;
     }
@@ -407,10 +407,10 @@ function zodcompaniontryreacquireservice(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x34c7f7bf, Offset: 0x2120
 // Size: 0x7a4
-function manage_companion_movement(entity) {
+function private manage_companion_movement(entity) {
     self endon(#"death");
     if (isdefined(level.var_bfd9ed83) && level.var_bfd9ed83.eligible_leader) {
         self.leader = level.var_bfd9ed83;
@@ -497,10 +497,10 @@ function manage_companion_movement(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xf33e182, Offset: 0x28d0
 // Size: 0x1d6
-function zodcompanioncollisionservice(entity) {
+function private zodcompanioncollisionservice(entity) {
     if (isdefined(entity.dontpushtime)) {
         if (gettime() < entity.dontpushtime) {
             return true;
@@ -530,10 +530,10 @@ function zodcompanioncollisionservice(entity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xf5317ee6, Offset: 0x2ab0
 // Size: 0x44
-function function_d04291cf() {
+function private function_d04291cf() {
     self endon(#"death");
     self function_1762804b(0);
     wait(2);
@@ -544,7 +544,7 @@ function function_d04291cf() {
 // Params 2, eflags: 0x4
 // Checksum 0x80851c4, Offset: 0x2b00
 // Size: 0x13e
-function function_f62bd05c(target_entity, max_distance) {
+function private function_f62bd05c(target_entity, max_distance) {
     entity = self;
     target_location = target_entity.origin;
     if (distancesquared(entity.origin, target_location) > max_distance * max_distance) {
@@ -563,10 +563,10 @@ function function_f62bd05c(target_entity, max_distance) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x4509f5f1, Offset: 0x2c48
 // Size: 0x50
-function function_34117adf(var_5935e1b9) {
+function private function_34117adf(var_5935e1b9) {
     self.var_53ce2a4e = 1;
     self setgoal(var_5935e1b9, 1);
     self waittill(#"goal");
@@ -575,10 +575,10 @@ function function_34117adf(var_5935e1b9) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x9b0a229, Offset: 0x2ca0
 // Size: 0xb0
-function function_3463b8c2(var_ee6ad78e) {
+function private function_3463b8c2(var_ee6ad78e) {
     self.var_c0e8df41 = 1;
     var_c9277d64 = getnodearray("flinger_traversal", "script_noteworthy");
     var_292fba5b = arraygetclosest(var_ee6ad78e, var_c9277d64);
@@ -589,10 +589,10 @@ function function_3463b8c2(var_ee6ad78e) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x55ff1ae9, Offset: 0x2d58
 // Size: 0x1cc
-function pick_new_movement_point() {
+function private pick_new_movement_point() {
     queryresult = positionquery_source_navigation(self.companion_anchor_point, 96, 256, 256, 20, self);
     if (queryresult.data.size) {
         if (isdefined(self.enemy) && self.enemy.archetype == "parasite") {
@@ -614,10 +614,10 @@ function pick_new_movement_point() {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x9511e5c1, Offset: 0x2f30
 // Size: 0xb8
-function function_ab299a53(parasite) {
+function private function_ab299a53(parasite) {
     point = self;
     height_difference = abs(point.origin[2] - parasite.origin[2]);
     var_3b804002 = 1.5 * height_difference * 1.5 * height_difference;
@@ -625,10 +625,10 @@ function function_ab299a53(parasite) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xaf0d314, Offset: 0x2ff0
 // Size: 0x6c
-function zodcompanionsetdesiredstancetostand(behaviortreeentity) {
+function private zodcompanionsetdesiredstancetostand(behaviortreeentity) {
     currentstance = blackboard::getblackboardattribute(behaviortreeentity, "_stance");
     if (currentstance == "crouch") {
         blackboard::setblackboardattribute(behaviortreeentity, "_desired_stance", "stand");
@@ -636,7 +636,7 @@ function zodcompanionsetdesiredstancetostand(behaviortreeentity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x22d4e3c4, Offset: 0x3068
 // Size: 0x3e4
 function zod_companion_revive_player(player) {
@@ -686,7 +686,7 @@ function zod_companion_revive_player(player) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xde5afc7a, Offset: 0x3458
 // Size: 0xd8
 function zod_companion_monitor_revive_attempt(player) {
@@ -703,7 +703,7 @@ function zod_companion_monitor_revive_attempt(player) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xee5c154b, Offset: 0x3538
 // Size: 0x82
 function zod_companion_revive_cleanup(player) {
@@ -719,10 +719,10 @@ function zod_companion_revive_cleanup(player) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x9eb06be3, Offset: 0x35c8
 // Size: 0xdc
-function zodcompanionfinishedsprinttransition(behaviortreeentity) {
+function private zodcompanionfinishedsprinttransition(behaviortreeentity) {
     behaviortreeentity.sprint_transition_happening = 0;
     if (blackboard::getblackboardattribute(behaviortreeentity, "_locomotion_speed") == "locomotion_speed_walk") {
         behaviortreeentity ai::set_behavior_attribute("sprint", 1);
@@ -734,10 +734,10 @@ function zodcompanionfinishedsprinttransition(behaviortreeentity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x587d468e, Offset: 0x36b0
 // Size: 0xe0
-function zodcompanionkeepscurrentmovementmode(behaviortreeentity) {
+function private zodcompanionkeepscurrentmovementmode(behaviortreeentity) {
     var_ef42515b = 262144;
     var_1be8672c = 147456;
     dist = distancesquared(behaviortreeentity.origin, behaviortreeentity.companion_anchor_point);
@@ -751,10 +751,10 @@ function zodcompanionkeepscurrentmovementmode(behaviortreeentity) {
 }
 
 // Namespace zodcompanionbehavior
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x5188172f, Offset: 0x3798
 // Size: 0x2c
-function zodcompanionsprinttransitioning(behaviortreeentity) {
+function private zodcompanionsprinttransitioning(behaviortreeentity) {
     if (behaviortreeentity.sprint_transition_happening === 1) {
         return true;
     }
@@ -764,10 +764,10 @@ function zodcompanionsprinttransitioning(behaviortreeentity) {
 #namespace zodcompanionserverutils;
 
 // Namespace zodcompanionserverutils
-// Params 4, eflags: 0x5 linked
+// Params 4, eflags: 0x4
 // Checksum 0x22882d2e, Offset: 0x37d0
 // Size: 0x134
-function _trygibbinghead(entity, damage, hitloc, isexplosive) {
+function private _trygibbinghead(entity, damage, hitloc, isexplosive) {
     if (isexplosive && randomfloatrange(0, 1) <= 0.5) {
         gibserverutils::gibhead(entity);
         return;
@@ -782,10 +782,10 @@ function _trygibbinghead(entity, damage, hitloc, isexplosive) {
 }
 
 // Namespace zodcompanionserverutils
-// Params 4, eflags: 0x5 linked
+// Params 4, eflags: 0x4
 // Checksum 0xd648e8bf, Offset: 0x3910
 // Size: 0x27c
-function _trygibbinglimb(entity, damage, hitloc, isexplosive) {
+function private _trygibbinglimb(entity, damage, hitloc, isexplosive) {
     if (gibserverutils::isgibbed(entity, 32) || gibserverutils::isgibbed(entity, 16)) {
         return;
     }
@@ -815,10 +815,10 @@ function _trygibbinglimb(entity, damage, hitloc, isexplosive) {
 }
 
 // Namespace zodcompanionserverutils
-// Params 5, eflags: 0x5 linked
+// Params 5, eflags: 0x4
 // Checksum 0xf06301e, Offset: 0x3b98
 // Size: 0x37c
-function _trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) {
+function private _trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) {
     if (!isdefined(attacker)) {
         attacker = entity;
     }
@@ -853,10 +853,10 @@ function _trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) {
 }
 
 // Namespace zodcompanionserverutils
-// Params 12, eflags: 0x5 linked
+// Params 12, eflags: 0x4
 // Checksum 0xb8358657, Offset: 0x3f20
 // Size: 0x190
-function zodcompaniongibdamageoverride(inflictor, attacker, damage, flags, meansofdeath, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
+function private zodcompaniongibdamageoverride(inflictor, attacker, damage, flags, meansofdeath, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
     entity = self;
     if ((entity.health - damage) / entity.maxhealth > 0.75) {
         return damage;
@@ -873,7 +873,7 @@ function zodcompaniongibdamageoverride(inflictor, attacker, damage, flags, means
 // Params 12, eflags: 0x4
 // Checksum 0x75dca24c, Offset: 0x40b8
 // Size: 0x230
-function zodcompaniondestructdeathoverride(inflictor, attacker, damage, flags, meansofdeath, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
+function private zodcompaniondestructdeathoverride(inflictor, attacker, damage, flags, meansofdeath, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
     entity = self;
     if (entity.health - damage <= 0) {
         destructserverutils::togglespawngibs(entity, 1);
@@ -897,10 +897,10 @@ function zodcompaniondestructdeathoverride(inflictor, attacker, damage, flags, m
 }
 
 // Namespace zodcompanionserverutils
-// Params 12, eflags: 0x5 linked
+// Params 12, eflags: 0x4
 // Checksum 0xfd7b7316, Offset: 0x42f0
 // Size: 0xcc
-function zodcompaniondamageoverride(inflictor, attacker, damage, flags, meansofdeath, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
+function private zodcompaniondamageoverride(inflictor, attacker, damage, flags, meansofdeath, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
     entity = self;
     if (hitloc == "helmet" || hitloc == "head" || hitloc == "neck") {
         damage = int(damage * 0.5);
@@ -912,7 +912,7 @@ function zodcompaniondamageoverride(inflictor, attacker, damage, flags, meansofd
 // Params 1, eflags: 0x4
 // Checksum 0xb8ef9671, Offset: 0x43c8
 // Size: 0x84
-function findclosestnavmeshpositiontoenemy(enemy) {
+function private findclosestnavmeshpositiontoenemy(enemy) {
     enemypositiononnavmesh = undefined;
     for (tolerancelevel = 1; tolerancelevel <= 4; tolerancelevel++) {
         enemypositiononnavmesh = getclosestpointonnavmesh(enemy.origin, -56 * tolerancelevel);
@@ -924,10 +924,10 @@ function findclosestnavmeshpositiontoenemy(enemy) {
 }
 
 // Namespace zodcompanionserverutils
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0xdc58d726, Offset: 0x4458
 // Size: 0x254
-function zodcompanionsoldierspawnsetup() {
+function private zodcompanionsoldierspawnsetup() {
     entity = self;
     entity.combatmode = "cover";
     entity.fullhealth = entity.health;
@@ -958,7 +958,7 @@ function zodcompanionsoldierspawnsetup() {
 #namespace zodcompanionutility;
 
 // Namespace zodcompanionutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xabe66e86, Offset: 0x46b8
 // Size: 0x68
 function manage_companion() {
@@ -974,7 +974,7 @@ function manage_companion() {
 }
 
 // Namespace zodcompanionutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x61d92885, Offset: 0x4728
 // Size: 0x9a
 function function_cbe73e3d() {
@@ -988,7 +988,7 @@ function function_cbe73e3d() {
 }
 
 // Namespace zodcompanionutility
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x957cfc4b, Offset: 0x47d0
 // Size: 0x166
 function define_new_leader() {
@@ -1013,7 +1013,7 @@ function define_new_leader() {
 }
 
 // Namespace zodcompanionutility
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x148dc9ba, Offset: 0x4940
 // Size: 0x122
 function get_potential_leaders(companion) {

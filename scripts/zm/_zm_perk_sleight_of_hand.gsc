@@ -16,23 +16,23 @@
 
 // Namespace namespace_b3116a5e
 // Params 0, eflags: 0x2
-// Checksum 0x78b51da7, Offset: 0x348
+// Checksum 0x98f249f3, Offset: 0x348
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_perk_sleight_of_hand", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_b3116a5e
-// Params 0, eflags: 0x0
-// Checksum 0x5bc8699d, Offset: 0x388
+// Params 0, eflags: 0x1 linked
+// Checksum 0x88b41cc0, Offset: 0x388
 // Size: 0x14
 function __init__() {
     function_ec609c41();
 }
 
 // Namespace namespace_b3116a5e
-// Params 0, eflags: 0x0
-// Checksum 0xfc38b56d, Offset: 0x3a8
+// Params 0, eflags: 0x1 linked
+// Checksum 0xfbc6d067, Offset: 0x3a8
 // Size: 0xf4
 function function_ec609c41() {
     zm_perks::register_perk_basic_info("specialty_fastreload", "sleight", 3000, %ZOMBIE_PERK_FASTRELOAD, getweapon("zombie_perk_bottle_sleight"));
@@ -43,8 +43,8 @@ function function_ec609c41() {
 }
 
 // Namespace namespace_b3116a5e
-// Params 0, eflags: 0x0
-// Checksum 0xc863a1d2, Offset: 0x4a8
+// Params 0, eflags: 0x1 linked
+// Checksum 0x85b77244, Offset: 0x4a8
 // Size: 0xe0
 function function_1f07387f() {
     if (isdefined(level.var_46bc5aab)) {
@@ -59,24 +59,24 @@ function function_1f07387f() {
 }
 
 // Namespace namespace_b3116a5e
-// Params 0, eflags: 0x0
-// Checksum 0x41f905ab, Offset: 0x590
+// Params 0, eflags: 0x1 linked
+// Checksum 0xa59fb08f, Offset: 0x590
 // Size: 0x34
 function function_1fff78dd() {
     clientfield::register("clientuimodel", "hudItems.perks.sleight_of_hand", 1, 2, "int");
 }
 
 // Namespace namespace_b3116a5e
-// Params 1, eflags: 0x0
-// Checksum 0x372e18fd, Offset: 0x5d0
+// Params 1, eflags: 0x1 linked
+// Checksum 0x68f8bbb7, Offset: 0x5d0
 // Size: 0x2c
 function function_86e1cb2a(state) {
     self clientfield::set_player_uimodel("hudItems.perks.sleight_of_hand", state);
 }
 
 // Namespace namespace_b3116a5e
-// Params 4, eflags: 0x0
-// Checksum 0xfdcb063b, Offset: 0x608
+// Params 4, eflags: 0x1 linked
+// Checksum 0xdd8f6990, Offset: 0x608
 // Size: 0xbc
 function function_2e78087c(use_trigger, perk_machine, bump_trigger, collision) {
     use_trigger.script_sound = "mus_perks_speed_jingle";

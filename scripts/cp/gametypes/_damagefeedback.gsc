@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x33bed38c, Offset: 0x218
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("damagefeedback", &__init__, undefined, undefined);
 }
 

@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe4c4ff14, Offset: 0x320
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("teams", &__init__, undefined, undefined);
 }
 

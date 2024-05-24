@@ -4,7 +4,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xcad340b0, Offset: 0x80
 // Size: 0x14
-function main() {
+function autoexec main() {
     _initializeblackboard();
 }
 
@@ -12,7 +12,7 @@ function main() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xa675a2dd, Offset: 0xa0
 // Size: 0x24
-function _initializeblackboard() {
+function private _initializeblackboard() {
     level.__ai_blackboard = [];
     level thread _updateevents();
 }
@@ -21,7 +21,7 @@ function _initializeblackboard() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x710c6ddf, Offset: 0xd0
 // Size: 0x18e
-function _updateevents() {
+function private _updateevents() {
     waittime = 0.05;
     updatemillis = waittime * 1000;
     while (true) {

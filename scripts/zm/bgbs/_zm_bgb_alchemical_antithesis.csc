@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa035259d, Offset: 0x160
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_alchemical_antithesis", &__init__, undefined, undefined);
 }
 

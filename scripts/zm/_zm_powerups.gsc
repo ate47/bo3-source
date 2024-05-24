@@ -408,7 +408,7 @@ function add_zombie_powerup(powerup_name, model_name, hint, func_should_drop_wit
 }
 
 // Namespace zm_powerups
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x8dde0c35, Offset: 0x2060
 // Size: 0x30
 function powerup_set_can_pick_up_in_last_stand(powerup_name, b_can_pick_up) {
@@ -468,7 +468,7 @@ function include_zombie_powerup(powerup_name) {
 }
 
 // Namespace zm_powerups
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x5e2b4916, Offset: 0x21e8
 // Size: 0x7c
 function powerup_remove_from_regular_drops(powerup_name) {
@@ -579,7 +579,7 @@ function specific_powerup_drop(powerup_name, var_43d485f9, powerup_team, powerup
 }
 
 // Namespace zm_powerups
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x7d4f50b9, Offset: 0x2828
 // Size: 0x13c
 function function_b347edb5(drop_point) {
@@ -1313,7 +1313,7 @@ function powerup_emp() {
 }
 
 // Namespace zm_powerups
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0xc359d26b, Offset: 0x4ea0
 // Size: 0xf6
 function get_powerups(origin, radius) {

@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xaa3ebfbf, Offset: 0x200
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("gadget_iff_override", &__init__, undefined, undefined);
 }
 

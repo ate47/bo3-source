@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x4d9cadcf, Offset: 0x248
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("hazard", &__init__, undefined, undefined);
 }
 
@@ -212,7 +212,7 @@ function function_459e5eff(str_name, var_5b9ad5b3) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xf67374c3, Offset: 0xbe8
 // Size: 0x38c
-function function_be12f5f8(str_name, e_ent, disable_ui) {
+function private function_be12f5f8(str_name, e_ent, disable_ui) {
     self notify("_hazard_protection_" + str_name);
     self endon("_hazard_protection_" + str_name);
     self endon(#"death");

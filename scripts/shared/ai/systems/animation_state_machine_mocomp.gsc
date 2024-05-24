@@ -4,7 +4,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x7dc7c359, Offset: 0xc8
 // Size: 0x10
-function initanimationmocomps() {
+function autoexec initanimationmocomps() {
     level._animationmocomps = [];
 }
 

@@ -24,7 +24,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x9cdd5c3, Offset: 0x698
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("load", &__init__, undefined, undefined);
 }
 
@@ -32,7 +32,7 @@ function function_2dc19561() {
 // Params 0, eflags: 0x2
 // Checksum 0xee1e469c, Offset: 0x6d8
 // Size: 0x22
-function first_frame() {
+function autoexec first_frame() {
     level.first_frame = 1;
     wait(0.05);
     level.first_frame = undefined;
@@ -592,7 +592,7 @@ function function_69110cf3(var_10b2f152, var_ad2b839c) {
 }
 
 // Namespace load
-// Params 6, eflags: 0x1 linked
+// Params 6, eflags: 0x0
 // Checksum 0xf8f3d539, Offset: 0x2668
 // Size: 0x1c4
 function function_e152ebb3(shader, iwidth, var_40c0cdd3, fdelay, x, y) {

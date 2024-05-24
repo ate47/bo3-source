@@ -6,7 +6,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa3ed084, Offset: 0x168
 // Size: 0x24
-function __init__() {
+function autoexec __init__() {
     if (!isdefined(level.struct)) {
         init_structs();
     }
@@ -191,7 +191,7 @@ function get(kvp_value, kvp_key) {
 }
 
 // Namespace struct
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd8be9110, Offset: 0xe70
 // Size: 0x84
 function spawn(v_origin, v_angles) {

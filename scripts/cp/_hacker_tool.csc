@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x7c8fc578, Offset: 0x128
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("hacker_tool", &__init__, undefined, undefined);
 }
 

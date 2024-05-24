@@ -7,7 +7,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc8eb4dfa, Offset: 0xe8
 // Size: 0x2c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_timer", undefined, &__main__, undefined);
 }
 
@@ -22,7 +22,7 @@ function __main__() {
 }
 
 // Namespace namespace_9ffa5e0
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0xa25cab14, Offset: 0x148
 // Size: 0x2dc
 function start_timer(time, stop_notify) {

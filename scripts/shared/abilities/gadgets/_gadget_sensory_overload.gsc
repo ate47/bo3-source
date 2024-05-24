@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf277f895, Offset: 0x208
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("gadget_sensory_overload", &__init__, undefined, undefined);
 }
 

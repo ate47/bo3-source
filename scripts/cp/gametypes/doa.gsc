@@ -18,7 +18,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x906f51fc, Offset: 0x350
 // Size: 0x17c
-function ignore_systems() {
+function autoexec ignore_systems() {
     level.var_be177839 = "";
     system::ignore("cybercom");
     system::ignore("healthoverlay");

@@ -21,7 +21,7 @@
 
 // Namespace namespace_40b4687d
 // Params 0, eflags: 0x1 linked
-// Checksum 0xda4556d9, Offset: 0x688
+// Checksum 0x7ab7098, Offset: 0x688
 // Size: 0x3cc
 function init() {
     level.var_168d703f = getweapon("tesla_gun");
@@ -60,7 +60,7 @@ function init() {
 
     // Namespace namespace_40b4687d
     // Params 0, eflags: 0x1 linked
-    // Checksum 0x6c357dda, Offset: 0xa60
+    // Checksum 0xde424d41, Offset: 0xa60
     // Size: 0x21c
     function function_4303154c() {
         if (!zm_weapons::is_weapon_included(level.var_168d703f)) {
@@ -87,7 +87,7 @@ function init() {
 
 // Namespace namespace_40b4687d
 // Params 3, eflags: 0x1 linked
-// Checksum 0xa14b9de8, Offset: 0xc88
+// Checksum 0x47ac2fff, Offset: 0xc88
 // Size: 0x194
 function function_51e87beb(hit_location, var_8a2b6fe5, player) {
     player endon(#"disconnect");
@@ -114,7 +114,7 @@ function function_51e87beb(hit_location, var_8a2b6fe5, player) {
 
 // Namespace namespace_40b4687d
 // Params 2, eflags: 0x1 linked
-// Checksum 0x29f0986f, Offset: 0xe28
+// Checksum 0xabb8d75d, Offset: 0xe28
 // Size: 0x50
 function function_53e27b27(mod, weapon) {
     return mod == "MOD_PROJECTILE" || (weapon == level.var_168d703f || weapon == level.var_d22a87eb) && mod == "MOD_PROJECTILE_SPLASH";
@@ -122,7 +122,7 @@ function function_53e27b27(mod, weapon) {
 
 // Namespace namespace_40b4687d
 // Params 0, eflags: 0x1 linked
-// Checksum 0x9369e6d7, Offset: 0xe80
+// Checksum 0x5e770a09, Offset: 0xe80
 // Size: 0x16
 function function_88a72013() {
     return isdefined(self.tesla_death) && self.tesla_death;
@@ -130,7 +130,7 @@ function function_88a72013() {
 
 // Namespace namespace_40b4687d
 // Params 0, eflags: 0x1 linked
-// Checksum 0x3d8e3401, Offset: 0xea0
+// Checksum 0xfed2fdf5, Offset: 0xea0
 // Size: 0x4c
 function on_player_spawned() {
     self thread function_3f6b791d();
@@ -140,7 +140,7 @@ function on_player_spawned() {
 
 // Namespace namespace_40b4687d
 // Params 0, eflags: 0x1 linked
-// Checksum 0xed425a57, Offset: 0xef8
+// Checksum 0x7d7ecec4, Offset: 0xef8
 // Size: 0x1c0
 function function_3f6b791d() {
     self endon(#"disconnect");
@@ -168,7 +168,7 @@ function function_3f6b791d() {
 
 // Namespace namespace_40b4687d
 // Params 1, eflags: 0x1 linked
-// Checksum 0x71ad3f1e, Offset: 0x10c0
+// Checksum 0x11755d5a, Offset: 0x10c0
 // Size: 0x3c
 function function_a3d8ec34(loop_sound) {
     self waittill(#"disconnect");
@@ -179,7 +179,7 @@ function function_a3d8ec34(loop_sound) {
 
 // Namespace namespace_40b4687d
 // Params 0, eflags: 0x1 linked
-// Checksum 0xd63f01b2, Offset: 0x1108
+// Checksum 0x77495a78, Offset: 0x1108
 // Size: 0x60
 function function_42e262c5() {
     self endon(#"disconnect");
@@ -192,7 +192,7 @@ function function_42e262c5() {
 
 // Namespace namespace_40b4687d
 // Params 0, eflags: 0x1 linked
-// Checksum 0x7edad748, Offset: 0x1170
+// Checksum 0x25ba9847, Offset: 0x1170
 // Size: 0x1b0
 function function_59434970() {
     self endon(#"disconnect");
@@ -227,7 +227,7 @@ function function_59434970() {
 
 // Namespace namespace_40b4687d
 // Params 1, eflags: 0x1 linked
-// Checksum 0xbca41d13, Offset: 0x1328
+// Checksum 0x49932a2d, Offset: 0x1328
 // Size: 0x128
 function function_a7f8c5b7(var_5f7e5be4) {
     self endon(#"disconnect");
@@ -249,7 +249,7 @@ function function_a7f8c5b7(var_5f7e5be4) {
 
 // Namespace namespace_40b4687d
 // Params 0, eflags: 0x1 linked
-// Checksum 0x42b828ff, Offset: 0x1458
+// Checksum 0xda5aef5c, Offset: 0x1458
 // Size: 0x5c
 function function_ea96aa67() {
     self endon(#"disconnect");
@@ -260,7 +260,7 @@ function function_ea96aa67() {
 
 // Namespace namespace_40b4687d
 // Params 0, eflags: 0x1 linked
-// Checksum 0xbae1207, Offset: 0x14c0
+// Checksum 0x42fd9012, Offset: 0x14c0
 // Size: 0x54
 function function_669acd5c() {
     self endon(#"disconnect");
@@ -275,7 +275,7 @@ function function_669acd5c() {
 
 // Namespace namespace_40b4687d
 // Params 0, eflags: 0x1 linked
-// Checksum 0x3c051ffa, Offset: 0x1520
+// Checksum 0xf5823fd7, Offset: 0x1520
 // Size: 0x26
 function function_2cffa872() {
     if (self function_88a72013()) {
@@ -286,7 +286,7 @@ function function_2cffa872() {
 
 // Namespace namespace_40b4687d
 // Params 13, eflags: 0x1 linked
-// Checksum 0x6b3fabd2, Offset: 0x1550
+// Checksum 0x86ea0614, Offset: 0x1550
 // Size: 0xb4
 function function_e7472a4d(willbekilled, inflictor, attacker, damage, flags, meansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, surfacetype) {
     if (self function_53e27b27(meansofdeath, weapon)) {

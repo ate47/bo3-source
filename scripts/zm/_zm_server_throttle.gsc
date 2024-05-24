@@ -110,7 +110,7 @@ function _server_safe_ground_trace_ignore_water(pos) {
 }
 
 // Namespace zm_server_throttle
-// Params 3, eflags: 0x0
+// Params 3, eflags: 0x1 linked
 // Checksum 0x924c085a, Offset: 0x420
 // Size: 0x5a
 function server_safe_ground_trace_ignore_water(id, max, origin) {

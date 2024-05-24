@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x7607e26c, Offset: 0x240
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_genesis_sound", &__init__, undefined, undefined);
 }
 

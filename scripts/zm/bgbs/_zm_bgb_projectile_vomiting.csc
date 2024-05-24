@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x6dce8d5f, Offset: 0x248
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_projectile_vomiting", &__init__, undefined, undefined);
 }
 

@@ -9,7 +9,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x5147f28b, Offset: 0x748
 // Size: 0x3ae
-function main() {
+function autoexec main() {
     clientfield::register("actor", "mechz_ft", 5000, 1, "int", &namespace_46498900::function_2fb5243, 0, 0);
     clientfield::register("actor", "mechz_faceplate_detached", 5000, 1, "int", &namespace_46498900::function_b6d242c2, 0, 0);
     clientfield::register("actor", "mechz_powercap_detached", 5000, 1, "int", &namespace_46498900::function_dcbbeee0, 0, 0);
@@ -33,7 +33,7 @@ function main() {
 // Params 0, eflags: 0x2
 // Checksum 0xed11ccbe, Offset: 0xb00
 // Size: 0x1de
-function precache() {
+function autoexec precache() {
     level._effect["fx_mech_wpn_flamethrower"] = "dlc1/castle/fx_mech_wpn_flamethrower";
     level._effect["fx_mech_dmg_armor_face"] = "dlc1/castle/fx_mech_dmg_armor_face";
     level._effect["fx_mech_dmg_armor"] = "dlc1/castle/fx_mech_dmg_armor";
@@ -59,7 +59,7 @@ function precache() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xeb0eadeb, Offset: 0xce8
 // Size: 0x88
-function function_cda3f485(localclientnum) {
+function private function_cda3f485(localclientnum) {
     level._footstepcbfuncs[self.archetype] = &function_e2126c69;
     level thread function_f4421436(self);
     self.var_bf4b6a5a = playfxontag(localclientnum, level._effect["fx_mech_head_light"], self, "tag_headlamp_FX");
@@ -120,7 +120,7 @@ function function_e2126c69(localclientnum, pos, surface, notetrack, bone) {
 // Params 7, eflags: 0x5 linked
 // Checksum 0x2c0ca02, Offset: 0x1078
 // Size: 0x15e
-function function_2fb5243(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_2fb5243(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     switch (newvalue) {
     case 1:
         self.var_1dc1e3d3 = beamlaunch(localclientnum, self, "tag_flamethrower_fx", undefined, "none", "flamethrower_beam_3p_zm_mechz");
@@ -266,7 +266,7 @@ function mechz_headlamp_off(localclientnum, oldvalue, newvalue, bnewent, binitia
 // Params 7, eflags: 0x5 linked
 // Checksum 0x17342b62, Offset: 0x1dc8
 // Size: 0xc8
-function function_62673bde(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_62673bde(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue) {
         if (isdefined(self.var_314feade)) {
             self clearanim(self.var_314feade, 0.2);

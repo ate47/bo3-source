@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe6b83de2, Offset: 0x200
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("gadget_rapid_strike", &__init__, undefined, undefined);
 }
 

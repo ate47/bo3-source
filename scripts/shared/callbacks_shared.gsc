@@ -139,7 +139,7 @@ function on_disconnect(func, obj) {
 }
 
 // Namespace callback
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xeeefc98a, Offset: 0x7d0
 // Size: 0x34
 function remove_on_disconnect(func, obj) {
@@ -179,7 +179,7 @@ function remove_on_loadout(func, obj) {
 }
 
 // Namespace callback
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4683f8bd, Offset: 0x910
 // Size: 0x34
 function on_player_damage(func, obj) {
@@ -187,7 +187,7 @@ function on_player_damage(func, obj) {
 }
 
 // Namespace callback
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x96eaa2de, Offset: 0x950
 // Size: 0x34
 function remove_on_player_damage(func, obj) {
@@ -235,7 +235,7 @@ function remove_on_player_killed(func, obj) {
 }
 
 // Namespace callback
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x1ba9bef2, Offset: 0xad0
 // Size: 0x34
 function on_ai_killed(func, obj) {
@@ -243,7 +243,7 @@ function on_ai_killed(func, obj) {
 }
 
 // Namespace callback
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4fa015b1, Offset: 0xb10
 // Size: 0x34
 function remove_on_ai_killed(func, obj) {
@@ -259,7 +259,7 @@ function on_actor_killed(func, obj) {
 }
 
 // Namespace callback
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x464d37e4, Offset: 0xb90
 // Size: 0x34
 function remove_on_actor_killed(func, obj) {
@@ -299,7 +299,7 @@ function remove_on_vehicle_killed(func, obj) {
 }
 
 // Namespace callback
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa0498752, Offset: 0xcd0
 // Size: 0x34
 function on_ai_damage(func, obj) {
@@ -307,7 +307,7 @@ function on_ai_damage(func, obj) {
 }
 
 // Namespace callback
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6a025514, Offset: 0xd10
 // Size: 0x34
 function remove_on_ai_damage(func, obj) {
@@ -339,7 +339,7 @@ function on_actor_damage(func, obj) {
 }
 
 // Namespace callback
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xafe44382, Offset: 0xe10
 // Size: 0x34
 function remove_on_actor_damage(func, obj) {

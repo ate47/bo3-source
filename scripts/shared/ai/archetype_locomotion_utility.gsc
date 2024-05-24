@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x993aee67, Offset: 0x618
 // Size: 0x55c
-function registerbehaviorscriptfunctions() {
+function autoexec registerbehaviorscriptfunctions() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("locomotionBehaviorCondition", &function_6d9627b7);
     behaviorstatemachine::registerbsmscriptapiinternal("locomotionBehaviorCondition", &function_6d9627b7);
     behaviortreenetworkutility::registerbehaviortreescriptapi("nonCombatLocomotionCondition", &noncombatlocomotioncondition);
@@ -54,7 +54,7 @@ function registerbehaviorscriptfunctions() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x5e696457, Offset: 0xb80
 // Size: 0xa6
-function locomotionisonstairs(behaviortreeentity) {
+function private locomotionisonstairs(behaviortreeentity) {
     startnode = behaviortreeentity.traversestartnode;
     if (isdefined(startnode) && behaviortreeentity shouldstarttraversal()) {
         if (isdefined(startnode.animscript) && issubstr(tolower(startnode.animscript), "stairs")) {
@@ -68,7 +68,7 @@ function locomotionisonstairs(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4cdd98fa, Offset: 0xc30
 // Size: 0x15a
-function locomotionshouldskipstairs(behaviortreeentity) {
+function private locomotionshouldskipstairs(behaviortreeentity) {
     /#
         assert(isdefined(behaviortreeentity._stairsstartnode) && isdefined(behaviortreeentity._stairsendnode));
     #/
@@ -94,7 +94,7 @@ function locomotionshouldskipstairs(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x31e6d82d, Offset: 0xd98
 // Size: 0x18c
-function locomotionshouldlooponstairs(behaviortreeentity) {
+function private locomotionshouldlooponstairs(behaviortreeentity) {
     /#
         assert(isdefined(behaviortreeentity._stairsstartnode) && isdefined(behaviortreeentity._stairsendnode));
     #/
@@ -126,7 +126,7 @@ function locomotionshouldlooponstairs(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x17cadfe5, Offset: 0xf30
 // Size: 0x390
-function locomotionstairsstart(behaviortreeentity) {
+function private locomotionstairsstart(behaviortreeentity) {
     startnode = behaviortreeentity.traversestartnode;
     endnode = behaviortreeentity.traverseendnode;
     /#
@@ -187,7 +187,7 @@ function locomotionstairsstart(behaviortreeentity) {
 // Params 1, eflags: 0x4
 // Checksum 0xc865e4bb, Offset: 0x12c8
 // Size: 0x6c
-function locomotionstairloopstart(behaviortreeentity) {
+function private locomotionstairloopstart(behaviortreeentity) {
     /#
         assert(isdefined(behaviortreeentity._stairsstartnode) && isdefined(behaviortreeentity._stairsendnode));
     #/
@@ -198,7 +198,7 @@ function locomotionstairloopstart(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x40084f0d, Offset: 0x1340
 // Size: 0x4c
-function locomotionstairsend(behaviortreeentity) {
+function private locomotionstairsend(behaviortreeentity) {
     blackboard::setblackboardattribute(behaviortreeentity, "_staircase_state", undefined);
     blackboard::setblackboardattribute(behaviortreeentity, "_staircase_direction", undefined);
 }
@@ -207,7 +207,7 @@ function locomotionstairsend(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xded5d031, Offset: 0x1398
 // Size: 0x42
-function locomotionpainbehaviorcondition(entity) {
+function private locomotionpainbehaviorcondition(entity) {
     return entity haspath() && entity hasvalidinterrupt("pain");
 }
 
@@ -223,7 +223,7 @@ function clearpathfromscript(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x40c8cc88, Offset: 0x1418
 // Size: 0x70
-function noncombatlocomotioncondition(behaviortreeentity) {
+function private noncombatlocomotioncondition(behaviortreeentity) {
     if (!behaviortreeentity haspath()) {
         return false;
     }
@@ -240,7 +240,7 @@ function noncombatlocomotioncondition(behaviortreeentity) {
 // Params 1, eflags: 0x4
 // Checksum 0x7e130122, Offset: 0x1490
 // Size: 0x6c
-function combatlocomotioncondition(behaviortreeentity) {
+function private combatlocomotioncondition(behaviortreeentity) {
     if (!behaviortreeentity haspath()) {
         return false;
     }
@@ -265,7 +265,7 @@ function function_6d9627b7(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x35ce5fb6, Offset: 0x1538
 // Size: 0x5c
-function setdesiredstanceformovement(behaviortreeentity) {
+function private setdesiredstanceformovement(behaviortreeentity) {
     if (blackboard::getblackboardattribute(behaviortreeentity, "_stance") != "stand") {
         blackboard::setblackboardattribute(behaviortreeentity, "_desired_stance", "stand");
     }
@@ -275,7 +275,7 @@ function setdesiredstanceformovement(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x82f37e3f, Offset: 0x15a0
 // Size: 0x56
-function locomotionshouldtraverse(behaviortreeentity) {
+function private locomotionshouldtraverse(behaviortreeentity) {
     startnode = behaviortreeentity.traversestartnode;
     if (isdefined(startnode) && behaviortreeentity shouldstarttraversal()) {
         return true;
@@ -313,7 +313,7 @@ function traverseactionstart(behaviortreeentity, asmstatename) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x87e3aa3f, Offset: 0x1778
 // Size: 0x20
-function disablerepath(entity) {
+function private disablerepath(entity) {
     entity.disablerepath = 1;
 }
 
@@ -321,7 +321,7 @@ function disablerepath(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x52d28ee, Offset: 0x17a0
 // Size: 0x1c
-function enablerepath(entity) {
+function private enablerepath(entity) {
     entity.disablerepath = 0;
 }
 
@@ -360,7 +360,7 @@ function delaymovement(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x18005f1c, Offset: 0x18b8
 // Size: 0x50
-function shouldadjuststanceattacticalwalk(behaviortreeentity) {
+function private shouldadjuststanceattacticalwalk(behaviortreeentity) {
     stance = blackboard::getblackboardattribute(behaviortreeentity, "_stance");
     if (stance != "stand") {
         return true;
@@ -372,7 +372,7 @@ function shouldadjuststanceattacticalwalk(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7b3442d, Offset: 0x1910
 // Size: 0x68
-function adjuststancetofaceenemyinitialize(behaviortreeentity) {
+function private adjuststancetofaceenemyinitialize(behaviortreeentity) {
     behaviortreeentity.newenemyreaction = 0;
     blackboard::setblackboardattribute(behaviortreeentity, "_desired_stance", "stand");
     behaviortreeentity orientmode("face enemy");
@@ -383,7 +383,7 @@ function adjuststancetofaceenemyinitialize(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x5b09bfac, Offset: 0x1980
 // Size: 0x34
-function adjuststancetofaceenemyterminate(behaviortreeentity) {
+function private adjuststancetofaceenemyterminate(behaviortreeentity) {
     blackboard::setblackboardattribute(behaviortreeentity, "_stance", "stand");
 }
 
@@ -391,7 +391,7 @@ function adjuststancetofaceenemyterminate(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x1f79ea79, Offset: 0x19c0
 // Size: 0xa0
-function tacticalwalkactionstart(behaviortreeentity) {
+function private tacticalwalkactionstart(behaviortreeentity) {
     cleararrivalpos(behaviortreeentity);
     resetcoverparameters(behaviortreeentity);
     setcanbeflanked(behaviortreeentity, 0);
@@ -404,7 +404,7 @@ function tacticalwalkactionstart(behaviortreeentity) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0xda2b73a9, Offset: 0x1a68
 // Size: 0x14e
-function validjukedirection(entity, entitynavmeshposition, forwardoffset, lateraloffset) {
+function private validjukedirection(entity, entitynavmeshposition, forwardoffset, lateraloffset) {
     jukenavmeshthreshold = 6;
     forwardposition = entity.origin + lateraloffset + forwardoffset;
     backwardposition = entity.origin + lateraloffset - forwardoffset;
@@ -464,7 +464,7 @@ function calculatejukedirection(entity, entityradius, jukedistance) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xbf77357, Offset: 0x1ee8
 // Size: 0x9a
-function calculatedefaultjukedirection(entity) {
+function private calculatedefaultjukedirection(entity) {
     jukedistance = 30;
     entityradius = 15;
     if (isdefined(entity.jukedistance)) {

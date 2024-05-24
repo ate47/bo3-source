@@ -21,7 +21,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x59b48d85, Offset: 0x3b0
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_equipment", &__init__, &__main__, undefined);
 }
 

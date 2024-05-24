@@ -21,7 +21,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xdaf2b833, Offset: 0x718
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_weap_quantum_bomb", &__init__, undefined, undefined);
 }
 

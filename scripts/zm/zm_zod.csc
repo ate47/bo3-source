@@ -74,13 +74,13 @@
 // Params 0, eflags: 0x2
 // Checksum 0xfd3f7874, Offset: 0x17c0
 // Size: 0x1c
-function opt_in() {
+function autoexec opt_in() {
     level.aat_in_use = 1;
     level.bgb_in_use = 1;
 }
 
 // Namespace zm_zod
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4850d5db, Offset: 0x17e8
 // Size: 0x364
 function main() {
@@ -124,7 +124,7 @@ function main() {
 }
 
 // Namespace zm_zod
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x81e3c41d, Offset: 0x1b58
 // Size: 0x5cc
 function register_clientfields() {
@@ -157,7 +157,7 @@ function register_clientfields() {
 }
 
 // Namespace zm_zod
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x888e40ec, Offset: 0x2130
 // Size: 0xb4
 function on_player_spawned(localclientnum) {
@@ -170,23 +170,23 @@ function on_player_spawned(localclientnum) {
 }
 
 // Namespace zm_zod
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x408fd6c8, Offset: 0x21f0
 // Size: 0x84
 function function_40c5bbcf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         /#
-            println("zombie/fx_glow_eye_orange_zod");
+            println("actor");
         #/
         return;
     }
     /#
-        println("zombie/fx_glow_eye_orange_zod");
+        println("fxanim_crate_junction_static");
     #/
 }
 
 // Namespace zm_zod
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf5a5366e, Offset: 0x2280
 // Size: 0x158
 function function_48d14da2(localclientnum) {
@@ -211,7 +211,7 @@ function function_48d14da2(localclientnum) {
 }
 
 // Namespace zm_zod
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x87889480, Offset: 0x23e0
 // Size: 0x29c
 function function_b339a5f5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -241,7 +241,7 @@ function function_b339a5f5(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_zod
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x58d8fa7, Offset: 0x2688
 // Size: 0x2c
 function function_8db965a5(var_df899b02) {
@@ -250,7 +250,7 @@ function function_8db965a5(var_df899b02) {
 }
 
 // Namespace zm_zod
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3e06a848, Offset: 0x26c0
 // Size: 0x34
 function include_weapons() {
@@ -259,7 +259,7 @@ function include_weapons() {
 }
 
 // Namespace zm_zod
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x5080ca6a, Offset: 0x2700
 // Size: 0x107a
 function setup_personality_character_exerts() {
@@ -396,7 +396,7 @@ function function_7d846745(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_zod
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xc24e7569, Offset: 0x3940
 // Size: 0x184
 function function_2cf3dd37(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -432,7 +432,7 @@ function function_f650f42a(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_zod
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x8ede04d, Offset: 0x3bd8
 // Size: 0x74
 function function_b48f294(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -441,7 +441,7 @@ function function_b48f294(localclientnum, oldval, newval, bnewent, binitialsnap,
 }
 
 // Namespace zm_zod
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x43fda5a5, Offset: 0x3c58
 // Size: 0x264
 function function_f8cdd387(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -468,7 +468,7 @@ function function_f8cdd387(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_zod
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x23b06917, Offset: 0x3ec8
 // Size: 0xde
 function function_66fdd0a3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -485,7 +485,7 @@ function function_66fdd0a3(localclientnum, oldval, newval, bnewent, binitialsnap
 }
 
 // Namespace zm_zod
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xe526335, Offset: 0x3fb0
 // Size: 0xde
 function function_5a6fb328(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

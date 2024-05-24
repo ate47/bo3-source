@@ -80,7 +80,7 @@ function wait_till(str_flag) {
 }
 
 // Namespace flagsys
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x380e9abd, Offset: 0x318
 // Size: 0x84
 function wait_till_timeout(n_timeout, str_flag) {
@@ -135,7 +135,7 @@ function wait_till_any(a_flags) {
 }
 
 // Namespace flagsys
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xe6513c0e, Offset: 0x590
 // Size: 0x84
 function wait_till_any_timeout(n_timeout, a_flags) {

@@ -412,7 +412,7 @@ function function_8fb467a7(player) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xf4d0d72f, Offset: 0x1db8
 // Size: 0x184
-function function_cea0c915(player, weapon) {
+function private function_cea0c915(player, weapon) {
     if (isdefined(player)) {
         forward = anglestoforward(self.angles + (player.doa.var_7a1de0da, 0, 0));
     } else {
@@ -681,7 +681,7 @@ function function_2d0f96ef(player) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x8b2e20bf, Offset: 0x2e80
 // Size: 0x254
-function function_5af02c44(target, num, offset) {
+function private function_5af02c44(target, num, offset) {
     self endon(#"death");
     self endon(#"hash_46cd614a");
     self.var_efa2b784 = 1;
@@ -714,7 +714,7 @@ function function_5af02c44(target, num, offset) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xe027bd9c, Offset: 0x30e0
 // Size: 0xec
-function function_e4f21fa9() {
+function private function_e4f21fa9() {
     roll = randomint(100);
     prize = "none";
     if (roll < 2) {

@@ -283,7 +283,7 @@ function electric_perks_dialog() {
 }
 
 // Namespace zm_perks
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0xb4d379b8, Offset: 0x1568
 // Size: 0x13c
 function reset_vending_hint_string() {
@@ -1024,7 +1024,7 @@ function getvendingmachinenotify() {
 }
 
 // Namespace zm_perks
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0xbd07b4d5, Offset: 0x40f0
 // Size: 0x294
 function perk_machine_removal(machine, replacement_model) {

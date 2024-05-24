@@ -26,7 +26,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x297f0d08, Offset: 0x728
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("warlord", &__init__, undefined, undefined);
 }
 
@@ -52,7 +52,7 @@ function __init__() {
 // Params 0, eflags: 0x2
 // Checksum 0x8b1e11dc, Offset: 0x8b0
 // Size: 0x1ac
-function registerbehaviorscriptfunctions() {
+function autoexec registerbehaviorscriptfunctions() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("warlordCanJukeCondition", &function_80e7735);
     behaviortreenetworkutility::registerbehaviortreescriptapi("warlordCanTacticalJukeCondition", &function_f663699c);
     behaviortreenetworkutility::registerbehaviortreescriptapi("warlordShouldBeAngryCondition", &function_cb636409);
@@ -69,7 +69,7 @@ function registerbehaviorscriptfunctions() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x66861b70, Offset: 0xa68
 // Size: 0x7c
-function function_ad72c974() {
+function private function_ad72c974() {
     blackboard::createblackboardforentity(self);
     ai::createinterfaceforentity(self);
     self aiutility::function_89e1fc16();
@@ -83,7 +83,7 @@ function function_ad72c974() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x725e3da9, Offset: 0xaf0
 // Size: 0x34
-function function_327511a(entity) {
+function private function_327511a(entity) {
     entity.__blackboard = undefined;
     entity function_ad72c974();
 }
@@ -92,7 +92,7 @@ function function_327511a(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6819054a, Offset: 0xb30
 // Size: 0x50
-function function_5a83bc0a(entity) {
+function private function_5a83bc0a(entity) {
     if (isdefined(entity.enemy) && isdefined(entity.var_ce767dbd) && gettime() < entity.var_ce767dbd) {
         return true;
     }
@@ -103,7 +103,7 @@ function function_5a83bc0a(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x310dc509, Offset: 0xb88
 // Size: 0x3ac
-function function_9b66e9bc(entity) {
+function private function_9b66e9bc(entity) {
     /#
         namespace_e585b400::function_3f561bff(entity, 3, 1);
     #/
@@ -739,7 +739,7 @@ function function_102f0bec(entity) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xdbfff006, Offset: 0x3560
 // Size: 0x44
-function function_29afe468(entity, point) {
+function private function_29afe468(entity, point) {
     entity.var_541cb3cf = entity.var_4a9d2541;
     entity.var_4a9d2541 = point;
 }
@@ -748,7 +748,7 @@ function function_29afe468(entity, point) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7fa14ed5, Offset: 0x35b0
 // Size: 0x52
-function function_e4f394f5(entity) {
+function private function_e4f394f5(entity) {
     /#
         namespace_e585b400::function_4160d34d(entity, undefined);
     #/
@@ -761,7 +761,7 @@ function function_e4f394f5(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x884ef31c, Offset: 0x3610
 // Size: 0xb0
-function function_eae6dfb3(entity) {
+function private function_eae6dfb3(entity) {
     if (distancesquared(entity.var_4a9d2541.origin, entity.origin) < 36 * 36 && isdefined(entity.var_4a9d2541) && abs(self.var_4a9d2541.origin[2] - entity.origin[2]) < 45) {
         return true;
     }
@@ -772,7 +772,7 @@ function function_eae6dfb3(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x9a2e3624, Offset: 0x36c8
 // Size: 0x88
-function function_40eb14cb(entity) {
+function private function_40eb14cb(entity) {
     if (!isdefined(entity.var_4a9d2541)) {
         return false;
     }
@@ -789,7 +789,7 @@ function function_40eb14cb(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xf0f30c96, Offset: 0x3758
 // Size: 0x204
-function function_69380127(entity) {
+function private function_69380127(entity) {
     if (isdefined(entity.var_4a9d2541)) {
         if (function_eae6dfb3(entity)) {
             if (isdefined(entity.var_a2230d1b)) {
@@ -824,7 +824,7 @@ function function_69380127(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb5364e33, Offset: 0x3968
 // Size: 0x244
-function function_78670b61(entity) {
+function private function_78670b61(entity) {
     validpoints = [];
     if (isdefined(entity.var_a3fbe34e)) {
         foreach (point in entity.var_a3fbe34e) {

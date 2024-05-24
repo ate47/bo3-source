@@ -19,7 +19,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf8d150b6, Offset: 0xab0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("character_customization", &__init__, undefined, undefined);
 }
 

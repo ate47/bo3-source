@@ -9,7 +9,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x95687222, Offset: 0x140
 // Size: 0x4c
-function main() {
+function autoexec main() {
     clientfield::register("vehicle", "raps_side_deathfx", 1, 1, "int", &do_side_death_fx, 0, 0);
 }
 

@@ -19,7 +19,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf8bbdc12, Offset: 0x2a8
 // Size: 0x2c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("placeable_mine", undefined, &__main__, undefined);
 }
 
@@ -27,7 +27,7 @@ function function_2dc19561() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x835e99c8, Offset: 0x2e0
 // Size: 0x24
-function __main__() {
+function private __main__() {
     if (isdefined(level.placeable_mines)) {
         level thread replenish_after_rounds();
     }
@@ -37,7 +37,7 @@ function __main__() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x80b3d893, Offset: 0x310
 // Size: 0x70
-function init_internal() {
+function private init_internal() {
     if (isdefined(level.placeable_mines)) {
         return;
     }
@@ -72,7 +72,7 @@ function add_mine_type(mine_name, str_retrieval_prompt) {
 }
 
 // Namespace zm_placeable_mine
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0xc8230f66, Offset: 0x478
 // Size: 0x92
 function add_weapon_to_mine_slot(mine_name) {
@@ -94,7 +94,7 @@ function set_max_per_player(n_max_per_player) {
 }
 
 // Namespace zm_placeable_mine
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x485a70a1, Offset: 0x538
 // Size: 0xb0
 function add_planted_callback(fn_planted_cb, wpn_name) {
@@ -110,7 +110,7 @@ function add_planted_callback(fn_planted_cb, wpn_name) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x2d51c8f1, Offset: 0x5f0
 // Size: 0xa0
-function run_planted_callbacks(e_planter) {
+function private run_planted_callbacks(e_planter) {
     foreach (fn in level.placeable_mine_planted_callbacks[self.weapon.name]) {
         self thread [[ fn ]](e_planter);
     }
@@ -120,7 +120,7 @@ function run_planted_callbacks(e_planter) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xdf12834a, Offset: 0x698
 // Size: 0x34
-function safe_to_plant() {
+function private safe_to_plant() {
     if (isdefined(level.placeable_mines_max_per_player) && self.owner.placeable_mines.size >= level.placeable_mines_max_per_player) {
         return false;
     }
@@ -131,7 +131,7 @@ function safe_to_plant() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xea0a8be2, Offset: 0x6d8
 // Size: 0x2c
-function wait_and_detonate() {
+function private wait_and_detonate() {
     wait(0.1);
     self detonate(self.owner);
 }
@@ -140,7 +140,7 @@ function wait_and_detonate() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xf8466fe8, Offset: 0x710
 // Size: 0x160
-function mine_watch(wpn_type) {
+function private mine_watch(wpn_type) {
     self endon(#"death");
     self notify(#"mine_watch");
     self endon(#"mine_watch");
@@ -228,7 +228,7 @@ function disable_all_prompts_for_player() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xc346b41b, Offset: 0xb08
 // Size: 0x2bc
-function pickup_placeable_mine() {
+function private pickup_placeable_mine() {
     player = self.owner;
     wpn_type = self.weapon;
     if (player.is_drinking > 0) {
@@ -268,7 +268,7 @@ function pickup_placeable_mine() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x9c0ce992, Offset: 0xdd0
 // Size: 0x54
-function pickup_placeable_mine_trigger_listener(trigger, player) {
+function private pickup_placeable_mine_trigger_listener(trigger, player) {
     self thread pickup_placeable_mine_trigger_listener_enable(trigger, player);
     self thread pickup_placeable_mine_trigger_listener_disable(trigger, player);
 }
@@ -277,7 +277,7 @@ function pickup_placeable_mine_trigger_listener(trigger, player) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x76825ad7, Offset: 0xe30
 // Size: 0xb8
-function pickup_placeable_mine_trigger_listener_enable(trigger, player) {
+function private pickup_placeable_mine_trigger_listener_enable(trigger, player) {
     self endon(#"delete");
     self endon(#"death");
     while (true) {
@@ -294,7 +294,7 @@ function pickup_placeable_mine_trigger_listener_enable(trigger, player) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xe3d0407e, Offset: 0xef0
 // Size: 0x98
-function pickup_placeable_mine_trigger_listener_disable(trigger, player) {
+function private pickup_placeable_mine_trigger_listener_disable(trigger, player) {
     self endon(#"delete");
     self endon(#"death");
     while (true) {
@@ -311,7 +311,7 @@ function pickup_placeable_mine_trigger_listener_disable(trigger, player) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x69c4b4ee, Offset: 0xf90
 // Size: 0x1ac
-function placeable_mine_damage() {
+function private placeable_mine_damage() {
     self endon(#"death");
     self setcandamage(1);
     self.health = 100000;
@@ -351,7 +351,7 @@ function placeable_mine_damage() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x36342f21, Offset: 0x1148
 // Size: 0x18
-function reset_satchel_explode_this_frame() {
+function private reset_satchel_explode_this_frame() {
     wait(0.05);
     level.satchelexplodethisframe = 0;
 }
@@ -360,7 +360,7 @@ function reset_satchel_explode_this_frame() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x977c8570, Offset: 0x1168
 // Size: 0x214
-function replenish_after_rounds() {
+function private replenish_after_rounds() {
     while (true) {
         level waittill(#"between_round_over");
         if (isdefined(level.var_d109cb41)) {
@@ -409,7 +409,7 @@ function setup_watchers() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x7c620d33, Offset: 0x1508
 // Size: 0x5c
-function on_spawn_retrieve_trigger(watcher, player) {
+function private on_spawn_retrieve_trigger(watcher, player) {
     self weaponobjects::function_26f3ad87(watcher, player);
     if (isdefined(self.pickuptrigger)) {
         self.pickuptrigger sethintlowpriority(0);
@@ -420,7 +420,7 @@ function on_spawn_retrieve_trigger(watcher, player) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xc501c98e, Offset: 0x1570
 // Size: 0x28
-function adjust_trigger_origin(origin) {
+function private adjust_trigger_origin(origin) {
     origin += (0, 0, 20);
     return origin;
 }
@@ -429,7 +429,7 @@ function adjust_trigger_origin(origin) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x3fb965aa, Offset: 0x15a0
 // Size: 0xcc
-function placeable_mine_detonate(attacker, weapon, target) {
+function private placeable_mine_detonate(attacker, weapon, target) {
     if (weapon.isemp) {
         self delete();
         return;

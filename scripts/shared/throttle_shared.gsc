@@ -58,7 +58,7 @@ class throttle {
     // Params 0, eflags: 0x5 linked
     // Checksum 0x2064fb3c, Offset: 0x110
     // Size: 0xc0
-    function _updatethrottle() {
+    function private _updatethrottle() {
         self.processed_ = 0;
         currentqueue = self.queue_;
         self.queue_ = [];
@@ -73,7 +73,7 @@ class throttle {
     // Params 1, eflags: 0x5 linked
     // Checksum 0xad52b6cf, Offset: 0x78
     // Size: 0x3c
-    function _updatethrottlethread(throttle) {
+    function private _updatethrottlethread(throttle) {
         while (isdefined(throttle)) {
             [[ throttle ]]->_updatethrottle();
             wait(throttle.updaterate_);

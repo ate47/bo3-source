@@ -7,7 +7,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x70598e7a, Offset: 0x180
 // Size: 0x5a
-function init_fire_fx() {
+function autoexec init_fire_fx() {
     wait(0.016);
     if (!isdefined(level._effect)) {
         level._effect = [];

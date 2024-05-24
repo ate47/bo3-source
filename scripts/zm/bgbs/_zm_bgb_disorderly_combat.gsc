@@ -20,7 +20,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf8ed0bcc, Offset: 0x3b0
 // Size: 0x44
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_disorderly_combat", &__init__, &__main__, "bgb");
 }
 

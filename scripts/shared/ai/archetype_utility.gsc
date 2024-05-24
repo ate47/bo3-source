@@ -16,7 +16,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x81c2cedf, Offset: 0x11f8
 // Size: 0xbc4
-function registerbehaviorscriptfunctions() {
+function autoexec registerbehaviorscriptfunctions() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("forceRagdoll", &function_ba976497);
     behaviortreenetworkutility::registerbehaviortreescriptapi("hasAmmo", &hasammo);
     behaviortreenetworkutility::registerbehaviortreescriptapi("hasLowAmmo", &function_23529b81);
@@ -439,7 +439,7 @@ function function_89e1fc16() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xd13a6d5a, Offset: 0x3248
 // Size: 0x172
-function bb_getstairsnumskipsteps() {
+function private bb_getstairsnumskipsteps() {
     /#
         assert(isdefined(self._stairsstartnode) && isdefined(self._stairsendnode));
     #/
@@ -467,7 +467,7 @@ function bb_getstairsnumskipsteps() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x78059b88, Offset: 0x33c8
 // Size: 0x32
-function bb_getawareness() {
+function private bb_getawareness() {
     if (!isdefined(self.stealth) || !isdefined(self.awarenesslevelcurrent)) {
         return "combat";
     }
@@ -478,7 +478,7 @@ function bb_getawareness() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xb7c38009, Offset: 0x3408
 // Size: 0x32
-function bb_getawarenessprevious() {
+function private bb_getawarenessprevious() {
     if (!isdefined(self.stealth) || !isdefined(self.awarenesslevelprevious)) {
         return "combat";
     }
@@ -489,7 +489,7 @@ function bb_getawarenessprevious() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xa809b14a, Offset: 0x3448
 // Size: 0x104
-function bb_getyawtocovernode() {
+function private bb_getyawtocovernode() {
     if (!isdefined(self.node)) {
         return 0;
     }
@@ -760,7 +760,7 @@ function addaioverridedamagecallback(entity, callback, addtofront) {
 }
 
 // Namespace aiutility
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6242b1b, Offset: 0x41e0
 // Size: 0x178
 function removeaioverridedamagecallback(entity, callback) {
@@ -1181,7 +1181,7 @@ function scriptstartragdoll(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x74f6c3f2, Offset: 0x5940
 // Size: 0x124
-function prepareforexposedmelee(behaviortreeentity) {
+function private prepareforexposedmelee(behaviortreeentity) {
     keepclaimnode(behaviortreeentity);
     meleeacquiremutex(behaviortreeentity);
     currentstance = blackboard::getblackboardattribute(behaviortreeentity, "_stance");
@@ -1564,7 +1564,7 @@ function choosebettercoverservicecodeversion(behaviortreeentity) {
 // Params 1, eflags: 0x4
 // Checksum 0xdf22936e, Offset: 0x6e48
 // Size: 0x1a6
-function choosebettercoverservice(behaviortreeentity) {
+function private choosebettercoverservice(behaviortreeentity) {
     shouldchoosebettercoverresult = shouldchoosebettercover(behaviortreeentity);
     if (shouldchoosebettercoverresult && !behaviortreeentity.keepclaimednode) {
         transitionrunning = behaviortreeentity asmistransitionrunning();
@@ -2050,7 +2050,7 @@ function shouldstealthresume(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xa46a95c1, Offset: 0x8728
 // Size: 0x9c
-function stealthreactcondition(entity) {
+function private stealthreactcondition(entity) {
     inscene = isdefined(self._o_scene) && isdefined(self._o_scene._str_state) && self._o_scene._str_state == "play";
     return !(isdefined(entity.stealth_reacting) && entity.stealth_reacting) && entity hasvalidinterrupt("react") && !inscene;
 }
@@ -2059,7 +2059,7 @@ function stealthreactcondition(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x5ace4537, Offset: 0x87d0
 // Size: 0x20
-function stealthreactstart(behaviortreeentity) {
+function private stealthreactstart(behaviortreeentity) {
     behaviortreeentity.stealth_reacting = 1;
 }
 
@@ -2067,7 +2067,7 @@ function stealthreactstart(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x1d064623, Offset: 0x87f8
 // Size: 0x1a
-function stealthreactterminate(behaviortreeentity) {
+function private stealthreactterminate(behaviortreeentity) {
     behaviortreeentity.stealth_reacting = undefined;
 }
 
@@ -2075,7 +2075,7 @@ function stealthreactterminate(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xdba3404c, Offset: 0x8820
 // Size: 0x60
-function stealthidleterminate(behaviortreeentity) {
+function private stealthidleterminate(behaviortreeentity) {
     behaviortreeentity notify(#"stealthidleterminate");
     if (isdefined(behaviortreeentity.stealth_resume_after_idle) && behaviortreeentity.stealth_resume_after_idle) {
         behaviortreeentity.stealth_resume_after_idle = undefined;
@@ -2112,7 +2112,7 @@ function explosivekilled(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xc541ec5b, Offset: 0x8968
 // Size: 0x84
-function _dropriotshield(riotshieldinfo) {
+function private _dropriotshield(riotshieldinfo) {
     entity = self;
     entity shared::throwweapon(riotshieldinfo.weapon, riotshieldinfo.tag, 0);
     if (isdefined(entity)) {
@@ -2365,7 +2365,7 @@ function shouldchargemelee(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x8deab18, Offset: 0x9718
 // Size: 0xf6
-function shouldattackinchargemelee(behaviortreeentity) {
+function private shouldattackinchargemelee(behaviortreeentity) {
     if (isdefined(behaviortreeentity.enemy)) {
         if (distancesquared(behaviortreeentity.origin, behaviortreeentity.enemy.origin) < 74 * 74) {
             yawtoenemy = angleclamp180(behaviortreeentity.angles[1] - vectortoangles(behaviortreeentity.enemy.origin - behaviortreeentity.origin)[1]);
@@ -2381,7 +2381,7 @@ function shouldattackinchargemelee(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xaf37ec01, Offset: 0x9818
 // Size: 0xc4
-function setupchargemeleeattack(behaviortreeentity) {
+function private setupchargemeleeattack(behaviortreeentity) {
     if (isdefined(behaviortreeentity.enemy) && isdefined(behaviortreeentity.enemy.vehicletype) && issubstr(behaviortreeentity.enemy.vehicletype, "firefly")) {
         blackboard::setblackboardattribute(behaviortreeentity, "_melee_enemy_type", "fireflyswarm");
     }
@@ -2393,7 +2393,7 @@ function setupchargemeleeattack(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xfd8d084b, Offset: 0x98e8
 // Size: 0x5c
-function cleanupmelee(behaviortreeentity) {
+function private cleanupmelee(behaviortreeentity) {
     meleereleasemutex(behaviortreeentity);
     releaseclaimnode(behaviortreeentity);
     blackboard::setblackboardattribute(behaviortreeentity, "_melee_enemy_type", undefined);
@@ -2403,7 +2403,7 @@ function cleanupmelee(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x75caa300, Offset: 0x9950
 // Size: 0xb4
-function cleanupchargemelee(behaviortreeentity) {
+function private cleanupchargemelee(behaviortreeentity) {
     behaviortreeentity.nextchargemeleetime = gettime() + 2000;
     blackboard::setblackboardattribute(behaviortreeentity, "_melee_enemy_type", undefined);
     meleereleasemutex(behaviortreeentity);
@@ -2426,7 +2426,7 @@ function cleanupchargemeleeattack(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xc2f3db4a, Offset: 0x9ab8
 // Size: 0x54
-function shouldchoosespecialpronepain(behaviortreeentity) {
+function private shouldchoosespecialpronepain(behaviortreeentity) {
     stance = blackboard::getblackboardattribute(behaviortreeentity, "_stance");
     return stance == "prone_back" || stance == "prone_front";
 }
@@ -2435,7 +2435,7 @@ function shouldchoosespecialpronepain(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xabde30a1, Offset: 0x9b18
 // Size: 0x4c
-function shouldchoosespecialpain(behaviortreeentity) {
+function private shouldchoosespecialpain(behaviortreeentity) {
     if (isdefined(behaviortreeentity.damageweapon)) {
         return (behaviortreeentity.damageweapon.specialpain || isdefined(behaviortreeentity.special_weapon));
     }
@@ -2446,7 +2446,7 @@ function shouldchoosespecialpain(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xcd9c3040, Offset: 0x9b70
 // Size: 0x3a
-function shouldchoosespecialdeath(behaviortreeentity) {
+function private shouldchoosespecialdeath(behaviortreeentity) {
     if (isdefined(behaviortreeentity.damageweapon)) {
         return behaviortreeentity.damageweapon.specialpain;
     }
@@ -2457,7 +2457,7 @@ function shouldchoosespecialdeath(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x22a3b7e5, Offset: 0x9bb8
 // Size: 0x54
-function shouldchoosespecialpronedeath(behaviortreeentity) {
+function private shouldchoosespecialpronedeath(behaviortreeentity) {
     stance = blackboard::getblackboardattribute(behaviortreeentity, "_stance");
     return stance == "prone_back" || stance == "prone_front";
 }
@@ -2466,7 +2466,7 @@ function shouldchoosespecialpronedeath(behaviortreeentity) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x92ec95f1, Offset: 0x9c18
 // Size: 0x48
-function setupexplosionanimscale(entity, asmstatename) {
+function private setupexplosionanimscale(entity, asmstatename) {
     self.animtranslationscale = 2;
     self asmsetanimationrate(0.7);
     return 4;
@@ -2601,7 +2601,7 @@ function postshootlaserandglintoff(ai) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xf795b6db, Offset: 0xa260
 // Size: 0x2a
-function isinphalanx(entity) {
+function private isinphalanx(entity) {
     return entity ai::get_behavior_attribute("phalanx");
 }
 
@@ -2609,7 +2609,7 @@ function isinphalanx(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x761035c, Offset: 0xa298
 // Size: 0xa6
-function isinphalanxstance(entity) {
+function private isinphalanxstance(entity) {
     phalanxstance = entity ai::get_behavior_attribute("phalanx_force_stance");
     currentstance = blackboard::getblackboardattribute(entity, "_stance");
     switch (phalanxstance) {
@@ -2625,7 +2625,7 @@ function isinphalanxstance(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xbaf8aa62, Offset: 0xa348
 // Size: 0xa6
-function togglephalanxstance(entity) {
+function private togglephalanxstance(entity) {
     phalanxstance = entity ai::get_behavior_attribute("phalanx_force_stance");
     switch (phalanxstance) {
     case 86:
@@ -2641,7 +2641,7 @@ function togglephalanxstance(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd9cb97ca, Offset: 0xa3f8
 // Size: 0x10e
-function tookflashbangdamage(entity) {
+function private tookflashbangdamage(entity) {
     if (isdefined(entity.damageweapon) && isdefined(entity.damagemod)) {
         weapon = entity.damageweapon;
         return (issubstr(weapon.rootweapon.name, "flash_grenade") || issubstr(weapon.rootweapon.name, "concussion_grenade") || entity.damagemod == "MOD_GRENADE_SPLASH" && isdefined(weapon.rootweapon) && issubstr(weapon.rootweapon.name, "proximity_grenade"));

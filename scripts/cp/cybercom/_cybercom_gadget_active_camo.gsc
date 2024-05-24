@@ -170,7 +170,7 @@ function function_b4902c73(slot, weapon, var_7ad67496, endnote) {
 // Params 4, eflags: 0x4
 // Checksum 0xccc0772e, Offset: 0xb78
 // Size: 0xc2
-function function_8f371c2b(slot, note, var_696db07, var_a9769379) {
+function private function_8f371c2b(slot, note, var_696db07, var_a9769379) {
     if (!isdefined(var_696db07)) {
         var_696db07 = 300;
     }
@@ -191,7 +191,7 @@ function function_8f371c2b(slot, note, var_696db07, var_a9769379) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x1faa3acf, Offset: 0xc48
 // Size: 0x224
-function function_e784c8b3() {
+function private function_e784c8b3() {
     self notify(#"hash_acc47db4");
     self endon(#"hash_acc47db4");
     var_d0c5bbcc = spawn("script_model", self.origin);
@@ -217,7 +217,7 @@ function function_e784c8b3() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xdef7cfee, Offset: 0xe78
 // Size: 0x5c
-function function_c51ef296(fakeent) {
+function private function_c51ef296(fakeent) {
     fakeent endon(#"death");
     self endon(#"disconnect");
     while (true) {
@@ -230,7 +230,7 @@ function function_c51ef296(fakeent) {
 // Params 0, eflags: 0x4
 // Checksum 0xbc6f286a, Offset: 0xee0
 // Size: 0xe0
-function function_d349a475() {
+function private function_d349a475() {
     self notify(#"hash_d349a475");
     self endon(#"hash_d349a475");
     self endon(#"hash_d3706a8a");

@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xae8ac95e, Offset: 0x178
 // Size: 0x4c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_lucky_crit", &__init__, undefined, array("aat", "bgb"));
 }
 

@@ -686,7 +686,7 @@ function generated_radius_attract_positions(forward, offset, num_positions, attr
 /#
 
     // Namespace zm_utility
-    // Params 0, eflags: 0x0
+    // Params 0, eflags: 0x1 linked
     // Checksum 0x288d4205, Offset: 0x2af0
     // Size: 0xa6
     function debug_draw_attractor_positions() {
@@ -816,7 +816,7 @@ function get_zombie_point_of_interest(origin, poi_array) {
 }
 
 // Namespace zm_utility
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x88bffdc9, Offset: 0x3188
 // Size: 0x28
 function activate_zombie_point_of_interest() {
@@ -827,7 +827,7 @@ function activate_zombie_point_of_interest() {
 }
 
 // Namespace zm_utility
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x14eb05d6, Offset: 0x31b8
 // Size: 0x104
 function deactivate_zombie_point_of_interest(dont_remove) {
@@ -1304,7 +1304,7 @@ function is_player_valid(player, checkignoremeflag, ignore_laststand_players) {
 }
 
 // Namespace zm_utility
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x75a045c2, Offset: 0x49d8
 // Size: 0x8c
 function get_number_of_valid_players() {
@@ -2682,7 +2682,7 @@ function function_dce51c76(sound) {
 }
 
 // Namespace zm_utility
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0xaa70bacb, Offset: 0x97b8
 // Size: 0x24
 function play_sound_2d(sound) {
@@ -2717,7 +2717,7 @@ function function_9440ba3(enable) {
 }
 
 // Namespace zm_utility
-// Params 6, eflags: 0x0
+// Params 6, eflags: 0x1 linked
 // Checksum 0x438b81a2, Offset: 0x98f0
 // Size: 0x130
 function print3d_ent(text, color, scale, offset, end_msg, overwrite) {
@@ -3661,7 +3661,7 @@ function ignore_triggers(timer) {
 }
 
 // Namespace zm_utility
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0xa18a6731, Offset: 0xb900
 // Size: 0x234
 function giveachievement_wrapper(achievement, all_players) {
@@ -3787,7 +3787,7 @@ function destroy_ent() {
 }
 
 // Namespace zm_utility
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x5d3c979f, Offset: 0xbde8
 // Size: 0xa0
 function waittill_not_moving() {
@@ -3963,7 +3963,7 @@ function add_gameloc(gl, dummy1, name, dummy2) {
 }
 
 // Namespace zm_utility
-// Params 3, eflags: 0x0
+// Params 3, eflags: 0x1 linked
 // Checksum 0x4b01adb7, Offset: 0xc620
 // Size: 0xf4
 function get_closest_index(org, array, dist) {
@@ -4257,7 +4257,7 @@ function is_favorite_weapon(weapon_to_check) {
 }
 
 // Namespace zm_utility
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x636fff89, Offset: 0xd180
 // Size: 0x26
 function function_93789785(event, chance) {
@@ -4457,7 +4457,7 @@ function function_1bfa9eb9() {
 }
 
 // Namespace zm_utility
-// Params 3, eflags: 0x0
+// Params 3, eflags: 0x1 linked
 // Checksum 0x598f9850, Offset: 0xdc60
 // Size: 0x22c
 function function_5bf9797b(a, b, var_c093fe79) {
@@ -4490,7 +4490,7 @@ function function_5bf9797b(a, b, var_c093fe79) {
 }
 
 // Namespace zm_utility
-// Params 3, eflags: 0x0
+// Params 3, eflags: 0x1 linked
 // Checksum 0xa61c3c2c, Offset: 0xde98
 // Size: 0x22c
 function function_596687a6(a, b, var_cb45764e) {
@@ -4676,7 +4676,7 @@ function redo_link_changes() {
 }
 
 // Namespace zm_utility
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x35a17a69, Offset: 0xe8d8
 // Size: 0xb2
 function is_gametype_active(a_gametypes) {
@@ -4693,7 +4693,7 @@ function is_gametype_active(a_gametypes) {
 }
 
 // Namespace zm_utility
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x44e10343, Offset: 0xe998
 // Size: 0x3e
 function register_custom_spawner_entry(spot_noteworthy, func) {
@@ -4935,7 +4935,7 @@ function approximate_path_dist(player) {
 }
 
 // Namespace zm_utility
-// Params 3, eflags: 0x0
+// Params 3, eflags: 0x1 linked
 // Checksum 0x3f21e441, Offset: 0xf488
 // Size: 0x8c
 function register_slowdown(str_type, n_rate, n_duration) {
@@ -4948,7 +4948,7 @@ function register_slowdown(str_type, n_rate, n_duration) {
 }
 
 // Namespace zm_utility
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x7a59bb11, Offset: 0xf520
 // Size: 0x284
 function function_447d3917(str_type) {
@@ -5100,7 +5100,7 @@ function function_62f3bbf4(var_a2fce333) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x87cb84d7, Offset: 0xfcc0
 // Size: 0xb4
-function function_8eb96012(ishost, var_95597467, issolo) {
+function private function_8eb96012(ishost, var_95597467, issolo) {
     path = spawnstruct();
     path.hosted = ishost ? "HOSTED" : "PLAYED";
     path.var_95597467 = var_95597467 ? "USED" : "UNUSED";
@@ -5112,7 +5112,7 @@ function function_8eb96012(ishost, var_95597467, issolo) {
 // Params 2, eflags: 0x4
 // Checksum 0xfe067fa6, Offset: 0xfd80
 // Size: 0x72
-function function_9878c818(statpath, statname) {
+function private function_9878c818(statpath, statname) {
     return self getdstat("dashboardingTrackingHistory", "gameSizeHistory", statpath.var_c0cf8114, "consumablesHistory", statpath.var_95597467, "periodHistory", statpath.hosted, statname);
 }
 
@@ -5120,7 +5120,7 @@ function function_9878c818(statpath, statname) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x80a342f, Offset: 0xfe00
 // Size: 0xac
-function function_96c1b925(statpath, statname, value) {
+function private function_96c1b925(statpath, statname, value) {
     self adddstat("dashboardingTrackingHistory", "gameSizeHistory", statpath.var_c0cf8114, "consumablesHistory", statpath.var_95597467, "periodHistory", statpath.hosted, statname, value);
     self adddstat("dashboardingTrackingHistory", "statsSinceLastComscoreEvent", statname, value);
 }
@@ -5129,7 +5129,7 @@ function function_96c1b925(statpath, statname, value) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xadadd5c6, Offset: 0xfeb8
 // Size: 0xe4
-function function_e33a692a(type) {
+function private function_e33a692a(type) {
     var_44222444 = self getdstat("dashboardingTrackingHistory", "currentDashboardingTrackingHistoryIndex");
     self setdstat("dashboardingTrackingHistory", "quitType", var_44222444, type);
     var_36d3e544 = (var_44222444 + 1) % 32;

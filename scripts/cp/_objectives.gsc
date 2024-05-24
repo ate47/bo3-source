@@ -279,7 +279,7 @@ class class_1d3048b8 : class_60c78d95 {
     // Params 2, eflags: 0x5 linked
     // Checksum 0xdf5c259e, Offset: 0x1910
     // Size: 0x134
-    function function_e3023aa1(player, target) {
+    function private function_e3023aa1(player, target) {
         entnum = player getentitynumber();
         obj_id = self.m_a_player_game_obj[entnum];
         var_a5b46d2f = 72;
@@ -408,7 +408,7 @@ class class_1d3048b8 : class_60c78d95 {
 // Params 0, eflags: 0x2
 // Checksum 0xb5c7ab63, Offset: 0x2260
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("objectives", &__init__, undefined, undefined);
 }
 
@@ -694,7 +694,7 @@ function function_ac28ba8e() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x76e69d94, Offset: 0x2de0
 // Size: 0xbe
-function on_player_spawned() {
+function private on_player_spawned() {
     if (isdefined(level.a_objectives)) {
         foreach (var_14191e40 in level.a_objectives) {
             if ([[ var_14191e40 ]]->function_9fe364f() && ![[ var_14191e40 ]]->is_done()) {

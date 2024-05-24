@@ -30,7 +30,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x22a25000, Offset: 0x598
 // Size: 0x9c
-function init() {
+function autoexec init() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("bonuszmZombieTraversalDoesAnimationExist", &function_6de9fa37);
     behaviortreenetworkutility::registerbehaviortreeaction("bonuszmSpecialTraverseAction", &function_88e9d5da, undefined, &function_dd1fc89b);
     animationstatenetwork::registeranimationmocomp("mocomp_bonuszm_special_traversal", &function_26c42b09, undefined, &function_47268b78);
@@ -40,7 +40,7 @@ function init() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7944fe09, Offset: 0x640
 // Size: 0x316
-function function_6de9fa37(entity) {
+function private function_6de9fa37(entity) {
     /#
         assert(isdefined(entity.traversestartnode));
     #/
@@ -85,7 +85,7 @@ function function_6de9fa37(entity) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xf705e76, Offset: 0x960
 // Size: 0x80
-function function_88e9d5da(entity, asmstatename) {
+function private function_88e9d5da(entity, asmstatename) {
     animationstatenetworkutility::requeststate(entity, asmstatename);
     entity ghost();
     entity notsolid();
@@ -97,7 +97,7 @@ function function_88e9d5da(entity, asmstatename) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x7f09f25d, Offset: 0x9e8
 // Size: 0x68
-function function_dd1fc89b(entity, asmstatename) {
+function private function_dd1fc89b(entity, asmstatename) {
     entity clientfield::set("zombie_appear_vanish_fx", 3);
     entity show();
     entity solid();
@@ -108,7 +108,7 @@ function function_dd1fc89b(entity, asmstatename) {
 // Params 5, eflags: 0x5 linked
 // Checksum 0xc47bc402, Offset: 0xa58
 // Size: 0x1d0
-function function_26c42b09(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
+function private function_26c42b09(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
     entity orientmode("face angle", entity.angles[1]);
     entity setrepairpaths(0);
     locomotionspeed = blackboard::getblackboardattribute(entity, "_locomotion_speed");
@@ -135,7 +135,7 @@ function function_26c42b09(entity, mocompanim, mocompanimblendouttime, mocompani
 // Params 5, eflags: 0x5 linked
 // Checksum 0x22257f19, Offset: 0xc30
 // Size: 0xbc
-function function_47268b78(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
+function private function_47268b78(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
     entity.blockingpain = 0;
     entity setrepairpaths(1);
     if (isdefined(entity.var_51ea7126)) {

@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x40cf54e3, Offset: 0x558
 // Size: 0x39c
-function registerbehaviorscriptfunctions() {
+function autoexec registerbehaviorscriptfunctions() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("prepareForMovement", &prepareformovement);
     behaviorstatemachine::registerbsmscriptapiinternal("prepareForMovement", &prepareformovement);
     behaviortreenetworkutility::registerbehaviortreescriptapi("shouldTacticalArrive", &shouldtacticalarrivecondition);
@@ -43,7 +43,7 @@ function registerbehaviorscriptfunctions() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x221bbfa9, Offset: 0x900
 // Size: 0x20
-function tacticalwalkscanterminate(entity) {
+function private tacticalwalkscanterminate(entity) {
     entity.lasttacticalscantime = gettime();
     return true;
 }
@@ -52,7 +52,7 @@ function tacticalwalkscanterminate(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6e9ebed3, Offset: 0x928
 // Size: 0x130
-function shouldtacticalwalkscan(entity) {
+function private shouldtacticalwalkscan(entity) {
     if (isdefined(entity.lasttacticalscantime) && entity.lasttacticalscantime + 2000 > gettime()) {
         return false;
     }
@@ -79,7 +79,7 @@ function shouldtacticalwalkscan(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x724e8970, Offset: 0xa60
 // Size: 0x150
-function continuetacticalwalkscan(entity) {
+function private continuetacticalwalkscan(entity) {
     if (!entity haspath()) {
         return false;
     }
@@ -105,7 +105,7 @@ function continuetacticalwalkscan(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xae808487, Offset: 0xbb8
 // Size: 0x76
-function shouldtacticalwalkpain(entity) {
+function private shouldtacticalwalkpain(entity) {
     if ((!isdefined(entity.startpaintime) || entity.startpaintime + 3000 < gettime()) && randomfloat(1) > 0.25) {
         return bsmlocomotionhasvalidpaininterrupt(entity);
     }
@@ -116,7 +116,7 @@ function shouldtacticalwalkpain(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x31754bab, Offset: 0xc38
 // Size: 0x20
-function begintacticalwalkpain(entity) {
+function private begintacticalwalkpain(entity) {
     entity.startpaintime = gettime();
     return true;
 }
@@ -125,7 +125,7 @@ function begintacticalwalkpain(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd50db974, Offset: 0xc60
 // Size: 0x24
-function shouldcontinuetacticalwalkpain(entity) {
+function private shouldcontinuetacticalwalkpain(entity) {
     return entity.startpaintime + 100 >= gettime();
 }
 
@@ -133,7 +133,7 @@ function shouldcontinuetacticalwalkpain(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xef2852b0, Offset: 0xc90
 // Size: 0x2a
-function bsmlocomotionhasvalidpaininterrupt(entity) {
+function private bsmlocomotionhasvalidpaininterrupt(entity) {
     return entity hasvalidinterrupt("pain");
 }
 
@@ -141,7 +141,7 @@ function bsmlocomotionhasvalidpaininterrupt(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xdc6ba5ac, Offset: 0xcc8
 // Size: 0xdc
-function shouldarriveexposed(behaviortreeentity) {
+function private shouldarriveexposed(behaviortreeentity) {
     if (behaviortreeentity ai::get_behavior_attribute("disablearrivals")) {
         return false;
     }
@@ -157,7 +157,7 @@ function shouldarriveexposed(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x2ab3796a, Offset: 0xdb0
 // Size: 0x38
-function preparetostopnearenemy(behaviortreeentity) {
+function private preparetostopnearenemy(behaviortreeentity) {
     behaviortreeentity clearpath();
     behaviortreeentity.keepclaimednode = 1;
 }
@@ -166,7 +166,7 @@ function preparetostopnearenemy(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4f1f9820, Offset: 0xdf0
 // Size: 0x38
-function preparetomoveawayfromnearbyenemy(behaviortreeentity) {
+function private preparetomoveawayfromnearbyenemy(behaviortreeentity) {
     behaviortreeentity clearpath();
     behaviortreeentity.keepclaimednode = 1;
 }
@@ -175,7 +175,7 @@ function preparetomoveawayfromnearbyenemy(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd9d4d520, Offset: 0xe30
 // Size: 0x1b8
-function shouldplanarrivalintocover(behaviortreeentity) {
+function private shouldplanarrivalintocover(behaviortreeentity) {
     goingtocovernode = isdefined(behaviortreeentity.node) && iscovernode(behaviortreeentity.node);
     if (!goingtocovernode) {
         return false;
@@ -202,7 +202,7 @@ function shouldplanarrivalintocover(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xfe6a6802, Offset: 0xff0
 // Size: 0x146
-function shouldswitchtotacticalwalkfromrun(behaviortreeentity) {
+function private shouldswitchtotacticalwalkfromrun(behaviortreeentity) {
     if (!behaviortreeentity haspath()) {
         return false;
     }
@@ -231,7 +231,7 @@ function shouldswitchtotacticalwalkfromrun(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4f255d2f, Offset: 0x1140
 // Size: 0x90
-function humannoncombatlocomotioncondition(behaviortreeentity) {
+function private humannoncombatlocomotioncondition(behaviortreeentity) {
     if (!behaviortreeentity haspath()) {
         return false;
     }
@@ -251,7 +251,7 @@ function humannoncombatlocomotioncondition(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb2eb04da, Offset: 0x11d8
 // Size: 0x8c
-function humancombatlocomotioncondition(behaviortreeentity) {
+function private humancombatlocomotioncondition(behaviortreeentity) {
     if (!behaviortreeentity haspath()) {
         return false;
     }
@@ -271,7 +271,7 @@ function humancombatlocomotioncondition(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xacda02ef, Offset: 0x1270
 // Size: 0xc8
-function combatlocomotionstart(behaviortreeentity) {
+function private combatlocomotionstart(behaviortreeentity) {
     randomchance = randomint(100);
     if (randomchance > 50) {
         blackboard::setblackboardattribute(behaviortreeentity, "_run_n_gun_variation", "variation_forward");
@@ -289,7 +289,7 @@ function combatlocomotionstart(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb1b0623c, Offset: 0x1340
 // Size: 0xfe
-function noncombatlocomotionupdate(behaviortreeentity) {
+function private noncombatlocomotionupdate(behaviortreeentity) {
     if (!behaviortreeentity haspath()) {
         return false;
     }
@@ -311,7 +311,7 @@ function noncombatlocomotionupdate(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x77c81a0a, Offset: 0x1448
 // Size: 0xdc
-function combatlocomotionupdate(behaviortreeentity) {
+function private combatlocomotionupdate(behaviortreeentity) {
     if (!behaviortreeentity haspath()) {
         return false;
     }
@@ -336,7 +336,7 @@ function combatlocomotionupdate(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xde44eabb, Offset: 0x1530
 // Size: 0x38
-function prepareformovement(behaviortreeentity) {
+function private prepareformovement(behaviortreeentity) {
     blackboard::setblackboardattribute(behaviortreeentity, "_stance", "stand");
     return true;
 }
@@ -345,7 +345,7 @@ function prepareformovement(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x991c0b9c, Offset: 0x1570
 // Size: 0x30
-function isarrivingfour(arrivalangle) {
+function private isarrivingfour(arrivalangle) {
     if (arrivalangle >= 45 && arrivalangle <= 120) {
         return true;
     }
@@ -356,7 +356,7 @@ function isarrivingfour(arrivalangle) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x562a9b33, Offset: 0x15a8
 // Size: 0x30
-function isarrivingone(arrivalangle) {
+function private isarrivingone(arrivalangle) {
     if (arrivalangle >= 120 && arrivalangle <= -91) {
         return true;
     }
@@ -367,7 +367,7 @@ function isarrivingone(arrivalangle) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x77e6a1a3, Offset: 0x15e0
 // Size: 0x30
-function isarrivingtwo(arrivalangle) {
+function private isarrivingtwo(arrivalangle) {
     if (arrivalangle >= -91 && arrivalangle <= -61) {
         return true;
     }
@@ -378,7 +378,7 @@ function isarrivingtwo(arrivalangle) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x11597442, Offset: 0x1618
 // Size: 0x30
-function isarrivingthree(arrivalangle) {
+function private isarrivingthree(arrivalangle) {
     if (arrivalangle >= -61 && arrivalangle <= -16) {
         return true;
     }
@@ -389,7 +389,7 @@ function isarrivingthree(arrivalangle) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x2da9b06c, Offset: 0x1650
 // Size: 0x30
-function isarrivingsix(arrivalangle) {
+function private isarrivingsix(arrivalangle) {
     if (arrivalangle >= -16 && arrivalangle <= 315) {
         return true;
     }
@@ -400,7 +400,7 @@ function isarrivingsix(arrivalangle) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xdfa41aea, Offset: 0x1688
 // Size: 0x30
-function isfacingfour(facingangle) {
+function private isfacingfour(facingangle) {
     if (facingangle >= 45 && facingangle <= -121) {
         return true;
     }
@@ -411,7 +411,7 @@ function isfacingfour(facingangle) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x364207b9, Offset: 0x16c0
 // Size: 0x30
-function isfacingeight(facingangle) {
+function private isfacingeight(facingangle) {
     if (facingangle >= -45 && facingangle <= 45) {
         return true;
     }
@@ -422,7 +422,7 @@ function isfacingeight(facingangle) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd3a84200, Offset: 0x16f8
 // Size: 0x2e
-function isfacingseven(facingangle) {
+function private isfacingseven(facingangle) {
     if (facingangle >= 0 && facingangle <= 90) {
         return true;
     }
@@ -433,7 +433,7 @@ function isfacingseven(facingangle) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7e65c9cb, Offset: 0x1730
 // Size: 0x30
-function isfacingsix(facingangle) {
+function private isfacingsix(facingangle) {
     if (facingangle >= -135 && facingangle <= -45) {
         return true;
     }
@@ -444,7 +444,7 @@ function isfacingsix(facingangle) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x8fc3cfeb, Offset: 0x1768
 // Size: 0x2e
-function isfacingnine(facingangle) {
+function private isfacingnine(facingangle) {
     if (facingangle >= -90 && facingangle <= 0) {
         return true;
     }
@@ -455,7 +455,7 @@ function isfacingnine(facingangle) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xc6224feb, Offset: 0x17a0
 // Size: 0x400
-function shouldtacticalarrivecondition(behaviortreeentity) {
+function private shouldtacticalarrivecondition(behaviortreeentity) {
     if (getdvarint("enableTacticalArrival") != 1) {
         return false;
     }
@@ -516,7 +516,7 @@ function shouldtacticalarrivecondition(behaviortreeentity) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xa6b2a3b8, Offset: 0x1ba8
 // Size: 0x3c
-function humanshouldsprint() {
+function private humanshouldsprint() {
     currentlocomovementtype = blackboard::getblackboardattribute(self, "_human_locomotion_movement_type");
     return currentlocomovementtype == "human_locomotion_movement_sprint";
 }
@@ -525,7 +525,7 @@ function humanshouldsprint() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xb7b2b442, Offset: 0x1bf0
 // Size: 0x57c
-function planhumanarrivalatcover(behaviortreeentity, arrivalanim) {
+function private planhumanarrivalatcover(behaviortreeentity, arrivalanim) {
     if (behaviortreeentity ai::get_behavior_attribute("disablearrivals")) {
         return false;
     }
@@ -601,7 +601,7 @@ function planhumanarrivalatcover(behaviortreeentity, arrivalanim) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x686df052, Offset: 0x2178
 // Size: 0x2dc
-function checkcoverarrivalconditions(coverenterpos, coverpos) {
+function private checkcoverarrivalconditions(coverenterpos, coverpos) {
     distsqtonode = distancesquared(self.origin, coverpos);
     distsqfromnodetoenterpos = distancesquared(coverpos, coverenterpos);
     awayfromenterpos = distsqtonode >= distsqfromnodetoenterpos + -106;
@@ -629,7 +629,7 @@ function checkcoverarrivalconditions(coverenterpos, coverpos) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xe2bf33c2, Offset: 0x2460
 // Size: 0x2d6
-function getarrivalsplittime(arrivalanim, isright) {
+function private getarrivalsplittime(arrivalanim, isright) {
     if (!isdefined(level.animarrivalsplittimes)) {
         level.animarrivalsplittimes = [];
     }
@@ -671,7 +671,7 @@ function getarrivalsplittime(arrivalanim, isright) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x2d89b03d, Offset: 0x2740
 // Size: 0x9c
-function deltarotate(delta, yaw) {
+function private deltarotate(delta, yaw) {
     cosine = cos(yaw);
     sine = sin(yaw);
     return (delta[0] * cosine - delta[1] * sine, delta[1] * cosine + delta[0] * sine, 0);

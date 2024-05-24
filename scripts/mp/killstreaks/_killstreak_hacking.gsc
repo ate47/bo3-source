@@ -71,7 +71,7 @@ function hackerloopfx() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x287bdd31, Offset: 0x530
 // Size: 0x1e4
-function _hacked_callback(hacker) {
+function private _hacked_callback(hacker) {
     killstreak = self;
     originalowner = killstreak.owner;
     if (isdefined(killstreak.killstreakhackscoreevent)) {

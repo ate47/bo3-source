@@ -138,7 +138,7 @@ function function_4135a1c4(slot, weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x3ef02424, Offset: 0xb88
 // Size: 0x33e
-function function_8aac802c(weapon) {
+function private function_8aac802c(weapon) {
     playerforward = anglestoforward(self getplayerangles());
     enemies = arraycombine(getaiteamarray("axis"), getaiteamarray("team3"), 0, 0);
     enemies = arraysort(enemies, self.origin, 1);
@@ -174,7 +174,7 @@ function function_8aac802c(weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x9f743a02, Offset: 0xed0
 // Size: 0x186
-function function_12a86f2e(slot, weapon) {
+function private function_12a86f2e(slot, weapon) {
     targets = function_8aac802c(weapon);
     self.cybercom.var_1beb8e5f = [];
     for (i = 0; i < self.cybercom.var_c0a69197; i++) {

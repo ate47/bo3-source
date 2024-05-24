@@ -17,15 +17,15 @@
 
 // Namespace zm_powerup_nuke
 // Params 0, eflags: 0x2
-// Checksum 0xe710e2f0, Offset: 0x2e0
+// Checksum 0x5fa4c4d, Offset: 0x2e0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_nuke", &__init__, undefined, undefined);
 }
 
 // Namespace zm_powerup_nuke
-// Params 0, eflags: 0x0
-// Checksum 0x268948f2, Offset: 0x320
+// Params 0, eflags: 0x1 linked
+// Checksum 0x65c01df5, Offset: 0x320
 // Size: 0xd4
 function __init__() {
     zm_powerups::register_powerup("nuke", &grab_nuke);
@@ -35,8 +35,8 @@ function __init__() {
 }
 
 // Namespace zm_powerup_nuke
-// Params 1, eflags: 0x0
-// Checksum 0x446f02de, Offset: 0x400
+// Params 1, eflags: 0x1 linked
+// Checksum 0xe716715b, Offset: 0x400
 // Size: 0xa8
 function grab_nuke(player) {
     level thread nuke_powerup(self, player.team);
@@ -47,8 +47,8 @@ function grab_nuke(player) {
 }
 
 // Namespace zm_powerup_nuke
-// Params 2, eflags: 0x0
-// Checksum 0x64ca1043, Offset: 0x4b0
+// Params 2, eflags: 0x1 linked
+// Checksum 0x89ae85f8, Offset: 0x4b0
 // Size: 0x49e
 function nuke_powerup(drop_item, player_team) {
     level thread nuke_delay_spawning(3);
@@ -107,8 +107,8 @@ function nuke_powerup(drop_item, player_team) {
 }
 
 // Namespace zm_powerup_nuke
-// Params 1, eflags: 0x0
-// Checksum 0xe1209caf, Offset: 0x958
+// Params 1, eflags: 0x1 linked
+// Checksum 0x1528e590, Offset: 0x958
 // Size: 0xac
 function nuke_flash(team) {
     if (isdefined(team)) {
@@ -120,8 +120,8 @@ function nuke_flash(team) {
 }
 
 // Namespace zm_powerup_nuke
-// Params 1, eflags: 0x0
-// Checksum 0xbc8f45bf, Offset: 0xa10
+// Params 1, eflags: 0x1 linked
+// Checksum 0xb1f12522, Offset: 0xa10
 // Size: 0xc4
 function nuke_delay_spawning(n_spawn_delay) {
     level endon(#"disable_nuke_delay_spawning");

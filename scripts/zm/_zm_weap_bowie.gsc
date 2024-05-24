@@ -7,9 +7,9 @@
 
 // Namespace namespace_f492499a
 // Params 0, eflags: 0x2
-// Checksum 0x94ef8f62, Offset: 0x198
+// Checksum 0x765e71a, Offset: 0x198
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("bowie_knife", &__init__, &__main__, undefined);
 }
 
@@ -17,15 +17,15 @@ function function_2dc19561() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x99ec1590, Offset: 0x1e0
 // Size: 0x4
-function __init__() {
+function private __init__() {
     
 }
 
 // Namespace namespace_f492499a
 // Params 0, eflags: 0x5 linked
-// Checksum 0xf06b7cc3, Offset: 0x1f0
+// Checksum 0x54d224a0, Offset: 0x1f0
 // Size: 0x104
-function __main__() {
+function private __main__() {
     if (isdefined(level.bowie_cost)) {
         cost = level.bowie_cost;
     } else {

@@ -16,7 +16,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc005c270, Offset: 0x2d8
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("oed", &__init__, &__main__, undefined);
 }
 

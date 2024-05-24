@@ -20,15 +20,15 @@
 
 // Namespace zm_powerup_weapon_minigun
 // Params 0, eflags: 0x2
-// Checksum 0xd5e784fd, Offset: 0x360
+// Checksum 0xbb663b4d, Offset: 0x360
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_weapon_minigun", &__init__, undefined, undefined);
 }
 
 // Namespace zm_powerup_weapon_minigun
 // Params 0, eflags: 0x1 linked
-// Checksum 0x9ad1f5d1, Offset: 0x3a0
+// Checksum 0x7790868a, Offset: 0x3a0
 // Size: 0x184
 function __init__() {
     zm_powerups::register_powerup("minigun", &grab_minigun);
@@ -45,7 +45,7 @@ function __init__() {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 1, eflags: 0x1 linked
-// Checksum 0x1b2864a8, Offset: 0x530
+// Checksum 0x4680ecb9, Offset: 0x530
 // Size: 0x64
 function grab_minigun(player) {
     level thread minigun_weapon_powerup(player);
@@ -57,7 +57,7 @@ function grab_minigun(player) {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 0, eflags: 0x1 linked
-// Checksum 0x2444d3e7, Offset: 0x5a0
+// Checksum 0xfa457549, Offset: 0x5a0
 // Size: 0x2e
 function init_player_zombie_vars() {
     self.zombie_vars["zombie_powerup_minigun_on"] = 0;
@@ -66,7 +66,7 @@ function init_player_zombie_vars() {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 0, eflags: 0x1 linked
-// Checksum 0x37c5c2e4, Offset: 0x5d8
+// Checksum 0x8edf7ae5, Offset: 0x5d8
 // Size: 0x1e
 function func_should_drop_minigun() {
     if (zm_powerups::minigun_no_drop()) {
@@ -77,7 +77,7 @@ function func_should_drop_minigun() {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 2, eflags: 0x1 linked
-// Checksum 0xfff57512, Offset: 0x600
+// Checksum 0xcdbc811c, Offset: 0x600
 // Size: 0x22c
 function minigun_weapon_powerup(ent_player, time) {
     ent_player endon(#"disconnect");
@@ -114,7 +114,7 @@ function minigun_weapon_powerup(ent_player, time) {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 0, eflags: 0x1 linked
-// Checksum 0x6370d4ff, Offset: 0x838
+// Checksum 0x2d522de0, Offset: 0x838
 // Size: 0x1c
 function minigun_powerup_last_stand() {
     zm_powerups::weapon_watch_gunner_downed("minigun");
@@ -122,7 +122,7 @@ function minigun_powerup_last_stand() {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 2, eflags: 0x1 linked
-// Checksum 0xbedc37b9, Offset: 0x860
+// Checksum 0x815b5429, Offset: 0x860
 // Size: 0x6e
 function minigun_countdown(ent_player, str_weapon_time) {
     while (ent_player.zombie_vars[str_weapon_time] > 0) {
@@ -133,7 +133,7 @@ function minigun_countdown(ent_player, str_weapon_time) {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 0, eflags: 0x0
-// Checksum 0xadb6823d, Offset: 0x8d8
+// Checksum 0xa6fab6f6, Offset: 0x8d8
 // Size: 0x1a
 function minigun_weapon_powerup_off() {
     self.zombie_vars["zombie_powerup_minigun_time"] = 0;
@@ -141,7 +141,7 @@ function minigun_weapon_powerup_off() {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 12, eflags: 0x1 linked
-// Checksum 0x8a9f16bb, Offset: 0x900
+// Checksum 0x35f4229, Offset: 0x900
 // Size: 0x186
 function minigun_damage_adjust(inflictor, attacker, damage, flags, meansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, surfacetype) {
     if (weapon.name != "minigun") {

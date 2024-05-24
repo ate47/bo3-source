@@ -9,7 +9,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc5e0455c, Offset: 0x100
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_island_spiders", &__init__, &__main__, undefined);
 }
 

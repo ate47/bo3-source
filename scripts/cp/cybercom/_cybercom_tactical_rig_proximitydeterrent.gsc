@@ -200,7 +200,7 @@ function function_e24410ed(type, player) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x2fbd5d4e, Offset: 0xf68
 // Size: 0x424
-function function_55b9d032(player, attacker, upgraded) {
+function private function_55b9d032(player, attacker, upgraded) {
     attacker endon(#"death");
     if (!isdefined(attacker.archetype)) {
         return;
@@ -303,7 +303,7 @@ function function_c0ba5acc(player, attacker, radius) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x52c55769, Offset: 0x1688
 // Size: 0x44
-function function_c8e11a8b(ent, note) {
+function private function_c8e11a8b(ent, note) {
     ent endon(#"death");
     self waittill(note);
     ent delete();
@@ -313,7 +313,7 @@ function function_c8e11a8b(ent, note) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xc8657186, Offset: 0x16d8
 // Size: 0x4c4
-function function_a38f70a1(player, target) {
+function private function_a38f70a1(player, target) {
     target endon(#"death");
     player endon(#"disconnect");
     orb = spawn("script_model", player.origin + (0, 0, 45));

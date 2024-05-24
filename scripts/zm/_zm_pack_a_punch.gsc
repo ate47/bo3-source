@@ -29,7 +29,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x2b4f5016, Offset: 0x718
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_pack_a_punch", &__init__, &__main__, undefined);
 }
 
@@ -66,7 +66,7 @@ function __main__() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x90676372, Offset: 0x8c8
 // Size: 0x484
-function spawn_init() {
+function private spawn_init() {
     zbarriers = getentarray("zm_pack_a_punch", "targetname");
     for (i = 0; i < zbarriers.size; i++) {
         if (!zbarriers[i] iszbarrier()) {
@@ -118,7 +118,7 @@ function spawn_init() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x2df1e363, Offset: 0xd58
 // Size: 0xe8
-function function_25b72b5f() {
+function private function_25b72b5f() {
     level endon(#"pack_a_punch_off");
     level waittill(#"pack_a_punch_on");
     self thread function_28497573();
@@ -136,7 +136,7 @@ function function_25b72b5f() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xfd722404, Offset: 0xe48
 // Size: 0x24
-function function_28497573() {
+function private function_28497573() {
     level waittill(#"pack_a_punch_off");
     self thread function_25b72b5f();
 }
@@ -145,7 +145,7 @@ function function_28497573() {
 // Params 5, eflags: 0x5 linked
 // Checksum 0x2fca6d05, Offset: 0xe78
 // Size: 0x4bc
-function third_person_weapon_upgrade(current_weapon, upgrade_weapon, packa_rollers, pap_machine, trigger) {
+function private third_person_weapon_upgrade(current_weapon, upgrade_weapon, packa_rollers, pap_machine, trigger) {
     level endon(#"pack_a_punch_off");
     trigger endon(#"pap_player_disconnected");
     current_weapon = self getbuildkitweapon(current_weapon, 0);
@@ -197,7 +197,7 @@ function third_person_weapon_upgrade(current_weapon, upgrade_weapon, packa_rolle
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe5e9c4e1, Offset: 0x1340
 // Size: 0xe6
-function can_pack_weapon(weapon) {
+function private can_pack_weapon(weapon) {
     if (weapon.isriotshield) {
         return false;
     }
@@ -223,7 +223,7 @@ function can_pack_weapon(weapon) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x572511ff, Offset: 0x1430
 // Size: 0x100
-function player_use_can_pack_now() {
+function private player_use_can_pack_now() {
     if (isdefined(self.intermission) && (self laststand::player_is_in_laststand() || self.intermission) || self isthrowinggrenade()) {
         return false;
     }
@@ -244,7 +244,7 @@ function player_use_can_pack_now() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x48227dce, Offset: 0x1538
 // Size: 0x144
-function function_88d56c01() {
+function private function_88d56c01() {
     self endon(#"death");
     self endon(#"pack_a_punch_off");
     self notify(#"hash_c29ef16b");
@@ -266,7 +266,7 @@ function function_88d56c01() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x31e2906d, Offset: 0x1688
 // Size: 0xb88
-function function_c101a20e() {
+function private function_c101a20e() {
     level endon(#"pack_a_punch_off");
     pap_machine = getent(self.target, "targetname");
     self.pap_machine = pap_machine;
@@ -408,7 +408,7 @@ function function_c101a20e() {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xcbc2b9b9, Offset: 0x2218
 // Size: 0xb0
-function shutoffpapsounds(ent1, ent2, ent3) {
+function private shutoffpapsounds(ent1, ent2, ent3) {
     while (true) {
         level waittill(#"pack_a_punch_off");
         level thread turnonpapsounds(ent1);
@@ -422,7 +422,7 @@ function shutoffpapsounds(ent1, ent2, ent3) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x8657725f, Offset: 0x22d0
 // Size: 0x34
-function turnonpapsounds(ent) {
+function private turnonpapsounds(ent) {
     level waittill(#"pack_a_punch_on");
     ent playloopsound("zmb_perks_packa_loop");
 }
@@ -431,7 +431,7 @@ function turnonpapsounds(ent) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x1b0b260d, Offset: 0x2310
 // Size: 0x64
-function function_45b5c3f2() {
+function private function_45b5c3f2() {
     level endon(#"pack_a_punch_off");
     while (true) {
         self.cost = 5000;
@@ -447,7 +447,7 @@ function function_45b5c3f2() {
 // Params 5, eflags: 0x5 linked
 // Checksum 0xdff64bf0, Offset: 0x2380
 // Size: 0x64c
-function wait_for_player_to_take(player, weapon, packa_timer, b_weapon_supports_aat, var_ca548511) {
+function private wait_for_player_to_take(player, weapon, packa_timer, b_weapon_supports_aat, var_ca548511) {
     current_weapon = self.current_weapon;
     upgrade_weapon = self.upgrade_weapon;
     /#
@@ -534,7 +534,7 @@ function wait_for_player_to_take(player, weapon, packa_timer, b_weapon_supports_
 // Params 4, eflags: 0x5 linked
 // Checksum 0x36eaffd3, Offset: 0x29d8
 // Size: 0x204
-function wait_for_timeout(weapon, packa_timer, player, var_ca548511) {
+function private wait_for_timeout(weapon, packa_timer, player, var_ca548511) {
     self endon(#"pap_taken");
     self endon(#"pap_player_disconnected");
     self thread wait_for_disconnect(player);
@@ -568,7 +568,7 @@ function wait_for_timeout(weapon, packa_timer, player, var_ca548511) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6c21b74e, Offset: 0x2be8
 // Size: 0x62
-function wait_for_disconnect(player) {
+function private wait_for_disconnect(player) {
     self endon(#"pap_taken");
     self endon(#"pap_timeout");
     while (isdefined(player)) {
@@ -584,7 +584,7 @@ function wait_for_disconnect(player) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xefa9743c, Offset: 0x2c58
 // Size: 0xa4
-function destroy_weapon_in_blackout(player) {
+function private destroy_weapon_in_blackout(player) {
     self endon(#"pap_timeout");
     self endon(#"pap_taken");
     self endon(#"pap_player_disconnected");
@@ -599,7 +599,7 @@ function destroy_weapon_in_blackout(player) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x2e8ec0da, Offset: 0x2d08
 // Size: 0x74
-function function_4edd595f() {
+function private function_4edd595f() {
     self endon(#"disconnect");
     self function_bfc21a18();
     self util::waittill_any("fake_death", "death", "player_downed", "weapon_change_complete");
@@ -610,7 +610,7 @@ function function_4edd595f() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x783b0945, Offset: 0x2d88
 // Size: 0x13c
-function function_bfc21a18() {
+function private function_bfc21a18() {
     self zm_utility::increment_is_drinking();
     self zm_utility::disable_player_move_states(1);
     primaries = self getweaponslistprimaries();
@@ -630,7 +630,7 @@ function function_bfc21a18() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x22bd43a8, Offset: 0x2ed0
 // Size: 0x104
-function function_5f10c30c() {
+function private function_5f10c30c() {
     self zm_utility::enable_player_move_states();
     weapon = getweapon("zombie_knuckle_crack");
     if (isdefined(self.intermission) && (self laststand::player_is_in_laststand() || self.intermission)) {
@@ -650,7 +650,7 @@ function function_5f10c30c() {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xf4f4e538, Offset: 0x2fe0
 // Size: 0xf2
-function function_d948efbd(delta, origin, radius) {
+function private function_d948efbd(delta, origin, radius) {
     if (isdefined(self.target)) {
         paporigin = self.target.origin;
         if (isdefined(self.target.trigger_off) && self.target.trigger_off) {
@@ -669,7 +669,7 @@ function function_d948efbd(delta, origin, radius) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x221abc61, Offset: 0x30e0
 // Size: 0x42
-function turn_on(origin, radius) {
+function private turn_on(origin, radius) {
     /#
         println("pack_a_punch");
     #/
@@ -680,7 +680,7 @@ function turn_on(origin, radius) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x21cebb9d, Offset: 0x3130
 // Size: 0x6c
-function turn_off(origin, radius) {
+function private turn_off(origin, radius) {
     /#
         println("pack_a_punch");
     #/
@@ -693,7 +693,7 @@ function turn_off(origin, radius) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xb9b8c0ff, Offset: 0x31a8
 // Size: 0x22
-function is_on() {
+function private is_on() {
     if (isdefined(self.powered)) {
         return self.powered.power;
     }
@@ -704,7 +704,7 @@ function is_on() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x95727f74, Offset: 0x31d8
 // Size: 0x22
-function get_start_state() {
+function private get_start_state() {
     if (isdefined(level.vending_machines_powered_on_at_start) && level.vending_machines_powered_on_at_start) {
         return true;
     }
@@ -715,7 +715,7 @@ function get_start_state() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xac719ad8, Offset: 0x3208
 // Size: 0x6e
-function cost_func() {
+function private cost_func() {
     if (isdefined(self.one_time_cost)) {
         cost = self.one_time_cost;
         self.one_time_cost = undefined;
@@ -734,7 +734,7 @@ function cost_func() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4a89c120, Offset: 0x3280
 // Size: 0xa4
-function toggle_think(powered_on) {
+function private toggle_think(powered_on) {
     if (!powered_on) {
         self.zbarrier set_pap_zbarrier_state("initial");
         level waittill(#"pack_a_punch_on");
@@ -751,7 +751,7 @@ function toggle_think(powered_on) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xb6fb840b, Offset: 0x3330
 // Size: 0x3c
-function pap_initial() {
+function private pap_initial() {
     self zbarrierpieceuseattachweapon(3);
     self setzbarrierpiecestate(0, "closed");
 }
@@ -760,7 +760,7 @@ function pap_initial() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x5671f2ce, Offset: 0x3378
 // Size: 0x24
-function pap_power_off() {
+function private pap_power_off() {
     self setzbarrierpiecestate(0, "closing");
 }
 
@@ -768,7 +768,7 @@ function pap_power_off() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x922584aa, Offset: 0x33a8
 // Size: 0x9c
-function pap_power_on() {
+function private pap_power_on() {
     self endon(#"zbarrier_state_change");
     self setzbarrierpiecestate(0, "opening");
     while (self getzbarrierpiecestate(0) == "opening") {
@@ -782,7 +782,7 @@ function pap_power_on() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x309c4005, Offset: 0x3450
 // Size: 0xf0
-function pap_powered() {
+function private pap_powered() {
     self endon(#"zbarrier_state_change");
     self setzbarrierpiecestate(4, "closed");
     if (self.classname === "zbarrier_zm_castle_packapunch" || self.classname === "zbarrier_zm_tomb_packapunch") {
@@ -800,7 +800,7 @@ function pap_powered() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x7aab39d1, Offset: 0x3548
 // Size: 0xb4
-function pap_take_gun() {
+function private pap_take_gun() {
     self setzbarrierpiecestate(1, "opening");
     self setzbarrierpiecestate(2, "opening");
     self setzbarrierpiecestate(3, "opening");
@@ -814,7 +814,7 @@ function pap_take_gun() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x1c6ca453, Offset: 0x3608
 // Size: 0x64
-function pap_eject_gun() {
+function private pap_eject_gun() {
     self setzbarrierpiecestate(1, "closing");
     self setzbarrierpiecestate(2, "closing");
     self setzbarrierpiecestate(3, "closing");
@@ -824,7 +824,7 @@ function pap_eject_gun() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xbc096c7b, Offset: 0x3678
 // Size: 0x82
-function pap_leaving() {
+function private pap_leaving() {
     self setzbarrierpiecestate(5, "closing");
     do {
         wait(0.05);
@@ -837,7 +837,7 @@ function pap_leaving() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xab54eab1, Offset: 0x3708
 // Size: 0x9c
-function pap_arriving() {
+function private pap_arriving() {
     self endon(#"zbarrier_state_change");
     self setzbarrierpiecestate(0, "opening");
     while (self getzbarrierpiecestate(0) == "opening") {
@@ -851,7 +851,7 @@ function pap_arriving() {
 // Params 0, eflags: 0x4
 // Checksum 0xbfb74bb9, Offset: 0x37b0
 // Size: 0xa
-function get_pap_zbarrier_state() {
+function private get_pap_zbarrier_state() {
     return self.state;
 }
 
@@ -859,7 +859,7 @@ function get_pap_zbarrier_state() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe8b5831b, Offset: 0x37c8
 // Size: 0x80
-function set_pap_zbarrier_state(state) {
+function private set_pap_zbarrier_state(state) {
     for (i = 0; i < self getnumzbarrierpieces(); i++) {
         self hidezbarrierpiece(i);
     }
@@ -871,7 +871,7 @@ function set_pap_zbarrier_state(state) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x91bcefc5, Offset: 0x3850
 // Size: 0x326
-function process_pap_zbarrier_state(state) {
+function private process_pap_zbarrier_state(state) {
     switch (state) {
     case 52:
         self showzbarrierpiece(0);
@@ -929,7 +929,7 @@ function process_pap_zbarrier_state(state) {
 }
 
 // Namespace namespace_d0ad3850
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x40cb1afe, Offset: 0x3b80
 // Size: 0x24
 function set_state_initial() {
@@ -937,7 +937,7 @@ function set_state_initial() {
 }
 
 // Namespace namespace_d0ad3850
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0xadcbddb1, Offset: 0x3bb0
 // Size: 0x24
 function set_state_leaving() {
@@ -945,7 +945,7 @@ function set_state_leaving() {
 }
 
 // Namespace namespace_d0ad3850
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x788533d, Offset: 0x3be0
 // Size: 0x24
 function set_state_arriving() {
@@ -953,7 +953,7 @@ function set_state_arriving() {
 }
 
 // Namespace namespace_d0ad3850
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0xf57fea00, Offset: 0x3c10
 // Size: 0x24
 function set_state_power_on() {
@@ -961,7 +961,7 @@ function set_state_power_on() {
 }
 
 // Namespace namespace_d0ad3850
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0xd3c7e32d, Offset: 0x3c40
 // Size: 0x24
 function set_state_hidden() {

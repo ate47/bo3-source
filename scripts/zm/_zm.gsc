@@ -131,7 +131,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x2fbc46f3, Offset: 0x3550
 // Size: 0x394
-function ignore_systems() {
+function autoexec ignore_systems() {
     system::ignore("gadget_clone");
     system::ignore("gadget_armor");
     system::ignore("gadget_heat_wave");
@@ -176,7 +176,7 @@ function ignore_systems() {
 // Params 0, eflags: 0x2
 // Checksum 0x435733ed, Offset: 0x38f0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm", &__init__, undefined, undefined);
 }
 
@@ -325,7 +325,7 @@ function init() {
 }
 
 // Namespace zm
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x206eee61, Offset: 0x4260
 // Size: 0x1c
 function post_main() {
@@ -1559,7 +1559,7 @@ function player_spawn_protection() {
 }
 
 // Namespace zm
-// Params 3, eflags: 0x0
+// Params 3, eflags: 0x1 linked
 // Checksum 0x397625d9, Offset: 0x9030
 // Size: 0x68
 function spawn_life_brush(origin, radius, height) {
@@ -1586,7 +1586,7 @@ function in_life_brush() {
 }
 
 // Namespace zm
-// Params 3, eflags: 0x0
+// Params 3, eflags: 0x1 linked
 // Checksum 0x72b480b4, Offset: 0x9138
 // Size: 0x68
 function spawn_kill_brush(origin, radius, height) {
@@ -3020,7 +3020,7 @@ function run_custom_ai_spawn_checks() {
 }
 
 // Namespace zm
-// Params 4, eflags: 0x0
+// Params 4, eflags: 0x1 linked
 // Checksum 0x6aa3ade5, Offset: 0xe560
 // Size: 0xb0
 function register_custom_ai_spawn_check(str_id, func_check, func_get_spawners, func_get_locations) {
@@ -3134,7 +3134,7 @@ function round_start() {
 }
 
 // Namespace zm
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x9b7b9318, Offset: 0xeb40
 // Size: 0x17c
 function play_door_dialog() {
@@ -5124,7 +5124,7 @@ function play_level_start_vox_delayed() {
 }
 
 // Namespace zm
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x87e96f92, Offset: 0x162c0
 // Size: 0x126
 function register_sidequest(id, sidequest_stat) {
@@ -5151,7 +5151,7 @@ function register_sidequest(id, sidequest_stat) {
 }
 
 // Namespace zm
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x30cc5fc8, Offset: 0x163f0
 // Size: 0x2c
 function is_sidequest_previously_completed(id) {
@@ -5159,7 +5159,7 @@ function is_sidequest_previously_completed(id) {
 }
 
 // Namespace zm
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x19156669, Offset: 0x16428
 // Size: 0xde
 function set_sidequest_completed(id) {

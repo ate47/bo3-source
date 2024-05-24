@@ -19,7 +19,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x42d46e52, Offset: 0x758
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_audio", &__init__, undefined, undefined);
 }
 
@@ -415,7 +415,7 @@ function zmbvoxinitspeaker(speaker, prefix, ent) {
 }
 
 // Namespace zm_audio
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0xe97141b5, Offset: 0x1a60
 // Size: 0x4e
 function custom_kill_damaged_vo(player) {
@@ -1020,7 +1020,7 @@ function sndmusicsystem_stopandflush() {
 }
 
 // Namespace zm_audio
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x1d7cd718, Offset: 0x3b48
 // Size: 0x4c
 function sndmusicsystem_isabletoplay() {
@@ -1130,7 +1130,7 @@ function function_b55a93f8(zone) {
 }
 
 // Namespace zm_audio
-// Params 6, eflags: 0x0
+// Params 6, eflags: 0x1 linked
 // Checksum 0x28aec4e4, Offset: 0x3f88
 // Size: 0x30a
 function sndmusicsystem_eesetup(state, origin1, origin2, origin3, origin4, origin5) {
@@ -1509,7 +1509,7 @@ function is_last_zombie() {
 }
 
 // Namespace zm_audio
-// Params 7, eflags: 0x0
+// Params 7, eflags: 0x1 linked
 // Checksum 0x33228ca2, Offset: 0x5240
 // Size: 0x466
 function function_ff22a5f2(var_6ac79f92, var_154f146d, origin1, origin2, origin3, origin4, origin5) {
@@ -1683,7 +1683,7 @@ function sndperksjingles_cooldown() {
 }
 
 // Namespace zm_audio
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x56ef71d6, Offset: 0x5bd0
 // Size: 0x88
 function function_7ab00f0c(name, var_2009b1c2) {
@@ -1698,7 +1698,7 @@ function function_7ab00f0c(name, var_2009b1c2) {
 }
 
 // Namespace zm_audio
-// Params 4, eflags: 0x0
+// Params 4, eflags: 0x1 linked
 // Checksum 0xbb08d499, Offset: 0x5c60
 // Size: 0x2a6
 function function_80db0d1d(name, line, var_838e0a98, ignoreplayer) {
@@ -1736,7 +1736,7 @@ function function_80db0d1d(name, line, var_838e0a98, ignoreplayer) {
 }
 
 // Namespace zm_audio
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0xe1cbfcff, Offset: 0x5f10
 // Size: 0x28e
 function function_20b36810(name) {
@@ -1901,7 +1901,7 @@ function function_27e4fddc() {
 }
 
 // Namespace zm_audio
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x7ba90ecd, Offset: 0x6690
 // Size: 0x16c
 function water_vox() {

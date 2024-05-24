@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xcf7b9303, Offset: 0x760
 // Size: 0x69e
-function main() {
+function autoexec main() {
     clientfield::register("actor", "margwa_head_left", 1, 2, "int", &namespace_8e0e686a::function_c0e0c646, 0, 0);
     clientfield::register("actor", "margwa_head_mid", 1, 2, "int", &namespace_8e0e686a::function_7e5d3087, 0, 0);
     clientfield::register("actor", "margwa_head_right", 1, 2, "int", &namespace_8e0e686a::function_d87d3ccf, 0, 0);
@@ -57,7 +57,7 @@ function main() {
 // Params 0, eflags: 0x2
 // Checksum 0x5b5921e6, Offset: 0xe08
 // Size: 0xc6
-function precache() {
+function autoexec precache() {
     level._effect["fx_margwa_teleport_zod_zmb"] = "zombie/fx_margwa_teleport_zod_zmb";
     level._effect["fx_margwa_teleport_travel_zod_zmb"] = "zombie/fx_margwa_teleport_travel_zod_zmb";
     level._effect["fx_margwa_teleport_tell_zod_zmb"] = "zombie/fx_margwa_teleport_tell_zod_zmb";
@@ -73,7 +73,7 @@ function precache() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x879a66c0, Offset: 0xed8
 // Size: 0x340
-function function_6a6776cf(localclientnum) {
+function private function_6a6776cf(localclientnum) {
     self util::waittill_dobj(localclientnum);
     if (!isdefined(self)) {
         return;
@@ -107,7 +107,7 @@ function function_6a6776cf(localclientnum) {
 // Params 7, eflags: 0x5 linked
 // Checksum 0x39899429, Offset: 0x1220
 // Size: 0x40e
-function function_c0e0c646(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_c0e0c646(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (isdefined(self.var_c848921f)) {
         stopfx(localclientnum, self.var_c848921f);
     }
@@ -159,7 +159,7 @@ function function_c0e0c646(localclientnum, oldvalue, newvalue, bnewent, binitial
 // Params 7, eflags: 0x5 linked
 // Checksum 0xe539dfdd, Offset: 0x1638
 // Size: 0x3a6
-function function_7e5d3087(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_7e5d3087(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (isdefined(self.var_12ac0a08)) {
         stopfx(localclientnum, self.var_12ac0a08);
     }
@@ -208,7 +208,7 @@ function function_7e5d3087(localclientnum, oldvalue, newvalue, bnewent, binitial
 // Params 7, eflags: 0x5 linked
 // Checksum 0xc6c44191, Offset: 0x19e8
 // Size: 0x3a6
-function function_d87d3ccf(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_d87d3ccf(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (isdefined(self.var_3ad36aa8)) {
         stopfx(localclientnum, self.var_3ad36aa8);
     }
@@ -257,7 +257,7 @@ function function_d87d3ccf(localclientnum, oldvalue, newvalue, bnewent, binitial
 // Params 1, eflags: 0x5 linked
 // Checksum 0xedfe9ecd, Offset: 0x1d98
 // Size: 0x9c
-function function_6ced7db8(localclientnum) {
+function private function_6ced7db8(localclientnum) {
     self endon(#"entityshutdown");
     wait(0.6);
     if (isdefined(self.var_c848921f)) {
@@ -275,7 +275,7 @@ function function_6ced7db8(localclientnum) {
 // Params 7, eflags: 0x5 linked
 // Checksum 0x915558a6, Offset: 0x1e40
 // Size: 0x94
-function function_f6e2bd30(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_f6e2bd30(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue) {
         self.var_7fe940db = playfx(localclientnum, level._effect["fx_margwa_teleport_zod_zmb"], self gettagorigin("j_spine_1"));
     }
@@ -285,7 +285,7 @@ function function_f6e2bd30(localclientnum, oldvalue, newvalue, bnewent, binitial
 // Params 7, eflags: 0x5 linked
 // Checksum 0xd40f1b8b, Offset: 0x1ee0
 // Size: 0xa4
-function function_2da4e7b5(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_2da4e7b5(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue) {
         tagpos = self gettagorigin("j_spine_1");
         self.var_50b72d4e = playfx(localclientnum, level._effect["fx_margwa_teleport_zod_zmb"], tagpos);
@@ -296,7 +296,7 @@ function function_2da4e7b5(localclientnum, oldvalue, newvalue, bnewent, binitial
 // Params 7, eflags: 0x5 linked
 // Checksum 0x90b68d05, Offset: 0x1f90
 // Size: 0xbe
-function function_7dbd5705(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_7dbd5705(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     switch (newvalue) {
     case 0:
         deletefx(localclientnum, self.var_1427f05a);
@@ -311,7 +311,7 @@ function function_7dbd5705(localclientnum, oldvalue, newvalue, bnewent, binitial
 // Params 7, eflags: 0x5 linked
 // Checksum 0x819f763b, Offset: 0x2058
 // Size: 0xde
-function function_584a8fb0(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_584a8fb0(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     switch (newvalue) {
     case 0:
         deletefx(localclientnum, self.var_add65037);
@@ -328,7 +328,7 @@ function function_584a8fb0(localclientnum, oldvalue, newvalue, bnewent, binitial
 // Params 1, eflags: 0x5 linked
 // Checksum 0xab59ebac, Offset: 0x2140
 // Size: 0xd8
-function function_201bc8e4(localclientnum) {
+function private function_201bc8e4(localclientnum) {
     self notify(#"hash_a222dc9a");
     self endon(#"hash_a222dc9a");
     self endon(#"entityshutdown");
@@ -348,7 +348,7 @@ function function_201bc8e4(localclientnum) {
 // Params 7, eflags: 0x5 linked
 // Checksum 0x477c632a, Offset: 0x2220
 // Size: 0x114
-function function_540e4b20(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_540e4b20(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue) {
         spawnfx = level._effect["fx_margwa_teleport_intro_zod_zmb"];
         if (isdefined(self.var_12c4e9d2)) {
@@ -367,7 +367,7 @@ function function_540e4b20(localclientnum, oldvalue, newvalue, bnewent, binitial
 // Params 7, eflags: 0x5 linked
 // Checksum 0x54ecfd4e, Offset: 0x2340
 // Size: 0x64
-function function_e758beb5(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_e758beb5(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue) {
         self postfx::playpostfxbundle("pstfx_parasite_dmg");
     }
@@ -409,7 +409,7 @@ function function_4b9de733(localclientnum, pos, surface, notetrack, bone) {
 // Params 7, eflags: 0x5 linked
 // Checksum 0x61e8731c, Offset: 0x25c8
 // Size: 0x194
-function function_be725723(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_be725723(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue) {
         e_player = getlocalplayer(localclientnum);
         var_c06eca13 = self.origin + vectorscale(anglestoforward(self.angles), 60);
@@ -430,7 +430,7 @@ function function_be725723(localclientnum, oldvalue, newvalue, bnewent, binitial
 // Params 7, eflags: 0x5 linked
 // Checksum 0xf2b2d95, Offset: 0x2768
 // Size: 0xac
-function function_e9b7fd(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_e9b7fd(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue) {
         effect = level._effect["fx_margwa_head_shot_zod_zmb"];
         if (isdefined(self.var_5373c806)) {
@@ -444,7 +444,7 @@ function function_e9b7fd(localclientnum, oldvalue, newvalue, bnewent, binitialsn
 // Params 7, eflags: 0x5 linked
 // Checksum 0x42a9f94f, Offset: 0x2820
 // Size: 0xac
-function function_f83117ae(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_f83117ae(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue) {
         effect = level._effect["fx_margwa_head_shot_zod_zmb"];
         if (isdefined(self.var_5373c806)) {
@@ -458,7 +458,7 @@ function function_f83117ae(localclientnum, oldvalue, newvalue, bnewent, binitial
 // Params 7, eflags: 0x5 linked
 // Checksum 0xe19fcfaf, Offset: 0x28d8
 // Size: 0xac
-function function_5a1f5466(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_5a1f5466(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue) {
         effect = level._effect["fx_margwa_head_shot_zod_zmb"];
         if (isdefined(self.var_5373c806)) {
@@ -472,7 +472,7 @@ function function_5a1f5466(localclientnum, oldvalue, newvalue, bnewent, binitial
 // Params 7, eflags: 0x5 linked
 // Checksum 0x3c4188, Offset: 0x2990
 // Size: 0x60
-function function_42dfc6e6(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_42dfc6e6(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue) {
         self.heads[newvalue].killed = 1;
     }
@@ -482,7 +482,7 @@ function function_42dfc6e6(localclientnum, oldvalue, newvalue, bnewent, binitial
 // Params 7, eflags: 0x5 linked
 // Checksum 0x94ddd068, Offset: 0x29f8
 // Size: 0x1c2
-function function_5d887ba9(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_5d887ba9(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue) {
         foreach (head in self.heads) {
             if (isdefined(head.killed) && head.killed) {

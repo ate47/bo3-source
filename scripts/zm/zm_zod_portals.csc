@@ -22,7 +22,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x92f345a3, Offset: 0x6c8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_zod_portals", &__init__, undefined, undefined);
 }
 

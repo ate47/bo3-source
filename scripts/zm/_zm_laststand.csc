@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x796482e0, Offset: 0x1b0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_laststand", &__init__, undefined, undefined);
 }
 

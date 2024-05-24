@@ -98,7 +98,7 @@ function function_ca06d008(player, origin) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x188acb5d, Offset: 0x8b8
 // Size: 0x220
-function function_963e13a0() {
+function private function_963e13a0() {
     self endon(#"death");
     while (true) {
         guy = self waittill(#"trigger");
@@ -141,7 +141,7 @@ function function_963e13a0() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x1ad49281, Offset: 0xae0
 // Size: 0x146
-function function_770e1327(trigger) {
+function private function_770e1327(trigger) {
     self endon(#"death");
     self notify(#"hash_770e1327");
     self endon(#"hash_770e1327");
@@ -201,7 +201,7 @@ function timeshifterupdate(player, origin) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x74cbfda, Offset: 0xfb0
 // Size: 0x1d8
-function function_78d20ce0() {
+function private function_78d20ce0() {
     self endon(#"death");
     while (true) {
         guy = self waittill(#"trigger");
@@ -240,7 +240,7 @@ function function_78d20ce0() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xa4d7167a, Offset: 0x1190
 // Size: 0x146
-function function_59a20c67(trigger) {
+function private function_59a20c67(trigger) {
     self endon(#"death");
     self notify(#"hash_59a20c67");
     self endon(#"hash_59a20c67");

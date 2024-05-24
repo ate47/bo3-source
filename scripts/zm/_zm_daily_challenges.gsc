@@ -23,7 +23,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x3b10dbe6, Offset: 0x860
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_daily_challenges", &__init__, &__main__, undefined);
 }
 
@@ -368,7 +368,7 @@ function increment_windows_repaired(s_barrier) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x9fdada64, Offset: 0x1818
 // Size: 0x96
-function rebuild_timer() {
+function private rebuild_timer() {
     self endon(#"disconnect");
     self.b_dc_rebuild_timer_active = 1;
     wait(45);

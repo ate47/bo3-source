@@ -18,7 +18,7 @@
 // Params 0, eflags: 0x4
 // Checksum 0xa3ea456e, Offset: 0x3c0
 // Size: 0x19c
-function function_a55a134f() {
+function private function_a55a134f() {
     arenas = struct::get_array("arena_center");
     for (i = 0; i < arenas.size; i++) {
         if (issubstr(arenas[i].script_parameters, "player_challenge")) {

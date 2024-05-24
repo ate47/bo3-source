@@ -21,7 +21,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd3ad68f8, Offset: 0x2f8
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_attackables", &__init__, &__main__, undefined);
 }
 
@@ -100,7 +100,7 @@ function get_attackable_slot(entity) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xd7af7903, Offset: 0x748
 // Size: 0xe4
-function clear_slots() {
+function private clear_slots() {
     foreach (slot in self.slot) {
         if (!isalive(slot.entity)) {
             slot.entity = undefined;
@@ -113,7 +113,7 @@ function clear_slots() {
 }
 
 // Namespace zm_attackables
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0x6e4e8d03, Offset: 0x838
 // Size: 0x38
 function activate() {

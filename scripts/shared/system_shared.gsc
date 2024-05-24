@@ -138,7 +138,7 @@ function ignore(var_f6d58016) {
 }
 
 // Namespace system
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xe7eee5a6, Offset: 0x848
 // Size: 0x4a
 function function_85aec44f(var_f6d58016) {

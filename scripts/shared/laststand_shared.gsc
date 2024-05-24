@@ -40,7 +40,7 @@ function player_all_players_in_laststand() {
 }
 
 // Namespace laststand
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xda614525, Offset: 0x298
 // Size: 0x16
 function player_any_player_in_laststand() {
@@ -231,7 +231,7 @@ function function_590a49b2() {
 }
 
 // Namespace laststand
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x7a430a53, Offset: 0xc40
 // Size: 0x84
 function function_5d050fca() {

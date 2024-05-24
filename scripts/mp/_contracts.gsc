@@ -18,7 +18,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x3249040e, Offset: 0x6a0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("contracts", &__init__, undefined, undefined);
 }
 

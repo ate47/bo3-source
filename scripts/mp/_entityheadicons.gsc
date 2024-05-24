@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc6887fc6, Offset: 0x130
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("entityheadicons", &__init__, undefined, undefined);
 }
 

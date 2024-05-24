@@ -532,7 +532,7 @@ function droptoground(origin, trailfx, impactfx, var_96214f04, var_7c5f2b05) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x3c24fbb8, Offset: 0x2fa8
 // Size: 0x94
-function function_9a5d69ac() {
+function private function_9a5d69ac() {
     self endon(#"death");
     self.zombie_move_speed = "walk";
     self util::waittill_any_timeout(30, "damage");
@@ -1306,7 +1306,7 @@ function function_45849d81(spawner, loc, def) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xbc4259cb, Offset: 0x61a8
 // Size: 0x15e
-function function_28cdab69(def) {
+function private function_28cdab69(def) {
     def.initialized = 1;
     def.var_40c7a009 = 0;
     targetsize = level.doa.var_e0d67a74.size;
@@ -1326,7 +1326,7 @@ function function_28cdab69(def) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xd3bca543, Offset: 0x6310
 // Size: 0x3c
-function function_1ee8b18c(def, ai) {
+function private function_1ee8b18c(def, ai) {
     ai endon(#"hash_9757351b");
     ai waittill(#"death");
     def.var_40c7a009--;
@@ -1336,7 +1336,7 @@ function function_1ee8b18c(def, ai) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xa70a5c0d, Offset: 0x6358
 // Size: 0xa4
-function function_be745286(def, ai) {
+function private function_be745286(def, ai) {
     ai endon(#"death");
     ai thread function_1ee8b18c(def, ai);
     def.var_40c7a009++;
@@ -1353,7 +1353,7 @@ function function_be745286(def, ai) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0xc692fa53, Offset: 0x6408
 // Size: 0x292
-function function_b6d31d3a(spot, hold, fx, var_3d98e879) {
+function private function_b6d31d3a(spot, hold, fx, var_3d98e879) {
     if (!isdefined(hold)) {
         hold = 0;
     }
@@ -1397,7 +1397,7 @@ function function_b6d31d3a(spot, hold, fx, var_3d98e879) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xe4a672c1, Offset: 0x66a8
 // Size: 0x34
-function function_2f0633b5() {
+function private function_2f0633b5() {
     self endon(#"death");
     wait(0.5);
     if (isdefined(self)) {
@@ -1409,7 +1409,7 @@ function function_2f0633b5() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x36c88a16, Offset: 0x66e8
 // Size: 0xa4
-function function_7c9f5521(zombie, spot) {
+function private function_7c9f5521(zombie, spot) {
     zombie endon(#"rise_anim_finished");
     while (isdefined(zombie) && isdefined(zombie.health) && zombie.health > 1) {
         amount = zombie waittill(#"damage");
@@ -1636,7 +1636,7 @@ function function_772a04fe() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x29a05752, Offset: 0x7450
 // Size: 0x50
-function function_45f23318(ai) {
+function private function_45f23318(ai) {
     self endon(#"death");
     ai endon(#"goal");
     ai waittill(#"death");
@@ -1726,7 +1726,7 @@ function function_4ce6d0ea() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x39d501e4, Offset: 0x7a78
 // Size: 0xe8
-function function_e8a17069() {
+function private function_e8a17069() {
     self endon(#"death");
     while (true) {
         if (getdvarint("scr_doa_soak_think", 0)) {
@@ -1759,7 +1759,7 @@ function function_62d794a5() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xf4c52146, Offset: 0x7cc0
 // Size: 0x40
-function function_13109fad() {
+function private function_13109fad() {
     self endon(#"death");
     while (true) {
         self waittill(#"hash_2f07c48c");
@@ -1771,7 +1771,7 @@ function function_13109fad() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xf419b2ed, Offset: 0x7d08
 // Size: 0x310
-function function_c0147a11() {
+function private function_c0147a11() {
     wait(0.05);
     self endon(#"death");
     self.takedamage = 1;
@@ -1857,7 +1857,7 @@ function function_b59ae4e9(inflictor, attacker, damage, dflags, mod, weapon, poi
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe3bcd2fa, Offset: 0x8468
 // Size: 0x4c
-function function_7ee81ba4(org) {
+function private function_7ee81ba4(org) {
     org thread namespace_eaa992c::function_285a2999("margwa_head_explode");
     wait(1);
     org delete();
@@ -1867,7 +1867,7 @@ function function_7ee81ba4(org) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x14cb7732, Offset: 0x84c0
 // Size: 0xdc
-function function_3133a8cb() {
+function private function_3133a8cb() {
     if (self.zombie_move_speed == "walk") {
         self.zombie_move_speed = "run";
         self asmsetanimationrate(0.8);
@@ -1885,7 +1885,7 @@ function function_3133a8cb() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x348e59ff, Offset: 0x85a8
 // Size: 0x130
-function function_1c99c7cd() {
+function private function_1c99c7cd() {
     trigger = spawn("trigger_radius", self.origin, 2, 40, 50);
     trigger.targetname = "margwaDamag";
     trigger enablelinkto();

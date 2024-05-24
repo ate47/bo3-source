@@ -9,7 +9,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xbee79c6c, Offset: 0x698
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("bb", &__init__, undefined, undefined);
 }
 

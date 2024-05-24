@@ -19,15 +19,15 @@
 
 // Namespace zm_powerup_free_perk
 // Params 0, eflags: 0x2
-// Checksum 0xef39b50b, Offset: 0x310
+// Checksum 0xff24fb40, Offset: 0x310
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_free_perk", &__init__, undefined, undefined);
 }
 
 // Namespace zm_powerup_free_perk
 // Params 0, eflags: 0x1 linked
-// Checksum 0x2bfa1a0f, Offset: 0x350
+// Checksum 0xba19622e, Offset: 0x350
 // Size: 0x9c
 function __init__() {
     zm_powerups::register_powerup("free_perk", &grab_free_perk);
@@ -38,7 +38,7 @@ function __init__() {
 
 // Namespace zm_powerup_free_perk
 // Params 1, eflags: 0x1 linked
-// Checksum 0x91c94707, Offset: 0x3f8
+// Checksum 0x96523314, Offset: 0x3f8
 // Size: 0x24
 function grab_free_perk(player) {
     level thread function_bce49437(self);
@@ -46,7 +46,7 @@ function grab_free_perk(player) {
 
 // Namespace zm_powerup_free_perk
 // Params 1, eflags: 0x1 linked
-// Checksum 0x6435eef0, Offset: 0x428
+// Checksum 0xf3252f3, Offset: 0x428
 // Size: 0x196
 function function_bce49437(item) {
     players = getplayers();
@@ -71,7 +71,7 @@ function function_bce49437(item) {
 
 // Namespace zm_powerup_free_perk
 // Params 1, eflags: 0x1 linked
-// Checksum 0x6f3810fc, Offset: 0x5c8
+// Checksum 0xcdf32e41, Offset: 0x5c8
 // Size: 0xe4
 function function_6754a666(perk) {
     self endon(#"disconnect");

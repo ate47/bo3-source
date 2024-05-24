@@ -13,12 +13,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd9b8185f, Offset: 0x190
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("grapple", &__init__, undefined, undefined);
 }
 
 // Namespace grapple
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1d0
 // Size: 0x4
 function __init__() {

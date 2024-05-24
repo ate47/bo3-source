@@ -201,7 +201,7 @@ function function_ccca7010(type) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd9625089, Offset: 0xd00
 // Size: 0x130
-function function_45ce30b1(type) {
+function private function_45ce30b1(type) {
     if (!isdefined(level.var_ab0cd3b2[type])) {
         return false;
     }

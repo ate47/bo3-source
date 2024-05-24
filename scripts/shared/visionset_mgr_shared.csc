@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd66fdc7f, Offset: 0x330
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("visionset_mgr", &__init__, undefined, undefined);
 }
 
@@ -775,7 +775,7 @@ function function_980ca37e(var_66d5434d, var_d02e72af, var_ddb7b79b) {
 }
 
 // Namespace visionset_mgr
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x5f7d0cc1, Offset: 0x3600
 // Size: 0x18
 function function_a95252c1(suffix) {

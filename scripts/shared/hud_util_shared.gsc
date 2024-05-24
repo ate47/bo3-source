@@ -412,7 +412,7 @@ function createicon(shader, width, height) {
 }
 
 // Namespace hud
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x168c9662, Offset: 0x1818
 // Size: 0x158
 function function_d945e9e7(shader, width, height, team) {

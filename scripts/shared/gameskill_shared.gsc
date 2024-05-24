@@ -11,12 +11,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0x865ce485, Offset: 0x430
 // Size: 0x10
-function init() {
+function autoexec init() {
     level.gameskill = 0;
 }
 
 // Namespace gameskill
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xd77f5ac2, Offset: 0x448
 // Size: 0x214
 function setskill(reset, var_4f8d5b23) {
@@ -359,7 +359,7 @@ function function_fabc32f() {
 }
 
 // Namespace gameskill
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x4aaa7543, Offset: 0x1688
 // Size: 0x442
 function playerhealthregen() {
@@ -1621,7 +1621,7 @@ function function_58f840ea() {
 }
 
 // Namespace gameskill
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7b492b4a, Offset: 0x4750
 // Size: 0xaa
 function function_57ab3c9d(player, eattacker, einflictor, idamage, weapon, shitloc, var_785f4b6e) {
@@ -1633,7 +1633,7 @@ function function_57ab3c9d(player, eattacker, einflictor, idamage, weapon, shitl
 }
 
 // Namespace gameskill
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x7afb1ecc, Offset: 0x4808
 // Size: 0x12e
 function function_904126cf(player, eattacker, einflictor, idamage, weapon, shitloc, var_785f4b6e) {

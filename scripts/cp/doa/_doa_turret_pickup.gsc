@@ -419,7 +419,7 @@ function function_3ce8bf1c(player, origin) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xfa1fd0ab, Offset: 0x20b8
 // Size: 0xa6
-function function_dfe832b7(timeleft, note) {
+function private function_dfe832b7(timeleft, note) {
     while (gettime() < timeleft) {
         if (level flag::get("doa_round_active")) {
             wait(1);
@@ -524,7 +524,7 @@ function function_f3ee1c57(einflictor, eattacker, idamage, idflags, smeansofdeat
 // Params 2, eflags: 0x5 linked
 // Checksum 0xd5f59049, Offset: 0x2908
 // Size: 0x66
-function function_43d18fa4(player, note) {
+function private function_43d18fa4(player, note) {
     self endon(#"death");
     level endon(note);
     while (isdefined(player)) {

@@ -2468,7 +2468,7 @@ function function_ece4ca01() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x8c6bce2e, Offset: 0xc620
 // Size: 0x92
-function function_7a152f99(statname) {
+function private function_7a152f99(statname) {
     var_9792a8bf = self getdstat("PlayerStatsByMap", getrootmapname(), "currentStats", statname);
     var_56aa772d = self getdstat("PlayerStatsList", statname, "statValue");
     return var_56aa772d - var_9792a8bf;

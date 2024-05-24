@@ -20,7 +20,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x8b599a3e, Offset: 0x3d8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("amws", &__init__, undefined, undefined);
 }
 
@@ -896,7 +896,7 @@ function path_update_interrupt() {
 }
 
 // Namespace amws
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x17b123d9, Offset: 0x3d48
 // Size: 0x84
 function gib(attacker) {

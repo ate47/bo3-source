@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xae9083f0, Offset: 0x370
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("dialog", &__init__, undefined, undefined);
 }
 
@@ -128,7 +128,7 @@ function say(str_vo_line, n_delay, var_57b7ba95, e_to_player, var_43937b21) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0xe81d3e10, Offset: 0x810
 // Size: 0x2a6
-function function_263a2879(str_vo_line, n_delay, var_57b7ba95, e_to_player) {
+function private function_263a2879(str_vo_line, n_delay, var_57b7ba95, e_to_player) {
     if (!isdefined(var_57b7ba95)) {
         var_57b7ba95 = 0;
     }

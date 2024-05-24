@@ -35,7 +35,7 @@ function init() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x889a2704, Offset: 0x500
 // Size: 0x4a4
-function function_d95d34bd(spawner) {
+function private function_d95d34bd(spawner) {
     level notify(#"hash_d95d34bd");
     level endon(#"hash_d95d34bd");
     while (true) {
@@ -92,7 +92,7 @@ function function_d95d34bd(spawner) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xf576030c, Offset: 0x9b0
 // Size: 0x452
-function function_555608c7() {
+function private function_555608c7() {
     self endon(#"death");
     self.takedamage = 1;
     while (true) {
@@ -147,7 +147,7 @@ function function_555608c7() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x3e01cd2c, Offset: 0xe10
 // Size: 0x2c
-function function_4e81959(waittime) {
+function private function_4e81959(waittime) {
     self endon(#"death");
     wait(waittime);
     self.zombie_move_speed = "sprint";
@@ -157,7 +157,7 @@ function function_4e81959(waittime) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x126ad4fb, Offset: 0xe48
 // Size: 0x154
-function function_a2756e92() {
+function private function_a2756e92() {
     self endon(#"death");
     self notify(#"hash_d96c599c");
     self thread namespace_1a381543::function_90118d8c("zmb_simianaut_roar");
@@ -229,7 +229,7 @@ function function_ce73145c() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x7b38ad91, Offset: 0x12c8
 // Size: 0x330
-function function_66efd1eb() {
+function private function_66efd1eb() {
     self endon(#"death");
     self endon(#"hash_19503b17");
     while (isdefined(self)) {
@@ -281,7 +281,7 @@ function function_66efd1eb() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x44bc310e, Offset: 0x1600
 // Size: 0x6c
-function function_5bd24aae() {
+function private function_5bd24aae() {
     self endon(#"death");
     level waittill(#"exit_taken");
     level notify(#"hash_48b870e4");
@@ -294,7 +294,7 @@ function function_5bd24aae() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x96f403e1, Offset: 0x1678
 // Size: 0x69c
-function function_2ca4656() {
+function private function_2ca4656() {
     self endon(#"death");
     wait(0.1);
     timeout = gettime() + 10000;
@@ -393,7 +393,7 @@ function function_2ca4656() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x924bab, Offset: 0x1d20
 // Size: 0xfc
-function function_e5e28b1b() {
+function private function_e5e28b1b() {
     self endon(#"death");
     while (true) {
         var_6792dc08 = getentarray("a_pickup_item", "script_noteworthy");

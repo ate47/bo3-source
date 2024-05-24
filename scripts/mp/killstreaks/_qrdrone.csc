@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x51e371a1, Offset: 0x390
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("qrdrone", &__init__, undefined, undefined);
 }
 

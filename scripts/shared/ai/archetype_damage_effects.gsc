@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x25729624, Offset: 0x208
 // Size: 0xe4
-function main() {
+function autoexec main() {
     clientfield::register("actor", "arch_actor_fire_fx", 1, 2, "int");
     clientfield::register("actor", "arch_actor_char", 1, 2, "int");
     callback::on_actor_damage(&onactordamagecallback);

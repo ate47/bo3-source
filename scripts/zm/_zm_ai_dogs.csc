@@ -7,15 +7,15 @@
 
 // Namespace namespace_cc5bac97
 // Params 0, eflags: 0x2
-// Checksum 0x1425f877, Offset: 0x168
+// Checksum 0x7ad078, Offset: 0x168
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_ai_dogs", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_cc5bac97
-// Params 0, eflags: 0x0
-// Checksum 0xdd2a52a2, Offset: 0x1a8
+// Params 0, eflags: 0x1 linked
+// Checksum 0x99e5ec07, Offset: 0x1a8
 // Size: 0x5c
 function __init__() {
     init_dog_fx();
@@ -23,8 +23,8 @@ function __init__() {
 }
 
 // Namespace namespace_cc5bac97
-// Params 0, eflags: 0x0
-// Checksum 0x9e597015, Offset: 0x210
+// Params 0, eflags: 0x1 linked
+// Checksum 0xb590ec1e, Offset: 0x210
 // Size: 0x3a
 function init_dog_fx() {
     level._effect["dog_eye_glow"] = "zombie/fx_dog_eyes_zmb";
@@ -32,8 +32,8 @@ function init_dog_fx() {
 }
 
 // Namespace namespace_cc5bac97
-// Params 7, eflags: 0x0
-// Checksum 0x75951ed4, Offset: 0x258
+// Params 7, eflags: 0x1 linked
+// Checksum 0xb223c93f, Offset: 0x258
 // Size: 0x17c
 function dog_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {

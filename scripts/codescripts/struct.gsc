@@ -6,7 +6,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x7da99b52, Offset: 0x170
 // Size: 0x24
-function __init__() {
+function autoexec __init__() {
     if (!isdefined(level.struct)) {
         init_structs();
     }

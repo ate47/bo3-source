@@ -9,7 +9,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x6140a4a0, Offset: 0x1d0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_unitrigger", &__init__, undefined, undefined);
 }
 
@@ -268,7 +268,7 @@ function register_dyn_unitrigger(unitrigger_stub, trigger_func, recalculate_zone
 }
 
 // Namespace zm_unitrigger
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0xeaae30a3, Offset: 0x10c0
 // Size: 0x44
 function reregister_unitrigger_as_dynamic(unitrigger_stub) {

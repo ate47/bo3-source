@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf2bd7f23, Offset: 0x150
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("tacticalinsertion", &__init__, undefined, undefined);
 }
 

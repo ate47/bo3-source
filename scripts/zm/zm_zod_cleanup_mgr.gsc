@@ -14,12 +14,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0xdfe025bc, Offset: 0x1d0
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zod_cleanup", &__init__, &__main__, undefined);
 }
 
 // Namespace namespace_2e83114d
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xa2fc0cc9, Offset: 0x218
 // Size: 0x10
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace namespace_2e83114d
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb315d564, Offset: 0x230
 // Size: 0x1c
 function __main__() {
@@ -43,10 +43,10 @@ function force_check_now() {
 }
 
 // Namespace namespace_2e83114d
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x4c31b495, Offset: 0x278
 // Size: 0x246
-function cleanup_main() {
+function private cleanup_main() {
     n_next_eval = 0;
     while (true) {
         util::wait_network_frame();
@@ -85,7 +85,7 @@ function cleanup_main() {
 }
 
 // Namespace namespace_2e83114d
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x296f29ed, Offset: 0x4c8
 // Size: 0x274
 function do_cleanup_check(n_override_cleanup_dist) {
@@ -133,10 +133,10 @@ function do_cleanup_check(n_override_cleanup_dist) {
 }
 
 // Namespace namespace_2e83114d
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x90b671f2, Offset: 0x748
 // Size: 0x324
-function delete_zombie_noone_looking() {
+function private delete_zombie_noone_looking() {
     if (isdefined(self.in_the_ground) && self.in_the_ground) {
         return;
     }
@@ -184,10 +184,10 @@ function delete_zombie_noone_looking() {
 }
 
 // Namespace namespace_2e83114d
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xffafe3ab, Offset: 0xa78
 // Size: 0xd8
-function player_can_see_me(player) {
+function private player_can_see_me(player) {
     v_player_angles = player getplayerangles();
     v_player_forward = anglestoforward(v_player_angles);
     var_47fa366e = self.origin - player getorigin();
@@ -200,10 +200,10 @@ function player_can_see_me(player) {
 }
 
 // Namespace namespace_2e83114d
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xc893309f, Offset: 0xb58
 // Size: 0xb4
-function player_ahead_of_me(player) {
+function private player_ahead_of_me(player) {
     v_player_angles = player getplayerangles();
     v_player_forward = anglestoforward(v_player_angles);
     v_dir = player getorigin() - self.origin;
@@ -215,7 +215,7 @@ function player_ahead_of_me(player) {
 }
 
 // Namespace namespace_2e83114d
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x795c4c03, Offset: 0xc18
 // Size: 0xb4
 function get_escape_position() {
@@ -233,7 +233,7 @@ function get_escape_position() {
 }
 
 // Namespace namespace_2e83114d
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x723b0ba4, Offset: 0xcd8
 // Size: 0x11e
 function get_adjacencies_to_zone(str_zone) {
@@ -254,10 +254,10 @@ function get_adjacencies_to_zone(str_zone) {
 }
 
 // Namespace namespace_2e83114d
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x64a2bb46, Offset: 0xe00
 // Size: 0xd2
-function get_wait_locations_in_zones(a_zones) {
+function private get_wait_locations_in_zones(a_zones) {
     a_wait_locations = [];
     foreach (zone in a_zones) {
         a_wait_locations = arraycombine(a_wait_locations, level.zones[zone].a_loc_types["wait_location"], 0, 0);
@@ -266,10 +266,10 @@ function get_wait_locations_in_zones(a_zones) {
 }
 
 // Namespace namespace_2e83114d
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xd5036f6e, Offset: 0xee0
 // Size: 0xd6
-function get_farthest_wait_location(a_wait_locations) {
+function private get_farthest_wait_location(a_wait_locations) {
     if (!isdefined(a_wait_locations) || a_wait_locations.size == 0) {
         return undefined;
     }
@@ -286,10 +286,10 @@ function get_farthest_wait_location(a_wait_locations) {
 }
 
 // Namespace namespace_2e83114d
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0xf31334e8, Offset: 0xfc0
 // Size: 0x88
-function get_wait_locations_in_zone(zone) {
+function private get_wait_locations_in_zone(zone) {
     if (isdefined(level.zones[zone].a_loc_types["wait_location"])) {
         a_wait_locations = [];
         a_wait_locations = arraycombine(a_wait_locations, level.zones[zone].a_loc_types["wait_location"], 0, 0);
@@ -299,7 +299,7 @@ function get_wait_locations_in_zone(zone) {
 }
 
 // Namespace namespace_2e83114d
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6a52bf88, Offset: 0x1050
 // Size: 0x9c
 function get_escape_position_in_current_zone() {

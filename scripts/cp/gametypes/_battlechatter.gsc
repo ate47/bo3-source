@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x46335fe9, Offset: 0x858
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("battlechatter", &__init__, undefined, undefined);
 }
 

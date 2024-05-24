@@ -38,7 +38,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xac6901d, Offset: 0xdc8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("enemy_highlight", &function_c7e2a7f7, undefined, undefined);
 }
 
@@ -1782,7 +1782,7 @@ function function_ee75acde(str_vo_line, delay, priority, toplayer) {
 // Params 5, eflags: 0x4
 // Checksum 0xeb3f4442, Offset: 0x7058
 // Size: 0x25c
-function function_6ac438(remote, str_vo_line, delay, priority, toplayer) {
+function private function_6ac438(remote, str_vo_line, delay, priority, toplayer) {
     var_8ef9b1c0 = strtok(str_vo_line, "_");
     character = var_8ef9b1c0[0];
     if (!isdefined(level.stealth) || character != "hend") {
@@ -1814,7 +1814,7 @@ function function_6ac438(remote, str_vo_line, delay, priority, toplayer) {
 // Params 5, eflags: 0x4
 // Checksum 0xdbec0878, Offset: 0x72c0
 // Size: 0x1c0
-function function_cb760154(remote, str_vo_line, delay, priority, toplayer) {
+function private function_cb760154(remote, str_vo_line, delay, priority, toplayer) {
     toplayer endon(#"disconnect");
     /#
         assert(isplayer(toplayer));

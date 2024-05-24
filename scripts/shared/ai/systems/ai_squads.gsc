@@ -110,7 +110,7 @@ class squad {
 // Params 0, eflags: 0x2
 // Checksum 0x912f91fc, Offset: 0x190
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("ai_squads", &__init__, undefined, undefined);
 }
 
@@ -128,7 +128,7 @@ function __init__() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xc47ace35, Offset: 0x700
 // Size: 0x38
-function createsquad(squadname) {
+function private createsquad(squadname) {
     level._squads[squadname] = new squad();
     return level._squads[squadname];
 }
@@ -137,7 +137,7 @@ function createsquad(squadname) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb71a0bee, Offset: 0x740
 // Size: 0x38
-function removesquad(squadname) {
+function private removesquad(squadname) {
     if (isdefined(level._squads) && isdefined(level._squads[squadname])) {
         level._squads[squadname] = undefined;
     }
@@ -147,7 +147,7 @@ function removesquad(squadname) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x19402e25, Offset: 0x780
 // Size: 0x18
-function getsquad(squadname) {
+function private getsquad(squadname) {
     return level._squads[squadname];
 }
 
@@ -155,7 +155,7 @@ function getsquad(squadname) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xfc4fd04c, Offset: 0x7a0
 // Size: 0x5c
-function thinksquad(squadname) {
+function private thinksquad(squadname) {
     while (true) {
         if ([[ level._squads[squadname] ]]->think()) {
             wait(0.5);
@@ -170,7 +170,7 @@ function thinksquad(squadname) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x7d4aac42, Offset: 0x808
 // Size: 0x54
-function squadmemberdeath() {
+function private squadmemberdeath() {
     self waittill(#"death");
     if (isdefined(self.squadname) && isdefined(level._squads[self.squadname])) {
         [[ level._squads[self.squadname] ]]->removeaifromsqaud(self);
@@ -181,7 +181,7 @@ function squadmemberdeath() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x75d41fe9, Offset: 0x868
 // Size: 0x416
-function squadmemberthink() {
+function private squadmemberthink() {
     self endon(#"death");
     if (!isdefined(self.script_aisquadname)) {
         return;

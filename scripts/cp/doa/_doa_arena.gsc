@@ -25,7 +25,7 @@
 // Params 0, eflags: 0x5 linked
 // Checksum 0x4c598588, Offset: 0x818
 // Size: 0x1fc
-function function_a55a134f() {
+function private function_a55a134f() {
     arenas = struct::get_array("arena_center");
     for (i = 0; i < arenas.size; i++) {
         if (isdefined(arenas[i].script_parameters) && (isdefined(arenas[i].var_e121d9e4) && arenas[i].var_e121d9e4 || issubstr(arenas[i].script_parameters, "player_challenge"))) {
@@ -80,7 +80,7 @@ function init() {
 // Params 8, eflags: 0x5 linked
 // Checksum 0xf0a5d45c, Offset: 0xe58
 // Size: 0x26c
-function function_abd3b624(name, minround, type, text, maxround, var_c9a1f25a, var_c92c30d9, var_6f369ab4) {
+function private function_abd3b624(name, minround, type, text, maxround, var_c9a1f25a, var_c92c30d9, var_6f369ab4) {
     room = spawnstruct();
     room.name = name;
     room.minround = minround;
@@ -182,7 +182,7 @@ function function_46b3be09() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x2b745c96, Offset: 0x14d0
 // Size: 0x3c2
-function function_6b351e04(type, var_436ba068) {
+function private function_6b351e04(type, var_436ba068) {
     if (!isdefined(type)) {
         type = 0;
     }
@@ -291,7 +291,7 @@ function function_e88371e5() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x2f1e4221, Offset: 0x1ac0
 // Size: 0xd70
-function function_1c54aa82(room) {
+function private function_1c54aa82(room) {
     level.doa.var_677d1262 = 0;
     players = namespace_831a4a7c::function_5eb6e4d1();
     playercount = players.size;
@@ -477,7 +477,7 @@ function function_b0e9983(name) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7dc3981a, Offset: 0x29d0
 // Size: 0x10a
-function function_9b67513c(name) {
+function private function_9b67513c(name) {
     switch (name) {
     case 50:
         return 1;
@@ -520,7 +520,7 @@ function function_9b67513c(name) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xa8b851cc, Offset: 0x2ae8
 // Size: 0x942
-function function_b7dafa0c(name, center, valid) {
+function private function_b7dafa0c(name, center, valid) {
     struct = spawnstruct();
     struct.name = name;
     struct.center = center;
@@ -968,7 +968,7 @@ function function_7d65367c() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x2f4c56e6, Offset: 0x4a40
 // Size: 0x4a
-function function_47f8f274() {
+function private function_47f8f274() {
     wait(0.1);
     level util::waittill_any("exit_taken", "doa_game_is_over");
     wait(0.05);
@@ -979,7 +979,7 @@ function function_47f8f274() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x938a7459, Offset: 0x4a98
 // Size: 0xa8
-function function_17665174(trigger) {
+function private function_17665174(trigger) {
     level endon(#"exit_taken");
     level endon(#"doa_game_is_over");
     trigger waittill(#"trigger");

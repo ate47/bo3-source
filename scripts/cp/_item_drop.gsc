@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x19fae8b3, Offset: 0x1f8
 // Size: 0x5c
-function main() {
+function autoexec main() {
     if (!isdefined(level.item_drops)) {
         level.item_drops = [];
     }

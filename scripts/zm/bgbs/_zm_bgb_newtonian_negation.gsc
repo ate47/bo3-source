@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe91d8a00, Offset: 0x1a8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_newtonian_negation", &__init__, undefined, "bgb");
 }
 

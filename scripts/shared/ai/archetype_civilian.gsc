@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc28bd094, Offset: 0x2a8
 // Size: 0x14
-function main() {
+function autoexec main() {
     archetypecivilian::registerbehaviorscriptfunctions();
 }
 
@@ -39,7 +39,7 @@ function registerbehaviorscriptfunctions() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x625ab7ad, Offset: 0x478
 // Size: 0x13c
-function civilianblackboardinit() {
+function private civilianblackboardinit() {
     blackboard::createblackboardforentity(self);
     ai::createinterfaceforentity(self);
     self aiutility::function_89e1fc16();
@@ -65,7 +65,7 @@ function civilianblackboardinit() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x357563bd, Offset: 0x5c0
 // Size: 0xbc
-function function_f0d98b47() {
+function private function_f0d98b47() {
     entity = self;
     locomotiontypes = array("alt1", "alt2", "alt3", "alt4");
     altindex = entity getentitynumber() % locomotiontypes.size;
@@ -77,7 +77,7 @@ function function_f0d98b47() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x59ad0bc9, Offset: 0x688
 // Size: 0x36
-function function_e0be6cd5() {
+function private function_e0be6cd5() {
     if (ai::getaiattribute(self, "panic")) {
         return "panic";
     }
@@ -88,7 +88,7 @@ function function_e0be6cd5() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x81c13565, Offset: 0x6c8
 // Size: 0x34
-function civilianonanimscriptedcallback(entity) {
+function private civilianonanimscriptedcallback(entity) {
     entity.__blackboard = undefined;
     entity civilianblackboardinit();
 }
@@ -97,7 +97,7 @@ function civilianonanimscriptedcallback(entity) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xd7523d1d, Offset: 0x708
 // Size: 0x58
-function civilianmoveactioninitialize(entity, asmstatename) {
+function private civilianmoveactioninitialize(entity, asmstatename) {
     blackboard::setblackboardattribute(entity, "_desired_stance", "stand");
     animationstatenetworkutility::requeststate(entity, asmstatename);
     return 5;
@@ -107,7 +107,7 @@ function civilianmoveactioninitialize(entity, asmstatename) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x2dfdced8, Offset: 0x768
 // Size: 0x68
-function civilianmoveactionfinalize(entity, asmstatename) {
+function private civilianmoveactionfinalize(entity, asmstatename) {
     if (blackboard::getblackboardattribute(entity, "_stance") != "stand") {
         blackboard::setblackboardattribute(entity, "_desired_stance", "stand");
     }
@@ -118,7 +118,7 @@ function civilianmoveactionfinalize(entity, asmstatename) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xcfa539e, Offset: 0x7d8
 // Size: 0xc8
-function function_d752eb0e(entity, asmstatename) {
+function private function_d752eb0e(entity, asmstatename) {
     if (isdefined(entity.node)) {
         higheststance = aiutility::gethighestnodestance(entity.node);
         if (higheststance == "crouch") {
@@ -135,7 +135,7 @@ function function_d752eb0e(entity, asmstatename) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xae944285, Offset: 0x8a8
 // Size: 0x34
-function civilianispanicked(entity) {
+function private civilianispanicked(entity) {
     return blackboard::getblackboardattribute(entity, "_panic") == "panic";
 }
 
@@ -143,7 +143,7 @@ function civilianispanicked(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x58b3c3ee, Offset: 0x8e8
 // Size: 0x30
-function function_8e0e957(entity) {
+function private function_8e0e957(entity) {
     entity ai::set_behavior_attribute("panic", 1);
     return true;
 }

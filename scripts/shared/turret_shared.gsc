@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x2c3a248f, Offset: 0x3c0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("turret", &__init__, undefined, undefined);
 }
 
@@ -656,7 +656,7 @@ function enable(n_index, b_user_required, v_offset) {
 }
 
 // Namespace turret
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xb1e10c00, Offset: 0x21c0
 // Size: 0x2c
 function enable_auto_use(b_enable) {
@@ -667,7 +667,7 @@ function enable_auto_use(b_enable) {
 }
 
 // Namespace turret
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x69dcc48f, Offset: 0x21f8
 // Size: 0x4c
 function disable_ai_getoff(n_index, b_disable) {
@@ -1647,7 +1647,7 @@ function trace_test(e_target, v_offset, n_index) {
 }
 
 // Namespace turret
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x6bde41d3, Offset: 0x59b0
 // Size: 0x4c
 function set_ignore_line_of_sight(b_ignore, n_index) {

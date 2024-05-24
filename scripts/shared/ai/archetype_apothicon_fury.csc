@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x9fc5252d, Offset: 0x3f0
 // Size: 0x262
-function main() {
+function autoexec main() {
     ai::add_archetype_spawn_function("apothicon_fury", &function_300930b2);
     if (ai::shouldregisterclientfieldforarchetype("apothicon_fury")) {
         clientfield::register("actor", "fury_fire_damage", 15000, getminbitcountfornum(7), "counter", &function_f47eeee6, 0, 0);

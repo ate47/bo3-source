@@ -17,7 +17,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa6285f1a, Offset: 0x228
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("load", &__init__, undefined, undefined);
 }
 

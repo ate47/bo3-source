@@ -44,7 +44,7 @@ function init() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xed9cce1f, Offset: 0xb68
 // Size: 0x2a
-function function_8335360e(player) {
+function private function_8335360e(player) {
     return getclosestpointonnavmesh(player.origin, 48);
 }
 
@@ -52,7 +52,7 @@ function function_8335360e(player) {
 // Params 1, eflags: 0x4
 // Checksum 0xb0d63a62, Offset: 0xba0
 // Size: 0x6a
-function function_dbe9b2f0(player) {
+function private function_dbe9b2f0(player) {
     var_c7db1a1b = anglestoforward(player.angles) * 72 + player.origin;
     return getclosestpointonnavmesh(var_c7db1a1b, 48);
 }
@@ -61,7 +61,7 @@ function function_dbe9b2f0(player) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x1f8aea73, Offset: 0xc18
 // Size: 0x17c
-function function_d975d303() {
+function private function_d975d303() {
     var_c55cca1f = 15000;
     while (true) {
         var_d96f8b8b = [];
@@ -109,7 +109,7 @@ function configureteampost(player, ishacked) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xadb4d1ff, Offset: 0xfc8
 // Size: 0xfc
-function function_3ce9bd07(robot, player, ishacked) {
+function private function_3ce9bd07(robot, player, ishacked) {
     if (ishacked) {
         var_ed68e6c9 = 3;
     } else {
@@ -128,7 +128,7 @@ function function_3ce9bd07(robot, player, ishacked) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x85d73383, Offset: 0x10d0
 // Size: 0xa8
-function function_1aab11c1(robot, position) {
+function private function_1aab11c1(robot, position) {
     owner = robot.owner;
     var_15f22fd2 = spawn("script_model", (0, 0, 0));
     var_15f22fd2.origin = position;
@@ -140,7 +140,7 @@ function function_1aab11c1(robot, position) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7f6199e9, Offset: 0x1180
 // Size: 0x3c
-function function_8ba2a33(robot) {
+function private function_8ba2a33(robot) {
     if (isdefined(robot.var_15f22fd2)) {
         robot.var_15f22fd2 delete();
     }
@@ -150,7 +150,7 @@ function function_8ba2a33(robot) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x3e8a6d29, Offset: 0x11c8
 // Size: 0xa8
-function function_b63444c3(robot) {
+function private function_b63444c3(robot) {
     robot endon(#"death");
     while (true) {
         if (robot.origin[2] + 36 <= getwaterheight(robot.origin)) {
@@ -166,7 +166,7 @@ function function_b63444c3(robot) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x5071ce34, Offset: 0x1278
 // Size: 0x20e
-function function_fdcdff00(robot) {
+function private function_fdcdff00(robot) {
     robot endon(#"death");
     robot.var_104d7d6b = 1;
     robot.var_98424714 = 0;
@@ -195,7 +195,7 @@ function function_fdcdff00(robot) {
 // Params 2, eflags: 0x4
 // Checksum 0x1929a29d, Offset: 0x1490
 // Size: 0x64
-function function_3620ca05(robot, enemy) {
+function private function_3620ca05(robot, enemy) {
     robot endon(#"death");
     robot setignoreent(enemy, 1);
     wait(5);
@@ -206,7 +206,7 @@ function function_3620ca05(robot, enemy) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x3ebd7a05, Offset: 0x1500
 // Size: 0x1b6
-function function_8dd17cee(robot, position) {
+function private function_8dd17cee(robot, position) {
     robot endon(#"death");
     robot.goalradius = 1000;
     robot setgoal(position);
@@ -603,7 +603,7 @@ function function_d4f822d5(player) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xa055f172, Offset: 0x2df8
 // Size: 0x54
-function function_369d3494() {
+function private function_369d3494() {
     archetype = self.archetype;
     corpse = self waittill(#"actor_corpse");
     corpse clientfield::set("arch_actor_fire_fx", 3);
@@ -613,7 +613,7 @@ function function_369d3494() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x376610d0, Offset: 0x2e58
 // Size: 0x1ac
-function function_39f8e7ed(combatrobot) {
+function private function_39f8e7ed(combatrobot) {
     combatrobot clientfield::set("arch_actor_fire_fx", 1);
     clientfield::set("robot_mind_control_explosion", 1);
     combatrobot thread function_369d3494();

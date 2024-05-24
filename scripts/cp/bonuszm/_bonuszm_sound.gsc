@@ -49,7 +49,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x1e88e82a, Offset: 0x738
 // Size: 0x13c
-function init() {
+function autoexec init() {
     if (!sessionmodeiscampaignzombiesgame()) {
         return;
     }
@@ -93,7 +93,7 @@ function function_4cb32f3c(scenename) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x577a3a3f, Offset: 0x9e8
 // Size: 0x144
-function say(alias) {
+function private say(alias) {
     self notify(#"hash_2d8828d0");
     self endon(#"hash_2d8828d0");
     if (isdefined(self.var_478c7e3e)) {

@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xceb1604a, Offset: 0x198
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("deathicons", &__init__, undefined, undefined);
 }
 

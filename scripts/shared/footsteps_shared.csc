@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x1b3a7c62, Offset: 0x170
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("footsteps", &__init__, undefined, undefined);
 }
 

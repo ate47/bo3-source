@@ -25,15 +25,15 @@
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x2
-// Checksum 0xfd484e66, Offset: 0x728
+// Checksum 0xe2f04c87, Offset: 0x728
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_audio_zhd", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_52adc03e
-// Params 0, eflags: 0x0
-// Checksum 0x5f5830f0, Offset: 0x768
+// Params 0, eflags: 0x1 linked
+// Checksum 0x8bf5f3cb, Offset: 0x768
 // Size: 0x114
 function __init__() {
     level flag::init("snd_zhdegg_activate");
@@ -48,8 +48,8 @@ function __init__() {
 }
 
 // Namespace namespace_52adc03e
-// Params 0, eflags: 0x0
-// Checksum 0xbe35ad5a, Offset: 0x888
+// Params 0, eflags: 0x1 linked
+// Checksum 0x6c5df029, Offset: 0x888
 // Size: 0x114
 function function_f9e823ac() {
     level flag::wait_till("snd_zhdegg_activate");
@@ -75,8 +75,8 @@ function function_f9e823ac() {
 }
 
 // Namespace namespace_52adc03e
-// Params 1, eflags: 0x0
-// Checksum 0x345b4a4, Offset: 0x9a8
+// Params 1, eflags: 0x1 linked
+// Checksum 0xc36e9b5f, Offset: 0x9a8
 // Size: 0x24c
 function function_513f51e1(restart) {
     if (!isdefined(restart)) {
@@ -106,8 +106,8 @@ function function_513f51e1(restart) {
 }
 
 // Namespace namespace_52adc03e
-// Params 0, eflags: 0x0
-// Checksum 0x74e3f3c0, Offset: 0xc00
+// Params 0, eflags: 0x1 linked
+// Checksum 0xa51385ea, Offset: 0xc00
 // Size: 0x114
 function function_cf1b154() {
     var_d1f154fd = struct::get_array("s_ballerina_timed", "targetname");
@@ -129,8 +129,8 @@ function function_cf1b154() {
 }
 
 // Namespace namespace_52adc03e
-// Params 0, eflags: 0x0
-// Checksum 0x371b26d3, Offset: 0xd20
+// Params 0, eflags: 0x1 linked
+// Checksum 0x52b033e6, Offset: 0xd20
 // Size: 0x19a
 function function_3cf3ba48() {
     self.var_ac086ffb = util::spawn_model(self.model, self.origin, self.angles);
@@ -141,7 +141,7 @@ function function_3cf3ba48() {
     self thread function_2fdaabf3();
     self thread function_a9a34039();
     /#
-        self.var_ac086ffb thread zm_utility::print3d_ent("vox_plr_1_exert_pain_0", (0, 1, 0), 3, (0, 0, 24));
+        self.var_ac086ffb thread zm_utility::print3d_ent("snd_zhdegg_arm", (0, 1, 0), 3, (0, 0, 24));
     #/
     self util::waittill_any("ballerina_destroyed", "ballerina_timeout");
     /#
@@ -154,8 +154,8 @@ function function_3cf3ba48() {
 }
 
 // Namespace namespace_52adc03e
-// Params 0, eflags: 0x0
-// Checksum 0xa88a6c4b, Offset: 0xec8
+// Params 0, eflags: 0x1 linked
+// Checksum 0x70b5d7ba, Offset: 0xec8
 // Size: 0x66
 function function_9d55fd08() {
     self.var_ac086ffb endon(#"death");
@@ -169,8 +169,8 @@ function function_9d55fd08() {
 }
 
 // Namespace namespace_52adc03e
-// Params 0, eflags: 0x0
-// Checksum 0x2419c4f8, Offset: 0xf38
+// Params 0, eflags: 0x1 linked
+// Checksum 0xedf5438d, Offset: 0xf38
 // Size: 0x1a4
 function function_2fdaabf3() {
     self endon(#"hash_874b5073");
@@ -197,8 +197,8 @@ function function_2fdaabf3() {
 }
 
 // Namespace namespace_52adc03e
-// Params 0, eflags: 0x0
-// Checksum 0x3a2a1d7e, Offset: 0x10e8
+// Params 0, eflags: 0x1 linked
+// Checksum 0x7f53d85, Offset: 0x10e8
 // Size: 0x52
 function function_a9a34039() {
     self endon(#"hash_72624b2b");
@@ -211,8 +211,8 @@ function function_a9a34039() {
 }
 
 // Namespace namespace_52adc03e
-// Params 0, eflags: 0x0
-// Checksum 0x4c7a9c8d, Offset: 0x1148
+// Params 0, eflags: 0x1 linked
+// Checksum 0xaa2ae58c, Offset: 0x1148
 // Size: 0x554
 function function_5b2770da() {
     playsoundatposition("zmb_sam_egg_success", (0, 0, 0));
@@ -255,8 +255,8 @@ function function_5b2770da() {
 }
 
 // Namespace namespace_52adc03e
-// Params 0, eflags: 0x0
-// Checksum 0xf3d55119, Offset: 0x16a8
+// Params 0, eflags: 0x1 linked
+// Checksum 0x7b686ba6, Offset: 0x16a8
 // Size: 0xac
 function function_e753d4f() {
     level.var_2a0600f = 0;
@@ -272,15 +272,15 @@ function function_e753d4f() {
 }
 
 // Namespace namespace_52adc03e
-// Params 0, eflags: 0x0
-// Checksum 0xbab9e1df, Offset: 0x1760
+// Params 0, eflags: 0x1 linked
+// Checksum 0x7aed8638, Offset: 0x1760
 // Size: 0x174
 function function_929c4dba() {
     e_origin = spawn("script_origin", self.origin);
     e_origin zm_unitrigger::create_unitrigger();
     e_origin playloopsound("zmb_ee_mus_lp", 1);
     /#
-        e_origin thread zm_utility::print3d_ent("vox_plr_1_exert_pain_2", (1, 1, 0), 3, (0, 0, 24));
+        e_origin thread zm_utility::print3d_ent("snd_zhdegg_arm", (1, 1, 0), 3, (0, 0, 24));
     #/
     while (!(isdefined(e_origin.b_activated) && e_origin.b_activated)) {
         who = e_origin waittill(#"trigger_activated");
@@ -298,8 +298,8 @@ function function_929c4dba() {
 }
 
 // Namespace namespace_52adc03e
-// Params 0, eflags: 0x0
-// Checksum 0xb17885cf, Offset: 0x18e0
+// Params 0, eflags: 0x1 linked
+// Checksum 0xdc1d08ec, Offset: 0x18e0
 // Size: 0x4e
 function function_8090042c() {
     if (isdefined(level.musicsystemoverride) && (isdefined(level.musicsystem.currentplaytype) && level.musicsystem.currentplaytype >= 4 || level.musicsystemoverride)) {
@@ -309,8 +309,8 @@ function function_8090042c() {
 }
 
 // Namespace namespace_52adc03e
-// Params 1, eflags: 0x0
-// Checksum 0x358518c3, Offset: 0x1938
+// Params 1, eflags: 0x1 linked
+// Checksum 0x3e61f717, Offset: 0x1938
 // Size: 0x84
 function function_bd90259b(e_player) {
     if (!(isdefined(self.b_activated) && self.b_activated)) {
@@ -323,8 +323,8 @@ function function_bd90259b(e_player) {
 }
 
 // Namespace namespace_52adc03e
-// Params 0, eflags: 0x0
-// Checksum 0x4d77fc2e, Offset: 0x19c8
+// Params 0, eflags: 0x1 linked
+// Checksum 0x795419, Offset: 0x19c8
 // Size: 0xc4
 function function_e1e44e18() {
     player = level waittill(#"connected");
@@ -339,8 +339,8 @@ function function_e1e44e18() {
 }
 
 // Namespace namespace_52adc03e
-// Params 0, eflags: 0x0
-// Checksum 0x40607143, Offset: 0x1a98
+// Params 0, eflags: 0x1 linked
+// Checksum 0x8eb30a4c, Offset: 0x1a98
 // Size: 0x622
 function setup_personality_character_exerts() {
     level.exert_sounds[1]["hitmed"][0] = "vox_plr_0_exert_pain_0";
@@ -387,7 +387,7 @@ function setup_personality_character_exerts() {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x0
-// Checksum 0xdf1471f5, Offset: 0x20c8
+// Checksum 0x55a6c3a6, Offset: 0x20c8
 // Size: 0x54
 function set_exert_id() {
     self endon(#"disconnect");

@@ -7,7 +7,7 @@
 #namespace zm_clone;
 
 // Namespace zm_clone
-// Params 4, eflags: 0x0
+// Params 4, eflags: 0x1 linked
 // Checksum 0x46c1b98d, Offset: 0x1a8
 // Size: 0x2f4
 function spawn_player_clone(player, origin, forceweapon, forcemodel) {
@@ -75,7 +75,7 @@ function clone_give_weapon(weapon) {
 }
 
 // Namespace zm_clone
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0x4348116f, Offset: 0x5d0
 // Size: 0x4c
 function clone_animate(animtype) {

@@ -17,7 +17,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc17731d1, Offset: 0x278
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_aat_fire_works", &__init__, undefined, "aat");
 }
 

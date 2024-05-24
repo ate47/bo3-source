@@ -10,12 +10,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0x10cc164, Offset: 0x290
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_zod_companion", &__init__, undefined, undefined);
 }
 
 // Namespace zodcompanionclientutils
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf4b4988d, Offset: 0x2d0
 // Size: 0xec
 function __init__() {
@@ -28,10 +28,10 @@ function __init__() {
 }
 
 // Namespace zodcompanionclientutils
-// Params 1, eflags: 0x5 linked
+// Params 1, eflags: 0x4
 // Checksum 0x10fefd58, Offset: 0x3c8
 // Size: 0x134
-function zodcompanionspawnsetup(localclientnum) {
+function private zodcompanionspawnsetup(localclientnum) {
     entity = self;
     gibclientutils::addgibcallback(localclientnum, entity, 8, &zodcompanionheadgibfx);
     gibclientutils::addgibcallback(localclientnum, entity, 8, &_gibcallback);
@@ -43,7 +43,7 @@ function zodcompanionspawnsetup(localclientnum) {
 }
 
 // Namespace zodcompanionclientutils
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xac04fc83, Offset: 0x508
 // Size: 0x104
 function zodcompanionheadgibfx(localclientnum, entity, gibflag) {
@@ -80,10 +80,10 @@ function zodcompanionclearfx(localclientnum, entity) {
 }
 
 // Namespace zodcompanionclientutils
-// Params 3, eflags: 0x5 linked
+// Params 3, eflags: 0x4
 // Checksum 0x579aa4e2, Offset: 0x6f8
 // Size: 0x92
-function _gibcallback(localclientnum, entity, gibflag) {
+function private _gibcallback(localclientnum, entity, gibflag) {
     if (!isdefined(entity) || !entity isai()) {
         return;
     }
@@ -102,7 +102,7 @@ function _gibcallback(localclientnum, entity, gibflag) {
 }
 
 // Namespace zodcompanionclientutils
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0x86b0ed7b, Offset: 0x798
 // Size: 0xdc
 function play_revival_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

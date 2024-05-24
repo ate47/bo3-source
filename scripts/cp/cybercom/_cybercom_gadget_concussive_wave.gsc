@@ -158,7 +158,7 @@ function function_73688d2e(damage, var_9bc2efcb) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x50b7817f, Offset: 0xbe8
 // Size: 0x162
-function function_8aac802c(weapon) {
+function private function_8aac802c(weapon) {
     humans = arraycombine(getaispeciesarray("axis", "human"), getaispeciesarray("team3", "human"), 0, 0);
     robots = arraycombine(getaispeciesarray("axis", "robot"), getaispeciesarray("team3", "robot"), 0, 0);
     zombies = arraycombine(getaispeciesarray("axis", "zombie"), getaispeciesarray("team3", "zombie"), 0, 0);
@@ -169,7 +169,7 @@ function function_8aac802c(weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4a108f88, Offset: 0xd58
 // Size: 0x5e
-function function_602b28e9(target) {
+function private function_602b28e9(target) {
     if (target cybercom::function_8fd8f5b1("cybercom_concussive")) {
         return false;
     }

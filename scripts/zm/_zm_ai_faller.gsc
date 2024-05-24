@@ -18,7 +18,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x13fa66b9, Offset: 0x578
 // Size: 0x64
-function init() {
+function autoexec init() {
     function_42a584ba();
     animationstatenetwork::registernotetrackhandlerfunction("faller_melee", &handle_fall_notetracks);
     animationstatenetwork::registernotetrackhandlerfunction("deathout", &function_ed7cd46d);
@@ -28,7 +28,7 @@ function init() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xf8cc7c68, Offset: 0x5e8
 // Size: 0x124
-function function_42a584ba() {
+function private function_42a584ba() {
     behaviortreenetworkutility::registerbehaviortreeaction("fallerDropAction", &function_ace3ab7e, &function_c8069639, &function_847e3d27);
     behaviortreenetworkutility::registerbehaviortreescriptapi("shouldFallerDrop", &function_e6fe6e69);
     behaviortreenetworkutility::registerbehaviortreescriptapi("isFallerInCeiling", &function_8c9514d7);
@@ -101,7 +101,7 @@ function function_84c54cca(entity) {
 // Params 5, eflags: 0x5 linked
 // Checksum 0xa7cbe30, Offset: 0x8c8
 // Size: 0x4c
-function function_dcaa5c5d(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
+function private function_dcaa5c5d(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
     entity animmode("nogravity", 0);
 }
 
@@ -109,7 +109,7 @@ function function_dcaa5c5d(entity, mocompanim, mocompanimblendouttime, mocompani
 // Params 5, eflags: 0x5 linked
 // Checksum 0x3da83c5c, Offset: 0x920
 // Size: 0x4c
-function function_1cdd0ab1(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
+function private function_1cdd0ab1(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
     entity animmode("noclip", 0);
 }
 

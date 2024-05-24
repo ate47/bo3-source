@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x1346ca21, Offset: 0x310
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("exploder", &__init__, &__main__, undefined);
 }
 

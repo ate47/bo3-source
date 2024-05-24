@@ -25,15 +25,15 @@
 
 // Namespace rocketshield
 // Params 0, eflags: 0x2
-// Checksum 0x202f2b65, Offset: 0x5e8
+// Checksum 0x5ebb0eb6, Offset: 0x5e8
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_weap_rocketshield", &__init__, &__main__, undefined);
 }
 
 // Namespace rocketshield
-// Params 0, eflags: 0x1 linked
-// Checksum 0x64ff916f, Offset: 0x630
+// Params 0, eflags: 0x0
+// Checksum 0x6578f4d3, Offset: 0x630
 // Size: 0x13c
 function __init__() {
     namespace_abd96e8b::init("craft_shield_zm", "zod_riotshield", "wpn_t7_zmb_zod_rocket_shield_world");
@@ -47,8 +47,8 @@ function __init__() {
 }
 
 // Namespace rocketshield
-// Params 0, eflags: 0x1 linked
-// Checksum 0x51085f5, Offset: 0x778
+// Params 0, eflags: 0x0
+// Checksum 0xbdc6f950, Offset: 0x778
 // Size: 0x204
 function __main__() {
     zm_equipment::register_for_level("zod_riotshield");
@@ -73,16 +73,16 @@ function __main__() {
 }
 
 // Namespace rocketshield
-// Params 0, eflags: 0x1 linked
-// Checksum 0x74926e91, Offset: 0x988
+// Params 0, eflags: 0x0
+// Checksum 0x74eb4738, Offset: 0x988
 // Size: 0x1c
 function on_player_connect() {
     self thread function_2de246fd();
 }
 
 // Namespace rocketshield
-// Params 0, eflags: 0x1 linked
-// Checksum 0x298db96c, Offset: 0x9b0
+// Params 0, eflags: 0x0
+// Checksum 0x9ab2c854, Offset: 0x9b0
 // Size: 0x74
 function function_2de246fd() {
     self endon(#"disconnect");
@@ -97,8 +97,8 @@ function function_2de246fd() {
 }
 
 // Namespace rocketshield
-// Params 0, eflags: 0x1 linked
-// Checksum 0x16332a27, Offset: 0xa30
+// Params 0, eflags: 0x0
+// Checksum 0x5b41cf3, Offset: 0xa30
 // Size: 0x7c
 function on_player_spawned() {
     self.player_shield_apply_damage = &function_fdf3c1f2;
@@ -109,8 +109,8 @@ function on_player_spawned() {
 }
 
 // Namespace rocketshield
-// Params 0, eflags: 0x1 linked
-// Checksum 0x33a24ce1, Offset: 0xab8
+// Params 0, eflags: 0x0
+// Checksum 0x61922cfc, Offset: 0xab8
 // Size: 0xc8
 function function_9fdb0cd6() {
     self notify(#"hash_9fdb0cd6");
@@ -127,8 +127,8 @@ function function_9fdb0cd6() {
 }
 
 // Namespace rocketshield
-// Params 0, eflags: 0x1 linked
-// Checksum 0x71a16e49, Offset: 0xb88
+// Params 0, eflags: 0x0
+// Checksum 0xaef9370f, Offset: 0xb88
 // Size: 0x68
 function function_3fbc315a() {
     self notify(#"hash_3fbc315a");
@@ -143,8 +143,8 @@ function function_3fbc315a() {
 }
 
 // Namespace rocketshield
-// Params 1, eflags: 0x1 linked
-// Checksum 0x8de026ed, Offset: 0xbf8
+// Params 1, eflags: 0x0
+// Checksum 0xe4d5ad46, Offset: 0xbf8
 // Size: 0x64
 function function_7221d39f(weapon) {
     wait(0.05);
@@ -155,8 +155,8 @@ function function_7221d39f(weapon) {
 }
 
 // Namespace rocketshield
-// Params 0, eflags: 0x1 linked
-// Checksum 0x3df9e05c, Offset: 0xc68
+// Params 0, eflags: 0x0
+// Checksum 0x7d2560a5, Offset: 0xc68
 // Size: 0x98
 function function_1a3ded76() {
     self notify(#"hash_1a3ded76");
@@ -172,8 +172,8 @@ function function_1a3ded76() {
 }
 
 // Namespace rocketshield
-// Params 4, eflags: 0x1 linked
-// Checksum 0x9ff650a0, Offset: 0xd08
+// Params 4, eflags: 0x0
+// Checksum 0x60f60aa1, Offset: 0xd08
 // Size: 0xac
 function function_fdf3c1f2(idamage, bheld, fromcode, smod) {
     if (!isdefined(fromcode)) {
@@ -190,8 +190,8 @@ function function_fdf3c1f2(idamage, bheld, fromcode, smod) {
 }
 
 // Namespace rocketshield
-// Params 0, eflags: 0x1 linked
-// Checksum 0xff60213a, Offset: 0xdc0
+// Params 0, eflags: 0x0
+// Checksum 0xfdb3cc6c, Offset: 0xdc0
 // Size: 0xf6
 function function_aace298e() {
     self notify(#"hash_aace298e");
@@ -211,8 +211,8 @@ function function_aace298e() {
 }
 
 // Namespace rocketshield
-// Params 1, eflags: 0x1 linked
-// Checksum 0xda1ca7b3, Offset: 0xec0
+// Params 1, eflags: 0x0
+// Checksum 0x7bf29d9d, Offset: 0xec0
 // Size: 0x298
 function function_f9e0085b(weapon) {
     self endon(#"weapon_melee");
@@ -259,7 +259,7 @@ function function_f9e0085b(weapon) {
 
     // Namespace rocketshield
     // Params 0, eflags: 0x0
-    // Checksum 0xec3edfcc, Offset: 0x1160
+    // Checksum 0x39335e27, Offset: 0x1160
     // Size: 0x15e
     function function_92debe0a() {
         level waittill(#"start_of_round");
@@ -278,8 +278,8 @@ function function_f9e0085b(weapon) {
 #/
 
 // Namespace rocketshield
-// Params 0, eflags: 0x1 linked
-// Checksum 0x94958a45, Offset: 0x12c8
+// Params 0, eflags: 0x0
+// Checksum 0xf69aa1ec, Offset: 0x12c8
 // Size: 0x356
 function function_dd62c0c2() {
     view_pos = self.origin;
@@ -321,8 +321,8 @@ function function_dd62c0c2() {
 }
 
 // Namespace rocketshield
-// Params 0, eflags: 0x1 linked
-// Checksum 0xf02ea910, Offset: 0x1628
+// Params 0, eflags: 0x0
+// Checksum 0xe02f32fe, Offset: 0x1628
 // Size: 0x23c
 function function_4301c4bc() {
     level flag::wait_till("all_players_spawned");
@@ -352,8 +352,8 @@ function function_4301c4bc() {
 }
 
 // Namespace rocketshield
-// Params 2, eflags: 0x1 linked
-// Checksum 0xddd762f3, Offset: 0x1870
+// Params 2, eflags: 0x0
+// Checksum 0x16fc392e, Offset: 0x1870
 // Size: 0x290
 function function_c94e27cd(v_origin, v_angles) {
     s_struct = self;
@@ -391,14 +391,14 @@ function function_c94e27cd(v_origin, v_angles) {
 /#
 
     // Namespace rocketshield
-    // Params 1, eflags: 0x1 linked
-    // Checksum 0xee9afb24, Offset: 0x1b08
+    // Params 1, eflags: 0x0
+    // Checksum 0x9200654e, Offset: 0x1b08
     // Size: 0x166
     function function_fc8bb1d(a_spawnpoints) {
         level notify(#"hash_afd0dfa9");
         level endon(#"hash_afd0dfa9");
         while (true) {
-            var_228edad9 = getdvarint("ZOMBIE_EQUIP_RIOTSHIELD_HOWTO", 0);
+            var_228edad9 = getdvarint("<unknown string>", 0);
             if (var_228edad9 > 0) {
                 foreach (spawnpoint in a_spawnpoints) {
                     v_color = (1, 1, 1);
@@ -415,8 +415,8 @@ function function_c94e27cd(v_origin, v_angles) {
 #/
 
 // Namespace rocketshield
-// Params 1, eflags: 0x1 linked
-// Checksum 0xffe08c5c, Offset: 0x1c78
+// Params 1, eflags: 0x0
+// Checksum 0xd5e1899f, Offset: 0x1c78
 // Size: 0xca
 function function_299e82af(player) {
     self sethintstring(%ZM_ZOD_PICKUP_BOTTLE);
@@ -430,8 +430,8 @@ function function_299e82af(player) {
 }
 
 // Namespace rocketshield
-// Params 0, eflags: 0x1 linked
-// Checksum 0x74ade081, Offset: 0x1d50
+// Params 0, eflags: 0x0
+// Checksum 0x5d633cbe, Offset: 0x1d50
 // Size: 0xa4
 function function_defde6ba() {
     while (true) {
@@ -451,8 +451,8 @@ function function_defde6ba() {
 }
 
 // Namespace rocketshield
-// Params 2, eflags: 0x1 linked
-// Checksum 0xb491bdcc, Offset: 0x1e00
+// Params 2, eflags: 0x0
+// Checksum 0x2bd29ad1, Offset: 0x1e00
 // Size: 0x10a
 function function_5c7f3b20(var_91089b66, player) {
     var_91089b66 notify(#"hash_c2022405");
@@ -469,16 +469,16 @@ function function_5c7f3b20(var_91089b66, player) {
 /#
 
     // Namespace rocketshield
-    // Params 0, eflags: 0x1 linked
-    // Checksum 0x14331e7e, Offset: 0x1f18
+    // Params 0, eflags: 0x0
+    // Checksum 0xe1052499, Offset: 0x1f18
     // Size: 0xf2
     function function_3f94d6cf() {
-        level flagsys::wait_till("ZOMBIE_EQUIP_RIOTSHIELD_HOWTO");
+        level flagsys::wait_till("<unknown string>");
         wait(1);
         zm_devgui::add_custom_devgui_callback(&function_e2f5a93);
-        adddebugcommand("ZOMBIE_EQUIP_RIOTSHIELD_HOWTO");
-        adddebugcommand("ZOMBIE_EQUIP_RIOTSHIELD_HOWTO");
-        adddebugcommand("ZOMBIE_EQUIP_RIOTSHIELD_HOWTO");
+        adddebugcommand("<unknown string>");
+        adddebugcommand("<unknown string>");
+        adddebugcommand("<unknown string>");
         players = getplayers();
         for (i = 0; i < players.size; i++) {
             ip1 = i + 1;
@@ -486,22 +486,22 @@ function function_5c7f3b20(var_91089b66, player) {
     }
 
     // Namespace rocketshield
-    // Params 1, eflags: 0x1 linked
-    // Checksum 0xc1b17595, Offset: 0x2018
+    // Params 1, eflags: 0x0
+    // Checksum 0x79860136, Offset: 0x2018
     // Size: 0x108
     function function_e2f5a93(cmd) {
         players = getplayers();
         retval = 0;
         switch (cmd) {
-        case 8:
-            array::thread_all(players, &zm_devgui::zombie_devgui_equipment_give, "ZOMBIE_EQUIP_RIOTSHIELD_HOWTO");
+        case 0:
+            array::thread_all(players, &zm_devgui::zombie_devgui_equipment_give, "<unknown string>");
             retval = 1;
             break;
-        case 8:
+        case 0:
             array::thread_all(players, &function_3796f8bc);
             retval = 1;
             break;
-        case 8:
+        default:
             array::thread_all(players, &function_e7c51939);
             retval = 1;
             break;
@@ -510,8 +510,8 @@ function function_5c7f3b20(var_91089b66, player) {
     }
 
     // Namespace rocketshield
-    // Params 0, eflags: 0x1 linked
-    // Checksum 0x78652bb3, Offset: 0x2128
+    // Params 0, eflags: 0x0
+    // Checksum 0xe6e7e36e, Offset: 0x2128
     // Size: 0x38
     function function_2449723c() {
         if (isdefined(self.var_9dc82bca)) {
@@ -524,17 +524,17 @@ function function_5c7f3b20(var_91089b66, player) {
     }
 
     // Namespace rocketshield
-    // Params 0, eflags: 0x1 linked
-    // Checksum 0x5573aa54, Offset: 0x2168
+    // Params 0, eflags: 0x0
+    // Checksum 0x6e7525b4, Offset: 0x2168
     // Size: 0x30
     function function_e7c51939() {
-        self zm_equipment::buy("ZOMBIE_EQUIP_RIOTSHIELD_HOWTO");
+        self zm_equipment::buy("<unknown string>");
         self.var_fa288d25 = 1;
     }
 
     // Namespace rocketshield
-    // Params 0, eflags: 0x1 linked
-    // Checksum 0x814005ef, Offset: 0x21a0
+    // Params 0, eflags: 0x0
+    // Checksum 0x882bdd1, Offset: 0x21a0
     // Size: 0x154
     function function_3796f8bc() {
         if (self function_2449723c()) {
@@ -542,7 +542,7 @@ function function_5c7f3b20(var_91089b66, player) {
         }
         self notify(#"hash_3796f8bc");
         self endon(#"hash_3796f8bc");
-        level flagsys::wait_till("ZOMBIE_EQUIP_RIOTSHIELD_HOWTO");
+        level flagsys::wait_till("<unknown string>");
         self.var_3796f8bc = !(isdefined(self.var_3796f8bc) && self.var_3796f8bc);
         if (self.var_3796f8bc) {
             while (isdefined(self)) {

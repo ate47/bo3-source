@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x662c3511, Offset: 0x200
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("player", &__init__, undefined, undefined);
 }
 
@@ -117,7 +117,7 @@ function take_weapons() {
 }
 
 // Namespace player
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe3a5cc14, Offset: 0x830
 // Size: 0x234
 function generate_weapon_data() {

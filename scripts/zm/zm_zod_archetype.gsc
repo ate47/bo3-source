@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe7a39eb6, Offset: 0xe8
 // Size: 0x84
-function init() {
+function autoexec init() {
     zombie_utility::register_ignore_player_handler("margwa", &function_478e89a7);
     zombie_utility::register_ignore_player_handler("zombie", &function_478e89a7);
     level.var_66c4cad4 = &function_66c4cad4;
@@ -16,10 +16,10 @@ function init() {
 }
 
 // Namespace namespace_29da2c3c
-// Params 0, eflags: 0x5 linked
+// Params 0, eflags: 0x4
 // Checksum 0x3bee7064, Offset: 0x178
 // Size: 0x216
-function function_478e89a7() {
+function private function_478e89a7() {
     self.ignore_player = [];
     foreach (player in level.players) {
         if (isdefined(player.teleporting) && player.teleporting) {
@@ -46,7 +46,7 @@ function function_478e89a7() {
 }
 
 // Namespace namespace_29da2c3c
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xffd17d44, Offset: 0x398
 // Size: 0x22
 function function_66c4cad4() {
@@ -57,7 +57,7 @@ function function_66c4cad4() {
 }
 
 // Namespace namespace_29da2c3c
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x895c738a, Offset: 0x3c8
 // Size: 0x84
 function function_979a9287(player) {

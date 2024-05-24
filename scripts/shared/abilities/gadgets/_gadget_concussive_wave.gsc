@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x64d5294a, Offset: 0x208
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("gadget_concussive_wave", &__init__, undefined, undefined);
 }
 

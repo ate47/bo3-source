@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xfe62b444, Offset: 0x1f0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_fear_in_headlights", &__init__, undefined, "bgb");
 }
 
@@ -31,7 +31,7 @@ function __init__() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x45567d84, Offset: 0x2a0
 // Size: 0x84
-function function_b13c2f15() {
+function private function_b13c2f15() {
     self endon(#"hash_4e7f43fc");
     self waittill(#"death");
     if (isdefined(self) && self ispaused()) {
@@ -46,7 +46,7 @@ function function_b13c2f15() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x12dc37be, Offset: 0x330
 // Size: 0xac
-function freeze_ai(ai) {
+function private freeze_ai(ai) {
     ai notify(#"hash_4e7f43fc");
     ai thread function_b13c2f15();
     ai setentitypaused(1);
@@ -60,7 +60,7 @@ function freeze_ai(ai) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4053149d, Offset: 0x3e8
 // Size: 0xa8
-function function_31a2964e(ai) {
+function private function_31a2964e(ai) {
     ai notify(#"hash_4e7f43fc");
     ai setentitypaused(0);
     if (isdefined(ai.var_7f7a0b19)) {
@@ -77,7 +77,7 @@ function function_31a2964e(ai) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xaa2beebd, Offset: 0x498
 // Size: 0x1b2
-function function_723d94f5(allai, trace, degree) {
+function private function_723d94f5(allai, trace, degree) {
     if (!isdefined(degree)) {
         degree = 45;
     }

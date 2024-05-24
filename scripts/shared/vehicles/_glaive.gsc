@@ -23,7 +23,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc65501a6, Offset: 0x490
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("glaive", &__init__, undefined, undefined);
 }
 
@@ -89,7 +89,7 @@ function defaultrole() {
 // Params 1, eflags: 0x4
 // Checksum 0x76ea15bd, Offset: 0x850
 // Size: 0x206
-function function_cb8b2163(target) {
+function private function_cb8b2163(target) {
     if (!isdefined(target)) {
         return false;
     }
@@ -129,7 +129,7 @@ function function_cb8b2163(target) {
 // Params 0, eflags: 0x4
 // Checksum 0xb97e2ba5, Offset: 0xa60
 // Size: 0xda
-function function_7ab362db() {
+function private function_7ab362db() {
     var_e9ab3b34 = getaiteamarray("axis");
     arraysortclosest(var_e9ab3b34, self.owner.origin);
     foreach (var_5f305fb8 in var_e9ab3b34) {
@@ -143,7 +143,7 @@ function function_7ab362db() {
 // Params 0, eflags: 0x4
 // Checksum 0x23481364, Offset: 0xb48
 // Size: 0x158
-function function_ad866c00() {
+function private function_ad866c00() {
     self endon(#"death");
     for (;;) {
         if (!isdefined(self.owner)) {

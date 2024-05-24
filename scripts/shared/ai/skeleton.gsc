@@ -25,7 +25,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x96d46297, Offset: 0x530
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("skeleton", &__init__, undefined, undefined);
 }
 
@@ -63,7 +63,7 @@ function skeletonspawnsetup() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xca7ee6fc, Offset: 0x6f0
 // Size: 0xf4
-function function_9aa7ac57() {
+function private function_9aa7ac57() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("skeletonTargetService", &function_d89f6c60);
     behaviortreenetworkutility::registerbehaviortreescriptapi("skeletonShouldMelee", &function_4db74dea);
     behaviortreenetworkutility::registerbehaviortreescriptapi("skeletonGibLegsCondition", &function_72df9548);
@@ -76,7 +76,7 @@ function function_9aa7ac57() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xe6f828d0, Offset: 0x7f0
 // Size: 0x24c
-function function_203c170e() {
+function private function_203c170e() {
     blackboard::createblackboardforentity(self);
     self aiutility::function_89e1fc16();
     blackboard::registerblackboardattribute(self, "_arms_position", "arms_up", &bb_getarmsposition);
@@ -119,7 +119,7 @@ function function_203c170e() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x8f26919b, Offset: 0xa48
 // Size: 0x34
-function archetypeskeletononanimscriptedcallback(entity) {
+function private archetypeskeletononanimscriptedcallback(entity) {
     entity.__blackboard = undefined;
     entity function_203c170e();
 }

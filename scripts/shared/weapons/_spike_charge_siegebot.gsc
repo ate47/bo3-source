@@ -7,7 +7,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xad8642d9, Offset: 0xd8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("spike_charge_siegebot", &__init__, undefined, undefined);
 }
 

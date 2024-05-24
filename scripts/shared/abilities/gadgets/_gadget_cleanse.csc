@@ -16,7 +16,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x69ed21a6, Offset: 0x290
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("gadget_cleanse", &__init__, undefined, undefined);
 }
 

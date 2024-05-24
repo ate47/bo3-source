@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x959b739f, Offset: 0x2c8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("classicmode", &__init__, undefined, undefined);
 }
 

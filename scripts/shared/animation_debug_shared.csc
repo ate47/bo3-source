@@ -10,7 +10,7 @@
     // Params 0, eflags: 0x2
     // Checksum 0x2d796748, Offset: 0xe0
     // Size: 0xd0
-    function __init__() {
+    function autoexec __init__() {
         setdvar("<unknown string>", 0);
         setdvar("<unknown string>", 0);
         while (true) {

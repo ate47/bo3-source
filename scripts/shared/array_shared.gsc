@@ -332,7 +332,7 @@ function wait_till(&array, notifies, n_timeout) {
 }
 
 // Namespace array
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xf010e87b, Offset: 0x1700
 // Size: 0x1b6
 function wait_till_match(&array, str_notify, str_match, n_timeout) {
@@ -533,7 +533,7 @@ function _waitlogic2(s_tracker, ent, msg) {
 }
 
 // Namespace array
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x633ad1f, Offset: 0x2110
 // Size: 0xcc
 function flag_wait_any(array, str_flag) {
@@ -890,7 +890,7 @@ function function_5fee9333(&a, var_82126fd8, val) {
 }
 
 // Namespace array
-// Params 7, eflags: 0x1 linked
+// Params 7, eflags: 0x0
 // Checksum 0xdc8831e9, Offset: 0x3038
 // Size: 0x1bc
 function spread_all(&entities, func, arg1, arg2, arg3, arg4, arg5) {

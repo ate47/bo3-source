@@ -9,7 +9,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x80508b30, Offset: 0x258
 // Size: 0x3ce
-function main() {
+function autoexec main() {
     clientfield::register("actor", "destructible_character_state", 1, 21, "int");
     destructibles = struct::get_script_bundles("destructiblecharacterdef");
     processedbundles = [];
@@ -42,7 +42,7 @@ function main() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x5b7d7283, Offset: 0x630
 // Size: 0x32
-function _getdestructstate(entity) {
+function private _getdestructstate(entity) {
     if (isdefined(entity._destruct_state)) {
         return entity._destruct_state;
     }
@@ -53,7 +53,7 @@ function _getdestructstate(entity) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xe9f4b4ff, Offset: 0x670
 // Size: 0x6c
-function _setdestructed(entity, destructflag) {
+function private _setdestructed(entity, destructflag) {
     entity._destruct_state = _getdestructstate(entity) | destructflag;
     entity clientfield::set("destructible_character_state", entity._destruct_state);
 }

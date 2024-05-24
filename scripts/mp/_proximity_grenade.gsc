@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x22380bd, Offset: 0x140
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("proximity_grenade", &__init__, undefined, undefined);
 }
 

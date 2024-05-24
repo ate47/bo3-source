@@ -13,7 +13,7 @@
 #namespace namespace_b65ec48a;
 
 // Namespace namespace_b65ec48a
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x74c57c4d, Offset: 0x488
 // Size: 0x194
 function main_start() {
@@ -34,7 +34,7 @@ function main_start() {
 }
 
 // Namespace namespace_b65ec48a
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf1f49ef1, Offset: 0x628
 // Size: 0xa54
 function main_end() {
@@ -101,7 +101,7 @@ function main_end() {
 }
 
 // Namespace namespace_b65ec48a
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x6c405b91, Offset: 0x1088
 // Size: 0x3c
 function function_320b9477() {
@@ -110,7 +110,7 @@ function function_320b9477() {
 }
 
 // Namespace namespace_b65ec48a
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0x5340ba65, Offset: 0x10d0
 // Size: 0xf4
 function function_2cba29a8(zone, pos, radius, height) {
@@ -126,7 +126,7 @@ function function_2cba29a8(zone, pos, radius, height) {
 }
 
 // Namespace namespace_b65ec48a
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2ba9416f, Offset: 0x11d0
 // Size: 0x9c
 function function_e7337b94() {
@@ -139,7 +139,7 @@ function function_e7337b94() {
 }
 
 // Namespace namespace_b65ec48a
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x65a7f7c6, Offset: 0x1278
 // Size: 0xe4
 function player_out_of_playable_area_monitor_callback() {

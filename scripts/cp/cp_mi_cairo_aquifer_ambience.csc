@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x192961e2, Offset: 0x430
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("aquifer_ambience", &__init__, undefined, undefined);
 }
 

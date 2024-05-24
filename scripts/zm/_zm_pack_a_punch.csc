@@ -16,7 +16,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x58763584, Offset: 0x248
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_pack_a_punch", &__init__, undefined, undefined);
 }
 
@@ -52,7 +52,7 @@ function pap_working_fx_handler(localclientnum, oldval, newval, bnewent, binitia
 // Params 3, eflags: 0x5 linked
 // Checksum 0x7efddba2, Offset: 0x3d8
 // Size: 0x14c
-function pap_play_fx(localclientnum, n_piece_index, str_tag) {
+function private pap_play_fx(localclientnum, n_piece_index, str_tag) {
     mdl_piece = self zbarriergetpiece(n_piece_index);
     if (isdefined(self.mdl_fx)) {
         self.mdl_fx delete();

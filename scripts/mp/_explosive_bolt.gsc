@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc651f55f, Offset: 0x140
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("explosive_bolt", &__init__, undefined, undefined);
 }
 

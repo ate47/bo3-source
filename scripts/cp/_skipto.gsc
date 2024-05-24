@@ -32,7 +32,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xb3e302f9, Offset: 0x1008
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("skipto", &__init__, &__main__, undefined);
 }
 
@@ -1593,7 +1593,7 @@ function function_be8adfb8(name, player) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xa525a40f, Offset: 0x7218
 // Size: 0xa2
-function function_52904bc9() {
+function private function_52904bc9() {
     foreach (trig in trigger::get_all()) {
         if (isdefined(trig.var_22c28736)) {
             trig thread function_87fe8621();
@@ -1605,7 +1605,7 @@ function function_52904bc9() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xfc459ad6, Offset: 0x72c8
 // Size: 0x272
-function function_87fe8621() {
+function private function_87fe8621() {
     self endon(#"death");
     level flag::wait_till("all_players_spawned");
     var_717810f = function_659bb22b(self.var_22c28736);
@@ -1662,7 +1662,7 @@ function function_659bb22b(var_3a36166b) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xaf9f131a, Offset: 0x7678
 // Size: 0x3d2
-function function_61843b91(var_717810f, var_cacbf7e2) {
+function private function_61843b91(var_717810f, var_cacbf7e2) {
     self endon(#"death");
     if (self isinvehicle()) {
         vh_occupied = self getvehicleoccupied();
@@ -2642,7 +2642,7 @@ function function_54fdc879() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x7a44328d, Offset: 0xbe80
 // Size: 0x86
-function function_b342abc7(skipto, starting) {
+function private function_b342abc7(skipto, starting) {
     if (isdefined(level.var_dc323706)) {
         [[ level.var_dc323706 ]](skipto, starting);
     }
@@ -2664,7 +2664,7 @@ function function_ab12ef82(str_flag) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0xbf3327c7, Offset: 0xbf40
 // Size: 0x29a
-function function_77ff537d(skipto, starting, direct, player) {
+function private function_77ff537d(skipto, starting, direct, player) {
     if (isdefined(level.var_e8899224)) {
         [[ level.var_e8899224 ]]();
     }

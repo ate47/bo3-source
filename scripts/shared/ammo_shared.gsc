@@ -10,13 +10,13 @@
 // Params 0, eflags: 0x2
 // Checksum 0xbca363b3, Offset: 0x178
 // Size: 0x3c
-function main() {
+function autoexec main() {
     level.ai_ammo_throttle = new throttle();
     [[ level.ai_ammo_throttle ]]->initialize(1, 0.1);
 }
 
 // Namespace ammo
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x29cfca2d, Offset: 0x1c0
 // Size: 0xf4
 function dropaiammo() {
@@ -36,7 +36,7 @@ function dropaiammo() {
 }
 
 // Namespace ammo
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe5fb5f96, Offset: 0x2c0
 // Size: 0x5f6
 function ammo_pouch_think() {

@@ -16,7 +16,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x32100736, Offset: 0x250
 // Size: 0x3c
-function main() {
+function autoexec main() {
     level.ai_weapon_throttle = new throttle();
     [[ level.ai_weapon_throttle ]]->initialize(1, 0.1);
 }
@@ -25,7 +25,7 @@ function main() {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x3ec5ebc2, Offset: 0x298
 // Size: 0x9c
-function _throwstowedweapon(entity, weapon, weaponmodel) {
+function private _throwstowedweapon(entity, weapon, weaponmodel) {
     entity waittill(#"death");
     if (isdefined(entity)) {
         weaponmodel unlink();
@@ -35,7 +35,7 @@ function _throwstowedweapon(entity, weapon, weaponmodel) {
 }
 
 // Namespace shared
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x3d6a37f0, Offset: 0x340
 // Size: 0xec
 function stowweapon(weapon, positionoffset, orientationoffset) {

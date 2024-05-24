@@ -7,7 +7,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xd4f4154d, Offset: 0xc0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_player", &__init__, undefined, undefined);
 }
 

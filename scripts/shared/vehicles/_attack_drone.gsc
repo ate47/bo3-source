@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x61abf4e4, Offset: 0x1a0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("attack_drone", &__init__, undefined, undefined);
 }
 

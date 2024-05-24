@@ -37,7 +37,7 @@ function set_ignoreall(val) {
 }
 
 // Namespace ai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x27a29b78, Offset: 0x490
 // Size: 0x48
 function set_pacifist(val) {
@@ -137,7 +137,7 @@ function is_dead_sentient() {
 }
 
 // Namespace ai
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x21fa2768, Offset: 0x768
 // Size: 0x216
 function waittill_dead(guys, num, timeoutlength) {
@@ -207,7 +207,7 @@ function waittill_dead_or_dying(guys, num, timeoutlength) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x65e47ebf, Offset: 0xb30
 // Size: 0x38
-function waittill_dead_thread(ent) {
+function private waittill_dead_thread(ent) {
     self waittill(#"death");
     ent.count--;
     ent notify(#"hash_27bc4415");
@@ -236,7 +236,7 @@ function waittill_dead_timeout(timeoutlength) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x4e000238, Offset: 0xbf8
 // Size: 0x50
-function wait_for_shoot() {
+function private wait_for_shoot() {
     self endon(#"stop_shoot_at_target");
     if (isvehicle(self)) {
         self waittill(#"weapon_fired");
@@ -349,7 +349,7 @@ function wait_until_done_speaking() {
 }
 
 // Namespace ai
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x6cd958a, Offset: 0x10e0
 // Size: 0x138
 function set_goal(value, key, b_force) {
@@ -485,7 +485,7 @@ function stoppainwaitinterval() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x68c5c59e, Offset: 0x1788
 // Size: 0x40
-function _allowpainrestore() {
+function private _allowpainrestore() {
     self endon(#"death");
     self util::waittill_any("painWaitIntervalRemove", "painWaitInterval");
     self.allowpain = 1;
@@ -513,7 +513,7 @@ function painwaitinterval(msec) {
 }
 
 // Namespace ai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xaca329f4, Offset: 0x1898
 // Size: 0x4f8
 function patrol(start_path_node) {
@@ -638,7 +638,7 @@ function end_and_clean_patrol_behaviors() {
 }
 
 // Namespace ai
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbc818625, Offset: 0x2008
 // Size: 0x2c4
 function bloody_death(n_delay, hit_loc) {

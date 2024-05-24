@@ -17,7 +17,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x3e892f09, Offset: 0x6d8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_score", &__init__, undefined, undefined);
 }
 
@@ -43,7 +43,7 @@ function __init__() {
 }
 
 // Namespace zm_score
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x91648eb7, Offset: 0x910
 // Size: 0x26
 function register_score_event(str_event, func_callback) {

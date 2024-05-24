@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc1ad19b3, Offset: 0x2e8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("mpdialog", &__init__, undefined, undefined);
 }
 

@@ -171,7 +171,7 @@ function function_8810da3c(owner, upgraded) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xa466cabf, Offset: 0xc98
 // Size: 0x290
-function function_eb018a63(origin, weapon, var_50ae8517) {
+function private function_eb018a63(origin, weapon, var_50ae8517) {
     timestep = 2;
     cloud = function_2fb41213(origin, getdvarint("scr_smokescreen_duration", 7), weapon);
     cloud thread function_7125df2e(getdvarint("scr_smokescreen_duration", 7));
@@ -203,7 +203,7 @@ function function_eb018a63(origin, weapon, var_50ae8517) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x6c6a6796, Offset: 0xf30
 // Size: 0xb6
-function function_76df0d04(player, timestep) {
+function private function_76df0d04(player, timestep) {
     self endon(#"death");
     while (true) {
         if (isdefined(self.trigger)) {
@@ -219,7 +219,7 @@ function function_76df0d04(player, timestep) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x6751a475, Offset: 0xff0
 // Size: 0x31a
-function function_eafddd94(player, cloud) {
+function private function_eafddd94(player, cloud) {
     self endon(#"death");
     while (true) {
         guy = self waittill(#"trigger");
@@ -283,7 +283,7 @@ function function_eafddd94(player, cloud) {
 // Params 3, eflags: 0x4
 // Checksum 0xc0551218, Offset: 0x1318
 // Size: 0x90
-function function_fc04e511(dir, var_99f49fe2, seconds) {
+function private function_fc04e511(dir, var_99f49fe2, seconds) {
     self endon(#"death");
     ticks = seconds * 20;
     var_ccde618b = var_99f49fe2 / ticks * vectornormalize(dir);
@@ -297,7 +297,7 @@ function function_fc04e511(dir, var_99f49fe2, seconds) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xd20be4a2, Offset: 0x13b0
 // Size: 0x88
-function function_2fb41213(origin, duration, weapon) {
+function private function_2fb41213(origin, duration, weapon) {
     smokescreen = spawntimedfx(weapon, origin, (0, 0, 1), duration);
     smokescreen.currentradius = getdvarint("scr_smokescreen_radius", 60);
     smokescreen.currentscale = 1;
@@ -308,7 +308,7 @@ function function_2fb41213(origin, duration, weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x251ec98a, Offset: 0x1440
 // Size: 0x5c
-function function_7125df2e(time) {
+function private function_7125df2e(time) {
     self endon(#"death");
     wait(time);
     if (isdefined(self.trigger)) {
@@ -321,7 +321,7 @@ function function_7125df2e(time) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x9c661a40, Offset: 0x14a8
 // Size: 0x176
-function function_2346317b(time, startscale, maxscale) {
+function private function_2346317b(time, startscale, maxscale) {
     self endon(#"death");
     if (maxscale < 1) {
         maxscale = 1;
@@ -354,7 +354,7 @@ function function_2346317b(time, startscale, maxscale) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x32b6a896, Offset: 0x1628
 // Size: 0x70
-function function_2f3c403b(time) {
+function private function_2f3c403b(time) {
     self endon(#"death");
     var_f6e1ecda = time * 20;
     while (var_f6e1ecda) {
@@ -388,7 +388,7 @@ function function_d25acb0(var_9bc2efcb, upgraded) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xa78c071e, Offset: 0x17a8
 // Size: 0x8e
-function function_e52895b(origin) {
+function private function_e52895b(origin) {
     self endon(#"death");
     var_9f9fc36f = 1;
     for (timeleft = getdvarint("scr_smokescreen_duration", 7); timeleft > 0; timeleft -= var_9f9fc36f) {

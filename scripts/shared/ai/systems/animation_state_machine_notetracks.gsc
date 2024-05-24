@@ -6,7 +6,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf8f80d1f, Offset: 0xc0
 // Size: 0x10
-function initnotetrackhandler() {
+function autoexec initnotetrackhandler() {
     level._notetrack_handler = [];
 }
 
@@ -14,7 +14,7 @@ function initnotetrackhandler() {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x3dcf0a81, Offset: 0xd8
 // Size: 0x8e
-function runnotetrackhandler(entity, notetracks) {
+function private runnotetrackhandler(entity, notetracks) {
     /#
         assert(isarray(notetracks));
     #/
@@ -27,7 +27,7 @@ function runnotetrackhandler(entity, notetracks) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x93449524, Offset: 0x170
 // Size: 0x9c
-function handlenotetrack(entity, notetrack) {
+function private handlenotetrack(entity, notetrack) {
     notetrackhandler = level._notetrack_handler[notetrack];
     if (!isdefined(notetrackhandler)) {
         return;

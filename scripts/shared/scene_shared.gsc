@@ -152,7 +152,7 @@ class csceneobject : cscriptbundleobjectbase {
     // Params 2, eflags: 0x5 linked
     // Checksum 0xa770363a, Offset: 0x6e60
     // Size: 0xbc
-    function skip_anim_on_server(entity, anim_name) {
+    function private skip_anim_on_server(entity, anim_name) {
         if (!isdefined(anim_name)) {
             return;
         }
@@ -175,7 +175,7 @@ class csceneobject : cscriptbundleobjectbase {
     // Params 2, eflags: 0x5 linked
     // Checksum 0x507b2946, Offset: 0x6dc8
     // Size: 0x8c
-    function skip_anim_on_client(entity, anim_name) {
+    function private skip_anim_on_client(entity, anim_name) {
         if (!isdefined(anim_name)) {
             return;
         }
@@ -1615,7 +1615,7 @@ class cscene : cscriptbundlebase {
     // Params 2, eflags: 0x5 linked
     // Checksum 0x3873c558, Offset: 0xd5e0
     // Size: 0x13c
-    function function_a2014270(var_ac574b2f, entity) {
+    function private function_a2014270(var_ac574b2f, entity) {
         if (self === var_ac574b2f) {
             if (!is_skipping_scene()) {
                 function_5a3cff18(1);
@@ -1637,7 +1637,7 @@ class cscene : cscriptbundlebase {
     // Params 1, eflags: 0x5 linked
     // Checksum 0x662b861f, Offset: 0xd3b0
     // Size: 0x222
-    function function_5a3cff18(b_started) {
+    function private function_5a3cff18(b_started) {
         if (isdefined(b_started) && b_started) {
             scene::function_f69c7a83();
             if (isdefined(level.var_a1d36213)) {
@@ -1680,7 +1680,7 @@ class cscene : cscriptbundlebase {
     // Params 0, eflags: 0x5 linked
     // Checksum 0x53ff8296, Offset: 0xd358
     // Size: 0x4a
-    function function_c54dbcf9() {
+    function private function_c54dbcf9() {
         if (isdefined(self._s.var_ab895d81)) {
             if (isdefined(level.var_a1d36213)) {
                 level.var_9d7e58c5 = self._s.name;
@@ -1694,7 +1694,7 @@ class cscene : cscriptbundlebase {
     // Params 0, eflags: 0x5 linked
     // Checksum 0x96435e5a, Offset: 0xd330
     // Size: 0x20
-    function function_e308028() {
+    function private function_e308028() {
         return isdefined(level.var_a1d36213) && isdefined(self._s.var_ab895d81);
     }
 
@@ -1713,7 +1713,7 @@ class cscene : cscriptbundlebase {
     // Params 0, eflags: 0x5 linked
     // Checksum 0x69921a04, Offset: 0xd160
     // Size: 0x14a
-    function _skip_scene() {
+    function private _skip_scene() {
         self endon(#"stopped");
         wait(0.05);
         foreach (o_scene_object in self._a_objects) {
@@ -1734,7 +1734,7 @@ class cscene : cscriptbundlebase {
     // Params 0, eflags: 0x5 linked
     // Checksum 0xab0ff12, Offset: 0xcf00
     // Size: 0x254
-    function function_6fb6722f() {
+    function private function_6fb6722f() {
         /#
             if (getdvarint("Align target '") > 0) {
                 printtoprightln("Align target '" + gettime(), (1, 0, 0));
@@ -3182,7 +3182,7 @@ class class_c0992da4 : cscriptbundleobjectbase, csceneobject {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xcc50c126, Offset: 0xba0
 // Size: 0x58
-function prepare_player_model_anim(ent) {
+function private prepare_player_model_anim(ent) {
     if (!(ent.animtree === "all_player")) {
         ent useanimtree(#all_player);
         ent.animtree = "all_player";
@@ -3193,7 +3193,7 @@ function prepare_player_model_anim(ent) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x60e80e8a, Offset: 0xc00
 // Size: 0x58
-function prepare_generic_model_anim(ent) {
+function private prepare_generic_model_anim(ent) {
     if (!(ent.animtree === "generic")) {
         ent useanimtree(#generic);
         ent.animtree = "generic";
@@ -3304,7 +3304,7 @@ function synced_delete() {
 // Params 0, eflags: 0x2
 // Checksum 0xeffeee90, Offset: 0x10d18
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("scene", &__init__, &__main__, undefined);
 }
 
@@ -3459,7 +3459,7 @@ function __main__() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x6284ffd, Offset: 0x11ad8
 // Size: 0xbc
-function _scene_link() {
+function private _scene_link() {
     self.e_scene_link = util::spawn_model("tag_origin", self.origin, self.angles);
     e_linkto = getent(self.linkto, "linkname");
     self.e_scene_link linkto(e_linkto);
@@ -3738,7 +3738,7 @@ function _init_instance(str_scenedef, a_ents, b_test_run) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xcae68714, Offset: 0x129f0
 // Size: 0x264
-function _load_female_scene(s_bundle, a_ents) {
+function private _load_female_scene(s_bundle, a_ents) {
     b_has_player = 0;
     foreach (s_object in s_bundle.objects) {
         if (!isdefined(s_object)) {
@@ -3920,7 +3920,7 @@ function skipto_end(arg1, arg2, arg3, n_time, b_include_players) {
 }
 
 // Namespace scene
-// Params 4, eflags: 0x1 linked
+// Params 4, eflags: 0x0
 // Checksum 0xe2dd1db6, Offset: 0x134a0
 // Size: 0x84
 function skipto_end_noai(arg1, arg2, arg3, n_time) {
@@ -4034,7 +4034,7 @@ function get_vehicle_count(str_scenedef) {
 }
 
 // Namespace scene
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x17aaa7b0, Offset: 0x13a78
 // Size: 0x2a
 function get_actor_count(str_scenedef) {
@@ -4277,7 +4277,7 @@ function is_capture_mode() {
 }
 
 // Namespace scene
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc92ebef5, Offset: 0x14540
 // Size: 0x16
 function should_spectate_on_join() {
@@ -4285,7 +4285,7 @@ function should_spectate_on_join() {
 }
 
 // Namespace scene
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x8edb56a3, Offset: 0x14560
 // Size: 0x28
 function wait_until_spectate_on_join_completes() {
@@ -4440,7 +4440,7 @@ function _skip_scene(var_7265d040, var_6b34ddbf, b_player_scene, var_48ef9f9) {
 }
 
 // Namespace scene
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf5887147, Offset: 0x14fa0
 // Size: 0x44
 function function_9e5b8cdb(var_68612a53) {
@@ -4471,7 +4471,7 @@ function function_f69c7a83() {
 }
 
 // Namespace scene
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xc457ce2f, Offset: 0x15058
 // Size: 0xc
 function function_b1f75ee9() {
@@ -4666,7 +4666,7 @@ function on_player_disconnect() {
 }
 
 // Namespace scene
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xa3a9cb6b, Offset: 0x15a38
 // Size: 0xdc
 function add_scene_ordered_notetrack(group_name, str_note) {
@@ -4688,7 +4688,7 @@ function add_scene_ordered_notetrack(group_name, str_note) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0xf9e3e899, Offset: 0x15b20
 // Size: 0x254
-function _wait_for_ordered_notify(id, group_obj, group_name, str_note) {
+function private _wait_for_ordered_notify(id, group_obj, group_name, str_note) {
     self waittill(str_note);
     if (group_obj.current_count == id) {
         group_obj.current_count++;
@@ -4720,7 +4720,7 @@ function _wait_for_ordered_notify(id, group_obj, group_name, str_note) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xeff68b87, Offset: 0x15d80
 // Size: 0xb4
-function _fire_ordered_notitifes(group_obj, group_name) {
+function private _fire_ordered_notitifes(group_obj, group_name) {
     if (isdefined(group_obj.pending_notifies)) {
         while (group_obj.pending_notifies.size > 0) {
             self notify("scene_" + group_obj.pending_notifies[0].str_note);
@@ -4733,7 +4733,7 @@ function _fire_ordered_notitifes(group_obj, group_name) {
 }
 
 // Namespace scene
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x6e33476f, Offset: 0x15e40
 // Size: 0x44
 function add_wait_for_streamer_hint_scene(str_scene_name) {

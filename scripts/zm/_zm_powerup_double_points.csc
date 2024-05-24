@@ -6,15 +6,15 @@
 
 // Namespace zm_powerup_double_points
 // Params 0, eflags: 0x2
-// Checksum 0xdb21ed6b, Offset: 0x128
+// Checksum 0xdc86fb3, Offset: 0x128
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_double_points", &__init__, undefined, undefined);
 }
 
 // Namespace zm_powerup_double_points
-// Params 0, eflags: 0x0
-// Checksum 0x86b7402, Offset: 0x168
+// Params 0, eflags: 0x1 linked
+// Checksum 0xc8a0fd8, Offset: 0x168
 // Size: 0x74
 function __init__() {
     zm_powerups::include_zombie_powerup("double_points");

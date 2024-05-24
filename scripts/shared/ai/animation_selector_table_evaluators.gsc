@@ -7,7 +7,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xc33db53e, Offset: 0x1c8
 // Size: 0xa4
-function registerastscriptfunctions() {
+function autoexec registerastscriptfunctions() {
     animationselectortable::registeranimationselectortableevaluator("testFunction", &testfunction);
     animationselectortable::registeranimationselectortableevaluator("evaluateBlockedAnimations", &evaluateblockedanimations);
     animationselectortable::registeranimationselectortableevaluator("evaluateHumanTurnAnimations", &evaluatehumanturnanimations);
@@ -28,7 +28,7 @@ function testfunction(entity, animations) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xdc0858, Offset: 0x2c8
 // Size: 0x256
-function evaluator_checkanimationagainstgeo(entity, animation) {
+function private evaluator_checkanimationagainstgeo(entity, animation) {
     pixbeginevent("Evaluator_CheckAnimationAgainstGeo");
     /#
         assert(isactor(entity));
@@ -59,7 +59,7 @@ function evaluator_checkanimationagainstgeo(entity, animation) {
 // Params 2, eflags: 0x4
 // Checksum 0x2fcb299b, Offset: 0x528
 // Size: 0x12e
-function evaluator_checkanimationendpointagainstgeo(entity, animation) {
+function private evaluator_checkanimationendpointagainstgeo(entity, animation) {
     pixbeginevent("Evaluator_CheckAnimationEndPointAgainstGeo");
     /#
         assert(isactor(entity));
@@ -79,7 +79,7 @@ function evaluator_checkanimationendpointagainstgeo(entity, animation) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x6a17f2a2, Offset: 0x660
 // Size: 0x19e
-function evaluator_checkanimationforovershootinggoal(entity, animation) {
+function private evaluator_checkanimationforovershootinggoal(entity, animation) {
     pixbeginevent("Evaluator_CheckAnimationForOverShootingGoal");
     /#
         assert(isactor(entity));
@@ -107,7 +107,7 @@ function evaluator_checkanimationforovershootinggoal(entity, animation) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x60939db6, Offset: 0x808
 // Size: 0xbe
-function evaluator_checkanimationagainstnavmesh(entity, animation) {
+function private evaluator_checkanimationagainstnavmesh(entity, animation) {
     /#
         assert(isactor(entity));
     #/
@@ -123,7 +123,7 @@ function evaluator_checkanimationagainstnavmesh(entity, animation) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x29c22af3, Offset: 0x8d0
 // Size: 0x112
-function evaluator_checkanimationarrivalposition(entity, animation) {
+function private evaluator_checkanimationarrivalposition(entity, animation) {
     localdeltavector = getmovedelta(animation, 0, 1, entity);
     endpoint = entity localtoworldcoords(localdeltavector);
     animdistsq = lengthsquared(localdeltavector);
@@ -137,7 +137,7 @@ function evaluator_checkanimationarrivalposition(entity, animation) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xdbfa0def, Offset: 0x9f0
 // Size: 0x1ce
-function evaluator_findfirstvalidanimation(entity, animations, tests) {
+function private evaluator_findfirstvalidanimation(entity, animations, tests) {
     /#
         assert(isarray(animations), "<unknown string>");
     #/
@@ -165,7 +165,7 @@ function evaluator_findfirstvalidanimation(entity, animations, tests) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x50cc3fa2, Offset: 0xbc8
 // Size: 0x6e
-function evaluateblockedanimations(entity, animations) {
+function private evaluateblockedanimations(entity, animations) {
     if (animations.size > 0) {
         return evaluator_findfirstvalidanimation(entity, animations, array(&evaluator_checkanimationagainstgeo, &evaluator_checkanimationforovershootinggoal));
     }
@@ -176,7 +176,7 @@ function evaluateblockedanimations(entity, animations) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xaa2165c4, Offset: 0xc40
 // Size: 0xee
-function evaluatehumanturnanimations(entity, animations) {
+function private evaluatehumanturnanimations(entity, animations) {
     /#
         if (isdefined(level.ai_dontturn) && level.ai_dontturn) {
             return undefined;
@@ -195,7 +195,7 @@ function evaluatehumanturnanimations(entity, animations) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0x696dd51b, Offset: 0xd38
 // Size: 0x76
-function evaluatehumanexposedarrivalanimations(entity, animations) {
+function private evaluatehumanexposedarrivalanimations(entity, animations) {
     if (!isdefined(entity.pathgoalpos)) {
         return undefined;
     }

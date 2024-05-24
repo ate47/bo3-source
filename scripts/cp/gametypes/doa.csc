@@ -32,7 +32,7 @@ function onstartgametype() {
 // Params 0, eflags: 0x2
 // Checksum 0xcb77fdb7, Offset: 0x178
 // Size: 0x13c
-function ignore_systems() {
+function autoexec ignore_systems() {
     system::ignore("cybercom");
     system::ignore("healthoverlay");
     system::ignore("challenges");

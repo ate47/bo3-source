@@ -17,7 +17,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x50aedd93, Offset: 0x260
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_mind_blown", &__init__, undefined, "bgb");
 }
 
@@ -104,7 +104,7 @@ function function_2a8862aa() {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x8d63b5e0, Offset: 0x770
 // Size: 0x152
-function function_2ca71d8b(allai, trace, degree) {
+function private function_2ca71d8b(allai, trace, degree) {
     if (!isdefined(degree)) {
         degree = 45;
     }

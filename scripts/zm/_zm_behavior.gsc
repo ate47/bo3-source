@@ -24,7 +24,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xb790ccae, Offset: 0xaf0
 // Size: 0x50
-function init() {
+function autoexec init() {
     initzmbehaviorsandasm();
     level.zigzag_activation_distance = -16;
     level.zigzag_distance_min = -16;
@@ -37,7 +37,7 @@ function init() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xcfa1274f, Offset: 0xb48
 // Size: 0xa1c
-function initzmbehaviorsandasm() {
+function private initzmbehaviorsandasm() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("zombieFindFleshService", &zombiefindflesh);
     behaviortreenetworkutility::registerbehaviortreescriptapi("zombieEnteredPlayableService", &zombieenteredplayable);
     behaviortreenetworkutility::registerbehaviortreescriptapi("zombieShouldMove", &shouldmovecondition);
@@ -614,7 +614,7 @@ function zombiegrappleactionstart(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7e7ccf1b, Offset: 0x35a8
 // Size: 0x84
-function zombieknockdownactionstart(behaviortreeentity) {
+function private zombieknockdownactionstart(behaviortreeentity) {
     blackboard::setblackboardattribute(behaviortreeentity, "_knockdown_direction", behaviortreeentity.knockdown_direction);
     blackboard::setblackboardattribute(behaviortreeentity, "_knockdown_type", behaviortreeentity.knockdown_type);
     blackboard::setblackboardattribute(behaviortreeentity, "_getup_direction", behaviortreeentity.getup_direction);
@@ -624,7 +624,7 @@ function zombieknockdownactionstart(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xa8d5d019, Offset: 0x3638
 // Size: 0x1c
-function zombiegetupactionterminate(behaviortreeentity) {
+function private zombiegetupactionterminate(behaviortreeentity) {
     behaviortreeentity.knockdown = 0;
 }
 
@@ -632,7 +632,7 @@ function zombiegetupactionterminate(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x5be79c35, Offset: 0x3660
 // Size: 0x34
-function zombiepushedactionstart(behaviortreeentity) {
+function private zombiepushedactionstart(behaviortreeentity) {
     blackboard::setblackboardattribute(behaviortreeentity, "_push_direction", behaviortreeentity.push_direction);
 }
 
@@ -640,7 +640,7 @@ function zombiepushedactionstart(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x73dd2705, Offset: 0x36a0
 // Size: 0x1c
-function zombiepushedactionterminate(behaviortreeentity) {
+function private zombiepushedactionterminate(behaviortreeentity) {
     behaviortreeentity.pushed = 0;
 }
 

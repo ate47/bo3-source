@@ -8,12 +8,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf44f4f79, Offset: 0xe8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("clientids", &__init__, undefined, undefined);
 }
 
 // Namespace clientids
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x9015d925, Offset: 0x128
 // Size: 0x44
 function __init__() {
@@ -22,7 +22,7 @@ function __init__() {
 }
 
 // Namespace clientids
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xb3ca95f2, Offset: 0x178
 // Size: 0x10
 function init() {
@@ -30,7 +30,7 @@ function init() {
 }
 
 // Namespace clientids
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x2ae1dc68, Offset: 0x190
 // Size: 0x94
 function on_player_connect() {

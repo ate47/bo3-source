@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x7d77c56c, Offset: 0x1d8
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_genesis_timer", &__init__, &__main__, undefined);
 }
 

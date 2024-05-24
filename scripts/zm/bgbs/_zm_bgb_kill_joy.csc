@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x4223f6c8, Offset: 0x140
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_kill_joy", &__init__, undefined, undefined);
 }
 

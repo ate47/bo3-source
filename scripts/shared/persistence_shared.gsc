@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x49c3934f, Offset: 0x2e0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("persistence", &__init__, undefined, undefined);
 }
 
@@ -380,7 +380,7 @@ function function_d1b7628a() {
 }
 
 // Namespace persistence
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0x9b2523cb, Offset: 0x1578
 // Size: 0x5c
 function function_3ec1e50f(playerindex, statname, value) {
@@ -390,7 +390,7 @@ function function_3ec1e50f(playerindex, statname, value) {
 }
 
 // Namespace persistence
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xc05153, Offset: 0x15e0
 // Size: 0x64
 function function_ae338cde(playerindex, medalindex, value) {

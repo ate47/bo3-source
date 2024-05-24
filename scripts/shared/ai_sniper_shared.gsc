@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x50402727, Offset: 0x200
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("ai_sniper", &__init__, undefined, undefined);
 }
 

@@ -912,7 +912,7 @@ function get_existing_ent(clientnum, str_name) {
 // Params 0, eflags: 0x2
 // Checksum 0xce6a6039, Offset: 0x4750
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("scene", &__init__, &__main__, undefined);
 }
 
@@ -970,7 +970,7 @@ function in_igc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname
 // Params 1, eflags: 0x5 linked
 // Checksum 0x8bd9bb9b, Offset: 0x4c38
 // Size: 0xdc
-function on_localplayer_shutdown(localclientnum) {
+function private on_localplayer_shutdown(localclientnum) {
     localplayer = self;
     codelocalplayer = getlocalplayer(localclientnum);
     if (isdefined(localplayer) && isdefined(localplayer.localclientnum) && isdefined(codelocalplayer) && localplayer == codelocalplayer) {
@@ -1576,7 +1576,7 @@ function play(arg1, arg2, arg3, b_test_run, str_mode) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x43cd7ea2, Offset: 0x77a8
 // Size: 0x54
-function function_e420df65(s_tracker) {
+function private function_e420df65(s_tracker) {
     level endon(#"demo_jump");
     for (i = 0; i < s_tracker.n_scene_count; i++) {
         s_tracker waittill(#"scene_done");
@@ -1612,7 +1612,7 @@ function _play_instance(s_tracker, str_scenedef, a_ents, b_test_run, str_mode) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6867a7da, Offset: 0x7960
 // Size: 0x2a
-function waittill_instance_scene_done(str_scenedef) {
+function private waittill_instance_scene_done(str_scenedef) {
     level endon(#"demo_jump");
     self waittillmatch(#"scene_done", str_scenedef);
 }
@@ -1778,7 +1778,7 @@ function is_active(str_scenedef) {
 }
 
 // Namespace scene
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0xf9a181b8, Offset: 0x8180
 // Size: 0x94
 function is_playing(str_scenedef) {

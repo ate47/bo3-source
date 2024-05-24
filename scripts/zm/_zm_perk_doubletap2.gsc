@@ -16,15 +16,15 @@
 
 // Namespace namespace_f95f1bc4
 // Params 0, eflags: 0x2
-// Checksum 0xc776d648, Offset: 0x340
+// Checksum 0x99801de0, Offset: 0x340
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_perk_doubletap2", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_f95f1bc4
 // Params 0, eflags: 0x1 linked
-// Checksum 0x9c5067de, Offset: 0x380
+// Checksum 0x307a5aac, Offset: 0x380
 // Size: 0x14
 function __init__() {
     function_67e7f8cd();
@@ -32,7 +32,7 @@ function __init__() {
 
 // Namespace namespace_f95f1bc4
 // Params 0, eflags: 0x1 linked
-// Checksum 0xad4f43d0, Offset: 0x3a0
+// Checksum 0xbbeab13c, Offset: 0x3a0
 // Size: 0xf4
 function function_67e7f8cd() {
     zm_perks::register_perk_basic_info("specialty_doubletap2", "doubletap", 2000, %ZOMBIE_PERK_DOUBLETAP, getweapon("zombie_perk_bottle_doubletap"));
@@ -44,7 +44,7 @@ function function_67e7f8cd() {
 
 // Namespace namespace_f95f1bc4
 // Params 0, eflags: 0x1 linked
-// Checksum 0x740e7362, Offset: 0x4a0
+// Checksum 0x93aa75ae, Offset: 0x4a0
 // Size: 0xe0
 function function_150621ef() {
     if (isdefined(level.var_54ded91b)) {
@@ -60,7 +60,7 @@ function function_150621ef() {
 
 // Namespace namespace_f95f1bc4
 // Params 0, eflags: 0x1 linked
-// Checksum 0xcb127f3f, Offset: 0x588
+// Checksum 0x492d32f, Offset: 0x588
 // Size: 0x34
 function function_90c13e4d() {
     clientfield::register("clientuimodel", "hudItems.perks.doubletap2", 1, 2, "int");
@@ -68,7 +68,7 @@ function function_90c13e4d() {
 
 // Namespace namespace_f95f1bc4
 // Params 1, eflags: 0x1 linked
-// Checksum 0xd745a, Offset: 0x5c8
+// Checksum 0x682b1fa0, Offset: 0x5c8
 // Size: 0x2c
 function function_7a56affa(state) {
     self clientfield::set_player_uimodel("hudItems.perks.doubletap2", state);
@@ -76,7 +76,7 @@ function function_7a56affa(state) {
 
 // Namespace namespace_f95f1bc4
 // Params 4, eflags: 0x1 linked
-// Checksum 0xc0995d9e, Offset: 0x600
+// Checksum 0xbbcebed8, Offset: 0x600
 // Size: 0xbc
 function function_fa064ac(use_trigger, perk_machine, bump_trigger, collision) {
     use_trigger.script_sound = "mus_perks_doubletap_jingle";

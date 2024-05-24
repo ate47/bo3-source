@@ -25,12 +25,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe565d991, Offset: 0x4e0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_genesis_random_weapon", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_f54133b9
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xe32e26b0, Offset: 0x520
 // Size: 0x144
 function __init__() {
@@ -42,7 +42,7 @@ function __init__() {
         zm_powerups::powerup_set_player_specific("genesis_random_weapon", 1);
     }
     /#
-        if (getdvarint("p7_zm_power_up_max_ammo") > 0) {
+        if (getdvarint("<unknown string>") > 0) {
             level thread function_15732f56();
         }
     #/
@@ -57,7 +57,7 @@ function function_f99a1ed4() {
 }
 
 // Namespace namespace_f54133b9
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x77c9a73f, Offset: 0x680
 // Size: 0x674
 function function_984a38e(e_player) {
@@ -127,25 +127,25 @@ function function_89d232d2() {
 /#
 
     // Namespace namespace_f54133b9
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x22d31693, Offset: 0xd48
     // Size: 0x64
     function function_15732f56() {
-        level flagsys::wait_till("p7_zm_power_up_max_ammo");
+        level flagsys::wait_till("<unknown string>");
         wait(1);
         zm_devgui::add_custom_devgui_callback(&function_9677023e);
-        adddebugcommand("p7_zm_power_up_max_ammo");
+        adddebugcommand("<unknown string>");
     }
 
     // Namespace namespace_f54133b9
-    // Params 1, eflags: 0x1 linked
+    // Params 1, eflags: 0x0
     // Checksum 0x2a273be5, Offset: 0xdb8
     // Size: 0xa4
     function function_9677023e(cmd) {
         var_c533fd32 = 0;
         switch (cmd) {
-        case 8:
-            var_30fbd0e8 = level thread zm_powerups::specific_powerup_drop("p7_zm_power_up_max_ammo", level.players[0].origin + (0, 80, 0), undefined, undefined, undefined, level.players[0]);
+        default:
+            var_30fbd0e8 = level thread zm_powerups::specific_powerup_drop("<unknown string>", level.players[0].origin + (0, 80, 0), undefined, undefined, undefined, level.players[0]);
             return 1;
         }
         return var_c533fd32;

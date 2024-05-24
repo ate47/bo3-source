@@ -15,7 +15,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x18b5852b, Offset: 0x358
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_zonemgr", &__init__, undefined, undefined);
 }
 
@@ -47,7 +47,7 @@ function zone_is_enabled(zone_name) {
 }
 
 // Namespace zm_zonemgr
-// Params 1, eflags: 0x0
+// Params 1, eflags: 0x1 linked
 // Checksum 0xf30bfb44, Offset: 0x490
 // Size: 0x30
 function zone_wait_till_enabled(zone_name) {
@@ -113,7 +113,7 @@ function get_zone_zbarriers(zone_name) {
 }
 
 // Namespace zm_zonemgr
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x554ceb2c, Offset: 0x6f8
 // Size: 0x164
 function get_players_in_zone(zone_name, return_players) {
@@ -613,7 +613,7 @@ function door_close_disconnect(flag_name) {
 }
 
 // Namespace zm_zonemgr
-// Params 3, eflags: 0x0
+// Params 3, eflags: 0x1 linked
 // Checksum 0xe90f3f66, Offset: 0x2840
 // Size: 0x198
 function function_e54a2e19(zone_name_a, zone_name_b, one_way) {

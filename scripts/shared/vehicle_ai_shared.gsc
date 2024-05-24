@@ -19,7 +19,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x22a80dd0, Offset: 0x488
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("vehicle_ai", &__init__, undefined, undefined);
 }
 
@@ -461,7 +461,7 @@ function level_out_for_landing() {
 }
 
 // Namespace vehicle_ai
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x2714a9f2, Offset: 0x1bf0
 // Size: 0x34
 function immolate(attacker) {
@@ -519,7 +519,7 @@ function iff_notifymeinnsec(time, note) {
 }
 
 // Namespace vehicle_ai
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0x4ef27cd4, Offset: 0x1f18
 // Size: 0x1e4
 function iff_override(owner, time) {

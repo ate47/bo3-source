@@ -22,15 +22,15 @@
 
 // Namespace zm_powerup_shield_charge
 // Params 0, eflags: 0x2
-// Checksum 0xf846a600, Offset: 0x3a0
+// Checksum 0x11e28ef8, Offset: 0x3a0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_shield_charge", &__init__, undefined, undefined);
 }
 
 // Namespace zm_powerup_shield_charge
 // Params 0, eflags: 0x1 linked
-// Checksum 0xc169dd7b, Offset: 0x3e0
+// Checksum 0xc93cd9a9, Offset: 0x3e0
 // Size: 0xd4
 function __init__() {
     zm_powerups::register_powerup("shield_charge", &grab_shield_charge);
@@ -45,7 +45,7 @@ function __init__() {
 
 // Namespace zm_powerup_shield_charge
 // Params 0, eflags: 0x1 linked
-// Checksum 0xe1ba5085, Offset: 0x4c0
+// Checksum 0x88a8188a, Offset: 0x4c0
 // Size: 0x6
 function func_drop_when_players_own() {
     return false;
@@ -53,7 +53,7 @@ function func_drop_when_players_own() {
 
 // Namespace zm_powerup_shield_charge
 // Params 1, eflags: 0x1 linked
-// Checksum 0xd5a7f62c, Offset: 0x4d0
+// Checksum 0xfa7a3efd, Offset: 0x4d0
 // Size: 0x44
 function grab_shield_charge(player) {
     level thread shield_charge_powerup(self, player);
@@ -62,7 +62,7 @@ function grab_shield_charge(player) {
 
 // Namespace zm_powerup_shield_charge
 // Params 2, eflags: 0x1 linked
-// Checksum 0x750cb52f, Offset: 0x520
+// Checksum 0xfda8d266, Offset: 0x520
 // Size: 0x84
 function shield_charge_powerup(item, player) {
     if (isdefined(player.hasriotshield) && player.hasriotshield) {
@@ -73,7 +73,7 @@ function shield_charge_powerup(item, player) {
 
 // Namespace zm_powerup_shield_charge
 // Params 2, eflags: 0x1 linked
-// Checksum 0x846cf053, Offset: 0x5b0
+// Checksum 0x62901095, Offset: 0x5b0
 // Size: 0x124
 function shield_on_hud(drop_item, player_team) {
     self endon(#"disconnect");
@@ -91,7 +91,7 @@ function shield_on_hud(drop_item, player_team) {
 
 // Namespace zm_powerup_shield_charge
 // Params 1, eflags: 0x1 linked
-// Checksum 0xfcfe90e1, Offset: 0x6e0
+// Checksum 0x235c03e6, Offset: 0x6e0
 // Size: 0xd4
 function full_ammo_move_hud(player_team) {
     players = getplayers(player_team);
@@ -110,7 +110,7 @@ function full_ammo_move_hud(player_team) {
 
     // Namespace zm_powerup_shield_charge
     // Params 0, eflags: 0x1 linked
-    // Checksum 0xb06cb57e, Offset: 0x7c0
+    // Checksum 0xeb04e2df, Offset: 0x7c0
     // Size: 0x7c
     function shield_devgui() {
         level flagsys::wait_till("zombie_timer_offset");
@@ -122,7 +122,7 @@ function full_ammo_move_hud(player_team) {
 
     // Namespace zm_powerup_shield_charge
     // Params 1, eflags: 0x1 linked
-    // Checksum 0x80a6680e, Offset: 0x848
+    // Checksum 0x20c58bda, Offset: 0x848
     // Size: 0xb4
     function shield_devgui_callback(cmd) {
         players = getplayers();

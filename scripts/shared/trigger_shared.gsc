@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x382caaef, Offset: 0x3e0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("trigger", &__init__, undefined, undefined);
 }
 
@@ -962,7 +962,7 @@ function is_trigger_once(trig) {
 }
 
 // Namespace trigger
-// Params 2, eflags: 0x1 linked
+// Params 2, eflags: 0x0
 // Checksum 0xbcee7960, Offset: 0x3678
 // Size: 0x11e
 function wait_for_either(str_targetname1, str_targetname2) {
@@ -987,7 +987,7 @@ function _ent_waits_for_trigger(trigger) {
 }
 
 // Namespace trigger
-// Params 3, eflags: 0x1 linked
+// Params 3, eflags: 0x0
 // Checksum 0xacbe479e, Offset: 0x37e0
 // Size: 0x8c
 function wait_or_timeout(n_time, str_name, str_key) {
@@ -1193,7 +1193,7 @@ function trigger_group_remove() {
 }
 
 // Namespace trigger
-// Params 3, eflags: 0x0
+// Params 3, eflags: 0x1 linked
 // Checksum 0xd35fe7b1, Offset: 0x41c8
 // Size: 0xfc
 function function_thread(ent, on_enter_payload, on_exit_payload) {

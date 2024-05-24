@@ -13,12 +13,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0x391d5cdf, Offset: 0x1d0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("antipersonnel_guidance", &__init__, undefined, undefined);
 }
 
 // Namespace antipersonnel_guidance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0xf734480, Offset: 0x210
 // Size: 0x4c
 function __init__() {
@@ -27,7 +27,7 @@ function __init__() {
 }
 
 // Namespace antipersonnel_guidance
-// Params 0, eflags: 0x1 linked
+// Params 0, eflags: 0x0
 // Checksum 0x3d39523a, Offset: 0x268
 // Size: 0xc2
 function player_init() {
@@ -39,7 +39,7 @@ function player_init() {
 }
 
 // Namespace antipersonnel_guidance
-// Params 1, eflags: 0x1 linked
+// Params 1, eflags: 0x0
 // Checksum 0x52dee59b, Offset: 0x338
 // Size: 0x126
 function watch_lockon(localclientnum) {

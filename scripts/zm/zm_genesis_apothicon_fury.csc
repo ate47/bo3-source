@@ -19,7 +19,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x9a29205b, Offset: 0x320
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_genesis_apothicon_fury", &__init__, undefined, undefined);
 }
 

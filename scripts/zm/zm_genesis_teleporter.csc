@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe154829c, Offset: 0x2b8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_genesis_teleporter", &__init__, undefined, undefined);
 }
 

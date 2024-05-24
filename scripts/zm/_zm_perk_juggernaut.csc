@@ -8,15 +8,15 @@
 
 // Namespace namespace_b1eac770
 // Params 0, eflags: 0x2
-// Checksum 0x222b0dd6, Offset: 0x198
+// Checksum 0x8e42b9ef, Offset: 0x198
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_perk_juggernaut", &__init__, undefined, undefined);
 }
 
 // Namespace namespace_b1eac770
 // Params 0, eflags: 0x0
-// Checksum 0x336a2a0e, Offset: 0x1d8
+// Checksum 0xc167c737, Offset: 0x1d8
 // Size: 0x84
 function __init__() {
     zm_perks::register_perk_clientfields("specialty_armorvest", &function_ddf4f425, &function_d46101a0);
@@ -26,7 +26,7 @@ function __init__() {
 
 // Namespace namespace_b1eac770
 // Params 0, eflags: 0x0
-// Checksum 0xe96c59c8, Offset: 0x268
+// Checksum 0xe64da626, Offset: 0x268
 // Size: 0x36
 function init_juggernaut() {
     if (isdefined(level.enable_magic) && level.enable_magic) {
@@ -36,7 +36,7 @@ function init_juggernaut() {
 
 // Namespace namespace_b1eac770
 // Params 0, eflags: 0x0
-// Checksum 0xe2694647, Offset: 0x2a8
+// Checksum 0x3decc15d, Offset: 0x2a8
 // Size: 0x3c
 function function_ddf4f425() {
     clientfield::register("clientuimodel", "hudItems.perks.juggernaut", 1, 2, "int", undefined, 0, 1);

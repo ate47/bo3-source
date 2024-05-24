@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x4fcd213b, Offset: 0x358
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("globallogic", &__init__, undefined, "visionset_mgr");
 }
 
@@ -161,7 +161,7 @@ function function_9350c173() {
 // Params 0, eflags: 0x2
 // Checksum 0xe79c43d8, Offset: 0xbd0
 // Size: 0x34
-function function_d00a98f6() {
+function autoexec function_d00a98f6() {
     if (getdvarint("sys_threadWatchdogTimeoutLive", 0) > 0) {
         level thread function_9350c173();
     }

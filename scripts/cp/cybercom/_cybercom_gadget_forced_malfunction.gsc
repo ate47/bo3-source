@@ -130,7 +130,7 @@ function function_4135a1c4(slot, weapon) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xeba66962, Offset: 0xa50
 // Size: 0x2bc
-function function_602b28e9(target) {
+function private function_602b28e9(target) {
     if (target cybercom::function_8fd8f5b1("cybercom_forcedmalfunction")) {
         self cybercom::function_29bf9dee(target, 2);
         return false;
@@ -168,7 +168,7 @@ function function_602b28e9(target) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4ec68eaa, Offset: 0xd18
 // Size: 0x52
-function function_8aac802c(weapon) {
+function private function_8aac802c(weapon) {
     return arraycombine(getaiteamarray("axis"), getaiteamarray("team3"), 0, 0);
 }
 
@@ -176,7 +176,7 @@ function function_8aac802c(weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xb9a64992, Offset: 0xd78
 // Size: 0x2a4
-function function_da7fe5ea(slot, weapon) {
+function private function_da7fe5ea(slot, weapon) {
     aborted = 0;
     fired = 0;
     foreach (item in self.cybercom.var_d1460543) {
@@ -213,7 +213,7 @@ function function_da7fe5ea(slot, weapon) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x34930fab, Offset: 0x1028
 // Size: 0xe4
-function function_586fec95(attacker, var_8e113fac, weapon) {
+function private function_586fec95(attacker, var_8e113fac, weapon) {
     self endon(#"death");
     self clientfield::set("forced_malfunction", 1);
     self.is_disabled = 1;
@@ -227,7 +227,7 @@ function function_586fec95(attacker, var_8e113fac, weapon) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x6ecf571a, Offset: 0x1118
 // Size: 0x1d0
-function function_609fcb0a(attacker, var_8e113fac, weapon) {
+function private function_609fcb0a(attacker, var_8e113fac, weapon) {
     self endon(#"death");
     if (!cybercom::function_76e3026d(self)) {
         self kill(self.origin, isdefined(attacker) ? attacker : undefined);
@@ -254,7 +254,7 @@ function function_609fcb0a(attacker, var_8e113fac, weapon) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xfa12ee08, Offset: 0x12f0
 // Size: 0x55c
-function function_91adcf0e(attacker, var_ba115ce0) {
+function private function_91adcf0e(attacker, var_ba115ce0) {
     self endon(#"death");
     weapon = getweapon("gadget_forced_malfunction");
     self notify(#"hash_f8c5dd60", weapon, attacker);

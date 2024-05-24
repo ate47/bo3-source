@@ -39,7 +39,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xce8953d, Offset: 0x1118
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("escort", &__init__, undefined, undefined);
 }
 

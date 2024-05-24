@@ -23,7 +23,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x1688b90, Offset: 0x6b8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("laststand", &__init__, undefined, undefined);
 }
 
@@ -101,7 +101,7 @@ function increment_downed_stat() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x29164f23, Offset: 0xb20
 // Size: 0x38
-function force_last_stand() {
+function private force_last_stand() {
     /#
         if (getdvarstring("") == "") {
             return true;
@@ -402,7 +402,7 @@ function function_ee6922c8() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xdbb93507, Offset: 0x1aa8
 // Size: 0x1c6
-function function_c690c6b2() {
+function private function_c690c6b2() {
     players = getplayers();
     if (players.size == 1) {
         if (self.lives == 0) {

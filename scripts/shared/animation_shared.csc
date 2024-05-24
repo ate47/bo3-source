@@ -12,7 +12,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xe0ac7f5e, Offset: 0x348
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("animation", &__init__, undefined, undefined);
 }
 
@@ -119,7 +119,7 @@ function _play(animation, v_origin_or_ent, v_angles_or_tag, n_rate, n_blend_in, 
 // Params 0, eflags: 0x5 linked
 // Checksum 0xc638e379, Offset: 0x990
 // Size: 0x26
-function waittill_end() {
+function private waittill_end() {
     level endon(#"demo_jump");
     self waittillmatch(#"_anim_notify_", "end");
 }

@@ -197,7 +197,7 @@ class class_1e7268a3 {
 // Params 0, eflags: 0x2
 // Checksum 0x33878d37, Offset: 0x330
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("cp_supply_manager", &__init__, &__main__, undefined);
 }
 

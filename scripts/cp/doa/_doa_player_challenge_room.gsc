@@ -84,7 +84,7 @@ function function_471d1403() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xbcb28abc, Offset: 0x870
 // Size: 0x2d6
-function function_4952be41(room) {
+function private function_4952be41(room) {
     level endon(#"hash_16154574");
     level endon(#"hash_d1f5acf7");
     level endon(#"hash_8194e795");

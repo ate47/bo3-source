@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xfb4a9b6b, Offset: 0x138
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("sensor_grenade", &__init__, undefined, undefined);
 }
 

@@ -798,7 +798,7 @@ function function_ec2caec3(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 1, eflags: 0x4
 // Checksum 0x129cf718, Offset: 0x45e8
 // Size: 0x9e
-function function_38452435(localclientnum) {
+function private function_38452435(localclientnum) {
     self notify(#"hash_38452435");
     self endon(#"hash_38452435");
     self waittill(#"entityshutdown");

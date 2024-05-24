@@ -10,7 +10,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf02a96fb, Offset: 0x11d0
 // Size: 0x24
-function main() {
+function autoexec main() {
     registerclientfields();
     loadeffects();
 }
@@ -131,7 +131,7 @@ function loadeffects() {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xe1450fb9, Offset: 0x1d30
 // Size: 0x15a
-function _burntag(localclientnum, tag, postfix) {
+function private _burntag(localclientnum, tag, postfix) {
     if (isdefined(self) && self hasdobj(localclientnum)) {
         fx_to_play = undefined;
         fxname = "fire_" + self.archetype + "_" + tag + postfix;
@@ -155,7 +155,7 @@ function _burntag(localclientnum, tag, postfix) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0x6964bec5, Offset: 0x1e98
 // Size: 0x14a
-function _burnstage(localclientnum, tagarray, shouldwait) {
+function private _burnstage(localclientnum, tagarray, shouldwait) {
     if (!isdefined(self)) {
         return;
     }
@@ -182,7 +182,7 @@ function _burnstage(localclientnum, tagarray, shouldwait) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x73388c1a, Offset: 0x1ff0
 // Size: 0x48c
-function _burnbody(localclientnum) {
+function private _burnbody(localclientnum) {
     self endon(#"entityshutdown");
     self.burn_loop_sound_handle = self playloopsound("chr_burn_npc_loop1", 0.2);
     timer = 10;
@@ -241,7 +241,7 @@ function sndstopburnloop(timer) {
 // Params 2, eflags: 0x5 linked
 // Checksum 0xeb0ba258, Offset: 0x24f8
 // Size: 0x3e4
-function _burncorpse(localclientnum, burningduration) {
+function private _burncorpse(localclientnum, burningduration) {
     self endon(#"entityshutdown");
     timer = 10;
     bonemodifier = "";
@@ -283,7 +283,7 @@ function _burncorpse(localclientnum, burningduration) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x30e14d54, Offset: 0x28e8
 // Size: 0x2e2
-function function_819d3852(localclientnum) {
+function private function_819d3852(localclientnum) {
     self endon(#"entityshutdown");
     bonemodifier = "";
     if (self.archetype == "robot") {

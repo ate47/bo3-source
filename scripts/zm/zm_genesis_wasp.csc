@@ -17,7 +17,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x6049cfe1, Offset: 0x2d8
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_ai_wasp", &__init__, undefined, undefined);
 }
 
@@ -86,7 +86,7 @@ function function_c9063f15(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x4
 // Checksum 0x3daf2eed, Offset: 0x728
 // Size: 0x64
-function function_8783c1f1(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private function_8783c1f1(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue) {
         self postfx::playpostfxbundle("pstfx_parasite_chaos");
     }

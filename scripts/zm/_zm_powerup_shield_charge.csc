@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xa68f92cd, Offset: 0x100
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_powerup_shield_charge", &__init__, undefined, undefined);
 }
 

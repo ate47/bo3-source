@@ -61,7 +61,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x8d6e873c, Offset: 0xf58
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("killstreaks", &__init__, undefined, undefined);
 }
 
@@ -2644,7 +2644,7 @@ function configure_team_internal(owner, ishacked) {
 // Params 3, eflags: 0x5 linked
 // Checksum 0xe28d886d, Offset: 0x9700
 // Size: 0x7c
-function _setup_configure_team_callbacks(influencertype, configureteamprefunction, configureteampostfunction) {
+function private _setup_configure_team_callbacks(influencertype, configureteamprefunction, configureteampostfunction) {
     killstreak = self;
     killstreak.killstreakteamconfigured = 1;
     killstreak.killstreakinfluencertype = influencertype;

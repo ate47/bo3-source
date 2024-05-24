@@ -17,12 +17,12 @@
 // Params 0, eflags: 0x2
 // Checksum 0x51758f32, Offset: 0x250
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_altbody", &__init__, undefined, undefined);
 }
 
 // Namespace zm_altbody
-// Params 0, eflags: 0x0
+// Params 0, eflags: 0x1 linked
 // Checksum 0xcd8a76b9, Offset: 0x290
 // Size: 0x104
 function __init__() {
@@ -33,7 +33,7 @@ function __init__() {
 }
 
 // Namespace zm_altbody
-// Params 9, eflags: 0x0
+// Params 9, eflags: 0x1 linked
 // Checksum 0x1a5e248b, Offset: 0x3a0
 // Size: 0x162
 function init(name, trigger_name, trigger_hint, visionset_name, visionset_priority, enter_callback, exit_callback, enter_3p_callback, exit_3p_callback) {
@@ -64,7 +64,7 @@ function init(name, trigger_name, trigger_hint, visionset_name, visionset_priori
 }
 
 // Namespace zm_altbody
-// Params 7, eflags: 0x0
+// Params 7, eflags: 0x1 linked
 // Checksum 0xcf14282c, Offset: 0x510
 // Size: 0x48
 function set_player_mana(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -72,7 +72,7 @@ function set_player_mana(localclientnum, oldval, newval, bnewent, binitialsnap, 
 }
 
 // Namespace zm_altbody
-// Params 7, eflags: 0x0
+// Params 7, eflags: 0x1 linked
 // Checksum 0x2bcfd96f, Offset: 0x560
 // Size: 0x14e
 function toggle_player_altbody(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -102,7 +102,7 @@ function toggle_player_altbody(localclientnum, oldval, newval, bnewent, binitial
 }
 
 // Namespace zm_altbody
-// Params 7, eflags: 0x0
+// Params 7, eflags: 0x1 linked
 // Checksum 0x5ec17c7a, Offset: 0x6b8
 // Size: 0xe6
 function toggle_player_altbody_3p(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -124,7 +124,7 @@ function toggle_player_altbody_3p(localclientnum, oldval, newval, bnewent, binit
 }
 
 // Namespace zm_altbody
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0x6f9067a, Offset: 0x7a8
 // Size: 0xfc
 function cover_transition(localclientnum, onoff) {
@@ -142,7 +142,7 @@ function cover_transition(localclientnum, onoff) {
 }
 
 // Namespace zm_altbody
-// Params 2, eflags: 0x0
+// Params 2, eflags: 0x1 linked
 // Checksum 0xe36a93a2, Offset: 0x8b0
 // Size: 0x2c
 function clear_transition(localclientnum, onoff) {

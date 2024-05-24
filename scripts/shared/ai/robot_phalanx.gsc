@@ -10,7 +10,7 @@
 class robotphalanx {
 
     // Namespace robotphalanx
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x739fba53, Offset: 0x1780
     // Size: 0x58
     function constructor() {
@@ -24,7 +24,7 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x2ff433d6, Offset: 0x1e78
     // Size: 0x100
     function scatterphalanx() {
@@ -44,7 +44,7 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xac88a1f4, Offset: 0x1e20
     // Size: 0x4c
     function resumefire() {
@@ -54,7 +54,7 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xde707302, Offset: 0x1cf0
     // Size: 0x124
     function resumeadvance() {
@@ -70,7 +70,7 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 8, eflags: 0x1 linked
+    // Params 8, eflags: 0x0
     // Checksum 0x24b3de30, Offset: 0x1988
     // Size: 0x35c
     function initialize(phalanxtype, origin, destination, breakingpoint, maxtiersize, tieronespawner, tiertwospawner, tierthreespawner) {
@@ -116,7 +116,7 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0xa42156b8, Offset: 0x1928
     // Size: 0x54
     function haltadvance() {
@@ -128,7 +128,7 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 0, eflags: 0x1 linked
+    // Params 0, eflags: 0x0
     // Checksum 0x4550017c, Offset: 0x18d0
     // Size: 0x4c
     function haltfire() {
@@ -138,10 +138,10 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 0, eflags: 0x5 linked
+    // Params 0, eflags: 0x4
     // Checksum 0x2472769d, Offset: 0x17f0
     // Size: 0xd4
-    function _updatephalanx() {
+    function private _updatephalanx() {
         if (self.scattered_) {
             return false;
         }
@@ -157,28 +157,28 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 1, eflags: 0x5 linked
+    // Params 1, eflags: 0x4
     // Checksum 0xf304cce7, Offset: 0x1750
     // Size: 0x28
-    function _updatephalanxthread(phalanx) {
+    function private _updatephalanxthread(phalanx) {
         while ([[ phalanx ]]->_updatephalanx()) {
             wait(1);
         }
     }
 
     // Namespace robotphalanx
-    // Params 2, eflags: 0x5 linked
+    // Params 2, eflags: 0x4
     // Checksum 0xbd4b7a70, Offset: 0x16a8
     // Size: 0xa0
-    function _rotatevec(vector, angle) {
+    function private _rotatevec(vector, angle) {
         return (vector[0] * cos(angle) - vector[1] * sin(angle), vector[0] * sin(angle) + vector[1] * cos(angle), vector[2]);
     }
 
     // Namespace robotphalanx
-    // Params 1, eflags: 0x5 linked
+    // Params 1, eflags: 0x4
     // Checksum 0xd481a9fd, Offset: 0x15d8
     // Size: 0xc2
-    function _resumefirerobots(robots) {
+    function private _resumefirerobots(robots) {
         /#
             assert(isarray(robots));
         #/
@@ -188,20 +188,20 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 1, eflags: 0x5 linked
+    // Params 1, eflags: 0x4
     // Checksum 0x36f8d4d8, Offset: 0x1590
     // Size: 0x40
-    function _resumefire(robot) {
+    function private _resumefire(robot) {
         if (isdefined(robot) && isalive(robot)) {
             robot.ignoreall = 0;
         }
     }
 
     // Namespace robotphalanx
-    // Params 1, eflags: 0x5 linked
+    // Params 1, eflags: 0x4
     // Checksum 0x110463ec, Offset: 0x14b8
     // Size: 0xca
-    function _releaserobots(robots) {
+    function private _releaserobots(robots) {
         foreach (robot in robots) {
             _resumefire(robot);
             _releaserobot(robot);
@@ -210,10 +210,10 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 1, eflags: 0x5 linked
+    // Params 1, eflags: 0x4
     // Checksum 0x92772e2b, Offset: 0x1378
     // Size: 0x134
-    function _releaserobot(robot) {
+    function private _releaserobot(robot) {
         if (isdefined(robot) && isalive(robot)) {
             robot clearuseposition();
             robot pathmode("move delayed", 1, randomfloatrange(0.5, 1));
@@ -227,10 +227,10 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 1, eflags: 0x5 linked
+    // Params 1, eflags: 0x4
     // Checksum 0x75c7ff0d, Offset: 0x12b0
     // Size: 0xc0
-    function _prunedead(robots) {
+    function private _prunedead(robots) {
         liverobots = [];
         foreach (index, robot in robots) {
             if (isdefined(robot) && isalive(robot)) {
@@ -241,19 +241,19 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 5, eflags: 0x5 linked
+    // Params 5, eflags: 0x4
     // Checksum 0x83d68cfc, Offset: 0x1090
     // Size: 0x212
-    function _movephalanxtier(robots, phalanxtype, tier, destination, forward) {
+    function private _movephalanxtier(robots, phalanxtype, tier, destination, forward) {
         positions = _getphalanxpositions(phalanxtype, tier);
         angles = vectortoangles(forward);
         /#
-            assert(robots.size <= positions.size, "phalanx_tier2");
+            assert(robots.size <= positions.size, "<unknown string>");
         #/
         foreach (index, robot in robots) {
             if (isdefined(robot) && isalive(robot)) {
                 /#
-                    assert(isvec(positions[index]), "phalanx_tier2" + index + "phalanx_tier2" + tier + "phalanx_tier2" + phalanxtype);
+                    assert(isvec(positions[index]), "<unknown string>" + index + "<unknown string>" + tier + "<unknown string>" + phalanxtype);
                 #/
                 orientedpos = _rotatevec(positions[index], angles[1] - 90);
                 navmeshposition = getclosestpointonnavmesh(destination + orientedpos, -56);
@@ -263,10 +263,10 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 1, eflags: 0x5 linked
+    // Params 1, eflags: 0x4
     // Checksum 0xc90cd839, Offset: 0xf98
     // Size: 0xec
-    function _initializerobot(robot) {
+    function private _initializerobot(robot) {
         /#
             assert(isactor(robot));
         #/
@@ -278,10 +278,10 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 1, eflags: 0x5 linked
+    // Params 1, eflags: 0x4
     // Checksum 0x48fff1e8, Offset: 0xeb0
     // Size: 0xde
-    function _haltfire(robots) {
+    function private _haltfire(robots) {
         /#
             assert(isarray(robots));
         #/
@@ -293,10 +293,10 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 1, eflags: 0x5 linked
+    // Params 1, eflags: 0x4
     // Checksum 0xe88ac232, Offset: 0xd58
     // Size: 0x14a
-    function _haltadvance(robots) {
+    function private _haltadvance(robots) {
         /#
             assert(isarray(robots));
         #/
@@ -310,25 +310,25 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 1, eflags: 0x5 linked
+    // Params 1, eflags: 0x4
     // Checksum 0x9657d2f5, Offset: 0xc90
     // Size: 0xbc
-    function _getphalanxspawner(tier) {
+    function private _getphalanxspawner(tier) {
         spawner = getspawnerarray(tier, "targetname");
         /#
-            assert(spawner.size >= 0, "phalanx_tier2" + "phalanx_tier2" + "phalanx_tier2");
+            assert(spawner.size >= 0, "<unknown string>" + "<unknown string>" + "<unknown string>");
         #/
         /#
-            assert(spawner.size == 1, "phalanx_tier2" + "phalanx_tier2" + "phalanx_tier2");
+            assert(spawner.size == 1, "<unknown string>" + "<unknown string>" + "<unknown string>");
         #/
         return spawner[0];
     }
 
     // Namespace robotphalanx
-    // Params 2, eflags: 0x5 linked
+    // Params 2, eflags: 0x4
     // Checksum 0x37e389c4, Offset: 0x7a0
     // Size: 0x4e4
-    function _getphalanxpositions(phalanxtype, tier) {
+    function private _getphalanxpositions(phalanxtype, tier) {
         switch (phalanxtype) {
         case 15:
             switch (tier) {
@@ -397,20 +397,20 @@ class robotphalanx {
             break;
         default:
             /#
-                assert("phalanx_tier2" + phalanxtype + "phalanx_tier2");
+                assert("<unknown string>" + phalanxtype + "<unknown string>");
             #/
             break;
         }
         /#
-            assert("phalanx_tier2" + tier + "phalanx_tier2");
+            assert("<unknown string>" + tier + "<unknown string>");
         #/
     }
 
     // Namespace robotphalanx
-    // Params c, eflags: 0x5 linked
+    // Params c, eflags: 0x4
     // Checksum 0x6f1e95cb, Offset: 0x5d0
     // Size: 0x1c8
-    function _dampenexplosivedamage(inflictor, attacker, damage, flags, meansofdamage, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
+    function private _dampenexplosivedamage(inflictor, attacker, damage, flags, meansofdamage, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
         entity = self;
         isexplosive = isinarray(array("MOD_GRENADE", "MOD_GRENADE_SPLASH", "MOD_PROJECTILE", "MOD_PROJECTILE_SPLASH", "MOD_EXPLOSIVE"), meansofdamage);
         if (isexplosive && isdefined(inflictor) && isdefined(inflictor.weapon)) {
@@ -426,10 +426,10 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 6, eflags: 0x5 linked
+    // Params 6, eflags: 0x4
     // Checksum 0xfabdf871, Offset: 0x368
     // Size: 0x260
-    function _createphalanxtier(phalanxtype, tier, phalanxposition, forward, maxtiersize, spawner) {
+    function private _createphalanxtier(phalanxtype, tier, phalanxposition, forward, maxtiersize, spawner) {
         if (!isdefined(spawner)) {
             spawner = undefined;
         }
@@ -459,10 +459,10 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params 2, eflags: 0x5 linked
+    // Params 2, eflags: 0x4
     // Checksum 0xd2c9fd3b, Offset: 0x268
     // Size: 0xf2
-    function _assignphalanxstance(robots, stance) {
+    function private _assignphalanxstance(robots, stance) {
         /#
             assert(isarray(robots));
         #/

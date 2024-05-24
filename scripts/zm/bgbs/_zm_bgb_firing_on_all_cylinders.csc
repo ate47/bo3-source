@@ -11,7 +11,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x89202ca1, Offset: 0x160
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_bgb_firing_on_all_cylinders", &__init__, undefined, undefined);
 }
 

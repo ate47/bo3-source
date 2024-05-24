@@ -14,7 +14,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x12e3fc4c, Offset: 0x338
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("collectibles", &__init__, &__main__, undefined);
 }
 
@@ -90,7 +90,7 @@ function function_93523442(var_977e0f67, radius, offset) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x5bacd759, Offset: 0x768
 // Size: 0x2a
-function function_148c7e54() {
+function private function_148c7e54() {
     return isdefined(level.var_bca96223) && level.var_bca96223 || sessionmodeiscampaignzombiesgame();
 }
 
@@ -181,7 +181,7 @@ function function_332e2cfd() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7b07f2f9, Offset: 0xd90
 // Size: 0xb8
-function function_b963f25(mdl_collectible) {
+function private function_b963f25(mdl_collectible) {
     mdl_collectible.radius = 60;
     mdl_collectible.offset = (0, 0, 5);
     var_3efe1e22 = level.var_3efe1e22[mdl_collectible.model];
@@ -292,7 +292,7 @@ function function_3955ccef() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xcffd827f, Offset: 0x14c8
 // Size: 0xd2
-function function_e1aad2b1() {
+function private function_e1aad2b1() {
     self endon(#"disconnect");
     self notify(#"hash_e1aad2b1");
     self endon(#"hash_e1aad2b1");

@@ -9,7 +9,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xfb919ca, Offset: 0x918
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("bb", &__init__, undefined, undefined);
 }
 
@@ -25,7 +25,7 @@ function __init__() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x574ef48b, Offset: 0x978
 // Size: 0xd8
-function function_edae084d(player) {
+function private function_edae084d(player) {
     var_24a24c3f = "";
     if (isdefined(player.var_b3dc8451)) {
         for (index = 0; index < player.var_b3dc8451.size; index++) {
@@ -44,7 +44,7 @@ function function_edae084d(player) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x8691e15f, Offset: 0xa58
 // Size: 0xe0
-function function_b918cb9(player) {
+function private function_b918cb9(player) {
     var_6a98da9a = "";
     foreach (var_3ca39bd6, var_ee404e07 in player.var_1c0132c) {
         if (var_6a98da9a != "") {

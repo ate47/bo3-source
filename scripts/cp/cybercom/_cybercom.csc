@@ -16,7 +16,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xf06ee7da, Offset: 0xb10
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("cybercom", &__init__, undefined, undefined);
 }
 
@@ -661,7 +661,7 @@ function function_ad58c2c9(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 0, eflags: 0x4
 // Checksum 0x3a2d7fb4, Offset: 0x3200
 // Size: 0x80
-function function_13f09a6b() {
+function private function_13f09a6b() {
     self endon(#"entityshutdown");
     self notify(#"hash_e0f9c098");
     self endon(#"hash_e0f9c098");
@@ -677,7 +677,7 @@ function function_13f09a6b() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xf9a8425f, Offset: 0x3288
 // Size: 0x24
-function function_d48fcfa6(localclientnum) {
+function private function_d48fcfa6(localclientnum) {
     self setdrawname();
 }
 
@@ -685,7 +685,7 @@ function function_d48fcfa6(localclientnum) {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x63fc349b, Offset: 0x32b8
 // Size: 0x198
-function function_66be631b() {
+function private function_66be631b() {
     alpha = array("A", "B", "C", "D", "E", "F");
     digit = array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9");
     var_f00997fd = randomint(100) < 50 ? alpha[randomint(alpha.size)] : digit[randomint(digit.size)];
@@ -697,7 +697,7 @@ function function_66be631b() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x55a79db3, Offset: 0x3458
 // Size: 0x122
-function function_a4cd6b9a() {
+function private function_a4cd6b9a() {
     name = "";
     if (issubstr(self.model, "_54i_")) {
         var_461b88f6 = "3534:49FF:FE";

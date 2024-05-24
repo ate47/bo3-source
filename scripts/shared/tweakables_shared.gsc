@@ -6,7 +6,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x3ee9fd73, Offset: 0x448
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("tweakables", &__init__, undefined, undefined);
 }
 

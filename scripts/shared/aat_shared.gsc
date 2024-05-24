@@ -13,7 +13,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0x76876137, Offset: 0x1f0
 // Size: 0x3c
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("aat", &__init__, &__main__, undefined);
 }
 
@@ -21,7 +21,7 @@ function function_2dc19561() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xbb1b5306, Offset: 0x238
 // Size: 0x1bc
-function __init__() {
+function private __init__() {
     if (!(isdefined(level.aat_in_use) && level.aat_in_use)) {
         return;
     }
@@ -58,7 +58,7 @@ function __main__() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0x4dfe6e68, Offset: 0x448
 // Size: 0xd8
-function on_player_connect() {
+function private on_player_connect() {
     self.aat = [];
     self.aat_cooldown_start = [];
     keys = getarraykeys(level.aat);
@@ -76,7 +76,7 @@ function on_player_connect() {
     // Params 0, eflags: 0x5 linked
     // Checksum 0x6f2a47f7, Offset: 0x528
     // Size: 0x184
-    function setup_devgui() {
+    function private setup_devgui() {
         waittillframeend();
         setdvar("int", "int");
         aat_devgui_base = "int";
@@ -94,7 +94,7 @@ function on_player_connect() {
     // Params 0, eflags: 0x5 linked
     // Checksum 0x249169ae, Offset: 0x6b8
     // Size: 0x158
-    function aat_devgui_think() {
+    function private aat_devgui_think() {
         for (;;) {
             aat_name = getdvarstring("int");
             if (aat_name != "int") {
@@ -116,7 +116,7 @@ function on_player_connect() {
     // Params 0, eflags: 0x4
     // Checksum 0x516dc590, Offset: 0x818
     // Size: 0x15c
-    function function_6d77b957() {
+    function private function_6d77b957() {
         self.aat_debug_text = newclienthudelem(self);
         self.aat_debug_text.elemtype = "int";
         self.aat_debug_text.font = "int";
@@ -138,7 +138,7 @@ function on_player_connect() {
     // Params 0, eflags: 0x5 linked
     // Checksum 0x7b8de09d, Offset: 0x980
     // Size: 0x90
-    function function_3d05ca49() {
+    function private function_3d05ca49() {
         self endon(#"disconnect");
         while (true) {
             weapon = self waittill(#"weapon_change");
@@ -156,7 +156,7 @@ function on_player_connect() {
 // Params 4, eflags: 0x5 linked
 // Checksum 0x7eaa0364, Offset: 0xa18
 // Size: 0x1f4
-function aat_set_debug_text(name, success, success_reroll, fail) {
+function private aat_set_debug_text(name, success, success_reroll, fail) {
     /#
         self notify(#"aat_set_debug_text_thread");
         self endon(#"aat_set_debug_text_thread");
@@ -205,7 +205,7 @@ function aat_cooldown_init() {
 // Params 15, eflags: 0x5 linked
 // Checksum 0x9e699fb9, Offset: 0xcd8
 // Size: 0x100
-function aat_vehicle_damage_monitor(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
+function private aat_vehicle_damage_monitor(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
     willbekilled = self.health - idamage <= 0;
     if (isdefined(level.aat_in_use) && level.aat_in_use) {
         self thread aat_response(willbekilled, einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, damagefromunderneath, vsurfacenormal);

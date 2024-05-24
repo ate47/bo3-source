@@ -16,23 +16,23 @@
 
 // Namespace zm_perk_staminup
 // Params 0, eflags: 0x2
-// Checksum 0x9bbd85e7, Offset: 0x330
+// Checksum 0xd1504b87, Offset: 0x330
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("zm_perk_staminup", &__init__, undefined, undefined);
 }
 
 // Namespace zm_perk_staminup
-// Params 0, eflags: 0x0
-// Checksum 0x90fc6ce, Offset: 0x370
+// Params 0, eflags: 0x1 linked
+// Checksum 0x84d59c04, Offset: 0x370
 // Size: 0x14
 function __init__() {
     enable_staminup_perk_for_level();
 }
 
 // Namespace zm_perk_staminup
-// Params 0, eflags: 0x0
-// Checksum 0xa2f68c2, Offset: 0x390
+// Params 0, eflags: 0x1 linked
+// Checksum 0x808a4b49, Offset: 0x390
 // Size: 0xf4
 function enable_staminup_perk_for_level() {
     zm_perks::register_perk_basic_info("specialty_staminup", "marathon", 2000, %ZOMBIE_PERK_MARATHON, getweapon("zombie_perk_bottle_marathon"));
@@ -43,8 +43,8 @@ function enable_staminup_perk_for_level() {
 }
 
 // Namespace zm_perk_staminup
-// Params 0, eflags: 0x0
-// Checksum 0x3ab91f17, Offset: 0x490
+// Params 0, eflags: 0x1 linked
+// Checksum 0xb674a3aa, Offset: 0x490
 // Size: 0xe0
 function staminup_precache() {
     if (isdefined(level.var_5a8d1a8c)) {
@@ -59,24 +59,24 @@ function staminup_precache() {
 }
 
 // Namespace zm_perk_staminup
-// Params 0, eflags: 0x0
-// Checksum 0x40de9ebd, Offset: 0x578
+// Params 0, eflags: 0x1 linked
+// Checksum 0x810bf9ce, Offset: 0x578
 // Size: 0x34
 function staminup_register_clientfield() {
     clientfield::register("clientuimodel", "hudItems.perks.marathon", 1, 2, "int");
 }
 
 // Namespace zm_perk_staminup
-// Params 1, eflags: 0x0
-// Checksum 0xdfd7344f, Offset: 0x5b8
+// Params 1, eflags: 0x1 linked
+// Checksum 0xf0c8efd6, Offset: 0x5b8
 // Size: 0x2c
 function staminup_set_clientfield(state) {
     self clientfield::set_player_uimodel("hudItems.perks.marathon", state);
 }
 
 // Namespace zm_perk_staminup
-// Params 4, eflags: 0x0
-// Checksum 0xf2ce953, Offset: 0x5f0
+// Params 4, eflags: 0x1 linked
+// Checksum 0x2522895, Offset: 0x5f0
 // Size: 0xbc
 function staminup_perk_machine_setup(use_trigger, perk_machine, bump_trigger, collision) {
     use_trigger.script_sound = "mus_perks_stamin_jingle";

@@ -8,7 +8,7 @@
 // Params 0, eflags: 0x2
 // Checksum 0xbac6971b, Offset: 0x3c0
 // Size: 0x34
-function function_2dc19561() {
+function autoexec function_2dc19561() {
     system::register("warlord", &__init__, undefined, undefined);
 }
 
@@ -16,7 +16,7 @@ function function_2dc19561() {
 // Params 0, eflags: 0x2
 // Checksum 0x6ab4e328, Offset: 0x400
 // Size: 0xe2
-function precache() {
+function autoexec precache() {
     level._effect["fx_elec_warlord_damage_1"] = "electric/fx_elec_warlord_damage_1";
     level._effect["fx_elec_warlord_damage_2"] = "electric/fx_elec_warlord_damage_2";
     level._effect["fx_elec_warlord_lower_damage_1"] = "electric/fx_elec_warlord_lower_damage_1";
