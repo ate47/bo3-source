@@ -1,0 +1,2014 @@
+#using scripts/cp/gametypes/_save;
+#using scripts/cp/gametypes/_battlechatter;
+#using scripts/cp/cp_mi_eth_prologue_accolades;
+#using scripts/shared/ai_shared;
+#using scripts/cp/cp_prologue_hangars;
+#using scripts/cp/cp_prologue_util;
+#using scripts/cp/cp_prologue_apc;
+#using scripts/cp/_spawn_manager;
+#using scripts/cp/cp_mi_eth_prologue;
+#using scripts/cp/_skipto;
+#using scripts/shared/lui_shared;
+#using scripts/shared/vehicle_shared;
+#using scripts/shared/trigger_shared;
+#using scripts/shared/spawner_shared;
+#using scripts/shared/scene_shared;
+#using scripts/shared/hud_util_shared;
+#using scripts/shared/gameobjects_shared;
+#using scripts/shared/array_shared;
+#using scripts/shared/flag_shared;
+#using scripts/shared/exploder_shared;
+#using scripts/shared/doors_shared;
+#using scripts/shared/colors_shared;
+#using scripts/shared/clientfield_shared;
+#using scripts/shared/callbacks_shared;
+#using scripts/cp/cybercom/_cybercom_util;
+#using scripts/cp/cp_mi_eth_prologue_sound;
+#using scripts/cp/cp_prologue_cyber_soldiers;
+#using scripts/cp/cp_mi_eth_prologue_fx;
+#using scripts/cp/_util;
+#using scripts/cp/_objectives;
+#using scripts/cp/_load;
+#using scripts/cp/_dialog;
+#using scripts/shared/util_shared;
+#using scripts/codescripts/struct;
+
+#namespace namespace_ab720c84;
+
+// Namespace namespace_ab720c84
+// Params 1, eflags: 0x0
+// Checksum 0xb1b453b3, Offset: 0x2250
+// Size: 0xc2
+function function_7af85b91(str_objective) {
+    function_8176e458();
+    spawner::add_spawn_function_group("fuel_tunnel_ai", "script_noteworthy", &namespace_2cb3876f::function_35be2939, "fuel_tunnel_alerted", 1024);
+    if (!isdefined(level.var_2fd26037)) {
+        level.var_2fd26037 = util::function_740f8516("hendricks");
+        cp_mi_eth_prologue::function_bff1a867("skipto_hostage_1_hendricks");
+        skipto::teleport_ai(str_objective);
+    }
+    level.var_2fd26037.ignoreme = 1;
+    level thread function_dbff3ab4();
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0xe0a57015, Offset: 0x2320
+// Size: 0x32
+function function_8176e458() {
+    level thread scene::init("cin_pro_06_01_hostage_vign_rollgrenade");
+    level thread scene::init("p7_fxanim_cp_prologue_underground_truck_explode_bundle");
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0xe7df76dd, Offset: 0x2360
+// Size: 0x152
+function function_dbff3ab4() {
+    level thread namespace_2cb3876f::function_950d1c3b(1);
+    level thread function_ca7de8e8();
+    objectives::set("cp_level_prologue_free_the_minister");
+    battlechatter::function_d9f49fba(1);
+    namespace_2cb3876f::function_47a62798(1);
+    level.var_2fd26037 thread function_672c874();
+    trigger::wait_till("hendricks_rollgrenade");
+    array::thread_all(level.players, &function_df74ca81);
+    level.var_2fd26037 waittill(#"hash_ff2562ea");
+    level thread function_88ddc4d5();
+    level flag::set("fuel_tunnel_alerted");
+    level thread function_5d78fd66();
+    level thread function_f41e9505();
+    level thread namespace_2cb3876f::function_8f7b1e06("t_fuel_tunnel_ai_fallback_controller", "info_fuel_tunnel_fallback_begin", "info_fuel_tunnel_fallback_end");
+    level waittill(#"hash_5d08c61e");
+    skipto::function_be8adfb8("skipto_hostage_1");
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0x79d84cf, Offset: 0x24c0
+// Size: 0x22
+function function_5d78fd66() {
+    wait(1.5);
+    level thread namespace_2cb3876f::function_a7eac508("sp_fuel_tunnel_explosion_runners", undefined, 1024, undefined);
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0xe07c72b2, Offset: 0x24f0
+// Size: 0x2da
+function function_ca7de8e8() {
+    a_ai_enemies = getaiteamarray("axis");
+    foreach (ai_enemy in a_ai_enemies) {
+        ai_enemy delete();
+    }
+    level thread function_b7afdf3a();
+    level thread function_e14a508d();
+    spawn_manager::enable("sm_fuel_tunnel");
+    spawner::simple_spawn("sp_fuel_depot_staging");
+    level thread function_c1e0b282();
+    level thread function_ee3c7f46();
+    level thread function_d9bab593("t_fuel_tunnel_left_door", "fueltunnel_spawnclosetdoor_2", "sp_fuel_tunnel_left_door", "info_fuel_tunnel_left_door", "info_fuel_tunnel_fallback_end", 0);
+    level thread function_d9bab593("t_fuel_tunnel_right_door", "fueltunnel_spawnclosetdoor_3", "sp_fuel_tunnel_right_door", "info_fuel_tunnel_right_door", "info_fuel_tunnel_fallback_end");
+    level thread namespace_2cb3876f::function_8f7b1e06("t_fueling_bridge_attacker", "info_fueling_bridge_attacker", "info_grenade_truck_guys_fallback");
+    level thread function_12ac9114();
+    level.var_2fd26037 waittill(#"hash_ff2562ea");
+    level thread namespace_2cb3876f::function_e0fb6da9("s_enemy_moveup_point_0", 100, 15, 1, 1, 6, "info_fuel_tunnel_fallback_end", "info_grenade_truck_guys_fallback");
+    level thread namespace_2cb3876f::function_e0fb6da9("s_enemy_moveup_point_1", 100, 15, 1, 1, 6, "info_fuel_tunnel_fallback_end", "info_grenade_truck_guys_fallback");
+    level thread namespace_2cb3876f::function_e0fb6da9("s_enemy_moveup_point_2", 100, 15, 1, 1, 6, "info_fuel_tunnel_fallback_end", "info_grenade_truck_guys_fallback");
+    level thread namespace_2cb3876f::function_e0fb6da9("s_enemy_moveup_point_forklift", -76, 8, 1, 1, 8, "info_fuel_tunnel_fallback_end", "info_grenade_truck_guys_fallback");
+    level thread namespace_2cb3876f::function_e0fb6da9("s_enemy_moveup_point_4", 100, 5, 1, 1, 2, "info_fuel_tunnel_fallback_end", "info_grenade_truck_guys_fallback");
+    level thread namespace_2cb3876f::function_e0fb6da9("s_enemy_moveup_point_5", 100, 5, 1, 1, 2, "info_fuel_tunnel_fallback_end", "info_grenade_truck_guys_fallback");
+    level thread function_50d18609();
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0x5547ba66, Offset: 0x27d8
+// Size: 0x32
+function function_b7afdf3a() {
+    trigger::wait_till("t_fueling_tunnel_alert_enemy");
+    level flag::set("fuel_tunnel_alerted");
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0x309954ad, Offset: 0x2818
+// Size: 0x8f
+function function_e14a508d() {
+    a_ents = getentarray("sp_fueling_stairwell_intro_guys", "targetname");
+    for (i = 0; i < a_ents.size; i++) {
+        e_ent = a_ents[i] spawner::spawn();
+        e_ent.overrideactordamage = &function_e93a75b6;
+        e_ent.goalradius = 32;
+    }
+    level notify(#"hash_db677f8c");
+}
+
+// Namespace namespace_ab720c84
+// Params 13, eflags: 0x0
+// Checksum 0xd5cb66aa, Offset: 0x28b0
+// Size: 0x95
+function function_e93a75b6(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, damagefromunderneath, modelindex, partname) {
+    if (isdefined(eattacker) && !isplayer(eattacker)) {
+        idamage = self.health + 1;
+    }
+    return idamage;
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0x3047c738, Offset: 0x2950
+// Size: 0xd2
+function function_88ddc4d5() {
+    level scene::add_scene_func("p7_fxanim_cp_prologue_underground_truck_explode_bundle", &function_70b550de);
+    level thread scene::play("p7_fxanim_cp_prologue_underground_truck_explode_bundle");
+    level clientfield::set("fuel_depot_truck_explosion", 1);
+    var_4d2c50ee = getent("orig_fuel_tunnel_explosion", "targetname");
+    level.var_2fd26037 radiusdamage(var_4d2c50ee.origin, 300, 2001, 2000, undefined, "MOD_EXPLOSIVE");
+}
+
+// Namespace namespace_ab720c84
+// Params 1, eflags: 0x0
+// Checksum 0xe55cc21b, Offset: 0x2a30
+// Size: 0x7a
+function function_70b550de(a_ents) {
+    a_ents["underground_truck_explode"] waittill(#"hash_5ec0d21e");
+    a_ents["underground_truck_explode"] setmodel("veh_t7_civ_truck_med_cargo_egypt_dead");
+    var_f33f812b = getent("fuel_truck_faxnim_clip", "targetname");
+    var_f33f812b solid();
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0x886b97bc, Offset: 0x2ab8
+// Size: 0x2a
+function function_f41e9505() {
+    wait(0.5);
+    level thread namespace_2cb3876f::function_8f7b1e06(undefined, "info_grenade_truck_guys", "info_grenade_truck_guys_fallback");
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0xdd4aa9df, Offset: 0x2af0
+// Size: 0x19a
+function function_ee3c7f46() {
+    trigger::wait_till("t_spawn_machine_gunner");
+    var_9bc6eb0e = getent("fueltunnel_spawnclosetdoor_1", "targetname");
+    var_9bc6eb0e rotateto(var_9bc6eb0e.angles + (0, -150, 0), 0.5);
+    var_9bc6eb0e playsound("evt_spawner_door_open");
+    var_8e7793a5 = getent("info_fuel_tunnel_fallback_end", "targetname");
+    a_ai = getentarray("sp_fuel_tunnel_upper_door", "targetname");
+    a_players = getplayers();
+    if (a_players.size == 1) {
+        n_num_to_spawn = 1;
+    } else if (a_players.size == 2) {
+        n_num_to_spawn = 2;
+    } else {
+        n_num_to_spawn = 5;
+    }
+    if (n_num_to_spawn > a_ai.size) {
+        n_num_to_spawn = a_ai.size;
+    }
+    for (i = 0; i < n_num_to_spawn; i++) {
+        e_ent = a_ai[i] spawner::spawn();
+        e_ent thread namespace_2cb3876f::function_8e9f617f(1024, undefined);
+        wait(0.5);
+    }
+    level thread function_3964d78d();
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0x7e98ba47, Offset: 0x2c98
+// Size: 0x212
+function function_3964d78d() {
+    e_volume = getent("info_final_tunnel_attackers", "targetname");
+    ready = 0;
+    while (!ready) {
+        if (level.var_2fd26037 istouching(e_volume)) {
+            ready = 1;
+        }
+        a_players = getplayers();
+        for (i = 0; i < a_players.size; i++) {
+            if (a_players[i] istouching(e_volume)) {
+                ready = 1;
+            }
+        }
+        wait(0.05);
+    }
+    var_fe3db664 = getentarray("sp_fuel_tunnel_stairs_attackers", "targetname");
+    for (i = 0; i < var_fe3db664.size; i++) {
+        e_ent = var_fe3db664[i] spawner::spawn();
+        nd_target = getnode(e_ent.target, "targetname");
+        e_ent.goalradius = -116;
+        e_ent setgoal(nd_target.origin);
+    }
+    while (true) {
+        var_f04bd8f5 = namespace_2cb3876f::function_609c412a("info_fuel_tunnel_upper_door", 1);
+        if (!var_f04bd8f5) {
+            break;
+        }
+        wait(0.05);
+    }
+    var_9bc6eb0e = getent("fueltunnel_spawnclosetdoor_1", "targetname");
+    var_9bc6eb0e rotateto(var_9bc6eb0e.angles - (0, -150, 0), 0.5);
+    var_9bc6eb0e playsound("evt_spawner_door_close");
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0x256ec75c, Offset: 0x2eb8
+// Size: 0x472
+function function_672c874() {
+    self function_8b6e6abe();
+    level flag::wait_till("start_grenade_roll");
+    level thread scene::play("cin_pro_06_01_hostage_vign_rollgrenade", level.var_2fd26037);
+    level util::delay(0.5, undefined, &trigger::use, "t_script_color_allies_r510");
+    level.var_2fd26037 waittill(#"hash_ff2562ea");
+    level thread namespace_2cb3876f::function_2a0bc326(level.var_2fd26037.origin, 0.65, 1.2, 800, 4);
+    level.var_2fd26037 ai::set_pacifist(0);
+    level.var_2fd26037 ai::set_ignoreme(0);
+    level.var_2fd26037 ai::set_ignoreall(0);
+    s_struct = struct::get("s_truck_explosion_origin", "targetname");
+    physicsexplosionsphere(s_struct.origin, -1, -2, 0.3, 25, 400);
+    wait(0.1);
+    var_ff31c6f9 = getentarray("truck_red_barrel", "script_noteworthy");
+    foreach (piece in var_ff31c6f9) {
+        if (isdefined(piece) && piece.targetname == "destructible") {
+            piece dodamage(5000, piece.origin, level.var_2fd26037);
+        }
+    }
+    wait(0.3);
+    var_7bb33476 = getnode("nd_grenade_throw", "targetname");
+    setenablenode(var_7bb33476, 0);
+    trigger::use("t_script_color_allies_r520");
+    namespace_2cb3876f::function_d1f1caad("t_script_color_allies_r530");
+    namespace_2cb3876f::function_d1f1caad("t_script_color_allies_r540");
+    scene::play("cin_pro_06_01_hostage_vign_jumpdown");
+    self colors::enable();
+    self setgoal(self.origin);
+    wait(1);
+    trigger::use("t_script_color_allies_r550");
+    wait(1);
+    self waittill(#"goal");
+    self.goalradius = 256;
+    namespace_2cb3876f::function_d1f1caad("t_script_color_allies_r560");
+    function_7a05bbf();
+    if (getplayers().size == 1) {
+        level notify(#"hash_bf9ccb51");
+    }
+    e_volume = getent("info_fuel_tunnel_fallback_end", "targetname");
+    while (true) {
+        a_ai = namespace_2cb3876f::function_68b8f4af(e_volume);
+        if (a_ai.size < 1) {
+            break;
+        }
+        wait(0.05);
+    }
+    e_trigger = getent("t_script_color_allies_r580", "targetname");
+    if (isdefined(e_trigger)) {
+        e_trigger notify(#"trigger");
+    }
+    function_1ddfda41();
+    var_22752fde = getnode("nd_fueling_tunnel_exit", "targetname");
+    self setgoal(var_22752fde.origin);
+    self.goalradius = 64;
+    self util::waittill_notify_or_timeout("goal", 15);
+    self thread function_c9d7d48a();
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0x46106392, Offset: 0x3338
+// Size: 0x89
+function function_7a05bbf() {
+    while (true) {
+        e_trigger = getent("t_script_color_allies_r570", "targetname");
+        if (!isdefined(e_trigger)) {
+            break;
+        }
+        var_f04bd8f5 = namespace_2cb3876f::function_609c412a("info_fuel_tunnel_fallback_end", 0);
+        if (var_f04bd8f5 <= 3) {
+            trigger::use("t_script_color_allies_r570");
+            break;
+        }
+        wait(0.05);
+    }
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0x4f5d0ecb, Offset: 0x33d0
+// Size: 0x18f
+function function_1ddfda41() {
+    e_volume = getent("info_fueling_tunnel_balcony", "targetname");
+    a_enemy = namespace_2cb3876f::function_68b8f4af(e_volume);
+    for (i = 0; i < a_enemy.size; i++) {
+        self getperfectinfo(a_enemy[i], 1);
+        a_enemy[i].overrideactordamage = &function_e93a75b6;
+    }
+    var_22752fde = getnode("nd_fueling_tunnel_top_stairs", "targetname");
+    self setgoal(var_22752fde.origin);
+    self.goalradius = 64;
+    self waittill(#"goal");
+    while (true) {
+        a_enemy = namespace_2cb3876f::function_68b8f4af(e_volume);
+        if (a_enemy.size == 0) {
+            break;
+        }
+        wait(0.05);
+    }
+    for (var_1f6e1fda = getaiteamarray("axis"); var_1f6e1fda.size > 0; var_1f6e1fda = getaiteamarray("axis")) {
+        var_1f6e1fda[0] ai::bloody_death();
+        wait(randomfloatrange(0.666667, 1.33333));
+    }
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0x3eac2fee, Offset: 0x3568
+// Size: 0x9a
+function function_50d18609() {
+    level waittill(#"hash_bf9ccb51");
+    a_nodes = getnodearray("nd_fueling_end", "targetname");
+    for (i = 0; i < a_nodes.size; i++) {
+        var_22752fde = a_nodes[i];
+        setenablenode(var_22752fde, 0);
+    }
+    wait(2);
+    namespace_2cb3876f::function_8f7b1e06(undefined, "info_fuel_tunnel_fallback_end", "info_fueling_flush_out_volume");
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0xde8e68bc, Offset: 0x3610
+// Size: 0x19a
+function function_8b6e6abe() {
+    level flag::wait_till("hendricks_exit_cam_room");
+    wait(0.5);
+    level thread function_1479714d();
+    self ai::set_behavior_attribute("can_melee", 0);
+    self colors::disable();
+    var_22752fde = getnode("nd_hendricks_attack_fueling_start_guys", "targetname");
+    self.perfectaim = 1;
+    self.goalradius = 32;
+    self ai::force_goal(var_22752fde);
+    wait(1);
+    a_enemy = spawner::get_ai_group_ai("tunnel_1st_contact_guys");
+    foreach (enemy in a_enemy) {
+        if (isdefined(enemy) && isalive(enemy)) {
+            self ai::shoot_at_target("shoot_until_target_dead", enemy);
+        }
+    }
+    spawner::waittill_ai_group_cleared("tunnel_1st_contact_guys");
+    self.perfectaim = 0;
+    self.goalradius = 512;
+    self ai::set_behavior_attribute("can_melee", 1);
+    self colors::enable();
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0x896e4268, Offset: 0x37b8
+// Size: 0x202
+function function_c9d7d48a() {
+    e_volume = getent("info_fueling_tunnel_exit_area", "targetname");
+    while (true) {
+        num_players = namespace_2cb3876f::function_fcb42941(e_volume);
+        if (num_players > 0) {
+            break;
+        }
+        wait(0.05);
+    }
+    level thread namespace_21b2c1f2::function_d4c52995();
+    wait(0.15);
+    level scene::add_scene_func("cin_pro_06_02_hostage_vign_getminister_hendricks_airlock", &function_5729b9e7, "play");
+    level scene::play("cin_pro_06_02_hostage_vign_getminister_hendricks_airlock");
+    n_node = getnode("nd_hendricks_jail_setup", "targetname");
+    level.var_2fd26037 setgoal(n_node, 1);
+    wait(0.5);
+    level notify(#"hash_5d08c61e");
+    s_struct = struct::get("s_close_security_door", "targetname");
+    while (true) {
+        v_forward = anglestoforward(s_struct.angles);
+        v_dir = vectornormalize(s_struct.origin - level.var_2fd26037.origin);
+        dp = vectordot(v_forward, v_dir);
+        if (dp < 0) {
+            break;
+        }
+        wait(0.1);
+    }
+    namespace_2cb3876f::function_9d611fab("s_close_security_door", undefined);
+    level thread function_6ae70954(0);
+}
+
+// Namespace namespace_ab720c84
+// Params 1, eflags: 0x0
+// Checksum 0x2ad2c70c, Offset: 0x39c8
+// Size: 0x2a
+function function_5729b9e7(a_ents) {
+    level waittill(#"hash_5729b9e7");
+    level function_6ae70954(1);
+}
+
+// Namespace namespace_ab720c84
+// Params 1, eflags: 0x0
+// Checksum 0x3fea1112, Offset: 0x3a00
+// Size: 0x19a
+function function_6ae70954(open_door) {
+    exploder::exploder("fx_exploder_door_vacuum");
+    var_bcc5e65a = getent("holdingcells_entrydoor_1", "targetname");
+    var_96c36bf1 = getent("holdingcells_entrydoor_2", "targetname");
+    if (open_door) {
+        exploder::exploder("light_exploder_prison_door");
+        var_bcc5e65a movex(64, 1, 0.1, 0.2);
+        var_bcc5e65a playsound("evt_fueldepot_door_open");
+        wait(0.25);
+        var_96c36bf1 movex(64, 1, 0.1, 0.2);
+        var_96c36bf1 playsound("evt_fueldepot_door_open");
+        return;
+    }
+    exploder::stop_exploder("light_exploder_prison_door");
+    var_96c36bf1 movex(-64, 1, 0.1, 0.2);
+    var_96c36bf1 playsound("evt_fueldepot_door_close");
+    wait(0.25);
+    var_bcc5e65a movex(-64, 1, 0.1, 0.2);
+    var_bcc5e65a playsound("evt_fueldepot_door_close");
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0x528f73e4, Offset: 0x3ba8
+// Size: 0x2a
+function function_df74ca81() {
+    self endon(#"death");
+    self waittill(#"weapon_fired");
+    level flag::set("fuel_tunnel_alerted");
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0x58100691, Offset: 0x3be0
+// Size: 0x62
+function function_1479714d() {
+    trigger::wait_till("t_spawn_machine_gunner");
+    wait(1);
+    level.var_2fd26037 dialog::say("hend_gunner_up_top_0");
+    level waittill(#"hash_5d08c61e");
+    level.var_2fd26037 dialog::say("hend_cell_block_ahead_on_0");
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0x2c743fe7, Offset: 0x3c50
+// Size: 0x3c
+function function_c1e0b282() {
+    trigger::wait_till("t_spawn_machine_gunner");
+    var_cf0db380 = spawner::simple_spawn_single("fuel_tunnel_mg_guy");
+}
+
+// Namespace namespace_ab720c84
+// Params 6, eflags: 0x0
+// Checksum 0x9242ef5d, Offset: 0x3c98
+// Size: 0x1e2
+function function_d9bab593(str_trigger, str_door, var_a9ea049a, var_137809d6, var_343b0267, var_bfba634f) {
+    if (!isdefined(var_bfba634f)) {
+        var_bfba634f = 1;
+    }
+    e_trigger = getent(str_trigger, "targetname");
+    e_trigger waittill(#"trigger");
+    e_door = getent(str_door, "targetname");
+    e_door rotateto(e_door.angles + (0, -110, 0), 0.5);
+    e_door playsound("evt_spawner_door_open");
+    var_ab891f49 = getent(var_343b0267, "targetname");
+    a_ai = getentarray(var_a9ea049a, "targetname");
+    for (i = 0; i < a_ai.size; i++) {
+        e_ent = a_ai[i] spawner::spawn();
+        e_ent setgoal(var_ab891f49);
+        wait(1.5);
+    }
+    if (!var_bfba634f) {
+        return;
+    }
+    wait(1);
+    while (true) {
+        var_f04bd8f5 = namespace_2cb3876f::function_609c412a(var_137809d6, 1);
+        if (!var_f04bd8f5) {
+            break;
+        }
+        wait(0.05);
+    }
+    e_door rotateto(e_door.angles + (0, 110, 0), 0.5);
+    e_door playsound("evt_spawner_door_close");
+}
+
+// Namespace namespace_ab720c84
+// Params 0, eflags: 0x0
+// Checksum 0x59b2e14a, Offset: 0x3e88
+// Size: 0x13a
+function function_12ac9114() {
+    var_1e913765 = getent("sp_stair_runners", "targetname");
+    e_volume = getent("info_fuel_tunnel_fallback_end", "targetname");
+    level thread function_6ae70954(1);
+    level flag::wait_till("fuel_tunnel_stair_runners_1");
+    ai_enemy = var_1e913765 spawner::spawn();
+    ai_enemy setgoal(e_volume);
+    wait(1.5);
+    ai_enemy = var_1e913765 spawner::spawn();
+    ai_enemy setgoal(e_volume);
+    level flag::wait_till("fuel_tunnel_stair_runners_2");
+    ai_enemy = var_1e913765 spawner::spawn();
+    ai_enemy setgoal(e_volume);
+    wait(3);
+    level thread function_6ae70954(0);
+}
+
+#namespace prison;
+
+// Namespace prison
+// Params 1, eflags: 0x0
+// Checksum 0x9218876b, Offset: 0x3fd0
+// Size: 0x1ea
+function function_955cbf0d(str_objective) {
+    function_8ee087ec();
+    if (!isdefined(level.var_2fd26037)) {
+        level.var_2fd26037 = util::function_740f8516("hendricks");
+        cp_mi_eth_prologue::function_bff1a867("skipto_prison_hendricks");
+        skipto::teleport_ai(str_objective);
+    }
+    if (!isdefined(level.var_4d5a4697)) {
+        level.var_4d5a4697 = util::function_740f8516("minister");
+        level.var_4d5a4697.ignoreme = 1;
+        level.var_4d5a4697.ignoreall = 1;
+        cp_mi_eth_prologue::function_211ff3c7("skipto_prison_minister");
+        level.var_4d5a4697.goalradius = 64;
+    }
+    if (!isdefined(level.var_9db406db)) {
+        level.var_9db406db = util::function_740f8516("khalil");
+        level.var_9db406db.ignoreme = 1;
+        level.var_9db406db.ignoreall = 1;
+        cp_mi_eth_prologue::function_c117302b("skipto_prison_khalil");
+        level.var_9db406db.goalradius = 64;
+    }
+    trigger::use("t_prison_respawns_disable", "targetname", undefined, 0);
+    battlechatter::function_d9f49fba(0);
+    namespace_2cb3876f::function_47a62798(1);
+    level.var_2fd26037.pacifist = 0;
+    level.var_2fd26037.ignoreme = 0;
+    level flag::init("khalil_door_breached");
+    level flag::init("player_interrogation_breach");
+    level thread function_13bbee98();
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0xe9c07cd6, Offset: 0x41c8
+// Size: 0x2
+function function_8ee087ec() {
+    
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0x28bb7819, Offset: 0x41d8
+// Size: 0x11a
+function function_13bbee98() {
+    level thread namespace_2cb3876f::function_950d1c3b(1);
+    level thread function_b317c15f();
+    level thread scene::init("cin_pro_06_03_hostage_1st_khalil_intro_rescue");
+    namespace_52f8de11::function_bfe70f02();
+    level thread function_f50dec65();
+    level thread function_771ca4c3();
+    var_beb17601 = getent("collision_observation_door", "targetname");
+    var_ddb80384 = getent("observation_door", "targetname");
+    var_beb17601 linkto(var_ddb80384);
+    level thread function_ef1899fb();
+    level.var_2fd26037 thread function_299a41be();
+    level thread function_15c51270();
+    level thread function_37b5c7e0();
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0x948b9796, Offset: 0x4300
+// Size: 0x52
+function function_f50dec65() {
+    level thread util::function_d8eaed3d(3);
+    level waittill(#"hash_516cb5e4");
+    util::clear_streamer_hint();
+    level thread util::function_d8eaed3d(4);
+    level waittill(#"hash_29445f62");
+    util::clear_streamer_hint();
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0xff401cd3, Offset: 0x4360
+// Size: 0x1ba
+function function_771ca4c3() {
+    objectives::set("cp_level_prologue_free_the_minister");
+    callback::on_ai_killed(&namespace_61c634f2::function_c58a9e36);
+    level flag::wait_till("player_entered_observation");
+    objectives::complete("cp_level_prologue_goto_minister_door");
+    level waittill(#"hash_a859aef4");
+    objectives::complete("cp_level_prologue_free_the_minister");
+    savegame::checkpoint_save();
+    level waittill(#"hash_ed07bf8c");
+    trigger::use("t_prison_respawns_enable", "targetname", undefined, 0);
+    s_pos = struct::get("s_objective_khalil_cell", "targetname");
+    objectives::set("cp_level_prologue_goto_khalil_door", s_pos);
+    objectives::set("cp_level_prologue_free_khalil");
+    level flag::wait_till("khalil_door_breached");
+    objectives::complete("cp_level_prologue_goto_minister_door");
+    objectives::complete("cp_level_prologue_free_khalil");
+    callback::remove_on_ai_killed(&namespace_61c634f2::function_c58a9e36);
+    objectives::set("cp_level_prologue_get_to_the_surface");
+    level waittill(#"hash_f83eeed5");
+    level thread objectives::breadcrumb("post_prison_breadcrumb_start");
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0x95cf0252, Offset: 0x4528
+// Size: 0xa2
+function function_299a41be() {
+    var_22752fde = getnode("nd_hendricks_jail_setup", "targetname");
+    self setgoal(var_22752fde, 1);
+    self waittill(#"goal");
+    level flag::wait_till("post_up_minister_breach");
+    level thread function_a1ad4aa7();
+    self sethighdetail(1);
+    function_a859aef4();
+    self sethighdetail(0);
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0x81b5a66f, Offset: 0x45d8
+// Size: 0x42
+function function_22b149da() {
+    level waittill(#"hash_5ea48ae9");
+    level thread namespace_21b2c1f2::function_1c0460dd();
+    level waittill(#"hash_35308140");
+    level.var_2fd26037 dialog::say("hend_depot_ahead_will_be_0");
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0xed202469, Offset: 0x4628
+// Size: 0x22
+function function_f48bd4a7() {
+    level waittill(#"hash_1dd905ef");
+    exploder::exploder("light_exploder_prison_exit");
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0xf9a7215, Offset: 0x4658
+// Size: 0x18b
+function function_a859aef4() {
+    var_6553bad6 = getent("trig_use_khalil_door", "targetname");
+    var_6553bad6 triggerenable(0);
+    level thread scene::play("cin_pro_06_03_hostage_vign_breach_hendrickscover");
+    level flag::wait_till("player_entered_observation");
+    level thread function_b8c0a930();
+    if (isdefined(level.var_57de23a9)) {
+        level thread [[ level.var_57de23a9 ]]();
+    }
+    level flag::wait_till_any(array("interrogation_finished", "player_breached_early"));
+    level thread scene::play("cin_pro_06_03_hostage_vign_breach");
+    level thread scene::play("cin_pro_06_03_hostage_vign_breach_hend_min");
+    level notify(#"hash_a859aef4");
+    level.var_4d5a4697.overrideactordamage = undefined;
+    level waittill(#"hash_ed07bf8c");
+    var_6553bad6 triggerenable(1);
+    var_d86e08d0 = util::function_14518e76(var_6553bad6, %cp_prompt_enteralt_prologue_khalil_breach, %CP_MI_ETH_PROLOGUE_DOOR_BREACH, &function_28af2208);
+    var_d86e08d0 thread gameobjects::function_e0e2d0fe((1, 1, 1), 800, 0);
+    level notify(#"hash_bd4342ed");
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0x91f498a1, Offset: 0x47f0
+// Size: 0x3a
+function function_db5cf0d5() {
+    self endon(#"death");
+    level endon(#"hash_a59a51");
+    level endon(#"hash_bedc2f57");
+    self waittill(#"weapon_fired");
+    level flag::set("player_breached_early");
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0x4c92f50b, Offset: 0x4838
+// Size: 0x22
+function function_a1ad4aa7() {
+    level waittill(#"hash_5e84ced9");
+    level clientfield::set("interrogate_physics", 1);
+}
+
+// Namespace prison
+// Params 1, eflags: 0x0
+// Checksum 0x77e9e1a8, Offset: 0x4868
+// Size: 0x132
+function function_28af2208(e_player) {
+    self gameobjects::disable_object();
+    array::run_all(level.players, &util::function_16c71b8, 1);
+    callback::on_spawned(&cp_mi_eth_prologue::function_4d4f1d4f);
+    level thread function_2137acd9();
+    level flag::set("khalil_door_breached");
+    level thread scene::play("cin_pro_06_03_hostage_1st_khalil_intro_player_rescue", e_player);
+    level thread scene::play("cin_pro_06_03_hostage_1st_khalil_intro_rescue");
+    level.var_9db406db sethighdetail(1);
+    level thread function_22b149da();
+    level thread function_f48bd4a7();
+    level waittill(#"hash_f83eeed5");
+    level.var_9db406db sethighdetail(0);
+    level notify(#"hash_29445f62");
+    skipto::function_be8adfb8("skipto_prison");
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0xaaeae8c, Offset: 0x49a8
+// Size: 0x6a
+function function_2137acd9() {
+    wait(42);
+    array::run_all(level.players, &util::function_16c71b8, 0);
+    callback::remove_on_spawned(&cp_mi_eth_prologue::function_4d4f1d4f);
+    level thread namespace_2cb3876f::function_77308ba7();
+    level thread function_fae1bd07();
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0xcf6366e2, Offset: 0x4a20
+// Size: 0x4a
+function function_fae1bd07() {
+    playsoundatposition("amb_walla_troops_1", (6175, -1548, -157));
+    wait(8);
+    playsoundatposition("amb_walla_troops_0", (6129, -1037, -266));
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0x4adf8c8f, Offset: 0x4a78
+// Size: 0x22
+function function_b8c0a930() {
+    level.var_4d5a4697.overrideactordamage = &function_9b720436;
+}
+
+// Namespace prison
+// Params 13, eflags: 0x0
+// Checksum 0xfc244b2a, Offset: 0x4aa8
+// Size: 0x103
+function function_9b720436(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, damagefromunderneath, modelindex, partname) {
+    if (isdefined(eattacker) && isplayer(eattacker)) {
+        if (isdefined(weapon) && (idamage <= 1 || weapon.isemp)) {
+            idamage = 0;
+        }
+        if (!isdefined(self.var_28e02422)) {
+            self.var_28e02422 = 0;
+        }
+        self.var_28e02422 = self.var_28e02422 + idamage;
+        if (self.var_28e02422 >= self.maxhealth) {
+            util::function_207f8667(%CP_MI_ETH_PROLOGUE_MINISTER_SHOT, %SCRIPT_MISSIONFAIL_WATCH_FIRE);
+        } else {
+            idamage = 0;
+        }
+    }
+    return idamage;
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0xd8c3d51d, Offset: 0x4bb8
+// Size: 0x92
+function function_ef1899fb() {
+    var_130a032 = getent("trig_use_minister_door", "targetname");
+    var_130a032 triggerenable(1);
+    var_e0897b20 = util::function_14518e76(var_130a032, %cp_prompt_enteralt_prologue_minister_breach, %CP_MI_ETH_PROLOGUE_DOOR_BREACH, &function_b0c29b02);
+    var_e0897b20 thread gameobjects::function_e0e2d0fe((1, 1, 1), 800, 0);
+}
+
+// Namespace prison
+// Params 1, eflags: 0x0
+// Checksum 0x24b67580, Offset: 0x4c58
+// Size: 0x12a
+function function_b0c29b02(e_player) {
+    self.trigger triggerenable(0);
+    self gameobjects::disable_object();
+    foreach (var_12195048 in level.activeplayers) {
+        var_12195048 util::function_16c71b8(1);
+        var_12195048 thread function_db5cf0d5();
+    }
+    callback::on_spawned(&cp_mi_eth_prologue::function_4d4f1d4f);
+    level flag::set("player_interrogation_breach");
+    level scene::play("cin_pro_06_03_hostage_vign_breach_playerbreach", e_player);
+    level notify(#"hash_516cb5e4");
+    level thread dialog::function_13b3b16a("plyr_interrogator_has_his_0", 3);
+    level thread function_813f55a8();
+}
+
+// Namespace prison
+// Params 1, eflags: 0x0
+// Checksum 0x74d5a199, Offset: 0x4d90
+// Size: 0x52
+function function_f8d7f50a(a_ents) {
+    e_door = a_ents["observation_door"];
+    e_door setmodel("p7_door_metal_security_02_rt_keypad");
+    level waittill(#"hash_18c83555");
+    e_door setmodel("p7_door_metal_security_02_rt_keypad_damage");
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0xc705a328, Offset: 0x4df0
+// Size: 0xca
+function function_b317c15f() {
+    level scene::add_scene_func("cin_pro_06_03_hostage_vign_breach_interrogation", &function_b8d7b823, "init");
+    level scene::init("cin_pro_06_03_hostage_vign_breach_interrogation");
+    level waittill(#"hash_5c0ece37");
+    scene::add_scene_func("cin_pro_06_03_hostage_vign_breach_guardloop", &function_53775c4d, "play");
+    level thread scene::play("cin_pro_06_03_hostage_vign_breach_guardloop");
+    level scene::play("cin_pro_06_03_hostage_vign_breach_interrogation");
+    level flag::set("interrogation_finished");
+}
+
+// Namespace prison
+// Params 1, eflags: 0x0
+// Checksum 0xc3fe0c2a, Offset: 0x4ec8
+// Size: 0x122
+function function_b8d7b823(a_ents) {
+    a_ents["interrogator"].var_69dd5d62 = 0;
+    a_ents["interrogator"] cybercom::function_59965309("cybercom_fireflyswarm");
+    level waittill(#"hash_7890ba26");
+    level.var_2fd26037 dialog::say("hend_on_my_mark_0");
+    wait(1);
+    level.var_2fd26037 thread dialog::say("hend_three_two_go_0");
+    level thread namespace_21b2c1f2::function_2f85277b();
+    wait(1);
+    foreach (e_player in level.activeplayers) {
+        e_player util::function_16c71b8(0);
+    }
+    callback::remove_on_spawned(&cp_mi_eth_prologue::function_4d4f1d4f);
+}
+
+// Namespace prison
+// Params 1, eflags: 0x0
+// Checksum 0x8eee1f03, Offset: 0x4ff8
+// Size: 0x83
+function function_53775c4d(a_ents) {
+    foreach (ai_guard in a_ents) {
+        ai_guard.var_c54411a6 = 1;
+        ai_guard.var_69dd5d62 = 0;
+        ai_guard cybercom::function_59965309("cybercom_fireflyswarm");
+    }
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0xee474c55, Offset: 0x5088
+// Size: 0xba
+function function_813f55a8() {
+    trigger::wait_till("trig_dam_int_room");
+    level thread namespace_2cb3876f::function_2a0bc326(level.var_2fd26037.origin, 0.3, 0.75, 5000, 10, "damage_heavy");
+    var_d3079b09 = getent("int_room_sound_wall", "targetname");
+    var_d3079b09 delete();
+    hidemiscmodels("interrogation_glass_hologram");
+    exploder::exploder("fx_exploder_glass_screen");
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0xf5780d6c, Offset: 0x5150
+// Size: 0x52
+function function_15c51270() {
+    level thread function_88b82e8a();
+    level waittill(#"hash_a859aef4");
+    level thread function_b1d2594d();
+    level flag::wait_till("khalil_door_breached");
+    level thread namespace_21b2c1f2::function_fb4a2ce1();
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0x5abfd218, Offset: 0x51b0
+// Size: 0x2a
+function function_88b82e8a() {
+    level endon(#"hash_df5cca92");
+    wait(17);
+    level.var_2fd26037 dialog::say("hend_that_exfil_won_t_wai_0");
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0x1a70cd69, Offset: 0x51e8
+// Size: 0x52
+function function_b1d2594d() {
+    level endon(#"hash_94c473aa");
+    level waittill(#"hash_bd4342ed");
+    wait(20);
+    level.var_2fd26037 dialog::say("hend_sooner_we_get_khalil_0");
+    wait(15);
+    level.var_2fd26037 dialog::say("hend_they_re_gonna_be_on_0");
+}
+
+// Namespace prison
+// Params 0, eflags: 0x0
+// Checksum 0x6edf640, Offset: 0x5248
+// Size: 0x82
+function function_37b5c7e0() {
+    level thread function_c11e5214("trig_volume_prisoner1_cell", "pris_please_please_help_0");
+    level thread function_c11e5214("trig_volume_prisoner2_cell", "pris_get_us_out_of_here_0");
+    level thread function_c11e5214("trig_volume_prisoner3_cell", "pris_don_t_leave_me_here_0");
+    level thread function_c11e5214("trig_volume_prisoner4_cell", "pris_please_help_us_0");
+}
+
+// Namespace prison
+// Params 2, eflags: 0x0
+// Checksum 0x391ee0da, Offset: 0x52d8
+// Size: 0x4a
+function function_c11e5214(str_trigger, str_vo) {
+    level trigger::wait_till(str_trigger, "targetname", undefined, 0);
+    level.var_2fd26037 dialog::say(str_vo);
+}
+
+#namespace namespace_52f8de11;
+
+// Namespace namespace_52f8de11
+// Params 1, eflags: 0x0
+// Checksum 0xab1a4b84, Offset: 0x5330
+// Size: 0xda
+function function_72514870(str_objective) {
+    function_6141027f();
+    level.var_2fd26037 ai::set_ignoreall(0);
+    level.var_4d5a4697 ai::set_ignoreall(0);
+    battlechatter::function_d9f49fba(1);
+    namespace_2cb3876f::function_47a62798(1);
+    spawner::add_spawn_function_group("bridge_attacker", "script_noteworthy", &namespace_d51ba4::function_33ec51ea);
+    level thread function_b8fd868b();
+    trigger::wait_till("t_start_lift_battle");
+    skipto::function_be8adfb8("skipto_security_desk");
+}
+
+// Namespace namespace_52f8de11
+// Params 0, eflags: 0x0
+// Checksum 0xe9c07cd6, Offset: 0x5418
+// Size: 0x2
+function function_6141027f() {
+    
+}
+
+// Namespace namespace_52f8de11
+// Params 0, eflags: 0x0
+// Checksum 0x796fef08, Offset: 0x5428
+// Size: 0xaa
+function function_b8fd868b() {
+    level thread namespace_2cb3876f::function_950d1c3b(1);
+    level thread function_e6af47cb();
+    level thread function_5e374f7a();
+    var_88e2cef7 = getent("trig_open_weapons_room", "targetname");
+    var_88e2cef7 triggerenable(1);
+    level flag::wait_till("open_weapons_room");
+    level thread namespace_21b2c1f2::function_6c35b4f3();
+    level thread function_b60a26e8();
+}
+
+// Namespace namespace_52f8de11
+// Params 0, eflags: 0x0
+// Checksum 0xa6dd6f3a, Offset: 0x54e0
+// Size: 0x2a
+function function_bfe70f02() {
+    if (!isdefined(level.var_e5ed7cda)) {
+        scene::init("cin_pro_07_01_securitydesk_vign_weapons_doorinit");
+        level.var_e5ed7cda = 1;
+    }
+}
+
+// Namespace namespace_52f8de11
+// Params 0, eflags: 0x0
+// Checksum 0xa6a78bf5, Offset: 0x5518
+// Size: 0x62
+function function_5e374f7a() {
+    level flag::wait_till("open_weapons_room");
+    level waittill(#"hash_ecefb6c8");
+    level thread function_4fd5aaec();
+    wait(1);
+    level thread function_bce54c0b();
+    level thread function_36113d75();
+    level thread function_680575de();
+}
+
+// Namespace namespace_52f8de11
+// Params 0, eflags: 0x0
+// Checksum 0x8257fd34, Offset: 0x5588
+// Size: 0x201
+function function_4fd5aaec() {
+    a_ai = getentarray("sp_armory_lift_area_1st_attacker", "targetname");
+    for (i = 0; i < a_ai.size; i++) {
+        e_ent = a_ai[i] spawner::spawn();
+        var_22752fde = getnode(e_ent.target, "targetname");
+        e_ent.goalradius = 64;
+        e_ent setgoal(var_22752fde.origin);
+        e_ent thread namespace_2cb3876f::function_8e9f617f(256, 1);
+    }
+    e_volume = getent("info_armory_enemy_pushup", "targetname");
+    a_ai = getentarray("sp_armory_lift_area_attackers", "targetname");
+    for (i = 0; i < a_ai.size; i++) {
+        e_ent = a_ai[i] spawner::spawn();
+        e_ent setgoal(e_volume);
+        e_ent thread namespace_2cb3876f::function_8e9f617f(512, 1);
+    }
+    e_volume = getent("info_armory_wave2", "targetname");
+    a_ai = getentarray("sp_armory_lift_area_attackers_part2", "targetname");
+    for (i = 0; i < a_ai.size; i++) {
+        e_ent = a_ai[i] spawner::spawn();
+        e_ent setgoal(e_volume);
+        e_ent thread namespace_2cb3876f::function_8e9f617f(512, 1);
+    }
+}
+
+// Namespace namespace_52f8de11
+// Params 0, eflags: 0x0
+// Checksum 0x184ea2be, Offset: 0x5798
+// Size: 0x7a
+function function_bce54c0b() {
+    a_spawners = getentarray("sp_armory_walkway_attackers", "targetname");
+    for (i = 0; i < a_spawners.size; i++) {
+        e_ent = a_spawners[i] spawner::spawn();
+        wait(1.5);
+    }
+    wait(3);
+    level thread function_ad03757a();
+}
+
+// Namespace namespace_52f8de11
+// Params 0, eflags: 0x0
+// Checksum 0xe8839630, Offset: 0x5820
+// Size: 0x92
+function function_36113d75() {
+    level thread namespace_2cb3876f::function_e0fb6da9("s_armory_moveup_start", -16, 7, 1, 1, 3, "info_armory_wave2", "info_armory_enemy_pushup");
+    level thread namespace_2cb3876f::function_e0fb6da9("s_armory_moveup_point_left", -16, 4, 1, 1, 6, "info_armory_wave2", "info_armory_enemy_pushup");
+    level thread namespace_2cb3876f::function_e0fb6da9("s_armory_moveup_point_right", -16, 4, 1, 1, 6, "info_armory_wave2", "info_armory_enemy_pushup");
+}
+
+// Namespace namespace_52f8de11
+// Params 0, eflags: 0x0
+// Checksum 0x4eefc4cc, Offset: 0x58c0
+// Size: 0xf2
+function function_e6af47cb() {
+    level flag::wait_till("open_weapons_room");
+    level.var_2fd26037 setgoal(level.var_2fd26037.origin);
+    level.var_2fd26037 clearforcedgoal();
+    level.var_2fd26037.goalradius = 64;
+    level thread function_473b7de8();
+    wait(2);
+    trigger::use("trig_armory_color");
+    namespace_2cb3876f::function_d1f1caad("t_script_color_allies_r2010");
+    namespace_2cb3876f::function_d1f1caad("t_script_color_allies_r2020");
+    namespace_2cb3876f::function_d1f1caad("t_script_color_allies_r2030");
+    namespace_2cb3876f::function_d1f1caad("t_script_color_allies_r2040");
+}
+
+// Namespace namespace_52f8de11
+// Params 0, eflags: 0x0
+// Checksum 0xb51a58fa, Offset: 0x59c0
+// Size: 0xf6
+function function_473b7de8() {
+    while (!scene::is_ready("cin_pro_07_01_securitydesk_vign_weapons")) {
+        wait(0.05);
+    }
+    scene::add_scene_func("cin_pro_07_01_securitydesk_vign_weapons", &function_d4401b52);
+    scene::play("cin_pro_07_01_securitydesk_vign_weapons");
+    level notify(#"hash_69db142c");
+    var_22752fde = getnode("nd_khalil_armory_battle", "targetname");
+    level.var_9db406db.goalradius = 64;
+    level.var_9db406db setgoal(var_22752fde.origin);
+    level.var_9db406db waittill(#"goal");
+    level.var_9db406db.goalradius = 512;
+}
+
+// Namespace namespace_52f8de11
+// Params 1, eflags: 0x0
+// Checksum 0x78a9c0c5, Offset: 0x5ac0
+// Size: 0xc2
+function function_d4401b52(a_ents) {
+    level endon(#"hash_2b5787d4");
+    level.var_4d5a4697 ai::gun_remove();
+    level.var_9db406db ai::gun_remove();
+    level.var_4d5a4697 waittill(#"hash_c89e55c9");
+    a_ents["arak_m"] hide();
+    level.var_4d5a4697 ai::gun_recall();
+    level.var_9db406db waittill(#"hash_2dc522e9");
+    a_ents["arak_k"] hide();
+    level.var_9db406db ai::gun_recall();
+}
+
+// Namespace namespace_52f8de11
+// Params 0, eflags: 0x0
+// Checksum 0x40d00e9f, Offset: 0x5b90
+// Size: 0x9e
+function function_ad03757a() {
+    wait(3);
+    a_ai = spawner::get_ai_group_ai("security_balcony");
+    if (a_ai.size > 0) {
+        var_b5dd40c7 = array::random(a_ai);
+        var_b5dd40c7 scene::play("cin_pro_07_01_securitydesk_vign_dropdown", var_b5dd40c7);
+        if (isalive(var_b5dd40c7)) {
+            var_b5dd40c7 setgoal(var_b5dd40c7.origin);
+            var_b5dd40c7.goalradius = 512;
+        }
+    }
+}
+
+// Namespace namespace_52f8de11
+// Params 0, eflags: 0x0
+// Checksum 0xf40f507f, Offset: 0x5c38
+// Size: 0x89
+function function_680575de() {
+    namespace_2cb3876f::function_520255e3("t_armory_wave2", 5);
+    var_fe3db664 = getentarray("sp_armory_wave2", "targetname");
+    for (i = 0; i < var_fe3db664.size; i++) {
+        e_ent = var_fe3db664[i] spawner::spawn();
+        e_ent thread function_2fa59109();
+    }
+}
+
+// Namespace namespace_52f8de11
+// Params 0, eflags: 0x0
+// Checksum 0xe14dcf62, Offset: 0x5cd0
+// Size: 0x42
+function function_2fa59109() {
+    e_volume = getent("info_armory_wave2", "targetname");
+    self setgoal(e_volume);
+}
+
+// Namespace namespace_52f8de11
+// Params 0, eflags: 0x0
+// Checksum 0xa2e25c04, Offset: 0x5d20
+// Size: 0x22
+function function_d9f4b7bc() {
+    level.var_9db406db thread dialog::say("khal_i_need_to_get_my_wea_0");
+}
+
+// Namespace namespace_52f8de11
+// Params 0, eflags: 0x0
+// Checksum 0xafdbcca4, Offset: 0x5d50
+// Size: 0x42
+function function_b60a26e8() {
+    objectives::set("cp_level_prologue_defend_khalil", level.var_9db406db);
+    level waittill(#"hash_69db142c");
+    objectives::complete("cp_level_prologue_defend_khalil");
+}
+
+#namespace namespace_e80bc418;
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x9aa4b3ee, Offset: 0x5da0
+// Size: 0x52
+function function_7280b87c() {
+    level flag::init("lift_arrived");
+    level flag::init("crane_in_position");
+    level flag::init("crane_dropped");
+    level.var_1dd14818 = 0;
+}
+
+// Namespace namespace_e80bc418
+// Params 1, eflags: 0x0
+// Checksum 0x180edd31, Offset: 0x5e00
+// Size: 0x2e2
+function function_68538fd(str_objective) {
+    function_7280b87c();
+    if (!isdefined(level.var_2fd26037)) {
+        level.var_2fd26037 = util::function_740f8516("hendricks");
+        cp_mi_eth_prologue::function_bff1a867();
+        level.var_2fd26037.goalradius = 16;
+        level.var_4d5a4697 = util::function_740f8516("minister");
+        cp_mi_eth_prologue::function_211ff3c7();
+        level.var_4d5a4697 ai::set_ignoreme(1);
+        level.var_9db406db = util::function_740f8516("khalil");
+        cp_mi_eth_prologue::function_c117302b();
+        level.var_9db406db ai::set_ignoreme(1);
+        skipto::teleport_ai(str_objective);
+    }
+    callback::on_ai_killed(&namespace_61c634f2::function_cbaf37cd);
+    var_489e46a = getent("t_regroup_lift", "targetname");
+    var_489e46a triggerenable(0);
+    trigger::use("t_lift_respawns_disable");
+    exploder::stop_exploder("light_exploder_prison_exit");
+    level.var_2fd26037 ai::set_ignoreall(0);
+    level.var_4d5a4697 ai::set_ignoreall(0);
+    battlechatter::function_d9f49fba(1);
+    namespace_2cb3876f::function_47a62798(1);
+    level thread function_9793598c();
+    level thread function_5517d018();
+    level thread function_6fabe3da();
+    level thread function_b17bd9c5();
+    function_e97f7dba();
+    var_489e46a = getent("t_regroup_lift", "targetname");
+    var_489e46a triggerenable(1);
+    trigger::use("t_lift_respawns_enable");
+    level thread function_a3dbf6a2();
+    level thread function_613d7b39();
+    level waittill(#"hash_b100689e");
+    callback::remove_on_ai_killed(&namespace_61c634f2::function_cbaf37cd);
+    skipto::function_be8adfb8("skipto_lift_escape");
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x757b4eac, Offset: 0x60f0
+// Size: 0x242
+function function_9793598c() {
+    level thread function_b1017ede();
+    level thread namespace_2cb3876f::function_e0fb6da9("s_lift_enemy_moveup_point_1", -126, 10, 1, 2, 10, "v_lift_fallback", "info_lift_start_right_side");
+    level thread function_eeb1c74e();
+    level thread function_30a5bc5();
+    level thread function_c8950894();
+    level thread function_a86c4e88();
+    level thread namespace_2cb3876f::function_40e4b0cf("sm_lift_start_left_side", "sp_lift_start_left_side", "info_lift_start_left_side");
+    if (level.activeplayers.size > 1) {
+        level thread namespace_2cb3876f::function_40e4b0cf("sm_lift_start_right_side", "sp_lift_start_right_side", "info_lift_start_right_side");
+    } else {
+        spawn_manager::kill("sm_lift_start_right_side");
+    }
+    level thread function_8a1821e("t_left_start_fallback", "info_left_start_fallback", "v_lift_fallback");
+    level thread function_8a1821e("t_right_start_fallback", "info_lift_start_right_side", "v_lift_fallback");
+    level thread function_8949fadf();
+    level thread function_51da5fc6();
+    trigger::wait_till("t_lift_reinforcements", undefined, undefined, 0);
+    a_spawners = getentarray("sp_stairs_guy_wave2", "targetname");
+    foreach (sp_spawner in a_spawners) {
+        sp_spawner spawner::spawn();
+    }
+    level thread namespace_2cb3876f::function_40e4b0cf("sm_lift_final_attackers", "sp_lift_final_attackers", "v_lift_fallback");
+    level thread function_93c4d161();
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0xf67e4a27, Offset: 0x6340
+// Size: 0x1a5
+function function_b1017ede() {
+    level endon(#"hash_631a1949");
+    a_players = getplayers();
+    if (a_players.size > 1) {
+        return;
+    }
+    start_time = gettime();
+    var_c2798c63 = getent("info_lift_players_camping", "targetname");
+    var_a9dae27c = getent("info_lift_area_volume", "targetname");
+    while (true) {
+        e_player = getplayers()[0];
+        time = gettime();
+        if (e_player istouching(var_c2798c63)) {
+            dt = (time - start_time) / 1000;
+            if (dt > 15) {
+                var_f2c0d323 = 0;
+                a_enemy = namespace_2cb3876f::function_68b8f4af(var_a9dae27c);
+                for (i = 0; i < a_enemy.size; i++) {
+                    e_enemy = a_enemy[i];
+                    if (!isdefined(e_enemy.var_4383fc69)) {
+                        e_enemy.var_4383fc69 = 1;
+                        e_enemy.goalradius = -56;
+                        e_enemy setgoal(e_player.origin);
+                        start_time = time;
+                        var_f2c0d323 = 1;
+                        break;
+                    }
+                }
+                if (!var_f2c0d323) {
+                    return;
+                }
+            }
+        } else {
+            start_time = time;
+        }
+        wait(0.05);
+    }
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x4904e822, Offset: 0x64f0
+// Size: 0x3a
+function function_a86c4e88() {
+    namespace_2cb3876f::function_d1f1caad("t_lift_intro_runners");
+    wait(10);
+    level thread namespace_2cb3876f::function_a7eac508("sp_lift_intro_rightside_backup", undefined, undefined, undefined);
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x68b8c536, Offset: 0x6538
+// Size: 0x1c9
+function function_eeb1c74e() {
+    level flag::wait_till("lift_arrived");
+    wait(10);
+    var_91737097 = getent("info_lift_area_volume", "targetname");
+    var_2320a476 = getent("info_lift_start_area_volume", "targetname");
+    while (true) {
+        if (isdefined(level.var_1f5f8798) && level.var_1f5f8798) {
+            return;
+        }
+        a_ai = getaiteamarray("axis");
+        count = 0;
+        for (i = 0; i < a_ai.size; i++) {
+            if (a_ai[i] istouching(var_2320a476)) {
+                count++;
+            }
+        }
+        if (count <= 2) {
+            break;
+        }
+        wait(0.05);
+    }
+    a_ai = getaiteamarray("axis");
+    a_enemy = [];
+    for (i = 0; i < a_ai.size; i++) {
+        e_ent = a_ai[i];
+        if (e_ent istouching(var_91737097) && !e_ent istouching(var_2320a476)) {
+            a_enemy[a_enemy.size] = e_ent;
+        }
+    }
+    count = a_enemy.size;
+    if (count > 3) {
+        count = 3;
+    }
+    for (i = 0; i < count; i++) {
+        e_ent = a_enemy[i];
+        e_ent setgoal(var_2320a476);
+    }
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0xbb0fb040, Offset: 0x6710
+// Size: 0x32
+function function_30a5bc5() {
+    namespace_2cb3876f::function_d1f1caad("t_lift_intro_runners");
+    level thread namespace_2cb3876f::function_a7eac508("sp_lift_intro_runners", 64, 64, undefined);
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x37d4722, Offset: 0x6750
+// Size: 0x32
+function function_c8950894() {
+    namespace_2cb3876f::function_d1f1caad("t_intro_guys_on_bridge");
+    namespace_2cb3876f::function_73acb160("sp_lift_stairs_intro_guys", undefined);
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0xe2259114, Offset: 0x6790
+// Size: 0x192
+function function_b17bd9c5() {
+    level.var_2fd26037.script_accuracy = 0.6;
+    level.var_4d5a4697.script_accuracy = 0.6;
+    level.var_9db406db.script_accuracy = 0.6;
+    level thread function_17d64396();
+    trigger::use("t_script_color_allies_r920");
+    trigger::wait_till("t_script_color_allies_r950");
+    level flag::wait_till("crane_in_position");
+    if (!level flag::get("crane_dropped")) {
+        e_target = util::spawn_model("tag_origin", struct::get("s_destroy_pipes", "targetname").origin);
+        e_target.health = 1000;
+        level.var_2fd26037 ai::shoot_at_target("normal", e_target, "tag_origin", 3);
+        e_target delete();
+        t_damage = getent("crane_damage_trigger", "targetname");
+        if (isdefined(t_damage)) {
+            t_damage useby(level.var_2fd26037);
+        }
+    }
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x4541d9d2, Offset: 0x6930
+// Size: 0x149
+function function_e97f7dba() {
+    spawner::waittill_ai_group_cleared("lift_area");
+    level thread namespace_21b2c1f2::function_49fef8f4();
+    level thread function_d4734ff1();
+    level thread function_6f04ae03();
+    level.var_2fd26037 thread function_add8f6bb();
+    level.var_9db406db thread function_f92b76b7();
+    level.var_4d5a4697 thread function_c3ab179b();
+    level flag::wait_till("hendricks_in_lift");
+    level flag::wait_till("minister_in_lift");
+    level flag::wait_till("khalil_in_lift");
+    while (!level scene::is_ready("cin_pro_09_01_intro_1st_cybersoldiers_diaz_attack") || !level scene::is_ready("cin_pro_09_01_intro_1st_cybersoldiers_maretti_attack") || !level scene::is_ready("cin_pro_09_01_intro_1st_cybersoldiers_sarah_attack") || !level scene::is_ready("cin_pro_09_01_intro_1st_cybersoldiers_taylor_attack")) {
+        wait(0.05);
+    }
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x8ba7c4e1, Offset: 0x6a88
+// Size: 0xd2
+function function_17d64396() {
+    namespace_2cb3876f::function_d1f1caad("entering_lift_fight");
+    start_time = gettime();
+    while (true) {
+        time = gettime();
+        dt = (time - start_time) / 1000;
+        if (dt > 10) {
+            var_f04bd8f5 = namespace_2cb3876f::function_609c412a("info_lift_start_area_volume", 0);
+            if (var_f04bd8f5 <= 2) {
+                break;
+            }
+        }
+        wait(0.05);
+    }
+    e_trigger = getent("t_script_color_allies_r930", "targetname");
+    if (isdefined(e_trigger)) {
+        trigger::use("t_script_color_allies_r930");
+    }
+}
+
+// Namespace namespace_e80bc418
+// Params 3, eflags: 0x0
+// Checksum 0xfd168f2e, Offset: 0x6b68
+// Size: 0x101
+function function_8a1821e(str_trigger, var_fc9c675e, var_62ec3b42) {
+    e_trigger = getent(str_trigger, "targetname");
+    if (isdefined(e_trigger)) {
+        e_trigger waittill(#"trigger");
+    }
+    var_cc6832b6 = getent(var_fc9c675e, "targetname");
+    var_97e01c0a = getent(var_62ec3b42, "targetname");
+    a_ai = getaiteamarray("axis");
+    for (i = 0; i < a_ai.size; i++) {
+        e_ent = a_ai[i];
+        if (e_ent istouching(var_cc6832b6)) {
+            e_ent setgoalvolume(var_97e01c0a);
+        }
+    }
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0xd18d2f5f, Offset: 0x6c78
+// Size: 0x62
+function function_d4734ff1() {
+    level thread scene::init("cin_pro_09_01_intro_1st_cybersoldiers_diaz_attack");
+    level thread scene::init("cin_pro_09_01_intro_1st_cybersoldiers_maretti_attack");
+    level thread scene::init("cin_pro_09_01_intro_1st_cybersoldiers_sarah_attack");
+    level thread scene::init("cin_pro_09_01_intro_1st_cybersoldiers_taylor_attack");
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x2e191f02, Offset: 0x6ce8
+// Size: 0x2f6
+function function_a3dbf6a2() {
+    trigger::wait_till("t_lift_interior");
+    var_d39a9d5b = getent("player_lift_clip", "targetname");
+    var_d39a9d5b movez(124, 0.05);
+    level.var_5b3ac1ed = 1;
+    level scene::add_scene_func("cin_pro_09_01_intro_1st_cybersoldiers_elevator_ride", &namespace_dccf27b3::function_679e7da9, "play");
+    level thread scene::play("cin_pro_09_01_intro_1st_cybersoldiers_lift_pushbutton");
+    level.var_4d5a4697.goalradius = 16;
+    level.var_4d5a4697.goalheight = 1600;
+    level.var_4d5a4697 setgoal(level.var_4d5a4697.origin);
+    level.var_9db406db.goalradius = 16;
+    level.var_9db406db.goalheight = 1600;
+    level.var_9db406db setgoal(level.var_9db406db.origin);
+    level notify(#"hash_3e51db3e");
+    level thread function_45ed0d4b(0, 1.5);
+    level waittill(#"hash_9e4059e6");
+    level.var_be31aa9a = getent("freight_lift", "targetname");
+    level.var_be31aa9a setmovingplatformenabled(1);
+    level.var_be31aa9a playsound("evt_freight_lift_start");
+    level.var_7b90133a = spawn("script_origin", level.var_be31aa9a.origin);
+    level.var_7b90133a linkto(level.var_be31aa9a);
+    level.var_7b90133a playloopsound("evt_freight_lift_loop");
+    level thread function_4d214c02(1);
+    level thread function_e19320a1(1);
+    level.var_be31aa9a thread scene::play("cin_pro_09_01_intro_1st_cybersoldiers_elevator");
+    level.var_3dce3f88 movez(270, 16.3);
+    level.var_3dce3f88 thread function_5bd223b0();
+    wait(16.3 - 2);
+    setdvar("grenadeAllowRigidBodyPhysics", "1");
+    level notify(#"hash_b100689e");
+    level.var_b100689e = 1;
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0xdd88bf7b, Offset: 0x6fe8
+// Size: 0xf1
+function function_5bd223b0() {
+    self endon(#"death");
+    self waittill(#"movedone");
+    t_bottom = getent("t_lift_interior", "targetname");
+    a_s_spots = struct::get_array("lift_left_behind", "targetname");
+    for (i = 0; i < level.activeplayers.size; i++) {
+        player = level.activeplayers[i];
+        if (player istouching(t_bottom)) {
+            player setorigin(a_s_spots[i].origin);
+            player setplayerangles(a_s_spots[i].angles);
+        }
+    }
+}
+
+// Namespace namespace_e80bc418
+// Params 1, eflags: 0x0
+// Checksum 0x9103a032, Offset: 0x70e8
+// Size: 0x12a
+function function_e19320a1(n_delay) {
+    if (!isdefined(n_delay)) {
+        n_delay = 0.05;
+    }
+    wait(n_delay);
+    exploder::stop_exploder("light_exploder_lift_inside");
+    exploder::exploder("light_exploder_lift_rising");
+    exploder::exploder("light_exploder_igc_cybersoldier");
+    exploder::exploder("fx_exploder_door_open_dust");
+    mdl_door_left = getent("hangar_lift_door_left", "targetname");
+    mdl_door_right = getent("hangar_lift_door_right", "targetname");
+    playsoundatposition("evt_freight_lift_abovedoor", mdl_door_right.origin);
+    mdl_door_left movey(104, 5);
+    mdl_door_right movey(104 * -1, 5);
+}
+
+// Namespace namespace_e80bc418
+// Params 1, eflags: 0x0
+// Checksum 0xfb0aba5b, Offset: 0x7220
+// Size: 0x13d
+function function_4d214c02(delay) {
+    wait(delay);
+    while (!(isdefined(level.var_b100689e) && level.var_b100689e)) {
+        foreach (player in level.players) {
+            player playrumbleonentity("cp_prologue_rumble_lift");
+        }
+        wait(0.5);
+    }
+    start_time = gettime();
+    while (true) {
+        time = gettime();
+        dt = (time - start_time) / 1000;
+        if (dt > 8) {
+            break;
+        }
+        foreach (player in level.players) {
+            player playrumbleonentity("cp_prologue_rumble_lift");
+        }
+        wait(0.5);
+    }
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x7f4e1c0a, Offset: 0x7368
+// Size: 0x2a
+function function_17ecef2() {
+    self.script_accuracy = 0.5;
+    self.overrideactordamage = &function_10ffa58e;
+}
+
+// Namespace namespace_e80bc418
+// Params 13, eflags: 0x0
+// Checksum 0xb0ca54ea, Offset: 0x73a0
+// Size: 0xa2
+function function_10ffa58e(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, damagefromunderneath, modelindex, partname) {
+    if (self.health - idamage <= 0) {
+        if (isdefined(eattacker) && isplayer(eattacker)) {
+            eattacker notify(#"hash_38f375b6");
+        }
+    }
+    return idamage;
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x48f86ffd, Offset: 0x7450
+// Size: 0xc1
+function function_613d7b39() {
+    level waittill(#"hash_b100689e");
+    wait(2);
+    if (isdefined(level.var_90cd4b44)) {
+        cp_mi_eth_prologue::function_6a77bdd4(level.var_90cd4b44);
+    }
+    if (isdefined(level.var_5fbe7226)) {
+        cp_mi_eth_prologue::function_6a77bdd4(level.var_5fbe7226);
+    }
+    level.var_4d5a4697.goalheight = 80;
+    level.var_9db406db.goalheight = 80;
+    a_ai = getaiteamarray("axis");
+    for (i = 0; i < a_ai.size; i++) {
+        a_ai[i] delete();
+    }
+}
+
+// Namespace namespace_e80bc418
+// Params 2, eflags: 0x0
+// Checksum 0xf243dd38, Offset: 0x7520
+// Size: 0xb3
+function cleanup(var_95c5d6ed, var_5feb916c) {
+    spawn_manager::kill(var_95c5d6ed);
+    var_db932442 = spawner::get_ai_group_ai(var_5feb916c);
+    foreach (var_1bed86d6 in var_db932442) {
+        if (isalive(var_1bed86d6)) {
+            var_1bed86d6 delete();
+        }
+    }
+}
+
+// Namespace namespace_e80bc418
+// Params 1, eflags: 0x0
+// Checksum 0x3ffe6aa7, Offset: 0x75e0
+// Size: 0x6e
+function function_9b5132a1(str_s_target) {
+    s_target = struct::get(str_s_target, "targetname");
+    self.var_5ddefd36 = undefined;
+    self.goalradius = -128;
+    self setgoalpos(s_target.origin);
+    self waittill(#"goal");
+    self.var_5ddefd36 = 1;
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0xcea8c160, Offset: 0x7658
+// Size: 0x72
+function function_add8f6bb() {
+    self colors::disable();
+    scene::add_scene_func("cin_pro_09_01_intro_1st_cybersoldiers_elevator_ride_start_hendricks", &function_3703e000, "play");
+    level scene::play("cin_pro_09_01_intro_1st_cybersoldiers_elevator_ride_start_hendricks");
+    level flag::set("hendricks_in_lift");
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x1ba19f44, Offset: 0x76d8
+// Size: 0x9a
+function function_c3ab179b() {
+    self ai::set_behavior_attribute("vignette_mode", "slow");
+    scene::add_scene_func("cin_pro_09_01_intro_1st_cybersoldiers_elevator_ride_start_minister", &function_6d36e736, "play");
+    level scene::play("cin_pro_09_01_intro_1st_cybersoldiers_elevator_ride_start_minister");
+    self setgoal(self.origin, 1);
+    level flag::set("minister_in_lift");
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x271709f0, Offset: 0x7780
+// Size: 0x9a
+function function_f92b76b7() {
+    self ai::set_behavior_attribute("vignette_mode", "slow");
+    scene::add_scene_func("cin_pro_09_01_intro_1st_cybersoldiers_elevator_ride_start_khalil", &function_789cecd6, "play");
+    level scene::play("cin_pro_09_01_intro_1st_cybersoldiers_elevator_ride_start_khalil");
+    self setgoal(self.origin, 1);
+    level flag::set("khalil_in_lift");
+}
+
+// Namespace namespace_e80bc418
+// Params 1, eflags: 0x0
+// Checksum 0x2baeee5e, Offset: 0x7828
+// Size: 0x2a
+function function_3703e000(a_ents) {
+    level endon(#"hash_7880f194");
+    wait(6);
+    level flag::set("hendricks_in_lift");
+}
+
+// Namespace namespace_e80bc418
+// Params 1, eflags: 0x0
+// Checksum 0xccaa486e, Offset: 0x7860
+// Size: 0x2a
+function function_6d36e736(a_ents) {
+    level endon(#"hash_9368976");
+    wait(4);
+    level flag::set("minister_in_lift");
+}
+
+// Namespace namespace_e80bc418
+// Params 1, eflags: 0x0
+// Checksum 0x8d5c727f, Offset: 0x7898
+// Size: 0x32
+function function_789cecd6(a_ents) {
+    level endon(#"hash_4c888af6");
+    wait(6.7);
+    level flag::set("khalil_in_lift");
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0xc4cfd4a8, Offset: 0x78d8
+// Size: 0x62
+function function_8949fadf() {
+    e_trigger = getent("t_lift_player_advances", "targetname");
+    if (isdefined(e_trigger)) {
+        e_trigger waittill(#"trigger");
+    }
+    level thread namespace_2cb3876f::function_a7eac508("sp_lift_player_advances", 64, 64, undefined);
+    level.var_1f5f8798 = 1;
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x61f9b441, Offset: 0x7948
+// Size: 0x3f2
+function function_51da5fc6() {
+    level.var_be31aa9a = getent("freight_lift", "targetname");
+    level.var_3dce3f88 = spawn("script_model", level.var_be31aa9a.origin);
+    level.var_be31aa9a linkto(level.var_3dce3f88);
+    level.var_be31aa9a setmovingplatformenabled(1);
+    level.var_be31aa9a thread function_f2f20b35();
+    exploder::exploder("light_exploder_lift_inside");
+    function_dfbe3c61();
+    a_spawners = getentarray("sp_lift_reinforcements", "targetname");
+    for (i = 0; i < a_spawners.size; i++) {
+        a_spawners[i] spawner::add_spawn_function(&function_38a8e28b);
+        a_spawners[i] spawner::spawn();
+    }
+    v_down = (0, 0, -1);
+    dist = 354;
+    move_time = 5;
+    var_519d9482 = level.var_be31aa9a.origin + v_down * dist;
+    level.var_3dce3f88 moveto(var_519d9482, move_time);
+    level.var_be31aa9a = getent("freight_lift", "targetname");
+    level.var_be31aa9a playsound("evt_freight_lift_start");
+    var_7b90133a = spawn("script_origin", level.var_be31aa9a.origin);
+    var_7b90133a linkto(level.var_be31aa9a);
+    var_7b90133a playloopsound("evt_freight_lift_loop");
+    level.var_3dce3f88 waittill(#"movedone");
+    level.var_3dce3f88 scene::init("cin_pro_08_01_liftescape_vign_lift_doorsopen", level.var_be31aa9a);
+    var_7b90133a stoploopsound(0.1);
+    setdvar("grenadeAllowRigidBodyPhysics", "0");
+    open_time = 1.5;
+    level thread function_45ed0d4b(1, open_time);
+    wait(open_time + 0.1);
+    var_950ed8c6 = getnode("n_lift_entrance_begin3", "targetname");
+    linktraversal(var_950ed8c6);
+    level flag::set("lift_arrived");
+    a_nodes = getnodearray("nd_exit_lift", "targetname");
+    a_ai = getentarray("sp_lift_reinforcements_ai", "targetname");
+    for (i = 0; i < a_ai.size; i++) {
+        a_ai[i] thread function_c6db42e4(a_nodes[i]);
+    }
+    wait(1);
+    level.var_2fd26037 dialog::say("hend_spotted_more_reinfor_0");
+}
+
+// Namespace namespace_e80bc418
+// Params 1, eflags: 0x0
+// Checksum 0xc1de545c, Offset: 0x7d48
+// Size: 0x56
+function function_c6db42e4(var_22752fde) {
+    self endon(#"death");
+    self util::stop_magic_bullet_shield();
+    self.goalradius = 64;
+    self setgoal(var_22752fde.origin);
+    self waittill(#"goal");
+    self.goalradius = 1024;
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0xb74db613, Offset: 0x7da8
+// Size: 0x22
+function function_38a8e28b() {
+    self.goalradius = 64;
+    self.var_37b94263 = 1;
+    self util::magic_bullet_shield();
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x7016e846, Offset: 0x7dd8
+// Size: 0x1a9
+function function_93c4d161() {
+    e_volume = getent("info_lift_start_area_volume", "targetname");
+    while (true) {
+        var_b9c84787 = getaiteamarray("axis");
+        if (var_b9c84787.size < 5) {
+            a_enemy = namespace_2cb3876f::function_68b8f4af(e_volume);
+            if (a_enemy.size < 3) {
+                break;
+            }
+        }
+        wait(0.05);
+    }
+    var_d6bb42cf = getent("v_lift_fallback", "targetname");
+    for (i = 0; i < a_enemy.size; i++) {
+        var_f4b1d057 = a_enemy[i];
+        var_f4b1d057 setgoal(var_d6bb42cf);
+    }
+    var_d6bb42cf = getent("info_lift_area_volume", "targetname");
+    while (true) {
+        a_enemy = namespace_2cb3876f::function_68b8f4af(e_volume);
+        if (a_enemy.size <= 1) {
+            break;
+        }
+        wait(0.05);
+    }
+    for (i = 0; i < a_enemy.size; i++) {
+        e_player = getplayers()[0];
+        e_enemy = a_enemy[i];
+        e_enemy.goalradius = -56;
+        e_enemy setgoal(e_player);
+    }
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x12ce9f78, Offset: 0x7f90
+// Size: 0xcf
+function function_dfbe3c61() {
+    namespace_2cb3876f::function_d1f1caad("entering_lift_fight");
+    start_time = gettime();
+    while (true) {
+        time = gettime();
+        dt = (time - start_time) / 1000;
+        if (dt > 20) {
+            e_trigger = getent("t_lift_reinforcements", "targetname");
+            if (!isdefined(e_trigger)) {
+                break;
+            }
+            var_f04bd8f5 = namespace_2cb3876f::function_609c412a("info_lift_area_volume", 0);
+            if (var_f04bd8f5 < 3) {
+                break;
+            }
+        }
+        wait(0.05);
+    }
+    level notify(#"hash_631a1949");
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0xe57ecda3, Offset: 0x8068
+// Size: 0x252
+function function_f2f20b35() {
+    var_dda0086b = getent("probe_lift", "targetname");
+    var_dda0086b linkto(self);
+    var_62873ca1 = getent("light_lift", "targetname");
+    var_62873ca1 linkto(self);
+    var_51875481 = getentarray("light_lift_02", "targetname");
+    foreach (light in var_51875481) {
+        light linkto(self);
+    }
+    var_51875481 = getentarray("light_lift_03", "targetname");
+    foreach (light in var_51875481) {
+        light linkto(self);
+    }
+    var_51875481 = getentarray("light_lift_panel_anim01", "targetname");
+    foreach (light in var_51875481) {
+        light linkto(self);
+    }
+    var_62873ca1 = getent("light_lift_panel_anim02", "targetname");
+    var_62873ca1 linkto(self);
+    level waittill(#"hash_a1a67fd8");
+    exploder::exploder("light_lift_panel_green");
+}
+
+// Namespace namespace_e80bc418
+// Params 2, eflags: 0x0
+// Checksum 0xd962973e, Offset: 0x82c8
+// Size: 0x25a
+function function_45ed0d4b(open_door, move_time) {
+    var_507d66a5 = getent("lift_door_top", "targetname");
+    var_3d3eb4dd = getent("lift_door_bottom", "targetname");
+    v_up = (0, 0, 1);
+    var_cbe6253d = 100;
+    if (open_door) {
+        if (level.var_1dd14818 == 1) {
+            return;
+        }
+        v_dest = var_507d66a5.origin + v_up * var_cbe6253d;
+        var_507d66a5 moveto(v_dest, move_time);
+        v_dest = var_3d3eb4dd.origin + v_up * var_cbe6253d * -1;
+        var_3d3eb4dd moveto(v_dest, move_time);
+        level.var_1dd14818 = 1;
+    } else {
+        if (level.var_1dd14818 == 0) {
+            return;
+        }
+        v_dest = var_507d66a5.origin + v_up * var_cbe6253d * -1;
+        var_507d66a5 moveto(v_dest, move_time);
+        v_dest = var_3d3eb4dd.origin + v_up * var_cbe6253d;
+        var_3d3eb4dd moveto(v_dest, move_time);
+        level.var_1dd14818 = 0;
+    }
+    var_3d3eb4dd playsound("evt_freight_elev_door_start");
+    var_cc8ae729 = spawn("script_origin", var_3d3eb4dd.origin);
+    var_cc8ae729 linkto(var_3d3eb4dd);
+    var_cc8ae729 playloopsound("evt_freight_elev_door_loop");
+    wait(move_time);
+    var_3d3eb4dd playsound("evt_freight_elev_door_stop");
+    var_cc8ae729 stoploopsound(0.1);
+    if (open_door) {
+        level.var_3dce3f88 scene::play("cin_pro_08_01_liftescape_vign_lift_doorsopen", level.var_be31aa9a);
+        return;
+    }
+    level.var_3dce3f88 scene::play("cin_pro_08_01_liftescape_vign_lift_doorsclose", level.var_be31aa9a);
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x99565026, Offset: 0x8530
+// Size: 0x2b2
+function function_5517d018() {
+    e_trigger = getent("crane_damage_trigger", "targetname");
+    e_trigger triggerenable(0);
+    namespace_2cb3876f::function_d1f1caad("t_intro_guys_on_bridge");
+    level thread scene::play("p7_fxanim_cp_prologue_ceiling_underground_crane_bundle", "scriptbundlename");
+    level waittill(#"hash_231a1398");
+    level flag::set("crane_in_position");
+    e_trigger triggerenable(1);
+    e_who = e_trigger waittill(#"trigger");
+    e_trigger delete();
+    level thread scene::play("p7_fxanim_cp_prologue_ceiling_underground_crane_shot_bundle");
+    level waittill(#"hash_1cda5581");
+    level flag::set("crane_dropped");
+    a_ai = getaiteamarray("axis");
+    e_volume = getent("info_crane_drop", "targetname");
+    for (i = 0; i < a_ai.size; i++) {
+        if (isalive(a_ai[i]) && a_ai[i] istouching(e_volume)) {
+            a_ai[i] kill();
+            if (isplayer(e_who)) {
+                namespace_61c634f2::function_d248b92b(e_who);
+            }
+        }
+    }
+    foreach (player in level.players) {
+        if (player istouching(e_volume)) {
+            player dodamage(500, e_volume.origin);
+        }
+    }
+    e_volume delete();
+    e_coll = getent("lifttunnel_pipecollision", "targetname");
+    e_coll movez(-80, 0.05);
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0xe737ee01, Offset: 0x87f0
+// Size: 0x9a
+function function_6fabe3da() {
+    trigger::wait_till("entering_lift_fight");
+    level.var_2fd26037 dialog::say("hend_that_s_our_exit_car_0");
+    namespace_2cb3876f::function_520255e3("t_lift_reinforcements", 60);
+    level.var_2fd26037 dialog::say("hend_elevator_s_right_the_0");
+    level waittill(#"hash_3e51db3e");
+    level thread namespace_21b2c1f2::function_9f50ebc2();
+    level thread namespace_21b2c1f2::function_c4c71c7();
+}
+
+// Namespace namespace_e80bc418
+// Params 0, eflags: 0x0
+// Checksum 0x62ce82d3, Offset: 0x8898
+// Size: 0x4a
+function function_6f04ae03() {
+    level endon(#"hash_3e51db3e");
+    level.var_2fd26037 dialog::say("hend_let_s_move_get_to_t_0");
+    wait(15);
+    level.var_2fd26037 dialog::say("hend_keep_pushing_forward_0");
+}
+
