@@ -131,7 +131,7 @@ function function_1b3e50b5(var_50a9e5d9, waittime, rotatetime, var_b646c3f4, var
 }
 
 // Namespace namespace_1931cdeb
-// Params c, eflags: 0x1 linked
+// Params 12, eflags: 0x1 linked
 // Checksum 0x7f8d3134, Offset: 0x1250
 // Size: 0xc70
 function function_91ce410(cars, var_c4643bb7, var_c7166e37, start, var_c3f523d4, var_35fc930f, var_9071646e, var_fbb2796a, var_4eb99366, var_5f47c084, var_c4ecec2, var_4b395157) {

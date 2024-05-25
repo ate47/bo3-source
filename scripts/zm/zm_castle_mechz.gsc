@@ -454,7 +454,7 @@ function achievement_watcher(var_99c3dd59) {
 }
 
 // Namespace namespace_48131a3f
-// Params c, eflags: 0x0
+// Params 12, eflags: 0x0
 // Checksum 0x12b23dd1, Offset: 0x1b28
 // Size: 0xfe
 function function_f517cdd6(inflictor, attacker, damage, dflags, mod, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {

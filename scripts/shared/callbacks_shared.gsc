@@ -536,7 +536,7 @@ function codecallback_playermigrated() {
 }
 
 // Namespace callback
-// Params d, eflags: 0x1 linked
+// Params 13, eflags: 0x1 linked
 // Checksum 0x8f21f542, Offset: 0x13c0
 // Size: 0xb8
 function codecallback_playerdamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, timeoffset, boneindex, vsurfacenormal) {
@@ -580,7 +580,7 @@ function codecallback_actorspawned(spawner) {
 }
 
 // Namespace callback
-// Params f, eflags: 0x1 linked
+// Params 15, eflags: 0x1 linked
 // Checksum 0x1a0221f0, Offset: 0x1650
 // Size: 0xc8
 function codecallback_actordamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, timeoffset, boneindex, modelindex, surfacetype, surfacenormal) {
@@ -622,7 +622,7 @@ function codecallback_vehiclekilled(einflictor, eattacker, idamage, smeansofdeat
 }
 
 // Namespace callback
-// Params f, eflags: 0x1 linked
+// Params 15, eflags: 0x1 linked
 // Checksum 0xb692cfa, Offset: 0x1880
 // Size: 0xc8
 function codecallback_vehicledamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, timeoffset, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -630,7 +630,7 @@ function codecallback_vehicledamage(einflictor, eattacker, idamage, idflags, sme
 }
 
 // Namespace callback
-// Params d, eflags: 0x1 linked
+// Params 13, eflags: 0x1 linked
 // Checksum 0xed79f1cc, Offset: 0x1950
 // Size: 0xb0
 function codecallback_vehicleradiusdamage(einflictor, eattacker, idamage, finnerdamage, fouterdamage, idflags, smeansofdeath, weapon, vpoint, fradius, fconeanglecos, vconedir, timeoffset) {

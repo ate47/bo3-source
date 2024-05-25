@@ -537,7 +537,7 @@ function function_3722ecc9(clone, attacker, weapon) {
 }
 
 // Namespace namespace_b3cf5df2
-// Params f, eflags: 0x1 linked
+// Params 15, eflags: 0x1 linked
 // Checksum 0x601756fe, Offset: 0x25a0
 // Size: 0x196
 function clonedamageoverride(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, timeoffset, boneindex, modelindex, surfacetype, surfacenormal) {

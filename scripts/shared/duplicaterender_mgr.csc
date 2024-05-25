@@ -154,7 +154,7 @@ function set_dr_filter_framebuffer(name, priority, require_flags, refuse_flags, 
 }
 
 // Namespace duplicate_render
-// Params d, eflags: 0x1 linked
+// Params 13, eflags: 0x1 linked
 // Checksum 0x32073c41, Offset: 0x1028
 // Size: 0xbc
 function set_dr_filter_framebuffer_duplicate(name, priority, require_flags, refuse_flags, drtype1, drval1, drcull1, drtype2, drval2, drcull2, drtype3, drval3, drcull3) {
@@ -162,7 +162,7 @@ function set_dr_filter_framebuffer_duplicate(name, priority, require_flags, refu
 }
 
 // Namespace duplicate_render
-// Params d, eflags: 0x1 linked
+// Params 13, eflags: 0x1 linked
 // Checksum 0xe6b67e0c, Offset: 0x10f0
 // Size: 0xbc
 function set_dr_filter_offscreen(name, priority, require_flags, refuse_flags, drtype1, drval1, drcull1, drtype2, drval2, drcull2, drtype3, drval3, drcull3) {

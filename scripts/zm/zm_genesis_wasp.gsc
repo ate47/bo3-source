@@ -1106,7 +1106,7 @@ function function_c93c5341(var_c1c8e05) {
 }
 
 // Namespace namespace_3425d4b9
-// Params f, eflags: 0x0
+// Params 15, eflags: 0x0
 // Checksum 0x81eae405, Offset: 0x4430
 // Size: 0xe4
 function damage_callback(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {

@@ -213,7 +213,7 @@ function setup_wc_weapon_model(localclientnum, extracam_data_struct) {
 }
 
 // Namespace weapon_customization_icon
-// Params a, eflags: 0x1 linked
+// Params 10, eflags: 0x1 linked
 // Checksum 0x3216106c, Offset: 0xe80
 // Size: 0x190
 function process_wc_paintjobicon_extracam_request(localclientnum, extracamindex, jobindex, var_61813f1a, weaponoptions, var_8ebc235, loadoutslot, paintjobindex, paintjobslot, isfilesharepreview) {
@@ -231,7 +231,7 @@ function process_wc_paintjobicon_extracam_request(localclientnum, extracamindex,
 }
 
 // Namespace weapon_customization_icon
-// Params a, eflags: 0x1 linked
+// Params 10, eflags: 0x1 linked
 // Checksum 0xa21ad56, Offset: 0x1018
 // Size: 0x190
 function process_wc_varianticon_extracam_request(localclientnum, extracamindex, jobindex, var_61813f1a, weaponoptions, var_8ebc235, loadoutslot, paintjobindex, paintjobslot, isfilesharepreview) {

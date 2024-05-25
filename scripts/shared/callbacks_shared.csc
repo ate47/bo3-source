@@ -411,7 +411,7 @@ function codecallback_localclientchanged(localclientnum, entity) {
 }
 
 // Namespace callback
-// Params c, eflags: 0x1 linked
+// Params 12, eflags: 0x1 linked
 // Checksum 0xa7a85a58, Offset: 0x1180
 // Size: 0xb0
 function codecallback_airsupport(localclientnum, x, y, z, type, yaw, team, teamfaction, owner, exittype, time, height) {
@@ -694,7 +694,7 @@ function function_3d7f6850(localclientnum, jobindex, extracamindex, sessionmode,
 }
 
 // Namespace callback
-// Params a, eflags: 0x1 linked
+// Params 10, eflags: 0x1 linked
 // Checksum 0x8a9a6ccf, Offset: 0x1ca8
 // Size: 0x98
 function codecallback_extracamrenderwcpaintjobicon(localclientnum, extracamindex, jobindex, var_61813f1a, weaponoptions, var_8ebc235, loadoutslot, paintjobindex, paintjobslot, isfilesharepreview) {
@@ -704,7 +704,7 @@ function codecallback_extracamrenderwcpaintjobicon(localclientnum, extracamindex
 }
 
 // Namespace callback
-// Params a, eflags: 0x1 linked
+// Params 10, eflags: 0x1 linked
 // Checksum 0x9f9e78a4, Offset: 0x1d48
 // Size: 0x98
 function codecallback_extracamrenderwcvarianticon(localclientnum, extracamindex, jobindex, var_61813f1a, weaponoptions, var_8ebc235, loadoutslot, paintjobindex, paintjobslot, isfilesharepreview) {

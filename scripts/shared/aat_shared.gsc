@@ -225,7 +225,7 @@ function get_nonalternate_weapon(weapon) {
 }
 
 // Namespace aat
-// Params d, eflags: 0x1 linked
+// Params 13, eflags: 0x1 linked
 // Checksum 0x2031490d, Offset: 0xe20
 // Size: 0x5fc
 function aat_response(death, inflictor, attacker, damage, flags, mod, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, surfacetype) {

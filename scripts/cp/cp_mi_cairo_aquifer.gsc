@@ -382,7 +382,7 @@ function function_f141f41c() {
 }
 
 // Namespace namespace_19487f32
-// Params b, eflags: 0x0
+// Params 11, eflags: 0x0
 // Checksum 0x6abf9f10, Offset: 0x2bf8
 // Size: 0x14c
 function function_6d9a8286(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex) {

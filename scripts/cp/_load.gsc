@@ -241,7 +241,7 @@ function function_13aa782f(player, target, weapon) {
 }
 
 // Namespace load
-// Params a, eflags: 0x0
+// Params 10, eflags: 0x0
 // Checksum 0x94ade954, Offset: 0x1420
 // Size: 0x392
 function player_damage_override(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime) {

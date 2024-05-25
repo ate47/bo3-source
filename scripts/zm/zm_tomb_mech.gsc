@@ -621,7 +621,7 @@ function function_8166f050(entity) {
 }
 
 // Namespace namespace_baebcb1
-// Params c, eflags: 0x1 linked
+// Params 12, eflags: 0x1 linked
 // Checksum 0x563f9fb, Offset: 0x2a58
 // Size: 0x116
 function function_c8cf79a8(inflictor, attacker, damage, dflags, mod, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {

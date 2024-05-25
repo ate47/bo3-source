@@ -754,7 +754,7 @@ function function_bbad02fc() {
 }
 
 // Namespace namespace_88f87109
-// Params d, eflags: 0x1 linked
+// Params 13, eflags: 0x1 linked
 // Checksum 0x6d4173ff, Offset: 0x30e0
 // Size: 0x88
 function function_f9326691(str_mod, var_5afff096, var_7c5a4ee4, e_player, n_amount, w_weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel) {

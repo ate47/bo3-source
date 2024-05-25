@@ -1037,7 +1037,7 @@ function function_dbb91fcf() {
 }
 
 // Namespace namespace_73fc8448
-// Params f, eflags: 0x1 linked
+// Params 15, eflags: 0x1 linked
 // Checksum 0xa5c85736, Offset: 0x5eb0
 // Size: 0x102
 function function_c1c247f6(e_inflictor, e_attacker, n_damage, n_dflags, str_means_of_death, weapon, v_point, v_dir, str_hit_loc, var_46043680, psoffsettime, var_3bc96147, var_269779a, var_829b9480, var_eca96ec1) {

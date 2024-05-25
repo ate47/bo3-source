@@ -407,7 +407,7 @@ class robotphalanx {
     }
 
     // Namespace robotphalanx
-    // Params c, eflags: 0x4
+    // Params 12, eflags: 0x4
     // Checksum 0x6f1e95cb, Offset: 0x5d0
     // Size: 0x1c8
     function private _dampenexplosivedamage(inflictor, attacker, damage, flags, meansofdamage, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {

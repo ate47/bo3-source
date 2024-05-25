@@ -47,7 +47,7 @@ function disable() {
 }
 
 // Namespace zm_bgb_sword_flay
-// Params c, eflags: 0x1 linked
+// Params 12, eflags: 0x1 linked
 // Checksum 0xcd14acee, Offset: 0x2b0
 // Size: 0xe0
 function actor_damage_override(inflictor, attacker, damage, flags, meansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, surfacetype) {

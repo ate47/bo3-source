@@ -224,7 +224,7 @@ function oncancelplacement(emp) {
 }
 
 // Namespace emp
-// Params f, eflags: 0x1 linked
+// Params 15, eflags: 0x1 linked
 // Checksum 0x5d845760, Offset: 0x14a8
 // Size: 0x158
 function onturretdamage(einflictor, attacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {

@@ -1099,7 +1099,7 @@ function function_24b31974(a_ents) {
 }
 
 // Namespace namespace_c3900363
-// Params b, eflags: 0x0
+// Params 11, eflags: 0x0
 // Checksum 0x49515ad5, Offset: 0x5988
 // Size: 0xcc
 function function_6255dfdc(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex) {

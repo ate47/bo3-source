@@ -311,7 +311,7 @@ function function_5fa9d769(var_ddbfd9e3, mode, characterindex, var_bf37af0a, hel
 }
 
 // Namespace character_customization
-// Params a, eflags: 0x1 linked
+// Params 10, eflags: 0x1 linked
 // Checksum 0x88493af2, Offset: 0x21a0
 // Size: 0xbcc
 function function_f374c6fc(var_ddbfd9e3, mode, localclientnum, xuid, characterindex, var_a7a58d47, var_93ecb41d, weaponrenderoptions, var_58d20c34, var_974ed5f5) {

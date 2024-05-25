@@ -454,7 +454,7 @@ function function_4bec2567(ai_zombie) {
 }
 
 // Namespace namespace_589e3c80
-// Params d, eflags: 0x1 linked
+// Params 13, eflags: 0x1 linked
 // Checksum 0xcf913ab6, Offset: 0x1b00
 // Size: 0xbc
 function function_86f6d957(mod, hit_location, var_8a2b6fe5, player, amount, weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel) {

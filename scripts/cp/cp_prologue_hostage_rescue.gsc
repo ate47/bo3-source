@@ -840,7 +840,7 @@ function function_b8c0a930() {
 }
 
 // Namespace prison
-// Params d, eflags: 0x1 linked
+// Params 13, eflags: 0x1 linked
 // Checksum 0x5063ce04, Offset: 0x5640
 // Size: 0x134
 function function_9b720436(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, damagefromunderneath, modelindex, partname) {

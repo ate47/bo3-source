@@ -1414,7 +1414,7 @@ function function_b1cd865a() {
 }
 
 // Namespace namespace_ed811526
-// Params c, eflags: 0x0
+// Params 12, eflags: 0x0
 // Checksum 0x207a9e0f, Offset: 0x5930
 // Size: 0xea
 function function_ca31caac(inflictor, attacker, damage, dflags, mod, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
