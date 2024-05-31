@@ -13,7 +13,6 @@
 
 // Namespace namespace_1931cdeb
 // Params 0, eflags: 0x1 linked
-// namespace_1931cdeb<file_0>::function_c35e6aab
 // Checksum 0x835624a, Offset: 0x738
 // Size: 0x624
 function init() {
@@ -65,7 +64,6 @@ function init() {
 
 // Namespace namespace_1931cdeb
 // Params 2, eflags: 0x0
-// namespace_1931cdeb<file_0>::function_c19bbc3e
 // Checksum 0x5858f9e7, Offset: 0xd68
 // Size: 0x7c
 function function_c19bbc3e(gate, var_8d1e404b) {
@@ -77,7 +75,6 @@ function function_c19bbc3e(gate, var_8d1e404b) {
 
 // Namespace namespace_1931cdeb
 // Params 4, eflags: 0x1 linked
-// namespace_1931cdeb<file_0>::function_c5b797fc
 // Checksum 0x5cc4dbac, Offset: 0xdf0
 // Size: 0x276
 function function_c5b797fc(&cars, &var_c4643bb7, start, name) {
@@ -104,7 +101,6 @@ function function_c5b797fc(&cars, &var_c4643bb7, start, name) {
 
 // Namespace namespace_1931cdeb
 // Params 1, eflags: 0x1 linked
-// namespace_1931cdeb<file_0>::function_656e58c3
 // Checksum 0x7ddb3bbc, Offset: 0x1070
 // Size: 0x24
 function function_656e58c3(time) {
@@ -114,7 +110,6 @@ function function_656e58c3(time) {
 
 // Namespace namespace_1931cdeb
 // Params 5, eflags: 0x1 linked
-// namespace_1931cdeb<file_0>::function_1b3e50b5
 // Checksum 0x5f7af435, Offset: 0x10a0
 // Size: 0x1a4
 function function_1b3e50b5(var_50a9e5d9, waittime, rotatetime, var_b646c3f4, var_8efac8e4) {
@@ -137,7 +132,6 @@ function function_1b3e50b5(var_50a9e5d9, waittime, rotatetime, var_b646c3f4, var
 
 // Namespace namespace_1931cdeb
 // Params 12, eflags: 0x1 linked
-// namespace_1931cdeb<file_0>::function_91ce410
 // Checksum 0x7f8d3134, Offset: 0x1250
 // Size: 0xc70
 function function_91ce410(cars, var_c4643bb7, var_c7166e37, start, var_c3f523d4, var_35fc930f, var_9071646e, var_fbb2796a, var_4eb99366, var_5f47c084, var_c4ecec2, var_4b395157) {
@@ -237,7 +231,6 @@ function function_91ce410(cars, var_c4643bb7, var_c7166e37, start, var_c3f523d4,
 
 // Namespace namespace_1931cdeb
 // Params 1, eflags: 0x1 linked
-// namespace_1931cdeb<file_0>::function_b08d0f63
 // Checksum 0x24112229, Offset: 0x1ec8
 // Size: 0x2c8
 function function_b08d0f63(tracknum) {
@@ -276,7 +269,6 @@ function function_b08d0f63(tracknum) {
 
 // Namespace namespace_1931cdeb
 // Params 2, eflags: 0x1 linked
-// namespace_1931cdeb<file_0>::function_d196b0a5
 // Checksum 0x428d0496, Offset: 0x2198
 // Size: 0x74
 function function_d196b0a5(index, var_4b395157) {
@@ -288,7 +280,6 @@ function function_d196b0a5(index, var_4b395157) {
 
 // Namespace namespace_1931cdeb
 // Params 1, eflags: 0x1 linked
-// namespace_1931cdeb<file_0>::function_881473ff
 // Checksum 0x29fc7808, Offset: 0x2218
 // Size: 0x186
 function function_881473ff(tracknum) {
@@ -316,7 +307,6 @@ function function_881473ff(tracknum) {
 
 // Namespace namespace_1931cdeb
 // Params 0, eflags: 0x1 linked
-// namespace_1931cdeb<file_0>::function_ac1ac4d2
 // Checksum 0x92cb1ca2, Offset: 0x23a8
 // Size: 0xb8
 function function_ac1ac4d2() {
@@ -335,7 +325,6 @@ function function_ac1ac4d2() {
 
 // Namespace namespace_1931cdeb
 // Params 0, eflags: 0x0
-// namespace_1931cdeb<file_0>::function_2d719a60
 // Checksum 0xc1d2a140, Offset: 0x2468
 // Size: 0x140
 function function_2d719a60() {
@@ -353,7 +342,6 @@ function function_2d719a60() {
 
 // Namespace namespace_1931cdeb
 // Params 3, eflags: 0x1 linked
-// namespace_1931cdeb<file_0>::function_a202446a
 // Checksum 0x964a41, Offset: 0x25b0
 // Size: 0x660
 function function_a202446a(var_6b9180f5, waittime, var_24d445fd) {
@@ -449,7 +437,6 @@ function function_a202446a(var_6b9180f5, waittime, var_24d445fd) {
 
 // Namespace namespace_1931cdeb
 // Params 0, eflags: 0x1 linked
-// namespace_1931cdeb<file_0>::function_efb0f9a4
 // Checksum 0x6544780f, Offset: 0x2c18
 // Size: 0x15a
 function function_efb0f9a4() {
@@ -468,7 +455,6 @@ function function_efb0f9a4() {
 
 // Namespace namespace_1931cdeb
 // Params 0, eflags: 0x1 linked
-// namespace_1931cdeb<file_0>::function_dde749cf
 // Checksum 0xadd7fbc9, Offset: 0x2d80
 // Size: 0x9e
 function function_dde749cf() {
@@ -482,7 +468,6 @@ function function_dde749cf() {
 
 // Namespace namespace_1931cdeb
 // Params 2, eflags: 0x0
-// namespace_1931cdeb<file_0>::function_b02c2d9b
 // Checksum 0x42bb6cb9, Offset: 0x2e28
 // Size: 0xf2
 function function_b02c2d9b(org, array) {

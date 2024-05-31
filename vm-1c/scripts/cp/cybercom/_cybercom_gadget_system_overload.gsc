@@ -21,7 +21,6 @@
 
 // Namespace namespace_528b4613
 // Params 0, eflags: 0x1 linked
-// namespace_528b4613<file_0>::function_c35e6aab
 // Checksum 0x99ec1590, Offset: 0x590
 // Size: 0x4
 function init() {
@@ -30,7 +29,6 @@ function init() {
 
 // Namespace namespace_528b4613
 // Params 0, eflags: 0x1 linked
-// namespace_528b4613<file_0>::function_d290ebfa
 // Checksum 0xfa91966b, Offset: 0x5a0
 // Size: 0x17c
 function main() {
@@ -48,7 +46,6 @@ function main() {
 
 // Namespace namespace_528b4613
 // Params 1, eflags: 0x1 linked
-// namespace_528b4613<file_0>::function_875da84b
 // Checksum 0xb8b6b934, Offset: 0x728
 // Size: 0xc
 function function_875da84b(slot) {
@@ -57,7 +54,6 @@ function function_875da84b(slot) {
 
 // Namespace namespace_528b4613
 // Params 2, eflags: 0x1 linked
-// namespace_528b4613<file_0>::function_8d01efb6
 // Checksum 0x1056d238, Offset: 0x740
 // Size: 0x14
 function function_8d01efb6(slot, weapon) {
@@ -66,7 +62,6 @@ function function_8d01efb6(slot, weapon) {
 
 // Namespace namespace_528b4613
 // Params 2, eflags: 0x1 linked
-// namespace_528b4613<file_0>::function_bdb47551
 // Checksum 0x326f4a20, Offset: 0x760
 // Size: 0x154
 function function_bdb47551(slot, weapon) {
@@ -83,7 +78,6 @@ function function_bdb47551(slot, weapon) {
 
 // Namespace namespace_528b4613
 // Params 2, eflags: 0x1 linked
-// namespace_528b4613<file_0>::function_39ea6a1b
 // Checksum 0xec35a07c, Offset: 0x8c0
 // Size: 0x62
 function function_39ea6a1b(slot, weapon) {
@@ -95,7 +89,6 @@ function function_39ea6a1b(slot, weapon) {
 
 // Namespace namespace_528b4613
 // Params 0, eflags: 0x1 linked
-// namespace_528b4613<file_0>::function_5d2fec30
 // Checksum 0x99ec1590, Offset: 0x930
 // Size: 0x4
 function function_5d2fec30() {
@@ -104,7 +97,6 @@ function function_5d2fec30() {
 
 // Namespace namespace_528b4613
 // Params 2, eflags: 0x1 linked
-// namespace_528b4613<file_0>::function_b039e27b
 // Checksum 0x3ebda224, Offset: 0x940
 // Size: 0x54
 function _on(slot, weapon) {
@@ -114,7 +106,6 @@ function _on(slot, weapon) {
 
 // Namespace namespace_528b4613
 // Params 2, eflags: 0x1 linked
-// namespace_528b4613<file_0>::function_251e7cf
 // Checksum 0xd572b556, Offset: 0x9a0
 // Size: 0x46
 function _off(slot, weapon) {
@@ -125,7 +116,6 @@ function _off(slot, weapon) {
 
 // Namespace namespace_528b4613
 // Params 2, eflags: 0x1 linked
-// namespace_528b4613<file_0>::function_4135a1c4
 // Checksum 0x49bdbe16, Offset: 0x9f0
 // Size: 0xb0
 function function_4135a1c4(slot, weapon) {
@@ -139,7 +129,6 @@ function function_4135a1c4(slot, weapon) {
 
 // Namespace namespace_528b4613
 // Params 1, eflags: 0x5 linked
-// namespace_528b4613<file_0>::function_602b28e9
 // Checksum 0x5e11d271, Offset: 0xaa8
 // Size: 0x238
 function private function_602b28e9(target) {
@@ -177,7 +166,6 @@ function private function_602b28e9(target) {
 
 // Namespace namespace_528b4613
 // Params 1, eflags: 0x5 linked
-// namespace_528b4613<file_0>::function_8aac802c
 // Checksum 0x6b564225, Offset: 0xce8
 // Size: 0x52
 function private function_8aac802c(weapon) {
@@ -186,7 +174,6 @@ function private function_8aac802c(weapon) {
 
 // Namespace namespace_528b4613
 // Params 2, eflags: 0x5 linked
-// namespace_528b4613<file_0>::function_35d3d1a2
 // Checksum 0x80f2e8f1, Offset: 0xd48
 // Size: 0x2ac
 function private function_35d3d1a2(slot, weapon) {
@@ -224,7 +211,6 @@ function private function_35d3d1a2(slot, weapon) {
 
 // Namespace namespace_528b4613
 // Params 2, eflags: 0x5 linked
-// namespace_528b4613<file_0>::function_b4223599
 // Checksum 0x7edeb03f, Offset: 0x1000
 // Size: 0x12c
 function private function_b4223599(attacker, weapon) {
@@ -245,7 +231,6 @@ function private function_b4223599(attacker, weapon) {
 
 // Namespace namespace_528b4613
 // Params 3, eflags: 0x1 linked
-// namespace_528b4613<file_0>::function_5839c4ac
 // Checksum 0x49c03469, Offset: 0x1138
 // Size: 0x2c2
 function function_5839c4ac(target, var_9bc2efcb, var_ba115ce0) {
@@ -290,7 +275,6 @@ function function_5839c4ac(target, var_9bc2efcb, var_ba115ce0) {
 
 // Namespace namespace_528b4613
 // Params 4, eflags: 0x1 linked
-// namespace_528b4613<file_0>::function_30553c67
 // Checksum 0x7ede5a05, Offset: 0x1408
 // Size: 0x716
 function system_overload(attacker, var_ba115ce0, weapon, var_9caedf97) {
@@ -374,7 +358,6 @@ function system_overload(attacker, var_ba115ce0, weapon, var_9caedf97) {
 
 // Namespace namespace_528b4613
 // Params 0, eflags: 0x1 linked
-// namespace_528b4613<file_0>::function_53cfe88a
 // Checksum 0xf1bc8d8a, Offset: 0x1b28
 // Size: 0x3a
 function function_53cfe88a() {

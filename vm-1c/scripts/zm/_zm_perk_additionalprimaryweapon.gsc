@@ -18,7 +18,6 @@
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 0, eflags: 0x2
-// namespace_c728c6c3<file_0>::function_2dc19561
 // Checksum 0x786dd918, Offset: 0x3f8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -27,7 +26,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 0, eflags: 0x1 linked
-// namespace_c728c6c3<file_0>::function_8c87d8eb
 // Checksum 0xb675cfd1, Offset: 0x438
 // Size: 0x5c
 function __init__() {
@@ -39,7 +37,6 @@ function __init__() {
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 0, eflags: 0x1 linked
-// namespace_c728c6c3<file_0>::function_f42ed446
 // Checksum 0xe20b6915, Offset: 0x4a0
 // Size: 0x12c
 function enable_additional_primary_weapon_perk_for_level() {
@@ -53,7 +50,6 @@ function enable_additional_primary_weapon_perk_for_level() {
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 0, eflags: 0x1 linked
-// namespace_c728c6c3<file_0>::function_788460cc
 // Checksum 0xeacd55a6, Offset: 0x5d8
 // Size: 0xe0
 function additional_primary_weapon_precache() {
@@ -70,7 +66,6 @@ function additional_primary_weapon_precache() {
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 0, eflags: 0x1 linked
-// namespace_c728c6c3<file_0>::function_4b4acdd6
 // Checksum 0xeb234b9f, Offset: 0x6c0
 // Size: 0x34
 function additional_primary_weapon_register_clientfield() {
@@ -79,7 +74,6 @@ function additional_primary_weapon_register_clientfield() {
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 1, eflags: 0x1 linked
-// namespace_c728c6c3<file_0>::function_97ed1467
 // Checksum 0x8b943970, Offset: 0x700
 // Size: 0x2c
 function additional_primary_weapon_set_clientfield(state) {
@@ -88,7 +82,6 @@ function additional_primary_weapon_set_clientfield(state) {
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 4, eflags: 0x1 linked
-// namespace_c728c6c3<file_0>::function_5d7931e7
 // Checksum 0x97dfe0fa, Offset: 0x738
 // Size: 0xbc
 function additional_primary_weapon_perk_machine_setup(use_trigger, perk_machine, bump_trigger, collision) {
@@ -105,7 +98,6 @@ function additional_primary_weapon_perk_machine_setup(use_trigger, perk_machine,
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 0, eflags: 0x1 linked
-// namespace_c728c6c3<file_0>::function_afaf20eb
 // Checksum 0x99ec1590, Offset: 0x800
 // Size: 0x4
 function give_additional_primary_weapon_perk() {
@@ -114,7 +106,6 @@ function give_additional_primary_weapon_perk() {
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 3, eflags: 0x1 linked
-// namespace_c728c6c3<file_0>::function_41f50e9d
 // Checksum 0xb40091f4, Offset: 0x810
 // Size: 0x44
 function take_additional_primary_weapon_perk(b_pause, str_perk, str_result) {
@@ -125,7 +116,6 @@ function take_additional_primary_weapon_perk(b_pause, str_perk, str_result) {
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 0, eflags: 0x1 linked
-// namespace_c728c6c3<file_0>::function_9f037faa
 // Checksum 0x52556200, Offset: 0x860
 // Size: 0x1ec
 function function_9f037faa() {
@@ -156,7 +146,6 @@ function function_9f037faa() {
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 0, eflags: 0x1 linked
-// namespace_c728c6c3<file_0>::function_df3cb43b
 // Checksum 0x5188ebd1, Offset: 0xa58
 // Size: 0x44
 function on_laststand() {
@@ -167,7 +156,6 @@ function on_laststand() {
 
 // Namespace zm_perk_additionalprimaryweapon
 // Params 1, eflags: 0x1 linked
-// namespace_c728c6c3<file_0>::function_81546dd1
 // Checksum 0xe552b3df, Offset: 0xaa8
 // Size: 0x5c
 function function_81546dd1(var_f52f94ab) {

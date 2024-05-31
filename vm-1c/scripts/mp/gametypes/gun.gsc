@@ -17,7 +17,6 @@
 
 // Namespace gun
 // Params 0, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_d290ebfa
 // Checksum 0x9d70ba5e, Offset: 0x7a8
 // Size: 0x24c
 function main() {
@@ -46,7 +45,6 @@ function main() {
 
 // Namespace gun
 // Params 0, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_5ada47ea
 // Checksum 0x90feccb9, Offset: 0xa00
 // Size: 0x29c
 function function_5ada47ea() {
@@ -74,7 +72,6 @@ function function_5ada47ea() {
 
 // Namespace gun
 // Params 0, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_74c19bbc
 // Checksum 0x9058d56f, Offset: 0xca8
 // Size: 0x29c
 function function_74c19bbc() {
@@ -102,7 +99,6 @@ function function_74c19bbc() {
 
 // Namespace gun
 // Params 0, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_6b594b42
 // Checksum 0x1a6eb9b7, Offset: 0xf50
 // Size: 0x4c
 function function_6b594b42() {
@@ -115,7 +111,6 @@ function function_6b594b42() {
 
 // Namespace gun
 // Params 0, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_990f40f7
 // Checksum 0xc2e21efb, Offset: 0xfa8
 // Size: 0x59e
 function function_990f40f7() {
@@ -177,7 +172,6 @@ function function_990f40f7() {
 
 // Namespace gun
 // Params 0, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_34685338
 // Checksum 0x7aad8e58, Offset: 0x1550
 // Size: 0x218
 function onstartgametype() {
@@ -203,7 +197,6 @@ function onstartgametype() {
 
 // Namespace gun
 // Params 0, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_8fa187d9
 // Checksum 0xa15fe160, Offset: 0x1770
 // Size: 0x154
 function inactivitykick() {
@@ -230,7 +223,6 @@ function inactivitykick() {
 
 // Namespace gun
 // Params 1, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_19bc9234
 // Checksum 0x18751c98, Offset: 0x18d0
 // Size: 0x64
 function onspawnplayer(predictedspawn) {
@@ -244,7 +236,6 @@ function onspawnplayer(predictedspawn) {
 
 // Namespace gun
 // Params 9, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_c2658b46
 // Checksum 0x819251cf, Offset: 0x1940
 // Size: 0x214
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -276,7 +267,6 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace gun
 // Params 1, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_257d1c47
 // Checksum 0x4c326bde, Offset: 0x1b60
 // Size: 0x5c
 function onendgame(winningplayer) {
@@ -287,7 +277,6 @@ function onendgame(winningplayer) {
 
 // Namespace gun
 // Params 9, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_ae129f9c
 // Checksum 0xd6bed09e, Offset: 0x1bc8
 // Size: 0x176
 function addguntoprogression(weaponname, attachment1, attachment2, attachment3, attachment4, attachment5, attachment6, attachment7, attachment8) {
@@ -322,7 +311,6 @@ function addguntoprogression(weaponname, attachment1, attachment2, attachment3, 
 
 // Namespace gun
 // Params 1, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_ebff918b
 // Checksum 0x9814568b, Offset: 0x1d48
 // Size: 0xcc
 function setupteam(team) {
@@ -339,7 +327,6 @@ function setupteam(team) {
 
 // Namespace gun
 // Params 1, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_6ef343c7
 // Checksum 0x5895ee75, Offset: 0x1e20
 // Size: 0x44
 function takeoldweapon(oldweapon) {
@@ -351,7 +338,6 @@ function takeoldweapon(oldweapon) {
 
 // Namespace gun
 // Params 1, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_ed44e709
 // Checksum 0x68fa108, Offset: 0x1e70
 // Size: 0x200
 function givecustomloadout(takeoldweapon) {
@@ -385,7 +371,6 @@ function givecustomloadout(takeoldweapon) {
 
 // Namespace gun
 // Params 1, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_470c1548
 // Checksum 0xa3c30f80, Offset: 0x2078
 // Size: 0x180
 function promoteplayer(weaponused) {
@@ -411,7 +396,6 @@ function promoteplayer(weaponused) {
 
 // Namespace gun
 // Params 1, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_e5f2fa6a
 // Checksum 0x47fb69dc, Offset: 0x2200
 // Size: 0x1cc
 function demoteplayer(attacker) {
@@ -442,7 +426,6 @@ function demoteplayer(attacker) {
 
 // Namespace gun
 // Params 0, eflags: 0x0
-// namespace_d60f4e1<file_0>::function_a260245b
 // Checksum 0xcb1fda5c, Offset: 0x23d8
 // Size: 0x90
 function infiniteammo() {

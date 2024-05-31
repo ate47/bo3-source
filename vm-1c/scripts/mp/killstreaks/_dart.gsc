@@ -29,7 +29,6 @@
 
 // Namespace dart
 // Params 0, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_c35e6aab
 // Checksum 0x5e2b748d, Offset: 0x7f8
 // Size: 0x254
 function init() {
@@ -48,7 +47,6 @@ function init() {
 
 // Namespace dart
 // Params 1, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_89a5cb77
 // Checksum 0xb767c07d, Offset: 0xa58
 // Size: 0x4e
 function wait_dart_timed_out(time) {
@@ -62,7 +60,6 @@ function wait_dart_timed_out(time) {
 
 // Namespace dart
 // Params 0, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_d4aab2c0
 // Checksum 0x907e2727, Offset: 0xab0
 // Size: 0x90
 function wait_for_throw_status() {
@@ -76,7 +73,6 @@ function wait_for_throw_status() {
 
 // Namespace dart
 // Params 1, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_edfd5135
 // Checksum 0x8bd11924, Offset: 0xb48
 // Size: 0x24c
 function activatedart(killstreaktype) {
@@ -114,7 +110,6 @@ function activatedart(killstreaktype) {
 
 // Namespace dart
 // Params 0, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_d0021288
 // Checksum 0x6a6f17d0, Offset: 0xda0
 // Size: 0x44
 function cleanup_grenade() {
@@ -124,7 +119,6 @@ function cleanup_grenade() {
 
 // Namespace dart
 // Params 1, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_e196a932
 // Checksum 0x14fafc2a, Offset: 0xdf0
 // Size: 0x314
 function watchthrow(missileweapon) {
@@ -169,7 +163,6 @@ function watchthrow(missileweapon) {
 
 // Namespace dart
 // Params 1, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_da11acc
 // Checksum 0xd451b56, Offset: 0x1110
 // Size: 0x16c
 function hackedprefunction(hacker) {
@@ -188,7 +181,6 @@ function hackedprefunction(hacker) {
 
 // Namespace dart
 // Params 1, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_c373fcbb
 // Checksum 0x4528778a, Offset: 0x1288
 // Size: 0x8c
 function hackedpostfunction(hacker) {
@@ -201,7 +193,6 @@ function hackedpostfunction(hacker) {
 
 // Namespace dart
 // Params 1, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_1df3079e
 // Checksum 0x924639ec, Offset: 0x1320
 // Size: 0x58
 function dart_hacked_health_update(hacker) {
@@ -213,7 +204,6 @@ function dart_hacked_health_update(hacker) {
 
 // Namespace dart
 // Params 1, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_d67cc4c0
 // Checksum 0xb7e1234f, Offset: 0x1380
 // Size: 0xca
 function check_launch_space(origin) {
@@ -226,7 +216,6 @@ function check_launch_space(origin) {
 
 // Namespace dart
 // Params 3, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_a0194395
 // Checksum 0x4193edac, Offset: 0x1458
 // Size: 0x538
 function spawndart(grenade, killstreak_id, spawn_origin) {
@@ -285,7 +274,6 @@ function spawndart(grenade, killstreak_id, spawn_origin) {
 
 // Namespace dart
 // Params 0, eflags: 0x0
-// namespace_1711c442<file_0>::function_75396cb7
 // Checksum 0x245a88d6, Offset: 0x1998
 // Size: 0x58
 function debug_origin() {
@@ -300,7 +288,6 @@ function debug_origin() {
 
 // Namespace dart
 // Params 0, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_680e1a7b
 // Checksum 0x34a4f797, Offset: 0x19f8
 // Size: 0xf2
 function waitremotecontrol() {
@@ -322,7 +309,6 @@ function waitremotecontrol() {
 
 // Namespace dart
 // Params 1, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_99e19649
 // Checksum 0xf99ddc1d, Offset: 0x1af8
 // Size: 0x23c
 function startdartremotecontrol(dart) {
@@ -354,7 +340,6 @@ function startdartremotecontrol(dart) {
 
 // Namespace dart
 // Params 2, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_8072ba94
 // Checksum 0x1f530dec, Offset: 0x1d40
 // Size: 0x2c
 function enddartremotecontrol(dart, exitrequestedbyowner) {
@@ -363,7 +348,6 @@ function enddartremotecontrol(dart, exitrequestedbyowner) {
 
 // Namespace dart
 // Params 0, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_48eaac7b
 // Checksum 0x9fb65301, Offset: 0x1d78
 // Size: 0x14
 function dartdistancefailure() {
@@ -372,7 +356,6 @@ function dartdistancefailure() {
 
 // Namespace dart
 // Params 2, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_7b936de9
 // Checksum 0x9c5c942, Offset: 0x1d98
 // Size: 0x18c
 function stop_remote_weapon(attacker, weapon) {
@@ -393,7 +376,6 @@ function stop_remote_weapon(attacker, weapon) {
 
 // Namespace dart
 // Params 15, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_8c6152e1
 // Checksum 0x8fe941b1, Offset: 0x1f30
 // Size: 0x154
 function dartdamageoverride(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -408,7 +390,6 @@ function dartdamageoverride(einflictor, eattacker, idamage, idflags, smeansofdea
 
 // Namespace dart
 // Params 2, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_affe9cf5
 // Checksum 0xfc09f7e3, Offset: 0x2090
 // Size: 0x44
 function emp_damage_cb(attacker, weapon) {
@@ -418,7 +399,6 @@ function emp_damage_cb(attacker, weapon) {
 
 // Namespace dart
 // Params 0, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_ceec4b9a
 // Checksum 0x3264f7ca, Offset: 0x20e0
 // Size: 0x94
 function darpredictedcollision() {
@@ -435,7 +415,6 @@ function darpredictedcollision() {
 
 // Namespace dart
 // Params 0, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_936c06b2
 // Checksum 0x55c3de3a, Offset: 0x2180
 // Size: 0xfc
 function watchcollision() {
@@ -457,7 +436,6 @@ function watchcollision() {
 
 // Namespace dart
 // Params 0, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_8c5bc4dc
 // Checksum 0x1898584b, Offset: 0x2288
 // Size: 0x6c
 function watchdeath() {
@@ -471,7 +449,6 @@ function watchdeath() {
 
 // Namespace dart
 // Params 2, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_c5d3f055
 // Checksum 0x9df30af7, Offset: 0x2300
 // Size: 0xbc
 function watchownernondeathevents(endcondition1, endcondition2) {
@@ -486,7 +463,6 @@ function watchownernondeathevents(endcondition1, endcondition2) {
 
 // Namespace dart
 // Params 0, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_960a9334
 // Checksum 0x7d1b2f4f, Offset: 0x23c8
 // Size: 0x44
 function watchforgameend() {
@@ -498,7 +474,6 @@ function watchforgameend() {
 
 // Namespace dart
 // Params 0, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_9fc9da80
 // Checksum 0xe6005f80, Offset: 0x2418
 // Size: 0x258
 function watchammo() {
@@ -544,7 +519,6 @@ function watchammo() {
 
 // Namespace dart
 // Params 0, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_efa95bd2
 // Checksum 0xb95b2a16, Offset: 0x2678
 // Size: 0x7d4
 function leave_dart() {
@@ -644,7 +618,6 @@ function leave_dart() {
 
 // Namespace dart
 // Params 1, eflags: 0x0
-// namespace_1711c442<file_0>::function_eb6be465
 // Checksum 0x8638dc99, Offset: 0x2e58
 // Size: 0x64
 function deleteonconditions(condition) {
@@ -659,7 +632,6 @@ function deleteonconditions(condition) {
 
 // Namespace dart
 // Params 1, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_e142d68a
 // Checksum 0xea573b45, Offset: 0x2ec8
 // Size: 0x3c
 function waitthendelete(waittime) {
@@ -671,7 +643,6 @@ function waitthendelete(waittime) {
 
 // Namespace dart
 // Params 1, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_30d9d7c4
 // Checksum 0x7e736bc7, Offset: 0x2f10
 // Size: 0x106
 function play_bda_dialog(pilotindex) {
@@ -694,7 +665,6 @@ function play_bda_dialog(pilotindex) {
 
 // Namespace dart
 // Params 0, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_cc70e058
 // Checksum 0x70e743f4, Offset: 0x3020
 // Size: 0xcc
 function enabledartmissilelocking() {
@@ -710,7 +680,6 @@ function enabledartmissilelocking() {
 
 // Namespace dart
 // Params 0, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_3eab105f
 // Checksum 0x574daa6b, Offset: 0x30f8
 // Size: 0x6c
 function disabledartmissilelocking() {
@@ -725,7 +694,6 @@ function disabledartmissilelocking() {
 
 // Namespace dart
 // Params 0, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_5173d7e
 // Checksum 0xad709d95, Offset: 0x3170
 // Size: 0x6c
 function getdartmissiletargets() {
@@ -736,7 +704,6 @@ function getdartmissiletargets() {
 
 // Namespace dart
 // Params 1, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_ae78d0a9
 // Checksum 0xa869999b, Offset: 0x31e8
 // Size: 0x14e
 function isvaliddartmissiletarget(ent) {
@@ -766,7 +733,6 @@ function isvaliddartmissiletarget(ent) {
 
 // Namespace dart
 // Params 2, eflags: 0x1 linked
-// namespace_1711c442<file_0>::function_1fd1fbd
 // Checksum 0x6d667b69, Offset: 0x3340
 // Size: 0x1c6
 function isstillvaliddartmissiletarget(ent, weapon) {

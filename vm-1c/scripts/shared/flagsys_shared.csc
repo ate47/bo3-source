@@ -4,7 +4,6 @@
 
 // Namespace flagsys
 // Params 1, eflags: 0x1 linked
-// namespace_957e94ce<file_0>::function_74d6b22f
 // Checksum 0xde220437, Offset: 0xb0
 // Size: 0x40
 function set(str_flag) {
@@ -17,7 +16,6 @@ function set(str_flag) {
 
 // Namespace flagsys
 // Params 2, eflags: 0x0
-// namespace_957e94ce<file_0>::function_82f2e835
 // Checksum 0xed3f0dad, Offset: 0xf8
 // Size: 0x6c
 function set_for_time(n_time, str_flag) {
@@ -30,7 +28,6 @@ function set_for_time(n_time, str_flag) {
 
 // Namespace flagsys
 // Params 1, eflags: 0x1 linked
-// namespace_957e94ce<file_0>::function_9d134160
 // Checksum 0x39ba2e23, Offset: 0x170
 // Size: 0x52
 function clear(str_flag) {
@@ -42,7 +39,6 @@ function clear(str_flag) {
 
 // Namespace flagsys
 // Params 2, eflags: 0x1 linked
-// namespace_957e94ce<file_0>::function_2698b54f
 // Checksum 0x350188a2, Offset: 0x1d0
 // Size: 0x74
 function set_val(str_flag, b_val) {
@@ -56,7 +52,6 @@ function set_val(str_flag, b_val) {
 
 // Namespace flagsys
 // Params 1, eflags: 0x0
-// namespace_957e94ce<file_0>::function_b9844299
 // Checksum 0x15fcffa8, Offset: 0x250
 // Size: 0x34
 function toggle(str_flag) {
@@ -65,7 +60,6 @@ function toggle(str_flag) {
 
 // Namespace flagsys
 // Params 1, eflags: 0x1 linked
-// namespace_957e94ce<file_0>::function_7922262b
 // Checksum 0x1aed90ca, Offset: 0x290
 // Size: 0x38
 function get(str_flag) {
@@ -74,7 +68,6 @@ function get(str_flag) {
 
 // Namespace flagsys
 // Params 1, eflags: 0x1 linked
-// namespace_957e94ce<file_0>::function_1ab5ebec
 // Checksum 0x5780f27a, Offset: 0x2d0
 // Size: 0x3c
 function wait_till(str_flag) {
@@ -86,7 +79,6 @@ function wait_till(str_flag) {
 
 // Namespace flagsys
 // Params 2, eflags: 0x0
-// namespace_957e94ce<file_0>::function_d266a8b4
 // Checksum 0xd50c69fd, Offset: 0x318
 // Size: 0x84
 function wait_till_timeout(n_timeout, str_flag) {
@@ -100,7 +92,6 @@ function wait_till_timeout(n_timeout, str_flag) {
 
 // Namespace flagsys
 // Params 1, eflags: 0x1 linked
-// namespace_957e94ce<file_0>::function_8870cfa8
 // Checksum 0x9a714d9e, Offset: 0x3a8
 // Size: 0x84
 function wait_till_all(a_flags) {
@@ -116,7 +107,6 @@ function wait_till_all(a_flags) {
 
 // Namespace flagsys
 // Params 2, eflags: 0x0
-// namespace_957e94ce<file_0>::function_de274e38
 // Checksum 0x62aba45c, Offset: 0x438
 // Size: 0x84
 function wait_till_all_timeout(n_timeout, a_flags) {
@@ -130,7 +120,6 @@ function wait_till_all_timeout(n_timeout, a_flags) {
 
 // Namespace flagsys
 // Params 1, eflags: 0x1 linked
-// namespace_957e94ce<file_0>::function_43ac000b
 // Checksum 0xe84d6bf7, Offset: 0x4c8
 // Size: 0xbc
 function wait_till_any(a_flags) {
@@ -145,7 +134,6 @@ function wait_till_any(a_flags) {
 
 // Namespace flagsys
 // Params 2, eflags: 0x0
-// namespace_957e94ce<file_0>::function_1ff63c0f
 // Checksum 0xc948cae4, Offset: 0x590
 // Size: 0x84
 function wait_till_any_timeout(n_timeout, a_flags) {
@@ -159,7 +147,6 @@ function wait_till_any_timeout(n_timeout, a_flags) {
 
 // Namespace flagsys
 // Params 1, eflags: 0x1 linked
-// namespace_957e94ce<file_0>::function_d3de6822
 // Checksum 0x19739ced, Offset: 0x620
 // Size: 0x3c
 function wait_till_clear(str_flag) {
@@ -171,7 +158,6 @@ function wait_till_clear(str_flag) {
 
 // Namespace flagsys
 // Params 2, eflags: 0x0
-// namespace_957e94ce<file_0>::function_d819e202
 // Checksum 0x3c52029b, Offset: 0x668
 // Size: 0x84
 function wait_till_clear_timeout(n_timeout, str_flag) {
@@ -185,7 +171,6 @@ function wait_till_clear_timeout(n_timeout, str_flag) {
 
 // Namespace flagsys
 // Params 1, eflags: 0x1 linked
-// namespace_957e94ce<file_0>::function_c8ca818a
 // Checksum 0x59fe73a2, Offset: 0x6f8
 // Size: 0x84
 function wait_till_clear_all(a_flags) {
@@ -201,7 +186,6 @@ function wait_till_clear_all(a_flags) {
 
 // Namespace flagsys
 // Params 2, eflags: 0x0
-// namespace_957e94ce<file_0>::function_eafbaea
 // Checksum 0x638dcd60, Offset: 0x788
 // Size: 0x84
 function wait_till_clear_all_timeout(n_timeout, a_flags) {
@@ -215,7 +199,6 @@ function wait_till_clear_all_timeout(n_timeout, a_flags) {
 
 // Namespace flagsys
 // Params 1, eflags: 0x1 linked
-// namespace_957e94ce<file_0>::function_270609b1
 // Checksum 0x3858741d, Offset: 0x818
 // Size: 0xc8
 function wait_till_clear_any(a_flags) {
@@ -232,7 +215,6 @@ function wait_till_clear_any(a_flags) {
 
 // Namespace flagsys
 // Params 2, eflags: 0x0
-// namespace_957e94ce<file_0>::function_f0c72955
 // Checksum 0x8271c3f9, Offset: 0x8e8
 // Size: 0x84
 function wait_till_clear_any_timeout(n_timeout, a_flags) {
@@ -246,7 +228,6 @@ function wait_till_clear_any_timeout(n_timeout, a_flags) {
 
 // Namespace flagsys
 // Params 1, eflags: 0x0
-// namespace_957e94ce<file_0>::function_dc8c8404
 // Checksum 0x82581ec9, Offset: 0x978
 // Size: 0x24
 function delete(str_flag) {

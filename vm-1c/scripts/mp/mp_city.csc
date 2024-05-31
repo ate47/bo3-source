@@ -14,7 +14,6 @@
 
 // Namespace namespace_eb4f89c8
 // Params 0, eflags: 0x1 linked
-// namespace_eb4f89c8<file_0>::function_d290ebfa
 // Checksum 0x778bd194, Offset: 0x2d8
 // Size: 0x154
 function main() {
@@ -35,7 +34,6 @@ function main() {
 
 // Namespace namespace_eb4f89c8
 // Params 2, eflags: 0x1 linked
-// namespace_eb4f89c8<file_0>::function_b6d6bffc
 // Checksum 0x50640e14, Offset: 0x438
 // Size: 0x9e
 function dom_flag_base_fx_override(flag, team) {
@@ -61,7 +59,6 @@ function dom_flag_base_fx_override(flag, team) {
 
 // Namespace namespace_eb4f89c8
 // Params 2, eflags: 0x1 linked
-// namespace_eb4f89c8<file_0>::function_628641cd
 // Checksum 0xad02c336, Offset: 0x4e0
 // Size: 0x9e
 function dom_flag_cap_fx_override(flag, team) {
@@ -87,7 +84,6 @@ function dom_flag_cap_fx_override(flag, team) {
 
 // Namespace namespace_eb4f89c8
 // Params 7, eflags: 0x1 linked
-// namespace_eb4f89c8<file_0>::function_d9f6a33c
 // Checksum 0x3adccad9, Offset: 0x588
 // Size: 0x10e
 function function_d9f6a33c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -113,7 +109,6 @@ function function_d9f6a33c(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_eb4f89c8
 // Params 6, eflags: 0x1 linked
-// namespace_eb4f89c8<file_0>::function_4b249f9b
 // Checksum 0xc44f1508, Offset: 0x6a0
 // Size: 0x1f4
 function function_4b249f9b(localclientnum, time, var_728dd484, var_b9359340, var_1cf558a0, var_ecf795c3) {
@@ -141,7 +136,6 @@ function function_4b249f9b(localclientnum, time, var_728dd484, var_b9359340, var
 
 // Namespace namespace_eb4f89c8
 // Params 7, eflags: 0x1 linked
-// namespace_eb4f89c8<file_0>::function_6c36a9a7
 // Checksum 0xeb13a841, Offset: 0x8a0
 // Size: 0x29c
 function function_6c36a9a7(localclientnum, time, var_728dd484, var_b9359340, var_1cf558a0, var_ecf795c3, total_time) {
@@ -179,7 +173,6 @@ function function_6c36a9a7(localclientnum, time, var_728dd484, var_b9359340, var
 
 // Namespace namespace_eb4f89c8
 // Params 4, eflags: 0x1 linked
-// namespace_eb4f89c8<file_0>::function_211e661e
 // Checksum 0xf4b5db95, Offset: 0xb48
 // Size: 0x192
 function function_211e661e(localclientnum, time, var_ecf795c3, var_1cf558a0) {
@@ -206,7 +199,6 @@ function function_211e661e(localclientnum, time, var_ecf795c3, var_1cf558a0) {
 
 // Namespace namespace_eb4f89c8
 // Params 1, eflags: 0x1 linked
-// namespace_eb4f89c8<file_0>::function_1afd2fff
 // Checksum 0xe64f1d37, Offset: 0xce8
 // Size: 0xbc
 function function_1afd2fff(localclientnum) {
@@ -220,7 +212,6 @@ function function_1afd2fff(localclientnum) {
 
 // Namespace namespace_eb4f89c8
 // Params 1, eflags: 0x1 linked
-// namespace_eb4f89c8<file_0>::function_e5636218
 // Checksum 0x3ca4b640, Offset: 0xdb0
 // Size: 0x2c
 function function_e5636218(localclientnum) {
@@ -229,7 +220,6 @@ function function_e5636218(localclientnum) {
 
 // Namespace namespace_eb4f89c8
 // Params 1, eflags: 0x1 linked
-// namespace_eb4f89c8<file_0>::function_857cbaeb
 // Checksum 0x32941b30, Offset: 0xde8
 // Size: 0x44
 function function_857cbaeb(localclientnum) {
@@ -238,7 +228,6 @@ function function_857cbaeb(localclientnum) {
 
 // Namespace namespace_eb4f89c8
 // Params 1, eflags: 0x1 linked
-// namespace_eb4f89c8<file_0>::function_b620184c
 // Checksum 0xf7a58c08, Offset: 0xe38
 // Size: 0x3c
 function function_b620184c(localclientnum) {

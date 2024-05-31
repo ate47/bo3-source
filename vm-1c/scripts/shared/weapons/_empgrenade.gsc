@@ -9,7 +9,6 @@
 
 // Namespace empgrenade
 // Params 0, eflags: 0x2
-// namespace_ffdc4251<file_0>::function_2dc19561
 // Checksum 0x25ce774f, Offset: 0x1e8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace empgrenade
 // Params 0, eflags: 0x1 linked
-// namespace_ffdc4251<file_0>::function_8c87d8eb
 // Checksum 0xfed6fe21, Offset: 0x228
 // Size: 0x84
 function __init__() {
@@ -29,7 +27,6 @@ function __init__() {
 
 // Namespace empgrenade
 // Params 0, eflags: 0x1 linked
-// namespace_ffdc4251<file_0>::function_aebcf025
 // Checksum 0x81639193, Offset: 0x2b8
 // Size: 0x3c
 function on_player_spawned() {
@@ -40,7 +37,6 @@ function on_player_spawned() {
 
 // Namespace empgrenade
 // Params 0, eflags: 0x1 linked
-// namespace_ffdc4251<file_0>::function_5639dbc1
 // Checksum 0xadc8ca9d, Offset: 0x300
 // Size: 0x228
 function monitorempgrenade() {
@@ -82,7 +78,6 @@ function monitorempgrenade() {
 
 // Namespace empgrenade
 // Params 2, eflags: 0x1 linked
-// namespace_ffdc4251<file_0>::function_459a24bb
 // Checksum 0x4d8b6d58, Offset: 0x530
 // Size: 0x334
 function applyemp(attacker, explosionpoint) {
@@ -136,7 +131,6 @@ function applyemp(attacker, explosionpoint) {
 
 // Namespace empgrenade
 // Params 0, eflags: 0x1 linked
-// namespace_ffdc4251<file_0>::function_4235ef83
 // Checksum 0x2543d7c5, Offset: 0x870
 // Size: 0x54
 function empgrenadedeathwaiter() {
@@ -151,7 +145,6 @@ function empgrenadedeathwaiter() {
 
 // Namespace empgrenade
 // Params 0, eflags: 0x1 linked
-// namespace_ffdc4251<file_0>::function_2be0d392
 // Checksum 0x5157ef, Offset: 0x8d0
 // Size: 0x54
 function function_2be0d392() {
@@ -166,7 +159,6 @@ function function_2be0d392() {
 
 // Namespace empgrenade
 // Params 0, eflags: 0x1 linked
-// namespace_ffdc4251<file_0>::function_5357a1e2
 // Checksum 0x2b0a4b1b, Offset: 0x930
 // Size: 0x7c
 function checktoturnoffemp() {
@@ -183,7 +175,6 @@ function checktoturnoffemp() {
 
 // Namespace empgrenade
 // Params 0, eflags: 0x1 linked
-// namespace_ffdc4251<file_0>::function_2498a3ca
 // Checksum 0x191fb63, Offset: 0x9b8
 // Size: 0x54
 function shutdownemprebootindicatormenu() {
@@ -195,7 +186,6 @@ function shutdownemprebootindicatormenu() {
 
 // Namespace empgrenade
 // Params 1, eflags: 0x1 linked
-// namespace_ffdc4251<file_0>::function_7dadf7b8
 // Checksum 0x76d92163, Offset: 0xa18
 // Size: 0x70
 function emprumbleloop(duration) {
@@ -210,7 +200,6 @@ function emprumbleloop(duration) {
 
 // Namespace empgrenade
 // Params 2, eflags: 0x1 linked
-// namespace_ffdc4251<file_0>::function_dd2e8431
 // Checksum 0x17d960f1, Offset: 0xa90
 // Size: 0xac
 function watchempexplosion(owner, weapon) {
@@ -224,7 +213,6 @@ function watchempexplosion(owner, weapon) {
 
 // Namespace empgrenade
 // Params 5, eflags: 0x1 linked
-// namespace_ffdc4251<file_0>::function_cd50b2c7
 // Checksum 0x7fbabb98, Offset: 0xb48
 // Size: 0x132
 function empexplosiondamageents(owner, weapon, origin, radius, damageplayers) {
@@ -242,7 +230,6 @@ function empexplosiondamageents(owner, weapon, origin, radius, damageplayers) {
 
 // Namespace empgrenade
 // Params 0, eflags: 0x1 linked
-// namespace_ffdc4251<file_0>::function_a7922cf8
 // Checksum 0x37e9f679, Offset: 0xc88
 // Size: 0xb0
 function begin_other_grenade_tracking() {

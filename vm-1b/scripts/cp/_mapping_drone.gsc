@@ -15,7 +15,6 @@
 
 // Namespace namespace_2afd69a
 // Params 2, eflags: 0x0
-// namespace_2afd69a<file_0>::function_10dad989
 // Checksum 0xc7d7d5a, Offset: 0x248
 // Size: 0x142
 function function_10dad989(var_cc525a1a, b_active) {
@@ -41,7 +40,6 @@ function function_10dad989(var_cc525a1a, b_active) {
 
 // Namespace namespace_2afd69a
 // Params 3, eflags: 0x0
-// namespace_2afd69a<file_0>::function_3831a720
 // Checksum 0xa071115d, Offset: 0x398
 // Size: 0xc2
 function follow_path(var_cc525a1a, str_flag, var_178571be) {
@@ -60,7 +58,6 @@ function follow_path(var_cc525a1a, str_flag, var_178571be) {
 
 // Namespace namespace_2afd69a
 // Params 1, eflags: 0x0
-// namespace_2afd69a<file_0>::function_6a8adcf6
 // Checksum 0xc5c81cf3, Offset: 0x468
 // Size: 0x2a
 function function_6a8adcf6(n_speed) {
@@ -70,7 +67,6 @@ function function_6a8adcf6(n_speed) {
 
 // Namespace namespace_2afd69a
 // Params 0, eflags: 0x0
-// namespace_2afd69a<file_0>::function_2dde6e87
 // Checksum 0xc1a06df2, Offset: 0x4a0
 // Size: 0x9
 function function_2dde6e87() {
@@ -79,7 +75,6 @@ function function_2dde6e87() {
 
 // Namespace namespace_2afd69a
 // Params 1, eflags: 0x0
-// namespace_2afd69a<file_0>::function_74191a2
 // Checksum 0x69e8433f, Offset: 0x4b8
 // Size: 0x3a
 function function_74191a2(var_e3262ea5) {
@@ -95,7 +90,6 @@ function function_74191a2(var_e3262ea5) {
 
 // Namespace namespace_2afd69a
 // Params 0, eflags: 0x0
-// namespace_2afd69a<file_0>::function_fb6d201d
 // Checksum 0x16a8c7e5, Offset: 0x500
 // Size: 0x335
 function function_fb6d201d() {
@@ -171,7 +165,6 @@ function function_fb6d201d() {
 
     // Namespace namespace_2afd69a
     // Params 0, eflags: 0x0
-    // namespace_2afd69a<file_0>::function_3c36d48d
     // Checksum 0x9b7743cc, Offset: 0x840
     // Size: 0xc1
     function function_3c36d48d() {
@@ -200,7 +193,6 @@ function function_fb6d201d() {
 
 // Namespace namespace_2afd69a
 // Params 4, eflags: 0x0
-// namespace_2afd69a<file_0>::function_517ced56
 // Checksum 0xff422fc1, Offset: 0x910
 // Size: 0x192
 function function_517ced56(var_d3dc91f3, var_c6f8c0e6, var_6813d241, var_2e2d306e) {
@@ -233,7 +225,6 @@ function function_517ced56(var_d3dc91f3, var_c6f8c0e6, var_6813d241, var_2e2d306
 
 // Namespace namespace_2afd69a
 // Params 1, eflags: 0x0
-// namespace_2afd69a<file_0>::function_4f6daa65
 // Checksum 0xc64fa8d3, Offset: 0xab0
 // Size: 0x13a
 function function_4f6daa65(b_on) {
@@ -258,7 +249,6 @@ function function_4f6daa65(b_on) {
 
 // Namespace namespace_2afd69a
 // Params 2, eflags: 0x4
-// namespace_2afd69a<file_0>::function_dbc35f5e
 // Checksum 0xf7844bb4, Offset: 0xbf8
 // Size: 0x4a
 function private function_dbc35f5e(var_c2dc2b72, delay) {

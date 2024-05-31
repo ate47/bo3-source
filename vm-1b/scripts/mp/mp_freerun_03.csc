@@ -9,7 +9,6 @@
 
 // Namespace namespace_95f3766e
 // Params 0, eflags: 0x0
-// namespace_95f3766e<file_0>::function_d290ebfa
 // Checksum 0x1b4fd022, Offset: 0x140
 // Size: 0x72
 function main() {

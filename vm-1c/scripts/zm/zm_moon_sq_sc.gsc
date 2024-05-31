@@ -20,7 +20,6 @@
 
 // Namespace namespace_32cb7332
 // Params 0, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_c35e6aab
 // Checksum 0x3caf7f9d, Offset: 0x4c0
 // Size: 0xb4
 function init() {
@@ -32,7 +31,6 @@ function init() {
 
 // Namespace namespace_32cb7332
 // Params 0, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_971c9050
 // Checksum 0x4f86963a, Offset: 0x580
 // Size: 0x74
 function init_2() {
@@ -42,7 +40,6 @@ function init_2() {
 
 // Namespace namespace_32cb7332
 // Params 0, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_f57f1713
 // Checksum 0xe2f72fd4, Offset: 0x600
 // Size: 0x1c
 function function_f57f1713() {
@@ -51,7 +48,6 @@ function function_f57f1713() {
 
 // Namespace namespace_32cb7332
 // Params 0, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_6163650d
 // Checksum 0xf6bfc837, Offset: 0x628
 // Size: 0x6c
 function function_6163650d() {
@@ -63,7 +59,6 @@ function function_6163650d() {
 
 // Namespace namespace_32cb7332
 // Params 1, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_ef31d7b9
 // Checksum 0xd3065c11, Offset: 0x6a0
 // Size: 0xc
 function function_ef31d7b9(success) {
@@ -72,7 +67,6 @@ function function_ef31d7b9(success) {
 
 // Namespace namespace_32cb7332
 // Params 0, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_bf888e64
 // Checksum 0x99ec1590, Offset: 0x6b8
 // Size: 0x4
 function init_stage() {
@@ -81,7 +75,6 @@ function init_stage() {
 
 // Namespace namespace_32cb7332
 // Params 0, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_ea60feeb
 // Checksum 0x646b5c65, Offset: 0x6c8
 // Size: 0x94
 function function_ea60feeb() {
@@ -95,7 +88,6 @@ function function_ea60feeb() {
 
 // Namespace namespace_32cb7332
 // Params 0, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_7747c56
 // Checksum 0x59aa432f, Offset: 0x768
 // Size: 0xec
 function function_7747c56() {
@@ -112,7 +104,6 @@ function function_7747c56() {
 
 // Namespace namespace_32cb7332
 // Params 0, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_159f49cd
 // Checksum 0xffd46660, Offset: 0x860
 // Size: 0xb6
 function function_159f49cd() {
@@ -128,7 +119,6 @@ function function_159f49cd() {
 
 // Namespace namespace_32cb7332
 // Params 0, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_7a51bd90
 // Checksum 0xc6663c2, Offset: 0x920
 // Size: 0x9a
 function function_7a51bd90() {
@@ -142,7 +132,6 @@ function function_7a51bd90() {
 
 // Namespace namespace_32cb7332
 // Params 0, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_34e08484
 // Checksum 0x8fbab29, Offset: 0x9c8
 // Size: 0x4c
 function function_34e08484() {
@@ -155,7 +144,6 @@ function function_34e08484() {
 
 // Namespace namespace_32cb7332
 // Params 1, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_cc3f3f6a
 // Checksum 0x82cb718f, Offset: 0xa20
 // Size: 0xc
 function function_cc3f3f6a(success) {
@@ -164,7 +152,6 @@ function function_cc3f3f6a(success) {
 
 // Namespace namespace_32cb7332
 // Params 0, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_30a9619
 // Checksum 0x719c2f6a, Offset: 0xa38
 // Size: 0x104
 function function_30a9619() {
@@ -180,7 +167,6 @@ function function_30a9619() {
 
 // Namespace namespace_32cb7332
 // Params 1, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_b96682e2
 // Checksum 0xf8fcb0ca, Offset: 0xb48
 // Size: 0x9a
 function function_b96682e2(who) {
@@ -198,7 +184,6 @@ function function_b96682e2(who) {
 
 // Namespace namespace_32cb7332
 // Params 0, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_b86d2843
 // Checksum 0xd49b392d, Offset: 0xbf0
 // Size: 0x46
 function function_b86d2843() {
@@ -214,7 +199,6 @@ function function_b86d2843() {
 
 // Namespace namespace_32cb7332
 // Params 0, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_4f187653
 // Checksum 0xb4be765f, Offset: 0xc40
 // Size: 0x1e4
 function function_4f187653() {
@@ -249,7 +233,6 @@ function function_4f187653() {
 
 // Namespace namespace_32cb7332
 // Params 0, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_8cd1f5d
 // Checksum 0x14b0fad5, Offset: 0xe30
 // Size: 0x1a0
 function function_8cd1f5d() {
@@ -271,7 +254,6 @@ function function_8cd1f5d() {
 
 // Namespace namespace_32cb7332
 // Params 0, eflags: 0x1 linked
-// namespace_32cb7332<file_0>::function_343f8e54
 // Checksum 0x403833eb, Offset: 0xfd8
 // Size: 0x1e4
 function function_343f8e54() {

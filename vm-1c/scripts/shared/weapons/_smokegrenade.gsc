@@ -15,7 +15,6 @@
 
 // Namespace smokegrenade
 // Params 0, eflags: 0x1 linked
-// namespace_5c7cd6ba<file_0>::function_1463e4e5
 // Checksum 0xa4898f3b, Offset: 0x270
 // Size: 0x8c
 function init_shared() {
@@ -31,7 +30,6 @@ function init_shared() {
 
 // Namespace smokegrenade
 // Params 5, eflags: 0x1 linked
-// namespace_5c7cd6ba<file_0>::function_a85c00ce
 // Checksum 0xf9d8a67c, Offset: 0x308
 // Size: 0x134
 function watchsmokegrenadedetonation(owner, statweapon, grenadeweaponname, duration, totaltime) {
@@ -47,7 +45,6 @@ function watchsmokegrenadedetonation(owner, statweapon, grenadeweaponname, durat
 
 // Namespace smokegrenade
 // Params 7, eflags: 0x1 linked
-// namespace_5c7cd6ba<file_0>::function_848c64a8
 // Checksum 0x9273d07c, Offset: 0x448
 // Size: 0x160
 function smokedetonate(owner, statweapon, smokeweapon, position, radius, effectlifetime, smokeblockduration) {
@@ -67,7 +64,6 @@ function smokedetonate(owner, statweapon, smokeweapon, position, radius, effectl
 
 // Namespace smokegrenade
 // Params 5, eflags: 0x1 linked
-// namespace_5c7cd6ba<file_0>::function_7c624c9a
 // Checksum 0xd0aef74c, Offset: 0x5b0
 // Size: 0x9c
 function damageeffectarea(owner, position, radius, height, killcament) {
@@ -80,7 +76,6 @@ function damageeffectarea(owner, position, radius, height, killcament) {
 
 // Namespace smokegrenade
 // Params 1, eflags: 0x1 linked
-// namespace_5c7cd6ba<file_0>::function_2a4c6c26
 // Checksum 0xf846a3dc, Offset: 0x658
 // Size: 0x98
 function smokeblocksight(radius) {
@@ -98,7 +93,6 @@ function smokeblocksight(radius) {
 
 // Namespace smokegrenade
 // Params 1, eflags: 0x1 linked
-// namespace_5c7cd6ba<file_0>::function_c11bde87
 // Checksum 0xdf98b74c, Offset: 0x6f8
 // Size: 0x11c
 function spawnsmokegrenadetrigger(duration) {
@@ -117,7 +111,6 @@ function spawnsmokegrenadetrigger(duration) {
 
 // Namespace smokegrenade
 // Params 0, eflags: 0x1 linked
-// namespace_5c7cd6ba<file_0>::function_c7ecc8f3
 // Checksum 0xab5b5d76, Offset: 0x820
 // Size: 0x94
 function function_c7ecc8f3() {
@@ -131,7 +124,6 @@ function function_c7ecc8f3() {
 
 // Namespace smokegrenade
 // Params 0, eflags: 0x1 linked
-// namespace_5c7cd6ba<file_0>::function_aebcf025
 // Checksum 0x32980acc, Offset: 0x8c0
 // Size: 0x24
 function on_player_spawned() {
@@ -141,7 +133,6 @@ function on_player_spawned() {
 
 // Namespace smokegrenade
 // Params 0, eflags: 0x1 linked
-// namespace_5c7cd6ba<file_0>::function_a7922cf8
 // Checksum 0x5b9a858f, Offset: 0x8f0
 // Size: 0xf0
 function begin_other_grenade_tracking() {
@@ -163,7 +154,6 @@ function begin_other_grenade_tracking() {
 
 // Namespace smokegrenade
 // Params 5, eflags: 0x1 linked
-// namespace_5c7cd6ba<file_0>::function_1a821727
 // Checksum 0x175271af, Offset: 0x9e8
 // Size: 0x13c
 function playsmokesound(position, duration, startsound, stopsound, loopsound) {

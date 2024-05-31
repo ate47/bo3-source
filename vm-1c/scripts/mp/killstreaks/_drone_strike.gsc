@@ -20,7 +20,6 @@
 
 // Namespace drone_strike
 // Params 0, eflags: 0x1 linked
-// namespace_b244b82a<file_0>::function_c35e6aab
 // Checksum 0xcacd8e6d, Offset: 0x6b0
 // Size: 0x10c
 function init() {
@@ -32,7 +31,6 @@ function init() {
 
 // Namespace drone_strike
 // Params 0, eflags: 0x1 linked
-// namespace_b244b82a<file_0>::function_a8bde492
 // Checksum 0xa3e9ac8d, Offset: 0x7c8
 // Size: 0x76
 function function_a8bde492() {
@@ -48,7 +46,6 @@ function function_a8bde492() {
 
 // Namespace drone_strike
 // Params 0, eflags: 0x1 linked
-// namespace_b244b82a<file_0>::function_11a55cc6
 // Checksum 0x2c1bed70, Offset: 0x848
 // Size: 0x18a
 function function_11a55cc6() {
@@ -79,7 +76,6 @@ function function_11a55cc6() {
 
 // Namespace drone_strike
 // Params 0, eflags: 0x1 linked
-// namespace_b244b82a<file_0>::function_16fae838
 // Checksum 0xf2abe4f9, Offset: 0x9e0
 // Size: 0x8c
 function waitforlocationselection() {
@@ -94,7 +90,6 @@ function waitforlocationselection() {
 
 // Namespace drone_strike
 // Params 1, eflags: 0x1 linked
-// namespace_b244b82a<file_0>::function_516499e1
 // Checksum 0x8139dd51, Offset: 0xa78
 // Size: 0x158
 function function_516499e1(location) {
@@ -113,7 +108,6 @@ function function_516499e1(location) {
 
 // Namespace drone_strike
 // Params 3, eflags: 0x1 linked
-// namespace_b244b82a<file_0>::function_c6a9df54
 // Checksum 0x87d3f965, Offset: 0xbd8
 // Size: 0x7c
 function watchforkillstreakend(team, influencer, killstreak_id) {
@@ -123,7 +117,6 @@ function watchforkillstreakend(team, influencer, killstreak_id) {
 
 // Namespace drone_strike
 // Params 4, eflags: 0x1 linked
-// namespace_b244b82a<file_0>::function_25291ec1
 // Checksum 0x29047183, Offset: 0xc60
 // Size: 0x3aa
 function function_25291ec1(position, yaw, team, killstreak_id) {
@@ -159,7 +152,6 @@ function function_25291ec1(position, yaw, team, killstreak_id) {
 
 // Namespace drone_strike
 // Params 6, eflags: 0x1 linked
-// namespace_b244b82a<file_0>::function_9c823234
 // Checksum 0x3824999, Offset: 0x1018
 // Size: 0x524
 function spawndrone(startpoint, endpoint, targetpoint, angles, team, killstreak_id) {
@@ -214,7 +206,6 @@ function spawndrone(startpoint, endpoint, targetpoint, angles, team, killstreak_
 
 // Namespace drone_strike
 // Params 0, eflags: 0x1 linked
-// namespace_b244b82a<file_0>::function_d3f5bb28
 // Checksum 0xb9ec8118, Offset: 0x1548
 // Size: 0xf4
 function function_d3f5bb28() {
@@ -228,7 +219,6 @@ function function_d3f5bb28() {
 
 // Namespace drone_strike
 // Params 2, eflags: 0x1 linked
-// namespace_b244b82a<file_0>::function_d04637c1
 // Checksum 0xf2466db1, Offset: 0x1648
 // Size: 0x19c
 function function_d04637c1(attacker, weapon) {
@@ -251,7 +241,6 @@ function function_d04637c1(attacker, weapon) {
 
 // Namespace drone_strike
 // Params 1, eflags: 0x1 linked
-// namespace_b244b82a<file_0>::function_27a3a860
 // Checksum 0x3e155982, Offset: 0x17f0
 // Size: 0x84
 function watchownerevents(bomb) {
@@ -265,7 +254,6 @@ function watchownerevents(bomb) {
 
 // Namespace drone_strike
 // Params 1, eflags: 0x1 linked
-// namespace_b244b82a<file_0>::function_b5c537e7
 // Checksum 0x304e9434, Offset: 0x1880
 // Size: 0x6c
 function watchforemp(owner) {
@@ -278,7 +266,6 @@ function watchforemp(owner) {
 
 // Namespace drone_strike
 // Params 1, eflags: 0x1 linked
-// namespace_b244b82a<file_0>::function_cf848804
 // Checksum 0xe67477e1, Offset: 0x18f8
 // Size: 0x3c
 function function_cf848804(attacker) {
@@ -288,7 +275,6 @@ function function_cf848804(attacker) {
 
 // Namespace drone_strike
 // Params 2, eflags: 0x1 linked
-// namespace_b244b82a<file_0>::function_b45679d2
 // Checksum 0xa0e22a3c, Offset: 0x1940
 // Size: 0x15c
 function function_b45679d2(attacker, victim) {
@@ -307,7 +293,6 @@ function function_b45679d2(attacker, victim) {
 
 // Namespace drone_strike
 // Params 0, eflags: 0x1 linked
-// namespace_b244b82a<file_0>::function_ed58337a
 // Checksum 0xa730fe5e, Offset: 0x1aa8
 // Size: 0x7c
 function function_ed58337a() {

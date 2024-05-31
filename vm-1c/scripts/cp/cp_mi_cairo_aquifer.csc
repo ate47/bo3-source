@@ -17,7 +17,6 @@
 
 // Namespace namespace_19487f32
 // Params 0, eflags: 0x1 linked
-// namespace_19487f32<file_0>::function_d290ebfa
 // Checksum 0x644eced5, Offset: 0x3d8
 // Size: 0x94
 function main() {
@@ -32,7 +31,6 @@ function main() {
 
 // Namespace namespace_19487f32
 // Params 0, eflags: 0x1 linked
-// namespace_19487f32<file_0>::function_4b0a421
 // Checksum 0x434ffe1c, Offset: 0x478
 // Size: 0x4c
 function function_4b0a421() {
@@ -41,7 +39,6 @@ function function_4b0a421() {
 
 // Namespace namespace_19487f32
 // Params 1, eflags: 0x1 linked
-// namespace_19487f32<file_0>::function_71f88fc
 // Checksum 0x26e4596, Offset: 0x4d0
 // Size: 0x1aa
 function function_71f88fc(n_zone) {
@@ -85,7 +82,6 @@ function function_71f88fc(n_zone) {
 
 // Namespace namespace_19487f32
 // Params 3, eflags: 0x0
-// namespace_19487f32<file_0>::function_93df2062
 // Checksum 0x59c561be, Offset: 0x688
 // Size: 0x7c
 function function_93df2062(player, filterid, var_5a938650) {
@@ -95,7 +91,6 @@ function function_93df2062(player, filterid, var_5a938650) {
 
 // Namespace namespace_19487f32
 // Params 1, eflags: 0x1 linked
-// namespace_19487f32<file_0>::function_8c34c654
 // Checksum 0x21a259b2, Offset: 0x710
 // Size: 0x30
 function mapped_material_id(materialname) {
@@ -107,7 +102,6 @@ function mapped_material_id(materialname) {
 
 // Namespace namespace_19487f32
 // Params 7, eflags: 0x1 linked
-// namespace_19487f32<file_0>::function_fb25b781
 // Checksum 0xc0474d19, Offset: 0x748
 // Size: 0x84
 function function_fb25b781(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

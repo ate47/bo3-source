@@ -18,7 +18,6 @@
 
 // Namespace killcam
 // Params 0, eflags: 0x2
-// namespace_367908b2<file_0>::function_2dc19561
 // Checksum 0x5be83ac7, Offset: 0x4f0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -27,7 +26,6 @@ function autoexec function_2dc19561() {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_8c87d8eb
 // Checksum 0x3a195c76, Offset: 0x530
 // Size: 0x54
 function __init__() {
@@ -37,7 +35,6 @@ function __init__() {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_c35e6aab
 // Checksum 0x3666793f, Offset: 0x590
 // Size: 0x54
 function init() {
@@ -48,7 +45,6 @@ function init() {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_4c8fcebe
 // Checksum 0xd2995684, Offset: 0x5f0
 // Size: 0xc2
 function init_final_killcam() {
@@ -63,7 +59,6 @@ function init_final_killcam() {
 
 // Namespace killcam
 // Params 1, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_61a6ba4a
 // Checksum 0x355fba82, Offset: 0x6c0
 // Size: 0x44
 function init_final_killcam_team(team) {
@@ -73,7 +68,6 @@ function init_final_killcam_team(team) {
 
 // Namespace killcam
 // Params 1, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_68ec327b
 // Checksum 0x388b6173, Offset: 0x710
 // Size: 0x112
 function clear_final_killcam_team(team) {
@@ -92,7 +86,6 @@ function clear_final_killcam_team(team) {
 
 // Namespace killcam
 // Params 11, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_96b5af72
 // Checksum 0x512c60f4, Offset: 0x830
 // Size: 0x344
 function record_settings(spectatorclient, targetentityindex, weapon, meansofdeath, deathtime, deathtimeoffset, offsettime, killcam_entity_info, perks, killstreaks, attacker) {
@@ -125,7 +118,6 @@ function record_settings(spectatorclient, targetentityindex, weapon, meansofdeat
 
 // Namespace killcam
 // Params 0, eflags: 0x0
-// namespace_367908b2<file_0>::function_b84ed3fc
 // Checksum 0x62e20270, Offset: 0xb80
 // Size: 0xb2
 function erase_final_killcam() {
@@ -139,7 +131,6 @@ function erase_final_killcam() {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_2f9d143c
 // Checksum 0xa0394982, Offset: 0xc40
 // Size: 0x20
 function final_killcam_waiter() {
@@ -150,7 +141,6 @@ function final_killcam_waiter() {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_6e092453
 // Checksum 0x69a05795, Offset: 0xc68
 // Size: 0x4c
 function post_round_final_killcam() {
@@ -164,7 +154,6 @@ function post_round_final_killcam() {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_98de7223
 // Checksum 0xb592c350, Offset: 0xcc0
 // Size: 0x25c
 function do_final_killcam() {
@@ -208,7 +197,6 @@ function do_final_killcam() {
 
 // Namespace killcam
 // Params 0, eflags: 0x0
-// namespace_367908b2<file_0>::function_ec4e2b9c
 // Checksum 0x99ec1590, Offset: 0xf28
 // Size: 0x4
 function function_ec4e2b9c() {
@@ -217,7 +205,6 @@ function function_ec4e2b9c() {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_4bb31c47
 // Checksum 0xcdc36a84, Offset: 0xf38
 // Size: 0x76
 function are_any_players_watching() {
@@ -233,7 +220,6 @@ function are_any_players_watching() {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_29c78220
 // Checksum 0xf9282db3, Offset: 0xfb8
 // Size: 0x44
 function watch_for_skip_killcam() {
@@ -245,7 +231,6 @@ function watch_for_skip_killcam() {
 
 // Namespace killcam
 // Params 14, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_367908b2
 // Checksum 0xe68895cb, Offset: 0x1008
 // Size: 0x68c
 function killcam(attackernum, targetnum, killcam_entity_info, weapon, meansofdeath, deathtime, deathtimeoffset, offsettime, respawn, maxtime, perks, killstreaks, attacker, keep_deathcam) {
@@ -342,7 +327,6 @@ function killcam(attackernum, targetnum, killcam_entity_info, weapon, meansofdea
 
 // Namespace killcam
 // Params 2, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_1c59dce7
 // Checksum 0xb8f502a6, Offset: 0x16a0
 // Size: 0x5c
 function set_entity(killcamentityindex, delayms) {
@@ -357,7 +341,6 @@ function set_entity(killcamentityindex, delayms) {
 
 // Namespace killcam
 // Params 2, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_afa01dbf
 // Checksum 0xd1b240ab, Offset: 0x1708
 // Size: 0xac
 function set_killcam_entities(entity_info, killcamstarttime) {
@@ -372,7 +355,6 @@ function set_killcam_entities(entity_info, killcamstarttime) {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_62177e42
 // Checksum 0x6b524243, Offset: 0x17c0
 // Size: 0x3a
 function wait_killcam_time() {
@@ -384,7 +366,6 @@ function wait_killcam_time() {
 
 // Namespace killcam
 // Params 2, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_8c00f071
 // Checksum 0xd3aeae4c, Offset: 0x1808
 // Size: 0x124
 function wait_final_killcam_slowdown(deathtime, starttime) {
@@ -406,7 +387,6 @@ function wait_final_killcam_slowdown(deathtime, starttime) {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_821991a3
 // Checksum 0xc6d64fb5, Offset: 0x1938
 // Size: 0xb4
 function wait_skip_killcam_button() {
@@ -429,7 +409,6 @@ function wait_skip_killcam_button() {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_70dee73f
 // Checksum 0x6cd927fb, Offset: 0x19f8
 // Size: 0x3c
 function wait_team_change_end_killcam() {
@@ -441,7 +420,6 @@ function wait_team_change_end_killcam() {
 
 // Namespace killcam
 // Params 0, eflags: 0x0
-// namespace_367908b2<file_0>::function_d0f29fe3
 // Checksum 0xc2a33f18, Offset: 0x1a40
 // Size: 0x7e
 function wait_skip_killcam_safe_spawn_button() {
@@ -459,7 +437,6 @@ function wait_skip_killcam_safe_spawn_button() {
 
 // Namespace killcam
 // Params 1, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_3fc1574
 // Checksum 0x90110cf2, Offset: 0x1ac8
 // Size: 0x6c
 function end(final) {
@@ -475,7 +452,6 @@ function end(final) {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_6d82e1ee
 // Checksum 0x9814c69d, Offset: 0x1b40
 // Size: 0x52
 function check_for_abrupt_end() {
@@ -492,7 +468,6 @@ function check_for_abrupt_end() {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_381b7570
 // Checksum 0x6b24d169, Offset: 0x1ba0
 // Size: 0x3c
 function spawned_killcam_cleanup() {
@@ -504,7 +479,6 @@ function spawned_killcam_cleanup() {
 
 // Namespace killcam
 // Params 1, eflags: 0x0
-// namespace_367908b2<file_0>::function_74a1e0e1
 // Checksum 0x829a3, Offset: 0x1be8
 // Size: 0x9c
 function spectator_killcam_cleanup(attacker) {
@@ -519,7 +493,6 @@ function spectator_killcam_cleanup(attacker) {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_548eaf1e
 // Checksum 0xde81b980, Offset: 0x1c90
 // Size: 0x50
 function function_548eaf1e() {
@@ -532,7 +505,6 @@ function function_548eaf1e() {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_5551058f
 // Checksum 0x1c268d7a, Offset: 0x1ce8
 // Size: 0x44
 function function_5551058f() {
@@ -544,7 +516,6 @@ function function_5551058f() {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_e5bdbb5a
 // Checksum 0x439f6ba4, Offset: 0x1d38
 // Size: 0x1a
 function cancel_use_button() {
@@ -553,7 +524,6 @@ function cancel_use_button() {
 
 // Namespace killcam
 // Params 0, eflags: 0x0
-// namespace_367908b2<file_0>::function_4d6872cc
 // Checksum 0x2aabc237, Offset: 0x1d60
 // Size: 0x1a
 function cancel_safe_spawn_button() {
@@ -562,7 +532,6 @@ function cancel_safe_spawn_button() {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_c342a02f
 // Checksum 0x87cd6e4c, Offset: 0x1d88
 // Size: 0x10
 function cancel_callback() {
@@ -571,7 +540,6 @@ function cancel_callback() {
 
 // Namespace killcam
 // Params 0, eflags: 0x0
-// namespace_367908b2<file_0>::function_8ab32671
 // Checksum 0x73e8dc44, Offset: 0x1da0
 // Size: 0x1c
 function cancel_safe_spawn_callback() {
@@ -581,7 +549,6 @@ function cancel_safe_spawn_callback() {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_ebf3b725
 // Checksum 0x70023b43, Offset: 0x1dc8
 // Size: 0x34
 function cancel_on_use() {
@@ -590,7 +557,6 @@ function cancel_on_use() {
 
 // Namespace killcam
 // Params 2, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_da9c53cb
 // Checksum 0x138b70fe, Offset: 0x1e08
 // Size: 0x11c
 function cancel_on_use_specific_button(pressingbuttonfunc, finishedfunc) {
@@ -625,7 +591,6 @@ function cancel_on_use_specific_button(pressingbuttonfunc, finishedfunc) {
 
 // Namespace killcam
 // Params 1, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_7d5f6485
 // Checksum 0xe551e0a2, Offset: 0x1f30
 // Size: 0x470
 function final_killcam_internal(winner) {
@@ -679,7 +644,6 @@ function final_killcam_internal(winner) {
 
 // Namespace killcam
 // Params 1, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_4a20ef53
 // Checksum 0x80881b92, Offset: 0x23a8
 // Size: 0x254
 function final_killcam(winner) {
@@ -719,7 +683,6 @@ function final_killcam(winner) {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_c0ee8391
 // Checksum 0xc5845bc7, Offset: 0x2608
 // Size: 0x44
 function spawn_end_of_final_killcam() {
@@ -730,7 +693,6 @@ function spawn_end_of_final_killcam() {
 
 // Namespace killcam
 // Params 1, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_999797fc
 // Checksum 0xb2c1dcb3, Offset: 0x2658
 // Size: 0x30
 function is_entity_weapon(weapon) {
@@ -742,7 +704,6 @@ function is_entity_weapon(weapon) {
 
 // Namespace killcam
 // Params 5, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_a8ca3be
 // Checksum 0x66cef2cf, Offset: 0x2690
 // Size: 0x154
 function calc_time(weapon, entitystarttime, predelay, respawn, maxtime) {
@@ -773,7 +734,6 @@ function calc_time(weapon, entitystarttime, predelay, respawn, maxtime) {
 
 // Namespace killcam
 // Params 0, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_53440b83
 // Checksum 0x960fac8c, Offset: 0x27f0
 // Size: 0x80
 function calc_post_delay() {
@@ -791,7 +751,6 @@ function calc_post_delay() {
 
 // Namespace killcam
 // Params 1, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_62ea5b06
 // Checksum 0x7666f597, Offset: 0x2878
 // Size: 0x2c
 function function_62ea5b06(respawn) {
@@ -800,7 +759,6 @@ function function_62ea5b06(respawn) {
 
 // Namespace killcam
 // Params 1, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_a6953bec
 // Checksum 0x393d0282, Offset: 0x28b0
 // Size: 0xc
 function function_a6953bec(camtime) {
@@ -809,7 +767,6 @@ function function_a6953bec(camtime) {
 
 // Namespace killcam
 // Params 0, eflags: 0x0
-// namespace_367908b2<file_0>::function_c0c42164
 // Checksum 0xa8124b2f, Offset: 0x28c8
 // Size: 0x550
 function function_c0c42164() {
@@ -887,7 +844,6 @@ function function_c0c42164() {
 
 // Namespace killcam
 // Params 3, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_bbd304c7
 // Checksum 0x7c8359a2, Offset: 0x2e20
 // Size: 0x220
 function get_closest_killcam_entity(attacker, killcamentities, depth) {
@@ -927,7 +883,6 @@ function get_closest_killcam_entity(attacker, killcamentities, depth) {
 
 // Namespace killcam
 // Params 3, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_85908717
 // Checksum 0x18c1a0c0, Offset: 0x3048
 // Size: 0x2e0
 function get_killcam_entity(attacker, einflictor, weapon) {
@@ -977,7 +932,6 @@ function get_killcam_entity(attacker, einflictor, weapon) {
 
 // Namespace killcam
 // Params 2, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_74acd992
 // Checksum 0xf54daf86, Offset: 0x3330
 // Size: 0x92
 function get_secondary_killcam_entity(entity, entity_info) {
@@ -990,7 +944,6 @@ function get_secondary_killcam_entity(entity, entity_info) {
 
 // Namespace killcam
 // Params 4, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_531d1afa
 // Checksum 0xa548f237, Offset: 0x33d0
 // Size: 0x10c
 function get_primary_killcam_entity(attacker, einflictor, weapon, entity_info) {
@@ -1007,7 +960,6 @@ function get_primary_killcam_entity(attacker, einflictor, weapon, entity_info) {
 
 // Namespace killcam
 // Params 3, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_f2ca412
 // Checksum 0x18dcb8c4, Offset: 0x34e8
 // Size: 0x80
 function get_killcam_entity_info(attacker, einflictor, weapon) {
@@ -1020,7 +972,6 @@ function get_killcam_entity_info(attacker, einflictor, weapon) {
 
 // Namespace killcam
 // Params 1, eflags: 0x1 linked
-// namespace_367908b2<file_0>::function_48c3310
 // Checksum 0x91240d3c, Offset: 0x3570
 // Size: 0x4c
 function get_killcam_entity_info_starttime(entity_info) {

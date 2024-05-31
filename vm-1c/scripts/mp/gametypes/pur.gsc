@@ -14,7 +14,6 @@
 
 // Namespace namespace_fc10b9aa
 // Params 0, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_d290ebfa
 // Checksum 0x54a61887, Offset: 0x410
 // Size: 0x2d4
 function main() {
@@ -49,7 +48,6 @@ function main() {
 
 // Namespace namespace_fc10b9aa
 // Params 0, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_34685338
 // Checksum 0x930182aa, Offset: 0x6f0
 // Size: 0x39c
 function onstartgametype() {
@@ -97,7 +95,6 @@ function onstartgametype() {
 
 // Namespace namespace_fc10b9aa
 // Params 0, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_78a36e4c
 // Checksum 0x74146a10, Offset: 0xa98
 // Size: 0x24
 function function_78a36e4c() {
@@ -108,7 +105,6 @@ function function_78a36e4c() {
 
 // Namespace namespace_fc10b9aa
 // Params 1, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_19bc9234
 // Checksum 0x664f3717, Offset: 0xac8
 // Size: 0x84
 function onspawnplayer(predictedspawn) {
@@ -123,7 +119,6 @@ function onspawnplayer(predictedspawn) {
 
 // Namespace namespace_fc10b9aa
 // Params 2, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_67248e13
 // Checksum 0x71533485, Offset: 0xb58
 // Size: 0x2c
 function function_67248e13(winningteam, endreasontext) {
@@ -132,7 +127,6 @@ function function_67248e13(winningteam, endreasontext) {
 
 // Namespace namespace_fc10b9aa
 // Params 1, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_8a94d3c2
 // Checksum 0x1d68fb80, Offset: 0xb90
 // Size: 0x24
 function onalivecountchange(team) {
@@ -141,7 +135,6 @@ function onalivecountchange(team) {
 
 // Namespace namespace_fc10b9aa
 // Params 1, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_a8cf0ca0
 // Checksum 0x6104d4c8, Offset: 0xbc0
 // Size: 0xe4
 function onlastteamaliveevent(team) {
@@ -160,7 +153,6 @@ function onlastteamaliveevent(team) {
 
 // Namespace namespace_fc10b9aa
 // Params 1, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_e0db18e8
 // Checksum 0xeda0f431, Offset: 0xcb0
 // Size: 0x4c
 function ondeadevent(team) {
@@ -171,7 +163,6 @@ function ondeadevent(team) {
 
 // Namespace namespace_fc10b9aa
 // Params 1, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_257d1c47
 // Checksum 0xd34ea38c, Offset: 0xd08
 // Size: 0x44
 function onendgame(winningteam) {
@@ -182,7 +173,6 @@ function onendgame(winningteam) {
 
 // Namespace namespace_fc10b9aa
 // Params 0, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_e4e885e6
 // Checksum 0x781d1b6f, Offset: 0xd58
 // Size: 0xba
 function onroundswitch() {
@@ -196,7 +186,6 @@ function onroundswitch() {
 
 // Namespace namespace_fc10b9aa
 // Params 1, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_3fcd5617
 // Checksum 0xb73f6456, Offset: 0xe20
 // Size: 0xec
 function onroundendgame(roundwinner) {
@@ -213,7 +202,6 @@ function onroundendgame(roundwinner) {
 
 // Namespace namespace_fc10b9aa
 // Params 0, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_5cee117d
 // Checksum 0xc10e2734, Offset: 0xf18
 // Size: 0x1d8
 function onscoreclosemusic() {
@@ -247,7 +235,6 @@ function onscoreclosemusic() {
 
 // Namespace namespace_fc10b9aa
 // Params 2, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_66ffb804
 // Checksum 0x4334df6, Offset: 0x10f8
 // Size: 0x1c4
 function function_66ffb804(team, y_pos) {
@@ -269,7 +256,6 @@ function function_66ffb804(team, y_pos) {
 
 // Namespace namespace_fc10b9aa
 // Params 0, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_92fa676f
 // Checksum 0x17465b07, Offset: 0x12c8
 // Size: 0x394
 function function_92fa676f() {
@@ -313,7 +299,6 @@ function function_92fa676f() {
 
 // Namespace namespace_fc10b9aa
 // Params 0, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_f62e26bc
 // Checksum 0x15d6c360, Offset: 0x1668
 // Size: 0x138
 function function_f62e26bc() {
@@ -335,7 +320,6 @@ function function_f62e26bc() {
 
 // Namespace namespace_fc10b9aa
 // Params 0, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_5891e6ab
 // Checksum 0xcf227ed3, Offset: 0x17a8
 // Size: 0x92
 function function_5891e6ab() {
@@ -347,7 +331,6 @@ function function_5891e6ab() {
 
 // Namespace namespace_fc10b9aa
 // Params 0, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_32ac38fb
 // Checksum 0xf5633ae2, Offset: 0x1848
 // Size: 0x94
 function function_32ac38fb() {
@@ -366,7 +349,6 @@ function function_32ac38fb() {
 
 // Namespace namespace_fc10b9aa
 // Params 0, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_71ebb03f
 // Checksum 0x83a81fb8, Offset: 0x18e8
 // Size: 0x14
 function function_71ebb03f() {
@@ -375,7 +357,6 @@ function function_71ebb03f() {
 
 // Namespace namespace_fc10b9aa
 // Params 2, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_62209e9a
 // Checksum 0x9966a59, Offset: 0x1908
 // Size: 0x44
 function onspawnspectator(origin, angles) {
@@ -385,7 +366,6 @@ function onspawnspectator(origin, angles) {
 
 // Namespace namespace_fc10b9aa
 // Params 1, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_446c8d00
 // Checksum 0x932f4e0e, Offset: 0x1958
 // Size: 0xf6
 function function_446c8d00(team) {
@@ -403,7 +383,6 @@ function function_446c8d00(team) {
 
 // Namespace namespace_fc10b9aa
 // Params 0, eflags: 0x0
-// namespace_fc10b9aa<file_0>::function_712cf456
 // Checksum 0x5525f0b1, Offset: 0x1a58
 // Size: 0x16
 function getrespawndelay() {

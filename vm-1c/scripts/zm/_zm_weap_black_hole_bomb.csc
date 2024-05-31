@@ -12,7 +12,6 @@
 
 // Namespace namespace_d6b63386
 // Params 0, eflags: 0x2
-// namespace_d6b63386<file_0>::function_2dc19561
 // Checksum 0xacd98a2a, Offset: 0x390
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_d6b63386
 // Params 0, eflags: 0x1 linked
-// namespace_d6b63386<file_0>::function_8c87d8eb
 // Checksum 0x59e6f1eb, Offset: 0x3d0
 // Size: 0x1bc
 function __init__() {
@@ -42,7 +40,6 @@ function __init__() {
 
 // Namespace namespace_d6b63386
 // Params 7, eflags: 0x1 linked
-// namespace_d6b63386<file_0>::function_2076deb2
 // Checksum 0xff77edf9, Offset: 0x598
 // Size: 0xa4
 function function_2076deb2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -55,7 +52,6 @@ function function_2076deb2(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_d6b63386
 // Params 7, eflags: 0x1 linked
-// namespace_d6b63386<file_0>::function_437a4164
 // Checksum 0x933466e6, Offset: 0x648
 // Size: 0xae
 function function_437a4164(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -70,7 +66,6 @@ function function_437a4164(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_d6b63386
 // Params 2, eflags: 0x1 linked
-// namespace_d6b63386<file_0>::function_65616fbd
 // Checksum 0xaf4a9b68, Offset: 0x700
 // Size: 0x224
 function function_65616fbd(local_client_num, var_d89c34cf) {
@@ -94,7 +89,6 @@ function function_65616fbd(local_client_num, var_d89c34cf) {
 
 // Namespace namespace_d6b63386
 // Params 2, eflags: 0x0
-// namespace_d6b63386<file_0>::function_2aac6f7b
 // Checksum 0x726acbc3, Offset: 0x930
 // Size: 0xa4
 function function_2aac6f7b(ent_model, var_26cba5b) {
@@ -109,7 +103,6 @@ function function_2aac6f7b(ent_model, var_26cba5b) {
 
 // Namespace namespace_d6b63386
 // Params 7, eflags: 0x1 linked
-// namespace_d6b63386<file_0>::function_13471301
 // Checksum 0xab804352, Offset: 0x9e0
 // Size: 0x1e4
 function function_13471301(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -139,7 +132,6 @@ function function_13471301(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_d6b63386
 // Params 2, eflags: 0x1 linked
-// namespace_d6b63386<file_0>::function_aedc4b92
 // Checksum 0x675d8ea9, Offset: 0xbd0
 // Size: 0x5c
 function function_aedc4b92(var_3df01f81, var_be0a9746) {

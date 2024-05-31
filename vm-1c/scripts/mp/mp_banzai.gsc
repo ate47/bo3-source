@@ -12,7 +12,6 @@
 
 // Namespace namespace_2c022880
 // Params 0, eflags: 0x1 linked
-// namespace_2c022880<file_0>::function_d290ebfa
 // Checksum 0x516adaf8, Offset: 0x278
 // Size: 0xa34
 function main() {
@@ -69,7 +68,6 @@ function main() {
 
 // Namespace namespace_2c022880
 // Params 0, eflags: 0x1 linked
-// namespace_2c022880<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0xcb8
 // Size: 0x4
 function precache() {
@@ -78,7 +76,6 @@ function precache() {
 
 // Namespace namespace_2c022880
 // Params 1, eflags: 0x1 linked
-// namespace_2c022880<file_0>::function_c9aa825e
 // Checksum 0xc128b815, Offset: 0xcc8
 // Size: 0xdc
 function function_c9aa825e(&var_6480c733) {
@@ -98,7 +95,6 @@ function function_c9aa825e(&var_6480c733) {
 
 // Namespace namespace_2c022880
 // Params 0, eflags: 0x1 linked
-// namespace_2c022880<file_0>::function_ad0d8732
 // Checksum 0x8dfd0abd, Offset: 0xdb0
 // Size: 0x74
 function spawnkilltrigger() {
@@ -109,7 +105,6 @@ function spawnkilltrigger() {
 
 // Namespace namespace_2c022880
 // Params 0, eflags: 0x1 linked
-// namespace_2c022880<file_0>::function_3a85dbfe
 // Checksum 0x633cdbc7, Offset: 0xe30
 // Size: 0x90
 function watchkilltrigger() {
@@ -123,7 +118,6 @@ function watchkilltrigger() {
 
 // Namespace namespace_2c022880
 // Params 1, eflags: 0x1 linked
-// namespace_2c022880<file_0>::function_8b3d9b0e
 // Checksum 0x30a098e8, Offset: 0xec8
 // Size: 0x44
 function update_escort_robot_path(&patharray) {

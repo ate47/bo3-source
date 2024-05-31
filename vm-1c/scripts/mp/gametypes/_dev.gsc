@@ -30,7 +30,6 @@
 
     // Namespace dev
     // Params 0, eflags: 0x2
-    // namespace_eae8c9fa<file_0>::function_2dc19561
     // Checksum 0xc847bbc1, Offset: 0x3e0
     // Size: 0x3c
     function autoexec function_2dc19561() {
@@ -41,7 +40,6 @@
 
 // Namespace dev
 // Params 0, eflags: 0x1 linked
-// namespace_eae8c9fa<file_0>::function_8c87d8eb
 // Checksum 0x3577be2f, Offset: 0x428
 // Size: 0x5c
 function __init__() {
@@ -52,7 +50,6 @@ function __init__() {
 
 // Namespace dev
 // Params 0, eflags: 0x1 linked
-// namespace_eae8c9fa<file_0>::function_c35e6aab
 // Checksum 0x13be6343, Offset: 0x490
 // Size: 0x4a0
 function init() {
@@ -120,7 +117,6 @@ function init() {
 
 // Namespace dev
 // Params 0, eflags: 0x1 linked
-// namespace_eae8c9fa<file_0>::function_8feafce2
 // Checksum 0xe27529ec, Offset: 0x938
 // Size: 0x3c
 function on_player_connected() {
@@ -136,7 +132,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_127c3b74
     // Checksum 0x11700fd3, Offset: 0x980
     // Size: 0x46e
     function updatehardpoints() {
@@ -191,7 +186,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_3d345413
     // Checksum 0x94df881f, Offset: 0xdf8
     // Size: 0x8c
     function function_3d345413() {
@@ -204,7 +198,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_277100a1
     // Checksum 0xa451eab2, Offset: 0xe90
     // Size: 0x54
     function warpalltohost(team) {
@@ -214,7 +207,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_93f46504
     // Checksum 0x6d1d1ea2, Offset: 0xef0
     // Size: 0x374
     function warpalltoplayer(team, player) {
@@ -265,7 +257,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x0
-    // namespace_eae8c9fa<file_0>::function_f755c633
     // Checksum 0x8c070c5, Offset: 0x1270
     // Size: 0x454
     function updatedevsettingszm() {
@@ -325,7 +316,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_f49597b8
     // Checksum 0xe5697c3c, Offset: 0x16d0
     // Size: 0x24de
     function updatedevsettings() {
@@ -775,7 +765,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_41388f05
     // Checksum 0xaa2f7617, Offset: 0x3bb8
     // Size: 0x3c
     function waitthennotifyroundkillcam() {
@@ -786,7 +775,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_834a6315
     // Checksum 0xdadd415a, Offset: 0x3c00
     // Size: 0x44
     function waitthennotifyfinalkillcam() {
@@ -798,7 +786,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_1870c86a
     // Checksum 0x2b40e928, Offset: 0x3c50
     // Size: 0x18c
     function devgui_spawn_think() {
@@ -828,7 +815,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_1fefb654
     // Checksum 0x27a030a3, Offset: 0x3de8
     // Size: 0x162
     function devgui_unlimited_ammo() {
@@ -856,7 +842,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_d4757f3c
     // Checksum 0x71b2d8b6, Offset: 0x3f58
     // Size: 0x11e
     function devgui_unlimited_momentum() {
@@ -882,7 +867,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_289ca173
     // Checksum 0x50fb2a68, Offset: 0x4080
     // Size: 0x112
     function devgui_increase_momentum(score) {
@@ -903,7 +887,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_a72d8be8
     // Checksum 0x156bcb9f, Offset: 0x41a0
     // Size: 0x318
     function devgui_health_debug() {
@@ -946,7 +929,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_91e82e7b
     // Checksum 0xe50d0b39, Offset: 0x44c0
     // Size: 0xc6
     function giveextraperks() {
@@ -962,7 +944,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_3a8a644f
     // Checksum 0xbc81e1ed, Offset: 0x4590
     // Size: 0x14c
     function xkillsy(attackername, victimname) {
@@ -985,7 +966,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_efe63614
     // Checksum 0x23fc05b7, Offset: 0x46e8
     // Size: 0x24
     function testscriptruntimeerrorassert() {
@@ -995,7 +975,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_b973d78b
     // Checksum 0xf0d6b813, Offset: 0x4718
     // Size: 0x2c
     function testscriptruntimeassertmsgassert() {
@@ -1005,7 +984,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_256f48df
     // Checksum 0x6ab82f7, Offset: 0x4750
     // Size: 0x2c
     function testscriptruntimeerrormsgassert() {
@@ -1015,7 +993,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_d6c7ab4
     // Checksum 0x967402eb, Offset: 0x4788
     // Size: 0x44
     function testscriptruntimeerror2() {
@@ -1027,7 +1004,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_7f73e9ef
     // Checksum 0x99f770e5, Offset: 0x47d8
     // Size: 0x1c
     function testscriptruntimeerror1() {
@@ -1036,7 +1012,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_cf63752
     // Checksum 0x8f8af74d, Offset: 0x4800
     // Size: 0x11c
     function testscriptruntimeerror() {
@@ -1063,7 +1038,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_92600b0d
     // Checksum 0x85eef04e, Offset: 0x4928
     // Size: 0xf4
     function testdvars() {
@@ -1084,7 +1058,6 @@ function on_player_connected() {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_43d8ad0a
     // Checksum 0x953b8ad6, Offset: 0x4a28
     // Size: 0x1e4
     function addenemyheli() {
@@ -1126,7 +1099,6 @@ function on_player_connected() {
 
 // Namespace dev
 // Params 1, eflags: 0x1 linked
-// namespace_eae8c9fa<file_0>::function_28e07f29
 // Checksum 0xaed7c259, Offset: 0x4c18
 // Size: 0x108
 function getormakebot(team) {
@@ -1151,7 +1123,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_cd0896a3
     // Checksum 0xd723e670, Offset: 0x4d28
     // Size: 0x20c
     function addtestcarepackage() {
@@ -1191,7 +1162,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 5, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_2bacd307
     // Checksum 0x5fa1b150, Offset: 0x4f40
     // Size: 0x5b6
     function showonespawnpoint(spawn_point, color, notification, height, print) {
@@ -1249,7 +1219,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_7d9b2146
     // Checksum 0x873925cd, Offset: 0x5500
     // Size: 0xe8
     function showspawnpoints() {
@@ -1268,7 +1237,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_af174d97
     // Checksum 0x8f477cda, Offset: 0x55f0
     // Size: 0x18
     function hidespawnpoints() {
@@ -1278,7 +1246,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_87ae141e
     // Checksum 0x19da8736, Offset: 0x5610
     // Size: 0x2bc
     function showstartspawnpoints() {
@@ -1314,7 +1281,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_45d39795
     // Checksum 0x8bac8a46, Offset: 0x58d8
     // Size: 0x18
     function hidestartspawnpoints() {
@@ -1324,7 +1290,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 6, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_f573927d
     // Checksum 0xdc31652c, Offset: 0x58f8
     // Size: 0x70
     function print3duntilnotified(origin, text, color, alpha, scale, notification) {
@@ -1337,7 +1302,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 5, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_fb4b2169
     // Checksum 0xf629061e, Offset: 0x5970
     // Size: 0x68
     function lineuntilnotified(start, end, color, depthtest, notification) {
@@ -1350,7 +1314,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_d6bb5795
     // Checksum 0xfa58c923, Offset: 0x59e0
     // Size: 0x160
     function engagement_distance_debug_toggle() {
@@ -1375,7 +1338,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_9019491d
     // Checksum 0x5aec9da2, Offset: 0x5b48
     // Size: 0x2a
     function dvar_turned_on(val) {
@@ -1387,7 +1349,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_e74609d7
     // Checksum 0x18123ce9, Offset: 0x5b80
     // Size: 0x3bc
     function engagement_distance_debug_init() {
@@ -1440,7 +1401,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_856a5846
     // Checksum 0x6d743a90, Offset: 0x5f48
     // Size: 0x66
     function engage_dist_debug_hud_destroy(hudarray, killnotify) {
@@ -1452,7 +1412,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_fbd4f508
     // Checksum 0x8ba9f94a, Offset: 0x5fb8
     // Size: 0x8c4
     function weapon_engage_dists_init() {
@@ -1543,7 +1502,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_88b8378e
     // Checksum 0xd0850ea4, Offset: 0x6888
     // Size: 0x3e
     function engage_dists_add(weaponname, values) {
@@ -1552,7 +1510,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_4f30f381
     // Checksum 0xa8b80d86, Offset: 0x68d0
     // Size: 0x3a
     function get_engage_dists(weapon) {
@@ -1564,7 +1521,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_1be47913
     // Checksum 0x27f13cb3, Offset: 0x6918
     // Size: 0x11c
     function engage_dists_watcher() {
@@ -1592,7 +1548,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_38935ccb
     // Checksum 0xe6fc00d7, Offset: 0x6a40
     // Size: 0x498
     function debug_realtime_engage_dist() {
@@ -1647,7 +1602,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_45ac76e3
     // Checksum 0x193de1da, Offset: 0x6ee0
     // Size: 0x92
     function hudobj_changecolor(hudobjarray, newcolor) {
@@ -1662,7 +1616,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_28798e2c
     // Checksum 0xd73a623a, Offset: 0x6f80
     // Size: 0x2ec
     function engagedist_hud_changetext(engagedisttype, units) {
@@ -1703,7 +1656,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 6, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_57e53630
     // Checksum 0x860109fd, Offset: 0x7278
     // Size: 0x1ee
     function function_57e53630(radius1, radius2, time, color, origin, normal) {
@@ -1734,7 +1686,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_de893d08
     // Checksum 0xb6977d03, Offset: 0x7470
     // Size: 0x1c6
     function larry_thread() {
@@ -1760,7 +1711,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_64afd89e
     // Checksum 0x5110f, Offset: 0x7640
     // Size: 0x270
     function larry_init(larry) {
@@ -1795,7 +1745,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_eee8ff82
     // Checksum 0x21e6aabb, Offset: 0x78b8
     // Size: 0x10c
     function larry_ai(larry) {
@@ -1808,7 +1757,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 3, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_de3f36b9
     // Checksum 0x3b01a55c, Offset: 0x79d0
     // Size: 0x1d0
     function larry_ai_thread(larry, origin, angles) {
@@ -1829,7 +1777,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_5d79797e
     // Checksum 0xd3629016, Offset: 0x7ba8
     // Size: 0x288
     function larry_ai_damage(larry) {
@@ -1866,7 +1813,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_a3678697
     // Checksum 0x4ca61d9e, Offset: 0x7e38
     // Size: 0x60
     function larry_ai_health(larry) {
@@ -1879,7 +1825,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_28dee610
     // Checksum 0x37d24781, Offset: 0x7ea0
     // Size: 0x5c6
     function larry_hud_init(larry) {
@@ -1920,7 +1865,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_36cb859c
     // Checksum 0x1c98712b, Offset: 0x8470
     // Size: 0xbc
     function larry_hud_destroy(larry) {
@@ -1935,7 +1879,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 5, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_fb312e3b
     // Checksum 0x144876f9, Offset: 0x8538
     // Size: 0xc2
     function new_hud(hud_name, msg, x, y, scale) {
@@ -1952,7 +1895,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 7, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_8bd98a60
     // Checksum 0x7a6d5de1, Offset: 0x8608
     // Size: 0x1a2
     function set_hudelem(text, x, y, scale, alpha, sort, debug_hudelem) {
@@ -1987,7 +1929,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_2f38b7bf
     // Checksum 0x6dcdba09, Offset: 0x87b8
     // Size: 0x228
     function function_2f38b7bf() {
@@ -2025,7 +1966,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_d99660db
     // Checksum 0xf5afdbaf, Offset: 0x89e8
     // Size: 0x10
     function function_d99660db() {
@@ -2034,7 +1974,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x0
-    // namespace_eae8c9fa<file_0>::function_c5833485
     // Checksum 0x974eb8f2, Offset: 0x8a00
     // Size: 0x3ac
     function function_c5833485() {
@@ -2098,7 +2037,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_142688a5
     // Checksum 0x4b66c4c8, Offset: 0x8db8
     // Size: 0x11c
     function print_weapon_name() {
@@ -2127,7 +2065,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_5bd29d09
     // Checksum 0x6b3b6a44, Offset: 0x8ee0
     // Size: 0x1b2
     function set_equipment_list() {
@@ -2149,7 +2086,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_bf6932f7
     // Checksum 0xe8d5e3a2, Offset: 0x90a0
     // Size: 0x1da
     function set_grenade_list() {
@@ -2172,7 +2108,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_498ac57d
     // Checksum 0x511e34b6, Offset: 0x9288
     // Size: 0xb6
     function take_all_grenades_and_equipment(player) {
@@ -2186,7 +2121,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_660b1787
     // Checksum 0xe5eee73f, Offset: 0x9348
     // Size: 0x128
     function equipment_dev_gui() {
@@ -2208,7 +2142,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_4ebc24c9
     // Checksum 0x46d7c44d, Offset: 0x9478
     // Size: 0x128
     function grenade_dev_gui() {
@@ -2230,7 +2163,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_1b69fde8
     // Checksum 0x84e4d854, Offset: 0x95a8
     // Size: 0x28c
     function force_grenade_throw(weapon) {
@@ -2265,7 +2197,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_7f9e1229
     // Checksum 0xa5e9190c, Offset: 0x9840
     // Size: 0x2a6
     function function_7f9e1229() {
@@ -2319,7 +2250,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_fdfd1b20
     // Checksum 0x122dce78, Offset: 0x9af0
     // Size: 0xac
     function function_fdfd1b20() {
@@ -2337,7 +2267,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_97fd4406
     // Checksum 0x4bb85f63, Offset: 0x9ba8
     // Size: 0xac
     function function_97fd4406() {
@@ -2355,7 +2284,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_194def6b
     // Checksum 0x6b4a398c, Offset: 0x9c60
     // Size: 0xac
     function function_194def6b() {
@@ -2373,7 +2301,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_7e05f110
     // Checksum 0x4870abd, Offset: 0x9d18
     // Size: 0x34
     function function_7e05f110() {
@@ -2383,7 +2310,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_aab0cfd5
     // Checksum 0x56cf9897, Offset: 0x9d58
     // Size: 0x34
     function function_aab0cfd5() {
@@ -2393,7 +2319,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_b4aa652
     // Checksum 0x8d38dd0c, Offset: 0x9d98
     // Size: 0x34
     function function_b4aa652() {
@@ -2403,7 +2328,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_5528f222
     // Checksum 0xb5cb3734, Offset: 0x9dd8
     // Size: 0x49a
     function devstraferunpathdebugdraw() {
@@ -2486,7 +2410,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_eace8596
     // Checksum 0x7d199df4, Offset: 0xa280
     // Size: 0x3c0
     function devhelipathdebugdraw() {
@@ -2559,7 +2482,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_a1b4a9e6
     // Checksum 0x6abfde4e, Offset: 0xa648
     // Size: 0x114
     function draworiginlines() {
@@ -2573,7 +2495,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 4, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_9c8f13fc
     // Checksum 0xa3935e6c, Offset: 0xa768
     // Size: 0x74
     function drawtargetnametext(textcolor, textalpha, textscale, textoffset) {
@@ -2585,7 +2506,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 4, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_4c38993b
     // Checksum 0x42e4ccd3, Offset: 0xa7e8
     // Size: 0x74
     function drawnoteworthytext(textcolor, textalpha, textscale, textoffset) {
@@ -2597,7 +2517,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 4, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_6d6b630
     // Checksum 0x85c30ab3, Offset: 0xa868
     // Size: 0xc4
     function draworigintext(textcolor, textalpha, textscale, textoffset) {
@@ -2610,7 +2529,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 4, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_d02a2e25
     // Checksum 0xd9e111a9, Offset: 0xa938
     // Size: 0xdc
     function drawspeedacceltext(textcolor, textalpha, textscale, textoffset) {
@@ -2624,7 +2542,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 7, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_2302cd4a
     // Checksum 0xdab997ed, Offset: 0xaa20
     // Size: 0x154
     function drawpath(linecolor, textcolor, textalpha, textscale, textoffset, drawtime, endonmsg) {
@@ -2646,7 +2563,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 8, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_2f793f75
     // Checksum 0xb6f3ecbc, Offset: 0xab80
     // Size: 0x124
     function drawpathsegment(enttarget, linecolor, textcolor, textalpha, textscale, textoffset, drawtime, endonmsg) {
@@ -2664,7 +2580,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_2c520d1
     // Checksum 0xd9794609, Offset: 0xacb0
     // Size: 0xc6
     function get_lookat_origin(player) {
@@ -2678,7 +2593,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_71fc369f
     // Checksum 0x2065d9e6, Offset: 0xad80
     // Size: 0x74
     function draw_pathnode(node, color) {
@@ -2690,7 +2604,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_11a3f646
     // Checksum 0xb08a4281, Offset: 0xae00
     // Size: 0x48
     function draw_pathnode_think(node, color) {
@@ -2703,7 +2616,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_7a3af9ad
     // Checksum 0x785cc348, Offset: 0xae50
     // Size: 0x1a
     function draw_pathnodes_stop() {
@@ -2713,7 +2625,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_dfff46e4
     // Checksum 0x2d6353b9, Offset: 0xae78
     // Size: 0x120
     function node_get(player) {
@@ -2739,7 +2650,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_fe53bfd5
     // Checksum 0x6aba584, Offset: 0xafa0
     // Size: 0x1a8
     function dev_get_node_pair() {
@@ -2774,7 +2684,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_348d62f8
     // Checksum 0xf5c55329, Offset: 0xb150
     // Size: 0x5c
     function draw_point(origin, color) {
@@ -2786,7 +2695,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_7a7785fc
     // Checksum 0x5272ed8d, Offset: 0xb1b8
     // Size: 0xa0
     function point_get(player) {
@@ -2804,7 +2712,6 @@ function getormakebot(team) {
 
     // Namespace dev
     // Params 0, eflags: 0x0
-    // namespace_eae8c9fa<file_0>::function_2258c623
     // Checksum 0x606626a1, Offset: 0xb260
     // Size: 0x120
     function dev_get_point_pair() {

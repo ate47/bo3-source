@@ -15,7 +15,6 @@
 
 // Namespace namespace_bf6feb71
 // Params 0, eflags: 0x2
-// namespace_bf6feb71<file_0>::function_2dc19561
 // Checksum 0x30b80a00, Offset: 0x2a0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -24,7 +23,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_bf6feb71
 // Params 0, eflags: 0x1 linked
-// namespace_bf6feb71<file_0>::function_8c87d8eb
 // Checksum 0x99dd98e1, Offset: 0x2e0
 // Size: 0x14c
 function __init__() {

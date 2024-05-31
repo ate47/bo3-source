@@ -7,7 +7,6 @@
 
 // Namespace namespace_136a0c13
 // Params 0, eflags: 0x1 linked
-// namespace_136a0c13<file_0>::function_2a476331
 // Checksum 0xb4e22bc9, Offset: 0x220
 // Size: 0xe4
 function function_2a476331() {
@@ -22,7 +21,6 @@ function function_2a476331() {
 
 // Namespace namespace_136a0c13
 // Params 1, eflags: 0x1 linked
-// namespace_136a0c13<file_0>::function_c95e41a1
 // Checksum 0xa18d0f9a, Offset: 0x310
 // Size: 0xb4
 function get_location_from_chest_index(chest_index) {
@@ -39,7 +37,6 @@ function get_location_from_chest_index(chest_index) {
 
 // Namespace namespace_136a0c13
 // Params 0, eflags: 0x1 linked
-// namespace_136a0c13<file_0>::function_145aa1f4
 // Checksum 0x26ee666, Offset: 0x3d0
 // Size: 0x2c4
 function magic_box_update() {
@@ -83,7 +80,6 @@ function magic_box_update() {
 
 // Namespace namespace_136a0c13
 // Params 0, eflags: 0x1 linked
-// namespace_136a0c13<file_0>::function_dc03417c
 // Checksum 0x5d5a895c, Offset: 0x6a0
 // Size: 0x15c
 function function_dc03417c() {

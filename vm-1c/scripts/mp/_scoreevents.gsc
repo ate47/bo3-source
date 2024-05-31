@@ -18,7 +18,6 @@
 
 // Namespace scoreevents
 // Params 0, eflags: 0x2
-// namespace_a1cb6b52<file_0>::function_2dc19561
 // Checksum 0x64c12f86, Offset: 0x1728
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -27,7 +26,6 @@ function autoexec function_2dc19561() {
 
 // Namespace scoreevents
 // Params 0, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_8c87d8eb
 // Checksum 0x6abb7c69, Offset: 0x1768
 // Size: 0x24
 function __init__() {
@@ -36,7 +34,6 @@ function __init__() {
 
 // Namespace scoreevents
 // Params 0, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_c35e6aab
 // Checksum 0x70a5481e, Offset: 0x1798
 // Size: 0x4c
 function init() {
@@ -47,7 +44,6 @@ function init() {
 
 // Namespace scoreevents
 // Params 2, eflags: 0x0
-// namespace_a1cb6b52<file_0>::function_1a76033a
 // Checksum 0x5e39930a, Offset: 0x17f0
 // Size: 0x52
 function scoreeventtablelookupint(index, scoreeventcolumn) {
@@ -56,7 +52,6 @@ function scoreeventtablelookupint(index, scoreeventcolumn) {
 
 // Namespace scoreevents
 // Params 2, eflags: 0x0
-// namespace_a1cb6b52<file_0>::function_a467985f
 // Checksum 0xa78c0c72, Offset: 0x1850
 // Size: 0x42
 function scoreeventtablelookup(index, scoreeventcolumn) {
@@ -65,7 +60,6 @@ function scoreeventtablelookup(index, scoreeventcolumn) {
 
 // Namespace scoreevents
 // Params 2, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_d48595d1
 // Checksum 0xa25334bd, Offset: 0x18a0
 // Size: 0x5c
 function registerscoreeventcallback(callback, func) {
@@ -77,7 +71,6 @@ function registerscoreeventcallback(callback, func) {
 
 // Namespace scoreevents
 // Params 2, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_24e4c464
 // Checksum 0x3e9dbc23, Offset: 0x1908
 // Size: 0x3104
 function scoreeventplayerkill(data, time) {
@@ -614,7 +607,6 @@ function scoreeventplayerkill(data, time) {
 
 // Namespace scoreevents
 // Params 1, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_3d5dd523
 // Checksum 0x59a60fa6, Offset: 0x4a18
 // Size: 0x32
 function get_equipped_hero_ability(ability_name) {
@@ -626,7 +618,6 @@ function get_equipped_hero_ability(ability_name) {
 
 // Namespace scoreevents
 // Params 3, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_3ae86df1
 // Checksum 0xd4876161, Offset: 0x4a58
 // Size: 0x1b4
 function function_3ae86df1(attacker, victim, weapon) {
@@ -679,7 +670,6 @@ function function_3ae86df1(attacker, victim, weapon) {
 
 // Namespace scoreevents
 // Params 6, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_2a6156
 // Checksum 0x8f84e64b, Offset: 0x4c18
 // Size: 0x1fc
 function function_2a6156(attacker, victim, weapon, victim_weapon, victim_gadget_power, victimgadgetwasactivelastdamage) {
@@ -733,7 +723,6 @@ function function_2a6156(attacker, victim, weapon, victim_weapon, victim_gadget_
 
 // Namespace scoreevents
 // Params 5, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_58bc5359
 // Checksum 0x6b553ecd, Offset: 0x4e20
 // Size: 0x3ec
 function specificweaponkill(attacker, victim, weapon, killstreak, inflictor) {
@@ -824,7 +813,6 @@ function specificweaponkill(attacker, victim, weapon, killstreak, inflictor) {
 
 // Namespace scoreevents
 // Params 2, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_82eacc98
 // Checksum 0x1598000d, Offset: 0x5218
 // Size: 0x104
 function multikill(killcount, weapon) {
@@ -845,7 +833,6 @@ function multikill(killcount, weapon) {
 
 // Namespace scoreevents
 // Params 2, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_cae0e706
 // Checksum 0x1253c2f, Offset: 0x5328
 // Size: 0x114
 function multiheroabilitykill(killcount, weapon) {
@@ -859,7 +846,6 @@ function multiheroabilitykill(killcount, weapon) {
 
 // Namespace scoreevents
 // Params 4, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_e5246e53
 // Checksum 0xa22cc850, Offset: 0x5448
 // Size: 0x1d6
 function is_weapon_valid(meansofdeath, weapon, weaponclass, killstreak) {
@@ -889,7 +875,6 @@ function is_weapon_valid(meansofdeath, weapon, weaponclass, killstreak) {
 
 // Namespace scoreevents
 // Params 4, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_22ab88ed
 // Checksum 0x892fd8fa, Offset: 0x5628
 // Size: 0x110
 function function_22ab88ed(victim, weapon, weaponclass, killstreak) {
@@ -911,7 +896,6 @@ function function_22ab88ed(victim, weapon, weaponclass, killstreak) {
 
 // Namespace scoreevents
 // Params 4, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_3345a3e4
 // Checksum 0x1189eefa, Offset: 0x5740
 // Size: 0xd54
 function updatemultikills(weapon, weaponclass, killstreak, victim) {
@@ -1143,7 +1127,6 @@ function updatemultikills(weapon, weaponclass, killstreak, victim) {
 
 // Namespace scoreevents
 // Params 0, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_aa3a87e2
 // Checksum 0x15cb0e08, Offset: 0x64a0
 // Size: 0x120
 function resetrecentkillvariables() {
@@ -1175,7 +1158,6 @@ function resetrecentkillvariables() {
 
 // Namespace scoreevents
 // Params 1, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_aecb03bf
 // Checksum 0x143be0a0, Offset: 0x65c8
 // Size: 0x1c
 function waittilltimeoutordeath(timeout) {
@@ -1185,7 +1167,6 @@ function waittilltimeoutordeath(timeout) {
 
 // Namespace scoreevents
 // Params 3, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_4ad1234
 // Checksum 0xe9adfcb, Offset: 0x65f0
 // Size: 0x110
 function updateoneshotmultikills(victim, weapon, firsttimedamaged) {
@@ -1209,7 +1190,6 @@ function updateoneshotmultikills(victim, weapon, firsttimedamaged) {
 
 // Namespace scoreevents
 // Params 2, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_8b8e58de
 // Checksum 0xc415295f, Offset: 0x6708
 // Size: 0x1c2
 function get_distance_for_weapon(weapon, weaponclass) {
@@ -1259,7 +1239,6 @@ function get_distance_for_weapon(weapon, weaponclass) {
 
 // Namespace scoreevents
 // Params 1, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_f5c67b17
 // Checksum 0x170d6d, Offset: 0x68d8
 // Size: 0x174
 function ongameend(data) {
@@ -1287,7 +1266,6 @@ function ongameend(data) {
 
 // Namespace scoreevents
 // Params 0, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_67662144
 // Checksum 0x9efd134f, Offset: 0x6a58
 // Size: 0xa4
 function specialistmedalachievement() {
@@ -1305,7 +1283,6 @@ function specialistmedalachievement() {
 
 // Namespace scoreevents
 // Params 2, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_36cfa8db
 // Checksum 0xc9adff77, Offset: 0x6b08
 // Size: 0x218
 function specialiststatabilityusage(usagesinglegame, multitrackperlife) {
@@ -1346,7 +1323,6 @@ function specialiststatabilityusage(usagesinglegame, multitrackperlife) {
 
 // Namespace scoreevents
 // Params 0, eflags: 0x1 linked
-// namespace_a1cb6b52<file_0>::function_fc5b5c6a
 // Checksum 0x54a0423f, Offset: 0x6d28
 // Size: 0x4c
 function multikillmedalachievement() {

@@ -6,7 +6,6 @@
 
 // Namespace namespace_cafc107d
 // Params 0, eflags: 0x2
-// namespace_cafc107d<file_0>::function_2dc19561
 // Checksum 0x3b3bc1d2, Offset: 0x110
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,7 +14,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_cafc107d
 // Params 0, eflags: 0x1 linked
-// namespace_cafc107d<file_0>::function_8c87d8eb
 // Checksum 0x43758031, Offset: 0x150
 // Size: 0x4c
 function __init__() {
@@ -24,7 +22,6 @@ function __init__() {
 
 // Namespace namespace_cafc107d
 // Params 7, eflags: 0x1 linked
-// namespace_cafc107d<file_0>::function_dd4aaa22
 // Checksum 0xf5d19323, Offset: 0x1a8
 // Size: 0x64
 function function_dd4aaa22(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {

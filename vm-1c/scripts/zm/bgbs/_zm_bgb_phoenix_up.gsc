@@ -13,7 +13,6 @@
 
 // Namespace zm_bgb_phoenix_up
 // Params 0, eflags: 0x2
-// namespace_7ffac71e<file_0>::function_2dc19561
 // Checksum 0x1a7644a8, Offset: 0x1e8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -22,7 +21,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_phoenix_up
 // Params 0, eflags: 0x1 linked
-// namespace_7ffac71e<file_0>::function_8c87d8eb
 // Checksum 0x74fcaac7, Offset: 0x228
 // Size: 0x94
 function __init__() {
@@ -35,7 +33,6 @@ function __init__() {
 
 // Namespace zm_bgb_phoenix_up
 // Params 0, eflags: 0x1 linked
-// namespace_7ffac71e<file_0>::function_e4776d0
 // Checksum 0xcc00651f, Offset: 0x2c8
 // Size: 0x114
 function validation() {
@@ -56,7 +53,6 @@ function validation() {
 
 // Namespace zm_bgb_phoenix_up
 // Params 0, eflags: 0x1 linked
-// namespace_7ffac71e<file_0>::function_7afbf7cd
 // Checksum 0xb1aa846b, Offset: 0x3e8
 // Size: 0x172
 function activation() {
@@ -79,7 +75,6 @@ function activation() {
 
 // Namespace zm_bgb_phoenix_up
 // Params 3, eflags: 0x1 linked
-// namespace_7ffac71e<file_0>::function_229a2615
 // Checksum 0xd209b7eb, Offset: 0x568
 // Size: 0x5e
 function lost_perk_override(perk, var_2488e46a, var_24df4040) {

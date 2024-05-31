@@ -17,7 +17,6 @@
 
 // Namespace namespace_2abc80c6
 // Params 0, eflags: 0x2
-// namespace_2abc80c6<file_0>::function_2dc19561
 // Checksum 0x73dab5c, Offset: 0x2c0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -26,7 +25,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_2abc80c6
 // Params 0, eflags: 0x1 linked
-// namespace_2abc80c6<file_0>::function_8c87d8eb
 // Checksum 0x1eab11b, Offset: 0x300
 // Size: 0xa4
 function __init__() {
@@ -39,7 +37,6 @@ function __init__() {
 
 // Namespace namespace_2abc80c6
 // Params 4, eflags: 0x1 linked
-// namespace_2abc80c6<file_0>::function_3c61bfc2
 // Checksum 0xbbb572b6, Offset: 0x3b0
 // Size: 0x1ac
 function result(death, attacker, mod, weapon) {
@@ -72,7 +69,6 @@ function result(death, attacker, mod, weapon) {
 
 // Namespace namespace_2abc80c6
 // Params 1, eflags: 0x1 linked
-// namespace_2abc80c6<file_0>::function_9781a8a4
 // Checksum 0xd47befed, Offset: 0x568
 // Size: 0x2ee
 function function_9781a8a4(attacker) {
@@ -111,7 +107,6 @@ function function_9781a8a4(attacker) {
 
 // Namespace namespace_2abc80c6
 // Params 0, eflags: 0x1 linked
-// namespace_2abc80c6<file_0>::function_8d19e8ea
 // Checksum 0x27fb16e3, Offset: 0x860
 // Size: 0xf4
 function function_8d19e8ea() {
@@ -138,7 +133,6 @@ function function_8d19e8ea() {
 
 // Namespace namespace_2abc80c6
 // Params 1, eflags: 0x1 linked
-// namespace_2abc80c6<file_0>::function_a761eba4
 // Checksum 0x52150375, Offset: 0x960
 // Size: 0x6c
 function zombie_death_time_limit(e_attacker) {
@@ -152,7 +146,6 @@ function zombie_death_time_limit(e_attacker) {
 
 // Namespace namespace_2abc80c6
 // Params 1, eflags: 0x1 linked
-// namespace_2abc80c6<file_0>::function_d62e6973
 // Checksum 0xbd0059c6, Offset: 0x9d8
 // Size: 0x8c
 function zombie_kill_tracker(e_attacker) {
@@ -169,7 +162,6 @@ function zombie_kill_tracker(e_attacker) {
 
 // Namespace namespace_2abc80c6
 // Params 1, eflags: 0x1 linked
-// namespace_2abc80c6<file_0>::function_f460d2f3
 // Checksum 0x4380c991, Offset: 0xa70
 // Size: 0xa4
 function zombie_death_gib(e_attacker) {

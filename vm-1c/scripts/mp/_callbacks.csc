@@ -25,7 +25,6 @@
 
 // Namespace callback
 // Params 0, eflags: 0x2
-// namespace_dabbe128<file_0>::function_2dc19561
 // Checksum 0x1ecb121, Offset: 0x448
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -34,7 +33,6 @@ function autoexec function_2dc19561() {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_8c87d8eb
 // Checksum 0xe1aa8e55, Offset: 0x488
 // Size: 0x1c
 function __init__() {
@@ -43,7 +41,6 @@ function __init__() {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_1234506c
 // Checksum 0x6823806a, Offset: 0x4b0
 // Size: 0xdc
 function set_default_callbacks() {
@@ -60,7 +57,6 @@ function set_default_callbacks() {
 
 // Namespace callback
 // Params 1, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_80bc4653
 // Checksum 0x810d3b7, Offset: 0x598
 // Size: 0x74
 function localclientconnect(localclientnum) {
@@ -73,7 +69,6 @@ function localclientconnect(localclientnum) {
 
 // Namespace callback
 // Params 1, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_5e92b6fc
 // Checksum 0xc5e991d4, Offset: 0x618
 // Size: 0x114
 function playerspawned(localclientnum) {
@@ -97,7 +92,6 @@ function playerspawned(localclientnum) {
 
 // Namespace callback
 // Params 1, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_fd677ed2
 // Checksum 0xc1dedb53, Offset: 0x738
 // Size: 0x250
 function entityspawned(localclientnum) {
@@ -144,7 +138,6 @@ function entityspawned(localclientnum) {
 
 // Namespace callback
 // Params 12, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_56e5590c
 // Checksum 0x447de7d3, Offset: 0x990
 // Size: 0x5ee
 function airsupport(localclientnum, x, y, z, type, yaw, team, teamfaction, owner, exittype, time, height) {
@@ -239,7 +232,6 @@ function airsupport(localclientnum, x, y, z, type, yaw, team, teamfaction, owner
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_4444b99f
 // Checksum 0xa1ac763c, Offset: 0xf88
 // Size: 0x14
 function creating_corpse(localclientnum, player) {
@@ -248,7 +240,6 @@ function creating_corpse(localclientnum, player) {
 
 // Namespace callback
 // Params 7, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_8ae1d4cc
 // Checksum 0x77d93aae, Offset: 0xfa8
 // Size: 0x8a
 function callback_stunned(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -263,7 +254,6 @@ function callback_stunned(localclientnum, oldval, newval, bnewent, binitialsnap,
 
 // Namespace callback
 // Params 7, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_978d5cff
 // Checksum 0x10ebf4e6, Offset: 0x1040
 // Size: 0x8a
 function callback_emp(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -278,7 +268,6 @@ function callback_emp(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 
 // Namespace callback
 // Params 7, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_1a338a6
 // Checksum 0x64cec4c8, Offset: 0x10d8
 // Size: 0x48
 function callback_proximity(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

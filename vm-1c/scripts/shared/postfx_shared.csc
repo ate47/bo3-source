@@ -11,7 +11,6 @@
 
 // Namespace postfx
 // Params 0, eflags: 0x2
-// namespace_bdde9225<file_0>::function_2dc19561
 // Checksum 0x228dcdfc, Offset: 0x248
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace postfx
 // Params 0, eflags: 0x1 linked
-// namespace_bdde9225<file_0>::function_8c87d8eb
 // Checksum 0xb149bfc0, Offset: 0x288
 // Size: 0x24
 function __init__() {
@@ -29,7 +27,6 @@ function __init__() {
 
 // Namespace postfx
 // Params 1, eflags: 0x1 linked
-// namespace_bdde9225<file_0>::function_2dca7a10
 // Checksum 0xdc4efc84, Offset: 0x2b8
 // Size: 0x1c
 function localplayer_postfx_bundle_init(localclientnum) {
@@ -38,7 +35,6 @@ function localplayer_postfx_bundle_init(localclientnum) {
 
 // Namespace postfx
 // Params 0, eflags: 0x1 linked
-// namespace_bdde9225<file_0>::function_7e41df4
 // Checksum 0x6938a182, Offset: 0x2e0
 // Size: 0x64
 function function_7e41df4() {
@@ -58,7 +54,6 @@ function function_7e41df4() {
 
     // Namespace postfx
     // Params 0, eflags: 0x1 linked
-    // namespace_bdde9225<file_0>::function_6743421b
     // Checksum 0x8d0a5480, Offset: 0x350
     // Size: 0x1c0
     function postfxbundledebuglisten() {
@@ -90,7 +85,6 @@ function function_7e41df4() {
 
 // Namespace postfx
 // Params 1, eflags: 0x1 linked
-// namespace_bdde9225<file_0>::function_bca12b73
 // Checksum 0x50299743, Offset: 0x518
 // Size: 0x8b4
 function playpostfxbundle(playbundlename) {
@@ -217,7 +211,6 @@ function playpostfxbundle(playbundlename) {
 
 // Namespace postfx
 // Params 2, eflags: 0x1 linked
-// namespace_bdde9225<file_0>::function_b712aa61
 // Checksum 0xeecf8868, Offset: 0xdd8
 // Size: 0x64
 function watchentityshutdown(localclientnum, filterid) {
@@ -227,7 +220,6 @@ function watchentityshutdown(localclientnum, filterid) {
 
 // Namespace postfx
 // Params 4, eflags: 0x1 linked
-// namespace_bdde9225<file_0>::function_8d3c3170
 // Checksum 0xc9879422, Offset: 0xe48
 // Size: 0x104
 function function_8d3c3170(localclientnum, var_402c9c53, filterid, values) {
@@ -240,7 +232,6 @@ function function_8d3c3170(localclientnum, var_402c9c53, filterid, values) {
 
 // Namespace postfx
 // Params 3, eflags: 0x1 linked
-// namespace_bdde9225<file_0>::function_381f14d2
 // Checksum 0x4d9b9b49, Offset: 0xf58
 // Size: 0x12e
 function function_381f14d2(localclientnum, msg, filterid) {
@@ -267,7 +258,6 @@ function function_381f14d2(localclientnum, msg, filterid) {
 
 // Namespace postfx
 // Params 0, eflags: 0x1 linked
-// namespace_bdde9225<file_0>::function_9493d991
 // Checksum 0x83107ac0, Offset: 0x1090
 // Size: 0x2c
 function function_9493d991() {
@@ -278,7 +268,6 @@ function function_9493d991() {
 
 // Namespace postfx
 // Params 0, eflags: 0x1 linked
-// namespace_bdde9225<file_0>::function_3d1a8db5
 // Checksum 0xa81d07ee, Offset: 0x10c8
 // Size: 0x76
 function stoppostfxbundle() {
@@ -297,7 +286,6 @@ function stoppostfxbundle() {
 
 // Namespace postfx
 // Params 0, eflags: 0x1 linked
-// namespace_bdde9225<file_0>::function_51f910fd
 // Checksum 0xc55314bb, Offset: 0x1148
 // Size: 0x48
 function exitpostfxbundle() {
@@ -308,7 +296,6 @@ function exitpostfxbundle() {
 
 // Namespace postfx
 // Params 3, eflags: 0x1 linked
-// namespace_bdde9225<file_0>::function_ef318b3
 // Checksum 0x910f2a31, Offset: 0x1198
 // Size: 0x124
 function setfrontendstreamingoverlay(localclientnum, system, enabled) {

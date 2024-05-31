@@ -6,7 +6,6 @@
 
 // Namespace zm_powerup_full_ammo
 // Params 0, eflags: 0x2
-// namespace_84b890ae<file_0>::function_2dc19561
 // Checksum 0xf8c0504e, Offset: 0x108
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,7 +14,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_full_ammo
 // Params 0, eflags: 0x1 linked
-// namespace_84b890ae<file_0>::function_8c87d8eb
 // Checksum 0x465f7bca, Offset: 0x148
 // Size: 0x6c
 function __init__() {

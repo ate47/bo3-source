@@ -24,7 +24,6 @@
 
 // Namespace namespace_38087cad
 // Params 0, eflags: 0x2
-// namespace_38087cad<file_0>::function_c35e6aab
 // Checksum 0xe1ab5da7, Offset: 0x3a8
 // Size: 0x64
 function autoexec init() {
@@ -37,7 +36,6 @@ function autoexec init() {
 
 // Namespace namespace_38087cad
 // Params 1, eflags: 0x5 linked
-// namespace_38087cad<file_0>::function_ce2310c1
 // Checksum 0x6c37284f, Offset: 0x418
 // Size: 0x58
 function private function_ce2310c1(player) {
@@ -46,7 +44,6 @@ function private function_ce2310c1(player) {
 
 // Namespace namespace_38087cad
 // Params 1, eflags: 0x5 linked
-// namespace_38087cad<file_0>::function_9b4b4134
 // Checksum 0x32b1b233, Offset: 0x478
 // Size: 0x12a
 function private function_9b4b4134(players) {
@@ -65,7 +62,6 @@ function private function_9b4b4134(players) {
 
 // Namespace namespace_38087cad
 // Params 2, eflags: 0x1 linked
-// namespace_38087cad<file_0>::function_4fbc4348
 // Checksum 0x933f06aa, Offset: 0x5b0
 // Size: 0x2da
 function function_4fbc4348(origin, players) {
@@ -132,7 +128,6 @@ function function_4fbc4348(origin, players) {
 
 // Namespace namespace_38087cad
 // Params 0, eflags: 0x1 linked
-// namespace_38087cad<file_0>::function_72e6c1d6
 // Checksum 0xbc90c6a8, Offset: 0x898
 // Size: 0x18c
 function function_72e6c1d6() {

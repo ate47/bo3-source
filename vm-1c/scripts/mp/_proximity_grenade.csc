@@ -10,7 +10,6 @@
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x2
-// namespace_bdb94467<file_0>::function_2dc19561
 // Checksum 0x51127d02, Offset: 0x170
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,7 +18,6 @@ function autoexec function_2dc19561() {
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_8c87d8eb
 // Checksum 0x6b9e9a20, Offset: 0x1b0
 // Size: 0x14
 function __init__() {

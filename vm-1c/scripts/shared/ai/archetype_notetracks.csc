@@ -5,7 +5,6 @@
 
 // Namespace notetracks
 // Params 0, eflags: 0x2
-// namespace_1a7fbd05<file_0>::function_d290ebfa
 // Checksum 0xc0d60468, Offset: 0x138
 // Size: 0x8c
 function autoexec main() {
@@ -20,7 +19,6 @@ function autoexec main() {
 
 // Namespace notetracks
 // Params 1, eflags: 0x5 linked
-// namespace_1a7fbd05<file_0>::function_c09fa883
 // Checksum 0xcb1d4e7f, Offset: 0x1d0
 // Size: 0x84
 function private initializenotetrackhandlers(localclientnum) {
@@ -31,7 +29,6 @@ function private initializenotetrackhandlers(localclientnum) {
 
 // Namespace notetracks
 // Params 3, eflags: 0x5 linked
-// namespace_1a7fbd05<file_0>::function_7d1f8d82
 // Checksum 0xad88a276, Offset: 0x260
 // Size: 0x4c
 function private addsurfacenotetrackfxhandler(localclientnum, notetrack, surfacetable) {
@@ -41,7 +38,6 @@ function private addsurfacenotetrackfxhandler(localclientnum, notetrack, surface
 
 // Namespace notetracks
 // Params 3, eflags: 0x5 linked
-// namespace_1a7fbd05<file_0>::function_2cfb2067
 // Checksum 0xafa940e2, Offset: 0x2b8
 // Size: 0xb0
 function private handlesurfacenotetrackfx(localclientnum, notetrack, surfacetable) {

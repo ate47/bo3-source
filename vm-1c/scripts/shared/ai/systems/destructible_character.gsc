@@ -7,7 +7,6 @@
 
 // Namespace destructible_character
 // Params 0, eflags: 0x2
-// namespace_87344f6b<file_0>::function_d290ebfa
 // Checksum 0x80508b30, Offset: 0x258
 // Size: 0x3ce
 function autoexec main() {
@@ -41,7 +40,6 @@ function autoexec main() {
 
 // Namespace destructserverutils
 // Params 1, eflags: 0x5 linked
-// namespace_1db74d15<file_0>::function_2cb45fe1
 // Checksum 0x5b7d7283, Offset: 0x630
 // Size: 0x32
 function private _getdestructstate(entity) {
@@ -53,7 +51,6 @@ function private _getdestructstate(entity) {
 
 // Namespace destructserverutils
 // Params 2, eflags: 0x5 linked
-// namespace_1db74d15<file_0>::function_736f4019
 // Checksum 0xe9f4b4ff, Offset: 0x670
 // Size: 0x6c
 function private _setdestructed(entity, destructflag) {
@@ -63,7 +60,6 @@ function private _setdestructed(entity, destructflag) {
 
 // Namespace destructserverutils
 // Params 2, eflags: 0x1 linked
-// namespace_1db74d15<file_0>::function_142d7ceb
 // Checksum 0x7c881414, Offset: 0x6e8
 // Size: 0x6c
 function copydestructstate(originalentity, newentity) {
@@ -74,7 +70,6 @@ function copydestructstate(originalentity, newentity) {
 
 // Namespace destructserverutils
 // Params 2, eflags: 0x1 linked
-// namespace_1db74d15<file_0>::function_a6d21b4d
 // Checksum 0xf486511e, Offset: 0x760
 // Size: 0xf6
 function destructhitlocpieces(entity, hitloc) {
@@ -91,7 +86,6 @@ function destructhitlocpieces(entity, hitloc) {
 
 // Namespace destructserverutils
 // Params 1, eflags: 0x1 linked
-// namespace_1db74d15<file_0>::function_6280cb37
 // Checksum 0x6431abe9, Offset: 0x860
 // Size: 0x6c
 function destructleftarmpieces(entity) {
@@ -102,7 +96,6 @@ function destructleftarmpieces(entity) {
 
 // Namespace destructserverutils
 // Params 1, eflags: 0x1 linked
-// namespace_1db74d15<file_0>::function_2ee2085d
 // Checksum 0x4616100b, Offset: 0x8d8
 // Size: 0x6c
 function destructleftlegpieces(entity) {
@@ -113,7 +106,6 @@ function destructleftlegpieces(entity) {
 
 // Namespace destructserverutils
 // Params 2, eflags: 0x1 linked
-// namespace_1db74d15<file_0>::function_be3b22d7
 // Checksum 0xe0c62230, Offset: 0x950
 // Size: 0x194
 function destructpiece(entity, piecenumber) {
@@ -137,7 +129,6 @@ function destructpiece(entity, piecenumber) {
 
 // Namespace destructserverutils
 // Params 2, eflags: 0x1 linked
-// namespace_1db74d15<file_0>::function_e6d09004
 // Checksum 0xb71e5d11, Offset: 0xaf0
 // Size: 0x188
 function destructnumberrandompieces(entity, num_pieces_to_destruct) {
@@ -166,7 +157,6 @@ function destructnumberrandompieces(entity, num_pieces_to_destruct) {
 
 // Namespace destructserverutils
 // Params 1, eflags: 0x1 linked
-// namespace_1db74d15<file_0>::function_3082ac0f
 // Checksum 0x69fabbac, Offset: 0xc80
 // Size: 0x8e
 function destructrandompieces(entity) {
@@ -180,7 +170,6 @@ function destructrandompieces(entity) {
 
 // Namespace destructserverutils
 // Params 1, eflags: 0x1 linked
-// namespace_1db74d15<file_0>::function_64d5af6e
 // Checksum 0x81d5bd7e, Offset: 0xd18
 // Size: 0x6c
 function destructrightarmpieces(entity) {
@@ -191,7 +180,6 @@ function destructrightarmpieces(entity) {
 
 // Namespace destructserverutils
 // Params 1, eflags: 0x1 linked
-// namespace_1db74d15<file_0>::function_a6b12e94
 // Checksum 0xd0a8f0cf, Offset: 0xd90
 // Size: 0x6c
 function destructrightlegpieces(entity) {
@@ -202,7 +190,6 @@ function destructrightlegpieces(entity) {
 
 // Namespace destructserverutils
 // Params 1, eflags: 0x1 linked
-// namespace_1db74d15<file_0>::function_655f5ac8
 // Checksum 0x5831dddd, Offset: 0xe08
 // Size: 0x6a
 function getpiececount(entity) {
@@ -217,7 +204,6 @@ function getpiececount(entity) {
 
 // Namespace destructserverutils
 // Params 12, eflags: 0x1 linked
-// namespace_1db74d15<file_0>::function_825ef784
 // Checksum 0xb4d83525, Offset: 0xe80
 // Size: 0x100
 function handledamage(einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon, vpoint, vdir, shitloc, psoffsettime, boneindex, modelindex) {
@@ -235,7 +221,6 @@ function handledamage(einflictor, eattacker, idamage, idflags, smeansofdeath, sw
 
 // Namespace destructserverutils
 // Params 2, eflags: 0x1 linked
-// namespace_1db74d15<file_0>::function_61b5800
 // Checksum 0xf5e6bf8c, Offset: 0xf88
 // Size: 0x66
 function isdestructed(entity, piecenumber) {
@@ -245,7 +230,6 @@ function isdestructed(entity, piecenumber) {
 
 // Namespace destructserverutils
 // Params 1, eflags: 0x1 linked
-// namespace_1db74d15<file_0>::function_ec4c18c6
 // Checksum 0x211c5f3e, Offset: 0xff8
 // Size: 0x12e
 function reapplydestructedpieces(entity) {
@@ -266,7 +250,6 @@ function reapplydestructedpieces(entity) {
 
 // Namespace destructserverutils
 // Params 1, eflags: 0x1 linked
-// namespace_1db74d15<file_0>::function_291dd9aa
 // Checksum 0xbbc3b6d1, Offset: 0x1130
 // Size: 0x10e
 function showdestructedpieces(entity) {
@@ -284,7 +267,6 @@ function showdestructedpieces(entity) {
 
 // Namespace destructserverutils
 // Params 2, eflags: 0x1 linked
-// namespace_1db74d15<file_0>::function_c660d06f
 // Checksum 0x50fba039, Offset: 0x1248
 // Size: 0xa4
 function togglespawngibs(entity, shouldspawngibs) {

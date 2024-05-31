@@ -22,7 +22,6 @@
 
 // Namespace namespace_9d2fabb6
 // Params 0, eflags: 0x2
-// namespace_9d2fabb6<file_0>::function_2dc19561
 // Checksum 0x9d789247, Offset: 0xbc8
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -31,7 +30,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_9d2fabb6
 // Params 0, eflags: 0x1 linked
-// namespace_9d2fabb6<file_0>::function_8c87d8eb
 // Checksum 0x8edd9d66, Offset: 0xc10
 // Size: 0x44
 function __init__() {
@@ -41,7 +39,6 @@ function __init__() {
 
 // Namespace namespace_9d2fabb6
 // Params 0, eflags: 0x1 linked
-// namespace_9d2fabb6<file_0>::function_5b6b9132
 // Checksum 0xd4886b20, Offset: 0xc60
 // Size: 0x9c
 function __main__() {
@@ -56,7 +53,6 @@ function __main__() {
 
 // Namespace namespace_9d2fabb6
 // Params 0, eflags: 0x1 linked
-// namespace_9d2fabb6<file_0>::function_5c478789
 // Checksum 0x578ae467, Offset: 0xd08
 // Size: 0x98
 function player_out_of_playable_area_override() {
@@ -72,7 +68,6 @@ function player_out_of_playable_area_override() {
 
 // Namespace namespace_9d2fabb6
 // Params 0, eflags: 0x1 linked
-// namespace_9d2fabb6<file_0>::function_19a0be33
 // Checksum 0x23dcab82, Offset: 0xda8
 // Size: 0xf1c
 function function_19a0be33() {
@@ -186,7 +181,6 @@ function function_19a0be33() {
 
 // Namespace namespace_9d2fabb6
 // Params 0, eflags: 0x1 linked
-// namespace_9d2fabb6<file_0>::function_6b91d71
 // Checksum 0x4b0f402, Offset: 0x1cd0
 // Size: 0x54
 function function_6b91d71() {
@@ -196,7 +190,6 @@ function function_6b91d71() {
 
 // Namespace namespace_9d2fabb6
 // Params 0, eflags: 0x1 linked
-// namespace_9d2fabb6<file_0>::function_9ce5da3b
 // Checksum 0x29ef9fbb, Offset: 0x1d30
 // Size: 0xc4
 function function_9ce5da3b() {
@@ -214,7 +207,6 @@ function function_9ce5da3b() {
 
 // Namespace namespace_9d2fabb6
 // Params 0, eflags: 0x1 linked
-// namespace_9d2fabb6<file_0>::function_fb8b5806
 // Checksum 0xa3c85703, Offset: 0x1e00
 // Size: 0xb0
 function function_fb8b5806() {

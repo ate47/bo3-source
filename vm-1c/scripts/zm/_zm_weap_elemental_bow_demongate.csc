@@ -15,7 +15,6 @@
 
 // Namespace namespace_efd1ef23
 // Params 0, eflags: 0x2
-// namespace_efd1ef23<file_0>::function_2dc19561
 // Checksum 0x75e7af2, Offset: 0x630
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -24,7 +23,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_efd1ef23
 // Params 0, eflags: 0x1 linked
-// namespace_efd1ef23<file_0>::function_8c87d8eb
 // Checksum 0x4848905a, Offset: 0x670
 // Size: 0x39e
 function __init__() {
@@ -50,7 +48,6 @@ function __init__() {
 
 // Namespace namespace_efd1ef23
 // Params 7, eflags: 0x1 linked
-// namespace_efd1ef23<file_0>::function_da7a9948
 // Checksum 0xe3b3815b, Offset: 0xa18
 // Size: 0x64
 function function_da7a9948(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -59,7 +56,6 @@ function function_da7a9948(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_efd1ef23
 // Params 7, eflags: 0x1 linked
-// namespace_efd1ef23<file_0>::function_f514bd4b
 // Checksum 0xe3a53729, Offset: 0xa88
 // Size: 0x74
 function function_f514bd4b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -70,7 +66,6 @@ function function_f514bd4b(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_efd1ef23
 // Params 7, eflags: 0x1 linked
-// namespace_efd1ef23<file_0>::function_3e42c666
 // Checksum 0x7deab41f, Offset: 0xb08
 // Size: 0x74
 function function_3e42c666(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -81,7 +76,6 @@ function function_3e42c666(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_efd1ef23
 // Params 7, eflags: 0x1 linked
-// namespace_efd1ef23<file_0>::function_b60106f1
 // Checksum 0xd0ae3df6, Offset: 0xb88
 // Size: 0x1a4
 function function_b60106f1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -101,7 +95,6 @@ function function_b60106f1(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_efd1ef23
 // Params 7, eflags: 0x1 linked
-// namespace_efd1ef23<file_0>::function_2e7aea94
 // Checksum 0x55e92d05, Offset: 0xd38
 // Size: 0x6e
 function function_2e7aea94(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -114,7 +107,6 @@ function function_2e7aea94(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_efd1ef23
 // Params 1, eflags: 0x1 linked
-// namespace_efd1ef23<file_0>::function_35e3ef91
 // Checksum 0x10d6567b, Offset: 0xdb0
 // Size: 0x60
 function function_35e3ef91(localclientnum) {
@@ -129,7 +121,6 @@ function function_35e3ef91(localclientnum) {
 
 // Namespace namespace_efd1ef23
 // Params 7, eflags: 0x1 linked
-// namespace_efd1ef23<file_0>::function_b463a519
 // Checksum 0x13859d7e, Offset: 0xe18
 // Size: 0x9c
 function function_b463a519(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -143,7 +134,6 @@ function function_b463a519(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_efd1ef23
 // Params 7, eflags: 0x1 linked
-// namespace_efd1ef23<file_0>::function_ac6d79d2
 // Checksum 0x6fa9c9e1, Offset: 0xec0
 // Size: 0x9c
 function function_ac6d79d2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -157,7 +147,6 @@ function function_ac6d79d2(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_efd1ef23
 // Params 7, eflags: 0x1 linked
-// namespace_efd1ef23<file_0>::function_f763292d
 // Checksum 0x8060380d, Offset: 0xf68
 // Size: 0x15c
 function function_f763292d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -181,7 +170,6 @@ function function_f763292d(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_efd1ef23
 // Params 7, eflags: 0x1 linked
-// namespace_efd1ef23<file_0>::function_ac9c30de
 // Checksum 0x95c5f1c, Offset: 0x10d0
 // Size: 0xfc
 function function_ac9c30de(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -21,7 +21,6 @@
 
 // Namespace hacking
 // Params 0, eflags: 0x2
-// namespace_ac959fba<file_0>::function_2dc19561
 // Checksum 0xa04a14df, Offset: 0x340
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -30,7 +29,6 @@ function autoexec function_2dc19561() {
 
 // Namespace hacking
 // Params 0, eflags: 0x0
-// namespace_ac959fba<file_0>::function_8c87d8eb
 // Checksum 0xca384341, Offset: 0x380
 // Size: 0x3c
 function __init__() {
@@ -40,7 +38,6 @@ function __init__() {
 
 // Namespace hacking
 // Params 2, eflags: 0x0
-// namespace_ac959fba<file_0>::function_f9e78d26
 // Checksum 0x67b3e7c1, Offset: 0x3c8
 // Size: 0x4c
 function hack(var_498bbabf, var_c08cc2da) {
@@ -51,7 +48,6 @@ function hack(var_498bbabf, var_c08cc2da) {
 
 // Namespace hacking
 // Params 6, eflags: 0x0
-// namespace_ac959fba<file_0>::function_68df65d8
 // Checksum 0x791d6c21, Offset: 0x420
 // Size: 0x2d8
 function function_68df65d8(var_498bbabf, str_objective, str_hint_text, var_84221fce, a_keyline_objects, var_27d1693f) {
@@ -94,7 +90,6 @@ function function_68df65d8(var_498bbabf, str_objective, str_hint_text, var_84221
 
 // Namespace hacking
 // Params 0, eflags: 0x0
-// namespace_ac959fba<file_0>::function_7373f13d
 // Checksum 0xfcbd28cb, Offset: 0x700
 // Size: 0x20
 function trigger_wait() {
@@ -104,7 +99,6 @@ function trigger_wait() {
 
 // Namespace hacking
 // Params 1, eflags: 0x0
-// namespace_ac959fba<file_0>::function_cfce9b82
 // Checksum 0xef3157b8, Offset: 0x728
 // Size: 0xc
 function onbeginuse(player) {
@@ -113,7 +107,6 @@ function onbeginuse(player) {
 
 // Namespace hacking
 // Params 3, eflags: 0x0
-// namespace_ac959fba<file_0>::function_a454a59a
 // Checksum 0x2df3c2e7, Offset: 0x740
 // Size: 0x1c
 function onenduse(team, player, result) {
@@ -122,7 +115,6 @@ function onenduse(team, player, result) {
 
 // Namespace hacking
 // Params 1, eflags: 0x0
-// namespace_ac959fba<file_0>::function_3c8ea097
 // Checksum 0x827bcf4c, Offset: 0x768
 // Size: 0x2c4
 function onuse(player) {

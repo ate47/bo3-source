@@ -11,7 +11,6 @@
 
 // Namespace lui
 // Params 0, eflags: 0x2
-// namespace_ce7c3ed5<file_0>::function_2dc19561
 // Checksum 0x7c192381, Offset: 0x310
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace lui
 // Params 0, eflags: 0x1 linked
-// namespace_ce7c3ed5<file_0>::function_8c87d8eb
 // Checksum 0x3a3fbbd1, Offset: 0x350
 // Size: 0x24
 function __init__() {
@@ -29,7 +27,6 @@ function __init__() {
 
 // Namespace lui
 // Params 0, eflags: 0x5 linked
-// namespace_ce7c3ed5<file_0>::function_53c7e831
 // Checksum 0x156ebb14, Offset: 0x380
 // Size: 0x130
 function private refresh_menu_values() {
@@ -50,7 +47,6 @@ function private refresh_menu_values() {
 
 // Namespace lui
 // Params 2, eflags: 0x1 linked
-// namespace_ce7c3ed5<file_0>::function_5f70476c
 // Checksum 0x1eebb1f7, Offset: 0x4b8
 // Size: 0x9c
 function play_animation(menu, str_anim) {
@@ -64,7 +60,6 @@ function play_animation(menu, str_anim) {
 
 // Namespace lui
 // Params 2, eflags: 0x1 linked
-// namespace_ce7c3ed5<file_0>::function_46534793
 // Checksum 0x28dc005, Offset: 0x560
 // Size: 0x8c
 function set_color(menu, color) {
@@ -75,7 +70,6 @@ function set_color(menu, color) {
 
 // Namespace lui
 // Params 3, eflags: 0x1 linked
-// namespace_ce7c3ed5<file_0>::function_d2ef5fff
 // Checksum 0x64f2902b, Offset: 0x5f8
 // Size: 0x94
 function set_value_for_player(str_menu_id, str_variable_id, value) {
@@ -90,7 +84,6 @@ function set_value_for_player(str_menu_id, str_variable_id, value) {
 
 // Namespace lui
 // Params 3, eflags: 0x0
-// namespace_ce7c3ed5<file_0>::function_494af3ab
 // Checksum 0xc284cb4e, Offset: 0x698
 // Size: 0x112
 function set_global(str_menu_id, str_variable_id, value) {
@@ -110,7 +103,6 @@ function set_global(str_menu_id, str_variable_id, value) {
 
 // Namespace lui
 // Params 5, eflags: 0x0
-// namespace_ce7c3ed5<file_0>::function_6f6f10c
 // Checksum 0xba93beb8, Offset: 0x7b8
 // Size: 0x17c
 function timer(n_time, str_endon, x, y, height) {
@@ -138,7 +130,6 @@ function timer(n_time, str_endon, x, y, height) {
 
 // Namespace lui
 // Params 3, eflags: 0x1 linked
-// namespace_ce7c3ed5<file_0>::function_2222cd4f
 // Checksum 0x1b165576, Offset: 0x940
 // Size: 0x10c
 function prime_movie(str_movie, b_looping, str_key) {
@@ -159,7 +150,6 @@ function prime_movie(str_movie, b_looping, str_key) {
 
 // Namespace lui
 // Params 5, eflags: 0x1 linked
-// namespace_ce7c3ed5<file_0>::function_8f7bd062
 // Checksum 0xbc4cec1c, Offset: 0xa58
 // Size: 0x2fe
 function play_movie(str_movie, str_type, show_black_screen, b_looping, str_key) {
@@ -206,7 +196,6 @@ function play_movie(str_movie, str_type, show_black_screen, b_looping, str_key) 
 
 // Namespace lui
 // Params 5, eflags: 0x5 linked
-// namespace_ce7c3ed5<file_0>::function_42f28535
 // Checksum 0xa6f7e2b, Offset: 0xd60
 // Size: 0x2ce
 function private _play_movie_for_player(str_movie, str_type, show_black_screen, b_looping, str_key) {
@@ -252,7 +241,6 @@ function private _play_movie_for_player(str_movie, str_type, show_black_screen, 
 
 // Namespace lui
 // Params 6, eflags: 0x1 linked
-// namespace_ce7c3ed5<file_0>::function_be38d8cd
 // Checksum 0x77729e83, Offset: 0x1038
 // Size: 0x272
 function function_be38d8cd(str_movie, str_type, timeout, show_black_screen, b_looping, str_key) {
@@ -288,7 +276,6 @@ function function_be38d8cd(str_movie, str_type, timeout, show_black_screen, b_lo
 
 // Namespace lui
 // Params 6, eflags: 0x5 linked
-// namespace_ce7c3ed5<file_0>::function_adc333e0
 // Checksum 0x55f86ea1, Offset: 0x12b8
 // Size: 0x292
 function private function_adc333e0(str_movie, str_type, timeout, show_black_screen, b_looping, str_key) {
@@ -330,7 +317,6 @@ function private function_adc333e0(str_movie, str_type, timeout, show_black_scre
 
 // Namespace lui
 // Params 6, eflags: 0x1 linked
-// namespace_ce7c3ed5<file_0>::function_724abc52
 // Checksum 0x148d648b, Offset: 0x1558
 // Size: 0x16c
 function screen_flash(n_fadein_time, n_hold_time, n_fadeout_time, n_target_alpha, v_color, b_force_close_menu) {
@@ -354,7 +340,6 @@ function screen_flash(n_fadein_time, n_hold_time, n_fadeout_time, n_target_alpha
 
 // Namespace lui
 // Params 6, eflags: 0x1 linked
-// namespace_ce7c3ed5<file_0>::function_3f0b2996
 // Checksum 0x712f7821, Offset: 0x16d0
 // Size: 0x14c
 function screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_force_close_menu, str_menu_id) {
@@ -378,7 +363,6 @@ function screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_force_clo
 
 // Namespace lui
 // Params 3, eflags: 0x1 linked
-// namespace_ce7c3ed5<file_0>::function_7e61de2b
 // Checksum 0x1f809824, Offset: 0x1828
 // Size: 0x4a
 function screen_fade_out(n_time, v_color, str_menu_id) {
@@ -388,7 +372,6 @@ function screen_fade_out(n_time, v_color, str_menu_id) {
 
 // Namespace lui
 // Params 3, eflags: 0x1 linked
-// namespace_ce7c3ed5<file_0>::function_593c2af4
 // Checksum 0xc7383e51, Offset: 0x1880
 // Size: 0x4a
 function screen_fade_in(n_time, v_color, str_menu_id) {
@@ -398,7 +381,6 @@ function screen_fade_in(n_time, v_color, str_menu_id) {
 
 // Namespace lui
 // Params 0, eflags: 0x1 linked
-// namespace_ce7c3ed5<file_0>::function_23157de
 // Checksum 0xa3a594ad, Offset: 0x18d8
 // Size: 0xb4
 function screen_close_menu() {
@@ -413,7 +395,6 @@ function screen_close_menu() {
 
 // Namespace lui
 // Params 0, eflags: 0x5 linked
-// namespace_ce7c3ed5<file_0>::function_2811b925
 // Checksum 0x3dec8ba6, Offset: 0x1998
 // Size: 0xd6
 function private _screen_close_menu() {
@@ -430,7 +411,6 @@ function private _screen_close_menu() {
 
 // Namespace lui
 // Params 6, eflags: 0x5 linked
-// namespace_ce7c3ed5<file_0>::function_3dad5d35
 // Checksum 0x6d24d048, Offset: 0x1a78
 // Size: 0x54e
 function private _screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_force_close_menu, str_menu_id) {
@@ -508,7 +488,6 @@ function private _screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_
 
 // Namespace lui
 // Params 1, eflags: 0x5 linked
-// namespace_ce7c3ed5<file_0>::function_ae1c7ad1
 // Checksum 0x47e2b193, Offset: 0x1fd0
 // Size: 0x54
 function private _one_screen_fade_per_network_frame(s_menu) {
@@ -520,7 +499,6 @@ function private _one_screen_fade_per_network_frame(s_menu) {
 
 // Namespace lui
 // Params 2, eflags: 0x0
-// namespace_ce7c3ed5<file_0>::function_c7825a26
 // Checksum 0x5433e658, Offset: 0x2030
 // Size: 0xf4
 function open_generic_script_dialog(title, description) {
@@ -536,7 +514,6 @@ function open_generic_script_dialog(title, description) {
 
 // Namespace lui
 // Params 1, eflags: 0x0
-// namespace_ce7c3ed5<file_0>::function_979762b0
 // Checksum 0x6a19f2b5, Offset: 0x2130
 // Size: 0x94
 function open_script_dialog(dialog_name) {

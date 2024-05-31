@@ -6,7 +6,6 @@
 
 // Namespace footsteps
 // Params 0, eflags: 0x2
-// namespace_cade3606<file_0>::function_2dc19561
 // Checksum 0x1b3a7c62, Offset: 0x170
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,7 +14,6 @@ function autoexec function_2dc19561() {
 
 // Namespace footsteps
 // Params 0, eflags: 0x1 linked
-// namespace_cade3606<file_0>::function_8c87d8eb
 // Checksum 0x2356d33, Offset: 0x1b0
 // Size: 0x19e
 function __init__() {
@@ -49,7 +47,6 @@ function __init__() {
 
     // Namespace footsteps
     // Params 2, eflags: 0x1 linked
-    // namespace_cade3606<file_0>::function_ce2898b2
     // Checksum 0xe57ee82, Offset: 0x358
     // Size: 0x114
     function function_ce2898b2(movetype, surfacetype) {
@@ -69,7 +66,6 @@ function __init__() {
 
 // Namespace footsteps
 // Params 6, eflags: 0x0
-// namespace_cade3606<file_0>::function_2e13c5c2
 // Checksum 0x41c9c4e9, Offset: 0x478
 // Size: 0xcc
 function function_2e13c5c2(client_num, player, surfacetype, firstperson, quiet, var_7c95fc4) {
@@ -85,7 +81,6 @@ function function_2e13c5c2(client_num, player, surfacetype, firstperson, quiet, 
 
 // Namespace footsteps
 // Params 7, eflags: 0x0
-// namespace_cade3606<file_0>::function_1aa3f5bd
 // Checksum 0x804095fa, Offset: 0x550
 // Size: 0x1d4
 function function_1aa3f5bd(client_num, player, surfacetype, firstperson, quiet, var_77e922e5, var_7c95fc4) {
@@ -116,7 +111,6 @@ function function_1aa3f5bd(client_num, player, surfacetype, firstperson, quiet, 
 
 // Namespace footsteps
 // Params 4, eflags: 0x1 linked
-// namespace_cade3606<file_0>::function_1e9a5eeb
 // Checksum 0xe83c03c1, Offset: 0x730
 // Size: 0x9c
 function function_1e9a5eeb(client_num, player, firstperson, quiet) {
@@ -130,7 +124,6 @@ function function_1e9a5eeb(client_num, player, firstperson, quiet) {
 
 // Namespace footsteps
 // Params 4, eflags: 0x1 linked
-// namespace_cade3606<file_0>::function_2d42a17f
 // Checksum 0x19e5897, Offset: 0x7d8
 // Size: 0x234
 function function_2d42a17f(movementtype, surfacetype, firstperson, var_7c95fc4) {
@@ -163,7 +156,6 @@ function function_2d42a17f(movementtype, surfacetype, firstperson, var_7c95fc4) 
 
 // Namespace footsteps
 // Params 4, eflags: 0x0
-// namespace_cade3606<file_0>::function_29897e3b
 // Checksum 0x681fd8a3, Offset: 0xa18
 // Size: 0x158
 function function_29897e3b(client_num, var_9e38e41f, var_5305dd36, var_e069c441) {
@@ -191,7 +183,6 @@ function function_29897e3b(client_num, var_9e38e41f, var_5305dd36, var_e069c441)
 
 // Namespace footsteps
 // Params 0, eflags: 0x1 linked
-// namespace_cade3606<file_0>::function_ea677ea1
 // Checksum 0x2e5c63dc, Offset: 0xb78
 // Size: 0x6c
 function missing_ai_footstep_callback() {
@@ -206,7 +197,6 @@ function missing_ai_footstep_callback() {
 
 // Namespace footsteps
 // Params 5, eflags: 0x1 linked
-// namespace_cade3606<file_0>::function_3ebc4867
 // Checksum 0xced7a97a, Offset: 0xbf0
 // Size: 0xe2
 function playaifootstep(client_num, pos, surface, notetrack, bone) {

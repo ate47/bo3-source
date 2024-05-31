@@ -8,7 +8,6 @@
 
 // Namespace remotemissile
 // Params 0, eflags: 0x2
-// namespace_818840b1<file_0>::function_2dc19561
 // Checksum 0xeb9702c9, Offset: 0x1f8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,7 +16,6 @@ function autoexec function_2dc19561() {
 
 // Namespace remotemissile
 // Params 0, eflags: 0x1 linked
-// namespace_818840b1<file_0>::function_8c87d8eb
 // Checksum 0xd3de3808, Offset: 0x238
 // Size: 0x94
 function __init__() {
@@ -27,7 +25,6 @@ function __init__() {
 
 // Namespace remotemissile
 // Params 7, eflags: 0x1 linked
-// namespace_818840b1<file_0>::function_cb6c271a
 // Checksum 0x64fbbdf3, Offset: 0x2d8
 // Size: 0x2cc
 function missile_fired(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -62,7 +59,6 @@ function missile_fired(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 
 // Namespace remotemissile
 // Params 7, eflags: 0x1 linked
-// namespace_818840b1<file_0>::function_7a051420
 // Checksum 0x7d3dad90, Offset: 0x5b0
 // Size: 0x23c
 function bomblets_deployed(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -91,7 +87,6 @@ function bomblets_deployed(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace remotemissile
 // Params 2, eflags: 0x1 linked
-// namespace_818840b1<file_0>::function_6bf3988a
 // Checksum 0x53fc81a, Offset: 0x7f8
 // Size: 0x8c
 function destruction_watcher(localclientnum, clientobjid) {
@@ -105,7 +100,6 @@ function destruction_watcher(localclientnum, clientobjid) {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x1 linked
-// namespace_818840b1<file_0>::function_de2c0ec8
 // Checksum 0x418b2cd5, Offset: 0x890
 // Size: 0x1d0
 function hud_update(localclientnum) {

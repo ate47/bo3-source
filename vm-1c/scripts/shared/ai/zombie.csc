@@ -6,7 +6,6 @@
 
 // Namespace zombie
 // Params 0, eflags: 0x2
-// namespace_fb9423cf<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x3c0
 // Size: 0x4
 function autoexec precache() {
@@ -15,7 +14,6 @@ function autoexec precache() {
 
 // Namespace zombie
 // Params 0, eflags: 0x2
-// namespace_fb9423cf<file_0>::function_d290ebfa
 // Checksum 0x2fc1badc, Offset: 0x3d0
 // Size: 0xd4
 function autoexec main() {
@@ -29,7 +27,6 @@ function autoexec main() {
 
 // Namespace zombieclientutils
 // Params 7, eflags: 0x1 linked
-// namespace_697da011<file_0>::function_15c8d779
 // Checksum 0x2000701f, Offset: 0x4b0
 // Size: 0x184
 function zombiehandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -49,7 +46,6 @@ function zombiehandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap
 
 // Namespace zombieclientutils
 // Params 3, eflags: 0x5 linked
-// namespace_697da011<file_0>::function_2eb49c4f
 // Checksum 0x1d4b1da8, Offset: 0x640
 // Size: 0xc6
 function private _gibcallback(localclientnum, entity, gibflag) {
@@ -68,7 +64,6 @@ function private _gibcallback(localclientnum, entity, gibflag) {
 
 // Namespace zombieclientutils
 // Params 7, eflags: 0x1 linked
-// namespace_697da011<file_0>::function_a505b3f0
 // Checksum 0x3e5013c9, Offset: 0x710
 // Size: 0xfc
 function zombiespecialdayeffectshandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -83,7 +78,6 @@ function zombiespecialdayeffectshandler(localclientnum, oldvalue, newvalue, bnew
 
 // Namespace zombieclientutils
 // Params 1, eflags: 0x1 linked
-// namespace_697da011<file_0>::function_c090e03b
 // Checksum 0x2dd457df, Offset: 0x818
 // Size: 0x14e
 function zombie_override_burn_fx(localclientnum) {

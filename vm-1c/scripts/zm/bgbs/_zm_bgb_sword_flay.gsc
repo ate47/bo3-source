@@ -11,7 +11,6 @@
 
 // Namespace zm_bgb_sword_flay
 // Params 0, eflags: 0x2
-// namespace_6caa802f<file_0>::function_2dc19561
 // Checksum 0xc0c4313b, Offset: 0x198
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_sword_flay
 // Params 0, eflags: 0x1 linked
-// namespace_6caa802f<file_0>::function_8c87d8eb
 // Checksum 0xc10f4d85, Offset: 0x1d8
 // Size: 0xac
 function __init__() {
@@ -34,7 +32,6 @@ function __init__() {
 
 // Namespace zm_bgb_sword_flay
 // Params 0, eflags: 0x1 linked
-// namespace_6caa802f<file_0>::function_bae40a28
 // Checksum 0x99ec1590, Offset: 0x290
 // Size: 0x4
 function enable() {
@@ -43,7 +40,6 @@ function enable() {
 
 // Namespace zm_bgb_sword_flay
 // Params 0, eflags: 0x1 linked
-// namespace_6caa802f<file_0>::function_54bdb053
 // Checksum 0x99ec1590, Offset: 0x2a0
 // Size: 0x4
 function disable() {
@@ -52,7 +48,6 @@ function disable() {
 
 // Namespace zm_bgb_sword_flay
 // Params 12, eflags: 0x1 linked
-// namespace_6caa802f<file_0>::function_33cecf53
 // Checksum 0xcd14acee, Offset: 0x2b0
 // Size: 0xe0
 function actor_damage_override(inflictor, attacker, damage, flags, meansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, surfacetype) {
@@ -67,7 +62,6 @@ function actor_damage_override(inflictor, attacker, damage, flags, meansofdeath,
 
 // Namespace zm_bgb_sword_flay
 // Params 15, eflags: 0x1 linked
-// namespace_6caa802f<file_0>::function_cde5d14c
 // Checksum 0xc12369cb, Offset: 0x398
 // Size: 0xa2
 function vehicle_damage_override(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {

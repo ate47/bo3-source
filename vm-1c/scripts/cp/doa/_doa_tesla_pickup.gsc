@@ -21,7 +21,6 @@
 
 // Namespace namespace_3f3eaecb
 // Params 0, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_c35e6aab
 // Checksum 0x7a44167f, Offset: 0x460
 // Size: 0xec
 function init() {
@@ -37,7 +36,6 @@ function init() {
 
 // Namespace namespace_3f3eaecb
 // Params 0, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_2f9ce7f8
 // Checksum 0xfeadcea, Offset: 0x558
 // Size: 0x5e
 function function_2f9ce7f8() {
@@ -54,7 +52,6 @@ function function_2f9ce7f8() {
 
 // Namespace namespace_3f3eaecb
 // Params 1, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_398dc86c
 // Checksum 0xed26d94f, Offset: 0x5c0
 // Size: 0x42
 function function_398dc86c(player) {
@@ -69,7 +66,6 @@ function function_398dc86c(player) {
 
 // Namespace namespace_3f3eaecb
 // Params 1, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_51e87beb
 // Checksum 0x78fec1cf, Offset: 0x610
 // Size: 0xf4
 function function_51e87beb(player) {
@@ -95,7 +91,6 @@ function function_51e87beb(player) {
 
 // Namespace namespace_3f3eaecb
 // Params 3, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_57a28e1
 // Checksum 0xdbfa5fb6, Offset: 0x710
 // Size: 0x20e
 function function_57a28e1(source_enemy, player, arc_num) {
@@ -124,7 +119,6 @@ function function_57a28e1(source_enemy, player, arc_num) {
 
 // Namespace namespace_3f3eaecb
 // Params 2, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_25febc97
 // Checksum 0xe143672, Offset: 0x928
 // Size: 0xbc
 function function_25febc97(arc_num, enemies_hit_num) {
@@ -143,7 +137,6 @@ function function_25febc97(arc_num, enemies_hit_num) {
 
 // Namespace namespace_3f3eaecb
 // Params 3, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_da0cecf0
 // Checksum 0x5783b256, Offset: 0x9f0
 // Size: 0x1e8
 function function_da0cecf0(origin, distance, player) {
@@ -177,7 +170,6 @@ function function_da0cecf0(origin, distance, player) {
 
 // Namespace namespace_3f3eaecb
 // Params 2, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_62bddefd
 // Checksum 0xa6185ff4, Offset: 0xbe0
 // Size: 0x90
 function function_62bddefd(enemy, hit) {
@@ -195,7 +187,6 @@ function function_62bddefd(enemy, hit) {
 
 // Namespace namespace_3f3eaecb
 // Params 3, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_55a2b33e
 // Checksum 0xd915e289, Offset: 0xc78
 // Size: 0x1f4
 function function_55a2b33e(source_enemy, arc_num, player) {
@@ -234,7 +225,6 @@ function function_55a2b33e(source_enemy, arc_num, player) {
 
 // Namespace namespace_3f3eaecb
 // Params 1, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_c80ea8b9
 // Checksum 0x23bd0038, Offset: 0xe78
 // Size: 0x90
 function function_c80ea8b9(arc_num) {
@@ -250,7 +240,6 @@ function function_c80ea8b9(arc_num) {
 
 // Namespace namespace_3f3eaecb
 // Params 1, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_7ac0e5cf
 // Checksum 0x93c713fe, Offset: 0xf10
 // Size: 0x28c
 function tesla_play_arc_fx(target) {
@@ -288,7 +277,6 @@ function tesla_play_arc_fx(target) {
 
     // Namespace namespace_3f3eaecb
     // Params 2, eflags: 0x0
-    // namespace_3f3eaecb<file_0>::function_acbdce5b
     // Checksum 0xe464f405, Offset: 0x11a8
     // Size: 0x6c
     function function_acbdce5b(origin, distance) {
@@ -305,7 +293,6 @@ function tesla_play_arc_fx(target) {
 
 // Namespace namespace_3f3eaecb
 // Params 0, eflags: 0x0
-// namespace_3f3eaecb<file_0>::function_88a72013
 // Checksum 0x5a82eab7, Offset: 0x1220
 // Size: 0x16
 function function_88a72013() {
@@ -314,7 +301,6 @@ function function_88a72013() {
 
 // Namespace namespace_3f3eaecb
 // Params 2, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_395fdfb8
 // Checksum 0x4d86147e, Offset: 0x1240
 // Size: 0xf4
 function function_395fdfb8(guy, attacker) {
@@ -337,7 +323,6 @@ function function_395fdfb8(guy, attacker) {
 
 // Namespace namespace_3f3eaecb
 // Params 2, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_8c768539
 // Checksum 0x56ffb1cc, Offset: 0x1340
 // Size: 0x84
 function function_8c768539(player, note) {
@@ -354,7 +339,6 @@ function function_8c768539(player, note) {
 
 // Namespace namespace_3f3eaecb
 // Params 2, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_e3b41890
 // Checksum 0x8da5be2b, Offset: 0x13d0
 // Size: 0xee
 function function_e3b41890(org, note) {
@@ -371,7 +355,6 @@ function function_e3b41890(org, note) {
 
 // Namespace namespace_3f3eaecb
 // Params 2, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_ccf71744
 // Checksum 0xe9abe27b, Offset: 0x14c8
 // Size: 0xac
 function function_ccf71744(org, vel) {
@@ -384,7 +367,6 @@ function function_ccf71744(org, vel) {
 
 // Namespace namespace_3f3eaecb
 // Params 1, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_89843a06
 // Checksum 0x5cdb3f0b, Offset: 0x1580
 // Size: 0x124
 function function_89843a06(player) {
@@ -409,7 +391,6 @@ function function_89843a06(player) {
 
 // Namespace namespace_3f3eaecb
 // Params 2, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_822f3ab1
 // Checksum 0xeb6ca3e1, Offset: 0x16b0
 // Size: 0x224
 function function_822f3ab1(org, note) {
@@ -447,7 +428,6 @@ function function_822f3ab1(org, note) {
 
 // Namespace namespace_3f3eaecb
 // Params 2, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_50608835
 // Checksum 0xcad648f4, Offset: 0x18e0
 // Size: 0x13c
 function function_50608835(org, note) {
@@ -471,7 +451,6 @@ function function_50608835(org, note) {
 
 // Namespace namespace_3f3eaecb
 // Params 2, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_be694794
 // Checksum 0xfed77a14, Offset: 0x1a28
 // Size: 0x76
 function function_be694794(org, note) {
@@ -485,7 +464,6 @@ function function_be694794(org, note) {
 
 // Namespace namespace_3f3eaecb
 // Params 1, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_8614ba51
 // Checksum 0x85ca1aa1, Offset: 0x1aa8
 // Size: 0xc6
 function function_8614ba51(org) {
@@ -501,7 +479,6 @@ function function_8614ba51(org) {
 
 // Namespace namespace_3f3eaecb
 // Params 0, eflags: 0x1 linked
-// namespace_3f3eaecb<file_0>::function_ca5c4134
 // Checksum 0x44d991c9, Offset: 0x1b78
 // Size: 0x92c
 function function_ca5c4134() {

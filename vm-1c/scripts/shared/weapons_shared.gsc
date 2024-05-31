@@ -7,7 +7,6 @@
 
 // Namespace weapons
 // Params 1, eflags: 0x1 linked
-// namespace_f996a5bc<file_0>::function_afc1125
 // Checksum 0xaa47fc6f, Offset: 0x148
 // Size: 0x46
 function is_primary_weapon(weapon) {
@@ -17,7 +16,6 @@ function is_primary_weapon(weapon) {
 
 // Namespace weapons
 // Params 1, eflags: 0x1 linked
-// namespace_f996a5bc<file_0>::function_7e589a1e
 // Checksum 0xb598aac4, Offset: 0x198
 // Size: 0x46
 function is_side_arm(weapon) {
@@ -27,7 +25,6 @@ function is_side_arm(weapon) {
 
 // Namespace weapons
 // Params 1, eflags: 0x1 linked
-// namespace_f996a5bc<file_0>::function_c8b5d8b0
 // Checksum 0xb2504e18, Offset: 0x1e8
 // Size: 0x46
 function is_inventory(weapon) {
@@ -37,7 +34,6 @@ function is_inventory(weapon) {
 
 // Namespace weapons
 // Params 1, eflags: 0x1 linked
-// namespace_f996a5bc<file_0>::function_56d05fd6
 // Checksum 0xb59bada3, Offset: 0x238
 // Size: 0x46
 function is_grenade(weapon) {
@@ -47,7 +43,6 @@ function is_grenade(weapon) {
 
 // Namespace weapons
 // Params 0, eflags: 0x1 linked
-// namespace_f996a5bc<file_0>::function_85d01080
 // Checksum 0xc449641b, Offset: 0x288
 // Size: 0x34
 function force_stowed_weapon_update() {
@@ -58,7 +53,6 @@ function force_stowed_weapon_update() {
 
 // Namespace weapons
 // Params 0, eflags: 0x1 linked
-// namespace_f996a5bc<file_0>::function_4243b4b4
 // Checksum 0xa387f0be, Offset: 0x2c8
 // Size: 0x6e
 function detach_carry_object_model() {
@@ -72,7 +66,6 @@ function detach_carry_object_model() {
 
 // Namespace weapons
 // Params 0, eflags: 0x1 linked
-// namespace_f996a5bc<file_0>::function_4aa90456
 // Checksum 0x84c9e58e, Offset: 0x340
 // Size: 0x136
 function detach_all_weapons() {
@@ -101,7 +94,6 @@ function detach_all_weapons() {
 
 // Namespace weapons
 // Params 1, eflags: 0x1 linked
-// namespace_f996a5bc<file_0>::function_56b1f484
 // Checksum 0xd8c6006e, Offset: 0x480
 // Size: 0x1d4
 function stow_on_back(current) {
@@ -135,7 +127,6 @@ function stow_on_back(current) {
 
 // Namespace weapons
 // Params 0, eflags: 0x1 linked
-// namespace_f996a5bc<file_0>::function_ef1f5718
 // Checksum 0x255225ce, Offset: 0x660
 // Size: 0xfc
 function stow_on_hip() {
@@ -158,7 +149,6 @@ function stow_on_hip() {
 
 // Namespace weapons
 // Params 4, eflags: 0x1 linked
-// namespace_f996a5bc<file_0>::function_f0e61345
 // Checksum 0xc0d88eb3, Offset: 0x768
 // Size: 0x62
 function weapondamagetracepassed(from, to, startradius, ignore) {
@@ -168,7 +158,6 @@ function weapondamagetracepassed(from, to, startradius, ignore) {
 
 // Namespace weapons
 // Params 4, eflags: 0x1 linked
-// namespace_f996a5bc<file_0>::function_63ac3439
 // Checksum 0x5e48222d, Offset: 0x7d8
 // Size: 0x1e0
 function weapondamagetrace(from, to, startradius, ignore) {
@@ -193,7 +182,6 @@ function weapondamagetrace(from, to, startradius, ignore) {
 
 // Namespace weapons
 // Params 0, eflags: 0x1 linked
-// namespace_f996a5bc<file_0>::function_e83cf36e
 // Checksum 0x67a3fc62, Offset: 0x9c0
 // Size: 0x40
 function has_lmg() {
@@ -203,7 +191,6 @@ function has_lmg() {
 
 // Namespace weapons
 // Params 0, eflags: 0x1 linked
-// namespace_f996a5bc<file_0>::function_5bdb578e
 // Checksum 0x2a71f790, Offset: 0xa08
 // Size: 0x36
 function has_launcher() {
@@ -213,7 +200,6 @@ function has_launcher() {
 
 // Namespace weapons
 // Params 0, eflags: 0x1 linked
-// namespace_f996a5bc<file_0>::function_e0710a11
 // Checksum 0x5595ce02, Offset: 0xa48
 // Size: 0x3c
 function has_hero_weapon() {
@@ -223,7 +209,6 @@ function has_hero_weapon() {
 
 // Namespace weapons
 // Params 1, eflags: 0x1 linked
-// namespace_f996a5bc<file_0>::function_829ad2e4
 // Checksum 0xc42c8fb4, Offset: 0xa90
 // Size: 0x6e
 function has_lockon(target) {

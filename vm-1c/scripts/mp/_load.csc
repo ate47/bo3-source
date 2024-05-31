@@ -79,7 +79,6 @@
 
 // Namespace load
 // Params 3, eflags: 0x1 linked
-// namespace_d7916d65<file_0>::function_2e683bb6
 // Checksum 0x4a965a5c, Offset: 0xaf0
 // Size: 0x3a
 function levelnotifyhandler(clientnum, state, oldstate) {
@@ -90,7 +89,6 @@ function levelnotifyhandler(clientnum, state, oldstate) {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
-// namespace_d7916d65<file_0>::function_d290ebfa
 // Checksum 0x57ca48c3, Offset: 0xb38
 // Size: 0xfc
 function main() {
@@ -106,7 +104,6 @@ function main() {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
-// namespace_d7916d65<file_0>::function_4ece4a2f
 // Checksum 0x896f8a44, Offset: 0xc40
 // Size: 0xdc
 function register_clientfields() {

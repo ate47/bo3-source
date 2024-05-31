@@ -12,7 +12,6 @@
 
 // Namespace namespace_2e83114d
 // Params 0, eflags: 0x2
-// namespace_2e83114d<file_0>::function_2dc19561
 // Checksum 0xdfe025bc, Offset: 0x1d0
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_2e83114d
 // Params 0, eflags: 0x1 linked
-// namespace_2e83114d<file_0>::function_8c87d8eb
 // Checksum 0xa2fc0cc9, Offset: 0x218
 // Size: 0x10
 function __init__() {
@@ -30,7 +28,6 @@ function __init__() {
 
 // Namespace namespace_2e83114d
 // Params 0, eflags: 0x1 linked
-// namespace_2e83114d<file_0>::function_5b6b9132
 // Checksum 0xb315d564, Offset: 0x230
 // Size: 0x1c
 function __main__() {
@@ -39,7 +36,6 @@ function __main__() {
 
 // Namespace namespace_2e83114d
 // Params 0, eflags: 0x0
-// namespace_2e83114d<file_0>::function_135b9ebe
 // Checksum 0x3189d3b8, Offset: 0x258
 // Size: 0x12
 function force_check_now() {
@@ -48,7 +44,6 @@ function force_check_now() {
 
 // Namespace namespace_2e83114d
 // Params 0, eflags: 0x5 linked
-// namespace_2e83114d<file_0>::function_94a71aa1
 // Checksum 0x4c31b495, Offset: 0x278
 // Size: 0x246
 function private cleanup_main() {
@@ -91,7 +86,6 @@ function private cleanup_main() {
 
 // Namespace namespace_2e83114d
 // Params 1, eflags: 0x1 linked
-// namespace_2e83114d<file_0>::function_f5e436a6
 // Checksum 0x296f29ed, Offset: 0x4c8
 // Size: 0x274
 function do_cleanup_check(n_override_cleanup_dist) {
@@ -140,7 +134,6 @@ function do_cleanup_check(n_override_cleanup_dist) {
 
 // Namespace namespace_2e83114d
 // Params 0, eflags: 0x5 linked
-// namespace_2e83114d<file_0>::function_9d062d5d
 // Checksum 0x90b671f2, Offset: 0x748
 // Size: 0x324
 function private delete_zombie_noone_looking() {
@@ -192,7 +185,6 @@ function private delete_zombie_noone_looking() {
 
 // Namespace namespace_2e83114d
 // Params 1, eflags: 0x5 linked
-// namespace_2e83114d<file_0>::function_6f990596
 // Checksum 0xffafe3ab, Offset: 0xa78
 // Size: 0xd8
 function private player_can_see_me(player) {
@@ -209,7 +201,6 @@ function private player_can_see_me(player) {
 
 // Namespace namespace_2e83114d
 // Params 1, eflags: 0x5 linked
-// namespace_2e83114d<file_0>::function_316e69fd
 // Checksum 0xc893309f, Offset: 0xb58
 // Size: 0xb4
 function private player_ahead_of_me(player) {
@@ -225,7 +216,6 @@ function private player_ahead_of_me(player) {
 
 // Namespace namespace_2e83114d
 // Params 0, eflags: 0x1 linked
-// namespace_2e83114d<file_0>::function_8cd09adb
 // Checksum 0x795c4c03, Offset: 0xc18
 // Size: 0xb4
 function get_escape_position() {
@@ -244,7 +234,6 @@ function get_escape_position() {
 
 // Namespace namespace_2e83114d
 // Params 1, eflags: 0x1 linked
-// namespace_2e83114d<file_0>::function_d6e4bd69
 // Checksum 0x723b0ba4, Offset: 0xcd8
 // Size: 0x11e
 function get_adjacencies_to_zone(str_zone) {
@@ -266,7 +255,6 @@ function get_adjacencies_to_zone(str_zone) {
 
 // Namespace namespace_2e83114d
 // Params 1, eflags: 0x5 linked
-// namespace_2e83114d<file_0>::function_99ba7416
 // Checksum 0x64a2bb46, Offset: 0xe00
 // Size: 0xd2
 function private get_wait_locations_in_zones(a_zones) {
@@ -279,7 +267,6 @@ function private get_wait_locations_in_zones(a_zones) {
 
 // Namespace namespace_2e83114d
 // Params 1, eflags: 0x5 linked
-// namespace_2e83114d<file_0>::function_1335dc11
 // Checksum 0xd5036f6e, Offset: 0xee0
 // Size: 0xd6
 function private get_farthest_wait_location(a_wait_locations) {
@@ -300,7 +287,6 @@ function private get_farthest_wait_location(a_wait_locations) {
 
 // Namespace namespace_2e83114d
 // Params 1, eflags: 0x5 linked
-// namespace_2e83114d<file_0>::function_15226b4f
 // Checksum 0xf31334e8, Offset: 0xfc0
 // Size: 0x88
 function private get_wait_locations_in_zone(zone) {
@@ -314,7 +300,6 @@ function private get_wait_locations_in_zone(zone) {
 
 // Namespace namespace_2e83114d
 // Params 0, eflags: 0x1 linked
-// namespace_2e83114d<file_0>::function_4c2110d2
 // Checksum 0x6a52bf88, Offset: 0x1050
 // Size: 0x9c
 function get_escape_position_in_current_zone() {

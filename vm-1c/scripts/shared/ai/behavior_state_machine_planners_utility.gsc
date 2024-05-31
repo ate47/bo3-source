@@ -8,7 +8,6 @@
 
 // Namespace namespace_3ae1c2fc
 // Params 0, eflags: 0x2
-// namespace_3ae1c2fc<file_0>::function_a13b795c
 // Checksum 0x99ec1590, Offset: 0x150
 // Size: 0x4
 function autoexec registerbehaviorscriptfunctions() {

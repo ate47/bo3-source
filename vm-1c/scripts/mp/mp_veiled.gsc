@@ -12,7 +12,6 @@
 
 // Namespace namespace_b949d622
 // Params 0, eflags: 0x1 linked
-// namespace_b949d622<file_0>::function_d290ebfa
 // Checksum 0xad65a792, Offset: 0x2d8
 // Size: 0x33c
 function main() {
@@ -38,7 +37,6 @@ function main() {
 
 // Namespace namespace_b949d622
 // Params 0, eflags: 0x1 linked
-// namespace_b949d622<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x620
 // Size: 0x4
 function precache() {
@@ -47,7 +45,6 @@ function precache() {
 
 // Namespace namespace_b949d622
 // Params 0, eflags: 0x1 linked
-// namespace_b949d622<file_0>::function_e8eaac79
 // Checksum 0x80b207eb, Offset: 0x630
 // Size: 0x1bc
 function function_e8eaac79() {

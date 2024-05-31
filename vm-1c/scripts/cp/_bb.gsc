@@ -7,7 +7,6 @@
 
 // Namespace bb
 // Params 0, eflags: 0x2
-// namespace_d8129fdd<file_0>::function_2dc19561
 // Checksum 0xfb919ca, Offset: 0x918
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,7 +15,6 @@ function autoexec function_2dc19561() {
 
 // Namespace bb
 // Params 0, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_8c87d8eb
 // Checksum 0x67d59eaa, Offset: 0x958
 // Size: 0x14
 function __init__() {
@@ -25,7 +23,6 @@ function __init__() {
 
 // Namespace bb
 // Params 1, eflags: 0x5 linked
-// namespace_d8129fdd<file_0>::function_edae084d
 // Checksum 0x574ef48b, Offset: 0x978
 // Size: 0xd8
 function private function_edae084d(player) {
@@ -45,7 +42,6 @@ function private function_edae084d(player) {
 
 // Namespace bb
 // Params 1, eflags: 0x5 linked
-// namespace_d8129fdd<file_0>::function_b918cb9
 // Checksum 0x8691e15f, Offset: 0xa58
 // Size: 0xe0
 function private function_b918cb9(player) {
@@ -61,7 +57,6 @@ function private function_b918cb9(player) {
 
 // Namespace bb
 // Params 1, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_e7f3440
 // Checksum 0x2784a880, Offset: 0xb40
 // Size: 0x91c
 function function_e7f3440(player) {
@@ -150,7 +145,6 @@ function function_e7f3440(player) {
 
 // Namespace bb
 // Params 3, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_bea1c67c
 // Checksum 0xda90d10c, Offset: 0x1468
 // Size: 0x134
 function function_bea1c67c(objectivename, player, status) {
@@ -165,7 +159,6 @@ function function_bea1c67c(objectivename, player, status) {
 
 // Namespace bb
 // Params 8, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_2aa586aa
 // Checksum 0xfa4d0b8e, Offset: 0x15a8
 // Size: 0x5a4
 function logdamage(attacker, victim, weapon, damage, damagetype, hitlocation, victimkilled, victimdowned) {
@@ -248,7 +241,6 @@ function logdamage(attacker, victim, weapon, damage, damagetype, hitlocation, vi
 
 // Namespace bb
 // Params 2, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_a96d8fec
 // Checksum 0x9f3ad9b, Offset: 0x1b58
 // Size: 0xfc
 function logaispawn(aient, spawner) {
@@ -257,7 +249,6 @@ function logaispawn(aient, spawner) {
 
 // Namespace bb
 // Params 2, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_945c54c5
 // Checksum 0xf63741aa, Offset: 0x1c60
 // Size: 0x154
 function function_945c54c5(notificationtype, player) {
@@ -280,7 +271,6 @@ function function_945c54c5(notificationtype, player) {
 
 // Namespace bb
 // Params 3, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_42ffd679
 // Checksum 0x798e1e14, Offset: 0x1dc0
 // Size: 0x15c
 function function_42ffd679(player, event, gadget) {
@@ -303,7 +293,6 @@ function function_42ffd679(player, event, gadget) {
 
 // Namespace bb
 // Params 4, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_1a69bad6
 // Checksum 0xab716e51, Offset: 0x1f28
 // Size: 0x17c
 function function_1a69bad6(var_932b0331, attacker, var_1a69bad6, radius) {

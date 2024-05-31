@@ -11,7 +11,6 @@
 
 // Namespace vehicle
 // Params 0, eflags: 0x2
-// namespace_96fa87af<file_0>::function_2dc19561
 // Checksum 0xe710735f, Offset: 0x198
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace vehicle
 // Params 0, eflags: 0x1 linked
-// namespace_96fa87af<file_0>::function_8c87d8eb
 // Checksum 0xe76df173, Offset: 0x1d8
 // Size: 0x6c
 function __init__() {
@@ -33,7 +31,6 @@ function __init__() {
 
 // Namespace vehicle
 // Params 1, eflags: 0x1 linked
-// namespace_96fa87af<file_0>::function_dacec601
 // Checksum 0x2dd0f302, Offset: 0x250
 // Size: 0x3a0
 function vehicle_rumble(localclientnum) {
@@ -97,7 +94,6 @@ function vehicle_rumble(localclientnum) {
 
 // Namespace vehicle
 // Params 1, eflags: 0x1 linked
-// namespace_96fa87af<file_0>::function_6fed04df
 // Checksum 0x2d473c90, Offset: 0x5f8
 // Size: 0x94
 function set_static_amount(staticamount) {
@@ -112,7 +108,6 @@ function set_static_amount(staticamount) {
 
 // Namespace vehicle
 // Params 1, eflags: 0x0
-// namespace_96fa87af<file_0>::function_6b6144ec
 // Checksum 0x69678ae2, Offset: 0x698
 // Size: 0xc
 function vehicle_variants(localclientnum) {
@@ -121,7 +116,6 @@ function vehicle_variants(localclientnum) {
 
 // Namespace vehicle
 // Params 7, eflags: 0x1 linked
-// namespace_96fa87af<file_0>::function_891f9949
 // Checksum 0x9c8d31e5, Offset: 0x6b0
 // Size: 0x19c
 function timeout_beep(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

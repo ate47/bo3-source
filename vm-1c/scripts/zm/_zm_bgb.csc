@@ -10,7 +10,6 @@
 
 // Namespace bgb
 // Params 0, eflags: 0x2
-// namespace_d2e735e2<file_0>::function_2dc19561
 // Checksum 0x8e44099b, Offset: 0x278
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -19,7 +18,6 @@ function autoexec function_2dc19561() {
 
 // Namespace bgb
 // Params 0, eflags: 0x1 linked
-// namespace_d2e735e2<file_0>::function_8c87d8eb
 // Checksum 0x9f12a9d8, Offset: 0x2c0
 // Size: 0x236
 function __init__() {
@@ -42,7 +40,6 @@ function __init__() {
 
 // Namespace bgb
 // Params 0, eflags: 0x5 linked
-// namespace_d2e735e2<file_0>::function_5b6b9132
 // Checksum 0xe5df4326, Offset: 0x500
 // Size: 0x2c
 function private __main__() {
@@ -54,7 +51,6 @@ function private __main__() {
 
 // Namespace bgb
 // Params 1, eflags: 0x5 linked
-// namespace_d2e735e2<file_0>::function_fb4f96b5
 // Checksum 0xf80d05eb, Offset: 0x538
 // Size: 0x3c
 function private on_player_connect(localclientnum) {
@@ -66,7 +62,6 @@ function private on_player_connect(localclientnum) {
 
 // Namespace bgb
 // Params 1, eflags: 0x5 linked
-// namespace_d2e735e2<file_0>::function_e94a4b1b
 // Checksum 0x7253b4eb, Offset: 0x580
 // Size: 0x42
 function private bgb_player_init(localclientnum) {
@@ -78,7 +73,6 @@ function private bgb_player_init(localclientnum) {
 
 // Namespace bgb
 // Params 0, eflags: 0x5 linked
-// namespace_d2e735e2<file_0>::function_47aee2eb
 // Checksum 0x92d48920, Offset: 0x5d0
 // Size: 0x384
 function private bgb_finalize() {
@@ -108,7 +102,6 @@ function private bgb_finalize() {
 
 // Namespace bgb
 // Params 2, eflags: 0x1 linked
-// namespace_d2e735e2<file_0>::function_50f16166
 // Checksum 0x8c8068f6, Offset: 0x960
 // Size: 0x144
 function register(name, limit_type) {
@@ -123,7 +116,6 @@ function register(name, limit_type) {
 
 // Namespace bgb
 // Params 2, eflags: 0x5 linked
-// namespace_d2e735e2<file_0>::function_78c4bfa
 // Checksum 0x199c3ca9, Offset: 0xab0
 // Size: 0x17c
 function private function_78c4bfa(localclientnum, time) {
@@ -160,7 +152,6 @@ function private function_78c4bfa(localclientnum, time) {
 
 // Namespace bgb
 // Params 7, eflags: 0x5 linked
-// namespace_d2e735e2<file_0>::function_cec2dbda
 // Checksum 0xd8dc07cd, Offset: 0xc38
 // Size: 0x6c
 function private function_cec2dbda(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -170,7 +161,6 @@ function private function_cec2dbda(localclientnum, oldval, newval, bnewent, bini
 
 // Namespace bgb
 // Params 2, eflags: 0x5 linked
-// namespace_d2e735e2<file_0>::function_c8a1c86
 // Checksum 0x8b49ea30, Offset: 0xcb0
 // Size: 0x94
 function private function_c8a1c86(localclientnum, fx) {
@@ -185,7 +175,6 @@ function private function_c8a1c86(localclientnum, fx) {
 
 // Namespace bgb
 // Params 7, eflags: 0x5 linked
-// namespace_d2e735e2<file_0>::function_f5d066f6
 // Checksum 0x66c74291, Offset: 0xd50
 // Size: 0x84
 function private bgb_blow_bubble(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

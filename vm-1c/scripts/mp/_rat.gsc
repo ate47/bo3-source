@@ -12,7 +12,6 @@
 
     // Namespace rat
     // Params 0, eflags: 0x2
-    // namespace_c7970376<file_0>::function_2dc19561
     // Checksum 0x4188acbd, Offset: 0x130
     // Size: 0x34
     function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@
 
     // Namespace rat
     // Params 0, eflags: 0x1 linked
-    // namespace_c7970376<file_0>::function_8c87d8eb
     // Checksum 0xa2e1d915, Offset: 0x170
     // Size: 0x9c
     function __init__() {
@@ -34,7 +32,6 @@
 
     // Namespace rat
     // Params 1, eflags: 0x1 linked
-    // namespace_c7970376<file_0>::function_fa95cdc0
     // Checksum 0xae3e113b, Offset: 0x218
     // Size: 0x284
     function rscaddenemy(params) {
@@ -63,7 +60,6 @@
 
     // Namespace rat
     // Params 1, eflags: 0x1 linked
-    // namespace_c7970376<file_0>::function_46de06b3
     // Checksum 0xe170273f, Offset: 0x4a8
     // Size: 0x66
     function testenemy(team) {
@@ -78,7 +74,6 @@
 
     // Namespace rat
     // Params 0, eflags: 0x1 linked
-    // namespace_c7970376<file_0>::function_455d89f
     // Checksum 0x6e23e87, Offset: 0x518
     // Size: 0x4c
     function deathcounter() {

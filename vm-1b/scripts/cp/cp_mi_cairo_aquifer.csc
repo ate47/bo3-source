@@ -16,7 +16,6 @@
 
 // Namespace namespace_19487f32
 // Params 0, eflags: 0x0
-// namespace_19487f32<file_0>::function_d290ebfa
 // Checksum 0x7e719d08, Offset: 0x360
 // Size: 0x62
 function main() {
@@ -29,7 +28,6 @@ function main() {
 
 // Namespace namespace_19487f32
 // Params 1, eflags: 0x0
-// namespace_19487f32<file_0>::function_71f88fc
 // Checksum 0x26419970, Offset: 0x3d0
 // Size: 0x189
 function function_71f88fc(n_zone) {
@@ -73,7 +71,6 @@ function function_71f88fc(n_zone) {
 
 // Namespace namespace_19487f32
 // Params 3, eflags: 0x0
-// namespace_19487f32<file_0>::function_93df2062
 // Checksum 0xedb3a650, Offset: 0x568
 // Size: 0x6a
 function function_93df2062(player, filterid, var_5a938650) {
@@ -83,7 +80,6 @@ function function_93df2062(player, filterid, var_5a938650) {
 
 // Namespace namespace_19487f32
 // Params 1, eflags: 0x0
-// namespace_19487f32<file_0>::function_8c34c654
 // Checksum 0x4e8dc932, Offset: 0x5e0
 // Size: 0x26
 function mapped_material_id(materialname) {

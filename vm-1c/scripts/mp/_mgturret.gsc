@@ -4,7 +4,6 @@
 
 // Namespace mgturret
 // Params 0, eflags: 0x0
-// namespace_bf40e307<file_0>::function_d290ebfa
 // Checksum 0xf9016ea1, Offset: 0x160
 // Size: 0xce
 function main() {
@@ -20,7 +19,6 @@ function main() {
 
 // Namespace mgturret
 // Params 1, eflags: 0x0
-// namespace_bf40e307<file_0>::function_2cbbd6c9
 // Checksum 0x56048da8, Offset: 0x238
 // Size: 0x136
 function set_difficulty(difficulty) {
@@ -51,7 +49,6 @@ function set_difficulty(difficulty) {
 
 // Namespace mgturret
 // Params 0, eflags: 0x0
-// namespace_bf40e307<file_0>::function_f2710fd4
 // Checksum 0xf0e40869, Offset: 0x378
 // Size: 0x2c4
 function init_turret_difficulty_settings() {
@@ -79,7 +76,6 @@ function init_turret_difficulty_settings() {
 
 // Namespace mgturret
 // Params 2, eflags: 0x0
-// namespace_bf40e307<file_0>::function_34de2b92
 // Checksum 0x5ab4a294, Offset: 0x648
 // Size: 0xc8
 function turret_set_difficulty(turret, difficulty) {
@@ -92,7 +88,6 @@ function turret_set_difficulty(turret, difficulty) {
 
 // Namespace mgturret
 // Params 1, eflags: 0x0
-// namespace_bf40e307<file_0>::function_4584a25e
 // Checksum 0xd8047c6a, Offset: 0x718
 // Size: 0xc4
 function turret_suppression_fire(targets) {
@@ -115,7 +110,6 @@ function turret_suppression_fire(targets) {
 
 // Namespace mgturret
 // Params 1, eflags: 0x0
-// namespace_bf40e307<file_0>::function_a6ee2100
 // Checksum 0xfb106269, Offset: 0x7e8
 // Size: 0x76
 function burst_fire_settings(setting) {
@@ -135,7 +129,6 @@ function burst_fire_settings(setting) {
 
 // Namespace mgturret
 // Params 2, eflags: 0x0
-// namespace_bf40e307<file_0>::function_2b08cd30
 // Checksum 0x3e0d20f1, Offset: 0x868
 // Size: 0x24a
 function burst_fire(turret, manual_target) {
@@ -177,7 +170,6 @@ function burst_fire(turret, manual_target) {
 
 // Namespace mgturret
 // Params 0, eflags: 0x0
-// namespace_bf40e307<file_0>::function_d8f74413
 // Checksum 0x2fe92454, Offset: 0xac0
 // Size: 0x37c
 function burst_fire_unmanned() {
@@ -243,7 +235,6 @@ function burst_fire_unmanned() {
 
 // Namespace mgturret
 // Params 0, eflags: 0x0
-// namespace_bf40e307<file_0>::function_3d40493e
 // Checksum 0x78291603, Offset: 0xe48
 // Size: 0x38
 function do_shoot() {
@@ -257,7 +248,6 @@ function do_shoot() {
 
 // Namespace mgturret
 // Params 1, eflags: 0x0
-// namespace_bf40e307<file_0>::function_b353569
 // Checksum 0xb7f54540, Offset: 0xe88
 // Size: 0x42
 function turret_timer(duration) {
@@ -273,7 +263,6 @@ function turret_timer(duration) {
 
 // Namespace mgturret
 // Params 1, eflags: 0x0
-// namespace_bf40e307<file_0>::function_c47b9502
 // Checksum 0x5b1682bf, Offset: 0xed8
 // Size: 0x13c
 function random_spread(ent) {

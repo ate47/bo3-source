@@ -8,7 +8,6 @@
 
 // Namespace lightning_chain
 // Params 0, eflags: 0x2
-// namespace_6e76848f<file_0>::function_2dc19561
 // Checksum 0x31266cca, Offset: 0x258
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,7 +16,6 @@ function autoexec function_2dc19561() {
 
 // Namespace lightning_chain
 // Params 0, eflags: 0x1 linked
-// namespace_6e76848f<file_0>::function_c35e6aab
 // Checksum 0x43b3577a, Offset: 0x298
 // Size: 0x1ac
 function init() {
@@ -34,7 +32,6 @@ function init() {
 
 // Namespace lightning_chain
 // Params 7, eflags: 0x1 linked
-// namespace_6e76848f<file_0>::function_68c72756
 // Checksum 0x7a432861, Offset: 0x450
 // Size: 0x166
 function lc_shock_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -63,7 +60,6 @@ function lc_shock_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 
 // Namespace lightning_chain
 // Params 7, eflags: 0x1 linked
-// namespace_6e76848f<file_0>::function_b1af811
 // Checksum 0x9e4ac16f, Offset: 0x5c0
 // Size: 0x164
 function lc_play_death_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

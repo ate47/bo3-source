@@ -4,7 +4,6 @@
 
     // Namespace debug_menu
     // Params 2, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_573980e0
     // Checksum 0x4da4d193, Offset: 0x70
     // Size: 0xb8
     function add_menu(menu_name, title) {
@@ -19,7 +18,6 @@
 
     // Namespace debug_menu
     // Params 4, eflags: 0x0
-    // namespace_4ed4457c<file_0>::function_2a240d1a
     // Checksum 0x9c1b5cfb, Offset: 0x130
     // Size: 0x132
     function add_menuoptions(menu_name, var_26a8b438, func, key) {
@@ -39,7 +37,6 @@
 
     // Namespace debug_menu
     // Params 5, eflags: 0x0
-    // namespace_4ed4457c<file_0>::function_c85aeeff
     // Checksum 0xab49b5d0, Offset: 0x270
     // Size: 0x176
     function add_menu_child(parent_menu, var_43d33b65, var_5a160d62, var_43a34966, func) {
@@ -66,7 +63,6 @@
 
     // Namespace debug_menu
     // Params 1, eflags: 0x0
-    // namespace_4ed4457c<file_0>::function_af0c3893
     // Checksum 0xa8aeb386, Offset: 0x3f0
     // Size: 0x2c
     function function_af0c3893(menu_name) {
@@ -75,7 +71,6 @@
 
     // Namespace debug_menu
     // Params 1, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_d8c9ef6e
     // Checksum 0xdc9fd09d, Offset: 0x428
     // Size: 0x276
     function enable_menu(menu_name) {
@@ -104,7 +99,6 @@
 
     // Namespace debug_menu
     // Params 1, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_2ab1ba27
     // Checksum 0xb94bf3f, Offset: 0x6a8
     // Size: 0x128
     function disable_menu(menu_name) {
@@ -125,7 +119,6 @@
 
     // Namespace debug_menu
     // Params 3, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_cd0bfb3c
     // Checksum 0x8ab091b4, Offset: 0x7d8
     // Size: 0xcc
     function set_menu_hudelem(text, type, y_offset) {
@@ -145,7 +138,6 @@
 
     // Namespace debug_menu
     // Params 7, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_8bd98a60
     // Checksum 0xec09d14, Offset: 0x8b0
     // Size: 0x1d2
     function set_hudelem(text, x, y, scale, alpha, sort, debug_hudelem) {
@@ -182,7 +174,6 @@
 
     // Namespace debug_menu
     // Params 0, eflags: 0x0
-    // namespace_4ed4457c<file_0>::function_a0ef74a9
     // Checksum 0x19b1b57a, Offset: 0xa90
     // Size: 0x820
     function menu_input() {
@@ -256,7 +247,6 @@
 
     // Namespace debug_menu
     // Params 1, eflags: 0x0
-    // namespace_4ed4457c<file_0>::function_bd37ea7e
     // Checksum 0x6a25ed7, Offset: 0x12b8
     // Size: 0x1ae
     function function_bd37ea7e(waittill_msg) {
@@ -291,7 +281,6 @@
 
     // Namespace debug_menu
     // Params 7, eflags: 0x0
-    // namespace_4ed4457c<file_0>::function_fb835fed
     // Checksum 0xa83f6979, Offset: 0x1470
     // Size: 0x46c
     function list_menu(list, x, y, scale, func, sort, var_4cd7cc92) {
@@ -372,7 +361,6 @@
 
     // Namespace debug_menu
     // Params 3, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_bdb589d8
     // Checksum 0xc724ff64, Offset: 0x18e8
     // Size: 0xbe
     function function_bdb589d8(hud_array, list, num) {
@@ -388,7 +376,6 @@
 
     // Namespace debug_menu
     // Params 6, eflags: 0x0
-    // namespace_4ed4457c<file_0>::function_7b7c3571
     // Checksum 0x6b6da306, Offset: 0x19b0
     // Size: 0x27e
     function move_list_menu(hud_array, dir, space, num, var_b091d62e, var_41028055) {
@@ -434,7 +421,6 @@
 
     // Namespace debug_menu
     // Params 2, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_b5f43638
     // Checksum 0xc8e901a6, Offset: 0x1c38
     // Size: 0xf0
     function hud_selector(x, y) {
@@ -451,7 +437,6 @@
 
     // Namespace debug_menu
     // Params 1, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_fe04e7e8
     // Checksum 0xe3862b1a, Offset: 0x1d30
     // Size: 0xc4
     function hud_selector_fade_out(time) {
@@ -471,7 +456,6 @@
 
     // Namespace debug_menu
     // Params 3, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_218217ee
     // Checksum 0x45385f29, Offset: 0x1e00
     // Size: 0x1a4
     function selection_error(msg, x, y) {
@@ -496,7 +480,6 @@
 
     // Namespace debug_menu
     // Params 1, eflags: 0x0
-    // namespace_4ed4457c<file_0>::function_79fea2bf
     // Checksum 0xceed86e0, Offset: 0x1fb0
     // Size: 0xfa
     function function_79fea2bf(mult) {
@@ -518,7 +501,6 @@
 
     // Namespace debug_menu
     // Params 0, eflags: 0x0
-    // namespace_4ed4457c<file_0>::function_c076b585
     // Checksum 0x7296d8f, Offset: 0x20b8
     // Size: 0xbc
     function menu_cursor() {
@@ -532,7 +514,6 @@
 
     // Namespace debug_menu
     // Params 5, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_fb312e3b
     // Checksum 0xe43fbaea, Offset: 0x2180
     // Size: 0xc2
     function new_hud(hud_name, msg, x, y, scale) {
@@ -549,7 +530,6 @@
 
     // Namespace debug_menu
     // Params 1, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_f8a0189f
     // Checksum 0xdb331f61, Offset: 0x2250
     // Size: 0x94
     function function_f8a0189f(hud_name) {
@@ -565,7 +545,6 @@
 
     // Namespace debug_menu
     // Params 1, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_ef76706b
     // Checksum 0x9f867dca, Offset: 0x22f0
     // Size: 0x34
     function function_ef76706b(hud) {
@@ -576,7 +555,6 @@
 
     // Namespace debug_menu
     // Params 7, eflags: 0x0
-    // namespace_4ed4457c<file_0>::function_7395ea6e
     // Checksum 0x729d6a77, Offset: 0x2330
     // Size: 0x142
     function function_7395ea6e(hud_array, num, x, y, space, var_b091d62e, var_41028055) {
@@ -602,7 +580,6 @@
 
     // Namespace debug_menu
     // Params 7, eflags: 0x0
-    // namespace_4ed4457c<file_0>::function_8117b00b
     // Checksum 0x57cd8107, Offset: 0x2480
     // Size: 0x360
     function function_8117b00b(x, y, width, height, time, color, alpha) {
@@ -650,7 +627,6 @@
 
     // Namespace debug_menu
     // Params 0, eflags: 0x0
-    // namespace_4ed4457c<file_0>::function_bea48276
     // Checksum 0x74c070b4, Offset: 0x27e8
     // Size: 0x9c
     function function_bea48276() {
@@ -667,7 +643,6 @@
 
     // Namespace debug_menu
     // Params 3, eflags: 0x0
-    // namespace_4ed4457c<file_0>::function_21e7ce2f
     // Checksum 0xd25c54b0, Offset: 0x2890
     // Size: 0x4e2
     function function_21e7ce2f(var_ecf4b75f, var_d0b8930f, var_476db3a8) {
@@ -716,7 +691,6 @@
 
     // Namespace debug_menu
     // Params 3, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_8d7a3a66
     // Checksum 0x60843bd4, Offset: 0x2d80
     // Size: 0x2ec
     function function_8d7a3a66(var_847182fe, var_aa73fd67, var_476db3a8) {
@@ -759,7 +733,6 @@
 
     // Namespace debug_menu
     // Params 0, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_5eabe035
     // Checksum 0xf5a974d8, Offset: 0x3078
     // Size: 0x5d4
     function function_5eabe035() {
@@ -815,7 +788,6 @@
 
     // Namespace debug_menu
     // Params 0, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_561fa6f4
     // Checksum 0x8bdca92c, Offset: 0x3658
     // Size: 0x54
     function function_561fa6f4() {
@@ -830,7 +802,6 @@
 
     // Namespace debug_menu
     // Params 1, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_6a8744ed
     // Checksum 0x3d9a7869, Offset: 0x36b8
     // Size: 0x166
     function function_6a8744ed(letter) {
@@ -852,7 +823,6 @@
 
     // Namespace debug_menu
     // Params 2, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_8b8ed93
     // Checksum 0xa0346b7c, Offset: 0x3828
     // Size: 0x84
     function add_universal_button(var_38e2c1b9, name) {
@@ -866,7 +836,6 @@
 
     // Namespace debug_menu
     // Params 1, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_f0168b54
     // Checksum 0xc9c28309, Offset: 0x38b8
     // Size: 0x22
     function clear_universal_buttons(var_38e2c1b9) {
@@ -875,7 +844,6 @@
 
     // Namespace debug_menu
     // Params 5, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_c51460e6
     // Checksum 0x22ec86c5, Offset: 0x38e8
     // Size: 0x1e0
     function universal_input_loop(var_38e2c1b9, end_on, var_f343011, var_e97f2392, var_584b7e5c) {
@@ -916,7 +884,6 @@
 
     // Namespace debug_menu
     // Params 1, eflags: 0x0
-    // namespace_4ed4457c<file_0>::function_49453b79
     // Checksum 0x4ec99fc1, Offset: 0x3ad0
     // Size: 0x22
     function function_49453b79(var_38e2c1b9) {
@@ -925,7 +892,6 @@
 
     // Namespace debug_menu
     // Params 1, eflags: 0x0
-    // namespace_4ed4457c<file_0>::function_80a9c472
     // Checksum 0xd9c67699, Offset: 0x3b00
     // Size: 0x26
     function function_80a9c472(var_38e2c1b9) {
@@ -935,7 +901,6 @@
 
     // Namespace debug_menu
     // Params 2, eflags: 0x1 linked
-    // namespace_4ed4457c<file_0>::function_4f066bc2
     // Checksum 0x11d4c4c4, Offset: 0x3b30
     // Size: 0x154
     function any_button_hit(var_b7d2a5af, type) {

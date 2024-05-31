@@ -8,7 +8,6 @@
 
 // Namespace namespace_f5f10e8c
 // Params 0, eflags: 0x1 linked
-// namespace_f5f10e8c<file_0>::function_1463e4e5
 // Checksum 0xd8fafa1f, Offset: 0x180
 // Size: 0x54
 function init_shared() {
@@ -20,7 +19,6 @@ function init_shared() {
 
 // Namespace namespace_f5f10e8c
 // Params 1, eflags: 0x1 linked
-// namespace_f5f10e8c<file_0>::function_e6350c5c
 // Checksum 0xff5c74e, Offset: 0x1e0
 // Size: 0x80
 function flashrumbleloop(duration) {
@@ -36,7 +34,6 @@ function flashrumbleloop(duration) {
 
 // Namespace namespace_f5f10e8c
 // Params 4, eflags: 0x1 linked
-// namespace_f5f10e8c<file_0>::function_8e149bc3
 // Checksum 0xefab220d, Offset: 0x268
 // Size: 0x3e4
 function function_8e149bc3(amount_distance, var_b5b15795, attacker, var_b4b1c76e) {
@@ -99,7 +96,6 @@ function function_8e149bc3(amount_distance, var_b5b15795, attacker, var_b4b1c76e
 
 // Namespace namespace_f5f10e8c
 // Params 0, eflags: 0x1 linked
-// namespace_f5f10e8c<file_0>::function_e1de60dd
 // Checksum 0x2f99d114, Offset: 0x658
 // Size: 0xa0
 function monitorflash() {
@@ -117,7 +113,6 @@ function monitorflash() {
 
 // Namespace namespace_f5f10e8c
 // Params 0, eflags: 0x0
-// namespace_f5f10e8c<file_0>::function_de4f854a
 // Checksum 0xf4fe401a, Offset: 0x700
 // Size: 0xc8
 function function_de4f854a() {
@@ -135,7 +130,6 @@ function function_de4f854a() {
 
 // Namespace namespace_f5f10e8c
 // Params 3, eflags: 0x1 linked
-// namespace_f5f10e8c<file_0>::function_117db197
 // Checksum 0x5e910e82, Offset: 0x7d0
 // Size: 0x14e
 function applyflash(duration, rumbleduration, attacker) {
@@ -163,7 +157,6 @@ function applyflash(duration, rumbleduration, attacker) {
 
 // Namespace namespace_f5f10e8c
 // Params 1, eflags: 0x1 linked
-// namespace_f5f10e8c<file_0>::function_125a6838
 // Checksum 0xb469a9ee, Offset: 0x928
 // Size: 0x154
 function function_125a6838(duration) {
@@ -187,7 +180,6 @@ function function_125a6838(duration) {
 
 // Namespace namespace_f5f10e8c
 // Params 1, eflags: 0x1 linked
-// namespace_f5f10e8c<file_0>::function_b9e9934d
 // Checksum 0x4d8194b, Offset: 0xa88
 // Size: 0x3c
 function deleteentonownerdeath(owner) {

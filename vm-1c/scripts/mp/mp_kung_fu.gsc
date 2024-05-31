@@ -12,7 +12,6 @@
 
 // Namespace namespace_b4cb0c94
 // Params 0, eflags: 0x1 linked
-// namespace_b4cb0c94<file_0>::function_d290ebfa
 // Checksum 0x4238920b, Offset: 0x2a8
 // Size: 0xbe4
 function main() {
@@ -91,7 +90,6 @@ function main() {
 
 // Namespace namespace_b4cb0c94
 // Params 0, eflags: 0x1 linked
-// namespace_b4cb0c94<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0xe98
 // Size: 0x4
 function precache() {
@@ -100,7 +98,6 @@ function precache() {
 
 // Namespace namespace_b4cb0c94
 // Params 3, eflags: 0x1 linked
-// namespace_b4cb0c94<file_0>::function_8bf0b925
 // Checksum 0x629f07e4, Offset: 0xea8
 // Size: 0xe2
 function function_8bf0b925(str_value, str_key, b_enable) {
@@ -116,7 +113,6 @@ function function_8bf0b925(str_value, str_key, b_enable) {
 
 // Namespace namespace_b4cb0c94
 // Params 0, eflags: 0x1 linked
-// namespace_b4cb0c94<file_0>::function_ad0d8732
 // Checksum 0x4d4edad0, Offset: 0xf98
 // Size: 0x5c
 function spawnkilltrigger() {
@@ -126,7 +122,6 @@ function spawnkilltrigger() {
 
 // Namespace namespace_b4cb0c94
 // Params 0, eflags: 0x1 linked
-// namespace_b4cb0c94<file_0>::function_3a85dbfe
 // Checksum 0x7dca3478, Offset: 0x1000
 // Size: 0x90
 function watchkilltrigger() {

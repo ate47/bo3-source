@@ -14,7 +14,6 @@
 
 // Namespace sensor_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_d357f370<file_0>::function_1463e4e5
 // Checksum 0x2411ef02, Offset: 0x2d8
 // Size: 0x3c
 function init_shared() {
@@ -24,7 +23,6 @@ function init_shared() {
 
 // Namespace sensor_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_d357f370<file_0>::function_cb111d01
 // Checksum 0x18f9a9e5, Offset: 0x320
 // Size: 0xcc
 function function_cb111d01() {
@@ -40,7 +38,6 @@ function function_cb111d01() {
 
 // Namespace sensor_grenade
 // Params 2, eflags: 0x1 linked
-// namespace_d357f370<file_0>::function_bdecb8fd
 // Checksum 0x2e9313f0, Offset: 0x3f8
 // Size: 0x134
 function function_bdecb8fd(watcher, player) {
@@ -59,7 +56,6 @@ function function_bdecb8fd(watcher, player) {
 
 // Namespace sensor_grenade
 // Params 1, eflags: 0x1 linked
-// namespace_d357f370<file_0>::function_5aadfa85
 // Checksum 0x8d1c2086, Offset: 0x538
 // Size: 0x6c
 function function_5aadfa85(owner) {
@@ -74,7 +70,6 @@ function function_5aadfa85(owner) {
 
 // Namespace sensor_grenade
 // Params 1, eflags: 0x1 linked
-// namespace_d357f370<file_0>::function_ab966fda
 // Checksum 0x2ea8088d, Offset: 0x5b0
 // Size: 0x74
 function function_ab966fda(owner) {
@@ -88,7 +83,6 @@ function function_ab966fda(owner) {
 
 // Namespace sensor_grenade
 // Params 1, eflags: 0x1 linked
-// namespace_d357f370<file_0>::function_32b1b0c7
 // Checksum 0x5b0e9354, Offset: 0x630
 // Size: 0x1d2
 function function_32b1b0c7(origin) {
@@ -112,7 +106,6 @@ function function_32b1b0c7(origin) {
 
 // Namespace sensor_grenade
 // Params 1, eflags: 0x1 linked
-// namespace_d357f370<file_0>::function_eaae596a
 // Checksum 0x8c6709b6, Offset: 0x810
 // Size: 0x5e
 function function_eaae596a(victim) {
@@ -126,7 +119,6 @@ function function_eaae596a(victim) {
 
 // Namespace sensor_grenade
 // Params 2, eflags: 0x1 linked
-// namespace_d357f370<file_0>::function_e9649fd8
 // Checksum 0x398e9f90, Offset: 0x878
 // Size: 0x82
 function function_e9649fd8(player, time) {
@@ -141,7 +133,6 @@ function function_e9649fd8(player, time) {
 
 // Namespace sensor_grenade
 // Params 3, eflags: 0x1 linked
-// namespace_d357f370<file_0>::function_7750ac68
 // Checksum 0x28ff607b, Offset: 0x908
 // Size: 0x104
 function function_7750ac68(attacker, weapon, target) {
@@ -160,7 +151,6 @@ function function_7750ac68(attacker, weapon, target) {
 
 // Namespace sensor_grenade
 // Params 1, eflags: 0x1 linked
-// namespace_d357f370<file_0>::function_288c9631
 // Checksum 0xd2d17739, Offset: 0xa18
 // Size: 0x35a
 function function_288c9631(watcher) {
@@ -211,7 +201,6 @@ function function_288c9631(watcher) {
 
 // Namespace sensor_grenade
 // Params 1, eflags: 0x1 linked
-// namespace_d357f370<file_0>::function_f4ccbeb2
 // Checksum 0x1d7938fd, Offset: 0xd80
 // Size: 0x142
 function function_f4ccbeb2(owner) {
@@ -230,7 +219,6 @@ function function_f4ccbeb2(owner) {
 
 // Namespace sensor_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_d357f370<file_0>::function_23685d89
 // Checksum 0x3a67bfa, Offset: 0xed0
 // Size: 0x26
 function function_23685d89() {
@@ -239,7 +227,6 @@ function function_23685d89() {
 
 // Namespace sensor_grenade
 // Params 1, eflags: 0x1 linked
-// namespace_d357f370<file_0>::function_d7943f6b
 // Checksum 0x2b8da758, Offset: 0xf00
 // Size: 0xf4
 function function_d7943f6b(sensor_grenade) {

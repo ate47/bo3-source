@@ -9,7 +9,6 @@
 
 // Namespace shellshock
 // Params 0, eflags: 0x2
-// namespace_f1aa5a21<file_0>::function_2dc19561
 // Checksum 0x6b716a28, Offset: 0x1d0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace shellshock
 // Params 0, eflags: 0x1 linked
-// namespace_f1aa5a21<file_0>::function_8c87d8eb
 // Checksum 0x4c9508ad, Offset: 0x210
 // Size: 0x3c
 function __init__() {
@@ -28,7 +26,6 @@ function __init__() {
 
 // Namespace shellshock
 // Params 0, eflags: 0x1 linked
-// namespace_f1aa5a21<file_0>::function_c35e6aab
 // Checksum 0x99ec1590, Offset: 0x258
 // Size: 0x4
 function init() {
@@ -37,7 +34,6 @@ function init() {
 
 // Namespace shellshock
 // Params 3, eflags: 0x1 linked
-// namespace_f1aa5a21<file_0>::function_1a61261a
 // Checksum 0x68b3c5a9, Offset: 0x268
 // Size: 0x1ac
 function on_damage(cause, damage, weapon) {
@@ -71,7 +67,6 @@ function on_damage(cause, damage, weapon) {
 
 // Namespace shellshock
 // Params 0, eflags: 0x0
-// namespace_f1aa5a21<file_0>::function_b1fe3c1b
 // Checksum 0x2ef22436, Offset: 0x420
 // Size: 0x1e
 function end_on_death() {
@@ -82,7 +77,6 @@ function end_on_death() {
 
 // Namespace shellshock
 // Params 1, eflags: 0x0
-// namespace_f1aa5a21<file_0>::function_fea9fb9a
 // Checksum 0xb8035dc8, Offset: 0x448
 // Size: 0x2a
 function end_on_timer(timer) {
@@ -93,7 +87,6 @@ function end_on_timer(timer) {
 
 // Namespace shellshock
 // Params 1, eflags: 0x1 linked
-// namespace_f1aa5a21<file_0>::function_d06cf10c
 // Checksum 0x18d4f868, Offset: 0x480
 // Size: 0x5c
 function rcbomb_earthquake(position) {
@@ -103,7 +96,6 @@ function rcbomb_earthquake(position) {
 
 // Namespace shellshock
 // Params 0, eflags: 0x0
-// namespace_f1aa5a21<file_0>::function_67eb8100
 // Checksum 0x98f6327f, Offset: 0x4e8
 // Size: 0x42
 function reset_meleesnd() {

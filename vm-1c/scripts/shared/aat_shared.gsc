@@ -11,7 +11,6 @@
 
 // Namespace aat
 // Params 0, eflags: 0x2
-// namespace_4db6bf4d<file_0>::function_2dc19561
 // Checksum 0x76876137, Offset: 0x1f0
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace aat
 // Params 0, eflags: 0x5 linked
-// namespace_4db6bf4d<file_0>::function_8c87d8eb
 // Checksum 0xbb1b5306, Offset: 0x238
 // Size: 0x1bc
 function private __init__() {
@@ -47,7 +45,6 @@ function private __init__() {
 
 // Namespace aat
 // Params 0, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_5b6b9132
 // Checksum 0x8a25a474, Offset: 0x400
 // Size: 0x3c
 function __main__() {
@@ -59,7 +56,6 @@ function __main__() {
 
 // Namespace aat
 // Params 0, eflags: 0x5 linked
-// namespace_4db6bf4d<file_0>::function_fb4f96b5
 // Checksum 0x4dfe6e68, Offset: 0x448
 // Size: 0xd8
 function private on_player_connect() {
@@ -78,7 +74,6 @@ function private on_player_connect() {
 
     // Namespace aat
     // Params 0, eflags: 0x5 linked
-    // namespace_4db6bf4d<file_0>::function_9b36a3d5
     // Checksum 0x6f2a47f7, Offset: 0x528
     // Size: 0x184
     function private setup_devgui() {
@@ -97,7 +92,6 @@ function private on_player_connect() {
 
     // Namespace aat
     // Params 0, eflags: 0x5 linked
-    // namespace_4db6bf4d<file_0>::function_832cf813
     // Checksum 0x249169ae, Offset: 0x6b8
     // Size: 0x158
     function private aat_devgui_think() {
@@ -120,7 +114,6 @@ function private on_player_connect() {
 
     // Namespace aat
     // Params 0, eflags: 0x4
-    // namespace_4db6bf4d<file_0>::function_6d77b957
     // Checksum 0x516dc590, Offset: 0x818
     // Size: 0x15c
     function private function_6d77b957() {
@@ -143,7 +136,6 @@ function private on_player_connect() {
 
     // Namespace aat
     // Params 0, eflags: 0x5 linked
-    // namespace_4db6bf4d<file_0>::function_3d05ca49
     // Checksum 0x7b8de09d, Offset: 0x980
     // Size: 0x90
     function private function_3d05ca49() {
@@ -162,7 +154,6 @@ function private on_player_connect() {
 
 // Namespace aat
 // Params 4, eflags: 0x5 linked
-// namespace_4db6bf4d<file_0>::function_288d5482
 // Checksum 0x7eaa0364, Offset: 0xa18
 // Size: 0x1f4
 function private aat_set_debug_text(name, success, success_reroll, fail) {
@@ -200,7 +191,6 @@ function private aat_set_debug_text(name, success, success_reroll, fail) {
 
 // Namespace aat
 // Params 0, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_2db29d00
 // Checksum 0x9c126700, Offset: 0xc18
 // Size: 0xb8
 function aat_cooldown_init() {
@@ -213,7 +203,6 @@ function aat_cooldown_init() {
 
 // Namespace aat
 // Params 15, eflags: 0x5 linked
-// namespace_4db6bf4d<file_0>::function_7b9272cb
 // Checksum 0x9e699fb9, Offset: 0xcd8
 // Size: 0x100
 function private aat_vehicle_damage_monitor(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -226,7 +215,6 @@ function private aat_vehicle_damage_monitor(einflictor, eattacker, idamage, idfl
 
 // Namespace aat
 // Params 1, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_61853daa
 // Checksum 0x8503cb0e, Offset: 0xde0
 // Size: 0x38
 function get_nonalternate_weapon(weapon) {
@@ -238,7 +226,6 @@ function get_nonalternate_weapon(weapon) {
 
 // Namespace aat
 // Params 13, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_c3c7f2d
 // Checksum 0x2031490d, Offset: 0xe20
 // Size: 0x5fc
 function aat_response(death, inflictor, attacker, damage, flags, mod, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, surfacetype) {
@@ -321,7 +308,6 @@ function aat_response(death, inflictor, attacker, damage, flags, mod, weapon, vp
 
 // Namespace aat
 // Params 10, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_50f16166
 // Checksum 0x412b79f4, Offset: 0x1428
 // Size: 0x5e8
 function register(name, percentage, cooldown_time_entity, cooldown_time_attacker, cooldown_time_global, occurs_on_death, result_func, damage_feedback_icon, damage_feedback_sound, validation_func) {
@@ -363,7 +349,6 @@ function register(name, percentage, cooldown_time_entity, cooldown_time_attacker
 
 // Namespace aat
 // Params 5, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_abe6717
 // Checksum 0x37aaa5cd, Offset: 0x1a18
 // Size: 0x21e
 function register_immunity(name, archetype, immune_trigger, immune_result_direct, immune_result_indirect) {
@@ -391,7 +376,6 @@ function register_immunity(name, archetype, immune_trigger, immune_result_direct
 
 // Namespace aat
 // Params 0, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_cda32664
 // Checksum 0x6b9ed8d1, Offset: 0x1c40
 // Size: 0x180
 function finalize_clientfields() {
@@ -412,7 +396,6 @@ function finalize_clientfields() {
 
 // Namespace aat
 // Params 1, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_59435a8d
 // Checksum 0xd31efc16, Offset: 0x1dc8
 // Size: 0x3a
 function register_aat_exemption(weapon) {
@@ -422,7 +405,6 @@ function register_aat_exemption(weapon) {
 
 // Namespace aat
 // Params 1, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_786b4314
 // Checksum 0xfc2a3a52, Offset: 0x1e10
 // Size: 0x36
 function is_exempt_weapon(weapon) {
@@ -432,7 +414,6 @@ function is_exempt_weapon(weapon) {
 
 // Namespace aat
 // Params 4, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_17cbe4c3
 // Checksum 0xc6af835a, Offset: 0x1e50
 // Size: 0x264
 function register_reroll(name, count, active_func, damage_feedback_icon) {
@@ -453,7 +434,6 @@ function register_reroll(name, count, active_func, damage_feedback_icon) {
 
 // Namespace aat
 // Params 1, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_f87075b4
 // Checksum 0xcd56baf7, Offset: 0x20c0
 // Size: 0xc0
 function getaatonweapon(weapon) {
@@ -466,7 +446,6 @@ function getaatonweapon(weapon) {
 
 // Namespace aat
 // Params 2, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_2ac07cf3
 // Checksum 0x35532001, Offset: 0x2188
 // Size: 0x25c
 function acquire(weapon, name) {
@@ -499,7 +478,6 @@ function acquire(weapon, name) {
 
 // Namespace aat
 // Params 1, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_77213189
 // Checksum 0x27eb2834, Offset: 0x23f0
 // Size: 0xa4
 function remove(weapon) {
@@ -514,7 +492,6 @@ function remove(weapon) {
 
 // Namespace aat
 // Params 0, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_94594df7
 // Checksum 0xd8e52f7b, Offset: 0x24a0
 // Size: 0xc8
 function watch_weapon_changes() {

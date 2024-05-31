@@ -13,7 +13,6 @@
 
 // Namespace zm_behavior_utility
 // Params 0, eflags: 0x1 linked
-// namespace_e2cf0456<file_0>::function_8896f283
 // Checksum 0x772e4ebb, Offset: 0x218
 // Size: 0x1c
 function setupattackproperties() {
@@ -23,7 +22,6 @@ function setupattackproperties() {
 
 // Namespace zm_behavior_utility
 // Params 0, eflags: 0x1 linked
-// namespace_e2cf0456<file_0>::function_50d970f7
 // Checksum 0x308197b7, Offset: 0x240
 // Size: 0x3c
 function enteredplayablearea() {

@@ -20,7 +20,6 @@
 
 // Namespace zm_powerup_weapon_minigun
 // Params 0, eflags: 0x2
-// namespace_274c55ae<file_0>::function_2dc19561
 // Checksum 0xbb663b4d, Offset: 0x360
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -29,7 +28,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 0, eflags: 0x1 linked
-// namespace_274c55ae<file_0>::function_8c87d8eb
 // Checksum 0x7790868a, Offset: 0x3a0
 // Size: 0x184
 function __init__() {
@@ -47,7 +45,6 @@ function __init__() {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 1, eflags: 0x1 linked
-// namespace_274c55ae<file_0>::function_c2688c83
 // Checksum 0x4680ecb9, Offset: 0x530
 // Size: 0x64
 function grab_minigun(player) {
@@ -60,7 +57,6 @@ function grab_minigun(player) {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 0, eflags: 0x1 linked
-// namespace_274c55ae<file_0>::function_4a83af2b
 // Checksum 0xfa457549, Offset: 0x5a0
 // Size: 0x2e
 function init_player_zombie_vars() {
@@ -70,7 +66,6 @@ function init_player_zombie_vars() {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 0, eflags: 0x1 linked
-// namespace_274c55ae<file_0>::function_c4c29fa9
 // Checksum 0x8edf7ae5, Offset: 0x5d8
 // Size: 0x1e
 function func_should_drop_minigun() {
@@ -82,7 +77,6 @@ function func_should_drop_minigun() {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 2, eflags: 0x1 linked
-// namespace_274c55ae<file_0>::function_789fa314
 // Checksum 0xcdbc811c, Offset: 0x600
 // Size: 0x22c
 function minigun_weapon_powerup(ent_player, time) {
@@ -120,7 +114,6 @@ function minigun_weapon_powerup(ent_player, time) {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 0, eflags: 0x1 linked
-// namespace_274c55ae<file_0>::function_9218be3b
 // Checksum 0x2d522de0, Offset: 0x838
 // Size: 0x1c
 function minigun_powerup_last_stand() {
@@ -129,7 +122,6 @@ function minigun_powerup_last_stand() {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 2, eflags: 0x1 linked
-// namespace_274c55ae<file_0>::function_3970134a
 // Checksum 0x815b5429, Offset: 0x860
 // Size: 0x6e
 function minigun_countdown(ent_player, str_weapon_time) {
@@ -141,7 +133,6 @@ function minigun_countdown(ent_player, str_weapon_time) {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 0, eflags: 0x0
-// namespace_274c55ae<file_0>::function_a5180dfa
 // Checksum 0xa6fab6f6, Offset: 0x8d8
 // Size: 0x1a
 function minigun_weapon_powerup_off() {
@@ -150,7 +141,6 @@ function minigun_weapon_powerup_off() {
 
 // Namespace zm_powerup_weapon_minigun
 // Params 12, eflags: 0x1 linked
-// namespace_274c55ae<file_0>::function_176eff04
 // Checksum 0x35f4229, Offset: 0x900
 // Size: 0x186
 function minigun_damage_adjust(inflictor, attacker, damage, flags, meansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, surfacetype) {

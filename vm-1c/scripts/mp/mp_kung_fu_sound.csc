@@ -6,7 +6,6 @@
 
 // Namespace namespace_b19eb620
 // Params 0, eflags: 0x1 linked
-// namespace_b19eb620<file_0>::function_d290ebfa
 // Checksum 0x99ec1590, Offset: 0xd0
 // Size: 0x4
 function main() {

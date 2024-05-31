@@ -8,7 +8,6 @@
 
 // Namespace scrambler
 // Params 0, eflags: 0x0
-// namespace_ba0d5c0a<file_0>::function_1463e4e5
 // Checksum 0x94fea33, Offset: 0x238
 // Size: 0x16c
 function init_shared() {
@@ -33,7 +32,6 @@ function init_shared() {
 
 // Namespace scrambler
 // Params 2, eflags: 0x0
-// namespace_ba0d5c0a<file_0>::function_948c304e
 // Checksum 0x42665048, Offset: 0x3b0
 // Size: 0x4c
 function function_948c304e(localclientnum, set) {
@@ -48,7 +46,6 @@ function function_948c304e(localclientnum, set) {
 
 // Namespace scrambler
 // Params 7, eflags: 0x0
-// namespace_ba0d5c0a<file_0>::function_d621d691
 // Checksum 0x9c94beb0, Offset: 0x408
 // Size: 0x74
 function function_d621d691(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -63,7 +60,6 @@ function function_d621d691(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace scrambler
 // Params 3, eflags: 0x0
-// namespace_ba0d5c0a<file_0>::function_ab1f9ea1
 // Checksum 0xba4ba597, Offset: 0x488
 // Size: 0x234
 function spawned(localclientnum, set, var_5d749438) {
@@ -93,7 +89,6 @@ function spawned(localclientnum, set, var_5d749438) {
 
 // Namespace scrambler
 // Params 3, eflags: 0x0
-// namespace_ba0d5c0a<file_0>::function_8bbd150b
 // Checksum 0xf713b19f, Offset: 0x6c8
 // Size: 0x354
 function function_8bbd150b(localclientnum, var_5d749438, var_aa893e08) {
@@ -137,7 +132,6 @@ function function_8bbd150b(localclientnum, var_5d749438, var_aa893e08) {
 
 // Namespace scrambler
 // Params 1, eflags: 0x0
-// namespace_ba0d5c0a<file_0>::function_2fbb0cd5
 // Checksum 0xf5ba1137, Offset: 0xa28
 // Size: 0x8b0
 function function_2fbb0cd5(localclientnum) {
@@ -253,7 +247,6 @@ function function_2fbb0cd5(localclientnum) {
 
 // Namespace scrambler
 // Params 4, eflags: 0x0
-// namespace_ba0d5c0a<file_0>::function_ddc2c972
 // Checksum 0x151400e3, Offset: 0x12e0
 // Size: 0x2f6
 function function_ddc2c972(scramblerent, var_aa893e08, var_5d749438, localclientnum) {
@@ -284,7 +277,6 @@ function function_ddc2c972(scramblerent, var_aa893e08, var_5d749438, localclient
 
 // Namespace scrambler
 // Params 1, eflags: 0x0
-// namespace_ba0d5c0a<file_0>::function_900e2038
 // Checksum 0x636f277e, Offset: 0x15e0
 // Size: 0x5e
 function function_900e2038(localclientnum) {
@@ -299,7 +291,6 @@ function function_900e2038(localclientnum) {
 
 // Namespace scrambler
 // Params 0, eflags: 0x0
-// namespace_ba0d5c0a<file_0>::function_22979bf
 // Checksum 0xb0df6b07, Offset: 0x1648
 // Size: 0x154
 function checkforplayerswitch() {
@@ -321,7 +312,6 @@ function checkforplayerswitch() {
 
 // Namespace scrambler
 // Params 1, eflags: 0x0
-// namespace_ba0d5c0a<file_0>::function_f8ee1baf
 // Checksum 0xa7c804a0, Offset: 0x17a8
 // Size: 0xec
 function function_f8ee1baf(isenemy) {

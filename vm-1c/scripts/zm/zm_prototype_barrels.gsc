@@ -12,7 +12,6 @@
 
 // Namespace namespace_1ed7595f
 // Params 0, eflags: 0x2
-// namespace_1ed7595f<file_0>::function_2dc19561
 // Checksum 0xf15f8ac7, Offset: 0x308
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_1ed7595f
 // Params 0, eflags: 0x1 linked
-// namespace_1ed7595f<file_0>::function_8c87d8eb
 // Checksum 0x142f833e, Offset: 0x348
 // Size: 0x1e4
 function __init__() {
@@ -50,7 +48,6 @@ function __init__() {
 
 // Namespace namespace_1ed7595f
 // Params 0, eflags: 0x1 linked
-// namespace_1ed7595f<file_0>::function_66d46c7d
 // Checksum 0x33453107, Offset: 0x538
 // Size: 0x24
 function function_66d46c7d() {
@@ -59,7 +56,6 @@ function function_66d46c7d() {
 
 // Namespace namespace_1ed7595f
 // Params 0, eflags: 0x1 linked
-// namespace_1ed7595f<file_0>::function_b6fe19c5
 // Checksum 0x1b19fe27, Offset: 0x568
 // Size: 0x24
 function function_b6fe19c5() {
@@ -68,7 +64,6 @@ function function_b6fe19c5() {
 
 // Namespace namespace_1ed7595f
 // Params 0, eflags: 0x1 linked
-// namespace_1ed7595f<file_0>::function_5cbc13a7
 // Checksum 0x9b41691, Offset: 0x598
 // Size: 0x1d0
 function function_5cbc13a7() {
@@ -104,7 +99,6 @@ function function_5cbc13a7() {
 
 // Namespace namespace_1ed7595f
 // Params 0, eflags: 0x1 linked
-// namespace_1ed7595f<file_0>::function_7a7f26e6
 // Checksum 0xa49a7a4b, Offset: 0x770
 // Size: 0x154
 function function_7a7f26e6() {
@@ -132,7 +126,6 @@ function function_7a7f26e6() {
 
 // Namespace namespace_1ed7595f
 // Params 0, eflags: 0x1 linked
-// namespace_1ed7595f<file_0>::function_c19689f4
 // Checksum 0x2b6e1189, Offset: 0x8d0
 // Size: 0x420
 function function_c19689f4() {
@@ -190,7 +183,6 @@ function function_c19689f4() {
 
 // Namespace namespace_1ed7595f
 // Params 0, eflags: 0x0
-// namespace_1ed7595f<file_0>::function_248dcb17
 // Checksum 0xdb63dd25, Offset: 0xcf8
 // Size: 0x9c
 function function_248dcb17() {
@@ -208,7 +200,6 @@ function function_248dcb17() {
 
 // Namespace namespace_1ed7595f
 // Params 0, eflags: 0x1 linked
-// namespace_1ed7595f<file_0>::function_28ed3370
 // Checksum 0xff61ec09, Offset: 0xda0
 // Size: 0xec
 function function_28ed3370() {

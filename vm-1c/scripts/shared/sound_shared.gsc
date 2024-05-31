@@ -4,7 +4,6 @@
 
 // Namespace sound
 // Params 3, eflags: 0x1 linked
-// namespace_93b50d82<file_0>::function_a90af7a4
 // Checksum 0x58245982, Offset: 0xb8
 // Size: 0xa4
 function loop_fx_sound(alias, origin, ender) {
@@ -19,7 +18,6 @@ function loop_fx_sound(alias, origin, ender) {
 
 // Namespace sound
 // Params 2, eflags: 0x1 linked
-// namespace_93b50d82<file_0>::function_8edc88bb
 // Checksum 0xd927be59, Offset: 0x168
 // Size: 0x44
 function loop_delete(ender, ent) {
@@ -30,7 +28,6 @@ function loop_delete(ender, ent) {
 
 // Namespace sound
 // Params 3, eflags: 0x1 linked
-// namespace_93b50d82<file_0>::function_2b67c264
 // Checksum 0x5b6206dd, Offset: 0x1b8
 // Size: 0xc4
 function play_in_space(alias, origin, master) {
@@ -48,7 +45,6 @@ function play_in_space(alias, origin, master) {
 
 // Namespace sound
 // Params 3, eflags: 0x1 linked
-// namespace_93b50d82<file_0>::function_9dca65a8
 // Checksum 0xe6c1c665, Offset: 0x288
 // Size: 0x15c
 function loop_on_tag(alias, tag, bstopsoundondeath) {
@@ -75,7 +71,6 @@ function loop_on_tag(alias, tag, bstopsoundondeath) {
 
 // Namespace sound
 // Params 3, eflags: 0x1 linked
-// namespace_93b50d82<file_0>::function_f9b4f940
 // Checksum 0x4b1702d3, Offset: 0x3f0
 // Size: 0x19c
 function play_on_tag(alias, tag, ends_on_death) {
@@ -103,7 +98,6 @@ function play_on_tag(alias, tag, ends_on_death) {
 
 // Namespace sound
 // Params 1, eflags: 0x0
-// namespace_93b50d82<file_0>::function_148dea01
 // Checksum 0x5a2cfddf, Offset: 0x598
 // Size: 0x24
 function play_on_entity(alias) {
@@ -112,7 +106,6 @@ function play_on_entity(alias) {
 
 // Namespace sound
 // Params 1, eflags: 0x1 linked
-// namespace_93b50d82<file_0>::function_d1160bad
 // Checksum 0x32ae8974, Offset: 0x5c8
 // Size: 0x26
 function wait_for_sounddone_or_death(org) {
@@ -122,7 +115,6 @@ function wait_for_sounddone_or_death(org) {
 
 // Namespace sound
 // Params 1, eflags: 0x0
-// namespace_93b50d82<file_0>::function_2b3ee2bc
 // Checksum 0x16a8d5e0, Offset: 0x5f8
 // Size: 0x20
 function stop_loop_on_entity(alias) {
@@ -131,7 +123,6 @@ function stop_loop_on_entity(alias) {
 
 // Namespace sound
 // Params 2, eflags: 0x0
-// namespace_93b50d82<file_0>::function_70f40069
 // Checksum 0xe09ca0e2, Offset: 0x620
 // Size: 0x164
 function loop_on_entity(alias, offset) {
@@ -155,7 +146,6 @@ function loop_on_entity(alias, offset) {
 
 // Namespace sound
 // Params 3, eflags: 0x1 linked
-// namespace_93b50d82<file_0>::function_4617f9ec
 // Checksum 0x43cf5034, Offset: 0x790
 // Size: 0xcc
 function loop_in_space(alias, origin, ender) {
@@ -173,7 +163,6 @@ function loop_in_space(alias, origin, ender) {
 
 // Namespace sound
 // Params 2, eflags: 0x1 linked
-// namespace_93b50d82<file_0>::function_f2d39415
 // Checksum 0x5e68983, Offset: 0x868
 // Size: 0x4c
 function delete_on_death_wait(ent, sounddone) {
@@ -186,7 +175,6 @@ function delete_on_death_wait(ent, sounddone) {
 
 // Namespace sound
 // Params 2, eflags: 0x1 linked
-// namespace_93b50d82<file_0>::function_53c92656
 // Checksum 0xe2110bab, Offset: 0x8c0
 // Size: 0x176
 function play_on_players(sound, team) {

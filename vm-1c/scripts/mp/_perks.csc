@@ -10,7 +10,6 @@
 
 // Namespace perks
 // Params 0, eflags: 0x2
-// namespace_133ce9dc<file_0>::function_2dc19561
 // Checksum 0xf72163e9, Offset: 0x5c0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,7 +18,6 @@ function autoexec function_2dc19561() {
 
 // Namespace perks
 // Params 0, eflags: 0x1 linked
-// namespace_133ce9dc<file_0>::function_8c87d8eb
 // Checksum 0x23d7c22, Offset: 0x600
 // Size: 0x30c
 function __init__() {
@@ -50,7 +48,6 @@ function __init__() {
 
 // Namespace perks
 // Params 0, eflags: 0x1 linked
-// namespace_133ce9dc<file_0>::function_12a47278
 // Checksum 0x8dc075ba, Offset: 0x918
 // Size: 0x1e0
 function updatesitrepscan() {
@@ -78,7 +75,6 @@ function updatesitrepscan() {
 
     // Namespace perks
     // Params 0, eflags: 0x1 linked
-    // namespace_133ce9dc<file_0>::function_22cd788
     // Checksum 0x3d3b1dde, Offset: 0xb00
     // Size: 0x278
     function updatedvars() {
@@ -106,7 +102,6 @@ function updatesitrepscan() {
 
 // Namespace perks
 // Params 7, eflags: 0x1 linked
-// namespace_133ce9dc<file_0>::function_7b7b87e6
 // Checksum 0x36f7eeb6, Offset: 0xd80
 // Size: 0x48
 function flying_callback(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -115,7 +110,6 @@ function flying_callback(local_client_num, oldval, newval, bnewent, binitialsnap
 
 // Namespace perks
 // Params 1, eflags: 0x1 linked
-// namespace_133ce9dc<file_0>::function_73cea1ff
 // Checksum 0xb2803202, Offset: 0xdd0
 // Size: 0x10c
 function on_local_client_connect(local_client_num) {
@@ -131,7 +125,6 @@ function on_local_client_connect(local_client_num) {
 
 // Namespace perks
 // Params 1, eflags: 0x1 linked
-// namespace_133ce9dc<file_0>::function_67e71792
 // Checksum 0xa3d2a307, Offset: 0xee8
 // Size: 0x74
 function on_localplayer_spawned(local_client_num) {
@@ -145,7 +138,6 @@ function on_localplayer_spawned(local_client_num) {
 
 // Namespace perks
 // Params 1, eflags: 0x1 linked
-// namespace_133ce9dc<file_0>::function_aebcf025
 // Checksum 0xdd80cfab, Offset: 0xf68
 // Size: 0x94
 function on_player_spawned(local_client_num) {
@@ -165,7 +157,6 @@ function on_player_spawned(local_client_num) {
 
     // Namespace perks
     // Params 2, eflags: 0x1 linked
-    // namespace_133ce9dc<file_0>::function_34d18d19
     // Checksum 0xde82a7ca, Offset: 0x1008
     // Size: 0xc2
     function array_equal(&a, &b) {
@@ -182,7 +173,6 @@ function on_player_spawned(local_client_num) {
 
     // Namespace perks
     // Params 1, eflags: 0x1 linked
-    // namespace_133ce9dc<file_0>::function_4535f0df
     // Checksum 0x7ee43bf1, Offset: 0x10d8
     // Size: 0xdc
     function watch_perks_change(local_client_num) {
@@ -206,7 +196,6 @@ function on_player_spawned(local_client_num) {
 
 // Namespace perks
 // Params 1, eflags: 0x0
-// namespace_133ce9dc<file_0>::function_84777f48
 // Checksum 0x3f47f5c5, Offset: 0x11c0
 // Size: 0xea
 function get_players(local_client_num) {
@@ -224,7 +213,6 @@ function get_players(local_client_num) {
 
 // Namespace perks
 // Params 1, eflags: 0x1 linked
-// namespace_133ce9dc<file_0>::function_307fbd3
 // Checksum 0xaab717cf, Offset: 0x12b8
 // Size: 0xfa
 function monitor_tracker_existing_players(local_client_num) {
@@ -242,7 +230,6 @@ function monitor_tracker_existing_players(local_client_num) {
 
 // Namespace perks
 // Params 1, eflags: 0x1 linked
-// namespace_133ce9dc<file_0>::function_57c10a2f
 // Checksum 0x4e9c6a91, Offset: 0x13c0
 // Size: 0x28c
 function monitor_tracker_perk_killcam(local_client_num) {
@@ -286,7 +273,6 @@ function monitor_tracker_perk_killcam(local_client_num) {
 
 // Namespace perks
 // Params 1, eflags: 0x1 linked
-// namespace_133ce9dc<file_0>::function_db8cdebb
 // Checksum 0x34e892da, Offset: 0x1658
 // Size: 0x240
 function monitor_tracker_perk(local_client_num) {
@@ -329,7 +315,6 @@ function monitor_tracker_perk(local_client_num) {
 
 // Namespace perks
 // Params 2, eflags: 0x1 linked
-// namespace_133ce9dc<file_0>::function_c64fdeb6
 // Checksum 0x6dfc260e, Offset: 0x18a0
 // Size: 0x84
 function tracker_playfx(local_client_num, positionandrotationstruct) {
@@ -339,7 +324,6 @@ function tracker_playfx(local_client_num, positionandrotationstruct) {
 
 // Namespace perks
 // Params 2, eflags: 0x1 linked
-// namespace_133ce9dc<file_0>::function_49983795
 // Checksum 0x6be4a25e, Offset: 0x1930
 // Size: 0xf8
 function killtrackerfx_track(local_client_num, handle) {
@@ -359,7 +343,6 @@ function killtrackerfx_track(local_client_num, handle) {
 
 // Namespace perks
 // Params 1, eflags: 0x1 linked
-// namespace_133ce9dc<file_0>::function_a182a2e0
 // Checksum 0x3ca09d2e, Offset: 0x1a30
 // Size: 0x204
 function killtrackerfx_on_death(local_client_num) {
@@ -394,7 +377,6 @@ function killtrackerfx_on_death(local_client_num) {
 
 // Namespace perks
 // Params 1, eflags: 0x1 linked
-// namespace_133ce9dc<file_0>::function_6c29f8f2
 // Checksum 0x12b9838, Offset: 0x1c40
 // Size: 0x48c
 function gettrackerfxposition(local_client_num) {
@@ -473,7 +455,6 @@ function gettrackerfxposition(local_client_num) {
 
 // Namespace perks
 // Params 1, eflags: 0x1 linked
-// namespace_133ce9dc<file_0>::function_cfab5fa8
 // Checksum 0x6458c445, Offset: 0x20d8
 // Size: 0x8cc
 function monitor_detectnearbyenemies(local_client_num) {

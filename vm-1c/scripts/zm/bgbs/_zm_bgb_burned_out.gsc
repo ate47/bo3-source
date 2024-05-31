@@ -13,7 +13,6 @@
 
 // Namespace zm_bgb_burned_out
 // Params 0, eflags: 0x2
-// namespace_403823cc<file_0>::function_2dc19561
 // Checksum 0x4741742b, Offset: 0x260
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -22,7 +21,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_burned_out
 // Params 0, eflags: 0x1 linked
-// namespace_403823cc<file_0>::function_8c87d8eb
 // Checksum 0x867604fe, Offset: 0x2a0
 // Size: 0x154
 function __init__() {
@@ -38,7 +36,6 @@ function __init__() {
 
 // Namespace zm_bgb_burned_out
 // Params 0, eflags: 0x1 linked
-// namespace_403823cc<file_0>::function_279e4e97
 // Checksum 0x46f389b1, Offset: 0x400
 // Size: 0x150
 function event() {
@@ -65,7 +62,6 @@ function event() {
 
 // Namespace zm_bgb_burned_out
 // Params 0, eflags: 0x1 linked
-// namespace_403823cc<file_0>::function_3c61bfc2
 // Checksum 0xd3104a3f, Offset: 0x558
 // Size: 0x326
 function result() {

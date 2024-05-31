@@ -8,7 +8,6 @@
 
 // Namespace clientfaceanim
 // Params 0, eflags: 0x2
-// namespace_1c6e58d4<file_0>::function_2dc19561
 // Checksum 0x80e118d8, Offset: 0x328
 // Size: 0x2c
 function autoexec function_2dc19561() {
@@ -17,7 +16,6 @@ function autoexec function_2dc19561() {
 
 // Namespace clientfaceanim
 // Params 0, eflags: 0x1 linked
-// namespace_1c6e58d4<file_0>::function_d290ebfa
 // Checksum 0xa42d971c, Offset: 0x360
 // Size: 0x3c
 function main() {
@@ -27,7 +25,6 @@ function main() {
 
 // Namespace clientfaceanim
 // Params 1, eflags: 0x5 linked
-// namespace_1c6e58d4<file_0>::function_aebcf025
 // Checksum 0xbbe2c022, Offset: 0x3a8
 // Size: 0x5c
 function private on_player_spawned(localclientnum) {
@@ -38,7 +35,6 @@ function private on_player_spawned(localclientnum) {
 
 // Namespace clientfaceanim
 // Params 1, eflags: 0x5 linked
-// namespace_1c6e58d4<file_0>::function_73d6c43b
 // Checksum 0x313d414b, Offset: 0x410
 // Size: 0xd8
 function private on_player_shutdown(localclientnum) {
@@ -61,7 +57,6 @@ function private on_player_shutdown(localclientnum) {
 
 // Namespace clientfaceanim
 // Params 1, eflags: 0x5 linked
-// namespace_1c6e58d4<file_0>::function_4c579175
 // Checksum 0xf32c995, Offset: 0x4f0
 // Size: 0xe8
 function private on_player_death(localclientnum) {
@@ -83,7 +78,6 @@ function private on_player_death(localclientnum) {
 
 // Namespace clientfaceanim
 // Params 1, eflags: 0x5 linked
-// namespace_1c6e58d4<file_0>::function_4f353102
 // Checksum 0xfa166f08, Offset: 0x5e0
 // Size: 0x54
 function private function_4f353102(localclientnum) {
@@ -95,7 +89,6 @@ function private function_4f353102(localclientnum) {
 
 // Namespace clientfaceanim
 // Params 1, eflags: 0x1 linked
-// namespace_1c6e58d4<file_0>::function_116ad836
 // Checksum 0xc86e8f29, Offset: 0x640
 // Size: 0x2ba
 function buildandvalidatefacialanimationlist(localclientnum) {
@@ -120,7 +113,6 @@ function buildandvalidatefacialanimationlist(localclientnum) {
 
 // Namespace clientfaceanim
 // Params 1, eflags: 0x5 linked
-// namespace_1c6e58d4<file_0>::function_a4d41fee
 // Checksum 0x5cbb042c, Offset: 0x908
 // Size: 0x170
 function private facialanimationthink_getwaittime(localclientnum) {
@@ -151,7 +143,6 @@ function private facialanimationthink_getwaittime(localclientnum) {
 
 // Namespace clientfaceanim
 // Params 1, eflags: 0x5 linked
-// namespace_1c6e58d4<file_0>::function_48af690b
 // Checksum 0xb6d6ef24, Offset: 0xa80
 // Size: 0xf2
 function private function_48af690b(localclientnum) {
@@ -176,7 +167,6 @@ function private function_48af690b(localclientnum) {
 
 // Namespace clientfaceanim
 // Params 2, eflags: 0x5 linked
-// namespace_1c6e58d4<file_0>::function_e4223f31
 // Checksum 0x4e24a182, Offset: 0xb80
 // Size: 0x2a8
 function private updatefacialanimforplayer(localclientnum, player) {
@@ -222,7 +212,6 @@ function private updatefacialanimforplayer(localclientnum, player) {
 
 // Namespace clientfaceanim
 // Params 2, eflags: 0x5 linked
-// namespace_1c6e58d4<file_0>::function_a1a8b1cb
 // Checksum 0x962f22e9, Offset: 0xe30
 // Size: 0x7c
 function private applynewfaceanim(localclientnum, animation) {
@@ -235,7 +224,6 @@ function private applynewfaceanim(localclientnum, animation) {
 
 // Namespace clientfaceanim
 // Params 1, eflags: 0x5 linked
-// namespace_1c6e58d4<file_0>::function_9f12506c
 // Checksum 0x4e830b8d, Offset: 0xeb8
 // Size: 0xa4
 function private applydeathanim(localclientnum) {
@@ -250,7 +238,6 @@ function private applydeathanim(localclientnum) {
 
 // Namespace clientfaceanim
 // Params 1, eflags: 0x5 linked
-// namespace_1c6e58d4<file_0>::function_65dce259
 // Checksum 0x87d8f06a, Offset: 0xf68
 // Size: 0x66
 function private clearallfacialanims(localclientnum) {

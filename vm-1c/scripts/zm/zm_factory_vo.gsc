@@ -11,7 +11,6 @@
 
 // Namespace namespace_4787588d
 // Params 0, eflags: 0x2
-// namespace_4787588d<file_0>::function_2dc19561
 // Checksum 0xe2924806, Offset: 0xa38
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_4787588d
 // Params 0, eflags: 0x1 linked
-// namespace_4787588d<file_0>::function_8c87d8eb
 // Checksum 0x99ec1590, Offset: 0xa80
 // Size: 0x4
 function __init__() {
@@ -29,7 +27,6 @@ function __init__() {
 
 // Namespace namespace_4787588d
 // Params 0, eflags: 0x1 linked
-// namespace_4787588d<file_0>::function_5b6b9132
 // Checksum 0x57bc9cac, Offset: 0xa90
 // Size: 0x1c
 function __main__() {
@@ -38,7 +35,6 @@ function __main__() {
 
 // Namespace namespace_4787588d
 // Params 0, eflags: 0x1 linked
-// namespace_4787588d<file_0>::function_7884e6b8
 // Checksum 0xa35586b8, Offset: 0xab8
 // Size: 0xb88
 function function_7884e6b8() {
@@ -138,7 +134,6 @@ function function_7884e6b8() {
 
 // Namespace namespace_4787588d
 // Params 5, eflags: 0x1 linked
-// namespace_4787588d<file_0>::function_c23e3a71
 // Checksum 0xc8ca1a8a, Offset: 0x1648
 // Size: 0xe4
 function function_c23e3a71(var_49fefccd, n_index, b_wait_if_busy, var_7e649f23, var_d1295208) {
@@ -159,7 +154,6 @@ function function_c23e3a71(var_49fefccd, n_index, b_wait_if_busy, var_7e649f23, 
 
 // Namespace namespace_4787588d
 // Params 4, eflags: 0x1 linked
-// namespace_4787588d<file_0>::function_7aa5324a
 // Checksum 0xa73fc471, Offset: 0x1738
 // Size: 0x10c
 function function_7aa5324a(a_str_vo, b_wait_if_busy, n_priority, var_d1295208) {
@@ -186,7 +180,6 @@ function function_7aa5324a(a_str_vo, b_wait_if_busy, n_priority, var_d1295208) {
 
 // Namespace namespace_4787588d
 // Params 1, eflags: 0x1 linked
-// namespace_4787588d<file_0>::function_218256bd
 // Checksum 0x69594eec, Offset: 0x1850
 // Size: 0x16a
 function function_218256bd(var_eca8128e) {
@@ -207,7 +200,6 @@ function function_218256bd(var_eca8128e) {
 
 // Namespace namespace_4787588d
 // Params 5, eflags: 0x1 linked
-// namespace_4787588d<file_0>::function_897246e4
 // Checksum 0x23700ed8, Offset: 0x19c8
 // Size: 0x17c
 function function_897246e4(str_vo_alias, n_wait, b_wait_if_busy, n_priority, var_d1295208) {
@@ -238,7 +230,6 @@ function function_897246e4(str_vo_alias, n_wait, b_wait_if_busy, n_priority, var
 
 // Namespace namespace_4787588d
 // Params 5, eflags: 0x1 linked
-// namespace_4787588d<file_0>::function_7b697614
 // Checksum 0x2830973f, Offset: 0x1b50
 // Size: 0x30c
 function vo_say(str_vo_alias, n_delay, b_wait_if_busy, n_priority, var_d1295208) {
@@ -297,7 +288,6 @@ function vo_say(str_vo_alias, n_delay, b_wait_if_busy, n_priority, var_d1295208)
 
 // Namespace namespace_4787588d
 // Params 0, eflags: 0x1 linked
-// namespace_4787588d<file_0>::function_8995134a
 // Checksum 0x86c0863e, Offset: 0x1e68
 // Size: 0xf4
 function vo_clear() {

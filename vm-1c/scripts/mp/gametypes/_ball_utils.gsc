@@ -2,7 +2,6 @@
 
 // Namespace ball
 // Params 1, eflags: 0x1 linked
-// namespace_e2ea4bd6<file_0>::function_10ecf402
 // Checksum 0x6693204a, Offset: 0x78
 // Size: 0x3a
 function function_10ecf402(trigger) {

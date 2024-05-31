@@ -12,7 +12,6 @@
 
 // Namespace weaponobjects
 // Params 0, eflags: 0x2
-// namespace_aec973d7<file_0>::function_2dc19561
 // Checksum 0x37a848ac, Offset: 0x1c8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace weaponobjects
 // Params 0, eflags: 0x1 linked
-// namespace_aec973d7<file_0>::function_8c87d8eb
 // Checksum 0xc5f6721e, Offset: 0x208
 // Size: 0x34
 function __init__() {
@@ -31,7 +29,6 @@ function __init__() {
 
 // Namespace weaponobjects
 // Params 0, eflags: 0x1 linked
-// namespace_aec973d7<file_0>::function_d1413784
 // Checksum 0x4135469d, Offset: 0x248
 // Size: 0x44
 function start_gametype() {
@@ -41,7 +38,6 @@ function start_gametype() {
 
 // Namespace weaponobjects
 // Params 0, eflags: 0x1 linked
-// namespace_aec973d7<file_0>::function_aebcf025
 // Checksum 0x4d754bc0, Offset: 0x298
 // Size: 0x24
 function on_player_spawned() {

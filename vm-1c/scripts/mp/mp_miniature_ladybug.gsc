@@ -7,7 +7,6 @@
 
 // Namespace namespace_6b1ea3e0
 // Params 0, eflags: 0x1 linked
-// namespace_6b1ea3e0<file_0>::function_d290ebfa
 // Checksum 0xb750ebe4, Offset: 0x4f8
 // Size: 0x27a
 function main() {
@@ -26,7 +25,6 @@ function main() {
 
 // Namespace namespace_6b1ea3e0
 // Params 2, eflags: 0x1 linked
-// namespace_6b1ea3e0<file_0>::function_edb97aef
 // Checksum 0xe82ec69a, Offset: 0x780
 // Size: 0x12c
 function function_edb97aef(a_ents, str_id) {

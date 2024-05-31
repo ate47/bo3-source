@@ -9,7 +9,6 @@
 
 // Namespace zm_bgb_soda_fountain
 // Params 0, eflags: 0x2
-// namespace_78eb0295<file_0>::function_2dc19561
 // Checksum 0x7d924837, Offset: 0x148
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_soda_fountain
 // Params 0, eflags: 0x1 linked
-// namespace_78eb0295<file_0>::function_8c87d8eb
 // Checksum 0x1dd74d08, Offset: 0x188
 // Size: 0x3c
 function __init__() {

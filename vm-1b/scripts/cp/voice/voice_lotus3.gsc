@@ -4,7 +4,6 @@
 
 // Namespace namespace_ad522020
 // Params 0, eflags: 0x0
-// namespace_ad522020<file_0>::function_e230521c
 // Checksum 0xd69536a, Offset: 0x1c78
 // Size: 0x1442
 function init_voice() {

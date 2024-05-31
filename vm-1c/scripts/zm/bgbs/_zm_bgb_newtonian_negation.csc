@@ -9,7 +9,6 @@
 
 // Namespace zm_bgb_newtonian_negation
 // Params 0, eflags: 0x2
-// namespace_5bdced82<file_0>::function_2dc19561
 // Checksum 0x224bc0cb, Offset: 0x150
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_newtonian_negation
 // Params 0, eflags: 0x1 linked
-// namespace_5bdced82<file_0>::function_8c87d8eb
 // Checksum 0x3f8cbaa9, Offset: 0x190
 // Size: 0x3c
 function __init__() {

@@ -6,7 +6,6 @@
 
 // Namespace scoreboard
 // Params 0, eflags: 0x2
-// namespace_3122447b<file_0>::function_2dc19561
 // Checksum 0xf1b52ed3, Offset: 0x130
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,7 +14,6 @@ function autoexec function_2dc19561() {
 
 // Namespace scoreboard
 // Params 0, eflags: 0x1 linked
-// namespace_3122447b<file_0>::function_8c87d8eb
 // Checksum 0xfec1ecb7, Offset: 0x170
 // Size: 0x24
 function __init__() {
@@ -24,7 +22,6 @@ function __init__() {
 
 // Namespace scoreboard
 // Params 0, eflags: 0x1 linked
-// namespace_3122447b<file_0>::function_c35e6aab
 // Checksum 0xac2e88ac, Offset: 0x1a0
 // Size: 0xb4
 function init() {

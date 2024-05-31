@@ -25,7 +25,6 @@
 
 // Namespace namespace_b2c57c5e
 // Params 0, eflags: 0x2
-// namespace_b2c57c5e<file_0>::function_2dc19561
 // Checksum 0x54be60ec, Offset: 0x498
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -34,7 +33,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_b2c57c5e
 // Params 0, eflags: 0x1 linked
-// namespace_b2c57c5e<file_0>::function_8c87d8eb
 // Checksum 0x7d158a1f, Offset: 0x4e0
 // Size: 0x7c
 function __init__() {
@@ -45,7 +43,6 @@ function __init__() {
 
 // Namespace namespace_b2c57c5e
 // Params 0, eflags: 0x1 linked
-// namespace_b2c57c5e<file_0>::function_5b6b9132
 // Checksum 0x69ed35a7, Offset: 0x568
 // Size: 0x10c
 function __main__() {

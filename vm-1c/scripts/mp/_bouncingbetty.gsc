@@ -9,7 +9,6 @@
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x2
-// namespace_c147e610<file_0>::function_2dc19561
 // Checksum 0x610619a7, Offset: 0x140
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x1 linked
-// namespace_c147e610<file_0>::function_8c87d8eb
 // Checksum 0xcf2f7c02, Offset: 0x180
 // Size: 0x20
 function __init__() {

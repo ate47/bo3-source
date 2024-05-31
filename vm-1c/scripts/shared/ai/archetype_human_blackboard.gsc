@@ -11,7 +11,6 @@
 
 // Namespace blackboard
 // Params 0, eflags: 0x1 linked
-// namespace_96515e2a<file_0>::function_31efa8fd
 // Checksum 0x4f82761f, Offset: 0x398
 // Size: 0x1dc
 function function_31efa8fd() {
@@ -49,7 +48,6 @@ function function_31efa8fd() {
 
 // Namespace blackboard
 // Params 0, eflags: 0x5 linked
-// namespace_96515e2a<file_0>::function_ecb757b3
 // Checksum 0x79234b33, Offset: 0x580
 // Size: 0x36
 function private bb_getarrivaltype() {
@@ -61,7 +59,6 @@ function private bb_getarrivaltype() {
 
 // Namespace blackboard
 // Params 0, eflags: 0x5 linked
-// namespace_96515e2a<file_0>::function_19576889
 // Checksum 0x8de58aa4, Offset: 0x5c0
 // Size: 0x3a
 function private bb_gettacticalarrivalfacingyaw() {
@@ -70,7 +67,6 @@ function private bb_gettacticalarrivalfacingyaw() {
 
 // Namespace blackboard
 // Params 0, eflags: 0x5 linked
-// namespace_96515e2a<file_0>::function_2275b620
 // Checksum 0x3714cb1b, Offset: 0x608
 // Size: 0x1ba
 function private bb_getlocomotionmovementtype() {
@@ -104,7 +100,6 @@ function private bb_getlocomotionmovementtype() {
 
 // Namespace blackboard
 // Params 0, eflags: 0x5 linked
-// namespace_96515e2a<file_0>::function_29705f9
 // Checksum 0xafbb2988, Offset: 0x7d0
 // Size: 0x1ce
 function private bb_getcoverflankability() {

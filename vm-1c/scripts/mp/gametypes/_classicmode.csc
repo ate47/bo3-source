@@ -9,7 +9,6 @@
 
 // Namespace classicmode
 // Params 0, eflags: 0x2
-// namespace_5d4e0f0a<file_0>::function_2dc19561
 // Checksum 0x959b739f, Offset: 0x2c8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace classicmode
 // Params 0, eflags: 0x1 linked
-// namespace_5d4e0f0a<file_0>::function_8c87d8eb
 // Checksum 0x68df5044, Offset: 0x308
 // Size: 0x44
 function __init__() {
@@ -30,7 +28,6 @@ function __init__() {
 
 // Namespace classicmode
 // Params 0, eflags: 0x1 linked
-// namespace_5d4e0f0a<file_0>::function_77584ea1
 // Checksum 0x1fe6cb43, Offset: 0x358
 // Size: 0x1d4
 function enableclassicmode() {

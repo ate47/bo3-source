@@ -9,7 +9,6 @@
 
 // Namespace zm_bgb_head_drama
 // Params 0, eflags: 0x2
-// namespace_51278ff7<file_0>::function_2dc19561
 // Checksum 0xb83cb158, Offset: 0x140
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_head_drama
 // Params 0, eflags: 0x1 linked
-// namespace_51278ff7<file_0>::function_8c87d8eb
 // Checksum 0x248dbca8, Offset: 0x180
 // Size: 0x3c
 function __init__() {

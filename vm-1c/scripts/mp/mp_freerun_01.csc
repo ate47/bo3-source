@@ -9,7 +9,6 @@
 
 // Namespace namespace_49ee819c
 // Params 0, eflags: 0x0
-// namespace_49ee819c<file_0>::function_d290ebfa
 // Checksum 0xf21b9a, Offset: 0x140
 // Size: 0x8c
 function main() {

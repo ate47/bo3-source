@@ -11,7 +11,6 @@
 
 // Namespace zm_bgb_reign_drops
 // Params 0, eflags: 0x2
-// namespace_7084af67<file_0>::function_2dc19561
 // Checksum 0xded1de76, Offset: 0x1e0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_reign_drops
 // Params 0, eflags: 0x1 linked
-// namespace_7084af67<file_0>::function_8c87d8eb
 // Checksum 0xefab241d, Offset: 0x220
 // Size: 0x64
 function __init__() {
@@ -32,7 +30,6 @@ function __init__() {
 
 // Namespace zm_bgb_reign_drops
 // Params 0, eflags: 0x1 linked
-// namespace_7084af67<file_0>::function_e4776d0
 // Checksum 0x7f3d91fe, Offset: 0x290
 // Size: 0x22
 function validation() {
@@ -44,7 +41,6 @@ function validation() {
 
 // Namespace zm_bgb_reign_drops
 // Params 0, eflags: 0x1 linked
-// namespace_7084af67<file_0>::function_7afbf7cd
 // Checksum 0x1cc28cdd, Offset: 0x2c0
 // Size: 0x1e4
 function activation() {
@@ -65,7 +61,6 @@ function activation() {
 
 // Namespace zm_bgb_reign_drops
 // Params 0, eflags: 0x1 linked
-// namespace_7084af67<file_0>::function_7892610e
 // Checksum 0x495e79a9, Offset: 0x4b0
 // Size: 0x92
 function function_7892610e() {
@@ -85,7 +80,6 @@ function function_7892610e() {
 
 // Namespace zm_bgb_reign_drops
 // Params 1, eflags: 0x1 linked
-// namespace_7084af67<file_0>::function_ed573cc2
 // Checksum 0xab8c78ba, Offset: 0x550
 // Size: 0x282
 function function_ed573cc2(n_position) {

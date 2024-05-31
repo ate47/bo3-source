@@ -24,7 +24,6 @@
 
 // Namespace sab
 // Params 0, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_d290ebfa
 // Checksum 0x587c85a1, Offset: 0xba0
 // Size: 0x48c
 function main() {
@@ -81,7 +80,6 @@ function main() {
 
 // Namespace sab
 // Params 0, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_90f0668f
 // Checksum 0x875d226, Offset: 0x1038
 // Size: 0x2c
 function onprecachegametype() {
@@ -91,7 +89,6 @@ function onprecachegametype() {
 
 // Namespace sab
 // Params 0, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_e4e885e6
 // Checksum 0x524ffa1a, Offset: 0x1070
 // Size: 0xd0
 function onroundswitch() {
@@ -110,7 +107,6 @@ function onroundswitch() {
 
 // Namespace sab
 // Params 0, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_34685338
 // Checksum 0x6290521b, Offset: 0x1148
 // Size: 0x4dc
 function onstartgametype() {
@@ -168,7 +164,6 @@ function onstartgametype() {
 
 // Namespace sab
 // Params 0, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_fb734762
 // Checksum 0x65990bc4, Offset: 0x1630
 // Size: 0x24
 function ontimelimit() {
@@ -180,7 +175,6 @@ function ontimelimit() {
 
 // Namespace sab
 // Params 0, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_5e994bd3
 // Checksum 0x68937bbc, Offset: 0x1660
 // Size: 0x224
 function function_5e994bd3() {
@@ -212,7 +206,6 @@ function function_5e994bd3() {
 
 // Namespace sab
 // Params 1, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_e0db18e8
 // Checksum 0xfbddcc73, Offset: 0x1890
 // Size: 0x1bc
 function ondeadevent(team) {
@@ -245,7 +238,6 @@ function ondeadevent(team) {
 
 // Namespace sab
 // Params 1, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_19bc9234
 // Checksum 0xab405a65, Offset: 0x1a58
 // Size: 0x124
 function onspawnplayer(predictedspawn) {
@@ -266,7 +258,6 @@ function onspawnplayer(predictedspawn) {
 
 // Namespace sab
 // Params 0, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_843e8b8a
 // Checksum 0x279daa23, Offset: 0x1b88
 // Size: 0x84
 function updategametypedvars() {
@@ -278,7 +269,6 @@ function updategametypedvars() {
 
 // Namespace sab
 // Params 0, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_158500a5
 // Checksum 0x1079bff0, Offset: 0x1c18
 // Size: 0x4b6
 function function_158500a5() {
@@ -333,7 +323,6 @@ function function_158500a5() {
 
 // Namespace sab
 // Params 2, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_b0fe9907
 // Checksum 0xf05e3a92, Offset: 0x20d8
 // Size: 0x1ea
 function createbombzone(team, trigger) {
@@ -357,7 +346,6 @@ function createbombzone(team, trigger) {
 
 // Namespace sab
 // Params 1, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_cfce9b82
 // Checksum 0x58d0200b, Offset: 0x22d0
 // Size: 0xe4
 function onbeginuse(player) {
@@ -373,7 +361,6 @@ function onbeginuse(player) {
 
 // Namespace sab
 // Params 3, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_a454a59a
 // Checksum 0x1e96bdc3, Offset: 0x23c0
 // Size: 0x68
 function onenduse(team, player, result) {
@@ -387,7 +374,6 @@ function onenduse(team, player, result) {
 
 // Namespace sab
 // Params 1, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_8e900a8a
 // Checksum 0xd55959ee, Offset: 0x2430
 // Size: 0x404
 function onpickup(player) {
@@ -438,7 +424,6 @@ function onpickup(player) {
 
 // Namespace sab
 // Params 1, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_5aacb6fd
 // Checksum 0xbbcd7960, Offset: 0x2840
 // Size: 0x184
 function ondrop(player) {
@@ -465,7 +450,6 @@ function ondrop(player) {
 
 // Namespace sab
 // Params 1, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_49ac7e58
 // Checksum 0xf1f0067f, Offset: 0x29d0
 // Size: 0x1cc
 function function_49ac7e58(delay) {
@@ -492,7 +476,6 @@ function function_49ac7e58(delay) {
 
 // Namespace sab
 // Params 1, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_3c8ea097
 // Checksum 0xf2333dbf, Offset: 0x2ba8
 // Size: 0x504
 function onuse(player) {
@@ -552,7 +535,6 @@ function onuse(player) {
 
 // Namespace sab
 // Params 1, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_b44f2f45
 // Checksum 0x22264e29, Offset: 0x30b8
 // Size: 0x2c
 function oncantuse(player) {
@@ -561,7 +543,6 @@ function oncantuse(player) {
 
 // Namespace sab
 // Params 2, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_d615cbd7
 // Checksum 0x72b78c22, Offset: 0x30f0
 // Size: 0x4dc
 function bombplanted(destroyedobj, team) {
@@ -611,7 +592,6 @@ function bombplanted(destroyedobj, team) {
 
 // Namespace sab
 // Params 0, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_efb02d17
 // Checksum 0xe35fb9ce, Offset: 0x35d8
 // Size: 0x24
 function bombtimerwait() {
@@ -621,7 +601,6 @@ function bombtimerwait() {
 
 // Namespace sab
 // Params 0, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_2a6a1143
 // Checksum 0x24f39f4b, Offset: 0x3608
 // Size: 0x19c
 function resetbombsite() {
@@ -641,7 +620,6 @@ function resetbombsite() {
 
 // Namespace sab
 // Params 0, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_3b1e4cbe
 // Checksum 0xe0b3a417, Offset: 0x37b0
 // Size: 0x174
 function setupfordefusing() {
@@ -660,7 +638,6 @@ function setupfordefusing() {
 
 // Namespace sab
 // Params 1, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_9b04caed
 // Checksum 0x32872e04, Offset: 0x3930
 // Size: 0x62
 function bombdefused(object) {
@@ -675,7 +652,6 @@ function bombdefused(object) {
 
 // Namespace sab
 // Params 9, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_c2658b46
 // Checksum 0x5e2c4c9a, Offset: 0x39a0
 // Size: 0x3ac
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -722,7 +698,6 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace sab
 // Params 1, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_257d1c47
 // Checksum 0x1edb1d67, Offset: 0x3d58
 // Size: 0x54
 function onendgame(winningteam) {
@@ -733,7 +708,6 @@ function onendgame(winningteam) {
 
 // Namespace sab
 // Params 1, eflags: 0x0
-// namespace_2afdc5d5<file_0>::function_3fcd5617
 // Checksum 0xd82a7b7f, Offset: 0x3db8
 // Size: 0x34
 function onroundendgame(roundwinner) {

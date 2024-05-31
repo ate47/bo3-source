@@ -96,7 +96,6 @@
 
 // Namespace zm
 // Params 0, eflags: 0x2
-// namespace_ac8e5d72<file_0>::function_a106fbcc
 // Checksum 0x74c9e6e2, Offset: 0x1900
 // Size: 0x3b4
 function autoexec ignore_systems() {
@@ -144,7 +143,6 @@ function autoexec ignore_systems() {
 
 // Namespace zm
 // Params 0, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_c35e6aab
 // Checksum 0x30efbc66, Offset: 0x1cc0
 // Size: 0x3f4
 function init() {
@@ -204,7 +202,6 @@ function init() {
 
 // Namespace zm
 // Params 1, eflags: 0x0
-// namespace_ac8e5d72<file_0>::function_aa0b5403
 // Checksum 0xbe7cc57b, Offset: 0x20c0
 // Size: 0x96
 function delay_for_clients_then_execute(func) {
@@ -223,7 +220,6 @@ function delay_for_clients_then_execute(func) {
 
     // Namespace zm
     // Params 0, eflags: 0x1 linked
-    // namespace_ac8e5d72<file_0>::function_9fee0219
     // Checksum 0xbdf70b76, Offset: 0x2160
     // Size: 0x1b6
     function function_9fee0219() {
@@ -257,7 +253,6 @@ function delay_for_clients_then_execute(func) {
 
 // Namespace zm
 // Params 0, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_74cb963f
 // Checksum 0x3b978554, Offset: 0x2320
 // Size: 0x11c
 function function_74cb963f() {
@@ -273,7 +268,6 @@ function function_74cb963f() {
 
 // Namespace zm
 // Params 1, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_27d0e46c
 // Checksum 0x269e5211, Offset: 0x2448
 // Size: 0x1ac
 function function_27d0e46c(localclientnum) {
@@ -304,7 +298,6 @@ function function_27d0e46c(localclientnum) {
 
 // Namespace zm
 // Params 1, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_ae5686be
 // Checksum 0x6ba54b0d, Offset: 0x2600
 // Size: 0x7c
 function player_umbrahotfixes(localclientnum) {
@@ -316,7 +309,6 @@ function player_umbrahotfixes(localclientnum) {
 
 // Namespace zm
 // Params 1, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_fe5263bc
 // Checksum 0xaaa20ab6, Offset: 0x2688
 // Size: 0x36
 function basic_player_connect(localclientnum) {
@@ -328,7 +320,6 @@ function basic_player_connect(localclientnum) {
 
 // Namespace zm
 // Params 1, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_2de2e7f
 // Checksum 0x78fe4a60, Offset: 0x26c8
 // Size: 0x5c
 function force_update_player_clientfields(localclientnum) {
@@ -342,7 +333,6 @@ function force_update_player_clientfields(localclientnum) {
 
 // Namespace zm
 // Params 0, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_48499cfd
 // Checksum 0x99ec1590, Offset: 0x2730
 // Size: 0x4
 function init_blocker_fx() {
@@ -351,7 +341,6 @@ function init_blocker_fx() {
 
 // Namespace zm
 // Params 0, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_5d06d1ea
 // Checksum 0x585b51c4, Offset: 0x2740
 // Size: 0x136
 function init_riser_fx() {
@@ -372,7 +361,6 @@ function init_riser_fx() {
 
 // Namespace zm
 // Params 0, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_2ea898a8
 // Checksum 0xd5279033, Offset: 0x2880
 // Size: 0x55c
 function init_clientfields() {
@@ -408,7 +396,6 @@ function init_clientfields() {
 
 // Namespace zm
 // Params 3, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_d922623
 // Checksum 0x4980c0b4, Offset: 0x2de8
 // Size: 0x44
 function box_monitor(clientnum, state, oldstate) {
@@ -419,7 +406,6 @@ function box_monitor(clientnum, state, oldstate) {
 
 // Namespace zm
 // Params 0, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_49fd3ad9
 // Checksum 0xe4e3f2c4, Offset: 0x2e38
 // Size: 0x5a
 function zpo_listener() {
@@ -436,7 +422,6 @@ function zpo_listener() {
 
 // Namespace zm
 // Params 0, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_e3393b95
 // Checksum 0xfed6339a, Offset: 0x2ea0
 // Size: 0x5a
 function zpoff_listener() {
@@ -453,7 +438,6 @@ function zpoff_listener() {
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_5243f49
 // Checksum 0xff682800, Offset: 0x2f08
 // Size: 0x56
 function zombie_power_clientfield_on(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -464,7 +448,6 @@ function zombie_power_clientfield_on(localclientnum, oldval, newval, bnewent, bi
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_e3fae1f5
 // Checksum 0x65cae13c, Offset: 0x2f68
 // Size: 0x56
 function zombie_power_clientfield_off(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -475,7 +458,6 @@ function zombie_power_clientfield_off(localclientnum, oldval, newval, bnewent, b
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_dbffdbfd
 // Checksum 0x8fd681ea, Offset: 0x2fc8
 // Size: 0x94
 function round_complete_time(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -485,7 +467,6 @@ function round_complete_time(localclientnum, oldval, newval, bnewent, binitialsn
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_b2daa27a
 // Checksum 0x51bb72f1, Offset: 0x3068
 // Size: 0x94
 function round_complete_num(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -495,7 +476,6 @@ function round_complete_num(localclientnum, oldval, newval, bnewent, binitialsna
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_abb5f667
 // Checksum 0xf3d61731, Offset: 0x3108
 // Size: 0x94
 function game_end_time(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -505,7 +485,6 @@ function game_end_time(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_a1ad4173
 // Checksum 0x3bb9a4a2, Offset: 0x31a8
 // Size: 0x94
 function quest_complete_time(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -515,7 +494,6 @@ function quest_complete_time(localclientnum, oldval, newval, bnewent, binitialsn
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_8e462ffe
 // Checksum 0x24df764d, Offset: 0x3248
 // Size: 0x94
 function game_start_time(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -525,7 +503,6 @@ function game_start_time(localclientnum, oldval, newval, bnewent, binitialsnap, 
 
 // Namespace zm
 // Params 1, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_255c0b26
 // Checksum 0xecb384b5, Offset: 0x32e8
 // Size: 0x102
 function createzombieeyesinternal(localclientnum) {
@@ -552,7 +529,6 @@ function createzombieeyesinternal(localclientnum) {
 
 // Namespace zm
 // Params 1, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_6fb8bb89
 // Checksum 0xf36f93b, Offset: 0x33f8
 // Size: 0x24
 function createzombieeyes(localclientnum) {
@@ -561,7 +537,6 @@ function createzombieeyes(localclientnum) {
 
 // Namespace zm
 // Params 1, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_232ddafc
 // Checksum 0x13f963a9, Offset: 0x3428
 // Size: 0x60
 function deletezombieeyes(localclientnum) {
@@ -575,7 +550,6 @@ function deletezombieeyes(localclientnum) {
 
 // Namespace zm
 // Params 7, eflags: 0x0
-// namespace_ac8e5d72<file_0>::function_52d3df9b
 // Checksum 0x8fca5312, Offset: 0x3490
 // Size: 0x174
 function function_52d3df9b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -599,7 +573,6 @@ function function_52d3df9b(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm
 // Params 7, eflags: 0x0
-// namespace_ac8e5d72<file_0>::function_55e6ff0a
 // Checksum 0xc5ae85d2, Offset: 0x3610
 // Size: 0x1b4
 function function_55e6ff0a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -625,7 +598,6 @@ function function_55e6ff0a(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm
 // Params 1, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_189bc7b4
 // Checksum 0x9a4af5ed, Offset: 0x37d0
 // Size: 0xcc
 function function_189bc7b4(localclientnum) {
@@ -642,7 +614,6 @@ function function_189bc7b4(localclientnum) {
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_47cf4ac3
 // Checksum 0xd44a2b10, Offset: 0x38a8
 // Size: 0x260
 function function_47cf4ac3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -674,7 +645,6 @@ function function_47cf4ac3(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_a67fb0bc
 // Checksum 0x4e7a70f1, Offset: 0x3b10
 // Size: 0x7c
 function function_a67fb0bc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -684,7 +654,6 @@ function function_a67fb0bc(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_a340759a
 // Checksum 0x87cc82e5, Offset: 0x3b98
 // Size: 0x154
 function zombie_eyes_clientfield_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -705,7 +674,6 @@ function zombie_eyes_clientfield_cb(localclientnum, oldval, newval, bnewent, bin
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_ecac10d
 // Checksum 0xb6e6aa2c, Offset: 0x3cf8
 // Size: 0xd4
 function zombie_zombie_keyline_render_clientfield_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -725,7 +693,6 @@ function zombie_zombie_keyline_render_clientfield_cb(localclientnum, oldval, new
 
 // Namespace zm
 // Params 0, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_d2a9f995
 // Checksum 0xa327895a, Offset: 0x3dd8
 // Size: 0x1c
 function get_eyeball_on_luminance() {
@@ -737,7 +704,6 @@ function get_eyeball_on_luminance() {
 
 // Namespace zm
 // Params 0, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_28ded1d3
 // Checksum 0x4d816df3, Offset: 0x3e00
 // Size: 0x1a
 function get_eyeball_off_luminance() {
@@ -749,7 +715,6 @@ function get_eyeball_off_luminance() {
 
 // Namespace zm
 // Params 0, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_6b4bd44e
 // Checksum 0x3bfa785e, Offset: 0x3e28
 // Size: 0x48
 function get_eyeball_color() {
@@ -765,7 +730,6 @@ function get_eyeball_color() {
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_77fa9c53
 // Checksum 0xc9c33d0b, Offset: 0x3e78
 // Size: 0x5c
 function zombie_ragdoll_explode_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -776,7 +740,6 @@ function zombie_ragdoll_explode_cb(localclientnum, oldval, newval, bnewent, bini
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_fe38007a
 // Checksum 0x503b4312, Offset: 0x3ee0
 // Size: 0xb4
 function zombie_gut_explosion_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -792,7 +755,6 @@ function zombie_gut_explosion_cb(localclientnum, oldval, newval, bnewent, biniti
 
 // Namespace zm
 // Params 0, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_e189ad3f
 // Checksum 0x2c45cc35, Offset: 0x3fa0
 // Size: 0x1e
 function init_zombie_explode_fx() {
@@ -801,7 +763,6 @@ function init_zombie_explode_fx() {
 
 // Namespace zm
 // Params 1, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_1a04e37b
 // Checksum 0xbbf4ebf6, Offset: 0x3fc8
 // Size: 0x114
 function zombie_wait_explode(localclientnum) {
@@ -826,7 +787,6 @@ function zombie_wait_explode(localclientnum) {
 
 // Namespace zm
 // Params 1, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_6b514dfb
 // Checksum 0x966d6779, Offset: 0x40e8
 // Size: 0x3a
 function mark_piece_gibbed(piece_index) {
@@ -838,7 +798,6 @@ function mark_piece_gibbed(piece_index) {
 
 // Namespace zm
 // Params 1, eflags: 0x0
-// namespace_ac8e5d72<file_0>::function_850e7732
 // Checksum 0x69f97b7, Offset: 0x4130
 // Size: 0x68
 function has_gibbed_piece(piece_index) {
@@ -855,7 +814,6 @@ function has_gibbed_piece(piece_index) {
 
 // Namespace zm
 // Params 0, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_1d930efd
 // Checksum 0xb0987d6a, Offset: 0x41a0
 // Size: 0x1e6
 function do_headshot_gib_fx() {
@@ -880,7 +838,6 @@ function do_headshot_gib_fx() {
 
 // Namespace zm
 // Params 1, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_af982a9e
 // Checksum 0xc1e6a91b, Offset: 0x4390
 // Size: 0xac
 function do_gib_fx(tag) {
@@ -893,7 +850,6 @@ function do_gib_fx(tag) {
 
 // Namespace zm
 // Params 2, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_5a579d99
 // Checksum 0x12003a1d, Offset: 0x4448
 // Size: 0x22c
 function do_gib(model, tag) {
@@ -927,7 +883,6 @@ function do_gib(model, tag) {
 
 // Namespace zm
 // Params 2, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_f11f817
 // Checksum 0x53be97ef, Offset: 0x4680
 // Size: 0xcc
 function do_hat_gib(model, tag) {
@@ -940,7 +895,6 @@ function do_hat_gib(model, tag) {
 
 // Namespace zm
 // Params 0, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_79faf5bc
 // Checksum 0x270f64be, Offset: 0x4758
 // Size: 0x20
 function check_should_gib() {
@@ -952,7 +906,6 @@ function check_should_gib() {
 
 // Namespace zm
 // Params 0, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_164e93c0
 // Checksum 0xb04a2a36, Offset: 0x4780
 // Size: 0x3c
 function resetgibcounter() {
@@ -966,7 +919,6 @@ function resetgibcounter() {
 
 // Namespace zm
 // Params 3, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_5901f2d4
 // Checksum 0x15b437b9, Offset: 0x47c8
 // Size: 0x6fc
 function on_gib_event(localclientnum, type, locations) {
@@ -1072,7 +1024,6 @@ function on_gib_event(localclientnum, type, locations) {
 
 // Namespace zm
 // Params 4, eflags: 0x0
-// namespace_ac8e5d72<file_0>::function_c4f961ee
 // Checksum 0x4b2dff80, Offset: 0x4ed0
 // Size: 0x284
 function zombie_vision_set_apply(str_visionset, int_priority, flt_transition_time, int_clientnum) {
@@ -1123,7 +1074,6 @@ function zombie_vision_set_apply(str_visionset, int_priority, flt_transition_tim
 
 // Namespace zm
 // Params 3, eflags: 0x0
-// namespace_ac8e5d72<file_0>::function_5f78c6c2
 // Checksum 0x362d963e, Offset: 0x5160
 // Size: 0x1dc
 function zombie_vision_set_remove(str_visionset, flt_transition_time, int_clientnum) {
@@ -1165,7 +1115,6 @@ function zombie_vision_set_remove(str_visionset, flt_transition_time, int_client
 
 // Namespace zm
 // Params 0, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_d6780e39
 // Checksum 0x60da8dfc, Offset: 0x5348
 // Size: 0xda
 function zombie_highest_vision_set_apply() {
@@ -1185,7 +1134,6 @@ function zombie_highest_vision_set_apply() {
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_53982d29
 // Checksum 0xe95875e5, Offset: 0x5430
 // Size: 0x13e
 function handle_zombie_risers_foliage(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1205,7 +1153,6 @@ function handle_zombie_risers_foliage(localclientnum, oldval, newval, bnewent, b
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_85f71cfd
 // Checksum 0x7b816927, Offset: 0x5578
 // Size: 0x13e
 function handle_zombie_risers_water(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1225,7 +1172,6 @@ function handle_zombie_risers_water(localclientnum, oldval, newval, bnewent, bin
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_d9fa15ed
 // Checksum 0x8df561fe, Offset: 0x56c0
 // Size: 0x1be
 function handle_zombie_risers(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1252,7 +1198,6 @@ function handle_zombie_risers(localclientnum, oldval, newval, bnewent, binitials
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_eff9f4bd
 // Checksum 0x18c23c07, Offset: 0x5888
 // Size: 0x1be
 function handle_zombie_risers_lowg(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1279,7 +1224,6 @@ function handle_zombie_risers_lowg(localclientnum, oldval, newval, bnewent, bini
 
 // Namespace zm
 // Params 4, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_4d70c126
 // Checksum 0x1b3b914, Offset: 0x5a50
 // Size: 0x326
 function rise_dust_fx(clientnum, type, billow_fx, burst_fx) {
@@ -1332,7 +1276,6 @@ function rise_dust_fx(clientnum, type, billow_fx, burst_fx) {
 
 // Namespace zm
 // Params 1, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_60d4443e
 // Checksum 0x34aa64e8, Offset: 0x5d80
 // Size: 0x84
 function end_last_stand(clientnum) {
@@ -1345,7 +1288,6 @@ function end_last_stand(clientnum) {
 
 // Namespace zm
 // Params 1, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_ff0745cb
 // Checksum 0xd875607, Offset: 0x5e10
 // Size: 0x178
 function last_stand_thread(clientnum) {
@@ -1373,7 +1315,6 @@ function last_stand_thread(clientnum) {
 
 // Namespace zm
 // Params 3, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_ffebee93
 // Checksum 0x1839cdce, Offset: 0x5f90
 // Size: 0x19e
 function last_stand_monitor(clientnum, state, oldstate) {
@@ -1407,7 +1348,6 @@ function last_stand_monitor(clientnum, state, oldstate) {
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_564407fb
 // Checksum 0x8ab02a33, Offset: 0x6138
 // Size: 0x1b4
 function laststand(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1429,7 +1369,6 @@ function laststand(localclientnum, oldval, newval, bnewent, binitialsnap, fieldn
 
 // Namespace zm
 // Params 7, eflags: 0x1 linked
-// namespace_ac8e5d72<file_0>::function_ee9af09f
 // Checksum 0xb29bd461, Offset: 0x62f8
 // Size: 0x14c
 function update_aat_hud(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

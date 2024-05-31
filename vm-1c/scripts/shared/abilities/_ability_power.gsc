@@ -11,7 +11,6 @@
 
 // Namespace ability_power
 // Params 0, eflags: 0x2
-// namespace_fcced877<file_0>::function_2dc19561
 // Checksum 0x46d4b0bd, Offset: 0x288
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace ability_power
 // Params 0, eflags: 0x1 linked
-// namespace_fcced877<file_0>::function_8c87d8eb
 // Checksum 0xcb703d1d, Offset: 0x2c8
 // Size: 0x24
 function __init__() {
@@ -31,7 +29,6 @@ function __init__() {
 
     // Namespace ability_power
     // Params 2, eflags: 0x1 linked
-    // namespace_fcced877<file_0>::function_13b0d3c3
     // Checksum 0x8576c243, Offset: 0x2f8
     // Size: 0x10c
     function cpower_print(slot, str) {
@@ -52,7 +49,6 @@ function __init__() {
 
 // Namespace ability_power
 // Params 0, eflags: 0x1 linked
-// namespace_fcced877<file_0>::function_fb4f96b5
 // Checksum 0x99ec1590, Offset: 0x410
 // Size: 0x4
 function on_player_connect() {
@@ -61,7 +57,6 @@ function on_player_connect() {
 
 // Namespace ability_power
 // Params 1, eflags: 0x1 linked
-// namespace_fcced877<file_0>::function_4bebd1c5
 // Checksum 0xfa7262e4, Offset: 0x420
 // Size: 0x1e
 function power_is_hero_ability(gadget) {
@@ -70,7 +65,6 @@ function power_is_hero_ability(gadget) {
 
 // Namespace ability_power
 // Params 2, eflags: 0x1 linked
-// namespace_fcced877<file_0>::function_cf8b1e89
 // Checksum 0x80a20107, Offset: 0x448
 // Size: 0x68
 function is_weapon_or_variant_same_as_gadget(weapon, gadget) {
@@ -87,7 +81,6 @@ function is_weapon_or_variant_same_as_gadget(weapon, gadget) {
 
 // Namespace ability_power
 // Params 4, eflags: 0x1 linked
-// namespace_fcced877<file_0>::function_89e84a38
 // Checksum 0xdced7892, Offset: 0x4b8
 // Size: 0x24e
 function power_gain_event_score(eattacker, score, weapon, var_ce8a30c7) {
@@ -126,7 +119,6 @@ function power_gain_event_score(eattacker, score, weapon, var_ce8a30c7) {
 
 // Namespace ability_power
 // Params 1, eflags: 0x0
-// namespace_fcced877<file_0>::function_393d0e93
 // Checksum 0xcaca1b14, Offset: 0x710
 // Size: 0x8e
 function power_gain_event_damage_actor(eattacker) {
@@ -142,7 +134,6 @@ function power_gain_event_damage_actor(eattacker) {
 
 // Namespace ability_power
 // Params 2, eflags: 0x0
-// namespace_fcced877<file_0>::function_f20e7ecb
 // Checksum 0x3ededdce, Offset: 0x7a8
 // Size: 0x186
 function power_gain_event_killed_actor(eattacker, meansofdeath) {
@@ -168,7 +159,6 @@ function power_gain_event_killed_actor(eattacker, meansofdeath) {
 
 // Namespace ability_power
 // Params 4, eflags: 0x1 linked
-// namespace_fcced877<file_0>::function_b2849c8b
 // Checksum 0x637b828a, Offset: 0x938
 // Size: 0xf4
 function power_gain_event(slot, eattacker, val, source) {
@@ -186,7 +176,6 @@ function power_gain_event(slot, eattacker, val, source) {
 
 // Namespace ability_power
 // Params 5, eflags: 0x1 linked
-// namespace_fcced877<file_0>::function_4111b469
 // Checksum 0xef257ace, Offset: 0xa38
 // Size: 0x196
 function power_loss_event_took_damage(eattacker, einflictor, weapon, smeansofdeath, idamage) {
@@ -213,7 +202,6 @@ function power_loss_event_took_damage(eattacker, einflictor, weapon, smeansofdea
 
 // Namespace ability_power
 // Params 4, eflags: 0x1 linked
-// namespace_fcced877<file_0>::function_e121567f
 // Checksum 0xa4806b6f, Offset: 0xbd8
 // Size: 0xd4
 function power_loss_event(slot, eattacker, val, source) {
@@ -228,7 +216,6 @@ function power_loss_event(slot, eattacker, val, source) {
 
 // Namespace ability_power
 // Params 1, eflags: 0x0
-// namespace_fcced877<file_0>::function_7b5970fe
 // Checksum 0x3fb9a5d0, Offset: 0xcb8
 // Size: 0x58
 function power_drain_completely(slot) {
@@ -238,7 +225,6 @@ function power_drain_completely(slot) {
 
 // Namespace ability_power
 // Params 0, eflags: 0x1 linked
-// namespace_fcced877<file_0>::function_c51dbe03
 // Checksum 0xa06fe933, Offset: 0xd18
 // Size: 0x6e
 function ismovingpowerloss() {
@@ -249,7 +235,6 @@ function ismovingpowerloss() {
 
 // Namespace ability_power
 // Params 2, eflags: 0x1 linked
-// namespace_fcced877<file_0>::function_238c013c
 // Checksum 0x9750aea3, Offset: 0xd90
 // Size: 0x240
 function power_consume_timer_think(slot, weapon) {

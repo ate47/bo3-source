@@ -17,7 +17,6 @@
 
 // Namespace namespace_c21dfba4
 // Params 0, eflags: 0x2
-// namespace_c21dfba4<file_0>::function_2dc19561
 // Checksum 0x9a29205b, Offset: 0x320
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -26,7 +25,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_c21dfba4
 // Params 0, eflags: 0x1 linked
-// namespace_c21dfba4<file_0>::function_8c87d8eb
 // Checksum 0xe9ab9c79, Offset: 0x360
 // Size: 0x9a
 function __init__() {
@@ -39,7 +37,6 @@ function __init__() {
 
 // Namespace namespace_c21dfba4
 // Params 7, eflags: 0x1 linked
-// namespace_c21dfba4<file_0>::function_87fb20f7
 // Checksum 0x41dcbda8, Offset: 0x408
 // Size: 0x14c
 function function_87fb20f7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

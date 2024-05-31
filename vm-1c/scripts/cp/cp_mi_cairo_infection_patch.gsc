@@ -16,7 +16,6 @@
 
 // Namespace namespace_bb56f921
 // Params 0, eflags: 0x1 linked
-// namespace_bb56f921<file_0>::function_7403e82b
 // Checksum 0x8f908a4c, Offset: 0x278
 // Size: 0x38c
 function function_7403e82b() {

@@ -11,7 +11,6 @@
 
 // Namespace killstreak_detect
 // Params 0, eflags: 0x2
-// namespace_4f1bf8af<file_0>::function_2dc19561
 // Checksum 0x9399d7a7, Offset: 0x238
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace killstreak_detect
 // Params 0, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_8c87d8eb
 // Checksum 0x439a64af, Offset: 0x278
 // Size: 0x210
 function __init__() {
@@ -42,7 +40,6 @@ function __init__() {
 
 // Namespace killstreak_detect
 // Params 7, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_21a1357f
 // Checksum 0x713c9791, Offset: 0x490
 // Size: 0xf4
 function vehicle_transition(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -56,7 +53,6 @@ function vehicle_transition(local_client_num, oldval, newval, bnewent, binitials
 
 // Namespace killstreak_detect
 // Params 1, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_c379b9f8
 // Checksum 0x6c2e1d8a, Offset: 0x590
 // Size: 0x82
 function should_set_compass_icon(local_client_num) {
@@ -66,7 +62,6 @@ function should_set_compass_icon(local_client_num) {
 
 // Namespace killstreak_detect
 // Params 7, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_91971c86
 // Checksum 0x3b007b4f, Offset: 0x620
 // Size: 0xdc
 function enemyscriptmovervehicle_changed(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -82,7 +77,6 @@ function enemyscriptmovervehicle_changed(local_client_num, oldval, newval, bnewe
 
 // Namespace killstreak_detect
 // Params 7, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_9c4b6d82
 // Checksum 0x306f4fbf, Offset: 0x708
 // Size: 0xdc
 function enemymissilevehicle_changed(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -98,7 +92,6 @@ function enemymissilevehicle_changed(local_client_num, oldval, newval, bnewent, 
 
 // Namespace killstreak_detect
 // Params 7, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_23a2ec58
 // Checksum 0x9bf6c4c1, Offset: 0x7f0
 // Size: 0x9c
 function enemymissile_changed(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -109,7 +102,6 @@ function enemymissile_changed(local_client_num, oldval, newval, bnewent, binitia
 
 // Namespace killstreak_detect
 // Params 7, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_67f63b94
 // Checksum 0x61cac5f8, Offset: 0x898
 // Size: 0x13a
 function enemyvehicle_changed(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -128,7 +120,6 @@ function enemyvehicle_changed(local_client_num, oldval, newval, bnewent, binitia
 
 // Namespace killstreak_detect
 // Params 2, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_7c5dce1e
 // Checksum 0x673337b3, Offset: 0x9e0
 // Size: 0x2c
 function updateteamvehicles(local_client_num, newval) {
@@ -137,7 +128,6 @@ function updateteamvehicles(local_client_num, newval) {
 
 // Namespace killstreak_detect
 // Params 2, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_1d33ac0a
 // Checksum 0x66c0d436, Offset: 0xa18
 // Size: 0x2c
 function updateteammissiles(local_client_num, newval) {
@@ -146,7 +136,6 @@ function updateteammissiles(local_client_num, newval) {
 
 // Namespace killstreak_detect
 // Params 2, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_1757c225
 // Checksum 0xa339ddf, Offset: 0xa50
 // Size: 0x27c
 function updateenemyvehicles(local_client_num, newval) {
@@ -180,7 +169,6 @@ function updateenemyvehicles(local_client_num, newval) {
 
 // Namespace killstreak_detect
 // Params 2, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_81c865e5
 // Checksum 0x3c89a699, Offset: 0xcd8
 // Size: 0x23c
 function updateenemymissiles(local_client_num, newval) {
@@ -213,7 +201,6 @@ function updateenemymissiles(local_client_num, newval) {
 
 // Namespace killstreak_detect
 // Params 1, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_3df98ab4
 // Checksum 0x24a3f887, Offset: 0xf20
 // Size: 0x11c
 function watch_killstreak_detect_perks_changed(local_client_num) {
@@ -237,7 +224,6 @@ function watch_killstreak_detect_perks_changed(local_client_num) {
 
 // Namespace killstreak_detect
 // Params 1, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_c416ed9b
 // Checksum 0x69629629, Offset: 0x1048
 // Size: 0x152
 function checkteamvehicles(localclientnum) {
@@ -264,7 +250,6 @@ function checkteamvehicles(localclientnum) {
 
 // Namespace killstreak_detect
 // Params 1, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_7500f6e3
 // Checksum 0x6864e80a, Offset: 0x11a8
 // Size: 0x152
 function checkteammissiles(localclientnum) {

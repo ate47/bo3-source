@@ -8,7 +8,6 @@
 
 // Namespace arena
 // Params 0, eflags: 0x2
-// namespace_42b73a8a<file_0>::function_2dc19561
 // Checksum 0x53c11b50, Offset: 0x1a8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,7 +16,6 @@ function autoexec function_2dc19561() {
 
 // Namespace arena
 // Params 0, eflags: 0x1 linked
-// namespace_42b73a8a<file_0>::function_8c87d8eb
 // Checksum 0x50926aa4, Offset: 0x1e8
 // Size: 0x24
 function __init__() {
@@ -26,7 +24,6 @@ function __init__() {
 
 // Namespace arena
 // Params 0, eflags: 0x1 linked
-// namespace_42b73a8a<file_0>::function_eb99da89
 // Checksum 0xbe742470, Offset: 0x218
 // Size: 0xca
 function on_connect() {
@@ -43,7 +40,6 @@ function on_connect() {
 
 // Namespace arena
 // Params 0, eflags: 0x1 linked
-// namespace_42b73a8a<file_0>::function_b7b326db
 // Checksum 0x33afbee2, Offset: 0x2f0
 // Size: 0x172
 function update_arena_challenge_seasons() {
@@ -67,7 +63,6 @@ function update_arena_challenge_seasons() {
 
 // Namespace arena
 // Params 1, eflags: 0x1 linked
-// namespace_42b73a8a<file_0>::function_78fde7be
 // Checksum 0x90b2b63a, Offset: 0x470
 // Size: 0x136
 function match_end(winner) {

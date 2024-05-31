@@ -6,7 +6,6 @@
 
 // Namespace client_flag
 // Params 0, eflags: 0x2
-// namespace_366ddbd<file_0>::function_2dc19561
 // Checksum 0x983df1c2, Offset: 0xf8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,7 +14,6 @@ function autoexec function_2dc19561() {
 
 // Namespace client_flag
 // Params 0, eflags: 0x1 linked
-// namespace_366ddbd<file_0>::function_8c87d8eb
 // Checksum 0x812ff7f, Offset: 0x138
 // Size: 0x4c
 function __init__() {
@@ -24,7 +22,6 @@ function __init__() {
 
 // Namespace client_flag
 // Params 7, eflags: 0x1 linked
-// namespace_366ddbd<file_0>::function_8a3ff3fa
 // Checksum 0xf37fb99f, Offset: 0x190
 // Size: 0x8c
 function setctfaway(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -35,7 +32,6 @@ function setctfaway(localclientnum, oldval, newval, bnewent, binitialsnap, field
 
 // Namespace client_flag
 // Params 2, eflags: 0x1 linked
-// namespace_366ddbd<file_0>::function_505d0177
 // Checksum 0x4a4f0902, Offset: 0x228
 // Size: 0x3c
 function clearctfaway(localclientnum, team) {

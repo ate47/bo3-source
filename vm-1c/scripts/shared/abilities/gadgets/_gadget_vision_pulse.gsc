@@ -14,7 +14,6 @@
 
 // Namespace namespace_7b9f2aa5
 // Params 0, eflags: 0x2
-// namespace_7b9f2aa5<file_0>::function_2dc19561
 // Checksum 0xae6a0676, Offset: 0x330
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -23,7 +22,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_7b9f2aa5
 // Params 0, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_8c87d8eb
 // Checksum 0xf61282e1, Offset: 0x370
 // Size: 0x18c
 function __init__() {
@@ -43,7 +41,6 @@ function __init__() {
 
 // Namespace namespace_7b9f2aa5
 // Params 1, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_53d8d98a
 // Checksum 0x7d450a1c, Offset: 0x508
 // Size: 0x2a
 function gadget_vision_pulse_is_inuse(slot) {
@@ -52,7 +49,6 @@ function gadget_vision_pulse_is_inuse(slot) {
 
 // Namespace namespace_7b9f2aa5
 // Params 1, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_32706c24
 // Checksum 0xad0be0e1, Offset: 0x540
 // Size: 0x22
 function gadget_vision_pulse_is_flickering(slot) {
@@ -61,7 +57,6 @@ function gadget_vision_pulse_is_flickering(slot) {
 
 // Namespace namespace_7b9f2aa5
 // Params 2, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_fa0dde53
 // Checksum 0xc7215618, Offset: 0x570
 // Size: 0x34
 function gadget_vision_pulse_on_flicker(slot, weapon) {
@@ -70,7 +65,6 @@ function gadget_vision_pulse_on_flicker(slot, weapon) {
 
 // Namespace namespace_7b9f2aa5
 // Params 2, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_97e4169e
 // Checksum 0x9806817f, Offset: 0x5b0
 // Size: 0x14
 function function_97e4169e(slot, weapon) {
@@ -79,7 +73,6 @@ function function_97e4169e(slot, weapon) {
 
 // Namespace namespace_7b9f2aa5
 // Params 2, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_bfa5bd70
 // Checksum 0xc012e195, Offset: 0x5d0
 // Size: 0x14
 function function_bfa5bd70(slot, weapon) {
@@ -88,7 +81,6 @@ function function_bfa5bd70(slot, weapon) {
 
 // Namespace namespace_7b9f2aa5
 // Params 0, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_e8ada75
 // Checksum 0x99ec1590, Offset: 0x5f0
 // Size: 0x4
 function function_e8ada75() {
@@ -97,7 +89,6 @@ function function_e8ada75() {
 
 // Namespace namespace_7b9f2aa5
 // Params 0, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_bbb240d2
 // Checksum 0x2bac4722, Offset: 0x600
 // Size: 0x54
 function gadget_vision_pulse_on_spawn() {
@@ -112,7 +103,6 @@ function gadget_vision_pulse_on_spawn() {
 
 // Namespace namespace_7b9f2aa5
 // Params 0, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_aed643ac
 // Checksum 0xbd564a9c, Offset: 0x660
 // Size: 0x2c
 function gadget_vision_pulse_ramp_hold_func() {
@@ -121,7 +111,6 @@ function gadget_vision_pulse_ramp_hold_func() {
 
 // Namespace namespace_7b9f2aa5
 // Params 0, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_85f13c1
 // Checksum 0x8444d48, Offset: 0x698
 // Size: 0x84
 function gadget_vision_pulse_watch_death() {
@@ -137,7 +126,6 @@ function gadget_vision_pulse_watch_death() {
 
 // Namespace namespace_7b9f2aa5
 // Params 0, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_79cbe2b9
 // Checksum 0x22298a1b, Offset: 0x728
 // Size: 0xb4
 function gadget_vision_pulse_watch_emp() {
@@ -159,7 +147,6 @@ function gadget_vision_pulse_watch_emp() {
 
 // Namespace namespace_7b9f2aa5
 // Params 2, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_4b54ef0a
 // Checksum 0xc768c0d7, Offset: 0x7e8
 // Size: 0xec
 function gadget_vision_pulse_on(slot, weapon) {
@@ -176,7 +163,6 @@ function gadget_vision_pulse_on(slot, weapon) {
 
 // Namespace namespace_7b9f2aa5
 // Params 2, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_8481ec90
 // Checksum 0xd588acc0, Offset: 0x8e0
 // Size: 0x54
 function gadget_vision_pulse_off(slot, weapon) {
@@ -186,7 +172,6 @@ function gadget_vision_pulse_off(slot, weapon) {
 
 // Namespace namespace_7b9f2aa5
 // Params 2, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_637bf313
 // Checksum 0xaa4e3154, Offset: 0x940
 // Size: 0x37c
 function gadget_vision_pulse_start(slot, weapon) {
@@ -235,7 +220,6 @@ function gadget_vision_pulse_start(slot, weapon) {
 
 // Namespace namespace_7b9f2aa5
 // Params 2, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_493f0e81
 // Checksum 0x3832dac6, Offset: 0xcc8
 // Size: 0x5e
 function wait_until_is_done(slot, timepulse) {
@@ -251,7 +235,6 @@ function wait_until_is_done(slot, timepulse) {
 
 // Namespace namespace_7b9f2aa5
 // Params 2, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_bb685fe3
 // Checksum 0x4e5fe86b, Offset: 0xd30
 // Size: 0xec
 function gadget_vision_pulse_flicker(slot, weapon) {
@@ -273,7 +256,6 @@ function gadget_vision_pulse_flicker(slot, weapon) {
 
 // Namespace namespace_7b9f2aa5
 // Params 2, eflags: 0x1 linked
-// namespace_7b9f2aa5<file_0>::function_2780e408
 // Checksum 0xd4c6c904, Offset: 0xe28
 // Size: 0x9c
 function set_gadget_vision_pulse_status(status, time) {

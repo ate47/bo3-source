@@ -7,7 +7,6 @@
 
 // Namespace fx
 // Params 0, eflags: 0x2
-// namespace_5753664b<file_0>::function_2dc19561
 // Checksum 0xe214437b, Offset: 0x150
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,7 +15,6 @@ function autoexec function_2dc19561() {
 
 // Namespace fx
 // Params 0, eflags: 0x1 linked
-// namespace_5753664b<file_0>::function_8c87d8eb
 // Checksum 0x99ec1590, Offset: 0x190
 // Size: 0x4
 function __init__() {
@@ -25,7 +23,6 @@ function __init__() {
 
 // Namespace fx
 // Params 0, eflags: 0x0
-// namespace_5753664b<file_0>::function_c35ee410
 // Checksum 0x2c0a4ab, Offset: 0x1a0
 // Size: 0x76
 function set_forward_and_up_vectors() {
@@ -35,7 +32,6 @@ function set_forward_and_up_vectors() {
 
 // Namespace fx
 // Params 1, eflags: 0x1 linked
-// namespace_5753664b<file_0>::function_7922262b
 // Checksum 0x3c47be68, Offset: 0x220
 // Size: 0x50
 function get(fx) {
@@ -45,7 +41,6 @@ function get(fx) {
 
 // Namespace fx
 // Params 2, eflags: 0x1 linked
-// namespace_5753664b<file_0>::function_7d0acaab
 // Checksum 0xb1486a1f, Offset: 0x278
 // Size: 0x144
 function create_effect(type, fxid) {
@@ -73,7 +68,6 @@ function create_effect(type, fxid) {
 
 // Namespace fx
 // Params 1, eflags: 0x0
-// namespace_5753664b<file_0>::function_61b8d93a
 // Checksum 0xfa974de, Offset: 0x3c8
 // Size: 0x5a
 function create_loop_effect(fxid) {
@@ -84,7 +78,6 @@ function create_loop_effect(fxid) {
 
 // Namespace fx
 // Params 1, eflags: 0x0
-// namespace_5753664b<file_0>::function_b7152400
 // Checksum 0xfe0a3f2f, Offset: 0x430
 // Size: 0x56
 function create_oneshot_effect(fxid) {
@@ -95,7 +88,6 @@ function create_oneshot_effect(fxid) {
 
 // Namespace fx
 // Params 8, eflags: 0x1 linked
-// namespace_5753664b<file_0>::function_43718187
 // Checksum 0xc94b3312, Offset: 0x490
 // Size: 0x294
 function play(str_fx, v_origin, v_angles, time_to_delete_or_notify, b_link_to_self, str_tag, b_no_cull, b_ignore_pause_world) {
@@ -134,7 +126,6 @@ function play(str_fx, v_origin, v_angles, time_to_delete_or_notify, b_link_to_se
 
 // Namespace fx
 // Params 2, eflags: 0x1 linked
-// namespace_5753664b<file_0>::function_a2f5bd7f
 // Checksum 0x37468010, Offset: 0x730
 // Size: 0xbc
 function _play_fx_delete(ent, time_to_delete_or_notify) {

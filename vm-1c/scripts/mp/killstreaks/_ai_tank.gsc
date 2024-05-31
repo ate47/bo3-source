@@ -37,7 +37,6 @@
 
 // Namespace ai_tank
 // Params 0, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_c35e6aab
 // Checksum 0x374b2fd4, Offset: 0xcd0
 // Size: 0x444
 function init() {
@@ -82,7 +81,6 @@ function init() {
 
 // Namespace ai_tank
 // Params 0, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_50f16166
 // Checksum 0x86303678, Offset: 0x1120
 // Size: 0xc4
 function register() {
@@ -94,7 +92,6 @@ function register() {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_5b6da341
 // Checksum 0xeb0bee1, Offset: 0x11f0
 // Size: 0x2e0
 function usekillstreakaitankdrop(hardpointtype) {
@@ -137,7 +134,6 @@ function usekillstreakaitankdrop(hardpointtype) {
 
 // Namespace ai_tank
 // Params 5, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_8c212895
 // Checksum 0x2f56f40, Offset: 0x14d8
 // Size: 0x24c
 function crateland(crate, category, owner, team, context) {
@@ -165,7 +161,6 @@ function crateland(crate, category, owner, team, context) {
 
 // Namespace ai_tank
 // Params 2, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_59189d4b
 // Checksum 0xbc61d07a, Offset: 0x1730
 // Size: 0x42
 function is_location_good(location, context) {
@@ -174,7 +169,6 @@ function is_location_good(location, context) {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_150cbb51
 // Checksum 0x8b7b206b, Offset: 0x1780
 // Size: 0xee
 function function_150cbb51(location) {
@@ -197,7 +191,6 @@ function function_150cbb51(location) {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_c18de8cf
 // Checksum 0xb97972ad, Offset: 0x1878
 // Size: 0x14c
 function hackedcallbackpre(hacker) {
@@ -216,7 +209,6 @@ function hackedcallbackpre(hacker) {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_96e69632
 // Checksum 0x2dcdde62, Offset: 0x19d0
 // Size: 0x70
 function hackedcallbackpost(hacker) {
@@ -228,7 +220,6 @@ function hackedcallbackpost(hacker) {
 
 // Namespace ai_tank
 // Params 2, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_d92ac79e
 // Checksum 0xbf109e51, Offset: 0x1a48
 // Size: 0x3c
 function configureteampost(owner, ishacked) {
@@ -238,7 +229,6 @@ function configureteampost(owner, ishacked) {
 
 // Namespace ai_tank
 // Params 4, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_b74a2f7e
 // Checksum 0xfb758726, Offset: 0x1a90
 // Size: 0x4f0
 function ai_tank_killstreak_start(owner, origin, killstreak_id, category) {
@@ -302,7 +292,6 @@ function ai_tank_killstreak_start(owner, origin, killstreak_id, category) {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x0
-// namespace_e4c2b65e<file_0>::function_89166848
 // Checksum 0x9b0a5e26, Offset: 0x1f88
 // Size: 0x4e
 function function_89166848(var_ef327ae6) {
@@ -317,7 +306,6 @@ function function_89166848(var_ef327ae6) {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_7e504ffe
 // Checksum 0xb3d10147, Offset: 0x1fe0
 // Size: 0xac
 function setup_gameplay_think(category) {
@@ -332,7 +320,6 @@ function setup_gameplay_think(category) {
 
 // Namespace ai_tank
 // Params 0, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_9e843a04
 // Checksum 0x73275696, Offset: 0x2098
 // Size: 0x638
 function function_9e843a04() {
@@ -426,7 +413,6 @@ function function_9e843a04() {
 
 // Namespace ai_tank
 // Params 0, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_358c796
 // Checksum 0xc3f65bcf, Offset: 0x26d8
 // Size: 0x2e
 function tank_team_kill() {
@@ -437,7 +423,6 @@ function tank_team_kill() {
 
 // Namespace ai_tank
 // Params 0, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_b2682202
 // Checksum 0x687b8174, Offset: 0x2710
 // Size: 0x108
 function kill_monitor() {
@@ -464,7 +449,6 @@ function kill_monitor() {
 
 // Namespace ai_tank
 // Params 0, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_dc7f776f
 // Checksum 0x2f0cc8a5, Offset: 0x2820
 // Size: 0x54
 function tank_abort_think() {
@@ -474,7 +458,6 @@ function tank_abort_think() {
 
 // Namespace ai_tank
 // Params 0, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_2d730fe1
 // Checksum 0xeb1859e4, Offset: 0x2880
 // Size: 0x46
 function tank_timeout_callback() {
@@ -485,7 +468,6 @@ function tank_timeout_callback() {
 
 // Namespace ai_tank
 // Params 0, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_4cfcf823
 // Checksum 0xd682fd17, Offset: 0x28d0
 // Size: 0x156
 function tank_watch_owner_events() {
@@ -510,7 +492,6 @@ function tank_watch_owner_events() {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_955831f9
 // Checksum 0xf37741ef, Offset: 0x2a30
 // Size: 0x34
 function function_955831f9(drone) {
@@ -521,7 +502,6 @@ function function_955831f9(drone) {
 
 // Namespace ai_tank
 // Params 0, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_462873aa
 // Checksum 0xd0c8f2c2, Offset: 0x2a70
 // Size: 0x5c
 function stop_remote() {
@@ -535,7 +515,6 @@ function stop_remote() {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_de096b2f
 // Checksum 0xc5f31269, Offset: 0x2ad8
 // Size: 0x90
 function tank_hacked_health_update(hacker) {
@@ -549,7 +528,6 @@ function tank_hacked_health_update(hacker) {
 
 // Namespace ai_tank
 // Params 0, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_bef55a96
 // Checksum 0xcaaa38d5, Offset: 0x2b70
 // Size: 0x622
 function tank_damage_think() {
@@ -633,7 +611,6 @@ function tank_damage_think() {
 
 // Namespace ai_tank
 // Params 0, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_e4a16458
 // Checksum 0x8af86660, Offset: 0x31a0
 // Size: 0xec
 function tank_low_health_fx() {
@@ -650,7 +627,6 @@ function tank_low_health_fx() {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_6d14ab65
 // Checksum 0x59434629, Offset: 0x3298
 // Size: 0xcc
 function deleteonkillbrush(player) {
@@ -672,7 +648,6 @@ function deleteonkillbrush(player) {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_20ab677c
 // Checksum 0x378637f7, Offset: 0x3370
 // Size: 0x240
 function tank_stun(duration) {
@@ -710,7 +685,6 @@ function tank_stun(duration) {
 
 // Namespace ai_tank
 // Params 0, eflags: 0x0
-// namespace_e4c2b65e<file_0>::function_51851270
 // Checksum 0xe7cdb907, Offset: 0x35b8
 // Size: 0x21c
 function emp_crazy_death() {
@@ -741,7 +715,6 @@ function emp_crazy_death() {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_a6660bd7
 // Checksum 0x54c50b43, Offset: 0x37e0
 // Size: 0x62c
 function tank_death_think(hardpointname) {
@@ -819,7 +792,6 @@ function tank_death_think(hardpointname) {
 
 // Namespace ai_tank
 // Params 4, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_7acf3be1
 // Checksum 0xc1ad44e9, Offset: 0x3e18
 // Size: 0x5c
 function killstreak_stop_and_assert(hardpoint_name, team, killstreak_id, assert_msg) {
@@ -829,7 +801,6 @@ function killstreak_stop_and_assert(hardpoint_name, team, killstreak_id, assert_
 
 // Namespace ai_tank
 // Params 0, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_23c0c1c9
 // Checksum 0xe25a31cc, Offset: 0x3e80
 // Size: 0x7e
 function tank_too_far_from_nav_mesh_abort_think() {
@@ -846,7 +817,6 @@ function tank_too_far_from_nav_mesh_abort_think() {
 
 // Namespace ai_tank
 // Params 0, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_83a8d785
 // Checksum 0x496c51c2, Offset: 0x3f08
 // Size: 0x6a
 function function_83a8d785() {
@@ -858,7 +828,6 @@ function function_83a8d785() {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_c975281
 // Checksum 0x52917d3b, Offset: 0x3f80
 // Size: 0x1ce
 function function_c975281(var_f9e0a43) {
@@ -890,7 +859,6 @@ function function_c975281(var_f9e0a43) {
 
 // Namespace ai_tank
 // Params 0, eflags: 0x0
-// namespace_e4c2b65e<file_0>::function_2efae724
 // Checksum 0x1770f54f, Offset: 0x4158
 // Size: 0x18c
 function function_2efae724() {
@@ -915,7 +883,6 @@ function function_2efae724() {
 
 // Namespace ai_tank
 // Params 3, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_546e90f
 // Checksum 0xf9d99e04, Offset: 0x42f0
 // Size: 0x250
 function valid_target(target, team, owner) {
@@ -968,7 +935,6 @@ function valid_target(target, team, owner) {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_414a9fb0
 // Checksum 0xec7a2ec1, Offset: 0x4548
 // Size: 0x23c
 function starttankremotecontrol(drone) {
@@ -995,7 +961,6 @@ function starttankremotecontrol(drone) {
 
 // Namespace ai_tank
 // Params 2, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_69f947bd
 // Checksum 0x5e9bf515, Offset: 0x4790
 // Size: 0x21c
 function endtankremotecontrol(drone, exitrequestedbyowner) {
@@ -1028,7 +993,6 @@ function endtankremotecontrol(drone, exitrequestedbyowner) {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_926d969d
 // Checksum 0x4f51dbd, Offset: 0x49b8
 // Size: 0xe4
 function perform_recoil_missile_turret(player) {
@@ -1042,7 +1006,6 @@ function perform_recoil_missile_turret(player) {
 
 // Namespace ai_tank
 // Params 3, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_f6dae745
 // Checksum 0x29de3f74, Offset: 0x4aa8
 // Size: 0x94
 function perform_recoil(recoil_tag, force_scale_factor, force_z_offset) {
@@ -1053,7 +1016,6 @@ function perform_recoil(recoil_tag, force_scale_factor, force_z_offset) {
 
 // Namespace ai_tank
 // Params 2, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_847aec89
 // Checksum 0xca77c55b, Offset: 0x4b48
 // Size: 0x7c
 function update_client_ammo(ammo_count, driver_only_update) {
@@ -1070,7 +1032,6 @@ function update_client_ammo(ammo_count, driver_only_update) {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_aa0d75cc
 // Checksum 0xbdbe79cb, Offset: 0x4bd0
 // Size: 0x110
 function tank_rocket_watch(player) {
@@ -1096,7 +1057,6 @@ function tank_rocket_watch(player) {
 
 // Namespace ai_tank
 // Params 0, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_b10bdf31
 // Checksum 0x8a74a70b, Offset: 0x4ce8
 // Size: 0x58
 function tank_rocket_watch_ai() {
@@ -1110,7 +1070,6 @@ function tank_rocket_watch_ai() {
 
 // Namespace ai_tank
 // Params 1, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_9178feb0
 // Checksum 0x29a4a5b9, Offset: 0x4d48
 // Size: 0x114
 function reload_rockets(player) {
@@ -1130,7 +1089,6 @@ function reload_rockets(player) {
 
 // Namespace ai_tank
 // Params 0, eflags: 0x1 linked
-// namespace_e4c2b65e<file_0>::function_42767f73
 // Checksum 0x46a9f2e4, Offset: 0x4e68
 // Size: 0x1be
 function watchwater() {
@@ -1156,7 +1114,6 @@ function watchwater() {
 
     // Namespace ai_tank
     // Params 0, eflags: 0x1 linked
-    // namespace_e4c2b65e<file_0>::function_56aef0f
     // Checksum 0x8e0ebc57, Offset: 0x5030
     // Size: 0xa8
     function function_56aef0f() {
@@ -1173,7 +1130,6 @@ function watchwater() {
 
     // Namespace ai_tank
     // Params 2, eflags: 0x1 linked
-    // namespace_e4c2b65e<file_0>::function_a06e2866
     // Checksum 0xfb2c6ee6, Offset: 0x50e0
     // Size: 0xa2
     function function_a06e2866(node1, node2) {
@@ -1191,7 +1147,6 @@ function watchwater() {
 
     // Namespace ai_tank
     // Params 0, eflags: 0x1 linked
-    // namespace_e4c2b65e<file_0>::function_d20cb955
     // Checksum 0x8f8fedae, Offset: 0x5190
     // Size: 0x152
     function function_d20cb955() {
@@ -1211,7 +1166,6 @@ function watchwater() {
 
     // Namespace ai_tank
     // Params 0, eflags: 0x0
-    // namespace_e4c2b65e<file_0>::function_cd2a55ac
     // Checksum 0xb9f02065, Offset: 0x52f0
     // Size: 0x268
     function function_cd2a55ac() {
@@ -1244,7 +1198,6 @@ function watchwater() {
 
     // Namespace ai_tank
     // Params 0, eflags: 0x0
-    // namespace_e4c2b65e<file_0>::function_11381be6
     // Checksum 0x15b8a2af, Offset: 0x5560
     // Size: 0x158
     function function_11381be6() {

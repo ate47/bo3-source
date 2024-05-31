@@ -7,7 +7,6 @@
 
 // Namespace namespace_dc4ed61a
 // Params 0, eflags: 0x2
-// namespace_dc4ed61a<file_0>::function_2dc19561
 // Checksum 0x82bd8c9c, Offset: 0x2e0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,7 +15,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_dc4ed61a
 // Params 0, eflags: 0x1 linked
-// namespace_dc4ed61a<file_0>::function_8c87d8eb
 // Checksum 0xea4dcba1, Offset: 0x320
 // Size: 0x184
 function __init__() {
@@ -33,7 +31,6 @@ function __init__() {
 
 // Namespace namespace_dc4ed61a
 // Params 7, eflags: 0x1 linked
-// namespace_dc4ed61a<file_0>::function_41819534
 // Checksum 0x9fcee703, Offset: 0x4b0
 // Size: 0x94
 function function_41819534(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -45,7 +42,6 @@ function function_41819534(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_dc4ed61a
 // Params 7, eflags: 0x1 linked
-// namespace_dc4ed61a<file_0>::function_6a2c832a
 // Checksum 0xb771c5c6, Offset: 0x550
 // Size: 0x102
 function function_6a2c832a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -61,7 +57,6 @@ function function_6a2c832a(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_dc4ed61a
 // Params 2, eflags: 0x1 linked
-// namespace_dc4ed61a<file_0>::function_80209369
 // Checksum 0xccfe6267, Offset: 0x660
 // Size: 0x40
 function function_80209369(localclientnum, ent) {
@@ -72,7 +67,6 @@ function function_80209369(localclientnum, ent) {
 
 // Namespace namespace_dc4ed61a
 // Params 1, eflags: 0x1 linked
-// namespace_dc4ed61a<file_0>::function_749acb79
 // Checksum 0x55347330, Offset: 0x6a8
 // Size: 0x1f8
 function function_749acb79(localclientnum) {
@@ -98,7 +92,6 @@ function function_749acb79(localclientnum) {
 
 // Namespace namespace_dc4ed61a
 // Params 7, eflags: 0x1 linked
-// namespace_dc4ed61a<file_0>::function_fb3ed342
 // Checksum 0xb75706ca, Offset: 0x8a8
 // Size: 0xd6
 function function_fb3ed342(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {

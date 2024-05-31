@@ -6,7 +6,6 @@
 
 // Namespace global_fx
 // Params 0, eflags: 0x2
-// namespace_d6a4e7f5<file_0>::function_2dc19561
 // Checksum 0x16e132c9, Offset: 0x150
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -15,7 +14,6 @@ function autoexec function_2dc19561() {
 
 // Namespace global_fx
 // Params 0, eflags: 0x1 linked
-// namespace_d6a4e7f5<file_0>::function_8c87d8eb
 // Checksum 0x87c3f446, Offset: 0x198
 // Size: 0x14
 function __init__() {
@@ -24,7 +22,6 @@ function __init__() {
 
 // Namespace global_fx
 // Params 0, eflags: 0x1 linked
-// namespace_d6a4e7f5<file_0>::function_d290ebfa
 // Checksum 0xe3dce9dd, Offset: 0x1b8
 // Size: 0x14
 function main() {
@@ -33,7 +30,6 @@ function main() {
 
 // Namespace global_fx
 // Params 0, eflags: 0x1 linked
-// namespace_d6a4e7f5<file_0>::function_26ae781b
 // Checksum 0xa958fc3b, Offset: 0x1d8
 // Size: 0x94
 function function_26ae781b() {
@@ -46,7 +42,6 @@ function function_26ae781b() {
 
 // Namespace global_fx
 // Params 0, eflags: 0x1 linked
-// namespace_d6a4e7f5<file_0>::function_a660fd6f
 // Checksum 0x206421fd, Offset: 0x278
 // Size: 0x20
 function check_for_wind_override() {

@@ -8,7 +8,6 @@
 
 // Namespace aat
 // Params 0, eflags: 0x2
-// namespace_4db6bf4d<file_0>::function_2dc19561
 // Checksum 0x7a1f1815, Offset: 0x150
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,7 +16,6 @@ function autoexec function_2dc19561() {
 
 // Namespace aat
 // Params 0, eflags: 0x5 linked
-// namespace_4db6bf4d<file_0>::function_8c87d8eb
 // Checksum 0x79f2846a, Offset: 0x190
 // Size: 0x84
 function private __init__() {
@@ -31,7 +29,6 @@ function private __init__() {
 
 // Namespace aat
 // Params 3, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_50f16166
 // Checksum 0xc478bd7c, Offset: 0x220
 // Size: 0x178
 function register(name, localized_string, icon) {
@@ -48,7 +45,6 @@ function register(name, localized_string, icon) {
 
 // Namespace aat
 // Params 7, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_4bd5555b
 // Checksum 0x3e92723b, Offset: 0x3a0
 // Size: 0x74
 function aat_hud_manager(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -59,7 +55,6 @@ function aat_hud_manager(localclientnum, oldval, newval, bnewent, binitialsnap, 
 
 // Namespace aat
 // Params 0, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_cda32664
 // Checksum 0xd278f4b0, Offset: 0x420
 // Size: 0x190
 function finalize_clientfields() {
@@ -80,7 +75,6 @@ function finalize_clientfields() {
 
 // Namespace aat
 // Params 1, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_55505bc1
 // Checksum 0x958679c9, Offset: 0x5b8
 // Size: 0xaa
 function get_string(n_aat_index) {
@@ -94,7 +88,6 @@ function get_string(n_aat_index) {
 
 // Namespace aat
 // Params 1, eflags: 0x1 linked
-// namespace_4db6bf4d<file_0>::function_89b61b7d
 // Checksum 0xb001f4e2, Offset: 0x670
 // Size: 0xaa
 function get_icon(n_aat_index) {

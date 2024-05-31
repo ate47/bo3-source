@@ -7,7 +7,6 @@
 
 // Namespace namespace_1b1d095e
 // Params 0, eflags: 0x1 linked
-// namespace_1b1d095e<file_0>::function_d290ebfa
 // Checksum 0xece8b3ed, Offset: 0x148
 // Size: 0x114
 function main() {
@@ -21,7 +20,6 @@ function main() {
 
 // Namespace namespace_1b1d095e
 // Params 0, eflags: 0x1 linked
-// namespace_1b1d095e<file_0>::function_b205c01b
 // Checksum 0x33b89258, Offset: 0x268
 // Size: 0x84
 function function_b205c01b() {
@@ -41,7 +39,6 @@ function function_b205c01b() {
 
 // Namespace namespace_1b1d095e
 // Params 0, eflags: 0x1 linked
-// namespace_1b1d095e<file_0>::function_e0b7e5b1
 // Checksum 0xd4a14508, Offset: 0x2f8
 // Size: 0x1c
 function function_e0b7e5b1() {
@@ -50,7 +47,6 @@ function function_e0b7e5b1() {
 
 // Namespace namespace_1b1d095e
 // Params 0, eflags: 0x1 linked
-// namespace_1b1d095e<file_0>::function_4c110feb
 // Checksum 0x732b8e43, Offset: 0x320
 // Size: 0x54
 function playintro() {
@@ -60,7 +56,6 @@ function playintro() {
 
 // Namespace namespace_1b1d095e
 // Params 0, eflags: 0x1 linked
-// namespace_1b1d095e<file_0>::function_e1a89b2
 // Checksum 0x1ac63891, Offset: 0x380
 // Size: 0x44
 function function_e1a89b2() {
@@ -70,7 +65,6 @@ function function_e1a89b2() {
 
 // Namespace namespace_1b1d095e
 // Params 0, eflags: 0x1 linked
-// namespace_1b1d095e<file_0>::function_1982fa4a
 // Checksum 0xf9f964c, Offset: 0x3d0
 // Size: 0x44
 function function_1982fa4a() {
@@ -80,7 +74,6 @@ function function_1982fa4a() {
 
 // Namespace namespace_1b1d095e
 // Params 4, eflags: 0x1 linked
-// namespace_1b1d095e<file_0>::function_5bbc7355
 // Checksum 0xad4bdf7e, Offset: 0x420
 // Size: 0xdc
 function playevent(event, var_d145aed1, fighter, var_9751e39f) {

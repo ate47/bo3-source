@@ -10,7 +10,6 @@
 
 // Namespace zm_bgb_pop_shocks
 // Params 0, eflags: 0x2
-// namespace_112fb534<file_0>::function_2dc19561
 // Checksum 0xa4d4e6c6, Offset: 0x168
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,7 +18,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_pop_shocks
 // Params 0, eflags: 0x1 linked
-// namespace_112fb534<file_0>::function_8c87d8eb
 // Checksum 0xbe98da8, Offset: 0x1a8
 // Size: 0x3c
 function __init__() {

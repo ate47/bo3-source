@@ -9,7 +9,6 @@
 
 // Namespace friendlyfire
 // Params 0, eflags: 0x2
-// namespace_98df9150<file_0>::function_2dc19561
 // Checksum 0x8f431ea0, Offset: 0x308
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace friendlyfire
 // Params 0, eflags: 0x1 linked
-// namespace_98df9150<file_0>::function_8c87d8eb
 // Checksum 0x5bcd9dae, Offset: 0x348
 // Size: 0x10c
 function __init__() {
@@ -40,7 +38,6 @@ function __init__() {
 
 // Namespace friendlyfire
 // Params 0, eflags: 0x1 linked
-// namespace_98df9150<file_0>::function_d3f0f21
 // Checksum 0xb679ea8b, Offset: 0x460
 // Size: 0x5c
 function init_player() {
@@ -52,7 +49,6 @@ function init_player() {
 
 // Namespace friendlyfire
 // Params 1, eflags: 0x1 linked
-// namespace_98df9150<file_0>::function_8e961e39
 // Checksum 0x87f3e56, Offset: 0x4c8
 // Size: 0x94
 function function_8e961e39(msg) {
@@ -68,7 +64,6 @@ function function_8e961e39(msg) {
 
 // Namespace friendlyfire
 // Params 0, eflags: 0x1 linked
-// namespace_98df9150<file_0>::function_f327b504
 // Checksum 0xe91b0691, Offset: 0x568
 // Size: 0xce8
 function debug_friendlyfire() {
@@ -198,7 +193,6 @@ function debug_friendlyfire() {
 
 // Namespace friendlyfire
 // Params 1, eflags: 0x1 linked
-// namespace_98df9150<file_0>::function_b74e3e5b
 // Checksum 0x6a1c25f3, Offset: 0x1258
 // Size: 0x3e
 function function_b74e3e5b(entity) {
@@ -210,7 +204,6 @@ function function_b74e3e5b(entity) {
 
 // Namespace friendlyfire
 // Params 4, eflags: 0x1 linked
-// namespace_98df9150<file_0>::function_36510feb
 // Checksum 0x3dd72d5a, Offset: 0x12a0
 // Size: 0x5a4
 function function_36510feb(entity, damage, attacker, method) {
@@ -304,7 +297,6 @@ function function_36510feb(entity, damage, attacker, method) {
 
 // Namespace friendlyfire
 // Params 1, eflags: 0x0
-// namespace_98df9150<file_0>::function_29ff364e
 // Checksum 0x30087afe, Offset: 0x1850
 // Size: 0x610
 function friendly_fire_think(entity) {
@@ -405,7 +397,6 @@ function friendly_fire_think(entity) {
 
 // Namespace friendlyfire
 // Params 0, eflags: 0x1 linked
-// namespace_98df9150<file_0>::function_2de1b253
 // Checksum 0x3fca0fb4, Offset: 0x1e68
 // Size: 0x34
 function friendly_fire_checkpoints() {
@@ -416,7 +407,6 @@ function friendly_fire_checkpoints() {
 
 // Namespace friendlyfire
 // Params 2, eflags: 0x1 linked
-// namespace_98df9150<file_0>::function_3a0893c0
 // Checksum 0xcf582966, Offset: 0x1ea8
 // Size: 0x9a
 function check_grenade(entity, method) {
@@ -435,7 +425,6 @@ function check_grenade(entity, method) {
 
 // Namespace friendlyfire
 // Params 0, eflags: 0x1 linked
-// namespace_98df9150<file_0>::function_e60e13b8
 // Checksum 0x707086bb, Offset: 0x1f50
 // Size: 0x44
 function savecommit_aftergrenade() {
@@ -449,7 +438,6 @@ function savecommit_aftergrenade() {
 
 // Namespace friendlyfire
 // Params 0, eflags: 0x1 linked
-// namespace_98df9150<file_0>::function_d3b6aec2
 // Checksum 0x84e6f7e5, Offset: 0x1fa0
 // Size: 0xa0
 function participation_point_cap() {
@@ -467,7 +455,6 @@ function participation_point_cap() {
 
 // Namespace friendlyfire
 // Params 0, eflags: 0x1 linked
-// namespace_98df9150<file_0>::function_bd017349
 // Checksum 0xbf157873, Offset: 0x2048
 // Size: 0x66
 function participation_point_flattenovertime() {
@@ -485,7 +472,6 @@ function participation_point_flattenovertime() {
 
 // Namespace friendlyfire
 // Params 0, eflags: 0x0
-// namespace_98df9150<file_0>::function_ae58abe6
 // Checksum 0x51d81f6d, Offset: 0x20b8
 // Size: 0x10
 function turnbackon() {
@@ -494,7 +480,6 @@ function turnbackon() {
 
 // Namespace friendlyfire
 // Params 0, eflags: 0x0
-// namespace_98df9150<file_0>::function_f676f983
 // Checksum 0x1265aa88, Offset: 0x20d0
 // Size: 0x10
 function turnoff() {
@@ -503,7 +488,6 @@ function turnoff() {
 
 // Namespace friendlyfire
 // Params 0, eflags: 0x1 linked
-// namespace_98df9150<file_0>::function_fab0cc81
 // Checksum 0xc7fd51ff, Offset: 0x20e8
 // Size: 0x8c
 function missionfail() {
@@ -520,7 +504,6 @@ function missionfail() {
 
 // Namespace friendlyfire
 // Params 1, eflags: 0x0
-// namespace_98df9150<file_0>::function_20e1fd85
 // Checksum 0x58ad3d55, Offset: 0x2180
 // Size: 0x7c
 function notifydamage(entity) {
@@ -534,7 +517,6 @@ function notifydamage(entity) {
 
 // Namespace friendlyfire
 // Params 1, eflags: 0x0
-// namespace_98df9150<file_0>::function_1c88568
 // Checksum 0xd2f3d1c0, Offset: 0x2208
 // Size: 0x6c
 function notifydamagenotdone(entity) {
@@ -545,7 +527,6 @@ function notifydamagenotdone(entity) {
 
 // Namespace friendlyfire
 // Params 1, eflags: 0x0
-// namespace_98df9150<file_0>::function_1c834dc8
 // Checksum 0x37a32e72, Offset: 0x2280
 // Size: 0x5c
 function notifydeath(entity) {

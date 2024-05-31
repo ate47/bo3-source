@@ -6,7 +6,6 @@
 
 // Namespace zm_powerup_shield_charge
 // Params 0, eflags: 0x2
-// namespace_2a4ec8bc<file_0>::function_2dc19561
 // Checksum 0xca25f467, Offset: 0x100
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,7 +14,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_shield_charge
 // Params 0, eflags: 0x1 linked
-// namespace_2a4ec8bc<file_0>::function_8c87d8eb
 // Checksum 0x162f3777, Offset: 0x140
 // Size: 0x34
 function __init__() {

@@ -9,7 +9,6 @@
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_dabbe128
 // Checksum 0xbf800c51, Offset: 0x1e8
 // Size: 0x134
 function callback(event, params) {
@@ -39,7 +38,6 @@ function callback(event, params) {
 
 // Namespace callback
 // Params 3, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_de460788
 // Checksum 0xf8621dc8, Offset: 0x328
 // Size: 0x18c
 function add_callback(event, func, obj) {
@@ -62,7 +60,6 @@ function add_callback(event, func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_1eedf5e0
 // Checksum 0xe9a29850, Offset: 0x4c0
 // Size: 0x3c
 function remove_callback_on_death(event, func) {
@@ -72,7 +69,6 @@ function remove_callback_on_death(event, func) {
 
 // Namespace callback
 // Params 3, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_724b62dd
 // Checksum 0x47454813, Offset: 0x508
 // Size: 0x13e
 function remove_callback(event, func, obj) {
@@ -90,7 +86,6 @@ function remove_callback(event, func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_faeb731e
 // Checksum 0x59fb6166, Offset: 0x650
 // Size: 0x34
 function on_finalize_initialization(func, obj) {
@@ -99,7 +94,6 @@ function on_finalize_initialization(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_eb99da89
 // Checksum 0xa3bb1492, Offset: 0x690
 // Size: 0x34
 function on_connect(func, obj) {
@@ -108,7 +102,6 @@ function on_connect(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_bcd31c2c
 // Checksum 0x4a68b221, Offset: 0x6d0
 // Size: 0x34
 function remove_on_connect(func, obj) {
@@ -117,7 +110,6 @@ function remove_on_connect(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_83731a3f
 // Checksum 0x21382839, Offset: 0x710
 // Size: 0x34
 function on_connecting(func, obj) {
@@ -126,7 +118,6 @@ function on_connecting(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x0
-// namespace_dabbe128<file_0>::function_7ebe505c
 // Checksum 0xc650034d, Offset: 0x750
 // Size: 0x34
 function remove_on_connecting(func, obj) {
@@ -135,7 +126,6 @@ function remove_on_connecting(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_95670def
 // Checksum 0x4f79bac7, Offset: 0x790
 // Size: 0x34
 function on_disconnect(func, obj) {
@@ -144,7 +134,6 @@ function on_disconnect(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_1f1cf008
 // Checksum 0xeeefc98a, Offset: 0x7d0
 // Size: 0x34
 function remove_on_disconnect(func, obj) {
@@ -153,7 +142,6 @@ function remove_on_disconnect(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_356a4ee1
 // Checksum 0xb675cd4e, Offset: 0x810
 // Size: 0x34
 function on_spawned(func, obj) {
@@ -162,7 +150,6 @@ function on_spawned(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_a0ac4434
 // Checksum 0x1b1f5633, Offset: 0x850
 // Size: 0x34
 function remove_on_spawned(func, obj) {
@@ -171,7 +158,6 @@ function remove_on_spawned(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_aa179d1b
 // Checksum 0x12de6700, Offset: 0x890
 // Size: 0x34
 function on_loadout(func, obj) {
@@ -180,7 +166,6 @@ function on_loadout(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_91a3f14e
 // Checksum 0x2b2c56fc, Offset: 0x8d0
 // Size: 0x34
 function remove_on_loadout(func, obj) {
@@ -189,7 +174,6 @@ function remove_on_loadout(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_4d1d6b36
 // Checksum 0x4683f8bd, Offset: 0x910
 // Size: 0x34
 function on_player_damage(func, obj) {
@@ -198,7 +182,6 @@ function on_player_damage(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_529abdc3
 // Checksum 0x96eaa2de, Offset: 0x950
 // Size: 0x34
 function remove_on_player_damage(func, obj) {
@@ -207,7 +190,6 @@ function remove_on_player_damage(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_c61b24c4
 // Checksum 0x29a20c08, Offset: 0x990
 // Size: 0x34
 function on_start_gametype(func, obj) {
@@ -216,7 +198,6 @@ function on_start_gametype(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_f6076bfe
 // Checksum 0x8d185449, Offset: 0x9d0
 // Size: 0x34
 function on_joined_team(func, obj) {
@@ -225,7 +206,6 @@ function on_joined_team(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_f10e0be0
 // Checksum 0xa955467d, Offset: 0xa10
 // Size: 0x34
 function on_joined_spectate(func, obj) {
@@ -234,7 +214,6 @@ function on_joined_spectate(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_1b292fa6
 // Checksum 0x48cfde09, Offset: 0xa50
 // Size: 0x34
 function on_player_killed(func, obj) {
@@ -243,7 +222,6 @@ function on_player_killed(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x0
-// namespace_dabbe128<file_0>::function_73c773b3
 // Checksum 0xa9cbf769, Offset: 0xa90
 // Size: 0x34
 function remove_on_player_killed(func, obj) {
@@ -252,7 +230,6 @@ function remove_on_player_killed(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_de1a6d25
 // Checksum 0x1ba9bef2, Offset: 0xad0
 // Size: 0x34
 function on_ai_killed(func, obj) {
@@ -261,7 +238,6 @@ function on_ai_killed(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_fad550c4
 // Checksum 0x4fa015b1, Offset: 0xb10
 // Size: 0x34
 function remove_on_ai_killed(func, obj) {
@@ -270,7 +246,6 @@ function remove_on_ai_killed(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_6aceae7c
 // Checksum 0x40c25da0, Offset: 0xb50
 // Size: 0x34
 function on_actor_killed(func, obj) {
@@ -279,7 +254,6 @@ function on_actor_killed(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_a09757b3
 // Checksum 0x464d37e4, Offset: 0xb90
 // Size: 0x34
 function remove_on_actor_killed(func, obj) {
@@ -288,7 +262,6 @@ function remove_on_actor_killed(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_82c5e7ec
 // Checksum 0xb1a13417, Offset: 0xbd0
 // Size: 0x34
 function on_vehicle_spawned(func, obj) {
@@ -297,7 +270,6 @@ function on_vehicle_spawned(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x0
-// namespace_dabbe128<file_0>::function_dc00bdb1
 // Checksum 0x4e9add3b, Offset: 0xc10
 // Size: 0x34
 function remove_on_vehicle_spawned(func, obj) {
@@ -306,7 +278,6 @@ function remove_on_vehicle_spawned(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_5cf145c9
 // Checksum 0xf010e8ca, Offset: 0xc50
 // Size: 0x34
 function on_vehicle_killed(func, obj) {
@@ -315,7 +286,6 @@ function on_vehicle_killed(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_9fcef20a
 // Checksum 0x1019c3f2, Offset: 0xc90
 // Size: 0x34
 function remove_on_vehicle_killed(func, obj) {
@@ -324,7 +294,6 @@ function remove_on_vehicle_killed(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_7bb100ad
 // Checksum 0xa0498752, Offset: 0xcd0
 // Size: 0x34
 function on_ai_damage(func, obj) {
@@ -333,7 +302,6 @@ function on_ai_damage(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_840ed4d4
 // Checksum 0x6a025514, Offset: 0xd10
 // Size: 0x34
 function remove_on_ai_damage(func, obj) {
@@ -342,7 +310,6 @@ function remove_on_ai_damage(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_87f30e90
 // Checksum 0xb48f6ced, Offset: 0xd50
 // Size: 0x34
 function on_ai_spawned(func, obj) {
@@ -351,7 +318,6 @@ function on_ai_spawned(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_3f5e6667
 // Checksum 0x6519d1ee, Offset: 0xd90
 // Size: 0x34
 function remove_on_ai_spawned(func, obj) {
@@ -360,7 +326,6 @@ function remove_on_ai_spawned(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_5e1777fc
 // Checksum 0xa14636cb, Offset: 0xdd0
 // Size: 0x34
 function on_actor_damage(func, obj) {
@@ -369,7 +334,6 @@ function on_actor_damage(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_7f6aa1c3
 // Checksum 0xafe44382, Offset: 0xe10
 // Size: 0x34
 function remove_on_actor_damage(func, obj) {
@@ -378,7 +342,6 @@ function remove_on_actor_damage(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_d38f54b1
 // Checksum 0xb00793e5, Offset: 0xe50
 // Size: 0x34
 function on_vehicle_damage(func, obj) {
@@ -387,7 +350,6 @@ function on_vehicle_damage(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x0
-// namespace_dabbe128<file_0>::function_129f29ea
 // Checksum 0x180d0c44, Offset: 0xe90
 // Size: 0x34
 function remove_on_vehicle_damage(func, obj) {
@@ -396,7 +358,6 @@ function remove_on_vehicle_damage(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_df3cb43b
 // Checksum 0x49724d9c, Offset: 0xed0
 // Size: 0x34
 function on_laststand(func, obj) {
@@ -405,7 +366,6 @@ function on_laststand(func, obj) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_dd7eece
 // Checksum 0xc2655bd9, Offset: 0xf10
 // Size: 0x34
 function on_challenge_complete(func, obj) {
@@ -414,7 +374,6 @@ function on_challenge_complete(func, obj) {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_cb755575
 // Checksum 0xd96be601, Offset: 0xf50
 // Size: 0x2c
 function codecallback_preinitialization() {
@@ -424,7 +383,6 @@ function codecallback_preinitialization() {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_2f55cff4
 // Checksum 0xf10abc5d, Offset: 0xf88
 // Size: 0x2c
 function codecallback_finalizeinitialization() {
@@ -434,7 +392,6 @@ function codecallback_finalizeinitialization() {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_36b54eb3
 // Checksum 0x8ed56e39, Offset: 0xfc0
 // Size: 0x3e
 function add_weapon_damage(weapontype, callback) {
@@ -446,7 +403,6 @@ function add_weapon_damage(weapontype, callback) {
 
 // Namespace callback
 // Params 5, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_d801d455
 // Checksum 0x817bf70f, Offset: 0x1008
 // Size: 0xda
 function callback_weapon_damage(eattacker, einflictor, weapon, meansofdeath, damage) {
@@ -464,7 +420,6 @@ function callback_weapon_damage(eattacker, einflictor, weapon, meansofdeath, dam
 
 // Namespace callback
 // Params 1, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_367a33a8
 // Checksum 0x39eafcca, Offset: 0x10f0
 // Size: 0x44
 function function_367a33a8(callback) {
@@ -476,7 +431,6 @@ function function_367a33a8(callback) {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_25419ce
 // Checksum 0x40668f64, Offset: 0x1140
 // Size: 0x54
 function function_25419ce() {
@@ -489,7 +443,6 @@ function function_25419ce() {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_3e2fcf68
 // Checksum 0xb20b5dfc, Offset: 0x11a0
 // Size: 0x3c
 function codecallback_startgametype() {
@@ -501,7 +454,6 @@ function codecallback_startgametype() {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_657088a5
 // Checksum 0x117ee0d9, Offset: 0x11e8
 // Size: 0x1c
 function codecallback_playerconnect() {
@@ -511,7 +463,6 @@ function codecallback_playerconnect() {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_246a8e7b
 // Checksum 0x850de460, Offset: 0x1210
 // Size: 0x64
 function codecallback_playerdisconnect() {
@@ -525,7 +476,6 @@ function codecallback_playerdisconnect() {
 
 // Namespace callback
 // Params 0, eflags: 0x0
-// namespace_dabbe128<file_0>::function_666e5a06
 // Checksum 0x7ff90849, Offset: 0x1280
 // Size: 0x34
 function codecallback_migration_setupgametype() {
@@ -535,7 +485,6 @@ function codecallback_migration_setupgametype() {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_4e914cd8
 // Checksum 0xa3e742c0, Offset: 0x12c0
 // Size: 0x34
 function codecallback_hostmigration() {
@@ -545,7 +494,6 @@ function codecallback_hostmigration() {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_b380737f
 // Checksum 0x1da9cab5, Offset: 0x1300
 // Size: 0x34
 function codecallback_hostmigrationsave() {
@@ -555,7 +503,6 @@ function codecallback_hostmigrationsave() {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_7f89f59a
 // Checksum 0x5bd0d6fd, Offset: 0x1340
 // Size: 0x34
 function codecallback_prehostmigrationsave() {
@@ -565,7 +512,6 @@ function codecallback_prehostmigrationsave() {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_d79e319c
 // Checksum 0xeeabbfa5, Offset: 0x1380
 // Size: 0x34
 function codecallback_playermigrated() {
@@ -575,7 +521,6 @@ function codecallback_playermigrated() {
 
 // Namespace callback
 // Params 13, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_158695a6
 // Checksum 0x8f21f542, Offset: 0x13c0
 // Size: 0xb8
 function codecallback_playerdamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, timeoffset, boneindex, vsurfacenormal) {
@@ -585,7 +530,6 @@ function codecallback_playerdamage(einflictor, eattacker, idamage, idflags, smea
 
 // Namespace callback
 // Params 9, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_58befed6
 // Checksum 0x91abe38a, Offset: 0x1480
 // Size: 0x88
 function codecallback_playerkilled(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, shitloc, timeoffset, deathanimduration) {
@@ -595,7 +539,6 @@ function codecallback_playerkilled(einflictor, eattacker, idamage, smeansofdeath
 
 // Namespace callback
 // Params 9, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_720dbde7
 // Checksum 0x3cf3c93e, Offset: 0x1510
 // Size: 0x88
 function codecallback_playerlaststand(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, shitloc, timeoffset, delayoverride) {
@@ -605,7 +548,6 @@ function codecallback_playerlaststand(einflictor, eattacker, idamage, smeansofde
 
 // Namespace callback
 // Params 8, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_b56a3eff
 // Checksum 0x21b2fc39, Offset: 0x15a0
 // Size: 0x7c
 function codecallback_playermelee(eattacker, idamage, weapon, vorigin, vdir, boneindex, shieldhit, frombehind) {
@@ -615,7 +557,6 @@ function codecallback_playermelee(eattacker, idamage, weapon, vorigin, vdir, bon
 
 // Namespace callback
 // Params 1, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_4449c9fd
 // Checksum 0x48935066, Offset: 0x1628
 // Size: 0x20
 function codecallback_actorspawned(spawner) {
@@ -624,7 +565,6 @@ function codecallback_actorspawned(spawner) {
 
 // Namespace callback
 // Params 15, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_331f043e
 // Checksum 0x1a0221f0, Offset: 0x1650
 // Size: 0xc8
 function codecallback_actordamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, timeoffset, boneindex, modelindex, surfacetype, surfacenormal) {
@@ -633,7 +573,6 @@ function codecallback_actordamage(einflictor, eattacker, idamage, idflags, smean
 
 // Namespace callback
 // Params 8, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_d73f0c3e
 // Checksum 0x2ecfc077, Offset: 0x1720
 // Size: 0x74
 function codecallback_actorkilled(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, shitloc, timeoffset) {
@@ -642,7 +581,6 @@ function codecallback_actorkilled(einflictor, eattacker, idamage, smeansofdeath,
 
 // Namespace callback
 // Params 1, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_b89cfe24
 // Checksum 0x7b9fad6f, Offset: 0x17a0
 // Size: 0x20
 function codecallback_actorcloned(original) {
@@ -651,7 +589,6 @@ function codecallback_actorcloned(original) {
 
 // Namespace callback
 // Params 1, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_7bdac1b4
 // Checksum 0xd98ff782, Offset: 0x17c8
 // Size: 0x2c
 function codecallback_vehiclespawned(spawner) {
@@ -662,7 +599,6 @@ function codecallback_vehiclespawned(spawner) {
 
 // Namespace callback
 // Params 8, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_6b913a11
 // Checksum 0x33edc3ba, Offset: 0x1800
 // Size: 0x74
 function codecallback_vehiclekilled(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -671,7 +607,6 @@ function codecallback_vehiclekilled(einflictor, eattacker, idamage, smeansofdeat
 
 // Namespace callback
 // Params 15, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_8d618209
 // Checksum 0xb692cfa, Offset: 0x1880
 // Size: 0xc8
 function codecallback_vehicledamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, timeoffset, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -680,7 +615,6 @@ function codecallback_vehicledamage(einflictor, eattacker, idamage, idflags, sme
 
 // Namespace callback
 // Params 13, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_d660f89f
 // Checksum 0xed79f1cc, Offset: 0x1950
 // Size: 0xb0
 function codecallback_vehicleradiusdamage(einflictor, eattacker, idamage, finnerdamage, fouterdamage, idflags, smeansofdeath, weapon, vpoint, fradius, fconeanglecos, vconedir, timeoffset) {
@@ -689,7 +623,6 @@ function codecallback_vehicleradiusdamage(einflictor, eattacker, idamage, finner
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_d96f4ab1
 // Checksum 0xac8c0a8d, Offset: 0x1a08
 // Size: 0x8a
 function finishcustomtraversallistener() {
@@ -706,7 +639,6 @@ function finishcustomtraversallistener() {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_609a27ef
 // Checksum 0x404e990c, Offset: 0x1aa0
 // Size: 0x6c
 function killedcustomtraversallistener() {
@@ -721,7 +653,6 @@ function killedcustomtraversallistener() {
 
 // Namespace callback
 // Params 10, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_3baa0a75
 // Checksum 0xe2c15bc, Offset: 0x1b18
 // Size: 0x1bc
 function codecallback_playcustomtraversal(entity, var_db65f0f0, endparent, origin, angles, var_73e74270, animmode, playbackspeed, goaltime, lerptime) {
@@ -742,7 +673,6 @@ function codecallback_playcustomtraversal(entity, var_db65f0f0, endparent, origi
 
 // Namespace callback
 // Params 2, eflags: 0x0
-// namespace_dabbe128<file_0>::function_b05486d8
 // Checksum 0x8ede0787, Offset: 0x1ce0
 // Size: 0x94
 function codecallback_faceeventnotify(notify_msg, ent) {
@@ -755,7 +685,6 @@ function codecallback_faceeventnotify(notify_msg, ent) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_29617602
 // Checksum 0x85c5ee2f, Offset: 0x1d80
 // Size: 0xde
 function codecallback_menuresponse(action, arg) {
@@ -773,7 +702,6 @@ function codecallback_menuresponse(action, arg) {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_6ea16f87
 // Checksum 0x1e62d2e1, Offset: 0x1e68
 // Size: 0x98
 function menu_response_queue_pump() {
@@ -789,7 +717,6 @@ function menu_response_queue_pump() {
 
 // Namespace callback
 // Params 3, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_99529282
 // Checksum 0x542a4e23, Offset: 0x1f08
 // Size: 0x5a
 function codecallback_callserverscript(var_2123133d, label, param) {
@@ -803,7 +730,6 @@ function codecallback_callserverscript(var_2123133d, label, param) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_c0e00e7d
 // Checksum 0xb90539ac, Offset: 0x1f70
 // Size: 0x52
 function codecallback_callserverscriptonlevel(label, param) {
@@ -817,7 +743,6 @@ function codecallback_callserverscriptonlevel(label, param) {
 
 // Namespace callback
 // Params 4, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_b13afaa8
 // Checksum 0xc1a0e47e, Offset: 0x1fd0
 // Size: 0x94
 function codecallback_launchsidemission(var_e5152480, str_gametype, var_d7bc23c2, var_c5147073) {
@@ -830,7 +755,6 @@ function codecallback_launchsidemission(var_e5152480, str_gametype, var_d7bc23c2
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_94d329
 // Checksum 0x1c1e0fbb, Offset: 0x2070
 // Size: 0x86
 function codecallback_fadeblackscreen(duration, blendtime) {
@@ -843,7 +767,6 @@ function codecallback_fadeblackscreen(duration, blendtime) {
 
 // Namespace callback
 // Params 1, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_f39f3bec
 // Checksum 0x3f1f9d49, Offset: 0x2100
 // Size: 0x1e
 function function_f39f3bec(var_4ffca9e2) {
@@ -852,7 +775,6 @@ function function_f39f3bec(var_4ffca9e2) {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_7668abe
 // Checksum 0x2f23f6ef, Offset: 0x2128
 // Size: 0x1a4
 function abort_level() {
@@ -878,7 +800,6 @@ function abort_level() {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_ad25bd72
 // Checksum 0x7e7088b0, Offset: 0x22d8
 // Size: 0x2a
 function codecallback_glasssmash(pos, dir) {
@@ -887,7 +808,6 @@ function codecallback_glasssmash(pos, dir) {
 
 // Namespace callback
 // Params 2, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_e7bdf0a0
 // Checksum 0x3eb81165, Offset: 0x2310
 // Size: 0x2c
 function codecallback_botentereduseredge(startnode, endnode) {
@@ -896,7 +816,6 @@ function codecallback_botentereduseredge(startnode, endnode) {
 
 // Namespace callback
 // Params 1, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_d75726b4
 // Checksum 0x23be3dea, Offset: 0x2348
 // Size: 0xd0
 function codecallback_decoration(name) {
@@ -917,7 +836,6 @@ function codecallback_decoration(name) {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_8f2e7dad
 // Checksum 0x99ec1590, Offset: 0x2420
 // Size: 0x4
 function callback_void() {

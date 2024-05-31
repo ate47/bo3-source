@@ -12,7 +12,6 @@
 
 // Namespace namespace_5846e657
 // Params 0, eflags: 0x2
-// namespace_5846e657<file_0>::function_2dc19561
 // Checksum 0x325425cd, Offset: 0x208
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_5846e657
 // Params 0, eflags: 0x1 linked
-// namespace_5846e657<file_0>::function_8c87d8eb
 // Checksum 0x261418fb, Offset: 0x248
 // Size: 0x104
 function __init__() {
@@ -36,7 +34,6 @@ function __init__() {
 
 // Namespace namespace_5846e657
 // Params 1, eflags: 0x1 linked
-// namespace_5846e657<file_0>::function_439b773e
 // Checksum 0x59b207ff, Offset: 0x358
 // Size: 0x2a
 function function_439b773e(slot) {
@@ -45,7 +42,6 @@ function function_439b773e(slot) {
 
 // Namespace namespace_5846e657
 // Params 1, eflags: 0x1 linked
-// namespace_5846e657<file_0>::function_aab070f0
 // Checksum 0xe942b942, Offset: 0x390
 // Size: 0x50
 function function_aab070f0(slot) {
@@ -56,7 +52,6 @@ function function_aab070f0(slot) {
 
 // Namespace namespace_5846e657
 // Params 2, eflags: 0x1 linked
-// namespace_5846e657<file_0>::function_612f0337
 // Checksum 0xb4356e45, Offset: 0x3e8
 // Size: 0x5c
 function function_612f0337(slot, weapon) {
@@ -67,7 +62,6 @@ function function_612f0337(slot, weapon) {
 
 // Namespace namespace_5846e657
 // Params 2, eflags: 0x1 linked
-// namespace_5846e657<file_0>::function_2f62c66a
 // Checksum 0x5b44aba4, Offset: 0x450
 // Size: 0x5c
 function function_2f62c66a(slot, weapon) {
@@ -78,7 +72,6 @@ function function_2f62c66a(slot, weapon) {
 
 // Namespace namespace_5846e657
 // Params 2, eflags: 0x1 linked
-// namespace_5846e657<file_0>::function_957ab904
 // Checksum 0x1e55dfb7, Offset: 0x4b8
 // Size: 0x5c
 function function_957ab904(slot, weapon) {
@@ -89,7 +82,6 @@ function function_957ab904(slot, weapon) {
 
 // Namespace namespace_5846e657
 // Params 0, eflags: 0x1 linked
-// namespace_5846e657<file_0>::function_3ee9b19
 // Checksum 0x60f5fc23, Offset: 0x520
 // Size: 0x44
 function function_3ee9b19() {
@@ -100,7 +92,6 @@ function function_3ee9b19() {
 
 // Namespace namespace_5846e657
 // Params 2, eflags: 0x1 linked
-// namespace_5846e657<file_0>::function_c5d34eae
 // Checksum 0xe829d52c, Offset: 0x570
 // Size: 0x7c
 function function_c5d34eae(slot, weapon) {
@@ -112,7 +103,6 @@ function function_c5d34eae(slot, weapon) {
 
 // Namespace namespace_5846e657
 // Params 2, eflags: 0x1 linked
-// namespace_5846e657<file_0>::function_ae24e944
 // Checksum 0x233804a1, Offset: 0x5f8
 // Size: 0x7c
 function function_ae24e944(slot, weapon) {
@@ -124,7 +114,6 @@ function function_ae24e944(slot, weapon) {
 
 // Namespace namespace_5846e657
 // Params 2, eflags: 0x1 linked
-// namespace_5846e657<file_0>::function_bbd467e7
 // Checksum 0xfc9f1239, Offset: 0x680
 // Size: 0x5c
 function function_bbd467e7(slot, weapon) {

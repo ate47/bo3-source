@@ -27,7 +27,6 @@
 
 // Namespace archetype_human
 // Params 0, eflags: 0x2
-// namespace_f8c5be8c<file_0>::function_c35e6aab
 // Checksum 0xe4a9e2c8, Offset: 0x6c8
 // Size: 0xbc
 function autoexec init() {
@@ -42,7 +41,6 @@ function autoexec init() {
 
 // Namespace archetype_human
 // Params 0, eflags: 0x5 linked
-// namespace_f8c5be8c<file_0>::function_bbcc300f
 // Checksum 0x80472732, Offset: 0x790
 // Size: 0x124
 function private archetypehumaninit() {
@@ -59,7 +57,6 @@ function private archetypehumaninit() {
 
 // Namespace archetype_human
 // Params 0, eflags: 0x5 linked
-// namespace_f8c5be8c<file_0>::function_d8065358
 // Checksum 0xb6638b53, Offset: 0x8c0
 // Size: 0x12c
 function private archetypehumanblackboardinit() {
@@ -83,7 +80,6 @@ function private archetypehumanblackboardinit() {
 
 // Namespace archetype_human
 // Params 1, eflags: 0x5 linked
-// namespace_f8c5be8c<file_0>::function_31e69b9a
 // Checksum 0x48a413f9, Offset: 0x9f8
 // Size: 0xdc
 function private archetypehumanonbehavecallback(entity) {
@@ -98,7 +94,6 @@ function private archetypehumanonbehavecallback(entity) {
 
 // Namespace archetype_human
 // Params 1, eflags: 0x5 linked
-// namespace_f8c5be8c<file_0>::function_906674ee
 // Checksum 0x7c317abd, Offset: 0xae0
 // Size: 0x84
 function private archetypehumanonanimscriptedcallback(entity) {
@@ -110,7 +105,6 @@ function private archetypehumanonanimscriptedcallback(entity) {
 
 // Namespace archetype_human
 // Params 8, eflags: 0x5 linked
-// namespace_f8c5be8c<file_0>::function_354f8239
 // Checksum 0xcb3b9b1b, Offset: 0xb70
 // Size: 0x310
 function private humangibkilledoverride(inflictor, attacker, damage, meansofdeath, weapon, dir, hitloc, offsettime) {
@@ -145,7 +139,6 @@ function private humangibkilledoverride(inflictor, attacker, damage, meansofdeat
 
 // Namespace archetype_human
 // Params 4, eflags: 0x4
-// namespace_f8c5be8c<file_0>::function_e70f39ae
 // Checksum 0x8bbf3326, Offset: 0xe88
 // Size: 0x9c
 function private trygibbinghead(entity, damage, hitloc, isexplosive) {
@@ -160,7 +153,6 @@ function private trygibbinghead(entity, damage, hitloc, isexplosive) {
 
 // Namespace archetype_human
 // Params 4, eflags: 0x5 linked
-// namespace_f8c5be8c<file_0>::function_70577d34
 // Checksum 0x47a97bbe, Offset: 0xf30
 // Size: 0x1cc
 function private trygibbinglimb(entity, damage, hitloc, isexplosive) {
@@ -192,7 +184,6 @@ function private trygibbinglimb(entity, damage, hitloc, isexplosive) {
 
 // Namespace archetype_human
 // Params 5, eflags: 0x5 linked
-// namespace_f8c5be8c<file_0>::function_12d3d9ef
 // Checksum 0x6553b96b, Offset: 0x1108
 // Size: 0x1fc
 function private trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) {
@@ -226,7 +217,6 @@ function private trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) {
 
 // Namespace archetype_human
 // Params 12, eflags: 0x1 linked
-// namespace_f8c5be8c<file_0>::function_e1e7a41a
 // Checksum 0xf06bd2c0, Offset: 0x1310
 // Size: 0x1bc
 function damageoverride(einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon, vpoint, vdir, shitloc, psoffsettime, boneindex, modelindex) {
@@ -250,7 +240,6 @@ function damageoverride(einflictor, eattacker, idamage, idflags, smeansofdeath, 
 
 // Namespace humansoldierserverutils
 // Params 4, eflags: 0x1 linked
-// namespace_bb62df56<file_0>::function_5861ca5a
 // Checksum 0x1d67b7a6, Offset: 0x14d8
 // Size: 0xa4
 function cqbattributecallback(entity, attribute, oldvalue, value) {
@@ -267,7 +256,6 @@ function cqbattributecallback(entity, attribute, oldvalue, value) {
 
 // Namespace humansoldierserverutils
 // Params 4, eflags: 0x1 linked
-// namespace_bb62df56<file_0>::function_9c5a83ff
 // Checksum 0x811187b7, Offset: 0x1588
 // Size: 0x38
 function forcetacticalwalkcallback(entity, attribute, oldvalue, value) {
@@ -276,7 +264,6 @@ function forcetacticalwalkcallback(entity, attribute, oldvalue, value) {
 
 // Namespace humansoldierserverutils
 // Params 4, eflags: 0x1 linked
-// namespace_bb62df56<file_0>::function_1ed32230
 // Checksum 0xcff08835, Offset: 0x15c8
 // Size: 0x6e
 function movemodeattributecallback(entity, attribute, oldvalue, value) {
@@ -292,7 +279,6 @@ function movemodeattributecallback(entity, attribute, oldvalue, value) {
 
 // Namespace humansoldierserverutils
 // Params 4, eflags: 0x1 linked
-// namespace_bb62df56<file_0>::function_2e8d82e5
 // Checksum 0x95a7339e, Offset: 0x1640
 // Size: 0x64
 function useanimationoverridecallback(entity, attribute, oldvalue, value) {
@@ -305,7 +291,6 @@ function useanimationoverridecallback(entity, attribute, oldvalue, value) {
 
 // Namespace humansoldierserverutils
 // Params 4, eflags: 0x1 linked
-// namespace_bb62df56<file_0>::function_d935235b
 // Checksum 0x8306d905, Offset: 0x16b0
 // Size: 0x1f2
 function vignettemodecallback(entity, attribute, oldvalue, value) {

@@ -37,7 +37,6 @@
 
 // Namespace escort
 // Params 0, eflags: 0x2
-// namespace_c1889dfd<file_0>::function_2dc19561
 // Checksum 0xce8953d, Offset: 0x1118
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -46,7 +45,6 @@ function autoexec function_2dc19561() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_8c87d8eb
 // Checksum 0x1f108eed, Offset: 0x1158
 // Size: 0x84
 function __init__() {
@@ -57,7 +55,6 @@ function __init__() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_d290ebfa
 // Checksum 0x37daa4a, Offset: 0x11e8
 // Size: 0x4ec
 function main() {
@@ -132,7 +129,6 @@ function main() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_90f0668f
 // Checksum 0x99ec1590, Offset: 0x16e0
 // Size: 0x4
 function onprecachegametype() {
@@ -141,7 +137,6 @@ function onprecachegametype() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_34685338
 // Checksum 0x1e691252, Offset: 0x16f0
 // Size: 0x51c
 function onstartgametype() {
@@ -202,7 +197,6 @@ function onstartgametype() {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_19bc9234
 // Checksum 0xdb3224d6, Offset: 0x1c18
 // Size: 0x24
 function onspawnplayer(predictedspawn) {
@@ -211,7 +205,6 @@ function onspawnplayer(predictedspawn) {
 
 // Namespace escort
 // Params 9, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_c2658b46
 // Checksum 0xd4cf71d7, Offset: 0x1c48
 // Size: 0x18c
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -231,7 +224,6 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_fb734762
 // Checksum 0x1a76fbf2, Offset: 0x1de0
 // Size: 0x64
 function ontimelimit() {
@@ -242,7 +234,6 @@ function ontimelimit() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_944eb829
 // Checksum 0x946806bb, Offset: 0x1e50
 // Size: 0x4c
 function function_944eb829() {
@@ -252,7 +243,6 @@ function function_944eb829() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_ba513292
 // Checksum 0x8edb11d8, Offset: 0x1ea8
 // Size: 0xa4
 function function_ba513292() {
@@ -267,7 +257,6 @@ function function_ba513292() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_e4e885e6
 // Checksum 0x5e3d93bb, Offset: 0x1f58
 // Size: 0x1c
 function onroundswitch() {
@@ -276,7 +265,6 @@ function onroundswitch() {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_257d1c47
 // Checksum 0xc0c770b9, Offset: 0x1f80
 // Size: 0xec
 function onendgame(winningteam) {
@@ -300,7 +288,6 @@ function onendgame(winningteam) {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_f4cce2d9
 // Checksum 0xe2d0874, Offset: 0x2078
 // Size: 0xb4
 function shouldplayovertimeround() {
@@ -320,7 +307,6 @@ function shouldplayovertimeround() {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_3fcd5617
 // Checksum 0x769beb89, Offset: 0x2138
 // Size: 0xda
 function onroundendgame(winningteam) {
@@ -336,7 +322,6 @@ function onroundendgame(winningteam) {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_aebcf025
 // Checksum 0x9cb50d48, Offset: 0x2220
 // Size: 0xe
 function on_player_spawned() {
@@ -345,7 +330,6 @@ function on_player_spawned() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_972892b3
 // Checksum 0xbd2bd05, Offset: 0x2238
 // Size: 0x84c
 function drop_robot() {
@@ -432,7 +416,6 @@ function drop_robot() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_c9773c91
 // Checksum 0x97dbc220, Offset: 0x2a90
 // Size: 0xec
 function drop_heli_leave() {
@@ -450,7 +433,6 @@ function drop_heli_leave() {
 
     // Namespace escort
     // Params 0, eflags: 0x0
-    // namespace_c1889dfd<file_0>::function_bbd4bb5c
     // Checksum 0xf7e3375b, Offset: 0x2b88
     // Size: 0x1c2
     function debug_draw_robot_path() {
@@ -471,7 +453,6 @@ function drop_heli_leave() {
 
     // Namespace escort
     // Params 1, eflags: 0x0
-    // namespace_c1889dfd<file_0>::function_18afe347
     // Checksum 0xe9fa509b, Offset: 0x2d58
     // Size: 0x1c2
     function debug_draw_approximate_robot_path_to_goal(&goalpatharray) {
@@ -492,7 +473,6 @@ function drop_heli_leave() {
 
     // Namespace escort
     // Params 1, eflags: 0x0
-    // namespace_c1889dfd<file_0>::function_f324b7ee
     // Checksum 0xd3f651ad, Offset: 0x2f28
     // Size: 0xac
     function debug_draw_current_robot_goal(goal) {
@@ -507,7 +487,6 @@ function drop_heli_leave() {
 
     // Namespace escort
     // Params 1, eflags: 0x0
-    // namespace_c1889dfd<file_0>::function_7082a6f9
     // Checksum 0xcf6f3dd5, Offset: 0x2fe0
     // Size: 0xb4
     function debug_draw_find_immediate_goal(pathgoal) {
@@ -522,7 +501,6 @@ function drop_heli_leave() {
 
     // Namespace escort
     // Params 1, eflags: 0x0
-    // namespace_c1889dfd<file_0>::function_73664534
     // Checksum 0xce0e0465, Offset: 0x30a0
     // Size: 0xb4
     function debug_draw_find_immediate_goal_override(immediategoal) {
@@ -537,7 +515,6 @@ function drop_heli_leave() {
 
     // Namespace escort
     // Params 2, eflags: 0x0
-    // namespace_c1889dfd<file_0>::function_96ceaa64
     // Checksum 0x4f7059ac, Offset: 0x3160
     // Size: 0xfc
     function debug_draw_blocked_path_kill_radius(center, radius) {
@@ -555,7 +532,6 @@ function drop_heli_leave() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_5e434860
 // Checksum 0x5244c443, Offset: 0x3268
 // Size: 0x88
 function wait_robot_moving() {
@@ -570,7 +546,6 @@ function wait_robot_moving() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_e21842b5
 // Checksum 0xc2cc4904, Offset: 0x32f8
 // Size: 0x88
 function wait_robot_stopped() {
@@ -587,7 +562,6 @@ function wait_robot_stopped() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_8c5e3594
 // Checksum 0x6a32bea3, Offset: 0x3388
 // Size: 0x188
 function wait_robot_shutdown() {
@@ -609,7 +583,6 @@ function wait_robot_shutdown() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_dad43641
 // Checksum 0x8e00cbd0, Offset: 0x3518
 // Size: 0x1c8
 function wait_robot_reboot() {
@@ -637,7 +610,6 @@ function wait_robot_reboot() {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_e1090819
 // Checksum 0xde68919d, Offset: 0x36e8
 // Size: 0x23c
 function auto_reboot_robot(time) {
@@ -673,7 +645,6 @@ function auto_reboot_robot(time) {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_6f201fbb
 // Checksum 0x1bbede3d, Offset: 0x3930
 // Size: 0x140
 function watch_robot_damaged() {
@@ -697,7 +668,6 @@ function watch_robot_damaged() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_905c93fc
 // Checksum 0x5a2ce6aa, Offset: 0x3a78
 // Size: 0x34
 function delete_on_endgame_sequence() {
@@ -708,7 +678,6 @@ function delete_on_endgame_sequence() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_833b2096
 // Checksum 0x6282e26b, Offset: 0x3ab8
 // Size: 0x12c
 function get_robot_path_array() {
@@ -734,7 +703,6 @@ function get_robot_path_array() {
 
     // Namespace escort
     // Params 2, eflags: 0x0
-    // namespace_c1889dfd<file_0>::function_dc012b6a
     // Checksum 0x749ee614, Offset: 0x3bf0
     // Size: 0xbc
     function calc_robot_path_length(robotorigin, patharray) {
@@ -751,7 +719,6 @@ function get_robot_path_array() {
 
 // Namespace escort
 // Params 2, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_99d41d5f
 // Checksum 0xb60990d8, Offset: 0x3cb8
 // Size: 0x418
 function spawn_robot(position, angles) {
@@ -799,7 +766,6 @@ function spawn_robot(position, angles) {
 
 // Namespace escort
 // Params 12, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_515997e1
 // Checksum 0xe48d3175, Offset: 0x40d8
 // Size: 0x6d4
 function robot_damage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, modelindex) {
@@ -884,7 +850,6 @@ function robot_damage(einflictor, eattacker, idamage, idflags, smeansofdeath, we
 
 // Namespace escort
 // Params 12, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_fa6b95ca
 // Checksum 0x80a5502c, Offset: 0x47b8
 // Size: 0x66
 function robot_damage_none(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, modelindex) {
@@ -893,7 +858,6 @@ function robot_damage_none(einflictor, eattacker, idamage, idflags, smeansofdeat
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_617df5f6
 // Checksum 0x7b862ec7, Offset: 0x4828
 // Size: 0x13c
 function shutdown_robot() {
@@ -915,7 +879,6 @@ function shutdown_robot() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_7b94be37
 // Checksum 0xadccf7f7, Offset: 0x4970
 // Size: 0x168
 function reboot_robot() {
@@ -940,7 +903,6 @@ function reboot_robot() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_f12af6e3
 // Checksum 0x2578a37, Offset: 0x4ae0
 // Size: 0xb4
 function move_robot() {
@@ -961,7 +923,6 @@ function move_robot() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_3220fdad
 // Checksum 0x57e705b5, Offset: 0x4ba0
 // Size: 0x2c
 function get_current_goal() {
@@ -970,7 +931,6 @@ function get_current_goal() {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_ff77701c
 // Checksum 0xf523a828, Offset: 0x4bd8
 // Size: 0x108
 function reached_closest_nav_mesh_goal_but_still_too_far_and_blocked(goalonnavmesh) {
@@ -993,7 +953,6 @@ function reached_closest_nav_mesh_goal_but_still_too_far_and_blocked(goalonnavme
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_399277b5
 // Checksum 0xb7847049, Offset: 0x4ce8
 // Size: 0x1ac
 function check_blocked_goal_and_kill() {
@@ -1025,7 +984,6 @@ function check_blocked_goal_and_kill() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_d95c9f34
 // Checksum 0xf1c0a4e7, Offset: 0x4ea0
 // Size: 0x114
 function find_immediate_goal() {
@@ -1044,7 +1002,6 @@ function find_immediate_goal() {
 
 // Namespace escort
 // Params 2, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_6f743fef
 // Checksum 0xdea4ea1f, Offset: 0x4fc0
 // Size: 0xbc
 function check_if_goal_is_blocked(previousgoal, goal) {
@@ -1056,7 +1013,6 @@ function check_if_goal_is_blocked(previousgoal, goal) {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_b7c147b0
 // Checksum 0x97d403bf, Offset: 0x5088
 // Size: 0x11a
 function watch_goal_becoming_blocked(goal) {
@@ -1090,7 +1046,6 @@ function watch_goal_becoming_blocked(goal) {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_8f698bf0
 // Checksum 0xc1310766, Offset: 0x51b0
 // Size: 0x124
 function watch_becoming_blocked_at_goal() {
@@ -1124,7 +1079,6 @@ function watch_becoming_blocked_at_goal() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_e7b010c0
 // Checksum 0x67839410, Offset: 0x52e0
 // Size: 0x12a
 function stop_robot() {
@@ -1147,7 +1101,6 @@ function stop_robot() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_49182c73
 // Checksum 0x24e34995, Offset: 0x5418
 // Size: 0xd4
 function check_robot_on_travesal_end() {
@@ -1165,7 +1118,6 @@ function check_robot_on_travesal_end() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_67785ffd
 // Checksum 0x6a4c3dd3, Offset: 0x54f8
 // Size: 0x60
 function update_stop_position() {
@@ -1181,7 +1133,6 @@ function update_stop_position() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_a0e1a7f8
 // Checksum 0x7bffddc5, Offset: 0x5560
 // Size: 0x268
 function robot_wait_next_point() {
@@ -1219,7 +1170,6 @@ function robot_wait_next_point() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_3743ef36
 // Checksum 0x5bda82dd, Offset: 0x57d0
 // Size: 0x8e
 function get_closest_point_on_nav_mesh_for_current_goal() {
@@ -1233,7 +1183,6 @@ function get_closest_point_on_nav_mesh_for_current_goal() {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_28b0a7f2
 // Checksum 0xcf6512d0, Offset: 0x5868
 // Size: 0x118
 function get_closest_point_on_nav_mesh(point) {
@@ -1255,7 +1204,6 @@ function get_closest_point_on_nav_mesh(point) {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_a025e6b4
 // Checksum 0x3b314c49, Offset: 0x5988
 // Size: 0x13c
 function set_goal_to_point_on_path(recursioncount) {
@@ -1283,7 +1231,6 @@ function set_goal_to_point_on_path(recursioncount) {
 
 // Namespace escort
 // Params 2, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_904452e5
 // Checksum 0xae84e96a, Offset: 0x5ad0
 // Size: 0xea
 function is_path_distance_to_goal_too_long(&patharray, toolongthreshold) {
@@ -1308,7 +1255,6 @@ function is_path_distance_to_goal_too_long(&patharray, toolongthreshold) {
 
     // Namespace escort
     // Params 0, eflags: 0x0
-    // namespace_c1889dfd<file_0>::function_2b09a250
     // Checksum 0xa21650, Offset: 0x5bc8
     // Size: 0x220
     function debug_reset_robot_to_start() {
@@ -1342,7 +1288,6 @@ function is_path_distance_to_goal_too_long(&patharray, toolongthreshold) {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_b8eb0475
 // Checksum 0xf3c4ffa3, Offset: 0x5df0
 // Size: 0x26c
 function explode_robot() {
@@ -1370,7 +1315,6 @@ function explode_robot() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_cb940e72
 // Checksum 0x2527d2c9, Offset: 0x6068
 // Size: 0x54
 function wait_robot_corpse() {
@@ -1381,7 +1325,6 @@ function wait_robot_corpse() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_3e741e67
 // Checksum 0xfcece1f5, Offset: 0x60c8
 // Size: 0x68
 function robot_move_chatter() {
@@ -1396,7 +1339,6 @@ function robot_move_chatter() {
 
 // Namespace escort
 // Params 2, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_e67f4432
 // Checksum 0x850b0157, Offset: 0x6138
 // Size: 0x224
 function setup_move_object(robot, triggername) {
@@ -1424,7 +1366,6 @@ function setup_move_object(robot, triggername) {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_cd187025
 // Checksum 0x97e4915e, Offset: 0x6368
 // Size: 0x8c
 function on_use_robot_move(player) {
@@ -1438,7 +1379,6 @@ function on_use_robot_move(player) {
 
 // Namespace escort
 // Params 3, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_ebeb6022
 // Checksum 0x49e4a6bf, Offset: 0x6400
 // Size: 0x64
 function on_update_use_rate_robot_move(team, progress, change) {
@@ -1450,7 +1390,6 @@ function on_update_use_rate_robot_move(team, progress, change) {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_7b483eac
 // Checksum 0xdd655d0d, Offset: 0x6470
 // Size: 0x108
 function track_escorting_players() {
@@ -1468,7 +1407,6 @@ function track_escorting_players() {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_49022587
 // Checksum 0x73413e75, Offset: 0x6580
 // Size: 0x24c
 function track_escort_time(player) {
@@ -1508,7 +1446,6 @@ function track_escort_time(player) {
 
 // Namespace escort
 // Params 0, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_9c4a4ebc
 // Checksum 0x44d4f3c0, Offset: 0x67d8
 // Size: 0x42
 function player_stop_escort() {
@@ -1522,7 +1459,6 @@ function player_stop_escort() {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_98db6e92
 // Checksum 0x1087ea2, Offset: 0x6828
 // Size: 0x54
 function wait_escort_death(player) {
@@ -1535,7 +1471,6 @@ function wait_escort_death(player) {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_fd1e330a
 // Checksum 0x105fd719, Offset: 0x6888
 // Size: 0x5c
 function wait_escort_shutdown(player) {
@@ -1548,7 +1483,6 @@ function wait_escort_shutdown(player) {
 
 // Namespace escort
 // Params 2, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_7f30ceb6
 // Checksum 0x1b4dcb6a, Offset: 0x68f0
 // Size: 0x64
 function setup_reboot_object(robot, triggername) {
@@ -1560,7 +1494,6 @@ function setup_reboot_object(robot, triggername) {
 
 // Namespace escort
 // Params 2, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_8b2a91c8
 // Checksum 0x8aa671fb, Offset: 0x6960
 // Size: 0x188
 function setup_goal_object(robot, triggername) {
@@ -1580,7 +1513,6 @@ function setup_goal_object(robot, triggername) {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_aea5e634
 // Checksum 0x7c121e2a, Offset: 0x6af0
 // Size: 0x2a4
 function watch_robot_enter(robot) {
@@ -1615,7 +1547,6 @@ function watch_robot_enter(robot) {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_6fd23d9a
 // Checksum 0x30fea889, Offset: 0x6da0
 // Size: 0x44
 function explode_robot_after_wait(wait_time) {
@@ -1628,7 +1559,6 @@ function explode_robot_after_wait(wait_time) {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_7ae5d032
 // Checksum 0x38ef8e59, Offset: 0x6df0
 // Size: 0x434
 function kill_anything_blocking_goal(goal) {
@@ -1693,7 +1623,6 @@ function kill_anything_blocking_goal(goal) {
 
 // Namespace escort
 // Params 1, eflags: 0x0
-// namespace_c1889dfd<file_0>::function_d9790351
 // Checksum 0x67808e6, Offset: 0x7230
 // Size: 0x1e4
 function destroy_supply_crate_blocking_goal(dirtogoal) {

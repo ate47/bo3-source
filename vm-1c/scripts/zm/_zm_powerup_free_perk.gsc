@@ -19,7 +19,6 @@
 
 // Namespace zm_powerup_free_perk
 // Params 0, eflags: 0x2
-// namespace_a85afeef<file_0>::function_2dc19561
 // Checksum 0xff24fb40, Offset: 0x310
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -28,7 +27,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_free_perk
 // Params 0, eflags: 0x1 linked
-// namespace_a85afeef<file_0>::function_8c87d8eb
 // Checksum 0xba19622e, Offset: 0x350
 // Size: 0x9c
 function __init__() {
@@ -40,7 +38,6 @@ function __init__() {
 
 // Namespace zm_powerup_free_perk
 // Params 1, eflags: 0x1 linked
-// namespace_a85afeef<file_0>::function_1c927783
 // Checksum 0x96523314, Offset: 0x3f8
 // Size: 0x24
 function grab_free_perk(player) {
@@ -49,7 +46,6 @@ function grab_free_perk(player) {
 
 // Namespace zm_powerup_free_perk
 // Params 1, eflags: 0x1 linked
-// namespace_a85afeef<file_0>::function_bce49437
 // Checksum 0xf3252f3, Offset: 0x428
 // Size: 0x196
 function function_bce49437(item) {
@@ -75,7 +71,6 @@ function function_bce49437(item) {
 
 // Namespace zm_powerup_free_perk
 // Params 1, eflags: 0x1 linked
-// namespace_a85afeef<file_0>::function_6754a666
 // Checksum 0xcdf32e41, Offset: 0x5c8
 // Size: 0xe4
 function function_6754a666(perk) {

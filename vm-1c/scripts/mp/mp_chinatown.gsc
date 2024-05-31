@@ -10,7 +10,6 @@
 
 // Namespace namespace_3411baba
 // Params 0, eflags: 0x1 linked
-// namespace_3411baba<file_0>::function_d290ebfa
 // Checksum 0xd3fe3b56, Offset: 0x368
 // Size: 0x514
 function main() {
@@ -49,7 +48,6 @@ function main() {
 
 // Namespace namespace_3411baba
 // Params 0, eflags: 0x1 linked
-// namespace_3411baba<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x888
 // Size: 0x4
 function precache() {

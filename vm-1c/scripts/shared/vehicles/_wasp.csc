@@ -11,7 +11,6 @@
 
 // Namespace wasp
 // Params 0, eflags: 0x2
-// namespace_7a91f98<file_0>::function_2dc19561
 // Checksum 0x8ebb590e, Offset: 0x1d8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace wasp
 // Params 0, eflags: 0x1 linked
-// namespace_7a91f98<file_0>::function_8c87d8eb
 // Checksum 0x6939802f, Offset: 0x218
 // Size: 0xb4
 function __init__() {
@@ -33,7 +31,6 @@ function __init__() {
 
 // Namespace wasp
 // Params 1, eflags: 0x1 linked
-// namespace_7a91f98<file_0>::function_ab1f9ea1
 // Checksum 0x9bb269c3, Offset: 0x2d8
 // Size: 0x1c
 function spawned(localclientnum) {
@@ -42,7 +39,6 @@ function spawned(localclientnum) {
 
 // Namespace wasp
 // Params 7, eflags: 0x1 linked
-// namespace_7a91f98<file_0>::function_b06f0d35
 // Checksum 0x7da71f55, Offset: 0x300
 // Size: 0x9c
 function handle_lod_display_for_driver(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

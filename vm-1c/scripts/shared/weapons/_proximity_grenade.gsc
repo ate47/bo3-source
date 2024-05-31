@@ -11,7 +11,6 @@
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_1463e4e5
 // Checksum 0x522a7d3e, Offset: 0x5e0
 // Size: 0x30c
 function init_shared() {
@@ -44,7 +43,6 @@ function init_shared() {
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_50f16166
 // Checksum 0xf014cefa, Offset: 0x8f8
 // Size: 0x34
 function register() {
@@ -53,7 +51,6 @@ function register() {
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_22cd788
 // Checksum 0xee08d814, Offset: 0x938
 // Size: 0x1f8
 function updatedvars() {
@@ -76,7 +73,6 @@ function updatedvars() {
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_715453ca
 // Checksum 0x834e24b8, Offset: 0xb38
 // Size: 0x1b0
 function createproximitygrenadewatcher() {
@@ -103,7 +99,6 @@ function createproximitygrenadewatcher() {
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_5d37308a
 // Checksum 0xf0f9537f, Offset: 0xcf0
 // Size: 0x198
 function creategadgetproximitygrenadewatcher() {
@@ -129,7 +124,6 @@ function creategadgetproximitygrenadewatcher() {
 
 // Namespace proximity_grenade
 // Params 2, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_f70c9add
 // Checksum 0xf649d748, Offset: 0xe90
 // Size: 0xcc
 function onspawnproximitygrenadeweaponobject(watcher, owner) {
@@ -144,7 +138,6 @@ function onspawnproximitygrenadeweaponobject(watcher, owner) {
 
 // Namespace proximity_grenade
 // Params 1, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_3f5eea16
 // Checksum 0x2d73d5f6, Offset: 0xf68
 // Size: 0x96
 function trackonowner(owner) {
@@ -163,7 +156,6 @@ function trackonowner(owner) {
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_a4ce8b04
 // Checksum 0xc1fad299, Offset: 0x1008
 // Size: 0x74
 function setupkillcament() {
@@ -175,7 +167,6 @@ function setupkillcament() {
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_fc55e212
 // Checksum 0x52fae0b4, Offset: 0x1088
 // Size: 0x44
 function cleanupkillcamentondeath() {
@@ -185,7 +176,6 @@ function cleanupkillcamentondeath() {
 
 // Namespace proximity_grenade
 // Params 3, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_7c4bcf20
 // Checksum 0x498ea605, Offset: 0x10d8
 // Size: 0xbc
 function proximitydetonate(attacker, weapon, target) {
@@ -202,7 +192,6 @@ function proximitydetonate(attacker, weapon, target) {
 
 // Namespace proximity_grenade
 // Params 7, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_b94747f6
 // Checksum 0xf33b8149, Offset: 0x11a0
 // Size: 0xcc
 function proximitygrenadedamageplayer(eattacker, einflictor, killcament, weapon, meansofdeath, damage, proximitychain) {
@@ -214,7 +203,6 @@ function proximitygrenadedamageplayer(eattacker, einflictor, killcament, weapon,
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_ec1316b9
 // Checksum 0xa2264755, Offset: 0x1278
 // Size: 0xda
 function getproximitychain() {
@@ -233,7 +221,6 @@ function getproximitychain() {
 
 // Namespace proximity_grenade
 // Params 1, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_5168b1ba
 // Checksum 0xe50a9619, Offset: 0x1360
 // Size: 0x3e
 function chainisactive(chain) {
@@ -245,7 +232,6 @@ function chainisactive(chain) {
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_196da010
 // Checksum 0x32151e57, Offset: 0x13a8
 // Size: 0xf4
 function cleanupproximitychainent() {
@@ -271,7 +257,6 @@ function cleanupproximitychainent() {
 
 // Namespace proximity_grenade
 // Params 1, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_f062e74b
 // Checksum 0x92eaef7d, Offset: 0x14a8
 // Size: 0x3e
 function isinchain(player) {
@@ -281,7 +266,6 @@ function isinchain(player) {
 
 // Namespace proximity_grenade
 // Params 1, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_ae5493c1
 // Checksum 0xc4929230, Offset: 0x14f0
 // Size: 0x42
 function addplayertochain(player) {
@@ -291,7 +275,6 @@ function addplayertochain(player) {
 
 // Namespace proximity_grenade
 // Params 8, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_873ad709
 // Checksum 0x25d5bd53, Offset: 0x1540
 // Size: 0x4c0
 function proximitygrenadechain(eattacker, einflictor, killcament, weapon, meansofdeath, damage, proximitychain, delay) {
@@ -359,7 +342,6 @@ function proximitygrenadechain(eattacker, einflictor, killcament, weapon, meanso
 
 // Namespace proximity_grenade
 // Params 8, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_83f1e65b
 // Checksum 0xfef483c0, Offset: 0x1a08
 // Size: 0x1cc
 function chainplayer(eattacker, killcament, weapon, meansofdeath, damage, proximitychain, player, distancesq) {
@@ -385,7 +367,6 @@ function chainplayer(eattacker, killcament, weapon, meansofdeath, damage, proxim
 
 // Namespace proximity_grenade
 // Params 2, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_7ac0e5cf
 // Checksum 0x1ec939ad, Offset: 0x1be0
 // Size: 0x1c4
 function tesla_play_arc_fx(target, waittime) {
@@ -413,7 +394,6 @@ function tesla_play_arc_fx(target, waittime) {
 
     // Namespace proximity_grenade
     // Params 0, eflags: 0x0
-    // namespace_bdb94467<file_0>::function_fefb6f32
     // Checksum 0x62421615, Offset: 0x1db0
     // Size: 0x3c
     function debugchainsphere() {
@@ -424,7 +404,6 @@ function tesla_play_arc_fx(target, waittime) {
 
 // Namespace proximity_grenade
 // Params 1, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_ec28939b
 // Checksum 0xf67451ff, Offset: 0x1df8
 // Size: 0x122
 function watchproximitygrenadehitplayer(owner) {
@@ -445,7 +424,6 @@ function watchproximitygrenadehitplayer(owner) {
 
 // Namespace proximity_grenade
 // Params 2, eflags: 0x0
-// namespace_bdb94467<file_0>::function_b9677033
 // Checksum 0x81de685, Offset: 0x1f28
 // Size: 0x140
 function performhudeffects(position, distancetogrenade) {
@@ -460,7 +438,6 @@ function performhudeffects(position, distancetogrenade) {
 
 // Namespace proximity_grenade
 // Params 3, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_6f0e1976
 // Checksum 0x22d131c8, Offset: 0x2070
 // Size: 0x40c
 function damageplayerinradius(position, eattacker, killcament) {
@@ -515,7 +492,6 @@ function damageplayerinradius(position, eattacker, killcament) {
 
 // Namespace proximity_grenade
 // Params 1, eflags: 0x0
-// namespace_bdb94467<file_0>::function_5e3105cd
 // Checksum 0xad26345a, Offset: 0x2488
 // Size: 0x26
 function proximitydeathwait(owner) {
@@ -525,7 +501,6 @@ function proximitydeathwait(owner) {
 
 // Namespace proximity_grenade
 // Params 1, eflags: 0x0
-// namespace_bdb94467<file_0>::function_b9e9934d
 // Checksum 0x75be551b, Offset: 0x24b8
 // Size: 0x62
 function deleteentonownerdeath(owner) {
@@ -538,7 +513,6 @@ function deleteentonownerdeath(owner) {
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_d52e9f7c
 // Checksum 0xb38b49ed, Offset: 0x2528
 // Size: 0x26
 function deleteentaftertime() {
@@ -549,7 +523,6 @@ function deleteentaftertime() {
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_4cc1ad35
 // Checksum 0xc8753c0d, Offset: 0x2558
 // Size: 0x34
 function deleteentontimeout() {
@@ -560,7 +533,6 @@ function deleteentontimeout() {
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_1a6dacfd
 // Checksum 0x5f2af52c, Offset: 0x2598
 // Size: 0xa4
 function watch_death() {
@@ -576,7 +548,6 @@ function watch_death() {
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_aebcf025
 // Checksum 0xb2e384d7, Offset: 0x2648
 // Size: 0x4c
 function on_player_spawned() {
@@ -587,7 +558,6 @@ function on_player_spawned() {
 
 // Namespace proximity_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_a7922cf8
 // Checksum 0xfd1c6b69, Offset: 0x26a0
 // Size: 0xc0
 function begin_other_grenade_tracking() {
@@ -608,7 +578,6 @@ function begin_other_grenade_tracking() {
 
 // Namespace proximity_grenade
 // Params 5, eflags: 0x1 linked
-// namespace_bdb94467<file_0>::function_1a61261a
 // Checksum 0x9a9163a8, Offset: 0x2768
 // Size: 0x64
 function on_damage(eattacker, einflictor, weapon, meansofdeath, damage) {

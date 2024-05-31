@@ -12,7 +12,6 @@
 
 // Namespace zm_bgb_crawl_space
 // Params 0, eflags: 0x2
-// namespace_66b3c421<file_0>::function_2dc19561
 // Checksum 0x97f9be4a, Offset: 0x1b0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_crawl_space
 // Params 0, eflags: 0x1 linked
-// namespace_66b3c421<file_0>::function_8c87d8eb
 // Checksum 0x83252f4c, Offset: 0x1f0
 // Size: 0x54
 function __init__() {
@@ -33,7 +31,6 @@ function __init__() {
 
 // Namespace zm_bgb_crawl_space
 // Params 0, eflags: 0x1 linked
-// namespace_66b3c421<file_0>::function_7afbf7cd
 // Checksum 0xbb425f2f, Offset: 0x250
 // Size: 0x116
 function activation() {

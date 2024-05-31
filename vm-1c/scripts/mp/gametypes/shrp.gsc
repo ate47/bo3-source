@@ -18,7 +18,6 @@
 
 // Namespace shrp
 // Params 0, eflags: 0x0
-// namespace_1fce3252<file_0>::function_d290ebfa
 // Checksum 0x4af9d642, Offset: 0x7d8
 // Size: 0x364
 function main() {
@@ -54,7 +53,6 @@ function main() {
 
 // Namespace shrp
 // Params 0, eflags: 0x0
-// namespace_1fce3252<file_0>::function_34685338
 // Checksum 0xd3dce8c4, Offset: 0xb48
 // Size: 0x544
 function onstartgametype() {
@@ -114,7 +112,6 @@ function onstartgametype() {
 
 // Namespace shrp
 // Params 0, eflags: 0x0
-// namespace_1fce3252<file_0>::function_e7dafa3c
 // Checksum 0xf1a8a97, Offset: 0x1098
 // Size: 0x11c
 function function_e7dafa3c() {
@@ -133,7 +130,6 @@ function function_e7dafa3c() {
 
 // Namespace shrp
 // Params 0, eflags: 0x0
-// namespace_1fce3252<file_0>::function_4ade964d
 // Checksum 0x760ce2d3, Offset: 0x11c0
 // Size: 0x20
 function function_4ade964d() {
@@ -144,7 +140,6 @@ function function_4ade964d() {
 
 // Namespace shrp
 // Params 0, eflags: 0x0
-// namespace_1fce3252<file_0>::function_47c621e8
 // Checksum 0xa8f29246, Offset: 0x11e8
 // Size: 0x4d0
 function function_47c621e8() {
@@ -223,7 +218,6 @@ function function_47c621e8() {
 
 // Namespace shrp
 // Params 2, eflags: 0x0
-// namespace_1fce3252<file_0>::function_a0add75a
 // Checksum 0x7110333c, Offset: 0x16c0
 // Size: 0x236
 function function_a0add75a(baseweaponname, attachmentlist) {
@@ -264,7 +258,6 @@ function function_a0add75a(baseweaponname, attachmentlist) {
 
 // Namespace shrp
 // Params 2, eflags: 0x0
-// namespace_1fce3252<file_0>::function_ab19bd44
 // Checksum 0x80682fcf, Offset: 0x1900
 // Size: 0x178
 function waitlongdurationwithhostmigrationpause(var_38c2b1f9, duration) {
@@ -291,7 +284,6 @@ function waitlongdurationwithhostmigrationpause(var_38c2b1f9, duration) {
 
 // Namespace shrp
 // Params 2, eflags: 0x0
-// namespace_1fce3252<file_0>::function_93c42307
 // Checksum 0x75b5bb3e, Offset: 0x1a80
 // Size: 0x282
 function function_93c42307(var_38c2b1f9, waittime) {
@@ -324,7 +316,6 @@ function function_93c42307(var_38c2b1f9, waittime) {
 
 // Namespace shrp
 // Params 0, eflags: 0x0
-// namespace_1fce3252<file_0>::function_2651a506
 // Checksum 0x7930d3f9, Offset: 0x1d10
 // Size: 0x39e
 function function_2651a506() {
@@ -382,7 +373,6 @@ function function_2651a506() {
 
 // Namespace shrp
 // Params 0, eflags: 0x0
-// namespace_1fce3252<file_0>::function_2e17d934
 // Checksum 0xf6c8d979, Offset: 0x20b8
 // Size: 0x4c
 function function_2e17d934() {
@@ -395,7 +385,6 @@ function function_2e17d934() {
 
 // Namespace shrp
 // Params 0, eflags: 0x0
-// namespace_1fce3252<file_0>::function_9ae59632
 // Checksum 0x95555e9, Offset: 0x2110
 // Size: 0x5e
 function function_9ae59632() {
@@ -407,7 +396,6 @@ function function_9ae59632() {
 
 // Namespace shrp
 // Params 2, eflags: 0x0
-// namespace_1fce3252<file_0>::function_ed44e709
 // Checksum 0x481540e9, Offset: 0x2178
 // Size: 0x15a
 function givecustomloadout(takeallweapons, alreadyspawned) {
@@ -433,7 +421,6 @@ function givecustomloadout(takeallweapons, alreadyspawned) {
 
 // Namespace shrp
 // Params 0, eflags: 0x0
-// namespace_1fce3252<file_0>::function_f4e09ebe
 // Checksum 0x3115f02a, Offset: 0x22e0
 // Size: 0xfc
 function function_f4e09ebe() {
@@ -456,7 +443,6 @@ function function_f4e09ebe() {
 
 // Namespace shrp
 // Params 9, eflags: 0x0
-// namespace_1fce3252<file_0>::function_c2658b46
 // Checksum 0xe0e8ef74, Offset: 0x23e8
 // Size: 0x664
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -540,7 +526,6 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace shrp
 // Params 1, eflags: 0x0
-// namespace_1fce3252<file_0>::function_19bc9234
 // Checksum 0xa091f3c7, Offset: 0x2a58
 // Size: 0x3c
 function onspawnplayer(predictedspawn) {
@@ -550,7 +535,6 @@ function onspawnplayer(predictedspawn) {
 
 // Namespace shrp
 // Params 0, eflags: 0x0
-// namespace_1fce3252<file_0>::function_a260245b
 // Checksum 0xdd0a90e9, Offset: 0x2aa0
 // Size: 0x68
 function infiniteammo() {
@@ -565,7 +549,6 @@ function infiniteammo() {
 
 // Namespace shrp
 // Params 0, eflags: 0x0
-// namespace_1fce3252<file_0>::function_8619115e
 // Checksum 0x3300c120, Offset: 0x2b10
 // Size: 0x124
 function function_8619115e() {
@@ -588,7 +571,6 @@ function function_8619115e() {
 
 // Namespace shrp
 // Params 0, eflags: 0x0
-// namespace_1fce3252<file_0>::function_6cbc2f85
 // Checksum 0x50307e0a, Offset: 0x2c40
 // Size: 0x6e
 function function_6cbc2f85() {

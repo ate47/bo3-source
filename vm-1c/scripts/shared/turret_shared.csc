@@ -9,7 +9,6 @@
 
 // Namespace turret
 // Params 0, eflags: 0x2
-// namespace_37b990db<file_0>::function_2dc19561
 // Checksum 0x161d6694, Offset: 0x170
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace turret
 // Params 0, eflags: 0x1 linked
-// namespace_37b990db<file_0>::function_8c87d8eb
 // Checksum 0x24bc1512, Offset: 0x1b0
 // Size: 0x4c
 function __init__() {
@@ -27,7 +25,6 @@ function __init__() {
 
 // Namespace turret
 // Params 7, eflags: 0x1 linked
-// namespace_37b990db<file_0>::function_11a8f6e7
 // Checksum 0x5d22dae, Offset: 0x208
 // Size: 0x120
 function field_toggle_lensflare(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

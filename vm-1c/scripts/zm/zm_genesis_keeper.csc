@@ -15,7 +15,6 @@
 
 // Namespace namespace_3d62d712
 // Params 0, eflags: 0x2
-// namespace_3d62d712<file_0>::function_2dc19561
 // Checksum 0x3462193b, Offset: 0x228
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -24,7 +23,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_3d62d712
 // Params 0, eflags: 0x1 linked
-// namespace_3d62d712<file_0>::function_8c87d8eb
 // Checksum 0x8cd9d433, Offset: 0x268
 // Size: 0x8c
 function __init__() {
@@ -36,7 +34,6 @@ function __init__() {
 
 // Namespace namespace_3d62d712
 // Params 1, eflags: 0x1 linked
-// namespace_3d62d712<file_0>::function_6ded398b
 // Checksum 0x244ff664, Offset: 0x300
 // Size: 0x24
 function function_6ded398b(localclientnum) {
@@ -45,7 +42,6 @@ function function_6ded398b(localclientnum) {
 
 // Namespace namespace_3d62d712
 // Params 1, eflags: 0x1 linked
-// namespace_3d62d712<file_0>::function_ea48e71e
 // Checksum 0x1a010f33, Offset: 0x330
 // Size: 0x140
 function function_ea48e71e(localclientnum) {
@@ -68,7 +64,6 @@ function function_ea48e71e(localclientnum) {
 
 // Namespace namespace_3d62d712
 // Params 1, eflags: 0x1 linked
-// namespace_3d62d712<file_0>::function_8c4f4e93
 // Checksum 0x3f9bf60f, Offset: 0x478
 // Size: 0x58
 function new_timer(localclientnum) {
@@ -80,7 +75,6 @@ function new_timer(localclientnum) {
 
 // Namespace namespace_3d62d712
 // Params 2, eflags: 0x1 linked
-// namespace_3d62d712<file_0>::function_ec23b7a7
 // Checksum 0xedbcc95e, Offset: 0x4d8
 // Size: 0x68
 function function_ec23b7a7(localclientnum, entity) {
@@ -94,7 +88,6 @@ function function_ec23b7a7(localclientnum, entity) {
 
 // Namespace namespace_3d62d712
 // Params 0, eflags: 0x0
-// namespace_3d62d712<file_0>::function_c1a32fb9
 // Checksum 0xee270e23, Offset: 0x548
 // Size: 0x10
 function get_time() {
@@ -103,7 +96,6 @@ function get_time() {
 
 // Namespace namespace_3d62d712
 // Params 0, eflags: 0x1 linked
-// namespace_3d62d712<file_0>::function_d655bd13
 // Checksum 0xd575c899, Offset: 0x560
 // Size: 0xa
 function get_time_in_seconds() {
@@ -112,7 +104,6 @@ function get_time_in_seconds() {
 
 // Namespace namespace_3d62d712
 // Params 0, eflags: 0x0
-// namespace_3d62d712<file_0>::function_799c46b8
 // Checksum 0x4ec7c232, Offset: 0x578
 // Size: 0x10
 function function_799c46b8() {
@@ -121,7 +112,6 @@ function function_799c46b8() {
 
 // Namespace namespace_3d62d712
 // Params 7, eflags: 0x1 linked
-// namespace_3d62d712<file_0>::function_6e8422e9
 // Checksum 0x1d179980, Offset: 0x590
 // Size: 0x27c
 function function_6e8422e9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

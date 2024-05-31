@@ -16,7 +16,6 @@
 
 // Namespace zm_turned
 // Params 0, eflags: 0x0
-// namespace_531b2d03<file_0>::function_c35e6aab
 // Checksum 0x332c7349, Offset: 0x3d8
 // Size: 0x16c
 function init() {
@@ -37,7 +36,6 @@ function init() {
 
 // Namespace zm_turned
 // Params 0, eflags: 0x1 linked
-// namespace_531b2d03<file_0>::function_71aa5c55
 // Checksum 0x8e533754, Offset: 0x550
 // Size: 0x6c
 function setup_zombie_exerts() {
@@ -49,7 +47,6 @@ function setup_zombie_exerts() {
 
 // Namespace zm_turned
 // Params 0, eflags: 0x1 linked
-// namespace_531b2d03<file_0>::function_d81f0d71
 // Checksum 0x220671ce, Offset: 0x5c8
 // Size: 0x54
 function delay_turning_on_eyes() {
@@ -62,7 +59,6 @@ function delay_turning_on_eyes() {
 
 // Namespace zm_turned
 // Params 0, eflags: 0x1 linked
-// namespace_531b2d03<file_0>::function_9e6a924d
 // Checksum 0x2e9a3ad5, Offset: 0x628
 // Size: 0x6c8
 function turn_to_zombie() {
@@ -160,7 +156,6 @@ function turn_to_zombie() {
 
 // Namespace zm_turned
 // Params 0, eflags: 0x1 linked
-// namespace_531b2d03<file_0>::function_101ce34e
 // Checksum 0x7f7e6fc2, Offset: 0xcf8
 // Size: 0x548
 function turn_to_human() {
@@ -237,7 +232,6 @@ function turn_to_human() {
 
 // Namespace zm_turned
 // Params 1, eflags: 0x0
-// namespace_531b2d03<file_0>::function_3005c34e
 // Checksum 0x74fde542, Offset: 0x1248
 // Size: 0x172
 function deletezombiesinradius(origin) {
@@ -256,7 +250,6 @@ function deletezombiesinradius(origin) {
 
 // Namespace zm_turned
 // Params 0, eflags: 0x1 linked
-// namespace_531b2d03<file_0>::function_c75f5c07
 // Checksum 0x23b29f0f, Offset: 0x13c8
 // Size: 0x164
 function turned_give_melee_weapon() {
@@ -276,7 +269,6 @@ function turned_give_melee_weapon() {
 
 // Namespace zm_turned
 // Params 0, eflags: 0x1 linked
-// namespace_531b2d03<file_0>::function_ae6b2c4f
 // Checksum 0x16caafe3, Offset: 0x1538
 // Size: 0x1b4
 function turned_player_buttons() {
@@ -310,7 +302,6 @@ function turned_player_buttons() {
 
 // Namespace zm_turned
 // Params 0, eflags: 0x1 linked
-// namespace_531b2d03<file_0>::function_c82dfe84
 // Checksum 0xc8e68765, Offset: 0x16f8
 // Size: 0xf4
 function turned_disable_player_weapons() {
@@ -334,7 +325,6 @@ function turned_disable_player_weapons() {
 
 // Namespace zm_turned
 // Params 0, eflags: 0x1 linked
-// namespace_531b2d03<file_0>::function_8a8621f7
 // Checksum 0xfaa999e1, Offset: 0x17f8
 // Size: 0x2a4
 function turned_enable_player_weapons() {
@@ -373,7 +363,6 @@ function turned_enable_player_weapons() {
 
 // Namespace zm_turned
 // Params 1, eflags: 0x0
-// namespace_531b2d03<file_0>::function_f90f2134
 // Checksum 0x91450807, Offset: 0x1aa8
 // Size: 0x194
 function get_farthest_available_zombie(player) {
@@ -392,7 +381,6 @@ function get_farthest_available_zombie(player) {
 
 // Namespace zm_turned
 // Params 0, eflags: 0x0
-// namespace_531b2d03<file_0>::function_69562c41
 // Checksum 0x71b511d6, Offset: 0x1c48
 // Size: 0xba
 function get_available_human() {
@@ -406,7 +394,6 @@ function get_available_human() {
 
 // Namespace zm_turned
 // Params 0, eflags: 0x1 linked
-// namespace_531b2d03<file_0>::function_e52b6115
 // Checksum 0xe30f7bf3, Offset: 0x1d10
 // Size: 0x74
 function silentlyremovezombie() {
@@ -418,7 +405,6 @@ function silentlyremovezombie() {
 
 // Namespace zm_turned
 // Params 0, eflags: 0x0
-// namespace_531b2d03<file_0>::function_fe9b0dce
 // Checksum 0xf427a550, Offset: 0x1d90
 // Size: 0x34
 function getspawnpoint() {

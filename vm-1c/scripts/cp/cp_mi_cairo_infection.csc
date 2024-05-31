@@ -16,7 +16,6 @@
 
 // Namespace namespace_1477b376
 // Params 0, eflags: 0x0
-// namespace_1477b376<file_0>::function_d290ebfa
 // Checksum 0x2a899235, Offset: 0x5f8
 // Size: 0xc4
 function main() {
@@ -34,7 +33,6 @@ function main() {
 
 // Namespace namespace_1477b376
 // Params 0, eflags: 0x0
-// namespace_1477b376<file_0>::function_2ea898a8
 // Checksum 0xc202d5df, Offset: 0x6c8
 // Size: 0x4c
 function init_clientfields() {
@@ -43,7 +41,6 @@ function init_clientfields() {
 
 // Namespace namespace_1477b376
 // Params 1, eflags: 0x0
-// namespace_1477b376<file_0>::function_71f88fc
 // Checksum 0x2289709a, Offset: 0x720
 // Size: 0x3da
 function function_71f88fc(n_zone) {
@@ -100,7 +97,6 @@ function function_71f88fc(n_zone) {
 
 // Namespace namespace_1477b376
 // Params 7, eflags: 0x0
-// namespace_1477b376<file_0>::function_1e832062
 // Checksum 0x6c1d0b05, Offset: 0xb08
 // Size: 0x64
 function function_1e832062(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

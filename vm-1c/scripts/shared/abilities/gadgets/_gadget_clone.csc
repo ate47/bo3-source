@@ -15,7 +15,6 @@
 
 // Namespace namespace_b3cf5df2
 // Params 0, eflags: 0x2
-// namespace_b3cf5df2<file_0>::function_2dc19561
 // Checksum 0x4fcc7ea5, Offset: 0x2d8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -24,7 +23,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_b3cf5df2
 // Params 0, eflags: 0x1 linked
-// namespace_b3cf5df2<file_0>::function_8c87d8eb
 // Checksum 0x172b240f, Offset: 0x318
 // Size: 0xdc
 function __init__() {
@@ -35,7 +33,6 @@ function __init__() {
 
 // Namespace namespace_b3cf5df2
 // Params 3, eflags: 0x1 linked
-// namespace_b3cf5df2<file_0>::function_87218e55
 // Checksum 0x98284375, Offset: 0x400
 // Size: 0x84
 function function_87218e55(localclientnum, enabled, entity) {
@@ -48,7 +45,6 @@ function function_87218e55(localclientnum, enabled, entity) {
 
 // Namespace namespace_b3cf5df2
 // Params 7, eflags: 0x1 linked
-// namespace_b3cf5df2<file_0>::function_40b299b0
 // Checksum 0x5c834f63, Offset: 0x490
 // Size: 0xbc
 function clone_activated(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -64,7 +60,6 @@ function clone_activated(localclientnum, oldval, newval, bnewent, binitialsnap, 
 
 // Namespace namespace_b3cf5df2
 // Params 7, eflags: 0x1 linked
-// namespace_b3cf5df2<file_0>::function_a000e134
 // Checksum 0x45b8f3, Offset: 0x558
 // Size: 0xdc
 function function_a000e134(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -83,7 +78,6 @@ function function_a000e134(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_b3cf5df2
 // Params 1, eflags: 0x1 linked
-// namespace_b3cf5df2<file_0>::function_46c43b11
 // Checksum 0xea2814f6, Offset: 0x640
 // Size: 0x84
 function function_46c43b11(localclientnum) {
@@ -97,7 +91,6 @@ function function_46c43b11(localclientnum) {
 
 // Namespace namespace_b3cf5df2
 // Params 0, eflags: 0x1 linked
-// namespace_b3cf5df2<file_0>::function_94521dca
 // Checksum 0xbe0400b5, Offset: 0x6d0
 // Size: 0x3e
 function function_94521dca() {
@@ -110,7 +103,6 @@ function function_94521dca() {
 
 // Namespace namespace_b3cf5df2
 // Params 7, eflags: 0x1 linked
-// namespace_b3cf5df2<file_0>::function_1771f2c0
 // Checksum 0x41ea835c, Offset: 0x718
 // Size: 0x74
 function clone_damaged(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

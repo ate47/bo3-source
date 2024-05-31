@@ -9,7 +9,6 @@
 
 // Namespace namespace_a4323dc1
 // Params 0, eflags: 0x2
-// namespace_a4323dc1<file_0>::function_2dc19561
 // Checksum 0xaadaf54, Offset: 0x190
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_a4323dc1
 // Params 0, eflags: 0x1 linked
-// namespace_a4323dc1<file_0>::function_8c87d8eb
 // Checksum 0x78ff9695, Offset: 0x1d0
 // Size: 0x44
 function __init__() {
@@ -28,7 +26,6 @@ function __init__() {
 
 // Namespace namespace_a4323dc1
 // Params 0, eflags: 0x1 linked
-// namespace_a4323dc1<file_0>::function_aebcf025
 // Checksum 0x77faff85, Offset: 0x220
 // Size: 0x1c
 function on_player_spawned() {
@@ -37,7 +34,6 @@ function on_player_spawned() {
 
 // Namespace namespace_a4323dc1
 // Params 0, eflags: 0x1 linked
-// namespace_a4323dc1<file_0>::function_1a8e90d4
 // Checksum 0xc0d48719, Offset: 0x248
 // Size: 0x130
 function function_1a8e90d4() {

@@ -16,7 +16,6 @@
 
 // Namespace battlechatter
 // Params 0, eflags: 0x2
-// namespace_76d95162<file_0>::function_2dc19561
 // Checksum 0x988120eb, Offset: 0xfe0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -25,7 +24,6 @@ function autoexec function_2dc19561() {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_8c87d8eb
 // Checksum 0x5d18b264, Offset: 0x1020
 // Size: 0x7a0
 function __init__() {
@@ -94,7 +92,6 @@ function __init__() {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_a111614a
 // Checksum 0x7aa0497c, Offset: 0x17c8
 // Size: 0x3c
 function pick_boost_number() {
@@ -104,7 +101,6 @@ function pick_boost_number() {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_f6076bfe
 // Checksum 0x9a09dd22, Offset: 0x1810
 // Size: 0x1aa
 function on_joined_team() {
@@ -136,7 +132,6 @@ function on_joined_team() {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_68fc346f
 // Checksum 0x7c290948, Offset: 0x19c8
 // Size: 0x3a
 function set_blops_dialog() {
@@ -146,7 +141,6 @@ function set_blops_dialog() {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_d2930434
 // Checksum 0xd11d16d8, Offset: 0x1a10
 // Size: 0x3a
 function set_cdp_dialog() {
@@ -156,7 +150,6 @@ function set_cdp_dialog() {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_fb4f96b5
 // Checksum 0x7e21c9ba, Offset: 0x1a58
 // Size: 0x1c
 function on_player_connect() {
@@ -165,7 +158,6 @@ function on_player_connect() {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_aebcf025
 // Checksum 0xbe5cdefa, Offset: 0x1a80
 // Size: 0xbc
 function on_player_spawned() {
@@ -185,7 +177,6 @@ function on_player_spawned() {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_c6008b7
 // Checksum 0xc6d64470, Offset: 0x1b48
 // Size: 0x80
 function function_c6008b7() {
@@ -203,7 +194,6 @@ function function_c6008b7() {
 
 // Namespace battlechatter
 // Params 1, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_a1063238
 // Checksum 0x143e7ac, Offset: 0x1bd0
 // Size: 0x80
 function dialog_chance(chancekey) {
@@ -218,7 +208,6 @@ function dialog_chance(chancekey) {
 
 // Namespace battlechatter
 // Params 2, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_fc14d9f4
 // Checksum 0xca07b64b, Offset: 0x1c58
 // Size: 0x9c
 function mpdialog_value(mpdialogkey, defaultvalue) {
@@ -238,7 +227,6 @@ function mpdialog_value(mpdialogkey, defaultvalue) {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_d2304b48
 // Checksum 0x740fc1c2, Offset: 0x1d00
 // Size: 0x21c
 function water_vox() {
@@ -281,7 +269,6 @@ function water_vox() {
 
 // Namespace battlechatter
 // Params 1, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_ff55a1a3
 // Checksum 0x43531411, Offset: 0x1f28
 // Size: 0xfc
 function pain_vox(meansofdeath) {
@@ -303,7 +290,6 @@ function pain_vox(meansofdeath) {
 
 // Namespace battlechatter
 // Params 2, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_7a194d5a
 // Checksum 0xf58220fd, Offset: 0x2030
 // Size: 0x38
 function on_player_suicide_or_team_kill(player, type) {
@@ -317,7 +303,6 @@ function on_player_suicide_or_team_kill(player, type) {
 
 // Namespace battlechatter
 // Params 2, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_654ce454
 // Checksum 0x1cad6f47, Offset: 0x2070
 // Size: 0x2a
 function on_player_near_explodable(object, type) {
@@ -327,7 +312,6 @@ function on_player_near_explodable(object, type) {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_d7768dc6
 // Checksum 0x8ebd3d23, Offset: 0x20a8
 // Size: 0x298
 function enemy_threat() {
@@ -368,7 +352,6 @@ function enemy_threat() {
 
 // Namespace battlechatter
 // Params 1, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_1fd8eea8
 // Checksum 0x4892d87b, Offset: 0x2348
 // Size: 0x290
 function killed_by_sniper(sniper) {
@@ -404,7 +387,6 @@ function killed_by_sniper(sniper) {
 
 // Namespace battlechatter
 // Params 2, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_1c575e66
 // Checksum 0x528b26c8, Offset: 0x25e0
 // Size: 0x154
 function player_killed(attacker, killstreaktype) {
@@ -429,7 +411,6 @@ function player_killed(attacker, killstreaktype) {
 
 // Namespace battlechatter
 // Params 4, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_89eb644
 // Checksum 0x8adead5d, Offset: 0x2740
 // Size: 0x574
 function say_kill_battle_chatter(attacker, weapon, victim, inflictor) {
@@ -479,7 +460,6 @@ function say_kill_battle_chatter(attacker, weapon, victim, inflictor) {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_b1fdb613
 // Checksum 0x74d9c28c, Offset: 0x2cc0
 // Size: 0x160
 function grenade_tracking() {
@@ -500,7 +480,6 @@ function grenade_tracking() {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_cc6a2e65
 // Checksum 0x81b38420, Offset: 0x2e28
 // Size: 0x160
 function missile_tracking() {
@@ -521,7 +500,6 @@ function missile_tracking() {
 
 // Namespace battlechatter
 // Params 4, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_8c2360ca
 // Checksum 0x4a9707, Offset: 0x2f90
 // Size: 0x1aa
 function incoming_projectile_alert(thrower, projectile, dialogkey, waittime) {
@@ -557,7 +535,6 @@ function incoming_projectile_alert(thrower, projectile, dialogkey, waittime) {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_d30fd7e9
 // Checksum 0x1851ee5, Offset: 0x3148
 // Size: 0xc8
 function sticky_grenade_tracking() {
@@ -575,7 +552,6 @@ function sticky_grenade_tracking() {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_98b960de
 // Checksum 0x90b26441, Offset: 0x3218
 // Size: 0x38e
 function function_98b960de() {
@@ -620,7 +596,6 @@ function function_98b960de() {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_1bb4a951
 // Checksum 0xa9ce52d7, Offset: 0x35b0
 // Size: 0x294
 function play_promotion_reaction() {
@@ -657,7 +632,6 @@ function play_promotion_reaction() {
 
 // Namespace battlechatter
 // Params 2, eflags: 0x0
-// namespace_76d95162<file_0>::function_d94c2cf5
 // Checksum 0x8bdc17ea, Offset: 0x3850
 // Size: 0x2a
 function gametype_specific_battle_chatter(event, team) {
@@ -667,7 +641,6 @@ function gametype_specific_battle_chatter(event, team) {
 
 // Namespace battlechatter
 // Params 4, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_c42d97d6
 // Checksum 0x9ab9b6e5, Offset: 0x3888
 // Size: 0xa4
 function play_death_vox(body, attacker, weapon, meansofdeath) {
@@ -680,7 +653,6 @@ function play_death_vox(body, attacker, weapon, meansofdeath) {
 
 // Namespace battlechatter
 // Params 2, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_1f219452
 // Checksum 0x7d35bb1d, Offset: 0x3938
 // Size: 0xfe
 function get_death_vox(weapon, meansofdeath) {
@@ -712,7 +684,6 @@ function get_death_vox(weapon, meansofdeath) {
 
 // Namespace battlechatter
 // Params 1, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_97264e7b
 // Checksum 0xcfcc7ca8, Offset: 0x3a40
 // Size: 0x5c
 function play_killstreak_threat(killstreaktype) {
@@ -724,7 +695,6 @@ function play_killstreak_threat(killstreaktype) {
 
 // Namespace battlechatter
 // Params 6, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_62af34de
 // Checksum 0x40d0bc94, Offset: 0x3aa8
 // Size: 0x9c
 function wait_play_dialog(waittime, dialogkey, dialogflags, dialogbuffer, enemy, endnotify) {
@@ -741,7 +711,6 @@ function wait_play_dialog(waittime, dialogkey, dialogflags, dialogbuffer, enemy,
 
 // Namespace battlechatter
 // Params 4, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_3001a972
 // Checksum 0x3f7d6454, Offset: 0x3b50
 // Size: 0x2dc
 function play_dialog(dialogkey, dialogflags, dialogbuffer, enemy) {
@@ -801,7 +770,6 @@ function play_dialog(dialogkey, dialogflags, dialogbuffer, enemy) {
 
 // Namespace battlechatter
 // Params 1, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_813f1ac6
 // Checksum 0xa876a7ce, Offset: 0x3e38
 // Size: 0x7c
 function wait_dialog_buffer(dialogbuffer) {
@@ -819,7 +787,6 @@ function wait_dialog_buffer(dialogbuffer) {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_89dbc928
 // Checksum 0xb222ce59, Offset: 0x3ec0
 // Size: 0x3c
 function stop_dialog() {
@@ -831,7 +798,6 @@ function stop_dialog() {
 
 // Namespace battlechatter
 // Params 1, eflags: 0x0
-// namespace_76d95162<file_0>::function_54ecefee
 // Checksum 0x5d0e1b41, Offset: 0x3f08
 // Size: 0xc
 function wait_playback_time(soundalias) {
@@ -840,7 +806,6 @@ function wait_playback_time(soundalias) {
 
 // Namespace battlechatter
 // Params 1, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_502e5701
 // Checksum 0x77ac6d9c, Offset: 0x3f20
 // Size: 0xaa
 function get_player_dialog_alias(dialogkey) {
@@ -860,7 +825,6 @@ function get_player_dialog_alias(dialogkey) {
 
 // Namespace battlechatter
 // Params 2, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_d10408e9
 // Checksum 0x4e2d63c7, Offset: 0x3fd8
 // Size: 0xfa
 function count_keys(bundle, dialogkey) {
@@ -879,7 +843,6 @@ function count_keys(bundle, dialogkey) {
 
 // Namespace battlechatter
 // Params 1, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_73d1e677
 // Checksum 0xb131a971, Offset: 0x40e0
 // Size: 0xd4
 function get_random_key(dialogkey) {
@@ -896,7 +859,6 @@ function get_random_key(dialogkey) {
 
 // Namespace battlechatter
 // Params 2, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_4e06c732
 // Checksum 0xb1f3ebb9, Offset: 0x41c0
 // Size: 0x50c
 function play_gadget_ready(weapon, userflip) {
@@ -1024,7 +986,6 @@ function play_gadget_ready(weapon, userflip) {
 
 // Namespace battlechatter
 // Params 1, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_628a3486
 // Checksum 0x49f2113d, Offset: 0x46d8
 // Size: 0x274
 function play_gadget_activate(weapon) {
@@ -1102,7 +1063,6 @@ function play_gadget_activate(weapon) {
 
 // Namespace battlechatter
 // Params 3, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_419d3de
 // Checksum 0x33b26e8d, Offset: 0x4958
 // Size: 0x2ac
 function play_gadget_success(weapon, waitkey, victim) {
@@ -1183,7 +1143,6 @@ function play_gadget_success(weapon, waitkey, victim) {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_b23cdd12
 // Checksum 0x7afaf9e6, Offset: 0x4c10
 // Size: 0x44
 function play_throw_hatchet() {
@@ -1192,7 +1151,6 @@ function play_throw_hatchet() {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_efbae489
 // Checksum 0x6a98e8ee, Offset: 0x4c60
 // Size: 0x1be
 function get_enemy_players() {
@@ -1218,7 +1176,6 @@ function get_enemy_players() {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_633d1b8c
 // Checksum 0xbec860b1, Offset: 0x4e28
 // Size: 0xc0
 function get_friendly_players() {
@@ -1235,7 +1192,6 @@ function get_friendly_players() {
 
 // Namespace battlechatter
 // Params 1, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_811527ed
 // Checksum 0x9a57e6bf, Offset: 0x4ef0
 // Size: 0xee
 function can_play_dialog(teamonly) {
@@ -1250,7 +1206,6 @@ function can_play_dialog(teamonly) {
 
 // Namespace battlechatter
 // Params 2, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_d8006cf0
 // Checksum 0x89654807, Offset: 0x4fe8
 // Size: 0x108
 function get_closest_player_enemy(origin, teamonly) {
@@ -1270,7 +1225,6 @@ function get_closest_player_enemy(origin, teamonly) {
 
 // Namespace battlechatter
 // Params 1, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_d7332a0e
 // Checksum 0xa5cdec1e, Offset: 0x50f8
 // Size: 0xfa
 function get_closest_player_ally(teamonly) {
@@ -1290,7 +1244,6 @@ function get_closest_player_ally(teamonly) {
 
 // Namespace battlechatter
 // Params 0, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_52949700
 // Checksum 0x111c94b8, Offset: 0x5200
 // Size: 0x1c4
 function check_boost_start_conversation() {
@@ -1319,7 +1272,6 @@ function check_boost_start_conversation() {
 
 // Namespace battlechatter
 // Params 2, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_5eb511a5
 // Checksum 0xc83824de, Offset: 0x53d0
 // Size: 0x76
 function pick_boost_players(player1, player2) {
@@ -1330,7 +1282,6 @@ function pick_boost_players(player1, player2) {
 
 // Namespace battlechatter
 // Params 1, eflags: 0x1 linked
-// namespace_76d95162<file_0>::function_7c2866d3
 // Checksum 0xb2749565, Offset: 0x5450
 // Size: 0x1ba
 function game_end_vox(winner) {
@@ -1360,7 +1311,6 @@ function game_end_vox(winner) {
 
     // Namespace battlechatter
     // Params 0, eflags: 0x1 linked
-    // namespace_76d95162<file_0>::function_88dafe6a
     // Checksum 0x58db8a52, Offset: 0x5618
     // Size: 0x380
     function devgui_think() {
@@ -1421,7 +1371,6 @@ function game_end_vox(winner) {
 
     // Namespace battlechatter
     // Params 1, eflags: 0x1 linked
-    // namespace_76d95162<file_0>::function_a2bcc9cd
     // Checksum 0xfa7736bb, Offset: 0x59a0
     // Size: 0xf4
     function test_other_dialog(delay) {
@@ -1436,7 +1385,6 @@ function game_end_vox(winner) {
 
     // Namespace battlechatter
     // Params 1, eflags: 0x1 linked
-    // namespace_76d95162<file_0>::function_ddada93e
     // Checksum 0xee7a2d00, Offset: 0x5aa0
     // Size: 0x64
     function test_player_dialog(delay) {
@@ -1449,7 +1397,6 @@ function game_end_vox(winner) {
 
     // Namespace battlechatter
     // Params 1, eflags: 0x1 linked
-    // namespace_76d95162<file_0>::function_1e6b5d80
     // Checksum 0xc71652a6, Offset: 0x5b10
     // Size: 0x5c
     function test_taacom_dialog(delay) {
@@ -1462,7 +1409,6 @@ function game_end_vox(winner) {
 
     // Namespace battlechatter
     // Params 1, eflags: 0x1 linked
-    // namespace_76d95162<file_0>::function_670a3585
     // Checksum 0x27832bab, Offset: 0x5b78
     // Size: 0x5c
     function test_commander_dialog(delay) {
@@ -1475,7 +1421,6 @@ function game_end_vox(winner) {
 
     // Namespace battlechatter
     // Params 1, eflags: 0x1 linked
-    // namespace_76d95162<file_0>::function_e0c1d79d
     // Checksum 0x2f8526d5, Offset: 0x5be0
     // Size: 0x5c
     function play_test_dialog(dialogkey) {
@@ -1485,7 +1430,6 @@ function game_end_vox(winner) {
 
     // Namespace battlechatter
     // Params 0, eflags: 0x1 linked
-    // namespace_76d95162<file_0>::function_3f647d90
     // Checksum 0x30b80b24, Offset: 0x5c48
     // Size: 0xc4
     function response_key() {
@@ -1514,7 +1458,6 @@ function game_end_vox(winner) {
 
     // Namespace battlechatter
     // Params 0, eflags: 0x1 linked
-    // namespace_76d95162<file_0>::function_29ddec7a
     // Checksum 0xbfd80586, Offset: 0x5d18
     // Size: 0x156
     function play_conv_self_other() {
@@ -1532,7 +1475,6 @@ function game_end_vox(winner) {
 
     // Namespace battlechatter
     // Params 0, eflags: 0x1 linked
-    // namespace_76d95162<file_0>::function_1b44e9d4
     // Checksum 0x858d8965, Offset: 0x5e78
     // Size: 0x15c
     function play_conv_other_self() {
@@ -1550,7 +1492,6 @@ function game_end_vox(winner) {
 
     // Namespace battlechatter
     // Params 0, eflags: 0x1 linked
-    // namespace_76d95162<file_0>::function_62a461b8
     // Checksum 0x6f286298, Offset: 0x5fe0
     // Size: 0x206
     function play_conv_other_other() {

@@ -9,7 +9,6 @@
 
 // Namespace zm_bgb_extra_credit
 // Params 0, eflags: 0x2
-// namespace_828507ab<file_0>::function_2dc19561
 // Checksum 0xd6aefe4c, Offset: 0x148
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_extra_credit
 // Params 0, eflags: 0x1 linked
-// namespace_828507ab<file_0>::function_8c87d8eb
 // Checksum 0xcdff7250, Offset: 0x188
 // Size: 0x3c
 function __init__() {

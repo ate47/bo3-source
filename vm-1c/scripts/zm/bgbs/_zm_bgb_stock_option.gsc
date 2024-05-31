@@ -10,7 +10,6 @@
 
 // Namespace zm_bgb_stock_option
 // Params 0, eflags: 0x2
-// namespace_5525011f<file_0>::function_2dc19561
 // Checksum 0x69aa66a0, Offset: 0x188
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,7 +18,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_stock_option
 // Params 0, eflags: 0x1 linked
-// namespace_5525011f<file_0>::function_8c87d8eb
 // Checksum 0x60e3f36f, Offset: 0x1c8
 // Size: 0x5c
 function __init__() {
@@ -31,7 +29,6 @@ function __init__() {
 
 // Namespace zm_bgb_stock_option
 // Params 0, eflags: 0x1 linked
-// namespace_5525011f<file_0>::function_bae40a28
 // Checksum 0xc39de15c, Offset: 0x230
 // Size: 0x24
 function enable() {
@@ -40,7 +37,6 @@ function enable() {
 
 // Namespace zm_bgb_stock_option
 // Params 0, eflags: 0x1 linked
-// namespace_5525011f<file_0>::function_54bdb053
 // Checksum 0x65f98b63, Offset: 0x260
 // Size: 0x24
 function disable() {

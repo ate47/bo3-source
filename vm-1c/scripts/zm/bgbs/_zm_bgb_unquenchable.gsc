@@ -9,7 +9,6 @@
 
 // Namespace zm_bgb_unquenchable
 // Params 0, eflags: 0x2
-// namespace_350615e2<file_0>::function_2dc19561
 // Checksum 0xc9aaf7e7, Offset: 0x148
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_unquenchable
 // Params 0, eflags: 0x1 linked
-// namespace_350615e2<file_0>::function_8c87d8eb
 // Checksum 0x98f6e7ac, Offset: 0x188
 // Size: 0x54
 function __init__() {
@@ -30,7 +28,6 @@ function __init__() {
 
 // Namespace zm_bgb_unquenchable
 // Params 0, eflags: 0x1 linked
-// namespace_350615e2<file_0>::function_279e4e97
 // Checksum 0x23d1decd, Offset: 0x1e8
 // Size: 0x64
 function event() {

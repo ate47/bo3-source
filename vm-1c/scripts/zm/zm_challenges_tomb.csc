@@ -6,7 +6,6 @@
 
 // Namespace namespace_a528e918
 // Params 0, eflags: 0x2
-// namespace_a528e918<file_0>::function_2dc19561
 // Checksum 0x3f5e0d4a, Offset: 0x178
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,7 +14,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_a528e918
 // Params 0, eflags: 0x1 linked
-// namespace_a528e918<file_0>::function_8c87d8eb
 // Checksum 0x5a1a0d0e, Offset: 0x1b8
 // Size: 0x124
 function __init__() {
@@ -27,7 +25,6 @@ function __init__() {
 
 // Namespace namespace_a528e918
 // Params 7, eflags: 0x1 linked
-// namespace_a528e918<file_0>::function_2d46c9fd
 // Checksum 0x6d8295f5, Offset: 0x2e8
 // Size: 0x94
 function function_2d46c9fd(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {

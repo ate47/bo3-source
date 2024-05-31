@@ -9,7 +9,6 @@
 
 // Namespace zm_bgb_crate_power
 // Params 0, eflags: 0x2
-// namespace_4385caec<file_0>::function_2dc19561
 // Checksum 0x6cf8301d, Offset: 0x148
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_crate_power
 // Params 0, eflags: 0x1 linked
-// namespace_4385caec<file_0>::function_8c87d8eb
 // Checksum 0x770047bf, Offset: 0x188
 // Size: 0x3c
 function __init__() {

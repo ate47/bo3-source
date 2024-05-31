@@ -9,7 +9,6 @@
 
 // Namespace explosive_bolt
 // Params 0, eflags: 0x2
-// namespace_821e9fb4<file_0>::function_2dc19561
 // Checksum 0xc651f55f, Offset: 0x140
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace explosive_bolt
 // Params 0, eflags: 0x1 linked
-// namespace_821e9fb4<file_0>::function_8c87d8eb
 // Checksum 0xf806a4a7, Offset: 0x180
 // Size: 0x24
 function __init__() {
@@ -27,7 +25,6 @@ function __init__() {
 
 // Namespace explosive_bolt
 // Params 0, eflags: 0x1 linked
-// namespace_821e9fb4<file_0>::function_aebcf025
 // Checksum 0xec314c6c, Offset: 0x1b0
 // Size: 0x1c
 function on_player_spawned() {
@@ -36,7 +33,6 @@ function on_player_spawned() {
 
 // Namespace explosive_bolt
 // Params 0, eflags: 0x1 linked
-// namespace_821e9fb4<file_0>::function_a7922cf8
 // Checksum 0x355c3886, Offset: 0x1d8
 // Size: 0x138
 function begin_other_grenade_tracking() {
@@ -61,7 +57,6 @@ function begin_other_grenade_tracking() {
 
 // Namespace explosive_bolt
 // Params 1, eflags: 0x1 linked
-// namespace_821e9fb4<file_0>::function_c0dabb0c
 // Checksum 0xcb036af0, Offset: 0x318
 // Size: 0xc
 function function_c0dabb0c(owner) {

@@ -9,7 +9,6 @@
 
 // Namespace zm_bgb_shopping_free
 // Params 0, eflags: 0x2
-// namespace_18c49b5a<file_0>::function_2dc19561
 // Checksum 0xea3a306b, Offset: 0x148
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_shopping_free
 // Params 0, eflags: 0x1 linked
-// namespace_18c49b5a<file_0>::function_8c87d8eb
 // Checksum 0x517dde6, Offset: 0x188
 // Size: 0x64
 function __init__() {
@@ -30,7 +28,6 @@ function __init__() {
 
 // Namespace zm_bgb_shopping_free
 // Params 0, eflags: 0x1 linked
-// namespace_18c49b5a<file_0>::function_bae40a28
 // Checksum 0xbf0ac0e8, Offset: 0x1f8
 // Size: 0x26
 function enable() {
@@ -41,7 +38,6 @@ function enable() {
 
 // Namespace zm_bgb_shopping_free
 // Params 0, eflags: 0x1 linked
-// namespace_18c49b5a<file_0>::function_54bdb053
 // Checksum 0x99ec1590, Offset: 0x228
 // Size: 0x4
 function disable() {

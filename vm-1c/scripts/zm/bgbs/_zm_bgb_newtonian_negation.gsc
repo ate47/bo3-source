@@ -11,7 +11,6 @@
 
 // Namespace zm_bgb_newtonian_negation
 // Params 0, eflags: 0x2
-// namespace_5bdced82<file_0>::function_2dc19561
 // Checksum 0xe91d8a00, Offset: 0x1a8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_newtonian_negation
 // Params 0, eflags: 0x1 linked
-// namespace_5bdced82<file_0>::function_8c87d8eb
 // Checksum 0x17a758b2, Offset: 0x1e8
 // Size: 0x5c
 function __init__() {
@@ -32,7 +30,6 @@ function __init__() {
 
 // Namespace zm_bgb_newtonian_negation
 // Params 0, eflags: 0x1 linked
-// namespace_5bdced82<file_0>::function_bae40a28
 // Checksum 0xc088cf25, Offset: 0x250
 // Size: 0x34
 function enable() {
@@ -42,7 +39,6 @@ function enable() {
 
 // Namespace zm_bgb_newtonian_negation
 // Params 0, eflags: 0x1 linked
-// namespace_5bdced82<file_0>::function_7d6ddd3a
 // Checksum 0x7d77b374, Offset: 0x290
 // Size: 0x2c
 function function_7d6ddd3a() {
@@ -53,7 +49,6 @@ function function_7d6ddd3a() {
 
 // Namespace zm_bgb_newtonian_negation
 // Params 0, eflags: 0x1 linked
-// namespace_5bdced82<file_0>::function_54bdb053
 // Checksum 0xb239c052, Offset: 0x2c8
 // Size: 0xdc
 function disable() {
@@ -71,7 +66,6 @@ function disable() {
 
 // Namespace zm_bgb_newtonian_negation
 // Params 1, eflags: 0x1 linked
-// namespace_5bdced82<file_0>::function_2b4ff13a
 // Checksum 0xd8054583, Offset: 0x3b0
 // Size: 0x54
 function function_2b4ff13a(var_365c612) {

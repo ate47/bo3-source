@@ -4,7 +4,6 @@
 
 // Namespace statemachine
 // Params 3, eflags: 0x1 linked
-// namespace_bb771e9f<file_0>::function_f7f12a75
 // Checksum 0x8804a1df, Offset: 0xb8
 // Size: 0x13e
 function create(name, owner, change_notify) {
@@ -32,7 +31,6 @@ function create(name, owner, change_notify) {
 
 // Namespace statemachine
 // Params 0, eflags: 0x1 linked
-// namespace_bb771e9f<file_0>::function_9d134160
 // Checksum 0x8d8ddb9e, Offset: 0x200
 // Size: 0xee
 function clear() {
@@ -52,7 +50,6 @@ function clear() {
 
 // Namespace statemachine
 // Params 5, eflags: 0x1 linked
-// namespace_bb771e9f<file_0>::function_26678920
 // Checksum 0x2fe729df, Offset: 0x2f8
 // Size: 0x150
 function add_state(name, enter_func, update_func, exit_func, reenter_func) {
@@ -72,7 +69,6 @@ function add_state(name, enter_func, update_func, exit_func, reenter_func) {
 
 // Namespace statemachine
 // Params 1, eflags: 0x1 linked
-// namespace_bb771e9f<file_0>::function_47381425
 // Checksum 0x66265aba, Offset: 0x450
 // Size: 0x18
 function get_state(name) {
@@ -81,7 +77,6 @@ function get_state(name) {
 
 // Namespace statemachine
 // Params 4, eflags: 0x1 linked
-// namespace_bb771e9f<file_0>::function_2605b15
 // Checksum 0x2e38b809, Offset: 0x470
 // Size: 0x110
 function add_interrupt_connection(from_state_name, to_state_name, on_notify, checkfunc) {
@@ -98,7 +93,6 @@ function add_interrupt_connection(from_state_name, to_state_name, on_notify, che
 
 // Namespace statemachine
 // Params 4, eflags: 0x1 linked
-// namespace_bb771e9f<file_0>::function_bca567c6
 // Checksum 0x6ad26937, Offset: 0x588
 // Size: 0x1b8
 function add_utility_connection(from_state_name, to_state_name, checkfunc, defaultscore) {
@@ -123,7 +117,6 @@ function add_utility_connection(from_state_name, to_state_name, checkfunc, defau
 
 // Namespace statemachine
 // Params 2, eflags: 0x1 linked
-// namespace_bb771e9f<file_0>::function_fa59cc99
 // Checksum 0x3ead35a3, Offset: 0x748
 // Size: 0x288
 function set_state(name, state_params) {
@@ -170,7 +163,6 @@ function set_state(name, state_params) {
 
 // Namespace statemachine
 // Params 1, eflags: 0x1 linked
-// namespace_bb771e9f<file_0>::function_920a4235
 // Checksum 0x96f8689d, Offset: 0x9d8
 // Size: 0xe2
 function threadnotifyconnections(state) {
@@ -183,7 +175,6 @@ function threadnotifyconnections(state) {
 
 // Namespace statemachine
 // Params 3, eflags: 0x1 linked
-// namespace_bb771e9f<file_0>::function_ca82cef5
 // Checksum 0xb0171b66, Offset: 0xac8
 // Size: 0xb60
 function connection_on_notify(state_machine, notify_name, connection) {
@@ -301,7 +292,6 @@ function connection_on_notify(state_machine, notify_name, connection) {
 
 // Namespace statemachine
 // Params 2, eflags: 0x1 linked
-// namespace_bb771e9f<file_0>::function_562e2e62
 // Checksum 0xea2ecbc7, Offset: 0x1630
 // Size: 0x2ec
 function evaluate_connections(eval_func, params) {
@@ -345,7 +335,6 @@ function evaluate_connections(eval_func, params) {
 
 // Namespace statemachine
 // Params 0, eflags: 0x0
-// namespace_bb771e9f<file_0>::function_86703645
 // Checksum 0xa0a5be3, Offset: 0x1928
 // Size: 0x2c
 function debugon() {

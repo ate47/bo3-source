@@ -20,7 +20,6 @@
 
 // Namespace namespace_e81d2518
 // Params 0, eflags: 0x2
-// namespace_e81d2518<file_0>::function_2dc19561
 // Checksum 0x95a02dce, Offset: 0x330
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -29,7 +28,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_e81d2518
 // Params 0, eflags: 0x1 linked
-// namespace_e81d2518<file_0>::function_8c87d8eb
 // Checksum 0x19735ddb, Offset: 0x370
 // Size: 0x2c
 function __init__() {
@@ -38,7 +36,6 @@ function __init__() {
 
 // Namespace namespace_e81d2518
 // Params 0, eflags: 0x1 linked
-// namespace_e81d2518<file_0>::function_20bd34e1
 // Checksum 0x6e1fc824, Offset: 0x3a8
 // Size: 0x23c
 function function_20bd34e1() {
@@ -72,7 +69,6 @@ function function_20bd34e1() {
 
 // Namespace namespace_e81d2518
 // Params 0, eflags: 0x1 linked
-// namespace_e81d2518<file_0>::function_b272dd98
 // Checksum 0xb07a22bd, Offset: 0x5f0
 // Size: 0x178
 function defaultrole() {
@@ -94,7 +90,6 @@ function defaultrole() {
 
 // Namespace namespace_e81d2518
 // Params 1, eflags: 0x5 linked
-// namespace_e81d2518<file_0>::function_cb8b2163
 // Checksum 0x301a319a, Offset: 0x770
 // Size: 0x1be
 function private function_cb8b2163(target) {
@@ -133,7 +128,6 @@ function private function_cb8b2163(target) {
 
 // Namespace namespace_e81d2518
 // Params 0, eflags: 0x5 linked
-// namespace_e81d2518<file_0>::function_e2991906
 // Checksum 0xc3db2b33, Offset: 0x938
 // Size: 0x29c
 function private function_e2991906() {
@@ -164,7 +158,6 @@ function private function_e2991906() {
 
 // Namespace namespace_e81d2518
 // Params 0, eflags: 0x5 linked
-// namespace_e81d2518<file_0>::function_cd3112cf
 // Checksum 0x9ce7bf64, Offset: 0xbe0
 // Size: 0x100
 function private function_cd3112cf() {
@@ -197,7 +190,6 @@ function private function_cd3112cf() {
 
 // Namespace namespace_e81d2518
 // Params 1, eflags: 0x1 linked
-// namespace_e81d2518<file_0>::function_b9f1655e
 // Checksum 0x6ac2c56b, Offset: 0xce8
 // Size: 0x264
 function function_b9f1655e(params) {
@@ -233,7 +225,6 @@ function function_b9f1655e(params) {
 
 // Namespace namespace_e81d2518
 // Params 3, eflags: 0x1 linked
-// namespace_e81d2518<file_0>::function_1d2da0bd
 // Checksum 0x5c589533, Offset: 0xf58
 // Size: 0x5a
 function function_1d2da0bd(from_state, to_state, connection) {
@@ -251,7 +242,6 @@ function function_1d2da0bd(from_state, to_state, connection) {
 
 // Namespace namespace_e81d2518
 // Params 1, eflags: 0x1 linked
-// namespace_e81d2518<file_0>::function_c637f0c1
 // Checksum 0x170a7e76, Offset: 0xfc0
 // Size: 0x850
 function state_combat_update(params) {
@@ -360,7 +350,6 @@ function state_combat_update(params) {
 
 // Namespace namespace_e81d2518
 // Params 0, eflags: 0x1 linked
-// namespace_e81d2518<file_0>::function_a7242558
 // Checksum 0x36fdcf4, Offset: 0x1818
 // Size: 0x250
 function function_a7242558() {
@@ -399,7 +388,6 @@ function function_a7242558() {
 
 // Namespace namespace_e81d2518
 // Params 0, eflags: 0x1 linked
-// namespace_e81d2518<file_0>::function_3f19103d
 // Checksum 0x43d208c4, Offset: 0x1a70
 // Size: 0x2ac
 function function_3f19103d() {
@@ -432,7 +420,6 @@ function function_3f19103d() {
 
 // Namespace namespace_e81d2518
 // Params 4, eflags: 0x1 linked
-// namespace_e81d2518<file_0>::function_cce3e8b4
 // Checksum 0xf44b4151, Offset: 0x1d28
 // Size: 0x26
 function function_cce3e8b4(einflictor, eattacker, smeansofdeath, weapon) {
@@ -441,7 +428,6 @@ function function_cce3e8b4(einflictor, eattacker, smeansofdeath, weapon) {
 
 // Namespace namespace_e81d2518
 // Params 15, eflags: 0x1 linked
-// namespace_e81d2518<file_0>::function_110bfc7e
 // Checksum 0x5610bcb2, Offset: 0x1d58
 // Size: 0x94
 function function_110bfc7e(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -453,7 +439,6 @@ function function_110bfc7e(einflictor, eattacker, idamage, idflags, smeansofdeat
 
 // Namespace namespace_e81d2518
 // Params 1, eflags: 0x1 linked
-// namespace_e81d2518<file_0>::function_c18559a5
 // Checksum 0xb059842e, Offset: 0x1df8
 // Size: 0xfc
 function state_death_update(params) {

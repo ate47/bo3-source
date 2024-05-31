@@ -30,7 +30,6 @@
 
 // Namespace namespace_bd8be9f1
 // Params 0, eflags: 0x2
-// namespace_bd8be9f1<file_0>::function_2dc19561
 // Checksum 0x3656668a, Offset: 0x3a8
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -39,7 +38,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_bd8be9f1
 // Params 0, eflags: 0x1 linked
-// namespace_bd8be9f1<file_0>::function_8c87d8eb
 // Checksum 0x82d72a9f, Offset: 0x3f0
 // Size: 0x64
 function __init__() {
@@ -53,7 +51,6 @@ function __init__() {
 
 // Namespace namespace_bd8be9f1
 // Params 0, eflags: 0x1 linked
-// namespace_bd8be9f1<file_0>::function_5b6b9132
 // Checksum 0x5d118d13, Offset: 0x460
 // Size: 0x14
 function __main__() {
@@ -62,7 +59,6 @@ function __main__() {
 
 // Namespace namespace_bd8be9f1
 // Params 0, eflags: 0x1 linked
-// namespace_bd8be9f1<file_0>::function_4ece4a2f
 // Checksum 0x99ec1590, Offset: 0x480
 // Size: 0x4
 function register_clientfields() {
@@ -71,7 +67,6 @@ function register_clientfields() {
 
 // Namespace namespace_bd8be9f1
 // Params 0, eflags: 0x1 linked
-// namespace_bd8be9f1<file_0>::function_c35e6aab
 // Checksum 0xf72a6783, Offset: 0x490
 // Size: 0x14
 function init() {
@@ -80,7 +75,6 @@ function init() {
 
 // Namespace namespace_bd8be9f1
 // Params 0, eflags: 0x1 linked
-// namespace_bd8be9f1<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x4b0
 // Size: 0x4
 function precache() {
@@ -91,7 +85,6 @@ function precache() {
 
     // Namespace namespace_bd8be9f1
     // Params 0, eflags: 0x1 linked
-    // namespace_bd8be9f1<file_0>::function_78933fc2
     // Checksum 0x1a73a026, Offset: 0x4c0
     // Size: 0x44
     function function_78933fc2() {
@@ -101,7 +94,6 @@ function precache() {
 
     // Namespace namespace_bd8be9f1
     // Params 1, eflags: 0x1 linked
-    // namespace_bd8be9f1<file_0>::function_46924c5
     // Checksum 0x52e3cfd0, Offset: 0x510
     // Size: 0x1e6
     function function_46924c5(cmd) {

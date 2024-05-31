@@ -9,7 +9,6 @@
 
     // Namespace rat
     // Params 0, eflags: 0x2
-    // namespace_c7970376<file_0>::function_2dc19561
     // Checksum 0xc8065075, Offset: 0xd8
     // Size: 0x34
     function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@
 
     // Namespace rat
     // Params 0, eflags: 0x1 linked
-    // namespace_c7970376<file_0>::function_8c87d8eb
     // Checksum 0xaa37bd14, Offset: 0x118
     // Size: 0x44
     function __init__() {

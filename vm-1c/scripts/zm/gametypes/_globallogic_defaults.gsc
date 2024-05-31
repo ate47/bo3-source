@@ -11,7 +11,6 @@
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_79d6ccd1
 // Checksum 0x14d14d3d, Offset: 0x2b0
 // Size: 0x32
 function getwinningteamfromloser(losing_team) {
@@ -23,7 +22,6 @@ function getwinningteamfromloser(losing_team) {
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_7a7141a5
 // Checksum 0xae330b20, Offset: 0x2f0
 // Size: 0x2c4
 function default_onforfeit(team) {
@@ -63,7 +61,6 @@ function default_onforfeit(team) {
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_d617fe3e
 // Checksum 0x5fbead3, Offset: 0x5c0
 // Size: 0x184
 function default_ondeadevent(team) {
@@ -87,7 +84,6 @@ function default_ondeadevent(team) {
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_c4c198b0
 // Checksum 0x4f978bc1, Offset: 0x750
 // Size: 0xc
 function default_onalivecountchange(team) {
@@ -96,7 +92,6 @@ function default_onalivecountchange(team) {
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_aca983ed
 // Checksum 0xccd9333a, Offset: 0x768
 // Size: 0x10
 function default_onroundendgame(winner) {
@@ -105,7 +100,6 @@ function default_onroundendgame(winner) {
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_6ab3de3d
 // Checksum 0xb23bc7ee, Offset: 0x780
 // Size: 0x16e
 function default_ononeleftevent(team) {
@@ -135,7 +129,6 @@ function default_ononeleftevent(team) {
 
 // Namespace globallogic_defaults
 // Params 0, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_3c98c1e8
 // Checksum 0x49f6d004, Offset: 0x8f8
 // Size: 0x124
 function default_ontimelimit() {
@@ -159,7 +152,6 @@ function default_ontimelimit() {
 
 // Namespace globallogic_defaults
 // Params 0, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_8455a753
 // Checksum 0x97efaffd, Offset: 0xa28
 // Size: 0x138
 function default_onscorelimit() {
@@ -187,7 +179,6 @@ function default_onscorelimit() {
 
 // Namespace globallogic_defaults
 // Params 2, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_3127df38
 // Checksum 0x8cf46196, Offset: 0xb68
 // Size: 0xfc
 function default_onspawnspectator(origin, angles) {
@@ -204,7 +195,6 @@ function default_onspawnspectator(origin, angles) {
 
 // Namespace globallogic_defaults
 // Params 0, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_91904565
 // Checksum 0x36a195a3, Offset: 0xc70
 // Size: 0xbc
 function default_onspawnintermission() {
@@ -222,7 +212,6 @@ function default_onspawnintermission() {
 
 // Namespace globallogic_defaults
 // Params 0, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_3d887edf
 // Checksum 0xed10c520, Offset: 0xd38
 // Size: 0x3a
 function default_gettimelimit() {

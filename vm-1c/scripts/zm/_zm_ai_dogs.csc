@@ -7,7 +7,6 @@
 
 // Namespace namespace_cc5bac97
 // Params 0, eflags: 0x2
-// namespace_cc5bac97<file_0>::function_2dc19561
 // Checksum 0x1425f877, Offset: 0x168
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,7 +15,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_cc5bac97
 // Params 0, eflags: 0x1 linked
-// namespace_cc5bac97<file_0>::function_8c87d8eb
 // Checksum 0xdd2a52a2, Offset: 0x1a8
 // Size: 0x5c
 function __init__() {
@@ -26,7 +24,6 @@ function __init__() {
 
 // Namespace namespace_cc5bac97
 // Params 0, eflags: 0x1 linked
-// namespace_cc5bac97<file_0>::function_e7f97171
 // Checksum 0x9e597015, Offset: 0x210
 // Size: 0x3a
 function init_dog_fx() {
@@ -36,7 +33,6 @@ function init_dog_fx() {
 
 // Namespace namespace_cc5bac97
 // Params 7, eflags: 0x1 linked
-// namespace_cc5bac97<file_0>::function_4bc83022
 // Checksum 0x75951ed4, Offset: 0x258
 // Size: 0x17c
 function dog_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

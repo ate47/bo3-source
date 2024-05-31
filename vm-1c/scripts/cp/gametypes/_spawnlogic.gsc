@@ -13,7 +13,6 @@
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x2
-// namespace_4a43ba8<file_0>::function_2dc19561
 // Checksum 0x8a8088d7, Offset: 0x348
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -22,7 +21,6 @@ function autoexec function_2dc19561() {
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_8c87d8eb
 // Checksum 0x9fa329bb, Offset: 0x388
 // Size: 0x24c
 function __init__() {
@@ -48,7 +46,6 @@ function __init__() {
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_4489f2c9
 // Checksum 0x3ef5ff22, Offset: 0x5e0
 // Size: 0x13a
 function function_4489f2c9() {
@@ -67,7 +64,6 @@ function function_4489f2c9() {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_98b48204
 // Checksum 0xebffd5e7, Offset: 0x728
 // Size: 0xdc
 function function_98b48204(e_linkto) {
@@ -85,7 +81,6 @@ function function_98b48204(e_linkto) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_d241af5c
 // Checksum 0xb29b001b, Offset: 0x810
 // Size: 0x50
 function function_d241af5c(trig) {
@@ -99,7 +94,6 @@ function function_d241af5c(trig) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_e3064ea7
 // Checksum 0xd515bd34, Offset: 0x868
 // Size: 0x48
 function function_e3064ea7(trig) {
@@ -112,7 +106,6 @@ function function_e3064ea7(trig) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_82c857e9
 // Checksum 0xe637a5d0, Offset: 0x8b8
 // Size: 0x70
 function function_82c857e9(b_enabled) {
@@ -125,7 +118,6 @@ function function_82c857e9(b_enabled) {
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_39213560
 // Checksum 0xff193c80, Offset: 0x930
 // Size: 0x100
 function update_spawn_points() {
@@ -144,7 +136,6 @@ function update_spawn_points() {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_93d52c4f
 // Checksum 0x6331c46b, Offset: 0xa38
 // Size: 0x64
 function function_93d52c4f(var_30b675eb) {
@@ -156,7 +147,6 @@ function function_93d52c4f(var_30b675eb) {
 
     // Namespace spawnlogic
     // Params 0, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_5787bc10
     // Checksum 0x300af62a, Offset: 0xaa8
     // Size: 0x2b0
     function function_5787bc10() {
@@ -188,7 +178,6 @@ function function_93d52c4f(var_30b675eb) {
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_c35e6aab
 // Checksum 0x3091c87f, Offset: 0xd60
 // Size: 0x3bc
 function init() {
@@ -249,7 +238,6 @@ function init() {
 
 // Namespace spawnlogic
 // Params 2, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_69178c74
 // Checksum 0x5b22b67b, Offset: 0x1128
 // Size: 0x1ea
 function add_spawn_points_internal(team, spawnpoints) {
@@ -281,7 +269,6 @@ function add_spawn_points_internal(team, spawnpoints) {
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_311d8eda
 // Checksum 0xafcda111, Offset: 0x1320
 // Size: 0x9a
 function clear_spawn_points() {
@@ -294,7 +281,6 @@ function clear_spawn_points() {
 
 // Namespace spawnlogic
 // Params 2, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_74317bd4
 // Checksum 0x67d58d2f, Offset: 0x13c8
 // Size: 0xd4
 function add_spawn_points(team, spawnpointname) {
@@ -314,7 +300,6 @@ function add_spawn_points(team, spawnpointname) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_e50ff400
 // Checksum 0x66a6eb92, Offset: 0x14a8
 // Size: 0x86
 function rebuild_spawn_points(team) {
@@ -326,7 +311,6 @@ function rebuild_spawn_points(team) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x0
-// namespace_4a43ba8<file_0>::function_8a213fa0
 // Checksum 0x3dd5c882, Offset: 0x1538
 // Size: 0x138
 function place_spawn_points(spawnpointname) {
@@ -354,7 +338,6 @@ function place_spawn_points(spawnpointname) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x0
-// namespace_4a43ba8<file_0>::function_43d63258
 // Checksum 0xec46e7f9, Offset: 0x1678
 // Size: 0xae
 function drop_spawn_points(spawnpointname) {
@@ -370,7 +353,6 @@ function drop_spawn_points(spawnpointname) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_caa2d299
 // Checksum 0x908dfe4, Offset: 0x1730
 // Size: 0x44
 function add_spawn_point_classname(spawnpointclassname) {
@@ -382,7 +364,6 @@ function add_spawn_point_classname(spawnpointclassname) {
 
 // Namespace spawnlogic
 // Params 2, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_4f996eb3
 // Checksum 0xfa8e2e9f, Offset: 0x1780
 // Size: 0x3c
 function add_spawn_point_team_classname(team, spawnpointclassname) {
@@ -391,7 +372,6 @@ function add_spawn_point_team_classname(team, spawnpointclassname) {
 
 // Namespace spawnlogic
 // Params 2, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_5880f755
 // Checksum 0x7b09a86b, Offset: 0x17c8
 // Size: 0x21a
 function get_spawnpoint_array(classname, var_30b675eb) {
@@ -425,7 +405,6 @@ function get_spawnpoint_array(classname, var_30b675eb) {
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_eed34c85
 // Checksum 0x50b264b5, Offset: 0x19f0
 // Size: 0x160
 function spawnpoint_init() {
@@ -450,7 +429,6 @@ function spawnpoint_init() {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_7f4a71b0
 // Checksum 0xc09f1e89, Offset: 0x1b58
 // Size: 0x18
 function function_7f4a71b0(team) {
@@ -459,7 +437,6 @@ function function_7f4a71b0(team) {
 
 // Namespace spawnlogic
 // Params 2, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_e87ffe7e
 // Checksum 0xad6892b3, Offset: 0x1b78
 // Size: 0x240
 function get_spawnpoint_final(spawnpoints, useweights) {
@@ -511,7 +488,6 @@ function get_spawnpoint_final(spawnpoints, useweights) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_3a4b1ceb
 // Checksum 0x8ee68e39, Offset: 0x1dc0
 // Size: 0x58
 function finalize_spawnpoint_choice(spawnpoint) {
@@ -524,7 +500,6 @@ function finalize_spawnpoint_choice(spawnpoint) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_f714995a
 // Checksum 0x3b7b2e63, Offset: 0x1e20
 // Size: 0x2b6
 function function_f714995a(spawnpoints) {
@@ -578,7 +553,6 @@ function function_f714995a(spawnpoints) {
 
     // Namespace spawnlogic
     // Params 1, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_d46f7aa7
     // Checksum 0x14975231, Offset: 0x20e0
     // Size: 0x156
     function function_d46f7aa7(spawnpoint) {
@@ -599,7 +573,6 @@ function function_f714995a(spawnpoints) {
 
     // Namespace spawnlogic
     // Params 4, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_c12fba5f
     // Checksum 0x3c3150c6, Offset: 0x2240
     // Size: 0xe6
     function function_c12fba5f(start, end, name1, name2) {
@@ -614,7 +587,6 @@ function function_f714995a(spawnpoints) {
 
     // Namespace spawnlogic
     // Params 3, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_75321ef
     // Checksum 0x6a7e6551, Offset: 0x2330
     // Size: 0x88c
     function function_75321ef(spawnpoints, useweights, bestspawnpoint) {
@@ -715,7 +687,6 @@ function function_f714995a(spawnpoints) {
 
     // Namespace spawnlogic
     // Params 2, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_78353cbc
     // Checksum 0x11e58333, Offset: 0x2bc8
     // Size: 0xb34
     function function_78353cbc(desiredid, relativepos) {
@@ -869,7 +840,6 @@ function function_f714995a(spawnpoints) {
 
     // Namespace spawnlogic
     // Params 0, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_363025a
     // Checksum 0xa688ec78, Offset: 0x3708
     // Size: 0x474
     function function_363025a() {
@@ -915,7 +885,6 @@ function function_f714995a(spawnpoints) {
 
     // Namespace spawnlogic
     // Params 1, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_88dd1973
     // Checksum 0x877cabc6, Offset: 0x3b88
     // Size: 0x7e
     function function_88dd1973(vec) {
@@ -924,7 +893,6 @@ function function_f714995a(spawnpoints) {
 
     // Namespace spawnlogic
     // Params 1, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_a76187dd
     // Checksum 0x88d89be4, Offset: 0x3c10
     // Size: 0x9e
     function function_a76187dd(str) {
@@ -939,7 +907,6 @@ function function_f714995a(spawnpoints) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_68eb5b1b
 // Checksum 0x7bdf592f, Offset: 0x3cb8
 // Size: 0xc2
 function get_spawnpoint_random(spawnpoints) {
@@ -957,7 +924,6 @@ function get_spawnpoint_random(spawnpoints) {
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_375588a3
 // Checksum 0xacb256ab, Offset: 0x3d88
 // Size: 0xb4
 function function_375588a3() {
@@ -977,7 +943,6 @@ function function_375588a3() {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_b8bbe7f3
 // Checksum 0xe24f2998, Offset: 0x3e48
 // Size: 0x1ec
 function function_b8bbe7f3(obj) {
@@ -1005,7 +970,6 @@ function function_b8bbe7f3(obj) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_57cf2c61
 // Checksum 0xafbe77a0, Offset: 0x4040
 // Size: 0xba
 function function_57cf2c61(spawnpoints) {
@@ -1024,7 +988,6 @@ function function_57cf2c61(spawnpoints) {
 
 // Namespace spawnlogic
 // Params 2, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_a8b6ae24
 // Checksum 0x845bccb9, Offset: 0x4108
 // Size: 0x540
 function function_a8b6ae24(spawnpoints, favoredspawnpoints) {
@@ -1100,7 +1063,6 @@ function function_a8b6ae24(spawnpoints, favoredspawnpoints) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x0
-// namespace_4a43ba8<file_0>::function_a1a08e8b
 // Checksum 0xfa1ae4f7, Offset: 0x4650
 // Size: 0x29a
 function function_a1a08e8b(spawnpoints) {
@@ -1138,7 +1100,6 @@ function function_a1a08e8b(spawnpoints) {
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_f38736d0
 // Checksum 0x7a324981, Offset: 0x48f8
 // Size: 0x50
 function begin() {
@@ -1152,7 +1113,6 @@ function begin() {
 
     // Namespace spawnlogic
     // Params 0, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_f415b14
     // Checksum 0x1a1ae24f, Offset: 0x4950
     // Size: 0xa6
     function function_f415b14() {
@@ -1176,7 +1136,6 @@ function begin() {
 
     // Namespace spawnlogic
     // Params 0, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_91a6180
     // Checksum 0x12ca3ac, Offset: 0x4a00
     // Size: 0x110
     function function_91a6180() {
@@ -1199,7 +1158,6 @@ function begin() {
 
     // Namespace spawnlogic
     // Params 0, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_e2e4ca72
     // Checksum 0xa2f3901c, Offset: 0x4b18
     // Size: 0x5a
     function function_e2e4ca72() {
@@ -1215,7 +1173,6 @@ function begin() {
 
     // Namespace spawnlogic
     // Params 0, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_ee9ff5a7
     // Checksum 0x8a7da13b, Offset: 0x4b80
     // Size: 0x650
     function function_ee9ff5a7() {
@@ -1290,7 +1247,6 @@ function begin() {
 
     // Namespace spawnlogic
     // Params 4, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_714f6572
     // Checksum 0xe87546d, Offset: 0x51d8
     // Size: 0x146
     function function_714f6572(fakespawnpoints, w, h, weightscale) {
@@ -1312,7 +1268,6 @@ function begin() {
 
     // Namespace spawnlogic
     // Params 2, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_3bdbf842
     // Checksum 0xdaa8bdaa, Offset: 0x5328
     // Size: 0x5c
     function function_3bdbf842(s1, weightscale) {
@@ -1324,7 +1279,6 @@ function begin() {
 
     // Namespace spawnlogic
     // Params 3, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_8965f304
     // Checksum 0x658a4ea6, Offset: 0x5390
     // Size: 0xdc
     function function_8965f304(s1, s2, weightscale) {
@@ -1338,7 +1292,6 @@ function begin() {
 
     // Namespace spawnlogic
     // Params 0, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_d320505c
     // Checksum 0xc305282a, Offset: 0x5478
     // Size: 0x374
     function function_d320505c() {
@@ -1387,7 +1340,6 @@ function begin() {
 
     // Namespace spawnlogic
     // Params 0, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_8384886e
     // Checksum 0x4656ee6c, Offset: 0x57f8
     // Size: 0x1e8
     function function_8384886e() {
@@ -1421,7 +1373,6 @@ function begin() {
 
     // Namespace spawnlogic
     // Params 0, eflags: 0x1 linked
-    // namespace_4a43ba8<file_0>::function_76bb9fb8
     // Checksum 0xe7ee5738, Offset: 0x59e8
     // Size: 0x4b0
     function function_76bb9fb8() {
@@ -1475,7 +1426,6 @@ function begin() {
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_403f0d14
 // Checksum 0x63dd92ba, Offset: 0x5ea0
 // Size: 0x56
 function function_403f0d14() {
@@ -1491,7 +1441,6 @@ function function_403f0d14() {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_f5751b11
 // Checksum 0x94f24a10, Offset: 0x5f00
 // Size: 0x314
 function function_f5751b11(spawnpoints) {
@@ -1538,7 +1487,6 @@ function function_f5751b11(spawnpoints) {
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_9ce570b0
 // Checksum 0xfd9796c0, Offset: 0x6220
 // Size: 0xf0
 function function_9ce570b0() {
@@ -1561,7 +1509,6 @@ function function_9ce570b0() {
 
     // Namespace spawnlogic
     // Params 2, eflags: 0x0
-    // namespace_4a43ba8<file_0>::function_d98d4227
     // Checksum 0xc2a22c43, Offset: 0x6318
     // Size: 0xe0
     function function_d98d4227(players, origin) {
@@ -1584,7 +1531,6 @@ function function_9ce570b0() {
 
 // Namespace spawnlogic
 // Params 2, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_d5c89a1f
 // Checksum 0xc5612788, Offset: 0x6400
 // Size: 0x14
 function function_d5c89a1f(dier, killer) {
@@ -1593,7 +1539,6 @@ function function_d5c89a1f(dier, killer) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x0
-// namespace_4a43ba8<file_0>::function_bf793871
 // Checksum 0xd976df9e, Offset: 0x6420
 // Size: 0x122
 function function_bf793871(deathinfo) {
@@ -1614,7 +1559,6 @@ function function_bf793871(deathinfo) {
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_1acf6a5c
 // Checksum 0x3f01d1a8, Offset: 0x6550
 // Size: 0x1e4
 function function_1acf6a5c() {
@@ -1640,7 +1584,6 @@ function function_1acf6a5c() {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x0
-// namespace_4a43ba8<file_0>::function_cb4bd6bd
 // Checksum 0x73fbdd1b, Offset: 0x6740
 // Size: 0x128
 function function_cb4bd6bd(playerorigin) {
@@ -1660,7 +1603,6 @@ function function_cb4bd6bd(playerorigin) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_3ed62c9
 // Checksum 0x9bf393c4, Offset: 0x6870
 // Size: 0x212
 function function_3ed62c9(spawnpoints) {
@@ -1691,7 +1633,6 @@ function function_3ed62c9(spawnpoints) {
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x0
-// namespace_4a43ba8<file_0>::function_d43d261c
 // Checksum 0xaf74b47f, Offset: 0x6a90
 // Size: 0x80
 function function_d43d261c() {
@@ -1709,7 +1650,6 @@ function function_d43d261c() {
 
 // Namespace spawnlogic
 // Params 2, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_30934c61
 // Checksum 0x8422b618, Offset: 0x6b18
 // Size: 0xc0
 function function_30934c61(skip_team, sums) {
@@ -1725,7 +1665,6 @@ function function_30934c61(skip_team, sums) {
 
 // Namespace spawnlogic
 // Params 2, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_5218c147
 // Checksum 0xb500b02f, Offset: 0x6be0
 // Size: 0xd2
 function function_5218c147(skip_team, mindists) {
@@ -1743,7 +1682,6 @@ function function_5218c147(skip_team, mindists) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_bb6a45e8
 // Checksum 0xd5f0d82f, Offset: 0x6cc0
 // Size: 0x6ea
 function function_bb6a45e8(spawnpoint) {
@@ -1830,7 +1768,6 @@ function function_bb6a45e8(spawnpoint) {
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_e40b0d5e
 // Checksum 0x18ba0e18, Offset: 0x73b8
 // Size: 0x72
 function function_e40b0d5e() {
@@ -1842,7 +1779,6 @@ function function_e40b0d5e() {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_b7cf3433
 // Checksum 0xf13fb75b, Offset: 0x7438
 // Size: 0x2de
 function function_b7cf3433(spawnpoint) {
@@ -1897,7 +1833,6 @@ function function_b7cf3433(spawnpoint) {
 
 // Namespace spawnlogic
 // Params 2, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_ab118dbe
 // Checksum 0xc988b060, Offset: 0x7720
 // Size: 0x570
 function function_ab118dbe(spawnpoints, teambased) {
@@ -1974,7 +1909,6 @@ function function_ab118dbe(spawnpoints, teambased) {
 
 // Namespace spawnlogic
 // Params 2, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_147ebda5
 // Checksum 0xdd3d43b9, Offset: 0x7c98
 // Size: 0x28c
 function function_147ebda5(spawnpoints, teambased) {
@@ -2017,7 +1951,6 @@ function function_147ebda5(spawnpoints, teambased) {
 
 // Namespace spawnlogic
 // Params 1, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_ad490295
 // Checksum 0x37ecbe93, Offset: 0x7f30
 // Size: 0x104
 function function_ad490295(spawnpoints) {
@@ -2042,7 +1975,6 @@ function function_ad490295(spawnpoints) {
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_3812b585
 // Checksum 0xc84b4010, Offset: 0x8040
 // Size: 0xa4
 function get_random_intermission_point() {
@@ -2057,7 +1989,6 @@ function get_random_intermission_point() {
 
 // Namespace spawnlogic
 // Params 0, eflags: 0x1 linked
-// namespace_4a43ba8<file_0>::function_1e347e22
 // Checksum 0x99ec1590, Offset: 0x80f0
 // Size: 0x4
 function function_1e347e22() {

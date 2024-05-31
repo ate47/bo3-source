@@ -8,7 +8,6 @@
 
 // Namespace zodcompanionclientutils
 // Params 0, eflags: 0x2
-// namespace_d593dec2<file_0>::function_2dc19561
 // Checksum 0x10cc164, Offset: 0x290
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,7 +16,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zodcompanionclientutils
 // Params 0, eflags: 0x0
-// namespace_d593dec2<file_0>::function_8c87d8eb
 // Checksum 0xf4b4988d, Offset: 0x2d0
 // Size: 0xec
 function __init__() {
@@ -31,7 +29,6 @@ function __init__() {
 
 // Namespace zodcompanionclientutils
 // Params 1, eflags: 0x4
-// namespace_d593dec2<file_0>::function_1b01e03a
 // Checksum 0x10fefd58, Offset: 0x3c8
 // Size: 0x134
 function private zodcompanionspawnsetup(localclientnum) {
@@ -47,7 +44,6 @@ function private zodcompanionspawnsetup(localclientnum) {
 
 // Namespace zodcompanionclientutils
 // Params 3, eflags: 0x0
-// namespace_d593dec2<file_0>::function_a353addc
 // Checksum 0xac04fc83, Offset: 0x508
 // Size: 0x104
 function zodcompanionheadgibfx(localclientnum, entity, gibflag) {
@@ -64,7 +60,6 @@ function zodcompanionheadgibfx(localclientnum, entity, gibflag) {
 
 // Namespace zodcompanionclientutils
 // Params 2, eflags: 0x0
-// namespace_d593dec2<file_0>::function_569a86c1
 // Checksum 0x834f8091, Offset: 0x618
 // Size: 0x90
 function zodcompaniondamagedfx(localclientnum, entity) {
@@ -76,7 +71,6 @@ function zodcompaniondamagedfx(localclientnum, entity) {
 
 // Namespace zodcompanionclientutils
 // Params 2, eflags: 0x0
-// namespace_d593dec2<file_0>::function_cb6be0ab
 // Checksum 0x8a42d885, Offset: 0x6b0
 // Size: 0x3a
 function zodcompanionclearfx(localclientnum, entity) {
@@ -87,7 +81,6 @@ function zodcompanionclearfx(localclientnum, entity) {
 
 // Namespace zodcompanionclientutils
 // Params 3, eflags: 0x4
-// namespace_d593dec2<file_0>::function_2eb49c4f
 // Checksum 0x579aa4e2, Offset: 0x6f8
 // Size: 0x92
 function private _gibcallback(localclientnum, entity, gibflag) {
@@ -110,7 +103,6 @@ function private _gibcallback(localclientnum, entity, gibflag) {
 
 // Namespace zodcompanionclientutils
 // Params 7, eflags: 0x0
-// namespace_d593dec2<file_0>::function_9d508314
 // Checksum 0x86b0ed7b, Offset: 0x798
 // Size: 0xdc
 function play_revival_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

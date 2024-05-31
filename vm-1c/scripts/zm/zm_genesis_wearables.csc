@@ -6,7 +6,6 @@
 
 // Namespace namespace_50411410
 // Params 0, eflags: 0x1 linked
-// namespace_50411410<file_0>::function_ad78a144
 // Checksum 0xf78e7320, Offset: 0x160
 // Size: 0xf4
 function function_ad78a144() {
@@ -19,7 +18,6 @@ function function_ad78a144() {
 
 // Namespace namespace_50411410
 // Params 7, eflags: 0x1 linked
-// namespace_50411410<file_0>::function_f51349bf
 // Checksum 0x58548947, Offset: 0x260
 // Size: 0x19c
 function function_f51349bf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

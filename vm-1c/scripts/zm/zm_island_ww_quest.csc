@@ -11,7 +11,6 @@
 
 // Namespace namespace_eaae7728
 // Params 0, eflags: 0x1 linked
-// namespace_eaae7728<file_0>::function_30d4f164
 // Checksum 0x7410e9e2, Offset: 0x210
 // Size: 0x16c
 function init_quest() {
@@ -24,7 +23,6 @@ function init_quest() {
 
 // Namespace namespace_eaae7728
 // Params 7, eflags: 0x1 linked
-// namespace_eaae7728<file_0>::function_fcdf674f
 // Checksum 0x46d171d6, Offset: 0x388
 // Size: 0x94
 function function_fcdf674f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -36,7 +34,6 @@ function function_fcdf674f(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_eaae7728
 // Params 7, eflags: 0x1 linked
-// namespace_eaae7728<file_0>::function_54254560
 // Checksum 0xe2bddd9b, Offset: 0x428
 // Size: 0x6c
 function function_54254560(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -45,7 +42,6 @@ function function_54254560(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_eaae7728
 // Params 7, eflags: 0x1 linked
-// namespace_eaae7728<file_0>::function_f0e89ab2
 // Checksum 0x6e9cc6a7, Offset: 0x4a0
 // Size: 0x6c
 function function_f0e89ab2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -54,7 +50,6 @@ function function_f0e89ab2(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_eaae7728
 // Params 7, eflags: 0x1 linked
-// namespace_eaae7728<file_0>::function_e9572f40
 // Checksum 0x4934485f, Offset: 0x518
 // Size: 0x6c
 function function_e9572f40(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -63,7 +58,6 @@ function function_e9572f40(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_eaae7728
 // Params 7, eflags: 0x1 linked
-// namespace_eaae7728<file_0>::function_6eb27bd9
 // Checksum 0xd98ee7d8, Offset: 0x590
 // Size: 0xbc
 function function_6eb27bd9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

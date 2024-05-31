@@ -4,7 +4,6 @@
 
 // Namespace compass
 // Params 1, eflags: 0x1 linked
-// namespace_b11c18b7<file_0>::function_a471e46d
 // Checksum 0xb5439aef, Offset: 0xc0
 // Size: 0x46c
 function setupminimap(material) {
@@ -55,7 +54,6 @@ function setupminimap(material) {
 
 // Namespace compass
 // Params 2, eflags: 0x1 linked
-// namespace_b11c18b7<file_0>::function_854418c9
 // Checksum 0x9f81d54e, Offset: 0x538
 // Size: 0x44
 function vecscale(vec, scalar) {

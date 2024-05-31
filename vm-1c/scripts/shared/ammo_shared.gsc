@@ -8,7 +8,6 @@
 
 // Namespace ammo
 // Params 0, eflags: 0x2
-// namespace_ba1472cf<file_0>::function_d290ebfa
 // Checksum 0xbca363b3, Offset: 0x178
 // Size: 0x3c
 function autoexec main() {
@@ -18,7 +17,6 @@ function autoexec main() {
 
 // Namespace ammo
 // Params 0, eflags: 0x1 linked
-// namespace_ba1472cf<file_0>::function_b6076fae
 // Checksum 0x29cfca2d, Offset: 0x1c0
 // Size: 0xf4
 function dropaiammo() {
@@ -39,7 +37,6 @@ function dropaiammo() {
 
 // Namespace ammo
 // Params 0, eflags: 0x1 linked
-// namespace_ba1472cf<file_0>::function_79283a3e
 // Checksum 0xe5fb5f96, Offset: 0x2c0
 // Size: 0x5f6
 function ammo_pouch_think() {

@@ -66,7 +66,6 @@
 
 // Namespace zm_castle
 // Params 0, eflags: 0x2
-// namespace_c491e335<file_0>::function_8e134dbe
 // Checksum 0xf0f91c95, Offset: 0x1640
 // Size: 0xea
 function autoexec opt_in() {
@@ -84,7 +83,6 @@ function autoexec opt_in() {
 
 // Namespace zm_castle
 // Params 0, eflags: 0x1 linked
-// namespace_c491e335<file_0>::function_d290ebfa
 // Checksum 0xe3acf33f, Offset: 0x1738
 // Size: 0x27c
 function main() {
@@ -124,7 +122,6 @@ function main() {
 
 // Namespace zm_castle
 // Params 0, eflags: 0x1 linked
-// namespace_c491e335<file_0>::function_a81bfac6
 // Checksum 0x25ab684f, Offset: 0x19c0
 // Size: 0x54
 function function_a81bfac6() {
@@ -136,7 +133,6 @@ function function_a81bfac6() {
 
 // Namespace zm_castle
 // Params 0, eflags: 0x1 linked
-// namespace_c491e335<file_0>::function_6e1af22d
 // Checksum 0x9d18d1d4, Offset: 0x1a20
 // Size: 0x34
 function include_weapons() {
@@ -146,7 +142,6 @@ function include_weapons() {
 
 // Namespace zm_castle
 // Params 0, eflags: 0x1 linked
-// namespace_c491e335<file_0>::function_4ece4a2f
 // Checksum 0x6b4f313a, Offset: 0x1a60
 // Size: 0x184
 function register_clientfields() {
@@ -160,7 +155,6 @@ function register_clientfields() {
 
 // Namespace zm_castle
 // Params 0, eflags: 0x1 linked
-// namespace_c491e335<file_0>::function_893a7cdd
 // Checksum 0xae742ad1, Offset: 0x1bf0
 // Size: 0x9c
 function function_893a7cdd() {
@@ -175,7 +169,6 @@ function function_893a7cdd() {
 
 // Namespace zm_castle
 // Params 0, eflags: 0x1 linked
-// namespace_c491e335<file_0>::function_80f102b1
 // Checksum 0x985cde5a, Offset: 0x1c98
 // Size: 0xe42
 function setup_personality_character_exerts() {
@@ -277,7 +270,6 @@ function setup_personality_character_exerts() {
 
 // Namespace zm_castle
 // Params 7, eflags: 0x1 linked
-// namespace_c491e335<file_0>::function_e9ccaf60
 // Checksum 0xf0e84355, Offset: 0x2ae8
 // Size: 0xe4
 function function_e9ccaf60(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -291,7 +283,6 @@ function function_e9ccaf60(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_castle
 // Params 7, eflags: 0x1 linked
-// namespace_c491e335<file_0>::function_467479e8
 // Checksum 0x72f91cdd, Offset: 0x2bd8
 // Size: 0x14c
 function function_467479e8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -310,7 +301,6 @@ function function_467479e8(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_castle
 // Params 7, eflags: 0x1 linked
-// namespace_c491e335<file_0>::function_91fd87d8
 // Checksum 0x47893ca4, Offset: 0x2d30
 // Size: 0x10e
 function function_91fd87d8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -12,7 +12,6 @@
 
 // Namespace killstreaks
 // Params 1, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_c288efd1
 // Checksum 0xfa6bb845, Offset: 0x2f0
 // Size: 0x66
 function is_killstreak_weapon(weapon) {
@@ -27,7 +26,6 @@ function is_killstreak_weapon(weapon) {
 
 // Namespace killstreaks
 // Params 1, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_4251ce01
 // Checksum 0x14a0df0c, Offset: 0x360
 // Size: 0x26
 function is_weapon_associated_with_killstreak(weapon) {
@@ -36,7 +34,6 @@ function is_weapon_associated_with_killstreak(weapon) {
 
 // Namespace killstreaks
 // Params 2, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_1cb37636
 // Checksum 0x1556f46a, Offset: 0x390
 // Size: 0x388
 function switch_to_last_non_killstreak_weapon(immediate, awayfromball) {
@@ -84,7 +81,6 @@ function switch_to_last_non_killstreak_weapon(immediate, awayfromball) {
 
 // Namespace killstreaks
 // Params 1, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_9d25749f
 // Checksum 0x75ebaf3c, Offset: 0x720
 // Size: 0x5a
 function get_killstreak_weapon(killstreak) {
@@ -97,7 +93,6 @@ function get_killstreak_weapon(killstreak) {
 
 // Namespace killstreaks
 // Params 1, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_c82524ce
 // Checksum 0x5de9e384, Offset: 0x788
 // Size: 0x40
 function isheldinventorykillstreakweapon(killstreakweapon) {
@@ -111,7 +106,6 @@ function isheldinventorykillstreakweapon(killstreakweapon) {
 
 // Namespace killstreaks
 // Params 5, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_ca5246c
 // Checksum 0xbd76a1dc, Offset: 0x7d0
 // Size: 0xa0
 function waitfortimecheck(duration, callback, endcondition1, endcondition2, endcondition3) {
@@ -132,7 +126,6 @@ function waitfortimecheck(duration, callback, endcondition1, endcondition2, endc
 
 // Namespace killstreaks
 // Params 0, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_fc5864ca
 // Checksum 0xfa99ebe9, Offset: 0x878
 // Size: 0x22
 function emp_isempd() {
@@ -144,7 +137,6 @@ function emp_isempd() {
 
 // Namespace killstreaks
 // Params 2, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_1b116607
 // Checksum 0xc745d97b, Offset: 0x8a8
 // Size: 0x62
 function waittillemp(onempdcallback, arg) {
@@ -158,7 +150,6 @@ function waittillemp(onempdcallback, arg) {
 
 // Namespace killstreaks
 // Params 1, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_d018d425
 // Checksum 0x3049658, Offset: 0x918
 // Size: 0x1c
 function hasuav(team_or_entnum) {
@@ -167,7 +158,6 @@ function hasuav(team_or_entnum) {
 
 // Namespace killstreaks
 // Params 1, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_f04b55b6
 // Checksum 0xfcc02b24, Offset: 0x940
 // Size: 0x1c
 function hassatellite(team_or_entnum) {
@@ -176,7 +166,6 @@ function hassatellite(team_or_entnum) {
 
 // Namespace killstreaks
 // Params 2, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_a9c66247
 // Checksum 0x41f4f010, Offset: 0x968
 // Size: 0x114
 function destroyotherteamsequipment(attacker, weapon) {
@@ -193,7 +182,6 @@ function destroyotherteamsequipment(attacker, weapon) {
 
 // Namespace killstreaks
 // Params 3, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_f292c33
 // Checksum 0xe4ebf8e7, Offset: 0xa88
 // Size: 0x18e
 function destroyequipment(attacker, team, weapon) {
@@ -223,7 +211,6 @@ function destroyequipment(attacker, team, weapon) {
 
 // Namespace killstreaks
 // Params 2, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_29abe150
 // Checksum 0x6141162a, Offset: 0xc20
 // Size: 0xc6
 function destroytacticalinsertions(attacker, victimteam) {
@@ -244,7 +231,6 @@ function destroytacticalinsertions(attacker, victimteam) {
 
 // Namespace killstreaks
 // Params 2, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_6af90814
 // Checksum 0xc960ba72, Offset: 0xcf0
 // Size: 0xd4
 function destroyotherteamsactivevehicles(attacker, weapon) {
@@ -259,7 +245,6 @@ function destroyotherteamsactivevehicles(attacker, weapon) {
 
 // Namespace killstreaks
 // Params 2, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_4b8b0719
 // Checksum 0xa41e5e06, Offset: 0xdd0
 // Size: 0x1d2
 function function_4b8b0719(attacker, weapon) {
@@ -280,7 +265,6 @@ function function_4b8b0719(attacker, weapon) {
 
 // Namespace killstreaks
 // Params 3, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_c61312f0
 // Checksum 0x853a25cd, Offset: 0xfb0
 // Size: 0x984
 function destroyactivevehicles(attacker, team, weapon) {
@@ -372,7 +356,6 @@ function destroyactivevehicles(attacker, team, weapon) {
 
 // Namespace killstreaks
 // Params 4, eflags: 0x1 linked
-// namespace_d50db15a<file_0>::function_39a181b4
 // Checksum 0xea6a148, Offset: 0x1940
 // Size: 0x1ba
 function destroyentities(entities, attacker, team, weapon) {

@@ -11,7 +11,6 @@
 
     // Namespace dev_class
     // Params 0, eflags: 0x2
-    // namespace_3c73629f<file_0>::function_2dc19561
     // Checksum 0xb809ca91, Offset: 0x130
     // Size: 0x34
     function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@
 
     // Namespace dev_class
     // Params 0, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_8c87d8eb
     // Checksum 0xc8239c6c, Offset: 0x170
     // Size: 0x2c
     function __init__() {
@@ -29,7 +27,6 @@
 
     // Namespace dev_class
     // Params 0, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_c35e6aab
     // Checksum 0x1e4c2319, Offset: 0x1a8
     // Size: 0x630
     function init() {
@@ -133,7 +130,6 @@
 
     // Namespace dev_class
     // Params 1, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_e6087c12
     // Checksum 0xbd4aa05c, Offset: 0x7e0
     // Size: 0xdc
     function dev_cac_camera(on) {
@@ -150,7 +146,6 @@
 
     // Namespace dev_class
     // Params 3, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_c3e77685
     // Checksum 0xc027e541, Offset: 0x8c8
     // Size: 0x1fc
     function dev_cac_dpad_think(part_name, cycle_function, tag) {
@@ -183,7 +178,6 @@
 
     // Namespace dev_class
     // Params 2, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_ef1ac5bb
     // Checksum 0xd46a9e5, Offset: 0xad0
     // Size: 0xb2
     function next_in_list(value, list) {
@@ -205,7 +199,6 @@
 
     // Namespace dev_class
     // Params 2, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_44ef9187
     // Checksum 0xbe2908f, Offset: 0xb90
     // Size: 0xbc
     function prev_in_list(value, list) {
@@ -227,7 +220,6 @@
 
     // Namespace dev_class
     // Params 0, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_847a07b5
     // Checksum 0x2885d000, Offset: 0xc58
     // Size: 0x1a
     function dev_cac_set_player_model() {
@@ -237,7 +229,6 @@
 
     // Namespace dev_class
     // Params 2, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_9316032
     // Checksum 0xce4a8f44, Offset: 0xc80
     // Size: 0xf4
     function dev_cac_cycle_body(forward, tag) {
@@ -256,7 +247,6 @@
 
     // Namespace dev_class
     // Params 2, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_ed0150a4
     // Checksum 0x699849df, Offset: 0xd80
     // Size: 0x10c
     function dev_cac_cycle_head(forward, tag) {
@@ -276,7 +266,6 @@
 
     // Namespace dev_class
     // Params 2, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_6f55c64f
     // Checksum 0x4e339ee4, Offset: 0xe98
     // Size: 0x10c
     function dev_cac_cycle_character(forward, tag) {
@@ -296,7 +285,6 @@
 
     // Namespace dev_class
     // Params 2, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_110d170d
     // Checksum 0x71735c96, Offset: 0xfb0
     // Size: 0x54
     function dev_cac_cycle_render_options(forward, tag) {
@@ -308,7 +296,6 @@
 
     // Namespace dev_class
     // Params 0, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_38710113
     // Checksum 0xd5f94212, Offset: 0x1010
     // Size: 0x2e
     function dev_cac_player_valid() {
@@ -317,7 +304,6 @@
 
     // Namespace dev_class
     // Params 1, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_76986d21
     // Checksum 0x843fbc6e, Offset: 0x1048
     // Size: 0xe2
     function dev_cac_cycle_player(forward) {
@@ -338,7 +324,6 @@
 
     // Namespace dev_class
     // Params 0, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_61f2506d
     // Checksum 0xcfb16530, Offset: 0x1138
     // Size: 0x44
     function highlight_player() {
@@ -349,7 +334,6 @@
 
     // Namespace dev_class
     // Params 0, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_d3646f84
     // Checksum 0xc13c72c, Offset: 0x1188
     // Size: 0x64
     function dev_cac_overlay_think() {
@@ -361,7 +345,6 @@
 
     // Namespace dev_class
     // Params 1, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_46c49047
     // Checksum 0xb2224940, Offset: 0x11f8
     // Size: 0x10
     function dev_cac_overlay_update(hud) {
@@ -370,7 +353,6 @@
 
     // Namespace dev_class
     // Params 1, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_69269d1a
     // Checksum 0x8237cc71, Offset: 0x1210
     // Size: 0xa4
     function dev_cac_overlay_destroy(hud) {
@@ -383,7 +365,6 @@
 
     // Namespace dev_class
     // Params 0, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_593bb238
     // Checksum 0xd62488cf, Offset: 0x12c0
     // Size: 0xd94
     function dev_cac_overlay_create() {
@@ -450,7 +431,6 @@
 
     // Namespace dev_class
     // Params 1, eflags: 0x0
-    // namespace_3c73629f<file_0>::function_d900369a
     // Checksum 0xdc3c61b5, Offset: 0x2060
     // Size: 0xa8
     function color(value) {
@@ -469,7 +449,6 @@
 
     // Namespace dev_class
     // Params 0, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_c34e1d63
     // Checksum 0xc1a3cb59, Offset: 0x2110
     // Size: 0x1a6
     function dev_cac_gdt_update_think() {
@@ -510,7 +489,6 @@
 
     // Namespace dev_class
     // Params 3, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_c4c66fcd
     // Checksum 0x7994091d, Offset: 0x22c0
     // Size: 0xd0
     function sort_greatest(func, attribute, greatest) {
@@ -526,7 +504,6 @@
 
     // Namespace dev_class
     // Params 3, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_93e8c75b
     // Checksum 0xc0ae52ff, Offset: 0x2398
     // Size: 0xd0
     function sort_least(func, attribute, least) {
@@ -542,7 +519,6 @@
 
     // Namespace dev_class
     // Params 2, eflags: 0x1 linked
-    // namespace_3c73629f<file_0>::function_690b8d4d
     // Checksum 0x1bfd45cf, Offset: 0x2470
     // Size: 0xc4
     function dev_cac_set_model_range(sort_function, attribute) {

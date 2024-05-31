@@ -8,7 +8,6 @@
 
     // Namespace rat_shared
     // Params 0, eflags: 0x1 linked
-    // namespace_ad2cbc9a<file_0>::function_c35e6aab
     // Checksum 0x645bc421, Offset: 0xd0
     // Size: 0x104
     function init() {
@@ -25,7 +24,6 @@
 
     // Namespace rat_shared
     // Params 2, eflags: 0x1 linked
-    // namespace_ad2cbc9a<file_0>::function_e98bbc2e
     // Checksum 0xa1d5276c, Offset: 0x1e0
     // Size: 0x46
     function addratscriptcmd(commandname, functioncallback) {
@@ -35,7 +33,6 @@
 
     // Namespace rat_shared
     // Params 1, eflags: 0x0
-    // namespace_ad2cbc9a<file_0>::function_2f718a9
     // Checksum 0x177b05bd, Offset: 0x230
     // Size: 0x104
     function codecallback_ratscriptcommand(params) {
@@ -49,7 +46,6 @@
 
     // Namespace rat_shared
     // Params 1, eflags: 0x1 linked
-    // namespace_ad2cbc9a<file_0>::function_8dc59c52
     // Checksum 0x58db72f7, Offset: 0x340
     // Size: 0x17c
     function rscteleport(params) {
@@ -65,7 +61,6 @@
 
     // Namespace rat_shared
     // Params 1, eflags: 0x1 linked
-    // namespace_ad2cbc9a<file_0>::function_edac6d3e
     // Checksum 0x5d890268, Offset: 0x4c8
     // Size: 0x1ec
     function function_edac6d3e(params) {
@@ -88,7 +83,6 @@
 
     // Namespace rat_shared
     // Params 1, eflags: 0x1 linked
-    // namespace_ad2cbc9a<file_0>::function_a627dcf2
     // Checksum 0x1c804330, Offset: 0x6c0
     // Size: 0x8c
     function rscsimulatescripterror(params) {
@@ -102,7 +96,6 @@
 
     // Namespace rat_shared
     // Params 1, eflags: 0x1 linked
-    // namespace_ad2cbc9a<file_0>::function_919ad68e
     // Checksum 0x8012e80, Offset: 0x758
     // Size: 0x15c
     function rscrecteleport(params) {

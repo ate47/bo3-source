@@ -10,7 +10,6 @@
 
     // Namespace namespace_e449108e
     // Params 0, eflags: 0x0
-    // namespace_e449108e<file_0>::function_c35e6aab
     // Checksum 0xf826e9fe, Offset: 0x110
     // Size: 0x6a
     function init() {
@@ -25,7 +24,6 @@
 
     // Namespace namespace_e449108e
     // Params 0, eflags: 0x0
-    // namespace_e449108e<file_0>::function_b55533bc
     // Checksum 0x2b4ec350, Offset: 0x188
     // Size: 0x1a
     function enabled() {
@@ -34,7 +32,6 @@
 
     // Namespace namespace_e449108e
     // Params 0, eflags: 0x0
-    // namespace_e449108e<file_0>::function_148c43f
     // Checksum 0xe101a692, Offset: 0x1b0
     // Size: 0x5a
     function init_debug() {
@@ -49,7 +46,6 @@
 
     // Namespace namespace_e449108e
     // Params 0, eflags: 0x0
-    // namespace_e449108e<file_0>::function_70b08fc4
     // Checksum 0x59f8572d, Offset: 0x218
     // Size: 0x1bb
     function function_70b08fc4() {
@@ -82,7 +78,6 @@
 
     // Namespace namespace_e449108e
     // Params 0, eflags: 0x0
-    // namespace_e449108e<file_0>::function_53d6792c
     // Checksum 0xa16d0449, Offset: 0x3e0
     // Size: 0x2c5
     function function_53d6792c() {
@@ -118,7 +113,6 @@
 
     // Namespace namespace_e449108e
     // Params 0, eflags: 0x0
-    // namespace_e449108e<file_0>::function_2dd1012
     // Checksum 0xf97d947b, Offset: 0x6b0
     // Size: 0x245
     function function_2dd1012() {
@@ -160,7 +154,6 @@
 
     // Namespace namespace_e449108e
     // Params 6, eflags: 0x0
-    // namespace_e449108e<file_0>::function_2188901b
     // Checksum 0x48f8d3eb, Offset: 0x900
     // Size: 0x2b5
     function function_2188901b(origin, angles, fovcosine, fovcosinez, viewdist, color) {
@@ -197,7 +190,6 @@
 
     // Namespace namespace_e449108e
     // Params 6, eflags: 0x0
-    // namespace_e449108e<file_0>::function_1c1f41ef
     // Checksum 0xadae54e9, Offset: 0xbc0
     // Size: 0x37e
     function function_1c1f41ef(text, color, alpha, scale, origin, life) {
@@ -240,7 +232,6 @@
 
     // Namespace namespace_e449108e
     // Params 1, eflags: 0x0
-    // namespace_e449108e<file_0>::function_7564640c
     // Checksum 0x4d22bd5c, Offset: 0xf48
     // Size: 0x8d
     function debug_text(var_37b8a117) {

@@ -8,7 +8,6 @@
 
 // Namespace entityheadicons
 // Params 0, eflags: 0x0
-// namespace_d5fb9674<file_0>::function_1463e4e5
 // Checksum 0xfc589875, Offset: 0x160
 // Size: 0x24
 function init_shared() {
@@ -17,7 +16,6 @@ function init_shared() {
 
 // Namespace entityheadicons
 // Params 0, eflags: 0x1 linked
-// namespace_d5fb9674<file_0>::function_d1413784
 // Checksum 0xd3748abf, Offset: 0x190
 // Size: 0xb8
 function start_gametype() {
@@ -38,7 +36,6 @@ function start_gametype() {
 
 // Namespace entityheadicons
 // Params 5, eflags: 0x1 linked
-// namespace_d5fb9674<file_0>::function_d7970fff
 // Checksum 0x349b1bc6, Offset: 0x250
 // Size: 0x384
 function setentityheadicon(team, owner, offset, objective, var_cc32611f) {
@@ -109,7 +106,6 @@ function setentityheadicon(team, owner, offset, objective, var_cc32611f) {
 
 // Namespace entityheadicons
 // Params 4, eflags: 0x1 linked
-// namespace_d5fb9674<file_0>::function_49af735d
 // Checksum 0xc517f71f, Offset: 0x5e0
 // Size: 0x1aa
 function function_49af735d(entity, team, icon, var_cc32611f) {
@@ -129,7 +125,6 @@ function function_49af735d(entity, team, icon, var_cc32611f) {
 
 // Namespace entityheadicons
 // Params 3, eflags: 0x1 linked
-// namespace_d5fb9674<file_0>::function_a7801f67
 // Checksum 0x971bf79f, Offset: 0x798
 // Size: 0x14a
 function function_a7801f67(entity, icon, var_cc32611f) {
@@ -147,7 +142,6 @@ function function_a7801f67(entity, icon, var_cc32611f) {
 
 // Namespace entityheadicons
 // Params 4, eflags: 0x1 linked
-// namespace_d5fb9674<file_0>::function_881beacf
 // Checksum 0x1ad8570c, Offset: 0x8f0
 // Size: 0xc2
 function updateentityheadteamobjective(entity, team, objective, var_cc32611f) {
@@ -160,7 +154,6 @@ function updateentityheadteamobjective(entity, team, objective, var_cc32611f) {
 
 // Namespace entityheadicons
 // Params 3, eflags: 0x1 linked
-// namespace_d5fb9674<file_0>::function_95d5dbed
 // Checksum 0xaa858299, Offset: 0x9c0
 // Size: 0xd2
 function updateentityheadclientobjective(entity, objective, var_cc32611f) {
@@ -174,7 +167,6 @@ function updateentityheadclientobjective(entity, objective, var_cc32611f) {
 
 // Namespace entityheadicons
 // Params 0, eflags: 0x1 linked
-// namespace_d5fb9674<file_0>::function_497e5092
 // Checksum 0xe5451607, Offset: 0xaa0
 // Size: 0x11e
 function destroyheadiconsondeath() {
@@ -196,7 +188,6 @@ function destroyheadiconsondeath() {
 
 // Namespace entityheadicons
 // Params 0, eflags: 0x1 linked
-// namespace_d5fb9674<file_0>::function_6a501184
 // Checksum 0x65aff947, Offset: 0xbc8
 // Size: 0x100
 function destroyentityheadicons() {
@@ -220,7 +211,6 @@ function destroyentityheadicons() {
 
 // Namespace entityheadicons
 // Params 1, eflags: 0x0
-// namespace_d5fb9674<file_0>::function_29295d50
 // Checksum 0xe42c2e4f, Offset: 0xcd0
 // Size: 0x84
 function function_29295d50(headicon) {
@@ -231,7 +221,6 @@ function function_29295d50(headicon) {
 
 // Namespace entityheadicons
 // Params 0, eflags: 0x0
-// namespace_d5fb9674<file_0>::function_4501c87c
 // Checksum 0xd7bae5e0, Offset: 0xd60
 // Size: 0x92
 function function_4501c87c() {

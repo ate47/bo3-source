@@ -5,7 +5,6 @@
 
 // Namespace zm_net
 // Params 2, eflags: 0x1 linked
-// namespace_af0b241a<file_0>::function_8e01ebc1
 // Checksum 0xa1da08c3, Offset: 0xa8
 // Size: 0x74
 function network_choke_init(id, max) {
@@ -20,7 +19,6 @@ function network_choke_init(id, max) {
 
 // Namespace zm_net
 // Params 1, eflags: 0x1 linked
-// namespace_af0b241a<file_0>::function_fe830b5b
 // Checksum 0x73c8d11b, Offset: 0x128
 // Size: 0x4a
 function network_choke_thread(id) {
@@ -33,7 +31,6 @@ function network_choke_thread(id) {
 
 // Namespace zm_net
 // Params 1, eflags: 0x1 linked
-// namespace_af0b241a<file_0>::function_50622110
 // Checksum 0x4bb00cee, Offset: 0x180
 // Size: 0x26
 function network_choke_safe(id) {
@@ -42,7 +39,6 @@ function network_choke_safe(id) {
 
 // Namespace zm_net
 // Params 5, eflags: 0x1 linked
-// namespace_af0b241a<file_0>::function_ef682305
 // Checksum 0x53e1a62c, Offset: 0x1b0
 // Size: 0xfe
 function network_choke_action(id, choke_action, arg1, arg2, arg3) {
@@ -65,7 +61,6 @@ function network_choke_action(id, choke_action, arg1, arg2, arg3) {
 
 // Namespace zm_net
 // Params 1, eflags: 0x1 linked
-// namespace_af0b241a<file_0>::function_b5a37462
 // Checksum 0x83ebe64a, Offset: 0x2b8
 // Size: 0x1e
 function network_entity_valid(entity) {
@@ -77,7 +72,6 @@ function network_entity_valid(entity) {
 
 // Namespace zm_net
 // Params 2, eflags: 0x1 linked
-// namespace_af0b241a<file_0>::function_4bff34cc
 // Checksum 0x9ee5e724, Offset: 0x2e0
 // Size: 0x7c
 function network_safe_init(id, max) {
@@ -89,7 +83,6 @@ function network_safe_init(id, max) {
 
 // Namespace zm_net
 // Params 2, eflags: 0x1 linked
-// namespace_af0b241a<file_0>::function_df58b72a
 // Checksum 0xb6a05505, Offset: 0x368
 // Size: 0x2a
 function _network_safe_spawn(classname, origin) {
@@ -98,7 +91,6 @@ function _network_safe_spawn(classname, origin) {
 
 // Namespace zm_net
 // Params 4, eflags: 0x1 linked
-// namespace_af0b241a<file_0>::function_e02c9be7
 // Checksum 0xb95f31d6, Offset: 0x3a0
 // Size: 0x62
 function network_safe_spawn(id, max, classname, origin) {
@@ -108,7 +100,6 @@ function network_safe_spawn(id, max, classname, origin) {
 
 // Namespace zm_net
 // Params 3, eflags: 0x1 linked
-// namespace_af0b241a<file_0>::function_72daa21d
 // Checksum 0x500e8ab9, Offset: 0x410
 // Size: 0x54
 function _network_safe_play_fx_on_tag(fx, entity, tag) {
@@ -119,7 +110,6 @@ function _network_safe_play_fx_on_tag(fx, entity, tag) {
 
 // Namespace zm_net
 // Params 5, eflags: 0x1 linked
-// namespace_af0b241a<file_0>::function_3544631a
 // Checksum 0xc9e60c48, Offset: 0x470
 // Size: 0x74
 function network_safe_play_fx_on_tag(id, max, fx, entity, tag) {

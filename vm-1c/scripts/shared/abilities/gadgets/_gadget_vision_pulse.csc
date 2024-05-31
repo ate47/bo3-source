@@ -14,7 +14,6 @@
 
 // Namespace gadget_vision_pulse
 // Params 0, eflags: 0x2
-// namespace_c8b119da<file_0>::function_2dc19561
 // Checksum 0xde1bb0c0, Offset: 0x308
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -23,7 +22,6 @@ function autoexec function_2dc19561() {
 
 // Namespace gadget_vision_pulse
 // Params 0, eflags: 0x1 linked
-// namespace_c8b119da<file_0>::function_8c87d8eb
 // Checksum 0x8e431cf7, Offset: 0x348
 // Size: 0x114
 function __init__() {
@@ -38,7 +36,6 @@ function __init__() {
 
 // Namespace gadget_vision_pulse
 // Params 1, eflags: 0x1 linked
-// namespace_c8b119da<file_0>::function_67e71792
 // Checksum 0x1f280e98, Offset: 0x468
 // Size: 0xac
 function on_localplayer_spawned(localclientnum) {
@@ -54,7 +51,6 @@ function on_localplayer_spawned(localclientnum) {
 
 // Namespace gadget_vision_pulse
 // Params 1, eflags: 0x1 linked
-// namespace_c8b119da<file_0>::function_d0c5071a
 // Checksum 0x8b95a0eb, Offset: 0x520
 // Size: 0x74
 function function_d0c5071a(localclientnum) {
@@ -71,7 +67,6 @@ function function_d0c5071a(localclientnum) {
 
 // Namespace gadget_vision_pulse
 // Params 2, eflags: 0x1 linked
-// namespace_c8b119da<file_0>::function_2902f0fc
 // Checksum 0xc3edc67e, Offset: 0x5a0
 // Size: 0x6c
 function function_2902f0fc(localclientnum, duration) {
@@ -86,7 +81,6 @@ function function_2902f0fc(localclientnum, duration) {
 
 // Namespace gadget_vision_pulse
 // Params 1, eflags: 0x1 linked
-// namespace_c8b119da<file_0>::function_d42fa123
 // Checksum 0x89838ccb, Offset: 0x618
 // Size: 0x8c
 function function_d42fa123(localclientnum) {
@@ -98,7 +92,6 @@ function function_d42fa123(localclientnum) {
 
 // Namespace gadget_vision_pulse
 // Params 1, eflags: 0x1 linked
-// namespace_c8b119da<file_0>::function_2cf010aa
 // Checksum 0x396e281d, Offset: 0x6b0
 // Size: 0x32c
 function function_2cf010aa(localclientnum) {
@@ -139,7 +132,6 @@ function function_2cf010aa(localclientnum) {
 
 // Namespace gadget_vision_pulse
 // Params 1, eflags: 0x1 linked
-// namespace_c8b119da<file_0>::function_db5a914c
 // Checksum 0x448f12a2, Offset: 0x9e8
 // Size: 0x4e
 function vision_pulse_owner_valid(owner) {
@@ -151,7 +143,6 @@ function vision_pulse_owner_valid(owner) {
 
 // Namespace gadget_vision_pulse
 // Params 1, eflags: 0x1 linked
-// namespace_c8b119da<file_0>::function_d9b31b24
 // Checksum 0x8a0fb79f, Offset: 0xa40
 // Size: 0xf6
 function watch_vision_pulse_owner_death(localclientnum) {
@@ -172,7 +163,6 @@ function watch_vision_pulse_owner_death(localclientnum) {
 
 // Namespace gadget_vision_pulse
 // Params 1, eflags: 0x1 linked
-// namespace_c8b119da<file_0>::function_9898d17b
 // Checksum 0x7fd14468, Offset: 0xb40
 // Size: 0x29a
 function do_vision_local_pulse(localclientnum) {
@@ -206,7 +196,6 @@ function do_vision_local_pulse(localclientnum) {
 
 // Namespace gadget_vision_pulse
 // Params 7, eflags: 0x1 linked
-// namespace_c8b119da<file_0>::function_6082f476
 // Checksum 0x5966ea40, Offset: 0xde8
 // Size: 0xa4
 function vision_pulse_changed(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -222,7 +211,6 @@ function vision_pulse_changed(localclientnum, oldval, newval, bnewent, binitials
 
 // Namespace gadget_vision_pulse
 // Params 1, eflags: 0x1 linked
-// namespace_c8b119da<file_0>::function_4ebdb91d
 // Checksum 0x5d4b6b41, Offset: 0xe98
 // Size: 0x154
 function function_4ebdb91d(localclientnum) {
@@ -245,7 +233,6 @@ function function_4ebdb91d(localclientnum) {
 
 // Namespace gadget_vision_pulse
 // Params 2, eflags: 0x1 linked
-// namespace_c8b119da<file_0>::function_34416618
 // Checksum 0xf31ab4c3, Offset: 0xff8
 // Size: 0x5c
 function set_reveal_enemy(localclientnum, on_off) {
@@ -257,7 +244,6 @@ function set_reveal_enemy(localclientnum, on_off) {
 
 // Namespace gadget_vision_pulse
 // Params 2, eflags: 0x1 linked
-// namespace_c8b119da<file_0>::function_4c0433b2
 // Checksum 0xa14c93cd, Offset: 0x1060
 // Size: 0x84
 function set_reveal_self(localclientnum, on_off) {
@@ -272,7 +258,6 @@ function set_reveal_self(localclientnum, on_off) {
 
 // Namespace gadget_vision_pulse
 // Params 2, eflags: 0x1 linked
-// namespace_c8b119da<file_0>::function_841fccf5
 // Checksum 0x82ddd9a2, Offset: 0x10f0
 // Size: 0x164
 function gadget_visionpulse_reveal(localclientnum, breveal) {

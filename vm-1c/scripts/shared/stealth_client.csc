@@ -8,7 +8,6 @@
 
 // Namespace namespace_f2cf86cc
 // Params 0, eflags: 0x2
-// namespace_f2cf86cc<file_0>::function_2dc19561
 // Checksum 0xf825c14d, Offset: 0x170
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,7 +16,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_f2cf86cc
 // Params 0, eflags: 0x1 linked
-// namespace_f2cf86cc<file_0>::function_8c87d8eb
 // Checksum 0xf0ab345b, Offset: 0x1b0
 // Size: 0x2c
 function __init__() {
@@ -28,7 +26,6 @@ function __init__() {
 
 // Namespace namespace_f2cf86cc
 // Params 0, eflags: 0x1 linked
-// namespace_f2cf86cc<file_0>::function_2ea898a8
 // Checksum 0xedee5511, Offset: 0x1e8
 // Size: 0x94
 function init_clientfields() {
@@ -38,7 +35,6 @@ function init_clientfields() {
 
 // Namespace namespace_f2cf86cc
 // Params 7, eflags: 0x1 linked
-// namespace_f2cf86cc<file_0>::function_f35fe4e2
 // Checksum 0xd459bdd0, Offset: 0x288
 // Size: 0xa2
 function function_f35fe4e2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -55,7 +51,6 @@ function function_f35fe4e2(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_f2cf86cc
 // Params 7, eflags: 0x1 linked
-// namespace_f2cf86cc<file_0>::function_b1ff0e4c
 // Checksum 0x3fae3892, Offset: 0x338
 // Size: 0x94
 function function_b1ff0e4c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -72,7 +67,6 @@ function function_b1ff0e4c(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_f2cf86cc
 // Params 0, eflags: 0x1 linked
-// namespace_f2cf86cc<file_0>::function_b557fc53
 // Checksum 0x3c15178a, Offset: 0x3d8
 // Size: 0x9e
 function function_b557fc53() {
@@ -93,7 +87,6 @@ function function_b557fc53() {
 
 // Namespace namespace_f2cf86cc
 // Params 0, eflags: 0x1 linked
-// namespace_f2cf86cc<file_0>::function_d473128e
 // Checksum 0x568f94c3, Offset: 0x480
 // Size: 0x76
 function function_d473128e() {

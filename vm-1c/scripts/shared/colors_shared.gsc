@@ -11,7 +11,6 @@
 
 // Namespace colors
 // Params 0, eflags: 0x2
-// namespace_6f7b2095<file_0>::function_2dc19561
 // Checksum 0x3ec97383, Offset: 0x3c8
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_8c87d8eb
 // Checksum 0x4c6f5581, Offset: 0x410
 // Size: 0x88c
 function __init__() {
@@ -121,7 +119,6 @@ function __init__() {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_5b6b9132
 // Checksum 0x6b06abf2, Offset: 0xca8
 // Size: 0xfa
 function __main__() {
@@ -139,7 +136,6 @@ function __main__() {
 
     // Namespace colors
     // Params 0, eflags: 0x1 linked
-    // namespace_6f7b2095<file_0>::function_198f6ed8
     // Checksum 0xab28e8a0, Offset: 0xdb0
     // Size: 0x98
     function debugdvars() {
@@ -156,7 +152,6 @@ function __main__() {
 
     // Namespace colors
     // Params 0, eflags: 0x1 linked
-    // namespace_6f7b2095<file_0>::function_4869a1eb
     // Checksum 0xd4742313, Offset: 0xe50
     // Size: 0x80
     function get_team_substr() {
@@ -176,7 +171,6 @@ function __main__() {
 
     // Namespace colors
     // Params 0, eflags: 0x1 linked
-    // namespace_6f7b2095<file_0>::function_d5f40cd5
     // Checksum 0x3159f7df, Offset: 0xed8
     // Size: 0x124
     function try_to_draw_line_to_node() {
@@ -199,7 +193,6 @@ function __main__() {
 
     // Namespace colors
     // Params 1, eflags: 0x1 linked
-    // namespace_6f7b2095<file_0>::function_310be1cc
     // Checksum 0xae842a2a, Offset: 0x1008
     // Size: 0x126
     function _get_debug_color(str_color) {
@@ -233,7 +226,6 @@ function __main__() {
 
     // Namespace colors
     // Params 0, eflags: 0x1 linked
-    // namespace_6f7b2095<file_0>::function_37241cf5
     // Checksum 0x6beb9722, Offset: 0x1138
     // Size: 0x22c
     function debug_colornodes() {
@@ -263,7 +255,6 @@ function __main__() {
 
     // Namespace colors
     // Params 2, eflags: 0x1 linked
-    // namespace_6f7b2095<file_0>::function_59ef90c2
     // Checksum 0x28b56944, Offset: 0x1370
     // Size: 0x2f8
     function draw_colornodes(array, team) {
@@ -288,7 +279,6 @@ function __main__() {
 
     // Namespace colors
     // Params 0, eflags: 0x1 linked
-    // namespace_6f7b2095<file_0>::function_ede28cb6
     // Checksum 0xda48f319, Offset: 0x1670
     // Size: 0x58
     function debugcolorfriendlies() {
@@ -303,7 +293,6 @@ function __main__() {
 
     // Namespace colors
     // Params 0, eflags: 0x1 linked
-    // namespace_6f7b2095<file_0>::function_e50c92c3
     // Checksum 0xe0a44f34, Offset: 0x16d0
     // Size: 0xe0
     function debugcolorfriendliestogglewatch() {
@@ -326,7 +315,6 @@ function __main__() {
 
     // Namespace colors
     // Params 0, eflags: 0x1 linked
-    // namespace_6f7b2095<file_0>::function_21aca0f7
     // Checksum 0xb35e26be, Offset: 0x17b8
     // Size: 0xb8
     function get_script_palette() {
@@ -343,7 +331,6 @@ function __main__() {
 
     // Namespace colors
     // Params 0, eflags: 0x1 linked
-    // namespace_6f7b2095<file_0>::function_f8aafe83
     // Checksum 0x2def34e6, Offset: 0x1878
     // Size: 0x392
     function draw_color_friendlies() {
@@ -397,7 +384,6 @@ function __main__() {
 
 // Namespace colors
 // Params 0, eflags: 0x0
-// namespace_6f7b2095<file_0>::function_65934191
 // Checksum 0x2046ce39, Offset: 0x1c18
 // Size: 0x14
 function player_init_color_grouping() {
@@ -406,7 +392,6 @@ function player_init_color_grouping() {
 
 // Namespace colors
 // Params 0, eflags: 0x0
-// namespace_6f7b2095<file_0>::function_16d9cdcf
 // Checksum 0xebf75fc9, Offset: 0x1c38
 // Size: 0x1c
 function convert_color_to_short_string() {
@@ -415,7 +400,6 @@ function convert_color_to_short_string() {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_c74d9e62
 // Checksum 0x86b71f80, Offset: 0x1c60
 // Size: 0x1e4
 function goto_current_colorindex() {
@@ -450,7 +434,6 @@ function goto_current_colorindex() {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_d12d059e
 // Checksum 0x60e0f9ea, Offset: 0x1e50
 // Size: 0xa4
 function get_color_list() {
@@ -467,7 +450,6 @@ function get_color_list() {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_d30cb8b3
 // Checksum 0x48cbc8d6, Offset: 0x1f00
 // Size: 0x256
 function get_colorcodes_from_trigger(color_team, team) {
@@ -502,7 +484,6 @@ function get_colorcodes_from_trigger(color_team, team) {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_7ec03676
 // Checksum 0xcf2316c6, Offset: 0x2160
 // Size: 0x298
 function trigger_issues_orders(color_team, team) {
@@ -545,7 +526,6 @@ function trigger_issues_orders(color_team, team) {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_d07acf12
 // Checksum 0xc214b5bd, Offset: 0x2400
 // Size: 0x5c
 function trigger_auto_disable() {
@@ -563,7 +543,6 @@ function trigger_auto_disable() {
 
 // Namespace colors
 // Params 1, eflags: 0x0
-// namespace_6f7b2095<file_0>::function_b8457087
 // Checksum 0xf74e22f2, Offset: 0x2468
 // Size: 0x64
 function activate_color_trigger(team) {
@@ -576,7 +555,6 @@ function activate_color_trigger(team) {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_410f7f76
 // Checksum 0x56246455, Offset: 0x24d8
 // Size: 0xac
 function get_colorcodes_and_activate_trigger(color_team, team) {
@@ -589,7 +567,6 @@ function get_colorcodes_and_activate_trigger(color_team, team) {
 
 // Namespace colors
 // Params 1, eflags: 0x5 linked
-// namespace_6f7b2095<file_0>::function_e5397838
 // Checksum 0xa11f33b2, Offset: 0x2590
 // Size: 0x250
 function private is_target_visible(target) {
@@ -623,7 +600,6 @@ function private is_target_visible(target) {
 
 // Namespace colors
 // Params 4, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_89827d0f
 // Checksum 0xc6ff04f6, Offset: 0x27e8
 // Size: 0x4e8
 function function_89827d0f(s_teleport, var_7ea5275e, var_9a424b4f, func_callback) {
@@ -711,7 +687,6 @@ function function_89827d0f(s_teleport, var_7ea5275e, var_9a424b4f, func_callback
 
 // Namespace colors
 // Params 4, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_a9e56ea1
 // Checksum 0xa96c7742, Offset: 0x2cd8
 // Size: 0x4be
 function activate_color_trigger_internal(colorcodes, colors, team, colorcodesbycolorindex) {
@@ -768,7 +743,6 @@ function activate_color_trigger_internal(colorcodes, colors, team, colorcodesbyc
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_7ce8ec15
 // Checksum 0xbb58ec24, Offset: 0x31a0
 // Size: 0x58
 function same_color_code_as_last_time(team, color) {
@@ -780,7 +754,6 @@ function same_color_code_as_last_time(team, color) {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_2a35e131
 // Checksum 0xa992ce5f, Offset: 0x3200
 // Size: 0x6a
 function process_cover_node_with_last_in_mind_allies(node, var_55b7f1ba) {
@@ -793,7 +766,6 @@ function process_cover_node_with_last_in_mind_allies(node, var_55b7f1ba) {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_65439558
 // Checksum 0xad889497, Offset: 0x3278
 // Size: 0x6a
 function process_cover_node_with_last_in_mind_axis(node, var_55b7f1ba) {
@@ -806,7 +778,6 @@ function process_cover_node_with_last_in_mind_axis(node, var_55b7f1ba) {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_31e3b27b
 // Checksum 0x954ad4f3, Offset: 0x32f0
 // Size: 0x2a
 function process_cover_node(node, null) {
@@ -815,7 +786,6 @@ function process_cover_node(node, null) {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_103ad145
 // Checksum 0xd3b398d5, Offset: 0x3328
 // Size: 0x2a
 function process_path_node(node, null) {
@@ -824,7 +794,6 @@ function process_path_node(node, null) {
 
 // Namespace colors
 // Params 3, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_d9d21895
 // Checksum 0xb1cd1a17, Offset: 0x3360
 // Size: 0x21c
 function prioritize_colorcoded_nodes(team, colorcode, color) {
@@ -851,7 +820,6 @@ function prioritize_colorcoded_nodes(team, colorcode, color) {
 
 // Namespace colors
 // Params 3, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_de7b13fa
 // Checksum 0xd63ada45, Offset: 0x3588
 // Size: 0x74
 function get_prioritized_colorcoded_nodes(team, colorcode, color) {
@@ -865,7 +833,6 @@ function get_prioritized_colorcoded_nodes(team, colorcode, color) {
 
 // Namespace colors
 // Params 3, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_5501d85f
 // Checksum 0x438f74e6, Offset: 0x3608
 // Size: 0x18a
 function issue_leave_node_order_to_ai_and_get_ai(colorcode, color, team) {
@@ -891,7 +858,6 @@ function issue_leave_node_order_to_ai_and_get_ai(colorcode, color, team) {
 
 // Namespace colors
 // Params 4, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_bc2a2a42
 // Checksum 0x8b02d036, Offset: 0x37a0
 // Size: 0x228
 function issue_color_order_to_ai(colorcode, color, team, ai) {
@@ -926,7 +892,6 @@ function issue_color_order_to_ai(colorcode, color, team, ai) {
 
 // Namespace colors
 // Params 4, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_a7e53e73
 // Checksum 0xbf792997, Offset: 0x39d0
 // Size: 0x6c
 function take_color_node(node, colorcode, trigger, counter) {
@@ -938,7 +903,6 @@ function take_color_node(node, colorcode, trigger, counter) {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_6d697e85
 // Checksum 0xf04771cf, Offset: 0x3a48
 // Size: 0xc0
 function player_color_node() {
@@ -967,7 +931,6 @@ function player_color_node() {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_ee90a726
 // Checksum 0x8c6bb86e, Offset: 0x3b10
 // Size: 0x64
 function color_node_finds_a_user() {
@@ -981,7 +944,6 @@ function color_node_finds_a_user() {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_83ef2ef5
 // Checksum 0xf6a88993, Offset: 0x3b80
 // Size: 0x6c
 function color_node_finds_user_from_colorcodes(colorcodestring, team) {
@@ -994,7 +956,6 @@ function color_node_finds_user_from_colorcodes(colorcodestring, team) {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_1c1f8ccd
 // Checksum 0x9aba7a01, Offset: 0x3bf8
 // Size: 0x158
 function color_node_finds_user_for_colorcode(colorcode, team) {
@@ -1022,7 +983,6 @@ function color_node_finds_user_for_colorcode(colorcode, team) {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_2dd95085
 // Checksum 0x128d7439, Offset: 0x3d58
 // Size: 0x28
 function occupies_colorcode(colorcode) {
@@ -1034,7 +994,6 @@ function occupies_colorcode(colorcode) {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_d3e2e9e8
 // Checksum 0x699294d6, Offset: 0x3d88
 // Size: 0x5c
 function ai_sets_goal_with_delay(node) {
@@ -1048,7 +1007,6 @@ function ai_sets_goal_with_delay(node) {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_5bd2364d
 // Checksum 0x4afc43c, Offset: 0x3df0
 // Size: 0x5c
 function ai_sets_goal(node) {
@@ -1059,7 +1017,6 @@ function ai_sets_goal(node) {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_ebf5579a
 // Checksum 0x631b29e6, Offset: 0x3e58
 // Size: 0x160
 function set_goal_and_volume(node) {
@@ -1090,7 +1047,6 @@ function set_goal_and_volume(node) {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_9cae7bd4
 // Checksum 0x5ea659ad, Offset: 0x3fc0
 // Size: 0x72
 function color_force_goal(node) {
@@ -1102,7 +1058,6 @@ function color_force_goal(node) {
 
 // Namespace colors
 // Params 2, eflags: 0x0
-// namespace_6f7b2095<file_0>::function_33359b10
 // Checksum 0x7cab48e6, Offset: 0x4040
 // Size: 0x98
 function careful_logic(node, volume) {
@@ -1119,7 +1074,6 @@ function careful_logic(node, volume) {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_aa7103ae
 // Checksum 0x1dc9aa72, Offset: 0x40e0
 // Size: 0x44
 function recover_from_careful_disable(node) {
@@ -1131,7 +1085,6 @@ function recover_from_careful_disable(node) {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_83d861e7
 // Checksum 0x949f8a42, Offset: 0x4130
 // Size: 0xda
 function use_big_goal_until_goal_is_safe(node, volume) {
@@ -1160,7 +1113,6 @@ function use_big_goal_until_goal_is_safe(node, volume) {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_d24fe79
 // Checksum 0x688e6159, Offset: 0x4218
 // Size: 0xaa
 function wait_until_an_enemy_is_in_safe_area(node, volume) {
@@ -1186,7 +1138,6 @@ function wait_until_an_enemy_is_in_safe_area(node, volume) {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_32ccd827
 // Checksum 0xeea81bfb, Offset: 0x42d0
 // Size: 0x2a
 function my_current_node_delays() {
@@ -1198,7 +1149,6 @@ function my_current_node_delays() {
 
 // Namespace colors
 // Params 3, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_3d3d6824
 // Checksum 0x3502a90d, Offset: 0x4308
 // Size: 0x218
 function process_color_order_to_ai(node, trigger, counter) {
@@ -1240,7 +1190,6 @@ function process_color_order_to_ai(node, trigger, counter) {
 
 // Namespace colors
 // Params 0, eflags: 0x0
-// namespace_6f7b2095<file_0>::function_186690f2
 // Checksum 0x1f05508e, Offset: 0x4528
 // Size: 0x16c
 function get_best_available_colored_node() {
@@ -1258,7 +1207,6 @@ function get_best_available_colored_node() {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_c4dbd2f3
 // Checksum 0x47d06455, Offset: 0x46a0
 // Size: 0x18c
 function get_best_available_new_colored_node() {
@@ -1277,7 +1225,6 @@ function get_best_available_new_colored_node() {
 
 // Namespace colors
 // Params 1, eflags: 0x0
-// namespace_6f7b2095<file_0>::function_f0baa16b
 // Checksum 0x598d226e, Offset: 0x4838
 // Size: 0xd4
 function process_stop_short_of_node(node) {
@@ -1300,7 +1247,6 @@ function process_stop_short_of_node(node) {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_70586773
 // Checksum 0x879d3279, Offset: 0x4918
 // Size: 0x1c
 function wait_for_killanimscript_or_time(timer) {
@@ -1310,7 +1256,6 @@ function wait_for_killanimscript_or_time(timer) {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_fb74e95b
 // Checksum 0x9572631e, Offset: 0x4940
 // Size: 0xc0
 function reached_node_but_could_not_claim_it(node) {
@@ -1332,7 +1277,6 @@ function reached_node_but_could_not_claim_it(node) {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_4f20255b
 // Checksum 0xb91058f5, Offset: 0x4a08
 // Size: 0x5e
 function decrementcolorusers(node) {
@@ -1348,7 +1292,6 @@ function decrementcolorusers(node) {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_eb17cbc9
 // Checksum 0x5391e178, Offset: 0x4a70
 // Size: 0x58
 function colorislegit(color) {
@@ -1362,7 +1305,6 @@ function colorislegit(color) {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_be75150e
 // Checksum 0xf7ab04a3, Offset: 0x4ad0
 // Size: 0xca
 function add_volume_to_global_arrays(colorcode, team) {
@@ -1375,7 +1317,6 @@ function add_volume_to_global_arrays(colorcode, team) {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_7d092f8c
 // Checksum 0x2bedc8ed, Offset: 0x4ba8
 // Size: 0x1ee
 function add_node_to_global_arrays(colorcode, team) {
@@ -1399,7 +1340,6 @@ function add_node_to_global_arrays(colorcode, team) {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_f33de82d
 // Checksum 0xeb920d3f, Offset: 0x4da0
 // Size: 0x72
 function left_color_node() {
@@ -1418,7 +1358,6 @@ function left_color_node() {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_549a461a
 // Checksum 0x3fc1753c, Offset: 0x4e20
 // Size: 0x116
 function getcolornumberarray() {
@@ -1439,7 +1378,6 @@ function getcolornumberarray() {
 
 // Namespace colors
 // Params 0, eflags: 0x0
-// namespace_6f7b2095<file_0>::function_65ecc30a
 // Checksum 0x6bba5edc, Offset: 0x4f40
 // Size: 0xde
 function removespawnerfromcolornumberarray() {
@@ -1457,7 +1395,6 @@ function removespawnerfromcolornumberarray() {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_dddba961
 // Checksum 0xd01e9457, Offset: 0x5028
 // Size: 0xbe
 function add_cover_node(type) {
@@ -1469,7 +1406,6 @@ function add_cover_node(type) {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_6fe74c07
 // Checksum 0xb494f2a, Offset: 0x50f0
 // Size: 0xbe
 function add_path_node(type) {
@@ -1481,7 +1417,6 @@ function add_path_node(type) {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_f26eb6b4
 // Checksum 0x5598015e, Offset: 0x51b8
 // Size: 0x300
 function colornode_spawn_reinforcement(classname, fromcolor) {
@@ -1538,7 +1473,6 @@ function colornode_spawn_reinforcement(classname, fromcolor) {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_5808e12a
 // Checksum 0x6cd84b2, Offset: 0x54c0
 // Size: 0x3b4
 function colornode_replace_on_death() {
@@ -1603,7 +1537,6 @@ function colornode_replace_on_death() {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_a738d3a3
 // Checksum 0x3434303d, Offset: 0x5880
 // Size: 0x5e
 function get_color_from_order(color, color_order) {
@@ -1621,7 +1554,6 @@ function get_color_from_order(color, color_order) {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_d5192a80
 // Checksum 0x8a737bcd, Offset: 0x58e8
 // Size: 0x230
 function friendly_spawner_vision_checker() {
@@ -1664,7 +1596,6 @@ function friendly_spawner_vision_checker() {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_ec095f6a
 // Checksum 0xe032e8f3, Offset: 0x5b20
 // Size: 0x284
 function get_color_spawner(classname, fromcolor) {
@@ -1715,7 +1646,6 @@ function get_color_spawner(classname, fromcolor) {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_d1fc12
 // Checksum 0xdd9c0f0b, Offset: 0x5db0
 // Size: 0x4c
 function getclasscolorhash(classname, fromcolor) {
@@ -1728,7 +1658,6 @@ function getclasscolorhash(classname, fromcolor) {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_c0d6cb9c
 // Checksum 0x1099fb02, Offset: 0x5e08
 // Size: 0x44
 function lock_spawner_for_awhile() {
@@ -1739,7 +1668,6 @@ function lock_spawner_for_awhile() {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_6b242f4
 // Checksum 0x9bc18e48, Offset: 0x5e58
 // Size: 0x24
 function player_sees_spawner() {
@@ -1748,7 +1676,6 @@ function player_sees_spawner() {
 
 // Namespace colors
 // Params 0, eflags: 0x0
-// namespace_6f7b2095<file_0>::function_d3f001ef
 // Checksum 0x87e38cf3, Offset: 0x5e88
 // Size: 0x7c
 function kill_color_replacements() {
@@ -1761,7 +1688,6 @@ function kill_color_replacements() {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_92e8dcfb
 // Checksum 0xcda5c060, Offset: 0x5f10
 // Size: 0xe
 function remove_replace_on_death() {
@@ -1770,7 +1696,6 @@ function remove_replace_on_death() {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_1b497663
 // Checksum 0x13dfbb31, Offset: 0x5f28
 // Size: 0x264
 function set_force_color(_color) {
@@ -1801,7 +1726,6 @@ function set_force_color(_color) {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_9054b7cf
 // Checksum 0x19a53544, Offset: 0x6198
 // Size: 0x88
 function remove_colorforced_ai_when_dead(ai) {
@@ -1813,7 +1737,6 @@ function remove_colorforced_ai_when_dead(ai) {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_e25a0dd
 // Checksum 0xc3a921a5, Offset: 0x6228
 // Size: 0x6c
 function shortencolor(color) {
@@ -1823,7 +1746,6 @@ function shortencolor(color) {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_de9cf53e
 // Checksum 0xe93a8079, Offset: 0x62a0
 // Size: 0x22
 function set_force_color_spawner(color) {
@@ -1833,7 +1755,6 @@ function set_force_color_spawner(color) {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_ab232870
 // Checksum 0x86e0b71e, Offset: 0x62d0
 // Size: 0xcc
 function new_color_being_set(color) {
@@ -1857,7 +1778,6 @@ function new_color_being_set(color) {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_6044a1ac
 // Checksum 0x5e5836f0, Offset: 0x63a8
 // Size: 0x126
 function update_debug_friendlycolor_on_death() {
@@ -1878,7 +1798,6 @@ function update_debug_friendlycolor_on_death() {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_eaf262e9
 // Checksum 0xf336fac5, Offset: 0x64d8
 // Size: 0x7a
 function update_debug_friendlycolor() {
@@ -1893,7 +1812,6 @@ function update_debug_friendlycolor() {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_8e9c2efb
 // Checksum 0x939a5164, Offset: 0x6560
 // Size: 0x44
 function has_color() {
@@ -1905,7 +1823,6 @@ function has_color() {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_e731e36f
 // Checksum 0xf38a2714, Offset: 0x65b0
 // Size: 0x1c
 function get_force_color() {
@@ -1915,7 +1832,6 @@ function get_force_color() {
 
 // Namespace colors
 // Params 2, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_c285644a
 // Checksum 0x3e873281, Offset: 0x65d8
 // Size: 0xd4
 function get_force_color_guys(team, color) {
@@ -1936,7 +1852,6 @@ function get_force_color_guys(team, color) {
 
 // Namespace colors
 // Params 0, eflags: 0x0
-// namespace_6f7b2095<file_0>::function_166a57a7
 // Checksum 0xea699ee5, Offset: 0x66b8
 // Size: 0xa8
 function get_all_force_color_friendlies() {
@@ -1954,7 +1869,6 @@ function get_all_force_color_friendlies() {
 
 // Namespace colors
 // Params 1, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_54bdb053
 // Checksum 0xe8f46efd, Offset: 0x6768
 // Size: 0x11c
 function disable(var_8d62dbc) {
@@ -1983,7 +1897,6 @@ function disable(var_8d62dbc) {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_bae40a28
 // Checksum 0xbd0e601f, Offset: 0x6890
 // Size: 0x46
 function enable() {
@@ -1999,7 +1912,6 @@ function enable() {
 
 // Namespace colors
 // Params 0, eflags: 0x1 linked
-// namespace_6f7b2095<file_0>::function_ab2c35fe
 // Checksum 0xfd7e9382, Offset: 0x68e0
 // Size: 0x18
 function is_color_ai() {
@@ -2010,7 +1922,6 @@ function is_color_ai() {
 
     // Namespace colors
     // Params 0, eflags: 0x0
-    // namespace_6f7b2095<file_0>::function_e4da4039
     // Checksum 0x8f107d4b, Offset: 0x6900
     // Size: 0x62
     function insure_player_does_not_set_forcecolor_twice_in_one_frame() {

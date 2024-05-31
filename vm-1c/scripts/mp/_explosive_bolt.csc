@@ -9,7 +9,6 @@
 
 // Namespace explosive_bolt
 // Params 0, eflags: 0x2
-// namespace_821e9fb4<file_0>::function_2dc19561
 // Checksum 0xc1e203e4, Offset: 0x198
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace explosive_bolt
 // Params 0, eflags: 0x1 linked
-// namespace_821e9fb4<file_0>::function_8c87d8eb
 // Checksum 0x290ddbce, Offset: 0x1d8
 // Size: 0x44
 function __init__() {
@@ -28,7 +26,6 @@ function __init__() {
 
 // Namespace explosive_bolt
 // Params 1, eflags: 0x1 linked
-// namespace_821e9fb4<file_0>::function_ab1f9ea1
 // Checksum 0xf601c4dc, Offset: 0x228
 // Size: 0x44
 function spawned(localclientnum) {
@@ -40,7 +37,6 @@ function spawned(localclientnum) {
 
 // Namespace explosive_bolt
 // Params 1, eflags: 0x1 linked
-// namespace_821e9fb4<file_0>::function_e18161a
 // Checksum 0x75f6e4f4, Offset: 0x278
 // Size: 0x12c
 function fx_think(localclientnum) {
@@ -59,7 +55,6 @@ function fx_think(localclientnum) {
 
 // Namespace explosive_bolt
 // Params 1, eflags: 0x1 linked
-// namespace_821e9fb4<file_0>::function_d2e7a133
 // Checksum 0xbb1685e5, Offset: 0x3b0
 // Size: 0x6c
 function start_light_fx(localclientnum) {
@@ -69,7 +64,6 @@ function start_light_fx(localclientnum) {
 
 // Namespace explosive_bolt
 // Params 1, eflags: 0x1 linked
-// namespace_821e9fb4<file_0>::function_958821cd
 // Checksum 0xf4662d04, Offset: 0x428
 // Size: 0x4e
 function stop_light_fx(localclientnum) {
@@ -81,7 +75,6 @@ function stop_light_fx(localclientnum) {
 
 // Namespace explosive_bolt
 // Params 1, eflags: 0x1 linked
-// namespace_821e9fb4<file_0>::function_9eb5d027
 // Checksum 0x6213bcbd, Offset: 0x480
 // Size: 0xf4
 function fullscreen_fx(localclientnum) {

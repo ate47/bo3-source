@@ -14,7 +14,6 @@
 
 // Namespace cic_turret
 // Params 0, eflags: 0x2
-// namespace_b219fa51<file_0>::function_2dc19561
 // Checksum 0xd265561e, Offset: 0x500
 // Size: 0x2a
 function autoexec function_2dc19561() {
@@ -23,7 +22,6 @@ function autoexec function_2dc19561() {
 
 // Namespace cic_turret
 // Params 0, eflags: 0x0
-// namespace_b219fa51<file_0>::function_8c87d8eb
 // Checksum 0x9a536174, Offset: 0x538
 // Size: 0x19b
 function __init__() {
@@ -44,7 +42,6 @@ function __init__() {
 
 // Namespace cic_turret
 // Params 0, eflags: 0x0
-// namespace_b219fa51<file_0>::function_4bf69f84
 // Checksum 0x780b7945, Offset: 0x6e0
 // Size: 0x272
 function function_4bf69f84() {
@@ -83,7 +80,6 @@ function function_4bf69f84() {
 
 // Namespace cic_turret
 // Params 0, eflags: 0x0
-// namespace_b219fa51<file_0>::function_64047fb9
 // Checksum 0xd08eeb55, Offset: 0x960
 // Size: 0x22
 function function_64047fb9() {
@@ -92,7 +88,6 @@ function function_64047fb9() {
 
 // Namespace cic_turret
 // Params 0, eflags: 0x0
-// namespace_b219fa51<file_0>::function_73a1f565
 // Checksum 0x5e21e13b, Offset: 0x990
 // Size: 0x22
 function function_73a1f565() {
@@ -101,7 +96,6 @@ function function_73a1f565() {
 
 // Namespace cic_turret
 // Params 1, eflags: 0x0
-// namespace_b219fa51<file_0>::function_6bf457cb
 // Checksum 0x73c99e3, Offset: 0x9c0
 // Size: 0x3a
 function function_6bf457cb(params) {
@@ -113,7 +107,6 @@ function function_6bf457cb(params) {
 
 // Namespace cic_turret
 // Params 1, eflags: 0x0
-// namespace_b219fa51<file_0>::function_31d70ab3
 // Checksum 0x40f825a, Offset: 0xa08
 // Size: 0x102
 function function_31d70ab3(angles) {
@@ -137,7 +130,6 @@ function function_31d70ab3(angles) {
 
 // Namespace cic_turret
 // Params 0, eflags: 0x0
-// namespace_b219fa51<file_0>::function_d20b689f
 // Checksum 0xa397e31f, Offset: 0xb18
 // Size: 0xa2
 function function_d20b689f() {
@@ -156,7 +148,6 @@ function function_d20b689f() {
 
 // Namespace cic_turret
 // Params 0, eflags: 0x0
-// namespace_b219fa51<file_0>::function_4ebb4502
 // Checksum 0xff0df41a, Offset: 0xbc8
 // Size: 0xce
 function function_4ebb4502() {
@@ -178,7 +169,6 @@ function function_4ebb4502() {
 
 // Namespace cic_turret
 // Params 0, eflags: 0x0
-// namespace_b219fa51<file_0>::function_8929bfc3
 // Checksum 0x3b0c479f, Offset: 0xca0
 // Size: 0x39d
 function function_8929bfc3() {
@@ -248,7 +238,6 @@ function function_8929bfc3() {
 
 // Namespace cic_turret
 // Params 1, eflags: 0x0
-// namespace_b219fa51<file_0>::function_2fae15b2
 // Checksum 0x631d733b, Offset: 0x1048
 // Size: 0x9a
 function function_2fae15b2(params) {
@@ -266,7 +255,6 @@ function function_2fae15b2(params) {
 
 // Namespace cic_turret
 // Params 1, eflags: 0x0
-// namespace_b219fa51<file_0>::function_b149aa04
 // Checksum 0xf4f2c60e, Offset: 0x10f0
 // Size: 0x97
 function function_b149aa04(health_pct) {
@@ -286,7 +274,6 @@ function function_b149aa04(health_pct) {
 
 // Namespace cic_turret
 // Params 2, eflags: 0x0
-// namespace_b219fa51<file_0>::function_197cacdf
 // Checksum 0xbc3273b, Offset: 0x1190
 // Size: 0x14a
 function function_197cacdf(effect, tag) {
@@ -314,7 +301,6 @@ function function_197cacdf(effect, tag) {
 
 // Namespace cic_turret
 // Params 0, eflags: 0x0
-// namespace_b219fa51<file_0>::function_6c405c27
 // Checksum 0x5e2049ca, Offset: 0x12e8
 // Size: 0x7d
 function function_6c405c27() {
@@ -332,7 +318,6 @@ function function_6c405c27() {
 
 // Namespace cic_turret
 // Params 0, eflags: 0x0
-// namespace_b219fa51<file_0>::function_c9084cfa
 // Checksum 0x263e8b26, Offset: 0x1370
 // Size: 0x1aa
 function function_c9084cfa() {
@@ -371,7 +356,6 @@ function function_c9084cfa() {
 
 // Namespace cic_turret
 // Params 0, eflags: 0x0
-// namespace_b219fa51<file_0>::function_f92793ae
 // Checksum 0x6206c1a7, Offset: 0x1528
 // Size: 0x8a
 function death_fx() {
@@ -385,7 +369,6 @@ function death_fx() {
 
 // Namespace cic_turret
 // Params 2, eflags: 0x0
-// namespace_b219fa51<file_0>::function_969be05e
 // Checksum 0x5e1a96c7, Offset: 0x15c0
 // Size: 0xcf
 function function_969be05e(attacker, hitdir) {
@@ -403,7 +386,6 @@ function function_969be05e(attacker, hitdir) {
 
 // Namespace cic_turret
 // Params 1, eflags: 0x0
-// namespace_b219fa51<file_0>::function_20d6503c
 // Checksum 0x45efa700, Offset: 0x1698
 // Size: 0x19a
 function function_20d6503c(totalfiretime) {
@@ -444,7 +426,6 @@ function function_20d6503c(totalfiretime) {
 
 // Namespace cic_turret
 // Params 0, eflags: 0x0
-// namespace_b219fa51<file_0>::function_c9760e52
 // Checksum 0xcf8449e0, Offset: 0x1840
 // Size: 0x1a
 function function_c9760e52() {
@@ -453,7 +434,6 @@ function function_c9760e52() {
 
 // Namespace cic_turret
 // Params 1, eflags: 0x0
-// namespace_b219fa51<file_0>::function_44158b0
 // Checksum 0x59e1a81b, Offset: 0x1868
 // Size: 0x2a
 function function_44158b0(team) {
@@ -465,7 +445,6 @@ function function_44158b0(team) {
 
 // Namespace cic_turret
 // Params 0, eflags: 0x0
-// namespace_b219fa51<file_0>::function_38baa992
 // Checksum 0xb31db029, Offset: 0x18a0
 // Size: 0x32
 function function_38baa992() {
@@ -477,7 +456,6 @@ function function_38baa992() {
 
 // Namespace cic_turret
 // Params 0, eflags: 0x0
-// namespace_b219fa51<file_0>::function_39f05215
 // Checksum 0x8083dc91, Offset: 0x18e0
 // Size: 0x192
 function function_39f05215() {
@@ -506,7 +484,6 @@ function function_39f05215() {
 
 // Namespace cic_turret
 // Params 14, eflags: 0x0
-// namespace_b219fa51<file_0>::function_df1adf01
 // Checksum 0x64b4843, Offset: 0x1a80
 // Size: 0x136
 function function_df1adf01(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname) {
@@ -528,7 +505,6 @@ function function_df1adf01(einflictor, eattacker, idamage, idflags, smeansofdeat
 
 // Namespace cic_turret
 // Params 1, eflags: 0x0
-// namespace_b219fa51<file_0>::function_2790de05
 // Checksum 0xf35cae8a, Offset: 0x1bc0
 // Size: 0xe5
 function function_2790de05(turret) {
@@ -553,7 +529,6 @@ function function_2790de05(turret) {
 
 // Namespace cic_turret
 // Params 0, eflags: 0x0
-// namespace_b219fa51<file_0>::function_d8937095
 // Checksum 0x90e66e78, Offset: 0x1cb0
 // Size: 0x19a
 function function_d8937095() {

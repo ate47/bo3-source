@@ -12,7 +12,6 @@
 
 // Namespace zm_powerup_zombie_blood
 // Params 0, eflags: 0x2
-// namespace_43a18dd5<file_0>::function_2dc19561
 // Checksum 0x10a3ffa2, Offset: 0x2f0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_zombie_blood
 // Params 0, eflags: 0x1 linked
-// namespace_43a18dd5<file_0>::function_8c87d8eb
 // Checksum 0xbc45ce0b, Offset: 0x330
 // Size: 0x12c
 function __init__() {
@@ -37,7 +35,6 @@ function __init__() {
 
 // Namespace zm_powerup_zombie_blood
 // Params 1, eflags: 0x1 linked
-// namespace_43a18dd5<file_0>::function_a0b86d2c
 // Checksum 0x5958323f, Offset: 0x468
 // Size: 0x64
 function function_a0b86d2c(localclientnum) {
@@ -48,7 +45,6 @@ function function_a0b86d2c(localclientnum) {
 
 // Namespace zm_powerup_zombie_blood
 // Params 7, eflags: 0x1 linked
-// namespace_43a18dd5<file_0>::function_2d30244a
 // Checksum 0x78770197, Offset: 0x4d8
 // Size: 0x1b6
 function toggle_player_zombie_blood_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {

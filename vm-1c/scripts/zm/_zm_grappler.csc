@@ -12,7 +12,6 @@
 
 // Namespace zm_grappler
 // Params 0, eflags: 0x2
-// namespace_b71fafb4<file_0>::function_2dc19561
 // Checksum 0xf7763e72, Offset: 0x208
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_grappler
 // Params 0, eflags: 0x1 linked
-// namespace_b71fafb4<file_0>::function_8c87d8eb
 // Checksum 0xd78a5aeb, Offset: 0x248
 // Size: 0x94
 function __init__() {
@@ -31,7 +29,6 @@ function __init__() {
 
 // Namespace zm_grappler
 // Params 7, eflags: 0x1 linked
-// namespace_b71fafb4<file_0>::function_79d05fa8
 // Checksum 0x2bedf7c9, Offset: 0x2e8
 // Size: 0x6e
 function grappler_source(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -45,7 +42,6 @@ function grappler_source(localclientnum, oldval, newval, bnewent, binitialsnap, 
 
 // Namespace zm_grappler
 // Params 7, eflags: 0x1 linked
-// namespace_b71fafb4<file_0>::function_7bbbd82e
 // Checksum 0x99739a26, Offset: 0x360
 // Size: 0xd6
 function grappler_beam(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -63,7 +59,6 @@ function grappler_beam(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 
 // Namespace zm_grappler
 // Params 4, eflags: 0x1 linked
-// namespace_b71fafb4<file_0>::function_55af4b5b
 // Checksum 0x10dd379b, Offset: 0x440
 // Size: 0x54
 function function_55af4b5b(player, tag, pivot, delay) {
@@ -74,7 +69,6 @@ function function_55af4b5b(player, tag, pivot, delay) {
 
 // Namespace zm_grappler
 // Params 3, eflags: 0x1 linked
-// namespace_b71fafb4<file_0>::function_1de33e08
 // Checksum 0x48d4d47e, Offset: 0x4a0
 // Size: 0x8c
 function grapple_beam(player, tag, pivot) {

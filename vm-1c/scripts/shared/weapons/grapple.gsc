@@ -12,7 +12,6 @@
 
 // Namespace grapple
 // Params 0, eflags: 0x2
-// namespace_c2daa8ee<file_0>::function_2dc19561
 // Checksum 0x5f7cf6d5, Offset: 0x248
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace grapple
 // Params 0, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_8c87d8eb
 // Checksum 0xd8107be, Offset: 0x290
 // Size: 0x24
 function __init__() {
@@ -30,7 +28,6 @@ function __init__() {
 
 // Namespace grapple
 // Params 0, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_5b6b9132
 // Checksum 0x2fafd7a3, Offset: 0x2c0
 // Size: 0xd2
 function __main__() {
@@ -43,7 +40,6 @@ function __main__() {
 
 // Namespace grapple
 // Params 2, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_c83c076b
 // Checksum 0x9cfddfe, Offset: 0x3a0
 // Size: 0x8a
 function function_c83c076b(var_893b36f7, var_c508a51e) {
@@ -58,7 +54,6 @@ function function_c83c076b(var_893b36f7, var_c508a51e) {
 
 // Namespace grapple
 // Params 0, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_80c05bda
 // Checksum 0xb9edc697, Offset: 0x438
 // Size: 0xfa
 function function_80c05bda() {
@@ -80,7 +75,6 @@ function function_80c05bda() {
 
 // Namespace grapple
 // Params 1, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_3a723e07
 // Checksum 0x6fb44ead, Offset: 0x540
 // Size: 0x13c
 function watch_lockon(weapon) {
@@ -108,7 +102,6 @@ function watch_lockon(weapon) {
 
 // Namespace grapple
 // Params 1, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_525a420a
 // Checksum 0xc1854e2f, Offset: 0x688
 // Size: 0xa4
 function function_525a420a(weapon) {
@@ -129,7 +122,6 @@ function function_525a420a(weapon) {
 
 // Namespace grapple
 // Params 1, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_4f0d1ede
 // Checksum 0x614c00df, Offset: 0x738
 // Size: 0x130
 function function_4f0d1ede(weapon) {
@@ -160,7 +152,6 @@ function function_4f0d1ede(weapon) {
 
 // Namespace grapple
 // Params 3, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_b0a2c4bd
 // Checksum 0xc3f53ac0, Offset: 0x870
 // Size: 0x186
 function function_b0a2c4bd(origin, forward, weapon) {
@@ -186,7 +177,6 @@ function function_b0a2c4bd(origin, forward, weapon) {
 
 // Namespace grapple
 // Params 1, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_43c5e4e9
 // Checksum 0xb795839b, Offset: 0xa00
 // Size: 0x3cc
 function function_43c5e4e9(weapon) {
@@ -247,7 +237,6 @@ function function_43c5e4e9(weapon) {
 
 // Namespace grapple
 // Params 1, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_3fb56153
 // Checksum 0x8caa6854, Offset: 0xdd8
 // Size: 0xaa
 function function_3fb56153(target) {
@@ -274,7 +263,6 @@ function function_3fb56153(target) {
 
 // Namespace grapple
 // Params 5, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_461aeeba
 // Checksum 0xd1c3b9c, Offset: 0xe90
 // Size: 0x19a
 function function_461aeeba(target, origin, forward, var_f2af12bd, max_range) {
@@ -298,7 +286,6 @@ function function_461aeeba(target, origin, forward, var_f2af12bd, max_range) {
 
 // Namespace grapple
 // Params 5, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_c0064c09
 // Checksum 0x86dbdecb, Offset: 0x1038
 // Size: 0x140
 function function_c0064c09(targets, origin, forward, var_f2af12bd, max_range) {
@@ -327,7 +314,6 @@ function function_c0064c09(targets, origin, forward, var_f2af12bd, max_range) {
 
 // Namespace grapple
 // Params 3, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_a52faa04
 // Checksum 0x1aebf85a, Offset: 0x1180
 // Size: 0x5c
 function trace(from, to, target) {
@@ -337,7 +323,6 @@ function trace(from, to, target) {
 
 // Namespace grapple
 // Params 5, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_7ee3d9cd
 // Checksum 0x2fe8a7c0, Offset: 0x11e8
 // Size: 0x178
 function can_see(target, target_origin, player_origin, player_forward, distance) {
@@ -363,7 +348,6 @@ function can_see(target, target_origin, player_origin, player_forward, distance)
 
 // Namespace grapple
 // Params 1, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_139e3a4a
 // Checksum 0x63620f01, Offset: 0x1368
 // Size: 0x74
 function is_valid_target(ent) {
@@ -377,7 +361,6 @@ function is_valid_target(ent) {
 
 // Namespace grapple
 // Params 3, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_2aaab717
 // Checksum 0x15deab00, Offset: 0x13e8
 // Size: 0xf8
 function function_2aaab717(testorigin, weapon, newtarget) {
@@ -395,7 +378,6 @@ function function_2aaab717(testorigin, weapon, newtarget) {
 
 // Namespace grapple
 // Params 2, eflags: 0x0
-// namespace_c2daa8ee<file_0>::function_891f41a2
 // Checksum 0xef02a434, Offset: 0x14e8
 // Size: 0x4a
 function function_891f41a2(testorigin, weapon) {
@@ -405,7 +387,6 @@ function function_891f41a2(testorigin, weapon) {
 
 // Namespace grapple
 // Params 1, eflags: 0x0
-// namespace_c2daa8ee<file_0>::function_2718edba
 // Checksum 0x3f7329be, Offset: 0x1540
 // Size: 0x4a
 function function_2718edba(targetorigin) {
@@ -415,7 +396,6 @@ function function_2718edba(targetorigin) {
 
 // Namespace grapple
 // Params 2, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_9814bbcd
 // Checksum 0x3759731a, Offset: 0x1598
 // Size: 0x3a
 function function_9814bbcd(targetorigin, radius) {
@@ -424,7 +404,6 @@ function function_9814bbcd(targetorigin, radius) {
 
 // Namespace grapple
 // Params 1, eflags: 0x1 linked
-// namespace_c2daa8ee<file_0>::function_9a6421f8
 // Checksum 0x36ef5584, Offset: 0x15e0
 // Size: 0x22
 function function_9a6421f8(target) {

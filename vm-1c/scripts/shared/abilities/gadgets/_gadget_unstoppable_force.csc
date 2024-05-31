@@ -13,7 +13,6 @@
 
 // Namespace namespace_11c3c67a
 // Params 0, eflags: 0x2
-// namespace_11c3c67a<file_0>::function_2dc19561
 // Checksum 0x8a3ac9eb, Offset: 0x400
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -22,7 +21,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_11c3c67a
 // Params 0, eflags: 0x1 linked
-// namespace_11c3c67a<file_0>::function_8c87d8eb
 // Checksum 0x696b3347, Offset: 0x440
 // Size: 0x6c
 function __init__() {
@@ -32,7 +30,6 @@ function __init__() {
 
 // Namespace namespace_11c3c67a
 // Params 1, eflags: 0x1 linked
-// namespace_11c3c67a<file_0>::function_a5129e56
 // Checksum 0x4601b7b, Offset: 0x4b8
 // Size: 0x24
 function on_localplayer_shutdown(localclientnum) {
@@ -41,7 +38,6 @@ function on_localplayer_shutdown(localclientnum) {
 
 // Namespace namespace_11c3c67a
 // Params 7, eflags: 0x1 linked
-// namespace_11c3c67a<file_0>::function_8f92edb4
 // Checksum 0xd388cba4, Offset: 0x4e8
 // Size: 0x202
 function function_8f92edb4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -63,7 +59,6 @@ function function_8f92edb4(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_11c3c67a
 // Params 1, eflags: 0x1 linked
-// namespace_11c3c67a<file_0>::function_435df4ae
 // Checksum 0x3f45a0ba, Offset: 0x6f8
 // Size: 0x11c
 function function_435df4ae(localclientnum) {
@@ -75,7 +70,6 @@ function function_435df4ae(localclientnum) {
 
 // Namespace namespace_11c3c67a
 // Params 1, eflags: 0x1 linked
-// namespace_11c3c67a<file_0>::function_f8cd963
 // Checksum 0x36d6bd01, Offset: 0x820
 // Size: 0x3c
 function function_f8cd963(localclientnum) {
@@ -84,7 +78,6 @@ function function_f8cd963(localclientnum) {
 
 // Namespace namespace_11c3c67a
 // Params 1, eflags: 0x1 linked
-// namespace_11c3c67a<file_0>::function_26d7266e
 // Checksum 0xad92a861, Offset: 0x868
 // Size: 0x3e
 function function_26d7266e(localclientnum) {
@@ -96,7 +89,6 @@ function function_26d7266e(localclientnum) {
 
 // Namespace namespace_11c3c67a
 // Params 1, eflags: 0x1 linked
-// namespace_11c3c67a<file_0>::function_4ba988e2
 // Checksum 0xd6d4fab3, Offset: 0x8b0
 // Size: 0x62
 function function_4ba988e2(localclientnum) {
@@ -108,7 +100,6 @@ function function_4ba988e2(localclientnum) {
 
 // Namespace namespace_11c3c67a
 // Params 1, eflags: 0x1 linked
-// namespace_11c3c67a<file_0>::function_7f9030dd
 // Checksum 0xb760393a, Offset: 0x920
 // Size: 0x190
 function function_7f9030dd(localclientnum) {

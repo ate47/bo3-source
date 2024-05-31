@@ -17,7 +17,6 @@
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x2
-// namespace_72ee5da4<file_0>::function_2dc19561
 // Checksum 0x22a80dd0, Offset: 0x488
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -26,7 +25,6 @@ function autoexec function_2dc19561() {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_8c87d8eb
 // Checksum 0x99ec1590, Offset: 0x4c8
 // Size: 0x4
 function __init__() {
@@ -35,7 +33,6 @@ function __init__() {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_ca333919
 // Checksum 0xc63df162, Offset: 0x4d8
 // Size: 0x3c
 function function_ca333919(archetype) {
@@ -44,7 +41,6 @@ function function_ca333919(archetype) {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_a767f9b4
 // Checksum 0x2bc4137e, Offset: 0x520
 // Size: 0x122
 function function_a767f9b4() {
@@ -64,7 +60,6 @@ function function_a767f9b4() {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_25c079cd
 // Checksum 0xf05386d0, Offset: 0x650
 // Size: 0xbc
 function entityisarchetype(entity, archetype) {
@@ -82,7 +77,6 @@ function entityisarchetype(entity, archetype) {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_14881d7e
 // Checksum 0xbc86bbe7, Offset: 0x718
 // Size: 0x52
 function getenemytarget() {
@@ -96,7 +90,6 @@ function getenemytarget() {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_eecdbfb2
 // Checksum 0x84cd94cd, Offset: 0x778
 // Size: 0x114
 function gettargetpos(target, geteye) {
@@ -117,7 +110,6 @@ function gettargetpos(target, geteye) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_cb8892f2
 // Checksum 0xb111546e, Offset: 0x898
 // Size: 0x6a
 function gettargeteyeoffset(target) {
@@ -130,7 +122,6 @@ function gettargeteyeoffset(target) {
 
 // Namespace vehicle_ai
 // Params 4, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_afb82faf
 // Checksum 0x2f425e0e, Offset: 0x910
 // Size: 0x174
 function fire_for_time(totalfiretime, turretidx, target, intervalscale) {
@@ -153,7 +144,6 @@ function fire_for_time(totalfiretime, turretidx, target, intervalscale) {
 
 // Namespace vehicle_ai
 // Params 3, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_b913648f
 // Checksum 0xa4fccb6e, Offset: 0xa90
 // Size: 0xec
 function fire_for_rounds(firecount, turretidx, target) {
@@ -170,7 +160,6 @@ function fire_for_rounds(firecount, turretidx, target) {
 
 // Namespace vehicle_ai
 // Params 4, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_59f83de7
 // Checksum 0x62dd2d6c, Offset: 0xb88
 // Size: 0x21c
 function __fire_for_rounds_internal(firecount, fireinterval, turretidx, target) {
@@ -205,7 +194,6 @@ function __fire_for_rounds_internal(firecount, fireinterval, turretidx, target) 
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_2c25abfe
 // Checksum 0x41604a55, Offset: 0xdb0
 // Size: 0x12a
 function owner_in_line_of_fire() {
@@ -222,7 +210,6 @@ function owner_in_line_of_fire() {
 
 // Namespace vehicle_ai
 // Params 3, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_5cbfc55e
 // Checksum 0xdb976140, Offset: 0xee8
 // Size: 0x14c
 function setturrettarget(target, turretidx, offset) {
@@ -254,7 +241,6 @@ function setturrettarget(target, turretidx, offset) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_7558fe9f
 // Checksum 0x27deb27d, Offset: 0x1040
 // Size: 0x34
 function fireturret(turretidx, var_2b904ac6) {
@@ -263,7 +249,6 @@ function fireturret(turretidx, var_2b904ac6) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_e8b93d1b
 // Checksum 0x695829d9, Offset: 0x1080
 // Size: 0xe4
 function javelin_losetargetatrighttime(target) {
@@ -285,7 +270,6 @@ function javelin_losetargetatrighttime(target) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_3a863dac
 // Checksum 0xd130444c, Offset: 0x1170
 // Size: 0x74
 function waittill_pathing_done(maxtime) {
@@ -298,7 +282,6 @@ function waittill_pathing_done(maxtime) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_be798a34
 // Checksum 0x2f53de23, Offset: 0x11f0
 // Size: 0x86
 function waittill_pathresult(maxtime) {
@@ -313,7 +296,6 @@ function waittill_pathresult(maxtime) {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_4134aafd
 // Checksum 0x99e99fb8, Offset: 0x1280
 // Size: 0x4a
 function waittill_asm_terminated() {
@@ -326,7 +308,6 @@ function waittill_asm_terminated() {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_9dfad743
 // Checksum 0x8e8cb833, Offset: 0x12d8
 // Size: 0x4a
 function waittill_asm_timeout(timeout) {
@@ -339,7 +320,6 @@ function waittill_asm_timeout(timeout) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_3e039667
 // Checksum 0x5301d55d, Offset: 0x1330
 // Size: 0xd6
 function waittill_asm_complete(substate_to_wait, timeout) {
@@ -359,7 +339,6 @@ function waittill_asm_complete(substate_to_wait, timeout) {
 
 // Namespace vehicle_ai
 // Params 4, eflags: 0x0
-// namespace_72ee5da4<file_0>::function_ce010d34
 // Checksum 0xa47b5bcb, Offset: 0x1410
 // Size: 0x1e4
 function throw_off_balance(damagetype, hitpoint, hitdirection, hitlocationinfo) {
@@ -379,7 +358,6 @@ function throw_off_balance(damagetype, hitpoint, hitdirection, hitlocationinfo) 
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x0
-// namespace_72ee5da4<file_0>::function_53d45756
 // Checksum 0xe005a867, Offset: 0x1600
 // Size: 0x7a
 function predicted_collision() {
@@ -395,7 +373,6 @@ function predicted_collision() {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_843f1c6c
 // Checksum 0xed4a3458, Offset: 0x1688
 // Size: 0x7c
 function collision_fx(normal) {
@@ -406,7 +383,6 @@ function collision_fx(normal) {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_21f990bf
 // Checksum 0x65f8c6eb, Offset: 0x1710
 // Size: 0x3ce
 function nudge_collision() {
@@ -460,7 +436,6 @@ function nudge_collision() {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_cfb0d8c8
 // Checksum 0xc717cf64, Offset: 0x1ae8
 // Size: 0x100
 function level_out_for_landing() {
@@ -479,7 +454,6 @@ function level_out_for_landing() {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_587b6deb
 // Checksum 0x2714a9f2, Offset: 0x1bf0
 // Size: 0x34
 function immolate(attacker) {
@@ -489,7 +463,6 @@ function immolate(attacker) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_f2b259d
 // Checksum 0x5d375f20, Offset: 0x1c30
 // Size: 0x2a4
 function burning_thread(attacker, inflictor) {
@@ -529,7 +502,6 @@ function burning_thread(attacker, inflictor) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_e26f0e60
 // Checksum 0xa0435258, Offset: 0x1ee0
 // Size: 0x2e
 function iff_notifymeinnsec(time, note) {
@@ -540,7 +512,6 @@ function iff_notifymeinnsec(time, note) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_3cede31
 // Checksum 0x4ef27cd4, Offset: 0x1f18
 // Size: 0x1e4
 function iff_override(owner, time) {
@@ -572,7 +543,6 @@ function iff_override(owner, time) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_a3ebd0f
 // Checksum 0xa9b1a471, Offset: 0x2108
 // Size: 0xd0
 function iff_override_team_switch_behavior(team) {
@@ -592,7 +562,6 @@ function iff_override_team_switch_behavior(team) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_d8666c51
 // Checksum 0x73d09bb3, Offset: 0x21e0
 // Size: 0xb4
 function blink_lights_for_time(time) {
@@ -611,7 +580,6 @@ function blink_lights_for_time(time) {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_f676f983
 // Checksum 0x97db72e5, Offset: 0x22a0
 // Size: 0x12
 function turnoff() {
@@ -620,7 +588,6 @@ function turnoff() {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_3110a54f
 // Checksum 0x65cffd1c, Offset: 0x22c0
 // Size: 0x12
 function turnon() {
@@ -629,7 +596,6 @@ function turnon() {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_f09929f
 // Checksum 0xb60ee7ce, Offset: 0x22e0
 // Size: 0xc4
 function turnoffalllightsandlaser() {
@@ -645,7 +611,6 @@ function turnoffalllightsandlaser() {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_e781ae0e
 // Checksum 0x19d9d6c, Offset: 0x23b0
 // Size: 0x4c
 function turnoffallambientanims() {
@@ -656,7 +621,6 @@ function turnoffallambientanims() {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_a5df6c0c
 // Checksum 0x57b7debe, Offset: 0x2408
 // Size: 0x94
 function clearalllookingandtargeting() {
@@ -670,7 +634,6 @@ function clearalllookingandtargeting() {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_eda2d09e
 // Checksum 0xd8363931, Offset: 0x24a8
 // Size: 0xf4
 function clearallmovement(zerooutspeed) {
@@ -693,7 +656,6 @@ function clearallmovement(zerooutspeed) {
 
 // Namespace vehicle_ai
 // Params 15, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_454d7744
 // Checksum 0xf298ea25, Offset: 0x25a8
 // Size: 0x240
 function shared_callback_damage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -725,7 +687,6 @@ function shared_callback_damage(einflictor, eattacker, idamage, idflags, smeanso
 
 // Namespace vehicle_ai
 // Params 5, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_8df80b43
 // Checksum 0x8d3f4559, Offset: 0x27f0
 // Size: 0x15a
 function should_emp(vehicle, weapon, meansofdeath, einflictor, eattacker) {
@@ -753,7 +714,6 @@ function should_emp(vehicle, weapon, meansofdeath, einflictor, eattacker) {
 
 // Namespace vehicle_ai
 // Params 5, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_7b61b3a4
 // Checksum 0x39e2d8aa, Offset: 0x2958
 // Size: 0x15a
 function should_burn(vehicle, weapon, meansofdeath, einflictor, eattacker) {
@@ -787,7 +747,6 @@ function should_burn(vehicle, weapon, meansofdeath, einflictor, eattacker) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_7155ba9c
 // Checksum 0xc9cb0b6, Offset: 0x2ac0
 // Size: 0xa4
 function startinitialstate(defaultstate) {
@@ -805,7 +764,6 @@ function startinitialstate(defaultstate) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_81b6f1ac
 // Checksum 0xf60e461d, Offset: 0x2b70
 // Size: 0x70
 function start_scripted(disable_death_state, no_clear_movement) {
@@ -817,7 +775,6 @@ function start_scripted(disable_death_state, no_clear_movement) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_efe9815e
 // Checksum 0x804a0aa4, Offset: 0x2be8
 // Size: 0x84
 function stop_scripted(statename) {
@@ -832,7 +789,6 @@ function stop_scripted(statename) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_dbc36e92
 // Checksum 0x482669b3, Offset: 0x2c78
 // Size: 0x18
 function set_role(rolename) {
@@ -841,7 +797,6 @@ function set_role(rolename) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_fa59cc99
 // Checksum 0x103ef3b8, Offset: 0x2c98
 // Size: 0x44
 function set_state(name, params) {
@@ -850,7 +805,6 @@ function set_state(name, params) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_562e2e62
 // Checksum 0xa4df6ed6, Offset: 0x2ce8
 // Size: 0x44
 function evaluate_connections(eval_func, params) {
@@ -859,7 +813,6 @@ function evaluate_connections(eval_func, params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_d4ad8dc0
 // Checksum 0x94835341, Offset: 0x2d38
 // Size: 0x6c
 function get_state_callbacks(statename) {
@@ -875,7 +828,6 @@ function get_state_callbacks(statename) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x0
-// namespace_72ee5da4<file_0>::function_7972425b
 // Checksum 0xabbd9bad, Offset: 0x2db0
 // Size: 0x60
 function get_state_callbacks_for_role(rolename, statename) {
@@ -890,7 +842,6 @@ function get_state_callbacks_for_role(rolename, statename) {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_4b5a00cb
 // Checksum 0xc002aee0, Offset: 0x2e18
 // Size: 0x56
 function get_current_state() {
@@ -902,7 +853,6 @@ function get_current_state() {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_ffa85d87
 // Checksum 0x8fdb09e1, Offset: 0x2e78
 // Size: 0x56
 function get_previous_state() {
@@ -914,7 +864,6 @@ function get_previous_state() {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_aba9988f
 // Checksum 0xe9cff409, Offset: 0x2ed8
 // Size: 0x56
 function get_next_state() {
@@ -926,7 +875,6 @@ function get_next_state() {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_896b19f4
 // Checksum 0x3a1aa4bf, Offset: 0x2f38
 // Size: 0x64
 function is_instate(statename) {
@@ -938,7 +886,6 @@ function is_instate(statename) {
 
 // Namespace vehicle_ai
 // Params 4, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_26678920
 // Checksum 0xd793377d, Offset: 0x2fa8
 // Size: 0x90
 function add_state(name, enter_func, update_func, exit_func) {
@@ -954,7 +901,6 @@ function add_state(name, enter_func, update_func, exit_func) {
 
 // Namespace vehicle_ai
 // Params 4, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_2605b15
 // Checksum 0x15382124, Offset: 0x3040
 // Size: 0x5c
 function add_interrupt_connection(from_state_name, to_state_name, on_notify, checkfunc) {
@@ -963,7 +909,6 @@ function add_interrupt_connection(from_state_name, to_state_name, on_notify, che
 
 // Namespace vehicle_ai
 // Params 4, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_bca567c6
 // Checksum 0x9acd29f8, Offset: 0x30a8
 // Size: 0x5c
 function add_utility_connection(from_state_name, to_state_name, checkfunc, defaultscore) {
@@ -972,7 +917,6 @@ function add_utility_connection(from_state_name, to_state_name, checkfunc, defau
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_9174840a
 // Checksum 0xac220f89, Offset: 0x3110
 // Size: 0x708
 function init_state_machine_for_role(rolename) {
@@ -1024,7 +968,6 @@ function init_state_machine_for_role(rolename) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_3a68afcc
 // Checksum 0x8257be41, Offset: 0x3820
 // Size: 0x3a
 function register_custom_add_state_callback(func) {
@@ -1036,7 +979,6 @@ function register_custom_add_state_callback(func) {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_9237f37a
 // Checksum 0x43a38276, Offset: 0x3868
 // Size: 0x54
 function call_custom_add_state_callbacks() {
@@ -1049,7 +991,6 @@ function call_custom_add_state_callbacks() {
 
 // Namespace vehicle_ai
 // Params 8, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_ba80775a
 // Checksum 0x8bb9cde8, Offset: 0x38c8
 // Size: 0x13c
 function callback_vehiclekilled(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -1070,7 +1011,6 @@ function callback_vehiclekilled(einflictor, eattacker, idamage, smeansofdeath, w
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_cdad1698
 // Checksum 0xcaca5a10, Offset: 0x3a10
 // Size: 0xaa
 function on_death_cleanup() {
@@ -1083,7 +1023,6 @@ function on_death_cleanup() {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_151aa7e3
 // Checksum 0xe02ec71c, Offset: 0x3ac8
 // Size: 0xe4
 function defaultstate_death_enter(params) {
@@ -1102,7 +1041,6 @@ function defaultstate_death_enter(params) {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_1f48ef7e
 // Checksum 0x44040a95, Offset: 0x3bb8
 // Size: 0x94
 function burning_death_fx() {
@@ -1116,7 +1054,6 @@ function burning_death_fx() {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_7b0235ff
 // Checksum 0x9c7d97ed, Offset: 0x3c58
 // Size: 0x94
 function emp_death_fx() {
@@ -1130,7 +1067,6 @@ function emp_death_fx() {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_c3eceaae
 // Checksum 0xc721e0b8, Offset: 0x3cf8
 // Size: 0xfc
 function death_radius_damage_special(radiusscale, meansofdamage) {
@@ -1150,7 +1086,6 @@ function death_radius_damage_special(radiusscale, meansofdamage) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_85432739
 // Checksum 0xac931e75, Offset: 0x3e00
 // Size: 0xb4
 function burning_death(params) {
@@ -1165,7 +1100,6 @@ function burning_death(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_ad32d1d9
 // Checksum 0x29d146a6, Offset: 0x3ec0
 // Size: 0xb4
 function emped_death(params) {
@@ -1180,7 +1114,6 @@ function emped_death(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_6e26f2f1
 // Checksum 0xc997f7b6, Offset: 0x3f80
 // Size: 0x9c
 function gibbed_death(params) {
@@ -1194,7 +1127,6 @@ function gibbed_death(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_4a695697
 // Checksum 0x198e5e5e, Offset: 0x4028
 // Size: 0x134
 function default_death(params) {
@@ -1216,7 +1148,6 @@ function default_death(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_64e84e6f
 // Checksum 0x714f3e04, Offset: 0x4168
 // Size: 0x108
 function get_death_type(params) {
@@ -1239,7 +1170,6 @@ function get_death_type(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_ed491970
 // Checksum 0x8f11ceea, Offset: 0x4278
 // Size: 0x14e
 function defaultstate_death_update(params) {
@@ -1271,7 +1201,6 @@ function defaultstate_death_update(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_eabd902b
 // Checksum 0x803457c, Offset: 0x43d0
 // Size: 0x94
 function defaultstate_scripted_enter(params) {
@@ -1287,7 +1216,6 @@ function defaultstate_scripted_enter(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_1f45a6b
 // Checksum 0xb063c4a5, Offset: 0x4470
 // Size: 0x44
 function defaultstate_scripted_exit(params) {
@@ -1299,7 +1227,6 @@ function defaultstate_scripted_exit(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_d29906a1
 // Checksum 0x23c8a6e3, Offset: 0x44c0
 // Size: 0xc
 function defaultstate_combat_enter(params) {
@@ -1308,7 +1235,6 @@ function defaultstate_combat_enter(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_fe49fdbd
 // Checksum 0x5145a6b6, Offset: 0x44d8
 // Size: 0xc
 function defaultstate_combat_exit(params) {
@@ -1317,7 +1243,6 @@ function defaultstate_combat_exit(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_4770ca98
 // Checksum 0x860ad2b, Offset: 0x44f0
 // Size: 0x194
 function defaultstate_emped_enter(params) {
@@ -1343,7 +1268,6 @@ function defaultstate_emped_enter(params) {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_633d77a8
 // Checksum 0x4ab811eb, Offset: 0x4690
 // Size: 0x5c
 function emp_startup_fx() {
@@ -1354,7 +1278,6 @@ function emp_startup_fx() {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_117a02e5
 // Checksum 0x96a1a4d2, Offset: 0x46f8
 // Size: 0x134
 function defaultstate_emped_update(params) {
@@ -1376,7 +1299,6 @@ function defaultstate_emped_update(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_52a3c3d2
 // Checksum 0xbd2fcdc0, Offset: 0x4838
 // Size: 0xfc
 function defaultstate_emped_exit(params) {
@@ -1396,7 +1318,6 @@ function defaultstate_emped_exit(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_bcfeb905
 // Checksum 0x2ff93dc7, Offset: 0x4940
 // Size: 0x10
 function defaultstate_emped_reenter(params) {
@@ -1405,7 +1326,6 @@ function defaultstate_emped_reenter(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_27cb64b3
 // Checksum 0x52e18e5c, Offset: 0x4958
 // Size: 0xc
 function function_27cb64b3(params) {
@@ -1414,7 +1334,6 @@ function function_27cb64b3(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_3e758cb3
 // Checksum 0x53c40913, Offset: 0x4970
 // Size: 0xc
 function function_3e758cb3(params) {
@@ -1423,7 +1342,6 @@ function function_3e758cb3(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_2995bfc0
 // Checksum 0x91fb6384, Offset: 0x4988
 // Size: 0x404
 function function_2995bfc0(params) {
@@ -1478,7 +1396,6 @@ function function_2995bfc0(params) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_4891e8b4
 // Checksum 0x6bf2af6a, Offset: 0x4d98
 // Size: 0xd8
 function path_update_interrupt(closest, attacker) {
@@ -1500,7 +1417,6 @@ function path_update_interrupt(closest, attacker) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_cae5a3fd
 // Checksum 0x8a4a4be3, Offset: 0x4e78
 // Size: 0x64
 function function_cae5a3fd(attacker) {
@@ -1512,7 +1428,6 @@ function function_cae5a3fd(attacker) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_7cb04dcb
 // Checksum 0x567efd0c, Offset: 0x4ee8
 // Size: 0x8c
 function try_detonate(closest, attacker) {
@@ -1527,7 +1442,6 @@ function try_detonate(closest, attacker) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_c1eaf281
 // Checksum 0xdb4acf74, Offset: 0x4f80
 // Size: 0xac
 function detonate(attacker) {
@@ -1540,7 +1454,6 @@ function detonate(attacker) {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_bd32466
 // Checksum 0xb397e217, Offset: 0x5038
 // Size: 0xb0
 function function_bd32466() {
@@ -1560,7 +1473,6 @@ function function_bd32466() {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_e96b1036
 // Checksum 0x2d8116f4, Offset: 0x50f0
 // Size: 0x184
 function defaultstate_off_enter(params) {
@@ -1587,7 +1499,6 @@ function defaultstate_off_enter(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_d1f7694c
 // Checksum 0xa3d80445, Offset: 0x5280
 // Size: 0x14c
 function defaultstate_off_exit(params) {
@@ -1613,7 +1524,6 @@ function defaultstate_off_exit(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_138f8590
 // Checksum 0x20d8648f, Offset: 0x53d8
 // Size: 0x1ac
 function defaultstate_driving_enter(params) {
@@ -1640,7 +1550,6 @@ function defaultstate_driving_enter(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_637abdaa
 // Checksum 0x3ac5d332, Offset: 0x5590
 // Size: 0xdc
 function defaultstate_driving_exit(params) {
@@ -1660,7 +1569,6 @@ function defaultstate_driving_exit(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_1ad2f451
 // Checksum 0x32bdd794, Offset: 0x5678
 // Size: 0x2c
 function defaultstate_pain_enter(params) {
@@ -1670,7 +1578,6 @@ function defaultstate_pain_enter(params) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_25cfa18d
 // Checksum 0xdc743933, Offset: 0x56b0
 // Size: 0x2c
 function defaultstate_pain_exit(params) {
@@ -1680,7 +1587,6 @@ function defaultstate_pain_exit(params) {
 
 // Namespace vehicle_ai
 // Params 3, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_f6581fb3
 // Checksum 0xfdf6c837, Offset: 0x56e8
 // Size: 0x72
 function canseeenemyfromposition(position, enemy, sight_check_height) {
@@ -1690,7 +1596,6 @@ function canseeenemyfromposition(position, enemy, sight_check_height) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_4796e657
 // Checksum 0x43ae0a34, Offset: 0x5768
 // Size: 0x7fe
 function function_4796e657(sight_check_height) {
@@ -1800,7 +1705,6 @@ function function_4796e657(sight_check_height) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_3932248
 // Checksum 0xc25f5ca9, Offset: 0x5f70
 // Size: 0x1c
 function timesince(starttimeinmilliseconds) {
@@ -1809,7 +1713,6 @@ function timesince(starttimeinmilliseconds) {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_ba468810
 // Checksum 0x5318df93, Offset: 0x5f98
 // Size: 0x1c
 function cooldowninit() {
@@ -1820,7 +1723,6 @@ function cooldowninit() {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_804ee9ae
 // Checksum 0x3d3eff66, Offset: 0x5fc0
 // Size: 0x42
 function cooldown(name, time_seconds) {
@@ -1830,7 +1732,6 @@ function cooldown(name, time_seconds) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_1d641563
 // Checksum 0xb7c6190c, Offset: 0x6010
 // Size: 0x54
 function getcooldowntimeraw(name) {
@@ -1843,7 +1744,6 @@ function getcooldowntimeraw(name) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_471958ff
 // Checksum 0x31a30c44, Offset: 0x6070
 // Size: 0x40
 function getcooldownleft(name) {
@@ -1853,7 +1753,6 @@ function getcooldownleft(name) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_e5257a7f
 // Checksum 0x275e9d6a, Offset: 0x60b8
 // Size: 0x72
 function iscooldownready(name, timeforward_seconds) {
@@ -1867,7 +1766,6 @@ function iscooldownready(name, timeforward_seconds) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_b1d7b4e3
 // Checksum 0x2a236979, Offset: 0x6138
 // Size: 0x32
 function clearcooldown(name) {
@@ -1877,7 +1775,6 @@ function clearcooldown(name) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_695a9fd6
 // Checksum 0x99ddd88a, Offset: 0x6178
 // Size: 0x56
 function addcooldowntime(name, time_seconds) {
@@ -1887,7 +1784,6 @@ function addcooldowntime(name, time_seconds) {
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_44b694dd
 // Checksum 0xbaab30f4, Offset: 0x61d8
 // Size: 0x98
 function clearallcooldowns() {
@@ -1900,7 +1796,6 @@ function clearallcooldowns() {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_629ab2b1
 // Checksum 0x299fceff, Offset: 0x6278
 // Size: 0xda
 function positionquery_debugscores(queryresult) {
@@ -1914,7 +1809,6 @@ function positionquery_debugscores(queryresult) {
 
 // Namespace vehicle_ai
 // Params 1, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_cdd2a274
 // Checksum 0x7f59c836, Offset: 0x6360
 // Size: 0x1c2
 function debugscore(entity) {
@@ -1942,7 +1836,6 @@ function debugscore(entity) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_45e2b2c3
 // Checksum 0xb4aeae62, Offset: 0x6530
 // Size: 0x40
 function _less_than_val(left, right) {
@@ -1956,7 +1849,6 @@ function _less_than_val(left, right) {
 
 // Namespace vehicle_ai
 // Params 3, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_df397320
 // Checksum 0x3a65bd8a, Offset: 0x6578
 // Size: 0x5c
 function _cmp_val(left, right, descending) {
@@ -1968,7 +1860,6 @@ function _cmp_val(left, right, descending) {
 
 // Namespace vehicle_ai
 // Params 3, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_3bee5ccf
 // Checksum 0xc47abc03, Offset: 0x65e0
 // Size: 0x4a
 function _sort_by_score(left, right, descending) {
@@ -1977,7 +1868,6 @@ function _sort_by_score(left, right, descending) {
 
 // Namespace vehicle_ai
 // Params 3, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_45f024ed
 // Checksum 0x8edec30e, Offset: 0x6638
 // Size: 0x122
 function positionquery_filter_random(queryresult, min, max) {
@@ -1995,7 +1885,6 @@ function positionquery_filter_random(queryresult, min, max) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_272864e7
 // Checksum 0xb241d1a0, Offset: 0x6768
 // Size: 0x74
 function positionquery_postprocess_sortscore(queryresult, descending) {
@@ -2008,7 +1897,6 @@ function positionquery_postprocess_sortscore(queryresult, descending) {
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_dc90001d
 // Checksum 0x74e4cba1, Offset: 0x67e8
 // Size: 0x142
 function positionquery_filter_outofgoalanchor(queryresult, tolerance) {
@@ -2031,7 +1919,6 @@ function positionquery_filter_outofgoalanchor(queryresult, tolerance) {
 
 // Namespace vehicle_ai
 // Params 4, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_d6e12a11
 // Checksum 0x4aa76431, Offset: 0x6938
 // Size: 0x33e
 function positionquery_filter_engagementdist(queryresult, enemy, engagementdistancemin, engagementdistancemax) {
@@ -2069,7 +1956,6 @@ function positionquery_filter_engagementdist(queryresult, enemy, engagementdista
 
 // Namespace vehicle_ai
 // Params 4, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_3e9d24f5
 // Checksum 0x53b3a1b3, Offset: 0x6c80
 // Size: 0x29e
 function positionquery_filter_distawayfromtarget(queryresult, targetarray, distance, tooclosepenalty) {
@@ -2106,7 +1992,6 @@ function positionquery_filter_distawayfromtarget(queryresult, targetarray, dista
 
 // Namespace vehicle_ai
 // Params 4, eflags: 0x0
-// namespace_72ee5da4<file_0>::function_764546dd
 // Checksum 0x1815be84, Offset: 0x6f28
 // Size: 0x122
 function distancepointtoengagementheight(origin, enemy, engagementheightmin, engagementheightmax) {
@@ -2126,7 +2011,6 @@ function distancepointtoengagementheight(origin, enemy, engagementheightmin, eng
 
 // Namespace vehicle_ai
 // Params 4, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_c807f3ac
 // Checksum 0xbea00de8, Offset: 0x7058
 // Size: 0x186
 function positionquery_filter_engagementheight(queryresult, enemy, engagementheightmin, engagementheightmax) {
@@ -2147,7 +2031,6 @@ function positionquery_filter_engagementheight(queryresult, enemy, engagementhei
 
 // Namespace vehicle_ai
 // Params 2, eflags: 0x0
-// namespace_72ee5da4<file_0>::function_8088e85d
 // Checksum 0x681ef66d, Offset: 0x71e8
 // Size: 0xbc
 function positionquery_postprocess_removeoutofgoalradius(queryresult, tolerance) {
@@ -2165,7 +2048,6 @@ function positionquery_postprocess_removeoutofgoalradius(queryresult, tolerance)
 
 // Namespace vehicle_ai
 // Params 4, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_54289651
 // Checksum 0xe4ba196b, Offset: 0x72b0
 // Size: 0x4c
 function function_54289651(var_9f84050f, var_1e08b2fd, var_9c5ca2c, var_cee3c9e9) {
@@ -2174,7 +2056,6 @@ function function_54289651(var_9f84050f, var_1e08b2fd, var_9c5ca2c, var_cee3c9e9
 
 // Namespace vehicle_ai
 // Params 4, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_b4b8a386
 // Checksum 0xfb1493ea, Offset: 0x7308
 // Size: 0x4c
 function function_b4b8a386(var_9f84050f, var_1e08b2fd, var_9c5ca2c, var_cee3c9e9) {
@@ -2183,7 +2064,6 @@ function function_b4b8a386(var_9f84050f, var_1e08b2fd, var_9c5ca2c, var_cee3c9e9
 
 // Namespace vehicle_ai
 // Params 5, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_c8b0c8c2
 // Checksum 0xbfce0f29, Offset: 0x7360
 // Size: 0x188
 function function_c8b0c8c2(client_flags, var_9f84050f, var_1e08b2fd, var_9c5ca2c, var_cee3c9e9) {
@@ -2214,7 +2094,6 @@ function function_c8b0c8c2(client_flags, var_9f84050f, var_1e08b2fd, var_9c5ca2c
 
     // Namespace vehicle_ai
     // Params 2, eflags: 0x0
-    // namespace_72ee5da4<file_0>::function_67bd73ee
     // Checksum 0x7e52ae37, Offset: 0x74f0
     // Size: 0xda
     function function_67bd73ee(var_9f84050f, var_1e08b2fd) {
@@ -2229,7 +2108,6 @@ function function_c8b0c8c2(client_flags, var_9f84050f, var_1e08b2fd, var_9c5ca2c
 
 // Namespace vehicle_ai
 // Params 0, eflags: 0x1 linked
-// namespace_72ee5da4<file_0>::function_ef34cc6f
 // Checksum 0x53c5153d, Offset: 0x75d8
 // Size: 0x90
 function target_hijackers() {

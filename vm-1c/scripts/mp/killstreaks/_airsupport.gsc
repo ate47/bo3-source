@@ -11,7 +11,6 @@
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_c35e6aab
 // Checksum 0xf27215d2, Offset: 0x358
 // Size: 0x18c
 function init() {
@@ -44,7 +43,6 @@ function init() {
 
 // Namespace airsupport
 // Params 2, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_b49a99ff
 // Checksum 0x4d4ac4a8, Offset: 0x4f0
 // Size: 0x4c
 function function_b49a99ff(location, usedcallback) {
@@ -58,7 +56,6 @@ function function_b49a99ff(location, usedcallback) {
 
 // Namespace airsupport
 // Params 3, eflags: 0x0
-// namespace_56e5590c<file_0>::function_c92c5dd5
 // Checksum 0x10cf9677, Offset: 0x548
 // Size: 0x48
 function function_c92c5dd5(var_1bc5675c, var_6376ee77, usedcallback) {
@@ -69,7 +66,6 @@ function function_c92c5dd5(var_1bc5675c, var_6376ee77, usedcallback) {
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_d7aaf14a
 // Checksum 0xe0b98a60, Offset: 0x598
 // Size: 0x5a
 function endselectionongameend() {
@@ -84,7 +80,6 @@ function endselectionongameend() {
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_1ac6bea1
 // Checksum 0xc69e28de, Offset: 0x600
 // Size: 0x5a
 function endselectiononhostmigration() {
@@ -99,7 +94,6 @@ function endselectiononhostmigration() {
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_71aee04a
 // Checksum 0x1f5fb587, Offset: 0x668
 // Size: 0x176
 function endselectionthink() {
@@ -121,7 +115,6 @@ function endselectionthink() {
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_3d27b3f8
 // Checksum 0x383fcc23, Offset: 0x7e8
 // Size: 0x84
 function clearuplocationselection() {
@@ -133,7 +126,6 @@ function clearuplocationselection() {
 
 // Namespace airsupport
 // Params 1, eflags: 0x0
-// namespace_56e5590c<file_0>::function_95e0ed9d
 // Checksum 0xdc000094, Offset: 0x878
 // Size: 0x34
 function stoploopsoundaftertime(time) {
@@ -144,7 +136,6 @@ function stoploopsoundaftertime(time) {
 
 // Namespace airsupport
 // Params 1, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_d12c768b
 // Checksum 0xa3ba544e, Offset: 0x8b8
 // Size: 0x64
 function calculatefalltime(flyheight) {
@@ -155,7 +146,6 @@ function calculatefalltime(flyheight) {
 
 // Namespace airsupport
 // Params 4, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_db134fc5
 // Checksum 0x2eef3ff7, Offset: 0x928
 // Size: 0x92
 function calculatereleasetime(flytime, flyheight, flyspeed, bombspeedscale) {
@@ -167,7 +157,6 @@ function calculatereleasetime(flytime, flyheight, flyspeed, bombspeedscale) {
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_af1fdb99
 // Checksum 0xf0951f8a, Offset: 0x9c8
 // Size: 0x10e
 function getminimumflyheight() {
@@ -190,7 +179,6 @@ function getminimumflyheight() {
 
 // Namespace airsupport
 // Params 1, eflags: 0x0
-// namespace_56e5590c<file_0>::function_83574e7f
 // Checksum 0x54344857, Offset: 0xae0
 // Size: 0x3f4
 function callstrike(flightplan) {
@@ -226,7 +214,6 @@ function callstrike(flightplan) {
 
 // Namespace airsupport
 // Params 10, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_90ede4a7
 // Checksum 0xf170a78d, Offset: 0xee0
 // Size: 0x14c
 function planestrike(owner, requireddeathcount, pathstart, pathend, bombtime, flytime, flyspeed, bombspeedscale, direction, planespawnedfunction) {
@@ -247,7 +234,6 @@ function planestrike(owner, requireddeathcount, pathstart, pathend, bombtime, fl
 
 // Namespace airsupport
 // Params 2, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_4f7f95d
 // Checksum 0xc1dd2e4b, Offset: 0x1038
 // Size: 0x8c
 function determinegroundpoint(player, position) {
@@ -258,7 +244,6 @@ function determinegroundpoint(player, position) {
 
 // Namespace airsupport
 // Params 2, eflags: 0x0
-// namespace_56e5590c<file_0>::function_6070197b
 // Checksum 0x30014b87, Offset: 0x10d0
 // Size: 0x4a
 function determinetargetpoint(player, position) {
@@ -268,7 +253,6 @@ function determinetargetpoint(player, position) {
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_d2aff5d7
 // Checksum 0xc0fa1d15, Offset: 0x1128
 // Size: 0x16
 function getmintargetheight() {
@@ -277,7 +261,6 @@ function getmintargetheight() {
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_3eb018c1
 // Checksum 0x918658cb, Offset: 0x1148
 // Size: 0x16
 function getmaxtargetheight() {
@@ -286,7 +269,6 @@ function getmaxtargetheight() {
 
 // Namespace airsupport
 // Params 1, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_1a46b805
 // Checksum 0x273a1457, Offset: 0x1168
 // Size: 0x94
 function clamptarget(target) {
@@ -303,7 +285,6 @@ function clamptarget(target) {
 
 // Namespace airsupport
 // Params 4, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_d914ad26
 // Checksum 0x233bf2cb, Offset: 0x1208
 // Size: 0x8e
 function _insidecylinder(point, base, radius, height) {
@@ -321,7 +302,6 @@ function _insidecylinder(point, base, radius, height) {
 
 // Namespace airsupport
 // Params 3, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_7b9d38f
 // Checksum 0x9c3fc95b, Offset: 0x12a0
 // Size: 0x9a
 function _insidenoflyzonebyindex(point, index, disregardheight) {
@@ -334,7 +314,6 @@ function _insidenoflyzonebyindex(point, index, disregardheight) {
 
 // Namespace airsupport
 // Params 1, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_ac07401e
 // Checksum 0xd6e8e7db, Offset: 0x1348
 // Size: 0x100
 function getnoflyzoneheight(point) {
@@ -356,7 +335,6 @@ function getnoflyzoneheight(point) {
 
 // Namespace airsupport
 // Params 2, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_3e01f0b4
 // Checksum 0x36811204, Offset: 0x1450
 // Size: 0x86
 function insidenoflyzones(point, disregardheight) {
@@ -371,7 +349,6 @@ function insidenoflyzones(point, disregardheight) {
 
 // Namespace airsupport
 // Params 2, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_4a1c787f
 // Checksum 0x8bfa5b4f, Offset: 0x14e0
 // Size: 0x156
 function crossesnoflyzone(start, end) {
@@ -390,7 +367,6 @@ function crossesnoflyzone(start, end) {
 
 // Namespace airsupport
 // Params 2, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_6f0de986
 // Checksum 0x7110a680, Offset: 0x1640
 // Size: 0x144
 function crossesnoflyzones(start, end) {
@@ -410,7 +386,6 @@ function crossesnoflyzones(start, end) {
 
 // Namespace airsupport
 // Params 3, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_8d29c581
 // Checksum 0xb1cdccbb, Offset: 0x1790
 // Size: 0x132
 function getnoflyzoneheightcrossed(start, end, minheight) {
@@ -429,7 +404,6 @@ function getnoflyzoneheightcrossed(start, end, minheight) {
 
 // Namespace airsupport
 // Params 2, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_c037dcdf
 // Checksum 0xe1a41d17, Offset: 0x18d0
 // Size: 0x7a
 function _shouldignorenoflyzone(noflyzone, noflyzones) {
@@ -446,7 +420,6 @@ function _shouldignorenoflyzone(noflyzone, noflyzones) {
 
 // Namespace airsupport
 // Params 3, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_8a83be1a
 // Checksum 0x9915dc5, Offset: 0x1958
 // Size: 0x6e
 function _shouldignorestartgoalnoflyzone(noflyzone, startnoflyzones, goalnoflyzones) {
@@ -464,7 +437,6 @@ function _shouldignorestartgoalnoflyzone(noflyzone, startnoflyzones, goalnoflyzo
 
 // Namespace airsupport
 // Params 2, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_ed1a8466
 // Checksum 0x82b6de87, Offset: 0x19d0
 // Size: 0x118
 function gethelipath(start, goal) {
@@ -484,7 +456,6 @@ function gethelipath(start, goal) {
 
 // Namespace airsupport
 // Params 3, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_77a97c63
 // Checksum 0x3aab51e1, Offset: 0x1af0
 // Size: 0x114
 function followpath(path, donenotify, stopatgoal) {
@@ -503,7 +474,6 @@ function followpath(path, donenotify, stopatgoal) {
 
 // Namespace airsupport
 // Params 3, eflags: 0x0
-// namespace_56e5590c<file_0>::function_a44f8ea3
 // Checksum 0xd8b13b8e, Offset: 0x1c10
 // Size: 0xa4
 function setgoalposition(goal, donenotify, stopatgoal) {
@@ -521,7 +491,6 @@ function setgoalposition(goal, donenotify, stopatgoal) {
 
 // Namespace airsupport
 // Params 4, eflags: 0x0
-// namespace_56e5590c<file_0>::function_650157c5
 // Checksum 0xbe577164, Offset: 0x1cc0
 // Size: 0xa0
 function clearpath(start, end, startnoflyzone, goalnoflyzone) {
@@ -536,7 +505,6 @@ function clearpath(start, end, startnoflyzone, goalnoflyzone) {
 
 // Namespace airsupport
 // Params 2, eflags: 0x0
-// namespace_56e5590c<file_0>::function_9855687f
 // Checksum 0x8c960f08, Offset: 0x1d68
 // Size: 0x56
 function append_array(dst, src) {
@@ -547,7 +515,6 @@ function append_array(dst, src) {
 
 // Namespace airsupport
 // Params 6, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_86e6f631
 // Checksum 0xc51ce290, Offset: 0x1dc8
 // Size: 0x102
 function calculatepath_r(start, end, points, startnoflyzones, goalnoflyzones, depth) {
@@ -569,7 +536,6 @@ function calculatepath_r(start, end, points, startnoflyzones, goalnoflyzones, de
 
 // Namespace airsupport
 // Params 4, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_ca00d252
 // Checksum 0xe9eb8a5b, Offset: 0x1ed8
 // Size: 0x172
 function calculatepath(start, end, startnoflyzones, goalnoflyzones) {
@@ -591,7 +557,6 @@ function calculatepath(start, end, startnoflyzones, goalnoflyzones) {
 
 // Namespace airsupport
 // Params 3, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_74dcca4f
 // Checksum 0x9d7370ab, Offset: 0x2058
 // Size: 0x1b2
 function _getstrikepathstartandend(goal, yaw, halfdistance) {
@@ -615,7 +580,6 @@ function _getstrikepathstartandend(goal, yaw, halfdistance) {
 
 // Namespace airsupport
 // Params 4, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_491dd49c
 // Checksum 0x9cd84d68, Offset: 0x2218
 // Size: 0x18a
 function getstrikepath(target, height, halfdistance, yaw) {
@@ -642,7 +606,6 @@ function getstrikepath(target, height, halfdistance, yaw) {
 
 // Namespace airsupport
 // Params 5, eflags: 0x0
-// namespace_56e5590c<file_0>::function_e31e4ed1
 // Checksum 0x289984a2, Offset: 0x23b0
 // Size: 0x74
 function doglassdamage(pos, radius, max, min, mod) {
@@ -652,7 +615,6 @@ function doglassdamage(pos, radius, max, min, mod) {
 
 // Namespace airsupport
 // Params 7, eflags: 0x0
-// namespace_56e5590c<file_0>::function_5555550b
 // Checksum 0xfbab79ba, Offset: 0x2430
 // Size: 0x418
 function entlosradiusdamage(ent, pos, radius, max, min, owner, einflictor) {
@@ -702,7 +664,6 @@ function entlosradiusdamage(ent, pos, radius, max, min, owner, einflictor) {
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_7a72dd8c
 // Checksum 0x7d46af59, Offset: 0x2850
 // Size: 0x70
 function getmapcenter() {
@@ -715,7 +676,6 @@ function getmapcenter() {
 
 // Namespace airsupport
 // Params 4, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_79ef74d2
 // Checksum 0xde07bbe7, Offset: 0x28c8
 // Size: 0x216
 function getrandommappoint(x_offset, y_offset, map_x_percentage, map_y_percentage) {
@@ -737,7 +697,6 @@ function getrandommappoint(x_offset, y_offset, map_x_percentage, map_y_percentag
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_eb8246b9
 // Checksum 0x7f5edb97, Offset: 0x2ae8
 // Size: 0xf6
 function getmaxmapwidth() {
@@ -752,7 +711,6 @@ function getmaxmapwidth() {
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_5ef259f7
 // Checksum 0x8426984d, Offset: 0x2be8
 // Size: 0xfc
 function initrotatingrig() {
@@ -766,7 +724,6 @@ function initrotatingrig() {
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_b407088e
 // Checksum 0x8264cad6, Offset: 0x2cf0
 // Size: 0x2e
 function rotaterig() {
@@ -778,7 +735,6 @@ function rotaterig() {
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_5e2a29c1
 // Checksum 0xfe9f30f6, Offset: 0x2d28
 // Size: 0x11e
 function swayrig() {
@@ -797,7 +753,6 @@ function swayrig() {
 
 // Namespace airsupport
 // Params 1, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_e395f23b
 // Checksum 0x2bdf16e4, Offset: 0x2e50
 // Size: 0x34
 function stoprotation(time) {
@@ -808,7 +763,6 @@ function stoprotation(time) {
 
 // Namespace airsupport
 // Params 1, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_1913db96
 // Checksum 0xc231a83f, Offset: 0x2e90
 // Size: 0xbc
 function flattenyaw(goal) {
@@ -825,7 +779,6 @@ function flattenyaw(goal) {
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_6dc1d8b8
 // Checksum 0x303a839d, Offset: 0x2f58
 // Size: 0x68
 function flattenroll() {
@@ -838,7 +791,6 @@ function flattenroll() {
 
 // Namespace airsupport
 // Params 1, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_11a1d8ae
 // Checksum 0x2e06faa2, Offset: 0x2fc8
 // Size: 0x2a2
 function leave(duration) {
@@ -880,7 +832,6 @@ function leave(duration) {
 
 // Namespace airsupport
 // Params 0, eflags: 0x0
-// namespace_56e5590c<file_0>::function_45ddd959
 // Checksum 0xde1ab329, Offset: 0x3278
 // Size: 0x1e4
 function getrandomhelicopterstartorigin() {
@@ -907,7 +858,6 @@ function getrandomhelicopterstartorigin() {
 
     // Namespace airsupport
     // Params 0, eflags: 0x0
-    // namespace_56e5590c<file_0>::function_447f3156
     // Checksum 0x83e51dd, Offset: 0x3468
     // Size: 0x96
     function debug_no_fly_zones() {
@@ -920,7 +870,6 @@ function getrandomhelicopterstartorigin() {
 
 // Namespace airsupport
 // Params 4, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_81f2c26a
 // Checksum 0x70a35416, Offset: 0x3508
 // Size: 0xc6
 function debug_plane_line(flytime, flyspeed, pathstart, pathend) {
@@ -933,7 +882,6 @@ function debug_plane_line(flytime, flyspeed, pathstart, pathend) {
 
 // Namespace airsupport
 // Params 1, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_5ba98d0e
 // Checksum 0xbc2be801, Offset: 0x35d8
 // Size: 0x94
 function debug_draw_bomb_explosion(prevpos) {
@@ -949,7 +897,6 @@ function debug_draw_bomb_explosion(prevpos) {
 
     // Namespace airsupport
     // Params 3, eflags: 0x0
-    // namespace_56e5590c<file_0>::function_4ec856bc
     // Checksum 0xa734e241, Offset: 0x3678
     // Size: 0x118
     function debug_draw_bomb_path(projectile, color, time) {
@@ -973,7 +920,6 @@ function debug_draw_bomb_explosion(prevpos) {
 
     // Namespace airsupport
     // Params 4, eflags: 0x1 linked
-    // namespace_56e5590c<file_0>::function_436a8e7c
     // Checksum 0x6ba8bb3f, Offset: 0x3798
     // Size: 0xd4
     function debug_print3d_simple(message, ent, offset, frames) {
@@ -989,7 +935,6 @@ function debug_draw_bomb_explosion(prevpos) {
 
     // Namespace airsupport
     // Params 5, eflags: 0x1 linked
-    // namespace_56e5590c<file_0>::function_7a75169f
     // Checksum 0xe6eac4a, Offset: 0x3878
     // Size: 0x11e
     function draw_text(msg, color, ent, offset, frames) {
@@ -1011,7 +956,6 @@ function debug_draw_bomb_explosion(prevpos) {
 
     // Namespace airsupport
     // Params 5, eflags: 0x1 linked
-    // namespace_56e5590c<file_0>::function_8adf2dbf
     // Checksum 0x4a7c9a94, Offset: 0x39a0
     // Size: 0x9c
     function debug_print3d(message, color, ent, origin_offset, frames) {
@@ -1025,7 +969,6 @@ function debug_draw_bomb_explosion(prevpos) {
 
 // Namespace airsupport
 // Params 5, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_a9c39c8b
 // Checksum 0xa606eb83, Offset: 0x3a48
 // Size: 0xec
 function debug_line(from, to, color, time, depthtest) {
@@ -1048,7 +991,6 @@ function debug_line(from, to, color, time, depthtest) {
 
 // Namespace airsupport
 // Params 3, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_edfc50ad
 // Checksum 0x13e48a71, Offset: 0x3b40
 // Size: 0xac
 function debug_star(origin, color, time) {
@@ -1070,7 +1012,6 @@ function debug_star(origin, color, time) {
 
     // Namespace airsupport
     // Params 4, eflags: 0x0
-    // namespace_56e5590c<file_0>::function_b5002a71
     // Checksum 0xc97d38c7, Offset: 0x3bf8
     // Size: 0xbc
     function debug_circle(origin, radius, color, time) {
@@ -1090,7 +1031,6 @@ function debug_star(origin, color, time) {
 
 // Namespace airsupport
 // Params 5, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_172e04fa
 // Checksum 0x1fe407c3, Offset: 0x3cc0
 // Size: 0x104
 function debug_sphere(origin, radius, color, alpha, time) {
@@ -1113,7 +1053,6 @@ function debug_sphere(origin, radius, color, alpha, time) {
 
     // Namespace airsupport
     // Params 6, eflags: 0x1 linked
-    // namespace_56e5590c<file_0>::function_9196c355
     // Checksum 0xb12ada07, Offset: 0x3dd0
     // Size: 0xa4
     function debug_airsupport_cylinder(origin, radius, height, color, mustrenderheight, time) {
@@ -1125,7 +1064,6 @@ function debug_sphere(origin, radius, color, alpha, time) {
 
     // Namespace airsupport
     // Params 6, eflags: 0x1 linked
-    // namespace_56e5590c<file_0>::function_fd0b80cb
     // Checksum 0xc00b6e9c, Offset: 0x3e80
     // Size: 0x14c
     function debug_cylinder(origin, radius, height, color, mustrenderheight, time) {
@@ -1151,7 +1089,6 @@ function debug_sphere(origin, radius, color, alpha, time) {
 
 // Namespace airsupport
 // Params 3, eflags: 0x0
-// namespace_56e5590c<file_0>::function_180453be
 // Checksum 0x6850499e, Offset: 0x3fd8
 // Size: 0xa2
 function getpointonline(startpoint, endpoint, ratio) {
@@ -1161,7 +1098,6 @@ function getpointonline(startpoint, endpoint, ratio) {
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_fdc93b37
 // Checksum 0x81b80e91, Offset: 0x4088
 // Size: 0x78
 function cantargetplayerwithspecialty() {
@@ -1175,7 +1111,6 @@ function cantargetplayerwithspecialty() {
 
 // Namespace airsupport
 // Params 1, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_ef068f2e
 // Checksum 0xe9d6dfa2, Offset: 0x4108
 // Size: 0x19e
 function monitorspeed(spawnprotectiontime) {
@@ -1211,7 +1146,6 @@ function monitorspeed(spawnprotectiontime) {
 
 // Namespace airsupport
 // Params 0, eflags: 0x1 linked
-// namespace_56e5590c<file_0>::function_54f4a4c6
 // Checksum 0xf9c5426c, Offset: 0x42b0
 // Size: 0x1c
 function clearmonitoredspeed() {

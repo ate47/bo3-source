@@ -10,7 +10,6 @@
 
 // Namespace killstreak_detect
 // Params 0, eflags: 0x2
-// namespace_4f1bf8af<file_0>::function_2dc19561
 // Checksum 0xd46200ea, Offset: 0x1e8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,7 +18,6 @@ function autoexec function_2dc19561() {
 
 // Namespace killstreak_detect
 // Params 0, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_8c87d8eb
 // Checksum 0x7913edc6, Offset: 0x228
 // Size: 0x124
 function __init__() {
@@ -33,7 +31,6 @@ function __init__() {
 
 // Namespace killstreak_detect
 // Params 2, eflags: 0x1 linked
-// namespace_4f1bf8af<file_0>::function_34b815cc
 // Checksum 0x4880e7cb, Offset: 0x358
 // Size: 0x6c
 function killstreaktargetset(killstreakentity, offset) {
@@ -48,7 +45,6 @@ function killstreaktargetset(killstreakentity, offset) {
 
 // Namespace killstreak_detect
 // Params 1, eflags: 0x0
-// namespace_4f1bf8af<file_0>::function_e249b873
 // Checksum 0x998556bf, Offset: 0x3d0
 // Size: 0x3c
 function killstreaktargetclear(killstreakentity) {

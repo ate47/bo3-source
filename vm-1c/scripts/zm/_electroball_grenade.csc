@@ -11,7 +11,6 @@
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x2
-// namespace_3df25fcf<file_0>::function_2dc19561
 // Checksum 0xfd18013, Offset: 0x3e8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_8c87d8eb
 // Checksum 0x7758a97b, Offset: 0x428
 // Size: 0x224
 function __init__() {
@@ -40,7 +38,6 @@ function __init__() {
 
 // Namespace electroball_grenade
 // Params 1, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_ed58f67b
 // Checksum 0x1ac2c6a6, Offset: 0x658
 // Size: 0xb4
 function proximity_spawned(localclientnum) {
@@ -54,7 +51,6 @@ function proximity_spawned(localclientnum) {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_9869bb07
 // Checksum 0x1a0a9f4e, Offset: 0x718
 // Size: 0x198
 function watchforproximityexplosion() {
@@ -83,7 +79,6 @@ function watchforproximityexplosion() {
 
 // Namespace electroball_grenade
 // Params 7, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_72eeb2e6
 // Checksum 0xd7a9e66f, Offset: 0x8b8
 // Size: 0x154
 function function_72eeb2e6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -104,7 +99,6 @@ function function_72eeb2e6(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace electroball_grenade
 // Params 7, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_1619af16
 // Checksum 0x723acdd3, Offset: 0xa18
 // Size: 0x78
 function function_1619af16(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -113,7 +107,6 @@ function function_1619af16(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace electroball_grenade
 // Params 7, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_bd1f6a88
 // Checksum 0x38108816, Offset: 0xa98
 // Size: 0x124
 function function_bd1f6a88(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -138,7 +131,6 @@ function function_bd1f6a88(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_1d823abf
 // Checksum 0xaa9ef4bf, Offset: 0xbc8
 // Size: 0x34
 function function_1d823abf() {
@@ -148,7 +140,6 @@ function function_1d823abf() {
 
 // Namespace electroball_grenade
 // Params 7, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_96325d01
 // Checksum 0x5e8f2ea5, Offset: 0xc08
 // Size: 0xb8
 function electroball_play_landed_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

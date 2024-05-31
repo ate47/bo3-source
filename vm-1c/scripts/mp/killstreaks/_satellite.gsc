@@ -26,7 +26,6 @@
 
 // Namespace satellite
 // Params 0, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_c35e6aab
 // Checksum 0x5038038d, Offset: 0x660
 // Size: 0x1fc
 function init() {
@@ -50,7 +49,6 @@ function init() {
 
 // Namespace satellite
 // Params 0, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_603848d5
 // Checksum 0x5cc4a00e, Offset: 0x868
 // Size: 0x56
 function onplayerconnect() {
@@ -63,7 +61,6 @@ function onplayerconnect() {
 
 // Namespace satellite
 // Params 1, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_be02cc45
 // Checksum 0x5207fbae, Offset: 0x8c8
 // Size: 0x2c
 function onplayerspawned(local_client_num) {
@@ -74,7 +71,6 @@ function onplayerspawned(local_client_num) {
 
 // Namespace satellite
 // Params 0, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_861da8b9
 // Checksum 0x65f060b6, Offset: 0x900
 // Size: 0x5d0
 function function_861da8b9() {
@@ -128,7 +124,6 @@ function function_861da8b9() {
 
 // Namespace satellite
 // Params 1, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_da11acc
 // Checksum 0xae48f69, Offset: 0xed8
 // Size: 0x34
 function hackedprefunction(hacker) {
@@ -138,7 +133,6 @@ function hackedprefunction(hacker) {
 
 // Namespace satellite
 // Params 2, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_d92ac79e
 // Checksum 0x2b51bf9b, Offset: 0xf18
 // Size: 0xc4
 function configureteampost(owner, ishacked) {
@@ -154,7 +148,6 @@ function configureteampost(owner, ishacked) {
 
 // Namespace satellite
 // Params 1, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_48c21154
 // Checksum 0x73d307ac, Offset: 0xfe8
 // Size: 0x46
 function rotate(duration) {
@@ -167,7 +160,6 @@ function rotate(duration) {
 
 // Namespace satellite
 // Params 2, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_4a622862
 // Checksum 0xc671d950, Offset: 0x1038
 // Size: 0x14
 function onlowhealth(attacker, weapon) {
@@ -176,7 +168,6 @@ function onlowhealth(attacker, weapon) {
 
 // Namespace satellite
 // Params 2, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_4383d23d
 // Checksum 0x48980dbe, Offset: 0x1058
 // Size: 0x2c
 function onteamchange(entnum, event) {
@@ -185,7 +176,6 @@ function onteamchange(entnum, event) {
 
 // Namespace satellite
 // Params 0, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_c3727207
 // Checksum 0xf4d283a7, Offset: 0x1090
 // Size: 0xac
 function ontimeout() {
@@ -202,7 +192,6 @@ function ontimeout() {
 
 // Namespace satellite
 // Params 2, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_d6c6626b
 // Checksum 0xaf65671a, Offset: 0x1148
 // Size: 0x3c
 function function_d6c6626b(attacker, arg) {
@@ -211,7 +200,6 @@ function function_d6c6626b(attacker, arg) {
 
 // Namespace satellite
 // Params 2, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_7ea6b1cc
 // Checksum 0xd78f71ef, Offset: 0x1190
 // Size: 0x244
 function function_7ea6b1cc(attacker, weapon) {
@@ -249,7 +237,6 @@ function function_7ea6b1cc(attacker, weapon) {
 
 // Namespace satellite
 // Params 1, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_f04b55b6
 // Checksum 0xc3aa1a61, Offset: 0x13e0
 // Size: 0x1c
 function hassatellite(team_or_entnum) {
@@ -258,7 +245,6 @@ function hassatellite(team_or_entnum) {
 
 // Namespace satellite
 // Params 0, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_e4c6d41f
 // Checksum 0x9e878859, Offset: 0x1408
 // Size: 0x5a
 function function_e4c6d41f() {
@@ -273,7 +259,6 @@ function function_e4c6d41f() {
 
 // Namespace satellite
 // Params 0, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_2a11ce46
 // Checksum 0xdcc394b2, Offset: 0x1470
 // Size: 0x44
 function function_2a11ce46() {
@@ -283,7 +268,6 @@ function function_2a11ce46() {
 
 // Namespace satellite
 // Params 0, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_5ae5cc6b
 // Checksum 0xad92d74, Offset: 0x14c0
 // Size: 0x16a
 function function_5ae5cc6b() {
@@ -308,7 +292,6 @@ function function_5ae5cc6b() {
 
 // Namespace satellite
 // Params 0, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_d3974478
 // Checksum 0x18ad5962, Offset: 0x1638
 // Size: 0x18a
 function function_d3974478() {
@@ -332,7 +315,6 @@ function function_d3974478() {
 
 // Namespace satellite
 // Params 1, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_3b2f36a8
 // Checksum 0xf45c8ceb, Offset: 0x17d0
 // Size: 0xe4
 function function_3b2f36a8(player) {
@@ -347,7 +329,6 @@ function function_3b2f36a8(player) {
 
 // Namespace satellite
 // Params 12, eflags: 0x1 linked
-// namespace_f96dfb9c<file_0>::function_9143715f
 // Checksum 0x7ebaf75d, Offset: 0x18c0
 // Size: 0xa0
 function killstreakdamagemodifier(damage, attacker, direction, point, smeansofdeath, tagname, modelname, partname, weapon, flags, inflictor, chargelevel) {

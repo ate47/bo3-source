@@ -7,7 +7,6 @@
 
     // Namespace zm_puppet
     // Params 0, eflags: 0x1 linked
-    // namespace_da6dc897<file_0>::function_ec1c999e
     // Checksum 0x2f419328, Offset: 0xa0
     // Size: 0x20c
     function wait_for_puppet_pickup() {

@@ -2,7 +2,6 @@
 
 // Namespace math
 // Params 3, eflags: 0x1 linked
-// namespace_d73b9283<file_0>::function_31931862
 // Checksum 0xefad7952, Offset: 0x70
 // Size: 0x54
 function clamp(val, val_min, val_max) {
@@ -16,7 +15,6 @@ function clamp(val, val_min, val_max) {
 
 // Namespace math
 // Params 5, eflags: 0x1 linked
-// namespace_d73b9283<file_0>::function_e4ef4645
 // Checksum 0x20f0638c, Offset: 0xd0
 // Size: 0x6a
 function linear_map(num, min_a, max_a, min_b, max_b) {
@@ -25,7 +23,6 @@ function linear_map(num, min_a, max_a, min_b, max_b) {
 
 // Namespace math
 // Params 4, eflags: 0x0
-// namespace_d73b9283<file_0>::function_f5e64bc7
 // Checksum 0x2d8e3beb, Offset: 0x148
 // Size: 0xa6
 function lag(desired, curr, k, dt) {
@@ -41,7 +38,6 @@ function lag(desired, curr, k, dt) {
 
 // Namespace math
 // Params 1, eflags: 0x0
-// namespace_d73b9283<file_0>::function_28df0c2c
 // Checksum 0xf2bcc5a7, Offset: 0x1f8
 // Size: 0xb8
 function array_average(array) {
@@ -56,7 +52,6 @@ function array_average(array) {
 
 // Namespace math
 // Params 2, eflags: 0x0
-// namespace_d73b9283<file_0>::function_bcf85e1e
 // Checksum 0xeef13f9a, Offset: 0x2b8
 // Size: 0x132
 function array_std_deviation(array, mean) {
@@ -75,7 +70,6 @@ function array_std_deviation(array, mean) {
 
 // Namespace math
 // Params 2, eflags: 0x0
-// namespace_d73b9283<file_0>::function_9da2e798
 // Checksum 0xd66952a, Offset: 0x3f8
 // Size: 0xb4
 function vector_compare(vec1, vec2) {
@@ -84,7 +78,6 @@ function vector_compare(vec1, vec2) {
 
 // Namespace math
 // Params 1, eflags: 0x0
-// namespace_d73b9283<file_0>::function_4e8104ae
 // Checksum 0xa5d827d6, Offset: 0x4b8
 // Size: 0x6c
 function random_vector(max_length) {
@@ -93,7 +86,6 @@ function random_vector(max_length) {
 
 // Namespace math
 // Params 2, eflags: 0x0
-// namespace_d73b9283<file_0>::function_503daaba
 // Checksum 0xe2576ba5, Offset: 0x530
 // Size: 0x76
 function angle_dif(oldangle, newangle) {
@@ -109,7 +101,6 @@ function angle_dif(oldangle, newangle) {
 
 // Namespace math
 // Params 1, eflags: 0x0
-// namespace_d73b9283<file_0>::function_cad75d7e
 // Checksum 0x8b05057c, Offset: 0x5b0
 // Size: 0x22
 function sign(x) {
@@ -121,7 +112,6 @@ function sign(x) {
 
 // Namespace math
 // Params 0, eflags: 0x1 linked
-// namespace_d73b9283<file_0>::function_d2c92ee7
 // Checksum 0xbd395a9d, Offset: 0x5e0
 // Size: 0x20
 function cointoss() {

@@ -20,7 +20,6 @@
 
 // Namespace namespace_f388b961
 // Params 0, eflags: 0x1 linked
-// namespace_f388b961<file_0>::function_c35e6aab
 // Checksum 0x99ec1590, Offset: 0x3a8
 // Size: 0x4
 function init() {
@@ -29,7 +28,6 @@ function init() {
 
 // Namespace namespace_f388b961
 // Params 0, eflags: 0x1 linked
-// namespace_f388b961<file_0>::function_d290ebfa
 // Checksum 0x51469a0d, Offset: 0x3b8
 // Size: 0xdc
 function main() {
@@ -43,7 +41,6 @@ function main() {
 
 // Namespace namespace_f388b961
 // Params 2, eflags: 0x0
-// namespace_f388b961<file_0>::function_8d01efb6
 // Checksum 0xaf34d774, Offset: 0x4a0
 // Size: 0x14
 function function_8d01efb6(slot, weapon) {
@@ -52,7 +49,6 @@ function function_8d01efb6(slot, weapon) {
 
 // Namespace namespace_f388b961
 // Params 2, eflags: 0x1 linked
-// namespace_f388b961<file_0>::function_bdb47551
 // Checksum 0x9c9d36d4, Offset: 0x4c0
 // Size: 0x4c
 function function_bdb47551(slot, weapon) {
@@ -63,7 +59,6 @@ function function_bdb47551(slot, weapon) {
 
 // Namespace namespace_f388b961
 // Params 2, eflags: 0x1 linked
-// namespace_f388b961<file_0>::function_39ea6a1b
 // Checksum 0x1cfd5d45, Offset: 0x518
 // Size: 0x2c
 function function_39ea6a1b(slot, weapon) {
@@ -72,7 +67,6 @@ function function_39ea6a1b(slot, weapon) {
 
 // Namespace namespace_f388b961
 // Params 0, eflags: 0x0
-// namespace_f388b961<file_0>::function_5d2fec30
 // Checksum 0x99ec1590, Offset: 0x550
 // Size: 0x4
 function function_5d2fec30() {
@@ -81,7 +75,6 @@ function function_5d2fec30() {
 
 // Namespace namespace_f388b961
 // Params 0, eflags: 0x0
-// namespace_f388b961<file_0>::function_75fd531c
 // Checksum 0x1477c675, Offset: 0x560
 // Size: 0x12
 function function_75fd531c() {
@@ -90,7 +83,6 @@ function function_75fd531c() {
 
 // Namespace namespace_f388b961
 // Params 2, eflags: 0x1 linked
-// namespace_f388b961<file_0>::function_b039e27b
 // Checksum 0x707f6a48, Offset: 0x580
 // Size: 0x264
 function _on(slot, weapon) {
@@ -123,7 +115,6 @@ function _on(slot, weapon) {
 
 // Namespace namespace_f388b961
 // Params 2, eflags: 0x1 linked
-// namespace_f388b961<file_0>::function_251e7cf
 // Checksum 0x1c3a4265, Offset: 0x7f0
 // Size: 0x74
 function _off(slot, weapon) {

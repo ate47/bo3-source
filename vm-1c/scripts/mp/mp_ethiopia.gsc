@@ -10,7 +10,6 @@
 
 // Namespace mp_ethiopia
 // Params 0, eflags: 0x1 linked
-// namespace_c0c4a05c<file_0>::function_d290ebfa
 // Checksum 0xcc4b4d07, Offset: 0x1f8
 // Size: 0x40c
 function main() {
@@ -40,7 +39,6 @@ function main() {
 
 // Namespace mp_ethiopia
 // Params 0, eflags: 0x1 linked
-// namespace_c0c4a05c<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x610
 // Size: 0x4
 function precache() {
@@ -49,7 +47,6 @@ function precache() {
 
 // Namespace mp_ethiopia
 // Params 1, eflags: 0x1 linked
-// namespace_c0c4a05c<file_0>::function_7bb6ebae
 // Checksum 0x85ed3478, Offset: 0x620
 // Size: 0x1ac
 function function_7bb6ebae(&var_ef2e1e06) {
@@ -81,7 +78,6 @@ function function_7bb6ebae(&var_ef2e1e06) {
 
 // Namespace mp_ethiopia
 // Params 0, eflags: 0x1 linked
-// namespace_c0c4a05c<file_0>::function_ad0d8732
 // Checksum 0x7f85f6b1, Offset: 0x7d8
 // Size: 0xfc
 function spawnkilltrigger() {
@@ -95,7 +91,6 @@ function spawnkilltrigger() {
 
 // Namespace mp_ethiopia
 // Params 0, eflags: 0x1 linked
-// namespace_c0c4a05c<file_0>::function_3a85dbfe
 // Checksum 0x9919dd65, Offset: 0x8e0
 // Size: 0x90
 function watchkilltrigger() {

@@ -16,7 +16,6 @@
 
 // Namespace namespace_baebcb1
 // Params 0, eflags: 0x1 linked
-// namespace_baebcb1<file_0>::function_c35e6aab
 // Checksum 0xdbda6c5d, Offset: 0x238
 // Size: 0x4c
 function init() {
@@ -25,7 +24,6 @@ function init() {
 
 // Namespace namespace_baebcb1
 // Params 7, eflags: 0x1 linked
-// namespace_baebcb1<file_0>::function_8c8b6484
 // Checksum 0x78e40cc4, Offset: 0x290
 // Size: 0xb8
 function function_8c8b6484(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {

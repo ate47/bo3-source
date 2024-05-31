@@ -16,7 +16,6 @@
 
 // Namespace doa
 // Params 0, eflags: 0x2
-// namespace_30ddac33<file_0>::function_a106fbcc
 // Checksum 0x906f51fc, Offset: 0x350
 // Size: 0x17c
 function autoexec ignore_systems() {
@@ -40,7 +39,6 @@ function autoexec ignore_systems() {
 
 // Namespace doa
 // Params 0, eflags: 0x1 linked
-// namespace_30ddac33<file_0>::function_d290ebfa
 // Checksum 0x5fcc44bf, Offset: 0x4d8
 // Size: 0x2d0
 function main() {
@@ -82,7 +80,6 @@ function main() {
 
 // Namespace doa
 // Params 0, eflags: 0x1 linked
-// namespace_30ddac33<file_0>::function_34685338
 // Checksum 0x4677315d, Offset: 0x7b0
 // Size: 0x208
 function onstartgametype() {
@@ -108,7 +105,6 @@ function onstartgametype() {
 
 // Namespace doa
 // Params 2, eflags: 0x1 linked
-// namespace_30ddac33<file_0>::function_19bc9234
 // Checksum 0xf9e97f2d, Offset: 0x9c0
 // Size: 0x3c
 function onspawnplayer(predictedspawn, question) {
@@ -118,7 +114,6 @@ function onspawnplayer(predictedspawn, question) {
 
 // Namespace doa
 // Params 1, eflags: 0x1 linked
-// namespace_30ddac33<file_0>::function_257d1c47
 // Checksum 0x497b97d5, Offset: 0xa08
 // Size: 0x24
 function onendgame(winningteam) {
@@ -127,7 +122,6 @@ function onendgame(winningteam) {
 
 // Namespace doa
 // Params 9, eflags: 0x1 linked
-// namespace_30ddac33<file_0>::function_c2658b46
 // Checksum 0xa0ec98e8, Offset: 0xa38
 // Size: 0x4c
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -136,7 +130,6 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace doa
 // Params 0, eflags: 0x1 linked
-// namespace_30ddac33<file_0>::function_fad7287a
 // Checksum 0x8dd79b36, Offset: 0xa90
 // Size: 0x8
 function wait_to_spawn() {
@@ -145,7 +138,6 @@ function wait_to_spawn() {
 
 // Namespace doa
 // Params 0, eflags: 0x1 linked
-// namespace_30ddac33<file_0>::function_16220a9c
 // Checksum 0xb4b721c, Offset: 0xaa0
 // Size: 0x8
 function function_16220a9c() {

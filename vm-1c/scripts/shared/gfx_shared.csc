@@ -9,7 +9,6 @@
 
 // Namespace gfx
 // Params 8, eflags: 0x1 linked
-// namespace_5fafa2b2<file_0>::function_4c522007
 // Checksum 0x2d77b00c, Offset: 0x260
 // Size: 0x5ec
 function setstage(localclientnum, bundle, filterid, stageprefix, stagelength, accumtime, totalaccumtime, setconstants) {
@@ -93,7 +92,6 @@ function setstage(localclientnum, bundle, filterid, stageprefix, stagelength, ac
 
 // Namespace gfx
 // Params 4, eflags: 0x1 linked
-// namespace_5fafa2b2<file_0>::function_f938e0bb
 // Checksum 0x99e635a9, Offset: 0x858
 // Size: 0x4ae
 function getshaderconstantvalue(bundle, constprefix, constname, delay) {
@@ -142,7 +140,6 @@ function getshaderconstantvalue(bundle, constprefix, constname, delay) {
 
 // Namespace gfx
 // Params 2, eflags: 0x1 linked
-// namespace_5fafa2b2<file_0>::function_8adba991
 // Checksum 0xa0c3e150, Offset: 0xd10
 // Size: 0x4e
 function getstructfieldorzero(bundle, field) {
@@ -155,7 +152,6 @@ function getstructfieldorzero(bundle, field) {
 
 // Namespace gfx
 // Params 1, eflags: 0x1 linked
-// namespace_5fafa2b2<file_0>::function_153a204c
 // Checksum 0x8933aded, Offset: 0xd68
 // Size: 0x8e
 function getshaderconstantindex(codeconstname) {

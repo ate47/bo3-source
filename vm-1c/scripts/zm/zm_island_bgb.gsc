@@ -23,7 +23,6 @@
 
 // Namespace namespace_f694d9ca
 // Params 0, eflags: 0x1 linked
-// namespace_f694d9ca<file_0>::function_c35e6aab
 // Checksum 0xc3fd3aaf, Offset: 0x3a8
 // Size: 0x34
 function init() {
@@ -33,7 +32,6 @@ function init() {
 
 // Namespace namespace_f694d9ca
 // Params 0, eflags: 0x1 linked
-// namespace_f694d9ca<file_0>::function_fa778ca4
 // Checksum 0x19c8ce9d, Offset: 0x3e8
 // Size: 0x144
 function function_fa778ca4() {
@@ -52,7 +50,6 @@ function function_fa778ca4() {
 
 // Namespace namespace_f694d9ca
 // Params 0, eflags: 0x1 linked
-// namespace_f694d9ca<file_0>::function_2d0e5eb6
 // Checksum 0xd2510803, Offset: 0x538
 // Size: 0x1d4
 function function_2d0e5eb6() {

@@ -13,7 +13,6 @@
 
 // Namespace namespace_6f2d2560
 // Params 0, eflags: 0x1 linked
-// namespace_6f2d2560<file_0>::function_c35e6aab
 // Checksum 0xa3aed79e, Offset: 0x1a0
 // Size: 0x34
 function init() {
@@ -23,7 +22,6 @@ function init() {
 
 // Namespace namespace_6f2d2560
 // Params 0, eflags: 0x1 linked
-// namespace_6f2d2560<file_0>::function_ee4b17bf
 // Checksum 0x20aad701, Offset: 0x1e0
 // Size: 0xd4
 function on_bot_connect() {
@@ -39,7 +37,6 @@ function on_bot_connect() {
 
 // Namespace namespace_6f2d2560
 // Params 0, eflags: 0x1 linked
-// namespace_6f2d2560<file_0>::function_eeb4665
 // Checksum 0x1a6dbf0b, Offset: 0x2c0
 // Size: 0x32c
 function function_eeb4665() {

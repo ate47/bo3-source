@@ -5,7 +5,6 @@
 
 // Namespace namespace_6e97c459
 // Params 2, eflags: 0x1 linked
-// namespace_6e97c459<file_0>::function_225a92d6
 // Checksum 0xef1a64ca, Offset: 0xf0
 // Size: 0xac
 function function_225a92d6(var_f814e008, var_6f3d2f15) {

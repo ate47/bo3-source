@@ -10,7 +10,6 @@
 
 // Namespace namespace_b31ea552
 // Params 0, eflags: 0x1 linked
-// namespace_b31ea552<file_0>::function_d290ebfa
 // Checksum 0xd9caa322, Offset: 0x220
 // Size: 0x1694
 function main() {
@@ -104,7 +103,6 @@ function main() {
 
 // Namespace namespace_b31ea552
 // Params 0, eflags: 0x1 linked
-// namespace_b31ea552<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x18c0
 // Size: 0x4
 function precache() {
@@ -113,7 +111,6 @@ function precache() {
 
 // Namespace namespace_b31ea552
 // Params 1, eflags: 0x1 linked
-// namespace_b31ea552<file_0>::function_65255849
 // Checksum 0xfba99ee2, Offset: 0x18d0
 // Size: 0xa4
 function bomb_zone_fixup(bombzone) {

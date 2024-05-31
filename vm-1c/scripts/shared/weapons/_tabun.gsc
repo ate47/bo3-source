@@ -6,7 +6,6 @@
 
 // Namespace tabun
 // Params 0, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_1463e4e5
 // Checksum 0x6be7c8be, Offset: 0x390
 // Size: 0x2fc
 function init_shared() {
@@ -42,7 +41,6 @@ function init_shared() {
 
 // Namespace tabun
 // Params 0, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_261a8166
 // Checksum 0x6943bd01, Offset: 0x698
 // Size: 0x248
 function checkdvarupdates() {
@@ -67,7 +65,6 @@ function checkdvarupdates() {
 
 // Namespace tabun
 // Params 1, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_34e6850f
 // Checksum 0x319b862e, Offset: 0x8e8
 // Size: 0xd4
 function watchtabungrenadedetonation(owner) {
@@ -87,7 +84,6 @@ function watchtabungrenadedetonation(owner) {
 
 // Namespace tabun
 // Params 5, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_7c624c9a
 // Checksum 0x50b3fa68, Offset: 0x9c8
 // Size: 0x3f2
 function damageeffectarea(owner, position, radius, height, killcament) {
@@ -144,7 +140,6 @@ function damageeffectarea(owner, position, radius, height, killcament) {
 
 // Namespace tabun
 // Params 4, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_7ae91d1c
 // Checksum 0xae633b96, Offset: 0xdc8
 // Size: 0x3b0
 function damageinpoisonarea(gaseffectarea, killcament, trace, position) {
@@ -198,7 +193,6 @@ function damageinpoisonarea(gaseffectarea, killcament, trace, position) {
 
 // Namespace tabun
 // Params 1, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_b9e9934d
 // Checksum 0x874b0fe4, Offset: 0x1180
 // Size: 0x3c
 function deleteentonownerdeath(owner) {
@@ -209,7 +203,6 @@ function deleteentonownerdeath(owner) {
 
 // Namespace tabun
 // Params 0, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_1a6dacfd
 // Checksum 0xae128989, Offset: 0x11c8
 // Size: 0x24
 function watch_death() {
@@ -219,7 +212,6 @@ function watch_death() {
 
 // Namespace tabun
 // Params 0, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_87a4a08b
 // Checksum 0x5f3c9081, Offset: 0x11f8
 // Size: 0x1c
 function function_87a4a08b() {
@@ -228,7 +220,6 @@ function function_87a4a08b() {
 
 // Namespace tabun
 // Params 0, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_c72856fc
 // Checksum 0x4323a513, Offset: 0x1220
 // Size: 0x1c
 function show_hud() {
@@ -237,7 +228,6 @@ function show_hud() {
 
 // Namespace tabun
 // Params 2, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_c3c997c
 // Checksum 0xe0a0baa, Offset: 0x1248
 // Size: 0xcc
 function generatelocations(position, owner) {
@@ -255,7 +245,6 @@ function generatelocations(position, owner) {
 
 // Namespace tabun
 // Params 2, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_6098a370
 // Checksum 0x75d904ff, Offset: 0x1320
 // Size: 0xcc
 function singlelocation(position, owner) {
@@ -268,7 +257,6 @@ function singlelocation(position, owner) {
 
 // Namespace tabun
 // Params 3, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_22c017de
 // Checksum 0xa81e5806, Offset: 0x13f8
 // Size: 0xd8
 function hitpos(start, end, color) {
@@ -285,7 +273,6 @@ function hitpos(start, end, color) {
 
 // Namespace tabun
 // Params 2, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_21bcade2
 // Checksum 0x6533de4f, Offset: 0x14d8
 // Size: 0x976
 function spawnalllocs(owner, startpos) {
@@ -393,7 +380,6 @@ function spawnalllocs(owner, startpos) {
 
 // Namespace tabun
 // Params 1, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_f98e3f3a
 // Checksum 0xac500c34, Offset: 0x1e58
 // Size: 0xf4
 function playtabunsound(position) {
@@ -410,7 +396,6 @@ function playtabunsound(position) {
 
 // Namespace tabun
 // Params 3, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_b5ff6f1a
 // Checksum 0xfb735030, Offset: 0x1f58
 // Size: 0x2e2
 function setuptabunfx(owner, locations, count) {
@@ -443,7 +428,6 @@ function setuptabunfx(owner, locations, count) {
 
 // Namespace tabun
 // Params 1, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_d0951719
 // Checksum 0xe3929658, Offset: 0x2248
 // Size: 0x100
 function getcenteroflocations(locations) {
@@ -463,7 +447,6 @@ function getcenteroflocations(locations) {
 
 // Namespace tabun
 // Params 1, eflags: 0x1 linked
-// namespace_f5ebf79f<file_0>::function_f8892858
 // Checksum 0x9192584c, Offset: 0x2350
 // Size: 0x268
 function getcenter(locations) {
@@ -507,7 +490,6 @@ function getcenter(locations) {
 
     // Namespace tabun
     // Params 5, eflags: 0x1 linked
-    // namespace_f5ebf79f<file_0>::function_63abb1a0
     // Checksum 0x93c5b9bc, Offset: 0x25c0
     // Size: 0xbc
     function tabun_debug_line(from, to, color, depthtest, time) {

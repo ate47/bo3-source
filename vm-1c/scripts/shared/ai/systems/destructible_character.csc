@@ -6,7 +6,6 @@
 
 // Namespace destructible_character
 // Params 0, eflags: 0x2
-// namespace_87344f6b<file_0>::function_d290ebfa
 // Checksum 0xd7c6f9f5, Offset: 0x198
 // Size: 0x3e6
 function autoexec main() {
@@ -40,7 +39,6 @@ function autoexec main() {
 
 // Namespace destructclientutils
 // Params 7, eflags: 0x5 linked
-// namespace_6eef25d9<file_0>::function_303292de
 // Checksum 0xacfac1d4, Offset: 0x588
 // Size: 0x138
 function private _destructhandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -65,7 +63,6 @@ function private _destructhandler(localclientnum, oldvalue, newvalue, bnewent, b
 
 // Namespace destructclientutils
 // Params 4, eflags: 0x5 linked
-// namespace_6eef25d9<file_0>::function_fbba3c4
 // Checksum 0x521f25b2, Offset: 0x6c8
 // Size: 0x164
 function private _destructpiece(localclientnum, entity, piecenumber, shouldspawngibs) {
@@ -86,7 +83,6 @@ function private _destructpiece(localclientnum, entity, piecenumber, shouldspawn
 
 // Namespace destructclientutils
 // Params 2, eflags: 0x5 linked
-// namespace_6eef25d9<file_0>::function_2cb45fe1
 // Checksum 0x557f08af, Offset: 0x838
 // Size: 0x3a
 function private _getdestructstate(localclientnum, entity) {
@@ -98,7 +94,6 @@ function private _getdestructstate(localclientnum, entity) {
 
 // Namespace destructclientutils
 // Params 3, eflags: 0x5 linked
-// namespace_6eef25d9<file_0>::function_f00bb74
 // Checksum 0xe0d458c6, Offset: 0x880
 // Size: 0xf4
 function private _handledestructcallbacks(localclientnum, entity, piecenumber) {
@@ -113,7 +108,6 @@ function private _handledestructcallbacks(localclientnum, entity, piecenumber) {
 
 // Namespace destructclientutils
 // Params 4, eflags: 0x1 linked
-// namespace_6eef25d9<file_0>::function_32ac599f
 // Checksum 0xb1c157a2, Offset: 0x980
 // Size: 0xf6
 function adddestructpiececallback(localclientnum, entity, piecenumber, callbackfunction) {
@@ -131,7 +125,6 @@ function adddestructpiececallback(localclientnum, entity, piecenumber, callbackf
 
 // Namespace destructclientutils
 // Params 3, eflags: 0x1 linked
-// namespace_6eef25d9<file_0>::function_3955bc40
 // Checksum 0x50f61d1f, Offset: 0xa80
 // Size: 0x3e
 function ispiecedestructed(localclientnum, entity, piecenumber) {

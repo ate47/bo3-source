@@ -14,7 +14,6 @@
 
 // Namespace _gadget_combat_efficiency
 // Params 0, eflags: 0x2
-// namespace_a9b52691<file_0>::function_2dc19561
 // Checksum 0x1fb0f39, Offset: 0x248
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -23,7 +22,6 @@ function autoexec function_2dc19561() {
 
 // Namespace _gadget_combat_efficiency
 // Params 0, eflags: 0x1 linked
-// namespace_a9b52691<file_0>::function_8c87d8eb
 // Checksum 0x99ec1590, Offset: 0x288
 // Size: 0x4
 function __init__() {

@@ -12,7 +12,6 @@
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_1463e4e5
 // Checksum 0xabc8fb53, Offset: 0x540
 // Size: 0x144
 function init_shared() {
@@ -36,7 +35,6 @@ function init_shared() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_50f16166
 // Checksum 0x77681d8f, Offset: 0x690
 // Size: 0x34
 function register() {
@@ -45,7 +43,6 @@ function register() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_3d8f7981
 // Checksum 0xa1a2f67b, Offset: 0x6d0
 // Size: 0x94
 function watchpregameclasschange() {
@@ -62,7 +59,6 @@ function watchpregameclasschange() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_b108f3b7
 // Checksum 0x8b435af6, Offset: 0x770
 // Size: 0x10c
 function watchriotshieldpickup() {
@@ -84,7 +80,6 @@ function watchriotshieldpickup() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_c308d92f
 // Checksum 0x49ebdaf, Offset: 0x888
 // Size: 0x258
 function trackriotshield() {
@@ -130,7 +125,6 @@ function trackriotshield() {
 
 // Namespace riotshield
 // Params 1, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_ba063cc9
 // Checksum 0xaaaa4193, Offset: 0xae8
 // Size: 0x82
 function isvalidnonshieldweapon(weapon) {
@@ -154,7 +148,6 @@ function isvalidnonshieldweapon(weapon) {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_daea5867
 // Checksum 0xd9bbf2c0, Offset: 0xb78
 // Size: 0x24
 function startriotshielddeploy() {
@@ -164,7 +157,6 @@ function startriotshielddeploy() {
 
 // Namespace riotshield
 // Params 1, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_70127cda
 // Checksum 0x814fa445, Offset: 0xba8
 // Size: 0x16e
 function resetreconmodelvisibility(owner) {
@@ -198,7 +190,6 @@ function resetreconmodelvisibility(owner) {
 
 // Namespace riotshield
 // Params 2, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_569a50ff
 // Checksum 0x267c6cbb, Offset: 0xd20
 // Size: 0x68
 function resetreconmodelonevent(eventname, owner) {
@@ -214,7 +205,6 @@ function resetreconmodelonevent(eventname, owner) {
 
 // Namespace riotshield
 // Params 2, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_3e9a625e
 // Checksum 0x51daaaf9, Offset: 0xd90
 // Size: 0x120
 function attachreconmodel(modelname, owner) {
@@ -235,7 +225,6 @@ function attachreconmodel(modelname, owner) {
 
 // Namespace riotshield
 // Params 2, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_97fc85bc
 // Checksum 0x19b6fe81, Offset: 0xeb8
 // Size: 0x150
 function spawnriotshieldcover(origin, angles) {
@@ -256,7 +245,6 @@ function spawnriotshieldcover(origin, angles) {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_eb33b662
 // Checksum 0x2c70e987, Offset: 0x1010
 // Size: 0x424
 function watchriotshielddeploy() {
@@ -317,7 +305,6 @@ function watchriotshielddeploy() {
 
 // Namespace riotshield
 // Params 1, eflags: 0x0
-// namespace_fee7726c<file_0>::function_ed584961
 // Checksum 0x622d8140, Offset: 0x1440
 // Size: 0x11e
 function riotshielddistancetest(origin) {
@@ -338,7 +325,6 @@ function riotshielddistancetest(origin) {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_a9045897
 // Checksum 0x25742695, Offset: 0x1568
 // Size: 0xec
 function watchdeployedriotshieldents() {
@@ -361,7 +347,6 @@ function watchdeployedriotshieldents() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_13e49e5a
 // Checksum 0x37061f2a, Offset: 0x1660
 // Size: 0x33c
 function watchdeployedriotshielddamage() {
@@ -402,7 +387,6 @@ function watchdeployedriotshielddamage() {
 
 // Namespace riotshield
 // Params 2, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_ffb68ade
 // Checksum 0x22736a25, Offset: 0x19a8
 // Size: 0x16c
 function damagethendestroyriotshield(attacker, weapon) {
@@ -427,7 +411,6 @@ function damagethendestroyriotshield(attacker, weapon) {
 
 // Namespace riotshield
 // Params 1, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_58248412
 // Checksum 0x2176b6ce, Offset: 0x1b20
 // Size: 0x42
 function deleteshieldontriggerdeath(shield_trigger) {
@@ -437,7 +420,6 @@ function deleteshieldontriggerdeath(shield_trigger) {
 
 // Namespace riotshield
 // Params 1, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_78c83a7a
 // Checksum 0x8b35e804, Offset: 0x1b70
 // Size: 0x6c
 function deleteshieldonplayerdeathordisconnect(shield_ent) {
@@ -449,7 +431,6 @@ function deleteshieldonplayerdeathordisconnect(shield_ent) {
 
 // Namespace riotshield
 // Params 2, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_66974b4a
 // Checksum 0x7e4ab3eb, Offset: 0x1be8
 // Size: 0x74
 function watchriotshieldstuckentitydeath(grenade, owner) {
@@ -460,7 +441,6 @@ function watchriotshieldstuckentitydeath(grenade, owner) {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_aebcf025
 // Checksum 0xa762d4c4, Offset: 0x1c68
 // Size: 0x34
 function on_player_spawned() {
@@ -470,7 +450,6 @@ function on_player_spawned() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_5c0cb7c5
 // Checksum 0x17cf46a0, Offset: 0x1ca8
 // Size: 0x50
 function watch_riot_shield_use() {
@@ -485,7 +464,6 @@ function watch_riot_shield_use() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_a7922cf8
 // Checksum 0x78b77817, Offset: 0x1d00
 // Size: 0xd2
 function begin_other_grenade_tracking() {
@@ -510,7 +488,6 @@ function begin_other_grenade_tracking() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
-// namespace_fee7726c<file_0>::function_c376161e
 // Checksum 0xc37a4a67, Offset: 0x1de0
 // Size: 0x54
 function check_stuck_to_shield() {

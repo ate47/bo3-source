@@ -10,7 +10,6 @@
 
 // Namespace ai_puppeteer
 // Params 0, eflags: 0x2
-// namespace_43b65c54<file_0>::function_2dc19561
 // Checksum 0x2feb7cc4, Offset: 0x178
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,7 +18,6 @@ function autoexec function_2dc19561() {
 
 // Namespace ai_puppeteer
 // Params 0, eflags: 0x1 linked
-// namespace_43b65c54<file_0>::function_8c87d8eb
 // Checksum 0xf2700eb1, Offset: 0x1b8
 // Size: 0x1c
 function __init__() {
@@ -32,7 +30,6 @@ function __init__() {
 
     // Namespace ai_puppeteer
     // Params 0, eflags: 0x1 linked
-    // namespace_43b65c54<file_0>::function_b469f415
     // Checksum 0x7d4efa32, Offset: 0x1e0
     // Size: 0x128
     function ai_puppeteer_think() {
@@ -53,7 +50,6 @@ function __init__() {
 
     // Namespace ai_puppeteer
     // Params 0, eflags: 0x1 linked
-    // namespace_43b65c54<file_0>::function_43b65c54
     // Checksum 0x7d23b61a, Offset: 0x310
     // Size: 0x124
     function ai_puppeteer() {
@@ -78,7 +74,6 @@ function __init__() {
 
     // Namespace ai_puppeteer
     // Params 0, eflags: 0x1 linked
-    // namespace_43b65c54<file_0>::function_d945ece4
     // Checksum 0x83018ece, Offset: 0x440
     // Size: 0xbd0
     function ai_puppet_manager() {
@@ -218,7 +213,6 @@ function __init__() {
 
     // Namespace ai_puppeteer
     // Params 0, eflags: 0x1 linked
-    // namespace_43b65c54<file_0>::function_39ab2879
     // Checksum 0xd212e734, Offset: 0x1018
     // Size: 0x7c
     function ai_puppet_set() {
@@ -231,7 +225,6 @@ function __init__() {
 
     // Namespace ai_puppeteer
     // Params 1, eflags: 0x1 linked
-    // namespace_43b65c54<file_0>::function_dfb7841a
     // Checksum 0xaba40a3b, Offset: 0x10a0
     // Size: 0x7e
     function ai_puppet_release(restore) {
@@ -247,7 +240,6 @@ function __init__() {
 
     // Namespace ai_puppeteer
     // Params 0, eflags: 0x1 linked
-    // namespace_43b65c54<file_0>::function_f2dd2384
     // Checksum 0xd09280a4, Offset: 0x1128
     // Size: 0x2d0
     function ai_puppet_cursor_tracker() {
@@ -290,7 +282,6 @@ function __init__() {
 
     // Namespace ai_puppeteer
     // Params 0, eflags: 0x1 linked
-    // namespace_43b65c54<file_0>::function_129e7dbd
     // Checksum 0x578fd6bb, Offset: 0x1400
     // Size: 0x3ac
     function ai_puppeteer_create_hud() {
@@ -340,7 +331,6 @@ function __init__() {
 
     // Namespace ai_puppeteer
     // Params 0, eflags: 0x1 linked
-    // namespace_43b65c54<file_0>::function_bc039ef5
     // Checksum 0x400ab25a, Offset: 0x17b8
     // Size: 0xa4
     function ai_puppeteer_destroy_hud() {
@@ -360,7 +350,6 @@ function __init__() {
 
     // Namespace ai_puppeteer
     // Params 4, eflags: 0x1 linked
-    // namespace_43b65c54<file_0>::function_7b8254e4
     // Checksum 0x3cae6bcb, Offset: 0x1868
     // Size: 0x164
     function ai_puppeteer_render_point(point, normal, forward, color) {
@@ -376,7 +365,6 @@ function __init__() {
 
     // Namespace ai_puppeteer
     // Params 2, eflags: 0x1 linked
-    // namespace_43b65c54<file_0>::function_2fa9fe42
     // Checksum 0x69b4d232, Offset: 0x19d8
     // Size: 0x124
     function ai_puppeteer_render_node(node, color) {
@@ -389,7 +377,6 @@ function __init__() {
 
     // Namespace ai_puppeteer
     // Params 2, eflags: 0x1 linked
-    // namespace_43b65c54<file_0>::function_44c88588
     // Checksum 0xeef902b, Offset: 0x1b08
     // Size: 0xcc
     function ai_puppeteer_render_ai(ai, color) {
@@ -400,7 +387,6 @@ function __init__() {
 
     // Namespace ai_puppeteer
     // Params 4, eflags: 0x1 linked
-    // namespace_43b65c54<file_0>::function_c735bdce
     // Checksum 0x357dbadb, Offset: 0x1be0
     // Size: 0xc8
     function ai_puppeteer_highlight_point(point, normal, forward, color) {
@@ -418,7 +404,6 @@ function __init__() {
 
     // Namespace ai_puppeteer
     // Params 1, eflags: 0x1 linked
-    // namespace_43b65c54<file_0>::function_8b606100
     // Checksum 0xeff01cbb, Offset: 0x1cb0
     // Size: 0xa8
     function ai_puppeteer_highlight_node(node) {
@@ -436,7 +421,6 @@ function __init__() {
 
     // Namespace ai_puppeteer
     // Params 2, eflags: 0x1 linked
-    // namespace_43b65c54<file_0>::function_4eab9d66
     // Checksum 0x6a5d474, Offset: 0x1d60
     // Size: 0xc0
     function ai_puppeteer_highlight_ai(ai, color) {

@@ -5,7 +5,6 @@
 
 // Namespace system
 // Params 4, eflags: 0x1 linked
-// namespace_bea63b8a<file_0>::function_50f16166
 // Checksum 0xc7264937, Offset: 0xc8
 // Size: 0x144
 function register(var_f6d58016, func_preinit, func_postinit, reqs) {
@@ -29,7 +28,6 @@ function register(var_f6d58016, func_preinit, func_postinit, reqs) {
 
 // Namespace system
 // Params 1, eflags: 0x1 linked
-// namespace_bea63b8a<file_0>::function_a9842591
 // Checksum 0xac61e5fd, Offset: 0x218
 // Size: 0xbc
 function exec_post_system(req) {
@@ -49,7 +47,6 @@ function exec_post_system(req) {
 
 // Namespace system
 // Params 0, eflags: 0x1 linked
-// namespace_bea63b8a<file_0>::function_2d31f8da
 // Checksum 0xd2b8a2d1, Offset: 0x2e0
 // Size: 0x1ec
 function run_post_systems() {
@@ -72,7 +69,6 @@ function run_post_systems() {
 
 // Namespace system
 // Params 1, eflags: 0x1 linked
-// namespace_bea63b8a<file_0>::function_e2e3f0ac
 // Checksum 0x836c460d, Offset: 0x4d8
 // Size: 0xbc
 function exec_pre_system(req) {
@@ -92,7 +88,6 @@ function exec_pre_system(req) {
 
 // Namespace system
 // Params 0, eflags: 0x1 linked
-// namespace_bea63b8a<file_0>::function_c01bb49
 // Checksum 0x22433237, Offset: 0x5a0
 // Size: 0x15a
 function run_pre_systems() {
@@ -110,7 +105,6 @@ function run_pre_systems() {
 
 // Namespace system
 // Params 1, eflags: 0x1 linked
-// namespace_bea63b8a<file_0>::function_1ab5ebec
 // Checksum 0x905d30bd, Offset: 0x708
 // Size: 0x6c
 function wait_till(required_systems) {
@@ -122,7 +116,6 @@ function wait_till(required_systems) {
 
 // Namespace system
 // Params 1, eflags: 0x1 linked
-// namespace_bea63b8a<file_0>::function_2bafb34f
 // Checksum 0x631d36d5, Offset: 0x780
 // Size: 0x90
 function ignore(var_f6d58016) {
@@ -135,7 +128,6 @@ function ignore(var_f6d58016) {
 
 // Namespace system
 // Params 1, eflags: 0x0
-// namespace_bea63b8a<file_0>::function_85aec44f
 // Checksum 0x1bab0c0, Offset: 0x818
 // Size: 0x4a
 function function_85aec44f(var_f6d58016) {

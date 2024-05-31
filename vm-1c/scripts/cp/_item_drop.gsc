@@ -9,7 +9,6 @@
 
 // Namespace item_drop
 // Params 0, eflags: 0x2
-// namespace_e746afb4<file_0>::function_d290ebfa
 // Checksum 0x19fae8b3, Offset: 0x1f8
 // Size: 0x5c
 function autoexec main() {
@@ -23,7 +22,6 @@ function autoexec main() {
 
 // Namespace item_drop
 // Params 3, eflags: 0x0
-// namespace_e746afb4<file_0>::function_5b4e1da2
 // Checksum 0x1e0c7d51, Offset: 0x260
 // Size: 0xc0
 function function_5b4e1da2(name, model, callback) {
@@ -40,7 +38,6 @@ function function_5b4e1da2(name, model, callback) {
 
 // Namespace item_drop
 // Params 2, eflags: 0x0
-// namespace_e746afb4<file_0>::function_1df4103f
 // Checksum 0xb3428da2, Offset: 0x328
 // Size: 0x9c
 function function_1df4103f(name, dropchance) {
@@ -56,7 +53,6 @@ function function_1df4103f(name, dropchance) {
 
 // Namespace item_drop
 // Params 2, eflags: 0x0
-// namespace_e746afb4<file_0>::function_744c208b
 // Checksum 0x9cab6c7a, Offset: 0x3d0
 // Size: 0x9c
 function function_744c208b(name, spawnpoints) {
@@ -72,7 +68,6 @@ function function_744c208b(name, spawnpoints) {
 
 // Namespace item_drop
 // Params 1, eflags: 0x0
-// namespace_e746afb4<file_0>::function_fe6d2452
 // Checksum 0xf325cfdd, Offset: 0x478
 // Size: 0x25c
 function function_fe6d2452(params) {
@@ -113,7 +108,6 @@ function function_fe6d2452(params) {
 
 // Namespace item_drop
 // Params 0, eflags: 0x0
-// namespace_e746afb4<file_0>::function_9b96760a
 // Checksum 0x66a5e242, Offset: 0x6e0
 // Size: 0xb0
 function function_9b96760a() {
@@ -133,7 +127,6 @@ function function_9b96760a() {
 
 // Namespace item_drop
 // Params 0, eflags: 0x0
-// namespace_e746afb4<file_0>::function_8c807b6a
 // Checksum 0xdaab1e00, Offset: 0x798
 // Size: 0x120
 function function_8c807b6a() {
@@ -155,7 +148,6 @@ function function_8c807b6a() {
 
 // Namespace item_drop
 // Params 2, eflags: 0x0
-// namespace_e746afb4<file_0>::function_49d52f82
 // Checksum 0xc54ffaef, Offset: 0x8c0
 // Size: 0xf8
 function function_49d52f82(drop, origin) {
@@ -171,7 +163,6 @@ function function_49d52f82(drop, origin) {
 
 // Namespace item_drop
 // Params 0, eflags: 0x0
-// namespace_e746afb4<file_0>::function_35a6028b
 // Checksum 0xd60423aa, Offset: 0x9c0
 // Size: 0x76
 function function_35a6028b() {
@@ -188,7 +179,6 @@ function function_35a6028b() {
 
 // Namespace item_drop
 // Params 0, eflags: 0x0
-// namespace_e746afb4<file_0>::function_64a1deed
 // Checksum 0x30b7d420, Offset: 0xa40
 // Size: 0x9c
 function function_64a1deed() {
@@ -205,7 +195,6 @@ function function_64a1deed() {
 
 // Namespace item_drop
 // Params 1, eflags: 0x0
-// namespace_e746afb4<file_0>::function_b72e286d
 // Checksum 0x28155834, Offset: 0xae8
 // Size: 0xf0
 function pickup(drop) {

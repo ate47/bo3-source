@@ -15,7 +15,6 @@
 
 // Namespace remote_weapons
 // Params 0, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_c35e6aab
 // Checksum 0xb0bfa67f, Offset: 0x318
 // Size: 0x44
 function init() {
@@ -26,7 +25,6 @@ function init() {
 
 // Namespace remote_weapons
 // Params 0, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_aebcf025
 // Checksum 0xebd83e5e, Offset: 0x368
 // Size: 0x24
 function on_player_spawned() {
@@ -36,7 +34,6 @@ function on_player_spawned() {
 
 // Namespace remote_weapons
 // Params 1, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_fed769ac
 // Checksum 0x9264ce6f, Offset: 0x398
 // Size: 0x44
 function removeandassignnewremotecontroltrigger(remotecontroltrigger) {
@@ -46,7 +43,6 @@ function removeandassignnewremotecontroltrigger(remotecontroltrigger) {
 
 // Namespace remote_weapons
 // Params 1, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_88b126fd
 // Checksum 0x6d99665c, Offset: 0x3e8
 // Size: 0xdc
 function assignremotecontroltrigger(force_new_assignment) {
@@ -68,7 +64,6 @@ function assignremotecontroltrigger(force_new_assignment) {
 
 // Namespace remote_weapons
 // Params 5, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_dd390964
 // Checksum 0x7250c605, Offset: 0x4d0
 // Size: 0xf4
 function registerremoteweapon(weaponname, hintstring, usecallback, endusecallback, hidecompassonuse) {
@@ -85,7 +80,6 @@ function registerremoteweapon(weaponname, hintstring, usecallback, endusecallbac
 
 // Namespace remote_weapons
 // Params 5, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_86e7a68
 // Checksum 0x962f1b83, Offset: 0x5d0
 // Size: 0x144
 function useremoteweapon(weapon, weaponname, immediate, allowmanualdeactivation, always_allow_ride) {
@@ -112,7 +106,6 @@ function useremoteweapon(weapon, weaponname, immediate, allowmanualdeactivation,
 
 // Namespace remote_weapons
 // Params 0, eflags: 0x0
-// namespace_84d207ed<file_0>::function_bb748780
 // Checksum 0xa76db73, Offset: 0x720
 // Size: 0x90
 function watchforhack() {
@@ -127,7 +120,6 @@ function watchforhack() {
 
 // Namespace remote_weapons
 // Params 0, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_80bc72b6
 // Checksum 0x7f50a7b1, Offset: 0x7b8
 // Size: 0x74
 function watchremoveremotecontrolledweapon() {
@@ -142,7 +134,6 @@ function watchremoveremotecontrolledweapon() {
 
 // Namespace remote_weapons
 // Params 0, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_11f54165
 // Checksum 0x7b67be61, Offset: 0x838
 // Size: 0x294
 function createremoteweapontrigger() {
@@ -171,7 +162,6 @@ function createremoteweapontrigger() {
 
 // Namespace remote_weapons
 // Params 0, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_41b78ac
 // Checksum 0x924caf56, Offset: 0xad8
 // Size: 0xac
 function watchweapondeath() {
@@ -186,7 +176,6 @@ function watchweapondeath() {
 
 // Namespace remote_weapons
 // Params 0, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_6dd8d83d
 // Checksum 0x17a8fa7d, Offset: 0xb90
 // Size: 0xdc
 function watchownerdisconnect() {
@@ -205,7 +194,6 @@ function watchownerdisconnect() {
 
 // Namespace remote_weapons
 // Params 0, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_6a5da0ec
 // Checksum 0x90d39203, Offset: 0xc78
 // Size: 0x98
 function watchremotetriggerdisable() {
@@ -221,7 +209,6 @@ function watchremotetriggerdisable() {
 
 // Namespace remote_weapons
 // Params 0, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_22b9ff6a
 // Checksum 0x69c1ec1b, Offset: 0xd18
 // Size: 0xca
 function allowremotestart() {
@@ -234,7 +221,6 @@ function allowremotestart() {
 
 // Namespace remote_weapons
 // Params 0, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_cdd9eed1
 // Checksum 0x58085e4f, Offset: 0xdf0
 // Size: 0x170
 function watchremotetriggeruse() {
@@ -263,7 +249,6 @@ function watchremotetriggeruse() {
 
 // Namespace remote_weapons
 // Params 2, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_4f88b29f
 // Checksum 0xbc3f0515, Offset: 0xf68
 // Size: 0x42c
 function useremotecontrolweapon(allowmanualdeactivation, always_allow_ride) {
@@ -325,7 +310,6 @@ function useremotecontrolweapon(allowmanualdeactivation, always_allow_ride) {
 
 // Namespace remote_weapons
 // Params 0, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_ecdd3def
 // Checksum 0x5225467c, Offset: 0x13a0
 // Size: 0x2c
 function resetcontrolinitiateduponownerrespawn() {
@@ -336,7 +320,6 @@ function resetcontrolinitiateduponownerrespawn() {
 
 // Namespace remote_weapons
 // Params 0, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_2c873275
 // Checksum 0x1f652251, Offset: 0x13d8
 // Size: 0xf0
 function watchremotecontroldeactivate() {
@@ -362,7 +345,6 @@ function watchremotecontroldeactivate() {
 
 // Namespace remote_weapons
 // Params 1, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_f7d11bc2
 // Checksum 0xbe4fada8, Offset: 0x14d0
 // Size: 0x4f0
 function endremotecontrolweaponuse(exitrequestedbyowner) {
@@ -437,7 +419,6 @@ function endremotecontrolweaponuse(exitrequestedbyowner) {
 
 // Namespace remote_weapons
 // Params 0, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_d739de6c
 // Checksum 0x6a0fd362, Offset: 0x19c8
 // Size: 0x6c
 function fadetoblackandbackin() {
@@ -451,7 +432,6 @@ function fadetoblackandbackin() {
 
 // Namespace remote_weapons
 // Params 1, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_b0a5453d
 // Checksum 0x6b5bd34d, Offset: 0x1a40
 // Size: 0xc8
 function stunstaticfx(duration) {
@@ -469,7 +449,6 @@ function stunstaticfx(duration) {
 
 // Namespace remote_weapons
 // Params 0, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_c8543c8a
 // Checksum 0x90ce73b7, Offset: 0x1b10
 // Size: 0x84
 function destroyremotehud() {
@@ -485,7 +464,6 @@ function destroyremotehud() {
 
 // Namespace remote_weapons
 // Params 1, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_7613f484
 // Checksum 0xf83e9e70, Offset: 0x1ba0
 // Size: 0x84
 function set_static(val) {
@@ -497,7 +475,6 @@ function set_static(val) {
 
 // Namespace remote_weapons
 // Params 0, eflags: 0x1 linked
-// namespace_84d207ed<file_0>::function_90edb0
 // Checksum 0xb05e264c, Offset: 0x1c30
 // Size: 0x52
 function do_static_fx() {

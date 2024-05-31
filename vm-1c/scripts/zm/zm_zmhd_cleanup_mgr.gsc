@@ -12,7 +12,6 @@
 
 // Namespace namespace_2d028ffb
 // Params 0, eflags: 0x2
-// namespace_2d028ffb<file_0>::function_2dc19561
 // Checksum 0x70771844, Offset: 0x1d8
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_2d028ffb
 // Params 0, eflags: 0x1 linked
-// namespace_2d028ffb<file_0>::function_8c87d8eb
 // Checksum 0x2cdb7971, Offset: 0x220
 // Size: 0x24
 function __init__() {
@@ -31,7 +29,6 @@ function __init__() {
 
 // Namespace namespace_2d028ffb
 // Params 0, eflags: 0x1 linked
-// namespace_2d028ffb<file_0>::function_5b6b9132
 // Checksum 0x37df1174, Offset: 0x250
 // Size: 0x1c
 function __main__() {
@@ -40,7 +37,6 @@ function __main__() {
 
 // Namespace namespace_2d028ffb
 // Params 0, eflags: 0x0
-// namespace_2d028ffb<file_0>::function_135b9ebe
 // Checksum 0x4eb1303d, Offset: 0x278
 // Size: 0x12
 function force_check_now() {
@@ -49,7 +45,6 @@ function force_check_now() {
 
 // Namespace namespace_2d028ffb
 // Params 0, eflags: 0x5 linked
-// namespace_2d028ffb<file_0>::function_94a71aa1
 // Checksum 0x7be5f439, Offset: 0x298
 // Size: 0x296
 function private cleanup_main() {
@@ -97,7 +92,6 @@ function private cleanup_main() {
 
 // Namespace namespace_2d028ffb
 // Params 1, eflags: 0x1 linked
-// namespace_2d028ffb<file_0>::function_f5e436a6
 // Checksum 0x4f746dfe, Offset: 0x538
 // Size: 0x278
 function do_cleanup_check(n_override_cleanup_dist) {
@@ -146,7 +140,6 @@ function do_cleanup_check(n_override_cleanup_dist) {
 
 // Namespace namespace_2d028ffb
 // Params 0, eflags: 0x5 linked
-// namespace_2d028ffb<file_0>::function_9d062d5d
 // Checksum 0x1dea1f69, Offset: 0x7b8
 // Size: 0x27c
 function private delete_zombie_noone_looking() {
@@ -191,7 +184,6 @@ function private delete_zombie_noone_looking() {
 
 // Namespace namespace_2d028ffb
 // Params 1, eflags: 0x1 linked
-// namespace_2d028ffb<file_0>::function_6f990596
 // Checksum 0xa1dc9d15, Offset: 0xa40
 // Size: 0xd8
 function player_can_see_me(player) {
@@ -208,7 +200,6 @@ function player_can_see_me(player) {
 
 // Namespace namespace_2d028ffb
 // Params 1, eflags: 0x5 linked
-// namespace_2d028ffb<file_0>::function_316e69fd
 // Checksum 0x13928f1a, Offset: 0xb20
 // Size: 0xb4
 function private player_ahead_of_me(player) {
@@ -224,7 +215,6 @@ function private player_ahead_of_me(player) {
 
 // Namespace namespace_2d028ffb
 // Params 1, eflags: 0x1 linked
-// namespace_2d028ffb<file_0>::function_d6e4bd69
 // Checksum 0xb6d74e46, Offset: 0xbe0
 // Size: 0x11e
 function get_adjacencies_to_zone(str_zone) {
@@ -246,7 +236,6 @@ function get_adjacencies_to_zone(str_zone) {
 
 // Namespace namespace_2d028ffb
 // Params 1, eflags: 0x1 linked
-// namespace_2d028ffb<file_0>::function_27553de3
 // Checksum 0xd8ad77d9, Offset: 0xd08
 // Size: 0x64
 function no_target_override(ai_zombie) {
@@ -259,7 +248,6 @@ function no_target_override(ai_zombie) {
 
 // Namespace namespace_2d028ffb
 // Params 0, eflags: 0x5 linked
-// namespace_2d028ffb<file_0>::function_8cd09adb
 // Checksum 0x73e66bf2, Offset: 0xd78
 // Size: 0x14e
 function private get_escape_position() {
@@ -284,7 +272,6 @@ function private get_escape_position() {
 
 // Namespace namespace_2d028ffb
 // Params 1, eflags: 0x5 linked
-// namespace_2d028ffb<file_0>::function_dc683d01
 // Checksum 0xf5349a7b, Offset: 0xed0
 // Size: 0xc2
 function private function_dc683d01(var_b52b26b9) {
@@ -303,7 +290,6 @@ function private function_dc683d01(var_b52b26b9) {
 
 // Namespace namespace_2d028ffb
 // Params 0, eflags: 0x5 linked
-// namespace_2d028ffb<file_0>::function_30b905e5
 // Checksum 0x371382f2, Offset: 0xfa0
 // Size: 0x78
 function private function_30b905e5() {
@@ -320,7 +306,6 @@ function private function_30b905e5() {
 
 // Namespace namespace_2d028ffb
 // Params 0, eflags: 0x5 linked
-// namespace_2d028ffb<file_0>::function_9de8a8db
 // Checksum 0xd2e70db, Offset: 0x1020
 // Size: 0xee
 function private function_9de8a8db() {
@@ -341,7 +326,6 @@ function private function_9de8a8db() {
 
 // Namespace namespace_2d028ffb
 // Params 1, eflags: 0x5 linked
-// namespace_2d028ffb<file_0>::function_99ba7416
 // Checksum 0x7889ab35, Offset: 0x1118
 // Size: 0x11e
 function private get_wait_locations_in_zones(a_zones) {
@@ -360,7 +344,6 @@ function private get_wait_locations_in_zones(a_zones) {
 
 // Namespace namespace_2d028ffb
 // Params 0, eflags: 0x5 linked
-// namespace_2d028ffb<file_0>::function_eadbcbdb
 // Checksum 0xd1e67316, Offset: 0x1240
 // Size: 0x5e
 function private function_eadbcbdb() {

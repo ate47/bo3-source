@@ -7,7 +7,6 @@
 
 // Namespace raps
 // Params 0, eflags: 0x2
-// namespace_a7941edd<file_0>::function_d290ebfa
 // Checksum 0x95687222, Offset: 0x140
 // Size: 0x4c
 function autoexec main() {
@@ -16,7 +15,6 @@ function autoexec main() {
 
 // Namespace raps
 // Params 4, eflags: 0x1 linked
-// namespace_a7941edd<file_0>::function_8db2f8e6
 // Checksum 0x3e063d2e, Offset: 0x198
 // Size: 0x124
 function adjust_side_death_dir_if_trace_fail(origin, side_dir, fxlength, up_dir) {
@@ -35,7 +33,6 @@ function adjust_side_death_dir_if_trace_fail(origin, side_dir, fxlength, up_dir)
 
 // Namespace raps
 // Params 7, eflags: 0x1 linked
-// namespace_a7941edd<file_0>::function_e296b6e4
 // Checksum 0x60f476ed, Offset: 0x2c8
 // Size: 0x37c
 function do_side_death_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

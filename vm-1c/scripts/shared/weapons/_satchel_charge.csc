@@ -8,7 +8,6 @@
 
 // Namespace satchel_charge
 // Params 1, eflags: 0x1 linked
-// namespace_624f140<file_0>::function_1463e4e5
 // Checksum 0xb6ac2d4a, Offset: 0x1b0
 // Size: 0x6c
 function init_shared(localclientnum) {
@@ -19,7 +18,6 @@ function init_shared(localclientnum) {
 
 // Namespace satchel_charge
 // Params 1, eflags: 0x1 linked
-// namespace_624f140<file_0>::function_dcd6d73e
 // Checksum 0x25a4dde6, Offset: 0x228
 // Size: 0x8c
 function function_dcd6d73e(localclientnum) {

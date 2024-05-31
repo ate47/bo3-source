@@ -12,7 +12,6 @@
 
 // Namespace zm_bgb_secret_shopper
 // Params 0, eflags: 0x2
-// namespace_48b6019<file_0>::function_2dc19561
 // Checksum 0xe152893d, Offset: 0x1a8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_secret_shopper
 // Params 0, eflags: 0x1 linked
-// namespace_48b6019<file_0>::function_8c87d8eb
 // Checksum 0xd030a5f9, Offset: 0x1e8
 // Size: 0x64
 function __init__() {
@@ -33,7 +31,6 @@ function __init__() {
 
 // Namespace zm_bgb_secret_shopper
 // Params 0, eflags: 0x1 linked
-// namespace_48b6019<file_0>::function_bae40a28
 // Checksum 0xb9b1440, Offset: 0x258
 // Size: 0x78
 function enable() {
@@ -49,7 +46,6 @@ function enable() {
 
 // Namespace zm_bgb_secret_shopper
 // Params 0, eflags: 0x1 linked
-// namespace_48b6019<file_0>::function_54bdb053
 // Checksum 0x57902796, Offset: 0x2d8
 // Size: 0x14
 function disable() {
@@ -58,7 +54,6 @@ function disable() {
 
 // Namespace zm_bgb_secret_shopper
 // Params 1, eflags: 0x1 linked
-// namespace_48b6019<file_0>::function_127dc5ca
 // Checksum 0x1b3f0ce1, Offset: 0x2f8
 // Size: 0x1a0
 function function_127dc5ca(player) {

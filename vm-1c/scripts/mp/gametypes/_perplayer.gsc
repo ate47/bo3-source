@@ -4,7 +4,6 @@
 
 // Namespace perplayer
 // Params 3, eflags: 0x0
-// namespace_3e6d1b65<file_0>::function_c35e6aab
 // Checksum 0xa3a73e6a, Offset: 0x98
 // Size: 0xbc
 function init(id, playerbegincallback, playerendcallback) {
@@ -21,7 +20,6 @@ function init(id, playerbegincallback, playerendcallback) {
 
 // Namespace perplayer
 // Params 1, eflags: 0x0
-// namespace_3e6d1b65<file_0>::function_bae40a28
 // Checksum 0x213fd1bf, Offset: 0x160
 // Size: 0x146
 function enable(handler) {
@@ -47,7 +45,6 @@ function enable(handler) {
 
 // Namespace perplayer
 // Params 1, eflags: 0x0
-// namespace_3e6d1b65<file_0>::function_54bdb053
 // Checksum 0x8d1b3ad2, Offset: 0x2b0
 // Size: 0x14e
 function disable(handler) {
@@ -73,7 +70,6 @@ function disable(handler) {
 
 // Namespace perplayer
 // Params 1, eflags: 0x0
-// namespace_3e6d1b65<file_0>::function_603848d5
 // Checksum 0xd68c9ea3, Offset: 0x408
 // Size: 0x180
 function onplayerconnect(handler) {
@@ -97,7 +93,6 @@ function onplayerconnect(handler) {
 
 // Namespace perplayer
 // Params 1, eflags: 0x0
-// namespace_3e6d1b65<file_0>::function_2163426b
 // Checksum 0x43e1a715, Offset: 0x590
 // Size: 0xcc
 function onplayerdisconnect(handler) {
@@ -114,7 +109,6 @@ function onplayerdisconnect(handler) {
 
 // Namespace perplayer
 // Params 1, eflags: 0x0
-// namespace_3e6d1b65<file_0>::function_99b59332
 // Checksum 0x8f2402c5, Offset: 0x668
 // Size: 0x48
 function onjoinedteam(handler) {
@@ -127,7 +121,6 @@ function onjoinedteam(handler) {
 
 // Namespace perplayer
 // Params 1, eflags: 0x0
-// namespace_3e6d1b65<file_0>::function_3c6a7d4b
 // Checksum 0xf3789b58, Offset: 0x6b8
 // Size: 0x48
 function onjoinedspectators(handler) {
@@ -140,7 +133,6 @@ function onjoinedspectators(handler) {
 
 // Namespace perplayer
 // Params 1, eflags: 0x0
-// namespace_3e6d1b65<file_0>::function_be02cc45
 // Checksum 0x8999efd3, Offset: 0x708
 // Size: 0x40
 function onplayerspawned(handler) {
@@ -153,7 +145,6 @@ function onplayerspawned(handler) {
 
 // Namespace perplayer
 // Params 1, eflags: 0x0
-// namespace_3e6d1b65<file_0>::function_c2658b46
 // Checksum 0x98568528, Offset: 0x750
 // Size: 0x48
 function onplayerkilled(handler) {
@@ -166,7 +157,6 @@ function onplayerkilled(handler) {
 
 // Namespace perplayer
 // Params 1, eflags: 0x0
-// namespace_3e6d1b65<file_0>::function_8c7e4704
 // Checksum 0xd6e31fe0, Offset: 0x7a0
 // Size: 0xb0
 function handleplayer(handler) {
@@ -183,7 +173,6 @@ function handleplayer(handler) {
 
 // Namespace perplayer
 // Params 3, eflags: 0x0
-// namespace_3e6d1b65<file_0>::function_639bd59d
 // Checksum 0x2a101852, Offset: 0x858
 // Size: 0xc4
 function unhandleplayer(handler, unsetready, disconnected) {

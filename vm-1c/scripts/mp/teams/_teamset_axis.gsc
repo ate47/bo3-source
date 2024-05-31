@@ -5,7 +5,6 @@
 
 // Namespace namespace_d58dbe33
 // Params 0, eflags: 0x1 linked
-// namespace_d58dbe33<file_0>::function_d290ebfa
 // Checksum 0xd26a60ae, Offset: 0x2b8
 // Size: 0x3c
 function main() {
@@ -16,7 +15,6 @@ function main() {
 
 // Namespace namespace_d58dbe33
 // Params 1, eflags: 0x1 linked
-// namespace_d58dbe33<file_0>::function_c35e6aab
 // Checksum 0xb0e82f6a, Offset: 0x300
 // Size: 0x30a
 function init(team) {
@@ -49,7 +47,6 @@ function init(team) {
 
 // Namespace namespace_d58dbe33
 // Params 0, eflags: 0x1 linked
-// namespace_d58dbe33<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x618
 // Size: 0x4
 function precache() {

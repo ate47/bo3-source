@@ -9,7 +9,6 @@
 
 // Namespace zm_bgb_alchemical_antithesis
 // Params 0, eflags: 0x2
-// namespace_f3043f41<file_0>::function_2dc19561
 // Checksum 0xa035259d, Offset: 0x160
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_alchemical_antithesis
 // Params 0, eflags: 0x1 linked
-// namespace_f3043f41<file_0>::function_8c87d8eb
 // Checksum 0xb8766228, Offset: 0x1a0
 // Size: 0x3c
 function __init__() {

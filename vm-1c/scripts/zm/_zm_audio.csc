@@ -10,7 +10,6 @@
 
 // Namespace zm_audio
 // Params 0, eflags: 0x2
-// namespace_aab55cf5<file_0>::function_2dc19561
 // Checksum 0x70ff34dc, Offset: 0x460
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,7 +18,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_audio
 // Params 0, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_8c87d8eb
 // Checksum 0x3f5a4146, Offset: 0x4a0
 // Size: 0x1a4
 function __init__() {
@@ -41,7 +39,6 @@ function __init__() {
 
 // Namespace zm_audio
 // Params 1, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_aebcf025
 // Checksum 0x2b6b900c, Offset: 0x650
 // Size: 0xc
 function on_player_spawned(localclientnum) {
@@ -50,7 +47,6 @@ function on_player_spawned(localclientnum) {
 
 // Namespace zm_audio
 // Params 1, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_91d8b2f8
 // Checksum 0x7e39eb96, Offset: 0x668
 // Size: 0x38
 function delay_set_exert_id(newval) {
@@ -62,7 +58,6 @@ function delay_set_exert_id(newval) {
 
 // Namespace zm_audio
 // Params 7, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_d3c5cb45
 // Checksum 0x29d2394a, Offset: 0x6a8
 // Size: 0xa4
 function charindex_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -80,7 +75,6 @@ function charindex_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 
 // Namespace zm_audio
 // Params 7, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_f11d369d
 // Checksum 0x873c8808, Offset: 0x758
 // Size: 0x60
 function isspeaking_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -93,7 +87,6 @@ function isspeaking_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 
 // Namespace zm_audio
 // Params 0, eflags: 0x0
-// namespace_aab55cf5<file_0>::function_28cc6eae
 // Checksum 0xa67fe2be, Offset: 0x7c0
 // Size: 0x94
 function zmbmuslooper() {
@@ -106,7 +99,6 @@ function zmbmuslooper() {
 
 // Namespace zm_audio
 // Params 0, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_1bf9783a
 // Checksum 0xa05676de, Offset: 0x860
 // Size: 0x64
 function waitfor_music_stop() {
@@ -119,7 +111,6 @@ function waitfor_music_stop() {
 
 // Namespace zm_audio
 // Params 2, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_49f720a3
 // Checksum 0x1c1044f8, Offset: 0x8d0
 // Size: 0x34
 function playerfalldamagesound(client_num, firstperson) {
@@ -128,7 +119,6 @@ function playerfalldamagesound(client_num, firstperson) {
 
 // Namespace zm_audio
 // Params 0, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_c7a6edf5
 // Checksum 0xfc787f59, Offset: 0x910
 // Size: 0x7e
 function clientvoicesetup() {
@@ -141,7 +131,6 @@ function clientvoicesetup() {
 
 // Namespace zm_audio
 // Params 1, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_188dd378
 // Checksum 0xad186b6f, Offset: 0x998
 // Size: 0xcc
 function audio_player_connect(localclientnum) {
@@ -155,7 +144,6 @@ function audio_player_connect(localclientnum) {
 
 // Namespace zm_audio
 // Params 2, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_b98cc33c
 // Checksum 0x2ddb3a68, Offset: 0xa70
 // Size: 0x15c
 function playerexert(localclientnum, exert) {
@@ -183,7 +171,6 @@ function playerexert(localclientnum, exert) {
 
 // Namespace zm_audio
 // Params 2, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_71d0cf94
 // Checksum 0x5618d8bd, Offset: 0xbd8
 // Size: 0xc8
 function sndvonotifydtp(localclientnum, notifystring) {
@@ -203,7 +190,6 @@ function sndvonotifydtp(localclientnum, notifystring) {
 
 // Namespace zm_audio
 // Params 2, eflags: 0x0
-// namespace_aab55cf5<file_0>::function_9b36845c
 // Checksum 0xdfc6f3a5, Offset: 0xca8
 // Size: 0x208
 function sndmeleeswipe(localclientnum, notifystring) {
@@ -241,7 +227,6 @@ function sndmeleeswipe(localclientnum, notifystring) {
 
 // Namespace zm_audio
 // Params 2, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_c7efb1c8
 // Checksum 0x6c31d1f8, Offset: 0xeb8
 // Size: 0xe8
 function sndvonotifyplain(localclientnum, notifystring) {
@@ -264,7 +249,6 @@ function sndvonotifyplain(localclientnum, notifystring) {
 
 // Namespace zm_audio
 // Params 0, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_30e38ad2
 // Checksum 0xfd5ef33e, Offset: 0xfa8
 // Size: 0x6c
 function end_gameover_snapshot() {
@@ -276,7 +260,6 @@ function end_gameover_snapshot() {
 
 // Namespace zm_audio
 // Params 0, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_67893d0c
 // Checksum 0x5e058b09, Offset: 0x1020
 // Size: 0x44
 function gameover_snapshot() {
@@ -287,7 +270,6 @@ function gameover_snapshot() {
 
 // Namespace zm_audio
 // Params 7, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_790b3d9d
 // Checksum 0xff5bbefa, Offset: 0x1070
 // Size: 0x94
 function function_790b3d9d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -300,7 +282,6 @@ function function_790b3d9d(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_audio
 // Params 7, eflags: 0x1 linked
-// namespace_aab55cf5<file_0>::function_ec0a10f7
 // Checksum 0x8b345a0c, Offset: 0x1110
 // Size: 0x14c
 function sndzmblaststand(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

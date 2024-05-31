@@ -15,7 +15,6 @@
 
 // Namespace load
 // Params 0, eflags: 0x2
-// namespace_d7916d65<file_0>::function_2dc19561
 // Checksum 0xa6285f1a, Offset: 0x228
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -24,7 +23,6 @@ function autoexec function_2dc19561() {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
-// namespace_d7916d65<file_0>::function_8c87d8eb
 // Checksum 0xeb152b63, Offset: 0x268
 // Size: 0x2c
 function __init__() {
@@ -38,7 +36,6 @@ function __init__() {
 
     // Namespace load
     // Params 0, eflags: 0x1 linked
-    // namespace_d7916d65<file_0>::function_f968e47b
     // Checksum 0xbf1fdc1, Offset: 0x2a0
     // Size: 0x26
     function first_frame() {
@@ -51,7 +48,6 @@ function __init__() {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
-// namespace_d7916d65<file_0>::function_b018f2a7
 // Checksum 0xcb85f097, Offset: 0x2d0
 // Size: 0x64
 function function_b018f2a7() {
@@ -63,7 +59,6 @@ function function_b018f2a7() {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
-// namespace_d7916d65<file_0>::function_60086937
 // Checksum 0xc008a629, Offset: 0x340
 // Size: 0x7c
 function art_review() {

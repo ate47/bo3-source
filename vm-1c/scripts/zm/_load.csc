@@ -34,7 +34,6 @@
 
 // Namespace load
 // Params 3, eflags: 0x1 linked
-// namespace_d7916d65<file_0>::function_2e683bb6
 // Checksum 0xeea521ca, Offset: 0x4f0
 // Size: 0x3a
 function levelnotifyhandler(clientnum, state, oldstate) {
@@ -45,7 +44,6 @@ function levelnotifyhandler(clientnum, state, oldstate) {
 
 // Namespace load
 // Params 2, eflags: 0x0
-// namespace_d7916d65<file_0>::function_c0576ad6
 // Checksum 0x8aa5a2bb, Offset: 0x538
 // Size: 0x14
 function warnmissilelocking(localclientnum, set) {
@@ -54,7 +52,6 @@ function warnmissilelocking(localclientnum, set) {
 
 // Namespace load
 // Params 2, eflags: 0x0
-// namespace_d7916d65<file_0>::function_e0ea5b2d
 // Checksum 0x45712abb, Offset: 0x558
 // Size: 0x14
 function warnmissilelocked(localclientnum, set) {
@@ -63,7 +60,6 @@ function warnmissilelocked(localclientnum, set) {
 
 // Namespace load
 // Params 2, eflags: 0x0
-// namespace_d7916d65<file_0>::function_ee2f2859
 // Checksum 0x836bfe92, Offset: 0x578
 // Size: 0x14
 function warnmissilefired(localclientnum, set) {
@@ -72,7 +68,6 @@ function warnmissilefired(localclientnum, set) {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
-// namespace_d7916d65<file_0>::function_d290ebfa
 // Checksum 0x12999f87, Offset: 0x598
 // Size: 0x14c
 function main() {
@@ -93,7 +88,6 @@ function main() {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
-// namespace_d7916d65<file_0>::function_41eff448
 // Checksum 0x6d016e91, Offset: 0x6f0
 // Size: 0x30
 function server_time() {
@@ -105,7 +99,6 @@ function server_time() {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
-// namespace_d7916d65<file_0>::function_4ece4a2f
 // Checksum 0xd69ff95c, Offset: 0x728
 // Size: 0xf4
 function register_clientfields() {

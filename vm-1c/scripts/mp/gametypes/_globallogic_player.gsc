@@ -57,7 +57,6 @@
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_f6076bfe
 // Checksum 0xfff1b1c5, Offset: 0x2210
 // Size: 0x34
 function on_joined_team() {
@@ -68,7 +67,6 @@ function on_joined_team() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_890f5017
 // Checksum 0x421bf341, Offset: 0x2250
 // Size: 0xc4
 function freezeplayerforroundend() {
@@ -85,7 +83,6 @@ function freezeplayerforroundend() {
 
 // Namespace globallogic_player
 // Params 1, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_7bb59f48
 // Checksum 0x14a94c50, Offset: 0x2320
 // Size: 0x8c
 function arraytostring(inputarray) {
@@ -101,7 +98,6 @@ function arraytostring(inputarray) {
 
 // Namespace globallogic_player
 // Params 2, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_c92849fa
 // Checksum 0x49eeb185, Offset: 0x23b8
 // Size: 0x120c
 function function_c92849fa(player, result) {
@@ -248,7 +244,6 @@ function function_c92849fa(player, result) {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_edac583b
 // Checksum 0xb45950f7, Offset: 0x35d0
 // Size: 0x1fe
 function player_monitor_travel_dist() {
@@ -285,7 +280,6 @@ function player_monitor_travel_dist() {
 
 // Namespace globallogic_player
 // Params 1, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_93be927a
 // Checksum 0xa52a58b, Offset: 0x37d8
 // Size: 0x204
 function record_special_move_data_for_life(killer) {
@@ -306,7 +300,6 @@ function record_special_move_data_for_life(killer) {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_716b3fd6
 // Checksum 0x36317591, Offset: 0x39e8
 // Size: 0x114
 function function_716b3fd6() {
@@ -331,7 +324,6 @@ function function_716b3fd6() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_64aa4793
 // Checksum 0x653361b2, Offset: 0x3b08
 // Size: 0x114
 function function_64aa4793() {
@@ -356,7 +348,6 @@ function function_64aa4793() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_9e98f49b
 // Checksum 0x160ad765, Offset: 0x3c28
 // Size: 0x100
 function function_9e98f49b() {
@@ -381,7 +372,6 @@ function function_9e98f49b() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_cf1cf1b3
 // Checksum 0xbd4ac2cb, Offset: 0x3d30
 // Size: 0x100
 function function_cf1cf1b3() {
@@ -406,7 +396,6 @@ function function_cf1cf1b3() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_6cacbb16
 // Checksum 0x49b1626f, Offset: 0x3e38
 // Size: 0x8e
 function player_monitor_inactivity() {
@@ -426,7 +415,6 @@ function player_monitor_inactivity() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_3c0d2fc2
 // Checksum 0x17916f3a, Offset: 0x3ed0
 // Size: 0x232c
 function callback_playerconnect() {
@@ -821,7 +809,6 @@ function callback_playerconnect() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_83dc991f
 // Checksum 0xe6b643c7, Offset: 0x6208
 // Size: 0x4c4
 function record_global_mp_stats_for_player_at_match_start() {
@@ -862,7 +849,6 @@ function record_global_mp_stats_for_player_at_match_start() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_619d0f4
 // Checksum 0x2df1bddb, Offset: 0x66d8
 // Size: 0x3f4
 function record_global_mp_stats_for_player_at_match_end() {
@@ -896,7 +882,6 @@ function record_global_mp_stats_for_player_at_match_end() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_e4be14ff
 // Checksum 0x966ce09f, Offset: 0x6ad8
 // Size: 0x1d4
 function record_misc_player_stats() {
@@ -932,7 +917,6 @@ function record_misc_player_stats() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_9933a9b1
 // Checksum 0xa9b6f402, Offset: 0x6cb8
 // Size: 0x274
 function spectate_player_watcher() {
@@ -981,7 +965,6 @@ function spectate_player_watcher() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_238aedd1
 // Checksum 0xf6e6b200, Offset: 0x6f38
 // Size: 0xba
 function callback_playermigrated() {
@@ -998,7 +981,6 @@ function callback_playermigrated() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_3ac6a6ae
 // Checksum 0x8fd86a50, Offset: 0x7000
 // Size: 0x73c
 function callback_playerdisconnect() {
@@ -1089,7 +1071,6 @@ function callback_playerdisconnect() {
 
 // Namespace globallogic_player
 // Params 8, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_2d14c1f4
 // Checksum 0x228f0e6e, Offset: 0x7748
 // Size: 0xc4
 function callback_playermelee(eattacker, idamage, weapon, vorigin, vdir, boneindex, shieldhit, frombehind) {
@@ -1104,7 +1085,6 @@ function callback_playermelee(eattacker, idamage, weapon, vorigin, vdir, boneind
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_78e81f9
 // Checksum 0xcc2c735a, Offset: 0x7818
 // Size: 0x242
 function choosenextbestnemesis() {
@@ -1140,7 +1120,6 @@ function choosenextbestnemesis() {
 
 // Namespace globallogic_player
 // Params 7, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_b245f6c9
 // Checksum 0x85b87834, Offset: 0x7a68
 // Size: 0xec
 function custom_gamemodes_modified_damage(victim, eattacker, idamage, smeansofdeath, weapon, einflictor, shitloc) {
@@ -1158,7 +1137,6 @@ function custom_gamemodes_modified_damage(victim, eattacker, idamage, smeansofde
 
 // Namespace globallogic_player
 // Params 1, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_5cdf8f76
 // Checksum 0xa76c6d2c, Offset: 0x7b60
 // Size: 0x160
 function figure_out_attacker(eattacker) {
@@ -1182,7 +1160,6 @@ function figure_out_attacker(eattacker) {
 
 // Namespace globallogic_player
 // Params 2, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_b168504f
 // Checksum 0x27357d6d, Offset: 0x7cc8
 // Size: 0x174
 function function_b168504f(weapon, einflictor) {
@@ -1208,7 +1185,6 @@ function function_b168504f(weapon, einflictor) {
 
 // Namespace globallogic_player
 // Params 1, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_adcdf849
 // Checksum 0xba49235d, Offset: 0x7e48
 // Size: 0x92
 function figure_out_friendly_fire(victim) {
@@ -1226,7 +1202,6 @@ function figure_out_friendly_fire(victim) {
 
 // Namespace globallogic_player
 // Params 2, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_f698740
 // Checksum 0x8ee28525, Offset: 0x7ee8
 // Size: 0x4e
 function function_f698740(eattacker, weapon) {
@@ -1244,7 +1219,6 @@ function function_f698740(eattacker, weapon) {
 
 // Namespace globallogic_player
 // Params 4, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_49825228
 // Checksum 0xa08460de, Offset: 0x7f40
 // Size: 0x196
 function should_do_player_damage(eattacker, weapon, smeansofdeath, idflags) {
@@ -1285,7 +1259,6 @@ function should_do_player_damage(eattacker, weapon, smeansofdeath, idflags) {
 
 // Namespace globallogic_player
 // Params 8, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_e6ce9593
 // Checksum 0xbb182fe, Offset: 0x80e0
 // Size: 0x210
 function apply_damage_to_armor(einflictor, eattacker, idamage, smeansofdeath, weapon, shitloc, friendlyfire, ignore_round_start_friendly_fire) {
@@ -1314,7 +1287,6 @@ function apply_damage_to_armor(einflictor, eattacker, idamage, smeansofdeath, we
 
 // Namespace globallogic_player
 // Params 1, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_6a7d9849
 // Checksum 0xbe6f0525, Offset: 0x82f8
 // Size: 0x82
 function make_sure_damage_is_not_zero(idamage) {
@@ -1329,7 +1301,6 @@ function make_sure_damage_is_not_zero(idamage) {
 
 // Namespace globallogic_player
 // Params 1, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_ba34d203
 // Checksum 0xcfeb1e82, Offset: 0x8388
 // Size: 0x6c
 function modify_player_damage_friendlyfire(idamage) {
@@ -1342,7 +1313,6 @@ function modify_player_damage_friendlyfire(idamage) {
 
 // Namespace globallogic_player
 // Params 11, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_3cfcbeb
 // Checksum 0xbb932040, Offset: 0x8400
 // Size: 0x342
 function modify_player_damage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex) {
@@ -1392,7 +1362,6 @@ function modify_player_damage(einflictor, eattacker, idamage, idflags, smeansofd
 
 // Namespace globallogic_player
 // Params 5, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_eddaa07
 // Checksum 0xb6320344, Offset: 0x8750
 // Size: 0xd4
 function modify_player_damage_meansofdeath(einflictor, eattacker, smeansofdeath, weapon, shitloc) {
@@ -1409,7 +1378,6 @@ function modify_player_damage_meansofdeath(einflictor, eattacker, smeansofdeath,
 
 // Namespace globallogic_player
 // Params 3, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_1a949060
 // Checksum 0x31fe0b0e, Offset: 0x8830
 // Size: 0xbe
 function function_1a949060(einflictor, eattacker, smeansofdeath) {
@@ -1425,7 +1393,6 @@ function function_1a949060(einflictor, eattacker, smeansofdeath) {
 
 // Namespace globallogic_player
 // Params 3, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_c4f6f66d
 // Checksum 0xe2497bf9, Offset: 0x88f8
 // Size: 0x146
 function function_c4f6f66d(einflictor, weapon, smeansofdeath) {
@@ -1455,7 +1422,6 @@ function function_c4f6f66d(einflictor, weapon, smeansofdeath) {
 
 // Namespace globallogic_player
 // Params 11, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_19a0a019
 // Checksum 0x2ac4ff93, Offset: 0x8a48
 // Size: 0x5a6
 function function_19a0a019(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex) {
@@ -1524,7 +1490,6 @@ function function_19a0a019(einflictor, eattacker, idamage, idflags, smeansofdeat
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_d71741f0
 // Checksum 0x9d97334f, Offset: 0x8ff8
 // Size: 0x3c
 function function_d71741f0() {
@@ -1536,7 +1501,6 @@ function function_d71741f0() {
 
 // Namespace globallogic_player
 // Params 2, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_5a53278d
 // Checksum 0x97e2bafe, Offset: 0x9040
 // Size: 0xb2
 function function_5a53278d(eattacker, ignore_round_start_friendly_fire) {
@@ -1560,7 +1524,6 @@ function function_5a53278d(eattacker, ignore_round_start_friendly_fire) {
 
 // Namespace globallogic_player
 // Params 1, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_35dc792c
 // Checksum 0x6053b5bb, Offset: 0x9100
 // Size: 0x7a
 function function_35dc792c(ignore_round_start_friendly_fire) {
@@ -1579,7 +1542,6 @@ function function_35dc792c(ignore_round_start_friendly_fire) {
 
 // Namespace globallogic_player
 // Params 5, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_c3e5e4ba
 // Checksum 0x1f67a35, Offset: 0x9188
 // Size: 0x19c
 function function_c3e5e4ba(eattacker, idamage, smeansofdeath, weapon, attackerishittingteammate) {
@@ -1607,7 +1569,6 @@ function function_c3e5e4ba(eattacker, idamage, smeansofdeath, weapon, attackeris
 
 // Namespace globallogic_player
 // Params 6, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_262023b1
 // Checksum 0x99745533, Offset: 0x9330
 // Size: 0x112
 function does_player_completely_avoid_damage(idflags, shitloc, weapon, friendlyfire, attackerishittingself, smeansofdeath) {
@@ -1635,7 +1596,6 @@ function does_player_completely_avoid_damage(idflags, shitloc, weapon, friendlyf
 
 // Namespace globallogic_player
 // Params 11, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_4c74c235
 // Checksum 0x9edcfe31, Offset: 0x9450
 // Size: 0x494
 function player_damage_log(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex) {
@@ -1679,7 +1639,6 @@ function player_damage_log(einflictor, eattacker, idamage, idflags, smeansofdeat
 
 // Namespace globallogic_player
 // Params 1, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_f8d3f5fb
 // Checksum 0x423e32ea, Offset: 0x98f0
 // Size: 0x34
 function should_allow_postgame_damage(smeansofdeath) {
@@ -1691,7 +1650,6 @@ function should_allow_postgame_damage(smeansofdeath) {
 
 // Namespace globallogic_player
 // Params 13, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_50cacd90
 // Checksum 0x99a011d1, Offset: 0x9930
 // Size: 0xec
 function do_post_game_damage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, boneindex, vsurfacenormal) {
@@ -1706,7 +1664,6 @@ function do_post_game_damage(einflictor, eattacker, idamage, idflags, smeansofde
 
 // Namespace globallogic_player
 // Params 13, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_6e816103
 // Checksum 0x3b4c5c6e, Offset: 0x9a28
 // Size: 0xbe4
 function callback_playerdamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, boneindex, vsurfacenormal) {
@@ -1843,7 +1800,6 @@ function callback_playerdamage(einflictor, eattacker, idamage, idflags, smeansof
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_2b8bc4cb
 // Checksum 0x7b0f50dc, Offset: 0xa618
 // Size: 0x34
 function resetattackerlist() {
@@ -1855,7 +1811,6 @@ function resetattackerlist() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_236569e7
 // Checksum 0x90e555e2, Offset: 0xa658
 // Size: 0x10
 function resetattackersthisspawnlist() {
@@ -1864,7 +1819,6 @@ function resetattackersthisspawnlist() {
 
 // Namespace globallogic_player
 // Params 5, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_6b151027
 // Checksum 0xf1f1edc3, Offset: 0xa670
 // Size: 0x1a8
 function function_6b151027(player, weapon, smeansofdeath, einflictor, armor_damaged) {
@@ -1887,7 +1841,6 @@ function function_6b151027(player, weapon, smeansofdeath, einflictor, armor_dama
 
 // Namespace globallogic_player
 // Params 2, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_81c21d0a
 // Checksum 0xdf28ba10, Offset: 0xa820
 // Size: 0x5c
 function isaikillstreakdamage(weapon, einflictor) {
@@ -1901,7 +1854,6 @@ function isaikillstreakdamage(weapon, einflictor) {
 
 // Namespace globallogic_player
 // Params 13, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_8cc0a609
 // Checksum 0xc2ada007, Offset: 0xa888
 // Size: 0x314
 function finishplayerdamagewrapper(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, boneindex, vsurfacenormal) {
@@ -1932,7 +1884,6 @@ function finishplayerdamagewrapper(einflictor, eattacker, idamage, idflags, smea
 
 // Namespace globallogic_player
 // Params 1, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_44ee63ae
 // Checksum 0xb4416e86, Offset: 0xaba8
 // Size: 0x4e
 function allowedassistweapon(weapon) {
@@ -1947,7 +1898,6 @@ function allowedassistweapon(weapon) {
 
 // Namespace globallogic_player
 // Params 2, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_da9b1acd
 // Checksum 0x48d6ba19, Offset: 0xac00
 // Size: 0x340
 function function_da9b1acd(attacker, weapon) {
@@ -1993,7 +1943,6 @@ function function_da9b1acd(attacker, weapon) {
 
 // Namespace globallogic_player
 // Params 6, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_6c73fce1
 // Checksum 0x683d510b, Offset: 0xaf48
 // Size: 0x4dc
 function function_6c73fce1(attacker, weapon, smeansofdeath, wasinlaststand, var_a3ad44ab, inflictor) {
@@ -2045,7 +1994,6 @@ function function_6c73fce1(attacker, weapon, smeansofdeath, wasinlaststand, var_
 
 // Namespace globallogic_player
 // Params 4, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_caa6d8d5
 // Checksum 0xe2d0f880, Offset: 0xb430
 // Size: 0x32c
 function function_caa6d8d5(attacker, einflictor, weapon, smeansofdeath) {
@@ -2090,7 +2038,6 @@ function function_caa6d8d5(attacker, einflictor, weapon, smeansofdeath) {
 
 // Namespace globallogic_player
 // Params 5, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_41055c90
 // Checksum 0x43f7b83, Offset: 0xb768
 // Size: 0x378
 function function_41055c90(einflictor, attacker, smeansofdeath, weapon, shitloc) {
@@ -2140,7 +2087,6 @@ function function_41055c90(einflictor, attacker, smeansofdeath, weapon, shitloc)
 
 // Namespace globallogic_player
 // Params 5, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_d7a6cc2b
 // Checksum 0x50944f1d, Offset: 0xbae8
 // Size: 0x2f4
 function function_d7a6cc2b(einflictor, attacker, smeansofdeath, weapon, shitloc) {
@@ -2183,7 +2129,6 @@ function function_d7a6cc2b(einflictor, attacker, smeansofdeath, weapon, shitloc)
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_ca6b9929
 // Checksum 0x5ab96d65, Offset: 0xbde8
 // Size: 0x44
 function wait_and_suicide() {
@@ -2195,7 +2140,6 @@ function wait_and_suicide() {
 
 // Namespace globallogic_player
 // Params 4, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_3f735e1d
 // Checksum 0x65535d5f, Offset: 0xbe38
 // Size: 0x1cc
 function function_3f735e1d(einflictor, attacker, weapon, lpattackteam) {
@@ -2229,7 +2173,6 @@ function function_3f735e1d(einflictor, attacker, weapon, lpattackteam) {
 
 // Namespace globallogic_player
 // Params 5, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_489d248c
 // Checksum 0xaa601a14, Offset: 0xc010
 // Size: 0x854
 function function_489d248c(einflictor, attacker, smeansofdeath, weapon, shitloc) {
@@ -2324,7 +2267,6 @@ function function_489d248c(einflictor, attacker, smeansofdeath, weapon, shitloc)
 
 // Namespace globallogic_player
 // Params 1, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_f5556ce
 // Checksum 0x5f5317b7, Offset: 0xc870
 // Size: 0x24
 function should_allow_postgame_death(smeansofdeath) {
@@ -2336,7 +2278,6 @@ function should_allow_postgame_death(smeansofdeath) {
 
 // Namespace globallogic_player
 // Params 9, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_8f2c8c07
 // Checksum 0xd2541a45, Offset: 0xc8a0
 // Size: 0x17c
 function function_8f2c8c07(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -2361,7 +2302,6 @@ function function_8f2c8c07(einflictor, attacker, idamage, smeansofdeath, weapon,
 
 // Namespace globallogic_player
 // Params 10, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_4c629ef3
 // Checksum 0xd6d6ced8, Offset: 0xca28
 // Size: 0x288a
 function callback_playerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration, enteredresurrect) {
@@ -2879,7 +2819,6 @@ function callback_playerkilled(einflictor, attacker, idamage, smeansofdeath, wea
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_36b1aaf0
 // Checksum 0x4a3ff5e5, Offset: 0xf2c0
 // Size: 0x2c6
 function function_36b1aaf0() {
@@ -2909,7 +2848,6 @@ function function_36b1aaf0() {
 
 // Namespace globallogic_player
 // Params 3, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_f9dae37e
 // Checksum 0xc6322b1c, Offset: 0xf590
 // Size: 0xea
 function function_f9dae37e(weapon, smeansofdeath, deathanimduration) {
@@ -2928,7 +2866,6 @@ function function_f9dae37e(weapon, smeansofdeath, deathanimduration) {
 
 // Namespace globallogic_player
 // Params 4, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_5beaed5a
 // Checksum 0x221628da, Offset: 0xf688
 // Size: 0x8e
 function should_drop_weapon_on_death(wasteamkill, wassuicide, current_weapon, smeansofdeath) {
@@ -2949,7 +2886,6 @@ function should_drop_weapon_on_death(wasteamkill, wassuicide, current_weapon, sm
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_117043
 // Checksum 0xe969e41e, Offset: 0xf720
 // Size: 0x24
 function function_117043() {
@@ -2960,7 +2896,6 @@ function function_117043() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_188bdae1
 // Checksum 0x8ce6966f, Offset: 0xf750
 // Size: 0x44
 function function_188bdae1() {
@@ -2975,7 +2910,6 @@ function function_188bdae1() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_361da015
 // Checksum 0xabc98346, Offset: 0xf7a0
 // Size: 0x84
 function function_361da015() {
@@ -2989,7 +2923,6 @@ function function_361da015() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_b8f126c4
 // Checksum 0x50f91b18, Offset: 0xf830
 // Size: 0x1ec
 function function_b8f126c4() {
@@ -3014,7 +2947,6 @@ function function_b8f126c4() {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_bd37ccff
 // Checksum 0x882523cf, Offset: 0xfa28
 // Size: 0x70
 function teamkilldelay() {
@@ -3028,7 +2960,6 @@ function teamkilldelay() {
 
 // Namespace globallogic_player
 // Params 1, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_a4451c91
 // Checksum 0x1450ec50, Offset: 0xfaa0
 // Size: 0x66
 function function_a4451c91(teamkilldelay) {
@@ -3045,7 +2976,6 @@ function function_a4451c91(teamkilldelay) {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_a1ea27f6
 // Checksum 0xc8cea91, Offset: 0xfb10
 // Size: 0xc0
 function function_a1ea27f6() {
@@ -3065,7 +2995,6 @@ function function_a1ea27f6() {
 
 // Namespace globallogic_player
 // Params 3, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_916c0917
 // Checksum 0x6bb74dad, Offset: 0xfbd8
 // Size: 0xfc
 function ignoreteamkills(weapon, smeansofdeath, einflictor) {
@@ -3089,7 +3018,6 @@ function ignoreteamkills(weapon, smeansofdeath, einflictor) {
 
 // Namespace globallogic_player
 // Params 9, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_568ddde0
 // Checksum 0xd683cb65, Offset: 0xfce0
 // Size: 0x84
 function callback_playerlaststand(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -3098,7 +3026,6 @@ function callback_playerlaststand(einflictor, eattacker, idamage, smeansofdeath,
 
 // Namespace globallogic_player
 // Params 5, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_3c70a91e
 // Checksum 0x2c1e9a4a, Offset: 0xfd70
 // Size: 0x8c
 function damageshellshockandrumble(eattacker, einflictor, weapon, smeansofdeath, idamage) {
@@ -3110,7 +3037,6 @@ function damageshellshockandrumble(eattacker, einflictor, weapon, smeansofdeath,
 
 // Namespace globallogic_player
 // Params 10, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_39d71623
 // Checksum 0xaeff5946, Offset: 0xfe08
 // Size: 0x354
 function function_39d71623(attacker, idamage, smeansofdeath, weapon, shitloc, vdir, vattackerorigin, deathanimduration, einflictor, body) {
@@ -3154,7 +3080,6 @@ function function_39d71623(attacker, idamage, smeansofdeath, weapon, shitloc, vd
 
 // Namespace globallogic_player
 // Params 2, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_f23edd25
 // Checksum 0x5898b4e1, Offset: 0x10168
 // Size: 0xb2
 function is_explosive_ragdoll(weapon, inflictor) {
@@ -3176,7 +3101,6 @@ function is_explosive_ragdoll(weapon, inflictor) {
 
 // Namespace globallogic_player
 // Params 2, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_e955ff9b
 // Checksum 0x561ff4f8, Offset: 0x10228
 // Size: 0x1b4
 function start_explosive_ragdoll(dir, weapon) {
@@ -3205,7 +3129,6 @@ function start_explosive_ragdoll(dir, weapon) {
 
 // Namespace globallogic_player
 // Params 1, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_83e1e325
 // Checksum 0x7abc2c15, Offset: 0x103e8
 // Size: 0x4c
 function start_death_from_above_ragdoll(dir) {
@@ -3218,7 +3141,6 @@ function start_death_from_above_ragdoll(dir) {
 
 // Namespace globallogic_player
 // Params 0, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_b9f48d20
 // Checksum 0xeaaa8e03, Offset: 0x10440
 // Size: 0x34
 function notifyconnecting() {
@@ -3231,7 +3153,6 @@ function notifyconnecting() {
 
 // Namespace globallogic_player
 // Params 6, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_10085183
 // Checksum 0xddc561fa, Offset: 0x10480
 // Size: 0x194
 function delaystartragdoll(ent, shitloc, vdir, weapon, einflictor, smeansofdeath) {
@@ -3267,7 +3188,6 @@ function delaystartragdoll(ent, shitloc, vdir, weapon, einflictor, smeansofdeath
 
 // Namespace globallogic_player
 // Params 4, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_127ea28
 // Checksum 0x570dee0c, Offset: 0x10620
 // Size: 0x2f2
 function trackattackerdamage(eattacker, idamage, smeansofdeath, weapon) {
@@ -3307,7 +3227,6 @@ function trackattackerdamage(eattacker, idamage, smeansofdeath, weapon) {
 
 // Namespace globallogic_player
 // Params 5, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_85b1d74
 // Checksum 0x7f835b52, Offset: 0x10920
 // Size: 0x104
 function giveattackerandinflictorownerassist(eattacker, einflictor, idamage, smeansofdeath, weapon) {
@@ -3335,7 +3254,6 @@ function giveattackerandinflictorownerassist(eattacker, einflictor, idamage, sme
 
 // Namespace globallogic_player
 // Params 5, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_d7eade4e
 // Checksum 0x71d08cc9, Offset: 0x10a30
 // Size: 0xf2
 function function_d7eade4e(attacker, einflictor, weapon, smeansofdeath, shitloc) {
@@ -3358,7 +3276,6 @@ function function_d7eade4e(attacker, einflictor, weapon, smeansofdeath, shitloc)
 
 // Namespace globallogic_player
 // Params 2, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_9cedb097
 // Checksum 0xc0032988, Offset: 0x10b30
 // Size: 0x2e4
 function function_9cedb097(attacker, weapon) {
@@ -3404,7 +3321,6 @@ function function_9cedb097(attacker, weapon) {
 
 // Namespace globallogic_player
 // Params 1, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_1e4d3508
 // Checksum 0x7f9a22ca, Offset: 0x10e20
 // Size: 0x68
 function function_1e4d3508(einflictor) {
@@ -3419,7 +3335,6 @@ function function_1e4d3508(einflictor) {
 
 // Namespace globallogic_player
 // Params 2, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_389dcc6a
 // Checksum 0xa5a09171, Offset: 0x10e90
 // Size: 0xd4
 function updateweapon(einflictor, weapon) {
@@ -3435,7 +3350,6 @@ function updateweapon(einflictor, weapon) {
 
 // Namespace globallogic_player
 // Params 4, eflags: 0x1 linked
-// namespace_b976075a<file_0>::function_57f41ad8
 // Checksum 0xb73cd326, Offset: 0x10f70
 // Size: 0x9c
 function playkillbattlechatter(attacker, weapon, victim, einflictor) {

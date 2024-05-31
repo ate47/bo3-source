@@ -9,7 +9,6 @@
 
 // Namespace deathicons
 // Params 0, eflags: 0x2
-// namespace_f17c3089<file_0>::function_2dc19561
 // Checksum 0xceb1604a, Offset: 0x198
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace deathicons
 // Params 0, eflags: 0x1 linked
-// namespace_f17c3089<file_0>::function_8c87d8eb
 // Checksum 0xe1dbfcff, Offset: 0x1d8
 // Size: 0x44
 function __init__() {
@@ -28,7 +26,6 @@ function __init__() {
 
 // Namespace deathicons
 // Params 0, eflags: 0x1 linked
-// namespace_f17c3089<file_0>::function_c35e6aab
 // Checksum 0x24f777ed, Offset: 0x228
 // Size: 0x30
 function init() {
@@ -42,7 +39,6 @@ function init() {
 
 // Namespace deathicons
 // Params 0, eflags: 0x1 linked
-// namespace_f17c3089<file_0>::function_fb4f96b5
 // Checksum 0x939bde4e, Offset: 0x260
 // Size: 0x10
 function on_player_connect() {
@@ -51,7 +47,6 @@ function on_player_connect() {
 
 // Namespace deathicons
 // Params 0, eflags: 0x0
-// namespace_f17c3089<file_0>::function_44455ed8
 // Checksum 0x99ec1590, Offset: 0x278
 // Size: 0x4
 function update_enabled() {
@@ -60,7 +55,6 @@ function update_enabled() {
 
 // Namespace deathicons
 // Params 4, eflags: 0x1 linked
-// namespace_f17c3089<file_0>::function_69554b3e
 // Checksum 0xa8b2e5f2, Offset: 0x288
 // Size: 0x184
 function add(entity, dyingplayer, team, timeout) {
@@ -88,7 +82,6 @@ function add(entity, dyingplayer, team, timeout) {
 
 // Namespace deathicons
 // Params 2, eflags: 0x1 linked
-// namespace_f17c3089<file_0>::function_c0c86ea2
 // Checksum 0x3d38e3d6, Offset: 0x418
 // Size: 0x6c
 function destroy_slowly(timeout, deathiconobjid) {
@@ -101,7 +94,6 @@ function destroy_slowly(timeout, deathiconobjid) {
 
 // Namespace deathicons
 // Params 10, eflags: 0x1 linked
-// namespace_f17c3089<file_0>::function_c877b52d
 // Checksum 0xf6ccaf77, Offset: 0x490
 // Size: 0xdc
 function ragdoll_override(idamage, smeansofdeath, sweapon, shitloc, vdir, vattackerorigin, deathanimduration, einflictor, ragdoll_jib, body) {

@@ -9,7 +9,6 @@
 
     // Namespace hostmigration
     // Params 0, eflags: 0x0
-    // namespace_6c1d04bd<file_0>::function_a8103bcf
     // Checksum 0x4000573a, Offset: 0x160
     // Size: 0x13c
     function debug_script_structs() {
@@ -33,7 +32,6 @@
 
 // Namespace hostmigration
 // Params 0, eflags: 0x0
-// namespace_6c1d04bd<file_0>::function_91ef6cc2
 // Checksum 0xd27d2531, Offset: 0x2a8
 // Size: 0xa0
 function updatetimerpausedness() {
@@ -53,7 +51,6 @@ function updatetimerpausedness() {
 
 // Namespace hostmigration
 // Params 0, eflags: 0x0
-// namespace_6c1d04bd<file_0>::function_568bba6c
 // Checksum 0xe2660599, Offset: 0x350
 // Size: 0x10
 function pausetimer() {
@@ -62,7 +59,6 @@ function pausetimer() {
 
 // Namespace hostmigration
 // Params 0, eflags: 0x0
-// namespace_6c1d04bd<file_0>::function_bbe04eff
 // Checksum 0xd51a2b5b, Offset: 0x368
 // Size: 0x20
 function resumetimer() {
@@ -71,7 +67,6 @@ function resumetimer() {
 
 // Namespace hostmigration
 // Params 0, eflags: 0x1 linked
-// namespace_6c1d04bd<file_0>::function_ce29b4cb
 // Checksum 0x75c48429, Offset: 0x390
 // Size: 0x68
 function locktimer() {
@@ -88,7 +83,6 @@ function locktimer() {
 
 // Namespace hostmigration
 // Params 2, eflags: 0x1 linked
-// namespace_6c1d04bd<file_0>::function_b4083d02
 // Checksum 0xf83530b, Offset: 0x400
 // Size: 0xf4
 function matchstarttimerconsole_internal(counttime, matchstarttimer) {
@@ -108,7 +102,6 @@ function matchstarttimerconsole_internal(counttime, matchstarttimer) {
 
 // Namespace hostmigration
 // Params 2, eflags: 0x1 linked
-// namespace_6c1d04bd<file_0>::function_2a3bfc4e
 // Checksum 0xc73e526c, Offset: 0x500
 // Size: 0x27c
 function matchstarttimerconsole(type, duration) {
@@ -144,7 +137,6 @@ function matchstarttimerconsole(type, duration) {
 
 // Namespace hostmigration
 // Params 0, eflags: 0x1 linked
-// namespace_6c1d04bd<file_0>::function_e2942b82
 // Checksum 0xca552724, Offset: 0x788
 // Size: 0x9a
 function hostmigrationwait() {
@@ -160,7 +152,6 @@ function hostmigrationwait() {
 
 // Namespace hostmigration
 // Params 0, eflags: 0x1 linked
-// namespace_6c1d04bd<file_0>::function_2e67d944
 // Checksum 0xb75eb330, Offset: 0x830
 // Size: 0x2c
 function waittillhostmigrationcountdown() {
@@ -173,7 +164,6 @@ function waittillhostmigrationcountdown() {
 
 // Namespace hostmigration
 // Params 0, eflags: 0x1 linked
-// namespace_6c1d04bd<file_0>::function_7cd16b3
 // Checksum 0xed5748dc, Offset: 0x868
 // Size: 0x14
 function hostmigrationwaitforplayers() {
@@ -183,7 +173,6 @@ function hostmigrationwaitforplayers() {
 
 // Namespace hostmigration
 // Params 0, eflags: 0x1 linked
-// namespace_6c1d04bd<file_0>::function_36993d4c
 // Checksum 0x5d666d2f, Offset: 0x888
 // Size: 0x80
 function hostmigrationtimerthink_internal() {
@@ -200,7 +189,6 @@ function hostmigrationtimerthink_internal() {
 
 // Namespace hostmigration
 // Params 0, eflags: 0x1 linked
-// namespace_6c1d04bd<file_0>::function_41818acc
 // Checksum 0xa4899c94, Offset: 0x910
 // Size: 0x4c
 function hostmigrationtimerthink() {
@@ -214,7 +202,6 @@ function hostmigrationtimerthink() {
 
 // Namespace hostmigration
 // Params 0, eflags: 0x1 linked
-// namespace_6c1d04bd<file_0>::function_8ef8da7f
 // Checksum 0xbde13e63, Offset: 0x968
 // Size: 0x38
 function waittillhostmigrationdone() {
@@ -228,7 +215,6 @@ function waittillhostmigrationdone() {
 
 // Namespace hostmigration
 // Params 1, eflags: 0x1 linked
-// namespace_6c1d04bd<file_0>::function_521e5168
 // Checksum 0x8056c80d, Offset: 0x9a8
 // Size: 0x2c
 function waittillhostmigrationstarts(duration) {
@@ -241,7 +227,6 @@ function waittillhostmigrationstarts(duration) {
 
 // Namespace hostmigration
 // Params 1, eflags: 0x1 linked
-// namespace_6c1d04bd<file_0>::function_ab19bd44
 // Checksum 0x29cb3318, Offset: 0x9e0
 // Size: 0x12c
 function waitlongdurationwithhostmigrationpause(duration) {
@@ -267,7 +252,6 @@ function waitlongdurationwithhostmigrationpause(duration) {
 
 // Namespace hostmigration
 // Params 1, eflags: 0x0
-// namespace_6c1d04bd<file_0>::function_45e1d952
 // Checksum 0x3577f787, Offset: 0xb18
 // Size: 0x14e
 function waitlongdurationwithhostmigrationpauseemp(duration) {
@@ -299,7 +283,6 @@ function waitlongdurationwithhostmigrationpauseemp(duration) {
 
 // Namespace hostmigration
 // Params 1, eflags: 0x0
-// namespace_6c1d04bd<file_0>::function_515833bd
 // Checksum 0x8e79bbde, Offset: 0xc70
 // Size: 0x17e
 function waitlongdurationwithgameendtimeupdate(duration) {
@@ -332,7 +315,6 @@ function waitlongdurationwithgameendtimeupdate(duration) {
 
 // Namespace hostmigration
 // Params 1, eflags: 0x1 linked
-// namespace_6c1d04bd<file_0>::function_4c381fb8
 // Checksum 0xf7ea8bee, Offset: 0xdf8
 // Size: 0xe8
 function migrationawarewait(durationms) {

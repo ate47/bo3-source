@@ -10,7 +10,6 @@
 
 // Namespace audio
 // Params 0, eflags: 0x2
-// namespace_4fe3eef1<file_0>::function_2dc19561
 // Checksum 0x4be1c835, Offset: 0x2a0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,7 +18,6 @@ function autoexec function_2dc19561() {
 
 // Namespace audio
 // Params 0, eflags: 0x1 linked
-// namespace_4fe3eef1<file_0>::function_8c87d8eb
 // Checksum 0x41388fbe, Offset: 0x2e0
 // Size: 0xec
 function __init__() {
@@ -35,7 +33,6 @@ function __init__() {
 
 // Namespace audio
 // Params 0, eflags: 0x1 linked
-// namespace_4fe3eef1<file_0>::function_4ece4a2f
 // Checksum 0xdb621717, Offset: 0x3d8
 // Size: 0x214
 function register_clientfields() {
@@ -54,7 +51,6 @@ function register_clientfields() {
 
 // Namespace audio
 // Params 0, eflags: 0x1 linked
-// namespace_4fe3eef1<file_0>::function_bf84e1f
 // Checksum 0x2aa593fa, Offset: 0x5f8
 // Size: 0x5c
 function sndchyronwatcher() {
@@ -66,7 +62,6 @@ function sndchyronwatcher() {
 
 // Namespace audio
 // Params 0, eflags: 0x1 linked
-// namespace_4fe3eef1<file_0>::function_9c83d0d4
 // Checksum 0x9624ec8b, Offset: 0x660
 // Size: 0x38
 function function_9c83d0d4() {
@@ -78,7 +73,6 @@ function function_9c83d0d4() {
 
 // Namespace audio
 // Params 0, eflags: 0x1 linked
-// namespace_4fe3eef1<file_0>::function_9a718faf
 // Checksum 0xde1b5159, Offset: 0x6a0
 // Size: 0x44
 function sndresetsoundsettings() {
@@ -88,7 +82,6 @@ function sndresetsoundsettings() {
 
 // Namespace audio
 // Params 0, eflags: 0x1 linked
-// namespace_4fe3eef1<file_0>::function_1b292fa6
 // Checksum 0x8f4bb61e, Offset: 0x6f0
 // Size: 0x34
 function on_player_killed() {
@@ -99,7 +92,6 @@ function on_player_killed() {
 
 // Namespace audio
 // Params 0, eflags: 0x1 linked
-// namespace_4fe3eef1<file_0>::function_bd3f5ec1
 // Checksum 0x53079a11, Offset: 0x730
 // Size: 0x24
 function vehiclespawncontext() {
@@ -108,7 +100,6 @@ function vehiclespawncontext() {
 
 // Namespace audio
 // Params 1, eflags: 0x1 linked
-// namespace_4fe3eef1<file_0>::function_ba7b948c
 // Checksum 0x9b5d4e34, Offset: 0x760
 // Size: 0x84
 function sndupdatevehiclecontext(added) {
@@ -128,7 +119,6 @@ function sndupdatevehiclecontext(added) {
 
 // Namespace audio
 // Params 2, eflags: 0x1 linked
-// namespace_4fe3eef1<file_0>::function_930520d5
 // Checksum 0x6c7fccf5, Offset: 0x7f0
 // Size: 0xaa
 function playtargetmissilesound(alias, looping) {
@@ -149,7 +139,6 @@ function playtargetmissilesound(alias, looping) {
 
 // Namespace audio
 // Params 0, eflags: 0x1 linked
-// namespace_4fe3eef1<file_0>::function_fe1c918a
 // Checksum 0xac6d5bd3, Offset: 0x8a8
 // Size: 0x12e
 function function_fe1c918a() {
@@ -172,7 +161,6 @@ function function_fe1c918a() {
 
 // Namespace audio
 // Params 0, eflags: 0x1 linked
-// namespace_4fe3eef1<file_0>::function_dbe63d5d
 // Checksum 0xd9fcb40f, Offset: 0x9e0
 // Size: 0xf8
 function function_dbe63d5d() {
@@ -191,7 +179,6 @@ function function_dbe63d5d() {
 
 // Namespace audio
 // Params 2, eflags: 0x1 linked
-// namespace_4fe3eef1<file_0>::function_9908d262
 // Checksum 0xee899bb9, Offset: 0xae0
 // Size: 0xfc
 function unlockfrontendmusic(unlockname, allplayers) {

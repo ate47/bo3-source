@@ -9,7 +9,6 @@
 
 // Namespace rank
 // Params 0, eflags: 0x2
-// namespace_f3970517<file_0>::function_2dc19561
 // Checksum 0xad97ce6b, Offset: 0x6e0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_8c87d8eb
 // Checksum 0x51e9fe91, Offset: 0x720
 // Size: 0x24
 function __init__() {
@@ -27,7 +25,6 @@ function __init__() {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_c35e6aab
 // Checksum 0x6c7a32a6, Offset: 0x750
 // Size: 0x584
 function init() {
@@ -81,7 +78,6 @@ function init() {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_d9fc380b
 // Checksum 0xbb4afa63, Offset: 0xce0
 // Size: 0x56c
 function initscoreinfo() {
@@ -153,7 +149,6 @@ function initscoreinfo() {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_8b6f38ee
 // Checksum 0xca12b509, Offset: 0x1258
 // Size: 0x40
 function getrankxpcapped(inrankxp) {
@@ -165,7 +160,6 @@ function getrankxpcapped(inrankxp) {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_35db3641
 // Checksum 0x543daeeb, Offset: 0x12a0
 // Size: 0x40
 function function_35db3641(var_9400f55b) {
@@ -177,7 +171,6 @@ function function_35db3641(var_9400f55b) {
 
 // Namespace rank
 // Params 5, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_d36e0f7c
 // Checksum 0x2f451c23, Offset: 0x12e8
 // Size: 0x1b0
 function registerscoreinfo(type, value, xp, label, var_cfc9e1bc) {
@@ -205,7 +198,6 @@ function registerscoreinfo(type, value, xp, label, var_cfc9e1bc) {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_57fb3da2
 // Checksum 0x2645d314, Offset: 0x14a0
 // Size: 0x7a
 function getscoreinfovalue(type) {
@@ -220,7 +212,6 @@ function getscoreinfovalue(type) {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_b7a18aab
 // Checksum 0x3ceb7265, Offset: 0x1528
 // Size: 0x7a
 function getscoreinfoxp(type) {
@@ -235,7 +226,6 @@ function getscoreinfoxp(type) {
 
 // Namespace rank
 // Params 1, eflags: 0x0
-// namespace_f3970517<file_0>::function_42615bc7
 // Checksum 0x2adc181e, Offset: 0x15b0
 // Size: 0x58
 function shouldskipmomentumdisplay(type) {
@@ -250,7 +240,6 @@ function shouldskipmomentumdisplay(type) {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_4988dd3
 // Checksum 0x3a8619fd, Offset: 0x1610
 // Size: 0x22
 function getscoreinfolabel(type) {
@@ -259,7 +248,6 @@ function getscoreinfolabel(type) {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_d8a526a8
 // Checksum 0x41cc360, Offset: 0x1640
 // Size: 0x22
 function getcombatefficiencyevent(type) {
@@ -268,7 +256,6 @@ function getcombatefficiencyevent(type) {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_2026e859
 // Checksum 0x859ba387, Offset: 0x1670
 // Size: 0x3e
 function doesscoreinfocounttowardrampage(type) {
@@ -277,7 +264,6 @@ function doesscoreinfocounttowardrampage(type) {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_1f2cf483
 // Checksum 0xae52a085, Offset: 0x16b8
 // Size: 0x32
 function getrankinfominxp(rankid) {
@@ -286,7 +272,6 @@ function getrankinfominxp(rankid) {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_e5c51041
 // Checksum 0xa9d64b95, Offset: 0x16f8
 // Size: 0x32
 function getrankinfoxpamt(rankid) {
@@ -295,7 +280,6 @@ function getrankinfoxpamt(rankid) {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_6dd6f60d
 // Checksum 0x2e3b73e9, Offset: 0x1738
 // Size: 0x32
 function getrankinfomaxxp(rankid) {
@@ -304,7 +288,6 @@ function getrankinfomaxxp(rankid) {
 
 // Namespace rank
 // Params 1, eflags: 0x0
-// namespace_f3970517<file_0>::function_8b105fa6
 // Checksum 0x692d9c7d, Offset: 0x1778
 // Size: 0x2a
 function getrankinfofull(rankid) {
@@ -313,7 +296,6 @@ function getrankinfofull(rankid) {
 
 // Namespace rank
 // Params 2, eflags: 0x0
-// namespace_f3970517<file_0>::function_61b8c112
 // Checksum 0xc8abbfc0, Offset: 0x17b0
 // Size: 0x3a
 function getrankinfoicon(rankid, prestigeid) {
@@ -322,7 +304,6 @@ function getrankinfoicon(rankid, prestigeid) {
 
 // Namespace rank
 // Params 1, eflags: 0x0
-// namespace_f3970517<file_0>::function_42515315
 // Checksum 0xbeddb22c, Offset: 0x17f8
 // Size: 0x42
 function getrankinfolevel(rankid) {
@@ -331,7 +312,6 @@ function getrankinfolevel(rankid) {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_a8f48405
 // Checksum 0x4ff70d3e, Offset: 0x1848
 // Size: 0x42
 function function_a8f48405(rankid) {
@@ -340,7 +320,6 @@ function function_a8f48405(rankid) {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_b85ec98b
 // Checksum 0x4140a883, Offset: 0x1898
 // Size: 0xbe
 function shouldkickbyrank() {
@@ -361,7 +340,6 @@ function shouldkickbyrank() {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_266f74f4
 // Checksum 0xd867db71, Offset: 0x1960
 // Size: 0x88
 function function_266f74f4() {
@@ -375,7 +353,6 @@ function function_266f74f4() {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_81238668
 // Checksum 0xcc1a9cc, Offset: 0x19f0
 // Size: 0x4c
 function function_81238668(codpoints) {
@@ -384,7 +361,6 @@ function function_81238668(codpoints) {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_a76b42cb
 // Checksum 0x5d49367, Offset: 0x1a48
 // Size: 0xa0
 function getrankxpstat() {
@@ -398,7 +374,6 @@ function getrankxpstat() {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_40497c83
 // Checksum 0x96d8f505, Offset: 0x1af0
 // Size: 0x62
 function getarenapointsstat() {
@@ -409,7 +384,6 @@ function getarenapointsstat() {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_fb4f96b5
 // Checksum 0x41400e7b, Offset: 0x1b60
 // Size: 0x68c
 function on_player_connect() {
@@ -469,7 +443,6 @@ function on_player_connect() {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_f6076bfe
 // Checksum 0x4ec3d9c4, Offset: 0x21f8
 // Size: 0x24
 function on_joined_team() {
@@ -479,7 +452,6 @@ function on_joined_team() {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_d2b6d98f
 // Checksum 0x51d8b29, Offset: 0x2228
 // Size: 0x24
 function on_joined_spectators() {
@@ -489,7 +461,6 @@ function on_joined_spectators() {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_aebcf025
 // Checksum 0x57ef742d, Offset: 0x2258
 // Size: 0x19c
 function on_player_spawned() {
@@ -518,7 +489,6 @@ function on_player_spawned() {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_cb1e9fe6
 // Checksum 0x11480c1d, Offset: 0x2400
 // Size: 0x10c
 function function_cb1e9fe6(amount) {
@@ -538,7 +508,6 @@ function function_cb1e9fe6(amount) {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_f4b1618b
 // Checksum 0xcb10dc5b, Offset: 0x2518
 // Size: 0x8e
 function atleastoneplayeroneachteam() {
@@ -552,7 +521,6 @@ function atleastoneplayeroneachteam() {
 
 // Namespace rank
 // Params 3, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_2589caf0
 // Checksum 0x5fef201e, Offset: 0x25b0
 // Size: 0x66c
 function giverankxp(type, value, var_1d04f5a7) {
@@ -670,7 +638,6 @@ function giverankxp(type, value, var_1d04f5a7) {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_f81cc016
 // Checksum 0xf5305a17, Offset: 0x2c28
 // Size: 0x34
 function round_this_number(value) {
@@ -680,7 +647,6 @@ function round_this_number(value) {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_7758fd48
 // Checksum 0x6e180d2b, Offset: 0x2c68
 // Size: 0x310
 function updaterank() {
@@ -718,7 +684,6 @@ function updaterank() {
 
 // Namespace rank
 // Params 3, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_aa8d0863
 // Checksum 0x627ffa57, Offset: 0x2f80
 // Size: 0x198
 function codecallback_rankup(rank, prestige, var_1276d357) {
@@ -747,7 +712,6 @@ function codecallback_rankup(rank, prestige, var_1276d357) {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_8bab24e2
 // Checksum 0x1a2d6973, Offset: 0x3120
 // Size: 0xa8
 function getitemindex(refstring) {
@@ -759,7 +723,6 @@ function getitemindex(refstring) {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_cb9154cd
 // Checksum 0xc8810436, Offset: 0x31d0
 // Size: 0x14
 function endgameupdate() {
@@ -768,7 +731,6 @@ function endgameupdate() {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_9c4690f5
 // Checksum 0xd49d78cd, Offset: 0x31f0
 // Size: 0x1bc
 function function_9c4690f5(amount) {
@@ -805,7 +767,6 @@ function function_9c4690f5(amount) {
 
 // Namespace rank
 // Params 3, eflags: 0x0
-// namespace_f3970517<file_0>::function_73d88f63
 // Checksum 0xca282a52, Offset: 0x33b8
 // Size: 0x2ec
 function function_73d88f63(amount, reason, var_1b34c188) {
@@ -859,7 +820,6 @@ function function_73d88f63(amount, reason, var_1b34c188) {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_f6937c36
 // Checksum 0x1f443b49, Offset: 0x36b0
 // Size: 0x44
 function function_f6937c36() {
@@ -873,7 +833,6 @@ function function_f6937c36() {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_9aa9e569
 // Checksum 0x359b8374, Offset: 0x3700
 // Size: 0xb4
 function getrank() {
@@ -887,7 +846,6 @@ function getrank() {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_b89b44ca
 // Checksum 0xe146ae37, Offset: 0x37c0
 // Size: 0x106
 function getrankforxp(xpval) {
@@ -911,7 +869,6 @@ function getrankforxp(xpval) {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_c872ca8f
 // Checksum 0x5c7cf053, Offset: 0x38d0
 // Size: 0x48
 function getspm() {
@@ -921,7 +878,6 @@ function getspm() {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_c60d35e9
 // Checksum 0xa3c8bb4a, Offset: 0x3920
 // Size: 0x2a
 function getrankxp() {
@@ -930,7 +886,6 @@ function getrankxp() {
 
 // Namespace rank
 // Params 1, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_d8416955
 // Checksum 0xd911516e, Offset: 0x3958
 // Size: 0x1aa
 function incrankxp(amount) {
@@ -955,7 +910,6 @@ function incrankxp(amount) {
 
 // Namespace rank
 // Params 0, eflags: 0x1 linked
-// namespace_f3970517<file_0>::function_6ffcd5b6
 // Checksum 0xfc596716, Offset: 0x3b10
 // Size: 0xdc
 function syncxpstat() {

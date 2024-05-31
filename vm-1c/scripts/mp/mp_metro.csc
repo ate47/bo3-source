@@ -10,7 +10,6 @@
 
 // Namespace namespace_27da2c28
 // Params 0, eflags: 0x1 linked
-// namespace_27da2c28<file_0>::function_d290ebfa
 // Checksum 0xee30ca84, Offset: 0x278
 // Size: 0x114
 function main() {
@@ -28,7 +27,6 @@ function main() {
 
 // Namespace namespace_27da2c28
 // Params 1, eflags: 0x1 linked
-// namespace_27da2c28<file_0>::function_610d5819
 // Checksum 0xfdbfc8bb, Offset: 0x398
 // Size: 0x448
 function function_610d5819(localclientnum) {
@@ -65,7 +63,6 @@ function function_610d5819(localclientnum) {
 
 // Namespace namespace_27da2c28
 // Params 7, eflags: 0x1 linked
-// namespace_27da2c28<file_0>::function_272a236
 // Checksum 0x6323aed2, Offset: 0x7e8
 // Size: 0x6c
 function function_272a236(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -79,7 +76,6 @@ function function_272a236(localclientnum, oldval, newval, bnewent, binitialsnap,
 
 // Namespace namespace_27da2c28
 // Params 2, eflags: 0x1 linked
-// namespace_27da2c28<file_0>::function_b6d6bffc
 // Checksum 0x146d954, Offset: 0x860
 // Size: 0xc2
 function dom_flag_base_fx_override(flag, team) {
@@ -110,7 +106,6 @@ function dom_flag_base_fx_override(flag, team) {
 
 // Namespace namespace_27da2c28
 // Params 2, eflags: 0x1 linked
-// namespace_27da2c28<file_0>::function_628641cd
 // Checksum 0xff48e7b, Offset: 0x930
 // Size: 0xc2
 function dom_flag_cap_fx_override(flag, team) {

@@ -9,7 +9,6 @@
 
 // Namespace namespace_30db0d4
 // Params 0, eflags: 0x2
-// namespace_30db0d4<file_0>::function_2dc19561
 // Checksum 0xb3d00fdf, Offset: 0x278
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_30db0d4
 // Params 0, eflags: 0x1 linked
-// namespace_30db0d4<file_0>::function_8c87d8eb
 // Checksum 0xe0202e89, Offset: 0x2b8
 // Size: 0x174
 function __init__() {
@@ -34,7 +32,6 @@ function __init__() {
 
 // Namespace namespace_30db0d4
 // Params 7, eflags: 0x0
-// namespace_30db0d4<file_0>::function_b84c3341
 // Checksum 0x3a75998a, Offset: 0x438
 // Size: 0x5c
 function function_b84c3341(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -45,7 +42,6 @@ function function_b84c3341(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_30db0d4
 // Params 0, eflags: 0x1 linked
-// namespace_30db0d4<file_0>::function_19082f83
 // Checksum 0x162940b6, Offset: 0x4a0
 // Size: 0x84
 function function_19082f83() {
@@ -57,7 +53,6 @@ function function_19082f83() {
 
 // Namespace namespace_30db0d4
 // Params 2, eflags: 0x1 linked
-// namespace_30db0d4<file_0>::function_2d89f1a7
 // Checksum 0x9caa2046, Offset: 0x530
 // Size: 0xa4
 function function_2d89f1a7(var_e2026f3a, var_a97a56af) {
@@ -78,7 +73,6 @@ function function_2d89f1a7(var_e2026f3a, var_a97a56af) {
 
 // Namespace namespace_30db0d4
 // Params 7, eflags: 0x1 linked
-// namespace_30db0d4<file_0>::function_1383302a
 // Checksum 0x13841580, Offset: 0x5e0
 // Size: 0x74
 function function_1383302a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -87,7 +81,6 @@ function function_1383302a(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_30db0d4
 // Params 7, eflags: 0x1 linked
-// namespace_30db0d4<file_0>::function_1bf93100
 // Checksum 0x9bd35b3a, Offset: 0x660
 // Size: 0xa4
 function function_1bf93100(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -100,7 +93,6 @@ function function_1bf93100(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_30db0d4
 // Params 7, eflags: 0x1 linked
-// namespace_30db0d4<file_0>::function_965b3fb9
 // Checksum 0xcbf25b09, Offset: 0x710
 // Size: 0x2da
 function function_965b3fb9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -128,7 +120,6 @@ function function_965b3fb9(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_30db0d4
 // Params 0, eflags: 0x1 linked
-// namespace_30db0d4<file_0>::function_58a73de9
 // Checksum 0xb1f8a7d8, Offset: 0x9f8
 // Size: 0x84
 function function_58a73de9() {
@@ -138,7 +129,6 @@ function function_58a73de9() {
 
 // Namespace namespace_30db0d4
 // Params 0, eflags: 0x1 linked
-// namespace_30db0d4<file_0>::function_60283937
 // Checksum 0x22eddf39, Offset: 0xa88
 // Size: 0x90
 function function_60283937() {
@@ -154,7 +144,6 @@ function function_60283937() {
 
 // Namespace namespace_30db0d4
 // Params 7, eflags: 0x1 linked
-// namespace_30db0d4<file_0>::function_8a2bbd06
 // Checksum 0x12c754a6, Offset: 0xb20
 // Size: 0x4c
 function function_8a2bbd06(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

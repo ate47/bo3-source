@@ -24,7 +24,6 @@
 
 // Namespace zm_altbody
 // Params 0, eflags: 0x2
-// namespace_8a7ba1fe<file_0>::function_2dc19561
 // Checksum 0xa3ab6a63, Offset: 0x448
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -33,7 +32,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_altbody
 // Params 0, eflags: 0x0
-// namespace_8a7ba1fe<file_0>::function_8c87d8eb
 // Checksum 0x89cd61e, Offset: 0x488
 // Size: 0xc4
 function __init__() {
@@ -45,7 +43,6 @@ function __init__() {
 
 // Namespace zm_altbody
 // Params 12, eflags: 0x0
-// namespace_8a7ba1fe<file_0>::function_c35e6aab
 // Checksum 0x560d4879, Offset: 0x558
 // Size: 0x1e4
 function init(name, kiosk_name, trigger_hint, visionset_name, visionset_priority, loadout, character_index, enter_callback, exit_callback, allow_callback, notrigger_hint, var_1982079a) {
@@ -83,7 +80,6 @@ function init(name, kiosk_name, trigger_hint, visionset_name, visionset_priority
 
 // Namespace zm_altbody
 // Params 0, eflags: 0x0
-// namespace_8a7ba1fe<file_0>::function_a2c7acf5
 // Checksum 0x13f9a2ae, Offset: 0x748
 // Size: 0x70
 function function_a2c7acf5() {
@@ -98,7 +94,6 @@ function function_a2c7acf5() {
 
     // Namespace zm_altbody
     // Params 1, eflags: 0x0
-    // namespace_8a7ba1fe<file_0>::function_4f8260a2
     // Checksum 0x4c662578, Offset: 0x7c0
     // Size: 0x2c
     function devgui_start_altbody(name) {
@@ -109,7 +104,6 @@ function function_a2c7acf5() {
 
 // Namespace zm_altbody
 // Params 2, eflags: 0x4
-// namespace_8a7ba1fe<file_0>::function_3c17a460
 // Checksum 0xa6d9a84c, Offset: 0x7f8
 // Size: 0xf8
 function private function_3c17a460(trigger, name) {
@@ -139,7 +133,6 @@ function private function_3c17a460(trigger, name) {
 
 // Namespace zm_altbody
 // Params 2, eflags: 0x4
-// namespace_8a7ba1fe<file_0>::function_b7c5c6d1
 // Checksum 0xd7dd5737, Offset: 0x8f8
 // Size: 0x110
 function private player_can_altbody(kiosk, name) {
@@ -172,7 +165,6 @@ function private player_can_altbody(kiosk, name) {
 
 // Namespace zm_altbody
 // Params 1, eflags: 0x0
-// namespace_8a7ba1fe<file_0>::function_a27a52af
 // Checksum 0xd2b5d9db, Offset: 0xa10
 // Size: 0xa4
 function function_a27a52af(name) {
@@ -186,7 +178,6 @@ function function_a27a52af(name) {
 
 // Namespace zm_altbody
 // Params 2, eflags: 0x4
-// namespace_8a7ba1fe<file_0>::function_e81daf64
 // Checksum 0xc4c90ea5, Offset: 0xac0
 // Size: 0x7c
 function private player_try_altbody(trigger, name) {
@@ -199,7 +190,6 @@ function private player_try_altbody(trigger, name) {
 
 // Namespace zm_altbody
 // Params 2, eflags: 0x4
-// namespace_8a7ba1fe<file_0>::function_b3e2d176
 // Checksum 0xc68371c3, Offset: 0xb48
 // Size: 0x88
 function private player_altbody(name, trigger) {
@@ -213,7 +203,6 @@ function private player_altbody(name, trigger) {
 
 // Namespace zm_altbody
 // Params 0, eflags: 0x4
-// namespace_8a7ba1fe<file_0>::function_1f9554ce
 // Checksum 0xcf678878, Offset: 0xbd8
 // Size: 0x64
 function private function_1f9554ce() {
@@ -227,7 +216,6 @@ function private function_1f9554ce() {
 
 // Namespace zm_altbody
 // Params 1, eflags: 0x0
-// namespace_8a7ba1fe<file_0>::function_9244ee8e
 // Checksum 0xcbfbae55, Offset: 0xc48
 // Size: 0x10
 function get_altbody_weapon_limit(player) {
@@ -236,7 +224,6 @@ function get_altbody_weapon_limit(player) {
 
 // Namespace zm_altbody
 // Params 2, eflags: 0x4
-// namespace_8a7ba1fe<file_0>::function_39fc0f41
 // Checksum 0xc3d7c316, Offset: 0xc60
 // Size: 0x174
 function private player_enter_altbody(name, trigger) {
@@ -260,7 +247,6 @@ function private player_enter_altbody(name, trigger) {
 
 // Namespace zm_altbody
 // Params 1, eflags: 0x4
-// namespace_8a7ba1fe<file_0>::function_43af326a
 // Checksum 0xba45a28a, Offset: 0xde0
 // Size: 0xe6
 function private player_apply_visionset(name) {
@@ -284,7 +270,6 @@ function private player_apply_visionset(name) {
 
 // Namespace zm_altbody
 // Params 1, eflags: 0x4
-// namespace_8a7ba1fe<file_0>::function_96a57786
 // Checksum 0xc42f34a1, Offset: 0xed0
 // Size: 0x174
 function private player_apply_loadout(name) {
@@ -310,7 +295,6 @@ function private player_apply_loadout(name) {
 
 // Namespace zm_altbody
 // Params 2, eflags: 0x4
-// namespace_8a7ba1fe<file_0>::function_32a45d2d
 // Checksum 0xb1121081, Offset: 0x1050
 // Size: 0x164
 function private player_exit_altbody(name, trigger) {
@@ -337,7 +321,6 @@ function private player_exit_altbody(name, trigger) {
 
 // Namespace zm_altbody
 // Params 2, eflags: 0x4
-// namespace_8a7ba1fe<file_0>::function_d97ca744
 // Checksum 0x827131b9, Offset: 0x11c0
 // Size: 0x144
 function private player_restore_loadout(name, trigger) {
@@ -359,7 +342,6 @@ function private player_restore_loadout(name, trigger) {
 
 // Namespace zm_altbody
 // Params 1, eflags: 0x0
-// namespace_8a7ba1fe<file_0>::function_72c3fae0
 // Checksum 0x3909f48b, Offset: 0x1310
 // Size: 0xb4
 function function_72c3fae0(washuman) {
@@ -374,7 +356,6 @@ function function_72c3fae0(washuman) {
 
 // Namespace zm_altbody
 // Params 4, eflags: 0x0
-// namespace_8a7ba1fe<file_0>::function_b32967de
 // Checksum 0x9c1ba611, Offset: 0x13d0
 // Size: 0x112
 function function_b32967de(name, kiosk_name, trigger_hint, notrigger_hint) {
@@ -390,7 +371,6 @@ function function_b32967de(name, kiosk_name, trigger_hint, notrigger_hint) {
 
 // Namespace zm_altbody
 // Params 4, eflags: 0x0
-// namespace_8a7ba1fe<file_0>::function_9621c06b
 // Checksum 0x721e9a86, Offset: 0x14f0
 // Size: 0x19c
 function function_9621c06b(kiosk, name, trigger_hint, notrigger_hint) {
@@ -414,7 +394,6 @@ function function_9621c06b(kiosk, name, trigger_hint, notrigger_hint) {
 
 // Namespace zm_altbody
 // Params 1, eflags: 0x0
-// namespace_8a7ba1fe<file_0>::function_d06c7b0a
 // Checksum 0xf83ed536, Offset: 0x1698
 // Size: 0x150
 function kiosk_trigger_visibility(player) {
@@ -432,7 +411,6 @@ function kiosk_trigger_visibility(player) {
 
 // Namespace zm_altbody
 // Params 0, eflags: 0x0
-// namespace_8a7ba1fe<file_0>::function_f270a7f6
 // Checksum 0xacb65556, Offset: 0x17f0
 // Size: 0xd0
 function kiosk_trigger_think() {
@@ -452,7 +430,6 @@ function kiosk_trigger_think() {
 
 // Namespace zm_altbody
 // Params 4, eflags: 0x4
-// namespace_8a7ba1fe<file_0>::function_66dbe82a
 // Checksum 0x255cd372, Offset: 0x18c8
 // Size: 0xac
 function private watch_kiosk_triggers(name, trigger_name, trigger_hint, whenvisible) {
@@ -465,7 +442,6 @@ function private watch_kiosk_triggers(name, trigger_name, trigger_hint, whenvisi
 
 // Namespace zm_altbody
 // Params 4, eflags: 0x4
-// namespace_8a7ba1fe<file_0>::function_ebd43723
 // Checksum 0x92d2eb44, Offset: 0x1980
 // Size: 0x168
 function private trigger_watch_kiosk(name, trigger_name, trigger_hint, whenvisible) {
@@ -492,7 +468,6 @@ function private trigger_watch_kiosk(name, trigger_name, trigger_hint, whenvisib
 
 // Namespace zm_altbody
 // Params 2, eflags: 0x0
-// namespace_8a7ba1fe<file_0>::function_64f6ca83
 // Checksum 0x7467037c, Offset: 0x1af0
 // Size: 0x1e8
 function trigger_monitor_visibility(name, whenvisible) {

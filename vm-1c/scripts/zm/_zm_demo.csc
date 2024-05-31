@@ -9,7 +9,6 @@
 
 // Namespace namespace_98a305bf
 // Params 0, eflags: 0x2
-// namespace_98a305bf<file_0>::function_2dc19561
 // Checksum 0xa96465a8, Offset: 0x168
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_98a305bf
 // Params 0, eflags: 0x1 linked
-// namespace_98a305bf<file_0>::function_8c87d8eb
 // Checksum 0xd9c3bdfb, Offset: 0x1a8
 // Size: 0x54
 function __init__() {
@@ -32,7 +30,6 @@ function __init__() {
 
 // Namespace namespace_98a305bf
 // Params 1, eflags: 0x1 linked
-// namespace_98a305bf<file_0>::function_e3031b65
 // Checksum 0x838493f1, Offset: 0x208
 // Size: 0x24
 function player_on_connect(localclientnum) {
@@ -41,7 +38,6 @@ function player_on_connect(localclientnum) {
 
 // Namespace namespace_98a305bf
 // Params 1, eflags: 0x1 linked
-// namespace_98a305bf<file_0>::function_14ebc07b
 // Checksum 0x3af5d63d, Offset: 0x238
 // Size: 0x214
 function watch_predicted_player_changes(localclientnum) {

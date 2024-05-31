@@ -4,7 +4,6 @@
 
 // Namespace namespace_ec2cabcf
 // Params 0, eflags: 0x0
-// namespace_ec2cabcf<file_0>::function_e230521c
 // Checksum 0x540e2f6f, Offset: 0x3108
 // Size: 0x2082
 function init_voice() {

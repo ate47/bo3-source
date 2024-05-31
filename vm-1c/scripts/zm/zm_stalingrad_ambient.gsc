@@ -11,7 +11,6 @@
 
 // Namespace namespace_c71bfefb
 // Params 0, eflags: 0x2
-// namespace_c71bfefb<file_0>::function_2dc19561
 // Checksum 0x5d309f37, Offset: 0x298
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_c71bfefb
 // Params 0, eflags: 0x1 linked
-// namespace_c71bfefb<file_0>::function_8c87d8eb
 // Checksum 0xd151ed8e, Offset: 0x2e0
 // Size: 0xcc
 function __init__() {
@@ -33,7 +31,6 @@ function __init__() {
 
 // Namespace namespace_c71bfefb
 // Params 0, eflags: 0x1 linked
-// namespace_c71bfefb<file_0>::function_5b6b9132
 // Checksum 0x45ce0ef6, Offset: 0x3b8
 // Size: 0x1c
 function __main__() {
@@ -42,7 +39,6 @@ function __main__() {
 
 // Namespace namespace_c71bfefb
 // Params 0, eflags: 0x1 linked
-// namespace_c71bfefb<file_0>::function_46a16b31
 // Checksum 0xb4cb2b8f, Offset: 0x3e0
 // Size: 0x1fe
 function function_46a16b31() {
@@ -69,7 +65,6 @@ function function_46a16b31() {
 
 // Namespace namespace_c71bfefb
 // Params 0, eflags: 0x1 linked
-// namespace_c71bfefb<file_0>::function_8c898920
 // Checksum 0xd6ed29ec, Offset: 0x5e8
 // Size: 0x348
 function function_8c898920() {
@@ -122,7 +117,6 @@ function function_8c898920() {
 
 // Namespace namespace_c71bfefb
 // Params 0, eflags: 0x1 linked
-// namespace_c71bfefb<file_0>::function_20bdb71
 // Checksum 0xb1812fce, Offset: 0x938
 // Size: 0x42
 function function_20bdb71() {
@@ -134,7 +128,6 @@ function function_20bdb71() {
 
 // Namespace namespace_c71bfefb
 // Params 1, eflags: 0x1 linked
-// namespace_c71bfefb<file_0>::function_7af373ba
 // Checksum 0xe2d1a99f, Offset: 0x988
 // Size: 0x16c
 function function_7af373ba(str_zone) {
@@ -161,7 +154,6 @@ function function_7af373ba(str_zone) {
 
 // Namespace namespace_c71bfefb
 // Params 1, eflags: 0x1 linked
-// namespace_c71bfefb<file_0>::function_8affee60
 // Checksum 0x3b6a51c1, Offset: 0xb00
 // Size: 0x160
 function function_8affee60(var_e3975fbf) {
@@ -189,7 +181,6 @@ function function_8affee60(var_e3975fbf) {
 
 // Namespace namespace_c71bfefb
 // Params 0, eflags: 0x1 linked
-// namespace_c71bfefb<file_0>::function_87fb5ddc
 // Checksum 0x57b82cd3, Offset: 0xc68
 // Size: 0x44
 function wait_for_power() {

@@ -17,7 +17,6 @@
 
 // Namespace character_customization
 // Params 0, eflags: 0x2
-// namespace_15737250<file_0>::function_2dc19561
 // Checksum 0xf8d150b6, Offset: 0xab0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -26,7 +25,6 @@ function autoexec function_2dc19561() {
 
 // Namespace character_customization
 // Params 0, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_8c87d8eb
 // Checksum 0x8ec07dc2, Offset: 0xaf0
 // Size: 0x18c
 function __init__() {
@@ -61,7 +59,6 @@ function __init__() {
 
 // Namespace character_customization
 // Params 1, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_80bc4653
 // Checksum 0xd8ec5c0d, Offset: 0xc88
 // Size: 0x84
 function localclientconnect(localclientnum) {
@@ -74,7 +71,6 @@ function localclientconnect(localclientnum) {
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_b79cb078
 // Checksum 0xbef7c521, Offset: 0xd18
 // Size: 0x418
 function function_b79cb078(charactermodel, localclientnum, alt_render_mode) {
@@ -129,7 +125,6 @@ function function_b79cb078(charactermodel, localclientnum, alt_render_mode) {
 
 // Namespace character_customization
 // Params 1, eflags: 0x0
-// namespace_15737250<file_0>::function_3a4cce98
 // Checksum 0x38c1b610, Offset: 0x1138
 // Size: 0xac
 function function_3a4cce98(game_mode) {
@@ -138,7 +133,6 @@ function function_3a4cce98(game_mode) {
 
 // Namespace character_customization
 // Params 4, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_d79d6d7
 // Checksum 0xd7ff6f8, Offset: 0x13f8
 // Size: 0x38a
 function function_d79d6d7(localclientnum, var_ddbfd9e3, characterindex, params) {
@@ -171,7 +165,6 @@ function function_d79d6d7(localclientnum, var_ddbfd9e3, characterindex, params) 
 
 // Namespace character_customization
 // Params 7, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_876bab0
 // Checksum 0xc01e0981, Offset: 0x1790
 // Size: 0x514
 function update_model_attachment(localclientnum, var_ddbfd9e3, attached_model, slot, model_anim, model_intro_anim, force_update) {
@@ -222,7 +215,6 @@ function update_model_attachment(localclientnum, var_ddbfd9e3, attached_model, s
 
 // Namespace character_customization
 // Params 2, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_e45a2c8b
 // Checksum 0x27b5d188, Offset: 0x1cb0
 // Size: 0x28
 function set_character(var_ddbfd9e3, characterindex) {
@@ -231,7 +223,6 @@ function set_character(var_ddbfd9e3, characterindex) {
 
 // Namespace character_customization
 // Params 2, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_9e81088b
 // Checksum 0xec73505a, Offset: 0x1ce0
 // Size: 0x68
 function set_character_mode(var_ddbfd9e3, charactermode) {
@@ -242,7 +233,6 @@ function set_character_mode(var_ddbfd9e3, charactermode) {
 
 // Namespace character_customization
 // Params 5, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_56dceb6
 // Checksum 0xb3943ca1, Offset: 0x1d50
 // Size: 0x1cc
 function function_56dceb6(var_ddbfd9e3, mode, characterindex, bodyindex, bodycolors) {
@@ -265,7 +255,6 @@ function function_56dceb6(var_ddbfd9e3, mode, characterindex, bodyindex, bodycol
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_b36a5f9d
 // Checksum 0x36da94c7, Offset: 0x1f28
 // Size: 0x7e
 function function_b36a5f9d(var_ddbfd9e3, mode, bodycolors) {
@@ -276,7 +265,6 @@ function function_b36a5f9d(var_ddbfd9e3, mode, bodycolors) {
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_f87a1792
 // Checksum 0xf3f5d371, Offset: 0x1fb0
 // Size: 0xbc
 function function_f87a1792(var_ddbfd9e3, var_6f15f34e, colorindex) {
@@ -287,7 +275,6 @@ function function_f87a1792(var_ddbfd9e3, var_6f15f34e, colorindex) {
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_5b80fae8
 // Checksum 0x28a683a9, Offset: 0x2078
 // Size: 0x8c
 function function_5b80fae8(var_ddbfd9e3, mode, headindex) {
@@ -299,7 +286,6 @@ function function_5b80fae8(var_ddbfd9e3, mode, headindex) {
 
 // Namespace character_customization
 // Params 5, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_5fa9d769
 // Checksum 0x26b32404, Offset: 0x2110
 // Size: 0x84
 function function_5fa9d769(var_ddbfd9e3, mode, characterindex, var_bf37af0a, helmetcolors) {
@@ -310,7 +296,6 @@ function function_5fa9d769(var_ddbfd9e3, mode, characterindex, var_bf37af0a, hel
 
 // Namespace character_customization
 // Params 10, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_f374c6fc
 // Checksum 0x88493af2, Offset: 0x21a0
 // Size: 0xbcc
 function function_f374c6fc(var_ddbfd9e3, mode, localclientnum, xuid, characterindex, var_a7a58d47, var_93ecb41d, weaponrenderoptions, var_58d20c34, var_974ed5f5) {
@@ -422,7 +407,6 @@ function function_f374c6fc(var_ddbfd9e3, mode, localclientnum, xuid, characterin
 
 // Namespace character_customization
 // Params 2, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_f8e56a38
 // Checksum 0xda774788, Offset: 0x2d78
 // Size: 0x104
 function function_f8e56a38(var_ddbfd9e3, colors) {
@@ -435,7 +419,6 @@ function function_f8e56a38(var_ddbfd9e3, colors) {
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_883d8451
 // Checksum 0x91b57759, Offset: 0x2e88
 // Size: 0xbc
 function function_883d8451(var_ddbfd9e3, var_6f15f34e, colorindex) {
@@ -446,7 +429,6 @@ function function_883d8451(var_ddbfd9e3, var_6f15f34e, colorindex) {
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_debccd1a
 // Checksum 0xa763d5bc, Offset: 0x2f50
 // Size: 0x304
 function update(localclientnum, var_ddbfd9e3, params) {
@@ -475,7 +457,6 @@ function update(localclientnum, var_ddbfd9e3, params) {
 
 // Namespace character_customization
 // Params 1, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_ddd0628f
 // Checksum 0x329c6342, Offset: 0x3260
 // Size: 0xe4
 function function_ddd0628f(var_ddbfd9e3) {
@@ -496,7 +477,6 @@ function function_ddd0628f(var_ddbfd9e3) {
 
 // Namespace character_customization
 // Params 1, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_f61cd9d1
 // Checksum 0x6f785b67, Offset: 0x3350
 // Size: 0xf2
 function function_f61cd9d1(var_ddbfd9e3) {
@@ -512,7 +492,6 @@ function function_f61cd9d1(var_ddbfd9e3) {
 
 // Namespace character_customization
 // Params 1, eflags: 0x0
-// namespace_15737250<file_0>::function_51d314df
 // Checksum 0xfeb99280, Offset: 0x3450
 // Size: 0x22
 function get_character_mode(localclientnum) {
@@ -521,7 +500,6 @@ function get_character_mode(localclientnum) {
 
 // Namespace character_customization
 // Params 4, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_7d59e996
 // Checksum 0x2385b98a, Offset: 0x3480
 // Size: 0x24c
 function function_7d59e996(localclientnum, charactermode, characterindex, var_66ec6e) {
@@ -551,7 +529,6 @@ function function_7d59e996(localclientnum, charactermode, characterindex, var_66
 
 // Namespace character_customization
 // Params 6, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_87ec3132
 // Checksum 0xefb6bf0e, Offset: 0x36d8
 // Size: 0x11c
 function function_87ec3132(localclientnum, charactermode, characterindex, bodyindex, var_6f15f34e, var_66ec6e) {
@@ -569,7 +546,6 @@ function function_87ec3132(localclientnum, charactermode, characterindex, bodyin
 
 // Namespace character_customization
 // Params 5, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_a4a750bd
 // Checksum 0xc6081c42, Offset: 0x3800
 // Size: 0xf4
 function function_a4a750bd(localclientnum, charactermode, characterindex, bodyindex, var_66ec6e) {
@@ -586,7 +562,6 @@ function function_a4a750bd(localclientnum, charactermode, characterindex, bodyin
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_ba2060c8
 // Checksum 0xc705f92e, Offset: 0x3900
 // Size: 0x11c
 function function_ba2060c8(localclientnum, charactermode, var_66ec6e) {
@@ -607,7 +582,6 @@ function function_ba2060c8(localclientnum, charactermode, var_66ec6e) {
 
 // Namespace character_customization
 // Params 4, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_f9865c49
 // Checksum 0xc2b5987f, Offset: 0x3a28
 // Size: 0x12c
 function function_f9865c49(localclientnum, charactermode, characterindex, var_66ec6e) {
@@ -628,7 +602,6 @@ function function_f9865c49(localclientnum, charactermode, characterindex, var_66
 
 // Namespace character_customization
 // Params 4, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_e37bf19c
 // Checksum 0x70bce869, Offset: 0x3b60
 // Size: 0xf4
 function function_e37bf19c(localclientnum, charactermode, characterindex, var_66ec6e) {
@@ -646,7 +619,6 @@ function function_e37bf19c(localclientnum, charactermode, characterindex, var_66
 
 // Namespace character_customization
 // Params 6, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_6abaf171
 // Checksum 0x7f254641, Offset: 0x3c60
 // Size: 0x11c
 function function_6abaf171(localclientnum, charactermode, characterindex, var_bf37af0a, var_6f15f34e, var_66ec6e) {
@@ -664,7 +636,6 @@ function function_6abaf171(localclientnum, charactermode, characterindex, var_bf
 
 // Namespace character_customization
 // Params 5, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_227c64d8
 // Checksum 0xba60c942, Offset: 0x3d88
 // Size: 0xf4
 function function_227c64d8(localclientnum, charactermode, characterindex, var_bf37af0a, var_66ec6e) {
@@ -681,7 +652,6 @@ function function_227c64d8(localclientnum, charactermode, characterindex, var_bf
 
 // Namespace character_customization
 // Params 1, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_2142a641
 // Checksum 0xff379647, Offset: 0x3e88
 // Size: 0x44
 function function_2142a641(charactermodel) {
@@ -692,7 +662,6 @@ function function_2142a641(charactermodel) {
 
 // Namespace character_customization
 // Params 1, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_40b8ba
 // Checksum 0x225eaff0, Offset: 0x3ed8
 // Size: 0xc8
 function function_40b8ba(params) {
@@ -706,7 +675,6 @@ function function_40b8ba(params) {
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_fd188096
 // Checksum 0x796d2f6f, Offset: 0x3fa8
 // Size: 0x4d4
 function function_fd188096(localclientnum, var_ddbfd9e3, params) {
@@ -784,7 +752,6 @@ function function_fd188096(localclientnum, var_ddbfd9e3, params) {
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_cccc34a1
 // Checksum 0xbba413b5, Offset: 0x4488
 // Size: 0xac
 function play_intro_and_animation(intro_anim_name, anim_name, b_keep_link) {
@@ -798,7 +765,6 @@ function play_intro_and_animation(intro_anim_name, anim_name, b_keep_link) {
 
 // Namespace character_customization
 // Params 2, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_e6f3ac24
 // Checksum 0x198f8b20, Offset: 0x4540
 // Size: 0x6c
 function function_e6f3ac24(var_ddbfd9e3, params) {
@@ -811,7 +777,6 @@ function function_e6f3ac24(var_ddbfd9e3, params) {
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_873d37c
 // Checksum 0xfc2dfaee, Offset: 0x45b8
 // Size: 0x88c
 function function_873d37c(localclientnum, var_ddbfd9e3, params) {
@@ -896,7 +861,6 @@ function function_873d37c(localclientnum, var_ddbfd9e3, params) {
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_b0a8e76d
 // Checksum 0x14272d55, Offset: 0x4e50
 // Size: 0x118
 function function_b0a8e76d(localclientnum, var_ddbfd9e3, var_51a4f7fb) {
@@ -917,7 +881,6 @@ function function_b0a8e76d(localclientnum, var_ddbfd9e3, var_51a4f7fb) {
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_ea9faed5
 // Checksum 0x8a740eaf, Offset: 0x4f70
 // Size: 0xcc
 function function_ea9faed5(localclientnum, var_ddbfd9e3, show_helmets) {
@@ -932,7 +895,6 @@ function function_ea9faed5(localclientnum, var_ddbfd9e3, show_helmets) {
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_474a5989
 // Checksum 0x6c7e1bac, Offset: 0x5048
 // Size: 0xcc
 function function_474a5989(localclientnum, var_ddbfd9e3, align_target) {
@@ -947,7 +909,6 @@ function function_474a5989(localclientnum, var_ddbfd9e3, align_target) {
 
 // Namespace character_customization
 // Params 1, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_1ab3db49
 // Checksum 0x9153773a, Offset: 0x5120
 // Size: 0xc4
 function setup_live_character_customization_target(localclientnum) {
@@ -964,7 +925,6 @@ function setup_live_character_customization_target(localclientnum) {
 
 // Namespace character_customization
 // Params 2, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_bd990dcd
 // Checksum 0xc732cb99, Offset: 0x51f0
 // Size: 0x7c
 function update_locked_shader(localclientnum, params) {
@@ -977,7 +937,6 @@ function update_locked_shader(localclientnum, params) {
 
 // Namespace character_customization
 // Params 2, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_55c4da6a
 // Checksum 0x9dcc7968, Offset: 0x5278
 // Size: 0x6ba
 function updateeventthread(localclientnum, var_ddbfd9e3) {
@@ -1067,7 +1026,6 @@ function updateeventthread(localclientnum, var_ddbfd9e3) {
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_731a29a3
 // Checksum 0xaddd4aec, Offset: 0x5940
 // Size: 0xf4
 function rotation_thread_spawner(localclientnum, var_ddbfd9e3, endonevent) {
@@ -1086,7 +1044,6 @@ function rotation_thread_spawner(localclientnum, var_ddbfd9e3, endonevent) {
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_30d929fb
 // Checksum 0xdb18ea1a, Offset: 0x5a40
 // Size: 0x2b8
 function update_model_rotation_for_right_stick(localclientnum, var_ddbfd9e3, endonevent) {
@@ -1113,7 +1070,6 @@ function update_model_rotation_for_right_stick(localclientnum, var_ddbfd9e3, end
 
 // Namespace character_customization
 // Params 1, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_c3117535
 // Checksum 0x953566bd, Offset: 0x5d00
 // Size: 0x17c
 function setup_static_character_customization_target(localclientnum) {
@@ -1132,7 +1088,6 @@ function setup_static_character_customization_target(localclientnum) {
 
 // Namespace character_customization
 // Params 4, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_c3c52048
 // Checksum 0x47133de6, Offset: 0x5e88
 // Size: 0x94
 function setup_character_extracam_struct(xcam, subxcam, model_animation, var_9d818304) {
@@ -1146,7 +1101,6 @@ function setup_character_extracam_struct(xcam, subxcam, model_animation, var_9d8
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_1c03b8b3
 // Checksum 0x5f015678, Offset: 0x5f28
 // Size: 0x54
 function wait_for_extracam_close(localclientnum, camera_ent, extracamindex) {
@@ -1156,7 +1110,6 @@ function wait_for_extracam_close(localclientnum, camera_ent, extracamindex) {
 
 // Namespace character_customization
 // Params 3, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_c7a7dce0
 // Checksum 0x3c73414, Offset: 0x5f88
 // Size: 0x324
 function setup_character_extracam_settings(localclientnum, var_ddbfd9e3, extracam_data_struct) {
@@ -1198,7 +1151,6 @@ function setup_character_extracam_settings(localclientnum, var_ddbfd9e3, extraca
 
 // Namespace character_customization
 // Params 2, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_e23dda16
 // Checksum 0x3a1a1507, Offset: 0x62b8
 // Size: 0x68
 function update_character_extracam(localclientnum, var_ddbfd9e3) {
@@ -1211,7 +1163,6 @@ function update_character_extracam(localclientnum, var_ddbfd9e3) {
 
 // Namespace character_customization
 // Params 5, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_bc334e1a
 // Checksum 0x43a318d, Offset: 0x6328
 // Size: 0xbc
 function function_bc334e1a(localclientnum, jobindex, extracamindex, sessionmode, characterindex) {
@@ -1224,7 +1175,6 @@ function function_bc334e1a(localclientnum, jobindex, extracamindex, sessionmode,
 
 // Namespace character_customization
 // Params 4, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_cdc26129
 // Checksum 0x58265a59, Offset: 0x63f0
 // Size: 0xc8
 function function_cdc26129(localclientnum, jobindex, extracamindex, sessionmode) {
@@ -1237,7 +1187,6 @@ function function_cdc26129(localclientnum, jobindex, extracamindex, sessionmode)
 
 // Namespace character_customization
 // Params 6, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_5c4b8768
 // Checksum 0x8eb5ce75, Offset: 0x64c0
 // Size: 0xe0
 function process_current_hero_headshot_extracam_request(localclientnum, jobindex, extracamindex, sessionmode, characterindex, isdefaulthero) {
@@ -1251,7 +1200,6 @@ function process_current_hero_headshot_extracam_request(localclientnum, jobindex
 
 // Namespace character_customization
 // Params 5, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_25aa300b
 // Checksum 0xa20bae34, Offset: 0x65a8
 // Size: 0xbc
 function function_25aa300b(localclientnum, jobindex, extracamindex, sessionmode, outfitindex) {
@@ -1264,7 +1212,6 @@ function function_25aa300b(localclientnum, jobindex, extracamindex, sessionmode,
 
 // Namespace character_customization
 // Params 7, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_c27b6e13
 // Checksum 0xb812158c, Offset: 0x6670
 // Size: 0x180
 function function_c27b6e13(localclientnum, jobindex, extracamindex, sessionmode, characterindex, itemindex, defaultimagerender) {
@@ -1286,7 +1233,6 @@ function function_c27b6e13(localclientnum, jobindex, extracamindex, sessionmode,
 
 // Namespace character_customization
 // Params 7, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_b345c4d8
 // Checksum 0xf26e4081, Offset: 0x67f8
 // Size: 0x180
 function function_b345c4d8(localclientnum, jobindex, extracamindex, sessionmode, characterindex, itemindex, defaultimagerender) {
@@ -1308,7 +1254,6 @@ function function_b345c4d8(localclientnum, jobindex, extracamindex, sessionmode,
 
 // Namespace character_customization
 // Params 6, eflags: 0x1 linked
-// namespace_15737250<file_0>::function_7639cbc1
 // Checksum 0xf3653415, Offset: 0x6980
 // Size: 0x178
 function process_character_head_item_extracam_request(localclientnum, jobindex, extracamindex, sessionmode, headindex, defaultimagerender) {

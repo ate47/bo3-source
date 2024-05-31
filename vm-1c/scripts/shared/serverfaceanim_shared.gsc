@@ -6,7 +6,6 @@
 
 // Namespace serverfaceanim
 // Params 0, eflags: 0x2
-// namespace_26228a20<file_0>::function_2dc19561
 // Checksum 0xe6ab256c, Offset: 0x180
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,7 +14,6 @@ function autoexec function_2dc19561() {
 
 // Namespace serverfaceanim
 // Params 0, eflags: 0x1 linked
-// namespace_26228a20<file_0>::function_8c87d8eb
 // Checksum 0x82f7fe, Offset: 0x1c0
 // Size: 0x3c
 function __init__() {
@@ -27,7 +25,6 @@ function __init__() {
 
 // Namespace serverfaceanim
 // Params 0, eflags: 0x1 linked
-// namespace_26228a20<file_0>::function_f6312113
 // Checksum 0xa6e06f9, Offset: 0x208
 // Size: 0x19c
 function init_serverfaceanim() {
@@ -50,7 +47,6 @@ function init_serverfaceanim() {
 
 // Namespace serverfaceanim
 // Params 0, eflags: 0x1 linked
-// namespace_26228a20<file_0>::function_b7796427
 // Checksum 0x43055e4f, Offset: 0x3b0
 // Size: 0xa8
 function wait_for_face_event() {

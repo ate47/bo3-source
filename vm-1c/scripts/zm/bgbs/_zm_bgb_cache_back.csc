@@ -9,7 +9,6 @@
 
 // Namespace zm_bgb_cache_back
 // Params 0, eflags: 0x2
-// namespace_767b8a45<file_0>::function_2dc19561
 // Checksum 0xbf91767b, Offset: 0x148
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_cache_back
 // Params 0, eflags: 0x1 linked
-// namespace_767b8a45<file_0>::function_8c87d8eb
 // Checksum 0x9a2bf5ea, Offset: 0x188
 // Size: 0x3c
 function __init__() {

@@ -25,7 +25,6 @@
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x2
-// namespace_52adc03e<file_0>::function_2dc19561
 // Checksum 0xe2f04c87, Offset: 0x728
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -34,7 +33,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_8c87d8eb
 // Checksum 0x8bf5f3cb, Offset: 0x768
 // Size: 0x114
 function __init__() {
@@ -51,7 +49,6 @@ function __init__() {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_f9e823ac
 // Checksum 0x6c5df029, Offset: 0x888
 // Size: 0x114
 function function_f9e823ac() {
@@ -79,7 +76,6 @@ function function_f9e823ac() {
 
 // Namespace namespace_52adc03e
 // Params 1, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_513f51e1
 // Checksum 0xc36e9b5f, Offset: 0x9a8
 // Size: 0x24c
 function function_513f51e1(restart) {
@@ -111,7 +107,6 @@ function function_513f51e1(restart) {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_cf1b154
 // Checksum 0xa51385ea, Offset: 0xc00
 // Size: 0x114
 function function_cf1b154() {
@@ -135,7 +130,6 @@ function function_cf1b154() {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_3cf3ba48
 // Checksum 0x52b033e6, Offset: 0xd20
 // Size: 0x19a
 function function_3cf3ba48() {
@@ -161,7 +155,6 @@ function function_3cf3ba48() {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_9d55fd08
 // Checksum 0x70b5d7ba, Offset: 0xec8
 // Size: 0x66
 function function_9d55fd08() {
@@ -177,7 +170,6 @@ function function_9d55fd08() {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_2fdaabf3
 // Checksum 0xedf5438d, Offset: 0xf38
 // Size: 0x1a4
 function function_2fdaabf3() {
@@ -206,7 +198,6 @@ function function_2fdaabf3() {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_a9a34039
 // Checksum 0x7f53d85, Offset: 0x10e8
 // Size: 0x52
 function function_a9a34039() {
@@ -221,7 +212,6 @@ function function_a9a34039() {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_5b2770da
 // Checksum 0xaa2ae58c, Offset: 0x1148
 // Size: 0x554
 function function_5b2770da() {
@@ -266,7 +256,6 @@ function function_5b2770da() {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_e753d4f
 // Checksum 0x7b686ba6, Offset: 0x16a8
 // Size: 0xac
 function function_e753d4f() {
@@ -284,7 +273,6 @@ function function_e753d4f() {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_929c4dba
 // Checksum 0x7aed8638, Offset: 0x1760
 // Size: 0x174
 function function_929c4dba() {
@@ -311,7 +299,6 @@ function function_929c4dba() {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_8090042c
 // Checksum 0xdc1d08ec, Offset: 0x18e0
 // Size: 0x4e
 function function_8090042c() {
@@ -323,7 +310,6 @@ function function_8090042c() {
 
 // Namespace namespace_52adc03e
 // Params 1, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_bd90259b
 // Checksum 0x3e61f717, Offset: 0x1938
 // Size: 0x84
 function function_bd90259b(e_player) {
@@ -338,7 +324,6 @@ function function_bd90259b(e_player) {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_e1e44e18
 // Checksum 0x795419, Offset: 0x19c8
 // Size: 0xc4
 function function_e1e44e18() {
@@ -355,7 +340,6 @@ function function_e1e44e18() {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_80f102b1
 // Checksum 0x8eb30a4c, Offset: 0x1a98
 // Size: 0x622
 function setup_personality_character_exerts() {
@@ -403,7 +387,6 @@ function setup_personality_character_exerts() {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x0
-// namespace_52adc03e<file_0>::function_f7f01a5c
 // Checksum 0x55a6c3a6, Offset: 0x20c8
 // Size: 0x54
 function set_exert_id() {

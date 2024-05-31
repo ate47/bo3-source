@@ -12,7 +12,6 @@
 
 // Namespace zm_grappler
 // Params 0, eflags: 0x2
-// namespace_b71fafb4<file_0>::function_2dc19561
 // Checksum 0xc67ef4f, Offset: 0x220
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_grappler
 // Params 0, eflags: 0x1 linked
-// namespace_b71fafb4<file_0>::function_8c87d8eb
 // Checksum 0x3225733, Offset: 0x268
 // Size: 0x64
 function __init__() {
@@ -31,7 +29,6 @@ function __init__() {
 
 // Namespace zm_grappler
 // Params 0, eflags: 0x1 linked
-// namespace_b71fafb4<file_0>::function_5b6b9132
 // Checksum 0x99ec1590, Offset: 0x2d8
 // Size: 0x4
 function __main__() {
@@ -40,7 +37,6 @@ function __main__() {
 
 // Namespace zm_grappler
 // Params 4, eflags: 0x1 linked
-// namespace_b71fafb4<file_0>::function_7eaac04b
 // Checksum 0xe69fe55d, Offset: 0x2e8
 // Size: 0x3bc
 function start_grapple(var_683c052c, e_grapplee, n_type, n_speed) {
@@ -84,7 +80,6 @@ function start_grapple(var_683c052c, e_grapplee, n_type, n_speed) {
 
 // Namespace zm_grappler
 // Params 0, eflags: 0x5 linked
-// namespace_b71fafb4<file_0>::function_b7c692b0
 // Checksum 0x140f8570, Offset: 0x6b0
 // Size: 0x28
 function private function_b7c692b0() {
@@ -95,7 +90,6 @@ function private function_b7c692b0() {
 
 // Namespace zm_grappler
 // Params 2, eflags: 0x5 linked
-// namespace_b71fafb4<file_0>::function_28ac2916
 // Checksum 0xd04d742b, Offset: 0x6e0
 // Size: 0xb0
 function private function_28ac2916(e_source, e_target) {
@@ -114,7 +108,6 @@ function private function_28ac2916(e_source, e_target) {
 
 // Namespace zm_grappler
 // Params 3, eflags: 0x5 linked
-// namespace_b71fafb4<file_0>::function_3e1b1cea
 // Checksum 0x6d5dc9a2, Offset: 0x798
 // Size: 0x72
 function private function_3e1b1cea(e_from, e_to, n_speed) {
@@ -124,7 +117,6 @@ function private function_3e1b1cea(e_from, e_to, n_speed) {
 
 // Namespace zm_grappler
 // Params 1, eflags: 0x5 linked
-// namespace_b71fafb4<file_0>::function_63b4b8a5
 // Checksum 0xe8143a3e, Offset: 0x818
 // Size: 0x104
 function private function_63b4b8a5(var_365c612) {
@@ -151,7 +143,6 @@ function private function_63b4b8a5(var_365c612) {
 
 // Namespace zm_grappler
 // Params 0, eflags: 0x5 linked
-// namespace_b71fafb4<file_0>::function_1e702195
 // Checksum 0x48e5527d, Offset: 0x928
 // Size: 0x46
 function private function_1e702195() {
@@ -164,7 +155,6 @@ function private function_1e702195() {
 
 // Namespace zm_grappler
 // Params 2, eflags: 0x5 linked
-// namespace_b71fafb4<file_0>::function_7027852f
 // Checksum 0x805558df, Offset: 0x978
 // Size: 0x54
 function private create_mover(v_origin, v_angles) {
@@ -175,7 +165,6 @@ function private create_mover(v_origin, v_angles) {
 
 // Namespace zm_grappler
 // Params 1, eflags: 0x5 linked
-// namespace_b71fafb4<file_0>::function_58192f77
 // Checksum 0x41501f2b, Offset: 0x9d8
 // Size: 0x2c
 function private destroy_mover(e_beamend) {

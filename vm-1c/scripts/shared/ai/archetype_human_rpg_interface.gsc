@@ -5,7 +5,6 @@
 
 // Namespace humanrpginterface
 // Params 0, eflags: 0x1 linked
-// namespace_2935cc06<file_0>::function_dac166c8
 // Checksum 0x262765a2, Offset: 0x118
 // Size: 0x11c
 function registerhumanrpginterfaceattributes() {

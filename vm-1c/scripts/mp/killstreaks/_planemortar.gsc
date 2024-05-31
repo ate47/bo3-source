@@ -17,7 +17,6 @@
 
 // Namespace planemortar
 // Params 0, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_c35e6aab
 // Checksum 0xfab18a7, Offset: 0x670
 // Size: 0x14c
 function init() {
@@ -31,7 +30,6 @@ function init() {
 
 // Namespace planemortar
 // Params 1, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_e009a8a1
 // Checksum 0xa900f44f, Offset: 0x7c8
 // Size: 0x76
 function usekillstreakplanemortar(hardpointtype) {
@@ -47,7 +45,6 @@ function usekillstreakplanemortar(hardpointtype) {
 
 // Namespace planemortar
 // Params 0, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_2009faf4
 // Checksum 0xcf65449a, Offset: 0x848
 // Size: 0x38
 function waittill_confirm_location() {
@@ -59,7 +56,6 @@ function waittill_confirm_location() {
 
 // Namespace planemortar
 // Params 1, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_6e7b623b
 // Checksum 0xb8b3c5f9, Offset: 0x888
 // Size: 0x202
 function selectplanemortarlocation(hardpointtype) {
@@ -95,7 +91,6 @@ function selectplanemortarlocation(hardpointtype) {
 
 // Namespace planemortar
 // Params 1, eflags: 0x0
-// namespace_fa29b58e<file_0>::function_7cb95be
 // Checksum 0xa214704f, Offset: 0xa98
 // Size: 0x8a
 function waitplaybacktime(soundalias) {
@@ -113,7 +108,6 @@ function waitplaybacktime(soundalias) {
 
 // Namespace planemortar
 // Params 0, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_61ef43d5
 // Checksum 0x1ec4965, Offset: 0xb30
 // Size: 0xcc
 function singleradarsweep() {
@@ -133,7 +127,6 @@ function singleradarsweep() {
 
 // Namespace planemortar
 // Params 0, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_96504f1a
 // Checksum 0xc22c4f11, Offset: 0xc08
 // Size: 0x4c
 function doradarsweep() {
@@ -144,7 +137,6 @@ function doradarsweep() {
 
 // Namespace planemortar
 // Params 1, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_fc81d8ef
 // Checksum 0x56956387, Offset: 0xc60
 // Size: 0x150
 function useplanemortar(positions) {
@@ -164,7 +156,6 @@ function useplanemortar(positions) {
 
 // Namespace planemortar
 // Params 3, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_afd31613
 // Checksum 0xec9f1399, Offset: 0xdb8
 // Size: 0x1a4
 function doplanemortar(positions, team, killstreak_id) {
@@ -191,7 +182,6 @@ function doplanemortar(positions, team, killstreak_id) {
 
 // Namespace planemortar
 // Params 0, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_e0cdf2ec
 // Checksum 0xde074da5, Offset: 0xf68
 // Size: 0x186
 function plane_mortar_bda_dialog() {
@@ -220,7 +210,6 @@ function plane_mortar_bda_dialog() {
 
 // Namespace planemortar
 // Params 2, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_cb1d32cd
 // Checksum 0xb09645f1, Offset: 0x10f8
 // Size: 0x6c
 function planemortar_watchforendnotify(team, killstreak_id) {
@@ -230,7 +219,6 @@ function planemortar_watchforendnotify(team, killstreak_id) {
 
 // Namespace planemortar
 // Params 2, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_9c8d119b
 // Checksum 0xea9bcfa5, Offset: 0x1170
 // Size: 0x34
 function planemortar_killstreakstop(team, killstreak_id) {
@@ -239,7 +227,6 @@ function planemortar_killstreakstop(team, killstreak_id) {
 
 // Namespace planemortar
 // Params 3, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_fa593625
 // Checksum 0x87396907, Offset: 0x11b0
 // Size: 0x4dc
 function dobombrun(position, yaw, team) {
@@ -288,7 +275,6 @@ function dobombrun(position, yaw, team) {
 
 // Namespace planemortar
 // Params 5, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_3b4ad5b2
 // Checksum 0x95d831b6, Offset: 0x1698
 // Size: 0xc4
 function followbomb(plane, position, direction, impact, player) {
@@ -300,7 +286,6 @@ function followbomb(plane, position, direction, impact, player) {
 
 // Namespace planemortar
 // Params 1, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_50e38984
 // Checksum 0xd7142913, Offset: 0x1768
 // Size: 0xb0
 function lookatexplosion(bomb) {
@@ -313,7 +298,6 @@ function lookatexplosion(bomb) {
 
 // Namespace planemortar
 // Params 1, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_e29ecfdf
 // Checksum 0xe81c251c, Offset: 0x1820
 // Size: 0x6c
 function planewatchforemp(owner) {
@@ -326,7 +310,6 @@ function planewatchforemp(owner) {
 
 // Namespace planemortar
 // Params 2, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_268773ce
 // Checksum 0xec3c4ad7, Offset: 0x1898
 // Size: 0x124
 function planeawardscoreevent(attacker, plane) {
@@ -343,7 +326,6 @@ function planeawardscoreevent(attacker, plane) {
 
 // Namespace planemortar
 // Params 0, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_34d9f52f
 // Checksum 0x376ffd32, Offset: 0x19c8
 // Size: 0x1c
 function plane_cleanupondeath() {
@@ -352,7 +334,6 @@ function plane_cleanupondeath() {
 
 // Namespace planemortar
 // Params 2, eflags: 0x1 linked
-// namespace_fa29b58e<file_0>::function_8264e4de
 // Checksum 0xd778076f, Offset: 0x19f0
 // Size: 0x26c
 function dropbomb(plane, bombposition) {

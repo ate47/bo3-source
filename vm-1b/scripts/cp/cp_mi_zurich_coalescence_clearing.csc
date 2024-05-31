@@ -9,7 +9,6 @@
 
 // Namespace namespace_29799936
 // Params 0, eflags: 0x0
-// namespace_29799936<file_0>::function_d290ebfa
 // Checksum 0xc355defb, Offset: 0x2b8
 // Size: 0x1a
 function main() {
@@ -19,7 +18,6 @@ function main() {
 
 // Namespace namespace_29799936
 // Params 0, eflags: 0x0
-// namespace_29799936<file_0>::function_2ea898a8
 // Checksum 0x8a2200a5, Offset: 0x2e0
 // Size: 0xca
 function init_clientfields() {
@@ -31,7 +29,6 @@ function init_clientfields() {
 
 // Namespace namespace_29799936
 // Params 7, eflags: 0x0
-// namespace_29799936<file_0>::function_e607bb59
 // Checksum 0xc2b3dddc, Offset: 0x3b8
 // Size: 0x19b
 function function_e607bb59(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -63,7 +60,6 @@ function function_e607bb59(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_29799936
 // Params 7, eflags: 0x0
-// namespace_29799936<file_0>::function_df47f2bb
 // Checksum 0x1d1a9567, Offset: 0x560
 // Size: 0xdf
 function function_df47f2bb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -93,7 +89,6 @@ function function_df47f2bb(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_29799936
 // Params 1, eflags: 0x0
-// namespace_29799936<file_0>::function_109ac1f6
 // Checksum 0x89c26705, Offset: 0x648
 // Size: 0xab
 function function_109ac1f6(a_ents) {
@@ -110,7 +105,6 @@ function function_109ac1f6(a_ents) {
 
 // Namespace namespace_29799936
 // Params 7, eflags: 0x0
-// namespace_29799936<file_0>::function_3ccbd173
 // Checksum 0x21b837d5, Offset: 0x700
 // Size: 0x97
 function function_3ccbd173(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -128,7 +122,6 @@ function function_3ccbd173(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_29799936
 // Params 0, eflags: 0x0
-// namespace_29799936<file_0>::function_8f4d8a35
 // Checksum 0xbf678e75, Offset: 0x7a0
 // Size: 0x9a
 function function_8f4d8a35() {

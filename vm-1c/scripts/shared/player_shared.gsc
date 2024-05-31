@@ -9,7 +9,6 @@
 
 // Namespace player
 // Params 0, eflags: 0x2
-// namespace_5dc5e20a<file_0>::function_2dc19561
 // Checksum 0x662c3511, Offset: 0x200
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace player
 // Params 0, eflags: 0x1 linked
-// namespace_5dc5e20a<file_0>::function_8c87d8eb
 // Checksum 0x770ba8eb, Offset: 0x240
 // Size: 0x54
 function __init__() {
@@ -28,7 +26,6 @@ function __init__() {
 
 // Namespace player
 // Params 0, eflags: 0x1 linked
-// namespace_5dc5e20a<file_0>::function_aebcf025
 // Checksum 0x36853d18, Offset: 0x2a0
 // Size: 0x12c
 function on_player_spawned() {
@@ -50,7 +47,6 @@ function on_player_spawned() {
 
 // Namespace player
 // Params 0, eflags: 0x1 linked
-// namespace_5dc5e20a<file_0>::function_7613b96c
 // Checksum 0xe399b5e8, Offset: 0x3d8
 // Size: 0x22c
 function last_valid_position() {
@@ -86,7 +82,6 @@ function last_valid_position() {
 
 // Namespace player
 // Params 0, eflags: 0x1 linked
-// namespace_5dc5e20a<file_0>::function_18cd2f76
 // Checksum 0xba0b2581, Offset: 0x610
 // Size: 0x212
 function take_weapons() {
@@ -123,7 +118,6 @@ function take_weapons() {
 
 // Namespace player
 // Params 0, eflags: 0x1 linked
-// namespace_5dc5e20a<file_0>::function_a05055fe
 // Checksum 0xe3a5cc14, Offset: 0x830
 // Size: 0x234
 function generate_weapon_data() {
@@ -161,7 +155,6 @@ function generate_weapon_data() {
 
 // Namespace player
 // Params 1, eflags: 0x1 linked
-// namespace_5dc5e20a<file_0>::function_75f710f6
 // Checksum 0x45cfc367, Offset: 0xa70
 // Size: 0x176
 function give_back_weapons(b_immediate) {
@@ -188,7 +181,6 @@ function give_back_weapons(b_immediate) {
 
 // Namespace player
 // Params 1, eflags: 0x1 linked
-// namespace_5dc5e20a<file_0>::function_145d50d6
 // Checksum 0xd3f45951, Offset: 0xbf0
 // Size: 0x30a
 function get_weapondata(weapon) {
@@ -232,7 +224,6 @@ function get_weapondata(weapon) {
 
 // Namespace player
 // Params 1, eflags: 0x1 linked
-// namespace_5dc5e20a<file_0>::function_cd87c683
 // Checksum 0x644277d1, Offset: 0xf08
 // Size: 0x264
 function weapondata_give(weapondata) {
@@ -262,7 +253,6 @@ function weapondata_give(weapondata) {
 
 // Namespace player
 // Params 1, eflags: 0x1 linked
-// namespace_5dc5e20a<file_0>::function_51bdb647
 // Checksum 0xd1e657b6, Offset: 0x1178
 // Size: 0x7c
 function switch_to_primary_weapon(b_immediate) {
@@ -280,7 +270,6 @@ function switch_to_primary_weapon(b_immediate) {
 
 // Namespace player
 // Params 0, eflags: 0x1 linked
-// namespace_5dc5e20a<file_0>::function_2734b5fd
 // Checksum 0x27cbe6a9, Offset: 0x1200
 // Size: 0x94
 function fill_current_clip() {
@@ -295,7 +284,6 @@ function fill_current_clip() {
 
 // Namespace player
 // Params 1, eflags: 0x1 linked
-// namespace_5dc5e20a<file_0>::function_107adfe1
 // Checksum 0xcad2be8b, Offset: 0x12a0
 // Size: 0x24
 function is_valid_weapon(weaponobject) {
@@ -304,7 +292,6 @@ function is_valid_weapon(weaponobject) {
 
 // Namespace player
 // Params 0, eflags: 0x1 linked
-// namespace_5dc5e20a<file_0>::function_5e880626
 // Checksum 0x52846471, Offset: 0x12d0
 // Size: 0x2c
 function is_spawn_protected() {
@@ -313,7 +300,6 @@ function is_spawn_protected() {
 
 // Namespace player
 // Params 0, eflags: 0x0
-// namespace_5dc5e20a<file_0>::function_8ce837a2
 // Checksum 0x15a9f39b, Offset: 0x1308
 // Size: 0x18
 function simple_respawn() {
@@ -322,7 +308,6 @@ function simple_respawn() {
 
 // Namespace player
 // Params 1, eflags: 0x1 linked
-// namespace_5dc5e20a<file_0>::function_1f591d91
 // Checksum 0x940b8fc8, Offset: 0x1328
 // Size: 0x142
 function get_snapped_spot_origin(spot_position) {
@@ -342,7 +327,6 @@ function get_snapped_spot_origin(spot_position) {
 
 // Namespace player
 // Params 1, eflags: 0x0
-// namespace_5dc5e20a<file_0>::function_c9f1c83e
 // Checksum 0x41b17cbe, Offset: 0x1478
 // Size: 0x19e
 function allow_stance_change(b_allow) {

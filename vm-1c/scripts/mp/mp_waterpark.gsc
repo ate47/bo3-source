@@ -10,7 +10,6 @@
 
 // Namespace namespace_89648a
 // Params 0, eflags: 0x1 linked
-// namespace_89648a<file_0>::function_d290ebfa
 // Checksum 0xe7dc5d45, Offset: 0x238
 // Size: 0xe04
 function main() {
@@ -73,7 +72,6 @@ function main() {
 
 // Namespace namespace_89648a
 // Params 0, eflags: 0x1 linked
-// namespace_89648a<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x1048
 // Size: 0x4
 function precache() {
@@ -82,7 +80,6 @@ function precache() {
 
 // Namespace namespace_89648a
 // Params 0, eflags: 0x1 linked
-// namespace_89648a<file_0>::function_ad0d8732
 // Checksum 0x25588a5a, Offset: 0x1058
 // Size: 0x37c
 function spawnkilltrigger() {
@@ -112,7 +109,6 @@ function spawnkilltrigger() {
 
 // Namespace namespace_89648a
 // Params 0, eflags: 0x1 linked
-// namespace_89648a<file_0>::function_3a85dbfe
 // Checksum 0x8162920f, Offset: 0x13e0
 // Size: 0x90
 function watchkilltrigger() {

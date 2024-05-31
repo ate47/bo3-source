@@ -18,7 +18,6 @@
 
 // Namespace roulette
 // Params 0, eflags: 0x2
-// namespace_ce9cba59<file_0>::function_2dc19561
 // Checksum 0x5e5edd60, Offset: 0x3f8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -27,7 +26,6 @@ function autoexec function_2dc19561() {
 
 // Namespace roulette
 // Params 0, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_8c87d8eb
 // Checksum 0xbbb057eb, Offset: 0x438
 // Size: 0x308
 function __init__() {
@@ -65,7 +63,6 @@ function __init__() {
 
     // Namespace roulette
     // Params 0, eflags: 0x0
-    // namespace_ce9cba59<file_0>::function_22cd788
     // Checksum 0xa669fb93, Offset: 0x748
     // Size: 0x1c
     function updatedvars() {
@@ -78,7 +75,6 @@ function __init__() {
 
 // Namespace roulette
 // Params 1, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_4cfa6fa0
 // Checksum 0xcf390dee, Offset: 0x770
 // Size: 0x22
 function function_4cfa6fa0(slot) {
@@ -87,7 +83,6 @@ function function_4cfa6fa0(slot) {
 
 // Namespace roulette
 // Params 1, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_327cbbe
 // Checksum 0xefc80a36, Offset: 0x7a0
 // Size: 0x22
 function function_327cbbe(slot) {
@@ -96,7 +91,6 @@ function function_327cbbe(slot) {
 
 // Namespace roulette
 // Params 2, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_26221a8d
 // Checksum 0xf7719fe7, Offset: 0x7d0
 // Size: 0x34
 function function_26221a8d(slot, weapon) {
@@ -105,7 +99,6 @@ function function_26221a8d(slot, weapon) {
 
 // Namespace roulette
 // Params 2, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_a55195e4
 // Checksum 0x58e8b84d, Offset: 0x810
 // Size: 0x54
 function function_a55195e4(slot, weapon) {
@@ -117,7 +110,6 @@ function function_a55195e4(slot, weapon) {
 
 // Namespace roulette
 // Params 2, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_e13e0d32
 // Checksum 0x10114e8e, Offset: 0x870
 // Size: 0x34
 function function_e13e0d32(slot, weapon) {
@@ -130,7 +122,6 @@ function function_e13e0d32(slot, weapon) {
 
 // Namespace roulette
 // Params 0, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_1a90b6ab
 // Checksum 0x6b12eddb, Offset: 0x8b0
 // Size: 0x14
 function function_1a90b6ab() {
@@ -139,7 +130,6 @@ function function_1a90b6ab() {
 
 // Namespace roulette
 // Params 0, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_7c7f99df
 // Checksum 0x2172c970, Offset: 0x8d0
 // Size: 0x42
 function function_7c7f99df() {
@@ -152,7 +142,6 @@ function function_7c7f99df() {
 
 // Namespace roulette
 // Params 0, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_e25adb10
 // Checksum 0xa0d5fa2f, Offset: 0x920
 // Size: 0x14
 function function_e25adb10() {
@@ -161,7 +150,6 @@ function function_e25adb10() {
 
 // Namespace roulette
 // Params 0, eflags: 0x0
-// namespace_ce9cba59<file_0>::function_f0e244e5
 // Checksum 0x99ec1590, Offset: 0x940
 // Size: 0x4
 function function_f0e244e5() {
@@ -170,7 +158,6 @@ function function_f0e244e5() {
 
 // Namespace roulette
 // Params 2, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_ca371720
 // Checksum 0xef5ffb71, Offset: 0x950
 // Size: 0x2c
 function function_ca371720(slot, weapon) {
@@ -179,7 +166,6 @@ function function_ca371720(slot, weapon) {
 
 // Namespace roulette
 // Params 2, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_a3b109bf
 // Checksum 0x1974859b, Offset: 0x988
 // Size: 0x4c
 function function_a3b109bf(slot, weapon) {
@@ -191,7 +177,6 @@ function function_a3b109bf(slot, weapon) {
 
 // Namespace roulette
 // Params 2, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_41f588ae
 // Checksum 0x7fa172b2, Offset: 0x9e0
 // Size: 0x8c
 function function_41f588ae(weapon, playsound) {
@@ -205,7 +190,6 @@ function function_41f588ae(weapon, playsound) {
 
 // Namespace roulette
 // Params 1, eflags: 0x0
-// namespace_ce9cba59<file_0>::function_834ca490
 // Checksum 0xcda3e507, Offset: 0xa78
 // Size: 0x5c
 function function_834ca490(duration) {
@@ -219,7 +203,6 @@ function function_834ca490(duration) {
 
 // Namespace roulette
 // Params 0, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_921cfa96
 // Checksum 0x881435a2, Offset: 0xae0
 // Size: 0x54
 function function_921cfa96() {
@@ -232,7 +215,6 @@ function function_921cfa96() {
 
 // Namespace roulette
 // Params 1, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_e3065835
 // Checksum 0xbed0d6be, Offset: 0xb40
 // Size: 0x1ba
 function function_e3065835(weapon) {
@@ -269,7 +251,6 @@ function function_e3065835(weapon) {
 
 // Namespace roulette
 // Params 0, eflags: 0x0
-// namespace_ce9cba59<file_0>::function_12fae26
 // Checksum 0x204f4d19, Offset: 0xd08
 // Size: 0x34
 function function_12fae26() {
@@ -282,7 +263,6 @@ function function_12fae26() {
 
 // Namespace roulette
 // Params 0, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_9746c63b
 // Checksum 0x548918d1, Offset: 0xd48
 // Size: 0x44
 function function_9746c63b() {
@@ -294,7 +274,6 @@ function function_9746c63b() {
 
 // Namespace roulette
 // Params 1, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_1eb9e79f
 // Checksum 0x79bbb368, Offset: 0xd98
 // Size: 0x94
 function function_1eb9e79f(weapon) {
@@ -310,7 +289,6 @@ function function_1eb9e79f(weapon) {
 
 // Namespace roulette
 // Params 2, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_381f2fff
 // Checksum 0xf0c00b47, Offset: 0xe38
 // Size: 0x23e
 function function_381f2fff(weapon, var_beed3e44) {
@@ -340,7 +318,6 @@ function function_381f2fff(weapon, var_beed3e44) {
 
 // Namespace roulette
 // Params 2, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_fc8f7639
 // Checksum 0x6b212acd, Offset: 0x1080
 // Size: 0x2c
 function function_fc8f7639(slot, weapon) {
@@ -349,7 +326,6 @@ function function_fc8f7639(slot, weapon) {
 
 // Namespace roulette
 // Params 1, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_27bf03c4
 // Checksum 0x123a51e0, Offset: 0x10b8
 // Size: 0x10c
 function function_27bf03c4(weapon) {
@@ -372,7 +348,6 @@ function function_27bf03c4(weapon) {
 
 // Namespace roulette
 // Params 2, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_d54205c5
 // Checksum 0xe7ac1e92, Offset: 0x11d0
 // Size: 0x14
 function function_d54205c5(slot, weapon) {
@@ -381,7 +356,6 @@ function function_d54205c5(slot, weapon) {
 
 // Namespace roulette
 // Params 2, eflags: 0x0
-// namespace_ce9cba59<file_0>::function_39b1b87b
 // Checksum 0x42e32b14, Offset: 0x11f0
 // Size: 0x9c
 function function_39b1b87b(status, time) {
@@ -396,7 +370,6 @@ function function_39b1b87b(status, time) {
 
 // Namespace roulette
 // Params 0, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_81b15d4d
 // Checksum 0x786ccab, Offset: 0x1298
 // Size: 0x1a
 function function_81b15d4d() {
@@ -405,7 +378,6 @@ function function_81b15d4d() {
 
 // Namespace roulette
 // Params 1, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_917fa966
 // Checksum 0xb828d0d1, Offset: 0x12c0
 // Size: 0x166
 function function_917fa966(var_beed3e44) {
@@ -431,7 +403,6 @@ function function_917fa966(var_beed3e44) {
 
 // Namespace roulette
 // Params 3, eflags: 0x1 linked
-// namespace_ce9cba59<file_0>::function_96a406d2
 // Checksum 0xf54aeb64, Offset: 0x1430
 // Size: 0x126
 function function_96a406d2(var_edf36e37, var_86166a51, var_c730de85) {

@@ -7,7 +7,6 @@
 
 // Namespace zm_ffotd
 // Params 0, eflags: 0x1 linked
-// namespace_4b0a4fe4<file_0>::function_8a5375f3
 // Checksum 0x99ec1590, Offset: 0x128
 // Size: 0x4
 function main_start() {
@@ -16,7 +15,6 @@ function main_start() {
 
 // Namespace zm_ffotd
 // Params 0, eflags: 0x1 linked
-// namespace_4b0a4fe4<file_0>::function_ead4e420
 // Checksum 0x7ccbc53e, Offset: 0x138
 // Size: 0x64
 function main_end() {
@@ -27,7 +25,6 @@ function main_end() {
 
 // Namespace zm_ffotd
 // Params 0, eflags: 0x0
-// namespace_4b0a4fe4<file_0>::function_e49aef7d
 // Checksum 0xcbcb8c24, Offset: 0x1a8
 // Size: 0x50
 function optimize_for_splitscreen() {

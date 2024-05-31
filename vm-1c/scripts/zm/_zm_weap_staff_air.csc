@@ -7,7 +7,6 @@
 
 // Namespace namespace_589e3c80
 // Params 0, eflags: 0x2
-// namespace_589e3c80<file_0>::function_2dc19561
 // Checksum 0xefbea1, Offset: 0x228
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,7 +15,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_589e3c80
 // Params 0, eflags: 0x1 linked
-// namespace_589e3c80<file_0>::function_8c87d8eb
 // Checksum 0x53e9c14d, Offset: 0x268
 // Size: 0x13c
 function __init__() {
@@ -31,7 +29,6 @@ function __init__() {
 
 // Namespace namespace_589e3c80
 // Params 7, eflags: 0x1 linked
-// namespace_589e3c80<file_0>::function_869adfb
 // Checksum 0x2a8c6e2e, Offset: 0x3b0
 // Size: 0x4c
 function function_869adfb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -40,7 +37,6 @@ function function_869adfb(localclientnum, oldval, newval, bnewent, binitialsnap,
 
 // Namespace namespace_589e3c80
 // Params 1, eflags: 0x1 linked
-// namespace_589e3c80<file_0>::function_39a748a7
 // Checksum 0x472e06ee, Offset: 0x408
 // Size: 0x20e
 function ragdoll_impact_watch(localclientnum) {
@@ -78,7 +74,6 @@ function ragdoll_impact_watch(localclientnum) {
 
 // Namespace namespace_589e3c80
 // Params 7, eflags: 0x1 linked
-// namespace_589e3c80<file_0>::function_5640a6aa
 // Checksum 0x5dd287ad, Offset: 0x620
 // Size: 0x204
 function function_5640a6aa(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -103,7 +98,6 @@ function function_5640a6aa(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_589e3c80
 // Params 7, eflags: 0x1 linked
-// namespace_589e3c80<file_0>::function_c6b66912
 // Checksum 0xc2de390e, Offset: 0x830
 // Size: 0x1ee
 function function_c6b66912(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -134,7 +128,6 @@ function function_c6b66912(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_589e3c80
 // Params 0, eflags: 0x1 linked
-// namespace_589e3c80<file_0>::function_3a4d4e97
 // Checksum 0x76ca7cfe, Offset: 0xa28
 // Size: 0x34
 function function_3a4d4e97() {

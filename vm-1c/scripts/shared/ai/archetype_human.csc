@@ -11,7 +11,6 @@
 
 // Namespace archetype_human
 // Params 0, eflags: 0x2
-// namespace_f8c5be8c<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x170
 // Size: 0x4
 function autoexec precache() {
@@ -20,7 +19,6 @@ function autoexec precache() {
 
 // Namespace archetype_human
 // Params 0, eflags: 0x2
-// namespace_f8c5be8c<file_0>::function_d290ebfa
 // Checksum 0xd88af5a1, Offset: 0x180
 // Size: 0x4c
 function autoexec main() {
@@ -31,7 +29,6 @@ function autoexec main() {
 
 // Namespace humanclientutils
 // Params 7, eflags: 0x1 linked
-// namespace_1735ef14<file_0>::function_c7b00089
 // Checksum 0xd40ee132, Offset: 0x1d8
 // Size: 0x8c
 function facialdialoguehandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {

@@ -8,7 +8,6 @@
 
     // Namespace debug
     // Params 0, eflags: 0x2
-    // namespace_f96f74aa<file_0>::function_2dc19561
     // Checksum 0x7638e90, Offset: 0xd0
     // Size: 0x34
     function autoexec function_2dc19561() {
@@ -17,7 +16,6 @@
 
     // Namespace debug
     // Params 0, eflags: 0x1 linked
-    // namespace_f96f74aa<file_0>::function_8c87d8eb
     // Checksum 0x6e21c650, Offset: 0x110
     // Size: 0x1c
     function __init__() {
@@ -26,7 +24,6 @@
 
     // Namespace debug
     // Params 0, eflags: 0x1 linked
-    // namespace_f96f74aa<file_0>::function_95733a17
     // Checksum 0xad4bb121, Offset: 0x138
     // Size: 0x24a
     function debug_draw_tuning_sphere() {

@@ -21,7 +21,6 @@
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_c35e6aab
 // Checksum 0xbccf1cf4, Offset: 0x658
 // Size: 0x17c
 function init() {
@@ -37,7 +36,6 @@ function init() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_72a45412
 // Checksum 0xa330c9a5, Offset: 0x7e0
 // Size: 0x64
 function on_player_spawn() {
@@ -48,7 +46,6 @@ function on_player_spawn() {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_77f47965
 // Checksum 0x6c74607d, Offset: 0x850
 // Size: 0x1a0
 function function_77f47965(playerent) {
@@ -69,7 +66,6 @@ function function_77f47965(playerent) {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x0
-// namespace_88a69b2f<file_0>::function_e172c2eb
 // Checksum 0x1d89981b, Offset: 0x9f8
 // Size: 0x116
 function function_e172c2eb(playerent) {
@@ -87,7 +83,6 @@ function function_e172c2eb(playerent) {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_6afb24d5
 // Checksum 0x58db2e83, Offset: 0xb18
 // Size: 0x28
 function function_6afb24d5(playerent) {
@@ -96,7 +91,6 @@ function function_6afb24d5(playerent) {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_79bc3ebf
 // Checksum 0x35313c8a, Offset: 0xb48
 // Size: 0x98
 function function_79bc3ebf() {
@@ -114,7 +108,6 @@ function function_79bc3ebf() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_51f86b78
 // Checksum 0x9d2ca19f, Offset: 0xbe8
 // Size: 0x64
 function setupcallbacks() {
@@ -126,7 +119,6 @@ function setupcallbacks() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_ebdcf8b2
 // Checksum 0xe5b262b4, Offset: 0xc58
 // Size: 0x27c
 function freegameplayhudelems() {
@@ -177,7 +169,6 @@ function freegameplayhudelems() {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x0
-// namespace_88a69b2f<file_0>::function_57487b97
 // Checksum 0x7fe78b3e, Offset: 0xee0
 // Size: 0xc6
 function teamplayercountsequal(playercounts) {
@@ -196,7 +187,6 @@ function teamplayercountsequal(playercounts) {
 
 // Namespace globallogic_ui
 // Params 2, eflags: 0x0
-// namespace_88a69b2f<file_0>::function_f5aaca6c
 // Checksum 0xd24f32c3, Offset: 0xfb0
 // Size: 0xda
 function teamwithlowestplayercount(playercounts, ignore_team) {
@@ -213,7 +203,6 @@ function teamwithlowestplayercount(playercounts, ignore_team) {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_7ec49a
 // Checksum 0xf699c3c7, Offset: 0x1098
 // Size: 0x36c
 function menuautoassign(comingfrommenu) {
@@ -265,7 +254,6 @@ function menuautoassign(comingfrommenu) {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_28e38a05
 // Checksum 0xce8abee3, Offset: 0x1410
 // Size: 0xce
 function teamscoresequal() {
@@ -284,7 +272,6 @@ function teamscoresequal() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_7d0933b6
 // Checksum 0x5a41cf0, Offset: 0x14e8
 // Size: 0xc4
 function teamwithlowestscore() {
@@ -300,7 +287,6 @@ function teamwithlowestscore() {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x0
-// namespace_88a69b2f<file_0>::function_c81d9a50
 // Checksum 0x5808531b, Offset: 0x15b8
 // Size: 0x74
 function pickteamfromscores(teams) {
@@ -315,7 +301,6 @@ function pickteamfromscores(teams) {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x0
-// namespace_88a69b2f<file_0>::function_6a47a2ce
 // Checksum 0x36a9d295, Offset: 0x1638
 // Size: 0xce
 function get_splitscreen_team() {
@@ -339,7 +324,6 @@ function get_splitscreen_team() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_5c7708d6
 // Checksum 0x9c684ea2, Offset: 0x1710
 // Size: 0xd4
 function updateobjectivetext() {
@@ -356,7 +340,6 @@ function updateobjectivetext() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_58a15001
 // Checksum 0x2117fdcb, Offset: 0x17f0
 // Size: 0x1c
 function closemenus() {
@@ -365,7 +348,6 @@ function closemenus() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_1fb4fec9
 // Checksum 0x36e13dad, Offset: 0x1818
 // Size: 0x2ac
 function beginclasschoice() {
@@ -397,7 +379,6 @@ function beginclasschoice() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_b381d26
 // Checksum 0x4d37e32b, Offset: 0x1ad0
 // Size: 0x38c
 function function_b381d26() {
@@ -453,7 +434,6 @@ function function_b381d26() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_e185d3f4
 // Checksum 0x18bec12f, Offset: 0x1e68
 // Size: 0x8c
 function function_e185d3f4() {
@@ -469,7 +449,6 @@ function function_e185d3f4() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_bf7a95e2
 // Checksum 0x4705f18a, Offset: 0x1f00
 // Size: 0x94
 function function_bf7a95e2() {
@@ -483,7 +462,6 @@ function function_bf7a95e2() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_52326035
 // Checksum 0x45100f1c, Offset: 0x1fa0
 // Size: 0xfe
 function function_52326035() {
@@ -504,7 +482,6 @@ function function_52326035() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_845b492e
 // Checksum 0x40f1396b, Offset: 0x20a8
 // Size: 0x74
 function showmainmenuforteam() {
@@ -515,7 +492,6 @@ function showmainmenuforteam() {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_80ae63bb
 // Checksum 0x26219d3c, Offset: 0x2128
 // Size: 0x234
 function menuteam(team) {
@@ -556,7 +532,6 @@ function menuteam(team) {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_b62abd87
 // Checksum 0x804ed8a2, Offset: 0x2368
 // Size: 0x1a4
 function menuspectator() {
@@ -587,7 +562,6 @@ function menuspectator() {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_6ede0f48
 // Checksum 0xa546881a, Offset: 0x2518
 // Size: 0x68a
 function menuclass(response) {
@@ -692,7 +666,6 @@ function menuclass(response) {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_89e70222
 // Checksum 0xd160de01, Offset: 0x2bb0
 // Size: 0x44
 function removespawnmessageshortly(delay) {
@@ -705,7 +678,6 @@ function removespawnmessageshortly(delay) {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_c1f135ab
 // Checksum 0x39576679, Offset: 0x2c00
 // Size: 0x108
 function function_c1f135ab(var_6f7b69cd) {
@@ -726,7 +698,6 @@ function function_c1f135ab(var_6f7b69cd) {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_d66e4079
 // Checksum 0xc7a0998f, Offset: 0x2d10
 // Size: 0x4a
 function function_d66e4079(var_6f7b69cd) {
@@ -736,7 +707,6 @@ function function_d66e4079(var_6f7b69cd) {
 
 // Namespace globallogic_ui
 // Params 3, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_8ee5a301
 // Checksum 0x148772b, Offset: 0x2d68
 // Size: 0xec
 function function_8ee5a301(var_6f7b69cd, closestatemaxdistance, mediumstatemaxdistance) {
@@ -758,7 +728,6 @@ function function_8ee5a301(var_6f7b69cd, closestatemaxdistance, mediumstatemaxdi
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x1 linked
-// namespace_88a69b2f<file_0>::function_2d11c5e4
 // Checksum 0xec2a034d, Offset: 0x2e60
 // Size: 0x26
 function function_2d11c5e4(var_6f7b69cd) {
@@ -767,7 +736,6 @@ function function_2d11c5e4(var_6f7b69cd) {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x0
-// namespace_88a69b2f<file_0>::function_8c6f9f69
 // Checksum 0xa0e41bc5, Offset: 0x2e90
 // Size: 0x26
 function function_8c6f9f69(var_6f7b69cd) {

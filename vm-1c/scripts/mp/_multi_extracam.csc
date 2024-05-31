@@ -8,7 +8,6 @@
 
 // Namespace multi_extracam
 // Params 0, eflags: 0x2
-// namespace_630abc90<file_0>::function_2dc19561
 // Checksum 0x84963374, Offset: 0x158
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,7 +16,6 @@ function autoexec function_2dc19561() {
 
 // Namespace multi_extracam
 // Params 1, eflags: 0x1 linked
-// namespace_630abc90<file_0>::function_8c87d8eb
 // Checksum 0x1be766f8, Offset: 0x198
 // Size: 0x2c
 function __init__(localclientnum) {
@@ -26,7 +24,6 @@ function __init__(localclientnum) {
 
 // Namespace multi_extracam
 // Params 1, eflags: 0x1 linked
-// namespace_630abc90<file_0>::function_7735d541
 // Checksum 0x6f392e00, Offset: 0x1d0
 // Size: 0x196
 function multi_extracam_init(localclientnum) {

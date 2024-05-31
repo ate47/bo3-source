@@ -8,7 +8,6 @@
 
 // Namespace healthoverlay
 // Params 0, eflags: 0x2
-// namespace_18001e6d<file_0>::function_2dc19561
 // Checksum 0x7fda6de4, Offset: 0x180
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,7 +16,6 @@ function autoexec function_2dc19561() {
 
 // Namespace healthoverlay
 // Params 0, eflags: 0x1 linked
-// namespace_18001e6d<file_0>::function_8c87d8eb
 // Checksum 0xa5bcc2ee, Offset: 0x1c0
 // Size: 0xdc
 function __init__() {
@@ -32,7 +30,6 @@ function __init__() {
 
 // Namespace healthoverlay
 // Params 0, eflags: 0x1 linked
-// namespace_18001e6d<file_0>::function_c35e6aab
 // Checksum 0x753d1a33, Offset: 0x2a8
 // Size: 0x50
 function init() {
@@ -44,7 +41,6 @@ function init() {
 
 // Namespace healthoverlay
 // Params 0, eflags: 0x1 linked
-// namespace_18001e6d<file_0>::function_f9283c47
 // Checksum 0x23849c3, Offset: 0x300
 // Size: 0x12
 function end_health_regen() {
@@ -53,7 +49,6 @@ function end_health_regen() {
 
 // Namespace healthoverlay
 // Params 0, eflags: 0x1 linked
-// namespace_18001e6d<file_0>::function_28c29e3d
 // Checksum 0xe47586d5, Offset: 0x320
 // Size: 0x554
 function player_health_regen() {
@@ -163,7 +158,6 @@ function player_health_regen() {
 
 // Namespace healthoverlay
 // Params 1, eflags: 0x1 linked
-// namespace_18001e6d<file_0>::function_675b27b0
 // Checksum 0xcca4f381, Offset: 0x880
 // Size: 0xee
 function decay_player_damages(decay) {
@@ -183,7 +177,6 @@ function decay_player_damages(decay) {
 
 // Namespace healthoverlay
 // Params 1, eflags: 0x1 linked
-// namespace_18001e6d<file_0>::function_92ef43e1
 // Checksum 0xf1256a44, Offset: 0x978
 // Size: 0xe2
 function player_breathing_sound(healthcap) {
@@ -212,7 +205,6 @@ function player_breathing_sound(healthcap) {
 
 // Namespace healthoverlay
 // Params 1, eflags: 0x1 linked
-// namespace_18001e6d<file_0>::function_4f4f83e3
 // Checksum 0x51dacd77, Offset: 0xa68
 // Size: 0x12c
 function player_heartbeat_sound(healthcap) {

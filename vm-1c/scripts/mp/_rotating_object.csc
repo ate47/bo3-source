@@ -8,7 +8,6 @@
 
 // Namespace rotating_object
 // Params 0, eflags: 0x2
-// namespace_efa64da5<file_0>::function_2dc19561
 // Checksum 0xd170aac3, Offset: 0x140
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,7 +16,6 @@ function autoexec function_2dc19561() {
 
 // Namespace rotating_object
 // Params 0, eflags: 0x1 linked
-// namespace_efa64da5<file_0>::function_8c87d8eb
 // Checksum 0xbb38f61, Offset: 0x180
 // Size: 0x24
 function __init__() {
@@ -26,7 +24,6 @@ function __init__() {
 
 // Namespace rotating_object
 // Params 1, eflags: 0x1 linked
-// namespace_efa64da5<file_0>::function_c35e6aab
 // Checksum 0xbf3a65a, Offset: 0x1b0
 // Size: 0x64
 function init(localclientnum) {
@@ -36,7 +33,6 @@ function init(localclientnum) {
 
 // Namespace rotating_object
 // Params 0, eflags: 0x1 linked
-// namespace_efa64da5<file_0>::function_218200
 // Checksum 0xd8ec663d, Offset: 0x220
 // Size: 0x1dc
 function rotating_object_think() {

@@ -5,7 +5,6 @@
 
 // Namespace player
 // Params 0, eflags: 0x2
-// namespace_5dc5e20a<file_0>::function_2dc19561
 // Checksum 0xdc7a9049, Offset: 0xf0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -14,7 +13,6 @@ function autoexec function_2dc19561() {
 
 // Namespace player
 // Params 0, eflags: 0x1 linked
-// namespace_5dc5e20a<file_0>::function_8c87d8eb
 // Checksum 0xac5b2152, Offset: 0x130
 // Size: 0x4c
 function __init__() {
@@ -23,7 +21,6 @@ function __init__() {
 
 // Namespace player
 // Params 7, eflags: 0x1 linked
-// namespace_5dc5e20a<file_0>::function_39cecb3f
 // Checksum 0x5e2ea3c, Offset: 0x188
 // Size: 0x5c
 function gameplay_started_callback(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

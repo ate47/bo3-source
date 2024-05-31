@@ -6,7 +6,6 @@
 
 // Namespace namespace_46de4034
 // Params 0, eflags: 0x2
-// namespace_46de4034<file_0>::function_2dc19561
 // Checksum 0xacae8f51, Offset: 0x140
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,7 +14,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_46de4034
 // Params 0, eflags: 0x2
-// namespace_46de4034<file_0>::function_f7046c76
 // Checksum 0x3dec4ee8, Offset: 0x180
 // Size: 0x1e
 function autoexec precache() {
@@ -24,7 +22,6 @@ function autoexec precache() {
 
 // Namespace namespace_46de4034
 // Params 0, eflags: 0x1 linked
-// namespace_46de4034<file_0>::function_8c87d8eb
 // Checksum 0x11ddfcb1, Offset: 0x1a8
 // Size: 0x64
 function __init__() {
@@ -35,7 +32,6 @@ function __init__() {
 
 // Namespace namespace_46de4034
 // Params 7, eflags: 0x5 linked
-// namespace_46de4034<file_0>::function_beea0195
 // Checksum 0xf0df0394, Offset: 0x218
 // Size: 0x108
 function private function_beea0195(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {

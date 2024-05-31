@@ -9,7 +9,6 @@
 
 // Namespace scrambler
 // Params 0, eflags: 0x2
-// namespace_ba0d5c0a<file_0>::function_2dc19561
 // Checksum 0xc2defcc9, Offset: 0x138
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace scrambler
 // Params 0, eflags: 0x0
-// namespace_ba0d5c0a<file_0>::function_8c87d8eb
 // Checksum 0xa65efa96, Offset: 0x178
 // Size: 0x14
 function __init__() {

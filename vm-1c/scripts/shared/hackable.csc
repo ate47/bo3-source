@@ -9,7 +9,6 @@
 
 // Namespace hackable
 // Params 0, eflags: 0x2
-// namespace_742a6662<file_0>::function_2dc19561
 // Checksum 0xe1cdf26e, Offset: 0x170
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace hackable
 // Params 0, eflags: 0x0
-// namespace_742a6662<file_0>::function_c35e6aab
 // Checksum 0x1adaf659, Offset: 0x1b0
 // Size: 0x24
 function init() {
@@ -27,7 +25,6 @@ function init() {
 
 // Namespace hackable
 // Params 1, eflags: 0x0
-// namespace_742a6662<file_0>::function_fb4f96b5
 // Checksum 0x71b76b02, Offset: 0x1e0
 // Size: 0x44
 function on_player_connect(localclientnum) {
@@ -36,7 +33,6 @@ function on_player_connect(localclientnum) {
 
 // Namespace hackable
 // Params 2, eflags: 0x0
-// namespace_742a6662<file_0>::function_a3b65390
 // Checksum 0xec346a6d, Offset: 0x230
 // Size: 0x94
 function set_hacked_ent(local_client_num, ent) {

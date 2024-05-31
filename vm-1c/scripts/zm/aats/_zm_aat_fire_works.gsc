@@ -15,7 +15,6 @@
 
 // Namespace namespace_a7e7ef63
 // Params 0, eflags: 0x2
-// namespace_a7e7ef63<file_0>::function_2dc19561
 // Checksum 0xc17731d1, Offset: 0x278
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -24,7 +23,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_a7e7ef63
 // Params 0, eflags: 0x1 linked
-// namespace_a7e7ef63<file_0>::function_8c87d8eb
 // Checksum 0xbb18de24, Offset: 0x2b8
 // Size: 0xe4
 function __init__() {
@@ -39,7 +37,6 @@ function __init__() {
 
 // Namespace namespace_a7e7ef63
 // Params 4, eflags: 0x1 linked
-// namespace_a7e7ef63<file_0>::function_3c61bfc2
 // Checksum 0xb159b0ab, Offset: 0x3a8
 // Size: 0x44
 function result(death, attacker, mod, weapon) {
@@ -48,7 +45,6 @@ function result(death, attacker, mod, weapon) {
 
 // Namespace namespace_a7e7ef63
 // Params 0, eflags: 0x1 linked
-// namespace_a7e7ef63<file_0>::function_5ae7061b
 // Checksum 0x2e06d898, Offset: 0x3f8
 // Size: 0x86
 function function_5ae7061b() {
@@ -69,7 +65,6 @@ function function_5ae7061b() {
 
 // Namespace namespace_a7e7ef63
 // Params 2, eflags: 0x1 linked
-// namespace_a7e7ef63<file_0>::function_188d9054
 // Checksum 0xc8ecfecc, Offset: 0x488
 // Size: 0x3e4
 function function_188d9054(e_player, w_weapon) {
@@ -114,7 +109,6 @@ function function_188d9054(e_player, w_weapon) {
 
 // Namespace namespace_a7e7ef63
 // Params 0, eflags: 0x1 linked
-// namespace_a7e7ef63<file_0>::function_5afeec5a
 // Checksum 0x67fa111b, Offset: 0x878
 // Size: 0x128
 function function_5afeec5a() {
@@ -140,7 +134,6 @@ function function_5afeec5a() {
 
 // Namespace namespace_a7e7ef63
 // Params 13, eflags: 0x1 linked
-// namespace_a7e7ef63<file_0>::function_446fe502
 // Checksum 0xb56be1fc, Offset: 0x9a8
 // Size: 0x11c
 function function_446fe502(str_mod, var_5afff096, var_7c5a4ee4, e_attacker, n_amount, w_weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel) {
@@ -156,7 +149,6 @@ function function_446fe502(str_mod, var_5afff096, var_7c5a4ee4, e_attacker, n_am
 
 // Namespace namespace_a7e7ef63
 // Params 1, eflags: 0x1 linked
-// namespace_a7e7ef63<file_0>::function_9b6b7072
 // Checksum 0x5c4dbb96, Offset: 0xad0
 // Size: 0x68
 function function_9b6b7072(attacker) {
@@ -171,7 +163,6 @@ function function_9b6b7072(attacker) {
 
 // Namespace namespace_a7e7ef63
 // Params 3, eflags: 0x1 linked
-// namespace_a7e7ef63<file_0>::function_f460d2f3
 // Checksum 0x9d35d25f, Offset: 0xb40
 // Size: 0x104
 function zombie_death_gib(e_attacker, w_weapon, e_owner) {

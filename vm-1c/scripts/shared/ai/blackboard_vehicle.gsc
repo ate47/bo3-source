@@ -6,7 +6,6 @@
 
 // Namespace blackboard
 // Params 0, eflags: 0x1 linked
-// namespace_96515e2a<file_0>::function_4a9398ae
 // Checksum 0x50764af7, Offset: 0x108
 // Size: 0xf4
 function registervehicleblackboardattributes() {
@@ -27,7 +26,6 @@ function registervehicleblackboardattributes() {
 
 // Namespace blackboard
 // Params 0, eflags: 0x1 linked
-// namespace_96515e2a<file_0>::function_ccce3b25
 // Checksum 0xc5014c38, Offset: 0x208
 // Size: 0x3a
 function bb_getspeed() {
@@ -37,7 +35,6 @@ function bb_getspeed() {
 
 // Namespace blackboard
 // Params 0, eflags: 0x1 linked
-// namespace_96515e2a<file_0>::function_d3f5783e
 // Checksum 0x6adacb43, Offset: 0x250
 // Size: 0x54
 function bb_vehgetenemyyaw() {
@@ -51,7 +48,6 @@ function bb_vehgetenemyyaw() {
 
 // Namespace blackboard
 // Params 2, eflags: 0x1 linked
-// namespace_96515e2a<file_0>::function_466d8720
 // Checksum 0x935ed51a, Offset: 0x2b0
 // Size: 0x190
 function vehgetpredictedyawtoenemy(entity, lookaheadtime) {

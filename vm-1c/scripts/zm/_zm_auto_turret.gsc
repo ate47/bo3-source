@@ -15,7 +15,6 @@
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x2
-// namespace_d1591a8d<file_0>::function_2dc19561
 // Checksum 0xbca9ef29, Offset: 0x368
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -24,7 +23,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x1 linked
-// namespace_d1591a8d<file_0>::function_8c87d8eb
 // Checksum 0x26e38224, Offset: 0x3b0
 // Size: 0x3c
 function __init__() {
@@ -34,7 +32,6 @@ function __init__() {
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x1 linked
-// namespace_d1591a8d<file_0>::function_5b6b9132
 // Checksum 0xa1f67b7e, Offset: 0x3f8
 // Size: 0x17e
 function __main__() {
@@ -64,7 +61,6 @@ function __main__() {
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x1 linked
-// namespace_d1591a8d<file_0>::function_88738224
 // Checksum 0x7717f804, Offset: 0x580
 // Size: 0x3f8
 function function_88738224() {
@@ -129,7 +125,6 @@ function function_88738224() {
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x0
-// namespace_d1591a8d<file_0>::function_87d3b877
 // Checksum 0x1c8ec4b3, Offset: 0x980
 // Size: 0xa4
 function function_87d3b877() {
@@ -145,7 +140,6 @@ function function_87d3b877() {
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x1 linked
-// namespace_d1591a8d<file_0>::function_f422b6a2
 // Checksum 0x66943774, Offset: 0xa30
 // Size: 0x2c
 function function_f422b6a2() {
@@ -154,7 +148,6 @@ function function_f422b6a2() {
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x1 linked
-// namespace_d1591a8d<file_0>::function_7b9aea27
 // Checksum 0x930e354, Offset: 0xa68
 // Size: 0x29c
 function function_7b9aea27() {
@@ -198,7 +191,6 @@ function function_7b9aea27() {
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x1 linked
-// namespace_d1591a8d<file_0>::function_ea0dbe46
 // Checksum 0xe2b63765, Offset: 0xd10
 // Size: 0x72
 function function_ea0dbe46() {
@@ -212,7 +204,6 @@ function function_ea0dbe46() {
 
 // Namespace namespace_d1591a8d
 // Params 0, eflags: 0x1 linked
-// namespace_d1591a8d<file_0>::function_2eb14263
 // Checksum 0x8569ee95, Offset: 0xd90
 // Size: 0x30
 function function_2eb14263() {
@@ -225,7 +216,6 @@ function function_2eb14263() {
 
 // Namespace namespace_d1591a8d
 // Params 1, eflags: 0x1 linked
-// namespace_d1591a8d<file_0>::function_12d49bf5
 // Checksum 0xced52821, Offset: 0xdc8
 // Size: 0x6c
 function death_check_for_challenge_updates(e_attacker) {

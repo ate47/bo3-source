@@ -9,7 +9,6 @@
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_d290ebfa
 // Checksum 0xa282f846, Offset: 0x218
 // Size: 0xf4
 function main() {
@@ -23,7 +22,6 @@ function main() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_b413fb86
 // Checksum 0x1b09760e, Offset: 0x318
 // Size: 0x6c
 function onlocalplayerspawned(localclientnum) {
@@ -36,7 +34,6 @@ function onlocalplayerspawned(localclientnum) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_f336ce55
 // Checksum 0x84f49575, Offset: 0x390
 // Size: 0xa4
 function localplayerspectating(localclientnum) {
@@ -54,7 +51,6 @@ function localplayerspectating(localclientnum) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_576e8126
 // Checksum 0x237bbd34, Offset: 0x440
 // Size: 0x3c
 function function_576e8126() {
@@ -66,7 +62,6 @@ function function_576e8126() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_c5c7c3ef
 // Checksum 0x7c234e2c, Offset: 0x488
 // Size: 0x76
 function function_c5c7c3ef(player) {
@@ -80,7 +75,6 @@ function function_c5c7c3ef(player) {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_8ef128e8
 // Checksum 0xd5799a55, Offset: 0x508
 // Size: 0x12a
 function function_8ef128e8(localclientnum, player) {
@@ -97,7 +91,6 @@ function function_8ef128e8(localclientnum, player) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_2bb59404
 // Checksum 0x821ae7ae, Offset: 0x640
 // Size: 0x2b4
 function setuppropplayernames(localclientnum) {
@@ -132,7 +125,6 @@ function setuppropplayernames(localclientnum) {
 
 // Namespace prop
 // Params 7, eflags: 0x0
-// namespace_a9dea446<file_0>::function_76519db0
 // Checksum 0xc2822249, Offset: 0x900
 // Size: 0xbc
 function highlightprop(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -147,7 +139,6 @@ function highlightprop(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_e622a96b
 // Checksum 0x3d0579b0, Offset: 0x9c8
 // Size: 0x208
 function function_e622a96b(localclientnum, var_2300871f) {
@@ -173,7 +164,6 @@ function function_e622a96b(localclientnum, var_2300871f) {
 
 // Namespace prop
 // Params 7, eflags: 0x0
-// namespace_a9dea446<file_0>::function_c87d7938
 // Checksum 0x7a6d3b20, Offset: 0xbd8
 // Size: 0x9c
 function highlightplayer(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -187,7 +177,6 @@ function highlightplayer(localclientnum, oldval, newval, bnewent, binitialsnap, 
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_b001ad83
 // Checksum 0x158cf71d, Offset: 0xc80
 // Size: 0x108
 function function_b001ad83(localclientnum, var_2300871f) {
@@ -204,7 +193,6 @@ function function_b001ad83(localclientnum, var_2300871f) {
 
 // Namespace prop
 // Params 7, eflags: 0x0
-// namespace_a9dea446<file_0>::function_6baff676
 // Checksum 0xbdd08b97, Offset: 0xd90
 // Size: 0x1d4
 function hideprop(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -227,7 +215,6 @@ function hideprop(localclientnum, oldval, newval, bnewent, binitialsnap, fieldna
 
 // Namespace prop
 // Params 7, eflags: 0x0
-// namespace_a9dea446<file_0>::function_8e3b5ce2
 // Checksum 0x4f180108, Offset: 0xf70
 // Size: 0xa4
 function function_8e3b5ce2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -243,7 +230,6 @@ function function_8e3b5ce2(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_4ff87091
 // Checksum 0x5555c2c0, Offset: 0x1020
 // Size: 0x60
 function function_4ff87091(localclientnum) {
@@ -259,7 +245,6 @@ function function_4ff87091(localclientnum) {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_4bf4d3e1
 // Checksum 0x3a1d49d9, Offset: 0x1088
 // Size: 0x17a
 function function_4bf4d3e1(localclientnum, teamint) {

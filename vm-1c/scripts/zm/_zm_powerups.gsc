@@ -32,7 +32,6 @@
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_c35e6aab
 // Checksum 0xe95276c1, Offset: 0xb38
 // Size: 0x34c
 function init() {
@@ -72,7 +71,6 @@ function init() {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_89332add
 // Checksum 0x27f3f38b, Offset: 0xe90
 // Size: 0x17c
 function init_powerups() {
@@ -98,7 +96,6 @@ function init_powerups() {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_4a83af2b
 // Checksum 0x466058e4, Offset: 0x1018
 // Size: 0x32
 function init_player_zombie_vars() {
@@ -108,7 +105,6 @@ function init_player_zombie_vars() {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_98372949
 // Checksum 0x3f149cda, Offset: 0x1058
 // Size: 0x36
 function set_weapon_ignore_max_ammo(weapon) {
@@ -120,7 +116,6 @@ function set_weapon_ignore_max_ammo(weapon) {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_80200026
 // Checksum 0xe6601c3e, Offset: 0x1098
 // Size: 0x614
 function powerup_hud_monitor() {
@@ -211,7 +206,6 @@ function powerup_hud_monitor() {
 
 // Namespace zm_powerups
 // Params 5, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_633db097
 // Checksum 0x262dd9c2, Offset: 0x16b8
 // Size: 0x10c
 function set_clientfield_powerups(clientfield_name, powerup_timer, powerup_on, flashing_timers, flashing_values) {
@@ -235,7 +229,6 @@ function set_clientfield_powerups(clientfield_name, powerup_timer, powerup_on, f
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_ae3b54f6
 // Checksum 0xcb031c17, Offset: 0x17d0
 // Size: 0x44
 function randomize_powerups() {
@@ -248,7 +241,6 @@ function randomize_powerups() {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_19eb00d4
 // Checksum 0x2738967f, Offset: 0x1820
 // Size: 0x60
 function get_next_powerup() {
@@ -263,7 +255,6 @@ function get_next_powerup() {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_f86e10ad
 // Checksum 0xbf627853, Offset: 0x1888
 // Size: 0x116
 function get_valid_powerup() {
@@ -295,7 +286,6 @@ function get_valid_powerup() {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_fff4b1d8
 // Checksum 0xab726123, Offset: 0x19a8
 // Size: 0xe8
 function minigun_no_drop() {
@@ -319,7 +309,6 @@ function minigun_no_drop() {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_ec02875e
 // Checksum 0xedf60270, Offset: 0x1a98
 // Size: 0x1e4
 function watch_for_drop() {
@@ -349,7 +338,6 @@ function watch_for_drop() {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x0
-// namespace_22646992<file_0>::function_29a2befc
 // Checksum 0xbe408545, Offset: 0x1c88
 // Size: 0x48
 function get_random_powerup_name() {
@@ -360,7 +348,6 @@ function get_random_powerup_name() {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_e820fdc1
 // Checksum 0xac0e4479, Offset: 0x1cd8
 // Size: 0xa4
 function get_regular_random_powerup_name() {
@@ -376,7 +363,6 @@ function get_regular_random_powerup_name() {
 
 // Namespace zm_powerups
 // Params 13, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_1be071ae
 // Checksum 0xcd84ff98, Offset: 0x1d88
 // Size: 0x2d0
 function add_zombie_powerup(powerup_name, model_name, hint, func_should_drop_with_regular_powerups, only_affects_grabber, any_team, zombie_grabbable, fx, client_field_name, time_name, on_name, clientfield_version, player_specific) {
@@ -423,7 +409,6 @@ function add_zombie_powerup(powerup_name, model_name, hint, func_should_drop_wit
 
 // Namespace zm_powerups
 // Params 2, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_ed72f319
 // Checksum 0x8dde0c35, Offset: 0x2060
 // Size: 0x30
 function powerup_set_can_pick_up_in_last_stand(powerup_name, b_can_pick_up) {
@@ -432,7 +417,6 @@ function powerup_set_can_pick_up_in_last_stand(powerup_name, b_can_pick_up) {
 
 // Namespace zm_powerups
 // Params 2, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_ba625dce
 // Checksum 0xf76ddef7, Offset: 0x2098
 // Size: 0x30
 function powerup_set_prevent_pick_up_if_drinking(powerup_name, b_prevent_pick_up) {
@@ -441,7 +425,6 @@ function powerup_set_prevent_pick_up_if_drinking(powerup_name, b_prevent_pick_up
 
 // Namespace zm_powerups
 // Params 2, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_77440261
 // Checksum 0x57e3b873, Offset: 0x20d0
 // Size: 0x44
 function powerup_set_player_specific(powerup_name, b_player_specific) {
@@ -453,7 +436,6 @@ function powerup_set_player_specific(powerup_name, b_player_specific) {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_8d73d5e5
 // Checksum 0x70c994cd, Offset: 0x2120
 // Size: 0x36
 function powerup_set_statless_powerup(powerup_name) {
@@ -465,7 +447,6 @@ function powerup_set_statless_powerup(powerup_name) {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_ee3c0641
 // Checksum 0xe91527ec, Offset: 0x2160
 // Size: 0x3a
 function add_zombie_special_drop(powerup_name) {
@@ -477,7 +458,6 @@ function add_zombie_special_drop(powerup_name) {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_2a156bc5
 // Checksum 0xf6d1d1d2, Offset: 0x21a8
 // Size: 0x36
 function include_zombie_powerup(powerup_name) {
@@ -489,7 +469,6 @@ function include_zombie_powerup(powerup_name) {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_499a86bf
 // Checksum 0x5e2b4916, Offset: 0x21e8
 // Size: 0x7c
 function powerup_remove_from_regular_drops(powerup_name) {
@@ -500,7 +479,6 @@ function powerup_remove_from_regular_drops(powerup_name) {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_b6d98483
 // Checksum 0xf123e19a, Offset: 0x2270
 // Size: 0x10
 function powerup_round_start() {
@@ -509,7 +487,6 @@ function powerup_round_start() {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_39f68c51
 // Checksum 0x1d2470ba, Offset: 0x2288
 // Size: 0x3e2
 function powerup_drop(drop_point) {
@@ -573,7 +550,6 @@ function powerup_drop(drop_point) {
 
 // Namespace zm_powerups
 // Params 7, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_9b998934
 // Checksum 0x3374877a, Offset: 0x2678
 // Size: 0x1a2
 function specific_powerup_drop(powerup_name, var_43d485f9, powerup_team, powerup_location, pickup_delay, powerup_player, b_stay_forever) {
@@ -598,7 +574,6 @@ function specific_powerup_drop(powerup_name, var_43d485f9, powerup_team, powerup
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_b347edb5
 // Checksum 0x7d4f50b9, Offset: 0x2828
 // Size: 0x13c
 function function_b347edb5(drop_point) {
@@ -623,7 +598,6 @@ function function_b347edb5(drop_point) {
 
 // Namespace zm_powerups
 // Params 5, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_5878d499
 // Checksum 0x2419e844, Offset: 0x2970
 // Size: 0x352
 function powerup_setup(powerup_override, powerup_team, powerup_location, powerup_player, shouldplaysound) {
@@ -678,7 +652,6 @@ function powerup_setup(powerup_override, powerup_team, powerup_location, powerup
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_e65b5a70
 // Checksum 0xfcc05d26, Offset: 0x2cd0
 // Size: 0x1ac
 function function_e65b5a70() {
@@ -706,7 +679,6 @@ function function_e65b5a70() {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_d67981e1
 // Checksum 0x52a07459, Offset: 0x2e88
 // Size: 0x54
 function powerup_zombie_grab_trigger_cleanup(trigger) {
@@ -716,7 +688,6 @@ function powerup_zombie_grab_trigger_cleanup(trigger) {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_e30b4a61
 // Checksum 0x312253db, Offset: 0x2ee8
 // Size: 0x35e
 function powerup_zombie_grab(powerup_team) {
@@ -769,7 +740,6 @@ function powerup_zombie_grab(powerup_team) {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_42f72c4
 // Checksum 0x8dc7ff86, Offset: 0x3250
 // Size: 0x8e8
 function powerup_grab(powerup_team) {
@@ -899,7 +869,6 @@ function powerup_grab(powerup_team) {
 
 // Namespace zm_powerups
 // Params 2, eflags: 0x0
-// namespace_22646992<file_0>::function_476f2c76
 // Checksum 0xe1182dcb, Offset: 0x3b40
 // Size: 0x13e
 function get_closest_window_repair(windows, origin) {
@@ -924,7 +893,6 @@ function get_closest_window_repair(windows, origin) {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_1177a4a7
 // Checksum 0x9d79aa47, Offset: 0x3c88
 // Size: 0xf0
 function powerup_vo(type) {
@@ -951,7 +919,6 @@ function powerup_vo(type) {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_7cfb3fce
 // Checksum 0x7a049d1b, Offset: 0x3d80
 // Size: 0xec
 function powerup_wobble_fx() {
@@ -980,7 +947,6 @@ function powerup_wobble_fx() {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_70fd8269
 // Checksum 0xaf5e929f, Offset: 0x3e78
 // Size: 0x1b8
 function powerup_wobble() {
@@ -1007,7 +973,6 @@ function powerup_wobble() {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_8a6e02c1
 // Checksum 0x889fd64a, Offset: 0x4038
 // Size: 0x11c
 function powerup_show(visible) {
@@ -1034,7 +999,6 @@ function powerup_show(visible) {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_590270b3
 // Checksum 0x1e6dd338, Offset: 0x4160
 // Size: 0x1dc
 function powerup_timeout() {
@@ -1081,7 +1045,6 @@ function powerup_timeout() {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_c45c7ee3
 // Checksum 0xcee46366, Offset: 0x4348
 // Size: 0x64
 function powerup_delete() {
@@ -1094,7 +1057,6 @@ function powerup_delete() {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_c64f649c
 // Checksum 0x1f7dff30, Offset: 0x43b8
 // Size: 0x3c
 function powerup_delete_delayed(time) {
@@ -1108,7 +1070,6 @@ function powerup_delete_delayed(time) {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_14e7e125
 // Checksum 0x2e0dc7ee, Offset: 0x4400
 // Size: 0x1e
 function is_insta_kill_active() {
@@ -1117,7 +1078,6 @@ function is_insta_kill_active() {
 
 // Namespace zm_powerups
 // Params 3, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_3308d17f
 // Checksum 0x88e21f7b, Offset: 0x4428
 // Size: 0x314
 function function_3308d17f(player, mod, hit_location) {
@@ -1165,7 +1125,6 @@ function function_3308d17f(player, mod, hit_location) {
 
 // Namespace zm_powerups
 // Params 2, eflags: 0x0
-// namespace_22646992<file_0>::function_272e7683
 // Checksum 0xfe8a6aab, Offset: 0x4748
 // Size: 0x94
 function point_doubler_on_hud(drop_item, player_team) {
@@ -1180,7 +1139,6 @@ function point_doubler_on_hud(drop_item, player_team) {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_7ff9b435
 // Checksum 0xb7d9c438, Offset: 0x47e8
 // Size: 0x194
 function time_remaining_on_point_doubler_powerup(player_team) {
@@ -1202,7 +1160,6 @@ function time_remaining_on_point_doubler_powerup(player_team) {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x0
-// namespace_22646992<file_0>::function_e2f502c4
 // Checksum 0xf4ba4d9c, Offset: 0x4988
 // Size: 0xc
 function devil_dialog_delay() {
@@ -1211,7 +1168,6 @@ function devil_dialog_delay() {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_d13be111
 // Checksum 0xb24d15f, Offset: 0x49a0
 // Size: 0x34
 function check_for_rare_drop_override(pos) {
@@ -1223,7 +1179,6 @@ function check_for_rare_drop_override(pos) {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_c4d6e3e4
 // Checksum 0x7d67e808, Offset: 0x49e0
 // Size: 0x72
 function tesla_powerup_active() {
@@ -1238,7 +1193,6 @@ function tesla_powerup_active() {
 
 // Namespace zm_powerups
 // Params 2, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_ed1b830d
 // Checksum 0xddaa27c9, Offset: 0x4a60
 // Size: 0x194
 function print_powerup_drop(powerup, type) {
@@ -1268,7 +1222,6 @@ function print_powerup_drop(powerup, type) {
 
 // Namespace zm_powerups
 // Params 2, eflags: 0x0
-// namespace_22646992<file_0>::function_7ba442e
 // Checksum 0x28906c0e, Offset: 0x4c00
 // Size: 0x56
 function register_carpenter_node(node, callback) {
@@ -1281,7 +1234,6 @@ function register_carpenter_node(node, callback) {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_108ccd4b
 // Checksum 0xf66d6d14, Offset: 0x4c60
 // Size: 0x28
 function function_108ccd4b() {
@@ -1293,7 +1245,6 @@ function function_108ccd4b() {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_45887568
 // Checksum 0x15f81d72, Offset: 0x4c90
 // Size: 0x6
 function func_should_never_drop() {
@@ -1302,7 +1253,6 @@ function func_should_never_drop() {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_d1b42977
 // Checksum 0xc0452ad2, Offset: 0x4ca0
 // Size: 0x8
 function func_should_always_drop() {
@@ -1311,7 +1261,6 @@ function func_should_always_drop() {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_6627e739
 // Checksum 0x2b2d02f3, Offset: 0x4cb0
 // Size: 0xfc
 function function_6627e739() {
@@ -1333,7 +1282,6 @@ function function_6627e739() {
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_9bea5bc
 // Checksum 0x49b78d73, Offset: 0x4db8
 // Size: 0xde
 function powerup_emp() {
@@ -1354,7 +1302,6 @@ function powerup_emp() {
 
 // Namespace zm_powerups
 // Params 2, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_1a9e255d
 // Checksum 0xc359d26b, Offset: 0x4ea0
 // Size: 0xf6
 function get_powerups(origin, radius) {
@@ -1372,7 +1319,6 @@ function get_powerups(origin, radius) {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_7e29ba17
 // Checksum 0x1f8a0fc2, Offset: 0x4fa0
 // Size: 0x88
 function should_award_stat(powerup_name) {
@@ -1387,7 +1333,6 @@ function should_award_stat(powerup_name) {
 
 // Namespace zm_powerups
 // Params 2, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_627915c2
 // Checksum 0x8252d25b, Offset: 0x5030
 // Size: 0x34
 function teller_withdrawl(powerup, player) {
@@ -1396,7 +1341,6 @@ function teller_withdrawl(powerup, player) {
 
 // Namespace zm_powerups
 // Params 2, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_c065e8bc
 // Checksum 0x38fd37c9, Offset: 0x5070
 // Size: 0x11c
 function show_on_hud(player_team, str_powerup) {
@@ -1416,7 +1360,6 @@ function show_on_hud(player_team, str_powerup) {
 
 // Namespace zm_powerups
 // Params 2, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_dd294084
 // Checksum 0x2d7c744a, Offset: 0x5198
 // Size: 0x214
 function time_remaining_on_powerup(player_team, str_powerup) {
@@ -1442,7 +1385,6 @@ function time_remaining_on_powerup(player_team, str_powerup) {
 
 // Namespace zm_powerups
 // Params 4, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_5efec304
 // Checksum 0x9da563eb, Offset: 0x53b8
 // Size: 0x1f4
 function weapon_powerup(ent_player, time, str_weapon, allow_cycling) {
@@ -1470,7 +1412,6 @@ function weapon_powerup(ent_player, time, str_weapon, allow_cycling) {
 
 // Namespace zm_powerups
 // Params 3, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_7576440b
 // Checksum 0x813c5681, Offset: 0x55b8
 // Size: 0xdc
 function weapon_powerup_change(ent_player, str_gun_return_notify, str_weapon) {
@@ -1490,7 +1431,6 @@ function weapon_powerup_change(ent_player, str_gun_return_notify, str_weapon) {
 
 // Namespace zm_powerups
 // Params 4, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_ddd484f4
 // Checksum 0xff19999e, Offset: 0x56a0
 // Size: 0x12c
 function weapon_powerup_countdown(ent_player, str_gun_return_notify, time, str_weapon) {
@@ -1510,7 +1450,6 @@ function weapon_powerup_countdown(ent_player, str_gun_return_notify, time, str_w
 
 // Namespace zm_powerups
 // Params 3, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_13829525
 // Checksum 0xe29192fc, Offset: 0x57d8
 // Size: 0xfc
 function weapon_powerup_replace(ent_player, str_gun_return_notify, str_weapon) {
@@ -1529,7 +1468,6 @@ function weapon_powerup_replace(ent_player, str_gun_return_notify, str_weapon) {
 
 // Namespace zm_powerups
 // Params 4, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_ca6fb35b
 // Checksum 0xb0d08de0, Offset: 0x58e0
 // Size: 0x134
 function weapon_powerup_remove(ent_player, str_gun_return_notify, str_weapon, b_switch_back_weapon) {
@@ -1553,7 +1491,6 @@ function weapon_powerup_remove(ent_player, str_gun_return_notify, str_weapon, b_
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_b94681b7
 // Checksum 0xba5b8d43, Offset: 0x5a20
 // Size: 0x158
 function weapon_watch_gunner_downed(str_weapon) {
@@ -1578,7 +1515,6 @@ function weapon_watch_gunner_downed(str_weapon) {
 
 // Namespace zm_powerups
 // Params 3, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_3d5f6a1f
 // Checksum 0x1dab04fd, Offset: 0x5b80
 // Size: 0xe4
 function register_powerup(str_powerup, func_grab_powerup, func_setup) {
@@ -1598,7 +1534,6 @@ function register_powerup(str_powerup, func_grab_powerup, func_setup) {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_6e665dc3
 // Checksum 0x82b72d1b, Offset: 0x5c70
 // Size: 0x74
 function _register_undefined_powerup(str_powerup) {
@@ -1613,7 +1548,6 @@ function _register_undefined_powerup(str_powerup) {
 
 // Namespace zm_powerups
 // Params 2, eflags: 0x1 linked
-// namespace_22646992<file_0>::function_18d592fa
 // Checksum 0x8f8e6611, Offset: 0x5cf0
 // Size: 0x98
 function register_powerup_weapon(str_powerup, func_countdown) {

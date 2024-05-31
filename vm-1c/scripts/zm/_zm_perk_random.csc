@@ -12,7 +12,6 @@
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x2
-// namespace_95f41f71<file_0>::function_2dc19561
 // Checksum 0x580e7367, Offset: 0x3e8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_8c87d8eb
 // Checksum 0x90af070d, Offset: 0x428
 // Size: 0x2fa
 function __init__() {
@@ -42,7 +40,6 @@ function __init__() {
 
 // Namespace zm_perk_random
 // Params 0, eflags: 0x0
-// namespace_95f41f71<file_0>::function_631bfeb5
 // Checksum 0x99ec1590, Offset: 0x730
 // Size: 0x4
 function init_animtree() {
@@ -51,7 +48,6 @@ function init_animtree() {
 
 // Namespace zm_perk_random
 // Params 7, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_851c1e54
 // Checksum 0x5f75a0cf, Offset: 0x740
 // Size: 0x3c
 function turn_on_location_indicator(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -60,7 +56,6 @@ function turn_on_location_indicator(localclientnum, oldval, newval, bnewent, bin
 
 // Namespace zm_perk_random
 // Params 7, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_aff02bd
 // Checksum 0x88703c4, Offset: 0x788
 // Size: 0x1aa
 function lightning_bolt_fx_toggle(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -89,7 +84,6 @@ function lightning_bolt_fx_toggle(localclientnum, oldval, newval, bnewent, binit
 
 // Namespace zm_perk_random
 // Params 7, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_b420b518
 // Checksum 0xf3a48ca6, Offset: 0x940
 // Size: 0xd4
 function zone_captured_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -107,7 +101,6 @@ function zone_captured_cb(localclientnum, oldval, newval, bnewent, binitialsnap,
 
 // Namespace zm_perk_random
 // Params 7, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_ea5f319d
 // Checksum 0xc7bd1009, Offset: 0xa20
 // Size: 0xb8
 function perk_random_machine_rock_emissive(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -124,7 +117,6 @@ function perk_random_machine_rock_emissive(localclientnum, oldval, newval, bnewe
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_1d08ad1
 // Checksum 0x532378e9, Offset: 0xae0
 // Size: 0x70
 function rock_emissive_think(localclientnum) {
@@ -137,7 +129,6 @@ function rock_emissive_think(localclientnum) {
 
 // Namespace zm_perk_random
 // Params 3, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_f9debff9
 // Checksum 0x22128f03, Offset: 0xb58
 // Size: 0x190
 function rock_emissive_fade(localclientnum, n_max_val, n_min_val) {
@@ -163,7 +154,6 @@ function rock_emissive_fade(localclientnum, n_max_val, n_min_val) {
 
 // Namespace zm_perk_random
 // Params 7, eflags: 0x5 linked
-// namespace_95f41f71<file_0>::function_b8b5a3a4
 // Checksum 0x8a84a10f, Offset: 0xcf0
 // Size: 0xaa
 function private perk_random_machine_init(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -181,7 +171,6 @@ function private perk_random_machine_init(localclientnum, oldval, newval, bnewen
 
 // Namespace zm_perk_random
 // Params 7, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_718a0a38
 // Checksum 0x19987032, Offset: 0xda8
 // Size: 0x194
 function set_light_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -206,7 +195,6 @@ function set_light_state(localclientnum, oldval, newval, bnewent, binitialsnap, 
 
 // Namespace zm_perk_random
 // Params 5, eflags: 0x5 linked
-// namespace_95f41f71<file_0>::function_e2849eb9
 // Checksum 0x2ae12ce6, Offset: 0xf48
 // Size: 0x11c
 function private perk_random_machine_play_fx(localclientnum, piece_index, tag, fx, deleteimmediate) {
@@ -225,7 +213,6 @@ function private perk_random_machine_play_fx(localclientnum, piece_index, tag, f
 
 // Namespace zm_perk_random
 // Params 7, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_f1b01534
 // Checksum 0x7527ac28, Offset: 0x1070
 // Size: 0x98
 function turn_on_active_light_green(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -238,7 +225,6 @@ function turn_on_active_light_green(localclientnum, oldval, newval, bnewent, bin
 
 // Namespace zm_perk_random
 // Params 7, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_5c4d6402
 // Checksum 0xdfbc9ead, Offset: 0x1110
 // Size: 0x98
 function turn_on_active_ball_light(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -251,7 +237,6 @@ function turn_on_active_ball_light(localclientnum, oldval, newval, bnewent, bini
 
 // Namespace zm_perk_random
 // Params 7, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_5f6feb1c
 // Checksum 0x771694ba, Offset: 0x11b0
 // Size: 0x84
 function start_bottle_cycling(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -264,7 +249,6 @@ function start_bottle_cycling(localclientnum, oldval, newval, bnewent, binitials
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_3e5d45df
 // Checksum 0x16e25db2, Offset: 0x1240
 // Size: 0xe4
 function start_vortex_fx(localclientnum) {
@@ -283,7 +267,6 @@ function start_vortex_fx(localclientnum) {
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_3da6b105
 // Checksum 0xb8cad584, Offset: 0x1330
 // Size: 0xb4
 function stop_vortex_fx(localclientnum) {
@@ -304,7 +287,6 @@ function stop_vortex_fx(localclientnum) {
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_992b2801
 // Checksum 0x2eb00f8e, Offset: 0x13f0
 // Size: 0x100
 function fx_artifact_pulse_thread(localclientnum) {
@@ -325,7 +307,6 @@ function fx_artifact_pulse_thread(localclientnum) {
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_463aa3fd
 // Checksum 0xc98c9b46, Offset: 0x14f8
 // Size: 0x44
 function fx_activation_electric_loop(localclientnum) {
@@ -340,7 +321,6 @@ function fx_activation_electric_loop(localclientnum) {
 
 // Namespace zm_perk_random
 // Params 1, eflags: 0x1 linked
-// namespace_95f41f71<file_0>::function_7ce938d0
 // Checksum 0x583a710, Offset: 0x1548
 // Size: 0x38
 function fx_bottle_cycling(localclientnum) {

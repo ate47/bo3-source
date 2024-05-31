@@ -7,7 +7,6 @@
 
 // Namespace dom
 // Params 0, eflags: 0x0
-// namespace_98d3c28f<file_0>::function_d290ebfa
 // Checksum 0x5b43ca31, Offset: 0x1a0
 // Size: 0x64
 function main() {
@@ -19,7 +18,6 @@ function main() {
 
 // Namespace dom
 // Params 1, eflags: 0x0
-// namespace_98d3c28f<file_0>::function_828aea2c
 // Checksum 0xd6b9aed7, Offset: 0x210
 // Size: 0x15a
 function on_localclient_connect(localclientnum) {
@@ -37,7 +35,6 @@ function on_localclient_connect(localclientnum) {
 
 // Namespace dom
 // Params 3, eflags: 0x0
-// namespace_98d3c28f<file_0>::function_9d281cb3
 // Checksum 0xc9411d12, Offset: 0x378
 // Size: 0x248
 function monitor_flag_fx(localclientnum, flag_objective, flag_name) {
@@ -72,7 +69,6 @@ function monitor_flag_fx(localclientnum, flag_objective, flag_name) {
 
 // Namespace dom
 // Params 4, eflags: 0x0
-// namespace_98d3c28f<file_0>::function_33e66e86
 // Checksum 0x81b02cc4, Offset: 0x5c8
 // Size: 0x120
 function play_base_fx(localclientnum, flag, fx_name, team) {
@@ -88,7 +84,6 @@ function play_base_fx(localclientnum, flag, fx_name, team) {
 
 // Namespace dom
 // Params 3, eflags: 0x0
-// namespace_98d3c28f<file_0>::function_f8164c8f
 // Checksum 0xbb292040, Offset: 0x6f0
 // Size: 0xf0
 function update_base_fx(localclientnum, flag, team) {
@@ -107,7 +102,6 @@ function update_base_fx(localclientnum, flag, team) {
 
 // Namespace dom
 // Params 4, eflags: 0x0
-// namespace_98d3c28f<file_0>::function_7e69de0f
 // Checksum 0xc243e3, Offset: 0x7e8
 // Size: 0x10c
 function play_cap_fx(localclientnum, flag, fx_name, team) {
@@ -122,7 +116,6 @@ function play_cap_fx(localclientnum, flag, fx_name, team) {
 
 // Namespace dom
 // Params 4, eflags: 0x0
-// namespace_98d3c28f<file_0>::function_14e97314
 // Checksum 0xe9305646, Offset: 0x900
 // Size: 0xd8
 function update_cap_fx(localclientnum, flag, team, progress) {
@@ -140,7 +133,6 @@ function update_cap_fx(localclientnum, flag, team, progress) {
 
 // Namespace dom
 // Params 2, eflags: 0x0
-// namespace_98d3c28f<file_0>::function_fb6f85a
 // Checksum 0x88b58279, Offset: 0x9e0
 // Size: 0x78
 function get_base_fx(flag, team) {
@@ -158,7 +150,6 @@ function get_base_fx(flag, team) {
 
 // Namespace dom
 // Params 2, eflags: 0x0
-// namespace_98d3c28f<file_0>::function_cd820c53
 // Checksum 0xf222362e, Offset: 0xa60
 // Size: 0x78
 function get_cap_fx(flag, team) {

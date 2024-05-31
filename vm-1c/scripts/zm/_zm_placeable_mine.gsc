@@ -17,7 +17,6 @@
 
 // Namespace zm_placeable_mine
 // Params 0, eflags: 0x2
-// namespace_6a494388<file_0>::function_2dc19561
 // Checksum 0xf8bbdc12, Offset: 0x2a8
 // Size: 0x2c
 function autoexec function_2dc19561() {
@@ -26,7 +25,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_placeable_mine
 // Params 0, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_5b6b9132
 // Checksum 0x835e99c8, Offset: 0x2e0
 // Size: 0x24
 function private __main__() {
@@ -37,7 +35,6 @@ function private __main__() {
 
 // Namespace zm_placeable_mine
 // Params 0, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_670d901d
 // Checksum 0x80b3d893, Offset: 0x310
 // Size: 0x70
 function private init_internal() {
@@ -53,7 +50,6 @@ function private init_internal() {
 
 // Namespace zm_placeable_mine
 // Params 0, eflags: 0x1 linked
-// namespace_6a494388<file_0>::function_385e37f8
 // Checksum 0x49678755, Offset: 0x388
 // Size: 0x62
 function get_first_available() {
@@ -66,7 +62,6 @@ function get_first_available() {
 
 // Namespace zm_placeable_mine
 // Params 2, eflags: 0x1 linked
-// namespace_6a494388<file_0>::function_9de368cb
 // Checksum 0xaa8a7e11, Offset: 0x3f8
 // Size: 0x72
 function add_mine_type(mine_name, str_retrieval_prompt) {
@@ -78,7 +73,6 @@ function add_mine_type(mine_name, str_retrieval_prompt) {
 
 // Namespace zm_placeable_mine
 // Params 1, eflags: 0x1 linked
-// namespace_6a494388<file_0>::function_8ac8f882
 // Checksum 0xc8230f66, Offset: 0x478
 // Size: 0x92
 function add_weapon_to_mine_slot(mine_name) {
@@ -93,7 +87,6 @@ function add_weapon_to_mine_slot(mine_name) {
 
 // Namespace zm_placeable_mine
 // Params 1, eflags: 0x0
-// namespace_6a494388<file_0>::function_535ea28c
 // Checksum 0xf6d4cef8, Offset: 0x518
 // Size: 0x18
 function set_max_per_player(n_max_per_player) {
@@ -102,7 +95,6 @@ function set_max_per_player(n_max_per_player) {
 
 // Namespace zm_placeable_mine
 // Params 2, eflags: 0x1 linked
-// namespace_6a494388<file_0>::function_1abcafc3
 // Checksum 0x485a70a1, Offset: 0x538
 // Size: 0xb0
 function add_planted_callback(fn_planted_cb, wpn_name) {
@@ -116,7 +108,6 @@ function add_planted_callback(fn_planted_cb, wpn_name) {
 
 // Namespace zm_placeable_mine
 // Params 1, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_f7fc44bc
 // Checksum 0x2d51c8f1, Offset: 0x5f0
 // Size: 0xa0
 function private run_planted_callbacks(e_planter) {
@@ -127,7 +118,6 @@ function private run_planted_callbacks(e_planter) {
 
 // Namespace zm_placeable_mine
 // Params 0, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_e39fb71c
 // Checksum 0xdf12834a, Offset: 0x698
 // Size: 0x34
 function private safe_to_plant() {
@@ -139,7 +129,6 @@ function private safe_to_plant() {
 
 // Namespace zm_placeable_mine
 // Params 0, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_686127f7
 // Checksum 0xea0a8be2, Offset: 0x6d8
 // Size: 0x2c
 function private wait_and_detonate() {
@@ -149,7 +138,6 @@ function private wait_and_detonate() {
 
 // Namespace zm_placeable_mine
 // Params 1, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_f0156ad4
 // Checksum 0xf8466fe8, Offset: 0x710
 // Size: 0x160
 function private mine_watch(wpn_type) {
@@ -176,7 +164,6 @@ function private mine_watch(wpn_type) {
 
 // Namespace zm_placeable_mine
 // Params 1, eflags: 0x1 linked
-// namespace_6a494388<file_0>::function_3f340b82
 // Checksum 0xb8d25709, Offset: 0x878
 // Size: 0x3a
 function is_true_placeable_mine(mine_name) {
@@ -191,7 +178,6 @@ function is_true_placeable_mine(mine_name) {
 
 // Namespace zm_placeable_mine
 // Params 2, eflags: 0x1 linked
-// namespace_6a494388<file_0>::function_13cc66d0
 // Checksum 0xe6820507, Offset: 0x8c0
 // Size: 0x170
 function setup_for_player(wpn_type, ui_model) {
@@ -222,7 +208,6 @@ function setup_for_player(wpn_type, ui_model) {
 
 // Namespace zm_placeable_mine
 // Params 1, eflags: 0x1 linked
-// namespace_6a494388<file_0>::function_4b449a58
 // Checksum 0x56bd53ea, Offset: 0xa38
 // Size: 0x30
 function disable_prompt_for_player(wpn_type) {
@@ -231,7 +216,6 @@ function disable_prompt_for_player(wpn_type) {
 
 // Namespace zm_placeable_mine
 // Params 0, eflags: 0x1 linked
-// namespace_6a494388<file_0>::function_eb0924a1
 // Checksum 0x97206e3d, Offset: 0xa70
 // Size: 0x8a
 function disable_all_prompts_for_player() {
@@ -242,7 +226,6 @@ function disable_all_prompts_for_player() {
 
 // Namespace zm_placeable_mine
 // Params 0, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_21cb7831
 // Checksum 0xc346b41b, Offset: 0xb08
 // Size: 0x2bc
 function private pickup_placeable_mine() {
@@ -283,7 +266,6 @@ function private pickup_placeable_mine() {
 
 // Namespace zm_placeable_mine
 // Params 2, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_31d9aaeb
 // Checksum 0x9c0ce992, Offset: 0xdd0
 // Size: 0x54
 function private pickup_placeable_mine_trigger_listener(trigger, player) {
@@ -293,7 +275,6 @@ function private pickup_placeable_mine_trigger_listener(trigger, player) {
 
 // Namespace zm_placeable_mine
 // Params 2, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_f58385a3
 // Checksum 0x76825ad7, Offset: 0xe30
 // Size: 0xb8
 function private pickup_placeable_mine_trigger_listener_enable(trigger, player) {
@@ -311,7 +292,6 @@ function private pickup_placeable_mine_trigger_listener_enable(trigger, player) 
 
 // Namespace zm_placeable_mine
 // Params 2, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_a5142f2e
 // Checksum 0xe3d0407e, Offset: 0xef0
 // Size: 0x98
 function private pickup_placeable_mine_trigger_listener_disable(trigger, player) {
@@ -329,7 +309,6 @@ function private pickup_placeable_mine_trigger_listener_disable(trigger, player)
 
 // Namespace zm_placeable_mine
 // Params 0, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_490a8d7c
 // Checksum 0x69c4b4ee, Offset: 0xf90
 // Size: 0x1ac
 function private placeable_mine_damage() {
@@ -370,7 +349,6 @@ function private placeable_mine_damage() {
 
 // Namespace zm_placeable_mine
 // Params 0, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_8c84ecd8
 // Checksum 0x36342f21, Offset: 0x1148
 // Size: 0x18
 function private reset_satchel_explode_this_frame() {
@@ -380,7 +358,6 @@ function private reset_satchel_explode_this_frame() {
 
 // Namespace zm_placeable_mine
 // Params 0, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_9c76084a
 // Checksum 0x977c8570, Offset: 0x1168
 // Size: 0x214
 function private replenish_after_rounds() {
@@ -409,7 +386,6 @@ function private replenish_after_rounds() {
 
 // Namespace zm_placeable_mine
 // Params 0, eflags: 0x1 linked
-// namespace_6a494388<file_0>::function_dcdfd2a4
 // Checksum 0x9343b07d, Offset: 0x1388
 // Size: 0x172
 function setup_watchers() {
@@ -431,7 +407,6 @@ function setup_watchers() {
 
 // Namespace zm_placeable_mine
 // Params 2, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_3554b37c
 // Checksum 0x7c620d33, Offset: 0x1508
 // Size: 0x5c
 function private on_spawn_retrieve_trigger(watcher, player) {
@@ -443,7 +418,6 @@ function private on_spawn_retrieve_trigger(watcher, player) {
 
 // Namespace zm_placeable_mine
 // Params 1, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_4b31a4d2
 // Checksum 0xc501c98e, Offset: 0x1570
 // Size: 0x28
 function private adjust_trigger_origin(origin) {
@@ -453,7 +427,6 @@ function private adjust_trigger_origin(origin) {
 
 // Namespace zm_placeable_mine
 // Params 3, eflags: 0x5 linked
-// namespace_6a494388<file_0>::function_f967a857
 // Checksum 0x3fb965aa, Offset: 0x15a0
 // Size: 0xcc
 function private placeable_mine_detonate(attacker, weapon, target) {

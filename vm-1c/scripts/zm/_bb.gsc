@@ -7,7 +7,6 @@
 
 // Namespace bb
 // Params 0, eflags: 0x2
-// namespace_d8129fdd<file_0>::function_2dc19561
 // Checksum 0xbee79c6c, Offset: 0x698
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,7 +15,6 @@ function autoexec function_2dc19561() {
 
 // Namespace bb
 // Params 0, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_8c87d8eb
 // Checksum 0x6e8779f7, Offset: 0x6d8
 // Size: 0x14
 function __init__() {
@@ -25,7 +23,6 @@ function __init__() {
 
 // Namespace bb
 // Params 8, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_2aa586aa
 // Checksum 0x9ff373f7, Offset: 0x6f8
 // Size: 0x534
 function logdamage(attacker, victim, weapon, damage, damagetype, hitlocation, victimkilled, victimdowned) {
@@ -100,7 +97,6 @@ function logdamage(attacker, victim, weapon, damage, damagetype, hitlocation, vi
 
 // Namespace bb
 // Params 2, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_a96d8fec
 // Checksum 0xffa916fc, Offset: 0xc38
 // Size: 0xbc
 function logaispawn(aient, spawner) {
@@ -109,7 +105,6 @@ function logaispawn(aient, spawner) {
 
 // Namespace bb
 // Params 2, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_e367a93e
 // Checksum 0xb437d062, Offset: 0xd00
 // Size: 0x144
 function logplayerevent(player, eventname) {
@@ -126,7 +121,6 @@ function logplayerevent(player, eventname) {
 
 // Namespace bb
 // Params 1, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_2c248b75
 // Checksum 0x5493d249, Offset: 0xe50
 // Size: 0xca
 function logroundevent(eventname) {
@@ -138,7 +132,6 @@ function logroundevent(eventname) {
 
 // Namespace bb
 // Params 7, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_91f32a58
 // Checksum 0x7cef30f4, Offset: 0xf28
 // Size: 0xec
 function logpurchaseevent(player, sellerent, cost, itemname, itemupgraded, itemtype, eventname) {
@@ -147,7 +140,6 @@ function logpurchaseevent(player, sellerent, cost, itemname, itemupgraded, itemt
 
 // Namespace bb
 // Params 3, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_9e0ebd5
 // Checksum 0x5792fc11, Offset: 0x1020
 // Size: 0x18a
 function logpowerupevent(powerup, optplayer, eventname) {

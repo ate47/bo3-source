@@ -14,7 +14,6 @@
 
 // Namespace collectibles
 // Params 0, eflags: 0x2
-// namespace_d275cebc<file_0>::function_2dc19561
 // Checksum 0xf37ef3f8, Offset: 0x5f8
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -23,7 +22,6 @@ function autoexec function_2dc19561() {
 
 // Namespace collectibles
 // Params 0, eflags: 0x1 linked
-// namespace_d275cebc<file_0>::function_8c87d8eb
 // Checksum 0x484ebc81, Offset: 0x640
 // Size: 0x9c
 function __init__() {
@@ -39,7 +37,6 @@ function __init__() {
 
 // Namespace collectibles
 // Params 0, eflags: 0x1 linked
-// namespace_d275cebc<file_0>::function_5b6b9132
 // Checksum 0x63f57881, Offset: 0x6e8
 // Size: 0x2c
 function __main__() {
@@ -51,7 +48,6 @@ function __main__() {
 
 // Namespace collectibles
 // Params 0, eflags: 0x1 linked
-// namespace_d275cebc<file_0>::function_ab60ef67
 // Checksum 0xad974ede, Offset: 0x720
 // Size: 0x20c
 function function_ab60ef67() {
@@ -84,7 +80,6 @@ function function_ab60ef67() {
 
 // Namespace collectibles
 // Params 1, eflags: 0x5 linked
-// namespace_d275cebc<file_0>::function_b963f25
 // Checksum 0xe2c8ec89, Offset: 0x938
 // Size: 0xe4
 function private function_b963f25(mdl_collectible) {
@@ -101,7 +96,6 @@ function private function_b963f25(mdl_collectible) {
 
 // Namespace collectibles
 // Params 0, eflags: 0x1 linked
-// namespace_d275cebc<file_0>::function_aebcf025
 // Checksum 0x99ec1590, Offset: 0xa28
 // Size: 0x4
 function on_player_spawned() {
@@ -110,7 +104,6 @@ function on_player_spawned() {
 
 // Namespace collectibles
 // Params 1, eflags: 0x1 linked
-// namespace_d275cebc<file_0>::function_8765a33c
 // Checksum 0xefd0fcb2, Offset: 0xa38
 // Size: 0x3a8
 function function_8765a33c(mdl_collectible) {
@@ -150,7 +143,6 @@ function function_8765a33c(mdl_collectible) {
 
 // Namespace collectibles
 // Params 0, eflags: 0x1 linked
-// namespace_d275cebc<file_0>::function_9b46b73e
 // Checksum 0xc218de9a, Offset: 0xde8
 // Size: 0x1a0
 function function_9b46b73e() {
@@ -168,7 +160,6 @@ function function_9b46b73e() {
 
 // Namespace collectibles
 // Params 1, eflags: 0x1 linked
-// namespace_d275cebc<file_0>::function_3c8ea097
 // Checksum 0xb72548ea, Offset: 0xf90
 // Size: 0x4e2
 function onuse(e_player) {
@@ -261,7 +252,6 @@ function onuse(e_player) {
 
 // Namespace collectibles
 // Params 1, eflags: 0x1 linked
-// namespace_d275cebc<file_0>::function_d789d2e
 // Checksum 0x5b565deb, Offset: 0x1480
 // Size: 0xa4
 function function_d789d2e(state) {
@@ -278,7 +268,6 @@ function function_d789d2e(state) {
 
 // Namespace collectibles
 // Params 1, eflags: 0x1 linked
-// namespace_d275cebc<file_0>::function_cfce9b82
 // Checksum 0x2bed3b14, Offset: 0x1530
 // Size: 0xc
 function onbeginuse(e_player) {
@@ -289,7 +278,6 @@ function onbeginuse(e_player) {
 
     // Namespace collectibles
     // Params 1, eflags: 0x1 linked
-    // namespace_d275cebc<file_0>::function_c7d0d818
     // Checksum 0xdd46cde6, Offset: 0x1548
     // Size: 0x58
     function function_c7d0d818(origin1) {
@@ -303,7 +291,6 @@ function onbeginuse(e_player) {
 
 // Namespace collectibles
 // Params 0, eflags: 0x1 linked
-// namespace_d275cebc<file_0>::function_7c315d3a
 // Checksum 0xf6b94855, Offset: 0x15a8
 // Size: 0x78
 function function_7c315d3a() {

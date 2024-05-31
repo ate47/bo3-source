@@ -7,7 +7,6 @@
 
 // Namespace namespace_723e3352
 // Params 5, eflags: 0x1 linked
-// namespace_723e3352<file_0>::function_f3d9376a
 // Checksum 0xf253a467, Offset: 0x188
 // Size: 0x470
 function function_f3d9376a(origin, angles, gender, speed, var_5f10cc59) {
@@ -67,7 +66,6 @@ function function_f3d9376a(origin, angles, gender, speed, var_5f10cc59) {
 
 // Namespace namespace_723e3352
 // Params 12, eflags: 0x1 linked
-// namespace_723e3352<file_0>::function_31f92a00
 // Checksum 0x17f917da, Offset: 0x600
 // Size: 0xa8
 function mannequindamage(inflictor, attacker, damage, dflags, mod, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
@@ -79,7 +77,6 @@ function mannequindamage(inflictor, attacker, damage, dflags, mod, weapon, point
 
 // Namespace namespace_723e3352
 // Params 0, eflags: 0x5 linked
-// namespace_723e3352<file_0>::function_eca74cda
 // Checksum 0x980bd82b, Offset: 0x6b0
 // Size: 0x54
 function private watch_game_ended() {
@@ -92,7 +89,6 @@ function private watch_game_ended() {
 
 // Namespace namespace_723e3352
 // Params 0, eflags: 0x5 linked
-// namespace_723e3352<file_0>::function_7b6d6b0b
 // Checksum 0x7022e4b, Offset: 0x710
 // Size: 0x5c
 function private function_7b6d6b0b() {
@@ -107,7 +103,6 @@ function private function_7b6d6b0b() {
 
 // Namespace namespace_723e3352
 // Params 1, eflags: 0x5 linked
-// namespace_723e3352<file_0>::function_8ad7149e
 // Checksum 0x32ca7607, Offset: 0x778
 // Size: 0x8c
 function private function_8ad7149e(frozen) {
@@ -122,7 +117,6 @@ function private function_8ad7149e(frozen) {
 
 // Namespace namespace_723e3352
 // Params 0, eflags: 0x1 linked
-// namespace_723e3352<file_0>::function_deaff58c
 // Checksum 0xbd474627, Offset: 0x810
 // Size: 0x2a0
 function function_deaff58c() {

@@ -11,7 +11,6 @@
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x2
-// namespace_52adc03e<file_0>::function_2dc19561
 // Checksum 0xb5103422, Offset: 0x5f0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_8c87d8eb
 // Checksum 0x839bd7d2, Offset: 0x630
 // Size: 0xfc
 function __init__() {
@@ -34,7 +32,6 @@ function __init__() {
 
 // Namespace namespace_52adc03e
 // Params 7, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_97d247be
 // Checksum 0xf6f1245, Offset: 0x738
 // Size: 0x10c
 function function_97d247be(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -51,7 +48,6 @@ function function_97d247be(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_52adc03e
 // Params 7, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_e312f684
 // Checksum 0x4d78cb81, Offset: 0x850
 // Size: 0x7c
 function function_e312f684(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -62,7 +58,6 @@ function function_e312f684(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_52adc03e
 // Params 0, eflags: 0x1 linked
-// namespace_52adc03e<file_0>::function_80f102b1
 // Checksum 0x43dc65dd, Offset: 0x8d8
 // Size: 0x4da
 function setup_personality_character_exerts() {

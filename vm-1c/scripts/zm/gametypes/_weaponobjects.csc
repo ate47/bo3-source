@@ -10,7 +10,6 @@
 
 // Namespace weaponobjects
 // Params 0, eflags: 0x2
-// namespace_aec973d7<file_0>::function_2dc19561
 // Checksum 0x79b0a1a9, Offset: 0x180
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,7 +18,6 @@ function autoexec function_2dc19561() {
 
 // Namespace weaponobjects
 // Params 0, eflags: 0x1 linked
-// namespace_aec973d7<file_0>::function_8c87d8eb
 // Checksum 0x204dfa4e, Offset: 0x1c0
 // Size: 0x14
 function __init__() {

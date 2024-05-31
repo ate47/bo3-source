@@ -2,7 +2,6 @@
 
 // Namespace name
 // Params 0, eflags: 0x0
-// namespace_4be20d44<file_0>::function_7cfd17f0
 // Checksum 0xe2d80747, Offset: 0x968
 // Size: 0x94
 function setup() {
@@ -17,7 +16,6 @@ function setup() {
 
 // Namespace name
 // Params 1, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_64e3832c
 // Checksum 0xceb216e4, Offset: 0xa08
 // Size: 0x7e
 function initialize_nationality(str_nationality) {
@@ -33,7 +31,6 @@ function initialize_nationality(str_nationality) {
 
 // Namespace name
 // Params 1, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_bd2395a4
 // Checksum 0xe7494a12, Offset: 0xa90
 // Size: 0x18e
 function add_nationality_names(str_nationality) {
@@ -76,7 +73,6 @@ function add_nationality_names(str_nationality) {
 
 // Namespace name
 // Params 0, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_a226ff16
 // Checksum 0xf0d1768d, Offset: 0xc28
 // Size: 0xc84
 function american_names() {
@@ -184,7 +180,6 @@ function american_names() {
 
 // Namespace name
 // Params 0, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_4f7cc8e7
 // Checksum 0xbba18c97, Offset: 0x18b8
 // Size: 0xac4
 function function_4f7cc8e7() {
@@ -278,7 +273,6 @@ function function_4f7cc8e7() {
 
 // Namespace name
 // Params 0, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_49c33890
 // Checksum 0x89223c52, Offset: 0x2388
 // Size: 0x504
 function function_49c33890() {
@@ -326,7 +320,6 @@ function function_49c33890() {
 
 // Namespace name
 // Params 0, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_d1c62dd1
 // Checksum 0x5d31fae2, Offset: 0x2898
 // Size: 0x3c4
 function function_d1c62dd1() {
@@ -364,7 +357,6 @@ function function_d1c62dd1() {
 
 // Namespace name
 // Params 0, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_45e8e281
 // Checksum 0xb24d179d, Offset: 0x2c68
 // Size: 0x284
 function function_45e8e281() {
@@ -392,7 +384,6 @@ function function_45e8e281() {
 
 // Namespace name
 // Params 0, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_20b0d377
 // Checksum 0x16afd882, Offset: 0x2ef8
 // Size: 0x144
 function function_20b0d377() {
@@ -410,7 +401,6 @@ function function_20b0d377() {
 
 // Namespace name
 // Params 0, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_3ff7174
 // Checksum 0x1eed7813, Offset: 0x3048
 // Size: 0x264
 function function_3ff7174() {
@@ -437,7 +427,6 @@ function function_3ff7174() {
 
 // Namespace name
 // Params 0, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_3a4b0ace
 // Checksum 0x1923c5c0, Offset: 0x32b8
 // Size: 0x284
 function function_3a4b0ace() {
@@ -465,7 +454,6 @@ function function_3a4b0ace() {
 
 // Namespace name
 // Params 0, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_b1ff3e5a
 // Checksum 0xec0784ff, Offset: 0x3548
 // Size: 0x284
 function function_b1ff3e5a() {
@@ -493,7 +481,6 @@ function function_b1ff3e5a() {
 
 // Namespace name
 // Params 0, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_a5d44d83
 // Checksum 0xca84922b, Offset: 0x37d8
 // Size: 0x284
 function function_a5d44d83() {
@@ -521,7 +508,6 @@ function function_a5d44d83() {
 
 // Namespace name
 // Params 2, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_5669fca4
 // Checksum 0x69bf28a4, Offset: 0x3a68
 // Size: 0x38
 function add_name(nationality, thename) {
@@ -530,7 +516,6 @@ function add_name(nationality, thename) {
 
 // Namespace name
 // Params 1, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_3e85d2c7
 // Checksum 0x9f423341, Offset: 0x3aa8
 // Size: 0xd2
 function randomize_name_list(nationality) {
@@ -545,7 +530,6 @@ function randomize_name_list(nationality) {
 
 // Namespace name
 // Params 1, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_7922262b
 // Checksum 0x70e58162, Offset: 0x3b88
 // Size: 0x362
 function get(override) {
@@ -598,7 +582,6 @@ function get(override) {
 
 // Namespace name
 // Params 0, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_e76ddadc
 // Checksum 0x87eb8e50, Offset: 0x3ef8
 // Size: 0x5c
 function get_ai_classname() {
@@ -612,7 +595,6 @@ function get_ai_classname() {
 
 // Namespace name
 // Params 2, eflags: 0x0
-// namespace_4be20d44<file_0>::function_8e6b9a66
 // Checksum 0x21aac143, Offset: 0x3f60
 // Size: 0x6e
 function add_override_name_func(nationality, func) {
@@ -625,7 +607,6 @@ function add_override_name_func(nationality, func) {
 
 // Namespace name
 // Params 1, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_f4cdd1a8
 // Checksum 0x87cdb0d9, Offset: 0x3fd8
 // Size: 0x458
 function get_name_for_nationality(nationality) {
@@ -701,7 +682,6 @@ function get_name_for_nationality(nationality) {
 
 // Namespace name
 // Params 1, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_16a184d0
 // Checksum 0x60767386, Offset: 0x4438
 // Size: 0x3c
 function is_seal_member(str_classname) {
@@ -713,7 +693,6 @@ function is_seal_member(str_classname) {
 
 // Namespace name
 // Params 1, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_d37c35e9
 // Checksum 0x679cbbb5, Offset: 0x4480
 // Size: 0x3c
 function is_navy_member(str_classname) {
@@ -725,7 +704,6 @@ function is_navy_member(str_classname) {
 
 // Namespace name
 // Params 1, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_25a66f9f
 // Checksum 0x373b55b4, Offset: 0x44c8
 // Size: 0x5c
 function is_police_member(str_classname) {
@@ -737,7 +715,6 @@ function is_police_member(str_classname) {
 
 // Namespace name
 // Params 1, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_10b913bf
 // Checksum 0xbf058ca, Offset: 0x4530
 // Size: 0x36
 function is_security_member(str_classname) {
@@ -749,7 +726,6 @@ function is_security_member(str_classname) {
 
 // Namespace name
 // Params 1, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_70a31fe4
 // Checksum 0x670e11e2, Offset: 0x4570
 // Size: 0x3c
 function is_special_agent_member(str_classname) {
@@ -761,7 +737,6 @@ function is_special_agent_member(str_classname) {
 
 // Namespace name
 // Params 1, eflags: 0x1 linked
-// namespace_4be20d44<file_0>::function_3dd70944
 // Checksum 0x91ae2455, Offset: 0x45b8
 // Size: 0x186
 function getrankfromname(name) {
@@ -799,7 +774,6 @@ function getrankfromname(name) {
 
 // Namespace name
 // Params 2, eflags: 0x0
-// namespace_4be20d44<file_0>::function_fb87f07b
 // Checksum 0x1522352f, Offset: 0x4748
 // Size: 0xcc
 function issubstr_match_any(str_match, str_search_array) {

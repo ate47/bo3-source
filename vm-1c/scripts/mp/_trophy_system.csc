@@ -10,7 +10,6 @@
 
 // Namespace trophy_system
 // Params 0, eflags: 0x2
-// namespace_f0a72d31<file_0>::function_2dc19561
 // Checksum 0x871d602b, Offset: 0x168
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,7 +18,6 @@ function autoexec function_2dc19561() {
 
 // Namespace trophy_system
 // Params 1, eflags: 0x1 linked
-// namespace_f0a72d31<file_0>::function_8c87d8eb
 // Checksum 0x9b05f6ab, Offset: 0x1a8
 // Size: 0x1c
 function __init__(localclientnum) {

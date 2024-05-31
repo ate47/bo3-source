@@ -5,7 +5,6 @@
 
 // Namespace robotinterface
 // Params 0, eflags: 0x1 linked
-// namespace_adabff90<file_0>::function_4fc8da84
 // Checksum 0x90f18da3, Offset: 0x318
 // Size: 0x69c
 function registerrobotinterfaceattributes() {

@@ -28,7 +28,6 @@
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_d290ebfa
 // Checksum 0xafd82ede, Offset: 0xa18
 // Size: 0xb58
 function main() {
@@ -189,7 +188,6 @@ function main() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_34685338
 // Checksum 0x5b2e1f9e, Offset: 0x1578
 // Size: 0x474
 function onstartgametype() {
@@ -248,7 +246,6 @@ function onstartgametype() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_8dde4d1f
 // Checksum 0x4247367c, Offset: 0x19f8
 // Size: 0x54
 function function_8dde4d1f() {
@@ -258,7 +255,6 @@ function function_8dde4d1f() {
 
 // Namespace infect
 // Params 2, eflags: 0x0
-// namespace_73ab579a<file_0>::function_f72d8c1c
 // Checksum 0x28d5139e, Offset: 0x1a58
 // Size: 0x6c
 function function_f72d8c1c(team, name) {
@@ -270,7 +266,6 @@ function function_f72d8c1c(team, name) {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_257d1c47
 // Checksum 0x92b36a79, Offset: 0x1ad0
 // Size: 0x4c
 function onendgame(winningteam) {
@@ -281,7 +276,6 @@ function onendgame(winningteam) {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_22765af9
 // Checksum 0xbd470088, Offset: 0x1b28
 // Size: 0x1b6
 function function_22765af9(winningteam) {
@@ -312,7 +306,6 @@ function function_22765af9(winningteam) {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_138f0446
 // Checksum 0xb4704ece, Offset: 0x1ce8
 // Size: 0x150
 function inithud() {
@@ -332,7 +325,6 @@ function inithud() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_603848d5
 // Checksum 0xa6262f55, Offset: 0x1e40
 // Size: 0x94
 function onplayerconnect() {
@@ -350,7 +342,6 @@ function onplayerconnect() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_70160c9
 // Checksum 0x38aaf0da, Offset: 0x1ee0
 // Size: 0x36
 function onplayerjoinedteam() {
@@ -363,7 +354,6 @@ function onplayerjoinedteam() {
 
 // Namespace infect
 // Params 2, eflags: 0x0
-// namespace_73ab579a<file_0>::function_485556b
 // Checksum 0x9622193c, Offset: 0x1f20
 // Size: 0x100
 function function_485556b(player, comingfrommenu) {
@@ -383,7 +373,6 @@ function function_485556b(player, comingfrommenu) {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_dc5fbf33
 // Checksum 0x2f36875e, Offset: 0x2028
 // Size: 0x58
 function function_dc5fbf33() {
@@ -395,7 +384,6 @@ function function_dc5fbf33() {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_19bc9234
 // Checksum 0x60cf97d9, Offset: 0x2088
 // Size: 0xbc
 function onspawnplayer(predictedspawn) {
@@ -415,7 +403,6 @@ function onspawnplayer(predictedspawn) {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_e4e885e6
 // Checksum 0xc2f18977, Offset: 0x2150
 // Size: 0x1c
 function onroundswitch() {
@@ -424,7 +411,6 @@ function onroundswitch() {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_3fcd5617
 // Checksum 0xa2162bff, Offset: 0x2178
 // Size: 0xb6
 function onroundendgame(roundwinner) {
@@ -438,7 +424,6 @@ function onroundendgame(roundwinner) {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_b3349c22
 // Checksum 0x7e3c9270, Offset: 0x2238
 // Size: 0x18
 function function_b3349c22() {
@@ -447,7 +432,6 @@ function function_b3349c22() {
 
 // Namespace infect
 // Params 3, eflags: 0x0
-// namespace_73ab579a<file_0>::function_40cc7792
 // Checksum 0x51dd4a1e, Offset: 0x2258
 // Size: 0xda
 function function_40cc7792(team, var_eb4caf58, calloutplayer) {
@@ -459,7 +443,6 @@ function function_40cc7792(team, var_eb4caf58, calloutplayer) {
 
 // Namespace infect
 // Params 9, eflags: 0x0
-// namespace_73ab579a<file_0>::function_c2658b46
 // Checksum 0x785dda9d, Offset: 0x2340
 // Size: 0x234
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -491,7 +474,6 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace infect
 // Params 2, eflags: 0x0
-// namespace_73ab579a<file_0>::function_e523aca
 // Checksum 0x827f4a8d, Offset: 0x2580
 // Size: 0x2d4
 function function_e523aca(victim, wassuicide) {
@@ -536,7 +518,6 @@ function function_e523aca(victim, wassuicide) {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_a27aff1a
 // Checksum 0xc9a10a9e, Offset: 0x2860
 // Size: 0x3a
 function function_a27aff1a() {
@@ -547,7 +528,6 @@ function function_a27aff1a() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_29e4b3e8
 // Checksum 0xe4dcdbd, Offset: 0x28a8
 // Size: 0x160
 function onfinalsurvivor() {
@@ -573,7 +553,6 @@ function onfinalsurvivor() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_d24c1b2e
 // Checksum 0x8dbf3628, Offset: 0x2a10
 // Size: 0x7c
 function function_d24c1b2e() {
@@ -589,7 +568,6 @@ function function_d24c1b2e() {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_f575f923
 // Checksum 0x6e62328f, Offset: 0x2a98
 // Size: 0x22e
 function finalsurvivoruav(finalsurvivor) {
@@ -623,7 +601,6 @@ function finalsurvivoruav(finalsurvivor) {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_e83e2a56
 // Checksum 0xd6d39d3c, Offset: 0x2cd0
 // Size: 0xd4
 function enduavonlatejoiner(finalsurvivor) {
@@ -645,7 +622,6 @@ function enduavonlatejoiner(finalsurvivor) {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_fb734762
 // Checksum 0x6e8ba4ac, Offset: 0x2db0
 // Size: 0x4c
 function ontimelimit() {
@@ -655,7 +631,6 @@ function ontimelimit() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_f092e37f
 // Checksum 0x82168c2f, Offset: 0x2e08
 // Size: 0x84
 function onsurvivorseliminated() {
@@ -667,7 +642,6 @@ function onsurvivorseliminated() {
 
 // Namespace infect
 // Params 2, eflags: 0x0
-// namespace_73ab579a<file_0>::function_11bc1b62
 // Checksum 0xab8716dd, Offset: 0x2e98
 // Size: 0x64
 function endgame(winner, endreasontext) {
@@ -681,7 +655,6 @@ function endgame(winner, endreasontext) {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_27abe9eb
 // Checksum 0x2f2415ff, Offset: 0x2f08
 // Size: 0x14
 function function_27abe9eb() {
@@ -690,7 +663,6 @@ function function_27abe9eb() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_2163426b
 // Checksum 0x30fc095b, Offset: 0x2f28
 // Size: 0x14
 function onplayerdisconnect() {
@@ -699,7 +671,6 @@ function onplayerdisconnect() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_ca9945d6
 // Checksum 0x98a0f3c7, Offset: 0x2f48
 // Size: 0x1f6
 function function_ca9945d6() {
@@ -736,7 +707,6 @@ function function_ca9945d6() {
 
 // Namespace infect
 // Params 2, eflags: 0x0
-// namespace_73ab579a<file_0>::function_ed44e709
 // Checksum 0x5b98eadb, Offset: 0x3148
 // Size: 0x96
 function givecustomloadout(takeallweapons, alreadyspawned) {
@@ -752,7 +722,6 @@ function givecustomloadout(takeallweapons, alreadyspawned) {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_bce75136
 // Checksum 0xb5817080, Offset: 0x31e8
 // Size: 0x16c
 function function_bce75136() {
@@ -779,7 +748,6 @@ function function_bce75136() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_d23c71b9
 // Checksum 0x3d1ff8ab, Offset: 0x3360
 // Size: 0x1c4
 function giveperks() {
@@ -804,7 +772,6 @@ function giveperks() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_4fe19a2e
 // Checksum 0x79008762, Offset: 0x3530
 // Size: 0x2fe
 function function_4fe19a2e() {
@@ -847,7 +814,6 @@ function function_4fe19a2e() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_39be730b
 // Checksum 0xfee6e2d, Offset: 0x3838
 // Size: 0x158
 function function_39be730b() {
@@ -873,7 +839,6 @@ function function_39be730b() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_5777d8fc
 // Checksum 0x44fe2986, Offset: 0x3998
 // Size: 0x164
 function choosefirstinfected() {
@@ -899,7 +864,6 @@ function choosefirstinfected() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_d07961fd
 // Checksum 0xe68ff6c5, Offset: 0x3b08
 // Size: 0x80
 function function_d07961fd() {
@@ -917,7 +881,6 @@ function function_d07961fd() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_34c8bd01
 // Checksum 0x545a5d88, Offset: 0x3b90
 // Size: 0x100
 function function_34c8bd01() {
@@ -941,7 +904,6 @@ function function_34c8bd01() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_938d075f
 // Checksum 0x3c583135, Offset: 0x3c98
 // Size: 0x76
 function function_938d075f() {
@@ -958,7 +920,6 @@ function function_938d075f() {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_d418a8fd
 // Checksum 0xedbd6df9, Offset: 0x3d18
 // Size: 0x12c
 function function_d418a8fd(team) {
@@ -980,7 +941,6 @@ function function_d418a8fd(team) {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_1a09ddff
 // Checksum 0x56e9d288, Offset: 0x3e50
 // Size: 0x276
 function setfirstinfected() {
@@ -1023,7 +983,6 @@ function setfirstinfected() {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_619135a0
 // Checksum 0xa7bb3a49, Offset: 0x40d0
 // Size: 0xb2
 function forcespawnteam(team) {
@@ -1035,7 +994,6 @@ function forcespawnteam(team) {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_a60288b8
 // Checksum 0x1c031324, Offset: 0x4190
 // Size: 0xe4
 function playerforcespawn() {
@@ -1059,7 +1017,6 @@ function playerforcespawn() {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_f65059ce
 // Checksum 0xf686c2bc, Offset: 0x4280
 // Size: 0x7c
 function function_f65059ce(player) {
@@ -1072,7 +1029,6 @@ function function_f65059ce(player) {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_4c6fd26d
 // Checksum 0xff19746d, Offset: 0x4308
 // Size: 0x4c
 function function_4c6fd26d() {
@@ -1085,7 +1041,6 @@ function function_4c6fd26d() {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_e90123d3
 // Checksum 0x2f05f359, Offset: 0x4360
 // Size: 0x42
 function function_e90123d3(player) {
@@ -1095,7 +1050,6 @@ function function_e90123d3(player) {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_aefd5486
 // Checksum 0x8eee1fc, Offset: 0x43b0
 // Size: 0x112
 function changeteam(team) {
@@ -1119,7 +1073,6 @@ function changeteam(team) {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_dd68b18b
 // Checksum 0x2c0745a1, Offset: 0x44d0
 // Size: 0x144
 function function_dd68b18b(team) {
@@ -1143,7 +1096,6 @@ function function_dd68b18b(team) {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_bf7761ac
 // Checksum 0x9b4c05ac, Offset: 0x4620
 // Size: 0x36
 function function_bf7761ac(team) {
@@ -1153,7 +1105,6 @@ function function_bf7761ac(team) {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_95e3ed98
 // Checksum 0x4e9657e2, Offset: 0x4660
 // Size: 0x44
 function updateteamscores() {
@@ -1163,7 +1114,6 @@ function updateteamscores() {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_5fbcf431
 // Checksum 0xe66a1aaa, Offset: 0x46b0
 // Size: 0x5c
 function updateteamscore(team) {
@@ -1174,7 +1124,6 @@ function updateteamscore(team) {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_355e787
 // Checksum 0xb03655b9, Offset: 0x4718
 // Size: 0x2c
 function function_355e787(weapon) {
@@ -1186,7 +1135,6 @@ function function_355e787(weapon) {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_84503315
 // Checksum 0xbc017bd2, Offset: 0x4750
 // Size: 0x68
 function function_84503315(weapon) {
@@ -1198,7 +1146,6 @@ function function_84503315(weapon) {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_e834578f
 // Checksum 0x3d851ff3, Offset: 0x47c0
 // Size: 0x16a
 function function_e834578f() {
@@ -1223,7 +1170,6 @@ function function_e834578f() {
 
 // Namespace infect
 // Params 2, eflags: 0x0
-// namespace_73ab579a<file_0>::function_859df572
 // Checksum 0x8a2eb012, Offset: 0x4938
 // Size: 0x3c
 function function_859df572(weapon, var_a76a1b22) {
@@ -1235,7 +1181,6 @@ function function_859df572(weapon, var_a76a1b22) {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_c30d35d6
 // Checksum 0xa14eeba0, Offset: 0x4980
 // Size: 0x10
 function function_c30d35d6() {
@@ -1244,7 +1189,6 @@ function function_c30d35d6() {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_c2deb19
 // Checksum 0x15e45848, Offset: 0x4998
 // Size: 0x92
 function gettimelimit() {
@@ -1262,7 +1206,6 @@ function gettimelimit() {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_fb693482
 // Checksum 0xc1f76bed, Offset: 0x4a38
 // Size: 0xde
 function function_fb693482(player) {
@@ -1286,7 +1229,6 @@ function function_fb693482(player) {
 
 // Namespace infect
 // Params 8, eflags: 0x0
-// namespace_73ab579a<file_0>::function_c17c938d
 // Checksum 0xad940572, Offset: 0x4b20
 // Size: 0x284
 function function_c17c938d(winner, endtype, endreasontext, outcometext, team, winnerenum, notifyroundendtoui, matchbonus) {
@@ -1321,7 +1263,6 @@ function function_c17c938d(winner, endtype, endreasontext, outcometext, team, wi
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_7ce7fbed
 // Checksum 0x5f6d2f58, Offset: 0x4db0
 // Size: 0x6c
 function function_7ce7fbed(player) {
@@ -1336,7 +1277,6 @@ function function_7ce7fbed(player) {
 
 // Namespace infect
 // Params 0, eflags: 0x0
-// namespace_73ab579a<file_0>::function_93f386c5
 // Checksum 0xe6f397bf, Offset: 0x4e28
 // Size: 0x4c
 function function_93f386c5() {
@@ -1349,7 +1289,6 @@ function function_93f386c5() {
 
 // Namespace infect
 // Params 1, eflags: 0x0
-// namespace_73ab579a<file_0>::function_e7129db9
 // Checksum 0x53e2b0fa, Offset: 0x4e80
 // Size: 0x2c
 function function_e7129db9(weaponitem) {
@@ -1360,7 +1299,6 @@ function function_e7129db9(weaponitem) {
 
     // Namespace infect
     // Params 2, eflags: 0x0
-    // namespace_73ab579a<file_0>::function_fb550fe9
     // Checksum 0xabd69782, Offset: 0x4eb8
     // Size: 0x134
     function function_fb550fe9(dvarname, var_c0c93d2) {
@@ -1384,7 +1322,6 @@ function function_e7129db9(weaponitem) {
 
     // Namespace infect
     // Params 2, eflags: 0x0
-    // namespace_73ab579a<file_0>::function_27ccd53
     // Checksum 0x603c7c15, Offset: 0x4ff8
     // Size: 0xe2
     function function_27ccd53(command, args) {
@@ -1403,7 +1340,6 @@ function function_e7129db9(weaponitem) {
 
     // Namespace infect
     // Params 0, eflags: 0x0
-    // namespace_73ab579a<file_0>::function_897ac191
     // Checksum 0x90f50a9, Offset: 0x50e8
     // Size: 0xa4
     function function_897ac191() {

@@ -40,7 +40,6 @@
 
 // Namespace prop
 // Params 0, eflags: 0x2
-// namespace_a9dea446<file_0>::function_2dc19561
 // Checksum 0x92a36df9, Offset: 0xeb0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -49,7 +48,6 @@ function autoexec function_2dc19561() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_8c87d8eb
 // Checksum 0x791d3167, Offset: 0xef0
 // Size: 0x64
 function __init__() {
@@ -59,7 +57,6 @@ function __init__() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_d290ebfa
 // Checksum 0xa79ec2b8, Offset: 0xf60
 // Size: 0x6bc
 function main() {
@@ -143,7 +140,6 @@ function main() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_fc1530ac
 // Checksum 0xa91946c, Offset: 0x1628
 // Size: 0x60
 function function_fc1530ac() {
@@ -159,7 +155,6 @@ function function_fc1530ac() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_e67ba2a2
 // Checksum 0x324eae9a, Offset: 0x1690
 // Size: 0x24
 function delayset() {
@@ -170,7 +165,6 @@ function delayset() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_257d1c47
 // Checksum 0x5812e593, Offset: 0x16c0
 // Size: 0x44
 function onendgame(winningteam) {
@@ -181,7 +175,6 @@ function onendgame(winningteam) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_e4e885e6
 // Checksum 0xd1a36ca9, Offset: 0x1710
 // Size: 0xba
 function onroundswitch() {
@@ -195,7 +188,6 @@ function onroundswitch() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_3fcd5617
 // Checksum 0xa92e100, Offset: 0x17d8
 // Size: 0x80
 function onroundendgame(var_18d04d1c) {
@@ -211,7 +203,6 @@ function onroundendgame(var_18d04d1c) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_96257f61
 // Checksum 0x5913e0ec, Offset: 0x1860
 // Size: 0x22
 function determinewinner(roundwinner) {
@@ -220,7 +211,6 @@ function determinewinner(roundwinner) {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_c7ac59e
 // Checksum 0x36e87ae6, Offset: 0x1890
 // Size: 0x230
 function function_c7ac59e(roundwinner, var_6ea8eea4) {
@@ -257,7 +247,6 @@ function function_c7ac59e(roundwinner, var_6ea8eea4) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_5cee117d
 // Checksum 0xe1e19167, Offset: 0x1ac8
 // Size: 0x1c2
 function onscoreclosemusic() {
@@ -291,7 +280,6 @@ function onscoreclosemusic() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_603848d5
 // Checksum 0xff7a20ca, Offset: 0x1c98
 // Size: 0xa2
 function onplayerconnect() {
@@ -309,7 +297,6 @@ function onplayerconnect() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_64875748
 // Checksum 0xc0b6ee59, Offset: 0x1d48
 // Size: 0xfa
 function hidehudintermission() {
@@ -328,7 +315,6 @@ function hidehudintermission() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_34685338
 // Checksum 0x24a9040e, Offset: 0x1e50
 // Size: 0x73c
 function onstartgametype() {
@@ -419,7 +405,6 @@ function onstartgametype() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_eed17dac
 // Checksum 0x2586ab21, Offset: 0x2598
 // Size: 0x8c
 function function_eed17dac(weapon) {
@@ -433,7 +418,6 @@ function function_eed17dac(weapon) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_f6c740a4
 // Checksum 0x10ce3ad2, Offset: 0x2630
 // Size: 0x54
 function function_f6c740a4(weapon) {
@@ -444,7 +428,6 @@ function function_f6c740a4(weapon) {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_c32f3fcc
 // Checksum 0xd2271022, Offset: 0x2690
 // Size: 0x7c
 function function_c32f3fcc(primaryoffhand, primaryoffhandcount) {
@@ -457,7 +440,6 @@ function function_c32f3fcc(primaryoffhand, primaryoffhandcount) {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_5ca26274
 // Checksum 0x1cf56a48, Offset: 0x2718
 // Size: 0x7c
 function function_5ca26274(secondaryoffhand, secondaryoffhandcount) {
@@ -470,7 +452,6 @@ function function_5ca26274(secondaryoffhand, secondaryoffhandcount) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_c389b506
 // Checksum 0x8966626e, Offset: 0x27a0
 // Size: 0x3c
 function giveperk(perkname) {
@@ -481,7 +462,6 @@ function giveperk(perkname) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_ed44e709
 // Checksum 0x8a8f4ec5, Offset: 0x27e8
 // Size: 0x3f6
 function givecustomloadout() {
@@ -527,7 +507,6 @@ function givecustomloadout() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_654742d1
 // Checksum 0xcf0c7165, Offset: 0x2be8
 // Size: 0x1a
 function is_player_gamepad_enabled() {
@@ -536,7 +515,6 @@ function is_player_gamepad_enabled() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_f8329ffe
 // Checksum 0xe2bc55eb, Offset: 0x2c10
 // Size: 0x64
 function whistlestarttimer(duration) {
@@ -549,7 +527,6 @@ function whistlestarttimer(duration) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_1dcf16b2
 // Checksum 0x96c8606, Offset: 0x2c80
 // Size: 0x40
 function whistlestarttimer_internal(counttime) {
@@ -563,7 +540,6 @@ function whistlestarttimer_internal(counttime) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_adfee0f5
 // Checksum 0xdec30f7d, Offset: 0x2cc8
 // Size: 0x34
 function useprophudserver() {
@@ -577,7 +553,6 @@ function useprophudserver() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_a4d3e3cf
 // Checksum 0xb96c9259, Offset: 0x2d08
 // Size: 0x4c0
 function setuproundstarthud() {
@@ -640,7 +615,6 @@ function setuproundstarthud() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_e820472
 // Checksum 0x1a4126d1, Offset: 0x31d0
 // Size: 0xa8
 function eliminatedhudmonitor() {
@@ -654,7 +628,6 @@ function eliminatedhudmonitor() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_19169d0a
 // Checksum 0x8b99a61e, Offset: 0x3280
 // Size: 0x114
 function get_alive_nonspecating_players(team) {
@@ -671,7 +644,6 @@ function get_alive_nonspecating_players(team) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_2163426b
 // Checksum 0x82f3cd94, Offset: 0x33a0
 // Size: 0x3c
 function onplayerdisconnect() {
@@ -683,7 +655,6 @@ function onplayerdisconnect() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_45c842e9
 // Checksum 0x7c5dd289, Offset: 0x33e8
 // Size: 0x28
 function function_45c842e9() {
@@ -694,7 +665,6 @@ function function_45c842e9() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_19bc9234
 // Checksum 0x5c053775, Offset: 0x3418
 // Size: 0x35c
 function onspawnplayer(predictedspawn) {
@@ -758,7 +728,6 @@ function onspawnplayer(predictedspawn) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_a709d71f
 // Checksum 0x4391ebd5, Offset: 0x3780
 // Size: 0x2a4
 function monitortimers() {
@@ -794,7 +763,6 @@ function monitortimers() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_cdee7177
 // Checksum 0x2e075c78, Offset: 0x3a30
 // Size: 0x240
 function function_cdee7177() {
@@ -826,7 +794,6 @@ function function_cdee7177() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_cb041a54
 // Checksum 0xe45d0321, Offset: 0x3c78
 // Size: 0x244
 function handleprop() {
@@ -859,7 +826,6 @@ function handleprop() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_f5d1e526
 // Checksum 0xca4e0f, Offset: 0x3ec8
 // Size: 0x9a
 function getthirdpersonrangeforsize(propsize) {
@@ -883,7 +849,6 @@ function getthirdpersonrangeforsize(propsize) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_ee3f924d
 // Checksum 0x27dfc3c5, Offset: 0x3f70
 // Size: 0x90
 function getthirdpersonheightoffsetforsize(propsize) {
@@ -907,7 +872,6 @@ function getthirdpersonheightoffsetforsize(propsize) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_8e2d867d
 // Checksum 0x25ecc0d4, Offset: 0x4008
 // Size: 0x16c
 function applyxyzoffset() {
@@ -925,7 +889,6 @@ function applyxyzoffset() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_ab42f726
 // Checksum 0xa9d99ab1, Offset: 0x4180
 // Size: 0x70
 function applyanglesoffset() {
@@ -939,7 +902,6 @@ function applyanglesoffset() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_f5596948
 // Checksum 0x661124d9, Offset: 0x41f8
 // Size: 0x510
 function propwhistle() {
@@ -1009,7 +971,6 @@ function propwhistle() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_59938cba
 // Checksum 0x8b04abf0, Offset: 0x4710
 // Size: 0xe8
 function getlivingplayersonteam(team) {
@@ -1027,7 +988,6 @@ function getlivingplayersonteam(team) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_b9b7bc13
 // Checksum 0x362c1b42, Offset: 0x4800
 // Size: 0x94
 function setupdamage() {
@@ -1042,7 +1002,6 @@ function setupdamage() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_500dc7d9
 // Checksum 0xffbac6f4, Offset: 0x48a0
 // Size: 0xea
 function function_500dc7d9(damagecallback) {
@@ -1056,7 +1015,6 @@ function function_500dc7d9(damagecallback) {
 
 // Namespace prop
 // Params 10, eflags: 0x0
-// namespace_a9dea446<file_0>::function_4e257327
 // Checksum 0xea1dfa14, Offset: 0x4998
 // Size: 0x1a4
 function damagewatch(damage, attacker, direction_vec, point, meansofdeath, modelname, tagname, partname, weapon, idflags) {
@@ -1082,7 +1040,6 @@ function damagewatch(damage, attacker, direction_vec, point, meansofdeath, model
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_3709202e
 // Checksum 0xe0078065, Offset: 0x4b48
 // Size: 0x54
 function propcleanup() {
@@ -1092,7 +1049,6 @@ function propcleanup() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_e8efbeec
 // Checksum 0xcbecfa76, Offset: 0x4ba8
 // Size: 0x12a
 function propcleanupdelayed(propents) {
@@ -1111,7 +1067,6 @@ function propcleanupdelayed(propents) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_f8469ff3
 // Checksum 0x2e066590, Offset: 0x4ce0
 // Size: 0xf4
 function propwatchdeath() {
@@ -1129,7 +1084,6 @@ function propwatchdeath() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_fea5a874
 // Checksum 0x68a2a40, Offset: 0x4de0
 // Size: 0x64
 function propwatchcleanupondisconnect() {
@@ -1143,7 +1097,6 @@ function propwatchcleanupondisconnect() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_b377fd75
 // Checksum 0xf7517c8e, Offset: 0x4e50
 // Size: 0x64
 function propwatchcleanuponroundend() {
@@ -1157,7 +1110,6 @@ function propwatchcleanuponroundend() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_bdee0913
 // Checksum 0x1edac8e7, Offset: 0x4ec0
 // Size: 0xa2
 function propclonecleanup() {
@@ -1172,7 +1124,6 @@ function propclonecleanup() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_80c4a292
 // Checksum 0x85a6b66d, Offset: 0x4f70
 // Size: 0x8c
 function propwatchprematchsettings() {
@@ -1188,7 +1139,6 @@ function propwatchprematchsettings() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_ca08f561
 // Checksum 0x2f9a7ef5, Offset: 0x5008
 // Size: 0x22
 function organizeproplist(inarray) {
@@ -1197,7 +1147,6 @@ function organizeproplist(inarray) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_b406e466
 // Checksum 0xcba70919, Offset: 0x5038
 // Size: 0x194
 function randgetpropsizetoallocate() {
@@ -1229,7 +1178,6 @@ function randgetpropsizetoallocate() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_48fae717
 // Checksum 0xe4c7660c, Offset: 0x51d8
 // Size: 0x2ae
 function getnextprop(inplayer) {
@@ -1270,7 +1218,6 @@ function getnextprop(inplayer) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_a8429dd2
 // Checksum 0x4e2ab164, Offset: 0x5490
 // Size: 0xa
 function getmapname() {
@@ -1279,7 +1226,6 @@ function getmapname() {
 
 // Namespace prop
 // Params 3, eflags: 0x0
-// namespace_a9dea446<file_0>::function_adf2659a
 // Checksum 0x2957c57b, Offset: 0x54a8
 // Size: 0x62
 function tablelookupbyrow(var_8c6b47e7, rowindex, columnindex) {
@@ -1292,7 +1238,6 @@ function tablelookupbyrow(var_8c6b47e7, rowindex, columnindex) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_b88eecdc
 // Checksum 0x215cda39, Offset: 0x5518
 // Size: 0x52c
 function populateproplist() {
@@ -1343,7 +1288,6 @@ function populateproplist() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_461f5243
 // Checksum 0x60986db1, Offset: 0x5a50
 // Size: 0x514
 function setupprop() {
@@ -1404,7 +1348,6 @@ function setupprop() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_9db20286
 // Checksum 0x2101f25, Offset: 0x5f70
 // Size: 0x2a
 function getprophealth(propinfo) {
@@ -1413,7 +1356,6 @@ function getprophealth(propinfo) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_caf0c217
 // Checksum 0xf2a22353, Offset: 0x5fa8
 // Size: 0x146
 function getpropsize(propsizetext) {
@@ -1451,7 +1393,6 @@ function getpropsize(propsizetext) {
 
 // Namespace prop
 // Params 8, eflags: 0x0
-// namespace_a9dea446<file_0>::function_20a3ce
 // Checksum 0xbd9efeb1, Offset: 0x60f8
 // Size: 0x1f8
 function addproptolist(modelname, propsize, xyzoffset, anglesoffset, propsizetext, propscale, propheight, proprange) {
@@ -1486,7 +1427,6 @@ function addproptolist(modelname, propsize, xyzoffset, anglesoffset, propsizetex
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_bef93685
 // Checksum 0x6fde2c98, Offset: 0x62f8
 // Size: 0x7c
 function ph_endgame(winningteam, endreasontext) {
@@ -1501,7 +1441,6 @@ function ph_endgame(winningteam, endreasontext) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_21226800
 // Checksum 0xf0bb828c, Offset: 0x6380
 // Size: 0x3c
 function ph_setfinalkillcamwinner(winningteam) {
@@ -1513,7 +1452,6 @@ function ph_setfinalkillcamwinner(winningteam) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_807122d9
 // Checksum 0xc954610a, Offset: 0x63c8
 // Size: 0x6c
 function givephteamscore(team) {
@@ -1527,7 +1465,6 @@ function givephteamscore(team) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_6bed115d
 // Checksum 0xf0cf6065, Offset: 0x6440
 // Size: 0xbc
 function setphteamscores() {
@@ -1544,7 +1481,6 @@ function setphteamscores() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_4abe31c7
 // Checksum 0xe33482d2, Offset: 0x6508
 // Size: 0x154
 function ononeleftevent(team) {
@@ -1575,7 +1511,6 @@ function ononeleftevent(team) {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_6feca368
 // Checksum 0xed7ad3c7, Offset: 0x6668
 // Size: 0xce
 function waittillrecoveredhealth(time, interval) {
@@ -1603,7 +1538,6 @@ function waittillrecoveredhealth(time, interval) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_a220336a
 // Checksum 0xb691d282, Offset: 0x6740
 // Size: 0x9e
 function givelastonteamwarning() {
@@ -1621,7 +1555,6 @@ function givelastonteamwarning() {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_435d5169
 // Checksum 0x6af17534, Offset: 0x67e8
 // Size: 0x44
 function function_435d5169(var_eb4caf58, calloutplayer) {
@@ -1630,7 +1563,6 @@ function function_435d5169(var_eb4caf58, calloutplayer) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_fb734762
 // Checksum 0x486dd509, Offset: 0x6838
 // Size: 0x6c
 function ontimelimit() {
@@ -1643,7 +1575,6 @@ function ontimelimit() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_f666ecbf
 // Checksum 0xa5b11995, Offset: 0x68b0
 // Size: 0xf6
 function function_f666ecbf() {
@@ -1656,7 +1587,6 @@ function function_f666ecbf() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_a1114d4b
 // Checksum 0x3d5fef46, Offset: 0x69b0
 // Size: 0x1bc
 function choosefinalkillcam() {
@@ -1683,7 +1613,6 @@ function choosefinalkillcam() {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_52b98131
 // Checksum 0xb373ef88, Offset: 0x6b78
 // Size: 0x244
 function choosebestpropforkillcam(var_fdf4a4ec, var_94ffcd5f) {
@@ -1716,7 +1645,6 @@ function choosebestpropforkillcam(var_fdf4a4ec, var_94ffcd5f) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_cd929fef
 // Checksum 0x3c243927, Offset: 0x6dc8
 // Size: 0x5c
 function function_cd929fef(setclientfield) {
@@ -1729,7 +1657,6 @@ function function_cd929fef(setclientfield) {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_945f1c41
 // Checksum 0xe533be2a, Offset: 0x6e30
 // Size: 0xf4
 function function_945f1c41(team, setclientfield) {
@@ -1745,7 +1672,6 @@ function function_945f1c41(team, setclientfield) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_c2dcc15d
 // Checksum 0x5c4dc50a, Offset: 0x6f30
 // Size: 0x84
 function function_c2dcc15d(team) {
@@ -1762,7 +1688,6 @@ function function_c2dcc15d(team) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_a8e0199
 // Checksum 0x973a99ef, Offset: 0x6fc0
 // Size: 0x70
 function function_a8e0199(team) {
@@ -1777,7 +1702,6 @@ function function_a8e0199(team) {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_cb3d2d31
 // Checksum 0xabc16fab, Offset: 0x7038
 // Size: 0xe6
 function function_cb3d2d31(player, team) {
@@ -1798,7 +1722,6 @@ function function_cb3d2d31(player, team) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_346bdc3b
 // Checksum 0x6044ca84, Offset: 0x7128
 // Size: 0x144
 function function_346bdc3b() {
@@ -1822,7 +1745,6 @@ function function_346bdc3b() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_a8cb094c
 // Checksum 0xb00d9545, Offset: 0x7278
 // Size: 0x234
 function stillalivexp() {
@@ -1869,7 +1791,6 @@ function stillalivexp() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_ca21c858
 // Checksum 0x27b77a15, Offset: 0x74b8
 // Size: 0x170
 function tracktimealive() {
@@ -1896,7 +1817,6 @@ function tracktimealive() {
 
 // Namespace prop
 // Params 11, eflags: 0x0
-// namespace_a9dea446<file_0>::function_19973438
 // Checksum 0x4ff11418, Offset: 0x7630
 // Size: 0xd0
 function gamemodemodifyplayerdamage(einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon, vpoint, vdir, shitloc, psoffsettime, boneindex) {
@@ -1911,7 +1831,6 @@ function gamemodemodifyplayerdamage(einflictor, eattacker, idamage, idflags, sme
 
 // Namespace prop
 // Params 6, eflags: 0x0
-// namespace_a9dea446<file_0>::function_dc6b46ed
 // Checksum 0x36de1fe8, Offset: 0x7708
 // Size: 0xbe
 function function_dc6b46ed(idflags, shitloc, weapon, friendlyfire, attackerishittingself, smeansofdeath) {
@@ -1931,7 +1850,6 @@ function function_dc6b46ed(idflags, shitloc, weapon, friendlyfire, attackerishit
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_3c054273
 // Checksum 0x5076a21b, Offset: 0x77d0
 // Size: 0x148
 function attackerswaittime() {
@@ -1962,7 +1880,6 @@ function attackerswaittime() {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_b00e098a
 // Checksum 0xa8e83fbf, Offset: 0x7920
 // Size: 0x110
 function function_b00e098a(var_e47d50e6, remainingtime) {
@@ -1985,7 +1902,6 @@ function function_b00e098a(var_e47d50e6, remainingtime) {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_b1b25534
 // Checksum 0xe6e153d9, Offset: 0x7a38
 // Size: 0x1e0
 function function_b1b25534(var_e47d50e6, remainingtime) {
@@ -2022,7 +1938,6 @@ function function_b1b25534(var_e47d50e6, remainingtime) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_d9c4b3d0
 // Checksum 0x6600a317, Offset: 0x7c20
 // Size: 0x20
 function function_d9c4b3d0() {
@@ -2031,7 +1946,6 @@ function function_d9c4b3d0() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_1edf732a
 // Checksum 0x9734ff41, Offset: 0x7c48
 // Size: 0x70
 function function_1edf732a() {
@@ -2047,7 +1961,6 @@ function function_1edf732a() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_da184fd
 // Checksum 0x3bfa2135, Offset: 0x7cc0
 // Size: 0x64
 function function_da184fd(remainingtime) {
@@ -2062,7 +1975,6 @@ function function_da184fd(remainingtime) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_5eebce92
 // Checksum 0xece38ec2, Offset: 0x7d30
 // Size: 0x30
 function function_5eebce92(remainingtime) {
@@ -2073,7 +1985,6 @@ function function_5eebce92(remainingtime) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_e999d
 // Checksum 0x2872313, Offset: 0x7d68
 // Size: 0x1b4
 function function_e999d() {
@@ -2108,7 +2019,6 @@ function function_e999d() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_320928f9
 // Checksum 0x25c1362d, Offset: 0x7f28
 // Size: 0x4c
 function function_320928f9() {
@@ -2120,7 +2030,6 @@ function function_320928f9() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_fbd8cfe8
 // Checksum 0xc7d97680, Offset: 0x7f80
 // Size: 0x1c4
 function attackerinitammo() {
@@ -2146,7 +2055,6 @@ function attackerinitammo() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_40302825
 // Checksum 0x65faf60b, Offset: 0x8150
 // Size: 0x98
 function attackerregenammo() {
@@ -2164,7 +2072,6 @@ function attackerregenammo() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_bd63ad3d
 // Checksum 0xf60b825b, Offset: 0x81f0
 // Size: 0x9c
 function checkkillrespawn() {
@@ -2182,7 +2089,6 @@ function checkkillrespawn() {
 
 // Namespace prop
 // Params 3, eflags: 0x0
-// namespace_a9dea446<file_0>::function_7d4f8220
 // Checksum 0x675406d3, Offset: 0x8298
 // Size: 0x4ca
 function function_7d4f8220(attacker, smeansofdeath, weapon) {
@@ -2245,7 +2151,6 @@ function function_7d4f8220(attacker, smeansofdeath, weapon) {
 
 // Namespace prop
 // Params 10, eflags: 0x0
-// namespace_a9dea446<file_0>::function_c2658b46
 // Checksum 0x6c47998a, Offset: 0x8770
 // Size: 0x42a
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, sweapon, vdir, shitloc, psoffsettime, deathanimduration, lifeid) {
@@ -2290,7 +2195,6 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, sweapon, v
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_cc5aee80
 // Checksum 0x7349378f, Offset: 0x8ba8
 // Size: 0x1c
 function respawnplayer() {
@@ -2299,7 +2203,6 @@ function respawnplayer() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_a975df4d
 // Checksum 0x230402aa, Offset: 0x8bd0
 // Size: 0xa6
 function waittillcanspawnclient() {
@@ -2319,7 +2222,6 @@ function waittillcanspawnclient() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_e0db18e8
 // Checksum 0xe3885e05, Offset: 0x8c80
 // Size: 0x5c
 function ondeadevent(team) {
@@ -2335,7 +2237,6 @@ function ondeadevent(team) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_b491ea0c
 // Checksum 0x7dbc7bfc, Offset: 0x8ce8
 // Size: 0xb4
 function propkilledend() {
@@ -2354,7 +2255,6 @@ function propkilledend() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_470f21c5
 // Checksum 0x17d68e67, Offset: 0x8da8
 // Size: 0x3c
 function function_470f21c5(smeansofdeath) {
@@ -2365,7 +2265,6 @@ function function_470f21c5(smeansofdeath) {
 
 // Namespace prop
 // Params 4, eflags: 0x0
-// namespace_a9dea446<file_0>::function_f21fec4
 // Checksum 0xc759fc00, Offset: 0x8df0
 // Size: 0x6c
 function playdeathsoundph(body, attacker, weapon, smeansofdeath) {
@@ -2376,7 +2275,6 @@ function playdeathsoundph(body, attacker, weapon, smeansofdeath) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_c99967b7
 // Checksum 0xf8df2b31, Offset: 0x8e68
 // Size: 0x34
 function round(value) {
@@ -2386,7 +2284,6 @@ function round(value) {
 
 // Namespace prop
 // Params 8, eflags: 0x0
-// namespace_a9dea446<file_0>::function_c17c938d
 // Checksum 0xf03a5bb4, Offset: 0x8ea8
 // Size: 0x3cc
 function function_c17c938d(winner, endtype, endreasontext, outcometext, team, winnerenum, notifyroundendtoui, matchbonus) {
@@ -2440,7 +2337,6 @@ function function_c17c938d(winner, endtype, endreasontext, outcometext, team, wi
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_e0d16266
 // Checksum 0x32f1a64c, Offset: 0x9280
 // Size: 0x28
 function function_e0d16266(spawnpoint, predictedspawn) {
@@ -2451,7 +2347,6 @@ function function_e0d16266(spawnpoint, predictedspawn) {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_6f13f156
 // Checksum 0x9abacb5d, Offset: 0x92b0
 // Size: 0xf6
 function function_6f13f156(spawnpoint, predictedspawn) {
@@ -2467,7 +2362,6 @@ function function_6f13f156(spawnpoint, predictedspawn) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_2afb638
 // Checksum 0x7cc765e6, Offset: 0x93b0
 // Size: 0x66
 function gamehasstarted() {
@@ -2479,7 +2373,6 @@ function gamehasstarted() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_4fb47492
 // Checksum 0x8ac7cf4b, Offset: 0x9420
 // Size: 0x146
 function function_4fb47492() {
@@ -2512,7 +2405,6 @@ function function_4fb47492() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_75804806
 // Checksum 0x86ab1f8, Offset: 0x9570
 // Size: 0x5c
 function disablespawningforplayer() {
@@ -2529,7 +2421,6 @@ function disablespawningforplayer() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_e4b2f23
 // Checksum 0xd9476b1e, Offset: 0x95d8
 // Size: 0x24
 function function_e4b2f23() {
@@ -2538,7 +2429,6 @@ function function_e4b2f23() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_4bdf92a7
 // Checksum 0x8a09992a, Offset: 0x9608
 // Size: 0xb2
 function function_4bdf92a7() {
@@ -2550,7 +2440,6 @@ function function_4bdf92a7() {
 
 // Namespace prop
 // Params 6, eflags: 0x0
-// namespace_a9dea446<file_0>::function_9bb11de9
 // Checksum 0x240ea49f, Offset: 0x96c8
 // Size: 0x9c
 function function_9bb11de9(eattacker, einflictor, weapon, smeansofdeath, idamage, vpoint) {
@@ -2562,7 +2451,6 @@ function function_9bb11de9(eattacker, einflictor, weapon, smeansofdeath, idamage
 
 // Namespace prop
 // Params 6, eflags: 0x0
-// namespace_a9dea446<file_0>::function_b37cf698
 // Checksum 0x1f6810f9, Offset: 0x9770
 // Size: 0x33a
 function function_b37cf698(eattacker, einflictor, weapon, meansofdeath, damage, point) {
@@ -2623,7 +2511,6 @@ function function_b37cf698(eattacker, einflictor, weapon, meansofdeath, damage, 
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_7010fe7f
 // Checksum 0xa843d4f7, Offset: 0x9ab8
 // Size: 0x14a
 function function_7010fe7f() {
@@ -2643,7 +2530,6 @@ function function_7010fe7f() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_5dcd4f30
 // Checksum 0x71af1237, Offset: 0x9c10
 // Size: 0x104
 function propwaitminigameinit(time) {
@@ -2666,7 +2552,6 @@ function propwaitminigameinit(time) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_b408af2c
 // Checksum 0xb1f8fb72, Offset: 0x9d20
 // Size: 0x422
 function function_b408af2c(time) {
@@ -2717,7 +2602,6 @@ function function_b408af2c(time) {
 
 // Namespace prop
 // Params 3, eflags: 0x0
-// namespace_a9dea446<file_0>::function_e8982b84
 // Checksum 0x42e7e3, Offset: 0xa150
 // Size: 0x11c
 function propminigameupdateshowwinner(hud, winyoffset, winfontscale) {
@@ -2739,7 +2623,6 @@ function propminigameupdateshowwinner(hud, winyoffset, winfontscale) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_7d5b1fa6
 // Checksum 0x34115605, Offset: 0xa278
 // Size: 0x8c
 function function_7d5b1fa6() {
@@ -2751,7 +2634,6 @@ function function_7d5b1fa6() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_2472fc6
 // Checksum 0xc3eae6f0, Offset: 0xa310
 // Size: 0x1c
 function function_2472fc6() {
@@ -2760,7 +2642,6 @@ function function_2472fc6() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_503c9413
 // Checksum 0x91e773aa, Offset: 0xa338
 // Size: 0x7a
 function function_503c9413() {
@@ -2775,7 +2656,6 @@ function function_503c9413() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_543b1a75
 // Checksum 0x103a6023, Offset: 0xa3c0
 // Size: 0x13c
 function function_543b1a75(isvisible) {
@@ -2800,7 +2680,6 @@ function function_543b1a75(isvisible) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_471ff19e
 // Checksum 0x1d4dbad9, Offset: 0xa508
 // Size: 0x16c
 function function_471ff19e(player) {
@@ -2824,7 +2703,6 @@ function function_471ff19e(player) {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_84edfab0
 // Checksum 0xfb1cbfe9, Offset: 0xa680
 // Size: 0x5c
 function function_84edfab0(player, clone) {
@@ -2838,7 +2716,6 @@ function function_84edfab0(player, clone) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_f2704a3c
 // Checksum 0x2b910f13, Offset: 0xa6e8
 // Size: 0x1a4
 function function_f2704a3c(isvisible) {
@@ -2866,7 +2743,6 @@ function function_f2704a3c(isvisible) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_c91df86f
 // Checksum 0xb8d3005a, Offset: 0xa898
 // Size: 0x29a
 function function_c91df86f() {
@@ -2903,7 +2779,6 @@ function function_c91df86f() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_1450fc18
 // Checksum 0xa3960799, Offset: 0xab40
 // Size: 0x15a
 function function_1450fc18() {
@@ -2923,7 +2798,6 @@ function function_1450fc18() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_5f1e8e1b
 // Checksum 0x99cbcc12, Offset: 0xaca8
 // Size: 0xa
 function function_5f1e8e1b() {
@@ -2932,7 +2806,6 @@ function function_5f1e8e1b() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_f26960c8
 // Checksum 0xfc7be020, Offset: 0xacc0
 // Size: 0x15e
 function function_f26960c8() {
@@ -2956,7 +2829,6 @@ function function_f26960c8() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_7d3dbc54
 // Checksum 0x7336442d, Offset: 0xae28
 // Size: 0x44
 function function_7d3dbc54(targetent) {
@@ -2968,7 +2840,6 @@ function function_7d3dbc54(targetent) {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_98636e21
 // Checksum 0xb88718f9, Offset: 0xae78
 // Size: 0x1b0
 function function_98636e21(origin, model) {
@@ -2992,7 +2863,6 @@ function function_98636e21(origin, model) {
 
 // Namespace prop
 // Params 10, eflags: 0x0
-// namespace_a9dea446<file_0>::function_8d5e52a2
 // Checksum 0x26e010fc, Offset: 0xb030
 // Size: 0x118
 function function_8d5e52a2(damage, attacker, direction_vec, point, meansofdeath, modelname, tagname, partname, weapon, idflags) {
@@ -3016,7 +2886,6 @@ function function_8d5e52a2(damage, attacker, direction_vec, point, meansofdeath,
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_d4992ad5
 // Checksum 0xfb2b762, Offset: 0xb150
 // Size: 0x190
 function movetarget() {
@@ -3038,7 +2907,6 @@ function movetarget() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_5e31e74e
 // Checksum 0x4e9debe3, Offset: 0xb2e8
 // Size: 0xdc
 function function_5e31e74e(location) {
@@ -3054,7 +2922,6 @@ function function_5e31e74e(location) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_8e704405
 // Checksum 0xed251c34, Offset: 0xb3d0
 // Size: 0x290
 function function_8e704405() {
@@ -3097,7 +2964,6 @@ function function_8e704405() {
 
 // Namespace prop
 // Params 4, eflags: 0x0
-// namespace_a9dea446<file_0>::function_249fb651
 // Checksum 0x753280b4, Offset: 0xb668
 // Size: 0x15c
 function function_249fb651(x, y, label, color) {
@@ -3120,7 +2986,6 @@ function function_249fb651(x, y, label, color) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_9b0f77c4
 // Checksum 0xa685371a, Offset: 0xb7d0
 // Size: 0x2cc
 function function_9b0f77c4(titlelabel) {
@@ -3151,7 +3016,6 @@ function function_9b0f77c4(titlelabel) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_e14e11c4
 // Checksum 0x6458c37a, Offset: 0xbaa8
 // Size: 0x110
 function function_e14e11c4() {
@@ -3169,7 +3033,6 @@ function function_e14e11c4() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_a88142c8
 // Checksum 0x6bcb5a2d, Offset: 0xbbc0
 // Size: 0xb4
 function function_a88142c8(player) {
@@ -3183,7 +3046,6 @@ function function_a88142c8(player) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_c021720c
 // Checksum 0x30238f7c, Offset: 0xbc80
 // Size: 0x1c2
 function function_c021720c(delaytime) {
@@ -3207,7 +3069,6 @@ function function_c021720c(delaytime) {
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_69596636
 // Checksum 0xb342a759, Offset: 0xbe50
 // Size: 0xc0
 function function_69596636(p1, p2) {
@@ -3225,7 +3086,6 @@ function function_69596636(p1, p2) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_ae94b584
 // Checksum 0xa9ea3a53, Offset: 0xbf18
 // Size: 0x138
 function function_ae94b584(label) {
@@ -3246,7 +3106,6 @@ function function_ae94b584(label) {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_89acdf0d
 // Checksum 0xa6047f54, Offset: 0xc058
 // Size: 0x24
 function function_89acdf0d(label) {
@@ -3255,7 +3114,6 @@ function function_89acdf0d(label) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_1cda54
 // Checksum 0xd60fa716, Offset: 0xc088
 // Size: 0x48
 function function_1cda54() {
@@ -3266,7 +3124,6 @@ function function_1cda54() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_83efbfcf
 // Checksum 0x431aa739, Offset: 0xc0d8
 // Size: 0x13c
 function function_83efbfcf() {
@@ -3282,7 +3139,6 @@ function function_83efbfcf() {
 
 // Namespace prop
 // Params 3, eflags: 0x0
-// namespace_a9dea446<file_0>::function_ec41bbd2
 // Checksum 0x7b8e3cb, Offset: 0xc220
 // Size: 0x454
 function function_ec41bbd2(clone, player, forward) {
@@ -3329,7 +3185,6 @@ function function_ec41bbd2(clone, player, forward) {
 
 // Namespace prop
 // Params 15, eflags: 0x0
-// namespace_a9dea446<file_0>::function_f574665f
 // Checksum 0x68b21c91, Offset: 0xc680
 // Size: 0x7e
 function clonedamageoverride(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, timeoffset, boneindex, modelindex, surfacetype, surfacenormal) {
@@ -3338,7 +3193,6 @@ function clonedamageoverride(einflictor, eattacker, idamage, idflags, smeansofde
 
 // Namespace prop
 // Params 2, eflags: 0x0
-// namespace_a9dea446<file_0>::function_fb6b3c68
 // Checksum 0x70555c38, Offset: 0xc708
 // Size: 0x80
 function _configurecloneteam(clone, player) {
@@ -3350,7 +3204,6 @@ function _configurecloneteam(clone, player) {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_41d2c44e
 // Checksum 0x10f4d074, Offset: 0xc790
 // Size: 0xfa
 function function_41d2c44e() {
@@ -3370,7 +3223,6 @@ function function_41d2c44e() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_f78d9549
 // Checksum 0x975eeaff, Offset: 0xc898
 // Size: 0x3d4
 function _updateclonepathing() {
@@ -3434,7 +3286,6 @@ function _updateclonepathing() {
 
 // Namespace prop
 // Params 0, eflags: 0x0
-// namespace_a9dea446<file_0>::function_176b694c
 // Checksum 0xf28bca49, Offset: 0xcc78
 // Size: 0x8a
 function function_176b694c() {
@@ -3448,7 +3299,6 @@ function function_176b694c() {
 
 // Namespace prop
 // Params 1, eflags: 0x0
-// namespace_a9dea446<file_0>::function_16efb8e6
 // Checksum 0x20dc11b7, Offset: 0xcd10
 // Size: 0x1c0
 function function_16efb8e6(origin) {
@@ -3473,7 +3323,6 @@ function function_16efb8e6(origin) {
 
 // Namespace prop
 // Params 10, eflags: 0x0
-// namespace_a9dea446<file_0>::function_12f9ab17
 // Checksum 0x9a653a5b, Offset: 0xced8
 // Size: 0xc0
 function function_12f9ab17(damage, attacker, direction_vec, point, meansofdeath, modelname, tagname, partname, weapon, idflags) {

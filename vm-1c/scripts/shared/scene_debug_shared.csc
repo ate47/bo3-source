@@ -13,7 +13,6 @@
 
     // Namespace scene
     // Params 0, eflags: 0x2
-    // namespace_cc27597<file_0>::function_2dc19561
     // Checksum 0x190b6660, Offset: 0x180
     // Size: 0x34
     function autoexec function_2dc19561() {
@@ -22,7 +21,6 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_8c87d8eb
     // Checksum 0x8f374282, Offset: 0x1c0
     // Size: 0xa4
     function __init__() {
@@ -36,7 +34,6 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_f69ab75e
     // Checksum 0xa6ab3bd5, Offset: 0x270
     // Size: 0xd8
     function function_f69ab75e() {
@@ -51,7 +48,6 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_c4a37ed9
     // Checksum 0x8a28e2c5, Offset: 0x350
     // Size: 0x104
     function function_c4a37ed9() {
@@ -64,7 +60,6 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_eb533dbb
     // Checksum 0x712831c9, Offset: 0x460
     // Size: 0x4a0
     function run_scene_tests() {
@@ -125,7 +120,6 @@
 
     // Namespace scene
     // Params 1, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_68a9014b
     // Checksum 0xf9d73b94, Offset: 0x908
     // Size: 0xd2
     function clear_old_ents(str_scene) {
@@ -138,7 +132,6 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_54f68d5a
     // Checksum 0xa9046d1b, Offset: 0x9e8
     // Size: 0x158
     function toggle_scene_menu() {
@@ -171,7 +164,6 @@
 
     // Namespace scene
     // Params 2, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_5d3bb86a
     // Checksum 0x85068a1f, Offset: 0xb48
     // Size: 0x19a
     function function_5d3bb86a(scene_name, index) {
@@ -196,7 +188,6 @@
 
     // Namespace scene
     // Params 1, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_259f2fa6
     // Checksum 0x95c64570, Offset: 0xcf0
     // Size: 0x730
     function display_scene_menu(str_type) {
@@ -292,7 +283,6 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_96d7ecd1
     // Checksum 0xddc307aa, Offset: 0x1428
     // Size: 0x234
     function function_96d7ecd1() {
@@ -324,7 +314,6 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_b0ed6108
     // Checksum 0x3bae486b, Offset: 0x1668
     // Size: 0x82
     function function_b0ed6108() {
@@ -338,7 +327,6 @@
 
     // Namespace scene
     // Params 3, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_9882c852
     // Checksum 0xac6c5028, Offset: 0x16f8
     // Size: 0x1ee
     function scene_list_settext(hud_array, strings, num) {
@@ -368,7 +356,6 @@
 
     // Namespace scene
     // Params 1, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_d57e2dab
     // Checksum 0xefe33b74, Offset: 0x18f0
     // Size: 0x60
     function is_scene_playing(str_scene) {
@@ -382,7 +369,6 @@
 
     // Namespace scene
     // Params 1, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_87fbeee3
     // Checksum 0xf642cc53, Offset: 0x1958
     // Size: 0x60
     function is_scene_initialized(str_scene) {
@@ -396,7 +382,6 @@
 
     // Namespace scene
     // Params 2, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_9061788e
     // Checksum 0x5e39b8cd, Offset: 0x19c0
     // Size: 0x86
     function scene_menu_cleanup(elems, title) {
@@ -409,7 +394,6 @@
 
     // Namespace scene
     // Params 1, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_1b5ca25a
     // Checksum 0x5f195845, Offset: 0x1a50
     // Size: 0x2c
     function test_init(arg1) {
@@ -418,7 +402,6 @@
 
     // Namespace scene
     // Params 2, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_fc5821e2
     // Checksum 0xdac5a38d, Offset: 0x1a88
     // Size: 0x3c
     function test_play(arg1, str_mode) {
@@ -427,7 +410,6 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
-    // namespace_cc27597<file_0>::function_3a1a4c9
     // Checksum 0x8d177824, Offset: 0x1ad0
     // Size: 0x2ce
     function debug_display() {

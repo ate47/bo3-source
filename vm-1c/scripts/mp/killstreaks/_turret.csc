@@ -10,7 +10,6 @@
 
 // Namespace autoturret
 // Params 0, eflags: 0x2
-// namespace_31ada252<file_0>::function_2dc19561
 // Checksum 0x3f4e8149, Offset: 0x1d8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,7 +18,6 @@ function autoexec function_2dc19561() {
 
 // Namespace autoturret
 // Params 0, eflags: 0x1 linked
-// namespace_31ada252<file_0>::function_8c87d8eb
 // Checksum 0xc95b1f34, Offset: 0x218
 // Size: 0x104
 function __init__() {
@@ -31,7 +29,6 @@ function __init__() {
 
 // Namespace autoturret
 // Params 7, eflags: 0x1 linked
-// namespace_31ada252<file_0>::function_a5d6ca70
 // Checksum 0x56c9f524, Offset: 0x328
 // Size: 0xc4
 function turret_init_anim(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -45,7 +42,6 @@ function turret_init_anim(localclientnum, oldval, newval, bnewent, binitialsnap,
 
 // Namespace autoturret
 // Params 7, eflags: 0x1 linked
-// namespace_31ada252<file_0>::function_eb4eb64e
 // Checksum 0x9d508bd6, Offset: 0x3f8
 // Size: 0x9c
 function turret_open(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -58,7 +54,6 @@ function turret_open(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 
 // Namespace autoturret
 // Params 7, eflags: 0x1 linked
-// namespace_31ada252<file_0>::function_de81edbe
 // Checksum 0xa01ff616, Offset: 0x4a0
 // Size: 0x9c
 function turret_close_anim(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

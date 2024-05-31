@@ -11,7 +11,6 @@
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_79d6ccd1
 // Checksum 0x1d8e98fb, Offset: 0x2d8
 // Size: 0x32
 function getwinningteamfromloser(losing_team) {
@@ -23,7 +22,6 @@ function getwinningteamfromloser(losing_team) {
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_7a7141a5
 // Checksum 0xec77d729, Offset: 0x318
 // Size: 0x324
 function default_onforfeit(team) {
@@ -67,7 +65,6 @@ function default_onforfeit(team) {
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_d617fe3e
 // Checksum 0x8248f09f, Offset: 0x648
 // Size: 0xc4
 function default_ondeadevent(team) {
@@ -84,7 +81,6 @@ function default_ondeadevent(team) {
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_45c10f52
 // Checksum 0xb17c3eaf, Offset: 0x718
 // Size: 0x184
 function function_45c10f52(team) {
@@ -108,7 +104,6 @@ function function_45c10f52(team) {
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_b4bcebce
 // Checksum 0x1c661e8a, Offset: 0x8a8
 // Size: 0xe
 function function_b4bcebce(team) {
@@ -117,7 +112,6 @@ function function_b4bcebce(team) {
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_e6761e5b
 // Checksum 0x4d3d9222, Offset: 0x8c0
 // Size: 0xae
 function function_e6761e5b(team) {
@@ -135,7 +129,6 @@ function function_e6761e5b(team) {
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_e4443d68
 // Checksum 0xd888d4d, Offset: 0x978
 // Size: 0x94
 function function_e4443d68(team) {
@@ -151,7 +144,6 @@ function function_e4443d68(team) {
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_c4c198b0
 // Checksum 0x8b5c3696, Offset: 0xa18
 // Size: 0xc
 function default_onalivecountchange(team) {
@@ -160,7 +152,6 @@ function default_onalivecountchange(team) {
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_aca983ed
 // Checksum 0x302553b9, Offset: 0xa30
 // Size: 0x10
 function default_onroundendgame(winner) {
@@ -169,7 +160,6 @@ function default_onroundendgame(winner) {
 
 // Namespace globallogic_defaults
 // Params 1, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_6ab3de3d
 // Checksum 0x4de415d7, Offset: 0xa48
 // Size: 0x154
 function default_ononeleftevent(team) {
@@ -197,7 +187,6 @@ function default_ononeleftevent(team) {
 
 // Namespace globallogic_defaults
 // Params 0, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_3c98c1e8
 // Checksum 0x482c3a2b, Offset: 0xba8
 // Size: 0x124
 function default_ontimelimit() {
@@ -221,7 +210,6 @@ function default_ontimelimit() {
 
 // Namespace globallogic_defaults
 // Params 0, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_8455a753
 // Checksum 0x8419719f, Offset: 0xcd8
 // Size: 0x138
 function default_onscorelimit() {
@@ -249,7 +237,6 @@ function default_onscorelimit() {
 
 // Namespace globallogic_defaults
 // Params 2, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_3127df38
 // Checksum 0x52cbdf0e, Offset: 0xe18
 // Size: 0x1a4
 function default_onspawnspectator(origin, angles) {
@@ -268,7 +255,6 @@ function default_onspawnspectator(origin, angles) {
 
 // Namespace globallogic_defaults
 // Params 0, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_91904565
 // Checksum 0x239ef23e, Offset: 0xfc8
 // Size: 0xbc
 function default_onspawnintermission() {
@@ -286,7 +272,6 @@ function default_onspawnintermission() {
 
 // Namespace globallogic_defaults
 // Params 0, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_3d887edf
 // Checksum 0xeeeb70b4, Offset: 0x1090
 // Size: 0x3a
 function default_gettimelimit() {
@@ -295,7 +280,6 @@ function default_gettimelimit() {
 
 // Namespace globallogic_defaults
 // Params 4, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_da304ba5
 // Checksum 0x6c66b424, Offset: 0x10d8
 // Size: 0x72
 function default_getteamkillpenalty(einflictor, attacker, smeansofdeath, weapon) {
@@ -309,7 +293,6 @@ function default_getteamkillpenalty(einflictor, attacker, smeansofdeath, weapon)
 
 // Namespace globallogic_defaults
 // Params 4, eflags: 0x1 linked
-// namespace_5deb553<file_0>::function_72921290
 // Checksum 0xca25ed86, Offset: 0x1158
 // Size: 0x3a
 function default_getteamkillscore(einflictor, attacker, smeansofdeath, weapon) {

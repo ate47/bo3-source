@@ -11,7 +11,6 @@
 
 // Namespace globallogic_vehicle
 // Params 1, eflags: 0x1 linked
-// namespace_deaef99f<file_0>::function_ae5e80c1
 // Checksum 0xc7e5a907, Offset: 0x288
 // Size: 0xbc
 function callback_vehiclespawned(spawner) {
@@ -29,7 +28,6 @@ function callback_vehiclespawned(spawner) {
 
 // Namespace globallogic_vehicle
 // Params 15, eflags: 0x1 linked
-// namespace_deaef99f<file_0>::function_66eed27a
 // Checksum 0x986e2bdd, Offset: 0x350
 // Size: 0xd4c
 function callback_vehicledamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -192,7 +190,6 @@ function callback_vehicledamage(einflictor, eattacker, idamage, idflags, smeanso
 
 // Namespace globallogic_vehicle
 // Params 13, eflags: 0x1 linked
-// namespace_deaef99f<file_0>::function_d28f6408
 // Checksum 0xf7c4aebc, Offset: 0x10a8
 // Size: 0x5dc
 function callback_vehicleradiusdamage(einflictor, eattacker, idamage, finnerdamage, fouterdamage, idflags, smeansofdeath, weapon, vpoint, fradius, fconeanglecos, vconedir, psoffsettime) {
@@ -272,7 +269,6 @@ function callback_vehicleradiusdamage(einflictor, eattacker, idamage, finnerdama
 
 // Namespace globallogic_vehicle
 // Params 8, eflags: 0x1 linked
-// namespace_deaef99f<file_0>::function_ba80775a
 // Checksum 0x971e7c9f, Offset: 0x1690
 // Size: 0x248
 function callback_vehiclekilled(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -309,7 +305,6 @@ function callback_vehiclekilled(einflictor, eattacker, idamage, smeansofdeath, w
 
 // Namespace globallogic_vehicle
 // Params 0, eflags: 0x0
-// namespace_deaef99f<file_0>::function_4d18350c
 // Checksum 0x4804548d, Offset: 0x18e0
 // Size: 0x8c
 function vehiclecrush() {
@@ -322,7 +317,6 @@ function vehiclecrush() {
 
 // Namespace globallogic_vehicle
 // Params 1, eflags: 0x1 linked
-// namespace_deaef99f<file_0>::function_d389b572
 // Checksum 0xc22f7914, Offset: 0x1978
 // Size: 0x64
 function getvehicleunderneathsplashscalar(weapon) {
@@ -337,7 +331,6 @@ function getvehicleunderneathsplashscalar(weapon) {
 
 // Namespace globallogic_vehicle
 // Params 4, eflags: 0x1 linked
-// namespace_deaef99f<file_0>::function_f28c5916
 // Checksum 0x65db527e, Offset: 0x19e8
 // Size: 0x52
 function allowfriendlyfiredamage(einflictor, eattacker, smeansofdeath, weapon) {

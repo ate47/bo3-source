@@ -7,7 +7,6 @@
 
 // Namespace skeleton
 // Params 0, eflags: 0x2
-// namespace_3aae4518<file_0>::function_2dc19561
 // Checksum 0xb77616bf, Offset: 0x138
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,7 +15,6 @@ function autoexec function_2dc19561() {
 
 // Namespace skeleton
 // Params 0, eflags: 0x2
-// namespace_3aae4518<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x178
 // Size: 0x4
 function autoexec precache() {
@@ -25,7 +23,6 @@ function autoexec precache() {
 
 // Namespace skeleton
 // Params 0, eflags: 0x1 linked
-// namespace_3aae4518<file_0>::function_8c87d8eb
 // Checksum 0x90eda43c, Offset: 0x188
 // Size: 0x64
 function __init__() {
@@ -38,7 +35,6 @@ function __init__() {
 
 // Namespace zombieclientutils
 // Params 7, eflags: 0x1 linked
-// namespace_697da011<file_0>::function_15c8d779
 // Checksum 0xcdfb6200, Offset: 0x1f8
 // Size: 0x184
 function zombiehandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -58,7 +54,6 @@ function zombiehandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap
 
 // Namespace zombieclientutils
 // Params 3, eflags: 0x5 linked
-// namespace_697da011<file_0>::function_2eb49c4f
 // Checksum 0x3ac2300a, Offset: 0x388
 // Size: 0xa6
 function private _gibcallback(localclientnum, entity, gibflag) {

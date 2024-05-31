@@ -11,7 +11,6 @@
 
 // Namespace hud_message
 // Params 0, eflags: 0x1 linked
-// namespace_4d476a30<file_0>::function_c35e6aab
 // Checksum 0x4178c43b, Offset: 0x5e8
 // Size: 0x2e2
 function init() {
@@ -42,7 +41,6 @@ function init() {
 
 // Namespace hud_message
 // Params 3, eflags: 0x1 linked
-// namespace_4d476a30<file_0>::function_ceff20b5
 // Checksum 0x13443e2b, Offset: 0x8d8
 // Size: 0xb9c
 function teamoutcomenotify(winner, endtype, endreasontext) {
@@ -214,7 +212,6 @@ function teamoutcomenotify(winner, endtype, endreasontext) {
 
 // Namespace hud_message
 // Params 3, eflags: 0x0
-// namespace_4d476a30<file_0>::function_8cab5867
 // Checksum 0x4cdbf92c, Offset: 0x1480
 // Size: 0x2bc
 function function_8cab5867(winner, isround, endreasontext) {
@@ -259,7 +256,6 @@ function function_8cab5867(winner, isround, endreasontext) {
 
 // Namespace hud_message
 // Params 3, eflags: 0x1 linked
-// namespace_4d476a30<file_0>::function_787e2ea4
 // Checksum 0x56f50007, Offset: 0x1748
 // Size: 0x2dc
 function outcomenotify(winner, var_a913a63a, endreasontext) {
@@ -302,7 +298,6 @@ function outcomenotify(winner, var_a913a63a, endreasontext) {
 
 // Namespace hud_message
 // Params 2, eflags: 0x0
-// namespace_4d476a30<file_0>::function_d5235f38
 // Checksum 0xa21ab923, Offset: 0x1a30
 // Size: 0xaac
 function function_d5235f38(winner, endreasontext) {
@@ -440,7 +435,6 @@ function function_d5235f38(winner, endreasontext) {
 
 // Namespace hud_message
 // Params 3, eflags: 0x0
-// namespace_4d476a30<file_0>::function_de9a72bf
 // Checksum 0xcd0673cf, Offset: 0x24e8
 // Size: 0xecc
 function function_de9a72bf(winner, var_a913a63a, endreasontext) {
@@ -602,7 +596,6 @@ function function_de9a72bf(winner, var_a913a63a, endreasontext) {
 
 // Namespace hud_message
 // Params 10, eflags: 0x1 linked
-// namespace_4d476a30<file_0>::function_7ebe2665
 // Checksum 0xa9ae7e12, Offset: 0x33c0
 // Size: 0x242
 function function_7ebe2665(var_38c290ce, var_12c01665, var_218d0eb4, var_fb8a944b, var_d58819e2, var_af859f79, var_89832510, var_c3a85137, var_9da5d6ce, var_a2b3e562) {
@@ -630,7 +623,6 @@ function function_7ebe2665(var_38c290ce, var_12c01665, var_218d0eb4, var_fb8a944
 
 // Namespace hud_message
 // Params 4, eflags: 0x1 linked
-// namespace_4d476a30<file_0>::function_c7dff00f
 // Checksum 0x6ae9da15, Offset: 0x3610
 // Size: 0x12c
 function function_c7dff00f(var_da7e1972, var_6c73b74a, var_9cdc61fb, outcometext) {
@@ -656,7 +648,6 @@ function function_c7dff00f(var_da7e1972, var_6c73b74a, var_9cdc61fb, outcometext
 
 // Namespace hud_message
 // Params 3, eflags: 0x0
-// namespace_4d476a30<file_0>::function_da2b338e
 // Checksum 0xd83a1bd9, Offset: 0x3748
 // Size: 0x170
 function function_da2b338e(var_66184a91, var_8c75d30d, var_4a691eaa) {
@@ -687,7 +678,6 @@ function function_da2b338e(var_66184a91, var_8c75d30d, var_4a691eaa) {
 
 // Namespace hud_message
 // Params 2, eflags: 0x1 linked
-// namespace_4d476a30<file_0>::function_cd821d4
 // Checksum 0xc6a5ae9f, Offset: 0x38c0
 // Size: 0x146
 function function_cd821d4(var_da7e1972, var_6c73b74a) {

@@ -48,7 +48,6 @@
 
 // Namespace ability_player
 // Params 0, eflags: 0x2
-// namespace_54f2129b<file_0>::function_2dc19561
 // Checksum 0x94efcf07, Offset: 0x9c8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -57,7 +56,6 @@ function autoexec function_2dc19561() {
 
 // Namespace ability_player
 // Params 0, eflags: 0x1 linked
-// namespace_54f2129b<file_0>::function_8c87d8eb
 // Checksum 0x99ec1590, Offset: 0xa08
 // Size: 0x4
 function __init__() {

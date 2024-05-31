@@ -15,7 +15,6 @@
 
 // Namespace namespace_d85da9ae
 // Params 0, eflags: 0x2
-// namespace_d85da9ae<file_0>::function_2dc19561
 // Checksum 0x2b13c541, Offset: 0x290
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -24,7 +23,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_d85da9ae
 // Params 0, eflags: 0x1 linked
-// namespace_d85da9ae<file_0>::function_8c87d8eb
 // Checksum 0x4f38e0da, Offset: 0x2d0
 // Size: 0x13c
 function __init__() {
@@ -42,7 +40,6 @@ function __init__() {
 
 // Namespace namespace_d85da9ae
 // Params 4, eflags: 0x1 linked
-// namespace_d85da9ae<file_0>::function_3c61bfc2
 // Checksum 0x193c00a1, Offset: 0x418
 // Size: 0xcc
 function result(death, attacker, mod, weapon) {

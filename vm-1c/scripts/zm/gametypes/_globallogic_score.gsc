@@ -15,7 +15,6 @@
 
 // Namespace globallogic_score
 // Params 0, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_b2a6c667
 // Checksum 0x2a16ed6e, Offset: 0x4d8
 // Size: 0x13a
 function gethighestscoringplayer() {
@@ -46,7 +45,6 @@ function gethighestscoringplayer() {
 
 // Namespace globallogic_score
 // Params 0, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_4ff2f46f
 // Checksum 0xe0c8fdb6, Offset: 0x620
 // Size: 0x28
 function resetscorechain() {
@@ -57,7 +55,6 @@ function resetscorechain() {
 
 // Namespace globallogic_score
 // Params 0, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_dbc2be8b
 // Checksum 0x7544113c, Offset: 0x650
 // Size: 0x5c
 function scorechaintimer() {
@@ -72,7 +69,6 @@ function scorechaintimer() {
 
 // Namespace globallogic_score
 // Params 1, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_d92cc672
 // Checksum 0xc76b841d, Offset: 0x6b8
 // Size: 0x54
 function roundtonearestfive(score) {
@@ -85,7 +81,6 @@ function roundtonearestfive(score) {
 
 // Namespace globallogic_score
 // Params 4, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_f56ebc1e
 // Checksum 0xabbe78f2, Offset: 0x718
 // Size: 0x1e4
 function giveplayermomentumnotification(score, label, descvalue, countstowardrampage) {
@@ -115,7 +110,6 @@ function giveplayermomentumnotification(score, label, descvalue, countstowardram
 
 // Namespace globallogic_score
 // Params 0, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_ca6dfd0a
 // Checksum 0x37db69f0, Offset: 0x908
 // Size: 0x4c
 function resetplayermomentumondeath() {
@@ -127,7 +121,6 @@ function resetplayermomentumondeath() {
 
 // Namespace globallogic_score
 // Params 4, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_9b842c9d
 // Checksum 0xc39953e6, Offset: 0x960
 // Size: 0x170
 function giveplayerxpdisplay(event, player, victim, descvalue) {
@@ -148,7 +141,6 @@ function giveplayerxpdisplay(event, player, victim, descvalue) {
 
 // Namespace globallogic_score
 // Params 5, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_7e99fb41
 // Checksum 0x3b8e8f04, Offset: 0xad8
 // Size: 0x4a
 function giveplayerscore(event, player, victim, descvalue, weapon) {
@@ -157,7 +149,6 @@ function giveplayerscore(event, player, victim, descvalue, weapon) {
 
 // Namespace globallogic_score
 // Params 3, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_8450550f
 // Checksum 0xd575d29b, Offset: 0xb30
 // Size: 0x1c
 function default_onplayerscore(event, player, victim) {
@@ -166,7 +157,6 @@ function default_onplayerscore(event, player, victim) {
 
 // Namespace globallogic_score
 // Params 2, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_fffda5bf
 // Checksum 0x62423f7c, Offset: 0xb58
 // Size: 0x14
 function _setplayerscore(player, score) {
@@ -175,7 +165,6 @@ function _setplayerscore(player, score) {
 
 // Namespace globallogic_score
 // Params 1, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_acc5da4b
 // Checksum 0x3bb427ed, Offset: 0xb78
 // Size: 0x20
 function _getplayerscore(player) {
@@ -184,7 +173,6 @@ function _getplayerscore(player) {
 
 // Namespace globallogic_score
 // Params 2, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_580d042d
 // Checksum 0xb66f0b5f, Offset: 0xba0
 // Size: 0x120
 function _setplayermomentum(player, momentum) {
@@ -205,7 +193,6 @@ function _setplayermomentum(player, momentum) {
 
 // Namespace globallogic_score
 // Params 4, eflags: 0x0
-// namespace_e32b5089<file_0>::function_34409a81
 // Checksum 0x7ad64985, Offset: 0xcc8
 // Size: 0x24
 function _giveplayerkillstreakinternal(player, momentum, oldmomentum, killstreaktypearray) {
@@ -216,7 +203,6 @@ function _giveplayerkillstreakinternal(player, momentum, oldmomentum, killstreak
 
     // Namespace globallogic_score
     // Params 0, eflags: 0x1 linked
-    // namespace_e32b5089<file_0>::function_40bd869f
     // Checksum 0x9af048a7, Offset: 0xcf8
     // Size: 0xf0
     function setplayermomentumdebug() {
@@ -240,7 +226,6 @@ function _giveplayerkillstreakinternal(player, momentum, oldmomentum, killstreak
 
 // Namespace globallogic_score
 // Params 4, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_806e3c51
 // Checksum 0x7295d380, Offset: 0xdf0
 // Size: 0x124
 function giveteamscore(event, team, player, victim) {
@@ -262,7 +247,6 @@ function giveteamscore(event, team, player, victim) {
 
 // Namespace globallogic_score
 // Params 2, eflags: 0x0
-// namespace_e32b5089<file_0>::function_595758a3
 // Checksum 0xe5b8f6fc, Offset: 0xf20
 // Size: 0xa4
 function giveteamscoreforobjective(team, score) {
@@ -278,7 +262,6 @@ function giveteamscoreforobjective(team, score) {
 
 // Namespace globallogic_score
 // Params 2, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_a5d0acb3
 // Checksum 0x2f0fff95, Offset: 0xfd0
 // Size: 0x6c
 function _setteamscore(team, teamscore) {
@@ -292,7 +275,6 @@ function _setteamscore(team, teamscore) {
 
 // Namespace globallogic_score
 // Params 0, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_fcb59778
 // Checksum 0x88d04600, Offset: 0x1048
 // Size: 0xbc
 function resetteamscores() {
@@ -306,7 +288,6 @@ function resetteamscores() {
 
 // Namespace globallogic_score
 // Params 0, eflags: 0x0
-// namespace_e32b5089<file_0>::function_3ee9bd9e
 // Checksum 0x88e70510, Offset: 0x1110
 // Size: 0x24
 function resetallscores() {
@@ -316,7 +297,6 @@ function resetallscores() {
 
 // Namespace globallogic_score
 // Params 0, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_7d5864a8
 // Checksum 0x8acd1904, Offset: 0x1140
 // Size: 0xa6
 function resetplayerscores() {
@@ -332,7 +312,6 @@ function resetplayerscores() {
 
 // Namespace globallogic_score
 // Params 1, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_95e3ed98
 // Checksum 0xb434dfb5, Offset: 0x11f0
 // Size: 0x4c
 function updateteamscores(team) {
@@ -342,7 +321,6 @@ function updateteamscores(team) {
 
 // Namespace globallogic_score
 // Params 0, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_16ca2e25
 // Checksum 0x2549ce5, Offset: 0x1248
 // Size: 0x8a
 function updateallteamscores() {
@@ -353,7 +331,6 @@ function updateallteamscores() {
 
 // Namespace globallogic_score
 // Params 1, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_1dcc90b7
 // Checksum 0xc28803f3, Offset: 0x12e0
 // Size: 0x1c
 function _getteamscore(team) {
@@ -362,7 +339,6 @@ function _getteamscore(team) {
 
 // Namespace globallogic_score
 // Params 0, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_ae8065ab
 // Checksum 0x67c280d6, Offset: 0x1308
 // Size: 0xf6
 function gethighestteamscoreteam() {
@@ -383,7 +359,6 @@ function gethighestteamscoreteam() {
 
 // Namespace globallogic_score
 // Params 2, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_e525bda4
 // Checksum 0xa556dc6a, Offset: 0x1408
 // Size: 0xb0
 function areteamarraysequal(teamsa, teamsb) {
@@ -400,7 +375,6 @@ function areteamarraysequal(teamsa, teamsb) {
 
 // Namespace globallogic_score
 // Params 2, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_9ed78565
 // Checksum 0xa76f163a, Offset: 0x14c0
 // Size: 0x2c8
 function onteamscore(score, team) {
@@ -453,7 +427,6 @@ function onteamscore(score, team) {
 
 // Namespace globallogic_score
 // Params 2, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_aa0fe5c3
 // Checksum 0x3ffb2fb1, Offset: 0x1790
 // Size: 0x14
 function default_onteamscore(event, team) {
@@ -462,7 +435,6 @@ function default_onteamscore(event, team) {
 
 // Namespace globallogic_score
 // Params 3, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_f4f342c9
 // Checksum 0x73a11619, Offset: 0x17b0
 // Size: 0xe2
 function initpersstat(dataname, record_stats, init_to_stat_value) {
@@ -479,7 +451,6 @@ function initpersstat(dataname, record_stats, init_to_stat_value) {
 
 // Namespace globallogic_score
 // Params 1, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_9142ee49
 // Checksum 0xde0fe12, Offset: 0x18a0
 // Size: 0x18
 function getpersstat(dataname) {
@@ -488,7 +459,6 @@ function getpersstat(dataname) {
 
 // Namespace globallogic_score
 // Params 4, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_ec3c08d5
 // Checksum 0x58f005dc, Offset: 0x18c0
 // Size: 0xbc
 function incpersstat(dataname, increment, record_stats, includegametype) {
@@ -503,7 +473,6 @@ function incpersstat(dataname, increment, record_stats, includegametype) {
 
 // Namespace globallogic_score
 // Params 1, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_2d0985b
 // Checksum 0xa6430cfa, Offset: 0x1988
 // Size: 0x3c
 function threadedrecordplayerstats(dataname) {
@@ -514,7 +483,6 @@ function threadedrecordplayerstats(dataname) {
 
 // Namespace globallogic_score
 // Params 1, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_c66a74a3
 // Checksum 0xb1fe0a37, Offset: 0x19d0
 // Size: 0x72
 function inckillstreaktracker(weapon) {
@@ -530,7 +498,6 @@ function inckillstreaktracker(weapon) {
 
 // Namespace globallogic_score
 // Params 5, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_d252c0d3
 // Checksum 0xc8bc6cd1, Offset: 0x1a50
 // Size: 0x344
 function trackattackerkill(name, rank, xp, prestige, xuid) {
@@ -568,7 +535,6 @@ function trackattackerkill(name, rank, xp, prestige, xuid) {
 
 // Namespace globallogic_score
 // Params 5, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_19bc0e4e
 // Checksum 0x7ff2117f, Offset: 0x1da0
 // Size: 0x2dc
 function trackattackeedeath(attackername, rank, xp, prestige, xuid) {
@@ -603,7 +569,6 @@ function trackattackeedeath(attackername, rank, xp, prestige, xuid) {
 
 // Namespace globallogic_score
 // Params 0, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_4349658
 // Checksum 0xceb59323, Offset: 0x2088
 // Size: 0x6
 function default_iskillboosting() {
@@ -612,7 +577,6 @@ function default_iskillboosting() {
 
 // Namespace globallogic_score
 // Params 3, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_f4f11e83
 // Checksum 0xc5cf0200, Offset: 0x2098
 // Size: 0x194
 function givekillstats(smeansofdeath, weapon, evictim) {
@@ -639,7 +603,6 @@ function givekillstats(smeansofdeath, weapon, evictim) {
 
 // Namespace globallogic_score
 // Params 1, eflags: 0x1 linked
-// namespace_e32b5089<file_0>::function_7bf7d322
 // Checksum 0x2b68bcf3, Offset: 0x2238
 // Size: 0x4c
 function inctotalkills(team) {
@@ -651,7 +614,6 @@ function inctotalkills(team) {
 
 // Namespace globallogic_score
 // Params 3, eflags: 0x0
-// namespace_e32b5089<file_0>::function_50ec476d
 // Checksum 0x964b3f67, Offset: 0x2290
 // Size: 0x17c
 function setinflictorstat(einflictor, eattacker, weapon) {
@@ -683,7 +645,6 @@ function setinflictorstat(einflictor, eattacker, weapon) {
 
 // Namespace globallogic_score
 // Params 1, eflags: 0x0
-// namespace_e32b5089<file_0>::function_1e129e72
 // Checksum 0x9648cb23, Offset: 0x2418
 // Size: 0xe4
 function processshieldassist(killedplayer) {
@@ -706,7 +667,6 @@ function processshieldassist(killedplayer) {
 
 // Namespace globallogic_score
 // Params 3, eflags: 0x0
-// namespace_e32b5089<file_0>::function_43256951
 // Checksum 0x8c62dcc3, Offset: 0x2508
 // Size: 0x22c
 function processassist(killedplayer, damagedone, weapon) {
@@ -755,7 +715,6 @@ function processassist(killedplayer, damagedone, weapon) {
 
     // Namespace globallogic_score
     // Params 0, eflags: 0x1 linked
-    // namespace_e32b5089<file_0>::function_4e01d1c3
     // Checksum 0x662cebce, Offset: 0x2740
     // Size: 0x8
     function function_4e01d1c3() {

@@ -8,7 +8,6 @@
 
 // Namespace water_surface
 // Params 0, eflags: 0x2
-// namespace_9e14c79a<file_0>::function_2dc19561
 // Checksum 0xe5937b7, Offset: 0x1c8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,7 +16,6 @@ function autoexec function_2dc19561() {
 
 // Namespace water_surface
 // Params 0, eflags: 0x1 linked
-// namespace_9e14c79a<file_0>::function_8c87d8eb
 // Checksum 0xf3d74054, Offset: 0x208
 // Size: 0x7c
 function __init__() {
@@ -31,7 +29,6 @@ function __init__() {
 
 // Namespace water_surface
 // Params 1, eflags: 0x1 linked
-// namespace_9e14c79a<file_0>::function_cd071852
 // Checksum 0xcab3eff, Offset: 0x290
 // Size: 0xd4
 function localplayer_spawned(localclientnum) {
@@ -51,7 +48,6 @@ function localplayer_spawned(localclientnum) {
 
 // Namespace water_surface
 // Params 0, eflags: 0x1 linked
-// namespace_9e14c79a<file_0>::function_3836b0e
 // Checksum 0x68b8f1f0, Offset: 0x370
 // Size: 0xd0
 function underwaterwatchbegin() {
@@ -73,7 +69,6 @@ function underwaterwatchbegin() {
 
 // Namespace water_surface
 // Params 0, eflags: 0x1 linked
-// namespace_9e14c79a<file_0>::function_832f9942
 // Checksum 0xa38ac746, Offset: 0x448
 // Size: 0xd0
 function underwaterwatchend() {
@@ -95,7 +90,6 @@ function underwaterwatchend() {
 
 // Namespace water_surface
 // Params 0, eflags: 0x1 linked
-// namespace_9e14c79a<file_0>::function_9e208c0d
 // Checksum 0xf4984de9, Offset: 0x520
 // Size: 0x114
 function underwaterbegin() {
@@ -115,7 +109,6 @@ function underwaterbegin() {
 
 // Namespace water_surface
 // Params 0, eflags: 0x1 linked
-// namespace_9e14c79a<file_0>::function_baecedf5
 // Checksum 0xd40a9332, Offset: 0x640
 // Size: 0xa4
 function underwaterend() {
@@ -132,7 +125,6 @@ function underwaterend() {
 
 // Namespace water_surface
 // Params 0, eflags: 0x0
-// namespace_9e14c79a<file_0>::function_c243b5ae
 // Checksum 0x4f941d8d, Offset: 0x6f0
 // Size: 0x24a
 function startwaterdive() {
@@ -162,7 +154,6 @@ function startwaterdive() {
 
 // Namespace water_surface
 // Params 0, eflags: 0x1 linked
-// namespace_9e14c79a<file_0>::function_8956791f
 // Checksum 0x8e79a9e6, Offset: 0x948
 // Size: 0x214
 function startwatersheeting() {
@@ -188,7 +179,6 @@ function startwatersheeting() {
 
 // Namespace water_surface
 // Params 1, eflags: 0x1 linked
-// namespace_9e14c79a<file_0>::function_b3b73e08
 // Checksum 0x3a588fe3, Offset: 0xb68
 // Size: 0x72
 function stop_player_fx(localclient) {

@@ -21,7 +21,6 @@
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x2
-// namespace_a7884d63<file_0>::function_2dc19561
 // Checksum 0x1998692b, Offset: 0x5c8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -30,7 +29,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_8c87d8eb
 // Checksum 0x7b7c9358, Offset: 0x608
 // Size: 0x14
 function __init__() {
@@ -39,7 +37,6 @@ function __init__() {
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_3842fab2
 // Checksum 0xdd4d310c, Offset: 0x628
 // Size: 0x164
 function enable_electric_cherry_perk_for_level() {
@@ -57,7 +54,6 @@ function enable_electric_cherry_perk_for_level() {
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_c93cc370
 // Checksum 0x3e6723f2, Offset: 0x798
 // Size: 0xe0
 function electric_cherry_precache() {
@@ -74,7 +70,6 @@ function electric_cherry_precache() {
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_42ac83f2
 // Checksum 0xaf5faf, Offset: 0x880
 // Size: 0x34
 function electric_cherry_register_clientfield() {
@@ -83,7 +78,6 @@ function electric_cherry_register_clientfield() {
 
 // Namespace zm_perk_electric_cherry
 // Params 1, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_da51a7db
 // Checksum 0x91b5a8ad, Offset: 0x8c0
 // Size: 0x2c
 function electric_cherry_set_clientfield(state) {
@@ -92,7 +86,6 @@ function electric_cherry_set_clientfield(state) {
 
 // Namespace zm_perk_electric_cherry
 // Params 4, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_25d80dd3
 // Checksum 0xe2a8c5b8, Offset: 0x8f8
 // Size: 0xbc
 function electric_cherry_perk_machine_setup(use_trigger, perk_machine, bump_trigger, collision) {
@@ -109,7 +102,6 @@ function electric_cherry_perk_machine_setup(use_trigger, perk_machine, bump_trig
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_fd67ecd
 // Checksum 0x6261c9ee, Offset: 0x9c0
 // Size: 0x144
 function init_electric_cherry() {
@@ -125,7 +117,6 @@ function init_electric_cherry() {
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x0
-// namespace_a7884d63<file_0>::function_1867899c
 // Checksum 0x3f1485b6, Offset: 0xb10
 // Size: 0x268
 function function_1867899c() {
@@ -155,7 +146,6 @@ function function_1867899c() {
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x0
-// namespace_a7884d63<file_0>::function_6051febd
 // Checksum 0xe7163a6c, Offset: 0xd80
 // Size: 0x10a
 function electric_cherry_host_migration_func() {
@@ -170,7 +160,6 @@ function electric_cherry_host_migration_func() {
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_9aeedd49
 // Checksum 0x76437d95, Offset: 0xe98
 // Size: 0x232
 function electric_cherry_laststand() {
@@ -204,7 +193,6 @@ function electric_cherry_laststand() {
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_fa3a7ce4
 // Checksum 0x366f3c4, Offset: 0x10d8
 // Size: 0xfc
 function electric_cherry_death_fx() {
@@ -227,7 +215,6 @@ function electric_cherry_death_fx() {
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_7a1ce718
 // Checksum 0x6ae0d783, Offset: 0x11e0
 // Size: 0xec
 function electric_cherry_shock_fx() {
@@ -248,7 +235,6 @@ function electric_cherry_shock_fx() {
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_4d52b1f
 // Checksum 0xa1142538, Offset: 0x12d8
 // Size: 0xba
 function electric_cherry_stun() {
@@ -276,7 +262,6 @@ function electric_cherry_stun() {
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_f1b9f957
 // Checksum 0xbb48159b, Offset: 0x13a0
 // Size: 0x4a6
 function electric_cherry_reload_attack() {
@@ -362,7 +347,6 @@ function electric_cherry_reload_attack() {
 
 // Namespace zm_perk_electric_cherry
 // Params 1, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_2c48dca2
 // Checksum 0x54069c5a, Offset: 0x1850
 // Size: 0xc4
 function electric_cherry_cooldown_timer(current_weapon) {
@@ -381,7 +365,6 @@ function electric_cherry_cooldown_timer(current_weapon) {
 
 // Namespace zm_perk_electric_cherry
 // Params 1, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_97ff65bd
 // Checksum 0x5b60cb14, Offset: 0x1920
 // Size: 0xd8
 function check_for_reload_complete(weapon) {
@@ -402,7 +385,6 @@ function check_for_reload_complete(weapon) {
 
 // Namespace zm_perk_electric_cherry
 // Params 1, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_be6f196f
 // Checksum 0xc1289b2, Offset: 0x1a00
 // Size: 0xcc
 function weapon_replaced_monitor(weapon) {
@@ -422,7 +404,6 @@ function weapon_replaced_monitor(weapon) {
 
 // Namespace zm_perk_electric_cherry
 // Params 1, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_ba7a1cb9
 // Checksum 0x70b5f166, Offset: 0x1ad8
 // Size: 0xd4
 function electric_cherry_reload_fx(n_fraction) {
@@ -439,7 +420,6 @@ function electric_cherry_reload_fx(n_fraction) {
 
 // Namespace zm_perk_electric_cherry
 // Params 3, eflags: 0x1 linked
-// namespace_a7884d63<file_0>::function_5fe54d08
 // Checksum 0xadcf3f34, Offset: 0x1bb8
 // Size: 0x34
 function electric_cherry_perk_lost(b_pause, str_perk, str_result) {

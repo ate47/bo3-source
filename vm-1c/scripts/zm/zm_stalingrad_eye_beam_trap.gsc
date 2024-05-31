@@ -23,7 +23,6 @@
 
 // Namespace namespace_a26e93d0
 // Params 0, eflags: 0x2
-// namespace_a26e93d0<file_0>::function_2dc19561
 // Checksum 0x51e0ee53, Offset: 0x530
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -32,7 +31,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_a26e93d0
 // Params 0, eflags: 0x1 linked
-// namespace_a26e93d0<file_0>::function_8c87d8eb
 // Checksum 0xcad13822, Offset: 0x570
 // Size: 0x2a0
 function __init__() {
@@ -55,7 +53,6 @@ function __init__() {
 
 // Namespace namespace_a26e93d0
 // Params 1, eflags: 0x1 linked
-// namespace_a26e93d0<file_0>::function_a2abac9c
 // Checksum 0xaf83ccba, Offset: 0x818
 // Size: 0x150
 function function_a2abac9c(e_player) {
@@ -79,7 +76,6 @@ function function_a2abac9c(e_player) {
 
 // Namespace namespace_a26e93d0
 // Params 0, eflags: 0x1 linked
-// namespace_a26e93d0<file_0>::function_fd8775a2
 // Checksum 0xfd45b1c8, Offset: 0x970
 // Size: 0x1b0
 function function_fd8775a2() {
@@ -104,7 +100,6 @@ function function_fd8775a2() {
 
 // Namespace namespace_a26e93d0
 // Params 2, eflags: 0x1 linked
-// namespace_a26e93d0<file_0>::function_3ae55c2d
 // Checksum 0x85a77903, Offset: 0xb28
 // Size: 0x10c
 function function_3ae55c2d(var_f2bd831, a_s_switches) {
@@ -118,7 +113,6 @@ function function_3ae55c2d(var_f2bd831, a_s_switches) {
 
 // Namespace namespace_a26e93d0
 // Params 2, eflags: 0x1 linked
-// namespace_a26e93d0<file_0>::function_8bc8cc13
 // Checksum 0xcafafa64, Offset: 0xc40
 // Size: 0x702
 function function_8bc8cc13(var_f2bd831, a_s_switches) {
@@ -183,7 +177,6 @@ function function_8bc8cc13(var_f2bd831, a_s_switches) {
 
 // Namespace namespace_a26e93d0
 // Params 1, eflags: 0x1 linked
-// namespace_a26e93d0<file_0>::function_78f79e79
 // Checksum 0x94c79d6c, Offset: 0x1350
 // Size: 0xbc
 function function_78f79e79(var_66a9cd70) {
@@ -199,7 +192,6 @@ function function_78f79e79(var_66a9cd70) {
 
 // Namespace namespace_a26e93d0
 // Params 1, eflags: 0x1 linked
-// namespace_a26e93d0<file_0>::function_6009178e
 // Checksum 0x46473d35, Offset: 0x1418
 // Size: 0x166
 function function_6009178e(var_47326) {

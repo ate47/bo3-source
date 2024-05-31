@@ -8,7 +8,6 @@
 
 // Namespace zm_perk_quick_revive
 // Params 0, eflags: 0x2
-// namespace_b2d8c6a7<file_0>::function_2dc19561
 // Checksum 0x8c742804, Offset: 0x1a8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,7 +16,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_perk_quick_revive
 // Params 0, eflags: 0x1 linked
-// namespace_b2d8c6a7<file_0>::function_8c87d8eb
 // Checksum 0xd75b83c7, Offset: 0x1e8
 // Size: 0x14
 function __init__() {
@@ -26,7 +24,6 @@ function __init__() {
 
 // Namespace zm_perk_quick_revive
 // Params 0, eflags: 0x1 linked
-// namespace_b2d8c6a7<file_0>::function_5c55b70
 // Checksum 0xa207372, Offset: 0x208
 // Size: 0x84
 function enable_quick_revive_perk_for_level() {
@@ -37,7 +34,6 @@ function enable_quick_revive_perk_for_level() {
 
 // Namespace zm_perk_quick_revive
 // Params 0, eflags: 0x1 linked
-// namespace_b2d8c6a7<file_0>::function_9402ecb1
 // Checksum 0x3c566f20, Offset: 0x298
 // Size: 0x36
 function init_quick_revive() {
@@ -48,7 +44,6 @@ function init_quick_revive() {
 
 // Namespace zm_perk_quick_revive
 // Params 0, eflags: 0x1 linked
-// namespace_b2d8c6a7<file_0>::function_61ace5e
 // Checksum 0x699b66a3, Offset: 0x2d8
 // Size: 0x3c
 function quick_revive_client_field_func() {
@@ -57,7 +52,6 @@ function quick_revive_client_field_func() {
 
 // Namespace zm_perk_quick_revive
 // Params 0, eflags: 0x1 linked
-// namespace_b2d8c6a7<file_0>::function_84b932f9
 // Checksum 0x99ec1590, Offset: 0x320
 // Size: 0x4
 function quick_revive_callback_func() {

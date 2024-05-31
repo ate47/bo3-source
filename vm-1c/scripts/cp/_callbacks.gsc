@@ -15,7 +15,6 @@
 
 // Namespace callback
 // Params 0, eflags: 0x2
-// namespace_dabbe128<file_0>::function_2dc19561
 // Checksum 0xfc21a354, Offset: 0x240
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -24,7 +23,6 @@ function autoexec function_2dc19561() {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_8c87d8eb
 // Checksum 0xfdd26222, Offset: 0x280
 // Size: 0x14
 function __init__() {
@@ -33,7 +31,6 @@ function __init__() {
 
 // Namespace callback
 // Params 0, eflags: 0x1 linked
-// namespace_dabbe128<file_0>::function_1234506c
 // Checksum 0xb374937, Offset: 0x2a0
 // Size: 0x20c
 function set_default_callbacks() {

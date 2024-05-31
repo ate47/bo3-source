@@ -14,7 +14,6 @@
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x2
-// namespace_3df25fcf<file_0>::function_2dc19561
 // Checksum 0xef440ea4, Offset: 0x460
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -23,7 +22,6 @@ function autoexec function_2dc19561() {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_8c87d8eb
 // Checksum 0xd082b3c6, Offset: 0x4a0
 // Size: 0x1d4
 function __init__() {
@@ -46,7 +44,6 @@ function __init__() {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_50f16166
 // Checksum 0xa069323f, Offset: 0x680
 // Size: 0xf4
 function register() {
@@ -59,7 +56,6 @@ function register() {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_b0f1e452
 // Checksum 0xeb7e7a82, Offset: 0x780
 // Size: 0x1f8
 function function_b0f1e452() {
@@ -90,7 +86,6 @@ function function_b0f1e452() {
 
 // Namespace electroball_grenade
 // Params 2, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_f424c33d
 // Checksum 0x1dc745d6, Offset: 0x980
 // Size: 0xf4
 function function_f424c33d(watcher, owner) {
@@ -108,7 +103,6 @@ function function_f424c33d(watcher, owner) {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_a4ce8b04
 // Checksum 0x6f9fa867, Offset: 0xa80
 // Size: 0x74
 function setupkillcament() {
@@ -120,7 +114,6 @@ function setupkillcament() {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_fc55e212
 // Checksum 0x2920a750, Offset: 0xb00
 // Size: 0x44
 function cleanupkillcamentondeath() {
@@ -130,7 +123,6 @@ function cleanupkillcamentondeath() {
 
 // Namespace electroball_grenade
 // Params 3, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_7c4bcf20
 // Checksum 0xd6755ce1, Offset: 0xb50
 // Size: 0x34
 function proximitydetonate(attacker, weapon, target) {
@@ -139,7 +131,6 @@ function proximitydetonate(attacker, weapon, target) {
 
 // Namespace electroball_grenade
 // Params 1, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_ec28939b
 // Checksum 0x1b01f084, Offset: 0xb90
 // Size: 0x112
 function watchproximitygrenadehitplayer(owner) {
@@ -159,7 +150,6 @@ function watchproximitygrenadehitplayer(owner) {
 
 // Namespace electroball_grenade
 // Params 2, eflags: 0x0
-// namespace_3df25fcf<file_0>::function_b9677033
 // Checksum 0x798e4938, Offset: 0xcb0
 // Size: 0x140
 function performhudeffects(position, distancetogrenade) {
@@ -174,7 +164,6 @@ function performhudeffects(position, distancetogrenade) {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_62ffcc2c
 // Checksum 0xc5c80df8, Offset: 0xdf8
 // Size: 0xe8
 function function_62ffcc2c() {
@@ -191,7 +180,6 @@ function function_62ffcc2c() {
 
 // Namespace electroball_grenade
 // Params 1, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_6f0e1976
 // Checksum 0xd6e50ddb, Offset: 0xee8
 // Size: 0x1f4
 function damageplayerinradius(eattacker) {
@@ -225,7 +213,6 @@ function damageplayerinradius(eattacker) {
 
 // Namespace electroball_grenade
 // Params 1, eflags: 0x0
-// namespace_3df25fcf<file_0>::function_5e3105cd
 // Checksum 0x85a5be4b, Offset: 0x10e8
 // Size: 0x26
 function proximitydeathwait(owner) {
@@ -235,7 +222,6 @@ function proximitydeathwait(owner) {
 
 // Namespace electroball_grenade
 // Params 1, eflags: 0x0
-// namespace_3df25fcf<file_0>::function_b9e9934d
 // Checksum 0xb00fe670, Offset: 0x1118
 // Size: 0x62
 function deleteentonownerdeath(owner) {
@@ -248,7 +234,6 @@ function deleteentonownerdeath(owner) {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_d52e9f7c
 // Checksum 0xa0b40048, Offset: 0x1188
 // Size: 0x26
 function deleteentaftertime() {
@@ -259,7 +244,6 @@ function deleteentaftertime() {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_4cc1ad35
 // Checksum 0xb723f0c8, Offset: 0x11b8
 // Size: 0x34
 function deleteentontimeout() {
@@ -270,7 +254,6 @@ function deleteentontimeout() {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_1a6dacfd
 // Checksum 0x61de7695, Offset: 0x11f8
 // Size: 0xa4
 function watch_death() {
@@ -286,7 +269,6 @@ function watch_death() {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_aebcf025
 // Checksum 0x7b03d475, Offset: 0x12a8
 // Size: 0x64
 function on_player_spawned() {
@@ -299,7 +281,6 @@ function on_player_spawned() {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_87f30e90
 // Checksum 0x31fee244, Offset: 0x1318
 // Size: 0x44
 function on_ai_spawned() {
@@ -311,7 +292,6 @@ function on_ai_spawned() {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_a7922cf8
 // Checksum 0x220ad969, Offset: 0x1368
 // Size: 0xa8
 function begin_other_grenade_tracking() {
@@ -329,7 +309,6 @@ function begin_other_grenade_tracking() {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_cb55123a
 // Checksum 0x381721a4, Offset: 0x1418
 // Size: 0x218
 function function_cb55123a() {
@@ -360,7 +339,6 @@ function function_cb55123a() {
 
 // Namespace electroball_grenade
 // Params 0, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_658aacad
 // Checksum 0x8ae465e, Offset: 0x1638
 // Size: 0xc4
 function function_658aacad() {
@@ -379,7 +357,6 @@ function function_658aacad() {
 
 // Namespace electroball_grenade
 // Params 12, eflags: 0x1 linked
-// namespace_3df25fcf<file_0>::function_f338543f
 // Checksum 0x35fdc775, Offset: 0x1708
 // Size: 0xd0
 function function_f338543f(inflictor, attacker, damage, flags, meansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, surfacetype) {

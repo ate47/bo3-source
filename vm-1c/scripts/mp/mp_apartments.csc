@@ -9,7 +9,6 @@
 
 // Namespace mp_apartments
 // Params 0, eflags: 0x1 linked
-// namespace_a646b324<file_0>::function_d290ebfa
 // Checksum 0x794abeb4, Offset: 0x168
 // Size: 0xbc
 function main() {

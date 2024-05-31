@@ -19,7 +19,6 @@
 
 // Namespace tdef
 // Params 0, eflags: 0x0
-// namespace_bf41de08<file_0>::function_d290ebfa
 // Checksum 0x2ba6227c, Offset: 0x650
 // Size: 0x2b6
 function main() {
@@ -56,7 +55,6 @@ function main() {
 
 // Namespace tdef
 // Params 0, eflags: 0x0
-// namespace_bf41de08<file_0>::function_90f0668f
 // Checksum 0x99ec1590, Offset: 0x910
 // Size: 0x4
 function onprecachegametype() {
@@ -65,7 +63,6 @@ function onprecachegametype() {
 
 // Namespace tdef
 // Params 0, eflags: 0x0
-// namespace_bf41de08<file_0>::function_34685338
 // Checksum 0x4c2141dd, Offset: 0x920
 // Size: 0x31c
 function onstartgametype() {
@@ -112,7 +109,6 @@ function onstartgametype() {
 
 // Namespace tdef
 // Params 0, eflags: 0x0
-// namespace_bf41de08<file_0>::function_bf41de08
 // Checksum 0x5ae1a7e1, Offset: 0xc48
 // Size: 0x86
 function tdef() {
@@ -124,7 +120,6 @@ function tdef() {
 
 // Namespace tdef
 // Params 9, eflags: 0x0
-// namespace_bf41de08<file_0>::function_c2658b46
 // Checksum 0xda79e75b, Offset: 0xcd8
 // Size: 0x39c
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -162,7 +157,6 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace tdef
 // Params 1, eflags: 0x0
-// namespace_bf41de08<file_0>::function_5aacb6fd
 // Checksum 0xa9387293, Offset: 0x1080
 // Size: 0x344
 function ondrop(player) {
@@ -203,7 +197,6 @@ function ondrop(player) {
 
 // Namespace tdef
 // Params 1, eflags: 0x0
-// namespace_bf41de08<file_0>::function_8e900a8a
 // Checksum 0x34a4199a, Offset: 0x13d0
 // Size: 0x3bc
 function onpickup(player) {
@@ -246,7 +239,6 @@ function onpickup(player) {
 
 // Namespace tdef
 // Params 0, eflags: 0x0
-// namespace_bf41de08<file_0>::function_3af70b81
 // Checksum 0x31ca16f, Offset: 0x1798
 // Size: 0x16c
 function applyflagcarrierclass() {
@@ -273,7 +265,6 @@ function applyflagcarrierclass() {
 
 // Namespace tdef
 // Params 0, eflags: 0x0
-// namespace_bf41de08<file_0>::function_35d0ed23
 // Checksum 0x7017572a, Offset: 0x1910
 // Size: 0x4c
 function waitattachflag() {
@@ -286,7 +277,6 @@ function waitattachflag() {
 
 // Namespace tdef
 // Params 0, eflags: 0x0
-// namespace_bf41de08<file_0>::function_4f322c90
 // Checksum 0xfa032e3e, Offset: 0x1968
 // Size: 0x104
 function watchforendgame() {
@@ -309,7 +299,6 @@ function watchforendgame() {
 
 // Namespace tdef
 // Params 1, eflags: 0x0
-// namespace_bf41de08<file_0>::function_603bf516
 // Checksum 0x815fe153, Offset: 0x1a78
 // Size: 0x180
 function function_603bf516(victim) {
@@ -336,7 +325,6 @@ function function_603bf516(victim) {
 
 // Namespace tdef
 // Params 1, eflags: 0x0
-// namespace_bf41de08<file_0>::function_74ab4e4b
 // Checksum 0x21f1d6f6, Offset: 0x1c00
 // Size: 0x2c0
 function createflag(victim) {
@@ -366,7 +354,6 @@ function createflag(victim) {
 
 // Namespace tdef
 // Params 0, eflags: 0x0
-// namespace_bf41de08<file_0>::function_62317c10
 // Checksum 0xc6a090ab, Offset: 0x1ec8
 // Size: 0x74
 function function_62317c10() {
@@ -383,7 +370,6 @@ function function_62317c10() {
 
 // Namespace tdef
 // Params 0, eflags: 0x0
-// namespace_bf41de08<file_0>::function_aa4c2fec
 // Checksum 0xf9539497, Offset: 0x1f48
 // Size: 0x58
 function attachflag() {
@@ -394,7 +380,6 @@ function attachflag() {
 
 // Namespace tdef
 // Params 0, eflags: 0x0
-// namespace_bf41de08<file_0>::function_f267a4f6
 // Checksum 0x7c14d5f1, Offset: 0x1fa8
 // Size: 0x50
 function detachflag() {
@@ -405,7 +390,6 @@ function detachflag() {
 
 // Namespace tdef
 // Params 1, eflags: 0x0
-// namespace_bf41de08<file_0>::function_e91e02c4
 // Checksum 0x3f6eb463, Offset: 0x2000
 // Size: 0x22
 function flagattachradar(team) {
@@ -415,7 +399,6 @@ function flagattachradar(team) {
 
 // Namespace tdef
 // Params 1, eflags: 0x0
-// namespace_bf41de08<file_0>::function_abe303dc
 // Checksum 0x2759ae18, Offset: 0x2030
 // Size: 0xdc
 function getflagradarowner(team) {
@@ -433,7 +416,6 @@ function getflagradarowner(team) {
 
 // Namespace tdef
 // Params 0, eflags: 0x0
-// namespace_bf41de08<file_0>::function_71b6f01c
 // Checksum 0x2e118dc, Offset: 0x2118
 // Size: 0x68
 function flagradarmover() {
@@ -448,7 +430,6 @@ function flagradarmover() {
 
 // Namespace tdef
 // Params 0, eflags: 0x0
-// namespace_bf41de08<file_0>::function_a3b3700f
 // Checksum 0xd9e40943, Offset: 0x2188
 // Size: 0x8c
 function flagwatchradarownerlost() {
@@ -461,7 +442,6 @@ function flagwatchradarownerlost() {
 
 // Namespace tdef
 // Params 1, eflags: 0x0
-// namespace_bf41de08<file_0>::function_3fcd5617
 // Checksum 0xbb0be249, Offset: 0x2220
 // Size: 0x34
 function onroundendgame(roundwinner) {
@@ -471,7 +451,6 @@ function onroundendgame(roundwinner) {
 
 // Namespace tdef
 // Params 1, eflags: 0x0
-// namespace_bf41de08<file_0>::function_19bc9234
 // Checksum 0x273a74f2, Offset: 0x2260
 // Size: 0x54
 function onspawnplayer(predictedspawn) {
@@ -484,7 +463,6 @@ function onspawnplayer(predictedspawn) {
 
 // Namespace tdef
 // Params 0, eflags: 0x0
-// namespace_bf41de08<file_0>::function_e4e885e6
 // Checksum 0x3a26dd0, Offset: 0x22c0
 // Size: 0x1c
 function onroundswitch() {
@@ -493,7 +471,6 @@ function onroundswitch() {
 
 // Namespace tdef
 // Params 0, eflags: 0x0
-// namespace_bf41de08<file_0>::function_1936f03b
 // Checksum 0x99ec1590, Offset: 0x22e8
 // Size: 0x4
 function function_1936f03b() {
@@ -502,7 +479,6 @@ function function_1936f03b() {
 
 // Namespace tdef
 // Params 0, eflags: 0x0
-// namespace_bf41de08<file_0>::function_c7d9ec4b
 // Checksum 0x99ec1590, Offset: 0x22f8
 // Size: 0x4
 function setspecialloadouts() {

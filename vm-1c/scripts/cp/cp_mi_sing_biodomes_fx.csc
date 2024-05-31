@@ -5,7 +5,6 @@
 
 // Namespace namespace_7042442b
 // Params 0, eflags: 0x1 linked
-// namespace_7042442b<file_0>::function_d290ebfa
 // Checksum 0x8c2a3548, Offset: 0xe0
 // Size: 0x14
 function main() {
@@ -14,7 +13,6 @@ function main() {
 
 // Namespace namespace_7042442b
 // Params 0, eflags: 0x1 linked
-// namespace_7042442b<file_0>::function_f45953c
 // Checksum 0x2c793f01, Offset: 0x100
 // Size: 0x1e
 function function_f45953c() {

@@ -7,7 +7,6 @@
 
 // Namespace decoy
 // Params 0, eflags: 0x2
-// namespace_b97178f7<file_0>::function_2dc19561
 // Checksum 0x39f0f22e, Offset: 0xf8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,7 +15,6 @@ function autoexec function_2dc19561() {
 
 // Namespace decoy
 // Params 0, eflags: 0x1 linked
-// namespace_b97178f7<file_0>::function_8c87d8eb
 // Checksum 0x6ebe3191, Offset: 0x138
 // Size: 0x14
 function __init__() {

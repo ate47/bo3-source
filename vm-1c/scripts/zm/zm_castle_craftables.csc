@@ -7,7 +7,6 @@
 
 // Namespace namespace_dddf9a25
 // Params 0, eflags: 0x1 linked
-// namespace_dddf9a25<file_0>::function_95743e9f
 // Checksum 0x16f96cc6, Offset: 0x298
 // Size: 0x7a
 function function_95743e9f() {
@@ -20,7 +19,6 @@ function function_95743e9f() {
 
 // Namespace namespace_dddf9a25
 // Params 0, eflags: 0x1 linked
-// namespace_dddf9a25<file_0>::function_3ebec56b
 // Checksum 0x9d739fd5, Offset: 0x320
 // Size: 0x1c
 function function_3ebec56b() {
@@ -29,7 +27,6 @@ function function_3ebec56b() {
 
 // Namespace namespace_dddf9a25
 // Params 0, eflags: 0x1 linked
-// namespace_dddf9a25<file_0>::function_4ece4a2f
 // Checksum 0xf67e8b33, Offset: 0x348
 // Size: 0x2ac
 function register_clientfields() {
@@ -47,7 +44,6 @@ function register_clientfields() {
 
 // Namespace namespace_dddf9a25
 // Params 7, eflags: 0x1 linked
-// namespace_dddf9a25<file_0>::function_f1838e49
 // Checksum 0x99fdfdad, Offset: 0x600
 // Size: 0xbe
 function function_f1838e49(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -63,7 +59,6 @@ function function_f1838e49(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_dddf9a25
 // Params 7, eflags: 0x1 linked
-// namespace_dddf9a25<file_0>::function_a43a3438
 // Checksum 0x5e317d00, Offset: 0x6c8
 // Size: 0x7c
 function function_a43a3438(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

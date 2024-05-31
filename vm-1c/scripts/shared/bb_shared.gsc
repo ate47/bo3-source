@@ -7,7 +7,6 @@
 
 // Namespace bb
 // Params 0, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_1463e4e5
 // Checksum 0x3aae8d24, Offset: 0x218
 // Size: 0x24
 function init_shared() {
@@ -16,7 +15,6 @@ function init_shared() {
 
 // Namespace bb
 // Params 0, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_c35e6aab
 // Checksum 0x1292c834, Offset: 0x248
 // Size: 0x44
 function init() {
@@ -26,7 +24,6 @@ function init() {
 
 // Namespace bb
 // Params 0, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_536049a7
 // Checksum 0xeaeeda8, Offset: 0x298
 // Size: 0x1c
 function player_init() {
@@ -35,7 +32,6 @@ function player_init() {
 
 // Namespace bb
 // Params 0, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_aebcf025
 // Checksum 0xa46f1e92, Offset: 0x2c0
 // Size: 0x7e
 function on_player_spawned() {
@@ -50,7 +46,6 @@ function on_player_spawned() {
 
 // Namespace bb
 // Params 0, eflags: 0x0
-// namespace_d8129fdd<file_0>::function_7d27aacb
 // Checksum 0xee53c396, Offset: 0x348
 // Size: 0x2c
 function on_player_disconnect() {
@@ -63,7 +58,6 @@ function on_player_disconnect() {
 
 // Namespace bb
 // Params 0, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_4c579175
 // Checksum 0xbde88803, Offset: 0x380
 // Size: 0x38
 function on_player_death() {
@@ -76,7 +70,6 @@ function on_player_death() {
 
 // Namespace bb
 // Params 0, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_da42bbc1
 // Checksum 0xba180f58, Offset: 0x3c0
 // Size: 0xac
 function commit_spawn_data() {
@@ -89,7 +82,6 @@ function commit_spawn_data() {
 
 // Namespace bb
 // Params 3, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_3941250c
 // Checksum 0x8c564503, Offset: 0x478
 // Size: 0x146
 function commit_weapon_data(spawnid, currentweapon, time0) {
@@ -111,7 +103,6 @@ function commit_weapon_data(spawnid, currentweapon, time0) {
 
 // Namespace bb
 // Params 2, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_e8c4e69f
 // Checksum 0x8e22cb3c, Offset: 0x5c8
 // Size: 0x56
 function add_to_stat(statname, delta) {
@@ -122,7 +113,6 @@ function add_to_stat(statname, delta) {
 
 // Namespace bb
 // Params 1, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_6a33da3c
 // Checksum 0xbb0627d7, Offset: 0x628
 // Size: 0xd4
 function function_6a33da3c(var_758db14b) {
@@ -140,7 +130,6 @@ function function_6a33da3c(var_758db14b) {
 
 // Namespace bb
 // Params 1, eflags: 0x1 linked
-// namespace_d8129fdd<file_0>::function_543e7299
 // Checksum 0x3c081c84, Offset: 0x708
 // Size: 0xec
 function function_543e7299(var_758db14b) {

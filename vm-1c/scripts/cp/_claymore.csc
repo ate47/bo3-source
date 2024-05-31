@@ -5,7 +5,6 @@
 
 // Namespace namespace_7df5be44
 // Params 1, eflags: 0x1 linked
-// namespace_7df5be44<file_0>::function_c35e6aab
 // Checksum 0x3d9a17fe, Offset: 0xe8
 // Size: 0x26
 function init(localclientnum) {
@@ -14,7 +13,6 @@ function init(localclientnum) {
 
 // Namespace namespace_7df5be44
 // Params 1, eflags: 0x1 linked
-// namespace_7df5be44<file_0>::function_ab1f9ea1
 // Checksum 0x6f4fcf8c, Offset: 0x118
 // Size: 0xc0
 function spawned(localclientnum) {

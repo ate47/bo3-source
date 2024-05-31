@@ -12,7 +12,6 @@
 
 // Namespace multilockap_guidance
 // Params 0, eflags: 0x2
-// namespace_e0ca4f4b<file_0>::function_2dc19561
 // Checksum 0xca70156d, Offset: 0x230
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace multilockap_guidance
 // Params 0, eflags: 0x1 linked
-// namespace_e0ca4f4b<file_0>::function_8c87d8eb
 // Checksum 0x2a44aba0, Offset: 0x270
 // Size: 0x44
 function __init__() {
@@ -31,7 +29,6 @@ function __init__() {
 
 // Namespace multilockap_guidance
 // Params 0, eflags: 0x1 linked
-// namespace_e0ca4f4b<file_0>::function_aebcf025
 // Checksum 0xaa6f7ebe, Offset: 0x2c0
 // Size: 0x4c
 function on_player_spawned() {
@@ -43,7 +40,6 @@ function on_player_spawned() {
 
 // Namespace multilockap_guidance
 // Params 2, eflags: 0x1 linked
-// namespace_e0ca4f4b<file_0>::function_4da93304
 // Checksum 0xbab8300c, Offset: 0x318
 // Size: 0x27c
 function clearaptarget(weapon, whom) {
@@ -86,7 +82,6 @@ function clearaptarget(weapon, whom) {
 
 // Namespace multilockap_guidance
 // Params 0, eflags: 0x1 linked
-// namespace_e0ca4f4b<file_0>::function_c0677ebd
 // Checksum 0x5071d4fb, Offset: 0x5a0
 // Size: 0x11e
 function function_c0677ebd() {
@@ -106,7 +101,6 @@ function function_c0677ebd() {
 
 // Namespace multilockap_guidance
 // Params 0, eflags: 0x1 linked
-// namespace_e0ca4f4b<file_0>::function_8d1ede4
 // Checksum 0xd5937d3, Offset: 0x6c8
 // Size: 0x178
 function aptoggleloop() {
@@ -140,7 +134,6 @@ function aptoggleloop() {
 
 // Namespace multilockap_guidance
 // Params 1, eflags: 0x1 linked
-// namespace_e0ca4f4b<file_0>::function_601d4865
 // Checksum 0x293136a1, Offset: 0x848
 // Size: 0x5b6
 function aplockloop(weapon) {
@@ -228,7 +221,6 @@ function aplockloop(weapon) {
 
 // Namespace multilockap_guidance
 // Params 0, eflags: 0x1 linked
-// namespace_e0ca4f4b<file_0>::function_7e6838e7
 // Checksum 0x73d61fbc, Offset: 0xe08
 // Size: 0x2c
 function destroylockoncanceledmessage() {
@@ -239,7 +231,6 @@ function destroylockoncanceledmessage() {
 
 // Namespace multilockap_guidance
 // Params 0, eflags: 0x0
-// namespace_e0ca4f4b<file_0>::function_ec576e9f
 // Checksum 0x61279067, Offset: 0xe40
 // Size: 0x154
 function displaylockoncanceledmessage() {
@@ -264,7 +255,6 @@ function displaylockoncanceledmessage() {
 
 // Namespace multilockap_guidance
 // Params 1, eflags: 0x1 linked
-// namespace_e0ca4f4b<file_0>::function_7f1a054a
 // Checksum 0xaf268941, Offset: 0xfa0
 // Size: 0x53e
 function getbesttarget(weapon) {
@@ -330,7 +320,6 @@ function getbesttarget(weapon) {
 
 // Namespace multilockap_guidance
 // Params 2, eflags: 0x1 linked
-// namespace_e0ca4f4b<file_0>::function_aa0319d2
 // Checksum 0xe4a4b175, Offset: 0x14e8
 // Size: 0x60
 function targetinsertionsortcompare(a, b) {
@@ -345,7 +334,6 @@ function targetinsertionsortcompare(a, b) {
 
 // Namespace multilockap_guidance
 // Params 1, eflags: 0x1 linked
-// namespace_e0ca4f4b<file_0>::function_13957682
 // Checksum 0x5b2ad39b, Offset: 0x1550
 // Size: 0x52
 function insideapreticlenolock(target) {
@@ -355,7 +343,6 @@ function insideapreticlenolock(target) {
 
 // Namespace multilockap_guidance
 // Params 1, eflags: 0x1 linked
-// namespace_e0ca4f4b<file_0>::function_66358804
 // Checksum 0xaec77aba, Offset: 0x15b0
 // Size: 0x52
 function insideapreticlelocked(target) {
@@ -365,7 +352,6 @@ function insideapreticlelocked(target) {
 
 // Namespace multilockap_guidance
 // Params 2, eflags: 0x1 linked
-// namespace_e0ca4f4b<file_0>::function_d02638da
 // Checksum 0xec082c7b, Offset: 0x1610
 // Size: 0x86
 function isstillvalidtarget(weapon, ent) {
@@ -386,7 +372,6 @@ function isstillvalidtarget(weapon, ent) {
 
 // Namespace multilockap_guidance
 // Params 3, eflags: 0x1 linked
-// namespace_e0ca4f4b<file_0>::function_17816f15
 // Checksum 0x99f29f6b, Offset: 0x16a0
 // Size: 0xec
 function seekersound(alias, looping, id) {
@@ -407,7 +392,6 @@ function seekersound(alias, looping, id) {
 
 // Namespace multilockap_guidance
 // Params 1, eflags: 0x1 linked
-// namespace_e0ca4f4b<file_0>::function_27f7300b
 // Checksum 0x853466a8, Offset: 0x1798
 // Size: 0x180
 function locksighttest(target) {

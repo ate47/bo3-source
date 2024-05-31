@@ -9,7 +9,6 @@
 
 // Namespace persistence
 // Params 0, eflags: 0x2
-// namespace_fe5e4926<file_0>::function_2dc19561
 // Checksum 0x49c3934f, Offset: 0x2e0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace persistence
 // Params 0, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_8c87d8eb
 // Checksum 0xb769779c, Offset: 0x320
 // Size: 0x44
 function __init__() {
@@ -28,7 +26,6 @@ function __init__() {
 
 // Namespace persistence
 // Params 0, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_c35e6aab
 // Checksum 0x3744d723, Offset: 0x370
 // Size: 0x64
 function init() {
@@ -42,7 +39,6 @@ function init() {
 
 // Namespace persistence
 // Params 0, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_fb4f96b5
 // Checksum 0x47bcfeeb, Offset: 0x3e0
 // Size: 0x10
 function on_player_connect() {
@@ -51,7 +47,6 @@ function on_player_connect() {
 
 // Namespace persistence
 // Params 0, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_a5fb9690
 // Checksum 0x12ea8f85, Offset: 0x3f8
 // Size: 0x1f8
 function initialize_stat_tracking() {
@@ -93,7 +88,6 @@ function initialize_stat_tracking() {
 
 // Namespace persistence
 // Params 0, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_f352670b
 // Checksum 0xcff142ce, Offset: 0x5f8
 // Size: 0x64c
 function function_f352670b() {
@@ -182,7 +176,6 @@ function function_f352670b() {
 
 // Namespace persistence
 // Params 1, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_2369852e
 // Checksum 0x1596b8a, Offset: 0xc50
 // Size: 0x6a
 function function_2369852e(dataname) {
@@ -197,7 +190,6 @@ function function_2369852e(dataname) {
 
 // Namespace persistence
 // Params 0, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_8b287992
 // Checksum 0x9c5b71a6, Offset: 0xcc8
 // Size: 0x9a
 function get_gametype_name() {
@@ -214,7 +206,6 @@ function get_gametype_name() {
 
 // Namespace persistence
 // Params 0, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_43d40270
 // Checksum 0xd64314c3, Offset: 0xd70
 // Size: 0x44
 function is_party_gamemode() {
@@ -230,7 +221,6 @@ function is_party_gamemode() {
 
 // Namespace persistence
 // Params 1, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_78783533
 // Checksum 0xa64ba86b, Offset: 0xdc0
 // Size: 0x1e
 function function_78783533(dataname) {
@@ -239,7 +229,6 @@ function function_78783533(dataname) {
 
 // Namespace persistence
 // Params 3, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_e885624a
 // Checksum 0xc8cd075a, Offset: 0xde8
 // Size: 0x9c
 function function_e885624a(dataname, value, incvalue) {
@@ -257,7 +246,6 @@ function function_e885624a(dataname, value, incvalue) {
 
 // Namespace persistence
 // Params 0, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_b33a7ae2
 // Checksum 0x72473311, Offset: 0xe90
 // Size: 0x64
 function adjust_recent_stats() {
@@ -271,7 +259,6 @@ function adjust_recent_stats() {
 
 // Namespace persistence
 // Params 3, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_fe323248
 // Checksum 0x6a7ed652, Offset: 0xf00
 // Size: 0xec
 function get_recent_stat(isglobal, index, statname) {
@@ -287,7 +274,6 @@ function get_recent_stat(isglobal, index, statname) {
 
 // Namespace persistence
 // Params 4, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_ebe77e8c
 // Checksum 0x548d8952, Offset: 0xff8
 // Size: 0x1a4
 function set_recent_stat(isglobal, index, statname, value) {
@@ -320,7 +306,6 @@ function set_recent_stat(isglobal, index, statname, value) {
 
 // Namespace persistence
 // Params 4, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_fc306ea1
 // Checksum 0x2c7c70b1, Offset: 0x11a8
 // Size: 0x114
 function add_recent_stat(isglobal, index, statname, value) {
@@ -345,7 +330,6 @@ function add_recent_stat(isglobal, index, statname, value) {
 
 // Namespace persistence
 // Params 2, eflags: 0x0
-// namespace_fe5e4926<file_0>::function_ea30052d
 // Checksum 0x7e27caad, Offset: 0x12c8
 // Size: 0x8c
 function set_match_history_stat(statname, value) {
@@ -356,7 +340,6 @@ function set_match_history_stat(statname, value) {
 
 // Namespace persistence
 // Params 2, eflags: 0x0
-// namespace_fe5e4926<file_0>::function_2354a0d6
 // Checksum 0x28b7481f, Offset: 0x1360
 // Size: 0x8c
 function add_match_history_stat(statname, value) {
@@ -367,7 +350,6 @@ function add_match_history_stat(statname, value) {
 
 // Namespace persistence
 // Params 0, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_f69038f1
 // Checksum 0xb95f26c1, Offset: 0x13f8
 // Size: 0x15c
 function initialize_match_stats() {
@@ -391,7 +373,6 @@ function initialize_match_stats() {
 
 // Namespace persistence
 // Params 0, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_d1b7628a
 // Checksum 0xdbe4a28a, Offset: 0x1560
 // Size: 0xa
 function function_d1b7628a() {
@@ -400,7 +381,6 @@ function function_d1b7628a() {
 
 // Namespace persistence
 // Params 3, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_3ec1e50f
 // Checksum 0x9b2523cb, Offset: 0x1578
 // Size: 0x5c
 function function_3ec1e50f(playerindex, statname, value) {
@@ -411,7 +391,6 @@ function function_3ec1e50f(playerindex, statname, value) {
 
 // Namespace persistence
 // Params 3, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_ae338cde
 // Checksum 0xc05153, Offset: 0x15e0
 // Size: 0x64
 function function_ae338cde(playerindex, medalindex, value) {
@@ -422,7 +401,6 @@ function function_ae338cde(playerindex, medalindex, value) {
 
 // Namespace persistence
 // Params 3, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_2eb5e93
 // Checksum 0x54b78d3, Offset: 0x1650
 // Size: 0xe4
 function function_2eb5e93(statname, value, index) {
@@ -445,7 +423,6 @@ function function_2eb5e93(statname, value, index) {
 
 // Namespace persistence
 // Params 7, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_14095578
 // Checksum 0x94783f53, Offset: 0x1740
 // Size: 0x4ec
 function codecallback_challengecomplete(rewardxp, maxval, row, tablenumber, challengetype, itemindex, challengeindex) {
@@ -495,7 +472,6 @@ function codecallback_challengecomplete(rewardxp, maxval, row, tablenumber, chal
 
 // Namespace persistence
 // Params 5, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_566d6e6a
 // Checksum 0x4b56aa13, Offset: 0x1c38
 // Size: 0xc4
 function codecallback_gunchallengecomplete(rewardxp, attachmentindex, itemindex, rankid, islastrank) {
@@ -509,7 +485,6 @@ function codecallback_gunchallengecomplete(rewardxp, attachmentindex, itemindex,
 
 // Namespace persistence
 // Params 0, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_b526d623
 // Checksum 0x99ec1590, Offset: 0x1d08
 // Size: 0x4
 function function_b526d623() {
@@ -518,7 +493,6 @@ function function_b526d623() {
 
 // Namespace persistence
 // Params 1, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_f81a1bca
 // Checksum 0xda1ecc9a, Offset: 0x1d18
 // Size: 0xc
 function function_f81a1bca(var_9c648312) {
@@ -527,7 +501,6 @@ function function_f81a1bca(var_9c648312) {
 
 // Namespace persistence
 // Params 2, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_8e1fc5b5
 // Checksum 0x1cf34034, Offset: 0x1d30
 // Size: 0x14
 function function_8e1fc5b5(index, passed) {
@@ -536,7 +509,6 @@ function function_8e1fc5b5(index, passed) {
 
 // Namespace persistence
 // Params 0, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_9392f054
 // Checksum 0x2bfc891e, Offset: 0x1d50
 // Size: 0x44
 function upload_stats_soon() {
@@ -549,7 +521,6 @@ function upload_stats_soon() {
 
 // Namespace persistence
 // Params 2, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_75855e8f
 // Checksum 0x18c2ee21, Offset: 0x1da0
 // Size: 0x14
 function function_75855e8f(dataname, value) {
@@ -558,7 +529,6 @@ function function_75855e8f(dataname, value) {
 
 // Namespace persistence
 // Params 3, eflags: 0x1 linked
-// namespace_fe5e4926<file_0>::function_faa796b4
 // Checksum 0xa2ad2f60, Offset: 0x1dc0
 // Size: 0x1c
 function function_faa796b4(weapon, dataname, value) {
@@ -567,7 +537,6 @@ function function_faa796b4(weapon, dataname, value) {
 
 // Namespace persistence
 // Params 4, eflags: 0x0
-// namespace_fe5e4926<file_0>::function_8cbcaaa5
 // Checksum 0xa75f9d15, Offset: 0x1de8
 // Size: 0x24
 function function_8cbcaaa5(stattype, dataname, value, weapon) {

@@ -16,7 +16,6 @@
 
 // Namespace namespace_96203a67
 // Params 0, eflags: 0x2
-// namespace_96203a67<file_0>::function_2dc19561
 // Checksum 0x52089e20, Offset: 0x3a0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -25,7 +24,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_96203a67
 // Params 0, eflags: 0x1 linked
-// namespace_96203a67<file_0>::function_8c87d8eb
 // Checksum 0x14cdc0aa, Offset: 0x3e0
 // Size: 0x142
 function __init__() {
@@ -39,7 +37,6 @@ function __init__() {
 
 // Namespace namespace_96203a67
 // Params 0, eflags: 0x1 linked
-// namespace_96203a67<file_0>::function_33237593
 // Checksum 0xc3fd4487, Offset: 0x530
 // Size: 0x174
 function trap_activate_fire() {
@@ -64,7 +61,6 @@ function trap_activate_fire() {
 
 // Namespace namespace_96203a67
 // Params 1, eflags: 0x1 linked
-// namespace_96203a67<file_0>::function_cf16cedb
 // Checksum 0x9a5a6d3d, Offset: 0x6b0
 // Size: 0x144
 function trap_audio(trap) {
@@ -84,7 +80,6 @@ function trap_audio(trap) {
 
 // Namespace namespace_96203a67
 // Params 1, eflags: 0x1 linked
-// namespace_96203a67<file_0>::function_c5d41372
 // Checksum 0x32d66219, Offset: 0x800
 // Size: 0x68
 function function_c5d41372(trap) {
@@ -97,7 +92,6 @@ function function_c5d41372(trap) {
 
 // Namespace namespace_96203a67
 // Params 0, eflags: 0x1 linked
-// namespace_96203a67<file_0>::function_4bd130f6
 // Checksum 0xd8fe54af, Offset: 0x870
 // Size: 0x1a6
 function player_damage() {
@@ -125,7 +119,6 @@ function player_damage() {
 
 // Namespace namespace_96203a67
 // Params 1, eflags: 0x1 linked
-// namespace_96203a67<file_0>::function_f9348fda
 // Checksum 0xf5259486, Offset: 0xa20
 // Size: 0x2a4
 function damage(trap) {

@@ -7,7 +7,6 @@
 
 // Namespace zombie_shared
 // Params 0, eflags: 0x0
-// namespace_6a3bcfe9<file_0>::function_9d423b8
 // Checksum 0xf1bb0efd, Offset: 0x520
 // Size: 0x24
 function deleteatlimit() {
@@ -17,7 +16,6 @@ function deleteatlimit() {
 
 // Namespace zombie_shared
 // Params 5, eflags: 0x0
-// namespace_6a3bcfe9<file_0>::function_873ad9f2
 // Checksum 0x8249ceaa, Offset: 0x550
 // Size: 0x2c
 function lookatentity(var_22ba4c26, lookduration, lookspeed, eyesonly, interruptothers) {
@@ -26,7 +24,6 @@ function lookatentity(var_22ba4c26, lookduration, lookspeed, eyesonly, interrupt
 
 // Namespace zombie_shared
 // Params 5, eflags: 0x0
-// namespace_6a3bcfe9<file_0>::function_5063e932
 // Checksum 0x78b2033d, Offset: 0x588
 // Size: 0x1b2
 function lookatposition(looktargetpos, lookduration, lookspeed, eyesonly, interruptothers) {
@@ -51,7 +48,6 @@ function lookatposition(looktargetpos, lookduration, lookspeed, eyesonly, interr
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x0
-// namespace_6a3bcfe9<file_0>::function_4ea4048a
 // Checksum 0xe5dfdf2c, Offset: 0x748
 // Size: 0x3c
 function lookatanimations(leftanim, rightanim) {
@@ -61,7 +57,6 @@ function lookatanimations(leftanim, rightanim) {
 
 // Namespace zombie_shared
 // Params 1, eflags: 0x0
-// namespace_6a3bcfe9<file_0>::function_4d7d1204
 // Checksum 0xcef2eb, Offset: 0x790
 // Size: 0x138
 function handledogsoundnotetracks(note) {
@@ -84,7 +79,6 @@ function handledogsoundnotetracks(note) {
 
 // Namespace zombie_shared
 // Params 0, eflags: 0x0
-// namespace_6a3bcfe9<file_0>::function_586b2608
 // Checksum 0xefff4ceb, Offset: 0x8d0
 // Size: 0xc
 function growling() {
@@ -93,7 +87,6 @@ function growling() {
 
 // Namespace zombie_shared
 // Params 0, eflags: 0x0
-// namespace_6a3bcfe9<file_0>::function_398df63e
 // Checksum 0xf1673cd7, Offset: 0x8e8
 // Size: 0x2a6
 function registernotetracks() {
@@ -122,7 +115,6 @@ function registernotetracks() {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x0
-// namespace_6a3bcfe9<file_0>::function_58ba05cd
 // Checksum 0xf0b6c5d6, Offset: 0xb98
 // Size: 0x14
 function notetrackstopanim(note, flagname) {
@@ -131,7 +123,6 @@ function notetrackstopanim(note, flagname) {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_a4db6fe3
 // Checksum 0x2b1b9cf, Offset: 0xbb8
 // Size: 0x4c
 function notetrackstartragdoll(note, flagname) {
@@ -144,7 +135,6 @@ function notetrackstartragdoll(note, flagname) {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_b4acbae5
 // Checksum 0xe3687222, Offset: 0xc10
 // Size: 0x48
 function notetrackmovementstop(note, flagname) {
@@ -155,7 +145,6 @@ function notetrackmovementstop(note, flagname) {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_766aa3ae
 // Checksum 0x12b7e8c6, Offset: 0xc60
 // Size: 0x48
 function notetrackmovementwalk(note, flagname) {
@@ -166,7 +155,6 @@ function notetrackmovementwalk(note, flagname) {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_291565a8
 // Checksum 0x42380774, Offset: 0xcb0
 // Size: 0x48
 function notetrackmovementrun(note, flagname) {
@@ -177,7 +165,6 @@ function notetrackmovementrun(note, flagname) {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_a14cd192
 // Checksum 0x56546d63, Offset: 0xd00
 // Size: 0x48
 function notetrackalertnesscasual(note, flagname) {
@@ -188,7 +175,6 @@ function notetrackalertnesscasual(note, flagname) {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_dd9a3621
 // Checksum 0x7d3c8c5f, Offset: 0xd50
 // Size: 0x48
 function notetrackalertnessalert(note, flagname) {
@@ -199,7 +185,6 @@ function notetrackalertnessalert(note, flagname) {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_81d67177
 // Checksum 0x64417b5c, Offset: 0xda0
 // Size: 0x44
 function notetrackposestand(note, flagname) {
@@ -209,7 +194,6 @@ function notetrackposestand(note, flagname) {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_2cf4f7bb
 // Checksum 0xb5b531dc, Offset: 0xdf0
 // Size: 0x74
 function notetrackposecrouch(note, flagname) {
@@ -223,7 +207,6 @@ function notetrackposecrouch(note, flagname) {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_77aac8dc
 // Checksum 0xd08e891, Offset: 0xe70
 // Size: 0xee
 function notetrackgravity(note, flagname) {
@@ -244,7 +227,6 @@ function notetrackgravity(note, flagname) {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_c6db2835
 // Checksum 0x7996bdc3, Offset: 0xf68
 // Size: 0xc4
 function notetrackbodyfall(note, flagname) {
@@ -264,7 +246,6 @@ function notetrackbodyfall(note, flagname) {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_6bb167b4
 // Checksum 0x80c74b0e, Offset: 0x1038
 // Size: 0x94
 function notetrackfootstep(note, flagname) {
@@ -280,7 +261,6 @@ function notetrackfootstep(note, flagname) {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_2ffb7dd6
 // Checksum 0xe08bf739, Offset: 0x10d8
 // Size: 0x64
 function notetrackfootscrape(note, flagname) {
@@ -294,7 +274,6 @@ function notetrackfootscrape(note, flagname) {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_396aa17d
 // Checksum 0x803319c9, Offset: 0x1148
 // Size: 0x64
 function notetrackland(note, flagname) {
@@ -308,7 +287,6 @@ function notetrackland(note, flagname) {
 
 // Namespace zombie_shared
 // Params 4, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_8ed1270
 // Checksum 0xbc00c609, Offset: 0x11b8
 // Size: 0x30a
 function handlenotetrack(note, flagname, customfunction, var1) {
@@ -373,7 +351,6 @@ function handlenotetrack(note, flagname, customfunction, var1) {
 
 // Namespace zombie_shared
 // Params 3, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_c7930296
 // Checksum 0x293cf051, Offset: 0x14d0
 // Size: 0x8c
 function donotetracks(flagname, customfunction, var1) {
@@ -391,7 +368,6 @@ function donotetracks(flagname, customfunction, var1) {
 
 // Namespace zombie_shared
 // Params 5, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_a9903697
 // Checksum 0x9cdddea5, Offset: 0x1568
 // Size: 0x13e
 function donotetracksforeverproc(notetracksfunc, flagname, killstring, customfunction, var1) {
@@ -417,7 +393,6 @@ function donotetracksforeverproc(notetracksfunc, flagname, killstring, customfun
 
 // Namespace zombie_shared
 // Params 4, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_7ad76e7b
 // Checksum 0xb6bf397d, Offset: 0x16b0
 // Size: 0x54
 function donotetracksforever(flagname, killstring, customfunction, var1) {
@@ -426,7 +401,6 @@ function donotetracksforever(flagname, killstring, customfunction, var1) {
 
 // Namespace zombie_shared
 // Params 6, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_fd474120
 // Checksum 0xe9663cf2, Offset: 0x1710
 // Size: 0x5a
 function donotetracksfortimeproc(donotetracksforeverfunc, time, flagname, customfunction, ent, var1) {
@@ -436,7 +410,6 @@ function donotetracksfortimeproc(donotetracksforeverfunc, time, flagname, custom
 
 // Namespace zombie_shared
 // Params 4, eflags: 0x0
-// namespace_6a3bcfe9<file_0>::function_c4b703c8
 // Checksum 0xf012d78c, Offset: 0x1778
 // Size: 0x94
 function donotetracksfortime(time, flagname, customfunction, var1) {
@@ -447,7 +420,6 @@ function donotetracksfortime(time, flagname, customfunction, var1) {
 
 // Namespace zombie_shared
 // Params 1, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_8cf6fb7c
 // Checksum 0x132b5aab, Offset: 0x1818
 // Size: 0x1e
 function donotetracksfortimeendnotify(time) {
@@ -457,7 +429,6 @@ function donotetracksfortimeendnotify(time) {
 
 // Namespace zombie_shared
 // Params 1, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_69e73361
 // Checksum 0xac931724, Offset: 0x1840
 // Size: 0x10c
 function playfootstep(foot) {
@@ -488,7 +459,6 @@ function playfootstep(foot) {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_8094635a
 // Checksum 0x5acb6a2c, Offset: 0x1958
 // Size: 0x108
 function playfootstepeffect(foot, groundtype) {
@@ -510,7 +480,6 @@ function playfootstepeffect(foot, groundtype) {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x0
-// namespace_6a3bcfe9<file_0>::function_836f983a
 // Checksum 0x31182a9b, Offset: 0x1a68
 // Size: 0x168
 function movetooriginovertime(origin, time) {
@@ -533,7 +502,6 @@ function movetooriginovertime(origin, time) {
 
 // Namespace zombie_shared
 // Params 0, eflags: 0x0
-// namespace_6a3bcfe9<file_0>::function_9be83eb7
 // Checksum 0x7f22aeb8, Offset: 0x1bd8
 // Size: 0x8
 function returntrue() {
@@ -542,7 +510,6 @@ function returntrue() {
 
 // Namespace zombie_shared
 // Params 0, eflags: 0x0
-// namespace_6a3bcfe9<file_0>::function_a5fbf5cc
 // Checksum 0x343bdccc, Offset: 0x1be8
 // Size: 0x714
 function trackloop() {
@@ -643,7 +610,6 @@ function trackloop() {
 
 // Namespace zombie_shared
 // Params 2, eflags: 0x0
-// namespace_6a3bcfe9<file_0>::function_ba4da757
 // Checksum 0x51a0dd60, Offset: 0x2308
 // Size: 0x108
 function setanimaimweight(goalweight, goaltime) {
@@ -663,7 +629,6 @@ function setanimaimweight(goalweight, goaltime) {
 
 // Namespace zombie_shared
 // Params 0, eflags: 0x1 linked
-// namespace_6a3bcfe9<file_0>::function_8ebae387
 // Checksum 0x1aa70a61, Offset: 0x2418
 // Size: 0xb4
 function incranimaimweight() {

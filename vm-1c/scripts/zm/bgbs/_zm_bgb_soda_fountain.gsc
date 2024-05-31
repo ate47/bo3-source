@@ -11,7 +11,6 @@
 
 // Namespace zm_bgb_soda_fountain
 // Params 0, eflags: 0x2
-// namespace_78eb0295<file_0>::function_2dc19561
 // Checksum 0x53b3b716, Offset: 0x188
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_soda_fountain
 // Params 0, eflags: 0x1 linked
-// namespace_78eb0295<file_0>::function_8c87d8eb
 // Checksum 0x3f0c8e30, Offset: 0x1c8
 // Size: 0x54
 function __init__() {
@@ -32,7 +30,6 @@ function __init__() {
 
 // Namespace zm_bgb_soda_fountain
 // Params 0, eflags: 0x1 linked
-// namespace_78eb0295<file_0>::function_279e4e97
 // Checksum 0xf5a131a5, Offset: 0x228
 // Size: 0x178
 function event() {

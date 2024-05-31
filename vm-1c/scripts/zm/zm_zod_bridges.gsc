@@ -21,7 +21,6 @@ class class_1f041243 {
 
     // Namespace namespace_1f041243
     // Params 0, eflags: 0x0
-    // namespace_1f041243<file_0>::function_64c24459
     // Checksum 0xe2e1d080, Offset: 0xb38
     // Size: 0x44
     function function_64c24459() {
@@ -31,7 +30,6 @@ class class_1f041243 {
 
     // Namespace namespace_1f041243
     // Params 0, eflags: 0x0
-    // namespace_1f041243<file_0>::function_35b36f55
     // Checksum 0xb3e1e759, Offset: 0xa80
     // Size: 0xac
     function function_35b36f55() {
@@ -45,7 +43,6 @@ class class_1f041243 {
 
     // Namespace namespace_1f041243
     // Params 2, eflags: 0x0
-    // namespace_1f041243<file_0>::function_266e1445
     // Checksum 0xceed0c4d, Offset: 0x8a8
     // Size: 0x1cc
     function function_266e1445(var_f68bad2e, var_d08932c5) {
@@ -67,7 +64,6 @@ class class_1f041243 {
 
     // Namespace namespace_1f041243
     // Params 2, eflags: 0x0
-    // namespace_1f041243<file_0>::function_1bfbfa4c
     // Checksum 0x5a78bae8, Offset: 0x858
     // Size: 0x48
     function function_1bfbfa4c(e_entity, var_d42f02cf) {
@@ -79,7 +75,6 @@ class class_1f041243 {
 
     // Namespace namespace_1f041243
     // Params 1, eflags: 0x0
-    // namespace_1f041243<file_0>::function_69d1a149
     // Checksum 0x5ffbac61, Offset: 0x488
     // Size: 0x3c4
     function function_69d1a149(var_d42f02cf) {
@@ -116,7 +111,6 @@ class class_1f041243 {
 
 // Namespace namespace_f76f5b63
 // Params 0, eflags: 0x2
-// namespace_f76f5b63<file_0>::function_2dc19561
 // Checksum 0xd1f51ee3, Offset: 0x330
 // Size: 0x2c
 function autoexec function_2dc19561() {
@@ -125,7 +119,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_f76f5b63
 // Params 0, eflags: 0x0
-// namespace_f76f5b63<file_0>::function_5b6b9132
 // Checksum 0x9b24a9a6, Offset: 0x368
 // Size: 0x1c
 function __main__() {
@@ -134,7 +127,6 @@ function __main__() {
 
 // Namespace namespace_f76f5b63
 // Params 0, eflags: 0x0
-// namespace_f76f5b63<file_0>::function_cc211d40
 // Checksum 0xee322fe9, Offset: 0x390
 // Size: 0x94
 function function_cc211d40() {
@@ -151,7 +143,6 @@ function function_cc211d40() {
 
 // Namespace namespace_f76f5b63
 // Params 2, eflags: 0x0
-// namespace_f76f5b63<file_0>::function_69d1a149
 // Checksum 0x645bb9c5, Offset: 0x430
 // Size: 0x50
 function function_69d1a149(var_d42f02cf, n_index) {

@@ -12,7 +12,6 @@
 
     // Namespace dev
     // Params 5, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_172e04fa
     // Checksum 0x6a755d42, Offset: 0x150
     // Size: 0xcc
     function debug_sphere(origin, radius, color, alpha, time) {
@@ -28,7 +27,6 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_b7e632c1
     // Checksum 0x9cb49404, Offset: 0x228
     // Size: 0xb1c
     function updateminimapsetting() {
@@ -157,7 +155,6 @@
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_854418c9
     // Checksum 0x301d0c37, Offset: 0xd50
     // Size: 0x4a
     function vecscale(vec, scalar) {
@@ -166,7 +163,6 @@
 
     // Namespace dev
     // Params 3, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_b6d31b67
     // Checksum 0x6b765295, Offset: 0xda8
     // Size: 0x3c0
     function drawminimapbounds(viewpos, mincorner, maxcorner) {
@@ -202,7 +198,6 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_eb800b12
     // Checksum 0x3abd2d34, Offset: 0x1170
     // Size: 0x1e6
     function minimapwarn(corners) {
@@ -228,7 +223,6 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_dfab5e4f
     // Checksum 0xf87efa4f, Offset: 0x1360
     // Size: 0xaa
     function function_dfab5e4f(var_9a65c47f) {
@@ -239,7 +233,6 @@
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_5fcfe5a4
     // Checksum 0x22469cfd, Offset: 0x1418
     // Size: 0xca
     function function_5fcfe5a4(character_index, body_index) {
@@ -251,7 +244,6 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_ddb1104b
     // Checksum 0xcaeb5420, Offset: 0x14f0
     // Size: 0x21e
     function body_customization_process_command(character_index) {
@@ -283,7 +275,6 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_630b630
     // Checksum 0x13761b6, Offset: 0x1718
     // Size: 0x2e6
     function body_customization_populate(mode) {
@@ -306,7 +297,6 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_8ed979e4
     // Checksum 0xce02794d, Offset: 0x1a08
     // Size: 0x98
     function body_customization_devgui(mode) {
@@ -323,7 +313,6 @@
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
-    // namespace_eae8c9fa<file_0>::function_484d1e26
     // Checksum 0xa9980c64, Offset: 0x1aa8
     // Size: 0xdc
     function add_perk_devgui(name, specialties) {

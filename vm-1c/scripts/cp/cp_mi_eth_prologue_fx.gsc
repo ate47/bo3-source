@@ -4,7 +4,6 @@
 
 // Namespace namespace_34e37984
 // Params 0, eflags: 0x1 linked
-// namespace_34e37984<file_0>::function_d290ebfa
 // Checksum 0xbbbe6f0c, Offset: 0x2d0
 // Size: 0x136
 function main() {

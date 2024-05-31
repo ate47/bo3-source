@@ -7,7 +7,6 @@
 
 // Namespace _laststand
 // Params 0, eflags: 0x2
-// namespace_8f9cc7d0<file_0>::function_c35e6aab
 // Checksum 0x6c0ca5e3, Offset: 0x158
 // Size: 0x124
 function autoexec init() {
@@ -24,7 +23,6 @@ function autoexec init() {
 
 // Namespace _laststand
 // Params 0, eflags: 0x1 linked
-// namespace_8f9cc7d0<file_0>::function_1e56aab0
 // Checksum 0x3627c892, Offset: 0x288
 // Size: 0xb0
 function wait_and_set_revive_shader_constant() {
@@ -39,7 +37,6 @@ function wait_and_set_revive_shader_constant() {
 
 // Namespace _laststand
 // Params 3, eflags: 0x1 linked
-// namespace_8f9cc7d0<file_0>::function_c2e280cb
 // Checksum 0xaa41963a, Offset: 0x340
 // Size: 0x108
 function function_c2e280cb(model, oldvalue, newvalue) {
@@ -59,7 +56,6 @@ function function_c2e280cb(model, oldvalue, newvalue) {
 
 // Namespace _laststand
 // Params 7, eflags: 0x1 linked
-// namespace_8f9cc7d0<file_0>::function_3cc786df
 // Checksum 0x6deb8153, Offset: 0x450
 // Size: 0x2b4
 function update_bleedout_timer(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

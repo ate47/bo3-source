@@ -34,7 +34,6 @@
 
 // Namespace archetype_zod_companion
 // Params 0, eflags: 0x2
-// namespace_100841b<file_0>::function_d290ebfa
 // Checksum 0x17284b84, Offset: 0xa08
 // Size: 0xa4
 function autoexec main() {
@@ -49,7 +48,6 @@ function autoexec main() {
 
 // Namespace zodcompanionbehavior
 // Params 0, eflags: 0x1 linked
-// namespace_3e53e718<file_0>::function_a13b795c
 // Checksum 0x436cef15, Offset: 0xab8
 // Size: 0x2ac
 function registerbehaviorscriptfunctions() {
@@ -74,7 +72,6 @@ function registerbehaviorscriptfunctions() {
 
 // Namespace zodcompanionbehavior
 // Params 5, eflags: 0x4
-// namespace_3e53e718<file_0>::function_d2e641c1
 // Checksum 0x555de963, Offset: 0xd70
 // Size: 0x7c
 function private mocompignorepainfaceenemyinit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -85,7 +82,6 @@ function private mocompignorepainfaceenemyinit(entity, mocompanim, mocompanimble
 
 // Namespace zodcompanionbehavior
 // Params 5, eflags: 0x4
-// namespace_3e53e718<file_0>::function_965bf254
 // Checksum 0x483b0f5b, Offset: 0xdf8
 // Size: 0x3c
 function private mocompignorepainfaceenemyterminate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -94,7 +90,6 @@ function private mocompignorepainfaceenemyterminate(entity, mocompanim, mocompan
 
 // Namespace zodcompanionbehavior
 // Params 0, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_ba6a1c98
 // Checksum 0x2becaace, Offset: 0xe40
 // Size: 0x1a4
 function private archetypezodcompanionblackboardinit() {
@@ -128,7 +123,6 @@ function private archetypezodcompanionblackboardinit() {
 
 // Namespace zodcompanionbehavior
 // Params 0, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_c82dd93c
 // Checksum 0x592af342, Offset: 0xff0
 // Size: 0xa6
 function private function_c82dd93c() {
@@ -147,7 +141,6 @@ function private function_c82dd93c() {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_2cb38d2c
 // Checksum 0x81c474f3, Offset: 0x10a0
 // Size: 0x44
 function private zodcompaniondelaymovement(entity) {
@@ -156,7 +149,6 @@ function private zodcompaniondelaymovement(entity) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_522ee3d
 // Checksum 0x97ffad11, Offset: 0x10f0
 // Size: 0x5c
 function private zodcompanionmovement(entity) {
@@ -167,7 +159,6 @@ function private zodcompanionmovement(entity) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x1 linked
-// namespace_3e53e718<file_0>::function_92d6d6ff
 // Checksum 0x4d3ca24a, Offset: 0x1158
 // Size: 0x156
 function zodcompanioncanjuke(entity) {
@@ -186,7 +177,6 @@ function zodcompanioncanjuke(entity) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x1 linked
-// namespace_3e53e718<file_0>::function_56b88d0a
 // Checksum 0x18865039, Offset: 0x12b8
 // Size: 0x31e
 function zodcompanioncanpreemptivejuke(entity) {
@@ -228,7 +218,6 @@ function zodcompanioncanpreemptivejuke(entity) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_49592c39
 // Checksum 0xe9bbcb3d, Offset: 0x15e0
 // Size: 0xae
 function private _isvalidplayer(player) {
@@ -240,7 +229,6 @@ function private _isvalidplayer(player) {
 
 // Namespace zodcompanionbehavior
 // Params 2, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_6b628702
 // Checksum 0x84d9cf2a, Offset: 0x1698
 // Size: 0x142
 function private _findclosest(entity, entities) {
@@ -261,7 +249,6 @@ function private _findclosest(entity, entities) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_c7372836
 // Checksum 0x12b9842d, Offset: 0x17e8
 // Size: 0x434
 function private zodcompaniontargetservice(entity) {
@@ -317,7 +304,6 @@ function private zodcompaniontargetservice(entity) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_e2fa3648
 // Checksum 0xfd51892b, Offset: 0x1c28
 // Size: 0x2c
 function private zodcompaniontacticalwalkactionstart(entity) {
@@ -326,7 +312,6 @@ function private zodcompaniontacticalwalkactionstart(entity) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_f9bebd95
 // Checksum 0xebfc955b, Offset: 0x1c60
 // Size: 0x54
 function private zodcompanionabletoshootcondition(entity) {
@@ -335,7 +320,6 @@ function private zodcompanionabletoshootcondition(entity) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_d7405ceb
 // Checksum 0xe4b8c005, Offset: 0x1cc0
 // Size: 0x2e
 function private zodcompanionshouldtacticalwalk(entity) {
@@ -347,7 +331,6 @@ function private zodcompanionshouldtacticalwalk(entity) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_f6c0cf0f
 // Checksum 0xfc2fb338, Offset: 0x1cf8
 // Size: 0xac
 function private zodcompanionjukeinitialize(entity) {
@@ -361,7 +344,6 @@ function private zodcompanionjukeinitialize(entity) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_89bf89b5
 // Checksum 0xce04fbd1, Offset: 0x1db0
 // Size: 0x68
 function private zodcompanionpreemptivejuketerminate(entity) {
@@ -371,7 +353,6 @@ function private zodcompanionpreemptivejuketerminate(entity) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_ac06a0e7
 // Checksum 0x913ad5f5, Offset: 0x1e20
 // Size: 0x2f2
 function private zodcompaniontryreacquireservice(entity) {
@@ -427,7 +408,6 @@ function private zodcompaniontryreacquireservice(entity) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_e3a7ef95
 // Checksum 0x34c7f7bf, Offset: 0x2120
 // Size: 0x7a4
 function private manage_companion_movement(entity) {
@@ -518,7 +498,6 @@ function private manage_companion_movement(entity) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_13a0d6ef
 // Checksum 0xf33e182, Offset: 0x28d0
 // Size: 0x1d6
 function private zodcompanioncollisionservice(entity) {
@@ -552,7 +531,6 @@ function private zodcompanioncollisionservice(entity) {
 
 // Namespace zodcompanionbehavior
 // Params 0, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_d04291cf
 // Checksum 0xf5317ee6, Offset: 0x2ab0
 // Size: 0x44
 function private function_d04291cf() {
@@ -564,7 +542,6 @@ function private function_d04291cf() {
 
 // Namespace zodcompanionbehavior
 // Params 2, eflags: 0x4
-// namespace_3e53e718<file_0>::function_f62bd05c
 // Checksum 0x80851c4, Offset: 0x2b00
 // Size: 0x13e
 function private function_f62bd05c(target_entity, max_distance) {
@@ -587,7 +564,6 @@ function private function_f62bd05c(target_entity, max_distance) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_34117adf
 // Checksum 0x4509f5f1, Offset: 0x2c48
 // Size: 0x50
 function private function_34117adf(var_5935e1b9) {
@@ -600,7 +576,6 @@ function private function_34117adf(var_5935e1b9) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_3463b8c2
 // Checksum 0x9b0a229, Offset: 0x2ca0
 // Size: 0xb0
 function private function_3463b8c2(var_ee6ad78e) {
@@ -615,7 +590,6 @@ function private function_3463b8c2(var_ee6ad78e) {
 
 // Namespace zodcompanionbehavior
 // Params 0, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_d03a1b48
 // Checksum 0x55ff1ae9, Offset: 0x2d58
 // Size: 0x1cc
 function private pick_new_movement_point() {
@@ -641,7 +615,6 @@ function private pick_new_movement_point() {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_ab299a53
 // Checksum 0x9511e5c1, Offset: 0x2f30
 // Size: 0xb8
 function private function_ab299a53(parasite) {
@@ -653,7 +626,6 @@ function private function_ab299a53(parasite) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_f7d72d81
 // Checksum 0xaf0d314, Offset: 0x2ff0
 // Size: 0x6c
 function private zodcompanionsetdesiredstancetostand(behaviortreeentity) {
@@ -665,7 +637,6 @@ function private zodcompanionsetdesiredstancetostand(behaviortreeentity) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x1 linked
-// namespace_3e53e718<file_0>::function_944023af
 // Checksum 0x22d4e3c4, Offset: 0x3068
 // Size: 0x3e4
 function zod_companion_revive_player(player) {
@@ -716,7 +687,6 @@ function zod_companion_revive_player(player) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x1 linked
-// namespace_3e53e718<file_0>::function_ed3b1086
 // Checksum 0xde5afc7a, Offset: 0x3458
 // Size: 0xd8
 function zod_companion_monitor_revive_attempt(player) {
@@ -734,7 +704,6 @@ function zod_companion_monitor_revive_attempt(player) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x1 linked
-// namespace_3e53e718<file_0>::function_c50a8914
 // Checksum 0xee5c154b, Offset: 0x3538
 // Size: 0x82
 function zod_companion_revive_cleanup(player) {
@@ -751,7 +720,6 @@ function zod_companion_revive_cleanup(player) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_580c8f2d
 // Checksum 0x9eb06be3, Offset: 0x35c8
 // Size: 0xdc
 function private zodcompanionfinishedsprinttransition(behaviortreeentity) {
@@ -767,7 +735,6 @@ function private zodcompanionfinishedsprinttransition(behaviortreeentity) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_9ff1641
 // Checksum 0x587d468e, Offset: 0x36b0
 // Size: 0xe0
 function private zodcompanionkeepscurrentmovementmode(behaviortreeentity) {
@@ -785,7 +752,6 @@ function private zodcompanionkeepscurrentmovementmode(behaviortreeentity) {
 
 // Namespace zodcompanionbehavior
 // Params 1, eflags: 0x5 linked
-// namespace_3e53e718<file_0>::function_27f60e31
 // Checksum 0x5188172f, Offset: 0x3798
 // Size: 0x2c
 function private zodcompanionsprinttransitioning(behaviortreeentity) {
@@ -799,7 +765,6 @@ function private zodcompanionsprinttransitioning(behaviortreeentity) {
 
 // Namespace zodcompanionserverutils
 // Params 4, eflags: 0x5 linked
-// namespace_cec034d6<file_0>::function_2ff664b7
 // Checksum 0x22882d2e, Offset: 0x37d0
 // Size: 0x134
 function private _trygibbinghead(entity, damage, hitloc, isexplosive) {
@@ -818,7 +783,6 @@ function private _trygibbinghead(entity, damage, hitloc, isexplosive) {
 
 // Namespace zodcompanionserverutils
 // Params 4, eflags: 0x5 linked
-// namespace_cec034d6<file_0>::function_9a8871d5
 // Checksum 0xd648e8bf, Offset: 0x3910
 // Size: 0x27c
 function private _trygibbinglimb(entity, damage, hitloc, isexplosive) {
@@ -852,7 +816,6 @@ function private _trygibbinglimb(entity, damage, hitloc, isexplosive) {
 
 // Namespace zodcompanionserverutils
 // Params 5, eflags: 0x5 linked
-// namespace_cec034d6<file_0>::function_5cde4a52
 // Checksum 0xf06301e, Offset: 0x3b98
 // Size: 0x37c
 function private _trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) {
@@ -891,7 +854,6 @@ function private _trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) 
 
 // Namespace zodcompanionserverutils
 // Params 12, eflags: 0x5 linked
-// namespace_cec034d6<file_0>::function_a05a46f
 // Checksum 0xb8358657, Offset: 0x3f20
 // Size: 0x190
 function private zodcompaniongibdamageoverride(inflictor, attacker, damage, flags, meansofdeath, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
@@ -909,7 +871,6 @@ function private zodcompaniongibdamageoverride(inflictor, attacker, damage, flag
 
 // Namespace zodcompanionserverutils
 // Params 12, eflags: 0x4
-// namespace_cec034d6<file_0>::function_b4b7c6c2
 // Checksum 0x75dca24c, Offset: 0x40b8
 // Size: 0x230
 function private zodcompaniondestructdeathoverride(inflictor, attacker, damage, flags, meansofdeath, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
@@ -937,7 +898,6 @@ function private zodcompaniondestructdeathoverride(inflictor, attacker, damage, 
 
 // Namespace zodcompanionserverutils
 // Params 12, eflags: 0x5 linked
-// namespace_cec034d6<file_0>::function_d3676ae9
 // Checksum 0xfd7b7316, Offset: 0x42f0
 // Size: 0xcc
 function private zodcompaniondamageoverride(inflictor, attacker, damage, flags, meansofdeath, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
@@ -950,7 +910,6 @@ function private zodcompaniondamageoverride(inflictor, attacker, damage, flags, 
 
 // Namespace zodcompanionserverutils
 // Params 1, eflags: 0x4
-// namespace_cec034d6<file_0>::function_c2c5b9e7
 // Checksum 0xb8ef9671, Offset: 0x43c8
 // Size: 0x84
 function private findclosestnavmeshpositiontoenemy(enemy) {
@@ -966,7 +925,6 @@ function private findclosestnavmeshpositiontoenemy(enemy) {
 
 // Namespace zodcompanionserverutils
 // Params 0, eflags: 0x5 linked
-// namespace_cec034d6<file_0>::function_556a6f90
 // Checksum 0xdc58d726, Offset: 0x4458
 // Size: 0x254
 function private zodcompanionsoldierspawnsetup() {
@@ -1001,7 +959,6 @@ function private zodcompanionsoldierspawnsetup() {
 
 // Namespace zodcompanionutility
 // Params 0, eflags: 0x1 linked
-// namespace_8f15b1fe<file_0>::function_18d76447
 // Checksum 0xabe66e86, Offset: 0x46b8
 // Size: 0x68
 function manage_companion() {
@@ -1018,7 +975,6 @@ function manage_companion() {
 
 // Namespace zodcompanionutility
 // Params 0, eflags: 0x1 linked
-// namespace_8f15b1fe<file_0>::function_cbe73e3d
 // Checksum 0x61d92885, Offset: 0x4728
 // Size: 0x9a
 function function_cbe73e3d() {
@@ -1033,7 +989,6 @@ function function_cbe73e3d() {
 
 // Namespace zodcompanionutility
 // Params 0, eflags: 0x1 linked
-// namespace_8f15b1fe<file_0>::function_5104a2a9
 // Checksum 0x957cfc4b, Offset: 0x47d0
 // Size: 0x166
 function define_new_leader() {
@@ -1059,7 +1014,6 @@ function define_new_leader() {
 
 // Namespace zodcompanionutility
 // Params 1, eflags: 0x1 linked
-// namespace_8f15b1fe<file_0>::function_801ff0ab
 // Checksum 0x148dc9ba, Offset: 0x4940
 // Size: 0x122
 function get_potential_leaders(companion) {

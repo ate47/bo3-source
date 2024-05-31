@@ -9,7 +9,6 @@
 
 // Namespace mp_freerun_04
 // Params 0, eflags: 0x0
-// namespace_d7e71261<file_0>::function_d290ebfa
 // Checksum 0x175bf9e0, Offset: 0x178
 // Size: 0xa4
 function main() {
@@ -24,7 +23,6 @@ function main() {
 
 // Namespace mp_freerun_04
 // Params 0, eflags: 0x0
-// namespace_d7e71261<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x228
 // Size: 0x4
 function precache() {

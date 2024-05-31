@@ -16,7 +16,6 @@
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x2
-// namespace_e82459b9<file_0>::function_2dc19561
 // Checksum 0x2c68e14d, Offset: 0x560
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -25,7 +24,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// namespace_e82459b9<file_0>::function_8c87d8eb
 // Checksum 0xdf106bd1, Offset: 0x5a8
 // Size: 0x44
 function __init__() {
@@ -35,7 +33,6 @@ function __init__() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// namespace_e82459b9<file_0>::function_5b6b9132
 // Checksum 0xe7a8636e, Offset: 0x5f8
 // Size: 0x1c4
 function __main__() {
@@ -65,7 +62,6 @@ function __main__() {
 
     // Namespace zm_weap_thundergun
     // Params 0, eflags: 0x1 linked
-    // namespace_e82459b9<file_0>::function_f54101e7
     // Checksum 0x1dd000fc, Offset: 0x7c8
     // Size: 0x21c
     function thundergun_devgui_dvar_think() {
@@ -93,7 +89,6 @@ function __main__() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// namespace_e82459b9<file_0>::function_a1ec502a
 // Checksum 0xdce0c8b1, Offset: 0x9f0
 // Size: 0x1c
 function thundergun_on_player_connect() {
@@ -102,7 +97,6 @@ function thundergun_on_player_connect() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// namespace_e82459b9<file_0>::function_e52bd440
 // Checksum 0xf87bf045, Offset: 0xa18
 // Size: 0x140
 function wait_for_thundergun_fired() {
@@ -122,7 +116,6 @@ function wait_for_thundergun_fired() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x0
-// namespace_e82459b9<file_0>::function_b69d791b
 // Checksum 0xe3906625, Offset: 0xb60
 // Size: 0x4c
 function thundergun_network_choke() {
@@ -136,7 +129,6 @@ function thundergun_network_choke() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// namespace_e82459b9<file_0>::function_d2538434
 // Checksum 0x4ac0fde7, Offset: 0xbb8
 // Size: 0x44
 function thundergun_fired() {
@@ -146,7 +138,6 @@ function thundergun_fired() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// namespace_e82459b9<file_0>::function_28be86fb
 // Checksum 0x20fa565b, Offset: 0xc08
 // Size: 0x144
 function thundergun_affect_ais() {
@@ -172,7 +163,6 @@ function thundergun_affect_ais() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// namespace_e82459b9<file_0>::function_34b34cbb
 // Checksum 0x4e22f80f, Offset: 0xd58
 // Size: 0x6ae
 function thundergun_get_enemies_in_range() {
@@ -247,7 +237,6 @@ function thundergun_get_enemies_in_range() {
 
 // Namespace zm_weap_thundergun
 // Params 2, eflags: 0x1 linked
-// namespace_e82459b9<file_0>::function_99964c81
 // Checksum 0xd731606, Offset: 0x1410
 // Size: 0x8c
 function thundergun_debug_print(msg, color) {
@@ -264,7 +253,6 @@ function thundergun_debug_print(msg, color) {
 
 // Namespace zm_weap_thundergun
 // Params 3, eflags: 0x1 linked
-// namespace_e82459b9<file_0>::function_952e71ef
 // Checksum 0x8ef260ee, Offset: 0x14a8
 // Size: 0x188
 function thundergun_fling_zombie(player, fling_vec, index) {
@@ -296,7 +284,6 @@ function thundergun_fling_zombie(player, fling_vec, index) {
 
 // Namespace zm_weap_thundergun
 // Params 2, eflags: 0x1 linked
-// namespace_e82459b9<file_0>::function_6db68516
 // Checksum 0x60991e4c, Offset: 0x1638
 // Size: 0x12c
 function zombie_knockdown(player, gib) {
@@ -317,7 +304,6 @@ function zombie_knockdown(player, gib) {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
-// namespace_e82459b9<file_0>::function_182137c4
 // Checksum 0xeb9451dd, Offset: 0x1770
 // Size: 0x23c
 function playthundergunpainanim() {
@@ -360,7 +346,6 @@ function playthundergunpainanim() {
 
 // Namespace zm_weap_thundergun
 // Params 2, eflags: 0x1 linked
-// namespace_e82459b9<file_0>::function_426da741
 // Checksum 0x5269231b, Offset: 0x19b8
 // Size: 0x88
 function thundergun_knockdown_zombie(player, gib) {
@@ -376,7 +361,6 @@ function thundergun_knockdown_zombie(player, gib) {
 
 // Namespace zm_weap_thundergun
 // Params 1, eflags: 0x1 linked
-// namespace_e82459b9<file_0>::function_a024186c
 // Checksum 0x16883d66, Offset: 0x1a48
 // Size: 0x94
 function handle_thundergun_pain_notetracks(note) {
@@ -388,7 +372,6 @@ function handle_thundergun_pain_notetracks(note) {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x0
-// namespace_e82459b9<file_0>::function_b8c1ec1c
 // Checksum 0xc69eacb0, Offset: 0x1ae8
 // Size: 0x50
 function is_thundergun_damage() {
@@ -397,7 +380,6 @@ function is_thundergun_damage() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x0
-// namespace_e82459b9<file_0>::function_5705ab6
 // Checksum 0xdd8a143c, Offset: 0x1b40
 // Size: 0x16
 function enemy_killed_by_thundergun() {
@@ -406,7 +388,6 @@ function enemy_killed_by_thundergun() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x0
-// namespace_e82459b9<file_0>::function_20dfb524
 // Checksum 0xdec31bb9, Offset: 0x1b60
 // Size: 0x118
 function thundergun_sound_thread() {
@@ -428,7 +409,6 @@ function thundergun_sound_thread() {
 
 // Namespace zm_weap_thundergun
 // Params 4, eflags: 0x1 linked
-// namespace_e82459b9<file_0>::function_c6a823b9
 // Checksum 0xae630ff9, Offset: 0x1c80
 // Size: 0xd4
 function setup_thundergun_vox(player, fling, gib, knockdown) {
@@ -448,7 +428,6 @@ function setup_thundergun_vox(player, fling, gib, knockdown) {
 
 // Namespace zm_weap_thundergun
 // Params 2, eflags: 0x1 linked
-// namespace_e82459b9<file_0>::function_76846f3d
 // Checksum 0x1d632cb6, Offset: 0x1d60
 // Size: 0x2c
 function override_thundergun_damage_func(player, gib) {

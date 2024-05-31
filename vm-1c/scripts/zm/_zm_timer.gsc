@@ -5,7 +5,6 @@
 
 // Namespace namespace_9ffa5e0
 // Params 0, eflags: 0x2
-// namespace_9ffa5e0<file_0>::function_2dc19561
 // Checksum 0xc8eb4dfa, Offset: 0xe8
 // Size: 0x2c
 function autoexec function_2dc19561() {
@@ -14,7 +13,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_9ffa5e0
 // Params 0, eflags: 0x1 linked
-// namespace_9ffa5e0<file_0>::function_5b6b9132
 // Checksum 0x4bc015a4, Offset: 0x120
 // Size: 0x1c
 function __main__() {
@@ -25,7 +23,6 @@ function __main__() {
 
 // Namespace namespace_9ffa5e0
 // Params 2, eflags: 0x1 linked
-// namespace_9ffa5e0<file_0>::function_827e691d
 // Checksum 0xa25cab14, Offset: 0x148
 // Size: 0x2dc
 function start_timer(time, stop_notify) {
@@ -70,7 +67,6 @@ function start_timer(time, stop_notify) {
 
 // Namespace namespace_9ffa5e0
 // Params 1, eflags: 0x1 linked
-// namespace_9ffa5e0<file_0>::function_e018c20f
 // Checksum 0x1e248d30, Offset: 0x430
 // Size: 0x54
 function function_e018c20f(stop_notify) {
@@ -83,7 +79,6 @@ function function_e018c20f(stop_notify) {
 
 // Namespace namespace_9ffa5e0
 // Params 0, eflags: 0x1 linked
-// namespace_9ffa5e0<file_0>::function_83ea29ce
 // Checksum 0x3a6775ea, Offset: 0x490
 // Size: 0x64
 function function_83ea29ce() {

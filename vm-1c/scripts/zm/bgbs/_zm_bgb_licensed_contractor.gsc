@@ -10,7 +10,6 @@
 
 // Namespace zm_bgb_licensed_contractor
 // Params 0, eflags: 0x2
-// namespace_2f4bd124<file_0>::function_2dc19561
 // Checksum 0xe47f214b, Offset: 0x180
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,7 +18,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_licensed_contractor
 // Params 0, eflags: 0x1 linked
-// namespace_2f4bd124<file_0>::function_8c87d8eb
 // Checksum 0x2f25e1ea, Offset: 0x1c0
 // Size: 0x54
 function __init__() {
@@ -31,7 +29,6 @@ function __init__() {
 
 // Namespace zm_bgb_licensed_contractor
 // Params 0, eflags: 0x1 linked
-// namespace_2f4bd124<file_0>::function_7afbf7cd
 // Checksum 0xd0c39e03, Offset: 0x220
 // Size: 0x24
 function activation() {

@@ -7,7 +7,6 @@
 
 // Namespace globallogic_utils
 // Params 0, eflags: 0x0
-// namespace_c46f5728<file_0>::function_15b32a64
 // Checksum 0xbffaeef0, Offset: 0x2e0
 // Size: 0x98
 function function_15b32a64() {
@@ -25,7 +24,6 @@ function function_15b32a64() {
 
 // Namespace globallogic_utils
 // Params 0, eflags: 0x0
-// namespace_c46f5728<file_0>::function_ff71e289
 // Checksum 0xf6cb316b, Offset: 0x380
 // Size: 0xba
 function testshock() {
@@ -44,7 +42,6 @@ function testshock() {
 
 // Namespace globallogic_utils
 // Params 0, eflags: 0x0
-// namespace_c46f5728<file_0>::function_ca9fc669
 // Checksum 0x80ee2051, Offset: 0x448
 // Size: 0xdc
 function timeuntilroundend() {
@@ -72,7 +69,6 @@ function timeuntilroundend() {
 
 // Namespace globallogic_utils
 // Params 0, eflags: 0x1 linked
-// namespace_c46f5728<file_0>::function_a5369db4
 // Checksum 0x2ba9a328, Offset: 0x530
 // Size: 0x3c
 function gettimeremaining() {
@@ -84,7 +80,6 @@ function gettimeremaining() {
 
 // Namespace globallogic_utils
 // Params 1, eflags: 0x1 linked
-// namespace_c46f5728<file_0>::function_10704124
 // Checksum 0xe3563218, Offset: 0x578
 // Size: 0x3a
 function registerpostroundevent(eventfunc) {
@@ -96,7 +91,6 @@ function registerpostroundevent(eventfunc) {
 
 // Namespace globallogic_utils
 // Params 0, eflags: 0x1 linked
-// namespace_c46f5728<file_0>::function_ea1bb317
 // Checksum 0xd24cae61, Offset: 0x5c0
 // Size: 0x54
 function executepostroundevents() {
@@ -110,7 +104,6 @@ function executepostroundevents() {
 
 // Namespace globallogic_utils
 // Params 3, eflags: 0x0
-// namespace_c46f5728<file_0>::function_4ad7cd92
 // Checksum 0xca094853, Offset: 0x620
 // Size: 0x52
 function getvalueinrange(value, minvalue, maxvalue) {
@@ -127,7 +120,6 @@ function getvalueinrange(value, minvalue, maxvalue) {
 
     // Namespace globallogic_utils
     // Params 0, eflags: 0x1 linked
-    // namespace_c46f5728<file_0>::function_36f2a476
     // Checksum 0xa739726b, Offset: 0x680
     // Size: 0x2c2
     function assertproperplacement() {
@@ -163,7 +155,6 @@ function getvalueinrange(value, minvalue, maxvalue) {
 
 // Namespace globallogic_utils
 // Params 1, eflags: 0x1 linked
-// namespace_c46f5728<file_0>::function_d0b6aba3
 // Checksum 0xbc8ade09, Offset: 0x950
 // Size: 0x68
 function isvalidclass(c) {
@@ -176,7 +167,6 @@ function isvalidclass(c) {
 
 // Namespace globallogic_utils
 // Params 1, eflags: 0x0
-// namespace_c46f5728<file_0>::function_8267b719
 // Checksum 0x2f5afe56, Offset: 0x9c0
 // Size: 0x120
 function playtickingsound(gametype_tick_sound) {
@@ -205,7 +195,6 @@ function playtickingsound(gametype_tick_sound) {
 
 // Namespace globallogic_utils
 // Params 0, eflags: 0x0
-// namespace_c46f5728<file_0>::function_8c1bbb73
 // Checksum 0xf50cae25, Offset: 0xae8
 // Size: 0x12
 function stoptickingsound() {
@@ -214,7 +203,6 @@ function stoptickingsound() {
 
 // Namespace globallogic_utils
 // Params 0, eflags: 0x1 linked
-// namespace_c46f5728<file_0>::function_97cbb4c6
 // Checksum 0xb7ec2ca0, Offset: 0xb08
 // Size: 0xd4
 function gametimer() {
@@ -238,7 +226,6 @@ function gametimer() {
 
 // Namespace globallogic_utils
 // Params 0, eflags: 0x1 linked
-// namespace_c46f5728<file_0>::function_3c9bd810
 // Checksum 0xa6a05cab, Offset: 0xbe8
 // Size: 0x52
 function gettimepassed() {
@@ -253,7 +240,6 @@ function gettimepassed() {
 
 // Namespace globallogic_utils
 // Params 0, eflags: 0x0
-// namespace_c46f5728<file_0>::function_568bba6c
 // Checksum 0xa6d0ced4, Offset: 0xc48
 // Size: 0x28
 function pausetimer() {
@@ -266,7 +252,6 @@ function pausetimer() {
 
 // Namespace globallogic_utils
 // Params 0, eflags: 0x0
-// namespace_c46f5728<file_0>::function_bbe04eff
 // Checksum 0xec9776ef, Offset: 0xc78
 // Size: 0x38
 function resumetimer() {
@@ -279,7 +264,6 @@ function resumetimer() {
 
 // Namespace globallogic_utils
 // Params 1, eflags: 0x1 linked
-// namespace_c46f5728<file_0>::function_843ad29d
 // Checksum 0x457e681b, Offset: 0xcb8
 // Size: 0x9e
 function getscoreremaining(team) {
@@ -293,7 +277,6 @@ function getscoreremaining(team) {
 
 // Namespace globallogic_utils
 // Params 1, eflags: 0x1 linked
-// namespace_c46f5728<file_0>::function_d696e595
 // Checksum 0xebe4d54d, Offset: 0xd60
 // Size: 0x6a
 function getteamscoreforround(team) {
@@ -305,7 +288,6 @@ function getteamscoreforround(team) {
 
 // Namespace globallogic_utils
 // Params 1, eflags: 0x1 linked
-// namespace_c46f5728<file_0>::function_de5f2318
 // Checksum 0x7bc6649b, Offset: 0xdd8
 // Size: 0xe2
 function getscoreperminute(team) {
@@ -321,7 +303,6 @@ function getscoreperminute(team) {
 
 // Namespace globallogic_utils
 // Params 1, eflags: 0x1 linked
-// namespace_c46f5728<file_0>::function_f5639177
 // Checksum 0x9013ec7, Offset: 0xec8
 // Size: 0xa2
 function getestimatedtimeuntilscorelimit(team) {
@@ -336,7 +317,6 @@ function getestimatedtimeuntilscorelimit(team) {
 
 // Namespace globallogic_utils
 // Params 0, eflags: 0x0
-// namespace_c46f5728<file_0>::function_7f3104cc
 // Checksum 0x84ecb8a4, Offset: 0xf78
 // Size: 0x40
 function rumbler() {
@@ -349,7 +329,6 @@ function rumbler() {
 
 // Namespace globallogic_utils
 // Params 2, eflags: 0x1 linked
-// namespace_c46f5728<file_0>::function_16a37f28
 // Checksum 0x7cc6dd55, Offset: 0xfc0
 // Size: 0x22
 function waitfortimeornotify(time, notifyname) {
@@ -359,7 +338,6 @@ function waitfortimeornotify(time, notifyname) {
 
 // Namespace globallogic_utils
 // Params 2, eflags: 0x0
-// namespace_c46f5728<file_0>::function_56ca4f95
 // Checksum 0x7012a40f, Offset: 0xff0
 // Size: 0x58
 function waitfortimeornotifynoartillery(time, notifyname) {
@@ -373,7 +351,6 @@ function waitfortimeornotifynoartillery(time, notifyname) {
 
 // Namespace globallogic_utils
 // Params 4, eflags: 0x1 linked
-// namespace_c46f5728<file_0>::function_7874f1ab
 // Checksum 0xb2365b75, Offset: 0x1050
 // Size: 0x96
 function isheadshot(weapon, shitloc, smeansofdeath, einflictor) {
@@ -396,7 +373,6 @@ function isheadshot(weapon, shitloc, smeansofdeath, einflictor) {
 
 // Namespace globallogic_utils
 // Params 1, eflags: 0x1 linked
-// namespace_c46f5728<file_0>::function_aa585f9
 // Checksum 0x7c895ed6, Offset: 0x10f0
 // Size: 0xd6
 function gethitlocheight(shitloc) {
@@ -433,7 +409,6 @@ function gethitlocheight(shitloc) {
 
     // Namespace globallogic_utils
     // Params 2, eflags: 0x0
-    // namespace_c46f5728<file_0>::function_93b7208c
     // Checksum 0x8deae826, Offset: 0x11d0
     // Size: 0x66
     function debugline(start, end) {
@@ -447,7 +422,6 @@ function gethitlocheight(shitloc) {
 
 // Namespace globallogic_utils
 // Params 2, eflags: 0x0
-// namespace_c46f5728<file_0>::function_7067df2b
 // Checksum 0x68ab2c73, Offset: 0x1240
 // Size: 0x5a
 function isexcluded(entity, entitylist) {
@@ -461,7 +435,6 @@ function isexcluded(entity, entitylist) {
 
 // Namespace globallogic_utils
 // Params 1, eflags: 0x0
-// namespace_c46f5728<file_0>::function_b59d6fa4
 // Checksum 0x32d3919, Offset: 0x12a8
 // Size: 0x62
 function function_b59d6fa4(var_be260a2e) {
@@ -476,7 +449,6 @@ function function_b59d6fa4(var_be260a2e) {
 
 // Namespace globallogic_utils
 // Params 2, eflags: 0x1 linked
-// namespace_c46f5728<file_0>::function_ca399f3
 // Checksum 0x4b2e0ec1, Offset: 0x1318
 // Size: 0x10c
 function logteamwinstring(wintype, winner) {

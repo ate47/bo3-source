@@ -12,7 +12,6 @@
 
 // Namespace flak_drone
 // Params 0, eflags: 0x2
-// namespace_cc429308<file_0>::function_2dc19561
 // Checksum 0x26a39a67, Offset: 0x208
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace flak_drone
 // Params 0, eflags: 0x1 linked
-// namespace_cc429308<file_0>::function_8c87d8eb
 // Checksum 0x5030f90b, Offset: 0x248
 // Size: 0x4c
 function __init__() {
@@ -30,7 +28,6 @@ function __init__() {
 
 // Namespace flak_drone
 // Params 7, eflags: 0x1 linked
-// namespace_cc429308<file_0>::function_90bd4f2f
 // Checksum 0x1901f080, Offset: 0x2a0
 // Size: 0x11c
 function active_camo_changed(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -46,7 +43,6 @@ function active_camo_changed(localclientnum, oldval, newval, bnewent, binitialsn
 
 // Namespace flak_drone
 // Params 2, eflags: 0x1 linked
-// namespace_cc429308<file_0>::function_7cd85a6d
 // Checksum 0xe68d7dc8, Offset: 0x3c8
 // Size: 0x164
 function doreveal(localclientnum, direction) {

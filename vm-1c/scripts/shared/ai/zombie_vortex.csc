@@ -8,7 +8,6 @@
 
 // Namespace zombie_vortex
 // Params 0, eflags: 0x2
-// namespace_ccd3897a<file_0>::function_2dc19561
 // Checksum 0x5e3e78c4, Offset: 0x2a8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,7 +16,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zombie_vortex
 // Params 0, eflags: 0x1 linked
-// namespace_ccd3897a<file_0>::function_8c87d8eb
 // Checksum 0x256cde5c, Offset: 0x2e8
 // Size: 0x114
 function __init__() {
@@ -29,7 +27,6 @@ function __init__() {
 
 // Namespace zombie_vortex
 // Params 7, eflags: 0x1 linked
-// namespace_ccd3897a<file_0>::function_49c8460a
 // Checksum 0xe317ab05, Offset: 0x408
 // Size: 0x1f4
 function start_vortex(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -60,7 +57,6 @@ function start_vortex(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 
 // Namespace zombie_vortex
 // Params 2, eflags: 0x1 linked
-// namespace_ccd3897a<file_0>::function_b5527d98
 // Checksum 0xd9acc02f, Offset: 0x608
 // Size: 0x50
 function vortex_shake_and_rumble(localclientnum, v_vortex_origin) {
@@ -73,7 +69,6 @@ function vortex_shake_and_rumble(localclientnum, v_vortex_origin) {
 
 // Namespace zombie_vortex
 // Params 7, eflags: 0x1 linked
-// namespace_ccd3897a<file_0>::function_a9cae3ef
 // Checksum 0x4bfdb5f7, Offset: 0x660
 // Size: 0x8c
 function vision_blur(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -86,7 +81,6 @@ function vision_blur(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 
 // Namespace zombie_vortex
 // Params 5, eflags: 0x1 linked
-// namespace_ccd3897a<file_0>::function_69096485
 // Checksum 0x77f76b26, Offset: 0x6f8
 // Size: 0x244
 function function_69096485(localclientnum, vortex_fx_handle, vposition, fx_vortex_explosion, n_vortex_time) {

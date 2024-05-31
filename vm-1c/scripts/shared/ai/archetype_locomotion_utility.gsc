@@ -11,7 +11,6 @@
 
 // Namespace aiutility
 // Params 0, eflags: 0x2
-// namespace_90d31901<file_0>::function_a13b795c
 // Checksum 0x993aee67, Offset: 0x618
 // Size: 0x55c
 function autoexec registerbehaviorscriptfunctions() {
@@ -53,7 +52,6 @@ function autoexec registerbehaviorscriptfunctions() {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_f05ad42b
 // Checksum 0x5e696457, Offset: 0xb80
 // Size: 0xa6
 function private locomotionisonstairs(behaviortreeentity) {
@@ -68,7 +66,6 @@ function private locomotionisonstairs(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_ad5176f0
 // Checksum 0x4cdd98fa, Offset: 0xc30
 // Size: 0x15a
 function private locomotionshouldskipstairs(behaviortreeentity) {
@@ -93,7 +90,6 @@ function private locomotionshouldskipstairs(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_2a5a8dc
 // Checksum 0x31e6d82d, Offset: 0xd98
 // Size: 0x18c
 function private locomotionshouldlooponstairs(behaviortreeentity) {
@@ -124,7 +120,6 @@ function private locomotionshouldlooponstairs(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_78f007b4
 // Checksum 0x17cadfe5, Offset: 0xf30
 // Size: 0x390
 function private locomotionstairsstart(behaviortreeentity) {
@@ -182,7 +177,6 @@ function private locomotionstairsstart(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x4
-// namespace_90d31901<file_0>::function_b5cf0b69
 // Checksum 0xc865e4bb, Offset: 0x12c8
 // Size: 0x6c
 function private locomotionstairloopstart(behaviortreeentity) {
@@ -192,7 +186,6 @@ function private locomotionstairloopstart(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_dce7c37f
 // Checksum 0x40084f0d, Offset: 0x1340
 // Size: 0x4c
 function private locomotionstairsend(behaviortreeentity) {
@@ -202,7 +195,6 @@ function private locomotionstairsend(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_fc2a8f93
 // Checksum 0xded5d031, Offset: 0x1398
 // Size: 0x42
 function private locomotionpainbehaviorcondition(entity) {
@@ -211,7 +203,6 @@ function private locomotionpainbehaviorcondition(entity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
-// namespace_90d31901<file_0>::function_623dba64
 // Checksum 0x8733d9c1, Offset: 0x13e8
 // Size: 0x24
 function clearpathfromscript(behaviortreeentity) {
@@ -220,7 +211,6 @@ function clearpathfromscript(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_b423ac14
 // Checksum 0x40c8cc88, Offset: 0x1418
 // Size: 0x70
 function private noncombatlocomotioncondition(behaviortreeentity) {
@@ -238,7 +228,6 @@ function private noncombatlocomotioncondition(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x4
-// namespace_90d31901<file_0>::function_654662b9
 // Checksum 0x7e130122, Offset: 0x1490
 // Size: 0x6c
 function private combatlocomotioncondition(behaviortreeentity) {
@@ -256,7 +245,6 @@ function private combatlocomotioncondition(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
-// namespace_90d31901<file_0>::function_6d9627b7
 // Checksum 0x95d61dda, Offset: 0x1508
 // Size: 0x22
 function function_6d9627b7(behaviortreeentity) {
@@ -265,7 +253,6 @@ function function_6d9627b7(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_c5e9e6ff
 // Checksum 0x35ce5fb6, Offset: 0x1538
 // Size: 0x5c
 function private setdesiredstanceformovement(behaviortreeentity) {
@@ -276,7 +263,6 @@ function private setdesiredstanceformovement(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_9c8a0725
 // Checksum 0x82f37e3f, Offset: 0x15a0
 // Size: 0x56
 function private locomotionshouldtraverse(behaviortreeentity) {
@@ -289,7 +275,6 @@ function private locomotionshouldtraverse(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
-// namespace_90d31901<file_0>::function_5248473a
 // Checksum 0x30c97292, Offset: 0x1600
 // Size: 0x68
 function traversesetup(behaviortreeentity) {
@@ -300,7 +285,6 @@ function traversesetup(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 2, eflags: 0x1 linked
-// namespace_90d31901<file_0>::function_37edbf77
 // Checksum 0x9da120ed, Offset: 0x1670
 // Size: 0x100
 function traverseactionstart(behaviortreeentity, asmstatename) {
@@ -315,7 +299,6 @@ function traverseactionstart(behaviortreeentity, asmstatename) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_b9250149
 // Checksum 0x87e3aa3f, Offset: 0x1778
 // Size: 0x20
 function private disablerepath(entity) {
@@ -324,7 +307,6 @@ function private disablerepath(entity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_6eb828ae
 // Checksum 0x52d28ee, Offset: 0x17a0
 // Size: 0x1c
 function private enablerepath(entity) {
@@ -333,7 +315,6 @@ function private enablerepath(entity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
-// namespace_90d31901<file_0>::function_23242eca
 // Checksum 0xeae52fe1, Offset: 0x17c8
 // Size: 0x2e
 function shouldstartarrivalcondition(behaviortreeentity) {
@@ -345,7 +326,6 @@ function shouldstartarrivalcondition(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
-// namespace_90d31901<file_0>::function_9195292b
 // Checksum 0x1d818f77, Offset: 0x1800
 // Size: 0x60
 function cleararrivalpos(behaviortreeentity) {
@@ -357,7 +337,6 @@ function cleararrivalpos(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
-// namespace_90d31901<file_0>::function_6a56032d
 // Checksum 0xe3da1a7f, Offset: 0x1868
 // Size: 0x48
 function delaymovement(entity) {
@@ -367,7 +346,6 @@ function delaymovement(entity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_4364ea2e
 // Checksum 0x18005f1c, Offset: 0x18b8
 // Size: 0x50
 function private shouldadjuststanceattacticalwalk(behaviortreeentity) {
@@ -380,7 +358,6 @@ function private shouldadjuststanceattacticalwalk(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_b3144d36
 // Checksum 0x7b3442d, Offset: 0x1910
 // Size: 0x68
 function private adjuststancetofaceenemyinitialize(behaviortreeentity) {
@@ -392,7 +369,6 @@ function private adjuststancetofaceenemyinitialize(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_acc2a229
 // Checksum 0x5b09bfac, Offset: 0x1980
 // Size: 0x34
 function private adjuststancetofaceenemyterminate(behaviortreeentity) {
@@ -401,7 +377,6 @@ function private adjuststancetofaceenemyterminate(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_a480e8bd
 // Checksum 0x1f79ea79, Offset: 0x19c0
 // Size: 0xa0
 function private tacticalwalkactionstart(behaviortreeentity) {
@@ -415,7 +390,6 @@ function private tacticalwalkactionstart(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 4, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_dc5061fd
 // Checksum 0xda2b73a9, Offset: 0x1a68
 // Size: 0x14e
 function private validjukedirection(entity, entitynavmeshposition, forwardoffset, lateraloffset) {
@@ -434,7 +408,6 @@ function private validjukedirection(entity, entitynavmeshposition, forwardoffset
 
 // Namespace aiutility
 // Params 3, eflags: 0x1 linked
-// namespace_90d31901<file_0>::function_10a9e9cf
 // Checksum 0x260240ea, Offset: 0x1bc0
 // Size: 0x31c
 function calculatejukedirection(entity, entityradius, jukedistance) {
@@ -477,7 +450,6 @@ function calculatejukedirection(entity, entityradius, jukedistance) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
-// namespace_90d31901<file_0>::function_924e5c38
 // Checksum 0xbf77357, Offset: 0x1ee8
 // Size: 0x9a
 function private calculatedefaultjukedirection(entity) {
@@ -494,7 +466,6 @@ function private calculatedefaultjukedirection(entity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
-// namespace_90d31901<file_0>::function_91f32416
 // Checksum 0xabdaaff4, Offset: 0x1f90
 // Size: 0xe4
 function canjuke(entity) {
@@ -513,7 +484,6 @@ function canjuke(entity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
-// namespace_90d31901<file_0>::function_4c6d220c
 // Checksum 0xa9c71271, Offset: 0x2080
 // Size: 0x54
 function choosejukedirection(entity) {

@@ -11,7 +11,6 @@
 
 // Namespace namespace_7deb8b28
 // Params 0, eflags: 0x1 linked
-// namespace_7deb8b28<file_0>::function_d290ebfa
 // Checksum 0xbbbbf0d1, Offset: 0x188
 // Size: 0x154
 function main() {
@@ -28,7 +27,6 @@ function main() {
 
 // Namespace namespace_7deb8b28
 // Params 0, eflags: 0x1 linked
-// namespace_7deb8b28<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x2e8
 // Size: 0x4
 function precache() {

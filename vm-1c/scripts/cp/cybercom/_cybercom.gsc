@@ -31,7 +31,6 @@
 
 // Namespace cybercom
 // Params 0, eflags: 0x2
-// namespace_175490fb<file_0>::function_2dc19561
 // Checksum 0x87d74700, Offset: 0x978
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -40,7 +39,6 @@ function autoexec function_2dc19561() {
 
 // Namespace cybercom
 // Params 0, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_c35e6aab
 // Checksum 0x614a0b0d, Offset: 0x9c0
 // Size: 0x3c4
 function init() {
@@ -70,7 +68,6 @@ function init() {
 
 // Namespace cybercom
 // Params 3, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_4ee56464
 // Checksum 0x1fb06128, Offset: 0xd90
 // Size: 0x78
 function function_4ee56464(var_23810282, var_442fb6cd, var_6ee14d17) {
@@ -83,7 +80,6 @@ function function_4ee56464(var_23810282, var_442fb6cd, var_6ee14d17) {
 
 // Namespace cybercom
 // Params 0, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_beff8cf9
 // Checksum 0xa3844a23, Offset: 0xe10
 // Size: 0x4e
 function function_beff8cf9() {
@@ -93,7 +89,6 @@ function function_beff8cf9() {
 
 // Namespace cybercom
 // Params 2, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_7f3ccb7
 // Checksum 0x85bc197, Offset: 0xe68
 // Size: 0x13c
 function function_7f3ccb7(slot, weapon) {
@@ -115,7 +110,6 @@ function function_7f3ccb7(slot, weapon) {
 
 // Namespace cybercom
 // Params 2, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_b8e0020b
 // Checksum 0x9290920f, Offset: 0xfb0
 // Size: 0x14
 function function_b8e0020b(slot, weapon) {
@@ -124,7 +118,6 @@ function function_b8e0020b(slot, weapon) {
 
 // Namespace cybercom
 // Params 0, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_e6cab0ff
 // Checksum 0xd6367e7b, Offset: 0xfd0
 // Size: 0x11c
 function initialize() {
@@ -143,7 +136,6 @@ function initialize() {
 
 // Namespace cybercom
 // Params 15, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_25889576
 // Checksum 0xfa02853d, Offset: 0x10f8
 // Size: 0x32a
 function function_25889576(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, boneindex, modelindex, surfacetype, surfacenormal) {
@@ -184,7 +176,6 @@ function function_25889576(einflictor, eattacker, idamage, idflags, smeansofdeat
 
 // Namespace cybercom
 // Params 15, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_17136681
 // Checksum 0x5cdb7d2b, Offset: 0x1430
 // Size: 0x114
 function function_17136681(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -201,7 +192,6 @@ function function_17136681(einflictor, eattacker, idamage, idflags, smeansofdeat
 
 // Namespace cybercom
 // Params 0, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_d290ebfa
 // Checksum 0x713def83, Offset: 0x1550
 // Size: 0xb4
 function main() {
@@ -218,7 +208,6 @@ function main() {
 
 // Namespace cybercom
 // Params 0, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_fb4f96b5
 // Checksum 0xcd5b6723, Offset: 0x1610
 // Size: 0xac
 function on_player_connect() {
@@ -233,7 +222,6 @@ function on_player_connect() {
 
 // Namespace cybercom
 // Params 0, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_aebcf025
 // Checksum 0x21b6106a, Offset: 0x16c8
 // Size: 0x1ee
 function on_player_spawned() {
@@ -262,7 +250,6 @@ function on_player_spawned() {
 
 // Namespace cybercom
 // Params 1, eflags: 0x5 linked
-// namespace_175490fb<file_0>::function_b1497851
 // Checksum 0x7775f832, Offset: 0x18c0
 // Size: 0x20
 function private function_b1497851(menu) {
@@ -271,7 +258,6 @@ function private function_b1497851(menu) {
 
 // Namespace cybercom
 // Params 2, eflags: 0x5 linked
-// namespace_175490fb<file_0>::function_4d11675a
 // Checksum 0x27de017b, Offset: 0x18e8
 // Size: 0x28
 function private function_4d11675a(menu, response) {
@@ -280,7 +266,6 @@ function private function_4d11675a(menu, response) {
 
 // Namespace cybercom
 // Params 0, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_f44a9d12
 // Checksum 0xcf6e9f6a, Offset: 0x1918
 // Size: 0x2a0
 function on_menu_response() {
@@ -327,7 +312,6 @@ function on_menu_response() {
 
 // Namespace cybercom
 // Params 1, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_6c141a2d
 // Checksum 0xe39f5d58, Offset: 0x1bc0
 // Size: 0x200
 function function_6c141a2d(var_1e41d598) {
@@ -353,7 +337,6 @@ function function_6c141a2d(var_1e41d598) {
 
 // Namespace cybercom
 // Params 0, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_e60e89fe
 // Checksum 0x18556843, Offset: 0x1dc8
 // Size: 0x228
 function function_e60e89fe() {
@@ -387,7 +370,6 @@ function function_e60e89fe() {
 
 // Namespace cybercom
 // Params 0, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_285f5fb1
 // Checksum 0x6c132135, Offset: 0x1ff8
 // Size: 0x34
 function function_285f5fb1() {
@@ -397,7 +379,6 @@ function function_285f5fb1() {
 
 // Namespace cybercom
 // Params 0, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_8ccda8bf
 // Checksum 0x8d41c7d3, Offset: 0x2038
 // Size: 0x12e
 function function_8ccda8bf() {
@@ -419,7 +400,6 @@ function function_8ccda8bf() {
 
 // Namespace cybercom
 // Params 0, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_d2409753
 // Checksum 0x5b6bf20f, Offset: 0x2170
 // Size: 0x13e
 function function_d2409753() {
@@ -441,7 +421,6 @@ function function_d2409753() {
 
 // Namespace cybercom
 // Params 7, eflags: 0x1 linked
-// namespace_175490fb<file_0>::function_2b5f1af7
 // Checksum 0xecdcd778, Offset: 0x22b8
 // Size: 0xcc
 function function_2b5f1af7(player, eattacker, einflictor, idamage, weapon, shitloc, var_785f4b6e) {
@@ -455,7 +434,6 @@ function function_2b5f1af7(player, eattacker, einflictor, idamage, weapon, shitl
 
 // Namespace cybercom
 // Params 4, eflags: 0x0
-// namespace_175490fb<file_0>::function_d240e350
 // Checksum 0x6fd4faf, Offset: 0x2390
 // Size: 0x2e4
 function function_d240e350(var_7872e02, target, var_9bc2efcb, upgraded) {

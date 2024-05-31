@@ -14,7 +14,6 @@
 
 // Namespace zm_bgb_unbearable
 // Params 0, eflags: 0x2
-// namespace_144de88e<file_0>::function_2dc19561
 // Checksum 0x286a1bbb, Offset: 0x248
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -23,7 +22,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_unbearable
 // Params 0, eflags: 0x1 linked
-// namespace_144de88e<file_0>::function_8c87d8eb
 // Checksum 0xa2a4bdb2, Offset: 0x288
 // Size: 0x84
 function __init__() {
@@ -36,7 +34,6 @@ function __init__() {
 
 // Namespace zm_bgb_unbearable
 // Params 0, eflags: 0x1 linked
-// namespace_144de88e<file_0>::function_279e4e97
 // Checksum 0x9eab77a, Offset: 0x318
 // Size: 0x64
 function event() {
@@ -49,7 +46,6 @@ function event() {
 
 // Namespace zm_bgb_unbearable
 // Params 1, eflags: 0x1 linked
-// namespace_144de88e<file_0>::function_7a5dc39b
 // Checksum 0xca6cd13, Offset: 0x388
 // Size: 0x1cc
 function function_7a5dc39b(player) {
@@ -75,7 +71,6 @@ function function_7a5dc39b(player) {
 
 // Namespace zm_bgb_unbearable
 // Params 0, eflags: 0x1 linked
-// namespace_144de88e<file_0>::function_a612a2b3
 // Checksum 0xcaf5b481, Offset: 0x560
 // Size: 0x114
 function function_a612a2b3() {

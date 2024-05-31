@@ -25,7 +25,6 @@
 
     // Namespace prop_dev
     // Params 2, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_6edad947
     // Checksum 0x10ee84f4, Offset: 0x340
     // Size: 0x9c
     function adddevguicommand(path, var_66e49a4e) {
@@ -37,7 +36,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_6c015e54
     // Checksum 0xaafd4ebc, Offset: 0x3e8
     // Size: 0x1720
     function propdevgui() {
@@ -281,7 +279,6 @@
 
     // Namespace prop_dev
     // Params 1, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_f35dfc64
     // Checksum 0xd6fdb526, Offset: 0x1b10
     // Size: 0xec
     function function_f35dfc64(enabled) {
@@ -296,7 +293,6 @@
 
     // Namespace prop_dev
     // Params 1, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_194631ab
     // Checksum 0x7ba3ecbf, Offset: 0x1c08
     // Size: 0xe2
     function function_194631ab(enabled) {
@@ -317,7 +313,6 @@
 
     // Namespace prop_dev
     // Params 5, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_e7f343ff
     // Checksum 0xa3e9f7e5, Offset: 0x1cf8
     // Size: 0x8e
     function function_e7f343ff(color, label, value, text, var_5f790513) {
@@ -329,7 +324,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_1b260dda
     // Checksum 0x21b8f9ef, Offset: 0x1d90
     // Size: 0x4ec
     function function_1b260dda() {
@@ -367,7 +361,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_bff3e3c5
     // Checksum 0x43b9e33e, Offset: 0x2288
     // Size: 0x17c
     function function_bff3e3c5() {
@@ -391,7 +384,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_8bd2ff0
     // Checksum 0x5b4e48d4, Offset: 0x2410
     // Size: 0x54
     function function_8bd2ff0() {
@@ -404,7 +396,6 @@
 
     // Namespace prop_dev
     // Params 6, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_ad87a039
     // Checksum 0xc28dfe5c, Offset: 0x2470
     // Size: 0x13c
     function debugaxis(origin, angles, size, alpha, depthtest, duration) {
@@ -418,7 +409,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_d8d922ad
     // Checksum 0xa3d2d16e, Offset: 0x25b8
     // Size: 0xb0
     function function_d8d922ad() {
@@ -432,7 +422,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_18a45f58
     // Checksum 0x1970135e, Offset: 0x2670
     // Size: 0x178
     function function_18a45f58() {
@@ -467,7 +456,6 @@
 
     // Namespace prop_dev
     // Params 1, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_6049bca3
     // Checksum 0x691cbaf6, Offset: 0x27f0
     // Size: 0x68
     function function_6049bca3(val) {
@@ -482,7 +470,6 @@
 
     // Namespace prop_dev
     // Params 1, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_9c8c6fe4
     // Checksum 0x51c5a6ce, Offset: 0x2860
     // Size: 0xf4
     function function_9c8c6fe4(val) {
@@ -502,7 +489,6 @@
 
     // Namespace prop_dev
     // Params 1, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_a24562f8
     // Checksum 0x979bdb9, Offset: 0x2960
     // Size: 0x68
     function function_a24562f8(val) {
@@ -517,7 +503,6 @@
 
     // Namespace prop_dev
     // Params 1, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_e52aa8bb
     // Checksum 0x876bb00d, Offset: 0x29d0
     // Size: 0x78
     function function_e52aa8bb(inval) {
@@ -532,7 +517,6 @@
 
     // Namespace prop_dev
     // Params 1, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_639754d0
     // Checksum 0x83df7dee, Offset: 0x2a50
     // Size: 0x84
     function function_639754d0(var_95f39eee) {
@@ -545,7 +529,6 @@
 
     // Namespace prop_dev
     // Params 1, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_8bdc662f
     // Checksum 0xb3f2ffad, Offset: 0x2ae0
     // Size: 0xf5c
     function function_8bdc662f(val) {
@@ -670,7 +653,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_4ef69a48
     // Checksum 0x4757a0ed, Offset: 0x3a48
     // Size: 0x74
     function function_4ef69a48() {
@@ -682,7 +664,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_9cfa92f3
     // Checksum 0x5b8e6721, Offset: 0x3ac8
     // Size: 0x1e4
     function function_9cfa92f3() {
@@ -702,7 +683,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_4e71de66
     // Checksum 0xf5d14f24, Offset: 0x3cb8
     // Size: 0x1e4
     function function_4e71de66() {
@@ -722,7 +702,6 @@
 
     // Namespace prop_dev
     // Params 1, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_b7096a63
     // Checksum 0xf0f7e163, Offset: 0x3ea8
     // Size: 0x4c
     function function_b7096a63(vec) {
@@ -731,7 +710,6 @@
 
     // Namespace prop_dev
     // Params 1, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_f0e744af
     // Checksum 0x26e43a0, Offset: 0x3f00
     // Size: 0x56
     function function_f0e744af(propinfo) {
@@ -740,7 +718,6 @@
 
     // Namespace prop_dev
     // Params 1, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_52e4c413
     // Checksum 0x3832ff7, Offset: 0x3f60
     // Size: 0x56
     function function_52e4c413(propinfo) {
@@ -749,7 +726,6 @@
 
     // Namespace prop_dev
     // Params 2, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_954fa963
     // Checksum 0x276c8e5c, Offset: 0x3fc0
     // Size: 0x2a4
     function function_954fa963(file, propinfo) {
@@ -779,7 +755,6 @@
 
     // Namespace prop_dev
     // Params 2, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_90b01d01
     // Checksum 0x645efcda, Offset: 0x4270
     // Size: 0x5c
     function function_90b01d01(file, propinfo) {
@@ -789,7 +764,6 @@
 
     // Namespace prop_dev
     // Params 2, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_74e29250
     // Checksum 0x78e0e2cf, Offset: 0x42d8
     // Size: 0x128
     function function_74e29250(file, propsizetext) {
@@ -804,7 +778,6 @@
 
     // Namespace prop_dev
     // Params 2, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_bce1e8ea
     // Checksum 0xb6ee1cee, Offset: 0x4408
     // Size: 0x128
     function function_bce1e8ea(file, propsizetext) {
@@ -819,7 +792,6 @@
 
     // Namespace prop_dev
     // Params 2, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_d3a80896
     // Checksum 0x1e42a382, Offset: 0x4538
     // Size: 0x324
     function function_d3a80896(file, var_dc7b1be6) {
@@ -849,7 +821,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_543336f9
     // Checksum 0x1b15aca1, Offset: 0x4868
     // Size: 0x3c4
     function function_543336f9() {
@@ -891,7 +862,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_a8147bf9
     // Checksum 0xc289c660, Offset: 0x4c38
     // Size: 0x3a4
     function function_a8147bf9() {
@@ -932,7 +902,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_1a022b4b
     // Checksum 0xaa973459, Offset: 0x4fe8
     // Size: 0xc54
     function function_1a022b4b() {
@@ -1048,7 +1017,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_c64fb4ca
     // Checksum 0x4b50b060, Offset: 0x5c48
     // Size: 0x3e8
     function function_c64fb4ca() {
@@ -1093,7 +1061,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_276ad638
     // Checksum 0xa85fb79d, Offset: 0x6038
     // Size: 0x10a
     function function_276ad638() {
@@ -1109,7 +1076,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_b52ad1b2
     // Checksum 0xbdb77043, Offset: 0x6150
     // Size: 0x132
     function function_b52ad1b2() {
@@ -1126,7 +1092,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_b02387d6
     // Checksum 0x3b365809, Offset: 0x6290
     // Size: 0xca
     function function_b02387d6() {
@@ -1142,7 +1107,6 @@
 
     // Namespace prop_dev
     // Params 3, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_61b27799
     // Checksum 0xdf8fdf55, Offset: 0x6368
     // Size: 0x32a
     function function_61b27799(propinfo, origin, angles) {
@@ -1174,7 +1138,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_ad9aebcc
     // Checksum 0x6628b56a, Offset: 0x66a0
     // Size: 0x264
     function function_ad9aebcc() {
@@ -1200,7 +1163,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_36895abd
     // Checksum 0xe76f612, Offset: 0x6910
     // Size: 0x334
     function function_36895abd() {
@@ -1238,7 +1200,6 @@
 
     // Namespace prop_dev
     // Params 4, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_b2eba1e3
     // Checksum 0x868dbd0, Offset: 0x6c50
     // Size: 0x19c
     function function_b2eba1e3(propinfo, origin, angles, team) {
@@ -1260,7 +1221,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_9b9725b1
     // Checksum 0x5e43d0eb, Offset: 0x6df8
     // Size: 0x268
     function function_9b9725b1() {
@@ -1284,7 +1244,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_6863880e
     // Checksum 0xfbc664a3, Offset: 0x7068
     // Size: 0x11e
     function function_6863880e() {
@@ -1301,7 +1260,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_5e127ae8
     // Checksum 0x69dc4cdd, Offset: 0x7190
     // Size: 0xf2
     function showplayers() {
@@ -1315,7 +1273,6 @@
 
     // Namespace prop_dev
     // Params 0, eflags: 0x0
-    // namespace_baba9b52<file_0>::function_b9002790
     // Checksum 0x9a50efeb, Offset: 0x7290
     // Size: 0xd6
     function showtargets() {

@@ -11,7 +11,6 @@
 
 // Namespace destructible
 // Params 0, eflags: 0x2
-// namespace_c8c4714f<file_0>::function_2dc19561
 // Checksum 0xe2265f2a, Offset: 0x3f0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,7 +19,6 @@ function autoexec function_2dc19561() {
 
 // Namespace destructible
 // Params 0, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_8c87d8eb
 // Checksum 0x995d206c, Offset: 0x430
 // Size: 0x134
 function __init__() {
@@ -41,7 +39,6 @@ function __init__() {
 
 // Namespace destructible
 // Params 0, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_1a193c6
 // Checksum 0x54662caf, Offset: 0x570
 // Size: 0x134
 function function_1a193c6() {
@@ -61,7 +58,6 @@ function function_1a193c6() {
 
 // Namespace destructible
 // Params 0, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_aeee3204
 // Checksum 0xe786b521, Offset: 0x6b0
 // Size: 0xb8
 function function_aeee3204() {
@@ -75,7 +71,6 @@ function function_aeee3204() {
 
 // Namespace destructible
 // Params 3, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_75c1521a
 // Checksum 0x86560d2f, Offset: 0x770
 // Size: 0xfc
 function physics_explosion_and_rumble(origin, radius, physics_explosion) {
@@ -93,7 +88,6 @@ function physics_explosion_and_rumble(origin, radius, physics_explosion) {
 
 // Namespace destructible
 // Params 3, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_2956828
 // Checksum 0x9e4fe93, Offset: 0x878
 // Size: 0x45e
 function destructible_event_callback(destructible_event, attacker, weapon) {
@@ -193,7 +187,6 @@ function destructible_event_callback(destructible_event, attacker, weapon) {
 
 // Namespace destructible
 // Params 1, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_ec338b03
 // Checksum 0xaa005df8, Offset: 0xce0
 // Size: 0x104
 function simple_explosion(attacker) {
@@ -209,7 +202,6 @@ function simple_explosion(attacker) {
 
 // Namespace destructible
 // Params 2, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_adb551df
 // Checksum 0x7fafac95, Offset: 0xdf0
 // Size: 0x13c
 function simple_timed_explosion(destructible_event, attacker) {
@@ -230,7 +222,6 @@ function simple_timed_explosion(destructible_event, attacker) {
 
 // Namespace destructible
 // Params 2, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_42300153
 // Checksum 0xb92b401a, Offset: 0xf38
 // Size: 0x114
 function complex_explosion(attacker, max_radius) {
@@ -250,7 +241,6 @@ function complex_explosion(attacker, max_radius) {
 
 // Namespace destructible
 // Params 2, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_7cabc668
 // Checksum 0xddaa5deb, Offset: 0x1058
 // Size: 0x19c
 function destructible_car_explosion(attacker, physics_explosion) {
@@ -282,7 +272,6 @@ function destructible_car_explosion(attacker, physics_explosion) {
 
 // Namespace destructible
 // Params 0, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_fd20c396
 // Checksum 0xab8f7b95, Offset: 0x1200
 // Size: 0x64
 function destructible_car_death_think() {
@@ -297,7 +286,6 @@ function destructible_car_death_think() {
 
 // Namespace destructible
 // Params 0, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_ad7669b
 // Checksum 0xd16d8a5, Offset: 0x1270
 // Size: 0xd8
 function destructible_car_grenade_stuck_think() {
@@ -317,7 +305,6 @@ function destructible_car_grenade_stuck_think() {
 
 // Namespace destructible
 // Params 1, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_e81733f0
 // Checksum 0x35cfcdb, Offset: 0x1350
 // Size: 0x12c
 function destructible_car_grenade_stuck_explode(missile) {
@@ -341,7 +328,6 @@ function destructible_car_grenade_stuck_explode(missile) {
 
 // Namespace destructible
 // Params 1, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_88e15d17
 // Checksum 0xec415e1b, Offset: 0x1488
 // Size: 0x6c
 function destructible_car_hacked_c4(car) {
@@ -356,7 +342,6 @@ function destructible_car_hacked_c4(car) {
 
 // Namespace destructible
 // Params 0, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_491eb7f1
 // Checksum 0x42be802f, Offset: 0x1500
 // Size: 0x3a
 function destructible_car_death_notify() {
@@ -367,7 +352,6 @@ function destructible_car_death_notify() {
 
 // Namespace destructible
 // Params 1, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_1a832562
 // Checksum 0xf1c72790, Offset: 0x1548
 // Size: 0x4c
 function destructible_car_fire_think(attacker) {
@@ -378,7 +362,6 @@ function destructible_car_fire_think(attacker) {
 
 // Namespace destructible
 // Params 5, eflags: 0x0
-// namespace_c8c4714f<file_0>::function_e6244a90
 // Checksum 0x46c2ed14, Offset: 0x15a0
 // Size: 0x11c
 function codecallback_destructibleevent(event, param1, param2, param3, param4) {
@@ -401,7 +384,6 @@ function codecallback_destructibleevent(event, param1, param2, param3, param4) {
 
 // Namespace destructible
 // Params 3, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_4ffe3888
 // Checksum 0x69821486, Offset: 0x16c8
 // Size: 0x64
 function breakafter(time, damage, piece) {
@@ -413,7 +395,6 @@ function breakafter(time, damage, piece) {
 
 // Namespace destructible
 // Params 3, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_6cb467e7
 // Checksum 0xd438c8a6, Offset: 0x1738
 // Size: 0x174
 function explosive_incendiary_explosion(attacker, explosion_radius, physics_explosion) {
@@ -437,7 +418,6 @@ function explosive_incendiary_explosion(attacker, explosion_radius, physics_expl
 
 // Namespace destructible
 // Params 3, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_c3f45e13
 // Checksum 0x9894917b, Offset: 0x18b8
 // Size: 0x15c
 function explosive_electrical_explosion(attacker, explosion_radius, physics_explosion) {
@@ -461,7 +441,6 @@ function explosive_electrical_explosion(attacker, explosion_radius, physics_expl
 
 // Namespace destructible
 // Params 3, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_aae4d4a1
 // Checksum 0x80d73c74, Offset: 0x1a20
 // Size: 0x15c
 function explosive_concussive_explosion(attacker, explosion_radius, physics_explosion) {

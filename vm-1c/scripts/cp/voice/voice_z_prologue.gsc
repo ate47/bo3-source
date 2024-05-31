@@ -4,7 +4,6 @@
 
 // Namespace namespace_babdccbe
 // Params 0, eflags: 0x1 linked
-// namespace_babdccbe<file_0>::function_e230521c
 // Checksum 0xe4de514e, Offset: 0xd90
 // Size: 0x844
 function init_voice() {

@@ -10,7 +10,6 @@
 
 // Namespace zm_bgb_now_you_see_me
 // Params 0, eflags: 0x2
-// namespace_62ef2c38<file_0>::function_2dc19561
 // Checksum 0xce329acc, Offset: 0x1a8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,7 +18,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_now_you_see_me
 // Params 0, eflags: 0x1 linked
-// namespace_62ef2c38<file_0>::function_8c87d8eb
 // Checksum 0x1607a289, Offset: 0x1e8
 // Size: 0x8c
 function __init__() {

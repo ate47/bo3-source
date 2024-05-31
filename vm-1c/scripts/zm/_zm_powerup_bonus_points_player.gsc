@@ -18,7 +18,6 @@
 
 // Namespace zm_powerup_bonus_points_player
 // Params 0, eflags: 0x2
-// namespace_f633c4d9<file_0>::function_2dc19561
 // Checksum 0xd56f9a47, Offset: 0x308
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -27,7 +26,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_bonus_points_player
 // Params 0, eflags: 0x1 linked
-// namespace_f633c4d9<file_0>::function_8c87d8eb
 // Checksum 0xa617132c, Offset: 0x348
 // Size: 0xa4
 function __init__() {
@@ -39,7 +37,6 @@ function __init__() {
 
 // Namespace zm_powerup_bonus_points_player
 // Params 1, eflags: 0x1 linked
-// namespace_f633c4d9<file_0>::function_17a48195
 // Checksum 0xae29b89, Offset: 0x3f8
 // Size: 0x44
 function grab_bonus_points_player(player) {
@@ -49,7 +46,6 @@ function grab_bonus_points_player(player) {
 
 // Namespace zm_powerup_bonus_points_player
 // Params 2, eflags: 0x1 linked
-// namespace_f633c4d9<file_0>::function_8edf7fe5
 // Checksum 0xc869e739, Offset: 0x448
 // Size: 0xe4
 function bonus_points_player_powerup(item, player) {

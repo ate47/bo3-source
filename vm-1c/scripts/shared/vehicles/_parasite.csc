@@ -12,7 +12,6 @@
 
 // Namespace parasite
 // Params 0, eflags: 0x2
-// namespace_9231e1c6<file_0>::function_d290ebfa
 // Checksum 0x8ee26695, Offset: 0x270
 // Size: 0x104
 function autoexec main() {
@@ -24,7 +23,6 @@ function autoexec main() {
 
 // Namespace parasite
 // Params 7, eflags: 0x5 linked
-// namespace_9231e1c6<file_0>::function_efb89eff
 // Checksum 0xbd1acd9c, Offset: 0x380
 // Size: 0x12c
 function private function_efb89eff(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -44,7 +42,6 @@ function private function_efb89eff(localclientnum, oldvalue, newvalue, bnewent, 
 
 // Namespace parasite
 // Params 7, eflags: 0x5 linked
-// namespace_9231e1c6<file_0>::function_5f6cf4b2
 // Checksum 0x4aff30da, Offset: 0x4b8
 // Size: 0x64
 function private function_5f6cf4b2(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -55,7 +52,6 @@ function private function_5f6cf4b2(localclientnum, oldvalue, newvalue, bnewent, 
 
 // Namespace parasite
 // Params 7, eflags: 0x5 linked
-// namespace_9231e1c6<file_0>::function_a6b394f4
 // Checksum 0xcf923992, Offset: 0x528
 // Size: 0xe4
 function private function_a6b394f4(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -70,7 +66,6 @@ function private function_a6b394f4(localclientnum, oldvalue, newvalue, bnewent, 
 
 // Namespace parasite
 // Params 1, eflags: 0x5 linked
-// namespace_9231e1c6<file_0>::function_ef842362
 // Checksum 0x9bea6617, Offset: 0x618
 // Size: 0x84
 function private _setup_(localclientnum) {

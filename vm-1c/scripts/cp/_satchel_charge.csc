@@ -9,7 +9,6 @@
 
 // Namespace satchel_charge
 // Params 0, eflags: 0x2
-// namespace_624f140<file_0>::function_2dc19561
 // Checksum 0x3a9f1375, Offset: 0x148
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,7 +17,6 @@ function autoexec function_2dc19561() {
 
 // Namespace satchel_charge
 // Params 1, eflags: 0x1 linked
-// namespace_624f140<file_0>::function_8c87d8eb
 // Checksum 0x836eb284, Offset: 0x188
 // Size: 0x1c
 function __init__(localclientnum) {

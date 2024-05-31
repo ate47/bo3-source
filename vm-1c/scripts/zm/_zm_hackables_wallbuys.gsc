@@ -9,7 +9,6 @@
 
 // Namespace namespace_359e846b
 // Params 0, eflags: 0x1 linked
-// namespace_359e846b<file_0>::function_862bc532
 // Checksum 0xda2b6faf, Offset: 0x180
 // Size: 0x224
 function function_862bc532() {
@@ -42,7 +41,6 @@ function function_862bc532() {
 
 // Namespace namespace_359e846b
 // Params 1, eflags: 0x1 linked
-// namespace_359e846b<file_0>::function_c9123339
 // Checksum 0x961c1c94, Offset: 0x3b0
 // Size: 0x8c
 function function_c9123339(hacker) {

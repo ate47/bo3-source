@@ -12,7 +12,6 @@
 
 // Namespace mp_apartments
 // Params 0, eflags: 0x1 linked
-// namespace_a646b324<file_0>::function_d290ebfa
 // Checksum 0x515000ad, Offset: 0x258
 // Size: 0x63c
 function main() {
@@ -58,7 +57,6 @@ function main() {
 
 // Namespace mp_apartments
 // Params 1, eflags: 0x1 linked
-// namespace_a646b324<file_0>::function_7bb6ebae
 // Checksum 0xd7140f66, Offset: 0x8a0
 // Size: 0x74
 function function_7bb6ebae(&var_ef2e1e06) {

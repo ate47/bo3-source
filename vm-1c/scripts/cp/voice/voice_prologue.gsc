@@ -4,7 +4,6 @@
 
 // Namespace namespace_feda6b63
 // Params 0, eflags: 0x1 linked
-// namespace_feda6b63<file_0>::function_e230521c
 // Checksum 0xe44fc052, Offset: 0x4dd0
 // Size: 0x3324
 function init_voice() {

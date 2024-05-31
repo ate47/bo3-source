@@ -7,7 +7,6 @@
 
 // Namespace namespace_ecdcc148
 // Params 0, eflags: 0x2
-// namespace_ecdcc148<file_0>::function_2dc19561
 // Checksum 0xee7a82f6, Offset: 0x280
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,7 +15,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_ecdcc148
 // Params 0, eflags: 0x1 linked
-// namespace_ecdcc148<file_0>::function_8c87d8eb
 // Checksum 0xbc361aec, Offset: 0x2c0
 // Size: 0xfc
 function __init__() {
@@ -29,7 +27,6 @@ function __init__() {
 
 // Namespace namespace_ecdcc148
 // Params 7, eflags: 0x1 linked
-// namespace_ecdcc148<file_0>::function_d6107b2c
 // Checksum 0xf6ddd742, Offset: 0x3c8
 // Size: 0xfc
 function function_d6107b2c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -45,7 +42,6 @@ function function_d6107b2c(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_ecdcc148
 // Params 7, eflags: 0x1 linked
-// namespace_ecdcc148<file_0>::function_657b61e3
 // Checksum 0x685522fd, Offset: 0x4d0
 // Size: 0x420
 function function_657b61e3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -95,7 +91,6 @@ function function_657b61e3(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_ecdcc148
 // Params 1, eflags: 0x1 linked
-// namespace_ecdcc148<file_0>::function_613e39fa
 // Checksum 0x277627d2, Offset: 0x8f8
 // Size: 0x3c
 function function_613e39fa(zomb) {

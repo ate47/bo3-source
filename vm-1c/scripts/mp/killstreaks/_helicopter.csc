@@ -15,7 +15,6 @@
 
 // Namespace helicopter
 // Params 0, eflags: 0x2
-// namespace_e685164a<file_0>::function_2dc19561
 // Checksum 0x3a1fa0d2, Offset: 0x830
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -24,7 +23,6 @@ function autoexec function_2dc19561() {
 
 // Namespace helicopter
 // Params 0, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_8c87d8eb
 // Checksum 0x39708156, Offset: 0x870
 // Size: 0x774
 function __init__() {
@@ -65,7 +63,6 @@ function __init__() {
 
 // Namespace helicopter
 // Params 1, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_aebcf025
 // Checksum 0x8788c6c4, Offset: 0xff0
 // Size: 0xaa
 function on_player_spawned(localclientnum) {
@@ -83,7 +80,6 @@ function on_player_spawned(localclientnum) {
 
 // Namespace helicopter
 // Params 0, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_441e439f
 // Checksum 0xeb899463, Offset: 0x10a8
 // Size: 0x3c
 function setupanimtree() {
@@ -94,7 +90,6 @@ function setupanimtree() {
 
 // Namespace helicopter
 // Params 7, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_90bd4f2f
 // Checksum 0xbd4c368f, Offset: 0x10f0
 // Size: 0x16c
 function active_camo_changed(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -115,7 +110,6 @@ function active_camo_changed(localclientnum, oldval, newval, bnewent, binitialsn
 
 // Namespace helicopter
 // Params 2, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_7cd85a6d
 // Checksum 0x4b855303, Offset: 0x1268
 // Size: 0x2bc
 function doreveal(local_client_num, direction) {
@@ -160,7 +154,6 @@ function doreveal(local_client_num, direction) {
 
 // Namespace helicopter
 // Params 7, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_c637c7f3
 // Checksum 0xeef61bff, Offset: 0x1530
 // Size: 0x9c
 function heli_comlink_bootup_anim(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -172,7 +165,6 @@ function heli_comlink_bootup_anim(localclientnum, oldval, newval, bnewent, binit
 
 // Namespace helicopter
 // Params 7, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_84281dbe
 // Checksum 0x25772c13, Offset: 0x15d8
 // Size: 0xec
 function supplydrop_care_package_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -188,7 +180,6 @@ function supplydrop_care_package_state(localclientnum, oldval, newval, bnewent, 
 
 // Namespace helicopter
 // Params 7, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_f08d7005
 // Checksum 0x3562b167, Offset: 0x16d0
 // Size: 0xec
 function supplydrop_ai_tank_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -204,7 +195,6 @@ function supplydrop_ai_tank_state(localclientnum, oldval, newval, bnewent, binit
 
 // Namespace helicopter
 // Params 7, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_c0576ad6
 // Checksum 0xe8138bb6, Offset: 0x17c8
 // Size: 0x7c
 function warnmissilelocking(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -216,7 +206,6 @@ function warnmissilelocking(localclientnum, oldval, newval, bnewent, binitialsna
 
 // Namespace helicopter
 // Params 7, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_e0ea5b2d
 // Checksum 0xc6d81dee, Offset: 0x1850
 // Size: 0x7c
 function warnmissilelocked(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -228,7 +217,6 @@ function warnmissilelocked(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace helicopter
 // Params 7, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_ee2f2859
 // Checksum 0x2655d7d1, Offset: 0x18d8
 // Size: 0x7c
 function warnmissilefired(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -240,7 +228,6 @@ function warnmissilefired(localclientnum, oldval, newval, bnewent, binitialsnap,
 
 // Namespace helicopter
 // Params 1, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_ed9b9cff
 // Checksum 0x4bc21d8d, Offset: 0x1960
 // Size: 0x156
 function heli_deletefx(localclientnum) {
@@ -272,7 +259,6 @@ function heli_deletefx(localclientnum) {
 
 // Namespace helicopter
 // Params 1, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_a9a23dc9
 // Checksum 0xcb21b051, Offset: 0x1ac0
 // Size: 0x354
 function startfx(localclientnum) {
@@ -331,7 +317,6 @@ function startfx(localclientnum) {
 
 // Namespace helicopter
 // Params 1, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_bae6b44e
 // Checksum 0xd93beaee, Offset: 0x1e20
 // Size: 0xec
 function startfx_loop(localclientnum) {
@@ -353,7 +338,6 @@ function startfx_loop(localclientnum) {
 
 // Namespace helicopter
 // Params 1, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_91f14f33
 // Checksum 0x9673f366, Offset: 0x1f18
 // Size: 0x1cc
 function function_91f14f33(localclientnum) {
@@ -386,7 +370,6 @@ function function_91f14f33(localclientnum) {
 
 // Namespace helicopter
 // Params 3, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_ab3cf418
 // Checksum 0x1c697a84, Offset: 0x20f0
 // Size: 0x4c
 function trail_fx(localclientnum, trail_fx, trail_tag) {
@@ -396,7 +379,6 @@ function trail_fx(localclientnum, trail_fx, trail_tag) {
 
 // Namespace helicopter
 // Params 2, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_2066610
 // Checksum 0xf9695b8f, Offset: 0x2148
 // Size: 0x4c
 function heli_comlink_lights_on_after_wait(localclientnum, wait_time) {
@@ -408,7 +390,6 @@ function heli_comlink_lights_on_after_wait(localclientnum, wait_time) {
 
 // Namespace helicopter
 // Params 1, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_1ac0363b
 // Checksum 0xf3aec881, Offset: 0x21a0
 // Size: 0x1a6
 function heli_comlink_lights_on(localclientnum) {
@@ -428,7 +409,6 @@ function heli_comlink_lights_on(localclientnum) {
 
 // Namespace helicopter
 // Params 1, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_728a8a8f
 // Checksum 0x5671eff4, Offset: 0x2350
 // Size: 0x96
 function heli_comlink_lights_off(localclientnum) {
@@ -445,7 +425,6 @@ function heli_comlink_lights_off(localclientnum) {
 
 // Namespace helicopter
 // Params 1, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_e15bce74
 // Checksum 0xc9fbf12c, Offset: 0x23f0
 // Size: 0x140
 function updatemarkerthread(localclientnum) {
@@ -463,7 +442,6 @@ function updatemarkerthread(localclientnum) {
 
 // Namespace helicopter
 // Params 1, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_4d8313f0
 // Checksum 0x9b530366, Offset: 0x2538
 // Size: 0x12e
 function stopcrateeffects(localclientnum) {
@@ -488,7 +466,6 @@ function stopcrateeffects(localclientnum) {
 
 // Namespace helicopter
 // Params 1, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_2f7a18f3
 // Checksum 0x2941d377, Offset: 0x2670
 // Size: 0x64
 function cleanupthrustersthread(localclientnum) {
@@ -501,7 +478,6 @@ function cleanupthrustersthread(localclientnum) {
 
 // Namespace helicopter
 // Params 7, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_6fc588fc
 // Checksum 0x89113343, Offset: 0x26e0
 // Size: 0x1e4
 function setsupplydropthrustersstate(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -523,7 +499,6 @@ function setsupplydropthrustersstate(localclientnum, oldval, newval, bnewent, bi
 
 // Namespace helicopter
 // Params 7, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_5a98ea62
 // Checksum 0xb6f73, Offset: 0x28d0
 // Size: 0x3c
 function function_5a98ea62(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -532,7 +507,6 @@ function function_5a98ea62(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace helicopter
 // Params 7, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_9b4696de
 // Checksum 0xbc7d536d, Offset: 0x2918
 // Size: 0x1e4
 function setaitankhrustersstate(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -554,7 +528,6 @@ function setaitankhrustersstate(localclientnum, oldval, newval, bnewent, binitia
 
 // Namespace helicopter
 // Params 7, eflags: 0x1 linked
-// namespace_e685164a<file_0>::function_9c395968
 // Checksum 0xd5650dbe, Offset: 0x2b08
 // Size: 0x2b4
 function marker_state_changed(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

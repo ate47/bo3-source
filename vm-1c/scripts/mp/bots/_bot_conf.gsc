@@ -10,7 +10,6 @@
 
 // Namespace namespace_3a008251
 // Params 0, eflags: 0x1 linked
-// namespace_3a008251<file_0>::function_c35e6aab
 // Checksum 0x99ec1590, Offset: 0x158
 // Size: 0x4
 function init() {

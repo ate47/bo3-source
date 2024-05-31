@@ -16,7 +16,6 @@
 
 // Namespace destructible
 // Params 0, eflags: 0x2
-// namespace_c8c4714f<file_0>::function_2dc19561
 // Checksum 0xbaef40eb, Offset: 0x4d0
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -25,7 +24,6 @@ function autoexec function_2dc19561() {
 
 // Namespace destructible
 // Params 0, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_8c87d8eb
 // Checksum 0xb0790c96, Offset: 0x518
 // Size: 0x174
 function __init__() {
@@ -50,7 +48,6 @@ function __init__() {
 
 // Namespace destructible
 // Params 0, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_5b6b9132
 // Checksum 0x9d891769, Offset: 0x698
 // Size: 0x13a
 function __main__() {
@@ -68,7 +65,6 @@ function __main__() {
 
 // Namespace destructible
 // Params 0, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_1a193c6
 // Checksum 0xe687c0f6, Offset: 0x7e0
 // Size: 0x134
 function function_1a193c6() {
@@ -88,7 +84,6 @@ function function_1a193c6() {
 
 // Namespace destructible
 // Params 0, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_aeee3204
 // Checksum 0x102b4a5a, Offset: 0x920
 // Size: 0xb8
 function function_aeee3204() {
@@ -102,7 +97,6 @@ function function_aeee3204() {
 
 // Namespace destructible
 // Params 4, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_75c1521a
 // Checksum 0x3646d451, Offset: 0x9e0
 // Size: 0x154
 function physics_explosion_and_rumble(origin, radius, var_824b40e2, var_34aa7e9b) {
@@ -130,7 +124,6 @@ function physics_explosion_and_rumble(origin, radius, var_824b40e2, var_34aa7e9b
 
 // Namespace destructible
 // Params 3, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_50f2d9cb
 // Checksum 0x9432782d, Offset: 0xb40
 // Size: 0x3ce
 function event_callback(destructible_event, attacker, weapon) {
@@ -200,7 +193,6 @@ function event_callback(destructible_event, attacker, weapon) {
 
 // Namespace destructible
 // Params 1, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_a381d4e5
 // Checksum 0xb75096cf, Offset: 0xf18
 // Size: 0x4c
 function car_fire_think(attacker) {
@@ -211,7 +203,6 @@ function car_fire_think(attacker) {
 
 // Namespace destructible
 // Params 1, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_ec338b03
 // Checksum 0xaa3e1c70, Offset: 0xf70
 // Size: 0x124
 function simple_explosion(attacker) {
@@ -231,7 +222,6 @@ function simple_explosion(attacker) {
 
 // Namespace destructible
 // Params 2, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_adb551df
 // Checksum 0xc52aa86a, Offset: 0x10a0
 // Size: 0x13c
 function simple_timed_explosion(destructible_event, attacker) {
@@ -252,7 +242,6 @@ function simple_timed_explosion(destructible_event, attacker) {
 
 // Namespace destructible
 // Params 2, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_42300153
 // Checksum 0x70b2562f, Offset: 0x11e8
 // Size: 0x124
 function complex_explosion(attacker, max_radius) {
@@ -272,7 +261,6 @@ function complex_explosion(attacker, max_radius) {
 
 // Namespace destructible
 // Params 2, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_940b72ed
 // Checksum 0xde2c219b, Offset: 0x1318
 // Size: 0x1c4
 function car_explosion(attacker, physics_explosion) {
@@ -306,7 +294,6 @@ function car_explosion(attacker, physics_explosion) {
 
 // Namespace destructible
 // Params 0, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_568c7d06
 // Checksum 0x6ae7220d, Offset: 0x14e8
 // Size: 0xc8
 function tank_grenade_stuck_think() {
@@ -325,7 +312,6 @@ function tank_grenade_stuck_think() {
 
 // Namespace destructible
 // Params 1, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_f56db889
 // Checksum 0x4a9aee59, Offset: 0x15b8
 // Size: 0x124
 function tank_grenade_stuck_explode(missile) {
@@ -348,7 +334,6 @@ function tank_grenade_stuck_explode(missile) {
 
 // Namespace destructible
 // Params 1, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_37431932
 // Checksum 0x5f30ca38, Offset: 0x16e8
 // Size: 0x64
 function tank_hacked_c4(tank) {
@@ -362,7 +347,6 @@ function tank_hacked_c4(tank) {
 
 // Namespace destructible
 // Params 0, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_761f73b
 // Checksum 0x97d00261, Offset: 0x1758
 // Size: 0x64
 function car_death_think() {
@@ -377,7 +361,6 @@ function car_death_think() {
 
 // Namespace destructible
 // Params 0, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_7ba851a2
 // Checksum 0x716f1a2f, Offset: 0x17c8
 // Size: 0xd8
 function car_grenade_stuck_think() {
@@ -397,7 +380,6 @@ function car_grenade_stuck_think() {
 
 // Namespace destructible
 // Params 1, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_da4a46ed
 // Checksum 0xa4cd371, Offset: 0x18a8
 // Size: 0x12c
 function car_grenade_stuck_explode(missile) {
@@ -421,7 +403,6 @@ function car_grenade_stuck_explode(missile) {
 
 // Namespace destructible
 // Params 1, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_fd485946
 // Checksum 0x357ec4b1, Offset: 0x19e0
 // Size: 0x6c
 function car_hacked_c4(car) {
@@ -436,7 +417,6 @@ function car_hacked_c4(car) {
 
 // Namespace destructible
 // Params 0, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_4682370e
 // Checksum 0xc8815dbb, Offset: 0x1a58
 // Size: 0x3a
 function car_death_notify() {
@@ -447,7 +427,6 @@ function car_death_notify() {
 
 // Namespace destructible
 // Params 5, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_e6244a90
 // Checksum 0xb501ea33, Offset: 0x1aa0
 // Size: 0x11c
 function codecallback_destructibleevent(event, param1, param2, param3, param4) {
@@ -470,7 +449,6 @@ function codecallback_destructibleevent(event, param1, param2, param3, param4) {
 
 // Namespace destructible
 // Params 3, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_4ffe3888
 // Checksum 0x2d7ab1c2, Offset: 0x1bc8
 // Size: 0x64
 function breakafter(time, damage, piece) {
@@ -482,7 +460,6 @@ function breakafter(time, damage, piece) {
 
 // Namespace destructible
 // Params 3, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_6cb467e7
 // Checksum 0xa7a30c58, Offset: 0x1c38
 // Size: 0x1e4
 function explosive_incendiary_explosion(attacker, explosion_radius, var_34aa7e9b) {
@@ -514,7 +491,6 @@ function explosive_incendiary_explosion(attacker, explosion_radius, var_34aa7e9b
 
 // Namespace destructible
 // Params 3, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_906eae90
 // Checksum 0xe30d7a2e, Offset: 0x1e28
 // Size: 0x84
 function function_906eae90(v_origin, n_radius, n_time) {
@@ -526,7 +502,6 @@ function function_906eae90(v_origin, n_radius, n_time) {
 
 // Namespace destructible
 // Params 3, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_c3f45e13
 // Checksum 0xdfdf4049, Offset: 0x1eb8
 // Size: 0x164
 function explosive_electrical_explosion(attacker, explosion_radius, var_34aa7e9b) {
@@ -550,7 +525,6 @@ function explosive_electrical_explosion(attacker, explosion_radius, var_34aa7e9b
 
 // Namespace destructible
 // Params 3, eflags: 0x1 linked
-// namespace_c8c4714f<file_0>::function_aae4d4a1
 // Checksum 0x53764405, Offset: 0x2028
 // Size: 0x164
 function explosive_concussive_explosion(attacker, explosion_radius, var_34aa7e9b) {

@@ -5,7 +5,6 @@
 
 // Namespace namespace_5c41055a
 // Params 0, eflags: 0x2
-// namespace_5c41055a<file_0>::function_2dc19561
 // Checksum 0xd8989ec8, Offset: 0xc0
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -14,7 +13,6 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_5c41055a
 // Params 0, eflags: 0x1 linked
-// namespace_5c41055a<file_0>::function_8c87d8eb
 // Checksum 0x99ec1590, Offset: 0x108
 // Size: 0x4
 function __init__() {
@@ -23,7 +21,6 @@ function __init__() {
 
 // Namespace namespace_5c41055a
 // Params 0, eflags: 0x1 linked
-// namespace_5c41055a<file_0>::function_5b6b9132
 // Checksum 0x99ec1590, Offset: 0x118
 // Size: 0x4
 function __main__() {
@@ -32,7 +29,6 @@ function __main__() {
 
 // Namespace namespace_5c41055a
 // Params 7, eflags: 0x1 linked
-// namespace_5c41055a<file_0>::function_3d58bdce
 // Checksum 0x43ab63f0, Offset: 0x128
 // Size: 0x204
 function function_3d58bdce(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -67,7 +63,6 @@ function function_3d58bdce(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_5c41055a
 // Params 1, eflags: 0x0
-// namespace_5c41055a<file_0>::function_1214cfea
 // Checksum 0xeb3ee950, Offset: 0x338
 // Size: 0x3a
 function function_1214cfea(song) {
@@ -79,7 +74,6 @@ function function_1214cfea(song) {
 
 // Namespace namespace_5c41055a
 // Params 7, eflags: 0x0
-// namespace_5c41055a<file_0>::function_2b7f281d
 // Checksum 0x5c12166d, Offset: 0x380
 // Size: 0x68
 function function_2b7f281d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -89,7 +83,6 @@ function function_2b7f281d(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_5c41055a
 // Params 2, eflags: 0x1 linked
-// namespace_5c41055a<file_0>::function_dc7ff543
 // Checksum 0xf6aafab2, Offset: 0x3f0
 // Size: 0x9c
 function fade(n_id, n_time) {
@@ -105,7 +98,6 @@ function fade(n_id, n_time) {
 
 // Namespace namespace_5c41055a
 // Params 0, eflags: 0x0
-// namespace_5c41055a<file_0>::function_6378a934
 // Checksum 0x98111f56, Offset: 0x498
 // Size: 0x60
 function function_6378a934() {

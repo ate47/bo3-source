@@ -24,7 +24,6 @@
 
 // Namespace namespace_e1bd9dd
 // Params 0, eflags: 0x2
-// namespace_e1bd9dd<file_0>::function_c35e6aab
 // Checksum 0xdcce7cdb, Offset: 0x3b0
 // Size: 0xa4
 function autoexec init() {
@@ -39,7 +38,6 @@ function autoexec init() {
 
 // Namespace namespace_e1bd9dd
 // Params 0, eflags: 0x5 linked
-// namespace_e1bd9dd<file_0>::function_87ff545e
 // Checksum 0xe71e7e3b, Offset: 0x460
 // Size: 0x1c
 function private function_87ff545e() {
@@ -48,7 +46,6 @@ function private function_87ff545e() {
 
 // Namespace namespace_e1bd9dd
 // Params 0, eflags: 0x5 linked
-// namespace_e1bd9dd<file_0>::function_b271c3e6
 // Checksum 0x48308429, Offset: 0x488
 // Size: 0x8c
 function private function_b271c3e6() {

@@ -8,7 +8,6 @@
 
 // Namespace archetype_human_exposed
 // Params 0, eflags: 0x2
-// namespace_508e2b85<file_0>::function_a13b795c
 // Checksum 0x9c49652d, Offset: 0x238
 // Size: 0x144
 function autoexec registerbehaviorscriptfunctions() {
@@ -24,7 +23,6 @@ function autoexec registerbehaviorscriptfunctions() {
 
 // Namespace archetype_human_exposed
 // Params 1, eflags: 0x5 linked
-// namespace_508e2b85<file_0>::function_4e0fe9bf
 // Checksum 0xd6dd1c1, Offset: 0x388
 // Size: 0x54
 function private preparetoreacttoenemy(behaviortreeentity) {
@@ -35,7 +33,6 @@ function private preparetoreacttoenemy(behaviortreeentity) {
 
 // Namespace archetype_human_exposed
 // Params 1, eflags: 0x5 linked
-// namespace_508e2b85<file_0>::function_187476b4
 // Checksum 0xd030ff30, Offset: 0x3e8
 // Size: 0x2c
 function private resetreactiontoenemy(behaviortreeentity) {
@@ -45,7 +42,6 @@ function private resetreactiontoenemy(behaviortreeentity) {
 
 // Namespace archetype_human_exposed
 // Params 1, eflags: 0x5 linked
-// namespace_508e2b85<file_0>::function_87515a95
 // Checksum 0x67ea8f08, Offset: 0x420
 // Size: 0x54
 function private nocloseenemyservice(behaviortreeentity) {
@@ -58,7 +54,6 @@ function private nocloseenemyservice(behaviortreeentity) {
 
 // Namespace archetype_human_exposed
 // Params 1, eflags: 0x5 linked
-// namespace_508e2b85<file_0>::function_948e553
 // Checksum 0x8b3129d4, Offset: 0x480
 // Size: 0x64
 function private hascloseenemy(behaviortreeentity) {
@@ -73,7 +68,6 @@ function private hascloseenemy(behaviortreeentity) {
 
 // Namespace archetype_human_exposed
 // Params 2, eflags: 0x5 linked
-// namespace_508e2b85<file_0>::function_672e0d90
 // Checksum 0x6bf7e00b, Offset: 0x4f0
 // Size: 0x38
 function private function_672e0d90(entity, neighbor) {
@@ -82,7 +76,6 @@ function private function_672e0d90(entity, neighbor) {
 
 // Namespace archetype_human_exposed
 // Params 1, eflags: 0x5 linked
-// namespace_508e2b85<file_0>::function_5a7b478e
 // Checksum 0xe945a739, Offset: 0x530
 // Size: 0x152
 function private function_5a7b478e(entity) {
@@ -99,7 +92,6 @@ function private function_5a7b478e(entity) {
 
 // Namespace archetype_human_exposed
 // Params 2, eflags: 0x5 linked
-// namespace_508e2b85<file_0>::function_a2da283c
 // Checksum 0x49ffb7c3, Offset: 0x690
 // Size: 0x4c
 function private setpathmovedelayedrandom(behaviortreeentity, asmstatename) {
@@ -108,7 +100,6 @@ function private setpathmovedelayedrandom(behaviortreeentity, asmstatename) {
 
 // Namespace archetype_human_exposed
 // Params 2, eflags: 0x5 linked
-// namespace_508e2b85<file_0>::function_51cc295a
 // Checksum 0x5500c47a, Offset: 0x6e8
 // Size: 0x7c
 function private exposedsetdesiredstancetostand(behaviortreeentity, asmstatename) {
@@ -119,7 +110,6 @@ function private exposedsetdesiredstancetostand(behaviortreeentity, asmstatename
 
 // Namespace archetype_human_exposed
 // Params 1, eflags: 0x5 linked
-// namespace_508e2b85<file_0>::function_3947f866
 // Checksum 0xa0542659, Offset: 0x770
 // Size: 0x2d2
 function private tryreacquireservice(behaviortreeentity) {

@@ -6,7 +6,6 @@
 
 // Namespace zm_traps
 // Params 0, eflags: 0x2
-// namespace_645ea757<file_0>::function_2dc19561
 // Checksum 0x2088e50d, Offset: 0xe8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,7 +14,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
-// namespace_645ea757<file_0>::function_8c87d8eb
 // Checksum 0x1c521a67, Offset: 0x128
 // Size: 0xf4
 function __init__() {
@@ -32,7 +30,6 @@ function __init__() {
 
 // Namespace zm_traps
 // Params 1, eflags: 0x1 linked
-// namespace_645ea757<file_0>::function_3c587a30
 // Checksum 0x883cae0, Offset: 0x228
 // Size: 0x1a
 function is_trap_registered(a_registered_traps) {

@@ -7,7 +7,6 @@
 
 // Namespace namespace_cfbe948b
 // Params 0, eflags: 0x0
-// namespace_cfbe948b<file_0>::function_c35e6aab
 // Checksum 0x72867dd5, Offset: 0x1f0
 // Size: 0xfc
 function init() {
@@ -20,7 +19,6 @@ function init() {
 
 // Namespace namespace_cfbe948b
 // Params 7, eflags: 0x0
-// namespace_cfbe948b<file_0>::function_c8f2b7a1
 // Checksum 0xa0b9e134, Offset: 0x2f8
 // Size: 0x286
 function magicbox_open_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -56,7 +54,6 @@ function magicbox_open_fx(localclientnum, oldval, newval, bnewent, binitialsnap,
 
 // Namespace namespace_cfbe948b
 // Params 7, eflags: 0x0
-// namespace_cfbe948b<file_0>::function_cc36f894
 // Checksum 0x3cfe9f14, Offset: 0x588
 // Size: 0xb4
 function function_cc36f894(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -72,7 +69,6 @@ function function_cc36f894(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_cfbe948b
 // Params 7, eflags: 0x0
-// namespace_cfbe948b<file_0>::function_1c9eb55c
 // Checksum 0x2013f6e0, Offset: 0x648
 // Size: 0x174
 function function_1c9eb55c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

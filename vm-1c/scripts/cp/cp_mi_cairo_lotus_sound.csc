@@ -8,7 +8,6 @@
 
 // Namespace namespace_9750c824
 // Params 0, eflags: 0x1 linked
-// namespace_9750c824<file_0>::function_d290ebfa
 // Checksum 0x6eda387, Offset: 0x228
 // Size: 0xac
 function main() {
@@ -21,7 +20,6 @@ function main() {
 
 // Namespace namespace_9750c824
 // Params 0, eflags: 0x1 linked
-// namespace_9750c824<file_0>::function_a0c5a719
 // Checksum 0x58d882c3, Offset: 0x2e0
 // Size: 0x1c
 function function_a0c5a719() {
@@ -30,7 +28,6 @@ function function_a0c5a719() {
 
 // Namespace namespace_9750c824
 // Params 0, eflags: 0x1 linked
-// namespace_9750c824<file_0>::function_759e7aaa
 // Checksum 0x435f7f81, Offset: 0x308
 // Size: 0xbc
 function function_759e7aaa() {
@@ -44,7 +41,6 @@ function function_759e7aaa() {
 
 // Namespace namespace_9750c824
 // Params 0, eflags: 0x1 linked
-// namespace_9750c824<file_0>::function_60df3271
 // Checksum 0xd9985dc2, Offset: 0x3d0
 // Size: 0x2e
 function function_60df3271() {
@@ -56,7 +52,6 @@ function function_60df3271() {
 
 // Namespace namespace_9750c824
 // Params 13, eflags: 0x1 linked
-// namespace_9750c824<file_0>::function_8b5fd6e1
 // Checksum 0x7085026b, Offset: 0x408
 // Size: 0x404
 function function_8b5fd6e1(player, target_origin, alias1, min_vol1, max_vol1, var_937fa2ef, var_ca956561, alias2, min_vol2, max_vol2, var_217833b4, var_f097dfca, var_d8bcfff1) {
@@ -119,7 +114,6 @@ function function_8b5fd6e1(player, target_origin, alias1, min_vol1, max_vol1, va
 
 // Namespace namespace_9750c824
 // Params 4, eflags: 0x1 linked
-// namespace_9750c824<file_0>::function_860d167b
 // Checksum 0x26961e9, Offset: 0x818
 // Size: 0x114
 function function_860d167b(ent1, ent2, id1, id2) {
@@ -139,7 +133,6 @@ function function_860d167b(ent1, ent2, id1, id2) {
 
 // Namespace namespace_9750c824
 // Params 0, eflags: 0x1 linked
-// namespace_9750c824<file_0>::function_4904d6ff
 // Checksum 0x306ffc1b, Offset: 0x938
 // Size: 0x64
 function function_4904d6ff() {
@@ -149,7 +142,6 @@ function function_4904d6ff() {
 
 // Namespace namespace_9750c824
 // Params 7, eflags: 0x1 linked
-// namespace_9750c824<file_0>::function_5e9a8778
 // Checksum 0x24c7455a, Offset: 0x9a8
 // Size: 0x10a
 function function_5e9a8778(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -170,7 +162,6 @@ function function_5e9a8778(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_9750c824
 // Params 2, eflags: 0x1 linked
-// namespace_9750c824<file_0>::function_372f5bfa
 // Checksum 0x31c1acea, Offset: 0xac0
 // Size: 0xcc
 function function_372f5bfa(location, newval) {
@@ -186,7 +177,6 @@ function function_372f5bfa(location, newval) {
 
 // Namespace namespace_9750c824
 // Params 0, eflags: 0x1 linked
-// namespace_9750c824<file_0>::function_7bcb0782
 // Checksum 0x37c1431c, Offset: 0xb98
 // Size: 0x94
 function function_7bcb0782() {
@@ -201,7 +191,6 @@ function function_7bcb0782() {
 
 // Namespace namespace_9750c824
 // Params 0, eflags: 0x1 linked
-// namespace_9750c824<file_0>::function_1a66f9f3
 // Checksum 0x9555f13, Offset: 0xc38
 // Size: 0xb4
 function function_1a66f9f3() {
@@ -215,7 +204,6 @@ function function_1a66f9f3() {
 
 // Namespace namespace_9750c824
 // Params 0, eflags: 0x1 linked
-// namespace_9750c824<file_0>::function_e675c6f2
 // Checksum 0xbc6199ce, Offset: 0xcf8
 // Size: 0x1c
 function function_e675c6f2() {
@@ -225,7 +213,6 @@ function function_e675c6f2() {
 
 // Namespace namespace_9750c824
 // Params 13, eflags: 0x1 linked
-// namespace_9750c824<file_0>::function_a89a73f3
 // Checksum 0xa4a0a04a, Offset: 0xd20
 // Size: 0x404
 function function_a89a73f3(player, target_origin, alias1, min_vol1, max_vol1, var_937fa2ef, var_ca956561, alias2, min_vol2, max_vol2, var_217833b4, var_f097dfca, var_d8bcfff1) {
@@ -288,7 +275,6 @@ function function_a89a73f3(player, target_origin, alias1, min_vol1, max_vol1, va
 
 // Namespace namespace_9750c824
 // Params 4, eflags: 0x1 linked
-// namespace_9750c824<file_0>::function_dc4a5405
 // Checksum 0x36c6cdba, Offset: 0x1130
 // Size: 0x114
 function function_dc4a5405(ent1, ent2, id1, id2) {

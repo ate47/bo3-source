@@ -13,7 +13,6 @@
 
 // Namespace dm
 // Params 0, eflags: 0x0
-// namespace_c9040adc<file_0>::function_d290ebfa
 // Checksum 0xe488bce6, Offset: 0x300
 // Size: 0x224
 function main() {
@@ -39,7 +38,6 @@ function main() {
 
 // Namespace dm
 // Params 1, eflags: 0x0
-// namespace_c9040adc<file_0>::function_ebff918b
 // Checksum 0x3c3c8f71, Offset: 0x530
 // Size: 0xec
 function setupteam(team) {
@@ -57,7 +55,6 @@ function setupteam(team) {
 
 // Namespace dm
 // Params 0, eflags: 0x0
-// namespace_c9040adc<file_0>::function_34685338
 // Checksum 0xa536d248, Offset: 0x628
 // Size: 0x1a4
 function onstartgametype() {
@@ -82,7 +79,6 @@ function onstartgametype() {
 
 // Namespace dm
 // Params 1, eflags: 0x0
-// namespace_c9040adc<file_0>::function_257d1c47
 // Checksum 0x9579e933, Offset: 0x7d8
 // Size: 0x58
 function onendgame(winningplayer) {
@@ -93,7 +89,6 @@ function onendgame(winningplayer) {
 
 // Namespace dm
 // Params 0, eflags: 0x0
-// namespace_c9040adc<file_0>::function_5cee117d
 // Checksum 0xb41a34e5, Offset: 0x838
 // Size: 0xb0
 function onscoreclosemusic() {
@@ -112,7 +107,6 @@ function onscoreclosemusic() {
 
 // Namespace dm
 // Params 1, eflags: 0x0
-// namespace_c9040adc<file_0>::function_19bc9234
 // Checksum 0xcd63ba78, Offset: 0x8f0
 // Size: 0x34
 function onspawnplayer(predictedspawn) {
@@ -124,7 +118,6 @@ function onspawnplayer(predictedspawn) {
 
 // Namespace dm
 // Params 9, eflags: 0x0
-// namespace_c9040adc<file_0>::function_c2658b46
 // Checksum 0x5e5eea6d, Offset: 0x930
 // Size: 0x114
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {

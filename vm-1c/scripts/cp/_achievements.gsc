@@ -12,7 +12,6 @@
 
 // Namespace achievements
 // Params 0, eflags: 0x2
-// namespace_4a344d81<file_0>::function_2dc19561
 // Checksum 0xd606ca34, Offset: 0x548
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace achievements
 // Params 0, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_8c87d8eb
 // Checksum 0xcb5b452b, Offset: 0x588
 // Size: 0xe4
 function __init__() {
@@ -36,7 +34,6 @@ function __init__() {
 
 // Namespace achievements
 // Params 0, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_4462a8b7
 // Checksum 0x895db7e7, Offset: 0x678
 // Size: 0x11a
 function function_4462a8b7() {
@@ -54,7 +51,6 @@ function function_4462a8b7() {
 
 // Namespace achievements
 // Params 2, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_52c9c74a
 // Checksum 0x188ef673, Offset: 0x7a0
 // Size: 0xac
 function function_52c9c74a(str_id, var_56503a18) {
@@ -73,7 +69,6 @@ function function_52c9c74a(str_id, var_56503a18) {
 
 // Namespace achievements
 // Params 0, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_fb4f96b5
 // Checksum 0xf3d0c2ed, Offset: 0x858
 // Size: 0xe8
 function on_player_connect() {
@@ -93,7 +88,6 @@ function on_player_connect() {
 
 // Namespace achievements
 // Params 3, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_5f2f7800
 // Checksum 0x94943805, Offset: 0x948
 // Size: 0x74
 function function_5f2f7800(eplayer, levelname, difficulty) {
@@ -108,7 +102,6 @@ function function_5f2f7800(eplayer, levelname, difficulty) {
 
 // Namespace achievements
 // Params 1, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_c3e7ff05
 // Checksum 0x5dab7b87, Offset: 0x9c8
 // Size: 0x244
 function function_c3e7ff05(eplayer) {
@@ -143,7 +136,6 @@ function function_c3e7ff05(eplayer) {
 
 // Namespace achievements
 // Params 4, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_733a6065
 // Checksum 0x5dc98f99, Offset: 0xc18
 // Size: 0x64
 function function_733a6065(eplayer, levelname, difficulty, var_10c5a3ef) {
@@ -155,7 +147,6 @@ function function_733a6065(eplayer, levelname, difficulty, var_10c5a3ef) {
 
 // Namespace achievements
 // Params 0, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_34eaa01b
 // Checksum 0x609cfd03, Offset: 0xc88
 // Size: 0x138
 function wall_run() {
@@ -180,7 +171,6 @@ function wall_run() {
 
 // Namespace achievements
 // Params 0, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_87f30e90
 // Checksum 0x99ec1590, Offset: 0xdc8
 // Size: 0x4
 function on_ai_spawned() {
@@ -189,7 +179,6 @@ function on_ai_spawned() {
 
 // Namespace achievements
 // Params 1, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_7bb100ad
 // Checksum 0x94078186, Offset: 0xdd8
 // Size: 0x64
 function on_ai_damage(s_params) {
@@ -203,7 +192,6 @@ function on_ai_damage(s_params) {
 
 // Namespace achievements
 // Params 1, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_4c579175
 // Checksum 0xe1aeb598, Offset: 0xe48
 // Size: 0x5c
 function on_player_death(s_params) {
@@ -215,7 +203,6 @@ function on_player_death(s_params) {
 
 // Namespace achievements
 // Params 2, eflags: 0x5 linked
-// namespace_4a344d81<file_0>::function_1121f26a
 // Checksum 0x31717bfd, Offset: 0xeb0
 // Size: 0x16c
 function private function_1121f26a(var_c856ad1d, evictim) {
@@ -240,7 +227,6 @@ function private function_1121f26a(var_c856ad1d, evictim) {
 
 // Namespace achievements
 // Params 4, eflags: 0x5 linked
-// namespace_4a344d81<file_0>::function_914b8688
 // Checksum 0x82e2b9b4, Offset: 0x1028
 // Size: 0x48c
 function private function_914b8688(player, evictim, weapon, einflictor) {
@@ -302,7 +288,6 @@ function private function_914b8688(player, evictim, weapon, einflictor) {
 
 // Namespace achievements
 // Params 3, eflags: 0x5 linked
-// namespace_4a344d81<file_0>::function_2b2fb40b
 // Checksum 0x4f15c880, Offset: 0x14c0
 // Size: 0x17c
 function private function_2b2fb40b(player, var_aae1ed0d, weapon) {
@@ -323,7 +308,6 @@ function private function_2b2fb40b(player, var_aae1ed0d, weapon) {
 
 // Namespace achievements
 // Params 2, eflags: 0x5 linked
-// namespace_4a344d81<file_0>::function_b1d71bd3
 // Checksum 0x25e2b1f9, Offset: 0x1648
 // Size: 0x18c
 function private function_b1d71bd3(player, weapon) {
@@ -349,7 +333,6 @@ function private function_b1d71bd3(player, weapon) {
 
 // Namespace achievements
 // Params 3, eflags: 0x5 linked
-// namespace_4a344d81<file_0>::function_307b3ac3
 // Checksum 0x727cb614, Offset: 0x17e0
 // Size: 0x24c
 function private function_307b3ac3(eplayer, evictim, eweapon) {
@@ -379,7 +362,6 @@ function private function_307b3ac3(eplayer, evictim, eweapon) {
 
 // Namespace achievements
 // Params 3, eflags: 0x5 linked
-// namespace_4a344d81<file_0>::function_c4f2de38
 // Checksum 0xc41a2fc8, Offset: 0x1a38
 // Size: 0xec
 function private function_c4f2de38(player, victim, inflictor) {
@@ -398,7 +380,6 @@ function private function_c4f2de38(player, victim, inflictor) {
 
 // Namespace achievements
 // Params 3, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_17ec453c
 // Checksum 0x3027eed4, Offset: 0x1b30
 // Size: 0xc4
 function function_17ec453c(eattacker, evictim, eweapon) {
@@ -416,7 +397,6 @@ function function_17ec453c(eattacker, evictim, eweapon) {
 
 // Namespace achievements
 // Params 2, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_99d6210d
 // Checksum 0x19cb686e, Offset: 0x1c00
 // Size: 0x7c
 function function_99d6210d(eplayer, evictim) {
@@ -427,7 +407,6 @@ function function_99d6210d(eplayer, evictim) {
 
 // Namespace achievements
 // Params 1, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_fbe029db
 // Checksum 0xfce6693e, Offset: 0x1c88
 // Size: 0x5c
 function function_fbe029db(eplayer) {
@@ -439,7 +418,6 @@ function function_fbe029db(eplayer) {
 
 // Namespace achievements
 // Params 1, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_de1a6d25
 // Checksum 0x38b1bd89, Offset: 0x1cf0
 // Size: 0x1ac
 function on_ai_killed(s_params) {
@@ -462,7 +440,6 @@ function on_ai_killed(s_params) {
 
 // Namespace achievements
 // Params 1, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_632712d7
 // Checksum 0x6a438277, Offset: 0x1ea8
 // Size: 0xc
 function function_632712d7(n_count) {
@@ -471,7 +448,6 @@ function function_632712d7(n_count) {
 
 // Namespace achievements
 // Params 1, eflags: 0x5 linked
-// namespace_4a344d81<file_0>::function_9dab90e7
 // Checksum 0xf271b138, Offset: 0x1ec0
 // Size: 0x60
 function private function_9dab90e7(player) {
@@ -484,7 +460,6 @@ function private function_9dab90e7(player) {
 
 // Namespace achievements
 // Params 0, eflags: 0x5 linked
-// namespace_4a344d81<file_0>::function_e587e1f2
 // Checksum 0x3d213abf, Offset: 0x1f28
 // Size: 0xac
 function private function_e587e1f2() {
@@ -500,7 +475,6 @@ function private function_e587e1f2() {
 
 // Namespace achievements
 // Params 1, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_17dc8de7
 // Checksum 0xdb95929f, Offset: 0x1fe0
 // Size: 0x34
 function function_17dc8de7(var_e9af7d73) {
@@ -511,7 +485,6 @@ function function_17dc8de7(var_e9af7d73) {
 
 // Namespace achievements
 // Params 0, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_b2d1aafa
 // Checksum 0x31223000, Offset: 0x2020
 // Size: 0xc0
 function function_b2d1aafa() {
@@ -527,7 +500,6 @@ function function_b2d1aafa() {
 
 // Namespace achievements
 // Params 1, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_386309ce
 // Checksum 0xce3ad276, Offset: 0x20e8
 // Size: 0x24
 function function_386309ce(player) {
@@ -536,7 +508,6 @@ function function_386309ce(player) {
 
 // Namespace achievements
 // Params 1, eflags: 0x1 linked
-// namespace_4a344d81<file_0>::function_6903d776
 // Checksum 0x536761ba, Offset: 0x2118
 // Size: 0x2e
 function function_6903d776(eai) {

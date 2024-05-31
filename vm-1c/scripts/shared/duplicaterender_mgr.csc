@@ -12,7 +12,6 @@
 
 // Namespace duplicate_render
 // Params 0, eflags: 0x2
-// namespace_1c38f9cf<file_0>::function_2dc19561
 // Checksum 0x497c2333, Offset: 0x4d0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace duplicate_render
 // Params 0, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_8c87d8eb
 // Checksum 0xc3c65de2, Offset: 0x510
 // Size: 0x53c
 function __init__() {
@@ -58,7 +56,6 @@ function __init__() {
 
 // Namespace duplicate_render
 // Params 1, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_aebcf025
 // Checksum 0xb8bc233, Offset: 0xa58
 // Size: 0x7c
 function on_player_spawned(local_client_num) {
@@ -72,7 +69,6 @@ function on_player_spawned(local_client_num) {
 
 // Namespace duplicate_render
 // Params 1, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_fb4f96b5
 // Checksum 0x496bab69, Offset: 0xae0
 // Size: 0x24
 function on_player_connect(localclientnum) {
@@ -81,7 +77,6 @@ function on_player_connect(localclientnum) {
 
 // Namespace duplicate_render
 // Params 1, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_a2b8a9df
 // Checksum 0xd432ca10, Offset: 0xb10
 // Size: 0x88
 function wait_team_changed(localclientnum) {
@@ -97,7 +92,6 @@ function wait_team_changed(localclientnum) {
 
 // Namespace duplicate_render
 // Params 14, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_6abbca39
 // Checksum 0xcb29d2c9, Offset: 0xba0
 // Size: 0x3b4
 function set_dr_filter(filterset, name, priority, require_flags, refuse_flags, drtype1, drval1, drcull1, drtype2, drval2, drcull2, drtype3, drval3, drcull3) {
@@ -153,7 +147,6 @@ function set_dr_filter(filterset, name, priority, require_flags, refuse_flags, d
 
 // Namespace duplicate_render
 // Params 13, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_787bc305
 // Checksum 0xdc5ca25a, Offset: 0xf60
 // Size: 0xbc
 function set_dr_filter_framebuffer(name, priority, require_flags, refuse_flags, drtype1, drval1, drcull1, drtype2, drval2, drcull2, drtype3, drval3, drcull3) {
@@ -162,7 +155,6 @@ function set_dr_filter_framebuffer(name, priority, require_flags, refuse_flags, 
 
 // Namespace duplicate_render
 // Params 13, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_1a41edb
 // Checksum 0x32073c41, Offset: 0x1028
 // Size: 0xbc
 function set_dr_filter_framebuffer_duplicate(name, priority, require_flags, refuse_flags, drtype1, drval1, drcull1, drtype2, drval2, drcull2, drtype3, drval3, drcull3) {
@@ -171,7 +163,6 @@ function set_dr_filter_framebuffer_duplicate(name, priority, require_flags, refu
 
 // Namespace duplicate_render
 // Params 13, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_c20cc247
 // Checksum 0xe6b67e0c, Offset: 0x10f0
 // Size: 0xbc
 function set_dr_filter_offscreen(name, priority, require_flags, refuse_flags, drtype1, drval1, drcull1, drtype2, drval2, drcull2, drtype3, drval3, drcull3) {
@@ -180,7 +171,6 @@ function set_dr_filter_offscreen(name, priority, require_flags, refuse_flags, dr
 
 // Namespace duplicate_render
 // Params 1, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_f5ac04c
 // Checksum 0xb54a7faa, Offset: 0x11b8
 // Size: 0x1a0
 function register_filter_materials(filter) {
@@ -212,7 +202,6 @@ function register_filter_materials(filter) {
 
 // Namespace duplicate_render
 // Params 3, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_697f7de0
 // Checksum 0x307a9179, Offset: 0x1360
 // Size: 0x64
 function update_dr_flag(localclientnum, toset, setto) {
@@ -226,7 +215,6 @@ function update_dr_flag(localclientnum, toset, setto) {
 
 // Namespace duplicate_render
 // Params 2, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_d174617d
 // Checksum 0x74cfeaef, Offset: 0x13d0
 // Size: 0xd0
 function set_dr_flag_not_array(toset, setto) {
@@ -249,7 +237,6 @@ function set_dr_flag_not_array(toset, setto) {
 
 // Namespace duplicate_render
 // Params 2, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_1e56fc11
 // Checksum 0x461ce453, Offset: 0x14a8
 // Size: 0x198
 function set_dr_flag(toset, setto) {
@@ -279,7 +266,6 @@ function set_dr_flag(toset, setto) {
 
 // Namespace duplicate_render
 // Params 1, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_4dc93362
 // Checksum 0x5daef493, Offset: 0x1648
 // Size: 0x24
 function clear_dr_flag(toclear) {
@@ -288,7 +274,6 @@ function clear_dr_flag(toclear) {
 
 // Namespace duplicate_render
 // Params 3, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_c4cc39ce
 // Checksum 0x60513159, Offset: 0x1678
 // Size: 0xf4
 function change_dr_flags(localclientnum, toset, toclear) {
@@ -309,7 +294,6 @@ function change_dr_flags(localclientnum, toset, toclear) {
 
 // Namespace duplicate_render
 // Params 1, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_ca519d34
 // Checksum 0x5d7ec2ff, Offset: 0x1778
 // Size: 0x122
 function _update_dr_filters(localclientnum) {
@@ -327,7 +311,6 @@ function _update_dr_filters(localclientnum) {
 
 // Namespace duplicate_render
 // Params 1, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_2c582173
 // Checksum 0x4ef65ea6, Offset: 0x18a8
 // Size: 0x24
 function update_dr_filters(localclientnum) {
@@ -336,7 +319,6 @@ function update_dr_filters(localclientnum) {
 
 // Namespace duplicate_render
 // Params 1, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_e126042e
 // Checksum 0x701ab3f1, Offset: 0x18d8
 // Size: 0xfc
 function find_dr_filter(filterset) {
@@ -356,7 +338,6 @@ function find_dr_filter(filterset) {
 
 // Namespace duplicate_render
 // Params 1, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_507c1196
 // Checksum 0x109f258c, Offset: 0x19e0
 // Size: 0xc8
 function can_use_filter(filter) {
@@ -375,7 +356,6 @@ function can_use_filter(filter) {
 
 // Namespace duplicate_render
 // Params 3, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_63edb3bc
 // Checksum 0x48752a49, Offset: 0x1ab0
 // Size: 0x364
 function apply_filter(localclientnum, filter, filterset) {
@@ -431,7 +411,6 @@ function apply_filter(localclientnum, filter, filterset) {
 
 // Namespace duplicate_render
 // Params 0, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_47125b07
 // Checksum 0xb86234df, Offset: 0x1e20
 // Size: 0x4c
 function disable_all_filters_on_game_ended() {
@@ -444,7 +423,6 @@ function disable_all_filters_on_game_ended() {
 
 // Namespace duplicate_render
 // Params 2, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_93580e49
 // Checksum 0xb4bf1258, Offset: 0x1e78
 // Size: 0x3c
 function set_item_retrievable(localclientnum, on_off) {
@@ -453,7 +431,6 @@ function set_item_retrievable(localclientnum, on_off) {
 
 // Namespace duplicate_render
 // Params 2, eflags: 0x0
-// namespace_1c38f9cf<file_0>::function_3caa584c
 // Checksum 0xfc573133, Offset: 0x1ec0
 // Size: 0x3c
 function set_item_unplaceable(localclientnum, on_off) {
@@ -462,7 +439,6 @@ function set_item_unplaceable(localclientnum, on_off) {
 
 // Namespace duplicate_render
 // Params 2, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_a75081b3
 // Checksum 0x69fdc590, Offset: 0x1f08
 // Size: 0x3c
 function set_item_enemy_equipment(localclientnum, on_off) {
@@ -471,7 +447,6 @@ function set_item_enemy_equipment(localclientnum, on_off) {
 
 // Namespace duplicate_render
 // Params 2, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_c9cf8686
 // Checksum 0x184c4ac5, Offset: 0x1f50
 // Size: 0x3c
 function set_item_friendly_equipment(localclientnum, on_off) {
@@ -480,7 +455,6 @@ function set_item_friendly_equipment(localclientnum, on_off) {
 
 // Namespace duplicate_render
 // Params 2, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_5ceb14b2
 // Checksum 0x30626352, Offset: 0x1f98
 // Size: 0x3c
 function function_5ceb14b2(localclientnum, on_off) {
@@ -489,7 +463,6 @@ function function_5ceb14b2(localclientnum, on_off) {
 
 // Namespace duplicate_render
 // Params 2, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_4e2867e3
 // Checksum 0xd1e11e6, Offset: 0x1fe0
 // Size: 0x3c
 function function_4e2867e3(localclientnum, on_off) {
@@ -498,7 +471,6 @@ function function_4e2867e3(localclientnum, on_off) {
 
 // Namespace duplicate_render
 // Params 2, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_a28d1a5f
 // Checksum 0xfef61605, Offset: 0x2028
 // Size: 0x3c
 function function_a28d1a5f(localclientnum, on_off) {
@@ -507,7 +479,6 @@ function function_a28d1a5f(localclientnum, on_off) {
 
 // Namespace duplicate_render
 // Params 2, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_48e05b4a
 // Checksum 0xc5c62de3, Offset: 0x2070
 // Size: 0x3c
 function function_48e05b4a(localclientnum, on_off) {
@@ -516,7 +487,6 @@ function function_48e05b4a(localclientnum, on_off) {
 
 // Namespace duplicate_render
 // Params 2, eflags: 0x0
-// namespace_1c38f9cf<file_0>::function_6b2297d7
 // Checksum 0xa733342a, Offset: 0x20b8
 // Size: 0x3c
 function set_entity_thermal(localclientnum, on_off) {
@@ -525,7 +495,6 @@ function set_entity_thermal(localclientnum, on_off) {
 
 // Namespace duplicate_render
 // Params 2, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_7d625cf9
 // Checksum 0x82d480d6, Offset: 0x2100
 // Size: 0x3c
 function set_player_threat_detected(localclientnum, on_off) {
@@ -534,7 +503,6 @@ function set_player_threat_detected(localclientnum, on_off) {
 
 // Namespace duplicate_render
 // Params 2, eflags: 0x0
-// namespace_1c38f9cf<file_0>::function_546b635c
 // Checksum 0x66d5f1e4, Offset: 0x2148
 // Size: 0x3c
 function set_hacker_tool_hacked(localclientnum, on_off) {
@@ -543,7 +511,6 @@ function set_hacker_tool_hacked(localclientnum, on_off) {
 
 // Namespace duplicate_render
 // Params 2, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_9f467d49
 // Checksum 0x705f2d36, Offset: 0x2190
 // Size: 0x3c
 function set_hacker_tool_hacking(localclientnum, on_off) {
@@ -552,7 +519,6 @@ function set_hacker_tool_hacking(localclientnum, on_off) {
 
 // Namespace duplicate_render
 // Params 2, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_c3fbd5
 // Checksum 0x95fa120d, Offset: 0x21d8
 // Size: 0xd4
 function set_hacker_tool_breaching(localclientnum, on_off) {
@@ -569,7 +535,6 @@ function set_hacker_tool_breaching(localclientnum, on_off) {
 
 // Namespace duplicate_render
 // Params 1, eflags: 0x1 linked
-// namespace_1c38f9cf<file_0>::function_9087aac2
 // Checksum 0x25d22344, Offset: 0x22b8
 // Size: 0x46
 function show_friendly_outlines(local_client_num) {

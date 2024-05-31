@@ -14,7 +14,6 @@
 
 // Namespace zm_bgb_bullet_boost
 // Params 0, eflags: 0x2
-// namespace_59f1b581<file_0>::function_2dc19561
 // Checksum 0xb4d0182e, Offset: 0x220
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -23,7 +22,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_bullet_boost
 // Params 0, eflags: 0x1 linked
-// namespace_59f1b581<file_0>::function_8c87d8eb
 // Checksum 0x1bb414a6, Offset: 0x260
 // Size: 0x7c
 function __init__() {
@@ -36,7 +34,6 @@ function __init__() {
 
 // Namespace zm_bgb_bullet_boost
 // Params 0, eflags: 0x1 linked
-// namespace_59f1b581<file_0>::function_e4776d0
 // Checksum 0x2c0f609c, Offset: 0x2e8
 // Size: 0x130
 function validation() {
@@ -59,7 +56,6 @@ function validation() {
 
 // Namespace zm_bgb_bullet_boost
 // Params 0, eflags: 0x1 linked
-// namespace_59f1b581<file_0>::function_7afbf7cd
 // Checksum 0x3fd0e64c, Offset: 0x420
 // Size: 0x16c
 function activation() {

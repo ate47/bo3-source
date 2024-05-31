@@ -12,7 +12,6 @@
 
 // Namespace zm_powerup_zombie_blood
 // Params 0, eflags: 0x2
-// namespace_43a18dd5<file_0>::function_2dc19561
 // Checksum 0xa6f82aca, Offset: 0x398
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,7 +20,6 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_zombie_blood
 // Params 0, eflags: 0x1 linked
-// namespace_43a18dd5<file_0>::function_8c87d8eb
 // Checksum 0x2d0a0913, Offset: 0x3d8
 // Size: 0x2cc
 function __init__() {
@@ -54,7 +52,6 @@ function __init__() {
 
 // Namespace zm_powerup_zombie_blood
 // Params 0, eflags: 0x1 linked
-// namespace_43a18dd5<file_0>::function_93a1348
 // Checksum 0x14b80caf, Offset: 0x6b0
 // Size: 0x32
 function init_player_zombie_blood_vars() {
@@ -64,7 +61,6 @@ function init_player_zombie_blood_vars() {
 
 // Namespace zm_powerup_zombie_blood
 // Params 1, eflags: 0x1 linked
-// namespace_43a18dd5<file_0>::function_73234659
 // Checksum 0xd36bba9f, Offset: 0x6f0
 // Size: 0x24
 function grab_zombie_blood(player) {
@@ -73,7 +69,6 @@ function grab_zombie_blood(player) {
 
 // Namespace zm_powerup_zombie_blood
 // Params 2, eflags: 0x1 linked
-// namespace_43a18dd5<file_0>::function_66dc807b
 // Checksum 0xf9671ea9, Offset: 0x720
 // Size: 0x6ba
 function zombie_blood_powerup(mdl_powerup, e_player) {
@@ -145,7 +140,6 @@ function zombie_blood_powerup(mdl_powerup, e_player) {
 
 // Namespace zm_powerup_zombie_blood
 // Params 1, eflags: 0x1 linked
-// namespace_43a18dd5<file_0>::function_9d038674
 // Checksum 0xfd05d0bf, Offset: 0xde8
 // Size: 0x3c
 function function_9d038674(e_player) {
@@ -156,7 +150,6 @@ function function_9d038674(e_player) {
 
 // Namespace zm_powerup_zombie_blood
 // Params 0, eflags: 0x1 linked
-// namespace_43a18dd5<file_0>::function_49cf85e9
 // Checksum 0x1f6115d5, Offset: 0xe30
 // Size: 0x84
 function watch_zombie_blood_early_exit() {
@@ -171,7 +164,6 @@ function watch_zombie_blood_early_exit() {
 
 // Namespace zm_powerup_zombie_blood
 // Params 0, eflags: 0x1 linked
-// namespace_43a18dd5<file_0>::function_b14b6e1d
 // Checksum 0x407f8505, Offset: 0xec0
 // Size: 0x192
 function make_zombie_blood_entity() {

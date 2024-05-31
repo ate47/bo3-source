@@ -9,7 +9,6 @@
 
 // Namespace mp_sector
 // Params 0, eflags: 0x1 linked
-// namespace_e8767eb<file_0>::function_d290ebfa
 // Checksum 0x48d2dfe5, Offset: 0x260
 // Size: 0x2ac
 function main() {
@@ -37,7 +36,6 @@ function main() {
 
 // Namespace mp_sector
 // Params 2, eflags: 0x1 linked
-// namespace_e8767eb<file_0>::function_b6d6bffc
 // Checksum 0x278af17b, Offset: 0x518
 // Size: 0x9e
 function dom_flag_base_fx_override(flag, team) {
@@ -63,7 +61,6 @@ function dom_flag_base_fx_override(flag, team) {
 
 // Namespace mp_sector
 // Params 2, eflags: 0x1 linked
-// namespace_e8767eb<file_0>::function_628641cd
 // Checksum 0x1dbb70c9, Offset: 0x5c0
 // Size: 0x9e
 function dom_flag_cap_fx_override(flag, team) {
