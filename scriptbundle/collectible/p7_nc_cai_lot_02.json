@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_cai_lot_02",
+    "type": "collectible",
+    "igdtseqnum": 22,
+    "uiMaterial": "t7_icon_menu_p7_nc_cai_lot_02",
+    "uiModel": "p7_nc_cai_lot_02",
+    "description": "COLLECTIBLE_P7_NC_CAI_LOT_02_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_CAI_LOT_02_LONG",
+    "audiolog_sound": "vox_safe_hanging_lantern_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_DECO_LANTERN",
+    "displayNameShort": "COLLECTIBLE_P7_NC_CAI_LOT_02_SHORT",
+    "codexurl": "Collectables-DecorativeHangingLantern.htm",
+    "slotSize": 1
+}

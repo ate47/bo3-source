@@ -35,6 +35,7 @@
 
 // Namespace ball
 // Params 0, eflags: 0x2
+// namespace_e2ea4bd6<file_0>::function_2dc19561
 // Checksum 0x59390af2, Offset: 0xdf0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -43,6 +44,7 @@ function autoexec function_2dc19561() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_8c87d8eb
 // Checksum 0x313e53d9, Offset: 0xe30
 // Size: 0xf4
 function __init__() {
@@ -55,6 +57,7 @@ function __init__() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_d290ebfa
 // Checksum 0xb5bb28f0, Offset: 0xf30
 // Size: 0x51c
 function main() {
@@ -110,6 +113,7 @@ function main() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_90f0668f
 // Checksum 0x4f9896f7, Offset: 0x1458
 // Size: 0x22
 function onprecachegametype() {
@@ -118,6 +122,7 @@ function onprecachegametype() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_34685338
 // Checksum 0xeab60ef9, Offset: 0x1488
 // Size: 0x76c
 function onstartgametype() {
@@ -202,6 +207,7 @@ function onstartgametype() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_481ef46f
 // Checksum 0xe9bb7b1a, Offset: 0x1c00
 // Size: 0xc2
 function function_481ef46f() {
@@ -219,6 +225,7 @@ function function_481ef46f() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_4dbb4a6a
 // Checksum 0x453fcb10, Offset: 0x1cd0
 // Size: 0x8a
 function function_4dbb4a6a() {
@@ -239,6 +246,7 @@ function function_4dbb4a6a() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_6dd12da4
 // Checksum 0xf1ba8231, Offset: 0x1d68
 // Size: 0x9c
 function function_6dd12da4() {
@@ -254,6 +262,7 @@ function function_6dd12da4() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_83143ec0
 // Checksum 0xfb2e7ca2, Offset: 0x1e10
 // Size: 0x5c
 function function_83143ec0() {
@@ -266,6 +275,7 @@ function function_83143ec0() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_25dd17ea
 // Checksum 0x3aea020b, Offset: 0x1e78
 // Size: 0x24
 function function_25dd17ea() {
@@ -275,6 +285,7 @@ function function_25dd17ea() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_e1d7d235
 // Checksum 0x99ec1590, Offset: 0x1ea8
 // Size: 0x4
 function function_e1d7d235() {
@@ -283,6 +294,7 @@ function function_e1d7d235() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_972a6af9
 // Checksum 0xf60ca9e7, Offset: 0x1eb8
 // Size: 0x1d4
 function function_972a6af9() {
@@ -315,6 +327,7 @@ function function_972a6af9() {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_19bc9234
 // Checksum 0xafacd58d, Offset: 0x2098
 // Size: 0x74
 function onspawnplayer(predictedspawn) {
@@ -327,6 +340,7 @@ function onspawnplayer(predictedspawn) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_67cb1206
 // Checksum 0x42eee9ad, Offset: 0x2118
 // Size: 0x1a8
 function function_67cb1206() {
@@ -357,6 +371,7 @@ function function_67cb1206() {
 
 // Namespace ball
 // Params 9, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_c2658b46
 // Checksum 0xc619453, Offset: 0x22c8
 // Size: 0x5f2
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -416,6 +431,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_e4e885e6
 // Checksum 0x4a11970d, Offset: 0x28c8
 // Size: 0x4c
 function onroundswitch() {
@@ -428,6 +444,7 @@ function onroundswitch() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_66508d39
 // Checksum 0x1e0affc1, Offset: 0x2920
 // Size: 0x9a
 function onroundscorelimit() {
@@ -443,6 +460,7 @@ function onroundscorelimit() {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_257d1c47
 // Checksum 0x39dec839, Offset: 0x29c8
 // Size: 0xf8
 function onendgame(winningteam) {
@@ -464,6 +482,7 @@ function onendgame(winningteam) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_828c341b
 // Checksum 0xc68a2abd, Offset: 0x2ac8
 // Size: 0xa2
 function updateteamscorebyroundswon() {
@@ -476,6 +495,7 @@ function updateteamscorebyroundswon() {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_3fcd5617
 // Checksum 0x27b6687b, Offset: 0x2b78
 // Size: 0x33c
 function onroundendgame(winningteam) {
@@ -531,6 +551,7 @@ function onroundendgame(winningteam) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_d6911678
 // Checksum 0xabc3d2a0, Offset: 0x2ec0
 // Size: 0x24
 function function_d6911678() {
@@ -539,6 +560,7 @@ function function_d6911678() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_f4cce2d9
 // Checksum 0x62044837, Offset: 0x2ef0
 // Size: 0x17c
 function shouldplayovertimeround() {
@@ -567,6 +589,7 @@ function shouldplayovertimeround() {
 
 // Namespace ball
 // Params 4, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_54dd76af
 // Checksum 0x2b6946be, Offset: 0x3078
 // Size: 0x7e
 function function_54dd76af(einflictor, attacker, smeansofdeath, weapon) {
@@ -579,6 +602,7 @@ function function_54dd76af(einflictor, attacker, smeansofdeath, weapon) {
 
 // Namespace ball
 // Params 4, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_eb6c9496
 // Checksum 0xf82f3834, Offset: 0x3100
 // Size: 0x8a
 function function_eb6c9496(einflictor, attacker, smeansofdeath, weapon) {
@@ -591,6 +615,7 @@ function function_eb6c9496(einflictor, attacker, smeansofdeath, weapon) {
 
 // Namespace ball
 // Params 6, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_6be95ac8
 // Checksum 0xca56900f, Offset: 0x3198
 // Size: 0x154
 function function_6be95ac8(startpos, startangles, index, count, defaultdistance, rotation) {
@@ -605,6 +630,7 @@ function function_6be95ac8(startpos, startangles, index, count, defaultdistance,
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_4826d8bb
 // Checksum 0xe17e5c79, Offset: 0x32f8
 // Size: 0x348
 function setup_objectives() {
@@ -638,6 +664,7 @@ function setup_objectives() {
 
 // Namespace ball
 // Params 2, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_b22de10a
 // Checksum 0x6a75c76a, Offset: 0x3648
 // Size: 0x224
 function function_b22de10a(trigger, team) {
@@ -659,6 +686,7 @@ function function_b22de10a(trigger, team) {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_ce3bd9c9
 // Checksum 0xbaa9b3f3, Offset: 0x3878
 // Size: 0x14
 function function_ce3bd9c9(player) {
@@ -667,6 +695,7 @@ function function_ce3bd9c9(player) {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_3d1ee3cc
 // Checksum 0xe5418b89, Offset: 0x3898
 // Size: 0x3fc
 function function_3d1ee3cc(player) {
@@ -713,6 +742,7 @@ function function_3d1ee3cc(player) {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_dbf94d16
 // Checksum 0x391d964d, Offset: 0x3ca0
 // Size: 0x378
 function function_dbf94d16(trigger) {
@@ -758,6 +788,7 @@ function function_dbf94d16(trigger) {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_b861e1df
 // Checksum 0xa881ec7a, Offset: 0x4020
 // Size: 0x3de
 function function_b861e1df(player) {
@@ -824,6 +855,7 @@ function function_b861e1df(player) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_9e348528
 // Checksum 0x5ffc5b0a, Offset: 0x4408
 // Size: 0x1a8
 function function_9e348528() {
@@ -852,6 +884,7 @@ function function_9e348528() {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_6ce143ff
 // Checksum 0xfed7917, Offset: 0x45b8
 // Size: 0x514
 function function_6ce143ff(player) {
@@ -917,6 +950,7 @@ function function_6ce143ff(player) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_e2e5a322
 // Checksum 0x42005cde, Offset: 0x4ad8
 // Size: 0x150
 function ball_carrier_cleanup() {
@@ -940,6 +974,7 @@ function ball_carrier_cleanup() {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_fbba6308
 // Checksum 0x9b860a47, Offset: 0x4c30
 // Size: 0x250
 function ball_set_dropped(skip_physics) {
@@ -981,6 +1016,7 @@ function ball_set_dropped(skip_physics) {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_df2611a2
 // Checksum 0xda30032, Offset: 0x4e88
 // Size: 0x16c
 function function_df2611a2(prev_origin) {
@@ -1008,6 +1044,7 @@ function function_df2611a2(prev_origin) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_98827162
 // Checksum 0x860b615, Offset: 0x5000
 // Size: 0x1c
 function function_98827162() {
@@ -1016,6 +1053,7 @@ function function_98827162() {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_db6a152e
 // Checksum 0xd26f3717, Offset: 0x5028
 // Size: 0x24c
 function function_db6a152e(goal) {
@@ -1048,6 +1086,7 @@ function function_db6a152e(goal) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_7cd85c83
 // Checksum 0x39fccac0, Offset: 0x5280
 // Size: 0x228
 function function_7cd85c83() {
@@ -1075,6 +1114,7 @@ function function_7cd85c83() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_804453f1
 // Checksum 0xaedbf88f, Offset: 0x54b0
 // Size: 0x54
 function function_804453f1() {
@@ -1086,6 +1126,7 @@ function function_804453f1() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_c98c4522
 // Checksum 0x80849ebe, Offset: 0x5510
 // Size: 0x254
 function ball_pass_watch() {
@@ -1125,6 +1166,7 @@ function ball_pass_watch() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_362cde1a
 // Checksum 0x851718c5, Offset: 0x5770
 // Size: 0x1e4
 function ball_shoot_watch() {
@@ -1155,6 +1197,7 @@ function ball_shoot_watch() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_cf6f6960
 // Checksum 0xc63c2ca6, Offset: 0x5960
 // Size: 0x1d4
 function ball_weapon_change_watch() {
@@ -1187,6 +1230,7 @@ function ball_weapon_change_watch() {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_c9a46809
 // Checksum 0xbb5e9b2, Offset: 0x5b40
 // Size: 0x66
 function valid_ball_pickup_weapon(weapon) {
@@ -1204,6 +1248,7 @@ function valid_ball_pickup_weapon(weapon) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_ac607c15
 // Checksum 0xc91d27ae, Offset: 0x5bb0
 // Size: 0x1a
 function player_no_pickup_time() {
@@ -1212,6 +1257,7 @@ function player_no_pickup_time() {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_40dff2cd
 // Checksum 0xb206613, Offset: 0x5bd8
 // Size: 0x10c
 function function_40dff2cd(trigger) {
@@ -1233,6 +1279,7 @@ function function_40dff2cd(trigger) {
 
 // Namespace ball
 // Params 3, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_8d8cbc12
 // Checksum 0xc839a79a, Offset: 0x5cf0
 // Size: 0x7c
 function ball_physics_launch_drop(force, droppingplayer, switchweapon) {
@@ -1245,6 +1292,7 @@ function ball_physics_launch_drop(force, droppingplayer, switchweapon) {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_5804eccb
 // Checksum 0x6cbbbb7d, Offset: 0x5d78
 // Size: 0x1a4
 function ball_check_pass_kill_pickup(carryobj) {
@@ -1273,6 +1321,7 @@ function ball_check_pass_kill_pickup(carryobj) {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_b2b2436a
 // Checksum 0x62f7ff82, Offset: 0x5f28
 // Size: 0x2a
 function timer_run(time) {
@@ -1283,6 +1332,7 @@ function timer_run(time) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_194e73cd
 // Checksum 0xc6369a75, Offset: 0x5f60
 // Size: 0x12
 function timer_cancel() {
@@ -1291,6 +1341,7 @@ function timer_cancel() {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_a518a69f
 // Checksum 0x3969ab1, Offset: 0x5f80
 // Size: 0xfc
 function adjust_for_stance(ball) {
@@ -1317,6 +1368,7 @@ function adjust_for_stance(ball) {
 
 // Namespace ball
 // Params 3, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_db6c3fc
 // Checksum 0x513675c6, Offset: 0x6088
 // Size: 0x454
 function ball_pass_projectile(var_c7e075bf, target, var_bd2ced7c) {
@@ -1360,6 +1412,7 @@ function ball_pass_projectile(var_c7e075bf, target, var_bd2ced7c) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_9b83a53
 // Checksum 0x29df13e8, Offset: 0x64e8
 // Size: 0xc4
 function ball_on_projectile_death() {
@@ -1376,6 +1429,7 @@ function ball_on_projectile_death() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_59d8acc6
 // Checksum 0xd0f27e4, Offset: 0x65b8
 // Size: 0x6a
 function ball_restore_contents() {
@@ -1387,6 +1441,7 @@ function ball_restore_contents() {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_8917ae7c
 // Checksum 0x2a7d6c3e, Offset: 0x6630
 // Size: 0x84
 function ball_on_projectile_hit_client(var_c7e075bf) {
@@ -1401,6 +1456,7 @@ function ball_on_projectile_hit_client(var_c7e075bf) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_96ef1d49
 // Checksum 0x9a14f112, Offset: 0x66c0
 // Size: 0x38
 function ball_clear_contents() {
@@ -1409,6 +1465,7 @@ function ball_clear_contents() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_23a3044f
 // Checksum 0x8e4da7c0, Offset: 0x6700
 // Size: 0x9c
 function ball_create_killcam_ent() {
@@ -1422,6 +1479,7 @@ function ball_create_killcam_ent() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_43affa10
 // Checksum 0x91fcbd90, Offset: 0x67a8
 // Size: 0x98
 function ball_pass_or_throw_active() {
@@ -1438,6 +1496,7 @@ function ball_pass_or_throw_active() {
 
 // Namespace ball
 // Params 2, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_e55a05fe
 // Checksum 0x7765c9c6, Offset: 0x6848
 // Size: 0x20
 function ball_download_fx(var_7ee2b1c, waittime) {
@@ -1446,6 +1505,7 @@ function ball_download_fx(var_7ee2b1c, waittime) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_2635f289
 // Checksum 0x9805e33a, Offset: 0x6870
 // Size: 0xec
 function function_2635f289() {
@@ -1466,6 +1526,7 @@ function function_2635f289() {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_548032e3
 // Checksum 0xfcffe9c2, Offset: 0x6968
 // Size: 0xd4
 function ball_assign_start(start) {
@@ -1479,6 +1540,7 @@ function ball_assign_start(start) {
 
 // Namespace ball
 // Params 2, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_428f3a6e
 // Checksum 0x15335c42, Offset: 0x6a48
 // Size: 0x32c
 function ball_physics_launch(force, droppingplayer) {
@@ -1516,6 +1578,7 @@ function ball_physics_launch(force, droppingplayer) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_96acd1aa
 // Checksum 0x2f4a12a9, Offset: 0x6d80
 // Size: 0x11c
 function function_96acd1aa() {
@@ -1536,6 +1599,7 @@ function function_96acd1aa() {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_506fb9c
 // Checksum 0x68f19b88, Offset: 0x6ea8
 // Size: 0xf4
 function ball_physics_touch_cant_pickup_player(droppingplayer) {
@@ -1559,6 +1623,7 @@ function ball_physics_touch_cant_pickup_player(droppingplayer) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_5ad5e92f
 // Checksum 0xfafbcf8a, Offset: 0x6fa8
 // Size: 0x92
 function ball_physics_fake_bounce() {
@@ -1570,6 +1635,7 @@ function ball_physics_fake_bounce() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_859e9fab
 // Checksum 0xef61c6a5, Offset: 0x7048
 // Size: 0x1a4
 function function_859e9fab() {
@@ -1600,6 +1666,7 @@ function function_859e9fab() {
 
 // Namespace ball
 // Params 4, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_12bbc0ef
 // Checksum 0x5d076eb5, Offset: 0x71f8
 // Size: 0xe4
 function function_12bbc0ef(line_start, line_end, var_494a9d56, sphere_radius) {
@@ -1614,6 +1681,7 @@ function function_12bbc0ef(line_start, line_end, var_494a9d56, sphere_radius) {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_7d7a0c29
 // Checksum 0x9c7fa449, Offset: 0x72e8
 // Size: 0x3b4
 function ball_touched_goal(goal) {
@@ -1660,6 +1728,7 @@ function ball_touched_goal(goal) {
 
 // Namespace ball
 // Params 2, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_f5c8a765
 // Checksum 0x594041c8, Offset: 0x76a8
 // Size: 0xec
 function ball_give_score(team, score) {
@@ -1678,6 +1747,7 @@ function ball_give_score(team, score) {
 
 // Namespace ball
 // Params 2, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_234a3172
 // Checksum 0xe50000c7, Offset: 0x77a0
 // Size: 0x74
 function should_record_final_score_cam(team, var_6db4572f) {
@@ -1688,6 +1758,7 @@ function should_record_final_score_cam(team, var_6db4572f) {
 
 // Namespace ball
 // Params 2, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_bb33aec7
 // Checksum 0x428f0afa, Offset: 0x7820
 // Size: 0x84
 function ball_check_assist(player, var_84a3cadc) {
@@ -1702,6 +1773,7 @@ function ball_check_assist(player, var_84a3cadc) {
 
 // Namespace ball
 // Params 2, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_6746e980
 // Checksum 0x81a5299a, Offset: 0x78b0
 // Size: 0x88
 function function_6746e980(projectile, timeout) {
@@ -1714,6 +1786,7 @@ function function_6746e980(projectile, timeout) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_2e8a57e4
 // Checksum 0x9a8517c7, Offset: 0x7940
 // Size: 0x124
 function ball_physics_timeout() {
@@ -1743,6 +1816,7 @@ function ball_physics_timeout() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_f293321c
 // Checksum 0xc5f7222f, Offset: 0x7a70
 // Size: 0x54
 function ball_physics_out_of_level() {
@@ -1755,6 +1829,7 @@ function ball_physics_out_of_level() {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_50686656
 // Checksum 0x4306d814, Offset: 0x7ad0
 // Size: 0x3a8
 function player_update_pass_target(var_afffeadd) {
@@ -1810,6 +1885,7 @@ function player_update_pass_target(var_afffeadd) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_6dc166ee
 // Checksum 0x99b405f9, Offset: 0x7e80
 // Size: 0xba
 function function_6dc166ee() {
@@ -1821,6 +1897,7 @@ function function_6dc166ee() {
 
 // Namespace ball
 // Params 2, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_a791758e
 // Checksum 0x2b0ecf81, Offset: 0x7f48
 // Size: 0x30
 function compare_player_pass_dot(left, right) {
@@ -1829,6 +1906,7 @@ function compare_player_pass_dot(left, right) {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_4a53e53f
 // Checksum 0xc5bd22ec, Offset: 0x7f80
 // Size: 0x19c
 function player_set_pass_target(new_target) {
@@ -1855,6 +1933,7 @@ function player_set_pass_target(new_target) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_f81451e4
 // Checksum 0x90c69813, Offset: 0x8128
 // Size: 0x134
 function player_clear_pass_target() {
@@ -1876,6 +1955,7 @@ function player_clear_pass_target() {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_5fa54274
 // Checksum 0xc5dc5edb, Offset: 0x8268
 // Size: 0x22e
 function function_5fa54274(var_c713c3d7) {
@@ -1906,6 +1986,7 @@ function function_5fa54274(var_c713c3d7) {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_d6b63e51
 // Checksum 0xe82efc29, Offset: 0x84a0
 // Size: 0xba
 function function_d6b63e51(origin) {
@@ -1920,6 +2001,7 @@ function function_d6b63e51(origin) {
 
 // Namespace ball
 // Params 1, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_22c4dbca
 // Checksum 0x5637d785, Offset: 0x8568
 // Size: 0xba
 function function_22c4dbca(z_offset) {
@@ -1932,6 +2014,7 @@ function function_22c4dbca(z_offset) {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_85e74fc9
 // Checksum 0x5747626b, Offset: 0x8630
 // Size: 0x54
 function function_85e74fc9() {
@@ -1941,6 +2024,7 @@ function function_85e74fc9() {
 
 // Namespace ball
 // Params 0, eflags: 0x0
+// namespace_e2ea4bd6<file_0>::function_b2a406b0
 // Checksum 0x4543a745, Offset: 0x8690
 // Size: 0x1e6
 function function_b2a406b0() {

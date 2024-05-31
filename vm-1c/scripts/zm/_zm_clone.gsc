@@ -8,6 +8,7 @@
 
 // Namespace zm_clone
 // Params 4, eflags: 0x1 linked
+// namespace_3e501f30<file_0>::function_f7337c08
 // Checksum 0x46c1b98d, Offset: 0x1a8
 // Size: 0x2f4
 function spawn_player_clone(player, origin, forceweapon, forcemodel) {
@@ -53,6 +54,7 @@ function spawn_player_clone(player, origin, forceweapon, forcemodel) {
 
 // Namespace zm_clone
 // Params 11, eflags: 0x1 linked
+// namespace_3e501f30<file_0>::function_84214261
 // Checksum 0x2b27c8a2, Offset: 0x4a8
 // Size: 0xa2
 function clone_damage_func(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex) {
@@ -65,6 +67,7 @@ function clone_damage_func(einflictor, eattacker, idamage, idflags, smeansofdeat
 
 // Namespace zm_clone
 // Params 1, eflags: 0x0
+// namespace_3e501f30<file_0>::function_79debaa3
 // Checksum 0x81e12050, Offset: 0x558
 // Size: 0x6c
 function clone_give_weapon(weapon) {
@@ -76,6 +79,7 @@ function clone_give_weapon(weapon) {
 
 // Namespace zm_clone
 // Params 1, eflags: 0x1 linked
+// namespace_3e501f30<file_0>::function_7596fc4
 // Checksum 0x4348116f, Offset: 0x5d0
 // Size: 0x4c
 function clone_animate(animtype) {
@@ -88,6 +92,7 @@ function clone_animate(animtype) {
 
 // Namespace zm_clone
 // Params 1, eflags: 0x1 linked
+// namespace_3e501f30<file_0>::function_38519482
 // Checksum 0x47fbb9dc, Offset: 0x628
 // Size: 0x7e
 function clone_actor_animate(animtype) {
@@ -105,6 +110,7 @@ function clone_actor_animate(animtype) {
 
 // Namespace zm_clone
 // Params 1, eflags: 0x1 linked
+// namespace_3e501f30<file_0>::function_ef5752aa
 // Checksum 0x853f6af0, Offset: 0x6b0
 // Size: 0x12e
 function clone_mover_animate(animtype) {

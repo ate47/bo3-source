@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_zur_coa_01",
+    "type": "collectible",
+    "igdtseqnum": 82,
+    "uiMaterial": "t7_icon_menu_p7_nc_zur_coa_01",
+    "uiModelWithStand": "p7_nc_zur_coa_01_with_stand",
+    "uiModel": "p7_nc_zur_coa_01",
+    "description": "COLLECTIBLE_P7_NC_ZUR_COA_01_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_ZUR_COA_01_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_RAVEN_FEATHER",
+    "displayNameShort": "COLLECTIBLE_P7_NC_ZUR_COA_01_SHORT",
+    "codexurl": "Collectables-RavenFeather.htm",
+    "slotSize": 0
+}

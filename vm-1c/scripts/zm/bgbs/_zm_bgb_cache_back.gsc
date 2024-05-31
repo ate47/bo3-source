@@ -9,6 +9,7 @@
 
 // Namespace zm_bgb_cache_back
 // Params 0, eflags: 0x2
+// namespace_767b8a45<file_0>::function_2dc19561
 // Checksum 0x11785c9e, Offset: 0x158
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_cache_back
 // Params 0, eflags: 0x1 linked
+// namespace_767b8a45<file_0>::function_8c87d8eb
 // Checksum 0xdb0ead9, Offset: 0x198
 // Size: 0x54
 function __init__() {
@@ -28,6 +30,7 @@ function __init__() {
 
 // Namespace zm_bgb_cache_back
 // Params 0, eflags: 0x1 linked
+// namespace_767b8a45<file_0>::function_7afbf7cd
 // Checksum 0x268560c4, Offset: 0x1f8
 // Size: 0x24
 function activation() {

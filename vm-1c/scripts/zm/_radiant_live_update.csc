@@ -7,6 +7,7 @@
 
     // Namespace radiant_live_udpate
     // Params 0, eflags: 0x2
+    // namespace_32d9575d<file_0>::function_2dc19561
     // Checksum 0x95b1ff47, Offset: 0xb8
     // Size: 0x34
     function autoexec function_2dc19561() {
@@ -15,6 +16,7 @@
 
     // Namespace radiant_live_udpate
     // Params 0, eflags: 0x1 linked
+    // namespace_32d9575d<file_0>::function_8c87d8eb
     // Checksum 0x689e53d2, Offset: 0xf8
     // Size: 0x1c
     function __init__() {
@@ -23,6 +25,7 @@
 
     // Namespace radiant_live_udpate
     // Params 0, eflags: 0x1 linked
+    // namespace_32d9575d<file_0>::function_a864be3e
     // Checksum 0x536ea647, Offset: 0x120
     // Size: 0x62
     function scriptstruct_debug_render() {
@@ -38,6 +41,7 @@
 
     // Namespace radiant_live_udpate
     // Params 1, eflags: 0x1 linked
+    // namespace_32d9575d<file_0>::function_27d8985f
     // Checksum 0x595b7e89, Offset: 0x190
     // Size: 0x80
     function render_struct(selected_struct) {

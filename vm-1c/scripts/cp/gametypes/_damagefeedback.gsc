@@ -6,6 +6,7 @@
 
 // Namespace damagefeedback
 // Params 0, eflags: 0x2
+// namespace_fc79db9f<file_0>::function_2dc19561
 // Checksum 0x33bed38c, Offset: 0x218
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -14,6 +15,7 @@ function autoexec function_2dc19561() {
 
 // Namespace damagefeedback
 // Params 0, eflags: 0x0
+// namespace_fc79db9f<file_0>::function_8c87d8eb
 // Checksum 0x84de7fec, Offset: 0x258
 // Size: 0x44
 function __init__() {
@@ -23,6 +25,7 @@ function __init__() {
 
 // Namespace damagefeedback
 // Params 0, eflags: 0x0
+// namespace_fc79db9f<file_0>::function_c35e6aab
 // Checksum 0x99ec1590, Offset: 0x2a8
 // Size: 0x4
 function init() {
@@ -31,6 +34,7 @@ function init() {
 
 // Namespace damagefeedback
 // Params 0, eflags: 0x0
+// namespace_fc79db9f<file_0>::function_fb4f96b5
 // Checksum 0xe54991a1, Offset: 0x2b8
 // Size: 0xd8
 function on_player_connect() {
@@ -47,6 +51,7 @@ function on_player_connect() {
 
 // Namespace damagefeedback
 // Params 1, eflags: 0x0
+// namespace_fc79db9f<file_0>::function_660af82d
 // Checksum 0xb9b79e31, Offset: 0x398
 // Size: 0x66
 function should_play_sound(mod) {
@@ -67,6 +72,7 @@ function should_play_sound(mod) {
 
 // Namespace damagefeedback
 // Params 3, eflags: 0x0
+// namespace_fc79db9f<file_0>::function_debccd1a
 // Checksum 0x8fd6a397, Offset: 0x408
 // Size: 0x260
 function update(mod, inflictor, perkfeedback) {
@@ -113,6 +119,7 @@ function update(mod, inflictor, perkfeedback) {
 
 // Namespace damagefeedback
 // Params 2, eflags: 0x0
+// namespace_fc79db9f<file_0>::function_a6594fd5
 // Checksum 0x83d2869b, Offset: 0x670
 // Size: 0x60
 function function_a6594fd5(mod, alert) {
@@ -127,6 +134,7 @@ function function_a6594fd5(mod, alert) {
 
 // Namespace damagefeedback
 // Params 1, eflags: 0x0
+// namespace_fc79db9f<file_0>::function_7fef183e
 // Checksum 0x67a874e3, Offset: 0x6d8
 // Size: 0xea
 function function_7fef183e(hitent) {
@@ -153,6 +161,7 @@ function function_7fef183e(hitent) {
 
 // Namespace damagefeedback
 // Params 1, eflags: 0x0
+// namespace_fc79db9f<file_0>::function_353402e0
 // Checksum 0x4c16db74, Offset: 0x7d0
 // Size: 0x17e
 function function_353402e0(hitent) {

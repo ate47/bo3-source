@@ -1,0 +1,209 @@
+{
+    "scenetype": "scene",
+    "allowmultiple": 1,
+    "vmtype": "server",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_blackstation_24_01_ride_vign_body_player_flail",
+    "type": "scene",
+    "igdtseqnum": 68,
+    "objects": [
+        {
+            "takedamage": 1,
+            "cameratween": 0.2,
+            "model": "c_hro_playermale_egypt_fb",
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "mainblend": 0.2,
+            "mainanim": "cp_mi_sing_blackstation_water_flail",
+            "playerstance": "stand",
+            "disableprimaryweaponswitch": 1,
+            "spawnoninit": 1,
+            "allowdeath": 1,
+            "name": "player",
+            "type": "player"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "player": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

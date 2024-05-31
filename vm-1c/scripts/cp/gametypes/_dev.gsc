@@ -20,6 +20,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x2
+    // namespace_eae8c9fa<file_0>::function_2dc19561
     // Checksum 0xe20e768c, Offset: 0x268
     // Size: 0x3c
     function autoexec function_2dc19561() {
@@ -28,6 +29,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_8c87d8eb
     // Checksum 0x9270c289, Offset: 0x2b0
     // Size: 0x2c
     function __init__() {
@@ -36,6 +38,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_c35e6aab
     // Checksum 0x2209a918, Offset: 0x2e8
     // Size: 0x360
     function init() {
@@ -84,6 +87,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_fb4f96b5
     // Checksum 0x1e134ad4, Offset: 0x650
     // Size: 0x8
     function on_player_connect() {
@@ -92,6 +96,7 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_277100a1
     // Checksum 0xb3cfe920, Offset: 0x660
     // Size: 0x54
     function warpalltohost(team) {
@@ -101,6 +106,7 @@
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_93f46504
     // Checksum 0x734abc16, Offset: 0x6c0
     // Size: 0x374
     function warpalltoplayer(team, player) {
@@ -151,6 +157,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x0
+    // namespace_eae8c9fa<file_0>::function_f755c633
     // Checksum 0xbbf0471c, Offset: 0xa40
     // Size: 0x454
     function updatedevsettingszm() {
@@ -210,6 +217,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_f49597b8
     // Checksum 0x71897e1c, Offset: 0xea0
     // Size: 0x18be
     function updatedevsettings() {
@@ -488,6 +496,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_1870c86a
     // Checksum 0xa345a04f, Offset: 0x2768
     // Size: 0x18c
     function devgui_spawn_think() {
@@ -517,6 +526,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_1fefb654
     // Checksum 0x563f228f, Offset: 0x2900
     // Size: 0x14a
     function devgui_unlimited_ammo() {
@@ -541,6 +551,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x0
+    // namespace_eae8c9fa<file_0>::function_a72d8be8
     // Checksum 0x95250b68, Offset: 0x2a58
     // Size: 0x318
     function devgui_health_debug() {
@@ -583,6 +594,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_91e82e7b
     // Checksum 0xc7fa43d0, Offset: 0x2d78
     // Size: 0xc6
     function giveextraperks() {
@@ -598,6 +610,7 @@
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_3a8a644f
     // Checksum 0x1c9d1429, Offset: 0x2e48
     // Size: 0x14c
     function xkillsy(attackername, victimname) {
@@ -620,6 +633,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_efe63614
     // Checksum 0xb430d3b, Offset: 0x2fa0
     // Size: 0x24
     function testscriptruntimeerrorassert() {
@@ -629,6 +643,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_d6c7ab4
     // Checksum 0x495f3ec9, Offset: 0x2fd0
     // Size: 0x44
     function testscriptruntimeerror2() {
@@ -640,6 +655,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_7f73e9ef
     // Checksum 0x8f9b8d47, Offset: 0x3020
     // Size: 0x1c
     function testscriptruntimeerror1() {
@@ -648,6 +664,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_cf63752
     // Checksum 0xa55889d4, Offset: 0x3048
     // Size: 0xcc
     function testscriptruntimeerror() {
@@ -670,6 +687,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_92600b0d
     // Checksum 0xd7d2bb8f, Offset: 0x3120
     // Size: 0xf4
     function testdvars() {
@@ -690,6 +708,7 @@
 
     // Namespace dev
     // Params 5, eflags: 0x0
+    // namespace_eae8c9fa<file_0>::function_2bacd307
     // Checksum 0x8e440970, Offset: 0x3220
     // Size: 0x58e
     function showonespawnpoint(spawn_point, color, notification, height, print) {
@@ -743,6 +762,7 @@
 
     // Namespace dev
     // Params 6, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_f573927d
     // Checksum 0xe04b8c8f, Offset: 0x37b8
     // Size: 0x70
     function print3duntilnotified(origin, text, color, alpha, scale, notification) {
@@ -755,6 +775,7 @@
 
     // Namespace dev
     // Params 5, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_fb4b2169
     // Checksum 0x4fbd31a7, Offset: 0x3830
     // Size: 0x68
     function lineuntilnotified(start, end, color, depthtest, notification) {
@@ -767,6 +788,7 @@
 
     // Namespace dev
     // Params 1, eflags: 0x0
+    // namespace_eae8c9fa<file_0>::function_9019491d
     // Checksum 0x96d21c6b, Offset: 0x38a0
     // Size: 0x2a
     function dvar_turned_on(val) {
@@ -778,6 +800,7 @@
 
     // Namespace dev
     // Params 5, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_fb312e3b
     // Checksum 0x6c24969e, Offset: 0x38d8
     // Size: 0xc2
     function new_hud(hud_name, msg, x, y, scale) {
@@ -794,6 +817,7 @@
 
     // Namespace dev
     // Params 7, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_8bd98a60
     // Checksum 0x706ad4fa, Offset: 0x39a8
     // Size: 0x1a2
     function set_hudelem(text, x, y, scale, alpha, sort, debug_hudelem) {
@@ -828,6 +852,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_d99660db
     // Checksum 0x32172257, Offset: 0x3b58
     // Size: 0x10
     function function_d99660db() {
@@ -836,6 +861,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x0
+    // namespace_eae8c9fa<file_0>::function_c5833485
     // Checksum 0xc2e840b, Offset: 0x3b70
     // Size: 0x3ac
     function function_c5833485() {
@@ -899,6 +925,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_142688a5
     // Checksum 0x602eb61a, Offset: 0x3f28
     // Size: 0x11c
     function print_weapon_name() {
@@ -927,6 +954,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_5bd29d09
     // Checksum 0xd6345ba, Offset: 0x4050
     // Size: 0x18a
     function set_equipment_list() {
@@ -947,6 +975,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_bf6932f7
     // Checksum 0xdfce22f0, Offset: 0x41e8
     // Size: 0x1b2
     function set_grenade_list() {
@@ -968,6 +997,7 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_498ac57d
     // Checksum 0xfda9360f, Offset: 0x43a8
     // Size: 0xb6
     function take_all_grenades_and_equipment(player) {
@@ -981,6 +1011,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_660b1787
     // Checksum 0xd8f24030, Offset: 0x4468
     // Size: 0x128
     function equipment_dev_gui() {
@@ -1002,6 +1033,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_4ebc24c9
     // Checksum 0x3ea2d3af, Offset: 0x4598
     // Size: 0x128
     function grenade_dev_gui() {
@@ -1023,6 +1055,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_5528f222
     // Checksum 0x35d27dca, Offset: 0x46c8
     // Size: 0x49a
     function devstraferunpathdebugdraw() {
@@ -1105,6 +1138,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_eace8596
     // Checksum 0x5a438bfa, Offset: 0x4b70
     // Size: 0x3c0
     function devhelipathdebugdraw() {
@@ -1177,6 +1211,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_a1b4a9e6
     // Checksum 0xedd3418f, Offset: 0x4f38
     // Size: 0x114
     function draworiginlines() {
@@ -1190,6 +1225,7 @@
 
     // Namespace dev
     // Params 4, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_9c8f13fc
     // Checksum 0x1969d55, Offset: 0x5058
     // Size: 0x74
     function drawtargetnametext(textcolor, textalpha, textscale, textoffset) {
@@ -1201,6 +1237,7 @@
 
     // Namespace dev
     // Params 4, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_4c38993b
     // Checksum 0xb62b37cc, Offset: 0x50d8
     // Size: 0x74
     function drawnoteworthytext(textcolor, textalpha, textscale, textoffset) {
@@ -1212,6 +1249,7 @@
 
     // Namespace dev
     // Params 4, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_6d6b630
     // Checksum 0x2163031b, Offset: 0x5158
     // Size: 0xc4
     function draworigintext(textcolor, textalpha, textscale, textoffset) {
@@ -1224,6 +1262,7 @@
 
     // Namespace dev
     // Params 4, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_d02a2e25
     // Checksum 0x9f3838d7, Offset: 0x5228
     // Size: 0xdc
     function drawspeedacceltext(textcolor, textalpha, textscale, textoffset) {
@@ -1237,6 +1276,7 @@
 
     // Namespace dev
     // Params 7, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_2302cd4a
     // Checksum 0x8a673efb, Offset: 0x5310
     // Size: 0x154
     function drawpath(linecolor, textcolor, textalpha, textscale, textoffset, drawtime, endonmsg) {
@@ -1258,6 +1298,7 @@
 
     // Namespace dev
     // Params 8, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_2f793f75
     // Checksum 0x31bfe0b9, Offset: 0x5470
     // Size: 0x124
     function drawpathsegment(enttarget, linecolor, textcolor, textalpha, textscale, textoffset, drawtime, endonmsg) {
@@ -1275,6 +1316,7 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_2c520d1
     // Checksum 0xacee10d5, Offset: 0x55a0
     // Size: 0xc6
     function get_lookat_origin(player) {
@@ -1288,6 +1330,7 @@
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_71fc369f
     // Checksum 0x90f6f6a8, Offset: 0x5670
     // Size: 0x74
     function draw_pathnode(node, color) {
@@ -1299,6 +1342,7 @@
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_11a3f646
     // Checksum 0xae81bc87, Offset: 0x56f0
     // Size: 0x48
     function draw_pathnode_think(node, color) {
@@ -1311,6 +1355,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_7a3af9ad
     // Checksum 0x5a16418b, Offset: 0x5740
     // Size: 0x1a
     function draw_pathnodes_stop() {
@@ -1320,6 +1365,7 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_dfff46e4
     // Checksum 0xddccdfdb, Offset: 0x5768
     // Size: 0x120
     function node_get(player) {
@@ -1345,6 +1391,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x0
+    // namespace_eae8c9fa<file_0>::function_fe53bfd5
     // Checksum 0xe203db97, Offset: 0x5890
     // Size: 0x1a8
     function dev_get_node_pair() {
@@ -1379,6 +1426,7 @@
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_348d62f8
     // Checksum 0x5fe65e0e, Offset: 0x5a40
     // Size: 0x5c
     function draw_point(origin, color) {
@@ -1390,6 +1438,7 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_7a7785fc
     // Checksum 0xdf6afad9, Offset: 0x5aa8
     // Size: 0xa0
     function point_get(player) {
@@ -1407,6 +1456,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x0
+    // namespace_eae8c9fa<file_0>::function_2258c623
     // Checksum 0x53bb7461, Offset: 0x5b50
     // Size: 0x120
     function dev_get_point_pair() {

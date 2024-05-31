@@ -1,0 +1,15 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_cai_lot_04",
+    "type": "collectible",
+    "igdtseqnum": 24,
+    "uiMaterial": "t7_icon_menu_p7_nc_cai_lot_04",
+    "uiModel": "p7_nc_cai_lot_04",
+    "description": "COLLECTIBLE_P7_NC_CAI_LOT_04_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_CAI_LOT_04_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_MELTED_ROBOT_HEAD",
+    "displayNameShort": "COLLECTIBLE_P7_NC_CAI_LOT_04_SHORT",
+    "codexurl": "Collectables-MeltedRobotPart.htm",
+    "slotSize": 0
+}

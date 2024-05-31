@@ -16,6 +16,7 @@
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x2
+// namespace_e8e1cef5<file_0>::function_2dc19561
 // Checksum 0x5c2d8033, Offset: 0x4c0
 // Size: 0x2a
 function autoexec function_2dc19561() {
@@ -24,6 +25,7 @@ function autoexec function_2dc19561() {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_8c87d8eb
 // Checksum 0x2851f1ce, Offset: 0x4f8
 // Size: 0x173
 function __init__() {
@@ -45,6 +47,7 @@ function __init__() {
 
     // Namespace sentry_turret
     // Params 3, eflags: 0x0
+    // namespace_e8e1cef5<file_0>::function_6a14e39c
     // Checksum 0x892bff9e, Offset: 0x678
     // Size: 0x52
     function function_6a14e39c(start, end, color) {
@@ -57,6 +60,7 @@ function __init__() {
 
 // Namespace sentry_turret
 // Params 2, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_ba2c6c94
 // Checksum 0x8a60abb2, Offset: 0x6d8
 // Size: 0xa4
 function function_ba2c6c94(origin, sector) {
@@ -75,6 +79,7 @@ function function_ba2c6c94(origin, sector) {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_e606dad7
 // Checksum 0x9b702aac, Offset: 0x788
 // Size: 0x1d6
 function function_e606dad7() {
@@ -115,6 +120,7 @@ function function_e606dad7() {
 
 // Namespace sentry_turret
 // Params 2, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_5f695de4
 // Checksum 0x1baf91a3, Offset: 0x968
 // Size: 0x48
 function function_5f695de4(point, yaw) {
@@ -126,6 +132,7 @@ function function_5f695de4(point, yaw) {
 
 // Namespace sentry_turret
 // Params 3, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_140f3a3e
 // Checksum 0x395de047, Offset: 0x9b8
 // Size: 0x59
 function get_target_point(origin, angles, yaw_offset) {
@@ -135,6 +142,7 @@ function get_target_point(origin, angles, yaw_offset) {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_1b820c4d
 // Checksum 0x116c0e89, Offset: 0xa20
 // Size: 0x1f6
 function function_1b820c4d() {
@@ -161,6 +169,7 @@ function function_1b820c4d() {
 
 // Namespace sentry_turret
 // Params 3, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_4ac3c3a1
 // Checksum 0xdc3674ad, Offset: 0xc20
 // Size: 0x4b
 function function_4ac3c3a1(e1, e2, b_lowest_first) {
@@ -172,6 +181,7 @@ function function_4ac3c3a1(e1, e2, b_lowest_first) {
 
 // Namespace sentry_turret
 // Params 1, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_c8f2c95d
 // Checksum 0x4c8ddb7c, Offset: 0xc78
 // Size: 0x15a
 function function_c8f2c95d(point) {
@@ -198,6 +208,7 @@ function function_c8f2c95d(point) {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_b2e9d990
 // Checksum 0xb630fdf4, Offset: 0xde0
 // Size: 0x12
 function function_b2e9d990() {
@@ -206,6 +217,7 @@ function function_b2e9d990() {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_c2d2b587
 // Checksum 0xe2f303e2, Offset: 0xe00
 // Size: 0x12
 function function_c2d2b587() {
@@ -214,6 +226,7 @@ function function_c2d2b587() {
 
 // Namespace sentry_turret
 // Params 1, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_e7857e05
 // Checksum 0x965482a2, Offset: 0xe20
 // Size: 0x57
 function function_e7857e05(e_enemy) {
@@ -226,6 +239,7 @@ function function_e7857e05(e_enemy) {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_8f042083
 // Checksum 0x26de0beb, Offset: 0xe80
 // Size: 0x24a
 function function_8f042083() {
@@ -264,6 +278,7 @@ function function_8f042083() {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_d19a819d
 // Checksum 0xa8d59ba6, Offset: 0x10d8
 // Size: 0x22
 function function_d19a819d() {
@@ -272,6 +287,7 @@ function function_d19a819d() {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_62182551
 // Checksum 0xcaa66952, Offset: 0x1108
 // Size: 0x22
 function function_62182551() {
@@ -280,6 +296,7 @@ function function_62182551() {
 
 // Namespace sentry_turret
 // Params 1, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_e59668cf
 // Checksum 0xa589a8f3, Offset: 0x1138
 // Size: 0x3a
 function function_e59668cf(params) {
@@ -291,6 +308,7 @@ function function_e59668cf(params) {
 
 // Namespace sentry_turret
 // Params 1, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_e6f10cc7
 // Checksum 0xe209d3f0, Offset: 0x1180
 // Size: 0xfa
 function function_e6f10cc7(angles) {
@@ -313,6 +331,7 @@ function function_e6f10cc7(angles) {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_21af94b3
 // Checksum 0x470778a5, Offset: 0x1288
 // Size: 0x92
 function function_21af94b3() {
@@ -329,6 +348,7 @@ function function_21af94b3() {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_4ebb4502
 // Checksum 0x168b7164, Offset: 0x1328
 // Size: 0xce
 function function_4ebb4502() {
@@ -350,6 +370,7 @@ function function_4ebb4502() {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_2e229297
 // Checksum 0x36af2abb, Offset: 0x1400
 // Size: 0x41d
 function function_2e229297() {
@@ -425,6 +446,7 @@ function function_2e229297() {
 
 // Namespace sentry_turret
 // Params 1, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_4642c69e
 // Checksum 0x80516acd, Offset: 0x1828
 // Size: 0x9a
 function function_4642c69e(params) {
@@ -442,6 +464,7 @@ function function_4642c69e(params) {
 
 // Namespace sentry_turret
 // Params 1, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_e823c700
 // Checksum 0xe931f13f, Offset: 0x18d0
 // Size: 0x97
 function function_e823c700(health_pct) {
@@ -461,6 +484,7 @@ function function_e823c700(health_pct) {
 
 // Namespace sentry_turret
 // Params 2, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_b212223b
 // Checksum 0x54d7f38d, Offset: 0x1970
 // Size: 0x132
 function function_b212223b(effect, tag) {
@@ -487,6 +511,7 @@ function function_b212223b(effect, tag) {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_8109253b
 // Checksum 0x528e3268, Offset: 0x1ab0
 // Size: 0x7d
 function function_8109253b() {
@@ -504,6 +529,7 @@ function function_8109253b() {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_78a2820e
 // Checksum 0xfcaee5a1, Offset: 0x1b38
 // Size: 0x1b2
 function function_78a2820e() {
@@ -545,6 +571,7 @@ function function_78a2820e() {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_f92793ae
 // Checksum 0xa2ba0c05, Offset: 0x1cf8
 // Size: 0x12
 function death_fx() {
@@ -553,6 +580,7 @@ function death_fx() {
 
 // Namespace sentry_turret
 // Params 2, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_e99c1c2
 // Checksum 0xb4fc7463, Offset: 0x1d18
 // Size: 0xcf
 function function_e99c1c2(attacker, hitdir) {
@@ -570,6 +598,7 @@ function function_e99c1c2(attacker, hitdir) {
 
 // Namespace sentry_turret
 // Params 2, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_5669b580
 // Checksum 0xc05720c3, Offset: 0x1df0
 // Size: 0x122
 function sentry_turret_fire_for_time(totalfiretime, enemy) {
@@ -602,6 +631,7 @@ function sentry_turret_fire_for_time(totalfiretime, enemy) {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_23b71dce
 // Checksum 0xddab0422, Offset: 0x1f20
 // Size: 0x1a
 function sentry_turret_alert_sound() {
@@ -610,6 +640,7 @@ function sentry_turret_alert_sound() {
 
 // Namespace sentry_turret
 // Params 1, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_ebdfd4e4
 // Checksum 0x7aa3962a, Offset: 0x1f48
 // Size: 0x2a
 function function_ebdfd4e4(team) {
@@ -621,6 +652,7 @@ function function_ebdfd4e4(team) {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_f08ad3e6
 // Checksum 0x32ef8a20, Offset: 0x1f80
 // Size: 0x32
 function function_f08ad3e6() {
@@ -632,6 +664,7 @@ function function_f08ad3e6() {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_791c1a61
 // Checksum 0xa46e4cf7, Offset: 0x1fc0
 // Size: 0x192
 function function_791c1a61() {
@@ -660,6 +693,7 @@ function function_791c1a61() {
 
 // Namespace sentry_turret
 // Params 15, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_df1adf01
 // Checksum 0xbf7f0c79, Offset: 0x2160
 // Size: 0xcc
 function function_df1adf01(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -674,6 +708,7 @@ function function_df1adf01(einflictor, eattacker, idamage, idflags, smeansofdeat
 
 // Namespace sentry_turret
 // Params 1, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_2790de05
 // Checksum 0x53152844, Offset: 0x2238
 // Size: 0xe5
 function function_2790de05(turret) {
@@ -698,6 +733,7 @@ function function_2790de05(turret) {
 
 // Namespace sentry_turret
 // Params 1, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_aa320a88
 // Checksum 0x8132d661, Offset: 0x2328
 // Size: 0x22
 function function_aa320a88(victim) {
@@ -706,6 +742,7 @@ function function_aa320a88(victim) {
 
 // Namespace sentry_turret
 // Params 0, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_9d82c548
 // Checksum 0x64bd5d41, Offset: 0x2358
 // Size: 0x6a
 function turret_idle_sound() {
@@ -717,6 +754,7 @@ function turret_idle_sound() {
 
 // Namespace sentry_turret
 // Params 1, eflags: 0x0
+// namespace_e8e1cef5<file_0>::function_dbef7aff
 // Checksum 0x48f46745, Offset: 0x23d0
 // Size: 0x42
 function turret_idle_sound_stop(sndloop_ent) {

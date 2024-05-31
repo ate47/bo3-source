@@ -10,6 +10,7 @@
 
 // Namespace archetype_robot
 // Params 0, eflags: 0x2
+// namespace_a814baaf<file_0>::function_2dc19561
 // Checksum 0xe5edbcd0, Offset: 0x2b0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,6 +19,7 @@ function autoexec function_2dc19561() {
 
 // Namespace archetype_robot
 // Params 0, eflags: 0x2
+// namespace_a814baaf<file_0>::function_f7046c76
 // Checksum 0xbf78174c, Offset: 0x2f0
 // Size: 0x3a
 function autoexec precache() {
@@ -27,6 +29,7 @@ function autoexec precache() {
 
 // Namespace archetype_robot
 // Params 0, eflags: 0x1 linked
+// namespace_a814baaf<file_0>::function_8c87d8eb
 // Checksum 0x5ba98427, Offset: 0x338
 // Size: 0x164
 function __init__() {
@@ -43,6 +46,7 @@ function __init__() {
 
 // Namespace robotclientutils
 // Params 1, eflags: 0x5 linked
+// namespace_76183701<file_0>::function_23cfe26f
 // Checksum 0x49e782e8, Offset: 0x4a8
 // Size: 0x1c
 function private robotsoldierspawnsetup(localclientnum) {
@@ -51,6 +55,7 @@ function private robotsoldierspawnsetup(localclientnum) {
 
 // Namespace robotclientutils
 // Params 4, eflags: 0x5 linked
+// namespace_76183701<file_0>::function_144d8a6b
 // Checksum 0xcad85f8b, Offset: 0x4d0
 // Size: 0x346
 function private robotlighting(localclientnum, entity, flicker, mindcontrolstate) {
@@ -102,6 +107,7 @@ function private robotlighting(localclientnum, entity, flicker, mindcontrolstate
 
 // Namespace robotclientutils
 // Params 7, eflags: 0x5 linked
+// namespace_76183701<file_0>::function_a827da8
 // Checksum 0xe77a3cfe, Offset: 0x820
 // Size: 0x164
 function private robotlightshandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -122,6 +128,7 @@ function private robotlightshandler(localclientnum, oldvalue, newvalue, bnewent,
 
 // Namespace robotclientutils
 // Params 7, eflags: 0x5 linked
+// namespace_76183701<file_0>::function_bc98e049
 // Checksum 0xebb2d757, Offset: 0x990
 // Size: 0x13a
 function private robotemphandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -143,6 +150,7 @@ function private robotemphandler(localclientnum, oldvalue, newvalue, bnewent, bi
 
 // Namespace robotclientutils
 // Params 7, eflags: 0x5 linked
+// namespace_76183701<file_0>::function_8eaa219e
 // Checksum 0xbbb3210f, Offset: 0xad8
 // Size: 0x114
 function private robotmindcontrolhandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -159,6 +167,7 @@ function private robotmindcontrolhandler(localclientnum, oldvalue, newvalue, bne
 
 // Namespace robotclientutils
 // Params 7, eflags: 0x1 linked
+// namespace_76183701<file_0>::function_b6ba589
 // Checksum 0x334d8647, Offset: 0xbf8
 // Size: 0x102
 function robotmindcontrolexplosionhandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {

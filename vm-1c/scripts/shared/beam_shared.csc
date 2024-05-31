@@ -7,6 +7,7 @@
 
 // Namespace beam
 // Params 5, eflags: 0x1 linked
+// namespace_242a37f8<file_0>::function_dbc82b90
 // Checksum 0xb7886a61, Offset: 0x110
 // Size: 0x1cc
 function launch(ent_1, str_tag1, ent_2, str_tag2, str_beam_type) {
@@ -33,6 +34,7 @@ function launch(ent_1, str_tag1, ent_2, str_tag2, str_beam_type) {
 
 // Namespace beam
 // Params 5, eflags: 0x1 linked
+// namespace_242a37f8<file_0>::function_2992720d
 // Checksum 0xf8caf966, Offset: 0x2e8
 // Size: 0x184
 function kill(ent_1, str_tag1, ent_2, str_tag2, str_beam_type) {
@@ -58,6 +60,7 @@ function kill(ent_1, str_tag1, ent_2, str_tag2, str_beam_type) {
 
 // Namespace beam
 // Params 5, eflags: 0x5 linked
+// namespace_242a37f8<file_0>::function_a9e8d754
 // Checksum 0x5e65883a, Offset: 0x478
 // Size: 0x136
 function private _new_beam(ent_1, str_tag1, ent_2, str_tag2, str_beam_type) {
@@ -81,6 +84,7 @@ function private _new_beam(ent_1, str_tag1, ent_2, str_tag2, str_beam_type) {
 
 // Namespace beam
 // Params 5, eflags: 0x5 linked
+// namespace_242a37f8<file_0>::function_6d7e20da
 // Checksum 0x589db238, Offset: 0x5b8
 // Size: 0x124
 function private _get_beam(ent_1, str_tag1, ent_2, str_tag2, str_beam_type) {
@@ -95,6 +99,7 @@ function private _get_beam(ent_1, str_tag1, ent_2, str_tag2, str_beam_type) {
 
 // Namespace beam
 // Params 3, eflags: 0x5 linked
+// namespace_242a37f8<file_0>::function_4ac06829
 // Checksum 0xaf2af332, Offset: 0x6e8
 // Size: 0xbc
 function private _kill_on_ent_death(s_beam, ent_1, ent_2) {

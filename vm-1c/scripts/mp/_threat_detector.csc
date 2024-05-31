@@ -11,6 +11,7 @@
 
 // Namespace threat_detector
 // Params 0, eflags: 0x2
+// namespace_226b51d2<file_0>::function_2dc19561
 // Checksum 0x3f481a07, Offset: 0x1f8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,6 +20,7 @@ function autoexec function_2dc19561() {
 
 // Namespace threat_detector
 // Params 0, eflags: 0x1 linked
+// namespace_226b51d2<file_0>::function_8c87d8eb
 // Checksum 0x557bb153, Offset: 0x238
 // Size: 0x64
 function __init__() {
@@ -29,6 +31,7 @@ function __init__() {
 
 // Namespace threat_detector
 // Params 7, eflags: 0x1 linked
+// namespace_226b51d2<file_0>::function_82ee334b
 // Checksum 0x40232c5, Offset: 0x2a8
 // Size: 0x1cc
 function function_82ee334b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -52,6 +55,7 @@ function function_82ee334b(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace threat_detector
 // Params 3, eflags: 0x1 linked
+// namespace_226b51d2<file_0>::function_aa1a4765
 // Checksum 0xb00a786c, Offset: 0x480
 // Size: 0x21c
 function function_aa1a4765(var_f0a669b2, var_f8f606cd, localclientnum) {
@@ -82,6 +86,7 @@ function function_aa1a4765(var_f0a669b2, var_f8f606cd, localclientnum) {
 
 // Namespace threat_detector
 // Params 3, eflags: 0x1 linked
+// namespace_226b51d2<file_0>::function_8490a224
 // Checksum 0x88204c4f, Offset: 0x6a8
 // Size: 0x1aa
 function function_8490a224(var_f0a669b2, var_f8f606cd, localclientnum) {

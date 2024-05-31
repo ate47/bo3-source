@@ -28,6 +28,7 @@
 
 // Namespace namespace_937d31fa
 // Params 0, eflags: 0x2
+// namespace_937d31fa<file_0>::function_c35e6aab
 // Checksum 0xa002b3e1, Offset: 0x500
 // Size: 0x64
 function autoexec init() {
@@ -38,6 +39,7 @@ function autoexec init() {
 
 // Namespace namespace_937d31fa
 // Params 0, eflags: 0x1 linked
+// namespace_937d31fa<file_0>::function_deba043e
 // Checksum 0x9ccc6a33, Offset: 0x570
 // Size: 0x1ec
 function function_deba043e() {
@@ -76,6 +78,7 @@ function function_deba043e() {
 
 // Namespace namespace_937d31fa
 // Params 1, eflags: 0x5 linked
+// namespace_937d31fa<file_0>::function_7fcb8a90
 // Checksum 0x998c98a3, Offset: 0x768
 // Size: 0x34
 function private function_7fcb8a90(entity) {
@@ -85,6 +88,7 @@ function private function_7fcb8a90(entity) {
 
 // Namespace namespace_937d31fa
 // Params 0, eflags: 0x5 linked
+// namespace_937d31fa<file_0>::function_339717fa
 // Checksum 0xf95c9a35, Offset: 0x7a8
 // Size: 0x34
 function private initzombiebehaviorsandasm() {
@@ -93,6 +97,7 @@ function private initzombiebehaviorsandasm() {
 
 // Namespace namespace_937d31fa
 // Params 0, eflags: 0x1 linked
+// namespace_937d31fa<file_0>::function_591dd6a0
 // Checksum 0xeb08379c, Offset: 0x7e8
 // Size: 0x1c
 function function_591dd6a0() {
@@ -101,6 +106,7 @@ function function_591dd6a0() {
 
 // Namespace namespace_937d31fa
 // Params 5, eflags: 0x1 linked
+// namespace_937d31fa<file_0>::function_45557eb8
 // Checksum 0xd762f5d7, Offset: 0x810
 // Size: 0x19c
 function function_45557eb8(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {

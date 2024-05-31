@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_inf_17",
+    "igdtseqnum": 77,
+    "challengeWidget": "Accuracy",
+    "challengeDetails": "ACCOLADES_INF_17",
+    "challengeName": "ACCOLADES_INF_17_NAME",
+    "centerText": "10",
+    "challengeReference": "MISSION_INFECTION_CHALLENGE17"
+}

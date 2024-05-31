@@ -14,6 +14,7 @@
 
     // Namespace zm_frontend_zm_bgb_chance
     // Params 0, eflags: 0x1 linked
+    // namespace_dd96a64a<file_0>::function_910ec890
     // Checksum 0xc27953be, Offset: 0x1a8
     // Size: 0x1c
     function zm_frontend_bgb_slots_logic() {
@@ -22,6 +23,7 @@
 
     // Namespace zm_frontend_zm_bgb_chance
     // Params 0, eflags: 0x1 linked
+    // namespace_dd96a64a<file_0>::function_b5c74882
     // Checksum 0xaba81fc3, Offset: 0x1d0
     // Size: 0x1bc
     function zm_frontend_bgb_devgui() {
@@ -40,6 +42,7 @@
 
     // Namespace zm_frontend_zm_bgb_chance
     // Params 0, eflags: 0x1 linked
+    // namespace_dd96a64a<file_0>::function_70fe94ae
     // Checksum 0x98c1dcc6, Offset: 0x398
     // Size: 0x1c0
     function bgb_devgui_think() {

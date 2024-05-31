@@ -4,6 +4,7 @@
 
 // Namespace namespace_5fc59ced
 // Params 0, eflags: 0x1 linked
+// namespace_5fc59ced<file_0>::function_c35e6aab
 // Checksum 0x2dc6ed52, Offset: 0x120
 // Size: 0x82
 function init() {
@@ -21,6 +22,7 @@ function init() {
 
 // Namespace namespace_5fc59ced
 // Params 0, eflags: 0x1 linked
+// namespace_5fc59ced<file_0>::function_c66f3f44
 // Checksum 0x6aa0c88e, Offset: 0x1b0
 // Size: 0xb4
 function customteam_init() {

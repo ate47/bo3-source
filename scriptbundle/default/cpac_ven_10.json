@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_ven_10",
+    "igdtseqnum": 176,
+    "challengeWidget": "Stealth",
+    "challengeDetails": "ACCOLADES_VEN_10",
+    "challengeName": "ACCOLADES_VEN_10_NAME",
+    "centerText": "5",
+    "challengeReference": "MISSION_VENGEANCE_CHALLENGE10"
+}

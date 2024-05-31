@@ -1,0 +1,240 @@
+{
+    "scenetype": "scene",
+    "allowmultiple": 1,
+    "vmtype": "server",
+    "aligntarget": "tag_align_safe_igc",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_zm_castle_drgroph_easteregg",
+    "type": "scene",
+    "looping": 1,
+    "igdtseqnum": 12,
+    "objects": [
+        {
+            "deletewhenfinished": 1,
+            "model": "c_zom_dlc1_drgropf",
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "endanimloop": "ch_zm_dlc1_drgroph_easteregg_doctor_end_loop",
+            "mainanim": "ch_zm_dlc1_drgroph_easteregg_doctor",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "removeweapon": 1,
+            "name": "groph",
+            "type": "actor"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "p7_zm_ctl_safe_standing_combined",
+            "firstframe": 1,
+            "mainanim": "o_zm_dlc1_drgroph_easteregg_safe",
+            "endanimloop": "o_zm_dlc1_drgroph_easteregg_safe_end_loop",
+            "deletewhenfinished": 1,
+            "playerstance": "stand",
+            "name": "safe",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "endanimloop": "o_zm_dlc1_drgroph_easteregg_keycard_end_loop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "mainanim": "o_zm_dlc1_drgroph_easteregg_keycard",
+            "firstframe": 1,
+            "model": "p7_zm_ctl_keycard_ee",
+            "name": "keycard",
+            "type": "prop"
+        },
+        {
+            "name": "folder",
+            "type": "prop",
+            "vmtype": "server",
+            "model": "p7_office_paper_folder_beige",
+            "endanimloop": "o_zm_dlc1_drgroph_easteregg_folder_end_loop",
+            "playerstance": "stand",
+            "mainanim": "o_zm_dlc1_drgroph_easteregg_folder",
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "name": "notebook_1",
+            "type": "prop",
+            "firstframe": 1,
+            "model": "p7_zm_ctl_notebook_a_01",
+            "mainanim": "o_zm_dlc1_drgroph_easteregg_notebook_1",
+            "playerstance": "stand",
+            "endanimloop": "o_zm_dlc1_drgroph_easteregg_notebook_1_end_loop",
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "notebook_2",
+            "type": "prop",
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "mainanim": "o_zm_dlc1_drgroph_easteregg_notebook_2",
+            "model": "p7_zm_ctl_notebook_b_01",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "endanimloop": "o_zm_dlc1_drgroph_easteregg_notebook_2_end_loop"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

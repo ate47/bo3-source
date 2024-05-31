@@ -6,6 +6,7 @@
 
 // Namespace gibclientutils
 // Params 0, eflags: 0x2
+// namespace_bff2cf93<file_0>::function_d290ebfa
 // Checksum 0x79a307f1, Offset: 0x208
 // Size: 0x434
 function autoexec main() {
@@ -42,6 +43,7 @@ function autoexec main() {
 
 // Namespace gibclientutils
 // Params 0, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_8b7c44ef
 // Checksum 0x19fdf876, Offset: 0x648
 // Size: 0x1f8
 function private _annihilatecorpse() {
@@ -71,6 +73,7 @@ function private _annihilatecorpse() {
 
 // Namespace gibclientutils
 // Params 3, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_530bd30f
 // Checksum 0x41014bcc, Offset: 0x848
 // Size: 0x20c
 function private _clonegibdata(localclientnum, entity, clone) {
@@ -92,6 +95,7 @@ function private _clonegibdata(localclientnum, entity, clone) {
 
 // Namespace gibclientutils
 // Params 1, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_e2149f4f
 // Checksum 0x51917e21, Offset: 0xa60
 // Size: 0x92
 function private function_e2149f4f(entity) {
@@ -105,6 +109,7 @@ function private function_e2149f4f(entity) {
 
 // Namespace gibclientutils
 // Params 2, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_8ca0b4c2
 // Checksum 0xf077f9c0, Offset: 0xb00
 // Size: 0x86
 function private _getgibbedstate(localclientnum, entity) {
@@ -118,6 +123,7 @@ function private _getgibbedstate(localclientnum, entity) {
 
 // Namespace gibclientutils
 // Params 2, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_116161c
 // Checksum 0xb4c565c0, Offset: 0xb90
 // Size: 0x17e
 function private _getgibbedlegmodel(localclientnum, entity) {
@@ -136,6 +142,7 @@ function private _getgibbedlegmodel(localclientnum, entity) {
 
 // Namespace gibclientutils
 // Params 3, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_df5ae433
 // Checksum 0xfe07e53d, Offset: 0xd18
 // Size: 0xd4
 function private _getgibextramodel(localclientnumm, entity, gibflag) {
@@ -150,6 +157,7 @@ function private _getgibextramodel(localclientnumm, entity, gibflag) {
 
 // Namespace gibclientutils
 // Params 2, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_8aacca23
 // Checksum 0xf5514252, Offset: 0xdf8
 // Size: 0x17e
 function private _getgibbedtorsomodel(localclientnum, entity) {
@@ -168,6 +176,7 @@ function private _getgibbedtorsomodel(localclientnum, entity) {
 
 // Namespace gibclientutils
 // Params 3, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_99660e6c
 // Checksum 0xc9277a10, Offset: 0xf80
 // Size: 0xb4
 function private _gibpiecetag(localclientnum, entity, gibflag) {
@@ -183,6 +192,7 @@ function private _gibpiecetag(localclientnum, entity, gibflag) {
 
 // Namespace gibclientutils
 // Params 3, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_b06a42b3
 // Checksum 0x227fac2a, Offset: 0x1040
 // Size: 0x2a0
 function private _gibentity(localclientnum, gibflags, shouldspawngibs) {
@@ -220,6 +230,7 @@ function private _gibentity(localclientnum, gibflags, shouldspawngibs) {
 
 // Namespace gibclientutils
 // Params 3, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_bffed523
 // Checksum 0xc67cd0a3, Offset: 0x12e8
 // Size: 0x98
 function private _setgibbed(localclientnum, entity, gibflag) {
@@ -233,6 +244,7 @@ function private _setgibbed(localclientnum, entity, gibflag) {
 
 // Namespace gibclientutils
 // Params 3, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_c218c7b1
 // Checksum 0x9b25048b, Offset: 0x1388
 // Size: 0x1c4
 function private _gibcliententityinternal(localclientnum, entity, gibflag) {
@@ -260,6 +272,7 @@ function private _gibcliententityinternal(localclientnum, entity, gibflag) {
 
 // Namespace gibclientutils
 // Params 3, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_bc754c68
 // Checksum 0xa71976e1, Offset: 0x1558
 // Size: 0x1ec
 function private _gibclientextrainternal(localclientnum, entity, gibflag) {
@@ -290,6 +303,7 @@ function private _gibclientextrainternal(localclientnum, entity, gibflag) {
 
 // Namespace gibclientutils
 // Params 7, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_bdb8d7be
 // Checksum 0x8f4d523d, Offset: 0x1750
 // Size: 0x1b0
 function private _gibhandler(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -317,6 +331,7 @@ function private _gibhandler(localclientnum, oldvalue, newvalue, bnewent, biniti
 
 // Namespace gibclientutils
 // Params 6, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_4f4550a4
 // Checksum 0x9567b73a, Offset: 0x1908
 // Size: 0x304
 function _gibpiece(localclientnum, entity, gibmodel, gibtag, gibfx, gibdir) {
@@ -361,6 +376,7 @@ function _gibpiece(localclientnum, entity, gibmodel, gibtag, gibfx, gibdir) {
 
 // Namespace gibclientutils
 // Params 3, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_c2c1ba4c
 // Checksum 0x9789438d, Offset: 0x1c18
 // Size: 0xde
 function private _handlegibcallbacks(localclientnum, entity, gibflag) {
@@ -373,6 +389,7 @@ function private _handlegibcallbacks(localclientnum, entity, gibflag) {
 
 // Namespace gibclientutils
 // Params 1, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_cb14462b
 // Checksum 0x2230dba5, Offset: 0x1d00
 // Size: 0x5c
 function private _handlegibannihilate(localclientnum) {
@@ -384,6 +401,7 @@ function private _handlegibannihilate(localclientnum) {
 
 // Namespace gibclientutils
 // Params 1, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_9e5707f2
 // Checksum 0x12a546e0, Offset: 0x1d68
 // Size: 0x5c
 function private _handlegibhead(localclientnum) {
@@ -395,6 +413,7 @@ function private _handlegibhead(localclientnum) {
 
 // Namespace gibclientutils
 // Params 1, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_d51c6b90
 // Checksum 0xcc7feb5c, Offset: 0x1dd0
 // Size: 0x5c
 function private _handlegibrightarm(localclientnum) {
@@ -406,6 +425,7 @@ function private _handlegibrightarm(localclientnum) {
 
 // Namespace gibclientutils
 // Params 1, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_a610129f
 // Checksum 0x45fd21e3, Offset: 0x1e38
 // Size: 0x5c
 function private _handlegibleftarm(localclientnum) {
@@ -417,6 +437,7 @@ function private _handlegibleftarm(localclientnum) {
 
 // Namespace gibclientutils
 // Params 1, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_6a83e90e
 // Checksum 0x9c070701, Offset: 0x1ea0
 // Size: 0x5c
 function private _handlegibrightleg(localclientnum) {
@@ -428,6 +449,7 @@ function private _handlegibrightleg(localclientnum) {
 
 // Namespace gibclientutils
 // Params 1, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_1b479c25
 // Checksum 0xcee07666, Offset: 0x1f08
 // Size: 0x5c
 function private _handlegibleftleg(localclientnum) {
@@ -439,6 +461,7 @@ function private _handlegibleftleg(localclientnum) {
 
 // Namespace gibclientutils
 // Params 1, eflags: 0x5 linked
+// namespace_bff2cf93<file_0>::function_d1b23d23
 // Checksum 0xc685497c, Offset: 0x1f70
 // Size: 0x6c
 function private _hasgibdef(entity) {
@@ -447,6 +470,7 @@ function private _hasgibdef(entity) {
 
 // Namespace gibclientutils
 // Params 4, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_5a8acf2a
 // Checksum 0x1e96fe57, Offset: 0x1fe8
 // Size: 0x10a
 function _playgibfx(localclientnum, entity, fxfilename, fxtag) {
@@ -466,6 +490,7 @@ function _playgibfx(localclientnum, entity, fxfilename, fxtag) {
 
 // Namespace gibclientutils
 // Params 3, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_840ed6d
 // Checksum 0xfbc0048, Offset: 0x2100
 // Size: 0x4c
 function _playgibsound(localclientnum, entity, soundalias) {
@@ -476,6 +501,7 @@ function _playgibsound(localclientnum, entity, soundalias) {
 
 // Namespace gibclientutils
 // Params 4, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_fd0cbc9
 // Checksum 0x30d2d745, Offset: 0x2158
 // Size: 0xf6
 function addgibcallback(localclientnum, entity, gibflag, callbackfunction) {
@@ -493,6 +519,7 @@ function addgibcallback(localclientnum, entity, gibflag, callbackfunction) {
 
 // Namespace gibclientutils
 // Params 2, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_6c43afe4
 // Checksum 0x5d4a37dd, Offset: 0x2258
 // Size: 0x7c
 function cliententgibannihilate(localclientnum, entity) {
@@ -505,6 +532,7 @@ function cliententgibannihilate(localclientnum, entity) {
 
 // Namespace gibclientutils
 // Params 2, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_62316411
 // Checksum 0x99acda71, Offset: 0x22e0
 // Size: 0x54
 function cliententgibhead(localclientnum, entity) {
@@ -514,6 +542,7 @@ function cliententgibhead(localclientnum, entity) {
 
 // Namespace gibclientutils
 // Params 2, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_4ee18776
 // Checksum 0x33bace49, Offset: 0x2340
 // Size: 0x54
 function cliententgibleftarm(localclientnum, entity) {
@@ -525,6 +554,7 @@ function cliententgibleftarm(localclientnum, entity) {
 
 // Namespace gibclientutils
 // Params 2, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_8f0dd4a7
 // Checksum 0xdb348e9d, Offset: 0x23a0
 // Size: 0x54
 function cliententgibrightarm(localclientnum, entity) {
@@ -536,6 +566,7 @@ function cliententgibrightarm(localclientnum, entity) {
 
 // Namespace gibclientutils
 // Params 2, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_99280dbc
 // Checksum 0x10359dca, Offset: 0x2400
 // Size: 0x34
 function cliententgibleftleg(localclientnum, entity) {
@@ -544,6 +575,7 @@ function cliententgibleftleg(localclientnum, entity) {
 
 // Namespace gibclientutils
 // Params 2, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_b9b8d16d
 // Checksum 0xadc4650a, Offset: 0x2440
 // Size: 0x34
 function cliententgibrightleg(localclientnum, entity) {
@@ -552,6 +584,7 @@ function cliententgibrightleg(localclientnum, entity) {
 
 // Namespace gibclientutils
 // Params 2, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_284d88b1
 // Checksum 0x6e4c48b6, Offset: 0x2480
 // Size: 0x378
 function createscriptmodelofentity(localclientnum, entity) {
@@ -585,6 +618,7 @@ function createscriptmodelofentity(localclientnum, entity) {
 
 // Namespace gibclientutils
 // Params 3, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_e04abdca
 // Checksum 0xb80f09c8, Offset: 0x2800
 // Size: 0x38
 function isgibbed(localclientnum, entity, gibflag) {
@@ -593,6 +627,7 @@ function isgibbed(localclientnum, entity, gibflag) {
 
 // Namespace gibclientutils
 // Params 2, eflags: 0x0
+// namespace_bff2cf93<file_0>::function_ca0811e9
 // Checksum 0x62794254, Offset: 0x2840
 // Size: 0x2e
 function isundamaged(localclientnum, entity) {
@@ -601,6 +636,7 @@ function isundamaged(localclientnum, entity) {
 
 // Namespace gibclientutils
 // Params 2, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_5e3c1644
 // Checksum 0xc94319c4, Offset: 0x2878
 // Size: 0x64
 function gibentity(localclientnum, gibflags) {
@@ -610,6 +646,7 @@ function gibentity(localclientnum, gibflags) {
 
 // Namespace gibclientutils
 // Params 1, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_eef9c953
 // Checksum 0x85465374, Offset: 0x28e8
 // Size: 0xac
 function handlegibnotetracks(localclientnum) {
@@ -624,6 +661,7 @@ function handlegibnotetracks(localclientnum) {
 
 // Namespace gibclientutils
 // Params 1, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_4196b217
 // Checksum 0xf57717a3, Offset: 0x29a0
 // Size: 0x2c
 function playergibleftarm(localclientnum) {
@@ -632,6 +670,7 @@ function playergibleftarm(localclientnum) {
 
 // Namespace gibclientutils
 // Params 1, eflags: 0x0
+// namespace_bff2cf93<file_0>::function_5b9d57e8
 // Checksum 0xdb12aa18, Offset: 0x29d8
 // Size: 0x2c
 function playergibrightarm(localclientnum) {
@@ -640,6 +679,7 @@ function playergibrightarm(localclientnum) {
 
 // Namespace gibclientutils
 // Params 1, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_c52423d
 // Checksum 0x4987943e, Offset: 0x2a10
 // Size: 0x2c
 function playergibleftleg(localclientnum) {
@@ -648,6 +688,7 @@ function playergibleftleg(localclientnum) {
 
 // Namespace gibclientutils
 // Params 1, eflags: 0x0
+// namespace_bff2cf93<file_0>::function_d8b718a6
 // Checksum 0x219354d, Offset: 0x2a48
 // Size: 0x2c
 function playergibrightleg(localclientnum) {
@@ -656,6 +697,7 @@ function playergibrightleg(localclientnum) {
 
 // Namespace gibclientutils
 // Params 1, eflags: 0x0
+// namespace_bff2cf93<file_0>::function_310472b3
 // Checksum 0x3c5f7a02, Offset: 0x2a80
 // Size: 0x4c
 function playergiblegs(localclientnum) {
@@ -665,6 +707,7 @@ function playergiblegs(localclientnum) {
 
 // Namespace gibclientutils
 // Params 2, eflags: 0x1 linked
+// namespace_bff2cf93<file_0>::function_a45e2bcc
 // Checksum 0x1d8d4fba, Offset: 0x2ad8
 // Size: 0x32
 function playergibtag(localclientnum, gibflag) {

@@ -10,6 +10,7 @@
 
     // Namespace rat
     // Params 0, eflags: 0x2
+    // namespace_c7970376<file_0>::function_2dc19561
     // Checksum 0x1f2990b3, Offset: 0x100
     // Size: 0x34
     function autoexec function_2dc19561() {
@@ -18,6 +19,7 @@
 
     // Namespace rat
     // Params 0, eflags: 0x1 linked
+    // namespace_c7970376<file_0>::function_8c87d8eb
     // Checksum 0x7b1372c7, Offset: 0x140
     // Size: 0x6c
     function __init__() {
@@ -28,6 +30,7 @@
 
     // Namespace rat
     // Params 2, eflags: 0x1 linked
+    // namespace_c7970376<file_0>::function_1601ebff
     // Checksum 0x4e9d15a5, Offset: 0x1b8
     // Size: 0x514
     function derriesezombiespawnnavmeshtest(params, inrat) {

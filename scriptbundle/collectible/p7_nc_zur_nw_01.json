@@ -1,0 +1,17 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_zur_nw_01",
+    "type": "collectible",
+    "igdtseqnum": 86,
+    "uiMaterial": "t7_icon_menu_p7_nc_zur_nw_01",
+    "uiModelWithStand": "p7_nc_zur_nw_01_with_stand",
+    "uiModel": "p7_nc_zur_nw_01",
+    "description": "COLLECTIBLE_P7_NC_ZUR_NW_01_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_ZUR_NW_01_LONG",
+    "audiolog_sound": "vox_safe_maglev_train_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_MAGLEV_TRAIN",
+    "displayNameShort": "COLLECTIBLE_P7_NC_ZUR_NW_01_SHORT",
+    "codexurl": "Collectables-ModelMaglevTrain.htm",
+    "slotSize": 0
+}

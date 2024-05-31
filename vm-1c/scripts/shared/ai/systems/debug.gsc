@@ -7,6 +7,7 @@
 
     // Namespace as_debug
     // Params 0, eflags: 0x2
+    // namespace_7e4a6241<file_0>::function_2dc19561
     // Checksum 0x59872824, Offset: 0xc0
     // Size: 0x34
     function autoexec function_2dc19561() {
@@ -15,6 +16,7 @@
 
     // Namespace as_debug
     // Params 0, eflags: 0x1 linked
+    // namespace_7e4a6241<file_0>::function_8c87d8eb
     // Checksum 0xc334b472, Offset: 0x100
     // Size: 0x1c
     function __init__() {
@@ -23,6 +25,7 @@
 
     // Namespace as_debug
     // Params 0, eflags: 0x1 linked
+    // namespace_7e4a6241<file_0>::function_198f6ed8
     // Checksum 0x8ed8704a, Offset: 0x128
     // Size: 0x50
     function debugdvars() {
@@ -36,6 +39,7 @@
 
     // Namespace as_debug
     // Params 0, eflags: 0x1 linked
+    // namespace_7e4a6241<file_0>::function_db636009
     // Checksum 0x24117f0f, Offset: 0x180
     // Size: 0x4c
     function isdebugon() {
@@ -44,6 +48,7 @@
 
     // Namespace as_debug
     // Params 4, eflags: 0x1 linked
+    // namespace_7e4a6241<file_0>::function_accdf135
     // Checksum 0xdccef656, Offset: 0x1d8
     // Size: 0x76
     function drawdebuglineinternal(frompoint, topoint, color, durationframes) {
@@ -55,6 +60,7 @@
 
     // Namespace as_debug
     // Params 4, eflags: 0x0
+    // namespace_7e4a6241<file_0>::function_4b340fbe
     // Checksum 0x1d597f48, Offset: 0x258
     // Size: 0x64
     function drawdebugline(frompoint, topoint, color, durationframes) {
@@ -65,6 +71,7 @@
 
     // Namespace as_debug
     // Params 4, eflags: 0x1 linked
+    // namespace_7e4a6241<file_0>::function_93b7208c
     // Checksum 0x5d0ba0d, Offset: 0x2c8
     // Size: 0x7e
     function debugline(frompoint, topoint, color, durationframes) {
@@ -76,6 +83,7 @@
 
     // Namespace as_debug
     // Params 4, eflags: 0x0
+    // namespace_7e4a6241<file_0>::function_d02396c8
     // Checksum 0x37cf8633, Offset: 0x350
     // Size: 0x154
     function drawdebugcross(atpoint, radius, color, durationframes) {
@@ -92,6 +100,7 @@
 
     // Namespace as_debug
     // Params 0, eflags: 0x0
+    // namespace_7e4a6241<file_0>::function_bad1b803
     // Checksum 0x3c9f817f, Offset: 0x4b0
     // Size: 0x98
     function updatedebuginfo() {
@@ -108,6 +117,7 @@
 
     // Namespace as_debug
     // Params 0, eflags: 0x1 linked
+    // namespace_7e4a6241<file_0>::function_419ea3bc
     // Checksum 0x32300c78, Offset: 0x550
     // Size: 0x104
     function updatedebuginfointernal() {
@@ -130,6 +140,7 @@
 
     // Namespace as_debug
     // Params 4, eflags: 0x0
+    // namespace_7e4a6241<file_0>::function_56da803a
     // Checksum 0x5be148d, Offset: 0x660
     // Size: 0x144
     function drawdebugenttext(text, ent, color, channel) {
@@ -149,6 +160,7 @@
 
     // Namespace as_debug
     // Params 2, eflags: 0x0
+    // namespace_7e4a6241<file_0>::function_7c7c05a1
     // Checksum 0x16828103, Offset: 0x7b0
     // Size: 0x1a2
     function debugpushstate(statename, extrainfo) {
@@ -175,6 +187,7 @@
 
     // Namespace as_debug
     // Params 2, eflags: 0x0
+    // namespace_7e4a6241<file_0>::function_63b6dcea
     // Checksum 0xa3cbf9ff, Offset: 0x960
     // Size: 0x2f8
     function debugaddstateinfo(statename, extrainfo) {
@@ -211,6 +224,7 @@
 
     // Namespace as_debug
     // Params 2, eflags: 0x0
+    // namespace_7e4a6241<file_0>::function_7e3ccdca
     // Checksum 0x88caa3aa, Offset: 0xc60
     // Size: 0x352
     function debugpopstate(statename, exitreason) {
@@ -251,6 +265,7 @@
 
     // Namespace as_debug
     // Params 0, eflags: 0x1 linked
+    // namespace_7e4a6241<file_0>::function_c7620b50
     // Checksum 0xc670a3b3, Offset: 0xfc0
     // Size: 0x44
     function debugclearstate() {
@@ -261,6 +276,7 @@
 
     // Namespace as_debug
     // Params 0, eflags: 0x0
+    // namespace_7e4a6241<file_0>::function_87bfeaa1
     // Checksum 0x7d00fea8, Offset: 0x1010
     // Size: 0x44
     function debugshouldclearstate() {
@@ -272,6 +288,7 @@
 
     // Namespace as_debug
     // Params 0, eflags: 0x0
+    // namespace_7e4a6241<file_0>::function_db9b994c
     // Checksum 0x2e69dca5, Offset: 0x1060
     // Size: 0xa8
     function debugcleanstatestack() {
@@ -286,6 +303,7 @@
 
     // Namespace as_debug
     // Params 1, eflags: 0x0
+    // namespace_7e4a6241<file_0>::function_73fc70ff
     // Checksum 0xcffebbbd, Offset: 0x1110
     // Size: 0x66
     function indent(depth) {
@@ -298,6 +316,7 @@
 
     // Namespace as_debug
     // Params 3, eflags: 0x0
+    // namespace_7e4a6241<file_0>::function_7da65dd6
     // Checksum 0xb7386487, Offset: 0x1180
     // Size: 0x106
     function debugdrawweightedpoints(entity, points, weights) {
@@ -318,6 +337,7 @@
 
     // Namespace as_debug
     // Params 5, eflags: 0x1 linked
+    // namespace_7e4a6241<file_0>::function_700f290f
     // Checksum 0xca208ae4, Offset: 0x1290
     // Size: 0x174
     function debugdrawweightedpoint(entity, point, weight, lowestvalue, highestvalue) {
@@ -338,6 +358,7 @@
 
     // Namespace as_debug
     // Params 0, eflags: 0x1 linked
+    // namespace_7e4a6241<file_0>::function_8bef747
     // Checksum 0x99621017, Offset: 0x1410
     // Size: 0xda
     function delete_all_ai_corpses() {

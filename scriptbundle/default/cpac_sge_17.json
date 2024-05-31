@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_sge_17",
+    "igdtseqnum": 165,
+    "challengeWidget": "HeavyWeapon",
+    "challengeDetails": "ACCOLADES_SGEN_17",
+    "challengeName": "ACCOLADES_SGEN_17_NAME",
+    "centerText": "2",
+    "challengeReference": "MISSION_SGEN_CHALLENGE17"
+}

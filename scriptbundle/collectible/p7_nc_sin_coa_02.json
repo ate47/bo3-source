@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_sin_coa_02",
+    "type": "collectible",
+    "igdtseqnum": 63,
+    "uiMaterial": "t7_icon_menu_p7_nc_sin_coa_02",
+    "uiModel": "p7_nc_sin_coa_02",
+    "description": "COLLECTIBLE_P7_NC_SIN_COA_02_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_SIN_COA_02_LONG",
+    "audiolog_sound": "vox_safe_test_kit_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_CONTAMINATION_TEST_KIT",
+    "displayNameShort": "COLLECTIBLE_P7_NC_SIN_COA_02_SHORT",
+    "codexurl": "Collectables-ContaminationTestKit.htm",
+    "slotSize": 1
+}

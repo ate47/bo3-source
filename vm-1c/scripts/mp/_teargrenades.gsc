@@ -7,6 +7,7 @@
 
 // Namespace namespace_5bd7fc09
 // Params 0, eflags: 0x0
+// namespace_5bd7fc09<file_0>::function_d290ebfa
 // Checksum 0xfb5f7a04, Offset: 0x138
 // Size: 0xa4
 function main() {
@@ -22,6 +23,7 @@ function main() {
 
 // Namespace namespace_5bd7fc09
 // Params 0, eflags: 0x0
+// namespace_5bd7fc09<file_0>::function_b8add1a2
 // Checksum 0x4dbf47a4, Offset: 0x1e8
 // Size: 0x1c
 function function_b8add1a2() {
@@ -30,6 +32,7 @@ function function_b8add1a2() {
 
 // Namespace namespace_5bd7fc09
 // Params 1, eflags: 0x0
+// namespace_5bd7fc09<file_0>::function_2641b450
 // Checksum 0x96cc1fba, Offset: 0x210
 // Size: 0x1a
 function function_2641b450(disconnected) {
@@ -38,6 +41,7 @@ function function_2641b450(disconnected) {
 
 // Namespace namespace_5bd7fc09
 // Params 0, eflags: 0x0
+// namespace_5bd7fc09<file_0>::function_ba1b8fa
 // Checksum 0x5a33845e, Offset: 0x238
 // Size: 0x274
 function function_ba1b8fa() {
@@ -80,6 +84,7 @@ function function_ba1b8fa() {
 
 // Namespace namespace_5bd7fc09
 // Params 1, eflags: 0x0
+// namespace_5bd7fc09<file_0>::function_b0dbd0d8
 // Checksum 0x711da42b, Offset: 0x4b8
 // Size: 0x4c
 function function_b0dbd0d8(team) {
@@ -90,6 +95,7 @@ function function_b0dbd0d8(team) {
 
 // Namespace namespace_5bd7fc09
 // Params 1, eflags: 0x0
+// namespace_5bd7fc09<file_0>::function_206015cd
 // Checksum 0xa14bc6f7, Offset: 0x510
 // Size: 0x228
 function tear(pos) {
@@ -126,6 +132,7 @@ function tear(pos) {
 
 // Namespace namespace_5bd7fc09
 // Params 0, eflags: 0x0
+// namespace_5bd7fc09<file_0>::function_700f69bc
 // Checksum 0x50a39cb8, Offset: 0x740
 // Size: 0x1a
 function function_700f69bc() {
@@ -135,6 +142,7 @@ function function_700f69bc() {
 
 // Namespace namespace_5bd7fc09
 // Params 0, eflags: 0x0
+// namespace_5bd7fc09<file_0>::function_580ff16b
 // Checksum 0x83e855bb, Offset: 0x768
 // Size: 0xd6
 function function_580ff16b() {
@@ -160,6 +168,7 @@ function function_580ff16b() {
 
     // Namespace namespace_5bd7fc09
     // Params 3, eflags: 0x0
+    // namespace_5bd7fc09<file_0>::function_77810775
     // Checksum 0xe1881f9a, Offset: 0x848
     // Size: 0x2ec
     function drawcylinder(pos, rad, height) {

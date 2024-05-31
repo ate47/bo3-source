@@ -15,6 +15,7 @@
 
 // Namespace zm_powerup_carpenter
 // Params 0, eflags: 0x2
+// namespace_a5ab9a0e<file_0>::function_2dc19561
 // Checksum 0x6f65eba2, Offset: 0x2d8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -23,6 +24,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_carpenter
 // Params 0, eflags: 0x1 linked
+// namespace_a5ab9a0e<file_0>::function_8c87d8eb
 // Checksum 0xe83bfb6c, Offset: 0x318
 // Size: 0xb4
 function __init__() {
@@ -35,6 +37,7 @@ function __init__() {
 
 // Namespace zm_powerup_carpenter
 // Params 1, eflags: 0x1 linked
+// namespace_a5ab9a0e<file_0>::function_88d5fa3a
 // Checksum 0x56f49635, Offset: 0x3d8
 // Size: 0x9c
 function grab_carpenter(player) {
@@ -51,6 +54,7 @@ function grab_carpenter(player) {
 
 // Namespace zm_powerup_carpenter
 // Params 1, eflags: 0x1 linked
+// namespace_a5ab9a0e<file_0>::function_30475bf2
 // Checksum 0xa77760ca, Offset: 0x480
 // Size: 0x324
 function start_carpenter(origin) {
@@ -97,6 +101,7 @@ function start_carpenter(origin) {
 
 // Namespace zm_powerup_carpenter
 // Params 2, eflags: 0x1 linked
+// namespace_a5ab9a0e<file_0>::function_476f2c76
 // Checksum 0xbb715fe8, Offset: 0x7b0
 // Size: 0x13e
 function get_closest_window_repair(windows, origin) {
@@ -121,6 +126,7 @@ function get_closest_window_repair(windows, origin) {
 
 // Namespace zm_powerup_carpenter
 // Params 1, eflags: 0x1 linked
+// namespace_a5ab9a0e<file_0>::function_8cf31031
 // Checksum 0xa2666c73, Offset: 0x8f8
 // Size: 0x492
 function function_8cf31031(origin) {
@@ -189,6 +195,7 @@ function function_8cf31031(origin) {
 
 // Namespace zm_powerup_carpenter
 // Params 1, eflags: 0x1 linked
+// namespace_a5ab9a0e<file_0>::function_3a823ae4
 // Checksum 0x23cf1427, Offset: 0xd98
 // Size: 0x166
 function get_near_boards(windows) {
@@ -217,6 +224,7 @@ function get_near_boards(windows) {
 
 // Namespace zm_powerup_carpenter
 // Params 1, eflags: 0x1 linked
+// namespace_a5ab9a0e<file_0>::function_50224fab
 // Checksum 0x6ef7041a, Offset: 0xf08
 // Size: 0x166
 function get_far_boards(windows) {
@@ -245,6 +253,7 @@ function get_far_boards(windows) {
 
 // Namespace zm_powerup_carpenter
 // Params 2, eflags: 0x1 linked
+// namespace_a5ab9a0e<file_0>::function_9ce998a0
 // Checksum 0xea39f32e, Offset: 0x1078
 // Size: 0x2ee
 function repair_far_boards(barriers, upgrade) {
@@ -286,6 +295,7 @@ function repair_far_boards(barriers, upgrade) {
 
 // Namespace zm_powerup_carpenter
 // Params 0, eflags: 0x1 linked
+// namespace_a5ab9a0e<file_0>::function_8ebc0f8c
 // Checksum 0xe0d6046e, Offset: 0x1370
 // Size: 0x24
 function func_should_drop_carpenter() {
@@ -297,6 +307,7 @@ function func_should_drop_carpenter() {
 
 // Namespace zm_powerup_carpenter
 // Params 0, eflags: 0x1 linked
+// namespace_a5ab9a0e<file_0>::function_280a3281
 // Checksum 0x37bb78a1, Offset: 0x13a0
 // Size: 0x8c
 function get_num_window_destroyed() {

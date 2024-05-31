@@ -6,6 +6,7 @@
 
 // Namespace namespace_bbfcd64f
 // Params 0, eflags: 0x1 linked
+// namespace_bbfcd64f<file_0>::function_d290ebfa
 // Checksum 0x9baaa0ab, Offset: 0xf8
 // Size: 0x4c
 function main() {
@@ -14,6 +15,7 @@ function main() {
 
 // Namespace namespace_bbfcd64f
 // Params 7, eflags: 0x1 linked
+// namespace_bbfcd64f<file_0>::function_c49f36a3
 // Checksum 0xad1477c8, Offset: 0x150
 // Size: 0x12e
 function function_c49f36a3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

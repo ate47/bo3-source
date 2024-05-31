@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_newworld_8",
+    "igdtseqnum": 109,
+    "challengeWidget": "Grenade",
+    "challengeDetails": "ACCOLADES_NEW_8",
+    "challengeName": "ACCOLADES_NEW_8_NAME",
+    "centerText": "3",
+    "challengeReference": "MISSION_NEWWORLD_CHALLENGE8"
+}

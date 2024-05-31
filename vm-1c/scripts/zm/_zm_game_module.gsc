@@ -12,6 +12,7 @@
 
 // Namespace zm_game_module
 // Params 7, eflags: 0x0
+// namespace_a2b7236a<file_0>::function_f2922c86
 // Checksum 0xb699760b, Offset: 0x210
 // Size: 0x238
 function register_game_module(index, module_name, pre_init_func, post_init_func, pre_init_zombie_spawn_func, post_init_zombie_spawn_func, hub_start_func) {
@@ -40,6 +41,7 @@ function register_game_module(index, module_name, pre_init_func, post_init_func,
 
 // Namespace zm_game_module
 // Params 1, eflags: 0x0
+// namespace_a2b7236a<file_0>::function_9633a8c1
 // Checksum 0xc303764, Offset: 0x450
 // Size: 0xac
 function set_current_game_module(game_module_index) {
@@ -58,6 +60,7 @@ function set_current_game_module(game_module_index) {
 
 // Namespace zm_game_module
 // Params 0, eflags: 0x1 linked
+// namespace_a2b7236a<file_0>::function_dde455ad
 // Checksum 0xa9200637, Offset: 0x508
 // Size: 0x1a
 function get_current_game_module() {
@@ -66,6 +69,7 @@ function get_current_game_module() {
 
 // Namespace zm_game_module
 // Params 1, eflags: 0x1 linked
+// namespace_a2b7236a<file_0>::function_41dd939f
 // Checksum 0xdc5d0d66, Offset: 0x530
 // Size: 0x7a
 function get_game_module(game_module_index) {
@@ -82,6 +86,7 @@ function get_game_module(game_module_index) {
 
 // Namespace zm_game_module
 // Params 0, eflags: 0x0
+// namespace_a2b7236a<file_0>::function_899676d6
 // Checksum 0xef8244e8, Offset: 0x5b8
 // Size: 0x5c
 function game_module_pre_zombie_spawn_init() {
@@ -94,6 +99,7 @@ function game_module_pre_zombie_spawn_init() {
 
 // Namespace zm_game_module
 // Params 0, eflags: 0x0
+// namespace_a2b7236a<file_0>::function_23d0e449
 // Checksum 0xda46626f, Offset: 0x620
 // Size: 0x5c
 function game_module_post_zombie_spawn_init() {
@@ -106,6 +112,7 @@ function game_module_post_zombie_spawn_init() {
 
 // Namespace zm_game_module
 // Params 1, eflags: 0x1 linked
+// namespace_a2b7236a<file_0>::function_e3c73203
 // Checksum 0xf2433d7e, Offset: 0x688
 // Size: 0x76
 function function_e3c73203(freeze) {
@@ -117,6 +124,7 @@ function function_e3c73203(freeze) {
 
 // Namespace zm_game_module
 // Params 0, eflags: 0x0
+// namespace_a2b7236a<file_0>::function_c657f013
 // Checksum 0xecb72f48, Offset: 0x708
 // Size: 0x10a
 function respawn_spectators_and_freeze_players() {
@@ -134,6 +142,7 @@ function respawn_spectators_and_freeze_players() {
 
 // Namespace zm_game_module
 // Params 10, eflags: 0x0
+// namespace_a2b7236a<file_0>::function_4f73361b
 // Checksum 0x96304f2e, Offset: 0x820
 // Size: 0xc8
 function damage_callback_no_pvp_damage(einflictor, eattacker, idamage, idflags, smeansofdeath, eapon, vpoint, vdir, shitloc, psoffsettime) {
@@ -151,6 +160,7 @@ function damage_callback_no_pvp_damage(einflictor, eattacker, idamage, idflags, 
 
 // Namespace zm_game_module
 // Params 0, eflags: 0x1 linked
+// namespace_a2b7236a<file_0>::function_2ee48b64
 // Checksum 0xf83d6d4c, Offset: 0x8f0
 // Size: 0xba
 function respawn_players() {
@@ -163,6 +173,7 @@ function respawn_players() {
 
 // Namespace zm_game_module
 // Params 1, eflags: 0x0
+// namespace_a2b7236a<file_0>::function_9ac45cb2
 // Checksum 0x727eb208, Offset: 0x9b8
 // Size: 0x10a
 function zombie_goto_round(target_round) {
@@ -184,6 +195,7 @@ function zombie_goto_round(target_round) {
 
 // Namespace zm_game_module
 // Params 0, eflags: 0x0
+// namespace_a2b7236a<file_0>::function_2f0d2b6a
 // Checksum 0xe8377067, Offset: 0xad0
 // Size: 0x24
 function make_supersprinter() {
@@ -192,6 +204,7 @@ function make_supersprinter() {
 
 // Namespace zm_game_module
 // Params 1, eflags: 0x0
+// namespace_a2b7236a<file_0>::function_ed1075e3
 // Checksum 0x41c6c77, Offset: 0xb00
 // Size: 0x384
 function function_ed1075e3(var_17837263) {
@@ -235,6 +248,7 @@ function function_ed1075e3(var_17837263) {
 
 // Namespace zm_game_module
 // Params 4, eflags: 0x0
+// namespace_a2b7236a<file_0>::function_ac8c475a
 // Checksum 0xbd00a67b, Offset: 0xe90
 // Size: 0x120
 function create_fireworks(launch_spots, min_wait, max_wait, randomize) {
@@ -253,6 +267,7 @@ function create_fireworks(launch_spots, min_wait, max_wait, randomize) {
 
 // Namespace zm_game_module
 // Params 1, eflags: 0x1 linked
+// namespace_a2b7236a<file_0>::function_d94cc609
 // Checksum 0xac5616a1, Offset: 0xfb8
 // Size: 0x2bc
 function fireworks_launch(launch_spot) {

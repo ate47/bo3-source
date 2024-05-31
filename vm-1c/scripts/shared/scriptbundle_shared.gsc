@@ -9,6 +9,7 @@ class cscriptbundleobjectbase {
 
     // Namespace cscriptbundleobjectbase
     // Params 0, eflags: 0x1 linked
+    // namespace_28d48ba3<file_0>::function_3983140d
     // Checksum 0x54798668, Offset: 0x418
     // Size: 0xa
     function get_ent() {
@@ -17,6 +18,7 @@ class cscriptbundleobjectbase {
 
     // Namespace cscriptbundleobjectbase
     // Params 2, eflags: 0x1 linked
+    // namespace_28d48ba3<file_0>::function_f64f72cb
     // Checksum 0xef96d976, Offset: 0x348
     // Size: 0xc4
     function warning(condition, str_msg) {
@@ -30,6 +32,7 @@ class cscriptbundleobjectbase {
 
     // Namespace cscriptbundleobjectbase
     // Params 2, eflags: 0x1 linked
+    // namespace_28d48ba3<file_0>::function_fe17af4d
     // Checksum 0x8f30bef4, Offset: 0x230
     // Size: 0x110
     function error(condition, str_msg) {
@@ -48,6 +51,7 @@ class cscriptbundleobjectbase {
 
     // Namespace cscriptbundleobjectbase
     // Params 1, eflags: 0x1 linked
+    // namespace_28d48ba3<file_0>::function_60ad95cd
     // Checksum 0xfb9ca0a7, Offset: 0x168
     // Size: 0xbc
     function log(str_msg) {
@@ -56,6 +60,7 @@ class cscriptbundleobjectbase {
 
     // Namespace cscriptbundleobjectbase
     // Params 3, eflags: 0x1 linked
+    // namespace_28d48ba3<file_0>::function_c35e6aab
     // Checksum 0x5844d1c3, Offset: 0x120
     // Size: 0x40
     function init(s_objdef, o_bundle, e_ent) {
@@ -72,6 +77,7 @@ class cscriptbundlebase {
 
     // Namespace cscriptbundlebase
     // Params 0, eflags: 0x1 linked
+    // namespace_3073d1de<file_0>::function_9b385ca5
     // Checksum 0x6de21345, Offset: 0x5c8
     // Size: 0x1c
     function constructor() {
@@ -81,6 +87,7 @@ class cscriptbundlebase {
 
     // Namespace cscriptbundlebase
     // Params 2, eflags: 0x1 linked
+    // namespace_3073d1de<file_0>::function_f64f72cb
     // Checksum 0x6ed1fa83, Offset: 0x8a0
     // Size: 0x5c
     function warning(condition, str_msg) {
@@ -95,6 +102,7 @@ class cscriptbundlebase {
 
     // Namespace cscriptbundlebase
     // Params 2, eflags: 0x1 linked
+    // namespace_3073d1de<file_0>::function_fe17af4d
     // Checksum 0x109a92d7, Offset: 0x7f8
     // Size: 0x9c
     function error(condition, str_msg) {
@@ -112,6 +120,7 @@ class cscriptbundlebase {
 
     // Namespace cscriptbundlebase
     // Params 1, eflags: 0x1 linked
+    // namespace_3073d1de<file_0>::function_60ad95cd
     // Checksum 0x76dbfee2, Offset: 0x798
     // Size: 0x54
     function log(str_msg) {
@@ -120,6 +129,7 @@ class cscriptbundlebase {
 
     // Namespace cscriptbundlebase
     // Params 1, eflags: 0x1 linked
+    // namespace_3073d1de<file_0>::function_2a8a1f09
     // Checksum 0x6f4cf57e, Offset: 0x760
     // Size: 0x2c
     function remove_object(o_object) {
@@ -128,6 +138,7 @@ class cscriptbundlebase {
 
     // Namespace cscriptbundlebase
     // Params 1, eflags: 0x1 linked
+    // namespace_3073d1de<file_0>::function_aa84004
     // Checksum 0x394eae86, Offset: 0x6d8
     // Size: 0x7a
     function add_object(o_object) {
@@ -141,6 +152,7 @@ class cscriptbundlebase {
 
     // Namespace cscriptbundlebase
     // Params 0, eflags: 0x1 linked
+    // namespace_3073d1de<file_0>::function_55d8d818
     // Checksum 0x4394c8e9, Offset: 0x6c0
     // Size: 0xa
     function is_testing() {
@@ -149,6 +161,7 @@ class cscriptbundlebase {
 
     // Namespace cscriptbundlebase
     // Params 0, eflags: 0x1 linked
+    // namespace_3073d1de<file_0>::function_e17ab6da
     // Checksum 0xd36ab5bc, Offset: 0x6a0
     // Size: 0x12
     function get_objects() {
@@ -157,6 +170,7 @@ class cscriptbundlebase {
 
     // Namespace cscriptbundlebase
     // Params 0, eflags: 0x1 linked
+    // namespace_3073d1de<file_0>::function_224e6cf9
     // Checksum 0xc521a181, Offset: 0x680
     // Size: 0x12
     function get_vm() {
@@ -165,6 +179,7 @@ class cscriptbundlebase {
 
     // Namespace cscriptbundlebase
     // Params 0, eflags: 0x1 linked
+    // namespace_3073d1de<file_0>::function_e9e6c8b
     // Checksum 0x3e31ff60, Offset: 0x668
     // Size: 0xa
     function get_name() {
@@ -173,6 +188,7 @@ class cscriptbundlebase {
 
     // Namespace cscriptbundlebase
     // Params 0, eflags: 0x1 linked
+    // namespace_3073d1de<file_0>::function_6f9dda36
     // Checksum 0x63864013, Offset: 0x648
     // Size: 0x12
     function get_type() {
@@ -181,6 +197,7 @@ class cscriptbundlebase {
 
     // Namespace cscriptbundlebase
     // Params 3, eflags: 0x1 linked
+    // namespace_3073d1de<file_0>::function_c35e6aab
     // Checksum 0xecff8071, Offset: 0x600
     // Size: 0x40
     function init(str_name, s, b_testing) {
@@ -191,6 +208,7 @@ class cscriptbundlebase {
 
     // Namespace cscriptbundlebase
     // Params 1, eflags: 0x1 linked
+    // namespace_3073d1de<file_0>::function_e248348d
     // Checksum 0x67ed96c9, Offset: 0x5b0
     // Size: 0xc
     function on_error(e) {
@@ -201,6 +219,7 @@ class cscriptbundlebase {
 
 // Namespace scriptbundle
 // Params 1, eflags: 0x1 linked
+// namespace_f4a44050<file_0>::function_4c206f9a
 // Checksum 0xbf45821f, Offset: 0xbd8
 // Size: 0x184
 function error_on_screen(str_msg) {
@@ -220,6 +239,7 @@ function error_on_screen(str_msg) {
 
 // Namespace scriptbundle
 // Params 0, eflags: 0x1 linked
+// namespace_f4a44050<file_0>::function_63d5271a
 // Checksum 0x1005fca8, Offset: 0xd68
 // Size: 0x6e
 function _destroy_error_on_screen() {
@@ -234,6 +254,7 @@ function _destroy_error_on_screen() {
 
     // Namespace scriptbundle
     // Params 1, eflags: 0x1 linked
+    // namespace_f4a44050<file_0>::function_ea342ad8
     // Checksum 0x6a7dd4e6, Offset: 0xde0
     // Size: 0x18c
     function warning_on_screen(str_msg) {
@@ -255,6 +276,7 @@ function _destroy_error_on_screen() {
 
 // Namespace scriptbundle
 // Params 0, eflags: 0x1 linked
+// namespace_f4a44050<file_0>::function_31c66e58
 // Checksum 0xef4b6a8f, Offset: 0xf78
 // Size: 0x6e
 function _destroy_warning_on_screen() {

@@ -27,6 +27,7 @@
 
 // Namespace emp
 // Params 0, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_c35e6aab
 // Checksum 0xdade4432, Offset: 0x6a8
 // Size: 0x2dc
 function init() {
@@ -53,6 +54,7 @@ function init() {
 
 // Namespace emp
 // Params 0, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_344a116b
 // Checksum 0x745d2afe, Offset: 0x990
 // Size: 0xec
 function initturretvehicle() {
@@ -69,6 +71,7 @@ function initturretvehicle() {
 
 // Namespace emp
 // Params 0, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_be02cc45
 // Checksum 0x889c859, Offset: 0xa88
 // Size: 0x24
 function onplayerspawned() {
@@ -78,6 +81,7 @@ function onplayerspawned() {
 
 // Namespace emp
 // Params 0, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_603848d5
 // Checksum 0x15824918, Offset: 0xab8
 // Size: 0x3a
 function onplayerconnect() {
@@ -87,6 +91,7 @@ function onplayerconnect() {
 
 // Namespace emp
 // Params 0, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_9765d140
 // Checksum 0x6d6296b3, Offset: 0xb00
 // Size: 0x1f8
 function function_9765d140() {
@@ -110,6 +115,7 @@ function function_9765d140() {
 
 // Namespace emp
 // Params 1, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_b5da3f4f
 // Checksum 0xd340d5f6, Offset: 0xd00
 // Size: 0x34c
 function function_b5da3f4f(emp) {
@@ -139,6 +145,7 @@ function function_b5da3f4f(emp) {
 
 // Namespace emp
 // Params 1, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_a102b768
 // Checksum 0x3f48ed8b, Offset: 0x1058
 // Size: 0x1dc
 function deployempturret(emp) {
@@ -162,6 +169,7 @@ function deployempturret(emp) {
 
 // Namespace emp
 // Params 1, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_c18de8cf
 // Checksum 0x72b7733f, Offset: 0x1240
 // Size: 0x84
 function hackedcallbackpre(hacker) {
@@ -172,6 +180,7 @@ function hackedcallbackpre(hacker) {
 
 // Namespace emp
 // Params 1, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_96e69632
 // Checksum 0x6e3bb1bf, Offset: 0x12d0
 // Size: 0x44
 function hackedcallbackpost(hacker) {
@@ -181,6 +190,7 @@ function hackedcallbackpost(hacker) {
 
 // Namespace emp
 // Params 1, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_9021213b
 // Checksum 0xc471d655, Offset: 0x1320
 // Size: 0x4c
 function doneempfx(fxtagorigin) {
@@ -190,6 +200,7 @@ function doneempfx(fxtagorigin) {
 
 // Namespace emp
 // Params 0, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_e12e5901
 // Checksum 0x849433c6, Offset: 0x1378
 // Size: 0x3c
 function playempfx() {
@@ -200,6 +211,7 @@ function playempfx() {
 
 // Namespace emp
 // Params 0, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_60f946
 // Checksum 0xc4f519ed, Offset: 0x13c0
 // Size: 0x84
 function on_timeout() {
@@ -213,6 +225,7 @@ function on_timeout() {
 
 // Namespace emp
 // Params 1, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_48cb58dd
 // Checksum 0x589fa470, Offset: 0x1450
 // Size: 0x4c
 function oncancelplacement(emp) {
@@ -221,6 +234,7 @@ function oncancelplacement(emp) {
 
 // Namespace emp
 // Params 15, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_3574c1df
 // Checksum 0x5d845760, Offset: 0x14a8
 // Size: 0x158
 function onturretdamage(einflictor, attacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -236,6 +250,7 @@ function onturretdamage(einflictor, attacker, idamage, idflags, smeansofdeath, w
 
 // Namespace emp
 // Params 8, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_fd39f182
 // Checksum 0x3da8dd63, Offset: 0x1608
 // Size: 0x64
 function onturretdeath(inflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -244,6 +259,7 @@ function onturretdeath(inflictor, attacker, idamage, smeansofdeath, weapon, vdir
 
 // Namespace emp
 // Params 2, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_e525f360
 // Checksum 0xe1595e7d, Offset: 0x1678
 // Size: 0x3c
 function ondeathafterframeend(attacker, weapon) {
@@ -255,6 +271,7 @@ function ondeathafterframeend(attacker, weapon) {
 
 // Namespace emp
 // Params 2, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_f87d22c8
 // Checksum 0x8d4e2de6, Offset: 0x16c0
 // Size: 0x22c
 function ondeath(attacker, weapon) {
@@ -277,6 +294,7 @@ function ondeath(attacker, weapon) {
 
 // Namespace emp
 // Params 1, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_6c415344
 // Checksum 0x5797d9ad, Offset: 0x18f8
 // Size: 0x24
 function onshutdown(emp) {
@@ -285,6 +303,7 @@ function onshutdown(emp) {
 
 // Namespace emp
 // Params 1, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_5c7d326f
 // Checksum 0xac2607db, Offset: 0x1928
 // Size: 0x134
 function shutdownemp(emp) {
@@ -310,6 +329,7 @@ function shutdownemp(emp) {
 
 // Namespace emp
 // Params 4, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_2eef0f59
 // Checksum 0x6bcee5bf, Offset: 0x1a68
 // Size: 0x54
 function stopemp(currentteam, currentownerentnum, originalteam, killstreakid) {
@@ -319,6 +339,7 @@ function stopemp(currentteam, currentownerentnum, originalteam, killstreakid) {
 
 // Namespace emp
 // Params 2, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_75562292
 // Checksum 0xbf2a633b, Offset: 0x1ac8
 // Size: 0x42
 function stopempeffect(team, ownerentnum) {
@@ -329,6 +350,7 @@ function stopempeffect(team, ownerentnum) {
 
 // Namespace emp
 // Params 2, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_b9ce1067
 // Checksum 0xa7bcc1be, Offset: 0x1b18
 // Size: 0x34
 function stopemprule(killstreakoriginalteam, killstreakid) {
@@ -337,6 +359,7 @@ function stopemprule(killstreakoriginalteam, killstreakid) {
 
 // Namespace emp
 // Params 0, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_ca8da989
 // Checksum 0x2bf3ab27, Offset: 0x1b58
 // Size: 0x14
 function hasactiveemp() {
@@ -345,6 +368,7 @@ function hasactiveemp() {
 
 // Namespace emp
 // Params 1, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_ef8c4e
 // Checksum 0xc881f687, Offset: 0x1b78
 // Size: 0x1c
 function teamhasactiveemp(team) {
@@ -353,6 +377,7 @@ function teamhasactiveemp(team) {
 
 // Namespace emp
 // Params 0, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_4e6c2fe5
 // Checksum 0x52bcdfa4, Offset: 0x1ba0
 // Size: 0x164
 function enemyempactive() {
@@ -375,6 +400,7 @@ function enemyempactive() {
 
 // Namespace emp
 // Params 0, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_7e727584
 // Checksum 0x3169db1b, Offset: 0x1d10
 // Size: 0xb4
 function enemyempowner() {
@@ -389,6 +415,7 @@ function enemyempowner() {
 
 // Namespace emp
 // Params 2, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_87cb24fc
 // Checksum 0x20da5e81, Offset: 0x1dd0
 // Size: 0x1b4
 function emp_jamenemies(empent, hacked) {
@@ -419,6 +446,7 @@ function emp_jamenemies(empent, hacked) {
 
 // Namespace emp
 // Params 0, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_acc70b97
 // Checksum 0xdcd703c7, Offset: 0x1f90
 // Size: 0xae
 function emptracker() {
@@ -433,6 +461,7 @@ function emptracker() {
 
 // Namespace emp
 // Params 0, eflags: 0x1 linked
+// namespace_8790b7c1<file_0>::function_62040dd4
 // Checksum 0xc2622160, Offset: 0x2048
 // Size: 0xb4
 function updateemp() {

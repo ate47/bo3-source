@@ -10,6 +10,7 @@
 
 // Namespace namespace_8215525
 // Params 0, eflags: 0x2
+// namespace_8215525<file_0>::function_2dc19561
 // Checksum 0x10f48560, Offset: 0x320
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,6 +19,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_8215525
 // Params 0, eflags: 0x1 linked
+// namespace_8215525<file_0>::function_8c87d8eb
 // Checksum 0xc700c34f, Offset: 0x360
 // Size: 0x1fc
 function __init__() {
@@ -32,6 +34,7 @@ function __init__() {
 
 // Namespace namespace_8215525
 // Params 7, eflags: 0x1 linked
+// namespace_8215525<file_0>::function_3b8ce539
 // Checksum 0x9be36c85, Offset: 0x568
 // Size: 0xa4
 function function_3b8ce539(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -44,6 +47,7 @@ function function_3b8ce539(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_8215525
 // Params 7, eflags: 0x1 linked
+// namespace_8215525<file_0>::function_adc7474a
 // Checksum 0x78f8c129, Offset: 0x618
 // Size: 0xa4
 function function_adc7474a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -56,6 +60,7 @@ function function_adc7474a(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_8215525
 // Params 7, eflags: 0x1 linked
+// namespace_8215525<file_0>::function_627dd7e5
 // Checksum 0xd1abdacd, Offset: 0x6c8
 // Size: 0xa4
 function function_627dd7e5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -68,6 +73,7 @@ function function_627dd7e5(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_8215525
 // Params 7, eflags: 0x1 linked
+// namespace_8215525<file_0>::function_7ba84100
 // Checksum 0x221ee2b3, Offset: 0x778
 // Size: 0x8c
 function function_7ba84100(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -77,6 +83,7 @@ function function_7ba84100(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_8215525
 // Params 7, eflags: 0x1 linked
+// namespace_8215525<file_0>::function_d2012501
 // Checksum 0x6d37b590, Offset: 0x810
 // Size: 0x64
 function function_d2012501(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -6,6 +6,7 @@
 
 // Namespace namespace_f0278666
 // Params 0, eflags: 0x2
+// namespace_f0278666<file_0>::function_2dc19561
 // Checksum 0x9a5421e1, Offset: 0x420
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -14,6 +15,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_f0278666
 // Params 0, eflags: 0x1 linked
+// namespace_f0278666<file_0>::function_8c87d8eb
 // Checksum 0xab0ec71b, Offset: 0x460
 // Size: 0x184
 function __init__() {
@@ -30,6 +32,7 @@ function __init__() {
 
 // Namespace gadget_camo_render
 // Params 1, eflags: 0x1 linked
+// namespace_4a551dff<file_0>::function_eb025809
 // Checksum 0x29aa0b9f, Offset: 0x5f0
 // Size: 0xbc
 function forceon(local_client_num) {
@@ -43,6 +46,7 @@ function forceon(local_client_num) {
 
 // Namespace gadget_camo_render
 // Params 2, eflags: 0x1 linked
+// namespace_4a551dff<file_0>::function_7cd85a6d
 // Checksum 0xc14d6820, Offset: 0x6b8
 // Size: 0x364
 function doreveal(local_client_num, direction) {

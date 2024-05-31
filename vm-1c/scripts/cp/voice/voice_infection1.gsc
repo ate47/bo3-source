@@ -4,6 +4,7 @@
 
 // Namespace namespace_67bf0840
 // Params 0, eflags: 0x1 linked
+// namespace_67bf0840<file_0>::function_e230521c
 // Checksum 0x6a6da443, Offset: 0x1250
 // Size: 0xd44
 function init_voice() {

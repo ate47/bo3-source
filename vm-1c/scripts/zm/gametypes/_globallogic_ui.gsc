@@ -12,6 +12,7 @@
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x2
+// namespace_88a69b2f<file_0>::function_2dc19561
 // Checksum 0x5a958bed, Offset: 0x248
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,6 +21,7 @@ function autoexec function_2dc19561() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
+// namespace_88a69b2f<file_0>::function_8c87d8eb
 // Checksum 0x99ec1590, Offset: 0x288
 // Size: 0x4
 function __init__() {
@@ -28,6 +30,7 @@ function __init__() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
+// namespace_88a69b2f<file_0>::function_51f86b78
 // Checksum 0xe1c11b17, Offset: 0x298
 // Size: 0x64
 function setupcallbacks() {
@@ -39,6 +42,7 @@ function setupcallbacks() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
+// namespace_88a69b2f<file_0>::function_ebdcf8b2
 // Checksum 0x4f9fe9df, Offset: 0x308
 // Size: 0x27c
 function freegameplayhudelems() {
@@ -89,6 +93,7 @@ function freegameplayhudelems() {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x0
+// namespace_88a69b2f<file_0>::function_57487b97
 // Checksum 0xfb20dd7d, Offset: 0x590
 // Size: 0xc6
 function teamplayercountsequal(playercounts) {
@@ -107,6 +112,7 @@ function teamplayercountsequal(playercounts) {
 
 // Namespace globallogic_ui
 // Params 2, eflags: 0x0
+// namespace_88a69b2f<file_0>::function_f5aaca6c
 // Checksum 0xcbd00bf2, Offset: 0x660
 // Size: 0xda
 function teamwithlowestplayercount(playercounts, ignore_team) {
@@ -123,6 +129,7 @@ function teamwithlowestplayercount(playercounts, ignore_team) {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x1 linked
+// namespace_88a69b2f<file_0>::function_7ec49a
 // Checksum 0xe330584f, Offset: 0x748
 // Size: 0x56c
 function menuautoassign(comingfrommenu) {
@@ -211,6 +218,7 @@ function menuautoassign(comingfrommenu) {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
+// namespace_88a69b2f<file_0>::function_28e38a05
 // Checksum 0xff84dac, Offset: 0xcc0
 // Size: 0xce
 function teamscoresequal() {
@@ -229,6 +237,7 @@ function teamscoresequal() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
+// namespace_88a69b2f<file_0>::function_7d0933b6
 // Checksum 0xc3aab7dc, Offset: 0xd98
 // Size: 0xc4
 function teamwithlowestscore() {
@@ -244,6 +253,7 @@ function teamwithlowestscore() {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x0
+// namespace_88a69b2f<file_0>::function_c81d9a50
 // Checksum 0x29e3fccd, Offset: 0xe68
 // Size: 0x74
 function pickteamfromscores(teams) {
@@ -258,6 +268,7 @@ function pickteamfromscores(teams) {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x0
+// namespace_88a69b2f<file_0>::function_2551192e
 // Checksum 0x45c3eb7e, Offset: 0xee8
 // Size: 0xce
 function getsplitscreenteam() {
@@ -281,6 +292,7 @@ function getsplitscreenteam() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
+// namespace_88a69b2f<file_0>::function_5c7708d6
 // Checksum 0xc3c4a600, Offset: 0xfc0
 // Size: 0xd4
 function updateobjectivetext() {
@@ -297,6 +309,7 @@ function updateobjectivetext() {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
+// namespace_88a69b2f<file_0>::function_58a15001
 // Checksum 0x51601f7a, Offset: 0x10a0
 // Size: 0x1c
 function closemenus() {
@@ -305,6 +318,7 @@ function closemenus() {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x1 linked
+// namespace_88a69b2f<file_0>::function_1fb4fec9
 // Checksum 0xa82ba665, Offset: 0x10c8
 // Size: 0x12c
 function beginclasschoice(forcenewchoice) {
@@ -325,6 +339,7 @@ function beginclasschoice(forcenewchoice) {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
+// namespace_88a69b2f<file_0>::function_845b492e
 // Checksum 0x28668455, Offset: 0x1200
 // Size: 0x74
 function showmainmenuforteam() {
@@ -335,6 +350,7 @@ function showmainmenuforteam() {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x1 linked
+// namespace_88a69b2f<file_0>::function_80ae63bb
 // Checksum 0xd64fa18, Offset: 0x1280
 // Size: 0x204
 function menuteam(team) {
@@ -371,6 +387,7 @@ function menuteam(team) {
 
 // Namespace globallogic_ui
 // Params 0, eflags: 0x1 linked
+// namespace_88a69b2f<file_0>::function_b62abd87
 // Checksum 0x4384b87a, Offset: 0x1490
 // Size: 0x182
 function menuspectator() {
@@ -399,6 +416,7 @@ function menuspectator() {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x1 linked
+// namespace_88a69b2f<file_0>::function_6ede0f48
 // Checksum 0x310e6512, Offset: 0x1620
 // Size: 0x24
 function menuclass(response) {
@@ -407,6 +425,7 @@ function menuclass(response) {
 
 // Namespace globallogic_ui
 // Params 1, eflags: 0x1 linked
+// namespace_88a69b2f<file_0>::function_89e70222
 // Checksum 0xe5cde140, Offset: 0x1650
 // Size: 0x44
 function removespawnmessageshortly(delay) {

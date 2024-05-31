@@ -1,0 +1,12 @@
+{
+    "vmtype": "none",
+    "name": "cpac_newworld_2",
+    "igdtseqnum": 103,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Find",
+    "challengeDetails": "ACCOLADES_NEW_2",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_NEW_2_NAME",
+    "centerText": "5",
+    "challengeReference": "MISSION_NEWWORLD_COLLECTIBLE"
+}

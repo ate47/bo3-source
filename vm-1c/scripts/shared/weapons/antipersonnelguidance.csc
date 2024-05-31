@@ -11,6 +11,7 @@
 
 // Namespace antipersonnel_guidance
 // Params 0, eflags: 0x2
+// namespace_319301a4<file_0>::function_2dc19561
 // Checksum 0x391d5cdf, Offset: 0x1d0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,6 +20,7 @@ function autoexec function_2dc19561() {
 
 // Namespace antipersonnel_guidance
 // Params 0, eflags: 0x1 linked
+// namespace_319301a4<file_0>::function_8c87d8eb
 // Checksum 0xf734480, Offset: 0x210
 // Size: 0x4c
 function __init__() {
@@ -28,6 +30,7 @@ function __init__() {
 
 // Namespace antipersonnel_guidance
 // Params 0, eflags: 0x1 linked
+// namespace_319301a4<file_0>::function_536049a7
 // Checksum 0x3d39523a, Offset: 0x268
 // Size: 0xc2
 function player_init() {
@@ -40,6 +43,7 @@ function player_init() {
 
 // Namespace antipersonnel_guidance
 // Params 1, eflags: 0x1 linked
+// namespace_319301a4<file_0>::function_3a723e07
 // Checksum 0x52dee59b, Offset: 0x338
 // Size: 0x126
 function watch_lockon(localclientnum) {

@@ -11,6 +11,7 @@
 
 // Namespace namespace_866151e1
 // Params 0, eflags: 0x1 linked
+// namespace_866151e1<file_0>::function_d290ebfa
 // Checksum 0x100e9159, Offset: 0x170
 // Size: 0xfc
 function main() {
@@ -25,6 +26,7 @@ function main() {
 
 // Namespace namespace_866151e1
 // Params 0, eflags: 0x1 linked
+// namespace_866151e1<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x278
 // Size: 0x4
 function precache() {

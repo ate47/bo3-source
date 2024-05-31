@@ -1,0 +1,15 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_sin_bs_03",
+    "type": "collectible",
+    "igdtseqnum": 58,
+    "uiMaterial": "t7_icon_menu_p7_nc_sin_bs_03",
+    "uiModel": "p7_nc_sin_bs_03",
+    "description": "COLLECTIBLE_P7_NC_SIN_BS_03_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_SIN_BS_03_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_TOY_TRUCK",
+    "displayNameShort": "COLLECTIBLE_P7_NC_SIN_BS_03_SHORT",
+    "codexurl": "Collectables-childstoy.htm",
+    "slotSize": 0
+}

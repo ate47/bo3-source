@@ -21,6 +21,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x2
+    // namespace_e462855b<file_0>::function_2dc19561
     // Checksum 0xa37866f7, Offset: 0x278
     // Size: 0x34
     function autoexec function_2dc19561() {
@@ -29,6 +30,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_8c87d8eb
     // Checksum 0xf04a5c64, Offset: 0x2b8
     // Size: 0x4b4
     function __init__() {
@@ -81,6 +83,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_fb4f96b5
     // Checksum 0x9cd0602e, Offset: 0x778
     // Size: 0x2c
     function on_player_connect() {
@@ -92,6 +95,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_f62f1c9
     // Checksum 0xb1985489, Offset: 0x7b0
     // Size: 0x172
     function devgui_player_spawn() {
@@ -110,6 +114,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_7953bdcc
     // Checksum 0x364fb713, Offset: 0x930
     // Size: 0x188
     function devgui_player_spawn_think() {
@@ -137,6 +142,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_2a6d5fb7
     // Checksum 0xfa3065bb, Offset: 0xac0
     // Size: 0x110
     function devgui_vehicle_spawn_think() {
@@ -161,6 +167,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_9df6342b
     // Checksum 0x92344cfd, Offset: 0xbd8
     // Size: 0x8fc
     function devgui_player_weapons() {
@@ -253,6 +260,7 @@
 
     // Namespace devgui
     // Params 6, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_c71c01bb
     // Checksum 0x315a2f80, Offset: 0x14e0
     // Size: 0x21e
     function devgui_add_player_weapons(root, pname, index, a_weapons, weapon_type, mindex) {
@@ -281,6 +289,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_27141585
     // Checksum 0x81a2d5b5, Offset: 0x1708
     // Size: 0x5e
     function function_27141585() {
@@ -295,6 +304,7 @@
 
     // Namespace devgui
     // Params 4, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_3294eaad
     // Checksum 0x1c86ec2f, Offset: 0x1770
     // Size: 0x84
     function devgui_add_player_weap_command(root, pid, weap_name, cmdindex) {
@@ -304,6 +314,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_dbdf88b3
     // Checksum 0xa13a7fd4, Offset: 0x1800
     // Size: 0x90
     function devgui_weapon_think() {
@@ -319,6 +330,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_b81c4580
     // Checksum 0x83890241, Offset: 0x1898
     // Size: 0x24
     function hero_art_on_player_connect() {
@@ -327,6 +339,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_c0297769
     // Checksum 0xf144b144, Offset: 0x18c8
     // Size: 0x3e0
     function devgui_weapon_asset_name_display_think() {
@@ -390,6 +403,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_496dcd72
     // Checksum 0x1c06142b, Offset: 0x1cb0
     // Size: 0x138
     function function_496dcd72() {
@@ -412,6 +426,7 @@
 
     // Namespace devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_4a4c6581
     // Checksum 0xe29d96c, Offset: 0x1df0
     // Size: 0x5c
     function devgui_attachment_cycling_clear(index) {
@@ -421,6 +436,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_e7edddd1
     // Checksum 0xabd9f930, Offset: 0x1e58
     // Size: 0x514
     function devgui_attachment_cycling_update() {
@@ -488,6 +504,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_25884f0a
     // Checksum 0x34b9ea45, Offset: 0x2378
     // Size: 0x178
     function devgui_attachment_cycling_think() {
@@ -514,6 +531,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_47239612
     // Checksum 0x6fb99d43, Offset: 0x24f8
     // Size: 0x20c
     function devgui_test_chart_think() {
@@ -544,6 +562,7 @@
 
     // Namespace devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_820cf1c0
     // Checksum 0xff585057, Offset: 0x2710
     // Size: 0x4ac
     function devgui_give_weapon(weapon_name) {
@@ -611,6 +630,7 @@
 
     // Namespace devgui
     // Params 2, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_5ef38019
     // Checksum 0x98638c6, Offset: 0x2bc8
     // Size: 0x15c
     function function_5ef38019(var_820a0a2e, var_5c078fc5) {
@@ -628,6 +648,7 @@
 
     // Namespace devgui
     // Params 3, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_bcce253a
     // Checksum 0x8010d4e, Offset: 0x2d30
     // Size: 0x13c
     function devgui_handle_player_command(playercallback, pcb_param_1, pcb_param_2) {
@@ -651,6 +672,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_d2e4fa20
     // Checksum 0xa879970a, Offset: 0x2e78
     // Size: 0x12c
     function init_debug_center_screen() {
@@ -678,6 +700,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_4bed8a5
     // Checksum 0x107adb7b, Offset: 0x2fb0
     // Size: 0x228
     function debug_center_screen() {
@@ -707,6 +730,7 @@
 
     // Namespace devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_fb989d0d
     // Checksum 0xdb996ddb, Offset: 0x31e0
     // Size: 0x142
     function add_vehicle_at_eye_trace(vehiclename) {
@@ -726,6 +750,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_8a190709
     // Checksum 0xf3e9df2b, Offset: 0x3330
     // Size: 0x98
     function watch_player_death() {

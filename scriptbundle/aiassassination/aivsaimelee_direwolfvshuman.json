@@ -1,0 +1,17 @@
+{
+    "victimbackanim": "ai_base_rifle_vs_ai_melee_b_attacked_by_dog_med_awin_defend",
+    "vmtype": "server",
+    "defendervariant": "regular",
+    "victimalternatefrontanim": "ai_base_rifle_vs_ai_melee_f_attacked_by_dog_awin_defend",
+    "configstringfiletype": "scriptbundle",
+    "name": "aivsaimelee_direwolfvshuman",
+    "type": "aiassassination",
+    "victimfrontanim": "ai_base_rifle_vs_ai_melee_f_attacked_by_dog_awin_defend",
+    "attackeralternatefrontanim": "ai_base_dog_vs_ai_melee_f_attacked_by_dog_awin_attack",
+    "attackervariant": "regular",
+    "attackerfrontanim": "ai_base_dog_vs_ai_melee_f_attacked_by_dog_awin_attack",
+    "attackerarchetype": "direwolf",
+    "defenderarchetype": "human",
+    "attackerbackanim": "ai_base_dog_vs_ai_melee_b_attacked_by_dog_med_awin_attack",
+    "igdtseqnum": 2
+}

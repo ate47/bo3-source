@@ -1,0 +1,11 @@
+{
+    "vmtype": "none",
+    "name": "cpac_aqu_15",
+    "igdtseqnum": 26,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Cybernetics",
+    "challengeDetails": "ACCOLADES_AQU_15",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_AQU_15_NAME",
+    "challengeReference": "MISSION_AQUIFER_CHALLENGE15"
+}

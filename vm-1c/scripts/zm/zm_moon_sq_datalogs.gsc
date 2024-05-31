@@ -19,6 +19,7 @@
 
 // Namespace namespace_80d0b0a9
 // Params 0, eflags: 0x1 linked
+// namespace_80d0b0a9<file_0>::function_c35e6aab
 // Checksum 0xffae8298, Offset: 0x368
 // Size: 0x404
 function init() {
@@ -62,6 +63,7 @@ function init() {
 
 // Namespace namespace_80d0b0a9
 // Params 0, eflags: 0x1 linked
+// namespace_80d0b0a9<file_0>::function_a4bcd62c
 // Checksum 0x20a4eecd, Offset: 0x778
 // Size: 0x18
 function function_a4bcd62c() {

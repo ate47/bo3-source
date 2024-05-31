@@ -1,0 +1,12 @@
+{
+    "vmtype": "none",
+    "name": "cpac_ven_02",
+    "igdtseqnum": 168,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Find",
+    "challengeDetails": "ACCOLADES_VEN_2",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_VEN_2_NAME",
+    "centerText": "4",
+    "challengeReference": "MISSION_VENGEANCE_COLLECTIBLE"
+}

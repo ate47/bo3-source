@@ -19,6 +19,7 @@
 
 // Namespace namespace_6500cb2b
 // Params 0, eflags: 0x2
+// namespace_6500cb2b<file_0>::function_2dc19561
 // Checksum 0x10d4fc6b, Offset: 0x340
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -27,6 +28,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_6500cb2b
 // Params 0, eflags: 0x0
+// namespace_6500cb2b<file_0>::function_8c87d8eb
 // Checksum 0x23a9d5cf, Offset: 0x380
 // Size: 0xa4
 function __init__() {
@@ -38,6 +40,7 @@ function __init__() {
 
 // Namespace namespace_6500cb2b
 // Params 1, eflags: 0x0
+// namespace_6500cb2b<file_0>::function_fb2447d7
 // Checksum 0x7fed1127, Offset: 0x430
 // Size: 0x44
 function function_fb2447d7(player) {
@@ -47,6 +50,7 @@ function function_fb2447d7(player) {
 
 // Namespace namespace_6500cb2b
 // Params 2, eflags: 0x0
+// namespace_6500cb2b<file_0>::function_98d4dd81
 // Checksum 0x168e0b4d, Offset: 0x480
 // Size: 0x12c
 function function_98d4dd81(item, player) {
@@ -65,6 +69,7 @@ function function_98d4dd81(item, player) {
 
 // Namespace namespace_6500cb2b
 // Params 2, eflags: 0x0
+// namespace_6500cb2b<file_0>::function_5cff02a2
 // Checksum 0x189de10b, Offset: 0x5b8
 // Size: 0x124
 function function_5cff02a2(drop_item, player_team) {
@@ -83,6 +88,7 @@ function function_5cff02a2(drop_item, player_team) {
 
 // Namespace namespace_6500cb2b
 // Params 1, eflags: 0x0
+// namespace_6500cb2b<file_0>::function_3a5ef9c7
 // Checksum 0x4ee9d9a3, Offset: 0x6e8
 // Size: 0xd4
 function full_ammo_move_hud(player_team) {

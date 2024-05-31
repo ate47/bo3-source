@@ -1,0 +1,9 @@
+{
+    "vmtype": "none",
+    "name": "cpac_sge_09",
+    "igdtseqnum": 158,
+    "challengeWidget": "Accuracy",
+    "challengeDetails": "ACCOLADES_SGEN_9",
+    "challengeName": "ACCOLADES_SGEN_9_NAME",
+    "challengeReference": "MISSION_SGEN_CHALLENGE9"
+}

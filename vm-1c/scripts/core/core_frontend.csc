@@ -11,6 +11,7 @@
 
 // Namespace core_frontend
 // Params 0, eflags: 0x1 linked
+// namespace_25ab77f3<file_0>::function_d290ebfa
 // Checksum 0xcb5f049b, Offset: 0x198
 // Size: 0x54
 function main() {

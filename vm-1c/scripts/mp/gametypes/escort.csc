@@ -9,6 +9,7 @@
 
 // Namespace escort
 // Params 0, eflags: 0x0
+// namespace_c1889dfd<file_0>::function_d290ebfa
 // Checksum 0x4a18a0af, Offset: 0x1e8
 // Size: 0xb4
 function main() {
@@ -19,6 +20,7 @@ function main() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
+// namespace_c1889dfd<file_0>::function_90f0668f
 // Checksum 0x99ec1590, Offset: 0x2a8
 // Size: 0x4
 function onprecachegametype() {
@@ -27,6 +29,7 @@ function onprecachegametype() {
 
 // Namespace escort
 // Params 0, eflags: 0x0
+// namespace_c1889dfd<file_0>::function_34685338
 // Checksum 0x99ec1590, Offset: 0x2b8
 // Size: 0x4
 function onstartgametype() {
@@ -35,6 +38,7 @@ function onstartgametype() {
 
 // Namespace escort
 // Params 1, eflags: 0x0
+// namespace_c1889dfd<file_0>::function_828aea2c
 // Checksum 0x203de21b, Offset: 0x2c8
 // Size: 0xfc
 function on_localclient_connect(localclientnum) {
@@ -46,6 +50,7 @@ function on_localclient_connect(localclientnum) {
 
 // Namespace escort
 // Params 7, eflags: 0x0
+// namespace_c1889dfd<file_0>::function_4eb19095
 // Checksum 0x63df61a, Offset: 0x3d0
 // Size: 0xac
 function robot_burn(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -59,6 +64,7 @@ function robot_burn(localclientnum, oldval, newval, bnewent, binitialsnap, field
 
 // Namespace escort
 // Params 2, eflags: 0x0
+// namespace_c1889dfd<file_0>::function_d08158b8
 // Checksum 0x9051c6a4, Offset: 0x488
 // Size: 0xa2
 function watch_fx_shutdown(localclientnum, fxhandles) {
@@ -70,6 +76,7 @@ function watch_fx_shutdown(localclientnum, fxhandles) {
 
 // Namespace escort
 // Params 7, eflags: 0x0
+// namespace_c1889dfd<file_0>::function_76a7d70
 // Checksum 0x3e883ade, Offset: 0x538
 // Size: 0x16c
 function function_76a7d70(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -91,6 +98,7 @@ function function_76a7d70(localclientnum, oldval, newval, bnewent, binitialsnap,
 
 // Namespace escort
 // Params 1, eflags: 0x0
+// namespace_c1889dfd<file_0>::function_a2b8a9df
 // Checksum 0x7749f2d1, Offset: 0x6b0
 // Size: 0xe6
 function wait_team_changed(localclientnum) {
@@ -110,6 +118,7 @@ function wait_team_changed(localclientnum) {
 
 // Namespace escort
 // Params 1, eflags: 0x0
+// namespace_c1889dfd<file_0>::function_f08a32d9
 // Checksum 0x14bf9d2f, Offset: 0x7a0
 // Size: 0x174
 function update_robot_team(localclientnum) {

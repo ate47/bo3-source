@@ -25,6 +25,7 @@
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_c35e6aab
 // Checksum 0xd9cb0822, Offset: 0x8e8
 // Size: 0xbc
 function init() {
@@ -47,6 +48,7 @@ function init() {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_603848d5
 // Checksum 0x61e8c6a, Offset: 0x9b0
 // Size: 0x38
 function onplayerconnect() {
@@ -58,6 +60,7 @@ function onplayerconnect() {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_be02cc45
 // Checksum 0x52b9e73a, Offset: 0x9f0
 // Size: 0x5c
 function onplayerspawned() {
@@ -72,6 +75,7 @@ function onplayerspawned() {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_8a855fc9
 // Checksum 0xa914751d, Offset: 0xa58
 // Size: 0xc0
 function watchforgrenadeduds() {
@@ -88,6 +92,7 @@ function watchforgrenadeduds() {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_4c773865
 // Checksum 0x5bd0b4ca, Offset: 0xb20
 // Size: 0x88
 function watchforgrenadelauncherduds() {
@@ -102,6 +107,7 @@ function watchforgrenadelauncherduds() {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_b22f1f2c
 // Checksum 0x26b6066d, Offset: 0xbb0
 // Size: 0x3c
 function grenade_safe_to_throw(player, weapon) {
@@ -113,6 +119,7 @@ function grenade_safe_to_throw(player, weapon) {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_df7277ec
 // Checksum 0xd9bcdeed, Offset: 0xbf8
 // Size: 0x3c
 function grenade_safe_to_bounce(player, weapon) {
@@ -124,6 +131,7 @@ function grenade_safe_to_bounce(player, weapon) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_da937091
 // Checksum 0x10f24109, Offset: 0xc40
 // Size: 0x4c
 function makegrenadedudanddestroy() {
@@ -138,6 +146,7 @@ function makegrenadedudanddestroy() {
 
 // Namespace zm_weapons
 // Params 3, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_4a87cb9b
 // Checksum 0x7d49cb78, Offset: 0xc98
 // Size: 0xf2
 function checkgrenadefordud(weapon, isthrowngrenade, player) {
@@ -161,6 +170,7 @@ function checkgrenadefordud(weapon, isthrowngrenade, player) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_567b6554
 // Checksum 0x6a662672, Offset: 0xd98
 // Size: 0x5a
 function function_567b6554() {
@@ -174,6 +184,7 @@ function function_567b6554() {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_5846b5e2
 // Checksum 0x37623555, Offset: 0xe00
 // Size: 0x4a
 function function_5846b5e2(time) {
@@ -188,6 +199,7 @@ function function_5846b5e2(time) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_b0aaa19e
 // Checksum 0xf5140818, Offset: 0xe58
 // Size: 0x7e
 function function_b0aaa19e(time) {
@@ -201,6 +213,7 @@ function function_b0aaa19e(time) {
 
 // Namespace zm_weapons
 // Params 3, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_c6d62e4f
 // Checksum 0x3fe36e4b, Offset: 0xee0
 // Size: 0xae
 function function_c6d62e4f(weapon, isthrowngrenade, player) {
@@ -216,6 +229,7 @@ function function_c6d62e4f(weapon, isthrowngrenade, player) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_61853daa
 // Checksum 0xe5a5abea, Offset: 0xf98
 // Size: 0x30
 function get_nonalternate_weapon(weapon) {
@@ -227,6 +241,7 @@ function get_nonalternate_weapon(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_9fd5bde7
 // Checksum 0x51a046b9, Offset: 0xfd0
 // Size: 0xb6
 function switch_from_alt_weapon(weapon) {
@@ -246,6 +261,7 @@ function switch_from_alt_weapon(weapon) {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_b628da11
 // Checksum 0x7beec2e7, Offset: 0x1090
 // Size: 0x4c
 function give_start_weapons(takeallweapons, alreadyspawned) {
@@ -255,6 +271,7 @@ function give_start_weapons(takeallweapons, alreadyspawned) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_38b8d666
 // Checksum 0x1ff0a4e6, Offset: 0x10e8
 // Size: 0x34
 function give_fallback_weapon(immediate) {
@@ -266,6 +283,7 @@ function give_fallback_weapon(immediate) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_89166084
 // Checksum 0x1405e12e, Offset: 0x1128
 // Size: 0x14
 function take_fallback_weapon() {
@@ -274,6 +292,7 @@ function take_fallback_weapon() {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_1e948ced
 // Checksum 0x67f8e602, Offset: 0x1148
 // Size: 0x224
 function switch_back_primary_weapon(oldprimary, immediate) {
@@ -310,6 +329,7 @@ function switch_back_primary_weapon(oldprimary, immediate) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_94719ba3
 // Checksum 0x2c01a14c, Offset: 0x1378
 // Size: 0x3a
 function function_94719ba3(name) {
@@ -321,6 +341,7 @@ function function_94719ba3(name) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_4f42dd4c
 // Checksum 0x4b17d5cc, Offset: 0x13c0
 // Size: 0x116
 function function_4f42dd4c() {
@@ -354,6 +375,7 @@ function function_4f42dd4c() {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_26d88099
 // Checksum 0x365bfd, Offset: 0x14e0
 // Size: 0x162
 function function_26d88099() {
@@ -381,6 +403,7 @@ function function_26d88099() {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_c04fc017
 // Checksum 0xd1030997, Offset: 0x1650
 // Size: 0x9c
 function updatelastheldweapontimingszm(newtime) {
@@ -395,6 +418,7 @@ function updatelastheldweapontimingszm(newtime) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_dda8d614
 // Checksum 0xfe622a7a, Offset: 0x16f8
 // Size: 0x94
 function updateweapontimingszm(newtime) {
@@ -414,6 +438,7 @@ function updateweapontimingszm(newtime) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_a7ba05ad
 // Checksum 0x1a59b42f, Offset: 0x1798
 // Size: 0xc8
 function function_a7ba05ad() {
@@ -433,6 +458,7 @@ function function_a7ba05ad() {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_22d8e9bd
 // Checksum 0x910ac24, Offset: 0x1868
 // Size: 0x152
 function function_22d8e9bd() {
@@ -458,6 +484,7 @@ function function_22d8e9bd() {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_fc84698b
 // Checksum 0x2669961d, Offset: 0x19c8
 // Size: 0x54
 function function_fc84698b() {
@@ -468,6 +495,7 @@ function function_fc84698b() {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_10ac3f1
 // Checksum 0x393e9191, Offset: 0x1a28
 // Size: 0x8c
 function function_10ac3f1(weaponname) {
@@ -480,6 +508,7 @@ function function_10ac3f1(weaponname) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_69278bd2
 // Checksum 0xc5a2a25f, Offset: 0x1ac0
 // Size: 0x8
 function default_check_firesale_loc_valid_func() {
@@ -488,6 +517,7 @@ function default_check_firesale_loc_valid_func() {
 
 // Namespace zm_weapons
 // Params 10, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_2d9f5f8a
 // Checksum 0x9e2fdfb7, Offset: 0x1ad0
 // Size: 0x4c8
 function add_zombie_weapon(weapon_name, upgrade_name, hint, cost, weaponvo, weaponvoresp, ammo_cost, create_vox, is_wonder_weapon, var_e44dc8f1) {
@@ -554,6 +584,7 @@ function add_zombie_weapon(weapon_name, upgrade_name, hint, cost, weaponvo, weap
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_e3556381
 // Checksum 0x39882fc8, Offset: 0x1fa0
 // Size: 0x1a4
 function function_e3556381(weapon, upgrade) {
@@ -575,6 +606,7 @@ function function_e3556381(weapon, upgrade) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_9519b54b
 // Checksum 0x833e67c3, Offset: 0x2150
 // Size: 0x52
 function is_weapon_included(weapon) {
@@ -587,6 +619,7 @@ function is_weapon_included(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_bf92ce67
 // Checksum 0x12dce875, Offset: 0x21b0
 // Size: 0x66
 function is_weapon_or_base_included(weapon) {
@@ -596,6 +629,7 @@ function is_weapon_or_base_included(weapon) {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_c9b9a8df
 // Checksum 0xec4fde8d, Offset: 0x2220
 // Size: 0x86
 function include_zombie_weapon(weapon_name, in_box) {
@@ -611,6 +645,7 @@ function include_zombie_weapon(weapon_name, in_box) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_cc916919
 // Checksum 0x21ce456a, Offset: 0x22b0
 // Size: 0x20
 function init_weapons() {
@@ -621,6 +656,7 @@ function init_weapons() {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_2fed8360
 // Checksum 0x8702e701, Offset: 0x22d8
 // Size: 0x4e
 function add_limited_weapon(weapon_name, amount) {
@@ -632,6 +668,7 @@ function add_limited_weapon(weapon_name, amount) {
 
 // Namespace zm_weapons
 // Params 3, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_59842aff
 // Checksum 0x40171222, Offset: 0x2330
 // Size: 0x3f2
 function limited_weapon_below_quota(weapon, ignore_player, var_10f9c82c) {
@@ -700,6 +737,7 @@ function limited_weapon_below_quota(weapon, ignore_player, var_10f9c82c) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_fa087acb
 // Checksum 0x855ae8a0, Offset: 0x2730
 // Size: 0x3a
 function add_custom_limited_weapon_check(callback) {
@@ -711,6 +749,7 @@ function add_custom_limited_weapon_check(callback) {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x0
+// namespace_33d4b538<file_0>::function_28efc591
 // Checksum 0x9c10f4e4, Offset: 0x2778
 // Size: 0x4e
 function add_weapon_to_content(weapon_name, package) {
@@ -722,6 +761,7 @@ function add_weapon_to_content(weapon_name, package) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_a0a25fdb
 // Checksum 0x83859d78, Offset: 0x27d0
 // Size: 0x50
 function player_can_use_content(weapon) {
@@ -735,6 +775,7 @@ function player_can_use_content(weapon) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_4d085def
 // Checksum 0x7cc187af, Offset: 0x2828
 // Size: 0xc34
 function init_spawnable_weapon_upgrade() {
@@ -860,6 +901,7 @@ function init_spawnable_weapon_upgrade() {
 
 // Namespace zm_weapons
 // Params 3, eflags: 0x0
+// namespace_33d4b538<file_0>::function_df69e20d
 // Checksum 0xa392a838, Offset: 0x3468
 // Size: 0x73c
 function add_dynamic_wallbuy(weapon, wallbuy, pristine) {
@@ -957,6 +999,7 @@ function add_dynamic_wallbuy(weapon, wallbuy, pristine) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_c2b03ce5
 // Checksum 0x1e5461ab, Offset: 0x3bb0
 // Size: 0x738
 function wall_weapon_update_prompt(player) {
@@ -1034,6 +1077,7 @@ function wall_weapon_update_prompt(player) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_db7ef269
 // Checksum 0x6cf46906, Offset: 0x42f0
 // Size: 0xf4
 function reset_wallbuy_internal(set_hint_string) {
@@ -1056,6 +1100,7 @@ function reset_wallbuy_internal(set_hint_string) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x0
+// namespace_33d4b538<file_0>::function_200ee8f6
 // Checksum 0xdd7564c9, Offset: 0x43f0
 // Size: 0x3f2
 function reset_wallbuys() {
@@ -1100,6 +1145,7 @@ function reset_wallbuys() {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_7fa249f
 // Checksum 0x91fb393d, Offset: 0x47f0
 // Size: 0x256
 function init_weapon_upgrade() {
@@ -1128,6 +1174,7 @@ function init_weapon_upgrade() {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_a7ea1512
 // Checksum 0xc5d047a7, Offset: 0x4a50
 // Size: 0x5a
 function get_weapon_hint(weapon) {
@@ -1137,6 +1184,7 @@ function get_weapon_hint(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_faf6a1fa
 // Checksum 0xdff295ff, Offset: 0x4ab8
 // Size: 0x5a
 function get_weapon_cost(weapon) {
@@ -1146,6 +1194,7 @@ function get_weapon_cost(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_8140243c
 // Checksum 0xebbf3f4f, Offset: 0x4b20
 // Size: 0x5a
 function get_ammo_cost(weapon) {
@@ -1155,6 +1204,7 @@ function get_ammo_cost(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_a5d01efd
 // Checksum 0x7049ba4, Offset: 0x4b88
 // Size: 0x7c
 function get_upgraded_ammo_cost(weapon) {
@@ -1167,6 +1217,7 @@ function get_upgraded_ammo_cost(weapon) {
 
 // Namespace zm_weapons
 // Params 3, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_fbeb3417
 // Checksum 0x120a26bc, Offset: 0x4c10
 // Size: 0x152
 function get_ammo_cost_for_weapon(w_current, n_base_non_wallbuy_cost, n_upgraded_non_wallbuy_cost) {
@@ -1197,6 +1248,7 @@ function get_ammo_cost_for_weapon(w_current, n_base_non_wallbuy_cost, n_upgraded
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_60061206
 // Checksum 0xb857a559, Offset: 0x4d70
 // Size: 0x5a
 function get_is_in_box(weapon) {
@@ -1206,6 +1258,7 @@ function get_is_in_box(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_4f54ceec
 // Checksum 0xe92b5690, Offset: 0x4dd8
 // Size: 0x5a
 function function_4f54ceec(weapon) {
@@ -1215,6 +1268,7 @@ function function_4f54ceec(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x0
+// namespace_33d4b538<file_0>::function_b2c6c6e
 // Checksum 0xf61a9121, Offset: 0x4e40
 // Size: 0x52
 function weapon_supports_default_attachment(weapon) {
@@ -1225,6 +1279,7 @@ function weapon_supports_default_attachment(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x0
+// namespace_33d4b538<file_0>::function_de1a7d98
 // Checksum 0xb9967d75, Offset: 0x4ea0
 // Size: 0x68
 function default_attachment(weapon) {
@@ -1238,6 +1293,7 @@ function default_attachment(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_3f5a6af7
 // Checksum 0x60d456b6, Offset: 0x4f10
 // Size: 0x62
 function weapon_supports_attachments(weapon) {
@@ -1248,6 +1304,7 @@ function weapon_supports_attachments(weapon) {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_c0a20f80
 // Checksum 0x9c48358d, Offset: 0x4f80
 // Size: 0x166
 function random_attachment(weapon, exclude) {
@@ -1275,6 +1332,7 @@ function random_attachment(weapon, exclude) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_c560c3d4
 // Checksum 0xcdc17296, Offset: 0x50f0
 // Size: 0x158
 function get_attachment_index(weapon) {
@@ -1300,6 +1358,7 @@ function get_attachment_index(weapon) {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x0
+// namespace_33d4b538<file_0>::function_ee21519
 // Checksum 0xdcb3587e, Offset: 0x5250
 // Size: 0xfc
 function weapon_supports_this_attachment(weapon, att) {
@@ -1320,6 +1379,7 @@ function weapon_supports_this_attachment(weapon, att) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_eb2f655c
 // Checksum 0xb299aed7, Offset: 0x5358
 // Size: 0x62
 function get_base_weapon(upgradedweapon) {
@@ -1333,6 +1393,7 @@ function get_base_weapon(upgradedweapon) {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_7ac738ad
 // Checksum 0xd2ade535, Offset: 0x53c8
 // Size: 0x1ec
 function get_upgrade_weapon(weapon, add_attachment) {
@@ -1359,6 +1420,7 @@ function get_upgrade_weapon(weapon, add_attachment) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_e57ec1d3
 // Checksum 0x98305b82, Offset: 0x55c0
 // Size: 0xee
 function can_upgrade_weapon(weapon) {
@@ -1378,6 +1440,7 @@ function can_upgrade_weapon(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_81635a67
 // Checksum 0xc916a679, Offset: 0x56b8
 // Size: 0xae
 function weapon_supports_aat(weapon) {
@@ -1397,6 +1460,7 @@ function weapon_supports_aat(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_ada4725b
 // Checksum 0x242dad3f, Offset: 0x5770
 // Size: 0x7e
 function is_weapon_upgraded(weapon) {
@@ -1413,6 +1477,7 @@ function is_weapon_upgraded(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_215e9ee
 // Checksum 0x9dd5b888, Offset: 0x57f8
 // Size: 0x1d6
 function get_weapon_with_attachments(weapon) {
@@ -1444,6 +1509,7 @@ function get_weapon_with_attachments(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_3c39f0a1
 // Checksum 0x39f29a94, Offset: 0x59d8
 // Size: 0x116
 function has_weapon_or_attachments(weapon) {
@@ -1464,6 +1530,7 @@ function has_weapon_or_attachments(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_1d4c2872
 // Checksum 0xe88737dd, Offset: 0x5af8
 // Size: 0xf4
 function has_upgrade(weapon) {
@@ -1481,6 +1548,7 @@ function has_upgrade(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_863f7b87
 // Checksum 0x9c58dbf8, Offset: 0x5bf8
 // Size: 0x174
 function has_weapon_or_upgrade(weapon) {
@@ -1505,6 +1573,7 @@ function has_weapon_or_upgrade(weapon) {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x0
+// namespace_33d4b538<file_0>::function_8af9f046
 // Checksum 0x740c9d6b, Offset: 0x5d78
 // Size: 0x30
 function add_shared_ammo_weapon(weapon, base_weapon) {
@@ -1513,6 +1582,7 @@ function add_shared_ammo_weapon(weapon, base_weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_c80da111
 // Checksum 0xbb7d5, Offset: 0x5db0
 // Size: 0x17e
 function get_shared_ammo_weapon(weapon) {
@@ -1533,6 +1603,7 @@ function get_shared_ammo_weapon(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_18c769a4
 // Checksum 0xaf4640d2, Offset: 0x5f38
 // Size: 0x114
 function get_player_weapon_with_same_base(weapon) {
@@ -1553,6 +1624,7 @@ function get_player_weapon_with_same_base(weapon) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_dca15f4b
 // Checksum 0x2fa0eef7, Offset: 0x6058
 // Size: 0x78
 function get_weapon_hint_ammo() {
@@ -1572,6 +1644,7 @@ function get_weapon_hint_ammo() {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_826edc77
 // Checksum 0x70e6f096, Offset: 0x60d8
 // Size: 0xc4
 function weapon_set_first_time_hint(cost, ammo_cost) {
@@ -1588,6 +1661,7 @@ function weapon_set_first_time_hint(cost, ammo_cost) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_47141fd8
 // Checksum 0x64212dda, Offset: 0x61a8
 // Size: 0x38
 function placeable_mine_can_buy_weapon_extra_check_func(w_weapon) {
@@ -1599,6 +1673,7 @@ function placeable_mine_can_buy_weapon_extra_check_func(w_weapon) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_b69e1fd8
 // Checksum 0xf9e81e95, Offset: 0x61e8
 // Size: 0xe44
 function weapon_spawn_think() {
@@ -1804,6 +1879,7 @@ function weapon_spawn_think() {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_60c55a8
 // Checksum 0x24ca17d4, Offset: 0x7038
 // Size: 0x4e
 function should_upgrade_weapon(player) {
@@ -1818,6 +1894,7 @@ function should_upgrade_weapon(player) {
 
 // Namespace zm_weapons
 // Params 4, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_278886c3
 // Checksum 0xf00fe3c4, Offset: 0x7090
 // Size: 0x3ae
 function show_all_weapon_buys(player, cost, ammo_cost, is_grenade) {
@@ -1870,6 +1947,7 @@ function show_all_weapon_buys(player, cost, ammo_cost, is_grenade) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_55700bcb
 // Checksum 0xaaeb59d1, Offset: 0x7448
 // Size: 0x1b4
 function weapon_show(player) {
@@ -1898,6 +1976,7 @@ function weapon_show(player) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_11a37a
 // Checksum 0xfbd26071, Offset: 0x7608
 // Size: 0xac
 function function_11a37a(var_d074477d) {
@@ -1919,6 +1998,7 @@ function function_11a37a(var_d074477d) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_8249c134
 // Checksum 0xc1dc143d, Offset: 0x76c0
 // Size: 0x2e0
 function get_pack_a_punch_weapon_options(weapon) {
@@ -1969,6 +2049,7 @@ function get_pack_a_punch_weapon_options(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_bd181031
 // Checksum 0x72b78483, Offset: 0x79a8
 // Size: 0x280
 function give_build_kit_weapon(weapon) {
@@ -2011,6 +2092,7 @@ function give_build_kit_weapon(weapon) {
 
 // Namespace zm_weapons
 // Params 5, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_b1f17a3b
 // Checksum 0xef0866d1, Offset: 0x7c30
 // Size: 0xa48
 function weapon_give(weapon, var_f9f5d998, magic_box, nosound, b_switch_weapon) {
@@ -2165,6 +2247,7 @@ function weapon_give(weapon, var_f9f5d998, magic_box, nosound, b_switch_weapon) 
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_aec69e19
 // Checksum 0xc0d61261, Offset: 0x8680
 // Size: 0x4c
 function weapon_take(weapon) {
@@ -2176,6 +2259,7 @@ function weapon_take(weapon) {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_483840e8
 // Checksum 0x2970475e, Offset: 0x86d8
 // Size: 0x204
 function play_weapon_vo(weapon, magic_box) {
@@ -2212,6 +2296,7 @@ function play_weapon_vo(weapon, magic_box) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_d880e85
 // Checksum 0x3f740074, Offset: 0x88e8
 // Size: 0x120
 function weapon_type_check(weapon) {
@@ -2234,6 +2319,7 @@ function weapon_type_check(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_ae95dded
 // Checksum 0xd6c98b8, Offset: 0x8a10
 // Size: 0x20e
 function ammo_give(weapon) {
@@ -2273,6 +2359,7 @@ function ammo_give(weapon) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_5b5c6ce4
 // Checksum 0x58f21b8e, Offset: 0x8c28
 // Size: 0x1d2
 function get_default_weapondata(weapon) {
@@ -2308,6 +2395,7 @@ function get_default_weapondata(weapon) {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_8d71a0a8
 // Checksum 0x105be506, Offset: 0x8e08
 // Size: 0x2a2
 function get_player_weapondata(player, weapon) {
@@ -2348,6 +2436,7 @@ function get_player_weapondata(player, weapon) {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_7b0a9d5d
 // Checksum 0x22b38581, Offset: 0x90b8
 // Size: 0xd8
 function weapon_is_better(left, right) {
@@ -2367,6 +2456,7 @@ function weapon_is_better(left, right) {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_dca55415
 // Checksum 0x6cb8dce3, Offset: 0x9198
 // Size: 0x486
 function merge_weapons(oldweapondata, newweapondata) {
@@ -2404,6 +2494,7 @@ function merge_weapons(oldweapondata, newweapondata) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_cd87c683
 // Checksum 0xb78b0ad2, Offset: 0x9628
 // Size: 0x31c
 function weapondata_give(weapondata) {
@@ -2444,6 +2535,7 @@ function weapondata_give(weapondata) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_3022ea21
 // Checksum 0x1fdc094a, Offset: 0x9950
 // Size: 0x144
 function weapondata_take(weapondata) {
@@ -2468,6 +2560,7 @@ function weapondata_take(weapondata) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x0
+// namespace_33d4b538<file_0>::function_b951b148
 // Checksum 0x7e6772e1, Offset: 0x9aa0
 // Size: 0x1ae
 function create_loadout(weapons) {
@@ -2494,6 +2587,7 @@ function create_loadout(weapons) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_9e79e1ce
 // Checksum 0xc25f2bb0, Offset: 0x9c58
 // Size: 0x120
 function player_get_loadout() {
@@ -2509,6 +2603,7 @@ function player_get_loadout() {
 
 // Namespace zm_weapons
 // Params 3, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_f575195b
 // Checksum 0xf6710b16, Offset: 0x9d80
 // Size: 0x1e4
 function player_give_loadout(loadout, replace_existing, immediate_switch) {
@@ -2542,6 +2637,7 @@ function player_give_loadout(loadout, replace_existing, immediate_switch) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x0
+// namespace_33d4b538<file_0>::function_8fe40bc1
 // Checksum 0x3ed37bba, Offset: 0x9f70
 // Size: 0x9a
 function player_take_loadout(loadout) {
@@ -2552,6 +2648,7 @@ function player_take_loadout(loadout) {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_75b0344c
 // Checksum 0x2ae33781, Offset: 0xa018
 // Size: 0x52
 function register_zombie_weapon_callback(weapon, func) {
@@ -2565,6 +2662,7 @@ function register_zombie_weapon_callback(weapon, func) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_7b4773e9
 // Checksum 0xc8fa7bbf, Offset: 0xa078
 // Size: 0x4c
 function set_stowed_weapon(weapon) {
@@ -2576,6 +2674,7 @@ function set_stowed_weapon(weapon) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_92f6e96
 // Checksum 0x549a831a, Offset: 0xa0d0
 // Size: 0x24
 function clear_stowed_weapon() {
@@ -2585,6 +2684,7 @@ function clear_stowed_weapon() {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x0
+// namespace_33d4b538<file_0>::function_43b7f9be
 // Checksum 0x39fb5d74, Offset: 0xa100
 // Size: 0x64
 function suppress_stowed_weapon(onoff) {
@@ -2598,6 +2698,7 @@ function suppress_stowed_weapon(onoff) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_d2c33e3a
 // Checksum 0x93e2ab52, Offset: 0xa170
 // Size: 0x24
 function checkstringvalid(str) {
@@ -2609,6 +2710,7 @@ function checkstringvalid(str) {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_b8cb5ac8
 // Checksum 0x69e8aa05, Offset: 0xa1a0
 // Size: 0x51c
 function load_weapon_spec_from_table(table, first_row) {
@@ -2660,6 +2762,7 @@ function load_weapon_spec_from_table(table, first_row) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_9e8dccbe
 // Checksum 0xa7f3d169, Offset: 0xa6c8
 // Size: 0x696
 function function_9e8dccbe() {
@@ -2743,6 +2846,7 @@ function function_9e8dccbe() {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_387b8580
 // Checksum 0xf7745372, Offset: 0xad68
 // Size: 0xbe
 function is_wallbuy(w_to_check) {
@@ -2757,6 +2861,7 @@ function is_wallbuy(w_to_check) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_c4054b34
 // Checksum 0x9164f3bf, Offset: 0xae30
 // Size: 0x66
 function is_wonder_weapon(w_to_check) {

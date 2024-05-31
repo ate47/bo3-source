@@ -16,6 +16,7 @@
 
 // Namespace zm_powerup_full_ammo
 // Params 0, eflags: 0x2
+// namespace_84b890ae<file_0>::function_2dc19561
 // Checksum 0xd3f246e4, Offset: 0x2a8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -24,6 +25,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_full_ammo
 // Params 0, eflags: 0x1 linked
+// namespace_84b890ae<file_0>::function_8c87d8eb
 // Checksum 0xdefd7360, Offset: 0x2e8
 // Size: 0x9c
 function __init__() {
@@ -35,6 +37,7 @@ function __init__() {
 
 // Namespace zm_powerup_full_ammo
 // Params 1, eflags: 0x1 linked
+// namespace_84b890ae<file_0>::function_e72c77fa
 // Checksum 0x4051e8d1, Offset: 0x390
 // Size: 0x44
 function grab_full_ammo(player) {
@@ -44,6 +47,7 @@ function grab_full_ammo(player) {
 
 // Namespace zm_powerup_full_ammo
 // Params 2, eflags: 0x1 linked
+// namespace_84b890ae<file_0>::function_c1b9b2ae
 // Checksum 0xb43e3ee0, Offset: 0x3e0
 // Size: 0x2f4
 function full_ammo_powerup(drop_item, player) {
@@ -88,6 +92,7 @@ function full_ammo_powerup(drop_item, player) {
 
 // Namespace zm_powerup_full_ammo
 // Params 2, eflags: 0x1 linked
+// namespace_84b890ae<file_0>::function_4af5f7f3
 // Checksum 0xc26af102, Offset: 0x6e0
 // Size: 0x94
 function full_ammo_on_hud(drop_item, player_team) {

@@ -7,6 +7,7 @@
 
 // Namespace zm_unitrigger
 // Params 0, eflags: 0x2
+// namespace_40f1a093<file_0>::function_2dc19561
 // Checksum 0x6140a4a0, Offset: 0x1d0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,6 +16,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_unitrigger
 // Params 0, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_8c87d8eb
 // Checksum 0x65117478, Offset: 0x210
 // Size: 0x186
 function __init__() {
@@ -37,6 +39,7 @@ function __init__() {
 
 // Namespace zm_unitrigger
 // Params 2, eflags: 0x0
+// namespace_40f1a093<file_0>::function_b36886ca
 // Checksum 0x53e903a9, Offset: 0x3a0
 // Size: 0x2e
 function function_b36886ca(system, trigger_func) {
@@ -45,6 +48,7 @@ function function_b36886ca(system, trigger_func) {
 
 // Namespace zm_unitrigger
 // Params 2, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_49df1607
 // Checksum 0xe95d81de, Offset: 0x3d8
 // Size: 0x3c
 function unitrigger_force_per_player_triggers(unitrigger_stub, opt_on_off) {
@@ -56,6 +60,7 @@ function unitrigger_force_per_player_triggers(unitrigger_stub, opt_on_off) {
 
 // Namespace zm_unitrigger
 // Params 1, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_ca758bf2
 // Checksum 0xcf3a0dea, Offset: 0x420
 // Size: 0x44
 function unitrigger_trigger(player) {
@@ -67,6 +72,7 @@ function unitrigger_trigger(player) {
 
 // Namespace zm_unitrigger
 // Params 0, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_13a434b8
 // Checksum 0x86403248, Offset: 0x470
 // Size: 0x40
 function unitrigger_origin() {
@@ -80,6 +86,7 @@ function unitrigger_origin() {
 
 // Namespace zm_unitrigger
 // Params 2, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_e9f5d0e1
 // Checksum 0xe6f19965, Offset: 0x4b8
 // Size: 0x454
 function register_unitrigger_internal(unitrigger_stub, trigger_func) {
@@ -140,6 +147,7 @@ function register_unitrigger_internal(unitrigger_stub, trigger_func) {
 
 // Namespace zm_unitrigger
 // Params 2, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_d3555cc7
 // Checksum 0x135963cc, Offset: 0x918
 // Size: 0x52
 function register_unitrigger(unitrigger_stub, trigger_func) {
@@ -149,6 +157,7 @@ function register_unitrigger(unitrigger_stub, trigger_func) {
 
 // Namespace zm_unitrigger
 // Params 1, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_1567335c
 // Checksum 0xeea88a3d, Offset: 0x978
 // Size: 0x24
 function unregister_unitrigger(unitrigger_stub) {
@@ -157,6 +166,7 @@ function unregister_unitrigger(unitrigger_stub) {
 
 // Namespace zm_unitrigger
 // Params 1, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_5d1f281c
 // Checksum 0xd5f889d8, Offset: 0x9a8
 // Size: 0x27c
 function unregister_unitrigger_internal(unitrigger_stub) {
@@ -192,6 +202,7 @@ function unregister_unitrigger_internal(unitrigger_stub) {
 
 // Namespace zm_unitrigger
 // Params 0, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_ab72f23
 // Checksum 0x90d1f616, Offset: 0xc30
 // Size: 0x58
 function function_ab72f23() {
@@ -208,6 +219,7 @@ function function_ab72f23() {
 
 // Namespace zm_unitrigger
 // Params 3, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_d8f45568
 // Checksum 0xd510e196, Offset: 0xc90
 // Size: 0x2fc
 function register_static_unitrigger(unitrigger_stub, trigger_func, recalculate_zone) {
@@ -246,6 +258,7 @@ function register_static_unitrigger(unitrigger_stub, trigger_func, recalculate_z
 
 // Namespace zm_unitrigger
 // Params 3, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_a0b95ef
 // Checksum 0x5b53c926, Offset: 0xf98
 // Size: 0x11c
 function register_dyn_unitrigger(unitrigger_stub, trigger_func, recalculate_zone) {
@@ -265,6 +278,7 @@ function register_dyn_unitrigger(unitrigger_stub, trigger_func, recalculate_zone
 
 // Namespace zm_unitrigger
 // Params 1, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_8b644bbb
 // Checksum 0xeaae30a3, Offset: 0x10c0
 // Size: 0x44
 function reregister_unitrigger_as_dynamic(unitrigger_stub) {
@@ -274,6 +288,7 @@ function reregister_unitrigger_as_dynamic(unitrigger_stub) {
 
 // Namespace zm_unitrigger
 // Params 0, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_f60d345a
 // Checksum 0xb652e09d, Offset: 0x1110
 // Size: 0x33c
 function debug_unitriggers() {
@@ -320,6 +335,7 @@ function debug_unitriggers() {
 
 // Namespace zm_unitrigger
 // Params 2, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_7b49e4f6
 // Checksum 0xd7ab0599, Offset: 0x1458
 // Size: 0xe4
 function cleanup_trigger(trigger, player) {
@@ -335,6 +351,7 @@ function cleanup_trigger(trigger, player) {
 
 // Namespace zm_unitrigger
 // Params 4, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_aadec86b
 // Checksum 0x1b7be5e9, Offset: 0x1548
 // Size: 0x1c4
 function assess_and_apply_visibility(trigger, stub, player, default_keep) {
@@ -367,6 +384,7 @@ function assess_and_apply_visibility(trigger, stub, player, default_keep) {
 
 // Namespace zm_unitrigger
 // Params 0, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_d290ebfa
 // Checksum 0x7723f0f5, Offset: 0x1718
 // Size: 0x9b4
 function main() {
@@ -521,6 +539,7 @@ function main() {
 
 // Namespace zm_unitrigger
 // Params 0, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_62b5e7aa
 // Checksum 0x4ba63b8, Offset: 0x20d8
 // Size: 0x128
 function run_visibility_function_for_all_triggers() {
@@ -546,6 +565,7 @@ function run_visibility_function_for_all_triggers() {
 
 // Namespace zm_unitrigger
 // Params 2, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_e649c57b
 // Checksum 0x8a578fbd, Offset: 0x2208
 // Size: 0x48
 function is_same_trigger(old_trigger, trigger) {
@@ -554,6 +574,7 @@ function is_same_trigger(old_trigger, trigger) {
 
 // Namespace zm_unitrigger
 // Params 2, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_32e9586c
 // Checksum 0x7ceac4a9, Offset: 0x2258
 // Size: 0x190
 function check_and_build_trigger_from_unitrigger_stub(stub, player) {
@@ -581,6 +602,7 @@ function check_and_build_trigger_from_unitrigger_stub(stub, player) {
 
 // Namespace zm_unitrigger
 // Params 2, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_98c83f61
 // Checksum 0x39b46354, Offset: 0x23f0
 // Size: 0x5fc
 function build_trigger_from_unitrigger_stub(stub, player) {
@@ -674,6 +696,7 @@ function build_trigger_from_unitrigger_stub(stub, player) {
 
 // Namespace zm_unitrigger
 // Params 2, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_b062f40
 // Checksum 0x531403d8, Offset: 0x29f8
 // Size: 0xbc
 function copy_zombie_keys_onto_trigger(trig, stub) {
@@ -687,6 +710,7 @@ function copy_zombie_keys_onto_trigger(trig, stub) {
 
 // Namespace zm_unitrigger
 // Params 1, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_96166eaa
 // Checksum 0xa5a9a85, Offset: 0x2ac0
 // Size: 0x2e
 function trigger_thread(trigger_func) {
@@ -698,6 +722,7 @@ function trigger_thread(trigger_func) {
 
 // Namespace zm_unitrigger
 // Params 3, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_5a2ceef
 // Checksum 0xf11f5a46, Offset: 0x2af8
 // Size: 0x1f2
 function get_closest_unitriggers(org, array, dist) {
@@ -732,6 +757,7 @@ function get_closest_unitriggers(org, array, dist) {
 
 // Namespace zm_unitrigger
 // Params 5, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_a1b986ba
 // Checksum 0x6cd670b, Offset: 0x2cf8
 // Size: 0x180
 function create_unitrigger(str_hint, n_radius, var_616077d9, func_unitrigger_logic, s_trigger_type) {
@@ -763,6 +789,7 @@ function create_unitrigger(str_hint, n_radius, var_616077d9, func_unitrigger_log
 
 // Namespace zm_unitrigger
 // Params 5, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_828cd696
 // Checksum 0x9532399f, Offset: 0x2e80
 // Size: 0x180
 function function_828cd696(str_hint, n_radius, var_616077d9, func_unitrigger_logic, s_trigger_type) {
@@ -794,6 +821,7 @@ function function_828cd696(str_hint, n_radius, var_616077d9, func_unitrigger_log
 
 // Namespace zm_unitrigger
 // Params 1, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_fcc6aab1
 // Checksum 0xa74ecf5, Offset: 0x3008
 // Size: 0x22
 function function_fcc6aab1(player) {
@@ -803,6 +831,7 @@ function function_fcc6aab1(player) {
 
 // Namespace zm_unitrigger
 // Params 0, eflags: 0x1 linked
+// namespace_40f1a093<file_0>::function_77c4e424
 // Checksum 0x27310e56, Offset: 0x3038
 // Size: 0xa4
 function function_77c4e424() {

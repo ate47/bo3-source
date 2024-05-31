@@ -12,6 +12,7 @@
 
 // Namespace namespace_2f63e553
 // Params 0, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_40206fdf
 // Checksum 0x5d704e08, Offset: 0x770
 // Size: 0x288
 function function_40206fdf() {
@@ -61,6 +62,7 @@ function function_40206fdf() {
 
 // Namespace namespace_2f63e553
 // Params 0, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_35d58a26
 // Checksum 0xd11245ec, Offset: 0xa00
 // Size: 0xda
 function function_35d58a26() {
@@ -75,6 +77,7 @@ function function_35d58a26() {
 
 // Namespace namespace_2f63e553
 // Params 0, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_29206f26
 // Checksum 0xccb7ece2, Offset: 0xae8
 // Size: 0x4a4
 function setupdevgui() {
@@ -128,6 +131,7 @@ function setupdevgui() {
 
 // Namespace namespace_2f63e553
 // Params 1, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_92c840a6
 // Checksum 0xae695569, Offset: 0xf98
 // Size: 0xf4
 function function_92c840a6(delay) {
@@ -155,6 +159,7 @@ function function_92c840a6(delay) {
 
 // Namespace namespace_2f63e553
 // Params 1, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_a4d5519a
 // Checksum 0x8d98c1b0, Offset: 0x1098
 // Size: 0x23c
 function function_a4d5519a(pickup) {
@@ -185,6 +190,7 @@ function function_a4d5519a(pickup) {
 
 // Namespace namespace_2f63e553
 // Params 0, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_733651c
 // Checksum 0x321d8385, Offset: 0x12e0
 // Size: 0x118
 function function_733651c() {
@@ -208,6 +214,7 @@ function function_733651c() {
 
 // Namespace namespace_2f63e553
 // Params 0, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_7abdb1e8
 // Checksum 0x9c92ccfe, Offset: 0x1400
 // Size: 0x54
 function function_7abdb1e8() {
@@ -220,6 +227,7 @@ function function_7abdb1e8() {
 
 // Namespace namespace_2f63e553
 // Params 0, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_f71d59c
 // Checksum 0x9d9d9dab, Offset: 0x1460
 // Size: 0x44
 function function_f71d59c() {
@@ -231,6 +239,7 @@ function function_f71d59c() {
 
 // Namespace namespace_2f63e553
 // Params 0, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_a3bba13d
 // Checksum 0x68e748d4, Offset: 0x14b0
 // Size: 0x850
 function function_a3bba13d() {
@@ -334,6 +343,7 @@ function function_a3bba13d() {
 
 // Namespace namespace_2f63e553
 // Params 0, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_f24eee41
 // Checksum 0x34c478bd, Offset: 0x1d08
 // Size: 0x50
 function function_f24eee41() {
@@ -347,6 +357,7 @@ function function_f24eee41() {
 
 // Namespace namespace_2f63e553
 // Params 0, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_c18f4e35
 // Checksum 0x3480e02e, Offset: 0x1d60
 // Size: 0x16e8
 function function_c18f4e35() {
@@ -617,6 +628,7 @@ function function_c18f4e35() {
 
 // Namespace namespace_2f63e553
 // Params 4, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_5e6b8376
 // Checksum 0x879edb88, Offset: 0x3450
 // Size: 0x200
 function function_5e6b8376(origin, radius, time, color) {
@@ -649,6 +661,7 @@ function function_5e6b8376(origin, radius, time, color) {
 
 // Namespace namespace_2f63e553
 // Params 3, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_3576b76d
 // Checksum 0xbab68229, Offset: 0x3658
 // Size: 0xfa
 function plotpoints(plotpoints, var_c75b4e78, var_8bb7be29) {
@@ -672,6 +685,7 @@ function plotpoints(plotpoints, var_c75b4e78, var_8bb7be29) {
 
 // Namespace namespace_2f63e553
 // Params 5, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_77810775
 // Checksum 0xc42db679, Offset: 0x3760
 // Size: 0x2fa
 function drawcylinder(pos, rad, height, var_8bb7be29, color) {
@@ -703,6 +717,7 @@ function drawcylinder(pos, rad, height, var_8bb7be29, color) {
 
     // Namespace namespace_2f63e553
     // Params 0, eflags: 0x0
+    // namespace_2f63e553<file_0>::function_4d1ec408
     // Checksum 0xd8d2482e, Offset: 0x3a68
     // Size: 0x1d0
     function debugorigin() {
@@ -727,6 +742,7 @@ function drawcylinder(pos, rad, height, var_8bb7be29, color) {
 
 // Namespace namespace_2f63e553
 // Params 4, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_a0e51d80
 // Checksum 0x963f7917, Offset: 0x3c40
 // Size: 0x1c0
 function function_a0e51d80(point, timesec, size, color) {
@@ -750,6 +766,7 @@ function function_a0e51d80(point, timesec, size, color) {
 
 // Namespace namespace_2f63e553
 // Params 4, eflags: 0x1 linked
+// namespace_2f63e553<file_0>::function_93b7208c
 // Checksum 0xbbbdd605, Offset: 0x3e08
 // Size: 0x88
 function debugline(p1, p2, timesec, color) {

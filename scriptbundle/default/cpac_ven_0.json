@@ -1,0 +1,11 @@
+{
+    "vmtype": "none",
+    "name": "cpac_ven_0",
+    "igdtseqnum": 166,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Untouched",
+    "challengeDetails": "ACCOLADES_VEN_0",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_VEN_0_NAME",
+    "challengeReference": "MISSION_VENGEANCE_UNTOUCHED"
+}

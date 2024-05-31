@@ -13,6 +13,7 @@ class class_a17e6f03 {
 
 // Namespace namespace_fdfaa57d
 // Params 0, eflags: 0x2
+// namespace_fdfaa57d<file_0>::function_58d5283a
 // Checksum 0x30387a33, Offset: 0x248
 // Size: 0x154
 function autoexec function_58d5283a() {
@@ -34,6 +35,7 @@ function autoexec function_58d5283a() {
 
 // Namespace namespace_fdfaa57d
 // Params 1, eflags: 0x1 linked
+// namespace_fdfaa57d<file_0>::function_549c28ac
 // Checksum 0x9597f221, Offset: 0x3a8
 // Size: 0x24e
 function function_549c28ac(var_6a173bd1) {
@@ -63,6 +65,7 @@ function function_549c28ac(var_6a173bd1) {
 
 // Namespace namespace_fdfaa57d
 // Params 1, eflags: 0x1 linked
+// namespace_fdfaa57d<file_0>::function_1e2e0936
 // Checksum 0x97a564d, Offset: 0x600
 // Size: 0xea
 function function_1e2e0936(var_1010f96a) {
@@ -83,6 +86,7 @@ function function_1e2e0936(var_1010f96a) {
 
 // Namespace namespace_fdfaa57d
 // Params 1, eflags: 0x1 linked
+// namespace_fdfaa57d<file_0>::function_53200e4d
 // Checksum 0x93e48692, Offset: 0x6f8
 // Size: 0x890
 function function_53200e4d(var_1010f96a) {
@@ -156,6 +160,7 @@ function function_53200e4d(var_1010f96a) {
 
 // Namespace namespace_fdfaa57d
 // Params 2, eflags: 0x1 linked
+// namespace_fdfaa57d<file_0>::function_43128d49
 // Checksum 0xe01c7cc, Offset: 0xf90
 // Size: 0x48c
 function function_43128d49(weaponinfo, var_fe7b5ca3) {
@@ -218,6 +223,7 @@ function function_43128d49(weaponinfo, var_fe7b5ca3) {
 
 // Namespace namespace_fdfaa57d
 // Params 0, eflags: 0x0
+// namespace_fdfaa57d<file_0>::function_7e774306
 // Checksum 0xa9502087, Offset: 0x1428
 // Size: 0x156
 function function_7e774306() {
@@ -236,6 +242,7 @@ function function_7e774306() {
 
 // Namespace namespace_fdfaa57d
 // Params 0, eflags: 0x1 linked
+// namespace_fdfaa57d<file_0>::function_be94c003
 // Checksum 0x639c1fbf, Offset: 0x1588
 // Size: 0x94
 function function_be94c003() {
@@ -250,6 +257,7 @@ function function_be94c003() {
 
 // Namespace namespace_fdfaa57d
 // Params 0, eflags: 0x1 linked
+// namespace_fdfaa57d<file_0>::function_d5efb07f
 // Checksum 0x5600cdc8, Offset: 0x1628
 // Size: 0x7c
 function function_d5efb07f() {
@@ -263,6 +271,7 @@ function function_d5efb07f() {
 
 // Namespace namespace_fdfaa57d
 // Params 1, eflags: 0x1 linked
+// namespace_fdfaa57d<file_0>::function_132d9eee
 // Checksum 0xec9d94b6, Offset: 0x16b0
 // Size: 0x174
 function function_132d9eee(weapon) {

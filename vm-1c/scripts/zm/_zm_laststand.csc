@@ -8,6 +8,7 @@
 
 // Namespace zm_laststand
 // Params 0, eflags: 0x2
+// namespace_67e7beef<file_0>::function_2dc19561
 // Checksum 0x796482e0, Offset: 0x1b0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,6 +17,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_laststand
 // Params 0, eflags: 0x1 linked
+// namespace_67e7beef<file_0>::function_8c87d8eb
 // Checksum 0x871fd196, Offset: 0x1f0
 // Size: 0x18c
 function __init__() {
@@ -34,6 +36,7 @@ function __init__() {
 
 // Namespace zm_laststand
 // Params 0, eflags: 0x1 linked
+// namespace_67e7beef<file_0>::function_1e56aab0
 // Checksum 0xd2aa51d5, Offset: 0x388
 // Size: 0xb0
 function wait_and_set_revive_shader_constant() {
@@ -48,6 +51,7 @@ function wait_and_set_revive_shader_constant() {
 
 // Namespace zm_laststand
 // Params 3, eflags: 0x1 linked
+// namespace_67e7beef<file_0>::function_c2e280cb
 // Checksum 0x63717055, Offset: 0x440
 // Size: 0x108
 function function_c2e280cb(model, oldvalue, newvalue) {
@@ -67,6 +71,7 @@ function function_c2e280cb(model, oldvalue, newvalue) {
 
 // Namespace zm_laststand
 // Params 7, eflags: 0x1 linked
+// namespace_67e7beef<file_0>::function_3cc786df
 // Checksum 0x6fdf2aaa, Offset: 0x550
 // Size: 0x2b4
 function update_bleedout_timer(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

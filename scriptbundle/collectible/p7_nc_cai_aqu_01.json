@@ -1,0 +1,18 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_cai_aqu_01",
+    "type": "collectible",
+    "igdtseqnum": 13,
+    "uiMaterialLarge": "t7_icon_menu_p7_nc_cai_aqu_01_lrg",
+    "uiMaterial": "t7_icon_menu_p7_nc_cai_aqu_01",
+    "uiModelWithStand": "p7_nc_cai_aqu_01_with_stand",
+    "uiModel": "p7_nc_cai_aqu_01",
+    "description": "COLLECTIBLE_P7_NC_CAI_AQU_01_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_CAI_AQU_01_LONG",
+    "audiolog_sound": "vox_safe_postcard_hall_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_POSTCARD",
+    "displayNameShort": "COLLECTIBLE_P7_NC_CAI_AQU_01_SHORT",
+    "codexurl": "Collectables-PostcardfromSarahHallsParents.htm",
+    "slotSize": 0
+}

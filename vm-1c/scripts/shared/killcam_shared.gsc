@@ -2,6 +2,7 @@
 
 // Namespace killcam
 // Params 1, eflags: 0x1 linked
+// namespace_367908b2<file_0>::function_bfc9a666
 // Checksum 0xb03fd074, Offset: 0x78
 // Size: 0x7a
 function get_killcam_entity_start_time(killcamentity) {
@@ -21,6 +22,7 @@ function get_killcam_entity_start_time(killcamentity) {
 
 // Namespace killcam
 // Params 1, eflags: 0x1 linked
+// namespace_367908b2<file_0>::function_d3473f90
 // Checksum 0x9aa781f7, Offset: 0x100
 // Size: 0x6c
 function store_killcam_entity_on_entity(killcam_entity) {

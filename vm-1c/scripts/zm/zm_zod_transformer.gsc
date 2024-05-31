@@ -19,6 +19,7 @@
 
 // Namespace namespace_ded850b0
 // Params 0, eflags: 0x2
+// namespace_ded850b0<file_0>::function_2dc19561
 // Checksum 0xcfe6ee67, Offset: 0x318
 // Size: 0x2c
 function autoexec function_2dc19561() {
@@ -27,6 +28,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_ded850b0
 // Params 0, eflags: 0x1 linked
+// namespace_ded850b0<file_0>::function_5b6b9132
 // Checksum 0x896f7415, Offset: 0x350
 // Size: 0x74
 function __main__() {
@@ -37,6 +39,7 @@ function __main__() {
 
 // Namespace namespace_ded850b0
 // Params 0, eflags: 0x1 linked
+// namespace_ded850b0<file_0>::function_eec8fd1e
 // Checksum 0xb15d153a, Offset: 0x3d0
 // Size: 0x132
 function init_transformers() {
@@ -52,6 +55,7 @@ function init_transformers() {
 
 // Namespace namespace_ded850b0
 // Params 1, eflags: 0x1 linked
+// namespace_ded850b0<file_0>::function_7734548b
 // Checksum 0xd720bc3b, Offset: 0x510
 // Size: 0x14c
 function function_7734548b(var_b46b59df) {

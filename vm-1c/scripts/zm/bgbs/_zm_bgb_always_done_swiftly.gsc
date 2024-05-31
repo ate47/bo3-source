@@ -10,6 +10,7 @@
 
 // Namespace zm_bgb_always_done_swiftly
 // Params 0, eflags: 0x2
+// namespace_d7f1b6c4<file_0>::function_2dc19561
 // Checksum 0x1d5db552, Offset: 0x198
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,6 +19,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_always_done_swiftly
 // Params 0, eflags: 0x1 linked
+// namespace_d7f1b6c4<file_0>::function_8c87d8eb
 // Checksum 0x79606d3, Offset: 0x1d8
 // Size: 0x5c
 function __init__() {
@@ -29,6 +31,7 @@ function __init__() {
 
 // Namespace zm_bgb_always_done_swiftly
 // Params 0, eflags: 0x1 linked
+// namespace_d7f1b6c4<file_0>::function_bae40a28
 // Checksum 0x83975a95, Offset: 0x240
 // Size: 0x44
 function enable() {
@@ -38,6 +41,7 @@ function enable() {
 
 // Namespace zm_bgb_always_done_swiftly
 // Params 0, eflags: 0x1 linked
+// namespace_d7f1b6c4<file_0>::function_54bdb053
 // Checksum 0x41f6037e, Offset: 0x290
 // Size: 0x44
 function disable() {

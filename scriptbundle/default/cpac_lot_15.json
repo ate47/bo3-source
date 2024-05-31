@@ -1,0 +1,11 @@
+{
+    "vmtype": "none",
+    "name": "cpac_lot_15",
+    "igdtseqnum": 94,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Traversal",
+    "challengeDetails": "ACCOLADES_LOT_15",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_LOT_15_NAME",
+    "challengeReference": "MISSION_LOTUS_CHALLENGE15"
+}

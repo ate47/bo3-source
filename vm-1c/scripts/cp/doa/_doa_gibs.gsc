@@ -24,6 +24,7 @@
 
 // Namespace namespace_fba031c8
 // Params 0, eflags: 0x1 linked
+// namespace_fba031c8<file_0>::function_c35e6aab
 // Checksum 0x4de06458, Offset: 0x5c0
 // Size: 0x194
 function init() {
@@ -34,6 +35,7 @@ function init() {
 
 // Namespace namespace_fba031c8
 // Params 2, eflags: 0x1 linked
+// namespace_fba031c8<file_0>::function_ddf685e8
 // Checksum 0xc3c31d9f, Offset: 0x760
 // Size: 0xe4
 function function_ddf685e8(launchvector, attacker) {
@@ -55,6 +57,7 @@ function function_ddf685e8(launchvector, attacker) {
 
 // Namespace namespace_fba031c8
 // Params 0, eflags: 0x1 linked
+// namespace_fba031c8<file_0>::function_7b3e39cb
 // Checksum 0x1d5a08ce, Offset: 0x850
 // Size: 0x1c
 function function_7b3e39cb() {
@@ -63,6 +66,7 @@ function function_7b3e39cb() {
 
 // Namespace namespace_fba031c8
 // Params 1, eflags: 0x1 linked
+// namespace_fba031c8<file_0>::function_45dffa6b
 // Checksum 0xd2afba04, Offset: 0x878
 // Size: 0xbc
 function function_45dffa6b(launchvector) {
@@ -82,6 +86,7 @@ function function_45dffa6b(launchvector) {
 
 // Namespace namespace_fba031c8
 // Params 0, eflags: 0x1 linked
+// namespace_fba031c8<file_0>::function_deb7df37
 // Checksum 0x410cc0a3, Offset: 0x940
 // Size: 0x9c
 function function_deb7df37() {
@@ -99,6 +104,7 @@ function function_deb7df37() {
 
 // Namespace namespace_fba031c8
 // Params 4, eflags: 0x1 linked
+// namespace_fba031c8<file_0>::function_e70f39ae
 // Checksum 0x92e5d157, Offset: 0x9e8
 // Size: 0x154
 function trygibbinghead(entity, damage, hitloc, isexplosive) {
@@ -120,6 +126,7 @@ function trygibbinghead(entity, damage, hitloc, isexplosive) {
 
 // Namespace namespace_fba031c8
 // Params 4, eflags: 0x1 linked
+// namespace_fba031c8<file_0>::function_70577d34
 // Checksum 0x34213ba4, Offset: 0xb48
 // Size: 0x334
 function trygibbinglimb(entity, damage, hitloc, isexplosive) {
@@ -164,6 +171,7 @@ function trygibbinglimb(entity, damage, hitloc, isexplosive) {
 
 // Namespace namespace_fba031c8
 // Params 5, eflags: 0x1 linked
+// namespace_fba031c8<file_0>::function_12d3d9ef
 // Checksum 0xcbdaa51c, Offset: 0xe88
 // Size: 0x49c
 function trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) {
@@ -219,6 +227,7 @@ function trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) {
 
 // Namespace namespace_fba031c8
 // Params 6, eflags: 0x1 linked
+// namespace_fba031c8<file_0>::function_15a268a6
 // Checksum 0x21fc330, Offset: 0x1330
 // Size: 0x204
 function function_15a268a6(attacker, damage, meansofdeath, weapon, hitloc, vdir) {

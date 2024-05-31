@@ -24,6 +24,7 @@
 
 // Namespace weapons
 // Params 0, eflags: 0x2
+// namespace_f996a5bc<file_0>::function_2dc19561
 // Checksum 0x6acead72, Offset: 0x3a0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -32,6 +33,7 @@ function autoexec function_2dc19561() {
 
 // Namespace weapons
 // Params 0, eflags: 0x1 linked
+// namespace_f996a5bc<file_0>::function_8c87d8eb
 // Checksum 0x8e70bb25, Offset: 0x3e0
 // Size: 0x14
 function __init__() {
@@ -40,6 +42,7 @@ function __init__() {
 
 // Namespace weapons
 // Params 1, eflags: 0x1 linked
+// namespace_f996a5bc<file_0>::function_1146dd0e
 // Checksum 0x7736f1df, Offset: 0x400
 // Size: 0xc
 function function_1146dd0e(weapon) {
@@ -48,6 +51,7 @@ function function_1146dd0e(weapon) {
 
 // Namespace weapons
 // Params 3, eflags: 0x1 linked
+// namespace_f996a5bc<file_0>::function_5be8b6af
 // Checksum 0x6d3a70d9, Offset: 0x418
 // Size: 0x1c
 function function_5be8b6af(weapon, options, var_65ce895e) {
@@ -56,6 +60,7 @@ function function_5be8b6af(weapon, options, var_65ce895e) {
 
 // Namespace weapons
 // Params 3, eflags: 0x0
+// namespace_f996a5bc<file_0>::function_27ed864
 // Checksum 0x1d0dc094, Offset: 0x440
 // Size: 0xe6
 function bestweapon_init(weapon, options, var_65ce895e) {
@@ -72,6 +77,7 @@ function bestweapon_init(weapon, options, var_65ce895e) {
 
 // Namespace weapons
 // Params 3, eflags: 0x0
+// namespace_f996a5bc<file_0>::function_4a709de3
 // Checksum 0xfbd35e31, Offset: 0x530
 // Size: 0x192
 function bestweapon_find(weapon, options, var_65ce895e) {
@@ -93,6 +99,7 @@ function bestweapon_find(weapon, options, var_65ce895e) {
 
 // Namespace weapons
 // Params 0, eflags: 0x0
+// namespace_f996a5bc<file_0>::function_fb8e236
 // Checksum 0xdcc9fe36, Offset: 0x6d0
 // Size: 0x224
 function bestweapon_get() {
@@ -130,6 +137,7 @@ function bestweapon_get() {
 
 // Namespace weapons
 // Params 0, eflags: 0x1 linked
+// namespace_f996a5bc<file_0>::function_7f1938e7
 // Checksum 0xd2203524, Offset: 0x900
 // Size: 0x38e
 function showcaseweapon_get() {

@@ -2,6 +2,7 @@
 
 // Namespace table
 // Params 3, eflags: 0x1 linked
+// namespace_988ffb13<file_0>::function_d7916d65
 // Checksum 0xb1e72bda, Offset: 0x80
 // Size: 0x280
 function load(str_filename, str_table_start, b_convert_numbers) {
@@ -43,6 +44,7 @@ function load(str_filename, str_table_start, b_convert_numbers) {
 
 // Namespace table
 // Params 1, eflags: 0x1 linked
+// namespace_988ffb13<file_0>::function_e02be5bb
 // Checksum 0x3c48f56, Offset: 0x308
 // Size: 0x7c
 function str_to_num(value) {

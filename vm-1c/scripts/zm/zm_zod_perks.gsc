@@ -26,6 +26,7 @@
 
 // Namespace namespace_bb738c6
 // Params 0, eflags: 0x1 linked
+// namespace_bb738c6<file_0>::function_c35e6aab
 // Checksum 0xd342191d, Offset: 0x4f0
 // Size: 0x1f4
 function init() {
@@ -44,6 +45,7 @@ function init() {
 
 // Namespace namespace_bb738c6
 // Params 0, eflags: 0x1 linked
+// namespace_bb738c6<file_0>::function_9a03e439
 // Checksum 0xfac6088e, Offset: 0x6f0
 // Size: 0x3f4
 function function_9a03e439() {
@@ -97,6 +99,7 @@ function function_9a03e439() {
 
 // Namespace namespace_bb738c6
 // Params 0, eflags: 0x1 linked
+// namespace_bb738c6<file_0>::function_5508b348
 // Checksum 0xe0fd8dca, Offset: 0xaf0
 // Size: 0x2c
 function function_5508b348() {
@@ -106,6 +109,7 @@ function function_5508b348() {
 
 // Namespace namespace_bb738c6
 // Params 0, eflags: 0x1 linked
+// namespace_bb738c6<file_0>::function_4a2261fa
 // Checksum 0xb3fb7d4c, Offset: 0xb28
 // Size: 0x2c
 function function_4a2261fa() {
@@ -115,6 +119,7 @@ function function_4a2261fa() {
 
 // Namespace namespace_bb738c6
 // Params 0, eflags: 0x1 linked
+// namespace_bb738c6<file_0>::function_6753e7bb
 // Checksum 0xc7000354, Offset: 0xb60
 // Size: 0x2c
 function function_6753e7bb() {
@@ -124,6 +129,7 @@ function function_6753e7bb() {
 
 // Namespace namespace_bb738c6
 // Params 0, eflags: 0x1 linked
+// namespace_bb738c6<file_0>::function_55b919e6
 // Checksum 0xbf64466, Offset: 0xb98
 // Size: 0x34
 function function_55b919e6() {
@@ -133,6 +139,7 @@ function function_55b919e6() {
 
 // Namespace namespace_bb738c6
 // Params 1, eflags: 0x1 linked
+// namespace_bb738c6<file_0>::function_e840e164
 // Checksum 0x7b9b9062, Offset: 0xbd8
 // Size: 0x3c
 function function_e840e164(var_d80a2da2) {
@@ -142,6 +149,7 @@ function function_e840e164(var_d80a2da2) {
 
 // Namespace namespace_bb738c6
 // Params 1, eflags: 0x1 linked
+// namespace_bb738c6<file_0>::function_588068b3
 // Checksum 0x75b15369, Offset: 0xc20
 // Size: 0x3c
 function function_588068b3(var_d80a2da2) {
@@ -151,6 +159,7 @@ function function_588068b3(var_d80a2da2) {
 
 // Namespace namespace_bb738c6
 // Params 1, eflags: 0x1 linked
+// namespace_bb738c6<file_0>::function_8b929f79
 // Checksum 0xd8053f79, Offset: 0xc68
 // Size: 0x3c
 function function_8b929f79(var_d80a2da2) {

@@ -11,6 +11,7 @@
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x2
+// namespace_c147e610<file_0>::function_2dc19561
 // Checksum 0x43c5de25, Offset: 0x1b0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,6 +20,7 @@ function autoexec function_2dc19561() {
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_8c87d8eb
 // Checksum 0x6c2e6e41, Offset: 0x1f0
 // Size: 0xe4
 function __init__() {
@@ -38,6 +40,7 @@ function __init__() {
 
 // Namespace bouncingbetty
 // Params 1, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_830caae9
 // Checksum 0x7d73c82a, Offset: 0x2e0
 // Size: 0x178
 function proximityweaponobjectdetonation_override(watcher) {

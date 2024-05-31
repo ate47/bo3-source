@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_aqu_10",
+    "igdtseqnum": 21,
+    "challengeWidget": "Explosion",
+    "challengeDetails": "ACCOLADES_AQU_10",
+    "challengeName": "ACCOLADES_AQU_10_NAME",
+    "centerText": "15",
+    "challengeReference": "MISSION_AQUIFER_CHALLENGE10"
+}

@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_cai_ram_04",
+    "type": "collectible",
+    "igdtseqnum": 30,
+    "uiMaterial": "t7_icon_menu_p7_nc_cai_ram_04",
+    "uiModelWithStand": "p7_nc_cai_ram_04_with_stand",
+    "uiModel": "p7_nc_cai_ram_04",
+    "description": "COLLECTIBLE_P7_NC_CAI_RAM_04_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_CAI_RAM_04_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_STAINED_GLASS",
+    "displayNameShort": "COLLECTIBLE_P7_NC_CAI_RAM_04_SHORT",
+    "codexurl": "Collectables-BrokenStainedGlass.htm",
+    "slotSize": 2
+}

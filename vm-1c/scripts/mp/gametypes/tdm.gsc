@@ -16,6 +16,7 @@
 
 // Namespace tdm
 // Params 0, eflags: 0x1 linked
+// namespace_f6a792a2<file_0>::function_d290ebfa
 // Checksum 0xd4f84cad, Offset: 0x388
 // Size: 0x284
 function main() {
@@ -46,6 +47,7 @@ function main() {
 
 // Namespace tdm
 // Params 0, eflags: 0x1 linked
+// namespace_f6a792a2<file_0>::function_34685338
 // Checksum 0x8187eb7d, Offset: 0x618
 // Size: 0x3d8
 function onstartgametype() {
@@ -97,6 +99,7 @@ function onstartgametype() {
 
 // Namespace tdm
 // Params 1, eflags: 0x1 linked
+// namespace_f6a792a2<file_0>::function_19bc9234
 // Checksum 0x16a7f1b4, Offset: 0x9f8
 // Size: 0x5c
 function onspawnplayer(predictedspawn) {
@@ -109,6 +112,7 @@ function onspawnplayer(predictedspawn) {
 
 // Namespace tdm
 // Params 1, eflags: 0x0
+// namespace_f6a792a2<file_0>::function_257d1c47
 // Checksum 0x54d68a9b, Offset: 0xa60
 // Size: 0x44
 function onendgame(winningteam) {
@@ -119,6 +123,7 @@ function onendgame(winningteam) {
 
 // Namespace tdm
 // Params 0, eflags: 0x1 linked
+// namespace_f6a792a2<file_0>::function_e4e885e6
 // Checksum 0xe911d08, Offset: 0xab0
 // Size: 0xba
 function onroundswitch() {
@@ -132,6 +137,7 @@ function onroundswitch() {
 
 // Namespace tdm
 // Params 1, eflags: 0x1 linked
+// namespace_f6a792a2<file_0>::function_3fcd5617
 // Checksum 0xc8f6e546, Offset: 0xb78
 // Size: 0xb6
 function onroundendgame(roundwinner) {
@@ -145,6 +151,7 @@ function onroundendgame(roundwinner) {
 
 // Namespace tdm
 // Params 0, eflags: 0x1 linked
+// namespace_f6a792a2<file_0>::function_5cee117d
 // Checksum 0x320d4b1d, Offset: 0xc38
 // Size: 0x1c2
 function onscoreclosemusic() {
@@ -178,6 +185,7 @@ function onscoreclosemusic() {
 
 // Namespace tdm
 // Params 9, eflags: 0x1 linked
+// namespace_f6a792a2<file_0>::function_c2658b46
 // Checksum 0x6ea1cd2a, Offset: 0xe08
 // Size: 0x204
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {

@@ -5,6 +5,7 @@
 
 // Namespace zm_game_module_utility
 // Params 1, eflags: 0x0
+// namespace_353bafbb<file_0>::function_f48b097
 // Checksum 0xc2ea6a80, Offset: 0xc8
 // Size: 0x122
 function move_ring(ring) {
@@ -21,6 +22,7 @@ function move_ring(ring) {
 
 // Namespace zm_game_module_utility
 // Params 1, eflags: 0x0
+// namespace_353bafbb<file_0>::function_20e39a1d
 // Checksum 0x2b93d922, Offset: 0x1f8
 // Size: 0x66
 function rotate_ring(forward) {

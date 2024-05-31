@@ -39,6 +39,7 @@
 
 // Namespace zm_factory
 // Params 0, eflags: 0x2
+// namespace_1437a8b5<file_0>::function_8e134dbe
 // Checksum 0xebeac76e, Offset: 0x1060
 // Size: 0x27c
 function autoexec opt_in() {
@@ -62,6 +63,7 @@ function autoexec opt_in() {
 
 // Namespace zm_factory
 // Params 0, eflags: 0x1 linked
+// namespace_1437a8b5<file_0>::function_d290ebfa
 // Checksum 0xfa7111d3, Offset: 0x12e8
 // Size: 0x254
 function main() {
@@ -96,6 +98,7 @@ function main() {
 
 // Namespace zm_factory
 // Params 1, eflags: 0x1 linked
+// namespace_1437a8b5<file_0>::function_8feafce2
 // Checksum 0xd0255da8, Offset: 0x1548
 // Size: 0xd6
 function on_player_connected(localclientnum) {
@@ -112,6 +115,7 @@ function on_player_connected(localclientnum) {
 
 // Namespace zm_factory
 // Params 0, eflags: 0x1 linked
+// namespace_1437a8b5<file_0>::function_6e1af22d
 // Checksum 0xa66efad, Offset: 0x1628
 // Size: 0x24
 function include_weapons() {
@@ -120,6 +124,7 @@ function include_weapons() {
 
 // Namespace zm_factory
 // Params 0, eflags: 0x1 linked
+// namespace_1437a8b5<file_0>::function_50a4ff91
 // Checksum 0x99ec1590, Offset: 0x1658
 // Size: 0x4
 function function_50a4ff91() {
@@ -128,6 +133,7 @@ function function_50a4ff91() {
 
 // Namespace zm_factory
 // Params 1, eflags: 0x1 linked
+// namespace_1437a8b5<file_0>::function_aebcf025
 // Checksum 0x8474b4c7, Offset: 0x1668
 // Size: 0x24
 function on_player_spawned(localclientnum) {
@@ -136,6 +142,7 @@ function on_player_spawned(localclientnum) {
 
 // Namespace zm_factory
 // Params 1, eflags: 0x1 linked
+// namespace_1437a8b5<file_0>::function_9788e0f3
 // Checksum 0xe38efa3c, Offset: 0x1698
 // Size: 0x108
 function function_9788e0f3(localclientnum) {
@@ -159,6 +166,7 @@ function function_9788e0f3(localclientnum) {
 
 // Namespace zm_factory
 // Params 0, eflags: 0x1 linked
+// namespace_1437a8b5<file_0>::function_dba1e8f1
 // Checksum 0x69a14ff, Offset: 0x17a8
 // Size: 0x2c
 function function_dba1e8f1() {
@@ -168,6 +176,7 @@ function function_dba1e8f1() {
 
 // Namespace zm_factory
 // Params 0, eflags: 0x1 linked
+// namespace_1437a8b5<file_0>::function_80f102b1
 // Checksum 0x52d9862f, Offset: 0x17e0
 // Size: 0x622
 function setup_personality_character_exerts() {
@@ -215,6 +224,7 @@ function setup_personality_character_exerts() {
 
 // Namespace zm_factory
 // Params 0, eflags: 0x0
+// namespace_1437a8b5<file_0>::function_f205a5f1
 // Checksum 0x1c2be500, Offset: 0x1e10
 // Size: 0xc6
 function function_f205a5f1() {
@@ -229,6 +239,7 @@ function function_f205a5f1() {
 
 // Namespace zm_factory
 // Params 0, eflags: 0x1 linked
+// namespace_1437a8b5<file_0>::function_e0500062
 // Checksum 0x24030f8f, Offset: 0x1ee0
 // Size: 0x64
 function function_e0500062() {
@@ -239,6 +250,7 @@ function function_e0500062() {
 
 // Namespace zm_factory
 // Params 7, eflags: 0x1 linked
+// namespace_1437a8b5<file_0>::function_31018bf3
 // Checksum 0x757639e8, Offset: 0x1f50
 // Size: 0x104
 function function_31018bf3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -256,6 +268,7 @@ function function_31018bf3(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_factory
 // Params 7, eflags: 0x1 linked
+// namespace_1437a8b5<file_0>::function_200762b0
 // Checksum 0x2d090ec0, Offset: 0x2060
 // Size: 0x104
 function function_200762b0(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -273,6 +286,7 @@ function function_200762b0(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_factory
 // Params 7, eflags: 0x1 linked
+// namespace_1437a8b5<file_0>::function_fe3e7230
 // Checksum 0xcfb23f84, Offset: 0x2170
 // Size: 0x104
 function function_fe3e7230(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -290,6 +304,7 @@ function function_fe3e7230(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_factory
 // Params 7, eflags: 0x1 linked
+// namespace_1437a8b5<file_0>::function_6eaba579
 // Checksum 0xd687f83d, Offset: 0x2280
 // Size: 0x8c
 function function_6eaba579(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -302,6 +317,7 @@ function function_6eaba579(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_factory
 // Params 7, eflags: 0x1 linked
+// namespace_1437a8b5<file_0>::function_bb8d01e2
 // Checksum 0x1b21d663, Offset: 0x2318
 // Size: 0x194
 function lightning_strike(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_sin_bio_04",
+    "type": "collectible",
+    "igdtseqnum": 53,
+    "uiMaterial": "t7_icon_menu_p7_nc_sin_bio_04",
+    "uiModel": "p7_nc_sin_bio_04",
+    "description": "COLLECTIBLE_P7_NC_SIN_BIO_04_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_SIN_BIO_04_LONG",
+    "audiolog_sound": "vox_safe_antique_vase_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_ANTIQUE_VASE",
+    "displayNameShort": "COLLECTIBLE_P7_NC_SIN_BIO_04_SHORT",
+    "codexurl": "Collectables-AntiqueVase.htm",
+    "slotSize": 1
+}

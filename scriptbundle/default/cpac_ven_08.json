@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_ven_08",
+    "igdtseqnum": 174,
+    "challengeWidget": "Melee",
+    "challengeDetails": "ACCOLADES_VEN_8",
+    "challengeName": "ACCOLADES_VEN_8_NAME",
+    "centerText": "5",
+    "challengeReference": "MISSION_VENGEANCE_CHALLENGE8"
+}

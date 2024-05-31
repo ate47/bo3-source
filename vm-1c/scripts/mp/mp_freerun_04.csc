@@ -10,6 +10,7 @@
 
 // Namespace mp_freerun_04
 // Params 0, eflags: 0x1 linked
+// namespace_d7e71261<file_0>::function_d290ebfa
 // Checksum 0x9485b1a9, Offset: 0x1b0
 // Size: 0xc4
 function main() {
@@ -25,6 +26,7 @@ function main() {
 
 // Namespace mp_freerun_04
 // Params 1, eflags: 0x1 linked
+// namespace_d7e71261<file_0>::function_5c196beb
 // Checksum 0x6fc6fc28, Offset: 0x280
 // Size: 0xcc
 function function_5c196beb(localclientnum) {

@@ -1,0 +1,220 @@
+{
+    "scenetype": "fxanim",
+    "vmtype": "server",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "p7_fxanim_zm_quest_rune_floating_all_bundle",
+    "type": "scene",
+    "igdtseqnum": 445,
+    "objects": [
+        {
+            "model": "p7_fxanim_zm_quest_rune_floating_bricks_mod",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "p7_fxanim_zm_quest_rune_floating_bricks_anim",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "name": "quest_rune_floating_bricks",
+            "type": "prop"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "p7_fxanim_zm_quest_rune_floating_crates_mod",
+            "mainanim": "p7_fxanim_zm_quest_rune_floating_crates_anim",
+            "playerstance": "stand",
+            "name": "quest_rune_floating_crates",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "mainanim": "p7_fxanim_zm_quest_rune_floating_canisters_anim",
+            "model": "p7_fxanim_zm_quest_rune_floating_canisters_mod",
+            "name": "quest_rune_floating_canisters",
+            "type": "prop"
+        },
+        {
+            "name": "quest_rune_floating_wires_post",
+            "type": "prop",
+            "vmtype": "server",
+            "model": "p7_fxanim_zm_quest_rune_floating_wires_post_mod",
+            "playerstance": "stand",
+            "mainanim": "p7_fxanim_zm_quest_rune_floating_wires_post_anim",
+            "spawnoninit": 1,
+            "player": 1
+        },
+        {
+            "name": "floating_truck_01",
+            "type": "prop",
+            "model": "veh_t7_dlc_truck_german_base_bed_splats_01_snow",
+            "mainanim": "p7_fxanim_zm_quest_rune_floating_truck_01_anim",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "floating_truck_02",
+            "type": "prop",
+            "mainanim": "p7_fxanim_zm_quest_rune_floating_truck_02_anim",
+            "model": "veh_t7_dlc_truck_german_base_bed_splats_02_snow",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

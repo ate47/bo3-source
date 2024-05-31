@@ -8,6 +8,7 @@
 
 // Namespace explode
 // Params 0, eflags: 0x2
+// namespace_3c655080<file_0>::function_2dc19561
 // Checksum 0x8d9235a8, Offset: 0x198
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,6 +17,7 @@ function autoexec function_2dc19561() {
 
 // Namespace explode
 // Params 0, eflags: 0x1 linked
+// namespace_3c655080<file_0>::function_8c87d8eb
 // Checksum 0x5b05be23, Offset: 0x1d8
 // Size: 0xb4
 function __init__() {
@@ -32,6 +34,7 @@ function __init__() {
 
     // Namespace explode
     // Params 0, eflags: 0x1 linked
+    // namespace_3c655080<file_0>::function_22cd788
     // Checksum 0xe604f422, Offset: 0x298
     // Size: 0x98
     function updatedvars() {
@@ -47,6 +50,7 @@ function __init__() {
 
 // Namespace explode
 // Params 1, eflags: 0x1 linked
+// namespace_3c655080<file_0>::function_cd071852
 // Checksum 0x9e3309c9, Offset: 0x338
 // Size: 0xdc
 function localplayer_spawned(localclientnum) {
@@ -70,6 +74,7 @@ function localplayer_spawned(localclientnum) {
 
 // Namespace explode
 // Params 1, eflags: 0x1 linked
+// namespace_3c655080<file_0>::function_afa8faa4
 // Checksum 0xf7871b3f, Offset: 0x420
 // Size: 0x98
 function watchforplayerfalldamage(localclientnum) {
@@ -85,6 +90,7 @@ function watchforplayerfalldamage(localclientnum) {
 
 // Namespace explode
 // Params 1, eflags: 0x1 linked
+// namespace_3c655080<file_0>::function_4a52cc7
 // Checksum 0xf408b1cd, Offset: 0x4c0
 // Size: 0x1d0
 function watchforplayerslide(localclientnum) {
@@ -115,6 +121,7 @@ function watchforplayerslide(localclientnum) {
 
 // Namespace explode
 // Params 6, eflags: 0x1 linked
+// namespace_3c655080<file_0>::function_d78a67f5
 // Checksum 0xf110aae7, Offset: 0x698
 // Size: 0x204
 function dothedirty(localclientnum, right, up, distance, dirtduration, dirtfadetime) {
@@ -142,6 +149,7 @@ function dothedirty(localclientnum, right, up, distance, dirtduration, dirtfadet
 
 // Namespace explode
 // Params 1, eflags: 0x1 linked
+// namespace_3c655080<file_0>::function_a7efd6f8
 // Checksum 0xb6f42e6e, Offset: 0x8a8
 // Size: 0x3a8
 function watchforexplosion(localclientnum) {

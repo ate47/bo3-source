@@ -11,6 +11,7 @@
 
 // Namespace zm_bgb_extra_credit
 // Params 0, eflags: 0x2
+// namespace_828507ab<file_0>::function_2dc19561
 // Checksum 0xed280d97, Offset: 0x190
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,6 +20,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_extra_credit
 // Params 0, eflags: 0x1 linked
+// namespace_828507ab<file_0>::function_8c87d8eb
 // Checksum 0x86932f6, Offset: 0x1d0
 // Size: 0x54
 function __init__() {
@@ -30,6 +32,7 @@ function __init__() {
 
 // Namespace zm_bgb_extra_credit
 // Params 0, eflags: 0x1 linked
+// namespace_828507ab<file_0>::function_7afbf7cd
 // Checksum 0xf80a50fa, Offset: 0x230
 // Size: 0x44
 function activation() {
@@ -39,6 +42,7 @@ function activation() {
 
 // Namespace zm_bgb_extra_credit
 // Params 1, eflags: 0x1 linked
+// namespace_828507ab<file_0>::function_b18c3b2d
 // Checksum 0xd8283fff, Offset: 0x280
 // Size: 0xd4
 function function_b18c3b2d(origin) {
@@ -54,6 +58,7 @@ function function_b18c3b2d(origin) {
 
 // Namespace zm_bgb_extra_credit
 // Params 0, eflags: 0x1 linked
+// namespace_828507ab<file_0>::function_3258dd42
 // Checksum 0xf150569d, Offset: 0x360
 // Size: 0x8
 function function_3258dd42() {

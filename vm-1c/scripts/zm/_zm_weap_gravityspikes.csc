@@ -9,6 +9,7 @@
 
 // Namespace namespace_b6ba8f1b
 // Params 0, eflags: 0x2
+// namespace_b6ba8f1b<file_0>::function_2dc19561
 // Checksum 0xce31d842, Offset: 0x600
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_b6ba8f1b
 // Params 1, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_8c87d8eb
 // Checksum 0x915f8b33, Offset: 0x640
 // Size: 0x16a
 function __init__(localclientnum) {
@@ -37,6 +39,7 @@ function __init__(localclientnum) {
 
 // Namespace namespace_b6ba8f1b
 // Params 0, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_4ece4a2f
 // Checksum 0xc6fca6e6, Offset: 0x7b8
 // Size: 0x3ac
 function register_clientfields() {
@@ -57,6 +60,7 @@ function register_clientfields() {
 
 // Namespace namespace_b6ba8f1b
 // Params 7, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_def2e02a
 // Checksum 0x875f40a, Offset: 0xb70
 // Size: 0x64
 function gravity_slam_down(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -67,6 +71,7 @@ function gravity_slam_down(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_b6ba8f1b
 // Params 7, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_f00ca2d8
 // Checksum 0x70b89c88, Offset: 0xbe0
 // Size: 0xa4
 function gravity_slam_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -80,6 +85,7 @@ function gravity_slam_fx(localclientnum, oldval, newval, bnewent, binitialsnap, 
 
 // Namespace namespace_b6ba8f1b
 // Params 7, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_1386cd6a
 // Checksum 0xfbcd0719, Offset: 0xc90
 // Size: 0x64
 function gravity_slam_player_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -88,6 +94,7 @@ function gravity_slam_player_fx(localclientnum, oldval, newval, bnewent, binitia
 
 // Namespace namespace_b6ba8f1b
 // Params 7, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_d925adb6
 // Checksum 0x81e2b595, Offset: 0xd00
 // Size: 0x21c
 function gravity_trap_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -122,6 +129,7 @@ function gravity_trap_fx(localclientnum, oldval, newval, bnewent, binitialsnap, 
 
 // Namespace namespace_b6ba8f1b
 // Params 7, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_49d6151c
 // Checksum 0xc720c606, Offset: 0xf28
 // Size: 0xac
 function gravity_trap_spike_spark(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -136,6 +144,7 @@ function gravity_trap_spike_spark(localclientnum, oldval, newval, bnewent, binit
 
 // Namespace namespace_b6ba8f1b
 // Params 7, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_99bb9db1
 // Checksum 0xe05e49c4, Offset: 0xfe0
 // Size: 0xbe
 function gravity_trap_location(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -151,6 +160,7 @@ function gravity_trap_location(localclientnum, oldval, newval, bnewent, binitial
 
 // Namespace namespace_b6ba8f1b
 // Params 7, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_7c1f58a
 // Checksum 0x4fed8c59, Offset: 0x10a8
 // Size: 0x6c
 function gravity_trap_destroy(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -159,6 +169,7 @@ function gravity_trap_destroy(localclientnum, oldval, newval, bnewent, binitials
 
 // Namespace namespace_b6ba8f1b
 // Params 7, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_92d29e12
 // Checksum 0xb83210bb, Offset: 0x1120
 // Size: 0x64
 function ragdoll_impact_watch_start(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -169,6 +180,7 @@ function ragdoll_impact_watch_start(localclientnum, oldval, newval, bnewent, bin
 
 // Namespace namespace_b6ba8f1b
 // Params 1, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_39a748a7
 // Checksum 0x4e8973f, Offset: 0x1190
 // Size: 0x220
 function ragdoll_impact_watch(localclientnum) {
@@ -204,6 +216,7 @@ function ragdoll_impact_watch(localclientnum) {
 
 // Namespace namespace_b6ba8f1b
 // Params 7, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_def5e8b7
 // Checksum 0x26b93f54, Offset: 0x13b8
 // Size: 0x76
 function function_def5e8b7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -216,6 +229,7 @@ function function_def5e8b7(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_b6ba8f1b
 // Params 1, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_4b3bf003
 // Checksum 0x71002509, Offset: 0x1438
 // Size: 0x60
 function gravity_trap_rumble(localclientnum) {
@@ -230,6 +244,7 @@ function gravity_trap_rumble(localclientnum) {
 
 // Namespace namespace_b6ba8f1b
 // Params 7, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_45619995
 // Checksum 0x8e135540, Offset: 0x14a0
 // Size: 0x15c
 function play_sparky_beam_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -252,6 +267,7 @@ function play_sparky_beam_fx(localclientnum, oldval, newval, bnewent, binitialsn
 
 // Namespace namespace_b6ba8f1b
 // Params 7, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_c70eff1
 // Checksum 0x5d99e91a, Offset: 0x1608
 // Size: 0x16e
 function sparky_zombie_fx_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -273,6 +289,7 @@ function sparky_zombie_fx_cb(localclientnum, oldval, newval, bnewent, binitialsn
 
 // Namespace namespace_b6ba8f1b
 // Params 7, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_135f7368
 // Checksum 0xa3bf1fbb, Offset: 0x1780
 // Size: 0xde
 function sparky_zombie_trail_fx_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -289,6 +306,7 @@ function sparky_zombie_trail_fx_cb(localclientnum, oldval, newval, bnewent, bini
 
 // Namespace namespace_b6ba8f1b
 // Params 7, eflags: 0x1 linked
+// namespace_b6ba8f1b<file_0>::function_d88b33bd
 // Checksum 0xc43e3a6, Offset: 0x1868
 // Size: 0x8c
 function gravity_spike_zombie_explode(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

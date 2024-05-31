@@ -5,6 +5,7 @@
 
 // Namespace namespace_b9254c21
 // Params 0, eflags: 0x0
+// namespace_b9254c21<file_0>::function_d290ebfa
 // Checksum 0x495b2dec, Offset: 0x118
 // Size: 0x6b
 function main() {

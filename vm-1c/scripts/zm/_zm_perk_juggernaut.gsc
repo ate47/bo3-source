@@ -17,6 +17,7 @@
 
 // Namespace namespace_b1eac770
 // Params 0, eflags: 0x2
+// namespace_b1eac770<file_0>::function_2dc19561
 // Checksum 0xe44b6d1f, Offset: 0x3a8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -25,6 +26,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_b1eac770
 // Params 0, eflags: 0x1 linked
+// namespace_b1eac770<file_0>::function_8c87d8eb
 // Checksum 0x30bb4274, Offset: 0x3e8
 // Size: 0x14
 function __init__() {
@@ -33,6 +35,7 @@ function __init__() {
 
 // Namespace namespace_b1eac770
 // Params 0, eflags: 0x1 linked
+// namespace_b1eac770<file_0>::function_242d42bd
 // Checksum 0xe08c117b, Offset: 0x408
 // Size: 0x13c
 function function_242d42bd() {
@@ -46,6 +49,7 @@ function function_242d42bd() {
 
 // Namespace namespace_b1eac770
 // Params 0, eflags: 0x1 linked
+// namespace_b1eac770<file_0>::function_7be0288e
 // Checksum 0xe55e9c63, Offset: 0x550
 // Size: 0x44
 function init_juggernaut() {
@@ -55,6 +59,7 @@ function init_juggernaut() {
 
 // Namespace namespace_b1eac770
 // Params 0, eflags: 0x1 linked
+// namespace_b1eac770<file_0>::function_9e164b07
 // Checksum 0xc7ab15d2, Offset: 0x5a0
 // Size: 0xe0
 function function_9e164b07() {
@@ -71,6 +76,7 @@ function function_9e164b07() {
 
 // Namespace namespace_b1eac770
 // Params 0, eflags: 0x1 linked
+// namespace_b1eac770<file_0>::function_d361c845
 // Checksum 0xa76a22ba, Offset: 0x688
 // Size: 0x34
 function function_d361c845() {
@@ -79,6 +85,7 @@ function function_d361c845() {
 
 // Namespace namespace_b1eac770
 // Params 1, eflags: 0x1 linked
+// namespace_b1eac770<file_0>::function_ea578652
 // Checksum 0x571e18f0, Offset: 0x6c8
 // Size: 0x2c
 function function_ea578652(state) {
@@ -87,6 +94,7 @@ function function_ea578652(state) {
 
 // Namespace namespace_b1eac770
 // Params 4, eflags: 0x1 linked
+// namespace_b1eac770<file_0>::function_d5821244
 // Checksum 0x6d167924, Offset: 0x700
 // Size: 0xd0
 function function_d5821244(use_trigger, perk_machine, bump_trigger, collision) {
@@ -104,6 +112,7 @@ function function_d5821244(use_trigger, perk_machine, bump_trigger, collision) {
 
 // Namespace namespace_b1eac770
 // Params 0, eflags: 0x1 linked
+// namespace_b1eac770<file_0>::function_c54b4a8c
 // Checksum 0xdbbf2ef, Offset: 0x7d8
 // Size: 0x24
 function function_c54b4a8c() {
@@ -112,6 +121,7 @@ function function_c54b4a8c() {
 
 // Namespace namespace_b1eac770
 // Params 3, eflags: 0x1 linked
+// namespace_b1eac770<file_0>::function_9c9dac0a
 // Checksum 0xafa819fe, Offset: 0x808
 // Size: 0x44
 function function_9c9dac0a(b_pause, str_perk, str_result) {

@@ -2,6 +2,7 @@
 
 // Namespace character
 // Params 1, eflags: 0x0
+// namespace_f2205aa2<file_0>::function_f9ddef95
 // Checksum 0xb8cda92d, Offset: 0xd0
 // Size: 0x3c
 function setmodelfromarray(a) {
@@ -10,6 +11,7 @@ function setmodelfromarray(a) {
 
 // Namespace character
 // Params 1, eflags: 0x0
+// namespace_f2205aa2<file_0>::function_6c340cd8
 // Checksum 0x5d8097c3, Offset: 0x118
 // Size: 0x28
 function randomelement(a) {
@@ -18,6 +20,7 @@ function randomelement(a) {
 
 // Namespace character
 // Params 1, eflags: 0x0
+// namespace_f2205aa2<file_0>::function_d52cf8e5
 // Checksum 0xdc69e339, Offset: 0x148
 // Size: 0x44
 function attachfromarray(a) {
@@ -26,6 +29,7 @@ function attachfromarray(a) {
 
 // Namespace character
 // Params 0, eflags: 0x0
+// namespace_f2205aa2<file_0>::function_b9c80ba2
 // Checksum 0xa087e372, Offset: 0x198
 // Size: 0x64
 function newcharacter() {
@@ -40,6 +44,7 @@ function newcharacter() {
 
 // Namespace character
 // Params 0, eflags: 0x0
+// namespace_f2205aa2<file_0>::function_2706f7ee
 // Checksum 0xc734a501, Offset: 0x208
 // Size: 0x1a8
 function save() {
@@ -64,6 +69,7 @@ function save() {
 
 // Namespace character
 // Params 1, eflags: 0x0
+// namespace_f2205aa2<file_0>::function_d7916d65
 // Checksum 0x7b4eca7, Offset: 0x3b8
 // Size: 0x196
 function load(info) {
@@ -88,6 +94,7 @@ function load(info) {
 
 // Namespace character
 // Params 1, eflags: 0x0
+// namespace_f2205aa2<file_0>::function_b2d3ffb3
 // Checksum 0xffca34a7, Offset: 0x558
 // Size: 0x1f2
 function get_random_character(amount) {
@@ -127,6 +134,7 @@ function get_random_character(amount) {
 
 // Namespace character
 // Params 2, eflags: 0x0
+// namespace_f2205aa2<file_0>::function_dc11916a
 // Checksum 0xd768ca27, Offset: 0x758
 // Size: 0x152
 function get_least_used_index(prefix, group) {
@@ -149,6 +157,7 @@ function get_least_used_index(prefix, group) {
 
 // Namespace character
 // Params 3, eflags: 0x0
+// namespace_f2205aa2<file_0>::function_7fa899df
 // Checksum 0xd3155a34, Offset: 0x8b8
 // Size: 0x60
 function initialize_character_group(prefix, group, amount) {
@@ -159,6 +168,7 @@ function initialize_character_group(prefix, group, amount) {
 
 // Namespace character
 // Params 1, eflags: 0x0
+// namespace_f2205aa2<file_0>::function_47d18840
 // Checksum 0x4b076887, Offset: 0x920
 // Size: 0x56
 function random(array) {

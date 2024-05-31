@@ -1,0 +1,12 @@
+{
+    "vmtype": "none",
+    "name": "cpac_aqu_02",
+    "igdtseqnum": 13,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Find",
+    "challengeDetails": "ACCOLADES_AQU_2",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_AQU_2_NAME",
+    "centerText": "2",
+    "challengeReference": "MISSION_AQUIFER_COLLECTIBLE"
+}

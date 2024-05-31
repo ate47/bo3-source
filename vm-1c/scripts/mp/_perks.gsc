@@ -12,6 +12,7 @@
 
 // Namespace spawning
 // Params 0, eflags: 0x2
+// namespace_52deffe2<file_0>::function_2dc19561
 // Checksum 0xe4dede43, Offset: 0x2e0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,6 +21,7 @@ function autoexec function_2dc19561() {
 
 // Namespace spawning
 // Params 0, eflags: 0x1 linked
+// namespace_52deffe2<file_0>::function_8c87d8eb
 // Checksum 0xc790bdc2, Offset: 0x320
 // Size: 0x74
 function __init__() {
@@ -30,6 +32,7 @@ function __init__() {
 
 // Namespace spawning
 // Params 1, eflags: 0x1 linked
+// namespace_52deffe2<file_0>::function_fb4f96b5
 // Checksum 0x4b39346, Offset: 0x3a0
 // Size: 0xc
 function on_player_connect(local_client_num) {
@@ -38,6 +41,7 @@ function on_player_connect(local_client_num) {
 
 // Namespace spawning
 // Params 1, eflags: 0x1 linked
+// namespace_52deffe2<file_0>::function_aebcf025
 // Checksum 0x13d007ea, Offset: 0x3b8
 // Size: 0x54
 function on_player_spawned(local_client_num) {
@@ -48,6 +52,7 @@ function on_player_spawned(local_client_num) {
 
 // Namespace spawning
 // Params 0, eflags: 0x1 linked
+// namespace_52deffe2<file_0>::function_d1e2e07f
 // Checksum 0x52708e88, Offset: 0x418
 // Size: 0x9c
 function monitorflight() {
@@ -66,6 +71,7 @@ function monitorflight() {
 
 // Namespace spawning
 // Params 0, eflags: 0x1 linked
+// namespace_52deffe2<file_0>::function_bb0bf92b
 // Checksum 0xee141e00, Offset: 0x4c0
 // Size: 0x5a0
 function monitorgpsjammer() {
@@ -160,6 +166,7 @@ function monitorgpsjammer() {
 
 // Namespace spawning
 // Params 0, eflags: 0x1 linked
+// namespace_52deffe2<file_0>::function_8f35236f
 // Checksum 0xe8c5b66f, Offset: 0xa68
 // Size: 0x5a0
 function monitorsengrenjammer() {

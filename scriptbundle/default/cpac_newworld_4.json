@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_newworld_4",
+    "igdtseqnum": 105,
+    "challengeWidget": "Traversal",
+    "challengeDetails": "ACCOLADES_NEW_4",
+    "challengeName": "ACCOLADES_NEW_4_NAME",
+    "centerText": "3",
+    "challengeReference": "MISSION_NEWWORLD_CHALLENGE4"
+}

@@ -1,0 +1,11 @@
+{
+    "vmtype": "none",
+    "name": "cpac_sge_11",
+    "igdtseqnum": 160,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Kills",
+    "challengeDetails": "ACCOLADES_SGEN_11",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_SGEN_11_NAME",
+    "challengeReference": "MISSION_SGEN_CHALLENGE11"
+}

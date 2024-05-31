@@ -1,0 +1,19 @@
+{
+    "vmtype": "client",
+    "s00_material": "generic_filter_drowning",
+    "configstringfiletype": "scriptbundle",
+    "s00_num_consts": 1,
+    "s00_c00_anm": "linear repeat",
+    "num_stages": 1,
+    "s00_c00_end_x": 1,
+    "s00_c00_end_z": 0.1,
+    "name": "postfx_bundle_test_loop",
+    "type": "postfxbundle",
+    "looping": 1,
+    "s00_c00_name": "scriptvector0",
+    "s00_c00_start_y": 1.414,
+    "s00_c00_start_z": 2,
+    "s00_length": 2,
+    "s00_c00_channels": 3,
+    "igdtseqnum": 347
+}

@@ -9,6 +9,7 @@
 
 // Namespace core_frontend
 // Params 0, eflags: 0x1 linked
+// namespace_25ab77f3<file_0>::function_d290ebfa
 // Checksum 0xa6476a3d, Offset: 0x148
 // Size: 0x54
 function main() {
@@ -20,6 +21,7 @@ function main() {
 
 // Namespace core_frontend
 // Params 0, eflags: 0x1 linked
+// namespace_25ab77f3<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x1a8
 // Size: 0x4
 function precache() {

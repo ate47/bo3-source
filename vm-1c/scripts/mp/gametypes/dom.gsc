@@ -23,6 +23,7 @@
 
 // Namespace dom
 // Params 0, eflags: 0x0
+// namespace_98d3c28f<file_0>::function_d290ebfa
 // Checksum 0xce9c7c6c, Offset: 0xdf8
 // Size: 0x564
 function main() {
@@ -79,6 +80,7 @@ function main() {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_90f0668f
 // Checksum 0x99ec1590, Offset: 0x1368
 // Size: 0x4
 function onprecachegametype() {
@@ -87,6 +89,7 @@ function onprecachegametype() {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_34685338
 // Checksum 0x8d25f54e, Offset: 0x1378
 // Size: 0x49c
 function onstartgametype() {
@@ -142,6 +145,7 @@ function onstartgametype() {
 
 // Namespace dom
 // Params 1, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_257d1c47
 // Checksum 0x73bf81a1, Offset: 0x1820
 // Size: 0xf6
 function onendgame(winningteam) {
@@ -158,6 +162,7 @@ function onendgame(winningteam) {
 
 // Namespace dom
 // Params 1, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_3fcd5617
 // Checksum 0x5dbaf02a, Offset: 0x1920
 // Size: 0xb6
 function onroundendgame(roundwinner) {
@@ -171,6 +176,7 @@ function onroundendgame(roundwinner) {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_843e8b8a
 // Checksum 0xfe35df6a, Offset: 0x19e0
 // Size: 0xc4
 function updategametypedvars() {
@@ -184,6 +190,7 @@ function updategametypedvars() {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_1b33a134
 // Checksum 0xca0dcb98, Offset: 0x1ab0
 // Size: 0x7e4
 function domflags() {
@@ -270,6 +277,7 @@ function domflags() {
 
 // Namespace dom
 // Params 2, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_518551ad
 // Checksum 0x508061e7, Offset: 0x22a0
 // Size: 0x12e
 function getunownedflagneareststart(team, excludeflag) {
@@ -293,6 +301,7 @@ function getunownedflagneareststart(team, excludeflag) {
 
     // Namespace dom
     // Params 0, eflags: 0x1 linked
+    // namespace_98d3c28f<file_0>::function_dc8506b8
     // Checksum 0x3486b113, Offset: 0x23d8
     // Size: 0x288
     function domdebug() {
@@ -328,6 +337,7 @@ function getunownedflagneareststart(team, excludeflag) {
 
 // Namespace dom
 // Params 1, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_cfce9b82
 // Checksum 0x7b18b183, Offset: 0x2668
 // Size: 0xfe
 function onbeginuse(player) {
@@ -347,6 +357,7 @@ function onbeginuse(player) {
 
 // Namespace dom
 // Params 3, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_76e87fb4
 // Checksum 0xed96ccf9, Offset: 0x2770
 // Size: 0x168
 function onuseupdate(team, progress, change) {
@@ -366,6 +377,7 @@ function onuseupdate(team, progress, change) {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_43cfaf40
 // Checksum 0xea65f701, Offset: 0x28e0
 // Size: 0x4c
 function flushobjectiveflagdialog() {
@@ -376,6 +388,7 @@ function flushobjectiveflagdialog() {
 
 // Namespace dom
 // Params 3, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_f5801c57
 // Checksum 0x3c842ee5, Offset: 0x2938
 // Size: 0xf4
 function statusdialog(dialog, team, objectivekey) {
@@ -398,6 +411,7 @@ function statusdialog(dialog, team, objectivekey) {
 
 // Namespace dom
 // Params 3, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_a454a59a
 // Checksum 0x2d2d1980, Offset: 0x2a38
 // Size: 0x4c
 function onenduse(team, player, success) {
@@ -408,6 +422,7 @@ function onenduse(team, player, success) {
 
 // Namespace dom
 // Params 1, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_95e1e5e2
 // Checksum 0x92960ff0, Offset: 0x2a90
 // Size: 0x1e4
 function flagcapturedfromneutral(team) {
@@ -430,6 +445,7 @@ function flagcapturedfromneutral(team) {
 
 // Namespace dom
 // Params 2, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_69ab2922
 // Checksum 0xe7ed2d85, Offset: 0x2c80
 // Size: 0x222
 function flagcapturedfromteam(team, oldteam) {
@@ -455,6 +471,7 @@ function flagcapturedfromteam(team, oldteam) {
 
 // Namespace dom
 // Params 2, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_95fc2b2
 // Checksum 0xa5e57fbd, Offset: 0x2eb0
 // Size: 0x134
 function flagneutralized(team, oldteam) {
@@ -472,6 +489,7 @@ function flagneutralized(team, oldteam) {
 
 // Namespace dom
 // Params 2, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_20a43863
 // Checksum 0x60926ad6, Offset: 0x2ff0
 // Size: 0x166
 function getdomflagusestring(label, neutralized) {
@@ -522,6 +540,7 @@ function getdomflagusestring(label, neutralized) {
 
 // Namespace dom
 // Params 1, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_77561c51
 // Checksum 0xfe5d8ed, Offset: 0x3160
 // Size: 0x47c
 function onusewithneutralizingflag(player) {
@@ -575,6 +594,7 @@ function onusewithneutralizingflag(player) {
 
 // Namespace dom
 // Params 1, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_5c292bcb
 // Checksum 0x4f81dc62, Offset: 0x35e8
 // Size: 0x344
 function onusewithoutneutralizingflag(player) {
@@ -616,6 +636,7 @@ function onusewithoutneutralizingflag(player) {
 
 // Namespace dom
 // Params 1, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_3c8ea097
 // Checksum 0x9807362d, Offset: 0x3938
 // Size: 0x64
 function onuse(player) {
@@ -629,6 +650,7 @@ function onuse(player) {
 
 // Namespace dom
 // Params 1, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_b256355
 // Checksum 0x935f8f28, Offset: 0x39a8
 // Size: 0x3c
 function totaldomination(team) {
@@ -640,6 +662,7 @@ function totaldomination(team) {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_d62fbaa7
 // Checksum 0xe4ddf2e2, Offset: 0x39f0
 // Size: 0x68
 function watchforbflagcap() {
@@ -654,6 +677,7 @@ function watchforbflagcap() {
 
 // Namespace dom
 // Params 1, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_b156854b
 // Checksum 0xda4206ba, Offset: 0x3a60
 // Size: 0x2a
 function endwatchforbflagcapaftertime(time) {
@@ -664,6 +688,7 @@ function endwatchforbflagcapaftertime(time) {
 
 // Namespace dom
 // Params 5, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_39bb28eb
 // Checksum 0xf1e6a320, Offset: 0x3a98
 // Size: 0x316
 function give_capture_credit(touchlist, string, lastownerteam, isbflag, neutralizing) {
@@ -710,6 +735,7 @@ function give_capture_credit(touchlist, string, lastownerteam, isbflag, neutrali
 
 // Namespace dom
 // Params 4, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_4af8fccc
 // Checksum 0xe139c33, Offset: 0x3db8
 // Size: 0x1f6
 function give_neutralized_credit(touchlist, string, lastownerteam, isbflag) {
@@ -739,6 +765,7 @@ function give_neutralized_credit(touchlist, string, lastownerteam, isbflag) {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_8cd6d84b
 // Checksum 0x5379ca4, Offset: 0x3fb8
 // Size: 0x530
 function updatedomscores() {
@@ -814,6 +841,7 @@ function updatedomscores() {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_5cee117d
 // Checksum 0xe4cdb33b, Offset: 0x44f0
 // Size: 0x33c
 function onscoreclosemusic() {
@@ -864,6 +892,7 @@ function onscoreclosemusic() {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_e4e885e6
 // Checksum 0x55f0bc78, Offset: 0x4838
 // Size: 0x9c
 function onroundswitch() {
@@ -879,6 +908,7 @@ function onroundswitch() {
 
 // Namespace dom
 // Params 9, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_c2658b46
 // Checksum 0xbbe5d5fd, Offset: 0x48e0
 // Size: 0x764
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -977,6 +1007,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace dom
 // Params 1, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_316dbc8
 // Checksum 0x431e0460, Offset: 0x5050
 // Size: 0x168
 function killwhilecontesting(flag) {
@@ -1006,6 +1037,7 @@ function killwhilecontesting(flag) {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_cfd75f25
 // Checksum 0x5a6296ba, Offset: 0x51c0
 // Size: 0x98
 function updateattackermultikills() {
@@ -1026,6 +1058,7 @@ function updateattackermultikills() {
 
 // Namespace dom
 // Params 1, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_82762a23
 // Checksum 0x3ab29ead, Offset: 0x5260
 // Size: 0x78
 function getteamflagcount(team) {
@@ -1040,6 +1073,7 @@ function getteamflagcount(team) {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_8f6610ee
 // Checksum 0xc3f6200, Offset: 0x52e0
 // Size: 0x1a
 function getflagteam() {
@@ -1048,6 +1082,7 @@ function getflagteam() {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_71558786
 // Checksum 0x39039275, Offset: 0x5308
 // Size: 0x106
 function getboundaryflags() {
@@ -1065,6 +1100,7 @@ function getboundaryflags() {
 
 // Namespace dom
 // Params 1, eflags: 0x0
+// namespace_98d3c28f<file_0>::function_1c563cc3
 // Checksum 0x8495472b, Offset: 0x5418
 // Size: 0xf6
 function getboundaryflagspawns(team) {
@@ -1083,6 +1119,7 @@ function getboundaryflagspawns(team) {
 
 // Namespace dom
 // Params 1, eflags: 0x0
+// namespace_98d3c28f<file_0>::function_505a826d
 // Checksum 0x18189a90, Offset: 0x5518
 // Size: 0x13e
 function getspawnsboundingflag(avoidflag) {
@@ -1111,6 +1148,7 @@ function getspawnsboundingflag(avoidflag) {
 
 // Namespace dom
 // Params 1, eflags: 0x0
+// namespace_98d3c28f<file_0>::function_94c41c1f
 // Checksum 0x871f7943, Offset: 0x5660
 // Size: 0x1b8
 function getownedandboundingflagspawns(team) {
@@ -1136,6 +1174,7 @@ function getownedandboundingflagspawns(team) {
 
 // Namespace dom
 // Params 1, eflags: 0x0
+// namespace_98d3c28f<file_0>::function_f931f320
 // Checksum 0xa3142be5, Offset: 0x5820
 // Size: 0xda
 function getownedflagspawns(team) {
@@ -1152,6 +1191,7 @@ function getownedflagspawns(team) {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_388469e6
 // Checksum 0xa85c26b3, Offset: 0x5908
 // Size: 0x68e
 function flagsetup() {
@@ -1241,6 +1281,7 @@ function flagsetup() {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_74f01d90
 // Checksum 0x789f2a79, Offset: 0x5fa0
 // Size: 0x124
 function createflagspawninfluencers() {
@@ -1258,6 +1299,7 @@ function createflagspawninfluencers() {
 
 // Namespace dom
 // Params 1, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_24384d63
 // Checksum 0x24d885fb, Offset: 0x60d0
 // Size: 0x18c
 function update_spawn_influencers(team) {
@@ -1279,6 +1321,7 @@ function update_spawn_influencers(team) {
 
 // Namespace dom
 // Params 3, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_4d24e569
 // Checksum 0x380975c4, Offset: 0x6268
 // Size: 0x94
 function addspawnpointsforflag(team, flag_team, flagspawnname) {
@@ -1293,6 +1336,7 @@ function addspawnpointsforflag(team, flag_team, flagspawnname) {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_25cda323
 // Checksum 0xf3d6624b, Offset: 0x6308
 // Size: 0x21c
 function function_25cda323() {
@@ -1321,6 +1365,7 @@ function function_25cda323() {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_488fc46d
 // Checksum 0x3b5d02b4, Offset: 0x6530
 // Size: 0xec
 function dominated_challenge_check() {
@@ -1345,6 +1390,7 @@ function dominated_challenge_check() {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_a5f5b013
 // Checksum 0x644aa30f, Offset: 0x6628
 // Size: 0xe4
 function dominated_check() {
@@ -1367,6 +1413,7 @@ function dominated_check() {
 
 // Namespace dom
 // Params 1, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_14d9f52e
 // Checksum 0x892875e5, Offset: 0x6718
 // Size: 0xf4
 function updatecapsperminute(lastownerteam) {
@@ -1390,6 +1437,7 @@ function updatecapsperminute(lastownerteam) {
 
 // Namespace dom
 // Params 2, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_688c00fa
 // Checksum 0x644fce4d, Offset: 0x6818
 // Size: 0x64
 function isscoreboosting(player, flag) {
@@ -1407,6 +1455,7 @@ function isscoreboosting(player, flag) {
 
 // Namespace dom
 // Params 0, eflags: 0x1 linked
+// namespace_98d3c28f<file_0>::function_747662c0
 // Checksum 0xb87325e, Offset: 0x6888
 // Size: 0xc0
 function onupdateuserate() {

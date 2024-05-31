@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_sin_bio_03",
+    "type": "collectible",
+    "igdtseqnum": 52,
+    "uiMaterial": "t7_icon_menu_p7_nc_sin_bio_03",
+    "uiModelWithStand": "p7_nc_sin_bio_03_with_stand",
+    "uiModel": "p7_nc_sin_bio_03",
+    "description": "COLLECTIBLE_P7_NC_SIN_BIO_03_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_SIN_BIO_03_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_GANGSTER_BLING",
+    "displayNameShort": "COLLECTIBLE_P7_NC_SIN_BIO_03_SHORT",
+    "codexurl": "Collectables-GangsterBling.htm",
+    "slotSize": 0
+}

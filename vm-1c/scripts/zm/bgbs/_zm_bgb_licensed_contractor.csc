@@ -9,6 +9,7 @@
 
 // Namespace zm_bgb_licensed_contractor
 // Params 0, eflags: 0x2
+// namespace_2f4bd124<file_0>::function_2dc19561
 // Checksum 0x5f57de5c, Offset: 0x158
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_licensed_contractor
 // Params 0, eflags: 0x1 linked
+// namespace_2f4bd124<file_0>::function_8c87d8eb
 // Checksum 0x7d698b67, Offset: 0x198
 // Size: 0x3c
 function __init__() {

@@ -18,6 +18,7 @@
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_80bc4653
 // Checksum 0x9276f3ab, Offset: 0x580
 // Size: 0x24
 function localclientconnect(localclientnum) {
@@ -26,6 +27,7 @@ function localclientconnect(localclientnum) {
 
 // Namespace customclass
 // Params 0, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_c35e6aab
 // Checksum 0x86d13e10, Offset: 0x5b0
 // Size: 0x124
 function init() {
@@ -50,6 +52,7 @@ function init() {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_35211642
 // Checksum 0x6b4b9546, Offset: 0x6e0
 // Size: 0x64
 function custom_class_init(localclientnum) {
@@ -61,6 +64,7 @@ function custom_class_init(localclientnum) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_58ef7272
 // Checksum 0x94eaac47, Offset: 0x750
 // Size: 0xc8
 function custom_class_start_threads(localclientnum) {
@@ -76,6 +80,7 @@ function custom_class_start_threads(localclientnum) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_8301e2ab
 // Checksum 0xa92b3143, Offset: 0x820
 // Size: 0xba
 function handle_cac_customization(localclientnum) {
@@ -94,6 +99,7 @@ function handle_cac_customization(localclientnum) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_d082ed6f
 // Checksum 0xa5071951, Offset: 0x8e8
 // Size: 0x3d4
 function custom_class_update(localclientnum) {
@@ -145,6 +151,7 @@ function custom_class_update(localclientnum) {
 
 // Namespace customclass
 // Params 2, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_56144993
 // Checksum 0xe6833470, Offset: 0xcc8
 // Size: 0x84
 function toggle_locked_weapon_shader(localclientnum, is_item_unlocked) {
@@ -163,6 +170,7 @@ function toggle_locked_weapon_shader(localclientnum, is_item_unlocked) {
 
 // Namespace customclass
 // Params 2, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_db89bd0c
 // Checksum 0xe05208a5, Offset: 0xd58
 // Size: 0x7c
 function function_db89bd0c(localclientnum, var_40e5de05) {
@@ -181,6 +189,7 @@ function function_db89bd0c(localclientnum, var_40e5de05) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_133a4a3f
 // Checksum 0xb71f6687, Offset: 0xde0
 // Size: 0x90
 function is_optic(attachmentname) {
@@ -195,6 +204,7 @@ function is_optic(attachmentname) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_72398bcb
 // Checksum 0x43c1d25a, Offset: 0xe78
 // Size: 0x344
 function custom_class_attachment_select_focus(localclientnum) {
@@ -244,6 +254,7 @@ function custom_class_attachment_select_focus(localclientnum) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_c82f44cc
 // Checksum 0x648093a7, Offset: 0x11c8
 // Size: 0x1d2
 function custom_class_remove(localclientnum) {
@@ -268,6 +279,7 @@ function custom_class_remove(localclientnum) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_e7763e6c
 // Checksum 0x1a54d780, Offset: 0x13a8
 // Size: 0x13a
 function custom_class_closed(localclientnum) {
@@ -287,6 +299,7 @@ function custom_class_closed(localclientnum) {
 
 // Namespace customclass
 // Params 3, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_b22c17a7
 // Checksum 0xeedd8dab, Offset: 0x14f0
 // Size: 0x84
 function spawn_weapon_model(localclientnum, origin, angles) {
@@ -300,6 +313,7 @@ function spawn_weapon_model(localclientnum, origin, angles) {
 
 // Namespace customclass
 // Params 2, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_2632634e
 // Checksum 0xb2ef07ee, Offset: 0x1580
 // Size: 0x108
 function function_2632634e(localclientnum, var_cf4497db) {
@@ -314,6 +328,7 @@ function function_2632634e(localclientnum, var_cf4497db) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_6c023f8a
 // Checksum 0x5f20b684, Offset: 0x1690
 // Size: 0xc4
 function hide_paintshop_bg(localclientnum) {
@@ -329,6 +344,7 @@ function hide_paintshop_bg(localclientnum) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_e18194df
 // Checksum 0x9b49ef47, Offset: 0x1760
 // Size: 0x9c
 function show_paintshop_bg(localclientnum) {
@@ -341,6 +357,7 @@ function show_paintshop_bg(localclientnum) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_2d50faf
 // Checksum 0x1446350e, Offset: 0x1808
 // Size: 0x3c
 function get_camo_index(localclientnum) {
@@ -352,6 +369,7 @@ function get_camo_index(localclientnum) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_15908133
 // Checksum 0xcfd735d9, Offset: 0x1850
 // Size: 0x3c
 function get_reticle_index(localclientnum) {
@@ -363,6 +381,7 @@ function get_reticle_index(localclientnum) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_bcfb8776
 // Checksum 0x9e65d4b5, Offset: 0x1898
 // Size: 0x3c
 function function_bcfb8776(localclientnum) {
@@ -374,6 +393,7 @@ function function_bcfb8776(localclientnum) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_48305aa
 // Checksum 0x2f13a37, Offset: 0x18e0
 // Size: 0x3c
 function get_show_emblem(localclientnum) {
@@ -385,6 +405,7 @@ function get_show_emblem(localclientnum) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_c9f6ea78
 // Checksum 0xf03abbd5, Offset: 0x1928
 // Size: 0x3c
 function get_show_paintshop(localclientnum) {
@@ -396,6 +417,7 @@ function get_show_paintshop(localclientnum) {
 
 // Namespace customclass
 // Params 2, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_f3037b75
 // Checksum 0x3cd10e22, Offset: 0x1970
 // Size: 0x18c
 function function_f3037b75(localclientnum, weapon_options_param) {
@@ -412,6 +434,7 @@ function function_f3037b75(localclientnum, weapon_options_param) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_822c6338
 // Checksum 0x7b9a907f, Offset: 0x1b08
 // Size: 0xa8
 function get_lerp_duration(camera) {
@@ -427,6 +450,7 @@ function get_lerp_duration(camera) {
 
 // Namespace customclass
 // Params 2, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_e4486341
 // Checksum 0x70878526, Offset: 0x1bb8
 // Size: 0x19c
 function setup_paintshop_bg(localclientnum, camera) {
@@ -449,6 +473,7 @@ function setup_paintshop_bg(localclientnum, camera) {
 
 // Namespace customclass
 // Params 6, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_a9379a04
 // Checksum 0xbb8ce4e7, Offset: 0x1d60
 // Size: 0x28c
 function transition_camera_immediate(localclientnum, weapontype, camera, subxcam, lerpduration, notetrack) {
@@ -479,6 +504,7 @@ function transition_camera_immediate(localclientnum, weapontype, camera, subxcam
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_da217883
 // Checksum 0xff1d246d, Offset: 0x1ff8
 // Size: 0x32
 function wait_preload_weapon(localclientnum) {
@@ -490,6 +516,7 @@ function wait_preload_weapon(localclientnum) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_3ce289d2
 // Checksum 0x37d959d2, Offset: 0x2038
 // Size: 0x8c
 function preload_weapon_watcher(localclientnum) {
@@ -507,6 +534,7 @@ function preload_weapon_watcher(localclientnum) {
 
 // Namespace customclass
 // Params 3, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_8da2c299
 // Checksum 0x5670f520, Offset: 0x20d0
 // Size: 0x2fc
 function preload_weapon_model(localclientnum, newweaponstring, should_update_weapon_options) {
@@ -543,6 +571,7 @@ function preload_weapon_model(localclientnum, newweaponstring, should_update_wea
 
 // Namespace customclass
 // Params 5, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_a0a6ebe7
 // Checksum 0xc490e1f1, Offset: 0x23d8
 // Size: 0x474
 function update_weapon_script_model(localclientnum, newweaponstring, should_update_weapon_options, is_item_unlocked, var_40e5de05) {
@@ -589,6 +618,7 @@ function update_weapon_script_model(localclientnum, newweaponstring, should_upda
 
 // Namespace customclass
 // Params 9, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_208bfb32
 // Checksum 0x12e5e38, Offset: 0x2858
 // Size: 0x134
 function transition_camera(localclientnum, weapontype, camera, subxcam, initialdelay, lerpduration, notetrack, newweaponstring, should_update_weapon_options) {
@@ -613,6 +643,7 @@ function transition_camera(localclientnum, weapontype, camera, subxcam, initiald
 
 // Namespace customclass
 // Params 2, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_c4ab8694
 // Checksum 0x89325b4d, Offset: 0x2998
 // Size: 0x11c
 function get_attachments_intersection(oldweapon, newweapon) {
@@ -635,6 +666,7 @@ function get_attachments_intersection(oldweapon, newweapon) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_a188ba2
 // Checksum 0xd249ec2b, Offset: 0x2ac0
 // Size: 0xf8
 function handle_cac_customization_focus(localclientnum) {
@@ -653,6 +685,7 @@ function handle_cac_customization_focus(localclientnum) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_db76bfd5
 // Checksum 0x1c1a08f1, Offset: 0x2bc0
 // Size: 0x1e0
 function function_db76bfd5(localclientnum) {
@@ -684,6 +717,7 @@ function function_db76bfd5(localclientnum) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_ade2f410
 // Checksum 0x8f953d29, Offset: 0x2da8
 // Size: 0x138
 function function_ade2f410(localclientnum) {
@@ -705,6 +739,7 @@ function function_ade2f410(localclientnum) {
 
 // Namespace customclass
 // Params 1, eflags: 0x1 linked
+// namespace_a022a0ac<file_0>::function_970c5a0a
 // Checksum 0x1b7053d2, Offset: 0x2ee8
 // Size: 0x1be
 function handle_cac_customization_closed(localclientnum) {

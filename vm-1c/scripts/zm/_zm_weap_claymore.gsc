@@ -18,6 +18,7 @@
 
 // Namespace namespace_e815346c
 // Params 0, eflags: 0x2
+// namespace_e815346c<file_0>::function_2dc19561
 // Checksum 0x51e77591, Offset: 0x2c8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -26,6 +27,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_e815346c
 // Params 0, eflags: 0x0
+// namespace_e815346c<file_0>::function_8c87d8eb
 // Checksum 0xc135554, Offset: 0x308
 // Size: 0x8c
 function __init__() {
@@ -37,6 +39,7 @@ function __init__() {
 
 // Namespace namespace_e815346c
 // Params 1, eflags: 0x0
+// namespace_e815346c<file_0>::function_fb3c3fb5
 // Checksum 0xdadb4bd3, Offset: 0x3a0
 // Size: 0x5c
 function play_claymore_effects(e_planter) {
@@ -47,6 +50,7 @@ function play_claymore_effects(e_planter) {
 
 // Namespace namespace_e815346c
 // Params 1, eflags: 0x0
+// namespace_e815346c<file_0>::function_512bf047
 // Checksum 0x42991b25, Offset: 0x408
 // Size: 0x34a
 function claymore_detonation(e_planter) {
@@ -97,6 +101,7 @@ function claymore_detonation(e_planter) {
 
 // Namespace namespace_e815346c
 // Params 1, eflags: 0x4
+// namespace_e815346c<file_0>::function_93447eb4
 // Checksum 0x514284a6, Offset: 0x760
 // Size: 0x13a
 function private should_trigger_claymore(e_mine) {
@@ -115,6 +120,7 @@ function private should_trigger_claymore(e_mine) {
 
 // Namespace namespace_e815346c
 // Params 2, eflags: 0x4
+// namespace_e815346c<file_0>::function_f58eb4ac
 // Checksum 0xd5036324, Offset: 0x8a8
 // Size: 0x74
 function private delete_mines_on_death(player, ent) {

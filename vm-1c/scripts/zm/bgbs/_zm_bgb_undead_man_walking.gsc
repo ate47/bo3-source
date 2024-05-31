@@ -13,6 +13,7 @@
 
 // Namespace zm_bgb_undead_man_walking
 // Params 0, eflags: 0x2
+// namespace_8438ffb3<file_0>::function_2dc19561
 // Checksum 0xc6a02ded, Offset: 0x200
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,6 +22,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_undead_man_walking
 // Params 0, eflags: 0x1 linked
+// namespace_8438ffb3<file_0>::function_8c87d8eb
 // Checksum 0x9ed3e659, Offset: 0x240
 // Size: 0x54
 function __init__() {
@@ -32,6 +34,7 @@ function __init__() {
 
 // Namespace zm_bgb_undead_man_walking
 // Params 0, eflags: 0x1 linked
+// namespace_8438ffb3<file_0>::function_bae40a28
 // Checksum 0x6e43e7e, Offset: 0x2a0
 // Size: 0x94
 function enable() {
@@ -48,6 +51,7 @@ function enable() {
 
 // Namespace zm_bgb_undead_man_walking
 // Params 0, eflags: 0x1 linked
+// namespace_8438ffb3<file_0>::function_40e95c74
 // Checksum 0x5523cdd, Offset: 0x340
 // Size: 0x94
 function function_40e95c74() {
@@ -61,6 +65,7 @@ function function_40e95c74() {
 
 // Namespace zm_bgb_undead_man_walking
 // Params 1, eflags: 0x1 linked
+// namespace_8438ffb3<file_0>::function_b41dc007
 // Checksum 0xbba95475, Offset: 0x3e0
 // Size: 0x166
 function function_b41dc007(b_walk) {
@@ -87,6 +92,7 @@ function function_b41dc007(b_walk) {
 
 // Namespace zm_bgb_undead_man_walking
 // Params 0, eflags: 0x1 linked
+// namespace_8438ffb3<file_0>::function_f3d5076d
 // Checksum 0x3deff811, Offset: 0x550
 // Size: 0xa4
 function function_f3d5076d() {

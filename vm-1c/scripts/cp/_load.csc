@@ -57,6 +57,7 @@
 
 // Namespace load
 // Params 3, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_2e683bb6
 // Checksum 0xfc7f8ebb, Offset: 0x7f0
 // Size: 0x3a
 function levelnotifyhandler(clientnum, state, oldstate) {
@@ -67,6 +68,7 @@ function levelnotifyhandler(clientnum, state, oldstate) {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_d290ebfa
 // Checksum 0x1d397cf3, Offset: 0x838
 // Size: 0x1bc
 function main() {
@@ -92,6 +94,7 @@ function main() {
 
 // Namespace load
 // Params 1, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_fe5263bc
 // Checksum 0x478993ff, Offset: 0xa00
 // Size: 0x54
 function basic_player_connect(localclientnum) {
@@ -104,6 +107,7 @@ function basic_player_connect(localclientnum) {
 
 // Namespace load
 // Params 1, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_aebcf025
 // Checksum 0x3dd95bc4, Offset: 0xa60
 // Size: 0x24
 function on_player_spawned(localclientnum) {
@@ -112,6 +116,7 @@ function on_player_spawned(localclientnum) {
 
 // Namespace load
 // Params 1, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_2de2e7f
 // Checksum 0x80a7c077, Offset: 0xa90
 // Size: 0x5c
 function force_update_player_clientfields(localclientnum) {
@@ -125,6 +130,7 @@ function force_update_player_clientfields(localclientnum) {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_4ece4a2f
 // Checksum 0x576e8083, Offset: 0xaf8
 // Size: 0x4c
 function register_clientfields() {

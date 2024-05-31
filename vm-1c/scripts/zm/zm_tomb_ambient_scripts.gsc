@@ -14,6 +14,7 @@
 
 // Namespace namespace_a2c37c4f
 // Params 0, eflags: 0x1 linked
+// namespace_a2c37c4f<file_0>::function_c6ff3260
 // Checksum 0xb9151ec8, Offset: 0x348
 // Size: 0x34
 function function_c6ff3260() {
@@ -22,6 +23,7 @@ function function_c6ff3260() {
 
 // Namespace namespace_a2c37c4f
 // Params 0, eflags: 0x1 linked
+// namespace_a2c37c4f<file_0>::function_d290ebfa
 // Checksum 0x84934736, Offset: 0x388
 // Size: 0x9c
 function main() {
@@ -32,6 +34,7 @@ function main() {
 
 // Namespace namespace_a2c37c4f
 // Params 2, eflags: 0x1 linked
+// namespace_a2c37c4f<file_0>::function_f903959b
 // Checksum 0x40ce1a5f, Offset: 0x430
 // Size: 0xd8
 function function_f903959b(str_script_noteworthy, str_ender) {
@@ -49,6 +52,7 @@ function function_f903959b(str_script_noteworthy, str_ender) {
 
 // Namespace namespace_a2c37c4f
 // Params 1, eflags: 0x1 linked
+// namespace_a2c37c4f<file_0>::function_68c49762
 // Checksum 0x8db9a111, Offset: 0x510
 // Size: 0x1e0
 function function_68c49762(a_structs) {
@@ -70,6 +74,7 @@ function function_68c49762(a_structs) {
 
 // Namespace namespace_a2c37c4f
 // Params 1, eflags: 0x1 linked
+// namespace_a2c37c4f<file_0>::function_f779394c
 // Checksum 0x370dba90, Offset: 0x6f8
 // Size: 0x190
 function function_f779394c(a_structs) {
@@ -98,6 +103,7 @@ function function_f779394c(a_structs) {
 
 // Namespace namespace_a2c37c4f
 // Params 0, eflags: 0x1 linked
+// namespace_a2c37c4f<file_0>::function_add29756
 // Checksum 0x20a75e48, Offset: 0x890
 // Size: 0x16c
 function function_add29756() {
@@ -121,6 +127,7 @@ function function_add29756() {
 
 // Namespace namespace_a2c37c4f
 // Params 0, eflags: 0x1 linked
+// namespace_a2c37c4f<file_0>::function_b6165329
 // Checksum 0x8cbbd44e, Offset: 0xa08
 // Size: 0x70
 function function_b6165329() {
@@ -133,6 +140,7 @@ function function_b6165329() {
 
 // Namespace namespace_a2c37c4f
 // Params 0, eflags: 0x1 linked
+// namespace_a2c37c4f<file_0>::function_511ab91d
 // Checksum 0xbf47243d, Offset: 0xa80
 // Size: 0x230
 function function_511ab91d() {

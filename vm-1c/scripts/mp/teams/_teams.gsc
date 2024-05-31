@@ -11,6 +11,7 @@
 
 // Namespace teams
 // Params 0, eflags: 0x2
+// namespace_e7a38025<file_0>::function_2dc19561
 // Checksum 0xe4c4ff14, Offset: 0x320
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,6 +20,7 @@ function autoexec function_2dc19561() {
 
 // Namespace teams
 // Params 0, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_8c87d8eb
 // Checksum 0xed96da9d, Offset: 0x360
 // Size: 0x48
 function __init__() {
@@ -29,6 +31,7 @@ function __init__() {
 
 // Namespace teams
 // Params 0, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_c35e6aab
 // Checksum 0xecd73fa6, Offset: 0x3b0
 // Size: 0x234
 function init() {
@@ -65,6 +68,7 @@ function init() {
 
 // Namespace teams
 // Params 0, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_fb4f96b5
 // Checksum 0xa8f8a694, Offset: 0x5f0
 // Size: 0x1c
 function on_player_connect() {
@@ -73,6 +77,7 @@ function on_player_connect() {
 
 // Namespace teams
 // Params 0, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_5cc8a462
 // Checksum 0x63289757, Offset: 0x618
 // Size: 0x1c
 function on_free_player_connect() {
@@ -81,6 +86,7 @@ function on_free_player_connect() {
 
 // Namespace teams
 // Params 0, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_f6076bfe
 // Checksum 0xf5184102, Offset: 0x640
 // Size: 0x4c
 function on_joined_team() {
@@ -90,6 +96,7 @@ function on_joined_team() {
 
 // Namespace teams
 // Params 0, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_d2b6d98f
 // Checksum 0x1d83fb76, Offset: 0x698
 // Size: 0x14
 function on_joined_spectators() {
@@ -98,6 +105,7 @@ function on_joined_spectators() {
 
 // Namespace teams
 // Params 0, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_e7a40e44
 // Checksum 0xe29d8516, Offset: 0x6b8
 // Size: 0x28c
 function function_e7a40e44() {
@@ -139,6 +147,7 @@ function function_e7a40e44() {
 
 // Namespace teams
 // Params 0, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_2eda566d
 // Checksum 0xed0fbf6d, Offset: 0x950
 // Size: 0xe8
 function update_player_times() {
@@ -164,6 +173,7 @@ function update_player_times() {
 
 // Namespace teams
 // Params 0, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_4f6c13e4
 // Checksum 0xad5e0249, Offset: 0xa40
 // Size: 0x41a
 function update_played_time() {
@@ -204,6 +214,7 @@ function update_played_time() {
 
 // Namespace teams
 // Params 0, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_2fc9381e
 // Checksum 0x681e707e, Offset: 0xe68
 // Size: 0x32
 function update_time() {
@@ -215,6 +226,7 @@ function update_time() {
 
 // Namespace teams
 // Params 0, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_88ad84a5
 // Checksum 0xb13d8352, Offset: 0xea8
 // Size: 0xce
 function update_balance_dvar() {
@@ -233,6 +245,7 @@ function update_balance_dvar() {
 
 // Namespace teams
 // Params 1, eflags: 0x0
+// namespace_e7a38025<file_0>::function_5f5f81d1
 // Checksum 0xd8da7570, Offset: 0xf80
 // Size: 0x16a
 function change(team) {
@@ -259,6 +272,7 @@ function change(team) {
 
 // Namespace teams
 // Params 0, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_193a1a91
 // Checksum 0xb89698bf, Offset: 0x10f8
 // Size: 0x170
 function count_players() {
@@ -281,6 +295,7 @@ function count_players() {
 
 // Namespace teams
 // Params 0, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_4e36223d
 // Checksum 0x50570acb, Offset: 0x1270
 // Size: 0x1a0
 function track_free_played_time() {
@@ -310,6 +325,7 @@ function track_free_played_time() {
 
 // Namespace teams
 // Params 2, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_37fd0a0f
 // Checksum 0xf03c7348, Offset: 0x1418
 // Size: 0x74
 function function_37fd0a0f(team, weapon) {
@@ -321,6 +337,7 @@ function function_37fd0a0f(team, weapon) {
 
 // Namespace teams
 // Params 1, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_536cc94a
 // Checksum 0xf2202718, Offset: 0x1498
 // Size: 0x6c
 function get_flag_model(teamref) {
@@ -331,6 +348,7 @@ function get_flag_model(teamref) {
 
 // Namespace teams
 // Params 1, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_db0684da
 // Checksum 0x363fbb5e, Offset: 0x1510
 // Size: 0x6c
 function get_flag_carry_model(teamref) {
@@ -341,6 +359,7 @@ function get_flag_carry_model(teamref) {
 
 // Namespace teams
 // Params 1, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_8bf6debc
 // Checksum 0x7ef0f9ba, Offset: 0x1588
 // Size: 0x60
 function getteamindex(team) {
@@ -361,6 +380,7 @@ function getteamindex(team) {
 
 // Namespace teams
 // Params 1, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_c7762542
 // Checksum 0x9fc9f4d5, Offset: 0x15f0
 // Size: 0xba
 function getenemyteam(player_team) {
@@ -378,6 +398,7 @@ function getenemyteam(player_team) {
 
 // Namespace teams
 // Params 0, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_5e0e0e7d
 // Checksum 0x3c833ccf, Offset: 0x16b8
 // Size: 0x13c
 function getenemyplayers() {
@@ -400,6 +421,7 @@ function getenemyplayers() {
 
 // Namespace teams
 // Params 0, eflags: 0x0
+// namespace_e7a38025<file_0>::function_8b5158a0
 // Checksum 0x90f6ec45, Offset: 0x1800
 // Size: 0x10c
 function getfriendlyplayers() {
@@ -419,6 +441,7 @@ function getfriendlyplayers() {
 
 // Namespace teams
 // Params 6, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_b8ae2b11
 // Checksum 0x2580118f, Offset: 0x1918
 // Size: 0xc0
 function waituntilteamchange(player, callback, arg, end_condition1, end_condition2, end_condition3) {
@@ -439,6 +462,7 @@ function waituntilteamchange(player, callback, arg, end_condition1, end_conditio
 
 // Namespace teams
 // Params 7, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_fd0843d0
 // Checksum 0x9767e803, Offset: 0x19e0
 // Size: 0xe0
 function waituntilteamchangesingleton(player, singletonstring, callback, arg, end_condition1, end_condition2, end_condition3) {
@@ -461,6 +485,7 @@ function waituntilteamchangesingleton(player, singletonstring, callback, arg, en
 
 // Namespace teams
 // Params 0, eflags: 0x1 linked
+// namespace_e7a38025<file_0>::function_fa923c5f
 // Checksum 0xd678ee7a, Offset: 0x1ac8
 // Size: 0x64
 function hidetosameteam() {

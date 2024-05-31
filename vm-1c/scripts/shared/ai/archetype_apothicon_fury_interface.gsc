@@ -10,6 +10,7 @@
 
 // Namespace namespace_55e12b83
 // Params 0, eflags: 0x1 linked
+// namespace_55e12b83<file_0>::function_dbcea833
 // Checksum 0xaea2fca8, Offset: 0x210
 // Size: 0x114
 function function_dbcea833() {

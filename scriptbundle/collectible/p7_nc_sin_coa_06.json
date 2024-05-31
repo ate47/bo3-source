@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_sin_coa_06",
+    "type": "collectible",
+    "igdtseqnum": 67,
+    "uiMaterial": "t7_icon_menu_p7_nc_sin_coa_06",
+    "uiModel": "p7_nc_sin_coa_06",
+    "description": "COLLECTIBLE_P7_NC_SIN_COA_06_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_SIN_COA_06_LONG",
+    "audiolog_sound": "vox_safe_whiteboard_section_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_BROKEN_WHITEBOARD",
+    "displayNameShort": "COLLECTIBLE_P7_NC_SIN_COA_06_SHORT",
+    "codexurl": "Collectables-BrokenE-InkWhite-BoardSection.htm",
+    "slotSize": 2
+}

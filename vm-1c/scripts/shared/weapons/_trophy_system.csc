@@ -11,6 +11,7 @@
 
 // Namespace trophy_system
 // Params 1, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_1463e4e5
 // Checksum 0x984c335, Offset: 0x1a8
 // Size: 0x9c
 function init_shared(localclientnum) {
@@ -20,6 +21,7 @@ function init_shared(localclientnum) {
 
 // Namespace trophy_system
 // Params 7, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_10006620
 // Checksum 0x8aaa277b, Offset: 0x250
 // Size: 0xde
 function trophy_state_change(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -44,6 +46,7 @@ function trophy_state_change(localclientnum, oldval, newval, bnewent, binitialsn
 
 // Namespace trophy_system
 // Params 7, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_28bcb4a4
 // Checksum 0x226fa8b2, Offset: 0x338
 // Size: 0xde
 function trophy_state_change_recon(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -68,6 +71,7 @@ function trophy_state_change_recon(localclientnum, oldval, newval, bnewent, bini
 
 // Namespace trophy_system
 // Params 1, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_4b2b652b
 // Checksum 0x5ac8d53d, Offset: 0x420
 // Size: 0x5c
 function trophy_rolling_anim(localclientnum) {
@@ -78,6 +82,7 @@ function trophy_rolling_anim(localclientnum) {
 
 // Namespace trophy_system
 // Params 1, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_8ee1a7cc
 // Checksum 0x2afc6136, Offset: 0x488
 // Size: 0x84
 function trophy_stationary_anim(localclientnum) {

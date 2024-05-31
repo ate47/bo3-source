@@ -1,0 +1,9 @@
+{
+    "vmtype": "none",
+    "name": "cpac_ram_16",
+    "igdtseqnum": 143,
+    "challengeWidget": "Traversal",
+    "challengeDetails": "ACCOLADES_RAM_16",
+    "challengeName": "ACCOLADES_RAM_16_NAME",
+    "challengeReference": "MISSION_RAMSES_CHALLENGE16"
+}

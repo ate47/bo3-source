@@ -1,0 +1,12 @@
+{
+    "speed": "default",
+    "vmtype": "server",
+    "configstringfiletype": "scriptbundle",
+    "attack_distance": 32,
+    "max_health": 1000,
+    "aggro_distance": 384,
+    "name": "zm_island_trap_plant_attackable",
+    "type": "attackables",
+    "max_attackers": 22,
+    "igdtseqnum": 4
+}

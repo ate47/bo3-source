@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_sin_bio_01",
+    "type": "collectible",
+    "igdtseqnum": 50,
+    "uiMaterial": "t7_icon_menu_p7_nc_sin_bio_01",
+    "uiModelWithStand": "p7_nc_sin_bio_01_with_stand",
+    "uiModel": "p7_nc_sin_bio_01",
+    "description": "COLLECTIBLE_P7_NC_SIN_BIO_01_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_SIN_BIO_01_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_BULLET_NECKLACE",
+    "displayNameShort": "COLLECTIBLE_P7_NC_SIN_BIO_01_SHORT",
+    "codexurl": "Collectables-BulletShellNecklace.htm",
+    "slotSize": 1
+}

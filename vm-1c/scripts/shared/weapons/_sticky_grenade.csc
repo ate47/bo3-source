@@ -8,6 +8,7 @@
 
 // Namespace sticky_grenade
 // Params 0, eflags: 0x2
+// namespace_e80cf34f<file_0>::function_2dc19561
 // Checksum 0x2f7cbaf1, Offset: 0x1f8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,6 +17,7 @@ function autoexec function_2dc19561() {
 
 // Namespace sticky_grenade
 // Params 0, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_8c87d8eb
 // Checksum 0x550c155c, Offset: 0x238
 // Size: 0x44
 function __init__() {
@@ -25,6 +27,7 @@ function __init__() {
 
 // Namespace sticky_grenade
 // Params 1, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_ab1f9ea1
 // Checksum 0x90778741, Offset: 0x288
 // Size: 0x44
 function spawned(localclientnum) {
@@ -36,6 +39,7 @@ function spawned(localclientnum) {
 
 // Namespace sticky_grenade
 // Params 1, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_761a1196
 // Checksum 0xc914722a, Offset: 0x2d8
 // Size: 0x2c
 function stop_sound_on_ent_shutdown(handle) {
@@ -45,6 +49,7 @@ function stop_sound_on_ent_shutdown(handle) {
 
 // Namespace sticky_grenade
 // Params 1, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_e18161a
 // Checksum 0xa452fdc0, Offset: 0x310
 // Size: 0x20c
 function fx_think(localclientnum) {
@@ -68,6 +73,7 @@ function fx_think(localclientnum) {
 
 // Namespace sticky_grenade
 // Params 1, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_d2e7a133
 // Checksum 0x1e1cd13d, Offset: 0x528
 // Size: 0x6c
 function start_light_fx(localclientnum) {
@@ -77,6 +83,7 @@ function start_light_fx(localclientnum) {
 
 // Namespace sticky_grenade
 // Params 1, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_958821cd
 // Checksum 0x42ab7a2c, Offset: 0x5a0
 // Size: 0x4e
 function stop_light_fx(localclientnum) {
@@ -88,6 +95,7 @@ function stop_light_fx(localclientnum) {
 
 // Namespace sticky_grenade
 // Params 2, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_4d111db2
 // Checksum 0x98e7f689, Offset: 0x5f8
 // Size: 0xd4
 function sticky_indicator(player, localclientnum) {
@@ -104,6 +112,7 @@ function sticky_indicator(player, localclientnum) {
 
 // Namespace sticky_grenade
 // Params 1, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_d3627562
 // Checksum 0xca91a046, Offset: 0x6d8
 // Size: 0x4c
 function function_d3627562(stickyimagemodel) {
@@ -115,6 +124,7 @@ function function_d3627562(stickyimagemodel) {
 
 // Namespace sticky_grenade
 // Params 1, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_9eb5d027
 // Checksum 0x2d0ee09b, Offset: 0x730
 // Size: 0x12c
 function fullscreen_fx(localclientnum) {

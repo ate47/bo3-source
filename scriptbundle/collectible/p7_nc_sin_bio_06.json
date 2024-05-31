@@ -1,0 +1,15 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_sin_bio_06",
+    "type": "collectible",
+    "igdtseqnum": 55,
+    "uiMaterial": "t7_icon_menu_p7_nc_sin_bio_06",
+    "uiModel": "p7_nc_sin_bio_06",
+    "description": "COLLECTIBLE_P7_NC_SIN_BIO_06_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_SIN_BIO_06_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_SUPERTREE_SOUVENIR",
+    "displayNameShort": "COLLECTIBLE_P7_NC_SIN_BIO_06_SHORT",
+    "codexurl": "Collectables-SupertreeSouvenir.htm",
+    "slotSize": 1
+}

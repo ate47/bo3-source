@@ -9,6 +9,7 @@
 
 // Namespace zm_bgb_dead_of_nuclear_winter
 // Params 0, eflags: 0x2
+// namespace_a3222192<file_0>::function_2dc19561
 // Checksum 0x35513d12, Offset: 0x168
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_dead_of_nuclear_winter
 // Params 0, eflags: 0x1 linked
+// namespace_a3222192<file_0>::function_8c87d8eb
 // Checksum 0xd5858dd5, Offset: 0x1a8
 // Size: 0x54
 function __init__() {
@@ -28,6 +30,7 @@ function __init__() {
 
 // Namespace zm_bgb_dead_of_nuclear_winter
 // Params 0, eflags: 0x1 linked
+// namespace_a3222192<file_0>::function_7afbf7cd
 // Checksum 0x40b5c35e, Offset: 0x208
 // Size: 0x24
 function activation() {

@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_cai_aqu_02",
+    "type": "collectible",
+    "igdtseqnum": 14,
+    "uiMaterialLarge": "t7_icon_menu_p7_nc_cai_aqu_02_lrg",
+    "uiMaterial": "t7_icon_menu_p7_nc_cai_aqu_02",
+    "uiModel": "p7_nc_cai_aqu_02",
+    "description": "COLLECTIBLE_P7_NC_CAI_AQU_02_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_CAI_AQU_02_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_DRILL_BIT",
+    "displayNameShort": "COLLECTIBLE_P7_NC_CAI_AQU_02_SHORT",
+    "codexurl": "Collectables-IndustrialDrillbitParts.htm",
+    "slotSize": 1
+}

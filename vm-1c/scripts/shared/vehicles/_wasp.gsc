@@ -15,6 +15,7 @@
 
 // Namespace wasp
 // Params 0, eflags: 0x2
+// namespace_7a91f98<file_0>::function_2dc19561
 // Checksum 0x9ff9f541, Offset: 0x328
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -23,6 +24,7 @@ function autoexec function_2dc19561() {
 
 // Namespace wasp
 // Params 0, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_8c87d8eb
 // Checksum 0x52d2787b, Offset: 0x368
 // Size: 0x5c
 function __init__() {
@@ -32,6 +34,7 @@ function __init__() {
 
 // Namespace wasp
 // Params 0, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_32100861
 // Checksum 0xf1ecb962, Offset: 0x3d0
 // Size: 0x274
 function wasp_initialize() {
@@ -70,6 +73,7 @@ function wasp_initialize() {
 
 // Namespace wasp
 // Params 0, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_b272dd98
 // Checksum 0x139c82bc, Offset: 0x650
 // Size: 0x28c
 function defaultrole() {
@@ -92,6 +96,7 @@ function defaultrole() {
 
 // Namespace wasp
 // Params 1, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_c18559a5
 // Checksum 0x5c6874c7, Offset: 0x8e8
 // Size: 0x3b4
 function state_death_update(params) {
@@ -152,6 +157,7 @@ function state_death_update(params) {
 
 // Namespace wasp
 // Params 1, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_8a8b75b0
 // Checksum 0x3a8a53de, Offset: 0xca8
 // Size: 0x68c
 function state_emped_update(params) {
@@ -229,6 +235,7 @@ function state_emped_update(params) {
 
 // Namespace wasp
 // Params 2, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_f84bd14b
 // Checksum 0x182a344, Offset: 0x1340
 // Size: 0x586
 function fall_and_bounce(killonimpact_speed, killonimpact_time) {
@@ -290,6 +297,7 @@ function fall_and_bounce(killonimpact_speed, killonimpact_time) {
 
 // Namespace wasp
 // Params 0, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_806b99e9
 // Checksum 0xbf402367, Offset: 0x18d0
 // Size: 0x262
 function init_guard_points() {
@@ -330,6 +338,7 @@ function init_guard_points() {
 
     // Namespace wasp
     // Params 0, eflags: 0x0
+    // namespace_7a91f98<file_0>::function_59361e32
     // Checksum 0x16b6976f, Offset: 0x1b40
     // Size: 0x110
     function guard_points_debug() {
@@ -354,6 +363,7 @@ function init_guard_points() {
 
 // Namespace wasp
 // Params 1, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_8a2bbc69
 // Checksum 0x78cc2892, Offset: 0x1c58
 // Size: 0x38e
 function get_guard_points(owner) {
@@ -390,6 +400,7 @@ function get_guard_points(owner) {
 
 // Namespace wasp
 // Params 3, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_896b6512
 // Checksum 0x8d69533c, Offset: 0x1ff0
 // Size: 0x11e
 function state_guard_can_enter(from_state, to_state, connection) {
@@ -410,6 +421,7 @@ function state_guard_can_enter(from_state, to_state, connection) {
 
 // Namespace wasp
 // Params 1, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_4001377d
 // Checksum 0x6b8368a2, Offset: 0x2118
 // Size: 0x4c
 function state_guard_enter(params) {
@@ -421,6 +433,7 @@ function state_guard_enter(params) {
 
 // Namespace wasp
 // Params 0, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_309d298c
 // Checksum 0x37fed2c6, Offset: 0x2170
 // Size: 0x70
 function update_main_guard() {
@@ -431,6 +444,7 @@ function update_main_guard() {
 
 // Namespace wasp
 // Params 1, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_ab509a91
 // Checksum 0x5da0a7fc, Offset: 0x21e8
 // Size: 0x3e
 function state_guard_exit(params) {
@@ -441,6 +455,7 @@ function state_guard_exit(params) {
 
 // Namespace wasp
 // Params 1, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_b237324d
 // Checksum 0xe34254, Offset: 0x2230
 // Size: 0x64
 function test_get_back_point(point) {
@@ -455,6 +470,7 @@ function test_get_back_point(point) {
 
 // Namespace wasp
 // Params 1, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_48db4874
 // Checksum 0xedfb84be, Offset: 0x22a0
 // Size: 0xf4
 function test_get_back_queryresult(queryresult) {
@@ -473,6 +489,7 @@ function test_get_back_queryresult(queryresult) {
 
 // Namespace wasp
 // Params 1, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_d8665ae
 // Checksum 0xf5f51a0b, Offset: 0x23a0
 // Size: 0x8a8
 function state_guard_update(params) {
@@ -603,6 +620,7 @@ function state_guard_update(params) {
 
 // Namespace wasp
 // Params 1, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_d4988dfc
 // Checksum 0xd19a91fa, Offset: 0x2c50
 // Size: 0x84
 function state_combat_enter(params) {
@@ -617,6 +635,7 @@ function state_combat_enter(params) {
 
 // Namespace wasp
 // Params 0, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_d4aac9b4
 // Checksum 0x9463690c, Offset: 0x2ce0
 // Size: 0x4ac
 function turretfireupdate() {
@@ -676,6 +695,7 @@ function turretfireupdate() {
 
 // Namespace wasp
 // Params 0, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_4891e8b4
 // Checksum 0xcd682ab0, Offset: 0x3198
 // Size: 0x1d4
 function path_update_interrupt() {
@@ -712,6 +732,7 @@ function path_update_interrupt() {
 
 // Namespace wasp
 // Params 1, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_69cb35f
 // Checksum 0x4556863a, Offset: 0x3378
 // Size: 0x2d6
 function wait_till_something_happens(timeout) {
@@ -763,6 +784,7 @@ function wait_till_something_happens(timeout) {
 
 // Namespace wasp
 // Params 0, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_7369fc52
 // Checksum 0x522bb99c, Offset: 0x3658
 // Size: 0x3e
 function drop_leader() {
@@ -774,6 +796,7 @@ function drop_leader() {
 
 // Namespace wasp
 // Params 0, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_dc9eee7a
 // Checksum 0xb1e74f7f, Offset: 0x36a0
 // Size: 0x20a
 function update_leader() {
@@ -816,6 +839,7 @@ function update_leader() {
 
 // Namespace wasp
 // Params 1, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_11ececc8
 // Checksum 0x47ee73d4, Offset: 0x38b8
 // Size: 0x148
 function should_fly_forward(distancetogoalsq) {
@@ -841,6 +865,7 @@ function should_fly_forward(distancetogoalsq) {
 
 // Namespace wasp
 // Params 1, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_c637f0c1
 // Checksum 0x63c0d4cb, Offset: 0x3a08
 // Size: 0x8aa
 function state_combat_update(params) {
@@ -966,6 +991,7 @@ function state_combat_update(params) {
 
 // Namespace wasp
 // Params 0, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_3b254302
 // Checksum 0x115be87e, Offset: 0x42c0
 // Size: 0x296
 function getnextmoveposition_wander() {
@@ -1001,6 +1027,7 @@ function getnextmoveposition_wander() {
 
 // Namespace wasp
 // Params 0, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_93d07f7e
 // Checksum 0xc1a8d307, Offset: 0x4560
 // Size: 0xcb2
 function getnextmoveposition_tactical() {
@@ -1143,6 +1170,7 @@ function getnextmoveposition_tactical() {
 
 // Namespace wasp
 // Params 15, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_160652f3
 // Checksum 0xa77cb908, Offset: 0x5220
 // Size: 0xd4
 function drone_callback_damage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -1152,6 +1180,7 @@ function drone_callback_damage(einflictor, eattacker, idamage, idflags, smeansof
 
 // Namespace wasp
 // Params 4, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_8e4e433d
 // Checksum 0xdf24ca8a, Offset: 0x5300
 // Size: 0x7c
 function drone_allowfriendlyfiredamage(einflictor, eattacker, smeansofdeath, weapon) {
@@ -1163,6 +1192,7 @@ function drone_allowfriendlyfiredamage(einflictor, eattacker, smeansofdeath, wea
 
 // Namespace wasp
 // Params 1, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_60687790
 // Checksum 0x1010e945, Offset: 0x5388
 // Size: 0xac
 function wasp_driving(params) {
@@ -1178,6 +1208,7 @@ function wasp_driving(params) {
 
 // Namespace wasp
 // Params 0, eflags: 0x1 linked
+// namespace_7a91f98<file_0>::function_2be24711
 // Checksum 0x756e94f1, Offset: 0x5440
 // Size: 0x74
 function wasp_manage_camera_swaps() {

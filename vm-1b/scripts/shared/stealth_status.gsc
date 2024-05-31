@@ -10,6 +10,7 @@
 
 // Namespace namespace_8312dbf
 // Params 0, eflags: 0x0
+// namespace_8312dbf<file_0>::function_c35e6aab
 // Checksum 0x9d1d498d, Offset: 0x1e8
 // Size: 0xba
 function init() {
@@ -26,6 +27,7 @@ function init() {
 
 // Namespace namespace_8312dbf
 // Params 0, eflags: 0x0
+// namespace_8312dbf<file_0>::function_b55533bc
 // Checksum 0x875c60e1, Offset: 0x2b0
 // Size: 0x1e
 function enabled() {
@@ -34,6 +36,7 @@ function enabled() {
 
 // Namespace namespace_8312dbf
 // Params 4, eflags: 0x0
+// namespace_8312dbf<file_0>::function_71d2217b
 // Checksum 0x58088bc9, Offset: 0x2d8
 // Size: 0x100
 function function_71d2217b(var_5cbd0572, v_origin, z_offset, var_32b38549) {
@@ -58,6 +61,7 @@ function function_71d2217b(var_5cbd0572, v_origin, z_offset, var_32b38549) {
 
 // Namespace namespace_8312dbf
 // Params 2, eflags: 0x0
+// namespace_8312dbf<file_0>::function_cf9dd532
 // Checksum 0xd0338a5f, Offset: 0x3e0
 // Size: 0x167
 function function_cf9dd532(var_32b38549, var_f69107b4) {
@@ -82,6 +86,7 @@ function function_cf9dd532(var_32b38549, var_f69107b4) {
 
 // Namespace namespace_8312dbf
 // Params 2, eflags: 0x0
+// namespace_8312dbf<file_0>::function_180adb28
 // Checksum 0xaafcd2db, Offset: 0x550
 // Size: 0x1d1
 function function_180adb28(index, var_f69107b4) {
@@ -112,6 +117,7 @@ function function_180adb28(index, var_f69107b4) {
 
 // Namespace namespace_8312dbf
 // Params 0, eflags: 0x0
+// namespace_8312dbf<file_0>::function_6789ff4f
 // Checksum 0x7e015acf, Offset: 0x730
 // Size: 0x71
 function function_6789ff4f() {
@@ -130,6 +136,7 @@ function function_6789ff4f() {
 
 // Namespace namespace_8312dbf
 // Params 1, eflags: 0x0
+// namespace_8312dbf<file_0>::function_16c0c92e
 // Checksum 0xbe491f19, Offset: 0x7b0
 // Size: 0x53
 function function_16c0c92e(alertlevel) {
@@ -144,6 +151,7 @@ function function_16c0c92e(alertlevel) {
 
 // Namespace namespace_8312dbf
 // Params 0, eflags: 0x0
+// namespace_8312dbf<file_0>::function_debccd1a
 // Checksum 0x34d113e3, Offset: 0x810
 // Size: 0x485
 function update() {
@@ -207,6 +215,7 @@ function update() {
 
 // Namespace namespace_8312dbf
 // Params 0, eflags: 0x0
+// namespace_8312dbf<file_0>::function_f9fc005b
 // Checksum 0x867671ac, Offset: 0xca0
 // Size: 0x3a
 function function_f9fc005b() {

@@ -13,6 +13,7 @@
 
     // Namespace util
     // Params 1, eflags: 0x1 linked
+    // namespace_82b91a51<file_0>::function_fe17af4d
     // Checksum 0xa1fd40f2, Offset: 0x270
     // Size: 0x74
     function error(msg) {
@@ -25,6 +26,7 @@
 
     // Namespace util
     // Params 1, eflags: 0x0
+    // namespace_82b91a51<file_0>::function_f64f72cb
     // Checksum 0xa02aa6f1, Offset: 0x2f0
     // Size: 0x34
     function warning(msg) {
@@ -35,6 +37,7 @@
 
 // Namespace util
 // Params 0, eflags: 0x0
+// namespace_82b91a51<file_0>::function_e3a37743
 // Checksum 0x29c03407, Offset: 0x330
 // Size: 0xec
 function brush_delete() {
@@ -57,6 +60,7 @@ function brush_delete() {
 
 // Namespace util
 // Params 0, eflags: 0x0
+// namespace_82b91a51<file_0>::function_10208521
 // Checksum 0x8dd2055d, Offset: 0x428
 // Size: 0x7c
 function brush_show() {
@@ -70,6 +74,7 @@ function brush_show() {
 
 // Namespace util
 // Params 0, eflags: 0x0
+// namespace_82b91a51<file_0>::function_e0387702
 // Checksum 0x47e4c043, Offset: 0x4b0
 // Size: 0x20c
 function brush_throw() {
@@ -101,6 +106,7 @@ function brush_throw() {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_a56c9eab
 // Checksum 0x8d6618ce, Offset: 0x6c8
 // Size: 0x176
 function playsoundonplayers(sound, team) {
@@ -127,6 +133,7 @@ function playsoundonplayers(sound, team) {
 
 // Namespace util
 // Params 0, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_4bb1ad3d
 // Checksum 0xaf6a8c70, Offset: 0x848
 // Size: 0xa
 function get_player_height() {
@@ -135,6 +142,7 @@ function get_player_height() {
 
 // Namespace util
 // Params 1, eflags: 0x0
+// namespace_82b91a51<file_0>::function_9b876dc5
 // Checksum 0xf8a53991, Offset: 0x860
 // Size: 0x3c
 function isbulletimpactmod(smeansofdeath) {
@@ -143,6 +151,7 @@ function isbulletimpactmod(smeansofdeath) {
 
 // Namespace util
 // Params 0, eflags: 0x0
+// namespace_82b91a51<file_0>::function_9349460a
 // Checksum 0x673c12e1, Offset: 0x8a8
 // Size: 0x40
 function waitrespawnbutton() {
@@ -155,6 +164,7 @@ function waitrespawnbutton() {
 
 // Namespace util
 // Params 3, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_ad66eb43
 // Checksum 0x393a04cd, Offset: 0x8f0
 // Size: 0x200
 function setlowermessage(text, time, var_452e72bb) {
@@ -190,6 +200,7 @@ function setlowermessage(text, time, var_452e72bb) {
 
 // Namespace util
 // Params 3, eflags: 0x0
+// namespace_82b91a51<file_0>::function_9468e63a
 // Checksum 0x85b3cb54, Offset: 0xaf8
 // Size: 0x228
 function function_9468e63a(text, value, var_e51ab3d) {
@@ -228,6 +239,7 @@ function function_9468e63a(text, value, var_e51ab3d) {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_d848704c
 // Checksum 0xa108f191, Offset: 0xd28
 // Size: 0xf4
 function clearlowermessage(fadetime) {
@@ -251,6 +263,7 @@ function clearlowermessage(fadetime) {
 
 // Namespace util
 // Params 2, eflags: 0x0
+// namespace_82b91a51<file_0>::function_ea1242aa
 // Checksum 0x4a3577e3, Offset: 0xe28
 // Size: 0xd6
 function printonteam(text, team) {
@@ -265,6 +278,7 @@ function printonteam(text, team) {
 
 // Namespace util
 // Params 2, eflags: 0x0
+// namespace_82b91a51<file_0>::function_e42ce187
 // Checksum 0x616f55c6, Offset: 0xf08
 // Size: 0xd6
 function printboldonteam(text, team) {
@@ -279,6 +293,7 @@ function printboldonteam(text, team) {
 
 // Namespace util
 // Params 3, eflags: 0x0
+// namespace_82b91a51<file_0>::function_a5c1053d
 // Checksum 0x2f21df99, Offset: 0xfe8
 // Size: 0xde
 function printboldonteamarg(text, team, arg) {
@@ -293,6 +308,7 @@ function printboldonteamarg(text, team, arg) {
 
 // Namespace util
 // Params 3, eflags: 0x0
+// namespace_82b91a51<file_0>::function_1c744a6a
 // Checksum 0x526cb98c, Offset: 0x10d0
 // Size: 0x1c
 function printonteamarg(text, team, arg) {
@@ -301,6 +317,7 @@ function printonteamarg(text, team, arg) {
 
 // Namespace util
 // Params 2, eflags: 0x0
+// namespace_82b91a51<file_0>::function_f8e95485
 // Checksum 0x72cb3b72, Offset: 0x10f8
 // Size: 0xee
 function printonplayers(text, team) {
@@ -318,6 +335,7 @@ function printonplayers(text, team) {
 
 // Namespace util
 // Params 7, eflags: 0x0
+// namespace_82b91a51<file_0>::function_23ba5d5e
 // Checksum 0xbaaa1ade, Offset: 0x11f0
 // Size: 0x516
 function printandsoundoneveryone(team, enemyteam, printfriendly, printenemy, soundfriendly, soundenemy, printarg) {
@@ -405,6 +423,7 @@ function printandsoundoneveryone(team, enemyteam, printfriendly, printenemy, sou
 
 // Namespace util
 // Params 1, eflags: 0x0
+// namespace_82b91a51<file_0>::function_c6e9f3b0
 // Checksum 0xd456b4b4, Offset: 0x1710
 // Size: 0x4c
 function _playlocalsound(soundalias) {
@@ -416,6 +435,7 @@ function _playlocalsound(soundalias) {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_fad13578
 // Checksum 0x260e7090, Offset: 0x1768
 // Size: 0x74
 function getotherteam(team) {
@@ -431,6 +451,7 @@ function getotherteam(team) {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_a2358f90
 // Checksum 0xe633f130, Offset: 0x17e8
 // Size: 0x64
 function getteammask(team) {
@@ -442,6 +463,7 @@ function getteammask(team) {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_1ca58d67
 // Checksum 0x68a95ee8, Offset: 0x1858
 // Size: 0xc4
 function getotherteamsmask(skip_team) {
@@ -459,6 +481,7 @@ function getotherteamsmask(skip_team) {
 
     // Namespace util
     // Params 5, eflags: 0x0
+    // namespace_82b91a51<file_0>::function_425d7b5a
     // Checksum 0x46f5f282, Offset: 0x1928
     // Size: 0x10e
     function plot_points(plotpoints, r, g, b, timer) {
@@ -485,6 +508,7 @@ function getotherteamsmask(skip_team) {
 
 // Namespace util
 // Params 1, eflags: 0x0
+// namespace_82b91a51<file_0>::function_e38768cd
 // Checksum 0xe2a1b730, Offset: 0x1a40
 // Size: 0x50
 function getfx(fx) {
@@ -494,6 +518,7 @@ function getfx(fx) {
 
 // Namespace util
 // Params 3, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_c25dc80f
 // Checksum 0xd0c9770f, Offset: 0x1a98
 // Size: 0x92
 function set_dvar_if_unset(dvar, value, reset) {
@@ -509,6 +534,7 @@ function set_dvar_if_unset(dvar, value, reset) {
 
 // Namespace util
 // Params 3, eflags: 0x0
+// namespace_82b91a51<file_0>::function_fc1f067e
 // Checksum 0xc7e74d2b, Offset: 0x1b38
 // Size: 0x8a
 function set_dvar_float_if_unset(dvar, value, reset) {
@@ -523,6 +549,7 @@ function set_dvar_float_if_unset(dvar, value, reset) {
 
 // Namespace util
 // Params 3, eflags: 0x0
+// namespace_82b91a51<file_0>::function_91b7ff45
 // Checksum 0x494368f8, Offset: 0x1bd0
 // Size: 0xa2
 function set_dvar_int_if_unset(dvar, value, reset) {
@@ -538,6 +565,7 @@ function set_dvar_int_if_unset(dvar, value, reset) {
 
 // Namespace util
 // Params 2, eflags: 0x0
+// namespace_82b91a51<file_0>::function_9210836
 // Checksum 0x9c25316e, Offset: 0x1c80
 // Size: 0x38
 function isstrstart(string1, substr) {
@@ -546,6 +574,7 @@ function isstrstart(string1, substr) {
 
 // Namespace util
 // Params 0, eflags: 0x0
+// namespace_82b91a51<file_0>::function_56e2eb5
 // Checksum 0x5dfd93aa, Offset: 0x1cc0
 // Size: 0x16
 function iskillstreaksenabled() {
@@ -554,6 +583,7 @@ function iskillstreaksenabled() {
 
 // Namespace util
 // Params 1, eflags: 0x0
+// namespace_82b91a51<file_0>::function_c5ed98df
 // Checksum 0x394b61ba, Offset: 0x1ce0
 // Size: 0x82
 function setusingremote(remotename) {
@@ -568,6 +598,7 @@ function setusingremote(remotename) {
 
 // Namespace util
 // Params 0, eflags: 0x0
+// namespace_82b91a51<file_0>::function_f07f6ad4
 // Checksum 0xfea073ea, Offset: 0x1d70
 // Size: 0x32
 function getremotename() {
@@ -577,6 +608,7 @@ function getremotename() {
 
 // Namespace util
 // Params 2, eflags: 0x0
+// namespace_82b91a51<file_0>::function_b5deb01d
 // Checksum 0x977051ab, Offset: 0x1db0
 // Size: 0x32
 function setobjectivetext(team, text) {
@@ -585,6 +617,7 @@ function setobjectivetext(team, text) {
 
 // Namespace util
 // Params 2, eflags: 0x0
+// namespace_82b91a51<file_0>::function_f38b59c3
 // Checksum 0x907ea9e3, Offset: 0x1df0
 // Size: 0x32
 function setobjectivescoretext(team, text) {
@@ -593,6 +626,7 @@ function setobjectivescoretext(team, text) {
 
 // Namespace util
 // Params 2, eflags: 0x0
+// namespace_82b91a51<file_0>::function_a7a109e6
 // Checksum 0x74881b0, Offset: 0x1e30
 // Size: 0x32
 function setobjectivehinttext(team, text) {
@@ -601,6 +635,7 @@ function setobjectivehinttext(team, text) {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_d20e7521
 // Checksum 0xe4e71209, Offset: 0x1e70
 // Size: 0x24
 function getobjectivetext(team) {
@@ -609,6 +644,7 @@ function getobjectivetext(team) {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_523a314f
 // Checksum 0x337a7ca5, Offset: 0x1ea0
 // Size: 0x24
 function getobjectivescoretext(team) {
@@ -617,6 +653,7 @@ function getobjectivescoretext(team) {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_efe537ba
 // Checksum 0x5c0b9bdd, Offset: 0x1ed0
 // Size: 0x24
 function getobjectivehinttext(team) {
@@ -625,6 +662,7 @@ function getobjectivehinttext(team) {
 
 // Namespace util
 // Params 2, eflags: 0x0
+// namespace_82b91a51<file_0>::function_4a3f3ebe
 // Checksum 0xc29b81f9, Offset: 0x1f00
 // Size: 0x64
 function registerroundswitch(minvalue, maxvalue) {
@@ -635,6 +673,7 @@ function registerroundswitch(minvalue, maxvalue) {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_549dd2f3
 // Checksum 0x713c3392, Offset: 0x1f70
 // Size: 0x64
 function registerroundlimit(minvalue, maxvalue) {
@@ -645,6 +684,7 @@ function registerroundlimit(minvalue, maxvalue) {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_779e30c5
 // Checksum 0xa14bf1e8, Offset: 0x1fe0
 // Size: 0x64
 function registerroundwinlimit(minvalue, maxvalue) {
@@ -655,6 +695,7 @@ function registerroundwinlimit(minvalue, maxvalue) {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_d094fb41
 // Checksum 0x2003c062, Offset: 0x2050
 // Size: 0x84
 function registerscorelimit(minvalue, maxvalue) {
@@ -666,6 +707,7 @@ function registerscorelimit(minvalue, maxvalue) {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_aa42b85a
 // Checksum 0x36d23cf6, Offset: 0x20e0
 // Size: 0x84
 function registertimelimit(minvalue, maxvalue) {
@@ -677,6 +719,7 @@ function registertimelimit(minvalue, maxvalue) {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_69229fbb
 // Checksum 0x11c9519d, Offset: 0x2170
 // Size: 0x64
 function registernumlives(minvalue, maxvalue) {
@@ -687,6 +730,7 @@ function registernumlives(minvalue, maxvalue) {
 
 // Namespace util
 // Params 1, eflags: 0x0
+// namespace_82b91a51<file_0>::function_292b6cbb
 // Checksum 0xd89a118c, Offset: 0x21e0
 // Size: 0x7e
 function getplayerfromclientnum(clientnum) {
@@ -703,6 +747,7 @@ function getplayerfromclientnum(clientnum) {
 
 // Namespace util
 // Params 0, eflags: 0x0
+// namespace_82b91a51<file_0>::function_f5152296
 // Checksum 0xb7703687, Offset: 0x2268
 // Size: 0x4c
 function ispressbuild() {
@@ -715,6 +760,7 @@ function ispressbuild() {
 
 // Namespace util
 // Params 0, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_3baa3ff4
 // Checksum 0x5b41c029, Offset: 0x22c0
 // Size: 0x1c
 function isflashbanged() {
@@ -723,6 +769,7 @@ function isflashbanged() {
 
 // Namespace util
 // Params 5, eflags: 0x0
+// namespace_82b91a51<file_0>::function_5459eaf7
 // Checksum 0x4c7fc933, Offset: 0x22e8
 // Size: 0xbc
 function domaxdamage(origin, attacker, inflictor, headshot, mod) {
@@ -740,6 +787,7 @@ function domaxdamage(origin, attacker, inflictor, headshot, mod) {
 
 // Namespace util
 // Params 5, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_190fd57
 // Checksum 0xbfd0e975, Offset: 0x23b0
 // Size: 0x328
 function get_array_of_closest(org, array, excluders, max, maxdist) {

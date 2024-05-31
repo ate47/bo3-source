@@ -8,6 +8,7 @@
 
 // Namespace claymore
 // Params 0, eflags: 0x2
+// namespace_f9a6d9a5<file_0>::function_2dc19561
 // Checksum 0x15cb0e3c, Offset: 0x150
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,6 +17,7 @@ function autoexec function_2dc19561() {
 
 // Namespace claymore
 // Params 1, eflags: 0x1 linked
+// namespace_f9a6d9a5<file_0>::function_8c87d8eb
 // Checksum 0xbbfe6f3f, Offset: 0x190
 // Size: 0x4c
 function __init__(localclientnum) {
@@ -25,6 +27,7 @@ function __init__(localclientnum) {
 
 // Namespace claymore
 // Params 1, eflags: 0x1 linked
+// namespace_f9a6d9a5<file_0>::function_ab1f9ea1
 // Checksum 0xe5f36bda, Offset: 0x1e8
 // Size: 0xc0
 function spawned(localclientnum) {

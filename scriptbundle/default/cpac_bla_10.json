@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_bla_10",
+    "igdtseqnum": 55,
+    "challengeWidget": "Accuracy",
+    "challengeDetails": "ACCOLADES_BLA_10",
+    "challengeName": "ACCOLADES_BLA_10_NAME",
+    "centerText": "3",
+    "challengeReference": "MISSION_BLACKSTATION_CHALLENGE10"
+}

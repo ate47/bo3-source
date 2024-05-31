@@ -10,6 +10,7 @@
 
 // Namespace quadtank
 // Params 0, eflags: 0x2
+// namespace_3fc75f50<file_0>::function_2dc19561
 // Checksum 0xf11a395, Offset: 0x218
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,6 +19,7 @@ function autoexec function_2dc19561() {
 
 // Namespace quadtank
 // Params 0, eflags: 0x1 linked
+// namespace_3fc75f50<file_0>::function_8c87d8eb
 // Checksum 0xe05355e4, Offset: 0x258
 // Size: 0xbc
 function __init__() {
@@ -28,6 +30,7 @@ function __init__() {
 
 // Namespace quadtank
 // Params 1, eflags: 0x1 linked
+// namespace_3fc75f50<file_0>::function_ef842362
 // Checksum 0xfa35bfb8, Offset: 0x320
 // Size: 0xbc
 function _setup_(localclientnum) {
@@ -44,6 +47,7 @@ function _setup_(localclientnum) {
 
 // Namespace quadtank
 // Params 1, eflags: 0x1 linked
+// namespace_3fc75f50<file_0>::function_c49d3115
 // Checksum 0x2dd30ef9, Offset: 0x3e8
 // Size: 0x80
 function player_enter(localclientnum) {
@@ -60,6 +64,7 @@ function player_enter(localclientnum) {
 
 // Namespace quadtank
 // Params 1, eflags: 0x1 linked
+// namespace_3fc75f50<file_0>::function_1fef4ec9
 // Checksum 0x27d03db1, Offset: 0x470
 // Size: 0x88
 function player_exit(localclientnum) {
@@ -76,6 +81,7 @@ function player_exit(localclientnum) {
 
 // Namespace quadtank
 // Params 7, eflags: 0x1 linked
+// namespace_3fc75f50<file_0>::function_f6cc6e97
 // Checksum 0xf76037b2, Offset: 0x500
 // Size: 0x3c
 function function_f6cc6e97(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -84,6 +90,7 @@ function function_f6cc6e97(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace quadtank
 // Params 7, eflags: 0x1 linked
+// namespace_3fc75f50<file_0>::function_fde81ec3
 // Checksum 0x43dee8ff, Offset: 0x548
 // Size: 0x6c
 function function_fde81ec3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -94,6 +101,7 @@ function function_fde81ec3(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace quadtank
 // Params 3, eflags: 0x1 linked
+// namespace_3fc75f50<file_0>::function_48b14d9d
 // Checksum 0x57392688, Offset: 0x5c0
 // Size: 0x164
 function function_48b14d9d(localclientnum, amount, fadeouttime) {
@@ -117,6 +125,7 @@ function function_48b14d9d(localclientnum, amount, fadeouttime) {
 
 // Namespace quadtank
 // Params 1, eflags: 0x1 linked
+// namespace_3fc75f50<file_0>::function_3502da52
 // Checksum 0xb49257a1, Offset: 0x730
 // Size: 0x170
 function function_3502da52(localclientnum) {

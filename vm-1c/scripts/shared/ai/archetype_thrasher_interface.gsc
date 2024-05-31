@@ -5,6 +5,7 @@
 
 // Namespace namespace_66565bbf
 // Params 0, eflags: 0x1 linked
+// namespace_66565bbf<file_0>::function_347a8745
 // Checksum 0xfae534bd, Offset: 0x118
 // Size: 0xcc
 function function_347a8745() {

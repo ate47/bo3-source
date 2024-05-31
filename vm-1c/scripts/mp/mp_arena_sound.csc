@@ -6,6 +6,7 @@
 
 // Namespace namespace_1b1d095e
 // Params 0, eflags: 0x1 linked
+// namespace_1b1d095e<file_0>::function_d290ebfa
 // Checksum 0xdac53549, Offset: 0x2f8
 // Size: 0x312
 function main() {
@@ -44,6 +45,7 @@ function main() {
 
 // Namespace namespace_1b1d095e
 // Params 7, eflags: 0x1 linked
+// namespace_1b1d095e<file_0>::function_8cf0b2
 // Checksum 0x1e8bee69, Offset: 0x618
 // Size: 0x48
 function function_8cf0b2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -52,6 +54,7 @@ function function_8cf0b2(localclientnum, oldval, newval, bnewent, binitialsnap, 
 
 // Namespace namespace_1b1d095e
 // Params 7, eflags: 0x1 linked
+// namespace_1b1d095e<file_0>::function_a7d453ed
 // Checksum 0x52f97342, Offset: 0x668
 // Size: 0x48
 function function_a7d453ed(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -60,6 +63,7 @@ function function_a7d453ed(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_1b1d095e
 // Params 7, eflags: 0x1 linked
+// namespace_1b1d095e<file_0>::function_234a7ab8
 // Checksum 0x27efeccd, Offset: 0x6b8
 // Size: 0x48
 function function_234a7ab8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -68,6 +72,7 @@ function function_234a7ab8(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_1b1d095e
 // Params 7, eflags: 0x1 linked
+// namespace_1b1d095e<file_0>::function_2ed4e576
 // Checksum 0x3e26bd49, Offset: 0x708
 // Size: 0x1fe
 function function_2ed4e576(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -99,6 +104,7 @@ function function_2ed4e576(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_1b1d095e
 // Params 3, eflags: 0x1 linked
+// namespace_1b1d095e<file_0>::function_aea157a4
 // Checksum 0x4152ca9b, Offset: 0x910
 // Size: 0x178
 function function_aea157a4(localclientnum, alias, line) {
@@ -119,6 +125,7 @@ function function_aea157a4(localclientnum, alias, line) {
 
 // Namespace namespace_1b1d095e
 // Params 2, eflags: 0x1 linked
+// namespace_1b1d095e<file_0>::function_22fabb0b
 // Checksum 0x98e4b52a, Offset: 0xa90
 // Size: 0x24c
 function function_22fabb0b(var_cfdadf12, localclientnum) {

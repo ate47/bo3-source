@@ -1,0 +1,12 @@
+{
+    "vmtype": "none",
+    "name": "cpac_sge_02",
+    "igdtseqnum": 151,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Find",
+    "challengeDetails": "ACCOLADES_SGEN_2",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_SGEN_2_NAME",
+    "centerText": "6",
+    "challengeReference": "MISSION_SGEN_COLLECTIBLE"
+}

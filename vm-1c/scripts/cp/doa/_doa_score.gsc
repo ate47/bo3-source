@@ -13,6 +13,7 @@
 
 // Namespace namespace_64c6b720
 // Params 0, eflags: 0x1 linked
+// namespace_64c6b720<file_0>::function_c35e6aab
 // Checksum 0x99ec1590, Offset: 0x210
 // Size: 0x4
 function init() {
@@ -21,6 +22,7 @@ function init() {
 
 // Namespace namespace_64c6b720
 // Params 1, eflags: 0x0
+// namespace_64c6b720<file_0>::function_acd89108
 // Checksum 0x5f92d60b, Offset: 0x220
 // Size: 0x2e
 function function_acd89108(note) {
@@ -31,6 +33,7 @@ function function_acd89108(note) {
 
 // Namespace namespace_64c6b720
 // Params 0, eflags: 0x0
+// namespace_64c6b720<file_0>::function_7c5410c4
 // Checksum 0x4be88cd, Offset: 0x258
 // Size: 0xfe
 function function_7c5410c4() {
@@ -47,6 +50,7 @@ function function_7c5410c4() {
 
 // Namespace namespace_64c6b720
 // Params 1, eflags: 0x0
+// namespace_64c6b720<file_0>::function_92c929ab
 // Checksum 0xcd67ff51, Offset: 0x360
 // Size: 0x32
 function function_92c929ab(val) {
@@ -56,6 +60,7 @@ function function_92c929ab(val) {
 
 // Namespace namespace_64c6b720
 // Params 0, eflags: 0x1 linked
+// namespace_64c6b720<file_0>::function_676edeb7
 // Checksum 0x3a7181e3, Offset: 0x3a0
 // Size: 0x30c
 function function_676edeb7() {
@@ -87,6 +92,7 @@ function function_676edeb7() {
 
 // Namespace namespace_64c6b720
 // Params 0, eflags: 0x1 linked
+// namespace_64c6b720<file_0>::function_93ccc5da
 // Checksum 0x84bb0b6a, Offset: 0x6b8
 // Size: 0x76
 function getplayerscore() {
@@ -98,6 +104,7 @@ function getplayerscore() {
 
 // Namespace namespace_64c6b720
 // Params 2, eflags: 0x1 linked
+// namespace_64c6b720<file_0>::function_80eb303
 // Checksum 0x61c78c40, Offset: 0x738
 // Size: 0x3a4
 function function_80eb303(points, var_c979daec) {
@@ -148,6 +155,7 @@ function function_80eb303(points, var_c979daec) {
 
 // Namespace namespace_64c6b720
 // Params 1, eflags: 0x1 linked
+// namespace_64c6b720<file_0>::function_126dc996
 // Checksum 0xb80dd6e7, Offset: 0xae8
 // Size: 0x166
 function function_126dc996(multiplier) {
@@ -166,6 +174,7 @@ function function_126dc996(multiplier) {
 
 // Namespace namespace_64c6b720
 // Params 2, eflags: 0x1 linked
+// namespace_64c6b720<file_0>::function_850bb47e
 // Checksum 0x4c4de764, Offset: 0xc58
 // Size: 0x234
 function function_850bb47e(increment, forcex) {

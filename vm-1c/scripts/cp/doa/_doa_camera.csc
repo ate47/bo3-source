@@ -7,6 +7,7 @@
 
 // Namespace namespace_ad544aeb
 // Params 3, eflags: 0x1 linked
+// namespace_ad544aeb<file_0>::function_d22ceb57
 // Checksum 0xa988da5d, Offset: 0x118
 // Size: 0xfc
 function function_d22ceb57(angles, min_dist, max_dist) {
@@ -31,6 +32,7 @@ function function_d22ceb57(angles, min_dist, max_dist) {
 
 // Namespace namespace_ad544aeb
 // Params 2, eflags: 0x1 linked
+// namespace_ad544aeb<file_0>::function_44a2ae85
 // Checksum 0xe78fd80, Offset: 0x220
 // Size: 0xce
 function function_44a2ae85(vec, mins) {
@@ -48,6 +50,7 @@ function function_44a2ae85(vec, mins) {
 
 // Namespace namespace_ad544aeb
 // Params 2, eflags: 0x1 linked
+// namespace_ad544aeb<file_0>::function_b72ba417
 // Checksum 0x86f9a1c4, Offset: 0x2f8
 // Size: 0xce
 function function_b72ba417(vec, maxs) {
@@ -65,6 +68,7 @@ function function_b72ba417(vec, maxs) {
 
 // Namespace namespace_ad544aeb
 // Params 2, eflags: 0x1 linked
+// namespace_ad544aeb<file_0>::function_d207ecc1
 // Checksum 0x142bcaa0, Offset: 0x3d0
 // Size: 0x12dc
 function function_d207ecc1(localclientnum, delta_time) {

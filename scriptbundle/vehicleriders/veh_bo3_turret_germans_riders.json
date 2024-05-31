@@ -1,0 +1,20 @@
+{
+    "highexitlandheight": 32,
+    "model": "veh_t7_turret_sentry_gun_world",
+    "lowexitheight": 32,
+    "dropspeed": 250,
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "name": "veh_bo3_turret_germans_riders",
+    "type": "vehicleriders",
+    "igdtseqnum": 1,
+    "objects": [
+        {
+            "enteranim": "ai_base_rifle_turret_mounted_enter",
+            "exitgroundanim": "ai_base_rifle_turret_mounted_exit",
+            "ridedeathanim": "ai_base_rifle_turret_mounted_dth_1",
+            "position": "driver",
+            "aligntag": "tag_gunner1"
+        }
+    ]
+}

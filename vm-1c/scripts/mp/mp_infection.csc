@@ -9,6 +9,7 @@
 
 // Namespace namespace_82e4b148
 // Params 0, eflags: 0x1 linked
+// namespace_82e4b148<file_0>::function_d290ebfa
 // Checksum 0x1bee8b2b, Offset: 0x138
 // Size: 0x5c
 function main() {

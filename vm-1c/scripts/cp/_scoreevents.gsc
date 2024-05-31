@@ -13,6 +13,7 @@
 
 // Namespace scoreevents
 // Params 0, eflags: 0x2
+// namespace_a1cb6b52<file_0>::function_2dc19561
 // Checksum 0x752dafb8, Offset: 0x6b8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,6 +22,7 @@ function autoexec function_2dc19561() {
 
 // Namespace scoreevents
 // Params 0, eflags: 0x1 linked
+// namespace_a1cb6b52<file_0>::function_8c87d8eb
 // Checksum 0x64f7635d, Offset: 0x6f8
 // Size: 0x24
 function __init__() {
@@ -29,6 +31,7 @@ function __init__() {
 
 // Namespace scoreevents
 // Params 0, eflags: 0x1 linked
+// namespace_a1cb6b52<file_0>::function_d290ebfa
 // Checksum 0x7e37df8c, Offset: 0x728
 // Size: 0x74
 function main() {
@@ -40,6 +43,7 @@ function main() {
 
 // Namespace scoreevents
 // Params 2, eflags: 0x0
+// namespace_a1cb6b52<file_0>::function_1a76033a
 // Checksum 0x406ea853, Offset: 0x7a8
 // Size: 0x52
 function scoreeventtablelookupint(index, scoreeventcolumn) {
@@ -48,6 +52,7 @@ function scoreeventtablelookupint(index, scoreeventcolumn) {
 
 // Namespace scoreevents
 // Params 2, eflags: 0x0
+// namespace_a1cb6b52<file_0>::function_a467985f
 // Checksum 0x45335bb8, Offset: 0x808
 // Size: 0x42
 function scoreeventtablelookup(index, scoreeventcolumn) {
@@ -56,6 +61,7 @@ function scoreeventtablelookup(index, scoreeventcolumn) {
 
 // Namespace scoreevents
 // Params 1, eflags: 0x0
+// namespace_a1cb6b52<file_0>::function_f8204815
 // Checksum 0xae836ba6, Offset: 0x858
 // Size: 0xbc
 function function_f8204815(event) {
@@ -69,6 +75,7 @@ function function_f8204815(event) {
 
 // Namespace scoreevents
 // Params 2, eflags: 0x1 linked
+// namespace_a1cb6b52<file_0>::function_d48595d1
 // Checksum 0xdd83568, Offset: 0x920
 // Size: 0x5c
 function registerscoreeventcallback(callback, func) {
@@ -80,6 +87,7 @@ function registerscoreeventcallback(callback, func) {
 
 // Namespace scoreevents
 // Params 2, eflags: 0x1 linked
+// namespace_a1cb6b52<file_0>::function_e1c28246
 // Checksum 0x89f4e20e, Offset: 0x988
 // Size: 0x14c
 function function_e1c28246(data, time) {
@@ -107,6 +115,7 @@ function function_e1c28246(data, time) {
 
 // Namespace scoreevents
 // Params 2, eflags: 0x1 linked
+// namespace_a1cb6b52<file_0>::function_24e4c464
 // Checksum 0x9efbbb5, Offset: 0xae0
 // Size: 0x10d4
 function scoreeventplayerkill(data, time) {
@@ -294,6 +303,7 @@ function scoreeventplayerkill(data, time) {
 
 // Namespace scoreevents
 // Params 4, eflags: 0x1 linked
+// namespace_a1cb6b52<file_0>::function_58bc5359
 // Checksum 0x8c92906e, Offset: 0x1bc0
 // Size: 0x24
 function specificweaponkill(attacker, victim, weapon, killstreak) {
@@ -302,6 +312,7 @@ function specificweaponkill(attacker, victim, weapon, killstreak) {
 
 // Namespace scoreevents
 // Params 2, eflags: 0x1 linked
+// namespace_a1cb6b52<file_0>::function_82eacc98
 // Checksum 0x4a78eb6e, Offset: 0x1bf0
 // Size: 0xcc
 function multikill(killcount, weapon) {
@@ -317,6 +328,7 @@ function multikill(killcount, weapon) {
 
 // Namespace scoreevents
 // Params 3, eflags: 0x1 linked
+// namespace_a1cb6b52<file_0>::function_e5246e53
 // Checksum 0x26e32e55, Offset: 0x1cc8
 // Size: 0xde
 function is_weapon_valid(meansofdeath, weapon, weaponclass) {
@@ -335,6 +347,7 @@ function is_weapon_valid(meansofdeath, weapon, weaponclass) {
 
 // Namespace scoreevents
 // Params 3, eflags: 0x1 linked
+// namespace_a1cb6b52<file_0>::function_3345a3e4
 // Checksum 0x56c02a99, Offset: 0x1db0
 // Size: 0x3c4
 function updatemultikills(weapon, weaponclass, killstreak) {
@@ -419,6 +432,7 @@ function updatemultikills(weapon, weaponclass, killstreak) {
 
 // Namespace scoreevents
 // Params 1, eflags: 0x1 linked
+// namespace_a1cb6b52<file_0>::function_aecb03bf
 // Checksum 0xdbd0869e, Offset: 0x2180
 // Size: 0x1c
 function waittilltimeoutordeath(timeout) {
@@ -428,6 +442,7 @@ function waittilltimeoutordeath(timeout) {
 
 // Namespace scoreevents
 // Params 3, eflags: 0x1 linked
+// namespace_a1cb6b52<file_0>::function_4ad1234
 // Checksum 0xee81e220, Offset: 0x21a8
 // Size: 0xe0
 function updateoneshotmultikills(victim, weapon, firsttimedamaged) {
@@ -450,6 +465,7 @@ function updateoneshotmultikills(victim, weapon, firsttimedamaged) {
 
 // Namespace scoreevents
 // Params 2, eflags: 0x1 linked
+// namespace_a1cb6b52<file_0>::function_8b8e58de
 // Checksum 0x996c99cf, Offset: 0x2290
 // Size: 0x13a
 function get_distance_for_weapon(weapon, weaponclass) {
@@ -492,6 +508,7 @@ function get_distance_for_weapon(weapon, weaponclass) {
 
 // Namespace scoreevents
 // Params 1, eflags: 0x1 linked
+// namespace_a1cb6b52<file_0>::function_f5c67b17
 // Checksum 0xcbd91ba5, Offset: 0x23d8
 // Size: 0x174
 function ongameend(data) {

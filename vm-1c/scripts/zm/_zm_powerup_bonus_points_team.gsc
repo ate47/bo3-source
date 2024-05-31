@@ -18,6 +18,7 @@
 
 // Namespace zm_powerup_bonus_points_team
 // Params 0, eflags: 0x2
+// namespace_50ac7dd1<file_0>::function_2dc19561
 // Checksum 0x46080908, Offset: 0x2f0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -26,6 +27,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_bonus_points_team
 // Params 0, eflags: 0x0
+// namespace_50ac7dd1<file_0>::function_8c87d8eb
 // Checksum 0xba5c7790, Offset: 0x330
 // Size: 0x9c
 function __init__() {
@@ -37,6 +39,7 @@ function __init__() {
 
 // Namespace zm_powerup_bonus_points_team
 // Params 1, eflags: 0x0
+// namespace_50ac7dd1<file_0>::function_b6e2445
 // Checksum 0x9727a310, Offset: 0x3d8
 // Size: 0x44
 function grab_bonus_points_team(player) {
@@ -46,6 +49,7 @@ function grab_bonus_points_team(player) {
 
 // Namespace zm_powerup_bonus_points_team
 // Params 1, eflags: 0x0
+// namespace_50ac7dd1<file_0>::function_b01369d9
 // Checksum 0x7419c9d5, Offset: 0x428
 // Size: 0x10e
 function bonus_points_team_powerup(item) {

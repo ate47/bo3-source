@@ -8,6 +8,7 @@
 
 // Namespace deathicons
 // Params 0, eflags: 0x2
+// namespace_f17c3089<file_0>::function_2dc19561
 // Checksum 0x7c31f568, Offset: 0x168
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,6 +17,7 @@ function autoexec function_2dc19561() {
 
 // Namespace deathicons
 // Params 0, eflags: 0x1 linked
+// namespace_f17c3089<file_0>::function_8c87d8eb
 // Checksum 0xc44f2bc0, Offset: 0x1a8
 // Size: 0x44
 function __init__() {
@@ -25,6 +27,7 @@ function __init__() {
 
 // Namespace deathicons
 // Params 0, eflags: 0x1 linked
+// namespace_f17c3089<file_0>::function_c35e6aab
 // Checksum 0x2df4678d, Offset: 0x1f8
 // Size: 0x30
 function init() {
@@ -38,6 +41,7 @@ function init() {
 
 // Namespace deathicons
 // Params 0, eflags: 0x1 linked
+// namespace_f17c3089<file_0>::function_fb4f96b5
 // Checksum 0x5a8fd029, Offset: 0x230
 // Size: 0x10
 function on_player_connect() {
@@ -46,6 +50,7 @@ function on_player_connect() {
 
 // Namespace deathicons
 // Params 0, eflags: 0x0
+// namespace_f17c3089<file_0>::function_44455ed8
 // Checksum 0x99ec1590, Offset: 0x248
 // Size: 0x4
 function update_enabled() {
@@ -54,6 +59,7 @@ function update_enabled() {
 
 // Namespace deathicons
 // Params 4, eflags: 0x1 linked
+// namespace_f17c3089<file_0>::function_69554b3e
 // Checksum 0xf2244b14, Offset: 0x258
 // Size: 0x244
 function add(entity, dyingplayer, team, timeout) {
@@ -93,6 +99,7 @@ function add(entity, dyingplayer, team, timeout) {
 
 // Namespace deathicons
 // Params 1, eflags: 0x1 linked
+// namespace_f17c3089<file_0>::function_c0c86ea2
 // Checksum 0xf81ce849, Offset: 0x4a8
 // Size: 0x64
 function destroy_slowly(timeout) {
@@ -106,6 +113,7 @@ function destroy_slowly(timeout) {
 
 // Namespace deathicons
 // Params 10, eflags: 0x1 linked
+// namespace_f17c3089<file_0>::function_c877b52d
 // Checksum 0xf1653f6c, Offset: 0x518
 // Size: 0xdc
 function ragdoll_override(idamage, smeansofdeath, sweapon, shitloc, vdir, vattackerorigin, deathanimduration, einflictor, ragdoll_jib, body) {

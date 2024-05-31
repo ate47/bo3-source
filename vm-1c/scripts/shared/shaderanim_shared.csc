@@ -2,6 +2,7 @@
 
 // Namespace shaderanim
 // Params 6, eflags: 0x1 linked
+// namespace_5eb52929<file_0>::function_8c880455
 // Checksum 0x959b0108, Offset: 0x88
 // Size: 0x1dc
 function animate_crack(localclientnum, vectorname, delay, duration, start, end) {
@@ -30,6 +31,7 @@ function animate_crack(localclientnum, vectorname, delay, duration, start, end) 
 
 // Namespace shaderanim
 // Params 3, eflags: 0x0
+// namespace_5eb52929<file_0>::function_ab0a3ed5
 // Checksum 0xa3bc333, Offset: 0x270
 // Size: 0x4c
 function shaderanim_update_opacity(entity, localclientnum, opacity) {

@@ -25,6 +25,7 @@
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_c35e6aab
 // Checksum 0x93172def, Offset: 0xb68
 // Size: 0x564
 function init() {
@@ -77,6 +78,7 @@ function init() {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x0
+// namespace_558b7bfe<file_0>::function_7f87cc32
 // Checksum 0x1921109e, Offset: 0x10d8
 // Size: 0xc0
 function tryuseqrdrone(lifeid) {
@@ -95,6 +97,7 @@ function tryuseqrdrone(lifeid) {
 
 // Namespace qrdrone
 // Params 2, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_704d1b6c
 // Checksum 0x7aa7e408, Offset: 0x11a0
 // Size: 0x120
 function givecarryqrdrone(lifeid, streakname) {
@@ -114,6 +117,7 @@ function givecarryqrdrone(lifeid, streakname) {
 
 // Namespace qrdrone
 // Params 2, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_20b12f27
 // Checksum 0xf06a16f2, Offset: 0x12c8
 // Size: 0x330
 function createcarryqrdrone(streakname, owner) {
@@ -146,6 +150,7 @@ function createcarryqrdrone(streakname, owner) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x0
+// namespace_558b7bfe<file_0>::function_ab0fff
 // Checksum 0x65f567b0, Offset: 0x1600
 // Size: 0x66
 function watchforattack() {
@@ -163,6 +168,7 @@ function watchforattack() {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_c155fa75
 // Checksum 0x7678615d, Offset: 0x1670
 // Size: 0x114
 function setcarryingqrdrone(carryqrdrone) {
@@ -187,6 +193,7 @@ function setcarryingqrdrone(carryqrdrone) {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_7f951504
 // Checksum 0xa7b6adfc, Offset: 0x1790
 // Size: 0x82
 function carryqrdrone_setcarried(carrier) {
@@ -200,6 +207,7 @@ function carryqrdrone_setcarried(carrier) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_666e1bda
 // Checksum 0x8e471a6d, Offset: 0x1820
 // Size: 0xac
 function isinremotenodeploy() {
@@ -215,6 +223,7 @@ function isinremotenodeploy() {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_b81199b9
 // Checksum 0x4d2bc25b, Offset: 0x18d8
 // Size: 0x244
 function updatecarryqrdroneplacement(carryqrdrone) {
@@ -256,6 +265,7 @@ function updatecarryqrdroneplacement(carryqrdrone) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_88d80548
 // Checksum 0x85487923, Offset: 0x1b28
 // Size: 0x94
 function carryqrdrone_handleexistence() {
@@ -271,6 +281,7 @@ function carryqrdrone_handleexistence() {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x0
+// namespace_558b7bfe<file_0>::function_b8d21a8f
 // Checksum 0x37f32605, Offset: 0x1bc8
 // Size: 0x24
 function removeremoteweapon() {
@@ -281,6 +292,7 @@ function removeremoteweapon() {
 
 // Namespace qrdrone
 // Params 4, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_1b320f34
 // Checksum 0xc32c7092, Offset: 0x1bf8
 // Size: 0x2d0
 function startqrdrone(lifeid, streakname, origin, angles) {
@@ -322,6 +334,7 @@ function startqrdrone(lifeid, streakname, origin, angles) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_cfb2f478
 // Checksum 0xbf35cecf, Offset: 0x1ed0
 // Size: 0x74
 function lockplayerforqrdronelaunch() {
@@ -333,6 +346,7 @@ function lockplayerforqrdronelaunch() {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_97b23bde
 // Checksum 0x73f4b08a, Offset: 0x1f50
 // Size: 0x64
 function clearplayerlockfromqrdronelaunch(lockspot) {
@@ -343,6 +357,7 @@ function clearplayerlockfromqrdronelaunch(lockspot) {
 
 // Namespace qrdrone
 // Params 6, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_9ae06ca6
 // Checksum 0x1b6108c6, Offset: 0x1fc0
 // Size: 0x470
 function createqrdrone(lifeid, owner, streakname, origin, angles, killstreak_id) {
@@ -392,6 +407,7 @@ function createqrdrone(lifeid, owner, streakname, origin, angles, killstreak_id)
 
 // Namespace qrdrone
 // Params 3, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_dd291787
 // Checksum 0x29023f66, Offset: 0x2438
 // Size: 0x164
 function qrdrone_ride(lifeid, qrdrone, streakname) {
@@ -413,6 +429,7 @@ function qrdrone_ride(lifeid, qrdrone, streakname) {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_4a934307
 // Checksum 0x19d8cf8, Offset: 0x25a8
 // Size: 0x6c
 function qrdrone_delaylaunchdialog(qrdrone) {
@@ -427,6 +444,7 @@ function qrdrone_delaylaunchdialog(qrdrone) {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_170356f0
 // Checksum 0x98e43d48, Offset: 0x2620
 // Size: 0x8c
 function qrdrone_unlink(qrdrone) {
@@ -444,6 +462,7 @@ function qrdrone_unlink(qrdrone) {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_6048e392
 // Checksum 0x5809d98f, Offset: 0x26b8
 // Size: 0xae
 function qrdrone_endride(qrdrone) {
@@ -461,6 +480,7 @@ function qrdrone_endride(qrdrone) {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_212d1d6b
 // Checksum 0x163f68f4, Offset: 0x2770
 // Size: 0x198
 function play_lockon_sounds(player) {
@@ -494,6 +514,7 @@ function play_lockon_sounds(player) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_78169fed
 // Checksum 0x8e4c112b, Offset: 0x2910
 // Size: 0x22
 function enemy_locking() {
@@ -505,6 +526,7 @@ function enemy_locking() {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_94369f28
 // Checksum 0xed47be0f, Offset: 0x2940
 // Size: 0x22
 function enemy_locked() {
@@ -516,6 +538,7 @@ function enemy_locked() {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_b225afe
 // Checksum 0xe571c9b, Offset: 0x2970
 // Size: 0x5c
 function qrdrone_freezebuffer() {
@@ -529,6 +552,7 @@ function qrdrone_freezebuffer() {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x0
+// namespace_558b7bfe<file_0>::function_bd2ba602
 // Checksum 0xef030f02, Offset: 0x29d8
 // Size: 0xc8
 function qrdrone_playerexit(qrdrone) {
@@ -553,6 +577,7 @@ function qrdrone_playerexit(qrdrone) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_b8e72f6f
 // Checksum 0x24b0ae5b, Offset: 0x2aa8
 // Size: 0x7c
 function touchedkillbrush() {
@@ -565,6 +590,7 @@ function touchedkillbrush() {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_6d14ab65
 // Checksum 0xca949fab, Offset: 0x2b30
 // Size: 0x3c4
 function deleteonkillbrush(player) {
@@ -613,6 +639,7 @@ function deleteonkillbrush(player) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_807af09d
 // Checksum 0xa72ac0ae, Offset: 0x2f00
 // Size: 0x74
 function qrdrone_force_destroy() {
@@ -623,6 +650,7 @@ function qrdrone_force_destroy() {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_b8316073
 // Checksum 0x11a68c4f, Offset: 0x2f80
 // Size: 0x30
 function qrdrone_get_damage_effect(health_pct) {
@@ -634,6 +662,7 @@ function qrdrone_get_damage_effect(health_pct) {
 
 // Namespace qrdrone
 // Params 2, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_4fe20ee8
 // Checksum 0x63e0e7e2, Offset: 0x2fb8
 // Size: 0x74
 function qrdrone_play_single_fx_on_tag(effect, tag) {
@@ -648,6 +677,7 @@ function qrdrone_play_single_fx_on_tag(effect, tag) {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_d144f0e3
 // Checksum 0x80fcd794, Offset: 0x3038
 // Size: 0x7c
 function qrdrone_update_damage_fx(health_percent) {
@@ -663,6 +693,7 @@ function qrdrone_update_damage_fx(health_percent) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_2763fe4a
 // Checksum 0xda572e3e, Offset: 0x30c0
 // Size: 0x388
 function qrdrone_damagewatcher() {
@@ -715,6 +746,7 @@ function qrdrone_damagewatcher() {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_bfdac369
 // Checksum 0x20cd5494, Offset: 0x3450
 // Size: 0x98
 function qrdrone_stun(duration) {
@@ -731,6 +763,7 @@ function qrdrone_stun(duration) {
 
 // Namespace qrdrone
 // Params 4, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_ca8e5b29
 // Checksum 0xeb769ee2, Offset: 0x34f0
 // Size: 0x254
 function qrdrone_death(attacker, weapon, dir, damagetype) {
@@ -761,6 +794,7 @@ function qrdrone_death(attacker, weapon, dir, damagetype) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x0
+// namespace_558b7bfe<file_0>::function_f92793ae
 // Checksum 0x6e234c54, Offset: 0x3750
 // Size: 0x44
 function death_fx() {
@@ -770,6 +804,7 @@ function death_fx() {
 
 // Namespace qrdrone
 // Params 2, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_bb4aa25a
 // Checksum 0xa0ac9b21, Offset: 0x37a0
 // Size: 0x37e
 function qrdrone_crash_movement(attacker, hitdir) {
@@ -806,6 +841,7 @@ function qrdrone_crash_movement(attacker, hitdir) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_1bdda36b
 // Checksum 0xc3983f9c, Offset: 0x3b28
 // Size: 0xd4
 function qrdrone_dmg_snd() {
@@ -820,6 +856,7 @@ function qrdrone_dmg_snd() {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_b24622cf
 // Checksum 0xe8bce08c, Offset: 0x3c08
 // Size: 0xd4
 function qrdrone_fire_for_time(totalfiretime) {
@@ -840,6 +877,7 @@ function qrdrone_fire_for_time(totalfiretime) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_52ab526b
 // Checksum 0xe664c927, Offset: 0x3ce8
 // Size: 0x1d8
 function qrdrone_crash_accel() {
@@ -872,6 +910,7 @@ function qrdrone_crash_accel() {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_4cc3c913
 // Checksum 0x7e11ea8b, Offset: 0x3ec8
 // Size: 0x166
 function qrdrone_collision() {
@@ -895,6 +934,7 @@ function qrdrone_collision() {
 
 // Namespace qrdrone
 // Params 2, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_c2477adc
 // Checksum 0x8023e1f0, Offset: 0x4038
 // Size: 0x33c
 function qrdrone_watch_distance(zoffset, minheightoverride) {
@@ -949,6 +989,7 @@ function qrdrone_watch_distance(zoffset, minheightoverride) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_39273ada
 // Checksum 0x870d0121, Offset: 0x4380
 // Size: 0x5e
 function qrdrone_in_range() {
@@ -962,6 +1003,7 @@ function qrdrone_in_range() {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_841e8489
 // Checksum 0xf9a0caed, Offset: 0x43e8
 // Size: 0x98
 function qrdrone_staticfade(staticalpha) {
@@ -979,6 +1021,7 @@ function qrdrone_staticfade(staticalpha) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_6d6af4d5
 // Checksum 0x458c2997, Offset: 0x4488
 // Size: 0xfc
 function qrdrone_rangecountdown() {
@@ -1001,6 +1044,7 @@ function qrdrone_rangecountdown() {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_4dd5d374
 // Checksum 0x172e4588, Offset: 0x4590
 // Size: 0x13c
 function qrdrone_explode_on_notify(killstreak_id) {
@@ -1021,6 +1065,7 @@ function qrdrone_explode_on_notify(killstreak_id) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_c16309b7
 // Checksum 0x386145ea, Offset: 0x46d8
 // Size: 0x9c
 function qrdrone_explode_on_game_end() {
@@ -1034,6 +1079,7 @@ function qrdrone_explode_on_game_end() {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_d89767f6
 // Checksum 0xcbee7c55, Offset: 0x4780
 // Size: 0x17c
 function qrdrone_leave_on_timeout(killstreakname) {
@@ -1061,6 +1107,7 @@ function qrdrone_leave_on_timeout(killstreakname) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_102c9fd0
 // Checksum 0xe840cfb5, Offset: 0x4908
 // Size: 0x12c
 function qrdrone_leave_on_timeout_callback() {
@@ -1078,6 +1125,7 @@ function qrdrone_leave_on_timeout_callback() {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_6e6e064e
 // Checksum 0xc982bd4a, Offset: 0x4a40
 // Size: 0x6a
 function qrdrone_leave() {
@@ -1091,6 +1139,7 @@ function qrdrone_leave() {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_7e259ad3
 // Checksum 0xf228e6f5, Offset: 0x4ab8
 // Size: 0x1a
 function qrdrone_exit_button_pressed() {
@@ -1099,6 +1148,7 @@ function qrdrone_exit_button_pressed() {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_a8258779
 // Checksum 0x289a586a, Offset: 0x4ae0
 // Size: 0x120
 function qrdrone_watch_for_exit() {
@@ -1124,6 +1174,7 @@ function qrdrone_watch_for_exit() {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_949d36fb
 // Checksum 0x986fefc9, Offset: 0x4c08
 // Size: 0x134
 function qrdrone_cleanup() {
@@ -1154,6 +1205,7 @@ function qrdrone_cleanup() {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x0
+// namespace_558b7bfe<file_0>::function_ba3aebd4
 // Checksum 0x8afd3953, Offset: 0x4d48
 // Size: 0x7c
 function qrdrone_light_fx() {
@@ -1164,6 +1216,7 @@ function qrdrone_light_fx() {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_dd4bf4c1
 // Checksum 0x5dd986a1, Offset: 0x4dd0
 // Size: 0xcc
 function qrdrone_dialog(dialoggroup) {
@@ -1183,6 +1236,7 @@ function qrdrone_dialog(dialoggroup) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x0
+// namespace_558b7bfe<file_0>::function_74c0a471
 // Checksum 0x11784270, Offset: 0x4ea8
 // Size: 0x9c
 function qrdrone_watchheliproximity() {
@@ -1203,6 +1257,7 @@ function qrdrone_watchheliproximity() {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x0
+// namespace_558b7bfe<file_0>::function_74eadfef
 // Checksum 0x2813b834, Offset: 0x4f50
 // Size: 0x14c
 function qrdrone_detonatewaiter() {
@@ -1222,6 +1277,7 @@ function qrdrone_detonatewaiter() {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_e4e67334
 // Checksum 0x28dbbce2, Offset: 0x50a8
 // Size: 0xe4
 function qrdrone_fireguns(qrdrone) {
@@ -1246,6 +1302,7 @@ function qrdrone_fireguns(qrdrone) {
 
 // Namespace qrdrone
 // Params 2, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_39ebf576
 // Checksum 0x700baf71, Offset: 0x5198
 // Size: 0x324
 function qrdrone_blowup(attacker, weapon) {
@@ -1292,6 +1349,7 @@ function qrdrone_blowup(attacker, weapon) {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_abc89fb3
 // Checksum 0xbabbba68, Offset: 0x54c8
 // Size: 0x6c
 function setvisionsetwaiter() {
@@ -1304,6 +1362,7 @@ function setvisionsetwaiter() {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_138f0446
 // Checksum 0x99ec1590, Offset: 0x5540
 // Size: 0x4
 function inithud() {
@@ -1312,6 +1371,7 @@ function inithud() {
 
 // Namespace qrdrone
 // Params 0, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_151ee984
 // Checksum 0x59f9bda9, Offset: 0x5550
 // Size: 0xa4
 function destroyhud() {
@@ -1329,6 +1389,7 @@ function destroyhud() {
 
 // Namespace qrdrone
 // Params 2, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_a524d70d
 // Checksum 0xb195b1f3, Offset: 0x5600
 // Size: 0x10c
 function set_static_alpha(alpha, drone) {
@@ -1353,6 +1414,7 @@ function set_static_alpha(alpha, drone) {
 
 // Namespace qrdrone
 // Params 1, eflags: 0x1 linked
+// namespace_558b7bfe<file_0>::function_234fa07f
 // Checksum 0x9d33602f, Offset: 0x5718
 // Size: 0xbe
 function flash_signal_failure(drone) {

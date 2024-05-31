@@ -10,6 +10,7 @@
 
 // Namespace hud_message
 // Params 0, eflags: 0x2
+// namespace_4d476a30<file_0>::function_2dc19561
 // Checksum 0x3506da05, Offset: 0x210
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,6 +19,7 @@ function autoexec function_2dc19561() {
 
 // Namespace hud_message
 // Params 0, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_8c87d8eb
 // Checksum 0x1bb5db15, Offset: 0x250
 // Size: 0x24
 function __init__() {
@@ -26,6 +28,7 @@ function __init__() {
 
 // Namespace hud_message
 // Params 0, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_c35e6aab
 // Checksum 0x87dbbe5e, Offset: 0x280
 // Size: 0x44
 function init() {
@@ -35,6 +38,7 @@ function init() {
 
 // Namespace hud_message
 // Params 0, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_fb4f96b5
 // Checksum 0x7311a22b, Offset: 0x2d0
 // Size: 0x64
 function on_player_connect() {
@@ -46,6 +50,7 @@ function on_player_connect() {
 
 // Namespace hud_message
 // Params 0, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_7d27aacb
 // Checksum 0x49c5d77, Offset: 0x340
 // Size: 0x54
 function on_player_disconnect() {
@@ -59,6 +64,7 @@ function on_player_disconnect() {
 
 // Namespace hud_message
 // Params 0, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_1aecf547
 // Checksum 0xe5e223ec, Offset: 0x3a0
 // Size: 0x1d4
 function function_1aecf547() {
@@ -84,6 +90,7 @@ function function_1aecf547() {
 
 // Namespace hud_message
 // Params 2, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_80eacd67
 // Checksum 0x7d1c6755, Offset: 0x580
 // Size: 0x6c
 function hintmessage(hinttext, duration) {
@@ -95,6 +102,7 @@ function hintmessage(hinttext, duration) {
 
 // Namespace hud_message
 // Params 3, eflags: 0x0
+// namespace_4d476a30<file_0>::function_163cbca3
 // Checksum 0x325610d, Offset: 0x5f8
 // Size: 0xae
 function function_163cbca3(players, hinttext, duration) {
@@ -108,6 +116,7 @@ function function_163cbca3(players, hinttext, duration) {
 
 // Namespace hud_message
 // Params 1, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_c0025cfc
 // Checksum 0x4286d2d8, Offset: 0x6b0
 // Size: 0x5c
 function function_c0025cfc(team) {
@@ -117,6 +126,7 @@ function function_c0025cfc(team) {
 
 // Namespace hud_message
 // Params 0, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_cb5c5225
 // Checksum 0xc8abad1d, Offset: 0x718
 // Size: 0x4d0
 function function_cb5c5225() {
@@ -191,6 +201,7 @@ function function_cb5c5225() {
 
 // Namespace hud_message
 // Params 6, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_2bb1fc0
 // Checksum 0xb6eb90c5, Offset: 0xbf0
 // Size: 0xf6
 function function_2bb1fc0(var_c4a19800, var_da258253, iconname, glowcolor, sound, duration) {
@@ -209,6 +220,7 @@ function function_2bb1fc0(var_c4a19800, var_da258253, iconname, glowcolor, sound
 
 // Namespace hud_message
 // Params 1, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_a73c3a23
 // Checksum 0xaba1d943, Offset: 0xcf0
 // Size: 0x5e
 function notifymessage(var_b444826e) {
@@ -223,6 +235,7 @@ function notifymessage(var_b444826e) {
 
 // Namespace hud_message
 // Params 1, eflags: 0x0
+// namespace_4d476a30<file_0>::function_18e0f0de
 // Checksum 0xe940172f, Offset: 0xd58
 // Size: 0x9c
 function playnotifyloop(duration) {
@@ -238,6 +251,7 @@ function playnotifyloop(duration) {
 
 // Namespace hud_message
 // Params 2, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_3cb967ea
 // Checksum 0x859cacce, Offset: 0xe00
 // Size: 0x79c
 function function_3cb967ea(var_b444826e, duration) {
@@ -349,6 +363,7 @@ function function_3cb967ea(var_b444826e, duration) {
 
 // Namespace hud_message
 // Params 1, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_6ecb638b
 // Checksum 0xffdc977d, Offset: 0x15a8
 // Size: 0x7a
 function function_6ecb638b(waittime) {
@@ -366,6 +381,7 @@ function function_6ecb638b(waittime) {
 
 // Namespace hud_message
 // Params 0, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_a8d99e50
 // Checksum 0xc8d94473, Offset: 0x1630
 // Size: 0x26
 function function_a8d99e50() {
@@ -377,6 +393,7 @@ function function_a8d99e50() {
 
 // Namespace hud_message
 // Params 0, eflags: 0x0
+// namespace_4d476a30<file_0>::function_ba8cd7c1
 // Checksum 0x93939159, Offset: 0x1660
 // Size: 0x44
 function resetondeath() {
@@ -389,6 +406,7 @@ function resetondeath() {
 
 // Namespace hud_message
 // Params 0, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_b9356de3
 // Checksum 0xf8ebd61f, Offset: 0x16b0
 // Size: 0x54
 function function_b9356de3() {
@@ -402,6 +420,7 @@ function function_b9356de3() {
 
 // Namespace hud_message
 // Params 0, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_efac4cb1
 // Checksum 0x43825907, Offset: 0x1710
 // Size: 0x60
 function resetnotify() {
@@ -414,6 +433,7 @@ function resetnotify() {
 
 // Namespace hud_message
 // Params 0, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_cd44acc1
 // Checksum 0x8978c336, Offset: 0x1778
 // Size: 0x48
 function hintmessagedeaththink() {
@@ -428,6 +448,7 @@ function hintmessagedeaththink() {
 
 // Namespace hud_message
 // Params 0, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_5fedeaff
 // Checksum 0x2cd85eb0, Offset: 0x17c8
 // Size: 0x1c8
 function lowermessagethink() {
@@ -453,6 +474,7 @@ function lowermessagethink() {
 
 // Namespace hud_message
 // Params 1, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_d6911678
 // Checksum 0x4d0387a1, Offset: 0x1998
 // Size: 0x6c
 function function_d6911678(team) {
@@ -465,6 +487,7 @@ function function_d6911678(team) {
 
 // Namespace hud_message
 // Params 2, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_80a63c1
 // Checksum 0x4c8461c3, Offset: 0x1a10
 // Size: 0x66
 function isintop(players, topn) {
@@ -478,6 +501,7 @@ function isintop(players, topn) {
 
 // Namespace hud_message
 // Params 1, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_6d358955
 // Checksum 0x3d8c1855, Offset: 0x1a80
 // Size: 0x2c
 function function_6d358955(hudelem) {
@@ -488,6 +512,7 @@ function function_6d358955(hudelem) {
 
 // Namespace hud_message
 // Params 0, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_b5203d90
 // Checksum 0xef39d67c, Offset: 0x1ab8
 // Size: 0xcc
 function function_b5203d90() {
@@ -503,6 +528,7 @@ function function_b5203d90() {
 
 // Namespace hud_message
 // Params 0, eflags: 0x1 linked
+// namespace_4d476a30<file_0>::function_b17b90b9
 // Checksum 0xfc203b0e, Offset: 0x1b90
 // Size: 0x36
 function function_b17b90b9() {
@@ -514,6 +540,7 @@ function function_b17b90b9() {
 
 // Namespace hud_message
 // Params 0, eflags: 0x0
+// namespace_4d476a30<file_0>::function_c830b4d0
 // Checksum 0x997d5d4f, Offset: 0x1bd0
 // Size: 0xee
 function function_c830b4d0() {

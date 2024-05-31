@@ -9,6 +9,7 @@
 
 // Namespace zm_bgb_disorderly_combat
 // Params 0, eflags: 0x2
+// namespace_bcb3abbf<file_0>::function_2dc19561
 // Checksum 0x5ccd3ef1, Offset: 0x150
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_disorderly_combat
 // Params 0, eflags: 0x1 linked
+// namespace_bcb3abbf<file_0>::function_8c87d8eb
 // Checksum 0x2d896596, Offset: 0x190
 // Size: 0x3c
 function __init__() {

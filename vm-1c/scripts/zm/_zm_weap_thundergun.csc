@@ -8,6 +8,7 @@
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x2
+// namespace_e82459b9<file_0>::function_2dc19561
 // Checksum 0x21395030, Offset: 0x168
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -16,6 +17,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
+// namespace_e82459b9<file_0>::function_8c87d8eb
 // Checksum 0x76eb7421, Offset: 0x1b0
 // Size: 0x44
 function __init__() {
@@ -25,6 +27,7 @@ function __init__() {
 
 // Namespace zm_weap_thundergun
 // Params 0, eflags: 0x1 linked
+// namespace_e82459b9<file_0>::function_5b6b9132
 // Checksum 0x87ca0449, Offset: 0x200
 // Size: 0x24
 function __main__() {
@@ -33,6 +36,7 @@ function __main__() {
 
 // Namespace zm_weap_thundergun
 // Params 1, eflags: 0x1 linked
+// namespace_e82459b9<file_0>::function_cd071852
 // Checksum 0xff77320e, Offset: 0x230
 // Size: 0x24
 function localplayer_spawned(localclientnum) {
@@ -41,6 +45,7 @@ function localplayer_spawned(localclientnum) {
 
 // Namespace zm_weap_thundergun
 // Params 1, eflags: 0x1 linked
+// namespace_e82459b9<file_0>::function_c94bc3fc
 // Checksum 0xb3a14413, Offset: 0x260
 // Size: 0xa0
 function function_c94bc3fc(localclientnum) {
@@ -57,6 +62,7 @@ function function_c94bc3fc(localclientnum) {
 
 // Namespace zm_weap_thundergun
 // Params 2, eflags: 0x1 linked
+// namespace_e82459b9<file_0>::function_966c584f
 // Checksum 0x51d84b88, Offset: 0x308
 // Size: 0x158
 function function_966c584f(localclientnum, w_weapon) {
@@ -86,6 +92,7 @@ function function_966c584f(localclientnum, w_weapon) {
 
 // Namespace zm_weap_thundergun
 // Params 1, eflags: 0x1 linked
+// namespace_e82459b9<file_0>::function_443cf039
 // Checksum 0xf7f6709c, Offset: 0x468
 // Size: 0x2c
 function thundergun_fx_fire(localclientnum) {

@@ -7,6 +7,7 @@
 
 // Namespace bot
 // Params 0, eflags: 0x2
+// namespace_f8253a5c<file_0>::function_2dc19561
 // Checksum 0x1bd9faba, Offset: 0xf8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,6 +16,7 @@ function autoexec function_2dc19561() {
 
 // Namespace bot
 // Params 0, eflags: 0x1 linked
+// namespace_f8253a5c<file_0>::function_8c87d8eb
 // Checksum 0x33f6b130, Offset: 0x138
 // Size: 0x94
 function __init__() {
@@ -32,6 +34,7 @@ function __init__() {
 
     // Namespace bot
     // Params 0, eflags: 0x1 linked
+    // namespace_f8253a5c<file_0>::function_ee4b17bf
     // Checksum 0x3f4002b6, Offset: 0x1d8
     // Size: 0x68
     function on_bot_connect() {

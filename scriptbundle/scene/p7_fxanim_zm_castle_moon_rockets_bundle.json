@@ -1,0 +1,275 @@
+{
+    "scenetype": "fxanim",
+    "vmtype": "server",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "p7_fxanim_zm_castle_moon_rockets_bundle",
+    "type": "scene",
+    "igdtseqnum": 110,
+    "objects": [
+        {
+            "model": "p7_fxanim_zm_castle_rocket_01_mod",
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "mainanim": "p7_fxanim_zm_castle_moon_rocket_01_anim",
+            "maindelaymax": 2,
+            "maindelaymin": 0.5,
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "name": "moon_rocket_01",
+            "type": "prop"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "p7_fxanim_zm_castle_rocket_01_mod",
+            "firstframe": 1,
+            "mainanim": "p7_fxanim_zm_castle_moon_rocket_02_anim",
+            "maindelaymax": 2,
+            "maindelaymin": 0.5,
+            "playerstance": "stand",
+            "name": "moon_rocket_02",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "maindelaymax": 2,
+            "maindelaymin": 0.5,
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "mainanim": "p7_fxanim_zm_castle_moon_rocket_03_anim",
+            "firstframe": 1,
+            "model": "p7_fxanim_zm_castle_rocket_01_mod",
+            "name": "moon_rocket_03",
+            "type": "prop"
+        },
+        {
+            "name": "moon_rocket_04",
+            "type": "prop",
+            "vmtype": "server",
+            "model": "p7_fxanim_zm_castle_rocket_01_mod",
+            "maindelaymax": 2,
+            "maindelaymin": 0.2,
+            "playerstance": "stand",
+            "mainanim": "p7_fxanim_zm_castle_moon_rocket_04_anim",
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "name": "moon_rocket_06",
+            "type": "prop",
+            "firstframe": 1,
+            "model": "p7_fxanim_zm_castle_rocket_01_mod",
+            "mainanim": "p7_fxanim_zm_castle_moon_rocket_06_anim",
+            "maindelaymax": 1,
+            "maindelaymin": 0.2,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "moon_rocket_07",
+            "type": "prop",
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "mainanim": "p7_fxanim_zm_castle_moon_rocket_07_anim",
+            "model": "p7_fxanim_zm_castle_rocket_01_mod",
+            "maindelaymax": 1,
+            "maindelaymin": 0.2,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "moon_rocket_08",
+            "type": "prop",
+            "maindelaymax": 2,
+            "maindelaymin": 0.2,
+            "playerstance": "stand",
+            "firstframe": 1,
+            "mainanim": "p7_fxanim_zm_castle_moon_rocket_08_anim",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "p7_fxanim_zm_castle_rocket_01_mod"
+        },
+        {
+            "name": "moon_rocket_09",
+            "type": "prop",
+            "model": "p7_fxanim_zm_castle_rocket_01_mod",
+            "maindelaymax": 2,
+            "maindelaymin": 0.2,
+            "playerstance": "stand",
+            "mainanim": "p7_fxanim_zm_castle_moon_rocket_09_anim",
+            "firstframe": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "moon_rocket_10",
+            "type": "prop",
+            "spawnoninit": 1,
+            "maindelaymax": 1,
+            "maindelaymin": 0.2,
+            "model": "p7_fxanim_zm_castle_rocket_01_mod",
+            "player": 1,
+            "playerstance": "stand",
+            "mainanim": "p7_fxanim_zm_castle_moon_rocket_10_anim",
+            "vmtype": "server",
+            "firstframe": 1
+        },
+        {
+            "spawnoninit": 1,
+            "name": "moon_rocket_11",
+            "type": "prop",
+            "maindelaymax": 1,
+            "maindelaymin": 0.2,
+            "firstframe": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "model": "p7_fxanim_zm_castle_rocket_01_mod",
+            "vmtype": "server",
+            "mainanim": "p7_fxanim_zm_castle_moon_rocket_11_anim"
+        },
+        {
+            "playerstance": "stand",
+            "model": "p7_fxanim_zm_castle_rocket_01_mod",
+            "spawnoninit": 1,
+            "name": "moon_rocket_12",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "p7_fxanim_zm_castle_moon_rocket_12_anim",
+            "firstframe": 1,
+            "maindelaymax": 1,
+            "maindelaymin": 0.2
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

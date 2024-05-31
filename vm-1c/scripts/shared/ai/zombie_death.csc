@@ -5,6 +5,7 @@
 
 // Namespace zombie_death
 // Params 0, eflags: 0x2
+// namespace_fb6a064<file_0>::function_321d4727
 // Checksum 0x70598e7a, Offset: 0x180
 // Size: 0x5a
 function autoexec init_fire_fx() {
@@ -18,6 +19,7 @@ function autoexec init_fire_fx() {
 
 // Namespace zombie_death
 // Params 1, eflags: 0x1 linked
+// namespace_fb6a064<file_0>::function_199a7ca5
 // Checksum 0xeb2011aa, Offset: 0x1e8
 // Size: 0x5e
 function on_fire_timeout(localclientnum) {
@@ -32,6 +34,7 @@ function on_fire_timeout(localclientnum) {
 
 // Namespace zombie_death
 // Params 1, eflags: 0x1 linked
+// namespace_fb6a064<file_0>::function_b7251c46
 // Checksum 0xdadb1011, Offset: 0x250
 // Size: 0x334
 function flame_death_fx(localclientnum) {
@@ -81,6 +84,7 @@ function flame_death_fx(localclientnum) {
 
 // Namespace zombie_death
 // Params 1, eflags: 0x1 linked
+// namespace_fb6a064<file_0>::function_98483e3c
 // Checksum 0x9fdf39c8, Offset: 0x590
 // Size: 0x9c
 function randomize_array(array) {

@@ -6,6 +6,7 @@
 
 // Namespace mp_devgui
 // Params 0, eflags: 0x2
+// namespace_b5b1573<file_0>::function_2dc19561
 // Checksum 0x9457f723, Offset: 0xd8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -14,6 +15,7 @@ function autoexec function_2dc19561() {
 
 // Namespace mp_devgui
 // Params 0, eflags: 0x1 linked
+// namespace_b5b1573<file_0>::function_8c87d8eb
 // Checksum 0x99ec1590, Offset: 0x118
 // Size: 0x4
 function __init__() {
@@ -24,6 +26,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_aead456c
     // Checksum 0xdbba9d9c, Offset: 0x128
     // Size: 0x4e
     function remove_mp_contracts_devgui(localclientnum) {
@@ -37,6 +40,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_fe8ee050
     // Checksum 0x2e67b32e, Offset: 0x180
     // Size: 0x110
     function create_mp_contracts_devgui(localclientnum) {
@@ -62,6 +66,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_9adcbac
     // Checksum 0xa22a1402, Offset: 0x298
     // Size: 0x476
     function add_blackjack_contract(localclientnum) {
@@ -113,6 +118,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 3, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_84aa3e45
     // Checksum 0x9654f7fe, Offset: 0x718
     // Size: 0xac
     function add_blackjack_contract_set_count(localclientnum, root, contract_count) {
@@ -123,6 +129,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 2, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_60cc8612
     // Checksum 0x3cf3f061, Offset: 0x7d0
     // Size: 0x74c
     function add_contract_slot(localclientnum, slot) {
@@ -235,6 +242,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_e42105ad
     // Checksum 0x8074706, Offset: 0xf28
     // Size: 0x2c4
     function add_devgui_scheduler(localclientnum) {
@@ -263,6 +271,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 3, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_576a3a27
     // Checksum 0xe607ca0a, Offset: 0x11f8
     // Size: 0x74
     function add_watched_devgui_cmd(localclientnum, root, cmds) {
@@ -274,6 +283,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 4, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_53539dc2
     // Checksum 0xd2411b73, Offset: 0x1278
     // Size: 0xbc
     function add_contract_scheduler_daily_duration(localclientnum, root, label, daily_duration) {
@@ -287,6 +297,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_6a91370b
     // Checksum 0xc954fa29, Offset: 0x1340
     // Size: 0x5e
     function wrap_dvarconfig_cmds(cmds) {
@@ -299,6 +310,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 3, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_1d69c51e
     // Checksum 0xb16161d2, Offset: 0x13a8
     // Size: 0x64
     function add_devgui_cmd(localclientnum, menu_path, cmds) {
@@ -309,6 +321,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_38d442f4
     // Checksum 0x3827e69a, Offset: 0x1418
     // Size: 0xe4
     function calculate_schedule_start_time(ref_time) {
@@ -324,6 +337,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_80f2f027
     // Checksum 0x592be4f0, Offset: 0x1508
     // Size: 0x298
     function watch_devgui() {
@@ -366,6 +380,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_782f9896
     // Checksum 0x69a3bf23, Offset: 0x17a8
     // Size: 0x9c
     function update_contract_start_time(delta_days) {
@@ -377,6 +392,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_17c6e025
     // Checksum 0xe52aa471, Offset: 0x1850
     // Size: 0x30
     function dvar_has_value(dvar_name) {
@@ -385,6 +401,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_d31b4880
     // Checksum 0x876f9abf, Offset: 0x1888
     // Size: 0x2c
     function clear_dvar(dvar_name) {
@@ -393,6 +410,7 @@ function __init__() {
 
     // Namespace mp_devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_b5b1573<file_0>::function_79a90c78
     // Checksum 0x305ab4bf, Offset: 0x18c0
     // Size: 0x2c
     function get_schedule_start_time() {

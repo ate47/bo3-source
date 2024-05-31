@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_cai_inf_06",
+    "type": "collectible",
+    "igdtseqnum": 20,
+    "uiMaterial": "t7_icon_menu_p7_nc_cai_inf_06",
+    "uiModel": "p7_nc_cai_inf_06",
+    "description": "COLLECTIBLE_P7_NC_CAI_INF_06_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_CAI_INF_06_LONG",
+    "audiolog_sound": "vox_safe_gramophone_record_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_GRAMOPHONE_RECORD",
+    "displayNameShort": "COLLECTIBLE_P7_NC_CAI_INF_06_SHORT",
+    "codexurl": "Collectables-WagnerGramophoneRecord.htm",
+    "slotSize": 1
+}

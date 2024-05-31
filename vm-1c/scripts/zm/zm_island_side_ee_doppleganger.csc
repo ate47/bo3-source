@@ -9,6 +9,7 @@
 
 // Namespace namespace_28a54cd6
 // Params 0, eflags: 0x1 linked
+// namespace_28a54cd6<file_0>::function_c35e6aab
 // Checksum 0x99ec1590, Offset: 0x148
 // Size: 0x4
 function init() {

@@ -1,0 +1,11 @@
+{
+    "vmtype": "none",
+    "name": "cpac_bla_01",
+    "igdtseqnum": 46,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Score",
+    "challengeDetails": "ACCOLADES_BLA_1",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_BLA_1_NAME",
+    "challengeReference": "MISSION_BLACKSTATION_SCORE"
+}

@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_ven_15",
+    "igdtseqnum": 180,
+    "challengeWidget": "Cybernetics",
+    "challengeDetails": "ACCOLADES_VEN_15",
+    "challengeName": "ACCOLADES_VEN_15_NAME",
+    "centerText": "5",
+    "challengeReference": "MISSION_VENGEANCE_CHALLENGE15"
+}

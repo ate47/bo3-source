@@ -15,6 +15,7 @@
 
 // Namespace trophy_system
 // Params 0, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_1463e4e5
 // Checksum 0x534f85df, Offset: 0x3f0
 // Size: 0x9c
 function init_shared() {
@@ -29,6 +30,7 @@ function init_shared() {
 
 // Namespace trophy_system
 // Params 0, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_50f16166
 // Checksum 0xc0db9c85, Offset: 0x498
 // Size: 0x64
 function register() {
@@ -38,6 +40,7 @@ function register() {
 
 // Namespace trophy_system
 // Params 0, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_88690538
 // Checksum 0x28c00d1d, Offset: 0x508
 // Size: 0x19c
 function createtrophysystemwatcher() {
@@ -64,6 +67,7 @@ function createtrophysystemwatcher() {
 
 // Namespace trophy_system
 // Params 2, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_922071d0
 // Checksum 0x7607893b, Offset: 0x6b0
 // Size: 0x27c
 function ontrophysystemspawn(watcher, player) {
@@ -95,6 +99,7 @@ function ontrophysystemspawn(watcher, player) {
 
 // Namespace trophy_system
 // Params 0, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_28169c31
 // Checksum 0xb05c3f98, Offset: 0x938
 // Size: 0x34
 function setreconmodeldeployed() {
@@ -105,6 +110,7 @@ function setreconmodeldeployed() {
 
 // Namespace trophy_system
 // Params 0, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_22000077
 // Checksum 0x17509010, Offset: 0x978
 // Size: 0x44
 function trophywatchhack() {
@@ -115,6 +121,7 @@ function trophywatchhack() {
 
 // Namespace trophy_system
 // Params 1, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_4541c4fa
 // Checksum 0xfcbd519b, Offset: 0x9c8
 // Size: 0xfc
 function ontrophysystemsmashed(attacker) {
@@ -132,6 +139,7 @@ function ontrophysystemsmashed(attacker) {
 
 // Namespace trophy_system
 // Params 1, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_30912131
 // Checksum 0xe6ccf268, Offset: 0xad0
 // Size: 0x37a
 function trophyactive(owner) {
@@ -203,6 +211,7 @@ function trophyactive(owner) {
 
 // Namespace trophy_system
 // Params 2, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_463884db
 // Checksum 0xcb25feb4, Offset: 0xe58
 // Size: 0x14c
 function projectileexplode(projectile, trophy) {
@@ -222,6 +231,7 @@ function projectileexplode(projectile, trophy) {
 
 // Namespace trophy_system
 // Params 2, eflags: 0x0
+// namespace_f0a72d31<file_0>::function_9beaa3ee
 // Checksum 0x63381435, Offset: 0xfb0
 // Size: 0x12c
 function trophydestroytacinsert(tacinsert, trophy) {
@@ -239,6 +249,7 @@ function trophydestroytacinsert(tacinsert, trophy) {
 
 // Namespace trophy_system
 // Params 3, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_a55f8710
 // Checksum 0x507a48cf, Offset: 0x10e8
 // Size: 0x104
 function trophysystemdetonate(attacker, weapon, target) {
@@ -255,6 +266,7 @@ function trophysystemdetonate(attacker, weapon, target) {
 
 // Namespace trophy_system
 // Params 1, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_711a4b64
 // Checksum 0xef86e522, Offset: 0x11f8
 // Size: 0x372
 function watchtrophysystemdamage(watcher) {
@@ -308,6 +320,7 @@ function watchtrophysystemdamage(watcher) {
 
 // Namespace trophy_system
 // Params 1, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_d219bc86
 // Checksum 0x4bfd03ad, Offset: 0x1578
 // Size: 0x24
 function ammo_scavenger(weapon) {
@@ -316,6 +329,7 @@ function ammo_scavenger(weapon) {
 
 // Namespace trophy_system
 // Params 0, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_6b5ae23
 // Checksum 0x8690777a, Offset: 0x15a8
 // Size: 0x16
 function ammo_reset() {
@@ -325,6 +339,7 @@ function ammo_reset() {
 
 // Namespace trophy_system
 // Params 1, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_5ba37d5e
 // Checksum 0x8cc2a621, Offset: 0x15c8
 // Size: 0x92
 function ammo_get(weapon) {
@@ -342,6 +357,7 @@ function ammo_get(weapon) {
 
 // Namespace trophy_system
 // Params 1, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_11facdb1
 // Checksum 0x93aa7869, Offset: 0x1668
 // Size: 0x50
 function ammo_weapon_pickup(ammo) {
@@ -357,6 +373,7 @@ function ammo_weapon_pickup(ammo) {
 
 // Namespace trophy_system
 // Params 1, eflags: 0x1 linked
+// namespace_f0a72d31<file_0>::function_2c68ed45
 // Checksum 0x3fa6de87, Offset: 0x16c0
 // Size: 0x24
 function ammo_weapon_hacked(ammo) {

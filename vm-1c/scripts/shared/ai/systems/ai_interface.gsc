@@ -4,6 +4,7 @@
 
     // Namespace ai_interface
     // Params 0, eflags: 0x2
+    // namespace_1bbb25ab<file_0>::function_d290ebfa
     // Checksum 0x493a47d0, Offset: 0xe8
     // Size: 0x2c
     function autoexec main() {
@@ -12,6 +13,7 @@
 
     // Namespace ai_interface
     // Params 3, eflags: 0x5 linked
+    // namespace_1bbb25ab<file_0>::function_33460edb
     // Checksum 0x85fdf085, Offset: 0x120
     // Size: 0x2d6
     function private _checkvalue(archetype, attributename, value) {
@@ -40,6 +42,7 @@
 
     // Namespace ai_interface
     // Params 2, eflags: 0x5 linked
+    // namespace_1bbb25ab<file_0>::function_5cb3d795
     // Checksum 0x7b801fce, Offset: 0x400
     // Size: 0x2b4
     function private _checkprerequisites(entity, attribute) {
@@ -57,6 +60,7 @@
 
     // Namespace ai_interface
     // Params 3, eflags: 0x5 linked
+    // namespace_1bbb25ab<file_0>::function_25cb7dbc
     // Checksum 0x758169d8, Offset: 0x6c0
     // Size: 0xcc
     function private _checkregistrationprerequisites(archetype, attribute, callbackfunction) {
@@ -69,6 +73,7 @@
 
 // Namespace ai_interface
 // Params 1, eflags: 0x5 linked
+// namespace_1bbb25ab<file_0>::function_81190b75
 // Checksum 0xc53888b5, Offset: 0x798
 // Size: 0x46
 function private _initializelevelinterface(archetype) {
@@ -84,6 +89,7 @@ function private _initializelevelinterface(archetype) {
 
 // Namespace ai
 // Params 1, eflags: 0x1 linked
+// namespace_d84e54db<file_0>::function_85668ce6
 // Checksum 0x16e05325, Offset: 0x7e8
 // Size: 0x30
 function createinterfaceforentity(entity) {
@@ -94,6 +100,7 @@ function createinterfaceforentity(entity) {
 
 // Namespace ai
 // Params 2, eflags: 0x1 linked
+// namespace_d84e54db<file_0>::function_21aa6f0b
 // Checksum 0xf3e78b73, Offset: 0x820
 // Size: 0x88
 function getaiattribute(entity, attribute) {
@@ -108,6 +115,7 @@ function getaiattribute(entity, attribute) {
 
 // Namespace ai
 // Params 2, eflags: 0x1 linked
+// namespace_d84e54db<file_0>::function_fc7c4077
 // Checksum 0x1fec0c42, Offset: 0x8b0
 // Size: 0x84
 function hasaiattribute(entity, attribute) {
@@ -116,6 +124,7 @@ function hasaiattribute(entity, attribute) {
 
 // Namespace ai
 // Params 5, eflags: 0x1 linked
+// namespace_d84e54db<file_0>::function_113088fb
 // Checksum 0x28515adb, Offset: 0x940
 // Size: 0x1cc
 function registermatchedinterface(archetype, attribute, defaultvalue, possiblevalues, callbackfunction) {
@@ -137,6 +146,7 @@ function registermatchedinterface(archetype, attribute, defaultvalue, possibleva
 
 // Namespace ai
 // Params 6, eflags: 0x1 linked
+// namespace_d84e54db<file_0>::function_1046d618
 // Checksum 0x29ba9605, Offset: 0xb18
 // Size: 0x304
 function registernumericinterface(archetype, attribute, defaultvalue, minimum, maximum, callbackfunction) {
@@ -162,6 +172,7 @@ function registernumericinterface(archetype, attribute, defaultvalue, minimum, m
 
 // Namespace ai
 // Params 4, eflags: 0x1 linked
+// namespace_d84e54db<file_0>::function_5ef4f02c
 // Checksum 0xe702d1d2, Offset: 0xe28
 // Size: 0x15c
 function registervectorinterface(archetype, attribute, defaultvalue, callbackfunction) {
@@ -181,6 +192,7 @@ function registervectorinterface(archetype, attribute, defaultvalue, callbackfun
 
 // Namespace ai
 // Params 3, eflags: 0x1 linked
+// namespace_d84e54db<file_0>::function_3051c25f
 // Checksum 0x4b1eb09, Offset: 0xf90
 // Size: 0x13a
 function setaiattribute(entity, attribute, value) {

@@ -5,6 +5,7 @@
 
 // Namespace cheat
 // Params 0, eflags: 0x2
+// namespace_160f792<file_0>::function_2dc19561
 // Checksum 0x8598ba5d, Offset: 0xe0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -13,6 +14,7 @@ function autoexec function_2dc19561() {
 
 // Namespace cheat
 // Params 0, eflags: 0x0
+// namespace_160f792<file_0>::function_8c87d8eb
 // Checksum 0x6b54a10, Offset: 0x120
 // Size: 0x5c
 function __init__() {
@@ -25,6 +27,7 @@ function __init__() {
 
 // Namespace cheat
 // Params 0, eflags: 0x0
+// namespace_160f792<file_0>::function_536049a7
 // Checksum 0x31f2394, Offset: 0x188
 // Size: 0x1c
 function player_init() {
@@ -33,6 +36,7 @@ function player_init() {
 
 // Namespace cheat
 // Params 0, eflags: 0x0
+// namespace_160f792<file_0>::function_ba9821ce
 // Checksum 0xf13d2a17, Offset: 0x1b0
 // Size: 0x14
 function death_monitor() {
@@ -41,6 +45,7 @@ function death_monitor() {
 
 // Namespace cheat
 // Params 0, eflags: 0x0
+// namespace_160f792<file_0>::function_24023f66
 // Checksum 0xe3961ac8, Offset: 0x1d0
 // Size: 0x66
 function function_24023f66() {
@@ -53,6 +58,7 @@ function function_24023f66() {
 
 // Namespace cheat
 // Params 2, eflags: 0x0
+// namespace_160f792<file_0>::function_abb44133
 // Checksum 0x62f7c4ca, Offset: 0x240
 // Size: 0x9a
 function function_abb44133(var_fc14059a, var_d8e978b0) {
@@ -68,6 +74,7 @@ function function_abb44133(var_fc14059a, var_d8e978b0) {
 
 // Namespace cheat
 // Params 1, eflags: 0x0
+// namespace_160f792<file_0>::function_2276c67c
 // Checksum 0x77ffe534, Offset: 0x2e8
 // Size: 0x96
 function function_2276c67c(var_fc14059a) {
@@ -84,6 +91,7 @@ function function_2276c67c(var_fc14059a) {
 
 // Namespace cheat
 // Params 0, eflags: 0x0
+// namespace_160f792<file_0>::function_c73833ba
 // Checksum 0xe0e3652b, Offset: 0x388
 // Size: 0xac
 function function_c73833ba() {
@@ -100,6 +108,7 @@ function function_c73833ba() {
 
 // Namespace cheat
 // Params 1, eflags: 0x0
+// namespace_160f792<file_0>::function_450d7601
 // Checksum 0x558a341e, Offset: 0x440
 // Size: 0x54
 function function_450d7601(var_38c46b05) {
@@ -112,6 +121,7 @@ function function_450d7601(var_38c46b05) {
 
 // Namespace cheat
 // Params 0, eflags: 0x0
+// namespace_160f792<file_0>::function_6fa66fdf
 // Checksum 0x52bcee02, Offset: 0x4a0
 // Size: 0x22
 function is_cheating() {

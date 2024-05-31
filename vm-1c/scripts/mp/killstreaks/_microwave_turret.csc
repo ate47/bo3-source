@@ -9,6 +9,7 @@
 
 // Namespace microwave_turret
 // Params 0, eflags: 0x2
+// namespace_b825a589<file_0>::function_2dc19561
 // Checksum 0xd7d2c368, Offset: 0x330
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace microwave_turret
 // Params 0, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_8c87d8eb
 // Checksum 0xcf9f7773, Offset: 0x370
 // Size: 0xdc
 function __init__() {
@@ -27,6 +29,7 @@ function __init__() {
 
 // Namespace microwave_turret
 // Params 7, eflags: 0x0
+// namespace_b825a589<file_0>::function_7d53d57c
 // Checksum 0xb1edb07f, Offset: 0x458
 // Size: 0x82
 function function_7d53d57c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -41,6 +44,7 @@ function function_7d53d57c(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace microwave_turret
 // Params 1, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_cdbf3444
 // Checksum 0xa607f580, Offset: 0x4e8
 // Size: 0x1dc
 function turret_microwave_sound_start(localclientnum) {
@@ -70,6 +74,7 @@ function turret_microwave_sound_start(localclientnum) {
 
 // Namespace microwave_turret
 // Params 1, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_494be470
 // Checksum 0x81bb1a26, Offset: 0x6d0
 // Size: 0xb0
 function turret_microwave_sound_off_waiter(localclientnum) {
@@ -85,6 +90,7 @@ function turret_microwave_sound_off_waiter(localclientnum) {
 
 // Namespace microwave_turret
 // Params 0, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_3d16c1db
 // Checksum 0x6e79f062, Offset: 0x788
 // Size: 0x1b0
 function turret_microwave_sound_updater() {
@@ -109,6 +115,7 @@ function turret_microwave_sound_updater() {
 
 // Namespace microwave_turret
 // Params 7, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_8ea39b5f
 // Checksum 0x9b853a42, Offset: 0x940
 // Size: 0xc4
 function microwave_init_anim(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -122,6 +129,7 @@ function microwave_init_anim(localclientnum, oldval, newval, bnewent, binitialsn
 
 // Namespace microwave_turret
 // Params 7, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_b8d1b57
 // Checksum 0xd2ba839f, Offset: 0xa10
 // Size: 0x174
 function microwave_open(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -141,6 +149,7 @@ function microwave_open(localclientnum, oldval, newval, bnewent, binitialsnap, f
 
 // Namespace microwave_turret
 // Params 7, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_8ef31b4f
 // Checksum 0xbb798c7f, Offset: 0xb90
 // Size: 0x9c
 function microwave_close_anim(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -155,6 +164,7 @@ function microwave_close_anim(localclientnum, oldval, newval, bnewent, binitials
 
     // Namespace microwave_turret
     // Params 2, eflags: 0x1 linked
+    // namespace_b825a589<file_0>::function_1226a8b8
     // Checksum 0xf6e859b, Offset: 0xc38
     // Size: 0xe4
     function debug_trace(origin, trace) {
@@ -171,6 +181,7 @@ function microwave_close_anim(localclientnum, oldval, newval, bnewent, binitials
 
 // Namespace microwave_turret
 // Params 1, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_27963f7c
 // Checksum 0xf33c3a60, Offset: 0xd28
 // Size: 0x558
 function startmicrowavefx(localclientnum) {
@@ -241,6 +252,7 @@ function startmicrowavefx(localclientnum) {
 
 // Namespace microwave_turret
 // Params 1, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_1f2cccc8
 // Checksum 0x68430413, Offset: 0x1288
 // Size: 0xc8
 function updatemicrowaveaim(microwavefxent) {
@@ -260,6 +272,7 @@ function updatemicrowaveaim(microwavefxent) {
 
 // Namespace microwave_turret
 // Params 3, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_f48ef46a
 // Checksum 0x57537d11, Offset: 0x1358
 // Size: 0x1b4
 function microwavefxhash(trace, origin, name) {
@@ -288,6 +301,7 @@ function microwavefxhash(trace, origin, name) {
 
 // Namespace microwave_turret
 // Params 2, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_8e89441d
 // Checksum 0xf5553194, Offset: 0x1518
 // Size: 0xf4
 function cleanupfx(localclientnum, microwavefxent) {
@@ -302,6 +316,7 @@ function cleanupfx(localclientnum, microwavefxent) {
 
 // Namespace microwave_turret
 // Params 3, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_92f40071
 // Checksum 0x7047121f, Offset: 0x1618
 // Size: 0xa2
 function play_fx_on_tag(localclientnum, fxname, tag) {
@@ -314,6 +329,7 @@ function play_fx_on_tag(localclientnum, fxname, tag) {
 
 // Namespace microwave_turret
 // Params 3, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_48c9eafb
 // Checksum 0xd1259275, Offset: 0x16c8
 // Size: 0x6c
 function stop_fx_on_tag(localclientnum, fxname, tag) {
@@ -328,6 +344,7 @@ function stop_fx_on_tag(localclientnum, fxname, tag) {
 
     // Namespace microwave_turret
     // Params 3, eflags: 0x1 linked
+    // namespace_b825a589<file_0>::function_bc4ca4fb
     // Checksum 0x1ba56, Offset: 0x1740
     // Size: 0x94
     function render_debug_sphere(tag, color, fxname) {
@@ -341,6 +358,7 @@ function stop_fx_on_tag(localclientnum, fxname, tag) {
 
 // Namespace microwave_turret
 // Params 4, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_624af0cf
 // Checksum 0x530b1b3d, Offset: 0x17e0
 // Size: 0xec
 function stop_or_start_fx(localclientnum, fxname, tag, start) {
@@ -363,6 +381,7 @@ function stop_or_start_fx(localclientnum, fxname, tag, start) {
 
 // Namespace microwave_turret
 // Params 5, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_7c219d34
 // Checksum 0x8f3bde0d, Offset: 0x18d8
 // Size: 0x568
 function playmicrowavefx(localclientnum, trace, traceright, traceleft, origin) {

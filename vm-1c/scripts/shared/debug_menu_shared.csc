@@ -6,6 +6,7 @@
 
 // Namespace debug_menu
 // Params 2, eflags: 0x0
+// namespace_4ed4457c<file_0>::function_c4c41a9
 // Checksum 0xda27fa8c, Offset: 0x138
 // Size: 0xc4
 function open(localclientnum, a_menu_items) {
@@ -19,6 +20,7 @@ function open(localclientnum, a_menu_items) {
 
 // Namespace debug_menu
 // Params 1, eflags: 0x0
+// namespace_4ed4457c<file_0>::function_b5a4f84f
 // Checksum 0x1625bacb, Offset: 0x208
 // Size: 0x5e
 function close(localclientnum) {
@@ -31,6 +33,7 @@ function close(localclientnum) {
 
 // Namespace debug_menu
 // Params 3, eflags: 0x0
+// namespace_4ed4457c<file_0>::function_8a62ddef
 // Checksum 0xccac289, Offset: 0x270
 // Size: 0xb4
 function set_item_text(localclientnum, index, name) {
@@ -42,6 +45,7 @@ function set_item_text(localclientnum, index, name) {
 
 // Namespace debug_menu
 // Params 3, eflags: 0x0
+// namespace_4ed4457c<file_0>::function_8e63462b
 // Checksum 0x7e599460, Offset: 0x330
 // Size: 0x11c
 function set_item_color(localclientnum, index, color) {

@@ -1,0 +1,9 @@
+{
+    "vmtype": "none",
+    "name": "cpac_pro_10",
+    "igdtseqnum": 113,
+    "challengeWidget": "AirVehicleDestroy",
+    "challengeDetails": "ACCOLADES_PRO_10",
+    "challengeName": "ACCOLADES_PRO_10_NAME",
+    "challengeReference": "MISSION_PROLOGUE_CHALLENGE10"
+}

@@ -8,6 +8,7 @@
 
 // Namespace namespace_66d26454
 // Params 0, eflags: 0x1 linked
+// namespace_66d26454<file_0>::function_d290ebfa
 // Checksum 0x6aeb2afb, Offset: 0x130
 // Size: 0x4c
 function main() {
@@ -16,6 +17,7 @@ function main() {
 
 // Namespace namespace_66d26454
 // Params 7, eflags: 0x1 linked
+// namespace_66d26454<file_0>::function_b6f5f7f5
 // Checksum 0x57188c94, Offset: 0x188
 // Size: 0x13a
 function function_b6f5f7f5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {

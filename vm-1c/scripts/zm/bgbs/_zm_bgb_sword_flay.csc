@@ -9,6 +9,7 @@
 
 // Namespace zm_bgb_sword_flay
 // Params 0, eflags: 0x2
+// namespace_6caa802f<file_0>::function_2dc19561
 // Checksum 0x1a39333e, Offset: 0x140
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_sword_flay
 // Params 0, eflags: 0x1 linked
+// namespace_6caa802f<file_0>::function_8c87d8eb
 // Checksum 0xb78f0bb, Offset: 0x180
 // Size: 0x3c
 function __init__() {

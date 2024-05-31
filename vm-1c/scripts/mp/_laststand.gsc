@@ -19,6 +19,7 @@
 
 // Namespace laststand
 // Params 0, eflags: 0x2
+// namespace_564407fb<file_0>::function_2dc19561
 // Checksum 0x18dc050f, Offset: 0x340
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -27,6 +28,7 @@ function autoexec function_2dc19561() {
 
 // Namespace laststand
 // Params 0, eflags: 0x1 linked
+// namespace_564407fb<file_0>::function_8c87d8eb
 // Checksum 0x3a638fa7, Offset: 0x380
 // Size: 0x1a
 function __init__() {
@@ -37,6 +39,7 @@ function __init__() {
 
 // Namespace laststand
 // Params 9, eflags: 0x1 linked
+// namespace_564407fb<file_0>::function_bf9245e0
 // Checksum 0x39e574e1, Offset: 0x3a8
 // Size: 0x12c
 function player_last_stand_stats(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -56,6 +59,7 @@ function player_last_stand_stats(einflictor, attacker, idamage, smeansofdeath, w
 
 // Namespace laststand
 // Params 9, eflags: 0x1 linked
+// namespace_564407fb<file_0>::function_1bbd62
 // Checksum 0xd2e67588, Offset: 0x4e0
 // Size: 0x39c
 function playerlaststand(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, delayoverride) {
@@ -101,6 +105,7 @@ function playerlaststand(einflictor, attacker, idamage, smeansofdeath, weapon, v
 
 // Namespace laststand
 // Params 0, eflags: 0x1 linked
+// namespace_564407fb<file_0>::function_1ca09cb
 // Checksum 0xa574874b, Offset: 0x888
 // Size: 0x98
 function function_1ca09cb() {
@@ -120,6 +125,7 @@ function function_1ca09cb() {
 
 // Namespace laststand
 // Params 0, eflags: 0x1 linked
+// namespace_564407fb<file_0>::function_30312660
 // Checksum 0x972b67c, Offset: 0x928
 // Size: 0xc4
 function laststand_disable_player_weapons() {
@@ -136,6 +142,7 @@ function laststand_disable_player_weapons() {
 
 // Namespace laststand
 // Params 1, eflags: 0x1 linked
+// namespace_564407fb<file_0>::function_b308f533
 // Checksum 0xd6da5a9b, Offset: 0x9f8
 // Size: 0x10c
 function laststand_enable_player_weapons(var_24621d3b) {
@@ -158,6 +165,7 @@ function laststand_enable_player_weapons(var_24621d3b) {
 
 // Namespace laststand
 // Params 2, eflags: 0x0
+// namespace_564407fb<file_0>::function_9e43f7f9
 // Checksum 0x3df4a57f, Offset: 0xb10
 // Size: 0xec
 function laststand_clean_up_on_interrupt(playerbeingrevived, var_3012e872) {
@@ -178,6 +186,7 @@ function laststand_clean_up_on_interrupt(playerbeingrevived, var_3012e872) {
 
 // Namespace laststand
 // Params 1, eflags: 0x0
+// namespace_564407fb<file_0>::function_eef372cb
 // Checksum 0xd5d2893c, Offset: 0xc08
 // Size: 0x68
 function laststand_clean_up_reviving_any(playerbeingrevived) {
@@ -191,6 +200,7 @@ function laststand_clean_up_reviving_any(playerbeingrevived) {
 
 // Namespace laststand
 // Params 0, eflags: 0x1 linked
+// namespace_564407fb<file_0>::function_8b8edd3e
 // Checksum 0x844f6248, Offset: 0xc78
 // Size: 0xac
 function bleed_out() {
@@ -208,6 +218,7 @@ function bleed_out() {
 
 // Namespace laststand
 // Params 0, eflags: 0x1 linked
+// namespace_564407fb<file_0>::function_d9e34d07
 // Checksum 0x236c6a4b, Offset: 0xd30
 // Size: 0x34
 function function_d9e34d07() {
@@ -217,6 +228,7 @@ function function_d9e34d07() {
 
 // Namespace laststand
 // Params 0, eflags: 0x1 linked
+// namespace_564407fb<file_0>::function_16999f69
 // Checksum 0xed4fe6f, Offset: 0xd70
 // Size: 0xb6
 function function_16999f69() {
@@ -235,6 +247,7 @@ function function_16999f69() {
 
 // Namespace laststand
 // Params 0, eflags: 0x1 linked
+// namespace_564407fb<file_0>::function_e2823d0a
 // Checksum 0x18b5e0de, Offset: 0xe30
 // Size: 0x54
 function function_e2823d0a() {

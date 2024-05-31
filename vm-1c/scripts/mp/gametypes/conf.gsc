@@ -17,6 +17,7 @@
 
 // Namespace conf
 // Params 0, eflags: 0x0
+// namespace_92a20183<file_0>::function_d290ebfa
 // Checksum 0xc4b9e3eb, Offset: 0x3c8
 // Size: 0x2fc
 function main() {
@@ -52,6 +53,7 @@ function main() {
 
 // Namespace conf
 // Params 0, eflags: 0x0
+// namespace_92a20183<file_0>::function_90f0668f
 // Checksum 0x99ec1590, Offset: 0x6d0
 // Size: 0x4
 function onprecachegametype() {
@@ -60,6 +62,7 @@ function onprecachegametype() {
 
 // Namespace conf
 // Params 0, eflags: 0x0
+// namespace_92a20183<file_0>::function_34685338
 // Checksum 0xac37d318, Offset: 0x6e0
 // Size: 0x38c
 function onstartgametype() {
@@ -106,6 +109,7 @@ function onstartgametype() {
 
 // Namespace conf
 // Params 9, eflags: 0x0
+// namespace_92a20183<file_0>::function_c2658b46
 // Checksum 0x2f335dc2, Offset: 0xa78
 // Size: 0x114
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -120,6 +124,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace conf
 // Params 1, eflags: 0x0
+// namespace_92a20183<file_0>::function_3c8ea097
 // Checksum 0x54979fb2, Offset: 0xb98
 // Size: 0x248
 function onuse(player) {
@@ -158,6 +163,7 @@ function onuse(player) {
 
 // Namespace conf
 // Params 1, eflags: 0x0
+// namespace_92a20183<file_0>::function_19bc9234
 // Checksum 0x15c51e97, Offset: 0xde8
 // Size: 0x7c
 function onspawnplayer(predictedspawn) {
@@ -173,6 +179,7 @@ function onspawnplayer(predictedspawn) {
 
 // Namespace conf
 // Params 0, eflags: 0x0
+// namespace_92a20183<file_0>::function_e4e885e6
 // Checksum 0xbf8dc844, Offset: 0xe70
 // Size: 0x1c
 function onroundswitch() {
@@ -181,6 +188,7 @@ function onroundswitch() {
 
 // Namespace conf
 // Params 0, eflags: 0x0
+// namespace_92a20183<file_0>::function_96257f61
 // Checksum 0x779c23ee, Offset: 0xe98
 // Size: 0x1a
 function determinewinner() {
@@ -189,6 +197,7 @@ function determinewinner() {
 
 // Namespace conf
 // Params 1, eflags: 0x0
+// namespace_92a20183<file_0>::function_3fcd5617
 // Checksum 0x20d5c7b7, Offset: 0xec0
 // Size: 0x22
 function onroundendgame(roundwinner) {

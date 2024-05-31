@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_cai_lot_01",
+    "type": "collectible",
+    "igdtseqnum": 21,
+    "uiMaterial": "t7_icon_menu_p7_nc_cai_lot_01",
+    "uiModelWithStand": "p7_nc_cai_lot_01_with_stand",
+    "uiModel": "p7_nc_cai_lot_01",
+    "description": "COLLECTIBLE_P7_NC_CAI_LOT_01_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_CAI_LOT_01_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_CARPET",
+    "displayNameShort": "COLLECTIBLE_P7_NC_CAI_LOT_01_SHORT",
+    "codexurl": "Collectables-WallHungCarpet.htm",
+    "slotSize": 2
+}

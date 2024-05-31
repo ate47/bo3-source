@@ -14,6 +14,7 @@
 
 // Namespace namespace_85688477
 // Params 0, eflags: 0x1 linked
+// namespace_85688477<file_0>::function_c35e6aab
 // Checksum 0x3560a554, Offset: 0x2a0
 // Size: 0x54
 function init() {
@@ -22,6 +23,7 @@ function init() {
 
 // Namespace namespace_85688477
 // Params 0, eflags: 0x1 linked
+// namespace_85688477<file_0>::function_bf888e64
 // Checksum 0x9db3fba0, Offset: 0x300
 // Size: 0x20
 function init_stage() {
@@ -31,6 +33,7 @@ function init_stage() {
 
 // Namespace namespace_85688477
 // Params 0, eflags: 0x1 linked
+// namespace_85688477<file_0>::function_7747c56
 // Checksum 0xaaa60187, Offset: 0x328
 // Size: 0x94
 function function_7747c56() {
@@ -45,6 +48,7 @@ function function_7747c56() {
 
 // Namespace namespace_85688477
 // Params 1, eflags: 0x1 linked
+// namespace_85688477<file_0>::function_cc3f3f6a
 // Checksum 0xbd8c55d0, Offset: 0x3c8
 // Size: 0x1a
 function function_cc3f3f6a(success) {
@@ -53,6 +57,7 @@ function function_cc3f3f6a(success) {
 
 // Namespace namespace_85688477
 // Params 8, eflags: 0x1 linked
+// namespace_85688477<file_0>::function_116238af
 // Checksum 0xdc7252bc, Offset: 0x3f0
 // Size: 0x1a4
 function function_116238af(einflictor, attacker, idamage, smeansofdeath, sweapon, vdir, shitloc, psoffsettime) {
@@ -74,6 +79,7 @@ function function_116238af(einflictor, attacker, idamage, smeansofdeath, sweapon
 
 // Namespace namespace_85688477
 // Params 0, eflags: 0x1 linked
+// namespace_85688477<file_0>::function_1efeda5d
 // Checksum 0x29a31f6, Offset: 0x5a0
 // Size: 0x178
 function function_1efeda5d() {

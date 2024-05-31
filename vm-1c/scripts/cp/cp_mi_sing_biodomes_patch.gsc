@@ -16,6 +16,7 @@
 
 // Namespace namespace_e82fdc69
 // Params 0, eflags: 0x1 linked
+// namespace_e82fdc69<file_0>::function_7403e82b
 // Checksum 0xed0274c8, Offset: 0x2e8
 // Size: 0x44c
 function function_7403e82b() {

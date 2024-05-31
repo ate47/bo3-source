@@ -8,6 +8,7 @@
 
 // Namespace ballistic_knife
 // Params 0, eflags: 0x2
+// namespace_a474294<file_0>::function_2dc19561
 // Checksum 0x5394aadd, Offset: 0x138
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,6 +17,7 @@ function autoexec function_2dc19561() {
 
 // Namespace ballistic_knife
 // Params 0, eflags: 0x1 linked
+// namespace_a474294<file_0>::function_8c87d8eb
 // Checksum 0xfbffd01e, Offset: 0x178
 // Size: 0x14
 function __init__() {

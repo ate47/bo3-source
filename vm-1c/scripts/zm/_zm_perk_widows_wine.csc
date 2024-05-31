@@ -9,6 +9,7 @@
 
 // Namespace zm_perk_widows_wine
 // Params 0, eflags: 0x2
+// namespace_21f2cb7f<file_0>::function_2dc19561
 // Checksum 0x95c9efcf, Offset: 0x2d8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_perk_widows_wine
 // Params 0, eflags: 0x1 linked
+// namespace_21f2cb7f<file_0>::function_8c87d8eb
 // Checksum 0x42b776b7, Offset: 0x318
 // Size: 0xcc
 function __init__() {
@@ -28,6 +30,7 @@ function __init__() {
 
 // Namespace zm_perk_widows_wine
 // Params 0, eflags: 0x1 linked
+// namespace_21f2cb7f<file_0>::function_28504119
 // Checksum 0x6d7c4be6, Offset: 0x3f0
 // Size: 0x52
 function init_widows_wine() {
@@ -39,6 +42,7 @@ function init_widows_wine() {
 
 // Namespace zm_perk_widows_wine
 // Params 0, eflags: 0x1 linked
+// namespace_21f2cb7f<file_0>::function_a8110ee4
 // Checksum 0xfc8467a9, Offset: 0x450
 // Size: 0xcc
 function widows_wine_client_field_func() {
@@ -49,6 +53,7 @@ function widows_wine_client_field_func() {
 
 // Namespace zm_perk_widows_wine
 // Params 0, eflags: 0x1 linked
+// namespace_21f2cb7f<file_0>::function_a8dd76a3
 // Checksum 0x99ec1590, Offset: 0x528
 // Size: 0x4
 function widows_wine_code_callback_func() {
@@ -57,6 +62,7 @@ function widows_wine_code_callback_func() {
 
 // Namespace zm_perk_widows_wine
 // Params 7, eflags: 0x1 linked
+// namespace_21f2cb7f<file_0>::function_c48acb49
 // Checksum 0x9f6e86a5, Offset: 0x538
 // Size: 0x194
 function function_c48acb49(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -84,6 +90,7 @@ function function_c48acb49(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_perk_widows_wine
 // Params 7, eflags: 0x1 linked
+// namespace_21f2cb7f<file_0>::function_bb108b89
 // Checksum 0x6b737327, Offset: 0x6d8
 // Size: 0x9c
 function function_bb108b89(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -95,6 +102,7 @@ function function_bb108b89(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace zm_perk_widows_wine
 // Params 1, eflags: 0x1 linked
+// namespace_21f2cb7f<file_0>::function_617a36aa
 // Checksum 0x2c27dd78, Offset: 0x780
 // Size: 0xbc
 function function_617a36aa(localclientnum) {

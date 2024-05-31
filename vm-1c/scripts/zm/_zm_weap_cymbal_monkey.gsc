@@ -13,6 +13,7 @@
 
 // Namespace namespace_570c8452
 // Params 0, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_c35e6aab
 // Checksum 0x8b008347, Offset: 0x3f0
 // Size: 0x1f8
 function init() {
@@ -56,6 +57,7 @@ function init() {
 
 // Namespace namespace_570c8452
 // Params 0, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_f5ea9985
 // Checksum 0xf73f989c, Offset: 0x5f0
 // Size: 0x5c
 function player_give_cymbal_monkey() {
@@ -66,6 +68,7 @@ function player_give_cymbal_monkey() {
 
 // Namespace namespace_570c8452
 // Params 0, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_6e1d44a0
 // Checksum 0xab224972, Offset: 0x658
 // Size: 0xac
 function function_6e1d44a0() {
@@ -82,6 +85,7 @@ function function_6e1d44a0() {
 
 // Namespace namespace_570c8452
 // Params 0, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_bd419aa0
 // Checksum 0xd643bc1e, Offset: 0x710
 // Size: 0xf8
 function player_handle_cymbal_monkey() {
@@ -109,6 +113,7 @@ function player_handle_cymbal_monkey() {
 
 // Namespace namespace_570c8452
 // Params 2, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_d673d804
 // Checksum 0x686475e, Offset: 0x810
 // Size: 0xf4
 function watch_for_dud(model, actor) {
@@ -134,6 +139,7 @@ function watch_for_dud(model, actor) {
 
 // Namespace namespace_570c8452
 // Params 2, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_e8b9d8b5
 // Checksum 0xa8207c0f, Offset: 0x910
 // Size: 0x1ec
 function watch_for_emp(model, actor) {
@@ -174,6 +180,7 @@ function watch_for_emp(model, actor) {
 
 // Namespace namespace_570c8452
 // Params 1, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_eddd2027
 // Checksum 0xe35da994, Offset: 0xb08
 // Size: 0x50
 function clone_player_angles(owner) {
@@ -187,6 +194,7 @@ function clone_player_angles(owner) {
 
 // Namespace namespace_570c8452
 // Params 1, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_568ab2ee
 // Checksum 0x4597327e, Offset: 0xb60
 // Size: 0xae
 function show_briefly(showtime) {
@@ -207,6 +215,7 @@ function show_briefly(showtime) {
 
 // Namespace namespace_570c8452
 // Params 1, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_6f1a957d
 // Checksum 0x60e8b30f, Offset: 0xc18
 // Size: 0x80
 function show_owner_on_attack(owner) {
@@ -224,6 +233,7 @@ function show_owner_on_attack(owner) {
 
 // Namespace namespace_570c8452
 // Params 1, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_de8ef005
 // Checksum 0x62579f73, Offset: 0xca0
 // Size: 0x22c
 function hide_owner(owner) {
@@ -253,6 +263,7 @@ function hide_owner(owner) {
 
 // Namespace namespace_570c8452
 // Params 1, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_e35ebac3
 // Checksum 0x3af2b9c5, Offset: 0xed8
 // Size: 0x26c
 function proximity_detonate(owner) {
@@ -292,6 +303,7 @@ function proximity_detonate(owner) {
 
 // Namespace namespace_570c8452
 // Params 1, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_fc5ac9f1
 // Checksum 0xb0d2dab, Offset: 0x1150
 // Size: 0x80
 function fakelinkto(var_968690f) {
@@ -307,6 +319,7 @@ function fakelinkto(var_968690f) {
 
 // Namespace namespace_570c8452
 // Params 4, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_8bce3190
 // Checksum 0x59ca39bc, Offset: 0x11d8
 // Size: 0x75c
 function player_throw_cymbal_monkey(grenade, num_attractors, max_attract_dist, attract_dist_diff) {
@@ -401,6 +414,7 @@ function player_throw_cymbal_monkey(grenade, num_attractors, max_attract_dist, a
 
 // Namespace namespace_570c8452
 // Params 1, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_11c66679
 // Checksum 0xbde94fea, Offset: 0x1940
 // Size: 0x1ea
 function function_11c66679(valid_poi) {
@@ -429,6 +443,7 @@ function function_11c66679(valid_poi) {
 
 // Namespace namespace_570c8452
 // Params 3, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_aa2bc3cf
 // Checksum 0x53e0f73c, Offset: 0x1b38
 // Size: 0x2dc
 function grenade_stolen_by_sam(var_dbce19b3, ent_model, var_29cc71a2) {
@@ -470,6 +485,7 @@ function grenade_stolen_by_sam(var_dbce19b3, ent_model, var_29cc71a2) {
 
 // Namespace namespace_570c8452
 // Params 1, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_387b9c7
 // Checksum 0x945465f1, Offset: 0x1e20
 // Size: 0x8c
 function monkey_cleanup(parent) {
@@ -490,6 +506,7 @@ function monkey_cleanup(parent) {
 
 // Namespace namespace_570c8452
 // Params 2, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_64a32180
 // Checksum 0x283f7b1, Offset: 0x1eb8
 // Size: 0x1f0
 function function_64a32180(e_owner, model) {
@@ -515,6 +532,7 @@ function function_64a32180(e_owner, model) {
 
 // Namespace namespace_570c8452
 // Params 2, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_245d2ee
 // Checksum 0xf628398, Offset: 0x20b0
 // Size: 0x2fc
 function do_monkey_sound(model, info) {
@@ -567,6 +585,7 @@ function do_monkey_sound(model, info) {
 
 // Namespace namespace_570c8452
 // Params 0, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_e76160f8
 // Checksum 0x1768175c, Offset: 0x23b8
 // Size: 0x6c
 function play_delayed_explode_vox() {
@@ -582,6 +601,7 @@ function play_delayed_explode_vox() {
 
 // Namespace namespace_570c8452
 // Params 0, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_d8bb007c
 // Checksum 0x342dee84, Offset: 0x2430
 // Size: 0xb8
 function get_thrown_monkey() {
@@ -601,6 +621,7 @@ function get_thrown_monkey() {
 
 // Namespace namespace_570c8452
 // Params 1, eflags: 0x0
+// namespace_570c8452<file_0>::function_5a68004b
 // Checksum 0x13c6f717, Offset: 0x24f0
 // Size: 0x1cc
 function monitor_zombie_groans(info) {
@@ -634,6 +655,7 @@ function monitor_zombie_groans(info) {
 
 // Namespace namespace_570c8452
 // Params 0, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_af474b1d
 // Checksum 0x60cc1bee, Offset: 0x26c8
 // Size: 0x66
 function play_zombie_groans() {
@@ -651,6 +673,7 @@ function play_zombie_groans() {
 
 // Namespace namespace_570c8452
 // Params 1, eflags: 0x1 linked
+// namespace_570c8452<file_0>::function_d20e538
 // Checksum 0xe07a4342, Offset: 0x2738
 // Size: 0x22
 function cymbal_monkey_exists(w_weapon) {

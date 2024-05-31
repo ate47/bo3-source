@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_cai_inf_04",
+    "type": "collectible",
+    "igdtseqnum": 18,
+    "uiMaterial": "t7_icon_menu_p7_nc_cai_inf_04",
+    "uiModelWithStand": "p7_nc_cai_inf_04_with_stand",
+    "uiModel": "p7_nc_cai_inf_04",
+    "description": "COLLECTIBLE_P7_NC_CAI_INF_04_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_CAI_INF_04_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_FIELD_COMPASS",
+    "displayNameShort": "COLLECTIBLE_P7_NC_CAI_INF_04_SHORT",
+    "codexurl": "Collectables-RussianFieldCompass.htm",
+    "slotSize": 0
+}

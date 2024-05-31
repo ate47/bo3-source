@@ -26,6 +26,7 @@
 
 // Namespace namespace_5a453011
 // Params 0, eflags: 0x2
+// namespace_5a453011<file_0>::function_2dc19561
 // Checksum 0x8ec3ddd7, Offset: 0x430
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -34,6 +35,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_5a453011
 // Params 0, eflags: 0x1 linked
+// namespace_5a453011<file_0>::function_8c87d8eb
 // Checksum 0x763f90c3, Offset: 0x470
 // Size: 0x16c
 function __init__() {
@@ -50,6 +52,7 @@ function __init__() {
 
 // Namespace namespace_5a453011
 // Params 0, eflags: 0x1 linked
+// namespace_5a453011<file_0>::function_d290ebfa
 // Checksum 0xbe1d8fa5, Offset: 0x5e8
 // Size: 0x7c
 function main() {
@@ -62,6 +65,7 @@ function main() {
 
 // Namespace namespace_5a453011
 // Params 0, eflags: 0x1 linked
+// namespace_5a453011<file_0>::function_aebcf025
 // Checksum 0x12185fee, Offset: 0x670
 // Size: 0x2c
 function on_player_spawned() {
@@ -70,6 +74,7 @@ function on_player_spawned() {
 
 // Namespace namespace_5a453011
 // Params 0, eflags: 0x1 linked
+// namespace_5a453011<file_0>::function_8feafce2
 // Checksum 0x99ec1590, Offset: 0x6a8
 // Size: 0x4
 function on_player_connected() {
@@ -78,6 +83,7 @@ function on_player_connected() {
 
 // Namespace namespace_5a453011
 // Params 1, eflags: 0x1 linked
+// namespace_5a453011<file_0>::function_1c4fc4a7
 // Checksum 0xc03c180a, Offset: 0x6b8
 // Size: 0xbc
 function function_1c4fc4a7(mdl_target) {
@@ -97,6 +103,7 @@ function function_1c4fc4a7(mdl_target) {
 
 // Namespace namespace_5a453011
 // Params 0, eflags: 0x1 linked
+// namespace_5a453011<file_0>::function_8ae0d6df
 // Checksum 0xea5ba053, Offset: 0x780
 // Size: 0x16c
 function function_8ae0d6df() {
@@ -120,6 +127,7 @@ function function_8ae0d6df() {
 
     // Namespace namespace_5a453011
     // Params 0, eflags: 0x1 linked
+    // namespace_5a453011<file_0>::function_35b46d1a
     // Checksum 0x89ac6280, Offset: 0x8f8
     // Size: 0x44
     function function_35b46d1a() {
@@ -129,6 +137,7 @@ function function_8ae0d6df() {
 
     // Namespace namespace_5a453011
     // Params 1, eflags: 0x1 linked
+    // namespace_5a453011<file_0>::function_41601624
     // Checksum 0xe807f219, Offset: 0x948
     // Size: 0x46
     function function_41601624(cmd) {

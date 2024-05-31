@@ -12,6 +12,7 @@
 
 // Namespace namespace_36171bd3
 // Params 0, eflags: 0x2
+// namespace_36171bd3<file_0>::function_2dc19561
 // Checksum 0x50e7ec9, Offset: 0x618
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,6 +21,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_36171bd3
 // Params 0, eflags: 0x1 linked
+// namespace_36171bd3<file_0>::function_8c87d8eb
 // Checksum 0xf4032903, Offset: 0x658
 // Size: 0x39c
 function __init__() {
@@ -50,6 +52,7 @@ function __init__() {
 
 // Namespace namespace_36171bd3
 // Params 7, eflags: 0x1 linked
+// namespace_36171bd3<file_0>::function_29cf4c66
 // Checksum 0x4eb77184, Offset: 0xa00
 // Size: 0x27c
 function function_29cf4c66(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -86,6 +89,7 @@ function function_29cf4c66(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_36171bd3
 // Params 7, eflags: 0x1 linked
+// namespace_36171bd3<file_0>::function_f532bd65
 // Checksum 0x2c2f2c53, Offset: 0xc88
 // Size: 0xcc
 function function_f532bd65(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -97,6 +101,7 @@ function function_f532bd65(local_client_num, oldval, newval, bnewent, binitialsn
 
 // Namespace namespace_36171bd3
 // Params 7, eflags: 0x1 linked
+// namespace_36171bd3<file_0>::function_2636ef23
 // Checksum 0xc0dab579, Offset: 0xd60
 // Size: 0xf4
 function function_2636ef23(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -116,6 +121,7 @@ function function_2636ef23(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_36171bd3
 // Params 1, eflags: 0x1 linked
+// namespace_36171bd3<file_0>::function_cffc9622
 // Checksum 0xb5a6f6e3, Offset: 0xe60
 // Size: 0xac
 function function_cffc9622(localclientnum) {
@@ -126,6 +132,7 @@ function function_cffc9622(localclientnum) {
 
 // Namespace namespace_36171bd3
 // Params 1, eflags: 0x1 linked
+// namespace_36171bd3<file_0>::function_50bf7fe9
 // Checksum 0xbcc6f4f8, Offset: 0xf18
 // Size: 0x64
 function function_50bf7fe9(localclientnum) {

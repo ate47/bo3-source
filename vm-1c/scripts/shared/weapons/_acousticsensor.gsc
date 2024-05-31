@@ -11,6 +11,7 @@
 
 // Namespace namespace_efc40536
 // Params 0, eflags: 0x0
+// namespace_efc40536<file_0>::function_1463e4e5
 // Checksum 0xeffdb9b0, Offset: 0x280
 // Size: 0x5c
 function init_shared() {
@@ -21,6 +22,7 @@ function init_shared() {
 
 // Namespace namespace_efc40536
 // Params 0, eflags: 0x0
+// namespace_efc40536<file_0>::function_f7da464e
 // Checksum 0xa24f1a71, Offset: 0x2e8
 // Size: 0xc0
 function function_f7da464e() {
@@ -35,6 +37,7 @@ function function_f7da464e() {
 
 // Namespace namespace_efc40536
 // Params 2, eflags: 0x0
+// namespace_efc40536<file_0>::function_ed275b60
 // Checksum 0x8b5d3bd7, Offset: 0x3b0
 // Size: 0x10c
 function function_ed275b60(watcher, player) {
@@ -53,6 +56,7 @@ function function_ed275b60(watcher, player) {
 
 // Namespace namespace_efc40536
 // Params 3, eflags: 0x0
+// namespace_efc40536<file_0>::function_46660dce
 // Checksum 0xe3739fa, Offset: 0x4c8
 // Size: 0x104
 function function_46660dce(attacker, weapon, target) {
@@ -71,6 +75,7 @@ function function_46660dce(attacker, weapon, target) {
 
 // Namespace namespace_efc40536
 // Params 0, eflags: 0x0
+// namespace_efc40536<file_0>::function_9036a554
 // Checksum 0x8135d255, Offset: 0x5d8
 // Size: 0x1c
 function destroyent() {
@@ -79,6 +84,7 @@ function destroyent() {
 
 // Namespace namespace_efc40536
 // Params 2, eflags: 0x0
+// namespace_efc40536<file_0>::function_e42ff528
 // Checksum 0x9939efbf, Offset: 0x600
 // Size: 0x52
 function watchshutdown(player, origin) {
@@ -90,6 +96,7 @@ function watchshutdown(player, origin) {
 
 // Namespace namespace_efc40536
 // Params 1, eflags: 0x0
+// namespace_efc40536<file_0>::function_1e59bb1a
 // Checksum 0x8499f6b3, Offset: 0x660
 // Size: 0x38a
 function function_1e59bb1a(watcher) {

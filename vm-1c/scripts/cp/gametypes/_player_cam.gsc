@@ -10,6 +10,7 @@
 
 // Namespace namespace_5f11fb0b
 // Params 0, eflags: 0x2
+// namespace_5f11fb0b<file_0>::function_d290ebfa
 // Checksum 0x42e2f60a, Offset: 0x568
 // Size: 0x94
 function autoexec main() {
@@ -20,6 +21,7 @@ function autoexec main() {
 
 // Namespace namespace_5f11fb0b
 // Params 9, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_8e835895
 // Checksum 0xf50df5cb, Offset: 0x608
 // Size: 0x3bc
 function function_8e835895(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -68,6 +70,7 @@ function function_8e835895(einflictor, attacker, idamage, smeansofdeath, weapon,
 
 // Namespace namespace_5f11fb0b
 // Params 0, eflags: 0x0
+// namespace_5f11fb0b<file_0>::function_812435e3
 // Checksum 0xf6cdc568, Offset: 0x9d0
 // Size: 0x4c
 function function_812435e3() {
@@ -79,6 +82,7 @@ function function_812435e3() {
 
 // Namespace namespace_5f11fb0b
 // Params 2, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_6eb06d8d
 // Checksum 0x4bde5ec, Offset: 0xa28
 // Size: 0xb4
 function get_trace(old_position, new_position) {
@@ -92,6 +96,7 @@ function get_trace(old_position, new_position) {
 
 // Namespace namespace_5f11fb0b
 // Params 2, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_b1d0850f
 // Checksum 0xe46b84a8, Offset: 0xae8
 // Size: 0x44
 function function_b1d0850f(old_position, new_position) {
@@ -101,6 +106,7 @@ function function_b1d0850f(old_position, new_position) {
 
 // Namespace namespace_5f11fb0b
 // Params 2, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_e2d94882
 // Checksum 0xb35b7462, Offset: 0xb38
 // Size: 0x56
 function function_e2d94882(old_position, new_position) {
@@ -113,6 +119,7 @@ function function_e2d94882(old_position, new_position) {
 
 // Namespace namespace_5f11fb0b
 // Params 1, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_3df17f41
 // Checksum 0xc800ead1, Offset: 0xb98
 // Size: 0x32
 function is_falling(position) {
@@ -121,6 +128,7 @@ function is_falling(position) {
 
 // Namespace namespace_5f11fb0b
 // Params 11, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_c003e53f
 // Checksum 0x7d4a3f96, Offset: 0xbd8
 // Size: 0x97c
 function function_c003e53f(vdir, tweentime, var_f40ed68d, var_9aadeff9, var_933bfc9b, var_67ca400f, var_f06dc6a2, var_b633f381, lookdir, var_213955be, var_956c7382) {
@@ -238,6 +246,7 @@ function function_c003e53f(vdir, tweentime, var_f40ed68d, var_9aadeff9, var_933b
 
 // Namespace namespace_5f11fb0b
 // Params 1, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_956c7382
 // Checksum 0x2c93fdab, Offset: 0x1560
 // Size: 0xb4
 function function_956c7382(position) {
@@ -249,6 +258,7 @@ function function_956c7382(position) {
 
 // Namespace namespace_5f11fb0b
 // Params 3, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_a0c37dda
 // Checksum 0x9e2cf7a3, Offset: 0x1620
 // Size: 0x12c
 function function_a0c37dda(position, angles, var_956c7382) {
@@ -268,6 +278,7 @@ function function_a0c37dda(position, angles, var_956c7382) {
 
 // Namespace namespace_5f11fb0b
 // Params 0, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_22196132
 // Checksum 0x951206bc, Offset: 0x1758
 // Size: 0x5e
 function function_22196132() {
@@ -280,6 +291,7 @@ function function_22196132() {
 
 // Namespace namespace_5f11fb0b
 // Params 6, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_f05a5931
 // Checksum 0xc88eb523, Offset: 0x17c0
 // Size: 0x1be
 function function_f05a5931(einflictor, attacker, idamage, weapon, vdir, shitloc) {
@@ -299,6 +311,7 @@ function function_f05a5931(einflictor, attacker, idamage, weapon, vdir, shitloc)
 
 // Namespace namespace_5f11fb0b
 // Params 6, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_6e880b57
 // Checksum 0xef110db8, Offset: 0x1988
 // Size: 0x1b6
 function function_6e880b57(einflictor, attacker, idamage, weapon, vdir, shitloc) {
@@ -318,6 +331,7 @@ function function_6e880b57(einflictor, attacker, idamage, weapon, vdir, shitloc)
 
 // Namespace namespace_5f11fb0b
 // Params 6, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_1e43c03b
 // Checksum 0x52ee63a5, Offset: 0x1b48
 // Size: 0x1be
 function function_1e43c03b(einflictor, attacker, idamage, weapon, vdir, shitloc) {
@@ -337,6 +351,7 @@ function function_1e43c03b(einflictor, attacker, idamage, weapon, vdir, shitloc)
 
 // Namespace namespace_5f11fb0b
 // Params 6, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_7a3707a6
 // Checksum 0x8c81e933, Offset: 0x1d10
 // Size: 0x32e
 function function_7a3707a6(einflictor, attacker, idamage, weapon, vdir, shitloc) {
@@ -367,6 +382,7 @@ function function_7a3707a6(einflictor, attacker, idamage, weapon, vdir, shitloc)
 
 // Namespace namespace_5f11fb0b
 // Params 6, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_1c006469
 // Checksum 0xe8175737, Offset: 0x2048
 // Size: 0x196
 function function_1c006469(einflictor, attacker, idamage, weapon, vdir, shitloc) {
@@ -387,6 +403,7 @@ function function_1c006469(einflictor, attacker, idamage, weapon, vdir, shitloc)
 
 // Namespace namespace_5f11fb0b
 // Params 6, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_514913aa
 // Checksum 0x40a51deb, Offset: 0x21e8
 // Size: 0x17a
 function function_514913aa(einflictor, attacker, idamage, weapon, vdir, shitloc) {
@@ -405,6 +422,7 @@ function function_514913aa(einflictor, attacker, idamage, weapon, vdir, shitloc)
 
 // Namespace namespace_5f11fb0b
 // Params 6, eflags: 0x1 linked
+// namespace_5f11fb0b<file_0>::function_fd6ad16
 // Checksum 0xa01dca14, Offset: 0x2370
 // Size: 0x14e
 function function_fd6ad16(einflictor, attacker, idamage, weapon, vdir, shitloc) {

@@ -6,6 +6,7 @@
 
 // Namespace util
 // Params 5, eflags: 0x0
+// namespace_82b91a51<file_0>::function_e09caba4
 // Checksum 0x8eece268, Offset: 0x2b0
 // Size: 0x2c
 function empty(a, b, c, d, e) {
@@ -14,6 +15,7 @@ function empty(a, b, c, d, e) {
 
 // Namespace util
 // Params 0, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_10f13008
 // Checksum 0x33122f03, Offset: 0x2e8
 // Size: 0x86
 function waitforallclients() {
@@ -34,6 +36,7 @@ function waitforallclients() {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_44333182
 // Checksum 0xa401ac1c, Offset: 0x378
 // Size: 0x34
 function waitforclient(client) {
@@ -44,6 +47,7 @@ function waitforclient(client) {
 
 // Namespace util
 // Params 2, eflags: 0x0
+// namespace_82b91a51<file_0>::function_751827b8
 // Checksum 0x944b1c1a, Offset: 0x3b8
 // Size: 0x62
 function get_dvar_float_default(str_dvar, default_val) {
@@ -53,6 +57,7 @@ function get_dvar_float_default(str_dvar, default_val) {
 
 // Namespace util
 // Params 2, eflags: 0x0
+// namespace_82b91a51<file_0>::function_5bb757b5
 // Checksum 0xde99debf, Offset: 0x428
 // Size: 0x62
 function get_dvar_int_default(str_dvar, default_val) {
@@ -62,6 +67,7 @@ function get_dvar_int_default(str_dvar, default_val) {
 
 // Namespace util
 // Params 4, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_b9fd52a4
 // Checksum 0x9a2dcb15, Offset: 0x498
 // Size: 0xac
 function spawn_model(n_client, str_model, origin, angles) {
@@ -79,6 +85,7 @@ function spawn_model(n_client, str_model, origin, angles) {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_7b32615
 // Checksum 0x49b06d09, Offset: 0x550
 // Size: 0x58
 function waittill_string(msg, ent) {
@@ -92,6 +99,7 @@ function waittill_string(msg, ent) {
 
 // Namespace util
 // Params 1, eflags: 0x20
+// namespace_82b91a51<file_0>::function_8e66bc6
 // Checksum 0x7554b5f1, Offset: 0x5b0
 // Size: 0xaa
 function waittill_multiple(...) {
@@ -107,6 +115,7 @@ function waittill_multiple(...) {
 
 // Namespace util
 // Params 1, eflags: 0x20
+// namespace_82b91a51<file_0>::function_6959d3ef
 // Checksum 0x3c0e4eba, Offset: 0x668
 // Size: 0x1e2
 function waittill_multiple_ents(...) {
@@ -144,6 +153,7 @@ function waittill_multiple_ents(...) {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_5fa09767
 // Checksum 0xc88c8f6e, Offset: 0x858
 // Size: 0xd0
 function _waitlogic(s_tracker, notifies) {
@@ -163,6 +173,7 @@ function _waitlogic(s_tracker, notifies) {
 
 // Namespace util
 // Params 7, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_45ce26d
 // Checksum 0x776fb161, Offset: 0x930
 // Size: 0x268
 function waittill_any_return(string1, string2, string3, string4, string5, string6, string7) {
@@ -198,6 +209,7 @@ function waittill_any_return(string1, string2, string3, string4, string5, string
 
 // Namespace util
 // Params 1, eflags: 0x21 linked
+// namespace_82b91a51<file_0>::function_183e3618
 // Checksum 0xd9aff40c, Offset: 0xba0
 // Size: 0x1cc
 function function_183e3618(...) {
@@ -234,6 +246,7 @@ function function_183e3618(...) {
 
 // Namespace util
 // Params 1, eflags: 0x0
+// namespace_82b91a51<file_0>::function_ec87322b
 // Checksum 0x191bf226, Offset: 0xd78
 // Size: 0x118
 function function_ec87322b(a_notifies) {
@@ -253,6 +266,7 @@ function function_ec87322b(a_notifies) {
 
 // Namespace util
 // Params 5, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_5b7e3888
 // Checksum 0x827b0c90, Offset: 0xe98
 // Size: 0x84
 function waittill_any(var_d5de4b6f, var_63d6dc34, var_89d9569d, var_17d1e762, var_3dd461cb) {
@@ -262,6 +276,7 @@ function waittill_any(var_d5de4b6f, var_63d6dc34, var_89d9569d, var_17d1e762, va
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_c7f20692
 // Checksum 0x6bce93a1, Offset: 0xf28
 // Size: 0x8c
 function function_c7f20692(a_notifies) {
@@ -276,6 +291,7 @@ function function_c7f20692(a_notifies) {
 
 // Namespace util
 // Params 6, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_9fcf3cd8
 // Checksum 0x8261b2f8, Offset: 0xfc0
 // Size: 0x1f0
 function waittill_any_timeout(n_timeout, string1, string2, string3, string4, string5) {
@@ -306,6 +322,7 @@ function waittill_any_timeout(n_timeout, string1, string2, string3, string4, str
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_a890a4d9
 // Checksum 0x52de6ba9, Offset: 0x11b8
 // Size: 0x32
 function _timeout(delay) {
@@ -316,6 +333,7 @@ function _timeout(delay) {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_c9aa1ff
 // Checksum 0xa3251a25, Offset: 0x11f8
 // Size: 0x22
 function waittill_notify_or_timeout(msg, timer) {
@@ -325,6 +343,7 @@ function waittill_notify_or_timeout(msg, timer) {
 
 // Namespace util
 // Params 14, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_39b48811
 // Checksum 0x4a1a4249, Offset: 0x1228
 // Size: 0x174
 function waittill_any_ents(ent1, string1, ent2, string2, ent3, string3, ent4, string4, ent5, string5, ent6, string6, ent7, string7) {
@@ -353,6 +372,7 @@ function waittill_any_ents(ent1, string1, ent2, string2, ent3, string3, ent4, st
 
 // Namespace util
 // Params 4, eflags: 0x0
+// namespace_82b91a51<file_0>::function_f20332a2
 // Checksum 0x418113d0, Offset: 0x13a8
 // Size: 0x8e
 function waittill_any_ents_two(ent1, string1, ent2, string2) {
@@ -366,6 +386,7 @@ function waittill_any_ents_two(ent1, string1, ent2, string2) {
 
 // Namespace util
 // Params 8, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_b1e5bfea
 // Checksum 0x74a1ab65, Offset: 0x1440
 // Size: 0x16e
 function single_func(entity, func, arg1, arg2, arg3, arg4, arg5, arg6) {
@@ -395,6 +416,7 @@ function single_func(entity, func, arg1, arg2, arg3, arg4, arg5, arg6) {
 
 // Namespace util
 // Params 7, eflags: 0x0
+// namespace_82b91a51<file_0>::function_3af16252
 // Checksum 0x8dea8452, Offset: 0x15b8
 // Size: 0xe8
 function new_func(func, arg1, arg2, arg3, arg4, arg5, arg6) {
@@ -411,6 +433,7 @@ function new_func(func, arg1, arg2, arg3, arg4, arg5, arg6) {
 
 // Namespace util
 // Params 1, eflags: 0x0
+// namespace_82b91a51<file_0>::function_f9d5b5e2
 // Checksum 0xc0a45989, Offset: 0x16a8
 // Size: 0x72
 function call_func(s_func) {
@@ -419,6 +442,7 @@ function call_func(s_func) {
 
 // Namespace util
 // Params 7, eflags: 0x0
+// namespace_82b91a51<file_0>::function_8ca58641
 // Checksum 0x710c3196, Offset: 0x1728
 // Size: 0x16c
 function array_ent_thread(entities, func, arg1, arg2, arg3, arg4, arg5) {
@@ -438,6 +462,7 @@ function array_ent_thread(entities, func, arg1, arg2, arg3, arg4, arg5) {
 
 // Namespace util
 // Params 8, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_8828b758
 // Checksum 0xef0e77ee, Offset: 0x18a0
 // Size: 0x184
 function single_thread(entity, func, arg1, arg2, arg3, arg4, arg5, arg6) {
@@ -471,6 +496,7 @@ function single_thread(entity, func, arg1, arg2, arg3, arg4, arg5, arg6) {
 
 // Namespace util
 // Params 7, eflags: 0x0
+// namespace_82b91a51<file_0>::function_733bf333
 // Checksum 0x89a716e9, Offset: 0x1a30
 // Size: 0x6c
 function add_listen_thread(wait_till, func, param1, param2, param3, param4, param5) {
@@ -479,6 +505,7 @@ function add_listen_thread(wait_till, func, param1, param2, param3, param4, para
 
 // Namespace util
 // Params 7, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_80767625
 // Checksum 0x5806aaa2, Offset: 0x1aa8
 // Size: 0x78
 function add_listen_thread_internal(wait_till, func, param1, param2, param3, param4, param5) {
@@ -490,6 +517,7 @@ function add_listen_thread_internal(wait_till, func, param1, param2, param3, par
 
 // Namespace util
 // Params 8, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_4573206
 // Checksum 0xe165ca36, Offset: 0x1b28
 // Size: 0xd4
 function timeout(n_time, func, arg1, arg2, arg3, arg4, arg5, arg6) {
@@ -504,6 +532,7 @@ function timeout(n_time, func, arg1, arg2, arg3, arg4, arg5, arg6) {
 
 // Namespace util
 // Params 9, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_67520c6a
 // Checksum 0x1e8a8113, Offset: 0x1c08
 // Size: 0x84
 function delay(time_or_notify, str_endon, func, arg1, arg2, arg3, arg4, arg5, arg6) {
@@ -512,6 +541,7 @@ function delay(time_or_notify, str_endon, func, arg1, arg2, arg3, arg4, arg5, ar
 
 // Namespace util
 // Params 9, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_1028c88d
 // Checksum 0xbfcfe531, Offset: 0x1c98
 // Size: 0xc4
 function _delay(time_or_notify, str_endon, func, arg1, arg2, arg3, arg4, arg5, arg6) {
@@ -529,6 +559,7 @@ function _delay(time_or_notify, str_endon, func, arg1, arg2, arg3, arg4, arg5, a
 
 // Namespace util
 // Params 3, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_6729b6ba
 // Checksum 0xb6a36da2, Offset: 0x1d68
 // Size: 0x3c
 function delay_notify(time_or_notify, str_notify, str_endon) {
@@ -537,6 +568,7 @@ function delay_notify(time_or_notify, str_notify, str_endon) {
 
 // Namespace util
 // Params 3, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_f97eadcb
 // Checksum 0x8f9ad867, Offset: 0x1db0
 // Size: 0x6c
 function _delay_notify(time_or_notify, str_notify, str_endon) {
@@ -554,6 +586,7 @@ function _delay_notify(time_or_notify, str_notify, str_endon) {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_8c4f4e93
 // Checksum 0x7c0bb092, Offset: 0x1e28
 // Size: 0x50
 function new_timer(n_timer_length) {
@@ -565,6 +598,7 @@ function new_timer(n_timer_length) {
 
 // Namespace util
 // Params 0, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_c1a32fb9
 // Checksum 0xa5d5574, Offset: 0x1e80
 // Size: 0x20
 function get_time() {
@@ -574,6 +608,7 @@ function get_time() {
 
 // Namespace util
 // Params 0, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_d655bd13
 // Checksum 0xe2a3f7d6, Offset: 0x1ea8
 // Size: 0x18
 function get_time_in_seconds() {
@@ -582,6 +617,7 @@ function get_time_in_seconds() {
 
 // Namespace util
 // Params 1, eflags: 0x0
+// namespace_82b91a51<file_0>::function_d7a03114
 // Checksum 0xa129ed4a, Offset: 0x1ec8
 // Size: 0x52
 function get_time_frac(n_end_time) {
@@ -593,6 +629,7 @@ function get_time_frac(n_end_time) {
 
 // Namespace util
 // Params 0, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_abc2cfcf
 // Checksum 0x408daa33, Offset: 0x1f28
 // Size: 0x58
 function get_time_left() {
@@ -605,6 +642,7 @@ function get_time_left() {
 
 // Namespace util
 // Params 0, eflags: 0x0
+// namespace_82b91a51<file_0>::function_8ae3d381
 // Checksum 0x5b6f6f20, Offset: 0x1f88
 // Size: 0x16
 function is_time_left() {
@@ -613,6 +651,7 @@ function is_time_left() {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_551546c4
 // Checksum 0x8b84f150, Offset: 0x1fa8
 // Size: 0x6c
 function timer_wait(n_wait) {
@@ -626,6 +665,7 @@ function timer_wait(n_wait) {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_124423a4
 // Checksum 0x866bc067, Offset: 0x2020
 // Size: 0x84
 function add_remove_list(&a, on_off) {
@@ -643,6 +683,7 @@ function add_remove_list(&a, on_off) {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_2d5c2e92
 // Checksum 0xf2ab6fab, Offset: 0x20b0
 // Size: 0xe2
 function clean_deleted(&array) {
@@ -661,6 +702,7 @@ function clean_deleted(&array) {
 
 // Namespace util
 // Params 0, eflags: 0x0
+// namespace_82b91a51<file_0>::function_be287e39
 // Checksum 0xa43fe45a, Offset: 0x21a0
 // Size: 0xd4
 function get_eye() {
@@ -681,6 +723,7 @@ function get_eye() {
 
 // Namespace util
 // Params 0, eflags: 0x0
+// namespace_82b91a51<file_0>::function_e4013110
 // Checksum 0x39e2d8e4, Offset: 0x2280
 // Size: 0xa8
 function spawn_player_arms() {
@@ -695,6 +738,7 @@ function spawn_player_arms() {
 
 // Namespace util
 // Params 7, eflags: 0x0
+// namespace_82b91a51<file_0>::function_f6bf06e2
 // Checksum 0x8f83e1e6, Offset: 0x2330
 // Size: 0x142
 function lerp_dvar(str_dvar, n_start_val, n_end_val, n_lerp_time, b_saved_dvar, b_client_dvar, n_client) {
@@ -718,6 +762,7 @@ function lerp_dvar(str_dvar, n_start_val, n_end_val, n_lerp_time, b_saved_dvar, 
 
 // Namespace util
 // Params 1, eflags: 0x0
+// namespace_82b91a51<file_0>::function_a0710fa5
 // Checksum 0xa92f97e5, Offset: 0x2480
 // Size: 0x1e
 function is_valid_type_for_callback(type) {
@@ -741,6 +786,7 @@ function is_valid_type_for_callback(type) {
 
 // Namespace util
 // Params 2, eflags: 0x0
+// namespace_82b91a51<file_0>::function_c8575f2a
 // Checksum 0xa83a3ff9, Offset: 0x2510
 // Size: 0xa4
 function wait_till_not_touching(e_to_check, e_to_touch) {
@@ -757,6 +803,7 @@ function wait_till_not_touching(e_to_check, e_to_touch) {
 
     // Namespace util
     // Params 1, eflags: 0x1 linked
+    // namespace_82b91a51<file_0>::function_fe17af4d
     // Checksum 0xc17cbce5, Offset: 0x25c0
     // Size: 0x34
     function error(message) {
@@ -768,6 +815,7 @@ function wait_till_not_touching(e_to_check, e_to_touch) {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_ff15a052
 // Checksum 0x1bd5b5e, Offset: 0x2600
 // Size: 0xd8
 function register_system(ssysname, cbfunc) {
@@ -792,6 +840,7 @@ function register_system(ssysname, cbfunc) {
 
 // Namespace util
 // Params 7, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_259aef37
 // Checksum 0x6f8a68ac, Offset: 0x26e0
 // Size: 0x48
 function field_set_lighting_ent(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -800,6 +849,7 @@ function field_set_lighting_ent(localclientnum, oldval, newval, bnewent, binitia
 
 // Namespace util
 // Params 7, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_cb412ba8
 // Checksum 0x372d0d26, Offset: 0x2730
 // Size: 0x3c
 function field_use_lighting_ent(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -808,6 +858,7 @@ function field_use_lighting_ent(localclientnum, oldval, newval, bnewent, binitia
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_2e224d69
 // Checksum 0x5fcf7e7, Offset: 0x2778
 // Size: 0x3c
 function waittill_dobj(localclientnum) {
@@ -818,6 +869,7 @@ function waittill_dobj(localclientnum) {
 
 // Namespace util
 // Params 4, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_193e964
 // Checksum 0xb4e33953, Offset: 0x27c0
 // Size: 0x122
 function server_wait(localclientnum, seconds, waitbetweenchecks, level_endon) {
@@ -848,6 +900,7 @@ function server_wait(localclientnum, seconds, waitbetweenchecks, level_endon) {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_f36b8920
 // Checksum 0xcd5f35c1, Offset: 0x28f0
 // Size: 0x14c
 function function_f36b8920(var_1d8cde9, var_56abff8b) {
@@ -871,6 +924,7 @@ function function_f36b8920(var_1d8cde9, var_56abff8b) {
 
 // Namespace util
 // Params 3, eflags: 0x0
+// namespace_82b91a51<file_0>::function_d3d6ba6c
 // Checksum 0x4ec08c2e, Offset: 0x2a48
 // Size: 0xe4
 function function_d3d6ba6c(var_1d8cde9, team, var_56abff8b) {
@@ -888,6 +942,7 @@ function function_d3d6ba6c(var_1d8cde9, team, var_56abff8b) {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_b074c98c
 // Checksum 0xee926cb8, Offset: 0x2b38
 // Size: 0x9c
 function isenemyplayer(player) {
@@ -907,6 +962,7 @@ function isenemyplayer(player) {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_99d55485
 // Checksum 0x85f8153f, Offset: 0x2be0
 // Size: 0x4e
 function is_player_view_linked_to_entity(localclientnum) {
@@ -921,6 +977,7 @@ function is_player_view_linked_to_entity(localclientnum) {
 
 // Namespace util
 // Params 0, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_b2dbe562
 // Checksum 0x1242c61b, Offset: 0x2c38
 // Size: 0xd4
 function init_utility() {
@@ -939,6 +996,7 @@ function init_utility() {
 
 // Namespace util
 // Params 4, eflags: 0x0
+// namespace_82b91a51<file_0>::function_22ff7ff0
 // Checksum 0x7b19bc71, Offset: 0x2d18
 // Size: 0xa2
 function within_fov(start_origin, start_angles, end_origin, fov) {
@@ -950,6 +1008,7 @@ function within_fov(start_origin, start_angles, end_origin, fov) {
 
 // Namespace util
 // Params 0, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_193d7d1c
 // Checksum 0x3b2e7eb4, Offset: 0x2dc8
 // Size: 0x12
 function is_mature() {
@@ -958,6 +1017,7 @@ function is_mature() {
 
 // Namespace util
 // Params 0, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_179773ff
 // Checksum 0xc7f32cc1, Offset: 0x2de8
 // Size: 0x36
 function is_gib_restricted_build() {
@@ -969,6 +1029,7 @@ function is_gib_restricted_build() {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_68ed15b1
 // Checksum 0xb9b641e8, Offset: 0x2e28
 // Size: 0xd8
 function registersystem(ssysname, cbfunc) {
@@ -993,6 +1054,7 @@ function registersystem(ssysname, cbfunc) {
 
 // Namespace util
 // Params 0, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_bc37a245
 // Checksum 0xe485bd4f, Offset: 0x2f08
 // Size: 0x4c
 function function_bc37a245() {
@@ -1007,6 +1069,7 @@ function function_bc37a245() {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_3763b8bf
 // Checksum 0xd377b04, Offset: 0x2f60
 // Size: 0x62
 function add_trigger_to_ent(ent, trig) {
@@ -1018,6 +1081,7 @@ function add_trigger_to_ent(ent, trig) {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_628362e1
 // Checksum 0x601e8a9c, Offset: 0x2fd0
 // Size: 0x82
 function remove_trigger_from_ent(ent, trig) {
@@ -1032,6 +1096,7 @@ function remove_trigger_from_ent(ent, trig) {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_88efdad8
 // Checksum 0x54cc1c39, Offset: 0x3060
 // Size: 0x70
 function ent_already_in_trigger(trig) {
@@ -1049,6 +1114,7 @@ function ent_already_in_trigger(trig) {
 
 // Namespace util
 // Params 3, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_96166eaa
 // Checksum 0xf23f481, Offset: 0x30d8
 // Size: 0xfc
 function trigger_thread(ent, on_enter_payload, on_exit_payload) {
@@ -1073,6 +1139,7 @@ function trigger_thread(ent, on_enter_payload, on_exit_payload) {
 
 // Namespace util
 // Params 3, eflags: 0x0
+// namespace_82b91a51<file_0>::function_b67a86ad
 // Checksum 0x79da31b8, Offset: 0x31e0
 // Size: 0xfc
 function local_player_trigger_thread_always_exit(ent, on_enter_payload, on_exit_payload) {
@@ -1096,6 +1163,7 @@ function local_player_trigger_thread_always_exit(ent, on_enter_payload, on_exit_
 
 // Namespace util
 // Params 7, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_fa5641db
 // Checksum 0x168448bf, Offset: 0x32e8
 // Size: 0x94
 function local_player_entity_thread(localclientnum, entity, func, arg1, arg2, arg3, arg4) {
@@ -1106,6 +1174,7 @@ function local_player_entity_thread(localclientnum, entity, func, arg1, arg2, ar
 
 // Namespace util
 // Params 6, eflags: 0x0
+// namespace_82b91a51<file_0>::function_c6073b50
 // Checksum 0x6e8b7f10, Offset: 0x3388
 // Size: 0xae
 function local_players_entity_thread(entity, func, arg1, arg2, arg3, arg4) {
@@ -1119,6 +1188,7 @@ function local_players_entity_thread(entity, func, arg1, arg2, arg3, arg4) {
 
     // Namespace util
     // Params 4, eflags: 0x1 linked
+    // namespace_82b91a51<file_0>::function_a9c39c8b
     // Checksum 0xca7f475b, Offset: 0x3440
     // Size: 0xac
     function debug_line(from, to, color, time) {
@@ -1133,6 +1203,7 @@ function local_players_entity_thread(entity, func, arg1, arg2, arg3, arg4) {
 
     // Namespace util
     // Params 3, eflags: 0x0
+    // namespace_82b91a51<file_0>::function_edfc50ad
     // Checksum 0x36a2d4d9, Offset: 0x34f8
     // Size: 0xac
     function debug_star(origin, color, time) {
@@ -1152,6 +1223,7 @@ function local_players_entity_thread(entity, func, arg1, arg2, arg3, arg4) {
 
 // Namespace util
 // Params 0, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_627630ff
 // Checksum 0xe56e953f, Offset: 0x35b0
 // Size: 0x30
 function servertime() {
@@ -1163,6 +1235,7 @@ function servertime() {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_a71443c4
 // Checksum 0xb7755a33, Offset: 0x35e8
 // Size: 0x110
 function getnextobjid(localclientnum) {
@@ -1188,6 +1261,7 @@ function getnextobjid(localclientnum) {
 
 // Namespace util
 // Params 2, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_adbf1314
 // Checksum 0x8eab1241, Offset: 0x3700
 // Size: 0xb0
 function releaseobjid(localclientnum, objid) {
@@ -1202,6 +1276,7 @@ function releaseobjid(localclientnum, objid) {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_3eb32a89
 // Checksum 0xe087cd68, Offset: 0x37b8
 // Size: 0x2e
 function function_3eb32a89(str_next_map) {
@@ -1221,6 +1296,7 @@ function function_3eb32a89(str_next_map) {
 
 // Namespace util
 // Params 1, eflags: 0x1 linked
+// namespace_82b91a51<file_0>::function_3da0c335
 // Checksum 0xfdd175cb, Offset: 0x3830
 // Size: 0x5a
 function is_safehouse(str_next_map) {
@@ -1241,6 +1317,7 @@ function is_safehouse(str_next_map) {
 
     // Namespace util
     // Params 1, eflags: 0x1 linked
+    // namespace_82b91a51<file_0>::function_95cc1e48
     // Checksum 0x98c7a806, Offset: 0x38c0
     // Size: 0x120
     function button_held_think(which_button) {
@@ -1271,6 +1348,7 @@ function is_safehouse(str_next_map) {
 
     // Namespace util
     // Params 0, eflags: 0x1 linked
+    // namespace_82b91a51<file_0>::function_27ba232d
     // Checksum 0xbcdc8fe3, Offset: 0x39e8
     // Size: 0x52
     function init_button_wrappers() {
@@ -1282,6 +1360,7 @@ function is_safehouse(str_next_map) {
 
     // Namespace util
     // Params 0, eflags: 0x1 linked
+    // namespace_82b91a51<file_0>::function_d286c26d
     // Checksum 0x28f1a770, Offset: 0x3a48
     // Size: 0x5e
     function up_button_held() {
@@ -1295,6 +1374,7 @@ function is_safehouse(str_next_map) {
 
     // Namespace util
     // Params 0, eflags: 0x1 linked
+    // namespace_82b91a51<file_0>::function_1adfa50a
     // Checksum 0xce566df5, Offset: 0x3ab0
     // Size: 0x5e
     function down_button_held() {
@@ -1308,6 +1388,7 @@ function is_safehouse(str_next_map) {
 
     // Namespace util
     // Params 0, eflags: 0x1 linked
+    // namespace_82b91a51<file_0>::function_5298bc32
     // Checksum 0xa274f376, Offset: 0x3b18
     // Size: 0x44
     function up_button_pressed() {
@@ -1316,6 +1397,7 @@ function is_safehouse(str_next_map) {
 
     // Namespace util
     // Params 0, eflags: 0x0
+    // namespace_82b91a51<file_0>::function_e0163a6f
     // Checksum 0xc77ff59, Offset: 0x3b68
     // Size: 0x2c
     function waittill_up_button_pressed() {
@@ -1326,6 +1408,7 @@ function is_safehouse(str_next_map) {
 
     // Namespace util
     // Params 0, eflags: 0x1 linked
+    // namespace_82b91a51<file_0>::function_95f33d4f
     // Checksum 0xb61215b3, Offset: 0x3ba0
     // Size: 0x44
     function down_button_pressed() {
@@ -1334,6 +1417,7 @@ function is_safehouse(str_next_map) {
 
     // Namespace util
     // Params 0, eflags: 0x0
+    // namespace_82b91a51<file_0>::function_d9a6f8a6
     // Checksum 0xe3221dd8, Offset: 0x3bf0
     // Size: 0x2c
     function waittill_down_button_pressed() {

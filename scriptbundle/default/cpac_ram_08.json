@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_ram_08",
+    "igdtseqnum": 135,
+    "challengeWidget": "HeavyWeapon",
+    "challengeDetails": "ACCOLADES_RAM_8",
+    "challengeName": "ACCOLADES_RAM_8_NAME",
+    "centerText": "2",
+    "challengeReference": "MISSION_RAMSES_CHALLENGE8"
+}

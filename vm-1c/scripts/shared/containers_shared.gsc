@@ -17,6 +17,7 @@ class ccontainer {
 
     // Namespace ccontainer
     // Params 3, eflags: 0x1 linked
+    // namespace_74810fd1<file_0>::function_b66bcd01
     // Checksum 0x528395a8, Offset: 0x2f0
     // Size: 0x62
     function init_xmodel(str_xmodel, v_origin, v_angles) {
@@ -31,6 +32,7 @@ class ccontainer {
 
 // Namespace containers
 // Params 0, eflags: 0x2
+// namespace_eb1fbc1<file_0>::function_2dc19561
 // Checksum 0x75cf0da1, Offset: 0x420
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -39,6 +41,7 @@ function autoexec function_2dc19561() {
 
 // Namespace containers
 // Params 0, eflags: 0x1 linked
+// namespace_eb1fbc1<file_0>::function_8c87d8eb
 // Checksum 0xdf834e5d, Offset: 0x460
 // Size: 0xda
 function __init__() {
@@ -53,6 +56,7 @@ function __init__() {
 
 // Namespace containers
 // Params 0, eflags: 0x1 linked
+// namespace_eb1fbc1<file_0>::function_c35e6aab
 // Checksum 0xf8ceee0c, Offset: 0x548
 // Size: 0x62
 function init() {
@@ -65,6 +69,7 @@ function init() {
 
 // Namespace containers
 // Params 2, eflags: 0x1 linked
+// namespace_eb1fbc1<file_0>::function_7ad16e
 // Checksum 0x9694457b, Offset: 0x5b8
 // Size: 0xd8
 function setup_container_scriptbundle(s_bundle, s_container_instance) {
@@ -79,6 +84,7 @@ function setup_container_scriptbundle(s_bundle, s_container_instance) {
 
 // Namespace containers
 // Params 1, eflags: 0x1 linked
+// namespace_eb1fbc1<file_0>::function_4571f75a
 // Checksum 0x42b40120, Offset: 0x698
 // Size: 0x114
 function container_update(c_container) {
@@ -94,6 +100,7 @@ function container_update(c_container) {
 
 // Namespace containers
 // Params 3, eflags: 0x1 linked
+// namespace_eb1fbc1<file_0>::function_ffa98dc5
 // Checksum 0xdae2545c, Offset: 0x7b8
 // Size: 0x118
 function create_locker_trigger(v_pos, n_radius, str_message) {
@@ -110,6 +117,7 @@ function create_locker_trigger(v_pos, n_radius, str_message) {
 
 // Namespace containers
 // Params 4, eflags: 0x0
+// namespace_eb1fbc1<file_0>::function_ab34f9c4
 // Checksum 0x5bd1cb48, Offset: 0x8d8
 // Size: 0x33c
 function setup_general_container_bundle(str_targetname, str_intel_vo, str_narrative_collectable_model, force_open) {
@@ -156,6 +164,7 @@ function setup_general_container_bundle(str_targetname, str_intel_vo, str_narrat
 
 // Namespace containers
 // Params 3, eflags: 0x0
+// namespace_eb1fbc1<file_0>::function_23b41c2f
 // Checksum 0x121cfaa9, Offset: 0xc20
 // Size: 0x196
 function setup_locker_double_doors(str_left_door_name, str_right_door_name, center_point_offset) {
@@ -182,6 +191,7 @@ function setup_locker_double_doors(str_left_door_name, str_right_door_name, cent
 
 // Namespace containers
 // Params 2, eflags: 0x1 linked
+// namespace_eb1fbc1<file_0>::function_536d392a
 // Checksum 0xcda1c3c0, Offset: 0xdc0
 // Size: 0xc6
 function get_closest_ent_from_array(v_pos, a_ents) {
@@ -199,6 +209,7 @@ function get_closest_ent_from_array(v_pos, a_ents) {
 
 // Namespace containers
 // Params 4, eflags: 0x1 linked
+// namespace_eb1fbc1<file_0>::function_b7da4a2e
 // Checksum 0x1171f6c3, Offset: 0xe90
 // Size: 0x1ac
 function create_locker_doors(e_left_door, e_right_door, door_open_angle, door_open_time) {

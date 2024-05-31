@@ -12,6 +12,7 @@
 
 // Namespace weaponobjects
 // Params 0, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_1463e4e5
 // Checksum 0xac375d84, Offset: 0x358
 // Size: 0x220
 function init_shared() {
@@ -33,6 +34,7 @@ function init_shared() {
 
 // Namespace weaponobjects
 // Params 1, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_67e71792
 // Checksum 0xc5c3fa9, Offset: 0x580
 // Size: 0x5c
 function on_localplayer_spawned(local_client_num) {
@@ -45,6 +47,7 @@ function on_localplayer_spawned(local_client_num) {
 
 // Namespace weaponobjects
 // Params 1, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_94c5a728
 // Checksum 0xfa820889, Offset: 0x5e8
 // Size: 0x138
 function function_94c5a728(local_client_num) {
@@ -68,6 +71,7 @@ function function_94c5a728(local_client_num) {
 
 // Namespace weaponobjects
 // Params 7, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_e043557
 // Checksum 0xcbd78f61, Offset: 0x728
 // Size: 0x5c
 function proximity_alarm_changed(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -76,6 +80,7 @@ function proximity_alarm_changed(local_client_num, oldval, newval, bnewent, bini
 
 // Namespace weaponobjects
 // Params 4, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_144ebd96
 // Checksum 0x72e6f4de, Offset: 0x790
 // Size: 0x15c
 function update_sound(local_client_num, bnewent, newval, oldval) {
@@ -101,6 +106,7 @@ function update_sound(local_client_num, bnewent, newval, oldval) {
 
 // Namespace weaponobjects
 // Params 7, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_d7ad0213
 // Checksum 0x9a7e1acc, Offset: 0x8f8
 // Size: 0x5c
 function teamequip_changed(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -109,6 +115,7 @@ function teamequip_changed(local_client_num, oldval, newval, bnewent, binitialsn
 
 // Namespace weaponobjects
 // Params 2, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_36dc5bfb
 // Checksum 0x2cbfaeda, Offset: 0x960
 // Size: 0x2c
 function updateteamequipment(local_client_num, newval) {
@@ -117,6 +124,7 @@ function updateteamequipment(local_client_num, newval) {
 
 // Namespace weaponobjects
 // Params 7, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_ae3b9669
 // Checksum 0x5f56a585, Offset: 0x998
 // Size: 0xbc
 function retrievable_changed(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -130,6 +138,7 @@ function retrievable_changed(local_client_num, oldval, newval, bnewent, binitial
 
 // Namespace weaponobjects
 // Params 2, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_338f2ca1
 // Checksum 0x26b546d1, Offset: 0xa60
 // Size: 0x84
 function updateretrievable(local_client_num, newval) {
@@ -144,6 +153,7 @@ function updateretrievable(local_client_num, newval) {
 
 // Namespace weaponobjects
 // Params 7, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_d3c48678
 // Checksum 0x5371e2c, Offset: 0xaf0
 // Size: 0xc4
 function enemyequip_changed(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -158,6 +168,7 @@ function enemyequip_changed(local_client_num, oldval, newval, bnewent, binitials
 
 // Namespace weaponobjects
 // Params 2, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_64cbefa6
 // Checksum 0xa1d278e4, Offset: 0xbc0
 // Size: 0x17c
 function updateenemyequipment(local_client_num, newval) {
@@ -179,6 +190,7 @@ function updateenemyequipment(local_client_num, newval) {
 
 // Namespace weaponobjects
 // Params 1, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_be7bb045
 // Checksum 0x90f4a382, Offset: 0xd48
 // Size: 0xc
 function function_be7bb045(local_client_num) {
@@ -187,6 +199,7 @@ function function_be7bb045(local_client_num) {
 
 // Namespace weaponobjects
 // Params 1, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_7bce2cc9
 // Checksum 0xaac203e7, Offset: 0xd60
 // Size: 0xfc
 function watch_perks_changed(local_client_num) {
@@ -207,6 +220,7 @@ function watch_perks_changed(local_client_num) {
 
 // Namespace weaponobjects
 // Params 1, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_6a5753a8
 // Checksum 0x8ce9836, Offset: 0xe68
 // Size: 0x13a
 function checkteamequipment(localclientnum) {
@@ -233,6 +247,7 @@ function checkteamequipment(localclientnum) {
 
 // Namespace weaponobjects
 // Params 1, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_5662ba25
 // Checksum 0x957f9b8e, Offset: 0xfb0
 // Size: 0xc4
 function equipmentteamobject(localclientnum) {
@@ -250,6 +265,7 @@ function equipmentteamobject(localclientnum) {
 
 // Namespace weaponobjects
 // Params 1, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_74004e0b
 // Checksum 0x56f10273, Offset: 0x1080
 // Size: 0x10c
 function playflarefx(localclientnum) {
@@ -274,6 +290,7 @@ function playflarefx(localclientnum) {
 
 // Namespace weaponobjects
 // Params 2, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_eeaa16e1
 // Checksum 0x7a90ac67, Offset: 0x1198
 // Size: 0xac
 function equipmentwatchteamfx(localclientnum, fxhandle) {
@@ -289,6 +306,7 @@ function equipmentwatchteamfx(localclientnum, fxhandle) {
 
 // Namespace weaponobjects
 // Params 2, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_43d27c5c
 // Checksum 0x772f4850, Offset: 0x1250
 // Size: 0xb6
 function equipmentwatchplayerteamchanged(localclientnum, fxhandle) {
@@ -307,6 +325,7 @@ function equipmentwatchplayerteamchanged(localclientnum, fxhandle) {
 
 // Namespace weaponobjects
 // Params 2, eflags: 0x1 linked
+// namespace_aec973d7<file_0>::function_cf163c95
 // Checksum 0x97a62f70, Offset: 0x1310
 // Size: 0x94
 function sndproxalert_entcleanup(localclientnum, ent) {

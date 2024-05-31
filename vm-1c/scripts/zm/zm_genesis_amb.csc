@@ -5,6 +5,7 @@
 
 // Namespace namespace_a7ac3fc4
 // Params 0, eflags: 0x1 linked
+// namespace_a7ac3fc4<file_0>::function_d290ebfa
 // Checksum 0x33d448ff, Offset: 0xd8
 // Size: 0x14
 function main() {
@@ -13,6 +14,7 @@ function main() {
 
 // Namespace namespace_a7ac3fc4
 // Params 0, eflags: 0x1 linked
+// namespace_a7ac3fc4<file_0>::function_d19cb2f8
 // Checksum 0xba4561fa, Offset: 0xf8
 // Size: 0x15c
 function startzmbspawnersoundloops() {
@@ -42,6 +44,7 @@ function startzmbspawnersoundloops() {
 
 // Namespace namespace_a7ac3fc4
 // Params 0, eflags: 0x1 linked
+// namespace_a7ac3fc4<file_0>::function_1f01c4b4
 // Checksum 0x72bff574, Offset: 0x260
 // Size: 0x16c
 function soundloopthink() {

@@ -8,6 +8,7 @@
 
 // Namespace zm_trap_electric
 // Params 0, eflags: 0x2
+// namespace_f86a2336<file_0>::function_2dc19561
 // Checksum 0x26a0fac0, Offset: 0x170
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,6 +17,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_trap_electric
 // Params 0, eflags: 0x0
+// namespace_f86a2336<file_0>::function_8c87d8eb
 // Checksum 0x7fceb13d, Offset: 0x1b0
 // Size: 0x10a
 function __init__() {
@@ -28,6 +30,7 @@ function __init__() {
 
 // Namespace zm_trap_electric
 // Params 7, eflags: 0x0
+// namespace_f86a2336<file_0>::function_9b0b8f8e
 // Checksum 0x4b16959a, Offset: 0x2c8
 // Size: 0x172
 function trap_fx_monitor(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -51,6 +54,7 @@ function trap_fx_monitor(localclientnum, oldval, newval, bnewent, binitialsnap, 
 
 // Namespace zm_trap_electric
 // Params 0, eflags: 0x0
+// namespace_f86a2336<file_0>::function_1fc3f4ef
 // Checksum 0xf5fac119, Offset: 0x448
 // Size: 0x12c
 function function_1fc3f4ef() {
@@ -71,6 +75,7 @@ function function_1fc3f4ef() {
 
 // Namespace zm_trap_electric
 // Params 0, eflags: 0x0
+// namespace_f86a2336<file_0>::function_dc960b46
 // Checksum 0xc2cffc0c, Offset: 0x580
 // Size: 0x88
 function function_dc960b46() {

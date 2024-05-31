@@ -7,6 +7,7 @@
 
 // Namespace zm_utility
 // Params 1, eflags: 0x0
+// namespace_172ba133<file_0>::function_1d9fdf1d
 // Checksum 0xb6ae7601, Offset: 0x120
 // Size: 0x4c
 function ignore_triggers(timer) {
@@ -22,6 +23,7 @@ function ignore_triggers(timer) {
 
 // Namespace zm_utility
 // Params 0, eflags: 0x0
+// namespace_172ba133<file_0>::function_67d38eab
 // Checksum 0x11d2e351, Offset: 0x178
 // Size: 0x6
 function is_encounter() {
@@ -30,6 +32,7 @@ function is_encounter() {
 
 // Namespace zm_utility
 // Params 1, eflags: 0x1 linked
+// namespace_172ba133<file_0>::function_deb49c87
 // Checksum 0xb233f14b, Offset: 0x188
 // Size: 0x4c
 function round_up_to_ten(score) {
@@ -42,6 +45,7 @@ function round_up_to_ten(score) {
 
 // Namespace zm_utility
 // Params 2, eflags: 0x1 linked
+// namespace_172ba133<file_0>::function_aeee1292
 // Checksum 0x2eea486c, Offset: 0x1e0
 // Size: 0x70
 function round_up_score(score, value) {
@@ -55,6 +59,7 @@ function round_up_score(score, value) {
 
 // Namespace zm_utility
 // Params 1, eflags: 0x1 linked
+// namespace_172ba133<file_0>::function_3e639cd4
 // Checksum 0xdd0d5faf, Offset: 0x258
 // Size: 0x3c
 function halve_score(n_score) {
@@ -65,6 +70,7 @@ function halve_score(n_score) {
 
 // Namespace zm_utility
 // Params 6, eflags: 0x0
+// namespace_172ba133<file_0>::function_b22c17a7
 // Checksum 0x12f62812, Offset: 0x2a0
 // Size: 0xf0
 function spawn_weapon_model(localclientnum, weapon, model, origin, angles, options) {
@@ -85,6 +91,7 @@ function spawn_weapon_model(localclientnum, weapon, model, origin, angles, optio
 
 // Namespace zm_utility
 // Params 5, eflags: 0x1 linked
+// namespace_172ba133<file_0>::function_728bf83a
 // Checksum 0x8b1bdca1, Offset: 0x398
 // Size: 0xb0
 function spawn_buildkit_weapon_model(localclientnum, weapon, camo, origin, angles) {
@@ -98,6 +105,7 @@ function spawn_buildkit_weapon_model(localclientnum, weapon, camo, origin, angle
 
 // Namespace zm_utility
 // Params 0, eflags: 0x0
+// namespace_172ba133<file_0>::function_4d275f1c
 // Checksum 0xee3faa58, Offset: 0x450
 // Size: 0x8
 function is_classic() {
@@ -106,6 +114,7 @@ function is_classic() {
 
 // Namespace zm_utility
 // Params 1, eflags: 0x0
+// namespace_172ba133<file_0>::function_f6859577
 // Checksum 0x24c4905c, Offset: 0x460
 // Size: 0xb2
 function is_gametype_active(a_gametypes) {
@@ -123,6 +132,7 @@ function is_gametype_active(a_gametypes) {
 
 // Namespace zm_utility
 // Params 7, eflags: 0x1 linked
+// namespace_172ba133<file_0>::function_7db15eb1
 // Checksum 0x363e5e7b, Offset: 0x520
 // Size: 0xa4
 function setinventoryuimodels(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -134,6 +144,7 @@ function setinventoryuimodels(localclientnum, oldval, newval, bnewent, binitials
 
 // Namespace zm_utility
 // Params 7, eflags: 0x1 linked
+// namespace_172ba133<file_0>::function_5c39944c
 // Checksum 0x3437d677, Offset: 0x5d0
 // Size: 0x84
 function setsharedinventoryuimodels(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -142,6 +153,7 @@ function setsharedinventoryuimodels(localclientnum, oldval, newval, bnewent, bin
 
 // Namespace zm_utility
 // Params 7, eflags: 0x1 linked
+// namespace_172ba133<file_0>::function_d0c5bf3
 // Checksum 0xa49f2bb2, Offset: 0x660
 // Size: 0xdc
 function zm_ui_infotext(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -156,6 +168,7 @@ function zm_ui_infotext(localclientnum, oldval, newval, bnewent, binitialsnap, f
 
     // Namespace zm_utility
     // Params 4, eflags: 0x1 linked
+    // namespace_172ba133<file_0>::function_77810775
     // Checksum 0x195d843, Offset: 0x748
     // Size: 0x2b6
     function drawcylinder(pos, rad, height, color) {
@@ -175,6 +188,7 @@ function zm_ui_infotext(localclientnum, oldval, newval, bnewent, binitialsnap, f
 
 // Namespace zm_utility
 // Params 1, eflags: 0x1 linked
+// namespace_172ba133<file_0>::function_e2f52f03
 // Checksum 0xbf9f9b53, Offset: 0xa08
 // Size: 0xb0
 function umbra_fix_logic(localclientnum) {
@@ -195,6 +209,7 @@ function umbra_fix_logic(localclientnum) {
 
 // Namespace zm_utility
 // Params 5, eflags: 0x0
+// namespace_172ba133<file_0>::function_69b7e3f9
 // Checksum 0xcbf2edac, Offset: 0xac0
 // Size: 0x12e
 function umbra_fix_trigger(localclientnum, pos, height, radius, umbra_name) {

@@ -5,6 +5,7 @@
 
 // Namespace namespace_219c76cc
 // Params 0, eflags: 0x0
+// namespace_219c76cc<file_0>::function_d290ebfa
 // Checksum 0x151b9530, Offset: 0x200
 // Size: 0xab
 function main() {

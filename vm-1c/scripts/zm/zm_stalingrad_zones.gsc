@@ -17,6 +17,7 @@
 
 // Namespace namespace_521a050e
 // Params 0, eflags: 0x1 linked
+// namespace_521a050e<file_0>::function_c35e6aab
 // Checksum 0x386efe02, Offset: 0x740
 // Size: 0x2424
 function init() {

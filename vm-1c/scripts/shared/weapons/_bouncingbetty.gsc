@@ -13,6 +13,7 @@
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_1463e4e5
 // Checksum 0xc22a486c, Offset: 0x468
 // Size: 0x2d4
 function init_shared() {
@@ -46,6 +47,7 @@ function init_shared() {
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_50f16166
 // Checksum 0x68c82c49, Offset: 0x748
 // Size: 0x64
 function register() {
@@ -57,6 +59,7 @@ function register() {
 
     // Namespace bouncingbetty
     // Params 0, eflags: 0x1 linked
+    // namespace_c147e610<file_0>::function_e889d2f4
     // Checksum 0x69a91686, Offset: 0x7b8
     // Size: 0x1ee
     function bouncingbettydvarupdate() {
@@ -81,6 +84,7 @@ function register() {
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_7f5b3680
 // Checksum 0x21dbe58c, Offset: 0x9b0
 // Size: 0x1b8
 function createbouncingbettywatcher() {
@@ -107,6 +111,7 @@ function createbouncingbettywatcher() {
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_f2256059
 // Checksum 0xee4e0a1c, Offset: 0xb70
 // Size: 0x74
 function onbouncingbettyfizzleout() {
@@ -121,6 +126,7 @@ function onbouncingbettyfizzleout() {
 
 // Namespace bouncingbetty
 // Params 2, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_ac7cfcde
 // Checksum 0x956ae8b5, Offset: 0xbf0
 // Size: 0xac
 function onspawnbouncingbetty(watcher, owner) {
@@ -135,6 +141,7 @@ function onspawnbouncingbetty(watcher, owner) {
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_97410d9e
 // Checksum 0xab87753b, Offset: 0xca8
 // Size: 0x5e
 function trackusedstatondeath() {
@@ -150,6 +157,7 @@ function trackusedstatondeath() {
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_cf148182
 // Checksum 0x57835688, Offset: 0xd10
 // Size: 0x2a
 function donotrackusedstatonpickup() {
@@ -160,6 +168,7 @@ function donotrackusedstatonpickup() {
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_829da249
 // Checksum 0x70bb5f68, Offset: 0xd48
 // Size: 0x42
 function trackusedonhack() {
@@ -171,6 +180,7 @@ function trackusedonhack() {
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_c284f8f6
 // Checksum 0xace15d4b, Offset: 0xd98
 // Size: 0x54
 function trackbouncingbettyasused() {
@@ -181,6 +191,7 @@ function trackbouncingbettyasused() {
 
 // Namespace bouncingbetty
 // Params 1, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_3f5eea16
 // Checksum 0xaf8469e2, Offset: 0xdf8
 // Size: 0x96
 function trackonowner(owner) {
@@ -199,6 +210,7 @@ function trackonowner(owner) {
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_d79a0fc2
 // Checksum 0x95e6a23, Offset: 0xe98
 // Size: 0x2a4
 function spawnminemover() {
@@ -229,6 +241,7 @@ function spawnminemover() {
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_803bcbd8
 // Checksum 0xe7f9b829, Offset: 0x1148
 // Size: 0x54
 function killminemoveronpickup() {
@@ -239,6 +252,7 @@ function killminemoveronpickup() {
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_69a47d0b
 // Checksum 0x6e34f188, Offset: 0x11a8
 // Size: 0x5c
 function killminemover() {
@@ -252,6 +266,7 @@ function killminemover() {
 
 // Namespace bouncingbetty
 // Params 3, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_4b635aa8
 // Checksum 0xbb0528b2, Offset: 0x1210
 // Size: 0x15c
 function bouncingbettydetonate(attacker, weapon, target) {
@@ -278,6 +293,7 @@ function bouncingbettydetonate(attacker, weapon, target) {
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_77f8c581
 // Checksum 0x518785ed, Offset: 0x1378
 // Size: 0xdc
 function bouncingbettydestroyed() {
@@ -293,6 +309,7 @@ function bouncingbettydestroyed() {
 
 // Namespace bouncingbetty
 // Params 0, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_2c27da
 // Checksum 0x58dec02a, Offset: 0x1460
 // Size: 0x114
 function bouncingbettyjumpandexplode() {
@@ -311,6 +328,7 @@ function bouncingbettyjumpandexplode() {
 
 // Namespace bouncingbetty
 // Params 2, eflags: 0x1 linked
+// namespace_c147e610<file_0>::function_4b5259b
 // Checksum 0x76eb6742, Offset: 0x1580
 // Size: 0x17c
 function mineexplode(explosiondir, explodepos) {

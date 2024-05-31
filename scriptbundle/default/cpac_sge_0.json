@@ -1,0 +1,11 @@
+{
+    "vmtype": "none",
+    "name": "cpac_sge_0",
+    "igdtseqnum": 149,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Untouched",
+    "challengeDetails": "ACCOLADES_SGEN_0",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_SGEN_0_NAME",
+    "challengeReference": "MISSION_SGEN_UNTOUCHED"
+}

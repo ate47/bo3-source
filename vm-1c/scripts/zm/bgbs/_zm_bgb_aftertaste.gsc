@@ -13,6 +13,7 @@
 
 // Namespace zm_bgb_aftertaste
 // Params 0, eflags: 0x2
+// namespace_a2aa0712<file_0>::function_2dc19561
 // Checksum 0xcf8d4385, Offset: 0x1d8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,6 +22,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_aftertaste
 // Params 0, eflags: 0x1 linked
+// namespace_a2aa0712<file_0>::function_8c87d8eb
 // Checksum 0xe0eca87a, Offset: 0x218
 // Size: 0x7c
 function __init__() {
@@ -33,6 +35,7 @@ function __init__() {
 
 // Namespace zm_bgb_aftertaste
 // Params 3, eflags: 0x1 linked
+// namespace_a2aa0712<file_0>::function_229a2615
 // Checksum 0x259233de, Offset: 0x2a0
 // Size: 0x9c
 function lost_perk_override(perk, var_2488e46a, var_24df4040) {
@@ -53,6 +56,7 @@ function lost_perk_override(perk, var_2488e46a, var_24df4040) {
 
 // Namespace zm_bgb_aftertaste
 // Params 0, eflags: 0x1 linked
+// namespace_a2aa0712<file_0>::function_279e4e97
 // Checksum 0x7705807e, Offset: 0x348
 // Size: 0x58
 function event() {

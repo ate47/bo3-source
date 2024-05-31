@@ -10,6 +10,7 @@
 
 // Namespace glaive
 // Params 0, eflags: 0x2
+// namespace_2eff3919<file_0>::function_d290ebfa
 // Checksum 0xcbdf1820, Offset: 0x1b0
 // Size: 0x4c
 function autoexec main() {
@@ -18,6 +19,7 @@ function autoexec main() {
 
 // Namespace glaive
 // Params 7, eflags: 0x4
+// namespace_2eff3919<file_0>::function_9e7195d7
 // Checksum 0x4f87c05d, Offset: 0x208
 // Size: 0xdc
 function private function_9e7195d7(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {

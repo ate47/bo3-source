@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_eth_pro_03",
+    "type": "collectible",
+    "igdtseqnum": 47,
+    "uiMaterial": "t7_icon_menu_p7_nc_eth_pro_03",
+    "uiModelWithStand": "p7_nc_eth_pro_03_with_stand",
+    "uiModel": "p7_nc_eth_pro_03",
+    "description": "COLLECTIBLE_P7_NC_ETH_PRO_03_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_ETH_PRO_03_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_EGA_CAP",
+    "displayNameShort": "COLLECTIBLE_P7_NC_ETH_PRO_03_SHORT",
+    "codexurl": "Collectables-EgyptianArmyDressUniformCap.htm",
+    "slotSize": 0
+}

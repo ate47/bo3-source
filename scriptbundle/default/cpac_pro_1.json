@@ -1,0 +1,11 @@
+{
+    "vmtype": "none",
+    "name": "cpac_pro_1",
+    "igdtseqnum": 112,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Score",
+    "challengeDetails": "ACCOLADES_PRO_1",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_PRO_1_NAME",
+    "challengeReference": "MISSION_PROLOGUE_SCORE"
+}

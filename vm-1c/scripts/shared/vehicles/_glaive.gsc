@@ -21,6 +21,7 @@
 
 // Namespace glaive
 // Params 0, eflags: 0x2
+// namespace_2eff3919<file_0>::function_2dc19561
 // Checksum 0xc65501a6, Offset: 0x490
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -29,6 +30,7 @@ function autoexec function_2dc19561() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
+// namespace_2eff3919<file_0>::function_8c87d8eb
 // Checksum 0x69361ae6, Offset: 0x4d0
 // Size: 0x5c
 function __init__() {
@@ -38,6 +40,7 @@ function __init__() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
+// namespace_2eff3919<file_0>::function_4178dbae
 // Checksum 0x7cb1107b, Offset: 0x538
 // Size: 0x1fc
 function function_4178dbae() {
@@ -70,6 +73,7 @@ function function_4178dbae() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
+// namespace_2eff3919<file_0>::function_b272dd98
 // Checksum 0xc67725d3, Offset: 0x740
 // Size: 0x108
 function defaultrole() {
@@ -87,6 +91,7 @@ function defaultrole() {
 
 // Namespace glaive
 // Params 1, eflags: 0x4
+// namespace_2eff3919<file_0>::function_cb8b2163
 // Checksum 0x76ea15bd, Offset: 0x850
 // Size: 0x206
 function private function_cb8b2163(target) {
@@ -127,6 +132,7 @@ function private function_cb8b2163(target) {
 
 // Namespace glaive
 // Params 0, eflags: 0x4
+// namespace_2eff3919<file_0>::function_7ab362db
 // Checksum 0xb97e2ba5, Offset: 0xa60
 // Size: 0xda
 function private function_7ab362db() {
@@ -141,6 +147,7 @@ function private function_7ab362db() {
 
 // Namespace glaive
 // Params 0, eflags: 0x4
+// namespace_2eff3919<file_0>::function_ad866c00
 // Checksum 0x23481364, Offset: 0xb48
 // Size: 0x158
 function private function_ad866c00() {
@@ -181,6 +188,7 @@ function private function_ad866c00() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
+// namespace_2eff3919<file_0>::function_6996ae57
 // Checksum 0x9e73debc, Offset: 0xca8
 // Size: 0x68
 function function_6996ae57() {
@@ -196,6 +204,7 @@ function function_6996ae57() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
+// namespace_2eff3919<file_0>::function_1aae8db0
 // Checksum 0xe1e666d2, Offset: 0xd18
 // Size: 0x136
 function function_1aae8db0() {
@@ -215,6 +224,7 @@ function function_1aae8db0() {
 
 // Namespace glaive
 // Params 1, eflags: 0x0
+// namespace_2eff3919<file_0>::function_d4988dfc
 // Checksum 0xaab219e8, Offset: 0xe58
 // Size: 0x2c
 function state_combat_enter(params) {
@@ -223,6 +233,7 @@ function state_combat_enter(params) {
 
 // Namespace glaive
 // Params 1, eflags: 0x0
+// namespace_2eff3919<file_0>::function_c637f0c1
 // Checksum 0xada6e9d5, Offset: 0xe90
 // Size: 0x664
 function state_combat_update(params) {
@@ -308,6 +319,7 @@ function state_combat_update(params) {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
+// namespace_2eff3919<file_0>::function_ce82716
 // Checksum 0x5dc2d6b9, Offset: 0x1500
 // Size: 0x9e
 function function_ce82716() {
@@ -321,6 +333,7 @@ function function_ce82716() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
+// namespace_2eff3919<file_0>::function_3f19103d
 // Checksum 0xb576a5b1, Offset: 0x15a8
 // Size: 0x2a4
 function function_3f19103d() {
@@ -353,6 +366,7 @@ function function_3f19103d() {
 
 // Namespace glaive
 // Params 1, eflags: 0x0
+// namespace_2eff3919<file_0>::function_6727edba
 // Checksum 0xab0f88e, Offset: 0x1858
 // Size: 0xd6
 function function_6727edba(enemy) {
@@ -379,6 +393,7 @@ function function_6727edba(enemy) {
 
 // Namespace glaive
 // Params 1, eflags: 0x0
+// namespace_2eff3919<file_0>::function_14d89a82
 // Checksum 0x1902385b, Offset: 0x1938
 // Size: 0x46c
 function function_14d89a82(params) {
@@ -428,6 +443,7 @@ function function_14d89a82(params) {
 
 // Namespace glaive
 // Params 1, eflags: 0x0
+// namespace_2eff3919<file_0>::function_e25879ca
 // Checksum 0xcef14ae6, Offset: 0x1db0
 // Size: 0x26
 function function_e25879ca(duration) {
@@ -438,6 +454,7 @@ function function_e25879ca(duration) {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
+// namespace_2eff3919<file_0>::function_bd13793a
 // Checksum 0xf61aa770, Offset: 0x1de0
 // Size: 0x3fc
 function function_bd13793a() {
@@ -484,6 +501,7 @@ function function_bd13793a() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
+// namespace_2eff3919<file_0>::function_7ffdbe09
 // Checksum 0x6a191cec, Offset: 0x21e8
 // Size: 0x364
 function function_7ffdbe09() {
@@ -535,6 +553,7 @@ function function_7ffdbe09() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
+// namespace_2eff3919<file_0>::function_11952f05
 // Checksum 0xe7f1298f, Offset: 0x2558
 // Size: 0xb6
 function function_11952f05() {
@@ -547,6 +566,7 @@ function function_11952f05() {
 
 // Namespace glaive
 // Params 0, eflags: 0x0
+// namespace_2eff3919<file_0>::function_adad389c
 // Checksum 0x6ce0f1cc, Offset: 0x2618
 // Size: 0x12a
 function function_adad389c() {
@@ -560,6 +580,7 @@ function function_adad389c() {
 
 // Namespace glaive
 // Params 4, eflags: 0x0
+// namespace_2eff3919<file_0>::function_226d16ed
 // Checksum 0xb795b7da, Offset: 0x2750
 // Size: 0x26
 function function_226d16ed(einflictor, eattacker, smeansofdeath, weapon) {
@@ -568,6 +589,7 @@ function function_226d16ed(einflictor, eattacker, smeansofdeath, weapon) {
 
 // Namespace glaive
 // Params 15, eflags: 0x0
+// namespace_2eff3919<file_0>::function_c6e986c3
 // Checksum 0x29abda7d, Offset: 0x2780
 // Size: 0x80
 function function_c6e986c3(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {

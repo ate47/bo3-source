@@ -8,6 +8,7 @@
 
 // Namespace zm_powerup_nuke
 // Params 0, eflags: 0x2
+// namespace_a647745d<file_0>::function_2dc19561
 // Checksum 0x73611491, Offset: 0x150
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,6 +17,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_nuke
 // Params 0, eflags: 0x1 linked
+// namespace_a647745d<file_0>::function_8c87d8eb
 // Checksum 0x730244fa, Offset: 0x190
 // Size: 0xc4
 function __init__() {
@@ -27,6 +29,7 @@ function __init__() {
 
 // Namespace zm_powerup_nuke
 // Params 7, eflags: 0x1 linked
+// namespace_a647745d<file_0>::function_71dcdc77
 // Checksum 0xed743393, Offset: 0x260
 // Size: 0x54
 function zombie_nuked(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

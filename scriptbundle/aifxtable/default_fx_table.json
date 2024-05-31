@@ -1,0 +1,10 @@
+{
+    "vmtype": "client",
+    "surfacefxtable_landing": "player_jump_start",
+    "configstringfiletype": "scriptbundle",
+    "surfacefxtable_vtollanding": "player_vtol_drop",
+    "name": "default_fx_table",
+    "type": "aifxtable",
+    "surfacefxtable_footstep": "player_footstep",
+    "surfacefxtable_jumping": "player_jump_start"
+}

@@ -14,6 +14,7 @@
 
 // Namespace armor
 // Params 0, eflags: 0x2
+// namespace_5e52c0f2<file_0>::function_2dc19561
 // Checksum 0xbb9ee106, Offset: 0x4d8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -22,6 +23,7 @@ function autoexec function_2dc19561() {
 
 // Namespace armor
 // Params 0, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_8c87d8eb
 // Checksum 0xe26d26b, Offset: 0x518
 // Size: 0x144
 function __init__() {
@@ -37,6 +39,7 @@ function __init__() {
 
 // Namespace armor
 // Params 1, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_24782613
 // Checksum 0xe841b40b, Offset: 0x668
 // Size: 0x22
 function function_24782613(slot) {
@@ -45,6 +48,7 @@ function function_24782613(slot) {
 
 // Namespace armor
 // Params 1, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_e4e11f03
 // Checksum 0x38b17ccc, Offset: 0x698
 // Size: 0x22
 function function_e4e11f03(slot) {
@@ -53,6 +57,7 @@ function function_e4e11f03(slot) {
 
 // Namespace armor
 // Params 2, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_9b27736e
 // Checksum 0xfafd890f, Offset: 0x6c8
 // Size: 0x34
 function function_9b27736e(slot, weapon) {
@@ -61,6 +66,7 @@ function function_9b27736e(slot, weapon) {
 
 // Namespace armor
 // Params 2, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_f593f079
 // Checksum 0xdcd54c3b, Offset: 0x708
 // Size: 0x4c
 function function_f593f079(slot, weapon) {
@@ -71,6 +77,7 @@ function function_f593f079(slot, weapon) {
 
 // Namespace armor
 // Params 2, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_c03e583
 // Checksum 0xa874831f, Offset: 0x760
 // Size: 0x34
 function function_c03e583(slot, weapon) {
@@ -79,6 +86,7 @@ function function_c03e583(slot, weapon) {
 
 // Namespace armor
 // Params 0, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_362bc1a8
 // Checksum 0x99ec1590, Offset: 0x7a0
 // Size: 0x4
 function function_362bc1a8() {
@@ -87,6 +95,7 @@ function function_362bc1a8() {
 
 // Namespace armor
 // Params 2, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_27d2ab93
 // Checksum 0x3850d83c, Offset: 0x7b0
 // Size: 0xec
 function function_27d2ab93(slot, weapon) {
@@ -104,6 +113,7 @@ function function_27d2ab93(slot, weapon) {
 
 // Namespace armor
 // Params 2, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_ef8f7527
 // Checksum 0xf72bc618, Offset: 0x8a8
 // Size: 0xf0
 function function_ef8f7527(slot, weapon) {
@@ -123,6 +133,7 @@ function function_ef8f7527(slot, weapon) {
 
 // Namespace armor
 // Params 2, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_29961c34
 // Checksum 0xfcda46fe, Offset: 0x9a0
 // Size: 0xcc
 function function_29961c34(slot, weapon) {
@@ -143,6 +154,7 @@ function function_29961c34(slot, weapon) {
 
 // Namespace armor
 // Params 2, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_39b1b87b
 // Checksum 0x111dc023, Offset: 0xa78
 // Size: 0x9c
 function function_39b1b87b(status, time) {
@@ -157,6 +169,7 @@ function function_39b1b87b(status, time) {
 
 // Namespace armor
 // Params 1, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_46ec01fd
 // Checksum 0xedae2673, Offset: 0xb20
 // Size: 0x15a
 function function_46ec01fd(smeansofdeath) {
@@ -191,6 +204,7 @@ function function_46ec01fd(smeansofdeath) {
 
 // Namespace armor
 // Params 2, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_db3ccbce
 // Checksum 0xfda1f5b7, Offset: 0xc88
 // Size: 0x8a
 function function_db3ccbce(weapon, smeansofdeath) {
@@ -233,6 +247,7 @@ function function_db3ccbce(weapon, smeansofdeath) {
 
 // Namespace armor
 // Params 4, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_4a835afe
 // Checksum 0x935fd1f8, Offset: 0xdc0
 // Size: 0x9c
 function function_4a835afe(eattacker, weapon, smeansofdeath, shitloc) {
@@ -250,6 +265,7 @@ function function_4a835afe(eattacker, weapon, smeansofdeath, shitloc) {
 
 // Namespace armor
 // Params 11, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_37346b5a
 // Checksum 0x6bff7fcf, Offset: 0xe68
 // Size: 0x2d0
 function function_37346b5a(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, modelindex, psoffsettime) {
@@ -291,6 +307,7 @@ function function_37346b5a(einflictor, eattacker, idamage, idflags, smeansofdeat
 
 // Namespace armor
 // Params 1, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_edc0b538
 // Checksum 0x5e2682ff, Offset: 0x1140
 // Size: 0x2c
 function function_edc0b538(val) {
@@ -301,6 +318,7 @@ function function_edc0b538(val) {
 
 // Namespace armor
 // Params 2, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_98b378e
 // Checksum 0x6a14ee13, Offset: 0x1178
 // Size: 0x20c
 function function_98b378e(slot, weapon) {

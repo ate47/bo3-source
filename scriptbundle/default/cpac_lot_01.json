@@ -1,0 +1,11 @@
+{
+    "vmtype": "none",
+    "name": "cpac_lot_01",
+    "igdtseqnum": 80,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Score",
+    "challengeDetails": "ACCOLADES_LOT_1",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_LOT_1_NAME",
+    "challengeReference": "MISSION_LOTUS_SCORE"
+}

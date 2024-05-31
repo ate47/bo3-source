@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_newworld_10",
+    "igdtseqnum": 97,
+    "challengeWidget": "Kills",
+    "challengeDetails": "ACCOLADES_NEW_10",
+    "challengeName": "ACCOLADES_NEW_10_NAME",
+    "centerText": "3",
+    "challengeReference": "MISSION_NEWWORLD_CHALLENGE10"
+}

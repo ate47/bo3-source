@@ -9,6 +9,7 @@
 
 // Namespace armor
 // Params 1, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_211deefa
 // Checksum 0xc4148b87, Offset: 0x148
 // Size: 0xec
 function setlightarmorhp(newvalue) {
@@ -27,6 +28,7 @@ function setlightarmorhp(newvalue) {
 
 // Namespace armor
 // Params 1, eflags: 0x0
+// namespace_5e52c0f2<file_0>::function_3a9a7962
 // Checksum 0x8c781c9f, Offset: 0x240
 // Size: 0xb4
 function setlightarmor(optionalarmorvalue) {
@@ -46,6 +48,7 @@ function setlightarmor(optionalarmorvalue) {
 
 // Namespace armor
 // Params 0, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_12080d97
 // Checksum 0xba7ec9f2, Offset: 0x300
 // Size: 0x44
 function removelightarmorondeath() {
@@ -58,6 +61,7 @@ function removelightarmorondeath() {
 
 // Namespace armor
 // Params 0, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_7067e3a9
 // Checksum 0x602433bd, Offset: 0x350
 // Size: 0x2a
 function unsetlightarmor() {
@@ -67,6 +71,7 @@ function unsetlightarmor() {
 
 // Namespace armor
 // Params 0, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_500c4c09
 // Checksum 0x2bf70c92, Offset: 0x388
 // Size: 0x3c
 function removelightarmoronmatchend() {
@@ -78,6 +83,7 @@ function removelightarmoronmatchend() {
 
 // Namespace armor
 // Params 0, eflags: 0x0
+// namespace_5e52c0f2<file_0>::function_8963677a
 // Checksum 0x62d02b25, Offset: 0x3d0
 // Size: 0x1a
 function haslightarmor() {
@@ -86,6 +92,7 @@ function haslightarmor() {
 
 // Namespace armor
 // Params 0, eflags: 0x1 linked
+// namespace_5e52c0f2<file_0>::function_3e7fdc00
 // Checksum 0x5530d2f0, Offset: 0x3f8
 // Size: 0x1a
 function function_3e7fdc00() {

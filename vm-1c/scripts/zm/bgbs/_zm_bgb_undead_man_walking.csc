@@ -9,6 +9,7 @@
 
 // Namespace zm_bgb_undead_man_walking
 // Params 0, eflags: 0x2
+// namespace_8438ffb3<file_0>::function_2dc19561
 // Checksum 0xba2db1d1, Offset: 0x150
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_undead_man_walking
 // Params 0, eflags: 0x1 linked
+// namespace_8438ffb3<file_0>::function_8c87d8eb
 // Checksum 0x17fb5b72, Offset: 0x190
 // Size: 0x3c
 function __init__() {

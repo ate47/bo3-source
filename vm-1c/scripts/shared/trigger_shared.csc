@@ -2,6 +2,7 @@
 
 // Namespace trigger
 // Params 3, eflags: 0x1 linked
+// namespace_4dbf3ae3<file_0>::function_d1278be0
 // Checksum 0x369ef334, Offset: 0x78
 // Size: 0xfc
 function function_thread(ent, on_enter_payload, on_exit_payload) {
@@ -26,6 +27,7 @@ function function_thread(ent, on_enter_payload, on_exit_payload) {
 
 // Namespace trigger
 // Params 1, eflags: 0x1 linked
+// namespace_4dbf3ae3<file_0>::function_7a6a7d29
 // Checksum 0xeaf7149e, Offset: 0x180
 // Size: 0x70
 function ent_already_in(trig) {
@@ -43,6 +45,7 @@ function ent_already_in(trig) {
 
 // Namespace trigger
 // Params 2, eflags: 0x1 linked
+// namespace_4dbf3ae3<file_0>::function_b0528fc4
 // Checksum 0x196bfb39, Offset: 0x1f8
 // Size: 0x62
 function add_to_ent(ent, trig) {
@@ -54,6 +57,7 @@ function add_to_ent(ent, trig) {
 
 // Namespace trigger
 // Params 2, eflags: 0x1 linked
+// namespace_4dbf3ae3<file_0>::function_4855edfa
 // Checksum 0x9138aded, Offset: 0x268
 // Size: 0x82
 function remove_from_ent(ent, trig) {
@@ -68,6 +72,7 @@ function remove_from_ent(ent, trig) {
 
 // Namespace trigger
 // Params 2, eflags: 0x0
+// namespace_4dbf3ae3<file_0>::function_ba9821ce
 // Checksum 0xfd01048d, Offset: 0x2f8
 // Size: 0x44
 function death_monitor(ent, ender) {

@@ -1,0 +1,9 @@
+{
+    "vmtype": "none",
+    "name": "cpac_inf_03",
+    "igdtseqnum": 64,
+    "challengeWidget": "TrickShot",
+    "challengeDetails": "ACCOLADES_INF_3",
+    "challengeName": "ACCOLADES_INF_3_NAME",
+    "challengeReference": "MISSION_INFECTION_CHALLENGE3"
+}

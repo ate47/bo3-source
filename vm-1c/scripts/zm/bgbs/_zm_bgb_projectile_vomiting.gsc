@@ -11,6 +11,7 @@
 
 // Namespace namespace_a5a0319c
 // Params 0, eflags: 0x2
+// namespace_a5a0319c<file_0>::function_2dc19561
 // Checksum 0xf631c93, Offset: 0x210
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,6 +20,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_a5a0319c
 // Params 0, eflags: 0x1 linked
+// namespace_a5a0319c<file_0>::function_8c87d8eb
 // Checksum 0x34d7b1e0, Offset: 0x250
 // Size: 0xb4
 function __init__() {
@@ -32,6 +34,7 @@ function __init__() {
 
 // Namespace namespace_a5a0319c
 // Params 0, eflags: 0x1 linked
+// namespace_a5a0319c<file_0>::function_bae40a28
 // Checksum 0x99ec1590, Offset: 0x310
 // Size: 0x4
 function enable() {
@@ -40,6 +43,7 @@ function enable() {
 
 // Namespace namespace_a5a0319c
 // Params 0, eflags: 0x1 linked
+// namespace_a5a0319c<file_0>::function_54bdb053
 // Checksum 0x99ec1590, Offset: 0x320
 // Size: 0x4
 function disable() {
@@ -48,6 +52,7 @@ function disable() {
 
 // Namespace namespace_a5a0319c
 // Params 1, eflags: 0x1 linked
+// namespace_a5a0319c<file_0>::function_5cb5de6
 // Checksum 0xad3199e8, Offset: 0x330
 // Size: 0x76
 function actor_death_override(attacker) {

@@ -13,6 +13,7 @@
 
 // Namespace threat_detector
 // Params 0, eflags: 0x2
+// namespace_226b51d2<file_0>::function_2dc19561
 // Checksum 0x2a0046f6, Offset: 0x260
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,6 +22,7 @@ function autoexec function_2dc19561() {
 
 // Namespace threat_detector
 // Params 0, eflags: 0x1 linked
+// namespace_226b51d2<file_0>::function_8c87d8eb
 // Checksum 0xc727a561, Offset: 0x2a0
 // Size: 0x54
 function __init__() {
@@ -30,6 +32,7 @@ function __init__() {
 
 // Namespace threat_detector
 // Params 0, eflags: 0x1 linked
+// namespace_226b51d2<file_0>::function_22766af5
 // Checksum 0x26dbcc5f, Offset: 0x300
 // Size: 0xcc
 function function_22766af5() {
@@ -45,6 +48,7 @@ function function_22766af5() {
 
 // Namespace threat_detector
 // Params 2, eflags: 0x1 linked
+// namespace_226b51d2<file_0>::function_8a24ecfd
 // Checksum 0xe7b5e964, Offset: 0x3d8
 // Size: 0x104
 function function_8a24ecfd(watcher, player) {
@@ -61,6 +65,7 @@ function function_8a24ecfd(watcher, player) {
 
 // Namespace threat_detector
 // Params 1, eflags: 0x1 linked
+// namespace_226b51d2<file_0>::function_5aadfa85
 // Checksum 0x7d336d0d, Offset: 0x4e8
 // Size: 0x74
 function function_5aadfa85(owner) {
@@ -75,6 +80,7 @@ function function_5aadfa85(owner) {
 
 // Namespace threat_detector
 // Params 1, eflags: 0x0
+// namespace_226b51d2<file_0>::function_eaae596a
 // Checksum 0x92dcaf36, Offset: 0x568
 // Size: 0x7c
 function function_eaae596a(victim) {
@@ -89,6 +95,7 @@ function function_eaae596a(victim) {
 
 // Namespace threat_detector
 // Params 3, eflags: 0x1 linked
+// namespace_226b51d2<file_0>::function_eee03df4
 // Checksum 0x9fff7f31, Offset: 0x5f0
 // Size: 0x104
 function function_eee03df4(attacker, weapon, target) {
@@ -107,6 +114,7 @@ function function_eee03df4(attacker, weapon, target) {
 
 // Namespace threat_detector
 // Params 1, eflags: 0x1 linked
+// namespace_226b51d2<file_0>::function_7b7421df
 // Checksum 0xabd7ef3c, Offset: 0x700
 // Size: 0x34a
 function function_7b7421df(watcher) {

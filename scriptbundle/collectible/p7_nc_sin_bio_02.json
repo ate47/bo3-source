@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_sin_bio_02",
+    "type": "collectible",
+    "igdtseqnum": 51,
+    "uiMaterial": "t7_icon_menu_p7_nc_sin_bio_02",
+    "uiModel": "p7_nc_sin_bio_02",
+    "description": "COLLECTIBLE_P7_NC_SIN_BIO_02_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_SIN_BIO_02_LONG",
+    "audiolog_sound": "vox_safe_slave_collar_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_DUD_SLAVE_COLLAR",
+    "displayNameShort": "COLLECTIBLE_P7_NC_SIN_BIO_02_SHORT",
+    "codexurl": "Collectables-DudSlaveCollar.htm",
+    "slotSize": 0
+}

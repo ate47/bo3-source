@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_inf_06",
+    "igdtseqnum": 67,
+    "challengeWidget": "HeavyWeapon",
+    "challengeDetails": "ACCOLADES_INF_6",
+    "challengeName": "ACCOLADES_INF_6_NAME",
+    "centerText": "5",
+    "challengeReference": "MISSION_INFECTION_CHALLENGE6"
+}

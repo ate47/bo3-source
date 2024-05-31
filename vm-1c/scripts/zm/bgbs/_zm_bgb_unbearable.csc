@@ -10,6 +10,7 @@
 
 // Namespace zm_bgb_unbearable
 // Params 0, eflags: 0x2
+// namespace_144de88e<file_0>::function_2dc19561
 // Checksum 0x6a21cc2c, Offset: 0x1a0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,6 +19,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_unbearable
 // Params 0, eflags: 0x1 linked
+// namespace_144de88e<file_0>::function_8c87d8eb
 // Checksum 0x64aaf439, Offset: 0x1e0
 // Size: 0x9e
 function __init__() {
@@ -31,6 +33,7 @@ function __init__() {
 
 // Namespace zm_bgb_unbearable
 // Params 7, eflags: 0x1 linked
+// namespace_144de88e<file_0>::function_cd297226
 // Checksum 0x549d0cef, Offset: 0x288
 // Size: 0x9c
 function function_cd297226(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

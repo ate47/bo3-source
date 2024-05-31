@@ -13,6 +13,7 @@
 
 // Namespace zm_powerup_insta_kill
 // Params 0, eflags: 0x2
+// namespace_e01d98c2<file_0>::function_2dc19561
 // Checksum 0x534c7878, Offset: 0x2a0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,6 +22,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_insta_kill
 // Params 0, eflags: 0x1 linked
+// namespace_e01d98c2<file_0>::function_8c87d8eb
 // Checksum 0xee8e4298, Offset: 0x2e0
 // Size: 0xbc
 function __init__() {
@@ -32,6 +34,7 @@ function __init__() {
 
 // Namespace zm_powerup_insta_kill
 // Params 1, eflags: 0x1 linked
+// namespace_e01d98c2<file_0>::function_325911de
 // Checksum 0x1323b5c4, Offset: 0x3a8
 // Size: 0x44
 function grab_insta_kill(player) {
@@ -41,6 +44,7 @@ function grab_insta_kill(player) {
 
 // Namespace zm_powerup_insta_kill
 // Params 2, eflags: 0x1 linked
+// namespace_e01d98c2<file_0>::function_72bf79b0
 // Checksum 0x93677335, Offset: 0x3f8
 // Size: 0x1c8
 function insta_kill_powerup(drop_item, player) {

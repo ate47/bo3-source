@@ -10,6 +10,7 @@
 
 // Namespace zm_bgb_power_vacuum
 // Params 0, eflags: 0x2
+// namespace_6cf54cb6<file_0>::function_2dc19561
 // Checksum 0xa3aebfb3, Offset: 0x168
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,6 +19,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_power_vacuum
 // Params 0, eflags: 0x1 linked
+// namespace_6cf54cb6<file_0>::function_8c87d8eb
 // Checksum 0x3550de5f, Offset: 0x1a8
 // Size: 0x5c
 function __init__() {
@@ -29,6 +31,7 @@ function __init__() {
 
 // Namespace zm_bgb_power_vacuum
 // Params 0, eflags: 0x1 linked
+// namespace_6cf54cb6<file_0>::function_bae40a28
 // Checksum 0xf6c1e19d, Offset: 0x210
 // Size: 0x6c
 function enable() {
@@ -45,6 +48,7 @@ function enable() {
 
 // Namespace zm_bgb_power_vacuum
 // Params 0, eflags: 0x1 linked
+// namespace_6cf54cb6<file_0>::function_54bdb053
 // Checksum 0x99ec1590, Offset: 0x288
 // Size: 0x4
 function disable() {

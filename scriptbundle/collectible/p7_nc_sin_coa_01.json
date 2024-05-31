@@ -1,0 +1,17 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_sin_coa_01",
+    "type": "collectible",
+    "igdtseqnum": 62,
+    "uiMaterial": "t7_icon_menu_p7_nc_sin_coa_01",
+    "uiModelWithStand": "p7_nc_sin_coa_01_with_stand",
+    "uiModel": "p7_nc_sin_coa_01",
+    "description": "COLLECTIBLE_P7_NC_SIN_COA_01_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_SIN_COA_01_LONG",
+    "audiolog_sound": "vox_safe_54i_datapad_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_54I_TABLET",
+    "displayNameShort": "COLLECTIBLE_P7_NC_SIN_COA_01_SHORT",
+    "codexurl": "Collectables-54IDatapad.htm",
+    "slotSize": 0
+}

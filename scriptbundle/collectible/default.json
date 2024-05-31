@@ -1,0 +1,9 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "default",
+    "type": "collectible",
+    "igdtseqnum": 12,
+    "uiModel": "tag_origin",
+    "slotSize": 0
+}

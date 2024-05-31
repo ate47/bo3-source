@@ -6,6 +6,7 @@
 
 // Namespace music
 // Params 0, eflags: 0x2
+// namespace_ccb8d056<file_0>::function_2dc19561
 // Checksum 0x77f7b329, Offset: 0xf0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -14,6 +15,7 @@ function autoexec function_2dc19561() {
 
 // Namespace music
 // Params 0, eflags: 0x1 linked
+// namespace_ccb8d056<file_0>::function_8c87d8eb
 // Checksum 0x8bb88893, Offset: 0x130
 // Size: 0x5c
 function __init__() {
@@ -26,6 +28,7 @@ function __init__() {
 
 // Namespace music
 // Params 2, eflags: 0x1 linked
+// namespace_ccb8d056<file_0>::function_c1cdedfb
 // Checksum 0xa2eaa94d, Offset: 0x198
 // Size: 0xa8
 function setmusicstate(state, player) {
@@ -45,6 +48,7 @@ function setmusicstate(state, player) {
 
 // Namespace music
 // Params 0, eflags: 0x1 linked
+// namespace_ccb8d056<file_0>::function_aebcf025
 // Checksum 0x201531c3, Offset: 0x248
 // Size: 0x9c
 function on_player_spawned() {

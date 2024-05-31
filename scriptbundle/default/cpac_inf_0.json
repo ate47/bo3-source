@@ -1,0 +1,11 @@
+{
+    "vmtype": "none",
+    "name": "cpac_inf_0",
+    "igdtseqnum": 61,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Untouched",
+    "challengeDetails": "ACCOLADES_INF_0",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_INF_0_NAME",
+    "challengeReference": "MISSION_INFECTION_UNTOUCHED"
+}

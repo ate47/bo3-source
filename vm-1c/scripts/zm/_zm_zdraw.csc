@@ -15,6 +15,7 @@
 
     // Namespace zm_zdraw
     // Params 0, eflags: 0x2
+    // namespace_3601a113<file_0>::function_2dc19561
     // Checksum 0x40ae5d3, Offset: 0x198
     // Size: 0x44
     function autoexec function_2dc19561() {
@@ -23,6 +24,7 @@
 
     // Namespace zm_zdraw
     // Params 0, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_8c87d8eb
     // Checksum 0xbcf0ce2d, Offset: 0x1e8
     // Size: 0x8c
     function __init__() {
@@ -36,6 +38,7 @@
 
     // Namespace zm_zdraw
     // Params 0, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_5b6b9132
     // Checksum 0xeb8facf, Offset: 0x280
     // Size: 0x8
     function __main__() {
@@ -44,6 +47,7 @@
 
     // Namespace zm_zdraw
     // Params 0, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_3e630288
     // Checksum 0x634bd6e3, Offset: 0x290
     // Size: 0x3be
     function function_3e630288() {
@@ -76,6 +80,7 @@
 
     // Namespace zm_zdraw
     // Params 0, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_aa8545fe
     // Checksum 0xf1be390b, Offset: 0x658
     // Size: 0x1d6
     function function_aa8545fe() {
@@ -95,6 +100,7 @@
 
     // Namespace zm_zdraw
     // Params 0, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_404ac348
     // Checksum 0x6298ca10, Offset: 0x838
     // Size: 0xf4
     function function_404ac348() {
@@ -111,6 +117,7 @@
 
     // Namespace zm_zdraw
     // Params 0, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_41fec76e
     // Checksum 0xc11a2415, Offset: 0x938
     // Size: 0xd8
     function function_41fec76e() {
@@ -130,6 +137,7 @@
 
     // Namespace zm_zdraw
     // Params 3, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_4282fd75
     // Checksum 0xe3d442e7, Offset: 0xa18
     // Size: 0xe4
     function function_4282fd75(var_859cfb21, startat, toplevel) {
@@ -151,6 +159,7 @@
 
     // Namespace zm_zdraw
     // Params 2, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_7bdd3089
     // Checksum 0x3dcfcace, Offset: 0xb08
     // Size: 0x16c
     function function_7bdd3089(var_859cfb21, startat) {
@@ -177,6 +186,7 @@
 
     // Namespace zm_zdraw
     // Params 2, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_f36ec3d2
     // Checksum 0x8c83621a, Offset: 0xc80
     // Size: 0x13c
     function function_f36ec3d2(var_859cfb21, startat) {
@@ -203,6 +213,7 @@
 
     // Namespace zm_zdraw
     // Params 2, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_be7cf134
     // Checksum 0xd7519ba1, Offset: 0xdc8
     // Size: 0x19c
     function function_be7cf134(var_859cfb21, startat) {
@@ -233,6 +244,7 @@
 
     // Namespace zm_zdraw
     // Params 2, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_3145e33f
     // Checksum 0x3f83e1b0, Offset: 0xf70
     // Size: 0x204
     function function_3145e33f(var_859cfb21, startat) {
@@ -268,6 +280,7 @@
 
     // Namespace zm_zdraw
     // Params 2, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_5ef6cf9b
     // Checksum 0x28301e68, Offset: 0x1180
     // Size: 0x17a
     function function_5ef6cf9b(var_859cfb21, startat) {
@@ -296,6 +309,7 @@
 
     // Namespace zm_zdraw
     // Params 2, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_eae4114a
     // Checksum 0x22d4065c, Offset: 0x1308
     // Size: 0xba
     function function_eae4114a(var_859cfb21, startat) {
@@ -314,6 +328,7 @@
 
     // Namespace zm_zdraw
     // Params 2, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_a13efe1c
     // Checksum 0x51378d73, Offset: 0x13d0
     // Size: 0xba
     function function_a13efe1c(var_859cfb21, startat) {
@@ -332,6 +347,7 @@
 
     // Namespace zm_zdraw
     // Params 2, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_f2f3c18e
     // Checksum 0xaecad868, Offset: 0x1498
     // Size: 0xea
     function function_f2f3c18e(var_859cfb21, startat) {
@@ -350,6 +366,7 @@
 
     // Namespace zm_zdraw
     // Params 2, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_8f04ad79
     // Checksum 0xfcc0d5ed, Offset: 0x1590
     // Size: 0xf2
     function function_8f04ad79(var_859cfb21, startat) {
@@ -368,6 +385,7 @@
 
     // Namespace zm_zdraw
     // Params 2, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_b3b92edc
     // Checksum 0xc3cbaee6, Offset: 0x1690
     // Size: 0xba
     function function_b3b92edc(var_859cfb21, startat) {
@@ -386,6 +404,7 @@
 
     // Namespace zm_zdraw
     // Params 2, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_8c2ca616
     // Checksum 0xfe5106db, Offset: 0x1758
     // Size: 0xce
     function function_8c2ca616(var_859cfb21, startat) {
@@ -404,6 +423,7 @@
 
     // Namespace zm_zdraw
     // Params 1, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_c0fb9425
     // Checksum 0x1c3ee0d0, Offset: 0x1830
     // Size: 0x88
     function function_c0fb9425(param) {
@@ -415,6 +435,7 @@
 
     // Namespace zm_zdraw
     // Params 2, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_36371547
     // Checksum 0xb60484ea, Offset: 0x18c0
     // Size: 0x260
     function function_36371547(var_859cfb21, startat) {
@@ -452,6 +473,7 @@
 
     // Namespace zm_zdraw
     // Params 2, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_33acda19
     // Checksum 0x24066f26, Offset: 0x1b28
     // Size: 0x8a
     function function_33acda19(var_859cfb21, startat) {
@@ -466,6 +488,7 @@
 
     // Namespace zm_zdraw
     // Params 2, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_ce50bae5
     // Checksum 0x2f7f683f, Offset: 0x1bc0
     // Size: 0x5a
     function function_ce50bae5(var_859cfb21, startat) {
@@ -478,6 +501,7 @@
 
     // Namespace zm_zdraw
     // Params 1, eflags: 0x1 linked
+    // namespace_3601a113<file_0>::function_c69caf7e
     // Checksum 0x8cafbd4a, Offset: 0x1c28
     // Size: 0x34
     function function_c69caf7e(msg) {

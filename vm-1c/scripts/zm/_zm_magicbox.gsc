@@ -23,6 +23,7 @@
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x2
+// namespace_4100e7e1<file_0>::function_2dc19561
 // Checksum 0x1c582414, Offset: 0x7c0
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -31,6 +32,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_8c87d8eb
 // Checksum 0x5d65ca71, Offset: 0x808
 // Size: 0x16c
 function __init__() {
@@ -48,6 +50,7 @@ function __init__() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_5b6b9132
 // Checksum 0x616753f4, Offset: 0x980
 // Size: 0xbc
 function __main__() {
@@ -69,6 +72,7 @@ function __main__() {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_bbab1cad
 // Checksum 0xc6a45f99, Offset: 0xa48
 // Size: 0x2f4
 function treasure_chest_init(start_chest_name) {
@@ -110,6 +114,7 @@ function treasure_chest_init(start_chest_name) {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_e41ca92a
 // Checksum 0x9bd6cc7f, Offset: 0xd48
 // Size: 0x3cc
 function init_starting_chest_location(start_chest_name) {
@@ -162,6 +167,7 @@ function init_starting_chest_location(start_chest_name) {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x0
+// namespace_4100e7e1<file_0>::function_a97ffa41
 // Checksum 0x4b961495, Offset: 0x1120
 // Size: 0x18
 function set_treasure_chest_cost(cost) {
@@ -170,6 +176,7 @@ function set_treasure_chest_cost(cost) {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_fc677805
 // Checksum 0x96ceed19, Offset: 0x1140
 // Size: 0x2a0
 function get_chest_pieces() {
@@ -201,6 +208,7 @@ function get_chest_pieces() {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_5ea78ad1
 // Checksum 0xcb44a37e, Offset: 0x13e8
 // Size: 0x90
 function boxtrigger_update_prompt(player) {
@@ -217,6 +225,7 @@ function boxtrigger_update_prompt(player) {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_b6852671
 // Checksum 0xe988b015, Offset: 0x1480
 // Size: 0x198
 function boxstub_update_prompt(player) {
@@ -248,6 +257,7 @@ function boxstub_update_prompt(player) {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_b2eeb9ea
 // Checksum 0x6100dbf1, Offset: 0x1620
 // Size: 0x22
 function default_magic_box_check_equipment(weapon) {
@@ -256,6 +266,7 @@ function default_magic_box_check_equipment(weapon) {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_78900720
 // Checksum 0xb6066895, Offset: 0x1650
 // Size: 0x178
 function trigger_visible_to_player(player) {
@@ -280,6 +291,7 @@ function trigger_visible_to_player(player) {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_bb7fc01f
 // Checksum 0x7b81af1d, Offset: 0x17d0
 // Size: 0x54
 function magicbox_unitrigger_think() {
@@ -292,6 +304,7 @@ function magicbox_unitrigger_think() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_7e3fe9e1
 // Checksum 0x6031fb69, Offset: 0x1830
 // Size: 0x24
 function play_crazi_sound() {
@@ -300,6 +313,7 @@ function play_crazi_sound() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_27dfe65c
 // Checksum 0xbc3b882c, Offset: 0x1860
 // Size: 0x10a
 function show_chest() {
@@ -317,6 +331,7 @@ function show_chest() {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_8ee1567f
 // Checksum 0xc39f2666, Offset: 0x1978
 // Size: 0x21c
 function hide_chest(doboxleave) {
@@ -347,6 +362,7 @@ function hide_chest(doboxleave) {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_ac70868
 // Checksum 0x7dad4ee4, Offset: 0x1ba0
 // Size: 0x4c
 function magic_box_zbarrier_leave() {
@@ -357,6 +373,7 @@ function magic_box_zbarrier_leave() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_121c1942
 // Checksum 0x2121959c, Offset: 0x1bf8
 // Size: 0x11c
 function default_pandora_fx_func() {
@@ -376,6 +393,7 @@ function default_pandora_fx_func() {
 
 // Namespace zm_magicbox
 // Params 3, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_54cec97d
 // Checksum 0x2f60e6a9, Offset: 0x1d20
 // Size: 0x94
 function default_pandora_show_func(anchor, anchortarget, pieces) {
@@ -390,6 +408,7 @@ function default_pandora_show_func(anchor, anchortarget, pieces) {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_7bcda4e
 // Checksum 0xd7b871be, Offset: 0x1dc0
 // Size: 0x44
 function unregister_unitrigger_on_kill_think() {
@@ -401,6 +420,7 @@ function unregister_unitrigger_on_kill_think() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_597887d
 // Checksum 0x154fa84c, Offset: 0x1e10
 // Size: 0xf04
 function treasure_chest_think() {
@@ -615,6 +635,7 @@ function treasure_chest_think() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_4ba099a4
 // Checksum 0x58c22f9b, Offset: 0x2d20
 // Size: 0x186
 function watch_for_emp_close() {
@@ -652,6 +673,7 @@ function watch_for_emp_close() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_f4d54a27
 // Checksum 0x46c5bf59, Offset: 0x2eb0
 // Size: 0xe2
 function can_buy_weapon() {
@@ -679,6 +701,7 @@ function can_buy_weapon() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_dc782885
 // Checksum 0x26a26b03, Offset: 0x2fa0
 // Size: 0x170
 function default_box_move_logic() {
@@ -706,6 +729,7 @@ function default_box_move_logic() {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_13157660
 // Checksum 0xc6a2ed1c, Offset: 0x3118
 // Size: 0x380
 function treasure_chest_move(player_vox) {
@@ -750,6 +774,7 @@ function treasure_chest_move(player_vox) {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_4d4cb529
 // Checksum 0x4ecc27b, Offset: 0x34a0
 // Size: 0xf4
 function fire_sale_fix() {
@@ -773,6 +798,7 @@ function fire_sale_fix() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x0
+// namespace_4100e7e1<file_0>::function_45dd6da1
 // Checksum 0xbe42826c, Offset: 0x35a0
 // Size: 0xee
 function check_for_desirable_chest_location() {
@@ -798,6 +824,7 @@ function check_for_desirable_chest_location() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x0
+// namespace_4100e7e1<file_0>::function_50af88b
 // Checksum 0x90e2ec1b, Offset: 0x3698
 // Size: 0x98
 function rotateroll_box() {
@@ -814,6 +841,7 @@ function rotateroll_box() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x0
+// namespace_4100e7e1<file_0>::function_5c649976
 // Checksum 0xa88e682f, Offset: 0x3738
 // Size: 0x8c
 function verify_chest_is_open() {
@@ -830,6 +858,7 @@ function verify_chest_is_open() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_26ce8514
 // Checksum 0x26656a14, Offset: 0x37d0
 // Size: 0x46
 function treasure_chest_timeout() {
@@ -842,6 +871,7 @@ function treasure_chest_timeout() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_ca693a19
 // Checksum 0x8fa3814c, Offset: 0x3820
 // Size: 0x94
 function treasure_chest_lid_open() {
@@ -854,6 +884,7 @@ function treasure_chest_lid_open() {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_d47278df
 // Checksum 0x6c36411c, Offset: 0x38c0
 // Size: 0x8a
 function treasure_chest_lid_close(timedout) {
@@ -866,6 +897,7 @@ function treasure_chest_lid_close(timedout) {
 
 // Namespace zm_magicbox
 // Params 3, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_9821da97
 // Checksum 0xb2cf9613, Offset: 0x3958
 // Size: 0x19c
 function function_9821da97(player, weapon, var_10f9c82c) {
@@ -904,6 +936,7 @@ function function_9821da97(player, weapon, var_10f9c82c) {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_f4e72416
 // Checksum 0x6616b999, Offset: 0x3b00
 // Size: 0x16c
 function function_f4e72416(player) {
@@ -929,6 +962,7 @@ function function_f4e72416(player) {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_4fed7e8
 // Checksum 0xe98311e6, Offset: 0x3c78
 // Size: 0x30
 function weapon_show_hint_choke() {
@@ -941,6 +975,7 @@ function weapon_show_hint_choke() {
 
 // Namespace zm_magicbox
 // Params 4, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_cbf7f254
 // Checksum 0x58e3825e, Offset: 0x3cb0
 // Size: 0x368
 function decide_hide_show_hint(endon_notify, second_endon_notify, onlyplayer, can_buy_weapon_extra_check_func) {
@@ -995,6 +1030,7 @@ function decide_hide_show_hint(endon_notify, second_endon_notify, onlyplayer, ca
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x0
+// namespace_4100e7e1<file_0>::function_1052bbd6
 // Checksum 0xbea68f5d, Offset: 0x4020
 // Size: 0x56
 function get_left_hand_weapon_model_name(weapon) {
@@ -1007,6 +1043,7 @@ function get_left_hand_weapon_model_name(weapon) {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_99c8f31
 // Checksum 0x5abd3b85, Offset: 0x4080
 // Size: 0xec
 function clean_up_hacked_box() {
@@ -1028,6 +1065,7 @@ function clean_up_hacked_box() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_9c0cd747
 // Checksum 0x572fdd08, Offset: 0x4178
 // Size: 0x2c
 function treasure_chest_firesale_active() {
@@ -1036,6 +1074,7 @@ function treasure_chest_firesale_active() {
 
 // Namespace zm_magicbox
 // Params 2, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_94997c46
 // Checksum 0xc2f050a9, Offset: 0x41b0
 // Size: 0x262
 function treasure_chest_should_move(chest, player) {
@@ -1090,6 +1129,7 @@ function treasure_chest_should_move(chest, player) {
 
 // Namespace zm_magicbox
 // Params 4, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_8a0f27d7
 // Checksum 0x5c7fda98, Offset: 0x4420
 // Size: 0x88
 function spawn_joker_weapon_model(player, model, origin, angles) {
@@ -1103,6 +1143,7 @@ function spawn_joker_weapon_model(player, model, origin, angles) {
 
 // Namespace zm_magicbox
 // Params 3, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_5e44b9bd
 // Checksum 0xad84792a, Offset: 0x44b0
 // Size: 0x114
 function treasure_chest_weapon_locking(player, weapon, onoff) {
@@ -1123,6 +1164,7 @@ function treasure_chest_weapon_locking(player, weapon, onoff) {
 
 // Namespace zm_magicbox
 // Params 3, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_b496f4ff
 // Checksum 0xdc57b80, Offset: 0x45d0
 // Size: 0xa3a
 function treasure_chest_weapon_spawn(chest, player, respin) {
@@ -1282,6 +1324,7 @@ function treasure_chest_weapon_spawn(chest, player, respin) {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x0
+// namespace_4100e7e1<file_0>::function_39f37460
 // Checksum 0x6c3e8ec3, Offset: 0x5018
 // Size: 0x1a
 function chest_get_min_usage() {
@@ -1291,6 +1334,7 @@ function chest_get_min_usage() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x0
+// namespace_4100e7e1<file_0>::function_c086f77a
 // Checksum 0xff98bcc9, Offset: 0x5040
 // Size: 0x116
 function chest_get_max_usage() {
@@ -1320,6 +1364,7 @@ function chest_get_max_usage() {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_c1e71539
 // Checksum 0x502942ce, Offset: 0x5160
 // Size: 0x84
 function timer_til_despawn(v_float) {
@@ -1334,6 +1379,7 @@ function timer_til_despawn(v_float) {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_c6af2b62
 // Checksum 0x73cd7680, Offset: 0x51f0
 // Size: 0xc4
 function treasure_chest_glowfx() {
@@ -1348,6 +1394,7 @@ function treasure_chest_glowfx() {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_9bd912db
 // Checksum 0xa62cfeb7, Offset: 0x52c0
 // Size: 0x164
 function treasure_chest_give_weapon(weapon) {
@@ -1373,6 +1420,7 @@ function treasure_chest_give_weapon(weapon) {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_b627f9ac
 // Checksum 0x2606b205, Offset: 0x5430
 // Size: 0x114
 function give_hero_weapon(weapon) {
@@ -1390,6 +1438,7 @@ function give_hero_weapon(weapon) {
 
 // Namespace zm_magicbox
 // Params 2, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_60c55a8
 // Checksum 0x7eb156d3, Offset: 0x5550
 // Size: 0x5e
 function should_upgrade_weapon(player, weapon) {
@@ -1404,6 +1453,7 @@ function should_upgrade_weapon(player, weapon) {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_7496cc77
 // Checksum 0x57fda026, Offset: 0x55b8
 // Size: 0xa8
 function function_7496cc77() {
@@ -1419,6 +1469,7 @@ function function_7496cc77() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_fea04511
 // Checksum 0x92b7dd7e, Offset: 0x5668
 // Size: 0x44
 function function_fea04511() {
@@ -1428,6 +1479,7 @@ function function_fea04511() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_4831fb0d
 // Checksum 0x8d61d350, Offset: 0x56b8
 // Size: 0x62
 function function_4831fb0d() {
@@ -1440,6 +1492,7 @@ function function_4831fb0d() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_fd5f77b3
 // Checksum 0x8c582cb6, Offset: 0x5728
 // Size: 0x62
 function function_fd5f77b3() {
@@ -1452,6 +1505,7 @@ function function_fd5f77b3() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_63e09f12
 // Checksum 0x33913978, Offset: 0x5798
 // Size: 0x62
 function function_63e09f12() {
@@ -1464,6 +1518,7 @@ function function_63e09f12() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_fe30a0c8
 // Checksum 0xcaa92ea8, Offset: 0x5808
 // Size: 0x62
 function function_fe30a0c8() {
@@ -1476,6 +1531,7 @@ function function_fe30a0c8() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_50470d41
 // Checksum 0x901bfa4e, Offset: 0x5878
 // Size: 0x15c
 function magic_box_do_weapon_rise() {
@@ -1498,6 +1554,7 @@ function magic_box_do_weapon_rise() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x0
+// namespace_4100e7e1<file_0>::function_e8e4d28b
 // Checksum 0xa93dcf1, Offset: 0x59e0
 // Size: 0x3c
 function magic_box_do_teddy_flyaway() {
@@ -1507,6 +1564,7 @@ function magic_box_do_teddy_flyaway() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x0
+// namespace_4100e7e1<file_0>::function_5642caf4
 // Checksum 0x1569fc17, Offset: 0x5a28
 // Size: 0x74
 function is_chest_active() {
@@ -1522,6 +1580,7 @@ function is_chest_active() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_4a792189
 // Checksum 0xb6046605, Offset: 0x5aa8
 // Size: 0xa
 function get_magic_box_zbarrier_state() {
@@ -1530,6 +1589,7 @@ function get_magic_box_zbarrier_state() {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_51e2324d
 // Checksum 0x615f83e1, Offset: 0x5ac0
 // Size: 0x80
 function set_magic_box_zbarrier_state(state) {
@@ -1542,6 +1602,7 @@ function set_magic_box_zbarrier_state(state) {
 
 // Namespace zm_magicbox
 // Params 1, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_87181b04
 // Checksum 0xa0b17943, Offset: 0x5b48
 // Size: 0x252
 function process_magic_box_zbarrier_state(state) {
@@ -1587,6 +1648,7 @@ function process_magic_box_zbarrier_state(state) {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_19f866e3
 // Checksum 0xc8c46aa7, Offset: 0x5da8
 // Size: 0x14e
 function magicbox_host_migration() {
@@ -1611,6 +1673,7 @@ function magicbox_host_migration() {
 
 // Namespace zm_magicbox
 // Params 0, eflags: 0x1 linked
+// namespace_4100e7e1<file_0>::function_14a6411c
 // Checksum 0xcd7c724b, Offset: 0x5f00
 // Size: 0x148
 function function_14a6411c() {

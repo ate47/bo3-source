@@ -9,6 +9,7 @@
 
 // Namespace namespace_2f637cea
 // Params 0, eflags: 0x2
+// namespace_2f637cea<file_0>::function_2dc19561
 // Checksum 0x7a3a96b, Offset: 0x170
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_2f637cea
 // Params 0, eflags: 0x1 linked
+// namespace_2f637cea<file_0>::function_8c87d8eb
 // Checksum 0xd3822a92, Offset: 0x1b0
 // Size: 0xc4
 function __init__() {
@@ -31,6 +33,7 @@ function __init__() {
 
 // Namespace namespace_2f637cea
 // Params 0, eflags: 0x1 linked
+// namespace_2f637cea<file_0>::function_279e4e97
 // Checksum 0xecf54b59, Offset: 0x280
 // Size: 0xb8
 function event() {
@@ -52,6 +55,7 @@ function event() {
 
 // Namespace namespace_2f637cea
 // Params 1, eflags: 0x1 linked
+// namespace_2f637cea<file_0>::function_40d43ce
 // Checksum 0xbc1fb679, Offset: 0x340
 // Size: 0x66
 function function_40d43ce(n_count) {
@@ -65,6 +69,7 @@ function function_40d43ce(n_count) {
 
 // Namespace namespace_2f637cea
 // Params 0, eflags: 0x1 linked
+// namespace_2f637cea<file_0>::function_42722ac4
 // Checksum 0x85313658, Offset: 0x3b0
 // Size: 0x164
 function function_42722ac4() {
@@ -81,6 +86,7 @@ function function_42722ac4() {
 
 // Namespace namespace_2f637cea
 // Params 12, eflags: 0x1 linked
+// namespace_2f637cea<file_0>::function_33cecf53
 // Checksum 0x4be7629a, Offset: 0x520
 // Size: 0xce
 function actor_damage_override(inflictor, attacker, damage, flags, meansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, surfacetype) {
@@ -95,6 +101,7 @@ function actor_damage_override(inflictor, attacker, damage, flags, meansofdeath,
 
 // Namespace namespace_2f637cea
 // Params 15, eflags: 0x1 linked
+// namespace_2f637cea<file_0>::function_cde5d14c
 // Checksum 0x5428ec4d, Offset: 0x5f8
 // Size: 0xe6
 function vehicle_damage_override(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {

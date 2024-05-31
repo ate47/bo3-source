@@ -8,6 +8,7 @@
 
     // Namespace spawn_manager
     // Params 0, eflags: 0x1 linked
+    // namespace_d5067552<file_0>::function_573de556
     // Checksum 0x446e2b77, Offset: 0xd0
     // Size: 0x220
     function function_573de556() {
@@ -40,6 +41,7 @@
 
     // Namespace spawn_manager
     // Params 5, eflags: 0x1 linked
+    // namespace_d5067552<file_0>::function_6d2d8da0
     // Checksum 0xf3c375e1, Offset: 0x2f8
     // Size: 0x636
     function function_6d2d8da0(var_9f308938, spawn_ai, max_ai, var_744eb752, var_699e3746) {
@@ -109,6 +111,7 @@
 
     // Namespace spawn_manager
     // Params 0, eflags: 0x1 linked
+    // namespace_d5067552<file_0>::function_fb4f96b5
     // Checksum 0xdf8555b3, Offset: 0x938
     // Size: 0x1c
     function on_player_connect() {
@@ -117,6 +120,7 @@
 
     // Namespace spawn_manager
     // Params 0, eflags: 0x1 linked
+    // namespace_d5067552<file_0>::function_2111823a
     // Checksum 0xfbf28bc6, Offset: 0x960
     // Size: 0x328
     function function_2111823a() {
@@ -183,6 +187,7 @@
 
     // Namespace spawn_manager
     // Params 0, eflags: 0x0
+    // namespace_d5067552<file_0>::function_bad6361c
     // Checksum 0x348bc46b, Offset: 0xc90
     // Size: 0x20c
     function function_bad6361c() {
@@ -211,6 +216,7 @@
 
     // Namespace spawn_manager
     // Params 1, eflags: 0x0
+    // namespace_d5067552<file_0>::function_228116ac
     // Checksum 0xa51ca00, Offset: 0xea8
     // Size: 0x78
     function function_228116ac(text) {
@@ -223,6 +229,7 @@
 
     // Namespace spawn_manager
     // Params 0, eflags: 0x1 linked
+    // namespace_d5067552<file_0>::function_2adbfa39
     // Checksum 0xf35deb89, Offset: 0xf28
     // Size: 0xbcc
     function function_2adbfa39() {
@@ -434,6 +441,7 @@
 
     // Namespace spawn_manager
     // Params 0, eflags: 0x1 linked
+    // namespace_d5067552<file_0>::function_facd2f34
     // Checksum 0x4c007a0d, Offset: 0x1b00
     // Size: 0x57e
     function function_facd2f34() {
@@ -523,6 +531,7 @@
 
     // Namespace spawn_manager
     // Params 0, eflags: 0x1 linked
+    // namespace_d5067552<file_0>::function_5b99d8b8
     // Checksum 0x6ade33d8, Offset: 0x2088
     // Size: 0x1ac
     function function_5b99d8b8() {
@@ -543,6 +552,7 @@
 
     // Namespace spawn_manager
     // Params 1, eflags: 0x1 linked
+    // namespace_d5067552<file_0>::function_fed43545
     // Checksum 0x35a09932, Offset: 0x2240
     // Size: 0x5c
     function function_fed43545(text) {
@@ -554,6 +564,7 @@
 
     // Namespace spawn_manager
     // Params 0, eflags: 0x1 linked
+    // namespace_d5067552<file_0>::function_f9e758e5
     // Checksum 0xce440999, Offset: 0x22a8
     // Size: 0x3c
     function function_f9e758e5() {
@@ -564,6 +575,7 @@
 
     // Namespace spawn_manager
     // Params 0, eflags: 0x1 linked
+    // namespace_d5067552<file_0>::function_10c561e2
     // Checksum 0x8e345548, Offset: 0x22f0
     // Size: 0x144
     function function_10c561e2() {

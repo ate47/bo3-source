@@ -1,0 +1,11 @@
+{
+    "vmtype": "client",
+    "surfacefxtable_landing": "player_jump_start",
+    "configstringfiletype": "scriptbundle",
+    "surfacefxtable_vtollanding": "player_vtol_drop",
+    "name": "c_zmb_thrasher_fx_table",
+    "type": "aifxtable",
+    "surfacefxtable_footstep": "c_zmb_thrasher_footstep",
+    "surfacefxtable_jumping": "player_jump_start",
+    "igdtseqnum": 2259
+}

@@ -8,6 +8,7 @@
 
 // Namespace oob
 // Params 0, eflags: 0x2
+// namespace_6ece97b7<file_0>::function_2dc19561
 // Checksum 0xae8c057d, Offset: 0x200
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,6 +17,7 @@ function autoexec function_2dc19561() {
 
 // Namespace oob
 // Params 0, eflags: 0x1 linked
+// namespace_6ece97b7<file_0>::function_8c87d8eb
 // Checksum 0x7d58f041, Offset: 0x240
 // Size: 0x2d4
 function __init__() {
@@ -44,6 +46,7 @@ function __init__() {
 
 // Namespace oob
 // Params 0, eflags: 0x1 linked
+// namespace_6ece97b7<file_0>::function_1469cd68
 // Checksum 0x783e749c, Offset: 0x520
 // Size: 0xa4
 function run_oob_trigger() {
@@ -60,6 +63,7 @@ function run_oob_trigger() {
 
 // Namespace oob
 // Params 0, eflags: 0x1 linked
+// namespace_6ece97b7<file_0>::function_b99692eb
 // Checksum 0x7f9c0879, Offset: 0x5d0
 // Size: 0x20
 function isoutofbounds() {
@@ -71,6 +75,7 @@ function isoutofbounds() {
 
 // Namespace oob
 // Params 0, eflags: 0x1 linked
+// namespace_6ece97b7<file_0>::function_37b1b5d8
 // Checksum 0x93e8a62e, Offset: 0x5f8
 // Size: 0x1d6
 function istouchinganyoobtrigger() {
@@ -104,6 +109,7 @@ function istouchinganyoobtrigger() {
 
 // Namespace oob
 // Params 2, eflags: 0x1 linked
+// namespace_6ece97b7<file_0>::function_6d6be069
 // Checksum 0x59fe2514, Offset: 0x7d8
 // Size: 0xc6
 function resetoobtimer(is_host_migrating, b_disable_timekeep) {
@@ -127,6 +133,7 @@ function resetoobtimer(is_host_migrating, b_disable_timekeep) {
 
 // Namespace oob
 // Params 0, eflags: 0x1 linked
+// namespace_6ece97b7<file_0>::function_db666897
 // Checksum 0x2f380cd2, Offset: 0x8a8
 // Size: 0x9c
 function waitforclonetouch() {
@@ -141,6 +148,7 @@ function waitforclonetouch() {
 
 // Namespace oob
 // Params 1, eflags: 0x0
+// namespace_6ece97b7<file_0>::function_ad23a9de
 // Checksum 0xafc02708, Offset: 0x950
 // Size: 0x50
 function getadjusedplayer(player) {
@@ -152,6 +160,7 @@ function getadjusedplayer(player) {
 
 // Namespace oob
 // Params 0, eflags: 0x1 linked
+// namespace_6ece97b7<file_0>::function_8bf6514d
 // Checksum 0xa3d43195, Offset: 0x9a8
 // Size: 0x310
 function waitforplayertouch() {
@@ -191,6 +200,7 @@ function waitforplayertouch() {
 
 // Namespace oob
 // Params 2, eflags: 0x1 linked
+// namespace_6ece97b7<file_0>::function_8d0415af
 // Checksum 0x524e78f8, Offset: 0xcc0
 // Size: 0xec
 function getdistancefromlastvalidplayerloc(trigger, entity) {
@@ -211,6 +221,7 @@ function getdistancefromlastvalidplayerloc(trigger, entity) {
 
 // Namespace oob
 // Params 2, eflags: 0x1 linked
+// namespace_6ece97b7<file_0>::function_9b146f7c
 // Checksum 0xedc2676f, Offset: 0xdb8
 // Size: 0x1b4
 function updatevisualeffects(trigger, entity) {
@@ -243,6 +254,7 @@ function updatevisualeffects(trigger, entity) {
 
 // Namespace oob
 // Params 1, eflags: 0x1 linked
+// namespace_6ece97b7<file_0>::function_f668bd18
 // Checksum 0xef12af99, Offset: 0xf78
 // Size: 0xf4
 function killentity(entity) {
@@ -259,6 +271,7 @@ function killentity(entity) {
 
 // Namespace oob
 // Params 2, eflags: 0x1 linked
+// namespace_6ece97b7<file_0>::function_db083e88
 // Checksum 0xaab08131, Offset: 0x1078
 // Size: 0x140
 function watchforleave(trigger, entity) {
@@ -287,6 +300,7 @@ function watchforleave(trigger, entity) {
 
 // Namespace oob
 // Params 2, eflags: 0x1 linked
+// namespace_6ece97b7<file_0>::function_1d10e97f
 // Checksum 0x8e5e8487, Offset: 0x11c0
 // Size: 0x6c
 function watchfordeath(trigger, entity) {
@@ -298,6 +312,7 @@ function watchfordeath(trigger, entity) {
 
 // Namespace oob
 // Params 2, eflags: 0x1 linked
+// namespace_6ece97b7<file_0>::function_c468111b
 // Checksum 0xda556949, Offset: 0x1238
 // Size: 0x4c
 function watchforhostmigration(trigger, entity) {
@@ -308,6 +323,7 @@ function watchforhostmigration(trigger, entity) {
 
 // Namespace oob
 // Params 1, eflags: 0x1 linked
+// namespace_6ece97b7<file_0>::function_113a0740
 // Checksum 0x6cf93ae2, Offset: 0x1290
 // Size: 0x48
 function disableplayeroob(disabled) {

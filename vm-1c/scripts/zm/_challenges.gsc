@@ -9,6 +9,7 @@
 
 // Namespace challenges
 // Params 0, eflags: 0x2
+// namespace_f74b04eb<file_0>::function_2dc19561
 // Checksum 0x3abcc6f8, Offset: 0x980
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace challenges
 // Params 0, eflags: 0x1 linked
+// namespace_f74b04eb<file_0>::function_8c87d8eb
 // Checksum 0x99ec1590, Offset: 0x9c0
 // Size: 0x4
 function __init__() {
@@ -25,6 +27,7 @@ function __init__() {
 
 // Namespace challenges
 // Params 0, eflags: 0x0
+// namespace_f74b04eb<file_0>::function_c35e6aab
 // Checksum 0x31b7cf42, Offset: 0x9d0
 // Size: 0x194
 function init() {
@@ -47,6 +50,7 @@ function init() {
 
 // Namespace challenges
 // Params 2, eflags: 0x1 linked
+// namespace_f74b04eb<file_0>::function_65115b2b
 // Checksum 0x35a3b5e7, Offset: 0xb70
 // Size: 0x1f6c
 function challengekills(data, time) {
@@ -435,6 +439,7 @@ function challengekills(data, time) {
 
 // Namespace challenges
 // Params 2, eflags: 0x1 linked
+// namespace_f74b04eb<file_0>::function_9323a046
 // Checksum 0x9055776d, Offset: 0x2ae8
 // Size: 0x14
 function function_9323a046(data, time) {

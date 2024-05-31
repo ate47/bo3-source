@@ -22,6 +22,7 @@
 
 // Namespace namespace_66b6bfda
 // Params 0, eflags: 0x0
+// namespace_66b6bfda<file_0>::function_d290ebfa
 // Checksum 0x596e36f7, Offset: 0x508
 // Size: 0xcc
 function main() {
@@ -37,6 +38,7 @@ function main() {
 
 // Namespace namespace_66b6bfda
 // Params 0, eflags: 0x0
+// namespace_66b6bfda<file_0>::function_34685338
 // Checksum 0x6974d434, Offset: 0x5e0
 // Size: 0x2c
 function onstartgametype() {
@@ -46,6 +48,7 @@ function onstartgametype() {
 
 // Namespace namespace_66b6bfda
 // Params 0, eflags: 0x0
+// namespace_66b6bfda<file_0>::function_fb4f96b5
 // Checksum 0xac5ae67b, Offset: 0x618
 // Size: 0x1c
 function on_player_connect() {
@@ -54,6 +57,7 @@ function on_player_connect() {
 
 // Namespace namespace_66b6bfda
 // Params 0, eflags: 0x0
+// namespace_66b6bfda<file_0>::function_ed44e709
 // Checksum 0x279c349e, Offset: 0x640
 // Size: 0x358
 function givecustomloadout() {
@@ -95,6 +99,7 @@ function givecustomloadout() {
 
 // Namespace namespace_66b6bfda
 // Params 0, eflags: 0x0
+// namespace_66b6bfda<file_0>::function_e6707d5e
 // Checksum 0xfaf8dcec, Offset: 0x9a0
 // Size: 0x2ac
 function function_e6707d5e() {
@@ -155,6 +160,7 @@ function function_e6707d5e() {
 
 // Namespace namespace_66b6bfda
 // Params 2, eflags: 0x0
+// namespace_66b6bfda<file_0>::function_b41dbb1d
 // Checksum 0x6c1fd34b, Offset: 0xc58
 // Size: 0x1d8
 function function_b41dbb1d(primaryweapon, var_d5801c8a) {
@@ -184,6 +190,7 @@ function function_b41dbb1d(primaryweapon, var_d5801c8a) {
 
 // Namespace namespace_66b6bfda
 // Params 1, eflags: 0x0
+// namespace_66b6bfda<file_0>::function_f0582641
 // Checksum 0x6eb5bf46, Offset: 0xe38
 // Size: 0x114
 function function_f0582641(sidearm) {
@@ -200,6 +207,7 @@ function function_f0582641(sidearm) {
 
 // Namespace namespace_66b6bfda
 // Params 9, eflags: 0x0
+// namespace_66b6bfda<file_0>::function_c2658b46
 // Checksum 0x9ae37041, Offset: 0xf58
 // Size: 0x2ac
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -232,6 +240,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace namespace_66b6bfda
 // Params 0, eflags: 0x0
+// namespace_66b6bfda<file_0>::function_357ca474
 // Checksum 0xbf2f7274, Offset: 0x1210
 // Size: 0x88
 function function_357ca474() {
@@ -247,6 +256,7 @@ function function_357ca474() {
 
 // Namespace namespace_66b6bfda
 // Params 1, eflags: 0x0
+// namespace_66b6bfda<file_0>::function_2d46be95
 // Checksum 0x5e951db9, Offset: 0x12a0
 // Size: 0x254
 function function_2d46be95(killrange) {
@@ -285,6 +295,7 @@ function function_2d46be95(killrange) {
 
 // Namespace namespace_66b6bfda
 // Params 0, eflags: 0x0
+// namespace_66b6bfda<file_0>::function_b5214454
 // Checksum 0xb1984705, Offset: 0x1500
 // Size: 0x50
 function function_b5214454() {
@@ -298,6 +309,7 @@ function function_b5214454() {
 
 // Namespace namespace_66b6bfda
 // Params 0, eflags: 0x0
+// namespace_66b6bfda<file_0>::function_ef6a5017
 // Checksum 0x8cbdc41d, Offset: 0x1558
 // Size: 0x284
 function function_ef6a5017() {
@@ -333,6 +345,7 @@ function function_ef6a5017() {
 
 // Namespace namespace_66b6bfda
 // Params 0, eflags: 0x0
+// namespace_66b6bfda<file_0>::function_c12878ec
 // Checksum 0xf6930d8, Offset: 0x17e8
 // Size: 0x120
 function function_c12878ec() {

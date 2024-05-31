@@ -22,6 +22,7 @@
 
 // Namespace zm_powerup_shield_charge
 // Params 0, eflags: 0x2
+// namespace_2a4ec8bc<file_0>::function_2dc19561
 // Checksum 0x11e28ef8, Offset: 0x3a0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -30,6 +31,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_shield_charge
 // Params 0, eflags: 0x1 linked
+// namespace_2a4ec8bc<file_0>::function_8c87d8eb
 // Checksum 0xc93cd9a9, Offset: 0x3e0
 // Size: 0xd4
 function __init__() {
@@ -45,6 +47,7 @@ function __init__() {
 
 // Namespace zm_powerup_shield_charge
 // Params 0, eflags: 0x1 linked
+// namespace_2a4ec8bc<file_0>::function_7b6cf62
 // Checksum 0x88a8188a, Offset: 0x4c0
 // Size: 0x6
 function func_drop_when_players_own() {
@@ -53,6 +56,7 @@ function func_drop_when_players_own() {
 
 // Namespace zm_powerup_shield_charge
 // Params 1, eflags: 0x1 linked
+// namespace_2a4ec8bc<file_0>::function_4f7872e8
 // Checksum 0xfa7a3efd, Offset: 0x4d0
 // Size: 0x44
 function grab_shield_charge(player) {
@@ -62,6 +66,7 @@ function grab_shield_charge(player) {
 
 // Namespace zm_powerup_shield_charge
 // Params 2, eflags: 0x1 linked
+// namespace_2a4ec8bc<file_0>::function_f9021218
 // Checksum 0xfda8d266, Offset: 0x520
 // Size: 0x84
 function shield_charge_powerup(item, player) {
@@ -73,6 +78,7 @@ function shield_charge_powerup(item, player) {
 
 // Namespace zm_powerup_shield_charge
 // Params 2, eflags: 0x1 linked
+// namespace_2a4ec8bc<file_0>::function_3d5da8f8
 // Checksum 0x62901095, Offset: 0x5b0
 // Size: 0x124
 function shield_on_hud(drop_item, player_team) {
@@ -91,6 +97,7 @@ function shield_on_hud(drop_item, player_team) {
 
 // Namespace zm_powerup_shield_charge
 // Params 1, eflags: 0x1 linked
+// namespace_2a4ec8bc<file_0>::function_3a5ef9c7
 // Checksum 0x235c03e6, Offset: 0x6e0
 // Size: 0xd4
 function full_ammo_move_hud(player_team) {
@@ -110,6 +117,7 @@ function full_ammo_move_hud(player_team) {
 
     // Namespace zm_powerup_shield_charge
     // Params 0, eflags: 0x1 linked
+    // namespace_2a4ec8bc<file_0>::function_f3127c4f
     // Checksum 0xeb04e2df, Offset: 0x7c0
     // Size: 0x7c
     function shield_devgui() {
@@ -122,6 +130,7 @@ function full_ammo_move_hud(player_team) {
 
     // Namespace zm_powerup_shield_charge
     // Params 1, eflags: 0x1 linked
+    // namespace_2a4ec8bc<file_0>::function_b6937313
     // Checksum 0x20c58bda, Offset: 0x848
     // Size: 0xb4
     function shield_devgui_callback(cmd) {

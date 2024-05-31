@@ -8,6 +8,7 @@
 
 // Namespace namespace_96203a67
 // Params 0, eflags: 0x2
+// namespace_96203a67<file_0>::function_2dc19561
 // Checksum 0xa7481c0e, Offset: 0x160
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,6 +17,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_96203a67
 // Params 0, eflags: 0x1 linked
+// namespace_96203a67<file_0>::function_8c87d8eb
 // Checksum 0xd5e3e2a7, Offset: 0x1a0
 // Size: 0xe2
 function __init__() {
@@ -27,6 +29,7 @@ function __init__() {
 
 // Namespace namespace_96203a67
 // Params 7, eflags: 0x1 linked
+// namespace_96203a67<file_0>::function_9b0b8f8e
 // Checksum 0x92b72f08, Offset: 0x290
 // Size: 0x172
 function trap_fx_monitor(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -50,6 +53,7 @@ function trap_fx_monitor(localclientnum, oldval, newval, bnewent, binitialsnap, 
 
 // Namespace namespace_96203a67
 // Params 0, eflags: 0x1 linked
+// namespace_96203a67<file_0>::function_a7c75d32
 // Checksum 0xd5b0be98, Offset: 0x410
 // Size: 0x12c
 function asset_pool_scriptbundlelist() {
@@ -70,6 +74,7 @@ function asset_pool_scriptbundlelist() {
 
 // Namespace namespace_96203a67
 // Params 0, eflags: 0x1 linked
+// namespace_96203a67<file_0>::function_dc960b46
 // Checksum 0x1d332b26, Offset: 0x548
 // Size: 0x88
 function function_dc960b46() {

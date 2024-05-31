@@ -4,6 +4,7 @@
 
 // Namespace namespace_1e4bbaa5
 // Params 0, eflags: 0x1 linked
+// namespace_1e4bbaa5<file_0>::function_2ea898a8
 // Checksum 0xa114242e, Offset: 0xa0
 // Size: 0x64
 function init_clientfields() {

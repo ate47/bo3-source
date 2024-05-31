@@ -6,6 +6,7 @@
 
 // Namespace clean
 // Params 0, eflags: 0x0
+// namespace_c558a4dc<file_0>::function_d290ebfa
 // Checksum 0x49b918a2, Offset: 0x160
 // Size: 0x94
 function main() {
@@ -15,6 +16,7 @@ function main() {
 
 // Namespace clean
 // Params 7, eflags: 0x0
+// namespace_c558a4dc<file_0>::function_3fdcaa92
 // Checksum 0x250b9960, Offset: 0x200
 // Size: 0x1d4
 function function_3fdcaa92(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -44,6 +46,7 @@ function function_3fdcaa92(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace clean
 // Params 1, eflags: 0x0
+// namespace_c558a4dc<file_0>::function_8eab3bb6
 // Checksum 0x63337a3b, Offset: 0x3e0
 // Size: 0x56
 function function_8eab3bb6(localclientnum) {
@@ -55,6 +58,7 @@ function function_8eab3bb6(localclientnum) {
 
 // Namespace clean
 // Params 1, eflags: 0x0
+// namespace_c558a4dc<file_0>::function_21017588
 // Checksum 0x90bb5176, Offset: 0x440
 // Size: 0x3e
 function function_21017588(localclientnum) {
@@ -66,6 +70,7 @@ function function_21017588(localclientnum) {
 
 // Namespace clean
 // Params 1, eflags: 0x0
+// namespace_c558a4dc<file_0>::function_ffa114bb
 // Checksum 0x506ff72c, Offset: 0x488
 // Size: 0xda
 function function_ffa114bb(localclientnum) {
@@ -83,6 +88,7 @@ function function_ffa114bb(localclientnum) {
 
 // Namespace clean
 // Params 7, eflags: 0x0
+// namespace_c558a4dc<file_0>::function_87660047
 // Checksum 0x941939c6, Offset: 0x570
 // Size: 0x1f4
 function function_87660047(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -105,6 +111,7 @@ function function_87660047(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace clean
 // Params 1, eflags: 0x0
+// namespace_c558a4dc<file_0>::function_842b9892
 // Checksum 0x799b6df6, Offset: 0x770
 // Size: 0x56
 function function_842b9892(localclientnum) {
@@ -116,6 +123,7 @@ function function_842b9892(localclientnum) {
 
 // Namespace clean
 // Params 1, eflags: 0x0
+// namespace_c558a4dc<file_0>::function_d5c5a3f2
 // Checksum 0xf1672d3b, Offset: 0x7d0
 // Size: 0x3e
 function function_d5c5a3f2(localclientnum) {

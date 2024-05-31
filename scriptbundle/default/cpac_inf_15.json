@@ -1,0 +1,9 @@
+{
+    "vmtype": "none",
+    "name": "cpac_inf_15",
+    "igdtseqnum": 75,
+    "challengeWidget": "Traversal",
+    "challengeDetails": "ACCOLADES_INF_15",
+    "challengeName": "ACCOLADES_INF_15_NAME",
+    "challengeReference": "MISSION_INFECTION_CHALLENGE15"
+}

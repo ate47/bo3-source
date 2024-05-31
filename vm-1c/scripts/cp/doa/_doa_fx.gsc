@@ -9,6 +9,7 @@
 
 // Namespace namespace_eaa992c
 // Params 0, eflags: 0x1 linked
+// namespace_eaa992c<file_0>::function_c35e6aab
 // Checksum 0xd3e9e999, Offset: 0x9c0
 // Size: 0xfe4
 function init() {
@@ -144,6 +145,7 @@ function init() {
 
 // Namespace namespace_eaa992c
 // Params 2, eflags: 0x1 linked
+// namespace_eaa992c<file_0>::function_6dcb1bbc
 // Checksum 0x6bd2e76c, Offset: 0x19b0
 // Size: 0x7e
 function function_6dcb1bbc(name, type) {
@@ -156,6 +158,7 @@ function function_6dcb1bbc(name, type) {
 
 // Namespace namespace_eaa992c
 // Params 1, eflags: 0x1 linked
+// namespace_eaa992c<file_0>::function_39dbe45b
 // Checksum 0xa81030e4, Offset: 0x1a38
 // Size: 0x60
 function function_39dbe45b(name) {
@@ -168,6 +171,7 @@ function function_39dbe45b(name) {
 
 // Namespace namespace_eaa992c
 // Params 0, eflags: 0x1 linked
+// namespace_eaa992c<file_0>::function_81e169ac
 // Checksum 0x25708dae, Offset: 0x1aa0
 // Size: 0x48
 function function_81e169ac() {
@@ -182,6 +186,7 @@ function function_81e169ac() {
 
 // Namespace namespace_eaa992c
 // Params 0, eflags: 0x1 linked
+// namespace_eaa992c<file_0>::function_1f8cb1fa
 // Checksum 0x1661d03d, Offset: 0x1af0
 // Size: 0x48
 function function_1f8cb1fa() {
@@ -196,6 +201,7 @@ function function_1f8cb1fa() {
 
 // Namespace namespace_eaa992c
 // Params 4, eflags: 0x1 linked
+// namespace_eaa992c<file_0>::function_64bc2503
 // Checksum 0x19b2a583, Offset: 0x1b40
 // Size: 0x224
 function function_64bc2503(&queue, flag, waitfunc, var_a6cc22d4) {
@@ -231,6 +237,7 @@ function function_64bc2503(&queue, flag, waitfunc, var_a6cc22d4) {
 
 // Namespace namespace_eaa992c
 // Params 1, eflags: 0x1 linked
+// namespace_eaa992c<file_0>::function_dc26a335
 // Checksum 0x6b28502e, Offset: 0x1d70
 // Size: 0x182
 function turnofffx(name) {
@@ -258,6 +265,7 @@ function turnofffx(name) {
 
 // Namespace namespace_eaa992c
 // Params 1, eflags: 0x1 linked
+// namespace_eaa992c<file_0>::function_285a2999
 // Checksum 0x392b681b, Offset: 0x1f00
 // Size: 0x174
 function function_285a2999(name) {
@@ -285,6 +293,7 @@ function function_285a2999(name) {
 
 // Namespace namespace_eaa992c
 // Params 6, eflags: 0x1 linked
+// namespace_eaa992c<file_0>::function_2fc7e62f
 // Checksum 0xfc64485a, Offset: 0x2080
 // Size: 0x14c
 function function_2fc7e62f(victim, damage, attacker, dir, smeansofdeath, weapon) {
@@ -304,6 +313,7 @@ function function_2fc7e62f(victim, damage, attacker, dir, smeansofdeath, weapon)
 
 // Namespace namespace_eaa992c
 // Params 6, eflags: 0x1 linked
+// namespace_eaa992c<file_0>::function_2c0f7946
 // Checksum 0x6fdbc64a, Offset: 0x21d8
 // Size: 0x74
 function function_2c0f7946(victim, damage, attacker, dir, smeansofdeath, weapon) {
@@ -312,6 +322,7 @@ function function_2c0f7946(victim, damage, attacker, dir, smeansofdeath, weapon)
 
 // Namespace namespace_eaa992c
 // Params 6, eflags: 0x1 linked
+// namespace_eaa992c<file_0>::function_f51d2b7e
 // Checksum 0xdaf20933, Offset: 0x2258
 // Size: 0x114
 function function_f51d2b7e(victim, damage, attacker, dir, smeansofdeath, weapon) {
@@ -330,6 +341,7 @@ function function_f51d2b7e(victim, damage, attacker, dir, smeansofdeath, weapon)
 
 // Namespace namespace_eaa992c
 // Params 6, eflags: 0x1 linked
+// namespace_eaa992c<file_0>::function_4f66d2fb
 // Checksum 0x84cc112a, Offset: 0x2378
 // Size: 0x5c
 function function_4f66d2fb(victim, damage, attacker, dir, smeansofdeath, weapon) {
@@ -338,6 +350,7 @@ function function_4f66d2fb(victim, damage, attacker, dir, smeansofdeath, weapon)
 
 // Namespace namespace_eaa992c
 // Params 6, eflags: 0x1 linked
+// namespace_eaa992c<file_0>::function_2aa1c0b3
 // Checksum 0x857bd290, Offset: 0x23e0
 // Size: 0x274
 function function_2aa1c0b3(victim, damage, attacker, dir, smeansofdeath, weapon) {
@@ -374,6 +387,7 @@ function function_2aa1c0b3(victim, damage, attacker, dir, smeansofdeath, weapon)
 
 // Namespace namespace_eaa992c
 // Params 2, eflags: 0x1 linked
+// namespace_eaa992c<file_0>::function_32bcda58
 // Checksum 0x993d9b9c, Offset: 0x2660
 // Size: 0x150
 function function_32bcda58(var_7aac5112, attacker) {
@@ -398,6 +412,7 @@ function function_32bcda58(var_7aac5112, attacker) {
 
 // Namespace namespace_eaa992c
 // Params 1, eflags: 0x5 linked
+// namespace_eaa992c<file_0>::function_9fc6e261
 // Checksum 0xeb847d5d, Offset: 0x27b8
 // Size: 0xc4
 function private function_9fc6e261(type) {

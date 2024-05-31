@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_bio_03",
+    "igdtseqnum": 32,
+    "challengeWidget": "HeavyWeapon",
+    "challengeDetails": "ACCOLADES_BIO_3",
+    "challengeName": "ACCOLADES_BIO_3_NAME",
+    "centerText": "8",
+    "challengeReference": "MISSION_BIODOMES_CHALLENGE3"
+}

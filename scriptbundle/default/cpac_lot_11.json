@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_lot_11",
+    "igdtseqnum": 90,
+    "challengeWidget": "HeavyWeapon",
+    "challengeDetails": "ACCOLADES_LOT_11",
+    "challengeName": "ACCOLADES_LOT_11_NAME",
+    "centerText": "8",
+    "challengeReference": "MISSION_LOTUS_CHALLENGE11"
+}

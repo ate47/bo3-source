@@ -10,6 +10,7 @@
 
 // Namespace zm_bgb_alchemical_antithesis
 // Params 0, eflags: 0x2
+// namespace_f3043f41<file_0>::function_2dc19561
 // Checksum 0x5c89c7f2, Offset: 0x1b8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,6 +19,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_alchemical_antithesis
 // Params 0, eflags: 0x1 linked
+// namespace_f3043f41<file_0>::function_8c87d8eb
 // Checksum 0xf7a937ed, Offset: 0x1f8
 // Size: 0xa4
 function __init__() {
@@ -31,6 +33,7 @@ function __init__() {
 
 // Namespace zm_bgb_alchemical_antithesis
 // Params 0, eflags: 0x1 linked
+// namespace_f3043f41<file_0>::function_e4776d0
 // Checksum 0xa7310812, Offset: 0x2a8
 // Size: 0x34
 function validation() {
@@ -39,6 +42,7 @@ function validation() {
 
 // Namespace zm_bgb_alchemical_antithesis
 // Params 0, eflags: 0x1 linked
+// namespace_f3043f41<file_0>::function_7afbf7cd
 // Checksum 0xfe1733be, Offset: 0x2e8
 // Size: 0x38
 function activation() {
@@ -49,6 +53,7 @@ function activation() {
 
 // Namespace zm_bgb_alchemical_antithesis
 // Params 3, eflags: 0x1 linked
+// namespace_f3043f41<file_0>::function_92fb7af0
 // Checksum 0x4f116cab, Offset: 0x328
 // Size: 0x156
 function add_to_player_score_override(points, str_awarded_by, var_1ed9bd9b) {
@@ -76,6 +81,7 @@ function add_to_player_score_override(points, str_awarded_by, var_1ed9bd9b) {
 
 // Namespace zm_bgb_alchemical_antithesis
 // Params 0, eflags: 0x1 linked
+// namespace_f3043f41<file_0>::function_a6bf711f
 // Checksum 0x6c1e26fe, Offset: 0x488
 // Size: 0x70
 function function_a6bf711f() {

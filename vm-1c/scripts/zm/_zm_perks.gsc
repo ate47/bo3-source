@@ -27,6 +27,7 @@
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_c35e6aab
 // Checksum 0x6bd042e2, Offset: 0x700
 // Size: 0x32c
 function init() {
@@ -73,6 +74,7 @@ function init() {
 
 // Namespace zm_perks
 // Params 2, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_942c1336
 // Checksum 0xfb96891, Offset: 0xa38
 // Size: 0x3c0
 function perk_machine_think(str_key, s_custom_perk) {
@@ -113,6 +115,7 @@ function perk_machine_think(str_key, s_custom_perk) {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_5c73bae7
 // Checksum 0x8ee7ab53, Offset: 0xe00
 // Size: 0xae
 function default_vending_precaching() {
@@ -128,6 +131,7 @@ function default_vending_precaching() {
 
 // Namespace zm_perks
 // Params 2, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_47e3e3db
 // Checksum 0xe9d40f1c, Offset: 0xeb8
 // Size: 0x9c
 function do_initial_power_off_callback(machine_array, perkname) {
@@ -144,6 +148,7 @@ function do_initial_power_off_callback(machine_array, perkname) {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_23ee6fc
 // Checksum 0xa672aef8, Offset: 0xf60
 // Size: 0x90
 function function_23ee6fc() {
@@ -161,6 +166,7 @@ function function_23ee6fc() {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_64e7765b
 // Checksum 0x6c27850f, Offset: 0xff8
 // Size: 0x18
 function set_power_on(state) {
@@ -169,6 +175,7 @@ function set_power_on(state) {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_3bd72dcd
 // Checksum 0xf969ad45, Offset: 0x1018
 // Size: 0x114
 function turn_perk_off(ishidden) {
@@ -190,6 +197,7 @@ function turn_perk_off(ishidden) {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_908278fe
 // Checksum 0x512b5493, Offset: 0x1138
 // Size: 0xac
 function play_loop_on_machine() {
@@ -206,6 +214,7 @@ function play_loop_on_machine() {
 
 // Namespace zm_perks
 // Params 2, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_d2fbaaea
 // Checksum 0xed7826d3, Offset: 0x11f0
 // Size: 0x168
 function perk_fx(fx, turnofffx) {
@@ -236,6 +245,7 @@ function perk_fx(fx, turnofffx) {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_d3581d0d
 // Checksum 0xc97aba4d, Offset: 0x1360
 // Size: 0x1fa
 function electric_perks_dialog() {
@@ -282,6 +292,7 @@ function electric_perks_dialog() {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_1798d7fc
 // Checksum 0xb4d379b8, Offset: 0x1568
 // Size: 0x13c
 function reset_vending_hint_string() {
@@ -301,6 +312,7 @@ function reset_vending_hint_string() {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_1273d6aa
 // Checksum 0xf3bcd714, Offset: 0x16b0
 // Size: 0xe6
 function vending_trigger_can_player_use(player) {
@@ -327,6 +339,7 @@ function vending_trigger_can_player_use(player) {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_23952604
 // Checksum 0x16185baa, Offset: 0x17a0
 // Size: 0x800
 function vending_trigger_think() {
@@ -445,6 +458,7 @@ function vending_trigger_think() {
 
 // Namespace zm_perks
 // Params 2, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_a51bc2c7
 // Checksum 0xf077f3ea, Offset: 0x1fa8
 // Size: 0x214
 function vending_trigger_post_think(player, perk) {
@@ -479,6 +493,7 @@ function vending_trigger_post_think(player, perk) {
 
 // Namespace zm_perks
 // Params 2, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_a0254875
 // Checksum 0xaa3bc49c, Offset: 0x21c8
 // Size: 0xa4
 function wait_give_perk(perk, bought) {
@@ -492,6 +507,7 @@ function wait_give_perk(perk, bought) {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_36b1754c
 // Checksum 0x9bd0e26d, Offset: 0x2278
 // Size: 0xe2
 function function_36b1754c() {
@@ -507,6 +523,7 @@ function function_36b1754c() {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_1da41b1c
 // Checksum 0xea4822dd, Offset: 0x2368
 // Size: 0x10c
 function give_perk_presentation(perk) {
@@ -527,6 +544,7 @@ function give_perk_presentation(perk) {
 
 // Namespace zm_perks
 // Params 2, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_f59bab01
 // Checksum 0xd8309a64, Offset: 0x2480
 // Size: 0x27c
 function give_perk(perk, bought) {
@@ -565,6 +583,7 @@ function give_perk(perk, bought) {
 
 // Namespace zm_perks
 // Params 3, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_78f42790
 // Checksum 0xd502595e, Offset: 0x2708
 // Size: 0x218
 function function_78f42790(str_perk, var_f8fab6db, var_b64a6b1b) {
@@ -612,6 +631,7 @@ function function_78f42790(str_perk, var_f8fab6db, var_b64a6b1b) {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_98f328c3
 // Checksum 0xb0904e5b, Offset: 0x2928
 // Size: 0x204
 function check_player_has_perk(perk) {
@@ -639,6 +659,7 @@ function check_player_has_perk(perk) {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x0
+// namespace_74c57fc0<file_0>::function_59b61f78
 // Checksum 0x2c91ff24, Offset: 0x2b38
 // Size: 0x2a
 function vending_set_hintstring(perk) {
@@ -650,6 +671,7 @@ function vending_set_hintstring(perk) {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_3d086b48
 // Checksum 0x46125510, Offset: 0x2b70
 // Size: 0x2b2
 function perk_think(perk) {
@@ -693,6 +715,7 @@ function perk_think(perk) {
 
 // Namespace zm_perks
 // Params 2, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_546a4f8c
 // Checksum 0x18a9d516, Offset: 0x2e30
 // Size: 0x68
 function set_perk_clientfield(perk, state) {
@@ -703,6 +726,7 @@ function set_perk_clientfield(perk, state) {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x0
+// namespace_74c57fc0<file_0>::function_36084434
 // Checksum 0x5ff4467a, Offset: 0x2ea0
 // Size: 0x38
 function function_36084434(perk) {
@@ -712,6 +736,7 @@ function function_36084434(perk) {
 
 // Namespace zm_perks
 // Params 2, eflags: 0x0
+// namespace_74c57fc0<file_0>::function_99589d97
 // Checksum 0x76cacb76, Offset: 0x2ee0
 // Size: 0x60
 function function_99589d97(perk, var_23d1e7f6) {
@@ -724,6 +749,7 @@ function function_99589d97(perk, var_23d1e7f6) {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_cb7ec458
 // Checksum 0xa648d1f8, Offset: 0x2f48
 // Size: 0xf8
 function perk_give_bottle_begin(perk) {
@@ -741,6 +767,7 @@ function perk_give_bottle_begin(perk) {
 
 // Namespace zm_perks
 // Params 2, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_938ed54c
 // Checksum 0x429504d4, Offset: 0x3048
 // Size: 0x274
 function function_938ed54c(original_weapon, perk) {
@@ -777,6 +804,7 @@ function function_938ed54c(original_weapon, perk) {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x0
+// namespace_74c57fc0<file_0>::function_5f12b357
 // Checksum 0xf8aa95c1, Offset: 0x32c8
 // Size: 0x5c
 function perk_abort_drinking(post_delay) {
@@ -792,6 +820,7 @@ function perk_abort_drinking(post_delay) {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_57435073
 // Checksum 0x997b241e, Offset: 0x3330
 // Size: 0x170
 function function_57435073() {
@@ -819,6 +848,7 @@ function function_57435073() {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x0
+// namespace_74c57fc0<file_0>::function_ca6c3b47
 // Checksum 0x98787054, Offset: 0x34a8
 // Size: 0x168
 function lose_random_perk() {
@@ -846,6 +876,7 @@ function lose_random_perk() {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_3da729b7
 // Checksum 0x95380bc6, Offset: 0x3618
 // Size: 0x8e
 function function_3da729b7() {
@@ -859,6 +890,7 @@ function function_3da729b7() {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_ac816709
 // Checksum 0xc8b4db0c, Offset: 0x36b0
 // Size: 0xae
 function quantum_bomb_give_nearest_perk_validation(position) {
@@ -874,6 +906,7 @@ function quantum_bomb_give_nearest_perk_validation(position) {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_f41c715b
 // Checksum 0xd9a0c586, Offset: 0x3768
 // Size: 0x25a
 function quantum_bomb_give_nearest_perk_result(position) {
@@ -904,6 +937,7 @@ function quantum_bomb_give_nearest_perk_result(position) {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_f8653126
 // Checksum 0x3748456f, Offset: 0x39d0
 // Size: 0x1ee
 function perk_pause(perk) {
@@ -929,6 +963,7 @@ function perk_pause(perk) {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_1c897671
 // Checksum 0x8a42eecd, Offset: 0x3bc8
 // Size: 0x1da
 function perk_unpause(perk) {
@@ -955,6 +990,7 @@ function perk_unpause(perk) {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_5a284ac4
 // Checksum 0x90a7c8c2, Offset: 0x3db0
 // Size: 0x122
 function perk_pause_all_perks(power_zone) {
@@ -972,6 +1008,7 @@ function perk_pause_all_perks(power_zone) {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_400b3fe7
 // Checksum 0x630b2e27, Offset: 0x3ee0
 // Size: 0x122
 function perk_unpause_all_perks(power_zone) {
@@ -989,6 +1026,7 @@ function perk_unpause_all_perks(power_zone) {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_7ab4a703
 // Checksum 0x50c1337e, Offset: 0x4010
 // Size: 0x44
 function has_perk_paused(perk) {
@@ -1000,6 +1038,7 @@ function has_perk_paused(perk) {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_68ec07f6
 // Checksum 0xddb2db67, Offset: 0x4060
 // Size: 0x84
 function getvendingmachinenotify() {
@@ -1015,6 +1054,7 @@ function getvendingmachinenotify() {
 
 // Namespace zm_perks
 // Params 2, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_1ac8c6f2
 // Checksum 0xbd07b4d5, Offset: 0x40f0
 // Size: 0x294
 function perk_machine_removal(machine, replacement_model) {
@@ -1059,6 +1099,7 @@ function perk_machine_removal(machine, replacement_model) {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_77c41094
 // Checksum 0xba8c7c82, Offset: 0x4390
 // Size: 0x99e
 function perk_machine_spawn_init() {
@@ -1180,6 +1221,7 @@ function perk_machine_spawn_init() {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_324dd0d7
 // Checksum 0x2066c483, Offset: 0x4d38
 // Size: 0x66
 function get_perk_machine_start_state(perk) {
@@ -1195,6 +1237,7 @@ function get_perk_machine_start_state(perk) {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_bbcff942
 // Checksum 0xcdf9575, Offset: 0x4da8
 // Size: 0xf6
 function perks_register_clientfield() {
@@ -1213,6 +1256,7 @@ function perks_register_clientfield() {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x0
+// namespace_74c57fc0<file_0>::function_b675fb35
 // Checksum 0x82a06e57, Offset: 0x4ea8
 // Size: 0x80
 function thread_bump_trigger() {
@@ -1227,6 +1271,7 @@ function thread_bump_trigger() {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_999c4a7d
 // Checksum 0xa75ea30e, Offset: 0x4f30
 // Size: 0x162
 function players_are_in_perk_area(perk_machine) {
@@ -1250,6 +1295,7 @@ function players_are_in_perk_area(perk_machine) {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_3cc6f2b6
 // Checksum 0x87b82ee5, Offset: 0x50a0
 // Size: 0x14e
 function perk_hostmigration() {
@@ -1271,6 +1317,7 @@ function perk_hostmigration() {
 
 // Namespace zm_perks
 // Params 2, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_a0a0888f
 // Checksum 0x3c7d354e, Offset: 0x51f8
 // Size: 0x132
 function host_migration_func(s_custom_perk, keyname) {
@@ -1285,6 +1332,7 @@ function host_migration_func(s_custom_perk, keyname) {
 
 // Namespace zm_perks
 // Params 2, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_47cf1165
 // Checksum 0x869ca063, Offset: 0x5338
 // Size: 0x10a
 function spare_change(str_trigger, str_sound) {
@@ -1304,6 +1352,7 @@ function spare_change(str_trigger, str_sound) {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_8ac7562
 // Checksum 0x30eb634e, Offset: 0x5450
 // Size: 0xa4
 function check_for_change() {
@@ -1321,6 +1370,7 @@ function check_for_change() {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_65d77778
 // Checksum 0xd119d379, Offset: 0x5500
 // Size: 0xac
 function get_perk_array() {
@@ -1338,6 +1388,7 @@ function get_perk_array() {
 
 // Namespace zm_perks
 // Params 0, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_aa9d5b3f
 // Checksum 0x537dde75, Offset: 0x55b8
 // Size: 0x1c
 function function_aa9d5b3f() {
@@ -1348,6 +1399,7 @@ function function_aa9d5b3f() {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x0
+// namespace_74c57fc0<file_0>::function_6aeaf56e
 // Checksum 0x2186d1b3, Offset: 0x55e0
 // Size: 0x3a
 function register_revive_success_perk_func(revive_func) {
@@ -1359,6 +1411,7 @@ function register_revive_success_perk_func(revive_func) {
 
 // Namespace zm_perks
 // Params 5, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_f6a97b55
 // Checksum 0xd1bbc6ea, Offset: 0x5628
 // Size: 0x1a8
 function register_perk_basic_info(str_perk, str_alias, n_perk_cost, str_hint_string, w_perk_bottle_weapon) {
@@ -1377,6 +1430,7 @@ function register_perk_basic_info(str_perk, str_alias, n_perk_cost, str_hint_str
 
 // Namespace zm_perks
 // Params 3, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_163232f7
 // Checksum 0x6fdda2e5, Offset: 0x57d8
 // Size: 0x100
 function register_perk_machine(str_perk, func_perk_machine_setup, func_perk_machine_thread) {
@@ -1393,6 +1447,7 @@ function register_perk_machine(str_perk, func_perk_machine_setup, func_perk_mach
 
 // Namespace zm_perks
 // Params 2, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_b420e228
 // Checksum 0x4c26a367, Offset: 0x58e0
 // Size: 0xc0
 function register_perk_machine_power_override(str_perk, func_perk_machine_power_override) {
@@ -1406,6 +1461,7 @@ function register_perk_machine_power_override(str_perk, func_perk_machine_power_
 
 // Namespace zm_perks
 // Params 2, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_1f29d94
 // Checksum 0x9f7294c5, Offset: 0x59a8
 // Size: 0xb4
 function register_perk_precache_func(str_perk, func_precache) {
@@ -1419,6 +1475,7 @@ function register_perk_precache_func(str_perk, func_precache) {
 
 // Namespace zm_perks
 // Params 3, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_2ef05da3
 // Checksum 0x81ba92ce, Offset: 0x5a68
 // Size: 0x100
 function register_perk_threads(str_perk, func_give_player_perk, func_take_player_perk) {
@@ -1437,6 +1494,7 @@ function register_perk_threads(str_perk, func_give_player_perk, func_take_player
 
 // Namespace zm_perks
 // Params 3, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_16dfd0ea
 // Checksum 0xa4e28c8b, Offset: 0x5b70
 // Size: 0x11c
 function register_perk_clientfields(str_perk, func_clientfield_register, func_clientfield_set) {
@@ -1454,6 +1512,7 @@ function register_perk_clientfields(str_perk, func_clientfield_register, func_cl
 
 // Namespace zm_perks
 // Params 3, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_2bb2f938
 // Checksum 0xfe9d97ac, Offset: 0x5c98
 // Size: 0x11c
 function register_perk_host_migration_params(str_perk, str_radiant_name, str_effect_name) {
@@ -1471,6 +1530,7 @@ function register_perk_host_migration_params(str_perk, str_radiant_name, str_eff
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_6f97de69
 // Checksum 0x97aaae8, Offset: 0x5dc0
 // Size: 0x5a
 function _register_undefined_perk(str_perk) {
@@ -1484,6 +1544,7 @@ function _register_undefined_perk(str_perk) {
 
 // Namespace zm_perks
 // Params 1, eflags: 0x1 linked
+// namespace_74c57fc0<file_0>::function_7a4242d7
 // Checksum 0x3d65efe7, Offset: 0x5e28
 // Size: 0x6c
 function register_perk_damage_override_func(func_damage_override) {

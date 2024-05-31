@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_bio_15",
+    "igdtseqnum": 42,
+    "challengeWidget": "Accuracy",
+    "challengeDetails": "ACCOLADES_BIO_15",
+    "challengeName": "ACCOLADES_BIO_15_NAME",
+    "centerText": "4",
+    "challengeReference": "MISSION_BIODOMES_CHALLENGE15"
+}

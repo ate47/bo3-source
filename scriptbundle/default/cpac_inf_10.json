@@ -1,0 +1,9 @@
+{
+    "vmtype": "none",
+    "name": "cpac_inf_10",
+    "igdtseqnum": 70,
+    "challengeWidget": "Melee",
+    "challengeDetails": "ACCOLADES_INF_10",
+    "challengeName": "ACCOLADES_INF_10_NAME",
+    "challengeReference": "MISSION_INFECTION_CHALLENGE10"
+}

@@ -29,6 +29,7 @@
 
 // Namespace archetype_robot
 // Params 0, eflags: 0x2
+// namespace_a814baaf<file_0>::function_2dc19561
 // Checksum 0x21f84e4a, Offset: 0x14b8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -37,6 +38,7 @@ function autoexec function_2dc19561() {
 
 // Namespace archetype_robot
 // Params 0, eflags: 0x1 linked
+// namespace_a814baaf<file_0>::function_8c87d8eb
 // Checksum 0x216de72d, Offset: 0x14f8
 // Size: 0x14c
 function __init__() {
@@ -56,6 +58,7 @@ function __init__() {
 
 // Namespace robotsoldierbehavior
 // Params 0, eflags: 0x1 linked
+// namespace_271fbeb5<file_0>::function_a13b795c
 // Checksum 0x55ded62f, Offset: 0x1650
 // Size: 0x105c
 function registerbehaviorscriptfunctions() {
@@ -162,6 +165,7 @@ function registerbehaviorscriptfunctions() {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x1 linked
+// namespace_271fbeb5<file_0>::function_af565ab7
 // Checksum 0x3f5a3671, Offset: 0x26b8
 // Size: 0x5c
 function robotcleanupchargemeleeattack(behaviortreeentity) {
@@ -172,6 +176,7 @@ function robotcleanupchargemeleeattack(behaviortreeentity) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_6b67969b
 // Checksum 0x2fdf2c1d, Offset: 0x2720
 // Size: 0x58
 function private robotlightsoff(entity, asmstatename) {
@@ -182,6 +187,7 @@ function private robotlightsoff(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_b2dce1c8
 // Checksum 0x9a9989af, Offset: 0x2780
 // Size: 0x68
 function private robotlightsflicker(entity, asmstatename) {
@@ -193,6 +199,7 @@ function private robotlightsflicker(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_3b409b27
 // Checksum 0xa13d03c4, Offset: 0x27f0
 // Size: 0x50
 function private robotlightson(entity, asmstatename) {
@@ -203,6 +210,7 @@ function private robotlightson(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_32ab11e
 // Checksum 0x3bf60785, Offset: 0x2848
 // Size: 0x22
 function private robotshouldgibdeath(entity, asmstatename) {
@@ -211,6 +219,7 @@ function private robotshouldgibdeath(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_785ad63b
 // Checksum 0xaa4fa4c6, Offset: 0x2878
 // Size: 0x60
 function private robotempidleinitialize(entity, asmstatename) {
@@ -222,6 +231,7 @@ function private robotempidleinitialize(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_2356a116
 // Checksum 0x4f438208, Offset: 0x28e0
 // Size: 0x8e
 function private robotempidleupdate(entity, asmstatename) {
@@ -236,6 +246,7 @@ function private robotempidleupdate(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_f8d2f222
 // Checksum 0xed902163, Offset: 0x2978
 // Size: 0x28
 function private robotempidleterminate(entity, asmstatename) {
@@ -245,6 +256,7 @@ function private robotempidleterminate(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x1 linked
+// namespace_271fbeb5<file_0>::function_a442e283
 // Checksum 0x5c7f5b2a, Offset: 0x29a8
 // Size: 0xfe
 function robotproceduraltraversalupdate(entity, asmstatename) {
@@ -261,6 +273,7 @@ function robotproceduraltraversalupdate(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x1 linked
+// namespace_271fbeb5<file_0>::function_283c0cf4
 // Checksum 0xf272cfcd, Offset: 0x2ab0
 // Size: 0x40
 function robotprocedurallandingupdate(entity, asmstatename) {
@@ -272,6 +285,7 @@ function robotprocedurallandingupdate(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x1 linked
+// namespace_271fbeb5<file_0>::function_c43de971
 // Checksum 0x26170401, Offset: 0x2af8
 // Size: 0xb58
 function robotcalcproceduraltraversal(entity, asmstatename) {
@@ -376,6 +390,7 @@ function robotcalcproceduraltraversal(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x1 linked
+// namespace_271fbeb5<file_0>::function_e6f0d3db
 // Checksum 0x87fb7673, Offset: 0x3658
 // Size: 0xe0
 function robottraversestart(entity, asmstatename) {
@@ -390,6 +405,7 @@ function robottraversestart(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x1 linked
+// namespace_271fbeb5<file_0>::function_d4473cb8
 // Checksum 0xc3c5ff11, Offset: 0x3740
 // Size: 0x54
 function robottraverseend(entity) {
@@ -402,6 +418,7 @@ function robottraverseend(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_fefde9c9
 // Checksum 0x8908868a, Offset: 0x37a0
 // Size: 0x48
 function private robottraverseragdollondeath(entity, asmstatename) {
@@ -413,6 +430,7 @@ function private robottraverseragdollondeath(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_b8ceedc5
 // Checksum 0xa809d124, Offset: 0x37f0
 // Size: 0xb2
 function private robotshouldproceduraltraverse(entity) {
@@ -425,6 +443,7 @@ function private robotshouldproceduraltraverse(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_74575538
 // Checksum 0xa2c18bfb, Offset: 0x38b0
 // Size: 0xbe
 function private robotwallruntraverse(entity) {
@@ -440,6 +459,7 @@ function private robotwallruntraverse(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_73b783d9
 // Checksum 0x732bd2e0, Offset: 0x3978
 // Size: 0x34
 function private robotshouldwallrun(entity) {
@@ -448,6 +468,7 @@ function private robotshouldwallrun(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 5, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_81204251
 // Checksum 0xa457a717, Offset: 0x39b8
 // Size: 0xd4
 function private mocomprobotstartwallruninit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -461,6 +482,7 @@ function private mocomprobotstartwallruninit(entity, mocompanim, mocompanimblend
 
 // Namespace robotsoldierbehavior
 // Params 5, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_c62ed314
 // Checksum 0x5e42ea20, Offset: 0x3a98
 // Size: 0x1f4
 function private mocomprobotstartwallrunupdate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -485,6 +507,7 @@ function private mocomprobotstartwallrunupdate(entity, mocompanim, mocompanimble
 
 // Namespace robotsoldierbehavior
 // Params 5, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_f1b69444
 // Checksum 0x4e48d9bd, Offset: 0x3c98
 // Size: 0x88
 function private mocomprobotstartwallrunterminate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -496,6 +519,7 @@ function private mocomprobotstartwallrunterminate(entity, mocompanim, mocompanim
 
 // Namespace robotsoldierbehavior
 // Params 5, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_c4469db2
 // Checksum 0x14cabede, Offset: 0x3d28
 // Size: 0xd2
 function private calculatecubicbezier(t, p1, p2, p3, p4) {
@@ -504,6 +528,7 @@ function private calculatecubicbezier(t, p1, p2, p3, p4) {
 
 // Namespace robotsoldierbehavior
 // Params 5, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_5c863814
 // Checksum 0xbeb34710, Offset: 0x3e08
 // Size: 0x394
 function private mocomprobotstarttraversalinit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -548,6 +573,7 @@ function private mocomprobotstarttraversalinit(entity, mocompanim, mocompanimble
 
 // Namespace robotsoldierbehavior
 // Params 5, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_c007b743
 // Checksum 0xae69cdb5, Offset: 0x41a8
 // Size: 0x2c
 function private mocomprobotstarttraversalterminate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -556,6 +582,7 @@ function private mocomprobotstarttraversalterminate(entity, mocompanim, mocompan
 
 // Namespace robotsoldierbehavior
 // Params 5, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_9779af3
 // Checksum 0x55c2af72, Offset: 0x41e0
 // Size: 0x12c
 function private mocomprobotproceduraltraversalinit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -573,6 +600,7 @@ function private mocomprobotproceduraltraversalinit(entity, mocompanim, mocompan
 
 // Namespace robotsoldierbehavior
 // Params 5, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_c7991c52
 // Checksum 0x52e22152, Offset: 0x4318
 // Size: 0x21c
 function private mocomprobotproceduraltraversalupdate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -600,6 +628,7 @@ function private mocomprobotproceduraltraversalupdate(entity, mocompanim, mocomp
 
 // Namespace robotsoldierbehavior
 // Params 5, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_3a35c9d6
 // Checksum 0x715b485c, Offset: 0x4540
 // Size: 0x114
 function private mocomprobotproceduraltraversalterminate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -618,6 +647,7 @@ function private mocomprobotproceduraltraversalterminate(entity, mocompanim, moc
 
 // Namespace robotsoldierbehavior
 // Params 5, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_d2e641c1
 // Checksum 0xc6f197cf, Offset: 0x4660
 // Size: 0xc4
 function private mocompignorepainfaceenemyinit(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -632,6 +662,7 @@ function private mocompignorepainfaceenemyinit(entity, mocompanim, mocompanimble
 
 // Namespace robotsoldierbehavior
 // Params 5, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_c3b41944
 // Checksum 0x537ba79b, Offset: 0x4730
 // Size: 0xb4
 function private mocompignorepainfaceenemyupdate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -644,6 +675,7 @@ function private mocompignorepainfaceenemyupdate(entity, mocompanim, mocompanimb
 
 // Namespace robotsoldierbehavior
 // Params 5, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_965bf254
 // Checksum 0x3dc4535e, Offset: 0x47f0
 // Size: 0x3c
 function private mocompignorepainfaceenemyterminate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -652,6 +684,7 @@ function private mocompignorepainfaceenemyterminate(entity, mocompanim, mocompan
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_3f41bd4e
 // Checksum 0xde67d908, Offset: 0x4838
 // Size: 0x186
 function private _calculatewallrundirection(startposition, endposition) {
@@ -677,6 +710,7 @@ function private _calculatewallrundirection(startposition, endposition) {
 
 // Namespace robotsoldierbehavior
 // Params 0, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_b41ea7e6
 // Checksum 0x996b3036, Offset: 0x49c8
 // Size: 0x6c
 function private robotwallrunstart() {
@@ -689,6 +723,7 @@ function private robotwallrunstart() {
 
 // Namespace robotsoldierbehavior
 // Params 0, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_ef054a85
 // Checksum 0xbe61e437, Offset: 0x4a40
 // Size: 0x80
 function private robotwallrunend() {
@@ -702,6 +737,7 @@ function private robotwallrunend() {
 
 // Namespace robotsoldierbehavior
 // Params 0, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_67b49d31
 // Checksum 0x429c844, Offset: 0x4ac8
 // Size: 0x220
 function private robotsetupwallrunjump() {
@@ -736,6 +772,7 @@ function private robotsetupwallrunjump() {
 
 // Namespace robotsoldierbehavior
 // Params 0, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_51b0baf6
 // Checksum 0x1c65b6c6, Offset: 0x4cf0
 // Size: 0x100
 function private robotsetupwallrunland() {
@@ -755,6 +792,7 @@ function private robotsetupwallrunland() {
 
 // Namespace robotsoldierbehavior
 // Params 0, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_7eaee72c
 // Checksum 0x7340aae4, Offset: 0x4df8
 // Size: 0x13a
 function private robotstartjumpdirection() {
@@ -777,6 +815,7 @@ function private robotstartjumpdirection() {
 
 // Namespace robotsoldierbehavior
 // Params 0, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_312f4715
 // Checksum 0x64ac1ee3, Offset: 0x4f40
 // Size: 0x13a
 function private robotendjumpdirection() {
@@ -799,6 +838,7 @@ function private robotendjumpdirection() {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_1d5e46fb
 // Checksum 0xaac419b3, Offset: 0x5088
 // Size: 0x42
 function private robottraversaltype(node) {
@@ -813,6 +853,7 @@ function private robottraversaltype(node) {
 
 // Namespace robotsoldierbehavior
 // Params 0, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_f03f3ec3
 // Checksum 0x3f77dbfd, Offset: 0x50d8
 // Size: 0x454
 function private archetyperobotblackboardinit() {
@@ -889,6 +930,7 @@ function private archetyperobotblackboardinit() {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_50e1258e
 // Checksum 0x88fd0ad2, Offset: 0x5538
 // Size: 0x118
 function private robotcrawlercanshootenemy(entity) {
@@ -903,6 +945,7 @@ function private robotcrawlercanshootenemy(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_16ddd18d
 // Checksum 0xd8fe3e94, Offset: 0x5658
 // Size: 0x34
 function private archetyperobotonanimscriptedcallback(entity) {
@@ -912,6 +955,7 @@ function private archetyperobotonanimscriptedcallback(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 0, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_4ab7ac39
 // Checksum 0xb2237cdc, Offset: 0x5698
 // Size: 0xa6
 function private function_4ab7ac39() {
@@ -930,6 +974,7 @@ function private function_4ab7ac39() {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_ce18c301
 // Checksum 0xfe09b0f4, Offset: 0x5748
 // Size: 0x3c
 function private robotinvalidatecover(entity) {
@@ -939,6 +984,7 @@ function private robotinvalidatecover(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_e40e2997
 // Checksum 0x70589c81, Offset: 0x5790
 // Size: 0x44
 function private robotdelaymovement(entity) {
@@ -947,6 +993,7 @@ function private robotdelaymovement(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_9c869f88
 // Checksum 0x69377831, Offset: 0x57e0
 // Size: 0x5c
 function private robotmovement(entity) {
@@ -957,6 +1004,7 @@ function private robotmovement(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_fdcce33d
 // Checksum 0x56f5016f, Offset: 0x5848
 // Size: 0xd0
 function private robotcoverscaninitialize(entity) {
@@ -970,6 +1018,7 @@ function private robotcoverscaninitialize(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_ed94b640
 // Checksum 0xd2a1f12d, Offset: 0x5920
 // Size: 0x84
 function private robotcoverscanterminate(entity) {
@@ -982,6 +1031,7 @@ function private robotcoverscanterminate(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x1 linked
+// namespace_271fbeb5<file_0>::function_ea3247ac
 // Checksum 0xe1f5860b, Offset: 0x59b0
 // Size: 0x156
 function robotcanjuke(entity) {
@@ -1000,6 +1050,7 @@ function robotcanjuke(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x1 linked
+// namespace_271fbeb5<file_0>::function_35881cbf
 // Checksum 0xb5de2b0f, Offset: 0x5b10
 // Size: 0x88
 function robotcantacticaljuke(entity) {
@@ -1012,6 +1063,7 @@ function robotcantacticaljuke(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x1 linked
+// namespace_271fbeb5<file_0>::function_2ed3e6d5
 // Checksum 0xb5498acb, Offset: 0x5ba0
 // Size: 0x3de
 function robotcanpreemptivejuke(entity) {
@@ -1060,6 +1112,7 @@ function robotcanpreemptivejuke(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x1 linked
+// namespace_271fbeb5<file_0>::function_253494f7
 // Checksum 0x3e07442f, Offset: 0x5f88
 // Size: 0x44
 function robotisatcovermodescan(entity) {
@@ -1069,6 +1122,7 @@ function robotisatcovermodescan(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_d5d87d50
 // Checksum 0xb83b04c6, Offset: 0x5fd8
 // Size: 0x4c
 function private robotprepareforadjusttocover(entity) {
@@ -1078,6 +1132,7 @@ function private robotprepareforadjusttocover(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_f4df422e
 // Checksum 0x861e448c, Offset: 0x6030
 // Size: 0x68
 function private robotcrawlerservice(entity) {
@@ -1089,6 +1144,7 @@ function private robotcrawlerservice(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x1 linked
+// namespace_271fbeb5<file_0>::function_467f7305
 // Checksum 0x389dde9d, Offset: 0x60a0
 // Size: 0x1a
 function robotiscrawler(entity) {
@@ -1097,6 +1153,7 @@ function robotiscrawler(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_e86e2430
 // Checksum 0x1de27696, Offset: 0x60c8
 // Size: 0xcc
 function private robotbecomecrawler(entity) {
@@ -1113,6 +1170,7 @@ function private robotbecomecrawler(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x1 linked
+// namespace_271fbeb5<file_0>::function_e7c6bbd3
 // Checksum 0x8ed1e249, Offset: 0x61a0
 // Size: 0x1a
 function robotshouldbecomecrawler(entity) {
@@ -1121,6 +1179,7 @@ function robotshouldbecomecrawler(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_7b40dd18
 // Checksum 0x11aec71, Offset: 0x61c8
 // Size: 0x34
 function private robotismarching(entity) {
@@ -1129,6 +1188,7 @@ function private robotismarching(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 0, eflags: 0x4
+// namespace_271fbeb5<file_0>::function_ca2e3f4d
 // Checksum 0xab9b95ec, Offset: 0x6208
 // Size: 0xbe
 function private robotlocomotionspeed() {
@@ -1150,6 +1210,7 @@ function private robotlocomotionspeed() {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_ec68fa10
 // Checksum 0x9c69a9cd, Offset: 0x62d0
 // Size: 0x8c
 function private robotcoveroverinitialize(behaviortreeentity) {
@@ -1161,6 +1222,7 @@ function private robotcoveroverinitialize(behaviortreeentity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_ac961ac7
 // Checksum 0xbf2c9c8b, Offset: 0x6368
 // Size: 0x3c
 function private robotcoveroverterminate(behaviortreeentity) {
@@ -1170,6 +1232,7 @@ function private robotcoveroverterminate(behaviortreeentity) {
 
 // Namespace robotsoldierbehavior
 // Params 0, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_8184b7d1
 // Checksum 0xdf72676d, Offset: 0x63b0
 // Size: 0x3a
 function private robotismindcontrolled() {
@@ -1182,6 +1245,7 @@ function private robotismindcontrolled() {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_89b67cc0
 // Checksum 0xce5ea347, Offset: 0x63f8
 // Size: 0x38
 function private robotdonttakecover(entity) {
@@ -1191,6 +1255,7 @@ function private robotdonttakecover(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_49592c39
 // Checksum 0x47e979b0, Offset: 0x6438
 // Size: 0xae
 function private _isvalidplayer(player) {
@@ -1202,6 +1267,7 @@ function private _isvalidplayer(player) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_3e0a8858
 // Checksum 0x5c2d94af, Offset: 0x64f0
 // Size: 0xf4
 function private robotrushenemyservice(entity) {
@@ -1219,6 +1285,7 @@ function private robotrushenemyservice(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_98d0cd1
 // Checksum 0x371f6b9f, Offset: 0x65f0
 // Size: 0x184
 function private _isvalidrusher(entity, neighbor) {
@@ -1227,6 +1294,7 @@ function private _isvalidrusher(entity, neighbor) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_bf253144
 // Checksum 0x34225f58, Offset: 0x6780
 // Size: 0x1bc
 function private robotrushneighborservice(entity) {
@@ -1252,6 +1320,7 @@ function private robotrushneighborservice(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_6b628702
 // Checksum 0x64b28d47, Offset: 0x6948
 // Size: 0x142
 function private _findclosest(entity, entities) {
@@ -1272,6 +1341,7 @@ function private _findclosest(entity, entities) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_32d4d3a1
 // Checksum 0x4a07a9b9, Offset: 0x6a98
 // Size: 0x5ec
 function private robottargetservice(entity) {
@@ -1337,6 +1407,7 @@ function private robottargetservice(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_9e05346c
 // Checksum 0x74627b3, Offset: 0x7090
 // Size: 0x6c
 function private setdesiredstancetostand(behaviortreeentity) {
@@ -1348,6 +1419,7 @@ function private setdesiredstancetostand(behaviortreeentity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_99e19e1e
 // Checksum 0x56950dc8, Offset: 0x7108
 // Size: 0x6c
 function private setdesiredstancetocrouch(behaviortreeentity) {
@@ -1359,6 +1431,7 @@ function private setdesiredstancetocrouch(behaviortreeentity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_69ffc3f9
 // Checksum 0xa4925103, Offset: 0x7180
 // Size: 0x94
 function private toggledesiredstance(entity) {
@@ -1372,6 +1445,7 @@ function private toggledesiredstance(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_56495d04
 // Checksum 0x7a400745, Offset: 0x7220
 // Size: 0x2a
 function private robotshouldshutdown(entity) {
@@ -1380,6 +1454,7 @@ function private robotshouldshutdown(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_7b1bf82d
 // Checksum 0x1e0228f1, Offset: 0x7258
 // Size: 0xae
 function private robotshouldexplode(entity) {
@@ -1396,6 +1471,7 @@ function private robotshouldexplode(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_4b79e029
 // Checksum 0x987af481, Offset: 0x7310
 // Size: 0x4c
 function private robotshouldadjusttocover(entity) {
@@ -1407,6 +1483,7 @@ function private robotshouldadjusttocover(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_751ae449
 // Checksum 0x74655515, Offset: 0x7368
 // Size: 0x94
 function private robotshouldreactatcover(behaviortreeentity) {
@@ -1415,6 +1492,7 @@ function private robotshouldreactatcover(behaviortreeentity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_1bd4c3b2
 // Checksum 0x1055f9b6, Offset: 0x7408
 // Size: 0x30
 function private robotexplode(entity) {
@@ -1424,6 +1502,7 @@ function private robotexplode(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_a668d043
 // Checksum 0x3bd8284d, Offset: 0x7440
 // Size: 0x164
 function private robotexplodeterminate(entity) {
@@ -1446,6 +1525,7 @@ function private robotexplodeterminate(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_49486993
 // Checksum 0x7bb93282, Offset: 0x75b0
 // Size: 0xfe
 function private robotexposedcoverservice(entity) {
@@ -1461,6 +1541,7 @@ function private robotexposedcoverservice(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_d7d69a6c
 // Checksum 0xfbb5e771, Offset: 0x76b8
 // Size: 0x134
 function private robotisatcovercondition(entity) {
@@ -1475,6 +1556,7 @@ function private robotisatcovercondition(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_ba043e7e
 // Checksum 0x1b6e4d05, Offset: 0x77f8
 // Size: 0x158
 function private robotsupportsovercover(entity) {
@@ -1489,6 +1571,7 @@ function private robotsupportsovercover(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_3149c942
 // Checksum 0xef59239d, Offset: 0x7958
 // Size: 0x180
 function private canmovetoenemycondition(entity) {
@@ -1512,6 +1595,7 @@ function private canmovetoenemycondition(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_e6a91466
 // Checksum 0xd21f67b1, Offset: 0x7ae0
 // Size: 0xb8
 function private canmoveclosetoenemycondition(entity) {
@@ -1525,6 +1609,7 @@ function private canmoveclosetoenemycondition(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_ca914469
 // Checksum 0x42e423f0, Offset: 0x7ba0
 // Size: 0x38
 function private robotstartsprint(entity) {
@@ -1534,6 +1619,7 @@ function private robotstartsprint(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_ee1443a6
 // Checksum 0xf24fdfe5, Offset: 0x7be0
 // Size: 0x38
 function private robotstartsupersprint(entity) {
@@ -1543,6 +1629,7 @@ function private robotstartsupersprint(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_1538394f
 // Checksum 0xebca12b9, Offset: 0x7c20
 // Size: 0x90
 function private robottacticalwalkactionstart(entity) {
@@ -1555,6 +1642,7 @@ function private robottacticalwalkactionstart(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_c4f96403
 // Checksum 0xf69d8c31, Offset: 0x7cb8
 // Size: 0x3c
 function private robotdie(entity) {
@@ -1565,6 +1653,7 @@ function private robotdie(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_c6fc9479
 // Checksum 0xd20766a9, Offset: 0x7d00
 // Size: 0x7c8
 function private movetoplayerupdate(entity, asmstatename) {
@@ -1658,6 +1747,7 @@ function private movetoplayerupdate(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_9fceca26
 // Checksum 0xe5675b53, Offset: 0x84d0
 // Size: 0x46
 function private robotshouldchargemelee(entity) {
@@ -1669,6 +1759,7 @@ function private robotshouldchargemelee(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_f8ae9bac
 // Checksum 0xde2b1c99, Offset: 0x8520
 // Size: 0x194
 function private robothasenemytomelee(entity) {
@@ -1684,6 +1775,7 @@ function private robothasenemytomelee(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_421ed8a4
 // Checksum 0x82106044, Offset: 0x86c0
 // Size: 0xea
 function private robotroguehasenemytomelee(entity) {
@@ -1698,6 +1790,7 @@ function private robotroguehasenemytomelee(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_bea02ae6
 // Checksum 0xa7ea7a0, Offset: 0x87b8
 // Size: 0x46
 function private robotshouldmelee(entity) {
@@ -1709,6 +1802,7 @@ function private robotshouldmelee(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_dbd2bc7e
 // Checksum 0x82162de5, Offset: 0x8808
 // Size: 0x15c
 function private robothascloseenemytomelee(entity) {
@@ -1727,6 +1821,7 @@ function private robothascloseenemytomelee(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_b7604a6
 // Checksum 0xcfb35b13, Offset: 0x8970
 // Size: 0xc2
 function private robotroguehascloseenemytomelee(entity) {
@@ -1738,6 +1833,7 @@ function private robotroguehascloseenemytomelee(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_8246bdc2
 // Checksum 0x3bf63f69, Offset: 0x8a40
 // Size: 0x4c
 function private scriptrequirestosprintcondition(entity) {
@@ -1746,6 +1842,7 @@ function private scriptrequirestosprintcondition(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_ba0b95e5
 // Checksum 0x5b428f6a, Offset: 0x8a98
 // Size: 0x4c
 function private robotscanexposedpainterminate(entity) {
@@ -1755,6 +1852,7 @@ function private robotscanexposedpainterminate(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_7d1a51f7
 // Checksum 0xea7c44cb, Offset: 0x8af0
 // Size: 0xae
 function private robottookempdamage(entity) {
@@ -1767,6 +1865,7 @@ function private robottookempdamage(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_a1a88c73
 // Checksum 0xa5caee9c, Offset: 0x8ba8
 // Size: 0x54
 function private robotnocloseenemyservice(entity) {
@@ -1779,6 +1878,7 @@ function private robotnocloseenemyservice(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 3, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_f7a368d1
 // Checksum 0xb23c0e25, Offset: 0x8c08
 // Size: 0x120
 function private _robotoutsidemovementrange(entity, range, useenemypos) {
@@ -1799,6 +1899,7 @@ function private _robotoutsidemovementrange(entity, range, useenemypos) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_bc2252d0
 // Checksum 0x18aaa216, Offset: 0x8d30
 // Size: 0x24
 function private robotoutsidesupersprintrange(entity) {
@@ -1807,6 +1908,7 @@ function private robotoutsidesupersprintrange(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_81c33582
 // Checksum 0xc9767f8, Offset: 0x8d60
 // Size: 0x76
 function private robotwithinsupersprintrange(entity) {
@@ -1818,6 +1920,7 @@ function private robotwithinsupersprintrange(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_7fd6ab7
 // Checksum 0x7852671c, Offset: 0x8de0
 // Size: 0x86
 function private robotoutsidesprintrange(entity) {
@@ -1829,6 +1932,7 @@ function private robotoutsidesprintrange(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_3339adbb
 // Checksum 0xfe05f237, Offset: 0x8e70
 // Size: 0xc2
 function private robotoutsidetacticalwalkrange(entity) {
@@ -1843,6 +1947,7 @@ function private robotoutsidetacticalwalkrange(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_55141515
 // Checksum 0xec87ffdb, Offset: 0x8f40
 // Size: 0xb2
 function private robotwithinsprintrange(entity) {
@@ -1857,6 +1962,7 @@ function private robotwithinsprintrange(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_ccf613aa
 // Checksum 0xe943a261, Offset: 0x9000
 // Size: 0x118
 function private shouldtakeovercondition(entity) {
@@ -1873,6 +1979,7 @@ function private shouldtakeovercondition(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_a097a0ea
 // Checksum 0xee8f2833, Offset: 0x9120
 // Size: 0x1c
 function private hasminiraps(entity) {
@@ -1881,6 +1988,7 @@ function private hasminiraps(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_e33b1e75
 // Checksum 0xc8d5efdc, Offset: 0x9148
 // Size: 0x80
 function private robotismoving(entity) {
@@ -1892,6 +2000,7 @@ function private robotismoving(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_1606f7ec
 // Checksum 0x83cd6a80, Offset: 0x91d0
 // Size: 0x20
 function private robotabletoshootcondition(entity) {
@@ -1900,6 +2009,7 @@ function private robotabletoshootcondition(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_846f2f66
 // Checksum 0x679e3d16, Offset: 0x91f8
 // Size: 0x44
 function private robotshouldtacticalwalk(entity) {
@@ -1911,6 +2021,7 @@ function private robotshouldtacticalwalk(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_c25bc6a0
 // Checksum 0xe03bb6a8, Offset: 0x9248
 // Size: 0x64c
 function private _robotcoverposition(entity) {
@@ -1984,6 +2095,7 @@ function private _robotcoverposition(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_92aecd01
 // Checksum 0xba260f09, Offset: 0x98a0
 // Size: 0x31c
 function private _robotescortposition(entity) {
@@ -2031,6 +2143,7 @@ function private _robotescortposition(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_7dbf6f86
 // Checksum 0xa5a07a52, Offset: 0x9bc8
 // Size: 0x404
 function private _robotrusherposition(entity) {
@@ -2077,6 +2190,7 @@ function private _robotrusherposition(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_eee2a916
 // Checksum 0xa1481ffc, Offset: 0x9fd8
 // Size: 0x418
 function private _robotguardposition(entity) {
@@ -2126,6 +2240,7 @@ function private _robotguardposition(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_b57c4ac3
 // Checksum 0x2e9595c9, Offset: 0xa3f8
 // Size: 0x28e
 function private robotpositionservice(entity) {
@@ -2177,6 +2292,7 @@ function private robotpositionservice(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_f45ed894
 // Checksum 0x43e905ec, Offset: 0xa690
 // Size: 0x84
 function private robotdropstartingweapon(entity, asmstatename) {
@@ -2188,6 +2304,7 @@ function private robotdropstartingweapon(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_f2dc2b1e
 // Checksum 0xbd5f0289, Offset: 0xa720
 // Size: 0xc4
 function private robotjukeinitialize(entity) {
@@ -2202,6 +2319,7 @@ function private robotjukeinitialize(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_213b7eb6
 // Checksum 0x7aeff500, Offset: 0xa7f0
 // Size: 0x68
 function private robotpreemptivejuketerminate(entity) {
@@ -2211,6 +2329,7 @@ function private robotpreemptivejuketerminate(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_d4856404
 // Checksum 0x407a6089, Offset: 0xa860
 // Size: 0x372
 function private robottryreacquireservice(entity) {
@@ -2273,6 +2392,7 @@ function private robottryreacquireservice(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_ddfb257c
 // Checksum 0xb0a829e8, Offset: 0xabe0
 // Size: 0xc8
 function private takeoverinitialize(entity, asmstatename) {
@@ -2293,6 +2413,7 @@ function private takeoverinitialize(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_8ed01e0b
 // Checksum 0x41cb79fe, Offset: 0xacb0
 // Size: 0x72
 function private takeoverterminate(entity, asmstatename) {
@@ -2307,6 +2428,7 @@ function private takeoverterminate(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_853dec33
 // Checksum 0xf386f477, Offset: 0xad30
 // Size: 0xb8
 function private stepintoinitialize(entity, asmstatename) {
@@ -2321,6 +2443,7 @@ function private stepintoinitialize(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_bf05158a
 // Checksum 0xf5dc206, Offset: 0xadf0
 // Size: 0x60
 function private stepintoterminate(entity, asmstatename) {
@@ -2332,6 +2455,7 @@ function private stepintoterminate(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_fb0a3607
 // Checksum 0xbe2bfc47, Offset: 0xae58
 // Size: 0x100
 function private stepoutinitialize(entity, asmstatename) {
@@ -2350,6 +2474,7 @@ function private stepoutinitialize(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 2, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_4d716ef6
 // Checksum 0xa7a33179, Offset: 0xaf60
 // Size: 0x70
 function private stepoutterminate(entity, asmstatename) {
@@ -2362,6 +2487,7 @@ function private stepoutterminate(entity, asmstatename) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_50754bbc
 // Checksum 0x11c62bc1, Offset: 0xafd8
 // Size: 0x74
 function private supportsstepoutcondition(entity) {
@@ -2370,6 +2496,7 @@ function private supportsstepoutcondition(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 1, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_8b6d1606
 // Checksum 0xdba8877b, Offset: 0xb058
 // Size: 0xe6
 function private shouldstepincondition(entity) {
@@ -2384,6 +2511,7 @@ function private shouldstepincondition(entity) {
 
 // Namespace robotsoldierbehavior
 // Params 0, eflags: 0x5 linked
+// namespace_271fbeb5<file_0>::function_e2fda40b
 // Checksum 0xe6a24ff8, Offset: 0xb148
 // Size: 0xd2
 function private robotdeployminiraps() {
@@ -2401,6 +2529,7 @@ function private robotdeployminiraps() {
 
 // Namespace robotsoldierserverutils
 // Params 4, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_2ff664b7
 // Checksum 0x464e3a, Offset: 0xb228
 // Size: 0x134
 function private _trygibbinghead(entity, damage, hitloc, isexplosive) {
@@ -2419,6 +2548,7 @@ function private _trygibbinghead(entity, damage, hitloc, isexplosive) {
 
 // Namespace robotsoldierserverutils
 // Params 5, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_9a8871d5
 // Checksum 0xced0797c, Offset: 0xb368
 // Size: 0x28c
 function private _trygibbinglimb(entity, damage, hitloc, isexplosive, ondeath) {
@@ -2456,6 +2586,7 @@ function private _trygibbinglimb(entity, damage, hitloc, isexplosive, ondeath) {
 
 // Namespace robotsoldierserverutils
 // Params 5, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_5cde4a52
 // Checksum 0x89ab4cd8, Offset: 0xb600
 // Size: 0x404
 function private _trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) {
@@ -2499,6 +2630,7 @@ function private _trygibbinglegs(entity, damage, hitloc, isexplosive, attacker) 
 
 // Namespace robotsoldierserverutils
 // Params 12, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_8f8ab878
 // Checksum 0xee873ad5, Offset: 0xba10
 // Size: 0x208
 function private robotgibdamageoverride(inflictor, attacker, damage, flags, meansofdeath, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
@@ -2523,6 +2655,7 @@ function private robotgibdamageoverride(inflictor, attacker, damage, flags, mean
 
 // Namespace robotsoldierserverutils
 // Params 8, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_7153ea3f
 // Checksum 0x5e889bf3, Offset: 0xbc20
 // Size: 0x78
 function private robotdeathoverride(inflictor, attacker, damage, meansofdeath, weapon, dir, hitloc, offsettime) {
@@ -2533,6 +2666,7 @@ function private robotdeathoverride(inflictor, attacker, damage, meansofdeath, w
 
 // Namespace robotsoldierserverutils
 // Params 8, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_d6ff5077
 // Checksum 0x40b66bab, Offset: 0xbca0
 // Size: 0x310
 function private robotgibdeathoverride(inflictor, attacker, damage, meansofdeath, weapon, dir, hitloc, offsettime) {
@@ -2566,6 +2700,7 @@ function private robotgibdeathoverride(inflictor, attacker, damage, meansofdeath
 
 // Namespace robotsoldierserverutils
 // Params 8, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_f6b76749
 // Checksum 0x4fe93a46, Offset: 0xbfb8
 // Size: 0x208
 function private robotdestructdeathoverride(inflictor, attacker, damage, meansofdeath, weapon, dir, hitloc, offsettime) {
@@ -2594,6 +2729,7 @@ function private robotdestructdeathoverride(inflictor, attacker, damage, meansof
 
 // Namespace robotsoldierserverutils
 // Params 12, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_60251d0
 // Checksum 0x95695e22, Offset: 0xc1c8
 // Size: 0x396
 function private robotdamageoverride(inflictor, attacker, damage, flags, meansofdamage, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
@@ -2638,6 +2774,7 @@ function private robotdamageoverride(inflictor, attacker, damage, flags, meansof
 
 // Namespace robotsoldierserverutils
 // Params 12, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_543a4a79
 // Checksum 0xde7d49a2, Offset: 0xc568
 // Size: 0xf8
 function private robotdestructrandompieces(inflictor, attacker, damage, flags, meansofdamage, weapon, point, dir, hitloc, offsettime, boneindex, modelindex) {
@@ -2651,6 +2788,7 @@ function private robotdestructrandompieces(inflictor, attacker, damage, flags, m
 
 // Namespace robotsoldierserverutils
 // Params 1, eflags: 0x4
+// namespace_8509e91d<file_0>::function_c2c5b9e7
 // Checksum 0x140a47ac, Offset: 0xc668
 // Size: 0x8c
 function private findclosestnavmeshpositiontoenemy(enemy) {
@@ -2666,6 +2804,7 @@ function private findclosestnavmeshpositiontoenemy(enemy) {
 
 // Namespace robotsoldierserverutils
 // Params 2, eflags: 0x4
+// namespace_8509e91d<file_0>::function_f007a52c
 // Checksum 0xd150017e, Offset: 0xc700
 // Size: 0xac
 function private robotchoosecoverdirection(entity, stepout) {
@@ -2679,6 +2818,7 @@ function private robotchoosecoverdirection(entity, stepout) {
 
 // Namespace robotsoldierserverutils
 // Params 0, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_23cfe26f
 // Checksum 0xc1ef79dd, Offset: 0xc7b8
 // Size: 0x644
 function private robotsoldierspawnsetup() {
@@ -2752,6 +2892,7 @@ function private robotsoldierspawnsetup() {
 
 // Namespace robotsoldierserverutils
 // Params 1, eflags: 0x4
+// namespace_8509e91d<file_0>::function_4f8dcbb1
 // Checksum 0x62bca8e2, Offset: 0xce08
 // Size: 0xd8
 function private robotgivewasp(entity) {
@@ -2766,6 +2907,7 @@ function private robotgivewasp(entity) {
 
 // Namespace robotsoldierserverutils
 // Params 1, eflags: 0x4
+// namespace_8509e91d<file_0>::function_6f89aedf
 // Checksum 0x72dac310, Offset: 0xcee8
 // Size: 0x132
 function private robotdeploywasp(entity) {
@@ -2785,6 +2927,7 @@ function private robotdeploywasp(entity) {
 
 // Namespace robotsoldierserverutils
 // Params 1, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_cae74906
 // Checksum 0x937bb8df, Offset: 0xd028
 // Size: 0x44
 function private rapsdetonatecountdown(entity) {
@@ -2795,6 +2938,7 @@ function private rapsdetonatecountdown(entity) {
 
 // Namespace robotsoldierserverutils
 // Params 1, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_a9ae106
 // Checksum 0xc93aa75e, Offset: 0xd078
 // Size: 0x58
 function private becomecrawler(entity) {
@@ -2805,6 +2949,7 @@ function private becomecrawler(entity) {
 
 // Namespace robotsoldierserverutils
 // Params 1, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_929a26f9
 // Checksum 0x441c4fa7, Offset: 0xd0d8
 // Size: 0x82
 function private cleanupequipment(entity) {
@@ -2823,6 +2968,7 @@ function private cleanupequipment(entity) {
 
 // Namespace robotsoldierserverutils
 // Params 0, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_6b7c4e44
 // Checksum 0xe4268612, Offset: 0xd168
 // Size: 0x9c
 function private forcerobotsoldiermindcontrollevel1() {
@@ -2838,6 +2984,7 @@ function private forcerobotsoldiermindcontrollevel1() {
 
 // Namespace robotsoldierserverutils
 // Params 0, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_dd83bd7f
 // Checksum 0x9c933b01, Offset: 0xd210
 // Size: 0x2c4
 function private forcerobotsoldiermindcontrollevel2() {
@@ -2870,6 +3017,7 @@ function private forcerobotsoldiermindcontrollevel2() {
 
 // Namespace robotsoldierserverutils
 // Params 0, eflags: 0x5 linked
+// namespace_8509e91d<file_0>::function_b7814316
 // Checksum 0xd92e82f4, Offset: 0xd4e0
 // Size: 0x9c
 function private forcerobotsoldiermindcontrollevel3() {
@@ -2885,6 +3033,7 @@ function private forcerobotsoldiermindcontrollevel3() {
 
 // Namespace robotsoldierserverutils
 // Params 4, eflags: 0x1 linked
+// namespace_8509e91d<file_0>::function_8494e898
 // Checksum 0x1cbdf600, Offset: 0xd588
 // Size: 0x38
 function robotequipminiraps(entity, attribute, oldvalue, value) {
@@ -2893,6 +3042,7 @@ function robotequipminiraps(entity, attribute, oldvalue, value) {
 
 // Namespace robotsoldierserverutils
 // Params 4, eflags: 0x1 linked
+// namespace_8509e91d<file_0>::function_84bc3ebc
 // Checksum 0x77ebd5c5, Offset: 0xd5c8
 // Size: 0x104
 function robotlights(entity, attribute, oldvalue, value) {
@@ -2919,6 +3069,7 @@ function robotlights(entity, attribute, oldvalue, value) {
 
 // Namespace robotsoldierserverutils
 // Params 1, eflags: 0x1 linked
+// namespace_8509e91d<file_0>::function_facc77c
 // Checksum 0xe2be951b, Offset: 0xd6d8
 // Size: 0xf4
 function randomgibroguerobot(entity) {
@@ -2942,6 +3093,7 @@ function randomgibroguerobot(entity) {
 
 // Namespace robotsoldierserverutils
 // Params 4, eflags: 0x1 linked
+// namespace_8509e91d<file_0>::function_b8afd119
 // Checksum 0x58c2ca, Offset: 0xd7d8
 // Size: 0x176
 function roguecontrolattributecallback(entity, attribute, oldvalue, value) {
@@ -2974,6 +3126,7 @@ function roguecontrolattributecallback(entity, attribute, oldvalue, value) {
 
 // Namespace robotsoldierserverutils
 // Params 4, eflags: 0x1 linked
+// namespace_8509e91d<file_0>::function_9f706ada
 // Checksum 0xcbb6752b, Offset: 0xd958
 // Size: 0x146
 function robotmovemodeattributecallback(entity, attribute, oldvalue, value) {
@@ -3002,6 +3155,7 @@ function robotmovemodeattributecallback(entity, attribute, oldvalue, value) {
 
 // Namespace robotsoldierserverutils
 // Params 4, eflags: 0x1 linked
+// namespace_8509e91d<file_0>::function_6a7d7354
 // Checksum 0x66a94c3b, Offset: 0xdaa8
 // Size: 0x24c
 function robotforcecrawler(entity, attribute, oldvalue, value) {
@@ -3047,6 +3201,7 @@ function robotforcecrawler(entity, attribute, oldvalue, value) {
 
 // Namespace robotsoldierserverutils
 // Params 4, eflags: 0x1 linked
+// namespace_8509e91d<file_0>::function_31598e4d
 // Checksum 0xc2811623, Offset: 0xdd00
 // Size: 0x114
 function roguecontrolforcegoalattributecallback(entity, attribute, oldvalue, value) {
@@ -3065,6 +3220,7 @@ function roguecontrolforcegoalattributecallback(entity, attribute, oldvalue, val
 
 // Namespace robotsoldierserverutils
 // Params 4, eflags: 0x1 linked
+// namespace_8509e91d<file_0>::function_bd55d65e
 // Checksum 0xbe56418, Offset: 0xde20
 // Size: 0xc6
 function roguecontrolspeedattributecallback(entity, attribute, oldvalue, value) {
@@ -3083,6 +3239,7 @@ function roguecontrolspeedattributecallback(entity, attribute, oldvalue, value) 
 
 // Namespace robotsoldierserverutils
 // Params 4, eflags: 0x1 linked
+// namespace_8509e91d<file_0>::function_62ac19bc
 // Checksum 0xbb04acc1, Offset: 0xdef0
 // Size: 0x72
 function robottraversalattributecallback(entity, attribute, oldvalue, value) {

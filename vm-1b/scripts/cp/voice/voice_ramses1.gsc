@@ -4,6 +4,7 @@
 
 // Namespace namespace_db167d30
 // Params 0, eflags: 0x0
+// namespace_db167d30<file_0>::function_e230521c
 // Checksum 0x1ab767a3, Offset: 0x1bd8
 // Size: 0x1142
 function init_voice() {

@@ -18,6 +18,7 @@
 
 // Namespace namespace_e3074452
 // Params 0, eflags: 0x1 linked
+// namespace_e3074452<file_0>::function_c35e6aab
 // Checksum 0x99ec1590, Offset: 0x3b0
 // Size: 0x4
 function init() {
@@ -26,6 +27,7 @@ function init() {
 
 // Namespace namespace_e3074452
 // Params 0, eflags: 0x1 linked
+// namespace_e3074452<file_0>::function_d290ebfa
 // Checksum 0x7cde4f48, Offset: 0x3c0
 // Size: 0x114
 function main() {
@@ -40,6 +42,7 @@ function main() {
 
 // Namespace namespace_e3074452
 // Params 0, eflags: 0x1 linked
+// namespace_e3074452<file_0>::function_fb4f96b5
 // Checksum 0x99ec1590, Offset: 0x4e0
 // Size: 0x4
 function on_player_connect() {
@@ -48,6 +51,7 @@ function on_player_connect() {
 
 // Namespace namespace_e3074452
 // Params 0, eflags: 0x1 linked
+// namespace_e3074452<file_0>::function_aebcf025
 // Checksum 0x99ec1590, Offset: 0x4f0
 // Size: 0x4
 function on_player_spawned() {
@@ -56,6 +60,7 @@ function on_player_spawned() {
 
 // Namespace namespace_e3074452
 // Params 1, eflags: 0x1 linked
+// namespace_e3074452<file_0>::function_a7861293
 // Checksum 0xf0f22155, Offset: 0x500
 // Size: 0x54
 function function_a7861293(type) {
@@ -65,6 +70,7 @@ function function_a7861293(type) {
 
 // Namespace namespace_e3074452
 // Params 1, eflags: 0x1 linked
+// namespace_e3074452<file_0>::function_5f9e76f1
 // Checksum 0x788928ab, Offset: 0x560
 // Size: 0x34
 function function_5f9e76f1(type) {
@@ -74,6 +80,7 @@ function function_5f9e76f1(type) {
 
 // Namespace namespace_e3074452
 // Params 1, eflags: 0x1 linked
+// namespace_e3074452<file_0>::function_306198fb
 // Checksum 0x896ea942, Offset: 0x5a0
 // Size: 0xbc
 function function_306198fb(type) {
@@ -90,6 +97,7 @@ function function_306198fb(type) {
 
 // Namespace namespace_e3074452
 // Params 1, eflags: 0x1 linked
+// namespace_e3074452<file_0>::function_18e4af4a
 // Checksum 0xe9eee012, Offset: 0x668
 // Size: 0xc
 function function_18e4af4a(type) {
@@ -98,6 +106,7 @@ function function_18e4af4a(type) {
 
 // Namespace namespace_e3074452
 // Params 1, eflags: 0x1 linked
+// namespace_e3074452<file_0>::function_9248cfb4
 // Checksum 0xe549a3da, Offset: 0x680
 // Size: 0xa8
 function function_9248cfb4(smeansofdeath) {

@@ -43,6 +43,7 @@
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_c35e6aab
 // Checksum 0x6f79795a, Offset: 0x1670
 // Size: 0x12dc
 function init() {
@@ -144,6 +145,7 @@ function init() {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_5436b900
 // Checksum 0xf03bdacf, Offset: 0x2958
 // Size: 0x112
 function finalizecratecategory(category) {
@@ -159,6 +161,7 @@ function finalizecratecategory(category) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x0
+// namespace_41cdfb13<file_0>::function_ce670156
 // Checksum 0x9e5d4a55, Offset: 0x2a78
 // Size: 0x104
 function function_ce670156(category) {
@@ -174,6 +177,7 @@ function function_ce670156(category) {
 
 // Namespace supplydrop
 // Params 3, eflags: 0x0
+// namespace_41cdfb13<file_0>::function_72509a87
 // Checksum 0x1e1adee1, Offset: 0x2b88
 // Size: 0x27c
 function setcategorytypeweight(category, type, weight) {
@@ -213,6 +217,7 @@ function setcategorytypeweight(category, type, weight) {
 
 // Namespace supplydrop
 // Params 8, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_56447f63
 // Checksum 0x8b4bb121, Offset: 0x2e10
 // Size: 0x204
 function function_56447f63(category, type, name, weight, hint, hint_gambler, givefunction, landfunctionoverride) {
@@ -250,6 +255,7 @@ function function_56447f63(category, type, name, weight, hint, hint_gambler, giv
 
     // Namespace supplydrop
     // Params 2, eflags: 0x1 linked
+    // namespace_41cdfb13<file_0>::function_5fea3b09
     // Checksum 0x32eee0a1, Offset: 0x3020
     // Size: 0xa4
     function function_5fea3b09(category, name) {
@@ -265,6 +271,7 @@ function function_56447f63(category, type, name, weight, hint, hint_gambler, giv
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_cc7417a7
 // Checksum 0xdf8a6084, Offset: 0x30d0
 // Size: 0x3ce
 function getrandomcratetype(category, gambler_crate_name) {
@@ -321,6 +328,7 @@ function getrandomcratetype(category, gambler_crate_name) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_75af8d2a
 // Checksum 0x8e8dfc79, Offset: 0x34a8
 // Size: 0xc6
 function givecrateitem(crate) {
@@ -333,6 +341,7 @@ function givecrateitem(crate) {
 
 // Namespace supplydrop
 // Params 3, eflags: 0x0
+// namespace_41cdfb13<file_0>::function_964feec3
 // Checksum 0xeb84b8ea, Offset: 0x3578
 // Size: 0x52
 function givecratekillstreakwaiter(event, removecrate, extraendon) {
@@ -346,6 +355,7 @@ function givecratekillstreakwaiter(event, removecrate, extraendon) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_4a5f0e8d
 // Checksum 0x991a1255, Offset: 0x35d8
 // Size: 0x24
 function givecratekillstreak(killstreak) {
@@ -354,6 +364,7 @@ function givecratekillstreak(killstreak) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_78ffbbc6
 // Checksum 0x384d2ff1, Offset: 0x3608
 // Size: 0x1a2
 function givespecializedcrateweapon(weapon) {
@@ -385,6 +396,7 @@ function givespecializedcrateweapon(weapon) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x0
+// namespace_41cdfb13<file_0>::function_3091002b
 // Checksum 0x323f7ba, Offset: 0x37b8
 // Size: 0x1c8
 function givecrateweapon(weapon_name) {
@@ -414,6 +426,7 @@ function givecrateweapon(weapon_name) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_c027a29a
 // Checksum 0x88a32571, Offset: 0x3988
 // Size: 0x2cc
 function usesupplydropmarker(package_contents_id, context) {
@@ -463,6 +476,7 @@ function usesupplydropmarker(package_contents_id, context) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_d21481d1
 // Checksum 0xcdf06df4, Offset: 0x3c60
 // Size: 0x4c
 function issupplydropgrenadeallowed(killstreak) {
@@ -475,6 +489,7 @@ function issupplydropgrenadeallowed(killstreak) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_8ce2c8b8
 // Checksum 0x9e7dfbe0, Offset: 0x3cb8
 // Size: 0x26
 function adddroplocation(killstreak_id, location) {
@@ -483,6 +498,7 @@ function adddroplocation(killstreak_id, location) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_108fcb2a
 // Checksum 0xc17ed8ab, Offset: 0x3ce8
 // Size: 0x18
 function deldroplocation(killstreak_id) {
@@ -491,6 +507,7 @@ function deldroplocation(killstreak_id) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_3c50ca0b
 // Checksum 0x98814c5c, Offset: 0x3d08
 // Size: 0x3f0
 function islocationgood(location, context) {
@@ -536,6 +553,7 @@ function islocationgood(location, context) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_921ac4ce
 // Checksum 0x6f11e84a, Offset: 0x4100
 // Size: 0x1ae
 function usekillstreaksupplydrop(killstreak) {
@@ -565,6 +583,7 @@ function usekillstreaksupplydrop(killstreak) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x0
+// namespace_41cdfb13<file_0>::function_39919eb6
 // Checksum 0xf9c15cca, Offset: 0x42b8
 // Size: 0x1d0
 function use_killstreak_death_machine(killstreak) {
@@ -591,6 +610,7 @@ function use_killstreak_death_machine(killstreak) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x0
+// namespace_41cdfb13<file_0>::function_2e2656c3
 // Checksum 0xfe8c92b0, Offset: 0x4490
 // Size: 0x1d0
 function use_killstreak_grim_reaper(killstreak) {
@@ -617,6 +637,7 @@ function use_killstreak_grim_reaper(killstreak) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x0
+// namespace_41cdfb13<file_0>::function_9d9f8e96
 // Checksum 0x1443f187, Offset: 0x4668
 // Size: 0x200
 function function_9d9f8e96(killstreak) {
@@ -644,6 +665,7 @@ function function_9d9f8e96(killstreak) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x0
+// namespace_41cdfb13<file_0>::function_161782e5
 // Checksum 0x86eb188c, Offset: 0x4870
 // Size: 0x200
 function function_161782e5(killstreak) {
@@ -671,6 +693,7 @@ function function_161782e5(killstreak) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_d4412064
 // Checksum 0x760fff8a, Offset: 0x4a78
 // Size: 0xba
 function cleanupwatcherondeath(team, killstreak_id) {
@@ -687,6 +710,7 @@ function cleanupwatcherondeath(team, killstreak_id) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_32e49d5b
 // Checksum 0x8466f01b, Offset: 0x4b40
 // Size: 0xe4
 function cleanup(context, player) {
@@ -706,6 +730,7 @@ function cleanup(context, player) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_be5b5acc
 // Checksum 0xd069746b, Offset: 0x4c30
 // Size: 0x358
 function markerupdatethread(context) {
@@ -746,6 +771,7 @@ function markerupdatethread(context) {
 
 // Namespace supplydrop
 // Params 4, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_e8df431
 // Checksum 0xe7321242, Offset: 0x4f90
 // Size: 0x424
 function supplydropwatcher(package_contents_id, trigger_event, supplydropweapon, context) {
@@ -807,6 +833,7 @@ function supplydropwatcher(package_contents_id, trigger_event, supplydropweapon,
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_f489729a
 // Checksum 0x758cf3c, Offset: 0x53c0
 // Size: 0x6c
 function checkforemp() {
@@ -822,6 +849,7 @@ function checkforemp() {
 
 // Namespace supplydrop
 // Params 3, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_f434193c
 // Checksum 0xfe78d1c1, Offset: 0x5438
 // Size: 0x1d4
 function supplydropgrenadetimeout(team, killstreak_id, weapon) {
@@ -852,6 +880,7 @@ function supplydropgrenadetimeout(team, killstreak_id, weapon) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_d1c5540f
 // Checksum 0xd4564f17, Offset: 0x5618
 // Size: 0x8a
 function checkweaponchange(team, killstreak_id) {
@@ -867,6 +896,7 @@ function checkweaponchange(team, killstreak_id) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x0
+// namespace_41cdfb13<file_0>::function_1c13ad9e
 // Checksum 0x93b37467, Offset: 0x56b0
 // Size: 0x11c
 function function_1c13ad9e(killstreak_id) {
@@ -890,6 +920,7 @@ function function_1c13ad9e(killstreak_id) {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_6503972
 // Checksum 0x5919cf2b, Offset: 0x57d8
 // Size: 0x7c
 function function_6503972() {
@@ -904,6 +935,7 @@ function function_6503972() {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x0
+// namespace_41cdfb13<file_0>::function_54bbab1c
 // Checksum 0x854cd560, Offset: 0x5860
 // Size: 0x7e
 function function_54bbab1c() {
@@ -920,6 +952,7 @@ function function_54bbab1c() {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_885798de
 // Checksum 0xd8ac150b, Offset: 0x58e8
 // Size: 0x1c8
 function geticonforcrate() {
@@ -969,6 +1002,7 @@ function geticonforcrate() {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_8717ad35
 // Checksum 0x8871838d, Offset: 0x5ab8
 // Size: 0x6e4
 function crateactivate(hacker) {
@@ -1058,6 +1092,7 @@ function crateactivate(hacker) {
 
 // Namespace supplydrop
 // Params 3, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_2e29cd17
 // Checksum 0xf5820818, Offset: 0x61a8
 // Size: 0xac
 function setricochetprotectionendtime(killstreak, killstreak_id, owner) {
@@ -1070,6 +1105,7 @@ function setricochetprotectionendtime(killstreak, killstreak_id, owner) {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_f3b1dd7c
 // Checksum 0x79326374, Offset: 0x6260
 // Size: 0x166
 function cratedeactivate() {
@@ -1095,6 +1131,7 @@ function cratedeactivate() {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_809a4bd3
 // Checksum 0xaae377af, Offset: 0x63d0
 // Size: 0x62
 function function_809a4bd3() {
@@ -1110,6 +1147,7 @@ function function_809a4bd3() {
 
 // Namespace supplydrop
 // Params 3, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_636195e5
 // Checksum 0x85f3e630, Offset: 0x6440
 // Size: 0x8a
 function dropalltoground(origin, radius, stickyobjectradius) {
@@ -1122,6 +1160,7 @@ function dropalltoground(origin, radius, stickyobjectradius) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_404df303
 // Checksum 0x6935091f, Offset: 0x64d8
 // Size: 0x2c
 function dropeverythingtouchingcrate(origin) {
@@ -1130,6 +1169,7 @@ function dropeverythingtouchingcrate(origin) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_f0963d23
 // Checksum 0x87d980b4, Offset: 0x6510
 // Size: 0x44
 function dropalltogroundaftercratedelete(crate, crate_origin) {
@@ -1140,6 +1180,7 @@ function dropalltogroundaftercratedelete(crate, crate_origin) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_e53f7c08
 // Checksum 0x3c9ec5e7, Offset: 0x6560
 // Size: 0xd6
 function dropcratestoground(origin, radius) {
@@ -1154,6 +1195,7 @@ function dropcratestoground(origin, radius) {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_193b1325
 // Checksum 0x811c8674, Offset: 0x6640
 // Size: 0xae
 function dropcratetoground() {
@@ -1172,6 +1214,7 @@ function dropcratetoground() {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_d92ac79e
 // Checksum 0xe0a882fe, Offset: 0x66f8
 // Size: 0x34
 function configureteampost(owner) {
@@ -1181,6 +1224,7 @@ function configureteampost(owner) {
 
 // Namespace supplydrop
 // Params 6, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_f2525f6f
 // Checksum 0x93d38e60, Offset: 0x6738
 // Size: 0x326
 function cratespawn(killstreak, killstreakid, owner, team, drop_origin, drop_angle) {
@@ -1229,6 +1273,7 @@ function cratespawn(killstreak, killstreakid, owner, team, drop_origin, drop_ang
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_3ceaf7a3
 // Checksum 0xcccad795, Offset: 0x6a68
 // Size: 0x1f4
 function cratedelete(drop_all_to_ground) {
@@ -1267,6 +1312,7 @@ function cratedelete(drop_all_to_ground) {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_a68c1ee4
 // Checksum 0x12220df6, Offset: 0x6c68
 // Size: 0x4e
 function stationarycrateoverride() {
@@ -1280,6 +1326,7 @@ function stationarycrateoverride() {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_216243b9
 // Checksum 0xf4ded14b, Offset: 0x6cc0
 // Size: 0x3c
 function timeoutcratewaiter() {
@@ -1291,6 +1338,7 @@ function timeoutcratewaiter() {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_4230965d
 // Checksum 0x29695eb8, Offset: 0x6d08
 // Size: 0x110
 function cratephysics() {
@@ -1310,6 +1358,7 @@ function cratephysics() {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x0
+// namespace_41cdfb13<file_0>::function_4f826843
 // Checksum 0x47657ed9, Offset: 0x6e20
 // Size: 0xea
 function get_height(e_ignore) {
@@ -1325,6 +1374,7 @@ function get_height(e_ignore) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_1fec9dbb
 // Checksum 0xdf961c5e, Offset: 0x6f18
 // Size: 0x304
 function cratecontrolleddrop(killstreak, v_target_location) {
@@ -1371,6 +1421,7 @@ function cratecontrolleddrop(killstreak, v_target_location) {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_c985410
 // Checksum 0x701e8961, Offset: 0x7228
 // Size: 0x84
 function play_impact_sound() {
@@ -1386,6 +1437,7 @@ function play_impact_sound() {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_dc7b6db0
 // Checksum 0x75d17fbf, Offset: 0x72b8
 // Size: 0x74
 function update_crate_velocity() {
@@ -1402,6 +1454,7 @@ function update_crate_velocity() {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_abdefdbd
 // Checksum 0xb63b7a8, Offset: 0x7338
 // Size: 0x80
 function crateredophysics() {
@@ -1415,6 +1468,7 @@ function crateredophysics() {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_fbcc2b00
 // Checksum 0x73899fb, Offset: 0x73c0
 // Size: 0x184
 function do_supply_drop_detonation(weapon, owner) {
@@ -1440,6 +1494,7 @@ function do_supply_drop_detonation(weapon, owner) {
 
 // Namespace supplydrop
 // Params 6, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_a6c52a8
 // Checksum 0xfd6a2b70, Offset: 0x7550
 // Size: 0xf4
 function dosupplydrop(weapon_instance, weapon, owner, killstreak_id, package_contents_id, context) {
@@ -1455,6 +1510,7 @@ function dosupplydrop(weapon_instance, weapon, owner, killstreak_id, package_con
 
 // Namespace supplydrop
 // Params 4, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_24a69b51
 // Checksum 0x181d4617, Offset: 0x7650
 // Size: 0x8c
 function watchexplode(weapon, owner, killstreak_id, package_contents_id) {
@@ -1466,6 +1522,7 @@ function watchexplode(weapon, owner, killstreak_id, package_contents_id) {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_6a095fc2
 // Checksum 0xbd2c81cf, Offset: 0x76e8
 // Size: 0x44
 function cratetimeoutthreader() {
@@ -1476,6 +1533,7 @@ function cratetimeoutthreader() {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_89cf7e73
 // Checksum 0xd13a5ffb, Offset: 0x7738
 // Size: 0x54
 function cratetimeout(time) {
@@ -1485,6 +1543,7 @@ function cratetimeout(time) {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_4c2141b1
 // Checksum 0x262852a5, Offset: 0x7798
 // Size: 0x6c
 function deleteonownerleave() {
@@ -1496,6 +1555,7 @@ function deleteonownerleave() {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_34ee4b94
 // Checksum 0xfda33ad3, Offset: 0x7810
 // Size: 0x34
 function waitanddelete(time) {
@@ -1506,6 +1566,7 @@ function waitanddelete(time) {
 
 // Namespace supplydrop
 // Params 10, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_4e878f8f
 // Checksum 0x7f53f382, Offset: 0x7850
 // Size: 0x424
 function dropcrate(origin, angle, killstreak, owner, team, killcament, killstreak_id, package_contents_id, crate_, context) {
@@ -1550,6 +1611,7 @@ function dropcrate(origin, angle, killstreak, owner, team, killcament, killstrea
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_cb4f77e1
 // Checksum 0xcbd2c630, Offset: 0x7c80
 // Size: 0x184
 function unlinkonrotation(crate) {
@@ -1573,6 +1635,7 @@ function unlinkonrotation(crate) {
 
 // Namespace supplydrop
 // Params 4, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_8c0b3727
 // Checksum 0x607ed3a, Offset: 0x7e10
 // Size: 0x1c2
 function default_land_function(crate, category, owner, team) {
@@ -1598,6 +1661,7 @@ function default_land_function(crate, category, owner, team) {
 
 // Namespace supplydrop
 // Params 7, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_8403872e
 // Checksum 0x16e18538, Offset: 0x7fe0
 // Size: 0x1e0
 function spawn_explosive_crate(origin, angle, killstreak, owner, team, hacker, playerhasengineerperk) {
@@ -1623,6 +1687,7 @@ function spawn_explosive_crate(origin, angle, killstreak, owner, team, hacker, p
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_7f66cbda
 // Checksum 0xcec43876, Offset: 0x81c8
 // Size: 0x23c
 function watch_explosive_crate() {
@@ -1650,6 +1715,7 @@ function watch_explosive_crate() {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_695c4df7
 // Checksum 0x24326b77, Offset: 0x8410
 // Size: 0x78
 function loop_sound(alias, interval) {
@@ -1666,6 +1732,7 @@ function loop_sound(alias, interval) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_2dcfbcf8
 // Checksum 0xd56d0635, Offset: 0x8490
 // Size: 0x16c
 function watchforcratekill(start_kill_watch_z_threshold) {
@@ -1702,6 +1769,7 @@ function watchforcratekill(start_kill_watch_z_threshold) {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x0
+// namespace_41cdfb13<file_0>::function_5fe61ece
 // Checksum 0xd75b512c, Offset: 0x8608
 // Size: 0x11c
 function cratekill() {
@@ -1733,6 +1801,7 @@ function cratekill() {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_f28476d7
 // Checksum 0xdffb5daf, Offset: 0x8730
 // Size: 0x42c
 function cratedroptogroundkill() {
@@ -1788,6 +1857,7 @@ function cratedroptogroundkill() {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_6bf5be4e
 // Checksum 0x646750b4, Offset: 0x8b68
 // Size: 0x1f4
 function cratedroptogroundtrace(start) {
@@ -1811,6 +1881,7 @@ function cratedroptogroundtrace(start) {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_7b3ed4ff
 // Checksum 0x108e0021, Offset: 0x8d68
 // Size: 0x3ba
 function is_touching_crate() {
@@ -1849,6 +1920,7 @@ function is_touching_crate() {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_dbbdf96d
 // Checksum 0x1440cc0f, Offset: 0x9130
 // Size: 0x1f6
 function is_clone_touching_crate() {
@@ -1869,6 +1941,7 @@ function is_clone_touching_crate() {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_72b8e1bc
 // Checksum 0xdc00f327, Offset: 0x9330
 // Size: 0x1ec
 function is_equipment_touching_crate(player) {
@@ -1898,6 +1971,7 @@ function is_equipment_touching_crate(player) {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_1558d926
 // Checksum 0x95b27f0a, Offset: 0x9528
 // Size: 0xa0
 function spawnuseent() {
@@ -1913,6 +1987,7 @@ function spawnuseent() {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_6dff7fc2
 // Checksum 0x2506ab40, Offset: 0x95d0
 // Size: 0x3c
 function useentownerdeathwaiter(owner) {
@@ -1923,6 +1998,7 @@ function useentownerdeathwaiter(owner) {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_2922a15d
 // Checksum 0xe4383efa, Offset: 0x9618
 // Size: 0x172
 function crateusethink() {
@@ -1959,6 +2035,7 @@ function crateusethink() {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_5b3bad0e
 // Checksum 0x6faaf267, Offset: 0x9798
 // Size: 0xe2
 function crateusethinkowner() {
@@ -1986,6 +2063,7 @@ function crateusethinkowner() {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_8f78c033
 // Checksum 0x832d62ad, Offset: 0x9888
 // Size: 0x15a
 function useholdthink(player, usetime) {
@@ -2018,6 +2096,7 @@ function useholdthink(player, usetime) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_a21f823d
 // Checksum 0x39999fac, Offset: 0x99f0
 // Size: 0xfe
 function continueholdthinkloop(player) {
@@ -2053,6 +2132,7 @@ function continueholdthinkloop(player) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_4b42ff9d
 // Checksum 0xcae826b8, Offset: 0x9af8
 // Size: 0xfa
 function useholdthinkloop(player) {
@@ -2077,6 +2157,7 @@ function useholdthinkloop(player) {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_7d65a43c
 // Checksum 0xadd1c8be, Offset: 0x9c00
 // Size: 0x148
 function crategamblerthink() {
@@ -2103,6 +2184,7 @@ function crategamblerthink() {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_7754cb02
 // Checksum 0x1a7f17fb, Offset: 0x9d50
 // Size: 0x7c
 function cratereactivate() {
@@ -2113,6 +2195,7 @@ function cratereactivate() {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_c624967d
 // Checksum 0x38ea0a6f, Offset: 0x9dd8
 // Size: 0x3f4
 function personalusebar(object) {
@@ -2158,6 +2241,7 @@ function personalusebar(object) {
 
 // Namespace supplydrop
 // Params 8, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_27b4758a
 // Checksum 0xa76c288a, Offset: 0xa1d8
 // Size: 0x3d8
 function spawn_helicopter(owner, team, origin, angles, model, targetname, killstreak_id, context) {
@@ -2203,6 +2287,7 @@ function spawn_helicopter(owner, team, origin, angles, model, targetname, killst
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_49013c01
 // Checksum 0x93563a49, Offset: 0xa5b8
 // Size: 0x1a
 function getdropheight(origin) {
@@ -2211,6 +2296,7 @@ function getdropheight(origin) {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_d1344e73
 // Checksum 0x5e75ce89, Offset: 0xa5e0
 // Size: 0x1e
 function getdropdirection() {
@@ -2219,6 +2305,7 @@ function getdropdirection() {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_71fa2b02
 // Checksum 0x3d4b4522, Offset: 0xa608
 // Size: 0x64
 function getnextdropdirection(drop_direction, degrees) {
@@ -2231,6 +2318,7 @@ function getnextdropdirection(drop_direction, degrees) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_ab1844a1
 // Checksum 0xf70c0456, Offset: 0xa678
 // Size: 0x20a
 function gethelistart(drop_origin, drop_direction) {
@@ -2255,6 +2343,7 @@ function gethelistart(drop_origin, drop_direction) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_6c7ae09a
 // Checksum 0xc6ef3487, Offset: 0xa890
 // Size: 0x164
 function getheliend(drop_origin, drop_direction) {
@@ -2273,6 +2362,7 @@ function getheliend(drop_origin, drop_direction) {
 
 // Namespace supplydrop
 // Params 3, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_3d4bdb47
 // Checksum 0x988b17a2, Offset: 0xaa00
 // Size: 0x82
 function addoffsetontopoint(point, direction, offset) {
@@ -2283,6 +2373,7 @@ function addoffsetontopoint(point, direction, offset) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_1879b1c1
 // Checksum 0xdc08698f, Offset: 0xaa90
 // Size: 0x5c
 function supplydrophelistartpath_v2_setup(goal, goal_offset) {
@@ -2293,6 +2384,7 @@ function supplydrophelistartpath_v2_setup(goal, goal_offset) {
 
 // Namespace supplydrop
 // Params 3, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_fda38a01
 // Checksum 0xd9dd0721, Offset: 0xaaf8
 // Size: 0x7e
 function supplydrophelistartpath_v2_part2_local(goal, goalpath, goal_local_offset) {
@@ -2303,6 +2395,7 @@ function supplydrophelistartpath_v2_part2_local(goal, goalpath, goal_local_offse
 
 // Namespace supplydrop
 // Params 3, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_e64b062d
 // Checksum 0x261f1a24, Offset: 0xab80
 // Size: 0x4a
 function supplydrophelistartpath_v2_part2(goal, goalpath, goal_world_offset) {
@@ -2312,6 +2405,7 @@ function supplydrophelistartpath_v2_part2(goal, goalpath, goal_world_offset) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x0
+// namespace_41cdfb13<file_0>::function_c88c067c
 // Checksum 0x213e8454, Offset: 0xabd8
 // Size: 0x362
 function supplydrophelistartpath(goal, goal_offset) {
@@ -2348,6 +2442,7 @@ function supplydrophelistartpath(goal, goal_offset) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_54d07922
 // Checksum 0xca88b311, Offset: 0xaf48
 // Size: 0x92
 function supplydropheliendpath_v2(start) {
@@ -2361,6 +2456,7 @@ function supplydropheliendpath_v2(start) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x0
+// namespace_41cdfb13<file_0>::function_293c31b7
 // Checksum 0x50bef97, Offset: 0xafe8
 // Size: 0x202
 function supplydropheliendpath(origin, drop_direction) {
@@ -2389,6 +2485,7 @@ function supplydropheliendpath(origin, drop_direction) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_ad308d9d
 // Checksum 0xac7c01e0, Offset: 0xb1f8
 // Size: 0x2ce
 function inccratekillstreakusagestat(weapon, killstreak_id) {
@@ -2431,6 +2528,7 @@ function inccratekillstreakusagestat(weapon, killstreak_id) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_741e7779
 // Checksum 0xac0b42ba, Offset: 0xb4d0
 // Size: 0x74
 function markercleanupthread(context) {
@@ -2441,6 +2539,7 @@ function markercleanupthread(context) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_1e23c817
 // Checksum 0x29fbb0cd, Offset: 0xb550
 // Size: 0xae
 function getchopperdroppoint(context) {
@@ -2450,6 +2549,7 @@ function getchopperdroppoint(context) {
 
 // Namespace supplydrop
 // Params 7, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_5b42c085
 // Checksum 0xe922d23d, Offset: 0xb608
 // Size: 0xfec
 function helidelivercrate(origin, weapon, owner, team, killstreak_id, package_contents_id, context) {
@@ -2628,6 +2728,7 @@ function helidelivercrate(origin, weapon, owner, team, killstreak_id, package_co
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_6de97db8
 // Checksum 0x48b3eb3e, Offset: 0xc600
 // Size: 0x114
 function function_6de97db8(destination) {
@@ -2649,6 +2750,7 @@ function function_6de97db8(destination) {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_f17a26fb
 // Checksum 0xc72677ed, Offset: 0xc720
 // Size: 0x144
 function speedregulator(goal) {
@@ -2670,6 +2772,7 @@ function speedregulator(goal) {
 
 // Namespace supplydrop
 // Params 7, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_b8474f27
 // Checksum 0xc8c97a39, Offset: 0xc870
 // Size: 0x4d4
 function helidropcrate(killstreak, originalowner, offset, killcament, killstreak_id, package_contents_id, context) {
@@ -2717,6 +2820,7 @@ function helidropcrate(killstreak, originalowner, offset, killcament, killstreak
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_cd99ce62
 // Checksum 0x1e44aa78, Offset: 0xcd50
 // Size: 0x104
 function helidestroyed() {
@@ -2741,6 +2845,7 @@ function helidestroyed() {
 
 // Namespace supplydrop
 // Params 0, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_5f72bc36
 // Checksum 0xdadbd483, Offset: 0xce60
 // Size: 0xec
 function lbexplode() {
@@ -2758,6 +2863,7 @@ function lbexplode() {
 
 // Namespace supplydrop
 // Params 1, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_44bb0287
 // Checksum 0x4b6534fd, Offset: 0xcf58
 // Size: 0xee
 function lbspin(speed) {
@@ -2773,6 +2879,7 @@ function lbspin(speed) {
 
 // Namespace supplydrop
 // Params 2, eflags: 0x1 linked
+// namespace_41cdfb13<file_0>::function_2873d940
 // Checksum 0x98d8b603, Offset: 0xd050
 // Size: 0x52
 function refcountdecchopper(team, killstreak_id) {
@@ -2785,6 +2892,7 @@ function refcountdecchopper(team, killstreak_id) {
 
     // Namespace supplydrop
     // Params 0, eflags: 0x1 linked
+    // namespace_41cdfb13<file_0>::function_f97ed2f4
     // Checksum 0x48101eba, Offset: 0xd0b0
     // Size: 0x70
     function supply_drop_dev_gui() {

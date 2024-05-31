@@ -5,6 +5,7 @@
 
 // Namespace namespace_273d1a1c
 // Params 0, eflags: 0x1 linked
+// namespace_273d1a1c<file_0>::function_e102db28
 // Checksum 0x26b16e52, Offset: 0x110
 // Size: 0xbc
 function registerzombiedoginterfaceattributes() {

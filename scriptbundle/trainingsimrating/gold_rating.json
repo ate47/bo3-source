@@ -1,0 +1,11 @@
+{
+    "vmtype": "server",
+    "name": "gold_rating",
+    "type": "trainingsimrating",
+    "igdtseqnum": 3,
+    "ratingImage": "t7_cp_hud_trainingsim_gold_icon",
+    "ratingName": "MPUI_CAMO_GOLD",
+    "xpAwarded": 7500,
+    "requiredScore": 27500,
+    "tokensAwarded": 3
+}

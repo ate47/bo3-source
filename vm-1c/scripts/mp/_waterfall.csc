@@ -12,6 +12,7 @@
 
 // Namespace waterfall
 // Params 1, eflags: 0x1 linked
+// namespace_a44eaf51<file_0>::function_79dde0eb
 // Checksum 0x1a70c90f, Offset: 0x210
 // Size: 0xca
 function waterfalloverlay(localclientnum) {
@@ -23,6 +24,7 @@ function waterfalloverlay(localclientnum) {
 
 // Namespace waterfall
 // Params 1, eflags: 0x1 linked
+// namespace_a44eaf51<file_0>::function_3eeb04ea
 // Checksum 0xfd5d4b84, Offset: 0x2e8
 // Size: 0xca
 function waterfallmistoverlay(localclientnum) {
@@ -34,6 +36,7 @@ function waterfallmistoverlay(localclientnum) {
 
 // Namespace waterfall
 // Params 1, eflags: 0x1 linked
+// namespace_a44eaf51<file_0>::function_bf6c61f3
 // Checksum 0x63426d8c, Offset: 0x3c0
 // Size: 0x44
 function waterfallmistoverlayreset(localclientnum) {
@@ -43,6 +46,7 @@ function waterfallmistoverlayreset(localclientnum) {
 
 // Namespace waterfall
 // Params 1, eflags: 0x1 linked
+// namespace_a44eaf51<file_0>::function_a63903c5
 // Checksum 0x3afb91a9, Offset: 0x410
 // Size: 0x128
 function setupwaterfallmist(localclientnum) {
@@ -67,6 +71,7 @@ function setupwaterfallmist(localclientnum) {
 
 // Namespace waterfall
 // Params 2, eflags: 0x1 linked
+// namespace_a44eaf51<file_0>::function_ade2925a
 // Checksum 0x181d276e, Offset: 0x540
 // Size: 0x118
 function setupwaterfall(localclientnum, localowner) {
@@ -90,6 +95,7 @@ function setupwaterfall(localclientnum, localowner) {
 
 // Namespace waterfall
 // Params 1, eflags: 0x1 linked
+// namespace_a44eaf51<file_0>::function_e9610e9b
 // Checksum 0xf395f41, Offset: 0x660
 // Size: 0xb8
 function trig_enter_waterfall(localplayer) {
@@ -105,6 +111,7 @@ function trig_enter_waterfall(localplayer) {
 
 // Namespace waterfall
 // Params 1, eflags: 0x1 linked
+// namespace_a44eaf51<file_0>::function_2bf9311c
 // Checksum 0x235a7961, Offset: 0x720
 // Size: 0x84
 function trig_leave_waterfall(localplayer) {
@@ -118,6 +125,7 @@ function trig_leave_waterfall(localplayer) {
 
 // Namespace waterfall
 // Params 1, eflags: 0x1 linked
+// namespace_a44eaf51<file_0>::function_9ae7b5a1
 // Checksum 0xd9836bd, Offset: 0x7b0
 // Size: 0x1f0
 function trig_enter_waterfall_mist(localplayer) {
@@ -151,6 +159,7 @@ function trig_enter_waterfall_mist(localplayer) {
 
 // Namespace waterfall
 // Params 1, eflags: 0x1 linked
+// namespace_a44eaf51<file_0>::function_134587a8
 // Checksum 0x8382a05c, Offset: 0x9a8
 // Size: 0x174
 function trig_leave_waterfall_mist(localplayer) {

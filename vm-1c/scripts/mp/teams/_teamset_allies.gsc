@@ -5,6 +5,7 @@
 
 // Namespace namespace_5d42ff52
 // Params 0, eflags: 0x1 linked
+// namespace_5d42ff52<file_0>::function_d290ebfa
 // Checksum 0x5dc4ff5c, Offset: 0x2f8
 // Size: 0xdc
 function main() {
@@ -21,6 +22,7 @@ function main() {
 
 // Namespace namespace_5d42ff52
 // Params 1, eflags: 0x1 linked
+// namespace_5d42ff52<file_0>::function_c35e6aab
 // Checksum 0x9b5c461f, Offset: 0x3e0
 // Size: 0x30a
 function init(team) {
@@ -53,6 +55,7 @@ function init(team) {
 
 // Namespace namespace_5d42ff52
 // Params 0, eflags: 0x1 linked
+// namespace_5d42ff52<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x6f8
 // Size: 0x4
 function precache() {

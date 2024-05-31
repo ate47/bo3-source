@@ -1,0 +1,9 @@
+{
+    "vmtype": "none",
+    "name": "cpac_inf_18",
+    "igdtseqnum": 78,
+    "challengeWidget": "Grenade",
+    "challengeDetails": "ACCOLADES_INF_18",
+    "challengeName": "ACCOLADES_INF_18_NAME",
+    "challengeReference": "MISSION_INFECTION_CHALLENGE18"
+}

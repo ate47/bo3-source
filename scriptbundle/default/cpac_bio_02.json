@@ -1,0 +1,12 @@
+{
+    "vmtype": "none",
+    "name": "cpac_bio_02",
+    "igdtseqnum": 31,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Find",
+    "challengeDetails": "ACCOLADES_BIO_2",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_BIO_2_NAME",
+    "centerText": "6",
+    "challengeReference": "MISSION_BIODOMES_COLLECTIBLE"
+}

@@ -1,0 +1,17 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_sin_ven_02",
+    "type": "collectible",
+    "igdtseqnum": 79,
+    "uiMaterial": "t7_icon_menu_p7_nc_sin_ven_02",
+    "uiModelWithStand": "p7_nc_sin_ven_02_with_stand",
+    "uiModel": "p7_nc_sin_ven_02",
+    "description": "COLLECTIBLE_P7_NC_SIN_VEN_02_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_SIN_VEN_02_LONG",
+    "audiolog_sound": "vox_safe_dragon_necklace_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_DRAGON_NECKLACE",
+    "displayNameShort": "COLLECTIBLE_P7_NC_SIN_VEN_02_SHORT",
+    "codexurl": "Collectables-DragonNecklace.htm",
+    "slotSize": 0
+}

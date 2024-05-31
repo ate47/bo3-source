@@ -9,6 +9,7 @@
 
 // Namespace aiutility
 // Params 0, eflags: 0x2
+// namespace_90d31901<file_0>::function_a13b795c
 // Checksum 0xafb593fb, Offset: 0x658
 // Size: 0x504
 function autoexec registerbehaviorscriptfunctions() {
@@ -48,6 +49,7 @@ function autoexec registerbehaviorscriptfunctions() {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_658af6b3
 // Checksum 0x6a6fdd18, Offset: 0xb68
 // Size: 0x4c
 function private coverreloadinitialize(behaviortreeentity) {
@@ -57,6 +59,7 @@ function private coverreloadinitialize(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_cfdabad2
 // Checksum 0x61db8b36, Offset: 0xbc0
 // Size: 0x54
 function refillammoandcleanupcovermode(behaviortreeentity) {
@@ -68,6 +71,7 @@ function refillammoandcleanupcovermode(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_da4dc1c4
 // Checksum 0xfe942645, Offset: 0xc20
 // Size: 0x1c
 function private supportspeekcovercondition(behaviortreeentity) {
@@ -76,6 +80,7 @@ function private supportspeekcovercondition(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_7426f525
 // Checksum 0x64c072a5, Offset: 0xc48
 // Size: 0x64
 function private coverpeekinitialize(behaviortreeentity) {
@@ -86,6 +91,7 @@ function private coverpeekinitialize(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_625be0f8
 // Checksum 0xae796100, Offset: 0xcb8
 // Size: 0x3c
 function private coverpeekterminate(behaviortreeentity) {
@@ -95,6 +101,7 @@ function private coverpeekterminate(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_8bbab451
 // Checksum 0xe70ef4a6, Offset: 0xd00
 // Size: 0x124
 function private supportsleancovercondition(behaviortreeentity) {
@@ -112,6 +119,7 @@ function private supportsleancovercondition(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_6126b9e3
 // Checksum 0xa1c27aec, Offset: 0xe30
 // Size: 0x340
 function private shouldleanatcovercondition(behaviortreeentity) {
@@ -146,6 +154,7 @@ function private shouldleanatcovercondition(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_89f62c9d
 // Checksum 0xec2360e2, Offset: 0x1178
 // Size: 0x42
 function private continueleaningatcovercondition(behaviortreeentity) {
@@ -157,6 +166,7 @@ function private continueleaningatcovercondition(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_8d4c7920
 // Checksum 0x562801cd, Offset: 0x11c8
 // Size: 0x7c
 function private coverleaninitialize(behaviortreeentity) {
@@ -168,6 +178,7 @@ function private coverleaninitialize(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_638abd17
 // Checksum 0x98ea0a0e, Offset: 0x1250
 // Size: 0x54
 function private coverleanterminate(behaviortreeentity) {
@@ -178,6 +189,7 @@ function private coverleanterminate(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_5638e53
 // Checksum 0x2fef1789, Offset: 0x12b0
 // Size: 0x1b4
 function private supportsovercovercondition(behaviortreeentity) {
@@ -201,6 +213,7 @@ function private supportsovercovercondition(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_7f604fc5
 // Checksum 0xf1209478, Offset: 0x1470
 // Size: 0x1f2
 function private shouldoveratcovercondition(entity) {
@@ -224,6 +237,7 @@ function private shouldoveratcovercondition(entity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_bf88f7e6
 // Checksum 0x9f66328f, Offset: 0x1670
 // Size: 0x64
 function private coveroverinitialize(behaviortreeentity) {
@@ -234,6 +248,7 @@ function private coveroverinitialize(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_d59447d9
 // Checksum 0x30598ad9, Offset: 0x16e0
 // Size: 0x3c
 function private coveroverterminate(behaviortreeentity) {
@@ -243,6 +258,7 @@ function private coveroverterminate(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_4abfd2d2
 // Checksum 0x317799c8, Offset: 0x1728
 // Size: 0x4c
 function private coveridleinitialize(behaviortreeentity) {
@@ -252,6 +268,7 @@ function private coveridleinitialize(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_3b70c233
 // Checksum 0xd4cc29c4, Offset: 0x1780
 // Size: 0x3c
 function private coveridleupdate(behaviortreeentity) {
@@ -262,6 +279,7 @@ function private coveridleupdate(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_b1fddb4d
 // Checksum 0x3cbad582, Offset: 0x17c8
 // Size: 0x3c
 function private coveridleterminate(behaviortreeentity) {
@@ -271,6 +289,7 @@ function private coveridleterminate(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_81a2c6dd
 // Checksum 0xf3337e03, Offset: 0x1810
 // Size: 0x6c
 function private isflankedbyenemyatcover(behaviortreeentity) {
@@ -279,6 +298,7 @@ function private isflankedbyenemyatcover(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_3dc1e29c
 // Checksum 0x43c9e4ea, Offset: 0x1888
 // Size: 0x24
 function private canbeflankedservice(behaviortreeentity) {
@@ -287,6 +307,7 @@ function private canbeflankedservice(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_69106f0d
 // Checksum 0x34b27321, Offset: 0x18b8
 // Size: 0xd4
 function private coverflankedinitialize(behaviortreeentity) {
@@ -302,6 +323,7 @@ function private coverflankedinitialize(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x5 linked
+// namespace_90d31901<file_0>::function_6ff3904a
 // Checksum 0xc476c8e3, Offset: 0x1998
 // Size: 0x34
 function private coverflankedactionterminate(behaviortreeentity) {
@@ -311,6 +333,7 @@ function private coverflankedactionterminate(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_94f77bf8
 // Checksum 0x40ce1bf0, Offset: 0x19d8
 // Size: 0x11e
 function isatcrouchnode(behaviortreeentity) {
@@ -324,6 +347,7 @@ function isatcrouchnode(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_f09741fa
 // Checksum 0xe95d1fce, Offset: 0x1b00
 // Size: 0x54
 function function_f09741fa(behaviortreeentity) {
@@ -332,6 +356,7 @@ function function_f09741fa(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_ac227ce3
 // Checksum 0xa8964d68, Offset: 0x1b60
 // Size: 0x3c
 function isatcoverstrictcondition(behaviortreeentity) {
@@ -340,6 +365,7 @@ function isatcoverstrictcondition(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_adf8920
 // Checksum 0x5ed99ea0, Offset: 0x1ba8
 // Size: 0x44
 function isatcovermodeover(behaviortreeentity) {
@@ -349,6 +375,7 @@ function isatcovermodeover(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_c85d95b8
 // Checksum 0x61592cae, Offset: 0x1bf8
 // Size: 0x44
 function isatcovermodenone(behaviortreeentity) {
@@ -358,6 +385,7 @@ function isatcovermodenone(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_7c5b343c
 // Checksum 0xed85490d, Offset: 0x1c48
 // Size: 0x3c
 function isexposedatcovercondition(behaviortreeentity) {
@@ -366,6 +394,7 @@ function isexposedatcovercondition(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_a3855625
 // Checksum 0x80415f0e, Offset: 0x1c90
 // Size: 0x72
 function shouldcoveridleonly(behaviortreeentity) {
@@ -380,6 +409,7 @@ function shouldcoveridleonly(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_15d43f74
 // Checksum 0x6a05b019, Offset: 0x1d10
 // Size: 0x28
 function issuppressedatcovercondition(behaviortreeentity) {
@@ -388,6 +418,7 @@ function issuppressedatcovercondition(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_416c7833
 // Checksum 0x5d1ff9d, Offset: 0x1d40
 // Size: 0x3c
 function keepclaimednodeandchoosecoverdirection(behaviortreeentity) {
@@ -397,6 +428,7 @@ function keepclaimednodeandchoosecoverdirection(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_c8edd93
 // Checksum 0xd9a5c848, Offset: 0x1d88
 // Size: 0x54
 function resetcoverparameters(behaviortreeentity) {
@@ -407,6 +439,7 @@ function resetcoverparameters(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 2, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_54747c5a
 // Checksum 0x34827db8, Offset: 0x1de8
 // Size: 0xac
 function choosecoverdirection(behaviortreeentity, stepout) {
@@ -420,6 +453,7 @@ function choosecoverdirection(behaviortreeentity, stepout) {
 
 // Namespace aiutility
 // Params 2, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_f4463183
 // Checksum 0x34d777bd, Offset: 0x1ea0
 // Size: 0x494
 function calculatecoverdirection(behaviortreeentity, stepout) {
@@ -479,6 +513,7 @@ function calculatecoverdirection(behaviortreeentity, stepout) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_3c00420d
 // Checksum 0xba8f02c, Offset: 0x2340
 // Size: 0x1a
 function clearcovershootstarttime(behaviortreeentity) {
@@ -487,6 +522,7 @@ function clearcovershootstarttime(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_e202c1c
 // Checksum 0x9ac73f53, Offset: 0x2368
 // Size: 0x1c
 function setcovershootstarttime(behaviortreeentity) {
@@ -495,6 +531,7 @@ function setcovershootstarttime(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_467b618f
 // Checksum 0x7902730e, Offset: 0x2390
 // Size: 0x2e
 function canbeflanked(behaviortreeentity) {
@@ -503,6 +540,7 @@ function canbeflanked(behaviortreeentity) {
 
 // Namespace aiutility
 // Params 2, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_1a0c8ad9
 // Checksum 0xff7096cb, Offset: 0x23c8
 // Size: 0x28
 function setcanbeflanked(behaviortreeentity, canbeflanked) {
@@ -511,6 +549,7 @@ function setcanbeflanked(behaviortreeentity, canbeflanked) {
 
 // Namespace aiutility
 // Params 1, eflags: 0x1 linked
+// namespace_90d31901<file_0>::function_dd5ae055
 // Checksum 0xb57632bd, Offset: 0x23f8
 // Size: 0xec
 function cleanupcovermode(behaviortreeentity) {

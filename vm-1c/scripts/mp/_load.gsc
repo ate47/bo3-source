@@ -87,6 +87,7 @@
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_d290ebfa
 // Checksum 0x6d2c6807, Offset: 0xce0
 // Size: 0x104
 function main() {
@@ -105,6 +106,7 @@ function main() {
 
 // Namespace load
 // Params 2, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_5aca2f62
 // Checksum 0x71cace33, Offset: 0xdf0
 // Size: 0xba
 function setfootstepeffect(name, fx) {
@@ -119,6 +121,7 @@ function setfootstepeffect(name, fx) {
 
 // Namespace load
 // Params 0, eflags: 0x0
+// namespace_d7916d65<file_0>::function_cade3606
 // Checksum 0xf6c331ad, Offset: 0xeb8
 // Size: 0x224
 function footsteps() {
@@ -143,6 +146,7 @@ function footsteps() {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_a7781e10
 // Checksum 0x17992b6f, Offset: 0x10e8
 // Size: 0xbc
 function init_traverse() {
@@ -160,6 +164,7 @@ function init_traverse() {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_bc375eca
 // Checksum 0x408cbe5e, Offset: 0x11b0
 // Size: 0x96
 function setup_traversals() {
@@ -174,6 +179,7 @@ function setup_traversals() {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_4ece4a2f
 // Checksum 0x4a8ae350, Offset: 0x1250
 // Size: 0x94
 function register_clientfields() {

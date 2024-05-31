@@ -1,0 +1,12 @@
+{
+    "vmtype": "none",
+    "name": "cpac_inf_09",
+    "igdtseqnum": 69,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "TrickShot",
+    "challengeDetails": "ACCOLADES_INF_9",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_INF_9_NAME",
+    "centerText": "2",
+    "challengeReference": "MISSION_INFECTION_CHALLENGE9"
+}

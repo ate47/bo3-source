@@ -13,6 +13,7 @@
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x2
+// namespace_8276f484<file_0>::function_2dc19561
 // Checksum 0xa2d3384b, Offset: 0x450
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,6 +22,7 @@ function autoexec function_2dc19561() {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_8c87d8eb
 // Checksum 0x4cd01a4b, Offset: 0x490
 // Size: 0x24
 function __init__() {
@@ -29,6 +31,7 @@ function __init__() {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_d290ebfa
 // Checksum 0xf31df8c6, Offset: 0x4c0
 // Size: 0x630
 function main() {
@@ -138,6 +141,7 @@ function main() {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_aab0d56f
 // Checksum 0x3e34d393, Offset: 0xaf8
 // Size: 0x26
 function do_scripted_crash() {
@@ -146,6 +150,7 @@ function do_scripted_crash() {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_59870a4f
 // Checksum 0x41e563d8, Offset: 0xb28
 // Size: 0x7c
 function play_death_audio() {
@@ -162,6 +167,7 @@ function play_death_audio() {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_8f137b8f
 // Checksum 0x60d9fa49, Offset: 0xbb0
 // Size: 0x74
 function play_spinning_plane_sound() {
@@ -172,6 +178,7 @@ function play_spinning_plane_sound() {
 
 // Namespace vehicle_death
 // Params 2, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_b6527b9a
 // Checksum 0xdca0f9b2, Offset: 0xc30
 // Size: 0x10c
 function set_death_model(smodel, fdelay) {
@@ -202,6 +209,7 @@ function set_death_model(smodel, fdelay) {
 
 // Namespace vehicle_death
 // Params 2, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_ba44042b
 // Checksum 0x1cfbc55, Offset: 0xd48
 // Size: 0x84
 function aircraft_crash(point, dir) {
@@ -220,6 +228,7 @@ function aircraft_crash(point, dir) {
 
 // Namespace vehicle_death
 // Params 2, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_21afa0a
 // Checksum 0xbe09bf78, Offset: 0xdd8
 // Size: 0x7c
 function helicopter_crash(point, dir) {
@@ -238,6 +247,7 @@ function helicopter_crash(point, dir) {
 
 // Namespace vehicle_death
 // Params 2, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_37751ee
 // Checksum 0x93541dd2, Offset: 0xe60
 // Size: 0x4b6
 function helicopter_crash_movement(point, dir) {
@@ -305,6 +315,7 @@ function helicopter_crash_movement(point, dir) {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_2f62a067
 // Checksum 0xe91642b0, Offset: 0x1320
 // Size: 0xa8
 function helicopter_crash_accel() {
@@ -322,6 +333,7 @@ function helicopter_crash_accel() {
 
 // Namespace vehicle_death
 // Params 2, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_960e5e07
 // Checksum 0x40006202, Offset: 0x13d0
 // Size: 0x388
 function helicopter_crash_rotation(point, dir) {
@@ -365,6 +377,7 @@ function helicopter_crash_rotation(point, dir) {
 
 // Namespace vehicle_death
 // Params 1, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_c07d6b4a
 // Checksum 0x31b6e14b, Offset: 0x1760
 // Size: 0x640
 function helicopter_crash_zone_accel(dir) {
@@ -433,6 +446,7 @@ function helicopter_crash_zone_accel(dir) {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x0
+// namespace_8276f484<file_0>::function_2a6e871f
 // Checksum 0x4790c3d, Offset: 0x1da8
 // Size: 0xda
 function helicopter_collision() {
@@ -451,6 +465,7 @@ function helicopter_collision() {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_fe77c3ea
 // Checksum 0x34bd476f, Offset: 0x1e90
 // Size: 0xac
 function play_crashing_loop() {
@@ -463,6 +478,7 @@ function play_crashing_loop() {
 
 // Namespace vehicle_death
 // Params 1, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_6b93afbc
 // Checksum 0x360caf15, Offset: 0x1f48
 // Size: 0x84
 function helicopter_explode(delete_me) {
@@ -476,6 +492,7 @@ function helicopter_explode(delete_me) {
 
 // Namespace vehicle_death
 // Params 2, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_d5f802ed
 // Checksum 0xa1cbe6cd, Offset: 0x1fd8
 // Size: 0x5a8
 function aircraft_crash_move(point, dir) {
@@ -547,6 +564,7 @@ function aircraft_crash_move(point, dir) {
 
 // Namespace vehicle_death
 // Params 1, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_cd162090
 // Checksum 0x5cea5205, Offset: 0x2588
 // Size: 0x74
 function delay_set_gravity(delay) {
@@ -558,6 +576,7 @@ function delay_set_gravity(delay) {
 
 // Namespace vehicle_death
 // Params 2, eflags: 0x0
+// namespace_8276f484<file_0>::function_d5e8bcde
 // Checksum 0x56026486, Offset: 0x2608
 // Size: 0x378
 function helicopter_crash_move(point, dir) {
@@ -601,6 +620,7 @@ function helicopter_crash_move(point, dir) {
 
 // Namespace vehicle_death
 // Params 2, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_4ea7ea13
 // Checksum 0xfbe3ab51, Offset: 0x2988
 // Size: 0x6c
 function boat_crash(point, dir) {
@@ -618,6 +638,7 @@ function boat_crash(point, dir) {
 
 // Namespace vehicle_death
 // Params 2, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_23228b61
 // Checksum 0xd69d1e48, Offset: 0x2a00
 // Size: 0x2c0
 function boat_crash_movement(point, dir) {
@@ -652,6 +673,7 @@ function boat_crash_movement(point, dir) {
 
 // Namespace vehicle_death
 // Params 3, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_d9e79774
 // Checksum 0xad262dea, Offset: 0x2cc8
 // Size: 0x5a
 function boat_crash_monitor(point, dir, crash_time) {
@@ -664,6 +686,7 @@ function boat_crash_monitor(point, dir, crash_time) {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_f0103a4d
 // Checksum 0x5d209fc5, Offset: 0x2d30
 // Size: 0x19c
 function crash_stop() {
@@ -690,6 +713,7 @@ function crash_stop() {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_9c2bc496
 // Checksum 0x77e5cbfe, Offset: 0x2ed8
 // Size: 0x15c
 function crash_collision_test() {
@@ -712,6 +736,7 @@ function crash_collision_test() {
 
 // Namespace vehicle_death
 // Params 1, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_d406f1bd
 // Checksum 0x97b039a5, Offset: 0x3040
 // Size: 0x1b2
 function crash_path_check(node) {
@@ -741,6 +766,7 @@ function crash_path_check(node) {
 
 // Namespace vehicle_death
 // Params 1, eflags: 0x0
+// namespace_8276f484<file_0>::function_1c34545
 // Checksum 0x37dd2dab, Offset: 0x3200
 // Size: 0x70
 function death_firesound(sound) {
@@ -754,6 +780,7 @@ function death_firesound(sound) {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_f92793ae
 // Checksum 0x99a681cf, Offset: 0x3278
 // Size: 0x6c
 function death_fx() {
@@ -770,6 +797,7 @@ function death_fx() {
 
 // Namespace vehicle_death
 // Params 1, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_4c9be28b
 // Checksum 0x8674df3e, Offset: 0x32f0
 // Size: 0xa4
 function death_make_badplace(type) {
@@ -788,6 +816,7 @@ function death_make_badplace(type) {
 
 // Namespace vehicle_death
 // Params 1, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_8ad8dc05
 // Checksum 0x9b380fa3, Offset: 0x33a0
 // Size: 0x174
 function death_jolt(type) {
@@ -812,6 +841,7 @@ function death_jolt(type) {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_fe33e0af
 // Checksum 0x5449791f, Offset: 0x3520
 // Size: 0x20
 function deathrollon() {
@@ -822,6 +852,7 @@ function deathrollon() {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_c6c94063
 // Checksum 0x1b628b79, Offset: 0x3548
 // Size: 0x1a
 function deathrolloff() {
@@ -831,6 +862,7 @@ function deathrolloff() {
 
 // Namespace vehicle_death
 // Params 3, eflags: 0x0
+// namespace_8276f484<file_0>::function_6c0b8a90
 // Checksum 0x1043dc4e, Offset: 0x3570
 // Size: 0xbe
 function loop_fx_on_vehicle_tag(effect, looptime, tag) {
@@ -846,6 +878,7 @@ function loop_fx_on_vehicle_tag(effect, looptime, tag) {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_6e1aa831
 // Checksum 0xe7a1d4c, Offset: 0x3638
 // Size: 0x12a
 function deathfx_ent() {
@@ -867,6 +900,7 @@ function deathfx_ent() {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_7a75abd9
 // Checksum 0x274ba33d, Offset: 0x3770
 // Size: 0x12c
 function death_cleanup_level_variables() {
@@ -891,6 +925,7 @@ function death_cleanup_level_variables() {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_f6a4fb44
 // Checksum 0xd35c1aca, Offset: 0x38a8
 // Size: 0x90
 function death_cleanup_riders() {
@@ -908,6 +943,7 @@ function death_cleanup_riders() {
 
 // Namespace vehicle_death
 // Params 1, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_f229336a
 // Checksum 0x65e7fa1d, Offset: 0x3940
 // Size: 0x114
 function death_radius_damage(meansofdamage) {
@@ -931,6 +967,7 @@ function death_radius_damage(meansofdamage) {
 
 // Namespace vehicle_death
 // Params 2, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_2dbee3db
 // Checksum 0xc1a92822, Offset: 0x3a60
 // Size: 0x2f4
 function death_update_crash(point, dir) {
@@ -988,6 +1025,7 @@ function death_update_crash(point, dir) {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_d83eae68
 // Checksum 0xe1b657a3, Offset: 0x3d60
 // Size: 0x180
 function waittill_crash_done_or_stopped() {
@@ -1021,6 +1059,7 @@ function waittill_crash_done_or_stopped() {
 
 // Namespace vehicle_death
 // Params 2, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_7c15816b
 // Checksum 0xb9c422e9, Offset: 0x3ee8
 // Size: 0x1ac
 function vehicle_damage_filter_damage_watcher(driver, heavy_damage_threshold) {
@@ -1049,6 +1088,7 @@ function vehicle_damage_filter_damage_watcher(driver, heavy_damage_threshold) {
 
 // Namespace vehicle_death
 // Params 1, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_6168b774
 // Checksum 0x87bd53c7, Offset: 0x40a0
 // Size: 0x3c
 function vehicle_damage_filter_exit_watcher(driver) {
@@ -1057,6 +1097,7 @@ function vehicle_damage_filter_exit_watcher(driver) {
 
 // Namespace vehicle_death
 // Params 4, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_bd6651da
 // Checksum 0x7743d4cb, Offset: 0x40e8
 // Size: 0x188
 function vehicle_damage_filter(vision_set, heavy_damage_threshold, filterid, b_use_player_damage) {
@@ -1093,6 +1134,7 @@ function vehicle_damage_filter(vision_set, heavy_damage_threshold, filterid, b_u
 
 // Namespace vehicle_death
 // Params 2, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_9a875413
 // Checksum 0x5430d41c, Offset: 0x4278
 // Size: 0x19c
 function flipping_shooting_death(attacker, hitdir) {
@@ -1125,6 +1167,7 @@ function flipping_shooting_death(attacker, hitdir) {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_d41319a1
 // Checksum 0x41e158cd, Offset: 0x4420
 // Size: 0x28c
 function plane_crash() {
@@ -1153,6 +1196,7 @@ function plane_crash() {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_1abc77b3
 // Checksum 0xd0997231, Offset: 0x46b8
 // Size: 0x24c
 function barrel_rolling_crash() {
@@ -1178,6 +1222,7 @@ function barrel_rolling_crash() {
 
 // Namespace vehicle_death
 // Params 1, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_f5613f80
 // Checksum 0x7325c797, Offset: 0x4910
 // Size: 0x31c
 function random_crash(hitdir) {
@@ -1209,6 +1254,7 @@ function random_crash(hitdir) {
 
 // Namespace vehicle_death
 // Params 2, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_112e1aa
 // Checksum 0x4b3e7008, Offset: 0x4c38
 // Size: 0x20e
 function set_movement_and_accel(new_vel, ang_vel) {
@@ -1240,6 +1286,7 @@ function set_movement_and_accel(new_vel, ang_vel) {
 
 // Namespace vehicle_death
 // Params 2, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_bb8173fc
 // Checksum 0xaad4f63d, Offset: 0x4e50
 // Size: 0x19a
 function flipping_shooting_crash_movement(attacker, hitdir) {
@@ -1274,6 +1321,7 @@ function flipping_shooting_crash_movement(attacker, hitdir) {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_ebf02955
 // Checksum 0x3cbae300, Offset: 0x4ff8
 // Size: 0xcc
 function flipping_shooting_dmg_snd() {
@@ -1288,6 +1336,7 @@ function flipping_shooting_dmg_snd() {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_e70af585
 // Checksum 0x41466a4e, Offset: 0x50d0
 // Size: 0x300
 function flipping_shooting_crash_accel() {
@@ -1333,6 +1382,7 @@ function flipping_shooting_crash_accel() {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_786467a2
 // Checksum 0xec5f4fe7, Offset: 0x53d8
 // Size: 0x8c
 function death_fire_loop_audio() {
@@ -1345,6 +1395,7 @@ function death_fire_loop_audio() {
 
 // Namespace vehicle_death
 // Params 1, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_8add346c
 // Checksum 0x4091733c, Offset: 0x5470
 // Size: 0x3c
 function freewhensafe(time) {
@@ -1356,6 +1407,7 @@ function freewhensafe(time) {
 
 // Namespace vehicle_death
 // Params 1, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_c72c6dbb
 // Checksum 0x884277c2, Offset: 0x54b8
 // Size: 0x3c
 function deletewhensafe(time) {
@@ -1367,6 +1419,7 @@ function deletewhensafe(time) {
 
 // Namespace vehicle_death
 // Params 2, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_86d0d014
 // Checksum 0xc9daef3b, Offset: 0x5500
 // Size: 0xdc
 function delayedremove_thread(time, shoulddelete) {
@@ -1390,6 +1443,7 @@ function delayedremove_thread(time, shoulddelete) {
 
 // Namespace vehicle_death
 // Params 0, eflags: 0x1 linked
+// namespace_8276f484<file_0>::function_32e49d5b
 // Checksum 0x6da5e86a, Offset: 0x55e8
 // Size: 0x34
 function cleanup() {

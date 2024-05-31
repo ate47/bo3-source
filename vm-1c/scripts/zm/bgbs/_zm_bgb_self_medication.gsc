@@ -14,6 +14,7 @@
 
 // Namespace namespace_a7758d0b
 // Params 0, eflags: 0x2
+// namespace_a7758d0b<file_0>::function_2dc19561
 // Checksum 0xd39f7aa2, Offset: 0x250
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -22,6 +23,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_a7758d0b
 // Params 0, eflags: 0x1 linked
+// namespace_a7758d0b<file_0>::function_8c87d8eb
 // Checksum 0x99dff58a, Offset: 0x290
 // Size: 0xac
 function __init__() {
@@ -35,6 +37,7 @@ function __init__() {
 
 // Namespace namespace_a7758d0b
 // Params 0, eflags: 0x1 linked
+// namespace_a7758d0b<file_0>::function_279e4e97
 // Checksum 0x94de5bae, Offset: 0x348
 // Size: 0xc8
 function event() {
@@ -54,6 +57,7 @@ function event() {
 
 // Namespace namespace_a7758d0b
 // Params 0, eflags: 0x1 linked
+// namespace_a7758d0b<file_0>::function_e4776d0
 // Checksum 0x898c956d, Offset: 0x418
 // Size: 0x22
 function validation() {
@@ -65,6 +69,7 @@ function validation() {
 
 // Namespace namespace_a7758d0b
 // Params 0, eflags: 0x1 linked
+// namespace_a7758d0b<file_0>::function_5816d71a
 // Checksum 0x20389a43, Offset: 0x448
 // Size: 0x64
 function function_5816d71a() {
@@ -78,6 +83,7 @@ function function_5816d71a() {
 
 // Namespace namespace_a7758d0b
 // Params 1, eflags: 0x1 linked
+// namespace_a7758d0b<file_0>::function_5cb5de6
 // Checksum 0xde13f5f, Offset: 0x4b8
 // Size: 0x74
 function actor_death_override(e_attacker) {
@@ -89,6 +95,7 @@ function actor_death_override(e_attacker) {
 
 // Namespace namespace_a7758d0b
 // Params 0, eflags: 0x1 linked
+// namespace_a7758d0b<file_0>::function_cfc2c8d5
 // Checksum 0x7ca72261, Offset: 0x538
 // Size: 0x1a4
 function function_cfc2c8d5() {
@@ -120,6 +127,7 @@ function function_cfc2c8d5() {
 
 // Namespace namespace_a7758d0b
 // Params 0, eflags: 0x1 linked
+// namespace_a7758d0b<file_0>::function_a8fd61f4
 // Checksum 0xaff20de, Offset: 0x6e8
 // Size: 0x5c
 function function_a8fd61f4() {
@@ -132,6 +140,7 @@ function function_a8fd61f4() {
 
 // Namespace namespace_a7758d0b
 // Params 3, eflags: 0x1 linked
+// namespace_a7758d0b<file_0>::function_229a2615
 // Checksum 0x51cbb794, Offset: 0x750
 // Size: 0x7e
 function lost_perk_override(perk, var_2488e46a, var_24df4040) {

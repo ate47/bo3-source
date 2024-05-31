@@ -9,6 +9,7 @@
 
 // Namespace ballistic_knife
 // Params 0, eflags: 0x1 linked
+// namespace_a474294<file_0>::function_1463e4e5
 // Checksum 0x79ad53c6, Offset: 0x1c8
 // Size: 0x24
 function init_shared() {
@@ -17,6 +18,7 @@ function init_shared() {
 
 // Namespace ballistic_knife
 // Params 2, eflags: 0x1 linked
+// namespace_a474294<file_0>::function_e0e5c163
 // Checksum 0xb6f9f2bc, Offset: 0x1f8
 // Size: 0x334
 function onspawn(watcher, player) {
@@ -64,6 +66,7 @@ function onspawn(watcher, player) {
 
 // Namespace ballistic_knife
 // Params 0, eflags: 0x1 linked
+// namespace_a474294<file_0>::function_dba9bc53
 // Checksum 0xbed08e73, Offset: 0x538
 // Size: 0x44
 function watch_shutdown() {
@@ -76,6 +79,7 @@ function watch_shutdown() {
 
 // Namespace ballistic_knife
 // Params 2, eflags: 0x1 linked
+// namespace_a474294<file_0>::function_caded721
 // Checksum 0x33386e08, Offset: 0x588
 // Size: 0x32c
 function onspawnretrievetrigger(watcher, player) {
@@ -114,6 +118,7 @@ function onspawnretrievetrigger(watcher, player) {
 
 // Namespace ballistic_knife
 // Params 5, eflags: 0x1 linked
+// namespace_a474294<file_0>::function_35579833
 // Checksum 0xa5c5fe6c, Offset: 0x8c0
 // Size: 0x2ce
 function function_35579833(trigger, model, callback, playersoundonuse, npcsoundonuse) {
@@ -165,6 +170,7 @@ function function_35579833(trigger, model, callback, playersoundonuse, npcsoundo
 
 // Namespace ballistic_knife
 // Params 1, eflags: 0x1 linked
+// namespace_a474294<file_0>::function_6f9992d6
 // Checksum 0xf774c980, Offset: 0xb98
 // Size: 0x18c
 function pick_up(player) {
@@ -191,6 +197,7 @@ function pick_up(player) {
 
 // Namespace ballistic_knife
 // Params 0, eflags: 0x1 linked
+// namespace_a474294<file_0>::function_c5341e6f
 // Checksum 0xa5eff024, Offset: 0xd30
 // Size: 0x5c
 function destroy_ent() {
@@ -205,6 +212,7 @@ function destroy_ent() {
 
 // Namespace ballistic_knife
 // Params 0, eflags: 0x1 linked
+// namespace_a474294<file_0>::function_d36601c2
 // Checksum 0x748f31aa, Offset: 0xd98
 // Size: 0x58
 function dropknivestoground() {
@@ -217,6 +225,7 @@ function dropknivestoground() {
 
 // Namespace ballistic_knife
 // Params 2, eflags: 0x1 linked
+// namespace_a474294<file_0>::function_e773b7dc
 // Checksum 0xf9503a0b, Offset: 0xdf8
 // Size: 0x7c
 function droptoground(origin, radius) {
@@ -228,6 +237,7 @@ function droptoground(origin, radius) {
 
 // Namespace ballistic_knife
 // Params 0, eflags: 0x1 linked
+// namespace_a474294<file_0>::function_ccac0732
 // Checksum 0x4cdefeb9, Offset: 0xe80
 // Size: 0x84
 function updateretrievetrigger() {
@@ -240,6 +250,7 @@ function updateretrievetrigger() {
 
 // Namespace ballistic_knife
 // Params 0, eflags: 0x1 linked
+// namespace_a474294<file_0>::function_29761697
 // Checksum 0x34016e70, Offset: 0xf10
 // Size: 0x94
 function createballisticknifewatcher() {

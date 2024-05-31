@@ -5,6 +5,7 @@
 
 // Namespace burnplayer
 // Params 0, eflags: 0x1 linked
+// namespace_97b5406d<file_0>::function_63e16ac6
 // Checksum 0x99ec1590, Offset: 0x140
 // Size: 0x4
 function function_63e16ac6() {
@@ -13,6 +14,7 @@ function function_63e16ac6() {
 
 // Namespace burnplayer
 // Params 1, eflags: 0x0
+// namespace_97b5406d<file_0>::function_b071d8c
 // Checksum 0x16dfc1bc, Offset: 0x150
 // Size: 0x19c
 function function_b071d8c(localclientnum) {

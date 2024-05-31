@@ -7,6 +7,7 @@
 
 // Namespace counteruav
 // Params 0, eflags: 0x2
+// namespace_65ee1df9<file_0>::function_2dc19561
 // Checksum 0x9e244fdb, Offset: 0x130
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,6 +16,7 @@ function autoexec function_2dc19561() {
 
 // Namespace counteruav
 // Params 0, eflags: 0x0
+// namespace_65ee1df9<file_0>::function_8c87d8eb
 // Checksum 0x50f4ce2e, Offset: 0x170
 // Size: 0x4c
 function __init__() {
@@ -23,6 +25,7 @@ function __init__() {
 
 // Namespace counteruav
 // Params 7, eflags: 0x0
+// namespace_65ee1df9<file_0>::function_ab1f9ea1
 // Checksum 0xe529a53b, Offset: 0x1c8
 // Size: 0x10e
 function spawned(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -45,6 +48,7 @@ function spawned(localclientnum, oldval, newval, bnewent, binitialsnap, fieldnam
 
 // Namespace counteruav
 // Params 1, eflags: 0x0
+// namespace_65ee1df9<file_0>::function_8752903c
 // Checksum 0x32428ae9, Offset: 0x2e0
 // Size: 0xdc
 function function_8752903c(localclientnum) {

@@ -1,0 +1,15 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_cai_lot_03",
+    "type": "collectible",
+    "igdtseqnum": 23,
+    "uiMaterial": "t7_icon_menu_p7_nc_cai_lot_03",
+    "uiModel": "p7_nc_cai_lot_03",
+    "description": "COLLECTIBLE_P7_NC_CAI_LOT_03_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_CAI_LOT_03_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_HOOKAH",
+    "displayNameShort": "COLLECTIBLE_P7_NC_CAI_LOT_03_SHORT",
+    "codexurl": "Collectables-Hookah.htm",
+    "slotSize": 1
+}

@@ -1,0 +1,17 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_cai_lot_05",
+    "type": "collectible",
+    "igdtseqnum": 25,
+    "uiMaterial": "t7_icon_menu_p7_nc_cai_lot_05",
+    "uiModelWithStand": "p7_nc_cai_lot_05_with_stand",
+    "uiModel": "p7_nc_cai_lot_05",
+    "description": "COLLECTIBLE_P7_NC_CAI_LOT_05_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_CAI_LOT_05_LONG",
+    "audiolog_sound": "vox_safe_taylors_insignia_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_TAYLOR_2ND_LT_INSIGNIA",
+    "displayNameShort": "COLLECTIBLE_P7_NC_CAI_LOT_05_SHORT",
+    "codexurl": "Collectables-JohnTaylors2ndLieutenantInsignia.htm",
+    "slotSize": 0
+}

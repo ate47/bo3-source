@@ -15,6 +15,7 @@
 
 // Namespace zm_bot
 // Params 0, eflags: 0x2
+// namespace_fe951448<file_0>::function_2dc19561
 // Checksum 0xe8a73f01, Offset: 0x1f8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -23,6 +24,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bot
 // Params 0, eflags: 0x1 linked
+// namespace_fe951448<file_0>::function_8c87d8eb
 // Checksum 0xd54b1689, Offset: 0x238
 // Size: 0xc4
 function __init__() {
@@ -42,6 +44,7 @@ function __init__() {
 
     // Namespace zm_bot
     // Params 0, eflags: 0x1 linked
+    // namespace_fe951448<file_0>::function_6e62d3e3
     // Checksum 0xb1f46eea, Offset: 0x308
     // Size: 0x1e8
     function function_6e62d3e3() {
@@ -75,6 +78,7 @@ function __init__() {
 
     // Namespace zm_bot
     // Params 0, eflags: 0x1 linked
+    // namespace_fe951448<file_0>::function_3981de7
     // Checksum 0x18071df4, Offset: 0x4f8
     // Size: 0x64
     function on_bot_spawned() {
@@ -85,6 +89,7 @@ function __init__() {
 
     // Namespace zm_bot
     // Params 1, eflags: 0x1 linked
+    // namespace_fe951448<file_0>::function_aacf4c41
     // Checksum 0x95d1e69, Offset: 0x568
     // Size: 0x64
     function debugmsg(var_69ae6753) {

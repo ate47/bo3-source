@@ -2,6 +2,7 @@
 
 // Namespace blackboard
 // Params 0, eflags: 0x2
+// namespace_96515e2a<file_0>::function_d290ebfa
 // Checksum 0xcad340b0, Offset: 0x80
 // Size: 0x14
 function autoexec main() {
@@ -10,6 +11,7 @@ function autoexec main() {
 
 // Namespace blackboard
 // Params 0, eflags: 0x5 linked
+// namespace_96515e2a<file_0>::function_4aa8fa4d
 // Checksum 0xa675a2dd, Offset: 0xa0
 // Size: 0x24
 function private _initializeblackboard() {
@@ -19,6 +21,7 @@ function private _initializeblackboard() {
 
 // Namespace blackboard
 // Params 0, eflags: 0x5 linked
+// namespace_96515e2a<file_0>::function_a51a9278
 // Checksum 0x710c6ddf, Offset: 0xd0
 // Size: 0x18e
 function private _updateevents() {
@@ -41,6 +44,7 @@ function private _updateevents() {
 
 // Namespace blackboard
 // Params 3, eflags: 0x1 linked
+// namespace_96515e2a<file_0>::function_7a4aebb
 // Checksum 0x48c9b02c, Offset: 0x268
 // Size: 0x1a8
 function addblackboardevent(eventname, data, timetoliveinmillis) {
@@ -63,6 +67,7 @@ function addblackboardevent(eventname, data, timetoliveinmillis) {
 
 // Namespace blackboard
 // Params 1, eflags: 0x1 linked
+// namespace_96515e2a<file_0>::function_e5c482b
 // Checksum 0x17147a3f, Offset: 0x418
 // Size: 0x30
 function getblackboardevents(eventname) {
@@ -74,6 +79,7 @@ function getblackboardevents(eventname) {
 
 // Namespace blackboard
 // Params 1, eflags: 0x0
+// namespace_96515e2a<file_0>::function_5837828d
 // Checksum 0x52a2a4f5, Offset: 0x450
 // Size: 0x2c
 function removeblackboardevents(eventname) {

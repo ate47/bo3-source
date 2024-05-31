@@ -1,0 +1,11 @@
+{
+    "vmtype": "none",
+    "name": "cpac_bio_13",
+    "igdtseqnum": 40,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "AirVehicleDestroy",
+    "challengeDetails": "ACCOLADES_BIO_13",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_BIO_13_NAME",
+    "challengeReference": "MISSION_BIODOMES_CHALLENGE13"
+}

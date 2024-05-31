@@ -7,6 +7,7 @@
 
 // Namespace namespace_42f5ba79
 // Params 0, eflags: 0x2
+// namespace_42f5ba79<file_0>::function_2dc19561
 // Checksum 0x19af50fb, Offset: 0x2e0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,6 +16,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_42f5ba79
 // Params 0, eflags: 0x1 linked
+// namespace_42f5ba79<file_0>::function_8c87d8eb
 // Checksum 0x25546eb0, Offset: 0x320
 // Size: 0x1bc
 function __init__() {
@@ -31,6 +33,7 @@ function __init__() {
 
 // Namespace namespace_42f5ba79
 // Params 7, eflags: 0x1 linked
+// namespace_42f5ba79<file_0>::function_fe22f274
 // Checksum 0xe02fc1bb, Offset: 0x4e8
 // Size: 0x134
 function function_fe22f274(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -52,6 +55,7 @@ function function_fe22f274(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_42f5ba79
 // Params 1, eflags: 0x1 linked
+// namespace_42f5ba79<file_0>::function_9a8e9819
 // Checksum 0x68303d64, Offset: 0x628
 // Size: 0xea
 function function_9a8e9819(localclientnum) {
@@ -67,6 +71,7 @@ function function_9a8e9819(localclientnum) {
 
 // Namespace namespace_42f5ba79
 // Params 1, eflags: 0x1 linked
+// namespace_42f5ba79<file_0>::function_56ddd8d9
 // Checksum 0x8199d85b, Offset: 0x720
 // Size: 0xc4
 function function_56ddd8d9(localclientnum) {
@@ -81,6 +86,7 @@ function function_56ddd8d9(localclientnum) {
 
 // Namespace namespace_42f5ba79
 // Params 7, eflags: 0x1 linked
+// namespace_42f5ba79<file_0>::function_968ecc77
 // Checksum 0x5fad75c0, Offset: 0x7f0
 // Size: 0x19e
 function function_968ecc77(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -105,6 +111,7 @@ function function_968ecc77(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_42f5ba79
 // Params 7, eflags: 0x1 linked
+// namespace_42f5ba79<file_0>::function_e6e6eaf8
 // Checksum 0xd8c475fd, Offset: 0x998
 // Size: 0x84
 function function_e6e6eaf8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {

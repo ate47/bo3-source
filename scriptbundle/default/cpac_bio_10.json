@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_bio_10",
+    "igdtseqnum": 37,
+    "challengeWidget": "Kills",
+    "challengeDetails": "ACCOLADES_BIO_10",
+    "challengeName": "ACCOLADES_BIO_10_NAME",
+    "centerText": "1",
+    "challengeReference": "MISSION_BIODOMES_CHALLENGE10"
+}

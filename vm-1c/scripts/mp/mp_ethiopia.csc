@@ -13,6 +13,7 @@
 
 // Namespace mp_ethiopia
 // Params 0, eflags: 0x1 linked
+// namespace_c0c4a05c<file_0>::function_d290ebfa
 // Checksum 0x43ca76ac, Offset: 0x220
 // Size: 0x12c
 function main() {
@@ -32,6 +33,7 @@ function main() {
 
 // Namespace mp_ethiopia
 // Params 2, eflags: 0x1 linked
+// namespace_c0c4a05c<file_0>::function_b6d6bffc
 // Checksum 0x12f4b7c6, Offset: 0x358
 // Size: 0x7a
 function dom_flag_base_fx_override(flag, team) {
@@ -52,6 +54,7 @@ function dom_flag_base_fx_override(flag, team) {
 
 // Namespace mp_ethiopia
 // Params 2, eflags: 0x1 linked
+// namespace_c0c4a05c<file_0>::function_628641cd
 // Checksum 0x746f6024, Offset: 0x3e0
 // Size: 0x7a
 function dom_flag_cap_fx_override(flag, team) {

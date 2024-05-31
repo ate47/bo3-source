@@ -1,0 +1,20 @@
+{
+    "leftstraightanim": "pb_sentry_turret_aim_70l_level",
+    "vmtype": "none",
+    "configstringfiletype": "scriptbundle",
+    "aimpitchangled": 60,
+    "aimpitchangleu": 60,
+    "name": "player_turret_bullet_base_anims",
+    "type": "turretanims",
+    "centerstraightanim": "pb_sentry_turret_aim_f_level",
+    "aimyawanglel": 80,
+    "aimyawangler": 80,
+    "rightdownanim": "pb_sentry_turret_aim_70r_60d",
+    "leftdownanim": "pb_sentry_turret_aim_70l_60d",
+    "rightupanim": "pb_sentry_turret_aim_70r_60u",
+    "rightstraightanim": "pb_sentry_turret_aim_70r_level",
+    "igdtseqnum": 16,
+    "leftupanim": "pb_sentry_turret_aim_70l_60u",
+    "centerdownanim": "pb_sentry_turret_aim_f_60d",
+    "centerupanim": "pb_sentry_turret_aim_f_60u"
+}

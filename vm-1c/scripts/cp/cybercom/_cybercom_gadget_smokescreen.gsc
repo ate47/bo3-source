@@ -19,6 +19,7 @@
 
 // Namespace namespace_11fb1f28
 // Params 0, eflags: 0x1 linked
+// namespace_11fb1f28<file_0>::function_c35e6aab
 // Checksum 0x99ec1590, Offset: 0x440
 // Size: 0x4
 function init() {
@@ -27,6 +28,7 @@ function init() {
 
 // Namespace namespace_11fb1f28
 // Params 0, eflags: 0x1 linked
+// namespace_11fb1f28<file_0>::function_d290ebfa
 // Checksum 0xeedc48a8, Offset: 0x450
 // Size: 0x17c
 function main() {
@@ -44,6 +46,7 @@ function main() {
 
 // Namespace namespace_11fb1f28
 // Params 1, eflags: 0x1 linked
+// namespace_11fb1f28<file_0>::function_875da84b
 // Checksum 0xd230f060, Offset: 0x5d8
 // Size: 0xc
 function function_875da84b(slot) {
@@ -52,6 +55,7 @@ function function_875da84b(slot) {
 
 // Namespace namespace_11fb1f28
 // Params 2, eflags: 0x1 linked
+// namespace_11fb1f28<file_0>::function_8d01efb6
 // Checksum 0x78b18fc8, Offset: 0x5f0
 // Size: 0x14
 function function_8d01efb6(slot, weapon) {
@@ -60,6 +64,7 @@ function function_8d01efb6(slot, weapon) {
 
 // Namespace namespace_11fb1f28
 // Params 2, eflags: 0x1 linked
+// namespace_11fb1f28<file_0>::function_bdb47551
 // Checksum 0x1d5424, Offset: 0x610
 // Size: 0x4c
 function function_bdb47551(slot, weapon) {
@@ -70,6 +75,7 @@ function function_bdb47551(slot, weapon) {
 
 // Namespace namespace_11fb1f28
 // Params 2, eflags: 0x1 linked
+// namespace_11fb1f28<file_0>::function_39ea6a1b
 // Checksum 0x19113ca5, Offset: 0x668
 // Size: 0x14
 function function_39ea6a1b(slot, weapon) {
@@ -78,6 +84,7 @@ function function_39ea6a1b(slot, weapon) {
 
 // Namespace namespace_11fb1f28
 // Params 0, eflags: 0x1 linked
+// namespace_11fb1f28<file_0>::function_5d2fec30
 // Checksum 0x99ec1590, Offset: 0x688
 // Size: 0x4
 function function_5d2fec30() {
@@ -86,6 +93,7 @@ function function_5d2fec30() {
 
 // Namespace namespace_11fb1f28
 // Params 2, eflags: 0x1 linked
+// namespace_11fb1f28<file_0>::function_b039e27b
 // Checksum 0xb8ccd566, Offset: 0x698
 // Size: 0xe4
 function _on(slot, weapon) {
@@ -101,6 +109,7 @@ function _on(slot, weapon) {
 
 // Namespace namespace_11fb1f28
 // Params 2, eflags: 0x1 linked
+// namespace_11fb1f28<file_0>::function_251e7cf
 // Checksum 0x63e3cfd5, Offset: 0x788
 // Size: 0x14
 function _off(slot, weapon) {
@@ -109,6 +118,7 @@ function _off(slot, weapon) {
 
 // Namespace namespace_11fb1f28
 // Params 2, eflags: 0x1 linked
+// namespace_11fb1f28<file_0>::function_4135a1c4
 // Checksum 0xafacf266, Offset: 0x7a8
 // Size: 0x14
 function function_4135a1c4(slot, weapon) {
@@ -117,6 +127,7 @@ function function_4135a1c4(slot, weapon) {
 
 // Namespace namespace_11fb1f28
 // Params 2, eflags: 0x1 linked
+// namespace_11fb1f28<file_0>::function_269cc172
 // Checksum 0x172cb9c9, Offset: 0x7c8
 // Size: 0xe2
 function function_269cc172(var_d7d4ed9f, var_c34fe8d9) {
@@ -128,6 +139,7 @@ function function_269cc172(var_d7d4ed9f, var_c34fe8d9) {
 
 // Namespace namespace_11fb1f28
 // Params 2, eflags: 0x1 linked
+// namespace_11fb1f28<file_0>::function_8810da3c
 // Checksum 0xbb3a8301, Offset: 0x8b8
 // Size: 0x3d4
 function function_8810da3c(owner, upgraded) {
@@ -169,6 +181,7 @@ function function_8810da3c(owner, upgraded) {
 
 // Namespace namespace_11fb1f28
 // Params 3, eflags: 0x5 linked
+// namespace_11fb1f28<file_0>::function_eb018a63
 // Checksum 0xa466cabf, Offset: 0xc98
 // Size: 0x290
 function private function_eb018a63(origin, weapon, var_50ae8517) {
@@ -201,6 +214,7 @@ function private function_eb018a63(origin, weapon, var_50ae8517) {
 
 // Namespace namespace_11fb1f28
 // Params 2, eflags: 0x5 linked
+// namespace_11fb1f28<file_0>::function_76df0d04
 // Checksum 0x6c6a6796, Offset: 0xf30
 // Size: 0xb6
 function private function_76df0d04(player, timestep) {
@@ -217,6 +231,7 @@ function private function_76df0d04(player, timestep) {
 
 // Namespace namespace_11fb1f28
 // Params 2, eflags: 0x5 linked
+// namespace_11fb1f28<file_0>::function_eafddd94
 // Checksum 0x6751a475, Offset: 0xff0
 // Size: 0x31a
 function private function_eafddd94(player, cloud) {
@@ -281,6 +296,7 @@ function private function_eafddd94(player, cloud) {
 
 // Namespace namespace_11fb1f28
 // Params 3, eflags: 0x4
+// namespace_11fb1f28<file_0>::function_fc04e511
 // Checksum 0xc0551218, Offset: 0x1318
 // Size: 0x90
 function private function_fc04e511(dir, var_99f49fe2, seconds) {
@@ -295,6 +311,7 @@ function private function_fc04e511(dir, var_99f49fe2, seconds) {
 
 // Namespace namespace_11fb1f28
 // Params 3, eflags: 0x5 linked
+// namespace_11fb1f28<file_0>::function_2fb41213
 // Checksum 0xd20be4a2, Offset: 0x13b0
 // Size: 0x88
 function private function_2fb41213(origin, duration, weapon) {
@@ -306,6 +323,7 @@ function private function_2fb41213(origin, duration, weapon) {
 
 // Namespace namespace_11fb1f28
 // Params 1, eflags: 0x5 linked
+// namespace_11fb1f28<file_0>::function_7125df2e
 // Checksum 0x251ec98a, Offset: 0x1440
 // Size: 0x5c
 function private function_7125df2e(time) {
@@ -319,6 +337,7 @@ function private function_7125df2e(time) {
 
 // Namespace namespace_11fb1f28
 // Params 3, eflags: 0x5 linked
+// namespace_11fb1f28<file_0>::function_2346317b
 // Checksum 0x9c661a40, Offset: 0x14a8
 // Size: 0x176
 function private function_2346317b(time, startscale, maxscale) {
@@ -352,6 +371,7 @@ function private function_2346317b(time, startscale, maxscale) {
 
 // Namespace namespace_11fb1f28
 // Params 1, eflags: 0x5 linked
+// namespace_11fb1f28<file_0>::function_2f3c403b
 // Checksum 0x32b6a896, Offset: 0x1628
 // Size: 0x70
 function private function_2f3c403b(time) {
@@ -366,6 +386,7 @@ function private function_2f3c403b(time) {
 
 // Namespace namespace_11fb1f28
 // Params 2, eflags: 0x1 linked
+// namespace_11fb1f28<file_0>::function_d25acb0
 // Checksum 0xad1bba24, Offset: 0x16a0
 // Size: 0xfc
 function function_d25acb0(var_9bc2efcb, upgraded) {
@@ -386,6 +407,7 @@ function function_d25acb0(var_9bc2efcb, upgraded) {
 
 // Namespace namespace_11fb1f28
 // Params 1, eflags: 0x5 linked
+// namespace_11fb1f28<file_0>::function_e52895b
 // Checksum 0xa78c071e, Offset: 0x17a8
 // Size: 0x8e
 function private function_e52895b(origin) {

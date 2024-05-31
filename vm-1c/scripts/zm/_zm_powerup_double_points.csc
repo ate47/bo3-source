@@ -6,6 +6,7 @@
 
 // Namespace zm_powerup_double_points
 // Params 0, eflags: 0x2
+// namespace_f7b99e65<file_0>::function_2dc19561
 // Checksum 0x22b46b31, Offset: 0x128
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -14,6 +15,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_double_points
 // Params 0, eflags: 0x1 linked
+// namespace_f7b99e65<file_0>::function_8c87d8eb
 // Checksum 0xa1f39732, Offset: 0x168
 // Size: 0x74
 function __init__() {

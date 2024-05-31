@@ -7,6 +7,7 @@
 
 // Namespace namespace_40b4687d
 // Params 0, eflags: 0x1 linked
+// namespace_40b4687d<file_0>::function_c35e6aab
 // Checksum 0x39173044, Offset: 0x340
 // Size: 0x184
 function init() {
@@ -29,6 +30,7 @@ function init() {
 
 // Namespace namespace_40b4687d
 // Params 0, eflags: 0x1 linked
+// namespace_40b4687d<file_0>::function_536049a7
 // Checksum 0x138c1440, Offset: 0x4d0
 // Size: 0x10e
 function player_init() {
@@ -47,6 +49,7 @@ function player_init() {
 
 // Namespace namespace_40b4687d
 // Params 1, eflags: 0x1 linked
+// namespace_40b4687d<file_0>::function_6f30c596
 // Checksum 0x8c079fe, Offset: 0x5e8
 // Size: 0x1b8
 function tesla_fx_rail(localclientnum) {
@@ -81,6 +84,7 @@ function tesla_fx_rail(localclientnum) {
 
 // Namespace namespace_40b4687d
 // Params 1, eflags: 0x1 linked
+// namespace_40b4687d<file_0>::function_b3585264
 // Checksum 0x706565e0, Offset: 0x7a8
 // Size: 0x350
 function tesla_fx_tube(localclientnum) {
@@ -151,6 +155,7 @@ function tesla_fx_tube(localclientnum) {
 
 // Namespace namespace_40b4687d
 // Params 0, eflags: 0x1 linked
+// namespace_40b4687d<file_0>::function_2727564b
 // Checksum 0x6b077315, Offset: 0xb00
 // Size: 0x7a
 function function_2727564b() {
@@ -169,6 +174,7 @@ function function_2727564b() {
 
 // Namespace namespace_40b4687d
 // Params 1, eflags: 0x1 linked
+// namespace_40b4687d<file_0>::function_42b7c319
 // Checksum 0x10ee4991, Offset: 0xb88
 // Size: 0xa0
 function function_42b7c319(localclientnum) {
@@ -186,6 +192,7 @@ function function_42b7c319(localclientnum) {
 
 // Namespace namespace_40b4687d
 // Params 1, eflags: 0x1 linked
+// namespace_40b4687d<file_0>::function_a99414e8
 // Checksum 0x34b84b69, Offset: 0xc30
 // Size: 0x48
 function function_a99414e8(localclientnum) {
@@ -198,6 +205,7 @@ function function_a99414e8(localclientnum) {
 
 // Namespace namespace_40b4687d
 // Params 1, eflags: 0x1 linked
+// namespace_40b4687d<file_0>::function_ee989b2f
 // Checksum 0x8a8836, Offset: 0xc80
 // Size: 0x7c
 function clear_tesla_tube_effect(localclientnum) {

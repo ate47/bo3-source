@@ -12,6 +12,7 @@
 
 // Namespace init
 // Params 1, eflags: 0x1 linked
+// namespace_c35e6aab<file_0>::function_de0c0c9f
 // Checksum 0x49bea41e, Offset: 0x238
 // Size: 0xe8
 function initweapon(weapon) {
@@ -27,6 +28,7 @@ function initweapon(weapon) {
 
 // Namespace init
 // Params 0, eflags: 0x1 linked
+// namespace_c35e6aab<file_0>::function_d290ebfa
 // Checksum 0x5e702d00, Offset: 0x328
 // Size: 0x564
 function main() {
@@ -105,6 +107,7 @@ function main() {
 
 // Namespace init
 // Params 0, eflags: 0x0
+// namespace_c35e6aab<file_0>::function_60ce1787
 // Checksum 0x834d6028, Offset: 0x898
 // Size: 0x24
 function setnameandrank() {
@@ -114,6 +117,7 @@ function setnameandrank() {
 
 // Namespace init
 // Params 0, eflags: 0x0
+// namespace_c35e6aab<file_0>::function_d8f75259
 // Checksum 0x99ec1590, Offset: 0x8c8
 // Size: 0x4
 function donothing() {
@@ -122,6 +126,7 @@ function donothing() {
 
 // Namespace init
 // Params 0, eflags: 0x0
+// namespace_c35e6aab<file_0>::function_3da266c0
 // Checksum 0xf199c4b9, Offset: 0x8d8
 // Size: 0x38
 function set_anim_playback_rate() {
@@ -131,6 +136,7 @@ function set_anim_playback_rate() {
 
 // Namespace init
 // Params 0, eflags: 0x0
+// namespace_c35e6aab<file_0>::function_3e6a4dd7
 // Checksum 0x3a96d7c2, Offset: 0x918
 // Size: 0x2c
 function trackvelocity() {
@@ -145,6 +151,7 @@ function trackvelocity() {
 
     // Namespace init
     // Params 1, eflags: 0x0
+    // namespace_c35e6aab<file_0>::function_a2c25bb
     // Checksum 0xb2ff24e9, Offset: 0x950
     // Size: 0x410
     function checkapproachangles(transtypes) {
@@ -199,6 +206,7 @@ function trackvelocity() {
 
 // Namespace init
 // Params 2, eflags: 0x0
+// namespace_c35e6aab<file_0>::function_85741bca
 // Checksum 0x485c7c83, Offset: 0xd68
 // Size: 0x2a
 function getexitsplittime(approachtype, dir) {
@@ -207,6 +215,7 @@ function getexitsplittime(approachtype, dir) {
 
 // Namespace init
 // Params 2, eflags: 0x0
+// namespace_c35e6aab<file_0>::function_743ebbf6
 // Checksum 0x1d9807cf, Offset: 0xda0
 // Size: 0x2a
 function gettranssplittime(approachtype, dir) {
@@ -215,6 +224,7 @@ function gettranssplittime(approachtype, dir) {
 
 // Namespace init
 // Params 0, eflags: 0x1 linked
+// namespace_c35e6aab<file_0>::function_83b32e8f
 // Checksum 0xa42ba06f, Offset: 0xdd8
 // Size: 0x16c
 function firstinit() {
@@ -240,6 +250,7 @@ function firstinit() {
 
 // Namespace init
 // Params 0, eflags: 0x0
+// namespace_c35e6aab<file_0>::function_603848d5
 // Checksum 0xebe0aaa1, Offset: 0xf50
 // Size: 0x34
 function onplayerconnect() {
@@ -250,6 +261,7 @@ function onplayerconnect() {
 
 // Namespace init
 // Params 0, eflags: 0x1 linked
+// namespace_c35e6aab<file_0>::function_804a4f4c
 // Checksum 0xd36ab55d, Offset: 0xf90
 // Size: 0x156
 function setnextplayergrenadetime() {
@@ -274,6 +286,7 @@ function setnextplayergrenadetime() {
 
 // Namespace init
 // Params 1, eflags: 0x1 linked
+// namespace_c35e6aab<file_0>::function_d8d637b2
 // Checksum 0x320caed, Offset: 0x10f0
 // Size: 0xc4
 function addtomissiles(grenade) {
@@ -294,6 +307,7 @@ function addtomissiles(grenade) {
 
 // Namespace init
 // Params 0, eflags: 0x1 linked
+// namespace_c35e6aab<file_0>::function_b44e1bfd
 // Checksum 0x6e31397b, Offset: 0x11c0
 // Size: 0xb8
 function function_b44e1bfd() {
@@ -313,6 +327,7 @@ function function_b44e1bfd() {
 
 // Namespace init
 // Params 0, eflags: 0x1 linked
+// namespace_c35e6aab<file_0>::function_48cec971
 // Checksum 0xcad206b4, Offset: 0x1280
 // Size: 0x78
 function function_48cec971() {
@@ -327,6 +342,7 @@ function function_48cec971() {
 
 // Namespace init
 // Params 0, eflags: 0x1 linked
+// namespace_c35e6aab<file_0>::function_a86baa0f
 // Checksum 0xe8657850, Offset: 0x1300
 // Size: 0x78
 function function_a86baa0f() {
@@ -341,6 +357,7 @@ function function_a86baa0f() {
 
 // Namespace init
 // Params 0, eflags: 0x1 linked
+// namespace_c35e6aab<file_0>::function_f2512ac9
 // Checksum 0x623988c7, Offset: 0x1380
 // Size: 0x50
 function begingrenadetracking() {
@@ -353,6 +370,7 @@ function begingrenadetracking() {
 
 // Namespace init
 // Params 0, eflags: 0x1 linked
+// namespace_c35e6aab<file_0>::function_49cda2b7
 // Checksum 0x653fca96, Offset: 0x13d8
 // Size: 0x1e
 function endondeath() {
@@ -363,6 +381,7 @@ function endondeath() {
 
 // Namespace init
 // Params 0, eflags: 0x1 linked
+// namespace_c35e6aab<file_0>::function_2876c7cf
 // Checksum 0x56af4433, Offset: 0x1400
 // Size: 0x84
 function grenade_earthquake() {
@@ -375,6 +394,7 @@ function grenade_earthquake() {
 
 // Namespace init
 // Params 0, eflags: 0x1 linked
+// namespace_c35e6aab<file_0>::function_9b08d9a2
 // Checksum 0x99ec1590, Offset: 0x1490
 // Size: 0x4
 function end_script() {

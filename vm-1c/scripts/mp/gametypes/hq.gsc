@@ -26,6 +26,7 @@
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_d290ebfa
 // Checksum 0xe9c6511d, Offset: 0x8c8
 // Size: 0x3ec
 function main() {
@@ -71,6 +72,7 @@ function main() {
 
 // Namespace hq
 // Params 3, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_cd54eaf0
 // Checksum 0x85ae1a50, Offset: 0xcc0
 // Size: 0xdc
 function updateobjectivehintmessages(defenderteam, defendmessage, attackmessage) {
@@ -85,6 +87,7 @@ function updateobjectivehintmessages(defenderteam, defendmessage, attackmessage)
 
 // Namespace hq
 // Params 1, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_4e1153b9
 // Checksum 0xd3b471cb, Offset: 0xda8
 // Size: 0x9c
 function updateobjectivehintmessage(message) {
@@ -95,6 +98,7 @@ function updateobjectivehintmessage(message) {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_712cf456
 // Checksum 0x3f98d34f, Offset: 0xe50
 // Size: 0x124
 function getrespawndelay() {
@@ -124,6 +128,7 @@ function getrespawndelay() {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_34685338
 // Checksum 0xbfedda14, Offset: 0xf80
 // Size: 0x4c4
 function onstartgametype() {
@@ -186,6 +191,7 @@ function onstartgametype() {
 
 // Namespace hq
 // Params 1, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_602d8d45
 // Checksum 0xae82881e, Offset: 0x1450
 // Size: 0xf4
 function function_602d8d45(delay) {
@@ -202,6 +208,7 @@ function function_602d8d45(delay) {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_813a2002
 // Checksum 0xe7f8a684, Offset: 0x1550
 // Size: 0xec
 function function_813a2002() {
@@ -218,6 +225,7 @@ function function_813a2002() {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_7834b445
 // Checksum 0x659ed1e5, Offset: 0x1648
 // Size: 0xc78
 function hqmainloop() {
@@ -351,6 +359,7 @@ function hqmainloop() {
 
 // Namespace hq
 // Params 1, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_1813cd2
 // Checksum 0x3b17ea2e, Offset: 0x22c8
 // Size: 0x28
 function hidetimerdisplayongameend(timerdisplay) {
@@ -360,6 +369,7 @@ function hidetimerdisplayongameend(timerdisplay) {
 
 // Namespace hq
 // Params 1, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_619135a0
 // Checksum 0xafa69286, Offset: 0x22f8
 // Size: 0xa6
 function forcespawnteam(team) {
@@ -378,6 +388,7 @@ function forcespawnteam(team) {
 
 // Namespace hq
 // Params 1, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_cfce9b82
 // Checksum 0x2730f0d1, Offset: 0x23a8
 // Size: 0xac
 function onbeginuse(player) {
@@ -391,6 +402,7 @@ function onbeginuse(player) {
 
 // Namespace hq
 // Params 3, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_a454a59a
 // Checksum 0x7b2d2017, Offset: 0x2460
 // Size: 0x2c
 function onenduse(team, player, success) {
@@ -399,6 +411,7 @@ function onenduse(team, player, success) {
 
 // Namespace hq
 // Params 1, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_fb860caf
 // Checksum 0xb2e8b4e, Offset: 0x2498
 // Size: 0x268
 function onradiocapture(player) {
@@ -432,6 +445,7 @@ function onradiocapture(player) {
 
 // Namespace hq
 // Params 2, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_39bb28eb
 // Checksum 0xeac50805, Offset: 0x2708
 // Size: 0x1c6
 function give_capture_credit(touchlist, string) {
@@ -456,6 +470,7 @@ function give_capture_credit(touchlist, string) {
 
 // Namespace hq
 // Params 3, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_636195e5
 // Checksum 0x572f48d2, Offset: 0x28d8
 // Size: 0x8a
 function dropalltoground(origin, radius, stickyobjectradius) {
@@ -468,6 +483,7 @@ function dropalltoground(origin, radius, stickyobjectradius) {
 
 // Namespace hq
 // Params 1, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_78bd77f5
 // Checksum 0x9d896af9, Offset: 0x2970
 // Size: 0x54
 function function_78bd77f5(radio) {
@@ -478,6 +494,7 @@ function function_78bd77f5(radio) {
 
 // Namespace hq
 // Params 1, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_4f3687b3
 // Checksum 0xfa3b4e3, Offset: 0x29d0
 // Size: 0x37c
 function onradiodestroy(firstplayer) {
@@ -522,6 +539,7 @@ function onradiodestroy(firstplayer) {
 
 // Namespace hq
 // Params 2, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_534cfaad
 // Checksum 0x9769dab, Offset: 0x2d58
 // Size: 0x9a
 function destroyhqaftertime(time, ownerteam) {
@@ -538,6 +556,7 @@ function destroyhqaftertime(time, ownerteam) {
 
 // Namespace hq
 // Params 1, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_c242acc9
 // Checksum 0x369e59d2, Offset: 0x2e00
 // Size: 0xdc
 function function_c242acc9(ownerteam) {
@@ -561,6 +580,7 @@ function function_c242acc9(ownerteam) {
 
 // Namespace hq
 // Params 1, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_4ee45b0c
 // Checksum 0x2ab2cfb4, Offset: 0x2ee8
 // Size: 0xe6
 function awardhqpoints(team) {
@@ -582,6 +602,7 @@ function awardhqpoints(team) {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_e110010a
 // Checksum 0x7543901f, Offset: 0x2fd8
 // Size: 0xe
 function koth_playerspawnedcb() {
@@ -590,6 +611,7 @@ function koth_playerspawnedcb() {
 
 // Namespace hq
 // Params 2, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_43b8c1a1
 // Checksum 0x3ba938af, Offset: 0x2ff0
 // Size: 0x10e
 function function_43b8c1a1(var_533ecd6e, var_2d3c5305) {
@@ -614,6 +636,7 @@ function function_43b8c1a1(var_533ecd6e, var_2d3c5305) {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_c8deebf7
 // Checksum 0x49265be3, Offset: 0x3108
 // Size: 0x132
 function function_c8deebf7() {
@@ -638,6 +661,7 @@ function function_c8deebf7() {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_f0804800
 // Checksum 0xbd3bf250, Offset: 0x3248
 // Size: 0x492
 function setupradios() {
@@ -705,6 +729,7 @@ function setupradios() {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_daeec435
 // Checksum 0x45ca9d27, Offset: 0x36e8
 // Size: 0x2a4
 function function_daeec435() {
@@ -744,6 +769,7 @@ function function_daeec435() {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_6e43ca87
 // Checksum 0xae40abc4, Offset: 0x3998
 // Size: 0x1c4
 function function_6e43ca87() {
@@ -764,6 +790,7 @@ function function_6e43ca87() {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_efe105f4
 // Checksum 0xe0a66b2d, Offset: 0x3b68
 // Size: 0x80
 function function_efe105f4() {
@@ -778,6 +805,7 @@ function function_efe105f4() {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_4dc1907d
 // Checksum 0x8a5cbe28, Offset: 0x3bf0
 // Size: 0x70
 function function_4dc1907d() {
@@ -791,6 +819,7 @@ function function_4dc1907d() {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_aa4ae528
 // Checksum 0xd30d966e, Offset: 0x3c68
 // Size: 0x6c
 function function_aa4ae528() {
@@ -803,6 +832,7 @@ function function_aa4ae528() {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_5bf752b0
 // Checksum 0xa2625c11, Offset: 0x3ce0
 // Size: 0x146
 function function_5bf752b0() {
@@ -830,6 +860,7 @@ function function_5bf752b0() {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_fbfa19e6
 // Checksum 0x78f9f265, Offset: 0x3e30
 // Size: 0x88
 function function_fbfa19e6() {
@@ -844,6 +875,7 @@ function function_fbfa19e6() {
 
 // Namespace hq
 // Params 1, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_6ac858b3
 // Checksum 0x4a3b6322, Offset: 0x3ec0
 // Size: 0xa8
 function function_6ac858b3(num) {
@@ -858,6 +890,7 @@ function function_6ac858b3(num) {
 
 // Namespace hq
 // Params 2, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_d35e7a8
 // Checksum 0x931d5089, Offset: 0x3f70
 // Size: 0x19a
 function function_d35e7a8(avgpos, origin) {
@@ -878,6 +911,7 @@ function function_d35e7a8(avgpos, origin) {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_60882fed
 // Checksum 0xb30d7168, Offset: 0x4118
 // Size: 0x43c
 function pickradiotospawn() {
@@ -934,6 +968,7 @@ function pickradiotospawn() {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_e4e885e6
 // Checksum 0xbe96ae82, Offset: 0x4560
 // Size: 0x1c
 function onroundswitch() {
@@ -942,6 +977,7 @@ function onroundswitch() {
 
 // Namespace hq
 // Params 9, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_c2658b46
 // Checksum 0xe31a118f, Offset: 0x4588
 // Size: 0x644
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -1025,6 +1061,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace hq
 // Params 1, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_316dbc8
 // Checksum 0x70680f64, Offset: 0x4bd8
 // Size: 0x168
 function killwhilecontesting(radio) {
@@ -1054,6 +1091,7 @@ function killwhilecontesting(radio) {
 
 // Namespace hq
 // Params 1, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_257d1c47
 // Checksum 0x782e23a5, Offset: 0x4d48
 // Size: 0x66
 function onendgame(winningteam) {
@@ -1064,6 +1102,7 @@ function onendgame(winningteam) {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_e603660e
 // Checksum 0x8b1c3f6c, Offset: 0x4db8
 // Size: 0x7c
 function function_e603660e() {
@@ -1074,6 +1113,7 @@ function function_e603660e() {
 
 // Namespace hq
 // Params 0, eflags: 0x0
+// namespace_6435f2d4<file_0>::function_747662c0
 // Checksum 0xe77a9500, Offset: 0x4e40
 // Size: 0x14a
 function onupdateuserate() {

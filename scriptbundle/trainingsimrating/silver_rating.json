@@ -1,0 +1,10 @@
+{
+    "vmtype": "server",
+    "name": "silver_rating",
+    "type": "trainingsimrating",
+    "ratingImage": "t7_cp_hud_trainingsim_silver_icon",
+    "ratingName": "MPUI_SIBERIAN",
+    "xpAwarded": 3500,
+    "requiredScore": 15000,
+    "tokensAwarded": 2
+}

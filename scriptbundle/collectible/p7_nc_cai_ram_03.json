@@ -1,0 +1,15 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_cai_ram_03",
+    "type": "collectible",
+    "igdtseqnum": 29,
+    "uiMaterial": "t7_icon_menu_p7_nc_cai_ram_03",
+    "uiModel": "p7_nc_cai_ram_03",
+    "description": "COLLECTIBLE_P7_NC_CAI_RAM_03_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_CAI_RAM_03_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_NRC_HELMET",
+    "displayNameShort": "COLLECTIBLE_P7_NC_CAI_RAM_03_SHORT",
+    "codexurl": "Collectables-NRCHelmet.htm",
+    "slotSize": 0
+}

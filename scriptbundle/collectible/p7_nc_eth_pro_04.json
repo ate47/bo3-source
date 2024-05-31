@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_eth_pro_04",
+    "type": "collectible",
+    "igdtseqnum": 48,
+    "uiMaterial": "t7_icon_menu_p7_nc_eth_pro_04",
+    "uiModelWithStand": "p7_nc_eth_pro_04_with_stand",
+    "uiModel": "p7_nc_eth_pro_04",
+    "description": "COLLECTIBLE_P7_NC_ETH_PRO_04_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_ETH_PRO_04_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_NANO_DRONE",
+    "displayNameShort": "COLLECTIBLE_P7_NC_ETH_PRO_04_SHORT",
+    "codexurl": "Collectables-ReplicaNanoDrone.htm",
+    "slotSize": 1
+}

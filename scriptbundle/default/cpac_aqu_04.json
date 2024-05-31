@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_aqu_04",
+    "igdtseqnum": 15,
+    "challengeWidget": "AirVehicleDestroy",
+    "challengeDetails": "ACCOLADES_AQU_4",
+    "challengeName": "ACCOLADES_AQU_4_NAME",
+    "centerText": "3",
+    "challengeReference": "MISSION_AQUIFER_CHALLENGE4"
+}

@@ -9,6 +9,7 @@
 
 // Namespace namespace_72c864a4
 // Params 0, eflags: 0x1 linked
+// namespace_72c864a4<file_0>::function_c2eb9077
 // Checksum 0x99ec1590, Offset: 0x748
 // Size: 0x4
 function precachecustomcharacters() {
@@ -17,6 +18,7 @@ function precachecustomcharacters() {
 
 // Namespace namespace_72c864a4
 // Params 0, eflags: 0x1 linked
+// namespace_72c864a4<file_0>::function_64b491e4
 // Checksum 0x5a5dd539, Offset: 0x758
 // Size: 0x24
 function initcharacterstartindex() {
@@ -25,6 +27,7 @@ function initcharacterstartindex() {
 
 // Namespace namespace_72c864a4
 // Params 0, eflags: 0x0
+// namespace_72c864a4<file_0>::function_31420e52
 // Checksum 0x114a29d7, Offset: 0x788
 // Size: 0x3e
 function selectcharacterindextouse() {
@@ -38,6 +41,7 @@ function selectcharacterindextouse() {
 
 // Namespace namespace_72c864a4
 // Params 0, eflags: 0x1 linked
+// namespace_72c864a4<file_0>::function_2b7aef11
 // Checksum 0x6ebaf324, Offset: 0x7d0
 // Size: 0x214
 function assign_lowest_unused_character_index() {
@@ -80,6 +84,7 @@ function assign_lowest_unused_character_index() {
 
 // Namespace namespace_72c864a4
 // Params 0, eflags: 0x1 linked
+// namespace_72c864a4<file_0>::function_a0c0aeb
 // Checksum 0x535ad2a0, Offset: 0x9f0
 // Size: 0x2a4
 function givecustomcharacters() {
@@ -123,6 +128,7 @@ function givecustomcharacters() {
 
 // Namespace namespace_72c864a4
 // Params 0, eflags: 0x1 linked
+// namespace_72c864a4<file_0>::function_f7f01a5c
 // Checksum 0xd002341d, Offset: 0xca0
 // Size: 0x54
 function set_exert_id() {
@@ -134,6 +140,7 @@ function set_exert_id() {
 
 // Namespace namespace_72c864a4
 // Params 0, eflags: 0x0
+// namespace_72c864a4<file_0>::function_80f102b1
 // Checksum 0xbbf2f9fb, Offset: 0xd00
 // Size: 0x8ba
 function setup_personality_character_exerts() {

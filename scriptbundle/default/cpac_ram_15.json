@@ -1,0 +1,9 @@
+{
+    "vmtype": "none",
+    "name": "cpac_ram_15",
+    "igdtseqnum": 142,
+    "challengeWidget": "Melee",
+    "challengeDetails": "ACCOLADES_RAM_15",
+    "challengeName": "ACCOLADES_RAM_15_NAME",
+    "challengeReference": "MISSION_RAMSES_CHALLENGE15"
+}

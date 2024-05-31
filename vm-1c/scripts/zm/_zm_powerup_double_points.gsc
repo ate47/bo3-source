@@ -14,6 +14,7 @@
 
 // Namespace zm_powerup_double_points
 // Params 0, eflags: 0x2
+// namespace_f7b99e65<file_0>::function_2dc19561
 // Checksum 0x768014ed, Offset: 0x2f8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -22,6 +23,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_double_points
 // Params 0, eflags: 0x1 linked
+// namespace_f7b99e65<file_0>::function_8c87d8eb
 // Checksum 0x6cb17b5f, Offset: 0x338
 // Size: 0xbc
 function __init__() {
@@ -33,6 +35,7 @@ function __init__() {
 
 // Namespace zm_powerup_double_points
 // Params 1, eflags: 0x1 linked
+// namespace_f7b99e65<file_0>::function_73857f09
 // Checksum 0x936785bb, Offset: 0x400
 // Size: 0x44
 function grab_double_points(player) {
@@ -42,6 +45,7 @@ function grab_double_points(player) {
 
 // Namespace zm_powerup_double_points
 // Params 2, eflags: 0x1 linked
+// namespace_f7b99e65<file_0>::function_e0bb1f2d
 // Checksum 0x376db927, Offset: 0x450
 // Size: 0x2a6
 function double_points_powerup(drop_item, player) {

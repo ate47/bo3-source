@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_bio_17",
+    "igdtseqnum": 44,
+    "challengeWidget": "GroundVehicleDestroy",
+    "challengeDetails": "ACCOLADES_BIO_17",
+    "challengeName": "ACCOLADES_BIO_17_NAME",
+    "centerText": "6",
+    "challengeReference": "MISSION_BIODOMES_CHALLENGE17"
+}

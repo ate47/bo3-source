@@ -6,6 +6,7 @@
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
+// namespace_22646992<file_0>::function_c35e6aab
 // Checksum 0xd9e08d5a, Offset: 0x1e0
 // Size: 0x10c
 function init() {
@@ -22,6 +23,7 @@ function init() {
 
 // Namespace zm_powerups
 // Params 3, eflags: 0x1 linked
+// namespace_22646992<file_0>::function_1be071ae
 // Checksum 0x625b084, Offset: 0x2f8
 // Size: 0x108
 function add_zombie_powerup(powerup_name, client_field_name, clientfield_version) {
@@ -45,6 +47,7 @@ function add_zombie_powerup(powerup_name, client_field_name, clientfield_version
 
 // Namespace zm_powerups
 // Params 0, eflags: 0x1 linked
+// namespace_22646992<file_0>::function_ced9fed2
 // Checksum 0xa55f1e7a, Offset: 0x408
 // Size: 0xb6
 function function_ced9fed2() {
@@ -61,6 +64,7 @@ function function_ced9fed2() {
 
 // Namespace zm_powerups
 // Params 1, eflags: 0x1 linked
+// namespace_22646992<file_0>::function_2a156bc5
 // Checksum 0x97187979, Offset: 0x4c8
 // Size: 0x36
 function include_zombie_powerup(powerup_name) {
@@ -72,6 +76,7 @@ function include_zombie_powerup(powerup_name) {
 
 // Namespace zm_powerups
 // Params 7, eflags: 0x1 linked
+// namespace_22646992<file_0>::function_cc23cad5
 // Checksum 0x3cb1864e, Offset: 0x508
 // Size: 0x52
 function powerup_state_callback(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -80,6 +85,7 @@ function powerup_state_callback(localclientnum, oldval, newval, bnewent, binitia
 
 // Namespace zm_powerups
 // Params 7, eflags: 0x1 linked
+// namespace_22646992<file_0>::function_bf10c912
 // Checksum 0x262aef0e, Offset: 0x568
 // Size: 0x17c
 function powerup_fx_callback(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

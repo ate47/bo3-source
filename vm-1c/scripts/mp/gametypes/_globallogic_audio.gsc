@@ -14,6 +14,7 @@
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x2
+// namespace_51c2821<file_0>::function_2dc19561
 // Checksum 0xa58ecddf, Offset: 0xe48
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -22,6 +23,7 @@ function autoexec function_2dc19561() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_8c87d8eb
 // Checksum 0xc546eb34, Offset: 0xe88
 // Size: 0x6c
 function __init__() {
@@ -33,6 +35,7 @@ function __init__() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_c35e6aab
 // Checksum 0x1fdb921e, Offset: 0xf00
 // Size: 0x626
 function init() {
@@ -90,6 +93,7 @@ function init() {
 
 // Namespace globallogic_audio
 // Params 4, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_d69e004d
 // Checksum 0x7421e2e7, Offset: 0x1530
 // Size: 0x8c
 function set_leader_gametype_dialog(startgamedialogkey, starthcgamedialogkey, offenseorderdialogkey, defenseorderdialogkey) {
@@ -102,6 +106,7 @@ function set_leader_gametype_dialog(startgamedialogkey, starthcgamedialogkey, of
 
 // Namespace globallogic_audio
 // Params 2, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_f17bbc69
 // Checksum 0xc8af3cbe, Offset: 0x15c8
 // Size: 0x15c
 function announce_round_winner(winner, delay) {
@@ -124,6 +129,7 @@ function announce_round_winner(winner, delay) {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_c42ec33d
 // Checksum 0xc81b234a, Offset: 0x1730
 // Size: 0xe4
 function announce_game_winner(winner) {
@@ -145,6 +151,7 @@ function announce_game_winner(winner) {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_499d49cc
 // Checksum 0xd76acfb, Offset: 0x1820
 // Size: 0x8a
 function flush_dialog() {
@@ -155,6 +162,7 @@ function flush_dialog() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_3307917c
 // Checksum 0xbcba1446, Offset: 0x18b8
 // Size: 0x3e
 function flush_dialog_on_player() {
@@ -167,6 +175,7 @@ function flush_dialog_on_player() {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_40698ab9
 // Checksum 0x1a72bfe4, Offset: 0x1900
 // Size: 0x86
 function flush_killstreak_dialog_on_player(killstreakid) {
@@ -182,6 +191,7 @@ function flush_killstreak_dialog_on_player(killstreakid) {
 
 // Namespace globallogic_audio
 // Params 3, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_f278076a
 // Checksum 0xf3844771, Offset: 0x1990
 // Size: 0x12a
 function killstreak_dialog_queued(dialogkey, killstreaktype, killstreakid) {
@@ -203,6 +213,7 @@ function killstreak_dialog_queued(dialogkey, killstreaktype, killstreakid) {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_78c468d8
 // Checksum 0x76e2accc, Offset: 0x1ac8
 // Size: 0x9a
 function flush_objective_dialog(objectivekey) {
@@ -213,6 +224,7 @@ function flush_objective_dialog(objectivekey) {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_b8957db8
 // Checksum 0xeaf61304, Offset: 0x1b70
 // Size: 0x8a
 function flush_objective_dialog_on_player(objectivekey) {
@@ -229,6 +241,7 @@ function flush_objective_dialog_on_player(objectivekey) {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x0
+// namespace_51c2821<file_0>::function_3b9c1d1e
 // Checksum 0xa6b7227d, Offset: 0x1c08
 // Size: 0x9a
 function flush_leader_dialog_key(dialogkey) {
@@ -239,6 +252,7 @@ function flush_leader_dialog_key(dialogkey) {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_9ed3224a
 // Checksum 0x8be31f6a, Offset: 0x1cb0
 // Size: 0x86
 function flush_leader_dialog_key_on_player(dialogkey) {
@@ -254,6 +268,7 @@ function flush_leader_dialog_key_on_player(dialogkey) {
 
 // Namespace globallogic_audio
 // Params 3, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_5f3253ee
 // Checksum 0x5e8b6b53, Offset: 0x1d40
 // Size: 0x3c
 function play_taacom_dialog(dialogkey, killstreaktype, killstreakid) {
@@ -262,6 +277,7 @@ function play_taacom_dialog(dialogkey, killstreaktype, killstreakid) {
 
 // Namespace globallogic_audio
 // Params 4, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_5c2c87a2
 // Checksum 0xf753a175, Offset: 0x1d88
 // Size: 0x144
 function killstreak_dialog_on_player(dialogkey, killstreaktype, killstreakid, pilotindex) {
@@ -292,6 +308,7 @@ function killstreak_dialog_on_player(dialogkey, killstreaktype, killstreakid, pi
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_f1f65569
 // Checksum 0x92fb6809, Offset: 0x1ed8
 // Size: 0x54
 function wait_for_player_dialog() {
@@ -306,6 +323,7 @@ function wait_for_player_dialog() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_1b35866d
 // Checksum 0x7cd278d5, Offset: 0x1f38
 // Size: 0x304
 function play_next_killstreak_dialog() {
@@ -355,6 +373,7 @@ function play_next_killstreak_dialog() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_8acabe7e
 // Checksum 0xcffad76f, Offset: 0x2248
 // Size: 0x5c
 function wait_next_killstreak_dialog() {
@@ -367,6 +386,7 @@ function wait_next_killstreak_dialog() {
 
 // Namespace globallogic_audio
 // Params 5, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_4dec8459
 // Checksum 0xc77d166f, Offset: 0x22b0
 // Size: 0xf2
 function leader_dialog_for_other_teams(dialogkey, skipteam, objectivekey, killstreakid, dialogbufferkey) {
@@ -380,6 +400,7 @@ function leader_dialog_for_other_teams(dialogkey, skipteam, objectivekey, killst
 
 // Namespace globallogic_audio
 // Params 6, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_b997c521
 // Checksum 0x33766107, Offset: 0x23b0
 // Size: 0x162
 function leader_dialog(dialogkey, team, excludelist, objectivekey, killstreakid, dialogbufferkey) {
@@ -400,6 +421,7 @@ function leader_dialog(dialogkey, team, excludelist, objectivekey, killstreakid,
 
 // Namespace globallogic_audio
 // Params 5, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_5a6c4285
 // Checksum 0xdaf251b3, Offset: 0x2520
 // Size: 0x3e4
 function leader_dialog_on_player(dialogkey, objectivekey, killstreakid, dialogbufferkey, introdialog) {
@@ -463,6 +485,7 @@ function leader_dialog_on_player(dialogkey, objectivekey, killstreakid, dialogbu
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_13bc2102
 // Checksum 0x525fa7db, Offset: 0x2910
 // Size: 0x28c
 function play_next_leader_dialog() {
@@ -506,6 +529,7 @@ function play_next_leader_dialog() {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_f8a52749
 // Checksum 0x57a715dc, Offset: 0x2ba8
 // Size: 0x4c
 function wait_next_leader_dialog(dialogbuffer) {
@@ -518,6 +542,7 @@ function wait_next_leader_dialog(dialogbuffer) {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_f234a17d
 // Checksum 0xd9737698, Offset: 0x2c00
 // Size: 0x378
 function dialogkey_priority(dialogkey) {
@@ -636,6 +661,7 @@ function dialogkey_priority(dialogkey) {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_d0c1f3ea
 // Checksum 0x37f2749, Offset: 0x2f80
 // Size: 0x24
 function play_equipment_destroyed_on_player() {
@@ -644,6 +670,7 @@ function play_equipment_destroyed_on_player() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_4bd6be09
 // Checksum 0x44094fd0, Offset: 0x2fb0
 // Size: 0x24
 function play_equipment_hacked_on_player() {
@@ -652,6 +679,7 @@ function play_equipment_hacked_on_player() {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_c3e705b2
 // Checksum 0x3282de6a, Offset: 0x2fe0
 // Size: 0x72
 function get_commander_dialog_alias(dialogkey) {
@@ -664,6 +692,7 @@ function get_commander_dialog_alias(dialogkey) {
 
 // Namespace globallogic_audio
 // Params 2, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_f08025d4
 // Checksum 0xcbe5f1e5, Offset: 0x3060
 // Size: 0xae
 function get_dialog_bundle_alias(dialogbundle, dialogkey) {
@@ -683,6 +712,7 @@ function get_dialog_bundle_alias(dialogbundle, dialogkey) {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_5d25078a
 // Checksum 0xb6e7fc6d, Offset: 0x3118
 // Size: 0xcc
 function is_team_winning(checkteam) {
@@ -699,6 +729,7 @@ function is_team_winning(checkteam) {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_d2725de6
 // Checksum 0x1ff6987d, Offset: 0x31f0
 // Size: 0xd2
 function announce_team_is_winning() {
@@ -714,6 +745,7 @@ function announce_team_is_winning() {
 
 // Namespace globallogic_audio
 // Params 2, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_ea1beeac
 // Checksum 0x704c33fc, Offset: 0x32d0
 // Size: 0xd6
 function play_2d_on_team(alias, team) {
@@ -728,6 +760,7 @@ function play_2d_on_team(alias, team) {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_3325e398
 // Checksum 0xe005dd49, Offset: 0x33b0
 // Size: 0x2e
 function get_round_switch_dialog(switchtype) {
@@ -743,6 +776,7 @@ function get_round_switch_dialog(switchtype) {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_de3b188d
 // Checksum 0xc546cbe2, Offset: 0x3408
 // Size: 0x54
 function function_de3b188d() {
@@ -754,6 +788,7 @@ function function_de3b188d() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_511e50ba
 // Checksum 0x761a06b, Offset: 0x3468
 // Size: 0x144
 function announcercontroller() {
@@ -777,6 +812,7 @@ function announcercontroller() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_c6f212a
 // Checksum 0x945d7420, Offset: 0x35b8
 // Size: 0x64
 function sndmusicfunctions() {
@@ -788,6 +824,7 @@ function sndmusicfunctions() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_a8967e04
 // Checksum 0x60d153c0, Offset: 0x3628
 // Size: 0xc0
 function sndmusicsetrandomizer() {
@@ -805,6 +842,7 @@ function sndmusicsetrandomizer() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_25145caf
 // Checksum 0x103c6085, Offset: 0x36f0
 // Size: 0xd4
 function sndmusicunlock() {
@@ -834,6 +872,7 @@ function sndmusicunlock() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_bbaa609d
 // Checksum 0xdda97620, Offset: 0x37d0
 // Size: 0x9c
 function sndmusictimesout() {
@@ -849,6 +888,7 @@ function sndmusictimesout() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_b3b69de9
 // Checksum 0xd4b3dec, Offset: 0x3878
 // Size: 0x54
 function sndmusichalfway() {
@@ -861,6 +901,7 @@ function sndmusichalfway() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_5e99e3fb
 // Checksum 0x6f256b8c, Offset: 0x38d8
 // Size: 0xce
 function sndmusictimelimitwatcher() {
@@ -884,6 +925,7 @@ function sndmusictimelimitwatcher() {
 
 // Namespace globallogic_audio
 // Params 5, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_e3595143
 // Checksum 0x6af087d1, Offset: 0x39b0
 // Size: 0x1aa
 function set_music_on_team(state, team, wait_time, save_state, return_state) {
@@ -913,6 +955,7 @@ function set_music_on_team(state, team, wait_time, save_state, return_state) {
 
 // Namespace globallogic_audio
 // Params 4, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_f35c5627
 // Checksum 0x274d86dd, Offset: 0x3b68
 // Size: 0xdc
 function set_music_on_player(state, wait_time, save_state, return_state) {
@@ -938,6 +981,7 @@ function set_music_on_player(state, wait_time, save_state, return_state) {
 
 // Namespace globallogic_audio
 // Params 4, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_81e167b
 // Checksum 0xfba48cb, Offset: 0x3c50
 // Size: 0x9c
 function set_music_global(state, wait_time, save_state, return_state) {

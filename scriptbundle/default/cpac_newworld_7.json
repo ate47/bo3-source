@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_newworld_7",
+    "igdtseqnum": 108,
+    "challengeWidget": "Explosion",
+    "challengeDetails": "ACCOLADES_NEW_7",
+    "challengeName": "ACCOLADES_NEW_7_NAME",
+    "centerText": "3",
+    "challengeReference": "MISSION_NEWWORLD_CHALLENGE7"
+}

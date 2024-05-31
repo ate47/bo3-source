@@ -30,6 +30,7 @@
 
 // Namespace namespace_6f13ba4a
 // Params 0, eflags: 0x0
+// namespace_6f13ba4a<file_0>::function_d290ebfa
 // Checksum 0xe9c07cd6, Offset: 0x800
 // Size: 0x2
 function main() {
@@ -38,6 +39,7 @@ function main() {
 
 // Namespace namespace_6f13ba4a
 // Params 2, eflags: 0x0
+// namespace_6f13ba4a<file_0>::function_af17c267
 // Checksum 0xea425da2, Offset: 0x810
 // Size: 0x3c2
 function function_af17c267(str_objective, var_74cd64bc) {
@@ -88,6 +90,7 @@ function function_af17c267(str_objective, var_74cd64bc) {
 
 // Namespace namespace_6f13ba4a
 // Params 1, eflags: 0x0
+// namespace_6f13ba4a<file_0>::function_203a65ec
 // Checksum 0x2d41dc8a, Offset: 0xbe0
 // Size: 0x82
 function function_203a65ec(a_ents) {
@@ -99,6 +102,7 @@ function function_203a65ec(a_ents) {
 
 // Namespace namespace_6f13ba4a
 // Params 1, eflags: 0x0
+// namespace_6f13ba4a<file_0>::function_e6379a2
 // Checksum 0x3b874df6, Offset: 0xc70
 // Size: 0x5a
 function function_e6379a2(var_74cd64bc) {
@@ -112,6 +116,7 @@ function function_e6379a2(var_74cd64bc) {
 
 // Namespace namespace_6f13ba4a
 // Params 0, eflags: 0x0
+// namespace_6f13ba4a<file_0>::function_76c56ee1
 // Checksum 0x7675c848, Offset: 0xcd8
 // Size: 0x3a
 function function_76c56ee1() {
@@ -123,6 +128,7 @@ function function_76c56ee1() {
 
 // Namespace namespace_6f13ba4a
 // Params 1, eflags: 0x0
+// namespace_6f13ba4a<file_0>::function_868ce0d5
 // Checksum 0x84f8ebd2, Offset: 0xd20
 // Size: 0x3a
 function function_868ce0d5(var_edc6e0e1) {
@@ -132,6 +138,7 @@ function function_868ce0d5(var_edc6e0e1) {
 
 // Namespace namespace_6f13ba4a
 // Params 0, eflags: 0x0
+// namespace_6f13ba4a<file_0>::function_646d5121
 // Checksum 0x420d338e, Offset: 0xd68
 // Size: 0x162
 function function_646d5121() {
@@ -159,6 +166,7 @@ function function_646d5121() {
 
 // Namespace namespace_6f13ba4a
 // Params 1, eflags: 0x0
+// namespace_6f13ba4a<file_0>::function_df8adf84
 // Checksum 0x4dc14c9b, Offset: 0xed8
 // Size: 0x62
 function function_df8adf84(var_9200d3f9) {
@@ -170,6 +178,7 @@ function function_df8adf84(var_9200d3f9) {
 
 // Namespace namespace_6f13ba4a
 // Params 0, eflags: 0x0
+// namespace_6f13ba4a<file_0>::function_f68b9e51
 // Checksum 0xc06bd1a6, Offset: 0xf48
 // Size: 0xf9
 function function_f68b9e51() {
@@ -187,6 +196,7 @@ function function_f68b9e51() {
 
 // Namespace namespace_6f13ba4a
 // Params 1, eflags: 0x0
+// namespace_6f13ba4a<file_0>::function_2ed72358
 // Checksum 0x1347cf00, Offset: 0x1050
 // Size: 0xca
 function function_2ed72358(var_8df23e0a) {
@@ -202,6 +212,7 @@ function function_2ed72358(var_8df23e0a) {
 
 // Namespace namespace_6f13ba4a
 // Params 1, eflags: 0x0
+// namespace_6f13ba4a<file_0>::function_c4de5eee
 // Checksum 0x4c5d85e7, Offset: 0x1128
 // Size: 0x6a
 function function_c4de5eee(a_ents) {
@@ -213,6 +224,7 @@ function function_c4de5eee(a_ents) {
 
 // Namespace namespace_6f13ba4a
 // Params 0, eflags: 0x0
+// namespace_6f13ba4a<file_0>::function_a0204230
 // Checksum 0x4a8a84f1, Offset: 0x11a0
 // Size: 0x62
 function function_a0204230() {
@@ -225,6 +237,7 @@ function function_a0204230() {
 
 // Namespace namespace_6f13ba4a
 // Params 12, eflags: 0x0
+// namespace_6f13ba4a<file_0>::function_daf71f6
 // Checksum 0x155b13af, Offset: 0x1210
 // Size: 0xa1
 function function_daf71f6(e_inflictor, e_attacker, n_damage, n_dflags, str_means_of_death, w_weapon, v_point, v_dir, str_hit_loc, var_269779a, psoffsettime, var_fe8d5ebb) {
@@ -239,6 +252,7 @@ function function_daf71f6(e_inflictor, e_attacker, n_damage, n_dflags, str_means
 
 // Namespace namespace_6f13ba4a
 // Params 4, eflags: 0x0
+// namespace_6f13ba4a<file_0>::function_451af01d
 // Checksum 0x72729022, Offset: 0x12c0
 // Size: 0x4a
 function function_451af01d(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
@@ -248,6 +262,7 @@ function function_451af01d(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 
 // Namespace namespace_6f13ba4a
 // Params 0, eflags: 0x0
+// namespace_6f13ba4a<file_0>::function_3d342090
 // Checksum 0xe9a5cf40, Offset: 0x1318
 // Size: 0x1a
 function function_3d342090() {

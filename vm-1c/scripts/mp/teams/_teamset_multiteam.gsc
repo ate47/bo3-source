@@ -7,6 +7,7 @@
 
 // Namespace namespace_8ff15f94
 // Params 0, eflags: 0x0
+// namespace_8ff15f94<file_0>::function_d290ebfa
 // Checksum 0x4a4cca84, Offset: 0x460
 // Size: 0xec
 function main() {
@@ -25,6 +26,7 @@ function main() {
 
 // Namespace namespace_8ff15f94
 // Params 0, eflags: 0x0
+// namespace_8ff15f94<file_0>::function_f7046c76
 // Checksum 0x1d58e302, Offset: 0x558
 // Size: 0x24
 function precache() {
@@ -34,6 +36,7 @@ function precache() {
 
 // Namespace namespace_8ff15f94
 // Params 1, eflags: 0x0
+// namespace_8ff15f94<file_0>::function_bd8c4fc
 // Checksum 0xc91b41af, Offset: 0x588
 // Size: 0x32a
 function init_allies(team) {
@@ -66,6 +69,7 @@ function init_allies(team) {
 
 // Namespace namespace_8ff15f94
 // Params 1, eflags: 0x0
+// namespace_8ff15f94<file_0>::function_dc85f705
 // Checksum 0x90a9fbf4, Offset: 0x8c0
 // Size: 0x32a
 function init_axis(team) {

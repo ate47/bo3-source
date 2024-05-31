@@ -1,0 +1,12 @@
+{
+    "vmtype": "none",
+    "name": "cpac_lot_02",
+    "igdtseqnum": 81,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Find",
+    "challengeDetails": "ACCOLADES_LOT_2",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_LOT_2_NAME",
+    "centerText": "6",
+    "challengeReference": "MISSION_LOTUS_COLLECTIBLE"
+}

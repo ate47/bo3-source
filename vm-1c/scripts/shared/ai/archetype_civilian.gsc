@@ -11,6 +11,7 @@
 
 // Namespace archetype_civilian
 // Params 0, eflags: 0x2
+// namespace_7ca3c39a<file_0>::function_d290ebfa
 // Checksum 0xc28bd094, Offset: 0x2a8
 // Size: 0x14
 function autoexec main() {
@@ -21,6 +22,7 @@ function autoexec main() {
 
 // Namespace archetypecivilian
 // Params 0, eflags: 0x1 linked
+// namespace_af0272d9<file_0>::function_a13b795c
 // Checksum 0x9a35315c, Offset: 0x2c8
 // Size: 0x1a4
 function registerbehaviorscriptfunctions() {
@@ -37,6 +39,7 @@ function registerbehaviorscriptfunctions() {
 
 // Namespace archetypecivilian
 // Params 0, eflags: 0x5 linked
+// namespace_af0272d9<file_0>::function_56bba783
 // Checksum 0x625ab7ad, Offset: 0x478
 // Size: 0x13c
 function private civilianblackboardinit() {
@@ -63,6 +66,7 @@ function private civilianblackboardinit() {
 
 // Namespace archetypecivilian
 // Params 0, eflags: 0x5 linked
+// namespace_af0272d9<file_0>::function_f0d98b47
 // Checksum 0x357563bd, Offset: 0x5c0
 // Size: 0xbc
 function private function_f0d98b47() {
@@ -75,6 +79,7 @@ function private function_f0d98b47() {
 
 // Namespace archetypecivilian
 // Params 0, eflags: 0x5 linked
+// namespace_af0272d9<file_0>::function_e0be6cd5
 // Checksum 0x59ad0bc9, Offset: 0x688
 // Size: 0x36
 function private function_e0be6cd5() {
@@ -86,6 +91,7 @@ function private function_e0be6cd5() {
 
 // Namespace archetypecivilian
 // Params 1, eflags: 0x5 linked
+// namespace_af0272d9<file_0>::function_a83cd44d
 // Checksum 0x81c13565, Offset: 0x6c8
 // Size: 0x34
 function private civilianonanimscriptedcallback(entity) {
@@ -95,6 +101,7 @@ function private civilianonanimscriptedcallback(entity) {
 
 // Namespace archetypecivilian
 // Params 2, eflags: 0x5 linked
+// namespace_af0272d9<file_0>::function_e3f72dd
 // Checksum 0xd7523d1d, Offset: 0x708
 // Size: 0x58
 function private civilianmoveactioninitialize(entity, asmstatename) {
@@ -105,6 +112,7 @@ function private civilianmoveactioninitialize(entity, asmstatename) {
 
 // Namespace archetypecivilian
 // Params 2, eflags: 0x5 linked
+// namespace_af0272d9<file_0>::function_2b54f9d9
 // Checksum 0x2dfdced8, Offset: 0x768
 // Size: 0x68
 function private civilianmoveactionfinalize(entity, asmstatename) {
@@ -116,6 +124,7 @@ function private civilianmoveactionfinalize(entity, asmstatename) {
 
 // Namespace archetypecivilian
 // Params 2, eflags: 0x5 linked
+// namespace_af0272d9<file_0>::function_d752eb0e
 // Checksum 0xcfa539e, Offset: 0x7d8
 // Size: 0xc8
 function private function_d752eb0e(entity, asmstatename) {
@@ -133,6 +142,7 @@ function private function_d752eb0e(entity, asmstatename) {
 
 // Namespace archetypecivilian
 // Params 1, eflags: 0x5 linked
+// namespace_af0272d9<file_0>::function_ba4429ed
 // Checksum 0xae944285, Offset: 0x8a8
 // Size: 0x34
 function private civilianispanicked(entity) {
@@ -141,6 +151,7 @@ function private civilianispanicked(entity) {
 
 // Namespace archetypecivilian
 // Params 1, eflags: 0x5 linked
+// namespace_af0272d9<file_0>::function_8e0e957
 // Checksum 0x58b3c3ee, Offset: 0x8e8
 // Size: 0x30
 function private function_8e0e957(entity) {

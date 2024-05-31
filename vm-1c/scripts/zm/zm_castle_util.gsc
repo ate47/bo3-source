@@ -9,6 +9,7 @@
 
 // Namespace namespace_744abc1c
 // Params 4, eflags: 0x1 linked
+// namespace_744abc1c<file_0>::function_a1b986ba
 // Checksum 0x69792900, Offset: 0x180
 // Size: 0x15c
 function create_unitrigger(str_hint, n_radius, var_616077d9, func_unitrigger_logic) {
@@ -36,6 +37,7 @@ function create_unitrigger(str_hint, n_radius, var_616077d9, func_unitrigger_log
 
 // Namespace namespace_744abc1c
 // Params 1, eflags: 0x1 linked
+// namespace_744abc1c<file_0>::function_fcc6aab1
 // Checksum 0x9c33223, Offset: 0x2e8
 // Size: 0x22
 function function_fcc6aab1(player) {
@@ -45,6 +47,7 @@ function function_fcc6aab1(player) {
 
 // Namespace namespace_744abc1c
 // Params 0, eflags: 0x1 linked
+// namespace_744abc1c<file_0>::function_77c4e424
 // Checksum 0x24b3b4a0, Offset: 0x318
 // Size: 0xbc
 function function_77c4e424() {
@@ -68,6 +71,7 @@ function function_77c4e424() {
 
 // Namespace namespace_744abc1c
 // Params 0, eflags: 0x1 linked
+// namespace_744abc1c<file_0>::function_fa7da172
 // Checksum 0xac5e3585, Offset: 0x3e0
 // Size: 0x1f4
 function function_fa7da172() {
@@ -97,6 +101,7 @@ function function_fa7da172() {
 
     // Namespace namespace_744abc1c
     // Params 4, eflags: 0x1 linked
+    // namespace_744abc1c<file_0>::function_8faf1d24
     // Checksum 0xc51fadf6, Offset: 0x5e0
     // Size: 0x108
     function function_8faf1d24(v_color, var_8882142e, n_scale, str_endon) {
@@ -127,6 +132,7 @@ function function_fa7da172() {
 
     // Namespace namespace_744abc1c
     // Params 5, eflags: 0x1 linked
+    // namespace_744abc1c<file_0>::function_72260d3a
     // Checksum 0xd3574411, Offset: 0x6f0
     // Size: 0x120
     function function_72260d3a(var_2fa24527, str_dvar, n_value, func, var_f0ee45c9) {

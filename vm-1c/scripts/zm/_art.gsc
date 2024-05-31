@@ -6,6 +6,7 @@
 
 // Namespace art
 // Params 0, eflags: 0x2
+// namespace_3fbd273c<file_0>::function_2dc19561
 // Checksum 0x4bed714a, Offset: 0x1d0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -14,6 +15,7 @@ function autoexec function_2dc19561() {
 
 // Namespace art
 // Params 0, eflags: 0x1 linked
+// namespace_3fbd273c<file_0>::function_8c87d8eb
 // Checksum 0x23317b66, Offset: 0x210
 // Size: 0x26c
 function __init__() {
@@ -52,6 +54,7 @@ function __init__() {
 
     // Namespace art
     // Params 2, eflags: 0x0
+    // namespace_3fbd273c<file_0>::function_3aef23e5
     // Checksum 0xfa9c27a1, Offset: 0x488
     // Size: 0x44
     function artfxprintln(file, string) {
@@ -65,6 +68,7 @@ function __init__() {
 
 // Namespace art
 // Params 2, eflags: 0x1 linked
+// namespace_3fbd273c<file_0>::function_393e0a6f
 // Checksum 0xc7a63654, Offset: 0x4d8
 // Size: 0xd4
 function strtok_loc(string, par1) {
@@ -86,6 +90,7 @@ function strtok_loc(string, par1) {
 
 // Namespace art
 // Params 0, eflags: 0x0
+// namespace_3fbd273c<file_0>::function_e61ed21d
 // Checksum 0xbba05d5d, Offset: 0x5b8
 // Size: 0x1b4
 function setfogsliders() {
@@ -111,6 +116,7 @@ function setfogsliders() {
 
     // Namespace art
     // Params 0, eflags: 0x1 linked
+    // namespace_3fbd273c<file_0>::function_2156b2de
     // Checksum 0xf1af3530, Offset: 0x778
     // Size: 0x960
     function tweakart() {
@@ -205,6 +211,7 @@ function setfogsliders() {
 
 // Namespace art
 // Params 0, eflags: 0x1 linked
+// namespace_3fbd273c<file_0>::function_bf2db7af
 // Checksum 0x106eb74a, Offset: 0x10e0
 // Size: 0x2d4
 function fovslidercheck() {
@@ -238,6 +245,7 @@ function fovslidercheck() {
 
     // Namespace art
     // Params 0, eflags: 0x1 linked
+    // namespace_3fbd273c<file_0>::function_bf41deac
     // Checksum 0x8d4d7218, Offset: 0x13c0
     // Size: 0x404
     function dumpsettings() {

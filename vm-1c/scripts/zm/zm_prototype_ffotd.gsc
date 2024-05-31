@@ -14,6 +14,7 @@
 
 // Namespace namespace_5150364b
 // Params 0, eflags: 0x1 linked
+// namespace_5150364b<file_0>::function_8a5375f3
 // Checksum 0x99ec1590, Offset: 0x1d0
 // Size: 0x4
 function main_start() {
@@ -22,6 +23,7 @@ function main_start() {
 
 // Namespace namespace_5150364b
 // Params 0, eflags: 0x1 linked
+// namespace_5150364b<file_0>::function_ead4e420
 // Checksum 0x99ec1590, Offset: 0x1e0
 // Size: 0x4
 function main_end() {

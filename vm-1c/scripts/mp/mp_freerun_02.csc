@@ -9,6 +9,7 @@
 
 // Namespace namespace_bbf5f0d7
 // Params 0, eflags: 0x0
+// namespace_bbf5f0d7<file_0>::function_d290ebfa
 // Checksum 0x2d395d7a, Offset: 0x140
 // Size: 0x8c
 function main() {

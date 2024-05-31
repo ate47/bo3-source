@@ -24,6 +24,7 @@
 
 // Namespace namespace_b61b7316
 // Params 0, eflags: 0x2
+// namespace_b61b7316<file_0>::function_c35e6aab
 // Checksum 0xdd362c52, Offset: 0x3a8
 // Size: 0x64
 function autoexec init() {

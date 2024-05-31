@@ -1,0 +1,12 @@
+{
+    "vmtype": "none",
+    "name": "cpac_zur_02",
+    "igdtseqnum": 184,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Find",
+    "challengeDetails": "ACCOLADES_ZUR_2",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_ZUR_2_NAME",
+    "centerText": "4",
+    "challengeReference": "MISSION_ZURICH_COLLECTIBLE"
+}

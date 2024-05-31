@@ -5,6 +5,7 @@
 
 // Namespace face
 // Params 1, eflags: 0x0
+// namespace_4bf1e5d2<file_0>::function_6b97f8bb
 // Checksum 0xad7967b3, Offset: 0x198
 // Size: 0x114
 function saygenericdialogue(typestring) {
@@ -39,6 +40,7 @@ function saygenericdialogue(typestring) {
 
 // Namespace face
 // Params 2, eflags: 0x1 linked
+// namespace_4bf1e5d2<file_0>::function_135967f5
 // Checksum 0x7d7ea58a, Offset: 0x2b8
 // Size: 0xb4
 function saygenericdialoguewithimportance(typestring, importance) {
@@ -57,6 +59,7 @@ function saygenericdialoguewithimportance(typestring, importance) {
 
 // Namespace face
 // Params 1, eflags: 0x0
+// namespace_4bf1e5d2<file_0>::function_f695fb2c
 // Checksum 0xae0f325c, Offset: 0x378
 // Size: 0x20
 function setidlefacedelayed(facialanimationarray) {
@@ -65,6 +68,7 @@ function setidlefacedelayed(facialanimationarray) {
 
 // Namespace face
 // Params 1, eflags: 0x0
+// namespace_4bf1e5d2<file_0>::function_ed73c86e
 // Checksum 0xeaf5d1ef, Offset: 0x3a0
 // Size: 0x44
 function setidleface(facialanimationarray) {
@@ -77,6 +81,7 @@ function setidleface(facialanimationarray) {
 
 // Namespace face
 // Params 7, eflags: 0x1 linked
+// namespace_4bf1e5d2<file_0>::function_eb490e88
 // Checksum 0xcda62950, Offset: 0x3f0
 // Size: 0x6c
 function sayspecificdialogue(facialanim, soundalias, importance, notifystring, waitornot, timetowait, toplayer) {
@@ -85,6 +90,7 @@ function sayspecificdialogue(facialanim, soundalias, importance, notifystring, w
 
 // Namespace face
 // Params 0, eflags: 0x1 linked
+// namespace_4bf1e5d2<file_0>::function_52969fe6
 // Checksum 0x1787f7b3, Offset: 0x468
 // Size: 0x4
 function playidleface() {
@@ -93,6 +99,7 @@ function playidleface() {
 
 // Namespace face
 // Params 7, eflags: 0x1 linked
+// namespace_4bf1e5d2<file_0>::function_a8624d04
 // Checksum 0x2c36f57b, Offset: 0x478
 // Size: 0x6a8
 function playfacethread(facialanim, str_script_alias, importance, notifystring, waitornot, timetowait, toplayer) {
@@ -206,6 +213,7 @@ function playfacethread(facialanim, str_script_alias, importance, notifystring, 
 
 // Namespace face
 // Params 3, eflags: 0x1 linked
+// namespace_4bf1e5d2<file_0>::function_53811a4b
 // Checksum 0x8d055a2a, Offset: 0xb28
 // Size: 0xaa
 function _play_sound_to_player_with_notify(soundalias, toplayer, uniquenotify) {
@@ -223,6 +231,7 @@ function _play_sound_to_player_with_notify(soundalias, toplayer, uniquenotify) {
 
 // Namespace face
 // Params 3, eflags: 0x5 linked
+// namespace_4bf1e5d2<file_0>::function_b5ed7955
 // Checksum 0x9ffd662d, Offset: 0xbe0
 // Size: 0x33e
 function private _temp_dialog(str_line, uniquenotify, b_missing_vo) {
@@ -258,6 +267,7 @@ function private _temp_dialog(str_line, uniquenotify, b_missing_vo) {
 
 // Namespace face
 // Params 3, eflags: 0x5 linked
+// namespace_4bf1e5d2<file_0>::function_4078d293
 // Checksum 0x9d9fde07, Offset: 0xf28
 // Size: 0x54
 function private _missing_dialog(str_script_alias, str_vox_file, uniquenotify) {
@@ -266,6 +276,7 @@ function private _missing_dialog(str_script_alias, str_vox_file, uniquenotify) {
 
 // Namespace face
 // Params 3, eflags: 0x0
+// namespace_4bf1e5d2<file_0>::function_28549aa
 // Checksum 0x4ff23ab5, Offset: 0xf88
 // Size: 0x5a
 function playface_waitfornotify(waitforstring, notifystring, killmestring) {
@@ -278,6 +289,7 @@ function playface_waitfornotify(waitforstring, notifystring, killmestring) {
 
 // Namespace face
 // Params 3, eflags: 0x0
+// namespace_4bf1e5d2<file_0>::function_c2d68d9e
 // Checksum 0xdc9ea251, Offset: 0xff0
 // Size: 0x56
 function playface_waitfortime(time, notifystring, killmestring) {

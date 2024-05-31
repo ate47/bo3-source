@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_eth_pro_01",
+    "type": "collectible",
+    "igdtseqnum": 45,
+    "uiMaterial": "t7_icon_menu_p7_nc_eth_pro_01",
+    "uiModel": "p7_nc_eth_pro_01",
+    "description": "COLLECTIBLE_P7_NC_ETH_PRO_01_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_ETH_PRO_01_LONG",
+    "audiolog_sound": "vox_safe_dud_rpg_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_DUD_RPG",
+    "displayNameShort": "COLLECTIBLE_P7_NC_ETH_PRO_01_SHORT",
+    "codexurl": "Collectables-DudRPG.htm",
+    "slotSize": 0
+}

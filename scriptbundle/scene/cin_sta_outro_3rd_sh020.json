@@ -1,0 +1,218 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_arena_landing",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "cameraswitcher": "c_sta_outro_3rd_sh020_cam",
+    "name": "cin_sta_outro_3rd_sh020",
+    "type": "scene",
+    "nextscenebundle": "cin_sta_outro_3rd_sh030",
+    "streamerhint": "cin_sta_outro_3rd",
+    "igdtseqnum": 88,
+    "objects": [
+        {
+            "model": "veh_t7_dlc3_mech_nikolai",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_sta_outro_3rd_sh020_mech",
+            "playerstance": "stand",
+            "name": "mech",
+            "type": "vehicle"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "model": "c_zom_dlc_waw_nikolai_fb",
+            "mainanim": "ch_sta_outro_3rd_sh020_nikolai_1",
+            "playerstance": "stand",
+            "name": "old nikolai",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "mainanim": "ch_sta_outro_3rd_sh020_nikolai_2",
+            "model": "c_zom_dlc3_nikolai_cin_fb",
+            "name": "nikolai",
+            "type": "actor"
+        },
+        {
+            "name": "vodka",
+            "type": "prop",
+            "vmtype": "server",
+            "model": "p7_zm_sta_bottle_vodka_01",
+            "playerstance": "stand",
+            "mainanim": "o_sta_outro_3rd_sh020_bottle",
+            "player": 1
+        },
+        {
+            "type": "prop",
+            "deletewhenfinished": 1,
+            "model": "wpn_t7_zm_sta_shotgun_spartan_prop",
+            "mainanim": "o_sta_outro_3rd_sh020_shotgun",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

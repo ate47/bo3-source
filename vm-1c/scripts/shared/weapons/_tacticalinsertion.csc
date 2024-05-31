@@ -8,6 +8,7 @@
 
 // Namespace tacticalinsertion
 // Params 0, eflags: 0x1 linked
+// namespace_b313ba29<file_0>::function_1463e4e5
 // Checksum 0x89ff87cc, Offset: 0x1f8
 // Size: 0x1f4
 function init_shared() {
@@ -41,6 +42,7 @@ function init_shared() {
 
 // Namespace tacticalinsertion
 // Params 7, eflags: 0x1 linked
+// namespace_b313ba29<file_0>::function_ab1f9ea1
 // Checksum 0xd1b26e43, Offset: 0x3f8
 // Size: 0x5c
 function spawned(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -52,6 +54,7 @@ function spawned(localclientnum, oldval, newval, bnewent, binitialsnap, fieldnam
 
 // Namespace tacticalinsertion
 // Params 1, eflags: 0x0
+// namespace_b313ba29<file_0>::function_74004e0b
 // Checksum 0x6c028cad, Offset: 0x460
 // Size: 0x11c
 function playflarefx(localclientnum) {
@@ -70,6 +73,7 @@ function playflarefx(localclientnum) {
 
 // Namespace tacticalinsertion
 // Params 2, eflags: 0x1 linked
+// namespace_b313ba29<file_0>::function_e52fa453
 // Checksum 0x346141d1, Offset: 0x588
 // Size: 0x3c
 function watchtacinsertshutdown(localclientnum, fxhandle) {
@@ -79,6 +83,7 @@ function watchtacinsertshutdown(localclientnum, fxhandle) {
 
 // Namespace tacticalinsertion
 // Params 1, eflags: 0x1 linked
+// namespace_b313ba29<file_0>::function_f67869b7
 // Checksum 0x63cef46e, Offset: 0x5d0
 // Size: 0x5c
 function stopflareloopwatcher(looporigin) {
@@ -93,6 +98,7 @@ function stopflareloopwatcher(looporigin) {
 
 // Namespace tacticalinsertion
 // Params 1, eflags: 0x1 linked
+// namespace_b313ba29<file_0>::function_22979bf
 // Checksum 0x2cf0f956, Offset: 0x638
 // Size: 0x64
 function checkforplayerswitch(localclientnum) {

@@ -1,0 +1,10 @@
+{
+    "vmtype": "server",
+    "name": "no_rating",
+    "type": "trainingsimrating",
+    "igdtseqnum": 2,
+    "ratingImage": "t7_cp_hud_trainingsim_norating_icon",
+    "xpAwarded": 0,
+    "requiredScore": 0,
+    "tokensAwarded": 0
+}

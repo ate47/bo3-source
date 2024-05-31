@@ -23,6 +23,7 @@
 
 // Namespace riotshield
 // Params 0, eflags: 0x2
+// namespace_fee7726c<file_0>::function_2dc19561
 // Checksum 0xa7a17f3b, Offset: 0x570
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -31,6 +32,7 @@ function autoexec function_2dc19561() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_8c87d8eb
 // Checksum 0x92aa122b, Offset: 0x5b8
 // Size: 0x30c
 function __init__() {
@@ -73,6 +75,7 @@ function __init__() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_5b6b9132
 // Checksum 0x99ec1590, Offset: 0x8d0
 // Size: 0x4
 function __main__() {
@@ -81,6 +84,7 @@ function __main__() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_fb4f96b5
 // Checksum 0x1b4aa19, Offset: 0x8e0
 // Size: 0x84
 function on_player_connect() {
@@ -95,6 +99,7 @@ function on_player_connect() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_eb52b46e
 // Checksum 0xac90d163, Offset: 0x970
 // Size: 0x48
 function player_init_shield_health() {
@@ -105,6 +110,7 @@ function player_init_shield_health() {
 
 // Namespace riotshield
 // Params 2, eflags: 0x0
+// namespace_fee7726c<file_0>::function_70c029fa
 // Checksum 0xb007e4a2, Offset: 0x9c0
 // Size: 0x54
 function player_set_shield_health(damage, max_damage) {
@@ -114,6 +120,7 @@ function player_set_shield_health(damage, max_damage) {
 
 // Namespace riotshield
 // Params 4, eflags: 0x0
+// namespace_fee7726c<file_0>::function_1636c976
 // Checksum 0xcaac1cbc, Offset: 0xa20
 // Size: 0x24
 function player_shield_absorb_damage(eattacker, idamage, shitloc, smeansofdeath) {
@@ -122,6 +129,7 @@ function player_shield_absorb_damage(eattacker, idamage, shitloc, smeansofdeath)
 
 // Namespace riotshield
 // Params 2, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_cdcbb4e3
 // Checksum 0x8317a53e, Offset: 0xa50
 // Size: 0x132
 function player_shield_facing_attacker(vdir, limit) {
@@ -138,6 +146,7 @@ function player_shield_facing_attacker(vdir, limit) {
 
 // Namespace riotshield
 // Params 10, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_459dbc64
 // Checksum 0x993695d2, Offset: 0xb90
 // Size: 0x17a
 function should_shield_absorb_damage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime) {
@@ -161,6 +170,7 @@ function should_shield_absorb_damage(einflictor, eattacker, idamage, idflags, sm
 
 // Namespace riotshield
 // Params 10, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_c1ca5f29
 // Checksum 0x68d3a09c, Offset: 0xd18
 // Size: 0x1b2
 function player_damage_override_callback(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime) {
@@ -184,6 +194,7 @@ function player_damage_override_callback(einflictor, eattacker, idamage, idflags
 
 // Namespace riotshield
 // Params 4, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_5ad54f92
 // Checksum 0xd69b6d95, Offset: 0xed8
 // Size: 0x21c
 function player_damage_shield(idamage, bheld, fromcode, smod) {
@@ -223,6 +234,7 @@ function player_damage_shield(idamage, bheld, fromcode, smod) {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_bf0aff60
 // Checksum 0xe9aebd7e, Offset: 0x1100
 // Size: 0x38
 function player_watch_weapon_change() {
@@ -234,6 +246,7 @@ function player_watch_weapon_change() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_49873617
 // Checksum 0xebec4a1e, Offset: 0x1140
 // Size: 0x48
 function player_watch_shield_melee() {
@@ -247,6 +260,7 @@ function player_watch_shield_melee() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_5344cc85
 // Checksum 0xa31d88d4, Offset: 0x1190
 // Size: 0x48
 function player_watch_shield_melee_power() {
@@ -260,6 +274,7 @@ function player_watch_shield_melee_power() {
 
 // Namespace riotshield
 // Params 3, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_9b9d9b74
 // Checksum 0xdfc280e0, Offset: 0x11e0
 // Size: 0x11c
 function riotshield_fling_zombie(player, fling_vec, index) {
@@ -284,6 +299,7 @@ function riotshield_fling_zombie(player, fling_vec, index) {
 
 // Namespace riotshield
 // Params 2, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_6db68516
 // Checksum 0x421716cb, Offset: 0x1308
 // Size: 0xcc
 function zombie_knockdown(player, gib) {
@@ -301,6 +317,7 @@ function zombie_knockdown(player, gib) {
 
 // Namespace riotshield
 // Params 2, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_550e076
 // Checksum 0xe7e3d2f3, Offset: 0x13e0
 // Size: 0x124
 function riotshield_knockdown_zombie(player, gib) {
@@ -321,6 +338,7 @@ function riotshield_knockdown_zombie(player, gib) {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_205278ec
 // Checksum 0xeb08484, Offset: 0x1510
 // Size: 0x5a8
 function riotshield_get_enemies_in_range() {
@@ -388,6 +406,7 @@ function riotshield_get_enemies_in_range() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_cea518ee
 // Checksum 0xcb5c162f, Offset: 0x1ac0
 // Size: 0x4c
 function function_cea518ee() {
@@ -401,6 +420,7 @@ function function_cea518ee() {
 
 // Namespace riotshield
 // Params 1, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_1018aec5
 // Checksum 0x69ca118b, Offset: 0x1b18
 // Size: 0x1f4
 function riotshield_melee(weapon) {
@@ -436,6 +456,7 @@ function riotshield_melee(weapon) {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_1d57117e
 // Checksum 0x405b2ff5, Offset: 0x1d18
 // Size: 0x1d4
 function updateriotshieldmodel() {
@@ -466,6 +487,7 @@ function updateriotshieldmodel() {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_5b189ba2
 // Checksum 0x679d9fcb, Offset: 0x1ef8
 // Size: 0x204
 function player_take_riotshield() {

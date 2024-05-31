@@ -1,0 +1,17 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_zur_nw_02",
+    "type": "collectible",
+    "igdtseqnum": 87,
+    "uiMaterial": "t7_icon_menu_p7_nc_zur_nw_02",
+    "uiModelWithStand": "p7_nc_zur_nw_02_with_stand",
+    "uiModel": "p7_nc_zur_nw_02",
+    "description": "COLLECTIBLE_P7_NC_ZUR_NW_02_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_ZUR_NW_02_LONG",
+    "audiolog_sound": "vox_safe_robot_hand_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_DEFECTIVE_ROBOT_HAND",
+    "displayNameShort": "COLLECTIBLE_P7_NC_ZUR_NW_02_SHORT",
+    "codexurl": "Collectables-DefectiveRobotHand.htm",
+    "slotSize": 0
+}

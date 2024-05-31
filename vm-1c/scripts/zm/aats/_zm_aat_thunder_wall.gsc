@@ -15,6 +15,7 @@
 
 // Namespace namespace_2ffd891d
 // Params 0, eflags: 0x2
+// namespace_2ffd891d<file_0>::function_2dc19561
 // Checksum 0xe4285d40, Offset: 0x2b8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -23,6 +24,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_2ffd891d
 // Params 0, eflags: 0x1 linked
+// namespace_2ffd891d<file_0>::function_8c87d8eb
 // Checksum 0x1d65d2ca, Offset: 0x2f8
 // Size: 0x86
 function __init__() {
@@ -35,6 +37,7 @@ function __init__() {
 
 // Namespace namespace_2ffd891d
 // Params 4, eflags: 0x1 linked
+// namespace_2ffd891d<file_0>::function_3c61bfc2
 // Checksum 0x1c0f7f83, Offset: 0x388
 // Size: 0x3c
 function result(death, attacker, mod, weapon) {
@@ -43,6 +46,7 @@ function result(death, attacker, mod, weapon) {
 
 // Namespace namespace_2ffd891d
 // Params 1, eflags: 0x1 linked
+// namespace_2ffd891d<file_0>::function_c2f2c617
 // Checksum 0xfedd4197, Offset: 0x3d0
 // Size: 0x536
 function function_c2f2c617(attacker) {
@@ -104,6 +108,7 @@ function function_c2f2c617(attacker) {
 
 // Namespace namespace_2ffd891d
 // Params 2, eflags: 0x1 linked
+// namespace_2ffd891d<file_0>::function_e0860fc8
 // Checksum 0x81ea2a9d, Offset: 0x910
 // Size: 0x4c
 function function_e0860fc8(v_blast_origin, var_384d5a7e) {

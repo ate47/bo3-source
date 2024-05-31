@@ -7,6 +7,7 @@
 
 // Namespace hud
 // Params 0, eflags: 0x2
+// namespace_724a4794<file_0>::function_2dc19561
 // Checksum 0xacba1b15, Offset: 0x128
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,6 +16,7 @@ function autoexec function_2dc19561() {
 
 // Namespace hud
 // Params 0, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_8c87d8eb
 // Checksum 0x67b6b5b9, Offset: 0x168
 // Size: 0x24
 function __init__() {
@@ -23,6 +25,7 @@ function __init__() {
 
 // Namespace hud
 // Params 0, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_c35e6aab
 // Checksum 0xcea92629, Offset: 0x198
 // Size: 0x384
 function init() {
@@ -87,6 +90,7 @@ function init() {
 
 // Namespace hud
 // Params 0, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_1ad5c13d
 // Checksum 0x1d41364, Offset: 0x528
 // Size: 0x44
 function function_1ad5c13d() {
@@ -98,6 +102,7 @@ function function_1ad5c13d() {
 
 // Namespace hud
 // Params 1, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_5e2578bc
 // Checksum 0x225808c6, Offset: 0x578
 // Size: 0x174
 function function_5e2578bc(player) {
@@ -130,6 +135,7 @@ function function_5e2578bc(player) {
 
 // Namespace hud
 // Params 5, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_d53889e2
 // Checksum 0x2d9af48c, Offset: 0x6f8
 // Size: 0x74
 function fade_to_black_for_x_sec(startwait, blackscreenwait, fadeintime, fadeouttime, shadername) {
@@ -142,6 +148,7 @@ function fade_to_black_for_x_sec(startwait, blackscreenwait, fadeintime, fadeout
 
 // Namespace hud
 // Params 1, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_593c2af4
 // Checksum 0xc469113f, Offset: 0x778
 // Size: 0x24
 function screen_fade_in(fadeintime) {

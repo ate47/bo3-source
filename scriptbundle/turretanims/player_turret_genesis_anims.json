@@ -1,0 +1,12 @@
+{
+    "vmtype": "none",
+    "configstringfiletype": "scriptbundle",
+    "aimpitchangled": 46,
+    "aimpitchangleu": 40,
+    "name": "player_turret_genesis_anims",
+    "type": "turretanims",
+    "centerstraightanim": "pb_zm_gen_tur_aim_f_level",
+    "igdtseqnum": 17,
+    "centerdownanim": "pb_zm_gen_tur_aim_f_46d",
+    "centerupanim": "pb_zm_gen_tur_aim_f_40u"
+}

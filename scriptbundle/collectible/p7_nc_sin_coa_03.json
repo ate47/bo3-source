@@ -1,0 +1,17 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_sin_coa_03",
+    "type": "collectible",
+    "igdtseqnum": 64,
+    "uiMaterial": "t7_icon_menu_p7_nc_sin_coa_03",
+    "uiModelWithStand": "p7_nc_sin_coa_03_with_stand",
+    "uiModel": "p7_nc_sin_coa_03",
+    "description": "COLLECTIBLE_P7_NC_SIN_COA_03_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_SIN_COA_03_LONG",
+    "audiolog_sound": "vox_safe_marketing_material_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_OLD_MARKETING_MATERIAL",
+    "displayNameShort": "COLLECTIBLE_P7_NC_SIN_COA_03_SHORT",
+    "codexurl": "Collectables-CoalescenceMarketingMaterial.htm",
+    "slotSize": 0
+}

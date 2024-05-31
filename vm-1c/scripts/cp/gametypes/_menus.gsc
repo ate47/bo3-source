@@ -10,6 +10,7 @@
 
 // Namespace menus
 // Params 0, eflags: 0x2
+// namespace_c0a9fbab<file_0>::function_2dc19561
 // Checksum 0x37e3e4c4, Offset: 0x410
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,6 +19,7 @@ function autoexec function_2dc19561() {
 
 // Namespace menus
 // Params 0, eflags: 0x1 linked
+// namespace_c0a9fbab<file_0>::function_8c87d8eb
 // Checksum 0x49684029, Offset: 0x450
 // Size: 0x44
 function __init__() {
@@ -27,6 +29,7 @@ function __init__() {
 
 // Namespace menus
 // Params 0, eflags: 0x1 linked
+// namespace_c0a9fbab<file_0>::function_c35e6aab
 // Checksum 0xbbb85017, Offset: 0x4a0
 // Size: 0x130
 function init() {
@@ -45,6 +48,7 @@ function init() {
 
 // Namespace menus
 // Params 0, eflags: 0x1 linked
+// namespace_c0a9fbab<file_0>::function_fb4f96b5
 // Checksum 0xa40a712, Offset: 0x5d8
 // Size: 0x3c
 function on_player_connect() {
@@ -54,6 +58,7 @@ function on_player_connect() {
 
 // Namespace menus
 // Params 1, eflags: 0x1 linked
+// namespace_c0a9fbab<file_0>::function_521a4b1f
 // Checksum 0xbe16ea21, Offset: 0x620
 // Size: 0xc4
 function function_521a4b1f(player) {
@@ -71,6 +76,7 @@ function function_521a4b1f(player) {
 
 // Namespace menus
 // Params 0, eflags: 0x1 linked
+// namespace_c0a9fbab<file_0>::function_f44a9d12
 // Checksum 0x52465265, Offset: 0x6f0
 // Size: 0x928
 function on_menu_response() {

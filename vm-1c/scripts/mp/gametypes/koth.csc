@@ -7,6 +7,7 @@
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_d290ebfa
 // Checksum 0x334ab77d, Offset: 0x2f0
 // Size: 0x2ac
 function main() {
@@ -38,6 +39,7 @@ function main() {
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_ae1d93ee
 // Checksum 0xab465e27, Offset: 0x5a8
 // Size: 0x288
 function get_shoutcaster_fx(local_client_num) {
@@ -65,6 +67,7 @@ function get_shoutcaster_fx(local_client_num) {
 
 // Namespace koth
 // Params 3, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_227bf24e
 // Checksum 0xf2b196b7, Offset: 0x838
 // Size: 0xaa
 function get_fx_state(local_client_num, state, is_shoutcaster) {
@@ -89,6 +92,7 @@ function get_fx_state(local_client_num, state, is_shoutcaster) {
 
 // Namespace koth
 // Params 3, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_86b0e854
 // Checksum 0xf87151c9, Offset: 0x8f0
 // Size: 0x2c
 function get_fx(fx_name, fx_state, effects) {
@@ -97,6 +101,7 @@ function get_fx(fx_name, fx_state, effects) {
 
 // Namespace koth
 // Params 3, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_43cdb05b
 // Checksum 0x2aa1351, Offset: 0x928
 // Size: 0x3c4
 function setup_hardpoint_fx(local_client_num, zone_index, state) {
@@ -147,6 +152,7 @@ function setup_hardpoint_fx(local_client_num, zone_index, state) {
 
 // Namespace koth
 // Params 7, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_27a48dc4
 // Checksum 0xc67818f0, Offset: 0xcf8
 // Size: 0x1fc
 function hardpoint(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -166,6 +172,7 @@ function hardpoint(localclientnum, oldval, newval, bnewent, binitialsnap, fieldn
 
 // Namespace koth
 // Params 7, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_8ec9593e
 // Checksum 0xe3518dfb, Offset: 0xf00
 // Size: 0x94
 function hardpoint_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -177,6 +184,7 @@ function hardpoint_state(localclientnum, oldval, newval, bnewent, binitialsnap, 
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_f9cdfde1
 // Checksum 0x7b9c241, Offset: 0xfa0
 // Size: 0x6c
 function watch_for_team_change(localclientnum) {

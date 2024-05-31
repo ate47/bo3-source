@@ -14,6 +14,7 @@
 
 // Namespace namespace_fec23565
 // Params 0, eflags: 0x2
+// namespace_fec23565<file_0>::function_2dc19561
 // Checksum 0xa0b58439, Offset: 0x1e8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -22,6 +23,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_fec23565
 // Params 0, eflags: 0x1 linked
+// namespace_fec23565<file_0>::function_8c87d8eb
 // Checksum 0x6faa7cb9, Offset: 0x228
 // Size: 0x6c
 function __init__() {
@@ -34,6 +36,7 @@ function __init__() {
 
 // Namespace namespace_fec23565
 // Params 0, eflags: 0x1 linked
+// namespace_fec23565<file_0>::function_279e4e97
 // Checksum 0x38795b6c, Offset: 0x2a0
 // Size: 0x50
 function event() {
@@ -46,6 +49,7 @@ function event() {
 
 // Namespace namespace_fec23565
 // Params 0, eflags: 0x1 linked
+// namespace_fec23565<file_0>::function_68917156
 // Checksum 0x43beadfe, Offset: 0x2f8
 // Size: 0x5c
 function givestartloadout() {
@@ -61,6 +65,7 @@ function givestartloadout() {
 
 // Namespace namespace_fec23565
 // Params 1, eflags: 0x1 linked
+// namespace_fec23565<file_0>::function_f1adaf91
 // Checksum 0x9c90067d, Offset: 0x360
 // Size: 0x35c
 function function_f1adaf91(player) {

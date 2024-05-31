@@ -6,6 +6,7 @@
 
 // Namespace zm_equipment
 // Params 0, eflags: 0x2
+// namespace_3b5de3f<file_0>::function_2dc19561
 // Checksum 0x314f8b, Offset: 0x108
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -14,6 +15,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_equipment
 // Params 0, eflags: 0x1 linked
+// namespace_3b5de3f<file_0>::function_8c87d8eb
 // Checksum 0x33123316, Offset: 0x148
 // Size: 0x7c
 function __init__() {
@@ -26,6 +28,7 @@ function __init__() {
 
 // Namespace zm_equipment
 // Params 2, eflags: 0x0
+// namespace_3b5de3f<file_0>::function_f1ddfcd6
 // Checksum 0xd8d48200, Offset: 0x1d0
 // Size: 0x26
 function add_equip_activated_callback_override(model, func) {
@@ -34,6 +37,7 @@ function add_equip_activated_callback_override(model, func) {
 
 // Namespace zm_equipment
 // Params 7, eflags: 0x1 linked
+// namespace_3b5de3f<file_0>::function_862027bb
 // Checksum 0x3110322e, Offset: 0x200
 // Size: 0x13a
 function equipment_activated_clientfield_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -54,6 +58,7 @@ function equipment_activated_clientfield_cb(localclientnum, oldval, newval, bnew
 
 // Namespace zm_equipment
 // Params 4, eflags: 0x0
+// namespace_3b5de3f<file_0>::function_95d83389
 // Checksum 0x7593f261, Offset: 0x348
 // Size: 0x2a6
 function play_fx_for_all_clients(fx, tag, storehandles, forward) {
@@ -102,6 +107,7 @@ function play_fx_for_all_clients(fx, tag, storehandles, forward) {
 
 // Namespace zm_equipment
 // Params 1, eflags: 0x0
+// namespace_3b5de3f<file_0>::function_73850fc
 // Checksum 0x80a7d5fa, Offset: 0x5f8
 // Size: 0x36
 function is_included(equipment) {
@@ -113,6 +119,7 @@ function is_included(equipment) {
 
 // Namespace zm_equipment
 // Params 1, eflags: 0x1 linked
+// namespace_3b5de3f<file_0>::function_4f45a367
 // Checksum 0x5e180a1f, Offset: 0x638
 // Size: 0x5a
 function include(equipment_name) {

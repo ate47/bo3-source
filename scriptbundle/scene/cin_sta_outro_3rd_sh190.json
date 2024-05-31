@@ -1,0 +1,225 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_arena_landing",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "cameraswitcher": "c_sta_outro_3rd_sh190_camera",
+    "name": "cin_sta_outro_3rd_sh190",
+    "type": "scene",
+    "nextscenebundle": "cin_sta_outro_3rd_sh200",
+    "igdtseqnum": 109,
+    "objects": [
+        {
+            "deletewhenfinished": 1,
+            "model": "c_zom_dlc3_dempsey_cin_fb",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_sta_outro_3rd_sh190_dempsey",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "name": "dempsey",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "model": "c_zom_dlc3_takeo_cin_fb",
+            "mainanim": "ch_sta_outro_3rd_sh190_takeo",
+            "deletewhenfinished": 1,
+            "playerstance": "stand",
+            "name": "takeo",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "mainanim": "ch_sta_outro_3rd_sh190_nikolai",
+            "deletewhenfinished": 1,
+            "model": "c_zom_dlc3_nikolai_cin_fb",
+            "name": "nikolai",
+            "type": "actor"
+        },
+        {
+            "name": "richtofen",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "c_zom_dlc_richtofen_cin_fb",
+            "playerstance": "stand",
+            "deletewhenfinished": 1,
+            "mainanim": "ch_sta_outro_3rd_sh190_richtofen",
+            "removeweapon": 1,
+            "player": 1
+        },
+        {
+            "name": "key",
+            "type": "prop",
+            "deletewhenfinished": 1,
+            "model": "p7_zm_ctl_summoning_key_small",
+            "mainanim": "o_sta_outro_3rd_sh190_key",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

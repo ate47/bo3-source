@@ -10,6 +10,7 @@
 
 // Namespace scrambler
 // Params 0, eflags: 0x0
+// namespace_ba0d5c0a<file_0>::function_1463e4e5
 // Checksum 0xd02ba2a9, Offset: 0x238
 // Size: 0xbc
 function init_shared() {
@@ -24,6 +25,7 @@ function init_shared() {
 
 // Namespace scrambler
 // Params 0, eflags: 0x0
+// namespace_ba0d5c0a<file_0>::function_d01280e2
 // Checksum 0xd0a3e2ae, Offset: 0x300
 // Size: 0xc0
 function function_d01280e2() {
@@ -38,6 +40,7 @@ function function_d01280e2() {
 
 // Namespace scrambler
 // Params 2, eflags: 0x0
+// namespace_ba0d5c0a<file_0>::function_fd7f52d0
 // Checksum 0x9768aff, Offset: 0x3c8
 // Size: 0x122
 function function_fd7f52d0(watcher, player) {
@@ -58,6 +61,7 @@ function function_fd7f52d0(watcher, player) {
 
 // Namespace scrambler
 // Params 3, eflags: 0x0
+// namespace_ba0d5c0a<file_0>::function_5bf68b8a
 // Checksum 0x51214db5, Offset: 0x4f8
 // Size: 0xd4
 function function_5bf68b8a(attacker, weapon, target) {
@@ -73,6 +77,7 @@ function function_5bf68b8a(attacker, weapon, target) {
 
 // Namespace scrambler
 // Params 1, eflags: 0x0
+// namespace_ba0d5c0a<file_0>::function_e42ff528
 // Checksum 0x9501b7bf, Offset: 0x5d8
 // Size: 0x5a
 function watchshutdown(player) {
@@ -85,6 +90,7 @@ function watchshutdown(player) {
 
 // Namespace scrambler
 // Params 0, eflags: 0x0
+// namespace_ba0d5c0a<file_0>::function_9036a554
 // Checksum 0xe212386, Offset: 0x640
 // Size: 0x1c
 function destroyent() {
@@ -93,6 +99,7 @@ function destroyent() {
 
 // Namespace scrambler
 // Params 1, eflags: 0x0
+// namespace_ba0d5c0a<file_0>::function_b8f94770
 // Checksum 0x30e8783d, Offset: 0x668
 // Size: 0x388
 function function_b8f94770(watcher) {
@@ -143,6 +150,7 @@ function function_b8f94770(watcher) {
 
 // Namespace scrambler
 // Params 2, eflags: 0x0
+// namespace_ba0d5c0a<file_0>::function_a1969e7f
 // Checksum 0x5fc454e0, Offset: 0x9f8
 // Size: 0x84
 function function_a1969e7f(var_4bab063, var_92b34128) {
@@ -160,6 +168,7 @@ function function_a1969e7f(var_4bab063, var_92b34128) {
 
 // Namespace scrambler
 // Params 0, eflags: 0x0
+// namespace_ba0d5c0a<file_0>::function_ec2ed838
 // Checksum 0xac9554b3, Offset: 0xa88
 // Size: 0x1a2
 function function_ec2ed838() {

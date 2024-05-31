@@ -18,6 +18,7 @@
 
 // Namespace namespace_df27fee4
 // Params 0, eflags: 0x2
+// namespace_df27fee4<file_0>::function_2dc19561
 // Checksum 0x3caff76, Offset: 0x268
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -26,6 +27,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_df27fee4
 // Params 0, eflags: 0x1 linked
+// namespace_df27fee4<file_0>::function_8c87d8eb
 // Checksum 0x99ec1590, Offset: 0x2b0
 // Size: 0x4
 function __init__() {
@@ -34,6 +36,7 @@ function __init__() {
 
 // Namespace namespace_df27fee4
 // Params 0, eflags: 0x1 linked
+// namespace_df27fee4<file_0>::function_5b6b9132
 // Checksum 0xc4f59970, Offset: 0x2c0
 // Size: 0x28
 function __main__() {

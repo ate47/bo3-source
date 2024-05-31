@@ -26,6 +26,7 @@
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_d290ebfa
 // Checksum 0x1a8f2329, Offset: 0xa00
 // Size: 0x512
 function main() {
@@ -81,6 +82,7 @@ function main() {
 
 // Namespace koth
 // Params 3, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_cd54eaf0
 // Checksum 0x75d97da5, Offset: 0xf20
 // Size: 0xdc
 function updateobjectivehintmessages(defenderteam, defendmessage, attackmessage) {
@@ -95,6 +97,7 @@ function updateobjectivehintmessages(defenderteam, defendmessage, attackmessage)
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_4e1153b9
 // Checksum 0x6e78dcd5, Offset: 0x1008
 // Size: 0x9c
 function updateobjectivehintmessage(message) {
@@ -105,6 +108,7 @@ function updateobjectivehintmessage(message) {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_712cf456
 // Checksum 0x39ce228e, Offset: 0x10b0
 // Size: 0x114
 function getrespawndelay() {
@@ -133,6 +137,7 @@ function getrespawndelay() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_34685338
 // Checksum 0x6a808d44, Offset: 0x11d0
 // Size: 0x4cc
 function onstartgametype() {
@@ -194,6 +199,7 @@ function onstartgametype() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_18d82beb
 // Checksum 0xf7fe91da, Offset: 0x16a8
 // Size: 0x30
 function pause_time() {
@@ -205,6 +211,7 @@ function pause_time() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_1fe01f98
 // Checksum 0x5ba59b3c, Offset: 0x16e0
 // Size: 0x38
 function resume_time() {
@@ -216,6 +223,7 @@ function resume_time() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_843e8b8a
 // Checksum 0xf62766a9, Offset: 0x1720
 // Size: 0x44
 function updategametypedvars() {
@@ -225,6 +233,7 @@ function updategametypedvars() {
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_50454d3e
 // Checksum 0xfebeb18f, Offset: 0x1770
 // Size: 0x124
 function spawn_first_zone(delay) {
@@ -244,6 +253,7 @@ function spawn_first_zone(delay) {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_cb8d3fab
 // Checksum 0xdc3c2e11, Offset: 0x18a0
 // Size: 0x14c
 function spawn_next_zone() {
@@ -264,6 +274,7 @@ function spawn_next_zone() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_bbeb3fa6
 // Checksum 0x23f72b25, Offset: 0x19f8
 // Size: 0xa2
 function getnumtouching() {
@@ -276,6 +287,7 @@ function getnumtouching() {
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_7646f6cb
 // Checksum 0x403ce815, Offset: 0x1aa8
 // Size: 0x74
 function togglezoneeffects(enabled) {
@@ -289,6 +301,7 @@ function togglezoneeffects(enabled) {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_bbe520b5
 // Checksum 0xc6b4ea92, Offset: 0x1b28
 // Size: 0x480
 function kothcaptureloop() {
@@ -336,6 +349,7 @@ function kothcaptureloop() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_8849b9da
 // Checksum 0xa7c540e8, Offset: 0x1fb0
 // Size: 0x6a8
 function kothmainloop() {
@@ -418,6 +432,7 @@ function kothmainloop() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_1813cd2
 // Checksum 0x9db0c64a, Offset: 0x2660
 // Size: 0x2c
 function hidetimerdisplayongameend() {
@@ -427,6 +442,7 @@ function hidetimerdisplayongameend() {
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_619135a0
 // Checksum 0x5ce0ff71, Offset: 0x2698
 // Size: 0xa6
 function forcespawnteam(team) {
@@ -445,6 +461,7 @@ function forcespawnteam(team) {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_23d570dc
 // Checksum 0x75dbd846, Offset: 0x2748
 // Size: 0xec
 function updateteamclientfield() {
@@ -466,6 +483,7 @@ function updateteamclientfield() {
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_cfce9b82
 // Checksum 0x458d3b58, Offset: 0x2840
 // Size: 0xac
 function onbeginuse(player) {
@@ -479,6 +497,7 @@ function onbeginuse(player) {
 
 // Namespace koth
 // Params 3, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_a454a59a
 // Checksum 0x55e6292d, Offset: 0x28f8
 // Size: 0x2c
 function onenduse(team, player, success) {
@@ -487,6 +506,7 @@ function onenduse(team, player, success) {
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_fecd2202
 // Checksum 0x4c69ca03, Offset: 0x2930
 // Size: 0x4ac
 function onzonecapture(player) {
@@ -548,6 +568,7 @@ function onzonecapture(player) {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_218a4027
 // Checksum 0x99ec1590, Offset: 0x2de8
 // Size: 0x4
 function track_capture_time() {
@@ -556,6 +577,7 @@ function track_capture_time() {
 
 // Namespace koth
 // Params 5, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_39bb28eb
 // Checksum 0x1e384f58, Offset: 0x2df8
 // Size: 0x2a6
 function give_capture_credit(touchlist, string, capturetime, capture_team, lastcaptureteam) {
@@ -592,6 +614,7 @@ function give_capture_credit(touchlist, string, capturetime, capture_team, lastc
 
 // Namespace koth
 // Params 2, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_fd286440
 // Checksum 0xa0b33f20, Offset: 0x30a8
 // Size: 0xa2
 function give_held_credit(touchlist, team) {
@@ -605,6 +628,7 @@ function give_held_credit(touchlist, team) {
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_b016b8f2
 // Checksum 0x95607239, Offset: 0x3158
 // Size: 0x27c
 function function_b016b8f2(player) {
@@ -642,6 +666,7 @@ function function_b016b8f2(player) {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_1aadb4b5
 // Checksum 0x1729b5cc, Offset: 0x33e0
 // Size: 0xac
 function onzoneunoccupied() {
@@ -656,6 +681,7 @@ function onzoneunoccupied() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_cbdb006f
 // Checksum 0xfd977ae3, Offset: 0x3498
 // Size: 0x152
 function onzonecontested() {
@@ -675,6 +701,7 @@ function onzonecontested() {
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_8fb70c34
 // Checksum 0x451fe5ae, Offset: 0x35f8
 // Size: 0xb4
 function onzoneuncontested(lastclaimteam) {
@@ -688,6 +715,7 @@ function onzoneuncontested(lastclaimteam) {
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_5c502929
 // Checksum 0x5a1579ce, Offset: 0x36b8
 // Size: 0x152
 function movezoneaftertime(time) {
@@ -709,6 +737,7 @@ function movezoneaftertime(time) {
 
 // Namespace koth
 // Params 2, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_3f43857b
 // Checksum 0x7293f491, Offset: 0x3818
 // Size: 0x226
 function awardcapturepoints(team, lastcaptureteam) {
@@ -745,6 +774,7 @@ function awardcapturepoints(team, lastcaptureteam) {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_e110010a
 // Checksum 0x229817d7, Offset: 0x3a48
 // Size: 0xe
 function koth_playerspawnedcb() {
@@ -753,6 +783,7 @@ function koth_playerspawnedcb() {
 
 // Namespace koth
 // Params 2, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_8e798b88
 // Checksum 0xc24eaa0, Offset: 0x3a60
 // Size: 0x10e
 function comparezoneindexes(zone_a, zone_b) {
@@ -777,6 +808,7 @@ function comparezoneindexes(zone_a, zone_b) {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_cf0e4e8
 // Checksum 0x7e268296, Offset: 0x3b78
 // Size: 0x132
 function getzonearray() {
@@ -801,6 +833,7 @@ function getzonearray() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_111ae6ad
 // Checksum 0xafa7d42, Offset: 0x3cb8
 // Size: 0x4e8
 function setupzones() {
@@ -870,6 +903,7 @@ function setupzones() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_8943f0cd
 // Checksum 0x2dd0a9, Offset: 0x41a8
 // Size: 0x1e8
 function setupzoneexclusions() {
@@ -897,6 +931,7 @@ function setupzoneexclusions() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_daeec435
 // Checksum 0xf4d04889, Offset: 0x4398
 // Size: 0x2a4
 function function_daeec435() {
@@ -936,6 +971,7 @@ function function_daeec435() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_72fa281d
 // Checksum 0xcb81a096, Offset: 0x4648
 // Size: 0x80
 function getfirstzone() {
@@ -950,6 +986,7 @@ function getfirstzone() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_d63c3536
 // Checksum 0x14f4bfeb, Offset: 0x46d0
 // Size: 0x70
 function getnextzone() {
@@ -963,6 +1000,7 @@ function getnextzone() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_98050513
 // Checksum 0xe92faf7a, Offset: 0x4748
 // Size: 0x6c
 function pickrandomzonetospawn() {
@@ -975,6 +1013,7 @@ function pickrandomzonetospawn() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_74d9acbd
 // Checksum 0x1f80713e, Offset: 0x47c0
 // Size: 0x146
 function shufflezones() {
@@ -1002,6 +1041,7 @@ function shufflezones() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_3b8c8963
 // Checksum 0xa047282e, Offset: 0x4910
 // Size: 0x88
 function getnextzonefromqueue() {
@@ -1016,6 +1056,7 @@ function getnextzonefromqueue() {
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_6ac858b3
 // Checksum 0xaf9ecfa6, Offset: 0x49a0
 // Size: 0xa8
 function function_6ac858b3(num) {
@@ -1030,6 +1071,7 @@ function function_6ac858b3(num) {
 
 // Namespace koth
 // Params 2, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_d35e7a8
 // Checksum 0x554a1c5, Offset: 0x4a50
 // Size: 0x19a
 function function_d35e7a8(avgpos, origin) {
@@ -1050,6 +1092,7 @@ function function_d35e7a8(avgpos, origin) {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_24389478
 // Checksum 0x7294687f, Offset: 0x4bf8
 // Size: 0x43c
 function function_24389478() {
@@ -1106,6 +1149,7 @@ function function_24389478() {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_e4e885e6
 // Checksum 0x3a1ebddd, Offset: 0x5040
 // Size: 0x1c
 function onroundswitch() {
@@ -1114,6 +1158,7 @@ function onroundswitch() {
 
 // Namespace koth
 // Params 9, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_c2658b46
 // Checksum 0x8162b882, Offset: 0x5068
 // Size: 0x714
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -1212,6 +1257,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_700b26c9
 // Checksum 0x4345bde2, Offset: 0x5788
 // Size: 0x6a
 function function_700b26c9(var_fb86e8bc) {
@@ -1225,6 +1271,7 @@ function function_700b26c9(var_fb86e8bc) {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_316dbc8
 // Checksum 0xfc535923, Offset: 0x5800
 // Size: 0x170
 function killwhilecontesting() {
@@ -1252,6 +1299,7 @@ function killwhilecontesting() {
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_257d1c47
 // Checksum 0x1ee6e1c7, Offset: 0x5978
 // Size: 0x66
 function onendgame(winningteam) {
@@ -1262,6 +1310,7 @@ function onendgame(winningteam) {
 
 // Namespace koth
 // Params 0, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_e74e7c6d
 // Checksum 0xff95f58d, Offset: 0x59e8
 // Size: 0x7c
 function createzonespawninfluencer() {
@@ -1272,6 +1321,7 @@ function createzonespawninfluencer() {
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_14d9f52e
 // Checksum 0xf1de8493, Offset: 0x5a70
 // Size: 0x114
 function updatecapsperminute(lastownerteam) {
@@ -1295,6 +1345,7 @@ function updatecapsperminute(lastownerteam) {
 
 // Namespace koth
 // Params 1, eflags: 0x0
+// namespace_8ba31dd7<file_0>::function_688c00fa
 // Checksum 0x210a14c, Offset: 0x5b90
 // Size: 0x3c
 function isscoreboosting(player) {

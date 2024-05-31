@@ -5,6 +5,7 @@
 
 // Namespace mannequininterface
 // Params 0, eflags: 0x1 linked
+// namespace_9b9dedd0<file_0>::function_44b98e84
 // Checksum 0xe164e6d, Offset: 0x100
 // Size: 0xac
 function registermannequininterfaceattributes() {

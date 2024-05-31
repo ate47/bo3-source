@@ -8,6 +8,7 @@
 
 // Namespace airsupport
 // Params 4, eflags: 0x0
+// namespace_56e5590c<file_0>::function_e1c00d05
 // Checksum 0xc94e3add, Offset: 0x230
 // Size: 0x8c
 function planesounds(localclientnum, spawnsound, flybysound, flybysoundloop) {
@@ -21,6 +22,7 @@ function planesounds(localclientnum, spawnsound, flybysound, flybysoundloop) {
 
 // Namespace airsupport
 // Params 1, eflags: 0x1 linked
+// namespace_56e5590c<file_0>::function_35b04da
 // Checksum 0x6a7b11fd, Offset: 0x2c8
 // Size: 0x24
 function getplanemodel(teamfaction) {
@@ -30,6 +32,7 @@ function getplanemodel(teamfaction) {
 
 // Namespace airsupport
 // Params 5, eflags: 0x0
+// namespace_56e5590c<file_0>::function_f1803b7a
 // Checksum 0x6f0d486e, Offset: 0x2f8
 // Size: 0x54
 function planeturnright(localclientnum, plane, yaw, halflife, starttime) {
@@ -38,6 +41,7 @@ function planeturnright(localclientnum, plane, yaw, halflife, starttime) {
 
 // Namespace airsupport
 // Params 5, eflags: 0x0
+// namespace_56e5590c<file_0>::function_c9ed4a5f
 // Checksum 0xcf2b617d, Offset: 0x358
 // Size: 0x54
 function planeturnleft(localclientnum, plane, yaw, halflife, starttime) {
@@ -46,6 +50,7 @@ function planeturnleft(localclientnum, plane, yaw, halflife, starttime) {
 
 // Namespace airsupport
 // Params 6, eflags: 0x1 linked
+// namespace_56e5590c<file_0>::function_db9a496c
 // Checksum 0x71290a37, Offset: 0x3b8
 // Size: 0xa4e
 function planeturn(localclientnum, plane, yaw, halflife, starttime, isturningright) {
@@ -144,6 +149,7 @@ function planeturn(localclientnum, plane, yaw, halflife, starttime, isturningrig
 
 // Namespace airsupport
 // Params 5, eflags: 0x0
+// namespace_56e5590c<file_0>::function_abef8392
 // Checksum 0x942a5d13, Offset: 0xe10
 // Size: 0x456
 function doabarrelroll(localclientnum, plane, endpoint, flytime, starttime) {
@@ -195,6 +201,7 @@ function doabarrelroll(localclientnum, plane, endpoint, flytime, starttime) {
 
 // Namespace airsupport
 // Params 6, eflags: 0x0
+// namespace_56e5590c<file_0>::function_c4001dfd
 // Checksum 0xbe9af5c1, Offset: 0x1270
 // Size: 0xc6
 function planegostraight(localclientnum, plane, startpoint, endpoint, movetime, starttime) {

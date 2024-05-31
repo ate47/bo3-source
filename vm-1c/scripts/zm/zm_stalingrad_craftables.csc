@@ -7,6 +7,7 @@
 
 // Namespace namespace_f058d6e4
 // Params 0, eflags: 0x1 linked
+// namespace_f058d6e4<file_0>::function_95743e9f
 // Checksum 0x425546e5, Offset: 0x1b0
 // Size: 0x44
 function function_95743e9f() {
@@ -17,6 +18,7 @@ function function_95743e9f() {
 
 // Namespace namespace_f058d6e4
 // Params 0, eflags: 0x1 linked
+// namespace_f058d6e4<file_0>::function_3ebec56b
 // Checksum 0x701cdc63, Offset: 0x200
 // Size: 0x1c
 function function_3ebec56b() {
@@ -25,6 +27,7 @@ function function_3ebec56b() {
 
 // Namespace namespace_f058d6e4
 // Params 0, eflags: 0x1 linked
+// namespace_f058d6e4<file_0>::function_4ece4a2f
 // Checksum 0xdd67189d, Offset: 0x228
 // Size: 0x1d4
 function register_clientfields() {

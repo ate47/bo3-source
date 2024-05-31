@@ -4,6 +4,7 @@
 
 // Namespace namespace_e8effba5
 // Params 0, eflags: 0x1 linked
+// namespace_e8effba5<file_0>::function_d290ebfa
 // Checksum 0x567e5419, Offset: 0x188
 // Size: 0x8e
 function main() {
@@ -16,6 +17,7 @@ function main() {
 
 // Namespace namespace_e8effba5
 // Params 1, eflags: 0x1 linked
+// namespace_e8effba5<file_0>::function_977dfbe0
 // Checksum 0xb9768b45, Offset: 0x220
 // Size: 0x54
 function function_977dfbe0(origin) {

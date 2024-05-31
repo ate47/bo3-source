@@ -10,6 +10,7 @@
 
 // Namespace namespace_e67b01cd
 // Params 0, eflags: 0x1 linked
+// namespace_e67b01cd<file_0>::function_d290ebfa
 // Checksum 0xa11ad5f5, Offset: 0x268
 // Size: 0x4e4
 function main() {
@@ -46,6 +47,7 @@ function main() {
 
 // Namespace namespace_e67b01cd
 // Params 0, eflags: 0x1 linked
+// namespace_e67b01cd<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x758
 // Size: 0x4
 function precache() {
@@ -54,6 +56,7 @@ function precache() {
 
 // Namespace namespace_e67b01cd
 // Params 0, eflags: 0x1 linked
+// namespace_e67b01cd<file_0>::function_d9a32821
 // Checksum 0xaa5fbe7b, Offset: 0x768
 // Size: 0x188
 function function_d9a32821() {
@@ -75,6 +78,7 @@ function function_d9a32821() {
 
 // Namespace namespace_e67b01cd
 // Params 0, eflags: 0x1 linked
+// namespace_e67b01cd<file_0>::function_c4a5736e
 // Checksum 0x69e6982f, Offset: 0x8f8
 // Size: 0x1be
 function function_c4a5736e() {
@@ -96,6 +100,7 @@ function function_c4a5736e() {
 
 // Namespace namespace_e67b01cd
 // Params 3, eflags: 0x1 linked
+// namespace_e67b01cd<file_0>::function_730358f4
 // Checksum 0xfb1be27c, Offset: 0xac0
 // Size: 0xe8
 function function_730358f4(train, startpoint, endpoint) {

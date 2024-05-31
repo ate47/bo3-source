@@ -1,0 +1,11 @@
+{
+    "vmtype": "none",
+    "name": "cpac_pro_0",
+    "igdtseqnum": 111,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Untouched",
+    "challengeDetails": "ACCOLADES_PRO_0",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_PRO_0_NAME",
+    "challengeReference": "MISSION_PROLOGUE_UNTOUCHED"
+}

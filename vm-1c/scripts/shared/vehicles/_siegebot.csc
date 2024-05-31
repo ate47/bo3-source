@@ -9,6 +9,7 @@
 
 // Namespace siegebot
 // Params 0, eflags: 0x2
+// namespace_d6bb7e31<file_0>::function_d290ebfa
 // Checksum 0x17543661, Offset: 0x178
 // Size: 0x2c
 function autoexec main() {
@@ -17,6 +18,7 @@ function autoexec main() {
 
 // Namespace siegebot
 // Params 1, eflags: 0x1 linked
+// namespace_d6bb7e31<file_0>::function_ef842362
 // Checksum 0x905b8876, Offset: 0x1b0
 // Size: 0x54
 function _setup_(localclientnum) {

@@ -1,0 +1,15 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_zur_nw_05",
+    "type": "collectible",
+    "igdtseqnum": 90,
+    "uiMaterial": "t7_icon_menu_p7_nc_zur_nw_05",
+    "uiModel": "p7_nc_zur_nw_05",
+    "description": "COLLECTIBLE_P7_NC_ZUR_NW_05_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_ZUR_NW_05_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_BOMB_DETONATOR_CAP",
+    "displayNameShort": "COLLECTIBLE_P7_NC_ZUR_NW_05_SHORT",
+    "codexurl": "Collectables-BombDetonatorCap.htm",
+    "slotSize": 0
+}

@@ -10,6 +10,7 @@
 
 // Namespace zm_bgb_crate_power
 // Params 0, eflags: 0x2
+// namespace_4385caec<file_0>::function_2dc19561
 // Checksum 0xcb70fb5b, Offset: 0x178
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,6 +19,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_crate_power
 // Params 0, eflags: 0x1 linked
+// namespace_4385caec<file_0>::function_8c87d8eb
 // Checksum 0xdb6c86f1, Offset: 0x1b8
 // Size: 0x54
 function __init__() {
@@ -29,6 +31,7 @@ function __init__() {
 
 // Namespace zm_bgb_crate_power
 // Params 0, eflags: 0x1 linked
+// namespace_4385caec<file_0>::function_279e4e97
 // Checksum 0x1345ac68, Offset: 0x218
 // Size: 0x5c
 function event() {

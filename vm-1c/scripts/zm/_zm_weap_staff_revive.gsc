@@ -15,6 +15,7 @@
 
 // Namespace namespace_db493cf
 // Params 0, eflags: 0x2
+// namespace_db493cf<file_0>::function_2dc19561
 // Checksum 0x266fe419, Offset: 0x260
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -23,6 +24,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_db493cf
 // Params 0, eflags: 0x1 linked
+// namespace_db493cf<file_0>::function_8c87d8eb
 // Checksum 0xb5506179, Offset: 0x2a0
 // Size: 0x24
 function __init__() {
@@ -31,6 +33,7 @@ function __init__() {
 
 // Namespace namespace_db493cf
 // Params 0, eflags: 0x1 linked
+// namespace_db493cf<file_0>::function_be02cc45
 // Checksum 0x30301e9a, Offset: 0x2d0
 // Size: 0x24
 function onplayerspawned() {
@@ -40,6 +43,7 @@ function onplayerspawned() {
 
 // Namespace namespace_db493cf
 // Params 0, eflags: 0x1 linked
+// namespace_db493cf<file_0>::function_bd596582
 // Checksum 0x631868f, Offset: 0x300
 // Size: 0xc0
 function function_bd596582() {
@@ -56,6 +60,7 @@ function function_bd596582() {
 
 // Namespace namespace_db493cf
 // Params 1, eflags: 0x1 linked
+// namespace_db493cf<file_0>::function_e94d3934
 // Checksum 0xdaf0c075, Offset: 0x3c8
 // Size: 0x19a
 function function_e94d3934(var_836ef144) {

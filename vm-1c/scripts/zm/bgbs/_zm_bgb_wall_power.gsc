@@ -10,6 +10,7 @@
 
 // Namespace zm_bgb_wall_power
 // Params 0, eflags: 0x2
+// namespace_df65c2a7<file_0>::function_2dc19561
 // Checksum 0xcb3de2e1, Offset: 0x188
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,6 +19,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_wall_power
 // Params 0, eflags: 0x1 linked
+// namespace_df65c2a7<file_0>::function_8c87d8eb
 // Checksum 0x740b41f8, Offset: 0x1c8
 // Size: 0x54
 function __init__() {
@@ -29,6 +31,7 @@ function __init__() {
 
 // Namespace zm_bgb_wall_power
 // Params 0, eflags: 0x1 linked
+// namespace_df65c2a7<file_0>::function_279e4e97
 // Checksum 0x2db4a56c, Offset: 0x228
 // Size: 0x7c
 function event() {

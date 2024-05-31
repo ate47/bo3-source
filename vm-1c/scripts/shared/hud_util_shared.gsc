@@ -6,6 +6,7 @@
 
 // Namespace hud
 // Params 1, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_89140677
 // Checksum 0x44b1a20e, Offset: 0x2e0
 // Size: 0xdc
 function setparent(element) {
@@ -26,6 +27,7 @@ function setparent(element) {
 
 // Namespace hud
 // Params 0, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_31f58f3b
 // Checksum 0x6adbf6ac, Offset: 0x3c8
 // Size: 0xa
 function getparent() {
@@ -34,6 +36,7 @@ function getparent() {
 
 // Namespace hud
 // Params 1, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_317ed10
 // Checksum 0xebb23835, Offset: 0x3e0
 // Size: 0x3a
 function addchild(element) {
@@ -43,6 +46,7 @@ function addchild(element) {
 
 // Namespace hud
 // Params 1, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_8635c711
 // Checksum 0x6b0da04e, Offset: 0x428
 // Size: 0xc6
 function removechild(element) {
@@ -57,6 +61,7 @@ function removechild(element) {
 
 // Namespace hud
 // Params 5, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_1e912b73
 // Checksum 0xba0f5e96, Offset: 0x4f8
 // Size: 0x834
 function setpoint(point, relativepoint, xoffset, yoffset, movetime) {
@@ -229,6 +234,7 @@ function setpoint(point, relativepoint, xoffset, yoffset, movetime) {
 
 // Namespace hud
 // Params 4, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_158ee2ca
 // Checksum 0x2b7dbbe2, Offset: 0xd38
 // Size: 0x1bc
 function setpointbar(point, relativepoint, xoffset, yoffset) {
@@ -254,6 +260,7 @@ function setpointbar(point, relativepoint, xoffset, yoffset) {
 
 // Namespace hud
 // Params 2, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_7089bce5
 // Checksum 0xed78d51a, Offset: 0xf00
 // Size: 0x44
 function updatebar(barfrac, rateofchange) {
@@ -264,6 +271,7 @@ function updatebar(barfrac, rateofchange) {
 
 // Namespace hud
 // Params 2, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_9891eda5
 // Checksum 0xc9043f0a, Offset: 0xf50
 // Size: 0x254
 function updatebarscale(barfrac, rateofchange) {
@@ -289,6 +297,7 @@ function updatebarscale(barfrac, rateofchange) {
 
 // Namespace hud
 // Params 2, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_1fa18f5d
 // Checksum 0x7d233e29, Offset: 0x11b0
 // Size: 0x130
 function createfontstring(font, fontscale) {
@@ -310,6 +319,7 @@ function createfontstring(font, fontscale) {
 
 // Namespace hud
 // Params 3, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_6aadf29c
 // Checksum 0x6ea1784a, Offset: 0x12e8
 // Size: 0x158
 function createserverfontstring(font, fontscale, team) {
@@ -335,6 +345,7 @@ function createserverfontstring(font, fontscale, team) {
 
 // Namespace hud
 // Params 3, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_4d374377
 // Checksum 0x885877fd, Offset: 0x1448
 // Size: 0x158
 function createservertimer(font, fontscale, team) {
@@ -360,6 +371,7 @@ function createservertimer(font, fontscale, team) {
 
 // Namespace hud
 // Params 2, eflags: 0x0
+// namespace_724a4794<file_0>::function_d0d695fb
 // Checksum 0xf387cccb, Offset: 0x15a8
 // Size: 0x130
 function createclienttimer(font, fontscale) {
@@ -381,6 +393,7 @@ function createclienttimer(font, fontscale) {
 
 // Namespace hud
 // Params 3, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_7acf2f62
 // Checksum 0x798e9be7, Offset: 0x16e0
 // Size: 0x130
 function createicon(shader, width, height) {
@@ -403,6 +416,7 @@ function createicon(shader, width, height) {
 
 // Namespace hud
 // Params 4, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_d945e9e7
 // Checksum 0x168c9662, Offset: 0x1818
 // Size: 0x158
 function function_d945e9e7(shader, width, height, team) {
@@ -429,6 +443,7 @@ function function_d945e9e7(shader, width, height, team) {
 
 // Namespace hud
 // Params 6, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_6f88521b
 // Checksum 0xb0ac180f, Offset: 0x1978
 // Size: 0x470
 function function_6f88521b(color, width, height, flashfrac, team, selected) {
@@ -498,6 +513,7 @@ function function_6f88521b(color, width, height, flashfrac, team, selected) {
 
 // Namespace hud
 // Params 4, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_993b88b8
 // Checksum 0x5d150e36, Offset: 0x1df0
 // Size: 0x3f0
 function createbar(color, width, height, flashfrac) {
@@ -556,6 +572,7 @@ function createbar(color, width, height, flashfrac) {
 
 // Namespace hud
 // Params 0, eflags: 0x0
+// namespace_724a4794<file_0>::function_388a6654
 // Checksum 0xc01af5d6, Offset: 0x21e8
 // Size: 0x94
 function getcurrentfraction() {
@@ -574,6 +591,7 @@ function getcurrentfraction() {
 
 // Namespace hud
 // Params 0, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_2057d0d7
 // Checksum 0x3c4bf479, Offset: 0x2288
 // Size: 0xa0
 function createprimaryprogressbar() {
@@ -588,6 +606,7 @@ function createprimaryprogressbar() {
 
 // Namespace hud
 // Params 0, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_439eec42
 // Checksum 0x29ccd3d1, Offset: 0x2330
 // Size: 0xac
 function createprimaryprogressbartext() {
@@ -603,6 +622,7 @@ function createprimaryprogressbartext() {
 
 // Namespace hud
 // Params 0, eflags: 0x0
+// namespace_724a4794<file_0>::function_2dc3c5fb
 // Checksum 0xbdf11818, Offset: 0x23e8
 // Size: 0x120
 function function_2dc3c5fb() {
@@ -620,6 +640,7 @@ function function_2dc3c5fb() {
 
 // Namespace hud
 // Params 0, eflags: 0x0
+// namespace_724a4794<file_0>::function_220d67ce
 // Checksum 0xfa96e4a8, Offset: 0x2510
 // Size: 0x104
 function function_220d67ce() {
@@ -637,6 +658,7 @@ function function_220d67ce() {
 
 // Namespace hud
 // Params 1, eflags: 0x0
+// namespace_724a4794<file_0>::function_a276e732
 // Checksum 0xa7e34bd9, Offset: 0x2620
 // Size: 0x70
 function function_a276e732(team) {
@@ -647,6 +669,7 @@ function function_a276e732(team) {
 
 // Namespace hud
 // Params 1, eflags: 0x0
+// namespace_724a4794<file_0>::function_67fad4f
 // Checksum 0x2eab32f8, Offset: 0x2698
 // Size: 0x70
 function function_67fad4f(team) {
@@ -657,6 +680,7 @@ function function_67fad4f(team) {
 
 // Namespace hud
 // Params 1, eflags: 0x0
+// namespace_724a4794<file_0>::function_33c6287f
 // Checksum 0xf0c54ebc, Offset: 0x2710
 // Size: 0x20
 function setflashfrac(flashfrac) {
@@ -665,6 +689,7 @@ function setflashfrac(flashfrac) {
 
 // Namespace hud
 // Params 0, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_3a37c554
 // Checksum 0x2841263c, Offset: 0x2738
 // Size: 0xd4
 function hideelem() {
@@ -689,6 +714,7 @@ function hideelem() {
 
 // Namespace hud
 // Params 0, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_48bb82ff
 // Checksum 0x5bb7f40b, Offset: 0x2818
 // Size: 0x108
 function showelem() {
@@ -717,6 +743,7 @@ function showelem() {
 
 // Namespace hud
 // Params 0, eflags: 0x0
+// namespace_724a4794<file_0>::function_81db17dd
 // Checksum 0x9172b9ed, Offset: 0x2928
 // Size: 0xf0
 function flashthread() {
@@ -745,6 +772,7 @@ function flashthread() {
 
 // Namespace hud
 // Params 0, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_9c3abbf4
 // Checksum 0xe278f85, Offset: 0x2a20
 // Size: 0x134
 function destroyelem() {
@@ -766,6 +794,7 @@ function destroyelem() {
 
 // Namespace hud
 // Params 1, eflags: 0x0
+// namespace_724a4794<file_0>::function_b5408b33
 // Checksum 0x58d979d3, Offset: 0x2b60
 // Size: 0x34
 function seticonshader(shader) {
@@ -774,6 +803,7 @@ function seticonshader(shader) {
 
 // Namespace hud
 // Params 1, eflags: 0x0
+// namespace_724a4794<file_0>::function_4b33df3d
 // Checksum 0x9a6e485, Offset: 0x2ba0
 // Size: 0x18
 function setwidth(width) {
@@ -782,6 +812,7 @@ function setwidth(width) {
 
 // Namespace hud
 // Params 1, eflags: 0x0
+// namespace_724a4794<file_0>::function_d6a2bd6
 // Checksum 0x4299b34, Offset: 0x2bc0
 // Size: 0x18
 function setheight(height) {
@@ -790,6 +821,7 @@ function setheight(height) {
 
 // Namespace hud
 // Params 2, eflags: 0x0
+// namespace_724a4794<file_0>::function_32e607e4
 // Checksum 0x24809c94, Offset: 0x2be0
 // Size: 0x2c
 function setsize(width, height) {
@@ -799,6 +831,7 @@ function setsize(width, height) {
 
 // Namespace hud
 // Params 0, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_b96fecab
 // Checksum 0x7816c1ea, Offset: 0x2c18
 // Size: 0x96
 function updatechildren() {
@@ -810,6 +843,7 @@ function updatechildren() {
 
 // Namespace hud
 // Params 5, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_21f67f44
 // Checksum 0x4d45072c, Offset: 0x2cb8
 // Size: 0x140
 function function_21f67f44(player, var_15524e1c, var_f5409200, xpos, ypos) {
@@ -830,6 +864,7 @@ function function_21f67f44(player, var_15524e1c, var_f5409200, xpos, ypos) {
 
 // Namespace hud
 // Params 5, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_5bb28094
 // Checksum 0xb22da31f, Offset: 0x2e00
 // Size: 0x110
 function function_5bb28094(player, var_15524e1c, var_f5409200, xpos, ypos) {
@@ -849,6 +884,7 @@ function function_5bb28094(player, var_15524e1c, var_f5409200, xpos, ypos) {
 
 // Namespace hud
 // Params 1, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_59b607f6
 // Checksum 0x40882419, Offset: 0x2f18
 // Size: 0x34
 function function_59b607f6(xcoord) {
@@ -857,6 +893,7 @@ function function_59b607f6(xcoord) {
 
 // Namespace hud
 // Params 2, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_81ff9096
 // Checksum 0x15f6a718, Offset: 0x2f58
 // Size: 0xd0
 function function_81ff9096(icon, xcoord) {
@@ -872,6 +909,7 @@ function function_81ff9096(icon, xcoord) {
 
 // Namespace hud
 // Params 5, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_489f386e
 // Checksum 0x1ee9da5f, Offset: 0x3030
 // Size: 0xbc
 function function_489f386e(iconelem, icon, alpha, var_31704579, text) {
@@ -890,6 +928,7 @@ function function_489f386e(iconelem, icon, alpha, var_31704579, text) {
 
 // Namespace hud
 // Params 4, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_c7cd3259
 // Checksum 0xbc8a9c53, Offset: 0x30f8
 // Size: 0xc8
 function function_c7cd3259(iconelem, fadetime, var_31704579, var_deead00e) {
@@ -911,6 +950,7 @@ function function_c7cd3259(iconelem, fadetime, var_31704579, var_deead00e) {
 
 // Namespace hud
 // Params 0, eflags: 0x1 linked
+// namespace_724a4794<file_0>::function_1b1daa35
 // Checksum 0x62581fb, Offset: 0x31c8
 // Size: 0x24
 function showperks() {
@@ -919,6 +959,7 @@ function showperks() {
 
 // Namespace hud
 // Params 3, eflags: 0x0
+// namespace_724a4794<file_0>::function_ae77a5ba
 // Checksum 0x6af53447, Offset: 0x31f8
 // Size: 0x2dc
 function function_ae77a5ba(index, perk, ypos) {
@@ -952,6 +993,7 @@ function function_ae77a5ba(index, perk, ypos) {
 
 // Namespace hud
 // Params 3, eflags: 0x0
+// namespace_724a4794<file_0>::function_74b6cb2d
 // Checksum 0xc4457c97, Offset: 0x34e0
 // Size: 0x17c
 function function_74b6cb2d(index, fadetime, var_deead00e) {
@@ -976,6 +1018,7 @@ function function_74b6cb2d(index, fadetime, var_deead00e) {
 
 // Namespace hud
 // Params 4, eflags: 0x0
+// namespace_724a4794<file_0>::function_8842ffe4
 // Checksum 0xe166c355, Offset: 0x3668
 // Size: 0x15c
 function function_8842ffe4(index, killstreak, xpos, ypos) {
@@ -997,6 +1040,7 @@ function function_8842ffe4(index, killstreak, xpos, ypos) {
 
 // Namespace hud
 // Params 2, eflags: 0x0
+// namespace_724a4794<file_0>::function_743093ab
 // Checksum 0x4f034ed1, Offset: 0x37d0
 // Size: 0xbc
 function function_743093ab(index, fadetime) {
@@ -1012,6 +1056,7 @@ function function_743093ab(index, fadetime) {
 
 // Namespace hud
 // Params 0, eflags: 0x0
+// namespace_724a4794<file_0>::function_21804f26
 // Checksum 0x32844bc2, Offset: 0x3898
 // Size: 0x5c
 function function_21804f26() {

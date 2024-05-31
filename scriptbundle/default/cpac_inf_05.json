@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_inf_05",
+    "igdtseqnum": 66,
+    "challengeWidget": "Accuracy",
+    "challengeDetails": "ACCOLADES_INF_5",
+    "challengeName": "ACCOLADES_INF_5_NAME",
+    "centerText": "10",
+    "challengeReference": "MISSION_INFECTION_HATTRICK"
+}

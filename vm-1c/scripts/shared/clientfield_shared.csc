@@ -2,6 +2,7 @@
 
 // Namespace clientfield
 // Params 8, eflags: 0x1 linked
+// namespace_71e9cb84<file_0>::function_50f16166
 // Checksum 0x5cf03b24, Offset: 0x78
 // Size: 0x74
 function register(str_pool_name, str_name, n_version, n_bits, str_type, func_callback, b_host, b_callback_for_zero_when_new) {
@@ -10,6 +11,7 @@ function register(str_pool_name, str_name, n_version, n_bits, str_type, func_cal
 
 // Namespace clientfield
 // Params 1, eflags: 0x1 linked
+// namespace_71e9cb84<file_0>::function_7922262b
 // Checksum 0x4e79446d, Offset: 0xf8
 // Size: 0x4c
 function get(field_name) {
@@ -21,6 +23,7 @@ function get(field_name) {
 
 // Namespace clientfield
 // Params 1, eflags: 0x1 linked
+// namespace_71e9cb84<file_0>::function_efc4a577
 // Checksum 0xeda893ff, Offset: 0x150
 // Size: 0x22
 function get_to_player(field_name) {
@@ -29,6 +32,7 @@ function get_to_player(field_name) {
 
 // Namespace clientfield
 // Params 1, eflags: 0x0
+// namespace_71e9cb84<file_0>::function_8a67d1f9
 // Checksum 0x62b4f328, Offset: 0x180
 // Size: 0x22
 function get_player_uimodel(field_name) {

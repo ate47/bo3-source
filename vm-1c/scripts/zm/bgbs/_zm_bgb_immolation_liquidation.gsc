@@ -9,6 +9,7 @@
 
 // Namespace zm_bgb_immolation_liquidation
 // Params 0, eflags: 0x2
+// namespace_cbb0522a<file_0>::function_2dc19561
 // Checksum 0x691467cc, Offset: 0x188
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_immolation_liquidation
 // Params 0, eflags: 0x1 linked
+// namespace_cbb0522a<file_0>::function_8c87d8eb
 // Checksum 0x4c05325f, Offset: 0x1c8
 // Size: 0x64
 function __init__() {
@@ -28,6 +30,7 @@ function __init__() {
 
 // Namespace zm_bgb_immolation_liquidation
 // Params 0, eflags: 0x1 linked
+// namespace_cbb0522a<file_0>::function_7afbf7cd
 // Checksum 0x33c4332e, Offset: 0x238
 // Size: 0x24
 function activation() {
@@ -36,6 +39,7 @@ function activation() {
 
 // Namespace zm_bgb_immolation_liquidation
 // Params 0, eflags: 0x1 linked
+// namespace_cbb0522a<file_0>::function_3d1f600e
 // Checksum 0xd54d9f7b, Offset: 0x268
 // Size: 0x3e
 function function_3d1f600e() {

@@ -6,6 +6,7 @@
 
 // Namespace zm_powerup_bonus_points_team
 // Params 0, eflags: 0x2
+// namespace_50ac7dd1<file_0>::function_2dc19561
 // Checksum 0x1afdefdc, Offset: 0x108
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -14,6 +15,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_bonus_points_team
 // Params 0, eflags: 0x0
+// namespace_50ac7dd1<file_0>::function_8c87d8eb
 // Checksum 0xadf9ce64, Offset: 0x148
 // Size: 0x34
 function __init__() {

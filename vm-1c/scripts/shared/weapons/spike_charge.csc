@@ -9,6 +9,7 @@
 
 // Namespace sticky_grenade
 // Params 0, eflags: 0x2
+// namespace_e80cf34f<file_0>::function_2dc19561
 // Checksum 0xf63bfe3b, Offset: 0x1d0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace sticky_grenade
 // Params 0, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_8c87d8eb
 // Checksum 0xba7cf905, Offset: 0x210
 // Size: 0x94
 function __init__() {
@@ -28,6 +30,7 @@ function __init__() {
 
 // Namespace sticky_grenade
 // Params 1, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_ab1f9ea1
 // Checksum 0xd5bf0bf6, Offset: 0x2b0
 // Size: 0x24
 function spawned(localclientnum) {
@@ -36,6 +39,7 @@ function spawned(localclientnum) {
 
 // Namespace sticky_grenade
 // Params 1, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_ee496415
 // Checksum 0xf6da891f, Offset: 0x2e0
 // Size: 0x3c
 function spawned_spike_charge(localclientnum) {
@@ -45,6 +49,7 @@ function spawned_spike_charge(localclientnum) {
 
 // Namespace sticky_grenade
 // Params 1, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_e18161a
 // Checksum 0x59ff6660, Offset: 0x328
 // Size: 0x10c
 function fx_think(localclientnum) {
@@ -62,6 +67,7 @@ function fx_think(localclientnum) {
 
 // Namespace sticky_grenade
 // Params 1, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_d2e7a133
 // Checksum 0x4ad23d31, Offset: 0x440
 // Size: 0x6c
 function start_light_fx(localclientnum) {
@@ -71,6 +77,7 @@ function start_light_fx(localclientnum) {
 
 // Namespace sticky_grenade
 // Params 1, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_958821cd
 // Checksum 0x37edc037, Offset: 0x4b8
 // Size: 0x4e
 function stop_light_fx(localclientnum) {
@@ -82,6 +89,7 @@ function stop_light_fx(localclientnum) {
 
 // Namespace sticky_grenade
 // Params 1, eflags: 0x1 linked
+// namespace_e80cf34f<file_0>::function_7f9695b3
 // Checksum 0x501c98ef, Offset: 0x510
 // Size: 0x104
 function spike_detonation(localclientnum) {

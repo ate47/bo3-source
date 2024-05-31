@@ -6,6 +6,7 @@
 
 // Namespace namespace_d5fba823
 // Params 0, eflags: 0x0
+// namespace_d5fba823<file_0>::function_c35e6aab
 // Checksum 0x9d4d6aeb, Offset: 0x198
 // Size: 0x1c
 function init() {
@@ -16,6 +17,7 @@ function init() {
 
 // Namespace namespace_d5fba823
 // Params 2, eflags: 0x1 linked
+// namespace_d5fba823<file_0>::function_55ebb79e
 // Checksum 0x2cbfacf8, Offset: 0x1c0
 // Size: 0x354
 function on_spawn(watcher, player) {
@@ -62,6 +64,7 @@ function on_spawn(watcher, player) {
 
 // Namespace namespace_d5fba823
 // Params 1, eflags: 0x1 linked
+// namespace_d5fba823<file_0>::function_9830e7bc
 // Checksum 0xa37d9a67, Offset: 0x520
 // Size: 0x44
 function function_9830e7bc(prey) {
@@ -73,6 +76,7 @@ function function_9830e7bc(prey) {
 
 // Namespace namespace_d5fba823
 // Params 2, eflags: 0x1 linked
+// namespace_d5fba823<file_0>::function_3554b37c
 // Checksum 0x449804a3, Offset: 0x570
 // Size: 0x454
 function on_spawn_retrieve_trigger(watcher, player) {
@@ -128,6 +132,7 @@ function on_spawn_retrieve_trigger(watcher, player) {
 
     // Namespace namespace_d5fba823
     // Params 1, eflags: 0x0
+    // namespace_d5fba823<file_0>::function_afbbec46
     // Checksum 0x14729f32, Offset: 0x9d0
     // Size: 0x48
     function debug_print(endpos) {
@@ -142,6 +147,7 @@ function on_spawn_retrieve_trigger(watcher, player) {
 
 // Namespace namespace_d5fba823
 // Params 6, eflags: 0x1 linked
+// namespace_d5fba823<file_0>::function_35579833
 // Checksum 0x8396dddf, Offset: 0xa20
 // Size: 0x350
 function function_35579833(trigger, model, callback, weapon, playersoundonuse, npcsoundonuse) {
@@ -190,6 +196,7 @@ function function_35579833(trigger, model, callback, weapon, playersoundonuse, n
 
 // Namespace namespace_d5fba823
 // Params 3, eflags: 0x1 linked
+// namespace_d5fba823<file_0>::function_6f9992d6
 // Checksum 0x9d254968, Offset: 0xd78
 // Size: 0x1b4
 function pick_up(weapon, model, trigger) {
@@ -216,6 +223,7 @@ function pick_up(weapon, model, trigger) {
 
 // Namespace namespace_d5fba823
 // Params 0, eflags: 0x1 linked
+// namespace_d5fba823<file_0>::function_c5341e6f
 // Checksum 0xbf0dd262, Offset: 0xf38
 // Size: 0x4c
 function destroy_ent() {
@@ -229,6 +237,7 @@ function destroy_ent() {
 
 // Namespace namespace_d5fba823
 // Params 2, eflags: 0x1 linked
+// namespace_d5fba823<file_0>::function_dba9bc53
 // Checksum 0x76ed68ab, Offset: 0xf90
 // Size: 0x74
 function watch_shutdown(trigger, model) {
@@ -239,6 +248,7 @@ function watch_shutdown(trigger, model) {
 
 // Namespace namespace_d5fba823
 // Params 1, eflags: 0x1 linked
+// namespace_d5fba823<file_0>::function_c6372501
 // Checksum 0x6260a55a, Offset: 0x1010
 // Size: 0xb0
 function function_c6372501(player) {
@@ -255,6 +265,7 @@ function function_c6372501(player) {
 
 // Namespace namespace_d5fba823
 // Params 2, eflags: 0x1 linked
+// namespace_d5fba823<file_0>::function_ae011034
 // Checksum 0xa9ccb7d4, Offset: 0x10c8
 // Size: 0x8c
 function function_ae011034(player, prey) {
@@ -268,6 +279,7 @@ function function_ae011034(player, prey) {
 
 // Namespace namespace_d5fba823
 // Params 1, eflags: 0x1 linked
+// namespace_d5fba823<file_0>::function_963df1d8
 // Checksum 0x54f633ab, Offset: 0x1160
 // Size: 0xbc
 function function_963df1d8(player) {

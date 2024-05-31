@@ -25,6 +25,7 @@
 
 // Namespace uav
 // Params 0, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_c35e6aab
 // Checksum 0x4e03fe8e, Offset: 0x678
 // Size: 0x264
 function init() {
@@ -52,6 +53,7 @@ function init() {
 
 // Namespace uav
 // Params 1, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_da11acc
 // Checksum 0x1a315810, Offset: 0x8e8
 // Size: 0x34
 function hackedprefunction(hacker) {
@@ -61,6 +63,7 @@ function hackedprefunction(hacker) {
 
 // Namespace uav
 // Params 2, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_d92ac79e
 // Checksum 0xd0896157, Offset: 0x928
 // Size: 0xcc
 function configureteampost(owner, ishacked) {
@@ -76,6 +79,7 @@ function configureteampost(owner, ishacked) {
 
 // Namespace uav
 // Params 0, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_749e27a2
 // Checksum 0xacf15c3d, Offset: 0xa00
 // Size: 0x650
 function activateuav() {
@@ -133,6 +137,7 @@ function activateuav() {
 
 // Namespace uav
 // Params 2, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_4a622862
 // Checksum 0x1044be01, Offset: 0x1058
 // Size: 0x7c
 function onlowhealth(attacker, weapon) {
@@ -145,6 +150,7 @@ function onlowhealth(attacker, weapon) {
 
 // Namespace uav
 // Params 2, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_4383d23d
 // Checksum 0x665b3f24, Offset: 0x10e0
 // Size: 0x2c
 function onteamchange(entnum, event) {
@@ -153,6 +159,7 @@ function onteamchange(entnum, event) {
 
 // Namespace uav
 // Params 2, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_e58eb1b3
 // Checksum 0xfab4abaa, Offset: 0x1118
 // Size: 0x26c
 function destroyuav(attacker, weapon) {
@@ -185,6 +192,7 @@ function destroyuav(attacker, weapon) {
 
 // Namespace uav
 // Params 0, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_603848d5
 // Checksum 0x788f2114, Offset: 0x1390
 // Size: 0x56
 function onplayerconnect() {
@@ -197,6 +205,7 @@ function onplayerconnect() {
 
 // Namespace uav
 // Params 0, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_be02cc45
 // Checksum 0x18b45ed6, Offset: 0x13f0
 // Size: 0x3e
 function onplayerspawned() {
@@ -208,6 +217,7 @@ function onplayerspawned() {
 
 // Namespace uav
 // Params 0, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_70160c9
 // Checksum 0xbbb20cd2, Offset: 0x1438
 // Size: 0x14
 function onplayerjoinedteam() {
@@ -216,6 +226,7 @@ function onplayerjoinedteam() {
 
 // Namespace uav
 // Params 0, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_c3727207
 // Checksum 0x2eaf1ccd, Offset: 0x1458
 // Size: 0xf4
 function ontimeout() {
@@ -235,6 +246,7 @@ function ontimeout() {
 
 // Namespace uav
 // Params 0, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_4731447
 // Checksum 0x3c48e2ae, Offset: 0x1558
 // Size: 0x34
 function ontimecheck() {
@@ -243,6 +255,7 @@ function ontimecheck() {
 
 // Namespace uav
 // Params 0, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_2a6995eb
 // Checksum 0xe0319ea2, Offset: 0x1598
 // Size: 0x84
 function startuavfx() {
@@ -257,6 +270,7 @@ function startuavfx() {
 
 // Namespace uav
 // Params 0, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_8e5dd1df
 // Checksum 0x86ee0bd0, Offset: 0x1628
 // Size: 0xa4
 function playafterburnerfx() {
@@ -272,6 +286,7 @@ function playafterburnerfx() {
 
 // Namespace uav
 // Params 1, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_d018d425
 // Checksum 0x1d78bd95, Offset: 0x16d8
 // Size: 0x1c
 function hasuav(team_or_entnum) {
@@ -280,6 +295,7 @@ function hasuav(team_or_entnum) {
 
 // Namespace uav
 // Params 0, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_ea2de1a8
 // Checksum 0xe2765b2a, Offset: 0x1700
 // Size: 0xbe
 function addactiveuav() {
@@ -299,6 +315,7 @@ function addactiveuav() {
 
 // Namespace uav
 // Params 0, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_3da52755
 // Checksum 0xcae8eff9, Offset: 0x17c8
 // Size: 0x5c
 function removeactiveuav() {
@@ -309,6 +326,7 @@ function removeactiveuav() {
 
 // Namespace uav
 // Params 0, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_77040854
 // Checksum 0x27ac3fa9, Offset: 0x1830
 // Size: 0x1ea
 function resetactiveuav() {
@@ -338,6 +356,7 @@ function resetactiveuav() {
 
 // Namespace uav
 // Params 0, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_173dbc2d
 // Checksum 0x8b0a7716, Offset: 0x1a28
 // Size: 0x2b6
 function uavtracker() {
@@ -369,6 +388,7 @@ function uavtracker() {
 
 // Namespace uav
 // Params 0, eflags: 0x1 linked
+// namespace_64c90e23<file_0>::function_a6e0ac1f
 // Checksum 0xbae2ff1a, Offset: 0x1ce8
 // Size: 0x92
 function hidealluavstosameteam() {

@@ -13,6 +13,7 @@
 
 // Namespace namespace_128a1bda
 // Params 0, eflags: 0x2
+// namespace_128a1bda<file_0>::function_2dc19561
 // Checksum 0xb32c977, Offset: 0x418
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,6 +22,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_128a1bda
 // Params 0, eflags: 0x1 linked
+// namespace_128a1bda<file_0>::function_8c87d8eb
 // Checksum 0x3a707045, Offset: 0x458
 // Size: 0x334
 function __init__() {
@@ -48,6 +50,7 @@ function __init__() {
 
 // Namespace namespace_128a1bda
 // Params 7, eflags: 0x1 linked
+// namespace_128a1bda<file_0>::function_7021da92
 // Checksum 0x84ac0683, Offset: 0x798
 // Size: 0x94
 function function_7021da92(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
@@ -61,6 +64,7 @@ function function_7021da92(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_128a1bda
 // Params 1, eflags: 0x1 linked
+// namespace_128a1bda<file_0>::function_a358ec33
 // Checksum 0xd4bee5d, Offset: 0x838
 // Size: 0xfa
 function function_a358ec33(localclientnum) {
@@ -74,6 +78,7 @@ function function_a358ec33(localclientnum) {
 
 // Namespace namespace_128a1bda
 // Params 1, eflags: 0x1 linked
+// namespace_128a1bda<file_0>::function_c1a20a24
 // Checksum 0xb88f3161, Offset: 0x940
 // Size: 0xea
 function function_c1a20a24(localclientnum) {
@@ -88,6 +93,7 @@ function function_c1a20a24(localclientnum) {
 
 // Namespace namespace_128a1bda
 // Params 7, eflags: 0x1 linked
+// namespace_128a1bda<file_0>::function_697cc62
 // Checksum 0x722d2435, Offset: 0xa38
 // Size: 0x124
 function function_697cc62(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -108,6 +114,7 @@ function function_697cc62(localclientnum, oldval, newval, bnewent, binitialsnap,
 
 // Namespace namespace_128a1bda
 // Params 3, eflags: 0x1 linked
+// namespace_128a1bda<file_0>::function_56029f33
 // Checksum 0x743fdb2f, Offset: 0xb68
 // Size: 0xac
 function function_56029f33(localclientnum, b_enabled, var_73021e86) {

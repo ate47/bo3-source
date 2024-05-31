@@ -18,6 +18,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x2
+    // namespace_eae8c9fa<file_0>::function_2dc19561
     // Checksum 0xac029f3c, Offset: 0x228
     // Size: 0x3c
     function autoexec function_2dc19561() {
@@ -26,6 +27,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_8c87d8eb
     // Checksum 0xb8beaf42, Offset: 0x270
     // Size: 0x2c
     function __init__() {
@@ -34,6 +36,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_c35e6aab
     // Checksum 0x8da1e1de, Offset: 0x2a8
     // Size: 0x400
     function init() {
@@ -89,6 +92,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_fb4f96b5
     // Checksum 0x278095a5, Offset: 0x6b0
     // Size: 0x8
     function on_player_connect() {
@@ -97,6 +101,7 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_277100a1
     // Checksum 0x73878099, Offset: 0x6c0
     // Size: 0x54
     function warpalltohost(team) {
@@ -106,6 +111,7 @@
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_93f46504
     // Checksum 0xac4b34d4, Offset: 0x720
     // Size: 0x374
     function warpalltoplayer(team, player) {
@@ -156,6 +162,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x0
+    // namespace_eae8c9fa<file_0>::function_f755c633
     // Checksum 0xc3aee491, Offset: 0xaa0
     // Size: 0x454
     function updatedevsettingszm() {
@@ -215,6 +222,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_f49597b8
     // Checksum 0xf469b382, Offset: 0xf00
     // Size: 0x1dc6
     function updatedevsettings() {
@@ -568,6 +576,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_1870c86a
     // Checksum 0x7fef9bc0, Offset: 0x2cd0
     // Size: 0x18c
     function devgui_spawn_think() {
@@ -597,6 +606,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_1fefb654
     // Checksum 0xb80672c5, Offset: 0x2e68
     // Size: 0x14a
     function devgui_unlimited_ammo() {
@@ -621,6 +631,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_d4757f3c
     // Checksum 0xc615b559, Offset: 0x2fc0
     // Size: 0x11e
     function devgui_unlimited_momentum() {
@@ -646,6 +657,7 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_289ca173
     // Checksum 0x5de7df38, Offset: 0x30e8
     // Size: 0x112
     function devgui_increase_momentum(score) {
@@ -666,6 +678,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x0
+    // namespace_eae8c9fa<file_0>::function_a72d8be8
     // Checksum 0xf72ffc35, Offset: 0x3208
     // Size: 0x318
     function devgui_health_debug() {
@@ -708,6 +721,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x0
+    // namespace_eae8c9fa<file_0>::function_91e82e7b
     // Checksum 0x676a75fe, Offset: 0x3528
     // Size: 0xc6
     function giveextraperks() {
@@ -723,6 +737,7 @@
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_3a8a644f
     // Checksum 0x6cc04f7a, Offset: 0x35f8
     // Size: 0x144
     function xkillsy(attackername, victimname) {
@@ -745,6 +760,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_efe63614
     // Checksum 0xb5a5361c, Offset: 0x3748
     // Size: 0x24
     function testscriptruntimeerrorassert() {
@@ -754,6 +770,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_d6c7ab4
     // Checksum 0x6c7aa9b3, Offset: 0x3778
     // Size: 0x44
     function testscriptruntimeerror2() {
@@ -765,6 +782,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_7f73e9ef
     // Checksum 0xaf449b5, Offset: 0x37c8
     // Size: 0x1c
     function testscriptruntimeerror1() {
@@ -773,6 +791,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_cf63752
     // Checksum 0x1dab855b, Offset: 0x37f0
     // Size: 0xcc
     function testscriptruntimeerror() {
@@ -795,6 +814,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_92600b0d
     // Checksum 0xd2497c9a, Offset: 0x38c8
     // Size: 0xf4
     function testdvars() {
@@ -815,6 +835,7 @@
 
     // Namespace dev
     // Params 5, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_2bacd307
     // Checksum 0xf9836abd, Offset: 0x39c8
     // Size: 0x58e
     function showonespawnpoint(spawn_point, color, notification, height, print) {
@@ -868,6 +889,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_7d9b2146
     // Checksum 0xa1f683b7, Offset: 0x3f60
     // Size: 0xe8
     function showspawnpoints() {
@@ -886,6 +908,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_af174d97
     // Checksum 0xa335972a, Offset: 0x4050
     // Size: 0x18
     function hidespawnpoints() {
@@ -895,6 +918,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_87ae141e
     // Checksum 0x565bebb1, Offset: 0x4070
     // Size: 0x222
     function showstartspawnpoints() {
@@ -924,6 +948,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_45d39795
     // Checksum 0x3320c390, Offset: 0x42a0
     // Size: 0x18
     function hidestartspawnpoints() {
@@ -933,6 +958,7 @@
 
     // Namespace dev
     // Params 6, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_f573927d
     // Checksum 0xbaf713b1, Offset: 0x42c0
     // Size: 0x70
     function print3duntilnotified(origin, text, color, alpha, scale, notification) {
@@ -945,6 +971,7 @@
 
     // Namespace dev
     // Params 5, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_fb4b2169
     // Checksum 0x5e25762e, Offset: 0x4338
     // Size: 0x68
     function lineuntilnotified(start, end, color, depthtest, notification) {
@@ -957,6 +984,7 @@
 
     // Namespace dev
     // Params 1, eflags: 0x0
+    // namespace_eae8c9fa<file_0>::function_9019491d
     // Checksum 0x7c627ada, Offset: 0x43a8
     // Size: 0x2a
     function dvar_turned_on(val) {
@@ -968,6 +996,7 @@
 
     // Namespace dev
     // Params 5, eflags: 0x0
+    // namespace_eae8c9fa<file_0>::function_fb312e3b
     // Checksum 0x966535a, Offset: 0x43e0
     // Size: 0xc2
     function new_hud(hud_name, msg, x, y, scale) {
@@ -984,6 +1013,7 @@
 
     // Namespace dev
     // Params 7, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_8bd98a60
     // Checksum 0x16ddc577, Offset: 0x44b0
     // Size: 0x1a2
     function set_hudelem(text, x, y, scale, alpha, sort, debug_hudelem) {
@@ -1018,6 +1048,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_d99660db
     // Checksum 0xa797b16d, Offset: 0x4660
     // Size: 0x10
     function function_d99660db() {
@@ -1026,6 +1057,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x0
+    // namespace_eae8c9fa<file_0>::function_c5833485
     // Checksum 0x48ef0a43, Offset: 0x4678
     // Size: 0x3ac
     function function_c5833485() {
@@ -1089,6 +1121,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_142688a5
     // Checksum 0xfc0a9f7f, Offset: 0x4a30
     // Size: 0x11c
     function print_weapon_name() {
@@ -1117,6 +1150,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_5bd29d09
     // Checksum 0x99911c09, Offset: 0x4b58
     // Size: 0x18a
     function set_equipment_list() {
@@ -1137,6 +1171,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_bf6932f7
     // Checksum 0xe61b4e5d, Offset: 0x4cf0
     // Size: 0x1b2
     function set_grenade_list() {
@@ -1158,6 +1193,7 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_498ac57d
     // Checksum 0x52574342, Offset: 0x4eb0
     // Size: 0xb6
     function take_all_grenades_and_equipment(player) {
@@ -1171,6 +1207,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_660b1787
     // Checksum 0xde08c1bb, Offset: 0x4f70
     // Size: 0x128
     function equipment_dev_gui() {
@@ -1192,6 +1229,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_4ebc24c9
     // Checksum 0x1a1db87a, Offset: 0x50a0
     // Size: 0x128
     function grenade_dev_gui() {
@@ -1213,6 +1251,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_5528f222
     // Checksum 0xa0feab5d, Offset: 0x51d0
     // Size: 0x49a
     function devstraferunpathdebugdraw() {
@@ -1295,6 +1334,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_eace8596
     // Checksum 0x49642bbd, Offset: 0x5678
     // Size: 0x3c0
     function devhelipathdebugdraw() {
@@ -1367,6 +1407,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_a1b4a9e6
     // Checksum 0x2f4ef59e, Offset: 0x5a40
     // Size: 0x114
     function draworiginlines() {
@@ -1380,6 +1421,7 @@
 
     // Namespace dev
     // Params 4, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_9c8f13fc
     // Checksum 0x2250e984, Offset: 0x5b60
     // Size: 0x74
     function drawtargetnametext(textcolor, textalpha, textscale, textoffset) {
@@ -1391,6 +1433,7 @@
 
     // Namespace dev
     // Params 4, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_4c38993b
     // Checksum 0xe47be90, Offset: 0x5be0
     // Size: 0x74
     function drawnoteworthytext(textcolor, textalpha, textscale, textoffset) {
@@ -1402,6 +1445,7 @@
 
     // Namespace dev
     // Params 4, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_6d6b630
     // Checksum 0x4e1414b4, Offset: 0x5c60
     // Size: 0xc4
     function draworigintext(textcolor, textalpha, textscale, textoffset) {
@@ -1414,6 +1458,7 @@
 
     // Namespace dev
     // Params 4, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_d02a2e25
     // Checksum 0x6290d8ae, Offset: 0x5d30
     // Size: 0xdc
     function drawspeedacceltext(textcolor, textalpha, textscale, textoffset) {
@@ -1427,6 +1472,7 @@
 
     // Namespace dev
     // Params 7, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_2302cd4a
     // Checksum 0x70c8acfb, Offset: 0x5e18
     // Size: 0x154
     function drawpath(linecolor, textcolor, textalpha, textscale, textoffset, drawtime, endonmsg) {
@@ -1448,6 +1494,7 @@
 
     // Namespace dev
     // Params 8, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_2f793f75
     // Checksum 0x6013eaa1, Offset: 0x5f78
     // Size: 0x124
     function drawpathsegment(enttarget, linecolor, textcolor, textalpha, textscale, textoffset, drawtime, endonmsg) {
@@ -1465,6 +1512,7 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_2c520d1
     // Checksum 0x7b3efdb4, Offset: 0x60a8
     // Size: 0xc6
     function get_lookat_origin(player) {
@@ -1478,6 +1526,7 @@
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_71fc369f
     // Checksum 0x7ddcffeb, Offset: 0x6178
     // Size: 0x74
     function draw_pathnode(node, color) {
@@ -1489,6 +1538,7 @@
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_11a3f646
     // Checksum 0xdf9a0cfc, Offset: 0x61f8
     // Size: 0x48
     function draw_pathnode_think(node, color) {
@@ -1501,6 +1551,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_7a3af9ad
     // Checksum 0x3ba9e3fc, Offset: 0x6248
     // Size: 0x1a
     function draw_pathnodes_stop() {
@@ -1510,6 +1561,7 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_dfff46e4
     // Checksum 0xff2042af, Offset: 0x6270
     // Size: 0x120
     function node_get(player) {
@@ -1535,6 +1587,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x0
+    // namespace_eae8c9fa<file_0>::function_fe53bfd5
     // Checksum 0x8619b1a7, Offset: 0x6398
     // Size: 0x1a8
     function dev_get_node_pair() {
@@ -1569,6 +1622,7 @@
 
     // Namespace dev
     // Params 2, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_348d62f8
     // Checksum 0x98e37d0a, Offset: 0x6548
     // Size: 0x5c
     function draw_point(origin, color) {
@@ -1580,6 +1634,7 @@
 
     // Namespace dev
     // Params 1, eflags: 0x1 linked
+    // namespace_eae8c9fa<file_0>::function_7a7785fc
     // Checksum 0xa73e3740, Offset: 0x65b0
     // Size: 0xa0
     function point_get(player) {
@@ -1597,6 +1652,7 @@
 
     // Namespace dev
     // Params 0, eflags: 0x0
+    // namespace_eae8c9fa<file_0>::function_2258c623
     // Checksum 0x510a2eae, Offset: 0x6658
     // Size: 0x120
     function dev_get_point_pair() {

@@ -9,6 +9,7 @@
 
 // Namespace mpdialog
 // Params 0, eflags: 0x2
+// namespace_afff28a6<file_0>::function_2dc19561
 // Checksum 0xc1ad19b3, Offset: 0x2e8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace mpdialog
 // Params 0, eflags: 0x1 linked
+// namespace_afff28a6<file_0>::function_8c87d8eb
 // Checksum 0x2d1f01b2, Offset: 0x328
 // Size: 0x1cc
 function __init__() {
@@ -38,6 +40,7 @@ function __init__() {
 
 // Namespace mpdialog
 // Params 1, eflags: 0x1 linked
+// namespace_afff28a6<file_0>::function_f25370e5
 // Checksum 0x74848ae9, Offset: 0x500
 // Size: 0x84
 function client_voice_setup(localclientnum) {
@@ -48,6 +51,7 @@ function client_voice_setup(localclientnum) {
 
 // Namespace mpdialog
 // Params 3, eflags: 0x1 linked
+// namespace_afff28a6<file_0>::function_4e7c2f22
 // Checksum 0x548a283a, Offset: 0x590
 // Size: 0x98
 function snipervonotify(localclientnum, notifystring, dialogkey) {
@@ -66,6 +70,7 @@ function snipervonotify(localclientnum, notifystring, dialogkey) {
 
 // Namespace mpdialog
 // Params 7, eflags: 0x1 linked
+// namespace_afff28a6<file_0>::function_24b3bf09
 // Checksum 0x582f1f46, Offset: 0x630
 // Size: 0x48
 function set_boost_number(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -74,6 +79,7 @@ function set_boost_number(localclientnum, oldval, newval, bnewent, binitialsnap,
 
 // Namespace mpdialog
 // Params 7, eflags: 0x1 linked
+// namespace_afff28a6<file_0>::function_d8f485b5
 // Checksum 0x1aa080fc, Offset: 0x680
 // Size: 0x13c
 function play_boost_vox(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -95,6 +101,7 @@ function play_boost_vox(localclientnum, oldval, newval, bnewent, binitialsnap, f
 
 // Namespace mpdialog
 // Params 1, eflags: 0x1 linked
+// namespace_afff28a6<file_0>::function_5c7b36b8
 // Checksum 0xa19f1a19, Offset: 0x7c8
 // Size: 0x134
 function play_boost_start_vox(localclientnum) {
@@ -119,6 +126,7 @@ function play_boost_start_vox(localclientnum) {
 
 // Namespace mpdialog
 // Params 1, eflags: 0x1 linked
+// namespace_afff28a6<file_0>::function_4310a812
 // Checksum 0x70c160f3, Offset: 0x908
 // Size: 0x7c
 function play_boost_start_response_vox(localclientnum) {
@@ -132,6 +140,7 @@ function play_boost_start_response_vox(localclientnum) {
 
 // Namespace mpdialog
 // Params 2, eflags: 0x0
+// namespace_afff28a6<file_0>::function_c3e705b2
 // Checksum 0x1dc713f, Offset: 0x990
 // Size: 0x62
 function get_commander_dialog_alias(commandername, dialogkey) {
@@ -144,6 +153,7 @@ function get_commander_dialog_alias(commandername, dialogkey) {
 
 // Namespace mpdialog
 // Params 1, eflags: 0x1 linked
+// namespace_afff28a6<file_0>::function_502e5701
 // Checksum 0x643779e4, Offset: 0xa00
 // Size: 0x82
 function get_player_dialog_alias(dialogkey) {
@@ -157,6 +167,7 @@ function get_player_dialog_alias(dialogkey) {
 
 // Namespace mpdialog
 // Params 2, eflags: 0x1 linked
+// namespace_afff28a6<file_0>::function_f08025d4
 // Checksum 0xab17a4eb, Offset: 0xa90
 // Size: 0xae
 function get_dialog_bundle_alias(dialogbundle, dialogkey) {
@@ -176,6 +187,7 @@ function get_dialog_bundle_alias(dialogbundle, dialogkey) {
 
 // Namespace mpdialog
 // Params 2, eflags: 0x1 linked
+// namespace_afff28a6<file_0>::function_3001a972
 // Checksum 0xbb5246cf, Offset: 0xb48
 // Size: 0x162
 function play_dialog(dialogkey, localclientnum) {
@@ -198,6 +210,7 @@ function play_dialog(dialogkey, localclientnum) {
 
 // Namespace mpdialog
 // Params 1, eflags: 0x1 linked
+// namespace_afff28a6<file_0>::function_244e128e
 // Checksum 0x7a9dc328, Offset: 0xcb8
 // Size: 0x4c
 function update_voice_origin(voicebox) {
@@ -212,6 +225,7 @@ function update_voice_origin(voicebox) {
 
 // Namespace mpdialog
 // Params 1, eflags: 0x1 linked
+// namespace_afff28a6<file_0>::function_2489c9a7
 // Checksum 0x5fe5d4b8, Offset: 0xd10
 // Size: 0x24
 function delete_after(waittime) {

@@ -29,6 +29,7 @@
 
 // Namespace globallogic_spawn
 // Params 1, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_cabdc9f7
 // Checksum 0x4be705e5, Offset: 0x760
 // Size: 0x1c2
 function timeuntilspawn(includeteamkilldelay) {
@@ -68,6 +69,7 @@ function timeuntilspawn(includeteamkilldelay) {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_5881cfb8
 // Checksum 0x133ed8d, Offset: 0x930
 // Size: 0x8e
 function allteamshaveexisted() {
@@ -81,6 +83,7 @@ function allteamshaveexisted() {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_cc406c51
 // Checksum 0xd1637ea9, Offset: 0x9c8
 // Size: 0x19c
 function mayspawn() {
@@ -115,6 +118,7 @@ function mayspawn() {
 
 // Namespace globallogic_spawn
 // Params 1, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_febae56
 // Checksum 0x3fc3c25b, Offset: 0xb70
 // Size: 0x122
 function timeuntilwavespawn(minimumwait) {
@@ -135,6 +139,7 @@ function timeuntilwavespawn(minimumwait) {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_dbb50216
 // Checksum 0x8602131f, Offset: 0xca0
 // Size: 0x3c
 function stoppoisoningandflareonspawn() {
@@ -147,6 +152,7 @@ function stoppoisoningandflareonspawn() {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_f868991e
 // Checksum 0x5c62abe8, Offset: 0xce8
 // Size: 0xc8
 function spawnplayerprediction() {
@@ -167,6 +173,7 @@ function spawnplayerprediction() {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_608568f5
 // Checksum 0x5be20e89, Offset: 0xdb8
 // Size: 0x1b4
 function doinitialspawnmessaging() {
@@ -202,6 +209,7 @@ function doinitialspawnmessaging() {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_1fee8319
 // Checksum 0x4a7c6038, Offset: 0xf78
 // Size: 0xe4c
 function spawnplayer() {
@@ -411,6 +419,7 @@ function spawnplayer() {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_7e08aae
 // Checksum 0x74f41757, Offset: 0x1dd0
 // Size: 0x9a
 function function_7e08aae() {
@@ -426,6 +435,7 @@ function function_7e08aae() {
 
 // Namespace globallogic_spawn
 // Params 1, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_a2c32efb
 // Checksum 0x7cceff6, Offset: 0x1e78
 // Size: 0x6c
 function function_a2c32efb(music) {
@@ -441,6 +451,7 @@ function function_a2c32efb(music) {
 
 // Namespace globallogic_spawn
 // Params 2, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_dedbb7c9
 // Checksum 0x2265af7f, Offset: 0x1ef0
 // Size: 0x4c
 function spawnspectator(origin, angles) {
@@ -451,6 +462,7 @@ function spawnspectator(origin, angles) {
 
 // Namespace globallogic_spawn
 // Params 2, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_a1bf9b89
 // Checksum 0x8c7d2b0b, Offset: 0x1f48
 // Size: 0x2c
 function respawn_asspectator(origin, angles) {
@@ -459,6 +471,7 @@ function respawn_asspectator(origin, angles) {
 
 // Namespace globallogic_spawn
 // Params 2, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_2e650f63
 // Checksum 0x7e69e83d, Offset: 0x1f80
 // Size: 0x194
 function in_spawnspectator(origin, angles) {
@@ -490,6 +503,7 @@ function in_spawnspectator(origin, angles) {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_29cfb1d
 // Checksum 0x7016011a, Offset: 0x2120
 // Size: 0x3c
 function spectatorthirdpersonness() {
@@ -502,6 +516,7 @@ function spectatorthirdpersonness() {
 
 // Namespace globallogic_spawn
 // Params 1, eflags: 0x0
+// namespace_7956eece<file_0>::function_7431d193
 // Checksum 0xc1058d4b, Offset: 0x2168
 // Size: 0xf4
 function forcespawn(time) {
@@ -528,6 +543,7 @@ function forcespawn(time) {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_a418f7cc
 // Checksum 0x15e21384, Offset: 0x2268
 // Size: 0x5c
 function kickifdontspawn() {
@@ -544,6 +560,7 @@ function kickifdontspawn() {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_e0811328
 // Checksum 0xd15b2892, Offset: 0x22d0
 // Size: 0x20c
 function kickifidontspawninternal() {
@@ -582,6 +599,7 @@ function kickifidontspawninternal() {
 
 // Namespace globallogic_spawn
 // Params 1, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_58062728
 // Checksum 0xc3eaefd6, Offset: 0x24e8
 // Size: 0x2c
 function kickwait(waittime) {
@@ -591,6 +609,7 @@ function kickwait(waittime) {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x0
+// namespace_7956eece<file_0>::function_f4876f2c
 // Checksum 0x56104739, Offset: 0x2520
 // Size: 0x13c
 function spawninterroundintermission() {
@@ -614,6 +633,7 @@ function spawninterroundintermission() {
 
 // Namespace globallogic_spawn
 // Params 2, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_8d9835ba
 // Checksum 0x464bcfd6, Offset: 0x2668
 // Size: 0x13c
 function spawnintermission(usedefaultcallback, endgame) {
@@ -640,6 +660,7 @@ function spawnintermission(usedefaultcallback, endgame) {
 
 // Namespace globallogic_spawn
 // Params 1, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_20ddc4c4
 // Checksum 0x75af9f0d, Offset: 0x27b0
 // Size: 0xd8
 function spawnqueuedclientonteam(team) {
@@ -661,6 +682,7 @@ function spawnqueuedclientonteam(team) {
 
 // Namespace globallogic_spawn
 // Params 2, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_dcb186d4
 // Checksum 0x554a5a3, Offset: 0x2890
 // Size: 0x152
 function spawnqueuedclient(dead_player_team, killer) {
@@ -686,6 +708,7 @@ function spawnqueuedclient(dead_player_team, killer) {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_a021ee79
 // Checksum 0xfccd6a23, Offset: 0x29f0
 // Size: 0xc4
 function allteamsnearscorelimit() {
@@ -705,6 +728,7 @@ function allteamsnearscorelimit() {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_59cc7caa
 // Checksum 0xa8575c1a, Offset: 0x2ac0
 // Size: 0x6e
 function shouldshowrespawnmessage() {
@@ -725,6 +749,7 @@ function shouldshowrespawnmessage() {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_f16225d
 // Checksum 0xdbf8cf33, Offset: 0x2b38
 // Size: 0x44
 function default_spawnmessage() {
@@ -734,6 +759,7 @@ function default_spawnmessage() {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_a559a720
 // Checksum 0x529475c1, Offset: 0x2b88
 // Size: 0x28
 function showspawnmessage() {
@@ -744,6 +770,7 @@ function showspawnmessage() {
 
 // Namespace globallogic_spawn
 // Params 1, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_f3db290b
 // Checksum 0xcac8abf5, Offset: 0x2bb8
 // Size: 0x194
 function spawnclient(timealreadypassed) {
@@ -773,6 +800,7 @@ function spawnclient(timealreadypassed) {
 
 // Namespace globallogic_spawn
 // Params 1, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_8deb5b1b
 // Checksum 0x680ac454, Offset: 0x2d58
 // Size: 0x5cc
 function waitandspawnclient(timealreadypassed) {
@@ -874,6 +902,7 @@ function waitandspawnclient(timealreadypassed) {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_8192db4b
 // Checksum 0x4df04495, Offset: 0x3330
 // Size: 0x48
 function waitrespawnorsafespawnbutton() {
@@ -889,6 +918,7 @@ function waitrespawnorsafespawnbutton() {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x0
+// namespace_7956eece<file_0>::function_a90f3701
 // Checksum 0xd8019057, Offset: 0x3380
 // Size: 0x90
 function waitinspawnqueue() {
@@ -904,6 +934,7 @@ function waitinspawnqueue() {
 
 // Namespace globallogic_spawn
 // Params 1, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_dc6304e9
 // Checksum 0x8d3d9ef6, Offset: 0x3418
 // Size: 0xec
 function setthirdperson(value) {
@@ -925,6 +956,7 @@ function setthirdperson(value) {
 
 // Namespace globallogic_spawn
 // Params 0, eflags: 0x1 linked
+// namespace_7956eece<file_0>::function_830143f3
 // Checksum 0xd9d7a8f8, Offset: 0x3510
 // Size: 0x4c
 function setspawnvariables() {

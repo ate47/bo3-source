@@ -15,6 +15,7 @@
 
 // Namespace counteruav
 // Params 0, eflags: 0x2
+// namespace_65ee1df9<file_0>::function_2dc19561
 // Checksum 0x6da9a314, Offset: 0x200
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -23,6 +24,7 @@ function autoexec function_2dc19561() {
 
 // Namespace counteruav
 // Params 0, eflags: 0x0
+// namespace_65ee1df9<file_0>::function_8c87d8eb
 // Checksum 0xeb419c88, Offset: 0x240
 // Size: 0x2c
 function __init__() {
@@ -31,6 +33,7 @@ function __init__() {
 
 // Namespace counteruav
 // Params 0, eflags: 0x0
+// namespace_65ee1df9<file_0>::function_3c868cce
 // Checksum 0x9251c15c, Offset: 0x278
 // Size: 0x188
 function function_3c868cce() {
@@ -54,6 +57,7 @@ function function_3c868cce() {
 
 // Namespace counteruav
 // Params 15, eflags: 0x0
+// namespace_65ee1df9<file_0>::function_160652f3
 // Checksum 0xe530170f, Offset: 0x408
 // Size: 0xd4
 function drone_callback_damage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {

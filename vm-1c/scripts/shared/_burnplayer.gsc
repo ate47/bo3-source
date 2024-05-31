@@ -8,6 +8,7 @@
 
 // Namespace burnplayer
 // Params 0, eflags: 0x2
+// namespace_97b5406d<file_0>::function_2dc19561
 // Checksum 0xfddb2fcd, Offset: 0x190
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,6 +17,7 @@ function autoexec function_2dc19561() {
 
 // Namespace burnplayer
 // Params 0, eflags: 0x1 linked
+// namespace_97b5406d<file_0>::function_8c87d8eb
 // Checksum 0x6b2ed257, Offset: 0x1d0
 // Size: 0x64
 function __init__() {
@@ -25,6 +27,7 @@ function __init__() {
 
 // Namespace burnplayer
 // Params 5, eflags: 0x1 linked
+// namespace_97b5406d<file_0>::function_890b79c9
 // Checksum 0x580dcdd8, Offset: 0x240
 // Size: 0xdc
 function setplayerburning(duration, interval, damageperinterval, attacker, weapon) {
@@ -38,6 +41,7 @@ function setplayerburning(duration, interval, damageperinterval, attacker, weapo
 
 // Namespace burnplayer
 // Params 3, eflags: 0x1 linked
+// namespace_97b5406d<file_0>::function_79202b29
 // Checksum 0x2a0c6c92, Offset: 0x328
 // Size: 0xac
 function takingburndamage(eattacker, weapon, smeansofdeath) {
@@ -56,6 +60,7 @@ function takingburndamage(eattacker, weapon, smeansofdeath) {
 
 // Namespace burnplayer
 // Params 0, eflags: 0x1 linked
+// namespace_97b5406d<file_0>::function_f61861fb
 // Checksum 0xa5df9b0b, Offset: 0x3e0
 // Size: 0x6c
 function watchburnfinished() {
@@ -67,6 +72,7 @@ function watchburnfinished() {
 
 // Namespace burnplayer
 // Params 1, eflags: 0x1 linked
+// namespace_97b5406d<file_0>::function_1d74cdc
 // Checksum 0x911e5abe, Offset: 0x458
 // Size: 0x52
 function watchburntimer(duration) {
@@ -80,6 +86,7 @@ function watchburntimer(duration) {
 
 // Namespace burnplayer
 // Params 4, eflags: 0x1 linked
+// namespace_97b5406d<file_0>::function_9059e14a
 // Checksum 0xbeac297d, Offset: 0x4b8
 // Size: 0xc2
 function watchburndamage(interval, damage, attacker, weapon) {
@@ -100,6 +107,7 @@ function watchburndamage(interval, damage, attacker, weapon) {
 
 // Namespace burnplayer
 // Params 0, eflags: 0x1 linked
+// namespace_97b5406d<file_0>::function_464bbd88
 // Checksum 0x46395752, Offset: 0x588
 // Size: 0x60
 function watchforwater() {

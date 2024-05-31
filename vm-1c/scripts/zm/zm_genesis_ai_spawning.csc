@@ -23,6 +23,7 @@
 
 // Namespace namespace_484ba32a
 // Params 0, eflags: 0x2
+// namespace_484ba32a<file_0>::function_2dc19561
 // Checksum 0x87b0eb1d, Offset: 0x4a0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -31,6 +32,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_484ba32a
 // Params 0, eflags: 0x1 linked
+// namespace_484ba32a<file_0>::function_8c87d8eb
 // Checksum 0xc08fb0de, Offset: 0x4e0
 // Size: 0x178
 function __init__() {
@@ -48,6 +50,7 @@ function __init__() {
 
 // Namespace namespace_484ba32a
 // Params 7, eflags: 0x1 linked
+// namespace_484ba32a<file_0>::function_74187aaf
 // Checksum 0xb6629f7d, Offset: 0x660
 // Size: 0xfc
 function function_74187aaf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -66,6 +69,7 @@ function function_74187aaf(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_484ba32a
 // Params 2, eflags: 0x1 linked
+// namespace_484ba32a<file_0>::function_3c75e14b
 // Checksum 0x9d968c9c, Offset: 0x768
 // Size: 0xdc
 function function_3c75e14b(localclientnum, onoff) {
@@ -86,6 +90,7 @@ function function_3c75e14b(localclientnum, onoff) {
 
 // Namespace namespace_484ba32a
 // Params 7, eflags: 0x1 linked
+// namespace_484ba32a<file_0>::function_ab98524a
 // Checksum 0xfc6157a9, Offset: 0x850
 // Size: 0x140
 function function_ab98524a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -112,6 +117,7 @@ function function_ab98524a(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace namespace_484ba32a
 // Params 1, eflags: 0x1 linked
+// namespace_484ba32a<file_0>::function_5ea6033e
 // Checksum 0x45c16de3, Offset: 0x998
 // Size: 0x104
 function function_5ea6033e(localclientnum) {
@@ -126,6 +132,7 @@ function function_5ea6033e(localclientnum) {
 
 // Namespace namespace_484ba32a
 // Params 1, eflags: 0x1 linked
+// namespace_484ba32a<file_0>::function_4dc56cc7
 // Checksum 0x3f7795df, Offset: 0xaa8
 // Size: 0x17c
 function function_4dc56cc7(localclientnum) {

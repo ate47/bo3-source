@@ -19,6 +19,7 @@
 
 // Namespace zm_attackables
 // Params 0, eflags: 0x2
+// namespace_ede0706c<file_0>::function_2dc19561
 // Checksum 0xd3ad68f8, Offset: 0x2f8
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -27,6 +28,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_attackables
 // Params 0, eflags: 0x1 linked
+// namespace_ede0706c<file_0>::function_8c87d8eb
 // Checksum 0xab6f11d8, Offset: 0x340
 // Size: 0x1a6
 function __init__() {
@@ -48,6 +50,7 @@ function __init__() {
 
 // Namespace zm_attackables
 // Params 0, eflags: 0x1 linked
+// namespace_ede0706c<file_0>::function_5b6b9132
 // Checksum 0x99ec1590, Offset: 0x4f0
 // Size: 0x4
 function __main__() {
@@ -56,6 +59,7 @@ function __main__() {
 
 // Namespace zm_attackables
 // Params 0, eflags: 0x1 linked
+// namespace_ede0706c<file_0>::function_db391b26
 // Checksum 0xb1b7fe98, Offset: 0x500
 // Size: 0x15c
 function get_attackable() {
@@ -82,6 +86,7 @@ function get_attackable() {
 
 // Namespace zm_attackables
 // Params 1, eflags: 0x1 linked
+// namespace_ede0706c<file_0>::function_79e00d21
 // Checksum 0x61fb08c, Offset: 0x668
 // Size: 0xd6
 function get_attackable_slot(entity) {
@@ -98,6 +103,7 @@ function get_attackable_slot(entity) {
 
 // Namespace zm_attackables
 // Params 0, eflags: 0x5 linked
+// namespace_ede0706c<file_0>::function_3f0ffd5a
 // Checksum 0xd7af7903, Offset: 0x748
 // Size: 0xe4
 function private clear_slots() {
@@ -114,6 +120,7 @@ function private clear_slots() {
 
 // Namespace zm_attackables
 // Params 0, eflags: 0x1 linked
+// namespace_ede0706c<file_0>::function_25294cfe
 // Checksum 0x6e4e8d03, Offset: 0x838
 // Size: 0x38
 function activate() {
@@ -125,6 +132,7 @@ function activate() {
 
 // Namespace zm_attackables
 // Params 0, eflags: 0x1 linked
+// namespace_ede0706c<file_0>::function_a5218027
 // Checksum 0xb70a0ad9, Offset: 0x878
 // Size: 0x10
 function deactivate() {
@@ -133,6 +141,7 @@ function deactivate() {
 
 // Namespace zm_attackables
 // Params 1, eflags: 0x1 linked
+// namespace_ede0706c<file_0>::function_d65827ea
 // Checksum 0x1522f874, Offset: 0x890
 // Size: 0x74
 function do_damage(damage) {
@@ -148,6 +157,7 @@ function do_damage(damage) {
 
 // Namespace zm_attackables
 // Params 1, eflags: 0x1 linked
+// namespace_ede0706c<file_0>::function_a22cb8ed
 // Checksum 0xbf7f2ea3, Offset: 0x910
 // Size: 0x9c
 function attackable_callback(entity) {

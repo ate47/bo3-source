@@ -9,6 +9,7 @@
 
 // Namespace namespace_2ef08cd1
 // Params 0, eflags: 0x2
+// namespace_2ef08cd1<file_0>::function_2dc19561
 // Checksum 0x4388266d, Offset: 0x4f8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_2ef08cd1
 // Params 0, eflags: 0x1 linked
+// namespace_2ef08cd1<file_0>::function_8c87d8eb
 // Checksum 0x14b25167, Offset: 0x538
 // Size: 0x24
 function __init__() {
@@ -25,6 +27,7 @@ function __init__() {
 
 // Namespace namespace_2ef08cd1
 // Params 1, eflags: 0x1 linked
+// namespace_2ef08cd1<file_0>::function_eaa5b495
 // Checksum 0x79cc3a39, Offset: 0x568
 // Size: 0x24
 function player_on_spawned(localclientnum) {
@@ -33,6 +36,7 @@ function player_on_spawned(localclientnum) {
 
 // Namespace namespace_2ef08cd1
 // Params 1, eflags: 0x1 linked
+// namespace_2ef08cd1<file_0>::function_94594df7
 // Checksum 0xceb2ebf0, Offset: 0x598
 // Size: 0x18e
 function watch_weapon_changes(localclientnum) {
@@ -62,6 +66,7 @@ function watch_weapon_changes(localclientnum) {
 
 // Namespace namespace_2ef08cd1
 // Params 1, eflags: 0x1 linked
+// namespace_2ef08cd1<file_0>::function_6c7c9327
 // Checksum 0x7052a51b, Offset: 0x730
 // Size: 0x16e
 function function_6c7c9327(localclientnum) {
@@ -80,6 +85,7 @@ function function_6c7c9327(localclientnum) {
 
 // Namespace namespace_2ef08cd1
 // Params 1, eflags: 0x1 linked
+// namespace_2ef08cd1<file_0>::function_a8ac2d1d
 // Checksum 0x14c08406, Offset: 0x8a8
 // Size: 0x2be
 function function_a8ac2d1d(localclientnum) {
@@ -104,6 +110,7 @@ function function_a8ac2d1d(localclientnum) {
 
 // Namespace namespace_2ef08cd1
 // Params 1, eflags: 0x1 linked
+// namespace_2ef08cd1<file_0>::function_99aba1a5
 // Checksum 0x1485465f, Offset: 0xb70
 // Size: 0xb2
 function function_99aba1a5(localclientnum) {
@@ -116,6 +123,7 @@ function function_99aba1a5(localclientnum) {
 
 // Namespace namespace_2ef08cd1
 // Params 1, eflags: 0x1 linked
+// namespace_2ef08cd1<file_0>::function_7645efdb
 // Checksum 0x6cbd7e65, Offset: 0xc30
 // Size: 0xb2
 function function_7645efdb(localclientnum) {
@@ -128,6 +136,7 @@ function function_7645efdb(localclientnum) {
 
 // Namespace namespace_2ef08cd1
 // Params 1, eflags: 0x1 linked
+// namespace_2ef08cd1<file_0>::function_3011ccf6
 // Checksum 0xbb81351a, Offset: 0xcf0
 // Size: 0x31e
 function function_3011ccf6(localclientnum) {

@@ -5,6 +5,7 @@
 
 // Namespace namespace_eb3fb2b6
 // Params 0, eflags: 0x1 linked
+// namespace_eb3fb2b6<file_0>::function_d290ebfa
 // Checksum 0x7328abba, Offset: 0x11d8
 // Size: 0x124
 function main() {
@@ -21,6 +22,7 @@ function main() {
 
 // Namespace namespace_eb3fb2b6
 // Params 0, eflags: 0x1 linked
+// namespace_eb3fb2b6<file_0>::function_f45953c
 // Checksum 0xb7cf7cfd, Offset: 0x1308
 // Size: 0x416
 function function_f45953c() {
@@ -65,6 +67,7 @@ function function_f45953c() {
 
 // Namespace namespace_eb3fb2b6
 // Params 0, eflags: 0x0
+// namespace_eb3fb2b6<file_0>::function_e6258024
 // Checksum 0xf369a7e, Offset: 0x1728
 // Size: 0x40e
 function function_e6258024() {
@@ -109,6 +112,7 @@ function function_e6258024() {
 
 // Namespace namespace_eb3fb2b6
 // Params 3, eflags: 0x1 linked
+// namespace_eb3fb2b6<file_0>::function_9b0b8f8e
 // Checksum 0x3095b104, Offset: 0x1b40
 // Size: 0x11a
 function trap_fx_monitor(name, loc, trap_type) {
@@ -129,6 +133,7 @@ function trap_fx_monitor(name, loc, trap_type) {
 
 // Namespace namespace_eb3fb2b6
 // Params 2, eflags: 0x1 linked
+// namespace_eb3fb2b6<file_0>::function_68c9b7de
 // Checksum 0x56bde681, Offset: 0x1c68
 // Size: 0x260
 function function_68c9b7de(loc, trap_type) {
@@ -172,6 +177,7 @@ function function_68c9b7de(loc, trap_type) {
 
 // Namespace namespace_eb3fb2b6
 // Params 2, eflags: 0x1 linked
+// namespace_eb3fb2b6<file_0>::function_3b3f16da
 // Checksum 0x8efbaf42, Offset: 0x1ed0
 // Size: 0x37a
 function function_3b3f16da(color, localclientnum) {

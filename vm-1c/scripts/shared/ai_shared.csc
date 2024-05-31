@@ -2,6 +2,7 @@
 
 // Namespace ai_shared
 // Params 0, eflags: 0x2
+// namespace_a94863d5<file_0>::function_d290ebfa
 // Checksum 0x92d15211, Offset: 0x78
 // Size: 0x1c
 function autoexec main() {
@@ -12,6 +13,7 @@ function autoexec main() {
 
 // Namespace ai
 // Params 1, eflags: 0x1 linked
+// namespace_d84e54db<file_0>::function_54bbe472
 // Checksum 0x1ab047e0, Offset: 0xa0
 // Size: 0x5e
 function add_ai_spawn_function(spawn_func) {
@@ -25,6 +27,7 @@ function add_ai_spawn_function(spawn_func) {
 
 // Namespace ai
 // Params 2, eflags: 0x1 linked
+// namespace_d84e54db<file_0>::function_906bdb6d
 // Checksum 0x5c316da5, Offset: 0x108
 // Size: 0x110
 function add_archetype_spawn_function(archetype, spawn_func) {
@@ -46,6 +49,7 @@ function add_archetype_spawn_function(archetype, spawn_func) {
 
 // Namespace ai
 // Params 1, eflags: 0x1 linked
+// namespace_d84e54db<file_0>::function_ba5ba8c5
 // Checksum 0xea9c8723, Offset: 0x220
 // Size: 0x104
 function spawned_callback(localclientnum) {
@@ -65,6 +69,7 @@ function spawned_callback(localclientnum) {
 
 // Namespace ai
 // Params 1, eflags: 0x1 linked
+// namespace_d84e54db<file_0>::function_310dd400
 // Checksum 0xa940b9ed, Offset: 0x330
 // Size: 0x48
 function shouldregisterclientfieldforarchetype(archetype) {

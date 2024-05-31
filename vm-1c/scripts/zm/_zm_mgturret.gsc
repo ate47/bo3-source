@@ -4,6 +4,7 @@
 
 // Namespace zm_mgturret
 // Params 0, eflags: 0x0
+// namespace_629dbab<file_0>::function_d290ebfa
 // Checksum 0x35bcd110, Offset: 0x168
 // Size: 0xce
 function main() {
@@ -19,6 +20,7 @@ function main() {
 
 // Namespace zm_mgturret
 // Params 1, eflags: 0x0
+// namespace_629dbab<file_0>::function_2cbbd6c9
 // Checksum 0xbf49ffea, Offset: 0x240
 // Size: 0x136
 function set_difficulty(difficulty) {
@@ -49,6 +51,7 @@ function set_difficulty(difficulty) {
 
 // Namespace zm_mgturret
 // Params 0, eflags: 0x1 linked
+// namespace_629dbab<file_0>::function_f2710fd4
 // Checksum 0x60546273, Offset: 0x380
 // Size: 0x2c4
 function init_turret_difficulty_settings() {
@@ -76,6 +79,7 @@ function init_turret_difficulty_settings() {
 
 // Namespace zm_mgturret
 // Params 2, eflags: 0x1 linked
+// namespace_629dbab<file_0>::function_34de2b92
 // Checksum 0x71a3412, Offset: 0x650
 // Size: 0xc8
 function turret_set_difficulty(turret, difficulty) {
@@ -88,6 +92,7 @@ function turret_set_difficulty(turret, difficulty) {
 
 // Namespace zm_mgturret
 // Params 1, eflags: 0x0
+// namespace_629dbab<file_0>::function_4584a25e
 // Checksum 0x83d70fd1, Offset: 0x720
 // Size: 0xc4
 function turret_suppression_fire(targets) {
@@ -110,6 +115,7 @@ function turret_suppression_fire(targets) {
 
 // Namespace zm_mgturret
 // Params 1, eflags: 0x1 linked
+// namespace_629dbab<file_0>::function_a6ee2100
 // Checksum 0xaab9269d, Offset: 0x7f0
 // Size: 0x76
 function burst_fire_settings(setting) {
@@ -129,6 +135,7 @@ function burst_fire_settings(setting) {
 
 // Namespace zm_mgturret
 // Params 2, eflags: 0x0
+// namespace_629dbab<file_0>::function_2b08cd30
 // Checksum 0x50606535, Offset: 0x870
 // Size: 0x24a
 function burst_fire(turret, manual_target) {
@@ -170,6 +177,7 @@ function burst_fire(turret, manual_target) {
 
 // Namespace zm_mgturret
 // Params 0, eflags: 0x0
+// namespace_629dbab<file_0>::function_d8f74413
 // Checksum 0xce8b1be, Offset: 0xac8
 // Size: 0x37c
 function burst_fire_unmanned() {
@@ -235,6 +243,7 @@ function burst_fire_unmanned() {
 
 // Namespace zm_mgturret
 // Params 1, eflags: 0x1 linked
+// namespace_629dbab<file_0>::function_f66d420d
 // Checksum 0x33ae99ac, Offset: 0xe50
 // Size: 0x3c
 function avoid_synchronization(time) {
@@ -248,6 +257,7 @@ function avoid_synchronization(time) {
 
 // Namespace zm_mgturret
 // Params 0, eflags: 0x1 linked
+// namespace_629dbab<file_0>::function_3d40493e
 // Checksum 0x9e8260b2, Offset: 0xe98
 // Size: 0x80
 function do_shoot() {
@@ -265,6 +275,7 @@ function do_shoot() {
 
 // Namespace zm_mgturret
 // Params 1, eflags: 0x1 linked
+// namespace_629dbab<file_0>::function_b353569
 // Checksum 0xfacae9f2, Offset: 0xf20
 // Size: 0x42
 function turret_timer(duration) {
@@ -280,6 +291,7 @@ function turret_timer(duration) {
 
 // Namespace zm_mgturret
 // Params 1, eflags: 0x1 linked
+// namespace_629dbab<file_0>::function_c47b9502
 // Checksum 0xd18a1c08, Offset: 0xf70
 // Size: 0x13c
 function random_spread(ent) {

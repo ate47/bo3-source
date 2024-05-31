@@ -4,6 +4,7 @@
 
 // Namespace namespace_c49c3ddb
 // Params 0, eflags: 0x1 linked
+// namespace_c49c3ddb<file_0>::function_c35e6aab
 // Checksum 0xf930f3aa, Offset: 0x880
 // Size: 0x14
 function init() {
@@ -12,6 +13,7 @@ function init() {
 
 // Namespace namespace_c49c3ddb
 // Params 0, eflags: 0x1 linked
+// namespace_c49c3ddb<file_0>::function_f45953c
 // Checksum 0xe46f271a, Offset: 0x8a0
 // Size: 0x39e
 function function_f45953c() {

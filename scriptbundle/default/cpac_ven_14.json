@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_ven_14",
+    "igdtseqnum": 179,
+    "challengeWidget": "HeavyWeapon",
+    "challengeDetails": "ACCOLADES_VEN_14",
+    "challengeName": "ACCOLADES_VEN_14_NAME",
+    "centerText": "10",
+    "challengeReference": "MISSION_VENGEANCE_CHALLENGE14"
+}

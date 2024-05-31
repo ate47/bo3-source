@@ -16,6 +16,7 @@
 
 // Namespace zm_perk_deadshot
 // Params 0, eflags: 0x2
+// namespace_56d7a026<file_0>::function_2dc19561
 // Checksum 0x592e8a9e, Offset: 0x350
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -24,6 +25,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_perk_deadshot
 // Params 0, eflags: 0x1 linked
+// namespace_56d7a026<file_0>::function_8c87d8eb
 // Checksum 0x32da6f01, Offset: 0x390
 // Size: 0x14
 function __init__() {
@@ -32,6 +34,7 @@ function __init__() {
 
 // Namespace zm_perk_deadshot
 // Params 0, eflags: 0x1 linked
+// namespace_56d7a026<file_0>::function_4928f643
 // Checksum 0x7da16b18, Offset: 0x3b0
 // Size: 0x12c
 function enable_deadshot_perk_for_level() {
@@ -45,6 +48,7 @@ function enable_deadshot_perk_for_level() {
 
 // Namespace zm_perk_deadshot
 // Params 0, eflags: 0x1 linked
+// namespace_56d7a026<file_0>::function_b8d4ab7d
 // Checksum 0x3b0dc8b3, Offset: 0x4e8
 // Size: 0xe0
 function deadshot_precache() {
@@ -61,6 +65,7 @@ function deadshot_precache() {
 
 // Namespace zm_perk_deadshot
 // Params 0, eflags: 0x1 linked
+// namespace_56d7a026<file_0>::function_b2e4b43f
 // Checksum 0x75d87402, Offset: 0x5d0
 // Size: 0x64
 function deadshot_register_clientfield() {
@@ -70,6 +75,7 @@ function deadshot_register_clientfield() {
 
 // Namespace zm_perk_deadshot
 // Params 1, eflags: 0x1 linked
+// namespace_56d7a026<file_0>::function_8bd0926c
 // Checksum 0x8ac41090, Offset: 0x640
 // Size: 0x2c
 function deadshot_set_clientfield(state) {
@@ -78,6 +84,7 @@ function deadshot_set_clientfield(state) {
 
 // Namespace zm_perk_deadshot
 // Params 4, eflags: 0x1 linked
+// namespace_56d7a026<file_0>::function_5618af8a
 // Checksum 0x85426269, Offset: 0x678
 // Size: 0xbc
 function deadshot_perk_machine_setup(use_trigger, perk_machine, bump_trigger, collision) {
@@ -94,6 +101,7 @@ function deadshot_perk_machine_setup(use_trigger, perk_machine, bump_trigger, co
 
 // Namespace zm_perk_deadshot
 // Params 0, eflags: 0x1 linked
+// namespace_56d7a026<file_0>::function_cc920406
 // Checksum 0xb467ca57, Offset: 0x740
 // Size: 0x24
 function give_deadshot_perk() {
@@ -102,6 +110,7 @@ function give_deadshot_perk() {
 
 // Namespace zm_perk_deadshot
 // Params 3, eflags: 0x1 linked
+// namespace_56d7a026<file_0>::function_34f06b20
 // Checksum 0xc1c76470, Offset: 0x770
 // Size: 0x3c
 function take_deadshot_perk(b_pause, str_perk, str_result) {

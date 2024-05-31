@@ -33,6 +33,7 @@
 
 // Namespace microwave_turret
 // Params 0, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_c35e6aab
 // Checksum 0x5964803c, Offset: 0x970
 // Size: 0x23c
 function init() {
@@ -52,6 +53,7 @@ function init() {
 
 // Namespace microwave_turret
 // Params 0, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_344a116b
 // Checksum 0xada05fe9, Offset: 0xbb8
 // Size: 0x14c
 function initturretvehicle() {
@@ -72,6 +74,7 @@ function initturretvehicle() {
 
 // Namespace microwave_turret
 // Params 0, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_aebcf025
 // Checksum 0xf5febb9c, Offset: 0xd10
 // Size: 0x1c
 function on_player_spawned() {
@@ -80,6 +83,7 @@ function on_player_spawned() {
 
 // Namespace microwave_turret
 // Params 0, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_82c5e7ec
 // Checksum 0xd795acc2, Offset: 0xd38
 // Size: 0x1c
 function on_vehicle_spawned() {
@@ -88,6 +92,7 @@ function on_vehicle_spawned() {
 
 // Namespace microwave_turret
 // Params 0, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_3ebd0dcc
 // Checksum 0xb875df0, Offset: 0xd60
 // Size: 0x16
 function reset_being_microwaved() {
@@ -97,6 +102,7 @@ function reset_being_microwaved() {
 
 // Namespace microwave_turret
 // Params 0, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_a6ec3693
 // Checksum 0x3db8207b, Offset: 0xd80
 // Size: 0x2c8
 function function_a6ec3693() {
@@ -125,6 +131,7 @@ function function_a6ec3693() {
 
 // Namespace microwave_turret
 // Params 1, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_b21f66a5
 // Checksum 0xe5113736, Offset: 0x1050
 // Size: 0x424
 function onplaceturret(turret) {
@@ -161,6 +168,7 @@ function onplaceturret(turret) {
 
 // Namespace microwave_turret
 // Params 1, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_da11acc
 // Checksum 0xd89a2a45, Offset: 0x1480
 // Size: 0x9c
 function hackedprefunction(hacker) {
@@ -172,6 +180,7 @@ function hackedprefunction(hacker) {
 
 // Namespace microwave_turret
 // Params 1, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_c373fcbb
 // Checksum 0x284327a6, Offset: 0x1528
 // Size: 0x3c
 function hackedpostfunction(hacker) {
@@ -181,6 +190,7 @@ function hackedpostfunction(hacker) {
 
 // Namespace microwave_turret
 // Params 1, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_48cb58dd
 // Checksum 0x74cf63c, Offset: 0x1570
 // Size: 0x1c
 function oncancelplacement(turret) {
@@ -189,6 +199,7 @@ function oncancelplacement(turret) {
 
 // Namespace microwave_turret
 // Params 1, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_5e504518
 // Checksum 0x444df70e, Offset: 0x1598
 // Size: 0xcc
 function onpickupturret(turret) {
@@ -202,6 +213,7 @@ function onpickupturret(turret) {
 
 // Namespace microwave_turret
 // Params 1, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_18ab2c03
 // Checksum 0xb643856f, Offset: 0x1670
 // Size: 0x34
 function function_18ab2c03(wait_time) {
@@ -212,6 +224,7 @@ function function_18ab2c03(wait_time) {
 
 // Namespace microwave_turret
 // Params 1, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_2eaa1320
 // Checksum 0x19110e16, Offset: 0x16b0
 // Size: 0x1c
 function onemp(attacker) {
@@ -220,6 +233,7 @@ function onemp(attacker) {
 
 // Namespace microwave_turret
 // Params 15, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_3574c1df
 // Checksum 0x2294d9ae, Offset: 0x16d8
 // Size: 0x138
 function onturretdamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -231,6 +245,7 @@ function onturretdamage(einflictor, eattacker, idamage, idflags, smeansofdeath, 
 
 // Namespace microwave_turret
 // Params 8, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_fd39f182
 // Checksum 0x3bf8aa93, Offset: 0x1818
 // Size: 0x32c
 function onturretdeath(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -262,6 +277,7 @@ function onturretdeath(einflictor, eattacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace microwave_turret
 // Params 8, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_397de1fe
 // Checksum 0x3cf83048, Offset: 0x1b50
 // Size: 0xe4
 function function_397de1fe(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -279,6 +295,7 @@ function function_397de1fe(einflictor, eattacker, idamage, smeansofdeath, weapon
 
 // Namespace microwave_turret
 // Params 1, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_6c415344
 // Checksum 0x95d65599, Offset: 0x1c40
 // Size: 0x8c
 function onshutdown(turret) {
@@ -292,6 +309,7 @@ function onshutdown(turret) {
 
 // Namespace microwave_turret
 // Params 2, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_dd009dff
 // Checksum 0xc31fff4d, Offset: 0x1cd8
 // Size: 0x54
 function function_dd009dff(killstreak_id, team) {
@@ -302,6 +320,7 @@ function function_dd009dff(killstreak_id, team) {
 
 // Namespace microwave_turret
 // Params 0, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_8d17105e
 // Checksum 0xefa9cfd6, Offset: 0x1d38
 // Size: 0x19c
 function startmicrowave() {
@@ -325,6 +344,7 @@ function startmicrowave() {
 
 // Namespace microwave_turret
 // Params 0, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_4a3759e4
 // Checksum 0x704aed9e, Offset: 0x1ee0
 // Size: 0x160
 function stopmicrowave() {
@@ -352,6 +372,7 @@ function stopmicrowave() {
 
 // Namespace microwave_turret
 // Params 0, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_2da8e9e5
 // Checksum 0x4ffeed07, Offset: 0x2048
 // Size: 0x74
 function turretdebugwatch() {
@@ -369,6 +390,7 @@ function turretdebugwatch() {
 
 // Namespace microwave_turret
 // Params 0, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_16f0c61c
 // Checksum 0x83388755, Offset: 0x20c8
 // Size: 0x12c
 function turretdebug() {
@@ -384,6 +406,7 @@ function turretdebug() {
 
 // Namespace microwave_turret
 // Params 0, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_e18d90b5
 // Checksum 0xcd51ce19, Offset: 0x2200
 // Size: 0x110
 function turretthink() {
@@ -408,6 +431,7 @@ function turretthink() {
 
 // Namespace microwave_turret
 // Params 1, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_3f606fe3
 // Checksum 0x2b0869d7, Offset: 0x2318
 // Size: 0xa8
 function microwaveentitypostshutdowncleanup(entity) {
@@ -425,6 +449,7 @@ function microwaveentitypostshutdowncleanup(entity) {
 
 // Namespace microwave_turret
 // Params 1, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_a86e75ed
 // Checksum 0x46c49b69, Offset: 0x23c8
 // Size: 0x6f8
 function microwaveentity(entity) {
@@ -505,6 +530,7 @@ function microwaveentity(entity) {
 
 // Namespace microwave_turret
 // Params 1, eflags: 0x1 linked
+// namespace_b825a589<file_0>::function_2e511215
 // Checksum 0xbf232e13, Offset: 0x2ac8
 // Size: 0x2ba
 function microwaveturretaffectsentity(entity) {

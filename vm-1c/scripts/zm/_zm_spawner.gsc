@@ -32,6 +32,7 @@
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_c35e6aab
 // Checksum 0x68af279, Offset: 0x10b0
 // Size: 0x20c
 function init() {
@@ -74,6 +75,7 @@ function init() {
 
     // Namespace zm_spawner
     // Params 0, eflags: 0x1 linked
+    // namespace_ae969b2b<file_0>::function_fa618012
     // Checksum 0x7f91a350, Offset: 0x12c8
     // Size: 0x468
     function debug_show_exterior_goals() {
@@ -118,6 +120,7 @@ function init() {
 
 // Namespace zm_spawner
 // Params 12, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_cb45f8b1
 // Checksum 0x60fcc9dc, Offset: 0x1738
 // Size: 0x1d4
 function function_cb45f8b1(player, amount, type, point, weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel) {
@@ -139,6 +142,7 @@ function function_cb45f8b1(player, amount, type, point, weapon, direction_vec, t
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_94b48f88
 // Checksum 0x4fc4f28d, Offset: 0x1918
 // Size: 0x2e
 function function_94b48f88(attacker) {
@@ -150,6 +154,7 @@ function function_94b48f88(attacker) {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_1612a0b8
 // Checksum 0xeba0a10c, Offset: 0x1950
 // Size: 0x168
 function function_1612a0b8() {
@@ -172,6 +177,7 @@ function function_1612a0b8() {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_8c5c2e62
 // Checksum 0xf1e01209, Offset: 0x1ac0
 // Size: 0xfa
 function is_spawner_targeted_by_blocker(ent) {
@@ -192,6 +198,7 @@ function is_spawner_targeted_by_blocker(ent) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_f532f99e
 // Checksum 0x238c77e2, Offset: 0x1bc8
 // Size: 0x3a
 function add_custom_zombie_spawn_logic(func) {
@@ -203,6 +210,7 @@ function add_custom_zombie_spawn_logic(func) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_63a51f54
 // Checksum 0xffa44670, Offset: 0x1c10
 // Size: 0x6ce
 function zombie_spawn_init(var_86a233b2) {
@@ -323,6 +331,7 @@ function zombie_spawn_init(var_86a233b2) {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_ae9b0147
 // Checksum 0x4972c634, Offset: 0x22e8
 // Size: 0x1de
 function zombie_damage_failsafe() {
@@ -353,6 +362,7 @@ function zombie_damage_failsafe() {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_6e266f55
 // Checksum 0xf413aa98, Offset: 0x24d0
 // Size: 0x58
 function should_skip_teardown(find_flesh_struct_string) {
@@ -367,6 +377,7 @@ function should_skip_teardown(find_flesh_struct_string) {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x0
+// namespace_ae969b2b<file_0>::function_8333c402
 // Checksum 0x78776b08, Offset: 0x2530
 // Size: 0x3b0
 function function_8333c402() {
@@ -419,6 +430,7 @@ function function_8333c402() {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_a7a6abf6
 // Checksum 0xf66f38bf, Offset: 0x28e8
 // Size: 0x180
 function zombie_think() {
@@ -453,6 +465,7 @@ function zombie_think() {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_e83d635c
 // Checksum 0xaddc3bd1, Offset: 0x2a70
 // Size: 0xf6
 function zombie_entered_playable() {
@@ -473,6 +486,7 @@ function zombie_entered_playable() {
 
 // Namespace zm_spawner
 // Params 2, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_1352119c
 // Checksum 0xf23e83cc, Offset: 0x2b70
 // Size: 0x278
 function function_1352119c(node, var_1b8f782b) {
@@ -510,6 +524,7 @@ function function_1352119c(node, var_1b8f782b) {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_888947fc
 // Checksum 0x48494aa9, Offset: 0x2df0
 // Size: 0x3a4
 function zombie_assure_node() {
@@ -558,6 +573,7 @@ function zombie_assure_node() {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_a192423b
 // Checksum 0x9828a6ea, Offset: 0x31a0
 // Size: 0x7e
 function zombie_bad_path() {
@@ -575,6 +591,7 @@ function zombie_bad_path() {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_84802c0d
 // Checksum 0x4ffd58bb, Offset: 0x3228
 // Size: 0x34
 function function_84802c0d() {
@@ -586,6 +603,7 @@ function function_84802c0d() {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_fd21703f
 // Checksum 0x9c9d9a33, Offset: 0x3268
 // Size: 0x2c
 function function_fd21703f() {
@@ -597,6 +615,7 @@ function function_fd21703f() {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_e322411
 // Checksum 0x95122476, Offset: 0x32a0
 // Size: 0x790
 function function_e322411() {
@@ -697,6 +716,7 @@ function function_e322411() {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_6c8781ef
 // Checksum 0x31b2dac2, Offset: 0x3a38
 // Size: 0x1cc
 function do_a_taunt() {
@@ -725,6 +745,7 @@ function do_a_taunt() {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_53deb81a
 // Checksum 0xcd4ff39d, Offset: 0x3c10
 // Size: 0x6a
 function taunt_notetracks(msg) {
@@ -740,6 +761,7 @@ function taunt_notetracks(msg) {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_68350f1
 // Checksum 0x4f13855a, Offset: 0x3c88
 // Size: 0x330
 function should_attack_player_thru_boards() {
@@ -780,6 +802,7 @@ function should_attack_player_thru_boards() {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_1eeede10
 // Checksum 0xc54a1e44, Offset: 0x3fc0
 // Size: 0x2d8
 function window_notetracks(msg) {
@@ -821,6 +844,7 @@ function window_notetracks(msg) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_9caec431
 // Checksum 0xa13f7de6, Offset: 0x42a0
 // Size: 0xd0
 function get_attack_spot(node) {
@@ -843,6 +867,7 @@ function get_attack_spot(node) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_aa5294e8
 // Checksum 0x894f9735, Offset: 0x4378
 // Size: 0xc8
 function get_attack_spot_index(node) {
@@ -863,6 +888,7 @@ function get_attack_spot_index(node) {
 
 // Namespace zm_spawner
 // Params 3, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_62a43d81
 // Checksum 0x5f01bb50, Offset: 0x4448
 // Size: 0xd8
 function zombie_tear_notetracks(msg, chunk, node) {
@@ -883,6 +909,7 @@ function zombie_tear_notetracks(msg, chunk, node) {
 
 // Namespace zm_spawner
 // Params 2, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_564f322
 // Checksum 0x2c7346f2, Offset: 0x4528
 // Size: 0x394
 function zombie_boardtear_offset_fx_horizontle(chunk, node) {
@@ -927,6 +954,7 @@ function zombie_boardtear_offset_fx_horizontle(chunk, node) {
 
 // Namespace zm_spawner
 // Params 2, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_275f0bb0
 // Checksum 0x81f82b71, Offset: 0x48c8
 // Size: 0x38c
 function zombie_boardtear_offset_fx_verticle(chunk, node) {
@@ -971,6 +999,7 @@ function zombie_boardtear_offset_fx_verticle(chunk, node) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x0
+// namespace_ae969b2b<file_0>::function_f46efee5
 // Checksum 0x455f089c, Offset: 0x4c60
 // Size: 0x5ae
 function zombie_bartear_offset_fx_verticle(chunk) {
@@ -1036,6 +1065,7 @@ function zombie_bartear_offset_fx_verticle(chunk) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x0
+// namespace_ae969b2b<file_0>::function_3f3f506f
 // Checksum 0x7bc1f402, Offset: 0x5218
 // Size: 0x446
 function zombie_bartear_offset_fx_horizontle(chunk) {
@@ -1084,6 +1114,7 @@ function zombie_bartear_offset_fx_horizontle(chunk) {
 
 // Namespace zm_spawner
 // Params 3, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_2030d172
 // Checksum 0x535ae2c8, Offset: 0x5668
 // Size: 0x84
 function check_zbarrier_piece_for_zombie_inert(chunk_index, zbarrier, zombie) {
@@ -1096,6 +1127,7 @@ function check_zbarrier_piece_for_zombie_inert(chunk_index, zbarrier, zombie) {
 
 // Namespace zm_spawner
 // Params 3, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_3d49c138
 // Checksum 0x332c081, Offset: 0x56f8
 // Size: 0xa4
 function check_zbarrier_piece_for_zombie_death(chunk_index, zbarrier, zombie) {
@@ -1113,6 +1145,7 @@ function check_zbarrier_piece_for_zombie_death(chunk_index, zbarrier, zombie) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x0
+// namespace_ae969b2b<file_0>::function_5d6ff2ef
 // Checksum 0xe9f4eee5, Offset: 0x57a8
 // Size: 0x3c
 function check_for_zombie_death(zombie) {
@@ -1123,6 +1156,7 @@ function check_for_zombie_death(zombie) {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_bb892ca5
 // Checksum 0xc7361f41, Offset: 0x57f0
 // Size: 0x2a
 function player_can_score_from_zombies() {
@@ -1134,6 +1168,7 @@ function player_can_score_from_zombies() {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_d6c178a8
 // Checksum 0x77ef676b, Offset: 0x5828
 // Size: 0x174
 function zombie_can_drop_powerups(zombie) {
@@ -1159,6 +1194,7 @@ function zombie_can_drop_powerups(zombie) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_1b6af62e
 // Checksum 0x595c1424, Offset: 0x59a8
 // Size: 0x34
 function function_1b6af62e(origin) {
@@ -1168,6 +1204,7 @@ function function_1b6af62e(origin) {
 
 // Namespace zm_spawner
 // Params 6, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_b3a70386
 // Checksum 0x59632ad0, Offset: 0x59e8
 // Size: 0x358
 function zombie_death_points(origin, mod, hit_location, attacker, zombie, team) {
@@ -1215,6 +1252,7 @@ function zombie_death_points(origin, mod, hit_location, attacker, zombie, team) 
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_25fa2662
 // Checksum 0xc50ddd77, Offset: 0x5d48
 // Size: 0x5e
 function get_number_variants(aliasprefix) {
@@ -1227,6 +1265,7 @@ function get_number_variants(aliasprefix) {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_1d18889c
 // Checksum 0x9cbb822d, Offset: 0x5db0
 // Size: 0x284
 function function_1d18889c() {
@@ -1261,6 +1300,7 @@ function function_1d18889c() {
 
 // Namespace zm_spawner
 // Params 2, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_aff3c129
 // Checksum 0xf2289e84, Offset: 0x6040
 // Size: 0x16c
 function zombie_ragdoll_then_explode(launchvector, attacker) {
@@ -1291,6 +1331,7 @@ function zombie_ragdoll_then_explode(launchvector, attacker) {
 
 // Namespace zm_spawner
 // Params 8, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_6cf4945d
 // Checksum 0xea00cb7e, Offset: 0x61b8
 // Size: 0x39c
 function zombie_death_animscript(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -1343,6 +1384,7 @@ function zombie_death_animscript(einflictor, attacker, idamage, smeansofdeath, w
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_1538b29d
 // Checksum 0xe0fb9317, Offset: 0x6560
 // Size: 0x62
 function check_zombie_death_animscript_callbacks() {
@@ -1359,6 +1401,7 @@ function check_zombie_death_animscript_callbacks() {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_6a0e8009
 // Checksum 0xf16fff1a, Offset: 0x65d0
 // Size: 0x3a
 function register_zombie_death_animscript_callback(func) {
@@ -1370,6 +1413,7 @@ function register_zombie_death_animscript_callback(func) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_5a36459d
 // Checksum 0x445cae19, Offset: 0x6618
 // Size: 0x1c8
 function damage_on_fire(player) {
@@ -1397,6 +1441,7 @@ function damage_on_fire(player) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_26a7d5bb
 // Checksum 0xa235bf48, Offset: 0x67e8
 // Size: 0x6a
 function player_using_hi_score_weapon(player) {
@@ -1409,6 +1454,7 @@ function player_using_hi_score_weapon(player) {
 
 // Namespace zm_spawner
 // Params 14, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_2725c6d1
 // Checksum 0x9d8e3dfe, Offset: 0x6860
 // Size: 0x724
 function zombie_damage(mod, hit_location, var_8a2b6fe5, player, amount, team, weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel) {
@@ -1492,6 +1538,7 @@ function zombie_damage(mod, hit_location, var_8a2b6fe5, player, amount, team, we
 
 // Namespace zm_spawner
 // Params 14, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_d0cf525a
 // Checksum 0xa204560c, Offset: 0x6f90
 // Size: 0x28c
 function function_d0cf525a(mod, hit_location, var_8a2b6fe5, player, amount, team, weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel) {
@@ -1532,6 +1579,7 @@ function function_d0cf525a(mod, hit_location, var_8a2b6fe5, player, amount, team
 
 // Namespace zm_spawner
 // Params 13, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_466facb5
 // Checksum 0x257bee37, Offset: 0x7228
 // Size: 0xfe
 function function_466facb5(mod, hit_location, var_8a2b6fe5, player, amount, weapon, direction_vec, tagname, modelname, partname, dflags, inflictor, chargelevel) {
@@ -1548,6 +1596,7 @@ function function_466facb5(mod, hit_location, var_8a2b6fe5, player, amount, weap
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_a1561a9d
 // Checksum 0x6902322f, Offset: 0x7330
 // Size: 0x3a
 function register_zombie_damage_callback(func) {
@@ -1559,6 +1608,7 @@ function register_zombie_damage_callback(func) {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_efdb50db
 // Checksum 0x2f053c8c, Offset: 0x7378
 // Size: 0x48
 function function_efdb50db() {
@@ -1571,6 +1621,7 @@ function function_efdb50db() {
 
 // Namespace zm_spawner
 // Params 2, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_6293b965
 // Checksum 0x52986543, Offset: 0x73c8
 // Size: 0x16c
 function zombie_flame_damage(mod, player) {
@@ -1599,6 +1650,7 @@ function zombie_flame_damage(mod, player) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_1acb147f
 // Checksum 0xe9b9123a, Offset: 0x7540
 // Size: 0x24
 function is_weapon_shotgun(weapon) {
@@ -1607,6 +1659,7 @@ function is_weapon_shotgun(weapon) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_479c8f18
 // Checksum 0x3edc84e4, Offset: 0x7570
 // Size: 0x12c
 function zombie_explodes_intopieces(random_gibs) {
@@ -1628,6 +1681,7 @@ function zombie_explodes_intopieces(random_gibs) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_a548dbb9
 // Checksum 0xf0f342c3, Offset: 0x76a8
 // Size: 0xbec
 function zombie_death_event(zombie) {
@@ -1767,6 +1821,7 @@ function zombie_death_event(zombie) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_2e6d7b0b
 // Checksum 0xa7f7e799, Offset: 0x82a0
 // Size: 0x64
 function check_zombie_death_event_callbacks(attacker) {
@@ -1780,6 +1835,7 @@ function check_zombie_death_event_callbacks(attacker) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_202d5265
 // Checksum 0x4eb7c596, Offset: 0x8310
 // Size: 0x3a
 function register_zombie_death_event_callback(func) {
@@ -1791,6 +1847,7 @@ function register_zombie_death_event_callback(func) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_d5b5054
 // Checksum 0xb2b73f21, Offset: 0x8358
 // Size: 0x34
 function deregister_zombie_death_event_callback(func) {
@@ -1801,6 +1858,7 @@ function deregister_zombie_death_event_callback(func) {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_f5a4e044
 // Checksum 0x35116976, Offset: 0x8398
 // Size: 0x60
 function zombie_setup_attack_properties() {
@@ -1814,6 +1872,7 @@ function zombie_setup_attack_properties() {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x0
+// namespace_ae969b2b<file_0>::function_8475ac13
 // Checksum 0xf0bb20c1, Offset: 0x8400
 // Size: 0x4c
 function attractors_generated_listener() {
@@ -1827,6 +1886,7 @@ function attractors_generated_listener() {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x0
+// namespace_ae969b2b<file_0>::function_fb112531
 // Checksum 0x5530c6df, Offset: 0x8458
 // Size: 0x4ac
 function function_fb112531() {
@@ -1905,6 +1965,7 @@ function function_fb112531() {
 
 // Namespace zm_spawner
 // Params 4, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_17df5af4
 // Checksum 0x9f832985, Offset: 0x8910
 // Size: 0x152
 function function_17df5af4(origin, breadcrumbs, var_6e71a45d, pick_random) {
@@ -1932,6 +1993,7 @@ function function_17df5af4(origin, breadcrumbs, var_6e71a45d, pick_random) {
 
 // Namespace zm_spawner
 // Params 2, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_766ac331
 // Checksum 0x8ba56a7, Offset: 0x8a70
 // Size: 0x5a
 function function_766ac331(crumb, var_6e71a45d) {
@@ -1945,6 +2007,7 @@ function function_766ac331(crumb, var_6e71a45d) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x0
+// namespace_ae969b2b<file_0>::function_401eaa59
 // Checksum 0x119e348d, Offset: 0x8ad8
 // Size: 0x278
 function function_401eaa59(var_93aaf9e3) {
@@ -1975,6 +2038,7 @@ function function_401eaa59(var_93aaf9e3) {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_59e041ed
 // Checksum 0x23ebd865, Offset: 0x8d58
 // Size: 0xa4
 function function_59e041ed() {
@@ -1992,6 +2056,7 @@ function function_59e041ed() {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_2877d890
 // Checksum 0xe2a530e4, Offset: 0x8e08
 // Size: 0x3e8
 function function_2877d890() {
@@ -2059,6 +2124,7 @@ function function_2877d890() {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_c0464b42
 // Checksum 0xa0ab68bb, Offset: 0x91f8
 // Size: 0x52
 function zombie_history(msg) {
@@ -2072,6 +2138,7 @@ function zombie_history(msg) {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_50b1a577
 // Checksum 0x7b9ee757, Offset: 0x9258
 // Size: 0x728
 function do_zombie_spawn() {
@@ -2160,6 +2227,7 @@ function do_zombie_spawn() {
 
     // Namespace zm_spawner
     // Params 0, eflags: 0x1 linked
+    // namespace_ae969b2b<file_0>::function_c77f0242
     // Checksum 0xcf13338c, Offset: 0x9988
     // Size: 0x58
     function draw_zone_spawned_from() {
@@ -2174,6 +2242,7 @@ function do_zombie_spawn() {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_7b062181
 // Checksum 0x253e8d86, Offset: 0x99e8
 // Size: 0x446
 function do_zombie_rise(spot) {
@@ -2232,6 +2301,7 @@ function do_zombie_rise(spot) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_4f66586
 // Checksum 0xc74592ea, Offset: 0x9e38
 // Size: 0xb2
 function zombie_rise_fx(zombie) {
@@ -2251,6 +2321,7 @@ function zombie_rise_fx(zombie) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_e3071dfb
 // Checksum 0x1700ee43, Offset: 0x9ef8
 // Size: 0x22c
 function zombie_rise_burst_fx(zombie) {
@@ -2282,6 +2353,7 @@ function zombie_rise_burst_fx(zombie) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_af6ed0e9
 // Checksum 0xef582f9c, Offset: 0xa130
 // Size: 0x256
 function zombie_rise_dust_fx(zombie) {
@@ -2320,6 +2392,7 @@ function zombie_rise_dust_fx(zombie) {
 
 // Namespace zm_spawner
 // Params 1, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_f4618b56
 // Checksum 0xbba038df, Offset: 0xa390
 // Size: 0x26
 function function_f4618b56(zombie) {
@@ -2329,6 +2402,7 @@ function function_f4618b56(zombie) {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_2777b1df
 // Checksum 0x65d65615, Offset: 0xa3c0
 // Size: 0xc4
 function zombie_tesla_head_gib() {
@@ -2346,6 +2420,7 @@ function zombie_tesla_head_gib() {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_5f6586cc
 // Checksum 0x30bf2f57, Offset: 0xa490
 // Size: 0x1b8
 function play_ambient_zombie_vocals() {
@@ -2387,6 +2462,7 @@ function play_ambient_zombie_vocals() {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_1bfa6f52
 // Checksum 0xc5fbc20f, Offset: 0xa650
 // Size: 0xb4
 function zombie_complete_emerging_into_playable_area() {
@@ -2405,6 +2481,7 @@ function zombie_complete_emerging_into_playable_area() {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_60389561
 // Checksum 0x33278b9c, Offset: 0xa710
 // Size: 0x3c
 function function_60389561() {
@@ -2418,6 +2495,7 @@ function function_60389561() {
 
 // Namespace zm_spawner
 // Params 0, eflags: 0x1 linked
+// namespace_ae969b2b<file_0>::function_525366e2
 // Checksum 0x92e4f341, Offset: 0xa758
 // Size: 0x34
 function function_525366e2() {

@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_zur_14",
+    "igdtseqnum": 196,
+    "challengeWidget": "HeavyWeapon",
+    "challengeDetails": "ACCOLADES_ZUR_14",
+    "challengeName": "ACCOLADES_ZUR_14_NAME",
+    "centerText": "20",
+    "challengeReference": "MISSION_ZURICH_CHALLENGE14"
+}

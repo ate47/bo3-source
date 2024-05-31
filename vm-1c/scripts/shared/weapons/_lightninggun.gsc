@@ -15,6 +15,7 @@
 
 // Namespace lightninggun
 // Params 0, eflags: 0x1 linked
+// namespace_2c46c1a5<file_0>::function_1463e4e5
 // Checksum 0x4d8bfbf6, Offset: 0x358
 // Size: 0x184
 function init_shared() {
@@ -40,6 +41,7 @@ function init_shared() {
 
     // Namespace lightninggun
     // Params 0, eflags: 0x1 linked
+    // namespace_2c46c1a5<file_0>::function_e198c2c5
     // Checksum 0x33cc7e23, Offset: 0x4e8
     // Size: 0x90
     function update_dvars() {
@@ -55,6 +57,7 @@ function init_shared() {
 
 // Namespace lightninggun
 // Params 1, eflags: 0x1 linked
+// namespace_2c46c1a5<file_0>::function_b3d1a13b
 // Checksum 0xb8a571b7, Offset: 0x580
 // Size: 0x9c
 function lightninggun_start_damage_effects(eattacker) {
@@ -74,6 +77,7 @@ function lightninggun_start_damage_effects(eattacker) {
 
 // Namespace lightninggun
 // Params 5, eflags: 0x1 linked
+// namespace_2c46c1a5<file_0>::function_1e67f6e0
 // Checksum 0xd1b58d17, Offset: 0x628
 // Size: 0xb4
 function lightninggun_arc_killcam(arc_source_pos, arc_target, arc_target_pos, original_killcam_ent, waittime) {
@@ -84,6 +88,7 @@ function lightninggun_arc_killcam(arc_source_pos, arc_target, arc_target_pos, or
 
 // Namespace lightninggun
 // Params 5, eflags: 0x1 linked
+// namespace_2c46c1a5<file_0>::function_97409d19
 // Checksum 0xf3e1e87a, Offset: 0x6e8
 // Size: 0x282
 function lightninggun_arc_fx(arc_source_pos, arc_target, arc_target_pos, distancesq, original_killcam_ent) {
@@ -125,6 +130,7 @@ function lightninggun_arc_fx(arc_source_pos, arc_target, arc_target_pos, distanc
 
 // Namespace lightninggun
 // Params 8, eflags: 0x1 linked
+// namespace_2c46c1a5<file_0>::function_377840f8
 // Checksum 0xf42cca32, Offset: 0x978
 // Size: 0x164
 function lightninggun_arc(delay, eattacker, arc_source, arc_source_origin, arc_source_pos, arc_target, arc_target_pos, distancesq) {
@@ -151,6 +157,7 @@ function lightninggun_arc(delay, eattacker, arc_source, arc_source_origin, arc_s
 
 // Namespace lightninggun
 // Params 4, eflags: 0x1 linked
+// namespace_2c46c1a5<file_0>::function_c40e18a7
 // Checksum 0x17c5dc1a, Offset: 0xae8
 // Size: 0x23c
 function lightninggun_find_arc_targets(eattacker, arc_source, arc_source_origin, arc_source_pos) {
@@ -183,6 +190,7 @@ function lightninggun_find_arc_targets(eattacker, arc_source, arc_source_origin,
 
 // Namespace lightninggun
 // Params 3, eflags: 0x1 linked
+// namespace_2c46c1a5<file_0>::function_edbad9f9
 // Checksum 0x2ac7397f, Offset: 0xd30
 // Size: 0x98
 function create_killcam_entity(origin, angles, weapon) {
@@ -195,6 +203,7 @@ function create_killcam_entity(origin, angles, weapon) {
 
 // Namespace lightninggun
 // Params 3, eflags: 0x1 linked
+// namespace_2c46c1a5<file_0>::function_b9f3f3c6
 // Checksum 0x553f1292, Offset: 0xdd0
 // Size: 0x140
 function killcam_move(start_origin, end_origin, time) {
@@ -215,6 +224,7 @@ function killcam_move(start_origin, end_origin, time) {
 
 // Namespace lightninggun
 // Params 5, eflags: 0x1 linked
+// namespace_2c46c1a5<file_0>::function_8eeb60f
 // Checksum 0xc9ea10c6, Offset: 0xf18
 // Size: 0x252
 function lightninggun_damage_response(eattacker, einflictor, weapon, meansofdeath, damage) {
@@ -248,6 +258,7 @@ function lightninggun_damage_response(eattacker, einflictor, weapon, meansofdeat
 
 // Namespace lightninggun
 // Params 5, eflags: 0x1 linked
+// namespace_2c46c1a5<file_0>::function_5df309b9
 // Checksum 0x9b115f62, Offset: 0x1178
 // Size: 0x74
 function on_damage_lightninggun(eattacker, einflictor, weapon, meansofdeath, damage) {

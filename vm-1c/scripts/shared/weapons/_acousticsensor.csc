@@ -8,6 +8,7 @@
 
 // Namespace namespace_efc40536
 // Params 0, eflags: 0x0
+// namespace_efc40536<file_0>::function_1463e4e5
 // Checksum 0xf92c74cf, Offset: 0x1a8
 // Size: 0xb4
 function init_shared() {
@@ -25,6 +26,7 @@ function init_shared() {
 
 // Namespace namespace_efc40536
 // Params 1, eflags: 0x0
+// namespace_efc40536<file_0>::function_fb4f96b5
 // Checksum 0xadac86c9, Offset: 0x268
 // Size: 0x44
 function on_player_connect(localclientnum) {
@@ -36,6 +38,7 @@ function on_player_connect(localclientnum) {
 
 // Namespace namespace_efc40536
 // Params 3, eflags: 0x0
+// namespace_efc40536<file_0>::function_bb05d439
 // Checksum 0x4bc47850, Offset: 0x2b8
 // Size: 0x9e
 function function_bb05d439(handle, var_f0a669b2, owner) {
@@ -49,6 +52,7 @@ function function_bb05d439(handle, var_f0a669b2, owner) {
 
 // Namespace namespace_efc40536
 // Params 1, eflags: 0x0
+// namespace_efc40536<file_0>::function_98918d12
 // Checksum 0x1538f359, Offset: 0x360
 // Size: 0x114
 function function_98918d12(var_e19ee9a4) {
@@ -66,6 +70,7 @@ function function_98918d12(var_e19ee9a4) {
 
 // Namespace namespace_efc40536
 // Params 1, eflags: 0x0
+// namespace_efc40536<file_0>::function_ab1f9ea1
 // Checksum 0x39bf2601, Offset: 0x480
 // Size: 0xa4
 function spawned(localclientnum) {
@@ -79,6 +84,7 @@ function spawned(localclientnum) {
 
 // Namespace namespace_efc40536
 // Params 1, eflags: 0x0
+// namespace_efc40536<file_0>::function_8bbd150b
 // Checksum 0x121b875f, Offset: 0x530
 // Size: 0x54
 function function_8bbd150b(localclientnum) {
@@ -88,6 +94,7 @@ function function_8bbd150b(localclientnum) {
 
 // Namespace namespace_efc40536
 // Params 1, eflags: 0x0
+// namespace_efc40536<file_0>::function_e42ff528
 // Checksum 0x5b6ad378, Offset: 0x590
 // Size: 0x2c
 function watchshutdown(handle) {
@@ -97,6 +104,7 @@ function watchshutdown(handle) {
 
 // Namespace namespace_efc40536
 // Params 0, eflags: 0x0
+// namespace_efc40536<file_0>::function_e128e674
 // Checksum 0xf132eb, Offset: 0x5c8
 // Size: 0x234
 function function_e128e674() {

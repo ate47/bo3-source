@@ -4,6 +4,7 @@
 
 // Namespace animationstatenetworkutility
 // Params 2, eflags: 0x1 linked
+// namespace_54aac76e<file_0>::function_6e632edf
 // Checksum 0x435607bf, Offset: 0xc0
 // Size: 0x4c
 function requeststate(entity, statename) {
@@ -13,6 +14,7 @@ function requeststate(entity, statename) {
 
 // Namespace animationstatenetworkutility
 // Params 2, eflags: 0x1 linked
+// namespace_54aac76e<file_0>::function_fe9126b5
 // Checksum 0xbe537519, Offset: 0x118
 // Size: 0x84
 function searchanimationmap(entity, aliasname) {

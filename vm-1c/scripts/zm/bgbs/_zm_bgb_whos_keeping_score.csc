@@ -9,6 +9,7 @@
 
 // Namespace zm_bgb_whos_keeping_score
 // Params 0, eflags: 0x2
+// namespace_3f74549<file_0>::function_2dc19561
 // Checksum 0x57f939cb, Offset: 0x158
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_whos_keeping_score
 // Params 0, eflags: 0x1 linked
+// namespace_3f74549<file_0>::function_8c87d8eb
 // Checksum 0x5c276fd0, Offset: 0x198
 // Size: 0x3c
 function __init__() {

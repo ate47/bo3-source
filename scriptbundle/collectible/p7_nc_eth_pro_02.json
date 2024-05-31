@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_eth_pro_02",
+    "type": "collectible",
+    "igdtseqnum": 46,
+    "uiMaterial": "t7_icon_menu_p7_nc_eth_pro_02",
+    "uiModelWithStand": "p7_nc_eth_pro_02_with_stand",
+    "uiModel": "p7_nc_eth_pro_02",
+    "description": "COLLECTIBLE_P7_NC_ETH_PRO_02_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_ETH_PRO_02_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_NRC_EARPIECE",
+    "displayNameShort": "COLLECTIBLE_P7_NC_ETH_PRO_02_SHORT",
+    "codexurl": "Collectables-NRCCommsEarpiece.htm",
+    "slotSize": 0
+}

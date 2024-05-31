@@ -1,0 +1,11 @@
+{
+    "vmtype": "none",
+    "name": "cpac_ram_01",
+    "igdtseqnum": 128,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Score",
+    "challengeDetails": "ACCOLADES_RAM_1",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_RAM_1_NAME",
+    "challengeReference": "MISSION_RAMSES_SCORE"
+}

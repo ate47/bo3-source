@@ -14,6 +14,7 @@
 
 // Namespace globallogic_actor
 // Params 1, eflags: 0x1 linked
+// namespace_c0611484<file_0>::function_57d44fe8
 // Checksum 0x991275da, Offset: 0x2d8
 // Size: 0x3c
 function callback_actorspawned(spawner) {
@@ -23,6 +24,7 @@ function callback_actorspawned(spawner) {
 
 // Namespace globallogic_actor
 // Params 15, eflags: 0x1 linked
+// namespace_c0611484<file_0>::function_58830695
 // Checksum 0x92aa45a9, Offset: 0x320
 // Size: 0xabc
 function callback_actordamage(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, boneindex, modelindex, surfacetype, vsurfacenormal) {
@@ -154,6 +156,7 @@ function callback_actordamage(einflictor, eattacker, idamage, idflags, smeansofd
 
 // Namespace globallogic_actor
 // Params 8, eflags: 0x1 linked
+// namespace_c0611484<file_0>::function_d8b85c1d
 // Checksum 0x538ebcb2, Offset: 0xde8
 // Size: 0x1ac
 function callback_actorkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime) {
@@ -179,6 +182,7 @@ function callback_actorkilled(einflictor, attacker, idamage, smeansofdeath, weap
 
 // Namespace globallogic_actor
 // Params 1, eflags: 0x1 linked
+// namespace_c0611484<file_0>::function_fba682d3
 // Checksum 0x399f3fb7, Offset: 0xfa0
 // Size: 0x3c
 function callback_actorcloned(original) {

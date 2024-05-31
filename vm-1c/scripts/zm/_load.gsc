@@ -51,6 +51,7 @@
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_d290ebfa
 // Checksum 0x85a46ec4, Offset: 0x7c0
 // Size: 0x11c
 function main() {
@@ -70,6 +71,7 @@ function main() {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_cade3606
 // Checksum 0x4240b549, Offset: 0x8e8
 // Size: 0x23c
 function footsteps() {
@@ -97,6 +99,7 @@ function footsteps() {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_bc375eca
 // Checksum 0x99ec1590, Offset: 0xb30
 // Size: 0x4
 function setup_traversals() {
@@ -105,6 +108,7 @@ function setup_traversals() {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_64e2eb95
 // Checksum 0xbe8a0915, Offset: 0xb40
 // Size: 0x94
 function start_intro_screen_zm() {
@@ -118,6 +122,7 @@ function start_intro_screen_zm() {
 
 // Namespace load
 // Params 0, eflags: 0x1 linked
+// namespace_d7916d65<file_0>::function_4ece4a2f
 // Checksum 0xe474fa, Offset: 0xbe0
 // Size: 0xc4
 function register_clientfields() {

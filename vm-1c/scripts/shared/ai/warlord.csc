@@ -6,6 +6,7 @@
 
 // Namespace warlord
 // Params 0, eflags: 0x2
+// namespace_2cbc0af0<file_0>::function_2dc19561
 // Checksum 0xbac6971b, Offset: 0x3c0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -14,6 +15,7 @@ function autoexec function_2dc19561() {
 
 // Namespace warlord
 // Params 0, eflags: 0x2
+// namespace_2cbc0af0<file_0>::function_f7046c76
 // Checksum 0x6ab4e328, Offset: 0x400
 // Size: 0xe2
 function autoexec precache() {
@@ -29,6 +31,7 @@ function autoexec precache() {
 
 // Namespace warlord
 // Params 0, eflags: 0x1 linked
+// namespace_2cbc0af0<file_0>::function_8c87d8eb
 // Checksum 0x64a4deb8, Offset: 0x4f0
 // Size: 0x13c
 function __init__() {
@@ -44,6 +47,7 @@ function __init__() {
 
 // Namespace namespace_e95b29c8
 // Params 7, eflags: 0x1 linked
+// namespace_e95b29c8<file_0>::function_695d7dee
 // Checksum 0xe0444911, Offset: 0x638
 // Size: 0x22e
 function function_695d7dee(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -74,6 +78,7 @@ function function_695d7dee(localclientnum, oldvalue, newvalue, bnewent, binitial
 
 // Namespace namespace_e95b29c8
 // Params 7, eflags: 0x1 linked
+// namespace_e95b29c8<file_0>::function_6765fb9c
 // Checksum 0x6af2e411, Offset: 0x870
 // Size: 0x60
 function function_6765fb9c(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -83,6 +88,7 @@ function function_6765fb9c(localclientnum, oldvalue, newvalue, bnewent, binitial
 
 // Namespace namespace_e95b29c8
 // Params 7, eflags: 0x1 linked
+// namespace_e95b29c8<file_0>::function_a4d15a01
 // Checksum 0xf139463b, Offset: 0x8d8
 // Size: 0x25c
 function function_a4d15a01(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -118,6 +124,7 @@ function function_a4d15a01(localclientnum, oldvalue, newvalue, bnewent, binitial
 
 // Namespace namespace_e95b29c8
 // Params 7, eflags: 0x1 linked
+// namespace_e95b29c8<file_0>::function_5620f99
 // Checksum 0xbf029161, Offset: 0xb40
 // Size: 0xc4
 function function_5620f99(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {

@@ -1,0 +1,17 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_zur_nw_03",
+    "type": "collectible",
+    "igdtseqnum": 88,
+    "uiMaterial": "t7_icon_menu_p7_nc_zur_nw_03",
+    "uiModelWithStand": "p7_nc_zur_nw_03_with_stand",
+    "uiModel": "p7_nc_zur_nw_03",
+    "description": "COLLECTIBLE_P7_NC_ZUR_NW_03_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_ZUR_NW_03_LONG",
+    "audiolog_sound": "vox_safe_rail_map_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_RAIL_MAP",
+    "displayNameShort": "COLLECTIBLE_P7_NC_ZUR_NW_03_SHORT",
+    "codexurl": "Collectables-InteractiveRailMap.htm",
+    "slotSize": 0
+}

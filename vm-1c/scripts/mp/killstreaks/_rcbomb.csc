@@ -13,6 +13,7 @@
 
 // Namespace rcbomb
 // Params 0, eflags: 0x2
+// namespace_13416574<file_0>::function_2dc19561
 // Checksum 0x5841e3e2, Offset: 0x3f8
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -21,6 +22,7 @@ function autoexec function_2dc19561() {
 
 // Namespace rcbomb
 // Params 0, eflags: 0x1 linked
+// namespace_13416574<file_0>::function_8c87d8eb
 // Checksum 0xc34ec220, Offset: 0x438
 // Size: 0x124
 function __init__() {
@@ -36,6 +38,7 @@ function __init__() {
 
 // Namespace rcbomb
 // Params 1, eflags: 0x1 linked
+// namespace_13416574<file_0>::function_ab1f9ea1
 // Checksum 0x589b0510, Offset: 0x568
 // Size: 0xac
 function spawned(localclientnum) {
@@ -50,6 +53,7 @@ function spawned(localclientnum) {
 
 // Namespace rcbomb
 // Params 1, eflags: 0x1 linked
+// namespace_13416574<file_0>::function_f402ff1d
 // Checksum 0xe2b080b1, Offset: 0x620
 // Size: 0x70
 function demo_think(localclientnum) {
@@ -65,6 +69,7 @@ function demo_think(localclientnum) {
 
 // Namespace rcbomb
 // Params 1, eflags: 0x1 linked
+// namespace_13416574<file_0>::function_a0a95316
 // Checksum 0x92166ed, Offset: 0x698
 // Size: 0xec
 function boost_blur(localclientnum) {
@@ -78,6 +83,7 @@ function boost_blur(localclientnum) {
 
 // Namespace rcbomb
 // Params 1, eflags: 0x1 linked
+// namespace_13416574<file_0>::function_8f366363
 // Checksum 0xbbe128ca, Offset: 0x790
 // Size: 0x40
 function boost_think(localclientnum) {
@@ -90,6 +96,7 @@ function boost_think(localclientnum) {
 
 // Namespace rcbomb
 // Params 1, eflags: 0x1 linked
+// namespace_13416574<file_0>::function_afc2dc96
 // Checksum 0x352b2b00, Offset: 0x7d8
 // Size: 0x2c
 function shutdown_think(localclientnum) {
@@ -99,6 +106,7 @@ function shutdown_think(localclientnum) {
 
 // Namespace rcbomb
 // Params 1, eflags: 0x0
+// namespace_13416574<file_0>::function_3e13e5c5
 // Checksum 0xe90b31e1, Offset: 0x810
 // Size: 0xc
 function function_3e13e5c5(localclientnum) {
@@ -107,6 +115,7 @@ function function_3e13e5c5(localclientnum) {
 
 // Namespace rcbomb
 // Params 1, eflags: 0x0
+// namespace_13416574<file_0>::function_ba7b10a6
 // Checksum 0xcf6f7b27, Offset: 0x828
 // Size: 0xc
 function function_ba7b10a6(localclientnum) {
@@ -115,6 +124,7 @@ function function_ba7b10a6(localclientnum) {
 
 // Namespace rcbomb
 // Params 1, eflags: 0x0
+// namespace_13416574<file_0>::function_99f36ceb
 // Checksum 0xa1ee086d, Offset: 0x840
 // Size: 0x122
 function function_99f36ceb(localclientnum) {
@@ -139,6 +149,7 @@ function function_99f36ceb(localclientnum) {
 
 // Namespace rcbomb
 // Params 1, eflags: 0x0
+// namespace_13416574<file_0>::function_309b34f0
 // Checksum 0x6453fcfe, Offset: 0x970
 // Size: 0x90
 function play_boost_fx(localclientnum) {
@@ -155,6 +166,7 @@ function play_boost_fx(localclientnum) {
 
 // Namespace rcbomb
 // Params 1, eflags: 0x1 linked
+// namespace_13416574<file_0>::function_d8e77882
 // Checksum 0x949acdba, Offset: 0xa08
 // Size: 0x90
 function stunnedhandler(localclientnum) {
@@ -170,6 +182,7 @@ function stunnedhandler(localclientnum) {
 
 // Namespace rcbomb
 // Params 1, eflags: 0x1 linked
+// namespace_13416574<file_0>::function_499a142f
 // Checksum 0x1e3e0337, Offset: 0xaa0
 // Size: 0x44
 function notstunnedhandler(localclientnum) {
@@ -181,6 +194,7 @@ function notstunnedhandler(localclientnum) {
 
 // Namespace rcbomb
 // Params 1, eflags: 0x1 linked
+// namespace_13416574<file_0>::function_8b1557cd
 // Checksum 0x8c318aa1, Offset: 0xaf0
 // Size: 0x70
 function play_stunned_fx_handler(localclientnum) {
@@ -195,6 +209,7 @@ function play_stunned_fx_handler(localclientnum) {
 
 // Namespace rcbomb
 // Params 1, eflags: 0x1 linked
+// namespace_13416574<file_0>::function_b603346e
 // Checksum 0x13a9b3a4, Offset: 0xb68
 // Size: 0x98
 function enginestutterhandler(localclientnum) {
@@ -212,6 +227,7 @@ function enginestutterhandler(localclientnum) {
 
 // Namespace rcbomb
 // Params 5, eflags: 0x1 linked
+// namespace_13416574<file_0>::function_8b3759b3
 // Checksum 0xfacf62c9, Offset: 0xc08
 // Size: 0x124
 function ondrivingfxcollision(localclientnum, player, hip, hitn, hit_intensity) {
@@ -230,6 +246,7 @@ function ondrivingfxcollision(localclientnum, player, hip, hitn, hit_intensity) 
 
 // Namespace rcbomb
 // Params 2, eflags: 0x1 linked
+// namespace_13416574<file_0>::function_6a5da12e
 // Checksum 0xebcdba72, Offset: 0xd38
 // Size: 0x14
 function ondrivingfxjumplanding(localclientnum, player) {

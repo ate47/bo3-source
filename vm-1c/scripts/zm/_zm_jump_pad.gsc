@@ -11,6 +11,7 @@
 
 // Namespace zm_jump_pad
 // Params 0, eflags: 0x2
+// namespace_6f3e8597<file_0>::function_2dc19561
 // Checksum 0xa55288, Offset: 0x210
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -19,6 +20,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_jump_pad
 // Params 0, eflags: 0x1 linked
+// namespace_6f3e8597<file_0>::function_8c87d8eb
 // Checksum 0x28cd7afd, Offset: 0x250
 // Size: 0x1c
 function __init__() {
@@ -27,6 +29,7 @@ function __init__() {
 
 // Namespace zm_jump_pad
 // Params 0, eflags: 0x1 linked
+// namespace_6f3e8597<file_0>::function_9c135600
 // Checksum 0x53ab579b, Offset: 0x278
 // Size: 0x194
 function jump_pad_init() {
@@ -48,6 +51,7 @@ function jump_pad_init() {
 
 // Namespace zm_jump_pad
 // Params 0, eflags: 0x1 linked
+// namespace_6f3e8597<file_0>::function_354a4277
 // Checksum 0x7e8e3335, Offset: 0x418
 // Size: 0x1c
 function jump_pad_player_variables() {
@@ -57,6 +61,7 @@ function jump_pad_player_variables() {
 
 // Namespace zm_jump_pad
 // Params 0, eflags: 0x1 linked
+// namespace_6f3e8597<file_0>::function_a26af6c2
 // Checksum 0x16564bea, Offset: 0x440
 // Size: 0x180
 function jump_pad_think() {
@@ -87,6 +92,7 @@ function jump_pad_think() {
 
 // Namespace zm_jump_pad
 // Params 1, eflags: 0x1 linked
+// namespace_6f3e8597<file_0>::function_31011f63
 // Checksum 0xf14e5c61, Offset: 0x5c8
 // Size: 0x64
 function delayed_jump_pad_start(who) {
@@ -98,6 +104,7 @@ function delayed_jump_pad_start(who) {
 
 // Namespace zm_jump_pad
 // Params 2, eflags: 0x1 linked
+// namespace_6f3e8597<file_0>::function_e47389f6
 // Checksum 0xf24ace13, Offset: 0x638
 // Size: 0xc5c
 function jump_pad_start(ent_player, endon_condition) {
@@ -274,6 +281,7 @@ function jump_pad_start(ent_player, endon_condition) {
 
 // Namespace zm_jump_pad
 // Params 1, eflags: 0x1 linked
+// namespace_6f3e8597<file_0>::function_d2dfa728
 // Checksum 0xd42cb7c5, Offset: 0x12a0
 // Size: 0xe6
 function jump_pad_cancel(ent_player) {
@@ -292,6 +300,7 @@ function jump_pad_cancel(ent_player) {
 
 // Namespace zm_jump_pad
 // Params 4, eflags: 0x1 linked
+// namespace_6f3e8597<file_0>::function_971df385
 // Checksum 0x497a3e9c, Offset: 0x1390
 // Size: 0x4dc
 function jump_pad_move(vec_direction, flt_time, struct_poi, trigger) {
@@ -370,6 +379,7 @@ function jump_pad_move(vec_direction, flt_time, struct_poi, trigger) {
 
 // Namespace zm_jump_pad
 // Params 0, eflags: 0x1 linked
+// namespace_6f3e8597<file_0>::function_46c81208
 // Checksum 0xe6690734, Offset: 0x1878
 // Size: 0x94
 function disconnect_failsafe_pad_poi_clean() {
@@ -386,6 +396,7 @@ function disconnect_failsafe_pad_poi_clean() {
 
 // Namespace zm_jump_pad
 // Params 2, eflags: 0x1 linked
+// namespace_6f3e8597<file_0>::function_f807c05b
 // Checksum 0xd82f6cd4, Offset: 0x1918
 // Size: 0x94
 function failsafe_pad_poi_clean(ent_trig, ent_poi) {
@@ -403,6 +414,7 @@ function failsafe_pad_poi_clean(ent_trig, ent_poi) {
 
 // Namespace zm_jump_pad
 // Params 1, eflags: 0x1 linked
+// namespace_6f3e8597<file_0>::function_3be678d7
 // Checksum 0xff16e623, Offset: 0x19b8
 // Size: 0x236
 function jump_pad_enemy_follow_or_ignore(ent_poi) {
@@ -441,6 +453,7 @@ function jump_pad_enemy_follow_or_ignore(ent_poi) {
 
 // Namespace zm_jump_pad
 // Params 1, eflags: 0x1 linked
+// namespace_6f3e8597<file_0>::function_ecd679e4
 // Checksum 0x79aa3f73, Offset: 0x1bf8
 // Size: 0x106
 function jump_pad_ignore_poi_cleanup(ent_poi) {
@@ -461,6 +474,7 @@ function jump_pad_ignore_poi_cleanup(ent_poi) {
 
 // Namespace zm_jump_pad
 // Params 1, eflags: 0x1 linked
+// namespace_6f3e8597<file_0>::function_4f916e79
 // Checksum 0x843afd60, Offset: 0x1d08
 // Size: 0x14a
 function stop_chasing_the_sky(ent_poi) {
@@ -487,6 +501,7 @@ function stop_chasing_the_sky(ent_poi) {
 
 // Namespace zm_jump_pad
 // Params 2, eflags: 0x1 linked
+// namespace_6f3e8597<file_0>::function_b6b9ca67
 // Checksum 0xb69ff45, Offset: 0x1e60
 // Size: 0xaa
 function jump_pad_player_overrides(st_behavior, int_clean) {

@@ -29,6 +29,7 @@
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_d290ebfa
 // Checksum 0x16cbe8f6, Offset: 0xe28
 // Size: 0x394
 function main() {
@@ -74,6 +75,7 @@ function main() {
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_90f0668f
 // Checksum 0x98c17885, Offset: 0x11c8
 // Size: 0x54
 function onprecachegametype() {
@@ -85,6 +87,7 @@ function onprecachegametype() {
 
 // Namespace dem
 // Params 4, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_6b1c3e2a
 // Checksum 0xf7365e5c, Offset: 0x1228
 // Size: 0x96
 function function_6b1c3e2a(einflictor, attacker, smeansofdeath, weapon) {
@@ -97,6 +100,7 @@ function function_6b1c3e2a(einflictor, attacker, smeansofdeath, weapon) {
 
 // Namespace dem
 // Params 4, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_574aa137
 // Checksum 0x34d2e3d4, Offset: 0x12c8
 // Size: 0xa2
 function function_574aa137(einflictor, attacker, smeansofdeath, weapon) {
@@ -109,6 +113,7 @@ function function_574aa137(einflictor, attacker, smeansofdeath, weapon) {
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_e4e885e6
 // Checksum 0xc89257bc, Offset: 0x1378
 // Size: 0x128
 function onroundswitch() {
@@ -132,6 +137,7 @@ function onroundswitch() {
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_b050a0e
 // Checksum 0xc43f6717, Offset: 0x14a8
 // Size: 0x20a
 function getbetterteam() {
@@ -165,6 +171,7 @@ function getbetterteam() {
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_34685338
 // Checksum 0x2cf1a558, Offset: 0x16c0
 // Size: 0x870
 function onstartgametype() {
@@ -263,6 +270,7 @@ function onstartgametype() {
 
 // Namespace dem
 // Params 1, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_19bc9234
 // Checksum 0x5e29c396, Offset: 0x1f38
 // Size: 0x44
 function onspawnplayer(predictedspawn) {
@@ -274,6 +282,7 @@ function onspawnplayer(predictedspawn) {
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_51c48e40
 // Checksum 0x286e1e88, Offset: 0x1f88
 // Size: 0x12
 function function_51c48e40() {
@@ -282,6 +291,7 @@ function function_51c48e40() {
 
 // Namespace dem
 // Params 9, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_c2658b46
 // Checksum 0xa8a316e6, Offset: 0x1fa8
 // Size: 0x55c
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -355,6 +365,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_35613c72
 // Checksum 0x73e3536c, Offset: 0x2510
 // Size: 0x11c
 function checkallowspectating() {
@@ -377,6 +388,7 @@ function checkallowspectating() {
 
 // Namespace dem
 // Params 2, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_3649f4f9
 // Checksum 0x8c0d7d10, Offset: 0x2638
 // Size: 0xec
 function function_3649f4f9(winningteam, endreasontext) {
@@ -391,6 +403,7 @@ function function_3649f4f9(winningteam, endreasontext) {
 
 // Namespace dem
 // Params 1, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_e0db18e8
 // Checksum 0x655e7268, Offset: 0x2730
 // Size: 0x174
 function ondeadevent(team) {
@@ -419,6 +432,7 @@ function ondeadevent(team) {
 
 // Namespace dem
 // Params 1, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_4abe31c7
 // Checksum 0x418b1da2, Offset: 0x28b0
 // Size: 0x3c
 function ononeleftevent(team) {
@@ -430,6 +444,7 @@ function ononeleftevent(team) {
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_fb734762
 // Checksum 0x5914f7a9, Offset: 0x28f8
 // Size: 0x17c
 function ontimelimit() {
@@ -456,6 +471,7 @@ function ontimelimit() {
 
 // Namespace dem
 // Params 1, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_ab9cc48a
 // Checksum 0xccb15c4e, Offset: 0x2a80
 // Size: 0x15c
 function warnlastplayer(team) {
@@ -483,6 +499,7 @@ function warnlastplayer(team) {
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_869f38e1
 // Checksum 0x8814b12b, Offset: 0x2be8
 // Size: 0xc4
 function givelastattackerwarning() {
@@ -506,6 +523,7 @@ function givelastattackerwarning() {
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_843e8b8a
 // Checksum 0xd29935c3, Offset: 0x2cb8
 // Size: 0x164
 function updategametypedvars() {
@@ -524,6 +542,7 @@ function updategametypedvars() {
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_f86ae84
 // Checksum 0x6af0092d, Offset: 0x2e28
 // Size: 0x1f4
 function resetbombzone() {
@@ -547,6 +566,7 @@ function resetbombzone() {
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_3b1e4cbe
 // Checksum 0x164eaa84, Offset: 0x3028
 // Size: 0x17c
 function setupfordefusing() {
@@ -564,6 +584,7 @@ function setupfordefusing() {
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_7f1fef4
 // Checksum 0x47278ef9, Offset: 0x31b0
 // Size: 0x992
 function bombs() {
@@ -661,6 +682,7 @@ function bombs() {
 
 // Namespace dem
 // Params 3, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_f7e94b21
 // Checksum 0x8b378748, Offset: 0x3b50
 // Size: 0x9c
 function setbomboverheatingafterweaponchange(useobject, overheated, heat) {
@@ -676,6 +698,7 @@ function setbomboverheatingafterweaponchange(useobject, overheated, heat) {
 
 // Namespace dem
 // Params 1, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_cfce9b82
 // Checksum 0xd3e7e53d, Offset: 0x3bf8
 // Size: 0x2e4
 function onbeginuse(player) {
@@ -718,6 +741,7 @@ function onbeginuse(player) {
 
 // Namespace dem
 // Params 3, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_a454a59a
 // Checksum 0xea84883a, Offset: 0x3ee8
 // Size: 0xfc
 function onenduse(team, player, result) {
@@ -740,6 +764,7 @@ function onenduse(team, player, result) {
 
 // Namespace dem
 // Params 1, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_b44f2f45
 // Checksum 0x4c1cb5b6, Offset: 0x3ff0
 // Size: 0x2c
 function oncantuse(player) {
@@ -748,6 +773,7 @@ function oncantuse(player) {
 
 // Namespace dem
 // Params 1, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_3fa7f3e6
 // Checksum 0x133d2c80, Offset: 0x4028
 // Size: 0x514
 function function_3fa7f3e6(player) {
@@ -813,6 +839,7 @@ function function_3fa7f3e6(player) {
 
 // Namespace dem
 // Params 1, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_5aacb6fd
 // Checksum 0x3070a5c6, Offset: 0x4548
 // Size: 0xec
 function ondrop(player) {
@@ -833,6 +860,7 @@ function ondrop(player) {
 
 // Namespace dem
 // Params 1, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_8e900a8a
 // Checksum 0x3cdca151, Offset: 0x4640
 // Size: 0x11c
 function onpickup(player) {
@@ -850,6 +878,7 @@ function onpickup(player) {
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_81253537
 // Checksum 0x99ec1590, Offset: 0x4768
 // Size: 0x4
 function onreset() {
@@ -858,6 +887,7 @@ function onreset() {
 
 // Namespace dem
 // Params 2, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_cd724d52
 // Checksum 0xf2cbc5e7, Offset: 0x4778
 // Size: 0xdc
 function function_cd724d52(label, reason) {
@@ -877,6 +907,7 @@ function function_cd724d52(label, reason) {
 
 // Namespace dem
 // Params 2, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_428ffa25
 // Checksum 0x511f4cf1, Offset: 0x4860
 // Size: 0x25c
 function dropbombmodel(player, site) {
@@ -898,6 +929,7 @@ function dropbombmodel(player, site) {
 
 // Namespace dem
 // Params 2, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_d615cbd7
 // Checksum 0xdc531f9f, Offset: 0x4ac8
 // Size: 0xb44
 function bombplanted(destroyedobj, player) {
@@ -1014,6 +1046,7 @@ function bombplanted(destroyedobj, player) {
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_c2deb19
 // Checksum 0x5d105980, Offset: 0x5618
 // Size: 0x5a
 function gettimelimit() {
@@ -1029,6 +1062,7 @@ function gettimelimit() {
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_f4cce2d9
 // Checksum 0xcecc647e, Offset: 0x5680
 // Size: 0x6e
 function shouldplayovertimeround() {
@@ -1043,6 +1077,7 @@ function shouldplayovertimeround() {
 
 // Namespace dem
 // Params 2, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_c50057a0
 // Checksum 0x37dbff0d, Offset: 0x56f8
 // Size: 0x170
 function function_c50057a0(var_4faa45a0, duration) {
@@ -1075,6 +1110,7 @@ function function_c50057a0(var_4faa45a0, duration) {
 
 // Namespace dem
 // Params 2, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_296d9a20
 // Checksum 0x1a74af36, Offset: 0x5870
 // Size: 0xdc
 function function_296d9a20(var_4faa45a0, detonatetime) {
@@ -1090,6 +1126,7 @@ function function_296d9a20(var_4faa45a0, detonatetime) {
 
 // Namespace dem
 // Params 1, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_9b04caed
 // Checksum 0x1830a104, Offset: 0x5958
 // Size: 0xec
 function bombdefused(player) {
@@ -1106,6 +1143,7 @@ function bombdefused(player) {
 
 // Namespace dem
 // Params 2, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_ef279c85
 // Checksum 0x69217c5d, Offset: 0x5a50
 // Size: 0x74
 function function_ef279c85(team, enemyteam) {
@@ -1119,6 +1157,7 @@ function function_ef279c85(team, enemyteam) {
 
 // Namespace dem
 // Params 0, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_fdacd5ea
 // Checksum 0x68df5ef0, Offset: 0x5ad0
 // Size: 0xdc
 function function_fdacd5ea() {
@@ -1139,6 +1178,7 @@ function function_fdacd5ea() {
 
 // Namespace dem
 // Params 2, eflags: 0x0
+// namespace_f4fa22d9<file_0>::function_688c00fa
 // Checksum 0x7a76eb75, Offset: 0x5bb8
 // Size: 0x64
 function isscoreboosting(player, flag) {

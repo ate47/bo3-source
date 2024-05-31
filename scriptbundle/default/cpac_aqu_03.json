@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_aqu_03",
+    "igdtseqnum": 14,
+    "challengeWidget": "Bullshark",
+    "challengeDetails": "ACCOLADES_AQU_3",
+    "challengeName": "ACCOLADES_AQU_3_NAME",
+    "centerText": "30",
+    "challengeReference": "MISSION_AQUIFER_CHALLENGE3"
+}

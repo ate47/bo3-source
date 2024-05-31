@@ -1,0 +1,9 @@
+{
+    "vmtype": "none",
+    "name": "cpac_bla_05",
+    "igdtseqnum": 50,
+    "challengeWidget": "Weapon",
+    "challengeDetails": "ACCOLADES_BLA_5",
+    "challengeName": "ACCOLADES_BLA_5_NAME",
+    "challengeReference": "MISSION_BLACKSTATION_CHALLENGE5"
+}

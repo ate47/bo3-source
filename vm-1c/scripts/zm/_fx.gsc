@@ -10,6 +10,7 @@
 
     // Namespace fx
     // Params 4, eflags: 0x0
+    // namespace_5753664b<file_0>::function_e1f2a925
     // Checksum 0x692da508, Offset: 0x110
     // Size: 0x184
     function print_org(fxcommand, fxid, fxpos, waittime) {
@@ -29,6 +30,7 @@
 
 // Namespace fx
 // Params 8, eflags: 0x0
+// namespace_5753664b<file_0>::function_e3989e61
 // Checksum 0x78a02089, Offset: 0x2a0
 // Size: 0x74
 function gunfireloopfx(fxid, fxpos, shotsmin, shotsmax, shotdelaymin, shotdelaymax, betweensetsmin, betweensetsmax) {
@@ -37,6 +39,7 @@ function gunfireloopfx(fxid, fxpos, shotsmin, shotsmax, shotdelaymin, shotdelaym
 
 // Namespace fx
 // Params 8, eflags: 0x0
+// namespace_5753664b<file_0>::function_80104749
 // Checksum 0x57640d33, Offset: 0x320
 // Size: 0x232
 function gunfireloopfxthread(fxid, fxpos, shotsmin, shotsmax, shotdelaymin, shotdelaymax, betweensetsmin, betweensetsmax) {
@@ -76,6 +79,7 @@ function gunfireloopfxthread(fxid, fxpos, shotsmin, shotsmax, shotdelaymin, shot
 
 // Namespace fx
 // Params 9, eflags: 0x0
+// namespace_5753664b<file_0>::function_8df6fe7d
 // Checksum 0x7261cb9c, Offset: 0x560
 // Size: 0x84
 function gunfireloopfxvec(fxid, fxpos, fxpos2, shotsmin, shotsmax, shotdelaymin, shotdelaymax, betweensetsmin, betweensetsmax) {
@@ -84,6 +88,7 @@ function gunfireloopfxvec(fxid, fxpos, fxpos2, shotsmin, shotsmax, shotdelaymin,
 
 // Namespace fx
 // Params 9, eflags: 0x0
+// namespace_5753664b<file_0>::function_762b842d
 // Checksum 0x53e758c6, Offset: 0x5f0
 // Size: 0x2d2
 function gunfireloopfxvecthread(fxid, fxpos, fxpos2, shotsmin, shotsmax, shotdelaymin, shotdelaymax, betweensetsmin, betweensetsmax) {
@@ -129,6 +134,7 @@ function gunfireloopfxvecthread(fxid, fxpos, fxpos2, shotsmin, shotsmax, shotdel
 
 // Namespace fx
 // Params 1, eflags: 0x0
+// namespace_5753664b<file_0>::function_9e739b08
 // Checksum 0xd996a8c1, Offset: 0x8d0
 // Size: 0x5c
 function grenadeexplosionfx(pos) {

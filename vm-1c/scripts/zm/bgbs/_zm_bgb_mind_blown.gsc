@@ -15,6 +15,7 @@
 
 // Namespace namespace_42b119c2
 // Params 0, eflags: 0x2
+// namespace_42b119c2<file_0>::function_2dc19561
 // Checksum 0x50aedd93, Offset: 0x260
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -23,6 +24,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_42b119c2
 // Params 0, eflags: 0x1 linked
+// namespace_42b119c2<file_0>::function_8c87d8eb
 // Checksum 0x1648f2df, Offset: 0x2a0
 // Size: 0x114
 function __init__() {
@@ -37,6 +39,7 @@ function __init__() {
 
 // Namespace namespace_42b119c2
 // Params 0, eflags: 0x1 linked
+// namespace_42b119c2<file_0>::function_e4776d0
 // Checksum 0x407677ef, Offset: 0x3c0
 // Size: 0x22
 function validation() {
@@ -48,6 +51,7 @@ function validation() {
 
 // Namespace namespace_42b119c2
 // Params 0, eflags: 0x1 linked
+// namespace_42b119c2<file_0>::function_7afbf7cd
 // Checksum 0x91f886d3, Offset: 0x3f0
 // Size: 0x3c
 function activation() {
@@ -58,6 +62,7 @@ function activation() {
 
 // Namespace namespace_42b119c2
 // Params 0, eflags: 0x1 linked
+// namespace_42b119c2<file_0>::function_80e37569
 // Checksum 0x8898c747, Offset: 0x438
 // Size: 0x20
 function function_80e37569() {
@@ -68,6 +73,7 @@ function function_80e37569() {
 
 // Namespace namespace_42b119c2
 // Params 0, eflags: 0x1 linked
+// namespace_42b119c2<file_0>::function_2a8862aa
 // Checksum 0x138b871, Offset: 0x460
 // Size: 0x304
 function function_2a8862aa() {
@@ -102,6 +108,7 @@ function function_2a8862aa() {
 
 // Namespace namespace_42b119c2
 // Params 3, eflags: 0x5 linked
+// namespace_42b119c2<file_0>::function_2ca71d8b
 // Checksum 0x8d63b5e0, Offset: 0x770
 // Size: 0x152
 function private function_2ca71d8b(allai, trace, degree) {
@@ -122,6 +129,7 @@ function private function_2ca71d8b(allai, trace, degree) {
 
 // Namespace namespace_42b119c2
 // Params 1, eflags: 0x1 linked
+// namespace_42b119c2<file_0>::function_1bb7ee0
 // Checksum 0xcc76e78f, Offset: 0x8d0
 // Size: 0xa4
 function function_1bb7ee0(ai) {
@@ -135,6 +143,7 @@ function function_1bb7ee0(ai) {
 
 // Namespace namespace_42b119c2
 // Params 0, eflags: 0x1 linked
+// namespace_42b119c2<file_0>::function_5cd7ae77
 // Checksum 0x74bbafea, Offset: 0x980
 // Size: 0xac
 function zombie_head_gib() {

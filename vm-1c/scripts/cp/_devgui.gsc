@@ -22,6 +22,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x2
+    // namespace_e462855b<file_0>::function_2dc19561
     // Checksum 0x56fc5155, Offset: 0x270
     // Size: 0x34
     function autoexec function_2dc19561() {
@@ -30,6 +31,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_8c87d8eb
     // Checksum 0x2e544098, Offset: 0x2b0
     // Size: 0x1bc
     function __init__() {
@@ -54,6 +56,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_6579c4b6
     // Checksum 0xe52f8091, Offset: 0x478
     // Size: 0x1ee
     function function_6579c4b6() {
@@ -77,6 +80,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_bbc58bb6
     // Checksum 0xd1bd5f69, Offset: 0x670
     // Size: 0xae
     function devgui_player_connect() {
@@ -94,6 +98,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_6307b682
     // Checksum 0x2847c4cd, Offset: 0x728
     // Size: 0x54
     function devgui_player_disconnect() {
@@ -106,6 +111,7 @@
 
     // Namespace devgui
     // Params 3, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_1b1c9526
     // Checksum 0xabff2da0, Offset: 0x788
     // Size: 0x68c
     function devgui_add_player_commands(root, pname, index) {
@@ -148,6 +154,7 @@
 
     // Namespace devgui
     // Params 5, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_d2147d9f
     // Checksum 0x5ceecd41, Offset: 0xe20
     // Size: 0x94
     function function_d2147d9f(root, pid, cmdname, cmdindex, cmddvar) {
@@ -156,6 +163,7 @@
 
     // Namespace devgui
     // Params 3, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_bcce253a
     // Checksum 0x26cfe2ce, Offset: 0xec0
     // Size: 0x10c
     function devgui_handle_player_command(cmd, playercallback, pcb_param) {
@@ -177,6 +185,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_88dafe6a
     // Checksum 0xf24b2b68, Offset: 0xfd8
     // Size: 0x7a8
     function devgui_think() {
@@ -307,6 +316,7 @@
 
     // Namespace devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_9c35ef50
     // Checksum 0x925fbe7c, Offset: 0x1788
     // Size: 0x2c
     function function_9c35ef50(stat_name) {
@@ -315,6 +325,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_e2643869
     // Checksum 0xc82906ba, Offset: 0x17c0
     // Size: 0xe2
     function function_e2643869() {
@@ -326,6 +337,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_4533d882
     // Checksum 0xa800f7e8, Offset: 0x18b0
     // Size: 0x6e
     function function_4533d882() {
@@ -336,6 +348,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_4edb34ed
     // Checksum 0x2abeb0f6, Offset: 0x1928
     // Size: 0x66
     function function_4edb34ed() {
@@ -346,6 +359,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_408729cd
     // Checksum 0x16e5afec, Offset: 0x1998
     // Size: 0xca
     function function_408729cd() {
@@ -359,6 +373,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_192ef5eb
     // Checksum 0xec45da43, Offset: 0x1a70
     // Size: 0xcc
     function function_192ef5eb() {
@@ -375,6 +390,7 @@
 
     // Namespace devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_b79fb0fe
     // Checksum 0x30b2578e, Offset: 0x1b48
     // Size: 0x74
     function function_b79fb0fe(var_b931f6fe) {
@@ -385,6 +401,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_f61fdbaf
     // Checksum 0x25b6ffaa, Offset: 0x1bc8
     // Size: 0xc2
     function function_f61fdbaf() {
@@ -396,6 +413,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_d7b26538
     // Checksum 0x9756e50f, Offset: 0x1c98
     // Size: 0xec
     function function_d7b26538() {
@@ -409,6 +427,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_fcd3cf3f
     // Checksum 0xc919a945, Offset: 0x1d90
     // Size: 0xc2
     function function_fcd3cf3f() {
@@ -420,6 +439,7 @@
 
     // Namespace devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_cac73614
     // Checksum 0x2ce7e4a4, Offset: 0x1e60
     // Size: 0x74
     function function_cac73614(var_735c65d7) {
@@ -430,6 +450,7 @@
 
     // Namespace devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_9f78d70e
     // Checksum 0x9b374b38, Offset: 0x1ee0
     // Size: 0x114
     function function_9f78d70e(var_735c65d7) {
@@ -442,6 +463,7 @@
 
     // Namespace devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_c4332467
     // Checksum 0xcd32baf, Offset: 0x2000
     // Size: 0x44
     function devgui_invulnerable(onoff) {
@@ -454,6 +476,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_e412b252
     // Checksum 0xd5803204, Offset: 0x2050
     // Size: 0xfc
     function devgui_kill() {
@@ -468,6 +491,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_57a60e2f
     // Checksum 0x6a46ad73, Offset: 0x2158
     // Size: 0x156
     function devgui_toggle_ammo() {
@@ -492,6 +516,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_f1e00eaf
     // Checksum 0x4e997271, Offset: 0x22b8
     // Size: 0x84
     function function_f1e00eaf() {
@@ -503,6 +528,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_32101c84
     // Checksum 0x3472d07b, Offset: 0x2348
     // Size: 0x84
     function function_32101c84() {
@@ -514,6 +540,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_70cef21d
     // Checksum 0x6d39044c, Offset: 0x23d8
     // Size: 0x13e
     function function_70cef21d() {
@@ -536,6 +563,7 @@
 
     // Namespace devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_ec2ac25f
     // Checksum 0xf0e202d3, Offset: 0x2520
     // Size: 0x64
     function function_ec2ac25f(maxhealth) {
@@ -552,6 +580,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_2612a7ee
     // Checksum 0x539c5ef2, Offset: 0x2590
     // Size: 0xfc
     function function_2612a7ee() {
@@ -571,6 +600,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_9df6342b
     // Checksum 0x290f738b, Offset: 0x2698
     // Size: 0x518
     function devgui_player_weapons() {
@@ -618,6 +648,7 @@
 
     // Namespace devgui
     // Params 5, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_fcadbfcd
     // Checksum 0xadb12274, Offset: 0x2bb8
     // Size: 0x222
     function function_fcadbfcd(root, pname, index, a_weapons, weapon_type) {
@@ -636,6 +667,7 @@
 
     // Namespace devgui
     // Params 5, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_c71c01bb
     // Checksum 0xbf1495a4, Offset: 0x2de8
     // Size: 0x24e
     function devgui_add_player_weapons(root, pname, index, a_weapons, weapon_type) {
@@ -666,6 +698,7 @@
 
     // Namespace devgui
     // Params 4, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_3294eaad
     // Checksum 0x2e75d6e, Offset: 0x3040
     // Size: 0x8c
     function devgui_add_player_weap_command(root, pid, weap_name, cmdindex) {
@@ -674,6 +707,7 @@
 
     // Namespace devgui
     // Params 4, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_2e546d79
     // Checksum 0x65801849, Offset: 0x30d8
     // Size: 0x8c
     function function_2e546d79(root, pid, var_ea9ecd24, cmdindex) {
@@ -682,6 +716,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_dbdf88b3
     // Checksum 0x11a6e8f8, Offset: 0x3170
     // Size: 0x108
     function devgui_weapon_think() {
@@ -702,6 +737,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_c0297769
     // Checksum 0x76befb20, Offset: 0x3280
     // Size: 0x3e0
     function devgui_weapon_asset_name_display_think() {
@@ -765,6 +801,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_47239612
     // Checksum 0x9149a16c, Offset: 0x3668
     // Size: 0x20c
     function devgui_test_chart_think() {
@@ -795,6 +832,7 @@
 
     // Namespace devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_820cf1c0
     // Checksum 0xe77ae077, Offset: 0x3880
     // Size: 0x324
     function devgui_give_weapon(weapon_name) {
@@ -841,6 +879,7 @@
 
     // Namespace devgui
     // Params 1, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_1734411b
     // Checksum 0x500d3027, Offset: 0x3bb0
     // Size: 0x46c
     function function_1734411b(var_ea9ecd24) {
@@ -887,6 +926,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_d2e4fa20
     // Checksum 0x40452b25, Offset: 0x4028
     // Size: 0x12c
     function init_debug_center_screen() {
@@ -914,6 +954,7 @@
 
     // Namespace devgui
     // Params 0, eflags: 0x1 linked
+    // namespace_e462855b<file_0>::function_4bed8a5
     // Checksum 0x13c6fc57, Offset: 0x4160
     // Size: 0x228
     function debug_center_screen() {

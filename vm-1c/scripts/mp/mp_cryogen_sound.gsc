@@ -4,6 +4,7 @@
 
 // Namespace namespace_779c23e4
 // Params 0, eflags: 0x1 linked
+// namespace_779c23e4<file_0>::function_d290ebfa
 // Checksum 0x8f1390a6, Offset: 0x118
 // Size: 0x44
 function main() {
@@ -14,6 +15,7 @@ function main() {
 
 // Namespace namespace_779c23e4
 // Params 0, eflags: 0x1 linked
+// namespace_779c23e4<file_0>::function_4d3ba930
 // Checksum 0xe58602aa, Offset: 0x168
 // Size: 0x140
 function function_4d3ba930() {
@@ -29,6 +31,7 @@ function function_4d3ba930() {
 
 // Namespace namespace_779c23e4
 // Params 2, eflags: 0x1 linked
+// namespace_779c23e4<file_0>::function_2df9c9dc
 // Checksum 0x3838b6db, Offset: 0x2b0
 // Size: 0x68
 function function_2df9c9dc(prefix, count) {
@@ -41,6 +44,7 @@ function function_2df9c9dc(prefix, count) {
 
 // Namespace namespace_779c23e4
 // Params 0, eflags: 0x1 linked
+// namespace_779c23e4<file_0>::function_d4d4c648
 // Checksum 0xb693e6a5, Offset: 0x320
 // Size: 0x54
 function function_d4d4c648() {
@@ -50,6 +54,7 @@ function function_d4d4c648() {
 
 // Namespace namespace_779c23e4
 // Params 2, eflags: 0x1 linked
+// namespace_779c23e4<file_0>::function_848fb66a
 // Checksum 0x5ac3add9, Offset: 0x380
 // Size: 0x128
 function function_848fb66a(mintime, maxtime) {
@@ -69,6 +74,7 @@ function function_848fb66a(mintime, maxtime) {
 
 // Namespace namespace_779c23e4
 // Params 1, eflags: 0x1 linked
+// namespace_779c23e4<file_0>::function_5e7ad856
 // Checksum 0x511042d8, Offset: 0x4b0
 // Size: 0x68
 function function_5e7ad856(&aliasarray) {
@@ -80,6 +86,7 @@ function function_5e7ad856(&aliasarray) {
 
 // Namespace namespace_779c23e4
 // Params 2, eflags: 0x1 linked
+// namespace_779c23e4<file_0>::function_af33668b
 // Checksum 0xf6fc5281, Offset: 0x520
 // Size: 0xa2
 function function_af33668b(alias, stopalias) {
@@ -90,6 +97,7 @@ function function_af33668b(alias, stopalias) {
 
 // Namespace namespace_779c23e4
 // Params 2, eflags: 0x1 linked
+// namespace_779c23e4<file_0>::function_c0a23046
 // Checksum 0xe70e134, Offset: 0x5d0
 // Size: 0x7c
 function function_c0a23046(alias, stopalias) {

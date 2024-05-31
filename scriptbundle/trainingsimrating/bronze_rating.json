@@ -1,0 +1,11 @@
+{
+    "vmtype": "server",
+    "name": "bronze_rating",
+    "type": "trainingsimrating",
+    "igdtseqnum": 4,
+    "ratingImage": "t7_cp_hud_trainingsim_bronze_icon",
+    "ratingName": "MPUI_REICH",
+    "xpAwarded": 2000,
+    "requiredScore": 5000,
+    "tokensAwarded": 2
+}

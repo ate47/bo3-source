@@ -16,6 +16,7 @@
 
 // Namespace raps
 // Params 0, eflags: 0x2
+// namespace_a7941edd<file_0>::function_2dc19561
 // Checksum 0xe69a43bd, Offset: 0x588
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -24,6 +25,7 @@ function autoexec function_2dc19561() {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_8c87d8eb
 // Checksum 0x310f6e55, Offset: 0x5c8
 // Size: 0xac
 function __init__() {
@@ -35,6 +37,7 @@ function __init__() {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_d4bced62
 // Checksum 0xf5b77dd1, Offset: 0x680
 // Size: 0x20c
 function raps_initialize() {
@@ -67,6 +70,7 @@ function raps_initialize() {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_b272dd98
 // Checksum 0x429de809, Offset: 0x898
 // Size: 0x114
 function defaultrole() {
@@ -81,6 +85,7 @@ function defaultrole() {
 
 // Namespace raps
 // Params 1, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_5447d15f
 // Checksum 0xc36232e9, Offset: 0x9b8
 // Size: 0xa4
 function state_scripted_update(params) {
@@ -96,6 +101,7 @@ function state_scripted_update(params) {
 
 // Namespace raps
 // Params 1, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_c18559a5
 // Checksum 0xaebe92af, Offset: 0xa68
 // Size: 0x144
 function state_death_update(params) {
@@ -122,6 +128,7 @@ function state_death_update(params) {
 
 // Namespace raps
 // Params 1, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_8a8b75b0
 // Checksum 0xa0151e2e, Offset: 0xbb8
 // Size: 0x1cc
 function state_emped_update(params) {
@@ -142,6 +149,7 @@ function state_emped_update(params) {
 
 // Namespace raps
 // Params 1, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_c637f0c1
 // Checksum 0x1b773d9f, Offset: 0xd90
 // Size: 0xdac
 function state_combat_update(params) {
@@ -322,6 +330,7 @@ function state_combat_update(params) {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_2de18d1c
 // Checksum 0x7257680, Offset: 0x1b48
 // Size: 0xfe
 function prevent_stuck() {
@@ -348,6 +357,7 @@ function prevent_stuck() {
 
 // Namespace raps
 // Params 2, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_9b5e0138
 // Checksum 0x62eba1ab, Offset: 0x1c50
 // Size: 0x150
 function check_detonation_dist(origin, enemy) {
@@ -363,6 +373,7 @@ function check_detonation_dist(origin, enemy) {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_a16de164
 // Checksum 0x98afa7ea, Offset: 0x1da8
 // Size: 0x224
 function jump_detonate() {
@@ -397,6 +408,7 @@ function jump_detonate() {
 
 // Namespace raps
 // Params 1, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_c1eaf281
 // Checksum 0xc1bb48b6, Offset: 0x1fd8
 // Size: 0x7c
 function detonate(attacker) {
@@ -409,6 +421,7 @@ function detonate(attacker) {
 
 // Namespace raps
 // Params 2, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_2cd3213b
 // Checksum 0xb0f5fdba, Offset: 0x2060
 // Size: 0x5c
 function detonate_damage_monitored(enemy, weapon) {
@@ -418,6 +431,7 @@ function detonate_damage_monitored(enemy, weapon) {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_abcfdb4d
 // Checksum 0x55ef63b1, Offset: 0x20c8
 // Size: 0x384
 function detonation_monitor() {
@@ -466,6 +480,7 @@ function detonation_monitor() {
 
 // Namespace raps
 // Params 1, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_75d8e23b
 // Checksum 0x9e8136a9, Offset: 0x2458
 // Size: 0x74
 function function_75d8e23b(owner) {
@@ -481,6 +496,7 @@ function function_75d8e23b(owner) {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_7cb04dcb
 // Checksum 0x37e1c17b, Offset: 0x24d8
 // Size: 0x4d2
 function try_detonate() {
@@ -536,6 +552,7 @@ function try_detonate() {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_70d73c6a
 // Checksum 0x2a901e5b, Offset: 0x29b8
 // Size: 0x376
 function function_70d73c6a() {
@@ -590,6 +607,7 @@ function function_70d73c6a() {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_4891e8b4
 // Checksum 0xf941c917, Offset: 0x2d38
 // Size: 0x364
 function path_update_interrupt() {
@@ -649,6 +667,7 @@ function path_update_interrupt() {
 
 // Namespace raps
 // Params 1, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_843f1c6c
 // Checksum 0x418aee00, Offset: 0x30a8
 // Size: 0x9c
 function collision_fx(normal) {
@@ -661,6 +680,7 @@ function collision_fx(normal) {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_21f990bf
 // Checksum 0xb2a4276f, Offset: 0x3150
 // Size: 0x130
 function nudge_collision() {
@@ -681,6 +701,7 @@ function nudge_collision() {
 
 // Namespace raps
 // Params 4, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_8c5ee611
 // Checksum 0x2d67ba9d, Offset: 0x3288
 // Size: 0xe8
 function function_8c5ee611(einflictor, eattacker, smeansofdeath, weapon) {
@@ -695,6 +716,7 @@ function function_8c5ee611(einflictor, eattacker, smeansofdeath, weapon) {
 
 // Namespace raps
 // Params 1, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_9c381af4
 // Checksum 0x906a8d8e, Offset: 0x3378
 // Size: 0x180
 function detonate_sides(einflictor) {
@@ -711,6 +733,7 @@ function detonate_sides(einflictor) {
 
 // Namespace raps
 // Params 15, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_296d9b47
 // Checksum 0x8462f859, Offset: 0x3500
 // Size: 0x2c8
 function function_296d9b47(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -736,6 +759,7 @@ function function_296d9b47(einflictor, eattacker, idamage, idflags, smeansofdeat
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_965a4280
 // Checksum 0x9a3442d9, Offset: 0x37d0
 // Size: 0x98
 function slow_raps_trigger() {
@@ -751,6 +775,7 @@ function slow_raps_trigger() {
 
 // Namespace raps
 // Params 1, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_9ce6ceb1
 // Checksum 0xbc29bfe8, Offset: 0x3870
 // Size: 0x166
 function slow_raps(trigger) {
@@ -776,6 +801,7 @@ function slow_raps(trigger) {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_add6c0d2
 // Checksum 0xe50be563, Offset: 0x39e0
 // Size: 0xdc
 function force_get_enemies() {
@@ -792,6 +818,7 @@ function force_get_enemies() {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_12446ae9
 // Checksum 0xd90f79a3, Offset: 0x3ac8
 // Size: 0x2ec
 function sndfunctions() {
@@ -830,6 +857,7 @@ function sndfunctions() {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_78d36bfd
 // Checksum 0x2284baa1, Offset: 0x3dc0
 // Size: 0x60
 function function_78d36bfd() {
@@ -844,6 +872,7 @@ function function_78d36bfd() {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_e1de20df
 // Checksum 0x68306cd3, Offset: 0x3e28
 // Size: 0xe8
 function function_e1de20df() {
@@ -865,6 +894,7 @@ function function_e1de20df() {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_ac32a52e
 // Checksum 0x4558a324, Offset: 0x3f18
 // Size: 0x64
 function function_ac32a52e() {
@@ -877,6 +907,7 @@ function function_ac32a52e() {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_8b7efe33
 // Checksum 0xab57d92c, Offset: 0x3f88
 // Size: 0x46
 function isdrivableplayervehicle() {
@@ -889,6 +920,7 @@ function isdrivableplayervehicle() {
 
 // Namespace raps
 // Params 0, eflags: 0x1 linked
+// namespace_a7941edd<file_0>::function_84d2e8de
 // Checksum 0xb10cabf7, Offset: 0x3fd8
 // Size: 0x74
 function do_death_fx() {

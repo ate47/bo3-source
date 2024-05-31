@@ -22,6 +22,7 @@
 
 // Namespace zm_behavior
 // Params 0, eflags: 0x2
+// namespace_c1bd5bf7<file_0>::function_c35e6aab
 // Checksum 0xb790ccae, Offset: 0xaf0
 // Size: 0x50
 function autoexec init() {
@@ -35,6 +36,7 @@ function autoexec init() {
 
 // Namespace zm_behavior
 // Params 0, eflags: 0x5 linked
+// namespace_c1bd5bf7<file_0>::function_31e1c1f5
 // Checksum 0xcfa1274f, Offset: 0xb48
 // Size: 0xa1c
 function private initzmbehaviorsandasm() {
@@ -100,6 +102,7 @@ function private initzmbehaviorsandasm() {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_f285ac94
 // Checksum 0x5a6b6ca9, Offset: 0x1570
 // Size: 0x9f6
 function zombiefindflesh(behaviortreeentity) {
@@ -241,6 +244,7 @@ function zombiefindflesh(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_e8418bbb
 // Checksum 0xa24fd650, Offset: 0x1f70
 // Size: 0x46c
 function zombiefindfleshcode(behaviortreeentity) {
@@ -314,6 +318,7 @@ function zombiefindfleshcode(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 0, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_32cad4dd
 // Checksum 0x601e002a, Offset: 0x23e8
 // Size: 0x604
 function zombieupdategoal() {
@@ -395,6 +400,7 @@ function zombieupdategoal() {
 
 // Namespace zm_behavior
 // Params 0, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_ccbb12ba
 // Checksum 0x3f20b860, Offset: 0x29f8
 // Size: 0x54c
 function zombieupdategoalcode() {
@@ -466,6 +472,7 @@ function zombieupdategoalcode() {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_77106326
 // Checksum 0x7f76bced, Offset: 0x2f50
 // Size: 0xf2
 function zombieenteredplayable(behaviortreeentity) {
@@ -483,6 +490,7 @@ function zombieenteredplayable(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_6f5a6e9e
 // Checksum 0xf2629051, Offset: 0x3050
 // Size: 0x5a
 function shouldmovecondition(behaviortreeentity) {
@@ -497,6 +505,7 @@ function shouldmovecondition(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_c81d899e
 // Checksum 0xa201b4f1, Offset: 0x30b8
 // Size: 0x12
 function zombieshouldmoveawaycondition(behaviortreeentity) {
@@ -505,6 +514,7 @@ function zombieshouldmoveawaycondition(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_c0758118
 // Checksum 0xbe9fe714, Offset: 0x30d8
 // Size: 0x3a
 function waskilledbyteslacondition(behaviortreeentity) {
@@ -516,6 +526,7 @@ function waskilledbyteslacondition(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_efae3e4c
 // Checksum 0x74a0f634, Offset: 0x3120
 // Size: 0x20
 function disablepowerups(behaviortreeentity) {
@@ -524,6 +535,7 @@ function disablepowerups(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_c281d25f
 // Checksum 0x178f55f4, Offset: 0x3148
 // Size: 0x1c
 function enablepowerups(behaviortreeentity) {
@@ -532,6 +544,7 @@ function enablepowerups(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_210ea112
 // Checksum 0x650b76c7, Offset: 0x3170
 // Size: 0x316
 function zombiemoveaway(behaviortreeentity, asmstatename) {
@@ -571,6 +584,7 @@ function zombiemoveaway(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_a81e952b
 // Checksum 0x192b5bca, Offset: 0x3490
 // Size: 0x3a
 function zombieisbeinggrappled(behaviortreeentity) {
@@ -582,6 +596,7 @@ function zombieisbeinggrappled(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_185bcea2
 // Checksum 0x644e3673, Offset: 0x34d8
 // Size: 0x3a
 function zombieshouldknockdown(behaviortreeentity) {
@@ -593,6 +608,7 @@ function zombieshouldknockdown(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_8da8a76c
 // Checksum 0xc1d32458, Offset: 0x3520
 // Size: 0x3a
 function zombieispushed(behaviortreeentity) {
@@ -604,6 +620,7 @@ function zombieispushed(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_babd3fc2
 // Checksum 0x4b9473d4, Offset: 0x3568
 // Size: 0x34
 function zombiegrappleactionstart(behaviortreeentity) {
@@ -612,6 +629,7 @@ function zombiegrappleactionstart(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x5 linked
+// namespace_c1bd5bf7<file_0>::function_2319aa61
 // Checksum 0x7e7ccf1b, Offset: 0x35a8
 // Size: 0x84
 function private zombieknockdownactionstart(behaviortreeentity) {
@@ -622,6 +640,7 @@ function private zombieknockdownactionstart(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x5 linked
+// namespace_c1bd5bf7<file_0>::function_3b28d2ad
 // Checksum 0xa8d5d019, Offset: 0x3638
 // Size: 0x1c
 function private zombiegetupactionterminate(behaviortreeentity) {
@@ -630,6 +649,7 @@ function private zombiegetupactionterminate(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x5 linked
+// namespace_c1bd5bf7<file_0>::function_85ff4162
 // Checksum 0x5be79c35, Offset: 0x3660
 // Size: 0x34
 function private zombiepushedactionstart(behaviortreeentity) {
@@ -638,6 +658,7 @@ function private zombiepushedactionstart(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x5 linked
+// namespace_c1bd5bf7<file_0>::function_b5a260d3
 // Checksum 0x73dd2705, Offset: 0x36a0
 // Size: 0x1c
 function private zombiepushedactionterminate(behaviortreeentity) {
@@ -646,6 +667,7 @@ function private zombiepushedactionterminate(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_8242b7f6
 // Checksum 0x91982099, Offset: 0x36c8
 // Size: 0x60
 function zombieshouldstun(behaviortreeentity) {
@@ -657,6 +679,7 @@ function zombieshouldstun(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_34015d43
 // Checksum 0x39bb1468, Offset: 0x3730
 // Size: 0xc
 function zombiestunactionstart(behaviortreeentity) {
@@ -665,6 +688,7 @@ function zombiestunactionstart(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_5dceeb0
 // Checksum 0x15f20e20, Offset: 0x3748
 // Size: 0x1c
 function zombiestunactionend(behaviortreeentity) {
@@ -673,6 +697,7 @@ function zombiestunactionend(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_c8bf526b
 // Checksum 0xc396708f, Offset: 0x3770
 // Size: 0x60
 function zombietraverseaction(behaviortreeentity, asmstatename) {
@@ -684,6 +709,7 @@ function zombietraverseaction(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_c4ed7430
 // Checksum 0xfa7f2ef4, Offset: 0x37d8
 // Size: 0xb0
 function zombietraverseactionterminate(behaviortreeentity, asmstatename) {
@@ -699,6 +725,7 @@ function zombietraverseactionterminate(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_90b53e35
 // Checksum 0x467618b7, Offset: 0x3890
 // Size: 0x3a
 function zombiegottoentrancecondition(behaviortreeentity) {
@@ -710,6 +737,7 @@ function zombiegottoentrancecondition(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_9d22515f
 // Checksum 0x82a00, Offset: 0x38d8
 // Size: 0x3a
 function zombiegottoattackspotcondition(behaviortreeentity) {
@@ -721,6 +749,7 @@ function zombiegottoattackspotcondition(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_8efd1072
 // Checksum 0x9f0b1708, Offset: 0x3920
 // Size: 0x3e
 function zombiehasattackspotalreadycondition(behaviortreeentity) {
@@ -732,6 +761,7 @@ function zombiehasattackspotalreadycondition(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_1cf28735
 // Checksum 0xd55d1d5a, Offset: 0x3968
 // Size: 0x76
 function zombieshouldtearcondition(behaviortreeentity) {
@@ -745,6 +775,7 @@ function zombieshouldtearcondition(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_8347a165
 // Checksum 0x91d34010, Offset: 0x39e8
 // Size: 0x318
 function zombieshouldattackthroughboardscondition(behaviortreeentity) {
@@ -783,6 +814,7 @@ function zombieshouldattackthroughboardscondition(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_c607d349
 // Checksum 0xbb73bdd6, Offset: 0x3d08
 // Size: 0x118
 function zombieshouldtauntcondition(behaviortreeentity) {
@@ -807,6 +839,7 @@ function zombieshouldtauntcondition(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_b16091dd
 // Checksum 0xaa7c11fa, Offset: 0x3e28
 // Size: 0xc0
 function zombieshouldenterplayablecondition(behaviortreeentity) {
@@ -822,6 +855,7 @@ function zombieshouldenterplayablecondition(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_e70d7be5
 // Checksum 0xf0a95612, Offset: 0x3ef0
 // Size: 0x28
 function ischunkvalidcondition(behaviortreeentity) {
@@ -833,6 +867,7 @@ function ischunkvalidcondition(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_7f9d4ab5
 // Checksum 0xd6a5567, Offset: 0x3f20
 // Size: 0x3a
 function inplayablearea(behaviortreeentity) {
@@ -844,6 +879,7 @@ function inplayablearea(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_454504bd
 // Checksum 0x708ac40b, Offset: 0x3f68
 // Size: 0x36
 function shouldskipteardown(behaviortreeentity) {
@@ -855,6 +891,7 @@ function shouldskipteardown(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_3fff305
 // Checksum 0xaf3ca78c, Offset: 0x3fa8
 // Size: 0x66
 function zombieisthinkdone(behaviortreeentity) {
@@ -871,6 +908,7 @@ function zombieisthinkdone(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_9aecf621
 // Checksum 0xfd7edcc0, Offset: 0x4018
 // Size: 0x34
 function zombieisatgoal(behaviortreeentity) {
@@ -880,6 +918,7 @@ function zombieisatgoal(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_9669a842
 // Checksum 0xba1d2bcb, Offset: 0x4058
 // Size: 0x5a
 function zombieisatentrance(behaviortreeentity) {
@@ -890,6 +929,7 @@ function zombieisatentrance(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_33e2754f
 // Checksum 0xcde610fc, Offset: 0x40c0
 // Size: 0xe4
 function getchunkservice(behaviortreeentity) {
@@ -902,6 +942,7 @@ function getchunkservice(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_6bd910ca
 // Checksum 0xe5f528bc, Offset: 0x41b0
 // Size: 0x80
 function updatechunkservice(behaviortreeentity) {
@@ -913,6 +954,7 @@ function updatechunkservice(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_9dbecad3
 // Checksum 0x783c6d47, Offset: 0x4238
 // Size: 0x100
 function updateattackspotservice(behaviortreeentity) {
@@ -937,6 +979,7 @@ function updateattackspotservice(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_5eef1eb8
 // Checksum 0x778f4413, Offset: 0x4340
 // Size: 0x1be
 function findnodesservice(behaviortreeentity) {
@@ -966,6 +1009,7 @@ function findnodesservice(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_edbeec6b
 // Checksum 0x9f8f4be6, Offset: 0x4508
 // Size: 0x13e
 function zombieattackableobjectservice(behaviortreeentity) {
@@ -992,6 +1036,7 @@ function zombieattackableobjectservice(behaviortreeentity) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_cf123ebb
 // Checksum 0x8afc9819, Offset: 0x4650
 // Size: 0x40
 function zombiemovetoentranceaction(behaviortreeentity, asmstatename) {
@@ -1002,6 +1047,7 @@ function zombiemovetoentranceaction(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_ad78ed80
 // Checksum 0x75b055a5, Offset: 0x4698
 // Size: 0x44
 function zombiemovetoentranceactionterminate(behaviortreeentity, asmstatename) {
@@ -1013,6 +1059,7 @@ function zombiemovetoentranceactionterminate(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_79b20ff5
 // Checksum 0x1f82e0b4, Offset: 0x46e8
 // Size: 0x40
 function zombiemovetoattackspotaction(behaviortreeentity, asmstatename) {
@@ -1023,6 +1070,7 @@ function zombiemovetoattackspotaction(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_e74742b6
 // Checksum 0xf92a0a96, Offset: 0x4730
 // Size: 0x2c
 function zombiemovetoattackspotactionterminate(behaviortreeentity, asmstatename) {
@@ -1032,6 +1080,7 @@ function zombiemovetoattackspotactionterminate(behaviortreeentity, asmstatename)
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_67827c56
 // Checksum 0x41bb5012, Offset: 0x4768
 // Size: 0x120
 function zombieholdboardaction(behaviortreeentity, asmstatename) {
@@ -1046,6 +1095,7 @@ function zombieholdboardaction(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_70f167df
 // Checksum 0xab24cb44, Offset: 0x4890
 // Size: 0x28
 function zombieholdboardactionterminate(behaviortreeentity, asmstatename) {
@@ -1055,6 +1105,7 @@ function zombieholdboardactionterminate(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_ca32c315
 // Checksum 0x923d69e9, Offset: 0x48c0
 // Size: 0x120
 function zombiegrabboardaction(behaviortreeentity, asmstatename) {
@@ -1069,6 +1120,7 @@ function zombiegrabboardaction(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_a08a6456
 // Checksum 0x64e7b453, Offset: 0x49e8
 // Size: 0x28
 function zombiegrabboardactionterminate(behaviortreeentity, asmstatename) {
@@ -1078,6 +1130,7 @@ function zombiegrabboardactionterminate(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_44e7d244
 // Checksum 0xfbf18931, Offset: 0x4a18
 // Size: 0x120
 function zombiepullboardaction(behaviortreeentity, asmstatename) {
@@ -1092,6 +1145,7 @@ function zombiepullboardaction(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_11581af9
 // Checksum 0x736701, Offset: 0x4b40
 // Size: 0x34
 function zombiepullboardactionterminate(behaviortreeentity, asmstatename) {
@@ -1102,6 +1156,7 @@ function zombiepullboardactionterminate(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_cbb95ba3
 // Checksum 0x58e79f43, Offset: 0x4b80
 // Size: 0x58
 function zombieattackthroughboardsaction(behaviortreeentity, asmstatename) {
@@ -1113,6 +1168,7 @@ function zombieattackthroughboardsaction(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_3a2740c8
 // Checksum 0x8a6207e6, Offset: 0x4be0
 // Size: 0x38
 function zombieattackthroughboardsactionterminate(behaviortreeentity, asmstatename) {
@@ -1123,6 +1179,7 @@ function zombieattackthroughboardsactionterminate(behaviortreeentity, asmstatena
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_4ed94e93
 // Checksum 0x3abc6f11, Offset: 0x4c20
 // Size: 0x48
 function zombietauntaction(behaviortreeentity, asmstatename) {
@@ -1133,6 +1190,7 @@ function zombietauntaction(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_64a4ce38
 // Checksum 0x59d094b0, Offset: 0x4c70
 // Size: 0x28
 function zombietauntactionterminate(behaviortreeentity, asmstatename) {
@@ -1142,6 +1200,7 @@ function zombietauntactionterminate(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_fbf29484
 // Checksum 0xbe001776, Offset: 0x4ca0
 // Size: 0xd0
 function zombiemantleaction(behaviortreeentity, asmstatename) {
@@ -1158,6 +1217,7 @@ function zombiemantleaction(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_b80c2a39
 // Checksum 0xb1760ff1, Offset: 0x4d78
 // Size: 0x50
 function zombiemantleactionterminate(behaviortreeentity, asmstatename) {
@@ -1169,6 +1229,7 @@ function zombiemantleactionterminate(behaviortreeentity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 5, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_5889416a
 // Checksum 0x8711e137, Offset: 0x4dd0
 // Size: 0x174
 function boardtearmocompstart(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -1183,6 +1244,7 @@ function boardtearmocompstart(entity, mocompanim, mocompanimblendouttime, mocomp
 
 // Namespace zm_behavior
 // Params 5, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_af703b65
 // Checksum 0x612ab632, Offset: 0x4f50
 // Size: 0x70
 function boardtearmocompupdate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -1193,6 +1255,7 @@ function boardtearmocompupdate(entity, mocompanim, mocompanimblendouttime, mocom
 
 // Namespace zm_behavior
 // Params 5, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_6bba3507
 // Checksum 0xd25cffe7, Offset: 0x4fc8
 // Size: 0x1e0
 function barricadeentermocompstart(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -1212,6 +1275,7 @@ function barricadeentermocompstart(entity, mocompanim, mocompanimblendouttime, m
 
 // Namespace zm_behavior
 // Params 5, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_1ede7552
 // Checksum 0x10bf7c6c, Offset: 0x51b0
 // Size: 0x5c
 function barricadeentermocompupdate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -1221,6 +1285,7 @@ function barricadeentermocompupdate(entity, mocompanim, mocompanimblendouttime, 
 
 // Namespace zm_behavior
 // Params 5, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_3ec1dcd6
 // Checksum 0x381e8f52, Offset: 0x5218
 // Size: 0xbc
 function barricadeentermocompterminate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -1234,6 +1299,7 @@ function barricadeentermocompterminate(entity, mocompanim, mocompanimblendouttim
 
 // Namespace zm_behavior
 // Params 5, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_3995d9be
 // Checksum 0xbb5320a, Offset: 0x52e0
 // Size: 0x218
 function barricadeentermocompnozstart(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -1254,6 +1320,7 @@ function barricadeentermocompnozstart(entity, mocompanim, mocompanimblendouttime
 
 // Namespace zm_behavior
 // Params 5, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_3eb7d151
 // Checksum 0xdcc5821c, Offset: 0x5500
 // Size: 0x5c
 function barricadeentermocompnozupdate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -1263,6 +1330,7 @@ function barricadeentermocompnozupdate(entity, mocompanim, mocompanimblendouttim
 
 // Namespace zm_behavior
 // Params 5, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_1e68f1df
 // Checksum 0x1b7d2016, Offset: 0x5568
 // Size: 0xbc
 function barricadeentermocompnozterminate(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -1276,6 +1344,7 @@ function barricadeentermocompnozterminate(entity, mocompanim, mocompanimblendout
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_f628891a
 // Checksum 0x361f1351, Offset: 0x5630
 // Size: 0x5c
 function notetrackboardtear(animationentity) {
@@ -1286,6 +1355,7 @@ function notetrackboardtear(animationentity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_c5e3b4da
 // Checksum 0xe96dd3c0, Offset: 0x5698
 // Size: 0x2e4
 function notetrackboardmelee(animationentity) {
@@ -1315,6 +1385,7 @@ function notetrackboardmelee(animationentity) {
 
 // Namespace zm_behavior
 // Params 0, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_d0a559b6
 // Checksum 0xb18b4352, Offset: 0x5988
 // Size: 0x21c
 function findzombieenemy() {
@@ -1340,6 +1411,7 @@ function findzombieenemy() {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_ff965f69
 // Checksum 0xeb2f342b, Offset: 0x5bb0
 // Size: 0xbc
 function zombieblackholebombpullstart(entity, asmstatename) {
@@ -1356,6 +1428,7 @@ function zombieblackholebombpullstart(entity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_1d739461
 // Checksum 0x996ad1d3, Offset: 0x5c78
 // Size: 0xd4
 function zombieupdateblackholebombpullstate(entity) {
@@ -1375,6 +1448,7 @@ function zombieupdateblackholebombpullstate(entity) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_4cd5b7a0
 // Checksum 0x2d538b78, Offset: 0x5d58
 // Size: 0x254
 function zombieblackholebombpullupdate(entity, asmstatename) {
@@ -1410,6 +1484,7 @@ function zombieblackholebombpullupdate(entity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_53d0f8b2
 // Checksum 0x8d024d9c, Offset: 0x5fb8
 // Size: 0x4a
 function zombieblackholebombpullend(entity, asmstatename) {
@@ -1422,6 +1497,7 @@ function zombieblackholebombpullend(entity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_8a7ca40b
 // Checksum 0xef6e5ccd, Offset: 0x6010
 // Size: 0x78
 function zombiekilledwhilegettingpulled(entity) {
@@ -1433,6 +1509,7 @@ function zombiekilledwhilegettingpulled(entity) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_442b4265
 // Checksum 0x2d8d7f2e, Offset: 0x6090
 // Size: 0x3a
 function zombiekilledbyblackholebombcondition(entity) {
@@ -1444,6 +1521,7 @@ function zombiekilledbyblackholebombcondition(entity) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_7cf5770e
 // Checksum 0x52260eff, Offset: 0x60d8
 // Size: 0x68
 function zombiekilledbyblackholebombstart(entity, asmstatename) {
@@ -1456,6 +1534,7 @@ function zombiekilledbyblackholebombstart(entity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 2, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_c47c459d
 // Checksum 0xd775c87c, Offset: 0x6148
 // Size: 0xd8
 function zombiekilledbyblackholebombend(entity, asmstatename) {
@@ -1470,6 +1549,7 @@ function zombiekilledbyblackholebombend(entity, asmstatename) {
 
 // Namespace zm_behavior
 // Params 1, eflags: 0x1 linked
+// namespace_c1bd5bf7<file_0>::function_466864a1
 // Checksum 0xba70f331, Offset: 0x6228
 // Size: 0xb0
 function zombiebhbburst(entity) {

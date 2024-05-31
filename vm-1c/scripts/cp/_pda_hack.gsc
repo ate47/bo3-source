@@ -13,6 +13,7 @@ class class_d86d3a6 {
 
     // Namespace namespace_d86d3a6
     // Params 0, eflags: 0x0
+    // namespace_d86d3a6<file_0>::function_9b385ca5
     // Checksum 0xefc64391, Offset: 0x1d0
     // Size: 0x80
     function constructor() {
@@ -29,6 +30,7 @@ class class_d86d3a6 {
 
     // Namespace namespace_d86d3a6
     // Params 0, eflags: 0x0
+    // namespace_d86d3a6<file_0>::function_5fba2032
     // Checksum 0xf9b0c4b0, Offset: 0x258
     // Size: 0x14
     function destructor() {
@@ -37,6 +39,7 @@ class class_d86d3a6 {
 
     // Namespace namespace_d86d3a6
     // Params 0, eflags: 0x0
+    // namespace_d86d3a6<file_0>::function_4305af9c
     // Checksum 0xa83bf92c, Offset: 0xf58
     // Size: 0x2c
     function clean_up() {
@@ -47,6 +50,7 @@ class class_d86d3a6 {
 
     // Namespace namespace_d86d3a6
     // Params 4, eflags: 0x0
+    // namespace_d86d3a6<file_0>::function_4336408f
     // Checksum 0x6f1c2cfe, Offset: 0xde8
     // Size: 0x168
     function function_4336408f(v_origin, n_radius, n_height, str_hint) {
@@ -66,6 +70,7 @@ class class_d86d3a6 {
 
     // Namespace namespace_d86d3a6
     // Params 1, eflags: 0x0
+    // namespace_d86d3a6<file_0>::function_62faa634
     // Checksum 0x6ab3a10c, Offset: 0xda0
     // Size: 0x3c
     function function_62faa634(var_cbc69bae) {
@@ -75,6 +80,7 @@ class class_d86d3a6 {
 
     // Namespace namespace_d86d3a6
     // Params 0, eflags: 0x0
+    // namespace_d86d3a6<file_0>::function_f7d58490
     // Checksum 0xe9339f6b, Offset: 0xd38
     // Size: 0x5c
     function function_f7d58490() {
@@ -87,6 +93,7 @@ class class_d86d3a6 {
 
     // Namespace namespace_d86d3a6
     // Params 1, eflags: 0x0
+    // namespace_d86d3a6<file_0>::function_e1c61785
     // Checksum 0x521e01b5, Offset: 0xbb8
     // Size: 0x174
     function function_e1c61785(trigger) {
@@ -101,6 +108,7 @@ class class_d86d3a6 {
 
     // Namespace namespace_d86d3a6
     // Params 0, eflags: 0x0
+    // namespace_d86d3a6<file_0>::function_341b7c41
     // Checksum 0xd41b1db0, Offset: 0x658
     // Size: 0x558
     function function_341b7c41() {
@@ -182,6 +190,7 @@ class class_d86d3a6 {
 
     // Namespace namespace_d86d3a6
     // Params 0, eflags: 0x0
+    // namespace_d86d3a6<file_0>::function_ce55f4fa
     // Checksum 0x7a93950c, Offset: 0x640
     // Size: 0x10
     function function_ce55f4fa() {
@@ -190,6 +199,7 @@ class class_d86d3a6 {
 
     // Namespace namespace_d86d3a6
     // Params 1, eflags: 0x0
+    // namespace_d86d3a6<file_0>::function_fd069dd4
     // Checksum 0x3c8995ca, Offset: 0x580
     // Size: 0xb8
     function function_fd069dd4(e_triggerer) {
@@ -209,6 +219,7 @@ class class_d86d3a6 {
 
     // Namespace namespace_d86d3a6
     // Params 0, eflags: 0x0
+    // namespace_d86d3a6<file_0>::function_365c53f7
     // Checksum 0xe5fd5d41, Offset: 0x510
     // Size: 0x68
     function disable_hacking() {
@@ -222,6 +233,7 @@ class class_d86d3a6 {
 
     // Namespace namespace_d86d3a6
     // Params 0, eflags: 0x0
+    // namespace_d86d3a6<file_0>::function_64ff4520
     // Checksum 0x198d3c44, Offset: 0x438
     // Size: 0xcc
     function enable_hacking() {
@@ -241,6 +253,7 @@ class class_d86d3a6 {
 
     // Namespace namespace_d86d3a6
     // Params 1, eflags: 0x0
+    // namespace_d86d3a6<file_0>::function_57511b5b
     // Checksum 0x4dd10459, Offset: 0x418
     // Size: 0x18
     function function_57511b5b(n_time) {
@@ -249,6 +262,7 @@ class class_d86d3a6 {
 
     // Namespace namespace_d86d3a6
     // Params 5, eflags: 0x0
+    // namespace_d86d3a6<file_0>::function_808cd5de
     // Checksum 0xdf0f4703, Offset: 0x278
     // Size: 0x194
     function function_808cd5de(v_origin, str_hint_string, v_angles, var_a65e7c1a, var_5152e048) {
@@ -274,6 +288,7 @@ class class_d86d3a6 {
 
 // Namespace namespace_4cb2c123
 // Params 0, eflags: 0x2
+// namespace_4cb2c123<file_0>::function_2dc19561
 // Checksum 0x2df759d0, Offset: 0x180
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -282,6 +297,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_4cb2c123
 // Params 0, eflags: 0x0
+// namespace_4cb2c123<file_0>::function_8c87d8eb
 // Checksum 0x99ec1590, Offset: 0x1c0
 // Size: 0x4
 function __init__() {

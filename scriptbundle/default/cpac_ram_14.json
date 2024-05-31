@@ -1,0 +1,12 @@
+{
+    "vmtype": "none",
+    "name": "cpac_ram_14",
+    "igdtseqnum": 141,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Traversal",
+    "challengeDetails": "ACCOLADES_RAM_14",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_RAM_14_NAME",
+    "centerText": "3",
+    "challengeReference": "MISSION_RAMSES_CHALLENGE14"
+}

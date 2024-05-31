@@ -1,0 +1,12 @@
+{
+    "vmtype": "none",
+    "name": "cpac_newworld_14",
+    "igdtseqnum": 101,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Weapon",
+    "challengeDetails": "ACCOLADES_NEW_14",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_NEW_14_NAME",
+    "centerText": "8",
+    "challengeReference": "MISSION_NEWWORLD_CHALLENGE14"
+}

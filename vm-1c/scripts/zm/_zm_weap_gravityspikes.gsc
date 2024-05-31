@@ -33,6 +33,7 @@
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x2
+// namespace_9b170cb8<file_0>::function_2dc19561
 // Checksum 0x9ef5452a, Offset: 0x8a0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -41,6 +42,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_8c87d8eb
 // Checksum 0xb6f0c845, Offset: 0x8e0
 // Size: 0x1bc
 function __init__() {
@@ -65,6 +67,7 @@ function __init__() {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_4ece4a2f
 // Checksum 0xdb3e254d, Offset: 0xaa8
 // Size: 0x274
 function register_clientfields() {
@@ -85,6 +88,7 @@ function register_clientfields() {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x5 linked
+// namespace_9b170cb8<file_0>::function_6bfe94e8
 // Checksum 0xe4775326, Offset: 0xd28
 // Size: 0x204
 function private function_6bfe94e8() {
@@ -120,6 +124,7 @@ function private function_6bfe94e8() {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_19d7ac29
 // Checksum 0xaed6b8eb, Offset: 0xf38
 // Size: 0x194
 function reset_after_bleeding_out() {
@@ -149,6 +154,7 @@ function reset_after_bleeding_out() {
 
 // Namespace zm_weap_gravityspikes
 // Params 2, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_4650a121
 // Checksum 0x15cc7355, Offset: 0x10d8
 // Size: 0x354
 function function_4650a121(e_player, ai_enemy) {
@@ -187,6 +193,7 @@ function function_4650a121(e_player, ai_enemy) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_618e090
 // Checksum 0x615bf360, Offset: 0x1438
 // Size: 0x12c
 function function_618e090(var_87f03818) {
@@ -208,6 +215,7 @@ function function_618e090(var_87f03818) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_aebacd0f
 // Checksum 0x95e60846, Offset: 0x1570
 // Size: 0x94
 function function_aebacd0f(var_87f03818) {
@@ -222,6 +230,7 @@ function function_aebacd0f(var_87f03818) {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_54cfcd62
 // Checksum 0x46af0972, Offset: 0x1610
 // Size: 0x68
 function weapon_drop_watcher() {
@@ -236,6 +245,7 @@ function weapon_drop_watcher() {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_2c008e7d
 // Checksum 0x2cd55, Offset: 0x1680
 // Size: 0x70
 function weapon_change_watcher() {
@@ -250,6 +260,7 @@ function weapon_change_watcher() {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_1f53d39a
 // Checksum 0x805edba7, Offset: 0x16f8
 // Size: 0xc8
 function gravityspikes_attack_watcher(var_87f03818) {
@@ -270,6 +281,7 @@ function gravityspikes_attack_watcher(var_87f03818) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_2460a8f9
 // Checksum 0xdd2886b6, Offset: 0x17c8
 // Size: 0x4f0
 function gravityspikes_stuck_above_zombie_watcher(var_87f03818) {
@@ -335,6 +347,7 @@ function gravityspikes_stuck_above_zombie_watcher(var_87f03818) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_c584b3cd
 // Checksum 0x165db7f1, Offset: 0x1cc0
 // Size: 0xa8
 function gravityspikes_altfire_watcher(var_87f03818) {
@@ -353,6 +366,7 @@ function gravityspikes_altfire_watcher(var_87f03818) {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_7441d62b
 // Checksum 0xc5dc9315, Offset: 0x1d70
 // Size: 0x44
 function gravity_spike_position_valid() {
@@ -366,6 +380,7 @@ function gravity_spike_position_valid() {
 
 // Namespace zm_weap_gravityspikes
 // Params 3, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_e485cb47
 // Checksum 0x3eaba3a0, Offset: 0x1dc0
 // Size: 0xfc
 function chop_actor(ai, leftswing, weapon) {
@@ -386,6 +401,7 @@ function chop_actor(ai, leftswing, weapon) {
 
 // Namespace zm_weap_gravityspikes
 // Params 3, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_cdc8d865
 // Checksum 0x749f776c, Offset: 0x1ec8
 // Size: 0x2f2
 function chop_zombies(first_time, leftswing, weapon) {
@@ -429,6 +445,7 @@ function chop_zombies(first_time, leftswing, weapon) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_b2b16b7b
 // Checksum 0x7dc03813, Offset: 0x21c8
 // Size: 0x7c
 function function_b2b16b7b(player) {
@@ -441,6 +458,7 @@ function function_b2b16b7b(player) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_844248de
 // Checksum 0xe628e136, Offset: 0x2250
 // Size: 0x88
 function function_844248de(var_87f03818) {
@@ -457,6 +475,7 @@ function function_844248de(var_87f03818) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_6b90b056
 // Checksum 0x5a80143, Offset: 0x22e0
 // Size: 0x64
 function function_6b90b056(player) {
@@ -468,6 +487,7 @@ function function_6b90b056(player) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_e0511e28
 // Checksum 0x1767b038, Offset: 0x2350
 // Size: 0x3e
 function function_e0511e28(weapon) {
@@ -478,6 +498,7 @@ function function_e0511e28(weapon) {
 
 // Namespace zm_weap_gravityspikes
 // Params 11, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_54877d91
 // Checksum 0xfc5653c5, Offset: 0x2398
 // Size: 0xac
 function player_invulnerable_during_gravityspike_slam(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex) {
@@ -489,6 +510,7 @@ function player_invulnerable_during_gravityspike_slam(einflictor, eattacker, ida
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_9f9763c2
 // Checksum 0xd76275e9, Offset: 0x2450
 // Size: 0x24
 function no_damage_gravityspikes_slam() {
@@ -499,6 +521,7 @@ function no_damage_gravityspikes_slam() {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_1d6b9fcf
 // Checksum 0x2f26f535, Offset: 0x2480
 // Size: 0x1a0
 function player_near_gravity_vortex(v_vortex_origin) {
@@ -522,6 +545,7 @@ function player_near_gravity_vortex(v_vortex_origin) {
 
 // Namespace zm_weap_gravityspikes
 // Params 2, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_55a5024b
 // Checksum 0x5be604f5, Offset: 0x2628
 // Size: 0xf2
 function function_55a5024b(e_player, v_vortex_origin) {
@@ -539,6 +563,7 @@ function function_55a5024b(e_player, v_vortex_origin) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_8d6b0843
 // Checksum 0x4d34d67a, Offset: 0x2728
 // Size: 0x3a2
 function plant_gravity_trap(var_87f03818) {
@@ -580,6 +605,7 @@ function plant_gravity_trap(var_87f03818) {
 
 // Namespace zm_weap_gravityspikes
 // Params 2, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_eda083d6
 // Checksum 0x6a783cb0, Offset: 0x2ad8
 // Size: 0x1ac
 function gravity_trap_loop(var_5da14f3b, var_87f03818) {
@@ -610,6 +636,7 @@ function gravity_trap_loop(var_5da14f3b, var_87f03818) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_3b94d3ac
 // Checksum 0x64f4091e, Offset: 0x2c90
 // Size: 0x1ac
 function gravity_trap_check(player) {
@@ -638,6 +665,7 @@ function gravity_trap_check(player) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_b86b5252
 // Checksum 0xeda43306, Offset: 0x2e48
 // Size: 0x176
 function create_gravity_trap_spikes_in_ground(var_e987f01a) {
@@ -662,6 +690,7 @@ function create_gravity_trap_spikes_in_ground(var_e987f01a) {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_a38a9d64
 // Checksum 0xfcca3bb1, Offset: 0x2fc8
 // Size: 0x34
 function gravity_spike_planted_play() {
@@ -671,6 +700,7 @@ function gravity_spike_planted_play() {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_d6f2325a
 // Checksum 0x7b59e6be, Offset: 0x3008
 // Size: 0x186
 function destroy_gravity_trap_spikes_in_ground() {
@@ -699,6 +729,7 @@ function destroy_gravity_trap_spikes_in_ground() {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_deadc276
 // Checksum 0x1a4c2838, Offset: 0x3198
 // Size: 0x9c
 function gravity_trap_fx_on(v_spawn_pos) {
@@ -713,6 +744,7 @@ function gravity_trap_fx_on(v_spawn_pos) {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_85b1964c
 // Checksum 0x276531a1, Offset: 0x3240
 // Size: 0x5c
 function gravity_trap_fx_off() {
@@ -725,6 +757,7 @@ function gravity_trap_fx_off() {
 
 // Namespace zm_weap_gravityspikes
 // Params 2, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_268b0239
 // Checksum 0xf7da4d32, Offset: 0x32a8
 // Size: 0x12c
 function function_268b0239(v_origin, var_87f03818) {
@@ -747,6 +780,7 @@ function function_268b0239(v_origin, var_87f03818) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_66b8ce07
 // Checksum 0x5b1051f8, Offset: 0x33e0
 // Size: 0x68
 function function_66b8ce07(player) {
@@ -760,6 +794,7 @@ function function_66b8ce07(player) {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_23d2cc59
 // Checksum 0x1cb5ce6b, Offset: 0x3450
 // Size: 0xa4
 function function_23d2cc59() {
@@ -781,6 +816,7 @@ function function_23d2cc59() {
 
 // Namespace zm_weap_gravityspikes
 // Params 2, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_6a359e28
 // Checksum 0xb7cc22e0, Offset: 0x3500
 // Size: 0x15a
 function function_6a359e28(var_91089b66, player) {
@@ -801,6 +837,7 @@ function function_6a359e28(var_91089b66, player) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_85c52e7e
 // Checksum 0x3c25e438, Offset: 0x3668
 // Size: 0x18
 function update_gravityspikes_state(n_gravityspikes_state) {
@@ -809,6 +846,7 @@ function update_gravityspikes_state(n_gravityspikes_state) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x0
+// namespace_9b170cb8<file_0>::function_9605596b
 // Checksum 0x5a168cb8, Offset: 0x3688
 // Size: 0x3c
 function function_9605596b(var_9284dd5) {
@@ -818,6 +856,7 @@ function function_9605596b(var_9284dd5) {
 
 // Namespace zm_weap_gravityspikes
 // Params 3, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_faceddcc
 // Checksum 0x97d98ef6, Offset: 0x36d0
 // Size: 0xf6
 function check_for_range_and_los(v_attack_source, n_allowed_z_diff, n_radius_sq) {
@@ -837,6 +876,7 @@ function check_for_range_and_los(v_attack_source, n_allowed_z_diff, n_radius_sq)
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_64f2541b
 // Checksum 0xed3bd535, Offset: 0x37d0
 // Size: 0x48
 function gravityspikes_target_filtering(ai_enemy) {
@@ -849,6 +889,7 @@ function gravityspikes_target_filtering(ai_enemy) {
 
 // Namespace zm_weap_gravityspikes
 // Params 6, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_8b18d62d
 // Checksum 0xbf01cd7d, Offset: 0x3820
 // Size: 0x79c
 function zombie_lift(player, v_attack_source, n_push_away, n_lift_height, v_lift_offset, n_lift_speed) {
@@ -928,6 +969,7 @@ function zombie_lift(player, v_attack_source, n_push_away, n_lift_height, v_lift
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_954ec67a
 // Checksum 0x107e8a0, Offset: 0x3fc8
 // Size: 0x8a
 function gravity_trap_notify_watcher(player) {
@@ -939,6 +981,7 @@ function gravity_trap_notify_watcher(player) {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_af8be6f0
 // Checksum 0x41563f55, Offset: 0x4060
 // Size: 0xa2
 function gravity_trap_timeout_watcher() {
@@ -952,6 +995,7 @@ function gravity_trap_timeout_watcher() {
 
 // Namespace zm_weap_gravityspikes
 // Params 2, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_722d098b
 // Checksum 0x9659b636, Offset: 0x4110
 // Size: 0x152
 function zombie_lift_wacky_rotate(n_lift_time, player) {
@@ -967,6 +1011,7 @@ function zombie_lift_wacky_rotate(n_lift_time, player) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_7328cfdf
 // Checksum 0x194824b0, Offset: 0x4270
 // Size: 0xcc
 function zombie_kill_and_gib(player) {
@@ -983,6 +1028,7 @@ function zombie_kill_and_gib(player) {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_99746179
 // Checksum 0x48910d37, Offset: 0x4348
 // Size: 0x20
 function track_lifted_for_ragdoll_count() {
@@ -993,6 +1039,7 @@ function track_lifted_for_ragdoll_count() {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_9b5e3163
 // Checksum 0xd682d666, Offset: 0x4370
 // Size: 0x94
 function corpse_off_navmesh_watcher() {
@@ -1005,6 +1052,7 @@ function corpse_off_navmesh_watcher() {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x5 linked
+// namespace_9b170cb8<file_0>::function_d43633e9
 // Checksum 0xa6ac0223, Offset: 0x4410
 // Size: 0x94
 function private do_zombie_explode() {
@@ -1019,6 +1067,7 @@ function private do_zombie_explode() {
 
 // Namespace zm_weap_gravityspikes
 // Params 2, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_6685b216
 // Checksum 0x8c13aa57, Offset: 0x44b0
 // Size: 0xb4
 function gravity_spike_melee_kill(v_position, player) {
@@ -1031,6 +1080,7 @@ function gravity_spike_melee_kill(v_position, player) {
 
 // Namespace zm_weap_gravityspikes
 // Params 0, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_ae47bf31
 // Checksum 0x78cd4a15, Offset: 0x4570
 // Size: 0x17c
 function knockdown_zombies_slam() {
@@ -1047,6 +1097,7 @@ function knockdown_zombies_slam() {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_6289121a
 // Checksum 0x53001a3f, Offset: 0x46f8
 // Size: 0xac
 function play_slam_fx(v_pos) {
@@ -1060,6 +1111,7 @@ function play_slam_fx(v_pos) {
 
 // Namespace zm_weap_gravityspikes
 // Params 1, eflags: 0x1 linked
+// namespace_9b170cb8<file_0>::function_f933660b
 // Checksum 0x22b6f5f2, Offset: 0x47b0
 // Size: 0x28c
 function zombie_slam_direction(v_position) {
@@ -1103,6 +1155,7 @@ function zombie_slam_direction(v_position) {
 
     // Namespace zm_weap_gravityspikes
     // Params 0, eflags: 0x1 linked
+    // namespace_9b170cb8<file_0>::function_81889ac5
     // Checksum 0x6d63cdd7, Offset: 0x4a48
     // Size: 0x5d0
     function function_81889ac5() {

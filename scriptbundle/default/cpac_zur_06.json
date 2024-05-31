@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_zur_06",
+    "igdtseqnum": 188,
+    "challengeWidget": "Melee",
+    "challengeDetails": "ACCOLADES_ZUR_6",
+    "challengeName": "ACCOLADES_ZUR_6_NAME",
+    "centerText": "5",
+    "challengeReference": "MISSION_ZURICH_CHALLENGE6"
+}

@@ -23,6 +23,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 0, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_9b385ca5
     // Checksum 0xeaf1916d, Offset: 0x800
     // Size: 0x2c
     function constructor() {
@@ -32,6 +33,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 0, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_c41d3e77
     // Checksum 0xe43a5b4d, Offset: 0x2078
     // Size: 0xe0
     function in_a_different_scene() {
@@ -47,6 +49,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 1, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_8d4c7e9f
     // Checksum 0x2a65885d, Offset: 0x2050
     // Size: 0x1a
     function is_alive(clientnum) {
@@ -55,6 +58,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 0, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_3f7081de
     // Checksum 0xfaecc5a3, Offset: 0x2028
     // Size: 0x1a
     function has_init_state() {
@@ -63,6 +67,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 0, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_2f376105
     // Checksum 0x40202f70, Offset: 0x1ff8
     // Size: 0x24
     function function_2f376105() {
@@ -71,6 +76,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 0, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_82d19144
     // Checksum 0xa8dfed11, Offset: 0x1fa8
     // Size: 0x44
     function get_align_tag() {
@@ -82,6 +88,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 8, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_9a460f6a
     // Checksum 0xc6944af9, Offset: 0x1cf8
     // Size: 0x2a4
     function _play_anim(clientnum, animation, n_delay_min, n_delay_max, n_rate, n_blend, str_siege_shot, loop) {
@@ -129,6 +136,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 1, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_2ccf8024
     // Checksum 0xaf66c5ea, Offset: 0x1b90
     // Size: 0x15c
     function _cleanup(clientnum) {
@@ -149,6 +157,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 1, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_d0458499
     // Checksum 0x5ed05f14, Offset: 0x1a28
     // Size: 0x15a
     function _prepare(clientnum) {
@@ -167,6 +176,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 2, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_3ad6b82d
     // Checksum 0x83c31024, Offset: 0x1658
     // Size: 0x3c8
     function _spawn(clientnum, b_hide) {
@@ -212,6 +222,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 0, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_90076459
     // Checksum 0x563cc1a3, Offset: 0x1638
     // Size: 0x12
     function get_orig_name() {
@@ -220,6 +231,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 0, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_e9e6c8b
     // Checksum 0x76170705, Offset: 0x1620
     // Size: 0xa
     function get_name() {
@@ -228,6 +240,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 0, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_2bef6297
     // Checksum 0x78723f65, Offset: 0x14f0
     // Size: 0x124
     function _assign_unique_name() {
@@ -249,6 +262,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 0, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_cc27597
     // Checksum 0xd376b57b, Offset: 0x14d8
     // Size: 0xa
     function scene() {
@@ -257,6 +271,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 1, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_635b76ab
     // Checksum 0x8801c705, Offset: 0x1378
     // Size: 0x154
     function get_align_ent(clientnum) {
@@ -278,6 +293,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 2, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_32871f8e
     // Checksum 0x877b71d, Offset: 0x1240
     // Size: 0x12c
     function finish_per_client(clientnum, b_clear) {
@@ -301,6 +317,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 1, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_bf1224d8
     // Checksum 0xf5354c11, Offset: 0x1158
     // Size: 0xdc
     function finish(b_clear) {
@@ -322,6 +339,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 1, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_bb87e627
     // Checksum 0x6c84bac0, Offset: 0xf50
     // Size: 0x1fc
     function play_per_client(clientnum) {
@@ -347,6 +365,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 0, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_43718187
     // Checksum 0xb5328d40, Offset: 0xe28
     // Size: 0x11c
     function play() {
@@ -371,6 +390,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 1, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_d7bf381f
     // Checksum 0xa4de13e7, Offset: 0xbd8
     // Size: 0x244
     function initialize_per_client(clientnum) {
@@ -398,6 +418,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 0, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_e6cab0ff
     // Checksum 0x2f9c8f4c, Offset: 0x8e0
     // Size: 0x2ec
     function initialize() {
@@ -436,6 +457,7 @@ class csceneobject : cscriptbundleobjectbase {
 
     // Namespace csceneobject
     // Params 4, eflags: 0x1 linked
+    // namespace_fa3620f1<file_0>::function_b8f5192a
     // Checksum 0x45dc0719, Offset: 0x858
     // Size: 0x7e
     function first_init(s_objdef, o_scene, e_ent, localclientnum) {
@@ -455,6 +477,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 0, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_9b385ca5
     // Checksum 0x2beff95f, Offset: 0x2700
     // Size: 0x30
     function constructor() {
@@ -464,6 +487,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 0, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_47381425
     // Checksum 0xdb7643be, Offset: 0x3fd0
     // Size: 0xa
     function get_state() {
@@ -472,6 +496,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 0, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_e248348d
     // Checksum 0x30d4688a, Offset: 0x3fb0
     // Size: 0x14
     function on_error() {
@@ -480,6 +505,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 0, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_f19401b5
     // Checksum 0xfa5ad4c4, Offset: 0x3e98
     // Size: 0x10c
     function get_valid_objects() {
@@ -499,6 +525,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 0, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_e8335960
     // Checksum 0x543bfc11, Offset: 0x3e68
     // Size: 0x24
     function function_e8335960() {
@@ -507,6 +534,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 0, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_2f376105
     // Checksum 0x69dc4dd6, Offset: 0x3e28
     // Size: 0x34
     function function_2f376105() {
@@ -517,6 +545,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 0, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_107a392
     // Checksum 0xf318e046, Offset: 0x3df8
     // Size: 0x26
     function is_looping() {
@@ -525,6 +554,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 0, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_17dcf452
     // Checksum 0xb376d501, Offset: 0x3dc8
     // Size: 0x26
     function allows_multiple() {
@@ -533,6 +563,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 1, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_635b76ab
     // Checksum 0x34ba963d, Offset: 0x3d40
     // Size: 0x80
     function get_align_ent(clientnum) {
@@ -548,6 +579,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 0, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_4c742502
     // Checksum 0xe82bcb26, Offset: 0x3d28
     // Size: 0xa
     function get_root() {
@@ -556,6 +588,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 0, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_3da2d8c
     // Checksum 0xa7af3fe1, Offset: 0x3b70
     // Size: 0x1ae
     function get_ents() {
@@ -583,6 +616,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 1, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_18bf033a
     // Checksum 0x24e99d13, Offset: 0x3798
     // Size: 0x3ce
     function _call_state_funcs(str_state) {
@@ -631,6 +665,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 0, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_3f7081de
     // Checksum 0x3d90f786, Offset: 0x36e0
     // Size: 0xaa
     function has_init_state() {
@@ -646,6 +681,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 2, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_fcf56ab5
     // Checksum 0xdbeffb09, Offset: 0x3458
     // Size: 0x280
     function stop(b_clear, b_finished) {
@@ -685,6 +721,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 0, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_b5dfcd68
     // Checksum 0xaa417818, Offset: 0x3268
     // Size: 0x1e4
     function run_next() {
@@ -712,6 +749,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 2, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_43718187
     // Checksum 0xb43c8a89, Offset: 0x2f50
     // Size: 0x30c
     function play(b_testing, str_mode) {
@@ -760,6 +798,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 0, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_a9fc89cd
     // Checksum 0xc389d09b, Offset: 0x2f30
     // Size: 0x12
     function get_object_id() {
@@ -769,6 +808,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 1, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_e6cab0ff
     // Checksum 0xc2eb031f, Offset: 0x2dd8
     // Size: 0x14c
     function initialize(b_playing) {
@@ -793,6 +833,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 0, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_d0a878d9
     // Checksum 0x335e1c45, Offset: 0x2c30
     // Size: 0x19c
     function get_valid_object_defs() {
@@ -816,6 +857,7 @@ class cscene : cscriptbundlebase {
 
     // Namespace cscene
     // Params 5, eflags: 0x1 linked
+    // namespace_2481fdf4<file_0>::function_c35e6aab
     // Checksum 0xa85f5853, Offset: 0x2758
     // Size: 0x4cc
     function init(str_scenedef, s_scenedef, e_align, a_ents, b_test_run) {
@@ -861,6 +903,7 @@ class cscene : cscriptbundlebase {
 
 // Namespace scene
 // Params 7, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_cf7faaa6
 // Checksum 0xd4a1ed75, Offset: 0x640
 // Size: 0x124
 function player_scene_animation_skip(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -880,6 +923,7 @@ function player_scene_animation_skip(localclientnum, oldval, newval, bnewent, bi
 
 // Namespace scene
 // Params 7, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_d305f41d
 // Checksum 0xd3017f8, Offset: 0x770
 // Size: 0x84
 function player_scene_skip_completed(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -890,6 +934,7 @@ function player_scene_skip_completed(localclientnum, oldval, newval, bnewent, bi
 
 // Namespace scene
 // Params 2, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_af9fe39b
 // Checksum 0xf3679ca8, Offset: 0x4678
 // Size: 0xcc
 function get_existing_ent(clientnum, str_name) {
@@ -908,6 +953,7 @@ function get_existing_ent(clientnum, str_name) {
 
 // Namespace scene
 // Params 0, eflags: 0x2
+// namespace_cc27597<file_0>::function_2dc19561
 // Checksum 0xce6a6039, Offset: 0x4750
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -916,6 +962,7 @@ function autoexec function_2dc19561() {
 
 // Namespace scene
 // Params 0, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_8c87d8eb
 // Checksum 0xf6f1967e, Offset: 0x4798
 // Size: 0x3bc
 function __init__() {
@@ -950,6 +997,7 @@ function __init__() {
 
 // Namespace scene
 // Params 7, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_df14f3ee
 // Checksum 0xa99e32, Offset: 0x4b60
 // Size: 0xd0
 function in_igc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -966,6 +1014,7 @@ function in_igc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname
 
 // Namespace scene
 // Params 1, eflags: 0x5 linked
+// namespace_cc27597<file_0>::function_a5129e56
 // Checksum 0x8bd9bb9b, Offset: 0x4c38
 // Size: 0xdc
 function private on_localplayer_shutdown(localclientnum) {
@@ -982,6 +1031,7 @@ function private on_localplayer_shutdown(localclientnum) {
 
 // Namespace scene
 // Params 7, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_ff7f3757
 // Checksum 0xe77c235b, Offset: 0x4d20
 // Size: 0x1096
 function postfx_igc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1135,6 +1185,7 @@ function postfx_igc(localclientnum, oldval, newval, bnewent, binitialsnap, field
 
 // Namespace scene
 // Params 1, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_ad252487
 // Checksum 0x75fbb1f6, Offset: 0x5dc0
 // Size: 0x56
 function postfx_igc_zombies(localclientnum) {
@@ -1146,6 +1197,7 @@ function postfx_igc_zombies(localclientnum) {
 
 // Namespace scene
 // Params 7, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_64a4d1c0
 // Checksum 0xaac913f6, Offset: 0x5e20
 // Size: 0x386
 function postfx_igc_short(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1185,6 +1237,7 @@ function postfx_igc_short(localclientnum, oldval, newval, bnewent, binitialsnap,
 
 // Namespace scene
 // Params 7, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_bbb4d4e
 // Checksum 0xf8235b94, Offset: 0x61b0
 // Size: 0x196
 function cf_server_sync(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -1220,6 +1273,7 @@ function cf_server_sync(localclientnum, oldval, newval, bnewent, binitialsnap, f
 
 // Namespace scene
 // Params 1, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_d5d5c169
 // Checksum 0xac0ec652, Offset: 0x6350
 // Size: 0x16a
 function remove_invalid_scene_objects(s_scenedef) {
@@ -1242,6 +1296,7 @@ function remove_invalid_scene_objects(s_scenedef) {
 
 // Namespace scene
 // Params 0, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_4d47318b
 // Checksum 0x259fb470, Offset: 0x64c8
 // Size: 0x7a
 function is_igc() {
@@ -1250,6 +1305,7 @@ function is_igc() {
 
 // Namespace scene
 // Params 0, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_5b6b9132
 // Checksum 0x6b8262b2, Offset: 0x6550
 // Size: 0x2da
 function __main__() {
@@ -1284,6 +1340,7 @@ function __main__() {
 
 // Namespace scene
 // Params 1, eflags: 0x0
+// namespace_cc27597<file_0>::function_2e2692d5
 // Checksum 0xd2fb4dff, Offset: 0x6838
 // Size: 0x3c
 function _trigger_init(trig) {
@@ -1294,6 +1351,7 @@ function _trigger_init(trig) {
 
 // Namespace scene
 // Params 1, eflags: 0x0
+// namespace_cc27597<file_0>::function_6e162fed
 // Checksum 0x314cd7b2, Offset: 0x6880
 // Size: 0x86
 function _trigger_play(trig) {
@@ -1306,6 +1364,7 @@ function _trigger_play(trig) {
 
 // Namespace scene
 // Params 1, eflags: 0x0
+// namespace_cc27597<file_0>::function_96ac1d9b
 // Checksum 0xdc027431, Offset: 0x6910
 // Size: 0x3c
 function _trigger_stop(trig) {
@@ -1316,6 +1375,7 @@ function _trigger_stop(trig) {
 
 // Namespace scene
 // Params 4, eflags: 0x21 linked
+// namespace_cc27597<file_0>::function_8f9f34e0
 // Checksum 0xca6922f0, Offset: 0x6958
 // Size: 0x19e
 function add_scene_func(str_scenedef, func, str_state, ...) {
@@ -1339,6 +1399,7 @@ function add_scene_func(str_scenedef, func, str_state, ...) {
 
 // Namespace scene
 // Params 3, eflags: 0x0
+// namespace_cc27597<file_0>::function_a5195379
 // Checksum 0x3f26a687, Offset: 0x6b00
 // Size: 0x14e
 function remove_scene_func(str_scenedef, func, str_state) {
@@ -1360,6 +1421,7 @@ function remove_scene_func(str_scenedef, func, str_state) {
 
 // Namespace scene
 // Params 5, eflags: 0x0
+// namespace_cc27597<file_0>::function_9b7fda5e
 // Checksum 0x5750d335, Offset: 0x6c58
 // Size: 0x1a8
 function spawn(arg1, arg2, arg3, arg4, b_test_run) {
@@ -1386,6 +1448,7 @@ function spawn(arg1, arg2, arg3, arg4, b_test_run) {
 
 // Namespace scene
 // Params 4, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_c35e6aab
 // Checksum 0xcba0d410, Offset: 0x6e08
 // Size: 0x298
 function init(arg1, arg2, arg3, b_test_run) {
@@ -1430,6 +1493,7 @@ function init(arg1, arg2, arg3, b_test_run) {
 
 // Namespace scene
 // Params 1, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_c9d6049b
 // Checksum 0xc44ff642, Offset: 0x70a8
 // Size: 0x2a
 function get_scenedef(str_scenedef) {
@@ -1438,6 +1502,7 @@ function get_scenedef(str_scenedef) {
 
 // Namespace scene
 // Params 1, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_5c74c6ba
 // Checksum 0x6c5f10da, Offset: 0x70e0
 // Size: 0x12c
 function get_scenedefs(str_type) {
@@ -1460,6 +1525,7 @@ function get_scenedefs(str_type) {
 
 // Namespace scene
 // Params 3, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_31558ccc
 // Checksum 0x31f219ca, Offset: 0x7218
 // Size: 0x1bc
 function _init_instance(str_scenedef, a_ents, b_test_run) {
@@ -1489,6 +1555,7 @@ function _init_instance(str_scenedef, a_ents, b_test_run) {
 
 // Namespace scene
 // Params 5, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_43718187
 // Checksum 0x9da0cd6a, Offset: 0x73e0
 // Size: 0x3bc
 function play(arg1, arg2, arg3, b_test_run, str_mode) {
@@ -1548,6 +1615,7 @@ function play(arg1, arg2, arg3, b_test_run, str_mode) {
 
 // Namespace scene
 // Params 1, eflags: 0x5 linked
+// namespace_cc27597<file_0>::function_e420df65
 // Checksum 0x43cd7ea2, Offset: 0x77a8
 // Size: 0x54
 function private function_e420df65(s_tracker) {
@@ -1559,6 +1627,7 @@ function private function_e420df65(s_tracker) {
 
 // Namespace scene
 // Params 5, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_c99e74c
 // Checksum 0xf0b42825, Offset: 0x7808
 // Size: 0x150
 function _play_instance(s_tracker, str_scenedef, a_ents, b_test_run, str_mode) {
@@ -1584,6 +1653,7 @@ function _play_instance(s_tracker, str_scenedef, a_ents, b_test_run, str_mode) {
 
 // Namespace scene
 // Params 1, eflags: 0x5 linked
+// namespace_cc27597<file_0>::function_e19eff61
 // Checksum 0x6867a7da, Offset: 0x7960
 // Size: 0x2a
 function private waittill_instance_scene_done(str_scenedef) {
@@ -1593,6 +1663,7 @@ function private waittill_instance_scene_done(str_scenedef) {
 
 // Namespace scene
 // Params 5, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_fcf56ab5
 // Checksum 0xe6f7d47b, Offset: 0x7998
 // Size: 0x2ac
 function stop(arg1, arg2, arg3, b_cancel, b_no_assert) {
@@ -1638,6 +1709,7 @@ function stop(arg1, arg2, arg3, b_cancel, b_no_assert) {
 
 // Namespace scene
 // Params 3, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_4058f466
 // Checksum 0xbb55ae47, Offset: 0x7c50
 // Size: 0x11e
 function _stop_instance(b_clear, str_scenedef, b_cancel) {
@@ -1659,6 +1731,7 @@ function _stop_instance(b_clear, str_scenedef, b_cancel) {
 
 // Namespace scene
 // Params 3, eflags: 0x0
+// namespace_cc27597<file_0>::function_a1ae3ccb
 // Checksum 0xf50f7a1a, Offset: 0x7d78
 // Size: 0x3c
 function cancel(arg1, arg2, arg3) {
@@ -1667,6 +1740,7 @@ function cancel(arg1, arg2, arg3) {
 
 // Namespace scene
 // Params 1, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_3f7081de
 // Checksum 0x65a90505, Offset: 0x7dc0
 // Size: 0xec
 function has_init_state(str_scenedef) {
@@ -1681,6 +1755,7 @@ function has_init_state(str_scenedef) {
 
 // Namespace scene
 // Params 0, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_f0f58f0b
 // Checksum 0xf51e0c3b, Offset: 0x7eb8
 // Size: 0x46
 function _has_init_state() {
@@ -1689,6 +1764,7 @@ function _has_init_state() {
 
 // Namespace scene
 // Params 1, eflags: 0x0
+// namespace_cc27597<file_0>::function_c9f6a699
 // Checksum 0x33d116ef, Offset: 0x7f08
 // Size: 0x2a
 function get_prop_count(str_scenedef) {
@@ -1697,6 +1773,7 @@ function get_prop_count(str_scenedef) {
 
 // Namespace scene
 // Params 1, eflags: 0x0
+// namespace_cc27597<file_0>::function_dcc92596
 // Checksum 0x2a373b43, Offset: 0x7f40
 // Size: 0x2a
 function get_vehicle_count(str_scenedef) {
@@ -1705,6 +1782,7 @@ function get_vehicle_count(str_scenedef) {
 
 // Namespace scene
 // Params 1, eflags: 0x0
+// namespace_cc27597<file_0>::function_1a0b1441
 // Checksum 0x28ce90af, Offset: 0x7f78
 // Size: 0x2a
 function get_actor_count(str_scenedef) {
@@ -1713,6 +1791,7 @@ function get_actor_count(str_scenedef) {
 
 // Namespace scene
 // Params 1, eflags: 0x0
+// namespace_cc27597<file_0>::function_e4553ea9
 // Checksum 0x24ee00f3, Offset: 0x7fb0
 // Size: 0x2a
 function get_player_count(str_scenedef) {
@@ -1721,6 +1800,7 @@ function get_player_count(str_scenedef) {
 
 // Namespace scene
 // Params 2, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_e61157e3
 // Checksum 0xb865b883, Offset: 0x7fe8
 // Size: 0x138
 function _get_type_count(str_type, str_scenedef) {
@@ -1738,6 +1818,7 @@ function _get_type_count(str_type, str_scenedef) {
 
 // Namespace scene
 // Params 1, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_444aea32
 // Checksum 0x53ae60e5, Offset: 0x8128
 // Size: 0x4e
 function is_active(str_scenedef) {
@@ -1749,6 +1830,7 @@ function is_active(str_scenedef) {
 
 // Namespace scene
 // Params 1, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_367f8966
 // Checksum 0xf9a181b8, Offset: 0x8180
 // Size: 0x94
 function is_playing(str_scenedef) {
@@ -1768,6 +1850,7 @@ function is_playing(str_scenedef) {
 
 // Namespace scene
 // Params 1, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_c1e1cb3c
 // Checksum 0x97ac7ee9, Offset: 0x8220
 // Size: 0x104
 function get_active_scenes(str_scenedef) {
@@ -1786,6 +1869,7 @@ function get_active_scenes(str_scenedef) {
 
 // Namespace scene
 // Params 1, eflags: 0x1 linked
+// namespace_cc27597<file_0>::function_7541b67d
 // Checksum 0xf7f21354, Offset: 0x8330
 // Size: 0xb4
 function get_active_scene(str_scenedef) {
@@ -1800,6 +1884,7 @@ function get_active_scene(str_scenedef) {
 
 // Namespace scene
 // Params 0, eflags: 0x0
+// namespace_cc27597<file_0>::function_c168d9cc
 // Checksum 0x7eda69ac, Offset: 0x83f0
 // Size: 0x5c
 function is_capture_mode() {

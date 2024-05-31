@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_ram_09",
+    "igdtseqnum": 136,
+    "challengeWidget": "Explosion",
+    "challengeDetails": "ACCOLADES_RAM_9",
+    "challengeName": "ACCOLADES_RAM_9_NAME",
+    "centerText": "7",
+    "challengeReference": "MISSION_RAMSES_CHALLENGE9"
+}

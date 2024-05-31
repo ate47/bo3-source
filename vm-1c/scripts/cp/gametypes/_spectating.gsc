@@ -6,6 +6,7 @@
 
 // Namespace spectating
 // Params 0, eflags: 0x2
+// namespace_54e5555d<file_0>::function_2dc19561
 // Checksum 0x4e6ce717, Offset: 0x110
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -14,6 +15,7 @@ function autoexec function_2dc19561() {
 
 // Namespace spectating
 // Params 0, eflags: 0x1 linked
+// namespace_54e5555d<file_0>::function_8c87d8eb
 // Checksum 0x4fb591c1, Offset: 0x150
 // Size: 0x84
 function __init__() {
@@ -25,6 +27,7 @@ function __init__() {
 
 // Namespace spectating
 // Params 0, eflags: 0x1 linked
+// namespace_54e5555d<file_0>::function_c35e6aab
 // Checksum 0x5a7447be, Offset: 0x1e0
 // Size: 0x98
 function init() {
@@ -35,6 +38,7 @@ function init() {
 
 // Namespace spectating
 // Params 0, eflags: 0x0
+// namespace_54e5555d<file_0>::function_920e461a
 // Checksum 0x90809a61, Offset: 0x280
 // Size: 0x5e
 function update_settings() {
@@ -46,6 +50,7 @@ function update_settings() {
 
 // Namespace spectating
 // Params 0, eflags: 0x1 linked
+// namespace_54e5555d<file_0>::function_6a47a2ce
 // Checksum 0x97b3f226, Offset: 0x2e8
 // Size: 0xce
 function get_splitscreen_team() {
@@ -69,6 +74,7 @@ function get_splitscreen_team() {
 
 // Namespace spectating
 // Params 0, eflags: 0x1 linked
+// namespace_54e5555d<file_0>::function_1f906eca
 // Checksum 0xa69733fc, Offset: 0x3c0
 // Size: 0xb8
 function other_local_player_still_alive() {
@@ -91,6 +97,7 @@ function other_local_player_still_alive() {
 
 // Namespace spectating
 // Params 1, eflags: 0x1 linked
+// namespace_54e5555d<file_0>::function_c532d79b
 // Checksum 0xe4c5d591, Offset: 0x480
 // Size: 0x9a
 function function_c532d79b(allow) {
@@ -101,6 +108,7 @@ function function_c532d79b(allow) {
 
 // Namespace spectating
 // Params 2, eflags: 0x1 linked
+// namespace_54e5555d<file_0>::function_2cf41c8d
 // Checksum 0x131cfae, Offset: 0x528
 // Size: 0xb2
 function function_2cf41c8d(skip_team, allow) {
@@ -114,6 +122,7 @@ function function_2cf41c8d(skip_team, allow) {
 
 // Namespace spectating
 // Params 0, eflags: 0x1 linked
+// namespace_54e5555d<file_0>::function_c3d72c52
 // Checksum 0x1751078, Offset: 0x5e8
 // Size: 0x524
 function set_permissions() {
@@ -184,6 +193,7 @@ function set_permissions() {
 
 // Namespace spectating
 // Params 0, eflags: 0x1 linked
+// namespace_54e5555d<file_0>::function_7275c170
 // Checksum 0x3ce731de, Offset: 0xb18
 // Size: 0xde
 function set_permissions_for_machine() {

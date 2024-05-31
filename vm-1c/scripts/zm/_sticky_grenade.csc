@@ -6,6 +6,7 @@
 
 // Namespace namespace_e381fc9e
 // Params 0, eflags: 0x1 linked
+// namespace_e381fc9e<file_0>::function_d290ebfa
 // Checksum 0xe389ef65, Offset: 0x128
 // Size: 0x1e
 function main() {
@@ -14,6 +15,7 @@ function main() {
 
 // Namespace namespace_e381fc9e
 // Params 1, eflags: 0x1 linked
+// namespace_e381fc9e<file_0>::function_ab1f9ea1
 // Checksum 0x14e3a2cb, Offset: 0x150
 // Size: 0x44
 function spawned(localclientnum) {
@@ -25,6 +27,7 @@ function spawned(localclientnum) {
 
 // Namespace namespace_e381fc9e
 // Params 1, eflags: 0x1 linked
+// namespace_e381fc9e<file_0>::function_e18161a
 // Checksum 0x39e3a1fc, Offset: 0x1a0
 // Size: 0x12c
 function fx_think(localclientnum) {
@@ -43,6 +46,7 @@ function fx_think(localclientnum) {
 
 // Namespace namespace_e381fc9e
 // Params 1, eflags: 0x1 linked
+// namespace_e381fc9e<file_0>::function_d2e7a133
 // Checksum 0x2d1ddc93, Offset: 0x2d8
 // Size: 0x6c
 function start_light_fx(localclientnum) {
@@ -52,6 +56,7 @@ function start_light_fx(localclientnum) {
 
 // Namespace namespace_e381fc9e
 // Params 1, eflags: 0x1 linked
+// namespace_e381fc9e<file_0>::function_958821cd
 // Checksum 0xbd4eae3a, Offset: 0x350
 // Size: 0x4e
 function stop_light_fx(localclientnum) {
@@ -63,6 +68,7 @@ function stop_light_fx(localclientnum) {
 
 // Namespace namespace_e381fc9e
 // Params 1, eflags: 0x1 linked
+// namespace_e381fc9e<file_0>::function_9eb5d027
 // Checksum 0xb8bf10a4, Offset: 0x3a8
 // Size: 0xf4
 function fullscreen_fx(localclientnum) {

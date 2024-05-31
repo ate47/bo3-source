@@ -14,6 +14,7 @@
 
 // Namespace killstreak_hacking
 // Params 3, eflags: 0x1 linked
+// namespace_8ab50f8f<file_0>::function_64ff4520
 // Checksum 0x9a316672, Offset: 0x218
 // Size: 0x1f0
 function enable_hacking(killstreakname, prehackfunction, posthackfunction) {
@@ -38,6 +39,7 @@ function enable_hacking(killstreakname, prehackfunction, posthackfunction) {
 
 // Namespace killstreak_hacking
 // Params 0, eflags: 0x0
+// namespace_8ab50f8f<file_0>::function_365c53f7
 // Checksum 0x80672ed6, Offset: 0x410
 // Size: 0x22
 function disable_hacking() {
@@ -47,6 +49,7 @@ function disable_hacking() {
 
 // Namespace killstreak_hacking
 // Params 0, eflags: 0x1 linked
+// namespace_8ab50f8f<file_0>::function_1a1da3f9
 // Checksum 0x9f1cc764, Offset: 0x440
 // Size: 0x6c
 function hackerfx() {
@@ -58,6 +61,7 @@ function hackerfx() {
 
 // Namespace killstreak_hacking
 // Params 0, eflags: 0x1 linked
+// namespace_8ab50f8f<file_0>::function_e2f5c237
 // Checksum 0x9ea8bc02, Offset: 0x4b8
 // Size: 0x6c
 function hackerloopfx() {
@@ -69,6 +73,7 @@ function hackerloopfx() {
 
 // Namespace killstreak_hacking
 // Params 1, eflags: 0x5 linked
+// namespace_8ab50f8f<file_0>::function_4567dfba
 // Checksum 0x287bdd31, Offset: 0x530
 // Size: 0x1e4
 function private _hacked_callback(hacker) {
@@ -101,6 +106,7 @@ function private _hacked_callback(hacker) {
 
 // Namespace killstreak_hacking
 // Params 1, eflags: 0x0
+// namespace_8ab50f8f<file_0>::function_5e664f57
 // Checksum 0x98e3cb3c, Offset: 0x720
 // Size: 0x30
 function override_hacked_killstreak_reference(killstreakref) {
@@ -110,6 +116,7 @@ function override_hacked_killstreak_reference(killstreakref) {
 
 // Namespace killstreak_hacking
 // Params 0, eflags: 0x1 linked
+// namespace_8ab50f8f<file_0>::function_5b1233b0
 // Checksum 0x19ecf789, Offset: 0x758
 // Size: 0x98
 function get_hacked_timeout_duration_ms() {
@@ -124,6 +131,7 @@ function get_hacked_timeout_duration_ms() {
 
 // Namespace killstreak_hacking
 // Params 2, eflags: 0x1 linked
+// namespace_8ab50f8f<file_0>::function_1c60f8bc
 // Checksum 0x74ad9713, Offset: 0x7f8
 // Size: 0x6a
 function set_vehicle_drivable_time_starting_now(killstreak, duration_ms) {
@@ -138,6 +146,7 @@ function set_vehicle_drivable_time_starting_now(killstreak, duration_ms) {
 
 // Namespace killstreak_hacking
 // Params 1, eflags: 0x1 linked
+// namespace_8ab50f8f<file_0>::function_d12db580
 // Checksum 0x11725507, Offset: 0x870
 // Size: 0xec
 function _update_health(hacker) {
@@ -163,6 +172,7 @@ function _update_health(hacker) {
 
     // Namespace killstreak_hacking
     // Params 0, eflags: 0x1 linked
+    // namespace_8ab50f8f<file_0>::function_5c6ab1e0
     // Checksum 0x620fb7d2, Offset: 0x968
     // Size: 0x28
     function killstreak_switch_team_end() {
@@ -172,6 +182,7 @@ function _update_health(hacker) {
 
     // Namespace killstreak_hacking
     // Params 1, eflags: 0x1 linked
+    // namespace_8ab50f8f<file_0>::function_3ea35aba
     // Checksum 0xe90c2a8d, Offset: 0x998
     // Size: 0x202
     function killstreak_switch_team(owner) {

@@ -12,6 +12,7 @@
 
 // Namespace namespace_3335be
 // Params 0, eflags: 0x1 linked
+// namespace_3335be<file_0>::function_c35e6aab
 // Checksum 0x830fafc7, Offset: 0x520
 // Size: 0xb4
 function init() {
@@ -22,6 +23,7 @@ function init() {
 
 // Namespace namespace_3335be
 // Params 0, eflags: 0x1 linked
+// namespace_3335be<file_0>::function_bf888e64
 // Checksum 0x78374dee, Offset: 0x5e0
 // Size: 0xb4
 function init_stage() {
@@ -37,6 +39,7 @@ function init_stage() {
 
 // Namespace namespace_3335be
 // Params 0, eflags: 0x1 linked
+// namespace_3335be<file_0>::function_9873f186
 // Checksum 0xee9f00a7, Offset: 0x6a0
 // Size: 0x2c
 function function_9873f186() {
@@ -46,6 +49,7 @@ function function_9873f186() {
 
 // Namespace namespace_3335be
 // Params 0, eflags: 0x1 linked
+// namespace_3335be<file_0>::function_20f15b9
 // Checksum 0x6d10cb84, Offset: 0x6d8
 // Size: 0xee
 function function_20f15b9() {
@@ -61,6 +65,7 @@ function function_20f15b9() {
 
 // Namespace namespace_3335be
 // Params 0, eflags: 0x1 linked
+// namespace_3335be<file_0>::function_d0295ce3
 // Checksum 0x319f992a, Offset: 0x7d0
 // Size: 0x134
 function trap_thread() {
@@ -79,6 +84,7 @@ function trap_thread() {
 
 // Namespace namespace_3335be
 // Params 0, eflags: 0x1 linked
+// namespace_3335be<file_0>::function_e3bf4adb
 // Checksum 0x7b4b813d, Offset: 0x910
 // Size: 0x80
 function function_e3bf4adb() {
@@ -95,6 +101,7 @@ function function_e3bf4adb() {
 
 // Namespace namespace_3335be
 // Params 0, eflags: 0x1 linked
+// namespace_3335be<file_0>::function_8feeec3c
 // Checksum 0x56da5f35, Offset: 0x998
 // Size: 0x1bc
 function function_8feeec3c() {
@@ -126,6 +133,7 @@ function function_8feeec3c() {
 
 // Namespace namespace_3335be
 // Params 1, eflags: 0x1 linked
+// namespace_3335be<file_0>::function_87175782
 // Checksum 0x8a414554, Offset: 0xb60
 // Size: 0x156
 function function_87175782(tile) {
@@ -173,6 +181,7 @@ function function_87175782(tile) {
 
 // Namespace namespace_3335be
 // Params 0, eflags: 0x1 linked
+// namespace_3335be<file_0>::function_7747c56
 // Checksum 0x5e39524a, Offset: 0xcc0
 // Size: 0x1e4
 function function_7747c56() {
@@ -199,6 +208,7 @@ function function_7747c56() {
 
 // Namespace namespace_3335be
 // Params 1, eflags: 0x1 linked
+// namespace_3335be<file_0>::function_cc3f3f6a
 // Checksum 0x9e6c47b2, Offset: 0xeb0
 // Size: 0x1e2
 function function_cc3f3f6a(success) {

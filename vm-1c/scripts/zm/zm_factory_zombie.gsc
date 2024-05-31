@@ -16,6 +16,7 @@
 
 // Namespace namespace_27d8454e
 // Params 0, eflags: 0x2
+// namespace_27d8454e<file_0>::function_c35e6aab
 // Checksum 0x7e13f35d, Offset: 0x300
 // Size: 0x8c
 function autoexec init() {
@@ -30,6 +31,7 @@ function autoexec init() {
 
 // Namespace namespace_27d8454e
 // Params 0, eflags: 0x5 linked
+// namespace_27d8454e<file_0>::function_46f62f6f
 // Checksum 0x7bfdec8c, Offset: 0x398
 // Size: 0x64
 function private function_46f62f6f() {
@@ -39,6 +41,7 @@ function private function_46f62f6f() {
 
 // Namespace namespace_27d8454e
 // Params 1, eflags: 0x1 linked
+// namespace_27d8454e<file_0>::function_b1713093
 // Checksum 0xa49e322c, Offset: 0x408
 // Size: 0x44
 function function_b1713093(entity) {
@@ -51,6 +54,7 @@ function function_b1713093(entity) {
 
 // Namespace namespace_27d8454e
 // Params 5, eflags: 0x5 linked
+// namespace_27d8454e<file_0>::function_a9009b71
 // Checksum 0x31de441a, Offset: 0x458
 // Size: 0x104
 function private function_a9009b71(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -65,6 +69,7 @@ function private function_a9009b71(entity, mocompanim, mocompanimblendouttime, m
 
 // Namespace namespace_27d8454e
 // Params 5, eflags: 0x5 linked
+// namespace_27d8454e<file_0>::function_3574d810
 // Checksum 0x1fd3e9e8, Offset: 0x568
 // Size: 0x2c
 function private function_3574d810(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
@@ -73,6 +78,7 @@ function private function_3574d810(entity, mocompanim, mocompanimblendouttime, m
 
 // Namespace namespace_27d8454e
 // Params 0, eflags: 0x1 linked
+// namespace_27d8454e<file_0>::function_f06eec12
 // Checksum 0x6c30432e, Offset: 0x5a0
 // Size: 0x1c
 function function_f06eec12() {
@@ -81,6 +87,7 @@ function function_f06eec12() {
 
 // Namespace namespace_27d8454e
 // Params 1, eflags: 0x5 linked
+// namespace_27d8454e<file_0>::function_f20cbe8b
 // Checksum 0xc6405d0a, Offset: 0x5c8
 // Size: 0xfa
 function private function_f20cbe8b(players) {
@@ -99,6 +106,7 @@ function private function_f20cbe8b(players) {
 
 // Namespace namespace_27d8454e
 // Params 2, eflags: 0x5 linked
+// namespace_27d8454e<file_0>::function_1daba8b7
 // Checksum 0xe248ceef, Offset: 0x6d0
 // Size: 0x262
 function private function_1daba8b7(origin, players) {
@@ -155,6 +163,7 @@ function private function_1daba8b7(origin, players) {
 
 // Namespace namespace_27d8454e
 // Params 0, eflags: 0x5 linked
+// namespace_27d8454e<file_0>::function_72e6c1d6
 // Checksum 0xd4e0ad5c, Offset: 0x940
 // Size: 0x18c
 function private function_72e6c1d6() {

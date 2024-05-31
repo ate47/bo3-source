@@ -17,6 +17,7 @@ class class_1e7268a3 {
 
     // Namespace namespace_1e7268a3
     // Params 1, eflags: 0x1 linked
+    // namespace_1e7268a3<file_0>::function_71f6269a
     // Checksum 0x52045c14, Offset: 0x1008
     // Size: 0x6c
     function function_71f6269a(var_bd13c94b) {
@@ -30,6 +31,7 @@ class class_1e7268a3 {
 
     // Namespace namespace_1e7268a3
     // Params 1, eflags: 0x1 linked
+    // namespace_1e7268a3<file_0>::function_2902ab6c
     // Checksum 0x13613ccb, Offset: 0xe68
     // Size: 0x194
     function function_2902ab6c(var_60a09143) {
@@ -57,6 +59,7 @@ class class_1e7268a3 {
 
     // Namespace namespace_1e7268a3
     // Params 1, eflags: 0x1 linked
+    // namespace_1e7268a3<file_0>::function_e76edd0b
     // Checksum 0xd085a242, Offset: 0xdd8
     // Size: 0x88
     function function_e76edd0b(var_60a09143) {
@@ -75,6 +78,7 @@ class class_1e7268a3 {
 
     // Namespace namespace_1e7268a3
     // Params 1, eflags: 0x1 linked
+    // namespace_1e7268a3<file_0>::function_57e40211
     // Checksum 0xa82182a2, Offset: 0xd90
     // Size: 0x3c
     function function_57e40211(w_weapon) {
@@ -87,6 +91,7 @@ class class_1e7268a3 {
 
     // Namespace namespace_1e7268a3
     // Params 1, eflags: 0x1 linked
+    // namespace_1e7268a3<file_0>::function_3c8ea097
     // Checksum 0x4982b758, Offset: 0xc08
     // Size: 0x17c
     function onuse(e_player) {
@@ -109,6 +114,7 @@ class class_1e7268a3 {
 
     // Namespace namespace_1e7268a3
     // Params 3, eflags: 0x1 linked
+    // namespace_1e7268a3<file_0>::function_a454a59a
     // Checksum 0x39c03398, Offset: 0xbc0
     // Size: 0x3c
     function onenduse(team, e_player, b_result) {
@@ -119,6 +125,7 @@ class class_1e7268a3 {
 
     // Namespace namespace_1e7268a3
     // Params 1, eflags: 0x1 linked
+    // namespace_1e7268a3<file_0>::function_cfce9b82
     // Checksum 0x276b7bc3, Offset: 0xb70
     // Size: 0x44
     function onbeginuse(e_player) {
@@ -128,6 +135,7 @@ class class_1e7268a3 {
 
     // Namespace namespace_1e7268a3
     // Params 2, eflags: 0x1 linked
+    // namespace_1e7268a3<file_0>::function_82b8e134
     // Checksum 0xb92ecb5b, Offset: 0xb08
     // Size: 0x5c
     function function_82b8e134(origin, angles) {
@@ -137,6 +145,7 @@ class class_1e7268a3 {
 
     // Namespace namespace_1e7268a3
     // Params 1, eflags: 0x1 linked
+    // namespace_1e7268a3<file_0>::function_35dd0243
     // Checksum 0x1ee86ce1, Offset: 0x5b8
     // Size: 0x544
     function function_35dd0243(var_455957d8) {
@@ -195,6 +204,7 @@ class class_1e7268a3 {
 
 // Namespace ammo_cache
 // Params 0, eflags: 0x2
+// namespace_fb5b04f4<file_0>::function_2dc19561
 // Checksum 0x33878d37, Offset: 0x330
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -203,6 +213,7 @@ function autoexec function_2dc19561() {
 
 // Namespace ammo_cache
 // Params 0, eflags: 0x1 linked
+// namespace_fb5b04f4<file_0>::function_8c87d8eb
 // Checksum 0x99ec1590, Offset: 0x378
 // Size: 0x4
 function __init__() {
@@ -211,6 +222,7 @@ function __init__() {
 
 // Namespace ammo_cache
 // Params 0, eflags: 0x1 linked
+// namespace_fb5b04f4<file_0>::function_5b6b9132
 // Checksum 0x647b572c, Offset: 0x388
 // Size: 0x204
 function __main__() {
@@ -235,6 +247,7 @@ function __main__() {
 
 // Namespace ammo_cache
 // Params 1, eflags: 0x0
+// namespace_fb5b04f4<file_0>::function_5815ab75
 // Checksum 0x1c1e7f56, Offset: 0x12c0
 // Size: 0x2c
 function hide_waypoint(e_player) {
@@ -243,6 +256,7 @@ function hide_waypoint(e_player) {
 
 // Namespace ammo_cache
 // Params 1, eflags: 0x0
+// namespace_fb5b04f4<file_0>::function_76a3ab20
 // Checksum 0xbef11540, Offset: 0x12f8
 // Size: 0x2c
 function show_waypoint(e_player) {

@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_ram_06",
+    "igdtseqnum": 133,
+    "challengeWidget": "Kills",
+    "challengeDetails": "ACCOLADES_RAM_6",
+    "challengeName": "ACCOLADES_RAM_6_NAME",
+    "centerText": "5",
+    "challengeReference": "MISSION_RAMSES_CHALLENGE6"
+}

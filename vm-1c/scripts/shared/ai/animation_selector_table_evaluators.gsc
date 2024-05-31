@@ -5,6 +5,7 @@
 
 // Namespace animation_selector_table_evaluators
 // Params 0, eflags: 0x2
+// namespace_ad906e7f<file_0>::function_2386b792
 // Checksum 0xc33db53e, Offset: 0x1c8
 // Size: 0xa4
 function autoexec registerastscriptfunctions() {
@@ -16,6 +17,7 @@ function autoexec registerastscriptfunctions() {
 
 // Namespace animation_selector_table_evaluators
 // Params 2, eflags: 0x1 linked
+// namespace_ad906e7f<file_0>::function_563d5541
 // Checksum 0xa47604a4, Offset: 0x278
 // Size: 0x46
 function testfunction(entity, animations) {
@@ -26,6 +28,7 @@ function testfunction(entity, animations) {
 
 // Namespace animation_selector_table_evaluators
 // Params 2, eflags: 0x5 linked
+// namespace_ad906e7f<file_0>::function_1ccfdc75
 // Checksum 0xdc0858, Offset: 0x2c8
 // Size: 0x256
 function private evaluator_checkanimationagainstgeo(entity, animation) {
@@ -55,6 +58,7 @@ function private evaluator_checkanimationagainstgeo(entity, animation) {
 
 // Namespace animation_selector_table_evaluators
 // Params 2, eflags: 0x4
+// namespace_ad906e7f<file_0>::function_f9822c6a
 // Checksum 0x2fcb299b, Offset: 0x528
 // Size: 0x12e
 function private evaluator_checkanimationendpointagainstgeo(entity, animation) {
@@ -73,6 +77,7 @@ function private evaluator_checkanimationendpointagainstgeo(entity, animation) {
 
 // Namespace animation_selector_table_evaluators
 // Params 2, eflags: 0x5 linked
+// namespace_ad906e7f<file_0>::function_7d978902
 // Checksum 0x6a17f2a2, Offset: 0x660
 // Size: 0x19e
 function private evaluator_checkanimationforovershootinggoal(entity, animation) {
@@ -97,6 +102,7 @@ function private evaluator_checkanimationforovershootinggoal(entity, animation) 
 
 // Namespace animation_selector_table_evaluators
 // Params 2, eflags: 0x5 linked
+// namespace_ad906e7f<file_0>::function_290b739e
 // Checksum 0x60939db6, Offset: 0x808
 // Size: 0xbe
 function private evaluator_checkanimationagainstnavmesh(entity, animation) {
@@ -111,6 +117,7 @@ function private evaluator_checkanimationagainstnavmesh(entity, animation) {
 
 // Namespace animation_selector_table_evaluators
 // Params 2, eflags: 0x5 linked
+// namespace_ad906e7f<file_0>::function_51c701a9
 // Checksum 0x29c22af3, Offset: 0x8d0
 // Size: 0x112
 function private evaluator_checkanimationarrivalposition(entity, animation) {
@@ -125,6 +132,7 @@ function private evaluator_checkanimationarrivalposition(entity, animation) {
 
 // Namespace animation_selector_table_evaluators
 // Params 3, eflags: 0x5 linked
+// namespace_ad906e7f<file_0>::function_fb224694
 // Checksum 0xdbfa0def, Offset: 0x9f0
 // Size: 0x1ce
 function private evaluator_findfirstvalidanimation(entity, animations, tests) {
@@ -149,6 +157,7 @@ function private evaluator_findfirstvalidanimation(entity, animations, tests) {
 
 // Namespace animation_selector_table_evaluators
 // Params 2, eflags: 0x5 linked
+// namespace_ad906e7f<file_0>::function_fdf6557d
 // Checksum 0x50cc3fa2, Offset: 0xbc8
 // Size: 0x6e
 function private evaluateblockedanimations(entity, animations) {
@@ -160,6 +169,7 @@ function private evaluateblockedanimations(entity, animations) {
 
 // Namespace animation_selector_table_evaluators
 // Params 2, eflags: 0x5 linked
+// namespace_ad906e7f<file_0>::function_c92e500f
 // Checksum 0xaa2165c4, Offset: 0xc40
 // Size: 0xee
 function private evaluatehumanturnanimations(entity, animations) {
@@ -179,6 +189,7 @@ function private evaluatehumanturnanimations(entity, animations) {
 
 // Namespace animation_selector_table_evaluators
 // Params 2, eflags: 0x5 linked
+// namespace_ad906e7f<file_0>::function_88aab781
 // Checksum 0x696dd51b, Offset: 0xd38
 // Size: 0x76
 function private evaluatehumanexposedarrivalanimations(entity, animations) {

@@ -10,6 +10,7 @@
 
 // Namespace drown
 // Params 0, eflags: 0x2
+// namespace_d2db8729<file_0>::function_2dc19561
 // Checksum 0xb0721313, Offset: 0x1e0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,6 +19,7 @@ function autoexec function_2dc19561() {
 
 // Namespace drown
 // Params 0, eflags: 0x1 linked
+// namespace_d2db8729<file_0>::function_8c87d8eb
 // Checksum 0x90f85851, Offset: 0x220
 // Size: 0x12c
 function __init__() {
@@ -35,6 +37,7 @@ function __init__() {
 
 // Namespace drown
 // Params 0, eflags: 0x1 linked
+// namespace_d2db8729<file_0>::function_b1aafe8a
 // Checksum 0x6ec5f7a5, Offset: 0x358
 // Size: 0x68
 function activate_player_health_visionset() {
@@ -47,6 +50,7 @@ function activate_player_health_visionset() {
 
 // Namespace drown
 // Params 0, eflags: 0x1 linked
+// namespace_d2db8729<file_0>::function_dd94caef
 // Checksum 0x988638a, Offset: 0x3c8
 // Size: 0x50
 function deactivate_player_health_visionset() {
@@ -58,6 +62,7 @@ function deactivate_player_health_visionset() {
 
 // Namespace drown
 // Params 0, eflags: 0x1 linked
+// namespace_d2db8729<file_0>::function_aebcf025
 // Checksum 0xe64699d5, Offset: 0x420
 // Size: 0x64
 function on_player_spawned() {
@@ -69,6 +74,7 @@ function on_player_spawned() {
 
 // Namespace drown
 // Params 0, eflags: 0x1 linked
+// namespace_d2db8729<file_0>::function_742fdf
 // Checksum 0x5e216765, Offset: 0x490
 // Size: 0x278
 function watch_player_drowning() {
@@ -112,6 +118,7 @@ function watch_player_drowning() {
 
 // Namespace drown
 // Params 0, eflags: 0x1 linked
+// namespace_d2db8729<file_0>::function_cb6a2e72
 // Checksum 0xab8ef219, Offset: 0x710
 // Size: 0x6c
 function function_cb6a2e72() {
@@ -125,6 +132,7 @@ function function_cb6a2e72() {
 
 // Namespace drown
 // Params 0, eflags: 0x1 linked
+// namespace_d2db8729<file_0>::function_eca74cda
 // Checksum 0x29f3389, Offset: 0x788
 // Size: 0x6c
 function watch_game_ended() {
@@ -138,6 +146,7 @@ function watch_game_ended() {
 
 // Namespace drown
 // Params 0, eflags: 0x1 linked
+// namespace_d2db8729<file_0>::function_4142e518
 // Checksum 0xad6fe649, Offset: 0x800
 // Size: 0x42
 function is_player_drowning() {

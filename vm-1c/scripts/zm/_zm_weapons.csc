@@ -10,6 +10,7 @@
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x2
+// namespace_33d4b538<file_0>::function_2dc19561
 // Checksum 0x3aa1875c, Offset: 0x2b0
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -18,6 +19,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_8c87d8eb
 // Checksum 0xb42e9433, Offset: 0x2f8
 // Size: 0x64
 function __init__() {
@@ -28,6 +30,7 @@ function __init__() {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_5b6b9132
 // Checksum 0x99ec1590, Offset: 0x368
 // Size: 0x4
 function __main__() {
@@ -36,6 +39,7 @@ function __main__() {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x5 linked
+// namespace_33d4b538<file_0>::function_fb4f96b5
 // Checksum 0x4d6c5ac0, Offset: 0x378
 // Size: 0x16a
 function private on_player_connect(localclientnum) {
@@ -53,6 +57,7 @@ function private on_player_connect(localclientnum) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_9519b54b
 // Checksum 0x672f56cb, Offset: 0x4f0
 // Size: 0x36
 function is_weapon_included(weapon) {
@@ -64,6 +69,7 @@ function is_weapon_included(weapon) {
 
 // Namespace zm_weapons
 // Params 5, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_18798fac
 // Checksum 0x61490fb, Offset: 0x530
 // Size: 0x11a
 function compute_player_weapon_ammo_cost(weapon, cost, upgraded, n_base_non_wallbuy_cost, n_upgraded_non_wallbuy_cost) {
@@ -91,6 +97,7 @@ function compute_player_weapon_ammo_cost(weapon, cost, upgraded, n_base_non_wall
 
 // Namespace zm_weapons
 // Params 5, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_e810e262
 // Checksum 0x2bc594ea, Offset: 0x658
 // Size: 0x24c
 function include_weapon(weapon_name, display_in_box, cost, ammo_cost, upgraded) {
@@ -131,6 +138,7 @@ function include_weapon(weapon_name, display_in_box, cost, ammo_cost, upgraded) 
 
 // Namespace zm_weapons
 // Params 5, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_f8412821
 // Checksum 0x2092c57, Offset: 0x8b0
 // Size: 0xc2
 function include_upgraded_weapon(weapon_name, upgrade_name, display_in_box, cost, ammo_cost) {
@@ -145,6 +153,7 @@ function include_upgraded_weapon(weapon_name, upgrade_name, display_in_box, cost
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_ada4725b
 // Checksum 0xe907d068, Offset: 0x980
 // Size: 0x42
 function is_weapon_upgraded(weapon) {
@@ -157,6 +166,7 @@ function is_weapon_upgraded(weapon) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_c35e6aab
 // Checksum 0xbd801785, Offset: 0x9d0
 // Size: 0x64c
 function init() {
@@ -222,6 +232,7 @@ function init() {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_387b8580
 // Checksum 0xf495bd10, Offset: 0x1028
 // Size: 0xe6
 function is_wallbuy(w_to_check) {
@@ -241,6 +252,7 @@ function is_wallbuy(w_to_check) {
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_471fdb56
 // Checksum 0x89ab75c0, Offset: 0x1118
 // Size: 0x1c4
 function wallbuy_player_connect(localclientnum) {
@@ -262,6 +274,7 @@ function wallbuy_player_connect(localclientnum) {
 
 // Namespace zm_weapons
 // Params 7, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_4789831f
 // Checksum 0x18aa2680, Offset: 0x12e8
 // Size: 0x436
 function wallbuy_callback(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -314,6 +327,7 @@ function wallbuy_callback(localclientnum, oldval, newval, bnewent, binitialsnap,
 
 // Namespace zm_weapons
 // Params 7, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_dbf7d143
 // Checksum 0x13830c4c, Offset: 0x1728
 // Size: 0x47a
 function wallbuy_callback_idx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -371,6 +385,7 @@ function wallbuy_callback_idx(localclientnum, oldval, newval, bnewent, binitials
 
 // Namespace zm_weapons
 // Params 1, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_d2c33e3a
 // Checksum 0xfd7b7392, Offset: 0x1bb0
 // Size: 0x24
 function checkstringvalid(str) {
@@ -382,6 +397,7 @@ function checkstringvalid(str) {
 
 // Namespace zm_weapons
 // Params 2, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_b8cb5ac8
 // Checksum 0xf3c38a0e, Offset: 0x1be0
 // Size: 0x44c
 function load_weapon_spec_from_table(table, first_row) {
@@ -421,6 +437,7 @@ function load_weapon_spec_from_table(table, first_row) {
 
 // Namespace zm_weapons
 // Params 0, eflags: 0x1 linked
+// namespace_33d4b538<file_0>::function_9e8dccbe
 // Checksum 0xac0d7e8e, Offset: 0x2038
 // Size: 0x6a6
 function function_9e8dccbe() {

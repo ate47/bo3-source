@@ -6,6 +6,7 @@
 
 // Namespace damagefeedback
 // Params 0, eflags: 0x0
+// namespace_fc79db9f<file_0>::function_8c87d8eb
 // Checksum 0xc1cddca, Offset: 0x210
 // Size: 0x44
 function __init__() {
@@ -15,6 +16,7 @@ function __init__() {
 
 // Namespace damagefeedback
 // Params 0, eflags: 0x1 linked
+// namespace_fc79db9f<file_0>::function_d290ebfa
 // Checksum 0x99ec1590, Offset: 0x260
 // Size: 0x4
 function main() {
@@ -23,6 +25,7 @@ function main() {
 
 // Namespace damagefeedback
 // Params 0, eflags: 0x1 linked
+// namespace_fc79db9f<file_0>::function_fb4f96b5
 // Checksum 0x1a5d1ac9, Offset: 0x270
 // Size: 0xd8
 function on_player_connect() {
@@ -39,6 +42,7 @@ function on_player_connect() {
 
 // Namespace damagefeedback
 // Params 1, eflags: 0x1 linked
+// namespace_fc79db9f<file_0>::function_660af82d
 // Checksum 0xd1f3c81d, Offset: 0x350
 // Size: 0x66
 function should_play_sound(mod) {
@@ -59,6 +63,7 @@ function should_play_sound(mod) {
 
 // Namespace damagefeedback
 // Params 3, eflags: 0x1 linked
+// namespace_fc79db9f<file_0>::function_bcb19900
 // Checksum 0x2ecbf3a1, Offset: 0x3c0
 // Size: 0x270
 function updatedamagefeedback(mod, inflictor, perkfeedback) {
@@ -105,6 +110,7 @@ function updatedamagefeedback(mod, inflictor, perkfeedback) {
 
 // Namespace damagefeedback
 // Params 2, eflags: 0x1 linked
+// namespace_fc79db9f<file_0>::function_624a623b
 // Checksum 0x6f63d84d, Offset: 0x638
 // Size: 0x60
 function function_624a623b(mod, alert) {
@@ -119,6 +125,7 @@ function function_624a623b(mod, alert) {
 
 // Namespace damagefeedback
 // Params 1, eflags: 0x0
+// namespace_fc79db9f<file_0>::function_cffe043d
 // Checksum 0x9659774, Offset: 0x6a0
 // Size: 0xea
 function function_cffe043d(hitent) {
@@ -145,6 +152,7 @@ function function_cffe043d(hitent) {
 
 // Namespace damagefeedback
 // Params 1, eflags: 0x1 linked
+// namespace_fc79db9f<file_0>::function_4c506f90
 // Checksum 0xeea33415, Offset: 0x798
 // Size: 0x17e
 function function_4c506f90(hitent) {

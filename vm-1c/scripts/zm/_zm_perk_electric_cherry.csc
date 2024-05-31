@@ -8,6 +8,7 @@
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x2
+// namespace_a7884d63<file_0>::function_2dc19561
 // Checksum 0x11ddf0bf, Offset: 0x380
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,6 +17,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x1 linked
+// namespace_a7884d63<file_0>::function_8c87d8eb
 // Checksum 0xa481624, Offset: 0x3c0
 // Size: 0x84
 function __init__() {
@@ -26,6 +28,7 @@ function __init__() {
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x1 linked
+// namespace_a7884d63<file_0>::function_fd67ecd
 // Checksum 0x541947e0, Offset: 0x450
 // Size: 0x226
 function init_electric_cherry() {
@@ -46,6 +49,7 @@ function init_electric_cherry() {
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x1 linked
+// namespace_a7884d63<file_0>::function_f3ab8914
 // Checksum 0x29b49cc9, Offset: 0x680
 // Size: 0x3c
 function electric_cherry_client_field_func() {
@@ -54,6 +58,7 @@ function electric_cherry_client_field_func() {
 
 // Namespace zm_perk_electric_cherry
 // Params 0, eflags: 0x1 linked
+// namespace_a7884d63<file_0>::function_8eb471d3
 // Checksum 0x99ec1590, Offset: 0x6c8
 // Size: 0x4
 function electric_cherry_code_callback_func() {
@@ -62,6 +67,7 @@ function electric_cherry_code_callback_func() {
 
 // Namespace zm_perk_electric_cherry
 // Params 7, eflags: 0x1 linked
+// namespace_a7884d63<file_0>::function_d3aeb08
 // Checksum 0x32a16dd, Offset: 0x6d8
 // Size: 0x176
 function electric_cherry_reload_attack_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -88,6 +94,7 @@ function electric_cherry_reload_attack_fx(localclientnum, oldval, newval, bnewen
 
 // Namespace zm_perk_electric_cherry
 // Params 7, eflags: 0x1 linked
+// namespace_a7884d63<file_0>::function_98fcc024
 // Checksum 0x3bc169, Offset: 0x858
 // Size: 0x12e
 function tesla_death_fx_callback(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -110,6 +117,7 @@ function tesla_death_fx_callback(localclientnum, oldval, newval, bnewent, biniti
 
 // Namespace zm_perk_electric_cherry
 // Params 7, eflags: 0x1 linked
+// namespace_a7884d63<file_0>::function_6f5d566b
 // Checksum 0xde9efe6d, Offset: 0x990
 // Size: 0x1c6
 function tesla_shock_eyes_fx_callback(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

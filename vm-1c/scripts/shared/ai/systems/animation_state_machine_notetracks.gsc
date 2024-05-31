@@ -4,6 +4,7 @@
 
 // Namespace animationstatenetwork
 // Params 0, eflags: 0x2
+// namespace_3923db8a<file_0>::function_eee4063c
 // Checksum 0xf8f80d1f, Offset: 0xc0
 // Size: 0x10
 function autoexec initnotetrackhandler() {
@@ -12,6 +13,7 @@ function autoexec initnotetrackhandler() {
 
 // Namespace animationstatenetwork
 // Params 2, eflags: 0x5 linked
+// namespace_3923db8a<file_0>::function_7948e6b7
 // Checksum 0x3dcf0a81, Offset: 0xd8
 // Size: 0x8e
 function private runnotetrackhandler(entity, notetracks) {
@@ -23,6 +25,7 @@ function private runnotetrackhandler(entity, notetracks) {
 
 // Namespace animationstatenetwork
 // Params 2, eflags: 0x5 linked
+// namespace_3923db8a<file_0>::function_8ed1270
 // Checksum 0x93449524, Offset: 0x170
 // Size: 0x9c
 function private handlenotetrack(entity, notetrack) {
@@ -39,6 +42,7 @@ function private handlenotetrack(entity, notetrack) {
 
 // Namespace animationstatenetwork
 // Params 2, eflags: 0x1 linked
+// namespace_3923db8a<file_0>::function_a522af1
 // Checksum 0x2ffe03ed, Offset: 0x218
 // Size: 0xd6
 function registernotetrackhandlerfunction(notetrackname, notetrackfuncptr) {
@@ -50,6 +54,7 @@ function registernotetrackhandlerfunction(notetrackname, notetrackfuncptr) {
 
 // Namespace animationstatenetwork
 // Params 3, eflags: 0x1 linked
+// namespace_3923db8a<file_0>::function_491a1a0e
 // Checksum 0x7075b8b9, Offset: 0x2f8
 // Size: 0x72
 function registerblackboardnotetrackhandler(notetrackname, blackboardattributename, blackboardvalue) {

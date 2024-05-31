@@ -1,0 +1,9 @@
+{
+    "vmtype": "none",
+    "name": "cpac_pro_16",
+    "igdtseqnum": 119,
+    "challengeWidget": "GroundVehicleDestroy",
+    "challengeDetails": "ACCOLADES_PRO_16",
+    "challengeName": "ACCOLADES_PRO_16_NAME",
+    "challengeReference": "MISSION_PROLOGUE_CHALLENGE16"
+}

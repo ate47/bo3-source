@@ -10,6 +10,7 @@
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x2
+// namespace_51c2821<file_0>::function_2dc19561
 // Checksum 0x57b19b2f, Offset: 0xc48
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -18,6 +19,7 @@ function autoexec function_2dc19561() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_8c87d8eb
 // Checksum 0xa157e38e, Offset: 0xc88
 // Size: 0x24
 function __init__() {
@@ -26,6 +28,7 @@ function __init__() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_c35e6aab
 // Checksum 0x27620dbc, Offset: 0xcb8
 // Size: 0x10c4
 function init() {
@@ -166,6 +169,7 @@ function init() {
 
 // Namespace globallogic_audio
 // Params 2, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_9c3f9daf
 // Checksum 0xab839279, Offset: 0x1d88
 // Size: 0xe8
 function function_9c3f9daf(group, var_5237b452) {
@@ -183,6 +187,7 @@ function function_9c3f9daf(group, var_5237b452) {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_2a897a84
 // Checksum 0x51859829, Offset: 0x1e78
 // Size: 0xac
 function function_2a897a84() {
@@ -203,6 +208,7 @@ function function_2a897a84() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_8395d834
 // Checksum 0x31b64c40, Offset: 0x1f30
 // Size: 0xa4
 function function_8395d834() {
@@ -217,6 +223,7 @@ function function_8395d834() {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_79a5ffc6
 // Checksum 0x7e5392bb, Offset: 0x1fe0
 // Size: 0x288
 function suspensemusic(random) {
@@ -263,6 +270,7 @@ function suspensemusic(random) {
 
 // Namespace globallogic_audio
 // Params 3, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_89d56d3
 // Checksum 0xce9a39a1, Offset: 0x2270
 // Size: 0xba
 function function_89d56d3(dialog, skip_team, var_f2c55274) {
@@ -275,6 +283,7 @@ function function_89d56d3(dialog, skip_team, var_f2c55274) {
 
 // Namespace globallogic_audio
 // Params 2, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_a6efdbf5
 // Checksum 0xaf97cd59, Offset: 0x2338
 // Size: 0x15c
 function function_a6efdbf5(winner, delay) {
@@ -297,6 +306,7 @@ function function_a6efdbf5(winner, delay) {
 
 // Namespace globallogic_audio
 // Params 2, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_19c083
 // Checksum 0xe131f084, Offset: 0x24a0
 // Size: 0xbc
 function function_19c083(winner, delay) {
@@ -316,6 +326,7 @@ function function_19c083(winner, delay) {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x0
+// namespace_51c2821<file_0>::function_521fca0b
 // Checksum 0x52569c2c, Offset: 0x2568
 // Size: 0x98
 function function_521fca0b() {
@@ -333,6 +344,7 @@ function function_521fca0b() {
 
 // Namespace globallogic_audio
 // Params 5, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_8cd2e72e
 // Checksum 0x4236b373, Offset: 0x2608
 // Size: 0x2b6
 function leaderdialog(dialog, team, group, excludelist, var_4972cdc5) {
@@ -376,6 +388,7 @@ function leaderdialog(dialog, team, group, excludelist, var_4972cdc5) {
 
 // Namespace globallogic_audio
 // Params 3, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_cbd911cb
 // Checksum 0xa770b8fe, Offset: 0x28c8
 // Size: 0x17e
 function function_cbd911cb(var_93e4c148, group, excludelist) {
@@ -407,6 +420,7 @@ function function_cbd911cb(var_93e4c148, group, excludelist) {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_d99d939d
 // Checksum 0x49b0557c, Offset: 0x2a50
 // Size: 0x8a
 function function_d99d939d() {
@@ -417,6 +431,7 @@ function function_d99d939d() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_63c739b9
 // Checksum 0x8766fccc, Offset: 0x2ae8
 // Size: 0x38
 function function_63c739b9() {
@@ -428,6 +443,7 @@ function function_63c739b9() {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x0
+// namespace_51c2821<file_0>::function_11f65e
 // Checksum 0x2c8c089d, Offset: 0x2b28
 // Size: 0x9a
 function function_11f65e(group) {
@@ -438,6 +454,7 @@ function function_11f65e(group) {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_aa8700b6
 // Checksum 0xfccf40a5, Offset: 0x2bd0
 // Size: 0xa2
 function function_aa8700b6(group) {
@@ -451,6 +468,7 @@ function function_aa8700b6(group) {
 
 // Namespace globallogic_audio
 // Params 2, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_270e670f
 // Checksum 0x2537c82b, Offset: 0x2c80
 // Size: 0x1ea
 function function_270e670f(dialog, group) {
@@ -485,6 +503,7 @@ function function_270e670f(dialog, group) {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_fc4617ba
 // Checksum 0x7eb2b86e, Offset: 0x2e78
 // Size: 0xc2
 function function_fc4617ba(group) {
@@ -503,6 +522,7 @@ function function_fc4617ba(group) {
 
 // Namespace globallogic_audio
 // Params 2, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_5b8d0e6
 // Checksum 0xd8651eeb, Offset: 0x2f48
 // Size: 0xe6
 function leaderdialogonplayer(dialog, group) {
@@ -532,6 +552,7 @@ function leaderdialogonplayer(dialog, group) {
 
 // Namespace globallogic_audio
 // Params 2, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_17c50624
 // Checksum 0xeedf1044, Offset: 0x3038
 // Size: 0x84
 function function_17c50624(sound, extratime) {
@@ -548,6 +569,7 @@ function function_17c50624(sound, extratime) {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_e529fd90
 // Checksum 0xd23669e6, Offset: 0x30c8
 // Size: 0x294
 function playleaderdialogonplayer(dialog) {
@@ -594,6 +616,7 @@ function playleaderdialogonplayer(dialog) {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_42bdf8e
 // Checksum 0x5e34189f, Offset: 0x3368
 // Size: 0xcc
 function function_42bdf8e(checkteam) {
@@ -610,6 +633,7 @@ function function_42bdf8e(checkteam) {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_a069d2b5
 // Checksum 0xcf1fa321, Offset: 0x3440
 // Size: 0xe2
 function function_a069d2b5() {
@@ -625,6 +649,7 @@ function function_a069d2b5() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_eed68ebe
 // Checksum 0xd17f15df, Offset: 0x3530
 // Size: 0x174
 function musiccontroller() {
@@ -651,6 +676,7 @@ function musiccontroller() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_b510a5ac
 // Checksum 0xeef964e9, Offset: 0x36b0
 // Size: 0x44
 function function_b510a5ac() {
@@ -661,6 +687,7 @@ function function_b510a5ac() {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x0
+// namespace_51c2821<file_0>::function_89994704
 // Checksum 0xf48b64e4, Offset: 0x3700
 // Size: 0x2c
 function function_89994704() {
@@ -672,6 +699,7 @@ function function_89994704() {
 
 // Namespace globallogic_audio
 // Params 2, eflags: 0x0
+// namespace_51c2821<file_0>::function_ea1beeac
 // Checksum 0xf0f66b03, Offset: 0x3738
 // Size: 0xd6
 function play_2d_on_team(alias, team) {
@@ -686,6 +714,7 @@ function play_2d_on_team(alias, team) {
 
 // Namespace globallogic_audio
 // Params 5, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_e3595143
 // Checksum 0x9e3d3cfd, Offset: 0x3818
 // Size: 0x2fe
 function set_music_on_team(state, team, save_state, return_state, wait_time) {
@@ -744,6 +773,7 @@ function set_music_on_team(state, team, save_state, return_state, wait_time) {
 
 // Namespace globallogic_audio
 // Params 4, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_f35c5627
 // Checksum 0x51f55112, Offset: 0x3b20
 // Size: 0x424
 function set_music_on_player(state, save_state, return_state, wait_time) {
@@ -812,6 +842,7 @@ function set_music_on_player(state, save_state, return_state, wait_time) {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x0
+// namespace_51c2821<file_0>::function_4f633c43
 // Checksum 0x8ced2f82, Offset: 0x3f50
 // Size: 0x94
 function function_4f633c43(wait_time) {
@@ -828,6 +859,7 @@ function function_4f633c43(wait_time) {
 
 // Namespace globallogic_audio
 // Params 2, eflags: 0x0
+// namespace_51c2821<file_0>::function_5f207017
 // Checksum 0xaa3e54f5, Offset: 0x3ff0
 // Size: 0x1de
 function function_5f207017(team, wait_time) {
@@ -858,6 +890,7 @@ function function_5f207017(team, wait_time) {
 
 // Namespace globallogic_audio
 // Params 2, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_419e790f
 // Checksum 0xec443cf2, Offset: 0x41d8
 // Size: 0x1bc
 function function_419e790f(nextstate, wait_time) {
@@ -884,6 +917,7 @@ function function_419e790f(nextstate, wait_time) {
 
 // Namespace globallogic_audio
 // Params 1, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_e008b8f9
 // Checksum 0xc7c47aaf, Offset: 0x43a0
 // Size: 0x2e
 function function_e008b8f9(switchtype) {
@@ -899,6 +933,7 @@ function function_e008b8f9(switchtype) {
 
 // Namespace globallogic_audio
 // Params 0, eflags: 0x1 linked
+// namespace_51c2821<file_0>::function_de3b188d
 // Checksum 0x4beef10f, Offset: 0x43f8
 // Size: 0x54
 function function_de3b188d() {

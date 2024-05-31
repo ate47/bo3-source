@@ -9,6 +9,7 @@
 
 // Namespace namespace_bbf5f0d7
 // Params 0, eflags: 0x0
+// namespace_bbf5f0d7<file_0>::function_d290ebfa
 // Checksum 0x14b6208c, Offset: 0x130
 // Size: 0x62
 function main() {
@@ -21,6 +22,7 @@ function main() {
 
 // Namespace namespace_bbf5f0d7
 // Params 0, eflags: 0x0
+// namespace_bbf5f0d7<file_0>::function_f7046c76
 // Checksum 0xe9c07cd6, Offset: 0x1a0
 // Size: 0x2
 function precache() {

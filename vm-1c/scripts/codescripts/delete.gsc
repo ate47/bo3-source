@@ -2,6 +2,7 @@
 
 // Namespace delete
 // Params 0, eflags: 0x1 linked
+// namespace_dc8c8404<file_0>::function_d290ebfa
 // Checksum 0xb5ab1af4, Offset: 0x70
 // Size: 0xfc
 function main() {

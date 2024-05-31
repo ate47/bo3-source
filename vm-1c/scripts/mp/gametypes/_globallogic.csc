@@ -12,6 +12,7 @@
 
 // Namespace globallogic
 // Params 0, eflags: 0x2
+// namespace_2282eece<file_0>::function_2dc19561
 // Checksum 0x4fcd213b, Offset: 0x358
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -20,6 +21,7 @@ function autoexec function_2dc19561() {
 
 // Namespace globallogic
 // Params 0, eflags: 0x1 linked
+// namespace_2282eece<file_0>::function_8c87d8eb
 // Checksum 0xc81c8126, Offset: 0x398
 // Size: 0x248
 function __init__() {
@@ -39,6 +41,7 @@ function __init__() {
 
 // Namespace globallogic
 // Params 7, eflags: 0x1 linked
+// namespace_2282eece<file_0>::function_c8ab51de
 // Checksum 0xff080585, Offset: 0x5e8
 // Size: 0x6c
 function game_ended(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -50,6 +53,7 @@ function game_ended(localclientnum, oldval, newval, bnewent, binitialsnap, field
 
 // Namespace globallogic
 // Params 7, eflags: 0x1 linked
+// namespace_2282eece<file_0>::function_cc0ade28
 // Checksum 0xc8c19e43, Offset: 0x660
 // Size: 0x6c
 function post_game(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -61,6 +65,7 @@ function post_game(localclientnum, oldval, newval, bnewent, binitialsnap, fieldn
 
 // Namespace globallogic
 // Params 7, eflags: 0x1 linked
+// namespace_2282eece<file_0>::function_3ddfc934
 // Checksum 0x2437adb2, Offset: 0x6d8
 // Size: 0x6c
 function firefly_effect_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -71,6 +76,7 @@ function firefly_effect_cb(localclientnum, oldval, newval, bnewent, binitialsnap
 
 // Namespace globallogic
 // Params 7, eflags: 0x1 linked
+// namespace_2282eece<file_0>::function_96d3770a
 // Checksum 0xeb68fc0a, Offset: 0x750
 // Size: 0x184
 function annihilate_effect_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -93,6 +99,7 @@ function annihilate_effect_cb(localclientnum, oldval, newval, bnewent, binitials
 
 // Namespace globallogic
 // Params 7, eflags: 0x1 linked
+// namespace_2282eece<file_0>::function_441eb319
 // Checksum 0x3bd754f3, Offset: 0x8e0
 // Size: 0xd4
 function pineapplegun_effect_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -109,6 +116,7 @@ function pineapplegun_effect_cb(localclientnum, oldval, newval, bnewent, binitia
 
 // Namespace globallogic
 // Params 1, eflags: 0x0
+// namespace_2282eece<file_0>::function_17f0b9e4
 // Checksum 0xf8be006, Offset: 0x9c0
 // Size: 0x48
 function function_17f0b9e4(localclientnum) {
@@ -121,6 +129,7 @@ function function_17f0b9e4(localclientnum) {
 
 // Namespace globallogic
 // Params 1, eflags: 0x1 linked
+// namespace_2282eece<file_0>::function_97755dc9
 // Checksum 0xc9c8f435, Offset: 0xa10
 // Size: 0x150
 function play_plant_sound(localclientnum) {
@@ -148,6 +157,7 @@ function play_plant_sound(localclientnum) {
 
 // Namespace globallogic
 // Params 0, eflags: 0x1 linked
+// namespace_2282eece<file_0>::function_9350c173
 // Checksum 0x56d077c2, Offset: 0xb68
 // Size: 0x5c
 function function_9350c173() {
@@ -159,6 +169,7 @@ function function_9350c173() {
 
 // Namespace globallogic
 // Params 0, eflags: 0x2
+// namespace_2282eece<file_0>::function_d00a98f6
 // Checksum 0xe79c43d8, Offset: 0xbd0
 // Size: 0x34
 function autoexec function_d00a98f6() {

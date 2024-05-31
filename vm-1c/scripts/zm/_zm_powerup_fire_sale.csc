@@ -6,6 +6,7 @@
 
 // Namespace zm_powerup_fire_sale
 // Params 0, eflags: 0x2
+// namespace_a5f9a5f8<file_0>::function_2dc19561
 // Checksum 0xf14025c5, Offset: 0x118
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -14,6 +15,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_powerup_fire_sale
 // Params 0, eflags: 0x1 linked
+// namespace_a5f9a5f8<file_0>::function_8c87d8eb
 // Checksum 0x18e04e00, Offset: 0x158
 // Size: 0x74
 function __init__() {

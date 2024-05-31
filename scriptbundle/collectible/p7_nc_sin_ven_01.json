@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_sin_ven_01",
+    "type": "collectible",
+    "igdtseqnum": 78,
+    "uiMaterial": "t7_icon_menu_p7_nc_sin_ven_01",
+    "uiModelWithStand": "p7_nc_sin_ven_01_with_stand",
+    "uiModel": "p7_nc_sin_ven_01",
+    "description": "COLLECTIBLE_P7_NC_SIN_VEN_01_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_SIN_VEN_01_LONG",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_DAMAGED_OPTICAL_CAMO",
+    "displayNameShort": "COLLECTIBLE_P7_NC_SIN_VEN_01_SHORT",
+    "codexurl": "Collectables-DamagedOpticalCamoCloak.htm",
+    "slotSize": 2
+}

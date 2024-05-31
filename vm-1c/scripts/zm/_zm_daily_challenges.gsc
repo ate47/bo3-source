@@ -21,6 +21,7 @@
 
 // Namespace zm_daily_challenges
 // Params 0, eflags: 0x2
+// namespace_880f7825<file_0>::function_2dc19561
 // Checksum 0x3b10dbe6, Offset: 0x860
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -29,6 +30,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_daily_challenges
 // Params 0, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_8c87d8eb
 // Checksum 0x624e1fbf, Offset: 0x8a8
 // Size: 0x84
 function __init__() {
@@ -40,6 +42,7 @@ function __init__() {
 
 // Namespace zm_daily_challenges
 // Params 0, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_5b6b9132
 // Checksum 0xcd33ab48, Offset: 0x938
 // Size: 0x34
 function __main__() {
@@ -49,6 +52,7 @@ function __main__() {
 
 // Namespace zm_daily_challenges
 // Params 0, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_eb99da89
 // Checksum 0xdd753b4b, Offset: 0x978
 // Size: 0x96
 function on_connect() {
@@ -64,6 +68,7 @@ function on_connect() {
 
 // Namespace zm_daily_challenges
 // Params 0, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_356a4ee1
 // Checksum 0x52a51f75, Offset: 0xa18
 // Size: 0x1c
 function on_spawned() {
@@ -72,6 +77,7 @@ function on_spawned() {
 
 // Namespace zm_daily_challenges
 // Params 0, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_360282a1
 // Checksum 0x87879af9, Offset: 0xa40
 // Size: 0x1ba
 function round_tracking() {
@@ -116,6 +122,7 @@ function round_tracking() {
 
 // Namespace zm_daily_challenges
 // Params 1, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_12d49bf5
 // Checksum 0x76520194, Offset: 0xc08
 // Size: 0x8e4
 function death_check_for_challenge_updates(e_attacker) {
@@ -293,6 +300,7 @@ function death_check_for_challenge_updates(e_attacker) {
 
 // Namespace zm_daily_challenges
 // Params 0, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_c3dcd311
 // Checksum 0xd9b5c95c, Offset: 0x14f8
 // Size: 0xd0
 function spent_points_tracking() {
@@ -310,6 +318,7 @@ function spent_points_tracking() {
 
 // Namespace zm_daily_challenges
 // Params 0, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_c97d6dda
 // Checksum 0x826c28cd, Offset: 0x15d0
 // Size: 0xd8
 function earned_points_tracking() {
@@ -328,6 +337,7 @@ function earned_points_tracking() {
 
 // Namespace zm_daily_challenges
 // Params 0, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_d0a3eb3c
 // Checksum 0x1815350a, Offset: 0x16b0
 // Size: 0x68
 function challenge_ingame_time_tracking() {
@@ -343,6 +353,7 @@ function challenge_ingame_time_tracking() {
 
 // Namespace zm_daily_challenges
 // Params 1, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_73234881
 // Checksum 0x5ff13b97, Offset: 0x1720
 // Size: 0xec
 function increment_windows_repaired(s_barrier) {
@@ -366,6 +377,7 @@ function increment_windows_repaired(s_barrier) {
 
 // Namespace zm_daily_challenges
 // Params 0, eflags: 0x5 linked
+// namespace_880f7825<file_0>::function_3f6259f8
 // Checksum 0x9fdada64, Offset: 0x1818
 // Size: 0x96
 function private rebuild_timer() {
@@ -385,6 +397,7 @@ function private rebuild_timer() {
 
 // Namespace zm_daily_challenges
 // Params 0, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_29f2f25e
 // Checksum 0x96c9415, Offset: 0x18b8
 // Size: 0xac
 function increment_magic_box() {
@@ -402,6 +415,7 @@ function increment_magic_box() {
 
 // Namespace zm_daily_challenges
 // Params 0, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_14eca715
 // Checksum 0xceab98c9, Offset: 0x1970
 // Size: 0xca
 function increment_nuked_zombie() {
@@ -417,6 +431,7 @@ function increment_nuked_zombie() {
 
 // Namespace zm_daily_challenges
 // Params 0, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_e90a2fbf
 // Checksum 0x32b774bb, Offset: 0x1a48
 // Size: 0x70
 function perk_purchase_tracking() {
@@ -432,6 +447,7 @@ function perk_purchase_tracking() {
 
 // Namespace zm_daily_challenges
 // Params 0, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_b5ebb546
 // Checksum 0x7beeb60b, Offset: 0x1ac0
 // Size: 0x68
 function perk_drink_tracking() {
@@ -449,6 +465,7 @@ function perk_drink_tracking() {
 
     // Namespace zm_daily_challenges
     // Params 1, eflags: 0x1 linked
+    // namespace_880f7825<file_0>::function_afbbec46
     // Checksum 0x96518ae5, Offset: 0x1b30
     // Size: 0x24
     function debug_print(str_line) {
@@ -459,6 +476,7 @@ function perk_drink_tracking() {
 
 // Namespace zm_daily_challenges
 // Params 1, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_dd7eece
 // Checksum 0x46457839, Offset: 0x1b60
 // Size: 0x1fc
 function on_challenge_complete(params) {
@@ -480,6 +498,7 @@ function on_challenge_complete(params) {
 
 // Namespace zm_daily_challenges
 // Params 1, eflags: 0x1 linked
+// namespace_880f7825<file_0>::function_ea1fd6d
 // Checksum 0x7a5650f9, Offset: 0x1d68
 // Size: 0x4e
 function is_daily_challenge(n_challenge_index) {

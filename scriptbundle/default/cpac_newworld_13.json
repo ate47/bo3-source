@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_newworld_13",
+    "igdtseqnum": 100,
+    "challengeWidget": "Cybernetics",
+    "challengeDetails": "ACCOLADES_NEW_13",
+    "challengeName": "ACCOLADES_NEW_13_NAME",
+    "centerText": "6",
+    "challengeReference": "MISSION_NEWWORLD_CHALLENGE13"
+}

@@ -20,6 +20,7 @@
 
 // Namespace remotemissile
 // Params 0, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_c35e6aab
 // Checksum 0x86d6e32c, Offset: 0x8e0
 // Size: 0x24c
 function init() {
@@ -43,6 +44,7 @@ function init() {
 
 // Namespace remotemissile
 // Params 3, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_235f168c
 // Checksum 0x80fafcc2, Offset: 0xb38
 // Size: 0x6a
 function remote_missile_game_end_think(rocket, team, killstreak_id) {
@@ -54,6 +56,7 @@ function remote_missile_game_end_think(rocket, team, killstreak_id) {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_99fa428c
 // Checksum 0x32a3b236, Offset: 0xbb0
 // Size: 0x154
 function tryusepredatormissile(lifeid) {
@@ -74,6 +77,7 @@ function tryusepredatormissile(lifeid) {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_4bc3d80
 // Checksum 0x190c135b, Offset: 0xd10
 // Size: 0x488
 function getbestspawnpoint(remotemissilespawnpoints) {
@@ -129,6 +133,7 @@ function getbestspawnpoint(remotemissilespawnpoints) {
 
     // Namespace remotemissile
     // Params 4, eflags: 0x0
+    // namespace_818840b1<file_0>::function_bf00adad
     // Checksum 0x8e2a717f, Offset: 0x11a0
     // Size: 0xa6
     function drawline(start, end, timeslice, color) {
@@ -143,6 +148,7 @@ function getbestspawnpoint(remotemissilespawnpoints) {
 
 // Namespace remotemissile
 // Params 4, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_924f213c
 // Checksum 0x58f41171, Offset: 0x1250
 // Size: 0x7f6
 function _fire(lifeid, player, team, killstreak_id) {
@@ -222,6 +228,7 @@ function _fire(lifeid, player, team, killstreak_id) {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_c339443c
 // Checksum 0xe403b7ce, Offset: 0x1a50
 // Size: 0xc
 function hackedhealthupdate(hacker) {
@@ -230,6 +237,7 @@ function hackedhealthupdate(hacker) {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_c373fcbb
 // Checksum 0x45cde0d0, Offset: 0x1a68
 // Size: 0x3c
 function hackedpostfunction(hacker) {
@@ -239,6 +247,7 @@ function hackedpostfunction(hacker) {
 
 // Namespace remotemissile
 // Params 0, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_45c10a49
 // Checksum 0x5d4984ac, Offset: 0x1ab0
 // Size: 0x3c
 function function_45c10a49() {
@@ -249,6 +258,7 @@ function function_45c10a49() {
 
 // Namespace remotemissile
 // Params 0, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_3a03ed6d
 // Checksum 0x7820c9ec, Offset: 0x1af8
 // Size: 0x94
 function watch_missile_kill_z() {
@@ -267,6 +277,7 @@ function watch_missile_kill_z() {
 
 // Namespace remotemissile
 // Params 3, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_bec3586c
 // Checksum 0x242f191e, Offset: 0x1b98
 // Size: 0x82
 function watch_missile_death(rocket, team, killstreak_id) {
@@ -279,6 +290,7 @@ function watch_missile_death(rocket, team, killstreak_id) {
 
 // Namespace remotemissile
 // Params 5, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_6cc54cf1
 // Checksum 0x40f9e60f, Offset: 0x1c28
 // Size: 0x25c
 function function_6cc54cf1(rocket, performplayerkillstreakend, unlink, team, killstreak_id) {
@@ -318,6 +330,7 @@ function function_6cc54cf1(rocket, performplayerkillstreakend, unlink, team, kil
 
 // Namespace remotemissile
 // Params 0, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_19fff0cb
 // Checksum 0xc77f172d, Offset: 0x1e90
 // Size: 0xac
 function missile_brake_timeout_watch() {
@@ -335,6 +348,7 @@ function missile_brake_timeout_watch() {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_d45e2460
 // Checksum 0xfb177fa0, Offset: 0x1f48
 // Size: 0x3c
 function stopondeath(snd) {
@@ -346,6 +360,7 @@ function stopondeath(snd) {
 
 // Namespace remotemissile
 // Params 3, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_1c02c3f9
 // Checksum 0x5e1d5e41, Offset: 0x1f90
 // Size: 0x8a
 function cleanupwaiter(rocket, team, killstreak_id) {
@@ -357,6 +372,7 @@ function cleanupwaiter(rocket, team, killstreak_id) {
 
 // Namespace remotemissile
 // Params 0, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_825ef784
 // Checksum 0x6e8becdf, Offset: 0x2028
 // Size: 0x1f0
 function handledamage() {
@@ -382,6 +398,7 @@ function handledamage() {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x0
+// namespace_818840b1<file_0>::function_5e8614bc
 // Checksum 0xe31bf957, Offset: 0x2220
 // Size: 0x1bc
 function function_5e8614bc(duration) {
@@ -408,6 +425,7 @@ function function_5e8614bc(duration) {
 
 // Namespace remotemissile
 // Params 0, eflags: 0x0
+// namespace_818840b1<file_0>::function_e4a02a7
 // Checksum 0x5d4cd215, Offset: 0x23e8
 // Size: 0x54
 function rocket_cleanupondeath() {
@@ -419,6 +437,7 @@ function rocket_cleanupondeath() {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_a15ab4ac
 // Checksum 0x2b0d01ac, Offset: 0x2448
 // Size: 0x1cc
 function missile_sound_play(player) {
@@ -440,6 +459,7 @@ function missile_sound_play(player) {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_30d06f1b
 // Checksum 0x97cc2a21, Offset: 0x2620
 // Size: 0x14c
 function missile_sound_boost(rocket) {
@@ -461,6 +481,7 @@ function missile_sound_boost(rocket) {
 
 // Namespace remotemissile
 // Params 2, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_ae186a90
 // Checksum 0x3f4af68, Offset: 0x2778
 // Size: 0xb4
 function missile_sound_impact(player, distance) {
@@ -481,6 +502,7 @@ function missile_sound_impact(player, distance) {
 
 // Namespace remotemissile
 // Params 0, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_ea9c5303
 // Checksum 0x4c3de612, Offset: 0x2838
 // Size: 0x74
 function sndwatchexplo() {
@@ -496,6 +518,7 @@ function sndwatchexplo() {
 
 // Namespace remotemissile
 // Params 0, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_6c7c683c
 // Checksum 0x35896e5a, Offset: 0x28b8
 // Size: 0x2c
 function missile_sound_deploy_bomblets() {
@@ -504,6 +527,7 @@ function missile_sound_deploy_bomblets() {
 
 // Namespace remotemissile
 // Params 3, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_d9afe5f3
 // Checksum 0x97ab644a, Offset: 0x28f0
 // Size: 0x790
 function getvalidtargets(rocket, trace, max_targets) {
@@ -590,6 +614,7 @@ function getvalidtargets(rocket, trace, max_targets) {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_c460fe4a
 // Checksum 0xb82bde9e, Offset: 0x3088
 // Size: 0x39c
 function create_missile_hud(rocket) {
@@ -631,6 +656,7 @@ function create_missile_hud(rocket) {
 
 // Namespace remotemissile
 // Params 0, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_b8f85d2
 // Checksum 0x9edfbc0c, Offset: 0x3430
 // Size: 0x146
 function destroy_missile_hud() {
@@ -656,6 +682,7 @@ function destroy_missile_hud() {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_79d47ec1
 // Checksum 0xf2117e7d, Offset: 0x3580
 // Size: 0x3f0
 function targeting_hud_think(rocket) {
@@ -707,6 +734,7 @@ function targeting_hud_think(rocket) {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_9b0d15eb
 // Checksum 0x2c0186f3, Offset: 0x3978
 // Size: 0xbc
 function missile_deploy_watch(rocket) {
@@ -728,6 +756,7 @@ function missile_deploy_watch(rocket) {
 
 // Namespace remotemissile
 // Params 2, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_91b530ab
 // Checksum 0x48056452, Offset: 0x3a40
 // Size: 0x398
 function missile_deploy(rocket, hacked) {
@@ -772,6 +801,7 @@ function missile_deploy(rocket, hacked) {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_6dc2b37
 // Checksum 0x161e0fd7, Offset: 0x3de8
 // Size: 0x96
 function bomblet_camera_waiter(rocket) {
@@ -788,6 +818,7 @@ function bomblet_camera_waiter(rocket) {
 
 // Namespace remotemissile
 // Params 0, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_17d4535f
 // Checksum 0xa54db4d0, Offset: 0x3e88
 // Size: 0x5c
 function setup_bomblet_map_icon() {
@@ -799,6 +830,7 @@ function setup_bomblet_map_icon() {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_c119c8aa
 // Checksum 0xd848d6b0, Offset: 0x3ef0
 // Size: 0x7c
 function setup_bomblet(bomb) {
@@ -811,6 +843,7 @@ function setup_bomblet(bomb) {
 
 // Namespace remotemissile
 // Params 4, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_7332c2b3
 // Checksum 0x9743d814, Offset: 0x3f78
 // Size: 0xfc
 function fire_bomblet(rocket, explosionradius, target, waitframes) {
@@ -826,6 +859,7 @@ function fire_bomblet(rocket, explosionradius, target, waitframes) {
 
 // Namespace remotemissile
 // Params 4, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_3465c70b
 // Checksum 0xb2186dbe, Offset: 0x4080
 // Size: 0x1ec
 function fire_random_bomblet(rocket, explosionradius, quadrant, waitframes) {
@@ -844,6 +878,7 @@ function fire_random_bomblet(rocket, explosionradius, quadrant, waitframes) {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_1b851add
 // Checksum 0x54c47e50, Offset: 0x4278
 // Size: 0x94
 function cleanup_bombs(bomb) {
@@ -858,6 +893,7 @@ function cleanup_bombs(bomb) {
 
 // Namespace remotemissile
 // Params 1, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_6390ee7d
 // Checksum 0x226beca6, Offset: 0x4318
 // Size: 0x70
 function function_6390ee7d(player) {
@@ -872,6 +908,7 @@ function function_6390ee7d(player) {
 
 // Namespace remotemissile
 // Params 0, eflags: 0x1 linked
+// namespace_818840b1<file_0>::function_ea078afe
 // Checksum 0x5c223770, Offset: 0x4390
 // Size: 0x13e
 function remotemissile_bda_dialog() {

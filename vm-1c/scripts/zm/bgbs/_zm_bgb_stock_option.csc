@@ -9,6 +9,7 @@
 
 // Namespace zm_bgb_stock_option
 // Params 0, eflags: 0x2
+// namespace_5525011f<file_0>::function_2dc19561
 // Checksum 0xd7fbb720, Offset: 0x148
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_bgb_stock_option
 // Params 0, eflags: 0x1 linked
+// namespace_5525011f<file_0>::function_8c87d8eb
 // Checksum 0xcb4e9d3d, Offset: 0x188
 // Size: 0x3c
 function __init__() {

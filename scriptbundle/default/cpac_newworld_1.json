@@ -1,0 +1,11 @@
+{
+    "vmtype": "none",
+    "name": "cpac_newworld_1",
+    "igdtseqnum": 96,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Score",
+    "challengeDetails": "ACCOLADES_NEW_1",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_NEW_1_NAME",
+    "challengeReference": "MISSION_NEWWORLD_SCORE"
+}

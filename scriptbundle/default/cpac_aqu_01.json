@@ -1,0 +1,11 @@
+{
+    "vmtype": "none",
+    "name": "cpac_aqu_01",
+    "igdtseqnum": 12,
+    "rewardImage": "uie_img_t7_menu_cacselection_icontokenlarge",
+    "challengeWidget": "Score",
+    "challengeDetails": "ACCOLADES_AQU_1",
+    "rewardName": "MPUI_UNLOCK_TOKEN",
+    "challengeName": "ACCOLADES_AQU_1_NAME",
+    "challengeReference": "MISSION_AQUIFER_SCORE"
+}

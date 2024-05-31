@@ -9,6 +9,7 @@
 
 // Namespace zm_equip_shield
 // Params 0, eflags: 0x2
+// namespace_70202871<file_0>::function_2dc19561
 // Checksum 0xd32decdf, Offset: 0x1a0
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -17,6 +18,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_equip_shield
 // Params 0, eflags: 0x1 linked
+// namespace_70202871<file_0>::function_8c87d8eb
 // Checksum 0x2635768e, Offset: 0x1e0
 // Size: 0x5c
 function __init__() {
@@ -26,6 +28,7 @@ function __init__() {
 
 // Namespace zm_equip_shield
 // Params 1, eflags: 0x1 linked
+// namespace_70202871<file_0>::function_eaa5b495
 // Checksum 0x2ba7e3a3, Offset: 0x248
 // Size: 0x24
 function player_on_spawned(localclientnum) {
@@ -34,6 +37,7 @@ function player_on_spawned(localclientnum) {
 
 // Namespace zm_equip_shield
 // Params 1, eflags: 0x1 linked
+// namespace_70202871<file_0>::function_94594df7
 // Checksum 0x1d9a1e39, Offset: 0x278
 // Size: 0x78
 function watch_weapon_changes(localclientnum) {
@@ -49,6 +53,7 @@ function watch_weapon_changes(localclientnum) {
 
 // Namespace zm_equip_shield
 // Params 1, eflags: 0x1 linked
+// namespace_70202871<file_0>::function_85cbbac5
 // Checksum 0xc14d928d, Offset: 0x2f8
 // Size: 0x92
 function function_85cbbac5(model) {
@@ -68,6 +73,7 @@ function function_85cbbac5(model) {
 
 // Namespace zm_equip_shield
 // Params 1, eflags: 0x1 linked
+// namespace_70202871<file_0>::function_3ceed68a
 // Checksum 0xd2d32a2f, Offset: 0x398
 // Size: 0x94
 function function_3ceed68a(model) {
@@ -87,6 +93,7 @@ function function_3ceed68a(model) {
 
 // Namespace zm_equip_shield
 // Params 2, eflags: 0x1 linked
+// namespace_70202871<file_0>::function_9287ee54
 // Checksum 0xf363bac0, Offset: 0x438
 // Size: 0x104
 function function_9287ee54(localclientnum, weapon) {

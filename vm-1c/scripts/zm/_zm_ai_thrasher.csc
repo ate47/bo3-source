@@ -9,6 +9,7 @@
 
 // Namespace namespace_fad8bcc0
 // Params 0, eflags: 0x2
+// namespace_fad8bcc0<file_0>::function_d290ebfa
 // Checksum 0x26529667, Offset: 0x210
 // Size: 0x4c
 function autoexec main() {
@@ -19,6 +20,7 @@ function autoexec main() {
 
 // Namespace namespace_4329c852
 // Params 3, eflags: 0x1 linked
+// namespace_4329c852<file_0>::function_43bf0af5
 // Checksum 0x2d446b35, Offset: 0x268
 // Size: 0x74
 function function_43bf0af5(entity, player, state) {
@@ -29,6 +31,7 @@ function function_43bf0af5(entity, player, state) {
 
 // Namespace namespace_4329c852
 // Params 7, eflags: 0x5 linked
+// namespace_4329c852<file_0>::function_dc24e0f3
 // Checksum 0x8d88a21e, Offset: 0x2e8
 // Size: 0x28e
 function private function_dc24e0f3(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
@@ -69,6 +72,7 @@ function private function_dc24e0f3(localclientnum, oldvalue, newvalue, bnewent, 
 
 // Namespace namespace_4329c852
 // Params 3, eflags: 0x5 linked
+// namespace_4329c852<file_0>::function_51fb721f
 // Checksum 0xb3db556e, Offset: 0x580
 // Size: 0xbc
 function private function_51fb721f(localclientnum, thrasher, player) {
@@ -81,6 +85,7 @@ function private function_51fb721f(localclientnum, thrasher, player) {
 
 // Namespace namespace_4329c852
 // Params 3, eflags: 0x5 linked
+// namespace_4329c852<file_0>::function_48032157
 // Checksum 0xec0791a0, Offset: 0x648
 // Size: 0x104
 function private function_48032157(localclientnum, thrasher, player) {
@@ -95,6 +100,7 @@ function private function_48032157(localclientnum, thrasher, player) {
 
 // Namespace namespace_4329c852
 // Params 3, eflags: 0x5 linked
+// namespace_4329c852<file_0>::function_98817801
 // Checksum 0x1e38fbd1, Offset: 0x758
 // Size: 0x13c
 function private function_98817801(localclientnum, thrasher, player) {
@@ -112,6 +118,7 @@ function private function_98817801(localclientnum, thrasher, player) {
 
 // Namespace namespace_4329c852
 // Params 3, eflags: 0x5 linked
+// namespace_4329c852<file_0>::function_4cf5760d
 // Checksum 0x13642a57, Offset: 0x8a0
 // Size: 0x41c
 function private function_4cf5760d(localclientnum, thrasher, player) {
@@ -155,6 +162,7 @@ function private function_4cf5760d(localclientnum, thrasher, player) {
 
 // Namespace namespace_4329c852
 // Params 3, eflags: 0x5 linked
+// namespace_4329c852<file_0>::function_785afcbe
 // Checksum 0x58804144, Offset: 0xcc8
 // Size: 0x25e
 function private function_785afcbe(localclientnum, thrasher, player) {
@@ -186,6 +194,7 @@ function private function_785afcbe(localclientnum, thrasher, player) {
 
 // Namespace namespace_4329c852
 // Params 3, eflags: 0x5 linked
+// namespace_4329c852<file_0>::function_93c1c40c
 // Checksum 0x277f2777, Offset: 0xf30
 // Size: 0xca
 function private function_93c1c40c(localclientnum, thrasher, player) {

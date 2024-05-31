@@ -1,0 +1,16 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_sin_bs_02",
+    "type": "collectible",
+    "igdtseqnum": 57,
+    "uiMaterial": "t7_icon_menu_p7_nc_sin_bs_02",
+    "uiModel": "p7_nc_sin_bs_02",
+    "description": "COLLECTIBLE_P7_NC_SIN_BS_02_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_SIN_BS_02_LONG",
+    "audiolog_sound": "vox_safe_warlord_helmet_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_WARLORD_HELMET",
+    "displayNameShort": "COLLECTIBLE_P7_NC_SIN_BS_02_SHORT",
+    "codexurl": "Collectables-WarlordHelmet.htm",
+    "slotSize": 1
+}

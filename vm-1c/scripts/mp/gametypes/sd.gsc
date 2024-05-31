@@ -30,6 +30,7 @@
 
 // Namespace sd
 // Params 0, eflags: 0x0
+// namespace_baf39230<file_0>::function_d290ebfa
 // Checksum 0xd7971186, Offset: 0xc68
 // Size: 0x354
 function main() {
@@ -70,6 +71,7 @@ function main() {
 
 // Namespace sd
 // Params 0, eflags: 0x0
+// namespace_baf39230<file_0>::function_90f0668f
 // Checksum 0xb743a413, Offset: 0xfc8
 // Size: 0x2c
 function onprecachegametype() {
@@ -79,6 +81,7 @@ function onprecachegametype() {
 
 // Namespace sd
 // Params 4, eflags: 0x0
+// namespace_baf39230<file_0>::function_ad4c316d
 // Checksum 0x4cfb930f, Offset: 0x1000
 // Size: 0x96
 function sd_getteamkillpenalty(einflictor, attacker, smeansofdeath, weapon) {
@@ -91,6 +94,7 @@ function sd_getteamkillpenalty(einflictor, attacker, smeansofdeath, weapon) {
 
 // Namespace sd
 // Params 4, eflags: 0x0
+// namespace_baf39230<file_0>::function_ca1ec9f8
 // Checksum 0x875fc83a, Offset: 0x10a0
 // Size: 0xa2
 function sd_getteamkillscore(einflictor, attacker, smeansofdeath, weapon) {
@@ -103,6 +107,7 @@ function sd_getteamkillscore(einflictor, attacker, smeansofdeath, weapon) {
 
 // Namespace sd
 // Params 0, eflags: 0x0
+// namespace_baf39230<file_0>::function_e4e885e6
 // Checksum 0x6c0da30e, Offset: 0x1150
 // Size: 0xf8
 function onroundswitch() {
@@ -123,6 +128,7 @@ function onroundswitch() {
 
 // Namespace sd
 // Params 0, eflags: 0x0
+// namespace_baf39230<file_0>::function_b050a0e
 // Checksum 0x67def125, Offset: 0x1250
 // Size: 0x20a
 function getbetterteam() {
@@ -156,6 +162,7 @@ function getbetterteam() {
 
 // Namespace sd
 // Params 0, eflags: 0x0
+// namespace_baf39230<file_0>::function_34685338
 // Checksum 0xdb00caed, Offset: 0x1468
 // Size: 0x414
 function onstartgametype() {
@@ -206,6 +213,7 @@ function onstartgametype() {
 
 // Namespace sd
 // Params 1, eflags: 0x0
+// namespace_baf39230<file_0>::function_19bc9234
 // Checksum 0xb6e8cf53, Offset: 0x1888
 // Size: 0x44
 function onspawnplayer(predictedspawn) {
@@ -217,6 +225,7 @@ function onspawnplayer(predictedspawn) {
 
 // Namespace sd
 // Params 0, eflags: 0x0
+// namespace_baf39230<file_0>::function_a142d5e5
 // Checksum 0xc40df5ba, Offset: 0x18d8
 // Size: 0x12
 function sd_playerspawnedcb() {
@@ -225,6 +234,7 @@ function sd_playerspawnedcb() {
 
 // Namespace sd
 // Params 9, eflags: 0x0
+// namespace_baf39230<file_0>::function_c2658b46
 // Checksum 0x3f89ccc, Offset: 0x18f8
 // Size: 0x4d4
 function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
@@ -279,6 +289,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 
 // Namespace sd
 // Params 0, eflags: 0x0
+// namespace_baf39230<file_0>::function_35613c72
 // Checksum 0xc16646eb, Offset: 0x1dd8
 // Size: 0x11c
 function checkallowspectating() {
@@ -301,6 +312,7 @@ function checkallowspectating() {
 
 // Namespace sd
 // Params 2, eflags: 0x0
+// namespace_baf39230<file_0>::function_fbbc66b0
 // Checksum 0x56bb03a6, Offset: 0x1f00
 // Size: 0x54
 function sd_endgame(winningteam, endreasontext) {
@@ -312,6 +324,7 @@ function sd_endgame(winningteam, endreasontext) {
 
 // Namespace sd
 // Params 2, eflags: 0x0
+// namespace_baf39230<file_0>::function_71bf3665
 // Checksum 0x451a0cd2, Offset: 0x1f60
 // Size: 0x2c
 function function_71bf3665(winningteam, endreasontext) {
@@ -320,6 +333,7 @@ function function_71bf3665(winningteam, endreasontext) {
 
 // Namespace sd
 // Params 1, eflags: 0x0
+// namespace_baf39230<file_0>::function_e0db18e8
 // Checksum 0x21418326, Offset: 0x1f98
 // Size: 0x174
 function ondeadevent(team) {
@@ -348,6 +362,7 @@ function ondeadevent(team) {
 
 // Namespace sd
 // Params 1, eflags: 0x0
+// namespace_baf39230<file_0>::function_4abe31c7
 // Checksum 0xa55ab202, Offset: 0x2118
 // Size: 0x3c
 function ononeleftevent(team) {
@@ -359,6 +374,7 @@ function ononeleftevent(team) {
 
 // Namespace sd
 // Params 0, eflags: 0x0
+// namespace_baf39230<file_0>::function_fb734762
 // Checksum 0xd4ac9b88, Offset: 0x2160
 // Size: 0x6c
 function ontimelimit() {
@@ -371,6 +387,7 @@ function ontimelimit() {
 
 // Namespace sd
 // Params 1, eflags: 0x0
+// namespace_baf39230<file_0>::function_ab9cc48a
 // Checksum 0x9b7d39a, Offset: 0x21d8
 // Size: 0x15c
 function warnlastplayer(team) {
@@ -398,6 +415,7 @@ function warnlastplayer(team) {
 
 // Namespace sd
 // Params 1, eflags: 0x0
+// namespace_baf39230<file_0>::function_869f38e1
 // Checksum 0x6dad08f4, Offset: 0x2340
 // Size: 0x154
 function givelastattackerwarning(team) {
@@ -430,6 +448,7 @@ function givelastattackerwarning(team) {
 
 // Namespace sd
 // Params 0, eflags: 0x0
+// namespace_baf39230<file_0>::function_843e8b8a
 // Checksum 0x59787dce, Offset: 0x24a0
 // Size: 0x104
 function updategametypedvars() {
@@ -445,6 +464,7 @@ function updategametypedvars() {
 
 // Namespace sd
 // Params 0, eflags: 0x0
+// namespace_baf39230<file_0>::function_7f1fef4
 // Checksum 0x60ce0b1a, Offset: 0x25b0
 // Size: 0x92e
 function bombs() {
@@ -543,6 +563,7 @@ function bombs() {
 
 // Namespace sd
 // Params 3, eflags: 0x0
+// namespace_baf39230<file_0>::function_f7e94b21
 // Checksum 0x88b9a64, Offset: 0x2ee8
 // Size: 0x9c
 function setbomboverheatingafterweaponchange(useobject, overheated, heat) {
@@ -558,6 +579,7 @@ function setbomboverheatingafterweaponchange(useobject, overheated, heat) {
 
 // Namespace sd
 // Params 1, eflags: 0x0
+// namespace_baf39230<file_0>::function_cfce9b82
 // Checksum 0x796769dd, Offset: 0x2f90
 // Size: 0x1bc
 function onbeginuse(player) {
@@ -584,6 +606,7 @@ function onbeginuse(player) {
 
 // Namespace sd
 // Params 3, eflags: 0x0
+// namespace_baf39230<file_0>::function_a454a59a
 // Checksum 0xc400e59e, Offset: 0x3158
 // Size: 0x116
 function onenduse(team, player, result) {
@@ -608,6 +631,7 @@ function onenduse(team, player, result) {
 
 // Namespace sd
 // Params 1, eflags: 0x0
+// namespace_baf39230<file_0>::function_b44f2f45
 // Checksum 0xaf5f605a, Offset: 0x3278
 // Size: 0x2c
 function oncantuse(player) {
@@ -616,6 +640,7 @@ function oncantuse(player) {
 
 // Namespace sd
 // Params 1, eflags: 0x0
+// namespace_baf39230<file_0>::function_55654db3
 // Checksum 0x334c3d4a, Offset: 0x32b0
 // Size: 0x26c
 function onuseplantobject(player) {
@@ -649,6 +674,7 @@ function onuseplantobject(player) {
 
 // Namespace sd
 // Params 1, eflags: 0x0
+// namespace_baf39230<file_0>::function_468a3a44
 // Checksum 0xa4ca9f30, Offset: 0x3528
 // Size: 0x2a4
 function onusedefuseobject(player) {
@@ -682,6 +708,7 @@ function onusedefuseobject(player) {
 
 // Namespace sd
 // Params 1, eflags: 0x0
+// namespace_baf39230<file_0>::function_5aacb6fd
 // Checksum 0x6195137a, Offset: 0x37d8
 // Size: 0x100
 function ondrop(player) {
@@ -705,6 +732,7 @@ function ondrop(player) {
 
 // Namespace sd
 // Params 1, eflags: 0x0
+// namespace_baf39230<file_0>::function_8e900a8a
 // Checksum 0xd36ceb57, Offset: 0x38e0
 // Size: 0x1f4
 function onpickup(player) {
@@ -734,6 +762,7 @@ function onpickup(player) {
 
 // Namespace sd
 // Params 0, eflags: 0x0
+// namespace_baf39230<file_0>::function_81253537
 // Checksum 0x99ec1590, Offset: 0x3ae0
 // Size: 0x4
 function onreset() {
@@ -742,6 +771,7 @@ function onreset() {
 
 // Namespace sd
 // Params 0, eflags: 0x0
+// namespace_baf39230<file_0>::function_292e5c71
 // Checksum 0xc4702cde, Offset: 0x3af0
 // Size: 0x9c
 function bombplantedmusicdelay() {
@@ -760,6 +790,7 @@ function bombplantedmusicdelay() {
 
 // Namespace sd
 // Params 2, eflags: 0x0
+// namespace_baf39230<file_0>::function_d615cbd7
 // Checksum 0xb83b14bb, Offset: 0x3b98
 // Size: 0xcac
 function bombplanted(destroyedobj, player) {
@@ -871,6 +902,7 @@ function bombplanted(destroyedobj, player) {
 
 // Namespace sd
 // Params 0, eflags: 0x0
+// namespace_baf39230<file_0>::function_efb02d17
 // Checksum 0x98ec2f0e, Offset: 0x4850
 // Size: 0x34
 function bombtimerwait() {
@@ -881,6 +913,7 @@ function bombtimerwait() {
 
 // Namespace sd
 // Params 2, eflags: 0x0
+// namespace_baf39230<file_0>::function_9b04caed
 // Checksum 0xb4a061f3, Offset: 0x4890
 // Size: 0x154
 function bombdefused(defusedobject, player) {
@@ -901,6 +934,7 @@ function bombdefused(defusedobject, player) {
 
 // Namespace sd
 // Params 0, eflags: 0x0
+// namespace_baf39230<file_0>::function_de2ebb90
 // Checksum 0x35b35e3f, Offset: 0x49f0
 // Size: 0xf0
 function sd_iskillboosting() {
@@ -924,6 +958,7 @@ function sd_iskillboosting() {
 
 // Namespace sd
 // Params 1, eflags: 0x0
+// namespace_baf39230<file_0>::function_8822c584
 // Checksum 0xeb802b79, Offset: 0x4ae8
 // Size: 0x6e
 function figureoutgametypefriendlyfire(victim) {

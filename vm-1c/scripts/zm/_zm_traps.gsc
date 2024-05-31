@@ -21,6 +21,7 @@
 
 // Namespace zm_traps
 // Params 0, eflags: 0x2
+// namespace_645ea757<file_0>::function_2dc19561
 // Checksum 0x6cc2b4bc, Offset: 0x760
 // Size: 0x3c
 function autoexec function_2dc19561() {
@@ -29,6 +30,7 @@ function autoexec function_2dc19561() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_8c87d8eb
 // Checksum 0x1480ef36, Offset: 0x7a8
 // Size: 0x3c
 function __init__() {
@@ -39,6 +41,7 @@ function __init__() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_c35e6aab
 // Checksum 0xc376937b, Offset: 0x7f0
 // Size: 0x54
 function init() {
@@ -48,6 +51,7 @@ function init() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_5b6b9132
 // Checksum 0xc31006ac, Offset: 0x850
 // Size: 0x54
 function __main__() {
@@ -57,6 +61,7 @@ function __main__() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_22c40f09
 // Checksum 0x1a55dce6, Offset: 0x8b0
 // Size: 0x68c
 function trap_init() {
@@ -173,6 +178,7 @@ function trap_init() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_3fe80398
 // Checksum 0x4e630e86, Offset: 0xf48
 // Size: 0x26e
 function trap_main() {
@@ -208,6 +214,7 @@ function trap_main() {
 
 // Namespace zm_traps
 // Params 1, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_d05f3f0d
 // Checksum 0xdf6ad76c, Offset: 0x11c0
 // Size: 0x3a0
 function trap_use_think(trap) {
@@ -265,6 +272,7 @@ function trap_use_think(trap) {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x5 linked
+// namespace_645ea757<file_0>::function_1a372e02
 // Checksum 0x5c77df64, Offset: 0x1568
 // Size: 0xfc
 function private update_trigger_visibility() {
@@ -285,6 +293,7 @@ function private update_trigger_visibility() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_b129e250
 // Checksum 0xea2504f2, Offset: 0x1670
 // Size: 0xc6
 function trap_lights_red() {
@@ -299,6 +308,7 @@ function trap_lights_red() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_a9dfc1d0
 // Checksum 0xe0745f19, Offset: 0x1740
 // Size: 0xde
 function trap_lights_green() {
@@ -316,6 +326,7 @@ function trap_lights_green() {
 
 // Namespace zm_traps
 // Params 3, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_5b4d35af
 // Checksum 0xc0630692, Offset: 0x1828
 // Size: 0xde
 function trap_set_string(string, param1, param2) {
@@ -334,6 +345,7 @@ function trap_set_string(string, param1, param2) {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_4c764e93
 // Checksum 0x995ba8c6, Offset: 0x1910
 // Size: 0x19c
 function trap_move_switches() {
@@ -358,6 +370,7 @@ function trap_move_switches() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_33237593
 // Checksum 0xe3033bbd, Offset: 0x1ab8
 // Size: 0xd2
 function trap_activate_fire() {
@@ -375,6 +388,7 @@ function trap_activate_fire() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_50dd0d2f
 // Checksum 0x87d64582, Offset: 0x1b98
 // Size: 0x236
 function trap_activate_rotating() {
@@ -407,6 +421,7 @@ function trap_activate_rotating() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_34ee4dc7
 // Checksum 0x99ec1590, Offset: 0x1dd8
 // Size: 0x4
 function trap_activate_flipper() {
@@ -415,6 +430,7 @@ function trap_activate_flipper() {
 
 // Namespace zm_traps
 // Params 1, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_23927464
 // Checksum 0xa54858b7, Offset: 0x1de8
 // Size: 0x134
 function trap_audio_fx(trap) {
@@ -434,6 +450,7 @@ function trap_audio_fx(trap) {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_1fa521c0
 // Checksum 0xd0f94275, Offset: 0x1f28
 // Size: 0x2aa
 function trap_damage() {
@@ -483,6 +500,7 @@ function trap_damage() {
 
 // Namespace zm_traps
 // Params 1, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_876100b5
 // Checksum 0xef03cece, Offset: 0x21e0
 // Size: 0x58
 function trig_update(parent) {
@@ -496,6 +514,7 @@ function trig_update(parent) {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_724ebdfa
 // Checksum 0x5662f0a, Offset: 0x2240
 // Size: 0x23e
 function player_elec_damage() {
@@ -536,6 +555,7 @@ function player_elec_damage() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_9d4d52f3
 // Checksum 0x5bfc8bc9, Offset: 0x2488
 // Size: 0x17e
 function player_fire_damage() {
@@ -562,6 +582,7 @@ function player_fire_damage() {
 
 // Namespace zm_traps
 // Params 2, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_980a1edc
 // Checksum 0xc4d49547, Offset: 0x2610
 // Size: 0x434
 function zombie_trap_death(trap, param) {
@@ -620,6 +641,7 @@ function zombie_trap_death(trap, param) {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_f55604c3
 // Checksum 0x35da5586, Offset: 0x2a50
 // Size: 0x3c
 function zombie_flame_watch() {
@@ -630,6 +652,7 @@ function zombie_flame_watch() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x0
+// namespace_645ea757<file_0>::function_31cf6d6a
 // Checksum 0xa811d04, Offset: 0x2a98
 // Size: 0x84
 function play_elec_vocals() {
@@ -644,6 +667,7 @@ function play_elec_vocals() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_69391f4a
 // Checksum 0xb0735da6, Offset: 0x2b28
 // Size: 0x2ec
 function electroctute_death_fx() {
@@ -689,6 +713,7 @@ function electroctute_death_fx() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_7e3c22a2
 // Checksum 0x28d588f2, Offset: 0x2e20
 // Size: 0x7e
 function electrocute_timeout() {
@@ -704,6 +729,7 @@ function electrocute_timeout() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_d4c20c3b
 // Checksum 0x18ca2b0d, Offset: 0x2ea8
 // Size: 0x194
 function trap_dialog() {
@@ -738,6 +764,7 @@ function trap_dialog() {
 
 // Namespace zm_traps
 // Params 1, eflags: 0x0
+// namespace_645ea757<file_0>::function_8f56df79
 // Checksum 0xa8a36d08, Offset: 0x3048
 // Size: 0xaa
 function get_trap_array(trap_type) {
@@ -753,6 +780,7 @@ function get_trap_array(trap_type) {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x0
+// namespace_645ea757<file_0>::function_f9615ad9
 // Checksum 0x26b078d5, Offset: 0x3100
 // Size: 0x98
 function trap_disable() {
@@ -769,6 +797,7 @@ function trap_disable() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x0
+// namespace_645ea757<file_0>::function_7c56054a
 // Checksum 0x9fdba38b, Offset: 0x31a0
 // Size: 0x4c
 function trap_enable() {
@@ -778,6 +807,7 @@ function trap_enable() {
 
 // Namespace zm_traps
 // Params 0, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_84c62dce
 // Checksum 0xd7509302, Offset: 0x31f8
 // Size: 0xd6
 function trap_model_type_init() {
@@ -803,6 +833,7 @@ function trap_model_type_init() {
 
 // Namespace zm_traps
 // Params 1, eflags: 0x0
+// namespace_645ea757<file_0>::function_3c587a30
 // Checksum 0x374edd94, Offset: 0x32d8
 // Size: 0x1a
 function is_trap_registered(a_registered_traps) {
@@ -811,6 +842,7 @@ function is_trap_registered(a_registered_traps) {
 
 // Namespace zm_traps
 // Params 3, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_619aabba
 // Checksum 0x697ad7f, Offset: 0x3300
 // Size: 0xe4
 function register_trap_basic_info(str_trap, func_activate, func_audio) {
@@ -824,6 +856,7 @@ function register_trap_basic_info(str_trap, func_activate, func_audio) {
 
 // Namespace zm_traps
 // Params 1, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_af5584c4
 // Checksum 0x8ee7d68c, Offset: 0x33f0
 // Size: 0x5a
 function _register_undefined_trap(str_trap) {
@@ -837,6 +870,7 @@ function _register_undefined_trap(str_trap) {
 
 // Namespace zm_traps
 // Params 3, eflags: 0x1 linked
+// namespace_645ea757<file_0>::function_a1e81a78
 // Checksum 0xc9fe2270, Offset: 0x3458
 // Size: 0x94
 function register_trap_damage(str_trap, func_player_damage, func_damage) {

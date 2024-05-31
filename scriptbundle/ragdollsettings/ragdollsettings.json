@@ -1,0 +1,13 @@
+{
+    "warlordidleanim": "ai_wrlrd_stn_combat_dth_pose",
+    "monkeyidleanim": "rtrg_ai_zm_dlc5_monkey_dth_pose",
+    "zombieidleanim": "ai_zombie_base_dth_pose",
+    "configstringfiletype": "scriptbundle",
+    "zombie_quadidleanim": "ai_zm_dlc5_quad_dth_pose",
+    "humanidleanim": "ai_base_rifle_stn_exposed_dth_pose",
+    "name": "ragdollsettings",
+    "type": "ragdollsettings",
+    "playeridleanim": "pb_death_base_pose",
+    "robotidleanim": "ai_robot_base_stn_exposed_dth_pose",
+    "femaleidleanim": "ai_fem_rifle_stn_exposed_dth_pose"
+}

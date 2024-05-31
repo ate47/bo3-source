@@ -19,6 +19,7 @@
 
 // Namespace namespace_aa4730ec
 // Params 0, eflags: 0x1 linked
+// namespace_aa4730ec<file_0>::function_c35e6aab
 // Checksum 0x1a615fc7, Offset: 0x520
 // Size: 0x3c6
 function init() {
@@ -66,6 +67,7 @@ function init() {
 
 // Namespace namespace_aa4730ec
 // Params 1, eflags: 0x1 linked
+// namespace_aa4730ec<file_0>::function_625b9108
 // Checksum 0x61b91ed1, Offset: 0x8f0
 // Size: 0x3a4
 function missile_logic(fake) {
@@ -115,6 +117,7 @@ function missile_logic(fake) {
 
 // Namespace namespace_aa4730ec
 // Params 2, eflags: 0x1 linked
+// namespace_aa4730ec<file_0>::function_3bf11cb5
 // Checksum 0x569738a1, Offset: 0xca0
 // Size: 0x12c
 function function_3bf11cb5(index, enemy) {
@@ -132,6 +135,7 @@ function function_3bf11cb5(index, enemy) {
 
 // Namespace namespace_aa4730ec
 // Params 2, eflags: 0x0
+// namespace_aa4730ec<file_0>::function_d8189eaf
 // Checksum 0x1166a2fb, Offset: 0xdd8
 // Size: 0x18c
 function function_d8189eaf(weapon, enemy) {
@@ -154,6 +158,7 @@ function function_d8189eaf(weapon, enemy) {
 
 // Namespace namespace_aa4730ec
 // Params 2, eflags: 0x1 linked
+// namespace_aa4730ec<file_0>::function_f2b24332
 // Checksum 0xd0948813, Offset: 0xf70
 // Size: 0x6c
 function turret_fire(index, enemy) {
@@ -166,6 +171,7 @@ function turret_fire(index, enemy) {
 
 // Namespace namespace_aa4730ec
 // Params 0, eflags: 0x1 linked
+// namespace_aa4730ec<file_0>::function_e18d90b5
 // Checksum 0x3f1b1af1, Offset: 0xfe8
 // Size: 0x90
 function turretthink() {
@@ -182,6 +188,7 @@ function turretthink() {
 
 // Namespace namespace_aa4730ec
 // Params 0, eflags: 0x1 linked
+// namespace_aa4730ec<file_0>::function_edfd79c9
 // Checksum 0xa19b572c, Offset: 0x1080
 // Size: 0x158
 function turret_target() {
@@ -214,6 +221,7 @@ function turret_target() {
 
 // Namespace namespace_aa4730ec
 // Params 2, eflags: 0x1 linked
+// namespace_aa4730ec<file_0>::function_4deaa5de
 // Checksum 0x934ae733, Offset: 0x11e0
 // Size: 0x124
 function function_4deaa5de(totalfiretime, enemy) {
@@ -238,6 +246,7 @@ function function_4deaa5de(totalfiretime, enemy) {
 
 // Namespace namespace_aa4730ec
 // Params 0, eflags: 0x1 linked
+// namespace_aa4730ec<file_0>::function_2c414dda
 // Checksum 0x90bf6e20, Offset: 0x1310
 // Size: 0x128
 function function_2c414dda() {
@@ -263,6 +272,7 @@ function function_2c414dda() {
 
 // Namespace namespace_aa4730ec
 // Params 1, eflags: 0x1 linked
+// namespace_aa4730ec<file_0>::function_ce584800
 // Checksum 0x22a70d8e, Offset: 0x1440
 // Size: 0xd4
 function canspawnturret(var_a6f28f3b) {
@@ -286,6 +296,7 @@ function canspawnturret(var_a6f28f3b) {
 
 // Namespace namespace_aa4730ec
 // Params 2, eflags: 0x1 linked
+// namespace_aa4730ec<file_0>::function_eabe8c0
 // Checksum 0xe02bc7e4, Offset: 0x1520
 // Size: 0x56e
 function function_eabe8c0(player, var_a6f28f3b) {
@@ -352,6 +363,7 @@ function function_eabe8c0(player, var_a6f28f3b) {
 
 // Namespace namespace_aa4730ec
 // Params 1, eflags: 0x1 linked
+// namespace_aa4730ec<file_0>::function_a0d09d25
 // Checksum 0x652ca5f8, Offset: 0x1a98
 // Size: 0x140
 function function_a0d09d25(player) {
@@ -369,6 +381,7 @@ function function_a0d09d25(player) {
 
 // Namespace namespace_aa4730ec
 // Params 2, eflags: 0x1 linked
+// namespace_aa4730ec<file_0>::function_3ce8bf1c
 // Checksum 0xfadcc137, Offset: 0x1be0
 // Size: 0x4cc
 function function_3ce8bf1c(player, origin) {
@@ -417,6 +430,7 @@ function function_3ce8bf1c(player, origin) {
 
 // Namespace namespace_aa4730ec
 // Params 2, eflags: 0x5 linked
+// namespace_aa4730ec<file_0>::function_dfe832b7
 // Checksum 0xfa1fd0ab, Offset: 0x20b8
 // Size: 0xa6
 function private function_dfe832b7(timeleft, note) {
@@ -439,6 +453,7 @@ function private function_dfe832b7(timeleft, note) {
 
 // Namespace namespace_aa4730ec
 // Params 2, eflags: 0x1 linked
+// namespace_aa4730ec<file_0>::function_62c5a5a
 // Checksum 0x7a2cb0fc, Offset: 0x2168
 // Size: 0x6ec
 function function_62c5a5a(player, origin) {
@@ -511,6 +526,7 @@ function function_62c5a5a(player, origin) {
 
 // Namespace namespace_aa4730ec
 // Params 15, eflags: 0x1 linked
+// namespace_aa4730ec<file_0>::function_f3ee1c57
 // Checksum 0xf675efcc, Offset: 0x2860
 // Size: 0xa0
 function function_f3ee1c57(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal) {
@@ -522,6 +538,7 @@ function function_f3ee1c57(einflictor, eattacker, idamage, idflags, smeansofdeat
 
 // Namespace namespace_aa4730ec
 // Params 2, eflags: 0x5 linked
+// namespace_aa4730ec<file_0>::function_43d18fa4
 // Checksum 0xd5f59049, Offset: 0x2908
 // Size: 0x66
 function private function_43d18fa4(player, note) {

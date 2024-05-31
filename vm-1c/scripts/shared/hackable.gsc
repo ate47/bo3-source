@@ -8,6 +8,7 @@
 
 // Namespace hackable
 // Params 0, eflags: 0x2
+// namespace_742a6662<file_0>::function_2dc19561
 // Checksum 0x2f8626f6, Offset: 0x198
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,6 +17,7 @@ function autoexec function_2dc19561() {
 
 // Namespace hackable
 // Params 0, eflags: 0x0
+// namespace_742a6662<file_0>::function_c35e6aab
 // Checksum 0xfe2998d1, Offset: 0x1d8
 // Size: 0x1c
 function init() {
@@ -26,6 +28,7 @@ function init() {
 
 // Namespace hackable
 // Params 5, eflags: 0x0
+// namespace_742a6662<file_0>::function_116bc640
 // Checksum 0xea1455e7, Offset: 0x200
 // Size: 0x248
 function add_hackable_object(obj, test_callback, start_callback, fail_callback, complete_callback) {
@@ -62,6 +65,7 @@ function add_hackable_object(obj, test_callback, start_callback, fail_callback, 
 
 // Namespace hackable
 // Params 1, eflags: 0x0
+// namespace_742a6662<file_0>::function_67b0378f
 // Checksum 0xcd7ca715, Offset: 0x450
 // Size: 0x3c
 function remove_hackable_object(obj) {
@@ -71,6 +75,7 @@ function remove_hackable_object(obj) {
 
 // Namespace hackable
 // Params 0, eflags: 0x0
+// namespace_742a6662<file_0>::function_5e9e844
 // Checksum 0x26dbc2a6, Offset: 0x498
 // Size: 0x34
 function cleanup_hackable_objects() {
@@ -79,6 +84,7 @@ function cleanup_hackable_objects() {
 
 // Namespace hackable
 // Params 1, eflags: 0x0
+// namespace_742a6662<file_0>::function_3228e2e1
 // Checksum 0x3fbbf7ef, Offset: 0x4d8
 // Size: 0x12
 function filter_deleted(val) {
@@ -87,6 +93,7 @@ function filter_deleted(val) {
 
 // Namespace hackable
 // Params 0, eflags: 0x0
+// namespace_742a6662<file_0>::function_ff99cfd2
 // Checksum 0x51ae796a, Offset: 0x4f8
 // Size: 0x17e
 function find_hackable_object() {
@@ -112,6 +119,7 @@ function find_hackable_object() {
 
 // Namespace hackable
 // Params 3, eflags: 0x0
+// namespace_742a6662<file_0>::function_242e52d7
 // Checksum 0xcb7970c2, Offset: 0x680
 // Size: 0x128
 function is_object_hackable(obj, origin, forward) {
@@ -135,6 +143,7 @@ function is_object_hackable(obj, origin, forward) {
 
 // Namespace hackable
 // Params 1, eflags: 0x0
+// namespace_742a6662<file_0>::function_836a4a1b
 // Checksum 0xa913a150, Offset: 0x7b0
 // Size: 0x64
 function start_hacking_object(obj) {
@@ -147,6 +156,7 @@ function start_hacking_object(obj) {
 
 // Namespace hackable
 // Params 1, eflags: 0x0
+// namespace_742a6662<file_0>::function_8dcd14b1
 // Checksum 0x52979d6, Offset: 0x820
 // Size: 0x70
 function fail_hacking_object(obj) {
@@ -160,6 +170,7 @@ function fail_hacking_object(obj) {
 
 // Namespace hackable
 // Params 1, eflags: 0x0
+// namespace_742a6662<file_0>::function_aab74b22
 // Checksum 0x6b41eed1, Offset: 0x898
 // Size: 0x70
 function complete_hacking_object(obj) {
@@ -173,6 +184,7 @@ function complete_hacking_object(obj) {
 
 // Namespace hackable
 // Params 2, eflags: 0x0
+// namespace_742a6662<file_0>::function_50e0bc12
 // Checksum 0xa31c9368, Offset: 0x910
 // Size: 0x54
 function watch_timeout(obj, time) {
@@ -186,6 +198,7 @@ function watch_timeout(obj, time) {
 
 // Namespace hackable
 // Params 1, eflags: 0x0
+// namespace_742a6662<file_0>::function_7491143c
 // Checksum 0xd5c346e6, Offset: 0x970
 // Size: 0x1da
 function continue_hacking_object(obj) {

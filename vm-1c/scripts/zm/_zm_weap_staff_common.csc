@@ -7,6 +7,7 @@
 
 // Namespace namespace_c9806b9
 // Params 0, eflags: 0x2
+// namespace_c9806b9<file_0>::function_2dc19561
 // Checksum 0xd504e4ef, Offset: 0x120
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -15,6 +16,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_c9806b9
 // Params 0, eflags: 0x1 linked
+// namespace_c9806b9<file_0>::function_8c87d8eb
 // Checksum 0x22c0e03f, Offset: 0x160
 // Size: 0x34
 function __init__() {
@@ -24,6 +26,7 @@ function __init__() {
 
 // Namespace namespace_c9806b9
 // Params 2, eflags: 0x1 linked
+// namespace_c9806b9<file_0>::function_4be5e665
 // Checksum 0x2cd8922, Offset: 0x1a0
 // Size: 0x26
 function function_4be5e665(w_weapon, fx) {
@@ -32,6 +35,7 @@ function function_4be5e665(w_weapon, fx) {
 
 // Namespace namespace_c9806b9
 // Params 1, eflags: 0x1 linked
+// namespace_c9806b9<file_0>::function_d10163c2
 // Checksum 0xc7652c7a, Offset: 0x1d0
 // Size: 0xb8
 function function_d10163c2(localclientnum) {
@@ -50,6 +54,7 @@ function function_d10163c2(localclientnum) {
 
 // Namespace namespace_c9806b9
 // Params 2, eflags: 0x1 linked
+// namespace_c9806b9<file_0>::function_2b18ce1b
 // Checksum 0x207fdc2b, Offset: 0x290
 // Size: 0xb0
 function function_2b18ce1b(localclientnum, fx) {
@@ -69,6 +74,7 @@ function function_2b18ce1b(localclientnum, fx) {
 
 // Namespace namespace_c9806b9
 // Params 1, eflags: 0x1 linked
+// namespace_c9806b9<file_0>::function_d4c51f0
 // Checksum 0x1854de80, Offset: 0x348
 // Size: 0x3e
 function function_d4c51f0(localclientnum) {

@@ -8,6 +8,7 @@
 
 // Namespace tabun
 // Params 0, eflags: 0x0
+// namespace_f5ebf79f<file_0>::function_c35e6aab
 // Checksum 0x3c1fc96a, Offset: 0x100
 // Size: 0x14
 function init() {

@@ -1,0 +1,10 @@
+{
+    "vmtype": "none",
+    "name": "cpac_inf_16",
+    "igdtseqnum": 76,
+    "challengeWidget": "Explosion",
+    "challengeDetails": "ACCOLADES_INF_16",
+    "challengeName": "ACCOLADES_INF_16_NAME",
+    "centerText": "4",
+    "challengeReference": "MISSION_INFECTION_CHALLENGE16"
+}

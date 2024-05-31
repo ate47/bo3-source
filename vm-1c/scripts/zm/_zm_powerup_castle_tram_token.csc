@@ -8,6 +8,7 @@
 
 // Namespace namespace_cb5bc243
 // Params 0, eflags: 0x2
+// namespace_cb5bc243<file_0>::function_2dc19561
 // Checksum 0x9f18ed32, Offset: 0x250
 // Size: 0x34
 function autoexec function_2dc19561() {
@@ -16,6 +17,7 @@ function autoexec function_2dc19561() {
 
 // Namespace namespace_cb5bc243
 // Params 0, eflags: 0x1 linked
+// namespace_cb5bc243<file_0>::function_8c87d8eb
 // Checksum 0xc95fe51b, Offset: 0x290
 // Size: 0x5e
 function __init__() {
@@ -27,6 +29,7 @@ function __init__() {
 
 // Namespace namespace_cb5bc243
 // Params 0, eflags: 0x1 linked
+// namespace_cb5bc243<file_0>::function_4ece4a2f
 // Checksum 0x5b5c23b2, Offset: 0x2f8
 // Size: 0x1ac
 function register_clientfields() {
@@ -42,6 +45,7 @@ function register_clientfields() {
 
 // Namespace namespace_cb5bc243
 // Params 7, eflags: 0x1 linked
+// namespace_cb5bc243<file_0>::function_4f546258
 // Checksum 0xa5bea765, Offset: 0x4b0
 // Size: 0x84
 function function_4f546258(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {

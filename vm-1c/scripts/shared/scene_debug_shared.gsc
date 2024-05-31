@@ -14,6 +14,7 @@
 
     // Namespace scene
     // Params 0, eflags: 0x2
+    // namespace_cc27597<file_0>::function_2dc19561
     // Checksum 0x90cc8e04, Offset: 0x1a8
     // Size: 0x34
     function autoexec function_2dc19561() {
@@ -22,6 +23,7 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_8c87d8eb
     // Checksum 0x945419c1, Offset: 0x1e8
     // Size: 0x11c
     function __init__() {
@@ -39,6 +41,7 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_f69ab75e
     // Checksum 0xf81a5076, Offset: 0x310
     // Size: 0xd8
     function function_f69ab75e() {
@@ -53,6 +56,7 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_c4a37ed9
     // Checksum 0xb19f2ffc, Offset: 0x3f0
     // Size: 0x104
     function function_c4a37ed9() {
@@ -65,6 +69,7 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_eb533dbb
     // Checksum 0x8208f8ca, Offset: 0x500
     // Size: 0x698
     function run_scene_tests() {
@@ -153,6 +158,7 @@
 
     // Namespace scene
     // Params 2, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_c7dd4c10
     // Checksum 0xcdc90501, Offset: 0xba0
     // Size: 0x5c
     function capture_scene(str_scene, str_mode) {
@@ -162,6 +168,7 @@
 
     // Namespace scene
     // Params 1, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_68a9014b
     // Checksum 0xb17abb79, Offset: 0xc08
     // Size: 0xc2
     function clear_old_ents(str_scene) {
@@ -174,6 +181,7 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_54f68d5a
     // Checksum 0xccf595b1, Offset: 0xcd8
     // Size: 0x178
     function toggle_scene_menu() {
@@ -207,6 +215,7 @@
 
     // Namespace scene
     // Params 2, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_5d3bb86a
     // Checksum 0x4b1c36ed, Offset: 0xe58
     // Size: 0x192
     function function_5d3bb86a(scene_name, index) {
@@ -231,6 +240,7 @@
 
     // Namespace scene
     // Params 1, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_259f2fa6
     // Checksum 0x8ec5f1b4, Offset: 0xff8
     // Size: 0x948
     function display_scene_menu(str_type) {
@@ -345,6 +355,7 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_96d7ecd1
     // Checksum 0x1b325cc0, Offset: 0x1948
     // Size: 0x234
     function function_96d7ecd1() {
@@ -375,6 +386,7 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_b0ed6108
     // Checksum 0x8c620ae4, Offset: 0x1b88
     // Size: 0x82
     function function_b0ed6108() {
@@ -388,6 +400,7 @@
 
     // Namespace scene
     // Params 3, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_9882c852
     // Checksum 0x6704776f, Offset: 0x1c18
     // Size: 0x20e
     function scene_list_settext(hud_array, strings, num) {
@@ -417,6 +430,7 @@
 
     // Namespace scene
     // Params 1, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_d57e2dab
     // Checksum 0x6a7fe4c7, Offset: 0x1e30
     // Size: 0x60
     function is_scene_playing(str_scene) {
@@ -430,6 +444,7 @@
 
     // Namespace scene
     // Params 1, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_87fbeee3
     // Checksum 0x2672de33, Offset: 0x1e98
     // Size: 0x60
     function is_scene_initialized(str_scene) {
@@ -443,6 +458,7 @@
 
     // Namespace scene
     // Params 3, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_9061788e
     // Checksum 0x3fd7833b, Offset: 0x1f00
     // Size: 0xb4
     function scene_menu_cleanup(elems, title, hudelem) {
@@ -456,6 +472,7 @@
 
     // Namespace scene
     // Params 1, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_1b5ca25a
     // Checksum 0xf08f4948, Offset: 0x1fc0
     // Size: 0x2c
     function test_init(arg1) {
@@ -464,6 +481,7 @@
 
     // Namespace scene
     // Params 2, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_fc5821e2
     // Checksum 0x712082f7, Offset: 0x1ff8
     // Size: 0x3c
     function test_play(arg1, str_mode) {
@@ -472,6 +490,7 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_3a1a4c9
     // Checksum 0xfaae9549, Offset: 0x2040
     // Size: 0x2de
     function debug_display() {
@@ -501,6 +520,7 @@
 
     // Namespace scene
     // Params 2, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_76dbac0b
     // Checksum 0x2546c035, Offset: 0x2328
     // Size: 0x224
     function move_to_scene(str_scene, b_reverse_dir) {
@@ -542,6 +562,7 @@
 
     // Namespace scene
     // Params 1, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_8d3bf7f8
     // Checksum 0x6126f971, Offset: 0x2558
     // Size: 0x64
     function set_origin(v_origin) {
@@ -553,6 +574,7 @@
 
     // Namespace scene
     // Params 0, eflags: 0x1 linked
+    // namespace_cc27597<file_0>::function_12727f7b
     // Checksum 0xf20f5baf, Offset: 0x25c8
     // Size: 0x74
     function toggle_postfx_igc_loop() {

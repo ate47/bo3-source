@@ -1,0 +1,17 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "p7_nc_cai_ram_05",
+    "type": "collectible",
+    "igdtseqnum": 31,
+    "uiMaterial": "t7_icon_menu_p7_nc_cai_ram_05",
+    "uiModelWithStand": "p7_nc_cai_ram_05_with_stand",
+    "uiModel": "p7_nc_cai_ram_05",
+    "description": "COLLECTIBLE_P7_NC_CAI_RAM_05_DESC",
+    "displayNameLong": "COLLECTIBLE_P7_NC_CAI_RAM_05_LONG",
+    "audiolog_sound": "vox_safe_officers_sword_000_kane",
+    "codexurldesc": "COLLECTIBLE_CODEX_BOOKMARK_OFFICERS_SWORD",
+    "displayNameShort": "COLLECTIBLE_P7_NC_CAI_RAM_05_SHORT",
+    "codexurl": "Collectables-MilitaryOfficersSword.htm",
+    "slotSize": 2
+}

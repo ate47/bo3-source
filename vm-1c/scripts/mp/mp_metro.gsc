@@ -12,6 +12,7 @@
 
 // Namespace namespace_27da2c28
 // Params 0, eflags: 0x1 linked
+// namespace_27da2c28<file_0>::function_d290ebfa
 // Checksum 0x15cb9fb7, Offset: 0x1d8
 // Size: 0x1ac
 function main() {
@@ -35,6 +36,7 @@ function main() {
 
 // Namespace namespace_27da2c28
 // Params 0, eflags: 0x1 linked
+// namespace_27da2c28<file_0>::function_f7046c76
 // Checksum 0x99ec1590, Offset: 0x390
 // Size: 0x4
 function precache() {
@@ -45,6 +47,7 @@ function precache() {
 
     // Namespace namespace_27da2c28
     // Params 0, eflags: 0x1 linked
+    // namespace_27da2c28<file_0>::function_a6fb40d5
     // Checksum 0x1961e654, Offset: 0x3a0
     // Size: 0x100
     function function_a6fb40d5() {

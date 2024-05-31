@@ -9,6 +9,7 @@
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_1463e4e5
 // Checksum 0x19d90bed, Offset: 0x260
 // Size: 0x82
 function init_shared() {
@@ -19,6 +20,7 @@ function init_shared() {
 
 // Namespace riotshield
 // Params 7, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_77ab3e63
 // Checksum 0x4150614b, Offset: 0x2f0
 // Size: 0xbe
 function shield_state_change(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
@@ -36,6 +38,7 @@ function shield_state_change(localclientnum, oldval, newval, bnewent, binitialsn
 
 // Namespace riotshield
 // Params 2, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_5327682
 // Checksum 0x8d16bac6, Offset: 0x3b8
 // Size: 0x154
 function riotshield_deploy_anim(localclientnum, instant) {
@@ -57,6 +60,7 @@ function riotshield_deploy_anim(localclientnum, instant) {
 
 // Namespace riotshield
 // Params 0, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_54f6d0b0
 // Checksum 0x1d0e80e, Offset: 0x518
 // Size: 0x108
 function watch_riotshield_damage() {
@@ -74,6 +78,7 @@ function watch_riotshield_damage() {
 
 // Namespace riotshield
 // Params 1, eflags: 0x1 linked
+// namespace_fee7726c<file_0>::function_2ed0db61
 // Checksum 0x63bd9418, Offset: 0x628
 // Size: 0xe4
 function riotshield_destroy_anim(localclientnum) {
