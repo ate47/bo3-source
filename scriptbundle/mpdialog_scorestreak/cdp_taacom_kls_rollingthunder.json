@@ -1,0 +1,22 @@
+{
+    "hacked": "hacked",
+    "wavestart": "wave_start",
+    "kill1": "kill_1",
+    "kill2": "kill_2",
+    "kill3": "kill_3",
+    "ready": "ready",
+    "vmtype": "both",
+    "killmultiple": "kill_multiple",
+    "configstringfiletype": "scriptbundle",
+    "wavestartfinal": "wave_start_final",
+    "destroyed": "destroyed",
+    "kill": "kill",
+    "name": "cdp_taacom_kls_rollingthunder",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_tacc_kls_rollingthunder_",
+    "firewallhacked": "hacked_fw",
+    "beinghacked": "being_hacked",
+    "killnone": "kill_none",
+    "firewallbeinghacked": "being_hacked_fw",
+    "igdtseqnum": 111
+}

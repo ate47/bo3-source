@@ -1,0 +1,13 @@
+{
+    "hacked": "raps_hacked",
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "timeoutconfirmed0": "timeout_pilot_0",
+    "timeoutconfirmed1": "timeout_pilot_1",
+    "timeoutconfirmed2": "timeout_pilot_2",
+    "timeoutconfirmed3": "timeout_pilot_3",
+    "name": "cdp_taacom_kls_raps",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_tacc_kls_raps_",
+    "igdtseqnum": 109
+}

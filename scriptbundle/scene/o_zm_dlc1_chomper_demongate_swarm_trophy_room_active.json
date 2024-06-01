@@ -1,0 +1,222 @@
+{
+    "scenetype": "scene",
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "o_zm_dlc1_chomper_demongate_swarm_trophy_room_active",
+    "type": "scene",
+    "igdtseqnum": 221,
+    "objects": [
+        {
+            "takedamage": 1,
+            "model": "c_zom_chomper_demongate",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "o_zm_dlc1_chomper_demongate_swarm_trophy_room_active_ch1",
+            "playerstance": "stand",
+            "name": "chomper",
+            "type": "vehicle"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "c_zom_chomper_demongate",
+            "mainanim": "o_zm_dlc1_chomper_demongate_swarm_trophy_room_active_ch2",
+            "playerstance": "stand",
+            "name": "chomper2",
+            "type": "vehicle"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "o_zm_dlc1_chomper_demongate_swarm_trophy_room_active_ch3",
+            "model": "c_zom_chomper_demongate",
+            "name": "chomper3",
+            "type": "vehicle"
+        },
+        {
+            "name": "chomper4",
+            "type": "vehicle",
+            "vmtype": "server",
+            "model": "c_zom_chomper_demongate",
+            "playerstance": "stand",
+            "mainanim": "o_zm_dlc1_chomper_demongate_swarm_trophy_room_active_ch4",
+            "takedamage": 1,
+            "player": 1
+        },
+        {
+            "name": "chomper5",
+            "type": "vehicle",
+            "model": "c_zom_chomper_demongate",
+            "mainanim": "o_zm_dlc1_chomper_demongate_swarm_trophy_room_active_ch5",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "name": "chomper6",
+            "type": "vehicle",
+            "mainanim": "o_zm_dlc1_chomper_demongate_swarm_trophy_room_active_ch6",
+            "model": "c_zom_chomper_demongate",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

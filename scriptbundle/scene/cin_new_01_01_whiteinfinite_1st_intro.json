@@ -1,0 +1,331 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_train_intro_igc",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_new_01_01_whiteinfinite_1st_intro",
+    "type": "scene",
+    "streamerhint": "cin_new_01_01_whiteinfinite_1st_intro",
+    "igdtseqnum": 386,
+    "objects": [
+        {
+            "model": "c_hro_playermale_egypt_fb",
+            "viewclampright": 10,
+            "viewclampbottom": 10,
+            "player": 1,
+            "sharedigc": 1,
+            "vmtype": "server",
+            "viewclampleft": 10,
+            "disabletransitionin": 1,
+            "mainanim": "pb_new_01_01_whiteinfinite_1st_intro_player",
+            "viewclamptop": 10,
+            "disabletransitionout": 1,
+            "playerstance": "stand",
+            "type": "player"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "p7_zur_train_car_1st_class_igc_combo",
+            "firstframe": 1,
+            "mainanim": "o_new_01_01_whiteinfinite_1st_intro_train",
+            "deletewhenfinished": 1,
+            "playerstance": "stand",
+            "name": "train_car",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "mainanim": "o_new_01_01_whiteinfinite_1st_intro_explodingtrain",
+            "deletewhenfinished": 1,
+            "firstframe": 1,
+            "model": "p7_zur_train_car_1st_class_igc_combo_b",
+            "name": "exploding_train_car",
+            "type": "prop"
+        },
+        {
+            "name": "taylor",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "c_hro_taylor_base_fb",
+            "endanim": "ch_new_01_01_whiteinfinite_1st_intro_taylor_part_2",
+            "playerstance": "stand",
+            "deletewhenfinished": 1,
+            "mainanim": "ch_new_01_01_whiteinfinite_1st_intro_taylor_part_1",
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "name": "whiteinfinite_civ_02",
+            "type": "actor",
+            "firstframe": 1,
+            "deletewhenfinished": 1,
+            "model": "spawner_civilian_newworld_formal",
+            "mainanim": "ch_new_01_01_whiteinfinite_1st_intro_civ02",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "whiteinfinite_civ_03",
+            "type": "actor",
+            "deletewhenfinished": 1,
+            "removeweapon": 1,
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "mainanim": "ch_new_01_01_whiteinfinite_1st_intro_civ03",
+            "model": "spawner_civilian_newworld_formal_female",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "whiteinfinite_civ_04",
+            "type": "actor",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "firstframe": 1,
+            "mainanim": "ch_new_01_01_whiteinfinite_1st_intro_civ04",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "deletewhenfinished": 1,
+            "model": "spawner_civilian_newworld_formal"
+        },
+        {
+            "name": "whiteinfinite_civ_05",
+            "type": "actor",
+            "model": "spawner_civilian_newworld_formal_female",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "mainanim": "ch_new_01_01_whiteinfinite_1st_intro_civ05",
+            "firstframe": 1,
+            "deletewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "whiteinfinite_civ_06",
+            "type": "actor",
+            "spawnoninit": 1,
+            "deletewhenfinished": 1,
+            "model": "spawner_civilian_newworld_formal",
+            "player": 1,
+            "playerstance": "stand",
+            "mainanim": "ch_new_01_01_whiteinfinite_1st_intro_civ06",
+            "vmtype": "server",
+            "removeweapon": 1,
+            "firstframe": 1
+        },
+        {
+            "spawnoninit": 1,
+            "deletewhenfinished": 1,
+            "name": "whiteinfinite_civ_07",
+            "type": "actor",
+            "firstframe": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "model": "spawner_civilian_newworld_formal",
+            "vmtype": "server",
+            "mainanim": "ch_new_01_01_whiteinfinite_1st_intro_civ07",
+            "removeweapon": 1
+        },
+        {
+            "playerstance": "stand",
+            "model": "tag_origin_animate",
+            "spawnoninit": 1,
+            "name": "explodingtrain_fx_tag_front_door",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "o_new_01_01_whiteinfinite_1st_intro_explodingtrain_fx_tag_front_door",
+            "firstframe": 1
+        },
+        {
+            "firstframe": 1,
+            "playerstance": "stand",
+            "model": "tag_origin_animate",
+            "name": "explodingtrain_fx_tag_rear_door",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1,
+            "takedamage": 1,
+            "mainanim": "o_new_01_01_whiteinfinite_1st_intro_explodingtrain_fx_tag_rear_door"
+        },
+        {
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "name": "train_fx_tag_rear_door",
+            "type": "prop",
+            "model": "tag_origin_animate",
+            "mainanim": "o_new_01_01_whiteinfinite_1st_intro_train_fx_tag_rear_door"
+        },
+        {
+            "model": "tag_origin_animate",
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1,
+            "vmtype": "server",
+            "name": "explodingtrain_fx_tag_window_screen_left",
+            "type": "prop",
+            "playerstance": "stand",
+            "mainanim": "o_new_01_01_whiteinfinite_1st_intro_explodingtrain_fx_tag_window_screen_left"
+        },
+        {
+            "mainanim": "o_new_01_01_whiteinfinite_1st_intro_explodingtrain_fx_tag_window_screen_right",
+            "model": "tag_origin_animate",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "name": "explodingtrain_fx_tag_window_screen_right",
+            "type": "prop",
+            "spawnoninit": 1,
+            "playerstance": "stand"
+        },
+        {
+            "mainanim": "o_new_01_01_whiteinfinite_1st_intro_train_fx_tag_window_screen_right",
+            "spawnoninit": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "tag_origin_animate",
+            "name": "train_fx_tag_window_screen_right",
+            "type": "prop",
+            "firstframe": 1
+        },
+        {
+            "model": "tag_origin_animate",
+            "mainanim": "o_new_01_01_whiteinfinite_1st_intro_train_fx_tag_window_screen_left",
+            "firstframe": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1,
+            "playerstance": "stand",
+            "name": "train_fx_tag_window_screen_left",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "mainanim": "o_new_01_01_whiteinfinite_1st_intro_train_fx_tag_front_door",
+            "player": 1,
+            "firstframe": 1,
+            "vmtype": "server",
+            "model": "tag_origin_animate",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "name": "train_fx_tag_front_door",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

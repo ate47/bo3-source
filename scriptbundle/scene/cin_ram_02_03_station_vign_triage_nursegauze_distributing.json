@@ -1,0 +1,267 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_station",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_ram_02_03_station_vign_triage_nursegauze_distributing",
+    "type": "scene",
+    "igdtseqnum": 1198,
+    "objects": [
+        {
+            "takedamage": 1,
+            "model": "c_ega_military_medic_1",
+            "player": 1,
+            "vmtype": "server",
+            "initanimloop": "ch_ram_02_03_station_vign_triage_nursegauze_loop",
+            "mainblend": 0.2,
+            "endanimloop": "ch_ram_02_03_station_vign_triage_nursegauze_ending_loop",
+            "mainanim": "ch_ram_02_03_station_vign_triage_nursegauze_distributing",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "runsceneondmg0": "none",
+            "type": "actor"
+        },
+        {
+            "runsceneondmg0": "none",
+            "player": 1,
+            "vmtype": "server",
+            "model": "p7_medical_gauze_roll_clean",
+            "mainanim": "o_ram_02_03_station_vign_triage_nursegauze_gauze01_distributing",
+            "initanimloop": "o_ram_02_03_station_vign_triage_nursegauze_gauze01_loop",
+            "endanimloop": "o_ram_02_03_station_vign_triage_nursegauze_gauze01_endloop",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "runsceneondmg0": "none",
+            "endanimloop": "o_ram_02_03_station_vign_triage_nursegauze_gauze02_endloop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "mainblend": 0.2,
+            "mainanim": "o_ram_02_03_station_vign_triage_nursegauze_gauze02_distributing",
+            "model": "p7_medical_gauze_roll_clean",
+            "initanimloop": "o_ram_02_03_station_vign_triage_nursegauze_gauze02_loop",
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "vmtype": "server",
+            "model": "p7_medical_gauze_roll_clean",
+            "runsceneondmg0": "none",
+            "endanimloop": "o_ram_02_03_station_vign_triage_nursegauze_gauze03_endloop",
+            "playerstance": "stand",
+            "mainanim": "o_ram_02_03_station_vign_triage_nursegauze_gauze03_distributing",
+            "player": 1,
+            "mainblend": 0.2,
+            "initanimloop": "o_ram_02_03_station_vign_triage_nursegauze_gauze03_loop"
+        },
+        {
+            "type": "prop",
+            "runsceneondmg0": "none",
+            "initanimloop": "o_ram_02_03_station_vign_triage_nursegauze_gauze04_loop",
+            "model": "p7_medical_gauze_roll_clean",
+            "mainblend": 0.2,
+            "mainanim": "o_ram_02_03_station_vign_triage_nursegauze_gauze04_distributing",
+            "playerstance": "stand",
+            "endanimloop": "o_ram_02_03_station_vign_triage_nursegauze_gauze04_endloop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "mainblend": 0.2,
+            "runsceneondmg0": "none",
+            "initanimloop": "o_ram_02_03_station_vign_triage_nursegauze_gauze05_loop",
+            "mainanim": "o_ram_02_03_station_vign_triage_nursegauze_gauze05_distributing",
+            "model": "p7_medical_gauze_roll_clean",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "endanimloop": "o_ram_02_03_station_vign_triage_nursegauze_gauze05_endloop"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "runsceneondmg0": "none",
+            "endanimloop": "o_ram_02_03_station_vign_triage_nursegauze_table_endloop",
+            "mainblend": 0.2,
+            "mainanim": "o_ram_02_03_station_vign_triage_nursegauze_table",
+            "initanimloop": "o_ram_02_03_station_vign_triage_nursegauze_table_loop",
+            "player": 1,
+            "vmtype": "server",
+            "model": "p7_medical_surgical_cart"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

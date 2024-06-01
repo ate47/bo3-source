@@ -1,0 +1,68 @@
+a0,b1,c2,d3,e4,f5,g6,h7,i8,j9,k10,l11,m12,n13,o14,p15
+1,# Total Victory,20,WINS,BIG_WINS,weekly,,,,,,,,,,
+2,# Objective Player,15,OBJECTIVE_WINS,BIG_OBJECTIVE_WINS,weekly,,,,,,,,,,
+3,# Full Strategy,25,MEDALS_SPECIALIST_ABILITIES,BIG_MEDALS_SPECIALIST_ABILITIES,weekly,,,,,,,,,,
+4,# Contract Killer,500,KILLS,BIG_KILLS,weekly,,,,,,,,,,
+5,# ScoreKeeper,50000,SCORE,BIG_SCORE,weekly,,,,,,,,,,
+6,# Aggressive,100,ATTACKER_DEFENDER_OBJECTIVE_GAMES,,weekly,,,,,,,,,,
+7,# Deadly,25,KILLS_SPECIALIST_WEAPONS,BIG_KILLS_SPECIALIST_WEAPONS,weekly,,,,,,,,,,
+8,# High Powered,25,KILLS_KILLSTREAKS,BIG_KILLS_KILLSTREAKS,weekly,,,,,,,,,,
+1000,# Victory,5,WINS,,daily,,,,,,,,,,
+1001,# Go for Rank,2,ARENA_WINS,,daily,,,,,,,,,,
+1002,# Team Deathmatch,3,TDM_WINS,,daily,,,,,,,,,,
+1003,# Uplink,3,BALL_WINS,,daily,,,,,,,,,,
+1004,# Safeguard,3,ESCORT_WINS,,daily,,,,,,,,,,
+1005,# Kill Confirmed,3,CONF_WINS,,daily,,,,,,,,,,
+1006,# Search and Destroy,3,SD_WINS,,daily,,,,,,,,,,
+1007,# Hardpoint,3,KOTH_WINS,,daily,,,,,,,,,,
+1008,# Dominiation,3,DOM_WINS,,daily,,,,,,,,,,
+1009,# Score,10000,SCORE,,daily,,,,,,,,,,
+1010,# Incoming,5,KILLS_KILLSTREAKS,,daily,,,,,,,,,,
+1011,# Return on Investment,200,KILLSTREAK_SCORE,,daily,,,,,,,,,,
+1012,# Weapons Hot,10,KILLS_SPECIALIST_WEAPONS,,daily,,,,,,,,,,
+1013,# Strategist,10,MEDALS_SPECIALIST_ABILITIES,,daily,,,,,,,,,,
+1014,# Killjoy,3,KILLED_SPECIALIST_ENEMY,,daily,,,,,,,,,,
+1015,# Kill Collector,125,KILLS,,daily,,,,,,,,,,
+1016,# Headhunter,10,HEADSHOTS,,daily,,,,,,,,,,
+1017,# Assault,10,KILLED_DEFENDER_OBJECTIVE_GAMES,,daily,,,,,,,,,,
+1018,# Defender,15,KILLED_ATTACKER_OBJECTIVE_GAMES,,daily,,,,,,,,,,
+1019,# Assault Rifles,100,AR_KILLS,,daily,,,,,,,,,,
+1020,# Submachine Guns,100,SMG_KILLS,,daily,,,,,,,,,,
+1021,# Sniper Rifles,50,SNIPER_KILLS,,daily,,,,,,,,,,
+1022,# Light Machine Guns,100,LMG_KILLS,,daily,,,,,,,,,,
+1023,# Shotguns,100,SHOTGUN_KILLS,,daily,,,,,,,,,,
+1024,# Pistols,100,PISTOL_KILLS,,daily,,,,,,,,,,
+1025,# Overloaded,100,LOADED_WEAPON_KILLS,,daily,,,,,,,,,,
+1026,# Capture the Flag,3,CTF_WINS,,daily,,,,,,,,,,
+1027,# Demonlition,3,DEM_WINS,,daily,,,,,,,,,,
+1028,# Free for All,3,DM_WINS,,daily,,,,,,,,,,
+1029,# Fracture,3,CLEAN_WINS,,daily,,,,,,,,,,
+3000,# Huge SMG Guns,650,SMG_KILLS,HUGE_SMG_KILLS,special_contract,,CONTRACT_HUGE_SMG_KILLS,,,,,mp_action,,,
+3001,# Huge AR Guns,650,AR_KILLS,HUGE_AR_KILLS,special_contract,,CONTRACT_HUGE_AR_KILLS,,,,,mp_action,,,
+3002,# Huge Shotguns,600,SHOTGUN_KILLS,HUGE_SHOTGUN_KILLS,special_contract,,CONTRACT_HUGE_SHOTGUN_KILLS,,,,,mp_action,,,
+3003,# Huge LMG,600,LMG_KILLS,HUGE_LMG_KILLS,special_contract,,CONTRACT_HUGE_LMG_KILLS,,,,,mp_action,,,
+3004,# Huge Sniper,400,SNIPER_KILLS,HUGE_SNIPER_KILLS,special_contract,,CONTRACT_HUGE_SNIPER_KILLS,,,,,mp_action,,,
+3005,# Huge Melee Weapons,400,MELEE_WEAPON_KILLS,HUGE_MELEE_WEAPON_KILLS,special_contract,,CONTRACT_HUGE_MELEE_WEAPON_KILLS,,,,,mp_action,,,
+3006,# Huge Specialist Weapons,200,KILLS_SPECIALIST_WEAPONS,HUGE_KILLS_SPECIALIST_WEAPONS,special_contract,,,CONTRACT_HUGE_SPECIALIST_WEAPON_KILLS,,,,,,,
+3007,# Huge Wins,100,HUGE_TOTAL_WINS,,special_contract,,,,extraBools 3,99053,99055,,loot_trifectaActive_dummy,t7_blackmarket_promo_triple_play_wide,trifecta
+3008,# Huge Wins 2,100,HUGE_TOTAL_WINS,,special_contract,,,,extraBools 8,99070,99072,,loot_trifectaActive_dummy,t7_blackmarket_promo_triple_play_wide,trifecta
+3009,# Huge Wins 3,100,HUGE_TOTAL_WINS,,special_contract,,,,extraBools 10,99077,99079,,loot_trifectaActive_dummy,t7_blackmarket_promo_triple_play_wide,trifecta
+3010,# Grand Slam,125,GRAND_SLAM,,special_contract,,,,extraBools 11,99085,99084,,loot_grandSlam_active,t7_blackmarket_crate_bribe_grandslam_large,grand_slam
+3011,# Huge Wins 4,100,HUGE_TOTAL_WINS,,special_contract,,,,extraBools 12,99088,99090,,loot_trifectaActive_dummy,t7_blackmarket_promo_triple_play_wide,trifecta
+3012,# Huge Wins 5,100,HUGE_TOTAL_WINS,,special_contract,,,,extraBools 13,99092,99094,,loot_trifectaActive_dummy,t7_blackmarket_promo_triple_play_wide,trifecta
+3013,# Huge Wins 6,100,HUGE_TOTAL_WINS,,special_contract,,,,extraBools 14,99096,99098,,loot_trifectaActive_dummy,t7_blackmarket_promo_triple_play_wide,trifecta
+3014,# Huge Wins 7,100,HUGE_TOTAL_WINS,,special_contract,,,,extraBools 15,99104,99106,,loot_trifectaActive_dummy,t7_blackmarket_promo_triple_play_wide,trifecta
+3015,# Huge Wins 8,100,HUGE_TOTAL_WINS,,special_contract,,,,extraBytes 14,99113,99115,,loot_trifectaActive_dummy,t7_blackmarket_promo_triple_play_wide,trifecta
+3016,# Mercenary Outfit,15,MERCENARY_OUTFIT,,special_contract,,,,extraBytes 5,90128,90110,,,t7_mercenary_bribe_wide,outfits
+3017,# Outrider Outfit,15,OUTRIDER_OUTFIT,,special_contract,,,,extraBytes 6,90129,90111,,,t7_outrider_bribe_wide,outfits
+3018,# Technomancer Outfit,15,TECHNOMANCER_OUTFIT,,special_contract,,,,extraBytes 7,90130,90112,,,t7_technomancer_bribe_wide,outfits
+3019,# Battery Outfit,15,BATTERY_OUTFIT,,special_contract,,,,extraBytes 8,90131,90113,,,t7_battery_bribe_wide,outfits
+3020,# Enforcer Outfit,15,ENFORCER_OUTFIT,,special_contract,,,,extraBytes 9,90132,90114,,,t7_enforcer_bribe_wide,outfits
+3021,# Trapper Outfit,15,TRAPPER_OUTFIT,,special_contract,,,,extraBytes 10,90133,90115,,,t7_trapper_bribe_wide,outfits
+3022,# Reaper Outfit,15,REAPER_OUTFIT,,special_contract,,,,extraBytes 11,90134,90116,,,t7_reaper_bribe_wide,outfits
+3023,# Spectre Outfit,15,SPECTRE_OUTFIT,,special_contract,,,,extraBytes 12,90135,90117,,,t7_spectre_bribe_wide,outfits
+3024,# Firebreak Outfit,15,FIREBREAK_OUTFIT,,special_contract,,,,extraBytes 13,90136,90118,,,t7_firebreak_bribe_wide,outfits
+3025,# Huge Wins 9,100,HUGE_TOTAL_WINS,,special_contract,,,,extraBools 16,99133,99135,,loot_trifectaActive,t7_blackmarket_promo_triple_play_wide,trifecta
+3026,# Huge Wins 10,100,HUGE_TOTAL_WINS,,special_contract,,,,,99137,99139,,loot_trifectaActive_dummy,t7_blackmarket_promo_triple_play_wide,trifecta
+3027,# Huge Wins 11,100,HUGE_TOTAL_WINS,,special_contract,,,,,99141,99143,,loot_trifectaActive_dummy,t7_blackmarket_promo_triple_play_wide,trifecta
+3028,# Huge Wins 12,100,HUGE_TOTAL_WINS,,special_contract,,,,,99145,99147,,loot_trifectaActive_dummy,t7_blackmarket_promo_triple_play_wide,trifecta

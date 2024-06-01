@@ -1,0 +1,274 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_subway_khalil",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_ram_01_01_enterstation_1st_ride",
+    "type": "scene",
+    "disablesceneskipping": 1,
+    "streamerhint": "cin_ram_01_01_enterstation_1st_ride",
+    "igdtseqnum": 1048,
+    "objects": [
+        {
+            "cameratweenout": 1,
+            "cameratween": 0.2,
+            "model": "c_t7_ally_fb",
+            "viewclampright": 15,
+            "viewclampbottom": 20,
+            "player": 1,
+            "sharedigc": 1,
+            "vmtype": "server",
+            "mainblend": 0.2,
+            "viewclampleft": 20,
+            "disabletransitionin": 1,
+            "mainanim": "p_ram_01_01_enterstation_1st_ride",
+            "viewclamptop": 20,
+            "disabletransitionout": 1,
+            "playerstance": "stand",
+            "nospawn": 1,
+            "runsceneondmg0": "none",
+            "name": "guy01",
+            "type": "player"
+        },
+        {
+            "runsceneondmg0": "none",
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "nospawn": 1,
+            "model": "c_hro_hendricks_egypt",
+            "firstframe": 1,
+            "mainanim": "ch_ram_01_01_enterstation_1st_ride_hendricks",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "name": "hendricks",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "runsceneondmg0": "none",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_ram_01_01_enterstation_1st_ride_rachel",
+            "nospawn": 1,
+            "firstframe": 1,
+            "model": "c_hro_rachel_egypt",
+            "name": "rachel",
+            "type": "actor"
+        },
+        {
+            "name": "traincar_primary",
+            "type": "prop",
+            "vmtype": "server",
+            "model": "p7_cai_train_subway_set_car_01",
+            "runsceneondmg0": "none",
+            "nospawn": 1,
+            "endanimloop": "o_ram_01_01_enterstation_1st_ride_idle",
+            "playerstance": "stand",
+            "mainanim": "o_ram_01_01_enterstation_1st_ride",
+            "firstframe": 1,
+            "player": 1,
+            "mainblend": 0.2
+        },
+        {
+            "name": "khalil",
+            "type": "actor",
+            "firstframe": 1,
+            "runsceneondmg0": "none",
+            "model": "c_hro_khalil_egypt",
+            "mainblend": 0.2,
+            "mainanim": "ch_ram_02_04_walk_1st_introduce_01_khalil_init",
+            "nospawn": 1,
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

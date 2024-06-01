@@ -1,0 +1,27 @@
+[
+    {
+        "id": 0,
+        "logo_icon": "t7_codcaster_icon_team01",
+        "logo_name": "CODCASTER_TEAM_01"
+    },
+    {
+        "id": 1,
+        "logo_icon": "t7_codcaster_icon_team02",
+        "logo_name": "CODCASTER_TEAM_02"
+    },
+    {
+        "id": 2,
+        "logo_icon": "t7_codcaster_icon_team03",
+        "logo_name": "CODCASTER_TEAM_03"
+    },
+    {
+        "id": 3,
+        "logo_icon": "t7_codcaster_icon_team04",
+        "logo_name": "CODCASTER_TEAM_04"
+    },
+    {
+        "id": 4,
+        "logo_icon": "t7_codcaster_icon_team05",
+        "logo_name": "CODCASTER_TEAM_05"
+    }
+]

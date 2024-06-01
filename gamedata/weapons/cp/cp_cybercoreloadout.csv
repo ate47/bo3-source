@@ -1,0 +1,17 @@
+class_count,15,,,,
+a0,b1,c2,d3,e4,f5
+0,1,cybercom_playermovement,1,cybercom_multicore,0
+1,1,cybercom_playermovement,1,cybercom_multicore,0
+2,1,cybercom_playermovement,1,cybercom_multicore,0
+3,1,cybercom_playermovement,1,cybercom_multicore,0
+4,1,cybercom_playermovement,1,cybercom_multicore,0
+5,,,,,
+6,,,,,
+7,,,,,
+8,,,,,
+9,,,,,
+10,1,cybercom_playermovement,0,cybercom_sensorybuffer,0
+11,1,cybercom_playermovement,0,cybercom_proximitydeterrent,0
+12,0,cybercom_copycat,0,cybercom_proximitydeterrent,0
+13,2,cybercom_sensorybuffer,0,cybercom_repulsorarmor,0
+14,2,cybercom_emergencyreserve,0,cybercom_proximitydeterrent,0

@@ -1,0 +1,320 @@
+{
+    "scenetype": "fxanim",
+    "allowmultiple": 1,
+    "vmtype": "server",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "p7_fxanim_cp_lotus_atrium_ravens_bundle",
+    "type": "scene",
+    "igdtseqnum": 565,
+    "objects": [
+        {
+            "takedamage": 1,
+            "deletewhenfinished": 1,
+            "model": "p7_fxanim_cp_lotus_atrium_ravens_mod",
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "mainanim": "p7_fxanim_cp_lotus_atrium_ravens_anim",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "name": "lotus_atrium_ravens",
+            "type": "prop"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "aml_gen_raven_flying_01_low_fb_cin",
+            "firstframe": 1,
+            "mainanim": "p7_fxanim_gp_raven_circle_lotus_01_anim",
+            "aligntarget": "lotus_atrium_ravens",
+            "deletewhenfinished": 1,
+            "aligntargettag": "tag_link_raven_01",
+            "playerstance": "stand",
+            "name": "raven_lotus_01",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "mainanim": "p7_fxanim_gp_raven_circle_lotus_02_anim",
+            "deletewhenfinished": 1,
+            "firstframe": 1,
+            "model": "aml_gen_raven_flying_01_low_fb_cin",
+            "aligntarget": "lotus_atrium_ravens",
+            "aligntargettag": "tag_link_raven_02",
+            "name": "raven_lotus_02",
+            "type": "prop"
+        },
+        {
+            "name": "raven_lotus_03",
+            "type": "prop",
+            "aligntargettag": "tag_link_raven_03",
+            "vmtype": "server",
+            "model": "aml_gen_raven_flying_01_low_fb_cin",
+            "aligntarget": "lotus_atrium_ravens",
+            "playerstance": "stand",
+            "deletewhenfinished": 1,
+            "mainanim": "p7_fxanim_gp_raven_circle_lotus_03_anim",
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "name": "raven_lotus_04",
+            "type": "prop",
+            "aligntargettag": "tag_link_raven_04",
+            "firstframe": 1,
+            "deletewhenfinished": 1,
+            "model": "aml_gen_raven_flying_01_low_fb_cin",
+            "aligntarget": "lotus_atrium_ravens",
+            "mainanim": "p7_fxanim_gp_raven_circle_lotus_04_anim",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "raven_lotus_05",
+            "type": "prop",
+            "deletewhenfinished": 1,
+            "aligntargettag": "tag_link_raven_05",
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "mainanim": "p7_fxanim_gp_raven_circle_lotus_05_anim",
+            "model": "aml_gen_raven_flying_01_low_fb_cin",
+            "aligntarget": "lotus_atrium_ravens",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "raven_lotus_06",
+            "type": "prop",
+            "aligntarget": "lotus_atrium_ravens",
+            "playerstance": "stand",
+            "aligntargettag": "tag_link_raven_06",
+            "firstframe": 1,
+            "mainanim": "p7_fxanim_gp_raven_circle_lotus_06_anim",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "deletewhenfinished": 1,
+            "model": "aml_gen_raven_flying_01_low_fb_cin"
+        },
+        {
+            "name": "raven_lotus_07",
+            "type": "prop",
+            "aligntargettag": "tag_link_raven_07",
+            "model": "aml_gen_raven_flying_01_low_fb_cin",
+            "playerstance": "stand",
+            "aligntarget": "lotus_atrium_ravens",
+            "mainanim": "p7_fxanim_gp_raven_circle_lotus_07_anim",
+            "firstframe": 1,
+            "deletewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "raven_lotus_08",
+            "type": "prop",
+            "spawnoninit": 1,
+            "aligntargettag": "tag_link_raven_08",
+            "deletewhenfinished": 1,
+            "model": "aml_gen_raven_flying_01_low_fb_cin",
+            "player": 1,
+            "playerstance": "stand",
+            "mainanim": "p7_fxanim_gp_raven_circle_lotus_08_anim",
+            "vmtype": "server",
+            "aligntarget": "lotus_atrium_ravens",
+            "firstframe": 1
+        },
+        {
+            "aligntargettag": "tag_link_raven_09",
+            "spawnoninit": 1,
+            "deletewhenfinished": 1,
+            "name": "raven_lotus_09",
+            "type": "prop",
+            "aligntarget": "lotus_atrium_ravens",
+            "firstframe": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "model": "aml_gen_raven_flying_01_low_fb_cin",
+            "vmtype": "server",
+            "mainanim": "p7_fxanim_gp_raven_circle_lotus_09_anim"
+        },
+        {
+            "aligntarget": "lotus_atrium_ravens",
+            "playerstance": "stand",
+            "model": "aml_gen_raven_flying_01_low_fb_cin",
+            "aligntargettag": "tag_link_raven_10",
+            "deletewhenfinished": 1,
+            "spawnoninit": 1,
+            "name": "raven_lotus_10",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "p7_fxanim_gp_raven_circle_lotus_10_anim",
+            "firstframe": 1
+        },
+        {
+            "deletewhenfinished": 1,
+            "firstframe": 1,
+            "playerstance": "stand",
+            "aligntargettag": "tag_link_raven_11",
+            "aligntarget": "lotus_atrium_ravens",
+            "model": "aml_gen_raven_flying_01_low_fb_cin",
+            "name": "raven_lotus_11",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1,
+            "mainanim": "p7_fxanim_gp_raven_circle_lotus_11_anim"
+        },
+        {
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "aligntargettag": "tag_link_raven_12",
+            "playerstance": "stand",
+            "player": 1,
+            "aligntarget": "lotus_atrium_ravens",
+            "vmtype": "server",
+            "name": "raven_lotus_12",
+            "type": "prop",
+            "model": "aml_gen_raven_flying_01_low_fb_cin",
+            "deletewhenfinished": 1,
+            "mainanim": "p7_fxanim_gp_raven_circle_lotus_12_anim"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

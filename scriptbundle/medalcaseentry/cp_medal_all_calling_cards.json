@@ -1,0 +1,14 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "cp_medal_all_calling_cards",
+    "type": "medalcaseentry",
+    "igdtseqnum": 2,
+    "largeIcon": "t7_icon_achievement_safehouse_02",
+    "smallIcon": "t7_icon_achievement_safehouse_02",
+    "model": "p7_medal_achievements_safehouse_02",
+    "requirements": "CPUI_MEDAL_ALL_CALLING_CARDS_REQ",
+    "aarDisplayName": "CPUI_MEDAL_ALL_CALLING_CARDS_AAR",
+    "displayName": "CPUI_MEDAL_ALL_CALLING_CARDS",
+    "XPBonus": 5000
+}

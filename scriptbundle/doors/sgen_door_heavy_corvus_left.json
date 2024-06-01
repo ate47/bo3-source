@@ -1,0 +1,22 @@
+{
+    "door_loop_sound": "evt_door_close_loop",
+    "model": "p7_sgen_door_heavy_corvus_lft",
+    "door_locked": 1,
+    "door_connect_paths": 1,
+    "door_slide_open_units": -56,
+    "vmtype": "server",
+    "door_open_method": "slide",
+    "configstringfiletype": "scriptbundle",
+    "door_slide_horizontal": 1,
+    "door_hack_time": 5,
+    "door_start_sound": "evt_hend_door_open",
+    "door_stop_sound": "evt_door_close_stop",
+    "door_swing_angle": 120,
+    "name": "sgen_door_heavy_corvus_left",
+    "type": "doors",
+    "door_trigger_radius": 80,
+    "door_unlock_method": "default",
+    "igdtseqnum": 23,
+    "door_closes": 1,
+    "door_open_time": 0.5
+}

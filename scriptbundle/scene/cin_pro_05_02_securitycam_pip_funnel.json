@@ -1,0 +1,284 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_torture_waterfunnel",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_pro_05_02_securitycam_pip_funnel",
+    "type": "scene",
+    "igdtseqnum": 235,
+    "objects": [
+        {
+            "deletewhenfinished": 1,
+            "model": "c_civ_egypt_prisoner_1",
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "mainanim": "ch_pro_05_02_securitycam_pip_funnel_prisoner",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "removeweapon": 1,
+            "runsceneondmg0": "none",
+            "runsceneondmg1": "none",
+            "runsceneondmg2": "none",
+            "runsceneondmg3": "none",
+            "runsceneondmg4": "none",
+            "runsceneondmg5": "none",
+            "name": "prisoner",
+            "type": "actor"
+        },
+        {
+            "runsceneondmg0": "none",
+            "runsceneondmg1": "none",
+            "runsceneondmg2": "none",
+            "runsceneondmg3": "none",
+            "runsceneondmg4": "none",
+            "runsceneondmg5": "none",
+            "spawnoninit": 1,
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "firstframe": 1,
+            "mainanim": "ch_pro_05_02_securitycam_pip_funnel_guard01",
+            "deletewhenfinished": 1,
+            "playerstance": "stand",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "runsceneondmg0": "none",
+            "runsceneondmg1": "none",
+            "runsceneondmg2": "none",
+            "runsceneondmg3": "none",
+            "runsceneondmg4": "none",
+            "runsceneondmg5": "none",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "removeweapon": 1,
+            "mainanim": "ch_pro_05_02_securitycam_pip_funnel_guard02",
+            "deletewhenfinished": 1,
+            "firstframe": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "type": "actor"
+        },
+        {
+            "type": "prop",
+            "vmtype": "server",
+            "model": "p7_pro_torture_water_jug",
+            "runsceneondmg0": "none",
+            "runsceneondmg1": "none",
+            "runsceneondmg2": "none",
+            "runsceneondmg3": "none",
+            "runsceneondmg4": "none",
+            "runsceneondmg5": "none",
+            "playerstance": "stand",
+            "deletewhenfinished": 1,
+            "mainanim": "o_pro_05_02_securitycam_pip_funnel_container",
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "type": "prop",
+            "model": "p7_pro_torture_water_funnel",
+            "mainanim": "o_pro_05_02_securitycam_pip_funnel_funnel",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "deletewhenfinished": 1,
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "mainanim": "o_pro_05_02_securitycam_pip_funnel_cam_pos",
+            "model": "tag_origin",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "firstframe": 1,
+            "mainanim": "o_pro_05_02_securitycam_pip_funnel_chair",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "deletewhenfinished": 1,
+            "model": "p7_chair_metal_prison"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

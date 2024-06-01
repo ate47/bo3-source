@@ -1,0 +1,10 @@
+{
+    "killcamupdist": 100,
+    "vmtype": "none",
+    "killcamtypestring": "explosive fast",
+    "name": "killcam_rocket",
+    "type": "killcam",
+    "killcambackdist": 250,
+    "killcamtype": 5,
+    "igdtseqnum": 4
+}

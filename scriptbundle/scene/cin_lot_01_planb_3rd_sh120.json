@@ -1,0 +1,264 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_intro",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "cameraswitcher": "c_lot_01_planb_3rd_sh120",
+    "name": "cin_lot_01_planb_3rd_sh120",
+    "type": "scene",
+    "nextscenebundle": "cin_lot_01_planb_3rd_sh130",
+    "igdtseqnum": 794,
+    "objects": [
+        {
+            "takedamage": 1,
+            "model": "spawner_ally_hero_hendricks_lotus",
+            "player": 1,
+            "vmtype": "server",
+            "mainblend": 0.2,
+            "mainanim": "ch_lot_01_planb_3rd_sh120_hendricks",
+            "playerstance": "stand",
+            "name": "hendricks",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "spawner_ally_hero_khalil_lotus",
+            "mainanim": "ch_lot_01_planb_3rd_sh120_khalil",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "name": "khalil",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainblend": 0.2,
+            "mainanim": "o_lot_01_planb_3rd_sh120_shield1",
+            "deletewhenfinished": 1,
+            "model": "wpn_t7_shield_riot_prop",
+            "type": "prop"
+        },
+        {
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "playerstance": "stand",
+            "deletewhenfinished": 1,
+            "mainanim": "ch_lot_01_planb_3rd_sh120_soldier1",
+            "takedamage": 1,
+            "player": 1,
+            "mainblend": 0.2
+        },
+        {
+            "type": "actor",
+            "deletewhenfinished": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "mainblend": 0.2,
+            "mainanim": "ch_lot_01_planb_3rd_sh120_soldier2",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "actor",
+            "mainblend": 0.2,
+            "deletewhenfinished": 1,
+            "mainanim": "ch_lot_01_planb_3rd_sh120_soldier3",
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "actor",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainblend": 0.2,
+            "mainanim": "o_lot_01_planb_3rd_sh120_shield2",
+            "player": 1,
+            "vmtype": "server",
+            "deletewhenfinished": 1,
+            "model": "wpn_t7_shield_riot_prop"
+        },
+        {
+            "type": "actor",
+            "mainblend": 0.2,
+            "model": "wpn_t7_shield_riot_prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "o_lot_01_planb_3rd_sh120_shield3",
+            "deletewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

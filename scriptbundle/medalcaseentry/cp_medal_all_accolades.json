@@ -1,0 +1,14 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "cp_medal_all_accolades",
+    "type": "medalcaseentry",
+    "igdtseqnum": 1,
+    "largeIcon": "t7_icon_achievement_safehouse_01",
+    "smallIcon": "t7_icon_achievement_safehouse_01",
+    "model": "p7_medal_achievements_safehouse_01",
+    "requirements": "CPUI_MEDAL_ALL_ACCOLADES_REQ",
+    "aarDisplayName": "CPUI_MEDAL_ALL_ACCOLADES_AAR",
+    "displayName": "CPUI_MEDAL_ALL_ACCOLADES",
+    "XPBonus": 5000
+}

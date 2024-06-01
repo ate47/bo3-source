@@ -1,0 +1,281 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_hangar",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_pro_09_01_intro_1st_cybersoldiers_maretti_attack",
+    "type": "scene",
+    "igdtseqnum": 292,
+    "objects": [
+        {
+            "takedamage": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_maretti_guard01",
+            "diewhenfinished": 1,
+            "disabled": 1,
+            "playerstance": "stand",
+            "name": "maretti_guard_01",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "diewhenfinished": 1,
+            "takedamage": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_maretti_guard02",
+            "disabled": 1,
+            "playerstance": "stand",
+            "name": "maretti_guard_02",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_maretti_guard03",
+            "disabled": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "diewhenfinished": 1,
+            "name": "maretti_guard_03",
+            "type": "actor"
+        },
+        {
+            "name": "maretti_guard_04",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "diewhenfinished": 1,
+            "playerstance": "stand",
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_maretti_guard04",
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1,
+            "mainblend": 0.2
+        },
+        {
+            "name": "maretti_guard_05",
+            "type": "actor",
+            "firstframe": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_maretti_guard05",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "diewhenfinished": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "takedamage": 1,
+            "name": "maretti_guard_06",
+            "type": "actor",
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "diewhenfinished": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_maretti_guard06",
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "maretti_guard_07",
+            "type": "actor",
+            "diewhenfinished": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "firstframe": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_maretti_guard07",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "spawner_enemy_nrc_human_assault_ar"
+        },
+        {
+            "name": "maretti_guard_08",
+            "type": "actor",
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_maretti_guard08",
+            "firstframe": 1,
+            "diewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "maretti_guard_09",
+            "type": "actor",
+            "diewhenfinished": 1,
+            "spawnoninit": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_maretti_guard09",
+            "vmtype": "server",
+            "firstframe": 1
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

@@ -1,0 +1,295 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_bio_04_01_market2_vign_pile",
+    "type": "scene",
+    "igdtseqnum": 419,
+    "objects": [
+        {
+            "model": "spawner_civilian_biodomes_prisoner",
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_bio_04_01_market2_vign_pile_civ01",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "removeweapon": 1,
+            "type": "actor"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "model": "spawner_civilian_biodomes_prisoner",
+            "firstframe": 1,
+            "mainanim": "ch_bio_04_01_market2_vign_pile_civ02",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "removeweapon": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_bio_04_01_market2_vign_pile_civ03",
+            "firstframe": 1,
+            "model": "spawner_civilian_biodomes_prisoner",
+            "type": "actor"
+        },
+        {
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_civilian_biodomes_prisoner",
+            "playerstance": "stand",
+            "mainanim": "ch_bio_04_01_market2_vign_pile_civ04",
+            "removeweapon": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1,
+            "mainblend": 0.2
+        },
+        {
+            "type": "actor",
+            "firstframe": 1,
+            "model": "spawner_civilian_biodomes_prisoner",
+            "mainblend": 0.2,
+            "mainanim": "ch_bio_04_01_market2_vign_pile_civ05",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "type": "actor",
+            "mainblend": 0.2,
+            "removeweapon": 1,
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "mainanim": "ch_bio_04_01_market2_vign_pile_civ06",
+            "model": "spawner_civilian_biodomes_prisoner",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "actor",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "firstframe": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_bio_04_01_market2_vign_pile_civ07",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "spawner_civilian_biodomes_prisoner"
+        },
+        {
+            "type": "actor",
+            "mainblend": 0.2,
+            "model": "spawner_civilian_biodomes_prisoner",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "mainanim": "ch_bio_04_01_market2_vign_pile_civ08",
+            "firstframe": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "type": "actor",
+            "spawnoninit": 1,
+            "model": "spawner_civilian_biodomes_prisoner",
+            "player": 1,
+            "playerstance": "stand",
+            "mainblend": 0.2,
+            "mainanim": "ch_bio_04_01_market2_vign_pile_civ09",
+            "vmtype": "server",
+            "removeweapon": 1,
+            "firstframe": 1
+        },
+        {
+            "spawnoninit": 1,
+            "runsceneondmg0": "none",
+            "runsceneondmg1": "none",
+            "runsceneondmg2": "none",
+            "runsceneondmg3": "none",
+            "runsceneondmg4": "none",
+            "runsceneondmg5": "none",
+            "type": "actor",
+            "firstframe": 1,
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "player": 1,
+            "model": "spawner_civilian_biodomes_prisoner",
+            "vmtype": "server",
+            "mainanim": "ch_bio_04_01_market2_vign_pile_civ10",
+            "removeweapon": 1
+        },
+        {
+            "playerstance": "stand",
+            "model": "p7_sin_ship_container_door_rt_orange",
+            "mainblend": 0.2,
+            "runsceneondmg0": "none",
+            "runsceneondmg1": "none",
+            "runsceneondmg2": "none",
+            "runsceneondmg3": "none",
+            "runsceneondmg4": "none",
+            "runsceneondmg5": "none",
+            "spawnoninit": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "o_bio_04_01_market2_vign_pile_door",
+            "firstframe": 1
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

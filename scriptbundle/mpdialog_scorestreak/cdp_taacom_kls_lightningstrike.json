@@ -1,0 +1,15 @@
+{
+    "hacked": "hacked",
+    "ready": "ready",
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "destroyed": "destroyed",
+    "name": "cdp_taacom_kls_lightningstrike",
+    "type": "mpdialog_scorestreak",
+    "killconfirmed0": "hit_confirm_pilot_1",
+    "killconfirmed1": "hit_confirm_pilot_2",
+    "killconfirmed2": "hit_confirm_pilot_3",
+    "killconfirmed3": "hit_confirm_pilot_4",
+    "voiceprefix": "vox_tacc_kls_lightning_",
+    "igdtseqnum": 107
+}

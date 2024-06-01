@@ -1,0 +1,262 @@
+[
+    {
+        "id": 1,
+        "name": "friend",
+        "override_multiteam": 1,
+        "radius": 1200,
+        "score": 200
+    },
+    {
+        "id": 2,
+        "name": "enemy",
+        "override_maps": "mp_apartments",
+        "radius": 2600
+    },
+    {
+        "id": 3,
+        "name": "enemy",
+        "override_maps": "mp_spire",
+        "radius": 2600
+    },
+    {
+        "id": 4,
+        "name": "enemy",
+        "override_maps": "mp_chinatown",
+        "radius": 2600
+    },
+    {
+        "id": 5,
+        "name": "enemy",
+        "override_maps": "mp_sector",
+        "radius": 2500
+    },
+    {
+        "id": 6,
+        "name": "enemy",
+        "override_maps": "mp_rise",
+        "radius": 1900
+    },
+    {
+        "id": 7,
+        "name": "enemy",
+        "override_maps": "mp_ethiopia",
+        "radius": 2400
+    },
+    {
+        "id": 8,
+        "name": "enemy",
+        "override_maps": "mp_havoc",
+        "radius": 2600
+    },
+    {
+        "id": 9,
+        "name": "enemy",
+        "override_maps": "mp_stronghold",
+        "radius": 2500
+    },
+    {
+        "id": 10,
+        "name": "enemy",
+        "override_maps": "mp_veiled",
+        "radius": 2300
+    },
+    {
+        "id": 11,
+        "name": "enemy",
+        "override_maps": "mp_biodome",
+        "radius": 2600
+    },
+    {
+        "id": 12,
+        "name": "enemy",
+        "override_maps": "mp_nuketown_x",
+        "radius": 1600
+    },
+    {
+        "id": 13,
+        "name": "friend_dead",
+        "override_maps": "mp_nuketown_x",
+        "radius": 1300
+    },
+    {
+        "id": 14,
+        "name": "friend_dead",
+        "override_maps": "mp_nuketown_x",
+        "time_out": 8
+    },
+    {
+        "id": 15,
+        "name": "enemy",
+        "override_maps": "mp_redwood",
+        "radius": 2550
+    },
+    {
+        "id": 16,
+        "name": "enemy",
+        "override_maps": "mp_skyjacked",
+        "radius": 1600
+    },
+    {
+        "id": 17,
+        "name": "friend_dead",
+        "override_maps": "mp_skyjacked",
+        "radius": 1300
+    },
+    {
+        "id": 18,
+        "name": "friend_dead",
+        "override_maps": "mp_skyjacked",
+        "time_out": 8
+    },
+    {
+        "id": 19,
+        "max_count": 7,
+        "name": "friend_dead",
+        "override_maps": "mp_skyjacked"
+    },
+    {
+        "id": 20,
+        "name": "friendly_spawn",
+        "override_gametypes": "koth",
+        "score": 0
+    },
+    {
+        "evaluation": "min",
+        "id": 21,
+        "name": "enemy",
+        "override_gametypes": "tdm"
+    },
+    {
+        "id": 22,
+        "name": "enemy",
+        "override_maps": "mp_biodome",
+        "radius": 2300
+    },
+    {
+        "evaluation": "min",
+        "id": 23,
+        "name": "enemy",
+        "override_gametypes": "dm"
+    },
+    {
+        "evaluation": "min",
+        "id": 24,
+        "name": "enemy",
+        "override_gametypes": "conf"
+    },
+    {
+        "id": 25,
+        "name": "enemy",
+        "override_maps": "mp_crucible",
+        "radius": 2300
+    },
+    {
+        "evaluation": "min",
+        "id": 26,
+        "name": "enemy",
+        "override_gametypes": "dm"
+    },
+    {
+        "evaluation": "min",
+        "id": 27,
+        "name": "enemy",
+        "override_gametypes": "gun"
+    },
+    {
+        "id": 28,
+        "name": "dom_neutral",
+        "override_maps": "mp_skyjacked",
+        "radius": 1300
+    },
+    {
+        "id": 29,
+        "name": "enemy",
+        "override_maps": "mp_conduit",
+        "radius": 2100
+    },
+    {
+        "id": 30,
+        "name": "enemy",
+        "override_maps": "mp_aerospace",
+        "radius": 2200
+    },
+    {
+        "id": 31,
+        "name": "enemy",
+        "override_maps": "mp_kung_fu",
+        "radius": 2800
+    },
+    {
+        "id": 32,
+        "name": "enemy_spawn",
+        "override_maps": "mp_kung_fu",
+        "radius": 1500
+    },
+    {
+        "id": 33,
+        "name": "dom_friendly",
+        "override_maps": "mp_banzai",
+        "radius": 1000
+    },
+    {
+        "id": 34,
+        "name": "dom_friendly",
+        "override_maps": "mp_banzai",
+        "score": 100
+    },
+    {
+        "id": 35,
+        "name": "enemy",
+        "override_maps": "mp_shrine",
+        "radius": 2300
+    },
+    {
+        "id": 36,
+        "name": "friendly_spawn",
+        "override_maps": "mp_shrine",
+        "score": 100
+    },
+    {
+        "id": 37,
+        "name": "enemy",
+        "override_maps": "mp_miniature",
+        "radius": 2100
+    },
+    {
+        "id": 38,
+        "name": "enemy",
+        "override_maps": "mp_arena",
+        "radius": 2600
+    },
+    {
+        "id": 39,
+        "name": "enemy",
+        "override_maps": "mp_cryogen",
+        "radius": 2350
+    },
+    {
+        "id": 40,
+        "name": "friend",
+        "override_gametypes": "clean",
+        "radius": 1000,
+        "score": 100
+    },
+    {
+        "id": 41,
+        "name": "enemy",
+        "override_maps": "mp_ruins",
+        "radius": 2300
+    },
+    {
+        "id": 42,
+        "name": "dom_friendly",
+        "override_maps": "mp_miniature",
+        "radius": 1000
+    },
+    {
+        "id": 43,
+        "name": "dom_friendly",
+        "override_maps": "mp_miniature",
+        "score": 100
+    }
+]

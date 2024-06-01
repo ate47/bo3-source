@@ -1,0 +1,293 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_factory_into",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_new_02_01_pallasintro_vign_appear",
+    "type": "scene",
+    "igdtseqnum": 387,
+    "objects": [
+        {
+            "takedamage": 1,
+            "model": "spawner_enemy_newworld_human_rpg_rocket",
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "mainanim": "ch_new_02_01_pallasintro_vign_appear_badguy",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "name": "factory_intro_enemy",
+            "type": "actor"
+        },
+        {
+            "allowdeath": 1,
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "spawner_ally_newworld_human_assault_ar",
+            "firstframe": 1,
+            "mainanim": "ch_new_02_01_pallasintro_vign_appear_swatguy01",
+            "playerstance": "stand",
+            "name": "factory_intro_soldier_01",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "mainanim": "ch_new_02_01_pallasintro_vign_appear_swatguy02",
+            "firstframe": 1,
+            "model": "spawner_ally_newworld_human_assault_ar",
+            "name": "factory_intro_soldier_02",
+            "type": "actor"
+        },
+        {
+            "name": "factory_intro_soldier_03",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_ally_newworld_human_assault_ar",
+            "playerstance": "stand",
+            "mainanim": "ch_new_02_01_pallasintro_vign_appear_swatguy03",
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "name": "factory_intro_soldier_04",
+            "type": "actor",
+            "firstframe": 1,
+            "model": "spawner_ally_newworld_human_assault_ar",
+            "mainanim": "ch_new_02_01_pallasintro_vign_appear_swatguy04",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "takedamage": 1,
+            "name": "factory_intro_soldier_05",
+            "type": "actor",
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "mainanim": "ch_new_02_01_pallasintro_vign_appear_swatguy05",
+            "model": "spawner_ally_newworld_human_assault_ar",
+            "player": 1,
+            "allowdeath": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "allowdeath": 1,
+            "name": "factory_intro_soldier_06",
+            "type": "actor",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "firstframe": 1,
+            "mainanim": "ch_new_02_01_pallasintro_vign_appear_swatguy06",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "spawner_ally_newworld_human_assault_ar"
+        },
+        {
+            "name": "factory_intro_soldier_07",
+            "type": "actor",
+            "allowdeath": 1,
+            "model": "spawner_ally_newworld_human_assault_ar",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_new_02_01_pallasintro_vign_appear_swatguy07",
+            "firstframe": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "factory_intro_truck_01",
+            "type": "vehicle",
+            "spawnoninit": 1,
+            "model": "veh_t7_civ_truck_pickup_tech_zdf",
+            "player": 1,
+            "playerstance": "stand",
+            "mainanim": "p7_fxanim_cp_newworld_truck_flip_factory_igc_anim",
+            "vmtype": "server",
+            "firstframe": 1
+        },
+        {
+            "spawnoninit": 1,
+            "name": "factory_intro_truck_02",
+            "type": "vehicle",
+            "firstframe": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "model": "veh_t7_civ_truck_pickup_tech_zdf",
+            "vmtype": "server",
+            "mainanim": "v_new_02_01_pallasintro_vign_appear_truck02"
+        },
+        {
+            "playerstance": "stand",
+            "model": "veh_t7_civ_truck_pickup_tech_zdf",
+            "spawnoninit": 1,
+            "name": "factory_intro_truck_03",
+            "type": "vehicle",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "v_new_02_01_pallasintro_vign_appear_truck03",
+            "firstframe": 1
+        },
+        {
+            "deletewhenfinished": 1,
+            "firstframe": 1,
+            "playerstance": "stand",
+            "model": "wpn_t7_launch_xm53_ai_world",
+            "name": "factory_intro_rpg_launcher",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1,
+            "mainanim": "o_new_02_01_pallasintro_vign_appear_badguy_launcher"
+        },
+        {
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "name": "factory_intro_rpg_projectile",
+            "type": "prop",
+            "model": "wpn_t7_launch_xm53_world_projectile",
+            "deletewhenfinished": 1,
+            "mainanim": "o_new_02_01_pallasintro_vign_appear_badguy_projectile"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

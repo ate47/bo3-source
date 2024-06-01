@@ -1,0 +1,287 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_station",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_ram_02_03_station_vign_supply_inventory",
+    "type": "scene",
+    "igdtseqnum": 1172,
+    "objects": [
+        {
+            "takedamage": 1,
+            "model": "c_ega_military_casual_1",
+            "player": 1,
+            "vmtype": "server",
+            "mainblend": 0.2,
+            "mainanim": "ch_ram_02_03_station_vign_supply_inventory_soldier01",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "runsceneondmg0": "none",
+            "type": "actor"
+        },
+        {
+            "runsceneondmg0": "none",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "p7_desk_metal_military_03_tablet",
+            "mainanim": "o_ram_02_03_station_vign_supply_inventory_soldier01_ipad",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "runsceneondmg0": "none",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "takedamage": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_ram_02_03_station_vign_supply_inventory_soldier02",
+            "model": "c_ega_military_casual_2",
+            "type": "actor"
+        },
+        {
+            "type": "prop",
+            "vmtype": "server",
+            "model": "p7_desk_metal_military_03_tablet",
+            "runsceneondmg0": "none",
+            "playerstance": "stand",
+            "mainanim": "o_ram_02_03_station_vign_supply_inventory_soldier02_ipad",
+            "takedamage": 1,
+            "player": 1,
+            "mainblend": 0.2
+        },
+        {
+            "type": "actor",
+            "runsceneondmg0": "none",
+            "model": "c_ega_military_casual_3",
+            "mainblend": 0.2,
+            "mainanim": "ch_ram_02_03_station_vign_supply_inventory_soldier03",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "removeweapon": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "mainblend": 0.2,
+            "runsceneondmg0": "none",
+            "mainanim": "o_ram_02_03_station_vign_supply_inventory_soldier03_ipad",
+            "model": "p7_desk_metal_military_03_tablet",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "actor",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "runsceneondmg0": "none",
+            "removeweapon": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_ram_02_03_station_vign_supply_inventory_soldier04",
+            "player": 1,
+            "vmtype": "server",
+            "model": "c_ega_military_casual_4"
+        },
+        {
+            "name": "(copy)",
+            "type": "prop",
+            "mainblend": 0.2,
+            "model": "p7_desk_metal_military_03_tablet",
+            "runsceneondmg0": "none",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "o_ram_02_03_station_vign_supply_inventory_soldier04_ipad",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "actor",
+            "runsceneondmg0": "none",
+            "model": "c_ega_military_casual_1",
+            "player": 1,
+            "playerstance": "stand",
+            "mainblend": 0.2,
+            "takedamage": 1,
+            "mainanim": "ch_ram_02_03_station_vign_supply_inventory_soldier05",
+            "vmtype": "server",
+            "removeweapon": 1
+        },
+        {
+            "runsceneondmg0": "none",
+            "takedamage": 1,
+            "type": "prop",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "player": 1,
+            "model": "p7_desk_metal_military_03_tablet",
+            "vmtype": "server",
+            "mainanim": "o_ram_02_03_station_vign_supply_inventory_soldier05_ipad"
+        },
+        {
+            "playerstance": "stand",
+            "model": "c_ega_workers1_1",
+            "removeweapon": 1,
+            "mainblend": 0.2,
+            "runsceneondmg0": "none",
+            "overrideaicharacter": 1,
+            "name": "supply_inventory_soldier06",
+            "type": "actor",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_ram_02_03_station_vign_supply_inventory_soldier06"
+        },
+        {
+            "playerstance": "stand",
+            "runsceneondmg0": "none",
+            "model": "p7_desk_metal_military_03_tablet",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "mainblend": 0.2,
+            "takedamage": 1,
+            "mainanim": "o_ram_02_03_station_vign_supply_inventory_soldier06_ipad"
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

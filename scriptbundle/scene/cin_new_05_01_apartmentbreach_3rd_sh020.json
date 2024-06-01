@@ -1,0 +1,252 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_apartment_igc",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "cameraswitcher": "c_new_05_01_apartmentbreach_3rd_shot020_camera",
+    "name": "cin_new_05_01_apartmentbreach_3rd_sh020",
+    "type": "scene",
+    "nextscenebundle": "cin_new_05_01_apartmentbreach_3rd_sh030",
+    "igdtseqnum": 440,
+    "objects": [
+        {
+            "model": "c_civ_zur_informant_fb",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_new_05_01_apartmentbreach_3rd_shot020_johneveryman",
+            "playerstance": "stand",
+            "name": "chase_bomber_ai",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "model": "spawner_enemy_sec_robot_assault_ar",
+            "mainanim": "ch_new_05_01_apartmentbreach_3rd_shot020_robot01",
+            "playerstance": "stand",
+            "name": "apartment_igc_robot01",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "mainanim": "ch_new_05_01_apartmentbreach_3rd_shot020_robot02",
+            "model": "spawner_enemy_sec_robot_assault_ar",
+            "name": "apartment_igc_robot02",
+            "type": "actor"
+        },
+        {
+            "name": "apartment_igc_robot03",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_enemy_sec_robot_assault_ar",
+            "playerstance": "stand",
+            "mainanim": "ch_new_05_01_apartmentbreach_3rd_shot020_robot03",
+            "player": 1
+        },
+        {
+            "name": "new object 6",
+            "type": "player",
+            "sharedigc": 1,
+            "model": "c_hro_playermale_egypt",
+            "mainanim": "pb_new_05_01_apartmentbreach_3rd_shot020_player",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "name": "apartment_igc_soldier02",
+            "type": "actor",
+            "diewhenfinished": 1,
+            "mainanim": "ch_new_05_01_apartmentbreach_3rd_shot020_soldier02",
+            "model": "spawner_ally_newworld_human_cqb_shotgun",
+            "player": 1,
+            "allowdeath": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "apartment_igc_soldier03",
+            "type": "actor",
+            "playerstance": "stand",
+            "mainanim": "ch_new_05_01_apartmentbreach_3rd_shot020_soldier03",
+            "player": 1,
+            "vmtype": "server",
+            "model": "spawner_ally_newworld_human_assault_ar"
+        },
+        {
+            "name": "apartment_igc_robot04",
+            "type": "actor",
+            "model": "spawner_enemy_sec_robot_assault_ar",
+            "playerstance": "stand",
+            "mainanim": "ch_new_05_01_apartmentbreach_3rd_shot020_robot04",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "highexitlandheight": 28,
+    "model": "veh_t7_mil_vtol_dropship_troopcarrier",
+    "dropspeed": 350,
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "name": "vtol_riders",
+    "type": "vehicleriders",
+    "objects": [
+        {
+            "exithighlandanim": "ai_crew_crobot_vtolrider_highdrop_land",
+            "rideanim": "ai_crew_crobot_vtolrider_idle_left",
+            "position": "driver",
+            "exithighloopanim": "ai_crew_crobot_vtolrider_highdrop_loop",
+            "exithighanim": "ai_crew_crobot_vtolrider_highdrop_intro_left",
+            "aligntag": "tag_troops_animate"
+        },
+        {
+            "rideanim": "ai_crew_vtol_captain_idle",
+            "position": "passenger1",
+            "aligntag": "tag_rider1"
+        },
+        {
+            "exithighanim": "ai_crew_vtol_1_norope_drop_intro",
+            "exithighlandanim": "ai_crew_vtol_1_norope_drop_landing",
+            "exithighloopanim": "ai_crew_vtol_1_norope_drop_loop",
+            "rideanim": "ai_crew_vtol_1_norope_idle",
+            "position": "crew1",
+            "aligntag": "tag_troops_animate"
+        },
+        {
+            "vehicleexitanim": "v_crew_vtol_hatch_back_open",
+            "exithighlandanim": "ai_crew_vtol_2_norope_drop_landing",
+            "exithighloopanim": "ai_crew_vtol_2_norope_drop_loop",
+            "exithighanim": "ai_crew_vtol_2_norope_drop_intro",
+            "rideanim": "ai_crew_vtol_2_norope_idle",
+            "position": "crew2",
+            "aligntag": "tag_rider1"
+        },
+        {
+            "exithighlandanim": "ai_crew_vtol_3_norope_drop_landing",
+            "exithighloopanim": "ai_crew_vtol_3_norope_drop_loop",
+            "rideanim": "ai_crew_vtol_3_norope_idle",
+            "exithighanim": "ai_crew_vtol_3_norope_drop_intro",
+            "position": "crew3",
+            "vehicleexitanim": "v_crew_vtol_hatch_back_open",
+            "aligntag": "tag_rider1"
+        },
+        {
+            "exithighlandanim": "ai_crew_vtol_4_norope_drop_landing",
+            "exithighloopanim": "ai_crew_vtol_4_norope_drop_loop",
+            "vehicleexitanim": "v_crew_vtol_hatch_back_open",
+            "rideanim": "ai_crew_vtol_4_norope_idle",
+            "position": "crew4",
+            "aligntag": "tag_rider1",
+            "exithighanim": "ai_crew_vtol_4_norope_drop_intro"
+        },
+        {
+            "exithighanim": "ai_crew_vtol_5_norope_drop_intro",
+            "exithighloopanim": "ai_crew_vtol_5_norope_drop_loop",
+            "rideanim": "ai_crew_vtol_5_norope_idle",
+            "position": "crew5",
+            "aligntag": "tag_rider1",
+            "vehicleexitanim": "v_crew_vtol_hatch_left_open",
+            "exithighlandanim": "ai_crew_vtol_5_norope_drop_landing"
+        },
+        {
+            "exithighloopanim": "ai_crew_vtol_6_norope_drop_loop",
+            "exithighanim": "ai_crew_vtol_6_norope_drop_intro",
+            "vehicleexitanim": "v_crew_vtol_hatch_left_open",
+            "rideanim": "ai_crew_vtol_6_norope_idle",
+            "position": "crew6",
+            "aligntag": "tag_rider1",
+            "exithighlandanim": "ai_crew_vtol_6_norope_drop_landing"
+        },
+        {
+            "exithighloopanim": "ai_crew_vtol_7_norope_drop_loop",
+            "exithighanim": "ai_crew_vtol_7_norope_drop_intro",
+            "rideanim": "ai_crew_vtol_7_norope_idle",
+            "position": "crew7",
+            "exithighlandanim": "ai_crew_vtol_7_norope_drop_landing",
+            "aligntag": "tag_rider1",
+            "vehicleexitanim": "v_crew_vtol_hatch_right_open"
+        },
+        {
+            "position": "crew8",
+            "aligntag": "tag_rider1",
+            "vehicleexitanim": "v_crew_vtol_hatch_right_open",
+            "exithighlandanim": "ai_crew_vtol_8_norope_drop_landing",
+            "exithighanim": "ai_crew_vtol_8_norope_drop_intro",
+            "exithighloopanim": "ai_crew_vtol_8_norope_drop_loop",
+            "rideanim": "ai_crew_vtol_8_norope_idle"
+        }
+    ]
+}

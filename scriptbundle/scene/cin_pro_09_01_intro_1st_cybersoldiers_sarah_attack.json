@@ -1,0 +1,282 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_hangar",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_pro_09_01_intro_1st_cybersoldiers_sarah_attack",
+    "type": "scene",
+    "igdtseqnum": 293,
+    "objects": [
+        {
+            "model": "spawner_ally_hero_theia_prologue",
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_sarah_sarah",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "name": "theia",
+            "type": "actor"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "diewhenfinished": 1,
+            "takedamage": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "firstframe": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_sarah_guard01",
+            "playerstance": "stand",
+            "name": "sarah_guard_01",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "takedamage": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_sarah_guard02",
+            "firstframe": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "diewhenfinished": 1,
+            "name": "sarah_guard_02",
+            "type": "actor"
+        },
+        {
+            "name": "sarah_guard_03",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "diewhenfinished": 1,
+            "playerstance": "stand",
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_sarah_guard03",
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "name": "sarah_guard_04",
+            "type": "actor",
+            "firstframe": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_sarah_guard04",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "diewhenfinished": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "takedamage": 1,
+            "name": "sarah_guard_05",
+            "type": "actor",
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "diewhenfinished": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_sarah_guard05",
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "sarah_guard_06",
+            "type": "actor",
+            "diewhenfinished": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "firstframe": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_sarah_guard06",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "spawner_enemy_nrc_human_assault_ar"
+        },
+        {
+            "name": "sarah_guard_07",
+            "type": "actor",
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_sarah_guard07",
+            "firstframe": 1,
+            "diewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "sarah_guard_08",
+            "type": "actor",
+            "diewhenfinished": 1,
+            "spawnoninit": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_sarah_guard08",
+            "vmtype": "server",
+            "firstframe": 1
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

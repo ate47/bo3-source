@@ -1,0 +1,274 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "bedroom_anim_struct",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "script_objective": "killing_streets",
+    "name": "cin_ven_02_20_synckill_vign",
+    "type": "scene",
+    "igdtseqnum": 823,
+    "objects": [
+        {
+            "takedamage": 1,
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "mainanim": "ch_ven_02_20_synckill_vign_enemy1",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "allowdeath": 1,
+            "name": "synckill_enemy1",
+            "type": "actor"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "spawner_enemy_54i_human_cqb_shotgun",
+            "firstframe": 1,
+            "mainanim": "ch_ven_02_20_synckill_vign_enemy2",
+            "playerstance": "stand",
+            "name": "synckill_enemy2",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "spawnoninit": 1,
+            "takedamage": 1,
+            "mainanim": "ch_ven_02_20_synckill_vign_enemy3",
+            "firstframe": 1,
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "name": "synckill_enemy3",
+            "type": "actor"
+        },
+        {
+            "name": "bedroom_door_left",
+            "type": "prop",
+            "vmtype": "server",
+            "model": "p7_cai_door_wood_decorative_01_rt",
+            "playerstance": "stand",
+            "mainanim": "o_ven_02_20_synckill_vign_leftdoor",
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "name": "bedroom_door_right",
+            "type": "prop",
+            "firstframe": 1,
+            "model": "p7_cai_door_wood_decorative_01_lft",
+            "mainanim": "o_ven_02_20_synckill_vign_rightdoor",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "synckill_dead_civilian",
+            "type": "actor",
+            "nospawn": 1,
+            "removeweapon": 1,
+            "firstframe": 1,
+            "diewhenfinished": 1,
+            "mainanim": "ch_ven_02_20_synckill_vign_civilian",
+            "model": "spawner_civilian_vengeance_generic",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "synckill_husband",
+            "type": "actor",
+            "diewhenfinished": 1,
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "firstframe": 1,
+            "nospawn": 1,
+            "mainanim": "ch_ven_02_20_synckill_vign_husband",
+            "player": 1,
+            "vmtype": "server",
+            "model": "spawner_civilian_vengeance_generic"
+        },
+        {
+            "name": "synckill_wife",
+            "type": "actor",
+            "model": "spawner_civilian_vengeance_generic_female",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "mainanim": "ch_ven_02_20_synckill_vign_wife",
+            "firstframe": 1,
+            "diewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server",
+            "nospawn": 1
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

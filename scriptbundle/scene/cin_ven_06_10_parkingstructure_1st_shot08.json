@@ -1,0 +1,270 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "garage_igc_script_node",
+    "configstringfiletype": "scriptbundle",
+    "dontthrottle": 1,
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_ven_06_10_parkingstructure_1st_shot08",
+    "type": "scene",
+    "igdtseqnum": 923,
+    "objects": [
+        {
+            "model": "c_t7_ally_fb",
+            "viewclampright": 15,
+            "viewclampbottom": 15,
+            "player": 1,
+            "sharedigc": 1,
+            "vmtype": "server",
+            "viewclampleft": 15,
+            "mainanim": "pb_ven_06_10_parkingstructure_1st_shot8_player",
+            "viewclamptop": 15,
+            "playerstance": "stand",
+            "name": "player 1",
+            "type": "player"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "model": "spawner_ally_hero_hendricks_vengeance",
+            "mainanim": "ch_ven_06_10_parkingstructure_1st_shot8_hendricks",
+            "playerstance": "stand",
+            "name": "hendricks",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "mainanim": "ch_ven_06_10_parkingstructure_1st_shot8_police_i",
+            "deletewhenfinished": 1,
+            "model": "spawner_ally_sing_human_assault_ar",
+            "name": "police_i",
+            "type": "actor"
+        },
+        {
+            "name": "police_j",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_ally_sing_human_assault_ar",
+            "playerstance": "stand",
+            "deletewhenfinished": 1,
+            "mainanim": "ch_ven_06_10_parkingstructure_1st_shot8_police_j",
+            "player": 1
+        },
+        {
+            "name": "enemy_a",
+            "type": "actor",
+            "deletewhenfinished": 1,
+            "model": "spawner_enemy_54i_human_sniper_sniperrifle",
+            "mainanim": "ch_ven_06_10_parkingstructure_1st_shot8_enemy_a",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "enemy_d",
+            "type": "actor",
+            "deletewhenfinished": 1,
+            "mainanim": "ch_ven_06_10_parkingstructure_1st_shot8_enemy_d",
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "enemy_e",
+            "type": "actor",
+            "playerstance": "stand",
+            "mainanim": "ch_ven_06_10_parkingstructure_1st_shot8_enemy_e",
+            "player": 1,
+            "vmtype": "server",
+            "deletewhenfinished": 1,
+            "model": "spawner_enemy_54i_human_assault_ar"
+        },
+        {
+            "name": "enemy_f",
+            "type": "actor",
+            "model": "spawner_enemy_54i_human_sniper_sniperrifle",
+            "playerstance": "stand",
+            "mainanim": "ch_ven_06_10_parkingstructure_1st_shot8_enemy_f",
+            "deletewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "enemy_g",
+            "type": "actor",
+            "deletewhenfinished": 1,
+            "model": "spawner_enemy_54i_human_sniper_sniperrifle",
+            "player": 1,
+            "playerstance": "stand",
+            "mainanim": "ch_ven_06_10_parkingstructure_1st_shot8_enemy_g",
+            "vmtype": "server"
+        },
+        {
+            "name": "enemy_h",
+            "type": "actor",
+            "playerstance": "stand",
+            "player": 1,
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "vmtype": "server",
+            "mainanim": "ch_ven_06_10_parkingstructure_1st_shot8_enemy_h"
+        },
+        {
+            "playerstance": "stand",
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "name": "enemy_i",
+            "type": "actor",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_ven_06_10_parkingstructure_1st_shot8_enemy_i"
+        },
+        {
+            "deletewhenfinished": 1,
+            "playerstance": "stand",
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "name": "enemy_j",
+            "type": "actor",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_ven_06_10_parkingstructure_1st_shot8_enemy_j"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "name": "technical_truck_2",
+            "type": "vehicle",
+            "model": "veh_t7_civ_truck_pickup_tech_54i",
+            "mainanim": "v_ven_06_10_parkingstructure_1st_shot8_technical_b"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "hacked": "hacked",
+    "ready": "ready",
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "destroyed": "destroyed",
+    "timeoutconfirmed0": "timeout_pilot_1",
+    "timeoutconfirmed1": "timeout_pilot_2",
+    "timeoutconfirmed2": "timeout_pilot_3",
+    "timeoutconfirmed3": "timeout_pilot_4",
+    "name": "blops_taacom_kls_raps_deployship",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_tacb_kls_raps_",
+    "firewallhacked": "hacked_fw",
+    "beinghacked": "being_hacked",
+    "firewallbeinghacked": "being_hacked_fw",
+    "igdtseqnum": 71
+}

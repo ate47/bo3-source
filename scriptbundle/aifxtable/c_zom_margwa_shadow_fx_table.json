@@ -1,0 +1,11 @@
+{
+    "vmtype": "client",
+    "surfacefxtable_landing": "player_jump_start",
+    "configstringfiletype": "scriptbundle",
+    "surfacefxtable_vtollanding": "player_vtol_drop",
+    "name": "c_zom_margwa_shadow_fx_table",
+    "type": "aifxtable",
+    "surfacefxtable_footstep": "zmb_margwa_footstep_shadow",
+    "surfacefxtable_jumping": "player_jump_start",
+    "igdtseqnum": 55
+}

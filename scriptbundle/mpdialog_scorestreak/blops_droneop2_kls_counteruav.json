@@ -1,0 +1,11 @@
+{
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "timecheck": "time_check",
+    "name": "blops_droneop2_kls_counteruav",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_bdo2_kls_counteruav_",
+    "timeout": "timeout",
+    "arrive": "arrive",
+    "igdtseqnum": 137
+}

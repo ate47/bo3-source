@@ -1,0 +1,99 @@
+0,mus_prologue_battle_intro,Black Ops,Jack Wall,,campaign
+1,mus_title_screen_intro,I Live (Electronic),Brian Tuey,,lobby;campaign
+2,mus_mp_lobby_intro,Ignition,Brian Tuey,,lobby;multiplayer
+3,mus_cp_lobby_intro,Safehouse,Brian Tuey,,lobby;campaign
+4,mus_zm_lobby_intro,Damned 3,Kevin Sherwood,Brian Tuey,lobby;zombies
+5,mus_new_world_chase_intro,Chasing Secrets,Jack Wall,,campaign
+6,mus_new_world_brave_intro,Brave,Brian Tuey,,campaign
+7,mus_blackstation_theme_intro,In Darkness,Jack Wall,,campaign
+8,mus_biodomes_battle_intro,Provocation,Jack Wall,,campaign
+9,mus_sgen_diaz_theme_intro,Hypocenter,Jack Wall,,campaign
+10,mus_ramses_battle_intro,Ramses,Jack Wall,,campaign
+11,mus_vengeance_alerted_intro,Vengeance,Jack Wall,,campaign
+12,mus_aquifer_comm_tower_intro,Sand Castle,Jack Wall,,campaign
+13,mus_infection_church_intro,Ego Vivo,Jack Wall,,campaign
+14,mus_lotus_theme_intro,Lotus Towers,Jack Wall,,campaign
+15,mus_coalescence_theme_intro,A World Upside Down,Jack Wall,,campaign
+16,mus_i_live_orchestral_intro,I Live (Orchestral),Jack Wall,,campaign
+17,mus_snake_skin_boots_intro,Snake Skin Boots,Jack Wall,,zombies
+18,mus_cold_hard_cash_intro,Cold Hard Cash,Jack Wall,,zombies
+19,mus_snake_skin_intrumental_intro,Snake Skin Boots (Instrumental),Jack Wall,,zombies
+20,mus_lullaby_for_a_dead_man_intro,Lullaby For a Dead Man,Kevin Sherwood,,zombies
+21,mus_the_one_intro,The One,Kevin Sherwood,,zombies
+22,mus_beauty_of_annihilation_intro,Beauty Of Annihilation,Kevin Sherwood,,zombies
+23,mus_115_intro,115,Kevin Sherwood,,zombies
+24,mus_abra_cadavre_intro,Abra Cadavre,Kevin Sherwood,,zombies
+25,mus_pareidolia_intro,Pareidolia,Kevin Sherwood,,zombies
+26,mus_coming_home_intro,Coming Home,Kevin Sherwood,,zombies
+27,mus_carrion_intro,Carrion,Kevin Sherwood,,zombies
+28,mus_we_all_fall_down_intro,We All Fall Down,Kevin Sherwood,,zombies
+29,mus_always_running_intro,Always Running,Kevin Sherwood,,zombies
+30,mus_where_are_we_going_intro,Where Are We Going,Kevin Sherwood,James McCawley,zombies
+31,mus_archangel_intro,Archangel,Kevin Sherwood,,zombies
+32,mus_beauty_the_giant_mix_intro,Beauty Of Annihilation (Giant Mix),Brian Tuey,,zombies
+33,mus_dystopia_intro,Dystopia,Jack Wall,,multiplayer
+34,mus_filter_intro,Filter,Brian Tuey,,multiplayer
+35,mus_immersion_intro,Immersion,Brian Tuey,,multiplayer
+36,mus_ruin_intro,Ruin,Jack Wall,,multiplayer
+37,mus_cod_bites_intro,Jade Helm,Avenged Sevenfold,,multiplayer
+38,mus_through_the_trees_intro,Through The Trees,Jack Wall,Brian Tuey,lobby;zombies
+39,mus_unstoppable_intro,Unstoppable,Afrojack,,multiplayer
+40,mus_poison_mushroom_oneshot_intro,Poison Mushroom,James McCawley,,doa
+41,mus_115_riddle_oneshot_intro,115 Riddles,Brian Tuey,,doa
+42,mus_clockwork_squares_oneshot_intro,Clockwork Squared,James McCawley,,doa
+43,mus_vengeance_alerted_intro,Vengeance Battle,Jack Wall,,campaign
+44,mus_abra_macabre_intro,Abra Macabre,Kevin Sherwood,,doa
+45,mus_laughcorpse_intro,Laughing Corpses,James McCawley,,doa
+46,mus_apc_intro,APC ,Jack Wall,,campaign
+47,mus_dead_again_intro,Dead Again,Kevin Sherwood,,zombies
+48,mus_dead_flowers_intro,Dead Flowers,Kevin Sherwood,James McCawley,zombies
+49,mus_darkstar_intro,Darkstar,Shawn Jimmerson,,multiplayer
+50,mus_platform_of_dreams_intro,Platform of Dreams,Brian Tuey,,zombies
+51,mus_legendary_intro,Legendary,Brian Tuey,,zombies
+52,mus_skulls_of_the_damned_intro,Skulls of the Damned,Brian Tuey,,zombies
+53,mus_arachnophobia_intro,Arachnophobia,Brian Tuey,,zombies
+54,mus_betrayal_intro,Betrayal,Brian Tuey,,zombies
+55,mus_zetsubou_no_shima_intro,Zetsubou No Shima,Brian Tuey,,zombies
+56,mus_the_frozen_forest_intro,The Frozen Forest,Jack Wall,,campaign
+57,mus_from_the_brink_of_death_intro,From the Brink of Death,Jack Wall,,campaign
+58,mus_riding_the_tempest_intro,Riding the Tempest,Jack Wall,,campaign
+59,mus_into_the_q_zone_intro,Into the Q Zone,Jack Wall,,campaign
+60,mus_horrors_in_the_silo_intro,Horrors in the Silo,Jack Wall,,campaign
+61,mus_diaz_intro,Diaz,Jack Wall,,campaign
+62,mus_burn_rescue_intro,Burn Rescue,Jack Wall,,campaign
+63,mus_samanthas_lullaby_magicmix_intro,Samantha's Lullaby (Magic Mix),Brian Tuey,,zombies
+64,mus_dead_ended_intro,Dead Ended,Kevin Sherwood,,zombies
+65,mus_blood_of_stalingrad_intro,Blood of Stalingrad,Brian Tuey,,zombies
+66,mus_king_of_the_hill_intro,King of the Hill,Brian Tuey,,zombies
+67,mus_samanthas_sorrow_intro,Samantha's Sorrow,Brian Tuey,,zombies
+68,mus_damned_intro,Damned,Kevin Sherwood,,zombies
+69,mus_damned_2_intro,Damned 100AE,Kevin Sherwood,Brian Tuey,zombies
+70,mus_damned_25_intro,Damned 3 (Instrumental) ,Kevin Sherwood,Brian Tuey,zombies
+71,mus_the_gift_intro,The Gift,Kevin Sherwood,,zombies
+72,mus_archangel_theatrical_mix_intro,Archangel (Theatrical Mix),Brian Tuey,Kevin Sherwood,zombies
+73,mus_dead_again_theatrical_mix_intro,Dead Again (Theatrical Mix),Brian Tuey,Kevin Sherwood,zombies
+74,mus_the_gift_theatrical_intro,The Gift (Theatrical Mix),Brian Tuey,Kevin Sherwood,zombies
+75,mus_wtf_intro,WTF,Brian Tuey,Kevin Sherwood,zombies
+76,mus_aether_intro,Aether,Brian Tuey,,zombies
+77,mus_blood_red_moon_intro,Blood Red Moon,Brian Tuey,,zombies
+78,mus_death_bell_intro,Death Bell,Brian Tuey,,zombies
+79,mus_desolation_intro,Desolation,Brian Tuey,,zombies
+80,mus_high_noon_intro,High Noon,Brian Tuey,,zombies
+81,mus_maskwalk_intro,Mask Walk,Kevin Sherwood,,zombies
+82,mus_quest_noir_intro,Ouest Noir,Brian Tuey,,zombies
+83,mus_richtofans_delight_intro,Richtofen's Delight,Brian Tuey,,zombies
+84,mus_samanthas_desire_intro,Samantha's Desire,Brian Tuey,,zombies
+85,mus_short_arm_of_the_law_intro,Short Arm of the Law,Brian Tuey,,zombies
+86,mus_theme_from_buried_intro,Buried (Theme),Brian Tuey,,zombies
+87,mus_undone_intro,Undone,Kevin Sherwood,,zombies
+88,mus_revelations_intro,Revelations,James McCawley,,zombies
+89,mus_a_rising_power_intro,Zombies Chronicles: A Rising Power,Brian Tuey,,zombies
+90,mus_one_way_out_intro,Zombies Chronicles: One Way Out,Brian Tuey,,zombies
+91,mus_flesh_and_bone_intro,Zombies Chronicles: Flesh and Bone,Brian Tuey,,zombies
+92,mus_crypt_intro,Zombies Chronicles: Crypt,Brian Tuey,,zombies
+93,mus_sam_journey_intro,Zombies Chronicles: Samantha's Journey,Brian Tuey,,zombies
+94,mus_remember_forever_intro,Zombies Chronicles: Remember Forever,Jack Wall/Cindy Shapiro,Brian Tuey,zombies
+95,mus_the_end_is_near_intro,Zombies Chronicles: The End Is Near,Brian Tuey,Kevin Sherwood,zombies
+96,mus_nightmare_intro,Nightmare,Avenged Sevenfold,,zombies
+97,mus_not_ready_to_die_intro,Not Ready To Die,Avenged Sevenfold,,zombies
+98,mus_shepherd_of_fire_intro,Shepherd of Fire,Avenged Sevenfold,,zombies

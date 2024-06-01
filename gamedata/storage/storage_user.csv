@@ -1,0 +1,42 @@
+user_settings,gamedata/ddl/common/profile_common.ddl,2,1,hdd,readOnLogin
+shoutcaster_settings,gamedata/ddl/common/profile_shoutcaster.ddl,1,1,hdd,readOnLogin
+cp_savegame_online,,40,1,dwuser,readOnLogin
+//cp_savegame_mod,,40,1,hdd,readOnLogin mod
+cp_savegame_offline,,40,1,hdd,readOnLogin mod
+cp_nightmare_savegame_online,,40,1,dwuser,readOnLogin
+//cp_nightmare_savegame_mod,,40,1,hdd,readOnLogin mod
+cp_nightmare_savegame_offline,,40,1,hdd,readOnLogin mod
+stats_cp,gamedata/ddl/cp/cp_stats.ddl,63,1,dwuser,readOnLogin useScratch sendToServer serverCP serverOnline
+//stats_cp_mod,gamedata/ddl/cp/cp_stats.ddl,63,1,hdd,readOnLogin useScratch sendToServer serverCP serverOnline mod
+stats_cp_offline,gamedata/ddl/cp/cp_stats_offline.ddl,65,1,hdd,readOnLogin useScratch sendToServer serverCP serverLAN mod
+stats_cp_nightmare,gamedata/ddl/cp/cp_stats.ddl,63,1,dwuser,readOnLogin useScratch sendToServer serverCPZM serverOnline
+//stats_cp_nightmare_mod,gamedata/ddl/cp/cp_stats.ddl,63,1,hdd,readOnLogin useScratch sendToServer serverCPZM serverOnline mod
+stats_cp_nightmare_offline,gamedata/ddl/cp/cp_stats_offline.ddl,65,1,hdd,readOnLogin useScratch sendToServer serverCPZM serverLAN mod
+stats_mp,gamedata/ddl/mp/mp_stats.ddl,128,1,dwuser,readOnLogin useScratch sendToServer serverMP serverOnline
+//stats_mp_mod,gamedata/ddl/mp/mp_stats.ddl,106,1,hdd,readOnLogin useScratch sendToServer serverMP serverOnline mod
+stats_mp_offline,gamedata/ddl/mp/mp_stats_offline.ddl,110,1,hdd,readOnLogin useScratch sendToServer serverMP serverLAN mod
+stats_zm,gamedata/ddl/zm/zm_stats.ddl,54,1,dwuser,readOnLogin useScratch sendToServer serverZM serverOnline
+//stats_zm_mod,gamedata/ddl/zm/zm_stats.ddl,54,1,hdd,readOnLogin useScratch sendToServer serverZM serverOnline mod
+stats_zm_offline,gamedata/ddl/zm/zm_stats_offline.ddl,54,1,hdd,readOnLogin useScratch sendToServer serverZM serverLAN mod
+stats_fr,gamedata/ddl/fr/fr_stats.ddl,60,1,dwuser,readOnLogin useScratch sendToServer serverFR serverOnline
+//stats_fr_mod,gamedata/ddl/fr/fr_stats.ddl,60,1,hdd,readOnLogin useScratch sendToServer serverFR serverOnline mod
+stats_fr_offline,gamedata/ddl/fr/fr_stats_offline.ddl,60,1,hdd,readOnLogin useScratch sendToServer serverFR serverLAN mod
+loadouts_mp,gamedata/ddl/loadouts/mp_loadouts.ddl,22,1,dwuser,readOnLogin sendToServer serverMP serverFR serverOnline
+//loadouts_mp_mod,gamedata/ddl/loadouts/mp_loadouts.ddl,22,1,hdd,readOnLogin sendToServer serverMP serverFR serverOnline mod
+loadouts_mp_offline,gamedata/ddl/loadouts/mp_loadouts_offline.ddl,22,1,hdd,readOnLogin sendToServer serverMP serverFR serverLAN mod
+loadouts_cp,gamedata/ddl/loadouts/cp_loadouts.ddl,7,1,dwuser,readOnLogin sendToServer serverCP serverCPZM serverOnline
+//loadouts_cp_mod,gamedata/ddl/loadouts/cp_loadouts.ddl,7,1,hdd,readOnLogin sendToServer serverCP serverCPZM serverOnline mod
+loadouts_cp_offline,gamedata/ddl/loadouts/cp_loadouts_offline.ddl,7,1,hdd,readOnLogin sendToServer serverCP serverCPZM serverLAN mod
+loadouts_zm,gamedata/ddl/loadouts/zm_loadouts.ddl,13,1,dwuser,readOnLogin sendToServer serverZM serverOnline
+//loadouts_zm_mod,gamedata/ddl/loadouts/zm_loadouts.ddl,13,1,hdd,readOnLogin sendToServer serverZM serverOnline mod
+loadouts_zm_offline,gamedata/ddl/loadouts/zm_loadouts_offline.ddl,13,1,hdd,readOnLogin sendToServer serverZM serverLAN mod
+class_sets_mp,gamedata/ddl/mp/class_sets.ddl,36,1,dwuser,readOnLogin
+craft_paintshopdata,gamedata/ddl/common/class_paintshop.ddl,152,1,memory,
+craft_gunsmith,gamedata/ddl/common/gunsmith.ddl,13,1,dwuser,readOnLogin
+craft_paintjobs,gamedata/ddl/common/paintjobs.ddl,64,10,dwuser,readOnLogin
+craft_emblems,gamedata/ddl/common/emblems.ddl,64,1,dwuser,readOnLogin
+gamedata/ddldata/common/default_emblems.ddldata,gamedata/ddl/common/emblems.ddl,64,1,fastfile,readOnLogin readOnly
+gamedata/ddldata/common/loot_emblems.ddldata,gamedata/ddl/common/emblems.ddl,64,5,fastfile,readOnLogin readOnly
+gamedata/ddldata/common/official_customgames.ddldata,gamedata/ddl/common/custom_games.ddl,64,1,fastfile,readOnLogin readOnly
+external_data,gamedata/ddl/common/external_data.ddl,1,1,dwuser,readOnLogin readOnly
+custom_games,gamedata/ddl/common/custom_games.ddl,64,10,dwuser,readOnLogin mod

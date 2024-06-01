@@ -1,0 +1,287 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_robot_defend",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_pro_20_01_rippedapart_murder",
+    "type": "scene",
+    "streamerhint": "cin_pro_20_01_rippedapart_murder",
+    "igdtseqnum": 165,
+    "objects": [
+        {
+            "takedamage": 1,
+            "cameratween": 0.2,
+            "model": "c_hro_playermale_prologue_body_cin_botharmsoff",
+            "viewclampright": 5,
+            "viewclampbottom": 2,
+            "player": 1,
+            "sharedigc": 1,
+            "vmtype": "server",
+            "viewclampleft": 5,
+            "mainanim": "pb_pro_20_01_rippedapart_murder_player",
+            "viewclamptop": 2,
+            "playerstance": "stand",
+            "nospawn": 1,
+            "name": "new object 1",
+            "type": "player"
+        },
+        {
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "model": "c_nrc_assault_prologue_viewbody_g_larmspawn",
+            "mainanim": "ch_pro_20_01_rippedapart_murder_leftarm",
+            "playerstance": "stand",
+            "name": "leftarm",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "mainanim": "ch_pro_20_01_rippedapart_murder_rightarm",
+            "model": "c_nrc_assault_prologue_viewbody_g_rarmspawn",
+            "name": "rightarm",
+            "type": "actor"
+        },
+        {
+            "name": "robot",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_enemy_prologue_robot_suppressor_ar",
+            "playerstance": "stand",
+            "deletewhenfinished": 1,
+            "mainanim": "ch_pro_20_01_rippedapart_murder_robot",
+            "removeweapon": 1,
+            "takedamage": 1,
+            "player": 1
+        },
+        {
+            "name": "robot 02",
+            "type": "actor",
+            "deletewhenfinished": 1,
+            "model": "spawner_enemy_prologue_robot_suppressor_ar",
+            "mainanim": "ch_pro_20_01_rippedapart_murder_robot_02",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "removeweapon": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "name": "robot 03",
+            "type": "actor",
+            "deletewhenfinished": 1,
+            "removeweapon": 1,
+            "mainanim": "ch_pro_20_01_rippedapart_murder_robot_03",
+            "model": "spawner_enemy_prologue_robot_suppressor_ar",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "robot 04",
+            "type": "actor",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "removeweapon": 1,
+            "mainanim": "ch_pro_20_01_rippedapart_murder_robot_04",
+            "player": 1,
+            "vmtype": "server",
+            "deletewhenfinished": 1,
+            "model": "spawner_enemy_prologue_robot_suppressor_ar"
+        },
+        {
+            "name": "robot 05",
+            "type": "actor",
+            "model": "spawner_enemy_prologue_robot_suppressor_ar",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "removeweapon": 1,
+            "mainanim": "ch_pro_20_01_rippedapart_murder_robot_05",
+            "deletewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "robot 06",
+            "type": "actor",
+            "deletewhenfinished": 1,
+            "model": "spawner_enemy_prologue_robot_suppressor_ar",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_pro_20_01_rippedapart_murder_robot_06",
+            "vmtype": "server",
+            "removeweapon": 1
+        },
+        {
+            "deletewhenfinished": 1,
+            "takedamage": 1,
+            "name": "robot 07",
+            "type": "actor",
+            "playerstance": "stand",
+            "player": 1,
+            "model": "spawner_enemy_prologue_robot_suppressor_ar",
+            "vmtype": "server",
+            "mainanim": "ch_pro_20_01_rippedapart_murder_robot_07",
+            "removeweapon": 1
+        },
+        {
+            "playerstance": "stand",
+            "model": "spawner_enemy_prologue_robot_suppressor_ar",
+            "removeweapon": 1,
+            "deletewhenfinished": 1,
+            "name": "robot 08",
+            "type": "actor",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_pro_20_01_rippedapart_murder_robot_08"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

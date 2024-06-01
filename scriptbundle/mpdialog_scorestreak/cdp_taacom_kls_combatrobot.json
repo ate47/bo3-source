@@ -1,0 +1,15 @@
+{
+    "hacked": "hacked",
+    "ready": "ready",
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "destroyed": "destroyed",
+    "name": "cdp_taacom_kls_combatrobot",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_tacc_kls_robot_",
+    "firewallhacked": "hacked_fw",
+    "beinghacked": "being_hacked",
+    "timeout": "timeout",
+    "firewallbeinghacked": "being_hacked_fw",
+    "igdtseqnum": 99
+}

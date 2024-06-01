@@ -1,0 +1,14 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "cp_medal_complete_on_veteran",
+    "type": "medalcaseentry",
+    "igdtseqnum": 8,
+    "largeIcon": "t7_icon_achievement_safehouse_09",
+    "smallIcon": "t7_icon_achievement_safehouse_09",
+    "model": "p7_medal_achievements_safehouse_09",
+    "requirements": "CPUI_MEDAL_COMPLETE_ON_VETERAN_REQ",
+    "aarDisplayName": "CPUI_MEDAL_COMPLETE_ON_VETERAN_AAR",
+    "displayName": "CPUI_MEDAL_COMPLETE_ON_VETERAN",
+    "XPBonus": 5000
+}

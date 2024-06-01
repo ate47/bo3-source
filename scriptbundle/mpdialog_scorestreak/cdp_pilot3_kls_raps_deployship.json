@@ -1,0 +1,14 @@
+{
+    "wavestart": "deploy",
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "wavestartfinal": "deploy_last",
+    "destroyed": "destroyed",
+    "name": "cdp_pilot3_kls_raps_deployship",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_crp2_kls_raps_",
+    "timeout": "leave",
+    "arrive": "arrive",
+    "igdtseqnum": 92,
+    "damaged": "damaged"
+}

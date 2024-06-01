@@ -1,0 +1,273 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_hangar",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_pro_09_01_intro_1st_cybersoldiers_taylor_attack",
+    "type": "scene",
+    "nextscenebundle": "cin_pro_09_01_intro_1st_cybersoldiers_confrontation",
+    "igdtseqnum": 294,
+    "objects": [
+        {
+            "model": "spawner_ally_hero_prometheus_prologue",
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_taylor_taylor",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "name": "prometheus",
+            "type": "actor"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "diewhenfinished": 1,
+            "takedamage": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "firstframe": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_taylor_guard01",
+            "playerstance": "stand",
+            "name": "taylor_guard_01",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "takedamage": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_taylor_guard02",
+            "firstframe": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "diewhenfinished": 1,
+            "name": "taylor_guard_02",
+            "type": "actor"
+        },
+        {
+            "name": "taylor_guard_03",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "diewhenfinished": 1,
+            "playerstance": "stand",
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_taylor_guard03",
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "name": "taylor_guard_04",
+            "type": "actor",
+            "firstframe": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_taylor_guard04",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "diewhenfinished": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "mainanim": "o_pro_09_01_intro_1st_cybersoldiers_taylor_gun",
+            "model": "wpn_t7_pistol_triton_prop_animate",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "hyperion",
+            "type": "actor",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "firstframe": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_maretti_maretti",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "spawner_ally_hero_hyperion_prologue"
+        },
+        {
+            "name": "pallas",
+            "type": "actor",
+            "model": "spawner_ally_hero_pallas_prologue",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_pro_09_01_intro_1st_cybersoldiers_diaz_diaz",
+            "firstframe": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

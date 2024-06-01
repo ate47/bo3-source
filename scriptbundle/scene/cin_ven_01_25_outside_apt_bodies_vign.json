@@ -1,0 +1,302 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "hendricks_street_anim_struct",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "script_objective": "takedown",
+    "name": "cin_ven_01_25_outside_apt_bodies_vign",
+    "type": "scene",
+    "looping": 1,
+    "igdtseqnum": 809,
+    "objects": [
+        {
+            "takedamage": 1,
+            "deletewhenfinished": 1,
+            "model": "spawner_civilian_vengeance_charred",
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "mainanim": "ch_ven_01_25_outside_apt_bodies_vign_civ01",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "removeweapon": 1,
+            "name": "outside_dead_body_01",
+            "type": "actor"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "spawner_civilian_vengeance_charred",
+            "firstframe": 1,
+            "mainanim": "ch_ven_01_25_outside_apt_bodies_vign_civ02",
+            "deletewhenfinished": 1,
+            "playerstance": "stand",
+            "name": "outside_dead_body_02",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "removeweapon": 1,
+            "takedamage": 1,
+            "mainanim": "ch_ven_01_25_outside_apt_bodies_vign_civ03",
+            "deletewhenfinished": 1,
+            "firstframe": 1,
+            "model": "spawner_civilian_vengeance_charred",
+            "name": "outside_dead_body_03",
+            "type": "actor"
+        },
+        {
+            "name": "outside_dead_body_04",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "c_civ_zur_sing_male_2_face_fb_bloody",
+            "playerstance": "stand",
+            "deletewhenfinished": 1,
+            "mainanim": "ch_ven_01_25_outside_apt_bodies_vign_civ04",
+            "removeweapon": 1,
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "name": "outside_dead_body_05",
+            "type": "actor",
+            "firstframe": 1,
+            "deletewhenfinished": 1,
+            "model": "c_civ_zur_sing_male_5_face_fb_bloody",
+            "mainanim": "ch_ven_01_25_outside_apt_bodies_vign_civ05",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "removeweapon": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "takedamage": 1,
+            "name": "outside_dead_body_06",
+            "type": "actor",
+            "deletewhenfinished": 1,
+            "removeweapon": 1,
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "mainanim": "ch_ven_01_25_outside_apt_bodies_vign_civ06",
+            "model": "spawner_civilian_vengeance_bloody_female",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "outside_dead_body_07",
+            "type": "actor",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "removeweapon": 1,
+            "firstframe": 1,
+            "mainanim": "ch_ven_01_25_outside_apt_bodies_vign_civ07",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "deletewhenfinished": 1,
+            "model": "c_civ_egypt_sing_male_3_face_fb_bloody"
+        },
+        {
+            "name": "outside_dead_body_08",
+            "type": "actor",
+            "model": "spawner_civilian_vengeance_generic",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "removeweapon": 1,
+            "mainanim": "ch_ven_01_25_outside_apt_bodies_vign_civ08",
+            "firstframe": 1,
+            "deletewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "outside_dead_body_09",
+            "type": "actor",
+            "spawnoninit": 1,
+            "deletewhenfinished": 1,
+            "model": "spawner_civilian_vengeance_generic",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_ven_01_25_outside_apt_bodies_vign_civ09",
+            "vmtype": "server",
+            "removeweapon": 1,
+            "firstframe": 1
+        },
+        {
+            "spawnoninit": 1,
+            "deletewhenfinished": 1,
+            "takedamage": 1,
+            "name": "outside_dead_body_10",
+            "type": "actor",
+            "firstframe": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "model": "c_civ_egypt_sing_male_3_face_fb_bloody",
+            "vmtype": "server",
+            "mainanim": "ch_ven_01_25_outside_apt_bodies_vign_civ10",
+            "removeweapon": 1
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "hacked": "hacked",
+    "kill1": "kill_1",
+    "kill2": "kill_2",
+    "kill3": "kill_3",
+    "ready": "ready",
+    "vmtype": "both",
+    "killmultiple": "kill_multiple",
+    "configstringfiletype": "scriptbundle",
+    "destroyed": "destroyed",
+    "name": "cdp_taacom_kls_hellstorm",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_tacc_kls_hellstorm_",
+    "firewallhacked": "hacked_fw",
+    "beinghacked": "being_hacked",
+    "killnone": "kill_none",
+    "firewallbeinghacked": "being_hacked_fw",
+    "igdtseqnum": 105
+}

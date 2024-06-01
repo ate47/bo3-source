@@ -1,0 +1,10 @@
+a0,b1,c2,d3,e4,f5,g6,h7,i8,j9
+0,playerstatslist plevel statValue,,,,,-1,1,hacked_client,hacked_server
+1,playerstatslist stats_version statValue,,,,,-1,1,hacked_client,hacked_server
+2,playerstatslist rankxp statValue,,32768,-1,65536,,,boosting_lobby_client,boosting_lobby_server
+3,playerstatslist KILLS statValue,,150,-1,300,,,boosting_lobby_client,boosting_lobby_server
+4,playerstatslist DEATHS statValue,,,-1,,,,hacked_client,hacked_server
+5,playerstatslist ASSISTS statValue,,150,-1,300,,,boosting_lobby_client,boosting_lobby_server
+6,playerstatslist HEADSHOTS statValue,,100,-1,200,,,boosting_lobby_client,boosting_lobby_server
+7,playerstatslist REVIVES statValue,,50,-1,100,,,boosting_lobby_client,boosting_lobby_server
+8,playerstatslist RANK statValue,,15,,20,,,boosting_lobby_client,boosting_lobby_server

@@ -1,0 +1,264 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_chinatown_warlord_intro",
+    "configstringfiletype": "scriptbundle",
+    "dontthrottle": 1,
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "cameraswitcher": "c_bla_03_warlordintro_3rd_sh150",
+    "name": "cin_bla_03_warlordintro_3rd_sh150",
+    "type": "scene",
+    "nextscenebundle": "cin_bla_03_warlordintro_3rd_sh160",
+    "igdtseqnum": 156,
+    "objects": [
+        {
+            "model": "spawner_civilian_blackstation_female_wife",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_bla_03_warlordintro_3rd_sh150_girl",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "name": "warlordintro_civilian_female",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "mainanim": "ch_bla_03_warlordintro_3rd_sh150_guard01",
+            "deletewhenfinished": 1,
+            "playerstance": "stand",
+            "name": "warlord_igc_0",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "mainanim": "ch_bla_03_warlordintro_3rd_sh020_guard03",
+            "deletewhenfinished": 1,
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "name": "warlord_igc_2",
+            "type": "actor"
+        },
+        {
+            "name": "warlordintro_warlord",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_enemy_54i_human_warlord_minigun",
+            "playerstance": "stand",
+            "deletewhenfinished": 1,
+            "mainanim": "ch_bla_03_warlordintro_3rd_sh150_warlord",
+            "player": 1
+        },
+        {
+            "name": "hendricks",
+            "type": "actor",
+            "model": "spawner_ally_hero_hendricks_blackstation",
+            "mainanim": "ch_bla_03_warlordintro_3rd_sh150_hendricks",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "warlordintro_civilian",
+            "type": "actor",
+            "removeweapon": 1,
+            "mainanim": "ch_bla_03_warlordintro_3rd_sh150_guy",
+            "model": "spawner_civilian_blackstation_husband",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "new object 8",
+            "type": "player",
+            "playerstance": "stand",
+            "sharedigc": 1,
+            "mainanim": "pb_bla_03_warlordintro_3rd_sh150_player",
+            "player": 1,
+            "vmtype": "server",
+            "model": "c_t7_ally_fb"
+        },
+        {
+            "name": "handcuffs",
+            "type": "prop",
+            "model": "p7_zm_zod_handcuffs",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "o_bla_03_warlordintro_3rd_sh150_handcuffs",
+            "deletewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "bomb_collar",
+            "type": "prop",
+            "deletewhenfinished": 1,
+            "model": "p7_c_spc_bomb_collar",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "o_bla_03_warlordintro_3rd_sh150_collar",
+            "vmtype": "server"
+        },
+        {
+            "deletewhenfinished": 1,
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "model": "wpn_t7_c4_detonator_prop",
+            "vmtype": "server",
+            "mainanim": "o_bla_03_warlordintro_3rd_sh150_detonator"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

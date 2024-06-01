@@ -1,0 +1,278 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "garage_igc_script_node",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "cameraswitcher": "c_ven_06_10_parkingstructure_3rd_camera_shot05",
+    "name": "cin_ven_06_10_parkingstructure_3rd_shot05",
+    "type": "scene",
+    "nextscenebundle": "cin_ven_06_10_parkingstructure_3rd_shot06",
+    "igdtseqnum": 927,
+    "objects": [
+        {
+            "deletewhenfinished": 1,
+            "model": "spawner_ally_sing_human_assault_smg",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_ven_06_10_parkingstructure_3rd_shot5_police_a",
+            "playerstance": "stand",
+            "name": "police_a",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "model": "spawner_ally_sing_cqb_shotgun",
+            "mainanim": "ch_ven_06_10_parkingstructure_3rd_shot5_police_b",
+            "deletewhenfinished": 1,
+            "playerstance": "stand",
+            "name": "police_b",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "mainanim": "ch_ven_06_10_parkingstructure_3rd_shot5_police_c",
+            "model": "spawner_ally_sing_human_assault_smg",
+            "name": "police_c",
+            "type": "actor"
+        },
+        {
+            "name": "police_d",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_ally_sing_human_assault_ar",
+            "playerstance": "stand",
+            "mainanim": "ch_ven_06_10_parkingstructure_3rd_shot5_police_d",
+            "player": 1
+        },
+        {
+            "name": "police_i",
+            "type": "actor",
+            "deletewhenfinished": 1,
+            "model": "spawner_ally_sing_human_assault_ar",
+            "mainanim": "ch_ven_06_10_parkingstructure_3rd_shot5_police_i",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "cop_car_2",
+            "type": "vehicle",
+            "mainanim": "v_ven_06_10_parkingstructure_3rd_shot5_copcar_b",
+            "model": "veh_t7_civ_sedan_midsize_police",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "enemy_a",
+            "type": "actor",
+            "playerstance": "stand",
+            "mainanim": "ch_ven_06_10_parkingstructure_3rd_shot5_enemy_a",
+            "player": 1,
+            "vmtype": "server",
+            "deletewhenfinished": 1,
+            "model": "spawner_enemy_54i_human_sniper_sniperrifle"
+        },
+        {
+            "name": "enemy_d",
+            "type": "actor",
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "playerstance": "stand",
+            "mainanim": "ch_ven_06_10_parkingstructure_3rd_shot5_enemy_d",
+            "deletewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "enemy_e",
+            "type": "actor",
+            "deletewhenfinished": 1,
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "player": 1,
+            "playerstance": "stand",
+            "mainanim": "ch_ven_06_10_parkingstructure_3rd_shot5_enemy_e",
+            "vmtype": "server"
+        },
+        {
+            "deletewhenfinished": 1,
+            "name": "enemy_f",
+            "type": "actor",
+            "playerstance": "stand",
+            "player": 1,
+            "model": "spawner_enemy_54i_human_sniper_sniperrifle",
+            "vmtype": "server",
+            "mainanim": "ch_ven_06_10_parkingstructure_3rd_shot5_enemy_f"
+        },
+        {
+            "playerstance": "stand",
+            "model": "spawner_enemy_54i_human_sniper_sniperrifle",
+            "deletewhenfinished": 1,
+            "name": "enemy_g",
+            "type": "actor",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_ven_06_10_parkingstructure_3rd_shot5_enemy_g"
+        },
+        {
+            "playerstance": "stand",
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "name": "enemy_h",
+            "type": "actor",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_ven_06_10_parkingstructure_3rd_shot5_enemy_h"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "name": "enemy_i",
+            "type": "actor",
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "mainanim": "ch_ven_06_10_parkingstructure_3rd_shot5_enemy_i"
+        },
+        {
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "player": 1,
+            "vmtype": "server",
+            "name": "enemy_j",
+            "type": "actor",
+            "playerstance": "stand",
+            "mainanim": "ch_ven_06_10_parkingstructure_3rd_shot5_enemy_j"
+        },
+        {
+            "mainanim": "ch_ven_06_10_parkingstructure_3rd_shot5_enemy_k",
+            "model": "spawner_enemy_54i_human_cqb_shotgun",
+            "player": 1,
+            "vmtype": "server",
+            "name": "enemy_k",
+            "type": "actor",
+            "playerstance": "stand"
+        },
+        {
+            "mainanim": "v_ven_06_10_parkingstructure_3rd_shot5_technical_b",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "model": "veh_t7_civ_truck_pickup_tech_54i",
+            "name": "technical_truck_2",
+            "type": "vehicle"
+        },
+        {
+            "model": "spawner_civilian_vengeance_bloody",
+            "mainanim": "ch_ven_06_10_parkingstructure_3rd_shot5_civilian_c",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "diewhenfinished": 1,
+            "name": "garage_civilian_c",
+            "type": "actor"
+        },
+        {
+            "mainanim": "o_ven_06_10_parkingstructure_3rd_shot5_noose_2",
+            "player": 1,
+            "vmtype": "server",
+            "model": "p7_ven_hanging_body_wires_03_l",
+            "playerstance": "stand",
+            "name": "noose_2",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

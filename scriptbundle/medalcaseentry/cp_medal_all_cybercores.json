@@ -1,0 +1,14 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "cp_medal_all_cybercores",
+    "type": "medalcaseentry",
+    "igdtseqnum": 4,
+    "largeIcon": "t7_icon_achievement_safehouse_04",
+    "smallIcon": "t7_icon_achievement_safehouse_04",
+    "model": "p7_medal_achievements_safehouse_04",
+    "requirements": "CPUI_MEDAL_ALL_CYBERCORES_REQ",
+    "aarDisplayName": "CPUI_MEDAL_ALL_CYBERCORES_AAR",
+    "displayName": "CPUI_MEDAL_ALL_CYBERCORES",
+    "XPBonus": 5000
+}

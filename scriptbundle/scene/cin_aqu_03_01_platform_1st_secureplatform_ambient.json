@@ -1,0 +1,337 @@
+{
+    "scenetype": "scene",
+    "vmtype": "both",
+    "aligntarget": "igc_kane_khalil_1",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_aqu_03_01_platform_1st_secureplatform_ambient",
+    "type": "scene",
+    "igdtseqnum": 276,
+    "objects": [
+        {
+            "takedamage": 1,
+            "deletewhenfinished": 1,
+            "model": "c_ega_soldier_1_fb",
+            "player": 1,
+            "vmtype": "client",
+            "firstframe": 1,
+            "mainanim": "ch_aqu_03_01_platform_1st_secureplatform_soldier03",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "allowdeath": 1,
+            "name": "soldier03",
+            "type": "actor"
+        },
+        {
+            "allowdeath": 1,
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "client",
+            "takedamage": 1,
+            "model": "c_ega_soldier_2_fb",
+            "firstframe": 1,
+            "mainanim": "ch_aqu_03_01_platform_1st_secureplatform_soldier04",
+            "deletewhenfinished": 1,
+            "playerstance": "stand",
+            "name": "soldier04",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "client",
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "spawnoninit": 1,
+            "takedamage": 1,
+            "mainanim": "ch_aqu_03_01_platform_1st_secureplatform_soldier05",
+            "deletewhenfinished": 1,
+            "firstframe": 1,
+            "model": "c_ega_soldier_3_fb",
+            "name": "soldier05",
+            "type": "actor"
+        },
+        {
+            "name": "soldier06",
+            "type": "actor",
+            "vmtype": "client",
+            "model": "c_ega_soldier_1_fb",
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "deletewhenfinished": 1,
+            "mainanim": "ch_aqu_03_01_platform_1st_secureplatform_soldier06",
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "name": "soldier07",
+            "type": "actor",
+            "firstframe": 1,
+            "deletewhenfinished": 1,
+            "model": "c_ega_soldier_2_fb",
+            "mainanim": "ch_aqu_03_01_platform_1st_secureplatform_soldier07",
+            "allowdeath": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "client",
+            "spawnoninit": 1
+        },
+        {
+            "takedamage": 1,
+            "name": "soldier08",
+            "type": "actor",
+            "deletewhenfinished": 1,
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "mainanim": "ch_aqu_03_01_platform_1st_secureplatform_soldier08",
+            "model": "c_ega_soldier_3_fb",
+            "player": 1,
+            "allowdeath": 1,
+            "vmtype": "client",
+            "playerstance": "stand"
+        },
+        {
+            "allowdeath": 1,
+            "name": "soldier09",
+            "type": "actor",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "firstframe": 1,
+            "mainanim": "ch_aqu_03_01_platform_1st_secureplatform_soldier09",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "client",
+            "deletewhenfinished": 1,
+            "model": "c_ega_soldier_1_fb"
+        },
+        {
+            "name": "soldier10",
+            "type": "actor",
+            "allowdeath": 1,
+            "model": "c_ega_soldier_2_fb",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_aqu_03_01_platform_1st_secureplatform_soldier10",
+            "firstframe": 1,
+            "deletewhenfinished": 1,
+            "player": 1,
+            "vmtype": "client",
+            "spawnoninit": 1
+        },
+        {
+            "name": "soldier11",
+            "type": "actor",
+            "spawnoninit": 1,
+            "allowdeath": 1,
+            "deletewhenfinished": 1,
+            "model": "c_ega_soldier_3_fb",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_aqu_03_01_platform_1st_secureplatform_soldier11",
+            "vmtype": "client",
+            "firstframe": 1
+        },
+        {
+            "spawnoninit": 1,
+            "allowdeath": 1,
+            "deletewhenfinished": 1,
+            "takedamage": 1,
+            "name": "soldier12",
+            "type": "actor",
+            "firstframe": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "model": "c_ega_soldier_1_fb",
+            "vmtype": "client",
+            "mainanim": "ch_aqu_03_01_platform_1st_secureplatform_soldier12"
+        },
+        {
+            "playerstance": "stand",
+            "model": "c_ega_soldier_2_fb",
+            "deletewhenfinished": 1,
+            "allowdeath": 1,
+            "spawnoninit": 1,
+            "name": "soldier13",
+            "type": "actor",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "client",
+            "mainanim": "ch_aqu_03_01_platform_1st_secureplatform_soldier13",
+            "firstframe": 1
+        },
+        {
+            "deletewhenfinished": 1,
+            "firstframe": 1,
+            "playerstance": "stand",
+            "model": "c_ega_soldier_3_fb",
+            "name": "soldier14",
+            "type": "actor",
+            "player": 1,
+            "allowdeath": 1,
+            "vmtype": "client",
+            "spawnoninit": 1,
+            "takedamage": 1,
+            "mainanim": "ch_aqu_03_01_platform_1st_secureplatform_soldier14"
+        },
+        {
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "client",
+            "name": "soldier15",
+            "type": "actor",
+            "model": "c_ega_soldier_1_fb",
+            "allowdeath": 1,
+            "deletewhenfinished": 1,
+            "mainanim": "ch_aqu_03_01_platform_1st_secureplatform_soldier15"
+        },
+        {
+            "allowdeath": 1,
+            "model": "c_ega_soldier_2_fb",
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1,
+            "vmtype": "client",
+            "deletewhenfinished": 1,
+            "name": "soldier16",
+            "type": "actor",
+            "playerstance": "stand",
+            "mainanim": "ch_aqu_03_01_platform_1st_secureplatform_soldier16"
+        },
+        {
+            "mainanim": "v_aqu_03_01_platform_1st_secureplatform_ship01",
+            "model": "veh_t7_mil_vtol_egypt_igc_nose",
+            "player": 1,
+            "deletewhenfinished": 1,
+            "vmtype": "client",
+            "firstframe": 1,
+            "name": "vtol01",
+            "type": "actor",
+            "spawnoninit": 1,
+            "playerstance": "stand"
+        },
+        {
+            "mainanim": "v_aqu_03_01_platform_1st_secureplatform_ship02",
+            "spawnoninit": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "client",
+            "model": "veh_t7_mil_vtol_egypt_igc_nose",
+            "name": "vtol02",
+            "type": "vehicle",
+            "firstframe": 1
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

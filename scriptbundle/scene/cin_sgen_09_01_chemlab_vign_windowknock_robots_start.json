@@ -1,0 +1,265 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_chem_lab",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_sgen_09_01_chemlab_vign_windowknock_robots_start",
+    "type": "scene",
+    "igdtseqnum": 129,
+    "objects": [
+        {
+            "model": "c_cia_robot_1",
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "mainblend": 0.2,
+            "endanimloop": "ch_sgen_09_01_chemlab_vign_windowknock_robot01_knocking",
+            "mainanim": "ch_sgen_09_01_chemlab_vign_windowknock_robot01_start",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "removeweapon": 1,
+            "name": "robot_01",
+            "type": "actor"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "model": "c_cia_robot_1",
+            "firstframe": 1,
+            "mainanim": "ch_sgen_09_01_chemlab_vign_windowknock_robot02_start",
+            "endanimloop": "ch_sgen_09_01_chemlab_vign_windowknock_robot02_knocking",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "name": "robot_02",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "endanimloop": "ch_sgen_09_01_chemlab_vign_windowknock_robot03_knocking",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "removeweapon": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_sgen_09_01_chemlab_vign_windowknock_robot03_start",
+            "firstframe": 1,
+            "model": "c_cia_robot_1",
+            "name": "robot_03",
+            "type": "actor"
+        },
+        {
+            "name": "robot_04",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "c_cia_robot_1",
+            "endanimloop": "ch_sgen_09_01_chemlab_vign_windowknock_robot04_knocking",
+            "playerstance": "stand",
+            "mainanim": "ch_sgen_09_01_chemlab_vign_windowknock_robot04_start",
+            "removeweapon": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1,
+            "mainblend": 0.2
+        },
+        {
+            "name": "robot_06",
+            "type": "actor",
+            "firstframe": 1,
+            "model": "c_cia_robot_1",
+            "mainblend": 0.2,
+            "mainanim": "ch_sgen_09_01_chemlab_vign_windowknock_robot06_start",
+            "playerstance": "stand",
+            "endanimloop": "ch_sgen_09_01_chemlab_vign_windowknock_robot06_knocking",
+            "removeweapon": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

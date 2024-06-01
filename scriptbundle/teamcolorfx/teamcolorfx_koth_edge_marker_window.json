@@ -1,0 +1,21 @@
+{
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "name": "teamcolorfx_koth_edge_marker_window",
+    "type": "teamcolorfx",
+    "igdtseqnum": 2,
+    "objects": [
+        {
+            "fx_colorid": "#fx:ui/fx_koth_marker_green_window"
+        },
+        {
+            "fx_colorid": "#fx:ui/fx_koth_marker_yellow_window"
+        },
+        {
+            "fx_colorid": "#fx:ui/fx_koth_marker_red_window"
+        },
+        {
+            "fx_colorid": "#fx:ui/fx_koth_marker_green_window"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "speed": "sprint",
+    "vmtype": "server",
+    "configstringfiletype": "scriptbundle",
+    "attack_distance": 48,
+    "max_health": 20,
+    "aggro_distance": 500,
+    "name": "zm_stalingrad_drop_pod_attackable",
+    "type": "attackables",
+    "max_attackers": 6,
+    "no_cleanup": 1,
+    "igdtseqnum": 2
+}

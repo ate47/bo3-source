@@ -1,0 +1,9 @@
+{
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "wavestartfinal": "leave",
+    "name": "cdp_droneop2_kls_carepackage",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_cdo2_kls_pkg_",
+    "igdtseqnum": 143
+}

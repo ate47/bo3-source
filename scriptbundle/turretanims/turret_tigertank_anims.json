@@ -1,0 +1,12 @@
+{
+    "vmtype": "none",
+    "configstringfiletype": "scriptbundle",
+    "aimpitchangled": 20,
+    "aimpitchangleu": 45,
+    "name": "turret_tigertank_anims",
+    "type": "turretanims",
+    "centerstraightanim": "ai_crew_tiger_tank_mg_aim",
+    "igdtseqnum": 25,
+    "centerdownanim": "ai_crew_tiger_tank_mg_aim_down",
+    "centerupanim": "ai_crew_tiger_tank_mg_aim_up"
+}

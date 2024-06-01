@@ -1,0 +1,242 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_zm_temple_cin",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "cameraswitcher": "c_zmhd_sizzle_temple_cam",
+    "name": "cin_zmhd_sizzle_temple_cam",
+    "type": "scene",
+    "igdtseqnum": 114,
+    "objects": [
+        {
+            "model": "c_zom_dlchd_shangrila_sonic",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_zmhd_sizzle_temple_zombie01",
+            "playerstance": "stand",
+            "name": "new object 1",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "model": "c_zom_dlchd_shangrila_sonic",
+            "mainanim": "ch_zmhd_sizzle_temple_zombie02",
+            "playerstance": "stand",
+            "name": "new object 1(copy)",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "mainanim": "ch_zmhd_sizzle_temple_zombie03",
+            "model": "c_zom_dlchd_shangrila_sonic",
+            "name": "new object 1(copy)(copy)",
+            "type": "actor"
+        },
+        {
+            "name": "new object 1(copy)(copy)(copy)",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "c_zom_dlchd_shangrila_sonic",
+            "playerstance": "stand",
+            "mainanim": "ch_zmhd_sizzle_temple_zombie04",
+            "player": 1
+        },
+        {
+            "name": "new object 1(copy)(copy)(copy)(copy)",
+            "type": "actor",
+            "model": "c_zom_dlchd_shangrila_sonic",
+            "mainanim": "ch_zmhd_sizzle_temple_zombie05",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "new object 1(copy)(copy)(copy)(copy)(copy)",
+            "type": "actor",
+            "mainanim": "ch_zmhd_sizzle_temple_zombie06",
+            "model": "c_zom_dlchd_shangrila_sonic",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "new object 1(copy)(copy)(copy)(copy)(copy)(copy)",
+            "type": "actor",
+            "playerstance": "stand",
+            "mainanim": "ch_zmhd_sizzle_temple_zombie07",
+            "player": 1,
+            "vmtype": "server",
+            "model": "c_zom_dlchd_shangrila_sonic"
+        },
+        {
+            "name": "new object 1(copy)(copy)(copy)(copy)(copy)(copy)(copy)",
+            "type": "actor",
+            "model": "c_zom_dlchd_shangrila_sonic",
+            "playerstance": "stand",
+            "mainanim": "ch_zmhd_sizzle_temple_zombie08",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "new object 1(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)",
+            "type": "actor",
+            "model": "c_zom_dlchd_shangrila_sonic",
+            "player": 1,
+            "playerstance": "stand",
+            "mainanim": "ch_zmhd_sizzle_temple_zombie09",
+            "vmtype": "server"
+        },
+        {
+            "name": "new object 1(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)",
+            "type": "actor",
+            "playerstance": "stand",
+            "player": 1,
+            "model": "c_zom_dlchd_shangrila_sonic",
+            "vmtype": "server",
+            "mainanim": "ch_zmhd_sizzle_temple_zombie10"
+        },
+        {
+            "playerstance": "stand",
+            "model": "c_zom_dlchd_shangrila_sonic",
+            "name": "new object 1(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)",
+            "type": "actor",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_zmhd_sizzle_temple_zombie11"
+        },
+        {
+            "playerstance": "stand",
+            "model": "c_zom_dlchd_shangrila_sonic",
+            "name": "new object 1(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)",
+            "type": "actor",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_zmhd_sizzle_temple_zombie12"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "name": "new object 1(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)",
+            "type": "actor",
+            "model": "c_zom_dlchd_shangrila_sonic",
+            "mainanim": "ch_zmhd_sizzle_temple_zombie13"
+        },
+        {
+            "model": "c_zom_dlchd_shangrila_sonic",
+            "player": 1,
+            "vmtype": "server",
+            "name": "new object 1(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)",
+            "type": "actor",
+            "playerstance": "stand",
+            "mainanim": "ch_zmhd_sizzle_temple_zombie14"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

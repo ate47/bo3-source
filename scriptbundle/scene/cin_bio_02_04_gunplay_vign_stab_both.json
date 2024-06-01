@@ -1,0 +1,320 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_partyroom",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_bio_02_04_gunplay_vign_stab_both",
+    "type": "scene",
+    "igdtseqnum": 398,
+    "objects": [
+        {
+            "model": "c_t7_ally_fb",
+            "viewclampright": 10,
+            "viewclampbottom": 8,
+            "player": 1,
+            "sharedigc": 1,
+            "vmtype": "server",
+            "viewclampleft": 10,
+            "disabletransitionin": 1,
+            "mainanim": "pb_bio_02_04_gunplay_vign_stab_both_player",
+            "viewclamptop": 8,
+            "playerstance": "stand",
+            "disableprimaryweaponswitch": 1,
+            "removeweapon": 1,
+            "type": "player"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "diewhenfinished": 1,
+            "takedamage": 1,
+            "model": "spawner_enemy_boss_dannyli_biodomes",
+            "mainanim": "ch_bio_02_04_gunplay_vign_stab_both_dannyli",
+            "playerstance": "stand",
+            "name": "dannyli",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "removeweapon": 1,
+            "takedamage": 1,
+            "mainanim": "ch_bio_02_04_gunplay_vign_stab_both_gohbrother",
+            "model": "spawner_enemy_boss_gomin_biodomes",
+            "diewhenfinished": 1,
+            "name": "gomin",
+            "type": "actor"
+        },
+        {
+            "name": "hendricks",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "c_hro_hendricks_egypt_fb",
+            "playerstance": "stand",
+            "mainanim": "ch_bio_02_04_gunplay_vign_stab_both_hendricks",
+            "player": 1
+        },
+        {
+            "name": "robot01",
+            "type": "actor",
+            "firstframe": 1,
+            "model": "c_54i_robot_1",
+            "mainanim": "ch_bio_02_04_gunplay_vign_stab_both_robot01",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "takedamage": 1,
+            "name": "robot02",
+            "type": "actor",
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "mainanim": "ch_bio_02_04_gunplay_vign_stab_both_robot02",
+            "model": "c_54i_robot_1",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "robot03",
+            "type": "actor",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "firstframe": 1,
+            "mainanim": "ch_bio_02_04_gunplay_vign_stab_both_robot03",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "c_54i_robot_1"
+        },
+        {
+            "name": "robot04",
+            "type": "actor",
+            "model": "c_54i_robot_1",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_bio_02_04_gunplay_vign_stab_both_robot04",
+            "firstframe": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "goxiulan",
+            "type": "actor",
+            "spawnoninit": 1,
+            "deletewhenfinished": 1,
+            "model": "spawner_enemy_boss_goxiulan_biodomes",
+            "player": 1,
+            "playerstance": "stand",
+            "mainanim": "ch_bio_02_04_gunplay_vign_stab_both_gohxiulan",
+            "vmtype": "server",
+            "removeweapon": 1
+        },
+        {
+            "spawnoninit": 1,
+            "takedamage": 1,
+            "diewhenfinished": 1,
+            "name": "guard01",
+            "type": "actor",
+            "playerstance": "stand",
+            "player": 1,
+            "model": "c_t7_enemy_fb",
+            "vmtype": "server",
+            "mainanim": "ch_bio_02_04_gunplay_vign_stab_both_guard01"
+        },
+        {
+            "playerstance": "stand",
+            "diewhenfinished": 1,
+            "model": "c_t7_enemy_fb",
+            "spawnoninit": 1,
+            "name": "guard02",
+            "type": "actor",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_bio_02_04_gunplay_vign_stab_both_guard02"
+        },
+        {
+            "playerstance": "stand",
+            "model": "c_t7_enemy_fb",
+            "name": "guard03",
+            "type": "actor",
+            "player": 1,
+            "diewhenfinished": 1,
+            "vmtype": "server",
+            "spawnoninit": 1,
+            "takedamage": 1,
+            "mainanim": "ch_bio_02_04_gunplay_vign_stab_both_guard03"
+        },
+        {
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "name": "party_room_table",
+            "type": "prop",
+            "model": "p7_table_wood_chinese_01",
+            "mainanim": "o_bio_02_04_gunplay_vign_stab_both_table"
+        },
+        {
+            "model": "c_54i_assault_fullbody",
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "name": "guard04",
+            "type": "actor",
+            "playerstance": "stand",
+            "diewhenfinished": 1,
+            "mainanim": "ch_bio_02_04_gunplay_vign_stab_both_guard04"
+        },
+        {
+            "mainanim": "ch_bio_02_04_gunplay_vign_stab_both_guard05",
+            "model": "c_54i_assault_fullbody",
+            "diewhenfinished": 1,
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "name": "guard05",
+            "type": "actor",
+            "spawnoninit": 1,
+            "playerstance": "stand"
+        },
+        {
+            "mainanim": "ch_bio_02_04_gunplay_vign_stab_both_marshawn",
+            "spawnoninit": 1,
+            "playerstance": "stand",
+            "deletewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "c_54i_cqb_lynch",
+            "name": "marshawn",
+            "type": "actor"
+        },
+        {
+            "model": "p7_cai_apt_door_generic_lt_01_dmg",
+            "mainanim": "o_bio_02_04_gunplay_vign_stab_both_door_back",
+            "firstframe": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1,
+            "playerstance": "stand",
+            "name": "back_door",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "mainanim": "o_bio_02_04_gunplay_vign_stab_both_door_side",
+            "player": 1,
+            "vmtype": "server",
+            "model": "p7_cai_apt_door_generic_lt_01_dmg",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "name": "side_door",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

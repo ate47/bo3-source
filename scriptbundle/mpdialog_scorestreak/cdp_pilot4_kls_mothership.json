@@ -1,0 +1,18 @@
+{
+    "remoteoperatorremoved": "op_remove",
+    "kill1": "kill1",
+    "kill2": "kill2",
+    "kill3": "kill3",
+    "vmtype": "both",
+    "killmultiple": "kill_multiple",
+    "remoteoperatoradd": "op_add",
+    "configstringfiletype": "scriptbundle",
+    "weapondestroyed": "turret_destroyed",
+    "kill": "kill",
+    "name": "cdp_pilot4_kls_mothership",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_cmp3_kls_mothership_",
+    "timeout": "timeout",
+    "arrive": "arrive",
+    "igdtseqnum": 94
+}

@@ -1,0 +1,14 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "cp_medal_complete_on_realistic",
+    "type": "medalcaseentry",
+    "igdtseqnum": 7,
+    "largeIcon": "t7_icon_achievement_safehouse_08",
+    "smallIcon": "t7_icon_achievement_safehouse_08",
+    "model": "p7_medal_achievements_safehouse_08",
+    "requirements": "CPUI_MEDAL_COMPLETE_ON_REALISTIC_REQ",
+    "aarDisplayName": "CPUI_MEDAL_COMPLETE_ON_REALISTIC_AAR",
+    "displayName": "CPUI_MEDAL_COMPLETE_ON_REALISTIC",
+    "XPBonus": 5000
+}

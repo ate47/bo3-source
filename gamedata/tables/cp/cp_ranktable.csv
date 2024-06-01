@@ -1,0 +1,22 @@
+a0,b1,c2,d3,e4,g5,g6,h7,i8,j9,k10,l11,m12,n13,o14,p15,p16,p17,s18
+maxrank,19,,,,,,,,,,,,,,,,,
+0,cp_rank_1,0,6000,RANK_CP_SHORT_1,RANK_CP_FULL_1,rank_pvc,6000,pistol_standard smg_standard ar_fastburst lmg_light sniper_fastbolt shotgun_pump frag_grenade flash_grenade cybercom_playermovement cybercom_copycat cybercom_sensorybuffer,,,,,1,1,,RANK_PFC_FULL,,
+1,cp_rank_2,6000,8858,RANK_CP_SHORT_2,RANK_CP_FULL_2,rank_pvc,14858,lmg_heavy incendiary_grenade,,,,,2,2,,RANK_PFC_FULL_N,token,
+2,cp_rank_3,14858,11377,RANK_CP_SHORT_3,RANK_CP_FULL_3,rank_pvc,26235,shotgun_semiauto ar_standard,,,,,3,3,,RANK_PFC_FULL_N,token,
+3,cp_rank_4,26235,13181,RANK_CP_SHORT_4,RANK_CP_FULL_4,rank_lcpl,39416,smg_burst emp_grenade bonuscard_danger_close,,,,,4,4,,RANK_LCPL_FULL,token,
+4,cp_rank_5,39416,15556,RANK_CP_SHORT_5,RANK_CP_FULL_5,rank_lcpl,54972,ar_accurate launcher_standard bonuscard_primary_gunfighter,,,,,5,5,,RANK_LCPL_FULL_N,token,
+5,cp_rank_6,54972,17491,RANK_CP_SHORT_6,RANK_CP_FULL_6,rank_lcpl,72463,sniper_fastsemi cybercom_emergencyreserve,,,,,6,6,,RANK_LCPL_FULL_N,token,
+6,cp_rank_7,72463,19979,RANK_CP_SHORT_7,RANK_CP_FULL_7,rank_cpl,92442,ar_cqb pistol_burst,,,,,7,7,,RANK_CPL_FULL,token,
+7,cp_rank_8,92442,22515,RANK_CP_SHORT_8,RANK_CP_FULL_8,rank_cpl,114957,smg_longrange sticky_grenade bonuscard_two_tacticals,,,,,8,8,,RANK_CPL_FULL_N,token,
+8,cp_rank_9,114957,25093,RANK_CP_SHORT_9,RANK_CP_FULL_9,rank_cpl,140050,lmg_cqb proximity_grenade,,,,,9,9,,RANK_CPL_FULL_N,token,
+9,cp_rank_10,140050,27210,RANK_CP_SHORT_10,RANK_CP_FULL_10,rank_sgt,167260,ar_damage hero_annihilator bonuscard_primary_gunfighter_2,,,,,10,10,,RANK_SGT_FULL,token,
+10,cp_rank_11,167260,29863,RANK_CP_SHORT_11,RANK_CP_FULL_11,rank_sgt,197123,smg_versatile satchel_charge,,,,,11,11,,RANK_SGT_FULL_N,token,
+11,cp_rank_12,197123,32550,RANK_CP_SHORT_12,RANK_CP_FULL_12,rank_sgt,229673,sniper_powerbolt cybercom_proximitydeterrent,,,,,12,12,,RANK_SGT_FULL_N,token,1
+12,cp_rank_13,229673,34767,RANK_CP_SHORT_13,RANK_CP_FULL_13,rank_ssgt,264440,shotgun_precision,,,,,13,13,,RANK_SSGT_FULL,token,1
+13,cp_rank_14,264440,37014,RANK_CP_SHORT_14,RANK_CP_FULL_14,rank_ssgt,301455,smg_fastfire pistol_fullauto,,,,,14,14,,RANK_SSGT_FULL_N,token,1
+14,cp_rank_15,301455,39789,RANK_CP_SHORT_15,RANK_CP_FULL_15,rank_ssgt,341244,ar_marksman bouncingbetty bonuscard_primary_gunfighter_3,,,,,15,15,,RANK_SSGT_FULL_N,token,1
+15,cp_rank_16,341244,42590,RANK_CP_SHORT_16,RANK_CP_FULL_16,rank_gysgt,383834,smg_capacity launcher_lockonly bonuscard_secondary_gunfighter,,,,,16,16,,RANK_GYSGT_FULL,token,1
+16,cp_rank_17,383834,45416,RANK_CP_SHORT_17,RANK_CP_FULL_17,rank_gysgt,429249,sniper_chargeshot cybercom_repulsorarmor,,,,,17,17,,RANK_GYSGT_FULL_N,token,1
+17,cp_rank_18,429249,48265,RANK_CP_SHORT_18,RANK_CP_FULL_18,rank_gysgt,477514,shotgun_fullauto hatchet,,,,,18,18,,RANK_GYSGT_FULL_N,token,1
+18,cp_rank_19,477514,51137,RANK_CP_SHORT_19,RANK_CP_FULL_19,rank_msgt,528651,ar_longburst,,,,,19,19,,RANK_MSGT_FULL,token,1
+19,cp_rank_20,528651,53000,RANK_CP_SHORT_20,RANK_CP_FULL_20,rank_msgt,581651,lmg_slowfire cybercom_multicore bonuscard_overkill,,,,,20,20,,RANK_MSGT_FULL_N,token,2

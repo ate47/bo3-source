@@ -1,0 +1,258 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_bla_07_02_stormsurge_1st_leap_ride",
+    "type": "scene",
+    "igdtseqnum": 19,
+    "objects": [
+        {
+            "takedamage": 1,
+            "model": "spawner_ally_hero_hendricks_blackstation",
+            "player": 1,
+            "aligntarget": "bs_dock_tugboat",
+            "vmtype": "server",
+            "mainblend": 0.5,
+            "mainanim": "ch_bla_07_02_stormsurge_1st_leap_hendricks_ride",
+            "playerstance": "stand",
+            "aligntargettag": "tag_origin",
+            "name": "hendricks",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "cameratween": 1.2,
+            "model": "c_t7_ally_fb",
+            "mainanim": "pb_bla_07_02_stormsurge_1st_leap_player_ride",
+            "aligntarget": "bs_dock_tugboat",
+            "sharedigc": 1,
+            "lerptime": 1.2,
+            "aligntargettag": "tag_origin",
+            "mainblend": 0.5,
+            "playerstance": "stand",
+            "name": "new object 3",
+            "type": "player"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainblend": 0.5,
+            "mainanim": "o_bla_07_02_stormsurge_1st_leap_anchor",
+            "model": "wpn_t7_anchor_prop_animate",
+            "aligntarget": "bs_dock_tugboat",
+            "aligntargettag": "tag_origin",
+            "name": "player_anchor",
+            "type": "prop"
+        },
+        {
+            "name": "bs_dock_tugboat",
+            "type": "prop",
+            "vmtype": "server",
+            "model": "p7_fxanim_cp_blackstation_barge_mod",
+            "aligntarget": "tag_align_tanker_ride_start",
+            "playerstance": "stand",
+            "mainanim": "o_bla_07_02_stormsurge_1st_leap_barge_start",
+            "takedamage": 1,
+            "player": 1,
+            "mainblend": 0.5
+        },
+        {
+            "name": "breach_tanker",
+            "type": "prop",
+            "model": "p7_vista_ship_tanker_split_back",
+            "aligntarget": "tag_align_tanker_ride_start",
+            "mainblend": 0.5,
+            "mainanim": "o_bla_07_02_stormsurge_1st_leap_tanker_ride",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

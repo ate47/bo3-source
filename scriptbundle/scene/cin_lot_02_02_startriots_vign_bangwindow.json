@@ -1,0 +1,272 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "lotus_hakim_throw",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_lot_02_02_startriots_vign_bangwindow",
+    "type": "scene",
+    "igdtseqnum": 814,
+    "objects": [
+        {
+            "deletewhenfinished": 1,
+            "model": "spawner_civilian_lotus_civ",
+            "player": 1,
+            "vmtype": "server",
+            "lookatplayer": 1,
+            "initanimloop": "lot_02_02_startriots_vign_bangwindow_start_loop_civ01",
+            "endanimloop": "lot_02_02_startriots_vign_bangwindow_end_loop_civ01",
+            "mainanim": "lot_02_02_startriots_vign_bangwindow_react_civ01",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "name": "bangwindow_civ01",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "model": "spawner_civilian_lotus_civ",
+            "lookatplayer": 1,
+            "mainanim": "lot_02_02_startriots_vign_bangwindow_react_civ02",
+            "initanimloop": "lot_02_02_startriots_vign_bangwindow_start_loop_civ02",
+            "endanimloop": "lot_02_02_startriots_vign_bangwindow_end_loop_civ02",
+            "deletewhenfinished": 1,
+            "playerstance": "stand",
+            "name": "bangwindow_civ02",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "endanimloop": "lot_02_02_startriots_vign_bangwindow_end_loop_civ03",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "mainanim": "lot_02_02_startriots_vign_bangwindow_react_civ03",
+            "deletewhenfinished": 1,
+            "lookatplayer": 1,
+            "model": "spawner_civilian_lotus_civ",
+            "initanimloop": "lot_02_02_startriots_vign_bangwindow_start_loop_civ03",
+            "name": "bangwindow_civ03",
+            "type": "actor"
+        },
+        {
+            "name": "bangwindow_civ04",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_civilian_lotus_civ",
+            "endanimloop": "lot_02_02_startriots_vign_bangwindow_end_loop_civ04",
+            "playerstance": "stand",
+            "deletewhenfinished": 1,
+            "mainanim": "lot_02_02_startriots_vign_bangwindow_react_civ04",
+            "removeweapon": 1,
+            "lookatplayer": 1,
+            "player": 1,
+            "initanimloop": "lot_02_02_startriots_vign_bangwindow_start_loop_civ04"
+        },
+        {
+            "name": "bangwindow_civ05",
+            "type": "actor",
+            "lookatplayer": 1,
+            "initanimloop": "lot_02_02_startriots_vign_bangwindow_start_loop_civ05",
+            "deletewhenfinished": 1,
+            "model": "spawner_civilian_lotus_civ",
+            "mainanim": "lot_02_02_startriots_vign_bangwindow_react_civ05",
+            "playerstance": "stand",
+            "endanimloop": "lot_02_02_startriots_vign_bangwindow_end_loop_civ05",
+            "removeweapon": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "bangwindow_civ06",
+            "type": "actor",
+            "deletewhenfinished": 1,
+            "removeweapon": 1,
+            "lookatplayer": 1,
+            "initanimloop": "lot_02_02_startriots_vign_bangwindow_start_loop_civ06",
+            "mainanim": "lot_02_02_startriots_vign_bangwindow_react_civ06",
+            "model": "spawner_civilian_lotus_civ",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "endanimloop": "lot_02_02_startriots_vign_bangwindow_end_loop_civ06"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

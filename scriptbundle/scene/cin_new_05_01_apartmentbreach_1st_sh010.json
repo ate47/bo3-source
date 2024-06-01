@@ -1,0 +1,282 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_apartment_igc",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_new_05_01_apartmentbreach_1st_sh010",
+    "type": "scene",
+    "nextscenebundle": "cin_new_05_01_apartmentbreach_3rd_sh020",
+    "streamerhint": "cin_new_apartment_breach",
+    "igdtseqnum": 437,
+    "objects": [
+        {
+            "model": "spawner_ally_newworld_human_assault_ar",
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_new_05_01_apartmentbreach_3rd_shot010_soldier01",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "name": "apartment_igc_soldier01",
+            "type": "actor"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "spawner_ally_newworld_human_cqb_shotgun",
+            "firstframe": 1,
+            "mainanim": "ch_new_05_01_apartmentbreach_3rd_shot010_soldier02",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "name": "apartment_igc_soldier02",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_new_05_01_apartmentbreach_3rd_shot010_soldier03",
+            "firstframe": 1,
+            "model": "spawner_ally_newworld_human_assault_ar",
+            "name": "apartment_igc_soldier03",
+            "type": "actor"
+        },
+        {
+            "name": "apartment_igc_soldier04",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_ally_newworld_human_cqb_shotgun",
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "deletewhenfinished": 1,
+            "mainanim": "ch_new_05_01_apartmentbreach_3rd_shot010_soldier04",
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1,
+            "mainblend": 0.2
+        },
+        {
+            "viewclampleft": 30,
+            "name": "new object 6",
+            "type": "player",
+            "firstframe": 1,
+            "showweaponinfirstperson": 1,
+            "viewclampright": 30,
+            "sharedigc": 1,
+            "model": "c_hro_playermale_egypt",
+            "cameratween": 0.2,
+            "viewclampbottom": 10,
+            "mainblend": 0.2,
+            "mainanim": "pb_new_05_01_apartmentbreach_3rd_shot010_player",
+            "viewclamptop": 10,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "c4",
+            "type": "prop",
+            "mainblend": 0.2,
+            "deletewhenfinished": 1,
+            "mainanim": "o_new_05_01_apartmentbreach_3rd_shot010_c4",
+            "model": "wpn_t7_c4_world",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "gunfire01",
+            "type": "prop",
+            "playerstance": "stand",
+            "mainblend": 0.2,
+            "mainanim": "o_new_05_01_apartmentbreach_3rd_shot010_gunfire01",
+            "player": 1,
+            "vmtype": "server",
+            "deletewhenfinished": 1,
+            "model": "tag_origin_animate"
+        },
+        {
+            "name": "gunfire02",
+            "type": "prop",
+            "mainblend": 0.2,
+            "model": "tag_origin_animate",
+            "playerstance": "stand",
+            "mainanim": "o_new_05_01_apartmentbreach_3rd_shot010_gunfire02",
+            "deletewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "gunfire03",
+            "type": "prop",
+            "deletewhenfinished": 1,
+            "model": "tag_origin_animate",
+            "player": 1,
+            "playerstance": "stand",
+            "mainanim": "o_new_05_01_apartmentbreach_3rd_shot010_gunfire03",
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

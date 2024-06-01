@@ -1,0 +1,22 @@
+{
+    "model": "p7_pro_door_control_tower_01_r",
+    "door_locked": 1,
+    "door_connect_paths": 1,
+    "door_slide_open_units": -55,
+    "vmtype": "server",
+    "door_open_method": "slide",
+    "configstringfiletype": "scriptbundle",
+    "door_triggeroffsetx": -30,
+    "door_slide_horizontal": 1,
+    "door_hack_time": 5,
+    "door_start_sound": "evt_securityroom_door_close",
+    "door_open_message": "door locked",
+    "door_swing_angle": -90,
+    "name": "prologue_nrc_knocking_door2",
+    "type": "doors",
+    "door_trigger_radius": 50,
+    "door_unlock_method": "default",
+    "door_use_trigger": 1,
+    "igdtseqnum": 3,
+    "door_open_time": 0.75
+}

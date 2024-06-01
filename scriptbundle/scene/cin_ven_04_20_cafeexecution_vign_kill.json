@@ -1,0 +1,270 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "script_objective": "dogleg_1",
+    "name": "cin_ven_04_20_cafeexecution_vign_kill",
+    "type": "scene",
+    "igdtseqnum": 877,
+    "objects": [
+        {
+            "takedamage": 1,
+            "model": "c_t7_ally_fb",
+            "player": 1,
+            "vmtype": "server",
+            "mainblend": 0.2,
+            "mainanim": "ch_ven_04_20_cafeexecution_main_vign_thug_a",
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "name": "cafe_execution_54i_thug_a",
+            "type": "actor"
+        },
+        {
+            "allowdeath": 1,
+            "player": 1,
+            "vmtype": "server",
+            "nospawn": 1,
+            "diewhenfinished": 1,
+            "takedamage": 1,
+            "model": "c_t7_ally_fb",
+            "mainanim": "ch_ven_04_20_cafeexecution_main_vign_civilian_a",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "name": "cafe_execution_civ_01",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "takedamage": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_ven_04_20_cafeexecution_main_vign_civilian_b",
+            "nospawn": 1,
+            "model": "c_t7_ally_fb",
+            "diewhenfinished": 1,
+            "name": "cafe_execution_civ_02",
+            "type": "actor"
+        },
+        {
+            "name": "cafe_execution_civ_03",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "c_t7_ally_fb",
+            "nospawn": 1,
+            "diewhenfinished": 1,
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "mainanim": "ch_ven_04_20_cafeexecution_main_vign_civilian_c",
+            "takedamage": 1,
+            "player": 1,
+            "mainblend": 0.2
+        },
+        {
+            "name": "cafe_execution_civ_04",
+            "type": "actor",
+            "model": "c_t7_ally_fb",
+            "mainblend": 0.2,
+            "mainanim": "ch_ven_04_20_cafeexecution_main_vign_civilian_d",
+            "nospawn": 1,
+            "allowdeath": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "diewhenfinished": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "name": "cafe_execution_civ_05",
+            "type": "actor",
+            "mainblend": 0.2,
+            "nospawn": 1,
+            "diewhenfinished": 1,
+            "mainanim": "ch_ven_04_20_cafeexecution_main_vign_civilian_e",
+            "model": "c_t7_ally_fb",
+            "player": 1,
+            "allowdeath": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

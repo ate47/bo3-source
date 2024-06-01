@@ -1,0 +1,14 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "cp_medal_all_weapon_unlocks",
+    "type": "medalcaseentry",
+    "igdtseqnum": 6,
+    "largeIcon": "t7_icon_achievement_safehouse_07",
+    "smallIcon": "t7_icon_achievement_safehouse_07",
+    "model": "p7_medal_achievements_safehouse_07",
+    "requirements": "CPUI_MEDAL_ALL_WEAPON_UNLOCKS_REQ",
+    "aarDisplayName": "CPUI_MEDAL_ALL_WEAPON_UNLOCKS_AAR",
+    "displayName": "CPUI_MEDAL_ALL_WEAPON_UNLOCKS",
+    "XPBonus": 5000
+}

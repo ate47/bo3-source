@@ -1,0 +1,14 @@
+{
+    "hacked": "hacked",
+    "ready": "ready",
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "destroyed": "destroyed",
+    "name": "blops_taacom_kls_empcore",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_tacb_kls_empcore_",
+    "firewallhacked": "hacked_fw",
+    "beinghacked": "being_hacked",
+    "firewallbeinghacked": "being_hacked_fw",
+    "igdtseqnum": 63
+}

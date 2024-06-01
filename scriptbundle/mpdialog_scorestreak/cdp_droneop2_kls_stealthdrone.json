@@ -1,0 +1,17 @@
+{
+    "kill1": "kill_1",
+    "kill2": "kill_2",
+    "kill3": "kill_3",
+    "vmtype": "both",
+    "killmultiple": "kill_multiple",
+    "configstringfiletype": "scriptbundle",
+    "activatecounter": "camo",
+    "weapondestroyed": "destroyed",
+    "kill": "kill",
+    "name": "cdp_droneop2_kls_stealthdrone",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_cdo2_kls_stealthdrone_",
+    "timeout": "timeout",
+    "igdtseqnum": 82,
+    "damaged": "damaged"
+}

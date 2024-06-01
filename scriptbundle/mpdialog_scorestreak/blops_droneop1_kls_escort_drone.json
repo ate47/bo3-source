@@ -1,0 +1,11 @@
+{
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "name": "blops_droneop1_kls_escort_drone",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_bdo1_kls_drone_",
+    "timeout": "timeout",
+    "arrive": "arrive",
+    "igdtseqnum": 128,
+    "damaged": "damaged"
+}

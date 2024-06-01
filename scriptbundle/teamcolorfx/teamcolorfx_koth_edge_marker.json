@@ -1,0 +1,21 @@
+{
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "name": "teamcolorfx_koth_edge_marker",
+    "type": "teamcolorfx",
+    "igdtseqnum": 3,
+    "objects": [
+        {
+            "fx_colorid": "#fx:ui/fx_koth_marker_green"
+        },
+        {
+            "fx_colorid": "#fx:ui/fx_koth_marker_yellow"
+        },
+        {
+            "fx_colorid": "#fx:ui/fx_koth_marker_red"
+        },
+        {
+            "fx_colorid": "#fx:ui/fx_koth_marker_green"
+        }
+    ]
+}

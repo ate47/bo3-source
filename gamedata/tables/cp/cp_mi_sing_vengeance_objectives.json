@@ -1,0 +1,169 @@
+[
+    {
+        "id": "cp_level_vengeance_temp",
+        "objective_desc": "CP_MI_SING_VENGEANCE_OBJ_TEST",
+        "show_distance": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 32,
+        "waypoint_text": "CP_MI_SING_VENGEANCE_OBJ_TEST",
+        "waypoint_z_offset": 60
+    },
+    {
+        "id": "obj_follow",
+        "objective_desc": "CP_MI_SING_VENGEANCE_FOLLOW_OBJ_DESC",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 0,
+        "waypoint_text": "CP_MI_SING_VENGEANCE_FOLLOW_WAYPOINT_TEXT",
+        "waypoint_z_offset": 64
+    },
+    {
+        "id": "obj_civilian_rescue",
+        "objective_desc": "CP_MI_SING_VENGEANCE_CIVILIAN_RESCUE_OBJ_DESC",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 0,
+        "waypoint_z_offset": 0
+    },
+    {
+        "id": "obj_takedown",
+        "objective_desc": "CP_MI_SING_VENGEANCE_TAKEDOWN_OBJ_DESC",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 0,
+        "waypoint_z_offset": 0
+    },
+    {
+        "id": "obj_hide_tutorial",
+        "objective_desc": "CP_MI_SING_VENGEANCE_HIDE_OBJ_DESC",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 32,
+        "waypoint_text": "CP_MI_SING_VENGEANCE_HIDE_WAYPOINT_TEXT",
+        "waypoint_z_offset": 0
+    },
+    {
+        "id": "obj_arena_street",
+        "objective_desc": "CP_MI_SING_VENGEANCE_ARENA_STREET_OBJ_DESC",
+        "show_distance": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 32,
+        "waypoint_text": "CP_MI_SING_VENGEANCE_ARENA_STREET_WAYPOINT_TEXT",
+        "waypoint_z_offset": 0
+    },
+    {
+        "id": "obj_dogleg_1",
+        "objective_desc": "CP_MI_SING_VENGEANCE_DOGLEG_1_OBJ_DESC",
+        "show_distance": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 32,
+        "waypoint_text": "CP_MI_SING_VENGEANCE_DOGLEG_1_WAYPOINT_TEXT",
+        "waypoint_z_offset": 0
+    },
+    {
+        "id": "regroup_radio_contact",
+        "objective_desc": "CP_MI_SING_VENGEANCE_REGROUP_RADIO_CONTACT_OBJ_DESC",
+        "show_distance": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 32,
+        "waypoint_text": "CP_MI_SING_VENGEANCE_REGROUP_RADIO_CONTACT_WAYPOINT_TEXT",
+        "waypoint_z_offset": 0
+    },
+    {
+        "id": "module_hackjammer_xy",
+        "objective_desc": "CP_MI_SING_VENGEANCE_HACK_JAMMER_OBJ_XY",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "module_hackjammer_ent",
+        "waypoint_text": "CP_MI_SING_VENGEANCE_HACK_JAMMER_WAYPOINT_TEXT",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "module_killjammers",
+        "objective_desc": "CP_MI_SING_VENGEANCE_KILL_JAMMERS_OBJ_DESC",
+        "waypoint_text": "CP_MI_SING_VENGEANCE_KILL_JAMMERS_WAYPOINT_TEXT",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "module_rescue_xy",
+        "objective_desc": "CP_MI_SING_VENGEANCE_RESCUE_POLICE_OBJ_XY",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "module_rescue_ent",
+        "waypoint_text": "CP_MI_SING_VENGEANCE_RESCUE_POLICE_WAYPOINT_TEXT",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "obj_secure_exfil_xy",
+        "objective_desc": "CP_MI_SING_VENGEANCE_SECURE_EXFIL_OBJ_DESC",
+        "waypoint_z_offset": 0
+    },
+    {
+        "id": "obj_secure_exfil_ent",
+        "waypoint_clamp": "enable",
+        "waypoint_text": "CP_MI_SING_VENGEANCE_SECURE_EXFIL_WAYPOINT_TEXT",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "obj_goto_garage",
+        "waypoint_clamp": "enable",
+        "waypoint_text": "CP_MI_SING_VENGEANCE_ZIPLINE_OBJ_WAYPOINT_TEXT",
+        "waypoint_z_offset": 0
+    },
+    {
+        "id": "obj_goto_safehouse",
+        "objective_desc": "CP_MI_SING_VENGEANCE_GOTO_SAFEHOUSE_OBJ_DESC",
+        "show_distance": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_z_offset": -20
+    },
+    {
+        "id": "obj_destroy_bridge_xy",
+        "objective_desc": "CP_MI_SING_VENGEANCE_BRIDGE_OBJ_DESC",
+        "waypoint_z_offset": 0
+    },
+    {
+        "id": "obj_destroy_bridge_ent",
+        "waypoint_clamp": "enable",
+        "waypoint_text": "CP_MI_SING_VENGEANCE_BRIDGE_WAYPOINT_TEXT",
+        "waypoint_z_offset": 16
+    },
+    {
+        "id": "obj_enter_tunnel",
+        "show_distance": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_z_offset": 0
+    },
+    {
+        "id": "obj_locate_rachel",
+        "objective_desc": "CP_MI_SING_VENGEANCE_RACHEL_OBJ_DESC",
+        "show_distance": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_z_offset": 20
+    },
+    {
+        "id": "obj_open_panic_room",
+        "waypoint_clamp": "enable",
+        "waypoint_text": "CP_MI_SING_VENGEANCE_PANIC_ROOM_WAYPOINT_TEXT",
+        "waypoint_z_offset": 20
+    },
+    {
+        "id": "obj_exit_safehouse",
+        "objective_desc": "CP_MI_SING_VENGEANCE_EXIT_SH_OBJ_DESC",
+        "show_distance": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_z_offset": 20
+    },
+    {
+        "id": "obj_destroy_quad",
+        "objective_desc": "CP_MI_SING_VENGEANCE_QUAD_TANK_OBJ_DESC",
+        "waypoint_clamp": "enable",
+        "waypoint_text": "CP_MI_SING_VENGEANCE_QUAD_TANK_WAYPOINT_TEXT",
+        "waypoint_z_offset": 20
+    },
+    {
+        "id": "obj_exfil",
+        "objective_desc": "CP_MI_SING_VENGEANCE_EXFIL_OBJ_DESC",
+        "show_distance": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_z_offset": 20
+    }
+]

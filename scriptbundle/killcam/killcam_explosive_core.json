@@ -1,0 +1,13 @@
+{
+    "killcamgroundupdist": 25,
+    "killcamwallsidedist": 30,
+    "killcamupdist": 10,
+    "killcamgroundbackdist": 50,
+    "vmtype": "none",
+    "killcamtypestring": "explosive",
+    "name": "killcam_explosive_core",
+    "type": "killcam",
+    "killcambackdist": 150,
+    "killcamwalloutdist": 10,
+    "killcamtype": 4
+}

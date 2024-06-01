@@ -1,0 +1,12 @@
+{
+    "vmtype": "none",
+    "configstringfiletype": "scriptbundle",
+    "aimpitchangled": 20,
+    "aimpitchangleu": 45,
+    "name": "player_macv_turret3",
+    "type": "turretanims",
+    "centerstraightanim": "pb_apc_tur3_mk19_aim_f_level",
+    "igdtseqnum": 14,
+    "centerdownanim": "pb_apc_tur3_mk19_aim_f_15d",
+    "centerupanim": "pb_apc_tur3_mk19_aim_f_45u"
+}

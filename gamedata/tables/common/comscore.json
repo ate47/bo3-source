@@ -1,0 +1,266 @@
+[
+    {
+        "event_record_id": 10000,
+        "id": 0,
+        "is_aggregated": 0,
+        "name": "test_action"
+    },
+    {
+        "event_record_id": 10001,
+        "id": 1,
+        "is_aggregated": 1,
+        "name": "screen_view"
+    },
+    {
+        "event_record_id": 10002,
+        "id": 2,
+        "is_aggregated": 0,
+        "name": "end_match"
+    },
+    {
+        "event_record_id": 10003,
+        "id": 3,
+        "is_aggregated": 0,
+        "name": "store_entry"
+    },
+    {
+        "event_record_id": 10004,
+        "id": 4,
+        "is_aggregated": 1,
+        "name": "store_item_browse"
+    },
+    {
+        "event_record_id": 10005,
+        "id": 5,
+        "is_aggregated": 0,
+        "name": "store_purchase_confirm"
+    },
+    {
+        "event_record_id": 10006,
+        "id": 6,
+        "is_aggregated": 1,
+        "name": "crm_message_view"
+    },
+    {
+        "event_record_id": 10007,
+        "id": 7,
+        "is_aggregated": 1,
+        "name": "crm_message_click"
+    },
+    {
+        "event_record_id": 10008,
+        "id": 8,
+        "is_aggregated": 0,
+        "name": "start_match"
+    },
+    {
+        "event_record_id": 10009,
+        "id": 9,
+        "is_aggregated": 0,
+        "name": "create_account"
+    },
+    {
+        "event_record_id": 10010,
+        "id": 10,
+        "is_aggregated": 0,
+        "name": "session_start"
+    },
+    {
+        "event_record_id": 10011,
+        "id": 11,
+        "is_aggregated": 0,
+        "name": "connect_to_lobby"
+    },
+    {
+        "event_record_id": 10012,
+        "id": 12,
+        "is_aggregated": 1,
+        "name": "paint_shop"
+    },
+    {
+        "event_record_id": 10013,
+        "id": 13,
+        "is_aggregated": 1,
+        "name": "gunsmith"
+    },
+    {
+        "event_record_id": 10014,
+        "id": 14,
+        "is_aggregated": 1,
+        "name": "save_emblem"
+    },
+    {
+        "event_record_id": 10015,
+        "id": 15,
+        "is_aggregated": 1,
+        "name": "watch_video"
+    },
+    {
+        "event_record_id": 10016,
+        "id": 16,
+        "is_aggregated": 1,
+        "name": "prestige"
+    },
+    {
+        "event_record_id": 10017,
+        "id": 17,
+        "is_aggregated": 0,
+        "name": "redeem_loot_drop"
+    },
+    {
+        "event_record_id": 10018,
+        "id": 18,
+        "is_aggregated": 0,
+        "name": "defeat_level"
+    },
+    {
+        "event_record_id": 10019,
+        "id": 19,
+        "is_aggregated": 0,
+        "name": "exchange_process_product"
+    },
+    {
+        "event_record_id": 10020,
+        "id": 20,
+        "is_aggregated": 1,
+        "name": "screenshot"
+    },
+    {
+        "event_record_id": 10021,
+        "id": 21,
+        "is_aggregated": 1,
+        "name": "clip"
+    },
+    {
+        "event_record_id": 10022,
+        "id": 22,
+        "is_aggregated": 1,
+        "name": "fileshare"
+    },
+    {
+        "event_record_id": 10023,
+        "id": 23,
+        "is_aggregated": 0,
+        "name": "daily_challenge_complete"
+    },
+    {
+        "event_record_id": 10024,
+        "id": 24,
+        "is_aggregated": 0,
+        "name": "daily_challenge_abandoned"
+    },
+    {
+        "event_record_id": 10025,
+        "id": 25,
+        "is_aggregated": 0,
+        "name": "daily_challenge_started"
+    },
+    {
+        "event_record_id": 10026,
+        "id": 26,
+        "is_aggregated": 0,
+        "name": "join_group"
+    },
+    {
+        "event_record_id": 10027,
+        "id": 27,
+        "is_aggregated": 0,
+        "name": "leave_group"
+    },
+    {
+        "event_record_id": 10028,
+        "id": 28,
+        "is_aggregated": 0,
+        "name": "create_group"
+    },
+    {
+        "event_record_id": 10029,
+        "id": 29,
+        "is_aggregated": 0,
+        "name": "spend_vials_success"
+    },
+    {
+        "event_record_id": 10030,
+        "id": 30,
+        "is_aggregated": 0,
+        "name": "spend_vials_failure"
+    },
+    {
+        "event_record_id": 10031,
+        "id": 31,
+        "is_aggregated": 0,
+        "name": "exchange_failure"
+    },
+    {
+        "event_record_id": 10032,
+        "id": 32,
+        "is_aggregated": 0,
+        "name": "dw_inventory_item_purchase"
+    },
+    {
+        "event_record_id": 10033,
+        "id": 33,
+        "is_aggregated": 0,
+        "name": "dw_inventory_item_equip"
+    },
+    {
+        "event_record_id": 10034,
+        "id": 34,
+        "is_aggregated": 0,
+        "name": "dw_inventory_cwl_camo_tracking"
+    },
+    {
+        "event_record_id": 10035,
+        "id": 35,
+        "is_aggregated": 0,
+        "name": "dw_inventory_cwl_backing_tracking"
+    },
+    {
+        "event_record_id": 10036,
+        "id": 36,
+        "is_aggregated": 0,
+        "name": "black_market_experiment_featured"
+    },
+    {
+        "event_record_id": 10037,
+        "id": 37,
+        "is_aggregated": 0,
+        "name": "black_market_experiment"
+    },
+    {
+        "event_record_id": 10038,
+        "id": 38,
+        "is_aggregated": 0,
+        "name": "lobby_monitor"
+    },
+    {
+        "event_record_id": 10039,
+        "id": 39,
+        "is_aggregated": 0,
+        "name": "cook_gobblegum_recipe"
+    },
+    {
+        "event_record_id": 10040,
+        "id": 40,
+        "is_aggregated": 1,
+        "name": "bonus_crypto_earn_rate"
+    },
+    {
+        "event_record_id": 10041,
+        "id": 41,
+        "is_aggregated": 1,
+        "name": "zm_dash_quit_types_aggregated"
+    },
+    {
+        "event_record_id": 10042,
+        "id": 42,
+        "is_aggregated": 0,
+        "name": "zm_dash_quit_types"
+    },
+    {
+        "event_record_id": 10043,
+        "id": 43,
+        "is_aggregated": 0,
+        "name": "orbis_status_check"
+    }
+]

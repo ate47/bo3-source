@@ -1,0 +1,316 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_armory_02",
+    "dontsync": 1,
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_ram_03_01_defend_1st_rapsintro",
+    "type": "scene",
+    "disablesceneskipping": 1,
+    "streamerhint": "cin_ram_03_01_defend_1st_rapsintro",
+    "igdtseqnum": 1256,
+    "objects": [
+        {
+            "takedamage": 1,
+            "cameratweenout": 0.5,
+            "model": "c_t7_ally_fb",
+            "viewclampright": 20,
+            "viewclampbottom": 20,
+            "player": 1,
+            "sharedigc": 1,
+            "vmtype": "server",
+            "mainblend": 0.2,
+            "viewclampleft": 20,
+            "mainanim": "pb_ram_03_01_defend_1st_rapsintro_player",
+            "viewclamptop": 20,
+            "playerstance": "stand",
+            "lerptime": 0.2,
+            "name": "new object 1",
+            "type": "player"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "diewhenfinished": 1,
+            "takedamage": 1,
+            "model": "c_ega_soldier_3_pincushion",
+            "firstframe": 1,
+            "mainanim": "ch_ram_03_01_defend_1st_rapsintro_guy",
+            "initanimloop": "ch_ram_03_01_defend_1st_rapsintro_guy_loop",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "name": "rap_intro_guy",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "takedamage": 1,
+            "mainblend": 0.2,
+            "mainanim": "v_ram_03_01_defend_1st_rapsintro_raps",
+            "deletewhenfinished": 1,
+            "firstframe": 1,
+            "model": "veh_t7_drone_raps",
+            "name": "rap_intro_veh",
+            "type": "vehicle"
+        },
+        {
+            "name": "shrapnel06",
+            "type": "prop",
+            "vmtype": "server",
+            "model": "veh_t7_raps_drone_shrapnel_07",
+            "diewhenfinished": 1,
+            "playerstance": "stand",
+            "mainanim": "o_ram_03_01_defend_1st_rapsintro_shrapnel_06",
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1,
+            "mainblend": 0.2
+        },
+        {
+            "name": "shrapnel07",
+            "type": "prop",
+            "firstframe": 1,
+            "model": "veh_t7_raps_drone_shrapnel_07",
+            "mainblend": 0.2,
+            "mainanim": "o_ram_03_01_defend_1st_rapsintro_shrapnel_07",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "diewhenfinished": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "takedamage": 1,
+            "name": "shrapnel_arm",
+            "type": "prop",
+            "mainblend": 0.2,
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "diewhenfinished": 1,
+            "mainanim": "o_ram_03_01_defend_1st_rapsintro_shrapnel_01",
+            "model": "veh_t7_raps_drone_shrapnel_07",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "shrapnel02",
+            "type": "prop",
+            "diewhenfinished": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "firstframe": 1,
+            "mainblend": 0.2,
+            "mainanim": "o_ram_03_01_defend_1st_rapsintro_shrapnel_03",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "veh_t7_raps_drone_shrapnel_02"
+        },
+        {
+            "name": "shrapnel03",
+            "type": "prop",
+            "mainblend": 0.2,
+            "model": "veh_t7_raps_drone_shrapnel_06",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "o_ram_03_01_defend_1st_rapsintro_shrapnel_04",
+            "firstframe": 1,
+            "diewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "shrapnel04",
+            "type": "prop",
+            "diewhenfinished": 1,
+            "spawnoninit": 1,
+            "model": "veh_t7_raps_drone_shrapnel_01",
+            "player": 1,
+            "playerstance": "stand",
+            "mainblend": 0.2,
+            "takedamage": 1,
+            "mainanim": "o_ram_03_01_defend_1st_rapsintro_shrapnel_05",
+            "vmtype": "server",
+            "firstframe": 1
+        },
+        {
+            "takedamage": 1,
+            "name": "raps_door_right",
+            "type": "prop",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "player": 1,
+            "model": "p7_spire_hotel_door_01_r",
+            "vmtype": "server",
+            "mainanim": "o_ram_03_01_defend_1st_rapsintro_door01"
+        },
+        {
+            "playerstance": "stand",
+            "model": "p7_spire_hotel_door_01_l",
+            "mainblend": 0.2,
+            "name": "raps_door_left",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "o_ram_03_01_defend_1st_rapsintro_door02"
+        },
+        {
+            "firstframe": 1,
+            "playerstance": "stand",
+            "model": "c_ega_soldier_3_arm_prop_anim",
+            "name": "arm",
+            "type": "prop",
+            "player": 1,
+            "diewhenfinished": 1,
+            "vmtype": "server",
+            "mainblend": 0.2,
+            "spawnoninit": 1,
+            "takedamage": 1,
+            "mainanim": "o_ram_03_01_defend_1st_rapsintro_arm"
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+a0,b1,c2,d3,e4,f5,g6,h7,i8,j9
+0,playerstatslist plevel statValue,,,,,-1,1,hacked_client,hacked_server
+1,playerstatslist stats_version statValue,,,,,-1,1,hacked_client,hacked_server
+2,playerstatslist rankxp statValue,,32768,-1,65536,,,boosting_lobby_client,boosting_lobby_server
+3,playerstatslist KILLS statValue,,5000,-1,10000,,,boosting_lobby_client,boosting_lobby_server
+4,playerstatslist DEATHS statValue,,,-1,,,,hacked_client,hacked_server
+5,playerstatslist ASSISTS statValue,,5000,-1,10000,,,boosting_lobby_client,boosting_lobby_server
+6,playerstatslist HEADSHOTS statValue,,3000,-1,6000,,,boosting_lobby_client,boosting_lobby_server
+7,playerstatslist REVIVES statValue,,50,-1,100,,,boosting_lobby_client,boosting_lobby_server
+8,playerstatslist TIME_PLAYED_TOTAL statValue,,,-1,,,,hacked_client,hacked_server
+9,playerstatslist WINS statValue,,,-1,,,,hacked_client,hacked_server
+10,playerstatslist TIES statValue,,,-1,,,,hacked_client,hacked_server
+11,playerstatslist HITS statValue,,,-1,,,,boosting_lobby_client,boosting_lobby_server
+12,playerstatslist MISSES statValue,,,,,,,boosting_lobby_client,boosting_lobby_server
+13,playerstatslist TOTAL_SHOTS statValue,,,-1,,,,boosting_lobby_client,boosting_lobby_server
+14,playerstatslist RANK statValue,,15,,20,,,boosting_lobby_client,boosting_lobby_server

@@ -1,0 +1,188 @@
+a0,b1,c2,d3,e4,f5,g6,h7,i8,j9,k10,l11,m12,n13,o14,p15,q16,r17,s18
+0,,weapon_pistol,WEAPON_NULL,weapon_null,,menu_mp_lobby_none_selected,,,,,,-1,,,,,,
+1,,weapon_pistol,WEAPON_PISTOL_STANDARD,pistol_standard,,t7_icon_weapon_pistol_standard,WEAPON_PISTOL_STANDARD_DESC,steadyaim quickdraw fastreload extclip reddot reflex suppressed fmj extbarrel damage,1,0,class_custom_smg steadyaim class_custom_assault fastreload class_custom_cqb quickdraw class_custom_lmg extclip class_custom_sniper fastreload class_smg class_assault class_lmg class_cqb class_sniper,1,secondary,,,,,
+2,,weapon_pistol,WEAPON_PISTOL_BURST,pistol_burst,,t7_icon_weapon_pistol_burst,WEAPON_PISTOL_BURST_DESC,steadyaim quickdraw fastreload extclip reddot reflex suppressed fmj extbarrel damage,2,6,,1,secondary,,,,1,MPUI_WEAPON_PISTOL_BLUEPRINT
+3,,weapon_pistol,WEAPON_PISTOL_FULLAUTO,pistol_fullauto,,t7_icon_weapon_pistol_fullauto,WEAPON_PISTOL_FULLAUTO_DESC,steadyaim quickdraw fastreload extclip reddot reflex suppressed fmj extbarrel damage,4,13,,1,secondary,,,,1,MPUI_WEAPON_PISTOL_BLUEPRINT
+4,,weapon_pistol,WEAPON_PISTOL_STANDARD_DW,pistol_standard_dw,,t7_icon_weapon_pistol_standard_dw,WEAPON_PISTOL_STANDARD_DW_DESC,steadyaim quickdraw fastreload extclip reddot reflex suppressed fmj extbarrel damage,1,60,,-1,secondary,,,,,
+5,,weapon_pistol,WEAPON_PISTOL_BURST_DW,pistol_burst_dw,,t7_icon_weapon_pistol_burst_dw,WEAPON_PISTOL_BURST_DW_DESC,steadyaim quickdraw fastreload extclip reddot reflex suppressed fmj extbarrel damage,1,60,,-1,secondary,,,,,
+6,,weapon_pistol,WEAPON_PISTOL_FULLAUTO_DW,pistol_fullauto_dw,,t7_icon_weapon_pistol_fullauto_dw,WEAPON_PISTOL_FULLAUTO_DW_DESC,steadyaim quickdraw fastreload extclip reddot reflex suppressed fmj extbarrel damage,1,60,,-1,secondary,,,,,
+7,,weapon_pistol,WEAPON_HERO_ANNIHILATOR,hero_annihilator,,t7_icon_weapon_hero_annihilator,WEAPON_HERO_ANNIHILATOR_DESC,,3,9,,1,secondary,,,,1,MPUI_WEAPON_PISTOL_BLUEPRINT
+10,,weapon_smg,WEAPON_SMG_STANDARD,smg_standard,,t7_icon_weapon_smg_standard,WEAPON_SMG_STANDARD_DESC,reflex reddot acog holo dualoptic quickdraw steadyaim grip stalker fastreload suppressed extclip fmj extbarrel rf,1,0,class_custom_assault reflex quickdraw grip,1,primary,,,,,
+11,,weapon_smg,WEAPON_SMG_BURST,smg_burst,,t7_icon_weapon_smg_burst,WEAPON_SMG_BURST_DESC,reflex reddot acog holo dualoptic quickdraw steadyaim grip stalker fastreload suppressed extclip fmj extbarrel rf,2,3,,1,primary,,,,1,MPUI_WEAPON_SMG_BLUEPRINT
+12,,weapon_smg,WEAPON_SMG_FASTFIRE,smg_fastfire,,t7_icon_weapon_smg_fastfire,WEAPON_SMG_FASTFIRE_DESC,reflex reddot acog holo dualoptic quickdraw steadyaim grip stalker fastreload suppressed extclip fmj extbarrel rf,5,13,,1,primary,,,,1,MPUI_WEAPON_SMG_BLUEPRINT
+13,,weapon_smg,WEAPON_SMG_LONGRANGE,smg_longrange,,t7_icon_weapon_smg_longrange,WEAPON_SMG_LONGRANGE_DESC,reflex reddot acog holo dualoptic quickdraw steadyaim grip stalker fastreload suppressed extclip fmj extbarrel rf,3,7,,1,primary,,,,1,MPUI_WEAPON_SMG_BLUEPRINT
+14,,weapon_smg,WEAPON_SMG_VERSATILE,smg_versatile,,t7_icon_weapon_smg_versatile,WEAPON_SMG_VERSATILE_DESC,reflex reddot acog holo dualoptic quickdraw steadyaim grip stalker fastreload suppressed extclip fmj extbarrel rf,4,10,,1,primary,,,,1,MPUI_WEAPON_SMG_BLUEPRINT
+15,,weapon_smg,WEAPON_SMG_CAPACITY,smg_capacity,,t7_icon_weapon_smg_capacity,WEAPON_SMG_CAPACITY_DESC,reflex reddot acog holo dualoptic quickdraw steadyaim grip stalker fastreload suppressed extclip fmj extbarrel rf,6,15,,1,primary,,,,1,MPUI_WEAPON_SMG_BLUEPRINT
+16,,weapon_smg,WEAPON_SMG_VERSATILE,smg_versatile_hero,,t7_icon_weapon_smg_versatile,WEAPON_SMG_VERSATILE_DESC,reflex reddot acog holo dualoptic quickdraw steadyaim grip stalker fastreload suppressed extclip fmj extbarrel rf,7,,,-1,primary,,,,,
+20,,weapon_assault,WEAPON_AR_STANDARD,ar_standard,,t7_icon_weapon_ar_standard,WEAPON_AR_STANDARD_DESC,reflex reddot acog holo dualoptic ir extclip quickdraw steadyaim grip stalker fastreload suppressed fmj rf extbarrel damage,2,2,,1,primary,,,,1,MPUI_WEAPON_ASSAULT_BLUEPRINT
+21,,weapon_assault,WEAPON_AR_ACCURATE,ar_accurate,,t7_icon_weapon_ar_accurate,WEAPON_AR_ACCURATE_DESC,reflex reddot acog holo dualoptic ir extclip quickdraw steadyaim grip stalker fastreload suppressed fmj rf extbarrel damage,3,4,,1,primary,,,,1,MPUI_WEAPON_ASSAULT_BLUEPRINT
+22,,weapon_assault,WEAPON_AR_CQB,ar_cqb,,t7_icon_weapon_ar_cqb,WEAPON_AR_CQB_DESC,reflex reddot acog holo dualoptic ir extclip quickdraw steadyaim grip stalker fastreload suppressed fmj rf extbarrel damage,4,6,,1,primary,,,,1,MPUI_WEAPON_ASSAULT_BLUEPRINT
+23,,weapon_assault,WEAPON_AR_DAMAGE,ar_damage,,t7_icon_weapon_ar_damage,WEAPON_AR_DAMAGE_DESC,reflex reddot acog holo dualoptic ir extclip quickdraw steadyaim grip stalker fastreload suppressed fmj rf extbarrel damage,5,9,,1,primary,,,,1,MPUI_WEAPON_ASSAULT_BLUEPRINT
+24,,weapon_assault,WEAPON_AR_FASTBURST,ar_fastburst,,t7_icon_weapon_ar_fastburst,WEAPON_AR_FASTBURST_DESC,reflex reddot acog holo dualoptic ir extclip quickdraw steadyaim grip stalker fastreload suppressed fmj rf extbarrel damage,1,0,class_custom_smg reflex stalker grip,1,primary,,,,,
+25,,weapon_assault,WEAPON_AR_LONGBURST,ar_longburst,,t7_icon_weapon_ar_longburst,WEAPON_AR_LONGBURST_DESC,reflex reddot acog holo dualoptic ir extclip quickdraw steadyaim grip stalker fastreload suppressed fmj rf extbarrel damage,7,18,,1,primary,,,,1,MPUI_WEAPON_ASSAULT_BLUEPRINT
+26,,weapon_assault,WEAPON_AR_MARKSMAN,ar_marksman,,t7_icon_weapon_ar_marksman,WEAPON_AR_MARKSMAN_DESC,reflex reddot acog holo dualoptic ir extclip quickdraw steadyaim grip stalker fastreload suppressed fmj rf extbarrel damage,6,14,,1,primary,,,,1,MPUI_WEAPON_ASSAULT_BLUEPRINT
+27,,weapon_assault,WEAPON_AR_STANDARD,ar_standard_hero,,t7_icon_weapon_ar_standard,WEAPON_AR_STANDARD_DESC,reflex reddot acog holo dualoptic ir extclip quickdraw steadyaim grip stalker fastreload suppressed fmj rf extbarrel damage,8,,,-1,primary,,,,,
+30,,weapon_lmg,WEAPON_LMG_CQB,lmg_cqb,,t7_icon_weapon_lmg_cqb,WEAPON_LMG_CQB_DESC,reflex reddot acog holo dualoptic ir quickdraw steadyaim grip stalker fastreload fmj suppressed rf extclip,3,8,,1,primary,,,,1,MPUI_WEAPON_LMG_BLUEPRINT
+31,,weapon_lmg,WEAPON_LMG_HEAVY,lmg_heavy,,t7_icon_weapon_lmg_heavy,WEAPON_LMG_HEAVY_DESC,reflex reddot acog holo dualoptic ir quickdraw steadyaim grip stalker fastreload fmj suppressed rf extclip,2,1,,1,primary,,,,1,MPUI_WEAPON_LMG_BLUEPRINT
+32,,weapon_lmg,WEAPON_LMG_LIGHT,lmg_light,,t7_icon_weapon_lmg_light,WEAPON_LMG_LIGHT_DESC,reflex reddot acog holo dualoptic ir quickdraw steadyaim grip stalker fastreload fmj suppressed rf extclip,1,0,class_custom_lmg reflex steadyaim grip,1,primary,,,,,
+33,,weapon_lmg,WEAPON_LMG_SLOWFIRE,lmg_slowfire,,t7_icon_weapon_lmg_slowfire,WEAPON_LMG_SLOWFIRE_DESC,reflex reddot acog holo dualoptic ir quickdraw steadyaim grip stalker fastreload fmj suppressed rf extclip,4,19,,1,primary,,,,1,MPUI_WEAPON_LMG_BLUEPRINT
+34,,weapon_lmg,WEAPON_LMG_LIGHT,lmg_light_hero,,t7_icon_weapon_lmg_light,WEAPON_LMG_LIGHT_DESC,reflex reddot acog holo dualoptic ir quickdraw steadyaim grip stalker fastreload fmj suppressed rf extclip,5,,,-1,primary,,,,,
+40,,weapon_sniper,WEAPON_SNIPER_FASTBOLT,sniper_fastbolt,,t7_icon_weapon_sniper_fastbolt,WEAPON_SNIPER_FASTBOLT_DESC_CP,acog dualoptic ir reddot extclip stalker suppressed fastreload fmj swayreduc rf,1,0,class_custom_sniper extclip,1,primary,,,,,
+41,,weapon_sniper,WEAPON_SNIPER_FASTSEMI,sniper_fastsemi,,t7_icon_weapon_sniper_fastsemi,WEAPON_SNIPER_FASTSEMI_DESC_CP,acog dualoptic ir reddot extclip stalker suppressed fastreload fmj swayreduc rf,2,5,,1,primary,,,,1,MPUI_WEAPON_SNIPER_BLUEPRINT
+42,,weapon_sniper,WEAPON_SNIPER_POWERBOLT,sniper_powerbolt,,t7_icon_weapon_sniper_powerbolt,WEAPON_SNIPER_POWERBOLT_DESC_CP,acog dualoptic ir reddot extclip stalker suppressed fastreload fmj swayreduc rf,3,11,,1,primary,,,,1,MPUI_WEAPON_SNIPER_BLUEPRINT
+43,,weapon_sniper,WEAPON_SNIPER_CHARGESHOT,sniper_chargeshot,,t7_icon_weapon_sniper_chargeshot,WEAPON_SNIPER_CHARGESHOT_DESC,acog dualoptic ir reddot extclip stalker suppressed fastreload fmj swayreduc rf,4,16,,1,primary,,,,1,MPUI_WEAPON_SNIPER_BLUEPRINT
+44,,weapon_sniper,WEAPON_SNIPER_FASTBOLT,sniper_fastbolt_hero,,t7_icon_weapon_sniper_fastbolt,WEAPON_SNIPER_FASTBOLT_DESC_CP,acog dualoptic ir reddot extclip stalker suppressed fastreload fmj swayreduc rf,5,,,-1,primary,,,,,
+50,,weapon_cqb,WEAPON_SHOTGUN_FULLAUTO,shotgun_fullauto,,t7_icon_weapon_shotgun_fullauto,WEAPON_SHOTGUN_FULLAUTO_DESC,reflex quickdraw reddot holo steadyaim stalker fastreload suppressed extclip extbarrel rf,4,17,,1,primary,,,,1,MPUI_WEAPON_CQB_BLUEPRINT
+51,,weapon_cqb,WEAPON_SHOTGUN_PRECISION,shotgun_precision,,t7_icon_weapon_shotgun_precision,WEAPON_SHOTGUN_PRECISION_DESC,reflex quickdraw reddot holo steadyaim stalker fastreload suppressed extclip extbarrel rf,3,12,,1,primary,,,,1,MPUI_WEAPON_CQB_BLUEPRINT
+52,,weapon_cqb,WEAPON_SHOTGUN_PUMP,shotgun_pump,,t7_icon_weapon_shotgun_pump,WEAPON_SHOTGUN_PUMP_DESC,reflex quickdraw reddot holo steadyaim stalker fastreload suppressed extclip extbarrel rf,1,0,class_custom_cqb reflex quickdraw steadyaim,1,primary,,,,,
+53,,weapon_cqb,WEAPON_SHOTGUN_SEMIAUTO,shotgun_semiauto,,t7_icon_weapon_shotgun_semiauto,WEAPON_SHOTGUN_SEMIAUTO_DESC,reflex quickdraw reddot holo steadyaim stalker fastreload suppressed extclip extbarrel rf,2,2,,1,primary,,,,1,MPUI_WEAPON_CQB_BLUEPRINT
+58,,weapon_launcher,WEAPON_LAUNCHER_STANDARD,launcher_standard,1,t7_icon_weapon_launcher_standard,WEAPON_LAUNCHER_STANDARD_DESC,,4,4,,-1,secondary,,,,,MPUI_WEAPON_LAUNCHER_BLUEPRINT
+59,,weapon_launcher,WEAPON_LAUNCHER_LOCKONLY,launcher_lockonly,1,t7_icon_weapon_launcher_lockonly,WEAPON_LAUNCHER_LOCKONLY_DESC,,3,15,,1,secondary,,,,1,MPUI_WEAPON_LAUNCHER_BLUEPRINT
+60,,weapon_launcher,WEAPON_LAUNCHER_STANDARD_DF,launcher_standard_df,1,t7_icon_weapon_launcher_standard,WEAPON_LAUNCHER_STANDARD_DF_DESC,,1,4,,1,secondary,,,,1,MPUI_WEAPON_LAUNCHER_BLUEPRINT
+91,,weapon_launcher,WEAPON_HERO_PINEAPPLEGUN,hero_pineapplegun,,t7_icon_weapon_hero_pineapplegun,WEAPON_HERO_PINEAPPLEGUN_DESC,,2,12,,1,secondary,,,,1,MPUI_WEAPON_LAUNCHER_BLUEPRINT
+61,,weapon_grenade,WEAPON_FRAGGRENADE,frag_grenade,1,t7_hud_icon_menu_frag,WEAPON_FRAGGRENADE_DESC,gmod0,1,0,class_custom_smg class_custom_assault class_custom_lmg class_custom_cqb class_custom_sniper,1,primarygadget,,,,,
+62,,weapon_grenade,WEAPON_HATCHET,hatchet,1,t7_hud_icon_menu_hatchet,WEAPON_HATCHET_DESC,gmod0,6,17,,1,primarygadget,,,,1,MPUI_PRIMARYGADGET_BLUEPRINT
+63,,weapon_grenade,WEAPON_STICKY_GRENADE,sticky_grenade,1,t7_hud_icon_menu_semtex,WEAPON_STICKY_GRENADE_DESC,gmod0,3,7,,1,primarygadget,,,,1,MPUI_PRIMARYGADGET_BLUEPRINT
+64,,weapon_grenade,WEAPON_SATCHEL_CHARGE,satchel_charge,1,t7_hud_icon_menu_c4,PLATFORM_SATCHEL_CHARGE_DESC,gmod0,4,10,,1,primarygadget,,,,1,MPUI_PRIMARYGADGET_BLUEPRINT
+65,,weapon_grenade,WEAPON_BOUNCINGBETTY,bouncingbetty,1,t7_hud_icon_menu_bouncebetty,WEAPON_BOUNCINGBETTY_DESC,gmod0,5,14,,1,primarygadget,,,,1,MPUI_PRIMARYGADGET_BLUEPRINT
+66,,weapon_grenade,WEAPON_INCENDIARY_GRENADE,incendiary_grenade,1,t7_hud_icon_menu_incendiary,WEAPON_INCENDIARY_GRENADE_DESC,gmod0,2,1,,1,primarygadget,,,,1,MPUI_PRIMARYGADGET_BLUEPRINT
+70,,weapon_grenade,WEAPON_WILLY_PETE,willy_pete,1,t7_hud_icon_menu_smoke,WEAPON_WILLY_PETE_DESC,gmod0,5,60,,-1,secondarygadget,,,,,
+71,,weapon_grenade,WEAPON_STUN_GRENADE,concussion_grenade,1,t7_hud_icon_menu_concussion,WEAPON_STUN_GRENADE_DESC,gmod0,4,60,,-1,secondarygadget,,,,,
+72,,weapon_grenade,WEAPON_EMPGRENADE,emp_grenade,1,t7_hud_icon_menu_emp,WEAPON_EMPGRENADE_DESC,gmod0,2,3,,1,secondarygadget,,,,1,MPUI_SECONDARYGADGET_BLUEPRINT
+74,,weapon_grenade,WEAPON_FLASHBANG,flash_grenade,1,t7_hud_icon_menu_flash,WEAPON_FLASHBANG_DESC,gmod0,1,0,class_custom_smg gmod0 class_custom_assault gmod0 class_custom_lmg gmod0 class_custom_cqb gmod0 class_custom_sniper gmod0,1,secondarygadget,,,,,
+75,,weapon_grenade,WEAPON_PROXIMITY_GRENADE,proximity_grenade,1,t7_hud_icon_menu_shock,WEAPON_PROXIMITY_GRENADE_DESC,gmod0,3,8,,1,secondarygadget,,,,1,MPUI_SECONDARYGADGET_BLUEPRINT
+76,,weapon_grenade,WEAPON_PDA_HACK,pda_hack,1,t7_hud_icon_menu_hack,WEAPON_PDA_HACK_DESC,gmod0,6,60,,-1,secondarygadget,,,,,
+78,,weapon_grenade,WEAPON_TROPHY_SYSTEM,trophy_system,1,t7_hud_icon_menu_trophy,WEAPON_TROPHY_SYSTEM_DESC,gmod0,8,60,,-1,secondarygadget,,,,,
+80,,weapon_special,WEAPON_KNIFE_HELD,knife_held,,combat_tab_knife,WEAPON_KNIFE_HELD_DESC,,,,,-1,secondary,,,,,
+81,,weapon_special,WEAPON_MINIGUN,minigun,,menu_mp_weapons_xm25,WEAPON_MINIGUN_DESC,,,,,-1,primary,,,,,
+82,,miscweapon,WEAPON_KNIFE,knife,,combat_tab_knife,,,,,,-1,,,,,,
+86,,weapon_special,WEAPON_HERO_MINIGUN,hero_minigun,,t7_menu_mp_hero_reaper_weapon,WEAPON_HERO_MINIGUN_DESC,,,,,-1,heroweapon,,,,,
+87,,weapon_special,WEAPON_HERO_LIGHTNINGGUN,hero_lightninggun,,t7_menu_mp_hero_technomancer_weapon,WEAPON_HERO_LIGHTNINGGUN_DESC,,,,,-1,heroweapon,,,,,
+88,,weapon_special,WEAPON_HERO_GRAVITYSPIKES,hero_gravityspikes,,t7_menu_mp_hero_mercenary_weapon,WEAPON_HERO_GRAVITYSPIKES_DESC,,,,,-1,heroweapon,,,,,
+89,,weapon_special,WEAPON_HERO_ARMBLADE,hero_armblade,,t7_menu_mp_hero_spectre_weapon,WEAPON_HERO_ARMBLADE_DESC,,,,,-1,heroweapon,,,,,
+92,,weapon_special,WEAPON_HERO_BOWLAUNCHER,hero_bowlauncher,,t7_menu_mp_hero_outrider_weapon,WEAPON_HERO_BOWLAUNCHER_DESC,,,,,-1,secondary,,,,,
+93,,weapon_special,WEAPON_HERO_CHEMICALGELGUN,hero_chemicalgelgun,,t7_menu_mp_hero_trapper_weapon,WEAPON_HERO_CHEMICALGELGUN_DESC,,,,,-1,heroweapon,,,,,
+94,,weapon_special,WEAPON_HERO_FLAMETHROWER,hero_flamethrower,,t7_menu_mp_hero_firebreak_weapon,WEAPON_HERO_FLAMETHROWER_DESC,,,,,-1,heroweapon,,,,,
+99,,weapon_knife,WEAPON_KNIFE_LOADOUT,knife_loadout,1,t7_icon_weapon_special_knife,WEAPON_KNIFE_LOADOUT_DESC,,1,9,,-1,secondary,,,,1,
+100,,cybercom_abilities,WEAPON_GADGET_SYSTEM_OVERLOAD,cybercom_systemoverload,,t7_cp_hud_ability_icon_systemoverload,WEAPON_GADGET_SYSTEM_OVERLOAD_MENU_DESC,,,,,1,cybercom_ability1,,,,,
+101,,cybercom_abilities,WEAPON_GADGET_EXO_BREAKDOWN,cybercom_exosuitbreakdown,,t7_cp_hud_ability_icon_exobreakdown,WEAPON_GADGET_EXO_BREAKDOWN_MENU_DESC,,,,,1,cybercom_ability1,,,,1,
+102,,cybercom_abilities,WEAPON_GADGET_SERVO_SHORTOUT,cybercom_servoshortout,,t7_cp_hud_ability_icon_servoshort,WEAPON_GADGET_SERVO_SHORTOUT_MENU_DESC,,,,,1,cybercom_ability1,,,,1,
+103,,cybercom_abilities,WEAPON_GADGET_SURGE,cybercom_surge,,t7_cp_hud_ability_icon_surge,WEAPON_GADGET_SURGE_MENU_DESC,,,,,1,cybercom_ability1,,,,1,
+104,,cybercom_abilities,WEAPON_GADGET_RAVAGE_CORE,cybercom_ravagecore,,t7_cp_hud_ability_icon_ravagecore,WEAPON_GADGET_RAVAGE_CORE_MENU_DESC,,,,,1,cybercom_ability1,,,,1,
+105,,cybercom_abilities,WEAPON_GADGET_REMOTE_HIJACK,cybercom_hijack,,t7_cp_hud_ability_icon_hijack,WEAPON_GADGET_REMOTE_HIJACK_MENU_DESC,,,,,1,cybercom_ability1,,,,1,
+106,,cybercom_abilities,WEAPON_GADGET_IFF_OVERRIDE,cybercom_iffoverride,,t7_cp_hud_ability_icon_iffoverride,WEAPON_GADGET_IFF_OVERRIDE_MENU_DESC,,,,,1,cybercom_ability1,,,,1,
+107,,cybercom_abilities,WEAPON_GADGET_SYSTEM_OVERLOAD_PRO,cybercom_systemoverload_pro,,t7_cp_hud_ability_icon_systemoverload,WEAPON_GADGET_SYSTEM_OVERLOAD_UPG_MENU_DESC,,,,,1,cybercom_ability1,,,,1,
+108,,cybercom_abilities,WEAPON_GADGET_EXO_BREAKDOWN_PRO,cybercom_exosuitbreakdown_pro,,t7_cp_hud_ability_icon_exobreakdown,WEAPON_GADGET_EXO_BREAKDOWN_UPG_MENU_DESC,,,,,1,cybercom_ability1,,,,1,
+109,,cybercom_abilities,WEAPON_GADGET_SERVO_SHORTOUT_PRO,cybercom_servoshortout_pro,,t7_cp_hud_ability_icon_servoshort,WEAPON_GADGET_SERVO_SHORTOUT_UPG_MENU_DESC,,,,,1,cybercom_ability1,,,,1,
+110,,cybercom_abilities,WEAPON_GADGET_SURGE_PRO,cybercom_surge_pro,,t7_cp_hud_ability_icon_surge,WEAPON_GADGET_SURGE_UPG_MENU_DESC,,,,,1,cybercom_ability1,,,,1,
+111,,cybercom_abilities,WEAPON_GADGET_RAVAGE_CORE_PRO,cybercom_ravagecore_pro,,t7_cp_hud_ability_icon_ravagecore,WEAPON_GADGET_RAVAGE_CORE_UPG_MENU_DESC,,,,,1,cybercom_ability1,,,,1,
+112,,cybercom_abilities,WEAPON_GADGET_REMOTE_HIJACK_PRO,cybercom_hijack_pro,,t7_cp_hud_ability_icon_hijack,WEAPON_GADGET_REMOTE_HIJACK_UPG_MENU_DESC,,,,,1,cybercom_ability1,,,,1,
+113,,cybercom_abilities,WEAPON_GADGET_IFF_OVERRIDE_PRO,cybercom_iffoverride_pro,,t7_cp_hud_ability_icon_iffoverride,WEAPON_GADGET_IFF_OVERRIDE_UPG_MENU_DESC,,,,,1,cybercom_ability1,,,,1,
+114,,cybercom_abilities,WEAPON_GADGET_OVERDRIVE,cybercom_overdrive,,t7_cp_hud_ability_icon_overdrive,WEAPON_GADGET_OVERDRIVE_MENU_DESC,,,,,1,cybercom_ability2,,,,,
+115,,cybercom_abilities,WEAPON_GADGET_SMOKESCREEN,cybercom_smokescreen,,t7_cp_hud_ability_icon_smokescreen,WEAPON_GADGET_SMOKESCREEN_MENU_DESC,,,,,1,cybercom_ability2,,,,1,
+116,,cybercom_abilities,WEAPON_GADGET_FORCED_MALFUNCTION,cybercom_forcedmalfunction,,t7_cp_hud_ability_icon_malfunction,WEAPON_GADGET_FORCED_MALFUNCTION_MENU_DESC,,,,,1,cybercom_ability2,,,,1,
+117,,cybercom_abilities,WEAPON_GADGET_ACTIVE_CAMO,cybercom_camo,,t7_cp_hud_ability_icon_actamo,WEAPON_GADGET_ACTIVE_CAMO_MENU_DESC,,,,,1,cybercom_ability2,,,,1,
+118,,cybercom_abilities,WEAPON_GADGET_UNSTOPPABLE_FORCE,cybercom_unstoppableforce,,t7_cp_hud_ability_icon_unstoppableforce,WEAPON_GADGET_UNSTOPPABLE_FORCE_MENU_DESC,,,,,1,cybercom_ability2,,,,1,
+119,,cybercom_abilities,WEAPON_GADGET_RAPID_STRIKE,cybercom_rapidstrike,,t7_cp_hud_ability_icon_rapidstrike,WEAPON_GADGET_RAPID_STRIKE_MENU_DESC,,,,,1,cybercom_ability2,,,,1,
+120,,cybercom_abilities,WEAPON_GADGET_CONCUSSIVE_WAVE,cybercom_concussive,,t7_cp_hud_ability_icon_concussive_wave,WEAPON_GADGET_CONCUSSIVE_WAVE_MENU_DESC,,,,,1,cybercom_ability2,,,,1,
+121,,cybercom_abilities,WEAPON_GADGET_OVERDRIVE_PRO,cybercom_overdrive_pro,,t7_cp_hud_ability_icon_overdrive,WEAPON_GADGET_OVERDRIVE_UPG_MENU_DESC,,,,,1,cybercom_ability2,,,,1,
+122,,cybercom_abilities,WEAPON_GADGET_SMOKESCREEN_PRO,cybercom_smokescreen_pro,,t7_cp_hud_ability_icon_smokescreen,WEAPON_GADGET_SMOKESCREEN_UPG_MENU_DESC,,,,,1,cybercom_ability2,,,,1,
+123,,cybercom_abilities,WEAPON_GADGET_FORCED_MALFUNCTION_PRO,cybercom_forcedmalfunction_pro,,t7_cp_hud_ability_icon_malfunction,WEAPON_GADGET_FORCED_MALFUNCTION_UPG_MENU_DESC,,,,,1,cybercom_ability2,,,,1,
+124,,cybercom_abilities,WEAPON_GADGET_ACTIVE_CAMO_PRO,cybercom_camo_pro,,t7_cp_hud_ability_icon_actamo,WEAPON_GADGET_ACTIVE_CAMO_UPG_MENU_DESC,,,,,1,cybercom_ability2,,,,1,
+125,,cybercom_abilities,WEAPON_GADGET_UNSTOPPABLE_FORCE_PRO,cybercom_unstoppableforce_pro,,t7_cp_hud_ability_icon_unstoppableforce,WEAPON_GADGET_UNSTOPPABLE_FORCE_UPG_MENU_DESC,,,,,1,cybercom_ability2,,,,1,
+126,,cybercom_abilities,WEAPON_GADGET_RAPID_STRIKE_PRO,cybercom_rapidstrike_pro,,t7_cp_hud_ability_icon_rapidstrike,WEAPON_GADGET_RAPID_STRIKE_UPG_MENU_DESC,,,,,1,cybercom_ability2,,,,1,
+127,,cybercom_abilities,WEAPON_GADGET_CONCUSSIVE_WAVE_PRO,cybercom_concussive_pro,,t7_cp_hud_ability_icon_concussive_wave,WEAPON_GADGET_CONCUSSIVE_WAVE_UPG_MENU_DESC,,,,,1,cybercom_ability2,,,,1,
+128,,cybercom_abilities,WEAPON_GADGET_SENSORY_OVERLOAD,cybercom_sensoryoverload,,t7_cp_hud_ability_icon_sensory_overload,WEAPON_GADGET_SENSORY_OVERLOAD_MENU_DESC,,,,,1,cybercom_ability3,,,,,
+129,,cybercom_abilities,WEAPON_GADGET_MISDIRECTION,cybercom_misdirection,,t7_cp_hud_ability_icon_misdirection,WEAPON_GADGET_MISDIRECTION_MENU_DESC,,,,,1,cybercom_ability3,,,,1,
+130,,cybercom_abilities,WEAPON_GADGET_ES_STRIKE,cybercom_es_strike,,t7_cp_hud_ability_icon_es_strike,WEAPON_GADGET_ES_STRIKE_MENU_DESC,,,,,1,cybercom_ability3,,,,1,
+131,,cybercom_abilities,WEAPON_GADGET_CACOPHONY,cybercom_cacophany,,t7_cp_hud_ability_icon_cacophany,WEAPON_GADGET_CACOPHANY_MENU_DESC,,,,,1,cybercom_ability3,,,,1,
+132,,cybercom_abilities,WEAPON_GADGET_IMMOLATION,cybercom_immolation,,t7_cp_hud_ability_icon_immolation,WEAPON_GADGET_IMMOLATION_MENU_DESC,,,,,1,cybercom_ability3,,,,1,
+133,,cybercom_abilities,WEAPON_GADGET_FIREFLY_SWARM,cybercom_fireflyswarm,,t7_cp_hud_ability_icon_fireflyswarm,WEAPON_GADGET_FIREFLY_SWARM_MENU_DESC,,,,,1,cybercom_ability3,,,,1,
+134,,cybercom_abilities,WEAPON_GADGET_MRPUKEY,cybercom_mrpukey,,t7_cp_hud_ability_icon_mrpukey,WEAPON_GADGET_MRPUKEY_MENU_DESC,,,,,1,cybercom_ability3,,,,1,
+135,,cybercom_abilities,WEAPON_GADGET_SENSORY_OVERLOAD_PRO,cybercom_sensoryoverload_pro,,t7_cp_hud_ability_icon_sensory_overload,WEAPON_GADGET_SENSORY_OVERLOAD_UPG_MENU_DESC,,,,,1,cybercom_ability3,,,,1,
+136,,cybercom_abilities,WEAPON_GADGET_MISDIRECTION_PRO,cybercom_misdirection_pro,,t7_cp_hud_ability_icon_misdirection,WEAPON_GADGET_MISDIRECTION_UPG_MENU_DESC,,,,,1,cybercom_ability3,,,,1,
+137,,cybercom_abilities,WEAPON_GADGET_ES_STRIKE_PRO,cybercom_es_strike_pro,,t7_cp_hud_ability_icon_es_strike,WEAPON_GADGET_ES_STRIKE_UPG_MENU_DESC,,,,,1,cybercom_ability3,,,,1,
+138,,cybercom_abilities,WEAPON_GADGET_CACOPHONY_PRO,cybercom_cacophany_pro,,t7_cp_hud_ability_icon_cacophany,WEAPON_GADGET_CACOPHANY_UPG_MENU_DESC,,,,,1,cybercom_ability3,,,,1,
+139,,cybercom_abilities,WEAPON_GADGET_IMMOLATION_PRO,cybercom_immolation_pro,,t7_cp_hud_ability_icon_immolation,WEAPON_GADGET_IMMOLATION_UPG_MENU_DESC,,,,,1,cybercom_ability3,,,,1,
+140,,cybercom_abilities,WEAPON_GADGET_FIREFLY_SWARM_PRO,cybercom_fireflyswarm_pro,,t7_cp_hud_ability_icon_fireflyswarm,WEAPON_GADGET_FIREFLY_SWARM_UPG_MENU_DESC,,,,,1,cybercom_ability3,,,,1,
+141,,cybercom_abilities,WEAPON_GADGET_MRPUKEY_PRO,cybercom_mrpukey_pro,,t7_cp_hud_ability_icon_mrpukey,WEAPON_GADGET_MRPUKEY_UPG_MENU_DESC,,,,,1,cybercom_ability3,,,,1,
+142,,cybercom_core,MENU_CONTROL,cybercore_control,,t7_cp_menu_cac_icon_control,CYBERCOM_CONTROL_DESC,,,,,0,cybercore,,,,,
+143,,cybercom_core,MENU_MARTIAL,cybercore_martial,,t7_cp_menu_cac_icon_martial,CYBERCOM_MARTIAL_DESC,,,,all,0,cybercore,,,,,
+144,,cybercom_core,MENU_CHAOS,cybercore_chaos,,t7_cp_menu_cac_icon_chaos,CYBERCOM_CHAOS_DESC,,,,,0,cybercore,,,,,
+145,,cybercom_tacrig,CYBERCOM_RIG_REPULSOR_ARMOR,cybercom_repulsorarmor,,t7_cp_hud_abilityrig_icon_repulsorarmor,CYBERCOM_REPULSOR_ARMOR_DESC,,6,16,,1,cybercom_tacrig1,,,,1,CPUI_TACRIG_BLUEPRINT
+146,,cybercom_tacrig,CYBERCOM_RIG_PROXIMITY_DETERRENT,cybercom_proximitydeterrent,,t7_cp_hud_abilityrig_icon_proximitydeterrent,CYBERCOM_PROXIMITY_DETERRENT_DESC,,5,11,,1,cybercom_tacrig1,,,,1,CPUI_TACRIG_BLUEPRINT
+147,,cybercom_tacrig,CYBERCOM_RIG_EMERGENCY_RESERVE,cybercom_emergencyreserve,,t7_cp_hud_abilityrig_icon_emergencyreserver,CYBERCOM_EMERGENCY_RESERVE_DESC,,4,5,,1,cybercom_tacrig1,,,,1,CPUI_TACRIG_BLUEPRINT
+148,,cybercom_tacrig,CYBERCOM_RIG_SENSORY_BUFFER,cybercom_sensorybuffer,,t7_cp_hud_abilityrig_icon_sensorybuffer,CYBERCOM_SENSORY_BUFFER_DESC,,1,0,,1,cybercom_tacrig1,,,,1,
+149,,cybercom_tacrig,CYBERCOM_RIG_PLAYER_MOVEMENT,cybercom_playermovement,,t7_cp_hud_abilityrig_icon_playermovement,CYBERCOM_PLAYER_MOVEMENT_DESC,,2,0,,1,cybercom_tacrig1,,,,1,
+150,,cybercom_tacrig,CYBERCOM_RIG_COPY_CAT,cybercom_copycat,,t7_cp_hud_abilityrig_icon_copycat,CYBERCOM_COPYCAT_DESC,,3,0,,1,cybercom_tacrig1,,,,1,
+151,,cybercom_tacrig,CYBERCOM_RIG_MULTI_CORE,cybercom_multicore,,t7_cp_hud_abilityrig_icon_multicore,CYBERCOM_MULTICORE_DESC,,,,,-1,cybercom_tacrig1,,,,,
+152,,cybercom_tacrig,CYBERCOM_RIG_REPULSOR_ARMOR_PRO,cybercom_repulsorarmor_pro,,t7_cp_hud_abilityrig_icon_repulsorarmor,CYBERCOM_REPULSOR_ARMOR_DESC_PRO,,6,,,1,cybercom_tacrig2,,,,1,
+153,,cybercom_tacrig,CYBERCOM_RIG_PROXIMITY_DETERRENT_PRO,cybercom_proximitydeterrent_pro,,t7_cp_hud_abilityrig_icon_proximitydeterrent,CYBERCOM_PROXIMITY_DETERRENT_DESC_PRO,,5,,,1,cybercom_tacrig2,,,,1,
+154,,cybercom_tacrig,CYBERCOM_RIG_EMERGENCY_RESERVE_PRO,cybercom_emergencyreserve_pro,,t7_cp_hud_abilityrig_icon_emergencyreserver,CYBERCOM_EMERGENCY_RESERVE_DESC_PRO,,4,,,1,cybercom_tacrig2,,,,1,
+155,,cybercom_tacrig,CYBERCOM_RIG_SENSORY_BUFFER_PRO,cybercom_sensorybuffer_pro,,t7_cp_hud_abilityrig_icon_sensorybuffer,CYBERCOM_SENSORY_BUFFER_DESC_PRO,,1,,,1,cybercom_tacrig2,,,,1,
+156,,cybercom_tacrig,CYBERCOM_RIG_PLAYER_MOVEMENT_PRO,cybercom_playermovement_pro,,t7_cp_hud_abilityrig_icon_playermovement,CYBERCOM_PLAYER_MOVEMENT_DESC_PRO,,2,,,1,cybercom_tacrig2,,,,1,
+157,,cybercom_tacrig,CYBERCOM_RIG_COPY_CAT_PRO,cybercom_copycat_pro,,t7_cp_hud_abilityrig_icon_copycat,CYBERCOM_COPYCAT_DESC_PRO,,3,,,1,cybercom_tacrig2,,,,1,
+158,,cybercom_tacrig,CYBERCOM_RIG_MULTI_CORE_PRO,cybercom_multicore_pro,,t7_cp_hud_abilityrig_icon_multicore,CYBERCOM_MULTICORE_DESC_PRO,,7,,,1,cybercom_tacrig2,,,,1,
+a0,b1,c2,d3,e4,f5,g6,h7,i8,j9,k10,l11,m12,n13,o14,p15,,,
+160,,specialty,PERKS_LIGHTWEIGHT,specialty_movefaster|specialty_fallheight,,t7_hud_perk_lightweight,PERKS_LIGHTWEIGHT_DESC,,1,55,,-1,specialty1,,,,,
+161,,specialty,PERKS_FLAK_JACKET,specialty_flakjacket,,t7_hud_perk_flakjacket,PERKS_FLAK_JACKET_DESC,,4,55,,1,specialty1,,,,1,
+162,,specialty,PERKS_BLIND_EYE,specialty_nottargetedbyairsupport,,t7_hud_perk_blind_eye,PERKS_BLIND_EYE_DESC,,3,55,,1,specialty1,,,,1,
+163,,specialty,PERKS_HARDLINE,specialty_earnmoremomentum,,t7_hud_perk_hardline,PERKS_HARDLINE_DESC,,2,55,,-1,specialty1,,,,1,
+164,,specialty,PERKS_GHOST,specialty_gpsjammer,,t7_hud_perk_ghost,PERKS_GHOST_DESC,,5,55,,1,specialty1,,,,1,
+165,,specialty,PERKS_HARD_WIRED,specialty_immunecounteruav|specialty_immuneemp,,t7_hud_perk_hardwired,PERKS_HARD_WIRED_DESC,,4,55,,1,specialty2,,,,1,
+166,,specialty,PERKS_SCAVENGER,specialty_scavenger,,t7_hud_perk_scavenger,PERKS_SCAVENGER_DESC,,5,55,,1,specialty2,,,,1,
+167,,specialty,PERKS_COLD_BLOODED,specialty_immunenvthermal|specialty_noname|specialty_immunerangefinder|specialty_nokillstreakreticle|specialty_immunemms|specialty_nomotionsensor,,t7_hud_perk_cold_blooded,PERKS_COLD_BLOODED_DESC,,2,55,,-1,specialty2,,,,1,
+168,,specialty,PERKS_FAST_HANDS,specialty_fastweaponswitch|specialty_pin_back|specialty_fasttoss|specialty_fastequipmentuse,,t7_hud_perk_fasthands,PERKS_FAST_HANDS_DESC,,3,55,,1,specialty2,,,,1,
+169,,specialty,PERKS_TOUGHNESS,specialty_bulletflinch,,t7_hud_perk_toughness,PERKS_TOUGHNESS_DESC,,1,55,,-1,specialty2,,,,,
+170,,specialty,PERKS_DEXTERITY,specialty_fastmantle|specialty_fastladderclimb|specialty_sprintrecovery|specialty_fastmeleerecovery,,t7_hud_perk_dexterity,PERKS_DEXTERITY_DESC,,1,55,,-1,specialty3,,,,,
+171,,specialty,PERKS_HACKER,specialty_showenemyequipment|specialty_delayexplosive,,t7_hud_perk_engineer,PERKS_HACKER_DESC,,3,55,,1,specialty3,,,,1,
+172,,specialty,PERKS_NINJA,specialty_quieter,,t7_hud_perk_deadsilence,PERKS_NINJA_DESC,,5,55,,1,specialty3,,,,1,
+173,,specialty,PERKS_EXTREME_CONDITIONING,specialty_longersprint,,t7_hud_perk_marathon,PERKS_EXTREME_CONDITIONING_DESC,,2,55,,-1,specialty3,,,,1,
+174,,specialty,PERKS_TACTICAL_MASK,specialty_stunprotection|specialty_flashprotection|specialty_proximityprotection,,t7_hud_perk_tacticalmask,PERKS_TACTICAL_MASK_DESC,,4,55,,1,specialty3,,,,1,
+175,,specialty,PERKS_AWARENESS,specialty_loudenemies,,t7_hud_perk_awareness,PERKS_AWARENESS_DESC,,6,55,,1,specialty3,,,,1,
+176,,,,,,,,,,,,,,,,,,
+177,,bonuscard,BONUSCARD_PRIMARY_GUNFIGHTER_1,bonuscard_primary_gunfighter,,t7_hud_cac_wildcards_primarygunfighter_256,MENU_BONUSCARD_PRIMARY_GUNFIGHTER_DESC,,2,4,,1,bonuscard1,,,,1,MPUI_BONUSCARD1
+178,,bonuscard,BONUSCARD_PRIMARY_GUNFIGHTER_2,bonuscard_primary_gunfighter_2,,t7_hud_cac_wildcards_primarygunfighter_256_2,MENU_BONUSCARD_PRIMARY_GUNFIGHTER_DESC,,4,9,,1,bonuscard1,,,,1,MPUI_BONUSCARD1
+179,,bonuscard,BONUSCARD_PRIMARY_GUNFIGHTER_3,bonuscard_primary_gunfighter_3,,t7_hud_cac_wildcards_primarygunfighter_256_3,MENU_BONUSCARD_PRIMARY_GUNFIGHTER_DESC,,6,14,,1,bonuscard1,,,,1,MPUI_BONUSCARD1
+180,,bonuscard,BONUSCARD_SECONDARY_GUNFIGHTER,bonuscard_secondary_gunfighter,,t7_hud_cac_wildcards_secondarygunfighter_256,MENU_BONUSCARD_SECONDARY_GUNFIGHTER_DESC,,3,7,,1,bonuscard1,,,,1,MPUI_BONUSCARD1
+181,,bonuscard,BONUSCARD_OVERKILL,bonuscard_overkill,,t7_hud_cac_wildcards_overkill_256,MENU_BONUSCARD_OVERKILL_DESC,,7,19,,1,bonuscard1,,,,1,MPUI_BONUSCARD1
+182,,bonuscard,BONUSCARD_DANGER_CLOSE,bonuscard_danger_close,,t7_hud_cac_wildcards_dangerclose_256,MENU_BONUSCARD_DANGER_CLOSE_CP_DESC,,1,3,,1,bonuscard1,,,,1,MPUI_BONUSCARD1
+183,,bonuscard,BONUSCARD_TWO_TACTICALS,bonuscard_two_tacticals,,t7_hud_cac_wildcards_tactician_256,MENU_BONUSCARD_TWO_TACTICALS_DESC,,5,12,,1,bonuscard1,,,,1,MPUI_BONUSCARD1
+184,,,,,,,,,,,,,,,,,,
+185,,miscweapon,WEAPON_DESTRUCTIBLE_CAR,destructible_car,,destructible_car,,,,,,-1,,,,,,
+186,,specialty,PERKS_NONE,specialty_null,,perk_null,,,,,,-1,,,,,,
+187,,feature,FEATURE_KILLSTREAKS,feature_killstreaks,,,FEATURE_KILLSTREAKS_DESC,,,55,,,,,,,,
+188,,,,,,,,,,,,,,,,,,
+189,passive,,,,,,,,,,,,,,,,,
+190,,,,,,,,,,,,,,,,,,
+191,passive,,,,,,,,,,,,,,,,,
+192,,feature,FEATURE_EMBLEM_TYPE_A_Z,feature_emblem_type_a_z,,,MENU_EMBLEM_TYPE_A_Z_DESC,,,55,,,,,,,,
+193,,feature,FEATURE_EMBLEM_NUMBERS,feature_emblem_numbers,,,MENU_EMBLEM_NUMBERS_DESC,,,55,,,,,,,,
+194,,,,,,,,,,,,,,,,,,
+195,,,,,,,,,,,,,,,,,,
+196,,feature,FEATURE_CLOSEASSAULT,feature_closeassault,,,FEATURE_CLOSEASSAULT_DESC,,,55,,,,,,,,
+197,,feature,FEATURE_SNIPER,feature_sniper,,,FEATURE_SNIPER_DESC,,,55,,,,,,,,
+198,,feature,FEATURE_CREATE_A_CLASS,feature_cac,,,FEATURE_CREATE_A_CLASS_DESC,,,55,,,,,,,,
+199,,,,,,,,,,,,,,,,,,
+200,,feature,FEATURE_COMBAT_RECORD,feature_combat_record,,,FEATURE_COMBAT_RECORD_DESC,,,55,,,,,,,,
+201,,feature,FEATURE_CLAN_TAG,feature_clantag,,,FEATURE_CLAN_TAG_DESC,,,55,,,,,,,,
+202,passive,feature,FEATURE_PRESTIGE_LB,feature_prestige_lb,,,FEATURE_PRESTIGE_LB_DESC,,,,,,,,,,,
+203,,feature,FEATURE_CHALLENGES,feature_challenges,,,FEATURE_CHALLENGES_DESC,,,,,,,,,,,
+204,,feature,FEATURE_CHALLENGES_SPECIALS,feature_challenges_specials,,,FEATURE_CHALLENGES_SPECIALS_DESC,,,,,,,,,,,
+205,passive,feature,FEATURE_PRESTIGE_CLASS_1,feature_prestige_class1,,,FEATURE_PRESTIGE_CLASS_1_DESC,,,,,,,1,1,,,
+206,,feature,FEATURE_PRESTIGE_CLASS_2,feature_prestige_class2,,,FEATURE_PRESTIGE_CLASS_2_DESC,,,,,,,3,1,,,
+207,,feature,FEATURE_PRESTIGE_CLASS_3,feature_prestige_class3,,,FEATURE_PRESTIGE_CLASS_3_DESC,,,,,,,5,1,,,
+208,,feature,FEATURE_PRESTIGE_CLASS_4,feature_prestige_class4,,,FEATURE_PRESTIGE_CLASS_4_DESC,,,,,,,7,1,,,
+209,,feature,FEATURE_PRESTIGE_CLASS_5,feature_prestige_class5,,,FEATURE_PRESTIGE_CLASS_5_DESC,,,,,,,9,1,,,
+210,,,,,,,,,,,,,,,,,,
+211,,feature,FEATURE_CHALLENGES_KILLSTREAKS,feature_challenges_killstreaks,,,FEATURE_CHALLENGES_KILLSTREAKS_DESC,,,,,,,,,,,
+212,,feature,FEATURE_CHALLENGES_ELITE,feature_challenges_elite,,,FEATURE_CHALLENGES_ELITE_DESC,,,,,,,,,,,
+213,,feature,FEATURE_CHALLENGES_FINAL,feature_challenges_final,,,FEATURE_CHALLENGES_FINAL_DESC,,,,,,,,,,,
+214,,feature,FEATURE_CHALLENGES_GAMEMODE,feature_challenges_gamemode,,,FEATURE_CHALLENGES_GAMEMODE_DESC,,,,,,,,,,,
+215,,feature,FEATURE_CHALLENGES_MEDALS,feature_challenges_medals,,,FEATURE_CHALLENGES_MEDALS_DESC,,,,,,,,,,,
+216,,feature,FEATURE_ALLOCATION_SLOT_1,feature_allocation_slot_1,,,FEATURE_ALLOCATION_SLOT_1_DESC,,,0,,,,,,,,
+217,,feature,FEATURE_ALLOCATION_SLOT_2,feature_allocation_slot_2,,,FEATURE_ALLOCATION_SLOT_2_DESC,,,0,,,,,,,,
+218,,feature,FEATURE_ALLOCATION_SLOT_3,feature_allocation_slot_3,,,FEATURE_ALLOCATION_SLOT_3_DESC,,,0,,,,,,,,
+219,,,,,,,,,,,,,,,,,,
+220,,feature,FEATURE_MULTICORE,feature_multicore,,t7_cp_hud_abilityrig_icon_multicore,FEATURE_MULTICORE_DESC,,,19,,,,,,,,
+221,,,,,,,,,,,,,,,,,,

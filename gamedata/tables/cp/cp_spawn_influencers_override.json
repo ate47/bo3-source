@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "name": "friend",
+        "override_multiteam": 1,
+        "radius": 1200,
+        "score": 200
+    },
+    {
+        "id": 2,
+        "name": "enemy",
+        "override_maps": "mp_apartments",
+        "radius": 2600
+    },
+    {
+        "id": 3,
+        "name": "enemy",
+        "override_maps": "mp_spire",
+        "radius": 2600
+    },
+    {
+        "id": 4,
+        "name": "enemy",
+        "override_maps": "mp_chinatown",
+        "radius": 2600
+    },
+    {
+        "id": 5,
+        "name": "enemy",
+        "override_maps": "mp_sector",
+        "radius": 2300
+    },
+    {
+        "id": 6,
+        "name": "enemy",
+        "override_maps": "mp_rise",
+        "radius": 2600
+    },
+    {
+        "id": 7,
+        "name": "enemy",
+        "override_maps": "mp_ethiopia",
+        "radius": 2400
+    },
+    {
+        "id": 8,
+        "name": "enemy",
+        "override_maps": "mp_havoc",
+        "radius": 2300
+    },
+    {
+        "id": 9,
+        "name": "enemy",
+        "override_maps": "mp_stronghold",
+        "radius": 2500
+    },
+    {
+        "id": 10,
+        "name": "enemy",
+        "override_maps": "mp_veiled",
+        "radius": 2300
+    },
+    {
+        "id": 11,
+        "name": "enemy",
+        "override_maps": "mp_biodome",
+        "radius": 2900
+    },
+    {
+        "id": 12,
+        "name": "enemy",
+        "override_maps": "mp_nuketown_x",
+        "radius": 1600
+    },
+    {
+        "id": 13,
+        "name": "friend_dead",
+        "override_maps": "mp_nuketown_x",
+        "radius": 1300
+    },
+    {
+        "id": 14,
+        "name": "friend_dead",
+        "override_maps": "mp_nuketown_x",
+        "time_out": 8
+    }
+]

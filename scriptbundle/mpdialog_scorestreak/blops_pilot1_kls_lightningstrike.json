@@ -1,0 +1,15 @@
+{
+    "kill1": "kill1",
+    "kill2": "kill2",
+    "kill3": "kill3",
+    "vmtype": "both",
+    "killmultiple": "kill_multiple",
+    "configstringfiletype": "scriptbundle",
+    "kill": "hit",
+    "name": "blops_pilot1_kls_lightningstrike",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_blp0_kls_lightning_",
+    "killnone": "kill_none",
+    "arrive": "arrive",
+    "igdtseqnum": 45
+}

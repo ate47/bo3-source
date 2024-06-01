@@ -1,0 +1,305 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_dni_igc_script",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_sgen_14_01_humanlab_vign_deadbodies",
+    "type": "scene",
+    "igdtseqnum": 172,
+    "objects": [
+        {
+            "takedamage": 1,
+            "model": "c_spc_decayman_stage5_fb",
+            "player": 1,
+            "vmtype": "server",
+            "mainblend": 0.2,
+            "mainanim": "ch_sgen_14_01_humanlab_vign_deadbodies01",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "c_spc_decayman_stage5_fb",
+            "mainanim": "ch_sgen_14_01_humanlab_vign_deadbodies02",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "takedamage": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_sgen_14_01_humanlab_vign_deadbodies03",
+            "model": "c_spc_decayman_stage5_fb",
+            "type": "actor"
+        },
+        {
+            "type": "actor",
+            "vmtype": "server",
+            "model": "c_test_decayedman_skel2",
+            "playerstance": "stand",
+            "mainanim": "ch_sgen_14_01_humanlab_vign_deadbodies04",
+            "removeweapon": 1,
+            "takedamage": 1,
+            "player": 1,
+            "mainblend": 0.2
+        },
+        {
+            "type": "actor",
+            "model": "c_test_decayedman_skel2",
+            "mainblend": 0.2,
+            "mainanim": "ch_sgen_14_01_humanlab_vign_deadbodies05",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "removeweapon": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "actor",
+            "mainblend": 0.2,
+            "removeweapon": 1,
+            "mainanim": "ch_sgen_14_01_humanlab_vign_deadbodies06",
+            "model": "c_test_decayedman_skel2",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "actor",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "removeweapon": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_sgen_14_01_humanlab_vign_deadbodies07",
+            "player": 1,
+            "vmtype": "server",
+            "model": "c_test_decayedman_skel2"
+        },
+        {
+            "type": "actor",
+            "mainblend": 0.2,
+            "model": "c_test_decayedman_skel2",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "removeweapon": 1,
+            "mainanim": "ch_sgen_14_01_humanlab_vign_deadbodies08",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "actor",
+            "model": "c_test_decayedman_skel2",
+            "player": 1,
+            "playerstance": "stand",
+            "mainblend": 0.2,
+            "takedamage": 1,
+            "mainanim": "ch_sgen_14_01_humanlab_vign_deadbodies09",
+            "vmtype": "server",
+            "removeweapon": 1
+        },
+        {
+            "runsceneondmg0": "none",
+            "takedamage": 1,
+            "type": "actor",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "player": 1,
+            "model": "c_test_decayedman_skel2",
+            "vmtype": "server",
+            "mainanim": "ch_sgen_14_01_humanlab_vign_deadbodies10",
+            "removeweapon": 1
+        },
+        {
+            "playerstance": "stand",
+            "model": "c_test_decayedman_skel2",
+            "removeweapon": 1,
+            "mainblend": 0.2,
+            "runsceneondmg0": "none",
+            "type": "actor",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_sgen_14_01_humanlab_vign_deadbodies11"
+        },
+        {
+            "playerstance": "stand",
+            "runsceneondmg0": "none",
+            "removeweapon": 1,
+            "model": "c_test_decayedman_skel2",
+            "type": "actor",
+            "player": 1,
+            "vmtype": "server",
+            "mainblend": 0.2,
+            "takedamage": 1,
+            "mainanim": "ch_sgen_14_01_humanlab_vign_deadbodies012"
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "model": "p7_sgen_dni_testing_pod_wires_01_off",
+            "mainanim": "o_sgen_14_01_humanlab_vign_deadbodies_wires01"
+        },
+        {
+            "model": "p7_sgen_dni_testing_pod_wires_01_off",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand",
+            "mainanim": "o_sgen_14_01_humanlab_vign_deadbodies_wires02"
+        },
+        {
+            "mainanim": "o_sgen_14_01_humanlab_vign_deadbodies_wires03",
+            "model": "p7_sgen_dni_testing_pod_wires_01_off",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "mainanim": "o_sgen_14_01_humanlab_vign_deadbodies_wires04",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "p7_sgen_dni_testing_pod_wires_01_off",
+            "type": "prop"
+        },
+        {
+            "model": "p7_sgen_dni_testing_pod_wires_01_off",
+            "mainanim": "o_sgen_14_01_humanlab_vign_deadbodies_wires05",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "mainanim": "o_sgen_14_01_humanlab_vign_deadbodies_wires06",
+            "player": 1,
+            "vmtype": "server",
+            "model": "p7_sgen_dni_testing_pod_wires_01_off",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "mainanim": "o_sgen_14_01_humanlab_vign_deadbodies_wires07",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "p7_sgen_dni_testing_pod_wires_01_off",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "mainanim": "o_sgen_14_01_humanlab_vign_deadbodies_wires08",
+            "model": "p7_sgen_dni_testing_pod_wires_01_off",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "model": "p7_sgen_dni_testing_pod_wires_01_off",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "o_sgen_14_01_humanlab_vign_deadbodies_wires09",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "model": "p7_sgen_dni_testing_pod_wires_01_off",
+            "mainanim": "o_sgen_14_01_humanlab_vign_deadbodies_wires10",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1,
+            "mainanim": "o_sgen_14_01_humanlab_vign_deadbodies_wires11",
+            "model": "p7_sgen_dni_testing_pod_wires_01_off"
+        },
+        {
+            "player": 1,
+            "model": "p7_sgen_dni_testing_pod_wires_01_off",
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "mainanim": "o_sgen_14_01_humanlab_vign_deadbodies_wires12",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

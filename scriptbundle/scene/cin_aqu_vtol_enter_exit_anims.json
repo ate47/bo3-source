@@ -1,0 +1,315 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_aqu_vtol_enter_exit_anims",
+    "type": "scene",
+    "igdtseqnum": 375,
+    "objects": [
+        {
+            "takedamage": 1,
+            "cameratween": 0.2,
+            "model": "c_t7_ally_fb",
+            "player": 1,
+            "vmtype": "server",
+            "mainblend": 0.2,
+            "mainanim": "pb_aqu_vtol_enter_15_l",
+            "playerstance": "stand",
+            "lerptime": 0.2,
+            "name": "new object 1",
+            "type": "player"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "cameratween": 0.2,
+            "model": "c_t7_ally_fb",
+            "mainanim": "pb_aqu_vtol_enter_15_r",
+            "lerptime": 0.2,
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "name": "new object 1(copy)",
+            "type": "player"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainblend": 0.2,
+            "mainanim": "pb_aqu_vtol_enter_45_l",
+            "cameratween": 0.2,
+            "model": "c_t7_ally_fb",
+            "lerptime": 0.2,
+            "name": "new object 1(copy)",
+            "type": "player"
+        },
+        {
+            "name": "new object 1(copy)(copy)",
+            "type": "player",
+            "vmtype": "server",
+            "model": "c_t7_ally_fb",
+            "cameratween": 0.2,
+            "playerstance": "stand",
+            "mainanim": "pb_aqu_vtol_enter_45_r",
+            "takedamage": 1,
+            "lerptime": 0.2,
+            "player": 1,
+            "mainblend": 0.2
+        },
+        {
+            "name": "new object 1(copy)(copy)(copy)",
+            "type": "player",
+            "model": "c_t7_ally_fb",
+            "cameratween": 0.2,
+            "mainblend": 0.2,
+            "mainanim": "pb_aqu_vtol_enter_90_l",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "lerptime": 0.2,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "name": "new object 1(copy)(copy)(copy)(copy)",
+            "type": "player",
+            "mainblend": 0.2,
+            "mainanim": "pb_aqu_vtol_enter_90_r",
+            "model": "c_t7_ally_fb",
+            "cameratween": 0.2,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "lerptime": 0.2
+        },
+        {
+            "name": "new object 1(copy)(copy)(copy)(copy)(copy)",
+            "type": "player",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainblend": 0.2,
+            "mainanim": "pb_aqu_vtol_enter_jump_loop_l",
+            "player": 1,
+            "vmtype": "server",
+            "model": "c_t7_ally_fb",
+            "lerptime": 0.2,
+            "cameratween": 0.2
+        },
+        {
+            "name": "new object 1(copy)(copy)(copy)(copy)(copy)(copy)",
+            "type": "player",
+            "mainblend": 0.2,
+            "model": "c_t7_ally_fb",
+            "cameratween": 0.2,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "pb_aqu_vtol_enter_jump_loop_r",
+            "player": 1,
+            "vmtype": "server",
+            "lerptime": 0.2
+        },
+        {
+            "name": "new object 1(copy)(copy)(copy)(copy)(copy)(copy)(copy)",
+            "type": "player",
+            "model": "c_t7_ally_fb",
+            "player": 1,
+            "playerstance": "stand",
+            "mainblend": 0.2,
+            "takedamage": 1,
+            "cameratween": 0.2,
+            "mainanim": "pb_aqu_vtol_enter_jump_start_l",
+            "vmtype": "server",
+            "lerptime": 0.2
+        },
+        {
+            "lerptime": 0.2,
+            "takedamage": 1,
+            "cameratween": 0.2,
+            "name": "new object 1(copy)(copy)(copy)(copy)(copy)(copy)(copy)(copy)",
+            "type": "player",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "player": 1,
+            "model": "c_t7_ally_fb",
+            "vmtype": "server",
+            "mainanim": "pb_aqu_vtol_enter_jump_start_r"
+        },
+        {
+            "playerstance": "stand",
+            "model": "c_t7_ally_fb",
+            "mainblend": 0.2,
+            "lerptime": 0.2,
+            "name": "new object 1(copy)(copy)",
+            "type": "player",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "cameratween": 0.2,
+            "mainanim": "pb_aqu_vtol_exit"
+        },
+        {
+            "cameratween": 0.2,
+            "playerstance": "stand",
+            "lerptime": 0.2,
+            "model": "c_t7_ally_fb",
+            "name": "new object 1(copy)(copy)(copy)",
+            "type": "player",
+            "player": 1,
+            "vmtype": "server",
+            "mainblend": 0.2,
+            "takedamage": 1,
+            "mainanim": "pb_aqu_vtol_enter"
+        },
+        {
+            "takedamage": 1,
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "name": "vtol open",
+            "type": "vehicle",
+            "model": "veh_t7_mil_vtol_fighter",
+            "mainanim": "v_aqu_vtol_cockpit_open"
+        },
+        {
+            "model": "veh_t7_mil_vtol_fighter",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "name": "vtol close",
+            "type": "vehicle",
+            "playerstance": "stand",
+            "mainblend": 0.2,
+            "mainanim": "v_aqu_vtol_cockpit_close"
+        },
+        {
+            "mainanim": "v_aqu_vtol_land_enter",
+            "model": "veh_t7_mil_vtol_fighter",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "name": "vtol land enter",
+            "type": "vehicle",
+            "playerstance": "stand"
+        },
+        {
+            "mainanim": "v_aqu_vtol_land_exit",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "veh_t7_mil_vtol_fighter",
+            "name": "vtol land exit",
+            "type": "vehicle"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

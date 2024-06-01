@@ -1,0 +1,154 @@
+a0,b1
+ar_standard,acog_kick damage dualoptic_kick extbarrel extclip fastreload_dualmag fmj grip holo ir_kick quickdraw reflex reddot rf stalker steadyaim suppressed gmod6 gmod7
+ar_standard_upgraded,acog damage dualoptic_upgraded extbarrel_upgraded extclip fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf_upgraded stalker steadyaim suppressed
+ar_accurate,acog damage dualoptic extbarrel_ar_power extclip fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf stalker steadyaim suppressed_ar gmod6 gmod7
+ar_accurate_upgraded,acog damage dualoptic_upgraded extbarrel_ar_power_upgraded extclip fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf_upgraded stalker steadyaim suppressed_ar
+ar_fastburst,acog damage dualoptic extbarrel_ar_power extclip fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf_arfastburst stalker steadyaim suppressed_ar gmod6 gmod7
+ar_fastburst_upgraded,acog damage dualoptic_upgraded extbarrel_ar_power_upgraded extclip fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf_arfastburst stalker steadyaim suppressed_ar
+ar_cqb,acog_kick damage dualoptic_kick extbarrel_ar_power extclip fastreload_dualmag fmj grip holo ir_kick quickdraw reflex reddot rf stalker steadyaim suppressed_ar gmod6 gmod7
+ar_cqb_upgraded,acog damage dualoptic_upgraded extbarrel_ar_power_upgraded extclip fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf_upgraded stalker steadyaim suppressed_ar
+ar_damage,acog_kick damage dualoptic_kick extbarrel_ar_power extclip fastreload_dualmag fmj grip holo ir_kick quickdraw reflex reddot rf stalker steadyaim suppressed_ar gmod6 gmod7
+ar_damage_upgraded,acog damage dualoptic_upgraded extbarrel_ar_power_upgraded extclip fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf_upgraded stalker steadyaim suppressed_ar
+ar_longburst,acog damage dualoptic extbarrel_ar_power extclip_longburst fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf_arlongburst stalker steadyaim suppressed_ar gmod6 gmod7
+ar_longburst_upgraded,acog damage dualoptic_upgraded extbarrel_ar_power_upgraded extclip fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf_arlongburst_upgraded stalker steadyaim suppressed_ar
+ar_marksman,acog damage dualoptic extbarrel_ar_power extclip fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf_arfastburst stalker steadyaim suppressed_ar gmod6 gmod7
+ar_marksman_upgraded,acog damage dualoptic_upgraded extbarrel_ar_power_upgraded extclip fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf_upgraded stalker steadyaim suppressed_ar
+smg_standard,acog_kick dualoptic_kick extbarrel_smg extclip fastreload fmj grip quickdraw_smg reflex reddot rf steadyaim_light stalker_smg suppressed_smg holo gmod6 gmod7
+smg_standard_upgraded,acog dualoptic_upgraded extbarrel_smg_upgraded extclip fastreload fmj grip quickdraw_smg reflex reddot rf_upgraded steadyaim_light stalker_smg suppressed_smg holo
+smg_versatile,acog_kick dualoptic_kick extbarrel_smg extclip fastreload_versatile fmj grip quickdraw_smg reflex reddot rf steadyaim_light stalker_smg suppressed_smg holo gmod6 gmod7
+smg_versatile_upgraded,acog dualoptic_upgraded extbarrel_smg_upgraded extclip fastreload_versatile fmj grip quickdraw_smg reflex reddot rf_upgraded steadyaim_light stalker_smg suppressed_smg holo
+smg_fastfire,acog_kick dualoptic_kick extbarrel_smg extclip fastreload fmj grip quickdraw_smg reflex reddot rf steadyaim_light stalker_smg_fast suppressed_smg holo gmod6 gmod7
+smg_fastfire_upgraded,acog dualoptic_upgraded extbarrel_smg_upgraded extclip fastreload fmj grip quickdraw_smg reflex reddot rf_upgraded steadyaim_light stalker_smg suppressed_smg holo
+smg_longrange,acog_kick dualoptic_kick extbarrel_smg extclip fastreload fmj grip quickdraw_smg reflex reddot rf steadyaim stalker_smg_fast suppressed_smg holo gmod6 gmod7
+smg_longrange_upgraded,acog dualoptic_upgraded extbarrel_smg_upgraded extclip fastreload fmj grip quickdraw_smg reflex reddot rf steadyaim_light stalker_smg suppressed_smg holo
+smg_burst,acog_kick dualoptic_kick extbarrel_smg extclip fastreload fmj grip quickdraw_smg reflex reddot rf_smgburst steadyaim_light stalker_smg_fast suppressed_smg holo gmod6 gmod7
+smg_burst_upgraded,acog dualoptic_upgraded extbarrel_smg_upgraded extclip fastreload fmj grip quickdraw_smg reflex reddot rf_smgburst_upgraded steadyaim_light stalker_smg suppressed_smg holo
+smg_capacity,acog_kick dualoptic_kick extbarrel_smg extclip fastreload fmj grip quickdraw_smg reflex reddot rf steadyaim_light stalker_smg_fast suppressed_smg holo gmod6 gmod7
+smg_capacity_upgraded,acog dualoptic_upgraded extbarrel_smg_upgraded extclip fastreload fmj grip quickdraw_smg reflex reddot rf_upgraded steadyaim_light stalker_smg suppressed_smg holo
+lmg_light,acog dualoptic_kick extclip fastreload fmj grip holo ir quickdraw_lmg reflex reddot rf steadyaim stalker_lmg suppressed_lmg gmod6 gmod7
+lmg_light_upgraded,acog dualoptic_upgraded extclip fastreload fmj grip holo ir quickdraw_lmg reflex reddot rf_upgraded steadyaim stalker_lmg suppressed_lmg
+lmg_heavy,acog dualoptic_kick extclip fastreload fmj grip holo ir quickdraw_lmg reflex reddot rf_lmgheavy steadyaim stalker_lmg suppressed_lmg gmod6 gmod7
+lmg_heavy_upgraded,acog dualoptic_upgraded extclip fastreload fmj grip holo ir quickdraw_lmg reflex reddot rf_lmgheavy_upgraded steadyaim stalker_lmg suppressed_lmg
+lmg_cqb,acog dualoptic_kick extclip fastreload fmj grip holo ir quickdraw_lmg reflex reddot rf steadyaim stalker_lmg suppressed_lmg gmod6 gmod7
+lmg_cqb_upgraded,acog dualoptic_upgraded extclip fastreload fmj grip holo ir quickdraw_lmg reflex reddot rf_upgraded steadyaim stalker_lmg suppressed_lmg
+lmg_slowfire,acog dualoptic_kick extclip fastreload fmj grip holo ir quickdraw_lmg reflex reddot rf steadyaim stalker_lmg suppressed_lmg gmod6 gmod7
+lmg_slowfire_upgraded,acog dualoptic_upgraded extclip fastreload fmj grip holo ir quickdraw_lmg reflex reddot rf_upgraded steadyaim stalker_lmg suppressed_lmg
+sniper_powerbolt,acog_sniper dualoptic_sniper extclip fastreload fmj ir_sniper reddot_sniper rf_powerbolt stalker_sniper suppressed swayreduc gmod6 gmod7
+sniper_powerbolt_upgraded,acog_sniper dualoptic_upgraded extclip fastreload fmj ir_sniper reddot_sniper rf_powerbolt_upgraded stalker_sniper suppressed swayreduc
+sniper_fastbolt,acog_sniper dualoptic_sniper extclip fastreload fmj ir_sniper reddot_sniper rf_fastbolt stalker_sniper suppressed swayreduc gmod6 gmod7
+sniper_fastbolt_upgraded,acog_sniper dualoptic_upgraded extclip fastreload fmj ir_sniper reddot_sniper rf_fastbolt_upgraded stalker_sniper suppressed swayreduc
+sniper_fastsemi,acog_sniper dualoptic_sniper extclip fastreload fmj ir_sniper reddot_sniper rf stalker_sniper suppressed swayreduc gmod6 gmod7
+sniper_fastsemi_upgraded,acog_sniper dualoptic_upgraded extclip fastreload fmj ir_sniper reddot rf_upgraded stalker_sniper suppressed swayreduc
+sniper_chargeshot,acog_sniper dualoptic_sniper extclip fastreload fmj ir_sniper reddot_sniper rf_sniperchargeshot stalker_sniper suppressed swayreduc gmod6 gmod7
+sniper_chargeshot_upgraded,acog_sniper dualoptic_upgraded extclip fastreload fmj ir_sniper reddot_sniper rf_sniperchargeshot stalker_sniper suppressed swayreduc
+shotgun_pump,extbarrel_shotgun extclip fastreload_segmented quickdraw reflex reddot rf_rechamber steadyaim stalker_shotgun suppressed_shotgun holo gmod6 gmod7
+shotgun_pump_upgraded,extbarrel_shotgun_upgraded extclip fastreload_segmented_upgraded quickdraw reflex reddot rf_rechamber_upgraded steadyaim stalker_shotgun suppressed_shotgun holo
+shotgun_semiauto,extbarrel_shotgun extclip fastreload quickdraw reflex reddot rf steadyaim stalker_shotgun suppressed_shotgun holo gmod6 gmod7
+shotgun_semiauto_upgraded,extbarrel_shotgun_upgraded extclip fastreload quickdraw reflex reddot rf_upgraded steadyaim stalker_shotgun suppressed_shotgun holo
+shotgun_precision,extbarrel_shotgun extclip fastreload quickdraw reflex reddot rf_rechamber steadyaim stalker_shotgun suppressed_shotgunprecision holo gmod6 gmod7
+shotgun_precision_upgraded,extbarrel_shotgun_upgraded extclip fastreload quickdraw reflex reddot rf_rechamber_upgraded steadyaim stalker_shotgun suppressed_shotgunprecision holo
+shotgun_fullauto,extbarrel_shotgun extclip fastreload quickdraw reflex reddot rf steadyaim stalker_shotgun suppressed_shotgun holo gmod6 gmod7
+shotgun_fullauto_upgraded,extbarrel_shotgun_upgraded extclip fastreload quickdraw reflex reddot rf_upgraded steadyaim stalker_shotgun suppressed_shotgun holo
+pistol_standard,damage dw extbarrel extclip fastreload fmj quickdraw reflex_pistol reddot steadyaim suppressed gmod6 gmod7
+pistol_burst,damage dw extbarrel extclip fastreload fmj quickdraw reflex_pistol  reddot steadyaim suppressed gmod6 gmod7
+pistol_burst_upgraded,damage dw extbarrel_upgraded extclip fastreload fmj quickdraw reflex_pistol  reddot steadyaim suppressed
+pistol_fullauto,damage dw extbarrel extclip fastreload fmj quickdraw reflex_pistol reddot steadyaim suppressed gmod6 gmod7
+pistol_fullauto_upgraded,damage dw extbarrel_upgraded extclip fastreload fmj quickdraw reflex_pistol reddot steadyaim suppressed
+pistol_standard_dw,gmod6 gmod7
+pistol_fullauto_dw,gmod6 gmod7
+pistol_burst_dw,gmod6 gmod7
+baseweapon,damage fastreload extclip ir quickdraw fmj gl grip sf suppressed stalker steadyaim reflex reddot acog holo
+frag_grenade,gmod0 gmod1 gmod2 gmod3
+satchel_charge,gmod0
+pda_hack,gmod0 gmod1
+trophy_system,gmod0 gmod1
+bouncingbetty,gmod0 gmod1
+sticky_grenade,gmod0 
+hatchet,gmod0 
+concussion_grenade,gmod0 gmod2
+flash_grenade,gmod0 gmod2
+emp_grenade,gmod0 gmod2
+proximity_grenade,gmod0 gmod1 gmod2
+sensor_grenade,gmod0 
+willy_pete,gmod0
+incendiary_grenade,gmod0
+hands_dni_control,dynzoom
+pistol_standard_zipline,damage dw extbarrel extclip fastreload fmj quickdraw reflex_pistol reddot steadyaim suppressed
+pistol_burst_zipline,damage dw extbarrel extclip fastreload fmj quickdraw reflex_pistol  reddot steadyaim suppressed
+pistol_fullauto_zipline,damage dw extbarrel extclip fastreload fmj quickdraw reflex_pistol reddot steadyaim suppressed
+ar_damage_hero,acog damage extbarrel extclip fastreload_dualmag fmj grip holo quickdraw reflex reddot rf stalker steadyaim suppressed_ar
+ar_standard_hero,acog damage extbarrel extclip fastreload_dualmag fmj grip holo quickdraw reflex reddot rf stalker steadyaim suppressed_ar
+lmg_cqb_hero,acog extclip fastreload fmj grip holo quickdraw_lmg reflex reddot rf steadyaim stalker_lmg suppressed_lmg
+lmg_light_hero,acog extclip fastreload fmj grip holo quickdraw_lmg reflex reddot rf steadyaim stalker_lmg suppressed_lmg
+smg_standard_hero,extbarrel extclip fastreload fmj grip quickdraw_smg reflex reddot rf steadyaim_light stalker_smg suppressed_smg holo
+smg_versatile_hero,extbarrel extclip fastreload_versatile fmj grip quickdraw_smg reflex reddot rf steadyaim_light stalker_smg suppressed_smg holo
+sniper_fastbolt_hero,acog extclip fastreload fmj rf_rechamber stalker_sniper suppressed swayreduc
+sniper_fastsemi_hero,acog extclip fastreload fmj rf stalker_sniper suppressed swayreduc
+launcher_standard,gmod6 gmod7
+launcher_lockonly,gmod6 gmod7
+knife_loadout,gmod6 gmod7
+melee_butterfly,gmod6 gmod7
+melee_wrench,gmod6 gmod7
+melee_knuckles,gmod6 gmod7
+melee_crowbar,gmod6 gmod7
+melee_sword,gmod6 gmod7
+ar_garand,acog damage dualoptic extbarrel_ar_power extclip_garand fastreload fmj grip holo ir quickdraw reflex reddot rf stalker steadyaim suppressed_ar gmod6 gmod7
+ar_garand_upgraded,acog damage dualoptic_upgraded extbarrel_ar_power_upgraded extclip_garand fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf_upgraded stalker steadyaim suppressed_ar
+pistol_shotgun,reflex reddot quickdraw suppressed steadyaim fastreload_pistolshotgun extbarrel dw gmod6 gmod7
+pistol_shotgun_dw,gmod6 gmod7
+pistol_shotgun_dw_upgraded,gmod6 gmod7
+special_crossbow,reflex reddot notracer stackfire supply dw gmod6 gmod7
+special_crossbow_dw,gmod6 gmod7
+smg_mp40,acog dualoptic extbarrel_smg extclip fastreload fmj grip quickdraw_smg reflex reddot rf steadyaim stalker_smg_fast suppressed_smg holo gmod6 gmod7
+smg_mp40_upgraded,acog dualoptic_upgraded extbarrel_smg_upgraded extclip fastreload fmj grip quickdraw_smg reflex reddot rf_upgraded steadyaim_light stalker_smg suppressed_smg holo
+sniper_quickscope,acog_sniper dualoptic_sniper extclip fastreload fmj ir_sniper reddot_sniper rf_fastbolt stalker_sniper suppressed swayreduc gmod6 gmod7
+melee_bat,gmod6 gmod7
+melee_dagger,gmod6 gmod7
+melee_bowie,gmod6 gmod7
+melee_mace,gmod6 gmod7
+melee_fireaxe,gmod6 gmod7
+ar_famas,acog damage dualoptic extbarrel_ar_power extclip fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf stalker steadyaim suppressed_ar gmod6 gmod7
+ar_famas_upgraded,acog damage dualoptic_upgraded extbarrel_ar_power_upgraded extclip fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf_upgraded stalker steadyaim suppressed_ar
+launcher_multi,gmod6 gmod7
+pistol_energy,reflex quickdraw suppressed reddot steadyaim fastreload extclip_energy gmod6 gmod7
+pistol_energy_upgraded,reflex quickdraw suppressed reddot steadyaim fastreload extclip_energy gmod6 gmod7
+shotgun_energy,reflex quickdraw suppressed holo stalker_shotgun steadyaim reddot fastreload extclip rf_energy gmod6 gmod7
+shotgun_energy_upgraded,reflex quickdraw suppressed holo stalker_shotgun steadyaim reddot fastreload extclip rf_energy gmod6 gmod7
+melee_boneglass,gmod6 gmod7
+melee_improvise,gmod6 gmod7
+melee_nunchuks,gmod6 gmod7
+melee_shockbaton,gmod6 gmod7
+sniper_double,acog_sniper dualoptic_sniper extclip fastreload fmj holo ir_sniper reddot_sniper reflex rf_fastbolt stalker_sniper suppressed gmod6 gmod7
+lmg_infinite,acog fmj grip holo ir quickdraw_lmg reflex reddot rf steadyaim stalker_lmg suppressed_lmg gmod6 gmod7
+ar_peacekeeper,acog damage dualoptic extbarrel_ar_power extclip fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf stalker_peacekeeper steadyaim suppressed_ar gmod6 gmod7
+melee_boxing,gmod6 gmod7
+special_discgun,gmod6 gmod7
+smg_nailgun,acog dualoptic extclip fastreload grip quickdraw_smg reflex reddot rf steadyaim stalker_smg suppressed_smg holo gmod6 gmod7
+melee_katana,gmod6 gmod7
+melee_shovel,gmod6 gmod7
+melee_prosthetic,gmod6 gmod7
+melee_chainsaw,gmod6 gmod7
+melee_crescent,gmod6 gmod7
+smg_rechamber,acog_kick dualoptic_kick extbarrel_smg extclip fastreload fmj grip quickdraw_smg reflex reddot rf steadyaim_light stalker_smg suppressed_smg holo gmod6 gmod7
+ar_pulse,acog damage extbarrel_ar_power extclip fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf stalker_peacekeeper steadyaim suppressed_ar gmod6 gmod7
+ar_m16,acog_kick damage dualoptic_kick extbarrel_ar_power extclip fastreload_dualmag fmj grip holo ir_kick quickdraw reflex reddot rf stalker steadyaim suppressed_ar gmod6 gmod7
+ar_m16_upgraded,acog_kick damage dualoptic_kick extbarrel_ar_power extclip fastreload_dualmag fmj grip holo ir_kick quickdraw reflex reddot rf stalker steadyaim suppressed_ar gmod6 gmod7
+smg_ppsh,acog dualoptic extbarrel_smg extclip_ppsh fastreload fmj grip quickdraw_smg reflex reddot rf steadyaim stalker_smg_fast suppressed_smg holo gmod6 gmod7
+ar_galil,acog_kick damage dualoptic_kick extbarrel_ar_power extclip_galil fastreload_galil fmj grip holo ir_kick quickdraw reflex reddot rf stalker steadyaim suppressed_ar gmod6 gmod7
+ar_galil_upgraded,acog_kick damage dualoptic_upgraded extbarrel_ar_power_upgraded extclip_galil_upgraded fastreload_galil fmj grip holo ir_kick quickdraw reflex reddot rf_upgraded stalker steadyaim suppressed_ar gmod6 gmod7
+knife_ballistic,gmod6 gmod7
+pistol_m1911,damage dw extbarrel extclip_m1911 fastreload fmj quickdraw reflex_pistol reddot steadyaim suppressed gmod6 gmod7
+pistol_m1911_dw,gmod6 gmod7
+smg_ak74u,acog_kick dualoptic_kick extbarrel_smg extclip fastreload fmj grip quickdraw_smg reflex reddot rf steadyaim_light stalker_smg suppressed_smg holo gmod6 gmod7
+smg_ak74u_upgraded,acog_kick dualoptic_kick extbarrel_smg_upgraded extclip fastreload fmj grip quickdraw_smg reflex reddot rf_upgraded steadyaim_light stalker_smg suppressed_smg holo gmod6 gmod7
+ar_an94,acog damage dualoptic extbarrel_ar extclip_an94 fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf stalker steadyaim suppressed_ar gmod6 gmod7
+launcher_ex41,gmod6 gmod7
+smg_msmc,acog_kick dualoptic_kick extbarrel_smg extclip fastreload_msmc fmj grip quickdraw_smg reflex reddot rf steadyaim_light stalker_smg suppressed_smg holo gmod6 gmod7
+shotgun_olympia,extbarrel_shotgun fastreload quickdraw reflex reddot rf steadyaim stalker_shotgun suppressed_shotgun holo gmod6 gmod7
+sniper_xpr50,acog_sniper dualoptic_sniper extclip fastreload_xpr50 fmj ir_sniper reddot_sniper rf stalker_sniper suppressed swayreduc gmod6 gmod7
+smg_sten2,acog_kick dualoptic_kick extbarrel_smg extclip fastreload fmj grip quickdraw_smg reflex reddot rf steadyaim_light stalker_smg suppressed_smg holo gmod6 gmod7
+lmg_rpk,acog dualoptic_kick extclip_rpk fastreload_rpk fmj grip holo ir quickdraw_lmg reflex reddot rf steadyaim stalker_lmg suppressed_lmg gmod6 gmod7
+ar_m14,acog damage dualoptic extbarrel_ar_power extclip fastreload_dualmag fmj grip holo ir quickdraw reflex_m14 reddot_m14 rf_arfastburst stalker steadyaim suppressed_ar gmod6 gmod7
+sniper_mosin,acog_sniper dualoptic_sniper extclip fastreload fmj ir_sniper reddot_sniper rf_powerbolt stalker_sniper suppressed swayreduc gmod6 gmod7
+lmg_rpk_upgraded,acog dualoptic_kick extclip fastreload fmj grip holo ir quickdraw_lmg reflex reddot rf steadyaim stalker_lmg suppressed_lmg gmod6 gmod7
+ar_m14_upgraded,acog damage dualoptic_upgraded extbarrel_ar_power_upgraded extclip fastreload_dualmag fmj grip holo ir quickdraw reflex reddot rf_upgraded stalker steadyaim suppressed_ar

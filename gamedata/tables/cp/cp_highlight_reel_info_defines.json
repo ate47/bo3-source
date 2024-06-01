@@ -1,0 +1,15 @@
+[
+    {
+        "bookmark_type": "DEMO_BOOKMARK_KILL",
+        "boost_priority": "false",
+        "eType": "ET_PLAYER",
+        "id": 0,
+        "info_type": "DEMO_HIGHLIGHT_REEL_INFORMATION_TYPE_FIRST_PERSON_PLAYER",
+        "killcam_available": "false",
+        "priority_event_weight": 10,
+        "priority_stack_factor": 7,
+        "seconds_after": 2000,
+        "seconds_before": 3000,
+        "thumbnail_capture_time": 0
+    }
+]

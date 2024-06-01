@@ -1,0 +1,13 @@
+{
+    "piece1_hitlocation": "helmet",
+    "piece1_gibtag": "j_helmet",
+    "vmtype": "both",
+    "piece1_detachmodel": "c_ger_winter_soldier_3_helm",
+    "configstringfiletype": "scriptbundle",
+    "name": "c_ger_winter_soldier_3_destructible_def",
+    "type": "destructiblecharacterdef",
+    "piececount": 1,
+    "piece1_gibmodel": "c_ger_winter_soldier_3_helm",
+    "piece1_gibsound": "evt_german_helmet_pop",
+    "igdtseqnum": 45
+}

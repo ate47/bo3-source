@@ -1,0 +1,42 @@
+{
+    "highexitlandheight": 32,
+    "model": "veh_t7_civ_truck_pickup_tech_54i",
+    "lowexitheight": 32,
+    "dropspeed": 250,
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "name": "veh_bo3_civ_technical_riders",
+    "type": "vehicleriders",
+    "igdtseqnum": 9,
+    "objects": [
+        {
+            "enteranim": "ai_crew_pickup_54i_driver_enter",
+            "vehicleenteranim": "v_crew_pickup_54i_driver_enter_door",
+            "exitgroundanim": "ai_crew_pickup_54i_driver_exit",
+            "vehicleexitanim": "v_crew_pickup_54i_driver_exit_door",
+            "vehicleriderdeathanim": "v_crew_pickup_54i_driver_death_falloutside_door",
+            "rideanim": "ai_crew_pickup_54i_driver_idle",
+            "ridedeathanim": "ai_crew_pickup_54i_driver_death",
+            "position": "driver",
+            "aligntag": "tag_driver"
+        },
+        {
+            "vehicleenteranim": "v_crew_pickup_54i_passenger_enter_door",
+            "ridedeathanim": "ai_crew_pickup_54i_passenger_death",
+            "exitgroundanim": "ai_crew_pickup_54i_passenger_exit",
+            "vehicleriderdeathanim": "v_crew_pickup_54i_passenger_death_falloutside_door",
+            "rideanim": "ai_crew_pickup_54i_passenger_idle",
+            "enteranim": "ai_crew_pickup_54i_passenger_enter",
+            "position": "passenger1",
+            "aligntag": "tag_passenger",
+            "vehicleexitanim": "v_crew_pickup_54i_passenger_exit_door"
+        },
+        {
+            "enteranim": "ai_crew_pickup_54i_turret_enter",
+            "exitgroundanim": "ai_crew_pickup_54i_turret_exit",
+            "position": "gunner1",
+            "ridedeathanim": "ai_crew_pickup_54i_turret_dth_1",
+            "aligntag": "tag_gunner1"
+        }
+    ]
+}

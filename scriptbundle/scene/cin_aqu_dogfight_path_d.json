@@ -1,0 +1,292 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "dogfight_scene",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_aqu_dogfight_path_d",
+    "type": "scene",
+    "igdtseqnum": 373,
+    "objects": [
+        {
+            "takedamage": 1,
+            "model": "veh_t7_mil_vtol_fighter",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "v_aqu_path_d_sec_a",
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "runsceneondmg0": "none",
+            "name": "path d sec a",
+            "type": "vehicle"
+        },
+        {
+            "runsceneondmg0": "none",
+            "allowdeath": 1,
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "veh_t7_mil_vtol_fighter",
+            "mainanim": "v_aqu_path_d_sec_b",
+            "playerstance": "stand",
+            "name": "path d sec b",
+            "type": "vehicle"
+        },
+        {
+            "player": 1,
+            "runsceneondmg0": "none",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "takedamage": 1,
+            "mainanim": "v_aqu_path_d_sec_c",
+            "model": "veh_t7_mil_vtol_fighter",
+            "name": "path d sec c",
+            "type": "vehicle"
+        },
+        {
+            "name": "path d sec d",
+            "type": "vehicle",
+            "vmtype": "server",
+            "model": "veh_t7_mil_vtol_fighter",
+            "runsceneondmg0": "none",
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "mainanim": "v_aqu_path_d_sec_d",
+            "takedamage": 1,
+            "player": 1
+        },
+        {
+            "name": "path d sec a branch a",
+            "type": "vehicle",
+            "runsceneondmg0": "none",
+            "model": "veh_t7_mil_vtol_fighter",
+            "mainanim": "v_aqu_path_d_sec_a_branch_a",
+            "allowdeath": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "name": "path d sec d branch a",
+            "type": "vehicle",
+            "runsceneondmg0": "none",
+            "mainanim": "v_aqu_path_d_sec_d_branch_a",
+            "model": "veh_t7_mil_vtol_fighter",
+            "player": 1,
+            "allowdeath": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "allowdeath": 1,
+            "name": "dogfight d sec a",
+            "type": "vehicle",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "v_aqu_dogfight_d_sec_a",
+            "player": 1,
+            "vmtype": "server",
+            "model": "veh_t7_mil_vtol_fighter"
+        },
+        {
+            "name": "dogfight d sec b",
+            "type": "vehicle",
+            "allowdeath": 1,
+            "model": "veh_t7_mil_vtol_fighter",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "v_aqu_dogfight_d_sec_b",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "dogfight d sec c",
+            "type": "vehicle",
+            "allowdeath": 1,
+            "model": "veh_t7_mil_vtol_fighter",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "v_aqu_dogfight_d_sec_c",
+            "vmtype": "server"
+        },
+        {
+            "allowdeath": 1,
+            "takedamage": 1,
+            "name": "dogfight d sec d",
+            "type": "vehicle",
+            "playerstance": "stand",
+            "player": 1,
+            "model": "veh_t7_mil_vtol_fighter",
+            "vmtype": "server",
+            "mainanim": "v_aqu_dogfight_d_sec_d"
+        },
+        {
+            "playerstance": "stand",
+            "model": "veh_t7_mil_vtol_fighter",
+            "allowdeath": 1,
+            "name": "dogfight d sec a branch a",
+            "type": "vehicle",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "v_aqu_dogfight_d_sec_a_branch_a"
+        },
+        {
+            "playerstance": "stand",
+            "model": "veh_t7_mil_vtol_fighter",
+            "name": "dogfight d sec d branch a",
+            "type": "vehicle",
+            "player": 1,
+            "allowdeath": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "mainanim": "v_aqu_dogfight_d_sec_d_branch_a"
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "name": "dogfight d to a",
+            "type": "vehicle",
+            "model": "veh_t7_mil_vtol_fighter",
+            "allowdeath": 1,
+            "mainanim": "v_aqu_dogfight_d_to_a"
+        },
+        {
+            "allowdeath": 1,
+            "model": "veh_t7_mil_vtol_fighter",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "name": "dogfight d to c",
+            "type": "vehicle",
+            "playerstance": "stand",
+            "mainanim": "v_aqu_dogfight_d_to_c"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

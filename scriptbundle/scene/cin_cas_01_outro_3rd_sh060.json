@@ -1,0 +1,225 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_outro",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "cameraswitcher": "c_cas_01_outro_3rd_sh060_camera",
+    "name": "cin_cas_01_outro_3rd_sh060",
+    "type": "scene",
+    "disablesceneskipping": 1,
+    "nextscenebundle": "cin_cas_01_outro_3rd_sh070",
+    "igdtseqnum": 88,
+    "objects": [
+        {
+            "model": "c_zom_dlc_dempsey_cin_fb",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_cas_01_outro_3rd_sh060_dempsey",
+            "playerstance": "stand",
+            "name": "dempsey",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "model": "c_zom_dlc_takeo_cin_fb",
+            "mainanim": "ch_cas_01_outro_3rd_sh060_takeo",
+            "playerstance": "stand",
+            "name": "takeo",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "mainanim": "ch_cas_01_outro_3rd_sh060_richtofen",
+            "model": "c_zom_der_richtofen_cin_fb",
+            "name": "richtofen",
+            "type": "actor"
+        },
+        {
+            "name": "nikolai",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "c_zom_dlc_nikolai_cin_fb",
+            "playerstance": "stand",
+            "mainanim": "ch_cas_01_outro_3rd_sh060_nikolai",
+            "player": 1
+        },
+        {
+            "name": "mr6_demp_left",
+            "type": "prop",
+            "deletewhenfinished": 1,
+            "model": "wpn_t7_mr6_world",
+            "mainanim": "o_cas_01_outro_3rd_sh060_dempsey_lmr6",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "mr6_demp_right",
+            "type": "prop",
+            "deletewhenfinished": 1,
+            "mainanim": "o_cas_01_outro_3rd_sh060_dempsey_rmr6",
+            "model": "wpn_t7_mr6_world",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "key",
+            "type": "prop",
+            "playerstance": "stand",
+            "mainanim": "o_cas_01_outro_3rd_sh060_key",
+            "player": 1,
+            "vmtype": "server",
+            "model": "p7_zm_ctl_summoning_key_small"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server"
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

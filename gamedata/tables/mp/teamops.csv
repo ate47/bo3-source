@@ -1,0 +1,14 @@
+Name,Description,Push Event,Pop Event,Reset Event,Count,Time Limit,Mode,Reward
+kill_2,TEAMOPS_KILL,kill,,,2,45,,radar
+kill_5,TEAMOPS_KILL,kill,,,5,,,straferun,radar
+kill_10,TEAMOPS_KILL,kill,,,10,,tdm,dom,straferun,radar
+melee_kill_2,TEAMOPS_MELEEKILL,melee_kill,,,2,45,,radar
+melee_kill_5,TEAMOPS_MELEEKILL,melee_kill,,,5,60,,radar
+melee_kill_10,TEAMOPS_MELEEKILL,melee_kill,,,10,60,,straferun
+killstreak_5,TEAMOPS_KILLSTREAK,kill,,death,5,60,,straferun
+killstreak_10,TEAMOPS_KILLSTREAK,kill,,death,10,120,,straferun
+kill_leader,TEAMOPS_KILLLEADER,killed_leader,,,1,,,straferun
+flag_capture,TEAMOPS_CTFCAPTURE,flag_capture,,,1,,ctf,straferun
+first_kill,TEAMOPS_FIRSTKILL,first_kill,,,1,,sd,radar
+hardpoint_kill,TEAMOPS_KOTHKILL,hardpoint_kill,,,10,,koth,straferun
+dom_point_secured,TEAMOPS_DOMCAPTURE,,,,2,,,straferun

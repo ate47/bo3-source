@@ -1,0 +1,12 @@
+{
+    "vmtype": "server",
+    "defendervariant": "melee",
+    "configstringfiletype": "scriptbundle",
+    "name": "aivsaimelee_humanvsrobot_rogue",
+    "type": "aiassassination",
+    "victimfrontanim": "ai_base_rifle_vs_rogue_robot_melee_f_knife_awin_defend",
+    "attackervariant": "regular",
+    "attackerfrontanim": "ai_base_rifle_vs_rogue_robot_melee_f_knife_awin_attack",
+    "attackerarchetype": "human",
+    "defenderarchetype": "robot"
+}

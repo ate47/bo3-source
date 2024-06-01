@@ -1,0 +1,273 @@
+[
+    {
+        "chunk_id": 1,
+        "file": "cmn_root",
+        "id": 0,
+        "type": "core"
+    },
+    {
+        "chunk_id": 1,
+        "file": "core_all",
+        "id": 1,
+        "type": "core"
+    },
+    {
+        "chunk_id": 1,
+        "file": "core_pre_gfx",
+        "id": 2,
+        "type": "core"
+    },
+    {
+        "chunk_id": 1,
+        "file": "core_gfx",
+        "id": 3,
+        "type": "core"
+    },
+    {
+        "chunk_id": 2,
+        "file": "mp_common_all",
+        "id": 4,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 2,
+        "file": "mp_code_post_gfx",
+        "id": 5,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 2,
+        "file": "mp_common",
+        "id": 6,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 2,
+        "file": "mp_dev",
+        "id": 7,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 2,
+        "file": "mp_factions",
+        "id": 8,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 2,
+        "file": "mp_faction_pmc",
+        "id": 9,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 2,
+        "file": "mp_faction_seals",
+        "id": 10,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 2,
+        "file": "mp_ui",
+        "id": 11,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 2,
+        "file": "ui_level",
+        "id": 12,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 2,
+        "file": "mp_ffotd_tu0",
+        "id": 13,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 2,
+        "file": "mp_sv_ffotd_tu0",
+        "id": 14,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 3,
+        "file": "zm_common_all",
+        "id": 15,
+        "type": "zm"
+    },
+    {
+        "chunk_id": 3,
+        "file": "zm_code_post_gfx",
+        "id": 16,
+        "type": "zm"
+    },
+    {
+        "chunk_id": 3,
+        "file": "zm_common",
+        "id": 17,
+        "type": "zm"
+    },
+    {
+        "chunk_id": 3,
+        "file": "zm_dev",
+        "id": 18,
+        "type": "zm"
+    },
+    {
+        "chunk_id": 3,
+        "file": "zm_ui",
+        "id": 19,
+        "type": "zm"
+    },
+    {
+        "chunk_id": 3,
+        "file": "zm_ffotd_tu0",
+        "id": 20,
+        "type": "zm"
+    },
+    {
+        "chunk_id": 4,
+        "file": "cp_common_all",
+        "id": 21,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 4,
+        "file": "cp_code_post_gfx",
+        "id": 22,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 4,
+        "file": "cp_common",
+        "id": 23,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 4,
+        "file": "cp_dev",
+        "id": 24,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 4,
+        "file": "cp_factions",
+        "id": 25,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 4,
+        "file": "cp_faction_pmc",
+        "id": 26,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 4,
+        "file": "cp_faction_seals",
+        "id": 27,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 4,
+        "file": "cp_ui",
+        "id": 28,
+        "launch_chunk": 1,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 5,
+        "file": "mp_apartments",
+        "id": 29,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 6,
+        "file": "mp_rise",
+        "id": 30,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 7,
+        "file": "mp_sentosa",
+        "id": 31,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 8,
+        "file": "mp_spire",
+        "id": 32,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 9,
+        "file": "mp_raid_2",
+        "id": 33,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 10,
+        "file": "mp_confinement",
+        "id": 34,
+        "type": "mp"
+    },
+    {
+        "chunk_id": 11,
+        "file": "zm_peter_test",
+        "id": 35,
+        "type": "zm"
+    },
+    {
+        "chunk_id": 12,
+        "file": "cp_hub_sing_chinatown",
+        "id": 36,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 13,
+        "file": "cp_hub_sing_downtown",
+        "id": 37,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 14,
+        "file": "cp_hub_sing_hilltop_park",
+        "id": 38,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 15,
+        "file": "cp_mi_sing_blackstation",
+        "id": 39,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 16,
+        "file": "cp_mi_sing_chinatown_intro",
+        "id": 40,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 17,
+        "file": "cp_sm_sing_chinatown_defend",
+        "id": 41,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 18,
+        "file": "cp_mi_sing_biodomes",
+        "id": 42,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 19,
+        "file": "cp_sm_sing_shipwreck",
+        "id": 43,
+        "type": "cp"
+    },
+    {
+        "chunk_id": 20,
+        "file": "cp_sm_sing_temple",
+        "id": 44,
+        "type": "cp"
+    }
+]

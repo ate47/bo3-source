@@ -1,0 +1,276 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_armory",
+    "dontsync": 1,
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_ram_02_interview_3rd_sh010_static_props",
+    "type": "scene",
+    "nextscenebundle": "cin_ram_02_interview_3rd_sh020",
+    "igdtseqnum": 1874,
+    "objects": [
+        {
+            "takedamage": 1,
+            "model": "c_hro_hendricks_egypt",
+            "player": 1,
+            "vmtype": "server",
+            "entitylerptime": 1.5,
+            "mainanim": "ch_ram_02_interview_3rd_sh010_hendricks",
+            "disabled": 1,
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "name": "hendricks",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "c_hro_salim_base",
+            "mainanim": "ch_ram_02_interview_3rd_sh010_salim",
+            "disabled": 1,
+            "playerstance": "stand",
+            "name": "nasser",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "sharedigc": 1,
+            "removeweapon": 1,
+            "takedamage": 1,
+            "mainanim": "pb_ram_02_interview_3rd_sh010_player",
+            "deletewhenfinished": 1,
+            "disabled": 1,
+            "lerptime": 1,
+            "type": "player"
+        },
+        {
+            "name": "interview_chair",
+            "type": "prop",
+            "vmtype": "server",
+            "model": "p7_chair_military_folding",
+            "playerstance": "stand",
+            "mainanim": "o_ram_02_interview_3rd_sh010_chair",
+            "takedamage": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "name": "interview_table",
+            "type": "prop",
+            "firstframe": 1,
+            "model": "p7_cai_igc_work_table_metal_01",
+            "mainanim": "o_ram_02_interview_3rd_sh010_table",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "firstframe": 1,
+            "mainanim": "o_ram_02_interview_3rd_sh010_sidetable",
+            "model": "p7_medical_surgical_cart_metal_01",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "interview_room_door_l",
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "firstframe": 1,
+            "mainanim": "o_ram_02_interview_3rd_sh010_door01",
+            "player": 1,
+            "vmtype": "server",
+            "model": "p7_cai_security_room_door_glass_in_lft"
+        },
+        {
+            "name": "interview_room_door_r",
+            "type": "prop",
+            "model": "p7_cai_security_room_door_glass_in_rt",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "o_ram_02_interview_3rd_sh010_door02",
+            "firstframe": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "type": "prop",
+            "deletewhenfinished": 1,
+            "model": "p7_cai_igc_interview_room_dust_pouch",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "o_ram_02_interview_3rd_sh010_pouch",
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "name": "interview_mug",
+            "type": "prop",
+            "firstframe": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "model": "p7_cai_igc_cup_coffee_mug_water",
+            "vmtype": "server",
+            "mainanim": "o_ram_02_interview_3rd_sh010_cup"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

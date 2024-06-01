@@ -1,0 +1,298 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_fueltunnel",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_pro_06_01_hostage_vign_rollgrenade",
+    "type": "scene",
+    "igdtseqnum": 244,
+    "objects": [
+        {
+            "model": "spawner_ally_hero_hendricks_prologue",
+            "player": 1,
+            "vmtype": "server",
+            "mainblend": 0.2,
+            "mainanim": "ch_pro_06_01_hostage_vign_rollgrenade_hendricks",
+            "disablearrivalinreach": 1,
+            "playerstance": "stand",
+            "doreach": 1,
+            "name": "hendricks",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "wpn_t7_grenade_frag_world",
+            "mainanim": "o_pro_06_01_hostage_vign_rollgrenade_grenade",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "name": "grenade",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_pro_06_01_hostage_vign_rollgrenade_guard01",
+            "disabled": 1,
+            "model": "c_t7_enemy_fb",
+            "diewhenfinished": 1,
+            "type": "actor"
+        },
+        {
+            "name": "new object 4",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "c_t7_enemy_fb",
+            "diewhenfinished": 1,
+            "playerstance": "stand",
+            "mainanim": "ch_pro_06_01_hostage_vign_rollgrenade_guard02",
+            "takedamage": 1,
+            "disabled": 1,
+            "player": 1,
+            "mainblend": 0.2
+        },
+        {
+            "name": "new object 5",
+            "type": "actor",
+            "model": "c_t7_enemy_fb",
+            "mainblend": 0.2,
+            "mainanim": "ch_pro_06_01_hostage_vign_rollgrenade_guard03",
+            "playerstance": "stand",
+            "disabled": 1,
+            "takedamage": 1,
+            "player": 1,
+            "diewhenfinished": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "name": "new object 6",
+            "type": "actor",
+            "mainblend": 0.2,
+            "diewhenfinished": 1,
+            "mainanim": "ch_pro_06_01_hostage_vign_rollgrenade_guard04",
+            "model": "c_t7_enemy_fb",
+            "disabled": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "new object 7",
+            "type": "actor",
+            "diewhenfinished": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_pro_06_01_hostage_vign_rollgrenade_guard05",
+            "player": 1,
+            "disabled": 1,
+            "vmtype": "server",
+            "model": "c_t7_enemy_fb"
+        },
+        {
+            "name": "new object 8",
+            "type": "actor",
+            "mainblend": 0.2,
+            "model": "c_t7_enemy_fb",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_pro_06_01_hostage_vign_rollgrenade_guard06",
+            "diewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server",
+            "disabled": 1
+        },
+        {
+            "name": "new object 9",
+            "type": "actor",
+            "diewhenfinished": 1,
+            "model": "c_t7_enemy_fb",
+            "player": 1,
+            "playerstance": "stand",
+            "mainblend": 0.2,
+            "takedamage": 1,
+            "mainanim": "ch_pro_06_01_hostage_vign_rollgrenade_guard07",
+            "vmtype": "server",
+            "disabled": 1
+        },
+        {
+            "disabled": 1,
+            "takedamage": 1,
+            "diewhenfinished": 1,
+            "name": "new object 10",
+            "type": "actor",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "player": 1,
+            "model": "c_t7_enemy_fb",
+            "vmtype": "server",
+            "mainanim": "ch_pro_06_01_hostage_vign_rollgrenade_guard08"
+        },
+        {
+            "playerstance": "stand",
+            "disabled": 1,
+            "diewhenfinished": 1,
+            "model": "c_t7_enemy_fb",
+            "mainblend": 0.2,
+            "name": "new object 11",
+            "type": "actor",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_pro_06_01_hostage_vign_rollgrenade_guard09"
+        },
+        {
+            "disabled": 1,
+            "playerstance": "stand",
+            "model": "c_t7_enemy_fb",
+            "name": "new object 12",
+            "type": "actor",
+            "player": 1,
+            "diewhenfinished": 1,
+            "vmtype": "server",
+            "mainblend": 0.2,
+            "takedamage": 1,
+            "mainanim": "ch_pro_06_01_hostage_vign_rollgrenade_guard10"
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

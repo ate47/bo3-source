@@ -1,0 +1,293 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_hospital_room_wakeup",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_new_17_01_wakingup_1st_reveal",
+    "type": "scene",
+    "igdtseqnum": 531,
+    "objects": [
+        {
+            "takedamage": 1,
+            "cameratween": 0.2,
+            "model": "c_hro_playermale_hospital_fb",
+            "viewclampright": 10,
+            "viewclampbottom": 10,
+            "player": 1,
+            "sharedigc": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "mainblend": 0.2,
+            "viewclampleft": 10,
+            "disabletransitionin": 1,
+            "mainanim": "pb_new_17_01_wakingup_1st_reveal_player",
+            "viewclamptop": 10,
+            "disabletransitionout": 1,
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "lerptime": 0.2,
+            "removeweapon": 1,
+            "name": "player",
+            "type": "player"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "model": "spawner_ally_hero_hendricks_newworld",
+            "firstframe": 1,
+            "mainanim": "ch_new_17_01_wakingup_1st_reveal_hendricks",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "name": "hendricks",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "removeweapon": 1,
+            "mainanim": "ch_new_17_01_wakingup_1st_reveal_taylor",
+            "firstframe": 1,
+            "model": "spawner_ally_hero_prometheus_newworld",
+            "name": "taylor",
+            "type": "actor"
+        },
+        {
+            "name": "bedside table",
+            "type": "prop",
+            "vmtype": "server",
+            "model": "p7_zur_nw_hospital_table_combined",
+            "playerstance": "stand",
+            "mainanim": "o_new_17_01_wakingup_1st_reveal_bedside_table",
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "name": "medical monitor",
+            "type": "prop",
+            "firstframe": 1,
+            "model": "p7_portable_medical_monitor_system_hospital",
+            "mainanim": "o_new_17_01_wakingup_1st_reveal_medical_monitor",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "takedamage": 1,
+            "name": "scarf",
+            "type": "prop",
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "mainanim": "o_new_17_01_wakingup_1st_reveal_scarf",
+            "model": "p7_rachel_scarf_anim",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "krueger",
+            "type": "actor",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "removeweapon": 1,
+            "firstframe": 1,
+            "mainanim": "ch_new_17_01_wakingup_1st_reveal_krueger",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "c_hro_krueger_base_fb"
+        },
+        {
+            "name": "rachel",
+            "type": "actor",
+            "model": "c_hro_rachel_egypt_with_scarf",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_new_17_01_wakingup_1st_reveal_rachel",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "door",
+            "type": "prop",
+            "model": "p7_zur_nw_hospital_door_01",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "o_new_17_01_wakingup_1st_reveal_door",
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "name": "blanket 1 player",
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "model": "p7_zur_nw_hospital_blanket_01",
+            "vmtype": "server",
+            "mainanim": "o_new_17_01_wakingup_1st_reveal_blanket_1"
+        },
+        {
+            "playerstance": "stand",
+            "model": "p7_zur_nw_hospital_blanket_02",
+            "name": "blanket 2 hendricks",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "o_new_17_01_wakingup_1st_reveal_blanket_2"
+        },
+        {
+            "playerstance": "stand",
+            "model": "p7_zm_zod_motel_pillow",
+            "name": "pillow",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "mainanim": "o_new_17_01_wakingup_1st_reveal_pillow"
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

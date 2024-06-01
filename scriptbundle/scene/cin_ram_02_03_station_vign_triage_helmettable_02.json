@@ -1,0 +1,281 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_station",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_ram_02_03_station_vign_triage_helmettable_02",
+    "type": "scene",
+    "igdtseqnum": 1197,
+    "objects": [
+        {
+            "takedamage": 1,
+            "deletewhenfinished": 1,
+            "model": "c_ega_military_medic_1",
+            "player": 1,
+            "vmtype": "server",
+            "initanimloop": "ch_ram_02_03_station_vign_triage_helmettable_guy01_start_loop",
+            "mainanim": "ch_ram_02_03_station_vign_triage_helmettable_guy01",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "runsceneondmg0": "none",
+            "type": "actor"
+        },
+        {
+            "runsceneondmg0": "none",
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "c_ega_military_medic_3",
+            "mainanim": "ch_ram_02_03_station_vign_triage_helmettable_guy02",
+            "initanimloop": "ch_ram_02_03_station_vign_triage_helmettable_guy02_start_loop",
+            "deletewhenfinished": 1,
+            "playerstance": "stand",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "runsceneondmg0": "none",
+            "endanimloop": "ch_ram_02_03_station_vign_triage_helmettable_guy03_end_loop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "takedamage": 1,
+            "mainanim": "ch_ram_02_03_station_vign_triage_helmettable_guy03",
+            "model": "c_ega_military_medic_3",
+            "initanimloop": "ch_ram_02_03_station_vign_triage_helmettable_guy03_start_loop",
+            "type": "actor"
+        },
+        {
+            "type": "actor",
+            "vmtype": "server",
+            "model": "c_ega_staff1_1",
+            "runsceneondmg0": "none",
+            "playerstance": "stand",
+            "deletewhenfinished": 1,
+            "mainanim": "ch_ram_02_03_station_vign_triage_helmettable_victim01",
+            "removeweapon": 1,
+            "takedamage": 1,
+            "player": 1,
+            "initanimloop": "ch_ram_02_03_station_vign_triage_helmettable_victim01_start_loop"
+        },
+        {
+            "type": "actor",
+            "runsceneondmg0": "none",
+            "initanimloop": "ch_ram_02_03_station_vign_triage_helmettable_victim02_start_loop",
+            "model": "c_ega_soldier_3",
+            "mainanim": "ch_ram_02_03_station_vign_triage_helmettable_victim02",
+            "playerstance": "stand",
+            "endanimloop": "ch_ram_02_03_station_vign_triage_helmettable_victim02_start_loop",
+            "takedamage": 1,
+            "removeweapon": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "deletewhenfinished": 1,
+            "runsceneondmg0": "none",
+            "initanimloop": "o_ram_02_03_station_vign_triage_helmettable_stretcher01_start_loop",
+            "mainanim": "o_ram_02_03_station_vign_triage_helmettable_stretcher01",
+            "model": "p7_medical_stretcher_set",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "runsceneondmg0": "none",
+            "endanimloop": "o_ram_02_03_station_vign_triage_helmettable_stretcher02_end_loop",
+            "mainanim": "o_ram_02_03_station_vign_triage_helmettable_stretcher02",
+            "initanimloop": "o_ram_02_03_station_vign_triage_helmettable_stretcher02_start_loop",
+            "player": 1,
+            "vmtype": "server",
+            "model": "p7_medical_stretcher_set"
+        },
+        {
+            "name": "table",
+            "type": "prop",
+            "model": "p7_medical_surgical_cart",
+            "runsceneondmg0": "none",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "endanimloop": "o_ram_02_03_station_vign_triage_helmettable_table_end_loop",
+            "mainanim": "o_ram_02_03_station_vign_triage_helmettable_table",
+            "player": 1,
+            "vmtype": "server",
+            "initanimloop": "o_ram_02_03_station_vign_triage_helmettable_table_start_loop"
+        },
+        {
+            "type": "prop",
+            "initanimloop": "o_ram_02_03_station_vign_triage_helmettable_helmet_start_loop",
+            "runsceneondmg0": "none",
+            "model": "c_ega_soldier_2_helmet_prop_anim",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "o_ram_02_03_station_vign_triage_helmettable_helmet",
+            "vmtype": "server",
+            "endanimloop": "o_ram_02_03_station_vign_triage_helmettable_helmet_end_loop"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "highexitlandheight": 32,
+    "model": "veh_t7_mil_macv",
+    "lowexitheight": 32,
+    "dropspeed": 250,
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "name": "veh_bo3_mil_apc_macv_riders",
+    "type": "vehicleriders",
+    "igdtseqnum": 11,
+    "objects": [
+        {
+            "enteranim": "ai_crew_macv_driver_enter",
+            "exitgroundanim": "ai_crew_macv_driver_exit",
+            "rideanim": "ai_crew_macv_driver_idle",
+            "ridedeathanim": "ai_crew_macv_driver_death",
+            "position": "driver",
+            "aligntag": "tag_driver"
+        },
+        {
+            "ridedeathanim": "ai_crew_macv_turret_fl_death",
+            "exitgroundanim": "ai_crew_macv_turret_fl_exit",
+            "enteranim": "ai_crew_macv_turret_fl_enter",
+            "position": "gunner1",
+            "aligntag": "tag_gunner1"
+        },
+        {
+            "enteranim": "ai_crew_macv_turret_fr_enter",
+            "exitgroundanim": "ai_crew_macv_turret_fr_exit",
+            "position": "gunner2",
+            "ridedeathanim": "ai_crew_macv_turret_fr_death",
+            "aligntag": "tag_gunner2"
+        },
+        {
+            "vehicleexitanim": "v_crew_macv_turret_bl_exit",
+            "exitgroundanim": "ai_crew_macv_turret_bl_exit",
+            "ridedeathanim": "ai_crew_macv_turret_bl_death",
+            "enteranim": "ai_crew_macv_turret_bl_enter",
+            "position": "gunner3",
+            "aligntag": "tag_gunner3",
+            "vehicleenteranim": "v_crew_macv_turret_bl_enter"
+        },
+        {
+            "ridedeathanim": "ai_crew_macv_turret_br_death",
+            "enteranim": "ai_crew_macv_turret_br_enter",
+            "exitgroundanim": "ai_crew_macv_turret_br_exit",
+            "position": "gunner4",
+            "vehicleexitanim": "v_crew_macv_turret_br_exit",
+            "aligntag": "tag_gunner4",
+            "vehicleenteranim": "v_crew_macv_turret_br_enter"
+        }
+    ]
+}

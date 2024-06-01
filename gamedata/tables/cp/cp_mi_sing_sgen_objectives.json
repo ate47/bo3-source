@@ -1,0 +1,13 @@
+[
+    {
+        "id": 0,
+        "numeric_property": 0,
+        "string_property": "Hello World"
+    },
+    {
+        "commented_string": "//this is not available",
+        "different_numeric_property": 999,
+        "different_string_property": "You can't use spaces in keynames!",
+        "id": 1
+    }
+]

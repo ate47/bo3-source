@@ -1,0 +1,14 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "cp_medal_all_collectibles",
+    "type": "medalcaseentry",
+    "igdtseqnum": 3,
+    "largeIcon": "t7_icon_achievement_safehouse_03",
+    "smallIcon": "t7_icon_achievement_safehouse_03",
+    "model": "p7_medal_achievements_safehouse_03",
+    "requirements": "CPUI_MEDAL_ALL_COLLECTIBLES_REQ",
+    "aarDisplayName": "CPUI_MEDAL_ALL_COLLECTIBLES_AAR",
+    "displayName": "CPUI_MEDAL_ALL_COLLECTIBLES",
+    "XPBonus": 5000
+}

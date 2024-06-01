@@ -1,0 +1,10 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "c_54i_robot_grunt_fx_def_death",
+    "type": "fxcharacterdef",
+    "effect1_attachtag": "j_spineupper",
+    "effectcount": 1,
+    "effect1_fx": "#fx:explosions/fx_exp_robot_torso_death",
+    "igdtseqnum": 308
+}

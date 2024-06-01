@@ -1,0 +1,17 @@
+{
+    "vmtype": "none",
+    "configstringfiletype": "scriptbundle",
+    "name": "chinese_names",
+    "type": "ainames",
+    "igdtseqnum": 2,
+    "name0": "Chen",
+    "name1": "Cheng",
+    "name2": "Jiang",
+    "name3": "Feng",
+    "name4": "Guan",
+    "name5": "Hu",
+    "name6": "Lai",
+    "name7": "Liang",
+    "name8": "Wu",
+    "name9": "Zheng"
+}

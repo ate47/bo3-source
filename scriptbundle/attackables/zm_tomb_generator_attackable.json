@@ -1,0 +1,11 @@
+{
+    "speed": "default",
+    "vmtype": "server",
+    "configstringfiletype": "scriptbundle",
+    "attack_distance": 32,
+    "max_health": 100,
+    "aggro_distance": 10000,
+    "name": "zm_tomb_generator_attackable",
+    "type": "attackables",
+    "max_attackers": 3
+}

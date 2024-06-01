@@ -1,0 +1,306 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "align_security_vent_cover",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_lot_04_09_security_1st_kickgrate",
+    "type": "scene",
+    "igdtseqnum": 860,
+    "objects": [
+        {
+            "takedamage": 1,
+            "cameratweenout": 0.35,
+            "cameratween": 0.2,
+            "model": "c_t7_ally_fb",
+            "viewclampright": 8,
+            "viewclampbottom": 4,
+            "player": 1,
+            "aligntarget": "align_security_vent_cover",
+            "sharedigc": 1,
+            "vmtype": "server",
+            "viewclampleft": 8,
+            "mainanim": "pb_lot_04_09_security_1st_kickgrate",
+            "viewclamptop": 8,
+            "disabletransitionout": 1,
+            "playerstance": "stand",
+            "lerptime": 0.2,
+            "name": "new object 1",
+            "type": "player"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "p7_anim_vent_metal_round_lrg_01",
+            "firstframe": 1,
+            "mainanim": "o_lot_04_09_security_1st_kickgrate_grate",
+            "playerstance": "stand",
+            "name": "kickgrate_grate",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "takedamage": 1,
+            "mainanim": "ch_lot_04_09_security_1st_kickgrate_guard01",
+            "model": "spawner_enemy_nrc_human_assault_arf",
+            "initanimloop": "ch_lot_04_09_security_1st_kickgrate_guard01_loop",
+            "name": "security_guard_1",
+            "type": "actor"
+        },
+        {
+            "name": "security_guard_2",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_enemy_nrc_human_assault_arf",
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "mainanim": "ch_lot_04_09_security_1st_kickgrate_guard02",
+            "takedamage": 1,
+            "player": 1,
+            "initanimloop": "ch_lot_04_09_security_1st_kickgrate_guard02_loop"
+        },
+        {
+            "name": "security_guard_3",
+            "type": "actor",
+            "initanimloop": "ch_lot_04_09_security_1st_kickgrate_guard03_loop",
+            "model": "spawner_enemy_nrc_human_assault_arf",
+            "mainanim": "ch_lot_04_09_security_1st_kickgrate_guard03",
+            "allowdeath": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "name": "security_guard_4",
+            "type": "actor",
+            "initanimloop": "ch_lot_04_09_security_1st_kickgrate_guard04_loop",
+            "mainanim": "ch_lot_04_09_security_1st_kickgrate_guard04",
+            "model": "spawner_enemy_nrc_human_assault_arf",
+            "player": 1,
+            "allowdeath": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "allowdeath": 1,
+            "name": "security_guard_5",
+            "type": "actor",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_lot_04_09_security_1st_kickgrate_guard05",
+            "initanimloop": "ch_lot_04_09_security_1st_kickgrate_guard05_loop",
+            "player": 1,
+            "vmtype": "server",
+            "model": "spawner_enemy_nrc_human_assault_arf"
+        },
+        {
+            "name": "security_guard_6",
+            "type": "actor",
+            "allowdeath": 1,
+            "model": "spawner_enemy_nrc_human_assault_arf",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_lot_04_09_security_1st_kickgrate_guard06",
+            "player": 1,
+            "vmtype": "server",
+            "initanimloop": "ch_lot_04_09_security_1st_kickgrate_guard06_loop"
+        },
+        {
+            "name": "security_guard_7",
+            "type": "actor",
+            "initanimloop": "ch_lot_04_09_security_1st_kickgrate_guard07_loop",
+            "allowdeath": 1,
+            "model": "spawner_enemy_nrc_human_assault_arf",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "ch_lot_04_09_security_1st_kickgrate_guard07",
+            "vmtype": "server"
+        },
+        {
+            "allowdeath": 1,
+            "initanimloop": "ch_lot_04_09_security_1st_kickgrate_guard08_loop",
+            "takedamage": 1,
+            "name": "security_guard_8",
+            "type": "actor",
+            "playerstance": "stand",
+            "player": 1,
+            "model": "spawner_enemy_nrc_human_assault_arf",
+            "vmtype": "server",
+            "mainanim": "ch_lot_04_09_security_1st_kickgrate_guard08"
+        },
+        {
+            "playerstance": "stand",
+            "model": "spawner_enemy_nrc_human_assault_arf",
+            "allowdeath": 1,
+            "initanimloop": "ch_lot_04_09_security_1st_kickgrate_guard09_loop",
+            "name": "security_guard_9",
+            "type": "actor",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "ch_lot_04_09_security_1st_kickgrate_guard09"
+        },
+        {
+            "playerstance": "stand",
+            "model": "spawner_enemy_nrc_human_assault_arf",
+            "name": "security_guard_10",
+            "type": "actor",
+            "player": 1,
+            "allowdeath": 1,
+            "vmtype": "server",
+            "initanimloop": "ch_lot_04_09_security_1st_kickgrate_guard10_loop",
+            "takedamage": 1,
+            "mainanim": "ch_lot_04_09_security_1st_kickgrate_guard10"
+        },
+        {
+            "initanimloop": "o_lot_04_09_security_1st_kickgrate_chair01_loop",
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "model": "p7_chair_office_modern",
+            "mainanim": "o_lot_04_09_security_1st_kickgrate_chair01"
+        },
+        {
+            "model": "p7_chair_office_modern",
+            "takedamage": 1,
+            "initanimloop": "o_lot_04_09_security_1st_kickgrate_chair02_loop",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand",
+            "mainanim": "o_lot_04_09_security_1st_kickgrate_chair02"
+        },
+        {
+            "mainanim": "o_lot_04_09_security_1st_kickgrate_chair03",
+            "model": "p7_chair_office_modern",
+            "takedamage": 1,
+            "player": 1,
+            "initanimloop": "o_lot_04_09_security_1st_kickgrate_chair03_loop",
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

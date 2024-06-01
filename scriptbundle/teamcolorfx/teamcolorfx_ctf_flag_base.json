@@ -1,0 +1,21 @@
+{
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "name": "teamcolorfx_ctf_flag_base",
+    "type": "teamcolorfx",
+    "igdtseqnum": 4,
+    "objects": [
+        {
+            "fx_colorid": "#fx:ui/fx_ctf_flag_base_team_green"
+        },
+        {
+            "fx_colorid": "#fx:ui/fx_ctf_flag_base_team_yellow"
+        },
+        {
+            "fx_colorid": "#fx:ui/fx_ctf_flag_base_team_red"
+        },
+        {
+            "fx_colorid": "#fx:ui/fx_ctf_flag_base_team_green"
+        }
+    ]
+}

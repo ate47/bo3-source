@@ -1,0 +1,276 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_easterncheckpoint",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_ram_04_02_easterncheck_vign_jumpdirect",
+    "type": "scene",
+    "igdtseqnum": 1330,
+    "objects": [
+        {
+            "delaymovementatend": 1,
+            "model": "c_ega_soldier_1",
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "mainanim": "ch_ram_04_02_easterncheck_vign_jumpdirect_soldier01",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "runsceneondmg0": "none",
+            "name": "staging_area_jumpdirect_guy01",
+            "type": "actor"
+        },
+        {
+            "runsceneondmg0": "none",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "c_ega_soldier_1",
+            "firstframe": 1,
+            "mainanim": "ch_ram_04_02_easterncheck_vign_jumpdirect_soldier02",
+            "delaymovementatend": 1,
+            "playerstance": "stand",
+            "name": "staging_area_jumpdirect_guy02",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "runsceneondmg0": "none",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "mainanim": "ch_ram_04_02_easterncheck_vign_jumpdirect_soldier03",
+            "firstframe": 1,
+            "delaymovementatend": 1,
+            "model": "c_ega_soldier_3",
+            "name": "staging_area_jumpdirect_guy03",
+            "type": "actor"
+        },
+        {
+            "name": "staging_area_jumpdirect_guy04",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "c_ega_soldier_3",
+            "runsceneondmg0": "none",
+            "playerstance": "stand",
+            "delaymovementatend": 1,
+            "mainanim": "ch_ram_04_02_easterncheck_vign_jumpdirect_soldier04",
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "name": "hendricks",
+            "type": "actor",
+            "runsceneondmg0": "none",
+            "model": "c_hro_hendricks_egypt",
+            "mainanim": "ch_ram_04_02_easterncheck_vign_jumpdirect_hendricks",
+            "playerstance": "stand",
+            "endanimloop": "ch_ram_04_02_easterncheck_vign_jumpdirect_hendricks_end_loop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "name": "khalil",
+            "type": "actor",
+            "runsceneondmg0": "none",
+            "mainanim": "ch_ram_04_02_easterncheck_vign_jumpdirect_khalil",
+            "model": "c_hro_khalil_egypt",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "endanimloop": "ch_ram_04_02_easterncheck_vign_jumpdirect_khalil_end_loop"
+        },
+        {
+            "name": "staging_area_jumpdirect_vtol",
+            "type": "prop",
+            "playerstance": "stand",
+            "runsceneondmg0": "none",
+            "mainanim": "v_ram_04_02_easterncheck_vign_jumpdirect_vtol",
+            "player": 1,
+            "disabled": 1,
+            "vmtype": "server",
+            "model": "veh_t7_mil_vtol_egypt_igc_nose"
+        },
+        {
+            "name": "staging_area_jumpdirect_wall",
+            "type": "prop",
+            "model": "p7_fxanim_cp_ramses_mobile_wall_mod_test",
+            "runsceneondmg0": "none",
+            "playerstance": "stand",
+            "mainanim": "o_ram_04_02_easterncheck_vign_jumpdirect_wall",
+            "deletewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server",
+            "disabled": 1
+        },
+        {
+            "name": "staging_area_jumpdirect_door",
+            "type": "prop",
+            "spawnoninit": 1,
+            "runsceneondmg0": "none",
+            "model": "p7_spire_hotel_door_01_l",
+            "player": 1,
+            "playerstance": "stand",
+            "mainanim": "o_ram_04_02_easterncheck_vign_jumpdirect_door",
+            "vmtype": "server",
+            "firstframe": 1
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

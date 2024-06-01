@@ -1,0 +1,48 @@
+a0,b1,c2,d3,e4,f5,g6,h7,i8,j9,k10,l11,m12,n13,o14,p15,q16,r17,s18,t19
+version,1,,,,,,,,,,,,,,,,,,
+category,1,FEATURED,MENU_STORE_FEATURED,t7_icon_menu_store_featured,1,1,0,3 4,3 4 6 7 ,3,,,,,,,,,
+category,2,CODPOINTS,MENU_STORE_COD_POINTS,t7_icon_menu_store_codpoints,1,1,1,,,,,,,,,,,,
+category,3,OUTFITS,MENU_STORE_OUTFITS,t7_icon_menu_store_spe_outfit,1,1,0,,,,,,,,,,,,
+category,4,ZOMBIES,MENU_STORE_ZOMBIES,t7_icon_menu_store_zombies,1,1,0,,,,,,,,,,,,
+category,5,MAPPACKS,MENU_STORE_MAP_PACKS,t7_icon_menu_store_maps,1,1,0,,,,,,,,,,,,
+category,6,CODE,MENU_STORE_CODE,t7_icon_menu_store_additional,1,1,0,,,,,,,,,,,,
+category,7,EXTRAPACKS,MENU_STORE_EXTRA_PACKS,t7_icon_menu_simple_cwl,1,1,1,,,,,,,,,,,,
+product,1,,CODBO4DELUXE0001,,,,,BO4,0,1,0,featured_first_3,t7_store_preview_bo4_dde,t7_store_product_bo4_dde,,,,,
+product,2,,CODBO4DELUXEPRE1,,,,,BO4,0,1,0,featured_first_3,t7_store_preview_bo4_dde,t7_store_product_bo4_dde,,,,,
+product,3,7c873305-5952-4354-93c2-c92a2e430d97,CODBO3ZOMBIESHD1,,,,,MAPPACKS FEATURED ZOMBIES,1,1,1,featured_first_3,t7_store_preview_zmhd,t7_store_product_zmhd,,,,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_ZHD_Gameplay_Trailer/Stream.m3u8,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_ZHD_Gameplay_Trailer/Banner.m3u8
+product,4,1cc09968-536c-445b-aa4c-cbc8da96ac99,BO3SP00000000000,366843,,,,SEASONPASS FEATURED MAPPACKS,1,1,1,seasonpass,t7_store_preview_seasonpass,t7_store_product_seasonpass,STORE_PRODUCT_SEASON_PASS_TITLE,STORE_PRODUCT_SEASON_PASS_DESC,,,
+product,5,,ASIACODBO3SEASON,,,,,SEASONPASS FEATURED MAPPACKS,1,1,1,seasonpass,t7_store_preview_seasonpass,t7_store_product_seasonpass,,,,,
+product,6,cdacbf1e-b4a0-4302-a445-1139d70326bb,BLACKOPS3GIANT00,,,,,FEATURED,1,1,1,mappacks,t7_store_preview_giant_zombie_map,t7_store_product_giant_zombie_map,,,,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_GIANT_CLEAN/Stream.m3u8,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_GIANT_CLEAN/Banner.m3u8
+product,7,a54584d2-d260-4d41-a248-a526c73e1215,,,,,,MAPPACKS,1,0,0,mappacks,t7_store_preview_salvation,t7_store_product_salvation,,,,https://www.callofduty.com/cdn/videos/StoreVideos/DLC4_TRAILER_AGNOSTIC/Stream.m3u8,https://www.callofduty.com/cdn/videos/StoreVideos/DLC4_TRAILER_AGNOSTIC/Banner.m3u8
+product,8,2d621116-0454-4a1e-8f4b-55325e442476,,,,,,MAPPACKS,1,0,0,mappacks,t7_store_preview_descent,t7_store_product_descent,,,,https://www.callofduty.com/cdn/videos/StoreVideos/DLC3_ZOMBIES_CLEAN/Stream.m3u8,https://www.callofduty.com/cdn/videos/StoreVideos/DLC3_ZOMBIES_CLEAN/Banner.m3u8
+product,9,2feca5e2-26a6-4015-8d25-cc1e519f8388,,,,,,MAPPACKS,1,0,0,mappacks,t7_store_preview_eclipse,t7_store_product_eclipse,,,,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_DLC2_ZOMBIES_CLEAN/Stream.m3u8,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_DLC2_ZOMBIES_CLEAN/Banner.m3u8
+product,10,1f84e11b-3b07-4b50-944b-dd13e8879fde,,,,,,MAPPACKS,1,0,0,mappacks,t7_store_preview_awakening,t7_store_product_awakening,,,,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_DLC1_CLEAN/Stream.m3u8,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_DLC1_CLEAN/Banner.m3u8
+product,11,,BLACKOPS3MAPPAK4,,,,,MAPPACKS FEATURED,0,1,1,mappacks,t7_store_preview_salvation,t7_store_product_salvation,,,,https://www.callofduty.com/cdn/videos/StoreVideos/DLC4_TRAILER_AGNOSTIC/Stream.m3u8,https://www.callofduty.com/cdn/videos/StoreVideos/DLC4_TRAILER_AGNOSTIC/Banner.m3u8
+product,12,,BLACKOPS3MAPPAK3,,,,,MAPPACKS FEATURED,0,1,1,mappacks,t7_store_preview_descent,t7_store_product_descent,,,,https://www.callofduty.com/cdn/videos/StoreVideos/DLC3_ZOMBIES_CLEAN/Stream.m3u8,https://www.callofduty.com/cdn/videos/StoreVideos/DLC3_ZOMBIES_CLEAN/Banner.m3u8
+product,13,,BLACKOPS3MAPPAK2,,,,,MAPPACKS FEATURED,0,1,1,mappacks,t7_store_preview_eclipse,t7_store_product_eclipse,,,,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_DLC2_ZOMBIES_CLEAN/Stream.m3u8,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_DLC2_ZOMBIES_CLEAN/Banner.m3u8
+product,14,,BLACKOPS3MAPPAK1,,,,,MAPPACKS FEATURED,0,1,1,mappacks,t7_store_preview_awakening,t7_store_product_awakening,,,,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_DLC1_CLEAN/Stream.m3u8,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_DLC1_CLEAN/Banner.m3u8
+product,15,c20c9584-7614-4ee6-99f6-2f2b522e7e64,BLACKOPS3PAK4ZMB,,,,,ZOMBIES,1,1,1,zombies,t7_store_preview_revelations,t7_store_product_revelations,,,,,
+product,16,d38e2efa-72f5-4ba9-8d3a-d0d87cce19c9,BLACKOPS3PAK3ZMB,,,,,ZOMBIES,1,1,1,zombies,t7_store_preview_gorod_krovi,t7_store_product_gorod_krovi,,,,,
+product,17,9f226fbb-babb-44fe-885b-014fcc553335,BLACKOPS3PAK2ZMB,,,,,ZOMBIES,1,1,1,zombies,t7_store_preview_zersubou_no_shima,t7_store_product_zersubou_no_shima,,,,,
+product,18,852d89e2-d51f-46bb-b2c7-1223c468534a,BLACKOPS3PAK1ZMB,,,,,ZOMBIES,1,1,1,zombies,t7_store_preview_der_eisendrache,t7_store_product_der_eisendrache,,,,,
+product,19,cdacbf1e-b4a0-4302-a445-1139d70326bb,BLACKOPS3GIANT00,,,,,MAPPACKS ZOMBIES,1,1,1,mappacks,t7_store_preview_giant_zombie_map,t7_store_product_giant_zombie_map,,,,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_GIANT_CLEAN/Stream.m3u8,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_GIANT_CLEAN/Banner.m3u8
+product,20,dc41534d-1a0c-49fd-b1bb-9cbe094b876c,BLACKOPS3NUK3TWN,,,,,MAPPACKS,1,1,1,mappacks,t7_store_preview_nuk3town_map,t7_store_product_nuk3town,,,nuketown,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_NUK3TOWN_CLEAN/Stream.m3u8,https://www.callofduty.com/cdn/videos/StoreVideos/BO3_NUK3TOWN_CLEAN/Banner.m3u8
+product,21,c5c86ee0-7d46-4207-b2b3-5bd2751263fd,CON0050000000000,120009,110010,100010,120009,FEATURED,1,1,1,featured_first_3,t7_store_preview_codpoints_13000,t7_store_product_codpoints_13000,,STORE_PRODUCT_CODPOINTS13000_DESC,,,
+product,22,fdf816ad-e54a-4b07-a3d5-c44ea9fe5f78,CON0060000000000,120018,110018,100018,120018,FEATURED,1,1,1,featured_first_3,t7_store_preview_codpoints_9500,t7_store_product_codpoints_9500,,STORE_PRODUCT_CODPOINTS9500_DESC,,,
+product,23,e6968ced-b7a3-46c4-a18a-dd5b98573e2b,CON0010000000000,120005,110006,100006,120005,CODPOINTS FEATURED,1,1,1,featured_first_3,t7_store_preview_codpoints_200,t7_store_product_codpoints_200,,STORE_PRODUCT_CODPOINTS200_DESC,,,
+product,24,f9bd7b89-7c2d-461a-8687-d14554db1361,CON0020000000000,120006,110007,100007,120006,CODPOINTS FEATURED,1,1,1,featured_last_3,t7_store_preview_codpoints_1100,t7_store_product_codpoints_1100,,STORE_PRODUCT_CODPOINTS1100_DESC,,,
+product,25,8dfcc3a9-5522-41fd-b39a-e3d9215bbb06,CON0030000000000,120007,110008,100008,120007,CODPOINTS FEATURED,1,1,1,featured_last_3,t7_store_preview_codpoints_2400,t7_store_product_codpoints_2400,,STORE_PRODUCT_CODPOINTS2400_DESC,,,
+product,26,daa205f6-da65-4498-83d2-bbae3187f5e0,CON0040000000000,120008,110009,100009,120008,CODPOINTS FEATURED,1,1,1,featured_last_3,t7_store_preview_codpoints_5000,t7_store_product_codpoints_5000,,STORE_PRODUCT_CODPOINTS5000_DESC,,,
+product,27,4be5f5c0-c99b-41cf-a0fd-27300a5e4a85,CODE010000000000,,110005,100005,,CODE,1,1,1,codemtx,t7_store_preview_code,t7_store_product_code,,,,,
+product,28,fdf816ad-e54a-4b07-a3d5-c44ea9fe5f78,CON0060000000000,120018,110018,100018,120018,CODPOINTS,1,1,1,cod_points,t7_store_preview_codpoints_9500,t7_store_product_codpoints_9500,,STORE_PRODUCT_CODPOINTS9500_DESC,,,
+product,29,c5c86ee0-7d46-4207-b2b3-5bd2751263fd,CON0050000000000,120009,110010,100010,120009,CODPOINTS,1,1,1,cod_points,t7_store_preview_codpoints_13000,t7_store_product_codpoints_13000,,STORE_PRODUCT_CODPOINTS13000_DESC,,,
+product,30,38f90930-7e22-46d6-b42a-f480e69072f6,CODE020000000000,120017,110017,100017,120017,CODE,1,1,1,codemtx02,t7_store_preview_code2,t7_store_product_code2,,,,,
+product,31,ae23b1b1-87c3-46c6-9ccb-4743bc9f0c30,CODE030000000000,120019,110019,100019,120019,CODE,1,1,1,codemtx03,t7_store_preview_code3,t7_store_product_code3,,,,,
+product,32,5819f941-0645-4b98-8e7e-bc3cf0db66f4,,,,,,BO2,1,0,0,bo2,t7_store_preview_bo2,t7_store_product_bo2,,,,,
+product,33,,CODBO4THEGAME001,,,,,BO4,0,1,0,bo4,t7_store_preview_bo4,t7_store_product_bo4,,,,,
+product,34,,CODBO4GAMEPRE001,,,,,BO4,0,1,0,bo4,t7_store_preview_bo4,t7_store_product_bo4,,,,,
+product,35,,CODBO4DLXPLUS001,,,,,BO4,0,1,0,bo4,t7_store_preview_bo4_ddep,t7_store_product_bo4_ddep,,,,,
+product,36,,CODBO4DLXPLUSPRE,,,,,BO4,0,1,0,bo4,t7_store_preview_bo4_ddep,t7_store_product_bo4_ddep,,,,,
+product,37,,CODBO4BASEDLXUPG,,,,,BO4,0,1,0,bo4,t7_store_preview_bo4_dde,t7_store_product_bo4_dde,,,,,
+product,38,,CODBO4BASEPLSUPG,,,,,BO4,0,1,0,bo4,t7_store_preview_bo4_ddep,t7_store_product_bo4_ddep,,,,,
+product,39,,CODBO4DLXPLUSUPG,,,,,BO4,0,1,0,bo4,t7_store_preview_bo4_ddep,t7_store_product_bo4_ddep,,,,,

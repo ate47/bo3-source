@@ -1,0 +1,284 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_hostile_merchants",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_bio_03_01_market_vign_engage",
+    "type": "scene",
+    "igdtseqnum": 404,
+    "objects": [
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "allowdeath": 1,
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "firstframe": 1,
+            "mainanim": "ch_bio_03_01_market_vign_engage_soldier01_end",
+            "initanimloop": "ch_bio_03_01_market_vign_engage_soldier01_loop",
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "name": "markets1_intro_guy1",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "spawnoninit": 1,
+            "takedamage": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_bio_03_01_market_vign_engage_soldier02_end",
+            "firstframe": 1,
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "initanimloop": "ch_bio_03_01_market_vign_engage_soldier02_loop",
+            "name": "markets1_intro_guy2",
+            "type": "actor"
+        },
+        {
+            "name": "markets1_intro_guy3",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "mainanim": "ch_bio_03_01_market_vign_engage_soldier03_end",
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1,
+            "mainblend": 0.2,
+            "initanimloop": "ch_bio_03_01_market_vign_engage_soldier03_loop"
+        },
+        {
+            "name": "markets1_intro_guy4",
+            "type": "actor",
+            "firstframe": 1,
+            "initanimloop": "ch_bio_03_01_market_vign_engage_soldier04_loop",
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "mainblend": 0.2,
+            "mainanim": "ch_bio_03_01_market_vign_engage_soldier04_end",
+            "allowdeath": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "takedamage": 1,
+            "name": "markets1_intro_guy5",
+            "type": "actor",
+            "mainblend": 0.2,
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "initanimloop": "ch_bio_03_01_market_vign_engage_soldier05_loop",
+            "mainanim": "ch_bio_03_01_market_vign_engage_soldier05_end",
+            "model": "spawner_enemy_54i_human_assault_ar",
+            "player": 1,
+            "allowdeath": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "firstframe": 1,
+            "mainblend": 0.2,
+            "mainanim": "o_bio_03_01_market_vign_engage_pistol01_end",
+            "spawnoninit": 1,
+            "initanimloop": "o_bio_03_01_market_vign_engage_pistol01_loop",
+            "player": 1,
+            "vmtype": "server",
+            "deletewhenfinished": 1,
+            "model": "wpn_t7_pistol_mr6_prop"
+        },
+        {
+            "type": "prop",
+            "mainblend": 0.2,
+            "model": "wpn_t7_pistol_mr6_prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "o_bio_03_01_market_vign_engage_pistol02_end",
+            "firstframe": 1,
+            "deletewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server",
+            "initanimloop": "o_bio_03_01_market_vign_engage_pistol02_loop",
+            "spawnoninit": 1
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

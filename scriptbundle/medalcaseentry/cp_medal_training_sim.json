@@ -1,0 +1,14 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "cp_medal_training_sim",
+    "type": "medalcaseentry",
+    "igdtseqnum": 10,
+    "largeIcon": "t7_icon_achievement_safehouse_12",
+    "smallIcon": "t7_icon_achievement_safehouse_12",
+    "model": "p7_medal_achievements_safehouse_12",
+    "requirements": "CPUI_MEDAL_TRAINING_SIM_REQ",
+    "aarDisplayName": "CPUI_MEDAL_TRAINING_SIM_AAR",
+    "displayName": "CPUI_MEDAL_TRAINING_SIM",
+    "XPBonus": 5000
+}

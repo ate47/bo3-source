@@ -1,0 +1,11 @@
+{
+    "head_gibeffecttag": "j_head",
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "annihilate_gibfx": "#fx:blood/fx_blood_impact_exp_body_lg",
+    "head_gibfx": "#fx:impacts/fx_bul_impact_blood_head_fatal_exit",
+    "annihilate_gibeffecttag": "j_spinelower",
+    "name": "c_civ_sin_chinatown_male_def",
+    "type": "gibcharacterdef",
+    "igdtseqnum": 145
+}

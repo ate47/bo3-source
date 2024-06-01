@@ -1,0 +1,321 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_partyroom",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_bio_01_01_party_1st_drinks_part2",
+    "type": "scene",
+    "igdtseqnum": 389,
+    "objects": [
+        {
+            "takedamage": 1,
+            "model": "p7_ashtray_01",
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "mainanim": "o_bio_01_01_party_1st_drinks_ashtray_guard04",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "type": "prop"
+        },
+        {
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "p7_ashtray_01",
+            "firstframe": 1,
+            "mainanim": "o_bio_01_01_party_1st_drinks_ashtray_guard05",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "takedamage": 1,
+            "mainanim": "o_bio_01_01_party_1st_drinks_ashtray_marshawn",
+            "firstframe": 1,
+            "model": "p7_ashtray_01",
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "vmtype": "server",
+            "model": "p7_chair_cafe_wood",
+            "playerstance": "stand",
+            "mainanim": "o_bio_01_01_party_1st_drinks_chair_guard04",
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "type": "prop",
+            "firstframe": 1,
+            "model": "p7_chair_cafe_wood",
+            "mainanim": "o_bio_01_01_party_1st_drinks_chair_guard05",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "mainanim": "o_bio_01_01_party_1st_drinks_chair_marshawn",
+            "model": "p7_chair_cafe_wood",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "firstframe": 1,
+            "mainanim": "o_bio_01_01_party_1st_drinks_glass_guard04",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "p7_anim_cup_glass_tumbler"
+        },
+        {
+            "type": "prop",
+            "model": "p7_anim_cup_glass_tumbler",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "o_bio_01_01_party_1st_drinks_glass_guard05",
+            "firstframe": 1,
+            "player": 1,
+            "vmtype": "server",
+            "disabled": 1,
+            "spawnoninit": 1
+        },
+        {
+            "type": "prop",
+            "spawnoninit": 1,
+            "model": "p7_anim_cup_glass_tumbler",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "o_bio_01_01_party_1st_drinks_glass_marshawn",
+            "vmtype": "server",
+            "firstframe": 1
+        },
+        {
+            "spawnoninit": 1,
+            "takedamage": 1,
+            "name": "side_door",
+            "type": "prop",
+            "firstframe": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "model": "p7_cai_apt_door_generic_lt_01_dmg",
+            "vmtype": "server",
+            "mainanim": "o_bio_01_01_party_1st_drinks_maindoor"
+        },
+        {
+            "playerstance": "stand",
+            "model": "wpn_t7_pistol_mr6_prop_static",
+            "spawnoninit": 1,
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "o_bio_01_01_party_1st_drinks_dannylipistol",
+            "firstframe": 1
+        },
+        {
+            "firstframe": 1,
+            "playerstance": "stand",
+            "model": "p7_bottle_glass_liquor_03",
+            "name": "new object 13",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1,
+            "takedamage": 1,
+            "mainanim": "o_bio_01_01_party_1st_drinks_bottle_marshawn"
+        },
+        {
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "name": "new object 14",
+            "type": "prop",
+            "model": "p7_bottle_glass_liquor_03",
+            "mainanim": "o_bio_01_01_party_1st_drinks_bottle_guard04"
+        },
+        {
+            "model": "p7_bottle_glass_liquor_03",
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1,
+            "vmtype": "server",
+            "name": "new object 15",
+            "type": "prop",
+            "playerstance": "stand",
+            "mainanim": "o_bio_01_01_party_1st_drinks_bottle1_guard05"
+        },
+        {
+            "mainanim": "o_bio_01_01_party_1st_drinks_bottle2_guard05",
+            "model": "p7_bottle_glass_liquor_03",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "firstframe": 1,
+            "name": "new object 16",
+            "type": "prop",
+            "spawnoninit": 1,
+            "playerstance": "stand"
+        },
+        {
+            "mainanim": "o_bio_01_01_party_1st_drinks_cigaret_marshawn",
+            "spawnoninit": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "p7_cigar_lit",
+            "name": "new object 17",
+            "type": "prop",
+            "firstframe": 1
+        },
+        {
+            "model": "c_54i_assault_fullbody",
+            "mainanim": "ch_bio_01_01_party_1st_drinks_guard04",
+            "firstframe": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1,
+            "playerstance": "stand",
+            "name": "guard04",
+            "type": "actor",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "mainanim": "ch_bio_01_01_party_1st_drinks_guard05",
+            "player": 1,
+            "firstframe": 1,
+            "vmtype": "server",
+            "model": "c_54i_assault_fullbody",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "name": "guard05",
+            "type": "actor"
+        },
+        {
+            "spawnoninit": 1,
+            "mainanim": "ch_bio_01_01_party_1st_drinks_marshawn",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "firstframe": 1,
+            "model": "c_54i_cqb_lynch",
+            "name": "marshawn",
+            "type": "actor",
+            "playerstance": "stand"
+        },
+        {
+            "firstframe": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "mainanim": "o_bio_01_01_party_1st_drinks_cigaret_guard05",
+            "spawnoninit": 1,
+            "model": "p7_cigar_lit",
+            "takedamage": 1,
+            "name": "new object 20",
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

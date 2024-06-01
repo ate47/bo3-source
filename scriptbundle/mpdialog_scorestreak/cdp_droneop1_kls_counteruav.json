@@ -1,0 +1,11 @@
+{
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "timecheck": "time_check",
+    "name": "cdp_droneop1_kls_counteruav",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_cdo1_kls_counteruav_",
+    "timeout": "timeout",
+    "arrive": "arrive",
+    "igdtseqnum": 138
+}

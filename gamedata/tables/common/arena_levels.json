@@ -1,0 +1,149 @@
+[
+    {
+        "icon": "t7_icon_rank_arena_level_01",
+        "mode": "stars_locked",
+        "points": 3,
+        "rank": 0,
+        "tier": 0
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_02",
+        "mode": "stars_locked",
+        "points": 3,
+        "rank": 1,
+        "tier": 0
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_03",
+        "mode": "stars_locked",
+        "points": 3,
+        "rank": 2,
+        "tier": 0
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_04",
+        "mode": "stars_locked",
+        "points": 3,
+        "rank": 3,
+        "tier": 0
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_05",
+        "mode": "stars_locked",
+        "points": 4,
+        "rank": 4,
+        "tier": 0
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_06",
+        "mode": "rank_locked",
+        "points": 4,
+        "rank": 5,
+        "tier": 1
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_07",
+        "mode": "rank_locked",
+        "points": 4,
+        "rank": 6,
+        "tier": 1
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_08",
+        "mode": "rank_locked",
+        "points": 4,
+        "rank": 7,
+        "tier": 1
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_09",
+        "mode": "rank_locked",
+        "points": 5,
+        "rank": 8,
+        "tier": 1
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_10",
+        "mode": "rank_locked",
+        "points": 5,
+        "rank": 9,
+        "tier": 1
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_11",
+        "mode": "rank_locked",
+        "points": 5,
+        "rank": 10,
+        "tier": 2
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_12",
+        "mode": "rank_locked",
+        "points": 5,
+        "rank": 11,
+        "tier": 2
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_13",
+        "mode": "rank_locked",
+        "points": 6,
+        "rank": 12,
+        "tier": 2
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_14",
+        "mode": "rank_locked",
+        "points": 6,
+        "rank": 13,
+        "tier": 2
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_15",
+        "mode": "rank_locked",
+        "points": 6,
+        "rank": 14,
+        "tier": 2
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_16",
+        "mode": "rank_locked",
+        "points": 6,
+        "rank": 15,
+        "tier": 3
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_17",
+        "mode": "rank_locked",
+        "points": 7,
+        "rank": 16,
+        "tier": 3
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_18",
+        "mode": "rank_locked",
+        "points": 7,
+        "rank": 17,
+        "tier": 3
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_19",
+        "mode": "rank_locked",
+        "points": 7,
+        "rank": 18,
+        "tier": 3
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_20",
+        "mode": "rank_locked",
+        "points": 7,
+        "rank": 19,
+        "tier": 3
+    },
+    {
+        "icon": "t7_icon_rank_arena_level_21",
+        "mode": "master",
+        "points": 1,
+        "rank": 20,
+        "tier": 4
+    }
+]

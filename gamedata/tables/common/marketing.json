@@ -1,0 +1,22 @@
+[
+    {
+        "id": 0,
+        "location": 0,
+        "name": "test_message"
+    },
+    {
+        "id": 1,
+        "location": 1,
+        "name": "motd"
+    },
+    {
+        "id": 2,
+        "location": 2,
+        "name": "crm_featured"
+    },
+    {
+        "id": 3,
+        "location": 3,
+        "name": "registration"
+    }
+]

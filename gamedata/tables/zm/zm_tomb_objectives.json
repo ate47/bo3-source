@@ -1,0 +1,52 @@
+[
+    {
+        "id": "zm_dlc5_capture_generator1",
+        "pulse_waypoint": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_image": "blacktransparent",
+        "waypoint_z_offset": 35
+    },
+    {
+        "id": "zm_dlc5_capture_generator2",
+        "pulse_waypoint": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_image": "blacktransparent",
+        "waypoint_z_offset": 35
+    },
+    {
+        "id": "zm_dlc5_capture_generator3",
+        "pulse_waypoint": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_image": "blacktransparent",
+        "waypoint_z_offset": 35
+    },
+    {
+        "id": "zm_dlc5_capture_generator4",
+        "pulse_waypoint": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_image": "blacktransparent",
+        "waypoint_z_offset": 35
+    },
+    {
+        "id": "zm_dlc5_capture_generator5",
+        "pulse_waypoint": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_image": "blacktransparent",
+        "waypoint_z_offset": 35
+    },
+    {
+        "id": "zm_dlc5_capture_generator6",
+        "pulse_waypoint": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_image": "blacktransparent",
+        "waypoint_z_offset": 35
+    },
+    {
+        "id": "zm_dlc5_recapture_zombie",
+        "pulse_waypoint": "enable",
+        "show3dDirectionArrow": 1,
+        "waypoint_clamp": "enable",
+        "waypoint_image": "t7_zm_hd_evil_crusade",
+        "waypoint_z_offset": 75
+    }
+]

@@ -1,0 +1,289 @@
+{
+    "scenetype": "scene",
+    "allowmultiple": 1,
+    "vmtype": "server",
+    "aligntarget": "tag_align_intro",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_lot_02_01_startriots_vign_overwhelm_siege2nd",
+    "type": "scene",
+    "igdtseqnum": 806,
+    "objects": [
+        {
+            "takedamage": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "player": 1,
+            "vmtype": "server",
+            "initanimloop": "ch_lot_02_01_startriots_vign_overwhelm_siege2nd_guard01_startloop",
+            "mainblend": 0.2,
+            "mainanim": "ch_lot_02_01_startriots_vign_overwhelm_siege2nd_guard01_main",
+            "diewhenfinished": 1,
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "allowdeath": 1,
+            "removeweapon": 1,
+            "name": "second_riots_guard_1",
+            "type": "actor"
+        },
+        {
+            "allowdeath": 1,
+            "spawnoninit": 1,
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "model": "spawner_civilian_lotus_civ",
+            "mainanim": "ch_lot_02_01_startriots_vign_overwhelm_siege2nd_civ01_main",
+            "initanimloop": "ch_lot_02_01_startriots_vign_overwhelm_siege2nd_civ01_startloop",
+            "delaymovementatend": 1,
+            "mainblend": 0.2,
+            "playerstance": "stand",
+            "name": "second_riots_civ_1",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "spawnoninit": 1,
+            "removeweapon": 1,
+            "takedamage": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_lot_02_01_startriots_vign_overwhelm_siege2nd_civ02_main",
+            "delaymovementatend": 1,
+            "model": "spawner_civilian_lotus_civ",
+            "initanimloop": "ch_lot_02_01_startriots_vign_overwhelm_siege2nd_civ02_startloop",
+            "name": "second_riots_civ_2",
+            "type": "actor"
+        },
+        {
+            "name": "second_riots_civ_3",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_civilian_lotus_civ",
+            "playerstance": "stand",
+            "allowdeath": 1,
+            "mainanim": "ch_lot_02_01_startriots_vign_overwhelm_siege2nd_civ03_main",
+            "removeweapon": 1,
+            "takedamage": 1,
+            "spawnoninit": 1,
+            "player": 1,
+            "mainblend": 0.2,
+            "initanimloop": "ch_lot_02_01_startriots_vign_overwhelm_siege2nd_civ03_startloop"
+        },
+        {
+            "name": "second_riots_civ_4",
+            "type": "actor",
+            "initanimloop": "ch_lot_02_01_startriots_vign_overwhelm_siege2nd_civ04_starloop",
+            "model": "spawner_civilian_lotus_civ",
+            "mainblend": 0.2,
+            "mainanim": "ch_lot_02_01_startriots_vign_overwhelm_siege2nd_civ04_main",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "takedamage": 1,
+            "name": "second_riots_civ_5",
+            "type": "actor",
+            "mainblend": 0.2,
+            "removeweapon": 1,
+            "spawnoninit": 1,
+            "initanimloop": "ch_lot_02_01_startriots_vign_overwhelm_siege2nd_civ05_startloop",
+            "mainanim": "ch_lot_02_01_startriots_vign_overwhelm_siege2nd_civ05_main",
+            "model": "spawner_civilian_lotus_civ",
+            "player": 1,
+            "allowdeath": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "allowdeath": 1,
+            "name": "second_riots_guard_2",
+            "type": "actor",
+            "diewhenfinished": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "removeweapon": 1,
+            "mainblend": 0.2,
+            "mainanim": "ch_lot_02_01_startriots_vign_overwhelm_siege2nd_guard02_main",
+            "spawnoninit": 1,
+            "initanimloop": "ch_lot_02_01_startriots_vign_overwhelm_siege2nd_guard02_startloop",
+            "player": 1,
+            "vmtype": "server",
+            "model": "spawner_enemy_nrc_human_assault_ar"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "vmtype": "server"
+        },
+        {
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "name": "blops_droneop2_kls_combatrobot",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_bdo2_kls_robot_",
+    "timeout": "timeout",
+    "igdtseqnum": 42
+}

@@ -1,0 +1,14 @@
+{
+    "vmtype": "client",
+    "configstringfiletype": "scriptbundle",
+    "name": "cp_medal_all_tokens",
+    "type": "medalcaseentry",
+    "igdtseqnum": 11,
+    "largeIcon": "t7_icon_achievement_safehouse_06",
+    "smallIcon": "t7_icon_achievement_safehouse_06",
+    "model": "p7_medal_achievements_safehouse_06",
+    "requirements": "CPUI_MEDAL_ALL_TOKENS_REQ",
+    "aarDisplayName": "CPUI_MEDAL_ALL_TOKENS_AAR",
+    "displayName": "CPUI_MEDAL_ALL_TOKENS",
+    "XPBonus": 5000
+}

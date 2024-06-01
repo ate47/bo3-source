@@ -1,0 +1,276 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_securitystation",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_pro_04_01_takeout_vign_truck_prisoners",
+    "type": "scene",
+    "igdtseqnum": 158,
+    "objects": [
+        {
+            "deletewhenfinished": 1,
+            "model": "spawner_ally_egypt_human_assault_casual",
+            "player": 1,
+            "vmtype": "server",
+            "initanimloop": "ch_pro_04_01_takeout_vign_truck_prisoner01_loop",
+            "mainanim": "ch_pro_04_01_takeout_vign_truck_prisoner01_end",
+            "initanim": "ch_pro_04_01_takeout_vign_truck_prisoner01_start",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "model": "spawner_ally_egypt_human_assault_casual",
+            "mainanim": "ch_pro_04_01_takeout_vign_truck_prisoner02_end",
+            "initanimloop": "ch_pro_04_01_takeout_vign_truck_prisoner02_loop",
+            "initanim": "ch_pro_04_01_takeout_vign_truck_prisoner02_start",
+            "deletewhenfinished": 1,
+            "playerstance": "stand",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "removeweapon": 1,
+            "mainanim": "ch_pro_04_01_takeout_vign_truck_prisoner03_end",
+            "deletewhenfinished": 1,
+            "model": "spawner_ally_egypt_human_assault_casual",
+            "initanim": "ch_pro_04_01_takeout_vign_truck_prisoner03_start",
+            "initanimloop": "ch_pro_04_01_takeout_vign_truck_prisoner03_loop",
+            "type": "actor"
+        },
+        {
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_ally_egypt_human_assault_casual",
+            "playerstance": "stand",
+            "deletewhenfinished": 1,
+            "mainanim": "ch_pro_04_01_takeout_vign_truck_prisoner04_end",
+            "removeweapon": 1,
+            "initanim": "ch_pro_04_01_takeout_vign_truck_prisoner04_start",
+            "player": 1,
+            "initanimloop": "ch_pro_04_01_takeout_vign_truck_prisoner04_loop"
+        },
+        {
+            "type": "actor",
+            "initanimloop": "ch_pro_04_01_takeout_vign_truck_prisoner06_loop",
+            "deletewhenfinished": 1,
+            "model": "spawner_ally_egypt_human_assault_casual",
+            "mainanim": "ch_pro_04_01_takeout_vign_truck_prisoner06_end",
+            "playerstance": "stand",
+            "initanim": "ch_pro_04_01_takeout_vign_truck_prisoner06_start",
+            "removeweapon": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "actor",
+            "deletewhenfinished": 1,
+            "initanimloop": "ch_pro_04_01_takeout_vign_truck_guard01_loop",
+            "mainanim": "ch_pro_04_01_takeout_vign_truck_guard01_end",
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "initanim": "ch_pro_04_01_takeout_vign_truck_guard01_start",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "actor",
+            "playerstance": "stand",
+            "mainanim": "ch_pro_04_01_takeout_vign_truck_guard02_end",
+            "initanimloop": "ch_pro_04_01_takeout_vign_truck_guard02_loop",
+            "player": 1,
+            "vmtype": "server",
+            "initanim": "ch_pro_04_01_takeout_vign_truck_guard02_start",
+            "deletewhenfinished": 1,
+            "model": "spawner_enemy_nrc_human_assault_ar"
+        },
+        {
+            "type": "actor",
+            "model": "spawner_enemy_nrc_human_assault_ar",
+            "playerstance": "stand",
+            "mainanim": "ch_pro_04_01_takeout_vign_truck_guard03_end",
+            "deletewhenfinished": 1,
+            "player": 1,
+            "vmtype": "server",
+            "initanim": "ch_pro_04_01_takeout_vign_truck_guard03_start",
+            "initanimloop": "ch_pro_04_01_takeout_vign_truck_guard03_loop"
+        },
+        {
+            "name": "sp_truck_tunnel_prisoners",
+            "type": "vehicle",
+            "initanimloop": "o_pro_04_01_takeout_vign_truck_truck_loop",
+            "deletewhenfinished": 1,
+            "model": "veh_t7_civ_truck_med_cargo_short_egypt",
+            "player": 1,
+            "playerstance": "stand",
+            "mainanim": "o_pro_04_01_takeout_vign_truck_truck_end",
+            "vmtype": "server",
+            "initanim": "o_pro_04_01_takeout_vign_truck_truck_start"
+        },
+        {
+            "name": "tunnel_vault_innerdoor_l",
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "model": "p7_eth_door_vault_lt",
+            "vmtype": "server",
+            "mainanim": "o_pro_04_01_takeout_vign_truck_prisoners_doorlt"
+        },
+        {
+            "playerstance": "stand",
+            "model": "p7_eth_door_vault_rt",
+            "name": "tunnel_vault_innerdoor_r",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "mainanim": "o_pro_04_01_takeout_vign_truck_prisoners_doorrt"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}

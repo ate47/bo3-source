@@ -1,0 +1,557 @@
+[
+    {
+        "3d_prompt_image": "t7_hud_prompt_beacon_64",
+        "3d_prompt_text": "SM_BEACON",
+        "3d_prompt_z_offset": 52,
+        "id": "sm_beacon_activate",
+        "minimap_icon": "t7_hud_minimap_beacon_key",
+        "objective_desc": "SM_OBJ_BEACON_ACTIVATE",
+        "waypoint_text": "SM_BEACON_CAPS"
+    },
+    {
+        "id": "sm_beacon_defend",
+        "minimap_icon": "t7_hud_minimap_beacon_key",
+        "objective_desc": "SM_OBJ_BEACON_DEFEND",
+        "waypoint_text": "SM_BEACON_CAPS"
+    },
+    {
+        "3d_prompt_image": "t7_hud_prompt_resource_64",
+        "3d_prompt_text": "SM_RESOURCE_STATION",
+        "3d_prompt_z_offset": 52,
+        "id": "sm_resource_station",
+        "minimap_icon": "t7_hud_minimap_resource"
+    },
+    {
+        "3d_prompt_image": "t7_hud_prompt_ammo_64",
+        "3d_prompt_text": "SM_RPL_AMMO_CACHE",
+        "3d_prompt_z_offset": 52,
+        "id": "sm_resource_ammo_cache",
+        "minimap_icon": "t7_hud_minimap_crate",
+        "resource_energy": 1
+    },
+    {
+        "3d_prompt_image": "t7_hud_prompt_ammo_64",
+        "3d_prompt_text": "SM_RPL_EXPLOSIVE_CACHE",
+        "3d_prompt_z_offset": 52,
+        "id": "sm_resource_explosives_cache",
+        "minimap_icon": "t7_hud_minimap_crate",
+        "resource_energy": 1
+    },
+    {
+        "3d_prompt_image": "t7_hud_prompt_ammo_64",
+        "3d_prompt_text": "SM_BARRICADE",
+        "3d_prompt_z_offset": 32,
+        "id": "sm_barricade"
+    },
+    {
+        "3d_prompt_image": "t7_hud_prompt_beacon_64",
+        "3d_prompt_text": "SM_UPLINK",
+        "3d_prompt_z_offset": 32,
+        "id": "sm_uplink"
+    },
+    {
+        "id": "sm_resource_turret_sentry",
+        "minimap_icon": "t7_hud_minimap_sentry"
+    },
+    {
+        "id": "sm_resource_turret_emp",
+        "minimap_icon": "t7_hud_minimap_guardian"
+    },
+    {
+        "id": "sm_resource_robot"
+    },
+    {
+        "id": "sm_resource_repair_robot"
+    },
+    {
+        "id": "sm_unobtainium_dropoff"
+    },
+    {
+        "3d_prompt_image": "t7_hud_prompt_unobtanium_64",
+        "3d_prompt_text": "SM_UNOBTAINIUM",
+        "3d_prompt_z_offset": 0,
+        "id": "sm_unobtainium_carry_a",
+        "minimap_icon": "t7_hud_waypoints_unob_a",
+        "objective_desc": "SM_EXTRACT_UNOBTAINIUM_OBJ",
+        "subobjective_desc": "SM_EXTRACT_UNOBTAINIUM_A"
+    },
+    {
+        "3d_prompt_image": "t7_hud_prompt_unobtanium_64",
+        "3d_prompt_text": "SM_UNOBTAINIUM",
+        "3d_prompt_z_offset": 0,
+        "id": "sm_unobtainium_carry_b",
+        "minimap_icon": "t7_hud_waypoints_unob_b",
+        "objective_desc": "SM_EXTRACT_UNOBTAINIUM_OBJ",
+        "subobjective_desc": "SM_EXTRACT_UNOBTAINIUM_B"
+    },
+    {
+        "3d_prompt_image": "t7_hud_prompt_unobtanium_64",
+        "3d_prompt_text": "SM_UNOBTAINIUM",
+        "3d_prompt_z_offset": 0,
+        "id": "sm_unobtainium_carry_c",
+        "minimap_icon": "t7_hud_waypoints_unob_c",
+        "objective_desc": "SM_EXTRACT_UNOBTAINIUM_OBJ",
+        "subobjective_desc": "SM_EXTRACT_UNOBTAINIUM_C"
+    },
+    {
+        "id": "module_kill_xy",
+        "objective_desc": "MODULE_OBJECTIVES_OBJ_KILL_XY"
+    },
+    {
+        "id": "module_value_example",
+        "objective_desc": "MODULE_OBJECTIVES_OBJ_VALUE"
+    },
+    {
+        "id": "module_skipto_1",
+        "objective_desc": "MODULE_OBJECTIVES_SKIPTO_1",
+        "show_distance": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_player_z_offset": 0,
+        "waypoint_z_offset": 0
+    },
+    {
+        "id": "module_skipto_2",
+        "objective_desc": "MODULE_OBJECTIVES_SKIPTO_2",
+        "show_distance": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_player_z_offset": 0,
+        "waypoint_z_offset": 0
+    },
+    {
+        "id": "module_skipto_3",
+        "objective_desc": "MODULE_OBJECTIVES_SKIPTO_3",
+        "show_distance": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_player_z_offset": 0,
+        "waypoint_z_offset": 0
+    },
+    {
+        "id": "module_skipto_4",
+        "objective_desc": "MODULE_OBJECTIVES_SKIPTO_4",
+        "show_distance": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_player_z_offset": 0,
+        "waypoint_z_offset": 0
+    },
+    {
+        "id": "module_skipto_4a",
+        "objective_desc": "MODULE_OBJECTIVES_SKIPTO_4A",
+        "show_distance": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_player_z_offset": 0,
+        "waypoint_z_offset": 0
+    },
+    {
+        "id": "module_skipto_4b",
+        "objective_desc": "MODULE_OBJECTIVES_SKIPTO_4B",
+        "show_distance": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_player_z_offset": 0,
+        "waypoint_z_offset": 0
+    },
+    {
+        "gametype": "dom",
+        "id": "dom_a",
+        "pulse_waypoint": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_neutral_new",
+        "waypoint_image_capture": "t7_hud_waypoints_capture_new_a",
+        "waypoint_image_defend": "t7_hud_waypoints_defend_new_a",
+        "waypoint_image_neutral": "t7_hud_waypoints_neutral_new_a",
+        "waypoint_label_capture": "MENU_WAYPOINT_CAPTURE",
+        "waypoint_label_capturing": "MENU_WAYPOINT_CAPTURING",
+        "waypoint_label_contested": "MENU_WAYPOINT_CONTESTED",
+        "waypoint_label_defend": "MENU_WAYPOINT_DEFEND",
+        "waypoint_label_losing": "MENU_WAYPOINT_LOSING",
+        "waypoint_label_neutralizing": "MENU_WAYPOINT_NEUTRALIZING",
+        "waypoint_text": "MENU_WAYPOINT_CAPTURE",
+        "waypoint_z_offset": 100
+    },
+    {
+        "gametype": "dom",
+        "id": "dom_b",
+        "pulse_waypoint": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_neutral_new",
+        "waypoint_image_capture": "t7_hud_waypoints_capture_new_b",
+        "waypoint_image_defend": "t7_hud_waypoints_defend_new_b",
+        "waypoint_image_neutral": "t7_hud_waypoints_neutral_new_b",
+        "waypoint_label_capture": "MENU_WAYPOINT_CAPTURE",
+        "waypoint_label_capturing": "MENU_WAYPOINT_CAPTURING",
+        "waypoint_label_contested": "MENU_WAYPOINT_CONTESTED",
+        "waypoint_label_defend": "MENU_WAYPOINT_DEFEND",
+        "waypoint_label_losing": "MENU_WAYPOINT_LOSING",
+        "waypoint_label_neutralizing": "MENU_WAYPOINT_NEUTRALIZING",
+        "waypoint_text": "MENU_WAYPOINT_CAPTURE",
+        "waypoint_z_offset": 100
+    },
+    {
+        "gametype": "dom",
+        "id": "dom_c",
+        "pulse_waypoint": "enable",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_neutral_new",
+        "waypoint_image_capture": "t7_hud_waypoints_capture_new_c",
+        "waypoint_image_defend": "t7_hud_waypoints_defend_new_c",
+        "waypoint_image_neutral": "t7_hud_waypoints_neutral_new_c",
+        "waypoint_label_capture": "MENU_WAYPOINT_CAPTURE",
+        "waypoint_label_capturing": "MENU_WAYPOINT_CAPTURING",
+        "waypoint_label_contested": "MENU_WAYPOINT_CONTESTED",
+        "waypoint_label_defend": "MENU_WAYPOINT_DEFEND",
+        "waypoint_label_losing": "MENU_WAYPOINT_LOSING",
+        "waypoint_label_neutralizing": "MENU_WAYPOINT_NEUTRALIZING",
+        "waypoint_text": "MENU_WAYPOINT_CAPTURE",
+        "waypoint_z_offset": 100
+    },
+    {
+        "gametype": "koth",
+        "id": "hardpoint",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_neutral_koth",
+        "waypoint_image_capture": "t7_hud_waypoints_neutral_koth",
+        "waypoint_image_defend": "t7_hud_waypoints_neutral_koth",
+        "waypoint_image_neutral": "t7_hud_waypoints_neutral_koth",
+        "waypoint_label_capture": "MENU_WAYPOINT_CAPTURE",
+        "waypoint_label_contested": "MENU_WAYPOINT_CONTESTED",
+        "waypoint_label_defend": "MENU_WAYPOINT_DEFEND",
+        "waypoint_text": "MENU_WAYPOINT_CAPTURE",
+        "waypoint_z_offset": 0
+    },
+    {
+        "gametype": "ball",
+        "id": "ball_goal_allies",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_uplink_uplink",
+        "waypoint_text": "OBJECTIVES_BALL_GOAL_FRIENDLY",
+        "waypoint_text_enemy": "OBJECTIVES_BALL_GOAL_ENEMY",
+        "waypoint_z_offset": 64
+    },
+    {
+        "gametype": "ball",
+        "id": "ball_goal_axis",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_uplink_uplink",
+        "waypoint_text": "OBJECTIVES_BALL_GOAL_FRIENDLY",
+        "waypoint_text_enemy": "OBJECTIVES_BALL_GOAL_ENEMY",
+        "waypoint_z_offset": 64
+    },
+    {
+        "gametype": "ball",
+        "id": "ball_ball",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_uplink_grab",
+        "waypoint_image_download": "t7_hud_waypoints_uplink_grab",
+        "waypoint_image_escort": "t7_hud_waypoints_uplink_grab",
+        "waypoint_image_grab": "t7_hud_waypoints_uplink_grab",
+        "waypoint_image_kill": "t7_hud_waypoints_uplink_grab",
+        "waypoint_image_upload": "t7_hud_waypoints_uplink_grab",
+        "waypoint_label_download": "OBJECTIVES_BALL_DOWNLOAD",
+        "waypoint_label_escort": "OBJECTIVES_BALL_ESCORT",
+        "waypoint_label_grab": "OBJECTIVES_BALL_GRAB",
+        "waypoint_label_kill": "OBJECTIVES_BALL_KILL",
+        "waypoint_label_upload": "OBJECTIVES_BALL_UPLOAD",
+        "waypoint_player_z_offset": 75,
+        "waypoint_text": "MENU_WAYPOINT_GRAB",
+        "waypoint_z_offset": 10
+    },
+    {
+        "gametype": "clean",
+        "id": "clean_deposit",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_stockpile",
+        "waypoint_image_map": "t7_hud_waypoints_stockpile_mini",
+        "waypoint_text": "OBJECTIVES_CLEAN_DEPOSIT",
+        "waypoint_text_depositing": "OBJECTIVES_CLEAN_DEPOSITING",
+        "waypoint_z_offset": 72
+    },
+    {
+        "carry_count_l": 7,
+        "carry_count_m": 4,
+        "gametype": "clean",
+        "id": "clean_carry",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image_l": "t7_hud_stockpile_overhead_neutral_large",
+        "waypoint_image_m": "t7_hud_stockpile_overhead_neutral_medium",
+        "waypoint_image_s": "t7_hud_stockpile_overhead_neutral_small",
+        "waypoint_text": "MPUI_EMPTY",
+        "waypoint_z_offset": 72
+    },
+    {
+        "gametype": "escort",
+        "id": "escort_robot",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_safeguard_robot",
+        "waypoint_image_map": "t7_hud_waypoints_safeguard_robot_minimap",
+        "waypoint_image_shutdown": "t7_hud_waypoints_safeguard_destroyv2",
+        "waypoint_text": "OBJECTIVES_ESCORT_ROBOT_ESCORT",
+        "waypoint_text_enemy": "OBJECTIVES_ESCORT_ROBOT_ATTACK",
+        "waypoint_text_escorting": "OBJECTIVES_ESCORT_ROBOT_ESCORTING",
+        "waypoint_text_shutdown": "OBJECTIVES_ESCORT_ROBOT_SHUTDOWN",
+        "waypoint_z_offset": 72
+    },
+    {
+        "gametype": "escort",
+        "id": "escort_goal",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_safeguard_location",
+        "waypoint_image_map": "t7_hud_waypoints_safeguard_location_minimap",
+        "waypoint_text": "OBJECTIVES_ESCORT_GOAL_DEFEND",
+        "waypoint_text_enemy": "OBJECTIVES_ESCORT_GOAL_ATTACK",
+        "waypoint_z_offset": 100
+    },
+    {
+        "gametype": "ctf",
+        "id": "allies_base",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_capture_new_flag",
+        "waypoint_text": "MENU_WAYPOINT_GRAB",
+        "waypoint_z_offset": 100
+    },
+    {
+        "gametype": "ctf",
+        "id": "axis_base",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_capture_new_flag",
+        "waypoint_text": "MENU_WAYPOINT_GRAB",
+        "waypoint_z_offset": 100
+    },
+    {
+        "gametype": "ctf",
+        "id": "allies_flag",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_capture_new_flag",
+        "waypoint_image_defend": "t7_hud_waypoints_defend_new_flag",
+        "waypoint_image_grab": "t7_hud_waypoints_capture_new_flag",
+        "waypoint_label_defend": "MENU_WAYPOINT_DEFEND",
+        "waypoint_label_escort": "MENU_WAYPOINT_ESCORT",
+        "waypoint_label_grab": "MENU_WAYPOINT_GRAB",
+        "waypoint_label_kill": "MENU_WAYPOINT_KILL",
+        "waypoint_label_return": "MENU_WAYPOINT_RETURN",
+        "waypoint_player_z_offset": 75,
+        "waypoint_text": "MENU_WAYPOINT_GRAB",
+        "waypoint_z_offset": 100
+    },
+    {
+        "gametype": "ctf",
+        "id": "axis_flag",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_capture_new_flag",
+        "waypoint_image_defend": "t7_hud_waypoints_defend_new_flag",
+        "waypoint_image_grab": "t7_hud_waypoints_capture_new_flag",
+        "waypoint_label_defend": "MENU_WAYPOINT_DEFEND",
+        "waypoint_label_escort": "MENU_WAYPOINT_ESCORT",
+        "waypoint_label_grab": "MENU_WAYPOINT_GRAB",
+        "waypoint_label_kill": "MENU_WAYPOINT_KILL",
+        "waypoint_label_return": "MENU_WAYPOINT_RETURN",
+        "waypoint_player_z_offset": 75,
+        "waypoint_text": "MENU_WAYPOINT_GRAB",
+        "waypoint_z_offset": 100
+    },
+    {
+        "gametype": "dem",
+        "id": "dem_a",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_neutral_new",
+        "waypoint_image_defend": "t7_hud_waypoints_defend_new_a",
+        "waypoint_image_defuse": "t7_hud_waypoints_capture_new_a",
+        "waypoint_image_target": "t7_hud_waypoints_capture_new_a",
+        "waypoint_label_defend": "MENU_WAYPOINT_DEFEND",
+        "waypoint_label_defuse": "MENU_WAYPOINT_DEFUSE",
+        "waypoint_label_target": "MENU_WAYPOINT_TARGET",
+        "waypoint_text": "MENU_WAYPOINT_TARGET",
+        "waypoint_z_offset": 64
+    },
+    {
+        "gametype": "dem",
+        "id": "dem_b",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_neutral_new",
+        "waypoint_image_defend": "t7_hud_waypoints_defend_new_b",
+        "waypoint_image_defuse": "t7_hud_waypoints_capture_new_b",
+        "waypoint_image_target": "t7_hud_waypoints_capture_new_b",
+        "waypoint_label_defend": "MENU_WAYPOINT_DEFEND",
+        "waypoint_label_defuse": "MENU_WAYPOINT_DEFUSE",
+        "waypoint_label_target": "MENU_WAYPOINT_TARGET",
+        "waypoint_text": "MENU_WAYPOINT_TARGET",
+        "waypoint_z_offset": 64
+    },
+    {
+        "id": "headicon_dead",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "headicon_dead",
+        "waypoint_z_offset": 64
+    },
+    {
+        "gametype": "sd",
+        "id": "sd_a",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_neutral_new",
+        "waypoint_image_defend": "t7_hud_waypoints_defend_new_a",
+        "waypoint_image_defuse": "t7_hud_waypoints_capture_new_a",
+        "waypoint_image_target": "t7_hud_waypoints_capture_new_a",
+        "waypoint_label_defend": "MENU_WAYPOINT_DEFEND",
+        "waypoint_label_defuse": "MENU_WAYPOINT_DEFUSE",
+        "waypoint_label_target": "MENU_WAYPOINT_TARGET",
+        "waypoint_text": "MENU_WAYPOINT_TARGET",
+        "waypoint_z_offset": 64
+    },
+    {
+        "gametype": "sd",
+        "id": "sd_b",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_neutral_new",
+        "waypoint_image_defend": "t7_hud_waypoints_defend_new_b",
+        "waypoint_image_defuse": "t7_hud_waypoints_capture_new_b",
+        "waypoint_image_target": "t7_hud_waypoints_capture_new_b",
+        "waypoint_label_defend": "MENU_WAYPOINT_DEFEND",
+        "waypoint_label_defuse": "MENU_WAYPOINT_DEFUSE",
+        "waypoint_label_target": "MENU_WAYPOINT_TARGET",
+        "waypoint_text": "MENU_WAYPOINT_TARGET",
+        "waypoint_z_offset": 64
+    },
+    {
+        "gametype": "sd",
+        "id": "sd_defuse_a",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_neutral_new",
+        "waypoint_image_defend": "t7_hud_waypoints_defend_new_a",
+        "waypoint_image_defuse": "t7_hud_waypoints_capture_new_a",
+        "waypoint_image_target": "t7_hud_waypoints_capture_new_a",
+        "waypoint_label_defend": "MENU_WAYPOINT_DEFEND",
+        "waypoint_label_defuse": "MENU_WAYPOINT_DEFUSE",
+        "waypoint_label_target": "MENU_WAYPOINT_TARGET",
+        "waypoint_text": "MENU_WAYPOINT_TARGET",
+        "waypoint_z_offset": 64
+    },
+    {
+        "gametype": "sd",
+        "id": "sd_defuse_b",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_neutral_new",
+        "waypoint_image_defend": "t7_hud_waypoints_defend_new_b",
+        "waypoint_image_defuse": "t7_hud_waypoints_capture_new_b",
+        "waypoint_image_target": "t7_hud_waypoints_capture_new_b",
+        "waypoint_label_defend": "MENU_WAYPOINT_DEFEND",
+        "waypoint_label_defuse": "MENU_WAYPOINT_DEFUSE",
+        "waypoint_label_target": "MENU_WAYPOINT_TARGET",
+        "waypoint_text": "MENU_WAYPOINT_TARGET",
+        "waypoint_z_offset": 32
+    },
+    {
+        "gametype": "sd",
+        "id": "sd_bomb",
+        "waypoint_clamp": "enable",
+        "waypoint_fade_when_targeted": "enable",
+        "waypoint_image": "t7_hud_waypoints_bomb_new",
+        "waypoint_image_bomb": "t7_hud_waypoints_bomb_new",
+        "waypoint_image_defend": "t7_hud_waypoints_bomb_new",
+        "waypoint_label_bomb": "MENU_WAYPOINT_BOMB",
+        "waypoint_label_defend": "MENU_WAYPOINT_DEFEND",
+        "waypoint_player_z_offset": 75,
+        "waypoint_text": "MENU_WAYPOINT_TARGET",
+        "waypoint_z_offset": 32
+    },
+    {
+        "id": "robot_name_1",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 70,
+        "waypoint_text": "OBJECTIVES_COOP_ROBOT1_NAME",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "robot_name_2",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 70,
+        "waypoint_text": "OBJECTIVES_COOP_ROBOT2_NAME",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "robot_name_3",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 70,
+        "waypoint_text": "OBJECTIVES_COOP_ROBOT3_NAME",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "robot_name_4",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 70,
+        "waypoint_text": "OBJECTIVES_COOP_ROBOT4_NAME",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "robot_name_5",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 70,
+        "waypoint_text": "OBJECTIVES_COOP_ROBOT5_NAME",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "robot_name_6",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 70,
+        "waypoint_text": "OBJECTIVES_COOP_ROBOT6_NAME",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "robot_name_7",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 70,
+        "waypoint_text": "OBJECTIVES_COOP_ROBOT7_NAME",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "robot_name_8",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 70,
+        "waypoint_text": "OBJECTIVES_COOP_ROBOT8_NAME",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "robot_name_9",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 70,
+        "waypoint_text": "OBJECTIVES_COOP_ROBOT9_NAME",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "robot_name_10",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 70,
+        "waypoint_text": "OBJECTIVES_COOP_ROBOT10_NAME",
+        "waypoint_z_offset": 70
+    },
+    {
+        "id": "robot_name_11",
+        "waypoint_clamp": "enable",
+        "waypoint_player_z_offset": 70,
+        "waypoint_text": "OBJECTIVES_COOP_ROBOT11_NAME",
+        "waypoint_z_offset": 70
+    }
+]

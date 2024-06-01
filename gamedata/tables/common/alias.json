@@ -1,0 +1,78 @@
+[
+    {
+        "name": "game_types",
+        "path": "gamedata/tables/common/game_types.json"
+    },
+    {
+        "name": "mod_game_types",
+        "path": "gamedata/tables/common/mod_game_types.json"
+    },
+    {
+        "name": "maps",
+        "path": "gamedata/tables/common/maps.json"
+    },
+    {
+        "name": "chunks",
+        "path": "gamedata/tables/common/chunks.json"
+    },
+    {
+        "name": "comscore",
+        "path": "gamedata/tables/common/comscore.json"
+    },
+    {
+        "name": "marketing",
+        "path": "gamedata/tables/common/marketing.json"
+    },
+    {
+        "name": "presence",
+        "path": "gamedata/tables/common/presence.json"
+    },
+    {
+        "name": "objectives",
+        "path": "gamedata/tables/common/objectives.json"
+    },
+    {
+        "name": "mp_spawn_influencers",
+        "path": "gamedata/tables/mp/mp_spawn_influencers.json"
+    },
+    {
+        "name": "mp_spawn_influencers_override",
+        "path": "gamedata/tables/mp/mp_spawn_influencers_override.json"
+    },
+    {
+        "name": "cp_spawn_influencers",
+        "path": "gamedata/tables/cp/cp_spawn_influencers.json"
+    },
+    {
+        "name": "cp_spawn_influencers_override",
+        "path": "gamedata/tables/cp/cp_spawn_influencers_override.json"
+    },
+    {
+        "name": "arena_levels",
+        "path": "gamedata/tables/common/arena_levels.json"
+    },
+    {
+        "name": "mp_codcaster_color_list",
+        "path": "gamedata/tables/mp/mp_codcaster_color_list.json"
+    },
+    {
+        "name": "mp_codcaster_logo_list",
+        "path": "gamedata/tables/mp/mp_codcaster_logo_list.json"
+    },
+    {
+        "name": "events",
+        "path": "gamedata/events/events.json"
+    },
+    {
+        "name": "events_orbis",
+        "path": "gamedata/events/events.json"
+    },
+    {
+        "name": "events_durango",
+        "path": "gamedata/events/events.json"
+    },
+    {
+        "name": "events_pc",
+        "path": "gamedata/events/events.json"
+    }
+]

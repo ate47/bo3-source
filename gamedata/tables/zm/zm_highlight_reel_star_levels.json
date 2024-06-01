@@ -1,0 +1,47 @@
+[
+    {
+        "id": 0,
+        "minimum_score": 0,
+        "star_level": "1.0"
+    },
+    {
+        "id": 1,
+        "minimum_score": 15,
+        "star_level": "1.5"
+    },
+    {
+        "id": 2,
+        "minimum_score": 30,
+        "star_level": "2.0"
+    },
+    {
+        "id": 3,
+        "minimum_score": 45,
+        "star_level": "2.5"
+    },
+    {
+        "id": 4,
+        "minimum_score": 60,
+        "star_level": "3.0"
+    },
+    {
+        "id": 5,
+        "minimum_score": 90,
+        "star_level": "3.5"
+    },
+    {
+        "id": 6,
+        "minimum_score": 140,
+        "star_level": "4.0"
+    },
+    {
+        "id": 7,
+        "minimum_score": 300,
+        "star_level": "4.5"
+    },
+    {
+        "id": 8,
+        "minimum_score": 500,
+        "star_level": "5.0"
+    }
+]

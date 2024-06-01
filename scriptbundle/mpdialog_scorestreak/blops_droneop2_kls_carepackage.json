@@ -1,0 +1,9 @@
+{
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "wavestartfinal": "leave",
+    "name": "blops_droneop2_kls_carepackage",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_bdo2_kls_pkg_",
+    "igdtseqnum": 141
+}

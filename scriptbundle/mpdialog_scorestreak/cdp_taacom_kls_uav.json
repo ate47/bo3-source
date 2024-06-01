@@ -1,0 +1,14 @@
+{
+    "hacked": "hacked",
+    "ready": "ready",
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "destroyed": "destroyed",
+    "name": "cdp_taacom_kls_uav",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_tacc_kls_uav_",
+    "firewallhacked": "hacked_fw",
+    "beinghacked": "being_hacked",
+    "firewallbeinghacked": "being_hacked_fw",
+    "igdtseqnum": 114
+}

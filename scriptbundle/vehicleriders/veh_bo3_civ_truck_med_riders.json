@@ -1,0 +1,51 @@
+{
+    "highexitlandheight": 32,
+    "model": "veh_t7_civ_truck_med_cargo",
+    "lowexitheight": 32,
+    "dropspeed": 250,
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "name": "veh_bo3_civ_truck_med_riders",
+    "type": "vehicleriders",
+    "igdtseqnum": 10,
+    "objects": [
+        {
+            "enteranim": "ai_crew_pickup_54i_driver_enter",
+            "vehicleenteranim": "v_crew_pickup_54i_driver_enter_door",
+            "exitgroundanim": "ai_crew_truck_flat_longbed_driver_exit",
+            "vehicleexitanim": "v_crew_truck_flat_longbed_driver_exit_door",
+            "rideanim": "ai_crew_truck_flat_longbed_driver_idle",
+            "position": "driver",
+            "aligntag": "tag_driver"
+        },
+        {
+            "vehicleenteranim": "v_crew_pickup_54i_passenger_enter_door",
+            "exitgroundanim": "ai_crew_truck_flat_longbed_passenger_exit",
+            "rideanim": "ai_crew_truck_flat_longbed_passenger_idle",
+            "enteranim": "ai_crew_pickup_54i_passenger_enter",
+            "position": "passenger1",
+            "aligntag": "tag_rider",
+            "vehicleexitanim": "v_crew_truck_flat_longbed_passenger_exit_door"
+        },
+        {
+            "exitgroundanim": "ai_crew_truck_flat_longbed_passenger_exit",
+            "rideanim": "ai_crew_truck_flat_longbed_passenger_idle",
+            "vehicleexitanim": "v_crew_truck_flat_longbed_passenger_exit_door",
+            "position": "crew1",
+            "aligntag": "tag_passenger"
+        },
+        {
+            "exitgroundanim": "bo3_ai_crew_cougar_guy1_exit",
+            "rideanim": "bo3_ai_crew_cougar_guy1_idle",
+            "position": "crew2",
+            "aligntag": "tag_passenger"
+        },
+        {
+            "ridedeathanim": "ai_crew_pickup_54i_turret_dth_1",
+            "enteranim": "ai_crew_pickup_54i_turret_enter",
+            "exitgroundanim": "ai_crew_pickup_54i_turret_exit",
+            "position": "gunner1",
+            "aligntag": "tag_gunner1"
+        }
+    ]
+}

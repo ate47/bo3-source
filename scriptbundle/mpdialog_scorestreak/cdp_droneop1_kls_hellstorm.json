@@ -1,0 +1,13 @@
+{
+    "kill1": "kill_1",
+    "kill2": "kill_2",
+    "kill3": "kill_3",
+    "vmtype": "both",
+    "killmultiple": "kill_multiple",
+    "configstringfiletype": "scriptbundle",
+    "name": "cdp_droneop1_kls_hellstorm",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_cdo1_kls_hellstorm_",
+    "killnone": "kill_none",
+    "igdtseqnum": 150
+}

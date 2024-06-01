@@ -1,0 +1,11 @@
+{
+    "vmtype": "both",
+    "configstringfiletype": "scriptbundle",
+    "kill": "confirm_hit",
+    "name": "cdp_droneop2_kls_agr",
+    "type": "mpdialog_scorestreak",
+    "voiceprefix": "vox_cdo2_kls_agr_",
+    "timeout": "timeout",
+    "igdtseqnum": 127,
+    "damaged": "taking_damage"
+}

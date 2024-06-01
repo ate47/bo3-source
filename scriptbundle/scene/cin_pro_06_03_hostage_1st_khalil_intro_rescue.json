@@ -1,0 +1,276 @@
+{
+    "scenetype": "scene",
+    "vmtype": "server",
+    "aligntarget": "tag_align_securityroom",
+    "configstringfiletype": "scriptbundle",
+    "devstate": "placeholder",
+    "nextscenemode": "init",
+    "name": "cin_pro_06_03_hostage_1st_khalil_intro_rescue",
+    "type": "scene",
+    "igdtseqnum": 249,
+    "objects": [
+        {
+            "model": "spawner_ally_hero_hendricks_prologue",
+            "player": 1,
+            "vmtype": "server",
+            "endanimloop": "ch_pro_06_03_hostage_1st_khalil_intro_hendricks_exitdoor_idl",
+            "mainanim": "ch_pro_06_03_hostage_1st_khalil_intro_hendricks_rescue",
+            "playerstance": "stand",
+            "name": "hendricks",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "removeweapon": 1,
+            "vmtype": "server",
+            "model": "c_hro_salim_base",
+            "mainanim": "ch_pro_06_03_hostage_1st_khalil_intro_minister_rescue",
+            "endanimloop": "ch_pro_06_03_hostage_1st_khalil_intro_minister_exitdoor_idl",
+            "playerstance": "stand",
+            "name": "minister",
+            "type": "actor"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "spawnoninit": 1,
+            "mainanim": "o_pro_06_03_hostage_1st_khalil_intro_door_rescue",
+            "firstframe": 1,
+            "model": "p7_door_metal_detention_lt",
+            "name": "khalil_door",
+            "type": "prop"
+        },
+        {
+            "name": "khalil",
+            "type": "actor",
+            "vmtype": "server",
+            "model": "spawner_ally_hero_khalil_prologue",
+            "endanimloop": "ch_pro_06_03_hostage_1st_khalil_intro_khalil_exitdoor_idl",
+            "playerstance": "stand",
+            "mainanim": "ch_pro_06_03_hostage_1st_khalil_intro_khalil_rescue",
+            "removeweapon": 1,
+            "spawnoninit": 1,
+            "firstframe": 1,
+            "player": 1
+        },
+        {
+            "type": "prop",
+            "firstframe": 1,
+            "model": "p7_chair_folding",
+            "mainanim": "o_pro_06_03_hostage_1st_khalil_intro_chair_rescue",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "takedamage": 1,
+            "name": "new object 6",
+            "type": "prop",
+            "firstframe": 1,
+            "spawnoninit": 1,
+            "mainanim": "ch_pro_06_03_hostage_1st_khalil_intro_alarm",
+            "model": "tag_origin_animate",
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "name": "new object 7",
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "firstframe": 1,
+            "mainanim": "o_pro_06_03_hostage_1st_khalil_intro_knife_rescue",
+            "spawnoninit": 1,
+            "player": 1,
+            "vmtype": "server",
+            "model": "wpn_t7_knife_combat_prop"
+        },
+        {
+            "name": "new object 8",
+            "type": "prop",
+            "model": "p7_rope_hanging_restraint",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "o_pro_06_03_hostage_1st_khalil_intro_rope_rescue",
+            "firstframe": 1,
+            "player": 1,
+            "vmtype": "server",
+            "spawnoninit": 1
+        },
+        {
+            "name": "new object 8(copy)",
+            "type": "prop",
+            "spawnoninit": 1,
+            "model": "p7_rope_hanging_mount_metal",
+            "player": 1,
+            "playerstance": "stand",
+            "takedamage": 1,
+            "mainanim": "o_pro_06_03_hostage_1st_khalil_intro_rope_rescue",
+            "vmtype": "server",
+            "firstframe": 1
+        },
+        {
+            "spawnoninit": 1,
+            "takedamage": 1,
+            "name": "new object 8",
+            "type": "prop",
+            "firstframe": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "model": "p7_rope_hanging_knot",
+            "vmtype": "server",
+            "mainanim": "o_pro_06_03_hostage_1st_khalil_intro_rope_rescue"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop",
+            "takedamage": 1
+        },
+        {
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "type": "prop"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1,
+            "type": "prop",
+            "playerstance": "stand"
+        },
+        {
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop"
+        },
+        {
+            "type": "prop",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "takedamage": 1,
+            "vmtype": "server",
+            "playerstance": "stand"
+        },
+        {
+            "type": "prop",
+            "player": 1,
+            "playerstance": "stand",
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "player": 1,
+            "type": "prop",
+            "vmtype": "server",
+            "playerstance": "stand",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "player": 1,
+            "vmtype": "server",
+            "takedamage": 1
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "playerstance": "stand",
+            "takedamage": 1,
+            "type": "prop",
+            "player": 1,
+            "vmtype": "server"
+        },
+        {
+            "type": "prop",
+            "playerstance": "stand",
+            "takedamage": 1,
+            "player": 1,
+            "vmtype": "server"
+        }
+    ]
+}
