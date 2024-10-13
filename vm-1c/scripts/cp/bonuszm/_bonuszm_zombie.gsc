@@ -24,30 +24,30 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/ai_shared;
 
-#namespace namespace_9c39c8b3;
+#namespace _bonuszm_zombie;
 
-// Namespace namespace_9c39c8b3
+// Namespace _bonuszm_zombie
 // Params 0, eflags: 0x2
 // Checksum 0x22a25000, Offset: 0x598
 // Size: 0x9c
 function autoexec init() {
-    behaviortreenetworkutility::registerbehaviortreescriptapi("bonuszmZombieTraversalDoesAnimationExist", &function_6de9fa37);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("bonuszmZombieTraversalDoesAnimationExist", &bonuszmZombieTraversalDoesAnimationExist);
     behaviortreenetworkutility::registerbehaviortreeaction("bonuszmSpecialTraverseAction", &function_88e9d5da, undefined, &function_dd1fc89b);
     animationstatenetwork::registeranimationmocomp("mocomp_bonuszm_special_traversal", &function_26c42b09, undefined, &function_47268b78);
 }
 
-// Namespace namespace_9c39c8b3
+// Namespace _bonuszm_zombie
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7944fe09, Offset: 0x640
 // Size: 0x316
-function private function_6de9fa37(entity) {
+function private bonuszmZombieTraversalDoesAnimationExist(entity) {
     assert(isdefined(entity.traversestartnode));
     var_f6b30806 = isdefined(entity.traverseendnode) && (isdefined(entity.traversestartnode) && entity.traversestartnode.script_noteworthy === "custom_traversal" || entity.traverseendnode.script_noteworthy === "custom_traversal");
     if (var_f6b30806) {
         if (isdefined(entity.traversestartnode) && !issubstr(entity.traversestartnode.animscript, "human")) {
             /#
                 if (isdefined(entity.traversestartnode.animscript)) {
-                    iprintln("animation" + entity.traversestartnode.animscript);
+                    iprintln("<dev string:x28>" + entity.traversestartnode.animscript);
                 }
             #/
             return false;
@@ -55,7 +55,7 @@ function private function_6de9fa37(entity) {
         if (isdefined(entity.traverseendnode) && !issubstr(entity.traversestartnode.animscript, "human")) {
             /#
                 if (isdefined(entity.traversestartnode.animscript)) {
-                    iprintln("animation" + entity.traversestartnode.animscript);
+                    iprintln("<dev string:x28>" + entity.traversestartnode.animscript);
                 }
             #/
             return false;
@@ -73,13 +73,13 @@ function private function_6de9fa37(entity) {
     }
     /#
         if (isdefined(entity.traversestartnode.animscript)) {
-            iprintln("animation" + entity.traversestartnode.animscript);
+            iprintln("<dev string:x28>" + entity.traversestartnode.animscript);
         }
     #/
     return false;
 }
 
-// Namespace namespace_9c39c8b3
+// Namespace _bonuszm_zombie
 // Params 2, eflags: 0x5 linked
 // Checksum 0xf705e76, Offset: 0x960
 // Size: 0x80
@@ -91,7 +91,7 @@ function private function_88e9d5da(entity, asmstatename) {
     return 5;
 }
 
-// Namespace namespace_9c39c8b3
+// Namespace _bonuszm_zombie
 // Params 2, eflags: 0x5 linked
 // Checksum 0x7f09f25d, Offset: 0x9e8
 // Size: 0x68
@@ -102,7 +102,7 @@ function private function_dd1fc89b(entity, asmstatename) {
     return 4;
 }
 
-// Namespace namespace_9c39c8b3
+// Namespace _bonuszm_zombie
 // Params 5, eflags: 0x5 linked
 // Checksum 0xc47bc402, Offset: 0xa58
 // Size: 0x1d0
@@ -127,7 +127,7 @@ function private function_26c42b09(entity, mocompanim, mocompanimblendouttime, m
     entity.blockingpain = 1;
 }
 
-// Namespace namespace_9c39c8b3
+// Namespace _bonuszm_zombie
 // Params 5, eflags: 0x5 linked
 // Checksum 0x22257f19, Offset: 0xc30
 // Size: 0xbc

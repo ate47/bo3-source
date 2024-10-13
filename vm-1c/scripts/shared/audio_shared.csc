@@ -168,7 +168,7 @@ function snd_snapshot_init() {
 // Checksum 0xf6e0d08a, Offset: 0x1298
 // Size: 0x34
 function function_23cf79ea() {
-    level endon(#"hash_76eb38a5");
+    level endon(#"sndOnOverride");
     level util::waittill_any_timeout(20, "sndOn", "sndOnOverride");
 }
 
@@ -178,7 +178,7 @@ function function_23cf79ea() {
 // Size: 0x52
 function snd_set_snapshot(state) {
     level._sndnextsnapshot = state;
-    println("sndFoleyContext" + state + "sndFoleyContext");
+    println("<dev string:x28>" + state + "<dev string:x44>");
     level notify(#"new_bus");
 }
 
@@ -223,12 +223,12 @@ function soundrandom_thread(localclientnum, randsound) {
     randsound.playing = 1;
     level thread soundrandom_notifywait(notify_name, randsound);
     while (true) {
-        wait(randomfloatrange(randsound.script_wait_min, randsound.script_wait_max));
+        wait randomfloatrange(randsound.script_wait_min, randsound.script_wait_max);
         if (isdefined(randsound.playing) && isdefined(randsound.script_sound) && randsound.playing) {
             playsound(localclientnum, randsound.script_sound, randsound.origin);
         }
         /#
-            if (getdvarint("sndFoleyContext") > 0) {
+            if (getdvarint("<dev string:x46>") > 0) {
                 print3d(randsound.origin, randsound.script_sound, (0, 0.8, 0), 1, 3, 45);
             }
         #/
@@ -372,22 +372,22 @@ function startsoundloops() {
     if (isdefined(loopers) && loopers.size > 0) {
         delay = 0;
         /#
-            if (getdvarint("sndFoleyContext") > 0) {
-                println("sndFoleyContext" + loopers.size + "sndFoleyContext");
+            if (getdvarint("<dev string:x46>") > 0) {
+                println("<dev string:x52>" + loopers.size + "<dev string:x7d>");
             }
         #/
         for (i = 0; i < loopers.size; i++) {
             loopers[i] thread soundloopthink();
             delay += 1;
             if (delay % 20 == 0) {
-                wait(0.016);
+                wait 0.016;
             }
         }
         return;
     }
     /#
-        if (getdvarint("sndFoleyContext") > 0) {
-            println("sndFoleyContext");
+        if (getdvarint("<dev string:x46>") > 0) {
+            println("<dev string:x88>");
         }
     #/
 }
@@ -401,22 +401,22 @@ function startlineemitters() {
     if (isdefined(lineemitters) && lineemitters.size > 0) {
         delay = 0;
         /#
-            if (getdvarint("sndFoleyContext") > 0) {
-                println("sndFoleyContext" + lineemitters.size + "sndFoleyContext");
+            if (getdvarint("<dev string:x46>") > 0) {
+                println("<dev string:xa7>" + lineemitters.size + "<dev string:x7d>");
             }
         #/
         for (i = 0; i < lineemitters.size; i++) {
             lineemitters[i] thread soundlinethink();
             delay += 1;
             if (delay % 20 == 0) {
-                wait(0.016);
+                wait 0.016;
             }
         }
         return;
     }
     /#
-        if (getdvarint("sndFoleyContext") > 0) {
-            println("sndFoleyContext");
+        if (getdvarint("<dev string:x46>") > 0) {
+            println("<dev string:xd8>");
         }
     #/
 }
@@ -428,13 +428,13 @@ function startlineemitters() {
 function startrattles() {
     rattles = struct::get_array("sound_rattle", "script_label");
     if (isdefined(rattles)) {
-        println("sndFoleyContext" + rattles.size + "sndFoleyContext");
+        println("<dev string:xfd>" + rattles.size + "<dev string:x104>");
         delay = 0;
         for (i = 0; i < rattles.size; i++) {
             soundrattlesetup(rattles[i].script_sound, rattles[i].origin);
             delay += 1;
             if (delay % 20 == 0) {
-                wait(0.016);
+                wait 0.016;
             }
         }
     }
@@ -449,9 +449,9 @@ function init_audio_triggers(localclientnum) {
     steptrigs = getentarray(localclientnum, "audio_step_trigger", "targetname");
     materialtrigs = getentarray(localclientnum, "audio_material_trigger", "targetname");
     /#
-        if (getdvarint("sndFoleyContext") > 0) {
-            println("sndFoleyContext" + steptrigs.size + "sndFoleyContext");
-            println("sndFoleyContext" + materialtrigs.size + "sndFoleyContext");
+        if (getdvarint("<dev string:x46>") > 0) {
+            println("<dev string:x10d>" + steptrigs.size + "<dev string:x117>");
+            println("<dev string:x10d>" + materialtrigs.size + "<dev string:x12d>");
         }
     #/
     array::thread_all(steptrigs, &audio_step_trigger, localclientnum);
@@ -554,7 +554,7 @@ function trig_leave_audio_step_trigger(trigplayer) {
         trigplayer.insteptrigger -= 1;
     }
     if (trigplayer.insteptrigger < 0) {
-        println("sndFoleyContext");
+        println("<dev string:x147>");
         trigplayer.insteptrigger = 0;
     }
     if (trigplayer.insteptrigger == 0) {
@@ -637,7 +637,7 @@ function mantle_wait(alias, localclientnum) {
 // Checksum 0x3b71de64, Offset: 0x2950
 // Size: 0x20
 function trig_leave_bump(ent) {
-    wait(1);
+    wait 1;
     ent notify(#"left_mantle");
 }
 
@@ -733,8 +733,8 @@ function snd_play_auto_fx(fxid, alias, offsetx, offsety, offsetz, onground, area
     // Checksum 0x4d2d743b, Offset: 0x2e20
     // Size: 0x6c
     function snd_print_fx_id(fxid, type, ent) {
-        if (getdvarint("sndFoleyContext") > 0) {
-            println("sndFoleyContext" + fxid + "sndFoleyContext" + type);
+        if (getdvarint("<dev string:x46>") > 0) {
+            println("<dev string:x18e>" + fxid + "<dev string:x1a0>" + type);
         }
     }
 
@@ -747,13 +747,13 @@ function snd_play_auto_fx(fxid, alias, offsetx, offsety, offsetz, onground, area
 function debug_line_emitter() {
     while (true) {
         /#
-            if (getdvarint("sndFoleyContext") > 0) {
+            if (getdvarint("<dev string:x46>") > 0) {
                 line(self.start, self.end, (0, 1, 0));
-                print3d(self.start, "sndFoleyContext", (0, 0.8, 0), 1, 3, 1);
-                print3d(self.end, "sndFoleyContext", (0, 0.8, 0), 1, 3, 1);
+                print3d(self.start, "<dev string:x1aa>", (0, 0.8, 0), 1, 3, 1);
+                print3d(self.end, "<dev string:x1b0>", (0, 0.8, 0), 1, 3, 1);
                 print3d(self.origin, self.script_sound, (0, 0.8, 0), 1, 3, 1);
             }
-            wait(0.016);
+            wait 0.016;
         #/
     }
 }
@@ -774,14 +774,14 @@ function move_sound_along_line() {
         }
         closest_dist = distancesquared(getlocalclientpos(0), self.origin);
         if (closest_dist > 1048576) {
-            wait(2);
+            wait 2;
             continue;
         }
         if (closest_dist > 262144) {
-            wait(0.2);
+            wait 0.2;
             continue;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -807,7 +807,7 @@ function stoploopat(aliasname, origin) {
 // Size: 0x34
 function soundwait(id) {
     while (soundplaying(id)) {
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -928,7 +928,7 @@ function soundplayuidecodeloop(decodestring, playtimems) {
         fake_ent = spawn(0, (0, 0, 0), "script_origin");
         if (isdefined(fake_ent)) {
             fake_ent playloopsound("uin_notify_data_loop");
-            wait(playtimems / 1000);
+            wait playtimems / 1000;
             fake_ent stopallloopsounds(0);
         }
         level.playinguidecodeloop = undefined;
@@ -957,43 +957,43 @@ function isplayerinfected() {
     }
     if (isdefined(self)) {
         switch (mapname) {
-        case 76:
+        case "cp_mi_eth_prologue":
             self.isinfected = 0;
             setsoundcontext("healthstate", "human");
             break;
-        case 82:
+        case "cp_mi_cairo_infection2":
             self.isinfected = 1;
             setsoundcontext("healthstate", "infected");
             break;
-        case 83:
+        case "cp_mi_cairo_infection3":
             self.isinfected = 1;
             setsoundcontext("healthstate", "infected");
             break;
-        case 81:
+        case "cp_mi_cairo_aquifer":
             self.isinfected = 1;
             setsoundcontext("healthstate", "infected");
             break;
-        case 84:
+        case "cp_mi_cairo_lotus":
             self.isinfected = 1;
             setsoundcontext("healthstate", "infected");
             break;
-        case 85:
+        case "cp_mi_cairo_lotus2":
             self.isinfected = 1;
             setsoundcontext("healthstate", "infected");
             break;
-        case 86:
+        case "cp_mi_cairo_lotus3":
             self.isinfected = 1;
             setsoundcontext("healthstate", "infected");
             break;
-        case 87:
+        case "cp_mi_zurich_coalescence":
             self.isinfected = 1;
             setsoundcontext("healthstate", "infected");
             break;
-        case 89:
+        case "zm_zod":
             self.isinfected = 0;
             setsoundcontext("healthstate", "human");
             break;
-        case 88:
+        case "zm_factory":
             self.isinfected = 0;
             setsoundcontext("healthstate", "human");
             break;
@@ -1063,14 +1063,14 @@ function function_e1ab476f(localclientnum, oldval, newval, bnewent, binitialsnap
 // Size: 0xb8
 function function_451c4dae(localclientnum, var_7f2a8cb, min, max) {
     self endon(#"hash_2b4649a6");
-    wait(0.5);
+    wait 0.5;
     if (isdefined(self) && isdefined(self.isinfected)) {
         if (self.isinfected) {
             playsound(localclientnum, "vox_dying_infected_after", (0, 0, 0));
         }
         while (isdefined(self)) {
             playsound(localclientnum, var_7f2a8cb, (0, 0, 0));
-            wait(randomfloatrange(min, max));
+            wait randomfloatrange(min, max);
         }
     }
 }
@@ -1149,7 +1149,7 @@ function weapon_butt_sounds(localclientnum, oldval, newval, bnewent, binitialsna
 // Checksum 0x4ec4661c, Offset: 0x40b0
 // Size: 0x2c
 function set_sound_context_defaults() {
-    wait(2);
+    wait 2;
     setsoundcontext("foley", "normal");
 }
 

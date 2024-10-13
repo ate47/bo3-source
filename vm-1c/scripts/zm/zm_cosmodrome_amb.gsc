@@ -8,9 +8,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_9dd378ec;
+#namespace zm_cosmodrome_amb;
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x55b4a5a8, Offset: 0x3c0
 // Size: 0xdc
@@ -26,7 +26,7 @@ function main() {
     level thread function_3757c044();
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdbd49cf6, Offset: 0x4a8
 // Size: 0x2c
@@ -35,7 +35,7 @@ function function_3757c044() {
     level thread zm_audio::sndmusicsystem_playstate("round_start_first_lander");
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x41c9abc6, Offset: 0x4e0
 // Size: 0xae
@@ -45,11 +45,11 @@ function function_85f659bd() {
     }
     for (i = 0; i < var_47bb83.size; i++) {
         playsoundatposition("zmb_circuit", var_47bb83[i].origin);
-        wait(randomfloatrange(0.25, 0.7));
+        wait randomfloatrange(0.25, 0.7);
     }
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 3, eflags: 0x1 linked
 // Checksum 0xafae44f0, Offset: 0x598
 // Size: 0xfc
@@ -80,7 +80,7 @@ function function_3cf7b8c9(alias, var_33dae1e3, var_9dd37d09) {
     }
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x49b769ba, Offset: 0x6a0
 // Size: 0x70
@@ -98,35 +98,35 @@ function function_524d0ceb(alias) {
     }
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb23ebe59, Offset: 0x718
 // Size: 0x98
 function function_b50a3ab4() {
     structs = struct::get_array("amb_warning_siren", "targetname");
-    wait(1);
+    wait 1;
     for (i = 0; i < structs.size; i++) {
         playsoundatposition("evt_cosmo_alarm_single", structs[i].origin);
     }
-    wait(0.5);
+    wait 0.5;
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xefff50e0, Offset: 0x7b8
 // Size: 0x7e
 function function_e32302e3() {
-    wait(3);
+    wait 3;
     while (true) {
         level flag::wait_till("monkey_round");
         level thread function_3cf7b8c9("vox_ann_monkey_begin");
         level waittill(#"between_round_over");
         level thread function_3cf7b8c9("vox_ann_monkey_end");
-        wait(10);
+        wait 10;
     }
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd5c51a1, Offset: 0x840
 // Size: 0x54
@@ -135,7 +135,7 @@ function function_f90a04e4() {
     array::thread_all(var_385d0c76, &function_5fd10b57);
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc71c7d78, Offset: 0x8a0
 // Size: 0x54
@@ -145,7 +145,7 @@ function function_5fd10b57() {
     playsoundatposition("vox_radio_egg_" + self.script_int, self.origin);
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xba8e27ef, Offset: 0x900
 // Size: 0x5c
@@ -155,7 +155,7 @@ function function_7624a208() {
     level thread zm_audio::sndmusicsystem_playstate("abracadavre");
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x17f13715, Offset: 0x968
 // Size: 0x9c
@@ -173,12 +173,12 @@ function function_337aada8() {
     level thread zm_audio::sndmusicsystem_playstate("not_ready_to_die");
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf0f7873, Offset: 0xa10
 // Size: 0x1b4
 function function_10544d8() {
-    self endon(#"hash_58b9d0eb");
+    self endon(#"phone_activated");
     self endon(#"timeout");
     self.t_damage = spawn("trigger_damage", self.origin, 0, 5, 5);
     while (true) {
@@ -207,7 +207,7 @@ function function_10544d8() {
     self.t_damage delete();
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd73fe40a, Offset: 0xbd0
 // Size: 0x268
@@ -220,7 +220,7 @@ function function_4947258a() {
     }
     var_693fabd9 = undefined;
     while (true) {
-        wait(randomintrange(90, -16));
+        wait randomintrange(90, -16);
         while (true) {
             var_9d999891 = array::random(var_85d06ae4);
             arrayremovevalue(var_85d06ae4, var_9d999891);
@@ -241,12 +241,12 @@ function function_4947258a() {
             }
             playsoundatposition("vox_egg_redphone_" + var_f1b4932d, var_9d999891.origin);
             var_693fabd9 = var_f1b4932d;
-            wait(30);
+            wait 30;
         }
     }
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x55be04c, Offset: 0xe40
 // Size: 0xe4
@@ -268,7 +268,7 @@ function function_de8ef595() {
     return true;
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x30ecc7a6, Offset: 0xf30
 // Size: 0x198
@@ -282,41 +282,41 @@ function function_99199901() {
     while (true) {
         who = self.var_7f6e3a35 waittill(#"trigger");
         if (!isplayer(who)) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         while (who istouching(self.var_7f6e3a35)) {
             if (who usebuttonpressed()) {
-                self notify(#"hash_58b9d0eb");
+                self notify(#"phone_activated");
                 self.var_7f6e3a35 delete();
                 self.var_48df29fd delete();
                 return;
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x82ceb9d8, Offset: 0x10d0
 // Size: 0x6c
 function function_d772340() {
     level endon(#"hash_2d7a77fa");
-    self endon(#"hash_58b9d0eb");
+    self endon(#"phone_activated");
     self endon(#"hash_b524a8eb");
-    wait(10);
+    wait 10;
     self notify(#"timeout");
     self.var_7f6e3a35 delete();
     self.var_48df29fd delete();
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc2b93900, Offset: 0x1148
 // Size: 0x8e
 function function_ba0eb696() {
-    wait(10);
+    wait 10;
     for (i = 0; i < 4; i++) {
         ent = getent("doll_egg_" + i, "targetname");
         if (!isdefined(ent)) {
@@ -326,7 +326,7 @@ function function_ba0eb696() {
     }
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x984750, Offset: 0x11e0
 // Size: 0x1b6
@@ -357,11 +357,11 @@ function function_25d6399c(num) {
         self playsoundwithnotify(alias, "sounddone" + alias);
         self waittill("sounddone" + alias);
         player zm_audio::create_and_play_dialog("weapon_pickup", "dolls");
-        wait(8);
+        wait 8;
     }
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 3, eflags: 0x1 linked
 // Checksum 0xb0d56239, Offset: 0x13a0
 // Size: 0xbc
@@ -378,7 +378,7 @@ function function_a0f14d15(grenade, model, player) {
     return false;
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf346de0a, Offset: 0x1468
 // Size: 0x10e
@@ -395,7 +395,7 @@ function function_5b4692c9() {
     level.var_605ba2da = undefined;
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe2e95507, Offset: 0x1580
 // Size: 0xdc
@@ -409,15 +409,15 @@ function function_2e4843da() {
     e_trig delete();
 }
 
-// Namespace namespace_9dd378ec
+// Namespace zm_cosmodrome_amb
 // Params 3, eflags: 0x1 linked
 // Checksum 0x264a5d9e, Offset: 0x1668
 // Size: 0xf4
 function function_61c7f9a3(grenade, model, var_7d5605b7) {
-    wait(1);
+    wait 1;
     time = 3;
     var_7d5605b7.s_target.var_ac086ffb moveto(grenade.origin + (0, 0, 50), time, time - 0.05);
-    wait(time);
+    wait time;
     playsoundatposition("zmb_gersh_teleporter_out", grenade.origin + (0, 0, 50));
     model delete();
     var_7d5605b7 notify(#"hash_de264026");

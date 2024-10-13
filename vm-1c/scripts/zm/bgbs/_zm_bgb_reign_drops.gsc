@@ -64,11 +64,11 @@ function activation() {
 // Checksum 0x495e79a9, Offset: 0x4b0
 // Size: 0x92
 function function_7892610e() {
-    wait(0.05);
+    wait 0.05;
     n_start_time = gettime();
     n_total_time = 0;
     while (isdefined(level.active_powerups) && level.active_powerups.size) {
-        wait(0.5);
+        wait 0.5;
         n_current_time = gettime();
         n_total_time = (n_current_time - n_start_time) / 1000;
         if (n_total_time >= 28) {

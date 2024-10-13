@@ -76,7 +76,7 @@ function function_aa1a4765(var_f0a669b2, var_f8f606cd, localclientnum) {
                 player duplicate_render::set_player_threat_detected(localclientnum, 0);
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 

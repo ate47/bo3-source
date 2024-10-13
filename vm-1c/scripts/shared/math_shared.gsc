@@ -146,7 +146,7 @@ function randomsign() {
 // Checksum 0xee08efd7, Offset: 0x6c8
 // Size: 0x384
 function get_dot_direction(v_point, b_ignore_z, b_normalize, str_direction, b_use_eye) {
-    assert(isdefined(v_point), "<unknown string>");
+    assert(isdefined(v_point), "<dev string:x28>");
     if (!isdefined(b_ignore_z)) {
         b_ignore_z = 0;
     }
@@ -179,26 +179,26 @@ function get_dot_direction(v_point, b_ignore_z, b_normalize, str_direction, b_us
         v_origin = (v_origin[0], v_origin[1], 0);
     }
     switch (str_direction) {
-    case 0:
+    case "forward":
         v_direction = anglestoforward(v_angles);
         break;
-    case 1:
+    case "backward":
         v_direction = anglestoforward(v_angles) * -1;
         break;
-    case 4:
+    case "right":
         v_direction = anglestoright(v_angles);
         break;
-    case 3:
+    case "left":
         v_direction = anglestoright(v_angles) * -1;
         break;
-    case 5:
+    case "up":
         v_direction = anglestoup(v_angles);
         break;
-    case 2:
+    case "down":
         v_direction = anglestoup(v_angles) * -1;
         break;
     default:
-        assertmsg(str_direction + "<unknown string>");
+        assertmsg(str_direction + "<dev string:x54>");
         v_direction = anglestoforward(v_angles);
         break;
     }
@@ -215,7 +215,7 @@ function get_dot_direction(v_point, b_ignore_z, b_normalize, str_direction, b_us
 // Checksum 0x994eb935, Offset: 0xa58
 // Size: 0x7c
 function get_dot_right(v_point, b_ignore_z, b_normalize) {
-    assert(isdefined(v_point), "<unknown string>");
+    assert(isdefined(v_point), "<dev string:x7f>");
     n_dot = get_dot_direction(v_point, b_ignore_z, b_normalize, "right");
     return n_dot;
 }
@@ -225,7 +225,7 @@ function get_dot_right(v_point, b_ignore_z, b_normalize) {
 // Checksum 0xf6efc644, Offset: 0xae0
 // Size: 0x7c
 function get_dot_up(v_point, b_ignore_z, b_normalize) {
-    assert(isdefined(v_point), "<unknown string>");
+    assert(isdefined(v_point), "<dev string:xb1>");
     n_dot = get_dot_direction(v_point, b_ignore_z, b_normalize, "up");
     return n_dot;
 }
@@ -235,7 +235,7 @@ function get_dot_up(v_point, b_ignore_z, b_normalize) {
 // Checksum 0x21434a0a, Offset: 0xb68
 // Size: 0x7c
 function get_dot_forward(v_point, b_ignore_z, b_normalize) {
-    assert(isdefined(v_point), "<unknown string>");
+    assert(isdefined(v_point), "<dev string:xe0>");
     n_dot = get_dot_direction(v_point, b_ignore_z, b_normalize, "forward");
     return n_dot;
 }
@@ -245,8 +245,8 @@ function get_dot_forward(v_point, b_ignore_z, b_normalize) {
 // Checksum 0xba8db492, Offset: 0xbf0
 // Size: 0xe4
 function get_dot_from_eye(v_point, b_ignore_z, b_normalize, str_direction) {
-    assert(isdefined(v_point), "<unknown string>");
-    assert(isplayer(self) || isai(self), "<unknown string>" + self.classname + "<unknown string>");
+    assert(isdefined(v_point), "<dev string:xe0>");
+    assert(isplayer(self) || isai(self), "<dev string:x114>" + self.classname + "<dev string:x134>");
     n_dot = get_dot_direction(v_point, b_ignore_z, b_normalize, str_direction, 1);
     return n_dot;
 }

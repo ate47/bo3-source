@@ -230,7 +230,7 @@ function function_eda821cb(localclientnum) {
         } else {
             setsaveddvar("r_speedBlurFX_enable", "0");
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -276,7 +276,7 @@ function function_789b5418(localclientnum) {
         for (i = 0; i < self.var_250efb17.size; i++) {
             [[ self.var_250efb17[i] ]]->update(localclientnum, self, var_53b07afb);
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -454,14 +454,14 @@ function function_556fe27b() {
 // Size: 0x64
 function function_2bf1fe21(surface_type) {
     switch (surface_type) {
-    case 23:
-    case 29:
-    case 30:
-    case 31:
-    case 32:
-    case 33:
-    case 34:
-    case 35:
+    case "dirt":
+    case "foliage":
+    case "grass":
+    case "gravel":
+    case "mud":
+    case "sand":
+    case "snow":
+    case "water":
         return true;
     }
     return false;
@@ -473,11 +473,11 @@ function function_2bf1fe21(surface_type) {
 // Size: 0x9e
 function function_7f884b2c() {
     var_1f075c86 = self getwheelsurface("back_right");
-    var_192c57b = self getwheelsurface("back_left");
+    left_rear = self getwheelsurface("back_left");
     if (function_2bf1fe21(var_1f075c86)) {
         return "dirt";
     }
-    if (function_2bf1fe21(var_192c57b)) {
+    if (function_2bf1fe21(left_rear)) {
         return "dirt";
     }
     return "dust";

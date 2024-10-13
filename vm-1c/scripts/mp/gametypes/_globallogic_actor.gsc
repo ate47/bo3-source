@@ -153,8 +153,8 @@ function callback_actordamage(einflictor, eattacker, idamage, idflags, smeansofd
         }
     }
     /#
-        if (getdvarint("vehicle_")) {
-            println("vehicle_" + self getentitynumber() + "vehicle_" + self.health + "vehicle_" + eattacker.clientid + "vehicle_" + isplayer(einflictor) + "vehicle_" + idamage + "vehicle_" + shitloc);
+        if (getdvarint("<dev string:x28>")) {
+            println("<dev string:x36>" + self getentitynumber() + "<dev string:x3d>" + self.health + "<dev string:x46>" + eattacker.clientid + "<dev string:x51>" + isplayer(einflictor) + "<dev string:x67>" + idamage + "<dev string:x70>" + shitloc);
         }
     #/
     if (true) {
@@ -173,7 +173,7 @@ function callback_actordamage(einflictor, eattacker, idamage, idflags, smeansofd
             lpattackerteam = "world";
         }
         /#
-            logprint("vehicle_" + lpselfnum + "vehicle_" + lpselfteam + "vehicle_" + lpattackguid + "vehicle_" + lpattacknum + "vehicle_" + lpattackerteam + "vehicle_" + lpattackname + "vehicle_" + weapon.name + "vehicle_" + idamage + "vehicle_" + smeansofdeath + "vehicle_" + shitloc + "vehicle_" + boneindex + "vehicle_");
+            logprint("<dev string:x79>" + lpselfnum + "<dev string:x7d>" + lpselfteam + "<dev string:x7d>" + lpattackguid + "<dev string:x7d>" + lpattacknum + "<dev string:x7d>" + lpattackerteam + "<dev string:x7d>" + lpattackname + "<dev string:x7d>" + weapon.name + "<dev string:x7d>" + idamage + "<dev string:x7d>" + smeansofdeath + "<dev string:x7d>" + shitloc + "<dev string:x7d>" + boneindex + "<dev string:x7f>");
         #/
     }
 }
@@ -194,7 +194,7 @@ function callback_actorkilled(einflictor, attacker, idamage, smeansofdeath, weap
     if (attacker.classname == "script_vehicle" && isdefined(attacker.owner)) {
         attacker = attacker.owner;
     }
-    namespace_b3cf5df2::function_3722ecc9(self, attacker, weapon);
+    _gadget_clone::function_3722ecc9(self, attacker, weapon);
     globallogic::doweaponspecifickilleffects(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime);
     globallogic::doweaponspecificcorpseeffects(self, einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime);
 }

@@ -58,13 +58,13 @@ function rotating_object_think() {
     angles = self.angles;
     while (true) {
         switch (axis) {
-        case 4:
+        case "roll":
             self rotateroll(direction * revolutions, rotate_time * revolutions);
             break;
-        case 3:
+        case "pitch":
             self rotatepitch(direction * revolutions, rotate_time * revolutions);
             break;
-        case 2:
+        case "yaw":
         default:
             self rotateyaw(direction * revolutions, rotate_time * revolutions);
             break;

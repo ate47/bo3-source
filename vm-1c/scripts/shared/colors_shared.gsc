@@ -51,8 +51,8 @@ function __init__() {
     }
     /#
         level.colornodes_debug_array = [];
-        level.colornodes_debug_array["BAD NODE"] = [];
-        level.colornodes_debug_array["BAD NODE"] = [];
+        level.colornodes_debug_array["<dev string:x28>"] = [];
+        level.colornodes_debug_array["<dev string:x2f>"] = [];
     #/
     level.color_node_type_function = [];
     add_cover_node("BAD NODE");
@@ -139,14 +139,14 @@ function __main__() {
     // Checksum 0xab28e8a0, Offset: 0xdb0
     // Size: 0x98
     function debugdvars() {
-        if (getdvarstring("BAD NODE") == "BAD NODE") {
-            setdvar("BAD NODE", "BAD NODE");
+        if (getdvarstring("<dev string:x34>") == "<dev string:x45>") {
+            setdvar("<dev string:x34>", "<dev string:x46>");
         }
         while (true) {
-            if (getdvarint("BAD NODE") > 0) {
+            if (getdvarint("<dev string:x34>") > 0) {
                 thread debug_colornodes();
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -155,13 +155,13 @@ function __main__() {
     // Checksum 0xd4742313, Offset: 0xe50
     // Size: 0x80
     function get_team_substr() {
-        if (self.team == "BAD NODE") {
+        if (self.team == "<dev string:x28>") {
             if (!isdefined(self.node.script_color_allies_old)) {
                 return;
             }
             return self.node.script_color_allies_old;
         }
-        if (self.team == "BAD NODE") {
+        if (self.team == "<dev string:x2f>") {
             if (!isdefined(self.node.script_color_axis_old)) {
                 return;
             }
@@ -187,7 +187,7 @@ function __main__() {
         if (!issubstr(substr, self.script_forcecolor)) {
             return;
         }
-        recordline(self.origin + (0, 0, 25), self.node.origin, _get_debug_color(self.script_forcecolor), "BAD NODE", self);
+        recordline(self.origin + (0, 0, 25), self.node.origin, _get_debug_color(self.script_forcecolor), "<dev string:x48>", self);
         line(self.origin + (0, 0, 25), self.node.origin, _get_debug_color(self.script_forcecolor));
     }
 
@@ -197,29 +197,29 @@ function __main__() {
     // Size: 0x126
     function _get_debug_color(str_color) {
         switch (str_color) {
-        case 8:
-        case 8:
+        case "<dev string:x4f>":
+        case "<dev string:x51>":
             return (1, 0, 0);
-        case 8:
-        case 8:
+        case "<dev string:x55>":
+        case "<dev string:x57>":
             return (0, 1, 0);
-        case 8:
-        case 8:
+        case "<dev string:x5d>":
+        case "<dev string:x5f>":
             return (0, 0, 1);
-        case 8:
-        case 8:
+        case "<dev string:x64>":
+        case "<dev string:x66>":
             return (1, 1, 0);
-        case 8:
-        case 8:
+        case "<dev string:x6d>":
+        case "<dev string:x6f>":
             return (1, 0.5, 0);
-        case 8:
-        case 8:
+        case "<dev string:x76>":
+        case "<dev string:x78>":
             return (0, 1, 1);
-        case 8:
-        case 8:
+        case "<dev string:x7d>":
+        case "<dev string:x7f>":
             return (1, 0, 1);
         default:
-            println("BAD NODE" + str_color + "BAD NODE");
+            println("<dev string:x86>" + str_color + "<dev string:x93>");
             return (0, 0, 0);
         }
     }
@@ -230,9 +230,9 @@ function __main__() {
     // Size: 0x22c
     function debug_colornodes() {
         array = [];
-        array["BAD NODE"] = [];
-        array["BAD NODE"] = [];
-        array["BAD NODE"] = [];
+        array["<dev string:x2f>"] = [];
+        array["<dev string:x28>"] = [];
+        array["<dev string:xd1>"] = [];
         foreach (ai in getaiarray()) {
             if (!isdefined(ai.currentcolorcode)) {
                 continue;
@@ -242,15 +242,15 @@ function __main__() {
             if (isdefined(ai.script_forcecolor)) {
                 color = _get_debug_color(ai.script_forcecolor);
             }
-            recordenttext(ai.currentcolorcode, ai, color, "BAD NODE");
+            recordenttext(ai.currentcolorcode, ai, color, "<dev string:x48>");
             print3d(ai.origin + (0, 0, 25), ai.currentcolorcode, color, 1, 0.7);
-            if (ai.team == "BAD NODE") {
+            if (ai.team == "<dev string:x2f>") {
                 continue;
             }
             ai try_to_draw_line_to_node();
         }
-        draw_colornodes(array, "BAD NODE");
-        draw_colornodes(array, "BAD NODE");
+        draw_colornodes(array, "<dev string:x28>");
+        draw_colornodes(array, "<dev string:x2f>");
     }
 
     // Namespace colors
@@ -264,13 +264,13 @@ function __main__() {
             if (isdefined(level.colornodes_debug_array[team][keys[i]])) {
                 a_team_nodes = level.colornodes_debug_array[team][keys[i]];
                 for (p = 0; p < a_team_nodes.size; p++) {
-                    print3d(a_team_nodes[p].origin, "BAD NODE" + keys[i], color, 1, 0.7);
-                    if (getdvarstring("BAD NODE") == "BAD NODE" && isdefined(a_team_nodes[p].script_color_allies_old)) {
+                    print3d(a_team_nodes[p].origin, "<dev string:xd9>" + keys[i], color, 1, 0.7);
+                    if (getdvarstring("<dev string:x34>") == "<dev string:xdc>" && isdefined(a_team_nodes[p].script_color_allies_old)) {
                         if (isdefined(a_team_nodes[p].color_user) && isalive(a_team_nodes[p].color_user) && isdefined(a_team_nodes[p].color_user.script_forcecolor)) {
-                            print3d(a_team_nodes[p].origin + (0, 0, -5), "BAD NODE" + a_team_nodes[p].script_color_allies_old, _get_debug_color(a_team_nodes[p].color_user.script_forcecolor), 0.5, 0.4);
+                            print3d(a_team_nodes[p].origin + (0, 0, -5), "<dev string:xd9>" + a_team_nodes[p].script_color_allies_old, _get_debug_color(a_team_nodes[p].color_user.script_forcecolor), 0.5, 0.4);
                             continue;
                         }
-                        print3d(a_team_nodes[p].origin + (0, 0, -5), "BAD NODE" + a_team_nodes[p].script_color_allies_old, color, 0.5, 0.4);
+                        print3d(a_team_nodes[p].origin + (0, 0, -5), "<dev string:xd9>" + a_team_nodes[p].script_color_allies_old, color, 0.5, 0.4);
                     }
                 }
             }
@@ -299,17 +299,17 @@ function __main__() {
         just_turned_on = 0;
         just_turned_off = 0;
         while (true) {
-            if (getdvarstring("BAD NODE") == "BAD NODE" && !just_turned_on) {
+            if (getdvarstring("<dev string:x34>") == "<dev string:xde>" && !just_turned_on) {
                 just_turned_on = 1;
                 just_turned_off = 0;
                 draw_color_friendlies();
             }
-            if (getdvarstring("BAD NODE") != "BAD NODE" && !just_turned_off) {
+            if (getdvarstring("<dev string:x34>") != "<dev string:xde>" && !just_turned_off) {
                 just_turned_off = 1;
                 just_turned_on = 0;
                 draw_color_friendlies();
             }
-            wait(0.25);
+            wait 0.25;
         }
     }
 
@@ -319,13 +319,13 @@ function __main__() {
     // Size: 0xb8
     function get_script_palette() {
         rgb = [];
-        rgb["BAD NODE"] = (1, 0, 0);
-        rgb["BAD NODE"] = (1, 0.5, 0);
-        rgb["BAD NODE"] = (1, 1, 0);
-        rgb["BAD NODE"] = (0, 1, 0);
-        rgb["BAD NODE"] = (0, 1, 1);
-        rgb["BAD NODE"] = (0, 0, 1);
-        rgb["BAD NODE"] = (1, 0, 1);
+        rgb["<dev string:x4f>"] = (1, 0, 0);
+        rgb["<dev string:x6d>"] = (1, 0.5, 0);
+        rgb["<dev string:x64>"] = (1, 1, 0);
+        rgb["<dev string:x55>"] = (0, 1, 0);
+        rgb["<dev string:x76>"] = (0, 1, 1);
+        rgb["<dev string:x5d>"] = (0, 0, 1);
+        rgb["<dev string:x7d>"] = (1, 0, 1);
         return rgb;
     }
 
@@ -338,13 +338,13 @@ function __main__() {
         keys = getarraykeys(level.debug_color_friendlies);
         colored_friendlies = [];
         colors = [];
-        colors[colors.size] = "BAD NODE";
-        colors[colors.size] = "BAD NODE";
-        colors[colors.size] = "BAD NODE";
-        colors[colors.size] = "BAD NODE";
-        colors[colors.size] = "BAD NODE";
-        colors[colors.size] = "BAD NODE";
-        colors[colors.size] = "BAD NODE";
+        colors[colors.size] = "<dev string:x4f>";
+        colors[colors.size] = "<dev string:x6d>";
+        colors[colors.size] = "<dev string:x64>";
+        colors[colors.size] = "<dev string:x55>";
+        colors[colors.size] = "<dev string:x76>";
+        colors[colors.size] = "<dev string:x5d>";
+        colors[colors.size] = "<dev string:x7d>";
         rgb = get_script_palette();
         for (i = 0; i < colors.size; i++) {
             colored_friendlies[colors[i]] = 0;
@@ -357,7 +357,7 @@ function __main__() {
             level.debug_color_huds[i] destroy();
         }
         level.debug_color_huds = [];
-        if (getdvarstring("BAD NODE") != "BAD NODE") {
+        if (getdvarstring("<dev string:x34>") != "<dev string:xde>") {
             return;
         }
         y = 365;
@@ -369,9 +369,9 @@ function __main__() {
                 overlay = newhudelem();
                 overlay.x = 15 + 25 * p;
                 overlay.y = y;
-                overlay setshader("BAD NODE", 16, 16);
-                overlay.alignx = "BAD NODE";
-                overlay.aligny = "BAD NODE";
+                overlay setshader("<dev string:xe0>", 16, 16);
+                overlay.alignx = "<dev string:xe6>";
+                overlay.aligny = "<dev string:xeb>";
                 overlay.alpha = 1;
                 overlay.color = rgb[colors[i]];
                 level.debug_color_huds[level.debug_color_huds.size] = overlay;
@@ -429,7 +429,7 @@ function goto_current_colorindex() {
         thread decrementcolorusers(node);
         return;
     }
-    println("BAD NODE" + self.export + "BAD NODE");
+    println("<dev string:xf2>" + self.export + "<dev string:x102>");
 }
 
 // Namespace colors
@@ -469,7 +469,7 @@ function get_colorcodes_from_trigger(color_team, team) {
         if (!isdefined(level.arrays_of_colorcoded_nodes[team][colorcodes[i]]) && !isdefined(level.colorcoded_volumes[team][colorcodes[i]])) {
             continue;
         }
-        assert(isdefined(color), "BAD NODE" + self getorigin() + "BAD NODE" + colorcodes[i]);
+        assert(isdefined(color), "<dev string:x13a>" + self getorigin() + "<dev string:x14d>" + colorcodes[i]);
         colorcodesbycolorindex[color] = colorcodes[i];
         colors[colors.size] = color;
         usable_colorcodes[usable_colorcodes.size] = colorcodes[i];
@@ -681,7 +681,7 @@ function function_89827d0f(s_teleport, var_7ea5275e, var_9a424b4f, func_callback
         } else {
             return;
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -703,7 +703,7 @@ function activate_color_trigger_internal(colorcodes, colors, team, colorcodesbyc
         level.arrays_of_colorforced_ai[team][colors[i]] = array::remove_dead(level.arrays_of_colorforced_ai[team][colors[i]]);
         level.lastcolorforced[team][colors[i]] = level.currentcolorforced[team][colors[i]];
         level.currentcolorforced[team][colors[i]] = colorcodesbycolorindex[colors[i]];
-        assert(isdefined(level.arrays_of_colorcoded_nodes[team][level.currentcolorforced[team][colors[i]]]) || isdefined(level.colorcoded_volumes[team][level.currentcolorforced[team][colors[i]]]), "BAD NODE" + colors[i] + "BAD NODE" + team + "BAD NODE");
+        assert(isdefined(level.arrays_of_colorcoded_nodes[team][level.currentcolorforced[team][colors[i]]]) || isdefined(level.colorcoded_volumes[team][level.currentcolorforced[team][colors[i]]]), "<dev string:x167>" + colors[i] + "<dev string:x187>" + team + "<dev string:x1a4>");
     }
     ai_array = [];
     for (i = 0; i < colorcodes.size; i++) {
@@ -869,7 +869,7 @@ function issue_color_order_to_ai(colorcode, color, team, ai) {
     #/
     /#
         if (nodes.size < ai.size) {
-            println("BAD NODE" + ai.size + "BAD NODE" + nodes.size + "BAD NODE");
+            println("<dev string:x1c0>" + ai.size + "<dev string:x1ed>" + nodes.size + "<dev string:x1f8>");
         }
     #/
     counter = 0;
@@ -909,7 +909,7 @@ function player_color_node() {
     for (;;) {
         playernode = undefined;
         if (!isdefined(self.node)) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         olduser = self.node.color_user;
@@ -922,7 +922,7 @@ function player_color_node() {
             if (self.node != playernode) {
                 break;
             }
-            wait(0.05);
+            wait 0.05;
         }
         playernode.color_user = undefined;
         playernode color_node_finds_a_user();
@@ -960,7 +960,7 @@ function color_node_finds_user_from_colorcodes(colorcodestring, team) {
 // Size: 0x158
 function color_node_finds_user_for_colorcode(colorcode, team) {
     color = colorcode[0];
-    assert(colorislegit(color), "BAD NODE" + color + "BAD NODE");
+    assert(colorislegit(color), "<dev string:x200>" + color + "<dev string:x207>");
     if (!isdefined(level.currentcolorforced[team][color])) {
         return;
     }
@@ -1000,7 +1000,7 @@ function ai_sets_goal_with_delay(node) {
     self endon(#"death");
     delay = my_current_node_delays();
     if (delay) {
-        wait(delay);
+        wait delay;
     }
     ai_sets_goal(node);
 }
@@ -1092,7 +1092,7 @@ function use_big_goal_until_goal_is_safe(node, volume) {
     self setgoal(self.origin);
     if (isdefined(volume)) {
         for (;;) {
-            wait(1);
+            wait 1;
             if (self isknownenemyinradius(node.origin, self.fixednodesaferadius)) {
                 continue;
             }
@@ -1107,7 +1107,7 @@ function use_big_goal_until_goal_is_safe(node, volume) {
         if (!self isknownenemyinradius(node.origin, self.fixednodesaferadius)) {
             return;
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -1124,7 +1124,7 @@ function wait_until_an_enemy_is_in_safe_area(node, volume) {
             if (self isknownenemyinvolume(volume)) {
                 return;
             }
-            wait(1);
+            wait 1;
         }
         return;
     }
@@ -1132,7 +1132,7 @@ function wait_until_an_enemy_is_in_safe_area(node, volume) {
         if (self isknownenemyinradius(node.origin, self.fixednodesaferadius)) {
             return;
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -1165,7 +1165,7 @@ function process_color_order_to_ai(node, trigger, counter) {
     }
     if (!my_current_node_delays()) {
         if (isdefined(counter)) {
-            wait(counter * randomfloatrange(0.2, 0.35));
+            wait counter * randomfloatrange(0.2, 0.35);
         }
     }
     self ai_sets_goal(node);
@@ -1173,11 +1173,11 @@ function process_color_order_to_ai(node, trigger, counter) {
     for (;;) {
         taker = self waittill(#"node_taken");
         if (taker == self) {
-            wait(0.05);
+            wait 0.05;
         }
         node = get_best_available_new_colored_node();
         if (isdefined(node)) {
-            assert(!isalive(node.color_user), "BAD NODE");
+            assert(!isalive(node.color_user), "<dev string:x215>");
             if (isalive(self.color_node.color_user) && self.color_node.color_user == self) {
                 self.color_node.color_user = undefined;
             }
@@ -1193,11 +1193,11 @@ function process_color_order_to_ai(node, trigger, counter) {
 // Checksum 0x1f05508e, Offset: 0x4528
 // Size: 0x16c
 function get_best_available_colored_node() {
-    assert(self.team != "BAD NODE");
-    assert(isdefined(self.script_forcecolor), "BAD NODE" + self.export + "BAD NODE");
+    assert(self.team != "<dev string:xd1>");
+    assert(isdefined(self.script_forcecolor), "<dev string:xf2>" + self.export + "<dev string:x232>");
     colorcode = level.currentcolorforced[self.team][self.script_forcecolor];
     nodes = get_prioritized_colorcoded_nodes(self.team, colorcode, self.script_forcecolor);
-    assert(nodes.size > 0, "BAD NODE" + self.export + "BAD NODE" + self.script_forcecolor + "BAD NODE");
+    assert(nodes.size > 0, "<dev string:x259>" + self.export + "<dev string:x278>" + self.script_forcecolor + "<dev string:x28b>");
     for (i = 0; i < nodes.size; i++) {
         if (!isalive(nodes[i].color_user)) {
             return nodes[i];
@@ -1210,11 +1210,11 @@ function get_best_available_colored_node() {
 // Checksum 0x47d06455, Offset: 0x46a0
 // Size: 0x18c
 function get_best_available_new_colored_node() {
-    assert(self.team != "BAD NODE");
-    assert(isdefined(self.script_forcecolor), "BAD NODE" + self.export + "BAD NODE");
+    assert(self.team != "<dev string:xd1>");
+    assert(isdefined(self.script_forcecolor), "<dev string:xf2>" + self.export + "<dev string:x232>");
     colorcode = level.currentcolorforced[self.team][self.script_forcecolor];
     nodes = get_prioritized_colorcoded_nodes(self.team, colorcode, self.script_forcecolor);
-    assert(nodes.size > 0, "BAD NODE" + self.export + "BAD NODE" + self.script_forcecolor + "BAD NODE");
+    assert(nodes.size > 0, "<dev string:x259>" + self.export + "<dev string:x278>" + self.script_forcecolor + "<dev string:x28b>");
     nodes = arraysort(nodes, self.origin);
     for (i = 0; i < nodes.size; i++) {
         if (!isalive(nodes[i].color_user)) {
@@ -1251,7 +1251,7 @@ function process_stop_short_of_node(node) {
 // Size: 0x1c
 function wait_for_killanimscript_or_time(timer) {
     self endon(#"killanimscript");
-    wait(timer);
+    wait timer;
 }
 
 // Namespace colors
@@ -1268,7 +1268,7 @@ function reached_node_but_could_not_claim_it(node) {
             continue;
         }
         ai[i] notify(#"eject_from_my_node");
-        wait(1);
+        wait 1;
         self notify(#"eject_from_my_node");
         return true;
     }
@@ -1310,7 +1310,7 @@ function colorislegit(color) {
 function add_volume_to_global_arrays(colorcode, team) {
     colors = strtok(colorcode, " ");
     for (p = 0; p < colors.size; p++) {
-        assert(!isdefined(level.colorcoded_volumes[team][colors[p]]), "BAD NODE" + colors[p]);
+        assert(!isdefined(level.colorcoded_volumes[team][colors[p]]), "<dev string:x2b9>" + colors[p]);
         level.colorcoded_volumes[team][colors[p]] = self;
     }
 }
@@ -1386,8 +1386,8 @@ function removespawnerfromcolornumberarray() {
         return;
     }
     team = var_fd61c660["team"];
-    var_4db28d15 = var_fd61c660["colorTeam"];
-    colors = strtok(var_4db28d15, " ");
+    colorTeam = var_fd61c660["colorTeam"];
+    colors = strtok(colorTeam, " ");
     for (i = 0; i < colors.size; i++) {
         arrayremovevalue(level.arrays_of_colorcoded_spawners[team][colors[i]], self);
     }
@@ -1445,7 +1445,7 @@ function colornode_spawn_reinforcement(classname, fromcolor) {
             spawn = spawner spawner::spawn();
             if (spawner::spawn_failed(spawn)) {
                 thread lock_spawner_for_awhile();
-                wait(1);
+                wait 1;
                 continue;
             }
             level notify(#"reinforcement_spawned", spawn);
@@ -1477,7 +1477,7 @@ function colornode_spawn_reinforcement(classname, fromcolor) {
 // Size: 0x3b4
 function colornode_replace_on_death() {
     level endon(#"kill_color_replacements");
-    assert(isalive(self), "BAD NODE");
+    assert(isalive(self), "<dev string:x2e6>");
     self endon(#"_disable_reinforcement");
     if (self.team == "axis") {
         return;
@@ -1486,7 +1486,7 @@ function colornode_replace_on_death() {
         return;
     }
     self.replace_on_death = 1;
-    assert(!isdefined(self.respawn_on_death), "BAD NODE" + self.export + "BAD NODE");
+    assert(!isdefined(self.respawn_on_death), "<dev string:x323>" + self.export + "<dev string:x334>");
     classname = self.classname;
     color = self.script_forcecolor;
     waittillframeend();
@@ -1517,12 +1517,12 @@ function colornode_replace_on_death() {
         correct_colored_friendlies = get_force_color_guys("allies", color_order[color]);
         correct_colored_friendlies = array::filter_classname(correct_colored_friendlies, 1, classname);
         if (!correct_colored_friendlies.size) {
-            wait(2);
+            wait 2;
             continue;
         }
         players = getplayers();
         correct_colored_guy = arraysort(correct_colored_friendlies, players[0].origin, 1)[0];
-        assert(correct_colored_guy.script_forcecolor != color, "BAD NODE" + color + "BAD NODE");
+        assert(correct_colored_guy.script_forcecolor != color, "<dev string:x35a>" + color + "<dev string:x36e>");
         waittillframeend();
         if (!isalive(correct_colored_guy)) {
             continue;
@@ -1561,7 +1561,7 @@ function friendly_spawner_vision_checker() {
     successes = 0;
     for (;;) {
         level flag::wait_till_clear("respawn_friendlies");
-        wait(1);
+        wait 1;
         if (!isdefined(level.respawn_spawner)) {
             continue;
         }
@@ -1605,7 +1605,7 @@ function get_color_spawner(classname, fromcolor) {
     }
     if (!isdefined(level.respawn_spawner)) {
         if (!isdefined(fromcolor) || !specificfromcolor) {
-            assertmsg("BAD NODE");
+            assertmsg("<dev string:x391>");
         }
     }
     if (!isdefined(classname)) {
@@ -1662,7 +1662,7 @@ function getclasscolorhash(classname, fromcolor) {
 // Size: 0x44
 function lock_spawner_for_awhile() {
     level flag::set("friendly_spawner_locked");
-    wait(2);
+    wait 2;
     level flag::clear("friendly_spawner_locked");
 }
 
@@ -1700,12 +1700,12 @@ function remove_replace_on_death() {
 // Size: 0x264
 function set_force_color(_color) {
     color = shortencolor(_color);
-    assert(colorislegit(color), "BAD NODE" + color);
+    assert(colorislegit(color), "<dev string:x4d3>" + color);
     if (!isactor(self)) {
         set_force_color_spawner(color);
         return;
     }
-    assert(isalive(self), "BAD NODE");
+    assert(isalive(self), "<dev string:x504>");
     self.fixednodesaferadius = 64;
     self.script_color_axis = undefined;
     self.script_color_allies = undefined;
@@ -1740,7 +1740,7 @@ function remove_colorforced_ai_when_dead(ai) {
 // Checksum 0xc3a921a5, Offset: 0x6228
 // Size: 0x6c
 function shortencolor(color) {
-    assert(isdefined(level.colorchecklist[tolower(color)]), "BAD NODE" + color);
+    assert(isdefined(level.colorchecklist[tolower(color)]), "<dev string:x4d3>" + color);
     return level.colorchecklist[tolower(color)];
 }
 
@@ -1884,7 +1884,7 @@ function disable(var_8d62dbc) {
     if (!isdefined(self.script_forcecolor)) {
         return;
     }
-    assert(!isdefined(self.old_forcecolor), "BAD NODE");
+    assert(!isdefined(self.old_forcecolor), "<dev string:x53b>");
     self.old_forcecolor = self.script_forcecolor;
     arrayremovevalue(level.arrays_of_colorforced_ai[self.team][self.script_forcecolor], self);
     left_color_node();
@@ -1925,7 +1925,7 @@ function is_color_ai() {
     // Checksum 0x8f107d4b, Offset: 0x6900
     // Size: 0x62
     function insure_player_does_not_set_forcecolor_twice_in_one_frame() {
-        assert(!isdefined(self.setforcecolor), "BAD NODE");
+        assert(!isdefined(self.setforcecolor), "<dev string:x59a>");
         self.setforcecolor = 1;
         waittillframeend();
         if (!isalive(self)) {

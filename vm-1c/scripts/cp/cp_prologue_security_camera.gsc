@@ -56,24 +56,24 @@ function function_889067f5() {
 // Checksum 0x6f331a7e, Offset: 0xfe0
 // Size: 0x1fc
 function function_599b2699() {
-    var_38907d67 = getent("t_regroup_security_camera", "targetname");
-    var_38907d67 triggerenable(0);
+    t_regroup_security_camera = getent("t_regroup_security_camera", "targetname");
+    t_regroup_security_camera triggerenable(0);
     exploder::exploder("light_exploder_torture_rooms");
-    level thread namespace_2cb3876f::function_950d1c3b(1);
+    level thread cp_prologue_util::function_950d1c3b(1);
     level thread namespace_52f8de11::function_bfe70f02();
     level thread function_6475a61e();
     battlechatter::function_d9f49fba(0);
-    namespace_2cb3876f::function_47a62798(1);
+    cp_prologue_util::function_47a62798(1);
     level thread function_61e4fa9();
     level.var_2fd26037 thread function_240f41ef();
-    level thread function_edd36550();
+    level thread setup_security_cameras();
     level waittill(#"hash_81d6c615");
     while (true) {
         var_d62d9e75 = function_e1a52cb4();
         if (!var_d62d9e75) {
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
     level scene::stop("injured_carried1", "targetname");
     level scene::stop("injured_carried2", "targetname");
@@ -89,8 +89,8 @@ function function_599b2699() {
 function function_6475a61e() {
     s_pos = struct::get("temp_security_door_obj", "targetname");
     objectives::set("cp_level_prologue_security_door", s_pos);
-    namespace_2cb3876f::function_d1f1caad("t_start_security_cam_room_breach_v2");
-    wait(2);
+    cp_prologue_util::function_d1f1caad("t_start_security_cam_room_breach_v2");
+    wait 2;
     objectives::complete("cp_level_prologue_security_door");
     level flag::wait_till("everyone_in_camera_room");
     objectives::complete("cp_level_prologue_locate_the_security_room");
@@ -119,7 +119,7 @@ function function_e1a52cb4() {
 // Params 0, eflags: 0x1 linked
 // Checksum 0x76f1b09, Offset: 0x13e0
 // Size: 0x1cc
-function function_edd36550() {
+function setup_security_cameras() {
     util::wait_network_frame();
     level clientfield::set("setup_security_cameras", 1);
     level thread function_d0260dae();
@@ -149,17 +149,17 @@ function function_9f9f8c2a() {
     }
     var_1d7e2b7c = function_6840a15e(level.var_690ce961);
     switch (var_1d7e2b7c.str_name) {
-    case 31:
+    case "torture_minister":
         level.var_690ce961 = level.var_c01222d2["hallway"].n_index;
         level.var_c01222d2["hallway"].var_b5991f0e = 0;
         level.var_c01222d2["hallway"].var_a1a1b35e = 3;
         break;
-    case 17:
+    case "hallway":
         level.var_690ce961 = level.var_c01222d2["interrogation"].n_index;
         level.var_c01222d2["interrogation"].var_b5991f0e = 0;
         level.var_c01222d2["interrogation"].var_a1a1b35e = 3;
         break;
-    case 19:
+    case "interrogation":
         level.var_1a6eba1f = 1;
         level thread namespace_21b2c1f2::function_fa2e45b8();
         break;
@@ -209,7 +209,7 @@ function function_7f6e313c(var_3675dd99, var_8deb7bb6, var_ff018680) {
 function function_83168a46() {
     self endon(#"death");
     level waittill(#"hash_1a6eba1f");
-    wait(1);
+    wait 1;
     self gameobjects::disable_object();
 }
 
@@ -248,13 +248,13 @@ function function_18df8595(var_79831c10, var_ff018680) {
     var_479668a = struct::get("s_security_cam_station_left", "targetname");
     var_479668a scene::play("p_security_cam_interface_intro", self);
     if (!level.var_ab82ba6d) {
-        level notify(#"hash_17ce64b4");
+        level notify(#"security_cam_active");
         self thread function_91e8303d(var_ff018680);
         level.var_ab82ba6d = 1;
         level thread namespace_21b2c1f2::function_e847067();
     }
     var_479668a thread scene::play(var_f05b3d6f, self);
-    wait(2);
+    wait 2;
     while (!level.var_1a6eba1f) {
         self util::function_67cfce72(%CP_MI_ETH_PROLOGUE_CAMERA_CHANGE, undefined, undefined, -86);
         if (self actionbuttonpressed()) {
@@ -273,14 +273,14 @@ function function_18df8595(var_79831c10, var_ff018680) {
             level flag::wait_till("face_scanning_complete");
             level flag::wait_till_clear("face_scanning_double_pause");
         }
-        wait(0.05);
+        wait 0.05;
     }
     self thread function_a4090f73(level.var_d658503a);
     level thread namespace_21b2c1f2::function_973b77f9();
     level.var_1a6eba1f = 1;
     level notify(#"hash_1a6eba1f");
-    var_38907d67 = getent("t_regroup_security_camera", "targetname");
-    var_38907d67 triggerenable(1);
+    t_regroup_security_camera = getent("t_regroup_security_camera", "targetname");
+    t_regroup_security_camera triggerenable(1);
     var_b7677f7e delete();
     var_479668a scene::play(var_f835fe4e, self);
     function_396ce97e();
@@ -333,12 +333,12 @@ function function_c41806ee(a_ents, n_index) {
     }
     var_a668bada = n_index - 1;
     while (!isdefined(level.var_d658503a) || level.var_d658503a < var_a668bada) {
-        wait(0.05);
+        wait 0.05;
     }
     a_ents["prisoner"] sethighdetail(1);
     a_ents["prisoner"].var_d3b49c28 = createstreamerhint(a_ents["prisoner"].origin, 1);
     while (level.var_d658503a <= n_index) {
-        wait(0.05);
+        wait 0.05;
     }
     a_ents["prisoner"] sethighdetail(0);
     a_ents["prisoner"].var_d3b49c28 delete();
@@ -436,30 +436,30 @@ function function_2e16b263(scenename) {
         level.isfirsttime = 1;
     }
     switch (scenename) {
-    case 20:
+    case "cin_pro_05_02_securitycam_pip_solitary":
         level.var_cc008929 playloopsound("evt_securitycam_solitary", 0.1);
         break;
-    case 22:
+    case "cin_pro_05_02_securitycam_pip_pipe":
         level.var_cc008929 playloopsound("evt_securitycam_pipe", 0.1);
         break;
-    case 24:
+    case "cin_pro_05_02_securitycam_pip_funnel":
         level.var_cc008929 playloopsound("evt_securitycam_funnel", 0.1);
         break;
-    case 28:
+    case "cin_pro_05_02_securitycam_pip_branding":
         level.var_cc008929 playloopsound("evt_securitycam_branding", 0.1);
         break;
-    case 32:
+    case "cin_pro_05_02_securitycam_pip_pressure":
         level.var_cc008929 playloopsound("evt_securitycam_pressure", 0.1);
         break;
-    case 30:
+    case "cin_pro_05_02_securitycam_pip_waterboard":
         level.var_cc008929 stoploopsound(0.1);
         level.var_cc008929 playsound("evt_securitycam_minister_water");
         break;
-    case 16:
+    case "cin_pro_05_02_securitycam_pip_ministerdrag":
         level.var_cc008929 stoploopsound(0.1);
         level.var_cc008929 playsound("evt_securitycam_minister_walk");
         break;
-    case 18:
+    case "cin_pro_05_02_securitycam_pip_ministerdrag_interrogationroom":
         if (isdefined(level.isfirsttime) && level.isfirsttime) {
             level.var_cc008929 stoploopsound(0.1);
             level.isfirsttime = 0;
@@ -484,10 +484,10 @@ function function_95e6066a(var_ff018680) {
     level flag::clear("face_scanning_complete");
     var_1ca98eed = function_6840a15e(var_ff018680);
     if (var_1ca98eed.var_a1a1b35e == 0) {
-        wait(2);
+        wait 2;
         return 0;
     }
-    wait(0.5);
+    wait 0.5;
     level flag::wait_till("face_scanning_complete");
     if (level.var_d658503a == level.var_690ce961) {
         return 1;
@@ -505,12 +505,12 @@ function function_a4090f73(var_6347c9e0) {
     }
     switch (var_6347c9e0) {
     case 0:
-        wait(3);
+        wait 3;
         break;
     case 1:
         if (level.var_965f8f82) {
             level.var_965f8f82 = 0;
-            wait(3);
+            wait 3;
         } else {
             level.var_2fd26037 dialog::say("hend_bingo_0", 5);
             level notify(#"hash_fd656b57");
@@ -537,12 +537,12 @@ function function_a4090f73(var_6347c9e0) {
         level.var_2fd26037 dialog::say("hend_we_have_our_orders_0");
         break;
     case 6:
-        wait(3);
+        wait 3;
         level.var_2fd26037 thread dialog::say("hend_no_match_0");
         break;
     case 7:
         level flag::set("face_scanning_double_pause");
-        wait(3);
+        wait 3;
         level flag::set("face_scanning_complete");
         level.var_2fd26037 dialog::say("hend_that_s_him_the_min_0", 0.75);
         level.var_2fd26037 dialog::say("hend_he_s_being_moved_0", 9);
@@ -573,7 +573,7 @@ function function_d0260dae() {
 function function_240f41ef() {
     level flag::set("activate_bc_5");
     level flag::wait_till("stealth_kill_prepare_done");
-    namespace_2cb3876f::function_d1f1caad("t_start_security_cam_room_breach_v2");
+    cp_prologue_util::function_d1f1caad("t_start_security_cam_room_breach_v2");
     level thread namespace_21b2c1f2::function_973b77f9();
     level notify(#"hash_fa5c41eb");
     exploder::exploder("light_exploder_cameraroom");
@@ -588,7 +588,7 @@ function function_240f41ef() {
     level notify(#"hash_8e1e9ee");
     level thread function_fef03d1c();
     exploder::stop_exploder("light_exploder_cameraroom");
-    level waittill(#"hash_17ce64b4");
+    level waittill(#"security_cam_active");
     level scene::play("cin_pro_05_01_securitycam_1st_stealth_kill_scanning");
     level flag::wait_till("security_cam_full_house");
     level scene::play("cin_pro_05_01_securitycam_1st_stealth_kill_notice");
@@ -671,10 +671,10 @@ function function_2b60c70b(a_ents) {
 // Checksum 0x5c29f797, Offset: 0x36e0
 // Size: 0x5c
 function function_fef03d1c() {
-    level endon(#"hash_17ce64b4");
-    wait(15);
+    level endon(#"security_cam_active");
+    wait 15;
     level.var_2fd26037 dialog::say("hend_you_wanna_hustle_ha_0");
-    wait(20);
+    wait 20;
     level.var_2fd26037 dialog::say("hend_our_cover_s_blown_an_0");
 }
 
@@ -686,7 +686,7 @@ function function_61e4fa9() {
     level endon(#"hash_fa5c41eb");
     level waittill(#"hash_6edff9b0");
     level.var_2fd26037 dialog::say("hend_you_ve_got_breach_l_0");
-    wait(20);
+    wait 20;
     level.var_2fd26037 dialog::say("hend_minister_s_not_gonna_0");
 }
 

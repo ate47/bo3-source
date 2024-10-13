@@ -69,7 +69,7 @@ function player_init(clientnum) {
 function validate(fxid, origin) {
     /#
         if (!isdefined(level._effect[fxid])) {
-            assertmsg("fxid" + fxid + "fxid" + origin);
+            assertmsg("<dev string:x28>" + fxid + "<dev string:x3c>" + origin);
         }
     #/
 }
@@ -148,7 +148,7 @@ function set_forward_and_up_vectors() {
 // Size: 0x4c
 function oneshot_thread(clientnum) {
     if (self.v["delay"] > 0) {
-        wait(self.v["delay"]);
+        wait self.v["delay"];
     }
     create_trigger(clientnum);
 }
@@ -189,7 +189,7 @@ function loop_sound(clientnum) {
 // Size: 0x50
 function lightning(normalfunc, flashfunc) {
     [[ flashfunc ]]();
-    wait(randomfloatrange(0.05, 0.1));
+    wait randomfloatrange(0.05, 0.1);
     [[ normalfunc ]]();
 }
 
@@ -228,7 +228,7 @@ function loop_thread(clientnum) {
 // Size: 0x4c
 function loop_stop(clientnum, timeout) {
     self endon(#"death");
-    wait(timeout);
+    wait timeout;
     if (isdefined(self.looper)) {
         deletefx(clientnum, self.looper);
     }
@@ -252,10 +252,10 @@ function loop(clientnum) {
     self.looperfx = playfx(clientnum, level._effect[self.v["fxid"]], self.v["origin"], self.v["forward"], self.v["up"], self.v["delay"], self.v["primlightfrac"], self.v["lightoriginoffs"]);
     while (true) {
         if (isdefined(self.v["delay"])) {
-            wait(self.v["delay"]);
+            wait self.v["delay"];
         }
         while (isfxplaying(clientnum, self.looperfx)) {
-            wait(0.25);
+            wait 0.25;
         }
         self.looperfx = playfx(clientnum, level._effect[self.v["fxid"]], self.v["origin"], self.v["forward"], self.v["up"], 0, self.v["primlightfrac"], self.v["lightoriginoffs"]);
     }
@@ -268,8 +268,8 @@ function loop(clientnum) {
 function create_trigger(clientnum) {
     validate(self.v["fxid"], self.v["origin"]);
     /#
-        if (getdvarint("fxid") > 0) {
-            println("fxid" + self.v["fxid"]);
+        if (getdvarint("<dev string:x43>") > 0) {
+            println("<dev string:x4c>" + self.v["<dev string:x5c>"]);
         }
     #/
     self.looperfx = playfx(clientnum, level._effect[self.v["fxid"]], self.v["origin"], self.v["forward"], self.v["up"], self.v["delay"], self.v["primlightfrac"], self.v["lightoriginoffs"]);
@@ -288,7 +288,7 @@ function blinky_light(localclientnum, tagname, friendlyfx, enemyfx) {
     self thread blinky_emp_wait(localclientnum);
     while (true) {
         if (isdefined(self.stunned) && self.stunned) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (isdefined(self)) {

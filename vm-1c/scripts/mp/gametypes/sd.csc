@@ -43,7 +43,7 @@ function function_63fb1af2() {
         self endon(#"hash_63fb1af2");
         while (true) {
             self setsoundentcontext("bomb_plant", "silent");
-            wait(1);
+            wait 1;
         }
     }
 }

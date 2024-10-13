@@ -36,7 +36,7 @@ function __init__() {
     clientfield::register("vehicle", "parasite_tell_fx", 1, 1, "int");
     clientfield::register("vehicle", "parasite_secondary_deathfx", 1, 1, "int");
     clientfield::register("toplayer", "parasite_damage", 1, 1, "counter");
-    callback::on_spawned(&function_5f6cf4b2);
+    callback::on_spawned(&parasite_damage);
     ai::registermatchedinterface("parasite", "firing_rate", "slow", array("slow", "medium", "fast"));
 }
 
@@ -44,7 +44,7 @@ function __init__() {
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9b4ff9fc, Offset: 0x5f8
 // Size: 0xd0
-function function_5f6cf4b2() {
+function parasite_damage() {
     self notify(#"hash_f6527ca9");
     self endon(#"hash_f6527ca9");
     self endon(#"death");
@@ -146,11 +146,11 @@ function private function_ec393181() {
     self endon(#"death");
     for (;;) {
         if (isdefined(self.ignoreall) && self.ignoreall) {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         if (is_target_valid(self.parasiteenemy)) {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         target = function_d3d4f77c();
@@ -162,7 +162,7 @@ function private function_ec393181() {
             self setlookatent(self.parasiteenemy);
             self setturrettargetent(self.parasiteenemy);
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -178,7 +178,7 @@ function function_41ba5057() {
     blackboard::registerblackboardattribute(self, "_parasite_firing_rate", "slow", &function_639ba96b);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("fast");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
     self.health = self.healthdefault;
@@ -239,7 +239,7 @@ function state_death_update(params) {
     self playsound("zmb_parasite_explo");
     self util::waittill_notify_or_timeout("veh_predictedcollision", 4);
     self clientfield::set("parasite_secondary_deathfx", 1);
-    wait(0.2);
+    wait 0.2;
     self delete();
 }
 
@@ -273,11 +273,11 @@ function state_combat_update(params) {
             self setspeed(self.settings.defaultmovespeed);
         }
         if (isdefined(self.inpain) && self.inpain) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (!isdefined(self.parasiteenemy)) {
-            wait(0.25);
+            wait 0.25;
             continue;
         }
         if (self.goalforced) {
@@ -302,7 +302,7 @@ function state_combat_update(params) {
                 self playsound("zmb_vocals_parasite_juke");
                 self vehicle_ai::waittill_pathing_done(5);
             } else {
-                wait(0.1);
+                wait 0.1;
             }
         } else if (!(isdefined(returndata["centerOnNav"]) && returndata["centerOnNav"])) {
             if (!isdefined(self.stucktime)) {
@@ -343,11 +343,11 @@ function function_be283ba2(var_1fc3b33b) {
         self asmrequestsubstate("locomotion@movement");
         self clientfield::set("parasite_tell_fx", 0);
         if (!var_1fc3b33b) {
-            wait(randomfloatrange(0.25, 0.5));
+            wait randomfloatrange(0.25, 0.5);
         }
         return;
     }
-    wait(randomfloatrange(1, 2));
+    wait randomfloatrange(1, 2);
 }
 
 // Namespace parasite
@@ -382,7 +382,7 @@ function getnextmoveposition_tactical() {
             if (sighttracepassed(self.origin, point.origin, 0, undefined)) {
                 trace_count++;
                 if (trace_count > 3) {
-                    wait(0.05);
+                    wait 0.05;
                     trace_count = 0;
                 }
                 if (!bullettracepassed(self.origin, point.origin, 0, self)) {
@@ -396,14 +396,14 @@ function getnextmoveposition_tactical() {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["fast"] = randomfloatrange(0, randomness);
+            point._scoredebug["<dev string:x3e>"] = randomfloatrange(0, randomness);
         #/
         point.score += randomfloatrange(0, randomness);
         /#
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["fast"] = point.distawayfromengagementarea * -1;
+            point._scoredebug["<dev string:x45>"] = point.distawayfromengagementarea * -1;
         #/
         point.score += point.distawayfromengagementarea * -1;
         distfrompreferredheight = abs(point.origin[2] - goalheight);
@@ -413,7 +413,7 @@ function getnextmoveposition_tactical() {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["fast"] = heightscore * -1;
+                point._scoredebug["<dev string:x54>"] = heightscore * -1;
             #/
             point.score += heightscore * -1;
         }
@@ -424,7 +424,7 @@ function getnextmoveposition_tactical() {
     }
     self vehicle_ai::positionquery_debugscores(queryresult);
     /#
-        if (isdefined(getdvarint("fast")) && getdvarint("fast")) {
+        if (isdefined(getdvarint("<dev string:x5b>")) && getdvarint("<dev string:x5b>")) {
             recordline(self.origin, best_point.origin, (0.3, 1, 0));
             recordline(self.origin, self.parasiteenemy.origin, (1, 0, 0.4));
         }
@@ -467,7 +467,7 @@ function function_efac5bc3() {
             if (sighttracepassed(self.origin, point.origin, 0, undefined)) {
                 trace_count++;
                 if (trace_count > 3) {
-                    wait(0.05);
+                    wait 0.05;
                     trace_count = 0;
                 }
                 if (!bullettracepassed(self.origin, point.origin, 0, self)) {
@@ -481,14 +481,14 @@ function function_efac5bc3() {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["fast"] = randomfloatrange(0, randomness);
+            point._scoredebug["<dev string:x3e>"] = randomfloatrange(0, randomness);
         #/
         point.score += randomfloatrange(0, randomness);
         /#
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["fast"] = point.distawayfromengagementarea * -1;
+            point._scoredebug["<dev string:x45>"] = point.distawayfromengagementarea * -1;
         #/
         point.score += point.distawayfromengagementarea * -1;
         distfrompreferredheight = abs(point.origin[2] - goalheight);
@@ -498,7 +498,7 @@ function function_efac5bc3() {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["fast"] = heightscore * -1;
+                point._scoredebug["<dev string:x54>"] = heightscore * -1;
             #/
             point.score += heightscore * -1;
         }
@@ -509,7 +509,7 @@ function function_efac5bc3() {
     }
     self vehicle_ai::positionquery_debugscores(queryresult);
     /#
-        if (isdefined(getdvarint("fast")) && getdvarint("fast")) {
+        if (isdefined(getdvarint("<dev string:x5b>")) && getdvarint("<dev string:x5b>")) {
             recordline(self.origin, best_point.origin, (0.3, 1, 0));
             recordline(self.origin, self.parasiteenemy.origin, (1, 0, 0.4));
         }
@@ -529,16 +529,16 @@ function path_update_interrupt() {
     self endon(#"change_state");
     self endon(#"near_goal");
     self endon(#"reached_end_node");
-    wait(1);
+    wait 1;
     while (true) {
         if (isdefined(self.current_pathto_pos)) {
             if (distance2dsquared(self.current_pathto_pos, self.goalpos) > self.goalradius * self.goalradius) {
-                wait(0.2);
+                wait 0.2;
                 self.var_e62301a4 = 1;
                 self notify(#"near_goal");
             }
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 
@@ -555,7 +555,7 @@ function drone_pain_for_time(time, stablizeparam, restorelookpoint) {
         while (gettime() < self.painstarttime + time * 1000) {
             self setvehvelocity(self.velocity * stablizeparam);
             self setangularvelocity(self getangularvelocity() * stablizeparam);
-            wait(0.1);
+            wait 0.1;
         }
         if (isdefined(restorelookpoint)) {
             restorelookent = spawn("script_model", restorelookpoint);
@@ -563,7 +563,7 @@ function drone_pain_for_time(time, stablizeparam, restorelookpoint) {
             self clearlookatent();
             self setlookatent(restorelookent);
             self setturrettargetent(restorelookent);
-            wait(1.5);
+            wait 1.5;
             self clearlookatent();
             self clearturrettarget();
             restorelookent delete();

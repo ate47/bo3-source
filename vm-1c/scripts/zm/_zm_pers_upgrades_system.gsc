@@ -18,7 +18,7 @@ function function_8562a0f6(name, upgrade_active_func, stat_name, stat_desired_va
         level.var_2cd32f16 = [];
     }
     if (isdefined(level.var_d830ee5f[name])) {
-        assert(0, "<unknown string>" + name);
+        assert(0, "<dev string:x28>" + name);
     }
     level.var_2cd32f16[level.var_2cd32f16.size] = name;
     level.var_d830ee5f[name] = spawnstruct();
@@ -40,7 +40,7 @@ function function_8562a0f6(name, upgrade_active_func, stat_name, stat_desired_va
 // Size: 0xc2
 function function_f17b9229(name, stat_name, stat_desired_value) {
     if (!isdefined(level.var_d830ee5f[name])) {
-        assert(0, name + "<unknown string>");
+        assert(0, name + "<dev string:x5e>");
     }
     var_6ab5b83a = level.var_d830ee5f[name].var_e45eb34e.size;
     level.var_d830ee5f[name].var_e45eb34e[var_6ab5b83a] = stat_name;
@@ -100,7 +100,7 @@ function function_4f17af50() {
                                 level thread zm::disable_end_game_intermission(1.5);
                             }
                             /#
-                                player iprintlnbold("<unknown string>");
+                                player iprintlnbold("<dev string:x8b>");
                             #/
                             if (isdefined(var_3ed63b1c.upgrade_active_func)) {
                                 player thread [[ var_3ed63b1c.upgrade_active_func ]]();
@@ -112,7 +112,7 @@ function function_4f17af50() {
                                 player playsoundtoplayer("evt_player_downgrade", player);
                             }
                             /#
-                                player iprintlnbold("<unknown string>");
+                                player iprintlnbold("<dev string:x95>");
                             #/
                         }
                         player.var_698f7e[level.var_2cd32f16[var_76226b65]] = 0;
@@ -122,7 +122,7 @@ function function_4f17af50() {
                 player.stats_this_frame = [];
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

@@ -36,12 +36,12 @@ function function_9c1fc2fd(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         load::function_73adcefc();
         level flag::init("hq_decon_deactivated");
-        namespace_8e9083ff::function_da579a5d(str_objective, 0);
+        zurich_util::function_da579a5d(str_objective, 0);
         level.var_3d556bcd.goalradius = 16;
         level thread namespace_b73b0f52::function_2950b33d();
-        level thread namespace_8e9083ff::function_2361541e("hq");
-        level scene::add_scene_func("cin_gen_ambient_raven_idle_eating_raven", &namespace_8e9083ff::function_e547724d, "init");
-        level scene::add_scene_func("cin_gen_ambient_raven_idle", &namespace_8e9083ff::function_e547724d, "init");
+        level thread zurich_util::function_2361541e("hq");
+        level scene::add_scene_func("cin_gen_ambient_raven_idle_eating_raven", &zurich_util::function_e547724d, "init");
+        level scene::add_scene_func("cin_gen_ambient_raven_idle", &zurich_util::function_e547724d, "init");
         level thread namespace_b73b0f52::function_6e7da34e();
     }
     util::function_d8eaed3d(2);
@@ -65,7 +65,7 @@ function function_9c1fc2fd(str_objective, var_74cd64bc) {
     level thread function_86f33bf();
     level waittill(#"hash_f0ca35d0");
     a_ai_enemies = getaiteamarray();
-    array::thread_all(a_ai_enemies, &namespace_8e9083ff::function_48463818);
+    array::thread_all(a_ai_enemies, &zurich_util::function_48463818);
     level waittill(#"hash_2bcc2145");
     level thread function_bef4fc91();
     level namespace_e0fbc9fc::function_f62d8d36();
@@ -78,7 +78,7 @@ function function_9c1fc2fd(str_objective, var_74cd64bc) {
 // Checksum 0x22c29899, Offset: 0xd18
 // Size: 0x53
 function function_1a4dfaaa(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
-    namespace_8e9083ff::function_4d032f25(0);
+    zurich_util::function_4d032f25(0);
     if (var_74cd64bc) {
         objectives::complete("cp_level_zurich_use_terminal_obj");
     }
@@ -106,7 +106,7 @@ function function_22dc4b59() {
     self util::magic_bullet_shield();
     trigger::wait_till("trig_look_sacrifice_lab_int");
     self thread function_52cdaa83();
-    wait(3);
+    wait 3;
     self util::stop_magic_bullet_shield();
     level flag::wait_till("flag_kane_sacrifice_door_closed");
     self delete();
@@ -154,7 +154,7 @@ function function_a50fba17() {
     self.health = -106;
     self util::magic_bullet_shield();
     trigger::wait_till("trig_look_sacrifice_lab_int");
-    wait(3);
+    wait 3;
     self util::stop_magic_bullet_shield();
     level waittill(#"hash_ae3bd4e0");
     self thread function_71b157ad();
@@ -170,7 +170,7 @@ function function_a19013c7() {
     self thread function_f5b0e3d0();
     self util::magic_bullet_shield();
     trigger::wait_till("trig_look_sacrifice_lab_int");
-    wait(3);
+    wait 3;
     self util::stop_magic_bullet_shield();
     level waittill(#"hash_350e4134");
     self thread function_71b157ad();
@@ -249,7 +249,7 @@ function function_3769aa25(var_74cd64bc) {
         level flag::wait_till("flag_decon_door_open");
         trigger::use("trig_color_kane_lab_interior");
     } else {
-        level thread namespace_8e9083ff::function_c049667c(0);
+        level thread zurich_util::function_c049667c(0);
     }
     trigger::wait_till("trig_move_kane_into_sacrifice_igc");
     self ai::set_ignoreall(1);
@@ -269,7 +269,7 @@ function function_a174da35(e_player) {
     scene::add_scene_func("cin_zur_06_sacrifice_3rd_sh110", &function_f57ae209, "play");
     scene::add_scene_func("cin_zur_06_sacrifice_3rd_sh150", &function_aa30b938, "done");
     level scene::init("cin_zur_06_sacrifice_3rd_sh010", e_player);
-    wait(0.5);
+    wait 0.5;
     level flag::set("flag_start_kane_sacrifice_igc");
     level thread function_6bd697de(e_player);
     level thread function_c22d22c5();
@@ -334,7 +334,7 @@ function function_ed9e0a0b(a_ents) {
     util::function_93831e79("sacrifice_teleport_spot");
     level flag::set("hq_decon_deactivated");
     level clientfield::set("set_exposure_bank", 0);
-    self thread namespace_8e9083ff::function_9f90bc0f(a_ents, "hq_ambient_cleanup");
+    self thread zurich_util::function_9f90bc0f(a_ents, "hq_ambient_cleanup");
 }
 
 // Namespace namespace_68404a06
@@ -372,22 +372,22 @@ function function_aa30b938(a_ents) {
 // Checksum 0xe22a822d, Offset: 0x1930
 // Size: 0xb9
 function function_f6f2b542() {
-    level endon(#"hash_29f9f0fd");
-    wait(2);
+    level endon(#"flag_kane_sacrifice_door_closed");
+    wait 2;
     if (!isdefined(level.var_56c8a612)) {
         level.var_56c8a612 = 0;
     }
-    level thread namespace_8e9083ff::function_33ec653f("hq_hallway_ally_fake_spawn_manager", undefined, 0.25, &function_22dc4b59);
+    level thread zurich_util::function_33ec653f("hq_hallway_ally_fake_spawn_manager", undefined, 0.25, &function_22dc4b59);
     if (!isdefined(level.var_286ef070)) {
         level.var_286ef070 = 0;
     }
     while (level.var_56c8a612 < 4) {
         if (level.var_286ef070 > 3) {
-            wait(1.5);
+            wait 1.5;
             continue;
         }
-        level thread namespace_8e9083ff::function_33ec653f("hq_hallway_enemy_fake_spawn_manager", undefined, 2, &function_bebe324d);
-        wait(14);
+        level thread zurich_util::function_33ec653f("hq_hallway_enemy_fake_spawn_manager", undefined, 2, &function_bebe324d);
+        wait 14;
     }
 }
 
@@ -399,8 +399,8 @@ function function_87a50dde() {
     level thread function_1d5e51b();
     level.var_7f489288 = 0;
     level.var_a8bbb2e4 = 0;
-    level thread namespace_8e9083ff::function_33ec653f("hq_labs_enemy_fake_spawn_manager", undefined, 0.15, &function_a50fba17);
-    level thread namespace_8e9083ff::function_33ec653f("hq_labs_ally_fake_spawn_manager", undefined, 0.15, &function_a19013c7);
+    level thread zurich_util::function_33ec653f("hq_labs_enemy_fake_spawn_manager", undefined, 0.15, &function_a50fba17);
+    level thread zurich_util::function_33ec653f("hq_labs_ally_fake_spawn_manager", undefined, 0.15, &function_a19013c7);
 }
 
 // Namespace namespace_68404a06
@@ -409,7 +409,7 @@ function function_87a50dde() {
 // Size: 0x82
 function function_71b157ad() {
     self endon(#"death");
-    wait(randomfloatrange(1.5, 3.5));
+    wait randomfloatrange(1.5, 3.5);
     self ai::set_ignoreall(1);
     self clearforcedgoal();
     self ai::set_goal("lab_fight_end_node", "targetname", 1);
@@ -473,7 +473,7 @@ function function_d3eae9b7() {
     n_open_time = 3;
     e_clip notsolid();
     mdl_door moveto(mdl_door.v_end, n_open_time);
-    wait(n_open_time / 2);
+    wait n_open_time / 2;
 }
 
 // Namespace namespace_68404a06
@@ -485,7 +485,7 @@ function function_a87436d9() {
     e_clip = getent("sacrifice_room_entrance_door_clip", "targetname");
     trigger::wait_till("trig_enter_kane_sacrifice");
     e_clip solid();
-    wait(0.5);
+    wait 0.5;
     mdl_door moveto(mdl_door.v_start, 0.5);
     level clientfield::set("hq_amb", 0);
     level flag::set("flag_kane_sacrifice_door_closed");
@@ -513,7 +513,7 @@ function function_bef4fc91() {
     n_open_time = 3;
     mdl_door moveto(mdl_door.v_end, n_open_time);
     mdl_door playsound("evt_zur_sac_sh150_door");
-    wait(n_open_time / 2);
+    wait n_open_time / 2;
 }
 
 // Namespace namespace_68404a06
@@ -540,10 +540,10 @@ function function_1dc45e88() {
 // Size: 0xa2
 function function_a660f4ee() {
     trigger::wait_till("trig_enter_kane_sacrifice");
-    level thread namespace_8e9083ff::function_11b424e5(1);
-    array::thread_all(level.players, &namespace_8e9083ff::function_7be427b1, 5);
+    level thread zurich_util::function_11b424e5(1);
+    array::thread_all(level.players, &zurich_util::function_7be427b1, 5);
     level waittill(#"hash_71da81fb");
     array::notify_all(level.players, "stop_radiation_monitor");
-    array::thread_all(level.players, &namespace_8e9083ff::function_61bb5738);
+    array::thread_all(level.players, &zurich_util::function_61bb5738);
 }
 

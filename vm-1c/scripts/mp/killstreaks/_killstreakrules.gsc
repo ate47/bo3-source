@@ -174,7 +174,7 @@ function addkillstreaktorule(killstreak, rule, counttowards, checkagainst, inven
 // Checksum 0x73a5c05d, Offset: 0x18f8
 // Size: 0x3a0
 function killstreakstart(hardpointtype, team, hacked, displayteammessage) {
-    assert(isdefined(team), "drone_strike");
+    assert(isdefined(team), "<dev string:x28>");
     if (self iskillstreakallowed(hardpointtype, team) == 0) {
         return -1;
     }
@@ -219,7 +219,7 @@ function killstreakstart(hardpointtype, team, hacked, displayteammessage) {
     level.matchrecorderkillstreakkills[killstreak_id] = 0;
     level.killstreaks_triggered[killstreak_id] = killstreak_data;
     /#
-        killstreak_debug_text("drone_strike" + hardpointtype + "drone_strike" + team + "drone_strike" + killstreak_id);
+        killstreak_debug_text("<dev string:x41>" + hardpointtype + "<dev string:x56>" + team + "<dev string:x62>" + killstreak_id);
     #/
     return killstreak_id;
 }
@@ -275,14 +275,14 @@ function recordkillstreakend(recordstreakindex, totalkills) {
 // Checksum 0x4aecaf41, Offset: 0x1e88
 // Size: 0x4a4
 function killstreakstop(hardpointtype, team, id) {
-    assert(isdefined(team), "drone_strike");
+    assert(isdefined(team), "<dev string:x28>");
     assert(isdefined(hardpointtype));
     /#
-        idstr = "drone_strike";
+        idstr = "<dev string:x68>";
         if (isdefined(id)) {
             idstr = id;
         }
-        killstreak_debug_text("drone_strike" + hardpointtype + "drone_strike" + team + "drone_strike" + idstr);
+        killstreak_debug_text("<dev string:x72>" + hardpointtype + "<dev string:x56>" + team + "<dev string:x62>" + idstr);
     #/
     keys = getarraykeys(level.killstreaktype[hardpointtype]);
     foreach (key in keys) {
@@ -326,7 +326,7 @@ function killstreakstop(hardpointtype, team, id) {
 // Checksum 0x7910a221, Offset: 0x2338
 // Size: 0x498
 function iskillstreakallowed(hardpointtype, team) {
-    assert(isdefined(team), "drone_strike");
+    assert(isdefined(team), "<dev string:x28>");
     assert(isdefined(hardpointtype));
     if (self killstreaks::function_124328c2()) {
         return 0;
@@ -340,7 +340,7 @@ function iskillstreakallowed(hardpointtype, team) {
         if (level.killstreakrules[key].max != 0) {
             if (level.killstreakrules[key].cur >= level.killstreakrules[key].max) {
                 /#
-                    killstreak_debug_text("drone_strike" + key + "drone_strike");
+                    killstreak_debug_text("<dev string:x87>" + key + "<dev string:x91>");
                 #/
                 isallowed = 0;
                 break;
@@ -353,7 +353,7 @@ function iskillstreakallowed(hardpointtype, team) {
             if (level.killstreakrules[key].curteam[team] >= level.killstreakrules[key].maxperteam) {
                 isallowed = 0;
                 /#
-                    killstreak_debug_text("drone_strike" + key + "drone_strike");
+                    killstreak_debug_text("<dev string:x87>" + key + "<dev string:x9a>");
                 #/
                 break;
             }
@@ -361,14 +361,14 @@ function iskillstreakallowed(hardpointtype, team) {
     }
     if (isdefined(self.laststand) && self.laststand) {
         /#
-            killstreak_debug_text("drone_strike");
+            killstreak_debug_text("<dev string:xa0>");
         #/
         isallowed = 0;
     }
     isemped = 0;
     if (self isempjammed()) {
         /#
-            killstreak_debug_text("drone_strike");
+            killstreak_debug_text("<dev string:xad>");
         #/
         isallowed = 0;
         isemped = 1;
@@ -399,14 +399,14 @@ function iskillstreakallowed(hardpointtype, team) {
 // Size: 0xb4
 function killstreak_debug_text(text) {
     /#
-        level.killstreak_rule_debug = getdvarint("drone_strike", 0);
+        level.killstreak_rule_debug = getdvarint("<dev string:xb8>", 0);
         if (isdefined(level.killstreak_rule_debug)) {
             if (level.killstreak_rule_debug == 1) {
-                iprintln("drone_strike" + text + "drone_strike");
+                iprintln("<dev string:xd2>" + text + "<dev string:xd8>");
                 return;
             }
             if (level.killstreak_rule_debug == 2) {
-                iprintlnbold("drone_strike" + text);
+                iprintlnbold("<dev string:xd2>" + text);
             }
         }
     #/

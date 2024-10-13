@@ -27,89 +27,89 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_d7c0ce12;
+#namespace zm_tomb_utility;
 
 /#
 
-    // Namespace namespace_d7c0ce12
+    // Namespace zm_tomb_utility
     // Params 0, eflags: 0x1 linked
     // Checksum 0x2a9d9605, Offset: 0x9c0
     // Size: 0x894
     function setup_devgui() {
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-        execdevgui("pre_init_zombie_spawn_func");
+        setdvar("<dev string:x28>", "<dev string:x3a>");
+        setdvar("<dev string:x3e>", "<dev string:x3a>");
+        setdvar("<dev string:x50>", "<dev string:x3a>");
+        setdvar("<dev string:x65>", "<dev string:x3a>");
+        setdvar("<dev string:x7e>", "<dev string:x3a>");
+        setdvar("<dev string:x8e>", "<dev string:x3a>");
+        setdvar("<dev string:x9d>", "<dev string:x3a>");
+        setdvar("<dev string:xad>", "<dev string:x3a>");
+        setdvar("<dev string:xc4>", "<dev string:x3a>");
+        setdvar("<dev string:xdb>", "<dev string:x3a>");
+        setdvar("<dev string:xf2>", "<dev string:x3a>");
+        setdvar("<dev string:x10a>", "<dev string:x3a>");
+        setdvar("<dev string:x122>", "<dev string:x3a>");
+        setdvar("<dev string:x13a>", "<dev string:x3a>");
+        setdvar("<dev string:x157>", "<dev string:x3a>");
+        setdvar("<dev string:x174>", "<dev string:x3a>");
+        setdvar("<dev string:x191>", "<dev string:x3a>");
+        setdvar("<dev string:x1aa>", "<dev string:x3a>");
+        setdvar("<dev string:x1c3>", "<dev string:x3a>");
+        setdvar("<dev string:x1dc>", "<dev string:x3a>");
+        setdvar("<dev string:x1f0>", "<dev string:x3a>");
+        setdvar("<dev string:x204>", "<dev string:x3a>");
+        setdvar("<dev string:x218>", "<dev string:x3a>");
+        setdvar("<dev string:x22c>", "<dev string:x3a>");
+        setdvar("<dev string:x240>", "<dev string:x3a>");
+        setdvar("<dev string:x254>", "<dev string:x3a>");
+        setdvar("<dev string:x268>", "<dev string:x3a>");
+        setdvar("<dev string:x27c>", "<dev string:x3a>");
+        setdvar("<dev string:x293>", "<dev string:x2a7>");
+        setdvar("<dev string:x2a9>", "<dev string:x2a7>");
+        setdvar("<dev string:x2bd>", "<dev string:x2a7>");
+        setdvar("<dev string:x2d1>", "<dev string:x2a7>");
+        execdevgui("<dev string:x2e9>");
         zm_devgui::add_custom_devgui_callback(&function_eac4a389);
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
-        adddebugcommand("pre_init_zombie_spawn_func");
+        adddebugcommand("<dev string:x2ff>");
+        adddebugcommand("<dev string:x34a>");
+        adddebugcommand("<dev string:x395>");
+        adddebugcommand("<dev string:x3e0>");
+        adddebugcommand("<dev string:x42b>");
+        adddebugcommand("<dev string:x476>");
+        adddebugcommand("<dev string:x4c1>");
+        adddebugcommand("<dev string:x50c>");
+        adddebugcommand("<dev string:x557>");
+        adddebugcommand("<dev string:x5a2>");
+        adddebugcommand("<dev string:x5ed>");
+        adddebugcommand("<dev string:x638>");
+        adddebugcommand("<dev string:x683>");
+        adddebugcommand("<dev string:x6c1>");
+        adddebugcommand("<dev string:x70e>");
+        adddebugcommand("<dev string:x758>");
+        adddebugcommand("<dev string:x7a3>");
+        adddebugcommand("<dev string:x7f9>");
+        adddebugcommand("<dev string:x83f>");
+        adddebugcommand("<dev string:x8a4>");
+        adddebugcommand("<dev string:x909>");
+        adddebugcommand("<dev string:x96d>");
+        adddebugcommand("<dev string:x9d0>");
+        adddebugcommand("<dev string:xa39>");
+        adddebugcommand("<dev string:xa9c>");
+        adddebugcommand("<dev string:xb0a>");
+        adddebugcommand("<dev string:xb79>");
+        adddebugcommand("<dev string:xbe7>");
+        adddebugcommand("<dev string:xc4b>");
+        adddebugcommand("<dev string:xcb5>");
+        adddebugcommand("<dev string:xd19>");
+        adddebugcommand("<dev string:xd62>");
+        adddebugcommand("<dev string:xdad>");
+        adddebugcommand("<dev string:xdf8>");
+        adddebugcommand("<dev string:xe43>");
+        adddebugcommand("<dev string:xe8e>");
+        adddebugcommand("<dev string:xed9>");
+        adddebugcommand("<dev string:xf24>");
+        adddebugcommand("<dev string:xf6f>");
+        adddebugcommand("<dev string:xfba>");
         level thread function_90960539();
         level thread function_3f2c9a81();
         level thread function_d88b52e6();
@@ -118,77 +118,77 @@
         level thread function_23eb2509();
     }
 
-    // Namespace namespace_d7c0ce12
+    // Namespace zm_tomb_utility
     // Params 1, eflags: 0x1 linked
     // Checksum 0x4a7558ab, Offset: 0x1260
     // Size: 0x14a
     function function_eac4a389(cmd) {
-        var_98be8724 = strtok(cmd, "pre_init_zombie_spawn_func");
+        var_98be8724 = strtok(cmd, "<dev string:x100f>");
         switch (var_98be8724[0]) {
-        case 8:
-            level notify(#"hash_387ef029");
+        case "<dev string:x1011>":
+            level notify(#"force_recapture_start");
             break;
-        case 8:
-        case 8:
-        case 8:
-        case 8:
-        case 8:
-        case 8:
+        case "<dev string:x1027>":
+        case "<dev string:x103c>":
+        case "<dev string:x1051>":
+        case "<dev string:x1066>":
+        case "<dev string:x107b>":
+        case "<dev string:x1090>":
             level notify(#"hash_bbcb5d8c", int(getsubstr(var_98be8724[0], 19)));
             break;
-        case 8:
-        case 8:
-        case 8:
-        case 8:
-        case 8:
-        case 8:
+        case "<dev string:x10a5>":
+        case "<dev string:x10bc>":
+        case "<dev string:x10d3>":
+        case "<dev string:x10ea>":
+        case "<dev string:x1101>":
+        case "<dev string:x1118>":
             level notify(#"hash_d9f2eac9", int(getsubstr(var_98be8724[0], 21)));
             break;
         }
     }
 
-    // Namespace namespace_d7c0ce12
+    // Namespace zm_tomb_utility
     // Params 0, eflags: 0x1 linked
     // Checksum 0xcf051245, Offset: 0x13b8
     // Size: 0x138
     function function_23eb2509() {
         while (true) {
-            if (getdvarstring("pre_init_zombie_spawn_func") != "pre_init_zombie_spawn_func") {
-                n_zone = int(getdvarstring("pre_init_zombie_spawn_func"));
+            if (getdvarstring("<dev string:x293>") != "<dev string:x2a7>") {
+                n_zone = int(getdvarstring("<dev string:x293>"));
                 level notify(#"hash_bbcb5d8c", n_zone);
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+                setdvar("<dev string:x293>", "<dev string:x2a7>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") != "pre_init_zombie_spawn_func") {
-                n_zone = int(getdvarstring("pre_init_zombie_spawn_func"));
+            if (getdvarstring("<dev string:x2a9>") != "<dev string:x2a7>") {
+                n_zone = int(getdvarstring("<dev string:x2a9>"));
                 level notify(#"hash_d9f2eac9", n_zone);
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+                setdvar("<dev string:x2a9>", "<dev string:x2a7>");
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 
-    // Namespace namespace_d7c0ce12
+    // Namespace zm_tomb_utility
     // Params 0, eflags: 0x1 linked
     // Checksum 0x4a3631ca, Offset: 0x14f8
     // Size: 0x78
     function function_6f935c89() {
         while (true) {
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                namespace_cdc4d06c::function_b0debead();
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x9d>") == "<dev string:x112f>") {
+                zm_tomb_capture_zones::function_b0debead();
+                setdvar("<dev string:x9d>", "<dev string:x3a>");
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 
-    // Namespace namespace_d7c0ce12
+    // Namespace zm_tomb_utility
     // Params 0, eflags: 0x1 linked
     // Checksum 0xabe7d99b, Offset: 0x1578
     // Size: 0x1b6
     function function_4e88f38d() {
-        cmd = "pre_init_zombie_spawn_func";
+        cmd = "<dev string:x1132>";
         while (true) {
-            wait(0.25);
+            wait 0.25;
             if (!isdefined(level.zombie_devgui_gun) || level.zombie_devgui_gun != cmd) {
                 a_players = getplayers();
                 foreach (player in a_players) {
@@ -207,211 +207,211 @@
         }
     }
 
-    // Namespace namespace_d7c0ce12
+    // Namespace zm_tomb_utility
     // Params 0, eflags: 0x1 linked
     // Checksum 0xec0c90ca, Offset: 0x1738
     // Size: 0xcb8
     function function_d88b52e6() {
         while (true) {
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x1dc>") == "<dev string:x112f>" || getdvarstring("<dev string:x1f0>") == "<dev string:x112f>" || getdvarstring("<dev string:x204>") == "<dev string:x112f>" || getdvarstring("<dev string:x218>") == "<dev string:x112f>" || getdvarstring("<dev string:x22c>") == "<dev string:x112f>" || getdvarstring("<dev string:x240>") == "<dev string:x112f>" || getdvarstring("<dev string:x254>") == "<dev string:x112f>" || getdvarstring("<dev string:x268>") == "<dev string:x112f>" || getdvarstring("<dev string:x27c>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1133>");
+                level flag::set("<dev string:x1149>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-                iprintlnbold("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x1dc>") == "<dev string:x112f>") {
+                setdvar("<dev string:x1dc>", "<dev string:x3a>");
+                iprintlnbold("<dev string:x115c>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x1f0>") == "<dev string:x112f>" || getdvarstring("<dev string:x204>") == "<dev string:x112f>" || getdvarstring("<dev string:x218>") == "<dev string:x112f>" || getdvarstring("<dev string:x22c>") == "<dev string:x112f>" || getdvarstring("<dev string:x240>") == "<dev string:x112f>" || getdvarstring("<dev string:x254>") == "<dev string:x112f>" || getdvarstring("<dev string:x268>") == "<dev string:x112f>" || getdvarstring("<dev string:x27c>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1177>");
                 level waittill(#"hash_e0898539");
                 level waittill(#"hash_e6967d42");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-                iprintlnbold("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x1f0>") == "<dev string:x112f>") {
+                setdvar("<dev string:x1f0>", "<dev string:x3a>");
+                iprintlnbold("<dev string:x118e>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x204>") == "<dev string:x112f>" || getdvarstring("<dev string:x218>") == "<dev string:x112f>" || getdvarstring("<dev string:x22c>") == "<dev string:x112f>" || getdvarstring("<dev string:x240>") == "<dev string:x112f>" || getdvarstring("<dev string:x254>") == "<dev string:x112f>" || getdvarstring("<dev string:x268>") == "<dev string:x112f>" || getdvarstring("<dev string:x27c>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x11a9>");
                 level waittill(#"hash_dc144054");
                 level waittill(#"hash_4c5352e3");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-                iprintlnbold("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x204>") == "<dev string:x112f>") {
+                setdvar("<dev string:x204>", "<dev string:x3a>");
+                iprintlnbold("<dev string:x11be>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                var_5e72b36d = getent("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x218>") == "<dev string:x112f>" || getdvarstring("<dev string:x22c>") == "<dev string:x112f>" || getdvarstring("<dev string:x240>") == "<dev string:x112f>" || getdvarstring("<dev string:x254>") == "<dev string:x112f>" || getdvarstring("<dev string:x268>") == "<dev string:x112f>" || getdvarstring("<dev string:x27c>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x11d9>");
+                var_5e72b36d = getent("<dev string:x11f4>", "<dev string:x120c>");
                 if (isdefined(var_5e72b36d)) {
                     var_5e72b36d delete();
                 }
-                var_54571dd0 = getent("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+                var_54571dd0 = getent("<dev string:x1217>", "<dev string:x120c>");
                 if (isdefined(var_54571dd0)) {
                     var_54571dd0 delete();
                 }
                 level waittill(#"hash_972e03ef");
                 level waittill(#"hash_7bcf8600");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-                iprintlnbold("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x218>") == "<dev string:x112f>") {
+                setdvar("<dev string:x218>", "<dev string:x3a>");
+                iprintlnbold("<dev string:x1228>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x22c>") == "<dev string:x112f>" || getdvarstring("<dev string:x240>") == "<dev string:x112f>" || getdvarstring("<dev string:x254>") == "<dev string:x112f>" || getdvarstring("<dev string:x268>") == "<dev string:x112f>" || getdvarstring("<dev string:x27c>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1243>");
+                level flag::set("<dev string:x1259>");
                 level waittill(#"hash_f397975a");
                 level waittill(#"hash_4f3f0441");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-                iprintlnbold("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x22c>") == "<dev string:x112f>") {
+                setdvar("<dev string:x22c>", "<dev string:x3a>");
+                iprintlnbold("<dev string:x1278>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x240>") == "<dev string:x112f>" || getdvarstring("<dev string:x254>") == "<dev string:x112f>" || getdvarstring("<dev string:x268>") == "<dev string:x112f>" || getdvarstring("<dev string:x27c>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1293>");
                 level waittill(#"hash_5fff9bfd");
                 level waittill(#"hash_8b0d379e");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-                iprintlnbold("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x240>") == "<dev string:x112f>") {
+                setdvar("<dev string:x240>", "<dev string:x3a>");
+                iprintlnbold("<dev string:x12ac>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x254>") == "<dev string:x112f>" || getdvarstring("<dev string:x268>") == "<dev string:x112f>" || getdvarstring("<dev string:x27c>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x12c7>");
                 level waittill(#"hash_9130e1d8");
                 level waittill(#"hash_ee01811f");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-                iprintlnbold("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x254>") == "<dev string:x112f>") {
+                setdvar("<dev string:x254>", "<dev string:x3a>");
+                iprintlnbold("<dev string:x12e5>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x268>") == "<dev string:x112f>" || getdvarstring("<dev string:x27c>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1300>");
                 level waittill(#"hash_26f53c83");
                 level waittill(#"hash_7f00c03c");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-                iprintlnbold("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x268>") == "<dev string:x112f>") {
+                setdvar("<dev string:x268>", "<dev string:x3a>");
+                iprintlnbold("<dev string:x1312>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x27c>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x132d>");
                 level waittill(#"hash_738ebd3d");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+                setdvar("<dev string:x27c>", "<dev string:x3a>");
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 
-    // Namespace namespace_d7c0ce12
+    // Namespace zm_tomb_utility
     // Params 0, eflags: 0x1 linked
     // Checksum 0xf65521e3, Offset: 0x23f8
     // Size: 0xa18
     function function_3f2c9a81() {
         while (true) {
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func" || getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-                level notify(#"hash_ccaad592");
+            if (getdvarstring("<dev string:x28>") == "<dev string:x112f>" || getdvarstring("<dev string:x3e>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1342>");
+                level flag::set("<dev string:x1358>");
+                level flag::set("<dev string:x136e>");
+                level flag::set("<dev string:x1389>");
+                level flag::set("<dev string:x13a0>");
+                setdvar("<dev string:x28>", "<dev string:x3a>");
+                level notify(#"open_all_gramophone_doors");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x7e>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x7e>");
+                setdvar("<dev string:x7e>", "<dev string:x3a>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x3e>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x13b5>");
+                level flag::set("<dev string:x13cb>");
+                level flag::set("<dev string:x13e1>");
+                level flag::set("<dev string:x13fc>");
+                level flag::set("<dev string:x13a0>");
+                level flag::set("<dev string:x1413>");
+                level flag::set("<dev string:x142e>");
+                level flag::set("<dev string:x144b>");
+                level flag::set("<dev string:x1467>");
+                setdvar("<dev string:x3e>", "<dev string:x3a>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:xad>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1342>");
+                setdvar("<dev string:xad>", "<dev string:x3a>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:xc4>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1342>");
+                level flag::set("<dev string:x13b5>");
+                setdvar("<dev string:xc4>", "<dev string:x3a>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:xdb>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1342>");
+                level flag::set("<dev string:x13b5>");
+                level flag::set("<dev string:x1413>");
+                setdvar("<dev string:xdb>", "<dev string:x3a>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:xf2>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1389>");
+                setdvar("<dev string:xf2>", "<dev string:x3a>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x10a>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1389>");
+                level flag::set("<dev string:x13fc>");
+                setdvar("<dev string:x10a>", "<dev string:x3a>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x122>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1389>");
+                level flag::set("<dev string:x13fc>");
+                level flag::set("<dev string:x144b>");
+                setdvar("<dev string:x122>", "<dev string:x3a>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x13a>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x136e>");
+                setdvar("<dev string:x13a>", "<dev string:x3a>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x157>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x136e>");
+                level flag::set("<dev string:x13e1>");
+                setdvar("<dev string:x157>", "<dev string:x3a>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x174>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x136e>");
+                level flag::set("<dev string:x13e1>");
+                level flag::set("<dev string:x1467>");
+                setdvar("<dev string:x174>", "<dev string:x3a>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x191>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1358>");
+                setdvar("<dev string:x191>", "<dev string:x3a>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x1aa>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1358>");
+                level flag::set("<dev string:x13cb>");
+                setdvar("<dev string:x1aa>", "<dev string:x3a>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x1c3>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1358>");
+                level flag::set("<dev string:x13cb>");
+                level flag::set("<dev string:x142e>");
+                setdvar("<dev string:x1c3>", "<dev string:x3a>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                level flag::set("pre_init_zombie_spawn_func");
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x8e>") == "<dev string:x112f>") {
+                level flag::set("<dev string:x1488>");
+                setdvar("<dev string:x8e>", "<dev string:x3a>");
             }
-            if (getdvarstring("pre_init_zombie_spawn_func") == "pre_init_zombie_spawn_func") {
-                namespace_97bec092::function_b67726d8(1);
-                namespace_97bec092::function_b67726d8(2);
-                namespace_97bec092::function_b67726d8(3);
-                namespace_97bec092::function_b67726d8(4);
-                setdvar("pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
-                level flag::set("pre_init_zombie_spawn_func");
+            if (getdvarstring("<dev string:x50>") == "<dev string:x112f>") {
+                zm_tomb_teleporter::function_b67726d8(1);
+                zm_tomb_teleporter::function_b67726d8(2);
+                zm_tomb_teleporter::function_b67726d8(3);
+                zm_tomb_teleporter::function_b67726d8(4);
+                setdvar("<dev string:x50>", "<dev string:x3a>");
+                level flag::set("<dev string:x149c>");
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 
 #/
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe56d3e9f, Offset: 0x2e18
 // Size: 0x36
@@ -431,54 +431,54 @@ function function_61fce955(var_abb52853) {
 
 /#
 
-    // Namespace namespace_d7c0ce12
+    // Namespace zm_tomb_utility
     // Params 0, eflags: 0x1 linked
     // Checksum 0xccc294f6, Offset: 0x2e88
     // Size: 0x1a2
     function function_90960539() {
-        while (getdvarstring("pre_init_zombie_spawn_func") != "pre_init_zombie_spawn_func") {
-            wait(0.1);
+        while (getdvarstring("<dev string:x14b2>") != "<dev string:x112f>") {
+            wait 0.1;
         }
         players = getplayers();
         foreach (player in players) {
-            player zm_equipment::set_player_equipment("pre_init_zombie_spawn_func");
-            player giveweapon("pre_init_zombie_spawn_func");
-            player setweaponammoclip("pre_init_zombie_spawn_func", 1);
-            player thread zm_equipment::show_hint("pre_init_zombie_spawn_func");
-            player notify("pre_init_zombie_spawn_func" + "pre_init_zombie_spawn_func");
-            player zm_equipment::set_equipment_invisibility_to_player("pre_init_zombie_spawn_func", 1);
-            player setactionslot(1, "pre_init_zombie_spawn_func", "pre_init_zombie_spawn_func");
+            player zm_equipment::set_player_equipment("<dev string:x14c2>");
+            player giveweapon("<dev string:x14c2>");
+            player setweaponammoclip("<dev string:x14c2>", 1);
+            player thread zm_equipment::show_hint("<dev string:x14c2>");
+            player notify("<dev string:x14c2>" + "<dev string:x14d4>");
+            player zm_equipment::set_equipment_invisibility_to_player("<dev string:x14c2>", 1);
+            player setactionslot(1, "<dev string:x14db>", "<dev string:x14c2>");
         }
     }
 
 #/
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x0
 // Checksum 0xedca92ae, Offset: 0x3038
 // Size: 0x54
 function function_2b260840(var_eca16733) {
-    println("pre_init_zombie_spawn_func" + var_eca16733.name);
-    namespace_f37770c8::function_ac4e44a7(var_eca16733);
+    println("<dev string:x14e2>" + var_eca16733.name);
+    zm_craftables::function_ac4e44a7(var_eca16733);
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x0
 // Checksum 0xc9f248dc, Offset: 0x3098
 // Size: 0x1a
 function function_30b74486() {
-    return self namespace_f37770c8::function_30b74486();
+    return self zm_craftables::function_30b74486();
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 2, eflags: 0x0
 // Checksum 0xab6ad5c4, Offset: 0x30c0
 // Size: 0x2a
 function function_ad26d97f(var_9967ff1, var_c122676d) {
-    return namespace_f37770c8::function_ad26d97f(var_9967ff1, var_c122676d);
+    return zm_craftables::function_ad26d97f(var_9967ff1, var_c122676d);
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x0
 // Checksum 0x8de399fb, Offset: 0x30f8
 // Size: 0x2e
@@ -487,7 +487,7 @@ function function_dccaee59(var_9967ff1) {
     return player;
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2cd72f6c, Offset: 0x3130
 // Size: 0x7c
@@ -499,7 +499,7 @@ function check_solo_status() {
     level.is_forever_solo_game = 0;
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x96a32454, Offset: 0x31b8
 // Size: 0x2f8
@@ -520,7 +520,7 @@ function function_b8710279() {
                 var_262a5e46 = 1;
                 self.var_262a5e46 = 1;
                 if (!(isdefined(self.var_7892737f) && self.var_7892737f) && !(isdefined(self.dontspeak) && self.dontspeak)) {
-                    self thread namespace_ad52727b::function_7c44fdd7();
+                    self thread zm_tomb_vo::function_7c44fdd7();
                 }
                 if (self hasperk("specialty_staminup")) {
                     var_19d9b011 = 0.75;
@@ -546,11 +546,11 @@ function function_b8710279() {
             }
             self setmovespeedscale(self.var_a0d51d60);
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2854f82f, Offset: 0x34b8
 // Size: 0x55e
@@ -643,7 +643,7 @@ function function_3b0e9b9(var_86a233b2) {
     self notify(#"zombie_init_done");
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9fcd31d6, Offset: 0x3a20
 // Size: 0x5c4
@@ -663,7 +663,7 @@ function function_8d90d591() {
     }
     if (!isdefined(find_flesh_struct_string) && isdefined(self.target) && self.target != "") {
         desired_origin = zombie_utility::get_desired_origin();
-        assert(isdefined(desired_origin), "pre_init_zombie_spawn_func" + self.origin + "pre_init_zombie_spawn_func");
+        assert(isdefined(desired_origin), "<dev string:x14fd>" + self.origin + "<dev string:x1508>");
         origin = desired_origin;
         node = arraygetclosest(origin, level.exterior_goals);
         self.entrance_nodes[self.entrance_nodes.size] = node;
@@ -719,13 +719,13 @@ function function_8d90d591() {
         self zm_spawner::zombie_history("zombie_think -> #1 entrance origin = " + node.origin);
         self thread zm_spawner::zombie_assure_node();
     }
-    assert(isdefined(node), "pre_init_zombie_spawn_func");
+    assert(isdefined(node), "<dev string:x1531>");
     level thread zm_utility::draw_line_ent_to_pos(self, node.origin, "goal");
     self.first_node = node;
     self thread zm_spawner::function_1352119c(node);
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa4f88784, Offset: 0x3ff0
 // Size: 0xf6
@@ -741,11 +741,11 @@ function function_d6a291a9() {
                 return;
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x68f439cc, Offset: 0x40f0
 // Size: 0x44
@@ -756,7 +756,7 @@ function function_6849be1f() {
     self thread zm_spawner::function_60389561();
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 2, eflags: 0x1 linked
 // Checksum 0xbd244430, Offset: 0x4140
 // Size: 0x24c
@@ -796,7 +796,7 @@ function function_83fc6b30(spot, var_a4da442e) {
     self zm_spawner::zombie_complete_emerging_into_playable_area();
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa7280003, Offset: 0x4398
 // Size: 0x6a
@@ -808,34 +808,34 @@ function function_f356818(spot) {
     self notify(#"hash_59e307f3");
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x1 linked
 // Checksum 0x37aa8f06, Offset: 0x4410
 // Size: 0x36
 function function_4eb9088(timeout) {
     self endon(#"death");
     self endon(#"hash_59e307f3");
-    wait(timeout);
+    wait timeout;
     self notify(#"hash_59e307f3");
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4975966e, Offset: 0x4450
 // Size: 0x2a
 function function_9441e538(w_weapon) {
     switch (w_weapon.name) {
-    case 27:
-    case 28:
-    case 29:
-    case 30:
+    case "staff_air_upgraded":
+    case "staff_fire_upgraded":
+    case "staff_lightning_upgraded":
+    case "staff_water_upgraded":
         return true;
     default:
         return false;
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x67f67e30, Offset: 0x44b8
 // Size: 0x390
@@ -889,7 +889,7 @@ function function_56cd26ed() {
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3afb7ae9, Offset: 0x4850
 // Size: 0x98
@@ -901,11 +901,11 @@ function function_38af9e8e() {
     while (true) {
         ammo = self getammocount(level.var_2b2f83e5);
         self clientfield::set_player_uimodel("hudItems.dpadLeftAmmo", ammo);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1bcf530e, Offset: 0x48f0
 // Size: 0xbc
@@ -915,7 +915,7 @@ function function_c2305758() {
     self endon(#"weapon_change");
     self endon(#"weapon_fired");
     while (!self attackbuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
     var_3321b2a6 = 0;
     while (true) {
@@ -923,11 +923,11 @@ function function_c2305758() {
             self clientfield::set_to_player("player_staff_charge", self.chargeshotlevel);
             var_3321b2a6 = self.chargeshotlevel;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8990f836, Offset: 0x49b8
 // Size: 0xc4
@@ -943,43 +943,43 @@ function function_69405a9c(weapon) {
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x0
 // Checksum 0x2fdc93f4, Offset: 0x4a88
 // Size: 0x5c
 function function_87ed5da9() {
     hud = function_5d129ad2();
     hud settext(%ZM_TOMB_RU);
-    wait(3);
+    wait 3;
     hud destroy();
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x975c8f17, Offset: 0x4af0
 // Size: 0x8c
 function function_85bdbb35() {
-    level notify(#"hash_78a2093f");
+    level notify(#"staff_hint");
     hud = function_5d129ad2();
     hud settext(%ZM_TOMB_OSO);
     level util::waittill_any_timeout(3, "staff_hint");
     hud destroy();
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfd998feb, Offset: 0x4b88
 // Size: 0x5c
 function function_837cc95f() {
     hud = function_5d129ad2();
     hud settext(%ZM_TOMB_GREL);
-    wait(3);
+    wait 3;
     hud destroy();
 }
 
 /#
 
-    // Namespace namespace_d7c0ce12
+    // Namespace zm_tomb_utility
     // Params 5, eflags: 0x1 linked
     // Checksum 0x64327085, Offset: 0x4bf0
     // Size: 0x146
@@ -987,14 +987,14 @@ function function_837cc95f() {
         self endon(#"death");
         self endon(#"stop_debug_position");
         if (!isdefined(var_e9f36a76)) {
-            var_e9f36a76 = "pre_init_zombie_spawn_func";
+            var_e9f36a76 = "<dev string:x155f>";
         }
         if (!isdefined(color)) {
             color = (255, 255, 255);
         }
         if (isdefined(str_dvar)) {
-            while (getdvarstring("pre_init_zombie_spawn_func") != "pre_init_zombie_spawn_func") {
-                wait(1);
+            while (getdvarstring("<dev string:x65>") != "<dev string:x112f>") {
+                wait 1;
             }
         }
         while (true) {
@@ -1004,7 +1004,7 @@ function function_837cc95f() {
                 var_7f409b8b = self.origin;
             }
             print3d(var_7f409b8b, var_e9f36a76, color, 1);
-            wait(0.1);
+            wait 0.1;
             if (isdefined(var_f85a2ecd)) {
                 var_f85a2ecd -= 0.1;
                 if (var_f85a2ecd <= 0) {
@@ -1016,7 +1016,7 @@ function function_837cc95f() {
 
 #/
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x0
 // Checksum 0x513b87a7, Offset: 0x4d40
 // Size: 0x44
@@ -1026,7 +1026,7 @@ function function_e51043e1(var_60c1e5f7) {
     self delete();
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x0
 // Checksum 0xdc1ccf12, Offset: 0x4d90
 // Size: 0x40
@@ -1034,11 +1034,11 @@ function function_f7140e8c() {
     self endon(#"death");
     while (true) {
         self rotateyaw(360, 10, 0, 0);
-        wait(9.9);
+        wait 9.9;
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7accf5af, Offset: 0x4dd8
 // Size: 0xf4
@@ -1057,7 +1057,7 @@ function function_5d129ad2() {
     return client_hint;
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x1 linked
 // Checksum 0x380532dc, Offset: 0x4ed8
 // Size: 0x142
@@ -1074,7 +1074,7 @@ function function_f2a1902a(var_cd7edcab) {
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x1 linked
 // Checksum 0x333d009c, Offset: 0x5028
 // Size: 0x4c
@@ -1084,7 +1084,7 @@ function function_d73e42e0(str_message) {
     zm_unitrigger::register_unitrigger(self, &function_3db9b69);
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 5, eflags: 0x1 linked
 // Checksum 0xff19ab6a, Offset: 0x5080
 // Size: 0x148
@@ -1112,7 +1112,7 @@ function function_52854313(origin, radius, use_trigger, var_3fe858d9, func_visib
     return trigger_stub;
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x65ba8ba1, Offset: 0x51d0
 // Size: 0x88
@@ -1127,7 +1127,7 @@ function function_3db9b69() {
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1685db52, Offset: 0x5260
 // Size: 0x1c
@@ -1135,7 +1135,7 @@ function function_bd611266() {
     zm_unitrigger::unregister_unitrigger(self);
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x42fcb0ab, Offset: 0x5288
 // Size: 0xac
@@ -1150,13 +1150,13 @@ function function_8a97fd20() {
     var_8c74d8bb[0] = level._zombie_gib_piece_index_all;
     self gib("normal", var_8c74d8bb);
     self ghost();
-    wait(0.4);
+    wait 0.4;
     if (isdefined(self)) {
         self delete();
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3acbefa1, Offset: 0x5340
 // Size: 0x12c
@@ -1175,14 +1175,14 @@ function function_cc964a18() {
     util::wait_network_frame();
     if (isdefined(self)) {
         self ghost();
-        wait(randomfloatrange(0.4, 1.1));
+        wait randomfloatrange(0.4, 1.1);
         if (isdefined(self)) {
             self delete();
         }
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 2, eflags: 0x0
 // Checksum 0x33755f6e, Offset: 0x5478
 // Size: 0x84
@@ -1195,7 +1195,7 @@ function function_4256cdf(var_1efde1e7, var_acf672ac) {
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 2, eflags: 0x0
 // Checksum 0xf4787734, Offset: 0x5508
 // Size: 0x84
@@ -1208,7 +1208,7 @@ function function_40ca640c(var_1efde1e7, var_acf672ac) {
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x663c1168, Offset: 0x5598
 // Size: 0x186
@@ -1238,7 +1238,7 @@ function function_ab2adcaa() {
     level notify(#"hash_149fa2ac");
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9886e581, Offset: 0x5728
 // Size: 0x1e0
@@ -1275,7 +1275,7 @@ function function_7d685c3() {
     level.var_43f919c6 = 3;
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x660d8a09, Offset: 0x5910
 // Size: 0x15c
@@ -1287,7 +1287,7 @@ function function_ff41015b() {
         function_7d685c3();
         level clientfield::set("rain_level", level.var_aa00c190);
         level clientfield::set("snow_level", level.var_c95eeed7);
-        wait(2);
+        wait 2;
         foreach (player in getplayers()) {
             if (zombie_utility::is_player_valid(player, 0, 1)) {
                 player function_c6592f0e();
@@ -1297,7 +1297,7 @@ function function_ff41015b() {
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf8c4e0b7, Offset: 0x5a78
 // Size: 0xae
@@ -1316,7 +1316,7 @@ function function_c6592f0e() {
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x61b9f14e, Offset: 0x5b30
 // Size: 0x80
@@ -1328,11 +1328,11 @@ function function_fdf9dab3() {
             level.var_9a587ba1 += 360;
         }
         setdvar("r_skyRotation", level.var_9a587ba1);
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x5bb8
 // Size: 0x4
@@ -1340,7 +1340,7 @@ function function_95f226b8() {
     
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x1 linked
 // Checksum 0x760bd61d, Offset: 0x5bc8
 // Size: 0x90
@@ -1354,7 +1354,7 @@ function function_9b31d651(var_a8a5285c) {
     self waittill(#"movedone");
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x1 linked
 // Checksum 0x140f6dba, Offset: 0x5c60
 // Size: 0x98
@@ -1368,7 +1368,7 @@ function function_7ac77501(s_start) {
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 2, eflags: 0x1 linked
 // Checksum 0x2205778e, Offset: 0x5d00
 // Size: 0x1d2
@@ -1392,7 +1392,7 @@ function function_cd40ebb0(s_start, var_b5f6f4e4) {
     return e_model;
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x48f4cff5, Offset: 0x5ee0
 // Size: 0x204
@@ -1412,14 +1412,14 @@ function function_159aac02() {
     var_a5d579d7.e_model clientfield::set("sky_pillar", 1);
     util::wait_network_frame();
     var_a5d579d7.e_model show();
-    wait(1);
-    wait(27.5);
+    wait 1;
+    wait 27.5;
     var_a5d579d7.e_model clientfield::set("sky_pillar", 0);
-    wait(1);
+    wait 1;
     var_a5d579d7.e_model delete();
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 2, eflags: 0x1 linked
 // Checksum 0x90265519, Offset: 0x60f0
 // Size: 0x184
@@ -1440,7 +1440,7 @@ function function_7340f39f(var_8aacdc6c, var_5dc37d2c) {
     return false;
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 3, eflags: 0x1 linked
 // Checksum 0x34097c5, Offset: 0x6280
 // Size: 0x72
@@ -1451,7 +1451,7 @@ function function_48f494c9(str_zone, var_8aacdc6c, var_5dc37d2c) {
     return function_7340f39f(var_8aacdc6c, var_5dc37d2c);
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 2, eflags: 0x1 linked
 // Checksum 0xac22ef58, Offset: 0x6300
 // Size: 0x660
@@ -1475,7 +1475,7 @@ function function_bfec48b1(var_ce4610fc, var_41685025) {
     var_8aacdc6c = cos(30);
     var_5dc37d2c = 32400;
     while (var_c165db56 < 1) {
-        wait(0.1);
+        wait 0.1;
         if (s_start function_48f494c9(str_zone, var_8aacdc6c, var_5dc37d2c)) {
             var_c165db56 += 0.1;
             continue;
@@ -1513,7 +1513,7 @@ function function_bfec48b1(var_ce4610fc, var_41685025) {
     return var_1cae8aa4;
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7d7e225a, Offset: 0x6968
 // Size: 0x4ca
@@ -1596,7 +1596,7 @@ function function_758db58b(var_86a233b2) {
     self notify(#"zombie_init_done");
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 2, eflags: 0x1 linked
 // Checksum 0x2fe763c7, Offset: 0x6e40
 // Size: 0x1a2
@@ -1607,18 +1607,18 @@ function function_d0dc88b2(var_1a79f1e9, var_628919) {
     a_players = getplayers();
     var_8bd151a9 = [];
     foreach (e_player in a_players) {
-        if (namespace_435339fc::function_34b281af(e_player.origin)) {
+        if (zm_tomb_chamber::function_34b281af(e_player.origin)) {
             e_player clientfield::set_to_player("player_rumble_and_shake", var_1a79f1e9);
             var_8bd151a9[var_8bd151a9.size] = e_player;
         }
     }
-    wait(var_628919);
+    wait var_628919;
     foreach (e_player in var_8bd151a9) {
         e_player clientfield::set_to_player("player_rumble_and_shake", 0);
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 3, eflags: 0x1 linked
 // Checksum 0x750455ff, Offset: 0x6ff0
 // Size: 0x1c2
@@ -1638,7 +1638,7 @@ function rumble_nearby_players(v_center, n_range, var_1a79f1e9) {
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 2, eflags: 0x1 linked
 // Checksum 0x5ef27798, Offset: 0x71c0
 // Size: 0x200
@@ -1653,7 +1653,7 @@ function function_1f0a611d(var_5c96fe71, var_5c2bcb80) {
     var_172bfe84 = 10000;
     var_fb942e9f = 90000;
     while (dist_sq < var_fb942e9f) {
-        wait(0.05);
+        wait 0.05;
         if (!isdefined(var_5c96fe71)) {
             break;
         }
@@ -1677,7 +1677,7 @@ function function_1f0a611d(var_5c96fe71, var_5c2bcb80) {
     self.var_8b5b43ed = 0;
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7b6ffc1f, Offset: 0x73c8
 // Size: 0x148
@@ -1695,7 +1695,7 @@ function function_8b1b140c(var_5c2bcb80) {
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf82ff272, Offset: 0x7518
 // Size: 0x54
@@ -1704,7 +1704,7 @@ function function_5a9d2dde() {
     array::thread_all(var_547a4d96, &function_89e4183d);
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x52ce0a7, Offset: 0x7578
 // Size: 0x24
@@ -1713,7 +1713,7 @@ function function_89e4183d() {
     self delete();
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd1c02de5, Offset: 0x75a8
 // Size: 0xbc
@@ -1726,7 +1726,7 @@ function adjustments_for_solo() {
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x88da9cd6, Offset: 0x7670
 // Size: 0xbc
@@ -1744,7 +1744,7 @@ function door_price_reduction_for_solo() {
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 2, eflags: 0x0
 // Checksum 0xaaeee198, Offset: 0x7738
 // Size: 0x7c
@@ -1753,7 +1753,7 @@ function function_dea8ad10(str_weapon, n_cost) {
     level.zombie_weapons[str_weapon].ammo_cost = zm_utility::round_up_to_ten(int(n_cost * 0.5));
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x20ffdddb, Offset: 0x77c0
 // Size: 0x1ee
@@ -1761,16 +1761,16 @@ function function_20c78add() {
     while (true) {
         level flag::wait_till("zone_capture_in_progress");
         level flag::wait_till_clear("zone_capture_in_progress");
-        wait(2);
-        foreach (generator in level.var_42990ddc.zones) {
+        wait 2;
+        foreach (generator in level.zone_capture.zones) {
             if (generator flag::get("player_controlled")) {
                 foreach (var_1af28ab3 in level.var_b578830d) {
                     if (var_1af28ab3.str_location == "start_bunker") {
                         if (level.players.size == 1) {
-                            level thread namespace_a528e918::function_139222f7(undefined, var_1af28ab3, &namespace_5d5ba750::function_51587ba7, -1);
+                            level thread zm_challenges_tomb::function_139222f7(undefined, var_1af28ab3, &zm_tomb_challenges::function_51587ba7, -1);
                             return;
                         }
-                        level thread namespace_a528e918::function_139222f7(undefined, var_1af28ab3, &namespace_5d5ba750::function_2bd3ec4f, -1);
+                        level thread zm_challenges_tomb::function_139222f7(undefined, var_1af28ab3, &zm_tomb_challenges::function_2bd3ec4f, -1);
                         return;
                     }
                 }
@@ -1779,11 +1779,11 @@ function function_20c78add() {
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd05283a0, Offset: 0x79b8
 // Size: 0xc4
-function function_a2cc4f96() {
+function traversal_blocker() {
     level flag::init("player_near_traversal");
     var_876dc212 = getent("traversal_blocker", "targetname");
     var_876dc212 thread function_76bfd1c3();
@@ -1792,7 +1792,7 @@ function function_a2cc4f96() {
     var_876dc212 delete();
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1624759b, Offset: 0x7a88
 // Size: 0x184
@@ -1808,12 +1808,12 @@ function function_76bfd1c3() {
                 var_de42e29f = 1;
             }
         }
-        wait(1);
+        wait 1;
     }
     level flag::set("player_near_traversal");
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 2, eflags: 0x1 linked
 // Checksum 0x9a865b86, Offset: 0x7c18
 // Size: 0x84
@@ -1828,7 +1828,7 @@ function function_f0759766(e_attacker, str_weapon) {
     self dodamage(self.health, self.origin, e_attacker, e_attacker, "none", self.var_c5a77b9b, 0, str_weapon);
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 3, eflags: 0x1 linked
 // Checksum 0xb5a7433a, Offset: 0x7ca8
 // Size: 0x7c
@@ -1842,7 +1842,7 @@ function function_ad22cd8f(e_attacker, str_weapon, var_c776f4) {
     self dodamage(var_c776f4, self.origin, e_attacker, e_attacker, "none", self.var_c5a77b9b, 0, str_weapon);
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 4, eflags: 0x1 linked
 // Checksum 0xf41bf7ac, Offset: 0x7d30
 // Size: 0x184
@@ -1865,7 +1865,7 @@ function function_2f31684b(e_attacker, n_amount, w_damage, str_mod) {
     self zm_net::network_choke_action("dodamage_kill", &function_f0759766, e_attacker, w_damage);
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaa8d93aa, Offset: 0x7ec0
 // Size: 0x2c
@@ -1876,7 +1876,7 @@ function _throttle_bullet_trace_think() {
     } while (true);
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 3, eflags: 0x1 linked
 // Checksum 0x1bbf971c, Offset: 0x7ef8
 // Size: 0x92
@@ -1891,7 +1891,7 @@ function bullet_trace_throttled(v_start, v_end, e_ignore) {
     return bullettracepassed(v_start, v_end, 0, e_ignore);
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6b987b3a, Offset: 0x7f98
 // Size: 0x100
@@ -1920,7 +1920,7 @@ function function_d39fc97a(player) {
     return true;
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc3fd7af1, Offset: 0x80a0
 // Size: 0x308
@@ -1938,7 +1938,7 @@ function function_e046126e(origin, players) {
             if (isdefined(self.var_326bf116) && self.var_326bf116) {
                 continue;
             } else if (!isdefined(var_8446333e)) {
-                var_2f4eb1e1 = self namespace_e6d36abe::function_23ff23ec();
+                var_2f4eb1e1 = self zm_tomb_tank::function_23ff23ec();
                 var_8446333e = var_2f4eb1e1;
             } else {
                 var_2f4eb1e1 = var_8446333e;
@@ -1987,7 +1987,7 @@ function function_e046126e(origin, players) {
     return var_9b31173;
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 1, eflags: 0x1 linked
 // Checksum 0x558873c, Offset: 0x83b0
 // Size: 0x46c
@@ -1997,7 +1997,7 @@ function function_84442246(var_6c0518cd) {
             var_6c0518cd = 0;
             str_weapon = self getcurrentweapon();
             if (function_9441e538(str_weapon)) {
-                s_info = namespace_f7a613cf::function_9b485a9(str_weapon);
+                s_info = zm_tomb_craftables::function_9b485a9(str_weapon);
                 if (isdefined(s_info)) {
                     var_6c0518cd = s_info.enum;
                     s_info.var_43f3f5e5.is_charged = 1;
@@ -2010,7 +2010,7 @@ function function_84442246(var_6c0518cd) {
         var_d5fbf885 = getweapon("knife");
         self.var_27eb897c = 0;
         if (var_6c0518cd != 0) {
-            var_abcf76c0 = namespace_f7a613cf::function_9cc411fa(var_6c0518cd);
+            var_abcf76c0 = zm_tomb_craftables::function_9cc411fa(var_6c0518cd);
             if (var_abcf76c0.var_43f3f5e5.is_charged) {
                 var_abcf76c0 = var_abcf76c0.upgrade;
             }
@@ -2030,7 +2030,7 @@ function function_84442246(var_6c0518cd) {
     var_d5b760b9 = self hasweapon(level.var_2b2f83e5);
     var_ec030825 = 0;
     a_weapons = self getweaponslistprimaries();
-    var_abcf76c0 = namespace_f7a613cf::function_9cc411fa(var_6c0518cd);
+    var_abcf76c0 = zm_tomb_craftables::function_9cc411fa(var_6c0518cd);
     foreach (str_weapon in a_weapons) {
         if (function_9441e538(str_weapon)) {
             var_ec030825 = 1;
@@ -2053,7 +2053,7 @@ function function_84442246(var_6c0518cd) {
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x0
 // Checksum 0xb58a33e4, Offset: 0x8828
 // Size: 0x4c
@@ -2066,19 +2066,19 @@ function function_a4919cb9() {
     return a_enemies;
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x909f2bee, Offset: 0x8880
 // Size: 0x2c
 function function_818a139e() {
     level.var_f2eb9c0d++;
-    wait(1);
+    wait 1;
     if (level.var_f2eb9c0d > 0) {
         level.var_f2eb9c0d--;
     }
 }
 
-// Namespace namespace_d7c0ce12
+// Namespace zm_tomb_utility
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1f07ac8c, Offset: 0x88b8
 // Size: 0x30

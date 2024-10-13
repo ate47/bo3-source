@@ -5,9 +5,9 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_ef480314;
+#namespace zm_bgb_firing_on_all_cylinders;
 
-// Namespace namespace_ef480314
+// Namespace zm_bgb_firing_on_all_cylinders
 // Params 0, eflags: 0x2
 // Checksum 0x89202ca1, Offset: 0x160
 // Size: 0x34
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_firing_on_all_cylinders", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_ef480314
+// Namespace zm_bgb_firing_on_all_cylinders
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9a93dfae, Offset: 0x1a0
 // Size: 0x3c

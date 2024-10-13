@@ -3,9 +3,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_1b1d095e;
+#namespace mp_arena_sound;
 
-// Namespace namespace_1b1d095e
+// Namespace mp_arena_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xece8b3ed, Offset: 0x148
 // Size: 0x114
@@ -18,26 +18,26 @@ function main() {
     level thread function_b205c01b();
 }
 
-// Namespace namespace_1b1d095e
+// Namespace mp_arena_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x33b89258, Offset: 0x268
 // Size: 0x84
 function function_b205c01b() {
-    wait(0.05);
+    wait 0.05;
     while (level.inprematchperiod) {
-        wait(1);
+        wait 1;
     }
-    wait(20);
+    wait 20;
     function_e0b7e5b1();
-    wait(-126);
+    wait -126;
     playintro();
-    wait(-6);
+    wait -6;
     function_e1a89b2();
-    wait(100);
+    wait 100;
     function_1982fa4a();
 }
 
-// Namespace namespace_1b1d095e
+// Namespace mp_arena_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd4a14508, Offset: 0x2f8
 // Size: 0x1c
@@ -45,7 +45,7 @@ function function_e0b7e5b1() {
     playevent(1, 10);
 }
 
-// Namespace namespace_1b1d095e
+// Namespace mp_arena_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x732b8e43, Offset: 0x320
 // Size: 0x54
@@ -54,7 +54,7 @@ function playintro() {
     playevent(2, 3, fighter, 5);
 }
 
-// Namespace namespace_1b1d095e
+// Namespace mp_arena_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1ac63891, Offset: 0x380
 // Size: 0x44
@@ -63,7 +63,7 @@ function function_e1a89b2() {
     playevent(3, 3, fighter, 5);
 }
 
-// Namespace namespace_1b1d095e
+// Namespace mp_arena_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf9f964c, Offset: 0x3d0
 // Size: 0x44
@@ -72,7 +72,7 @@ function function_1982fa4a() {
     playevent(4, 3, fighter, 5);
 }
 
-// Namespace namespace_1b1d095e
+// Namespace mp_arena_sound
 // Params 4, eflags: 0x1 linked
 // Checksum 0xad4bdf7e, Offset: 0x420
 // Size: 0xdc

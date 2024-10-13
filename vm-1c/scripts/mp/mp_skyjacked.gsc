@@ -6,9 +6,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b31ea552;
+#namespace mp_skyjacked;
 
-// Namespace namespace_b31ea552
+// Namespace mp_skyjacked
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd9caa322, Offset: 0x220
 // Size: 0x1694
@@ -25,8 +25,8 @@ function main() {
     level.levelescortdisable[level.levelescortdisable.size] = spawn("trigger_radius", (881.857, -341.619, 120.587), 0, 100, 100);
     precache();
     level.bomb_zone_fixup = &bomb_zone_fixup;
-    namespace_816c28f7::main();
-    namespace_5596a11e::main();
+    mp_skyjacked_fx::main();
+    mp_skyjacked_sound::main();
     load::main();
     compass::setupminimap("compass_map_mp_skyjacked");
     setdvar("compassmaxrange", "2100");
@@ -101,7 +101,7 @@ function main() {
     level.cleandepositpoints = array((-3, -196.025, 20.625), (-283.422, 233.852, -171.875), (-1567.78, -65.9542, -43.875), (663.755, -188.581, 20.125));
 }
 
-// Namespace namespace_b31ea552
+// Namespace mp_skyjacked
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x18c0
 // Size: 0x4
@@ -109,7 +109,7 @@ function precache() {
     
 }
 
-// Namespace namespace_b31ea552
+// Namespace mp_skyjacked
 // Params 1, eflags: 0x1 linked
 // Checksum 0xfba99ee2, Offset: 0x18d0
 // Size: 0xa4

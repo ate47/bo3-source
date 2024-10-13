@@ -10,9 +10,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_d0ad3850;
+#namespace _zm_pack_a_punch;
 
-// Namespace namespace_d0ad3850
+// Namespace _zm_pack_a_punch
 // Params 0, eflags: 0x2
 // Checksum 0x58763584, Offset: 0x248
 // Size: 0x34
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
     system::register("zm_pack_a_punch", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_d0ad3850
+// Namespace _zm_pack_a_punch
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6c3915b8, Offset: 0x288
 // Size: 0x64
@@ -29,7 +29,7 @@ function __init__() {
     clientfield::register("zbarrier", "pap_working_FX", 5000, 1, "int", &pap_working_fx_handler, 0, 0);
 }
 
-// Namespace namespace_d0ad3850
+// Namespace _zm_pack_a_punch
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8fdc16d5, Offset: 0x2f8
 // Size: 0xd4
@@ -42,13 +42,13 @@ function pap_working_fx_handler(localclientnum, oldval, newval, bnewent, binitia
         stopfx(localclientnum, self.n_pap_fx);
         self.n_pap_fx = undefined;
     }
-    wait(1);
+    wait 1;
     if (isdefined(self.mdl_fx)) {
         self.mdl_fx delete();
     }
 }
 
-// Namespace namespace_d0ad3850
+// Namespace _zm_pack_a_punch
 // Params 3, eflags: 0x5 linked
 // Checksum 0x7efddba2, Offset: 0x3d8
 // Size: 0x14c

@@ -32,7 +32,7 @@ function spawned(localclientnum) {
     self util::waittill_dobj(localclientnum);
     while (true) {
         if (isdefined(self.stunned) && self.stunned) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         self.claymorelaserfxid = playfxontag(localclientnum, level._effect["fx_claymore_laser"], self, "tag_fx");

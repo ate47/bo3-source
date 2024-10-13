@@ -71,7 +71,7 @@ function warnmissilefired(localclientnum, set) {
 // Checksum 0x12999f87, Offset: 0x598
 // Size: 0x14c
 function main() {
-    assert(isdefined(level.first_frame), "float");
+    assert(isdefined(level.first_frame), "<dev string:x28>");
     zm::init();
     level thread server_time();
     level thread util::init_utility();
@@ -79,7 +79,7 @@ function main() {
     register_clientfields();
     level.createfx_disable_fx = getdvarint("disable_fx") == 1;
     if (isdefined(level._uses_sticky_grenades) && level._uses_sticky_grenades) {
-        level thread namespace_e381fc9e::main();
+        level thread _sticky_grenade::main();
     }
     system::wait_till("all");
     level thread art_review();
@@ -93,7 +93,7 @@ function main() {
 function server_time() {
     for (;;) {
         level.servertime = getservertime(0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 

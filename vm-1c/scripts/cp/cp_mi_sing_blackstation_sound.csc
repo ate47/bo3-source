@@ -2,9 +2,9 @@
 #using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_7a033503;
+#namespace cp_mi_sing_blackstation_sound;
 
-// Namespace namespace_7a033503
+// Namespace cp_mi_sing_blackstation_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6dfc0b30, Offset: 0x2c8
 // Size: 0x7c
@@ -14,11 +14,11 @@ function main() {
     clientfield::register("toplayer", "slowmo_duck_active", 1, 2, "int", &function_41d671f5, 0, 0);
 }
 
-// Namespace namespace_7a033503
+// Namespace cp_mi_sing_blackstation_sound
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd1f983d0, Offset: 0x350
 // Size: 0x27a
-function function_879c3b17(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function sndWindSystem(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         if (!isdefined(self.var_e9bbdd0a)) {
             self stopallloopsounds();
@@ -56,7 +56,7 @@ function function_879c3b17(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_7a033503
+// Namespace cp_mi_sing_blackstation_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x59984d, Offset: 0x5d8
 // Size: 0x54
@@ -70,7 +70,7 @@ function function_d84ed3d1() {
     }
 }
 
-// Namespace namespace_7a033503
+// Namespace cp_mi_sing_blackstation_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x16549f41, Offset: 0x638
 // Size: 0x2c
@@ -78,7 +78,7 @@ function function_87c8026c() {
     soundloopemitter("evt_barge_wave_looper", (1193, -8283, -63));
 }
 
-// Namespace namespace_7a033503
+// Namespace cp_mi_sing_blackstation_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1b8a0ce7, Offset: 0x670
 // Size: 0x504
@@ -117,11 +117,11 @@ function function_ca589ae4() {
     audio::playloopat("amb_subway_light", (-571, 9460, 30));
 }
 
-// Namespace namespace_7a033503
+// Namespace cp_mi_sing_blackstation_sound
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd954f333, Offset: 0xb80
 // Size: 0x94
-function function_fb96c813(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function sndStationWalla(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         audio::playloopat("amb_station_walla", (-4172, 4988, 40));
         return;
@@ -129,11 +129,11 @@ function function_fb96c813(localclientnum, oldval, newval, bnewent, binitialsnap
     audio::stoploopat("amb_station_walla", (-4172, 4988, 40));
 }
 
-// Namespace namespace_7a033503
+// Namespace cp_mi_sing_blackstation_sound
 // Params 7, eflags: 0x1 linked
 // Checksum 0x646f98ce, Offset: 0xc20
 // Size: 0x12c
-function function_c6d82f9d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function sndBlackStationSounds(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     audio::playloopat("amb_computer_error", (84, 9455, -116));
     audio::playloopat("amb_computer_error", (-950, 1088, -36));
     audio::playloopat("amb_computer_error", (-1351, 9976, -36));
@@ -142,11 +142,11 @@ function function_c6d82f9d(localclientnum, oldval, newval, bnewent, binitialsnap
     audio::playloopat("amb_computer_future", (-783, 9675, -36));
 }
 
-// Namespace namespace_7a033503
+// Namespace cp_mi_sing_blackstation_sound
 // Params 7, eflags: 0x1 linked
 // Checksum 0x608c6e71, Offset: 0xd58
 // Size: 0x47c
-function function_598a3b92(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function sndDrillWalla(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         audio::stoploopat("amb_glass_shake_loop", (-8446, 10255, 419));
         audio::stoploopat("amb_glass_shake_loop", (-9941, 11040, 452));
@@ -179,7 +179,7 @@ function function_598a3b92(localclientnum, oldval, newval, bnewent, binitialsnap
     audio::stoploopat("evt_drilling", (-968, 9589, 380));
 }
 
-// Namespace namespace_7a033503
+// Namespace cp_mi_sing_blackstation_sound
 // Params 7, eflags: 0x1 linked
 // Checksum 0x34dd995, Offset: 0x11e0
 // Size: 0x84

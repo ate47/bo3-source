@@ -83,11 +83,11 @@ function smokeblocksight(radius) {
     while (true) {
         fxblocksight(self, radius);
         /#
-            if (getdvarint("<unknown string>", 0)) {
+            if (getdvarint("<dev string:x28>", 0)) {
                 sphere(self.origin, -128, (1, 0, 0), 0.25, 0, 10, 15);
             }
         #/
-        wait(0.75);
+        wait 0.75;
     }
 }
 
@@ -166,13 +166,13 @@ function playsmokesound(position, duration, startsound, stopsound, loopsound) {
         smokesound playloopsound(loopsound);
     }
     if (duration > 0.5) {
-        wait(duration - 0.5);
+        wait duration - 0.5;
     }
     if (isdefined(stopsound)) {
         thread sound::play_in_space(stopsound, position);
     }
     smokesound stoploopsound(0.5);
-    wait(0.5);
+    wait 0.5;
     smokesound delete();
 }
 

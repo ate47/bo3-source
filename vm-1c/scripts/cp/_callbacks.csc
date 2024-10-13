@@ -51,7 +51,7 @@ function set_default_callbacks() {
 // Checksum 0x88dc56c9, Offset: 0x3c0
 // Size: 0x94
 function localclientconnect(localclientnum) {
-    println("<unknown string>" + localclientnum);
+    println("<dev string:x28>" + localclientnum);
     if (isdefined(level.charactercustomizationsetup)) {
         [[ level.charactercustomizationsetup ]](localclientnum);
     }
@@ -85,7 +85,7 @@ function playerspawned(localclientnum) {
 function entityspawned(localclientnum) {
     self endon(#"entityshutdown");
     if (!isdefined(self.type)) {
-        println("<unknown string>");
+        println("<dev string:x55>");
         return;
     }
     if (self isplayer()) {
@@ -98,11 +98,11 @@ function entityspawned(localclientnum) {
             self thread [[ level._custom_weapon_cb_func ]](localclientnum);
         }
         switch (self.weapon.name) {
-        case 3:
-            self thread namespace_3d2de961::spawned(localclientnum);
+        case "explosive_bolt":
+            self thread _explosive_bolt::spawned(localclientnum);
             break;
-        case 2:
-            self thread namespace_7df5be44::spawned(localclientnum);
+        case "claymore":
+            self thread _claymore::spawned(localclientnum);
             break;
         }
         return;
@@ -143,7 +143,7 @@ function creating_corpse(localclientnum, player) {
 // Size: 0x8a
 function callback_stunned(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self.stunned = newval;
-    println("<unknown string>");
+    println("<dev string:x6c>");
     if (newval) {
         self notify(#"stunned");
         return;
@@ -157,7 +157,7 @@ function callback_stunned(localclientnum, oldval, newval, bnewent, binitialsnap,
 // Size: 0x8a
 function callback_emp(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self.emp = newval;
-    println("<unknown string>");
+    println("<dev string:x7d>");
     if (newval) {
         self notify(#"emp");
         return;

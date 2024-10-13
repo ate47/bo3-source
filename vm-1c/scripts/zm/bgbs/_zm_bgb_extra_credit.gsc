@@ -46,7 +46,7 @@ function function_b18c3b2d(origin) {
     self endon(#"bled_out");
     e_powerup = zm_powerups::specific_powerup_drop("bonus_points_player", origin, undefined, undefined, 0.1);
     e_powerup.bonus_points_powerup_override = &function_3258dd42;
-    wait(1);
+    wait 1;
     if (!e_powerup zm::in_enabled_playable_area() && isdefined(e_powerup) && !e_powerup zm::in_life_brush()) {
         level thread bgb::function_434235f9(e_powerup);
     }

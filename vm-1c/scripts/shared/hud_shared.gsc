@@ -115,7 +115,7 @@ function function_5e2578bc(player) {
     if (self.inframes > 0) {
         self changefontscaleovertime(self.inframes * 0.05);
         self.fontscale = self.maxfontscale;
-        wait(self.inframes * 0.05);
+        wait self.inframes * 0.05;
     } else {
         self.fontscale = self.maxfontscale;
         self.alpha = 0;
@@ -134,9 +134,9 @@ function function_5e2578bc(player) {
 // Size: 0x74
 function fade_to_black_for_x_sec(startwait, blackscreenwait, fadeintime, fadeouttime, shadername) {
     self endon(#"disconnect");
-    wait(startwait);
+    wait startwait;
     lui::screen_fade_out(fadeintime, shadername);
-    wait(blackscreenwait);
+    wait blackscreenwait;
     lui::screen_fade_in(fadeouttime, shadername);
 }
 

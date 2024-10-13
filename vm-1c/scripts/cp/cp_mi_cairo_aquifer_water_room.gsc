@@ -29,9 +29,9 @@
 #using scripts/cp/_util;
 #using scripts/cp/_load;
 
-#namespace namespace_967f4af8;
+#namespace cp_mi_cairo_aquifer_water_room;
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe5a01181, Offset: 0xdb0
 // Size: 0x124
@@ -49,7 +49,7 @@ function main() {
     spawner::add_spawn_function_group("water_robots3", "targetname", &function_a527e6f9);
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0xeb475bac, Offset: 0xee0
 // Size: 0x84
@@ -60,7 +60,7 @@ function init_flags() {
     level flag::init("flag_double_doors_open");
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb708c701, Offset: 0xf70
 // Size: 0xa4
@@ -68,12 +68,12 @@ function function_60f7b1b6() {
     level endon(#"hash_ee3f7dc5");
     struct = getent("igc_kane_khalil_1", "targetname");
     level flag::wait_till("flag_kayne_pre_water");
-    wait(6);
+    wait 6;
     struct scene::play("cin_aqu_03_19_pre_water_room_kane", level.var_89ea8991);
     struct scene::play("cin_aqu_03_19_pre_water_room_wait_kane", level.var_89ea8991);
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4d807c32, Offset: 0x1020
 // Size: 0x364
@@ -114,7 +114,7 @@ function function_1ecf48ef() {
     struct thread scene::play("cin_aqu_03_20_water_room_idle", level.var_89ea8991);
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7acb3cba, Offset: 0x1390
 // Size: 0x12a
@@ -126,20 +126,20 @@ function function_cd377710() {
             player.var_8fedf36c.state = undefined;
             player.var_8fedf36c clientfield::set("vtol_canopy_state", 0);
             player.var_8fedf36c clientfield::set("vtol_enable_wash_fx", 0);
-            wait(0.05);
+            wait 0.05;
         }
     }
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd6e906b1, Offset: 0x14c8
 // Size: 0x24
 function function_3d8a313e(a_ents) {
-    namespace_786319bb::function_c897523d("respawn_in_water_room");
+    aquifer_util::function_c897523d("respawn_in_water_room");
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x288db59c, Offset: 0x14f8
 // Size: 0x29c
@@ -152,7 +152,7 @@ function function_4a90c357() {
         p clientfield::set_to_player("player_bubbles_fx", 0);
     }
     level thread lui::screen_fade_out(1);
-    wait(1);
+    wait 1;
     level.var_89ea8991 stopanimscripted();
     setdvar("player_swimSpeed", -106);
     level.var_89ea8991 clientfield::set("kane_bubbles_fx", 0);
@@ -171,7 +171,7 @@ function function_4a90c357() {
     thread function_8aec0a4c();
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9a3abe90, Offset: 0x17a0
 // Size: 0x20c
@@ -197,50 +197,50 @@ function function_8aec0a4c() {
     level.var_89ea8991 dialog::say("kane_on_me_0");
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3c3e34a5, Offset: 0x19b8
 // Size: 0xfc
 function function_cc9a0395() {
     level endon(#"hash_eb6a1c8b");
-    wait(2);
+    wait 2;
     level.var_89ea8991 dialog::say("kane_come_on_get_in_pos_0");
-    wait(6);
+    wait 6;
     level.var_89ea8991 dialog::say("kane_hurry_it_up_0");
-    wait(12);
+    wait 12;
     level.var_89ea8991 dialog::say("kane_come_on_get_in_pos_0");
-    wait(20);
+    wait 20;
     level.var_89ea8991 dialog::say("kane_hurry_it_up_0");
-    wait(25);
+    wait 25;
     level.var_89ea8991 dialog::say("kane_come_on_get_in_pos_0");
-    wait(30);
+    wait 30;
     level.var_89ea8991 dialog::say("kane_hurry_it_up_0");
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf8e3184c, Offset: 0x1ac0
 // Size: 0xca
 function function_c1808198() {
     foreach (p in level.activeplayers) {
-        p thread namespace_786319bb::function_89eaa1b3(1.5);
+        p thread aquifer_util::function_89eaa1b3(1.5);
         p hazard::do_damage("o2", 85);
         p thread function_498a7d66();
     }
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x45e1feab, Offset: 0x1b98
 // Size: 0x54
 function function_498a7d66() {
     self endon(#"disconnect");
     self clientfield::set_to_player("player_bubbles_fx", 1);
-    wait(2);
+    wait 2;
     self clientfield::set_to_player("player_bubbles_fx", 0);
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6c165947, Offset: 0x1bf8
 // Size: 0x44c
@@ -249,7 +249,7 @@ function function_ee430caa() {
     level thread namespace_71a63eac::function_973b77f9();
     level notify(#"hash_9f732141");
     level notify(#"hash_bf1c950c");
-    namespace_786319bb::function_8bf8a765(1);
+    aquifer_util::function_8bf8a765(1);
     level flag::clear("inside_data_center");
     namespace_84eb777e::function_61034146(1);
     namespace_84eb777e::function_b3ed487d(0);
@@ -273,7 +273,7 @@ function function_ee430caa() {
     thread function_ddc03444();
     struct = getent("igc_kane_khalil_1", "targetname");
     if (!isdefined(level.activeplayers[0].var_8fedf36c)) {
-        level.activeplayers[0] namespace_786319bb::function_d683f26a(0);
+        level.activeplayers[0] aquifer_util::function_d683f26a(0);
     }
     level.activeplayers[0].var_8fedf36c show();
     struct thread scene::play("cin_aqu_03_01_platform_1st_secureplatform_vtol", level.activeplayers[0].var_8fedf36c);
@@ -281,44 +281,44 @@ function function_ee430caa() {
     struct scene::play("cin_aqu_03_01_platform_1st_secureplatform", var_99b9d1f2.who);
     thread function_430fd872();
     struct scene::play("cin_aqu_03_01_platform_1st_secureplatform_exit");
-    level notify(#"hash_2ff2d753");
+    level notify(#"platform_scenes_done");
     struct scene::stop("cin_aqu_03_20_water_room_body_loop", 1);
     savegame::checkpoint_save();
     level flag::set("flag_khalil_water_igc_done");
     struct scene::stop("cin_aqu_03_01_platform_1st_secureplatform");
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x92039143, Offset: 0x2050
 // Size: 0x9c
 function function_430fd872() {
     level dialog::remote("hend_we_ve_got_additional_0");
-    wait(1);
+    wait 1;
     level dialog::function_13b3b16a("plyr_copy_that_we_re_on_0");
-    wait(4);
+    wait 4;
     level dialog::function_13b3b16a("plyr_i_see_em_multiple_0");
     level thread namespace_71a63eac::function_b1ee6c2d();
-    wait(1);
+    wait 1;
     level dialog::function_13b3b16a("kane_copy_i_see_em_too_0");
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x47a11f9e, Offset: 0x20f8
 // Size: 0xe4
 function function_ddc03444() {
     var_c0155443 = struct::get("water_room_flyby_1", "targetname");
     var_4e0de508 = struct::get("water_room_flyby_2", "targetname");
-    wait(3);
+    wait 3;
     var_c0155443 scene::play(var_c0155443.scriptbundlename);
     var_c0155443 scene::stop(1);
-    wait(8);
+    wait 8;
     var_4e0de508 scene::play(var_4e0de508.scriptbundlename);
     var_4e0de508 scene::stop(1);
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x153a874f, Offset: 0x21e8
 // Size: 0x8c
@@ -329,7 +329,7 @@ function function_a079b7e3() {
     level.var_89ea8991 dialog::say("kane_up_here_ready_weapo_0", 2);
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x0
 // Checksum 0xa83d5152, Offset: 0x2280
 // Size: 0x34
@@ -337,7 +337,7 @@ function function_26031755() {
     playfxontag(level._effect["emp_flash"], self, "tag_origin");
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8ac5ca08, Offset: 0x22c0
 // Size: 0x70
@@ -347,11 +347,11 @@ function emprumbleloop(duration) {
     goaltime = gettime() + duration * 1000;
     while (gettime() < goaltime) {
         self playrumbleonentity("damage_heavy");
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4ba2cb77, Offset: 0x2338
 // Size: 0x64
@@ -364,7 +364,7 @@ function checktoturnoffemp() {
     }
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc6abb6a6, Offset: 0x23a8
 // Size: 0x54
@@ -375,7 +375,7 @@ function shutdownemprebootindicatormenu() {
     }
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdb3edf2, Offset: 0x2408
 // Size: 0x1c4
@@ -393,7 +393,7 @@ function function_4f725f0b() {
     self setluimenudata(emprebootmenu, "startTime", int(self.empstarttime));
     self thread emprumbleloop(0.75);
     self setempjammed(1);
-    wait(7);
+    wait 7;
     if (isdefined(self)) {
         self notify(#"empgrenadetimedout");
         self checktoturnoffemp();
@@ -401,7 +401,7 @@ function function_4f725f0b() {
     self disableinvulnerability();
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7806bd47, Offset: 0x25d8
 // Size: 0x1fc
@@ -414,22 +414,22 @@ function function_408f0fb5() {
     }
     setdvar("player_swimSpeed", 95);
     level notify(#"hash_781a429d");
-    level thread namespace_1d1d22be::function_69386a6b();
+    level thread cp_mi_cairo_aquifer_sound::function_69386a6b();
     function_846f1215(0.5);
-    level thread namespace_1d1d22be::function_decbd389();
-    wait(2);
+    level thread cp_mi_cairo_aquifer_sound::function_decbd389();
+    wait 2;
     setdvar("player_swimSpeed", 80);
     function_846f1215(0.65);
-    level thread namespace_1d1d22be::function_4ce4df2();
-    wait(2);
+    level thread cp_mi_cairo_aquifer_sound::function_4ce4df2();
+    wait 2;
     setdvar("player_swimSpeed", 50);
     function_846f1215(0.8);
-    level thread namespace_1d1d22be::function_2ad0c85b();
-    wait(2);
+    level thread cp_mi_cairo_aquifer_sound::function_2ad0c85b();
+    wait 2;
     level flag::set("flag_kayne_water_moment");
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 1, eflags: 0x1 linked
 // Checksum 0x43a32278, Offset: 0x27e0
 // Size: 0xd2
@@ -441,7 +441,7 @@ function function_846f1215(n_alpha) {
     }
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 1, eflags: 0x1 linked
 // Checksum 0x76bc628f, Offset: 0x28c0
 // Size: 0x4c
@@ -451,40 +451,40 @@ function function_45676b91(n_alpha) {
     self util::function_c04ace5b(0, 1);
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0xab8698ac, Offset: 0x2918
 // Size: 0x15c
 function function_645f7873() {
     level endon(#"hash_47f08523");
     setdvar("player_swimSpeed", 95);
-    wait(0.5);
-    level thread namespace_1d1d22be::function_fc716128();
+    wait 0.5;
+    level thread cp_mi_cairo_aquifer_sound::function_fc716128();
     thread function_c1808198();
     level dialog::remote("corv_listen_only_to_the_s_2", undefined, "corvus");
-    wait(0.2);
-    level thread namespace_1d1d22be::function_6e78d063();
+    wait 0.2;
+    level thread cp_mi_cairo_aquifer_sound::function_6e78d063();
     thread function_c1808198();
     level dialog::remote("corv_imagine_yourself_0", undefined, "corvus");
-    wait(0.2);
-    level thread namespace_1d1d22be::function_487655fa();
+    wait 0.2;
+    level thread cp_mi_cairo_aquifer_sound::function_487655fa();
     thread function_c1808198();
     level dialog::remote("corv_in_a_frozen_fore_0", undefined, "corvus");
     level flag::set("water_corvus_vo_cleared");
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x0
 // Checksum 0xbaeada78, Offset: 0x2a80
 // Size: 0x6c
 function function_ba41df77() {
     thread util::screen_fade_out(0.55, "white");
-    wait(0.55);
+    wait 0.55;
     util::screen_fade_out(0, "white");
     util::screen_fade_in(0.55, "white");
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x0
 // Checksum 0x1855a16e, Offset: 0x2af8
 // Size: 0x4c
@@ -493,7 +493,7 @@ function function_e367262c() {
     self hazard::do_damage("o2", 50);
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf685b4fa, Offset: 0x2b50
 // Size: 0xb8
@@ -506,11 +506,11 @@ function function_913d882() {
         if (self.sessionstate == "playing" && isalive(self) && self isplayerunderwater() && !(isdefined(self.var_5ea9c8b7) && self.var_5ea9c8b7)) {
             self thread function_41018429();
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0xeafc9e38, Offset: 0x2c10
 // Size: 0xe8
@@ -521,22 +521,22 @@ function function_41018429() {
     self.var_5ea9c8b7 = 1;
     self hazard::function_459e5eff("o2", 0);
     for (var_dd075cd2 = 1; self isplayerunderwater(); var_dd075cd2 = self hazard::do_damage("o2", 5)) {
-        wait(1);
+        wait 1;
     }
     self hazard::function_459e5eff("o2", 1);
     self.var_5ea9c8b7 = 0;
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x96f756ae, Offset: 0x2d00
 // Size: 0x2c
 function function_a1923020() {
-    level waittill(#"hash_a57da79e");
+    level waittill(#"door_explodes");
     level flag::set("flag_door_explodes");
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x109b04e8, Offset: 0x2d38
 // Size: 0x20c
@@ -544,13 +544,13 @@ function function_a1b52577() {
     thread function_a1923020();
     level flag::wait_till_all(array("flag_maretti_trap_door", "flag_kayne_ready_trap", "flag_door_explodes"));
     exploder::exploder("server_room_boobytrap");
-    level thread namespace_1d1d22be::function_ceaeaa5a();
+    level thread cp_mi_cairo_aquifer_sound::function_ceaeaa5a();
     var_5b8892d8 = getent("mdl_trapdoor", "targetname");
     var_5b8892d8 delete();
     level thread function_cb3decf1();
     thread function_a05b1c8c();
     level notify(#"hash_66250ae7");
-    wait(2);
+    wait 2;
     level dialog::remote("khal_kane_do_you_read_me_0");
     level dialog::remote("khal_there_s_multiple_con_0");
     level.var_89ea8991 dialog::say("kane_taylor_and_maretti_0");
@@ -563,7 +563,7 @@ function function_a1b52577() {
     savegame::checkpoint_save();
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x85d9812c, Offset: 0x2f50
 // Size: 0xf4
@@ -571,15 +571,15 @@ function function_71af9864() {
     spawn_manager::enable("spawn_manager_flood_robots");
     spawn_manager::enable("spawn_manager_water_robots");
     spawn_manager::enable("spawn_manager_flood_robots2");
-    wait(2);
+    wait 2;
     struct = getent("igc_kane_water", "targetname");
     struct thread scene::play("cin_aqu_03_21_server_room_doors_open");
-    level thread namespace_1d1d22be::function_ed6114d2();
+    level thread cp_mi_cairo_aquifer_sound::function_ed6114d2();
     var_31b9fd4a = getent("doubledoor_sbm", "targetname");
     var_31b9fd4a delete();
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfc1543f5, Offset: 0x3050
 // Size: 0x3c
@@ -588,7 +588,7 @@ function function_b563cc38() {
     level flag::set("flag_kane_start_water_escape");
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x222f3b2e, Offset: 0x3098
 // Size: 0x10c
@@ -603,18 +603,18 @@ function function_18af354a() {
     thread function_67c72b6();
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf6dd97dd, Offset: 0x31b0
 // Size: 0x5c
 function function_8fdcc95b(delay) {
     if (isdefined(delay)) {
-        wait(delay);
+        wait delay;
     }
     self fx::play("bubbles", self.origin, (0, 0, 0), "swim_done", 1, "j_spineupper", 1);
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7dfc2cef, Offset: 0x3218
 // Size: 0x104
@@ -629,7 +629,7 @@ function function_67c72b6() {
     struct scene::play("cin_aqu_03_22_water_room_escape_end_loop", level.var_89ea8991);
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x53ced520, Offset: 0x3328
 // Size: 0x1aa
@@ -649,23 +649,23 @@ function function_cb3decf1() {
     }
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc597b4af, Offset: 0x34e0
 // Size: 0x3c
 function function_a476832a(delay, duration) {
-    wait(delay);
+    wait delay;
     self shellshock("proximity_grenade", duration);
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb679127c, Offset: 0x3528
 // Size: 0x2c2
 function function_a05b1c8c() {
     closest = level.activeplayers[0];
     var_e34a3797 = [];
-    var_52aa09ce = getent("look_at_kane_origin", "targetname");
+    kane = getent("look_at_kane_origin", "targetname");
     var_be38fd90 = getent("door_trap_origin", "targetname");
     foreach (player in level.activeplayers) {
         if (distance(player.origin, var_be38fd90.origin) < -81) {
@@ -681,15 +681,15 @@ function function_a05b1c8c() {
         array::add(var_e34a3797, closest);
     }
     foreach (player in var_e34a3797) {
-        thread function_a0faf694(player, var_52aa09ce, var_be38fd90);
+        thread function_a0faf694(player, kane, var_be38fd90);
     }
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 3, eflags: 0x1 linked
 // Checksum 0xeb54c5da, Offset: 0x37f8
 // Size: 0x25c
-function function_a0faf694(var_4b70f64, var_52aa09ce, var_be38fd90) {
+function function_a0faf694(var_4b70f64, kane, var_be38fd90) {
     rotator = spawn("script_origin", var_4b70f64.origin);
     rotator.angles = var_4b70f64 getplayerangles();
     var_4b70f64 playerlinkto(rotator, undefined, 1, 0, 0, 0, 0);
@@ -698,16 +698,16 @@ function function_a0faf694(var_4b70f64, var_52aa09ce, var_be38fd90) {
         if (var_4b70f64.origin[1] < var_be38fd90.origin[1]) {
             rotator moveto(rotator.origin + (0, 40, 0), 0.3, 0.15, 0.15);
         }
-        rotator rotateto(vectortoangles(var_52aa09ce.origin - var_4b70f64.origin), 0.7, 0.3, 0.3);
+        rotator rotateto(vectortoangles(kane.origin - var_4b70f64.origin), 0.7, 0.3, 0.3);
     } else {
-        rotator rotateto(vectortoangles(var_52aa09ce.origin - player_eye), 0.7, 0.3, 0.3);
+        rotator rotateto(vectortoangles(kane.origin - player_eye), 0.7, 0.3, 0.3);
     }
     rotator waittill(#"rotatedone");
     var_4b70f64 unlink();
     rotator delete();
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd0a3853d, Offset: 0x3a60
 // Size: 0x94
@@ -723,7 +723,7 @@ function function_a527e6f9() {
     }
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x0
 // Checksum 0x4c4b12b5, Offset: 0x3b00
 // Size: 0x6c
@@ -733,7 +733,7 @@ function function_3b4d25aa() {
     self ai::set_ignoreme(1);
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8a9e5d29, Offset: 0x3b78
 // Size: 0x24
@@ -742,14 +742,14 @@ function function_3ed240f1() {
     thread function_8492aced();
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x1 linked
 // Checksum 0x66287dad, Offset: 0x3ba8
 // Size: 0x14c
 function function_8492aced() {
     level waittill(#"hash_43565802");
     lui::screen_fade_out(0, "black");
-    wait(0.25);
+    wait 0.25;
     level waittill(#"hash_f26c95d0");
     lui::screen_fade_in(1, "black");
     level waittill(#"hash_43565802");
@@ -764,7 +764,7 @@ function function_8492aced() {
     level thread util::screen_fade_in(1, "black");
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x0
 // Checksum 0xbbad9b36, Offset: 0x3d00
 // Size: 0x60
@@ -779,7 +779,7 @@ function function_c67c64fe() {
     }
 }
 
-// Namespace namespace_967f4af8
+// Namespace cp_mi_cairo_aquifer_water_room
 // Params 0, eflags: 0x0
 // Checksum 0x7a5ec2c1, Offset: 0x3d68
 // Size: 0x60

@@ -2,9 +2,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_d5fba823;
+#namespace _zm_weap_ballistic_knife;
 
-// Namespace namespace_d5fba823
+// Namespace _zm_weap_ballistic_knife
 // Params 0, eflags: 0x0
 // Checksum 0x9d4d6aeb, Offset: 0x198
 // Size: 0x1c
@@ -14,14 +14,14 @@ function init() {
     }
 }
 
-// Namespace namespace_d5fba823
+// Namespace _zm_weap_ballistic_knife
 // Params 2, eflags: 0x1 linked
 // Checksum 0x2cbfacf8, Offset: 0x1c0
 // Size: 0x354
 function on_spawn(watcher, player) {
     player endon(#"death");
     player endon(#"disconnect");
-    player endon(#"hash_987c489b");
+    player endon(#"zmb_lost_knife");
     level endon(#"game_ended");
     endpos, normal, angles, attacker, prey, bone = self waittill(#"stationary");
     isfriendly = 0;
@@ -60,25 +60,25 @@ function on_spawn(watcher, player) {
     }
 }
 
-// Namespace namespace_d5fba823
+// Namespace _zm_weap_ballistic_knife
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa37d9a67, Offset: 0x520
 // Size: 0x44
 function function_9830e7bc(prey) {
     level endon(#"game_ended");
     self endon(#"death");
-    wait(2);
+    wait 2;
     self setmodel("t6_wpn_ballistic_knife_projectile");
 }
 
-// Namespace namespace_d5fba823
+// Namespace _zm_weap_ballistic_knife
 // Params 2, eflags: 0x1 linked
 // Checksum 0x449804a3, Offset: 0x570
 // Size: 0x454
 function on_spawn_retrieve_trigger(watcher, player) {
     player endon(#"death");
     player endon(#"disconnect");
-    player endon(#"hash_987c489b");
+    player endon(#"zmb_lost_knife");
     level endon(#"game_ended");
     retrievable_model, normal, prey = player waittill(#"ballistic_knife_stationary");
     if (!isdefined(retrievable_model)) {
@@ -126,21 +126,21 @@ function on_spawn_retrieve_trigger(watcher, player) {
 
 /#
 
-    // Namespace namespace_d5fba823
+    // Namespace _zm_weap_ballistic_knife
     // Params 1, eflags: 0x0
     // Checksum 0x14729f32, Offset: 0x9d0
     // Size: 0x48
     function debug_print(endpos) {
         self endon(#"death");
         while (true) {
-            print3d(endpos, "zmb_lost_knife");
-            wait(0.05);
+            print3d(endpos, "<dev string:x28>");
+            wait 0.05;
         }
     }
 
 #/
 
-// Namespace namespace_d5fba823
+// Namespace _zm_weap_ballistic_knife
 // Params 6, eflags: 0x1 linked
 // Checksum 0x8396dddf, Offset: 0xa20
 // Size: 0x350
@@ -188,7 +188,7 @@ function function_35579833(trigger, model, callback, weapon, playersoundonuse, n
     }
 }
 
-// Namespace namespace_d5fba823
+// Namespace _zm_weap_ballistic_knife
 // Params 3, eflags: 0x1 linked
 // Checksum 0x9d254968, Offset: 0xd78
 // Size: 0x1b4
@@ -214,7 +214,7 @@ function pick_up(weapon, model, trigger) {
     trigger destroy_ent();
 }
 
-// Namespace namespace_d5fba823
+// Namespace _zm_weap_ballistic_knife
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbf0dd262, Offset: 0xf38
 // Size: 0x4c
@@ -227,7 +227,7 @@ function destroy_ent() {
     }
 }
 
-// Namespace namespace_d5fba823
+// Namespace _zm_weap_ballistic_knife
 // Params 2, eflags: 0x1 linked
 // Checksum 0x76ed68ab, Offset: 0xf90
 // Size: 0x74
@@ -237,13 +237,13 @@ function watch_shutdown(trigger, model) {
     model destroy_ent();
 }
 
-// Namespace namespace_d5fba823
+// Namespace _zm_weap_ballistic_knife
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6260a55a, Offset: 0x1010
 // Size: 0xb0
 function function_c6372501(player) {
     player endon(#"death");
-    player endon(#"hash_987c489b");
+    player endon(#"zmb_lost_knife");
     for (;;) {
         origin, radius = level waittill(#"drop_objects_to_ground");
         if (distancesquared(origin, self.origin) < radius * radius) {
@@ -253,26 +253,26 @@ function function_c6372501(player) {
     }
 }
 
-// Namespace namespace_d5fba823
+// Namespace _zm_weap_ballistic_knife
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa9ccb7d4, Offset: 0x10c8
 // Size: 0x8c
 function function_ae011034(player, prey) {
     self endon(#"death");
-    player endon(#"hash_987c489b");
+    player endon(#"zmb_lost_knife");
     prey waittill(#"death");
     self unlink();
     self physicslaunch((0, 0, 1), (5, 5, 5));
     self thread function_963df1d8(player);
 }
 
-// Namespace namespace_d5fba823
+// Namespace _zm_weap_ballistic_knife
 // Params 1, eflags: 0x1 linked
 // Checksum 0x54f633ab, Offset: 0x1160
 // Size: 0xbc
 function function_963df1d8(player) {
     self endon(#"death");
-    player endon(#"hash_987c489b");
+    player endon(#"zmb_lost_knife");
     if (isdefined(level.var_b7b04aa6)) {
         self [[ level.var_b7b04aa6 ]](player);
         return;

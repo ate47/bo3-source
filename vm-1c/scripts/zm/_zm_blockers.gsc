@@ -160,25 +160,25 @@ function door_classify(parent_trig) {
             self.script_string = "";
         }
         switch (self.script_string) {
-        case 31:
-            assert(isdefined(self.script_animname), "targetname" + self.targetname);
-            assert(isdefined(level.scr_anim[self.script_animname]), "targetname" + self.script_animname);
-            assert(isdefined(level.var_d519ab60), "targetname");
+        case "anim":
+            assert(isdefined(self.script_animname), "<dev string:x28>" + self.targetname);
+            assert(isdefined(level.scr_anim[self.script_animname]), "<dev string:x5e>" + self.script_animname);
+            assert(isdefined(level.var_d519ab60), "<dev string:xa1>");
             break;
-        case 34:
+        case "counter_1s":
             parent_trig.counter_1s = self;
             return;
-        case 33:
+        case "counter_10s":
             parent_trig.counter_10s = self;
             return;
-        case 32:
+        case "counter_100s":
             parent_trig.counter_100s = self;
             return;
-        case 35:
-            if (!isdefined(parent_trig.var_b18482d)) {
-                parent_trig.var_b18482d = [];
+        case "explosives":
+            if (!isdefined(parent_trig.explosives)) {
+                parent_trig.explosives = [];
             }
-            parent_trig.var_b18482d[parent_trig.var_b18482d.size] = self;
+            parent_trig.explosives[parent_trig.explosives.size] = self;
             return;
         }
     }
@@ -273,7 +273,7 @@ function blocker_update_prompt_visibility() {
                 }
             }
         }
-        wait(0.25);
+        wait 0.25;
     }
 }
 
@@ -282,9 +282,9 @@ function blocker_update_prompt_visibility() {
 // Checksum 0xa7930561, Offset: 0x18c0
 // Size: 0x1ee
 function door_delay() {
-    if (isdefined(self.var_b18482d)) {
-        for (i = 0; i < self.var_b18482d.size; i++) {
-            self.var_b18482d[i] show();
+    if (isdefined(self.explosives)) {
+        for (i = 0; i < self.explosives.size; i++) {
+            self.explosives[i] show();
         }
     }
     if (!isdefined(self.script_int)) {
@@ -294,17 +294,17 @@ function door_delay() {
     for (i = 0; i < var_302c97b6.size; i++) {
         var_302c97b6[i] triggerenable(0);
     }
-    wait(self.script_int);
+    wait self.script_int;
     for (i = 0; i < self.script_int; i++) {
         /#
             iprintln(self.script_int - i);
         #/
-        wait(1);
+        wait 1;
     }
-    if (isdefined(self.var_b18482d)) {
-        for (i = 0; i < self.var_b18482d.size; i++) {
-            playfx(level._effect["def_explosion"], self.var_b18482d[i].origin, anglestoforward(self.var_b18482d[i].angles));
-            self.var_b18482d[i] hide();
+    if (isdefined(self.explosives)) {
+        for (i = 0; i < self.explosives.size; i++) {
+            playfx(level._effect["def_explosion"], self.explosives[i].origin, anglestoforward(self.explosives[i].angles));
+            self.explosives[i] hide();
         }
     }
 }
@@ -355,7 +355,7 @@ function door_activate(time, open, quick, use_blocker_clip_for_pathing) {
     if (isdefined(self.script_string) && (isdefined(self.script_noteworthy) && self.script_noteworthy == "clip" || self.script_string == "clip")) {
         if (!open) {
             self util::delay(time, undefined, &self_disconnectpaths);
-            wait(0.1);
+            wait 0.1;
             self solid();
         }
         return;
@@ -374,7 +374,7 @@ function door_activate(time, open, quick, use_blocker_clip_for_pathing) {
         scale = -1;
     }
     switch (self.script_string) {
-    case 28:
+    case "rotate":
         if (isdefined(self.script_angles)) {
             rot_angle = self.script_angles;
             if (!open) {
@@ -386,10 +386,10 @@ function door_activate(time, open, quick, use_blocker_clip_for_pathing) {
                 self thread disconnect_paths_when_done();
             }
         }
-        wait(randomfloat(0.15));
+        wait randomfloat(0.15);
         break;
-    case 29:
-    case 54:
+    case "move":
+    case "slide_apart":
         if (isdefined(self.script_vector)) {
             vector = vectorscale(self.script_vector, scale);
             if (time >= 0.5) {
@@ -402,18 +402,18 @@ function door_activate(time, open, quick, use_blocker_clip_for_pathing) {
                 self thread disconnect_paths_when_done();
             }
         }
-        wait(randomfloat(0.15));
+        wait randomfloat(0.15);
         break;
-    case 31:
+    case "anim":
         self [[ level.var_d519ab60 ]](self.script_animname);
         self thread door_solid_thread_anim();
-        wait(randomfloat(0.15));
+        wait randomfloat(0.15);
         break;
-    case 53:
+    case "physics":
         self thread physics_launch_door(self);
-        wait(0.1);
+        wait 0.1;
         break;
-    case 55:
+    case "zbarrier":
         self thread door_zbarrier_move();
         break;
     }
@@ -438,12 +438,12 @@ function kill_trapped_zombies(trigger) {
         if (zombies[i] istouching(trigger)) {
             zombies[i].marked_for_recycle = 1;
             zombies[i] dodamage(zombies[i].health + 666, trigger.origin, self);
-            wait(randomfloat(0.15));
+            wait randomfloat(0.15);
             continue;
         }
         if (isdefined(level.custom_trapped_zombies)) {
             zombies[i] thread [[ level.custom_trapped_zombies ]]();
-            wait(randomfloat(0.15));
+            wait randomfloat(0.15);
         }
     }
 }
@@ -457,7 +457,7 @@ function any_player_touching(trigger) {
         if (player istouching(trigger)) {
             return true;
         }
-        wait(0.01);
+        wait 0.01;
     }
     return false;
 }
@@ -512,9 +512,9 @@ function any_zombie_touching_any(trigger, more_triggers) {
 function wait_trigger_clear(trigger, more_triggers, end_on) {
     self endon(end_on);
     while (any_player_touching_any(trigger, more_triggers) || any_zombie_touching_any(trigger, more_triggers)) {
-        wait(1);
+        wait 1;
     }
-    println("targetname");
+    println("<dev string:xd9>");
     self notify(#"trigger_clear");
 }
 
@@ -528,7 +528,7 @@ function waittill_door_trigger_clear_local_power_off(trigger, var_302c97b6) {
         if (isdefined(self.local_power_on) && self.local_power_on) {
             self waittill(#"local_power_off");
         }
-        println("targetname");
+        println("<dev string:xfe>");
         self wait_trigger_clear(trigger, var_302c97b6, "local_power_on");
     }
 }
@@ -543,7 +543,7 @@ function waittill_door_trigger_clear_global_power_off(trigger, var_302c97b6) {
         if (isdefined(self.power_on) && self.power_on) {
             self waittill(#"power_off");
         }
-        println("targetname");
+        println("<dev string:x11f>");
         self wait_trigger_clear(trigger, var_302c97b6, "power_on");
     }
 }
@@ -559,7 +559,7 @@ function waittill_door_can_close() {
     }
     var_302c97b6 = getentarray(self.target, "target");
     switch (self.script_noteworthy) {
-    case 22:
+    case "local_electric_door":
         if (isdefined(trigger) || isdefined(var_302c97b6)) {
             self waittill_door_trigger_clear_local_power_off(trigger, var_302c97b6);
             self thread kill_trapped_zombies(trigger);
@@ -569,7 +569,7 @@ function waittill_door_can_close() {
             self waittill(#"local_power_off");
         }
         return;
-    case 17:
+    case "electric_door":
         if (isdefined(trigger) || isdefined(var_302c97b6)) {
             self waittill_door_trigger_clear_global_power_off(trigger, var_302c97b6);
             if (isdefined(trigger)) {
@@ -597,12 +597,12 @@ function door_think() {
     self sethintlowpriority(1);
     while (true) {
         switch (self.script_noteworthy) {
-        case 22:
+        case "local_electric_door":
             if (!(isdefined(self.local_power_on) && self.local_power_on)) {
                 self waittill(#"local_power_on");
             }
             if (!(isdefined(self._door_open) && self._door_open)) {
-                println("targetname");
+                println("<dev string:x141>");
                 self door_opened(cost, 1);
                 if (!isdefined(self.power_cost)) {
                     self.power_cost = 0;
@@ -613,22 +613,22 @@ function door_think() {
             if (isdefined(level.local_doors_stay_open) && level.local_doors_stay_open) {
                 return;
             }
-            wait(3);
+            wait 3;
             self waittill_door_can_close();
             self door_block();
             if (isdefined(self._door_open) && self._door_open) {
-                println("targetname");
+                println("<dev string:x15f>");
                 self door_opened(cost, 1);
             }
             self sethintstring(%ZOMBIE_NEED_LOCAL_POWER);
-            wait(3);
+            wait 3;
             continue;
-        case 17:
+        case "electric_door":
             if (!(isdefined(self.power_on) && self.power_on)) {
                 self waittill(#"power_on");
             }
             if (!(isdefined(self._door_open) && self._door_open)) {
-                println("targetname");
+                println("<dev string:x17d>");
                 self door_opened(cost, 1);
                 if (!isdefined(self.power_cost)) {
                     self.power_cost = 0;
@@ -639,17 +639,17 @@ function door_think() {
             if (isdefined(level.local_doors_stay_open) && level.local_doors_stay_open) {
                 return;
             }
-            wait(3);
+            wait 3;
             self waittill_door_can_close();
             self door_block();
             if (isdefined(self._door_open) && self._door_open) {
-                println("targetname");
+                println("<dev string:x19c>");
                 self door_opened(cost, 1);
             }
             self sethintstring(%ZOMBIE_NEED_POWER);
-            wait(3);
+            wait 3;
             continue;
-        case 18:
+        case "electric_buyable_door":
             if (!(isdefined(self.power_on) && self.power_on)) {
                 self waittill(#"power_on");
             }
@@ -658,7 +658,7 @@ function door_think() {
                 continue;
             }
             break;
-        case 58:
+        case "delay_door":
             if (!self door_buy()) {
                 continue;
             }
@@ -781,7 +781,7 @@ function door_opened(cost, quick_close) {
         }
     }
     level.active_zone_names = zm_zonemgr::get_active_zone_names();
-    wait(1);
+    wait 1;
     self.door_is_moving = 0;
     foreach (trig in var_302c97b6) {
         trig.door_is_moving = 0;
@@ -793,7 +793,7 @@ function door_opened(cost, quick_close) {
         return;
     }
     if (level flag::get("door_can_close")) {
-        wait(2);
+        wait 2;
         for (i = 0; i < var_302c97b6.size; i++) {
             var_302c97b6[i] triggerenable(1);
         }
@@ -807,11 +807,11 @@ function door_opened(cost, quick_close) {
 function physics_launch_door(door_trig) {
     vec = vectorscale(vectornormalize(self.script_vector), 10);
     self rotateroll(5, 0.05);
-    wait(0.05);
+    wait 0.05;
     self moveto(self.origin + vec, 0.1);
     self waittill(#"movedone");
     self physicslaunch(self.origin, self.script_vector * 300);
-    wait(60);
+    wait 60;
     self delete();
 }
 
@@ -835,7 +835,7 @@ function door_solid_thread() {
             self solid();
             return;
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -859,7 +859,7 @@ function door_solid_thread_anim() {
             self solid();
             return;
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -1057,7 +1057,7 @@ function door_zbarrier_move() {
 function move_chunk(index, b_hide) {
     self setzbarrierpiecestate(index, "opening");
     while (self getzbarrierpiecestate(index) == "opening") {
-        wait(0.1);
+        wait 0.1;
     }
     self notify(#"movedone");
     if (b_hide) {
@@ -1085,7 +1085,7 @@ function debris_move(struct) {
                 angles = og_angles + (-5 + randomfloat(10), -5 + randomfloat(10), -5 + randomfloat(10));
                 time = randomfloatrange(0.1, 0.4);
                 self rotateto(angles, time);
-                wait(time - 0.05);
+                wait time - 0.05;
             }
         }
     }
@@ -1155,7 +1155,7 @@ function blocker_init() {
                     if (targets[j].script_noteworthy == "2" || targets[j].script_noteworthy == "3" || targets[j].script_noteworthy == "4" || targets[j].script_noteworthy == "5" || targets[j].script_noteworthy == "6") {
                         targets[j] hide();
                         /#
-                            iprintlnbold("targetname");
+                            iprintlnbold("<dev string:x1bb>");
                         #/
                     }
                 }
@@ -1290,7 +1290,7 @@ function blocker_choke() {
     level._blocker_choke = 0;
     level endon(#"stop_blocker_think");
     while (true) {
-        wait(0.05);
+        wait 0.05;
         level._blocker_choke = 0;
     }
 }
@@ -1309,10 +1309,10 @@ function blocker_think() {
         use_choke = 1;
     }
     while (true) {
-        wait(0.5);
+        wait 0.5;
         if (use_choke) {
             if (level._blocker_choke > 3) {
-                wait(0.05);
+                wait 0.05;
             }
         }
         level._blocker_choke++;
@@ -1373,7 +1373,7 @@ function has_blocker_affecting_perk() {
 // Size: 0x2c
 function do_post_chunk_repair_delay(has_perk) {
     if (!self util::script_delay()) {
-        wait(1);
+        wait 1;
     }
 }
 
@@ -1419,7 +1419,7 @@ function blocker_trigger_think() {
     if (isdefined(level.no_board_repair) && level.no_board_repair) {
         return;
     }
-    println("targetname");
+    println("<dev string:x1c2>");
     level endon(#"stop_blocker_think");
     cost = 10;
     if (isdefined(self.zombie_cost)) {
@@ -1461,7 +1461,7 @@ function blocker_trigger_think() {
     self thread trigger_delete_on_repair();
     thread zm_unitrigger::register_static_unitrigger(self.unitrigger_stub, &blocker_unitrigger_think);
     /#
-        if (getdvarint("targetname") > 0) {
+        if (getdvarint("<dev string:x1e7>") > 0) {
             thread zm_utility::debug_blocker(trigger_pos, radius, height);
         }
     #/
@@ -1473,7 +1473,7 @@ function blocker_trigger_think() {
             return;
         }
         if (zm_utility::no_valid_repairable_boards(self, self.barrier_chunks)) {
-            self notify(#"hash_46d36511");
+            self notify(#"no valid boards");
             return;
         }
         if (isdefined(level._zm_blocker_trigger_think_return_override)) {
@@ -1544,7 +1544,7 @@ function blocker_trigger_think() {
                 return;
             }
             if (zm_utility::no_valid_repairable_boards(self, self.barrier_chunks)) {
-                self notify(#"hash_46d36511");
+                self notify(#"no valid boards");
                 player increment_window_repaired(self);
                 return;
             }
@@ -1595,7 +1595,7 @@ function blockerstub_update_prompt(player) {
 // Checksum 0x3403525f, Offset: 0x6700
 // Size: 0x24
 function random_destroyed_chunk_show() {
-    wait(0.5);
+    wait 0.5;
     self show();
 }
 
@@ -1691,9 +1691,9 @@ function remove_chunk(chunk, node, destroy_immediately, zomb) {
             } else {
                 ent rotatepitch(90, time, time * 0.5);
             }
-            wait(time);
+            wait time;
             chunk hide();
-            wait(0.1);
+            wait 0.1;
             ent delete();
         } else {
             ent = spawn("script_origin", chunk.origin);
@@ -1719,9 +1719,9 @@ function remove_chunk(chunk, node, destroy_immediately, zomb) {
             } else {
                 ent rotatepitch(90, time, time * 0.5);
             }
-            wait(time);
+            wait time;
             chunk hide();
-            wait(0.1);
+            wait 0.1;
             ent delete();
         }
         chunk update_states("destroyed");
@@ -1756,14 +1756,14 @@ function remove_chunk(chunk, node, destroy_immediately, zomb) {
         } else {
             ent rotatepitch(90, time, time * 0.5);
         }
-        wait(time);
+        wait time;
         if (isdefined(chunk.unbroken_section)) {
             if (isdefined(chunk.material) && chunk.material == "metal") {
                 chunk.unbroken_section zm_utility::self_delete();
             }
         }
         chunk hide();
-        wait(0.1);
+        wait 0.1;
         ent delete();
         chunk update_states("destroyed");
         chunk notify(#"destroyed");
@@ -1787,7 +1787,7 @@ function remove_chunk(chunk, node, destroy_immediately, zomb) {
             } else {
                 ent rotatepitch(90, time, time * 0.5);
             }
-            wait(time);
+            wait time;
             chunk hide();
             ent delete();
             chunk update_states("destroyed");
@@ -1821,14 +1821,14 @@ function zombie_boardtear_audio_offset(chunk) {
     }
     if (isdefined(chunk.material) && chunk.material == "glass" && chunk.already_broken == 0) {
         chunk playsound("zmb_break_glass_barrier");
-        wait(randomfloatrange(0.3, 0.6));
+        wait randomfloatrange(0.3, 0.6);
         chunk playsound("zmb_break_glass_barrier");
         chunk.already_broken = 1;
         return;
     }
     if (isdefined(chunk.material) && chunk.material == "metal" && chunk.already_broken == 0) {
         chunk playsound("grab_metal_bar");
-        wait(randomfloatrange(0.3, 0.6));
+        wait randomfloatrange(0.3, 0.6);
         chunk playsound("break_metal_bar");
         chunk.already_broken = 1;
         return;
@@ -1836,7 +1836,7 @@ function zombie_boardtear_audio_offset(chunk) {
     if (isdefined(chunk.material) && chunk.material == "rock") {
         if (!(isdefined(level.use_clientside_rock_tearin_fx) && level.use_clientside_rock_tearin_fx)) {
             chunk playsound("zmb_break_rock_barrier");
-            wait(randomfloatrange(0.3, 0.6));
+            wait randomfloatrange(0.3, 0.6);
             chunk playsound("zmb_break_rock_barrier");
         }
         chunk.already_broken = 1;
@@ -1850,7 +1850,7 @@ function zombie_boardtear_audio_offset(chunk) {
     }
     if (!(isdefined(level.use_clientside_board_fx) && level.use_clientside_board_fx)) {
         chunk zm_utility::play_sound_on_ent("break_barrier_piece");
-        wait(randomfloatrange(0.3, 0.6));
+        wait randomfloatrange(0.3, 0.6);
         chunk zm_utility::play_sound_on_ent("break_barrier_piece");
     }
     chunk.already_broken = 1;
@@ -1862,9 +1862,9 @@ function zombie_boardtear_audio_offset(chunk) {
 // Size: 0xac
 function zombie_bartear_audio_offset(chunk) {
     chunk zm_utility::play_sound_on_ent("grab_metal_bar");
-    wait(randomfloatrange(0.3, 0.6));
+    wait randomfloatrange(0.3, 0.6);
     chunk zm_utility::play_sound_on_ent("break_metal_bar");
-    wait(randomfloatrange(1, 1.3));
+    wait randomfloatrange(1, 1.3);
     chunk zm_utility::play_sound_on_ent("drop_metal_bar");
 }
 
@@ -1916,7 +1916,7 @@ function replace_chunk(barrier, chunk, perk, upgrade, via_powerup) {
     barrier.zbarrier showzbarrierpiece(chunk);
     barrier.zbarrier setzbarrierpiecestate(chunk, "closing", scalar);
     waitduration = barrier.zbarrier getzbarrierpieceanimlengthforstate(chunk, "closing", scalar);
-    wait(waitduration);
+    wait waitduration;
 }
 
 // Namespace zm_blockers
@@ -1949,7 +1949,7 @@ function zombie_boardtear_audio_plus_fx_offset_repair_horizontal(chunk) {
             chunk clientfield::set("tearin_rock_fx", 0);
         } else {
             earthquake(randomfloatrange(0.3, 0.4), randomfloatrange(0.2, 0.4), chunk.origin, -106);
-            wait(randomfloatrange(0.3, 0.6));
+            wait randomfloatrange(0.3, 0.6);
             chunk zm_utility::play_sound_on_ent("break_barrier_piece");
         }
         return;
@@ -1959,7 +1959,7 @@ function zombie_boardtear_audio_plus_fx_offset_repair_horizontal(chunk) {
         return;
     }
     earthquake(randomfloatrange(0.3, 0.4), randomfloatrange(0.2, 0.4), chunk.origin, -106);
-    wait(randomfloatrange(0.3, 0.6));
+    wait randomfloatrange(0.3, 0.6);
     chunk zm_utility::play_sound_on_ent("break_barrier_piece");
 }
 
@@ -1973,7 +1973,7 @@ function zombie_boardtear_audio_plus_fx_offset_repair_verticle(chunk) {
             chunk clientfield::set("tearin_rock_fx", 0);
         } else {
             earthquake(randomfloatrange(0.3, 0.4), randomfloatrange(0.2, 0.4), chunk.origin, -106);
-            wait(randomfloatrange(0.3, 0.6));
+            wait randomfloatrange(0.3, 0.6);
             chunk zm_utility::play_sound_on_ent("break_barrier_piece");
         }
         return;
@@ -1983,7 +1983,7 @@ function zombie_boardtear_audio_plus_fx_offset_repair_verticle(chunk) {
         return;
     }
     earthquake(randomfloatrange(0.3, 0.4), randomfloatrange(0.2, 0.4), chunk.origin, -106);
-    wait(randomfloatrange(0.3, 0.6));
+    wait randomfloatrange(0.3, 0.6);
     chunk zm_utility::play_sound_on_ent("break_barrier_piece");
 }
 
@@ -1997,27 +1997,27 @@ function zombie_gratetear_audio_plus_fx_offset_repair_horizontal(chunk) {
     switch (randomint(9)) {
     case 0:
         playfx(level._effect["fx_zombie_bar_break"], chunk.origin + (-30, 0, 0));
-        wait(randomfloatrange(0, 0.3));
+        wait randomfloatrange(0, 0.3);
         playfx(level._effect["fx_zombie_bar_break_lite"], chunk.origin + (-30, 0, 0));
         break;
     case 1:
         playfx(level._effect["fx_zombie_bar_break"], chunk.origin + (-30, 0, 0));
-        wait(randomfloatrange(0, 0.3));
+        wait randomfloatrange(0, 0.3);
         playfx(level._effect["fx_zombie_bar_break"], chunk.origin + (-30, 0, 0));
         break;
     case 2:
         playfx(level._effect["fx_zombie_bar_break_lite"], chunk.origin + (-30, 0, 0));
-        wait(randomfloatrange(0, 0.3));
+        wait randomfloatrange(0, 0.3);
         playfx(level._effect["fx_zombie_bar_break"], chunk.origin + (-30, 0, 0));
         break;
     case 3:
         playfx(level._effect["fx_zombie_bar_break"], chunk.origin + (-30, 0, 0));
-        wait(randomfloatrange(0, 0.3));
+        wait randomfloatrange(0, 0.3);
         playfx(level._effect["fx_zombie_bar_break_lite"], chunk.origin + (-30, 0, 0));
         break;
     case 4:
         playfx(level._effect["fx_zombie_bar_break_lite"], chunk.origin + (-30, 0, 0));
-        wait(randomfloatrange(0, 0.3));
+        wait randomfloatrange(0, 0.3);
         playfx(level._effect["fx_zombie_bar_break_lite"], chunk.origin + (-30, 0, 0));
         break;
     case 5:
@@ -2045,27 +2045,27 @@ function zombie_bartear_audio_plus_fx_offset_repair_horizontal(chunk) {
     switch (randomint(9)) {
     case 0:
         playfxontag(level._effect["fx_zombie_bar_break_lite"], chunk, "Tag_fx_left");
-        wait(randomfloatrange(0, 0.3));
+        wait randomfloatrange(0, 0.3);
         playfxontag(level._effect["fx_zombie_bar_break_lite"], chunk, "Tag_fx_right");
         break;
     case 1:
         playfxontag(level._effect["fx_zombie_bar_break"], chunk, "Tag_fx_left");
-        wait(randomfloatrange(0, 0.3));
+        wait randomfloatrange(0, 0.3);
         playfxontag(level._effect["fx_zombie_bar_break"], chunk, "Tag_fx_right");
         break;
     case 2:
         playfxontag(level._effect["fx_zombie_bar_break_lite"], chunk, "Tag_fx_left");
-        wait(randomfloatrange(0, 0.3));
+        wait randomfloatrange(0, 0.3);
         playfxontag(level._effect["fx_zombie_bar_break"], chunk, "Tag_fx_right");
         break;
     case 3:
         playfxontag(level._effect["fx_zombie_bar_break"], chunk, "Tag_fx_left");
-        wait(randomfloatrange(0, 0.3));
+        wait randomfloatrange(0, 0.3);
         playfxontag(level._effect["fx_zombie_bar_break_lite"], chunk, "Tag_fx_right");
         break;
     case 4:
         playfxontag(level._effect["fx_zombie_bar_break_lite"], chunk, "Tag_fx_left");
-        wait(randomfloatrange(0, 0.3));
+        wait randomfloatrange(0, 0.3);
         playfxontag(level._effect["fx_zombie_bar_break_lite"], chunk, "Tag_fx_right");
         break;
     case 5:
@@ -2093,27 +2093,27 @@ function zombie_bartear_audio_plus_fx_offset_repair_verticle(chunk) {
     switch (randomint(9)) {
     case 0:
         playfxontag(level._effect["fx_zombie_bar_break_lite"], chunk, "Tag_fx_top");
-        wait(randomfloatrange(0, 0.3));
+        wait randomfloatrange(0, 0.3);
         playfxontag(level._effect["fx_zombie_bar_break_lite"], chunk, "Tag_fx_bottom");
         break;
     case 1:
         playfxontag(level._effect["fx_zombie_bar_break"], chunk, "Tag_fx_top");
-        wait(randomfloatrange(0, 0.3));
+        wait randomfloatrange(0, 0.3);
         playfxontag(level._effect["fx_zombie_bar_break"], chunk, "Tag_fx_bottom");
         break;
     case 2:
         playfxontag(level._effect["fx_zombie_bar_break_lite"], chunk, "Tag_fx_top");
-        wait(randomfloatrange(0, 0.3));
+        wait randomfloatrange(0, 0.3);
         playfxontag(level._effect["fx_zombie_bar_break"], chunk, "Tag_fx_bottom");
         break;
     case 3:
         playfxontag(level._effect["fx_zombie_bar_break"], chunk, "Tag_fx_top");
-        wait(randomfloatrange(0, 0.3));
+        wait randomfloatrange(0, 0.3);
         playfxontag(level._effect["fx_zombie_bar_break_lite"], chunk, "Tag_fx_bottom");
         break;
     case 4:
         playfxontag(level._effect["fx_zombie_bar_break_lite"], chunk, "Tag_fx_top");
-        wait(randomfloatrange(0, 0.3));
+        wait randomfloatrange(0, 0.3);
         playfxontag(level._effect["fx_zombie_bar_break_lite"], chunk, "Tag_fx_bottom");
         break;
     case 5:
@@ -2137,7 +2137,7 @@ function zombie_bartear_audio_plus_fx_offset_repair_verticle(chunk) {
 // Size: 0x19c
 function flag_blocker() {
     if (!isdefined(self.script_flag_wait)) {
-        assertmsg("targetname" + self.origin + "targetname");
+        assertmsg("<dev string:x1f4>" + self.origin + "<dev string:x205>");
         return;
     }
     if (!isdefined(level.flag[self.script_flag_wait])) {
@@ -2159,7 +2159,7 @@ function flag_blocker() {
         self triggerenable(0);
         return;
     }
-    assertmsg("targetname" + self.origin + "targetname" + type + "targetname");
+    assertmsg("<dev string:x236>" + self.origin + "<dev string:x247>" + type + "<dev string:x254>");
 }
 
 // Namespace zm_blockers

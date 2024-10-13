@@ -145,7 +145,7 @@ function player_drown_fx(localclientnum, stage) {
         filter::set_filter_drowning_damage_inner_radius(localclientnum, 1, self.drown_innerradius);
         filter::set_filter_drowning_damage_outer_radius(localclientnum, 1, self.drown_outerradius);
         filter::set_filter_drowning_damage_opacity(localclientnum, 1, self.drown_opacity);
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -169,7 +169,7 @@ function player_fade_out_drown_fx(localclientnum) {
         filter::set_filter_drowning_damage_outer_radius(localclientnum, 1, outerradius);
         filter::set_filter_drowning_damage_inner_radius(localclientnum, 1, innerradius);
         filter::set_filter_drowning_damage_opacity(localclientnum, 1, opacity);
-        wait(0.016);
+        wait 0.016;
     }
     self disable_drown(localclientnum);
 }

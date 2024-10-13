@@ -16,7 +16,7 @@
 // Size: 0x104
 function autoexec main() {
     clientfield::register("vehicle", "parasite_tell_fx", 1, 1, "int", &function_efb89eff, 0, 0);
-    clientfield::register("toplayer", "parasite_damage", 1, 1, "counter", &function_5f6cf4b2, 0, 0);
+    clientfield::register("toplayer", "parasite_damage", 1, 1, "counter", &parasite_damage, 0, 0);
     clientfield::register("vehicle", "parasite_secondary_deathfx", 1, 1, "int", &function_a6b394f4, 0, 0);
     vehicle::add_vehicletype_callback("parasite", &_setup_);
 }
@@ -44,7 +44,7 @@ function private function_efb89eff(localclientnum, oldvalue, newvalue, bnewent, 
 // Params 7, eflags: 0x5 linked
 // Checksum 0x4aff30da, Offset: 0x4b8
 // Size: 0x64
-function private function_5f6cf4b2(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private parasite_damage(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue) {
         self postfx::playpostfxbundle("pstfx_parasite_dmg");
     }

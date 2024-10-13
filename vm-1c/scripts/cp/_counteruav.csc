@@ -40,7 +40,7 @@ function spawned(localclientnum, oldval, newval, bnewent, binitialsnap, fieldnam
         player setenemyglobalscrambler(1);
         return;
     }
-    self notify(#"hash_1d3810db");
+    self notify(#"counteruav_off");
 }
 
 // Namespace counteruav

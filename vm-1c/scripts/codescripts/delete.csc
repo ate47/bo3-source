@@ -6,14 +6,14 @@
 // Size: 0xfc
 function main() {
     assert(isdefined(self));
-    wait(0);
+    wait 0;
     if (isdefined(self)) {
         /#
             if (isdefined(self.classname)) {
-                if (self.classname == "<unknown string>" || self.classname == "<unknown string>" || self.classname == "<unknown string>") {
-                    println("<unknown string>");
-                    println("<unknown string>" + self getentitynumber() + "<unknown string>" + self.origin);
-                    println("<unknown string>");
+                if (self.classname == "<dev string:x28>" || self.classname == "<dev string:x35>" || self.classname == "<dev string:x44>") {
+                    println("<dev string:x55>");
+                    println("<dev string:x56>" + self getentitynumber() + "<dev string:x94>" + self.origin);
+                    println("<dev string:x55>");
                 }
             }
         #/

@@ -29,7 +29,7 @@ function autoexec main() {
         }
         processedfxbundles[fxbundlename] = processedfxbundle;
     }
-    level.var_3f831f3b["fxcharacterdef"] = processedfxbundles;
+    level.scriptbundles["fxcharacterdef"] = processedfxbundles;
 }
 
 #namespace fxclientutils;
@@ -96,15 +96,15 @@ function private _gibhandler(localclientnum, entity, gibflag) {
 function private _gibpartnametogibflag(gibpartname) {
     if (isdefined(gibpartname)) {
         switch (gibpartname) {
-        case 6:
+        case "head":
             return 8;
-        case 9:
+        case "right arm":
             return 16;
-        case 7:
+        case "left arm":
             return 32;
-        case 10:
+        case "right leg":
             return -128;
-        case 8:
+        case "left leg":
             return 256;
         }
     }

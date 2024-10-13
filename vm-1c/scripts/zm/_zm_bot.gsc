@@ -26,7 +26,7 @@ function autoexec function_2dc19561() {
 // Checksum 0xd54b1689, Offset: 0x238
 // Size: 0xc4
 function __init__() {
-    println("<unknown string>");
+    println("<dev string:x28>");
     /#
         level.onbotspawned = &on_bot_spawned;
         level.var_93a32db5 = &namespace_5cd60c9f::function_3aa9220a;
@@ -46,30 +46,30 @@ function __init__() {
     // Size: 0x1e8
     function function_6e62d3e3() {
         botcount = 0;
-        adddebugcommand("<unknown string>");
+        adddebugcommand("<dev string:x5b>");
         while (true) {
-            if (getdvarint("<unknown string>") > 0) {
-                while (getdvarint("<unknown string>") > 0) {
+            if (getdvarint("<dev string:xdf>") > 0) {
+                while (getdvarint("<dev string:xdf>") > 0) {
                     if (botcount > 0 && randomint(100) > 60) {
-                        adddebugcommand("<unknown string>");
+                        adddebugcommand("<dev string:xf8>");
                         botcount--;
-                        debugmsg("<unknown string>" + botcount);
-                    } else if (botcount < getdvarint("<unknown string>") && randomint(100) > 50) {
-                        adddebugcommand("<unknown string>");
+                        debugmsg("<dev string:x10e>" + botcount);
+                    } else if (botcount < getdvarint("<dev string:xdf>") && randomint(100) > 50) {
+                        adddebugcommand("<dev string:x12d>");
                         botcount++;
-                        debugmsg("<unknown string>" + botcount);
+                        debugmsg("<dev string:x140>" + botcount);
                     }
-                    wait(randomintrange(1, 3));
+                    wait randomintrange(1, 3);
                 }
             } else {
                 while (botcount > 0) {
-                    adddebugcommand("<unknown string>");
+                    adddebugcommand("<dev string:xf8>");
                     botcount--;
-                    debugmsg("<unknown string>" + botcount);
-                    wait(1);
+                    debugmsg("<dev string:x10e>" + botcount);
+                    wait 1;
                 }
             }
-            wait(1);
+            wait 1;
         }
     }
 
@@ -90,7 +90,7 @@ function __init__() {
     function debugmsg(var_69ae6753) {
         iprintlnbold(var_69ae6753);
         if (isdefined(level.name)) {
-            println("<unknown string>" + level.name + "<unknown string>" + var_69ae6753);
+            println("<dev string:x15c>" + level.name + "<dev string:x15e>" + var_69ae6753);
         }
     }
 

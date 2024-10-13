@@ -107,7 +107,7 @@ function onstartgametype() {
         game["switchedsides"] = 0;
     }
     /#
-        setdebugsideswitch(game["0"]);
+        setdebugsideswitch(game["<dev string:x28>"]);
     #/
     setclientnamemode("auto_change");
     globallogic_score::resetteamscores();
@@ -458,7 +458,7 @@ function ctf() {
     flag_triggers = getentarray("ctf_flag_pickup_trig", "targetname");
     if (!isdefined(flag_triggers) || flag_triggers.size != 2) {
         /#
-            util::error("0");
+            util::error("<dev string:x36>");
         #/
         return;
     }
@@ -472,7 +472,7 @@ function ctf() {
     flag_zones = getentarray("ctf_flag_zone_trig", "targetname");
     if (!isdefined(flag_zones) || flag_zones.size != 2) {
         /#
-            util::error("0");
+            util::error("<dev string:x78>");
         #/
         return;
     }
@@ -547,9 +547,9 @@ function ondrop(player) {
     globallogic_audio::leader_dialog("ctfEnemyFlagDropped", otherteam, undefined, "ctf_flag_enemy");
     /#
         if (isdefined(player)) {
-            print(team + "0");
+            print(team + "<dev string:xb8>");
         } else {
-            print(team + "0");
+            print(team + "<dev string:xb8>");
         }
     #/
     if (isdefined(player)) {
@@ -626,10 +626,10 @@ function onpickup(player) {
         self returnflag();
         /#
             if (isdefined(player)) {
-                print(team + "0");
+                print(team + "<dev string:xc6>");
                 return;
             }
-            print(team + "0");
+            print(team + "<dev string:xc6>");
         #/
         return;
     }
@@ -662,7 +662,7 @@ function onpickup(player) {
     update_hints();
     player resetflashback();
     /#
-        print(team + "0");
+        print(team + "<dev string:xd5>");
     #/
     ss = level.spawnsystem;
     player_team_mask = util::getteammask(otherteam);
@@ -678,7 +678,7 @@ function onpickup(player) {
 function onpickupmusicstate(player) {
     self endon(#"disconnect");
     self endon(#"death");
-    wait(6);
+    wait 6;
     if (player.isflagcarrier) {
     }
 }
@@ -752,7 +752,7 @@ function oncapture(player) {
     globallogic_audio::play_2d_on_team("mpl_flagcapture_sting_friend", team);
     player giveflagcapturexp(player);
     /#
-        print(enemyteam + "0");
+        print(enemyteam + "<dev string:xe1>");
     #/
     flag = player.carryobject;
     player challenges::capturedobjective(time, flag.trigger);
@@ -979,16 +979,16 @@ function function_5badced4(time) {
     self endon(#"picked_up");
     level endon(#"game_ended");
     ownerteam = self gameobjects::get_owner_team();
-    assert(!level.var_5d0c9f44["0"][ownerteam].alpha);
+    assert(!level.var_5d0c9f44["<dev string:xf0>"][ownerteam].alpha);
     level.var_5d0c9f44["axis"][ownerteam].alpha = 1;
     level.var_5d0c9f44["axis"][ownerteam] settimer(time);
-    assert(!level.var_5d0c9f44["0"][ownerteam].alpha);
+    assert(!level.var_5d0c9f44["<dev string:xf5>"][ownerteam].alpha);
     level.var_5d0c9f44["allies"][ownerteam].alpha = 1;
     level.var_5d0c9f44["allies"][ownerteam] settimer(time);
     if (time <= 0) {
         return false;
     } else {
-        wait(time);
+        wait time;
     }
     return true;
 }

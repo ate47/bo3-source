@@ -6,25 +6,25 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f3e3de78;
+#namespace zm_island_power;
 
-// Namespace namespace_f3e3de78
+// Namespace zm_island_power
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa58a8e1a, Offset: 0x258
 // Size: 0x16c
 function init() {
-    clientfield::register("scriptmover", "bucket_fx", 9000, 1, "int", &function_9865d978, 0, 0);
-    clientfield::register("world", "power_switch_1_fx", 9000, 1, "int", &function_41da9a24, 0, 0);
-    clientfield::register("world", "power_switch_2_fx", 9000, 1, "int", &function_11d41051, 0, 0);
+    clientfield::register("scriptmover", "bucket_fx", 9000, 1, "int", &bucket_fx, 0, 0);
+    clientfield::register("world", "power_switch_1_fx", 9000, 1, "int", &power_switch_1_fx, 0, 0);
+    clientfield::register("world", "power_switch_2_fx", 9000, 1, "int", &power_switch_2_fx, 0, 0);
     clientfield::register("world", "penstock_fx_anim", 9000, 1, "int", &function_8816d2aa, 0, 0);
-    clientfield::register("scriptmover", "power_plant_glow", 9000, 1, "int", &function_884da1ce, 0, 0);
+    clientfield::register("scriptmover", "power_plant_glow", 9000, 1, "int", &power_plant_glow, 0, 0);
 }
 
-// Namespace namespace_f3e3de78
+// Namespace zm_island_power
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5c8cebd, Offset: 0x3d0
 // Size: 0xdc
-function function_9865d978(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function bucket_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self util::waittill_dobj(localclientnum);
     if (!isdefined(self)) {
         return;
@@ -38,11 +38,11 @@ function function_9865d978(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f3e3de78
+// Namespace zm_island_power
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb2c01677, Offset: 0x4b8
 // Size: 0x3a4
-function function_41da9a24(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function power_switch_1_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     a_s_fx = struct::get_array("power_switch_1_fx", "targetname");
     foreach (s_fx in a_s_fx) {
         if (isdefined(s_fx.var_e709b4fd)) {
@@ -73,11 +73,11 @@ function function_41da9a24(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f3e3de78
+// Namespace zm_island_power
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8315189e, Offset: 0x868
 // Size: 0x3a4
-function function_11d41051(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function power_switch_2_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     a_s_fx = struct::get_array("power_switch_2_fx", "targetname");
     foreach (s_fx in a_s_fx) {
         if (isdefined(s_fx.var_e709b4fd)) {
@@ -108,7 +108,7 @@ function function_11d41051(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f3e3de78
+// Namespace zm_island_power
 // Params 2, eflags: 0x1 linked
 // Checksum 0x3eb5843, Offset: 0xc18
 // Size: 0x1c0
@@ -138,11 +138,11 @@ function function_5ae9f178(localclientnum, b_on) {
             n_shader_value = mapfloat(n_start_time, n_end_time, n_min, n_max, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_f3e3de78
+// Namespace zm_island_power
 // Params 7, eflags: 0x1 linked
 // Checksum 0x50bb08b9, Offset: 0xde0
 // Size: 0x84
@@ -154,11 +154,11 @@ function function_8816d2aa(localclientnum, oldval, newval, bnewent, binitialsnap
     scene::play("p7_fxanim_zm_island_penstock_vent_stuck_bundle");
 }
 
-// Namespace namespace_f3e3de78
+// Namespace zm_island_power
 // Params 7, eflags: 0x1 linked
 // Checksum 0x114b2009, Offset: 0xe70
 // Size: 0x84
-function function_884da1ce(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function power_plant_glow(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self thread function_a88bde9b(localclientnum, 1);
         return;
@@ -166,7 +166,7 @@ function function_884da1ce(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread function_a88bde9b(localclientnum, 0);
 }
 
-// Namespace namespace_f3e3de78
+// Namespace zm_island_power
 // Params 2, eflags: 0x1 linked
 // Checksum 0x77305cee, Offset: 0xf00
 // Size: 0x1c0
@@ -196,7 +196,7 @@ function function_a88bde9b(localclientnum, b_on) {
             n_shader_value = mapfloat(n_start_time, n_end_time, n_min, n_max, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 

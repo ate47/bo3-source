@@ -11,9 +11,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_bf6feb71;
+#namespace zm_genesis_keeper_companion;
 
-// Namespace namespace_bf6feb71
+// Namespace zm_genesis_keeper_companion
 // Params 0, eflags: 0x2
 // Checksum 0x30b80a00, Offset: 0x2a0
 // Size: 0x34
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_keeper_companion", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_bf6feb71
+// Namespace zm_genesis_keeper_companion
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99dd98e1, Offset: 0x2e0
 // Size: 0x14c

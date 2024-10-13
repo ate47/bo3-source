@@ -146,7 +146,7 @@ function spawnplayerprediction() {
     self endon(#"joined_spectators");
     self endon(#"spawned");
     while (true) {
-        wait(0.5);
+        wait 0.5;
         self [[ level.onspawnplayer ]](1);
     }
 }
@@ -163,7 +163,7 @@ function doinitialspawnmessaging() {
     team = self.pers["team"];
     thread hud_message::function_c0025cfc(team);
     while (level.inprematchperiod) {
-        wait(0.05);
+        wait 0.05;
     }
     hintmessage = util::getobjectivehinttext(team);
     if (isdefined(hintmessage)) {
@@ -292,18 +292,18 @@ function spawnplayer() {
         self.momentum = self.pers["momentum"];
     }
     pixendevent();
-    wait(0.05);
+    wait 0.05;
     self notify(#"spawned_player");
     if (!getdvarint("art_review", 0)) {
         callback::callback(#"hash_bc12b61f");
     }
     /#
-        print("spawnPlayer_postUTS" + self.origin[0] + "spawnPlayer_postUTS" + self.origin[1] + "spawnPlayer_postUTS" + self.origin[2] + "spawnPlayer_postUTS");
+        print("<dev string:x28>" + self.origin[0] + "<dev string:x2b>" + self.origin[1] + "<dev string:x2b>" + self.origin[2] + "<dev string:x2d>");
     #/
     setdvar("scr_selecting_location", "");
     self thread function_f937c96d();
     /#
-        if (getdvarint("spawnPlayer_postUTS") > 0) {
+        if (getdvarint("<dev string:x2f>") > 0) {
             self thread globallogic_score::function_4e01d1c3();
         }
     #/
@@ -405,7 +405,7 @@ function forcespawn(time) {
     if (!isdefined(time)) {
         time = 60;
     }
-    wait(time);
+    wait time;
     if (self.hasspawned) {
         return;
     }
@@ -426,7 +426,7 @@ function forcespawn(time) {
 // Size: 0x5c
 function kickifdontspawn() {
     /#
-        if (getdvarint("spawnPlayer_postUTS") == 1) {
+        if (getdvarint("<dev string:x3a>") == 1) {
             return;
         }
     #/
@@ -689,7 +689,7 @@ function waitandspawnclient(timealreadypassed) {
             util::setlowermessage(%MP_FRIENDLY_FIRE_WILL_NOT, teamkilldelay);
             self thread respawn_asspectator(self.origin + (0, 0, 60), self.angles);
             spawnedasspectator = 1;
-            wait(teamkilldelay);
+            wait teamkilldelay;
         }
         self.teamkillpunish = 0;
     }
@@ -772,7 +772,7 @@ function waitandspawnclient(timealreadypassed) {
     if (isdefined(self.var_acfedf1c) && self.var_acfedf1c) {
         self waittill(#"end_killcam");
     }
-    self notify(#"hash_1528244e");
+    self notify(#"camera_sequence_completed");
     if (isdefined(self.var_ee8c475a)) {
         self.var_ee8c475a.alpha = 0;
     }
@@ -804,7 +804,7 @@ function waitrespawnorsafespawnbutton() {
         if (self usebuttonpressed()) {
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

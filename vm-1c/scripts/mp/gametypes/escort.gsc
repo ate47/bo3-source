@@ -91,16 +91,16 @@ function main() {
         level.shutdowndamage = killstreak_bundles::get_max_health(level.escortrobotkillstreakbundle);
     }
     /#
-        switch (getdvarint("MP_ESCORT_OVERTIME_ROUND_2_TIE_ATTACKERS", 1)) {
+        switch (getdvarint("<dev string:x28>", 1)) {
         case 1:
-            level.robotspeed = "time_limit_reached";
+            level.robotspeed = "<dev string:x33>";
             break;
         case 2:
-            level.robotspeed = "escort_overtime_second_winner";
+            level.robotspeed = "<dev string:x37>";
             break;
         case 0:
         default:
-            level.robotspeed = "scr_supplydropSpeedStarting";
+            level.robotspeed = "<dev string:x3e>";
             break;
         }
     #/
@@ -371,7 +371,7 @@ function drop_robot() {
     level.robot playsound("evt_safeguard_robot_land");
     chopper thread drop_heli_leave();
     while (level.robot flagsys::get("in_vehicle")) {
-        wait(1);
+        wait 1;
     }
     level.robot.patharray = patharray;
     level.robot.pathindex = 0;
@@ -402,7 +402,7 @@ function drop_robot() {
     level.robot thread wait_robot_shutdown();
     level.robot thread wait_robot_reboot();
     while (level.inprematchperiod) {
-        wait(0.05);
+        wait 0.05;
     }
     level.robot.onground = 1;
     if (level.boottime) {
@@ -420,7 +420,7 @@ function drop_robot() {
 // Size: 0xec
 function drop_heli_leave() {
     chopper = self;
-    wait(1);
+    wait 1;
     supplydropspeed = getdvarint("scr_supplydropSpeedLeaving", -6);
     supplydropaccel = getdvarint("scr_supplydropAccelLeaving", 60);
     chopper setspeed(supplydropspeed, supplydropaccel);
@@ -436,7 +436,7 @@ function drop_heli_leave() {
     // Checksum 0xf7e3375b, Offset: 0x2b88
     // Size: 0x1c2
     function debug_draw_robot_path() {
-        if ((isdefined(getdvarint("all")) ? getdvarint("all") : 0) == 0) {
+        if ((isdefined(getdvarint("<dev string:x43>")) ? getdvarint("<dev string:x43>") : 0) == 0) {
             return;
         }
         debug_duration = 999999999;
@@ -456,7 +456,7 @@ function drop_heli_leave() {
     // Checksum 0xe9fa509b, Offset: 0x2d58
     // Size: 0x1c2
     function debug_draw_approximate_robot_path_to_goal(&goalpatharray) {
-        if ((isdefined(getdvarint("all")) ? getdvarint("all") : 0) == 0) {
+        if ((isdefined(getdvarint("<dev string:x43>")) ? getdvarint("<dev string:x43>") : 0) == 0) {
             return;
         }
         debug_duration = 60;
@@ -476,7 +476,7 @@ function drop_heli_leave() {
     // Checksum 0xd3f651ad, Offset: 0x2f28
     // Size: 0xac
     function debug_draw_current_robot_goal(goal) {
-        if ((isdefined(getdvarint("all")) ? getdvarint("all") : 0) == 0) {
+        if ((isdefined(getdvarint("<dev string:x43>")) ? getdvarint("<dev string:x43>") : 0) == 0) {
             return;
         }
         if (isdefined(goal)) {
@@ -490,7 +490,7 @@ function drop_heli_leave() {
     // Checksum 0xcf6f3dd5, Offset: 0x2fe0
     // Size: 0xb4
     function debug_draw_find_immediate_goal(pathgoal) {
-        if ((isdefined(getdvarint("all")) ? getdvarint("all") : 0) == 0) {
+        if ((isdefined(getdvarint("<dev string:x43>")) ? getdvarint("<dev string:x43>") : 0) == 0) {
             return;
         }
         if (isdefined(pathgoal)) {
@@ -504,7 +504,7 @@ function drop_heli_leave() {
     // Checksum 0xce0e0465, Offset: 0x30a0
     // Size: 0xb4
     function debug_draw_find_immediate_goal_override(immediategoal) {
-        if ((isdefined(getdvarint("all")) ? getdvarint("all") : 0) == 0) {
+        if ((isdefined(getdvarint("<dev string:x43>")) ? getdvarint("<dev string:x43>") : 0) == 0) {
             return;
         }
         if (isdefined(immediategoal)) {
@@ -518,7 +518,7 @@ function drop_heli_leave() {
     // Checksum 0x4f7059ac, Offset: 0x3160
     // Size: 0xfc
     function debug_draw_blocked_path_kill_radius(center, radius) {
-        if ((isdefined(getdvarint("all")) ? getdvarint("all") : 0) == 0) {
+        if ((isdefined(getdvarint("<dev string:x43>")) ? getdvarint("<dev string:x43>") : 0) == 0) {
             return;
         }
         if (isdefined(center)) {
@@ -633,7 +633,7 @@ function auto_reboot_robot(time) {
             percent = min(1, shutdowntime / time);
             objective_setprogress(level.moveobject.objectiveid, percent);
         }
-        wait(0.05);
+        wait 0.05;
     }
     if (level.rebootplayers > 0) {
         foreach (struct in level.moveobject.touchlist[game["attackers"]]) {
@@ -682,10 +682,10 @@ function delete_on_endgame_sequence() {
 // Size: 0x12c
 function get_robot_path_array() {
     if (isdefined(level.escortrobotpath)) {
-        println("escort_robot_path_start");
+        println("<dev string:x5f>");
         return level.escortrobotpath;
     }
-    println("straferun_gun");
+    println("<dev string:x82>");
     patharray = [];
     currnode = getnode("escort_robot_path_start", "targetname");
     patharray[patharray.size] = currnode.origin;
@@ -712,7 +712,7 @@ function get_robot_path_array() {
             distance += distance(lastpoint, patharray[i]);
             lastpoint = patharray[i];
         }
-        println("ESCORTS" + distance);
+        println("<dev string:x96>" + distance);
     }
 
 #/
@@ -897,7 +897,7 @@ function reboot_robot() {
         aiutility::attachriotshield(self, getweapon("riotshield"), "wpn_t7_shield_riot_world_lh", "tag_stowed_back");
     }
     self ai::set_behavior_attribute("shutdown", 0);
-    wait(getanimlength("ai_robot_rogue_ctrl_crc_shutdown_2_alert"));
+    wait getanimlength("ai_robot_rogue_ctrl_crc_shutdown_2_alert");
     self.canwalk = 1;
 }
 
@@ -960,7 +960,7 @@ function check_blocked_goal_and_kill() {
         return 0;
     }
     if (gettime() < (isdefined(self.blocked_wait_end_time) ? self.blocked_wait_end_time : 0)) {
-        wait((self.blocked_wait_end_time - gettime()) / 1000);
+        wait (self.blocked_wait_end_time - gettime()) / 1000;
     }
     goalonnavmesh = self get_closest_point_on_nav_mesh_for_current_goal();
     previousgoal = self.pathindex > 0 && !isdefined(self.immediategoaloverride) ? self.patharray[self.pathindex - 1] : self.origin;
@@ -1023,7 +1023,7 @@ function watch_goal_becoming_blocked(goal) {
     level endon(#"game_ended");
     disttogoalsqr = 1e+09;
     while (true) {
-        wait(0.1);
+        wait 0.1;
         if (isdefined(self.traversestartnode)) {
             self waittill(#"traverse_end");
             continue;
@@ -1061,7 +1061,7 @@ function watch_becoming_blocked_at_goal() {
     atsameposcount = 0;
     iterationcount = 0;
     while (self.moving) {
-        wait(0.1);
+        wait 0.1;
         if (distancesquared(startpos, self.origin) < 1) {
             atsameposcount++;
         }
@@ -1260,9 +1260,9 @@ function is_path_distance_to_goal_too_long(&patharray, toolongthreshold) {
     function debug_reset_robot_to_start() {
         level endon(#"game_ended");
         while (true) {
-            if ((isdefined(getdvarint("<unknown string>")) ? getdvarint("<unknown string>") : 0) > 0) {
+            if ((isdefined(getdvarint("<dev string:xab>")) ? getdvarint("<dev string:xab>") : 0) > 0) {
                 if (isdefined(level.robot)) {
-                    pathindex = (isdefined(getdvarint("<unknown string>")) ? getdvarint("<unknown string>") : 0) - 1;
+                    pathindex = (isdefined(getdvarint("<dev string:xab>")) ? getdvarint("<dev string:xab>") : 0) - 1;
                     pathpoint = level.robot.patharray[pathindex];
                     robotangles = (0, 0, 0);
                     if (pathindex < level.robot.patharray.size - 1) {
@@ -1273,14 +1273,14 @@ function is_path_distance_to_goal_too_long(&patharray, toolongthreshold) {
                     level.robot.pathindex = pathindex;
                     level.robot.immediategoaloverride = undefined;
                     while (isdefined(self.traversestartnode)) {
-                        wait(0.05);
+                        wait 0.05;
                     }
                     level.robot stop_robot();
                     level.robot setgoal(level.robot.origin, 0);
                 }
-                setdvar("<unknown string>", 0);
+                setdvar("<dev string:xab>", 0);
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 
@@ -1333,7 +1333,7 @@ function robot_move_chatter() {
         if (self.moving) {
             self playsoundontag("vox_robot_chatter", "J_Head");
         }
-        wait(randomfloatrange(1.5, 2.5));
+        wait randomfloatrange(1.5, 2.5);
     }
 }
 
@@ -1401,7 +1401,7 @@ function track_escorting_players() {
                 self thread track_escort_time(touch.player);
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1420,7 +1420,7 @@ function track_escort_time(player) {
     self thread wait_escort_shutdown(player);
     consecutiveescorts = 0;
     while (true) {
-        wait(1);
+        wait 1;
         touching = 0;
         foreach (touch in self.touchlist[self.team]) {
             if (touch.player == player) {
@@ -1541,7 +1541,7 @@ function watch_robot_enter(robot) {
             level thread globallogic::endgame(attackers, game["strings"][attackers + "_mission_accomplished"]);
             return;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1551,7 +1551,7 @@ function watch_robot_enter(robot) {
 // Size: 0x44
 function explode_robot_after_wait(wait_time) {
     robot = self;
-    wait(wait_time);
+    wait wait_time;
     if (isdefined(robot)) {
         robot explode_robot();
     }
@@ -1642,7 +1642,7 @@ function destroy_supply_crate_blocking_goal(dirtogoal) {
     if (isdefined(bestcrate)) {
         playfx(level._supply_drop_explosion_fx, bestcrate.origin);
         playsoundatposition("wpn_grenade_explode", bestcrate.origin);
-        wait(0.1);
+        wait 0.1;
         bestcrate supplydrop::cratedelete();
         return true;
     }

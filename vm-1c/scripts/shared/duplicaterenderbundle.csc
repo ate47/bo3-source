@@ -6,9 +6,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_9e20367a;
+#namespace duplicate_render_bundle;
 
-// Namespace namespace_9e20367a
+// Namespace duplicate_render_bundle
 // Params 0, eflags: 0x2
 // Checksum 0xb03b661a, Offset: 0x230
 // Size: 0x34
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
     system::register("duplicate_render_bundle", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_9e20367a
+// Namespace duplicate_render_bundle
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4fb7160b, Offset: 0x270
 // Size: 0x24
@@ -24,7 +24,7 @@ function __init__() {
     callback::on_localplayer_spawned(&function_58c8343a);
 }
 
-// Namespace namespace_9e20367a
+// Namespace duplicate_render_bundle
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5a01651d, Offset: 0x2a0
 // Size: 0x1c
@@ -32,7 +32,7 @@ function function_58c8343a(localclientnum) {
     function_e5e53b1a();
 }
 
-// Namespace namespace_9e20367a
+// Namespace duplicate_render_bundle
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbce53f3f, Offset: 0x2c8
 // Size: 0x64
@@ -51,38 +51,38 @@ function function_e5e53b1a() {
 
 /#
 
-    // Namespace namespace_9e20367a
+    // Namespace duplicate_render_bundle
     // Params 0, eflags: 0x1 linked
     // Checksum 0xdf8c00cc, Offset: 0x338
     // Size: 0x1c0
     function function_4d534504() {
         self endon(#"entityshutdown");
-        setdvar("fb_", "fb_");
-        setdvar("fb_", "fb_");
-        setdvar("fb_", "fb_");
+        setdvar("<dev string:x28>", "<dev string:x49>");
+        setdvar("<dev string:x4a>", "<dev string:x49>");
+        setdvar("<dev string:x6b>", "<dev string:x49>");
         while (true) {
-            playbundlename = getdvarstring("fb_");
-            if (playbundlename != "fb_") {
+            playbundlename = getdvarstring("<dev string:x28>");
+            if (playbundlename != "<dev string:x49>") {
                 self thread function_5584f24e(playbundlename);
-                setdvar("fb_", "fb_");
+                setdvar("<dev string:x28>", "<dev string:x49>");
             }
-            stopbundlename = getdvarstring("fb_");
-            if (stopbundlename != "fb_") {
+            stopbundlename = getdvarstring("<dev string:x4a>");
+            if (stopbundlename != "<dev string:x49>") {
                 self thread function_503eb424();
-                setdvar("fb_", "fb_");
+                setdvar("<dev string:x4a>", "<dev string:x49>");
             }
-            stopbundlename = getdvarstring("fb_");
-            if (stopbundlename != "fb_") {
+            stopbundlename = getdvarstring("<dev string:x6b>");
+            if (stopbundlename != "<dev string:x49>") {
                 self thread function_b908ab6c();
-                setdvar("fb_", "fb_");
+                setdvar("<dev string:x6b>", "<dev string:x49>");
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 
 #/
 
-// Namespace namespace_9e20367a
+// Namespace duplicate_render_bundle
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2cc9b982, Offset: 0x500
 // Size: 0x554
@@ -92,7 +92,7 @@ function function_5584f24e(playbundlename) {
     function_1122e900();
     bundle = struct::get_script_bundle("duprenderbundle", playbundlename);
     if (!isdefined(bundle)) {
-        println("fb_" + playbundlename + "fb_");
+        println("<dev string:x8c>" + playbundlename + "<dev string:xa6>");
         return;
     }
     totalaccumtime = 0;
@@ -146,7 +146,7 @@ function function_5584f24e(playbundlename) {
         prevtime = self getclienttime();
         while ((var_417f3f5 || accumtime < stagelength) && !self.var_53791ab9) {
             gfx::setstage(localclientnum, bundle, undefined, stageprefix, stagelength, accumtime, totalaccumtime, &function_a6aaa147);
-            wait(0.016);
+            wait 0.016;
             currtime = self getclienttime();
             deltatime = currtime - prevtime;
             accumtime += deltatime;
@@ -169,7 +169,7 @@ function function_5584f24e(playbundlename) {
     function_145785e5(localclientnum, "Finished " + playbundlename);
 }
 
-// Namespace namespace_9e20367a
+// Namespace duplicate_render_bundle
 // Params 4, eflags: 0x1 linked
 // Checksum 0xf41254a7, Offset: 0xa60
 // Size: 0x1fc
@@ -178,22 +178,22 @@ function function_9cd899ba(localclientnum, bundle, prefix, type) {
     var_c1436aeb = function_e8ef6cb0(bundle, prefix + "method");
     if (isdefined(var_c1436aeb)) {
         switch (var_c1436aeb) {
-        case 17:
+        case "off":
             method = 0;
             break;
-        case 14:
+        case "default material":
             method = 1;
             break;
-        case 13:
+        case "custom material":
             method = 3;
             break;
-        case 16:
+        case "force custom material":
             method = 3;
             break;
-        case 18:
+        case "thermal":
             method = 2;
             break;
-        case 15:
+        case "enemy material":
             method = 4;
             break;
         }
@@ -214,7 +214,7 @@ function function_9cd899ba(localclientnum, bundle, prefix, type) {
     self addduplicaterenderoption(type, method, materialid);
 }
 
-// Namespace namespace_9e20367a
+// Namespace duplicate_render_bundle
 // Params 4, eflags: 0x1 linked
 // Checksum 0x8a82312d, Offset: 0xc68
 // Size: 0x6c
@@ -222,7 +222,7 @@ function function_a6aaa147(localclientnum, var_402c9c53, filterid, values) {
     self mapshaderconstant(localclientnum, 0, var_402c9c53, values[0], values[1], values[2], values[3]);
 }
 
-// Namespace namespace_9e20367a
+// Namespace duplicate_render_bundle
 // Params 2, eflags: 0x1 linked
 // Checksum 0x48da07de, Offset: 0xce0
 // Size: 0x64
@@ -237,7 +237,7 @@ function function_145785e5(localclientnum, msg) {
     self.var_33b1de58 = "";
 }
 
-// Namespace namespace_9e20367a
+// Namespace duplicate_render_bundle
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9277ac22, Offset: 0xd50
 // Size: 0x2c
@@ -247,7 +247,7 @@ function function_1122e900() {
     }
 }
 
-// Namespace namespace_9e20367a
+// Namespace duplicate_render_bundle
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3bd6c971, Offset: 0xd88
 // Size: 0x72
@@ -255,7 +255,7 @@ function function_503eb424() {
     if (!(isdefined(self.var_53791ab9) && self.var_53791ab9) && isdefined(self.var_33b1de58) && self.var_33b1de58 != "") {
         self.var_53791ab9 = 1;
         while (self.var_33b1de58 != "") {
-            wait(0.016);
+            wait 0.016;
             if (!isdefined(self)) {
                 return;
             }
@@ -263,7 +263,7 @@ function function_503eb424() {
     }
 }
 
-// Namespace namespace_9e20367a
+// Namespace duplicate_render_bundle
 // Params 0, eflags: 0x1 linked
 // Checksum 0x20be7a97, Offset: 0xe08
 // Size: 0x48

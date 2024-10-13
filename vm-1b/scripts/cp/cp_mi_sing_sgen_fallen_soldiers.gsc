@@ -28,9 +28,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_ed09da6e;
+#namespace cp_mi_sing_sgen_fallen_soldiers;
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 2, eflags: 0x0
 // Checksum 0x291e3c16, Offset: 0x1028
 // Size: 0x2aa
@@ -42,9 +42,9 @@ function function_73eb52a7(str_objective, var_74cd64bc) {
     spawner::add_spawn_function_group("fallen_soldiers_start_awake", "script_noteworthy", &function_bebe324d);
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_fa13d4ba::function_bff1a867(str_objective);
-        var_d3556aed = getnode("nd_post_jump_downs", "targetname");
-        level.var_2fd26037 thread ai::force_goal(var_d3556aed, 32);
+        sgen::function_bff1a867(str_objective);
+        nd_post_jump_downs = getnode("nd_post_jump_downs", "targetname");
+        level.var_2fd26037 thread ai::force_goal(nd_post_jump_downs, 32);
         level battlechatter::function_d9f49fba(0);
         level clientfield::set("w_underwater_state", 1);
         level clientfield::set("fallen_soldiers_client_fxanims", 1);
@@ -53,7 +53,7 @@ function function_73eb52a7(str_objective, var_74cd64bc) {
         objectives::complete("cp_level_sgen_locate_emf");
         objectives::set("cp_level_sgen_find_recon_drone", level.var_ea764859);
         level thread namespace_d40478f6::function_71f06599();
-        namespace_2afd69a::function_10dad989(undefined, 0);
+        mapping_drone::function_10dad989(undefined, 0);
         playfxontag(level._effect["drone_sparks"], level.var_ea764859, "tag_origin");
         load::function_a2995f22();
     }
@@ -64,7 +64,7 @@ function function_73eb52a7(str_objective, var_74cd64bc) {
     skipto::function_be8adfb8("fallen_soldiers");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 4, eflags: 0x0
 // Checksum 0x13f99af9, Offset: 0x12e0
 // Size: 0x112
@@ -79,7 +79,7 @@ function function_51f4af5d(str_objective, var_d6b1856a, var_e4cd2b8b, player) {
     struct::function_368120a1("scene", "cin_sgen_13_01_fallensoldiers_vign_grab_end");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0xac1ecbf6, Offset: 0x1400
 // Size: 0x1b2
@@ -101,17 +101,17 @@ function main() {
     level flag::wait_till("fallen_soldiers_dayroom_started");
     spawner::waittill_ai_group_cleared("fallen_soldiers_extra_robots");
     level.var_2fd26037 waittill(#"goal");
-    wait(0.5);
+    wait 0.5;
     function_5ed260ac();
     trigger::wait_till("fallen_soldiers_exit_zone_trig");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0x31c8aa60, Offset: 0x15c0
 // Size: 0xda
 function function_99e352d9() {
-    level endon(#"hash_38e80c44");
+    level endon(#"fallen_soldiers_robots_cleared");
     level.var_2fd26037 setgoal(getnode("fallen_soldiers_hendricks_decon_door_exit_node", "targetname"), 1);
     level.var_2fd26037 waittill(#"goal");
     level.var_2fd26037 function_2b5c3469("fallen_soldiers_hendricks_decon_exit_zone_aitrig");
@@ -121,7 +121,7 @@ function function_99e352d9() {
     level flag::set("fallen_soldiers_hendricks_ready_to_enter_dayroom");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0x43bfedec, Offset: 0x16a8
 // Size: 0x65
@@ -132,7 +132,7 @@ function function_568e0f1b() {
     var_d07fc618 waittill(#"death");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 2, eflags: 0x0
 // Checksum 0xc49679a8, Offset: 0x1718
 // Size: 0x16a
@@ -141,7 +141,7 @@ function function_2b5c3469(str_key, str_val) {
         str_val = "targetname";
     }
     self endon(#"death");
-    level endon(#"hash_38e80c44");
+    level endon(#"fallen_soldiers_robots_cleared");
     var_68d8f035 = getent(str_key, str_val);
     var_12859611 = getnode(var_68d8f035.target, "targetname");
     var_68d8f035 endon(#"death");
@@ -154,12 +154,12 @@ function function_2b5c3469(str_key, str_val) {
                 var_f580cae3++;
             }
         }
-        wait(1.5);
+        wait 1.5;
     } while (var_f580cae3 > 0);
     self setgoal(var_12859611);
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0xf8c094ec, Offset: 0x1890
 // Size: 0x2ca
@@ -167,7 +167,7 @@ function function_b2ddfb27() {
     var_f0e94a11 = getent("trig_testing_lab_door", "targetname");
     var_f0e94a11 triggerenable(0);
     level thread namespace_cba4cc55::set_door_state("fallen_soldiers_decon_hallway_door", "close");
-    level scene::add_scene_func("cin_sgen_12_01_corvus_vign_secret_entrance_hendricks", &function_cc10b9af, "init");
+    level scene::add_scene_func("cin_sgen_12_01_corvus_vign_secret_entrance_hendricks", &drone_breadcrumb, "init");
     level scene::init("cin_sgen_12_01_corvus_vign_secret_entrance_hendricks");
     level flag::wait_till("player_entered_corvus");
     level flag::wait_till("hendricks_corvus_examination");
@@ -178,7 +178,7 @@ function function_b2ddfb27() {
     level scene::play("cin_sgen_12_01_corvus_vign_secret_entrance_hendricks");
     level thread namespace_d40478f6::function_22982c6e();
     level.var_2fd26037 waittill(#"goal");
-    wait(0.5);
+    wait 0.5;
     level scene::init("cin_sgen_13_01_fallensoldiers_vign_grab_start");
     trigger::wait_till("fallen_soldiers_enter_decon_trig");
     level thread namespace_cba4cc55::set_door_state("fallen_soldiers_enter_door", "open");
@@ -190,13 +190,13 @@ function function_b2ddfb27() {
     level notify(#"hash_b0f8d01");
     level thread namespace_cba4cc55::set_door_state("fallen_soldiers_enter_door", "close");
     level notify(#"hash_c74ae0a4");
-    wait(1.3);
+    wait 1.3;
     scene::add_scene_func("cin_sgen_13_01_fallensoldiers_vign_grab_end", &function_2f485a41);
     level scene::play("cin_sgen_13_01_fallensoldiers_vign_grab_end");
     level flag::set("fallen_soldiers_hendricks_ready");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 1, eflags: 0x0
 // Checksum 0x3b904a86, Offset: 0x1b68
 // Size: 0x7b
@@ -208,7 +208,7 @@ function function_2f485a41(a_ents) {
     }
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0xfc98b6f, Offset: 0x1bf0
 // Size: 0x42
@@ -219,7 +219,7 @@ function function_d43d6872() {
     self clientfield::set("play_cia_robot_rogue_control", 0);
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 1, eflags: 0x0
 // Checksum 0x6f58441b, Offset: 0x1c40
 // Size: 0x8b
@@ -231,7 +231,7 @@ function function_1c39896e(a_ents) {
     level notify(#"hash_b8163f70");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0xba05d5be, Offset: 0x1cd8
 // Size: 0x2c2
@@ -263,7 +263,7 @@ function function_6596c28b() {
     trigger::wait_till("fallen_soldiers_decon_room_exit_trig");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0x2487639e, Offset: 0x1fa8
 // Size: 0x53
@@ -273,7 +273,7 @@ function function_5ed260ac() {
     level notify(#"hash_96a30d1b");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 1, eflags: 0x0
 // Checksum 0x42c852cd, Offset: 0x2008
 // Size: 0x92
@@ -285,7 +285,7 @@ function function_3dbe13f9(a_ents) {
     level.var_2fd26037 clearforcedgoal();
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0xf53f7654, Offset: 0x20a8
 // Size: 0x21a
@@ -318,7 +318,7 @@ function vo() {
     level flag::set("kane_robots_convo_done");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0xa90bfa5d, Offset: 0x22d0
 // Size: 0x5a
@@ -329,7 +329,7 @@ function function_fe403015() {
     level dialog::remote("kane_according_to_the_gps_0");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0xeac01970, Offset: 0x2338
 // Size: 0xaf
@@ -344,11 +344,11 @@ function function_c1c96249() {
         var_2050b70 = "vox_sgen_visual_extracts_00" + i + "_salm";
         var_337b3942 playsoundwithnotify(var_2050b70, "sounddone");
         var_337b3942 waittill(#"sounddone");
-        wait(5);
+        wait 5;
     }
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0x5d61762c, Offset: 0x23f0
 // Size: 0xd3
@@ -364,17 +364,17 @@ function function_68f0b726() {
     }
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0x440fa36a, Offset: 0x24d0
 // Size: 0x32
 function function_88a16751() {
     self stopsounds();
-    wait(0.1);
+    wait 0.1;
     self playsound("evt_salim_speaker_destroy");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0x7f2aa840, Offset: 0x2510
 // Size: 0x1b2
@@ -420,7 +420,7 @@ function function_a43abada() {
     self delete();
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 2, eflags: 0x0
 // Checksum 0x1393331c, Offset: 0x26d0
 // Size: 0x4a
@@ -430,7 +430,7 @@ function function_edc1192b(n_timeout, str_flag) {
     level flag::set(str_flag);
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0x673b995f, Offset: 0x2728
 // Size: 0xa5
@@ -450,14 +450,14 @@ function function_7d5168cb() {
     }
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 1, eflags: 0x0
 // Checksum 0x9fa6e811, Offset: 0x27d8
 // Size: 0x16a
 function function_80a49394(var_dc854c29) {
     self endon(#"death");
     level endon(#"hash_aa9b4587");
-    assert(isdefined(self.target), "fallen_soldiers_decon_hallway_door" + self.origin);
+    assert(isdefined(self.target), "<dev string:x28>" + self.origin);
     var_64e85e6d = [];
     var_b6944555 = struct::get_array(self.target);
     foreach (n_count, s_scriptbundle in var_b6944555) {
@@ -473,7 +473,7 @@ function function_80a49394(var_dc854c29) {
     self delete();
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 2, eflags: 0x0
 // Checksum 0x841e891, Offset: 0x2950
 // Size: 0x93
@@ -482,13 +482,13 @@ function function_ae64ae2(var_f6c5842, s_scriptbundle) {
     var_f6c5842 endon(#"death");
     self endon(#"death");
     self util::waittill_any_ents(var_f6c5842, "damage", self, "trigger");
-    wait(randomfloatrange(0.1, 0.25));
+    wait randomfloatrange(0.1, 0.25);
     var_f6c5842 function_89ba9422();
     s_scriptbundle scene::play(var_f6c5842);
     level notify(#"hash_2cbed988");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0x159c104b, Offset: 0x29f0
 // Size: 0xa2
@@ -501,10 +501,10 @@ function function_31e3341a() {
     if (var_39dd968a <= 0) {
         var_39dd968a = 0.2;
     }
-    wait(randomfloatrange(var_ec24660, var_39dd968a));
+    wait randomfloatrange(var_ec24660, var_39dd968a);
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0xd1579469, Offset: 0x2aa0
 // Size: 0x4a
@@ -515,7 +515,7 @@ function function_fbd51610() {
     self ai::set_behavior_attribute("robot_lights", 2);
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0x8dedb7f7, Offset: 0x2af8
 // Size: 0xe2
@@ -538,7 +538,7 @@ function function_bebe324d() {
     self ai::set_behavior_attribute("rogue_control", "forced_level_" + n_level);
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0x8cc5b1ad, Offset: 0x2be8
 // Size: 0x7a
@@ -551,7 +551,7 @@ function function_89ba9422() {
     self ai::set_behavior_attribute("rogue_control", "forced_level_2");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 1, eflags: 0x0
 // Checksum 0x42c0d99f, Offset: 0x2c70
 // Size: 0x5a
@@ -562,7 +562,7 @@ function function_516039af(str_flag) {
     level flag::set(str_flag);
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 1, eflags: 0x0
 // Checksum 0x2f782ba, Offset: 0x2cd8
 // Size: 0x91
@@ -575,7 +575,7 @@ function function_15debd57(str_ender) {
     }
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0x97f5c61e, Offset: 0x2d78
 // Size: 0x32
@@ -584,7 +584,7 @@ function function_f7879f6f() {
     spawn_manager::kill("fallen_soldiers_mid_encounter_group");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 0, eflags: 0x0
 // Checksum 0x9465b76, Offset: 0x2db8
 // Size: 0x9a
@@ -600,11 +600,11 @@ function function_ab5cee74() {
     level thread objectives::breadcrumb("fallen_soldiers_end_breadcrumb_trig");
 }
 
-// Namespace namespace_ed09da6e
+// Namespace cp_mi_sing_sgen_fallen_soldiers
 // Params 1, eflags: 0x0
 // Checksum 0xc0ef62d8, Offset: 0x2e60
 // Size: 0x62
-function function_cc10b9af(a_ents) {
+function drone_breadcrumb(a_ents) {
     objectives::set("cp_waypoint_breadcrumb", a_ents["mapping_drone"]);
     trigger::wait_till("fallen_soldiers_drone_intro_looktrig");
     objectives::complete("cp_waypoint_breadcrumb", a_ents["mapping_drone"]);

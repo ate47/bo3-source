@@ -11,9 +11,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/array_shared;
 
-#namespace namespace_8217eb2b;
+#namespace zm_sumpf_trap_pendulum;
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 0, eflags: 0x1 linked
 // Checksum 0x21d92f5e, Offset: 0x428
 // Size: 0x210
@@ -28,11 +28,11 @@ function function_5b96904c() {
     }
     var_3d5f2e06[0].var_50551f5f enablelinkto();
     var_3d5f2e06[0].var_50551f5f linkto(var_3d5f2e06[0].var_16b12946);
-    level thread namespace_e722cafc::function_e1aaca19("pendulum_light");
+    level thread zm_sumpf::function_e1aaca19("pendulum_light");
     level.var_99432870 = 0;
 }
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 0, eflags: 0x1 linked
 // Checksum 0x84a42404, Offset: 0x640
 // Size: 0xe2
@@ -46,7 +46,7 @@ function function_c3dda1aa() {
     self notify(#"hash_50f15d93");
 }
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdaa11660, Offset: 0x730
 // Size: 0xe2
@@ -60,7 +60,7 @@ function function_60843de1() {
     self notify(#"hash_6bfca09c");
 }
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2a2f17d1, Offset: 0x820
 // Size: 0xa4
@@ -76,14 +76,14 @@ function hint_string(string) {
     self setcursorhint("HINT_NOICON");
 }
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 0, eflags: 0x1 linked
 // Checksum 0x98de429a, Offset: 0x8d0
 // Size: 0x438
 function function_46e4b0ba() {
     self sethintstring("");
-    var_24e459e0 = getent("speaker_by_log", "targetname");
-    wait(0.5);
+    pa_system = getent("speaker_by_log", "targetname");
+    wait 0.5;
     self.is_available = 1;
     self.zombie_cost = 750;
     self sethintstring(%ZOMBIE_BUTTON_BUY_TRAP, self.zombie_cost);
@@ -100,7 +100,7 @@ function function_46e4b0ba() {
             if (who zm_score::can_player_purchase(self.zombie_cost)) {
                 if (!level.var_99432870) {
                     level.var_99432870 = 1;
-                    level thread namespace_e722cafc::function_5ba3c6e5("pendulum_light");
+                    level thread zm_sumpf::function_5ba3c6e5("pendulum_light");
                     array::thread_all(triggers, &hint_string, %ZOMBIE_TRAP_ACTIVE);
                     zm_utility::play_sound_at_pos("purchase", who.origin);
                     who thread zm_audio::create_and_play_dialog("level", "trap_log");
@@ -111,15 +111,15 @@ function function_46e4b0ba() {
                     var_50955e53 = getent("engine_loop_right", "targetname");
                     playsoundatposition("zmb_motor_start_left", var_8121257c.origin);
                     playsoundatposition("zmb_motor_start_right", var_50955e53.origin);
-                    wait(0.5);
+                    wait 0.5;
                     self thread function_ac46b2f7(var_8121257c, var_50955e53, who);
                     self waittill(#"hash_f64cbe4e");
                     array::thread_all(triggers, &hint_string, %ZOMBIE_TRAP_COOLDOWN);
                     self thread function_60843de1();
                     self waittill(#"hash_6bfca09c");
-                    wait(45);
-                    var_24e459e0 playsound("zmb_warning");
-                    level thread namespace_e722cafc::function_e1aaca19("pendulum_light");
+                    wait 45;
+                    pa_system playsound("zmb_warning");
+                    level thread zm_sumpf::function_e1aaca19("pendulum_light");
                     level.var_99432870 = 0;
                     array::thread_all(triggers, &hint_string, %ZOMBIE_BUTTON_BUY_TRAP);
                 }
@@ -128,7 +128,7 @@ function function_46e4b0ba() {
     }
 }
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 3, eflags: 0x1 linked
 // Checksum 0xf4e47c6c, Offset: 0xd10
 // Size: 0x344
@@ -158,25 +158,25 @@ function function_ac46b2f7(var_8121257c, var_50955e53, who) {
     self.var_16b12946 waittill(#"rotatedone");
     self.var_50551f5f triggerenable(0);
     self.var_f75b2a0c = 0;
-    self.var_16b12946 thread namespace_72609f96::function_9ae0a79();
+    self.var_16b12946 thread zm_sumpf_zipline::function_9ae0a79();
     self notify(#"hash_f64cbe4e");
     level notify(#"hash_1bcf775");
-    wait(3);
+    wait 3;
     wheel_left delete();
     wheel_right delete();
 }
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3d95905d, Offset: 0x1060
 // Size: 0x26a
 function function_ab6ace70() {
     self endon(#"rotatedone");
-    var_7281d7 = getent("blade_left", "targetname");
-    var_4559df92 = getent("blade_right", "targetname");
+    blade_left = getent("blade_left", "targetname");
+    blade_right = getent("blade_right", "targetname");
     for (lastangle = self.angles[0]; ; lastangle = angle) {
         var_d9865ad0 = 90;
-        wait(0.01);
+        wait 0.01;
         angle = self.angles[0];
         speed = int(abs(angle - lastangle)) % 360;
         var_c2f72a6c = int(abs(angle)) % 360;
@@ -186,32 +186,32 @@ function function_ab6ace70() {
             continue;
         }
         if (var_c2f72a6c > var_d9865ad0 && var_7965d00c <= var_d9865ad0) {
-            var_7281d7 playsound("zmb_blade_right");
-            var_4559df92 playsound("zmb_blade_right");
+            blade_left playsound("zmb_blade_right");
+            blade_right playsound("zmb_blade_right");
         }
         if ((var_c2f72a6c + -76) % 360 > var_d9865ad0 && (var_7965d00c + -76) % 360 <= var_d9865ad0) {
-            var_7281d7 playsound("zmb_blade_right");
-            var_4559df92 playsound("zmb_blade_right");
+            blade_left playsound("zmb_blade_right");
+            blade_right playsound("zmb_blade_right");
         }
     }
 }
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 4, eflags: 0x1 linked
 // Checksum 0xb9afc176, Offset: 0x12d8
 // Size: 0xd4
 function function_832aabf(var_8121257c, var_50955e53, wheel_left, wheel_right) {
-    wait(13);
+    wait 13;
     var_8121257c stoploopsound(2);
     var_8121257c playsound("zmb_motor_stop_left");
     var_50955e53 stoploopsound(2);
     var_50955e53 playsound("zmb_motor_stop_right");
-    wait(8);
+    wait 8;
     wheel_left stoploopsound(8);
     wheel_right stoploopsound(8);
 }
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 2, eflags: 0x1 linked
 // Checksum 0x76900d20, Offset: 0x13b8
 // Size: 0xb8
@@ -229,19 +229,19 @@ function function_ff47477d(parent, who) {
     }
 }
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf4bfac35, Offset: 0x1478
 // Size: 0x44
 function function_49e0867() {
     level.var_576d3a1d = 0;
     while (level.var_576d3a1d <= 20) {
-        wait(0.1);
+        wait 0.1;
         level.var_576d3a1d += 0.1;
     }
 }
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 0, eflags: 0x1 linked
 // Checksum 0x866f0943, Offset: 0x14c8
 // Size: 0xec
@@ -259,7 +259,7 @@ function function_7d258b1c() {
     }
 }
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 2, eflags: 0x1 linked
 // Checksum 0xe12da9f6, Offset: 0x15c0
 // Size: 0x264
@@ -299,7 +299,7 @@ function function_24330aa3(parent, who) {
     }
 }
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcc78f9f3, Offset: 0x1830
 // Size: 0x4c
@@ -312,7 +312,7 @@ function function_25748d83() {
     }
 }
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 4, eflags: 0x1 linked
 // Checksum 0x11dafd2a, Offset: 0x1888
 // Size: 0x13c
@@ -332,7 +332,7 @@ function function_8fec7f40(x, y, z, parent) {
     level.var_960264ad++;
 }
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaee0d34, Offset: 0x19d0
 // Size: 0x40
@@ -344,7 +344,7 @@ function function_b866f920() {
     }
 }
 
-// Namespace namespace_8217eb2b
+// Namespace zm_sumpf_trap_pendulum
 // Params 0, eflags: 0x1 linked
 // Checksum 0x427ed8a9, Offset: 0x1a18
 // Size: 0xcc
@@ -358,7 +358,7 @@ function function_6a5beb44() {
         self clientfield::set("zombie_flogger_trap", 1);
         level.var_266eb8ee++;
     }
-    wait(0.75);
+    wait 0.75;
     self dodamage(self.health + 600, self.origin);
 }
 

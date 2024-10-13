@@ -237,7 +237,7 @@ function function_58f5574a(target, var_9bc2efcb) {
         type = self cybercom::function_5e3d3aa();
         self orientmode("face default");
         self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate", "normal", generic%root, 1, 0.3);
-        self waittillmatch(#"hash_39fa7e38", "fire");
+        self waittillmatch(#"ai_cybercom_anim", "fire");
     }
     weapon = getweapon("gadget_sensory_overload");
     foreach (guy in validtargets) {
@@ -245,7 +245,7 @@ function function_58f5574a(target, var_9bc2efcb) {
             continue;
         }
         guy thread sensory_overload(self);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -256,13 +256,13 @@ function function_58f5574a(target, var_9bc2efcb) {
 function sensory_overload(attacker, var_7d4fd98c) {
     self endon(#"death");
     weapon = getweapon("gadget_sensory_overload");
-    self notify(#"hash_f8c5dd60", weapon, attacker);
+    self notify(#"cybercom_action", weapon, attacker);
     if (isdefined(attacker.cybercom) && isdefined(attacker.cybercom.var_bf39536d)) {
         loops = attacker.cybercom.var_bf39536d;
     } else {
         loops = 1;
     }
-    wait(randomfloatrange(0, 0.75));
+    wait randomfloatrange(0, 0.75);
     if (!attacker cybercom::function_7a7d1608(self, weapon)) {
         return;
     }
@@ -300,7 +300,7 @@ function sensory_overload(attacker, var_7d4fd98c) {
         }
         self clientfield::set("sensory_overload", 0);
     } else {
-        assert(self.archetype == "scr_sensory_overload_loops");
+        assert(self.archetype == "<dev string:x28>");
         base = "base_rifle";
         if (isdefined(self.voiceprefix) && getsubstr(self.voiceprefix, 7) == "f") {
             base = "fem_rifle";
@@ -310,14 +310,14 @@ function sensory_overload(attacker, var_7d4fd98c) {
         self animscripted("intro_anim", self.origin, self.angles, "ai_" + base + "_" + type + "_exposed_sens_overload_react_intro" + variant, "normal", generic%root, 1, 0.3);
         self thread cybercom::function_cf64f12c("damage_pain", "intro_anim", 1, attacker, weapon);
         self thread cybercom::function_cf64f12c("notify_melee_damage", "intro_anim", 1, attacker, weapon);
-        self waittillmatch(#"hash_7fba22d3", "end");
+        self waittillmatch(#"intro_anim", "end");
         function_58831b5a(loops, attacker, weapon, variant, base, type);
         if (isalive(self) && !self isragdoll()) {
             self clientfield::set("sensory_overload", 0);
             self animscripted("restart_anim", self.origin, self.angles, "ai_" + base + "_" + type + "_exposed_sens_overload_react_outro" + variant, "normal", generic%root, 1, 0.3);
             self thread cybercom::function_cf64f12c("damage_pain", "restart_anim", 1, attacker, weapon);
             self thread cybercom::function_cf64f12c("notify_melee_damage", "restart_anim", 1, attacker, weapon);
-            self waittillmatch(#"hash_82518b16", "end");
+            self waittillmatch(#"restart_anim", "end");
         }
     }
     self stoploopsound(0.75);
@@ -335,7 +335,7 @@ function sensory_overload(attacker, var_7d4fd98c) {
 // Checksum 0xbe413c76, Offset: 0x1c60
 // Size: 0x8e
 function function_58831b5a(loops, attacker, weapon, variant, base, type) {
-    self endon(#"hash_8817762c");
+    self endon(#"breakout_overload_loop");
     self thread function_53cfe88a();
     while (loops) {
         self function_e01b8059(attacker, weapon, variant, base, type);
@@ -353,7 +353,7 @@ function function_e01b8059(attacker, weapon, variant, base, type) {
     self thread cybercom::function_cf64f12c("damage_pain", "sens_loop_anim", 1, attacker, weapon);
     self thread cybercom::function_cf64f12c("breakout_overload_loop", "sens_loop_anim", 0, attacker, weapon);
     self thread cybercom::function_cf64f12c("notify_melee_damage", "sens_loop_anim", 1, attacker, weapon);
-    self waittillmatch(#"hash_3b87dc07", "end");
+    self waittillmatch(#"sens_loop_anim", "end");
 }
 
 // Namespace namespace_64276cf9
@@ -362,7 +362,7 @@ function function_e01b8059(attacker, weapon, variant, base, type) {
 // Size: 0x3a
 function function_53cfe88a() {
     self endon(#"death");
-    wait(getdvarfloat("scr_sensory_overload_loop_time", 4.7));
-    self notify(#"hash_8817762c");
+    wait getdvarfloat("scr_sensory_overload_loop_time", 4.7);
+    self notify(#"breakout_overload_loop");
 }
 

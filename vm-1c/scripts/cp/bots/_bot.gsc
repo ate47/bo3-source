@@ -36,11 +36,11 @@ function __init__() {
     // Size: 0x68
     function on_bot_connect() {
         self endon(#"disconnect");
-        wait(0.25);
-        self notify(#"menuresponse", "<unknown string>", "<unknown string>");
-        wait(0.25);
+        wait 0.25;
+        self notify(#"menuresponse", "<dev string:x28>", "<dev string:x3b>");
+        wait 0.25;
         if (isdefined(self.pers)) {
-            self.var_273d3e89 = self.pers["<unknown string>"];
+            self.var_273d3e89 = self.pers["<dev string:x49>"];
         }
     }
 

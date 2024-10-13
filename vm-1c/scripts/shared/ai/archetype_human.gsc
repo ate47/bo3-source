@@ -35,7 +35,7 @@ function autoexec init() {
     humaninterface::registerhumaninterfaceattributes();
     clientfield::register("actor", "facial_dial", 1, 1, "int");
     /#
-        level.__ai_forcegibs = getdvarint("_human_locomotion_variation");
+        level.__ai_forcegibs = getdvarint("<dev string:x28>");
     #/
 }
 
@@ -83,7 +83,7 @@ function private archetypehumanblackboardinit() {
 // Checksum 0x48a413f9, Offset: 0x9f8
 // Size: 0xdc
 function private archetypehumanonbehavecallback(entity) {
-    if (aiutility::function_f09741fa(entity)) {
+    if (aiutility::isAtCoverCondition(entity)) {
         blackboard::setblackboardattribute(entity, "_previous_cover_mode", "cover_alert");
         blackboard::setblackboardattribute(entity, "_cover_mode", "cover_mode_none");
     }
@@ -269,9 +269,9 @@ function forcetacticalwalkcallback(entity, attribute, oldvalue, value) {
 function movemodeattributecallback(entity, attribute, oldvalue, value) {
     entity.ignorepathenemyfightdist = 0;
     switch (value) {
-    case 41:
+    case "normal":
         break;
-    case 42:
+    case "rambo":
         entity.ignorepathenemyfightdist = 1;
         break;
     }
@@ -295,21 +295,21 @@ function useanimationoverridecallback(entity, attribute, oldvalue, value) {
 // Size: 0x1f2
 function vignettemodecallback(entity, attribute, oldvalue, value) {
     switch (value) {
-    case 49:
+    case "off":
         entity.pushable = 1;
         entity function_1762804b(0);
         entity pushplayer(0);
         entity setavoidancemask("avoid all");
         entity setsteeringmode("normal steering");
         break;
-    case 50:
+    case "slow":
         entity.pushable = 0;
         entity function_1762804b(0);
         entity pushplayer(1);
         entity setavoidancemask("avoid ai");
         entity setsteeringmode("vignette steering");
         break;
-    case 48:
+    case "fast":
         entity.pushable = 0;
         entity function_1762804b(1);
         entity pushplayer(1);

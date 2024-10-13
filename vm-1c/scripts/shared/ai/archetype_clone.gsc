@@ -77,7 +77,7 @@ function private function_8d660ab4() {
         if (isdefined(entity.enemy)) {
             entity getperfectinfo(entity.enemy, 1);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

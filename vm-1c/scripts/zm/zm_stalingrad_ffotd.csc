@@ -7,9 +7,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_15d4d4c0;
+#namespace zm_stalingrad_ffotd;
 
-// Namespace namespace_15d4d4c0
+// Namespace zm_stalingrad_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x178
 // Size: 0x4
@@ -17,7 +17,7 @@ function main_start() {
     
 }
 
-// Namespace namespace_15d4d4c0
+// Namespace zm_stalingrad_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x188
 // Size: 0x4

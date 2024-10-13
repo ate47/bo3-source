@@ -8,7 +8,7 @@
 // Checksum 0x70598e7a, Offset: 0x180
 // Size: 0x5a
 function autoexec init_fire_fx() {
-    wait(0.016);
+    wait 0.016;
     if (!isdefined(level._effect)) {
         level._effect = [];
     }
@@ -23,7 +23,7 @@ function autoexec init_fire_fx() {
 function on_fire_timeout(localclientnum) {
     self endon(#"death");
     self endon(#"entityshutdown");
-    wait(12);
+    wait 12;
     if (isdefined(self) && isalive(self)) {
         self.is_on_fire = 0;
         self notify(#"stop_flame_damage");
@@ -51,11 +51,11 @@ function flame_death_fx(localclientnum) {
             playfxontag(localclientnum, level._effect["character_fire_death_torso"], self, fire_tag);
         }
     } else {
-        println("J_Elbow_RI");
+        println("<dev string:x28>");
     }
     if (isdefined(level._effect) && isdefined(level._effect["character_fire_death_sm"])) {
         if (self.archetype !== "parasite" && self.archetype !== "raps") {
-            wait(1);
+            wait 1;
             tagarray = [];
             tagarray[0] = "J_Elbow_LE";
             tagarray[1] = "J_Elbow_RI";
@@ -63,7 +63,7 @@ function flame_death_fx(localclientnum) {
             tagarray[3] = "J_Knee_LE";
             tagarray = randomize_array(tagarray);
             playfxontag(localclientnum, level._effect["character_fire_death_sm"], self, tagarray[0]);
-            wait(1);
+            wait 1;
             tagarray[0] = "J_Wrist_RI";
             tagarray[1] = "J_Wrist_LE";
             if (!(isdefined(self.missinglegs) && self.missinglegs)) {
@@ -76,7 +76,7 @@ function flame_death_fx(localclientnum) {
         }
         return;
     }
-    println("J_Elbow_RI");
+    println("<dev string:xc7>");
 }
 
 // Namespace zombie_death

@@ -21,9 +21,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_9d2fabb6;
+#namespace zm_island_zones;
 
-// Namespace namespace_9d2fabb6
+// Namespace zm_island_zones
 // Params 0, eflags: 0x2
 // Checksum 0x961b648d, Offset: 0xb58
 // Size: 0x34
@@ -31,7 +31,7 @@ function autoexec function_2dc19561() {
     system::register("zm_island_zones", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_9d2fabb6
+// Namespace zm_island_zones
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9507a86d, Offset: 0xb98
 // Size: 0x64
@@ -40,7 +40,7 @@ function __init__() {
     scene::add_scene_func("p7_fxanim_zm_island_vine_gate_bundle", &function_6ed87461, "init");
 }
 
-// Namespace namespace_9d2fabb6
+// Namespace zm_island_zones
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcf21dbb6, Offset: 0xc08
 // Size: 0x54
@@ -51,7 +51,7 @@ function main() {
     level thread zm_zonemgr::manage_zones(init_zones);
 }
 
-// Namespace namespace_9d2fabb6
+// Namespace zm_island_zones
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe91a074, Offset: 0xc68
 // Size: 0x8ec
@@ -102,8 +102,8 @@ function function_45a8888c() {
     zm_zonemgr::add_adjacent_zone("zone_bunker_left", "zone_bunker_underwater_defend", "connect_bunker_left_to_underwater_defend");
     zm_zonemgr::add_adjacent_zone("zone_cliffside", "zone_bunker_left", "connect_cliffside_to_bunker_left");
     zm_zonemgr::add_adjacent_zone("zone_operating_rooms", "zone_flooded_bunker_right", "connect_operating_rooms_to_flooded_bunker_right");
-    level thread namespace_34c58dc::function_3c997cb2("sewer");
-    level thread namespace_34c58dc::function_3c997cb2("zip_line");
+    level thread zm_island_transport::function_3c997cb2("sewer");
+    level thread zm_island_transport::function_3c997cb2("zip_line");
     level thread function_cd881f16();
     level thread function_2043d032();
     level thread function_87fe8382();
@@ -120,7 +120,7 @@ function function_45a8888c() {
     #/
 }
 
-// Namespace namespace_9d2fabb6
+// Namespace zm_island_zones
 // Params 0, eflags: 0x1 linked
 // Checksum 0x84971e72, Offset: 0x1560
 // Size: 0x2c
@@ -128,37 +128,37 @@ function function_2043d032() {
     zm_zonemgr::add_adjacent_zone("zone_bunker_prison", "zone_bunker_prison_entrance", "enable_zone_bunker_prison");
 }
 
-// Namespace namespace_9d2fabb6
+// Namespace zm_island_zones
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8470047d, Offset: 0x1598
 // Size: 0x58
 function function_87fe8382() {
     zm_zonemgr::add_adjacent_zone("zone_flooded_bunker_right", "zone_flooded_bunker_tunnel", "connect_flooded_bunker_right_to_flooded_tunnel");
-    level waittill(#"hash_bb2835ec");
+    level waittill(#"zone_flooded_bunker_tunnel");
     level.zones["zone_flooded_bunker_tunnel"].is_spawning_allowed = 0;
 }
 
 /#
 
-    // Namespace namespace_9d2fabb6
+    // Namespace zm_island_zones
     // Params 0, eflags: 0x1 linked
     // Checksum 0x8aa96f3c, Offset: 0x15f8
     // Size: 0x114
     function function_8b7501aa() {
         level waittill(#"open_sesame");
-        level flag::set("connect_start_water_to_start");
-        level flag::set("connect_start_water_to_start");
-        level flag::set("connect_start_water_to_start");
-        level flag::set("connect_start_water_to_start");
-        level thread namespace_5f2c95ae::function_3bd86987("connect_start_water_to_start");
-        level flag::set("connect_start_water_to_start");
-        level flag::set("connect_start_water_to_start");
-        level flag::set("connect_start_water_to_start");
+        level flag::set("<dev string:x28>");
+        level flag::set("<dev string:x45>");
+        level flag::set("<dev string:x5e>");
+        level flag::set("<dev string:x80>");
+        level thread zm_island_skullquest::function_3bd86987("<dev string:xa3>");
+        level flag::set("<dev string:xb4>");
+        level flag::set("<dev string:xdd>");
+        level flag::set("<dev string:xf7>");
     }
 
 #/
 
-// Namespace namespace_9d2fabb6
+// Namespace zm_island_zones
 // Params 1, eflags: 0x1 linked
 // Checksum 0xfe59c314, Offset: 0x1718
 // Size: 0x20
@@ -166,7 +166,7 @@ function function_6ed87461(a_ents) {
     self.var_4165e349 = a_ents["fxanim_vine_gate"];
 }
 
-// Namespace namespace_9d2fabb6
+// Namespace zm_island_zones
 // Params 0, eflags: 0x1 linked
 // Checksum 0xac275b0f, Offset: 0x1740
 // Size: 0x25a
@@ -179,7 +179,7 @@ function function_feb4ddde() {
     foreach (s_scene in var_9649126c) {
         if (isdefined(s_scene) && isdefined(s_scene.var_4165e349)) {
             s_scene.var_4165e349 clientfield::set("vine_door_play_fx", 1);
-            wait(0.25);
+            wait 0.25;
             s_scene thread scene::play();
         }
     }
@@ -189,7 +189,7 @@ function function_feb4ddde() {
     }
 }
 
-// Namespace namespace_9d2fabb6
+// Namespace zm_island_zones
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbae01f88, Offset: 0x19a8
 // Size: 0x3c
@@ -198,14 +198,14 @@ function function_cd881f16() {
     exploder::exploder("fxexp_410");
 }
 
-// Namespace namespace_9d2fabb6
+// Namespace zm_island_zones
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb694a54f, Offset: 0x19f0
 // Size: 0x4c
 function function_afc937e7() {
     self endon(#"death");
     self util::waittill_either("rotatedone", "movedone");
-    wait(2);
+    wait 2;
     self delete();
 }
 

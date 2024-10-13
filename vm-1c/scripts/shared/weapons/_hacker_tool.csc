@@ -106,7 +106,7 @@ function watchhackspeed(localclientnum, isbreachingfirewall) {
             targetent = targetentarray[0];
             break;
         }
-        wait(0.02);
+        wait 0.02;
     }
     targetent watchtargethack(localclientnum, player, isbreachingfirewall);
 }
@@ -165,7 +165,7 @@ function watchtargethack(localclientnum, player, isbreachingfirewall) {
                 level.friendlyhackingsoundid[localclientnum] = undefined;
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -198,7 +198,7 @@ function watchforemp(localclientnum) {
         } else {
             setuimodelvalue(createuimodel(getuimodelforcontroller(localclientnum), "hudItems.blackhat.status"), 0);
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 

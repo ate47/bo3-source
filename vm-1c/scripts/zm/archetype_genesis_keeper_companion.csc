@@ -21,8 +21,8 @@ function autoexec main() {
     clientfield::register("actor", "keeper_ai_death_effect", 15000, 1, "int", &function_2935ac4d, 0, 0);
     clientfield::register("vehicle", "keeper_ai_death_effect", 15000, 1, "int", &function_2935ac4d, 0, 0);
     clientfield::register("scriptmover", "keeper_ai_spawn_tell", 15000, 1, "int", &function_fa8bf98f, 0, 0);
-    clientfield::register("actor", "keeper_thunderwall", 15000, 1, "counter", &function_a9034ac4, 0, 0);
-    clientfield::register("scriptmover", "keeper_thunderwall_360", 15000, 1, "counter", &function_4dcf018, 0, 0);
+    clientfield::register("actor", "keeper_thunderwall", 15000, 1, "counter", &keeper_thunderwall, 0, 0);
+    clientfield::register("scriptmover", "keeper_thunderwall_360", 15000, 1, "counter", &keeper_thunderwall_360, 0, 0);
     level._effect["dlc4/genesis/fx_keeperprot_revive_kp"] = "dlc4/genesis/fx_keeperprot_revive_kp";
     level._effect["dlc4/genesis/fx_keeperprot_revive_player"] = "dlc4/genesis/fx_keeperprot_revive_player";
     level._effect["dlc4/genesis/fx_keeperprot_underlit_amb"] = "dlc4/genesis/fx_keeperprot_underlit_amb";
@@ -172,7 +172,7 @@ function private function_802744a7(localclientnum, oldval, newval, bnewent, bini
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1f6f1fec, Offset: 0x1050
 // Size: 0xa8
-function function_a9034ac4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function keeper_thunderwall(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"entityshutdown");
     self util::waittill_dobj(localclientnum);
     if (!isdefined(self)) {
@@ -187,7 +187,7 @@ function function_a9034ac4(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd6acde6e, Offset: 0x1100
 // Size: 0x98
-function function_4dcf018(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function keeper_thunderwall_360(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"entityshutdown");
     if (!isdefined(self)) {
         return;

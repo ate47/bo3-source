@@ -191,7 +191,7 @@ function private function_eb018a63(origin, weapon, var_50ae8517) {
     cloud endon(#"death");
     while (true) {
         fxblocksight(cloud, cloud.currentradius);
-        wait(timestep);
+        wait timestep;
         cloud.durationleft -= timestep;
         if (cloud.durationleft < 0) {
             cloud.durationleft = 0;
@@ -211,7 +211,7 @@ function private function_76df0d04(player, timestep) {
         }
         self.trigger = spawn("trigger_radius", self.origin, 25, self.currentradius, self.currentradius);
         self.trigger thread function_eafddd94(player, self);
-        wait(timestep);
+        wait timestep;
     }
 }
 
@@ -265,12 +265,12 @@ function private function_eafddd94(player, cloud) {
         }
         if (isdefined(guy.archetype)) {
             switch (guy.archetype) {
-            case 14:
+            case "robot":
                 player thread challenges::function_96ed590f("cybercom_uses_martial");
                 guy thread namespace_528b4613::system_overload(player, cloud.durationleft * 1000);
                 break;
-            case 12:
-            case 13:
+            case "human":
+            case "human_riotshield":
                 player thread challenges::function_96ed590f("cybercom_uses_martial");
                 guy thread namespace_64276cf9::sensory_overload(player, "cybercom_smokescreen");
                 break;
@@ -310,7 +310,7 @@ function private function_2fb41213(origin, duration, weapon) {
 // Size: 0x5c
 function private function_7125df2e(time) {
     self endon(#"death");
-    wait(time);
+    wait time;
     if (isdefined(self.trigger)) {
         self.trigger delete();
     }
@@ -345,7 +345,7 @@ function private function_2346317b(time, startscale, maxscale) {
             self.currentscale = 1;
         }
         self.currentradius = getdvarint("scr_smokescreen_radius", 60) * self.currentscale;
-        wait(0.05);
+        wait 0.05;
         var_f6e1ecda--;
     }
 }
@@ -360,7 +360,7 @@ function private function_2f3c403b(time) {
     while (var_f6e1ecda) {
         var_f6e1ecda--;
         level thread cybercom::debug_sphere(self.origin, self.currentradius);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -379,7 +379,7 @@ function function_d25acb0(var_9bc2efcb, upgraded) {
         type = self cybercom::function_5e3d3aa();
         self orientmode("face default");
         self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
-        self waittillmatch(#"hash_39fa7e38", "fire");
+        self waittillmatch(#"ai_cybercom_anim", "fire");
     }
     level thread function_8810da3c(self, upgraded);
 }
@@ -393,7 +393,7 @@ function private function_e52895b(origin) {
     var_9f9fc36f = 1;
     for (timeleft = getdvarint("scr_smokescreen_duration", 7); timeleft > 0; timeleft -= var_9f9fc36f) {
         resetvisibilitycachewithinradius(origin, 1000);
-        wait(var_9f9fc36f);
+        wait var_9f9fc36f;
     }
 }
 

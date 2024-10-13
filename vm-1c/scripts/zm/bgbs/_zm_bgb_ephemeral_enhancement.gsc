@@ -56,7 +56,7 @@ function activation() {
     self endon(#"death");
     self endon(#"disconnect");
     self endon(#"bled_out");
-    self endon(#"hash_cf1b207b");
+    self endon(#"replaced_upgraded_weapon");
     self util::waittill_any_timeout(1, "weapon_change_complete", "death", "disconnect", "bled_out", "replaced_upgraded_weapon");
     if (self laststand::player_is_in_laststand()) {
         return;
@@ -124,7 +124,7 @@ function function_79585675(var_19dc14f6) {
     while (true) {
         self waittill(#"weapon_change_complete");
         if (!self zm_weapons::has_weapon_or_attachments(var_19dc14f6)) {
-            self notify(#"hash_cf1b207b");
+            self notify(#"replaced_upgraded_weapon");
             self.var_fb11234e = undefined;
             return;
         }

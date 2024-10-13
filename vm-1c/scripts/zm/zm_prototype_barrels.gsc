@@ -8,9 +8,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_1ed7595f;
+#namespace zm_prototype_barrels;
 
-// Namespace namespace_1ed7595f
+// Namespace zm_prototype_barrels
 // Params 0, eflags: 0x2
 // Checksum 0xf15f8ac7, Offset: 0x308
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("zm_prototype_barrels", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_1ed7595f
+// Namespace zm_prototype_barrels
 // Params 0, eflags: 0x1 linked
 // Checksum 0x142f833e, Offset: 0x348
 // Size: 0x1e4
@@ -46,7 +46,7 @@ function __init__() {
     level thread function_28ed3370();
 }
 
-// Namespace namespace_1ed7595f
+// Namespace zm_prototype_barrels
 // Params 0, eflags: 0x1 linked
 // Checksum 0x33453107, Offset: 0x538
 // Size: 0x24
@@ -54,7 +54,7 @@ function function_66d46c7d() {
     self clientfield::set("exploding_barrel_burn_fx", 1);
 }
 
-// Namespace namespace_1ed7595f
+// Namespace zm_prototype_barrels
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1b19fe27, Offset: 0x568
 // Size: 0x24
@@ -62,7 +62,7 @@ function function_b6fe19c5() {
     self clientfield::set("exploding_barrel_explode_fx", 1);
 }
 
-// Namespace namespace_1ed7595f
+// Namespace zm_prototype_barrels
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9b41691, Offset: 0x598
 // Size: 0x1d0
@@ -75,7 +75,7 @@ function function_5cbc13a7() {
     self setcandamage(1);
     for (;;) {
         amount, attacker, direction_vec, p, type = self waittill(#"damage");
-        println("exp_redbarrel" + type);
+        println("<dev string:x28>" + type);
         if (type == "MOD_MELEE" || type == "MOD_IMPACT") {
             continue;
         }
@@ -88,7 +88,7 @@ function function_5cbc13a7() {
             self.damageowner = attacker;
         }
         if (level.var_bbaf8ae8) {
-            wait(randomfloat(1));
+            wait randomfloat(1);
         }
         self.damagetaken += amount;
         if (self.damagetaken == amount) {
@@ -97,7 +97,7 @@ function function_5cbc13a7() {
     }
 }
 
-// Namespace namespace_1ed7595f
+// Namespace zm_prototype_barrels
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa49a7a4b, Offset: 0x770
 // Size: 0x154
@@ -119,12 +119,12 @@ function function_7a7f26e6() {
             self playsound("exp_barrel_fuse");
         }
         count++;
-        wait(0.05);
+        wait 0.05;
     }
     self thread function_c19689f4();
 }
 
-// Namespace namespace_1ed7595f
+// Namespace zm_prototype_barrels
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2b6e1189, Offset: 0x8d0
 // Size: 0x420
@@ -181,7 +181,7 @@ function function_c19689f4() {
     level.var_bbaf8ae8 = 0;
 }
 
-// Namespace namespace_1ed7595f
+// Namespace zm_prototype_barrels
 // Params 0, eflags: 0x0
 // Checksum 0xdb63dd25, Offset: 0xcf8
 // Size: 0x9c
@@ -198,7 +198,7 @@ function function_248dcb17() {
     }
 }
 
-// Namespace namespace_1ed7595f
+// Namespace zm_prototype_barrels
 // Params 0, eflags: 0x1 linked
 // Checksum 0xff61ec09, Offset: 0xda0
 // Size: 0xec

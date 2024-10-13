@@ -12,34 +12,34 @@
 #using scripts/cp/_util;
 #using scripts/codescripts/struct;
 
-#namespace namespace_1477b376;
+#namespace cp_mi_cairo_infection;
 
-// Namespace namespace_1477b376
+// Namespace cp_mi_cairo_infection
 // Params 0, eflags: 0x0
 // Checksum 0x2a899235, Offset: 0x5f8
 // Size: 0xc4
 function main() {
     init_clientfields();
     util::function_57b966c8(&function_71f88fc, 11);
-    namespace_dff03fd3::main();
-    namespace_5fae4ea::main();
-    namespace_c024ffd::main();
-    namespace_34269b51::main();
-    namespace_c7c6fa6::main();
+    cp_mi_cairo_infection_fx::main();
+    cp_mi_cairo_infection_sound::main();
+    cp_mi_cairo_infection_theia_battle::main();
+    cp_mi_cairo_infection_sim_reality_starts::main();
+    cp_mi_cairo_infection_sgen_test_chamber::main();
     load::main();
     util::waitforclient(0);
     namespace_f397b667::function_7403e82b();
 }
 
-// Namespace namespace_1477b376
+// Namespace cp_mi_cairo_infection
 // Params 0, eflags: 0x0
 // Checksum 0xc202d5df, Offset: 0x6c8
 // Size: 0x4c
 function init_clientfields() {
-    clientfield::register("world", "set_exposure_bank", 1, 2, "int", &function_1e832062, 0, 0);
+    clientfield::register("world", "set_exposure_bank", 1, 2, "int", &set_exposure_bank, 0, 0);
 }
 
-// Namespace namespace_1477b376
+// Namespace cp_mi_cairo_infection
 // Params 1, eflags: 0x0
 // Checksum 0x2289709a, Offset: 0x720
 // Size: 0x3da
@@ -95,11 +95,11 @@ function function_71f88fc(n_zone) {
     }
 }
 
-// Namespace namespace_1477b376
+// Namespace cp_mi_cairo_infection
 // Params 7, eflags: 0x0
 // Checksum 0x6c1d0b05, Offset: 0xb08
 // Size: 0x64
-function function_1e832062(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function set_exposure_bank(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval != oldval) {
         setexposureactivebank(localclientnum, newval);
     }

@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_d4bfdfc;
+#namespace mp_city_sound;
 
-// Namespace namespace_d4bfdfc
+// Namespace mp_city_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x90
 // Size: 0x4

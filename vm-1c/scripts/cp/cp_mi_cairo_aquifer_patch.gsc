@@ -12,9 +12,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_a52a2a1d;
+#namespace cp_mi_cairo_aquifer_patch;
 
-// Namespace namespace_a52a2a1d
+// Namespace cp_mi_cairo_aquifer_patch
 // Params 0, eflags: 0x1 linked
 // Checksum 0xff5ebd78, Offset: 0x238
 // Size: 0x44

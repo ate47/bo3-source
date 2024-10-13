@@ -156,11 +156,11 @@ function function_9e76f68() {
     self function_358b5b46("hq_patrol");
     if (self getstance() == "prone") {
         self setstance("crouch");
-        wait(0.25);
+        wait 0.25;
     }
     if (self getstance() == "crouch") {
         self setstance("stand");
-        wait(0.25);
+        wait 0.25;
     }
     points = array::randomize(level.radio.points);
     foreach (point in points) {

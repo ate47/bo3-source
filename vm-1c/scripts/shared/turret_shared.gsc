@@ -105,7 +105,7 @@ function watch_for_flash_and_stun(n_index) {
             }
             self.stunned = 1;
             stop(n_index, 1);
-            wait(randomfloatrange(5, 7));
+            wait randomfloatrange(5, 7);
             self.stunned = undefined;
         }
     }
@@ -130,7 +130,7 @@ function emp_watcher(n_index) {
                 self laseroff();
             }
             stop(n_index, 1);
-            wait(randomfloatrange(5, 7));
+            wait randomfloatrange(5, 7);
             self.emped = undefined;
             if (isdefined(_get_turret_data(n_index).has_laser)) {
                 self laseron();
@@ -285,7 +285,7 @@ function function_d1a39ff1(n_index) {
 function _wait_for_current_user_to_finish(n_index) {
     self endon(#"death");
     while (isalive(get_user(n_index))) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -499,7 +499,7 @@ function set_min_target_distance_squared(n_distance_squared, n_index) {
 // Size: 0x184
 function fire(n_index) {
     s_turret = _get_turret_data(n_index);
-    assert(isdefined(n_index) && n_index >= 0, "robot");
+    assert(isdefined(n_index) && n_index >= 0, "<dev string:x28>");
     if (n_index == 0) {
         self fireweapon(0, s_turret.e_target);
     } else {
@@ -541,7 +541,7 @@ function fire_for_time(n_time, n_index) {
     if (!isdefined(n_index)) {
         n_index = 0;
     }
-    assert(isdefined(n_time), "robot");
+    assert(isdefined(n_time), "<dev string:x58>");
     self endon(#"death");
     self endon(#"drone_death");
     self endon("_stop_turret" + _index(n_index));
@@ -554,7 +554,7 @@ function fire_for_time(n_time, n_index) {
     } else {
         /#
             w_weapon = get_weapon(n_index);
-            assert(n_time >= w_weapon.firetime, "robot" + n_time + "robot" + w_weapon.firetime);
+            assert(n_time >= w_weapon.firetime, "<dev string:x92>" + n_time + "<dev string:x9e>" + w_weapon.firetime);
         #/
     }
     while (n_time > 0 || b_fire_forever) {
@@ -570,7 +570,7 @@ function fire_for_time(n_time, n_index) {
 // Checksum 0x9cd17921, Offset: 0x1d38
 // Size: 0xf4
 function shoot_at_target(e_target, n_time, v_offset, n_index, b_just_once) {
-    assert(isdefined(e_target), "robot");
+    assert(isdefined(e_target), "<dev string:xe1>");
     self endon(#"drone_death");
     self endon(#"death");
     s_turret = _get_turret_data(n_index);
@@ -613,7 +613,7 @@ function _shoot_turret_at_target(e_target, n_time, v_offset, n_index, b_just_onc
 // Size: 0x90
 function _waittill_turret_on_target(e_target, n_index) {
     do {
-        wait(isdefined(self.waittill_turret_on_target_delay) ? self.waittill_turret_on_target_delay : 0.5);
+        wait isdefined(self.waittill_turret_on_target_delay) ? self.waittill_turret_on_target_delay : 0.5;
         if (!isdefined(n_index) || n_index == 0) {
             self waittill(#"turret_on_target");
             continue;
@@ -733,7 +733,7 @@ function _turret_think(n_index, v_offset) {
         s_turret flag::wait_till_clear("turret manual");
         n_time_now = gettime();
         if (self _check_for_paused(n_index) || isdefined(self.emped) || isdefined(self.stunned)) {
-            wait(turret_think_time);
+            wait turret_think_time;
             continue;
         }
         a_potential_targets = function_5798a268(n_index);
@@ -780,7 +780,7 @@ function _turret_think(n_index, v_offset) {
         if (!(isdefined(s_turret.disable_ai_getoff) && s_turret.disable_ai_getoff) && _has_nearby_player_enemy(n_index, self)) {
             _drop_turret(n_index, 0);
         }
-        wait(turret_think_time);
+        wait turret_think_time;
     }
 }
 
@@ -906,7 +906,7 @@ function _check_for_paused(n_index) {
                 return true;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
     return false;
 }
@@ -937,7 +937,7 @@ function function_b5dd89ec(n_index) {
         var_7f7aca6b = "gunner" + n_index;
     }
     while (true) {
-        wait(3);
+        wait 3;
         if (isdefined(self.script_auto_use) && does_have_target(n_index) && !_user_check(n_index) && self.script_auto_use) {
             str_team = get_team(n_index);
             var_bb65a987 = getaiarchetypearray("human", str_team);
@@ -1008,13 +1008,13 @@ function _user_check(n_index) {
     // Size: 0x350
     function _debug_turret_think(n_index) {
         self endon(#"death");
-        self endon("robot" + _index(n_index));
-        self endon("robot" + _index(n_index));
+        self endon("<dev string:x10f>" + _index(n_index));
+        self endon("<dev string:x11d>" + _index(n_index));
         s_turret = _get_turret_data(n_index);
         v_color = (0, 0, 1);
         while (true) {
-            if (!getdvarint("robot")) {
-                wait(0.2);
+            if (!getdvarint("<dev string:x12d>")) {
+                wait 0.2;
                 continue;
             }
             has_target = isdefined(get_target(n_index));
@@ -1025,28 +1025,28 @@ function _user_check(n_index) {
             }
             str_team = get_team(n_index);
             if (!isdefined(str_team)) {
-                str_team = "robot";
+                str_team = "<dev string:x13c>";
             }
-            str_target = "robot";
+            str_target = "<dev string:x144>";
             e_target = s_turret.e_next_target;
             if (isdefined(e_target)) {
                 if (isactor(e_target)) {
-                    str_target += "robot";
+                    str_target += "<dev string:x14e>";
                 } else if (isplayer(e_target)) {
-                    str_target += "robot";
+                    str_target += "<dev string:x151>";
                 } else if (isvehicle(e_target)) {
-                    str_target += "robot";
-                } else if (isdefined(e_target.targetname) && e_target.targetname == "robot") {
-                    str_target += "robot";
+                    str_target += "<dev string:x158>";
+                } else if (isdefined(e_target.targetname) && e_target.targetname == "<dev string:x160>") {
+                    str_target += "<dev string:x160>";
                 } else if (isdefined(e_target.classname)) {
                     str_target += e_target.classname;
                 }
             } else {
-                str_target += "robot";
+                str_target += "<dev string:x166>";
             }
-            str_debug = self getentnum() + "robot" + str_team + "robot" + str_target;
-            record3dtext(str_debug, self.origin, v_color, "robot", self);
-            wait(0.05);
+            str_debug = self getentnum() + "<dev string:x16b>" + str_team + "<dev string:x16b>" + str_target;
+            record3dtext(str_debug, self.origin, v_color, "<dev string:x16d>", self);
+            wait 0.05;
         }
     }
 
@@ -1093,14 +1093,14 @@ function _init_turret(n_index) {
     self endon(#"death");
     w_weapon = get_weapon(n_index);
     if (w_weapon == level.weaponnone) {
-        assertmsg("robot");
+        assertmsg("<dev string:x174>");
         return;
     }
     util::waittill_asset_loaded("xmodel", self.model);
     if (isvehicle(self)) {
         s_turret = _init_vehicle_turret(n_index);
     } else {
-        assertmsg("robot");
+        assertmsg("<dev string:x19e>");
     }
     s_turret.w_weapon = w_weapon;
     _update_turret_arcs(n_index);
@@ -1141,20 +1141,20 @@ function _update_turret_arcs(n_index) {
 // Size: 0x11a
 function function_f956e85a(n_index) {
     switch (_get_turret_data(n_index).str_weapon_type) {
-    case 6:
+    case "bullet":
         function_1c6038d9(&function_b6eca136, n_index);
         break;
-    case 22:
+    case "gas":
         function_1c6038d9(&function_40d1f6f5, n_index);
         break;
-    case 23:
+    case "grenade":
         function_1c6038d9(&function_d0f7a33c, n_index);
         break;
-    case 24:
+    case "projectile":
         function_1c6038d9(&function_2276a7b7, n_index);
         break;
     default:
-        assertmsg("robot");
+        assertmsg("<dev string:x1f1>");
         break;
     }
 }
@@ -1172,7 +1172,7 @@ function function_1c6038d9(var_187a0a9, n_index) {
 // Checksum 0x42ec0a4b, Offset: 0x3eb0
 // Size: 0x288
 function _init_vehicle_turret(n_index) {
-    assert(isdefined(n_index) && n_index >= 0, "robot");
+    assert(isdefined(n_index) && n_index >= 0, "<dev string:x211>");
     s_turret = spawnstruct();
     v_angles = self getseatfiringangles(n_index);
     if (isdefined(v_angles)) {
@@ -1236,7 +1236,7 @@ function _burst_fire(n_max_time, n_index) {
         s_turret.n_burst_fire_time = 0;
         n_time_since_last_shot = (gettime() - s_turret.n_last_fire_time) / 1000;
         if (n_time_since_last_shot < n_burst_wait) {
-            wait(n_burst_wait - n_time_since_last_shot);
+            wait n_burst_wait - n_time_since_last_shot;
         }
     } else {
         n_burst_time -= s_turret.n_burst_fire_time;
@@ -1248,10 +1248,10 @@ function _burst_fire(n_max_time, n_index) {
         fire(n_index);
         n_total_time += n_fire_time;
         s_turret.n_burst_fire_time += n_fire_time;
-        wait(n_fire_time);
+        wait n_fire_time;
     }
     if (n_burst_wait > 0) {
-        wait(n_burst_wait);
+        wait n_burst_wait;
     }
     return n_burst_time + n_burst_wait;
 }
@@ -1372,7 +1372,7 @@ function function_5798a268(n_index) {
         for (i = 0; i < a_potential_targets.size; i++) {
             e_target = a_potential_targets[i];
             var_214803fd = 0;
-            assert(isdefined(e_target), "robot");
+            assert(isdefined(e_target), "<dev string:x247>");
             if (isdefined(e_target.ignoreme) && e_target.ignoreme || !isdefined(e_target.health) || e_target.health <= 0) {
                 var_214803fd = 1;
             } else if (e_target isnotarget() || issentient(e_target) && e_target ai::is_dead_sentient()) {
@@ -1674,7 +1674,7 @@ function track_lens_flare() {
                 self toggle_lensflare(0);
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -1693,7 +1693,7 @@ function _get_gunner_tag_for_turret_index(n_index) {
     case 4:
         return "tag_gunner4";
     default:
-        assertmsg("robot");
+        assertmsg("<dev string:x26a>");
         break;
     }
 }
@@ -1704,13 +1704,13 @@ function _get_gunner_tag_for_turret_index(n_index) {
 // Size: 0x56
 function function_69ced6d1(str_tag) {
     switch (str_tag) {
-    case 44:
+    case "tag_gunner1":
         return 1;
-    case 45:
+    case "tag_gunner2":
         return 2;
-    case 46:
+    case "tag_gunner3":
         return 3;
-    case 47:
+    case "tag_gunner4":
         return 4;
     }
 }

@@ -77,10 +77,10 @@ function ambient_flak_think(point) {
             point.is_firing = 1;
             playfx(0, level._effect[point.fx_id], point.origin, point.forward, point.up);
             thread sound::play_in_space(0, "wpn_triple25_fire", point.origin);
-            wait(0.2);
+            wait 0.2;
         }
         point.is_firing = 0;
-        wait(randomfloatrange(min_delay, max_delay));
+        wait randomfloatrange(min_delay, max_delay);
     }
 }
 
@@ -107,7 +107,7 @@ function ambient_flak_rotate(point) {
         for (i = 0; i < steps; i++) {
             point.forward += diff_forward;
             point.up += diff_up;
-            wait(0.1);
+            wait 0.1;
         }
         point.forward = forward;
         point.up = up;
@@ -132,7 +132,7 @@ function ambient_flak_flash(point, min_burst_time, max_burst_time) {
     fxpos = undefined;
     while (true) {
         if (!point.is_firing) {
-            wait(0.25);
+            wait 0.25;
             continue;
         }
         fxpos = point.origin + vectorscale(point.forward, randomintrange(min_dist, max_dist));
@@ -140,7 +140,7 @@ function ambient_flak_flash(point, min_burst_time, max_burst_time) {
         if (level.timeofday == "evening" || isdefined(level.timeofday) && level.timeofday == "night") {
             playfx(0, level._effect["flak_cloudflash_night"], fxpos);
         }
-        wait(randomfloatrange(min_burst_time, max_burst_time));
+        wait randomfloatrange(min_burst_time, max_burst_time);
     }
 }
 
@@ -162,7 +162,7 @@ function ambient_fakefire_think(point) {
         point.weaponinfo = "axis_turret";
     }
     switch (point.weaponinfo) {
-    case 29:
+    case "allies_assault":
         if (isdefined(level.allies_team) && level.allies_team == "marines") {
             firesound = "weap_bar_fire";
         } else {
@@ -177,7 +177,7 @@ function ambient_fakefire_think(point) {
         soundchance = 75;
         weaptype = "assault";
         break;
-    case 33:
+    case "axis_assault":
         if (isdefined(level.axis_team) && level.axis_team == "german") {
             firesound = "weap_mp44_fire";
         } else {
@@ -192,7 +192,7 @@ function ambient_fakefire_think(point) {
         soundchance = 75;
         weaptype = "assault";
         break;
-    case 30:
+    case "allies_rifle":
         if (isdefined(level.allies_team) && level.allies_team == "marines") {
             firesound = "weap_m1garand_fire";
         } else {
@@ -207,7 +207,7 @@ function ambient_fakefire_think(point) {
         soundchance = 95;
         weaptype = "rifle";
         break;
-    case 34:
+    case "axis_rifle":
         if (isdefined(level.axis_team) && level.axis_team == "german") {
             firesound = "weap_kar98k_fire";
         } else {
@@ -222,7 +222,7 @@ function ambient_fakefire_think(point) {
         soundchance = 95;
         weaptype = "rifle";
         break;
-    case 31:
+    case "allies_smg":
         if (isdefined(level.allies_team) && level.allies_team == "marines") {
             firesound = "weap_thompson_fire";
         } else {
@@ -237,7 +237,7 @@ function ambient_fakefire_think(point) {
         soundchance = 75;
         weaptype = "smg";
         break;
-    case 35:
+    case "axis_smg":
         if (isdefined(level.axis_team) && level.axis_team == "german") {
             firesound = "weap_mp40_fire";
         } else {
@@ -252,7 +252,7 @@ function ambient_fakefire_think(point) {
         soundchance = 75;
         weaptype = "smg";
         break;
-    case 32:
+    case "allies_turret":
         if (isdefined(level.allies_team) && level.allies_team == "marines") {
             firesound = "weap_30cal_fire";
         } else {
@@ -267,7 +267,7 @@ function ambient_fakefire_think(point) {
         soundchance = 95;
         weaptype = "turret";
         break;
-    case 8:
+    case "axis_turret":
         if (isdefined(level.axis_team) && level.axis_team == "german") {
             firesound = "weap_bar_fire";
         } else {
@@ -283,7 +283,7 @@ function ambient_fakefire_think(point) {
         weaptype = "turret";
         break;
     default:
-        assertmsg("axis_turret" + point.weaponinfo + "axis_turret");
+        assertmsg("<dev string:x28>" + point.weaponinfo + "<dev string:x48>");
         break;
     }
     while (true) {
@@ -295,9 +295,9 @@ function ambient_fakefire_think(point) {
                 bullettracer(point.origin, target);
             }
             playfx(0, level._effect[point.fx_id], point.origin, point.forward);
-            wait(randomfloatrange(betweenshotsmin, betweenshotsmax));
+            wait randomfloatrange(betweenshotsmin, betweenshotsmax);
         }
-        wait(randomfloatrange(reloadtimemin, reloadtimemax));
+        wait randomfloatrange(reloadtimemin, reloadtimemax);
     }
 }
 
@@ -308,7 +308,7 @@ function ambient_fakefire_think(point) {
 function ceiling_fans_init(clientnum) {
     fan_array = getentarray(clientnum, "ceiling_fan", "targetname");
     if (isdefined(fan_array)) {
-        println("axis_turret" + fan_array.size);
+        println("<dev string:x5d>" + fan_array.size);
         array::thread_all(fan_array, &spin_fan);
     }
 }
@@ -382,17 +382,17 @@ function clocks_init(clientnum) {
     second_values["rotate_bit"] = 6;
     hour_hand_array = getentarray(clientnum, "hour_hand", "targetname");
     if (isdefined(hour_hand_array)) {
-        println("axis_turret" + hour_hand_array.size);
+        println("<dev string:x84>" + hour_hand_array.size);
         array::thread_all(hour_hand_array, &clock_run, hour_values);
     }
     minute_hand_array = getentarray(clientnum, "minute_hand", "targetname");
     if (isdefined(minute_hand_array)) {
-        println("axis_turret" + minute_hand_array.size);
+        println("<dev string:xb1>" + minute_hand_array.size);
         array::thread_all(minute_hand_array, &clock_run, minute_values);
     }
     second_hand_array = getentarray(clientnum, "second_hand", "targetname");
     if (isdefined(second_hand_array)) {
-        println("axis_turret" + second_hand_array.size);
+        println("<dev string:xe0>" + second_hand_array.size);
         array::thread_all(second_hand_array, &clock_run, second_values);
     }
 }
@@ -407,46 +407,46 @@ function clock_run(time_values) {
         hour = time_values["hand_time"];
         curr_time = getsystemtime(1);
         switch (tolower(self.script_noteworthy)) {
-        case 53:
+        case "honolulu":
             hour = curr_time[0] - 10;
             break;
-        case 46:
+        case "alaska":
             hour = curr_time[0] - 9;
             break;
-        case 55:
+        case "los angeles":
             hour = curr_time[0] - 8;
             break;
-        case 49:
+        case "denver":
             hour = curr_time[0] - 7;
             break;
-        case 47:
+        case "chicago":
             hour = curr_time[0] - 6;
             break;
-        case 57:
+        case "new york":
             hour = curr_time[0] - 5;
             break;
-        case 51:
+        case "halifax":
             hour = curr_time[0] - 4;
             break;
-        case 50:
+        case "greenland":
             hour = curr_time[0] - 3;
             break;
-        case 54:
+        case "london":
             hour = curr_time[0];
             break;
-        case 58:
+        case "paris":
             hour = curr_time[0] + 1;
             break;
-        case 52:
+        case "helsinki":
             hour = curr_time[0] + 2;
             break;
-        case 56:
+        case "moscow":
             hour = curr_time[0] + 3;
             break;
-        case 59:
+        case "vietnam":
             hour = curr_time[0] + 7;
             break;
-        case 48:
+        case "china":
             hour = curr_time[0] + 8;
             break;
         }
@@ -471,7 +471,7 @@ function clock_run(time_values) {
             self rotatepitch(time_values["rotate_bit"], 0.05);
             prev_time = curr_time;
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -483,11 +483,11 @@ function spin_anemometers(clientnum) {
     spoon_spinners = getentarray(clientnum, "spinner1", "targetname");
     flat_spinners = getentarray(clientnum, "spinner2", "targetname");
     if (isdefined(spoon_spinners)) {
-        println("axis_turret" + spoon_spinners.size);
+        println("<dev string:x10f>" + spoon_spinners.size);
         array::thread_all(spoon_spinners, &spoon_spin_func);
     }
     if (isdefined(flat_spinners)) {
-        println("axis_turret" + flat_spinners.size);
+        println("<dev string:x13b>" + flat_spinners.size);
         array::thread_all(flat_spinners, &arrow_spin_func);
     }
 }

@@ -66,7 +66,7 @@ function activation() {
     if ("timeout" != ret) {
         visionset_mgr::deactivate("visionset", "zm_bgb_now_you_see_me", self);
     } else {
-        wait(0.5);
+        wait 0.5;
     }
     visionset_mgr::deactivate("overlay", "zm_bgb_now_you_see_me", self);
     self.b_is_designated_target = 0;

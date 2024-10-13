@@ -18,9 +18,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_d8d03071;
+#namespace zm_zod_traps;
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Method(s) 23 Total 23
 class class_a32cae3d {
 
@@ -51,17 +51,17 @@ class class_a32cae3d {
             foreach (var_5404ad23 in self.var_7d0ff937) {
                 var_5404ad23 thread scene::play("p7_fxanim_zm_zod_chain_trap_heart_low_bundle", var_5404ad23);
             }
-            wait(n_wait);
+            wait n_wait;
             foreach (var_5404ad23 in self.var_7d0ff937) {
                 var_5404ad23 scene::stop("p7_fxanim_zm_zod_chain_trap_heart_low_bundle");
                 var_5404ad23 thread scene::play("p7_fxanim_zm_zod_chain_trap_heart_med_bundle", var_5404ad23);
             }
-            wait(n_wait);
+            wait n_wait;
             foreach (var_5404ad23 in self.var_7d0ff937) {
                 var_5404ad23 scene::stop("p7_fxanim_zm_zod_chain_trap_heart_med_bundle");
                 var_5404ad23 thread scene::play("p7_fxanim_zm_zod_chain_trap_heart_fast_bundle", var_5404ad23);
             }
-            wait(n_wait);
+            wait n_wait;
             foreach (var_5404ad23 in self.var_7d0ff937) {
                 var_5404ad23 scene::stop("p7_fxanim_zm_zod_chain_trap_heart_fast_bundle");
             }
@@ -124,7 +124,7 @@ class class_a32cae3d {
         if (isdefined(ent.maxhealth) && self.var_12a7c9a2 >= ent.maxhealth && !isvehicle(ent)) {
             function_a99cc5f4(ent);
             ent dodamage(ent.maxhealth * 0.5, ent.origin, self.var_faf8139, self.var_faf8139, "MOD_GRENADE");
-            wait(self.var_8bfee5e9);
+            wait self.var_8bfee5e9;
             function_a99cc5f4(ent);
             ent dodamage(ent.maxhealth, ent.origin, self.var_faf8139, self.var_faf8139, "MOD_GRENADE");
             ent.trap_damage_cooldown = undefined;
@@ -132,7 +132,7 @@ class class_a32cae3d {
         }
         function_a99cc5f4(ent);
         ent dodamage(self.var_12a7c9a2, ent.origin, self.var_faf8139, self.var_faf8139, "MOD_GRENADE");
-        wait(self.var_8bfee5e9);
+        wait self.var_8bfee5e9;
         ent.trap_damage_cooldown = undefined;
     }
 
@@ -156,7 +156,7 @@ class class_a32cae3d {
             return;
         }
         ent dodamage(self.var_820db121 / 2, ent.origin);
-        wait(self.var_1e59abc0);
+        wait self.var_1e59abc0;
         ent.trap_damage_cooldown = undefined;
     }
 
@@ -213,8 +213,8 @@ class class_a32cae3d {
     // Params 0, eflags: 0x1 linked
     // Checksum 0x46d92123, Offset: 0x1618
     // Size: 0x6c
-    function function_d8823dfd() {
-        println("pap");
+    function trap_active() {
+        println("<dev string:x28>");
         self.var_faf8139 setvisibletoall();
         self.var_faf8139 triggerenable(1);
         thread trap_damage();
@@ -239,7 +239,7 @@ class class_a32cae3d {
             function_cafd3848();
             break;
         case 2:
-            function_d8823dfd();
+            trap_active();
             self notify(#"trap_start");
             break;
         case 3:
@@ -274,7 +274,7 @@ class class_a32cae3d {
         foreach (var_5404ad23 in self.var_7d0ff937) {
             var_5404ad23 moveto(var_5404ad23.origin - (0, 0, -32), 0.25);
         }
-        wait(0.25);
+        wait 0.25;
         self thread function_8e2169c7();
     }
 
@@ -289,7 +289,7 @@ class class_a32cae3d {
         }
         var_74a8cf96 = 30;
         self thread function_7e393675(var_74a8cf96);
-        wait(0.25);
+        wait 0.25;
         self.var_faf8139 playsound("zmb_trap_activate");
         self thread function_8e2169c7();
     }
@@ -377,12 +377,12 @@ class class_a32cae3d {
             [[ var_1f29d07e ]]->function_d84562ad(self);
             [[ var_1f29d07e ]]->function_8aa04a46();
             who thread zm_audio::create_and_play_dialog("trap", "start");
-            wait(var_1f29d07e.var_2ac38075);
+            wait var_1f29d07e.var_2ac38075;
             var_1f29d07e.var_5fd95ddf = 3;
             [[ var_1f29d07e ]]->function_8aa04a46();
             [[ var_1f29d07e ]]->function_d84562ad(self);
             [[ var_1f29d07e ]]->function_e95944e1();
-            wait(var_1f29d07e.var_3e336f90);
+            wait var_1f29d07e.var_3e336f90;
             var_1f29d07e.var_5fd95ddf = 1;
             [[ var_1f29d07e ]]->function_e95944e1();
             [[ var_1f29d07e ]]->function_d84562ad(self);
@@ -454,7 +454,7 @@ class class_a32cae3d {
 
 }
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 0, eflags: 0x2
 // Checksum 0xb414e397, Offset: 0x528
 // Size: 0x34
@@ -462,7 +462,7 @@ function autoexec function_2dc19561() {
     system::register("zm_zod_traps", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1b9ab328, Offset: 0x568
 // Size: 0x64
@@ -471,7 +471,7 @@ function __init__() {
     clientfield::register("scriptmover", "trap_chain_location", 1, 2, "int");
 }
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0x87fff9bd, Offset: 0x5d8
 // Size: 0xac
@@ -487,7 +487,7 @@ function init_traps() {
     function_89303c72(undefined);
 }
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 1, eflags: 0x1 linked
 // Checksum 0x69ac3fef, Offset: 0x690
 // Size: 0x5c
@@ -498,7 +498,7 @@ function function_f46f1aeb(var_6b6cc590) {
     }
 }
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa031d45b, Offset: 0x6f8
 // Size: 0x1e4
@@ -519,7 +519,7 @@ function function_89303c72(var_f6caa7fd) {
     level thread function_8144bbbe();
 }
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0x887fccef, Offset: 0x8e8
 // Size: 0xc0

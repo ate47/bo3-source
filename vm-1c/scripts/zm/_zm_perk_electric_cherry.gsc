@@ -168,7 +168,7 @@ function electric_cherry_laststand() {
         playfx(level._effect["electric_cherry_explode"], self.origin);
         self playsound("zmb_cherry_explode");
         self notify(#"electric_cherry_start");
-        wait(0.05);
+        wait 0.05;
         a_zombies = zombie_utility::get_round_enemy_array();
         a_zombies = util::get_array_of_closest(self.origin, a_zombies, undefined, undefined, 500);
         for (i = 0; i < a_zombies.size; i++) {
@@ -183,7 +183,7 @@ function electric_cherry_laststand() {
                     a_zombies[i] thread electric_cherry_stun();
                     a_zombies[i] thread electric_cherry_shock_fx();
                 }
-                wait(0.1);
+                wait 0.1;
                 a_zombies[i] dodamage(1000, self.origin, self, self, "none");
             }
         }
@@ -243,7 +243,7 @@ function electric_cherry_stun() {
     self endon(#"stun_zombie");
     if (self.health <= 0) {
         /#
-            iprintln("p7_zm_vending_nuke");
+            iprintln("<dev string:x28>");
         #/
         return;
     }
@@ -252,7 +252,7 @@ function electric_cherry_stun() {
     }
     self.var_128cd975 = 1;
     self.ignoreall = 1;
-    wait(4);
+    wait 4;
     if (isdefined(self)) {
         self.var_128cd975 = 0;
         self.ignoreall = 0;
@@ -334,7 +334,7 @@ function electric_cherry_reload_attack() {
                         }
                         a_zombies[i] thread electric_cherry_shock_fx();
                     }
-                    wait(0.1);
+                    wait 0.1;
                     if (isdefined(a_zombies[i]) && isalive(a_zombies[i])) {
                         a_zombies[i] dodamage(perk_dmg, self.origin, self, self, "none");
                     }
@@ -359,7 +359,7 @@ function electric_cherry_cooldown_timer(current_weapon) {
         n_reload_time *= getdvarfloat("perk_weapReloadMultiplier");
     }
     n_cooldown_time = n_reload_time + 3;
-    wait(n_cooldown_time);
+    wait n_cooldown_time;
     self.consecutive_electric_cherry_attacks = 0;
 }
 
@@ -414,7 +414,7 @@ function electric_cherry_reload_fx(n_fraction) {
     } else {
         codesetclientfield(self, "electric_cherry_reload_fx", 3);
     }
-    wait(1);
+    wait 1;
     codesetclientfield(self, "electric_cherry_reload_fx", 0);
 }
 

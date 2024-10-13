@@ -23,7 +23,7 @@ function __init__() {
     zm_perks::register_perk_clientfields("specialty_widowswine", &widows_wine_client_field_func, &widows_wine_code_callback_func);
     zm_perks::register_perk_effects("specialty_widowswine", "widow_light");
     zm_perks::register_perk_init_thread("specialty_widowswine", &init_widows_wine);
-    clientfield::register("toplayer", "widows_wine_1p_contact_explosion", 1, 1, "counter", &function_bb108b89, 0, 0);
+    clientfield::register("toplayer", "widows_wine_1p_contact_explosion", 1, 1, "counter", &widows_wine_1p_contact_explosion, 0, 0);
 }
 
 // Namespace zm_perk_widows_wine
@@ -86,7 +86,7 @@ function function_c48acb49(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6b737327, Offset: 0x6d8
 // Size: 0x9c
-function function_bb108b89(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function widows_wine_1p_contact_explosion(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     owner = self getowner(localclientnum);
     if (isdefined(owner) && owner == getlocalplayer(localclientnum)) {
         thread function_617a36aa(localclientnum);
@@ -106,7 +106,7 @@ function function_617a36aa(localclientnum) {
         }
     }
     var_3d48c982 = playviewmodelfx(localclientnum, "zombie/fx_widows_exp_1p_zmb", tag);
-    wait(2);
+    wait 2;
     deletefx(localclientnum, var_3d48c982, 1);
 }
 

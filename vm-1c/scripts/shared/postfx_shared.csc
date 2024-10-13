@@ -58,26 +58,26 @@ function function_7e41df4() {
     // Size: 0x1c0
     function postfxbundledebuglisten() {
         self endon(#"entityshutdown");
-        setdvar("material", "material");
-        setdvar("material", "material");
-        setdvar("material", "material");
+        setdvar("<dev string:x28>", "<dev string:x3f>");
+        setdvar("<dev string:x40>", "<dev string:x3f>");
+        setdvar("<dev string:x57>", "<dev string:x3f>");
         while (true) {
-            playbundlename = getdvarstring("material");
-            if (playbundlename != "material") {
+            playbundlename = getdvarstring("<dev string:x28>");
+            if (playbundlename != "<dev string:x3f>") {
                 self thread playpostfxbundle(playbundlename);
-                setdvar("material", "material");
+                setdvar("<dev string:x28>", "<dev string:x3f>");
             }
-            stopbundlename = getdvarstring("material");
-            if (stopbundlename != "material") {
+            stopbundlename = getdvarstring("<dev string:x40>");
+            if (stopbundlename != "<dev string:x3f>") {
                 self thread stoppostfxbundle();
-                setdvar("material", "material");
+                setdvar("<dev string:x40>", "<dev string:x3f>");
             }
-            stopbundlename = getdvarstring("material");
-            if (stopbundlename != "material") {
+            stopbundlename = getdvarstring("<dev string:x57>");
+            if (stopbundlename != "<dev string:x3f>") {
                 self thread exitpostfxbundle();
-                setdvar("material", "material");
+                setdvar("<dev string:x57>", "<dev string:x3f>");
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 
@@ -94,7 +94,7 @@ function playpostfxbundle(playbundlename) {
     function_9493d991();
     bundle = struct::get_script_bundle("postfxbundle", playbundlename);
     if (!isdefined(bundle)) {
-        println("material" + playbundlename + "material");
+        println("<dev string:x6e>" + playbundlename + "<dev string:x85>");
         return;
     }
     filterid = 0;
@@ -186,7 +186,7 @@ function playpostfxbundle(playbundlename) {
         prevtime = self getclienttime();
         while ((var_417f3f5 || accumtime < stagelength) && !self.forcestoppostfxbundle) {
             gfx::setstage(localclientnum, bundle, filterid, stageprefix, stagelength, accumtime, totalaccumtime, &function_8d3c3170);
-            wait(0.016);
+            wait 0.016;
             currtime = self getclienttime();
             deltatime = currtime - prevtime;
             accumtime += deltatime;
@@ -276,7 +276,7 @@ function stoppostfxbundle() {
     if (isdefined(self.playingpostfxbundle) && self.playingpostfxbundle != "") {
         self.forcestoppostfxbundle = 1;
         while (self.playingpostfxbundle != "") {
-            wait(0.016);
+            wait 0.016;
             if (!isdefined(self)) {
                 return;
             }

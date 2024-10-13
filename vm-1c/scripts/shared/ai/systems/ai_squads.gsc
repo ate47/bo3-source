@@ -96,7 +96,7 @@ class squad {
         assert(self.squadleader == ai);
         if (distance2dsquared(self.squadbreadcrumb, ai.origin) >= 9216) {
             /#
-                recordcircle(ai.origin, 4, (0, 0, 1), "<unknown string>", ai);
+                recordcircle(ai.origin, 4, (0, 0, 1), "<dev string:x28>", ai);
             #/
             self.squadbreadcrumb = ai.origin;
         }
@@ -156,7 +156,7 @@ function private getsquad(squadname) {
 function private thinksquad(squadname) {
     while (true) {
         if ([[ level._squads[squadname] ]]->think()) {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         removesquad(squadname);
@@ -184,7 +184,7 @@ function private squadmemberthink() {
     if (!isdefined(self.script_aisquadname)) {
         return;
     }
-    wait(0.5);
+    wait 0.5;
     self.squadname = self.script_aisquadname;
     if (isdefined(self.squadname)) {
         if (!isdefined(level._squads[self.squadname])) {
@@ -203,13 +203,13 @@ function private squadmemberthink() {
             if (isdefined(squadleader) && !(isint(squadleader) && squadleader == 0)) {
                 if (squadleader == self) {
                     /#
-                        recordenttext(self.squadname + "<unknown string>", self, (0, 1, 0), "<unknown string>");
+                        recordenttext(self.squadname + "<dev string:x33>", self, (0, 1, 0), "<dev string:x28>");
                     #/
                     /#
-                        recordenttext(self.squadname + "<unknown string>", self, (0, 1, 0), "<unknown string>");
+                        recordenttext(self.squadname + "<dev string:x33>", self, (0, 1, 0), "<dev string:x28>");
                     #/
                     /#
-                        recordcircle(self.origin, 300, (1, 0.5, 0), "<unknown string>", self);
+                        recordcircle(self.origin, 300, (1, 0.5, 0), "<dev string:x28>", self);
                     #/
                     if (isdefined(self.enemy)) {
                         self setgoal(self.enemy);
@@ -217,10 +217,10 @@ function private squadmemberthink() {
                     [[ squad ]]->addsquadbreadcrumbs(self);
                 } else {
                     /#
-                        recordline(self.origin, squadleader.origin, (0, 1, 0), "<unknown string>", self);
+                        recordline(self.origin, squadleader.origin, (0, 1, 0), "<dev string:x28>", self);
                     #/
                     /#
-                        recordenttext(self.squadname + "<unknown string>", self, (0, 1, 0), "<unknown string>");
+                        recordenttext(self.squadname + "<dev string:x3c>", self, (0, 1, 0), "<dev string:x28>");
                     #/
                     followposition = [[ squad ]]->getsquadbreadcrumb();
                     followdistsq = distance2dsquared(self.goalpos, followposition);
@@ -239,7 +239,7 @@ function private squadmemberthink() {
                     }
                 }
             }
-            wait(1);
+            wait 1;
         }
     }
 }

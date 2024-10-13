@@ -135,10 +135,10 @@ function monitordistance(localclientnum) {
     if (isdefined(distance_to_closest_enemy_emp_ui_model)) {
         while (true) {
             /#
-                max_static_value = getdvarfloat("distanceToClosestEnemyEmpKillstreak");
-                min_static_value = getdvarfloat("distanceToClosestEnemyEmpKillstreak");
-                min_radius_max_static = getdvarfloat("distanceToClosestEnemyEmpKillstreak");
-                max_radius_min_static = getdvarfloat("distanceToClosestEnemyEmpKillstreak");
+                max_static_value = getdvarfloat("<dev string:x28>");
+                min_static_value = getdvarfloat("<dev string:x49>");
+                min_radius_max_static = getdvarfloat("<dev string:x6a>");
+                max_radius_min_static = getdvarfloat("<dev string:x8f>");
             #/
             new_distance = getuimodelvalue(distance_to_closest_enemy_emp_ui_model);
             range = max_radius_min_static - min_radius_max_static;
@@ -149,7 +149,7 @@ function monitordistance(localclientnum) {
                 current_static_value = 1;
             }
             filter::set_filter_tactical_amount(localplayer, 2, current_static_value);
-            wait(0.1);
+            wait 0.1;
         }
     }
 }

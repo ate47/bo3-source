@@ -4,9 +4,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e37c032f;
+#namespace zm_powerup_island_seed;
 
-// Namespace namespace_e37c032f
+// Namespace zm_powerup_island_seed
 // Params 0, eflags: 0x2
 // Checksum 0x4a0f53f6, Offset: 0x1b0
 // Size: 0x34
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
     system::register("zm_powerup_island_seed", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_e37c032f
+// Namespace zm_powerup_island_seed
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7f371ebf, Offset: 0x1f0
 // Size: 0x44
@@ -24,7 +24,7 @@ function __init__() {
     zm_powerups::add_zombie_powerup("island_seed");
 }
 
-// Namespace namespace_e37c032f
+// Namespace zm_powerup_island_seed
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa130375c, Offset: 0x240
 // Size: 0x14c

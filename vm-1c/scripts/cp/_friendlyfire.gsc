@@ -41,7 +41,7 @@ function __init__() {
 // Checksum 0xb679ea8b, Offset: 0x460
 // Size: 0x5c
 function init_player() {
-    assert(isdefined(self), "friendlyfire_enabled");
+    assert(isdefined(self), "<dev string:x28>");
     self.participation = 0;
     self thread debug_friendlyfire();
     self thread participation_point_flattenovertime();
@@ -53,11 +53,11 @@ function init_player() {
 // Size: 0x94
 function function_8e961e39(msg) {
     /#
-        if (getdvarstring("friendlyfire_enabled") == "friendlyfire_enabled") {
+        if (getdvarstring("<dev string:x3c>") == "<dev string:x4f>") {
             iprintlnbold(msg);
         }
-        if (getdvarstring("friendlyfire_enabled") == "friendlyfire_enabled") {
-            println("friendlyfire_enabled" + msg);
+        if (getdvarstring("<dev string:x52>") == "<dev string:x4f>") {
+            println("<dev string:x69>" + msg);
         }
     #/
 }
@@ -70,98 +70,98 @@ function debug_friendlyfire() {
     self endon(#"hash_cca1b1b9");
     /#
         self endon(#"disconnect");
-        if (getdvarstring("friendlyfire_enabled") == "friendlyfire_enabled") {
-            setdvar("friendlyfire_enabled", "friendlyfire_enabled");
+        if (getdvarstring("<dev string:x3c>") == "<dev string:x79>") {
+            setdvar("<dev string:x3c>", "<dev string:x7a>");
         }
-        if (getdvarstring("friendlyfire_enabled") == "friendlyfire_enabled") {
-            setdvar("friendlyfire_enabled", "friendlyfire_enabled");
+        if (getdvarstring("<dev string:x52>") == "<dev string:x79>") {
+            setdvar("<dev string:x52>", "<dev string:x7a>");
         }
-        var_a4c398c5 = level.var_4d4e553d["friendlyfire_enabled"] - level.var_4d4e553d["friendlyfire_enabled"];
+        var_a4c398c5 = level.var_4d4e553d["<dev string:x7e>"] - level.var_4d4e553d["<dev string:x90>"];
         var_db33b685 = 520;
         var_97e29ff = 620;
         ypos = -126;
         var_b565b605 = var_97e29ff - var_db33b685;
         friendly_fire = newdebughudelem();
         friendly_fire.fontscale = 3;
-        friendly_fire.alignx = "friendlyfire_enabled";
-        friendly_fire.aligny = "friendlyfire_enabled";
-        friendly_fire.x = var_97e29ff - var_b565b605 * level.var_4d4e553d["friendlyfire_enabled"] / var_a4c398c5 - log(self.participation) * friendly_fire.fontscale;
+        friendly_fire.alignx = "<dev string:xa2>";
+        friendly_fire.aligny = "<dev string:xa8>";
+        friendly_fire.x = var_97e29ff - var_b565b605 * level.var_4d4e553d["<dev string:x7e>"] / var_a4c398c5 - log(self.participation) * friendly_fire.fontscale;
         friendly_fire.y = 100;
         friendly_fire.alpha = 1;
         var_9234aec3 = newdebughudelem();
         var_9234aec3.fontscale = 1.5;
-        var_9234aec3.alignx = "friendlyfire_enabled";
-        var_9234aec3.aligny = "friendlyfire_enabled";
-        var_9234aec3.x = var_db33b685 - (ceil(max(log(abs(level.var_4d4e553d["friendlyfire_enabled"])) / log(10), 0)) - 2 + (self.participation < 0)) * friendly_fire.fontscale;
+        var_9234aec3.alignx = "<dev string:xa2>";
+        var_9234aec3.aligny = "<dev string:xa8>";
+        var_9234aec3.x = var_db33b685 - (ceil(max(log(abs(level.var_4d4e553d["<dev string:x90>"])) / log(10), 0)) - 2 + (self.participation < 0)) * friendly_fire.fontscale;
         var_9234aec3.y = ypos;
         var_9234aec3.alpha = 1;
-        var_9234aec3 setvalue(level.var_4d4e553d["friendlyfire_enabled"]);
+        var_9234aec3 setvalue(level.var_4d4e553d["<dev string:x90>"]);
         var_edb99954 = newdebughudelem();
         var_edb99954.fontscale = 1.5;
-        var_edb99954.alignx = "friendlyfire_enabled";
-        var_edb99954.aligny = "friendlyfire_enabled";
-        var_edb99954.x = var_97e29ff + 2 * (ceil(max(log(abs(level.var_4d4e553d["friendlyfire_enabled"])) / log(10), 0)) + 2.5 + (self.participation < 0)) * friendly_fire.fontscale;
+        var_edb99954.alignx = "<dev string:xa2>";
+        var_edb99954.aligny = "<dev string:xa8>";
+        var_edb99954.x = var_97e29ff + 2 * (ceil(max(log(abs(level.var_4d4e553d["<dev string:x7e>"])) / log(10), 0)) + 2.5 + (self.participation < 0)) * friendly_fire.fontscale;
         var_edb99954.y = ypos;
         var_edb99954.alpha = 1;
-        var_edb99954 setvalue(level.var_4d4e553d["friendlyfire_enabled"]);
+        var_edb99954 setvalue(level.var_4d4e553d["<dev string:x7e>"]);
         var_4327ab81 = newclienthudelem(self);
-        var_4327ab81.alignx = "friendlyfire_enabled";
-        var_4327ab81.aligny = "friendlyfire_enabled";
+        var_4327ab81.alignx = "<dev string:xa2>";
+        var_4327ab81.aligny = "<dev string:xa8>";
         var_4327ab81.x = var_97e29ff;
         var_4327ab81.y = ypos;
         var_4327ab81.sort = 1;
         var_4327ab81.alpha = 1;
         var_4327ab81.foreground = 1;
         var_4327ab81.color = (0.4, 0.4, 0.4);
-        var_4327ab81 setshader("friendlyfire_enabled", var_b565b605, 9);
+        var_4327ab81 setshader("<dev string:xaf>", var_b565b605, 9);
         debug_health_bar = newclienthudelem(self);
-        debug_health_bar.alignx = "friendlyfire_enabled";
-        debug_health_bar.aligny = "friendlyfire_enabled";
+        debug_health_bar.alignx = "<dev string:xa2>";
+        debug_health_bar.aligny = "<dev string:xa8>";
         debug_health_bar.x = 620;
         debug_health_bar.y = ypos;
         debug_health_bar.sort = 4;
         debug_health_bar.alpha = 1;
         debug_health_bar.foreground = 1;
         debug_health_bar.color = (0, 0, 0.9);
-        debug_health_bar setshader("friendlyfire_enabled", 4, 15);
+        debug_health_bar setshader("<dev string:xaf>", 4, 15);
         var_4c91c06 = newclienthudelem(self);
-        var_4c91c06.alignx = "friendlyfire_enabled";
-        var_4c91c06.aligny = "friendlyfire_enabled";
+        var_4c91c06.alignx = "<dev string:xa2>";
+        var_4c91c06.aligny = "<dev string:xa8>";
         var_4c91c06.x = var_db33b685;
         var_4c91c06.y = ypos;
         var_4c91c06.sort = 2;
         var_4c91c06.alpha = 1;
         var_4c91c06.foreground = 1;
-        var_4c91c06 setshader("friendlyfire_enabled", 4, 21);
+        var_4c91c06 setshader("<dev string:xb5>", 4, 21);
         var_8ff245f7 = newclienthudelem(self);
-        var_8ff245f7.alignx = "friendlyfire_enabled";
-        var_8ff245f7.aligny = "friendlyfire_enabled";
+        var_8ff245f7.alignx = "<dev string:xa2>";
+        var_8ff245f7.aligny = "<dev string:xa8>";
         var_8ff245f7.x = var_97e29ff;
         var_8ff245f7.y = ypos;
         var_8ff245f7.sort = 2;
         var_8ff245f7.alpha = 1;
         var_8ff245f7.foreground = 1;
-        var_8ff245f7 setshader("friendlyfire_enabled", 4, 21);
+        var_8ff245f7 setshader("<dev string:xb5>", 4, 21);
         var_d2572fe4 = newclienthudelem(self);
-        var_d2572fe4.alignx = "friendlyfire_enabled";
-        var_d2572fe4.aligny = "friendlyfire_enabled";
-        var_d2572fe4.x = var_db33b685 + level.var_4d4e553d["friendlyfire_enabled"] * -1 / var_a4c398c5 * var_b565b605;
+        var_d2572fe4.alignx = "<dev string:xa2>";
+        var_d2572fe4.aligny = "<dev string:xa8>";
+        var_d2572fe4.x = var_db33b685 + level.var_4d4e553d["<dev string:x90>"] * -1 / var_a4c398c5 * var_b565b605;
         var_d2572fe4.y = ypos + 9;
         var_d2572fe4.sort = 2;
         var_d2572fe4.alpha = 1;
         var_d2572fe4.foreground = 1;
-        var_d2572fe4 setshader("friendlyfire_enabled", 4, 4);
+        var_d2572fe4 setshader("<dev string:xb5>", 4, 4);
         var_5c31876e = newclienthudelem(self);
-        var_5c31876e.alignx = "friendlyfire_enabled";
-        var_5c31876e.aligny = "friendlyfire_enabled";
-        var_5c31876e.x = var_db33b685 + level.var_4d4e553d["friendlyfire_enabled"] * -1 / var_a4c398c5 * var_b565b605;
+        var_5c31876e.alignx = "<dev string:xa2>";
+        var_5c31876e.aligny = "<dev string:xa8>";
+        var_5c31876e.x = var_db33b685 + level.var_4d4e553d["<dev string:x90>"] * -1 / var_a4c398c5 * var_b565b605;
         var_5c31876e.y = ypos - 9;
         var_5c31876e.sort = 2;
         var_5c31876e.alpha = 1;
         var_5c31876e.foreground = 1;
-        var_5c31876e setshader("friendlyfire_enabled", 4, 4);
+        var_5c31876e setshader("<dev string:xb5>", 4, 4);
         for (;;) {
-            if (getdvarstring("friendlyfire_enabled") == "friendlyfire_enabled") {
+            if (getdvarstring("<dev string:x3c>") == "<dev string:x4f>") {
                 friendly_fire.alpha = 1;
                 var_9234aec3.alpha = 1;
                 var_edb99954.alpha = 1;
@@ -182,11 +182,11 @@ function debug_friendlyfire() {
                 var_d2572fe4.alpha = 0;
                 var_5c31876e.alpha = 0;
             }
-            xpos = (level.var_4d4e553d["friendlyfire_enabled"] - self.participation) / var_a4c398c5 * var_b565b605;
+            xpos = (level.var_4d4e553d["<dev string:x7e>"] - self.participation) / var_a4c398c5 * var_b565b605;
             debug_health_bar.x = var_97e29ff - xpos;
             friendly_fire setvalue(self.participation);
-            friendly_fire.x = var_97e29ff - var_b565b605 * level.var_4d4e553d["friendlyfire_enabled"] / var_a4c398c5 + (ceil(max(log(abs(self.participation)) / log(10), 0)) + 1 + (self.participation < 0)) * friendly_fire.fontscale * 2;
-            wait(0.25);
+            friendly_fire.x = var_97e29ff - var_b565b605 * level.var_4d4e553d["<dev string:x7e>"] / var_a4c398c5 + (ceil(max(log(abs(self.participation)) / log(10), 0)) + 1 + (self.participation < 0)) * friendly_fire.fontscale * 2;
+            wait 0.25;
         }
     #/
 }
@@ -430,7 +430,7 @@ function check_grenade(entity, method) {
 function savecommit_aftergrenade() {
     currenttime = gettime();
     if (currenttime < 4500) {
-        println("friendlyfire_enabled");
+        println("<dev string:xbb>");
         return true;
     }
     return false;
@@ -442,7 +442,7 @@ function savecommit_aftergrenade() {
 // Size: 0xa0
 function participation_point_cap() {
     if (!isdefined(self.participation)) {
-        assertmsg("friendlyfire_enabled");
+        assertmsg("<dev string:x124>");
         return;
     }
     if (self.participation > level.var_4d4e553d["max_participation"]) {
@@ -466,7 +466,7 @@ function participation_point_flattenovertime() {
         } else if (self.participation < 0) {
             self.participation++;
         }
-        wait(level.var_4d4e553d["point_loss_interval"]);
+        wait level.var_4d4e553d["point_loss_interval"];
     }
 }
 

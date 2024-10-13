@@ -56,7 +56,7 @@ function usekillstreakhelicopter(hardpointtype) {
     }
     if (!isdefined(level.heli_paths) || !level.heli_paths.size) {
         /#
-            iprintlnbold("evt_helicopter_spin_start");
+            iprintlnbold("<dev string:x28>");
         #/
         return false;
     }
@@ -71,7 +71,7 @@ function usekillstreakhelicopter(hardpointtype) {
     if (hardpointtype == "helicopter_x2") {
         missilesenabled = 1;
     }
-    assert(level.heli_paths.size > 0, "evt_helicopter_spin_start");
+    assert(level.heli_paths.size > 0, "<dev string:x52>");
     random_path = randomint(level.heli_paths[destination].size);
     startnode = level.heli_paths[destination][random_path];
     protectlocation = undefined;
@@ -114,7 +114,7 @@ function heli_path_graph() {
     gunner_loop_start = getentarray("heli_gunner_loop_start", "targetname");
     leave_nodes = getentarray("heli_leave", "targetname");
     crash_start = getentarray("heli_crash_start", "targetname");
-    assert(isdefined(path_start) && isdefined(path_dest), "evt_helicopter_spin_start");
+    assert(isdefined(path_start) && isdefined(path_dest), "<dev string:x7f>");
     for (i = 0; i < path_dest.size; i++) {
         startnode_array = [];
         isprimarydest = 0;
@@ -143,7 +143,7 @@ function heli_path_graph() {
                 }
             }
         }
-        assert(isdefined(startnode_array) && startnode_array.size > 0, "evt_helicopter_spin_start");
+        assert(isdefined(startnode_array) && startnode_array.size > 0, "<dev string:x9f>");
         if (isprimarydest) {
             level.heli_primary_path = startnode_array;
             continue;
@@ -154,7 +154,7 @@ function heli_path_graph() {
         startnode = getent(loop_start[i].target, "targetname");
         level.heli_loop_paths[level.heli_loop_paths.size] = startnode;
     }
-    assert(isdefined(level.heli_loop_paths[0]), "evt_helicopter_spin_start");
+    assert(isdefined(level.heli_loop_paths[0]), "<dev string:xb9>");
     for (i = 0; i < gunner_loop_start.size; i++) {
         startnode = getent(gunner_loop_start[i].target, "targetname");
         startnode.isgunnerpath = 1;
@@ -166,16 +166,16 @@ function heli_path_graph() {
         }
         level.heli_startnodes[level.heli_startnodes.size] = path_start[i];
     }
-    assert(isdefined(level.heli_startnodes[0]), "evt_helicopter_spin_start");
+    assert(isdefined(level.heli_startnodes[0]), "<dev string:xdf>");
     for (i = 0; i < leave_nodes.size; i++) {
         level.heli_leavenodes[level.heli_leavenodes.size] = leave_nodes[i];
     }
-    assert(isdefined(level.heli_leavenodes[0]), "evt_helicopter_spin_start");
+    assert(isdefined(level.heli_leavenodes[0]), "<dev string:x106>");
     for (i = 0; i < crash_start.size; i++) {
         crash_start_node = getent(crash_start[i].target, "targetname");
         level.heli_crash_paths[level.heli_crash_paths.size] = crash_start_node;
     }
-    assert(isdefined(level.heli_crash_paths[0]), "evt_helicopter_spin_start");
+    assert(isdefined(level.heli_crash_paths[0]), "<dev string:x12d>");
 }
 
 // Namespace helicopter
@@ -275,7 +275,7 @@ function heli_update_global_dvars(debug_refresh) {
         level.heli_protect_radius = function_91077906("scr_heli_protect_radius", "2000");
         level.heli_missile_reload_time = function_c233870c("scr_heli_missile_reload_time", "5.0");
         level.heli_warning_distance = function_91077906("scr_heli_warning_distance", "500");
-        wait(1);
+        wait 1;
     } while (isdefined(debug_refresh));
 }
 
@@ -362,7 +362,7 @@ function onflakdronedestroyed() {
 // Size: 0x40
 function explodeoncontact(hardpointtype) {
     self endon(#"death");
-    wait(10);
+    wait 10;
     for (;;) {
         self waittill(#"touch");
         self thread heli_explode();
@@ -603,11 +603,11 @@ function heli_missile_regen() {
         if (self.missile_ammo >= level.heli_missile_max) {
             self waittill(#"hash_b0c5ea03");
         } else if (self.currentstate == "heavy smoke") {
-            wait(level.heli_missile_regen_time / 4);
+            wait level.heli_missile_regen_time / 4;
         } else if (self.currentstate == "light smoke") {
-            wait(level.heli_missile_regen_time / 2);
+            wait level.heli_missile_regen_time / 2;
         } else {
-            wait(level.heli_missile_regen_time);
+            wait level.heli_missile_regen_time;
         }
         if (self.missile_ammo < level.heli_missile_max) {
             self.missile_ammo++;
@@ -670,7 +670,7 @@ function heli_targeting(missilesenabled, hardpointtype) {
             self.secondarytarget = undefined;
             debug_print_target();
             self setgoalyaw(randomint(360));
-            wait(self.targeting_delay);
+            wait self.targeting_delay;
             continue;
         }
         if (targets.size == 1) {
@@ -702,7 +702,7 @@ function heli_targeting(missilesenabled, hardpointtype) {
         } else if (targetsmissile.size > 1) {
             assignsecondarytargets(targetsmissile);
         }
-        wait(self.targeting_delay);
+        wait self.targeting_delay;
         debug_print_target();
     }
 }
@@ -966,18 +966,18 @@ function assignprimarytargets(targets) {
         }
         killstreaks::update_non_player_threat(targets[idx]);
     }
-    assert(targets.size >= 2, "evt_helicopter_spin_start");
+    assert(targets.size >= 2, "<dev string:x154>");
     highest = 0;
     second_highest = 0;
     primarytarget = undefined;
     for (idx = 0; idx < targets.size; idx++) {
-        assert(isdefined(targets[idx].threatlevel), "evt_helicopter_spin_start");
+        assert(isdefined(targets[idx].threatlevel), "<dev string:x187>");
         if (targets[idx].threatlevel >= highest) {
             highest = targets[idx].threatlevel;
             primarytarget = targets[idx];
         }
     }
-    assert(isdefined(primarytarget), "evt_helicopter_spin_start");
+    assert(isdefined(primarytarget), "<dev string:x1b0>");
     self.primarytarget = primarytarget;
     self notify(#"hash_907788c7");
 }
@@ -996,19 +996,19 @@ function assignsecondarytargets(targets) {
             killstreaks::update_missile_dog_threat(targets[idx]);
         }
     }
-    assert(targets.size >= 2, "evt_helicopter_spin_start");
+    assert(targets.size >= 2, "<dev string:x154>");
     highest = 0;
     second_highest = 0;
     primarytarget = undefined;
     secondarytarget = undefined;
     for (idx = 0; idx < targets.size; idx++) {
-        assert(isdefined(targets[idx].missilethreatlevel), "evt_helicopter_spin_start");
+        assert(isdefined(targets[idx].missilethreatlevel), "<dev string:x187>");
         if (targets[idx].missilethreatlevel >= highest) {
             highest = targets[idx].missilethreatlevel;
             secondarytarget = targets[idx];
         }
     }
-    assert(isdefined(secondarytarget), "evt_helicopter_spin_start");
+    assert(isdefined(secondarytarget), "<dev string:x1e0>");
     self.secondarytarget = secondarytarget;
     self notify(#"hash_519af70b");
 }
@@ -1036,7 +1036,7 @@ function heli_wait(waittime) {
     self endon(#"crashing");
     self endon(#"evasive");
     self thread heli_hover();
-    wait(waittime);
+    wait waittime;
     heli_reset();
     self notify(#"hash_38f853e7");
 }
@@ -1085,7 +1085,7 @@ function wait_for_killed() {
 // Size: 0x34
 function wait_for_bda_timeout() {
     self endon(#"killed");
-    wait(2.5);
+    wait 2.5;
     if (!isdefined(self)) {
         return;
     }
@@ -1182,7 +1182,7 @@ function heli_damage_monitor(hardpointtype) {
                 var_a0c8d318 = weapon.statindex != level.weaponpistolenergy.statindex && weapon.statindex != level.weaponspecialcrossbow.statindex && weapon.statindex != level.var_5f8b749e.statindex;
                 if (var_a0c8d318) {
                     switch (weapon.name) {
-                    case 168:
+                    case "tow_turret":
                         if (isdefined(self.var_474dd144)) {
                             damage = self.var_474dd144;
                         } else if (isdefined(self.rocketdamageoneshot)) {
@@ -1207,32 +1207,32 @@ function heli_damage_monitor(hardpointtype) {
         if (self.damagetaken > self.maxhealth && !isdefined(self.xpgiven)) {
             self.xpgiven = 1;
             switch (hardpointtype) {
-            case 183:
+            case "helicopter_gunner":
                 playercontrolled = 1;
                 event = "destroyed_vtol_mothership";
                 goto LOC_00000690;
-            case 14:
-            case 15:
+            case "helicopter_comlink":
+            case "inventory_helicopter_comlink":
                 event = "destroyed_helicopter_comlink";
                 if (self.leaving !== 1) {
                     self killstreaks::play_destroyed_dialog_on_owner(self.killstreaktype, self.killstreak_id);
                 }
                 goto LOC_00000690;
-            case 184:
-            case 185:
+            case "supply_drop":
+            case "supply_drop_combat_robot":
                 if (isdefined(helicopter.killstreakweaponname)) {
                     switch (helicopter.killstreakweaponname) {
-                    case 174:
-                    case 175:
-                    case 176:
-                    case 179:
-                    case 180:
+                    case "ai_tank_drop":
+                    case "ai_tank_drop_marker":
+                    case "ai_tank_marker":
+                    case "inventory_ai_tank_drop":
+                    case "inventory_ai_tank_marker":
                         event = "destroyed_helicopter_agr_drop";
                         break;
-                    case 177:
-                    case 178:
-                    case 181:
-                    case 182:
+                    case "combat_robot_drop":
+                    case "combat_robot_marker":
+                    case "inventory_combat_robot_drop":
+                    case "inventory_combat_robot_marker":
                         event = "destroyed_helicopter_giunit_drop";
                         break;
                     default:
@@ -1261,9 +1261,9 @@ function heli_damage_monitor(hardpointtype) {
             }
             weaponstatname = "destroyed";
             switch (weapon.name) {
-            case 190:
-            case 168:
-            case 191:
+            case "auto_tow":
+            case "tow_turret":
+            case "tow_turret_drop":
                 weaponstatname = "kills";
                 break;
             }
@@ -1271,27 +1271,27 @@ function heli_damage_monitor(hardpointtype) {
             notifystring = undefined;
             killstreakreference = undefined;
             switch (hardpointtype) {
-            case 183:
+            case "helicopter_gunner":
                 killstreakreference = "killstreak_helicopter_gunner";
                 break;
-            case 186:
+            case "helicopter_player_gunner":
                 killstreakreference = "killstreak_helicopter_player_gunner";
                 break;
-            case 199:
+            case "helicopter_player_firstperson":
                 killstreakreference = "killstreak_helicopter_player_firstperson";
                 break;
-            case 32:
-            case 14:
-            case 16:
-            case 15:
+            case "helicopter":
+            case "helicopter_comlink":
+            case "helicopter_x2":
+            case "inventory_helicopter_comlink":
                 notifystring = %KILLSTREAK_DESTROYED_HELICOPTER;
                 killstreakreference = "killstreak_helicopter_comlink";
                 break;
-            case 184:
+            case "supply_drop":
                 notifystring = %KILLSTREAK_DESTROYED_SUPPLY_DROP_DEPLOY_SHIP;
                 killstreakreference = "killstreak_supply_drop";
                 break;
-            case 145:
+            case "helicopter_guard":
                 killstreakreference = "killstreak_helicopter_guard";
                 break;
             }
@@ -1415,7 +1415,7 @@ function heli_active_camo_damage_update(damage) {
         return;
     }
     heli heli_set_active_camo_state(2);
-    wait(1);
+    wait 1;
     heli heli_set_active_camo_state(1);
 }
 
@@ -1430,7 +1430,7 @@ function heli_active_camo_damage_disable() {
     heli notify(#"heli_active_camo_damage_disable");
     heli endon(#"heli_active_camo_damage_disable");
     heli heli_set_active_camo_state(0);
-    wait(10);
+    wait 10;
     heli.active_camo_damage = 0;
     heli.active_camo_disabled = 0;
     heli heli_set_active_camo_state(1);
@@ -1453,7 +1453,7 @@ function heli_health(hardpointtype, playernotify) {
     }
     for (;;) {
         damage, attacker, direction, point, type, modelname, tagname, partname, weapon = self waittill(#"damage");
-        wait(0.05);
+        wait 0.05;
         if (self.damagetaken > self.maxhealth) {
             damagestate = 0;
             self setdamagestage(damagestate);
@@ -1469,7 +1469,7 @@ function heli_health(hardpointtype, playernotify) {
             damagestate = 1;
             self.currentstate = "heavy smoke";
             self.evasive = 1;
-            self notify(#"hash_2b25e23d");
+            self notify(#"damage state");
         } else if (self.damagetaken >= self.maxhealth * 0.33 && damagestate == 3) {
             if (isdefined(self.vehicletype) && self.vehicletype == "heli_player_gunner_mp") {
                 playfxontag(level.chopper_fx["damage"]["light_smoke"], self, "tag_origin");
@@ -1478,7 +1478,7 @@ function heli_health(hardpointtype, playernotify) {
             }
             damagestate = 2;
             self.currentstate = "light smoke";
-            self notify(#"hash_2b25e23d");
+            self notify(#"damage state");
         }
         if (self.damagetaken <= level.heli_armor) {
             airsupport::debug_print3d_simple("Armor: " + level.heli_armor - self.damagetaken, self, (0, 0, 100), 20);
@@ -1507,7 +1507,7 @@ function heli_evasive(hardpointtype) {
             }
         }
     }
-    assert(var_dca2b26f, "evt_helicopter_spin_start");
+    assert(var_dca2b26f, "<dev string:x215>");
     startwait = 2;
     if (isdefined(self.donotstop) && self.donotstop) {
         startwait = 0;
@@ -1528,7 +1528,7 @@ function notify_player(player, playernotify, delay) {
     }
     player endon(#"disconnect");
     player endon(playernotify);
-    wait(delay);
+    wait delay;
     player notify(playernotify);
 }
 
@@ -1539,7 +1539,7 @@ function notify_player(player, playernotify, delay) {
 function play_going_down_vo(delay) {
     self.owner endon(#"disconnect");
     self endon(#"death");
-    wait(delay);
+    wait delay;
 }
 
 // Namespace helicopter
@@ -1568,13 +1568,13 @@ function heli_crash(hardpointtype, player, playernotify) {
         if (level.heli_debug_crash) {
             switch (level.heli_debug_crash) {
             case 1:
-                crashtype = "evt_helicopter_spin_start";
+                crashtype = "<dev string:x23f>";
                 break;
             case 2:
-                crashtype = "evt_helicopter_spin_start";
+                crashtype = "<dev string:x247>";
                 break;
             case 3:
-                crashtype = "evt_helicopter_spin_start";
+                crashtype = "<dev string:x253>";
                 break;
             default:
                 break;
@@ -1582,11 +1582,11 @@ function heli_crash(hardpointtype, player, playernotify) {
         }
     #/
     switch (crashtype) {
-    case 40:
+    case "explode":
         thread notify_player(player, playernotify, 0);
         self thread heli_explode();
         break;
-    case 210:
+    case "crashOnPath":
         if (isdefined(player)) {
             self thread play_going_down_vo(0.5);
         }
@@ -1594,7 +1594,7 @@ function heli_crash(hardpointtype, player, playernotify) {
         self clear_client_flags();
         self thread crashonnearestcrashpath(hardpointtype);
         break;
-    case 211:
+    case "spinOut":
         if (isdefined(player)) {
             self thread play_going_down_vo(0.5);
         }
@@ -1636,7 +1636,7 @@ function damagedrotorfx() {
 // Size: 0x34
 function waitthenexplode(time) {
     self endon(#"death");
-    wait(time);
+    wait time;
     self thread heli_explode();
 }
 
@@ -1661,7 +1661,7 @@ function crashonnearestcrashpath(hardpointtype) {
     self thread heli_fly(crashpath, 0, hardpointtype);
     rateofspin = 45 + randomint(90);
     self thread heli_spin(rateofspin);
-    self waittill(#"hash_df5908ac");
+    self waittill(#"path start");
     self waittill(#"hash_9b1f1e2d");
     self thread heli_explode();
 }
@@ -1674,11 +1674,11 @@ function checkhelicoptertag(tagname) {
     if (isdefined(self.model)) {
         if (self.model == "veh_t7_drone_hunter") {
             switch (tagname) {
-            case 216:
+            case "tag_engine_left":
                 return "tag_fx_exhaust2";
-            case 217:
+            case "tag_engine_right":
                 return "tag_fx_exhaust1";
-            case 218:
+            case "tail_rotor_jnt":
                 return "tag_fx_tail";
             default:
                 break;
@@ -1703,7 +1703,7 @@ function heli_secondary_explosions() {
     }
     self setdamagestage(0);
     self thread trail_fx(level.chopper_fx["fire"]["trail"]["large"], self checkhelicoptertag("tag_engine_left"), "stop body fire");
-    wait(3);
+    wait 3;
     if (!isdefined(self)) {
         return;
     }
@@ -1721,7 +1721,7 @@ function heli_spin(speed) {
     self setyawspeed(speed, speed / 3, speed / 3);
     while (isdefined(self)) {
         self settargetyaw(self.angles[1] + speed * 0.9);
-        wait(1);
+        wait 1;
     }
 }
 
@@ -1731,11 +1731,11 @@ function heli_spin(speed) {
 // Size: 0x8c
 function spinsoundshortly() {
     self endon(#"death");
-    wait(0.25);
+    wait 0.25;
     self stoploopsound();
-    wait(0.05);
+    wait 0.05;
     self playloopsound(level.heli_sound["spinloop"]);
-    wait(0.05);
+    wait 0.05;
     self playsound(level.heli_sound["spinstart"]);
 }
 
@@ -1793,7 +1793,7 @@ function heli_explode() {
         playfx(level.chopper_fx["explode"]["death"], self.origin, forward);
     }
     self playsound(level.heli_sound["crash"]);
-    wait(0.1);
+    wait 0.1;
     assert(isdefined(self.destroyfunc));
     self [[ self.destroyfunc ]]();
 }
@@ -1826,7 +1826,7 @@ function heli_leave() {
     self clearlookatent();
     exitangles = vectortoangles(leavenode.origin - self.origin);
     self setgoalyaw(exitangles[1]);
-    wait(1.5);
+    wait 1.5;
     if (!isdefined(self)) {
         return;
     }
@@ -1866,10 +1866,10 @@ function heli_fly(currentnode, startwait, hardpointtype) {
     self.reached_dest = 0;
     heli_reset();
     pos = self.origin;
-    wait(startwait);
+    wait startwait;
     while (isdefined(currentnode.target)) {
         nextnode = getent(currentnode.target, "targetname");
-        assert(isdefined(nextnode), "evt_helicopter_spin_start");
+        assert(isdefined(nextnode), "<dev string:x25b>");
         pos = nextnode.origin + (0, 0, 30);
         if (isdefined(currentnode.script_airspeed) && isdefined(currentnode.script_accel)) {
             heli_speed = currentnode.script_airspeed;
@@ -1892,7 +1892,7 @@ function heli_fly(currentnode, startwait, hardpointtype) {
             self setspeed(heli_speed, heli_accel);
             self set_goal_pos(pos, stop);
             self waittill(#"near_goal");
-            self notify(#"hash_df5908ac");
+            self notify(#"path start");
         } else {
             if (isdefined(nextnode.script_delay) && !isdefined(self.donotstop)) {
                 stop = 1;
@@ -1901,7 +1901,7 @@ function heli_fly(currentnode, startwait, hardpointtype) {
             self set_goal_pos(pos, stop);
             if (!isdefined(nextnode.script_delay) || isdefined(self.donotstop)) {
                 self waittill(#"near_goal");
-                self notify(#"hash_df5908ac");
+                self notify(#"path start");
             } else {
                 self setgoalyaw(nextnode.angles[1]);
                 self waittillmatch(#"goal");
@@ -1968,7 +1968,7 @@ function function_55098db7(time, msg1, msg2, msg3) {
     self endon(msg1);
     self endon(msg2);
     self endon(msg3);
-    wait(time);
+    wait time;
     return true;
 }
 
@@ -2035,7 +2035,7 @@ function heli_mobilespawn(protectdest) {
     iprintlnbold("PROTECT ORIGIN: (" + protectdest[0] + "," + protectdest[1] + "," + protectdest[2] + ")\n");
     heli_reset();
     self sethoverparams(50, 100, 50);
-    wait(2);
+    wait 2;
     set_heli_speed_normal();
     self set_goal_pos(protectdest, 1);
     self waittill(#"near_goal");
@@ -2054,7 +2054,7 @@ function heli_protect(startnode, protectdest, hardpointtype, heli_team) {
     self.reached_dest = 0;
     heli_reset();
     self sethoverparams(50, 100, 50);
-    wait(2);
+    wait 2;
     currentdest = protectdest;
     nodeheight = protectdest[2];
     nextnode = startnode;
@@ -2090,7 +2090,7 @@ function heli_protect(startnode, protectdest, hardpointtype, heli_team) {
         self thread updatespeedonlock();
         self util::waittill_any("near_goal", "locking on", "locking on hacking");
         hostmigration::waittillhostmigrationdone();
-        self notify(#"hash_df5908ac");
+        self notify(#"path start");
         if (!self is_targeted()) {
             waittillframeend();
             time = level.heli_protect_pos_time;
@@ -2100,7 +2100,7 @@ function heli_protect(startnode, protectdest, hardpointtype, heli_team) {
             set_heli_speed_hover();
             function_55098db7(time, "locking on", "locking on hacking", "damage state");
         } else {
-            wait(2);
+            wait 2;
         }
         prevdest = currentdest;
         currentdest = heli_get_protect_spot(protectdest, nodeheight);
@@ -2154,7 +2154,7 @@ function updatetargetyaw() {
             yaw = math::get_2d_yaw(self.origin, self.primarytarget.origin);
             self settargetyaw(yaw);
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -2171,12 +2171,12 @@ function fire_missile(smissiletype, ishots, etarget) {
     weaponshoottime = undefined;
     tags = [];
     switch (smissiletype) {
-    case 233:
+    case "ffar":
         weapon = getweapon("hind_FFAR");
         tags[0] = "tag_store_r_2";
         break;
     default:
-        assertmsg("evt_helicopter_spin_start");
+        assertmsg("<dev string:x28e>");
         break;
     }
     assert(isdefined(weapon));
@@ -2194,7 +2194,7 @@ function fire_missile(smissiletype, ishots, etarget) {
         emissile.killcament = self;
         self.lastrocketfiretime = gettime();
         if (i < ishots - 1) {
-            wait(weaponshoottime);
+            wait weaponshoottime;
         }
     }
 }
@@ -2242,7 +2242,7 @@ function attack_secondary(hardpointtype) {
                 }
                 antithreat += 100;
                 self.missiletarget.antithreat = antithreat;
-                wait(level.heli_missile_rof);
+                wait level.heli_missile_rof;
                 if (isdefined(self.secondarytarget) && (!isdefined(self.secondarytarget) || self.missiletarget != self.secondarytarget)) {
                     break;
                 }
@@ -2308,7 +2308,7 @@ function missile_support(target_player, rof, instantfire, endon_notify) {
     }
     self.turret_giveup = 0;
     if (!instantfire) {
-        wait(rof);
+        wait rof;
         self.turret_giveup = 1;
         self notify(#"hash_e4ae4515");
     }
@@ -2339,7 +2339,7 @@ function missile_support(target_player, rof, instantfire, endon_notify) {
         return;
     }
     if (instantfire) {
-        wait(rof);
+        wait rof;
         self notify(#"hash_2ff1ad5e");
     }
 }
@@ -2365,7 +2365,7 @@ function attack_primary(hardpointtype) {
                 }
                 helicopterturretmaxangle = function_91077906("scr_helicopterTurretMaxAngle", level.helicopterturretmaxangle);
                 while (isdefined(self.turrettarget) && isalive(self.turrettarget) && self turret_target_check(self.turrettarget, helicopterturretmaxangle) == 0) {
-                    wait(0.1);
+                    wait 0.1;
                 }
                 if (!isdefined(self.turrettarget) || !isalive(self.turrettarget)) {
                     break;
@@ -2377,9 +2377,9 @@ function attack_primary(hardpointtype) {
                 if (self.pilotistalking) {
                 }
                 self thread function_7b27c61a(self.turrettarget);
-                wait(1);
+                wait 1;
                 self heli_set_active_camo_state(0);
-                wait(level.heli_turret_spinup_delay);
+                wait level.heli_turret_spinup_delay;
                 weaponshoottime = self.defaultweapon.firetime;
                 self setvehweapon(self.defaultweapon);
                 for (i = 0; i < level.heli_turretclipsize; i++) {
@@ -2397,12 +2397,12 @@ function attack_primary(hardpointtype) {
                         minigun = self fireweapon();
                     }
                     if (i < level.heli_turretclipsize - 1) {
-                        wait(weaponshoottime);
+                        wait weaponshoottime;
                     }
                 }
                 self notify(#"hash_849f87ba");
-                wait(level.heli_turretreloadtime);
-                wait(3);
+                wait level.heli_turretreloadtime;
+                wait 3;
                 self heli_set_active_camo_state(1);
                 if (isdefined(self.turrettarget) && isalive(self.turrettarget)) {
                     antithreat += 100;
@@ -2446,14 +2446,14 @@ function function_7b27c61a(turrettarget) {
         if (var_7e7ba03f < level.heli_target_recognition) {
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
     if (isdefined(turrettarget) && isdefined(turrettarget.origin)) {
-        assert(isdefined(turrettarget.origin), "evt_helicopter_spin_start");
+        assert(isdefined(turrettarget.origin), "<dev string:x2bb>");
         self.var_52daed11 = turrettarget.origin + (0, 0, 40);
-        assert(isdefined(self.var_52daed11), "evt_helicopter_spin_start");
+        assert(isdefined(self.var_52daed11), "<dev string:x2f2>");
         self setturrettargetvec(self.var_52daed11);
-        assert(isdefined(self.var_52daed11), "evt_helicopter_spin_start");
+        assert(isdefined(self.var_52daed11), "<dev string:x328>");
         airsupport::debug_print3d_simple("Turret target lost at: " + self.var_52daed11, self, (0, 0, -70), 60);
         self.targetlost = 1;
         return;
@@ -2531,7 +2531,7 @@ function selecthelicopterlocation(hardpointtype) {
 function processcopterassist(destroyedcopter, damagedone) {
     self endon(#"disconnect");
     destroyedcopter endon(#"disconnect");
-    wait(0.05);
+    wait 0.05;
     if (!isdefined(level.teams[self.team])) {
         return;
     }
@@ -2570,7 +2570,7 @@ function playpilotdialog(dialog, time, voice, shouldwait) {
     self endon(#"death");
     level endon(#"remote_end");
     if (isdefined(time)) {
-        wait(time);
+        wait time;
     }
     if (!isdefined(self.pilotvoicenumber)) {
         self.pilotvoicenumber = 0;
@@ -2598,11 +2598,11 @@ function playpilottalking(shouldwait, soundalias) {
         if (isdefined(shouldwait) && !shouldwait) {
             return;
         }
-        wait(1);
+        wait 1;
     }
     self.pilottalking = 1;
     self playlocalsound(soundalias);
-    wait(3);
+    wait 3;
     self.pilottalking = 0;
 }
 

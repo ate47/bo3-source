@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_929c1dbf;
+#namespace voice_sgen;
 
-// Namespace namespace_929c1dbf
+// Namespace voice_sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x65491528, Offset: 0x4f48
 // Size: 0x3504

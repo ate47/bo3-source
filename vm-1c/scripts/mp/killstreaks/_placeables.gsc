@@ -225,7 +225,7 @@ function watchplacement(placeable) {
         if (placeable.cancelable && player actionslotfourbuttonpressed()) {
             placeable notify(#"cancelled");
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

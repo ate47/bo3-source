@@ -46,7 +46,7 @@ function function_2f9ce7f8() {
         self.var_a954893b = 1;
         self waittill(#"hash_236d3ea5");
         self.var_a954893b = 0;
-        wait(2);
+        wait 2;
     }
 }
 
@@ -193,7 +193,7 @@ function function_55a2b33e(source_enemy, arc_num, player) {
     player endon(#"disconnect");
     timetowait = 0.2 * arc_num;
     if (timetowait > 0) {
-        wait(timetowait);
+        wait timetowait;
     }
     if (!isdefined(self) || !isalive(self)) {
         return;
@@ -244,7 +244,7 @@ function function_c80ea8b9(arc_num) {
 // Size: 0x28c
 function tesla_play_arc_fx(target) {
     if (!isdefined(self) || !isdefined(target)) {
-        wait(getdvarfloat("scr_arc_travel_time", 0.05));
+        wait getdvarfloat("scr_arc_travel_time", 0.05);
         return;
     }
     tag = "J_SpineUpper";
@@ -285,7 +285,7 @@ function tesla_play_arc_fx(target) {
         }
         start = gettime();
         while (gettime() < start + 3000) {
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -346,7 +346,7 @@ function function_e3b41890(org, note) {
     self endon(#"disconnect");
     org playloopsound("zmb_pwup_coco_loop");
     level namespace_49107f3a::function_124b9a08();
-    wait(self namespace_49107f3a::function_1ded48e6(level.doa.rules.var_37d05402));
+    wait self namespace_49107f3a::function_1ded48e6(level.doa.rules.var_37d05402);
     org stopsounds();
     org stoploopsound(0.5);
     self thread namespace_1a381543::function_90118d8c("zmb_pwup_coco_end");
@@ -378,7 +378,7 @@ function function_89843a06(player) {
             self.objects[i] unlink();
         }
     }
-    wait(2);
+    wait 2;
     for (i = 0; i < self.objects.size; i++) {
         if (isdefined(self.objects[i])) {
             self.objects[i] delete();
@@ -410,7 +410,7 @@ function function_822f3ab1(org, note) {
             }
         }
     }
-    wait(2);
+    wait 2;
     if (isdefined(org)) {
         for (i = 0; i < org.objects.size; i++) {
             if (isdefined(org.objects[i])) {
@@ -445,7 +445,7 @@ function function_50608835(org, note) {
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -458,7 +458,7 @@ function function_be694794(org, note) {
     org endon(#"death");
     while (true) {
         org rotateto(org.angles + (0, 180, 0), 1);
-        wait(1);
+        wait 1;
     }
 }
 
@@ -481,7 +481,7 @@ function function_8614ba51(org) {
 // Params 0, eflags: 0x1 linked
 // Checksum 0x44d991c9, Offset: 0x1b78
 // Size: 0x92c
-function function_ca5c4134() {
+function tesla_blockers_update() {
     note = namespace_49107f3a::function_2ccf4b82("end_tesla_pickup");
     self endon(note);
     self thread function_2f9ce7f8();

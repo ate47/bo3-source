@@ -16,9 +16,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_52f9507e;
+#namespace zm_island_portals;
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 0, eflags: 0x2
 // Checksum 0xb4aa7609, Offset: 0x548
 // Size: 0x34
@@ -26,7 +26,7 @@ function autoexec function_2dc19561() {
     system::register("zm_island_portals", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 0, eflags: 0x1 linked
 // Checksum 0xca8ae54e, Offset: 0x588
 // Size: 0x244
@@ -34,15 +34,15 @@ function __init__() {
     visionset_mgr::register_overlay_info_style_transported("zm_zod", 9000, 15, 2);
     n_bits = getminbitcountfornum(3);
     clientfield::register("toplayer", "player_stargate_fx", 9000, 1, "int", &player_stargate_fx, 0, 0);
-    clientfield::register("world", "portal_state_ending_0", 9000, 1, "int", &function_ed05ad08, 0, 0);
-    clientfield::register("world", "portal_state_ending_1", 9000, 1, "int", &function_13082771, 0, 0);
-    clientfield::register("world", "portal_state_ending_2", 9000, 1, "int", &function_390aa1da, 0, 0);
-    clientfield::register("world", "portal_state_ending_3", 9000, 1, "int", &function_5f0d1c43, 0, 0);
+    clientfield::register("world", "portal_state_ending_0", 9000, 1, "int", &portal_state_ending_0, 0, 0);
+    clientfield::register("world", "portal_state_ending_1", 9000, 1, "int", &portal_state_ending_1, 0, 0);
+    clientfield::register("world", "portal_state_ending_2", 9000, 1, "int", &portal_state_ending_2, 0, 0);
+    clientfield::register("world", "portal_state_ending_3", 9000, 1, "int", &portal_state_ending_3, 0, 0);
     clientfield::register("world", "pulse_ee_boat_portal_top", 9000, 1, "counter", &function_b040f607, 0, 0);
     clientfield::register("world", "pulse_ee_boat_portal_bottom", 9000, 1, "counter", &function_bfbf92fb, 0, 0);
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 7, eflags: 0x1 linked
 // Checksum 0x902d3456, Offset: 0x7d8
 // Size: 0xf6
@@ -60,10 +60,10 @@ function player_stargate_fx(localclientnum, oldval, newval, bnewent, binitialsna
         self thread postfx::playpostfxbundle("pstfx_zm_wormhole");
         return;
     }
-    self notify(#"hash_ee477153");
+    self notify(#"player_portal_complete");
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd3c1131d, Offset: 0x8d8
 // Size: 0x4c
@@ -72,11 +72,11 @@ function function_e7a8756e(localclientnum) {
     self postfx::exitpostfxbundle();
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 7, eflags: 0x0
 // Checksum 0x41dd897e, Offset: 0x930
 // Size: 0xac
-function function_dcfb71f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function portal_3p(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"death");
     if (newval == 1) {
         self.var_e4e89382 = playfxontag(localclientnum, level._effect["portal_3p"], self, "j_spineupper");
@@ -85,7 +85,7 @@ function function_dcfb71f(localclientnum, oldval, newval, bnewent, binitialsnap,
     function_f9eb885e(localclientnum, self.var_e4e89382);
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 7, eflags: 0x0
 // Checksum 0xcc09a80e, Offset: 0x9e8
 // Size: 0x5c
@@ -93,7 +93,7 @@ function function_e962c05f(localclientnum, oldval, newval, bnewent, binitialsnap
     function_35d5bf67(localclientnum, "ee_boat", newval);
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 3, eflags: 0x1 linked
 // Checksum 0xb21ee1ba, Offset: 0xa50
 // Size: 0x2ae
@@ -122,7 +122,7 @@ function function_35d5bf67(localclientnum, var_d42f02cf, newval) {
     }
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa69b6de5, Offset: 0xd08
 // Size: 0x5c
@@ -130,7 +130,7 @@ function function_b040f607(localclientnum, oldval, newval, bnewent, binitialsnap
     function_11ac3c33(localclientnum, "ee_boat", 1);
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 7, eflags: 0x1 linked
 // Checksum 0x32b6dedf, Offset: 0xd70
 // Size: 0x5c
@@ -138,7 +138,7 @@ function function_bfbf92fb(localclientnum, oldval, newval, bnewent, binitialsnap
     function_11ac3c33(localclientnum, "ee_boat", 0);
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 3, eflags: 0x1 linked
 // Checksum 0xab680e8b, Offset: 0xdd8
 // Size: 0xee
@@ -154,7 +154,7 @@ function function_11ac3c33(localclientnum, var_d42f02cf, var_a5e295bc) {
     }
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 4, eflags: 0x1 linked
 // Checksum 0x1fd87ea3, Offset: 0xed0
 // Size: 0x312
@@ -180,7 +180,7 @@ function function_c0c1771a(localclientnum, s_loc, b_open, var_9c9cfb54) {
     mdl_portal = function_86743484(localclientnum, s_loc);
     mdl_portal hidepart(localclientnum, "tag_portal_open");
     if (b_open) {
-        wait(1.3);
+        wait 1.3;
         mdl_portal showpart(localclientnum, "tag_portal_open");
         for (i = 1; i < 25; i++) {
             playfxontag(localclientnum, level._effect["portal_shortcut_open_border"], mdl_portal, "tag_fx_ring_" + i);
@@ -194,7 +194,7 @@ function function_c0c1771a(localclientnum, s_loc, b_open, var_9c9cfb54) {
     }
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 2, eflags: 0x1 linked
 // Checksum 0x5ff2ea7c, Offset: 0x11f0
 // Size: 0x18e
@@ -216,7 +216,7 @@ function function_86743484(localclientnum, s_loc) {
     return level.var_ef51ee6d[localclientnum][str_name].mdl_portal;
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 3, eflags: 0x1 linked
 // Checksum 0x20999577, Offset: 0x1388
 // Size: 0x13c
@@ -237,7 +237,7 @@ function function_227344a6(str_targetname, var_d42f02cf, var_a5e295bc) {
     return var_216e113e;
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 2, eflags: 0x1 linked
 // Checksum 0xeb1776f5, Offset: 0x14d0
 // Size: 0x3c
@@ -247,7 +247,7 @@ function function_f9eb885e(localclientnum, var_55518655) {
     }
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 5, eflags: 0x1 linked
 // Checksum 0x2fd801bf, Offset: 0x1518
 // Size: 0x2c
@@ -255,7 +255,7 @@ function function_a2d0d0e4(origin1, origin2, var_4358f968, var_2978dbc6, activat
     
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 4, eflags: 0x1 linked
 // Checksum 0x847c867a, Offset: 0x1550
 // Size: 0x36
@@ -265,11 +265,11 @@ function function_c968dcbc(origin1, var_4358f968, oneshot, activate) {
     }
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8b035949, Offset: 0x1590
 // Size: 0x3b4
-function function_ed05ad08(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function portal_state_ending_0(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isspectating(localclientnum)) {
         return;
     }
@@ -301,11 +301,11 @@ function function_ed05ad08(localclientnum, oldval, newval, bnewent, binitialsnap
     level.var_2cc3341a.var_92f13ff4 delete();
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 7, eflags: 0x1 linked
 // Checksum 0x306b4aee, Offset: 0x1950
 // Size: 0x3b4
-function function_13082771(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function portal_state_ending_1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isspectating(localclientnum)) {
         return;
     }
@@ -337,11 +337,11 @@ function function_13082771(localclientnum, oldval, newval, bnewent, binitialsnap
     level.var_52c5ae83.var_92f13ff4 delete();
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4a57cd5, Offset: 0x1d10
 // Size: 0x3b4
-function function_390aa1da(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function portal_state_ending_2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isspectating(localclientnum)) {
         return;
     }
@@ -373,11 +373,11 @@ function function_390aa1da(localclientnum, oldval, newval, bnewent, binitialsnap
     level.var_e0be3f48.var_92f13ff4 delete();
 }
 
-// Namespace namespace_52f9507e
+// Namespace zm_island_portals
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf6bf7649, Offset: 0x20d0
 // Size: 0x3b4
-function function_5f0d1c43(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function portal_state_ending_3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isspectating(localclientnum)) {
         return;
     }

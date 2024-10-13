@@ -31,9 +31,9 @@ function default_onforfeit(team) {
     level endon(#"hash_577494dc");
     forfeit_delay = 20;
     announcement(game["strings"]["opponent_forfeiting_in"], forfeit_delay, 0);
-    wait(10);
+    wait 10;
     announcement(game["strings"]["opponent_forfeiting_in"], 10, 0);
-    wait(10);
+    wait 10;
     endreason = %;
     if (!isdefined(team)) {
         setdvar("ui_text_endreason", game["strings"]["players_forfeited"]);
@@ -44,16 +44,16 @@ function default_onforfeit(team) {
         setdvar("ui_text_endreason", endreason);
         winner = getwinningteamfromloser(team);
     } else {
-        assert(isdefined(team), "team eliminated");
-        assert(0, "team eliminated" + team + "team eliminated");
+        assert(isdefined(team), "<dev string:x28>");
+        assert(0, "<dev string:x46>" + team + "<dev string:x56>");
         winner = "tie";
     }
     level.forcedend = 1;
     /#
         if (isplayer(winner)) {
-            print("team eliminated" + winner getxuid() + "team eliminated" + winner.name + "team eliminated");
+            print("<dev string:x6d>" + winner getxuid() + "<dev string:x7c>" + winner.name + "<dev string:x7e>");
         } else {
-            globallogic_utils::logteamwinstring("team eliminated", winner);
+            globallogic_utils::logteamwinstring("<dev string:x80>", winner);
         }
     #/
     thread globallogic::endgame(winner, endreason);
@@ -107,9 +107,9 @@ function default_ononeleftevent(team) {
         winner = globallogic_score::gethighestscoringplayer();
         /#
             if (isdefined(winner)) {
-                print("team eliminated" + winner.name);
+                print("<dev string:x88>" + winner.name);
             } else {
-                print("team eliminated");
+                print("<dev string:x9e>");
             }
         #/
         thread globallogic::endgame(winner, %MP_ENEMIES_ELIMINATED);
@@ -140,9 +140,9 @@ function default_ontimelimit() {
         winner = globallogic_score::gethighestscoringplayer();
         /#
             if (isdefined(winner)) {
-                print("team eliminated" + winner.name);
+                print("<dev string:xbb>" + winner.name);
             } else {
-                print("team eliminated");
+                print("<dev string:xcd>");
             }
         #/
     }
@@ -166,9 +166,9 @@ function default_onscorelimit() {
         winner = globallogic_score::gethighestscoringplayer();
         /#
             if (isdefined(winner)) {
-                print("team eliminated" + winner.name);
+                print("<dev string:xdd>" + winner.name);
             } else {
-                print("team eliminated");
+                print("<dev string:xef>");
             }
         #/
     }
@@ -188,7 +188,7 @@ function default_onspawnspectator(origin, angles) {
     }
     spawnpointname = "mp_global_intermission";
     spawnpoints = getentarray(spawnpointname, "classname");
-    assert(spawnpoints.size, "team eliminated");
+    assert(spawnpoints.size, "<dev string:xff>");
     spawnpoint = spawnlogic::getspawnpoint_random(spawnpoints);
     self spawn(spawnpoint.origin, spawnpoint.angles);
 }
@@ -206,7 +206,7 @@ function default_onspawnintermission() {
         return;
     }
     /#
-        util::error("team eliminated" + spawnpointname + "team eliminated");
+        util::error("<dev string:x159>" + spawnpointname + "<dev string:x15d>");
     #/
 }
 

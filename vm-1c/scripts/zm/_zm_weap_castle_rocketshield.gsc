@@ -37,7 +37,7 @@ function autoexec function_2dc19561() {
 // Checksum 0x17500068, Offset: 0x658
 // Size: 0x13c
 function __init__() {
-    namespace_abd96e8b::init("craft_shield_zm", "castle_riotshield", "wpn_t7_zmb_zod_rocket_shield_world");
+    zm_craft_shield::init("craft_shield_zm", "castle_riotshield", "wpn_t7_zmb_zod_rocket_shield_world");
     clientfield::register("allplayers", "rs_ammo", 1, 1, "int");
     callback::on_connect(&on_player_connect);
     callback::on_spawned(&on_player_spawned);
@@ -149,7 +149,7 @@ function function_3fbc315a() {
     self endon(#"hash_3fbc315a");
     for (;;) {
         self waittill(#"zmb_max_ammo");
-        wait(0.05);
+        wait 0.05;
         if (isdefined(self.hasriotshield) && self.hasriotshield) {
             self thread function_7221d39f(self.weaponriotshield);
         }
@@ -161,7 +161,7 @@ function function_3fbc315a() {
 // Checksum 0xd01e0872, Offset: 0xc80
 // Size: 0x64
 function function_7221d39f(weapon) {
-    wait(0.05);
+    wait 0.05;
     if (isdefined(self)) {
         ammo = self getweaponammoclip(weapon);
         self clientfield::set("rs_ammo", ammo);
@@ -224,7 +224,7 @@ function function_f9e0085b(weapon) {
             zombie thread riotshield::riotshield_fling_zombie(self, zombie.fling_vec, 0);
             shield_damage += level.zombie_vars["riotshield_juke_damage_shield"];
             if (!var_27e95375) {
-                self thread namespace_97ddfc0d::function_c166f48();
+                self thread zm_castle_vo::function_c166f48();
                 var_27e95375 = 1;
             }
         }
@@ -235,7 +235,7 @@ function function_f9e0085b(weapon) {
         level.riotshield_knockdown_gib = [];
         level.riotshield_fling_enemies = [];
         level.riotshield_fling_vecs = [];
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -382,7 +382,7 @@ function function_c94e27cd(v_origin, v_angles) {
         level notify(#"hash_afd0dfa9");
         level endon(#"hash_afd0dfa9");
         while (true) {
-            var_228edad9 = getdvarint("ZOMBIE_EQUIP_RIOTSHIELD_HOWTO", 0);
+            var_228edad9 = getdvarint("<dev string:x28>", 0);
             if (var_228edad9 > 0) {
                 foreach (spawnpoint in a_spawnpoints) {
                     v_color = (1, 1, 1);
@@ -392,7 +392,7 @@ function function_c94e27cd(v_origin, v_angles) {
                     sphere(spawnpoint.origin, 25, v_color, 0.1, 0, 25, 10);
                 }
             }
-            wait(10 * 0.05);
+            wait 10 * 0.05;
         }
     }
 
@@ -457,11 +457,11 @@ function function_5c7f3b20(var_91089b66, player) {
     // Checksum 0xc244a8d0, Offset: 0x1e78
     // Size: 0xda
     function function_3f94d6cf() {
-        level flagsys::wait_till("ZOMBIE_EQUIP_RIOTSHIELD_HOWTO");
-        wait(1);
+        level flagsys::wait_till("<dev string:x4c>");
+        wait 1;
         zm_devgui::add_custom_devgui_callback(&function_e2f5a93);
-        adddebugcommand("ZOMBIE_EQUIP_RIOTSHIELD_HOWTO");
-        adddebugcommand("ZOMBIE_EQUIP_RIOTSHIELD_HOWTO");
+        adddebugcommand("<dev string:x65>");
+        adddebugcommand("<dev string:xb4>");
         players = getplayers();
         for (i = 0; i < players.size; i++) {
             ip1 = i + 1;
@@ -476,11 +476,11 @@ function function_5c7f3b20(var_91089b66, player) {
         players = getplayers();
         retval = 0;
         switch (cmd) {
-        case 8:
-            array::thread_all(players, &zm_devgui::zombie_devgui_equipment_give, "ZOMBIE_EQUIP_RIOTSHIELD_HOWTO");
+        case "<dev string:x116>":
+            array::thread_all(players, &zm_devgui::zombie_devgui_equipment_give, "<dev string:x128>");
             retval = 1;
             break;
-        case 8:
+        case "<dev string:x13a>":
             array::thread_all(players, &function_3796f8bc);
             retval = 1;
             break;
@@ -512,7 +512,7 @@ function function_5c7f3b20(var_91089b66, player) {
         }
         self notify(#"hash_3796f8bc");
         self endon(#"hash_3796f8bc");
-        level flagsys::wait_till("ZOMBIE_EQUIP_RIOTSHIELD_HOWTO");
+        level flagsys::wait_till("<dev string:x4c>");
         self.var_3796f8bc = !(isdefined(self.var_3796f8bc) && self.var_3796f8bc);
         if (self.var_3796f8bc) {
             while (isdefined(self)) {
@@ -526,7 +526,7 @@ function function_5c7f3b20(var_91089b66, player) {
                 } else {
                     shieldhealth = self damageriotshield(int(damagemax / 10));
                 }
-                wait(0.5);
+                wait 0.5;
             }
         }
     }

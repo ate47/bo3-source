@@ -84,7 +84,7 @@ function start_carpenter(origin) {
                 zm_blockers::blocker_disconnect_paths(windows.neg_start, windows.neg_end);
             }
             util::wait_network_frame();
-            wait(0.05);
+            wait 0.05;
         }
         util::wait_network_frame();
     }
@@ -163,7 +163,7 @@ function function_8cf31031(origin) {
         if (isdefined(window.zbarrier)) {
             if (isdefined(last_repaired_chunk)) {
                 while (window.zbarrier getzbarrierpiecestate(last_repaired_chunk) == "closing") {
-                    wait(0.05);
+                    wait 0.05;
                 }
                 if (isdefined(window._post_carpenter_callback)) {
                     window [[ window._post_carpenter_callback ]]();
@@ -172,7 +172,7 @@ function function_8cf31031(origin) {
             continue;
         }
         while (isdefined(last_repaired_chunk) && last_repaired_chunk.state == "mid_repair") {
-            wait(0.05);
+            wait 0.05;
         }
     }
     carp_ent stoploopsound(1);

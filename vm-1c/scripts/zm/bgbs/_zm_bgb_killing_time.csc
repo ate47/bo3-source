@@ -6,9 +6,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_9dd35181;
+#namespace zm_bgb_killing_time;
 
-// Namespace namespace_9dd35181
+// Namespace zm_bgb_killing_time
 // Params 0, eflags: 0x2
 // Checksum 0xc0fa76bd, Offset: 0x1d8
 // Size: 0x34
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_killing_time", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_9dd35181
+// Namespace zm_bgb_killing_time
 // Params 0, eflags: 0x1 linked
 // Checksum 0x57de1a93, Offset: 0x218
 // Size: 0xcc
@@ -29,7 +29,7 @@ function __init__() {
     clientfield::register("toplayer", "instakill_upgraded_fx", 1, 1, "int", &function_cf8c9fce, 0, 0);
 }
 
-// Namespace namespace_9dd35181
+// Namespace zm_bgb_killing_time
 // Params 7, eflags: 0x1 linked
 // Checksum 0x53c00ba2, Offset: 0x2f0
 // Size: 0x56
@@ -40,7 +40,7 @@ function function_cf8c9fce(localclientnum, oldval, newval, bnewent, binitialsnap
     self notify(#"hash_eb366021");
 }
 
-// Namespace namespace_9dd35181
+// Namespace zm_bgb_killing_time
 // Params 1, eflags: 0x0
 // Checksum 0x6e3d244b, Offset: 0x350
 // Size: 0x86
@@ -52,11 +52,11 @@ function function_2a30e2ca(localclientnum) {
     self endon(#"hash_eb366021");
     while (true) {
         self.var_dedf9511 = self playsound(localclientnum, "zmb_music_box", self.origin);
-        wait(4);
+        wait 4;
     }
 }
 
-// Namespace namespace_9dd35181
+// Namespace zm_bgb_killing_time
 // Params 7, eflags: 0x1 linked
 // Checksum 0x13eba211, Offset: 0x3e0
 // Size: 0xa4
@@ -70,13 +70,13 @@ function function_a81107fc(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_9dd35181
+// Namespace zm_bgb_killing_time
 // Params 2, eflags: 0x5 linked
 // Checksum 0x4d0d7ef4, Offset: 0x490
 // Size: 0x54
 function private function_10dcbf51(localclientnum, fxobj) {
     fxobj playsound(localclientnum, "evt_ai_explode");
-    wait(1);
+    wait 1;
     fxobj delete();
 }
 

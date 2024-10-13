@@ -32,13 +32,13 @@ function init() {
         setdvar("scr_drawfriend", "0");
     }
     level.drawfriend = getdvarint("scr_drawfriend");
-    assert(isdefined(game["<unknown string>"]), "<unknown string>");
-    assert(isdefined(game["<unknown string>"]), "<unknown string>");
+    assert(isdefined(game["<dev string:x28>"]), "<dev string:x38>");
+    assert(isdefined(game["<dev string:x7e>"]), "<dev string:x8c>");
     callback::on_spawned(&on_player_spawned);
     callback::on_player_killed(&on_player_killed);
     for (;;) {
         updatefriendiconsettings();
-        wait(5);
+        wait 5;
     }
 }
 

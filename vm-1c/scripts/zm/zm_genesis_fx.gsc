@@ -3,9 +3,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_d7c5f6de;
+#namespace zm_genesis_fx;
 
-// Namespace namespace_d7c5f6de
+// Namespace zm_genesis_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc0d1f88, Offset: 0x4f8
 // Size: 0x24
@@ -14,7 +14,7 @@ function main() {
     function_e6258024();
 }
 
-// Namespace namespace_d7c5f6de
+// Namespace zm_genesis_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd28a30e, Offset: 0x528
 // Size: 0x16e
@@ -34,7 +34,7 @@ function function_f45953c() {
     level._effect["fury_ground_tell_fx"] = "zombie/fx_meatball_impact_ground_tell_zod_zmb";
 }
 
-// Namespace namespace_d7c5f6de
+// Namespace zm_genesis_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x6a0
 // Size: 0x4
@@ -42,7 +42,7 @@ function function_e6258024() {
     
 }
 
-// Namespace namespace_d7c5f6de
+// Namespace zm_genesis_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcd6f94ee, Offset: 0x6b0
 // Size: 0x34
@@ -51,7 +51,7 @@ function function_2c301fae() {
     level thread function_7eea24df();
 }
 
-// Namespace namespace_d7c5f6de
+// Namespace zm_genesis_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1ef8872a, Offset: 0x6f0
 // Size: 0xaa
@@ -64,7 +64,7 @@ function function_12901f9a() {
     level._effect["additionalprimaryweapon_light"] = "dlc4/genesis/fx_perk_mule_kick";
 }
 
-// Namespace namespace_d7c5f6de
+// Namespace zm_genesis_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x46c5fb05, Offset: 0x7a8
 // Size: 0x1e

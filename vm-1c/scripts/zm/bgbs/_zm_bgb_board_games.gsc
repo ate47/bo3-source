@@ -92,7 +92,7 @@ function function_d5ed5165(s_window) {
     if (isdefined(s_window.zbarrier)) {
         if (isdefined(last_repaired_chunk)) {
             while (s_window.zbarrier getzbarrierpiecestate(last_repaired_chunk) == "closing") {
-                wait(0.05);
+                wait 0.05;
             }
             if (isdefined(s_window._post_carpenter_callback)) {
                 s_window [[ s_window._post_carpenter_callback ]]();
@@ -100,7 +100,7 @@ function function_d5ed5165(s_window) {
         }
     } else {
         while (isdefined(last_repaired_chunk) && last_repaired_chunk.state == "mid_repair") {
-            wait(0.05);
+            wait 0.05;
         }
     }
     carp_ent stoploopsound(1);

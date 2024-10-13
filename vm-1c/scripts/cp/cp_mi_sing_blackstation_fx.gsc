@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_56310eec;
+#namespace cp_mi_sing_blackstation_fx;
 
-// Namespace namespace_56310eec
+// Namespace cp_mi_sing_blackstation_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x52cbd27, Offset: 0x168
 // Size: 0x72

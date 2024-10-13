@@ -7,9 +7,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_a5a0319c;
+#namespace zm_bgb_projectile_vomiting;
 
-// Namespace namespace_a5a0319c
+// Namespace zm_bgb_projectile_vomiting
 // Params 0, eflags: 0x2
 // Checksum 0x6dce8d5f, Offset: 0x248
 // Size: 0x34
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_projectile_vomiting", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_a5a0319c
+// Namespace zm_bgb_projectile_vomiting
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcc0eaea8, Offset: 0x288
 // Size: 0xc4
@@ -32,7 +32,7 @@ function __init__() {
     level.var_e0154011 = 0;
 }
 
-// Namespace namespace_a5a0319c
+// Namespace zm_bgb_projectile_vomiting
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb59a22ba, Offset: 0x358
 // Size: 0x10c
@@ -48,13 +48,13 @@ function function_6ac13208(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_a5a0319c
+// Namespace zm_bgb_projectile_vomiting
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3d371b8d, Offset: 0x470
 // Size: 0x1c
 function function_6d325051() {
     level.var_e0154011++;
-    wait(1);
+    wait 1;
     level.var_e0154011--;
 }
 

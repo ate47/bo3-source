@@ -2,9 +2,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/aat_shared;
 
-#namespace namespace_d85da9ae;
+#namespace zm_aat_dead_wire;
 
-// Namespace namespace_d85da9ae
+// Namespace zm_aat_dead_wire
 // Params 0, eflags: 0x2
 // Checksum 0x9cfeeb5e, Offset: 0x180
 // Size: 0x34
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
     system::register("zm_aat_dead_wire", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_d85da9ae
+// Namespace zm_aat_dead_wire
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5b92a17, Offset: 0x1c0
 // Size: 0xfe
@@ -26,7 +26,7 @@ function __init__() {
     level._effect["zm_aat_dead_wire"] = "zombie/fx_tesla_shock_zmb";
 }
 
-// Namespace namespace_d85da9ae
+// Namespace zm_aat_dead_wire
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbd3e1b38, Offset: 0x2c8
 // Size: 0xae
@@ -41,7 +41,7 @@ function function_522b211a(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_d85da9ae
+// Namespace zm_aat_dead_wire
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2930a5a2, Offset: 0x380
 // Size: 0xfe

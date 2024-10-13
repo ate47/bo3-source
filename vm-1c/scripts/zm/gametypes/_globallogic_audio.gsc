@@ -192,8 +192,8 @@ function function_2a897a84() {
     }
     if (!isdefined(level.nextmusicstate)) {
         /#
-            if (getdvarint("losing") > 0) {
-                println("losing");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x34>");
             }
         #/
         self.pers["music"].currentstate = "UNDERSCORE";
@@ -209,8 +209,8 @@ function function_8395d834() {
     self endon(#"disconnect");
     self thread set_music_on_player("UNDERSCORE", 0);
     /#
-        if (getdvarint("losing") > 0) {
-            println("losing" + self.pers["losing"].returnstate + "losing" + self getentitynumber());
+        if (getdvarint("<dev string:x28>") > 0) {
+            println("<dev string:x82>" + self.pers["<dev string:xb8>"].returnstate + "<dev string:xbe>" + self getentitynumber());
         }
     #/
 }
@@ -224,15 +224,15 @@ function suspensemusic(random) {
     level endon(#"match_ending_soon");
     self endon(#"disconnect");
     /#
-        if (getdvarint("losing") > 0) {
-            println("losing");
+        if (getdvarint("<dev string:x28>") > 0) {
+            println("<dev string:xca>");
         }
     #/
     while (true) {
-        wait(randomintrange(25, 60));
+        wait randomintrange(25, 60);
         /#
-            if (getdvarint("losing") > 0) {
-                println("losing");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:xf4>");
             }
         #/
         if (!isdefined(self.pers["music"].inque)) {
@@ -240,8 +240,8 @@ function suspensemusic(random) {
         }
         if (self.pers["music"].inque) {
             /#
-                if (getdvarint("losing") > 0) {
-                    println("losing");
+                if (getdvarint("<dev string:x28>") > 0) {
+                    println("<dev string:x122>");
                 }
             #/
             continue;
@@ -253,8 +253,8 @@ function suspensemusic(random) {
             self thread function_8395d834();
             self.underscorechance -= 20;
             /#
-                if (getdvarint("losing") > 0) {
-                    println("losing");
+                if (getdvarint("<dev string:x28>") > 0) {
+                    println("<dev string:xca>");
                 }
             #/
         }
@@ -279,7 +279,7 @@ function function_89d56d3(dialog, skip_team, var_f2c55274) {
 // Size: 0x15c
 function function_a6efdbf5(winner, delay) {
     if (delay > 0) {
-        wait(delay);
+        wait delay;
     }
     if (!isdefined(winner) || isplayer(winner)) {
         return;
@@ -301,7 +301,7 @@ function function_a6efdbf5(winner, delay) {
 // Size: 0xbc
 function function_19c083(winner, delay) {
     if (delay > 0) {
-        wait(delay);
+        wait delay;
     }
     if (!isdefined(winner) || isplayer(winner)) {
         return;
@@ -540,10 +540,10 @@ function function_17c50624(sound, extratime) {
     }
     time = soundgetplaybacktime(sound);
     if (time < 0) {
-        wait(3 + extratime);
+        wait 3 + extratime;
         return;
     }
-    wait(time * 0.001 + extratime);
+    wait time * 0.001 + extratime;
 }
 
 // Namespace globallogic_audio
@@ -666,7 +666,7 @@ function function_b510a5ac() {
 function function_89994704() {
     level endon(#"game_ended");
     level.playingactionmusic = 1;
-    wait(45);
+    wait 45;
     level.playingactionmusic = 0;
 }
 
@@ -696,32 +696,32 @@ function set_music_on_team(state, team, save_state, return_state, wait_time) {
     if (!isdefined(team)) {
         team = "both";
         /#
-            if (getdvarint("losing") > 0) {
-                println("losing");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x14c>");
             }
         #/
     }
     if (!isdefined(save_state)) {
         var_ae07e254 = 0;
         /#
-            if (getdvarint("losing") > 0) {
-                println("losing");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x17b>");
             }
         #/
     }
     if (!isdefined(return_state)) {
         return_state = 0;
         /#
-            if (getdvarint("losing") > 0) {
-                println("losing");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x1b0>");
             }
         #/
     }
     if (!isdefined(wait_time)) {
         wait_time = 0;
         /#
-            if (getdvarint("losing") > 0) {
-                println("losing");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x1f7>");
             }
         #/
     }
@@ -734,8 +734,8 @@ function set_music_on_team(state, team, save_state, return_state, wait_time) {
         if (isdefined(player.pers["team"]) && player.pers["team"] == team) {
             player thread set_music_on_player(state, save_state, return_state, wait_time);
             /#
-                if (getdvarint("losing") > 0) {
-                    println("losing" + state + "losing" + player getentitynumber());
+                if (getdvarint("<dev string:x28>") > 0) {
+                    println("<dev string:x228>" + state + "<dev string:xbe>" + player getentitynumber());
                 }
             #/
         }
@@ -755,32 +755,32 @@ function set_music_on_player(state, save_state, return_state, wait_time) {
     if (!isdefined(save_state)) {
         save_state = 0;
         /#
-            if (getdvarint("losing") > 0) {
-                println("losing");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x24c>");
             }
         #/
     }
     if (!isdefined(return_state)) {
         return_state = 0;
         /#
-            if (getdvarint("losing") > 0) {
-                println("losing");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x1b0>");
             }
         #/
     }
     if (!isdefined(wait_time)) {
         wait_time = 0;
         /#
-            if (getdvarint("losing") > 0) {
-                println("losing");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x1f7>");
             }
         #/
     }
     if (!isdefined(state)) {
         state = "UNDERSCORE";
         /#
-            if (getdvarint("losing") > 0) {
-                println("losing");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x290>");
             }
         #/
     }
@@ -788,22 +788,22 @@ function set_music_on_player(state, save_state, return_state, wait_time) {
     if (isdefined(self.pers["music"].currentstate) && save_state) {
         self.pers["music"].returnstate = state;
         /#
-            if (getdvarint("losing") > 0) {
-                println("losing" + self.pers["losing"].returnstate + "losing" + self getentitynumber());
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x2c6>" + self.pers["<dev string:xb8>"].returnstate + "<dev string:x2e9>" + self getentitynumber());
             }
         #/
     }
     self.pers["music"].previousstate = self.pers["music"].currentstate;
     self.pers["music"].currentstate = state;
     /#
-        if (getdvarint("losing") > 0) {
-            println("losing" + state + "losing" + self getentitynumber());
+        if (getdvarint("<dev string:x28>") > 0) {
+            println("<dev string:x228>" + state + "<dev string:xbe>" + self getentitynumber());
         }
     #/
     if (isdefined(self.pers["music"].returnstate) && return_state) {
         /#
-            if (getdvarint("losing") > 0) {
-                println("losing" + self.pers["losing"].returnstate + "losing" + self getentitynumber());
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x2ee>" + self.pers["<dev string:xb8>"].returnstate + "<dev string:x2e9>" + self getentitynumber());
             }
         #/
         self function_419e790f(self.pers["music"].returnstate, wait_time);
@@ -818,8 +818,8 @@ function function_4f633c43(wait_time) {
     if (!isdefined(wait_time)) {
         wait_time = 0;
         /#
-            if (getdvarint("losing") > 0) {
-                println("losing");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x1f7>");
             }
         #/
     }
@@ -834,8 +834,8 @@ function function_5f207017(team, wait_time) {
     if (!isdefined(wait_time)) {
         wait_time = 0;
         /#
-            if (getdvarint("losing") > 0) {
-                println("losing");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x1f7>");
             }
         #/
     }
@@ -848,8 +848,8 @@ function function_5f207017(team, wait_time) {
         if (isdefined(player.pers["team"]) && player.pers["team"] == team) {
             player thread function_419e790f(self.pers["music"].returnstate, wait_time);
             /#
-                if (getdvarint("losing") > 0) {
-                    println("losing" + self.pers["losing"].returnstate + "losing" + player getentitynumber());
+                if (getdvarint("<dev string:x28>") > 0) {
+                    println("<dev string:x228>" + self.pers["<dev string:xb8>"].returnstate + "<dev string:xbe>" + player getentitynumber());
                 }
             #/
         }
@@ -864,8 +864,8 @@ function function_419e790f(nextstate, wait_time) {
     self endon(#"disconnect");
     self.pers["music"].nextstate = nextstate;
     /#
-        if (getdvarint("losing") > 0) {
-            println("losing" + self.pers["losing"].nextstate + "losing" + self getentitynumber());
+        if (getdvarint("<dev string:x28>") > 0) {
+            println("<dev string:x314>" + self.pers["<dev string:xb8>"].nextstate + "<dev string:x2e9>" + self getentitynumber());
         }
     #/
     if (!isdefined(self.pers["music"].inque)) {
@@ -876,7 +876,7 @@ function function_419e790f(nextstate, wait_time) {
     }
     self.pers["music"].inque = 1;
     if (wait_time) {
-        wait(wait_time);
+        wait wait_time;
     }
     self set_music_on_player(self.pers["music"].nextstate, 0);
     self.pers["music"].inque = 0;
@@ -888,9 +888,9 @@ function function_419e790f(nextstate, wait_time) {
 // Size: 0x2e
 function function_e008b8f9(switchtype) {
     switch (switchtype) {
-    case 93:
+    case "halftime":
         return "halftime";
-    case 94:
+    case "overtime":
         return "overtime";
     default:
         return "side_switch";

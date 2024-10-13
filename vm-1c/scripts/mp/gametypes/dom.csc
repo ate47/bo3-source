@@ -26,7 +26,7 @@ function on_localclient_connect(localclientnum) {
         self.domflags["a"] = serverobjective_getobjective(localclientnum, "dom_a");
         self.domflags["b"] = serverobjective_getobjective(localclientnum, "dom_b");
         self.domflags["c"] = serverobjective_getobjective(localclientnum, "dom_c");
-        wait(0.05);
+        wait 0.05;
     }
     foreach (key, flag_objective in self.domflags) {
         self thread monitor_flag_fx(localclientnum, flag_objective, key);
@@ -63,7 +63,7 @@ function monitor_flag_fx(localclientnum, flag_objective, flag_name) {
         if (progress != flag.last_progress) {
             flag update_cap_fx(localclientnum, flag, team, progress);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

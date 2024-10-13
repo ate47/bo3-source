@@ -35,7 +35,7 @@ function localplayer_spawned(localclientnum) {
         return;
     }
     /#
-        level.var_d9defa1c = getdvarfloat("<unknown string>", level.var_d9defa1c);
+        level.var_d9defa1c = getdvarfloat("<dev string:x28>", level.var_d9defa1c);
     #/
     self.var_d38c16be = 0;
     bodytype = self getcharacterbodytype();
@@ -200,7 +200,7 @@ function function_ff801c5b(localclientnum) {
         } else if (isdefined(self.blood_enabled) && self.blood_enabled) {
             self function_14cd2c76(localclientnum);
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 

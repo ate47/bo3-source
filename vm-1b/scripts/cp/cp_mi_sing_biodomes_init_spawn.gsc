@@ -9,9 +9,9 @@
 #using scripts/shared/spawner_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b002c73b;
+#namespace sm_initial_spawns;
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 0, eflags: 0x2
 // Checksum 0x8cf20879, Offset: 0x250
 // Size: 0x3a
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
     system::register("sm_initial_spawns", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 0, eflags: 0x0
 // Checksum 0xe9c07cd6, Offset: 0x298
 // Size: 0x2
@@ -27,7 +27,7 @@ function __init__() {
     
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 0, eflags: 0x0
 // Checksum 0xfc3a4c71, Offset: 0x2a8
 // Size: 0x12
@@ -35,50 +35,50 @@ function __main__() {
     level thread function_590e549();
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 1, eflags: 0x0
 // Checksum 0xdea29acb, Offset: 0x2c8
 // Size: 0x62
 function function_18f12c5f(spawn_struct) {
     self endon(#"death");
-    wait(1);
+    wait 1;
     if (!level flag::get("sm_combat_started")) {
-        wait(randomfloatrange(0.5, 1));
+        wait randomfloatrange(0.5, 1);
         level flag::set("sm_combat_started");
     }
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 0, eflags: 0x0
 // Checksum 0x503eee0e, Offset: 0x338
 // Size: 0xc
 function function_64ebf854() {
-    level waittill(#"hash_1b1dc746");
+    level waittill(#"sm_combat_started");
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 0, eflags: 0x0
 // Checksum 0x8d3803cf, Offset: 0x350
 // Size: 0x8b
 function function_590e549() {
-    wait(1);
+    wait 1;
     var_8eb85679 = struct::get_array("infil_manager", "targetname");
     foreach (zone in var_8eb85679) {
         zone function_9b333f19();
     }
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 0, eflags: 0x0
 // Checksum 0x13ae633c, Offset: 0x3e8
 // Size: 0x5a
 function function_9b333f19() {
     var_61b5d65a = getentarray(self.target, "targetname");
-    assert(var_61b5d65a.size != 0, "<unknown string>");
+    assert(var_61b5d65a.size != 0, "<dev string:x28>");
     var_61b5d65a[0] thread function_c04f5659();
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 1, eflags: 0x0
 // Checksum 0x87cfd9e3, Offset: 0x450
 // Size: 0x125
@@ -107,7 +107,7 @@ function function_166a3348(var_61b5d65a) {
     return var_3979e78;
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 0, eflags: 0x0
 // Checksum 0x61bb5c90, Offset: 0x580
 // Size: 0x13b
@@ -117,13 +117,13 @@ function function_c04f5659() {
         if (isdefined(ent.sessionstate) && ent.sessionstate != "spectator") {
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
     target = self.target;
     a_entities = getentarray(target, "targetname");
-    assert(a_entities.size != 0, "<unknown string>");
+    assert(a_entities.size != 0, "<dev string:x60>");
     var_9dfd5595 = self;
-    wait(1);
+    wait 1;
     foreach (entity in a_entities) {
         if (isspawner(entity) && !isdefined(level.var_7952320e) && isdefined(var_9dfd5595)) {
             entity function_90dcd682(var_9dfd5595);
@@ -132,7 +132,7 @@ function function_c04f5659() {
     self notify(#"hash_48a5af9");
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 1, eflags: 0x0
 // Checksum 0x43502dab, Offset: 0x6c8
 // Size: 0x1d2
@@ -178,7 +178,7 @@ function function_90dcd682(var_92b4ece5) {
     }
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 0, eflags: 0x0
 // Checksum 0x2ef7f2a4, Offset: 0x8a8
 // Size: 0x91
@@ -191,7 +191,7 @@ function function_7d634332() {
     }
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 0, eflags: 0x0
 // Checksum 0xe8ac00d7, Offset: 0x948
 // Size: 0xc6
@@ -207,7 +207,7 @@ function function_db5780d1() {
     hunter.lockontarget = level.players[0];
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 2, eflags: 0x0
 // Checksum 0x36642361, Offset: 0xa18
 // Size: 0xd2
@@ -224,7 +224,7 @@ function function_c6e1fa1(path_start, index) {
     self.lockontarget = level.players[0];
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 1, eflags: 0x0
 // Checksum 0x2fb69a2f, Offset: 0xaf8
 // Size: 0x33
@@ -235,7 +235,7 @@ function function_e55a5d84(i) {
     return i - i / 2 + 0.5;
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 1, eflags: 0x0
 // Checksum 0x6f472489, Offset: 0xb38
 // Size: 0x6d
@@ -249,7 +249,7 @@ function function_7da79f81(var_cc525a1a) {
     }
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 2, eflags: 0x0
 // Checksum 0xbd87d939, Offset: 0xbb0
 // Size: 0x102
@@ -270,12 +270,12 @@ function function_ef0b8dc3(var_2d7613bb, var_92b4ece5) {
             self.goalradius = var_92b4ece5.radius;
         }
     }
-    wait(0.05);
-    assert(isdefined(self.script_string), "<unknown string>");
+    wait 0.05;
+    assert(isdefined(self.script_string), "<dev string:x97>");
     var_2d7613bb thread scene::init(self.script_string, self);
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 0, eflags: 0x0
 // Checksum 0xc95bd9c2, Offset: 0xcc0
 // Size: 0x16a
@@ -298,7 +298,7 @@ function function_2cf0cb11() {
     self delete();
 }
 
-// Namespace namespace_b002c73b
+// Namespace sm_initial_spawns
 // Params 0, eflags: 0x0
 // Checksum 0x700fa315, Offset: 0xe38
 // Size: 0x16

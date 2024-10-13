@@ -63,7 +63,7 @@ function watchkillstreakweapondelay() {
             return;
         }
         if (!killstreaks::is_killstreak_weapon(newweapon)) {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         killstreak = killstreaks::get_killstreak_for_weapon(newweapon);
@@ -74,7 +74,7 @@ function watchkillstreakweapondelay() {
             }
             self iprintlnbold(%MP_UNAVAILABLE_FOR_N, " " + timeleft + " ", %EXE_SECONDS);
             self switchtoweapon(currentweapon);
-            wait(0.5);
+            wait 0.5;
         }
     }
 }

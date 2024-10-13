@@ -10,9 +10,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_c415b483;
+#namespace cp_mi_zurich_newworld_patch_c;
 
-// Namespace namespace_c415b483
+// Namespace cp_mi_zurich_newworld_patch_c
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x1d8
 // Size: 0x4

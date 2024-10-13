@@ -81,7 +81,7 @@ function function_124b9a08() {
         if (level flag::get("doa_round_active")) {
             return;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -91,7 +91,7 @@ function function_124b9a08() {
 // Size: 0x34
 function function_c8f4d63a() {
     while (level flag::get("doa_bonusroom_active")) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -102,13 +102,13 @@ function function_c8f4d63a() {
 function function_d0e32ad0(state) {
     if (state == 1) {
         while (!level flag::get("doa_screen_faded_out")) {
-            wait(0.05);
+            wait 0.05;
         }
         return;
     }
     if (state == 0) {
         while (level flag::get("doa_screen_faded_out")) {
-            wait(0.05);
+            wait 0.05;
         }
     }
 }
@@ -142,13 +142,13 @@ function function_a5821e05(time) {
     }
     if (isdefined(level.var_a7749866)) {
         /#
-            debugmsg("MOD_PROJECTILE_SPLASH");
+            debugmsg("<dev string:x28>");
         #/
         return;
     }
     level.var_a7749866 = gettime();
     /#
-        debugmsg("MOD_PROJECTILE_SPLASH" + level.var_a7749866);
+        debugmsg("<dev string:x3b>" + level.var_a7749866);
     #/
     level thread function_1d62c13a();
     foreach (player in getplayers()) {
@@ -156,9 +156,9 @@ function function_a5821e05(time) {
         player thread namespace_831a4a7c::function_4519b17(1);
     }
     level lui::screen_fade_out(time, "black");
-    wait(time);
+    wait time;
     /#
-        debugmsg("MOD_PROJECTILE_SPLASH" + gettime());
+        debugmsg("<dev string:x4a>" + gettime());
     #/
     level notify(#"hash_96377490");
     level flag::set("doa_screen_faded_out");
@@ -176,11 +176,11 @@ function function_c85960dd(hold_black_time, unfreeze) {
         unfreeze = 1;
     }
     /#
-        debugmsg("MOD_PROJECTILE_SPLASH");
+        debugmsg("<dev string:x67>");
     #/
-    wait(hold_black_time);
+    wait hold_black_time;
     foreach (player in getplayers()) {
-        player notify(#"hash_ff28e404");
+        player notify(#"killInitialBlack");
     }
     level lui::screen_fade_in(1.5);
     if (unfreeze) {
@@ -191,7 +191,7 @@ function function_c85960dd(hold_black_time, unfreeze) {
     }
     level notify(#"hash_dec47e9f");
     /#
-        debugmsg("MOD_PROJECTILE_SPLASH");
+        debugmsg("<dev string:x71>");
     #/
     level flag::clear("doa_screen_faded_out");
     level.var_a7749866 = undefined;
@@ -211,10 +211,10 @@ function function_1d62c13a() {
         if (level flag::get("doa_round_spawning")) {
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
     /#
-        debugmsg("MOD_PROJECTILE_SPLASH");
+        debugmsg("<dev string:x89>");
     #/
     level thread function_c85960dd();
 }
@@ -226,14 +226,14 @@ function function_1d62c13a() {
 function function_d0c69425(waitsec) {
     level endon(#"hash_dec47e9f");
     while (!(isdefined(level.var_de693c3) && level.var_de693c3)) {
-        wait(0.05);
+        wait 0.05;
     }
     timeout = gettime() + waitsec * 1000;
     while (isdefined(level.var_a7749866) && gettime() < timeout) {
-        wait(0.05);
+        wait 0.05;
     }
     /#
-        debugmsg("MOD_PROJECTILE_SPLASH");
+        debugmsg("<dev string:xb1>");
     #/
     level thread function_c85960dd();
 }
@@ -292,7 +292,7 @@ function function_1bfb2259(&entarray) {
 // Size: 0x84
 function function_999bba85(origin, time) {
     self moveto(origin, time, 0, 0);
-    wait(time);
+    wait time;
     if (isdefined(self.trigger)) {
         self.trigger delete();
     }
@@ -307,7 +307,7 @@ function function_999bba85(origin, time) {
 // Size: 0x2e
 function function_80409246(note, timeout) {
     self endon(#"death");
-    wait(timeout);
+    wait timeout;
     self notify(note);
 }
 
@@ -402,7 +402,7 @@ function function_24245456(other, note) {
 function function_d1686f4c(note, sec, endnote, param1, param2) {
     self endon(endnote);
     self endon(#"disconnect");
-    wait(sec);
+    wait sec;
     self notify(note, param1, param2);
 }
 
@@ -433,7 +433,7 @@ function function_783519c1(note, var_8b804bd9) {
 // Size: 0x5c
 function function_1bd67aef(time) {
     self endon(#"death");
-    wait(time);
+    wait time;
     if (isdefined(self.anchor)) {
         self.anchor delete();
     }
@@ -464,7 +464,7 @@ function function_981c685d(var_627e7613) {
 // Checksum 0xe9945f5e, Offset: 0x1598
 // Size: 0x74
 function function_a625b5d3(player) {
-    assert(isplayer(player), "MOD_PROJECTILE_SPLASH");
+    assert(isplayer(player), "<dev string:xd4>");
     self endon(#"death");
     player waittill(#"disconnect");
     self delete();
@@ -476,7 +476,7 @@ function function_a625b5d3(player) {
 // Size: 0x24
 function function_c157030a() {
     while (function_b99d78c7() > 0) {
-        wait(1);
+        wait 1;
     }
 }
 
@@ -490,7 +490,7 @@ function function_1ced251e(all) {
     }
     while (function_b99d78c7() > 0) {
         function_f798b582(all);
-        wait(1);
+        wait 1;
     }
 }
 
@@ -631,7 +631,7 @@ function function_ba30b321(time, attacker, mod) {
     }
     self endon(#"death");
     if (time > 0) {
-        wait(time);
+        wait time;
     }
     self.takedamage = 1;
     self.allowdeath = 1;
@@ -719,13 +719,13 @@ function function_8fc4387a(num) {
 // Size: 0x84
 function function_812b4715(side) {
     switch (side) {
-    case 29:
+    case "top":
         return "bottom";
-    case 28:
+    case "bottom":
         return "top";
-    case 31:
+    case "left":
         return "right";
-    case 30:
+    case "right":
         return "left";
     }
     assert(0);
@@ -737,8 +737,8 @@ function function_812b4715(side) {
 // Size: 0xa2
 function function_5b4fbaef() {
     /#
-        if (getdvarint("MOD_PROJECTILE_SPLASH", 0)) {
-            return "MOD_PROJECTILE_SPLASH";
+        if (getdvarint("<dev string:xf9>", 0)) {
+            return "<dev string:x10a>";
         }
     #/
     switch (randomint(4)) {
@@ -809,7 +809,7 @@ function function_a98c85b2(location, timesec) {
     targettime = gettime() + timesec * 1000;
     while (gettime() < targettime) {
         self.origin -= increment;
-        wait(0.05);
+        wait 0.05;
     }
     self notify(#"movedone");
 }
@@ -822,7 +822,7 @@ function function_89a258a7() {
     self endon(#"death");
     self endon(#"hash_3d81b494");
     while (true) {
-        wait(0.5);
+        wait 0.5;
         if (isdefined(self.var_111c7bbb)) {
             distsq = distancesquared(self.var_111c7bbb, self.origin);
             if (distsq < 32 * 32) {
@@ -891,7 +891,7 @@ function function_5f54cafa(waittime) {
     level endon(#"hash_5f54cafa");
     while (true) {
         clearallcorpses();
-        wait(waittime);
+        wait waittime;
     }
 }
 
@@ -939,7 +939,7 @@ function function_c5f3ece8(text, param, holdtime, color, note) {
     }
     level.doa.var_4bc31566 fadeovertime(1);
     level.doa.var_4bc31566.alpha = 0;
-    level notify(#"hash_b96c96ac");
+    level notify(#"title1Fade");
 }
 
 // Namespace namespace_49107f3a
@@ -970,7 +970,7 @@ function function_37fb5c23(text, param, holdtime, color, note) {
     level util::waittill_any_timeout(holdtime, note);
     level.doa.var_25c09afd fadeovertime(1);
     level.doa.var_25c09afd.alpha = 0;
-    level notify(#"hash_97276c43");
+    level notify(#"title2Fade");
 }
 
 // Namespace namespace_49107f3a
@@ -1021,7 +1021,7 @@ function function_dbcf48a0(delay, width, height) {
         height = 40;
     }
     if (delay) {
-        wait(delay);
+        wait delay;
     }
     if (!isdefined(self)) {
         return;
@@ -1077,7 +1077,7 @@ function function_1ded48e6(time, var_f88fd757) {
 // Size: 0x2e
 function function_a4d1f25e(note, time) {
     self endon(#"death");
-    wait(time);
+    wait time;
     self notify(note);
 }
 
@@ -1172,7 +1172,7 @@ function function_fa8a86e8(ent, target) {
             line(var_a84bd888, var_1a5347c3, color, 1, 0, 1);
             line(var_5e2b69e1, var_842de44a, color, 1, 0, 1);
             line(var_e4d48d14, var_56dbfc4f, color, 1, 0, 1);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1195,7 +1195,7 @@ function function_fa8a86e8(ent, target) {
             line(var_a84bd888, var_1a5347c3, color, 1, 0, 1);
             line(var_5e2b69e1, var_842de44a, color, 1, 0, 1);
             line(var_e4d48d14, var_56dbfc4f, color, 1, 0, 1);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1204,7 +1204,7 @@ function function_fa8a86e8(ent, target) {
     // Checksum 0x6255f834, Offset: 0x3928
     // Size: 0x34
     function debugmsg(txt) {
-        println("MOD_PROJECTILE_SPLASH" + txt);
+        println("<dev string:x10e>" + txt);
     }
 
 #/

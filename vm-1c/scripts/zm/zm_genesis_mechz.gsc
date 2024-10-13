@@ -23,9 +23,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_8f77dbcb;
+#namespace zm_genesis_mechz;
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x2
 // Checksum 0x2082694f, Offset: 0x6e0
 // Size: 0x18c
@@ -48,7 +48,7 @@ function autoexec init() {
     #/
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x5 linked
 // Checksum 0x91c5683b, Offset: 0x878
 // Size: 0x1fc
@@ -67,21 +67,21 @@ function private function_24ed806f() {
     animationstatenetwork::registeranimationmocomp("mocomp_teleport_traversal@mechz", &function_5683b5d5, undefined, undefined);
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x5 linked
 // Checksum 0x7b4f9d99, Offset: 0xa80
 // Size: 0xce
 function private function_76e7495b() {
-    wait(0.5);
+    wait 0.5;
     a_e_traps = getentarray("zombie_trap", "targetname");
     foreach (e_trap in a_e_traps) {
         if (e_trap.script_noteworthy == "electric") {
-            level.var_de3378ba = e_trap;
+            level.electric_trap = e_trap;
         }
     }
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7283641e, Offset: 0xb58
 // Size: 0x126
@@ -94,8 +94,8 @@ function private function_b25360f(entity) {
             return true;
         }
     }
-    if (isdefined(level.var_de3378ba)) {
-        if (isdefined(level.var_de3378ba._trap_in_use) && level.var_de3378ba._trap_in_use && !(isdefined(level.var_de3378ba.var_58acf3b0) && level.var_de3378ba.var_58acf3b0)) {
+    if (isdefined(level.electric_trap)) {
+        if (isdefined(level.electric_trap._trap_in_use) && level.electric_trap._trap_in_use && !(isdefined(level.electric_trap.var_58acf3b0) && level.electric_trap.var_58acf3b0)) {
             if (entity function_d8f5da34("elec_trap_switch")) {
                 return true;
             }
@@ -104,7 +104,7 @@ function private function_b25360f(entity) {
     return false;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x5 linked
 // Checksum 0x72b858c2, Offset: 0xc88
 // Size: 0x9e
@@ -119,7 +119,7 @@ function private function_604404(entity) {
     return false;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x5 linked
 // Checksum 0x200c993b, Offset: 0xd30
 // Size: 0x3a
@@ -130,7 +130,7 @@ function private function_e92d3bb1(entity) {
     self.react[self.react.size] = entity;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6c7e79b4, Offset: 0xd78
 // Size: 0x1c2
@@ -145,7 +145,7 @@ function private function_8746ceea(entity) {
                 if (dist_sq < 9216) {
                     entity.stun = 1;
                     entity.vortex = vortex;
-                    if (isdefined(vortex.weapon) && namespace_42517170::function_9b7ac6a9(vortex.weapon)) {
+                    if (isdefined(vortex.weapon) && idgun::function_9b7ac6a9(vortex.weapon)) {
                         blackboard::setblackboardattribute(entity, "_zombie_damageweapon_type", "packed");
                     }
                     vortex function_e92d3bb1(entity);
@@ -157,7 +157,7 @@ function private function_8746ceea(entity) {
     return false;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x5 linked
 // Checksum 0xcf00231a, Offset: 0xf48
 // Size: 0x15a
@@ -167,12 +167,12 @@ function private function_2ffb7337(entity) {
         return true;
     }
     if (isdefined(level.var_9baa9723)) {
-        foreach (var_15c31508 in level.var_9baa9723) {
-            if (isdefined(var_15c31508)) {
-                dist_sq = distancesquared(var_15c31508.origin, self.origin);
+        foreach (octobomb in level.var_9baa9723) {
+            if (isdefined(octobomb)) {
+                dist_sq = distancesquared(octobomb.origin, self.origin);
                 if (dist_sq < 360000) {
-                    entity.var_24971ab5 = var_15c31508;
-                    entity setgoal(var_15c31508.origin);
+                    entity.var_24971ab5 = octobomb;
+                    entity setgoal(octobomb.origin);
                     return true;
                 }
             }
@@ -181,7 +181,7 @@ function private function_2ffb7337(entity) {
     return false;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x5 linked
 // Checksum 0xef228288, Offset: 0x10b0
 // Size: 0x184
@@ -206,13 +206,13 @@ function private function_d8f5da34(var_2dba2212) {
     return false;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x1 linked
 // Checksum 0x56378946, Offset: 0x1240
 // Size: 0x94
 function function_957c9419() {
     self endon(#"death");
-    wait(60);
+    wait 60;
     if (isdefined(self.ignoreall) && (isdefined(self.var_72308ff2) && (isdefined(self.var_d77404f7) && self.var_d77404f7 || self.var_72308ff2) || self.ignoreall)) {
         self.var_d77404f7 = 0;
         self.var_72308ff2 = 0;
@@ -221,7 +221,7 @@ function function_957c9419() {
     }
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x1 linked
 // Checksum 0x62eb8dcb, Offset: 0x12e0
 // Size: 0x3a
@@ -232,7 +232,7 @@ function function_beb13c4b(entity) {
     return false;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4cf7a31, Offset: 0x1328
 // Size: 0x2e
@@ -243,7 +243,7 @@ function function_fc277828(entity) {
     return false;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf00a1db5, Offset: 0x1360
 // Size: 0x3a
@@ -254,7 +254,7 @@ function function_d1cb5cbc(entity) {
     return false;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x5 linked
 // Checksum 0x8d6fdf20, Offset: 0x13a8
 // Size: 0xbe
@@ -272,7 +272,7 @@ function private function_4e06a982(entity) {
     return true;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2fdf1357, Offset: 0x1470
 // Size: 0x30
@@ -281,7 +281,7 @@ function function_4210ca29(entity) {
     entity.var_72308ff2 = 1;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb370ce16, Offset: 0x14a8
 // Size: 0xb4
@@ -292,13 +292,13 @@ function function_910e57ee(entity) {
         if (entity.s_trap.script_noteworthy == "masher_trap_switch") {
             level flag::clear("masher_on");
         } else {
-            level.var_de3378ba notify(#"trap_deactivate");
+            level.electric_trap notify(#"trap_deactivate");
         }
     }
     namespace_648c84b6::mechztargetservice(entity);
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x1 linked
 // Checksum 0x17184bf0, Offset: 0x1568
 // Size: 0x64
@@ -310,7 +310,7 @@ function function_78198ba2(entity) {
     namespace_648c84b6::mechzstopflame(entity);
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 5, eflags: 0x1 linked
 // Checksum 0x8af26e9a, Offset: 0x15d8
 // Size: 0x84
@@ -319,7 +319,7 @@ function function_45f397ee(entity, mocompanim, mocompanimblendouttime, mocompani
     entity animmode("normal");
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 5, eflags: 0x1 linked
 // Checksum 0xc8867e8e, Offset: 0x1668
 // Size: 0x4c
@@ -327,7 +327,7 @@ function function_9da58a6f(entity, mocompanim, mocompanimblendouttime, mocompani
     entity orientmode("face default");
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6d4acc3f, Offset: 0x16c0
 // Size: 0x2ec
@@ -365,7 +365,7 @@ function function_6367c303() {
     }
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 3, eflags: 0x1 linked
 // Checksum 0xd8f5e84c, Offset: 0x19b8
 // Size: 0x54
@@ -376,7 +376,7 @@ function function_26beb37e(n_value, n_limit, n_player_modifier) {
     return n_value;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3fa40fb3, Offset: 0x1a18
 // Size: 0xfa
@@ -396,7 +396,7 @@ function function_d8d01032() {
     level notify(#"hash_8f65ad3d");
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x1 linked
 // Checksum 0x395bf9f3, Offset: 0x1b20
 // Size: 0x64
@@ -404,32 +404,32 @@ function function_3fdbda1e() {
     self function_1faf1646();
     util::wait_network_frame();
     self clientfield::increment("mechz_fx_spawn");
-    wait(1);
+    wait 1;
     self function_ee090a93();
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2363b45c, Offset: 0x1b90
 // Size: 0x2c
 function function_b7e11612() {
     self waittill(#"death");
-    self namespace_c149ef1::function_f7879c72(self.attacker);
+    self zm_genesis_vo::function_f7879c72(self.attacker);
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf4dca2d, Offset: 0x1bc8
 // Size: 0x44
 function function_b2a1b297() {
     mechz = self waittill(#"actor_corpse");
-    wait(60);
+    wait 60;
     if (isdefined(mechz)) {
         mechz delete();
     }
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x1 linked
 // Checksum 0x89ea333c, Offset: 0x1c18
 // Size: 0x244
@@ -437,7 +437,7 @@ function function_2a26e636() {
     self endon(#"death");
     while (true) {
         if (!isdefined(self.zone_name)) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         var_225b5e15 = 1;
@@ -471,37 +471,37 @@ function function_2a26e636() {
         if (var_e01c8f74 && (var_225b5e15 && !var_9626d5b6 || var_9626d5b6)) {
             break;
         }
-        wait(0.5);
+        wait 0.5;
     }
     self thread function_17da3db2();
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7b4efa08, Offset: 0x1e68
 // Size: 0x54
 function function_17da3db2() {
-    wait(0.05);
+    wait 0.05;
     if (isdefined(self)) {
         self delete();
     }
-    wait(1.1);
-    level thread namespace_6929903c::spawn_boss("mechz");
+    wait 1.1;
+    level thread zm_genesis_round_bosses::spawn_boss("mechz");
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdfd65fd3, Offset: 0x1ec8
 // Size: 0x3c
 function function_a2a11991() {
     self endon(#"death");
     while (!isdefined(self.zombie_lift_override)) {
-        wait(0.05);
+        wait 0.05;
     }
     self.zombie_lift_override = &function_2d571578;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7668c947, Offset: 0x1f10
 // Size: 0xc4
@@ -514,7 +514,7 @@ function function_2a2bfc25() {
     }
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 12, eflags: 0x1 linked
 // Checksum 0x127817f3, Offset: 0x1fe0
 // Size: 0x64
@@ -522,7 +522,7 @@ function function_f517cdd6(inflictor, attacker, damage, dflags, mod, weapon, poi
     
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 5, eflags: 0x1 linked
 // Checksum 0x55d305a2, Offset: 0x2050
 // Size: 0xdc
@@ -532,11 +532,11 @@ function function_5683b5d5(entity, mocompanim, mocompanimblendouttime, mocompani
     entity animmode("normal");
     if (isdefined(entity.traversestartnode)) {
         portal_trig = entity.traversestartnode.portal_trig;
-        portal_trig thread namespace_766d6099::function_eb1242c8(entity);
+        portal_trig thread zm_genesis_portals::function_eb1242c8(entity);
     }
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 6, eflags: 0x1 linked
 // Checksum 0xf5b7b7a4, Offset: 0x2138
 // Size: 0x2c8
@@ -576,7 +576,7 @@ function function_2d571578(e_player, v_attack_source, n_push_away, n_lift_height
     }
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x1 linked
 // Checksum 0xcdd8f98b, Offset: 0x2408
 // Size: 0x1a4
@@ -588,7 +588,7 @@ function function_a0b6d6b9(mechz) {
     if (isdefined(mechz) && isalive(mechz) && isdefined(mechz.var_ab0efcf6)) {
         var_c430eda8 = mechz gettagorigin("tag_eye");
         /#
-            recordline(mechz.origin, var_c430eda8, (0, 255, 0), "genesisVortexService", mechz);
+            recordline(mechz.origin, var_c430eda8, (0, 255, 0), "<dev string:x28>", mechz);
         #/
         trace = bullettrace(var_c430eda8, mechz.origin, 0, mechz);
         if (trace["position"] !== mechz.origin) {
@@ -601,7 +601,7 @@ function function_a0b6d6b9(mechz) {
     }
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 2, eflags: 0x1 linked
 // Checksum 0xbe06b1aa, Offset: 0x25b8
 // Size: 0xa4
@@ -611,7 +611,7 @@ function function_5f2149bb(inflictor, attacker) {
     self dodamage(n_damage, self getcentroid(), inflictor, attacker, undefined, "MOD_PROJECTILE_SPLASH", 0, getweapon("none"));
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x5 linked
 // Checksum 0xf9fd1480, Offset: 0x2668
 // Size: 0x34
@@ -623,7 +623,7 @@ function private function_1df1ec14() {
     return false;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x5 linked
 // Checksum 0x868b0e29, Offset: 0x26a8
 // Size: 0xae
@@ -640,7 +640,7 @@ function private function_40ef38f8() {
     return speedboost;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 2, eflags: 0x1 linked
 // Checksum 0xdcc4e48e, Offset: 0x2760
 // Size: 0x46
@@ -651,7 +651,7 @@ function function_a8588ff(attacker, damage) {
     return damage;
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x5 linked
 // Checksum 0xebf31b1c, Offset: 0x27b0
 // Size: 0x6c
@@ -663,7 +663,7 @@ function private function_1faf1646() {
     self pathmode("dont move");
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x5 linked
 // Checksum 0x6950a9c0, Offset: 0x2828
 // Size: 0x70
@@ -671,43 +671,43 @@ function private function_ee090a93() {
     self.isfrozen = 0;
     self show();
     self solid();
-    wait(0.5);
+    wait 0.5;
     self pathmode("move allowed");
     self.candamage = 1;
 }
 
 /#
 
-    // Namespace namespace_8f77dbcb
+    // Namespace zm_genesis_mechz
     // Params 0, eflags: 0x1 linked
     // Checksum 0xb373f219, Offset: 0x28a0
     // Size: 0xb8
     function function_78e44cda() {
-        wait(0.05);
+        wait 0.05;
         level waittill(#"start_zombie_round_logic");
-        wait(0.05);
-        setdvar("genesisVortexService", 0);
-        adddebugcommand("genesisVortexService");
+        wait 0.05;
+        setdvar("<dev string:x2f>", 0);
+        adddebugcommand("<dev string:x5c>");
         while (true) {
-            if (getdvarint("genesisVortexService")) {
-                setdvar("genesisVortexService", 0);
+            if (getdvarint("<dev string:x2f>")) {
+                setdvar("<dev string:x2f>", 0);
                 level thread function_eac1444a();
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 
-    // Namespace namespace_8f77dbcb
+    // Namespace zm_genesis_mechz
     // Params 0, eflags: 0x1 linked
     // Checksum 0x5da0bfa5, Offset: 0x2960
     // Size: 0x282
     function function_eac1444a() {
-        var_10b176f0 = getaiarchetypearray("genesisVortexService");
+        var_10b176f0 = getaiarchetypearray("<dev string:xbc>");
         foreach (var_99c3dd59 in var_10b176f0) {
-            var_efe3c52f = level.activeplayers[0] gettagorigin("genesisVortexService") + (0, 0, 20);
-            var_7ddc55f4 = level.activeplayers[0] gettagorigin("genesisVortexService") + (5, 0, 20);
-            var_a3ded05d = level.activeplayers[0] gettagorigin("genesisVortexService") + (-5, 0, 20);
-            var_31d76122 = level.activeplayers[0] gettagorigin("genesisVortexService") + (0, 0, 15);
+            var_efe3c52f = level.activeplayers[0] gettagorigin("<dev string:xc2>") + (0, 0, 20);
+            var_7ddc55f4 = level.activeplayers[0] gettagorigin("<dev string:xc2>") + (5, 0, 20);
+            var_a3ded05d = level.activeplayers[0] gettagorigin("<dev string:xc2>") + (-5, 0, 20);
+            var_31d76122 = level.activeplayers[0] gettagorigin("<dev string:xc2>") + (0, 0, 15);
             magicbullet(level.var_e106fba5, var_efe3c52f, var_99c3dd59 getcentroid(), level.activeplayers[0]);
             magicbullet(level.var_791ba87b, var_7ddc55f4, var_99c3dd59 getcentroid(), level.activeplayers[0]);
             magicbullet(level.var_5d4538da, var_a3ded05d, var_99c3dd59 getcentroid(), level.activeplayers[0]);
@@ -715,7 +715,7 @@ function private function_ee090a93() {
         }
     }
 
-    // Namespace namespace_8f77dbcb
+    // Namespace zm_genesis_mechz
     // Params 3, eflags: 0x0
     // Checksum 0xdad1de02, Offset: 0x2bf0
     // Size: 0x5c

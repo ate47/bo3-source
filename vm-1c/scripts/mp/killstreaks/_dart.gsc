@@ -54,7 +54,7 @@ function wait_dart_timed_out(time) {
     self endon(#"death");
     self endon(#"dart_throw_failed");
     self endon(#"dart_entered");
-    wait(time);
+    wait time;
     self notify(#"dart_throw_timed_out");
 }
 
@@ -282,7 +282,7 @@ function debug_origin() {
         /#
             sphere(self.origin, 5, (1, 0, 0), 1, 1, 2, 120);
         #/
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -511,7 +511,7 @@ function watchammo() {
         player clientfield::set_to_player("dart_update_ammo", params.ksdartshotcount - shotcount);
         if (shotcount >= params.ksdartshotcount) {
             dart disabledriverfiring(1);
-            wait(params.ksdartwaittimeafterlastshot);
+            wait params.ksdartwaittimeafterlastshot;
             dart stop_remote_weapon();
         }
     }
@@ -594,7 +594,7 @@ function leave_dart() {
             if (!isdefined(params.ksdartcamerawatchduration)) {
                 params.ksdartcamerawatchduration = 2;
             }
-            wait(params.ksdartcamerawatchduration);
+            wait params.ksdartcamerawatchduration;
             if (isdefined(owner)) {
                 owner cameraactivate(0);
             }
@@ -637,7 +637,7 @@ function deleteonconditions(condition) {
 function waitthendelete(waittime) {
     self endon(#"delete");
     self endon(#"death");
-    wait(waittime);
+    wait waittime;
     self delete();
 }
 
@@ -647,7 +647,7 @@ function waitthendelete(waittime) {
 // Size: 0x106
 function play_bda_dialog(pilotindex) {
     self endon(#"game_ended");
-    wait(0.5);
+    wait 0.5;
     if (!isdefined(self.dartbda) || self.dartbda == 0) {
         bdadialog = "killNone";
     } else if (self.dartbda == 1) {

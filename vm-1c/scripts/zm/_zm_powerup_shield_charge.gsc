@@ -96,13 +96,13 @@ function shield_on_hud(drop_item, player_team) {
 function full_ammo_move_hud(player_team) {
     players = getplayers(player_team);
     players[0] playsoundtoteam("zmb_full_ammo", player_team);
-    wait(0.5);
+    wait 0.5;
     move_fade_time = 1.5;
     self fadeovertime(move_fade_time);
     self moveovertime(move_fade_time);
     self.y = 270;
     self.alpha = 0;
-    wait(move_fade_time);
+    wait move_fade_time;
     self destroy();
 }
 
@@ -113,11 +113,11 @@ function full_ammo_move_hud(player_team) {
     // Checksum 0xeb04e2df, Offset: 0x7c0
     // Size: 0x7c
     function shield_devgui() {
-        level flagsys::wait_till("zombie_timer_offset");
-        wait(1);
+        level flagsys::wait_till("<dev string:x28>");
+        wait 1;
         zm_devgui::add_custom_devgui_callback(&shield_devgui_callback);
-        adddebugcommand("zombie_timer_offset");
-        adddebugcommand("zombie_timer_offset");
+        adddebugcommand("<dev string:x41>");
+        adddebugcommand("<dev string:x92>");
     }
 
     // Namespace zm_powerup_shield_charge
@@ -128,10 +128,10 @@ function full_ammo_move_hud(player_team) {
         players = getplayers();
         retval = 0;
         switch (cmd) {
-        case 8:
+        case "<dev string:xeb>":
             zm_devgui::zombie_devgui_give_powerup(cmd, 1);
             break;
-        case 8:
+        case "<dev string:xf9>":
             zm_devgui::zombie_devgui_give_powerup(getsubstr(cmd, 5), 0);
             break;
         }

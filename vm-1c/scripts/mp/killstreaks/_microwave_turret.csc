@@ -50,7 +50,7 @@ function turret_microwave_sound_start(localclientnum) {
         return;
     }
     self playsound(0, "wpn_micro_turret_start");
-    wait(0.7);
+    wait 0.7;
     origin = self gettagorigin("tag_flash");
     angles = self gettagangles("tag_flash");
     forward = anglestoforward(angles);
@@ -103,7 +103,7 @@ function turret_microwave_sound_updater() {
             self.microwave_audio_end = trace["position"];
             soundupdatelineemitter("wpn_micro_turret_loop", previousstart, previousend, self.microwave_audio_start, self.microwave_audio_end);
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -158,13 +158,13 @@ function microwave_close_anim(localclientnum, oldval, newval, bnewent, binitials
     // Checksum 0xf6e859b, Offset: 0xc38
     // Size: 0xe4
     function debug_trace(origin, trace) {
-        if (trace["tag_flash"] < 1) {
+        if (trace["<dev string:x28>"] < 1) {
             color = (0.95, 0.05, 0.05);
         } else {
             color = (0.05, 0.95, 0.05);
         }
-        sphere(trace["tag_flash"], 5, color, 0.75, 1, 10, 100);
-        util::debug_line(origin, trace["tag_flash"], color, 100);
+        sphere(trace["<dev string:x31>"], 5, color, 0.75, 1, 10, 100);
+        util::debug_line(origin, trace["<dev string:x31>"], color, 100);
     }
 
 #/
@@ -190,20 +190,20 @@ function startmicrowavefx(localclientnum) {
     microwavefxent.fxhashs = [];
     self thread updatemicrowaveaim(microwavefxent);
     self thread cleanupfx(localclientnum, microwavefxent);
-    wait(0.3);
+    wait 0.3;
     while (true) {
         /#
-            if (getdvarint("tag_flash")) {
+            if (getdvarint("<dev string:x3a>")) {
                 turret.should_update_fx = 1;
-                microwavefxent.fxhashs["tag_flash"] = 0;
+                microwavefxent.fxhashs["<dev string:x58>"] = 0;
             }
         #/
         if (turret.should_update_fx == 0) {
-            wait(1);
+            wait 1;
             continue;
         }
         if (isdefined(level.last_microwave_turret_fx_trace) && level.last_microwave_turret_fx_trace == gettime()) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         angles = turret gettagangles("tag_flash");
@@ -218,7 +218,7 @@ function startmicrowavefx(localclientnum) {
         traceright = bullettrace(origin, origin + var_af36cb32, 0, turret);
         traceleft = bullettrace(origin, origin + var_3d4b46f7, 0, turret);
         /#
-            if (getdvarint("tag_flash")) {
+            if (getdvarint("<dev string:x3a>")) {
                 debug_trace(origin, trace);
                 debug_trace(origin, traceright);
                 debug_trace(origin, traceleft);
@@ -229,13 +229,13 @@ function startmicrowavefx(localclientnum) {
         need_to_rebuild |= microwavefxent microwavefxhash(traceleft, origin, "left");
         level.last_microwave_turret_fx_trace = gettime();
         if (!need_to_rebuild) {
-            wait(1);
+            wait 1;
             continue;
         }
-        wait(0.1);
+        wait 0.1;
         microwavefxent playmicrowavefx(localclientnum, trace, traceright, traceleft, origin);
         turret.should_update_fx = 0;
-        wait(1);
+        wait 1;
     }
 }
 
@@ -254,7 +254,7 @@ function updatemicrowaveaim(microwavefxent) {
             turret.should_update_fx = 1;
             last_angles = angles;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -331,7 +331,7 @@ function stop_fx_on_tag(localclientnum, fxname, tag) {
     // Checksum 0x1ba56, Offset: 0x1740
     // Size: 0x94
     function render_debug_sphere(tag, color, fxname) {
-        if (getdvarint("tag_flash")) {
+        if (getdvarint("<dev string:x3a>")) {
             origin = self gettagorigin(tag);
             sphere(origin, 2, color, 0.75, 1, 10, 100);
         }
@@ -347,7 +347,7 @@ function stop_or_start_fx(localclientnum, fxname, tag, start) {
     if (start) {
         self play_fx_on_tag(localclientnum, fxname, tag);
         /#
-            if (fxname == "tag_flash") {
+            if (fxname == "<dev string:x5f>") {
                 render_debug_sphere(tag, (0.5, 0.5, 0), fxname);
             } else {
                 render_debug_sphere(tag, (0, 1, 0), fxname);

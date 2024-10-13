@@ -321,7 +321,7 @@ function function_f374c6fc(var_ddbfd9e3, mode, localclientnum, xuid, characterin
         attachmentnames[attachmentnames.size] = "none";
         var_9853d5dd[var_9853d5dd.size] = 0;
     }
-    var_ddbfd9e3.var_65ce895e = getattachmentcosmeticvariantindexes(var_ddbfd9e3.var_8f9c1e31, attachmentnames[0], var_9853d5dd[0], attachmentnames[1], var_9853d5dd[1], attachmentnames[2], var_9853d5dd[2], attachmentnames[3], var_9853d5dd[3], attachmentnames[4], var_9853d5dd[4], attachmentnames[5], var_9853d5dd[5], attachmentnames[6], var_9853d5dd[6], attachmentnames[7], var_9853d5dd[7]);
+    var_ddbfd9e3.acvi = getattachmentcosmeticvariantindexes(var_ddbfd9e3.var_8f9c1e31, attachmentnames[0], var_9853d5dd[0], attachmentnames[1], var_9853d5dd[1], attachmentnames[2], var_9853d5dd[2], attachmentnames[3], var_9853d5dd[3], attachmentnames[4], var_9853d5dd[4], attachmentnames[5], var_9853d5dd[5], attachmentnames[6], var_9853d5dd[6], attachmentnames[7], var_9853d5dd[7]);
     camoindex = 0;
     paintjobslot = 15;
     paintjobindex = 15;
@@ -441,7 +441,7 @@ function update(localclientnum, var_ddbfd9e3, params) {
     update_model_attachment(localclientnum, var_ddbfd9e3, var_88932ad4, "helmet", undefined, undefined, 1);
     head_model = var_ddbfd9e3.headmodel;
     if (var_8f53ef86 && isdefined(params) && getcharacterhelmethideshead(var_ddbfd9e3.characterindex, var_ddbfd9e3.var_bf37af0a, isdefined(params.sessionmode) ? params.sessionmode : var_ddbfd9e3.charactermode)) {
-        assert(var_88932ad4 != "script_model");
+        assert(var_88932ad4 != "<dev string:x28>");
         head_model = "tag_origin";
     }
     update_model_attachment(localclientnum, var_ddbfd9e3, head_model, "head", undefined, undefined, 1);
@@ -815,8 +815,8 @@ function function_873d37c(localclientnum, var_ddbfd9e3, params) {
     }
     if (params.anim_name !== var_ddbfd9e3.var_a5c8c7ea || isdefined(params.anim_name) && align_changed) {
         changed = 1;
-        namespace_3cadf69b::function_7222354d(localclientnum, var_ddbfd9e3.charactermodel);
-        namespace_3cadf69b::function_1926278(var_ddbfd9e3.charactermodel);
+        end_game_taunts::function_7222354d(localclientnum, var_ddbfd9e3.charactermodel);
+        end_game_taunts::function_1926278(var_ddbfd9e3.charactermodel);
         var_ddbfd9e3.var_a5c8c7ea = params.anim_name;
         var_ddbfd9e3.weapon_right = params.weapon_right;
         if (!var_ddbfd9e3.charactermodel hasanimtree()) {
@@ -850,11 +850,11 @@ function function_873d37c(localclientnum, var_ddbfd9e3, params) {
         if (isdefined(var_ddbfd9e3.attached_models["tag_weapon_left"]) && var_ddbfd9e3.charactermodel isattached(var_ddbfd9e3.attached_models["tag_weapon_left"], "tag_weapon_left")) {
             var_ddbfd9e3.charactermodel detach(var_ddbfd9e3.attached_models["tag_weapon_left"], "tag_weapon_left");
         }
-        var_ddbfd9e3.charactermodel attachweapon(var_ddbfd9e3.var_8f9c1e31, var_ddbfd9e3.weaponrenderoptions, var_ddbfd9e3.var_65ce895e);
+        var_ddbfd9e3.charactermodel attachweapon(var_ddbfd9e3.var_8f9c1e31, var_ddbfd9e3.weaponrenderoptions, var_ddbfd9e3.acvi);
         var_ddbfd9e3.charactermodel useweaponhidetags(var_ddbfd9e3.var_8f9c1e31);
         var_ddbfd9e3.charactermodel.showcaseweapon = var_ddbfd9e3.var_8f9c1e31;
         var_ddbfd9e3.charactermodel.var_7ff9e1d4 = var_ddbfd9e3.weaponrenderoptions;
-        var_ddbfd9e3.charactermodel.var_4b073b25 = var_ddbfd9e3.var_65ce895e;
+        var_ddbfd9e3.charactermodel.var_4b073b25 = var_ddbfd9e3.acvi;
     }
     return changed;
 }
@@ -943,10 +943,10 @@ function updateeventthread(localclientnum, var_ddbfd9e3) {
     while (true) {
         eventtype, param1, param2, param3, param4 = level waittill("updateHero" + localclientnum);
         switch (eventtype) {
-        case 113:
+        case "update_lcn":
             var_ddbfd9e3.var_2fee1906 = param1;
             break;
-        case 112:
+        case "refresh":
             var_ddbfd9e3.var_2fee1906 = param1;
             params = spawnstruct();
             params.anim_name = "pb_cac_main_lobby_idle";
@@ -956,13 +956,13 @@ function updateeventthread(localclientnum, var_ddbfd9e3) {
                 level.var_5b12555e.playsound = param3;
             }
             break;
-        case 108:
+        case "changeHero":
             params = spawnstruct();
             params.anim_name = "pb_cac_main_lobby_idle";
             params.sessionmode = param2;
             function_d79d6d7(localclientnum, var_ddbfd9e3, param1, params);
             break;
-        case 102:
+        case "changeBody":
             params = spawnstruct();
             params.sessionmode = param2;
             params.isitemunlocked = param3;
@@ -970,7 +970,7 @@ function updateeventthread(localclientnum, var_ddbfd9e3) {
             update(localclientnum, var_ddbfd9e3, params);
             update_locked_shader(localclientnum, params);
             break;
-        case 106:
+        case "changeHelmet":
             params = spawnstruct();
             params.sessionmode = param2;
             params.isitemunlocked = param3;
@@ -978,31 +978,31 @@ function updateeventthread(localclientnum, var_ddbfd9e3) {
             update(localclientnum, var_ddbfd9e3, params);
             update_locked_shader(localclientnum, params);
             break;
-        case 109:
+        case "changeShowcaseWeapon":
             params = spawnstruct();
             params.sessionmode = param4;
             function_f374c6fc(var_ddbfd9e3, param4, localclientnum, undefined, var_ddbfd9e3.characterindex, param1, param2, param3, 0, 1);
             update(localclientnum, var_ddbfd9e3, params);
             break;
-        case 105:
+        case "changeHead":
             params = spawnstruct();
             params.sessionmode = param2;
             function_5b80fae8(var_ddbfd9e3, param2, param1);
             update(localclientnum, var_ddbfd9e3, params);
             break;
-        case 103:
+        case "changeBodyAccentColor":
             params = spawnstruct();
             params.sessionmode = param3;
             function_f87a1792(var_ddbfd9e3, param1, param2);
             update(localclientnum, var_ddbfd9e3, params);
             break;
-        case 107:
+        case "changeHelmetAccentColor":
             params = spawnstruct();
             params.sessionmode = param3;
             function_883d8451(var_ddbfd9e3, param1, param2);
             update(localclientnum, var_ddbfd9e3, params);
             break;
-        case 104:
+        case "changeFrozenMoment":
             var_ddbfd9e3.var_d11acdfe = param1;
             if (var_ddbfd9e3.var_62e980f) {
                 markasdirty(var_ddbfd9e3.charactermodel);
@@ -1010,14 +1010,14 @@ function updateeventthread(localclientnum, var_ddbfd9e3) {
             }
             level notify("frozenMomentChanged" + localclientnum);
             break;
-        case 110:
+        case "previewGesture":
             var_ddbfd9e3.var_a5c8c7ea = param1;
-            thread namespace_3cadf69b::previewgesture(localclientnum, var_ddbfd9e3.charactermodel, var_ddbfd9e3.anim_name, param1);
+            thread end_game_taunts::previewgesture(localclientnum, var_ddbfd9e3.charactermodel, var_ddbfd9e3.anim_name, param1);
             break;
-        case 111:
+        case "previewTaunt":
             if (function_ddd0628f(var_ddbfd9e3)) {
                 var_ddbfd9e3.var_a5c8c7ea = param1;
-                thread namespace_3cadf69b::function_b5457a9d(localclientnum, var_ddbfd9e3.charactermodel, var_ddbfd9e3.anim_name, param1);
+                thread end_game_taunts::previewTaunt(localclientnum, var_ddbfd9e3.charactermodel, var_ddbfd9e3.anim_name, param1);
             }
             break;
         }
@@ -1064,7 +1064,7 @@ function update_model_rotation_for_right_stick(localclientnum, var_ddbfd9e3, end
                 model.angles = (model.angles[0], absangleclamp360(model.angles[1] - pos["yaw"] * 3), model.angles[2]);
             }
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -1135,12 +1135,12 @@ function setup_character_extracam_settings(localclientnum, var_ddbfd9e3, extraca
     var_ddbfd9e3.alt_render_mode = 0;
     function_d79d6d7(localclientnum, var_ddbfd9e3, extracam_data_struct.characterindex, params);
     while (!function_ddd0628f(var_ddbfd9e3)) {
-        wait(0.016);
+        wait 0.016;
     }
     if (isdefined(extracam_data_struct.defaultimagerender) && extracam_data_struct.defaultimagerender) {
-        wait(0.5);
+        wait 0.5;
     } else {
-        wait(0.1);
+        wait 0.1;
     }
     setextracamrenderready(extracam_data_struct.jobindex);
     extracam_data_struct.jobindex = undefined;

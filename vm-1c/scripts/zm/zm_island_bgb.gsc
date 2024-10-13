@@ -19,9 +19,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f694d9ca;
+#namespace zm_island_bgb;
 
-// Namespace namespace_f694d9ca
+// Namespace zm_island_bgb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc3fd3aaf, Offset: 0x3a8
 // Size: 0x34
@@ -30,7 +30,7 @@ function init() {
     level.var_2d0e5eb6 = &function_2d0e5eb6;
 }
 
-// Namespace namespace_f694d9ca
+// Namespace zm_island_bgb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x19c8ce9d, Offset: 0x3e8
 // Size: 0x144
@@ -48,7 +48,7 @@ function function_fa778ca4() {
     return s_respawn_point;
 }
 
-// Namespace namespace_f694d9ca
+// Namespace zm_island_bgb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd2510803, Offset: 0x538
 // Size: 0x1d4

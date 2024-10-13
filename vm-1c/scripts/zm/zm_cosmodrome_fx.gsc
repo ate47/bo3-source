@@ -2,9 +2,9 @@
 
 #using_animtree("fxanim_props");
 
-#namespace namespace_eb3fb2b6;
+#namespace zm_cosmodrome_fx;
 
-// Namespace namespace_eb3fb2b6
+// Namespace zm_cosmodrome_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x51208832, Offset: 0x5b8
 // Size: 0x2c
@@ -13,7 +13,7 @@ function main() {
     level thread function_f205a5f1();
 }
 
-// Namespace namespace_eb3fb2b6
+// Namespace zm_cosmodrome_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6f20814, Offset: 0x5f0
 // Size: 0x24e
@@ -41,7 +41,7 @@ function function_f45953c() {
     level._effect["fx_light_ee_progress"] = "dlc5/cosmo/fx_light_ee_progress";
 }
 
-// Namespace namespace_eb3fb2b6
+// Namespace zm_cosmodrome_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4c494f54, Offset: 0x848
 // Size: 0xca

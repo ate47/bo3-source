@@ -100,7 +100,7 @@ class csceneobject : cscriptbundleobjectbase {
         }
         if (n_delay > 0) {
             flagsys::set("ready");
-            wait(n_delay);
+            wait n_delay;
             _spawn(clientnum);
         } else {
             _spawn(clientnum);
@@ -121,7 +121,7 @@ class csceneobject : cscriptbundleobjectbase {
             }
         } else {
             /#
-                cscriptbundleobjectbase::log("' doesn't exist for scene object." + animation + "' doesn't exist for scene object.");
+                cscriptbundleobjectbase::log("<dev string:x5b>" + animation + "<dev string:x75>");
             #/
         }
         self._is_valid = is_alive(clientnum);
@@ -621,7 +621,7 @@ class cscene : cscriptbundlebase {
                         self._e_root thread [[ func ]](a_ents);
                         break;
                     default:
-                        assertmsg("' doesn't exist for scene object.");
+                        assertmsg("<dev string:x8a>");
                         break;
                     }
                 }
@@ -869,8 +869,8 @@ function player_scene_animation_skip(localclientnum, oldval, newval, bnewent, bi
         is_looping = isanimlooping(localclientnum, anim_name);
         if (!is_looping) {
             /#
-                if (getdvarint("' doesn't exist for scene object.") > 0) {
-                    printtoprightln("' doesn't exist for scene object." + anim_name + "' doesn't exist for scene object." + gettime(), (0.6, 0.6, 0.6));
+                if (getdvarint("<dev string:x28>") > 0) {
+                    printtoprightln("<dev string:x39>" + anim_name + "<dev string:x57>" + gettime(), (0.6, 0.6, 0.6));
                 }
             #/
             self setanimtimebyname(anim_name, 1, 1);
@@ -1038,12 +1038,12 @@ function postfx_igc(localclientnum, oldval, newval, bnewent, binitialsnap, field
                 for (j = 650; j < 1150; j += 16) {
                     jt = j / 1000;
                     filter::set_filter_frame_transition_heavy_hexagons(self, 5, mapfloat(0.65, 1.15, 0, 1, jt));
-                    wait(0.016);
+                    wait 0.016;
                 }
                 for (j = 1150; j < 650; j -= 16) {
                     jt = j / 1000;
                     filter::set_filter_frame_transition_heavy_hexagons(self, 5, mapfloat(0.65, 1.15, 0, 1, jt));
-                    wait(0.016);
+                    wait 0.016;
                 }
             }
             b_streamer_wait = 0;
@@ -1123,7 +1123,7 @@ function postfx_igc(localclientnum, oldval, newval, bnewent, binitialsnap, field
         } else if (st >= 1.85) {
             filter::set_filter_frame_transition_warp(self, 5, -1 * (1 - mapfloat(1.85, 2, 0, 1, st)));
         }
-        wait(0.016);
+        wait 0.016;
     }
     filter::disable_filter_base_frame_transition(self, 5);
     filter::disable_filter_sprite_transition(self, 5);
@@ -1139,7 +1139,7 @@ function postfx_igc(localclientnum, oldval, newval, bnewent, binitialsnap, field
 // Size: 0x56
 function postfx_igc_zombies(localclientnum) {
     lui::screen_fade_out(0, "black");
-    wait(0.016);
+    wait 0.016;
     lui::screen_fade_in(0.3);
     self.postfx_igc_on = undefined;
 }
@@ -1174,7 +1174,7 @@ function postfx_igc_short(localclientnum, oldval, newval, bnewent, binitialsnap,
         } else {
             filter::set_filter_frame_transition_iris(self, 5, 0);
         }
-        wait(0.016);
+        wait 0.016;
     }
     filter::disable_filter_base_frame_transition(self, 5);
     filter::disable_filter_sprite_transition(self, 5);
@@ -1253,7 +1253,7 @@ function is_igc() {
 // Checksum 0x6b8262b2, Offset: 0x6550
 // Size: 0x2da
 function __main__() {
-    wait(0.05);
+    wait 0.05;
     if (isdefined(level.disablefxaniminsplitscreencount)) {
         if (isdefined(level.localplayers)) {
             if (level.localplayers.size >= level.disablefxaniminsplitscreencount) {
@@ -1266,7 +1266,7 @@ function __main__() {
     }
     foreach (s_instance in a_instances) {
         s_scenedef = struct::get_script_bundle("scene", s_instance.scriptbundlename);
-        assert(isdefined(s_scenedef), "' doesn't exist for scene object." + s_instance.origin + "' doesn't exist for scene object." + s_instance.scriptbundlename + "' doesn't exist for scene object.");
+        assert(isdefined(s_scenedef), "<dev string:xae>" + s_instance.origin + "<dev string:xbe>" + s_instance.scriptbundlename + "<dev string:xd3>");
         if (s_scenedef.vmtype == "client") {
             if (isdefined(level.var_283122e6) && [[ level.var_283122e6 ]](s_instance.scriptbundlename)) {
                 continue;
@@ -1315,14 +1315,14 @@ function _trigger_stop(trig) {
 }
 
 // Namespace scene
-// Params 4, eflags: 0x21 linked
+// Params 4, eflags: 0x21 linked variadic
 // Checksum 0xca6922f0, Offset: 0x6958
 // Size: 0x19e
 function add_scene_func(str_scenedef, func, str_state, ...) {
     if (!isdefined(str_state)) {
         str_state = "play";
     }
-    assert(isdefined(get_scenedef(str_scenedef)), "' doesn't exist for scene object." + str_scenedef + "' doesn't exist for scene object.");
+    assert(isdefined(get_scenedef(str_scenedef)), "<dev string:xe9>" + str_scenedef + "<dev string:xd3>");
     if (!isdefined(level.scene_funcs)) {
         level.scene_funcs = [];
     }
@@ -1345,7 +1345,7 @@ function remove_scene_func(str_scenedef, func, str_state) {
     if (!isdefined(str_state)) {
         str_state = "play";
     }
-    assert(isdefined(get_scenedef(str_scenedef)), "' doesn't exist for scene object." + str_scenedef + "' doesn't exist for scene object.");
+    assert(isdefined(get_scenedef(str_scenedef)), "<dev string:x114>" + str_scenedef + "<dev string:xd3>");
     if (!isdefined(level.scene_funcs)) {
         level.scene_funcs = [];
     }
@@ -1364,7 +1364,7 @@ function remove_scene_func(str_scenedef, func, str_state) {
 // Size: 0x1a8
 function spawn(arg1, arg2, arg3, arg4, b_test_run) {
     str_scenedef = arg1;
-    assert(isdefined(str_scenedef), "' doesn't exist for scene object.");
+    assert(isdefined(str_scenedef), "<dev string:x142>");
     if (isvec(arg2)) {
         v_origin = arg2;
         v_angles = arg3;
@@ -1401,7 +1401,7 @@ function init(arg1, arg2, arg3, b_test_run) {
             }
             if (isdefined(str_key)) {
                 a_instances = struct::get_array(str_value, str_key);
-                assert(a_instances.size, "' doesn't exist for scene object." + str_key + "' doesn't exist for scene object." + str_value + "' doesn't exist for scene object.");
+                assert(a_instances.size, "<dev string:x16d>" + str_key + "<dev string:x18b>" + str_value + "<dev string:x18f>");
             } else {
                 a_instances = struct::get_array(str_value, "targetname");
                 if (!a_instances.size) {
@@ -1471,8 +1471,8 @@ function _init_instance(str_scenedef, a_ents, b_test_run) {
     }
     s_bundle = get_scenedef(str_scenedef);
     /#
-        assert(isdefined(str_scenedef), "' doesn't exist for scene object." + (isdefined(self.origin) ? self.origin : "' doesn't exist for scene object.") + "' doesn't exist for scene object.");
-        assert(isdefined(s_bundle), "' doesn't exist for scene object." + (isdefined(self.origin) ? self.origin : "' doesn't exist for scene object.") + "' doesn't exist for scene object." + str_scenedef + "' doesn't exist for scene object.");
+        assert(isdefined(str_scenedef), "<dev string:x192>" + (isdefined(self.origin) ? self.origin : "<dev string:x19d>") + "<dev string:x1a3>");
+        assert(isdefined(s_bundle), "<dev string:x192>" + (isdefined(self.origin) ? self.origin : "<dev string:x19d>") + "<dev string:x1bf>" + str_scenedef + "<dev string:xd3>");
     #/
     o_scene = get_active_scene(str_scenedef);
     if (isdefined(o_scene)) {
@@ -1514,7 +1514,7 @@ function play(arg1, arg2, arg3, b_test_run, str_mode) {
             if (isdefined(str_key)) {
                 a_instances = struct::get_array(str_value, str_key);
                 str_scenedef = undefined;
-                assert(a_instances.size, "' doesn't exist for scene object." + str_key + "' doesn't exist for scene object." + str_value + "' doesn't exist for scene object.");
+                assert(a_instances.size, "<dev string:x16d>" + str_key + "<dev string:x18b>" + str_value + "<dev string:x18f>");
             } else {
                 a_instances = struct::get_array(str_value, "targetname");
                 if (!a_instances.size) {
@@ -1611,7 +1611,7 @@ function stop(arg1, arg2, arg3, b_cancel, b_no_assert) {
             }
             if (isdefined(str_key)) {
                 a_instances = struct::get_array(str_value, str_key);
-                assert(b_no_assert || a_instances.size, "' doesn't exist for scene object." + str_key + "' doesn't exist for scene object." + str_value + "' doesn't exist for scene object.");
+                assert(b_no_assert || a_instances.size, "<dev string:x16d>" + str_key + "<dev string:x18b>" + str_value + "<dev string:x18f>");
                 str_value = undefined;
             } else {
                 a_instances = struct::get_array(str_value, "targetname");

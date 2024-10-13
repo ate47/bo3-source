@@ -20,11 +20,11 @@ function waitforallclients() {
     localclient = 0;
     if (!isdefined(level.localplayers)) {
         while (!isdefined(level.localplayers)) {
-            wait(0.016);
+            wait 0.016;
         }
     }
     while (level.localplayers.size <= 0) {
-        wait(0.016);
+        wait 0.016;
     }
     while (localclient < level.localplayers.size) {
         waitforclient(localclient);
@@ -38,7 +38,7 @@ function waitforallclients() {
 // Size: 0x34
 function waitforclient(client) {
     while (!clienthassnapshot(client)) {
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -91,7 +91,7 @@ function waittill_string(msg, ent) {
 }
 
 // Namespace util
-// Params 1, eflags: 0x20
+// Params 1, eflags: 0x20 variadic
 // Checksum 0x7554b5f1, Offset: 0x5b0
 // Size: 0xaa
 function waittill_multiple(...) {
@@ -106,7 +106,7 @@ function waittill_multiple(...) {
 }
 
 // Namespace util
-// Params 1, eflags: 0x20
+// Params 1, eflags: 0x20 variadic
 // Checksum 0x3c0e4eba, Offset: 0x668
 // Size: 0x1e2
 function waittill_multiple_ents(...) {
@@ -197,7 +197,7 @@ function waittill_any_return(string1, string2, string3, string4, string5, string
 }
 
 // Namespace util
-// Params 1, eflags: 0x21 linked
+// Params 1, eflags: 0x21 linked variadic
 // Checksum 0xd9aff40c, Offset: 0xba0
 // Size: 0x1cc
 function function_183e3618(...) {
@@ -265,7 +265,7 @@ function waittill_any(var_d5de4b6f, var_63d6dc34, var_89d9569d, var_17d1e762, va
 // Checksum 0x6bce93a1, Offset: 0xf28
 // Size: 0x8c
 function function_c7f20692(a_notifies) {
-    assert(isdefined(a_notifies[0]), "actor");
+    assert(isdefined(a_notifies[0]), "<dev string:x28>");
     for (i = 1; i < a_notifies.size; i++) {
         if (isdefined(a_notifies[i])) {
             self endon(a_notifies[i]);
@@ -310,7 +310,7 @@ function waittill_any_timeout(n_timeout, string1, string2, string3, string4, str
 // Size: 0x32
 function _timeout(delay) {
     self endon(#"die");
-    wait(delay);
+    wait delay;
     self notify(#"returned", "timeout");
 }
 
@@ -320,7 +320,7 @@ function _timeout(delay) {
 // Size: 0x22
 function waittill_notify_or_timeout(msg, timer) {
     self endon(msg);
-    wait(timer);
+    wait timer;
 }
 
 // Namespace util
@@ -422,8 +422,8 @@ function call_func(s_func) {
 // Checksum 0x710c3196, Offset: 0x1728
 // Size: 0x16c
 function array_ent_thread(entities, func, arg1, arg2, arg3, arg4, arg5) {
-    assert(isdefined(entities), "actor");
-    assert(isdefined(func), "actor");
+    assert(isdefined(entities), "<dev string:x6d>");
+    assert(isdefined(func), "<dev string:xa5>");
     if (isarray(entities)) {
         if (entities.size) {
             keys = getarraykeys(entities);
@@ -441,7 +441,7 @@ function array_ent_thread(entities, func, arg1, arg2, arg3, arg4, arg5) {
 // Checksum 0xef0e77ee, Offset: 0x18a0
 // Size: 0x184
 function single_thread(entity, func, arg1, arg2, arg3, arg4, arg5, arg6) {
-    assert(isdefined(entity), "actor");
+    assert(isdefined(entity), "<dev string:xd9>");
     if (isdefined(arg6)) {
         entity thread [[ func ]](arg1, arg2, arg3, arg4, arg5, arg6);
         return;
@@ -522,7 +522,7 @@ function _delay(time_or_notify, str_endon, func, arg1, arg2, arg3, arg4, arg5, a
     if (isstring(time_or_notify)) {
         self waittill(time_or_notify);
     } else {
-        wait(time_or_notify);
+        wait time_or_notify;
     }
     single_func(self, func, arg1, arg2, arg3, arg4, arg5, arg6);
 }
@@ -547,7 +547,7 @@ function _delay_notify(time_or_notify, str_notify, str_endon) {
     if (isstring(time_or_notify)) {
         self waittill(time_or_notify);
     } else {
-        wait(time_or_notify);
+        wait time_or_notify;
     }
     self notify(str_notify);
 }
@@ -619,7 +619,7 @@ function timer_wait(n_wait) {
     if (isdefined(self.n_length)) {
         n_wait = min(n_wait, get_time_left());
     }
-    wait(n_wait);
+    wait n_wait;
     n_current_time = get_time_in_seconds();
     return n_current_time;
 }
@@ -722,17 +722,17 @@ function lerp_dvar(str_dvar, n_start_val, n_end_val, n_lerp_time, b_saved_dvar, 
 // Size: 0x1e
 function is_valid_type_for_callback(type) {
     switch (type) {
-    case 7:
-    case 8:
-    case 9:
-    case 10:
-    case 11:
-    case 12:
-    case 13:
-    case 14:
-    case 15:
-    case 16:
-    case 17:
+    case "NA":
+    case "actor":
+    case "general":
+    case "helicopter":
+    case "missile":
+    case "plane":
+    case "player":
+    case "scriptmover":
+    case "trigger":
+    case "turret":
+    case "vehicle":
         return true;
     default:
         return false;
@@ -744,12 +744,12 @@ function is_valid_type_for_callback(type) {
 // Checksum 0xa83a3ff9, Offset: 0x2510
 // Size: 0xa4
 function wait_till_not_touching(e_to_check, e_to_touch) {
-    assert(isdefined(e_to_check), "actor");
-    assert(isdefined(e_to_touch), "actor");
+    assert(isdefined(e_to_check), "<dev string:x10a>");
+    assert(isdefined(e_to_touch), "<dev string:x148>");
     e_to_check endon(#"entityshutdown");
     e_to_touch endon(#"entityshutdown");
     while (e_to_check istouching(e_to_touch)) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -760,8 +760,8 @@ function wait_till_not_touching(e_to_check, e_to_touch) {
     // Checksum 0xc17cbce5, Offset: 0x25c0
     // Size: 0x34
     function error(message) {
-        println("actor", message);
-        wait(0.05);
+        println("<dev string:x186>", message);
+        wait 0.05;
     }
 
 #/
@@ -776,13 +776,13 @@ function register_system(ssysname, cbfunc) {
     }
     if (level._systemstates.size >= 32) {
         /#
-            error("actor");
+            error("<dev string:x194>");
         #/
         return;
     }
     if (isdefined(level._systemstates[ssysname])) {
         /#
-            error("actor" + ssysname);
+            error("<dev string:x1b5>" + ssysname);
         #/
         return;
     }
@@ -812,7 +812,7 @@ function field_use_lighting_ent(localclientnum, oldval, newval, bnewent, binitia
 // Size: 0x3c
 function waittill_dobj(localclientnum) {
     while (isdefined(self) && !self hasdobj(localclientnum)) {
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -834,13 +834,13 @@ function server_wait(localclientnum, seconds, waitbetweenchecks, level_endon) {
         endtime = starttime + seconds * 1000;
         while (level.servertime < endtime && level.servertime >= lasttime) {
             lasttime = level.servertime;
-            wait(waitbetweenchecks);
+            wait waitbetweenchecks;
         }
         if (lasttime < level.servertime) {
             waitcompletedsuccessfully = 1;
         }
     } else {
-        wait(seconds);
+        wait seconds;
         waitcompletedsuccessfully = 1;
     }
     return waitcompletedsuccessfully;
@@ -977,13 +977,13 @@ function registersystem(ssysname, cbfunc) {
     }
     if (level._systemstates.size >= 32) {
         /#
-            error("actor");
+            error("<dev string:x194>");
         #/
         return;
     }
     if (isdefined(level._systemstates[ssysname])) {
         /#
-            error("actor" + ssysname);
+            error("<dev string:x1b5>" + ssysname);
         #/
         return;
     }
@@ -1061,7 +1061,7 @@ function trigger_thread(ent, on_enter_payload, on_exit_payload) {
         [[ on_enter_payload ]](ent);
     }
     while (isdefined(ent) && ent istouching(self)) {
-        wait(0.016);
+        wait 0.016;
     }
     if (isdefined(ent) && isdefined(on_exit_payload)) {
         [[ on_exit_payload ]](ent);
@@ -1084,7 +1084,7 @@ function local_player_trigger_thread_always_exit(ent, on_enter_payload, on_exit_
         [[ on_enter_payload ]](ent);
     }
     while (isdefined(ent) && ent istouching(self) && ent issplitscreenhost()) {
-        wait(0.016);
+        wait 0.016;
     }
     if (isdefined(on_exit_payload)) {
         [[ on_exit_payload ]](ent);
@@ -1122,7 +1122,7 @@ function local_players_entity_thread(entity, func, arg1, arg2, arg3, arg4) {
     // Checksum 0xca7f475b, Offset: 0x3440
     // Size: 0xac
     function debug_line(from, to, color, time) {
-        level.debug_line = getdvarint("actor", 0);
+        level.debug_line = getdvarint("<dev string:x1dd>", 0);
         if (isdefined(level.debug_line) && level.debug_line == 1) {
             if (!isdefined(time)) {
                 time = 1000;
@@ -1136,7 +1136,7 @@ function local_players_entity_thread(entity, func, arg1, arg2, arg3, arg4) {
     // Checksum 0x36a2d4d9, Offset: 0x34f8
     // Size: 0xac
     function debug_star(origin, color, time) {
-        level.debug_star = getdvarint("actor", 0);
+        level.debug_star = getdvarint("<dev string:x1ec>", 0);
         if (isdefined(level.debug_star) && level.debug_star == 1) {
             if (!isdefined(time)) {
                 time = 1000;
@@ -1157,7 +1157,7 @@ function local_players_entity_thread(entity, func, arg1, arg2, arg3, arg4) {
 function servertime() {
     for (;;) {
         level.servertime = getservertime(0);
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -1176,7 +1176,7 @@ function getnextobjid(localclientnum) {
     }
     /#
         if (nextid > 31) {
-            println("actor");
+            println("<dev string:x1fb>");
         }
         assert(nextid < 32);
     #/
@@ -1206,13 +1206,13 @@ function releaseobjid(localclientnum, objid) {
 // Size: 0x2e
 function function_3eb32a89(str_next_map) {
     switch (str_next_map) {
-    case 29:
-    case 30:
-    case 31:
+    case "cp_mi_sing_biodomes":
+    case "cp_mi_sing_blackstation":
+    case "cp_mi_sing_sgen":
         return "cp_sh_singapore";
-    case 26:
-    case 27:
-    case 28:
+    case "cp_mi_cairo_aquifer":
+    case "cp_mi_cairo_infection":
+    case "cp_mi_cairo_lotus":
         return "cp_sh_cairo";
     default:
         return "cp_sh_mobile";
@@ -1228,9 +1228,9 @@ function is_safehouse(str_next_map) {
         str_next_map = tolower(getdvarstring("mapname"));
     }
     switch (str_next_map) {
-    case 24:
-    case 25:
-    case 23:
+    case "cp_sh_cairo":
+    case "cp_sh_mobile":
+    case "cp_sh_singapore":
         return true;
     default:
         return false;
@@ -1265,7 +1265,7 @@ function is_safehouse(str_next_map) {
             } else if (time_started != 0) {
                 time_started = 0;
             }
-            wait(0.016);
+            wait 0.016;
         }
     }
 
@@ -1311,7 +1311,7 @@ function is_safehouse(str_next_map) {
     // Checksum 0xa274f376, Offset: 0x3b18
     // Size: 0x44
     function up_button_pressed() {
-        return self buttonpressed("actor") || self buttonpressed("actor");
+        return self buttonpressed("<dev string:x226>") || self buttonpressed("<dev string:x22e>");
     }
 
     // Namespace util
@@ -1320,7 +1320,7 @@ function is_safehouse(str_next_map) {
     // Size: 0x2c
     function waittill_up_button_pressed() {
         while (!self up_button_pressed()) {
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1329,7 +1329,7 @@ function is_safehouse(str_next_map) {
     // Checksum 0xb61215b3, Offset: 0x3ba0
     // Size: 0x44
     function down_button_pressed() {
-        return self buttonpressed("actor") || self buttonpressed("actor");
+        return self buttonpressed("<dev string:x236>") || self buttonpressed("<dev string:x240>");
     }
 
     // Namespace util
@@ -1338,7 +1338,7 @@ function is_safehouse(str_next_map) {
     // Size: 0x2c
     function waittill_down_button_pressed() {
         while (!self down_button_pressed()) {
-            wait(0.05);
+            wait 0.05;
         }
     }
 

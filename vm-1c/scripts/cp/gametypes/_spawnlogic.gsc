@@ -26,13 +26,13 @@ function autoexec function_2dc19561() {
 function __init__() {
     function_4489f2c9();
     foreach (spawn_point in function_93d52c4f()) {
-        if (isdefined(spawn_point.var_ff844e3f)) {
-            foreach (trig in getentarray(spawn_point.var_ff844e3f, "scriptgroup_playerspawns_enable")) {
+        if (isdefined(spawn_point.scriptgroup_playerspawns_enable)) {
+            foreach (trig in getentarray(spawn_point.scriptgroup_playerspawns_enable, "scriptgroup_playerspawns_enable")) {
                 spawn_point thread function_d241af5c(trig);
             }
         }
-        if (isdefined(spawn_point.var_ff3739ca)) {
-            foreach (trig in getentarray(spawn_point.var_ff3739ca, "scriptgroup_playerspawns_disable")) {
+        if (isdefined(spawn_point.scriptgroup_playerspawns_disable)) {
+            foreach (trig in getentarray(spawn_point.scriptgroup_playerspawns_disable, "scriptgroup_playerspawns_disable")) {
                 spawn_point thread function_e3064ea7(trig);
             }
         }
@@ -71,8 +71,8 @@ function function_98b48204(e_linkto) {
     var_14497229.angles = self.angles;
     var_14497229.targetname = self.targetname;
     var_14497229.script_objective = self.script_objective;
-    var_14497229.var_ff3739ca = self.var_ff3739ca;
-    var_14497229.var_ff844e3f = self.var_ff844e3f;
+    var_14497229.scriptgroup_playerspawns_disable = self.scriptgroup_playerspawns_disable;
+    var_14497229.scriptgroup_playerspawns_enable = self.scriptgroup_playerspawns_enable;
     if (isdefined(e_linkto)) {
         var_14497229 linkto(e_linkto);
     }
@@ -130,7 +130,7 @@ function update_spawn_points() {
             spawning::updateallspawnpoints();
             level flagsys::clear("spawnpoints_dirty");
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -150,27 +150,27 @@ function function_93d52c4f(var_30b675eb) {
     // Checksum 0x300af62a, Offset: 0xaa8
     // Size: 0x2b0
     function function_5787bc10() {
-        if (getdvarstring("cp_coop_spawn") == "cp_coop_spawn") {
-            setdvar("cp_coop_spawn", 0);
-            setdvar("cp_coop_spawn", 0);
+        if (getdvarstring("<dev string:x28>") == "<dev string:x37>") {
+            setdvar("<dev string:x28>", 0);
+            setdvar("<dev string:x38>", 0);
         }
         while (true) {
-            b_debug = getdvarint("cp_coop_spawn", 0);
+            b_debug = getdvarint("<dev string:x28>", 0);
             if (b_debug) {
                 foreach (spawn_point in function_93d52c4f(1)) {
                     color = (1, 0, 1);
-                    if (spawn_point.targetname === "cp_coop_spawn") {
+                    if (spawn_point.targetname === "<dev string:x4c>") {
                         color = (0, 0, 1);
                     }
                     if (isdefined(spawn_point.var_9c98934d) && (isdefined(spawn_point.disabled) && spawn_point.disabled || spawn_point.var_9c98934d)) {
                         color = (1, 0, 0);
                     }
                     print3d(spawn_point.origin + (0, 0, -35), spawn_point.targetname, color, 1, 0.3, 1);
-                    print3d(spawn_point.origin + (0, 0, -43), isdefined(spawn_point.script_objective) ? spawn_point.script_objective : "cp_coop_spawn", color, 1, 0.3, 1);
+                    print3d(spawn_point.origin + (0, 0, -43), isdefined(spawn_point.script_objective) ? spawn_point.script_objective : "<dev string:x5a>", color, 1, 0.3, 1);
                     box(spawn_point.origin, (-16, -16, -36), (16, 16, 36), 0, color, 0, 1);
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -182,15 +182,15 @@ function function_93d52c4f(var_30b675eb) {
 // Size: 0x3bc
 function init() {
     /#
-        if (getdvarstring("cp_coop_spawn") == "cp_coop_spawn") {
-            setdvar("cp_coop_spawn", 0);
+        if (getdvarstring("<dev string:x64>") == "<dev string:x37>") {
+            setdvar("<dev string:x64>", 0);
         }
-        level.storespawndata = getdvarint("cp_coop_spawn");
-        if (getdvarstring("cp_coop_spawn") == "cp_coop_spawn") {
-            setdvar("cp_coop_spawn", 0);
+        level.storespawndata = getdvarint("<dev string:x64>");
+        if (getdvarstring("<dev string:x78>") == "<dev string:x37>") {
+            setdvar("<dev string:x78>", 0);
         }
-        if (getdvarstring("cp_coop_spawn") == "cp_coop_spawn") {
-            setdvar("cp_coop_spawn", 0.25);
+        if (getdvarstring("<dev string:x85>") == "<dev string:x37>") {
+            setdvar("<dev string:x85>", 0.25);
         }
         thread function_d320505c();
     #/
@@ -214,13 +214,13 @@ function init() {
         setdvar("scr_spawn_enemyavoidweight", "0");
     }
     /#
-        if (getdvarstring("cp_coop_spawn") == "cp_coop_spawn") {
-            setdvar("cp_coop_spawn", "cp_coop_spawn");
+        if (getdvarstring("<dev string:x96>") == "<dev string:x37>") {
+            setdvar("<dev string:x96>", "<dev string:xa6>");
         }
-        if (getdvarstring("cp_coop_spawn") == "cp_coop_spawn") {
-            setdvar("cp_coop_spawn", "cp_coop_spawn");
+        if (getdvarstring("<dev string:xa8>") == "<dev string:x37>") {
+            setdvar("<dev string:xa8>", "<dev string:xa6>");
         }
-        if (getdvarint("cp_coop_spawn") > 0) {
+        if (getdvarint("<dev string:xa8>") > 0) {
             thread function_76bb9fb8();
             thread function_403f0d14();
             thread function_9ce570b0();
@@ -228,8 +228,8 @@ function init() {
         if (level.storespawndata) {
             thread function_8384886e();
         }
-        if (getdvarstring("cp_coop_spawn") == "cp_coop_spawn") {
-            setdvar("cp_coop_spawn", "cp_coop_spawn");
+        if (getdvarstring("<dev string:xbc>") == "<dev string:x37>") {
+            setdvar("<dev string:xbc>", "<dev string:xa6>");
         }
         thread function_f415b14();
         thread function_e2e4ca72();
@@ -290,10 +290,10 @@ function add_spawn_points(team, spawnpointname) {
     if (!level.teamspawnpoints[team].size) {
         /#
             if (!isdefined(level.var_a6f85f47)) {
-                assert(level.teamspawnpoints[team].size, "cp_coop_spawn" + spawnpointname + "cp_coop_spawn");
+                assert(level.teamspawnpoints[team].size, "<dev string:xcd>" + spawnpointname + "<dev string:xda>");
             }
         #/
-        wait(1);
+        wait 1;
         return;
     }
 }
@@ -322,9 +322,9 @@ function place_spawn_points(spawnpointname) {
         }
     #/
     if (!spawnpoints.size) {
-        println("cp_coop_spawn" + spawnpointname + "cp_coop_spawn");
+        println("<dev string:x12b>" + spawnpointname + "<dev string:x131>");
         callback::abort_level();
-        wait(1);
+        wait 1;
         return;
     }
     for (index = 0; index < spawnpoints.size; index++) {
@@ -343,7 +343,7 @@ function place_spawn_points(spawnpointname) {
 function drop_spawn_points(spawnpointname) {
     spawnpoints = get_spawnpoint_array(spawnpointname);
     if (!spawnpoints.size) {
-        println("cp_coop_spawn" + spawnpointname + "cp_coop_spawn");
+        println("<dev string:x12b>" + spawnpointname + "<dev string:x131>");
         return;
     }
     for (index = 0; index < spawnpoints.size; index++) {
@@ -541,7 +541,7 @@ function function_f714995a(spawnpoints) {
         penalty = function_e40b0d5e();
         /#
             if (level.storespawndata || level.debugspawning) {
-                bestspawnpoint.spawndata[bestspawnpoint.spawndata.size] = "cp_coop_spawn" + penalty;
+                bestspawnpoint.spawndata[bestspawnpoint.spawndata.size] = "<dev string:x14e>" + penalty;
             }
         #/
         bestspawnpoint.weight -= penalty;
@@ -556,9 +556,9 @@ function function_f714995a(spawnpoints) {
     // Checksum 0x14975231, Offset: 0x20e0
     // Size: 0x156
     function function_d46f7aa7(spawnpoint) {
-                for (i = 0; i < level.players.size; i++) {
+        for (i = 0; i < level.players.size; i++) {
             player = level.players[i];
-            if (!isalive(player) || player.sessionstate != "cp_coop_spawn") {
+            if (!isalive(player) || player.sessionstate != "<dev string:x169>") {
                 continue;
             }
             if (level.teambased && player.team == self.team) {
@@ -579,9 +579,9 @@ function function_f714995a(spawnpoints) {
         dist = distance(start, end);
         for (i = 0; i < -56; i++) {
             line(start, end, (1, 0, 0));
-            print3d(start, "cp_coop_spawn" + name1 + "cp_coop_spawn" + dist);
+            print3d(start, "<dev string:x171>" + name1 + "<dev string:x17d>" + dist);
             print3d(end, name2);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -593,7 +593,7 @@ function function_f714995a(spawnpoints) {
         if (!isdefined(level.storespawndata) || !level.storespawndata) {
             return;
         }
-        level.storespawndata = getdvarint("cp_coop_spawn");
+        level.storespawndata = getdvarint("<dev string:x64>");
         if (!level.storespawndata) {
             return;
         }
@@ -601,23 +601,23 @@ function function_f714995a(spawnpoints) {
             level.spawngameid = randomint(100);
             level.spawnid = 0;
         }
-        if (bestspawnpoint.targetname == "cp_coop_spawn") {
+        if (bestspawnpoint.targetname == "<dev string:x187>") {
             return;
         }
         level.spawnid++;
-        file = openfile("cp_coop_spawn", "cp_coop_spawn");
-        fprintfields(file, level.spawngameid + "cp_coop_spawn" + level.spawnid + "cp_coop_spawn" + spawnpoints.size + "cp_coop_spawn" + self.name);
+        file = openfile("<dev string:x19e>", "<dev string:x1ac>");
+        fprintfields(file, level.spawngameid + "<dev string:x1b3>" + level.spawnid + "<dev string:x1b5>" + spawnpoints.size + "<dev string:x1b5>" + self.name);
         for (i = 0; i < spawnpoints.size; i++) {
-            str = function_88dd1973(spawnpoints[i].origin) + "cp_coop_spawn";
+            str = function_88dd1973(spawnpoints[i].origin) + "<dev string:x1b5>";
             if (spawnpoints[i] == bestspawnpoint) {
-                str += "cp_coop_spawn";
+                str += "<dev string:x1b7>";
             } else {
-                str += "cp_coop_spawn";
+                str += "<dev string:x1ba>";
             }
             if (!useweights) {
-                str += "cp_coop_spawn";
+                str += "<dev string:x1ba>";
             } else {
-                str += spawnpoints[i].weight + "cp_coop_spawn";
+                str += spawnpoints[i].weight + "<dev string:x1b5>";
             }
             if (!isdefined(spawnpoints[i].spawndata)) {
                 spawnpoints[i].spawndata = [];
@@ -625,13 +625,13 @@ function function_f714995a(spawnpoints) {
             if (!isdefined(spawnpoints[i].sightchecks)) {
                 spawnpoints[i].sightchecks = [];
             }
-            str += spawnpoints[i].spawndata.size + "cp_coop_spawn";
+            str += spawnpoints[i].spawndata.size + "<dev string:x1b5>";
             for (j = 0; j < spawnpoints[i].spawndata.size; j++) {
-                str += spawnpoints[i].spawndata[j] + "cp_coop_spawn";
+                str += spawnpoints[i].spawndata[j] + "<dev string:x1b5>";
             }
-            str += spawnpoints[i].sightchecks.size + "cp_coop_spawn";
+            str += spawnpoints[i].sightchecks.size + "<dev string:x1b5>";
             for (j = 0; j < spawnpoints[i].sightchecks.size; j++) {
-                str += spawnpoints[i].sightchecks[j].penalty + "cp_coop_spawn" + function_88dd1973(spawnpoints[i].origin) + "cp_coop_spawn";
+                str += spawnpoints[i].sightchecks[j].penalty + "<dev string:x1b5>" + function_88dd1973(spawnpoints[i].origin) + "<dev string:x1b5>";
             }
             fprintfields(file, str);
         }
@@ -639,47 +639,47 @@ function function_f714995a(spawnpoints) {
         function_b8bbe7f3(obj);
         numallies = 0;
         numenemies = 0;
-        str = "cp_coop_spawn";
+        str = "<dev string:x37>";
         for (i = 0; i < obj.allies.size; i++) {
             if (obj.allies[i] == self) {
                 continue;
             }
             numallies++;
-            str += function_88dd1973(obj.allies[i].origin) + "cp_coop_spawn";
+            str += function_88dd1973(obj.allies[i].origin) + "<dev string:x1b5>";
         }
         for (i = 0; i < obj.enemies.size; i++) {
             numenemies++;
-            str += function_88dd1973(obj.enemies[i].origin) + "cp_coop_spawn";
+            str += function_88dd1973(obj.enemies[i].origin) + "<dev string:x1b5>";
         }
-        str = numallies + "cp_coop_spawn" + numenemies + "cp_coop_spawn" + str;
+        str = numallies + "<dev string:x1b5>" + numenemies + "<dev string:x1b5>" + str;
         fprintfields(file, str);
         otherdata = [];
         if (isdefined(level.bombguy)) {
             index = otherdata.size;
             otherdata[index] = spawnstruct();
             otherdata[index].origin = level.bombguy.origin + (0, 0, 20);
-            otherdata[index].text = "cp_coop_spawn";
+            otherdata[index].text = "<dev string:x1bd>";
         } else if (isdefined(level.bombpos)) {
             index = otherdata.size;
             otherdata[index] = spawnstruct();
             otherdata[index].origin = level.bombpos;
-            otherdata[index].text = "cp_coop_spawn";
+            otherdata[index].text = "<dev string:x1c9>";
         }
         if (isdefined(level.flags)) {
             for (i = 0; i < level.flags.size; i++) {
                 index = otherdata.size;
                 otherdata[index] = spawnstruct();
                 otherdata[index].origin = level.flags[i].origin;
-                otherdata[index].text = level.flags[i].useobj gameobjects::get_owner_team() + "cp_coop_spawn";
+                otherdata[index].text = level.flags[i].useobj gameobjects::get_owner_team() + "<dev string:x1ce>";
             }
         }
-        str = otherdata.size + "cp_coop_spawn";
+        str = otherdata.size + "<dev string:x1b5>";
         for (i = 0; i < otherdata.size; i++) {
-            str += function_88dd1973(otherdata[i].origin) + "cp_coop_spawn" + otherdata[i].text + "cp_coop_spawn";
+            str += function_88dd1973(otherdata[i].origin) + "<dev string:x1b5>" + otherdata[i].text + "<dev string:x1b5>";
         }
         fprintfields(file, str);
         closefile(file);
-        thisspawnid = level.spawngameid + "cp_coop_spawn" + level.spawnid;
+        thisspawnid = level.spawngameid + "<dev string:x1b3>" + level.spawnid;
         if (isdefined(self.thisspawnid)) {
         }
         self.thisspawnid = thisspawnid;
@@ -690,7 +690,7 @@ function function_f714995a(spawnpoints) {
     // Checksum 0x11e58333, Offset: 0x2bc8
     // Size: 0xb34
     function function_78353cbc(desiredid, relativepos) {
-        file = openfile("cp_coop_spawn", "cp_coop_spawn");
+        file = openfile("<dev string:x19e>", "<dev string:x1d4>");
         if (file < 0) {
             return;
         }
@@ -801,24 +801,24 @@ function function_f714995a(spawnpoints) {
                 data.otherdata[data.otherdata.size] = otherdata;
             }
             if (isdefined(relativepos)) {
-                if (relativepos == "cp_coop_spawn") {
+                if (relativepos == "<dev string:x1d9>") {
                     if (data.id == oldspawndata.id) {
                         level.curspawndata = prevthisplayer;
                         break;
                     }
-                } else if (relativepos == "cp_coop_spawn") {
+                } else if (relativepos == "<dev string:x1e8>") {
                     if (data.id == oldspawndata.id) {
                         level.curspawndata = prev;
                         break;
                     }
-                } else if (relativepos == "cp_coop_spawn") {
+                } else if (relativepos == "<dev string:x1ed>") {
                     if (lookingfornextthisplayer) {
                         level.curspawndata = data;
                         break;
                     } else if (data.id == oldspawndata.id) {
                         lookingfornextthisplayer = 1;
                     }
-                } else if (relativepos == "cp_coop_spawn") {
+                } else if (relativepos == "<dev string:x1fc>") {
                     if (lookingfornext) {
                         level.curspawndata = data;
                         break;
@@ -848,14 +848,14 @@ function function_f714995a(spawnpoints) {
         textoffset = (0, 0, -12);
         while (true) {
             if (!isdefined(level.curspawndata)) {
-                wait(0.5);
+                wait 0.5;
                 continue;
             }
             for (i = 0; i < level.curspawndata.friends.size; i++) {
-                print3d(level.curspawndata.friends[i], "cp_coop_spawn", (0.5, 1, 0.5), 1, 5);
+                print3d(level.curspawndata.friends[i], "<dev string:x201>", (0.5, 1, 0.5), 1, 5);
             }
             for (i = 0; i < level.curspawndata.enemies.size; i++) {
-                print3d(level.curspawndata.enemies[i], "cp_coop_spawn", (1, 0.5, 0.5), 1, 5);
+                print3d(level.curspawndata.enemies[i], "<dev string:x204>", (1, 0.5, 0.5), 1, 5);
             }
             for (i = 0; i < level.curspawndata.otherdata.size; i++) {
                 print3d(level.curspawndata.otherdata[i].origin, level.curspawndata.otherdata[i].text, (0.5, 0.75, 1), 1, 2);
@@ -864,22 +864,22 @@ function function_f714995a(spawnpoints) {
                 sp = level.curspawndata.spawnpoints[i];
                 orig = sp.sighttracepoint;
                 if (sp.winner) {
-                    print3d(orig, level.curspawndata.playername + "cp_coop_spawn", (0.5, 0.5, 1), 1, 2);
+                    print3d(orig, level.curspawndata.playername + "<dev string:x207>", (0.5, 0.5, 1), 1, 2);
                     orig += textoffset;
                 }
                 amnt = (sp.weight - level.curspawndata.minweight) / (level.curspawndata.maxweight - level.curspawndata.minweight);
-                print3d(orig, "cp_coop_spawn" + sp.weight, (1 - amnt, amnt, 0.5));
+                print3d(orig, "<dev string:x215>" + sp.weight, (1 - amnt, amnt, 0.5));
                 orig += textoffset;
                 for (j = 0; j < sp.data.size; j++) {
                     print3d(orig, sp.data[j], (1, 1, 1));
                     orig += textoffset;
                 }
                 for (j = 0; j < sp.sightchecks.size; j++) {
-                    print3d(orig, "cp_coop_spawn" + sp.sightchecks[j].penalty, (1, 0.5, 0.5));
+                    print3d(orig, "<dev string:x21e>" + sp.sightchecks[j].penalty, (1, 0.5, 0.5));
                     orig += textoffset;
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -888,7 +888,7 @@ function function_f714995a(spawnpoints) {
     // Checksum 0x877cabc6, Offset: 0x3b88
     // Size: 0x7e
     function function_88dd1973(vec) {
-        return int(vec[0]) + "cp_coop_spawn" + int(vec[1]) + "cp_coop_spawn" + int(vec[2]);
+        return int(vec[0]) + "<dev string:x22d>" + int(vec[1]) + "<dev string:x22d>" + int(vec[2]);
     }
 
     // Namespace spawnlogic
@@ -896,7 +896,7 @@ function function_f714995a(spawnpoints) {
     // Checksum 0x88d89be4, Offset: 0x3c10
     // Size: 0x9e
     function function_a76187dd(str) {
-        parts = strtok(str, "cp_coop_spawn");
+        parts = strtok(str, "<dev string:x22d>");
         if (parts.size != 3) {
             return (0, 0, 0);
         }
@@ -995,10 +995,10 @@ function function_a8b6ae24(spawnpoints, favoredspawnpoints) {
         return undefined;
     }
     /#
-        if (getdvarstring("cp_coop_spawn") == "cp_coop_spawn") {
-            setdvar("cp_coop_spawn", "cp_coop_spawn");
+        if (getdvarstring("<dev string:x22f>") == "<dev string:x37>") {
+            setdvar("<dev string:x22f>", "<dev string:xa6>");
         }
-        if (getdvarstring("cp_coop_spawn") == "cp_coop_spawn") {
+        if (getdvarstring("<dev string:x22f>") == "<dev string:x242>") {
             return get_spawnpoint_random(spawnpoints);
         }
     #/
@@ -1024,7 +1024,7 @@ function function_a8b6ae24(spawnpoints, favoredspawnpoints) {
             spawnpoint.weight = (enemydistsum - allieddistanceweight * allydistsum) / spawnpoint.numplayersatlastupdate;
             /#
                 if (level.storespawndata || level.debugspawning) {
-                    spawnpoint.spawndata[spawnpoint.spawndata.size] = "cp_coop_spawn" + int(spawnpoint.weight) + "cp_coop_spawn" + int(enemydistsum) + "cp_coop_spawn" + allieddistanceweight + "cp_coop_spawn" + int(allydistsum) + "cp_coop_spawn" + spawnpoint.numplayersatlastupdate;
+                    spawnpoint.spawndata[spawnpoint.spawndata.size] = "<dev string:x244>" + int(spawnpoint.weight) + "<dev string:x252>" + int(enemydistsum) + "<dev string:x257>" + allieddistanceweight + "<dev string:x25b>" + int(allydistsum) + "<dev string:x25d>" + spawnpoint.numplayersatlastupdate;
                 }
             #/
             continue;
@@ -1032,7 +1032,7 @@ function function_a8b6ae24(spawnpoints, favoredspawnpoints) {
         spawnpoint.weight = 0;
         /#
             if (level.storespawndata || level.debugspawning) {
-                spawnpoint.spawndata[spawnpoint.spawndata.size] = "cp_coop_spawn";
+                spawnpoint.spawndata[spawnpoint.spawndata.size] = "<dev string:x262>";
             }
         #/
     }
@@ -1051,10 +1051,10 @@ function function_a8b6ae24(spawnpoints, favoredspawnpoints) {
     function_ab118dbe(spawnpoints, 1);
     result = get_spawnpoint_final(spawnpoints);
     /#
-        if (getdvarstring("cp_coop_spawn") == "cp_coop_spawn") {
-            setdvar("cp_coop_spawn", "cp_coop_spawn");
+        if (getdvarstring("<dev string:x271>") == "<dev string:x37>") {
+            setdvar("<dev string:x271>", "<dev string:xa6>");
         }
-        if (getdvarstring("cp_coop_spawn") == "cp_coop_spawn") {
+        if (getdvarstring("<dev string:x271>") == "<dev string:x242>") {
             function_d46f7aa7(result);
         }
     #/
@@ -1104,8 +1104,8 @@ function function_a1a08e8b(spawnpoints) {
 // Size: 0x50
 function begin() {
     /#
-        level.storespawndata = getdvarint("cp_coop_spawn");
-        level.debugspawning = getdvarint("cp_coop_spawn") > 0;
+        level.storespawndata = getdvarint("<dev string:x64>");
+        level.debugspawning = getdvarint("<dev string:xa8>") > 0;
     #/
 }
 
@@ -1118,17 +1118,17 @@ function begin() {
     function function_f415b14() {
         while (true) {
             while (true) {
-                if (getdvarint("cp_coop_spawn") > 0) {
+                if (getdvarint("<dev string:xbc>") > 0) {
                     break;
                 }
-                wait(0.05);
+                wait 0.05;
             }
             thread function_91a6180();
             while (true) {
-                if (getdvarint("cp_coop_spawn") <= 0) {
+                if (getdvarint("<dev string:xbc>") <= 0) {
                     break;
                 }
-                wait(0.05);
+                wait 0.05;
             }
             level notify(#"stop_spawn_profile");
         }
@@ -1152,7 +1152,7 @@ function begin() {
                 }
                 player function_a8b6ae24(level.spawnpoints);
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1162,8 +1162,8 @@ function begin() {
     // Size: 0x5a
     function function_e2e4ca72() {
         while (true) {
-            if (getdvarint("cp_coop_spawn") < 1) {
-                wait(3);
+            if (getdvarint("<dev string:x283>") < 1) {
+                wait 3;
                 continue;
             }
             thread function_ee9ff5a7();
@@ -1180,9 +1180,9 @@ function begin() {
         h = 20;
         weightscale = 0.1;
         fakespawnpoints = [];
-        corners = getentarray("cp_coop_spawn", "cp_coop_spawn");
+        corners = getentarray("<dev string:x292>", "<dev string:x2a1>");
         if (corners.size != 2) {
-            println("cp_coop_spawn");
+            println("<dev string:x2ac>");
             return;
         }
         min = corners[0].origin;
@@ -1215,7 +1215,7 @@ function begin() {
             spawni = 0;
             numiters = 5;
             for (i = 0; i < numiters; i++) {
-                if (!level.players.size || !isdefined(level.players[0].team) || level.players[0].team == "cp_coop_spawn" || !isdefined(level.players[0].curclass)) {
+                if (!level.players.size || !isdefined(level.players[0].team) || level.players[0].team == "<dev string:x2d5>" || !isdefined(level.players[0].curclass)) {
                     break;
                 }
                 endspawni = spawni + fakespawnpoints.size / numiters;
@@ -1229,10 +1229,10 @@ function begin() {
                 if (didweights) {
                     level.players[0] function_714f6572(fakespawnpoints, w, h, weightscale);
                 }
-                wait(0.05);
+                wait 0.05;
             }
-            if (!level.players.size || !isdefined(level.players[0].team) || level.players[0].team == "cp_coop_spawn" || !isdefined(level.players[0].curclass)) {
-                wait(1);
+            if (!level.players.size || !isdefined(level.players[0].team) || level.players[0].team == "<dev string:x2d5>" || !isdefined(level.players[0].curclass)) {
+                wait 1;
                 continue;
             }
             level.players[0] function_a8b6ae24(fakespawnpoints);
@@ -1241,7 +1241,7 @@ function begin() {
             }
             didweights = 1;
             level.players[0] function_714f6572(fakespawnpoints, w, h, weightscale);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1296,12 +1296,12 @@ function begin() {
     // Size: 0x374
     function function_d320505c() {
         while (true) {
-            if (getdvarint("cp_coop_spawn") < 1) {
-                wait(3);
+            if (getdvarint("<dev string:x78>") < 1) {
+                wait 3;
                 continue;
             }
             if (!isdefined(level.players)) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             bots = [];
@@ -1309,32 +1309,32 @@ function begin() {
                 if (!isdefined(level.players[i])) {
                     continue;
                 }
-                if (level.players[i].sessionstate == "cp_coop_spawn" && issubstr(level.players[i].name, "cp_coop_spawn")) {
+                if (level.players[i].sessionstate == "<dev string:x169>" && issubstr(level.players[i].name, "<dev string:x2df>")) {
                     bots[bots.size] = level.players[i];
                 }
             }
             if (bots.size > 0) {
-                if (getdvarint("cp_coop_spawn") == 1) {
+                if (getdvarint("<dev string:x78>") == 1) {
                     killer = bots[randomint(bots.size)];
                     victim = bots[randomint(bots.size)];
-                    victim thread [[ level.callbackplayerdamage ]](killer, killer, 1000, 0, "cp_coop_spawn", level.weaponnone, (0, 0, 0), (0, 0, 0), "cp_coop_spawn", (0, 0, 0), 0, 0, (1, 0, 0));
+                    victim thread [[ level.callbackplayerdamage ]](killer, killer, 1000, 0, "<dev string:x2e3>", level.weaponnone, (0, 0, 0), (0, 0, 0), "<dev string:x2f4>", (0, 0, 0), 0, 0, (1, 0, 0));
                 } else {
-                    numkills = getdvarint("cp_coop_spawn");
+                    numkills = getdvarint("<dev string:x78>");
                     lastvictim = undefined;
                     for (index = 0; index < numkills; index++) {
                         killer = bots[randomint(bots.size)];
                         for (victim = bots[randomint(bots.size)]; isdefined(lastvictim) && victim == lastvictim; victim = bots[randomint(bots.size)]) {
                         }
-                        victim thread [[ level.callbackplayerdamage ]](killer, killer, 1000, 0, "cp_coop_spawn", level.weaponnone, (0, 0, 0), (0, 0, 0), "cp_coop_spawn", (0, 0, 0), 0, 0, (1, 0, 0));
+                        victim thread [[ level.callbackplayerdamage ]](killer, killer, 1000, 0, "<dev string:x2e3>", level.weaponnone, (0, 0, 0), (0, 0, 0), "<dev string:x2f4>", (0, 0, 0), 0, 0, (1, 0, 0));
                         lastvictim = victim;
                     }
                 }
             }
-            if (getdvarstring("cp_coop_spawn") != "cp_coop_spawn") {
-                wait(getdvarfloat("cp_coop_spawn"));
+            if (getdvarstring("<dev string:x85>") != "<dev string:x37>") {
+                wait getdvarfloat("<dev string:x85>");
                 continue;
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1343,19 +1343,19 @@ function begin() {
     // Checksum 0x4656ee6c, Offset: 0x57f8
     // Size: 0x1e8
     function function_8384886e() {
-        setdvar("cp_coop_spawn", "cp_coop_spawn");
-        prevval = getdvarstring("cp_coop_spawn");
-        prevrelval = getdvarstring("cp_coop_spawn");
+        setdvar("<dev string:x2f9>", "<dev string:x37>");
+        prevval = getdvarstring("<dev string:x2f9>");
+        prevrelval = getdvarstring("<dev string:x309>");
         readthistime = 0;
         while (true) {
-            val = getdvarstring("cp_coop_spawn");
+            val = getdvarstring("<dev string:x2f9>");
             relval = undefined;
             if (!isdefined(val) || val == prevval) {
-                relval = getdvarstring("cp_coop_spawn");
-                if (isdefined(relval) && relval != "cp_coop_spawn") {
-                    setdvar("cp_coop_spawn", "cp_coop_spawn");
+                relval = getdvarstring("<dev string:x309>");
+                if (isdefined(relval) && relval != "<dev string:x37>") {
+                    setdvar("<dev string:x309>", "<dev string:x37>");
                 } else {
-                    wait(0.5);
+                    wait 0.5;
                     continue;
                 }
             }
@@ -1363,9 +1363,9 @@ function begin() {
             readthistime = 0;
             function_78353cbc(val, relval);
             if (!isdefined(level.curspawndata)) {
-                println("cp_coop_spawn");
+                println("<dev string:x31a>");
             } else {
-                println("cp_coop_spawn" + level.curspawndata.id);
+                println("<dev string:x331>" + level.curspawndata.id);
             }
             thread function_363025a();
         }
@@ -1377,8 +1377,8 @@ function begin() {
     // Size: 0x4b0
     function function_76bb9fb8() {
         while (true) {
-            if (getdvarstring("cp_coop_spawn") == "cp_coop_spawn") {
-                wait(3);
+            if (getdvarstring("<dev string:xa8>") == "<dev string:xa6>") {
+                wait 3;
                 continue;
             }
             time = gettime();
@@ -1408,17 +1408,17 @@ function begin() {
                 if (spawnkill.var_349bc34) {
                     line(spawnkill.spawnpointorigin, spawnkill.dierorigin, (0.4, 0.5, 0.4));
                     line(spawnkill.dierorigin, spawnkill.killerorigin, (0, 1, 1));
-                    print3d(spawnkill.dierorigin + (0, 0, 32), "cp_coop_spawn", (0, 1, 1));
+                    print3d(spawnkill.dierorigin + (0, 0, 32), "<dev string:x343>", (0, 1, 1));
                 } else {
                     line(spawnkill.spawnpointorigin, spawnkill.killerorigin, (0.4, 0.5, 0.4));
                     line(spawnkill.killerorigin, spawnkill.dierorigin, (0, 1, 1));
-                    print3d(spawnkill.dierorigin + (0, 0, 32), "cp_coop_spawn", (0, 1, 1));
+                    print3d(spawnkill.dierorigin + (0, 0, 32), "<dev string:x350>", (0, 1, 1));
                 }
                 if (time - spawnkill.time < 60000) {
                     level.spawnlogic_spawnkills[level.spawnlogic_spawnkills.size] = oldspawnkills[i];
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1431,11 +1431,11 @@ function begin() {
 function function_403f0d14() {
     while (true) {
         if (getdvarstring("scr_spawnpointdebug") == "0") {
-            wait(3);
+            wait 3;
             continue;
         }
         function_1acf6a5c();
-        wait(3);
+        wait 3;
     }
 }
 
@@ -1448,8 +1448,8 @@ function function_f5751b11(spawnpoints) {
     level endon(#"stop_spawn_weight_debug");
     /#
         while (true) {
-            if (getdvarstring("cp_coop_spawn") == "cp_coop_spawn") {
-                wait(3);
+            if (getdvarstring("<dev string:xa8>") == "<dev string:xa6>") {
+                wait 3;
                 continue;
             }
             textoffset = (0, 0, -12);
@@ -1475,12 +1475,12 @@ function function_f5751b11(spawnpoints) {
                         if (spawnpoints[i].sightchecks[j].penalty == 0) {
                             continue;
                         }
-                        print3d(orig, "cp_coop_spawn" + spawnpoints[i].sightchecks[j].penalty, (0.5, 0.5, 0.5));
+                        print3d(orig, "<dev string:x35b>" + spawnpoints[i].sightchecks[j].penalty, (0.5, 0.5, 0.5));
                         orig += textoffset;
                     }
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     #/
 }
@@ -1492,7 +1492,7 @@ function function_f5751b11(spawnpoints) {
 function function_9ce570b0() {
     while (true) {
         if (getdvarstring("scr_spawnpointprofile") != "1") {
-            wait(3);
+            wait 3;
             continue;
         }
         for (i = 0; i < level.spawnpoints.size; i++) {
@@ -1501,7 +1501,7 @@ function function_9ce570b0() {
         if (level.players.size > 0) {
             level.players[randomint(level.players.size)] function_a8b6ae24(level.spawnpoints);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1512,7 +1512,7 @@ function function_9ce570b0() {
     // Checksum 0xc2a22c43, Offset: 0x6318
     // Size: 0xe0
     function function_d98d4227(players, origin) {
-        if (getdvarstring("cp_coop_spawn") == "cp_coop_spawn") {
+        if (getdvarstring("<dev string:xa8>") == "<dev string:xa6>") {
             return;
         }
         starttime = gettime();
@@ -1523,7 +1523,7 @@ function function_9ce570b0() {
             if (gettime() - starttime > 5000) {
                 return;
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1623,7 +1623,7 @@ function function_3ed62c9(spawnpoints) {
                 spawnpoints[i].weight = spawnpoints[i].weight - weapondamagepenalty;
                 /#
                     if (level.storespawndata || level.debugspawning) {
-                        spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "cp_coop_spawn" + int(weapondamagepenalty);
+                        spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "<dev string:x36d>" + int(weapondamagepenalty);
                     }
                 #/
             }
@@ -1638,7 +1638,7 @@ function function_3ed62c9(spawnpoints) {
 function function_d43d261c() {
     spawnpointindex = 0;
     while (true) {
-        wait(0.05);
+        wait 0.05;
         if (!isdefined(level.spawnpoints)) {
             return;
         }
@@ -1699,7 +1699,7 @@ function function_bb6a45e8(spawnpoint) {
     spawnpointdir = spawnpoint.forward;
     debug = 0;
     /#
-        debug = getdvarint("cp_coop_spawn") > 0;
+        debug = getdvarint("<dev string:xa8>") > 0;
     #/
     mindist = [];
     distsum = [];
@@ -1898,7 +1898,7 @@ function function_ab118dbe(spawnpoints, teambased) {
                     spawnpoints[i].weight = spawnpoints[i].weight - penalty;
                     /#
                         if (level.storespawndata || level.debugspawning) {
-                            spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "cp_coop_spawn" + int(spawnpoints[i].minenemydist[mindistteam]) + "cp_coop_spawn" + int(penalty);
+                            spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "<dev string:x381>" + int(spawnpoints[i].minenemydist[mindistteam]) + "<dev string:x393>" + int(penalty);
                         }
                     #/
                 }
@@ -1937,7 +1937,7 @@ function function_147ebda5(spawnpoints, teambased) {
                 spawnpoint.weight -= worsen;
                 /#
                     if (level.storespawndata || level.debugspawning) {
-                        spawnpoint.spawndata[spawnpoint.spawndata.size] = "cp_coop_spawn" + worsen;
+                        spawnpoint.spawndata[spawnpoint.spawndata.size] = "<dev string:x39d>" + worsen;
                     }
                 #/
             } else {
@@ -1965,7 +1965,7 @@ function function_ad490295(spawnpoints) {
             spawnpoints[i].weight = spawnpoints[i].weight - 50000;
             /#
                 if (level.storespawndata || level.debugspawning) {
-                    spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "cp_coop_spawn";
+                    spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "<dev string:x3b2>";
                 }
             #/
             break;

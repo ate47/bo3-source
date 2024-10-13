@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_27f0ae11;
+#namespace voice_z_provocation;
 
-// Namespace namespace_27f0ae11
+// Namespace voice_z_provocation
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4cb72791, Offset: 0xb70
 // Size: 0x6e4

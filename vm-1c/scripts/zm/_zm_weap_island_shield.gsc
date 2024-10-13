@@ -36,7 +36,7 @@ function autoexec function_2dc19561() {
 // Checksum 0x7d158a1f, Offset: 0x4e0
 // Size: 0x7c
 function __init__() {
-    namespace_abd96e8b::init("craft_shield_zm", "island_riotshield", "wpn_t7_zmb_dlc2_shield_world");
+    zm_craft_shield::init("craft_shield_zm", "island_riotshield", "wpn_t7_zmb_dlc2_shield_world");
     level.weaponriotshield = getweapon("island_riotshield");
     zm_equipment::register("island_riotshield", %ZOMBIE_EQUIP_RIOTSHIELD_PICKUP_HINT_STRING, %ZOMBIE_EQUIP_RIOTSHIELD_HOWTO, undefined, "riotshield");
 }

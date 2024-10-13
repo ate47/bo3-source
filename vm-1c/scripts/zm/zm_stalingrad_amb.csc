@@ -9,9 +9,9 @@
 #using scripts/shared/music_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_db83306f;
+#namespace zm_stalingrad_amb;
 
-// Namespace namespace_db83306f
+// Namespace zm_stalingrad_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd0a1cd81, Offset: 0x348
 // Size: 0xbc
@@ -26,7 +26,7 @@ function main() {
     level thread function_1e68a892();
 }
 
-// Namespace namespace_db83306f
+// Namespace zm_stalingrad_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x89d2d487, Offset: 0x410
 // Size: 0x15c
@@ -35,27 +35,27 @@ function startzmbspawnersoundloops() {
     if (isdefined(loopers) && loopers.size > 0) {
         delay = 0;
         /#
-            if (getdvarint("mus_stalingrad_underscore_") > 0) {
-                println("mus_stalingrad_underscore_" + loopers.size + "mus_stalingrad_underscore_");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x34>" + loopers.size + "<dev string:x6c>");
             }
         #/
         for (i = 0; i < loopers.size; i++) {
             loopers[i] thread soundloopthink();
             delay += 1;
             if (delay % 20 == 0) {
-                wait(0.016);
+                wait 0.016;
             }
         }
         return;
     }
     /#
-        if (getdvarint("mus_stalingrad_underscore_") > 0) {
-            println("mus_stalingrad_underscore_");
+        if (getdvarint("<dev string:x28>") > 0) {
+            println("<dev string:x77>");
         }
     #/
 }
 
-// Namespace namespace_db83306f
+// Namespace zm_stalingrad_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc55634, Offset: 0x578
 // Size: 0x16c
@@ -92,24 +92,24 @@ function soundloopthink() {
     }
 }
 
-// Namespace namespace_db83306f
+// Namespace zm_stalingrad_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc6172f94, Offset: 0x6f0
 // Size: 0xa4
 function function_bab3ea62() {
-    wait(3);
+    wait 3;
     level.var_98f2b64e = "pavlov";
     level thread function_8620d917();
     level thread function_53b9afad();
     var_29085ef = getentarray(0, "sndMusicTrig", "targetname");
-    array::thread_all(var_29085ef, &function_95d61fc1);
+    array::thread_all(var_29085ef, &sndMusicTrig);
 }
 
-// Namespace namespace_db83306f
+// Namespace zm_stalingrad_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xed5900c3, Offset: 0x7a0
 // Size: 0xc4
-function function_95d61fc1() {
+function sndMusicTrig() {
     while (true) {
         trigplayer = self waittill(#"trigger");
         if (trigplayer islocalplayer()) {
@@ -119,15 +119,15 @@ function function_95d61fc1() {
                 level notify(#"hash_51d7bc7c", self.script_sound);
             }
             while (isdefined(trigplayer) && trigplayer istouching(self)) {
-                wait(0.016);
+                wait 0.016;
             }
             continue;
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_db83306f
+// Namespace zm_stalingrad_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7aa98ef6, Offset: 0x870
 // Size: 0xf8
@@ -146,18 +146,18 @@ function function_53b9afad() {
     }
 }
 
-// Namespace namespace_db83306f
+// Namespace zm_stalingrad_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x72365af7, Offset: 0x970
 // Size: 0x64
 function function_51d7bc7c(var_6d9d81aa) {
     level endon(#"hash_51d7bc7c");
     level.var_eb526c90 stopallloopsounds(2);
-    wait(1);
+    wait 1;
     level.var_9433cf5a = level.var_eb526c90 playloopsound(var_6d9d81aa, 2);
 }
 
-// Namespace namespace_db83306f
+// Namespace zm_stalingrad_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x78556f5d, Offset: 0x9e0
 // Size: 0x92
@@ -175,7 +175,7 @@ function function_8620d917() {
     }
 }
 
-// Namespace namespace_db83306f
+// Namespace zm_stalingrad_amb
 // Params 0, eflags: 0x0
 // Checksum 0x97848ea6, Offset: 0xa80
 // Size: 0x92
@@ -191,18 +191,18 @@ function function_a2a905a5() {
     }
 }
 
-// Namespace namespace_db83306f
+// Namespace zm_stalingrad_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xae4659f4, Offset: 0xb20
 // Size: 0x50
 function function_b21d9845() {
     while (true) {
-        wait(randomintrange(4, 10));
+        wait randomintrange(4, 10);
         playsound(0, "amb_comp_sweets", (-3157, 21574, -85));
     }
 }
 
-// Namespace namespace_db83306f
+// Namespace zm_stalingrad_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x71f66d34, Offset: 0xb78
 // Size: 0x7c
@@ -212,49 +212,49 @@ function function_d4a3f122() {
     audio::playloopat("amb_creepy_machine_loops", (-2765, 21978, -106));
 }
 
-// Namespace namespace_db83306f
+// Namespace zm_stalingrad_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf600dd06, Offset: 0xc00
 // Size: 0x50
 function function_daa9b420() {
     while (true) {
-        wait(randomintrange(10, 40));
+        wait randomintrange(10, 40);
         playsound(0, "amb_banging", (-3319, 21151, -103));
     }
 }
 
-// Namespace namespace_db83306f
+// Namespace zm_stalingrad_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdad07f90, Offset: 0xc58
 // Size: 0xa0
 function function_75cde2e7() {
     while (true) {
-        wait(randomintrange(4, 10));
+        wait randomintrange(4, 10);
         playsound(0, "amb_whispers", (-3414, 21402, 63));
         playsound(0, "amb_whispers", (-2639, 21161, -90));
         playsound(0, "amb_whispers", (-3004, 22547, 44));
     }
 }
 
-// Namespace namespace_db83306f
+// Namespace zm_stalingrad_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x89a7976e, Offset: 0xd00
 // Size: 0x94
 function function_157aa38() {
-    level waittill(#"hash_bad0de07");
+    level waittill(#"power_on_level");
     playsound(0, "amb_sophia_boot", (300, 4862, 296));
     audio::playloopat("amb_sophia_computer_screen_lp", (-404, 4764, -33));
-    wait(8);
+    wait 8;
     audio::playloopat("amb_sophia_loop", (300, 4862, 296));
 }
 
-// Namespace namespace_db83306f
+// Namespace zm_stalingrad_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaaf6b4f3, Offset: 0xda0
 // Size: 0xa0
 function function_1e68a892() {
     while (true) {
-        wait(randomintrange(1, 2));
+        wait randomintrange(1, 2);
         playsound(0, "amb_light_flicker_flour", (-2956, 21337, 125));
         playsound(0, "amb_light_flicker_flour", (-3037, 21457, -39));
         playsound(0, "amb_light_flicker_flour", (-3223, 21912, -47));

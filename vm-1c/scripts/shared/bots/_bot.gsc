@@ -211,7 +211,7 @@ function on_player_connect() {
     self.pers["isBot"] = 1;
     if (level.teambased) {
         self notify(#"menuresponse", game["menu_team"], self.team);
-        wait(0.5);
+        wait 0.5;
     }
     self notify(#"joined_team");
     callback::callback(#"hash_95a6c4c0");
@@ -258,7 +258,7 @@ function function_6eed3d1a() {
     level endon(#"game_ended");
     while (true) {
         self bot_think();
-        wait(level.var_93fffa7b.var_d74d136c);
+        wait level.botsettings.var_d74d136c;
     }
 }
 
@@ -302,7 +302,7 @@ function update_swim() {
     }
     if (self isplayerunderwater()) {
         if (!isdefined(self.bot.resurfacetime)) {
-            self.bot.resurfacetime = gettime() + level.var_93fffa7b.swimtime;
+            self.bot.resurfacetime = gettime() + level.botsettings.swimtime;
         }
     } else {
         self.bot.resurfacetime = undefined;
@@ -329,9 +329,9 @@ function update_swim() {
         vertdist = swimheight - 45;
     }
     if (isdefined(vertdist)) {
-        var_9907e16 = level.var_93fffa7b.var_b907551c * level.var_93fffa7b.var_d74d136c;
+        var_9907e16 = level.botsettings.var_b907551c * level.botsettings.var_d74d136c;
         if (var_9907e16 > vertdist) {
-            self function_62a758ad(level.var_93fffa7b.var_d74d136c * vertdist / var_9907e16);
+            self function_62a758ad(level.botsettings.var_d74d136c * vertdist / var_9907e16);
         }
     }
 }
@@ -343,7 +343,7 @@ function update_swim() {
 function function_62a758ad(waittime) {
     self endon(#"death");
     level endon(#"game_ended");
-    wait(waittime);
+    wait waittime;
     self function_67a9a01d();
     self function_6174e2fe();
 }
@@ -353,38 +353,38 @@ function function_62a758ad(waittime) {
 // Checksum 0xb6cc53ab, Offset: 0x11c0
 // Size: 0x688
 function function_90b0af3() {
-    level.var_93fffa7b = [[ level.var_199a9d5d ]]();
-    setdvar("bot_AllowMelee", isdefined(level.var_93fffa7b.allowmelee) ? level.var_93fffa7b.allowmelee : 0);
-    setdvar("bot_AllowGrenades", isdefined(level.var_93fffa7b.var_556a176d) ? level.var_93fffa7b.var_556a176d : 0);
-    setdvar("bot_AllowKillstreaks", isdefined(level.var_93fffa7b.allowkillstreaks) ? level.var_93fffa7b.allowkillstreaks : 0);
-    setdvar("bot_AllowHeroGadgets", isdefined(level.var_93fffa7b.var_65b4bd7) ? level.var_93fffa7b.var_65b4bd7 : 0);
-    setdvar("bot_Fov", isdefined(level.var_93fffa7b.fov) ? level.var_93fffa7b.fov : 0);
-    setdvar("bot_FovAds", isdefined(level.var_93fffa7b.var_bcd59d68) ? level.var_93fffa7b.var_bcd59d68 : 0);
-    setdvar("bot_PitchSensitivity", level.var_93fffa7b.pitchsensitivity);
-    setdvar("bot_YawSensitivity", level.var_93fffa7b.yawsensitivity);
-    setdvar("bot_PitchSpeed", isdefined(level.var_93fffa7b.var_1ade69f2) ? level.var_93fffa7b.var_1ade69f2 : 0);
-    setdvar("bot_PitchSpeedAds", isdefined(level.var_93fffa7b.var_de2a5ea0) ? level.var_93fffa7b.var_de2a5ea0 : 0);
-    setdvar("bot_YawSpeed", isdefined(level.var_93fffa7b.var_7b873bb7) ? level.var_93fffa7b.var_7b873bb7 : 0);
-    setdvar("bot_YawSpeedAds", isdefined(level.var_93fffa7b.var_1ae54a4b) ? level.var_93fffa7b.var_1ae54a4b : 0);
-    setdvar("pitchAccelerationTime", isdefined(level.var_93fffa7b.var_6dd1deb2) ? level.var_93fffa7b.var_6dd1deb2 : 0);
-    setdvar("yawAccelerationTime", isdefined(level.var_93fffa7b.var_32344391) ? level.var_93fffa7b.var_32344391 : 0);
-    setdvar("pitchDecelerationThreshold", isdefined(level.var_93fffa7b.var_eba264cd) ? level.var_93fffa7b.var_eba264cd : 0);
-    setdvar("yawDecelerationThreshold", isdefined(level.var_93fffa7b.var_f56d4360) ? level.var_93fffa7b.var_f56d4360 : 0);
-    meleerange = getdvarint("player_meleeRangeDefault") * (isdefined(level.var_93fffa7b.var_e5ef01c3) ? level.var_93fffa7b.var_e5ef01c3 : 0);
-    level.var_93fffa7b.meleerange = int(meleerange);
-    level.var_93fffa7b.meleerangesq = meleerange * meleerange;
-    level.var_93fffa7b.var_982d2abd = level.var_93fffa7b.var_a4232b8d * level.var_93fffa7b.var_a4232b8d;
-    level.var_93fffa7b.var_253386f = level.var_93fffa7b.var_e18736a3 * level.var_93fffa7b.var_e18736a3;
-    var_57945af2 = isdefined(level.var_93fffa7b.var_57945af2) ? level.var_93fffa7b.var_57945af2 : 0;
-    level.var_93fffa7b.var_8190d80e = var_57945af2 * var_57945af2;
-    var_da7f9cfc = isdefined(level.var_93fffa7b.var_da7f9cfc) ? level.var_93fffa7b.var_da7f9cfc : 1024;
-    level.var_93fffa7b.var_706015f4 = var_da7f9cfc * var_da7f9cfc;
-    var_cd4eae6d = isdefined(level.var_93fffa7b.var_cd4eae6d) ? level.var_93fffa7b.var_cd4eae6d : 0;
-    level.var_93fffa7b.var_42d92b9d = var_cd4eae6d * var_cd4eae6d;
-    var_8385083 = isdefined(level.var_93fffa7b.var_8385083) ? level.var_93fffa7b.var_8385083 : 1024;
-    level.var_93fffa7b.var_833a914f = var_8385083 * var_8385083;
-    level.var_93fffa7b.var_b907551c = getdvarfloat("player_swimVerticalSpeedMax");
-    level.var_93fffa7b.swimtime = getdvarfloat("player_swimTime", 5) * 1000;
+    level.botsettings = [[ level.var_199a9d5d ]]();
+    setdvar("bot_AllowMelee", isdefined(level.botsettings.allowmelee) ? level.botsettings.allowmelee : 0);
+    setdvar("bot_AllowGrenades", isdefined(level.botsettings.var_556a176d) ? level.botsettings.var_556a176d : 0);
+    setdvar("bot_AllowKillstreaks", isdefined(level.botsettings.allowkillstreaks) ? level.botsettings.allowkillstreaks : 0);
+    setdvar("bot_AllowHeroGadgets", isdefined(level.botsettings.var_65b4bd7) ? level.botsettings.var_65b4bd7 : 0);
+    setdvar("bot_Fov", isdefined(level.botsettings.fov) ? level.botsettings.fov : 0);
+    setdvar("bot_FovAds", isdefined(level.botsettings.var_bcd59d68) ? level.botsettings.var_bcd59d68 : 0);
+    setdvar("bot_PitchSensitivity", level.botsettings.pitchsensitivity);
+    setdvar("bot_YawSensitivity", level.botsettings.yawsensitivity);
+    setdvar("bot_PitchSpeed", isdefined(level.botsettings.var_1ade69f2) ? level.botsettings.var_1ade69f2 : 0);
+    setdvar("bot_PitchSpeedAds", isdefined(level.botsettings.var_de2a5ea0) ? level.botsettings.var_de2a5ea0 : 0);
+    setdvar("bot_YawSpeed", isdefined(level.botsettings.var_7b873bb7) ? level.botsettings.var_7b873bb7 : 0);
+    setdvar("bot_YawSpeedAds", isdefined(level.botsettings.var_1ae54a4b) ? level.botsettings.var_1ae54a4b : 0);
+    setdvar("pitchAccelerationTime", isdefined(level.botsettings.pitchAccelerationTime) ? level.botsettings.pitchAccelerationTime : 0);
+    setdvar("yawAccelerationTime", isdefined(level.botsettings.yawAccelerationTime) ? level.botsettings.yawAccelerationTime : 0);
+    setdvar("pitchDecelerationThreshold", isdefined(level.botsettings.pitchDecelerationThreshold) ? level.botsettings.pitchDecelerationThreshold : 0);
+    setdvar("yawDecelerationThreshold", isdefined(level.botsettings.yawDecelerationThreshold) ? level.botsettings.yawDecelerationThreshold : 0);
+    meleerange = getdvarint("player_meleeRangeDefault") * (isdefined(level.botsettings.var_e5ef01c3) ? level.botsettings.var_e5ef01c3 : 0);
+    level.botsettings.meleerange = int(meleerange);
+    level.botsettings.meleerangesq = meleerange * meleerange;
+    level.botsettings.var_982d2abd = level.botsettings.var_a4232b8d * level.botsettings.var_a4232b8d;
+    level.botsettings.var_253386f = level.botsettings.var_e18736a3 * level.botsettings.var_e18736a3;
+    var_57945af2 = isdefined(level.botsettings.var_57945af2) ? level.botsettings.var_57945af2 : 0;
+    level.botsettings.var_8190d80e = var_57945af2 * var_57945af2;
+    var_da7f9cfc = isdefined(level.botsettings.var_da7f9cfc) ? level.botsettings.var_da7f9cfc : 1024;
+    level.botsettings.var_706015f4 = var_da7f9cfc * var_da7f9cfc;
+    var_cd4eae6d = isdefined(level.botsettings.var_cd4eae6d) ? level.botsettings.var_cd4eae6d : 0;
+    level.botsettings.var_42d92b9d = var_cd4eae6d * var_cd4eae6d;
+    var_8385083 = isdefined(level.botsettings.var_8385083) ? level.botsettings.var_8385083 : 1024;
+    level.botsettings.var_833a914f = var_8385083 * var_8385083;
+    level.botsettings.var_b907551c = getdvarfloat("player_swimVerticalSpeedMax");
+    level.botsettings.swimtime = getdvarfloat("player_swimTime", 5) * 1000;
 }
 
 // Namespace bot
@@ -478,7 +478,7 @@ function function_1f0a2676(trigger) {
     var_520cbd16 = height / 4;
     queryorigin = minorigin + (0, 0, var_520cbd16);
     /#
-        if (getdvarint("bot_AllowMelee", 0)) {
+        if (getdvarint("<dev string:x28>", 0)) {
             var_d00d6cae = 10;
             circle(queryorigin, radius, (0, 1, 0), 0, 1, 20 * var_d00d6cae);
             circle(queryorigin + (0, 0, var_520cbd16), radius, (0, 1, 0), 0, 1, 20 * var_d00d6cae);
@@ -530,7 +530,7 @@ function function_22715ac8(trigger) {
 // Size: 0x284
 function function_4826a5ea() {
     /#
-        if (!getdvarint("bot_AllowMelee")) {
+        if (!getdvarint("<dev string:x3d>")) {
             return;
         }
     #/
@@ -545,9 +545,9 @@ function function_4826a5ea() {
         self.bot.var_39a761da++;
         if (self.bot.var_39a761da >= 3) {
             /#
-                if (getdvarint("bot_AllowMelee", 0)) {
+                if (getdvarint("<dev string:x4f>", 0)) {
                     sphere(self.origin, 16, (1, 0, 0), 0.25, 0, 16, 1200);
-                    iprintln("bot_AllowMelee" + self.name + "bot_AllowMelee" + self.origin);
+                    iprintln("<dev string:x5e>" + self.name + "<dev string:x63>" + self.origin);
                 }
             #/
             self thread function_36492c9c();
@@ -577,7 +577,7 @@ function function_d2360390() {
     maxdistsq = undefined;
     for (i = 0; i < self.bot.var_53515354.size; i++) {
         /#
-            if (getdvarint("bot_AllowMelee", 0)) {
+            if (getdvarint("<dev string:x4f>", 0)) {
                 line(self.bot.var_53515354[i], self.bot.var_53515354[i] + (0, 0, 72), (0, 1, 0), 1, 0, 10);
             }
         #/
@@ -589,9 +589,9 @@ function function_d2360390() {
         }
     }
     /#
-        if (getdvarint("bot_AllowMelee", 0)) {
+        if (getdvarint("<dev string:x4f>", 0)) {
             sphere(self.origin, -128, (1, 0, 0), 0.25, 0, 16, 1200);
-            iprintln("bot_AllowMelee" + self.name + "bot_AllowMelee" + self.origin);
+            iprintln("<dev string:x5e>" + self.name + "<dev string:x74>" + self.origin);
         }
     #/
     self thread function_36492c9c();
@@ -610,7 +610,7 @@ function function_36492c9c() {
     var_8939cf85 = anglestoforward((0, var_7e144ff9, 0));
     self function_c14cc56c(var_8939cf85);
     self botsetmovemagnitude(1);
-    wait(1.5);
+    wait 1.5;
     self botreleasemanualcontrol();
 }
 
@@ -644,12 +644,12 @@ function function_187eccb() {
     while (true) {
         reason = self waittill(#"bot_path_failed");
         /#
-            if (getdvarint("bot_AllowMelee", 0)) {
+            if (getdvarint("<dev string:x4f>", 0)) {
                 goalposition = self function_5bd0f250();
                 box(self.origin, (-15, -15, 0), (15, 15, 72), 0, (0, 1, 0), 0.25, 0, 1200);
                 box(goalposition, (-15, -15, 0), (15, 15, 72), 0, (1, 0, 0), 0.25, 0, 1200);
                 line(self.origin, goalposition, (1, 1, 1), 1, 0, 1200);
-                iprintln("bot_AllowMelee" + self.name + "bot_AllowMelee" + self.origin + "bot_AllowMelee" + goalposition);
+                iprintln("<dev string:x5e>" + self.name + "<dev string:x86>" + self.origin + "<dev string:x9a>" + goalposition);
             }
         #/
         self thread function_36492c9c();
@@ -848,16 +848,16 @@ function follow_entity(entity, radiusmin, radiusmax) {
 // Size: 0x544
 function function_2e1b3e51(fwd, radiusmin, radiusmax, spacing, var_fad66805) {
     if (!isdefined(radiusmin)) {
-        radiusmin = isdefined(level.var_93fffa7b.var_d39050ca) ? level.var_93fffa7b.var_d39050ca : 0;
+        radiusmin = isdefined(level.botsettings.var_d39050ca) ? level.botsettings.var_d39050ca : 0;
     }
     if (!isdefined(radiusmax)) {
-        radiusmax = isdefined(level.var_93fffa7b.var_e8aef864) ? level.var_93fffa7b.var_e8aef864 : 0;
+        radiusmax = isdefined(level.botsettings.var_e8aef864) ? level.botsettings.var_e8aef864 : 0;
     }
     if (!isdefined(spacing)) {
-        spacing = isdefined(level.var_93fffa7b.var_fe2843a5) ? level.var_93fffa7b.var_fe2843a5 : 0;
+        spacing = isdefined(level.botsettings.var_fe2843a5) ? level.botsettings.var_fe2843a5 : 0;
     }
     if (!isdefined(var_fad66805)) {
-        var_fad66805 = isdefined(level.var_93fffa7b.var_ba8787e6) ? level.var_93fffa7b.var_ba8787e6 : 0;
+        var_fad66805 = isdefined(level.botsettings.var_ba8787e6) ? level.botsettings.var_ba8787e6 : 0;
     }
     if (!isdefined(fwd)) {
         fwd = anglestoforward(self.angles);
@@ -893,11 +893,11 @@ function function_2e1b3e51(fwd, radiusmin, radiusmax, spacing, var_fad66805) {
         return;
     }
     /#
-        if (getdvarint("bot_AllowMelee", 0)) {
+        if (getdvarint("<dev string:x4f>", 0)) {
             circle(self.origin, radiusmin, (1, 0, 0), 0, 1, 1200);
             circle(self.origin, radiusmax, (1, 0, 0), 0, 1, 1200);
             sphere(self.origin, 16, (0, 1, 0), 0.25, 0, 16, 1200);
-            iprintln("bot_AllowMelee" + self.name + "bot_AllowMelee" + self.origin);
+            iprintln("<dev string:x5e>" + self.name + "<dev string:xa0>" + self.origin);
         }
     #/
     self thread function_36492c9c();
@@ -1027,7 +1027,7 @@ function function_7ff6d5f0(var_5c0a8960, cornerdist) {
     var_9af44998 = cornerdist * cornerdist;
     var_686adc0a = cornerdist * cornerdist;
     while (true) {
-        centerpoint, var_299d2679, leavepoint, angle, var_2670a60a = self waittill(#"hash_f486669c");
+        centerpoint, var_299d2679, leavepoint, angle, var_2670a60a = self waittill(#"bot_corner");
         if (self namespace_5cd60c9f::function_231137e6()) {
             continue;
         }
@@ -1044,7 +1044,7 @@ function function_7ff6d5f0(var_5c0a8960, cornerdist) {
 // Size: 0x10c
 function function_73658497(var_9af44998, centerpoint, var_299d2679, leavepoint, angle, var_2670a60a) {
     self endon(#"death");
-    self endon(#"hash_f486669c");
+    self endon(#"bot_corner");
     self endon(#"bot_goal_reached");
     self endon(#"hash_3f789ced");
     level endon(#"game_ended");
@@ -1052,7 +1052,7 @@ function function_73658497(var_9af44998, centerpoint, var_299d2679, leavepoint, 
         if (self namespace_5cd60c9f::function_231137e6()) {
             return;
         }
-        wait(0.05);
+        wait 0.05;
     }
     self botlookatpoint((var_2670a60a[0], var_2670a60a[1], var_2670a60a[1] + 60));
     self thread function_ddce1c40();
@@ -1140,13 +1140,13 @@ function function_8e07117() {
     function function_9fda6f90(team) {
         host = util::gethostplayer();
         trace = host eye_trace();
-        direction_vec = host.origin - trace["bot_AllowMelee"];
+        direction_vec = host.origin - trace["<dev string:xbe>"];
         direction = vectortoangles(direction_vec);
         yaw = direction[1];
         bot = add_bot(team);
         if (isdefined(bot)) {
             bot waittill(#"spawned_player");
-            bot setorigin(trace["bot_AllowMelee"]);
+            bot setorigin(trace["<dev string:xbe>"]);
             bot setplayerangles((bot.angles[0], yaw, bot.angles[2]));
         }
         return bot;
@@ -1170,13 +1170,13 @@ function function_8e07117() {
     // Checksum 0xba222abc, Offset: 0x4748
     // Size: 0x152
     function function_d20cb955() {
-        iprintln("bot_AllowMelee");
+        iprintln("<dev string:xc7>");
         points = self function_f486e6e9();
         if (!isdefined(points) || points.size == 0) {
-            iprintln("bot_AllowMelee");
+            iprintln("<dev string:xd5>");
             return;
         }
-        iprintln("bot_AllowMelee");
+        iprintln("<dev string:xeb>");
         players = getplayers();
         foreach (player in players) {
             if (!player util::is_bot()) {
@@ -1191,26 +1191,26 @@ function function_8e07117() {
     // Checksum 0xa866648f, Offset: 0x48a8
     // Size: 0x22a
     function function_f486e6e9() {
-        iprintln("bot_AllowMelee");
-        iprintln("bot_AllowMelee");
-        iprintln("bot_AllowMelee");
+        iprintln("<dev string:x109>");
+        iprintln("<dev string:x120>");
+        iprintln("<dev string:x131>");
         points = [];
         while (true) {
-            wait(0.05);
-            point = self eye_trace()["bot_AllowMelee"];
+            wait 0.05;
+            point = self eye_trace()["<dev string:xbe>"];
             if (isdefined(point)) {
                 point = getclosestpointonnavmesh(point, -128);
                 if (isdefined(point)) {
                     sphere(point, 16, (0, 0, 1), 0.25, 0, 16, 1);
                 }
             }
-            if (self buttonpressed("bot_AllowMelee")) {
+            if (self buttonpressed("<dev string:x145>")) {
                 if (points.size == 0 || isdefined(point) && distance2d(point, points[points.size - 1]) > 16) {
                     points[points.size] = point;
                 }
-            } else if (self buttonpressed("bot_AllowMelee")) {
+            } else if (self buttonpressed("<dev string:x14e>")) {
                 return points;
-            } else if (self buttonpressed("bot_AllowMelee")) {
+            } else if (self buttonpressed("<dev string:x157>")) {
                 return undefined;
             }
             for (i = 0; i < points.size; i++) {
@@ -1240,25 +1240,25 @@ function function_8e07117() {
     // Size: 0x128
     function function_58ff286c() {
         while (true) {
-            wait(0.25);
-            cmd = getdvarstring("bot_AllowMelee", "bot_AllowMelee");
+            wait 0.25;
+            cmd = getdvarstring("<dev string:x160>", "<dev string:x16b>");
             if (!isdefined(level.var_f61e96da) || ![[ level.var_f61e96da ]](cmd)) {
                 host = util::gethostplayer();
                 switch (cmd) {
-                case 8:
+                case "<dev string:x16c>":
                     remove_bots();
                     break;
-                case 8:
+                case "<dev string:x177>":
                     kill_bots();
                     break;
-                case 8:
+                case "<dev string:x181>":
                     host function_d20cb955();
                     break;
                 default:
                     break;
                 }
             }
-            setdvar("bot_AllowMelee", "bot_AllowMelee");
+            setdvar("<dev string:x160>", "<dev string:x16b>");
         }
     }
 
@@ -1269,16 +1269,16 @@ function function_8e07117() {
     function function_ca7aa540(cmd) {
         host = function_acc126dc();
         switch (cmd) {
-        case 8:
+        case "<dev string:x188>":
             add_bot(host.team);
             return 1;
-        case 8:
+        case "<dev string:x18c>":
             add_bots(3, host.team);
             return 1;
-        case 8:
+        case "<dev string:x192>":
             function_9fda6f90();
             return 1;
-        case 8:
+        case "<dev string:x1a0>":
             remove_bots(1);
             return 1;
         }

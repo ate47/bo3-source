@@ -204,7 +204,7 @@ function function_4ebb4502() {
     if (!isdefined(driver)) {
         self function_63f13a8e(target_vec);
     }
-    wait(1);
+    wait 1;
     self.turretrotscale = 1 * self.var_cf0b2b03;
 }
 
@@ -307,11 +307,11 @@ function state_combat_update(params) {
         self setbrake(1);
     }
     switch (self.variant) {
-    case 8:
+    case "cannon":
         vehicle_ai::cooldown("main_cannon", 4);
         self thread function_9196ecf2();
         break;
-    case 10:
+    case "rocketpod":
         self thread function_76333d5f();
         break;
     }
@@ -389,7 +389,7 @@ function function_8ec0e22c(params) {
     vehicle_ai::cooldown("emped_timer", time);
     while (!vehicle_ai::iscooldownready("emped_timer")) {
         timeleft = max(vehicle_ai::getcooldownleft("emped_timer"), 0.5);
-        wait(timeleft);
+        wait timeleft;
     }
     self.stun_fx delete();
     self.emped = undefined;
@@ -402,7 +402,7 @@ function function_8ec0e22c(params) {
 // Checksum 0x240566e0, Offset: 0x2028
 // Size: 0x36
 function function_fcd2c4ce() {
-    if (self.var_2168e5ee === 1) {
+    if (self.trophy_down === 1) {
         return true;
     }
     if (trophy_destroyed()) {
@@ -443,7 +443,7 @@ function function_5d17667f() {
     if (function_fcd2c4ce()) {
         return;
     }
-    self.var_2168e5ee = 1;
+    self.trophy_down = 1;
     driver = self getseatoccupant(0);
     if (!isdefined(driver) && self vehicle_ai::get_current_state() != "off" && self vehicle_ai::get_next_state() !== "off") {
         self notify(#"pain", 1);
@@ -467,22 +467,22 @@ function function_5d17667f() {
         [[ level.var_3be61296 ]](self, 0);
     }
     if (trophy_destroyed()) {
-        self notify(#"hash_27175bcd");
-        level notify(#"hash_27175bcd", self);
+        self notify(#"trophy_system_destroyed");
+        level notify(#"trophy_system_destroyed", self);
         self playsound("wpn_trophy_disable");
         playfxontag(self.settings.trophydetonationfx, self, "tag_target_lower");
         self hidepart("tag_lidar_null", "", 1);
         return;
     }
-    self notify(#"hash_6530962c");
-    level notify(#"hash_6530962c", self);
+    self notify(#"trophy_system_disabled");
+    level notify(#"trophy_system_disabled", self);
     self playsound("wpn_trophy_disable");
     self vehicle_ai::cooldown("trophy_down", self.settings.var_f5c1a5ef);
     while (!self vehicle_ai::iscooldownready("trophy_down") || self vehicle_ai::get_current_state() === "off") {
         if (self.var_9d0e9d5e >= self.settings.var_f99b9c5 || vehicle_ai::getcooldownleft("trophy_down") < 0.5 * self.settings.var_f5c1a5ef && self.var_31e90786 >= 5) {
             self vehicle_ai::clearcooldown("trophy_down");
         }
-        wait(1);
+        wait 1;
     }
     driver = self getseatoccupant(0);
     if (isdefined(driver)) {
@@ -503,9 +503,9 @@ function function_ce00e5c0() {
     self endon(#"hash_1b5e6193");
     function_e9d5fa52(1);
     time = isdefined(self.settings.var_5a624323) ? self.settings.var_5a624323 : 0.1;
-    wait(time);
+    wait time;
     driver = self getseatoccupant(0);
-    self.var_2168e5ee = 0;
+    self.trophy_down = 0;
     self.attackeraccuracy = 1;
     self showpart("tag_defense_active");
     objectives::function_66c6f97b("cp_quadtank_rocket_icon", self);
@@ -574,7 +574,7 @@ function function_bcd490eb(var_dcf15942) {
                 self setlookatent(self.enemy);
                 target_vec = self.enemy.origin + (0, 0, 40);
                 self function_63f13a8e(target_vec);
-                wait(1);
+                wait 1;
                 self clearlookatent();
                 self.var_f5d48615++;
             }
@@ -593,7 +593,7 @@ function function_bcd490eb(var_dcf15942) {
         }
         target_vec += (0, 0, 40);
         self function_63f13a8e(target_vec);
-        wait(0.2);
+        wait 0.2;
     }
 }
 
@@ -658,7 +658,7 @@ function function_9196ecf2() {
                 self setturrettargetent(self.enemy);
                 self setlookatent(self.enemy);
             }
-            wait(0.2);
+            wait 0.2;
             continue;
         }
         if (isdefined(self.enemy) && self function_4246bc05(self.enemy)) {
@@ -666,7 +666,7 @@ function function_9196ecf2() {
             self setturrettargetent(self.enemy);
             self setlookatent(self.enemy);
             if (var_65801466 >= 2) {
-                wait(0.1);
+                wait 0.1;
                 self cancelaimove();
                 self clearvehgoalpos();
                 self notify(#"near_goal");
@@ -693,7 +693,7 @@ function function_9196ecf2() {
                         self clearvehgoalpos();
                         self notify(#"near_goal");
                         self.turretrotscale = 0.7;
-                        wait(1);
+                        wait 1;
                         level notify(#"hash_7d88204f");
                         self vehicle_ai::waittill_asm_complete("fire@stationary", 6);
                         self function_e672a8ad(1);
@@ -710,12 +710,12 @@ function function_9196ecf2() {
                 self function_6daea2f7(0);
                 vehicle_ai::cooldown("main_cannon", randomfloatrange(5, 7.5));
             } else {
-                wait(0.25);
+                wait 0.25;
             }
             continue;
         }
         var_65801466++;
-        wait(0.5);
+        wait 0.5;
         if (var_65801466 > 40) {
             self function_bcd490eb(0);
             continue;
@@ -776,7 +776,7 @@ function function_76333d5f() {
                 self setvehweapon(getweapon("quadtank_main_turret_rocketpods_javelin"));
                 vehicle_ai::setturrettarget(self.enemy, 0, (0, 0, 300));
             }
-            wait(1);
+            wait 1;
             msg = self util::waittill_any_timeout(2, "turret_on_target");
             if (isdefined(self.enemy) && distance2dsquared(self.origin, self.enemy.origin) > 350 * 350) {
                 fired = 0;
@@ -789,7 +789,7 @@ function function_76333d5f() {
                     }
                     self fireweapon(0, self.enemy);
                     fired = 1;
-                    wait(0.8);
+                    wait 0.8;
                 }
                 if (fired) {
                     vehicle_ai::cooldown("rocket_launcher", randomfloatrange(8, 10));
@@ -801,7 +801,7 @@ function function_76333d5f() {
             self function_e672a8ad(1);
             self vehicle::toggle_ambient_anim_group(2, 0);
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -826,7 +826,7 @@ function path_update_interrupt() {
     self endon(#"change_state");
     self endon(#"near_goal");
     self endon(#"reached_end_node");
-    wait(1);
+    wait 1;
     var_b5465829 = 0;
     while (true) {
         if (isdefined(self.current_pathto_pos)) {
@@ -846,12 +846,12 @@ function path_update_interrupt() {
                 }
             }
             if (distance2dsquared(self.current_pathto_pos, self.goalpos) > self.goalradius * self.goalradius) {
-                wait(1);
+                wait 1;
                 self.var_29b7382f = 1;
                 self notify(#"near_goal");
             }
         }
-        wait(0.3);
+        wait 0.3;
     }
 }
 
@@ -874,7 +874,7 @@ function function_52951bdf() {
     outerspacing = innerspacing * 2;
     var_fc9d1e61 = 15;
     self asmrequestsubstate("locomotion@movement");
-    wait(0.5);
+    wait 0.5;
     self setbrake(0);
     while (true) {
         self setspeed(self.settings.defaultmovespeed, 5, 5);
@@ -890,7 +890,7 @@ function function_52951bdf() {
                     if (!isdefined(point._scoredebug)) {
                         point._scoredebug = [];
                     }
-                    point._scoredebug["cannon"] = -100;
+                    point._scoredebug["<dev string:x28>"] = -100;
                 #/
                 point.score += -100;
             }
@@ -916,15 +916,15 @@ function function_52951bdf() {
             self clearvehgoalpos();
             if (isdefined(self.var_29b7382f)) {
                 self.var_29b7382f = undefined;
-                wait(0.1);
+                wait 0.1;
             } else {
-                wait(0.5);
+                wait 0.5;
             }
             continue;
         }
         self.current_pathto_pos = undefined;
         goalyaw = self getgoalyaw();
-        wait(1);
+        wait 1;
     }
 }
 
@@ -936,7 +936,7 @@ function function_350cca63() {
     self endon(#"death");
     self endon(#"change_state");
     self asmrequestsubstate("locomotion@movement");
-    wait(0.5);
+    wait 0.5;
     self setbrake(0);
     while (self.allow_movement) {
         if (self.var_872042b7 !== 1) {
@@ -955,14 +955,14 @@ function function_350cca63() {
             self clearvehgoalpos();
             if (isdefined(self.var_29b7382f)) {
                 self.var_29b7382f = undefined;
-                wait(0.1);
+                wait 0.1;
             } else {
-                wait(0.5);
+                wait 0.5;
             }
             continue;
         }
         while (isdefined(self.var_872042b7)) {
-            wait(0.2);
+            wait 0.2;
         }
     }
 }
@@ -981,7 +981,7 @@ function function_644777c8() {
         if (self isgunnerfiring(0)) {
             self fireweapon(2);
         }
-        wait(firetime);
+        wait firetime;
     }
 }
 
@@ -999,7 +999,7 @@ function function_867556e3(shoulddodamage, enemy) {
     if (isplayer(enemy) && enemy laststand::player_is_in_laststand()) {
         return false;
     }
-    self notify(#"hash_c0e427d0");
+    self notify(#"play_meleefx");
     if (shoulddodamage) {
         players = getplayers();
         foreach (player in players) {
@@ -1046,7 +1046,7 @@ function function_17b8332e() {
                 break;
             }
         }
-        wait(0.3);
+        wait 0.3;
     }
 }
 
@@ -1206,7 +1206,7 @@ function function_8440fad9(time) {
     self notify(#"hash_f7122e99");
     self endon(#"hash_f7122e99");
     self endon(#"death");
-    wait(time);
+    wait time;
     self laseroff();
 }
 
@@ -1337,16 +1337,16 @@ function function_bda33f7a() {
     while (true) {
         note = self util::waittill_any_return("footstep_front_left", "footstep_front_right", "footstep_rear_left", "footstep_rear_right");
         switch (note) {
-        case 81:
+        case "footstep_front_left":
             bone = "tag_foot_fx_left_front";
             break;
-        case 80:
+        case "footstep_front_right":
             bone = "tag_foot_fx_right_front";
             break;
-        case 79:
+        case "footstep_rear_left":
             bone = "tag_foot_fx_left_back";
             break;
-        case 78:
+        case "footstep_rear_right":
             bone = "tag_foot_fx_right_back";
             break;
         }
@@ -1365,7 +1365,7 @@ function function_c73f719e(projectile) {
     projectile = self waittill(#"weapon_fired");
     distance = 1400;
     alias = "prj_quadtank_javelin_incoming";
-    wait(5);
+    wait 5;
     if (!isdefined(projectile)) {
         return;
     }
@@ -1377,7 +1377,7 @@ function function_c73f719e(projectile) {
                 return;
             }
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 
@@ -1400,7 +1400,7 @@ function function_af1bc2b1(projectile) {
                 return;
             }
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 

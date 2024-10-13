@@ -64,10 +64,10 @@ function skeletonspawnsetup() {
 // Checksum 0xca7ee6fc, Offset: 0x6f0
 // Size: 0xf4
 function private function_9aa7ac57() {
-    behaviortreenetworkutility::registerbehaviortreescriptapi("skeletonTargetService", &function_d89f6c60);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("skeletonTargetService", &skeletonTargetService);
     behaviortreenetworkutility::registerbehaviortreescriptapi("skeletonShouldMelee", &function_4db74dea);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("skeletonGibLegsCondition", &function_72df9548);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("isSkeletonWalking", &function_46ef8559);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("skeletonGibLegsCondition", &skeletonGibLegsCondition);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("isSkeletonWalking", &isSkeletonWalking);
     behaviortreenetworkutility::registerbehaviortreescriptapi("skeletonDeathAction", &skeletondeathaction);
     animationstatenetwork::registernotetrackhandlerfunction("contact", &function_53729d53);
 }
@@ -82,31 +82,31 @@ function private function_203c170e() {
     blackboard::registerblackboardattribute(self, "_arms_position", "arms_up", &bb_getarmsposition);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("skeletonShouldMelee");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_speed", "locomotion_speed_walk", &function_f8ae4008);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("skeletonShouldMelee");
+            self trackblackboardattribute("<dev string:x37>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_has_legs", "has_legs_yes", &bb_gethaslegsstatus);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("skeletonShouldMelee");
+            self trackblackboardattribute("<dev string:x49>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_which_board_pull", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("skeletonShouldMelee");
+            self trackblackboardattribute("<dev string:x53>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_board_attack_spot", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("skeletonShouldMelee");
+            self trackblackboardattribute("<dev string:x65>");
         #/
     }
     self.___archetypeonanimscriptedcallback = &archetypeskeletononanimscriptedcallback;
@@ -172,7 +172,7 @@ function bb_gethaslegsstatus() {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa13d6678, Offset: 0xb98
 // Size: 0x80
-function function_46ef8559(behaviortreeentity) {
+function isSkeletonWalking(behaviortreeentity) {
     if (!isdefined(behaviortreeentity.zombie_move_speed)) {
         return true;
     }
@@ -183,7 +183,7 @@ function function_46ef8559(behaviortreeentity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2f256bb4, Offset: 0xc20
 // Size: 0x42
-function function_72df9548(behaviortreeentity) {
+function skeletonGibLegsCondition(behaviortreeentity) {
     return gibserverutils::isgibbed(behaviortreeentity, 256) || gibserverutils::isgibbed(behaviortreeentity, -128);
 }
 
@@ -350,7 +350,7 @@ function function_989e1981(goal) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2b5a36dd, Offset: 0x13d0
 // Size: 0x3b0
-function function_d89f6c60(behaviortreeentity) {
+function skeletonTargetService(behaviortreeentity) {
     self endon(#"death");
     if (isdefined(behaviortreeentity.ignoreall) && behaviortreeentity.ignoreall) {
         return 0;

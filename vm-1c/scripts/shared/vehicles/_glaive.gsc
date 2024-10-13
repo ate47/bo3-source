@@ -78,7 +78,7 @@ function defaultrole() {
     self vehicle_ai::get_state_callbacks("combat").enter_func = &state_combat_enter;
     self vehicle_ai::add_state("slash", undefined, &function_14d89a82, undefined);
     /#
-        setdvar("<unknown string>", 1);
+        setdvar("<dev string:x28>", 1);
     #/
     self thread function_ad866c00();
     vehicle_ai::startinitialstate("combat");
@@ -147,26 +147,26 @@ function private function_ad866c00() {
     self endon(#"death");
     for (;;) {
         if (!isdefined(self.owner)) {
-            wait(0.25);
+            wait 0.25;
             continue;
         }
         if (isdefined(self.ignoreall) && self.ignoreall) {
-            wait(0.25);
+            wait 0.25;
             continue;
         }
         /#
-            if (getdvarint("<unknown string>", 0)) {
+            if (getdvarint("<dev string:x28>", 0)) {
                 if (isdefined(self.var_f23a98eb)) {
                     line(self.origin, self.var_f23a98eb.origin, (1, 0, 0), 1, 0, 5);
                 }
             }
         #/
         if (self function_cb8b2163(self.var_f23a98eb)) {
-            wait(0.25);
+            wait 0.25;
             continue;
         }
         if (isdefined(self._glaive_must_return_to_owner) && self._glaive_must_return_to_owner) {
-            wait(0.25);
+            wait 0.25;
             continue;
         }
         target = function_7ab362db();
@@ -175,7 +175,7 @@ function private function_ad866c00() {
         } else {
             self.var_f23a98eb = target;
         }
-        wait(0.25);
+        wait 0.25;
     }
 }
 
@@ -230,7 +230,7 @@ function state_combat_update(params) {
     self endon(#"death");
     pathfailcount = 0;
     while (!isdefined(self.owner)) {
-        wait(0.1);
+        wait 0.1;
         if (!isdefined(self.owner)) {
             self.owner = getplayers(self.team)[0];
         }
@@ -297,12 +297,12 @@ function state_combat_update(params) {
                         self function_bd13793a();
                     }
                 }
-                wait(0.1);
+                wait 0.1;
             } else {
                 pathfailcount = 0;
             }
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 
@@ -362,13 +362,13 @@ function function_6727edba(enemy) {
     self.var_4dfc2454 = "tag_origin";
     if (isdefined(enemy.archetype)) {
         switch (enemy.archetype) {
-        case 23:
+        case "parasite":
             var_8a282a6c = "o_zombie_zod_sword_projectile_melee_parasite_synced_a";
             break;
-        case 24:
+        case "raps":
             var_8a282a6c = "o_zombie_zod_sword_projectile_melee_elemental_synced_a";
             break;
-        case 9:
+        case "margwa":
             var_8a282a6c = "o_zombie_zod_sword_projectile_melee_margwa_m_synced_a";
             self.var_4dfc2454 = "tag_sync";
             break;
@@ -432,7 +432,7 @@ function function_14d89a82(params) {
 // Size: 0x26
 function function_e25879ca(duration) {
     self endon(#"death");
-    wait(duration);
+    wait duration;
     self.var_7d75bfbb = undefined;
 }
 
@@ -459,7 +459,7 @@ function function_bd13793a() {
                     if (!isdefined(point._scoredebug)) {
                         point._scoredebug = [];
                     }
-                    point._scoredebug["<unknown string>"] = distancesquared(point.origin, targetpos) * -1;
+                    point._scoredebug["<dev string:x45>"] = distancesquared(point.origin, targetpos) * -1;
                 #/
                 point.score += distancesquared(point.origin, targetpos) * -1;
             }
@@ -477,7 +477,7 @@ function function_bd13793a() {
                 self setvehgoalpos(self.current_pathto_pos, 1, 1);
             }
         }
-        wait(1);
+        wait 1;
     }
     self asmrequestsubstate("idle@movement");
 }
@@ -500,7 +500,7 @@ function function_7ffdbe09() {
             if (sighttracepassed(self.origin, point.origin, 0, undefined)) {
                 trace_count++;
                 if (trace_count > 3) {
-                    wait(0.05);
+                    wait 0.05;
                     trace_count = 0;
                 }
                 if (!bullettracepassed(self.origin, point.origin, 0, self)) {
@@ -524,13 +524,13 @@ function function_7ffdbe09() {
                 }
             }
         }
-        wait(1);
+        wait 1;
     }
     if (isdefined(self.owner)) {
         self.origin = self.owner.origin + (0, 0, 40);
     }
     self notify(#"hash_3de4334");
-    wait(2);
+    wait 2;
 }
 
 // Namespace glaive
@@ -540,7 +540,7 @@ function function_7ffdbe09() {
 function function_11952f05() {
     self endon(#"death");
     while (abs(self.origin[2] - self.owner.origin[2]) > 80 * 80 || isdefined(self.owner) && distance2dsquared(self.origin, self.owner.origin) > 80 * 80) {
-        wait(0.1);
+        wait 0.1;
     }
     self notify(#"hash_3de4334");
 }
@@ -552,7 +552,7 @@ function function_11952f05() {
 function function_adad389c() {
     self endon(#"death");
     while (abs(self.origin[2] - self.owner.origin[2]) > -96 * -96 || distance2dsquared(self.origin, self.owner.origin) > -96 * -96 || isdefined(self.owner) && !util::within_fov(self.owner.origin, self.owner.angles, self.origin, cos(60))) {
-        wait(0.1);
+        wait 0.1;
     }
     self asmrequestsubstate("idle@movement");
     self notify(#"hash_6e5855cf");

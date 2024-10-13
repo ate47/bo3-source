@@ -213,7 +213,7 @@ function watch_killstreak_detect_perks_changed(local_client_num) {
     self endon(#"disconnect");
     self endon(#"entityshutdown");
     while (isdefined(self)) {
-        wait(0.016);
+        wait 0.016;
         util::clean_deleted(level.enemyvehicles);
         util::clean_deleted(level.enemymissiles);
         array::thread_all(level.enemyvehicles, &updateenemyvehicles, local_client_num, 1);

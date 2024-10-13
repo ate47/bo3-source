@@ -15,9 +15,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_99cd1d55;
+#namespace zm_zod_zombie;
 
-// Namespace namespace_99cd1d55
+// Namespace zm_zod_zombie
 // Params 0, eflags: 0x2
 // Checksum 0x706b7615, Offset: 0x358
 // Size: 0xac
@@ -32,16 +32,16 @@ function autoexec init() {
     level.var_1ace2307 = 2;
 }
 
-// Namespace namespace_99cd1d55
+// Namespace zm_zod_zombie
 // Params 0, eflags: 0x5 linked
 // Checksum 0xa71748a2, Offset: 0x410
 // Size: 0x5c
 function private function_3606a81c() {
     animationstatenetwork::registeranimationmocomp("mocomp_teleport_traversal@zombie", &function_5683b5d5, undefined, undefined);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("zodShouldMove", &function_d0ef2cea);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("zodShouldMove", &zodShouldMove);
 }
 
-// Namespace namespace_99cd1d55
+// Namespace zm_zod_zombie
 // Params 5, eflags: 0x1 linked
 // Checksum 0x40247a63, Offset: 0x478
 // Size: 0x104
@@ -52,15 +52,15 @@ function function_5683b5d5(entity, mocompanim, mocompanimblendouttime, mocompani
     if (isdefined(entity.traversestartnode)) {
         portal_trig = entity.traversestartnode.portal_trig;
         level clientfield::increment("pulse_" + portal_trig.script_noteworthy);
-        portal_trig thread namespace_8e2647d0::function_eb1242c8(entity);
+        portal_trig thread zm_zod_portals::function_eb1242c8(entity);
     }
 }
 
-// Namespace namespace_99cd1d55
+// Namespace zm_zod_zombie
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc0a8f5b0, Offset: 0x588
 // Size: 0x192
-function function_d0ef2cea(entity) {
+function zodShouldMove(entity) {
     if (isdefined(entity.var_128cd975) && entity.var_128cd975 && !(isdefined(entity.tesla_death) && entity.tesla_death)) {
         return false;
     }
@@ -94,7 +94,7 @@ function function_d0ef2cea(entity) {
     return false;
 }
 
-// Namespace namespace_99cd1d55
+// Namespace zm_zod_zombie
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcfab10c5, Offset: 0x728
 // Size: 0x1c
@@ -102,7 +102,7 @@ function function_e4da8c4d() {
     self function_1762804b(0);
 }
 
-// Namespace namespace_99cd1d55
+// Namespace zm_zod_zombie
 // Params 1, eflags: 0x5 linked
 // Checksum 0x47ab5626, Offset: 0x750
 // Size: 0xfa
@@ -120,7 +120,7 @@ function private function_8e555efc(players) {
     self.last_closest_player = undefined;
 }
 
-// Namespace namespace_99cd1d55
+// Namespace zm_zod_zombie
 // Params 2, eflags: 0x5 linked
 // Checksum 0x8502ecf4, Offset: 0x858
 // Size: 0x282
@@ -177,7 +177,7 @@ function private function_e33b6e60(origin, players) {
     return self.last_closest_player;
 }
 
-// Namespace namespace_99cd1d55
+// Namespace zm_zod_zombie
 // Params 0, eflags: 0x5 linked
 // Checksum 0x47f0106f, Offset: 0xae8
 // Size: 0x1ec
@@ -203,7 +203,7 @@ function private function_72e6c1d6() {
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

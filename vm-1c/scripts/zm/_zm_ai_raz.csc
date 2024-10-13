@@ -2,9 +2,9 @@
 #using scripts/shared/visionset_mgr_shared;
 #using scripts/shared/system_shared;
 
-#namespace namespace_1c31c03d;
+#namespace zm_ai_raz;
 
-// Namespace namespace_1c31c03d
+// Namespace zm_ai_raz
 // Params 0, eflags: 0x2
 // Checksum 0xe991112f, Offset: 0x120
 // Size: 0x3c
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
     system::register("zm_ai_raz", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_1c31c03d
+// Namespace zm_ai_raz
 // Params 0, eflags: 0x3 linked
 // Checksum 0xe7fe6fe9, Offset: 0x168
 // Size: 0x44
@@ -21,7 +21,7 @@ function autoexec __init__() {
     ai::add_archetype_spawn_function("raz", &function_f87a1709);
 }
 
-// Namespace namespace_1c31c03d
+// Namespace zm_ai_raz
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x1b8
 // Size: 0x4
@@ -29,7 +29,7 @@ function __main__() {
     
 }
 
-// Namespace namespace_1c31c03d
+// Namespace zm_ai_raz
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbb8f5c6b, Offset: 0x1c8
 // Size: 0x34

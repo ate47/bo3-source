@@ -40,16 +40,16 @@ function init() {
 function init_spawns() {
     spawns = getnodearray("spawn", "script_noteworthy");
     if (!isdefined(spawns) || !spawns.size) {
-        println("allowdogs");
+        println("<dev string:x28>");
         return;
     }
-    var_88278484 = getent("dog_spawner", "targetname");
-    if (!isdefined(var_88278484)) {
-        println("allowdogs");
+    dog_spawner = getent("dog_spawner", "targetname");
+    if (!isdefined(dog_spawner)) {
+        println("<dev string:x48>");
         return;
     }
     valid = spawnlogic::get_spawnpoint_array("mp_tdm_spawn");
-    dog = var_88278484 spawnfromspawner();
+    dog = dog_spawner spawnfromspawner();
     foreach (spawn in spawns) {
         valid = arraysort(valid, spawn.origin, 0);
         for (i = 0; i < 5; i++) {
@@ -61,7 +61,7 @@ function init_spawns() {
     }
     /#
         if (!level.var_a16d1f64.size) {
-            println("allowdogs");
+            println("<dev string:x6b>");
         }
     #/
     dog delete();
@@ -124,19 +124,19 @@ function function_4aae4772() {
 // Checksum 0x7fd773a3, Offset: 0x9c8
 // Size: 0x11c
 function function_62a07a8b() {
-    var_88278484 = getent("dog_spawner", "targetname");
-    if (!isdefined(var_88278484)) {
-        println("allowdogs");
+    dog_spawner = getent("dog_spawner", "targetname");
+    if (!isdefined(dog_spawner)) {
+        println("<dev string:x93>");
         return false;
     }
     spawns = getnodearray("spawn", "script_noteworthy");
     if (level.var_a16d1f64.size <= 0) {
-        println("allowdogs");
+        println("<dev string:x28>");
         return false;
     }
     exits = getnodearray("exit", "script_noteworthy");
     if (exits.size <= 0) {
-        println("allowdogs");
+        println("<dev string:xb0>");
         return false;
     }
     return true;
@@ -238,8 +238,8 @@ function function_971fce06(team) {
 // Checksum 0x9c07771e, Offset: 0xed0
 // Size: 0x168
 function function_4b764fa6(owner, team, spawn_node, requireddeathcount) {
-    var_88278484 = getent("dog_spawner", "targetname");
-    dog = var_88278484 spawnfromspawner();
+    dog_spawner = getent("dog_spawner", "targetname");
+    dog = dog_spawner spawnfromspawner();
     dog forceteleport(spawn_node.origin, spawn_node.angles);
     dog init_dog();
     dog function_6ece2d8c(owner, team, requireddeathcount);
@@ -263,7 +263,7 @@ function function_49bbd420() {
         if (weapon_utils::isflashorstunweapon(weapon)) {
             damage_area = spawn("trigger_radius", self.origin, 0, -128, -128);
             attacker thread function_f436e711(damage_area);
-            wait(0.05);
+            wait 0.05;
             damage_area delete();
         }
     }
@@ -288,7 +288,7 @@ function function_ec5275d9(owner, deathcount, killstreak_id) {
             node = function_7181571a(owner, team);
             level function_4b764fa6(owner, team, node, requireddeathcount);
             count++;
-            wait(randomfloatrange(2, 5));
+            wait randomfloatrange(2, 5);
         }
         level waittill(#"hash_39475062");
     }
@@ -297,7 +297,7 @@ function function_ec5275d9(owner, deathcount, killstreak_id) {
         if (dogs.size <= 0) {
             killstreakrules::killstreakstop("dogs", team, killstreak_id);
             if (isdefined(owner)) {
-                owner notify(#"hash_5718e892");
+                owner notify(#"dogs_complete");
             }
             return;
         }
@@ -375,7 +375,7 @@ function dog_patrol() {
             return;
         }
         if (isdefined(self.enemy)) {
-            wait(randomintrange(3, 5));
+            wait randomintrange(3, 5);
             continue;
         }
         nodes = [];
@@ -421,7 +421,7 @@ function dog_patrol() {
                 break;
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -590,13 +590,13 @@ function function_71fb32a8() {
 function function_f7ae2e49(delay, interval, regen_interval) {
     self endon(#"death");
     self endon(#"damage");
-    wait(delay);
+    wait delay;
     for (step = 0; step <= 5; step += interval) {
         if (self.health >= 100) {
             break;
         }
         self.health += regen_interval;
-        wait(interval);
+        wait interval;
     }
     self function_71fb32a8();
     self.health = 100;
@@ -673,16 +673,16 @@ function function_f436e711(area) {
     // Checksum 0x9ecbeb6b, Offset: 0x2650
     // Size: 0x2a0
     function function_cced6d39() {
-        setdvar("allowdogs", "allowdogs");
+        setdvar("<dev string:xcf>", "<dev string:xda>");
         var_9d163ef3 = 0;
         for (;;) {
-            cmd = getdvarstring("allowdogs");
+            cmd = getdvarstring("<dev string:xcf>");
             switch (cmd) {
-            case 8:
+            case "<dev string:xdb>":
                 player = util::gethostplayer();
                 function_40fd21d0(player.team);
                 break;
-            case 8:
+            case "<dev string:xea>":
                 player = util::gethostplayer();
                 foreach (team in level.teams) {
                     if (team == player.team) {
@@ -691,32 +691,32 @@ function function_f436e711(area) {
                     function_40fd21d0(team);
                 }
                 break;
-            case 8:
+            case "<dev string:xf6>":
                 level function_fb1a25fe();
                 break;
-            case 8:
+            case "<dev string:x102>":
                 function_dd7ddc82();
                 break;
-            case 8:
+            case "<dev string:x10d>":
                 function_649863ab();
                 break;
-            case 8:
+            case "<dev string:x119>":
                 function_545a4b27();
                 break;
-            case 8:
+            case "<dev string:x127>":
                 function_a4d2dcc5();
                 break;
-            case 8:
+            case "<dev string:x133>":
                 function_7cc16e06();
                 break;
-            case 8:
+            case "<dev string:x13e>":
                 function_d20cb955();
                 break;
             }
-            if (cmd != "allowdogs") {
-                setdvar("allowdogs", "allowdogs");
+            if (cmd != "<dev string:xda>") {
+                setdvar("<dev string:xcf>", "<dev string:xda>");
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 
@@ -726,10 +726,10 @@ function function_f436e711(area) {
     // Size: 0x2a4
     function function_40fd21d0(team) {
         player = util::gethostplayer();
-        var_88278484 = getent("allowdogs", "allowdogs");
+        dog_spawner = getent("<dev string:x14a>", "<dev string:x156>");
         level.var_fb1a25fe = 0;
-        if (!isdefined(var_88278484)) {
-            iprintln("allowdogs");
+        if (!isdefined(dog_spawner)) {
+            iprintln("<dev string:x93>");
             return;
         }
         direction = player getplayerangles();
@@ -738,13 +738,13 @@ function function_f436e711(area) {
         scale = 8000;
         direction_vec = (direction_vec[0] * scale, direction_vec[1] * scale, direction_vec[2] * scale);
         trace = bullettrace(eye, eye + direction_vec, 0, undefined);
-        nodes = getnodesinradius(trace["allowdogs"], 256, 0, -128, "allowdogs", 8);
+        nodes = getnodesinradius(trace["<dev string:x161>"], 256, 0, -128, "<dev string:x16a>", 8);
         if (!nodes.size) {
-            iprintln("allowdogs");
+            iprintln("<dev string:x16f>");
             return;
         }
-        iprintln("allowdogs");
-        node = arraygetclosest(trace["allowdogs"], nodes);
+        iprintln("<dev string:x196>");
+        node = arraygetclosest(trace["<dev string:x161>"], nodes);
         dog = function_4b764fa6(player, player.team, node, 5);
         if (team != player.team) {
             dog.team = team;
@@ -777,8 +777,8 @@ function function_f436e711(area) {
             }
             if (!isdefined(dog.cam)) {
                 forward = anglestoforward(dog.angles);
-                dog.cam = spawn("allowdogs", dog.origin + (0, 0, 50) + forward * -100);
-                dog.cam setmodel("allowdogs");
+                dog.cam = spawn("<dev string:x1be>", dog.origin + (0, 0, 50) + forward * -100);
+                dog.cam setmodel("<dev string:x1cb>");
                 dog.cam linkto(dog);
             }
             if (dog getentitynumber() <= level.var_dd7ddc82) {
@@ -810,8 +810,8 @@ function function_f436e711(area) {
         scale = 8000;
         direction_vec = (direction_vec[0] * scale, direction_vec[1] * scale, direction_vec[2] * scale);
         trace = bullettrace(eye, eye + direction_vec, 0, undefined);
-        killcament = spawn("allowdogs", player.origin);
-        level thread supplydrop::dropcrate(trace["allowdogs"] + (0, 0, 25), direction, "allowdogs", player, player.team, killcament);
+        killcament = spawn("<dev string:x1be>", player.origin);
+        level thread supplydrop::dropcrate(trace["<dev string:x161>"] + (0, 0, 25), direction, "<dev string:x1d6>", player, player.team, killcament);
     }
 
     // Namespace dogs
@@ -845,7 +845,7 @@ function function_f436e711(area) {
         spawns = level.var_a16d1f64;
         color = (0, 1, 0);
         for (i = 0; i < spawns.size; i++) {
-            dev::showonespawnpoint(spawns[i], color, "allowdogs", 32, "allowdogs");
+            dev::showonespawnpoint(spawns[i], color, "<dev string:x1e1>", 32, "<dev string:x1f1>");
         }
     }
 
@@ -863,10 +863,10 @@ function function_f436e711(area) {
             level notify(#"hash_92f820ac");
             return;
         }
-        exits = getnodearray("allowdogs", "allowdogs");
+        exits = getnodearray("<dev string:x1fb>", "<dev string:x200>");
         color = (1, 0, 0);
         for (i = 0; i < exits.size; i++) {
-            dev::showonespawnpoint(exits[i], color, "allowdogs", 32, "allowdogs");
+            dev::showonespawnpoint(exits[i], color, "<dev string:x212>", 32, "<dev string:x221>");
         }
     }
 
@@ -879,11 +879,11 @@ function function_f436e711(area) {
         self endon(#"hash_9d163ef3");
         for (;;) {
             self setgoal(node1);
-            self util::waittill_any("allowdogs", "allowdogs");
-            wait(1);
+            self util::waittill_any("<dev string:x22a>", "<dev string:x22f>");
+            wait 1;
             self setgoal(node2);
-            self util::waittill_any("allowdogs", "allowdogs");
-            wait(1);
+            self util::waittill_any("<dev string:x22a>", "<dev string:x22f>");
+            wait 1;
         }
     }
 
@@ -892,13 +892,13 @@ function function_f436e711(area) {
     // Checksum 0xf8413aaf, Offset: 0x3300
     // Size: 0xe4
     function function_d20cb955() {
-        iprintln("allowdogs");
+        iprintln("<dev string:x238>");
         nodes = dev::dev_get_node_pair();
         if (!isdefined(nodes)) {
-            iprintln("allowdogs");
+            iprintln("<dev string:x265>");
             return;
         }
-        iprintln("allowdogs");
+        iprintln("<dev string:x27b>");
         dogs = function_b944b696();
         if (isdefined(dogs[0])) {
             dogs[0] notify(#"hash_9d163ef3");

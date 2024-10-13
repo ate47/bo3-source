@@ -5,9 +5,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_73dbe018;
+#namespace root_cairo;
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0xf819d85d, Offset: 0x358
 // Size: 0x22
@@ -16,7 +16,7 @@ function main() {
     function_ba0b35c();
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0x985e2fb, Offset: 0x388
 // Size: 0x72
@@ -25,7 +25,7 @@ function init_clientfields() {
     clientfield::register("world", "cairo_client_ents", 1, 1, "int", &function_889c4970, 0, 0);
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0xd132ea01, Offset: 0x408
 // Size: 0x1b
@@ -33,7 +33,7 @@ function function_ba0b35c() {
     level._effect["vtol_spawn_fx"] = "explosions/fx_exp_lightning_fold_infection";
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 7, eflags: 0x0
 // Checksum 0x77cd380, Offset: 0x430
 // Size: 0x2e5
@@ -61,31 +61,31 @@ function function_889c4970(localclientnum, oldval, newval, bnewent, binitialsnap
         array::thread_all(var_c9a3a65d, &function_9f362d5c, localclientnum);
         return;
     }
-    level notify(#"hash_8ca632f9");
+    level notify(#"cairo_root_client_cleanup");
     level.var_fdb616fc = undefined;
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 1, eflags: 0x0
 // Checksum 0x60115c55, Offset: 0x720
 // Size: 0x52
 function function_ea552f44(localclientnum) {
     self waittill(#"trigger");
-    assert(isdefined(self.script_string), "<unknown string>");
+    assert(isdefined(self.script_string), "<dev string:x28>");
     level thread scene::play("p7_fxanim_cp_zurich_cairo_" + self.script_string);
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 1, eflags: 0x0
 // Checksum 0x6247fddf, Offset: 0x780
 // Size: 0x52
 function function_9f362d5c(localclientnum) {
     self waittill(#"trigger");
-    assert(isdefined(self.script_string), "<unknown string>");
+    assert(isdefined(self.script_string), "<dev string:x63>");
     level thread scene::play("p7_fxanim_cp_zurich_" + self.script_string);
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 7, eflags: 0x0
 // Checksum 0x6d78a6ae, Offset: 0x7e0
 // Size: 0x62

@@ -5,9 +5,9 @@
 #using scripts/shared/filter_shared;
 #using scripts/shared/clientfield_shared;
 
-#namespace namespace_11fcf241;
+#namespace zm_equip_gasmask;
 
-// Namespace namespace_11fcf241
+// Namespace zm_equip_gasmask
 // Params 0, eflags: 0x2
 // Checksum 0x712e7161, Offset: 0x1d8
 // Size: 0x34
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
     system::register("zm_equip_gasmask", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_11fcf241
+// Namespace zm_equip_gasmask
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb327cc4b, Offset: 0x218
 // Size: 0xcc
@@ -26,7 +26,7 @@ function __init__() {
     visionset_mgr::register_overlay_info_style_postfx_bundle("zm_gasmask_postfx", 21000, 32, "pstfx_moon_helmet", 3);
 }
 
-// Namespace namespace_11fcf241
+// Namespace zm_equip_gasmask
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb643961, Offset: 0x2f0
 // Size: 0x146

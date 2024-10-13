@@ -5,8 +5,8 @@
 // Checksum 0x13510906, Offset: 0x80
 // Size: 0x11e
 function registerblackboardattribute(entity, attributename, defaultattributevalue, getterfunction) {
-    assert(isdefined(entity.__blackboard), "<unknown string>");
-    assert(!isdefined(entity.__blackboard[attributename]), "<unknown string>" + attributename + "<unknown string>");
+    assert(isdefined(entity.__blackboard), "<dev string:x28>");
+    assert(!isdefined(entity.__blackboard[attributename]), "<dev string:x65>" + attributename + "<dev string:x7d>");
     if (isdefined(getterfunction)) {
         assert(isfunctionptr(getterfunction));
         entity.__blackboard[attributename] = getterfunction;
@@ -50,7 +50,7 @@ function setblackboardattribute(entity, attributename, attributevalue) {
         if (!isdefined(attributevalue) && isfunctionptr(entity.__blackboard[attributename])) {
             return;
         }
-        assert(!isfunctionptr(entity.__blackboard[attributename]), "<unknown string>");
+        assert(!isfunctionptr(entity.__blackboard[attributename]), "<dev string:x92>");
     }
     entity.__blackboard[attributename] = attributevalue;
     /#

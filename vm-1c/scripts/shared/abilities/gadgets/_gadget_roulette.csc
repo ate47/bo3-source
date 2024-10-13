@@ -4,9 +4,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_a7d38b50;
+#namespace gadget_roulette;
 
-// Namespace namespace_a7d38b50
+// Namespace gadget_roulette
 // Params 0, eflags: 0x2
 // Checksum 0xfc02a92d, Offset: 0x188
 // Size: 0x34
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_roulette", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_a7d38b50
+// Namespace gadget_roulette
 // Params 0, eflags: 0x1 linked
 // Checksum 0xde03de54, Offset: 0x1c8
 // Size: 0x6c
@@ -23,7 +23,7 @@ function __init__() {
     callback::on_localplayer_spawned(&on_localplayer_spawned);
 }
 
-// Namespace namespace_a7d38b50
+// Namespace gadget_roulette
 // Params 7, eflags: 0x1 linked
 // Checksum 0x58a93926, Offset: 0x240
 // Size: 0x54
@@ -31,7 +31,7 @@ function function_abc7905(localclientnum, oldval, newval, bnewent, binitialsnap,
     function_80a6323d(localclientnum, newval);
 }
 
-// Namespace namespace_a7d38b50
+// Namespace gadget_roulette
 // Params 2, eflags: 0x1 linked
 // Checksum 0x1896b8f6, Offset: 0x2a0
 // Size: 0x8c
@@ -45,15 +45,15 @@ function function_80a6323d(localclientnum, newval) {
     }
 }
 
-// Namespace namespace_a7d38b50
+// Namespace gadget_roulette
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2086fa7b, Offset: 0x338
 // Size: 0x74
 function on_localplayer_spawned(localclientnum) {
-    var_4c8a0a2b = 0;
+    roulette_state = 0;
     if (getserverhighestclientfieldversion() >= 11000) {
-        var_4c8a0a2b = self clientfield::get_to_player("roulette_state");
+        roulette_state = self clientfield::get_to_player("roulette_state");
     }
-    function_80a6323d(localclientnum, var_4c8a0a2b);
+    function_80a6323d(localclientnum, roulette_state);
 }
 

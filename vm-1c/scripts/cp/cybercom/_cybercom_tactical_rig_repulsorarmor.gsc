@@ -148,7 +148,7 @@ function private function_170e07a2() {
         } else {
             self clientfield::set_player_uimodel("playerAbilities.repulsorIndicatorIntensity", 0);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

@@ -17,9 +17,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_ec1f3b4;
+#namespace zm_zod_defend_areas;
 
-// Namespace namespace_ec1f3b4
+// Namespace zm_zod_defend_areas
 // Method(s) 36 Total 36
 class class_a0023ae3 {
 
@@ -76,7 +76,7 @@ class class_a0023ae3 {
     // Size: 0x37a
     function function_8d5cae10() {
         level lui::screen_flash(0.2, 0.5, 1, 0.8, "white");
-        wait(0.2);
+        wait 0.2;
         a_ai_zombies = function_a5e2032d();
         var_6b1085eb = [];
         foreach (ai_zombie in a_ai_zombies) {
@@ -150,7 +150,7 @@ class class_a0023ae3 {
         if (isdefined(player) && player.sessionstate === "spectator") {
             return;
         }
-        wait(3);
+        wait 3;
         self function_19d7a318(player);
     }
 
@@ -163,7 +163,7 @@ class class_a0023ae3 {
         if (isdefined(player) && isdefined(player.sessionstate) && player.sessionstate == "spectator") {
             return;
         }
-        wait(3);
+        wait 3;
         self function_19d7a318(player);
     }
 
@@ -241,7 +241,7 @@ class class_a0023ae3 {
     // Checksum 0x1a3a4bd8, Offset: 0x1bc0
     // Size: 0x148
     function function_17690ec3() {
-        println("ritual_in_progress");
+        println("<dev string:x111>");
         self.var_5fd95ddf = 1;
         function_f494e855();
         function_c9ad9349();
@@ -251,7 +251,7 @@ class class_a0023ae3 {
             if (!isdefined(player)) {
                 continue;
             }
-            player thread namespace_8e578893::function_6edf48d5(0);
+            player thread zm_zod_util::function_6edf48d5(0);
             player.var_84f1bc44 = undefined;
             self thread function_d2445eb5(player);
         }
@@ -263,7 +263,7 @@ class class_a0023ae3 {
     // Checksum 0x421a8147, Offset: 0x19a0
     // Size: 0x216
     function function_49b4e0e3() {
-        println("ritual_in_progress");
+        println("<dev string:xf2>");
         self.var_5fd95ddf = 3;
         function_c9ad9349();
         foreach (s_spawn_point in self.var_c2c38644) {
@@ -277,7 +277,7 @@ class class_a0023ae3 {
             if (!isdefined(player)) {
                 continue;
             }
-            player thread namespace_8e578893::function_6edf48d5(6);
+            player thread zm_zod_util::function_6edf48d5(6);
             player.var_84f1bc44 = undefined;
             self thread function_56842015(player);
             player zm_score::add_to_player_score(500);
@@ -332,7 +332,7 @@ class class_a0023ae3 {
                 self setgoal(e_target_player);
                 self waittill(#"goal");
             }
-            wait(0.1);
+            wait 0.1;
         }
     }
 
@@ -363,15 +363,15 @@ class class_a0023ae3 {
                 s_spawn_point = function_7e9f0faf();
                 ai = zombie_utility::spawn_zombie(self.var_ce363bed[0], "defend_event_zombie", s_spawn_point);
                 if (!isdefined(ai)) {
-                    println("ritual_in_progress");
+                    println("<dev string:xbb>");
                     continue;
                 }
                 ai.var_81ac9e79 = 1;
-                ai thread namespace_1f61c67f::function_2d0c5aa1(s_spawn_point);
+                ai thread zm_zod_quest::function_2d0c5aa1(s_spawn_point);
                 ai thread function_877a7365();
                 array::add(self.var_a64ccb9c, ai, 0);
             }
-            wait(level.zombie_vars["zombie_spawn_delay"]);
+            wait level.zombie_vars["zombie_spawn_delay"];
         }
     }
 
@@ -418,7 +418,7 @@ class class_a0023ae3 {
     // Checksum 0x4eb6c0e1, Offset: 0xef8
     // Size: 0x404
     function progress_think() {
-        println("ritual_in_progress");
+        println("<dev string:x9e>");
         self.var_b46f18d4 = 0;
         self.var_3218a534 = self.var_3895bf80;
         self.var_9e054a5d = [];
@@ -436,12 +436,12 @@ class class_a0023ae3 {
                 }
                 if (function_1a94b9be(player)) {
                     if (!isdefined(player.var_84f1bc44)) {
-                        player thread namespace_8e578893::function_6edf48d5(5);
+                        player thread zm_zod_util::function_6edf48d5(5);
                         array::add(self.var_9e054a5d, player, 0);
                         player.var_84f1bc44 = 1;
                     }
                     if (!player.var_84f1bc44) {
-                        player thread namespace_8e578893::function_6edf48d5(5);
+                        player thread zm_zod_util::function_6edf48d5(5);
                         player.var_84f1bc44 = 1;
                         self function_19d7a318(player);
                     }
@@ -449,7 +449,7 @@ class class_a0023ae3 {
                 }
                 if (zm_utility::is_player_valid(player, 1, 1)) {
                     if (isdefined(player.var_84f1bc44) && player.var_84f1bc44) {
-                        player thread namespace_8e578893::function_6edf48d5(0);
+                        player thread zm_zod_util::function_6edf48d5(0);
                         player.var_84f1bc44 = 0;
                         self function_19d7a318(player);
                         player.var_fed8a8e6 = player openluimenu(self.var_3dc82e65);
@@ -464,7 +464,7 @@ class class_a0023ae3 {
             } else {
                 self.var_3218a534 -= 0.1;
             }
-            wait(0.1);
+            wait 0.1;
         }
         if (self.var_b46f18d4 == 100) {
             function_49b4e0e3();
@@ -500,7 +500,7 @@ class class_a0023ae3 {
             self thread progress_think();
             self thread function_dab6014d();
             while (self.var_5fd95ddf != 1) {
-                wait(1);
+                wait 1;
             }
         }
     }
@@ -526,10 +526,10 @@ class class_a0023ae3 {
         }
         player.var_b999c630 = 1;
         if (zm_utility::is_player_valid(player)) {
-            player thread namespace_8e578893::function_55f114f9("zmInventory.widget_quest_items", 3.5);
-            player thread namespace_8e578893::function_69e0fb83("ZM_ZOD_UI_RITUAL_BUSY", 3.5);
+            player thread zm_zod_util::function_55f114f9("zmInventory.widget_quest_items", 3.5);
+            player thread zm_zod_util::function_69e0fb83("ZM_ZOD_UI_RITUAL_BUSY", 3.5);
         }
-        wait(3.5);
+        wait 3.5;
         player.var_b999c630 = 0;
     }
 
@@ -609,7 +609,7 @@ class class_a0023ae3 {
     // Size: 0xc4
     function start() {
         var_329acd7d = (110, 110, -128);
-        self.var_28f7dec3 = namespace_8e578893::function_c17c0335(self.var_cac6e7ae.origin, self.var_cac6e7ae.angles, var_329acd7d, 1);
+        self.var_28f7dec3 = zm_zod_util::function_c17c0335(self.var_cac6e7ae.origin, self.var_cac6e7ae.angles, var_329acd7d, 1);
         self.var_28f7dec3.var_501122d5 = self;
         self.var_28f7dec3.prompt_and_visibility_func = self.var_602ef511;
         self.var_784ea913 = 1;
@@ -633,8 +633,8 @@ class class_a0023ae3 {
     function function_b9dda40b(var_8a526dce, var_11689cb) {
         self.var_b8236eca = getent(var_8a526dce, "targetname");
         self.var_52d55b67 = getent(var_11689cb, "targetname");
-        assert(isdefined(self.var_b8236eca), "ritual_in_progress");
-        assert(isdefined(self.var_52d55b67), "ritual_in_progress");
+        assert(isdefined(self.var_b8236eca), "<dev string:x28>");
+        assert(isdefined(self.var_52d55b67), "<dev string:x63>");
     }
 
     // Namespace namespace_a0023ae3

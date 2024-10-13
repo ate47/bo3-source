@@ -16,7 +16,7 @@ function processscoreevent(event, player, victim, weapon) {
     pixbeginevent("processScoreEvent");
     scoregiven = 0;
     if (!isplayer(player)) {
-        assertmsg("gamedata/tables/cp/scoreInfo.csv" + event);
+        assertmsg("<dev string:x28>" + event);
         return scoregiven;
     }
     if (getdvarint("teamOpsEnabled") == 1) {
@@ -94,9 +94,9 @@ function shouldaddrankxp(player) {
 // Size: 0x64
 function uninterruptedobitfeedkills(attacker, weapon) {
     self endon(#"disconnect");
-    wait(0.1);
+    wait 0.1;
     util::waittillslowprocessallowed();
-    wait(0.1);
+    wait 0.1;
     processscoreevent("uninterrupted_obit_feed_kills", attacker, self, weapon);
 }
 
@@ -117,7 +117,7 @@ function isregisteredevent(type) {
 // Size: 0x3c
 function decrementlastobituaryplayercountafterfade() {
     level endon(#"reset_obituary_count");
-    wait(5);
+    wait 5;
     level.lastobituaryplayercount--;
     assert(level.lastobituaryplayercount >= 0);
 }
@@ -146,7 +146,7 @@ function getscoreeventtableid() {
     if (isdefined(scoreinfotableid)) {
         scoreinfotableloaded = 1;
     }
-    assert(scoreinfotableloaded, "gamedata/tables/cp/scoreInfo.csv" + getscoreeventtablename());
+    assert(scoreinfotableloaded, "<dev string:x58>" + getscoreeventtablename());
     return scoreinfotableid;
 }
 
@@ -200,7 +200,7 @@ function function_7d1547d7(gametype) {
             break;
         }
     }
-    assert(var_410de38c, "gamedata/tables/cp/scoreInfo.csv" + gametype);
+    assert(var_410de38c, "<dev string:x7a>" + gametype);
     return var_75c035a0;
 }
 

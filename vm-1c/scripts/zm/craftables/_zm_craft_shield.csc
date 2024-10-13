@@ -7,9 +7,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_abd96e8b;
+#namespace zm_craft_shield;
 
-// Namespace namespace_abd96e8b
+// Namespace zm_craft_shield
 // Params 0, eflags: 0x2
 // Checksum 0xfa82bb45, Offset: 0x240
 // Size: 0x34
@@ -17,13 +17,13 @@ function autoexec function_2dc19561() {
     system::register("zm_craft_shield", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_abd96e8b
+// Namespace zm_craft_shield
 // Params 0, eflags: 0x1 linked
 // Checksum 0x50b1a1e5, Offset: 0x280
 // Size: 0x184
 function __init__() {
-    namespace_f37770c8::function_ac4e44a7("craft_shield_zm");
-    namespace_f37770c8::function_8421d708("craft_shield_zm");
+    zm_craftables::function_ac4e44a7("craft_shield_zm");
+    zm_craftables::function_8421d708("craft_shield_zm");
     registerclientfield("world", "piece_riotshield_dolly", 1, 1, "int", &zm_utility::setsharedinventoryuimodels, 0);
     registerclientfield("world", "piece_riotshield_door", 1, 1, "int", &zm_utility::setsharedinventoryuimodels, 0);
     registerclientfield("world", "piece_riotshield_clamp", 1, 1, "int", &zm_utility::setsharedinventoryuimodels, 0);

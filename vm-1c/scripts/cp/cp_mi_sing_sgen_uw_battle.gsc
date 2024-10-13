@@ -20,9 +20,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b1c45cf3;
+#namespace cp_mi_sing_sgen_uw_battle;
 
-// Namespace namespace_b1c45cf3
+// Namespace cp_mi_sing_sgen_uw_battle
 // Params 2, eflags: 0x1 linked
 // Checksum 0xf95c4d8a, Offset: 0x570
 // Size: 0x2c4
@@ -34,7 +34,7 @@ function function_297ca3c6(str_objective, var_74cd64bc) {
     level util::clientnotify("tuwc");
     level thread function_48cb67f6();
     if (var_74cd64bc) {
-        namespace_fa13d4ba::function_bff1a867(str_objective);
+        sgen::function_bff1a867(str_objective);
         objectives::set("cp_level_sgen_escape_sgen");
     }
     level.var_2fd26037 ai::set_ignoreme(1);
@@ -43,7 +43,7 @@ function function_297ca3c6(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         load::function_a2995f22();
     } else {
-        wait(0.05);
+        wait 0.05;
         skipto::teleport("underwater_battle");
     }
     foreach (player in level.players) {
@@ -56,7 +56,7 @@ function function_297ca3c6(str_objective, var_74cd64bc) {
     skipto::function_be8adfb8("underwater_battle");
 }
 
-// Namespace namespace_b1c45cf3
+// Namespace cp_mi_sing_sgen_uw_battle
 // Params 4, eflags: 0x1 linked
 // Checksum 0xfb8219ce, Offset: 0x840
 // Size: 0x24
@@ -64,7 +64,7 @@ function function_ceb4ae50(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     
 }
 
-// Namespace namespace_b1c45cf3
+// Namespace cp_mi_sing_sgen_uw_battle
 // Params 0, eflags: 0x1 linked
 // Checksum 0x59b45a80, Offset: 0x870
 // Size: 0x134
@@ -74,16 +74,16 @@ function function_dbfa8dae() {
     level thread function_77b723a3();
     level thread scene::play("cin_sgen_23_01_underwater_battle_vign_swim_hendricks_groundidl");
     while (!scene::is_ready("cin_sgen_23_01_underwater_battle_vign_swim_hendricks_groundidl")) {
-        wait(0.1);
+        wait 0.1;
     }
-    level thread namespace_caee6f4a::function_82311a3e();
+    level thread cp_mi_sing_sgen_flood::function_82311a3e();
     spawn_manager::enable("uw_battle_spawnmanager");
     level thread function_b980dc78();
     level flag::wait_till("hendricks_uwb_to_window");
     level scene::play("cin_sgen_23_01_underwater_battle_vign_swim_hendricks_traverse_room", level.var_2fd26037);
 }
 
-// Namespace namespace_b1c45cf3
+// Namespace cp_mi_sing_sgen_uw_battle
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5408ce87, Offset: 0x9b0
 // Size: 0xd4
@@ -97,7 +97,7 @@ function function_b980dc78() {
     level.var_2fd26037 dialog::say("hend_on_me_once_i_blow_t_0");
 }
 
-// Namespace namespace_b1c45cf3
+// Namespace cp_mi_sing_sgen_uw_battle
 // Params 0, eflags: 0x1 linked
 // Checksum 0x889a9052, Offset: 0xa90
 // Size: 0x18c
@@ -113,12 +113,12 @@ function function_48cb67f6() {
     array::thread_all(var_dc83f241, &scene::play);
 }
 
-// Namespace namespace_b1c45cf3
+// Namespace cp_mi_sing_sgen_uw_battle
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3b6a0997, Offset: 0xc28
 // Size: 0x9a
 function function_77b723a3() {
-    wait(5);
+    wait 5;
     foreach (player in level.activeplayers) {
         player util::show_hint_text(%COOP_SWIM_INSTRUCTIONS);
     }

@@ -3,9 +3,9 @@
 #using scripts/shared/exploder_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_35f5e9b2;
+#namespace zm_castle_fx;
 
-// Namespace namespace_35f5e9b2
+// Namespace zm_castle_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x1f0
 // Size: 0x4
@@ -13,7 +13,7 @@ function function_8d0ec42e() {
     
 }
 
-// Namespace namespace_35f5e9b2
+// Namespace zm_castle_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x24fec0e7, Offset: 0x200
 // Size: 0x34
@@ -23,7 +23,7 @@ function main() {
     function_f45953c();
 }
 
-// Namespace namespace_35f5e9b2
+// Namespace zm_castle_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf9cde396, Offset: 0x240
 // Size: 0x8e
@@ -35,7 +35,7 @@ function function_f45953c() {
     level._effect["death_ray_shock_eyes"] = "zombie/fx_tesla_shock_eyes_zmb";
 }
 
-// Namespace namespace_35f5e9b2
+// Namespace zm_castle_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x2d8
 // Size: 0x4

@@ -9,17 +9,17 @@
 // Checksum 0x50764af7, Offset: 0x108
 // Size: 0xf4
 function registervehicleblackboardattributes() {
-    assert(isvehicle(self), "<unknown string>");
+    assert(isvehicle(self), "<dev string:x28>");
     registerblackboardattribute(self, "_speed", undefined, &bb_getspeed);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("<unknown string>");
+            self trackblackboardattribute("<dev string:x6f>");
         #/
     }
     registerblackboardattribute(self, "_enemy_yaw", undefined, &bb_vehgetenemyyaw);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("<unknown string>");
+            self trackblackboardattribute("<dev string:x76>");
         #/
     }
 }

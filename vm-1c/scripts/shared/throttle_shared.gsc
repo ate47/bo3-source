@@ -32,7 +32,7 @@ class throttle {
                     self.queue_[0] = undefined;
                     continue;
                 }
-                wait(self.updaterate_);
+                wait self.updaterate_;
             }
         }
         self.processed_++;
@@ -76,7 +76,7 @@ class throttle {
     function private _updatethrottlethread(throttle) {
         while (isdefined(throttle)) {
             [[ throttle ]]->_updatethrottle();
-            wait(throttle.updaterate_);
+            wait throttle.updaterate_;
         }
     }
 

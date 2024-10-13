@@ -16,7 +16,7 @@ function autoexec main() {
         level.item_drops = [];
     }
     level thread function_8c807b6a();
-    wait(0.05);
+    wait 0.05;
     callback::on_actor_killed(&function_fe6d2452);
 }
 
@@ -81,7 +81,7 @@ function function_fe6d2452(params) {
     drop = array::random(level.item_drops);
     /#
         if (isdefined(drop.var_7bc9910b)) {
-            drop.var_7bc9910b = getdvarfloat("<unknown string>" + drop.name);
+            drop.var_7bc9910b = getdvarfloat("<dev string:x28>" + drop.name);
         }
     #/
     if (getdvarint("scr_drop_autorecover")) {
@@ -133,7 +133,7 @@ function function_8c807b6a() {
     level.var_4f2308ad = [];
     level flag::wait_till("all_players_spawned");
     while (true) {
-        wait(15);
+        wait 15;
         if (level.var_4f2308ad.size < 1 && level.item_drops.size > 0) {
             drop = array::random(level.item_drops);
             if (isdefined(drop.spawnpoints)) {
@@ -172,7 +172,7 @@ function function_35a6028b() {
     while (isdefined(self)) {
         angle = time * 90;
         self.angles = (0, angle, 0);
-        wait(0.05);
+        wait 0.05;
         time += 0.05;
     }
 }

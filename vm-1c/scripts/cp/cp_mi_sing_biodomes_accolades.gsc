@@ -74,7 +74,7 @@ function function_deda4654(params) {
     if (isdefined(params.eattacker) && isplayer(params.eattacker) && isdefined(params.eattacker.hijacked_vehicle_entity) && params.eattacker.hijacked_vehicle_entity.archetype === "turret") {
         if (params.eattacker.hijacked_vehicle_entity !== self && params.eattacker.var_50ef9076 < 8) {
             params.eattacker.var_50ef9076++;
-            params.eattacker notify(#"hash_e3795b02");
+            params.eattacker notify(#"grant_turret_kill_accolade");
         }
     }
 }
@@ -131,7 +131,7 @@ function function_674f33f(params) {
             }
             params.eattacker.var_d7f97874++;
             if (params.eattacker.var_d7f97874 === 6) {
-                params.eattacker notify(#"hash_bff7939a");
+                params.eattacker notify(#"grant_wasp_accolade");
             }
         }
     }
@@ -145,7 +145,7 @@ function function_3c326d55() {
     if (self.var_fd2e786f != 1) {
         self.var_fd2e786f = 1;
         self.var_d7f97874 = 1;
-        wait(2);
+        wait 2;
         self.var_fd2e786f = 0;
         self.var_d7f97874 = 0;
     }
@@ -206,7 +206,7 @@ function function_d5374ce7(params) {
 // Checksum 0x83f07977, Offset: 0xe00
 // Size: 0x50
 function function_62deee75() {
-    self endon(#"hash_32230ba9");
+    self endon(#"accolade_nomiss_wasp_kills");
     while (isdefined(self.var_399b086d) && self.var_399b086d) {
         self waittill(#"weapon_fired");
         self thread function_a1bcadc9();
@@ -218,7 +218,7 @@ function function_62deee75() {
 // Checksum 0xeed0bc5a, Offset: 0xe58
 // Size: 0x58
 function function_a1bcadc9() {
-    wait(0.2);
+    wait 0.2;
     self.var_be5f3952++;
     if (self.var_be5f3952 > self.var_6917783e) {
         self.var_399b086d = 0;
@@ -353,7 +353,7 @@ function function_9c292522(params) {
     if (isdefined(params.eattacker) && isplayer(params.eattacker) && isdefined(params.eattacker.hijacked_vehicle_entity) && params.eattacker.hijacked_vehicle_entity.archetype === "siegebot") {
         if (params.eattacker.hijacked_vehicle_entity !== self && params.eattacker.var_f62f9f5d < 8) {
             params.eattacker.var_f62f9f5d++;
-            params.eattacker notify(#"hash_9c3e76f1");
+            params.eattacker notify(#"siege_bot_smash");
         }
     }
 }
@@ -379,7 +379,7 @@ function function_72f8596b() {
     level.var_57f2d2db++;
     if (level.var_57f2d2db == var_1e94bf2c) {
         foreach (player in level.activeplayers) {
-            player notify(#"hash_c7302d58");
+            player notify(#"accolade_kill_all_server_zippers");
         }
     }
 }
@@ -463,7 +463,7 @@ function function_fcc8b758() {
 // Checksum 0x8af75fa, Offset: 0x1868
 // Size: 0x6c
 function function_b5aa3655() {
-    level.var_3234f804 = getent("t_underwater_kill", "targetname");
+    level.t_underwater_kill = getent("t_underwater_kill", "targetname");
     callback::on_spawned(&function_9dcab1fd);
     callback::on_actor_killed(&function_4d4eb70e);
 }
@@ -490,9 +490,9 @@ function function_a057c38f() {
 // Checksum 0xdee89398, Offset: 0x1948
 // Size: 0xbc
 function function_4d4eb70e(params) {
-    if (isdefined(params.eattacker) && isplayer(params.eattacker) && params.eattacker istouching(level.var_3234f804) && params.eattacker.var_58aa080e < 4) {
+    if (isdefined(params.eattacker) && isplayer(params.eattacker) && params.eattacker istouching(level.t_underwater_kill) && params.eattacker.var_58aa080e < 4) {
         params.eattacker.var_58aa080e++;
-        params.eattacker notify(#"hash_e859318d");
+        params.eattacker notify(#"underwater_kill");
     }
 }
 

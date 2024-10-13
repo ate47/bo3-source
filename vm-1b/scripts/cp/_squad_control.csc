@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_36171bd3;
+#namespace squad_control;
 
-// Namespace namespace_36171bd3
+// Namespace squad_control
 // Params 0, eflags: 0x2
 // Checksum 0xc0d5db96, Offset: 0x618
 // Size: 0x2a
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("squad_control", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_36171bd3
+// Namespace squad_control
 // Params 0, eflags: 0x0
 // Checksum 0xed46291, Offset: 0x650
 // Size: 0x2d2
@@ -48,7 +48,7 @@ function __init__() {
     duplicate_render::set_dr_filter_framebuffer("camo_brk", 70, "gadget_camo_on,gadget_camo_break", undefined, 0, "mc/hud_outline_predator_break");
 }
 
-// Namespace namespace_36171bd3
+// Namespace squad_control
 // Params 7, eflags: 0x0
 // Checksum 0x5a784dd2, Offset: 0x930
 // Size: 0x202
@@ -59,9 +59,9 @@ function function_29cf4c66(localclientnum, oldval, newval, bnewent, binitialsnap
     if (!isdefined(e_player) || n_index != e_player getentitynumber()) {
         return;
     }
-    assert(isdefined(self), "keyline_active_green,keyfill_active_green");
+    assert(isdefined(self), "<dev string:x28>");
     level flagsys::wait_till("duplicaterender_registry_ready");
-    assert(isdefined(self), "<unknown string>");
+    assert(isdefined(self), "<dev string:x4e>");
     if (newval == 1) {
         self duplicate_render::change_dr_flags(localclientnum, "keyline_active_white", "keyfill_active_white");
         return;
@@ -84,7 +84,7 @@ function function_29cf4c66(localclientnum, oldval, newval, bnewent, binitialsnap
     self duplicate_render::change_dr_flags(localclientnum, undefined, "keyline_active_white_through_walls,keyfill_active_white_through_walls");
 }
 
-// Namespace namespace_36171bd3
+// Namespace squad_control
 // Params 7, eflags: 0x0
 // Checksum 0xb1196aff, Offset: 0xb40
 // Size: 0x92
@@ -95,7 +95,7 @@ function function_f532bd65(local_client_num, oldval, newval, bnewent, binitialsn
     self duplicate_render::change_dr_flags(local_client_num);
 }
 
-// Namespace namespace_36171bd3
+// Namespace squad_control
 // Params 7, eflags: 0x0
 // Checksum 0x7b5cc48, Offset: 0xbe0
 // Size: 0xca
@@ -114,7 +114,7 @@ function function_2636ef23(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_36171bd3
+// Namespace squad_control
 // Params 1, eflags: 0x0
 // Checksum 0x306f11d5, Offset: 0xcb8
 // Size: 0x92
@@ -124,7 +124,7 @@ function function_cffc9622(localclientnum) {
     self.var_c8a562aa = playfxontag(localclientnum, level._effect["squad_waypoint_base_client"], self.var_56f42b55, "tag_origin");
 }
 
-// Namespace namespace_36171bd3
+// Namespace squad_control
 // Params 1, eflags: 0x0
 // Checksum 0xc0c4b945, Offset: 0xd58
 // Size: 0x4a

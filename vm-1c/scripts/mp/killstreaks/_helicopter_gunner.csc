@@ -4,9 +4,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_ba7e0f70;
+#namespace helicopter_gunner;
 
-// Namespace namespace_ba7e0f70
+// Namespace helicopter_gunner
 // Params 0, eflags: 0x2
 // Checksum 0x28e0e411, Offset: 0x208
 // Size: 0x34
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
     system::register("helicopter_gunner", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_ba7e0f70
+// Namespace helicopter_gunner
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7788c6ec, Offset: 0x248
 // Size: 0x14c
@@ -26,7 +26,7 @@ function __init__() {
     visionset_mgr::register_visionset_info("mothership_visionset", 1, 1, undefined, "mp_vehicles_mothership");
 }
 
-// Namespace namespace_ba7e0f70
+// Namespace helicopter_gunner
 // Params 7, eflags: 0x1 linked
 // Checksum 0x66df3794, Offset: 0x3a0
 // Size: 0x3c
@@ -34,7 +34,7 @@ function function_4e820f76(localclientnum, oldval, newval, bnewent, binitialsnap
     
 }
 
-// Namespace namespace_ba7e0f70
+// Namespace helicopter_gunner
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2e0e26ab, Offset: 0x3e8
 // Size: 0x3c
@@ -42,7 +42,7 @@ function function_748489df(localclientnum, oldval, newval, bnewent, binitialsnap
     
 }
 
-// Namespace namespace_ba7e0f70
+// Namespace helicopter_gunner
 // Params 3, eflags: 0x1 linked
 // Checksum 0x8d02caa7, Offset: 0x430
 // Size: 0x7c
@@ -53,7 +53,7 @@ function function_366de7bb(localclientnum, var_1a2e89c5, new_value) {
     }
 }
 
-// Namespace namespace_ba7e0f70
+// Namespace helicopter_gunner
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4f474745, Offset: 0x4b8
 // Size: 0xdc
@@ -65,7 +65,7 @@ function function_f4f4212c(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_ba7e0f70
+// Namespace helicopter_gunner
 // Params 7, eflags: 0x1 linked
 // Checksum 0xeb96673e, Offset: 0x5a0
 // Size: 0x9c

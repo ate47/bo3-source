@@ -42,7 +42,7 @@ function function_ec87e5c5(localclientnum, oldval, newval, bnewent, binitialsnap
 // Size: 0x144
 function function_2c16a75b(localclientnum) {
     self endon(#"entityshutdown");
-    wait(0.016);
+    wait 0.016;
     var_76dfdc9 = self.origin;
     amplitude = randomfloatrange(4, 12);
     dz = randomfloatrange(0.2, 1);
@@ -55,7 +55,7 @@ function function_2c16a75b(localclientnum) {
         var_50413d99 = sin(z);
         shift = amplitude * var_50413d99;
         self.origin = var_76dfdc9 + (0, 0, shift);
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -83,7 +83,7 @@ function function_ac2a831d(localclientnum, oldval, newval, bnewent, binitialsnap
             self.decoy mapshaderconstant(localclientnum, 0, var_aa5d763a, var_fc81e73c, var_754d7044, var_e754df7f, var_595c4eba);
             self.decoy mapshaderconstant(localclientnum, 0, var_6c5c3132, var_93429fd9, 0, 0, 0);
             playfxontag(localclientnum, "vehicle/fx_veh_dni_wasp_rez_in", self.decoy, "tag_origin");
-            wait(0.25);
+            wait 0.25;
             self.decoy show();
         }
         self playsound(0, "gdt_cybercore_decoy_spawn");
@@ -95,7 +95,7 @@ function function_ac2a831d(localclientnum, oldval, newval, bnewent, binitialsnap
         playfxontag(localclientnum, "vehicle/fx_veh_dni_wasp_rez_out", self.decoy, "tag_origin");
         self.decoy duplicate_render::set_dr_flag("armor_on", 0);
         decoy = self.decoy;
-        wait(0.25);
+        wait 0.25;
         decoy delete();
     }
 }

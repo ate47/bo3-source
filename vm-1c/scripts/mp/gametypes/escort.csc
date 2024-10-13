@@ -62,7 +62,7 @@ function robot_burn(localclientnum, oldval, newval, bnewent, binitialsnap, field
 // Checksum 0x9051c6a4, Offset: 0x488
 // Size: 0xa2
 function watch_fx_shutdown(localclientnum, fxhandles) {
-    wait(3);
+    wait 3;
     foreach (fx in fxhandles) {
         stopfx(localclientnum, fx);
     }
@@ -97,7 +97,7 @@ function wait_team_changed(localclientnum) {
     while (true) {
         level waittill(#"team_changed");
         while (!isdefined(getnonpredictedlocalplayer(localclientnum))) {
-            wait(0.05);
+            wait 0.05;
         }
         if (!isdefined(level.escortrobots)) {
             continue;

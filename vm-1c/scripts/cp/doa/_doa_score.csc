@@ -83,7 +83,7 @@ function function_6fa6dee2() {
         level.var_b9d30140[level.var_b9d30140.size] = model;
     }
     level.var_c8a4d758 = 0;
-    level.var_f219339a = array(0, 0, 0, 0);
+    level.gpr = array(0, 0, 0, 0);
     level.var_29e6f519 = [];
     for (i = 0; i < 4; i++) {
         doa = spawnstruct();
@@ -111,20 +111,20 @@ function function_d3f117f9(doa, idx) {
                 break;
             }
         }
-        txt = "" + (isdefined(idx) ? idx : "") + "" + (isdefined(doa.player) ? doa.player getentitynumber() : "");
+        txt = "<dev string:x28>" + (isdefined(idx) ? idx : "<dev string:x3e>") + "<dev string:x42>" + (isdefined(doa.player) ? doa.player getentitynumber() : "<dev string:x63>");
         namespace_693feb87::debugmsg(txt);
     #/
     doa.score = 0;
     doa.var_db3637c0 = 0;
-    doa.var_c4c3767e = 0;
+    doa.xbar = 0;
     doa.lives = 3;
     doa.bombs = 1;
     doa.var_c5e98ad6 = 2;
-    doa.var_4d5a5848 = 0;
+    doa.bulletbar = 0;
     doa.multiplier = 1;
     doa.name = "";
-    doa.var_f219339a = 0;
-    doa.var_4b3052ec = 0;
+    doa.gpr = 0;
+    doa.gpr2 = 0;
     doa.var_4f0e30c = 0;
     doa.var_c88a6593 = 0;
     doa.var_c86225b5 = 0;
@@ -143,14 +143,14 @@ function function_e06716c7(doa, idx) {
         setuimodelvalue(getuimodel(doa.ui_model, "boosts"), doa.var_c5e98ad6);
         setuimodelvalue(getuimodel(doa.ui_model, "score"), "" + doa.score);
         setuimodelvalue(getuimodel(doa.ui_model, "multiplier"), doa.multiplier);
-        setuimodelvalue(getuimodel(doa.ui_model, "xbar"), doa.var_c4c3767e);
-        setuimodelvalue(getuimodel(doa.ui_model, "bulletbar"), doa.var_4d5a5848);
+        setuimodelvalue(getuimodel(doa.ui_model, "xbar"), doa.xbar);
+        setuimodelvalue(getuimodel(doa.ui_model, "bulletbar"), doa.bulletbar);
         setuimodelvalue(getuimodel(doa.ui_model, "bulletbar_rgb"), "255 208 0");
         setuimodelvalue(getuimodel(doa.ui_model, "ribbon"), 0);
         setuimodelvalue(getuimodel(doa.ui_model, "gpr_rgb"), "0 255 0");
         setuimodelvalue(getuimodel(doa.ui_model, "generic_txt"), "");
-        setuimodelvalue(getuimodel(doa.ui_model, "gpr"), doa.var_f219339a);
-        setuimodelvalue(getuimodel(doa.ui_model, "gpr2"), doa.var_4b3052ec);
+        setuimodelvalue(getuimodel(doa.ui_model, "gpr"), doa.gpr);
+        setuimodelvalue(getuimodel(doa.ui_model, "gpr2"), doa.gpr2);
         setuimodelvalue(getuimodel(doa.ui_model, "weaplevel1"), 0);
         setuimodelvalue(getuimodel(doa.ui_model, "weaplevel2"), 0);
         setuimodelvalue(getuimodel(doa.ui_model, "respawn"), "");
@@ -177,7 +177,7 @@ function function_cdb6d911() {
         if (getplayers(0).size > 1 && isdefined(var_324ecf57)) {
             setuimodelvalue(getuimodel(var_324ecf57.ui_model, "ribbon"), 1);
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -210,7 +210,7 @@ function function_4d819138() {
             score = doa.score * 25;
             setuimodelvalue(getuimodel(doa.ui_model, "score"), "" + score);
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -222,7 +222,7 @@ function function_2c9a6a47() {
     self notify(#"hash_2c9a6a47");
     self endon(#"hash_2c9a6a47");
     while (true) {
-        wait(0.016);
+        wait 0.016;
         foreach (doa in level.var_29e6f519) {
             setuimodelvalue(getuimodel(doa.ui_model, "respawn"), "");
             if (isdefined(level.var_c8a4d758) && level.var_c8a4d758) {
@@ -237,7 +237,7 @@ function function_2c9a6a47() {
                 setuimodelvalue(getuimodel(doa.ui_model, "name"), name);
                 if (isdefined(doa.var_c86225b5) && doa.var_c86225b5) {
                     setuimodelvalue(createuimodel(doa.ui_model, "name"), istring("DOA_RESPAWNING"));
-                    val = "" + int(ceil(doa.var_c4c3767e * 60));
+                    val = "" + int(ceil(doa.xbar * 60));
                     setuimodelvalue(getuimodel(doa.ui_model, "respawn"), val);
                 }
             }
@@ -246,8 +246,8 @@ function function_2c9a6a47() {
                 doa.bombs = (doa.player.headshots & 3840) >> 8;
                 doa.var_c5e98ad6 = (doa.player.headshots & -16) >> 4;
                 doa.multiplier = doa.player.headshots & 15;
-                doa.var_c4c3767e = (doa.player.downs >> 2) / -1;
-                doa.var_4d5a5848 = (doa.player.revives >> 2) / -1;
+                doa.xbar = (doa.player.downs >> 2) / -1;
+                doa.bulletbar = (doa.player.revives >> 2) / -1;
                 doa.var_4f0e30c = doa.player.downs & 3;
                 doa.var_c86225b5 = doa.player.assists & 1;
                 doa.var_db3637c0 = doa.player.assists >> 2;
@@ -260,8 +260,8 @@ function function_2c9a6a47() {
             setuimodelvalue(getuimodel(doa.ui_model, "boosts"), doa.var_c5e98ad6);
             setuimodelvalue(getuimodel(doa.ui_model, "lives"), doa.lives);
             setuimodelvalue(getuimodel(doa.ui_model, "multiplier"), doa.multiplier);
-            setuimodelvalue(getuimodel(doa.ui_model, "xbar"), doa.var_c4c3767e);
-            setuimodelvalue(getuimodel(doa.ui_model, "bulletbar"), doa.var_4d5a5848);
+            setuimodelvalue(getuimodel(doa.ui_model, "xbar"), doa.xbar);
+            setuimodelvalue(getuimodel(doa.ui_model, "bulletbar"), doa.bulletbar);
             setuimodelvalue(getuimodel(doa.ui_model, "weaplevel1"), 0);
             setuimodelvalue(getuimodel(doa.ui_model, "weaplevel2"), 0);
             if (!(isdefined(level.var_c8a4d758) && level.var_c8a4d758)) {
@@ -283,8 +283,8 @@ function function_2c9a6a47() {
                     break;
                 }
             }
-            setuimodelvalue(getuimodel(doa.ui_model, "gpr"), doa.var_f219339a);
-            setuimodelvalue(getuimodel(doa.ui_model, "gpr2"), doa.var_4b3052ec);
+            setuimodelvalue(getuimodel(doa.ui_model, "gpr"), doa.gpr);
+            setuimodelvalue(getuimodel(doa.ui_model, "gpr2"), doa.gpr2);
         }
     }
 }
@@ -296,7 +296,7 @@ function function_2c9a6a47() {
 function on_shutdown(localclientnum, ent) {
     if (isdefined(ent) && self === ent) {
         /#
-            namespace_693feb87::debugmsg("" + (isdefined(self.name) ? self.name : self getentitynumber()));
+            namespace_693feb87::debugmsg("<dev string:x67>" + (isdefined(self.name) ? self.name : self getentitynumber()));
         #/
         if (isdefined(self.doa)) {
             function_e06716c7(self.doa);
@@ -330,8 +330,8 @@ function function_e0f15ca4(localclientnum, oldval, newval, bnewent, binitialsnap
         level notify(#"hash_48152b36", fieldname, diff);
     }
     idx = int(fieldname[fieldname.size - 1]);
-    assert(idx >= 0 && idx < level.var_f219339a.size);
-    level.var_f219339a[idx] = newval;
+    assert(idx >= 0 && idx < level.gpr.size);
+    level.gpr[idx] = newval;
     field = "gpr" + idx;
     setuimodelvalue(createuimodel(level.var_7e2a814c, field), newval);
 }
@@ -342,7 +342,7 @@ function function_e0f15ca4(localclientnum, oldval, newval, bnewent, binitialsnap
 // Size: 0x8c
 function function_2db8b053(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     playernum = int(fieldname[fieldname.size - 1]);
-    level.var_29e6f519[playernum].var_f219339a = newval;
+    level.var_29e6f519[playernum].gpr = newval;
 }
 
 // Namespace namespace_64c6b720
@@ -351,7 +351,7 @@ function function_2db8b053(localclientnum, oldval, newval, bnewent, binitialsnap
 // Size: 0x8c
 function function_b9397b2b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     playernum = int(fieldname[fieldname.size - 1]);
-    level.var_29e6f519[playernum].var_4b3052ec = newval;
+    level.var_29e6f519[playernum].gpr2 = newval;
 }
 
 // Namespace namespace_64c6b720
@@ -392,7 +392,7 @@ function function_a08fe7c3(totaltime) {
         g = -1 * (1 - ratio);
         rgb = r + " " + g + " 0";
         setuimodelvalue(getuimodel(level.var_7e2a814c, "grgb1"), rgb);
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -407,16 +407,16 @@ function function_56dd76b(val) {
     while (val > 0) {
         setuimodelvalue(getuimodel(level.var_7e2a814c, "countdown"), "" + val);
         playsound(0, "evt_countdown", (0, 0, 0));
-        wait(1.05);
+        wait 1.05;
         setuimodelvalue(getuimodel(level.var_7e2a814c, "countdown"), "");
-        wait(0.016);
+        wait 0.016;
         val -= 1;
         level notify(#"countdown", val);
     }
     level notify(#"countdown", 0);
     setuimodelvalue(getuimodel(level.var_7e2a814c, "countdown"), %CP_DOA_BO3_GO);
     playsound(0, "evt_countdown_go", (0, 0, 0));
-    wait(1.1);
+    wait 1.1;
     setuimodelvalue(getuimodel(level.var_7e2a814c, "countdown"), "");
     level.var_b1ce5a88 = 0;
 }

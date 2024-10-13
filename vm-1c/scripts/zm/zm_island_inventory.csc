@@ -5,9 +5,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_48e6dffb;
+#namespace zm_island_inventory;
 
-// Namespace namespace_48e6dffb
+// Namespace zm_island_inventory
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8b6ae55a, Offset: 0x398
 // Size: 0x644
@@ -36,7 +36,7 @@ function init() {
     clientfield::register("toplayer", "wonderweapon_part_wwiii", 9000, 1, "int", &zm_utility::setsharedinventoryuimodels, 0, 0);
 }
 
-// Namespace namespace_48e6dffb
+// Namespace zm_island_inventory
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x9e8
 // Size: 0x4
@@ -44,7 +44,7 @@ function main() {
     
 }
 
-// Namespace namespace_48e6dffb
+// Namespace zm_island_inventory
 // Params 7, eflags: 0x1 linked
 // Checksum 0x7f908ea1, Offset: 0x9f8
 // Size: 0x18c
@@ -69,7 +69,7 @@ function function_67b53ed4(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_48e6dffb
+// Namespace zm_island_inventory
 // Params 3, eflags: 0x1 linked
 // Checksum 0x26c3ef99, Offset: 0xb90
 // Size: 0x100
@@ -83,7 +83,7 @@ function function_63119d2(var_1b778cf0, var_6e653641, n_new_value) {
         var_1c9f31e1 = (getrealtime() - n_start_time) / 1000;
         var_9b20c5f5 = lerpfloat(var_6e653641, n_new_value, var_1c9f31e1);
         setuimodelvalue(var_1b778cf0, var_9b20c5f5);
-        wait(0.016);
+        wait 0.016;
     }
 }
 

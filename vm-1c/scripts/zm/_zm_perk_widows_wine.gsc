@@ -276,7 +276,7 @@ function function_74d493f9() {
         }
         wait_time = time;
     }
-    wait(wait_time);
+    wait wait_time;
     for (i = 20; i > 0; i--) {
         if (i % 2) {
             self zm_powerups::powerup_show(0);
@@ -284,17 +284,17 @@ function function_74d493f9() {
             self zm_powerups::powerup_show(1);
         }
         if (i > 15) {
-            wait(0.3);
+            wait 0.3;
         }
         if (i > 10) {
-            wait(0.25);
+            wait 0.25;
             continue;
         }
         if (i > 5) {
-            wait(0.15);
+            wait 0.15;
             continue;
         }
-        wait(0.1);
+        wait 0.1;
     }
     self notify(#"powerup_timedout");
     self zm_powerups::powerup_delete();
@@ -315,7 +315,7 @@ function function_125ad71e(e_player, duration, var_192262ee) {
     end_time = start_time + duration * 1000;
     while (gettime() < end_time && self.var_53d35c55 < var_192262ee) {
         e_player zm_score::add_to_player_score(10);
-        wait(duration / var_192262ee);
+        wait duration / var_192262ee;
     }
 }
 
@@ -437,12 +437,12 @@ function widows_wine_vehicle_behavior(attacker, weapon) {
         if (self.archetype == "raps") {
             self clientfield::set("widows_wine_wrapping", 1);
             self._override_raps_combat_speed = 5;
-            wait(6);
+            wait 6;
             self dodamage(self.health + 1000, self.origin, attacker, undefined, "none", "MOD_EXPLOSIVE", 0, weapon);
             return;
         }
         if (self.archetype == "parasite") {
-            wait(0.05);
+            wait 0.05;
             self dodamage(self.maxhealth, self.origin);
         }
     }
@@ -528,7 +528,7 @@ function function_f10d5de3(vo_dialog_id, flourish_weapon, weapon, var_834ec52d, 
                     }
                 }
                 self zm_score::minus_to_player_score(cost);
-                assert(weapon.name == "widows_wine_1p_contact_explosion" || weapon.name == "widows_wine_1p_contact_explosion");
+                assert(weapon.name == "<dev string:x28>" || weapon.name == "<dev string:x34>");
                 self.var_6a22bdf4 = weapon;
                 if (self.var_6a22bdf4.name == "bowie_knife") {
                     self thread zm_melee_weapon::give_melee_weapon(vo_dialog_id, flourish_weapon, weapon, var_834ec52d, var_499da020, flourish_fn, wallbuy);

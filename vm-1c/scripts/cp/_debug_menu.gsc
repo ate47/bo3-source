@@ -8,11 +8,11 @@
     // Size: 0xb8
     function add_menu(menu_name, title) {
         if (isdefined(level.menu_sys[menu_name])) {
-            println("<unknown string>" + menu_name + "<unknown string>");
+            println("<dev string:x28>" + menu_name + "<dev string:x3a>");
             return;
         }
         level.menu_sys[menu_name] = spawnstruct();
-        level.menu_sys[menu_name].title = "<unknown string>";
+        level.menu_sys[menu_name].title = "<dev string:x61>";
         level.menu_sys[menu_name].title = title;
     }
 
@@ -74,26 +74,26 @@
     // Checksum 0xdc9fd09d, Offset: 0x428
     // Size: 0x276
     function enable_menu(menu_name) {
-        disable_menu("<unknown string>");
+        disable_menu("<dev string:x66>");
         if (isdefined(level.menu_cursor)) {
             level.menu_cursor.y = -126;
             level.menu_cursor.current_pos = 0;
         }
-        level.menu_sys["<unknown string>"].title = set_menu_hudelem(level.menu_sys[menu_name].title, "<unknown string>");
-        level.menu_sys["<unknown string>"].menu_name = menu_name;
+        level.menu_sys["<dev string:x66>"].title = set_menu_hudelem(level.menu_sys[menu_name].title, "<dev string:x73>");
+        level.menu_sys["<dev string:x66>"].menu_name = menu_name;
         var_593795dd = 0;
         if (isdefined(level.menu_sys[menu_name].options)) {
             options = level.menu_sys[menu_name].options;
             for (i = 0; i < options.size; i++) {
-                text = i + 1 + "<unknown string>" + options[i];
-                level.menu_sys["<unknown string>"].options[i] = set_menu_hudelem(text, "<unknown string>", 20 * i);
+                text = i + 1 + "<dev string:x79>" + options[i];
+                level.menu_sys["<dev string:x66>"].options[i] = set_menu_hudelem(text, "<dev string:x7c>", 20 * i);
                 var_593795dd = i;
             }
         }
         if (isdefined(level.menu_sys[menu_name].parent_menu) && !isdefined(level.menu_sys[menu_name].var_5989e69a)) {
             var_593795dd++;
-            text = var_593795dd + 1 + "<unknown string>" + "<unknown string>";
-            level.menu_sys["<unknown string>"].options[var_593795dd] = set_menu_hudelem(text, "<unknown string>", 20 * var_593795dd);
+            text = var_593795dd + 1 + "<dev string:x79>" + "<dev string:x84>";
+            level.menu_sys["<dev string:x66>"].options[var_593795dd] = set_menu_hudelem(text, "<dev string:x7c>", 20 * var_593795dd);
         }
     }
 
@@ -123,7 +123,7 @@
     // Size: 0xcc
     function set_menu_hudelem(text, type, y_offset) {
         y = 100;
-        if (isdefined(type) && type == "<unknown string>") {
+        if (isdefined(type) && type == "<dev string:x73>") {
             scale = 2;
         } else {
             scale = 1.3;
@@ -157,8 +157,8 @@
             hud.debug_hudelem = 1;
         }
         hud.location = 0;
-        hud.alignx = "<unknown string>";
-        hud.aligny = "<unknown string>";
+        hud.alignx = "<dev string:x89>";
+        hud.aligny = "<dev string:x8e>";
         hud.foreground = 1;
         hud.fontscale = scale;
         hud.sort = sort;
@@ -179,28 +179,28 @@
     function menu_input() {
         while (true) {
             keystring = level waittill(#"hash_69c6c918");
-            menu_name = level.menu_sys["<unknown string>"].menu_name;
-            if (keystring == "<unknown string>" || keystring == "<unknown string>") {
+            menu_name = level.menu_sys["<dev string:x66>"].menu_name;
+            if (keystring == "<dev string:x95>" || keystring == "<dev string:x9d>") {
                 if (level.menu_cursor.current_pos > 0) {
                     level.menu_cursor.y -= 20;
                     level.menu_cursor.current_pos--;
                 } else if (level.menu_cursor.current_pos == 0) {
-                    level.menu_cursor.y += (level.menu_sys["<unknown string>"].options.size - 1) * 20;
-                    level.menu_cursor.current_pos = level.menu_sys["<unknown string>"].options.size - 1;
+                    level.menu_cursor.y += (level.menu_sys["<dev string:x66>"].options.size - 1) * 20;
+                    level.menu_cursor.current_pos = level.menu_sys["<dev string:x66>"].options.size - 1;
                 }
-                wait(0.1);
+                wait 0.1;
                 continue;
-            } else if (keystring == "<unknown string>" || keystring == "<unknown string>") {
-                if (level.menu_cursor.current_pos < level.menu_sys["<unknown string>"].options.size - 1) {
+            } else if (keystring == "<dev string:xa5>" || keystring == "<dev string:xaf>") {
+                if (level.menu_cursor.current_pos < level.menu_sys["<dev string:x66>"].options.size - 1) {
                     level.menu_cursor.y += 20;
                     level.menu_cursor.current_pos++;
-                } else if (level.menu_cursor.current_pos == level.menu_sys["<unknown string>"].options.size - 1) {
+                } else if (level.menu_cursor.current_pos == level.menu_sys["<dev string:x66>"].options.size - 1) {
                     level.menu_cursor.y += level.menu_cursor.current_pos * -20;
                     level.menu_cursor.current_pos = 0;
                 }
-                wait(0.1);
+                wait 0.1;
                 continue;
-            } else if (keystring == "<unknown string>" || keystring == "<unknown string>") {
+            } else if (keystring == "<dev string:xb9>" || keystring == "<dev string:xc2>") {
                 key = level.menu_cursor.current_pos;
             } else {
                 key = int(keystring) - 1;
@@ -208,10 +208,10 @@
             if (key > level.menu_sys[menu_name].options.size) {
                 continue;
             } else if (isdefined(level.menu_sys[menu_name].parent_menu) && key == level.menu_sys[menu_name].options.size) {
-                level notify("<unknown string>" + menu_name);
+                level notify("<dev string:xc8>" + menu_name);
                 level enable_menu(level.menu_sys[menu_name].parent_menu);
             } else if (isdefined(level.menu_sys[menu_name].func) && isdefined(level.menu_sys[menu_name].func[key])) {
-                level.menu_sys["<unknown string>"].options[key] thread hud_selector(level.menu_sys["<unknown string>"].options[key].x, level.menu_sys["<unknown string>"].options[key].y);
+                level.menu_sys["<dev string:x66>"].options[key] thread hud_selector(level.menu_sys["<dev string:x66>"].options[key].x, level.menu_sys["<dev string:x66>"].options[key].y);
                 if (isdefined(level.menu_sys[menu_name].var_330af417) && isdefined(level.menu_sys[menu_name].var_330af417[key]) && level.menu_sys[menu_name].var_330af417[key] == keystring) {
                     error_msg = level [[ level.menu_sys[menu_name].func[key] ]]();
                 } else {
@@ -219,29 +219,29 @@
                 }
                 level thread hud_selector_fade_out();
                 if (isdefined(error_msg)) {
-                    level thread selection_error(error_msg, level.menu_sys["<unknown string>"].options[key].x, level.menu_sys["<unknown string>"].options[key].y);
+                    level thread selection_error(error_msg, level.menu_sys["<dev string:x66>"].options[key].x, level.menu_sys["<dev string:x66>"].options[key].y);
                 }
             }
             if (!isdefined(level.menu_sys[menu_name].children_menu)) {
-                println("<unknown string>" + menu_name + "<unknown string>");
+                println("<dev string:xd1>" + menu_name + "<dev string:xd5>");
                 continue;
             } else if (!isdefined(level.menu_sys[menu_name].children_menu[key])) {
-                println("<unknown string>" + menu_name + "<unknown string>" + key + "<unknown string>");
+                println("<dev string:xd1>" + menu_name + "<dev string:x101>" + key + "<dev string:x11f>");
                 continue;
             } else if (!isdefined(level.menu_sys[level.menu_sys[menu_name].children_menu[key]])) {
-                println("<unknown string>" + level.menu_sys[menu_name].options[key] + "<unknown string>");
+                println("<dev string:xd1>" + level.menu_sys[menu_name].options[key] + "<dev string:x130>");
                 continue;
             }
             if (isdefined(level.menu_sys[menu_name].children_func) && isdefined(level.menu_sys[menu_name].children_func[key])) {
                 func = level.menu_sys[menu_name].children_func[key];
                 error_msg = [[ func ]]();
                 if (isdefined(error_msg)) {
-                    level thread selection_error(error_msg, level.menu_sys["<unknown string>"].options[key].x, level.menu_sys["<unknown string>"].options[key].y);
+                    level thread selection_error(error_msg, level.menu_sys["<dev string:x66>"].options[key].x, level.menu_sys["<dev string:x66>"].options[key].y);
                     continue;
                 }
             }
             level enable_menu(level.menu_sys[menu_name].children_menu[key]);
-            wait(0.1);
+            wait 0.1;
         }
     }
 
@@ -253,28 +253,28 @@
         if (isdefined(waittill_msg)) {
             level waittill(waittill_msg);
         }
-        wait(0.1);
-        menu_name = level.menu_sys["<unknown string>"].menu_name;
+        wait 0.1;
+        menu_name = level.menu_sys["<dev string:x66>"].menu_name;
         key = level.menu_sys[menu_name].options.size;
         key++;
         if (key == 1) {
-            key = "<unknown string>";
+            key = "<dev string:x14a>";
         } else if (key == 2) {
-            key = "<unknown string>";
+            key = "<dev string:x14c>";
         } else if (key == 3) {
-            key = "<unknown string>";
+            key = "<dev string:x14e>";
         } else if (key == 4) {
-            key = "<unknown string>";
+            key = "<dev string:x150>";
         } else if (key == 5) {
-            key = "<unknown string>";
+            key = "<dev string:x152>";
         } else if (key == 6) {
-            key = "<unknown string>";
+            key = "<dev string:x154>";
         } else if (key == 7) {
-            key = "<unknown string>";
+            key = "<dev string:x156>";
         } else if (key == 8) {
-            key = "<unknown string>";
+            key = "<dev string:x158>";
         } else if (key == 9) {
-            key = "<unknown string>";
+            key = "<dev string:x15a>";
         }
         level notify(#"hash_69c6c918", key);
     }
@@ -321,24 +321,24 @@
         while (true) {
             key = level waittill(#"hash_69c6c918");
             level.menu_list_selected = 1;
-            if (any_button_hit(key, "<unknown string>")) {
+            if (any_button_hit(key, "<dev string:x15c>")) {
                 break;
-            } else if (key == "<unknown string>" || key == "<unknown string>") {
+            } else if (key == "<dev string:xaf>" || key == "<dev string:xa5>") {
                 if (var_42618b51 >= list.size - 1) {
                     continue;
                 }
                 var_42618b51++;
                 function_bdb589d8(hud_array, list, var_42618b51);
-            } else if (key == "<unknown string>" || key == "<unknown string>") {
+            } else if (key == "<dev string:x9d>" || key == "<dev string:x95>") {
                 if (var_42618b51 <= 0) {
                     continue;
                 }
                 var_42618b51--;
                 function_bdb589d8(hud_array, list, var_42618b51);
-            } else if (key == "<unknown string>" || key == "<unknown string>") {
+            } else if (key == "<dev string:xc2>" || key == "<dev string:xb9>") {
                 selected = 1;
                 break;
-            } else if (key == "<unknown string>" || key == "<unknown string>") {
+            } else if (key == "<dev string:x164>" || key == "<dev string:x168>") {
                 selected = 0;
                 break;
             }
@@ -349,7 +349,7 @@
                     [[ func ]](list[var_42618b51]);
                 }
             }
-            wait(0.1);
+            wait 0.1;
         }
         for (i = 0; i < hud_array.size; i++) {
             hud_array[i] destroy();
@@ -364,11 +364,11 @@
     // Checksum 0xc724ff64, Offset: 0x18e8
     // Size: 0xbe
     function function_bdb589d8(hud_array, list, num) {
-                for (i = 0; i < hud_array.size; i++) {
+        for (i = 0; i < hud_array.size; i++) {
             if (isdefined(list[i + num - 2])) {
                 text = list[i + num - 2];
             } else {
-                text = "<unknown string>";
+                text = "<dev string:x171>";
             }
             hud_array[i] settext(text);
         }
@@ -386,13 +386,13 @@
             var_41028055 = 3;
         }
         var_21b889cc = 0;
-        if (dir == "<unknown string>") {
+        if (dir == "<dev string:x172>") {
             var_21b889cc = 1;
             movement = space;
-        } else if (dir == "<unknown string>") {
+        } else if (dir == "<dev string:x89>") {
             var_21b889cc = 1;
             movement = space * -1;
-        } else if (dir == "<unknown string>") {
+        } else if (dir == "<dev string:x178>") {
             movement = space;
         } else {
             movement = space * -1;
@@ -429,7 +429,7 @@
         }
         level.menu_cursor.alpha = 0;
         level.hud_selector = set_hudelem(undefined, x - 10, y, 1);
-        level.hud_selector setshader("<unknown string>", 125, 20);
+        level.hud_selector setshader("<dev string:x17b>", 125, 20);
         level.hud_selector.color = (1, 1, 0.5);
         level.hud_selector.alpha = 0.5;
         level.hud_selector.sort = 10;
@@ -450,7 +450,7 @@
             hud fadeovertime(time);
         }
         hud.alpha = 0;
-        wait(time + 0.1);
+        wait time + 0.1;
         hud destroy();
     }
 
@@ -460,7 +460,7 @@
     // Size: 0x1a4
     function selection_error(msg, x, y) {
         hud = set_hudelem(undefined, x - 10, y, 1);
-        hud setshader("<unknown string>", 125, 20);
+        hud setshader("<dev string:x17b>", 125, 20);
         hud.color = (0.5, 0, 0);
         hud.alpha = 0.7;
         var_58f82c4b = set_hudelem(msg, x + 125, y, 1);
@@ -473,7 +473,7 @@
             var_58f82c4b fadeovertime(3);
         }
         var_58f82c4b.alpha = 0;
-        wait(3.1);
+        wait 3.1;
         hud destroy();
         var_58f82c4b destroy();
     }
@@ -495,7 +495,7 @@
         dif /= 1 * 20;
         for (i = 0; i < 1 * 20; i++) {
             self.fontscale += dif;
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -505,7 +505,7 @@
     // Size: 0xbc
     function menu_cursor() {
         level.menu_cursor = set_hudelem(undefined, 0, -126, 1.3);
-        level.menu_cursor setshader("<unknown string>", 125, 20);
+        level.menu_cursor setshader("<dev string:x17b>", 125, 20);
         level.menu_cursor.color = (1, 0.5, 0);
         level.menu_cursor.alpha = 0.5;
         level.menu_cursor.sort = 1;
@@ -595,8 +595,8 @@
             hud = newdebughudelem();
             hud.debug_hudelem = 1;
         }
-        hud.alignx = "<unknown string>";
-        hud.aligny = "<unknown string>";
+        hud.alignx = "<dev string:x89>";
+        hud.aligny = "<dev string:x8e>";
         hud.foreground = 1;
         hud.sort = 30;
         hud.x = x;
@@ -609,19 +609,19 @@
             hud.background = newdebughudelem();
             hud.debug_hudelem = 1;
         }
-        hud.background.alignx = "<unknown string>";
-        hud.background.aligny = "<unknown string>";
+        hud.background.alignx = "<dev string:x89>";
+        hud.background.aligny = "<dev string:x8e>";
         hud.background.foreground = 1;
         hud.background.sort = 25;
         hud.background.x = x + 2;
         hud.background.y = y + 2;
         hud.background.alpha = 0.75;
         hud.background.color = (0, 0, 0);
-        hud setshader("<unknown string>", 0, 0);
+        hud setshader("<dev string:x17b>", 0, 0);
         hud scaleovertime(time, width, height);
-        hud.background setshader("<unknown string>", 0, 0);
+        hud.background setshader("<dev string:x17b>", 0, 0);
         hud.background scaleovertime(time, width, height);
-        wait(time);
+        wait time;
         return hud;
     }
 
@@ -632,7 +632,7 @@
     function function_bea48276() {
         self.background scaleovertime(0.25, 0, 0);
         self scaleovertime(0.25, 0, 0);
-        wait(0.1);
+        wait 0.1;
         if (isdefined(self.background)) {
             self.background destroy();
         }
@@ -647,45 +647,45 @@
     // Size: 0x4e2
     function function_21e7ce2f(var_ecf4b75f, var_d0b8930f, var_476db3a8) {
         y = 100;
-        hud = new_hud("<unknown string>", undefined, 320 - 300 * 0.5, y, 1);
-        hud setshader("<unknown string>", 300, 100);
-        hud.aligny = "<unknown string>";
+        hud = new_hud("<dev string:x181>", undefined, 320 - 300 * 0.5, y, 1);
+        hud setshader("<dev string:x17b>", 300, 100);
+        hud.aligny = "<dev string:x18c>";
         hud.color = (0, 0, 0.2);
         hud.alpha = 0.85;
         hud.sort = 20;
-        hud = new_hud("<unknown string>", var_ecf4b75f, 320 - 300 * 0.5 + 10, y + 10, 1.25);
+        hud = new_hud("<dev string:x181>", var_ecf4b75f, 320 - 300 * 0.5 + 10, y + 10, 1.25);
         hud.sort = 25;
         if (isdefined(var_d0b8930f)) {
-            hud = new_hud("<unknown string>", var_d0b8930f, 320 - 300 * 0.5 + 10, y + 30, 1.1);
+            hud = new_hud("<dev string:x181>", var_d0b8930f, 320 - 300 * 0.5 + 10, y + 30, 1.1);
             hud.sort = 25;
         }
         var_564f8517 = 300 - 20;
         y = -106;
-        hud = new_hud("<unknown string>", undefined, 320 - var_564f8517 * 0.5, y, 1);
-        hud setshader("<unknown string>", var_564f8517, 20);
-        hud.aligny = "<unknown string>";
+        hud = new_hud("<dev string:x181>", undefined, 320 - var_564f8517 * 0.5, y, 1);
+        hud setshader("<dev string:x17b>", var_564f8517, 20);
+        hud.aligny = "<dev string:x18c>";
         hud.color = (0, 0, 0);
         hud.alpha = 0.85;
         hud.sort = 30;
         var_847182fe = 320 - var_564f8517 * 0.5 + 2;
         var_aa73fd67 = y + 8;
         if (level.xenon) {
-            hud = new_hud("<unknown string>", "<unknown string>", 320 - 50, y + 30, 1.25);
-            hud.alignx = "<unknown string>";
+            hud = new_hud("<dev string:x181>", "<dev string:x190>", 320 - 50, y + 30, 1.25);
+            hud.alignx = "<dev string:x197>";
             hud.sort = 25;
-            hud = new_hud("<unknown string>", "<unknown string>", 320 + 50, y + 30, 1.25);
-            hud.alignx = "<unknown string>";
+            hud = new_hud("<dev string:x181>", "<dev string:x19e>", 320 + 50, y + 30, 1.25);
+            hud.alignx = "<dev string:x197>";
             hud.sort = 25;
         } else {
-            hud = new_hud("<unknown string>", "<unknown string>", 320 - 50, y + 30, 1.25);
-            hud.alignx = "<unknown string>";
+            hud = new_hud("<dev string:x181>", "<dev string:x1a9>", 320 - 50, y + 30, 1.25);
+            hud.alignx = "<dev string:x197>";
             hud.sort = 25;
-            hud = new_hud("<unknown string>", "<unknown string>", 320 + 50, y + 30, 1.25);
-            hud.alignx = "<unknown string>";
+            hud = new_hud("<dev string:x181>", "<dev string:x1b4>", 320 + 50, y + 30, 1.25);
+            hud.alignx = "<dev string:x197>";
             hud.sort = 25;
         }
         result = function_8d7a3a66(var_847182fe, var_aa73fd67, var_476db3a8);
-        function_f8a0189f("<unknown string>");
+        function_f8a0189f("<dev string:x181>");
         return result;
     }
 
@@ -694,23 +694,23 @@
     // Checksum 0x60843bd4, Offset: 0x2d80
     // Size: 0x2ec
     function function_8d7a3a66(var_847182fe, var_aa73fd67, var_476db3a8) {
-        level.var_f1175864 = new_hud("<unknown string>", "<unknown string>", var_847182fe, var_aa73fd67, 1.25);
+        level.var_f1175864 = new_hud("<dev string:x181>", "<dev string:x1c1>", var_847182fe, var_aa73fd67, 1.25);
         level.var_f1175864.sort = 75;
         level thread function_561fa6f4();
         function_5eabe035();
-        var_5f2f1ccb = new_hud("<unknown string>", "<unknown string>", var_847182fe, var_aa73fd67, 1.25);
+        var_5f2f1ccb = new_hud("<dev string:x181>", "<dev string:x171>", var_847182fe, var_aa73fd67, 1.25);
         var_5f2f1ccb.sort = 75;
         var_3eb3582a = [];
-        word = "<unknown string>";
+        word = "<dev string:x171>";
         while (true) {
             button = level waittill(#"hash_b6282a51");
-            if (button == "<unknown string>" || button == "<unknown string>") {
-                word = "<unknown string>";
+            if (button == "<dev string:x164>" || button == "<dev string:x1c3>") {
+                word = "<dev string:x1cc>";
                 break;
-            } else if (button == "<unknown string>" || button == "<unknown string>" || button == "<unknown string>") {
+            } else if (button == "<dev string:xc2>" || button == "<dev string:x1cf>" || button == "<dev string:xb9>") {
                 break;
-            } else if (button == "<unknown string>" || button == "<unknown string>") {
-                var_a6dc440 = "<unknown string>";
+            } else if (button == "<dev string:x1d8>" || button == "<dev string:x1e2>") {
+                var_a6dc440 = "<dev string:x171>";
                 for (i = 0; i < word.size - 1; i++) {
                     var_a6dc440 += word[i];
                 }
@@ -724,7 +724,7 @@
                 x += function_6a8744ed(word[i]);
             }
             level.var_f1175864.x = x;
-            wait(0.05);
+            wait 0.05;
         }
         level notify(#"hash_645fd9e1");
         level notify(#"hash_a1a6c8e3");
@@ -736,54 +736,54 @@
     // Checksum 0xf5a974d8, Offset: 0x3078
     // Size: 0x5d4
     function function_5eabe035() {
-        clear_universal_buttons("<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
-        add_universal_button("<unknown string>", "<unknown string>");
+        clear_universal_buttons("<dev string:x1e6>");
+        add_universal_button("<dev string:x181>", "<dev string:x1fa>");
+        add_universal_button("<dev string:x181>", "<dev string:x1fc>");
+        add_universal_button("<dev string:x181>", "<dev string:x14a>");
+        add_universal_button("<dev string:x181>", "<dev string:x14c>");
+        add_universal_button("<dev string:x181>", "<dev string:x14e>");
+        add_universal_button("<dev string:x181>", "<dev string:x150>");
+        add_universal_button("<dev string:x181>", "<dev string:x152>");
+        add_universal_button("<dev string:x181>", "<dev string:x154>");
+        add_universal_button("<dev string:x181>", "<dev string:x156>");
+        add_universal_button("<dev string:x181>", "<dev string:x158>");
+        add_universal_button("<dev string:x181>", "<dev string:x15a>");
+        add_universal_button("<dev string:x181>", "<dev string:x1fe>");
+        add_universal_button("<dev string:x181>", "<dev string:x200>");
+        add_universal_button("<dev string:x181>", "<dev string:x202>");
+        add_universal_button("<dev string:x181>", "<dev string:x204>");
+        add_universal_button("<dev string:x181>", "<dev string:x206>");
+        add_universal_button("<dev string:x181>", "<dev string:x208>");
+        add_universal_button("<dev string:x181>", "<dev string:x20a>");
+        add_universal_button("<dev string:x181>", "<dev string:x20c>");
+        add_universal_button("<dev string:x181>", "<dev string:x20e>");
+        add_universal_button("<dev string:x181>", "<dev string:x210>");
+        add_universal_button("<dev string:x181>", "<dev string:x212>");
+        add_universal_button("<dev string:x181>", "<dev string:x214>");
+        add_universal_button("<dev string:x181>", "<dev string:x216>");
+        add_universal_button("<dev string:x181>", "<dev string:x218>");
+        add_universal_button("<dev string:x181>", "<dev string:x21a>");
+        add_universal_button("<dev string:x181>", "<dev string:x21c>");
+        add_universal_button("<dev string:x181>", "<dev string:x21e>");
+        add_universal_button("<dev string:x181>", "<dev string:x220>");
+        add_universal_button("<dev string:x181>", "<dev string:x222>");
+        add_universal_button("<dev string:x181>", "<dev string:x224>");
+        add_universal_button("<dev string:x181>", "<dev string:x226>");
+        add_universal_button("<dev string:x181>", "<dev string:x228>");
+        add_universal_button("<dev string:x181>", "<dev string:x22a>");
+        add_universal_button("<dev string:x181>", "<dev string:x22c>");
+        add_universal_button("<dev string:x181>", "<dev string:x22e>");
+        add_universal_button("<dev string:x181>", "<dev string:x230>");
+        add_universal_button("<dev string:x181>", "<dev string:xc2>");
+        add_universal_button("<dev string:x181>", "<dev string:x1cf>");
+        add_universal_button("<dev string:x181>", "<dev string:x164>");
+        add_universal_button("<dev string:x181>", "<dev string:x1d8>");
+        add_universal_button("<dev string:x181>", "<dev string:x1e2>");
         if (level.xenon) {
-            add_universal_button("<unknown string>", "<unknown string>");
-            add_universal_button("<unknown string>", "<unknown string>");
+            add_universal_button("<dev string:x181>", "<dev string:xb9>");
+            add_universal_button("<dev string:x181>", "<dev string:x1c3>");
         }
-        level thread universal_input_loop("<unknown string>", "<unknown string>", undefined, undefined);
+        level thread universal_input_loop("<dev string:x181>", "<dev string:x232>", undefined, undefined);
     }
 
     // Namespace debug_menu
@@ -794,9 +794,9 @@
         level endon(#"hash_645fd9e1");
         while (true) {
             level.var_f1175864.alpha = 0;
-            wait(0.5);
+            wait 0.5;
             level.var_f1175864.alpha = 1;
-            wait(0.5);
+            wait 0.5;
         }
     }
 
@@ -805,15 +805,15 @@
     // Checksum 0x3d9a7869, Offset: 0x36b8
     // Size: 0x166
     function function_6a8744ed(letter) {
-        if (letter == "<unknown string>" || letter == "<unknown string>" || letter == "<unknown string>") {
+        if (letter == "<dev string:x216>" || letter == "<dev string:x22a>" || letter == "<dev string:x1fa>") {
             space = 10;
-        } else if (letter == "<unknown string>" || letter == "<unknown string>" || letter == "<unknown string>" || letter == "<unknown string>" || letter == "<unknown string>" || letter == "<unknown string>") {
+        } else if (letter == "<dev string:x206>" || letter == "<dev string:x20c>" || letter == "<dev string:x226>" || letter == "<dev string:x228>" || letter == "<dev string:x22c>" || letter == "<dev string:x21a>") {
             space = 7;
-        } else if (letter == "<unknown string>" || letter == "<unknown string>" || letter == "<unknown string>") {
+        } else if (letter == "<dev string:x208>" || letter == "<dev string:x220>" || letter == "<dev string:x224>") {
             space = 5;
-        } else if (letter == "<unknown string>" || letter == "<unknown string>") {
+        } else if (letter == "<dev string:x20e>" || letter == "<dev string:x214>") {
             space = 4;
-        } else if (letter == "<unknown string>") {
+        } else if (letter == "<dev string:x210>") {
             space = 3;
         } else {
             space = 6;
@@ -851,34 +851,34 @@
         if (!isdefined(var_f343011)) {
             var_f343011 = 0;
         }
-        notify_name = var_38e2c1b9 + "<unknown string>";
+        notify_name = var_38e2c1b9 + "<dev string:x249>";
         buttons = level.u_buttons[var_38e2c1b9];
         level.u_buttons_disable[var_38e2c1b9] = 0;
         while (true) {
             if (level.u_buttons_disable[var_38e2c1b9]) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             if (isdefined(var_e97f2392) && !level.player buttonpressed(var_e97f2392)) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             } else if (isdefined(var_584b7e5c) && level.player buttonpressed(var_584b7e5c)) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             if (var_f343011 && level.player attackbuttonpressed()) {
-                level notify(notify_name, "<unknown string>");
-                wait(0.1);
+                level notify(notify_name, "<dev string:x259>");
+                wait 0.1;
                 continue;
             }
             for (i = 0; i < buttons.size; i++) {
                 if (level.player buttonpressed(buttons[i])) {
                     level notify(notify_name, buttons[i]);
-                    wait(0.1);
+                    wait 0.1;
                     break;
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -895,7 +895,7 @@
     // Checksum 0xd9c67699, Offset: 0x3b00
     // Size: 0x26
     function function_80a9c472(var_38e2c1b9) {
-        wait(1);
+        wait 1;
         level.u_buttons_disable[var_38e2c1b9] = 0;
     }
 
@@ -905,17 +905,17 @@
     // Size: 0x154
     function any_button_hit(var_b7d2a5af, type) {
         buttons = [];
-        if (type == "<unknown string>") {
-            buttons[0] = "<unknown string>";
-            buttons[1] = "<unknown string>";
-            buttons[2] = "<unknown string>";
-            buttons[3] = "<unknown string>";
-            buttons[4] = "<unknown string>";
-            buttons[5] = "<unknown string>";
-            buttons[6] = "<unknown string>";
-            buttons[7] = "<unknown string>";
-            buttons[8] = "<unknown string>";
-            buttons[9] = "<unknown string>";
+        if (type == "<dev string:x15c>") {
+            buttons[0] = "<dev string:x1fc>";
+            buttons[1] = "<dev string:x14a>";
+            buttons[2] = "<dev string:x14c>";
+            buttons[3] = "<dev string:x14e>";
+            buttons[4] = "<dev string:x150>";
+            buttons[5] = "<dev string:x152>";
+            buttons[6] = "<dev string:x154>";
+            buttons[7] = "<dev string:x156>";
+            buttons[8] = "<dev string:x158>";
+            buttons[9] = "<dev string:x15a>";
         } else {
             buttons = level.buttons;
         }

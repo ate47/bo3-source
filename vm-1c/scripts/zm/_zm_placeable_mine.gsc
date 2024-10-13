@@ -132,7 +132,7 @@ function private safe_to_plant() {
 // Checksum 0xea0a8be2, Offset: 0x6d8
 // Size: 0x2c
 function private wait_and_detonate() {
-    wait(0.1);
+    wait 0.1;
     self detonate(self.owner);
 }
 
@@ -335,9 +335,9 @@ function private placeable_mine_damage() {
         break;
     }
     if (level.satchelexplodethisframe) {
-        wait(0.1 + randomfloat(0.4));
+        wait 0.1 + randomfloat(0.4);
     } else {
-        wait(0.05);
+        wait 0.05;
     }
     if (!isdefined(self)) {
         return;
@@ -352,7 +352,7 @@ function private placeable_mine_damage() {
 // Checksum 0x36342f21, Offset: 0x1148
 // Size: 0x18
 function private reset_satchel_explode_this_frame() {
-    wait(0.05);
+    wait 0.05;
     level.satchelexplodethisframe = 0;
 }
 

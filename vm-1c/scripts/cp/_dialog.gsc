@@ -42,8 +42,8 @@ function function_bfb57e5a() {
 // Checksum 0xc4c71d70, Offset: 0x440
 // Size: 0xfc
 function add(var_6ec80991, str_vox_file) {
-    assert(isdefined(var_6ec80991), "human");
-    assert(isdefined(str_vox_file), "human");
+    assert(isdefined(var_6ec80991), "<dev string:x28>");
+    assert(isdefined(str_vox_file), "<dev string:x5c>");
     if (!isdefined(level.scr_sound)) {
         level.scr_sound = [];
     }
@@ -111,7 +111,7 @@ function say(str_vo_line, n_delay, var_57b7ba95, e_to_player, var_43937b21) {
     }
     ent endon(#"death");
     ent thread function_263a2879(str_vo_line, n_delay, var_57b7ba95, e_to_player);
-    ent waittillmatch(#"hash_90f83311", str_vo_line);
+    ent waittillmatch(#"done speaking", str_vo_line);
     if (self == level) {
         ent delete();
         if (isdefined(level.e_speaker)) {
@@ -131,10 +131,10 @@ function private function_263a2879(str_vo_line, n_delay, var_57b7ba95, e_to_play
     self endon(#"death");
     self.var_f3995442 = 1;
     self thread function_665c78f1(str_vo_line);
-    level endon(#"hash_3962ec94");
-    self endon(#"hash_3962ec94");
+    level endon(#"kill_pending_dialog");
+    self endon(#"kill_pending_dialog");
     if (isdefined(n_delay) && n_delay > 0) {
-        wait(n_delay);
+        wait n_delay;
     }
     if (self.classname === "script_origin") {
         var_57b7ba95 = 1;
@@ -142,9 +142,9 @@ function private function_263a2879(str_vo_line, n_delay, var_57b7ba95, e_to_play
     if (!var_57b7ba95) {
         if (!isdefined(self.health) || self.health <= 0) {
             if (!isplayer(self) || !(isdefined(self.laststand) && self.laststand)) {
-                assertmsg("human");
+                assertmsg("<dev string:x8d>");
                 self.var_f3995442 = undefined;
-                self notify(#"hash_90f83311", str_vo_line);
+                self notify(#"done speaking", str_vo_line);
                 return;
             }
         }
@@ -154,7 +154,7 @@ function private function_263a2879(str_vo_line, n_delay, var_57b7ba95, e_to_play
         self clientfield::set("facial_dial", 1);
     }
     self face::sayspecificdialogue(0, str_vo_line, 1, undefined, undefined, undefined, e_to_player);
-    self waittillmatch(#"hash_90f83311", str_vo_line);
+    self waittillmatch(#"done speaking", str_vo_line);
     if (self.archetype == "human" || self.archetype == "human_riotshield" || self.archetype == "human_rpg" || isdefined(self.archetype) && self.archetype == "civilian") {
         self clientfield::set("facial_dial", 0);
     }
@@ -201,35 +201,35 @@ function remote(str_vo_line, n_delay, str_type, e_to_player, var_43937b21) {
         var_8ef9b1c0 = strtok(level.scr_sound["generic"][str_vo_line], "_");
         var_46866c13 = undefined;
         switch (var_8ef9b1c0[var_8ef9b1c0.size - 1]) {
-        case 27:
+        case "diaz":
             var_46866c13 = %CPUI_DIAZ_SEBASTIAN;
             break;
-        case 28:
+        case "ecmd":
             var_46866c13 = %CPUI_EGYPTIAN_COMMAND;
             break;
-        case 37:
+        case "xiul":
             var_46866c13 = %CPUI_GOH_XIULAN;
             break;
-        case 30:
+        case "hend":
             var_46866c13 = %CPUI_HENDRICKS_JACOB;
             break;
-        case 32:
+        case "khal":
             var_46866c13 = %CPUI_KHALIL_ZEYAD;
             break;
-        case 33:
+        case "mare":
             var_46866c13 = %CPUI_MARETTI_PETER;
             break;
-        case 31:
+        case "kane":
             var_46866c13 = %CPUI_KANE_RACHEL;
             break;
-        case 29:
+        case "hall":
             var_46866c13 = %CPUI_HALL_SARAH;
             break;
-        case 34:
+        case "tayr":
             var_46866c13 = %CPUI_TAYLOR_JOHN;
             break;
-        case 35:
-        case 36:
+        case "vtpl":
+        case "wapl":
             var_46866c13 = %CPUI_VTOL_PILOT;
             break;
         default:

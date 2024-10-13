@@ -16,10 +16,10 @@
     // Checksum 0x35ebbcc1, Offset: 0x3b0
     // Size: 0x74
     function error(msg) {
-        println("leave_trigger_", msg);
-        wait(0.05);
-        if (getdvarstring("leave_trigger_") != "leave_trigger_") {
-            assertmsg("leave_trigger_");
+        println("<dev string:x28>", msg);
+        wait 0.05;
+        if (getdvarstring("<dev string:x33>") != "<dev string:x39>") {
+            assertmsg("<dev string:x3b>");
         }
     }
 
@@ -28,7 +28,7 @@
     // Checksum 0x999fc99c, Offset: 0x430
     // Size: 0x34
     function warning(msg) {
-        println("leave_trigger_" + msg);
+        println("<dev string:x68>" + msg);
     }
 
 #/
@@ -68,7 +68,7 @@ function waitrespawnbutton() {
     self endon(#"disconnect");
     self endon(#"end_respawn");
     while (self usebuttonpressed() != 1) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -164,7 +164,7 @@ function clearlowermessage(fadetime) {
     self.lowermessage.alpha = 0;
     self.lowertimer fadeovertime(fadetime);
     self.lowertimer.alpha = 0;
-    wait(fadetime);
+    wait fadetime;
     self setlowermessage("");
 }
 
@@ -345,7 +345,7 @@ function getotherteam(team) {
     } else {
         return "allies";
     }
-    assertmsg("leave_trigger_" + team);
+    assertmsg("<dev string:x74>" + team);
 }
 
 // Namespace util
@@ -389,7 +389,7 @@ function wait_endon(waittime, endonstring, endonstring2, endonstring3, endonstri
     if (isdefined(endonstring4)) {
         self endon(endonstring4);
     }
-    wait(waittime);
+    wait waittime;
     return true;
 }
 
@@ -426,7 +426,7 @@ function wait_endon(waittime, endonstring, endonstring2, endonstring3, endonstri
 // Checksum 0xbc3ef4bd, Offset: 0x1798
 // Size: 0x50
 function getfx(fx) {
-    assert(isdefined(level._effect[fx]), "leave_trigger_" + fx + "leave_trigger_");
+    assert(isdefined(level._effect[fx]), "<dev string:x90>" + fx + "<dev string:x94>");
     return level._effect[fx];
 }
 
@@ -547,7 +547,7 @@ function trigger_thread(ent, on_enter_payload, on_exit_payload) {
         self thread [[ on_enter_payload ]](ent, endon_condition);
     }
     while (isdefined(ent) && ent istouching(self)) {
-        wait(0.01);
+        wait 0.01;
     }
     ent notify(endon_condition);
     if (isdefined(ent) && isdefined(on_exit_payload)) {
@@ -861,7 +861,7 @@ function function_1ec499f0(var_237ef712, var_fd7c7ca9, var_d77a0240, var_e462c32
         level.var_bc357a76 destroy();
     }
     if (isdefined(n_time) && n_time > 0) {
-        wait(n_time);
+        wait n_time;
         function_77f8007d();
     }
 }
@@ -872,7 +872,7 @@ function function_1ec499f0(var_237ef712, var_fd7c7ca9, var_d77a0240, var_e462c32
 // Size: 0x94
 function function_77f8007d(delay) {
     if (isdefined(delay)) {
-        wait(delay);
+        wait delay;
     }
     if (isdefined(level.var_703085a4)) {
         level.var_703085a4 destroy();
@@ -895,7 +895,7 @@ function ghost_wait_show(wait_time) {
     }
     self endon(#"death");
     self ghost();
-    wait(wait_time);
+    wait wait_time;
     self show();
 }
 
@@ -924,7 +924,7 @@ function ghost_wait_show_to_player(player, wait_time, self_endon_string1) {
     self ghost();
     self setinvisibletoall();
     self setvisibletoplayer(player);
-    wait(wait_time);
+    wait wait_time;
     if (!isdefined(self.abort_ghost_wait_show_to_player)) {
         self showtoplayer(player);
     }
@@ -954,7 +954,7 @@ function ghost_wait_show_to_others(player, wait_time, self_endon_string1) {
     }
     self ghost();
     self setinvisibletoplayer(player);
-    wait(wait_time);
+    wait wait_time;
     if (!isdefined(self.abort_ghost_wait_show_to_others)) {
         self show();
         self setinvisibletoplayer(player);
@@ -966,7 +966,7 @@ function ghost_wait_show_to_others(player, wait_time, self_endon_string1) {
 // Checksum 0xe88b82c6, Offset: 0x2e28
 // Size: 0x4a
 function use_button_pressed() {
-    assert(isplayer(self), "leave_trigger_");
+    assert(isplayer(self), "<dev string:xb6>");
     return self usebuttonpressed();
 }
 
@@ -976,7 +976,7 @@ function use_button_pressed() {
 // Size: 0x2c
 function waittill_use_button_pressed() {
     while (!self use_button_pressed()) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1154,8 +1154,8 @@ function player_contract_event(event_name, param1, param2, param3) {
     // Checksum 0x1fc153e4, Offset: 0x3758
     // Size: 0x54
     function debug_slow_heli_speed() {
-        if (getdvarint("leave_trigger_", 0) > 0) {
-            self setspeed(getdvarint("leave_trigger_"));
+        if (getdvarint("<dev string:xe2>", 0) > 0) {
+            self setspeed(getdvarint("<dev string:xe2>"));
         }
     }
 
@@ -1167,10 +1167,10 @@ function player_contract_event(event_name, param1, param2, param3) {
 // Size: 0x52
 function is_objective_game(game_type) {
     switch (game_type) {
-    case 43:
-    case 44:
-    case 45:
-    case 46:
+    case "conf":
+    case "dm":
+    case "gun":
+    case "tdm":
         return 0;
     default:
         return 1;

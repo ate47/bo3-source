@@ -6,9 +6,9 @@
 #using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_8b3a30e2;
+#namespace zm_bgb_lucky_crit;
 
-// Namespace namespace_8b3a30e2
+// Namespace zm_bgb_lucky_crit
 // Params 0, eflags: 0x2
 // Checksum 0xae8ac95e, Offset: 0x178
 // Size: 0x4c
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_lucky_crit", &__init__, undefined, array("aat", "bgb"));
 }
 
-// Namespace namespace_8b3a30e2
+// Namespace zm_bgb_lucky_crit
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb37e3abf, Offset: 0x1d0
 // Size: 0x94
@@ -28,7 +28,7 @@ function __init__() {
     aat::register_reroll("zm_bgb_lucky_crit", 2, &active, "t7_hud_zm_aat_bgb");
 }
 
-// Namespace namespace_8b3a30e2
+// Namespace zm_bgb_lucky_crit
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe867df8d, Offset: 0x270
 // Size: 0x1a

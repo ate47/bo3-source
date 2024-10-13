@@ -13,9 +13,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_fb788cda;
+#namespace zm_weap_annihilator;
 
-// Namespace namespace_fb788cda
+// Namespace zm_weap_annihilator
 // Params 0, eflags: 0x2
 // Checksum 0x6925665e, Offset: 0x260
 // Size: 0x34
@@ -23,7 +23,7 @@ function autoexec function_2dc19561() {
     system::register("zm_weap_annihilator", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_fb788cda
+// Namespace zm_weap_annihilator
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6ae0438f, Offset: 0x2a0
 // Size: 0x5c
@@ -33,7 +33,7 @@ function __init__() {
     level.var_43d5da02 = getweapon("hero_annihilator");
 }
 
-// Namespace namespace_fb788cda
+// Namespace zm_weap_annihilator
 // Params 1, eflags: 0x1 linked
 // Checksum 0x660b6305, Offset: 0x308
 // Size: 0x74

@@ -4,9 +4,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_66d26454;
+#namespace zm_tomb_ee_lights;
 
-// Namespace namespace_66d26454
+// Namespace zm_tomb_ee_lights
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6aeb2afb, Offset: 0x130
 // Size: 0x4c
@@ -14,7 +14,7 @@ function main() {
     clientfield::register("world", "light_show", 21000, 2, "int", &function_b6f5f7f5, 0, 0);
 }
 
-// Namespace namespace_66d26454
+// Namespace zm_tomb_ee_lights
 // Params 7, eflags: 0x1 linked
 // Checksum 0x57188c94, Offset: 0x188
 // Size: 0x13a

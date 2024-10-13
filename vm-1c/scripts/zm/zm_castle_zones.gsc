@@ -10,9 +10,9 @@
 #using scripts/shared/exploder_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_63d46525;
+#namespace zm_castle_zones;
 
-// Namespace namespace_63d46525
+// Namespace zm_castle_zones
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd893da8a, Offset: 0x838
 // Size: 0x9cc
@@ -88,7 +88,7 @@ function init() {
     zm_zonemgr::add_zone_flags("connect_greathall_to_undercroft", "activate_undercroft");
 }
 
-// Namespace namespace_63d46525
+// Namespace zm_castle_zones
 // Params 0, eflags: 0x0
 // Checksum 0x27ffafc7, Offset: 0x1210
 // Size: 0xc4
@@ -103,7 +103,7 @@ function function_15166300() {
     return var_49fa7253;
 }
 
-// Namespace namespace_63d46525
+// Namespace zm_castle_zones
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf001cdd4, Offset: 0x12e0
 // Size: 0x1a6
@@ -128,7 +128,7 @@ function function_e9579b3e() {
     }
 }
 
-// Namespace namespace_63d46525
+// Namespace zm_castle_zones
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe8c5082e, Offset: 0x1490
 // Size: 0x164
@@ -146,7 +146,7 @@ function function_8ead5cf5() {
     level thread function_affecb53(var_405e4f24);
 }
 
-// Namespace namespace_63d46525
+// Namespace zm_castle_zones
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7e01306, Offset: 0x1600
 // Size: 0x19a
@@ -168,7 +168,7 @@ function function_affecb53(var_405e4f24) {
     }
 }
 
-// Namespace namespace_63d46525
+// Namespace zm_castle_zones
 // Params 1, eflags: 0x1 linked
 // Checksum 0x59e55e6d, Offset: 0x17a8
 // Size: 0x236
@@ -187,7 +187,7 @@ function function_48cfc7df(spot) {
     self.mdl_anchor moveto(spot.origin, 0.05);
     self.mdl_anchor rotateto(spot.angles, 0.05);
     self.mdl_anchor waittill(#"movedone");
-    wait(0.05);
+    wait 0.05;
     if (!isdefined(self) || !isdefined(self.mdl_anchor)) {
         return;
     }
@@ -205,7 +205,7 @@ function function_48cfc7df(spot) {
     self notify(#"risen", spot.script_string);
 }
 
-// Namespace namespace_63d46525
+// Namespace zm_castle_zones
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8c3c5793, Offset: 0x19e8
 // Size: 0x4c
@@ -217,14 +217,14 @@ function function_27a6dd5f() {
     }
 }
 
-// Namespace namespace_63d46525
+// Namespace zm_castle_zones
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa6cb66b5, Offset: 0x1a40
 // Size: 0x4c
 function anchor_delete_watcher() {
     self waittill(#"death");
     if (isdefined(self.mdl_anchor)) {
-        wait(0.05);
+        wait 0.05;
         if (isdefined(self.mdl_anchor)) {
             self.mdl_anchor delete();
         }

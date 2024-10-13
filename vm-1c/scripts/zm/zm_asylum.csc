@@ -35,9 +35,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f69b3b38;
+#namespace zm_asylum;
 
-// Namespace namespace_f69b3b38
+// Namespace zm_asylum
 // Params 0, eflags: 0x2
 // Checksum 0x19709fff, Offset: 0x6d0
 // Size: 0x1c
@@ -46,52 +46,52 @@ function autoexec function_d9af860b() {
     level.bgb_in_use = 1;
 }
 
-// Namespace namespace_f69b3b38
+// Namespace zm_asylum
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2eaa74fd, Offset: 0x6f8
 // Size: 0x1bc
 function main() {
-    namespace_1e5daa72::main_start();
+    zm_asylum_ffotd::main_start();
     level.default_game_mode = "zclassic";
     level.default_start_location = "default";
     function_b211e563();
-    namespace_bf71ff59::main();
+    zm_asylum_fx::main();
     visionset_mgr::register_visionset_info("zm_showerhead", 21000, 31, undefined, "zm_bloodwash_red");
     visionset_mgr::register_overlay_info_style_postfx_bundle("zm_showerhead_postfx", 21000, 32, "pstfx_blood_wash", 3);
     visionset_mgr::register_overlay_info_style_postfx_bundle("zm_waterfall_postfx", 21000, 32, "pstfx_shower_wash", 3);
     level._uses_sticky_grenades = 1;
     init_clientfields();
     load::main();
-    namespace_570c8452::init();
-    namespace_40b4687d::init();
+    _zm_weap_cymbal_monkey::init();
+    _zm_weap_tesla::init();
     util::waitforclient(0);
     level thread function_d87a7dcc();
     level thread function_c9207335();
     level thread startzmbspawnersoundloops();
-    println("int");
-    namespace_1e5daa72::main_end();
+    println("<dev string:x28>");
+    zm_asylum_ffotd::main_end();
 }
 
-// Namespace namespace_f69b3b38
+// Namespace zm_asylum
 // Params 0, eflags: 0x1 linked
 // Checksum 0x217b1330, Offset: 0x8c0
 // Size: 0xdc
 function init_clientfields() {
-    clientfield::register("world", "asylum_trap_fx_north", 21000, 1, "int", &namespace_bf71ff59::function_93f91575, 0, 0);
-    clientfield::register("world", "asylum_trap_fx_south", 21000, 1, "int", &namespace_bf71ff59::function_4c17ba1b, 0, 0);
+    clientfield::register("world", "asylum_trap_fx_north", 21000, 1, "int", &zm_asylum_fx::function_93f91575, 0, 0);
+    clientfield::register("world", "asylum_trap_fx_south", 21000, 1, "int", &zm_asylum_fx::function_4c17ba1b, 0, 0);
     clientfield::register("world", "asylum_generator_state", 21000, 1, "int", &function_d56a2c4b, 0, 0);
 }
 
-// Namespace namespace_f69b3b38
+// Namespace zm_asylum
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7fd86da, Offset: 0x9a8
 // Size: 0x24
 function function_b211e563() {
     include_weapons();
-    namespace_570c8452::init();
+    _zm_weap_cymbal_monkey::init();
 }
 
-// Namespace namespace_f69b3b38
+// Namespace zm_asylum
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa780ea69, Offset: 0x9d8
 // Size: 0x24
@@ -99,7 +99,7 @@ function include_weapons() {
     zm_weapons::load_weapon_spec_from_table("gamedata/weapons/zm/zm_asylum_weapons.csv", 1);
 }
 
-// Namespace namespace_f69b3b38
+// Namespace zm_asylum
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbae1fc32, Offset: 0xa08
 // Size: 0xca
@@ -117,7 +117,7 @@ function function_d87a7dcc() {
     }
 }
 
-// Namespace namespace_f69b3b38
+// Namespace zm_asylum
 // Params 7, eflags: 0x1 linked
 // Checksum 0x61fe4a2c, Offset: 0xae0
 // Size: 0x88
@@ -132,29 +132,29 @@ function function_d56a2c4b(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f69b3b38
+// Namespace zm_asylum
 // Params 0, eflags: 0x1 linked
 // Checksum 0x43d15260, Offset: 0xb70
 // Size: 0x58
 function function_21212316() {
     while (level.var_c4ea7bb2) {
-        wait(randomfloatrange(0.45, 0.85));
+        wait randomfloatrange(0.45, 0.85);
         playsound(0, "amb_elec_arc_generator", (-672, -264, 296));
     }
 }
 
-// Namespace namespace_f69b3b38
+// Namespace zm_asylum
 // Params 0, eflags: 0x1 linked
 // Checksum 0x697cab3f, Offset: 0xbd0
 // Size: 0x74
 function function_c9207335() {
-    wait(3);
+    wait 3;
     level thread function_d667714e();
     var_13a52dfe = getentarray(0, "sndMusicTrig", "targetname");
     array::thread_all(var_13a52dfe, &function_60a32834);
 }
 
-// Namespace namespace_f69b3b38
+// Namespace zm_asylum
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdab0934b, Offset: 0xc50
 // Size: 0x94
@@ -164,15 +164,15 @@ function function_60a32834() {
         if (trigplayer islocalplayer()) {
             level notify(#"hash_51d7bc7c", self.script_sound);
             while (isdefined(trigplayer) && trigplayer istouching(self)) {
-                wait(0.016);
+                wait 0.016;
             }
             continue;
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_f69b3b38
+// Namespace zm_asylum
 // Params 0, eflags: 0x1 linked
 // Checksum 0x84694b1b, Offset: 0xcf0
 // Size: 0xf8
@@ -191,18 +191,18 @@ function function_d667714e() {
     }
 }
 
-// Namespace namespace_f69b3b38
+// Namespace zm_asylum
 // Params 1, eflags: 0x1 linked
 // Checksum 0x3a920e5b, Offset: 0xdf0
 // Size: 0x64
 function function_b234849(var_6d9d81aa) {
     level endon(#"hash_51d7bc7c");
     level.var_eb526c90 stopallloopsounds(2);
-    wait(1);
+    wait 1;
     level.var_9433cf5a = level.var_eb526c90 playloopsound(var_6d9d81aa, 2);
 }
 
-// Namespace namespace_f69b3b38
+// Namespace zm_asylum
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcc7c49f1, Offset: 0xe60
 // Size: 0x15c
@@ -211,27 +211,27 @@ function startzmbspawnersoundloops() {
     if (isdefined(loopers) && loopers.size > 0) {
         delay = 0;
         /#
-            if (getdvarint("int") > 0) {
-                println("int" + loopers.size + "int");
+            if (getdvarint("<dev string:x63>") > 0) {
+                println("<dev string:x6f>" + loopers.size + "<dev string:xa7>");
             }
         #/
         for (i = 0; i < loopers.size; i++) {
             loopers[i] thread soundloopthink();
             delay += 1;
             if (delay % 20 == 0) {
-                wait(0.016);
+                wait 0.016;
             }
         }
         return;
     }
     /#
-        if (getdvarint("int") > 0) {
-            println("int");
+        if (getdvarint("<dev string:x63>") > 0) {
+            println("<dev string:xb2>");
         }
     #/
 }
 
-// Namespace namespace_f69b3b38
+// Namespace zm_asylum
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1d058adc, Offset: 0xfc8
 // Size: 0x16c

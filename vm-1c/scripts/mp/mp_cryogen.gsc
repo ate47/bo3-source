@@ -9,17 +9,17 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_9de125a0;
+#namespace mp_cryogen;
 
-// Namespace namespace_9de125a0
+// Namespace mp_cryogen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x75dc3c73, Offset: 0x328
 // Size: 0x594
 function main() {
     precache();
     spawnlogic::move_spawn_point("mp_dm_spawn_start", (1197.14, -979.058, 37.625), (834.823, -803.36, 37.625), (0, 191, 0));
-    namespace_5633db91::main();
-    namespace_779c23e4::main();
+    mp_cryogen_fx::main();
+    mp_cryogen_sound::main();
     load::main();
     compass::setupminimap("compass_map_mp_cryogen");
     setdvar("compassmaxrange", "2100");
@@ -51,7 +51,7 @@ function main() {
     level spawnkilltrigger();
 }
 
-// Namespace namespace_9de125a0
+// Namespace mp_cryogen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x8c8
 // Size: 0x4
@@ -59,7 +59,7 @@ function precache() {
     
 }
 
-// Namespace namespace_9de125a0
+// Namespace mp_cryogen
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc1b55ae4, Offset: 0x8d8
 // Size: 0x128
@@ -69,26 +69,26 @@ function scene_sequence(str_scene) {
     var_3aeeca62 = 0.5;
     var_df291458 = 3;
     while (true) {
-        wait(randomfloatrange(var_aae314ac, var_9a15ce42));
+        wait randomfloatrange(var_aae314ac, var_9a15ce42);
         level thread function_cfe901b9(str_scene, "ring_01_towers", var_3aeeca62, var_df291458);
-        wait(randomfloatrange(var_aae314ac, var_9a15ce42));
+        wait randomfloatrange(var_aae314ac, var_9a15ce42);
         level thread function_cfe901b9(str_scene, "ring_02_towers", var_3aeeca62, var_df291458);
-        wait(randomfloatrange(var_aae314ac, var_9a15ce42));
+        wait randomfloatrange(var_aae314ac, var_9a15ce42);
         level thread function_cfe901b9(str_scene, "ring_03_towers", var_3aeeca62, var_df291458);
     }
 }
 
-// Namespace namespace_9de125a0
+// Namespace mp_cryogen
 // Params 4, eflags: 0x1 linked
 // Checksum 0x5c644110, Offset: 0xa08
 // Size: 0x74
 function function_cfe901b9(str_scene, str_ring, min_time, max_time) {
     level thread init_scene(str_scene, str_ring, min_time, max_time);
-    wait(10);
+    wait 10;
     level thread run_scene(str_scene, str_ring, min_time, max_time);
 }
 
-// Namespace namespace_9de125a0
+// Namespace mp_cryogen
 // Params 4, eflags: 0x1 linked
 // Checksum 0x2d56f685, Offset: 0xa88
 // Size: 0x252
@@ -115,7 +115,7 @@ function run_scene(str_scene, str_targetname, min_time, max_time) {
     }
 }
 
-// Namespace namespace_9de125a0
+// Namespace mp_cryogen
 // Params 4, eflags: 0x1 linked
 // Checksum 0xf69ce83b, Offset: 0xce8
 // Size: 0x17c
@@ -134,7 +134,7 @@ function init_scene(str_scene, str_targetname, min_time, max_time) {
     }
 }
 
-// Namespace namespace_9de125a0
+// Namespace mp_cryogen
 // Params 3, eflags: 0x1 linked
 // Checksum 0x90be8bd2, Offset: 0xe70
 // Size: 0x4a
@@ -142,7 +142,7 @@ function function_76d36418(&array, b_keep_keys, str_targetname) {
     return array::filter(array, b_keep_keys, &function_e35699e3, str_targetname);
 }
 
-// Namespace namespace_9de125a0
+// Namespace mp_cryogen
 // Params 2, eflags: 0x1 linked
 // Checksum 0xcffa67c2, Offset: 0xec8
 // Size: 0x28
@@ -150,29 +150,29 @@ function function_e35699e3(val, arg) {
     return val.targetname === arg;
 }
 
-// Namespace namespace_9de125a0
+// Namespace mp_cryogen
 // Params 4, eflags: 0x1 linked
 // Checksum 0xc3cdb89f, Offset: 0xef8
 // Size: 0x84
 function function_f3529f1a(str_scene, str_mode, min_time, max_time) {
     if (min_time >= 0 && max_time > 0) {
-        wait(randomfloatrange(min_time, max_time));
+        wait randomfloatrange(min_time, max_time);
     }
     self thread scene::play(str_scene, undefined, undefined, 1, undefined, str_mode);
 }
 
-// Namespace namespace_9de125a0
+// Namespace mp_cryogen
 // Params 3, eflags: 0x1 linked
 // Checksum 0xd3cefbbf, Offset: 0xf88
 // Size: 0x74
 function function_cf748f4e(str_scene, min_time, max_time) {
     if (min_time >= 0 && max_time > 0) {
-        wait(randomfloatrange(min_time, max_time));
+        wait randomfloatrange(min_time, max_time);
     }
     self thread scene::init(str_scene, undefined, undefined, 1);
 }
 
-// Namespace namespace_9de125a0
+// Namespace mp_cryogen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9812a804, Offset: 0x1008
 // Size: 0xec
@@ -185,7 +185,7 @@ function spawnkilltrigger() {
     trigger thread watchkilltrigger();
 }
 
-// Namespace namespace_9de125a0
+// Namespace mp_cryogen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x59afdfa0, Offset: 0x1100
 // Size: 0x90

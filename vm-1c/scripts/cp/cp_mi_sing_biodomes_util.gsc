@@ -31,21 +31,21 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_27a45d31;
+#namespace cp_mi_sing_biodomes_util;
 
 /#
 
-    // Namespace namespace_27a45d31
+    // Namespace cp_mi_sing_biodomes_util
     // Params 1, eflags: 0x1 linked
     // Checksum 0xb1513ff6, Offset: 0x6d0
     // Size: 0x34
     function function_ddb0eeea(msg) {
-        println("fxanim_warehouse" + msg);
+        println("<dev string:x28>" + msg);
     }
 
 #/
 
-// Namespace namespace_27a45d31
+// Namespace cp_mi_sing_biodomes_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5245256d, Offset: 0x710
 // Size: 0x84
@@ -56,7 +56,7 @@ function function_bff1a867(str_objective) {
     skipto::teleport_ai(str_objective);
 }
 
-// Namespace namespace_27a45d31
+// Namespace cp_mi_sing_biodomes_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf7cd0514, Offset: 0x7a0
 // Size: 0x13c
@@ -75,13 +75,13 @@ function function_1c1462ee(var_2c617722) {
     }
 }
 
-// Namespace namespace_27a45d31
+// Namespace cp_mi_sing_biodomes_util
 // Params 2, eflags: 0x0
 // Checksum 0xc6b11af8, Offset: 0x8e8
 // Size: 0x102
 function function_54d82960(str_group, b_enable) {
     a_triggers = getentarray(str_group, "script_noteworthy");
-    assert(isdefined(a_triggers), str_group + "fxanim_warehouse");
+    assert(isdefined(a_triggers), str_group + "<dev string:x36>");
     if (isdefined(a_triggers)) {
         foreach (trigger in a_triggers) {
             trigger triggerenable(b_enable);
@@ -89,7 +89,7 @@ function function_54d82960(str_group, b_enable) {
     }
 }
 
-// Namespace namespace_27a45d31
+// Namespace cp_mi_sing_biodomes_util
 // Params 3, eflags: 0x1 linked
 // Checksum 0x1906a8a9, Offset: 0x9f8
 // Size: 0xca
@@ -100,7 +100,7 @@ function function_a22e7052(b_enable, str_name, str_key) {
     }
 }
 
-// Namespace namespace_27a45d31
+// Namespace cp_mi_sing_biodomes_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x3355764b, Offset: 0xad0
 // Size: 0x22
@@ -108,7 +108,7 @@ function function_7ff50323(var_2d3d7b7) {
     return array::random(var_2d3d7b7);
 }
 
-// Namespace namespace_27a45d31
+// Namespace cp_mi_sing_biodomes_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0xcd8776db, Offset: 0xb00
 // Size: 0x22c
@@ -126,7 +126,7 @@ function function_7aa89143(n_duration) {
     self disableweaponcycling();
     self disableusability();
     self disableoffhandweapons();
-    wait(n_duration);
+    wait n_duration;
     self takeweapon(var_bd901adc);
     self enableweaponfire();
     self enableweaponcycling();
@@ -142,7 +142,7 @@ function function_7aa89143(n_duration) {
     }
 }
 
-// Namespace namespace_27a45d31
+// Namespace cp_mi_sing_biodomes_util
 // Params 3, eflags: 0x1 linked
 // Checksum 0x71a266a1, Offset: 0xd38
 // Size: 0xea
@@ -153,7 +153,7 @@ function function_f61c0df8(var_e39815ad, n_time_min, n_time_max) {
     }
 }
 
-// Namespace namespace_27a45d31
+// Namespace cp_mi_sing_biodomes_util
 // Params 4, eflags: 0x1 linked
 // Checksum 0xef2aab5a, Offset: 0xe30
 // Size: 0x94
@@ -170,7 +170,7 @@ function function_a1669688(str_aigroup, str_volume, n_delay_min, n_delay_max) {
     }
 }
 
-// Namespace namespace_27a45d31
+// Namespace cp_mi_sing_biodomes_util
 // Params 3, eflags: 0x1 linked
 // Checksum 0x99be592e, Offset: 0xed0
 // Size: 0x172
@@ -182,81 +182,81 @@ function function_5f83cbd0(str_volume, n_delay_min, n_delay_max) {
         n_delay_max = 0;
     }
     volume = getent(str_volume, "targetname");
-    assert(isdefined(volume), "fxanim_warehouse" + str_volume + "fxanim_warehouse");
+    assert(isdefined(volume), "<dev string:x72>" + str_volume + "<dev string:x7f>");
     if (isdefined(volume)) {
         foreach (ai in self) {
             if (isalive(ai)) {
                 ai setgoal(volume, 1);
             }
             if (n_delay_max > n_delay_min) {
-                wait(randomfloatrange(n_delay_min, n_delay_max));
+                wait randomfloatrange(n_delay_min, n_delay_max);
             }
         }
     }
 }
 
-// Namespace namespace_27a45d31
+// Namespace cp_mi_sing_biodomes_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x43e12498, Offset: 0x1050
 // Size: 0x49e
 function function_753a859(str_objective) {
     switch (str_objective) {
-    case 15:
+    case "objective_igc":
         hidemiscmodels("fxanim_nursery");
         hidemiscmodels("fxanim_markets2");
         hidemiscmodels("fxanim_warehouse");
         hidemiscmodels("fxanim_cloud_mountain");
         break;
-    case 18:
+    case "objective_markets_start":
         hidemiscmodels("fxanim_nursery");
         hidemiscmodels("fxanim_markets2");
         hidemiscmodels("fxanim_warehouse");
         hidemiscmodels("fxanim_cloud_mountain");
         break;
-    case 17:
+    case "objective_markets_rpg":
         hidemiscmodels("fxanim_warehouse");
         hidemiscmodels("fxanim_cloud_mountain");
         break;
-    case 16:
+    case "objective_markets2_start":
         hidemiscmodels("fxanim_cloud_mountain");
         break;
-    case 21:
+    case "objective_warehouse":
         hidemiscmodels("fxanim_party_house");
         break;
-    case 12:
-        hidemiscmodels("fxanim_party_house");
-        hidemiscmodels("fxanim_markets1");
-        hidemiscmodels("fxanim_nursery");
-        break;
-    case 13:
+    case "objective_cloudmountain":
         hidemiscmodels("fxanim_party_house");
         hidemiscmodels("fxanim_markets1");
         hidemiscmodels("fxanim_nursery");
-        hidemiscmodels("fxanim_markets2");
-        hidemiscmodels("fxanim_warehouse");
         break;
-    case 20:
+    case "objective_cloudmountain_level_2":
         hidemiscmodels("fxanim_party_house");
         hidemiscmodels("fxanim_markets1");
         hidemiscmodels("fxanim_nursery");
         hidemiscmodels("fxanim_markets2");
         hidemiscmodels("fxanim_warehouse");
         break;
-    case 22:
+    case "objective_turret_hallway":
         hidemiscmodels("fxanim_party_house");
         hidemiscmodels("fxanim_markets1");
         hidemiscmodels("fxanim_nursery");
         hidemiscmodels("fxanim_markets2");
         hidemiscmodels("fxanim_warehouse");
         break;
-    case 19:
+    case "objective_xiulan_vignette":
         hidemiscmodels("fxanim_party_house");
         hidemiscmodels("fxanim_markets1");
         hidemiscmodels("fxanim_nursery");
         hidemiscmodels("fxanim_markets2");
         hidemiscmodels("fxanim_warehouse");
         break;
-    case 14:
+    case "objective_server_room_defend":
+        hidemiscmodels("fxanim_party_house");
+        hidemiscmodels("fxanim_markets1");
+        hidemiscmodels("fxanim_nursery");
+        hidemiscmodels("fxanim_markets2");
+        hidemiscmodels("fxanim_warehouse");
+        break;
+    case "objective_fighttothedome":
         hidemiscmodels("fxanim_party_house");
         hidemiscmodels("fxanim_markets1");
         hidemiscmodels("fxanim_nursery");
@@ -267,7 +267,7 @@ function function_753a859(str_objective) {
     }
 }
 
-// Namespace namespace_27a45d31
+// Namespace cp_mi_sing_biodomes_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd3e8b52c, Offset: 0x14f8
 // Size: 0xf4
@@ -287,7 +287,7 @@ function function_d28654c9() {
     }
 }
 
-// Namespace namespace_27a45d31
+// Namespace cp_mi_sing_biodomes_util
 // Params 2, eflags: 0x1 linked
 // Checksum 0x447e3411, Offset: 0x15f8
 // Size: 0x144

@@ -235,7 +235,7 @@ function function_2e537afb(target, var_9bc2efcb) {
         type = self cybercom::function_5e3d3aa();
         self orientmode("face default");
         self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
-        self waittillmatch(#"hash_39fa7e38", "fire");
+        self waittillmatch(#"ai_cybercom_anim", "fire");
     }
     weapon = getweapon("gadget_exo_breakdown");
     foreach (guy in validtargets) {
@@ -243,7 +243,7 @@ function function_2e537afb(target, var_9bc2efcb) {
             continue;
         }
         guy thread function_585970ba(self);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -260,7 +260,7 @@ function private function_69246d49(attacker, loops, weapon) {
         self.allowpain = 1;
         self dodamage(5, self.origin, isdefined(attacker) ? attacker : undefined, undefined, "none", "MOD_UNKNOWN", 0, weapon, -1, 1);
         self.allowpain = 0;
-        wait(0.05);
+        wait 0.05;
         self waittillmatch(#"bhtn_action_terminate");
         loops--;
     }
@@ -277,13 +277,13 @@ function private function_69246d49(attacker, loops, weapon) {
 function private function_585970ba(attacker) {
     self endon(#"death");
     weapon = getweapon("gadget_exo_breakdown");
-    self notify(#"hash_f8c5dd60", weapon, attacker);
+    self notify(#"cybercom_action", weapon, attacker);
     if (isdefined(attacker.cybercom) && isdefined(attacker.cybercom.var_b8a4f6a5)) {
         loops = self.cybercom.var_1360b9f1;
     } else {
         loops = 1;
     }
-    wait(randomfloatrange(0, 0.75));
+    wait randomfloatrange(0, 0.75);
     if (!attacker cybercom::function_7a7d1608(self, weapon)) {
         return;
     }
@@ -318,12 +318,12 @@ function private function_585970ba(attacker) {
     self animscripted("exo_intro_anim", self.origin, self.angles, "ai_" + base + "_" + type + "_exposed_suit_overload_react_intro" + variant, "normal", generic%body, 1, 0.2);
     self thread cybercom::function_cf64f12c("damage_pain", "exo_intro_anim", 1, attacker, weapon);
     self thread cybercom::function_cf64f12c("notify_melee_damage", "exo_intro_anim", 1, attacker, weapon);
-    self waittillmatch(#"hash_aae05ca2", "end");
+    self waittillmatch(#"exo_intro_anim", "end");
     function_58831b5a(loops, attacker, weapon, variant, base, type);
     self animscripted("exo_outro_anim", self.origin, self.angles, "ai_" + base + "_" + type + "_exposed_suit_overload_react_outro" + variant, "normal", generic%body, 1, 0.2);
     self thread cybercom::function_cf64f12c("damage_pain", "exo_outro_anim", 1, attacker, weapon);
     self thread cybercom::function_cf64f12c("notify_melee_damage", "exo_outro_anim", 1, attacker, weapon);
-    self waittillmatch(#"hash_7a5cc1cf", "end");
+    self waittillmatch(#"exo_outro_anim", "end");
     self.ignoreall = 0;
     self.is_disabled = undefined;
 }
@@ -333,7 +333,7 @@ function private function_585970ba(attacker) {
 // Checksum 0xc85b3bfb, Offset: 0x19a0
 // Size: 0x8e
 function function_58831b5a(loops, attacker, weapon, variant, base, type) {
-    self endon(#"hash_614ee876");
+    self endon(#"breakout_exo_loop");
     self thread function_53cfe88a();
     while (loops) {
         self function_e01b8059(attacker, weapon, variant, base, type);
@@ -350,7 +350,7 @@ function function_e01b8059(attacker, weapon, variant, base, type) {
     self animscripted("exo_loop_anim", self.origin, self.angles, "ai_" + base + "_" + type + "_exposed_suit_overload_react_loop" + variant, "normal", generic%body, 1, 0.2);
     self thread cybercom::function_cf64f12c("damage_pain", "exo_loop_anim", 1, attacker, weapon);
     self thread cybercom::function_cf64f12c("breakout_exo_loop", "exo_loop_anim", 0, attacker, weapon);
-    self waittillmatch(#"hash_346e71c6", "end");
+    self waittillmatch(#"exo_loop_anim", "end");
 }
 
 // Namespace namespace_491e7803
@@ -359,7 +359,7 @@ function function_e01b8059(attacker, weapon, variant, base, type) {
 // Size: 0x3a
 function function_53cfe88a() {
     self endon(#"death");
-    wait(getdvarfloat("scr_exo_breakdown_loop_time", 4.2));
-    self notify(#"hash_614ee876");
+    wait getdvarfloat("scr_exo_breakdown_loop_time", 4.2);
+    self notify(#"breakout_exo_loop");
 }
 

@@ -5,9 +5,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_8847920b;
+#namespace zm_theater_teleporter;
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x2
 // Checksum 0xbb6d6fbd, Offset: 0x380
 // Size: 0x34
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
     system::register("zm_theater_teleporter", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0xceecf62e, Offset: 0x3c0
 // Size: 0x1dc
@@ -24,12 +24,12 @@ function __init__() {
     clientfield::register("scriptmover", "extra_screen", 21000, 1, "int", &function_667aa0b4, 0, 0);
     clientfield::register("scriptmover", "teleporter_fx", 21000, 1, "counter", &function_a8255fab, 0, 0);
     clientfield::register("allplayers", "player_teleport_fx", 21000, 1, "counter", &function_2b23adc9, 0, 0);
-    clientfield::register("scriptmover", "play_fly_me_to_the_moon_fx", 21000, 1, "int", &function_14c9b6d3, 0, 0);
+    clientfield::register("scriptmover", "play_fly_me_to_the_moon_fx", 21000, 1, "int", &play_fly_me_to_the_moon_fx, 0, 0);
     clientfield::register("world", "teleporter_initiate_fx", 21000, 1, "counter", &function_6776dea9, 0, 0);
-    clientfield::register("scriptmover", "teleporter_link_cable_mtl", 21000, 1, "int", &function_2ae4e56, 0, 0);
+    clientfield::register("scriptmover", "teleporter_link_cable_mtl", 21000, 1, "int", &teleporter_link_cable_mtl, 0, 0);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5f4cceec, Offset: 0x5a8
 // Size: 0x34
@@ -38,7 +38,7 @@ function main() {
     level thread function_7de9450a();
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x463b6e93, Offset: 0x5e8
 // Size: 0x4c
@@ -49,12 +49,12 @@ function function_f03654b2() {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x56ef38d0, Offset: 0x640
 // Size: 0x24c
 function function_7de9450a() {
-    clientnum = level waittill(#"hash_1cf6ce10");
+    clientnum = level waittill(#"pack_clock_start");
     curr_time = getsystemtime();
     hours = curr_time[0];
     if (hours > 12) {
@@ -85,7 +85,7 @@ function function_7de9450a() {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9ecd1a5b, Offset: 0x898
 // Size: 0x14c
@@ -104,11 +104,11 @@ function function_cb983f5b(time_values) {
             self rotatepitch(time_values["rotate_bit"] * -1, 0.05);
             prev_time = curr_time;
         }
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 7, eflags: 0x1 linked
 // Checksum 0x24325f55, Offset: 0x9f0
 // Size: 0x2e2
@@ -140,7 +140,7 @@ function function_667aa0b4(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 7, eflags: 0x1 linked
 // Checksum 0x385109b8, Offset: 0xce0
 // Size: 0xfc
@@ -154,7 +154,7 @@ function function_a8255fab(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 7, eflags: 0x1 linked
 // Checksum 0x503edeef, Offset: 0xde8
 // Size: 0x13a
@@ -166,7 +166,7 @@ function function_2b23adc9(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 7, eflags: 0x1 linked
 // Checksum 0x98cfce89, Offset: 0xf30
 // Size: 0x27a
@@ -184,11 +184,11 @@ function function_6776dea9(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3fd1e314, Offset: 0x11b8
 // Size: 0x174
-function function_14c9b6d3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function play_fly_me_to_the_moon_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self.var_d623bf76 = util::spawn_model(localclientnum, "tag_origin", self.origin + (0, 0, -19), (90, 0, 0));
         self.var_d623bf76 linkto(self);
@@ -203,11 +203,11 @@ function function_14c9b6d3(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 7, eflags: 0x1 linked
 // Checksum 0x70a23f31, Offset: 0x1338
 // Size: 0x9c
-function function_2ae4e56(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function teleporter_link_cable_mtl(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 1, 0, 0, 0);
         return;

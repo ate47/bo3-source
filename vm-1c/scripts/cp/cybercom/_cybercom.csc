@@ -53,11 +53,11 @@ function init_clientfields() {
     clientfield::register("scriptmover", "cybercom_surge", 1, 1, "int", &function_38cc3f2e, 0, 0);
     clientfield::register("actor", "cybercom_shortout", 1, 2, "int", &function_82d4e6fe, 0, 0);
     clientfield::register("vehicle", "cybercom_shortout", 1, 2, "int", &function_6f88468d, 0, 0);
-    clientfield::register("allplayers", "cyber_arm_pulse", 1, 2, "counter", &function_7ee723d1, 0, 0);
-    clientfield::register("actor", "cyber_arm_pulse", 1, 2, "counter", &function_7ee723d1, 0, 0);
-    clientfield::register("scriptmover", "cyber_arm_pulse", 1, 2, "counter", &function_7ee723d1, 0, 0);
-    clientfield::register("actor", "sensory_overload", 1, 2, "int", &function_dacce323, 0, 0);
-    clientfield::register("actor", "forced_malfunction", 1, 1, "int", &function_815b0789, 0, 0);
+    clientfield::register("allplayers", "cyber_arm_pulse", 1, 2, "counter", &cyber_arm_pulse, 0, 0);
+    clientfield::register("actor", "cyber_arm_pulse", 1, 2, "counter", &cyber_arm_pulse, 0, 0);
+    clientfield::register("scriptmover", "cyber_arm_pulse", 1, 2, "counter", &cyber_arm_pulse, 0, 0);
+    clientfield::register("actor", "sensory_overload", 1, 2, "int", &cybercom_sensoryoverload, 0, 0);
+    clientfield::register("actor", "forced_malfunction", 1, 1, "int", &cybercom_forcedmalfunction, 0, 0);
     clientfield::register("toplayer", "hacking_progress", 1, 12, "int", &function_9439eecf, 0, 0);
     clientfield::register("toplayer", "resetAbilityWheel", 1, 1, "int", &function_806d1a61, 0, 0);
     level._effect["sensory_disable_human"] = "electric/fx_ability_elec_sensory_ol_human";
@@ -171,7 +171,7 @@ function function_6944603a(localclientnum, menu) {
     self notify(#"hash_6944603a");
     self endon(#"hash_6944603a");
     audio::stoploopat("gdt_tac_menu_snapshot_loop", (0, 0, 0));
-    wait(0.25);
+    wait 0.25;
     closeluimenu(localclientnum, menu);
     if (!isdefined(self)) {
         return;
@@ -223,7 +223,7 @@ function function_524667f7(localclientnum) {
     self endon(#"hash_ae8ccd0d");
     self endon(#"death");
     self.var_5208f863 = 1;
-    wait(0.15);
+    wait 0.15;
     self function_2551a9f6(localclientnum);
 }
 
@@ -356,7 +356,7 @@ function function_52e82d52(localclientnum) {
         self waittill(#"gadget_casting_anim");
         curtime = gettime();
         if (self.cybercom.var_3064004f + 1000 < curtime) {
-            function_7ee723d1(localclientnum, 0, 0);
+            cyber_arm_pulse(localclientnum, 0, 0);
             self.cybercom.var_3064004f = curtime;
         }
     }
@@ -384,19 +384,19 @@ function function_38510c4a(localclientnum, oldval, newval, bnewent, binitialsnap
         playfx(localclientnum, "electric/fx_elec_sparks_burst_lg_os", self.origin);
         if (isdefined(self.archetype)) {
             switch (self.archetype) {
-            case 40:
+            case "turret":
                 playsound(0, "gdt_cybercore_turret_shutdown", self.origin);
                 break;
-            case 37:
+            case "amws":
                 playsound(0, "gdt_cybercore_amws_shutdown", self.origin);
                 break;
-            case 38:
+            case "pamws":
                 playsound(0, "gdt_cybercore_amws_shutdown", self.origin);
                 break;
-            case 39:
+            case "raps":
                 playsound(0, "veh_raps_skid", self.origin);
                 break;
-            case 41:
+            case "wasp":
                 playsound(0, "gdt_cybercore_wasp_shutdown", self.origin);
                 break;
             }
@@ -458,46 +458,46 @@ function function_50dfd00b(localclientnum, oldval, newval, bnewent, binitialsnap
     if (newval == 1) {
         self playsound(0, "gdt_surge_impact");
         switch (self.archetype) {
-        case 40:
+        case "turret":
             self.var_3949887b = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_turret", self, "tag_fx");
             break;
-        case 37:
+        case "amws":
             self.var_3949887b = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_amws", self, "tag_head_slide_animate");
             break;
-        case 38:
+        case "pamws":
             self.var_3949887b = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_pamws", self, "tag_head_slide_animate");
             break;
-        case 39:
+        case "raps":
             self.var_3949887b = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_raps", self, "tag_wheel_front_right_animate");
             break;
-        case 41:
+        case "wasp":
             self.var_3949887b = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_wasp", self, "tag_body");
             break;
         default:
-            assert(0, "vehicle");
+            assert(0, "<dev string:x28>");
             break;
         }
         return;
     }
     if (newval == 2) {
         switch (self.archetype) {
-        case 40:
+        case "turret":
             self.var_3949887b = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_upgrade_turret", self, "tag_fx");
             break;
-        case 37:
+        case "amws":
             self.var_3949887b = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_upgrade_amws", self, "tag_head_slide_animate");
             break;
-        case 38:
+        case "pamws":
             self.var_3949887b = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_upgrade_pamws", self, "tag_head_slide_animate");
             break;
-        case 39:
+        case "raps":
             self.var_3949887b = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_upgrade_raps", self, "tag_wheel_front_right_animate");
             break;
-        case 41:
+        case "wasp":
             self.var_3949887b = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_upgrade_wasp", self, "tag_body");
             break;
         default:
-            assert(0, "vehicle");
+            assert(0, "<dev string:x28>");
             break;
         }
     }
@@ -529,46 +529,46 @@ function function_6f88468d(localclientnum, oldval, newval, bnewent, binitialsnap
     if (newval == 1) {
         self playsound(0, "gdt_servo_robot_die");
         switch (self.archetype) {
-        case 40:
+        case "turret":
             self.var_3e759796 = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_turret", self, "tag_fx");
             break;
-        case 37:
+        case "amws":
             self.var_3e759796 = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_amws", self, "tag_head_slide_animate");
             break;
-        case 38:
+        case "pamws":
             self.var_3e759796 = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_pamws", self, "tag_head_slide_animate");
             break;
-        case 39:
+        case "raps":
             self.var_3e759796 = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_raps", self, "tag_wheel_front_right_animate");
             break;
-        case 41:
+        case "wasp":
             self.var_3e759796 = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_wasp", self, "tag_body");
             break;
         default:
-            assert(0, "vehicle");
+            assert(0, "<dev string:x41>");
             break;
         }
         return;
     }
     if (newval == 2) {
         switch (self.archetype) {
-        case 40:
+        case "turret":
             self.var_3e759796 = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_upgrade_turret", self, "tag_fx");
             break;
-        case 37:
+        case "amws":
             self.var_3e759796 = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_upgrade_amws", self, "tag_head_slide_animate");
             break;
-        case 38:
+        case "pamws":
             self.var_3e759796 = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_upgrade_pamws", self, "tag_head_slide_animate");
             break;
-        case 39:
+        case "raps":
             self.var_3e759796 = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_upgrade_raps", self, "tag_wheel_front_right_animate");
             break;
-        case 41:
+        case "wasp":
             self.var_3e759796 = playfxontag(localclientnum, "electric/fx_ability_elec_surge_short_upgrade_wasp", self, "tag_body");
             break;
         default:
-            assert(0, "vehicle");
+            assert(0, "<dev string:x41>");
             break;
         }
     }
@@ -654,9 +654,9 @@ function private function_13f09a6b() {
     self notify(#"hash_e0f9c098");
     self endon(#"hash_e0f9c098");
     while (true) {
-        wait(2);
+        wait 2;
         self setdrawname(self.var_2b998b77, 2);
-        wait(2);
+        wait 2;
         self setdrawname(self.var_2b998b77, 1);
     }
 }
@@ -705,7 +705,7 @@ function private function_a4cd6b9a() {
 // Params 7, eflags: 0x1 linked
 // Checksum 0x50cbbfa6, Offset: 0x3588
 // Size: 0x176
-function function_7ee723d1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function cyber_arm_pulse(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     var_a40f758e = 1;
     var_ab8d7883 = 1;
     var_67dd73d2 = 1;
@@ -783,7 +783,7 @@ function function_38e32940() {
             self setarmpulseposition(var_b608e411);
             break;
         }
-        wait(0.01);
+        wait 0.01;
         time_counter += 10;
     }
 }
@@ -792,7 +792,7 @@ function function_38e32940() {
 // Params 7, eflags: 0x1 linked
 // Checksum 0xfad030df, Offset: 0x3a50
 // Size: 0x11c
-function function_815b0789(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function cybercom_forcedmalfunction(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 0 && isdefined(self.var_dea2a612)) {
         deletefx(localclientnum, self.var_dea2a612);
     }
@@ -811,7 +811,7 @@ function function_815b0789(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x9659b0df, Offset: 0x3b78
 // Size: 0x104
-function function_dacce323(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function cybercom_sensoryoverload(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 0 && isdefined(self.var_ac70f183)) {
         deletefx(localclientnum, self.var_ac70f183);
     }
@@ -840,7 +840,7 @@ function function_2aa9d708(model, range, start) {
         setuimodelvalue(model, val);
         totaltime = (getrealtime() - starttime) / 1000 + start;
         val = math::clamp(totaltime / range, 0, 1);
-        wait(0.016);
+        wait 0.016;
     }
     setuimodelvalue(model, 0);
 }

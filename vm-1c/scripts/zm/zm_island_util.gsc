@@ -22,9 +22,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_8aed53c9;
+#namespace zm_island_util;
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 4, eflags: 0x1 linked
 // Checksum 0xedfdab31, Offset: 0x3d0
 // Size: 0x5a
@@ -35,7 +35,7 @@ function function_d095318(origin, radius, use_trigger, var_cd7edcab) {
     return function_a40fee2f(origin, undefined, radius, use_trigger, var_cd7edcab);
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 5, eflags: 0x5 linked
 // Checksum 0xb27fe2a0, Offset: 0x438
 // Size: 0x1f8
@@ -73,7 +73,7 @@ function private function_a40fee2f(origin, angles, var_3b9cee11, use_trigger, va
     return trigger_stub;
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0xcea5676, Offset: 0x638
 // Size: 0x170
@@ -102,7 +102,7 @@ function function_5ea427bf(player) {
     return b_visible;
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 0, eflags: 0x5 linked
 // Checksum 0xceb4f4f2, Offset: 0x7b0
 // Size: 0x60
@@ -115,7 +115,7 @@ function private function_c54cd556() {
     }
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0x68689137, Offset: 0x818
 // Size: 0x1c
@@ -123,7 +123,7 @@ function function_c1947ff7() {
     self zm_unitrigger::run_visibility_function_for_all_triggers();
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4cfd57a9, Offset: 0x840
 // Size: 0x28
@@ -133,7 +133,7 @@ function function_acd04dc9() {
     self.no_powerups = 1;
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x623a4f3d, Offset: 0x870
 // Size: 0x324
@@ -150,14 +150,14 @@ function function_7448e472(e_target) {
             if (self util::ads_button_held()) {
                 if (self getcurrentweapon() !== level.var_c003f5b) {
                     while (self adsbuttonpressed()) {
-                        wait(0.05);
+                        wait 0.05;
                     }
                 } else if (self getammocount(level.var_c003f5b)) {
                     if (self namespace_f55b6585::function_3f3f64e9(e_target) && self namespace_f55b6585::function_5fa274c1(e_target)) {
                         self playrumbleonentity("zm_island_skull_reveal");
                         n_count = 0;
                         while (self util::ads_button_held()) {
-                            wait(1);
+                            wait 1;
                             n_count++;
                             if (n_count >= 2) {
                                 break;
@@ -185,12 +185,12 @@ function function_7448e472(e_target) {
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
     return var_c2b47c7a;
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb69e2633, Offset: 0xba0
 // Size: 0x64
@@ -202,7 +202,7 @@ function function_4aedb20b() {
     self gadgetpowerset(0, 0);
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 4, eflags: 0x1 linked
 // Checksum 0xc2793d9b, Offset: 0xc10
 // Size: 0x182
@@ -216,10 +216,10 @@ function function_925aa63a(a_e_elements, n_delay, n_value, b_delete) {
     foreach (e_element in a_e_elements) {
         if (isdefined(e_element)) {
             e_element clientfield::set("do_fade_material", n_value);
-            wait(n_delay);
+            wait n_delay;
         }
     }
-    wait(1);
+    wait 1;
     if (isdefined(b_delete) && b_delete) {
         foreach (e_element in a_e_elements) {
             e_element delete();
@@ -227,7 +227,7 @@ function function_925aa63a(a_e_elements, n_delay, n_value, b_delete) {
     }
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe2ee335f, Offset: 0xda0
 // Size: 0x62
@@ -239,7 +239,7 @@ function function_f2a55b5f(a_str_zones) {
     return isinarray(a_str_zones, str_player_zone);
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 2, eflags: 0x1 linked
 // Checksum 0x1c271c0a, Offset: 0xe10
 // Size: 0x142
@@ -260,7 +260,7 @@ function is_facing(target, var_94d542a1) {
     return n_dot >= var_94d542a1;
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5bbda886, Offset: 0xf60
 // Size: 0x15c
@@ -277,7 +277,7 @@ function function_1867f3e8(n_distance) {
     return var_9efb74d5;
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf03d770, Offset: 0x10c8
 // Size: 0xd2
@@ -295,7 +295,7 @@ function function_4bf4ac40(v_loc) {
     return e_player;
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 4, eflags: 0x1 linked
 // Checksum 0x2c12842f, Offset: 0x11a8
 // Size: 0xdc
@@ -308,7 +308,7 @@ function any_player_looking_at(v_org, n_dot, b_do_trace, e_ignore) {
     return false;
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x83f1c76a, Offset: 0x1290
 // Size: 0x242
@@ -342,7 +342,7 @@ function swap_weapon(var_9f85aad5) {
     }
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 2, eflags: 0x1 linked
 // Checksum 0xbb6ab070, Offset: 0x14e0
 // Size: 0xa0
@@ -354,7 +354,7 @@ function function_dcfc8bde(current_weapon, weapon) {
     var_7b9ca68 = self zm_weapons::give_build_kit_weapon(weapon);
 }
 
-// Namespace namespace_8aed53c9
+// Namespace zm_island_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x23f61bbf, Offset: 0x1588
 // Size: 0x140
@@ -375,7 +375,7 @@ function function_3420bc2f(var_9f85aad5) {
 
 /#
 
-    // Namespace namespace_8aed53c9
+    // Namespace zm_island_util
     // Params 4, eflags: 0x1 linked
     // Checksum 0xafa07a94, Offset: 0x16d0
     // Size: 0x108
@@ -384,15 +384,15 @@ function function_3420bc2f(var_9f85aad5) {
             v_color = (0, 0, 255);
         }
         if (!isdefined(var_8882142e)) {
-            var_8882142e = "do_fade_material";
+            var_8882142e = "<dev string:x28>";
         }
         if (!isdefined(n_scale)) {
             n_scale = 0.25;
         }
         if (!isdefined(str_endon)) {
-            str_endon = "do_fade_material";
+            str_endon = "<dev string:x2a>";
         }
-        if (getdvarint("do_fade_material") == 0) {
+        if (getdvarint("<dev string:x3c>") == 0) {
             return;
         }
         if (isdefined(str_endon)) {
@@ -401,7 +401,7 @@ function function_3420bc2f(var_9f85aad5) {
         origin = self.origin;
         while (true) {
             print3d(origin, var_8882142e, v_color, n_scale);
-            wait(0.1);
+            wait 0.1;
         }
     }
 

@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_20d60703;
+#namespace _gadget_iff_override;
 
-// Namespace namespace_20d60703
+// Namespace _gadget_iff_override
 // Params 0, eflags: 0x2
 // Checksum 0xf5f75be4, Offset: 0x1f0
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_iff_override", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_20d60703
+// Namespace _gadget_iff_override
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x230
 // Size: 0x4

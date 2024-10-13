@@ -86,7 +86,7 @@ function physics_explosion_and_rumble(origin, radius, physics_explosion) {
     if (isdefined(physics_explosion) && physics_explosion) {
         radius += 1 << 9;
     }
-    wait(0.05);
+    wait 0.05;
     var_7d0c93e1 clientfield::set("start_destructible_explosion", radius);
     var_7d0c93e1.in_use = 0;
 }
@@ -125,41 +125,41 @@ function event_callback(destructible_event, attacker, weapon) {
         return;
     }
     switch (destructible_event) {
-    case 18:
+    case "destructible_car_explosion":
         self car_explosion(attacker);
         if (isdefined(weapon)) {
             self.destroyingweapon = weapon;
         }
         break;
-    case 19:
+    case "destructible_car_fire":
         level thread battlechatter::on_player_near_explodable(self, "car");
         self thread car_fire_think(attacker);
         if (isdefined(weapon)) {
             self.destroyingweapon = weapon;
         }
         break;
-    case 8:
+    case "explode":
         self thread simple_explosion(attacker);
         break;
-    case 12:
+    case "explode_complex":
         self thread complex_explosion(attacker, explosion_radius);
         break;
-    case 24:
-    case 25:
+    case "destructible_explosive_incendiary_large":
+    case "destructible_explosive_incendiary_small":
         self explosive_incendiary_explosion(attacker, explosion_radius, 0);
         if (isdefined(weapon)) {
             self.destroyingweapon = weapon;
         }
         break;
-    case 22:
-    case 23:
+    case "destructible_explosive_electrical_large":
+    case "destructible_explosive_electrical_small":
         self explosive_electrical_explosion(attacker, explosion_radius, 0);
         if (isdefined(weapon)) {
             self.destroyingweapon = weapon;
         }
         break;
-    case 20:
-    case 21:
+    case "destructible_explosive_concussive_large":
+    case "destructible_explosive_concussive_small":
         self explosive_concussive_explosion(attacker, explosion_radius, 0);
         if (isdefined(weapon)) {
             self.destroyingweapon = weapon;
@@ -208,7 +208,7 @@ function simple_timed_explosion(destructible_event, attacker) {
         wait_times[0] = 5;
         wait_times[1] = 10;
     }
-    wait(randomintrange(wait_times[0], wait_times[1]));
+    wait randomintrange(wait_times[0], wait_times[1]);
     simple_explosion(attacker);
 }
 
@@ -401,7 +401,7 @@ function car_death_notify() {
 // Size: 0x4c
 function car_fire_think(attacker) {
     self endon(#"death");
-    wait(randomintrange(7, 10));
+    wait randomintrange(7, 10);
     self thread car_explosion(attacker);
 }
 
@@ -434,7 +434,7 @@ function codecallback_destructibleevent(event, param1, param2, param3, param4) {
 function breakafter(time, damage, piece) {
     self notify(#"breakafter");
     self endon(#"breakafter");
-    wait(time);
+    wait time;
     self dodamage(damage, self.origin, undefined, undefined);
 }
 

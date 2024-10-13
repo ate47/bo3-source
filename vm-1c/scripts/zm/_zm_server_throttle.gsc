@@ -23,7 +23,7 @@ function server_choke_init(id, max) {
 // Size: 0x32
 function server_choke_thread(id) {
     while (true) {
-        wait(0.05);
+        wait 0.05;
         level.zombie_server_choke_ids_count[id] = 0;
     }
 }
@@ -41,9 +41,9 @@ function server_choke_safe(id) {
 // Checksum 0xc82f66b4, Offset: 0x1a0
 // Size: 0xfe
 function server_choke_action(id, choke_action, arg1, arg2, arg3) {
-    assert(isdefined(level.zombie_server_choke_ids_max[id]), "<unknown string>" + id + "<unknown string>");
+    assert(isdefined(level.zombie_server_choke_ids_max[id]), "<dev string:x28>" + id + "<dev string:x37>");
     while (!server_choke_safe(id)) {
-        wait(0.05);
+        wait 0.05;
     }
     level.zombie_server_choke_ids_count[id]++;
     if (!isdefined(arg1)) {

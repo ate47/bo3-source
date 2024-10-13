@@ -5,9 +5,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_99ea9186;
+#namespace zm_tomb_dig;
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x1 linked
 // Checksum 0x21f714dd, Offset: 0x1c0
 // Size: 0x244

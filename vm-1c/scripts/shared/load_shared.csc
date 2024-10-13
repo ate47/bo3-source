@@ -40,7 +40,7 @@ function __init__() {
     // Size: 0x26
     function first_frame() {
         level.first_frame = 1;
-        wait(0.05);
+        wait 0.05;
         level.first_frame = undefined;
     }
 

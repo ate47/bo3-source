@@ -167,11 +167,11 @@ function private _burnstage(localclientnum, tagarray, shouldwait) {
         }
         self.activefx[self.activefx.size] = self _burntag(localclientnum, tags[i], shouldwait ? "_loop" : "_os");
         if (shouldwait) {
-            wait(randomfloatrange(0.1, 0.3));
+            wait randomfloatrange(0.1, 0.3);
         }
     }
     if (shouldwait) {
-        wait(randomfloatrange(0, 1));
+        wait randomfloatrange(0, 1);
     }
     if (isdefined(self)) {
         self notify(#"burn_stage_finished");
@@ -267,7 +267,7 @@ function private _burncorpse(localclientnum, burningduration) {
         maturemask = 1;
     }
     self mapshaderconstant(localclientnum, 0, "scriptVector0", maturemask * 1);
-    wait(20);
+    wait 20;
     if (isdefined(self)) {
         foreach (fx in self.activefx) {
             stopfx(localclientnum, fx);
@@ -299,10 +299,10 @@ function private function_819d3852(localclientnum) {
         fx = "smolder_" + self.archetype + tag + "_os";
         if (isdefined(level._effect[fx])) {
             activefx[activefx.size] = playfxontag(localclientnum, level._effect[fx], self, tag);
-            wait(randomfloatrange(0.1, 1));
+            wait randomfloatrange(0.1, 1);
         }
     }
-    wait(20);
+    wait 20;
     if (isdefined(self)) {
         foreach (fx in activefx) {
             stopfx(localclientnum, fx);
@@ -390,7 +390,7 @@ function actorcharrampto(localclientnum, chardesired) {
         self.curcharlevel = math::clamp(self.curcharlevel + self.charinc, 0, 1);
         self mapshaderconstant(localclientnum, 0, "scriptVector0", maturemask * self.curcharlevel);
         self.charsteps--;
-        wait(0.01);
+        wait 0.01;
     }
 }
 

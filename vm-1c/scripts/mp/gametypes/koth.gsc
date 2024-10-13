@@ -72,7 +72,7 @@ function main() {
         globallogic::setvisiblescoreboardcolumns("score", "kills", "deaths", "objtime", "defends");
     }
     /#
-        trigs = getentarray("mp_tdm_spawn", "MP_HQ_REINFORCEMENTS_IN");
+        trigs = getentarray("<dev string:x28>", "<dev string:x35>");
         foreach (trig in trigs) {
             trig delete();
         }
@@ -183,7 +183,7 @@ function onstartgametype() {
     setdemointermissionpoint(spawnpoint.origin, spawnpoint.angles);
     level.spawn_all = spawnlogic::get_spawnpoint_array("mp_tdm_spawn");
     if (!level.spawn_all.size) {
-        println("hq_protect");
+        println("<dev string:x40>");
         callback::abort_level();
         return;
     }
@@ -235,7 +235,7 @@ function spawn_first_zone(delay) {
     }
     if (isdefined(level.zone)) {
         /#
-            print("death" + level.zone.trigorigin[0] + "<unknown string>" + level.zone.trigorigin[1] + "<unknown string>" + level.zone.trigorigin[2] + "<unknown string>");
+            print("<dev string:x68>" + level.zone.trigorigin[0] + "<dev string:x78>" + level.zone.trigorigin[1] + "<dev string:x78>" + level.zone.trigorigin[2] + "<dev string:x7a>");
         #/
         level.zone spawning::enable_influencers(1);
     }
@@ -255,7 +255,7 @@ function spawn_next_zone() {
     }
     if (isdefined(level.zone)) {
         /#
-            print("death" + level.zone.trigorigin[0] + "<unknown string>" + level.zone.trigorigin[1] + "<unknown string>" + level.zone.trigorigin[2] + "<unknown string>");
+            print("<dev string:x68>" + level.zone.trigorigin[0] + "<dev string:x78>" + level.zone.trigorigin[1] + "<dev string:x78>" + level.zone.trigorigin[2] + "<dev string:x7a>");
         #/
         level.zone spawning::enable_influencers(1);
     }
@@ -351,10 +351,10 @@ function kothmainloop() {
     }
     spawn_first_zone();
     while (level.inprematchperiod) {
-        wait(0.05);
+        wait 0.05;
     }
     pause_time();
-    wait(5);
+    wait 5;
     setbombtimer("A", 0);
     setmatchflag("bomb_timer_a", 0);
     thread hidetimerdisplayongameend();
@@ -370,7 +370,7 @@ function kothmainloop() {
             updateobjectivehintmessage(level.objectivehintpreparezone);
             setmatchflag("bomb_timer_a", 1);
             setbombtimer("A", int(gettime() + 1000 + level.zonespawntime * 1000));
-            wait(level.zonespawntime);
+            wait level.zonespawntime;
             level.zone.gameobject gameobjects::set_flags(0);
             globallogic_audio::leader_dialog("kothOnline", undefined, undefined, "gamemode_objective", undefined, "kothActiveDialogBuffer");
         }
@@ -410,9 +410,9 @@ function kothmainloop() {
         level notify(#"zone_reset");
         setmatchflag("bomb_timer_a", 0);
         spawn_next_zone();
-        wait(0.5);
+        wait 0.5;
         thread forcespawnteam(ownerteam);
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -438,7 +438,7 @@ function forcespawnteam(team) {
         }
         if (player.pers["team"] == team) {
             player notify(#"force_spawn");
-            wait(0.1);
+            wait 0.1;
         }
     }
 }
@@ -493,7 +493,7 @@ function onzonecapture(player) {
     capture_team = player.pers["team"];
     capturetime = gettime();
     /#
-        print("<unknown string>");
+        print("<dev string:x7c>");
     #/
     pause_time();
     string = %MP_KOTH_CAPTURED_BY;
@@ -559,7 +559,7 @@ function track_capture_time() {
 // Checksum 0x1e384f58, Offset: 0x2df8
 // Size: 0x2a6
 function give_capture_credit(touchlist, string, capturetime, capture_team, lastcaptureteam) {
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     players = getarraykeys(touchlist);
     for (i = 0; i < players.size; i++) {
@@ -585,7 +585,7 @@ function give_capture_credit(touchlist, string, capturetime, capture_team, lastc
             continue;
         }
         /#
-            player iprintlnbold("<unknown string>");
+            player iprintlnbold("<dev string:x8a>");
         #/
     }
 }
@@ -595,7 +595,7 @@ function give_capture_credit(touchlist, string, capturetime, capture_team, lastc
 // Checksum 0xa0b33f20, Offset: 0x30a8
 // Size: 0xa2
 function give_held_credit(touchlist, team) {
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     players = getarraykeys(touchlist);
     for (i = 0; i < players.size; i++) {
@@ -610,7 +610,7 @@ function give_held_credit(touchlist, team) {
 function function_b016b8f2(player) {
     var_9394096e = player.pers["team"];
     /#
-        print("<unknown string>");
+        print("<dev string:xcf>");
     #/
     scoreevents::processscoreevent("zone_destroyed", player);
     player recordgameevent("destroy");
@@ -695,7 +695,7 @@ function movezoneaftertime(time) {
     level endon(#"zone_reset");
     level.zonemovetime = gettime() + time * 1000;
     level.zonedestroyedbytimer = 0;
-    wait(time);
+    wait time;
     if (!isdefined(level.zone.gameobject.wascontested) || level.zone.gameobject.wascontested == 0) {
         if (!isdefined(level.zone.gameobject.wasleftunoccupied) || level.zone.gameobject.wasleftunoccupied == 0) {
             zoneowningteam = level.zone.gameobject gameobjects::get_owner_team();
@@ -721,7 +721,7 @@ function awardcapturepoints(team, lastcaptureteam) {
     seconds = 1;
     score = 1;
     while (!level.gameended) {
-        wait(seconds);
+        wait seconds;
         hostmigration::waittillhostmigrationdone();
         if (!level.zone.gameobject.iscontested) {
             if (level.scoreperplayer) {
@@ -762,11 +762,11 @@ function comparezoneindexes(zone_a, zone_b) {
         return false;
     }
     if (!isdefined(script_index_a) && isdefined(script_index_b)) {
-        println("<unknown string>" + zone_a.origin);
+        println("<dev string:xde>" + zone_a.origin);
         return true;
     }
     if (isdefined(script_index_a) && !isdefined(script_index_b)) {
-        println("<unknown string>" + zone_b.origin);
+        println("<dev string:xde>" + zone_b.origin);
         return false;
     }
     if (script_index_a > script_index_b) {
@@ -851,12 +851,12 @@ function setupzones() {
     }
     if (maperrors.size > 0) {
         /#
-            println("<unknown string>");
+            println("<dev string:x105>");
             for (i = 0; i < maperrors.size; i++) {
                 println(maperrors[i]);
             }
-            println("<unknown string>");
-            util::error("<unknown string>");
+            println("<dev string:x12c>");
+            util::error("<dev string:x153>");
         #/
         callback::abort_level();
         return;
@@ -1220,7 +1220,7 @@ function function_700b26c9(var_fb86e8bc) {
     level endon(#"zone_captured");
     level endon(#"death");
     self util::waittill_any_return("killWhileContesting", "disconnect");
-    level notify(#"hash_a3d5effc");
+    level notify(#"abortKillWhileContesting");
 }
 
 // Namespace koth

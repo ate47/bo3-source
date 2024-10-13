@@ -6,16 +6,16 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_487ad092;
+#namespace mp_arena;
 
-// Namespace namespace_487ad092
+// Namespace mp_arena
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6f25ad22, Offset: 0x278
 // Size: 0x87c
 function main() {
     precache();
-    namespace_6d277d37::main();
-    namespace_1b1d095e::main();
+    mp_arena_fx::main();
+    mp_arena_sound::main();
     load::main();
     compass::setupminimap("compass_map_mp_arena");
     setdvar("compassmaxrange", "2100");
@@ -56,7 +56,7 @@ function main() {
     level.cleandepositpoints = array((222.743, -1.71311, 64.125), (317.682, 1532.49, 160.125), (-327.224, -1275.68, 128.125), (1289, -1210.86, 128.125));
 }
 
-// Namespace namespace_487ad092
+// Namespace mp_arena
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xb00
 // Size: 0x4

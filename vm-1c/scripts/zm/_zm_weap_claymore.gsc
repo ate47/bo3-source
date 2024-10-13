@@ -14,9 +14,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e815346c;
+#namespace _zm_weap_claymore;
 
-// Namespace namespace_e815346c
+// Namespace _zm_weap_claymore
 // Params 0, eflags: 0x2
 // Checksum 0x51e77591, Offset: 0x2c8
 // Size: 0x34
@@ -24,7 +24,7 @@ function autoexec function_2dc19561() {
     system::register("claymore", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_e815346c
+// Namespace _zm_weap_claymore
 // Params 0, eflags: 0x0
 // Checksum 0xc135554, Offset: 0x308
 // Size: 0x8c
@@ -35,7 +35,7 @@ function __init__() {
     zm_placeable_mine::add_planted_callback(&claymore_detonation, "claymore");
 }
 
-// Namespace namespace_e815346c
+// Namespace _zm_weap_claymore
 // Params 1, eflags: 0x0
 // Checksum 0xdadb4bd3, Offset: 0x3a0
 // Size: 0x5c
@@ -45,7 +45,7 @@ function play_claymore_effects(e_planter) {
     playfxontag(level._effect["claymore_laser"], self, "tag_fx");
 }
 
-// Namespace namespace_e815346c
+// Namespace _zm_weap_claymore
 // Params 1, eflags: 0x0
 // Checksum 0x42991b25, Offset: 0x408
 // Size: 0x34a
@@ -84,7 +84,7 @@ function claymore_detonation(e_planter) {
         }
         if (ent damageconetrace(self.origin, self) > 0) {
             self playsound("wpn_claymore_alert");
-            wait(0.4);
+            wait 0.4;
             if (isdefined(self.owner)) {
                 self detonate(self.owner);
                 return;
@@ -95,7 +95,7 @@ function claymore_detonation(e_planter) {
     }
 }
 
-// Namespace namespace_e815346c
+// Namespace _zm_weap_claymore
 // Params 1, eflags: 0x4
 // Checksum 0x514284a6, Offset: 0x760
 // Size: 0x13a
@@ -113,7 +113,7 @@ function private should_trigger_claymore(e_mine) {
     return dot > n_detonation_dot;
 }
 
-// Namespace namespace_e815346c
+// Namespace _zm_weap_claymore
 // Params 2, eflags: 0x4
 // Checksum 0xd5036324, Offset: 0x8a8
 // Size: 0x74
@@ -122,7 +122,7 @@ function private delete_mines_on_death(player, ent) {
     if (isdefined(player)) {
         arrayremovevalue(player.placeable_mines, self);
     }
-    wait(0.05);
+    wait 0.05;
     if (isdefined(ent)) {
         ent delete();
     }

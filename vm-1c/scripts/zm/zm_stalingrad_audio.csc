@@ -6,9 +6,9 @@
 #using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b73d41a1;
+#namespace zm_stalingrad_audio;
 
-// Namespace namespace_b73d41a1
+// Namespace zm_stalingrad_audio
 // Params 0, eflags: 0x2
 // Checksum 0x717361b0, Offset: 0x2a8
 // Size: 0x34
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
     system::register("zm_stalingrad_audio", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_b73d41a1
+// Namespace zm_stalingrad_audio
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2fcd0a30, Offset: 0x2e8
 // Size: 0x102
@@ -29,7 +29,7 @@ function __init__() {
     level._effect["ee_ballerina_disappear"] = "dlc3/stalingrad/fx_main_impact_success";
 }
 
-// Namespace namespace_b73d41a1
+// Namespace zm_stalingrad_audio
 // Params 7, eflags: 0x1 linked
 // Checksum 0x95348088, Offset: 0x3f8
 // Size: 0x134
@@ -37,7 +37,7 @@ function function_a50e0efb(localclientnum, oldval, newval, bnewent, binitialsnap
     if (newval) {
         playfx(localclientnum, level._effect["ee_anthem_pa_appear"], self.origin);
         audio::playloopat("zmb_nikolai_mus_pa_anthem_lp", self.origin);
-        wait(randomfloatrange(0.05, 0.35));
+        wait randomfloatrange(0.05, 0.35);
         playsound(0, "zmb_nikolai_mus_pa_anthem_start", self.origin);
         return;
     }
@@ -45,7 +45,7 @@ function function_a50e0efb(localclientnum, oldval, newval, bnewent, binitialsnap
     audio::stoploopat("zmb_nikolai_mus_pa_anthem_lp", self.origin);
 }
 
-// Namespace namespace_b73d41a1
+// Namespace zm_stalingrad_audio
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6c8710d3, Offset: 0x538
 // Size: 0x10c

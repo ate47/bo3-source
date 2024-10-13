@@ -196,10 +196,10 @@ function private function_7f3f3bde(slot, weapon) {
 // Size: 0xa8
 function function_41e98fcc(attacker, offset) {
     if (offset == 0) {
-        wait(0.1);
+        wait 0.1;
     } else {
         var_f5aa368a = 0.15 + randomfloatrange(0.1, 0.25) * offset;
-        wait(var_f5aa368a);
+        wait var_f5aa368a;
     }
     self dodamage(self.health + 100, self.origin, attacker, attacker);
     self.var_37915be0 = 1;

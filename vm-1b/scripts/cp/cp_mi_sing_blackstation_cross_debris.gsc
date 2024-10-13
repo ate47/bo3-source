@@ -20,9 +20,9 @@
 #using scripts/cp/_dialog;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e785bfa0;
+#namespace cp_mi_sing_blackstation_cross_debris;
 
-// Namespace namespace_e785bfa0
+// Namespace cp_mi_sing_blackstation_cross_debris
 // Params 2, eflags: 0x0
 // Checksum 0x7e91b2cd, Offset: 0x7b0
 // Size: 0x19a
@@ -38,19 +38,19 @@ function function_e9acb08(str_objective, var_74cd64bc) {
     }
     level thread util::function_d8eaed3d(4);
     level thread scene::play("cin_bla_13_02_looting_vign_lightningstrike_ziplinetalk_kane_idle");
-    level thread namespace_4040b6c2::function_5142ef8e();
+    level thread cp_mi_sing_blackstation_station::function_5142ef8e();
     level thread namespace_79e1cd97::function_6778ea09("light_ne");
     level thread function_5fae6516();
     level thread function_6ffde259();
     level thread function_7e62fe5e();
     level thread function_52065393();
-    level.var_2fd26037 thread namespace_4040b6c2::function_a561f620();
+    level.var_2fd26037 thread cp_mi_sing_blackstation_station::function_a561f620();
     level.var_2fd26037 thread namespace_79e1cd97::function_ba29155a();
     level.var_2fd26037 thread function_289b95f6();
     level.var_2fd26037 thread function_9ead7187();
 }
 
-// Namespace namespace_e785bfa0
+// Namespace cp_mi_sing_blackstation_cross_debris
 // Params 4, eflags: 0x0
 // Checksum 0x390951d1, Offset: 0x958
 // Size: 0x72
@@ -61,7 +61,7 @@ function function_508330ae(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     level thread util::clear_streamer_hint();
 }
 
-// Namespace namespace_e785bfa0
+// Namespace cp_mi_sing_blackstation_cross_debris
 // Params 0, eflags: 0x0
 // Checksum 0x43861541, Offset: 0x9d8
 // Size: 0x15a
@@ -78,7 +78,7 @@ function function_b0ed4f4f() {
     getent("comrelay_door_clip_left", "targetname") delete();
 }
 
-// Namespace namespace_e785bfa0
+// Namespace cp_mi_sing_blackstation_cross_debris
 // Params 0, eflags: 0x0
 // Checksum 0x21c0289b, Offset: 0xb40
 // Size: 0x62
@@ -89,7 +89,7 @@ function function_52065393() {
     level thread scene::play("p7_fxanim_cp_blackstation_collapsed_bldg_debris_02_bundle");
 }
 
-// Namespace namespace_e785bfa0
+// Namespace cp_mi_sing_blackstation_cross_debris
 // Params 0, eflags: 0x0
 // Checksum 0xe798e89c, Offset: 0xbb0
 // Size: 0x82
@@ -101,7 +101,7 @@ function function_5fae6516() {
     skipto::function_be8adfb8("objective_cross_debris");
 }
 
-// Namespace namespace_e785bfa0
+// Namespace cp_mi_sing_blackstation_cross_debris
 // Params 0, eflags: 0x0
 // Checksum 0xa1dfc089, Offset: 0xc40
 // Size: 0xca
@@ -116,14 +116,14 @@ function function_289b95f6() {
     level dialog::function_13b3b16a("plyr_this_place_is_fallin_0", 1);
 }
 
-// Namespace namespace_e785bfa0
+// Namespace cp_mi_sing_blackstation_cross_debris
 // Params 0, eflags: 0x0
 // Checksum 0xafdb4b5f, Offset: 0xd18
 // Size: 0xc2
 function function_9ead7187() {
     level endon(#"hash_62f8dc0c");
     self ai::set_ignoreall(1);
-    level waittill(#"hash_5050a70c");
+    level waittill(#"bridge_collapsed");
     self colors::disable();
     level scene::add_scene_func("cin_bla_12_01_cross_debris_vign_point", &function_8bcb3a1b);
     level scene::play("cin_bla_12_01_cross_debris_vign_point", self);
@@ -133,7 +133,7 @@ function function_9ead7187() {
     self ai::set_ignoreall(1);
 }
 
-// Namespace namespace_e785bfa0
+// Namespace cp_mi_sing_blackstation_cross_debris
 // Params 1, eflags: 0x0
 // Checksum 0x41d25620, Offset: 0xde8
 // Size: 0x42
@@ -141,7 +141,7 @@ function function_8bcb3a1b(a_ents) {
     level.var_2fd26037 setgoal(getnode("hendricks_crossdebris_landing", "targetname"));
 }
 
-// Namespace namespace_e785bfa0
+// Namespace cp_mi_sing_blackstation_cross_debris
 // Params 0, eflags: 0x0
 // Checksum 0xee7e731d, Offset: 0xe38
 // Size: 0x171
@@ -153,16 +153,16 @@ function function_7e62fe5e() {
     var_895e60d2 = array::randomize(struct::get_array("crossdebris_window"));
     for (i = 0; i < 4; i++) {
         glassradiusdamage(var_895e60d2[i].origin, 100, 500, 500);
-        wait(randomfloat(1));
+        wait randomfloat(1);
     }
     level waittill(#"hash_b251293d");
     for (i = 4; i < var_895e60d2.size; i++) {
         glassradiusdamage(var_895e60d2[i].origin, 100, 500, 500);
-        wait(randomfloat(0.3));
+        wait randomfloat(0.3);
     }
 }
 
-// Namespace namespace_e785bfa0
+// Namespace cp_mi_sing_blackstation_cross_debris
 // Params 0, eflags: 0x0
 // Checksum 0xfec00143, Offset: 0xfb8
 // Size: 0x202
@@ -184,10 +184,10 @@ function function_6ffde259() {
     if (isdefined(mdl_clip)) {
         mdl_clip delete();
     }
-    level thread namespace_4040b6c2::function_b8052aae();
+    level thread cp_mi_sing_blackstation_station::function_b8052aae();
 }
 
-// Namespace namespace_e785bfa0
+// Namespace cp_mi_sing_blackstation_cross_debris
 // Params 1, eflags: 0x0
 // Checksum 0x81d53625, Offset: 0x11c8
 // Size: 0x93

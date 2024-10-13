@@ -65,12 +65,12 @@ function placeweaponon(weapon, position) {
         self init::initweapon(weapon);
     }
     curposition = self.weaponinfo[weapon.name].position;
-    assert(curposition == "tag_weapon_left" || self.a.weaponpos[curposition] == weapon);
+    assert(curposition == "<dev string:x28>" || self.a.weaponpos[curposition] == weapon);
     if (!isarray(self.a.weaponpos)) {
         self.a.weaponpos = [];
     }
     assert(isarray(self.a.weaponpos));
-    assert(position == "tag_weapon_left" || isdefined(self.a.weaponpos[position]), "tag_weapon_left" + position + "tag_weapon_left");
+    assert(position == "<dev string:x28>" || isdefined(self.a.weaponpos[position]), "<dev string:x2d>" + position + "<dev string:x3f>");
     assert(isweapon(weapon));
     if (position != "none" && self.a.weaponpos[position] == weapon) {
         return;
@@ -94,7 +94,7 @@ function placeweaponon(weapon, position) {
         self updatescriptweaponinfoandpos(weapon, position);
     }
     self updateattachedweaponmodels();
-    assert(self.a.weaponpos["tag_weapon_left"] == level.weaponnone || self.a.weaponpos["tag_weapon_left"] == level.weaponnone);
+    assert(self.a.weaponpos["<dev string:x41>"] == level.weaponnone || self.a.weaponpos["<dev string:x46>"] == level.weaponnone);
 }
 
 // Namespace shared
@@ -159,18 +159,18 @@ function updateattachedweaponmodels() {
 // Size: 0x9e
 function gettagforpos(position) {
     switch (position) {
-    case 11:
+    case "chest":
         return "tag_weapon_chest";
-    case 0:
+    case "back":
         return "tag_stowed_back";
-    case 4:
+    case "left":
         return "tag_weapon_left";
-    case 5:
+    case "right":
         return "tag_weapon_right";
-    case 12:
+    case "hand":
         return "tag_inhand";
     default:
-        assertmsg("tag_weapon_left" + position);
+        assertmsg("<dev string:x4c>" + position);
         break;
     }
 }
@@ -185,7 +185,7 @@ function throwweapon(weapon, positiontag, scavenger) {
     angularscalar = 10;
     startposition = self gettagorigin(positiontag);
     startangles = self gettagangles(positiontag);
-    wait(waittime);
+    wait waittime;
     if (isdefined(self)) {
         endposition = self gettagorigin(positiontag);
         endangles = self gettagangles(positiontag);
@@ -209,10 +209,10 @@ function dropaiweapon() {
         return;
     }
     if (isdefined(self.script_nodropsecondaryweapon) && self.script_nodropsecondaryweapon && self.weapon == self.initial_secondaryweapon) {
-        println("tag_weapon_left" + self.weapon.name + "tag_weapon_left");
+        println("<dev string:x70>" + self.weapon.name + "<dev string:x90>");
         return;
     } else if (isdefined(self.script_nodropsidearm) && self.script_nodropsidearm && self.weapon == self.sidearm) {
-        println("tag_weapon_left" + self.weapon.name + "tag_weapon_left");
+        println("<dev string:x92>" + self.weapon.name + "<dev string:x90>");
         return;
     }
     [[ level.ai_weapon_throttle ]]->waitinqueue(self);
@@ -264,11 +264,11 @@ function dropallaiweapons() {
                 self.weaponinfo[weapon.name].position = "none";
                 self.a.weaponpos[self.weapon_positions[index]] = level.weaponnone;
                 if (isdefined(self.script_nodropsecondaryweapon) && self.script_nodropsecondaryweapon && weapon == self.initial_secondaryweapon) {
-                    println("tag_weapon_left" + weapon.name + "tag_weapon_left");
+                    println("<dev string:x70>" + weapon.name + "<dev string:x90>");
                     continue;
                 }
                 if (isdefined(self.script_nodropsidearm) && self.script_nodropsidearm && weapon == self.sidearm) {
-                    println("tag_weapon_left" + weapon.name + "tag_weapon_left");
+                    println("<dev string:x92>" + weapon.name + "<dev string:x90>");
                     continue;
                 }
                 velocity = self getvelocity();
@@ -408,8 +408,8 @@ function donotetracksforeverproc(notetracksfunc, flagname, killstring, customfun
             returnednote = [[ notetracksfunc ]](flagname, customfunction, debugidentifier);
             timetaken = gettime() - time;
             if (timetaken < 0.05) {
-                println(gettime() + "tag_weapon_left" + debugidentifier + "tag_weapon_left" + flagname + "tag_weapon_left" + returnednote + "tag_weapon_left");
-                wait(0.05 - timetaken);
+                println(gettime() + "<dev string:xa9>" + debugidentifier + "<dev string:xab>" + flagname + "<dev string:xf5>" + returnednote + "<dev string:x101>");
+                wait 0.05 - timetaken;
             }
         }
     }
@@ -449,7 +449,7 @@ function donotetracksfortimeproc(donotetracksforeverfunc, time, flagname, custom
 // Checksum 0xc7221f27, Offset: 0x1b00
 // Size: 0x1e
 function donotetracksfortimeendnotify(time) {
-    wait(time);
+    wait time;
     self notify(#"stop_notetracks");
 }
 

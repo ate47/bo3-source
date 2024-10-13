@@ -54,7 +54,7 @@
 // Checksum 0x85a46ec4, Offset: 0x7c0
 // Size: 0x11c
 function main() {
-    assert(isdefined(level.first_frame), "_t6/bio/player/fx_footstep_sand");
+    assert(isdefined(level.first_frame), "<dev string:x28>");
     zm::init();
     level._loadstarted = 1;
     register_clientfields();
@@ -113,7 +113,7 @@ function start_intro_screen_zm() {
         players[i] lui::screen_fade_out(0, undefined);
         players[i] freezecontrols(1);
     }
-    wait(1);
+    wait 1;
 }
 
 // Namespace load

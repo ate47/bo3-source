@@ -4,9 +4,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_734d511;
+#namespace zm_stalingrad_achievements;
 
-// Namespace namespace_734d511
+// Namespace zm_stalingrad_achievements
 // Params 0, eflags: 0x2
 // Checksum 0x585fce64, Offset: 0x238
 // Size: 0x34
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
     system::register("zm_stalingrad_achievements", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_734d511
+// Namespace zm_stalingrad_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0xea67b9d9, Offset: 0x278
 // Size: 0x54
@@ -24,7 +24,7 @@ function __init__() {
     callback::on_connect(&on_player_connect);
 }
 
-// Namespace namespace_734d511
+// Namespace zm_stalingrad_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa6044a79, Offset: 0x2d8
 // Size: 0xc4
@@ -39,7 +39,7 @@ function on_player_connect() {
     self thread function_54dbe534();
 }
 
-// Namespace namespace_734d511
+// Namespace zm_stalingrad_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa321952e, Offset: 0x3a8
 // Size: 0x44
@@ -48,7 +48,7 @@ function function_73d8758f() {
     array::run_all(level.players, &giveachievement, "ZM_STALINGRAD_NIKOLAI");
 }
 
-// Namespace namespace_734d511
+// Namespace zm_stalingrad_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbeb66235, Offset: 0x3f8
 // Size: 0x3c
@@ -58,7 +58,7 @@ function function_69021ea7() {
     self giveachievement("ZM_STALINGRAD_WIELD_DRAGON");
 }
 
-// Namespace namespace_734d511
+// Namespace zm_stalingrad_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0x367d7c03, Offset: 0x440
 // Size: 0x44
@@ -67,7 +67,7 @@ function function_42b2ae41() {
     array::run_all(level.players, &giveachievement, "ZM_STALINGRAD_TWENTY_ROUNDS");
 }
 
-// Namespace namespace_734d511
+// Namespace zm_stalingrad_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3c8fa777, Offset: 0x490
 // Size: 0x3c
@@ -77,7 +77,7 @@ function function_35e5c39b() {
     self giveachievement("ZM_STALINGRAD_RIDE_DRAGON");
 }
 
-// Namespace namespace_734d511
+// Namespace zm_stalingrad_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdc7c9333, Offset: 0x4d8
 // Size: 0x3c
@@ -87,7 +87,7 @@ function function_68cad44c() {
     self giveachievement("ZM_STALINGRAD_LOCKDOWN");
 }
 
-// Namespace namespace_734d511
+// Namespace zm_stalingrad_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbc007367, Offset: 0x520
 // Size: 0x3c
@@ -97,7 +97,7 @@ function function_77f84ddb() {
     self giveachievement("ZM_STALINGRAD_SOLO_TRIALS");
 }
 
-// Namespace namespace_734d511
+// Namespace zm_stalingrad_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbc451b59, Offset: 0x568
 // Size: 0x6a
@@ -112,7 +112,7 @@ function function_3a3c9cc6() {
     }
 }
 
-// Namespace namespace_734d511
+// Namespace zm_stalingrad_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0x45cca3b4, Offset: 0x5e0
 // Size: 0x6a
@@ -127,7 +127,7 @@ function function_b6e817dd() {
     }
 }
 
-// Namespace namespace_734d511
+// Namespace zm_stalingrad_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8b84fe90, Offset: 0x658
 // Size: 0x6a
@@ -142,7 +142,7 @@ function function_bdcf8e90() {
     }
 }
 
-// Namespace namespace_734d511
+// Namespace zm_stalingrad_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb2e9eacd, Offset: 0x6d0
 // Size: 0x3c
@@ -151,7 +151,7 @@ function function_54dbe534() {
     self thread function_60593db9(10);
 }
 
-// Namespace namespace_734d511
+// Namespace zm_stalingrad_achievements
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb42d02c0, Offset: 0x718
 // Size: 0x7e
@@ -167,7 +167,7 @@ function function_99a5ed1a(n_target_kills) {
     }
 }
 
-// Namespace namespace_734d511
+// Namespace zm_stalingrad_achievements
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf2cc378b, Offset: 0x7a0
 // Size: 0x7e

@@ -38,9 +38,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_5da6b440;
+#namespace cp_mi_sing_sgen_exterior;
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 2, eflags: 0x0
 // Checksum 0xf2595693, Offset: 0x1c98
 // Size: 0x373
@@ -81,7 +81,7 @@ function function_62616b71(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x3b2f1833, Offset: 0x2018
 // Size: 0x42
@@ -92,7 +92,7 @@ function function_32c69f8a() {
     level thread util::screen_fade_in(3);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x448ad6e2, Offset: 0x2068
 // Size: 0x52
@@ -102,7 +102,7 @@ function function_12570551(a_ents) {
     level dialog::remote("kane_much_of_the_structur_0");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x273c88b5, Offset: 0x20c8
 // Size: 0x52
@@ -112,7 +112,7 @@ function function_149dd934(a_ents) {
     trigger::use("enter_sgen_hendricks", "targetname", undefined, 1);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x330ff9cb, Offset: 0x2128
 // Size: 0x93
@@ -123,7 +123,7 @@ function function_d97219ae(a_ents) {
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x515753c1, Offset: 0x21c8
 // Size: 0x22
@@ -131,16 +131,16 @@ function function_bd2f8313(a_ents) {
     skipto::function_be8adfb8("intro");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 4, eflags: 0x0
 // Checksum 0x46dbef27, Offset: 0x21f8
 // Size: 0x52
 function function_19a68bdb(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     struct::function_368120a1("scene", "cin_sgen_01_intro_3rd_pre100_flyover");
-    namespace_19d629e::function_a8e314e9();
+    cp_mi_sing_sgen_revenge_igc::function_a8e314e9();
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0xf1f80dbd, Offset: 0x2258
 // Size: 0x32
@@ -149,7 +149,7 @@ function function_87664862() {
     setdvar("ai_awarenessenabled", 0);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 2, eflags: 0x0
 // Checksum 0x1f621ce1, Offset: 0x2298
 // Size: 0x692
@@ -160,7 +160,7 @@ function function_d43e5685(str_objective, var_74cd64bc) {
         level thread function_524fa1f4();
         level thread function_d97219ae();
         exploder::exploder("sgen_flying_IGC");
-        namespace_fa13d4ba::function_bff1a867(str_objective);
+        sgen::function_bff1a867(str_objective);
         level thread function_4574902a();
         load::function_a2995f22();
     }
@@ -203,7 +203,7 @@ function function_d43e5685(str_objective, var_74cd64bc) {
     level flag::wait_till("start_enter_sgen");
     savegame::checkpoint_save();
     level thread function_32832330();
-    level thread function_234a4910();
+    level thread stealth_vo();
     level.var_2fd26037 thread function_34be1751();
     level.var_48b27857 thread function_9200d313();
     level.var_48b27857 waittill(#"death");
@@ -222,7 +222,7 @@ function function_d43e5685(str_objective, var_74cd64bc) {
     namespace_99202726::function_6d2fd9d2();
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x3525d66a, Offset: 0x2938
 // Size: 0x121
@@ -235,12 +235,12 @@ function function_da046478() {
             a_ai_enemies[i] notify(#"hash_ed065856");
             a_ai_enemies[i] setgoal(var_b640b7ec, 1);
             a_ai_enemies[i] thread namespace_cba4cc55::function_c8849158(800);
-            wait(randomfloatrange(2, 5));
+            wait randomfloatrange(2, 5);
         }
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x35ed67c, Offset: 0x2a68
 // Size: 0x81
@@ -253,17 +253,17 @@ function function_331e454() {
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x4cf27948, Offset: 0x2af8
 // Size: 0x3a
 function function_a56f1c2e() {
-    wait(10);
+    wait 10;
     var_b9b7fda9 = getent("intro_no_sight", "targetname");
     var_b9b7fda9 delete();
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x7c76754c, Offset: 0x2b40
 // Size: 0xb2
@@ -279,35 +279,35 @@ function function_ceeb020() {
     self vehicle::unload("all");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x66642ce, Offset: 0x2c00
 // Size: 0x62
 function function_2a8b80c4() {
     self endon(#"death");
-    level endon(#"hash_766878c3");
+    level endon(#"exterior_gone_hot");
     self ai::set_ignoreall(0);
     self util::waittill_any("damage", "death", "bulletwhizby");
     level flag::set("exterior_gone_hot");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0xc1e0e746, Offset: 0x2c70
 // Size: 0x61
 function function_daa3910f() {
     self endon(#"death");
-    level endon(#"hash_6db95ed8");
+    level endon(#"start_hendricks_move_up_battle_1");
     while (true) {
         e_player = self waittill(#"trigger");
         if (level.players.size == 1) {
             trigger::use(self.script_string, "targetname", e_player);
-            wait(1);
+            wait 1;
         }
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 4, eflags: 0x0
 // Checksum 0x1854b0a4, Offset: 0x2ce0
 // Size: 0x122
@@ -322,11 +322,11 @@ function function_91e8545f(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     callback::remove_on_spawned(&function_210baecb);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x550ec580, Offset: 0x2e10
 // Size: 0x11a
-function function_234a4910() {
+function stealth_vo() {
     var_e561bbaf = 0;
     foreach (player in level.activeplayers) {
         w_current_weapon = player getcurrentweapon();
@@ -336,14 +336,14 @@ function function_234a4910() {
     }
     if (!flag::get("exterior_gone_hot") && var_e561bbaf) {
         level.var_2fd26037 dialog::say("hend_54i_crawling_all_ove_0");
-        wait(0.8);
+        wait 0.8;
     }
     if (!flag::get("exterior_gone_hot")) {
         level.var_2fd26037 dialog::say("hend_waiting_on_your_shot_0", 1);
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x14d280c0, Offset: 0x2f38
 // Size: 0x4a
@@ -353,7 +353,7 @@ function function_6dc55b15() {
     level thread objectives::breadcrumb("obj_intro_breadcrumb_3");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 2, eflags: 0x0
 // Checksum 0xce8dc4d8, Offset: 0x2f90
 // Size: 0x2a
@@ -362,7 +362,7 @@ function function_2c6d8ae0(str_endon, str_name) {
     level trigger::wait_till(str_name);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x41c682e3, Offset: 0x2fc8
 // Size: 0x4b
@@ -374,13 +374,13 @@ function function_7d0e1b80() {
     level notify(#"stop_patrolling");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0xb68fb4c3, Offset: 0x3020
 // Size: 0x85
 function function_cf842dc5() {
     self endon(#"death");
-    level endon(#"hash_766878c3");
+    level endon(#"exterior_gone_hot");
     level endon(#"stop_patrolling");
     w_current_weapon = self getcurrentweapon();
     while (true) {
@@ -392,13 +392,13 @@ function function_cf842dc5() {
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x331220ab, Offset: 0x30b0
 // Size: 0xf5
 function function_cb09a77d() {
     self endon(#"death");
-    level endon(#"hash_766878c3");
+    level endon(#"exterior_gone_hot");
     level endon(#"stop_patrolling");
     var_83181ea9[0] = "gadget_active_camo";
     var_83181ea9[1] = "gadget_es_strike";
@@ -416,20 +416,20 @@ function function_cb09a77d() {
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0xc95da64a, Offset: 0x31b0
 // Size: 0x11a
 function function_30b0b2ca() {
-    level endon(#"hash_766878c3");
+    level endon(#"exterior_gone_hot");
     level.var_cb80bdd = 0;
     while (true) {
         if (level.var_cb80bdd >= 8) {
             break;
         }
-        wait(1);
+        wait 1;
     }
-    wait(0.5);
+    wait 0.5;
     var_4e5ceeda = getcorpsearray();
     var_a76fb911 = arraygetclosest(level.players[0].origin, var_4e5ceeda);
     var_a1eda872 = util::spawn_model("tag_origin", var_a76fb911.origin, var_a76fb911.angles);
@@ -440,7 +440,7 @@ function function_30b0b2ca() {
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x64c01350, Offset: 0x32d8
 // Size: 0x72
@@ -453,22 +453,22 @@ function function_ef817b9c(var_9751fdd2) {
     level flag::set("exterior_gone_hot");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x54afc64b, Offset: 0x3358
 // Size: 0x62
-function function_f4386791() {
+function enable_battle_volumes() {
     level flag::wait_till("enable_battle_volumes");
     var_e9e4b7d = getentarray("vol_enemy_reaction", "script_noteworthy");
     array::run_all(var_e9e4b7d, &delete);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0xc8c83739, Offset: 0x33c8
 // Size: 0x23a
 function function_4574902a() {
-    level thread function_f4386791();
+    level thread enable_battle_volumes();
     level thread function_30b0b2ca();
     spawner::add_spawn_function_group("exterior_guys", "script_aigroup", &function_82755bcd);
     spawner::add_spawn_function_group("quadtank_reinforcement_guy", "targetname", &function_79e56538);
@@ -492,7 +492,7 @@ function function_4574902a() {
     level flag::set("fallback_to_qt");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x4e814be5, Offset: 0x3610
 // Size: 0x263
@@ -502,7 +502,7 @@ function function_79e56538() {
     var_45c136ef = getent("vol_enemy_end", "targetname");
     self setgoal(var_45c136ef, 1);
     level waittill(#"hash_9eb56acf");
-    wait(randomfloatrange(1, 3));
+    wait randomfloatrange(1, 3);
     self cleargoalvolume();
     var_9b683040 = getnodearray("nd_attack_quadtank", "targetname");
     foreach (var_71f6480e in var_9b683040) {
@@ -513,18 +513,18 @@ function function_79e56538() {
     }
     self setignoreent(level.var_2fd26037, 1);
     self thread function_e9ad0b91();
-    wait(randomfloatrange(8, 11));
+    wait randomfloatrange(8, 11);
     self setignoreent(level.var_2fd26037, 0);
     var_45c136ef = getent("vol_enemy_end", "targetname");
     self setgoal(var_45c136ef, 1);
-    wait(randomfloatrange(3, 5));
+    wait randomfloatrange(3, 5);
     self notify(#"hash_1ad878bf");
     foreach (e_player in level.players) {
         self setignoreent(e_player, 0);
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x14194d1b, Offset: 0x3880
 // Size: 0x8a
@@ -537,7 +537,7 @@ function function_e9ad0b91() {
     self setignoreent(level.var_2fd26037, 0);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x832b4955, Offset: 0x3918
 // Size: 0x45a
@@ -585,7 +585,7 @@ function function_82755bcd() {
             }
         }
     }
-    wait(randomfloatrange(10, 12));
+    wait randomfloatrange(10, 12);
     self cleargoalvolume();
     level flag::set("enable_battle_volumes");
     var_60a7dd2a = getent("vol_exterior_area", "targetname");
@@ -600,20 +600,20 @@ function function_82755bcd() {
     self setgoal(var_45c136ef, 1);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x50ef9073, Offset: 0x3d80
 // Size: 0x45
 function function_e183f381() {
     self endon(#"death");
-    level endon(#"hash_766878c3");
+    level endon(#"exterior_gone_hot");
     while (true) {
-        wait(randomintrange(5, 15));
+        wait randomintrange(5, 15);
         self playsound("amb_enemy_fake_radio");
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x1d609f7b, Offset: 0x3dd0
 // Size: 0xa2
@@ -624,28 +624,28 @@ function function_b75564dc(a_scene_ents) {
     var_9ab0909 thread function_9c58c518();
     level util::waittill_any_ents(level, "exterior_gone_hot", ai_guy, "damage", ai_guy, "death");
     ai_guy scene::stop();
-    wait(0.05);
+    wait 0.05;
     var_9ab0909 physicslaunch(var_9ab0909.origin, (0, 0, -1));
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x131d27fb, Offset: 0x3e80
 // Size: 0x3a
 function function_9c58c518() {
-    level endon(#"hash_766878c3");
+    level endon(#"exterior_gone_hot");
     self setcandamage(1);
     self waittill(#"damage");
     level flag::set("exterior_gone_hot");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0xaae9128b, Offset: 0x3ec8
 // Size: 0xe2
 function function_6f49bfa5() {
     self endon(#"death");
-    level endon(#"hash_766878c3");
+    level endon(#"exterior_gone_hot");
     self thread function_6808f370();
     self.goalradius = 32;
     self.var_a09dbf8c = self.maxsightdistsqrd;
@@ -656,13 +656,13 @@ function function_6f49bfa5() {
     }
     self util::waittill_any("damage", "bulletwhizby");
     self thread function_b81f9767(1);
-    wait(1);
+    wait 1;
     if (isalive(self)) {
         level flag::set("exterior_gone_hot");
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x689802ae, Offset: 0x3fb8
 // Size: 0xf2
@@ -679,7 +679,7 @@ function function_b81f9767(b_immediate) {
     }
     self.should_stop_patrolling = 1;
     if (isdefined(self.script_noteworthy)) {
-        wait(randomfloatrange(0.3, 1.5));
+        wait randomfloatrange(0.3, 1.5);
         if (issubstr(self.script_noteworthy, "rummage")) {
             self thread scene::play(self.script_noteworthy + "_react", self);
             return;
@@ -688,45 +688,45 @@ function function_b81f9767(b_immediate) {
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x56be8d1b, Offset: 0x40b8
 // Size: 0x1f6
 function function_ffbd411() {
     switch (self.script_string) {
-    case 109:
+    case "nd_cargo_truck_driver":
         self.var_87be2839 = "start_vehicle_patrols";
         self vehicle::get_in(level.var_a2059f5c, "driver", 1);
         break;
-    case 110:
+    case "nd_cargo_truck_passenger":
         self.var_87be2839 = "start_vehicle_patrols";
         self vehicle::get_in(level.var_a2059f5c, "passenger1", 1);
         break;
-    case 113:
+    case "nd_left_walkway":
         self.var_82d84400 = "nd_left_walkway_attack";
         break;
-    case 117:
+    case "nd_right_walkway":
         self.var_82d84400 = "nd_right_walkway_attack";
         break;
-    case 108:
+    case "nd_big_rig":
         self.var_82d84400 = "nd_bigrig_attack";
         break;
-    case 114:
+    case "nd_patrol_right_truck_driver":
         self.var_87be2839 = "start_vehicle_patrols";
         self vehicle::get_in(level.var_8bf4b572, "driver", 1);
         break;
-    case 115:
+    case "nd_right_driveway_path":
         self.n_wait = 1.2;
         self thread function_5d6e495e();
         break;
-    case 116:
+    case "nd_right_intro_shack":
         self thread function_5d6e495e();
         break;
-    case 112:
+    case "nd_left_driveway_path":
         self.n_wait = 3;
         self thread function_5d6e495e();
         break;
-    case 111:
+    case "nd_left_building_enemy_path":
         self.var_87be2839 = "trig_left_exterior_building";
         self.var_9ba4fd54 = 1;
         self thread function_5d6e495e();
@@ -736,12 +736,12 @@ function function_ffbd411() {
     return var_ccf4d32c;
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0xc032cd0a, Offset: 0x42b8
 // Size: 0x52
 function function_efb86353() {
-    level endon(#"hash_766878c3");
+    level endon(#"exterior_gone_hot");
     self waittill(#"death");
     level.var_cb80bdd++;
     if (self.script_string === "left_building_enemy") {
@@ -751,12 +751,12 @@ function function_efb86353() {
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0xe84e07a7, Offset: 0x4318
 // Size: 0x10a
 function function_5d6e495e() {
-    level endon(#"hash_766878c3");
+    level endon(#"exterior_gone_hot");
     self endon(#"hash_3a662ede");
     self endon(#"hash_2f93f839");
     self.var_f9b223f5 = 1;
@@ -772,13 +772,13 @@ function function_5d6e495e() {
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x558420f3, Offset: 0x4430
 // Size: 0x18a
 function function_4e452acd(var_2fa53f37) {
     self endon(#"death");
-    wait(randomfloatrange(0.4, 0.8));
+    wait randomfloatrange(0.4, 0.8);
     if (!level.var_2fd26037.var_c48463a8) {
         if (self.var_f9b223f5 === 1) {
             if (level.players.size == 1 && !util::within_fov(level.var_2fd26037.origin, level.players[0].angles, level.players[0].origin, cos(70))) {
@@ -793,13 +793,13 @@ function function_4e452acd(var_2fa53f37) {
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x9e7dcfe4, Offset: 0x45c8
 // Size: 0x112
 function function_94a23f13(player) {
     self endon(#"death");
-    level endon(#"hash_766878c3");
+    level endon(#"exterior_gone_hot");
     self notify(#"hash_1592960");
     if (isdefined(player) && distancesquared(self.origin, player.origin) > 40000) {
         if (!level flag::get("enemy_alerting_area")) {
@@ -811,28 +811,28 @@ function function_94a23f13(player) {
         }
     } else {
         self thread function_b81f9767(1);
-        wait(1);
+        wait 1;
     }
     level flag::set("exterior_gone_hot");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x1a8c1bda, Offset: 0x46e8
 // Size: 0x7a
 function function_e28048de(var_ccf4d32c) {
     self endon(#"death");
-    level endon(#"hash_766878c3");
+    level endon(#"exterior_gone_hot");
     if (isdefined(self.var_87be2839) && !level flag::get("exterior_gone_hot")) {
         level flag::wait_till(self.var_87be2839);
     }
     if (isdefined(self.n_wait)) {
-        wait(self.n_wait);
+        wait self.n_wait;
     }
     self thread ai::patrol(var_ccf4d32c);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x78deb037, Offset: 0x4770
 // Size: 0x1ea
@@ -857,7 +857,7 @@ function function_843ef2d4() {
     level.var_a2059f5c vehicle::unload("all");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x5ca429f3, Offset: 0x4968
 // Size: 0x6a
@@ -870,7 +870,7 @@ function function_55f744bd(var_cc525a1a) {
     self setcandamage(1);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x1e4ba11d, Offset: 0x49e0
 // Size: 0x13a
@@ -891,7 +891,7 @@ function function_524fa1f4() {
     level thread scene::init("p7_fxanim_cp_sgen_quadtank_reveal_debris_bundle");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0xdc7e41ae, Offset: 0x4b28
 // Size: 0x6c2
@@ -917,38 +917,38 @@ function function_34be1751() {
                     level.var_2fd26037.var_5b14c02a = getent(e_vol.script_noteworthy, "targetname");
                     level.var_2fd26037 setgoal(level.var_2fd26037.var_5b14c02a, 1);
                     if (!level.var_2fd26037 istouching(level.var_2fd26037.var_5b14c02a)) {
-                        wait(1);
+                        wait 1;
                     }
                     e_vol.var_87d0e81f = 0;
                 }
             }
         }
-        wait(5);
+        wait 5;
     }
     level.var_2fd26037 cleargoalvolume();
     foreach (e_vol in var_c3354820) {
         if (isdefined(e_vol)) {
             if (level.var_2fd26037 istouching(e_vol)) {
                 switch (e_vol.script_noteworthy) {
-                case 148:
+                case "vol_security_room":
                     level.var_f60a06d4 = 1;
                     var_dad69a16 = getent("trig_color_move_security_1", "targetname");
                     var_b4d41fad = getent("trig_color_move_security_2", "targetname");
                     var_8ed1a544 = getent("trig_color_move_security_3", "targetname");
                     break;
-                case 145:
+                case "vol_driveway":
                     level.var_f60a06d4 = 0;
                     var_dad69a16 = getent("trig_color_move_middle_1", "targetname");
                     var_b4d41fad = getent("trig_color_move_middle_2", "targetname");
                     var_8ed1a544 = getent("trig_color_move_middle_3", "targetname");
                     break;
-                case 147:
+                case "vol_left_building_exterior":
                     level.var_f60a06d4 = 0;
                     var_dad69a16 = getent("trig_color_left_building_1", "targetname");
                     var_b4d41fad = getent("trig_color_left_building_2", "targetname");
                     var_8ed1a544 = getent("trig_color_move_middle_3", "targetname");
                     break;
-                case 146:
+                case "vol_left_building":
                     level.var_f60a06d4 = 0;
                     var_dad69a16 = getent("trig_color_left_building_1", "targetname");
                     var_b4d41fad = getent("trig_color_left_building_2", "targetname");
@@ -983,7 +983,7 @@ function function_34be1751() {
     battlechatter::function_d9f49fba(0);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x619bb053, Offset: 0x51f8
 // Size: 0x332
@@ -1024,7 +1024,7 @@ function function_9200d313() {
     level thread dialog::remote("kane_core_destabilized_q_0", 1);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x7adcd7fe, Offset: 0x5538
 // Size: 0x32
@@ -1033,7 +1033,7 @@ function function_dce4d116(a_ents) {
     level.var_48b27857 quadtank::function_fefa9078();
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x682df4b2, Offset: 0x5578
 // Size: 0x2aa
@@ -1082,7 +1082,7 @@ function function_e6160d3() {
     self thread function_91175921("vo_bullet_damage", var_1085ad79, 30);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x199b15a4, Offset: 0x5830
 // Size: 0x55
@@ -1091,12 +1091,12 @@ function function_624e7d89() {
     self waittill(#"hash_27175bcd");
     level flag::set("quad_tank_trophy_system_destroyed");
     while (true) {
-        level notify(#"hash_868c73b");
-        wait(randomfloatrange(10, 15));
+        level notify(#"vo_trophy_system_destroyed");
+        wait randomfloatrange(10, 15);
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x1a342709, Offset: 0x5890
 // Size: 0x47
@@ -1105,13 +1105,13 @@ function function_749f2173() {
     self endon(#"hash_27175bcd");
     while (true) {
         self waittill(#"hash_6530962c");
-        level notify(#"hash_828f5f9a");
+        level notify(#"vo_trophy_system_disabled");
         self waittill(#"hash_f015cdf7");
-        level notify(#"hash_e6776989");
+        level notify(#"vo_trophy_system_enabled");
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 4, eflags: 0x0
 // Checksum 0x913c1f, Offset: 0x58e0
 // Size: 0x1ad
@@ -1137,15 +1137,15 @@ function function_91175921(str_notify, a_str_vo, n_cooldown, var_2148cdcc) {
         } else {
             level dialog::remote(str_vo);
         }
-        wait(1);
+        wait 1;
         level flag::clear("quad_tank_nag_vo_playing");
         if (isdefined(n_cooldown)) {
-            wait(n_cooldown);
+            wait n_cooldown;
         }
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 2, eflags: 0x0
 // Checksum 0x41e64776, Offset: 0x5a98
 // Size: 0xc3
@@ -1153,16 +1153,16 @@ function function_4fc8c2e(obj, params) {
     if (isplayer(params.eattacker)) {
         if (params.smeansofdeath === "MOD_RIFLE_BULLET") {
             if (params.partname != "tag_target_lower" && params.partname != "tag_target_upper" && params.partname != "tag_defense_active" && params.partname != "tag_body_animate") {
-                level notify(#"hash_52293e91");
+                level notify(#"vo_bullet_damage");
             }
         }
         if (params.weapon.name === "launcher_standard") {
-            level notify(#"hash_e09e14de");
+            level notify(#"vo_direct_hit");
         }
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0xe824f3c9, Offset: 0x5b68
 // Size: 0x16d
@@ -1190,18 +1190,18 @@ function function_b59ee5b9() {
                 trigger::use("trig_color_qt_left_push");
             }
         }
-        wait(randomfloatrange(6, 9));
+        wait randomfloatrange(6, 9);
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0xd1d60c9d, Offset: 0x5ce0
 // Size: 0x1ab
 function function_f2daaec0() {
     scene::add_scene_func("p7_fxanim_cp_sgen_truck_flip_crates_bundle", &function_78ca0a7d);
     self waittill(#"fire");
-    wait(0.2);
+    wait 0.2;
     level thread scene::play("p7_fxanim_cp_sgen_truck_flip_crates_bundle");
     var_3f9c346d = struct::get("qtank_impact", "targetname");
     radiusdamage(var_3f9c346d.origin, -76, 500, 90, self);
@@ -1215,7 +1215,7 @@ function function_f2daaec0() {
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x80ba0561, Offset: 0x5e98
 // Size: 0x3a
@@ -1224,7 +1224,7 @@ function function_78ca0a7d(a_ents) {
     a_ents["truck_flip"] setmodel("veh_t7_civ_truck_pickup_yell_dead_not_flat");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x3840694a, Offset: 0x5ee0
 // Size: 0x13a
@@ -1242,7 +1242,7 @@ function function_32832330() {
     level thread function_6d9af09f(t_door.origin);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x609474cc, Offset: 0x6028
 // Size: 0x3ca
@@ -1253,7 +1253,7 @@ function function_5d647309(e_player) {
     e_player cybercom::function_f8669cbf(1);
     e_player clientfield::set_to_player("sndCCHacking", 2);
     e_player util::delay(1, undefined, &clientfield::increment_to_player, "hack_dni_fx");
-    wait(0.5);
+    wait 0.5;
     var_8cc17559 = getentarray("exterior_hack_panel", "targetname");
     foreach (model in var_8cc17559) {
         model setmodel("p7_sgen_door_access_panel_hacked");
@@ -1281,7 +1281,7 @@ function function_5d647309(e_player) {
         var_96ba651b = anglestoforward(m_door.angles) * 60;
         m_door moveto(m_door.origin + var_96ba651b, n_time, n_accel, var_1fbff2a7);
     }
-    wait(n_time);
+    wait n_time;
     foreach (m_door in var_f40abca8) {
         m_door connectpaths();
     }
@@ -1289,7 +1289,7 @@ function function_5d647309(e_player) {
     self gameobjects::destroy_object(1);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0xf4270ea7, Offset: 0x6400
 // Size: 0x1f
@@ -1299,7 +1299,7 @@ function function_27f3c2cd() {
     level notify(#"hash_7507e989");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x77f91915, Offset: 0x6428
 // Size: 0x2a
@@ -1308,7 +1308,7 @@ function function_6d9af09f(sndorigin) {
     playsoundatposition("evt_lobby_door_panelhack", sndorigin);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 2, eflags: 0x0
 // Checksum 0xc43b5df1, Offset: 0x6460
 // Size: 0x2fa
@@ -1317,7 +1317,7 @@ function function_2c76d8aa(str_objective, var_74cd64bc) {
         level thread function_d97219ae();
         spawner::simple_spawn_single("entrance_qtank", &function_86c5b0ca);
         exploder::exploder("sgen_flying_IGC");
-        namespace_fa13d4ba::function_bff1a867(str_objective);
+        sgen::function_bff1a867(str_objective);
         objectives::complete("cp_level_sgen_clear_entrance");
         t_door = getent("trig_lobby_entrance", "targetname");
         t_door triggerenable(0);
@@ -1343,8 +1343,8 @@ function function_2c76d8aa(str_objective, var_74cd64bc) {
     level.var_75c82874 = 1;
     objectives::complete("cp_level_sgen_hack_door");
     objectives::set("cp_level_sgen_investigate_sgen");
-    var_c7d2cbe9 = getent("trig_post_discover_data", "targetname");
-    var_c7d2cbe9 triggerenable(0);
+    trig_post_discover_data = getent("trig_post_discover_data", "targetname");
+    trig_post_discover_data triggerenable(0);
     trigger::wait_till("discover_data_breadcrumb_2");
     if (isdefined(level.var_9c89f6ae)) {
         [[ level.var_9c89f6ae ]]();
@@ -1353,7 +1353,7 @@ function function_2c76d8aa(str_objective, var_74cd64bc) {
     skipto::function_be8adfb8(str_objective);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x5404efe4, Offset: 0x6768
 // Size: 0x62
@@ -1365,7 +1365,7 @@ function function_86c5b0ca() {
     self delete();
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 4, eflags: 0x0
 // Checksum 0xa9d4b93d, Offset: 0x67d8
 // Size: 0x132
@@ -1383,7 +1383,7 @@ function function_8903df94(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     hidemiscmodels("sgen_ocean_water");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0xa5d57b07, Offset: 0x6918
 // Size: 0xfa
@@ -1394,14 +1394,14 @@ function function_51fb0632() {
     var_910bc1f3 playloopsound("amb_billboard_glitch_loop");
     sndent = spawn("script_origin", (-6, -1301, -6));
     sndent playsound("mus_coalescence_theme_lobby");
-    wait(6);
+    wait 6;
     sndent playsound("mus_coalescence_theme_lobby_underscore");
     sndent dialog::say("rbot_welcome_to_coalescen_0");
-    wait(45);
+    wait 45;
     sndent delete();
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0xe4b9de39, Offset: 0x6a20
 // Size: 0x6a
@@ -1413,7 +1413,7 @@ function function_b50db732() {
     objectives::breadcrumb("discover_data_breadcrumb_2");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0xbcf4214f, Offset: 0x6a98
 // Size: 0x182
@@ -1438,7 +1438,7 @@ function function_68742ac0(var_640e871b) {
     level flag::set("hendricks_at_silo_doors");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x794e6371, Offset: 0x6c28
 // Size: 0x72
@@ -1448,12 +1448,12 @@ function function_79f61708() {
     if (level flag::get("lobby_door_opening")) {
         return;
     }
-    level endon(#"hash_6a13f4bf");
-    wait(5);
+    level endon(#"lobby_door_opening");
+    wait 5;
     self dialog::say("hend_hey_let_s_go_0");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0xa8dbb3ae, Offset: 0x6ca8
 // Size: 0x9d
@@ -1467,7 +1467,7 @@ function function_d05c5d63() {
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x982eb33c, Offset: 0x6d50
 // Size: 0x21a
@@ -1480,7 +1480,7 @@ function function_547e0499() {
     foreach (player in level.players) {
         player clientfield::set_to_player("sndSiloBG", 1);
     }
-    wait(0.5);
+    wait 0.5;
     var_280d5f68 = getent("silo_door_left", "targetname");
     var_3c301126 = getent("silo_door_right", "targetname");
     var_280d5f68 rotateyaw(var_280d5f68.script_int, 1, 0.25, 0.4);
@@ -1491,14 +1491,14 @@ function function_547e0499() {
     level flag::set("silo_door_opened");
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x8ae506da, Offset: 0x6f78
 // Size: 0xf2
 function function_6808f370() {
     self endon(#"death");
     self endon(#"hash_1592960");
-    level endon(#"hash_766878c3");
+    level endon(#"exterior_gone_hot");
     b_alerted = 0;
     var_50cacf55 = undefined;
     do {
@@ -1514,12 +1514,12 @@ function function_6808f370() {
                 break;
             }
         }
-        wait(0.1);
+        wait 0.1;
     } while (!b_alerted);
     self thread function_94a23f13(var_50cacf55);
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 3, eflags: 0x0
 // Checksum 0x1609ffc8, Offset: 0x7078
 // Size: 0x123
@@ -1551,11 +1551,11 @@ function function_d01267bd(var_2e939094, n_delay, str_endon) {
                 var_531b88b4++;
             }
         }
-        wait(n_delay);
+        wait n_delay;
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 1, eflags: 0x0
 // Checksum 0x20682162, Offset: 0x71a8
 // Size: 0x58
@@ -1565,7 +1565,7 @@ function function_392ca6eb(var_45900c37) {
     return var_997800be[0];
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x6f5bda2d, Offset: 0x7208
 // Size: 0x1cb
@@ -1588,7 +1588,7 @@ function function_9e3af01c() {
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x7ff998ca, Offset: 0x73e0
 // Size: 0x7a
@@ -1605,7 +1605,7 @@ function function_a2ef2c8c() {
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x691dbd11, Offset: 0x7468
 // Size: 0x59
@@ -1620,23 +1620,23 @@ function function_210baecb() {
     }
 }
 
-// Namespace namespace_5da6b440
+// Namespace cp_mi_sing_sgen_exterior
 // Params 0, eflags: 0x0
 // Checksum 0x7a2e1401, Offset: 0x74d0
 // Size: 0xbb
 function function_7aa1381() {
     self endon(#"death");
-    self endon(#"hash_b6eb1761");
+    self endon(#"weapon_swap_learned");
     if (!isdefined(self.var_c142b118)) {
         self util::show_hint_text(%COOP_EQUIP_XM53, 0, "weapon_swap_learned", 10);
         n_timeout = 0;
         while (self getcurrentweapon() == getweapon("launcher_standard") && n_timeout <= 10) {
             n_timeout += 0.1;
-            wait(0.1);
+            wait 0.1;
         }
         self.var_c142b118 = 1;
         self util::hide_hint_text();
-        self notify(#"hash_b6eb1761");
+        self notify(#"weapon_swap_learned");
     }
 }
 

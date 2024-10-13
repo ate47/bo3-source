@@ -56,11 +56,11 @@ function init() {
     }
     initscoreinfo();
     level.maxrank = int(tablelookup(level.var_b7e5f751, 0, "maxrank", 1));
-    level.var_52e3d4cf = int(tablelookup(level.var_b7e5f751, 0, "maxrankstarterpack", 1));
+    level.maxrankstarterpack = int(tablelookup(level.var_b7e5f751, 0, "maxrankstarterpack", 1));
     level.maxprestige = int(tablelookup(level.var_55417986, 0, "maxprestige", 1));
     rankid = 0;
     rankname = tablelookup(level.var_b7e5f751, 0, rankid, 1);
-    assert(isdefined(rankname) && rankname != "scr_maxinventory_scorestreaks");
+    assert(isdefined(rankname) && rankname != "<dev string:x28>");
     while (isdefined(rankname) && rankname != "") {
         level.ranktable[rankid][1] = tablelookup(level.var_b7e5f751, 0, rankid, 1);
         level.ranktable[rankid][2] = tablelookup(level.var_b7e5f751, 0, rankid, 2);
@@ -130,8 +130,8 @@ function initscoreinfo() {
                 }
                 registerxp(type, xpvalue, addplayerstat, ismedal, var_f9ae5f2c, row);
             }
-            var_4ee997a1 = tablelookupcolumnforrow(scoreinfotableid, row, 5);
-            if (var_4ee997a1 == "TRUE") {
+            allowKillstreakWeapons = tablelookupcolumnforrow(scoreinfotableid, row, 5);
+            if (allowKillstreakWeapons == "TRUE") {
                 level.scoreinfo[type]["allowKillstreakWeapons"] = 1;
             }
             var_717f4a38 = tablelookupcolumnforrow(scoreinfotableid, row, 7);
@@ -402,7 +402,7 @@ function on_player_connect() {
     }
     self.rankupdatetotal = 0;
     self.cur_ranknum = rankid;
-    assert(isdefined(self.cur_ranknum), "scr_maxinventory_scorestreaks" + rankid + "scr_maxinventory_scorestreaks" + level.var_b7e5f751);
+    assert(isdefined(self.cur_ranknum), "<dev string:x29>" + rankid + "<dev string:x30>" + level.var_b7e5f751);
     prestige = self getdstat("playerstatslist", "plevel", "StatValue");
     self setrank(rankid, prestige);
     self.pers["prestige"] = prestige;
@@ -544,33 +544,33 @@ function giverankxp(type, value, var_1d04f5a7) {
         bbprint("mpplayerxp", "gametime %d, player %s, type %s, delta %d", gettime(), self.name, type, value);
     }
     switch (type) {
-    case 70:
-    case 71:
-    case 72:
-    case 73:
-    case 74:
-    case 75:
-    case 76:
-    case 77:
-    case 78:
-    case 79:
-    case 80:
-    case 81:
-    case 82:
-    case 83:
-    case 84:
-    case 85:
-    case 86:
-    case 87:
-    case 30:
-    case 88:
-    case 89:
-    case 90:
-    case 91:
-    case 92:
-    case 93:
-    case 94:
-    case 95:
+    case "assault":
+    case "assault_assist":
+    case "assist":
+    case "assist_25":
+    case "assist_50":
+    case "assist_75":
+    case "capture":
+    case "defend":
+    case "defuse":
+    case "destroyer":
+    case "dogassist":
+    case "dogkill":
+    case "headshot":
+    case "helicopterassist":
+    case "helicopterassist_25":
+    case "helicopterassist_50":
+    case "helicopterassist_75":
+    case "helicopterkill":
+    case "kill":
+    case "medal":
+    case "pickup":
+    case "plant":
+    case "rcbombdestroy":
+    case "return":
+    case "revive":
+    case "spyplaneassist":
+    case "spyplanekill":
         value = int(value * level.xpscale);
         break;
     default:
@@ -594,35 +594,35 @@ function giverankxp(type, value, var_1d04f5a7) {
         }
     }
     switch (type) {
-    case 70:
-    case 72:
-    case 73:
-    case 74:
-    case 75:
-    case 76:
-    case 77:
-    case 82:
-    case 83:
-    case 84:
-    case 85:
-    case 86:
-    case 30:
-    case 88:
-    case 89:
-    case 92:
-    case 93:
-    case 98:
-    case 96:
+    case "assault":
+    case "assist":
+    case "assist_25":
+    case "assist_50":
+    case "assist_75":
+    case "capture":
+    case "defend":
+    case "headshot":
+    case "helicopterassist":
+    case "helicopterassist_25":
+    case "helicopterassist_50":
+    case "helicopterassist_75":
+    case "kill":
+    case "medal":
+    case "pickup":
+    case "return":
+    case "revive":
+    case "suicide":
+    case "teamkill":
         self.pers["summary"]["score"] = self.pers["summary"]["score"] + value;
         function_cb1e9fe6(round_this_number(value * level.var_9364c56a));
         break;
-    case 97:
-    case 99:
-    case 100:
+    case "loss":
+    case "tie":
+    case "win":
         self.pers["summary"]["match"] = self.pers["summary"]["match"] + value;
         function_cb1e9fe6(round_this_number(value * level.var_c1745e43));
         break;
-    case 57:
+    case "challenge":
         self.pers["summary"]["challenge"] = self.pers["summary"]["challenge"] + value;
         function_cb1e9fe6(round_this_number(value * level.var_4e39954b));
         break;
@@ -676,7 +676,7 @@ function updaterank() {
         rankid++;
     }
     /#
-        print("scr_maxinventory_scorestreaks" + oldrank + "scr_maxinventory_scorestreaks" + newrankid + "scr_maxinventory_scorestreaks" + self getdstat("scr_maxinventory_scorestreaks", "scr_maxinventory_scorestreaks", "scr_maxinventory_scorestreaks"));
+        print("<dev string:x50>" + oldrank + "<dev string:x5f>" + newrankid + "<dev string:x64>" + self getdstat("<dev string:x72>", "<dev string:x82>", "<dev string:x94>"));
     #/
     self setrank(newrankid);
     return true;
@@ -717,7 +717,7 @@ function codecallback_rankup(rank, prestige, var_1276d357) {
 function getitemindex(refstring) {
     var_a804a5cf = util::function_bc37a245();
     itemindex = int(tablelookup(var_a804a5cf, 4, refstring, 0));
-    assert(itemindex > 0, "scr_maxinventory_scorestreaks" + refstring + "scr_maxinventory_scorestreaks" + itemindex);
+    assert(itemindex > 0, "<dev string:x9e>" + refstring + "<dev string:xb4>" + itemindex);
     return itemindex;
 }
 
@@ -746,7 +746,7 @@ function function_9c4690f5(amount) {
     self notify(#"hash_2b145a7d");
     self endon(#"hash_2b145a7d");
     self.rankupdatetotal += amount;
-    wait(0.05);
+    wait 0.05;
     if (isdefined(self.var_c81ebd72)) {
         if (self.rankupdatetotal < 0) {
             self.var_c81ebd72.label = %;
@@ -758,7 +758,7 @@ function function_9c4690f5(amount) {
         self.var_c81ebd72 setvalue(self.rankupdatetotal);
         self.var_c81ebd72.alpha = 0.85;
         self.var_c81ebd72 thread hud::function_5e2578bc(self);
-        wait(1);
+        wait 1;
         self.var_c81ebd72 fadeovertime(0.75);
         self.var_c81ebd72.alpha = 0;
         self.rankupdatetotal = 0;
@@ -806,14 +806,14 @@ function function_73d88f63(amount, reason, var_1b34c188) {
                 self.var_59367135.alpha = 0;
             }
         }
-        wait(1);
+        wait 1;
         self.var_c81ebd72 fadeovertime(0.75);
         self.var_c81ebd72.alpha = 0;
         if (isdefined(self.var_59367135) && isdefined(reason)) {
             self.var_59367135 fadeovertime(0.75);
             self.var_59367135.alpha = 0;
         }
-        wait(0.75);
+        wait 0.75;
         self.rankupdatetotal = 0;
     }
 }
@@ -897,8 +897,8 @@ function incrankxp(amount) {
     if (self.pers["rank"] == level.maxrank && newxp >= getrankinfomaxxp(level.maxrank)) {
         newxp = getrankinfomaxxp(level.maxrank);
     }
-    if (self isstarterpack() && self.pers["rank"] >= level.var_52e3d4cf && newxp >= getrankinfominxp(level.var_52e3d4cf)) {
-        newxp = getrankinfominxp(level.var_52e3d4cf);
+    if (self isstarterpack() && self.pers["rank"] >= level.maxrankstarterpack && newxp >= getrankinfominxp(level.maxrankstarterpack)) {
+        newxp = getrankinfominxp(level.maxrankstarterpack);
     }
     var_9e387ebd = getrankxpcapped(newxp) - self.pers["rankxp"];
     if (var_9e387ebd < 0) {

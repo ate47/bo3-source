@@ -5,9 +5,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_36389e13;
+#namespace zm_moon_fx;
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xad1c205c, Offset: 0x10c0
 // Size: 0x3c
@@ -17,7 +17,7 @@ function main() {
     level thread function_f205a5f1();
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc015e12e, Offset: 0x1108
 // Size: 0x382
@@ -56,7 +56,7 @@ function function_f45953c() {
     level._effect["osc_button_glow"] = "dlc5/moon/fx_moon_button_console_glow";
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc3236df1, Offset: 0x1498
 // Size: 0x34a
@@ -93,7 +93,7 @@ function function_e6258024() {
     level._effect["fx_earth_destroyed"] = "maps/zombie_moon/fx_earth_destroyed";
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6d15c0f3, Offset: 0x17f0
 // Size: 0x102

@@ -2,21 +2,21 @@
 #using scripts/shared/fx_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_bbfcd64f;
+#namespace cp_mi_zurich_newworld_fx;
 
-// Namespace namespace_bbfcd64f
+// Namespace cp_mi_zurich_newworld_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9baaa0ab, Offset: 0xf8
 // Size: 0x4c
 function main() {
-    clientfield::register("world", "set_fog_bank", 1, 2, "int", &function_c49f36a3, 0, 0);
+    clientfield::register("world", "set_fog_bank", 1, 2, "int", &set_fog_bank, 0, 0);
 }
 
-// Namespace namespace_bbfcd64f
+// Namespace cp_mi_zurich_newworld_fx
 // Params 7, eflags: 0x1 linked
 // Checksum 0xad1477c8, Offset: 0x150
 // Size: 0x12e
-function function_c49f36a3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function set_fog_bank(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 0) {
         var_3a456a21 = 1;
     } else if (newval == 1) {

@@ -128,7 +128,7 @@ function function_eb301e4f() {
     var_6dd78192 = int(level.var_82949e7a / step);
     for (i = 0; i < step; i++) {
         self zm_score::add_to_player_score(var_6dd78192);
-        wait(0.2);
+        wait 0.2;
     }
 }
 
@@ -149,11 +149,11 @@ function function_7c2cb828(var_9443d9e6) {
         if (self getstance() == "prone") {
             if (!var_9443d9e6) {
                 self zm_stats::increment_client_stat("pers_cash_back_prone", 0);
-                wait(0.8);
+                wait 0.8;
             }
             return;
         }
-        wait(0.01);
+        wait 0.01;
     }
     if (var_9443d9e6) {
         self notify(#"hash_56b30d01");
@@ -197,7 +197,7 @@ function function_a312b387() {
 // Size: 0x290
 function function_51f00958(active_time) {
     self endon(#"death");
-    wait(0.25);
+    wait 0.25;
     if (namespace_95add22b::function_4ab3f2ab()) {
         return;
     }
@@ -234,7 +234,7 @@ function function_51f00958(active_time) {
             e_closest.marked_for_insta_upgraded_death = 1;
             e_closest dodamage(e_closest.health + 666, e_closest.origin, self, self, "none", "MOD_PISTOL_BULLET", 0);
         }
-        wait(0.01);
+        wait 0.01;
     }
 }
 
@@ -302,7 +302,7 @@ function function_b0f6b767() {
             if (accuracy <= level.var_5d181faf) {
                 self zm_stats::increment_client_stat("pers_pistol_points_counter", 0);
                 /#
-                    iprintlnbold("cash_back");
+                    iprintlnbold("<dev string:x28>");
                 #/
             }
         }
@@ -372,7 +372,7 @@ function function_bb9a6b2c() {
         if (dt >= 30) {
             break;
         }
-        wait(0.1);
+        wait 0.1;
     }
     level.var_bd49be0c = undefined;
     if (isdefined(self.var_cbe5509c)) {
@@ -398,7 +398,7 @@ function function_bb9a6b2c() {
         if (total_points >= level.var_2ce89398) {
             self zm_stats::increment_client_stat("pers_double_points_counter", 0);
             /#
-                iprintlnbold("cash_back");
+                iprintlnbold("<dev string:x28>");
             #/
         }
     }
@@ -456,7 +456,7 @@ function function_1425fc15() {
     if (!namespace_95add22b::function_69f37d91()) {
         return;
     }
-    wait(1);
+    wait 1;
     if (!(isdefined(self.var_698f7e["perk_lose"]) && self.var_698f7e["perk_lose"])) {
         if (level.round_number <= level.var_1d4251ad) {
             if (!isdefined(self.var_dde369de)) {
@@ -464,7 +464,7 @@ function function_1425fc15() {
                 if (isdefined(a_perks) && a_perks.size == 4) {
                     self zm_stats::increment_client_stat("pers_perk_lose_counter", 0);
                     /#
-                        iprintlnbold("cash_back");
+                        iprintlnbold("<dev string:x48>");
                     #/
                     self.var_dde369de = 1;
                 }
@@ -539,11 +539,11 @@ function function_ac62adf2() {
         if (var_c06c2a8e) {
             var_9a43980a = self getweaponslistprimaries();
             for (i = 0; i < self.var_53b6d197.size; i++) {
-                var_a6bcdf4d = self.var_53b6d197[i];
+                saved_weapon = self.var_53b6d197[i];
                 found = 0;
                 for (j = 0; j < var_9a43980a.size; j++) {
                     current_weapon = var_9a43980a[j];
-                    if (current_weapon == var_a6bcdf4d["weapon"]) {
+                    if (current_weapon == saved_weapon["weapon"]) {
                         found = 1;
                         break;
                     }
@@ -596,12 +596,12 @@ function function_8d1310c0(zombie, attacker) {
     }
     self.var_4355968f++;
     /#
-        iprintlnbold("cash_back");
+        iprintlnbold("<dev string:x64>");
     #/
     if (self.var_4355968f >= level.var_98b6d77b) {
         self zm_stats::increment_client_stat("pers_sniper_counter", 0);
         /#
-            iprintlnbold("cash_back");
+            iprintlnbold("<dev string:x81>");
         #/
     }
 }
@@ -619,7 +619,7 @@ function function_c055872c() {
         var_30449d68 = int(total_score / steps);
         for (i = 0; i < steps; i++) {
             self zm_score::add_to_player_score(var_30449d68);
-            wait(0.25);
+            wait 0.25;
         }
     }
 }
@@ -713,7 +713,7 @@ function function_85e94769() {
     var_61bb264b function_bc64f9a1(level.chest_index);
     self.var_4db55a5c = var_61bb264b;
     var_61bb264b setinvisibletoall();
-    wait(0.1);
+    wait 0.1;
     var_61bb264b setvisibletoplayer(self);
     while (true) {
         box = level.chests[level.chest_index];
@@ -726,26 +726,26 @@ function function_85e94769() {
                 if (!namespace_95add22b::function_4ab3f2ab()) {
                     break;
                 }
-                wait(0.01);
+                wait 0.01;
             }
             var_61bb264b setvisibletoplayer(self);
         }
         if (level flag::get("moving_chest_now")) {
             var_61bb264b setinvisibletoall();
             while (level flag::get("moving_chest_now")) {
-                wait(0.1);
+                wait 0.1;
             }
             var_61bb264b function_bc64f9a1(level.chest_index);
-            wait(0.1);
+            wait 0.1;
             var_61bb264b setvisibletoplayer(self);
         }
         if (isdefined(level.var_c23d93ae) && level.var_c23d93ae) {
             var_61bb264b setinvisibletoall();
             while (isdefined(level.var_c23d93ae) && level.var_c23d93ae) {
-                wait(0.1);
+                wait 0.1;
             }
             var_61bb264b function_bc64f9a1(level.chest_index);
-            wait(0.1);
+            wait 0.1;
             var_61bb264b setvisibletoplayer(self);
         }
         if (isdefined(box._box_open) && box._box_open) {
@@ -754,11 +754,11 @@ function function_85e94769() {
                 if (!(isdefined(box._box_open) && box._box_open)) {
                     break;
                 }
-                wait(0.01);
+                wait 0.01;
             }
             var_61bb264b setvisibletoplayer(self);
         }
-        wait(0.01);
+        wait 0.01;
     }
     var_61bb264b delete();
 }
@@ -808,9 +808,9 @@ function function_ef89461c(player) {
         }
         keys = array::randomize(level.var_cfff4e41);
         /#
-            forced_weapon_name = getdvarstring("cash_back");
+            forced_weapon_name = getdvarstring("<dev string:x9a>");
             forced_weapon = getweapon(forced_weapon_name);
-            if (forced_weapon_name != "cash_back" && isdefined(level.zombie_weapons[getweapon(forced_weapon)])) {
+            if (forced_weapon_name != "<dev string:xab>" && isdefined(level.zombie_weapons[getweapon(forced_weapon)])) {
                 arrayinsert(keys, forced_weapon, 0);
             }
         #/
@@ -851,10 +851,10 @@ function function_7f93d5d8() {
 // Size: 0x10c
 function function_8aa76743() {
     self endon(#"disconnect");
-    wait(1);
+    wait 1;
     while (true) {
         if (level.zombie_vars["zombie_powerup_fire_sale_on"] == 1) {
-            wait(5);
+            wait 5;
             for (i = 0; i < level.chests.size; i++) {
                 if (i == level.chest_index) {
                     continue;
@@ -866,13 +866,13 @@ function function_8aa76743() {
                 if (level.zombie_vars["zombie_powerup_fire_sale_on"] == 0) {
                     break;
                 }
-                wait(0.01);
+                wait 0.01;
             }
         }
         if (level.round_number >= level.var_21500b7f) {
             return;
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -886,7 +886,7 @@ function function_dd713e62(box, var_902e3799) {
     var_61bb264b setmodel(level.chest_joker_model);
     var_61bb264b function_bc64f9a1(var_902e3799);
     var_61bb264b setinvisibletoall();
-    wait(0.1);
+    wait 0.1;
     var_61bb264b setvisibletoplayer(self);
     while (true) {
         if (isdefined(box._box_open) && box._box_open) {
@@ -895,14 +895,14 @@ function function_dd713e62(box, var_902e3799) {
                 if (!(isdefined(box._box_open) && box._box_open)) {
                     break;
                 }
-                wait(0.01);
+                wait 0.01;
             }
             var_61bb264b setvisibletoplayer(self);
         }
         if (level.zombie_vars["zombie_powerup_fire_sale_on"] == 0) {
             break;
         }
-        wait(0.01);
+        wait 0.01;
     }
     var_61bb264b delete();
 }

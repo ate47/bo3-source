@@ -10,9 +10,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_3a5b90;
+#namespace cp_mi_zurich_coalescence_patch_c;
 
-// Namespace namespace_3a5b90
+// Namespace cp_mi_zurich_coalescence_patch_c
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4e7599b3, Offset: 0x1d8
 // Size: 0x4c

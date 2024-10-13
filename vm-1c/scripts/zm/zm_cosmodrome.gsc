@@ -78,9 +78,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_670cb61;
+#namespace zm_cosmodrome;
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x2
 // Checksum 0xc31141f4, Offset: 0x1780
 // Size: 0x28
@@ -90,12 +90,12 @@ function autoexec opt_in() {
     level.pack_a_punch_camo_index = -124;
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x343d736f, Offset: 0x17b0
 // Size: 0x7ac
 function main() {
-    namespace_79efb23f::main_start();
+    zm_cosmodrome_ffotd::main_start();
     level.var_9b27bea6 = 1;
     level.default_game_mode = "zclassic";
     level.default_start_location = "default";
@@ -107,7 +107,7 @@ function main() {
     visionset_mgr::register_info("visionset", "zm_cosmodrome_monkey_on", 21000, 996, 31, 1, &visionset_mgr::ramp_in_thread_per_player, 0);
     visionset_mgr::register_info("visionset", "zm_cosmodrome_monkey_off", 21000, 995, 31, 1, &visionset_mgr::ramp_in_out_thread_per_player, 0);
     level.default_game_mode = "zclassic";
-    namespace_eb3fb2b6::main();
+    zm_cosmodrome_fx::main();
     zm::init_fx();
     level.zombiemode = 1;
     level._zmbvoxlevelspecific = &function_30a8bcac;
@@ -121,7 +121,7 @@ function main() {
     level.zombiemode_offhand_weapon_give_override = &offhand_weapon_give_override;
     function_a823cd4e();
     load::main();
-    namespace_9dd378ec::main();
+    zm_cosmodrome_amb::main();
     level.default_laststandpistol = getweapon("pistol_m1911");
     level.default_solo_laststandpistol = getweapon("pistol_m1911_upgraded");
     level.laststandpistol = level.default_laststandpistol;
@@ -136,8 +136,8 @@ function main() {
     }
     level.player_out_of_playable_area_monitor = 1;
     level.player_out_of_playable_area_monitor_callback = &function_75d97e41;
-    level thread namespace_b73b7f62::init();
-    level.var_15768556 = &function_2c076a5e;
+    level thread zm_cosmodrome_ai_monkey::init();
+    level.monkey_round_start = &function_2c076a5e;
     level.var_724fe496 = &function_980a894b;
     level.var_32c9ee7a = 1000;
     level.var_be7278ad = -6;
@@ -148,29 +148,29 @@ function main() {
         level.custom_ai_type = array(level.custom_ai_type);
     }
     level.custom_ai_type[level.custom_ai_type.size] = &namespace_8fb880d9::function_4c8046f8;
-    level.var_fd927951 = &namespace_b73b7f62::function_3cc4d318;
+    level.var_fd927951 = &zm_cosmodrome_ai_monkey::function_3cc4d318;
     level.var_a854d307 = 5;
     level.var_8e7446c1 = 3;
-    level thread namespace_9d4ce396::init();
-    level thread namespace_9d4ce396::function_21a92c45();
+    level thread zm_cosmodrome_lander::init();
+    level thread zm_cosmodrome_lander::function_21a92c45();
     level._allow_melee_weapon_switching = 1;
-    level namespace_136a0c13::function_2a476331();
+    level zm_cosmodrome_magic_box::function_2a476331();
     level thread function_54bf648f();
     level.zone_manager_init_func = &function_9635d667;
     init_zones[0] = "centrifuge_zone";
     init_zones[1] = "centrifuge_zone2";
     level thread zm_zonemgr::manage_zones(init_zones);
     level thread electric_switch();
-    level thread namespace_f23e8c1a::init();
-    level thread namespace_860ef124::init_traps();
+    level thread zm_cosmodrome_eggs::init();
+    level thread zm_cosmodrome_traps::init_traps();
     level thread function_306aca61();
     level thread function_20b1e59e();
     level thread function_e0d31800();
-    level thread namespace_caf9f66::function_11434d9();
-    level thread namespace_6c01a8f1::init();
+    level thread zm_cosmodrome_pack_a_punch::function_11434d9();
+    level thread zm_cosmodrome_achievement::init();
     level thread zm::post_main();
     /#
-        execdevgui("zm_cosmodrome_monkey_off");
+        execdevgui("<dev string:x28>");
         level.custom_devgui = &function_161eeb8e;
         setup_devgui();
     #/
@@ -178,16 +178,16 @@ function main() {
     level thread function_de8d20ac();
     level thread function_9503fe88();
     level thread zm_perks::spare_change();
-    scene::add_scene_func("cin_zmhd_sizzle_cosmodrome_cam", &function_facd0d5e, "play");
-    scene::add_scene_func("cin_zmhd_sizzle_cosmodrome_cam2", &function_829f6f98, "play");
-    namespace_79efb23f::main_end();
+    scene::add_scene_func("cin_zmhd_sizzle_cosmodrome_cam", &cin_zmhd_sizzle_cosmodrome_cam, "play");
+    scene::add_scene_func("cin_zmhd_sizzle_cosmodrome_cam2", &cin_zmhd_sizzle_cosmodrome_cam2, "play");
+    zm_cosmodrome_ffotd::main_end();
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 1, eflags: 0x1 linked
 // Checksum 0x408bb0ce, Offset: 0x1f68
 // Size: 0x10a
-function function_facd0d5e(a_ents) {
+function cin_zmhd_sizzle_cosmodrome_cam(a_ents) {
     level thread scene::play("cin_zmhd_sizzle_cosmodrome_cam2");
     foreach (var_6cae1ad0 in a_ents) {
         if (issubstr(var_6cae1ad0.model, "zombie") || issubstr(var_6cae1ad0.model, "cosmon")) {
@@ -196,11 +196,11 @@ function function_facd0d5e(a_ents) {
     }
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9c1ed8fb, Offset: 0x2080
 // Size: 0xea
-function function_829f6f98(a_ents) {
+function cin_zmhd_sizzle_cosmodrome_cam2(a_ents) {
     foreach (var_6cae1ad0 in a_ents) {
         if (issubstr(var_6cae1ad0.model, "zombie") || issubstr(var_6cae1ad0.model, "cosmon")) {
             var_6cae1ad0 clientfield::set("zombie_has_eyes", 1);
@@ -208,7 +208,7 @@ function function_829f6f98(a_ents) {
     }
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa704b468, Offset: 0x2178
 // Size: 0x514
@@ -242,7 +242,7 @@ function init_clientfields() {
     clientfield::register("clientuimodel", "player_lives", 1, 2, "int");
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x94cfbb68, Offset: 0x2698
 // Size: 0x3c
@@ -252,7 +252,7 @@ function function_a4a54181() {
     zm::round_start();
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc0e382dc, Offset: 0x26e0
 // Size: 0x42
@@ -266,7 +266,7 @@ function function_869d6f66() {
     return true;
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4633da75, Offset: 0x2730
 // Size: 0x2e
@@ -277,7 +277,7 @@ function function_f97e7fed() {
     return true;
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1a3c2425, Offset: 0x2768
 // Size: 0xa4
@@ -288,7 +288,7 @@ function function_de8d20ac() {
     zm::spawn_kill_brush((1760, 1256, 490), 400, 1000);
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf1b4f082, Offset: 0x2818
 // Size: 0x3a
@@ -299,7 +299,7 @@ function function_75d97e41() {
     return true;
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x271a0a99, Offset: 0x2860
 // Size: 0x166
@@ -320,11 +320,11 @@ function function_306aca61() {
             var_157ff899 connectpaths();
             var_b9bd08ae = 0;
         }
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x46b6c402, Offset: 0x29d0
 // Size: 0x16e
@@ -345,11 +345,11 @@ function function_20b1e59e() {
             var_157ff899 connectpaths();
             var_ac214666 = 0;
         }
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5e6c7bed, Offset: 0x2b48
 // Size: 0x24
@@ -357,7 +357,7 @@ function function_7837e42a() {
     zm_weapons::load_weapon_spec_from_table("gamedata/weapons/zm/zm_cosmodrome_weapons.csv", 1);
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5a46d173, Offset: 0x2b78
 // Size: 0x2c
@@ -366,7 +366,7 @@ function custom_add_vox() {
     function_30a8bcac();
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x0
 // Checksum 0x8204d5db, Offset: 0x2bb0
 // Size: 0x126
@@ -381,15 +381,15 @@ function function_7eea24df() {
     chest triggerenable(0);
     chest.chest_lid zm_magicbox::treasure_chest_lid_open();
     chest thread zm_magicbox::treasure_chest_move();
-    wait(0.5);
+    wait 0.5;
     level notify(#"weapon_fly_away_start");
-    wait(2);
+    wait 2;
     chest notify(#"box_moving");
     level notify(#"weapon_fly_away_end");
     level.chest_min_move_usage = undefined;
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1c0ba76e, Offset: 0x2ce0
 // Size: 0x49c
@@ -428,7 +428,7 @@ function function_9635d667() {
     zm_zonemgr::add_zone_flags("power_catwalk_access", "roof_connector_dropoff");
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x31af023c, Offset: 0x3188
 // Size: 0x34
@@ -438,7 +438,7 @@ function function_54bf648f() {
     level.fn_custom_zombie_spawner_selection = &function_54da140a;
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7643ea79, Offset: 0x31c8
 // Size: 0x204
@@ -467,10 +467,10 @@ function function_54da140a() {
             return sp_zombie;
         }
     }
-    assert(isdefined(sp_zombie), "zm_cosmodrome_monkey_off" + var_343b1937);
+    assert(isdefined(sp_zombie), "<dev string:x44>" + var_343b1937);
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x29f00e00, Offset: 0x33d8
 // Size: 0xbc
@@ -483,7 +483,7 @@ function electric_switch() {
     playsoundatposition("zmb_poweron_front", (0, 0, 0));
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x95278e78, Offset: 0x34a0
 // Size: 0x1b4
@@ -494,37 +494,37 @@ function wait_for_power() {
     var_cf413835 scene::play("p7_fxanim_zmhd_power_switch_bundle");
     playfx(level._effect["switch_sparks"], struct::get("elec_switch_fx", "targetname").origin);
     playsoundatposition("zmb_switch_flip", var_cf413835.origin);
-    level thread namespace_9dd378ec::function_85f659bd();
-    level thread namespace_9dd378ec::function_3cf7b8c9("vox_ann_power_switch");
+    level thread zm_cosmodrome_amb::function_85f659bd();
+    level thread zm_cosmodrome_amb::function_3cf7b8c9("vox_ann_power_switch");
     level flag::set("lander_power");
     level clientfield::set("zombie_power_on", 1);
     exploder::exploder("lgt_exploder_power_on");
-    wait(31);
+    wait 31;
     exploder::kill_exploder("lgt_exploder_power_alt_off");
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x0
 // Checksum 0x3d9247a2, Offset: 0x3660
 // Size: 0x44
 function function_98fe9c46() {
     level clientfield::set("COSMO_VISIONSET_POWERON", 1);
-    wait(31);
+    wait 31;
     exploder::kill_exploder("lgt_exploder_power_alt_off");
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 3, eflags: 0x0
 // Checksum 0x8733c7df, Offset: 0x36b0
 // Size: 0xb4
 function custom_pandora_show_func(anchor, anchortarget, pieces) {
     level.pandora_light.angles = (-90, anchortarget.angles[1] + -76, 0);
     level.pandora_light moveto(anchortarget.origin, 0.05);
-    wait(1);
+    wait 1;
     playfx(level._effect["lght_marker_flare"], level.pandora_light.origin);
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x0
 // Checksum 0x52082eea, Offset: 0x3770
 // Size: 0x144
@@ -538,7 +538,7 @@ function custom_pandora_fx_func() {
     playfxontag(level._effect["lght_marker"], level.pandora_light, "tag_origin");
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x994f0712, Offset: 0x38c0
 // Size: 0x54
@@ -549,7 +549,7 @@ function function_e0d31800() {
     }
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x0
 // Checksum 0x3cf1089, Offset: 0x3920
 // Size: 0x9c
@@ -563,7 +563,7 @@ function function_a97cb654() {
     self thread function_c6807eeb();
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5fda2f15, Offset: 0x39c8
 // Size: 0x3c
@@ -574,7 +574,7 @@ function function_c6807eeb() {
     }
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x336cb8cf, Offset: 0x3a10
 // Size: 0x24
@@ -582,7 +582,7 @@ function initcharacterstartindex() {
     level.characterstartindex = randomint(4);
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x0
 // Checksum 0xc48db998, Offset: 0x3a40
 // Size: 0x3e
@@ -595,7 +595,7 @@ function selectcharacterindextouse() {
     return self.characterindex;
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0xeadc1241, Offset: 0x3a88
 // Size: 0x2cc
@@ -610,8 +610,8 @@ function givecustomcharacters() {
     self.favorite_wall_weapons_list = [];
     self.talks_in_danger = 0;
     /#
-        if (getdvarstring("zm_cosmodrome_monkey_off") != "zm_cosmodrome_monkey_off") {
-            self.characterindex = getdvarint("zm_cosmodrome_monkey_off");
+        if (getdvarstring("<dev string:x6e>") != "<dev string:x79>") {
+            self.characterindex = getdvarint("<dev string:x6e>");
         }
     #/
     self setcharacterbodytype(self.characterindex);
@@ -641,7 +641,7 @@ function givecustomcharacters() {
     self thread namespace_52adc03e::set_exert_id();
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x69260fa3, Offset: 0x3d60
 // Size: 0x214
@@ -683,7 +683,7 @@ function assign_lowest_unused_character_index() {
     return 0;
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x697d9492, Offset: 0x3f80
 // Size: 0xbe
@@ -698,7 +698,7 @@ function function_1b6520c() {
     level.zombie_equipment_player_init = undefined;
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 1, eflags: 0x1 linked
 // Checksum 0x1dfb743c, Offset: 0x4048
 // Size: 0x15c
@@ -714,14 +714,14 @@ function offhand_weapon_give_override(w_current_weapon) {
         return true;
     }
     if (w_current_weapon.name == "nesting_dolls") {
-        self namespace_d2920ea5::function_f2e5f766();
+        self _zm_weap_nesting_dolls::function_f2e5f766();
         self zm_weapons::play_weapon_vo(w_current_weapon);
         return true;
     }
     return false;
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0xeef9a36, Offset: 0x41b0
 // Size: 0xe8
@@ -736,7 +736,7 @@ function init_sounds() {
     level.var_28d3a005 = 1;
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdf33b615, Offset: 0x42a0
 // Size: 0x1fc
@@ -754,18 +754,18 @@ function setupmusic() {
     zm_audio::musicstate_create("monkey_round_end", 3, "monkey_round_end");
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb0aa645d, Offset: 0x44a8
 // Size: 0x132
 function function_9503fe88() {
     perk_machines = getentarray("zombie_vending", "targetname");
-    var_4b718fa4 = getent("new_revive_clip", "targetname");
+    new_revive_clip = getent("new_revive_clip", "targetname");
     foreach (perk_machine in perk_machines) {
         if (isdefined(perk_machine.clip)) {
             perk_machine.clip delete();
             if (perk_machine.script_noteworthy == "specialty_quickrevive") {
-                perk_machine.clip = var_4b718fa4;
+                perk_machine.clip = new_revive_clip;
             }
         }
     }
@@ -773,51 +773,51 @@ function function_9503fe88() {
 
 /#
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 1, eflags: 0x1 linked
     // Checksum 0x95711123, Offset: 0x45e8
     // Size: 0x21a
     function function_161eeb8e(cmd) {
         level.var_6708aa9c = 0;
-        var_98be8724 = strtok(cmd, "zm_cosmodrome_monkey_off");
+        var_98be8724 = strtok(cmd, "<dev string:x7a>");
         switch (var_98be8724[0]) {
-        case 8:
+        case "<dev string:x7c>":
             function_797b2641();
             break;
-        case 8:
+        case "<dev string:x90>":
             function_f0357d95();
             break;
-        case 8:
+        case "<dev string:xad>":
             function_d360e7c6();
             break;
-        case 8:
+        case "<dev string:xbf>":
             function_d9e82452();
             break;
-        case 8:
+        case "<dev string:xd3>":
             function_b8df7e30(1);
             break;
-        case 8:
+        case "<dev string:xee>":
             function_b8df7e30(0);
             break;
-        case 8:
+        case "<dev string:x106>":
             function_83393018(0);
             break;
-        case 8:
+        case "<dev string:x11f>":
             function_83393018(1);
             break;
-        case 8:
+        case "<dev string:x135>":
             function_55336afe();
-        case 8:
+        case "<dev string:x14b>":
             function_c0e05145();
-        case 8:
+        case "<dev string:x161>":
             function_c28796c3();
-        case 8:
+        case "<dev string:x175>":
             function_f567fa2e();
-        case 8:
+        case "<dev string:x18a>":
             function_502e7927();
-        case 8:
+        case "<dev string:x19e>":
             function_a53ed1da();
-        case 8:
+        case "<dev string:x1b5>":
             function_8a5ca1ef();
             break;
         default:
@@ -825,196 +825,196 @@ function function_9503fe88() {
         }
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 0, eflags: 0x1 linked
     // Checksum 0xb77233d5, Offset: 0x4810
     // Size: 0x4c4
     function setup_devgui() {
         level.var_6708aa9c = 0;
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
-        adddebugcommand("zm_cosmodrome_monkey_off");
+        setdvar("<dev string:x1d4>", "<dev string:x1e9>");
+        setdvar("<dev string:x90>", "<dev string:x1e9>");
+        setdvar("<dev string:xad>", "<dev string:x1e9>");
+        setdvar("<dev string:xbf>", "<dev string:x1e9>");
+        setdvar("<dev string:xd3>", "<dev string:x1e9>");
+        setdvar("<dev string:xee>", "<dev string:x1e9>");
+        setdvar("<dev string:x106>", "<dev string:x1e9>");
+        setdvar("<dev string:x11f>", "<dev string:x1e9>");
+        setdvar("<dev string:x135>", "<dev string:x1e9>");
+        setdvar("<dev string:x14b>", "<dev string:x1e9>");
+        setdvar("<dev string:x161>", "<dev string:x1e9>");
+        setdvar("<dev string:x175>", "<dev string:x1e9>");
+        setdvar("<dev string:x18a>", "<dev string:x1e9>");
+        setdvar("<dev string:x19e>", "<dev string:x1e9>");
+        setdvar("<dev string:x1b5>", "<dev string:x1e9>");
+        setdvar("<dev string:x1ed>", "<dev string:x1e9>");
+        setdvar("<dev string:x1fa>", "<dev string:x1e9>");
+        setdvar("<dev string:x206>", "<dev string:x1e9>");
+        setdvar("<dev string:x216>", "<dev string:x1e9>");
+        setdvar("<dev string:x223>", "<dev string:x1e9>");
+        setdvar("<dev string:x234>", "<dev string:x1e9>");
+        adddebugcommand("<dev string:x247>");
+        adddebugcommand("<dev string:x298>");
+        adddebugcommand("<dev string:x2e5>");
+        adddebugcommand("<dev string:x330>");
+        adddebugcommand("<dev string:x383>");
+        adddebugcommand("<dev string:x3d0>");
+        adddebugcommand("<dev string:x425>");
+        adddebugcommand("<dev string:x472>");
+        adddebugcommand("<dev string:x4cb>");
+        adddebugcommand("<dev string:x51c>");
+        adddebugcommand("<dev string:x562>");
+        adddebugcommand("<dev string:x5b6>");
+        adddebugcommand("<dev string:x604>");
+        adddebugcommand("<dev string:x654>");
+        adddebugcommand("<dev string:x69c>");
+        adddebugcommand("<dev string:x6ec>");
+        adddebugcommand("<dev string:x73b>");
+        adddebugcommand("<dev string:x78f>");
+        adddebugcommand("<dev string:x7dc>");
+        adddebugcommand("<dev string:x827>");
+        adddebugcommand("<dev string:x878>");
         level thread function_58ab8a92();
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 0, eflags: 0x1 linked
     // Checksum 0x9fb9a407, Offset: 0x4ce0
     // Size: 0x9d8
     function function_58ab8a92() {
         while (true) {
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+            if (getdvarstring("<dev string:x1d4>") == "<dev string:x8cc>") {
+                setdvar("<dev string:x1d4>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:x8cf>");
                 function_797b2641();
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+            if (getdvarstring("<dev string:x1ed>") == "<dev string:x8cc>") {
+                setdvar("<dev string:x1ed>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:x8e8>");
                 function_9d5d7bb3(0);
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+            if (getdvarstring("<dev string:x1fa>") == "<dev string:x8cc>") {
+                setdvar("<dev string:x1fa>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:x8fa>");
                 function_9d5d7bb3(1);
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+            if (getdvarstring("<dev string:x206>") == "<dev string:x8cc>") {
+                setdvar("<dev string:x206>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:x90b>");
                 function_9d5d7bb3(2);
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+            if (getdvarstring("<dev string:x216>") == "<dev string:x8cc>") {
+                setdvar("<dev string:x216>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:x920>");
                 function_9d5d7bb3(3);
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+            if (getdvarstring("<dev string:x223>") == "<dev string:x8cc>") {
+                setdvar("<dev string:x223>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:x932>");
                 function_9d5d7bb3(4);
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+            if (getdvarstring("<dev string:x234>") == "<dev string:x8cc>") {
+                setdvar("<dev string:x234>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:x948>");
                 level thread function_5b312f();
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+            if (getdvarstring("<dev string:x90>") == "<dev string:x8cc>") {
+                setdvar("<dev string:x90>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:x956>");
                 function_f0357d95();
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+            if (getdvarstring("<dev string:xad>") == "<dev string:x8cc>") {
+                setdvar("<dev string:xad>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:x96d>");
                 function_d360e7c6();
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+            if (getdvarstring("<dev string:xbf>") == "<dev string:x8cc>") {
+                setdvar("<dev string:xbf>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:x982>");
                 function_d9e82452();
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+            if (getdvarstring("<dev string:xd3>") == "<dev string:x8cc>") {
+                setdvar("<dev string:xd3>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:x9ad>");
                 function_b8df7e30(1);
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+            if (getdvarstring("<dev string:xee>") == "<dev string:x8cc>") {
+                setdvar("<dev string:xee>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:x9c2>");
                 function_b8df7e30(0);
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+            if (getdvarstring("<dev string:x106>") == "<dev string:x8cc>") {
+                setdvar("<dev string:x106>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:x9d4>");
                 function_83393018(0);
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+            if (getdvarstring("<dev string:x11f>") == "<dev string:x8cc>") {
+                setdvar("<dev string:x11f>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:x9f1>");
                 function_83393018(1);
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
+            if (getdvarstring("<dev string:x135>") == "<dev string:x8cc>") {
                 level.var_ee92e6f7 = 1;
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+                setdvar("<dev string:x135>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:xa10>");
                 function_55336afe();
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
+            if (getdvarstring("<dev string:x14b>") == "<dev string:x8cc>") {
                 level.var_ee92e6f7 = 1;
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+                setdvar("<dev string:x14b>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:xa2a>");
                 function_c0e05145();
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
+            if (getdvarstring("<dev string:x161>") == "<dev string:x8cc>") {
                 level.var_ee92e6f7 = 1;
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+                setdvar("<dev string:x161>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:xa44>");
                 function_c28796c3();
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
+            if (getdvarstring("<dev string:x175>") == "<dev string:x8cc>") {
                 level.var_ee92e6f7 = 1;
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+                setdvar("<dev string:x175>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:xa66>");
                 function_f567fa2e();
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
+            if (getdvarstring("<dev string:x18a>") == "<dev string:x8cc>") {
                 level.var_ee92e6f7 = 1;
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+                setdvar("<dev string:x18a>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:xa7e>");
                 function_502e7927();
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
+            if (getdvarstring("<dev string:x19e>") == "<dev string:x8cc>") {
                 level.var_ee92e6f7 = 1;
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+                setdvar("<dev string:x19e>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:xa99>");
                 function_a53ed1da();
             }
-            if (getdvarstring("zm_cosmodrome_monkey_off") == "zm_cosmodrome_monkey_off") {
+            if (getdvarstring("<dev string:x1b5>") == "<dev string:x8cc>") {
                 level.var_ee92e6f7 = 1;
-                setdvar("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
-                iprintlnbold("zm_cosmodrome_monkey_off");
+                setdvar("<dev string:x1b5>", "<dev string:x1e9>");
+                iprintlnbold("<dev string:xab5>");
                 function_8a5ca1ef();
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 0, eflags: 0x1 linked
     // Checksum 0xfc2e3b31, Offset: 0x56c0
     // Size: 0x2f4
     function function_797b2641() {
-        if (!level flag::get("zm_cosmodrome_monkey_off")) {
-            iprintln("zm_cosmodrome_monkey_off");
+        if (!level flag::get("<dev string:xace>")) {
+            iprintln("<dev string:xad7>");
             zm_devgui::zombie_devgui_open_sesame();
         }
-        if (!level flag::exists("zm_cosmodrome_monkey_off")) {
-            level flag::init("zm_cosmodrome_monkey_off");
+        if (!level flag::exists("<dev string:xafa>")) {
+            level flag::init("<dev string:xafa>");
         }
-        if (!level flag::get("zm_cosmodrome_monkey_off")) {
-            iprintln("zm_cosmodrome_monkey_off");
-            zm_devgui::zombie_devgui_give_perk("zm_cosmodrome_monkey_off");
+        if (!level flag::get("<dev string:xafa>")) {
+            iprintln("<dev string:xb06>");
+            zm_devgui::zombie_devgui_give_perk("<dev string:xb12>");
         } else {
-            var_2921da00 = array("zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off", "zm_cosmodrome_monkey_off");
+            var_2921da00 = array("<dev string:xb12>", "<dev string:xb28>", "<dev string:xb3d>", "<dev string:xb50>", "<dev string:xb64>", "<dev string:xb86>", "<dev string:xb9b>");
             e_player = getplayers()[0];
             var_18253ec9 = randomintrange(0, var_2921da00.size - 1);
             while (e_player hasperk(var_2921da00[var_18253ec9])) {
@@ -1023,21 +1023,21 @@ function function_9503fe88() {
             }
             zm_devgui::zombie_devgui_give_perk(var_2921da00[var_18253ec9]);
         }
-        if (!level flag::get("zm_cosmodrome_monkey_off")) {
-            iprintln("zm_cosmodrome_monkey_off");
-            level flag::wait_till("zm_cosmodrome_monkey_off");
-            iprintln("zm_cosmodrome_monkey_off");
-            wait(12);
+        if (!level flag::get("<dev string:xbb0>")) {
+            iprintln("<dev string:xbbf>");
+            level flag::wait_till("<dev string:xbe4>");
+            iprintln("<dev string:xbf6>");
+            wait 12;
         }
-        level flag::wait_till("zm_cosmodrome_monkey_off");
-        wait(0.05);
+        level flag::wait_till("<dev string:xafa>");
+        wait 0.05;
         n_next_round = level.round_number + 1;
-        iprintln("zm_cosmodrome_monkey_off" + n_next_round);
+        iprintln("<dev string:xc17>" + n_next_round);
         level.var_175c18a7 = n_next_round;
         zm_devgui::zombie_devgui_goto_round(n_next_round);
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 1, eflags: 0x1 linked
     // Checksum 0xb58ffb3d, Offset: 0x59c0
     // Size: 0x544
@@ -1063,29 +1063,29 @@ function function_9503fe88() {
             var_2c6930fc = undefined;
             if (choose == 0) {
                 if (isdefined(level.var_99568ae3[var_e4761a9b.script_noteworthy])) {
-                    var_2c6930fc = level.var_99568ae3[var_e4761a9b.script_noteworthy]["zm_cosmodrome_monkey_off"];
+                    var_2c6930fc = level.var_99568ae3[var_e4761a9b.script_noteworthy]["<dev string:xc2e>"];
                 }
             } else if (choose == 1) {
                 if (isdefined(level.var_99568ae3[var_e4761a9b.script_noteworthy])) {
-                    var_2c6930fc = level.var_99568ae3[var_e4761a9b.script_noteworthy]["zm_cosmodrome_monkey_off"];
+                    var_2c6930fc = level.var_99568ae3[var_e4761a9b.script_noteworthy]["<dev string:xc34>"];
                 }
             } else if (choose == 2) {
                 if (isdefined(level.var_99568ae3[var_e4761a9b.script_noteworthy])) {
-                    var_2c6930fc = level.var_99568ae3[var_e4761a9b.script_noteworthy]["zm_cosmodrome_monkey_off"];
+                    var_2c6930fc = level.var_99568ae3[var_e4761a9b.script_noteworthy]["<dev string:xc39>"];
                 }
             } else if (choose == 3) {
                 if (isdefined(level.var_99568ae3[var_e4761a9b.script_noteworthy])) {
-                    var_2c6930fc = level.var_99568ae3[var_e4761a9b.script_noteworthy]["zm_cosmodrome_monkey_off"];
+                    var_2c6930fc = level.var_99568ae3[var_e4761a9b.script_noteworthy]["<dev string:xc42>"];
                 }
             } else if (choose == 4) {
                 if (isdefined(level.var_99568ae3[var_e4761a9b.script_noteworthy])) {
-                    var_2c6930fc = level.var_99568ae3[var_e4761a9b.script_noteworthy]["zm_cosmodrome_monkey_off"];
+                    var_2c6930fc = level.var_99568ae3[var_e4761a9b.script_noteworthy]["<dev string:xc48>"];
                 }
             }
             if (!isdefined(var_2c6930fc)) {
                 var_2c6930fc = level.var_99568ae3[choose];
             }
-            attack_spots = struct::get_array(var_e4761a9b.machine.target, "zm_cosmodrome_monkey_off");
+            attack_spots = struct::get_array(var_e4761a9b.machine.target, "<dev string:xc52>");
             spot = undefined;
             foreach (attack_spot in attack_spots) {
                 if (attack_spot.script_int == 1) {
@@ -1113,7 +1113,7 @@ function function_9503fe88() {
         }
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 2, eflags: 0x1 linked
     // Checksum 0x1cc592ed, Offset: 0x5f10
     // Size: 0xb6
@@ -1124,13 +1124,13 @@ function function_9503fe88() {
         if (isdefined(spot)) {
             while (true) {
                 time = getanimlength(var_2c6930fc);
-                level.var_93621cb animscripted("zm_cosmodrome_monkey_off", spot.origin, spot.angles, var_2c6930fc);
-                wait(time);
+                level.var_93621cb animscripted("<dev string:xc5d>", spot.origin, spot.angles, var_2c6930fc);
+                wait time;
             }
         }
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 0, eflags: 0x1 linked
     // Checksum 0x3a5739d9, Offset: 0x5fd0
     // Size: 0xd8
@@ -1143,11 +1143,11 @@ function function_9503fe88() {
                     debugstar(spawn.origin, 6, (1, 1, 1));
                 #/
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 0, eflags: 0x1 linked
     // Checksum 0x675f7c1a, Offset: 0x60b0
     // Size: 0x6e
@@ -1158,33 +1158,33 @@ function function_9503fe88() {
         }
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 0, eflags: 0x1 linked
     // Checksum 0x314c3727, Offset: 0x6128
     // Size: 0x6e
     function function_d360e7c6() {
         players = getplayers();
         for (i = 0; i < players.size; i++) {
-            players[i] namespace_d2920ea5::function_f2e5f766();
+            players[i] _zm_weap_nesting_dolls::function_f2e5f766();
         }
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 0, eflags: 0x1 linked
     // Checksum 0x6013858d, Offset: 0x61a0
     // Size: 0xa4
     function function_d9e82452() {
-        level flag::wait_till("zm_cosmodrome_monkey_off");
+        level flag::wait_till("<dev string:xbe4>");
         zm_devgui::zombie_devgui_open_sesame();
-        wait(2);
-        level flag::set("zm_cosmodrome_monkey_off");
-        iprintlnbold("zm_cosmodrome_monkey_off");
-        wait(5);
-        level flag::set("zm_cosmodrome_monkey_off");
-        level thread namespace_caf9f66::function_c680451d();
+        wait 2;
+        level flag::set("<dev string:xc6e>");
+        iprintlnbold("<dev string:xc7f>");
+        wait 5;
+        level flag::set("<dev string:xc97>");
+        level thread zm_cosmodrome_pack_a_punch::function_c680451d();
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 1, eflags: 0x1 linked
     // Checksum 0xf16e330b, Offset: 0x6250
     // Size: 0x1c
@@ -1192,7 +1192,7 @@ function function_9503fe88() {
         level.var_6708aa9c = var_416e7c7f;
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 1, eflags: 0x1 linked
     // Checksum 0xd71278a8, Offset: 0x6278
     // Size: 0x1c
@@ -1200,7 +1200,7 @@ function function_9503fe88() {
         level.var_a1879e28 = b_cooldown;
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 0, eflags: 0x1 linked
     // Checksum 0xb4adac6e, Offset: 0x62a0
     // Size: 0x44
@@ -1212,27 +1212,27 @@ function function_9503fe88() {
         }
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 0, eflags: 0x1 linked
     // Checksum 0x8beed1cf, Offset: 0x62f0
     // Size: 0x5c
     function function_a53ed1da() {
-        level thread namespace_f23e8c1a::function_50560fe8(level.var_50560fe8, level.var_50560fe8);
-        level flag::set("zm_cosmodrome_monkey_off");
+        level thread zm_cosmodrome_eggs::function_50560fe8(level.var_50560fe8, level.var_50560fe8);
+        level flag::set("<dev string:xca7>");
         util::wait_network_frame();
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 0, eflags: 0x1 linked
     // Checksum 0x6f2dc450, Offset: 0x6358
     // Size: 0x44
     function function_502e7927() {
         level.var_4058a336 = 1;
-        level flag::set("zm_cosmodrome_monkey_off");
+        level flag::set("<dev string:xcb9>");
         util::wait_network_frame();
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 0, eflags: 0x1 linked
     // Checksum 0x7d024f0b, Offset: 0x63a8
     // Size: 0x24
@@ -1241,7 +1241,7 @@ function function_9503fe88() {
         util::wait_network_frame();
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 0, eflags: 0x1 linked
     // Checksum 0x4645f6aa, Offset: 0x63d8
     // Size: 0x24
@@ -1250,17 +1250,17 @@ function function_9503fe88() {
         util::wait_network_frame();
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 0, eflags: 0x1 linked
     // Checksum 0xbb0bc511, Offset: 0x6408
     // Size: 0x44
     function function_c0e05145() {
         level.var_c0e05145 = 1;
-        level flag::set("zm_cosmodrome_monkey_off");
+        level flag::set("<dev string:xcc8>");
         util::wait_network_frame();
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 0, eflags: 0x1 linked
     // Checksum 0x2e7e8e25, Offset: 0x6458
     // Size: 0x24
@@ -1269,7 +1269,7 @@ function function_9503fe88() {
         util::wait_network_frame();
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 4, eflags: 0x1 linked
     // Checksum 0x12ca6904, Offset: 0x6488
     // Size: 0xd0
@@ -1281,12 +1281,12 @@ function function_9503fe88() {
         self thread function_9a889da5(str_msg, str_ender);
         var_ded2b0d1 = v_org - (0, 0, 16);
         while (true) {
-            print3d(var_ded2b0d1, "zm_cosmodrome_monkey_off", (0, 255, 0), 1, n_scale, 1);
-            wait(0.1);
+            print3d(var_ded2b0d1, "<dev string:xcda>", (0, 255, 0), 1, n_scale, 1);
+            wait 0.1;
         }
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 2, eflags: 0x1 linked
     // Checksum 0x9f701ab5, Offset: 0x6560
     // Size: 0x3c
@@ -1295,18 +1295,18 @@ function function_9503fe88() {
         iprintlnbold(str_msg);
     }
 
-    // Namespace namespace_670cb61
+    // Namespace zm_cosmodrome
     // Params 1, eflags: 0x1 linked
     // Checksum 0x2986cf87, Offset: 0x65a8
     // Size: 0x24
     function function_bb831d(str_ender) {
         self notify(str_ender);
-        wait(0.1);
+        wait 0.1;
     }
 
 #/
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb44daefc, Offset: 0x65d8
 // Size: 0x384
@@ -1329,7 +1329,7 @@ function function_30a8bcac() {
     level.vox zm_audio::zmbvoxadd("weapon_pickup", "gersh", "wpck_gersh_device", 100, 0);
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb26f72f9, Offset: 0x6968
 // Size: 0x13c
@@ -1341,14 +1341,14 @@ function function_f9572b4e() {
         visionset_mgr::activate("visionset", "zm_cosmodrome_no_power", self, 1);
         level flag::wait_till("lander_power");
         visionset_mgr::activate("visionset", "zm_cosmodrome_power_antic", self, 0.1, 0.01, 0.5);
-        wait(0.2);
+        wait 0.2;
         visionset_mgr::deactivate("visionset", "zm_cosmodrome_no_power", self);
-        wait(0.4);
+        wait 0.4;
         visionset_mgr::activate("visionset", "zm_cosmodrome_power_flare", self, 0.4, 1, 1);
     }
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2598b1da, Offset: 0x6ab0
 // Size: 0x24
@@ -1356,7 +1356,7 @@ function function_e509f24d() {
     callback::on_spawned(&function_f9572b4e);
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x124f32a8, Offset: 0x6ae0
 // Size: 0xdc
@@ -1368,7 +1368,7 @@ function function_2c076a5e() {
     level clientfield::set("COSMO_VISIONSET_POWERON", 0);
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd2a7585f, Offset: 0x6bc8
 // Size: 0x18c
@@ -1376,7 +1376,7 @@ function function_980a894b() {
     foreach (e_player in level.players) {
         visionset_mgr::activate("visionset", "zm_cosmodrome_monkey_off", e_player, 0.1, 0.9, 3);
     }
-    wait(0.5);
+    wait 0.5;
     foreach (e_player in level.players) {
         visionset_mgr::deactivate("visionset", "zm_cosmodrome_monkey_on", e_player);
     }
@@ -1384,7 +1384,7 @@ function function_980a894b() {
     level clientfield::set("COSMO_VISIONSET_MONKEY", 0);
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6b95d9ed, Offset: 0x6d60
 // Size: 0x4c
@@ -1394,7 +1394,7 @@ function function_a823cd4e() {
     level.custom_random_perk_weights = &function_c027d01d;
 }
 
-// Namespace namespace_670cb61
+// Namespace zm_cosmodrome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4371387f, Offset: 0x6db8
 // Size: 0xa4

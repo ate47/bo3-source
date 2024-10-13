@@ -308,7 +308,7 @@ function closemenus() {
 // Checksum 0xa82ba665, Offset: 0x10c8
 // Size: 0x12c
 function beginclasschoice(forcenewchoice) {
-    assert(isdefined(level.teams[self.pers["playing"]]));
+    assert(isdefined(level.teams[self.pers["<dev string:x28>"]]));
     team = self.pers["team"];
     if (level.disablecac == 1) {
         self.pers["class"] = level.defaultclass;
@@ -328,7 +328,7 @@ function beginclasschoice(forcenewchoice) {
 // Checksum 0x28668455, Offset: 0x1200
 // Size: 0x74
 function showmainmenuforteam() {
-    assert(isdefined(level.teams[self.pers["playing"]]));
+    assert(isdefined(level.teams[self.pers["<dev string:x28>"]]));
     team = self.pers["team"];
     self openmenu(game["menu_changeclass_" + team]);
 }
@@ -413,7 +413,7 @@ function removespawnmessageshortly(delay) {
     self endon(#"disconnect");
     waittillframeend();
     self endon(#"end_respawn");
-    wait(delay);
+    wait delay;
     self util::clearlowermessage(2);
 }
 

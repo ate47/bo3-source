@@ -59,12 +59,12 @@ function private function_75050fc3() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("mechzShouldShootFlame", &mechzshouldshootflame);
     behaviortreenetworkutility::registerbehaviortreescriptapi("mechzShouldShootFlameSweep", &mechzshouldshootflamesweep);
     behaviortreenetworkutility::registerbehaviortreescriptapi("mechzShouldTurnBerserk", &mechzshouldturnberserk);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("mechzShouldStun", &function_61bf428d);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("mechzShouldStun", &mechzShouldStun);
     behaviortreenetworkutility::registerbehaviortreescriptapi("mechzShouldStumble", &mechzshouldstumble);
     behaviortreenetworkutility::registerbehaviortreeaction("mechzStunLoop", &function_5ea3a844, &function_c65c7003, &function_7561480f);
     behaviortreenetworkutility::registerbehaviortreeaction("mechzStumbleLoop", &function_48571752, &function_76b932dd, &function_bcd1c0b9);
     behaviortreenetworkutility::registerbehaviortreeaction("mechzShootFlameAction", &function_82a18c9c, &function_993e2b, &function_bee98bb7);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("mechzShootGrenade", &function_f4e4ed65);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("mechzShootGrenade", &mechzShootGrenade);
     behaviortreenetworkutility::registerbehaviortreescriptapi("mechzShootFlame", &mechzshootflame);
     behaviortreenetworkutility::registerbehaviortreescriptapi("mechzUpdateFlame", &mechzupdateflame);
     behaviortreenetworkutility::registerbehaviortreescriptapi("mechzStopFlame", &mechzstopflame);
@@ -88,25 +88,25 @@ function private function_4b03ba18() {
     blackboard::registerblackboardattribute(self, "_locomotion_speed", "locomotion_speed_run", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("mechz_rknee_armor_detached");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_should_turn", "should_not_turn", &bb_getshouldturn);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("mechz_rknee_armor_detached");
+            self trackblackboardattribute("<dev string:x3a>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_zombie_damageweapon_type", "regular", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("mechz_rknee_armor_detached");
+            self trackblackboardattribute("<dev string:x52>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_mechz_part", "mechz_powercore", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("mechz_rknee_armor_detached");
+            self trackblackboardattribute("<dev string:x6c>");
         #/
     }
     self.___archetypeonanimscriptedcallback = &function_68c7b0ae;
@@ -486,7 +486,7 @@ function private mechzshouldturnberserk(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x86f0f149, Offset: 0x2748
 // Size: 0x3a
-function private function_61bf428d(entity) {
+function private mechzShouldStun(entity) {
     if (isdefined(entity.stun) && entity.stun) {
         return true;
     }
@@ -633,7 +633,7 @@ function function_bee98bb7(entity, asmstatename) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x52640d37, Offset: 0x2be8
 // Size: 0x4c
-function private function_f4e4ed65(entity) {
+function private mechzShootGrenade(entity) {
     entity.var_400b82a8++;
     if (entity.var_400b82a8 >= 3) {
         entity.var_6cfeff6f = gettime() + 6000;
@@ -656,7 +656,7 @@ function private function_98ebddae() {
     self endon(#"death");
     self notify(#"hash_98ebddae");
     self endon(#"hash_98ebddae");
-    wait(0.3);
+    wait 0.3;
     self clientfield::set("mechz_ft", 1);
     self.var_ee93e137 = 1;
     self.var_5cff5e58 = gettime() + 2500;
@@ -702,7 +702,7 @@ function function_58121b44(mechz) {
         } else {
             self burnplayer::setplayerburning(1.5, 0.5, 20, mechz, undefined);
         }
-        wait(1.5);
+        wait 1.5;
         self.is_burning = 0;
     }
 }
@@ -756,7 +756,7 @@ function private function_30b61b5f() {
             self asmsetanimationrate(1);
             blackboard::setblackboardattribute(self, "_locomotion_speed", "locomotion_speed_run");
         }
-        wait(0.25);
+        wait 0.25;
     }
 }
 
@@ -822,7 +822,7 @@ function private function_13ea5d88() {
     self.var_43025ce8 = gettime();
     self.var_e12b0a6c = gettime();
     /#
-        self.debug_traversal_ast = "mechz_rknee_armor_detached";
+        self.debug_traversal_ast = "<dev string:x78>";
     #/
     self.var_ec9023a6 = spawn("trigger_box", self.origin, 0, -56, 50, 25);
     self.var_ec9023a6 enablelinkto();
@@ -844,11 +844,11 @@ function private function_5cd35d77() {
         if (isdefined(self.favoriteenemy)) {
             if (self.var_ec9023a6 istouching(self.favoriteenemy)) {
                 /#
-                    printtoprightln("mechz_rknee_armor_detached");
+                    printtoprightln("<dev string:x87>");
                 #/
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -915,7 +915,7 @@ function function_2670d89e(inflictor, attacker, damage, dflags, mod, weapon, poi
                 self function_b024a4c(var_3e32b9de);
             }
             /#
-                iprintlnbold("mechz_rknee_armor_detached" + var_3e32b9de + "mechz_rknee_armor_detached" + self.health - var_3e32b9de);
+                iprintlnbold("<dev string:x90>" + var_3e32b9de + "<dev string:x9c>" + self.health - var_3e32b9de);
             #/
             if (!isdefined(self.var_5ad1fcf3)) {
                 self.var_5ad1fcf3 = 0;
@@ -943,7 +943,7 @@ function function_2670d89e(inflictor, attacker, damage, dflags, mod, weapon, poi
             }
             self [[ level.var_78fafa94 ]]();
             /#
-                iprintlnbold("mechz_rknee_armor_detached" + explosive_damage + "mechz_rknee_armor_detached" + self.health - explosive_damage);
+                iprintlnbold("<dev string:xa3>" + explosive_damage + "<dev string:x9c>" + self.health - explosive_damage);
             #/
             return explosive_damage;
         }
@@ -951,13 +951,13 @@ function function_2670d89e(inflictor, attacker, damage, dflags, mod, weapon, poi
     if (hitloc == "head") {
         attacker show_hit_marker();
         /#
-            iprintlnbold("mechz_rknee_armor_detached" + damage + "mechz_rknee_armor_detached" + self.health - damage);
+            iprintlnbold("<dev string:xb3>" + damage + "<dev string:x9c>" + self.health - damage);
         #/
         return damage;
     }
     if (hitloc !== "none") {
         switch (hitloc) {
-        case 91:
+        case "torso_upper":
             if (self.var_aba6456b == 1) {
                 var_2700f09 = self gettagorigin("j_faceplate");
                 dist_sq = distancesquared(var_2700f09, point);
@@ -975,19 +975,19 @@ function function_2670d89e(inflictor, attacker, damage, dflags, mod, weapon, poi
                 self function_ff3f6e(damage);
                 attacker show_hit_marker();
                 /#
-                    iprintlnbold("mechz_rknee_armor_detached" + damage * 0.1 + "mechz_rknee_armor_detached" + self.health - damage * 0.1);
+                    iprintlnbold("<dev string:xbe>" + damage * 0.1 + "<dev string:x9c>" + self.health - damage * 0.1);
                 #/
                 return (damage * 0.1);
             } else if (partname === "tag_powersupply" || self.var_41505d43 !== 1 && self.var_6d2e297f === 1 && partname === "tag_powersupply_hit") {
                 self function_81c30baa(damage);
                 attacker show_hit_marker();
                 /#
-                    iprintlnbold("mechz_rknee_armor_detached" + damage + "mechz_rknee_armor_detached" + self.health - damage);
+                    iprintlnbold("<dev string:xbe>" + damage + "<dev string:x9c>" + self.health - damage);
                 #/
                 return damage;
             } else if (partname === "tag_powersupply" || self.var_41505d43 !== 1 && self.var_6d2e297f !== 1 && partname === "tag_powersupply_hit") {
                 /#
-                    iprintlnbold("mechz_rknee_armor_detached" + damage * 0.5 + "mechz_rknee_armor_detached" + self.health - damage * 0.5);
+                    iprintlnbold("<dev string:xbe>" + damage * 0.5 + "<dev string:x9c>" + self.health - damage * 0.5);
                 #/
                 attacker show_hit_marker();
                 return (damage * 0.5);
@@ -995,52 +995,52 @@ function function_2670d89e(inflictor, attacker, damage, dflags, mod, weapon, poi
             if (self.var_d469243b === 1 && partname === "j_shoulderarmor_ri") {
                 self function_b7934265(damage);
                 /#
-                    iprintlnbold("mechz_rknee_armor_detached" + damage * 0.1 + "mechz_rknee_armor_detached" + self.health - damage * 0.1);
+                    iprintlnbold("<dev string:xd5>" + damage * 0.1 + "<dev string:x9c>" + self.health - damage * 0.1);
                 #/
                 return (damage * 0.1);
             }
             if (self.var_6f97a2a8 === 1 && partname === "j_shoulderarmor_le") {
                 self function_75493757(damage);
                 /#
-                    iprintlnbold("mechz_rknee_armor_detached" + damage * 0.1 + "mechz_rknee_armor_detached" + self.health - damage * 0.1);
+                    iprintlnbold("<dev string:xd5>" + damage * 0.1 + "<dev string:x9c>" + self.health - damage * 0.1);
                 #/
                 return (damage * 0.1);
             }
             /#
-                iprintlnbold("mechz_rknee_armor_detached" + damage * 0.1 + "mechz_rknee_armor_detached" + self.health - damage * 0.1);
+                iprintlnbold("<dev string:xd5>" + damage * 0.1 + "<dev string:x9c>" + self.health - damage * 0.1);
             #/
             return (damage * 0.1);
-        case 89:
+        case "left_leg_lower":
             partname = getpartname("c_zom_mech_body", boneindex);
             if (partname === "j_knee_attach_le" && self.var_abc28c49 === 1) {
                 self function_68a38e0(damage);
             }
             /#
-                iprintlnbold("mechz_rknee_armor_detached" + damage * 0.1 + "mechz_rknee_armor_detached" + self.health - damage * 0.1);
+                iprintlnbold("<dev string:xe7>" + damage * 0.1 + "<dev string:x9c>" + self.health - damage * 0.1);
             #/
             return (damage * 0.1);
-        case 90:
+        case "right_leg_lower":
             partname = getpartname("c_zom_mech_body", boneindex);
             if (partname === "j_knee_attach_ri" && self.var_3b950b2e === 1) {
                 self function_1f360652(damage);
             }
             /#
-                iprintlnbold("mechz_rknee_armor_detached" + damage * 0.1 + "mechz_rknee_armor_detached" + self.health - damage * 0.1);
+                iprintlnbold("<dev string:x100>" + damage * 0.1 + "<dev string:x9c>" + self.health - damage * 0.1);
             #/
             return (damage * 0.1);
-        case 86:
-        case 87:
-        case 88:
+        case "left_arm_lower":
+        case "left_arm_upper":
+        case "left_hand":
             if (isdefined(level.var_ca204e3d)) {
                 self [[ level.var_ca204e3d ]]();
             }
             /#
-                iprintlnbold("mechz_rknee_armor_detached" + damage * 0.1 + "mechz_rknee_armor_detached" + self.health - damage * 0.1);
+                iprintlnbold("<dev string:x119>" + damage * 0.1 + "<dev string:x9c>" + self.health - damage * 0.1);
             #/
             return (damage * 0.1);
         default:
             /#
-                iprintlnbold("mechz_rknee_armor_detached" + damage * 0.1 + "mechz_rknee_armor_detached" + self.health - damage * 0.1);
+                iprintlnbold("<dev string:x12c>" + damage * 0.1 + "<dev string:x9c>" + self.health - damage * 0.1);
             #/
             return (damage * 0.1);
         }
@@ -1052,7 +1052,7 @@ function function_2670d89e(inflictor, attacker, damage, dflags, mod, weapon, poi
             dist_sq = distancesquared(head_pos, point);
             if (dist_sq <= -112) {
                 /#
-                    iprintlnbold("mechz_rknee_armor_detached" + damage + "mechz_rknee_armor_detached" + self.health - damage);
+                    iprintlnbold("<dev string:x141>" + damage + "<dev string:x9c>" + self.health - damage);
                 #/
                 attacker show_hit_marker();
                 return damage;
@@ -1075,7 +1075,7 @@ function function_2670d89e(inflictor, attacker, damage, dflags, mod, weapon, poi
         if (var_2a8c0bea <= 25) {
             if (self.var_41505d43 !== 1 && self.var_6d2e297f !== 1) {
                 /#
-                    iprintlnbold("mechz_rknee_armor_detached" + damage + "mechz_rknee_armor_detached" + self.health - damage);
+                    iprintlnbold("<dev string:x157>" + damage + "<dev string:x9c>" + self.health - damage);
                 #/
                 attacker show_hit_marker();
                 return damage;
@@ -1084,7 +1084,7 @@ function function_2670d89e(inflictor, attacker, damage, dflags, mod, weapon, poi
                 self function_81c30baa(damage);
                 attacker show_hit_marker();
                 /#
-                    iprintlnbold("mechz_rknee_armor_detached" + damage + "mechz_rknee_armor_detached" + self.health - damage);
+                    iprintlnbold("<dev string:x157>" + damage + "<dev string:x9c>" + self.health - damage);
                 #/
                 return damage;
             }
@@ -1122,7 +1122,7 @@ function function_2670d89e(inflictor, attacker, damage, dflags, mod, weapon, poi
             }
         }
         /#
-            iprintlnbold("mechz_rknee_armor_detached" + hit_damage + "mechz_rknee_armor_detached" + self.health - hit_damage);
+            iprintlnbold("<dev string:x171>" + hit_damage + "<dev string:x9c>" + self.health - hit_damage);
         #/
         return hit_damage;
     } else if (mod == "MOD_PROJECTILE_SPLASH") {
@@ -1175,7 +1175,7 @@ function function_2670d89e(inflictor, attacker, damage, dflags, mod, weapon, poi
             }
         }
         /#
-            iprintlnbold("mechz_rknee_armor_detached" + hit_damage + "mechz_rknee_armor_detached" + self.health - hit_damage);
+            iprintlnbold("<dev string:x182>" + hit_damage + "<dev string:x9c>" + self.health - hit_damage);
         #/
         return hit_damage;
     }

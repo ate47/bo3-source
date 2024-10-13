@@ -46,10 +46,10 @@ function function_2bc18574(params) {
 function onactorkilledcallback(params) {
     onactorkilled();
     switch (self.archetype) {
-    case 4:
+    case "human":
         function_696061ce();
         break;
-    case 5:
+    case "robot":
         function_30a29e89();
         break;
     }

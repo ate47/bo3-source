@@ -123,7 +123,7 @@ function timer(n_time, str_endon, x, y, height) {
     if (isdefined(str_endon)) {
         self util::waittill_notify_or_timeout(str_endon, n_time);
     } else {
-        wait(n_time);
+        wait n_time;
     }
     self closeluimenu(lui);
 }
@@ -202,15 +202,15 @@ function private _play_movie_for_player(str_movie, str_type, show_black_screen, 
     self endon(#"disconnect");
     str_menu = undefined;
     switch (str_type) {
-    case 11:
-    case 12:
+    case "fullscreen":
+    case "fullscreen_additive":
         str_menu = "FullscreenMovie";
         break;
-    case 17:
+    case "pip":
         str_menu = "PiPMenu";
         break;
     default:
-        assertmsg("y" + str_type + "y");
+        assertmsg("<dev string:x28>" + str_type + "<dev string:x3d>");
         break;
     }
     if (str_type == "pip") {
@@ -282,15 +282,15 @@ function private function_adc333e0(str_movie, str_type, timeout, show_black_scre
     self endon(#"disconnect");
     str_menu = undefined;
     switch (str_type) {
-    case 11:
-    case 12:
+    case "fullscreen":
+    case "fullscreen_additive":
         str_menu = "FullscreenMovie";
         break;
-    case 17:
+    case "pip":
         str_menu = "PiPMenu";
         break;
     default:
-        assertmsg("y" + str_type + "y");
+        assertmsg("<dev string:x28>" + str_type + "<dev string:x3d>");
         break;
     }
     if (str_type == "pip") {
@@ -306,7 +306,7 @@ function private function_adc333e0(str_movie, str_type, timeout, show_black_scre
         if (issubstr(str_type, "additive")) {
             self setluimenudata(lui_menu, "additive", 1);
         }
-        wait(timeout);
+        wait timeout;
         if (str_type == "pip") {
             self playsoundtoplayer("uin_pip_close", self);
         }
@@ -334,7 +334,7 @@ function screen_flash(n_fadein_time, n_hold_time, n_fadeout_time, n_target_alpha
     }
     self endon(#"disconnect");
     self _screen_fade(n_fadein_time, n_target_alpha, 0, v_color, b_force_close_menu);
-    wait(n_hold_time);
+    wait n_hold_time;
     self _screen_fade(n_fadeout_time, 0, n_target_alpha, v_color, b_force_close_menu);
 }
 
@@ -367,7 +367,7 @@ function screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_force_clo
 // Size: 0x4a
 function screen_fade_out(n_time, v_color, str_menu_id) {
     screen_fade(n_time, 1, 0, v_color, 0, str_menu_id);
-    wait(n_time);
+    wait n_time;
 }
 
 // Namespace lui
@@ -376,7 +376,7 @@ function screen_fade_out(n_time, v_color, str_menu_id) {
 // Size: 0x4a
 function screen_fade_in(n_time, v_color, str_menu_id) {
     screen_fade(n_time, 0, 1, v_color, 1, str_menu_id);
-    wait(n_time);
+    wait n_time;
 }
 
 // Namespace lui
@@ -433,10 +433,10 @@ function private _screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_
     str_menu = "FullScreenBlack";
     if (isstring(v_color)) {
         switch (v_color) {
-        case 29:
+        case "black":
             v_color = (0, 0, 0);
             break;
-        case 30:
+        case "white":
             v_color = (1, 1, 1);
             break;
         }
@@ -466,13 +466,13 @@ function private _screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_
         }
         n_debug_time = gettime();
         if (n_debug_time - level.n_fade_debug_time > 5000) {
-            printtoprightln("y");
+            printtoprightln("<dev string:x40>");
         }
         level.n_fade_debug_time = n_debug_time;
-        printtoprightln("y" + string::function_8e23acba("y" + gettime(), 6) + "y" + string::function_8e23acba(str_menu_id, 10) + "y" + string::function_8e23acba(v_color, 11) + "y" + string::function_8e23acba(n_start_alpha + "y" + n_target_alpha, 10) + "y" + string::function_8e23acba(n_time, 6) + "y", (1, 1, 1));
+        printtoprightln("<dev string:x42>" + string::function_8e23acba("<dev string:x44>" + gettime(), 6) + "<dev string:x45>" + string::function_8e23acba(str_menu_id, 10) + "<dev string:x4e>" + string::function_8e23acba(v_color, 11) + "<dev string:x4e>" + string::function_8e23acba(n_start_alpha + "<dev string:x51>" + n_target_alpha, 10) + "<dev string:x4e>" + string::function_8e23acba(n_time, 6) + "<dev string:x56>", (1, 1, 1));
     #/
     if (n_time > 0) {
-        wait(n_time);
+        wait n_time;
     }
     self setluimenudata(lui_menu, "fadeOverTime", 0);
     if (b_force_close_menu || n_target_alpha == 0) {

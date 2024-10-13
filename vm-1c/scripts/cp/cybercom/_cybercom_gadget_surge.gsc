@@ -160,11 +160,11 @@ function private function_602b28e9(target, secondary) {
             return false;
         }
         switch (target.archetype) {
-        case 6:
-        case 7:
-        case 8:
-        case 9:
-        case 10:
+        case "amws":
+        case "pamws":
+        case "raps":
+        case "turret":
+        case "wasp":
             break;
         default:
             self cybercom::function_29bf9dee(target, 2);
@@ -266,7 +266,7 @@ function private function_311d046a(upgraded, secondary, attacker, weapon) {
         secondary = 0;
     }
     self endon(#"death");
-    self notify(#"hash_f8c5dd60", weapon, attacker);
+    self notify(#"cybercom_action", weapon, attacker);
     weapon = getweapon("gadget_surge");
     if (isvehicle(self)) {
         self thread function_dd7268a3(upgraded, secondary, attacker);
@@ -305,7 +305,7 @@ function private function_311d046a(upgraded, secondary, attacker, weapon) {
             self thread function_b8a5c1a6();
             while (isdefined(target) && !(isdefined(self.var_b92dd31d) && self.var_b92dd31d)) {
                 self useposition(getclosestpointonnavmesh(target.origin, -56));
-                wait(0.05);
+                wait 0.05;
             }
         }
     }
@@ -332,7 +332,7 @@ function function_e4f42bf7(attacker, weapon, var_a360d6f5) {
 function function_c1b2cc5a(var_a360d6f5) {
     self endon(#"hash_a738dd0");
     self endon(#"death");
-    wait(var_a360d6f5);
+    wait var_a360d6f5;
     self notify(#"hash_147d6ee");
 }
 
@@ -360,7 +360,7 @@ function private function_a405f422() {
         if ((gettime() - starttime) / 1000 >= getdvarint("scr_surge_seek_time", 8)) {
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
     self.var_b92dd31d = 1;
 }
@@ -374,7 +374,7 @@ function private function_d007b404(upgraded, enemy, attacker) {
     enemy endon(#"death");
     traveltime = distancesquared(enemy.origin, self.origin) / -128 * -128 * getdvarfloat("scr_surge_arc_travel_time", 0.05);
     self thread function_abaf736(enemy, traveltime);
-    wait(traveltime);
+    wait traveltime;
     if (isvehicle(enemy)) {
         enemy thread function_dd7268a3(upgraded, 1, attacker);
         return;
@@ -420,7 +420,7 @@ function private function_2a105d32(attacker) {
     if (isdefined(attacker)) {
         radiusdamage(origin + (0, 0, 40), getdvarint("scr_surge_blowradius", -128), getdvarint("scr_surge_blowmaxdmg", 90), getdvarint("scr_surge_blowmindmg", 32), attacker, "MOD_GRENADE_SPLASH", getweapon("emp_grenade"));
     }
-    wait(0.2);
+    wait 0.2;
     if (isalive(self)) {
         self kill(self.origin, isdefined(attacker) ? attacker : undefined);
         self startragdoll();
@@ -482,8 +482,8 @@ function private function_abaf736(target, traveltime) {
     fxorg clientfield::set("cybercom_surge", 1);
     tag = isvehicle(target) ? "tag_origin" : "J_SpineUpper";
     fxorg thread function_d09562d9(target, traveltime, tag);
-    wait(traveltime);
-    wait(0.25);
+    wait traveltime;
+    wait 0.25;
     fxorg delete();
 }
 
@@ -558,7 +558,7 @@ function function_9eb4d79d(target, var_9bc2efcb, upgraded) {
         type = self cybercom::function_5e3d3aa();
         self orientmode("face default");
         self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
-        self waittillmatch(#"hash_39fa7e38", "fire");
+        self waittillmatch(#"ai_cybercom_anim", "fire");
     }
     weapon = getweapon("gadget_surge");
     foreach (guy in validtargets) {
@@ -566,7 +566,7 @@ function function_9eb4d79d(target, var_9bc2efcb, upgraded) {
             continue;
         }
         guy thread function_311d046a(self, upgraded);
-        wait(0.05);
+        wait 0.05;
     }
 }
 

@@ -42,9 +42,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_fa13d4ba;
+#namespace sgen;
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x0
 // Checksum 0x7bc19daa, Offset: 0x1a30
 // Size: 0x34
@@ -53,7 +53,7 @@ function function_243693d4() {
     util::add_gametype("cpzm");
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9edcc896, Offset: 0x1a70
 // Size: 0x2a4
@@ -73,8 +73,8 @@ function main() {
     util::function_286a5010(6);
     callback::on_spawned(&on_player_spawned);
     savegame::function_8c0c4b3a("sgen");
-    namespace_219c76cc::main();
-    namespace_172c963::main();
+    cp_mi_sing_sgen_fx::main();
+    cp_mi_sing_sgen_sound::main();
     level.var_d829fe9f = 1;
     level.can_revive_use_depthinwater_test = 1;
     level.var_173c585e = 1;
@@ -82,7 +82,7 @@ function main() {
         namespace_cba4cc55::function_6d1a2a8d("flood_combat", "dev_flood_combat");
     }
     load::main();
-    namespace_643bc20::function_7403e82b();
+    cp_mi_sing_sgen_patch::function_7403e82b();
     var_19aeddfe = struct::get_array("dark_battle_align_2", "targetname");
     if (isdefined(var_19aeddfe) && var_19aeddfe.size > 1) {
         level.var_c490ab3b = var_19aeddfe[1].origin - var_19aeddfe[0].origin;
@@ -93,7 +93,7 @@ function main() {
     level thread namespace_99202726::function_66df416f();
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfb27e6cc, Offset: 0x1d20
 // Size: 0x5c
@@ -102,13 +102,13 @@ function function_1f7e5210() {
     var_d227736c thread function_4fef5e4();
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaf1193c2, Offset: 0x1d88
 // Size: 0x70
 function function_4fef5e4() {
     self endon(#"death");
-    level endon(#"hash_398666a0");
+    level endon(#"chem_door_open");
     while (true) {
         who = self waittill(#"trigger");
         if (isplayer(who)) {
@@ -117,7 +117,7 @@ function function_4fef5e4() {
     }
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb8772033, Offset: 0x1e00
 // Size: 0x66
@@ -128,39 +128,39 @@ function function_b29072ff() {
     level.var_3efe1e22["p7_nc_sin_coa_04"] = var_76099c5f;
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9f7944a8, Offset: 0x1e70
 // Size: 0x644
 function function_673254cc() {
-    skipto::add("intro", &namespace_5da6b440::function_62616b71, "Intro", &namespace_5da6b440::function_19a68bdb);
-    skipto::add("exterior", &namespace_5da6b440::function_d43e5685, "Exterior", &namespace_5da6b440::function_91e8545f);
-    skipto::function_d68e678e("enter_lobby", &namespace_5da6b440::function_2c76d8aa, "Enter Lobby", &namespace_5da6b440::function_8903df94);
-    skipto::function_d68e678e("discover_data", &namespace_9c567844::function_aa390943, "Discover Data", &namespace_9c567844::function_e59a6c89);
-    skipto::function_d68e678e("aquarium_shimmy", &namespace_9c567844::function_17b49f2c, "Aquarium Shimmy", &namespace_9c567844::function_e28bb832);
-    skipto::function_d68e678e("gen_lab", &namespace_9c567844::function_ab2e4091, "Genetics Lab", &namespace_9c567844::function_627360fb);
-    skipto::function_d68e678e("post_gen_lab", &namespace_9c567844::function_d26cae1c, "Post Gen Lab", &namespace_9c567844::function_dcc3e542);
-    skipto::function_d68e678e("chem_lab", &namespace_9c567844::function_f6774f56, "Chemical Lab", &namespace_9c567844::function_79f1dc0);
-    skipto::function_d68e678e("post_chem_lab", &namespace_9c567844::function_4843e971, "Post Chem Lab", &namespace_9c567844::function_ff8909db);
-    skipto::function_d68e678e("silo_floor", &namespace_9c567844::function_6926cd7f, "Silo Floor Battle", &namespace_9c567844::function_e3f81a25);
-    skipto::function_d68e678e("under_silo", &namespace_9c567844::function_77964ef1, "Under Silo", &namespace_9c567844::function_2edb6f5b);
-    skipto::function_d68e678e("fallen_soldiers", &namespace_ed09da6e::function_73eb52a7, "Fallen Soldiers", &namespace_ed09da6e::function_51f4af5d);
-    skipto::function_d68e678e("testing_lab_igc", &namespace_a5e80dc::function_74581061, "Human Testing Lab", &namespace_a5e80dc::function_bfad6ceb);
-    skipto::function_d68e678e("dark_battle", &namespace_4c73eafb::function_32dc1c24, "Dark Battle", &namespace_4c73eafb::function_bbb54b1a);
-    skipto::function_d68e678e("charging_station", &namespace_4c73eafb::function_5f76850f, "Charging Station", &namespace_4c73eafb::function_9724b9d5);
-    skipto::function_d68e678e("descent", &namespace_646f304f::function_1a420bcd, "Descent", &namespace_646f304f::function_d15424d7);
-    skipto::add("pallas_start", &namespace_646f304f::function_1f2baf43, "pallas start", &namespace_646f304f::function_5a8d1289);
-    skipto::add("pallas_end", &namespace_646f304f::function_bf36708e, "Pallas Death", &namespace_646f304f::function_e3c54b48);
-    skipto::function_d68e678e("twin_revenge", &namespace_19d629e::function_cc756659, "Twin Revenge", &namespace_19d629e::function_b2f95c13);
-    skipto::function_d68e678e("flood_combat", &namespace_caee6f4a::function_37c559db, "Flood Combat", &namespace_caee6f4a::function_ebe27bf1);
-    skipto::function_d68e678e("flood_defend", &namespace_caee6f4a::function_ba34fbda, "Flood Defend", &namespace_caee6f4a::function_e2a342e4);
-    skipto::function_d68e678e("underwater_battle", &namespace_b1c45cf3::function_297ca3c6, "Underwater Battle", &namespace_b1c45cf3::function_ceb4ae50);
-    skipto::function_d68e678e("underwater_rail", &namespace_bfe2abac::function_b2f17f19, "Underwater Rail", &namespace_bfe2abac::function_88fd81d3);
-    skipto::function_d68e678e("silo_swim", &namespace_da397ec0::function_d64c7d65, "Silo Swim", &namespace_da397ec0::function_9670e43f);
-    skipto::add_dev("dev_flood_combat", &namespace_caee6f4a::function_37c559db, "Flood Combat", &namespace_caee6f4a::function_ebe27bf1);
+    skipto::add("intro", &cp_mi_sing_sgen_exterior::function_62616b71, "Intro", &cp_mi_sing_sgen_exterior::function_19a68bdb);
+    skipto::add("exterior", &cp_mi_sing_sgen_exterior::function_d43e5685, "Exterior", &cp_mi_sing_sgen_exterior::function_91e8545f);
+    skipto::function_d68e678e("enter_lobby", &cp_mi_sing_sgen_exterior::function_2c76d8aa, "Enter Lobby", &cp_mi_sing_sgen_exterior::function_8903df94);
+    skipto::function_d68e678e("discover_data", &cp_mi_sing_sgen_enter_silo::function_aa390943, "Discover Data", &cp_mi_sing_sgen_enter_silo::function_e59a6c89);
+    skipto::function_d68e678e("aquarium_shimmy", &cp_mi_sing_sgen_enter_silo::function_17b49f2c, "Aquarium Shimmy", &cp_mi_sing_sgen_enter_silo::function_e28bb832);
+    skipto::function_d68e678e("gen_lab", &cp_mi_sing_sgen_enter_silo::function_ab2e4091, "Genetics Lab", &cp_mi_sing_sgen_enter_silo::function_627360fb);
+    skipto::function_d68e678e("post_gen_lab", &cp_mi_sing_sgen_enter_silo::function_d26cae1c, "Post Gen Lab", &cp_mi_sing_sgen_enter_silo::function_dcc3e542);
+    skipto::function_d68e678e("chem_lab", &cp_mi_sing_sgen_enter_silo::function_f6774f56, "Chemical Lab", &cp_mi_sing_sgen_enter_silo::function_79f1dc0);
+    skipto::function_d68e678e("post_chem_lab", &cp_mi_sing_sgen_enter_silo::function_4843e971, "Post Chem Lab", &cp_mi_sing_sgen_enter_silo::function_ff8909db);
+    skipto::function_d68e678e("silo_floor", &cp_mi_sing_sgen_enter_silo::function_6926cd7f, "Silo Floor Battle", &cp_mi_sing_sgen_enter_silo::function_e3f81a25);
+    skipto::function_d68e678e("under_silo", &cp_mi_sing_sgen_enter_silo::function_77964ef1, "Under Silo", &cp_mi_sing_sgen_enter_silo::function_2edb6f5b);
+    skipto::function_d68e678e("fallen_soldiers", &cp_mi_sing_sgen_fallen_soldiers::function_73eb52a7, "Fallen Soldiers", &cp_mi_sing_sgen_fallen_soldiers::function_51f4af5d);
+    skipto::function_d68e678e("testing_lab_igc", &cp_mi_sing_sgen_testing_lab_igc::function_74581061, "Human Testing Lab", &cp_mi_sing_sgen_testing_lab_igc::function_bfad6ceb);
+    skipto::function_d68e678e("dark_battle", &cp_mi_sing_sgen_dark_battle::function_32dc1c24, "Dark Battle", &cp_mi_sing_sgen_dark_battle::function_bbb54b1a);
+    skipto::function_d68e678e("charging_station", &cp_mi_sing_sgen_dark_battle::function_5f76850f, "Charging Station", &cp_mi_sing_sgen_dark_battle::function_9724b9d5);
+    skipto::function_d68e678e("descent", &cp_mi_sing_sgen_pallas::function_1a420bcd, "Descent", &cp_mi_sing_sgen_pallas::function_d15424d7);
+    skipto::add("pallas_start", &cp_mi_sing_sgen_pallas::function_1f2baf43, "pallas start", &cp_mi_sing_sgen_pallas::function_5a8d1289);
+    skipto::add("pallas_end", &cp_mi_sing_sgen_pallas::function_bf36708e, "Pallas Death", &cp_mi_sing_sgen_pallas::function_e3c54b48);
+    skipto::function_d68e678e("twin_revenge", &cp_mi_sing_sgen_revenge_igc::function_cc756659, "Twin Revenge", &cp_mi_sing_sgen_revenge_igc::function_b2f95c13);
+    skipto::function_d68e678e("flood_combat", &cp_mi_sing_sgen_flood::function_37c559db, "Flood Combat", &cp_mi_sing_sgen_flood::function_ebe27bf1);
+    skipto::function_d68e678e("flood_defend", &cp_mi_sing_sgen_flood::function_ba34fbda, "Flood Defend", &cp_mi_sing_sgen_flood::function_e2a342e4);
+    skipto::function_d68e678e("underwater_battle", &cp_mi_sing_sgen_uw_battle::function_297ca3c6, "Underwater Battle", &cp_mi_sing_sgen_uw_battle::function_ceb4ae50);
+    skipto::function_d68e678e("underwater_rail", &cp_mi_sing_sgen_water_ride::function_b2f17f19, "Underwater Rail", &cp_mi_sing_sgen_water_ride::function_88fd81d3);
+    skipto::function_d68e678e("silo_swim", &cp_mi_sing_sgen_silo_swim::function_d64c7d65, "Silo Swim", &cp_mi_sing_sgen_silo_swim::function_9670e43f);
+    skipto::add_dev("dev_flood_combat", &cp_mi_sing_sgen_flood::function_37c559db, "Flood Combat", &cp_mi_sing_sgen_flood::function_ebe27bf1);
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4682d5ef, Offset: 0x24c0
 // Size: 0x1de
@@ -184,7 +184,7 @@ function precache() {
     level._effect["weakspot_impact"] = "impacts/fx_bul_impact_metal_tower_core_sgen";
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x262b52e8, Offset: 0x26a8
 // Size: 0x8f4
@@ -238,7 +238,7 @@ function init_clientfields() {
     visionset_mgr::register_info("overlay", "earthquake_blur", 1, 50, 1, 1, &visionset_mgr::timeout_lerp_thread_per_player, 0);
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9b2c5e53, Offset: 0x2fa8
 // Size: 0xbac
@@ -339,7 +339,7 @@ function init_flags() {
     level flag::init("sgen_end_igc");
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x412e7781, Offset: 0x3b60
 // Size: 0x1a4
@@ -352,13 +352,13 @@ function function_4b0856b() {
     array::thread_all(var_9e2795b5, &function_5dd1ccff, 0);
     var_2068ca6f = getentarray("water_movement_trigger", "targetname");
     array::thread_all(var_2068ca6f, &function_db43be1e);
-    level thread function_ec9fa3fe();
+    level thread silo_grate();
     level thread function_d481b315();
     level thread function_dedf5ad3();
     level thread function_3fbd8c78();
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 1, eflags: 0x1 linked
 // Checksum 0x822476b7, Offset: 0x3d10
 // Size: 0xcc
@@ -373,7 +373,7 @@ function function_bff1a867(str_objective) {
     }
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x77bca04b, Offset: 0x3de8
 // Size: 0x304
@@ -400,7 +400,7 @@ function function_3fbd8c78() {
     scene::add_scene_func("cin_sgen_16_01_charging_station_aie_awaken_robot05_jumpdown", &function_e860d344, "play");
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x0
 // Checksum 0x9ab3b3, Offset: 0x40f8
 // Size: 0xc2
@@ -411,7 +411,7 @@ function function_aba4c411() {
     }
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2886601a, Offset: 0x41c8
 // Size: 0x44
@@ -421,11 +421,11 @@ function on_player_spawned() {
     }
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2920af6d, Offset: 0x4218
 // Size: 0xdc
-function function_ec9fa3fe() {
+function silo_grate() {
     level flag::wait_till("silo_grate_open");
     a_blockers = getentarray("silo_floor_clip", "targetname");
     array::run_all(a_blockers, &delete);
@@ -434,7 +434,7 @@ function function_ec9fa3fe() {
     array::run_all(a_blockers, &delete);
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x0
 // Checksum 0xfc5af39d, Offset: 0x4300
 // Size: 0xbc
@@ -449,7 +449,7 @@ function function_7a4e1da3() {
     }
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 3, eflags: 0x1 linked
 // Checksum 0xd2a2027, Offset: 0x43c8
 // Size: 0x2aa
@@ -457,7 +457,7 @@ function function_5dd1ccff(b_enable, var_5b1ec2c2, e_player) {
     if (!isdefined(var_5b1ec2c2)) {
         var_5b1ec2c2 = 1;
     }
-    level endon(#"hash_6a9c5cb5");
+    level endon(#"Descent");
     while (true) {
         if (var_5b1ec2c2) {
             e_player = self waittill(#"trigger");
@@ -496,7 +496,7 @@ function function_5dd1ccff(b_enable, var_5b1ec2c2, e_player) {
     }
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa3bcd7fb, Offset: 0x4680
 // Size: 0x8c
@@ -511,7 +511,7 @@ function function_ff4dec72(a_ents) {
     }
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 1, eflags: 0x1 linked
 // Checksum 0x480edda1, Offset: 0x4718
 // Size: 0x84
@@ -526,7 +526,7 @@ function function_e860d344(a_ents) {
     }
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x31aeba40, Offset: 0x47a8
 // Size: 0x68
@@ -539,7 +539,7 @@ function function_db43be1e() {
     }
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 1, eflags: 0x1 linked
 // Checksum 0xfdee393c, Offset: 0x4818
 // Size: 0xd4
@@ -550,14 +550,14 @@ function function_8084e40a(e_player) {
     e_player setmovespeedscale(0.7);
     e_player allowprone(0);
     while (e_player istouching(self)) {
-        wait(0.1);
+        wait 0.1;
     }
     e_player allowprone(1);
     e_player setmovespeedscale(1);
     e_player.is_in_water = 0;
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0xda651ceb, Offset: 0x48f8
 // Size: 0x54
@@ -566,7 +566,7 @@ function function_d481b315() {
     array::run_all(var_15849db9, &setscale, 2);
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 2, eflags: 0x0
 // Checksum 0xa4343cd0, Offset: 0x4958
 // Size: 0x104
@@ -582,7 +582,7 @@ function function_1f0515fa(str_name, n_index) {
     level.struct_class_names["targetname"][str_name + "_script"] = array(s_align);
 }
 
-// Namespace namespace_fa13d4ba
+// Namespace sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4feccb5f, Offset: 0x4a68
 // Size: 0x7c

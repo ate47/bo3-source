@@ -40,7 +40,7 @@ function autoexec init() {
     level thread aat::register_immunity("zm_aat_turned", "margwa", 1, 1, 1);
     spawner::add_archetype_spawn_function("margwa", &function_17627e34);
     /#
-        execdevgui("zm_aat_turned");
+        execdevgui("<dev string:x28>");
         thread function_cdd8baf7();
     #/
 }
@@ -50,11 +50,11 @@ function autoexec init() {
 // Checksum 0xf5bcdacb, Offset: 0x828
 // Size: 0x92
 function function_4092fa4d() {
-    wait(20);
+    wait 20;
     for (i = 0; i < 1; i++) {
-        var_2dcff864 = arraygetclosest(level.players[0].origin, level.var_95810297);
-        margwa = function_8a0708c2(var_2dcff864);
-        wait(0.5);
+        margwa_location = arraygetclosest(level.players[0].origin, level.var_95810297);
+        margwa = function_8a0708c2(margwa_location);
+        wait 0.5;
     }
 }
 
@@ -129,7 +129,7 @@ function private function_5d11b2dc(entity) {
         dist_sq = distancesquared(self.favoriteenemy.origin, entity.origin);
         var_9c921a96 = 2250000;
         /#
-            var_7a419cfb = getdvarint("zm_aat_turned") * 12;
+            var_7a419cfb = getdvarint("<dev string:x46>") * 12;
             var_9c921a96 = var_7a419cfb * var_7a419cfb;
         #/
         if (dist_sq > var_9c921a96) {
@@ -212,12 +212,12 @@ function private function_d59056ec(entity) {
         return true;
     }
     if (isdefined(level.var_9baa9723)) {
-        foreach (var_15c31508 in level.var_9baa9723) {
-            if (isdefined(var_15c31508)) {
-                dist_sq = distancesquared(var_15c31508.origin, self.origin);
+        foreach (octobomb in level.var_9baa9723) {
+            if (isdefined(octobomb)) {
+                dist_sq = distancesquared(octobomb.origin, self.origin);
                 if (dist_sq < 360000) {
-                    entity.var_24971ab5 = var_15c31508;
-                    entity setgoal(var_15c31508.origin);
+                    entity.var_24971ab5 = octobomb;
+                    entity setgoal(octobomb.origin);
                     return true;
                 }
             }
@@ -266,7 +266,7 @@ function private function_6312be59(entity) {
                 dist_sq = distancesquared(vortex.origin, self.origin);
                 if (dist_sq < 9216) {
                     entity.var_843f1731 = 1;
-                    if (isdefined(vortex.weapon) && namespace_42517170::function_9b7ac6a9(vortex.weapon)) {
+                    if (isdefined(vortex.weapon) && idgun::function_9b7ac6a9(vortex.weapon)) {
                         blackboard::setblackboardattribute(entity, "_zombie_damageweapon_type", "packed");
                     }
                     vortex function_e92d3bb1(entity);
@@ -439,7 +439,7 @@ function private function_137093c0(entity) {
 // Checksum 0x9e26feb2, Offset: 0x1d10
 // Size: 0x60
 function private function_743b10d2(entity) {
-    namespace_6c6fd2b0::function_d6861357(entity);
+    namespace_6c6fd2b0::margwaTeleportInTerminate(entity);
     entity.previous_zone_name = entity.zone_name;
     entity.zone_name = zm_utility::get_current_zone();
 }
@@ -489,12 +489,12 @@ function private function_1f53b1a2(var_9c967ca3, attacker) {
     loc = spawnstruct();
     loc.origin = spawn_pos;
     loc.angles = self.angles;
-    self function_181c5967();
+    self margwa_head_explosion();
     var_d6f3a912 = undefined;
     if (isdefined(level.var_39c0c115)) {
         var_d6f3a912 = level.var_39c0c115;
     }
-    namespace_b1ca30af::function_8aeb3564(1, loc, 32, 32, 1, 0, 0, var_d6f3a912);
+    zm_ai_wasp::function_8aeb3564(1, loc, 32, 32, 1, 0, 0, var_d6f3a912);
     if (isdefined(self.var_26f9f957)) {
         self thread [[ self.var_26f9f957 ]](var_9c967ca3, attacker);
     }
@@ -530,7 +530,7 @@ function private function_4cf696ce() {
 // Params 0, eflags: 0x5 linked
 // Checksum 0xee1c770f, Offset: 0x2288
 // Size: 0xea
-function private function_181c5967() {
+function private margwa_head_explosion() {
     players = getplayers();
     foreach (player in players) {
         distsq = distancesquared(self.origin, player.origin);
@@ -591,7 +591,7 @@ function function_618bf323() {
                     }
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     #/
 }
@@ -603,7 +603,7 @@ function function_618bf323() {
 function private function_3d56f587() {
     util::wait_network_frame();
     self clientfield::increment("margwa_fx_spawn");
-    wait(3);
+    wait 3;
     self function_26c35525();
     self.candamage = 1;
     self.var_c7ae07c2 = 1;
@@ -804,7 +804,7 @@ function private function_f1358c65(zombie) {
     // Checksum 0x64709624, Offset: 0x32b0
     // Size: 0x44
     function private function_cdd8baf7() {
-        level flagsys::wait_till("zm_aat_turned");
+        level flagsys::wait_till("<dev string:x5f>");
         zm_devgui::add_custom_devgui_callback(&function_a2da506b);
     }
 
@@ -814,19 +814,19 @@ function private function_f1358c65(zombie) {
     // Size: 0x1f6
     function private function_a2da506b(cmd) {
         players = getplayers();
-        var_2c8bf5cd = getentarray("zm_aat_turned", "zm_aat_turned");
+        var_2c8bf5cd = getentarray("<dev string:x78>", "<dev string:x7f>");
         margwa = arraygetclosest(getplayers()[0].origin, var_2c8bf5cd);
         switch (cmd) {
-        case 8:
-            var_2dcff864 = arraygetclosest(players[0].origin, level.var_95810297);
-            margwa = function_8a0708c2(var_2dcff864);
+        case "<dev string:x8a>":
+            margwa_location = arraygetclosest(players[0].origin, level.var_95810297);
+            margwa = function_8a0708c2(margwa_location);
             break;
-        case 8:
+        case "<dev string:x97>":
             if (isdefined(margwa)) {
                 margwa kill();
             }
             break;
-        case 8:
+        case "<dev string:xa3>":
             if (isdefined(margwa)) {
                 if (!isdefined(margwa.var_c5dc6229)) {
                     margwa.var_c5dc6229 = 1;
@@ -835,7 +835,7 @@ function private function_f1358c65(zombie) {
                 }
             }
             break;
-        case 8:
+        case "<dev string:xb1>":
             if (isdefined(margwa)) {
                 if (!isdefined(margwa.var_9e2d6dc4)) {
                     margwa.var_9e2d6dc4 = 1;
@@ -856,11 +856,11 @@ function private function_f1358c65(zombie) {
 function private function_a89905c6() {
     /#
         rate = 1;
-        if (self.zombie_move_speed == "zm_aat_turned") {
-            percent = getdvarint("zm_aat_turned");
+        if (self.zombie_move_speed == "<dev string:xbf>") {
+            percent = getdvarint("<dev string:xc3>");
             rate = float(percent / 100);
-        } else if (self.zombie_move_speed == "zm_aat_turned") {
-            percent = getdvarint("zm_aat_turned");
+        } else if (self.zombie_move_speed == "<dev string:xd8>") {
+            percent = getdvarint("<dev string:xdf>");
             rate = float(percent / 100);
         }
         return rate;

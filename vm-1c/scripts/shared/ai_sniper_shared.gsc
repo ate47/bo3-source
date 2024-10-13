@@ -29,7 +29,7 @@ function __init__() {
 // Checksum 0x1086fd21, Offset: 0x260
 // Size: 0x326
 function function_abc49676(targetname) {
-    wait(0.05);
+    wait 0.05;
     if (!isdefined(targetname)) {
         targetname = "ai_sniper_node_scan";
     }
@@ -96,7 +96,7 @@ function function_b61dfa9e(node) {
         goalpos = self.arrivalfinalpos;
     }
     while (distancesquared(self.origin, goalpos) > 256) {
-        wait(0.05);
+        wait 0.05;
     }
     self notify(#"hash_50b88a46", node);
 }
@@ -197,7 +197,7 @@ function function_6840179(var_f1f6e3d) {
     }
     if (isarray(var_f1f6e3d) && (!isdefined(var_f1f6e3d) || var_f1f6e3d.size == 0)) {
         /#
-            iprintlnbold("steady");
+            iprintlnbold("<dev string:x28>");
         #/
         return;
     }
@@ -260,7 +260,7 @@ function function_782962c5() {
             debugstar(self.origin, 1, (1, 0, 0));
             line(self.origin, lastpos, (1, 0, 0), 1, 0, 20);
             lastpos = self.origin;
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -281,7 +281,7 @@ function function_2ba378ce() {
         } else if (gettime() - var_bef987c0 > 350) {
             self laseron();
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -368,7 +368,7 @@ function function_cc2a65b3(v_eye, var_f1f6e3d, var_717108ce) {
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -403,19 +403,19 @@ function function_6eceec3e(var_f1f6e3d, e_owner) {
     start = var_f1f6e3d;
     while (true) {
         while (isdefined(self.var_8722cfb)) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         if (isarray(var_f1f6e3d)) {
             self function_5ee81302(var_f1f6e3d[index], e_owner);
             if (!isvec(var_f1f6e3d[index]) && isdefined(var_f1f6e3d[index].script_wait)) {
-                wait(var_f1f6e3d[index].script_wait);
+                wait var_f1f6e3d[index].script_wait;
             }
         } else {
             var_f1f6e3d = function_b75b8fc4(var_f1f6e3d);
             self function_5ee81302(var_f1f6e3d, e_owner);
             if (!isvec(var_f1f6e3d) && isdefined(var_f1f6e3d.script_wait)) {
-                wait(var_f1f6e3d.script_wait);
+                wait var_f1f6e3d.script_wait;
             }
         }
         looped = 0;
@@ -476,7 +476,7 @@ function function_9c1ac1cb(endposition, totaltime, var_5d61a864) {
         if (neworigin[0] > var_3d372c1a * -1 && neworigin[0] < var_3d372c1a && neworigin[1] > var_3d372c1a * -1 && neworigin[1] < var_3d372c1a && neworigin[2] > var_3d372c1a * -1 && neworigin[2] < var_3d372c1a) {
             self.origin = neworigin;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -522,7 +522,7 @@ function function_5ee81302(var_79b9c7a7, owner) {
             delta = point - self.origin;
             delta *= 0.2;
             self.origin += delta;
-            wait(0.05);
+            wait 0.05;
         }
         return;
     }
@@ -584,7 +584,7 @@ function function_e57ea743(v_eye, var_79b9c7a7, var_5143a614, var_717108ce, fire
             var_2cbaef6c = 0;
         }
         var_4bbe1b92 += 0.05;
-        wait(0.05);
+        wait 0.05;
     }
     if (isactor(var_717108ce)) {
         var_717108ce.holdfire = 1;

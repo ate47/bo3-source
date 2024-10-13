@@ -77,13 +77,13 @@ function autoexec main() {
 // Checksum 0x6287ac41, Offset: 0xe18
 // Size: 0x11c
 function registerbehaviorscriptfunctions() {
-    behaviortreenetworkutility::registerbehaviortreescriptapi("keeperCompanionShouldmove", &function_adedda81);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("keeperCompanionDelayMovement", &function_44608c63);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("keeperCompanionShouldTraverse", &function_b6696414);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("keeperCompanionKeepsUpdateMovementMode", &function_a2f20d7a);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("keeperUpdatethunderwallAttackParams", &function_4df8d7e4);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("keeperCompanionUpdateLeader", &function_519d9aab);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("keeperCompanionMovementService", &function_b66ba76d);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("keeperCompanionShouldmove", &keeperCompanionShouldmove);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("keeperCompanionDelayMovement", &keeperCompanionDelayMovement);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("keeperCompanionShouldTraverse", &keeperCompanionShouldTraverse);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("keeperCompanionKeepsUpdateMovementMode", &keeperCompanionKeepsUpdateMovementMode);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("keeperUpdatethunderwallAttackParams", &keeperUpdatethunderwallAttackParams);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("keeperCompanionUpdateLeader", &keeperCompanionUpdateLeader);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("keeperCompanionMovementService", &keeperCompanionMovementService);
 }
 
 // Namespace namespace_6d577909
@@ -125,8 +125,8 @@ function function_3ff0b3e(entity, mocompanim, mocompanimblendouttime, mocompanim
 function function_f1efe0ab(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
     if (isdefined(entity.var_63288fb8)) {
         /#
-            print3d(entity.origin, "counter", (1, 0, 0), 1, 1, 60);
-            print3d(entity.var_63288fb8.origin, "counter", (0, 1, 0), 1, 1, 60);
+            print3d(entity.origin, "<dev string:x28>", (1, 0, 0), 1, 1, 60);
+            print3d(entity.var_63288fb8.origin, "<dev string:x28>", (0, 1, 0), 1, 1, 60);
             line(entity.origin, entity.var_63288fb8.origin, (0, 1, 0), 1, 0, 60);
         #/
         var_99523a0 = entity.var_63288fb8.origin - entity.origin;
@@ -252,13 +252,13 @@ function private function_8c4e826e() {
     blackboard::registerblackboardattribute(self, "_locomotion_speed", "locomotion_speed_sprint", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("counter");
+            self trackblackboardattribute("<dev string:x2a>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_keeper_protector_attack", "inactive", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("counter");
+            self trackblackboardattribute("<dev string:x3c>");
         #/
     }
     /#
@@ -310,13 +310,13 @@ function private function_98f178fc(entity) {
     entity endon(#"death");
     while (true) {
         /#
-            recordcircle(entity.origin, 700, (1, 0, 0), "counter", entity);
+            recordcircle(entity.origin, 700, (1, 0, 0), "<dev string:x55>", entity);
             if (isdefined(entity.var_8cf1ff79)) {
-                recordline(entity.origin, entity.var_8cf1ff79, (0, 0, 1), "counter", entity);
-                recordsphere(entity.var_8cf1ff79, 8, (0, 0, 1), "counter", entity);
+                recordline(entity.origin, entity.var_8cf1ff79, (0, 0, 1), "<dev string:x55>", entity);
+                recordsphere(entity.var_8cf1ff79, 8, (0, 0, 1), "<dev string:x55>", entity);
             }
         #/
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -324,7 +324,7 @@ function private function_98f178fc(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x264d6d31, Offset: 0x1f78
 // Size: 0x44
-function private function_44608c63(entity) {
+function private keeperCompanionDelayMovement(entity) {
     entity pathmode("move delayed", 0, randomfloatrange(1, 2));
 }
 
@@ -343,7 +343,7 @@ function private _isvalidplayer(player) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8719b416, Offset: 0x2080
 // Size: 0x28
-function function_b6696414(entity) {
+function keeperCompanionShouldTraverse(entity) {
     if (isdefined(entity.traversestartnode)) {
         return true;
     }
@@ -354,7 +354,7 @@ function function_b6696414(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x99305865, Offset: 0x20b0
 // Size: 0x2e
-function private function_adedda81(entity) {
+function private keeperCompanionShouldmove(entity) {
     if (!entity haspath()) {
         return false;
     }
@@ -373,7 +373,7 @@ function private function_469c9511(entity) {
     }
     entity.var_539a912c = gettime() + 2500;
     entity.var_f1e0aeaf = 1;
-    wait(3);
+    wait 3;
     if (!isdefined(entity) || !isdefined(entity.leader)) {
         entity.var_f1e0aeaf = 0;
         return;
@@ -393,7 +393,7 @@ function private function_469c9511(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x735727bb, Offset: 0x22d0
 // Size: 0xa1c
-function private function_b66ba76d(entity) {
+function private keeperCompanionMovementService(entity) {
     if (isdefined(level.var_bfd9ed83.eligible_leader) && isdefined(level.var_bfd9ed83) && level.var_bfd9ed83.eligible_leader) {
         entity.leader = level.var_bfd9ed83;
     }
@@ -523,7 +523,7 @@ function private function_34117adf(var_5935e1b9) {
     self.var_53ce2a4e = 1;
     self setgoal(var_5935e1b9, 1);
     self waittill(#"goal");
-    wait(1);
+    wait 1;
     self.var_53ce2a4e = 0;
 }
 
@@ -561,7 +561,7 @@ function private function_3463b8c2(var_ee6ad78e) {
     self teleport_to_location(var_577ef8dd.origin, var_577ef8dd.angles);
     while (isdefined(self.leader.is_flung) && (!isdefined(self.leader) || !isalive(self.leader) || self.leader.is_flung)) {
         self setgoal(var_577ef8dd.origin);
-        wait(0.05);
+        wait 0.05;
     }
     self.var_c0e8df41 = 0;
 }
@@ -627,12 +627,12 @@ function function_95adf61c(player) {
     }
     if (distancesquared(self.companion_destination, self.origin) <= 450 * 450) {
         self forceteleport(self.origin, self.angles, 1);
-        wait(0.05);
+        wait 0.05;
         self setgoal(self.companion_destination, 1);
         self waittill(#"goal");
         self.var_1a5b8ffb = 1;
         self.reviving_player = player;
-        wait(2);
+        wait 2;
     } else {
         angles = vectortoangles(player.origin - self.companion_destination);
         self teleport_to_location(self.companion_destination, angles);
@@ -681,7 +681,7 @@ function function_f95febaf(player) {
         if (!(isdefined(player laststand::player_is_in_laststand()) && player laststand::player_is_in_laststand())) {
             self function_703fda6d(player);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -709,7 +709,7 @@ function function_703fda6d(player) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4a842122, Offset: 0x3ae8
 // Size: 0xc4
-function private function_a2f20d7a(entity) {
+function private keeperCompanionKeepsUpdateMovementMode(entity) {
     var_ef42515b = 90000;
     var_1be8672c = 90000;
     dist = distancesquared(entity.origin, entity.companion_anchor_point);
@@ -733,7 +733,7 @@ function private function_36af0313(entity, var_109b8552) {
         if (!isdefined(entity.var_8cf1ff79)) {
             break;
         } else if (!util::within_fov(entity.origin, entity.angles, entity.var_8cf1ff79, cos(70))) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         entity.holdfire = 0;
@@ -754,17 +754,17 @@ function private function_36af0313(entity, var_109b8552) {
         }
         /#
             if (isdefined(level.var_c3eaadba) && level.var_c3eaadba) {
-                blackboard::setblackboardattribute(entity, "counter", "counter");
-                var_aef04392 = getanimlength("counter");
+                blackboard::setblackboardattribute(entity, "<dev string:x5c>", "<dev string:x7a>");
+                var_aef04392 = getanimlength("<dev string:x80>");
             }
         #/
         entity.var_285f7306 = gettime() + var_aef04392 * 1000;
         /#
-            recordenttext("counter", self, (0, 1, 0), "counter");
+            recordenttext("<dev string:xab>", self, (0, 1, 0), "<dev string:x55>");
         #/
-        wait(var_aef04392);
+        wait var_aef04392;
         /#
-            recordenttext("counter", self, (0, 1, 0), "counter");
+            recordenttext("<dev string:xb9>", self, (0, 1, 0), "<dev string:x55>");
         #/
         blackboard::setblackboardattribute(entity, "_keeper_protector_attack", "inactive");
         entity.var_92aa697 = 0;
@@ -778,7 +778,7 @@ function private function_36af0313(entity, var_109b8552) {
 // Size: 0x90
 function private function_5d2ab113(entity) {
     /#
-        recordenttext("counter", self, (1, 0, 0), "counter");
+        recordenttext("<dev string:xca>", self, (1, 0, 0), "<dev string:x55>");
     #/
     blackboard::setblackboardattribute(entity, "_keeper_protector_attack", "inactive");
     entity.var_92aa697 = 0;
@@ -812,7 +812,7 @@ function private function_87727b5b(entity) {
     }
     /#
         foreach (enemy in validenemies) {
-            recordline(entity.origin, enemy.origin, (0, 1, 0), "counter", entity);
+            recordline(entity.origin, enemy.origin, (0, 1, 0), "<dev string:x55>", entity);
         }
     #/
     return validenemies;
@@ -822,7 +822,7 @@ function private function_87727b5b(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xf8cfc967, Offset: 0x4208
 // Size: 0x3a6
-function private function_4df8d7e4(entity) {
+function private keeperUpdatethunderwallAttackParams(entity) {
     var_9540bf56 = 1;
     if (isdefined(entity.var_92aa697) && entity.var_92aa697) {
         if (isdefined(entity.var_285f7306)) {
@@ -883,7 +883,7 @@ function private function_4df8d7e4(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7e623f34, Offset: 0x45b8
 // Size: 0x7c
-function private function_519d9aab(entity) {
+function private keeperCompanionUpdateLeader(entity) {
     if (!entity.reviving_a_player) {
         if (!isdefined(entity.leader) || !(isdefined(entity.leader.eligible_leader) && entity.leader.eligible_leader)) {
             entity define_new_leader();
@@ -1127,7 +1127,7 @@ function private function_cd2f0f8a(entity, var_4fd6352b, var_e54db1ed) {
     for (i = 0; i < level.var_fb631584.size; i++) {
         ai = level.var_fb631584[i];
         ai thread function_e620963b(entity, ai, var_4fd6352b, level.var_90c9a476[i], var_e54db1ed);
-        wait(0.05);
+        wait 0.05;
     }
     level.var_fb631584 = [];
     level.var_90c9a476 = [];
@@ -1139,7 +1139,7 @@ function private function_cd2f0f8a(entity, var_4fd6352b, var_e54db1ed) {
 // Size: 0x3c
 function private function_5250c5dd() {
     level waittill(#"intermission");
-    wait(5.25);
+    wait 5.25;
     self.allowdeath = 1;
     self kill();
 }

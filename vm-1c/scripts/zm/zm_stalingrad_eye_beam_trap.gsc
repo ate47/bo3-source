@@ -19,9 +19,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_a26e93d0;
+#namespace zm_stalingrad_eye_beam_trap;
 
-// Namespace namespace_a26e93d0
+// Namespace zm_stalingrad_eye_beam_trap
 // Params 0, eflags: 0x2
 // Checksum 0x51e0ee53, Offset: 0x530
 // Size: 0x34
@@ -29,7 +29,7 @@ function autoexec function_2dc19561() {
     system::register("zm_stalingrad_eye_beam_trap", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_a26e93d0
+// Namespace zm_stalingrad_eye_beam_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcad13822, Offset: 0x570
 // Size: 0x2a0
@@ -51,7 +51,7 @@ function __init__() {
     }
 }
 
-// Namespace namespace_a26e93d0
+// Namespace zm_stalingrad_eye_beam_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0xaf83ccba, Offset: 0x818
 // Size: 0x150
@@ -74,7 +74,7 @@ function function_a2abac9c(e_player) {
     return true;
 }
 
-// Namespace namespace_a26e93d0
+// Namespace zm_stalingrad_eye_beam_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfd45b1c8, Offset: 0x970
 // Size: 0x1b0
@@ -98,7 +98,7 @@ function function_fd8775a2() {
     }
 }
 
-// Namespace namespace_a26e93d0
+// Namespace zm_stalingrad_eye_beam_trap
 // Params 2, eflags: 0x1 linked
 // Checksum 0x85a77903, Offset: 0xb28
 // Size: 0x10c
@@ -107,11 +107,11 @@ function function_3ae55c2d(var_f2bd831, a_s_switches) {
         s_target.s_unitrigger flag::set("beam_on");
         playsoundatposition("zmb_robo_eye_beam_start", s_target.origin);
     }
-    s_target namespace_48c05c81::function_903f6b36(1);
+    s_target zm_stalingrad_util::function_903f6b36(1);
     self thread function_8bc8cc13(var_f2bd831, a_s_switches);
 }
 
-// Namespace namespace_a26e93d0
+// Namespace zm_stalingrad_eye_beam_trap
 // Params 2, eflags: 0x1 linked
 // Checksum 0xcafafa64, Offset: 0xc40
 // Size: 0x702
@@ -122,7 +122,7 @@ function function_8bc8cc13(var_f2bd831, a_s_switches) {
     var_cbf27250 = self.var_cbf27250;
     exploder::exploder(var_cbf27250);
     var_f7261317 = getent("eye_beam_volume_" + var_47326.script_string, "targetname");
-    var_f2bd831 thread namespace_dcf9c464::function_176ac3fa();
+    var_f2bd831 thread zm_stalingrad_vo::function_176ac3fa();
     level clientfield::set("eye_beam_rumble_" + var_47326.script_string, 1);
     level thread function_78f79e79(1);
     n_total_kills = 0;
@@ -153,7 +153,7 @@ function function_8bc8cc13(var_f2bd831, a_s_switches) {
                 e_player thread function_6009178e(var_47326);
             }
         }
-        wait(0.25);
+        wait 0.25;
         n_total_time = (gettime() - n_start_time) / 1000;
     }
     if (isdefined(var_f2bd831)) {
@@ -168,14 +168,14 @@ function function_8bc8cc13(var_f2bd831, a_s_switches) {
         playsoundatposition("zmb_robo_eye_beam_stop", s_target.origin);
     }
     level clientfield::set("eye_beam_rumble_" + var_47326.script_string, 0);
-    wait(60);
-    s_target namespace_48c05c81::function_903f6b36(0);
+    wait 60;
+    s_target zm_stalingrad_util::function_903f6b36(0);
     foreach (s_target in a_s_switches) {
         s_target.s_unitrigger flag::clear("beam_cooldown");
     }
 }
 
-// Namespace namespace_a26e93d0
+// Namespace zm_stalingrad_eye_beam_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0x94c79d6c, Offset: 0x1350
 // Size: 0xbc
@@ -190,12 +190,12 @@ function function_78f79e79(var_66a9cd70) {
     mdl_head stoploopsound(1);
 }
 
-// Namespace namespace_a26e93d0
+// Namespace zm_stalingrad_eye_beam_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0x46473d35, Offset: 0x1418
 // Size: 0x166
 function function_6009178e(var_47326) {
-    level endon(#"hash_4b40ae8");
+    level endon(#"tesla_coil_cooldown");
     /#
         if (isgodmode(self)) {
             return;
@@ -210,7 +210,7 @@ function function_6009178e(var_47326) {
             self playrumbleonentity("damage_heavy");
             self dodamage(40, self.origin, undefined, undefined, undefined, "MOD_BURNED");
         }
-        wait(0.2);
+        wait 0.2;
     }
     self clientfield::set_to_player("eye_beam_trap_postfx", 0);
     self.var_5a524cf9 = undefined;

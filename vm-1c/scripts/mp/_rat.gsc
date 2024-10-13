@@ -15,7 +15,7 @@
     // Checksum 0x4188acbd, Offset: 0x130
     // Size: 0x34
     function autoexec function_2dc19561() {
-        system::register("<unknown string>", &__init__, undefined, undefined);
+        system::register("<dev string:x28>", &__init__, undefined, undefined);
     }
 
     // Namespace rat
@@ -26,8 +26,8 @@
         rat_shared::init();
         level.rat.common.gethostplayer = &util::gethostplayer;
         level.rat.deathcount = 0;
-        rat_shared::addratscriptcmd("<unknown string>", &rscaddenemy);
-        setdvar("<unknown string>", 0);
+        rat_shared::addratscriptcmd("<dev string:x2c>", &rscaddenemy);
+        setdvar("<dev string:x35>", 0);
     }
 
     // Namespace rat
@@ -36,19 +36,19 @@
     // Size: 0x284
     function rscaddenemy(params) {
         player = [[ level.rat.common.gethostplayer ]]();
-        team = "<unknown string>";
-        if (isdefined(player.pers["<unknown string>"])) {
-            team = util::getotherteam(player.pers["<unknown string>"]);
+        team = "<dev string:x45>";
+        if (isdefined(player.pers["<dev string:x4a>"])) {
+            team = util::getotherteam(player.pers["<dev string:x4a>"]);
         }
         bot = dev::getormakebot(team);
         if (!isdefined(bot)) {
-            println("<unknown string>");
-            ratreportcommandresult(params._id, 0, "<unknown string>");
+            println("<dev string:x4f>");
+            ratreportcommandresult(params._id, 0, "<dev string:x4f>");
             return;
         }
         bot thread testenemy(team);
         bot thread deathcounter();
-        wait(2);
+        wait 2;
         pos = (float(params.x), float(params.y), float(params.z));
         bot setorigin(pos);
         if (isdefined(params.ax)) {
@@ -64,11 +64,11 @@
     // Size: 0x66
     function testenemy(team) {
         self endon(#"disconnect");
-        while (!isdefined(self.pers["<unknown string>"])) {
-            wait(0.05);
+        while (!isdefined(self.pers["<dev string:x4a>"])) {
+            wait 0.05;
         }
         if (level.teambased) {
-            self notify(#"menuresponse", game["<unknown string>"], team);
+            self notify(#"menuresponse", game["<dev string:x69>"], team);
         }
     }
 
@@ -79,7 +79,7 @@
     function deathcounter() {
         self waittill(#"death");
         level.rat.deathcount++;
-        setdvar("<unknown string>", level.rat.deathcount);
+        setdvar("<dev string:x35>", level.rat.deathcount);
     }
 
 #/

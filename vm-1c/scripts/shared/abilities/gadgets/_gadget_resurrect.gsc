@@ -164,7 +164,7 @@ function function_56e9efb7() {
             smokeeffect thread function_70fc2bc3(self);
             return;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -195,7 +195,7 @@ function function_f668c085(player) {
 function function_815c75f8(player) {
     self endon(#"death");
     player waittill(#"player_input_revive");
-    wait(0.5);
+    wait 0.5;
     self delete();
 }
 
@@ -230,7 +230,7 @@ function function_f00b1078(slot, weapon) {
 // Checksum 0x77d530be, Offset: 0xec8
 // Size: 0x4c
 function function_21432960(slot, weapon) {
-    wait(0.1);
+    wait 0.1;
     self gadgetsetactivatetime(slot, gettime());
     self thread function_8a4ecd82(weapon);
 }
@@ -307,7 +307,7 @@ function function_e8ed3d71(slot) {
             self.resurrect_origin = self.origin;
             self.resurrect_angles = self.angles;
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -318,7 +318,7 @@ function function_e8ed3d71(slot) {
 function function_289e75a(time) {
     self endon(#"disconnect");
     self clientfield::set("resurrecting", 1);
-    wait(time);
+    wait time;
     self clientfield::set("resurrecting", 0);
 }
 
@@ -330,7 +330,7 @@ function function_648516ce(time, msg) {
     self endon(#"disconnect");
     self endon(#"game_ended");
     self endon(msg);
-    wait(time);
+    wait time;
     self notify(msg);
 }
 
@@ -347,7 +347,7 @@ function function_9a4b6cfa(msg) {
             self flagsys::set("gadget_resurrect_activated");
             self notify(msg);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -364,7 +364,7 @@ function function_858818cc(msg, time) {
     }
     time = int(time + 1);
     randwait = randomint(time);
-    wait(randwait);
+    wait randwait;
     self flagsys::set("gadget_resurrect_activated");
     self notify(msg);
 }
@@ -378,7 +378,7 @@ function function_5d68587() {
     fxorg = spawn("script_model", self.resurrect_origin + offset);
     fxorg setmodel("tag_origin");
     fx = playfxontag("player/fx_plyr_revive", fxorg, "tag_origin");
-    self waittill(#"hash_d67928ae");
+    self waittill(#"resurrect_time_or_activate");
     fxorg delete();
 }
 
@@ -423,7 +423,7 @@ function function_1be002d(slot, weapon) {
     self thread function_9a4b6cfa("resurrect_time_or_activate");
     self thread function_858818cc("resurrect_time_or_activate", var_d99f16e2);
     self thread function_5d68587();
-    self waittill(#"hash_d67928ae");
+    self waittill(#"resurrect_time_or_activate");
     self flagsys::clear("gadget_resurrect_pending");
     if (self flagsys::get("gadget_resurrect_activated")) {
         self thread function_3de8b43c();
@@ -502,7 +502,7 @@ function function_f3f47570() {
     self function_73f25579();
     self thread function_1efa08b4();
     self thread function_b6ec4f96();
-    wait(1.4);
+    wait 1.4;
     self thread function_272118e1();
     self thread function_b53e6337();
     self thread function_56c2b39b();
@@ -544,7 +544,7 @@ function function_56c2b39b() {
         if (self oob::istouchinganyoobtrigger()) {
             self function_91d24dda();
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -558,7 +558,7 @@ function function_b53e6337() {
     self endon(#"disconnect");
     self endon(#"death");
     level endon(#"game_ended");
-    wait(4);
+    wait 4;
     self playsound("mpl_rejack_suicide_timeout");
     self thread function_ab495fcb(-30);
     self function_91d24dda();
@@ -574,7 +574,7 @@ function function_b6ec4f96() {
     self endon(#"death");
     level endon(#"game_ended");
     while (self usebuttonpressed()) {
-        wait(1);
+        wait 1;
     }
     if (isdefined(self.laststand) && self.laststand) {
         starttime = gettime();
@@ -587,7 +587,7 @@ function function_b6ec4f96() {
                 self playsound("mpl_rejack_suicide");
                 return;
             }
-            wait(0.01);
+            wait 0.01;
         }
     }
 }
@@ -614,14 +614,14 @@ function function_1efa08b4() {
     self endon(#"death");
     level endon(#"game_ended");
     while (self offhandspecialbuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
     self.var_2de01560 = 0;
     while (!self.var_2de01560) {
         if (self offhandspecialbuttonpressed()) {
             self.var_2de01560 = 1;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -636,7 +636,7 @@ function function_272118e1() {
     level endon(#"game_ended");
     if (isdefined(self.laststand) && self.laststand) {
         while (true) {
-            wait(0.05);
+            wait 0.05;
             if (isdefined(self.var_2de01560) && self.var_2de01560) {
                 self notify(#"player_input_revive");
                 if (isdefined(level.start_player_health_regen)) {
@@ -675,7 +675,7 @@ function function_73f25579() {
 // Size: 0x4c
 function function_ecbc696f() {
     self endon(#"disconnect");
-    wait(1.5);
+    wait 1.5;
     self clientfield::set_player_uimodel("hudItems.rejack.activationWindowEntered", 0);
     self util::show_hud(1);
 }

@@ -5,9 +5,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_28a54cd6;
+#namespace zm_island_side_ee_doppleganger;
 
-// Namespace namespace_28a54cd6
+// Namespace zm_island_side_ee_doppleganger
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x148
 // Size: 0x4

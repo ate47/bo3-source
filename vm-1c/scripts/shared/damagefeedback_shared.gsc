@@ -67,12 +67,12 @@ function should_play_sound(mod) {
         return false;
     }
     switch (mod) {
-    case 4:
-    case 5:
-    case 6:
-    case 7:
-    case 8:
-    case 9:
+    case "MOD_CRUSH":
+    case "MOD_GRENADE_SPLASH":
+    case "MOD_HIT_BY_OBJECT":
+    case "MOD_MELEE":
+    case "MOD_MELEE_ASSASSINATE":
+    case "MOD_MELEE_WEAPON_BUTT":
         return false;
     }
     return true;
@@ -117,7 +117,7 @@ function update(mod, inflictor, perkfeedback, weapon, victim, psoffsettime, shit
     if (should_play_sound(mod)) {
         if (isdefined(victim) && isdefined(victim.victimsoundmod)) {
             switch (victim.victimsoundmod) {
-            case 12:
+            case "safeguard_robot":
                 hitalias = "mpl_hit_alert_escort";
                 break;
             default:
@@ -126,7 +126,7 @@ function update(mod, inflictor, perkfeedback, weapon, victim, psoffsettime, shit
             }
         } else if (isdefined(inflictor) && isdefined(inflictor.soundmod)) {
             switch (inflictor.soundmod) {
-            case 32:
+            case "player":
                 if (isdefined(victim.isaiclone) && isdefined(victim) && victim.isaiclone) {
                     hitalias = "mpl_hit_alert_clone";
                 } else if (isdefined(victim) && isplayer(victim) && victim flagsys::get("gadget_armor_on") && armor::function_4a835afe(inflictor, weapon, mod, shitloc)) {
@@ -139,31 +139,31 @@ function update(mod, inflictor, perkfeedback, weapon, victim, psoffsettime, shit
                     hitalias = "mpl_hit_alert";
                 }
                 break;
-            case 29:
+            case "heatwave":
                 hitalias = "mpl_hit_alert_heatwave";
                 break;
-            case 30:
+            case "heli":
                 hitalias = "mpl_hit_alert_air";
                 break;
-            case 31:
+            case "hpm":
                 hitalias = "mpl_hit_alert_hpm";
                 break;
-            case 35:
+            case "taser_spike":
                 hitalias = "mpl_hit_alert_taser_spike";
                 break;
-            case 26:
-            case 34:
+            case "dog":
+            case "straferun":
                 break;
-            case 28:
+            case "firefly":
                 hitalias = "mpl_hit_alert_firefly";
                 break;
-            case 27:
+            case "drone_land":
                 hitalias = "mpl_hit_alert_air";
                 break;
-            case 33:
+            case "raps":
                 hitalias = "mpl_hit_alert_air";
                 break;
-            case 25:
+            case "default_loud":
                 hitalias = "mpl_hit_heli_gunner";
                 break;
             default:
@@ -188,13 +188,13 @@ function update(mod, inflictor, perkfeedback, weapon, victim, psoffsettime, shit
     if (isdefined(perkfeedback)) {
         if (isdefined(self.hud_damagefeedback_additional)) {
             switch (perkfeedback) {
-            case 39:
+            case "flakjacket":
                 self.hud_damagefeedback_additional setshader("damage_feedback_flak", 24, 48);
                 break;
-            case 40:
+            case "tacticalMask":
                 self.hud_damagefeedback_additional setshader("damage_feedback_tac", 24, 48);
                 break;
-            case 16:
+            case "armor":
                 self.hud_damagefeedback_additional setshader("damage_feedback_armor", 24, 48);
                 break;
             }
@@ -282,7 +282,7 @@ function kill_hitmarker_fade() {
     self endon(#"kill_hitmarker_fade");
     self endon(#"disconnect");
     self.hud_damagefeedback.alpha = 1;
-    wait(0.25);
+    wait 0.25;
     self.hud_damagefeedback fadeovertime(0.3);
     self.hud_damagefeedback.alpha = 0;
 }
@@ -328,7 +328,7 @@ function function_7fef183e(hitent) {
     if (!isplayer(hitent)) {
         return;
     }
-    wait(0.05);
+    wait 0.05;
     if (!isdefined(self.var_3f443551)) {
         self.var_3f443551 = [];
         var_1dbcf329 = hitent getentitynumber();

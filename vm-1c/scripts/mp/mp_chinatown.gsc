@@ -6,16 +6,16 @@
 #using scripts/shared/compass;
 #using scripts/codescripts/struct;
 
-#namespace namespace_3411baba;
+#namespace mp_chinatown;
 
-// Namespace namespace_3411baba
+// Namespace mp_chinatown
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd3fe3b56, Offset: 0x368
 // Size: 0x514
 function main() {
     precache();
-    namespace_fc074aef::main();
-    namespace_92e32ef6::main();
+    mp_chinatown_fx::main();
+    mp_chinatown_sound::main();
     level.remotemissile_kill_z = -435 + 50;
     load::main();
     compass::setupminimap("compass_map_mp_chinatown");
@@ -46,7 +46,7 @@ function main() {
     level.cleandepositpoints = array((-97.928, -7.61413, 0.125), (1384.68, 1934.86, 8.125), (438.717, 1, 144.125), (857.493, -1991.98, 24.125));
 }
 
-// Namespace namespace_3411baba
+// Namespace mp_chinatown
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x888
 // Size: 0x4

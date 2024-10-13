@@ -33,7 +33,7 @@ function __init__() {
 // Checksum 0x2fe5353d, Offset: 0x1b0
 // Size: 0x2ba
 function create(name, origin, team, shader, alpha, scale) {
-    assert(isdefined(level.teams[team]) || team == "<unknown string>");
+    assert(isdefined(level.teams[team]) || team == "<dev string:x28>");
     objpoint = function_c120f6a5(name);
     if (isdefined(objpoint)) {
         delete(objpoint);
@@ -156,10 +156,10 @@ function function_3ae8114() {
     while (self.isflashing) {
         self fadeovertime(0.75);
         self.alpha = 0.35 * self.basealpha;
-        wait(0.75);
+        wait 0.75;
         self fadeovertime(0.75);
         self.alpha = self.basealpha;
-        wait(0.75);
+        wait 0.75;
     }
     self.alpha = self.basealpha;
 }

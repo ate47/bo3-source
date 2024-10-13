@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_f0d8a318;
+#namespace mp_ethiopia_sound;
 
-// Namespace namespace_f0d8a318
+// Namespace mp_ethiopia_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x90
 // Size: 0x4

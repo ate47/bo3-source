@@ -14,52 +14,52 @@ function function_88b58a8a(itemname) {
         return false;
     }
     switch (itemname) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-    case 7:
-    case 8:
-    case 9:
-    case 10:
-    case 11:
-    case 12:
-    case 13:
-    case 14:
-    case 15:
-    case 16:
-    case 17:
-    case 18:
-    case 19:
-    case 20:
-    case 21:
-    case 22:
-    case 23:
-    case 24:
-    case 25:
-    case 26:
-    case 27:
-    case 28:
-    case 29:
-    case 30:
-    case 31:
-    case 32:
-    case 33:
-    case 34:
-    case 35:
-    case 36:
-    case 37:
-    case 38:
-    case 39:
-    case 40:
-    case 41:
-    case 42:
-    case 43:
-    case 44:
-    case 45:
+    case "KILLSTREAK_COUNTER_UAV":
+    case "KILLSTREAK_RAPS":
+    case "KILLSTREAK_RECON":
+    case "KILLSTREAK_SATELLITE":
+    case "KILLSTREAK_SENTINEL":
+    case "WEAPON_AR_ACCURATE":
+    case "WEAPON_AR_CQB":
+    case "WEAPON_AR_DAMAGE":
+    case "WEAPON_AR_FASTBURST":
+    case "WEAPON_AR_LONGBURST":
+    case "WEAPON_AR_MARKSMAN":
+    case "WEAPON_AR_STANDARD":
+    case "WEAPON_BOUNCINGBETTY":
+    case "WEAPON_EMPGRENADE":
+    case "WEAPON_FLASHBANG":
+    case "WEAPON_FRAGGRENADE":
+    case "WEAPON_HATCHET":
+    case "WEAPON_INCENDIARY_GRENADE":
+    case "WEAPON_KNIFE_LOADOUT":
+    case "WEAPON_LAUNCHER_LOCKONLY":
+    case "WEAPON_LAUNCHER_STANDARD":
+    case "WEAPON_LMG_CQB":
+    case "WEAPON_LMG_HEAVY":
+    case "WEAPON_LMG_LIGHT":
+    case "WEAPON_LMG_SLOWFIRE":
+    case "WEAPON_PISTOL_BURST":
+    case "WEAPON_PISTOL_FULLAUTO":
+    case "WEAPON_PISTOL_STANDARD":
+    case "WEAPON_PROXIMITY_GRENADE":
+    case "WEAPON_SHOTGUN_FULLAUTO":
+    case "WEAPON_SHOTGUN_PRECISION":
+    case "WEAPON_SHOTGUN_PUMP":
+    case "WEAPON_SHOTGUN_SEMIAUTO":
+    case "WEAPON_SMG_BURST":
+    case "WEAPON_SMG_CAPACITY":
+    case "WEAPON_SMG_FASTFIRE":
+    case "WEAPON_SMG_LONGRANGE":
+    case "WEAPON_SMG_STANDARD":
+    case "WEAPON_SMG_VERSATILE":
+    case "WEAPON_SNIPER_CHARGESHOT":
+    case "WEAPON_SNIPER_FASTBOLT":
+    case "WEAPON_SNIPER_FASTSEMI":
+    case "WEAPON_SNIPER_POWERBOLT":
+    case "WEAPON_STICKY_GRENADE":
+    case "WEAPON_STUN_GRENADE":
+    case "WEAPON_WILLY_PETE":
         return true;
     }
     return false;
@@ -297,9 +297,9 @@ function on_bot_connect() {
     if (isdefined(self.pers["bot_loadout"])) {
         return;
     }
-    wait(0.1);
+    wait 0.1;
     if (self getentitynumber() % 2 == 0) {
-        wait(0.05);
+        wait 0.05;
     }
     self bot::set_rank();
     self botsetrandomcharactercustomization();

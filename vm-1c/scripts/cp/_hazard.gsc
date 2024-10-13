@@ -105,7 +105,7 @@ function function_b6af57a8() {
         var_8601d520 = getarraykeys(level.var_7817fe3c);
         foreach (str_name in var_8601d520) {
             self do_damage(str_name, 3, undefined);
-            wait(0.1);
+            wait 0.1;
         }
     }
 }
@@ -131,7 +131,7 @@ function function_a421f870() {
 // Checksum 0x6f222bbb, Offset: 0x870
 // Size: 0x56
 function function_12231466(str_name) {
-    assert(isdefined(level.var_7817fe3c[str_name]), "hudItems.hess1.type" + str_name + "hudItems.hess1.type");
+    assert(isdefined(level.var_7817fe3c[str_name]), "<dev string:x28>" + str_name + "<dev string:x3e>");
     self.var_7dec7e93[str_name] = 0;
 }
 
@@ -140,7 +140,7 @@ function function_12231466(str_name) {
 // Checksum 0xbfde7e7b, Offset: 0x8d0
 // Size: 0x1c6
 function do_damage(str_name, n_damage, e_ent, disable_ui) {
-    assert(isdefined(level.var_7817fe3c[str_name]), "hudItems.hess1.type" + str_name + "hudItems.hess1.type");
+    assert(isdefined(level.var_7817fe3c[str_name]), "<dev string:x28>" + str_name + "<dev string:x3e>");
     if (!isdefined(disable_ui)) {
         disable_ui = 0;
     }
@@ -154,10 +154,10 @@ function do_damage(str_name, n_damage, e_ent, disable_ui) {
         return true;
     }
     switch (str_name) {
-    case 3:
+    case "o2":
         str_mod = "MOD_DROWN";
         break;
-    case 1:
+    case "heat":
         str_mod = "MOD_BURNED";
         break;
     default:
@@ -173,7 +173,7 @@ function do_damage(str_name, n_damage, e_ent, disable_ui) {
 // Checksum 0xe9fcf0c3, Offset: 0xaa0
 // Size: 0x50
 function function_eaa9157d(str_name) {
-    assert(isdefined(self.var_7dec7e93[str_name]), "hudItems.hess1.type" + str_name + "hudItems.hess1.type");
+    assert(isdefined(self.var_7dec7e93[str_name]), "<dev string:x28>" + str_name + "<dev string:x3e>");
     return self.var_7dec7e93[str_name];
 }
 
@@ -182,7 +182,7 @@ function function_eaa9157d(str_name) {
 // Checksum 0xe1b74171, Offset: 0xaf8
 // Size: 0x68
 function function_b78a859e(str_name) {
-    assert(isdefined(self.var_7dec7e93[str_name]), "hudItems.hess1.type" + str_name + "hudItems.hess1.type");
+    assert(isdefined(self.var_7dec7e93[str_name]), "<dev string:x28>" + str_name + "<dev string:x3e>");
     return self.var_7dec7e93[str_name] / level.var_7817fe3c[str_name].var_4758598;
 }
 
@@ -194,7 +194,7 @@ function function_459e5eff(str_name, var_5b9ad5b3) {
     if (!isdefined(var_5b9ad5b3)) {
         var_5b9ad5b3 = 1;
     }
-    assert(isdefined(self.var_6c3e78bb[str_name]), "hudItems.hess1.type" + str_name + "hudItems.hess1.type");
+    assert(isdefined(self.var_6c3e78bb[str_name]), "<dev string:x28>" + str_name + "<dev string:x3e>");
     self.var_6c3e78bb[str_name] = var_5b9ad5b3;
 }
 
@@ -236,7 +236,7 @@ function private function_be12f5f8(str_name, e_ent, disable_ui) {
         if (isdefined(var_1fc26863.var_f313500d)) {
             [[ var_1fc26863.var_f313500d ]](n_frac, e_ent);
         }
-        wait(0.05);
+        wait 0.05;
         if (self.var_6c3e78bb[str_name] == 1) {
             self.var_7dec7e93[str_name] = self.var_7dec7e93[str_name] - var_1fc26863.n_regen_rate * 0.05;
         }
@@ -249,7 +249,7 @@ function private function_be12f5f8(str_name, e_ent, disable_ui) {
         self.var_8657b6f[var_c8fe868d] = 0;
         return;
     }
-    assert("hudItems.hess1.type");
+    assert("<dev string:x4c>");
 }
 
 // Namespace hazard
@@ -286,7 +286,7 @@ function function_476442fb(var_e9a83a8e, e_ent) {
 function function_503a50a8() {
     self endon(#"death");
     self clientfield::set_to_player("player_cam_bubbles", 1);
-    wait(4);
+    wait 4;
     self clientfield::set_to_player("player_cam_bubbles", 0);
 }
 
@@ -335,7 +335,7 @@ function function_fda01c41(alias) {
     self endon(#"disconnect");
     level endon(#"save_restore");
     while (self isplayerunderwater()) {
-        wait(0.1);
+        wait 0.1;
     }
     self playsound(alias);
 }
@@ -356,7 +356,7 @@ function function_e9b126ef(n_time, var_827d6de0) {
 // Checksum 0x40dde053, Offset: 0x1430
 // Size: 0x1fa
 function function_ccddb105(str_hazard, var_6d20ee14, n_time, var_827d6de0) {
-    assert(isdefined(level.var_7817fe3c[str_hazard]), "hudItems.hess1.type" + str_hazard + "hudItems.hess1.type");
+    assert(isdefined(level.var_7817fe3c[str_hazard]), "<dev string:x28>" + str_hazard + "<dev string:x3e>");
     self notify("stop_hazard_dot_" + str_hazard);
     self endon("stop_hazard_dot_" + str_hazard);
     self endon(#"death");
@@ -373,7 +373,7 @@ function function_ccddb105(str_hazard, var_6d20ee14, n_time, var_827d6de0) {
         }
     }
     for (n_damage = var_a6321c17 / n_time; true; n_damage = var_6d20ee14) {
-        wait(1);
+        wait 1;
         var_dd075cd2 = self do_damage(str_hazard, n_damage);
         var_7ba0abc9 = self function_b78a859e(str_hazard);
         if (n_damage > var_6d20ee14 && var_7ba0abc9 >= var_827d6de0) {

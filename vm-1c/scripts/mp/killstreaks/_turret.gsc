@@ -194,7 +194,7 @@ function hackedcallbackpost(hacker) {
 function play_deploy_anim_after_wait(wait_time) {
     turret = self;
     turret endon(#"death");
-    wait(wait_time);
+    wait wait_time;
     turret play_deploy_anim();
 }
 
@@ -312,16 +312,16 @@ function ondeath(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, sh
     }
     turretvehicle vehicle_death::death_fx();
     turretvehicle playsound("mpl_m_turret_exp");
-    wait(0.1);
+    wait 0.1;
     turretvehicle ghost();
     turretvehicle notsolid();
     turretvehicle util::waittill_any_timeout(2, "remote_weapon_end");
     if (isdefined(turretvehicle)) {
         while (turretvehicle.controlled || isdefined(turretvehicle) && !isdefined(turretvehicle.owner)) {
-            wait(0.05);
+            wait 0.05;
         }
         turretvehicle.dontfreeme = undefined;
-        wait(0.5);
+        wait 0.5;
         if (isdefined(turretvehicle)) {
             turretvehicle delete();
         }
@@ -382,7 +382,7 @@ function enableturretafterwait(wait_time) {
         self.owner endon(#"disconnect");
         self.owner endon(#"joined_spectators");
     }
-    wait(wait_time);
+    wait wait_time;
     self enable(0, 0);
 }
 
@@ -439,7 +439,7 @@ function turret_laser_watch() {
         } else if (islaseron(turretvehicle)) {
             turretvehicle enable_laser(0, 0);
         }
-        wait(0.25);
+        wait 0.25;
     }
 }
 
@@ -481,14 +481,14 @@ function turretscanning() {
     turretvehicle endon(#"end_turret_scanning");
     var_58ed2f46 = turretvehicle _get_turret_data(0);
     turretvehicle.do_not_clear_targets_during_think = 1;
-    wait(0.8);
+    wait 0.8;
     while (true) {
         if (turretvehicle.controlled) {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         if (turretvehicle does_have_target(0)) {
-            wait(0.25);
+            wait 0.25;
             continue;
         }
         /#
@@ -502,7 +502,7 @@ function turretscanning() {
             turretvehicle function_d013f7fa((0, (var_58ed2f46.rightarc - 10) * -1, 0), 0);
             turretvehicle.scanpos = "left";
         }
-        wait(2.5);
+        wait 2.5;
     }
 }
 

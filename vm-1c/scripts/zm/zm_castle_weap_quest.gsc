@@ -22,9 +22,9 @@
 
 #using_animtree("zm_castle");
 
-#namespace namespace_2a78f3c;
+#namespace zm_castle_weap_quest;
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x2
 // Checksum 0xedffc252, Offset: 0x9c8
 // Size: 0x3c
@@ -32,13 +32,13 @@ function autoexec function_2dc19561() {
     system::register("zm_castle_weap_quest", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xee6081cf, Offset: 0xa10
 // Size: 0x2e8
 function __init__() {
     /#
-        level flag::init("dragon_position");
+        level flag::init("<dev string:x28>");
     #/
     flag::init("soul_catchers_charged");
     level.var_b45cec00 = [];
@@ -64,7 +64,7 @@ function __init__() {
     level.n_soul_catchers_charged = 0;
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb51f8491, Offset: 0xd00
 // Size: 0x3c
@@ -72,7 +72,7 @@ function __main__() {
     array::thread_all(level.zombie_spawners, &spawner::add_spawn_function, &function_162da110);
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x49e64fec, Offset: 0xd48
 // Size: 0x252
@@ -101,18 +101,18 @@ function function_d5070a46() {
     var_d198ed8e["front"] = zm_castle%rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_f;
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x33c0043, Offset: 0xfa8
 // Size: 0x12c
 function soul_catcher_state_manager() {
-    wait(1);
+    wait 1;
     level clientfield::set(self.script_parameters, 7);
     e_player = self waittill(#"first_zombie_killed_in_zone");
     level clientfield::set(self.script_parameters, 1);
     anim_length = getanimlength(zm_castle%rtrg_o_zm_dlc1_dragonhead_intro);
-    e_player thread namespace_97ddfc0d::function_ad27f488(anim_length);
-    wait(anim_length);
+    e_player thread zm_castle_vo::function_ad27f488(anim_length);
+    wait anim_length;
     while (!self.is_charged) {
         level clientfield::set(self.script_parameters, 2);
         self util::waittill_either("fully_charged", "finished_eating");
@@ -120,7 +120,7 @@ function soul_catcher_state_manager() {
     level clientfield::set(self.script_parameters, 6);
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x76b43303, Offset: 0x10e0
 // Size: 0x1c
@@ -128,7 +128,7 @@ function function_162da110() {
     self.actor_killed_override = &function_b57a0484;
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 8, eflags: 0x1 linked
 // Checksum 0x6d14a0eb, Offset: 0x1108
 // Size: 0x1b4
@@ -153,7 +153,7 @@ function function_b57a0484(einflictor, attacker, idamage, smeansofdeath, sweapon
     }
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x53a5424, Offset: 0x12c8
 // Size: 0xaa
@@ -171,7 +171,7 @@ function function_1fba78c8() {
     return false;
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 8, eflags: 0x1 linked
 // Checksum 0xa8f1feb1, Offset: 0x1380
 // Size: 0x3f0
@@ -203,7 +203,7 @@ function function_d712edd5(einflictor, attacker, idamage, smeansofdeath, weapon,
     }
     var_f41bc81e = zm_castle%ai_zm_dlc1_dragonhead_zombie_impact;
     var_427f919 = getanimlength(var_f41bc81e) + 0.2;
-    wait(var_427f919);
+    wait var_427f919;
     level clientfield::set(var_56269cbf.script_parameters, n_eating_anim);
     if (n_eating_anim == 3) {
         var_a8b20b82 = getanimlength(zm_castle%rtrg_o_zm_dlc1_dragonhead_consume_pre_eat_f) + getanimlength(zm_castle%rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_f);
@@ -212,9 +212,9 @@ function function_d712edd5(einflictor, attacker, idamage, smeansofdeath, weapon,
     } else {
         var_a8b20b82 = getanimlength(zm_castle%rtrg_o_zm_dlc1_dragonhead_consume_pre_eat_l) + getanimlength(zm_castle%rtrg_ai_zm_dlc1_dragonhead_consume_zombie_align_l);
     }
-    wait(var_a8b20b82 - 0.5);
+    wait var_a8b20b82 - 0.5;
     var_56269cbf.var_98730ffa++;
-    wait(0.5);
+    wait 0.5;
     var_56269cbf notify(#"finished_eating");
     var_56269cbf.var_252d95de = 0;
     if (isdefined(self)) {
@@ -223,7 +223,7 @@ function function_d712edd5(einflictor, attacker, idamage, smeansofdeath, weapon,
     return true;
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x0
 // Checksum 0xeb26829e, Offset: 0x1778
 // Size: 0xd8
@@ -247,18 +247,18 @@ function function_5955ab6c() {
     return 5;
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb5c066b4, Offset: 0x1858
 // Size: 0x4c
 function function_edf4b761() {
     anim_length = getanimlength(zm_castle%rtrg_o_zm_dlc1_dragonhead_intro);
-    wait(anim_length);
+    wait anim_length;
     self notify(#"hash_f77f4f21");
     self.var_252d95de = 0;
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x510b4979, Offset: 0x18b0
 // Size: 0x104
@@ -275,7 +275,7 @@ function which_eating_anim() {
     return 5;
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4c15307a, Offset: 0x19c0
 // Size: 0x104
@@ -288,7 +288,7 @@ function soul_catcher_check() {
             self notify(#"fully_charged");
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
     if (level.n_soul_catchers_charged == 1) {
         self thread function_54af3e05();
@@ -297,12 +297,12 @@ function soul_catcher_check() {
     if (level.n_soul_catchers_charged >= level.var_b45cec00.size) {
         level flag::set("soul_catchers_charged");
         self thread function_b7dd8bb3();
-        level.var_63e17dd5 thread namespace_97ddfc0d::function_439c7159();
+        level.var_63e17dd5 thread zm_castle_vo::function_439c7159();
         level thread function_a01a53de();
     }
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0xaaa7a358, Offset: 0x1ad0
 // Size: 0xbc
@@ -319,7 +319,7 @@ function function_e775e6a4(var_63530679) {
     }
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1b98
 // Size: 0x4
@@ -327,7 +327,7 @@ function function_7b154c37() {
     
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x1ba8
 // Size: 0x4
@@ -335,7 +335,7 @@ function function_54af3e05() {
     
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x1bb8
 // Size: 0x4
@@ -343,20 +343,20 @@ function function_b7dd8bb3() {
     
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7450503b, Offset: 0x1bc8
 // Size: 0x294
 function function_a01a53de() {
     /#
-        if (level flag::get("dragon_position")) {
+        if (level flag::get("<dev string:x28>")) {
             return;
         }
-        level flag::set("dragon_position");
+        level flag::set("<dev string:x28>");
     #/
     var_14ea0734 = struct::get("base_bow_pickup_struct", "targetname");
     level thread scene::play("p7_fxanim_zm_castle_quest_base_bow_idle_bundle");
-    wait(0.25);
+    wait 0.25;
     level.var_15acc392 = getent("base_bow_pickup", "targetname");
     var_14ea0734 function_bb60c970();
     array::thread_all(level.players, &function_9376cff9);
@@ -370,11 +370,11 @@ function function_a01a53de() {
     level scene::stop("p7_fxanim_zm_castle_quest_base_bow_idle_bundle");
     callback::remove_on_connect(&function_c9cdf051);
     zm_unitrigger::unregister_unitrigger(var_14ea0734.var_67b5dd94);
-    wait(5);
+    wait 5;
     level thread struct::function_368120a1("scene", "p7_fxanim_zm_castle_quest_base_bow_idle_bundle");
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe7c7b2cd, Offset: 0x1e68
 // Size: 0x160
@@ -400,7 +400,7 @@ function function_9376cff9() {
     }
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4c46ce70, Offset: 0x1fd0
 // Size: 0xf6
@@ -411,7 +411,7 @@ function function_e464049a() {
     return false;
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe54d7704, Offset: 0x20d0
 // Size: 0xe0
@@ -430,7 +430,7 @@ function function_fb853e2c() {
     }
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x20b82f6f, Offset: 0x21b8
 // Size: 0xc0
@@ -448,7 +448,7 @@ function function_71d4f620() {
     self.var_8f97fa0b = var_890bca07.clipsize;
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc80fa01c, Offset: 0x2280
 // Size: 0x1c
@@ -456,7 +456,7 @@ function function_c9cdf051() {
     self thread function_9376cff9();
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5d3f38e3, Offset: 0x22a8
 // Size: 0xfc
@@ -474,7 +474,7 @@ function function_bb60c970() {
     zm_unitrigger::register_static_unitrigger(s_unitrigger, &function_26e22a99);
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0x90a21b12, Offset: 0x23b0
 // Size: 0x80
@@ -487,7 +487,7 @@ function function_65fb1c47(e_player) {
     return true;
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x86251b11, Offset: 0x2438
 // Size: 0x2b8
@@ -508,7 +508,7 @@ function function_26e22a99() {
         }
         var_e1041201 = getweapon("elemental_bow");
         e_who zm_weapons::weapon_give(var_e1041201, 0, 0, 1);
-        e_who thread namespace_97ddfc0d::function_db92bdf2();
+        e_who thread zm_castle_vo::base_bow_picked_up();
         if (isdefined(e_who.var_e8e28d9e)) {
             e_who setweaponammostock(var_e1041201, e_who.var_e8e28d9e);
         }
@@ -526,7 +526,7 @@ function function_26e22a99() {
     }
 }
 
-// Namespace namespace_2a78f3c
+// Namespace zm_castle_weap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd8753211, Offset: 0x26f8
 // Size: 0xc6

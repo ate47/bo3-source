@@ -35,13 +35,13 @@ function function_6383d314(str_objective, var_74cd64bc) {
         load::function_73adcefc();
         namespace_c7062b04::function_c63fb1d();
         load::function_c32ba481();
-        level thread namespace_ce0e5f06::function_30ec5bf7(1);
+        level thread newworld_util::function_30ec5bf7(1);
     }
-    namespace_ce0e5f06::function_3383b379();
+    newworld_util::player_snow_fx();
     level scene::init("cin_new_17_01_wakingup_1st_reveal");
     level scene::init("p7_fxanim_cp_newworld_curtain_bundle");
     util::function_d8eaed3d(10);
-    namespace_ce0e5f06::function_83a7d040();
+    newworld_util::function_83a7d040();
     util::streamer_wait();
     function_c3e8639();
     level thread namespace_e38c3c58::function_9c65cf9a();
@@ -98,7 +98,7 @@ function function_c3e8639() {
     level.var_fc1953ce dialog::say("tayr_there_was_no_way_to_0", 0.5, 1);
     level.var_fc1953ce dialog::say("tayr_your_dni_may_show_yo_0", 0.5, 1);
     level.var_fc1953ce dialog::say("tayr_sometimes_you_have_0", 1, 1);
-    wait(0.5);
+    wait 0.5;
 }
 
 // Namespace namespace_d2831417

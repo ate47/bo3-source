@@ -11,9 +11,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_8f77dbcb;
+#namespace zm_genesis_mechz;
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x2
 // Checksum 0xf7c34f46, Offset: 0x2b0
 // Size: 0x34
@@ -21,23 +21,23 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_mechz", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcf13c96e, Offset: 0x2f0
 // Size: 0xc4
 function __init__() {
     level._effect["tesla_zombie_shock"] = "dlc4/genesis/fx_elec_trap_body_shock";
     if (ai::shouldregisterclientfieldforarchetype("mechz")) {
-        clientfield::register("actor", "death_ray_shock_fx", 15000, 1, "int", &function_3852b0a4, 0, 0);
+        clientfield::register("actor", "death_ray_shock_fx", 15000, 1, "int", &death_ray_shock_fx, 0, 0);
     }
     clientfield::register("actor", "mechz_fx_spawn", 15000, 1, "counter", &function_4b9cfd4c, 0, 0);
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6328da43, Offset: 0x3c0
 // Size: 0x124
-function function_3852b0a4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function death_ray_shock_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self function_51adc559(localclientnum);
     if (newval) {
         if (!isdefined(self.var_8f44671e)) {
@@ -54,7 +54,7 @@ function function_3852b0a4(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf53bc5ba, Offset: 0x4f0
 // Size: 0x4c
@@ -65,7 +65,7 @@ function function_7772592b(localclientnum) {
     self function_51adc559(localclientnum);
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb537c374, Offset: 0x548
 // Size: 0x52
@@ -77,7 +77,7 @@ function function_51adc559(localclientnum) {
     self notify(#"hash_51adc559");
 }
 
-// Namespace namespace_8f77dbcb
+// Namespace zm_genesis_mechz
 // Params 7, eflags: 0x1 linked
 // Checksum 0xedc769c0, Offset: 0x5a8
 // Size: 0xa4

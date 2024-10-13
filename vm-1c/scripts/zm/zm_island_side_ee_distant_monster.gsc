@@ -21,9 +21,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_6c640490;
+#namespace zm_island_side_ee_distant_monster;
 
-// Namespace namespace_6c640490
+// Namespace zm_island_side_ee_distant_monster
 // Params 0, eflags: 0x2
 // Checksum 0x8031d76c, Offset: 0x3a8
 // Size: 0x34
@@ -31,7 +31,7 @@ function autoexec function_2dc19561() {
     system::register("zm_island_side_ee_distant_monster", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_6c640490
+// Namespace zm_island_side_ee_distant_monster
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x3e8
 // Size: 0x4
@@ -39,7 +39,7 @@ function __init__() {
     
 }
 
-// Namespace namespace_6c640490
+// Namespace zm_island_side_ee_distant_monster
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbe0b4f08, Offset: 0x3f8
 // Size: 0x5c
@@ -51,7 +51,7 @@ function main() {
     #/
 }
 
-// Namespace namespace_6c640490
+// Namespace zm_island_side_ee_distant_monster
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x460
 // Size: 0x4
@@ -59,7 +59,7 @@ function on_player_spawned() {
     
 }
 
-// Namespace namespace_6c640490
+// Namespace zm_island_side_ee_distant_monster
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa4956a7d, Offset: 0x470
 // Size: 0x114
@@ -74,12 +74,12 @@ function function_e94b80b9() {
                 var_d95fb733 = 1;
             }
         }
-        wait(2);
+        wait 2;
     } while (!(isdefined(var_d95fb733) && var_d95fb733));
     function_549b07cb();
 }
 
-// Namespace namespace_6c640490
+// Namespace zm_island_side_ee_distant_monster
 // Params 0, eflags: 0x1 linked
 // Checksum 0x25e29879, Offset: 0x590
 // Size: 0x1d4
@@ -106,27 +106,27 @@ function function_549b07cb() {
 
 /#
 
-    // Namespace namespace_6c640490
+    // Namespace zm_island_side_ee_distant_monster
     // Params 0, eflags: 0x1 linked
     // Checksum 0xef872461, Offset: 0x770
     // Size: 0x6c
     function function_abe01b4d() {
         zm_devgui::add_custom_devgui_callback(&function_603ad7e1);
         level.var_7b18dfab = 0;
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
+        adddebugcommand("<dev string:x28>");
+        adddebugcommand("<dev string:x80>");
     }
 
-    // Namespace namespace_6c640490
+    // Namespace zm_island_side_ee_distant_monster
     // Params 1, eflags: 0x1 linked
     // Checksum 0xbf55fbe2, Offset: 0x7e8
     // Size: 0x66
     function function_603ad7e1(cmd) {
         switch (cmd) {
-        case 8:
+        case "<dev string:xea>":
             function_549b07cb();
             return 1;
-        case 8:
+        case "<dev string:xff>":
             level.var_7b18dfab = !level.var_7b18dfab;
             return 1;
         }

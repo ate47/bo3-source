@@ -18,9 +18,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/abilities/_ability_util;
 
-#namespace namespace_66b6bfda;
+#namespace sniperonly;
 
-// Namespace namespace_66b6bfda
+// Namespace sniperonly
 // Params 0, eflags: 0x0
 // Checksum 0x596e36f7, Offset: 0x508
 // Size: 0xcc
@@ -35,7 +35,7 @@ function main() {
     callback::on_connect(&on_player_connect);
 }
 
-// Namespace namespace_66b6bfda
+// Namespace sniperonly
 // Params 0, eflags: 0x0
 // Checksum 0x6974d434, Offset: 0x5e0
 // Size: 0x2c
@@ -44,7 +44,7 @@ function onstartgametype() {
     level function_c12878ec();
 }
 
-// Namespace namespace_66b6bfda
+// Namespace sniperonly
 // Params 0, eflags: 0x0
 // Checksum 0xac5ae67b, Offset: 0x618
 // Size: 0x1c
@@ -52,7 +52,7 @@ function on_player_connect() {
     self thread function_ef6a5017();
 }
 
-// Namespace namespace_66b6bfda
+// Namespace sniperonly
 // Params 0, eflags: 0x0
 // Checksum 0x279c349e, Offset: 0x640
 // Size: 0x358
@@ -93,7 +93,7 @@ function givecustomloadout() {
     return primaryweapon;
 }
 
-// Namespace namespace_66b6bfda
+// Namespace sniperonly
 // Params 0, eflags: 0x0
 // Checksum 0xfaf8dcec, Offset: 0x9a0
 // Size: 0x2ac
@@ -153,7 +153,7 @@ function function_e6707d5e() {
     }
 }
 
-// Namespace namespace_66b6bfda
+// Namespace sniperonly
 // Params 2, eflags: 0x0
 // Checksum 0x6c1fd34b, Offset: 0xc58
 // Size: 0x1d8
@@ -182,7 +182,7 @@ function function_b41dbb1d(primaryweapon, var_d5801c8a) {
     self.alreadysetspawnweapononce = 1;
 }
 
-// Namespace namespace_66b6bfda
+// Namespace sniperonly
 // Params 1, eflags: 0x0
 // Checksum 0x6eb5bf46, Offset: 0xe38
 // Size: 0x114
@@ -198,7 +198,7 @@ function function_f0582641(sidearm) {
     }
 }
 
-// Namespace namespace_66b6bfda
+// Namespace sniperonly
 // Params 9, eflags: 0x0
 // Checksum 0x9ae37041, Offset: 0xf58
 // Size: 0x2ac
@@ -230,7 +230,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
     }
 }
 
-// Namespace namespace_66b6bfda
+// Namespace sniperonly
 // Params 0, eflags: 0x0
 // Checksum 0xbf2f7274, Offset: 0x1210
 // Size: 0x88
@@ -245,7 +245,7 @@ function function_357ca474() {
     self.var_ea382ca4.alpha = 0;
 }
 
-// Namespace namespace_66b6bfda
+// Namespace sniperonly
 // Params 1, eflags: 0x0
 // Checksum 0x5e951db9, Offset: 0x12a0
 // Size: 0x254
@@ -283,7 +283,7 @@ function function_2d46be95(killrange) {
     self thread function_357ca474();
 }
 
-// Namespace namespace_66b6bfda
+// Namespace sniperonly
 // Params 0, eflags: 0x0
 // Checksum 0xb1984705, Offset: 0x1500
 // Size: 0x50
@@ -296,7 +296,7 @@ function function_b5214454() {
     }
 }
 
-// Namespace namespace_66b6bfda
+// Namespace sniperonly
 // Params 0, eflags: 0x0
 // Checksum 0x8cbdc41d, Offset: 0x1558
 // Size: 0x284
@@ -331,7 +331,7 @@ function function_ef6a5017() {
     self thread function_b5214454();
 }
 
-// Namespace namespace_66b6bfda
+// Namespace sniperonly
 // Params 0, eflags: 0x0
 // Checksum 0xf6930d8, Offset: 0x17e8
 // Size: 0x120

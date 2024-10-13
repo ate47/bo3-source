@@ -208,7 +208,7 @@ function private player_altbody(name, trigger) {
 function private function_1f9554ce() {
     self endon(#"disconnect");
     var_8a32e9d8 = self enableinvulnerability();
-    wait(1);
+    wait 1;
     if (isdefined(self) && !(isdefined(var_8a32e9d8) && var_8a32e9d8)) {
         self disableinvulnerability();
     }
@@ -493,7 +493,7 @@ function trigger_monitor_visibility(name, whenvisible) {
                 self setinvisibletoplayer(player);
             }
         }
-        wait(randomfloatrange(0.2, 0.5));
+        wait randomfloatrange(0.2, 0.5);
     }
 }
 

@@ -295,7 +295,7 @@ function kill_exploder(exploder_id) {
         }
         return;
     }
-    assertmsg("delay" + exploder_id);
+    assertmsg("<dev string:x28>" + exploder_id);
 }
 
 // Namespace exploder
@@ -315,7 +315,7 @@ function exploder_delay() {
         max_delay = self.v["delay_max"];
     }
     if (min_delay > 0) {
-        wait(randomfloatrange(min_delay, max_delay));
+        wait randomfloatrange(min_delay, max_delay);
     }
 }
 
@@ -446,7 +446,7 @@ function cannon_effect() {
         self.loopfx = [];
     }
     if (!isdefined(level._effect[self.v["fxid"]])) {
-        assertmsg("delay" + self.v["delay"] + "delay");
+        assertmsg("<dev string:x66>" + self.v["<dev string:x7b>"] + "<dev string:x80>");
         return;
     }
     for (i = 0; i < players.size; i++) {
@@ -497,13 +497,13 @@ function fire_effect() {
 // Size: 0xda
 function playexploderfx(clientnum) {
     /#
-        if (!isdefined(self.v["delay"])) {
+        if (!isdefined(self.v["<dev string:xa0>"])) {
             return;
         }
-        if (!isdefined(self.v["delay"])) {
+        if (!isdefined(self.v["<dev string:xa7>"])) {
             return;
         }
-        if (!isdefined(self.v["delay"])) {
+        if (!isdefined(self.v["<dev string:xaf>"])) {
             return;
         }
     #/
@@ -515,7 +515,7 @@ function playexploderfx(clientnum) {
 // Checksum 0xf119375b, Offset: 0x2270
 // Size: 0x34
 function stop_after_duration(name, duration) {
-    wait(duration);
+    wait duration;
     stop_exploder(name);
 }
 

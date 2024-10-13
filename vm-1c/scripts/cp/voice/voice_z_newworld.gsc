@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_70ee1527;
+#namespace voice_z_newworld;
 
-// Namespace namespace_70ee1527
+// Namespace voice_z_newworld
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6136470a, Offset: 0x1430
 // Size: 0xca4

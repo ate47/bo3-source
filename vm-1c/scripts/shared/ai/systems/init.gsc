@@ -137,7 +137,7 @@ function trackvelocity() {
     self endon(#"death");
     for (;;) {
         self.oldorigin = self.origin;
-        wait(0.2);
+        wait 0.2;
     }
 }
 
@@ -156,21 +156,21 @@ function trackvelocity() {
         idealtransangles[7] = -121;
         idealtransangles[8] = -76;
         idealtransangles[9] = -135;
-        wait(0.05);
+        wait 0.05;
         for (i = 1; i <= 9; i++) {
             for (j = 0; j < transtypes.size; j++) {
                 trans = transtypes[j];
                 idealadd = 0;
-                if (trans == "axis" || trans == "axis") {
+                if (trans == "<dev string:x28>" || trans == "<dev string:x2d>") {
                     idealadd = 90;
-                } else if (trans == "axis" || trans == "axis") {
+                } else if (trans == "<dev string:x39>" || trans == "<dev string:x3f>") {
                     idealadd = -90;
                 }
                 if (isdefined(anim.covertransangles[trans][i])) {
                     correctangle = angleclamp180(idealtransangles[i] + idealadd);
                     actualangle = angleclamp180(anim.covertransangles[trans][i]);
                     if (absangleclamp180(actualangle - correctangle) > 7) {
-                        println("axis" + trans + "axis" + i + "axis" + actualangle + "axis" + correctangle + "axis");
+                        println("<dev string:x4c>" + trans + "<dev string:x8c>" + i + "<dev string:x90>" + actualangle + "<dev string:x99>" + correctangle + "<dev string:xb4>");
                     }
                 }
             }
@@ -179,16 +179,16 @@ function trackvelocity() {
             for (j = 0; j < transtypes.size; j++) {
                 trans = transtypes[j];
                 idealadd = 0;
-                if (trans == "axis" || trans == "axis") {
+                if (trans == "<dev string:x28>" || trans == "<dev string:x2d>") {
                     idealadd = 90;
-                } else if (trans == "axis" || trans == "axis") {
+                } else if (trans == "<dev string:x39>" || trans == "<dev string:x3f>") {
                     idealadd = -90;
                 }
                 if (isdefined(anim.coverexitangles[trans][i])) {
                     correctangle = angleclamp180(-1 * (idealtransangles[i] + idealadd + -76));
                     actualangle = angleclamp180(anim.coverexitangles[trans][i]);
                     if (absangleclamp180(actualangle - correctangle) > 7) {
-                        println("axis" + trans + "axis" + i + "axis" + actualangle + "axis" + correctangle + "axis");
+                        println("<dev string:xb8>" + trans + "<dev string:x8c>" + i + "<dev string:x90>" + actualangle + "<dev string:x99>" + correctangle + "<dev string:xb4>");
                     }
                 }
             }
@@ -287,7 +287,7 @@ function addtomissiles(grenade) {
     }
     level.missileentities[level.missileentities.size] = grenade;
     while (isdefined(grenade)) {
-        wait(0.05);
+        wait 0.05;
     }
     arrayremovevalue(level.missileentities, grenade);
 }

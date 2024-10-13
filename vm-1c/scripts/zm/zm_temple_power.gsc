@@ -9,9 +9,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b89de338;
+#namespace zm_temple_power;
 
-// Namespace namespace_b89de338
+// Namespace zm_temple_power
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdc89b75f, Offset: 0x430
 // Size: 0x204
@@ -33,7 +33,7 @@ function function_4323754a() {
     level thread function_7ea2ce8();
 }
 
-// Namespace namespace_b89de338
+// Namespace zm_temple_power
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5c45ca1, Offset: 0x640
 // Size: 0x94
@@ -44,7 +44,7 @@ function function_d89f08d3() {
     level thread function_ee647c3a();
 }
 
-// Namespace namespace_b89de338
+// Namespace zm_temple_power
 // Params 2, eflags: 0x1 linked
 // Checksum 0xbd726961, Offset: 0x6e0
 // Size: 0x104
@@ -63,20 +63,20 @@ function power_switch(trigger_name, var_1e1fc126) {
     level thread function_4ebc92cc(player);
 }
 
-// Namespace namespace_b89de338
+// Namespace zm_temple_power
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5a776816, Offset: 0x7f0
 // Size: 0x7c
 function function_4ebc92cc(player) {
     level notify(#"hash_a300e69");
     level endon(#"hash_a300e69");
-    wait(5);
+    wait 5;
     if (isdefined(player) && level flag::get("power_on")) {
         player thread zm_audio::create_and_play_dialog("general", "poweron");
     }
 }
 
-// Namespace namespace_b89de338
+// Namespace zm_temple_power
 // Params 2, eflags: 0x1 linked
 // Checksum 0x30f51cce, Offset: 0x878
 // Size: 0x13c
@@ -94,18 +94,18 @@ function function_3046fbc7(var_1e1fc126, var_91c79b1d) {
     level flag::set(var_91c79b1d);
 }
 
-// Namespace namespace_b89de338
+// Namespace zm_temple_power
 // Params 0, eflags: 0x1 linked
 // Checksum 0xff34737e, Offset: 0x9c0
 // Size: 0x5c
 function wait_for_power() {
     level flag::wait_till("left_switch_done");
     level flag::wait_till("right_switch_done");
-    wait(1);
+    wait 1;
     zm_power::turn_power_on_and_open_doors();
 }
 
-// Namespace namespace_b89de338
+// Namespace zm_temple_power
 // Params 0, eflags: 0x1 linked
 // Checksum 0x29b3bcd9, Offset: 0xa28
 // Size: 0x174
@@ -122,11 +122,11 @@ function function_7ea2ce8() {
     array::delete_all(level.var_c43f63de);
     playsoundatposition("zmb_poweron_front", (0, 0, 0));
     playsoundatposition("zmb_poweron_rear", (0, 0, 0));
-    wait(4.5);
+    wait 4.5;
     exploder::exploder("fxexp_15");
 }
 
-// Namespace namespace_b89de338
+// Namespace zm_temple_power
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9b931b40, Offset: 0xba8
 // Size: 0xf2
@@ -135,7 +135,7 @@ function function_f8d52bb6() {
     util::wait_network_frame();
     level notify(#"hash_2680d19f");
     util::wait_network_frame();
-    level notify(#"hash_a7912f12");
+    level notify(#"revive_on");
     util::wait_network_frame();
     level notify(#"hash_ec4676f1");
     util::wait_network_frame();
@@ -143,12 +143,12 @@ function function_f8d52bb6() {
     util::wait_network_frame();
     level notify(#"hash_e3fa9df1");
     util::wait_network_frame();
-    level notify(#"hash_bd00857f");
+    level notify(#"doubletap_on");
     util::wait_network_frame();
     level notify(#"pack_a_punch_on");
 }
 
-// Namespace namespace_b89de338
+// Namespace zm_temple_power
 // Params 1, eflags: 0x0
 // Checksum 0xafd5bee, Offset: 0xca8
 // Size: 0x9e
@@ -159,7 +159,7 @@ function function_fb70e1ed(var_68f7eb77) {
     }
 }
 
-// Namespace namespace_b89de338
+// Namespace zm_temple_power
 // Params 4, eflags: 0x1 linked
 // Checksum 0x62125e92, Offset: 0xd50
 // Size: 0x4c
@@ -167,16 +167,16 @@ function function_d57d875f(var_2ac38233, time, acceleration_time, var_cff30a24) 
     self movez(var_2ac38233, time, acceleration_time, var_cff30a24);
 }
 
-// Namespace namespace_b89de338
+// Namespace zm_temple_power
 // Params 5, eflags: 0x1 linked
 // Checksum 0x960574f1, Offset: 0xda8
 // Size: 0x10c
 function function_e9d25b3(var_91c79b1d, var_57b77c66, var_b8c57a38, isright, sound) {
     level flag::wait_till(var_91c79b1d);
-    wait(3.5);
+    wait 3.5;
     exploder::exploder("fxexp_" + var_57b77c66);
     exploder::stop_exploder("fxexp_" + var_b8c57a38);
-    wait(1.2);
+    wait 1.2;
     soundent = getent(sound + "_origin", "targetname");
     if (isdefined(soundent)) {
         soundent playloopsound(sound, 1);
@@ -184,18 +184,18 @@ function function_e9d25b3(var_91c79b1d, var_57b77c66, var_b8c57a38, isright, sou
     function_2a5dbecb(isright);
 }
 
-// Namespace namespace_b89de338
+// Namespace zm_temple_power
 // Params 0, eflags: 0x1 linked
 // Checksum 0x67fe4648, Offset: 0xec0
 // Size: 0x12c
 function function_2507931f() {
     level flag::wait_till("left_switch_done");
-    wait(3.5);
+    wait 3.5;
     start_struct = struct::get("water_spout_01", "targetname");
     if (isdefined(start_struct)) {
         level thread sound::play_in_space("evt_water_spout01", start_struct.origin);
     }
-    wait(1);
+    wait 1;
     var_388f2981 = struct::get("water_pour_01", "targetname");
     if (isdefined(var_388f2981)) {
         sound_entity = spawn("script_origin", (0, 0, 1));
@@ -204,18 +204,18 @@ function function_2507931f() {
     }
 }
 
-// Namespace namespace_b89de338
+// Namespace zm_temple_power
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb47b2116, Offset: 0xff8
 // Size: 0x12c
 function function_ee647c3a() {
     level flag::wait_till("right_switch_done");
-    wait(3.5);
+    wait 3.5;
     start_struct = struct::get("water_spout_02", "targetname");
     if (isdefined(start_struct)) {
         level thread sound::play_in_space("evt_water_spout02", start_struct.origin);
     }
-    wait(1);
+    wait 1;
     var_388f2981 = struct::get("water_pour_02", "targetname");
     if (isdefined(var_388f2981)) {
         sound_entity = spawn("script_origin", (0, 0, 1));
@@ -224,7 +224,7 @@ function function_ee647c3a() {
     }
 }
 
-// Namespace namespace_b89de338
+// Namespace zm_temple_power
 // Params 1, eflags: 0x1 linked
 // Checksum 0x3f5bbffb, Offset: 0x1130
 // Size: 0x5c

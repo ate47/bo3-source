@@ -96,7 +96,7 @@ function function_ea7e3000(s_unitrigger, var_df61c394, var_60e07243) {
             s_unitrigger.var_f30d1f8f.var_f2c16bcc--;
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -140,7 +140,7 @@ function function_41457bd1() {
             self thread function_748696f0(0, i);
         }
         self.var_f2c16bcc = var_f2c16bcc;
-        wait(0.05);
+        wait 0.05;
     }
     level flag::set("dragon_strike_unlocked");
     for (i = 1; i <= 4; i++) {
@@ -177,7 +177,7 @@ function function_8f02cb7e() {
             self thread function_748696f0(0, i);
         }
         self.var_f2c16bcc = var_f2c16bcc;
-        wait(0.05);
+        wait 0.05;
     }
     level flag::set("dragon_stage4_started");
     for (i = 1; i <= 4; i++) {
@@ -195,7 +195,7 @@ function function_316be9a7() {
     s_unitrigger.var_f30d1f8f.angles = s_unitrigger.angles;
     s_unitrigger.var_f30d1f8f setmodel("p7_zm_sta_dragon_strike_console");
     s_unitrigger.var_f30d1f8f.targetname = "dragon_strike_lockbox";
-    wait(0.05);
+    wait 0.05;
     for (i = 1; i <= 4; i++) {
         s_unitrigger.var_f30d1f8f function_748696f0(0, i);
     }
@@ -292,7 +292,7 @@ function function_f25c1083() {
     level flag::wait_till("dragon_strike_quest_complete");
     var_8de3e280 = getent("pavlovs_second_floor", "targetname");
     while (!util::any_player_is_touching(var_8de3e280, "allies")) {
-        wait(1);
+        wait 1;
     }
     self scene::play("p7_fxanim_zm_stal_dragon_strike_console_bundle");
 }
@@ -324,7 +324,7 @@ function function_8258d71c() {
 function function_b8ea3482(var_86a3391a) {
     self endon(#"disconnect");
     self thread clientfield::set_player_uimodel(var_86a3391a, 1);
-    wait(3);
+    wait 3;
     self thread clientfield::set_player_uimodel(var_86a3391a, 0);
 }
 
@@ -383,10 +383,10 @@ function function_93510b8b() {
 // Checksum 0x2eefbe17, Offset: 0x2348
 // Size: 0x44
 function function_e6794c49() {
-    wait(10);
+    wait 10;
     playsoundatposition("zmb_drag_strike_lockdown_over", (0, 0, 0));
     /#
-        iprintlnbold("lockbox_light_4");
+        iprintlnbold("<dev string:x28>");
     #/
 }
 

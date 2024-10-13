@@ -2,9 +2,9 @@
 #using scripts/shared/math_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_3d2de961;
+#namespace _explosive_bolt;
 
-// Namespace namespace_3d2de961
+// Namespace _explosive_bolt
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8a023d93, Offset: 0x128
 // Size: 0x1e
@@ -12,7 +12,7 @@ function main() {
     level._effect["crossbow_light"] = "weapon/fx_equip_light_os";
 }
 
-// Namespace namespace_3d2de961
+// Namespace _explosive_bolt
 // Params 1, eflags: 0x1 linked
 // Checksum 0x439528b7, Offset: 0x150
 // Size: 0x44
@@ -23,7 +23,7 @@ function spawned(localclientnum) {
     self thread fx_think(localclientnum);
 }
 
-// Namespace namespace_3d2de961
+// Namespace _explosive_bolt
 // Params 1, eflags: 0x1 linked
 // Checksum 0x350353a4, Offset: 0x1a0
 // Size: 0x12c
@@ -41,7 +41,7 @@ function fx_think(localclientnum) {
     }
 }
 
-// Namespace namespace_3d2de961
+// Namespace _explosive_bolt
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbfc8117e, Offset: 0x2d8
 // Size: 0x6c
@@ -50,7 +50,7 @@ function start_light_fx(localclientnum) {
     self.fx = playfxontag(localclientnum, level._effect["crossbow_light"], self, "tag_origin");
 }
 
-// Namespace namespace_3d2de961
+// Namespace _explosive_bolt
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdb6b62d7, Offset: 0x350
 // Size: 0x4e
@@ -61,7 +61,7 @@ function stop_light_fx(localclientnum) {
     }
 }
 
-// Namespace namespace_3d2de961
+// Namespace _explosive_bolt
 // Params 1, eflags: 0x1 linked
 // Checksum 0x17a0a744, Offset: 0x3a8
 // Size: 0xd4

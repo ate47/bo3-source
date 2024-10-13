@@ -91,12 +91,12 @@ function clone_animate(animtype) {
 // Checksum 0x47fbb9dc, Offset: 0x628
 // Size: 0x7e
 function clone_actor_animate(animtype) {
-    wait(0.1);
+    wait 0.1;
     switch (animtype) {
-    case 8:
+    case "laststand":
         self setanimstatefromasd("laststand");
         break;
-    case 9:
+    case "idle":
     default:
         self setanimstatefromasd("idle");
         break;
@@ -110,19 +110,19 @@ function clone_actor_animate(animtype) {
 function clone_mover_animate(animtype) {
     self useanimtree(#zm_ally);
     switch (animtype) {
-    case 8:
+    case "laststand":
         self setanim(zm_ally%pb_laststand_idle);
         break;
-    case 10:
+    case "afterlife":
         self setanim(zm_ally%pb_afterlife_laststand_idle);
         break;
-    case 11:
+    case "chair":
         self setanim(zm_ally%ai_actor_elec_chair_idle);
         break;
-    case 12:
+    case "falling":
         self setanim(zm_ally%pb_falling_loop);
         break;
-    case 9:
+    case "idle":
     default:
         self setanim(zm_ally%pb_stand_alert);
         break;

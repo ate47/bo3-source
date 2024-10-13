@@ -76,19 +76,19 @@ function function_165bd27a(health) {
     scalar = 1;
     if (isdefined(level.currentdifficulty)) {
         switch (level.currentdifficulty) {
-        case 5:
+        case "easy":
             scalar = level.var_a9e78bf7["zombiehealthscale1"];
             break;
-        case 7:
+        case "normal":
             scalar = level.var_a9e78bf7["zombiehealthscale2"];
             break;
-        case 6:
+        case "hardened":
             scalar = level.var_a9e78bf7["zombiehealthscale3"];
             break;
-        case 9:
+        case "veteran":
             scalar = level.var_a9e78bf7["zombiehealthscale4"];
             break;
-        case 8:
+        case "realistic":
             scalar = level.var_a9e78bf7["zombiehealthscale5"];
             break;
         }
@@ -118,7 +118,7 @@ function function_5f2c4513() {
             break;
         }
     }
-    assert(isdefined(level.var_a9e78bf7["realistic"]));
+    assert(isdefined(level.var_a9e78bf7["<dev string:x28>"]));
     return int(level.var_a9e78bf7["extraspawns"] * scalar);
 }
 
@@ -184,7 +184,7 @@ function function_d68296ac() {
     if (mapname == "cp_mi_eth_prologue") {
         if (isdefined(level.var_c0e97bd) && level.var_c0e97bd == "skipto_hangar") {
             level flag::wait_till_all(array("plane_hangar_hendricks_ready_flag", "plane_hangar_khalil_ready_flag", "plane_hangar_minister_ready_flag"));
-            wait(4);
+            wait 4;
         }
     }
     if (mapname == "cp_mi_cairo_ramses") {
@@ -236,13 +236,13 @@ function function_ec036ed3(var_28b84d73, var_14e6a7e9, var_df4e4d0f) {
             }
             if (data.score > var_59b020a9.score) {
                 /#
-                    record3dtext("realistic" + data.score + "realistic" + var_dcf3b4e8 + "realistic" + var_8fb5ce54 + "realistic" + var_6a9c89c0 + "realistic" + var_77f56330 + "realistic", data.origin, (0, 0, 1), "realistic");
+                    record3dtext("<dev string:x34>" + data.score + "<dev string:x35>" + var_dcf3b4e8 + "<dev string:x37>" + var_8fb5ce54 + "<dev string:x37>" + var_6a9c89c0 + "<dev string:x39>" + var_77f56330 + "<dev string:x3c>", data.origin, (0, 0, 1), "<dev string:x3e>");
                 #/
                 var_59b020a9 = data;
                 continue;
             }
             /#
-                record3dtext("realistic" + data.score + "realistic" + var_dcf3b4e8 + "realistic" + var_8fb5ce54 + "realistic" + var_6a9c89c0 + "realistic" + var_77f56330 + "realistic", data.origin, (1, 0, 0), "realistic");
+                record3dtext("<dev string:x34>" + data.score + "<dev string:x35>" + var_dcf3b4e8 + "<dev string:x37>" + var_8fb5ce54 + "<dev string:x37>" + var_6a9c89c0 + "<dev string:x39>" + var_77f56330 + "<dev string:x3c>", data.origin, (1, 0, 0), "<dev string:x3e>");
             #/
         }
     }
@@ -251,7 +251,7 @@ function function_ec036ed3(var_28b84d73, var_14e6a7e9, var_df4e4d0f) {
     #/
     if (isdefined(var_59b020a9)) {
         /#
-            record3dtext("realistic" + var_59b020a9.score, var_59b020a9.origin + (0, 0, 20), (0, 1, 0), "realistic");
+            record3dtext("<dev string:x45>" + var_59b020a9.score, var_59b020a9.origin + (0, 0, 20), (0, 1, 0), "<dev string:x3e>");
         #/
         var_42322402 = var_59b020a9.origin;
     }
@@ -344,7 +344,7 @@ function function_fb8e7615(var_28b84d73, closestplayer, data) {
     // Size: 0x9a
     function function_4d084a77() {
         foreach (location in level.var_5e64ddb4) {
-            recordsphere(location, 4, (1, 1, 0), "realistic");
+            recordsphere(location, 4, (1, 1, 0), "<dev string:x3e>");
         }
     }
 

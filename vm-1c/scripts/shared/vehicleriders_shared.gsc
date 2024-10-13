@@ -216,7 +216,7 @@ function get_in(vh, str_pos, var_b98c3119) {
     if (!isdefined(str_pos)) {
         str_pos = vh function_5a2fe36b(self);
     }
-    assert(isdefined(str_pos), "_enter");
+    assert(isdefined(str_pos), "<dev string:x28>");
     if (!isdefined(str_pos)) {
         return;
     }
@@ -224,7 +224,7 @@ function get_in(vh, str_pos, var_b98c3119) {
         seat_index = level.var_14c128[str_pos];
         if (seat_index <= 4) {
             var_a6ccaa06 = !vh isvehicleseatoccupied(seat_index);
-            assert(var_a6ccaa06, "_enter");
+            assert(var_a6ccaa06, "<dev string:x4f>");
             if (!var_a6ccaa06) {
                 return;
             }
@@ -250,7 +250,7 @@ function get_in(vh, str_pos, var_b98c3119) {
     if (isdefined(self.var_1b425382) && isdefined(self.var_1b425382.rideanim)) {
         self thread animation::play(self.var_1b425382.rideanim, self.vehicle, self.var_1b425382.aligntag, 1, 0.2, 0.2, 0, 0, 0, 0);
     } else if (!isdefined(level.var_14c128[str_pos])) {
-        assert("_enter" + str_pos);
+        assert("<dev string:x6e>" + str_pos);
     } else if (isdefined(self.var_1b425382)) {
         v_tag_pos = vh gettagorigin(self.var_1b425382.aligntag);
         v_tag_ang = vh gettagangles(self.var_1b425382.aligntag);
@@ -258,7 +258,7 @@ function get_in(vh, str_pos, var_b98c3119) {
             self forceteleport(v_tag_pos, v_tag_ang);
         }
     } else {
-        errormsg("_enter");
+        errormsg("<dev string:x99>");
     }
     if (isactor(self)) {
         self pathmode("dont move");
@@ -306,7 +306,7 @@ function handle_rider_death() {
 // Checksum 0xee273b79, Offset: 0x15e8
 // Size: 0x34
 function delete_rider_asap(entity) {
-    wait(0.05);
+    wait 0.05;
     if (isdefined(entity)) {
         entity delete();
     }
@@ -395,8 +395,8 @@ function get_out(str_mode) {
     ai = self;
     self endon(#"death");
     self notify(#"exiting_vehicle");
-    assert(isalive(self), "_enter");
-    assert(isdefined(self.vehicle), "_enter");
+    assert(isalive(self), "<dev string:xac>");
+    assert(isdefined(self.vehicle), "<dev string:xcd>");
     if (isdefined(self.vehicle.vehicleclass) && (isdefined(self.vehicle.vehicleclass) && self.vehicle.vehicleclass == "helicopter" || self.vehicle.vehicleclass == "plane")) {
         if (!isdefined(str_mode)) {
             str_mode = "variable";
@@ -411,17 +411,17 @@ function get_out(str_mode) {
         self.vehicle setanim(self.var_1b425382.vehicleexitanim, 1, 0, 1);
     }
     switch (str_mode) {
-    case 23:
+    case "ground":
         exit_ground();
         break;
-    case 24:
+    case "low":
         function_63b86466();
         break;
-    case 22:
+    case "variable":
         exit_variable();
         break;
     default:
-        assertmsg("_enter");
+        assertmsg("<dev string:xe3>");
         break;
     }
     if (isactor(self)) {
@@ -466,7 +466,7 @@ function unload(str_group, str_mode, var_86f1d254, var_bfe5d67f) {
         str_group = "all";
     }
     self notify(#"unload", str_group);
-    assert(isdefined(level.var_ca190c08[str_group]), str_group + "_enter");
+    assert(isdefined(level.var_ca190c08[str_group]), str_group + "<dev string:x104>");
     str_group = level.var_ca190c08[str_group];
     var_3346855c = [];
     foreach (ai_rider in self.riders) {
@@ -494,7 +494,7 @@ function unload(str_group, str_mode, var_86f1d254, var_bfe5d67f) {
 // Checksum 0xf122f610, Offset: 0x20e0
 // Size: 0xb2
 function remove_riders_after_wait(wait_time, a_riders_to_remove) {
-    wait(wait_time);
+    wait wait_time;
     if (isdefined(a_riders_to_remove)) {
         foreach (ai in a_riders_to_remove) {
             arrayremovevalue(self.riders, ai);
@@ -524,7 +524,7 @@ function exit_ground() {
     if (!isdefined(self.var_1b425382.exitgrounddeathanim)) {
         self thread ragdoll_dead_exit_rider();
     }
-    assert(isstring(self.var_1b425382.exitgroundanim), "_enter" + self.var_1b425382.position + "_enter");
+    assert(isstring(self.var_1b425382.exitgroundanim), "<dev string:x122>" + self.var_1b425382.position + "<dev string:x13a>");
     if (isstring(self.var_1b425382.exitgroundanim)) {
         animation::play(self.var_1b425382.exitgroundanim, self.vehicle, self.var_1b425382.aligntag);
     }
@@ -536,7 +536,7 @@ function exit_ground() {
 // Size: 0xac
 function function_63b86466() {
     self animation::set_death_anim(self.var_1b425382.var_24c6bf4e);
-    assert(isdefined(self.var_1b425382.var_60cf8622), "_enter" + self.var_1b425382.position + "_enter");
+    assert(isdefined(self.var_1b425382.var_60cf8622), "<dev string:x122>" + self.var_1b425382.position + "<dev string:x13a>");
     animation::play(self.var_1b425382.var_60cf8622, self.vehicle, self.var_1b425382.aligntag);
 }
 
@@ -572,12 +572,12 @@ function private forward_euler_integration(e_move, v_target_landing, n_initial_s
             position = v_target_landing;
         }
         /#
-            recordline(previousposition, position, (1, 0.5, 0), "_enter", self);
+            recordline(previousposition, position, (1, 0.5, 0), "<dev string:x15b>", self);
         #/
         hostmigration::waittillhostmigrationdone();
         e_move moveto(position, var_af0234d7);
         if (!landed) {
-            wait(var_af0234d7);
+            wait var_af0234d7;
         }
     }
 }
@@ -592,7 +592,7 @@ function exit_variable() {
     self notify(#"exiting_vehicle");
     self thread handle_falling_death();
     self animation::set_death_anim(self.var_1b425382.exithighdeathanim);
-    assert(isdefined(self.var_1b425382.exithighanim), "_enter" + self.var_1b425382.position + "_enter");
+    assert(isdefined(self.var_1b425382.exithighanim), "<dev string:x122>" + self.var_1b425382.position + "<dev string:x13a>");
     animation::play(self.var_1b425382.exithighanim, self.vehicle, self.var_1b425382.aligntag, 1, 0, 0);
     self animation::set_death_anim(self.var_1b425382.exithighloopdeathanim);
     n_cur_height = get_height(self.vehicle);
@@ -625,7 +625,7 @@ function exit_variable() {
     animation::play(self.var_1b425382.exithighlandanim, e_move, "tag_origin");
     self notify(#"landed");
     self unlink();
-    wait(0.05);
+    wait 0.05;
     e_move delete();
 }
 
@@ -651,7 +651,7 @@ function get_height(e_ignore) {
     }
     trace = groundtrace(self.origin + (0, 0, 10), self.origin + (0, 0, -10000), 0, e_ignore, 0);
     /#
-        recordline(self.origin + (0, 0, 10), trace["_enter"], (1, 0.5, 0), "_enter", self);
+        recordline(self.origin + (0, 0, 10), trace["<dev string:x166>"], (1, 0.5, 0), "<dev string:x15b>", self);
     #/
     return distance(self.origin, trace["position"]);
 }
@@ -661,7 +661,7 @@ function get_height(e_ignore) {
 // Checksum 0xd1dc17f2, Offset: 0x2be8
 // Size: 0x4a
 function get_bundle() {
-    assert(isdefined(self.vehicleridersbundle), "_enter");
+    assert(isdefined(self.vehicleridersbundle), "<dev string:x16f>");
     return struct::get_script_bundle("vehicleriders", self.vehicleridersbundle);
 }
 
@@ -670,7 +670,7 @@ function get_bundle() {
 // Checksum 0xb237f061, Offset: 0x2c40
 // Size: 0x4a
 function get_robot_bundle() {
-    assert(isdefined(self.vehicleridersrobotbundle), "_enter");
+    assert(isdefined(self.vehicleridersrobotbundle), "<dev string:x1c0>");
     return struct::get_script_bundle("vehicleriders", self.vehicleridersrobotbundle);
 }
 
@@ -693,8 +693,8 @@ function function_ad4ec07a(str_pos) {
 // Checksum 0xbb12bcb5, Offset: 0x2d58
 // Size: 0xd4
 function private function_ce794bff(vh, str_pos) {
-    assert(isdefined(self.vehicle) || isdefined(vh), "_enter");
-    assert(isdefined(self.var_1b425382) || isdefined(str_pos), "_enter");
+    assert(isdefined(self.vehicle) || isdefined(vh), "<dev string:x217>");
+    assert(isdefined(self.var_1b425382) || isdefined(str_pos), "<dev string:x237>");
     if (isdefined(vh)) {
         self.vehicle = vh;
     }

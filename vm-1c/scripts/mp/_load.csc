@@ -92,7 +92,7 @@ function levelnotifyhandler(clientnum, state, oldstate) {
 // Checksum 0x57ca48c3, Offset: 0xb38
 // Size: 0xfc
 function main() {
-    assert(isdefined(level.first_frame), "cf_m_emp");
+    assert(isdefined(level.first_frame), "<dev string:x28>");
     level thread util::servertime();
     level thread util::init_utility();
     util::registersystem("levelNotify", &levelnotifyhandler);

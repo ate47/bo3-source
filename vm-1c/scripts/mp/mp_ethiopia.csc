@@ -16,8 +16,8 @@
 // Checksum 0x43ca76ac, Offset: 0x220
 // Size: 0x12c
 function main() {
-    namespace_fd054d15::main();
-    namespace_f0d8a318::main();
+    mp_ethiopia_fx::main();
+    mp_ethiopia_sound::main();
     load::main();
     level.domflagbasefxoverride = &dom_flag_base_fx_override;
     level.domflagcapfxoverride = &dom_flag_cap_fx_override;
@@ -36,16 +36,16 @@ function main() {
 // Size: 0x7a
 function dom_flag_base_fx_override(flag, team) {
     switch (flag.name) {
-    case 6:
+    case "a":
         break;
-    case 7:
+    case "b":
         if (team == "neutral") {
             return "ui/fx_dom_marker_neutral_r120";
         } else {
             return "ui/fx_dom_marker_team_r120";
         }
         break;
-    case 8:
+    case "c":
         break;
     }
 }
@@ -56,16 +56,16 @@ function dom_flag_base_fx_override(flag, team) {
 // Size: 0x7a
 function dom_flag_cap_fx_override(flag, team) {
     switch (flag.name) {
-    case 6:
+    case "a":
         break;
-    case 7:
+    case "b":
         if (team == "neutral") {
             return "ui/fx_dom_marker_neutral_r120";
         } else {
             return "ui/fx_dom_marker_team_r120";
         }
         break;
-    case 8:
+    case "c":
         break;
     }
 }

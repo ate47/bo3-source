@@ -41,9 +41,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_aed37ba8;
+#namespace zm_theater;
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 0, eflags: 0x2
 // Checksum 0x341b7d08, Offset: 0x920
 // Size: 0x1c
@@ -52,12 +52,12 @@ function autoexec opt_in() {
     level.bgb_in_use = 1;
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 0, eflags: 0x1 linked
 // Checksum 0x795593a6, Offset: 0x948
 // Size: 0x22c
 function main() {
-    namespace_16a77fe2::main_start();
+    zm_theater_ffotd::main_start();
     include_weapons();
     level.default_game_mode = "zclassic";
     level.default_start_location = "default";
@@ -66,13 +66,13 @@ function main() {
     visionset_mgr::register_visionset_info("cheat_bw_invert_contrast", 21000, 1, "cheat_bw_invert_contrast", "cheat_bw_invert_contrast");
     visionset_mgr::register_visionset_info("zombie_turned", 21000, 1, "zombie_turned", "zombie_turned");
     register_clientfields();
-    namespace_8847920b::main();
-    namespace_265ae7e9::main();
-    namespace_6d4f3e39::main();
+    zm_theater_teleporter::main();
+    zm_theater_fx::main();
+    zm_theater_amb::main();
     level.var_21469639 = 98;
     function_4362fcc1();
     load::main();
-    namespace_570c8452::init();
+    _zm_weap_cymbal_monkey::init();
     thread util::waitforclient(0);
     level._power_on = 0;
     level thread function_3825d415();
@@ -80,10 +80,10 @@ function main() {
     level thread function_dcf14adc();
     level thread function_d87a7dcc();
     level thread startzmbspawnersoundloops();
-    namespace_16a77fe2::main_end();
+    zm_theater_ffotd::main_end();
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 0, eflags: 0x1 linked
 // Checksum 0x248fcae, Offset: 0xb80
 // Size: 0xd4
@@ -97,7 +97,7 @@ function function_6ac83719() {
     visionset_mgr::function_3aea3c1a(4, "zombie_theater_eroom_girlnew");
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5cc94bdc, Offset: 0xc60
 // Size: 0xe2
@@ -118,7 +118,7 @@ function function_d87a7dcc() {
     }
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb0a4e944, Offset: 0xd50
 // Size: 0x24
@@ -126,7 +126,7 @@ function include_weapons() {
     zm_weapons::load_weapon_spec_from_table("gamedata/weapons/zm/zm_theater_weapons.csv", 1);
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 0, eflags: 0x1 linked
 // Checksum 0x18683985, Offset: 0xd80
 // Size: 0x9c
@@ -136,7 +136,7 @@ function function_4362fcc1() {
     callback::on_localclient_connect(&function_eff8a342);
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 1, eflags: 0x1 linked
 // Checksum 0x872138a, Offset: 0xe28
 // Size: 0x1a8
@@ -159,7 +159,7 @@ function function_eff8a342(clientnum) {
     }
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 2, eflags: 0x0
 // Checksum 0x1d0af62b, Offset: 0xfd8
 // Size: 0xf6
@@ -175,7 +175,7 @@ function function_ac2087dd(clientnum, name) {
     return lights;
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4351c4a7, Offset: 0x10d8
 // Size: 0x66
@@ -186,7 +186,7 @@ function function_cd14d250(clientnum) {
     }
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa118788a, Offset: 0x1148
 // Size: 0xda
@@ -194,18 +194,18 @@ function function_df3c225f(clientnum, period) {
     level notify("kill_box_light_threads_" + clientnum);
     level endon("kill_box_light_threads_" + clientnum);
     while (true) {
-        wait(period);
+        wait period;
         for (i = 0; i < level.var_bea700d2.size; i++) {
             function_e2275c1d(clientnum, i);
         }
-        wait(period);
+        wait period;
         for (i = 0; i < level.var_bea700d2.size; i++) {
             function_e2daf77(clientnum, i, 1);
         }
     }
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 3, eflags: 0x1 linked
 // Checksum 0xcb63c5, Offset: 0x1230
 // Size: 0x7c
@@ -220,7 +220,7 @@ function function_e2275c1d(clientnum, var_307e89fe, play_fx) {
     exploder::exploder(name);
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 3, eflags: 0x1 linked
 // Checksum 0xdc3fb92a, Offset: 0x12b8
 // Size: 0x84
@@ -235,7 +235,7 @@ function function_e2daf77(clientnum, var_307e89fe, var_a5e484fd) {
     exploder::stop_exploder(name);
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 3, eflags: 0x1 linked
 // Checksum 0xea5b77c0, Offset: 0x1348
 // Size: 0x16c
@@ -264,12 +264,12 @@ function function_5cd605a9(clientnum, state, oldstate) {
     }
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 0, eflags: 0x1 linked
 // Checksum 0x735b9afc, Offset: 0x14c0
 // Size: 0xe0
 function function_3825d415() {
-    wait(0.016);
+    wait 0.016;
     if (!level clientfield::get("zombie_power_on")) {
         level waittill(#"zpo");
     }
@@ -281,17 +281,17 @@ function function_3825d415() {
             }
         }
         level notify(#"hash_9f91944d");
-        level notify(#"hash_a39e7bd2");
+        level notify(#"pl1");
         level waittill(#"zpo");
     }
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfd275f47, Offset: 0x15a8
 // Size: 0xbe
 function function_dcf14adc() {
-    wait(0.016);
+    wait 0.016;
     players = getlocalplayers();
     for (i = 0; i < players.size; i++) {
         var_3e0fbdba = getentarray(i, "model_lights_on", "targetname");
@@ -301,12 +301,12 @@ function function_dcf14adc() {
     }
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 0, eflags: 0x1 linked
 // Checksum 0x23d312ce, Offset: 0x1670
 // Size: 0xa4
 function function_7414b0df() {
-    wait(0.016);
+    wait 0.016;
     if (!level clientfield::get("zombie_power_on")) {
         level waittill(#"zpo");
     }
@@ -319,18 +319,18 @@ function function_7414b0df() {
     }
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 0, eflags: 0x1 linked
 // Checksum 0x218c80ba, Offset: 0x1720
 // Size: 0xfc
 function register_clientfields() {
     clientfield::register("world", "zm_theater_screen_in_place", 21000, 1, "int", &function_17e9c62f, 0, 0);
     clientfield::register("scriptmover", "zombie_has_eyes", 21000, 1, "int", &zm::zombie_eyes_clientfield_cb, 0, 0);
-    clientfield::register("world", "zm_theater_movie_reel_playing", 21000, 2, "int", &namespace_265ae7e9::function_e4b3e1ca, 0, 0);
+    clientfield::register("world", "zm_theater_movie_reel_playing", 21000, 2, "int", &zm_theater_fx::function_e4b3e1ca, 0, 0);
     namespace_6e97c459::function_225a92d6("movieReel", 21000);
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 7, eflags: 0x0
 // Checksum 0xa483ad33, Offset: 0x1828
 // Size: 0x3c
@@ -338,7 +338,7 @@ function function_ce6ee03b(localclientnum, oldval, newval, bnewent, binitialsnap
     
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe04babdf, Offset: 0x1870
 // Size: 0x3c
@@ -346,7 +346,7 @@ function function_17e9c62f(localclientnum, oldval, newval, bnewent, binitialsnap
     
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 0, eflags: 0x1 linked
 // Checksum 0x84187b56, Offset: 0x18b8
 // Size: 0x15c
@@ -355,27 +355,27 @@ function startzmbspawnersoundloops() {
     if (isdefined(loopers) && loopers.size > 0) {
         delay = 0;
         /#
-            if (getdvarint("zombie_theater_erooms_pentagon") > 0) {
-                println("zombie_theater_erooms_pentagon" + loopers.size + "zombie_theater_erooms_pentagon");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x34>" + loopers.size + "<dev string:x6c>");
             }
         #/
         for (i = 0; i < loopers.size; i++) {
             loopers[i] thread soundloopthink();
             delay += 1;
             if (delay % 20 == 0) {
-                wait(0.016);
+                wait 0.016;
             }
         }
         return;
     }
     /#
-        if (getdvarint("zombie_theater_erooms_pentagon") > 0) {
-            println("zombie_theater_erooms_pentagon");
+        if (getdvarint("<dev string:x28>") > 0) {
+            println("<dev string:x77>");
         }
     #/
 }
 
-// Namespace namespace_aed37ba8
+// Namespace zm_theater
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1cfd44db, Offset: 0x1a20
 // Size: 0x16c

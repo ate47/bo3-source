@@ -10,9 +10,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_5150364b;
+#namespace zm_prototype_ffotd;
 
-// Namespace namespace_5150364b
+// Namespace zm_prototype_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x1d0
 // Size: 0x4
@@ -20,7 +20,7 @@ function main_start() {
     
 }
 
-// Namespace namespace_5150364b
+// Namespace zm_prototype_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x1e0
 // Size: 0x4

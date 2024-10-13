@@ -1,9 +1,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_eb3fb2b6;
+#namespace zm_cosmodrome_fx;
 
-// Namespace namespace_eb3fb2b6
+// Namespace zm_cosmodrome_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7328abba, Offset: 0x11d8
 // Size: 0x124
@@ -19,7 +19,7 @@ function main() {
     }
 }
 
-// Namespace namespace_eb3fb2b6
+// Namespace zm_cosmodrome_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb7cf7cfd, Offset: 0x1308
 // Size: 0x416
@@ -63,7 +63,7 @@ function function_f45953c() {
     level._effect["perk_machine_light_green"] = "dlc5/zmhd/fx_wonder_fizz_light_green";
 }
 
-// Namespace namespace_eb3fb2b6
+// Namespace zm_cosmodrome_fx
 // Params 0, eflags: 0x0
 // Checksum 0xf369a7e, Offset: 0x1728
 // Size: 0x40e
@@ -107,7 +107,7 @@ function function_e6258024() {
     level._effect["fx_zmb_russian_rocket_smk"] = "dlc5/cosmo/fx_zmb_russian_rocket_smk";
 }
 
-// Namespace namespace_eb3fb2b6
+// Namespace zm_cosmodrome_fx
 // Params 3, eflags: 0x1 linked
 // Checksum 0x3095b104, Offset: 0x1b40
 // Size: 0x11a
@@ -127,7 +127,7 @@ function trap_fx_monitor(name, loc, trap_type) {
     }
 }
 
-// Namespace namespace_eb3fb2b6
+// Namespace zm_cosmodrome_fx
 // Params 2, eflags: 0x1 linked
 // Checksum 0x56bde681, Offset: 0x1c68
 // Size: 0x260
@@ -149,10 +149,10 @@ function function_68c9b7de(loc, trap_type) {
         fx_name = self.script_string;
     } else {
         switch (trap_type) {
-        case 159:
+        case "electric":
             fx_name = "zapper";
             break;
-        case 0:
+        case "fire":
         default:
             fx_name = "fire_trap";
             break;
@@ -170,7 +170,7 @@ function function_68c9b7de(loc, trap_type) {
     self.loopfx = [];
 }
 
-// Namespace namespace_eb3fb2b6
+// Namespace zm_cosmodrome_fx
 // Params 2, eflags: 0x1 linked
 // Checksum 0x8efbaf42, Offset: 0x1ed0
 // Size: 0x37a

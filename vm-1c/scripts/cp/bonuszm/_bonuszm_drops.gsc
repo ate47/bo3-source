@@ -90,7 +90,7 @@ function function_b67e03f7() {
     var_7c911129 = level.var_a9e78bf7["powerupdropsenabled"];
     var_978f1b32 = level.var_a9e78bf7["powerdropchance"] * level.var_a9e78bf7["powerdropsscalar"];
     /#
-        if (getdvarstring("cybercoreupgradeddropchance") != "cybercoreupgradeddropchance") {
+        if (getdvarstring("<dev string:x28>") != "<dev string:x36>") {
             var_7c911129 = 1;
             var_978f1b32 = 100;
         }
@@ -153,8 +153,8 @@ function function_b67e03f7() {
         var_2f14c279 = var_bf55d8d2[randomint(var_bf55d8d2.size)];
     }
     /#
-        if (getdvarstring("cybercoreupgradeddropchance") != "cybercoreupgradeddropchance") {
-            var_2f14c279 = getdvarstring("cybercoreupgradeddropchance");
+        if (getdvarstring("<dev string:x28>") != "<dev string:x36>") {
+            var_2f14c279 = getdvarstring("<dev string:x28>");
         }
     #/
     if (!isdefined(var_2f14c279)) {
@@ -168,7 +168,7 @@ function function_b67e03f7() {
         origin = self.origin + vectorscale(direction, -106);
     }
     switch (var_2f14c279) {
-    case 5:
+    case "random_weapon":
         weaponinfo = function_1e2e0936(0);
         if (!isdefined(weaponinfo)) {
             return;
@@ -181,43 +181,43 @@ function function_b67e03f7() {
         str_model = weaponinfo[0].worldmodel;
         var_638b7f73 = self function_95409c5(str_model, origin, (0, 0, 30), weaponinfo, 0);
         break;
-    case 7:
+    case "cybercom":
         str_identifier = "cybercom";
         var_663ac88a = "cybercom";
         var_638b7f73 = self function_95409c5("p7_zm_power_up_cyber_core", origin, (0, 0, 30), undefined, 0);
         break;
-    case 9:
+    case "cybercom_upgraded":
         str_identifier = "cybercom_upgraded";
         var_663ac88a = "cybercom_upgraded";
         var_638b7f73 = self function_95409c5("p7_zm_power_up_cyber_core", origin, (0, 0, 30), undefined, 1, 1);
         break;
-    case 13:
+    case "max_ammo":
         str_identifier = "max_ammo";
         var_663ac88a = "max_ammo";
         var_638b7f73 = self function_95409c5("p7_zm_power_up_max_ammo", origin, (0, 0, 30), undefined, 0);
         break;
-    case 15:
+    case "max_ammo_upgraded":
         str_identifier = "max_ammo_upgraded";
         var_663ac88a = "max_ammo_upgraded";
         var_638b7f73 = self function_95409c5("p7_zm_power_up_max_ammo", origin, (0, 0, 30), undefined, 1, 1);
         break;
-    case 3:
+    case "instakill":
         str_identifier = "instakill";
         var_663ac88a = "instakill";
         var_638b7f73 = self function_95409c5("p7_zm_power_up_insta_kill", origin, (0, 0, 30), undefined, 0);
         break;
-    case 17:
+    case "instakill_upgraded":
         str_identifier = "instakill_upgraded";
         var_663ac88a = "instakill_upgraded";
         var_638b7f73 = self function_95409c5("p7_zm_power_up_insta_kill", origin, (0, 0, 30), undefined, 1, 1);
         break;
-    case 19:
+    case "raps":
         str_identifier = "raps";
         var_663ac88a = "raps";
         var_638b7f73 = self function_95409c5("veh_t7_drone_raps", origin, (0, 0, 30), undefined, 0);
         break;
     default:
-        assertmsg("cybercoreupgradeddropchance");
+        assertmsg("<dev string:x37>");
         break;
     }
     level.var_61c4b2a6++;
@@ -240,7 +240,7 @@ function function_95409c5(str_model, var_86aa369c, v_offset, weaponinfo, upgrade
     }
     if (!mayspawnentity()) {
         /#
-            iprintln("cybercoreupgradeddropchance");
+            iprintln("<dev string:x52>");
         #/
         return;
     }
@@ -317,7 +317,7 @@ function function_8036f40b() {
     }
     while (true) {
         self rotateyaw(-180, rotatetime);
-        wait(rotatetime);
+        wait rotatetime;
     }
 }
 
@@ -327,7 +327,7 @@ function function_8036f40b() {
 // Size: 0x1be
 function function_b050d188() {
     self endon(#"death");
-    self endon(#"hash_56f6579a");
+    self endon(#"stopbzmdrop_behavior");
     var_b57f6680 = 18;
     n_frames = var_b57f6680 * 20;
     n_section = int(n_frames / 6);
@@ -353,9 +353,9 @@ function function_b050d188() {
         }
         b_show = !b_show;
         i += n_multiplier;
-        wait(0.05 * n_multiplier);
+        wait 0.05 * n_multiplier;
     }
-    self notify(#"hash_56f6579a");
+    self notify(#"stopbzmdrop_behavior");
 }
 
 // Namespace namespace_fdfaa57d
@@ -384,7 +384,7 @@ function function_6b3c34cc(var_638b7f73, str_identifier, var_663ac88a) {
         return;
     }
     var_638b7f73 endon(#"death");
-    var_638b7f73 endon(#"hash_56f6579a");
+    var_638b7f73 endon(#"stopbzmdrop_behavior");
     util::wait_network_frame();
     var_e484e9fb = int(180);
     for (i = 0; i < var_e484e9fb; i++) {
@@ -399,12 +399,12 @@ function function_6b3c34cc(var_638b7f73, str_identifier, var_663ac88a) {
                     players[i] notify(#"hash_b5d20c7d");
                     players[i] notify(str_identifier);
                     players[i] function_da35c458(var_663ac88a, var_638b7f73);
-                    var_638b7f73 notify(#"hash_56f6579a");
+                    var_638b7f73 notify(#"stopbzmdrop_behavior");
                     break;
                 }
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -423,7 +423,7 @@ function function_cf8cea5f(n_delay) {
     if (n_delay > 0) {
         self clientfield::set("powerup_on_fx", 0);
         self ghost();
-        wait(n_delay);
+        wait n_delay;
     }
     if (isdefined(self)) {
         self delete();
@@ -451,32 +451,32 @@ function function_13d6da78() {
 // Size: 0x16e
 function function_da35c458(var_663ac88a, var_638b7f73) {
     switch (var_663ac88a) {
-    case 7:
+    case "cybercom":
         self function_2beeb3b3(0);
         break;
-    case 9:
+    case "cybercom_upgraded":
         self function_2beeb3b3(1);
         break;
-    case 13:
+    case "max_ammo":
         self give_max_ammo();
         break;
-    case 15:
+    case "max_ammo_upgraded":
         self function_4827a249();
         break;
-    case 5:
+    case "random_weapon":
         self function_4035ce17(var_638b7f73);
         break;
-    case 3:
+    case "instakill":
         self function_f3239cd2();
         break;
-    case 17:
+    case "instakill_upgraded":
         self function_c54347ed();
         break;
-    case 19:
+    case "raps":
         self thread function_be188509();
         break;
     default:
-        assert("cybercoreupgradeddropchance" + var_663ac88a + "cybercoreupgradeddropchance");
+        assert("<dev string:x7e>" + var_663ac88a + "<dev string:x95>");
         break;
     }
 }
@@ -501,7 +501,7 @@ function private function_be188509() {
         level.var_f011cb7c.ignoreme = 1;
         level.var_f011cb7c.disableautodetonation = 1;
         level.var_f011cb7c setavoidancemask("avoid none");
-        wait(40);
+        wait 40;
         if (isdefined(level.var_f011cb7c) && isalive(level.var_f011cb7c)) {
             attacker = level.var_f011cb7c;
             level.var_f011cb7c stopsounds();
@@ -540,8 +540,8 @@ function function_2beeb3b3(upgraded) {
     }
     var_b5725157 = array::random(abilities);
     /#
-        if (getdvarstring("cybercoreupgradeddropchance", "cybercoreupgradeddropchance") != "cybercoreupgradeddropchance") {
-            var_b5725157 = getdvarstring("cybercoreupgradeddropchance");
+        if (getdvarstring("<dev string:xb4>", "<dev string:x36>") != "<dev string:x36>") {
+            var_b5725157 = getdvarstring("<dev string:xb4>");
         }
     #/
     self cybercom::function_e60e89fe();
@@ -565,13 +565,13 @@ function private function_8435cfdc(var_b5725157, upgraded) {
     self.var_cc7a6101 = 0;
     self.var_db92ee58 = gettime();
     switch (var_b5725157) {
-    case 40:
-    case 37:
-    case 39:
-    case 36:
+    case "cybercom_camo":
+    case "cybercom_concussive":
+    case "cybercom_fireflyswarm":
+    case "cybercom_overdrive":
         self thread function_2d73d3d9(upgraded);
         break;
-    case 38:
+    case "cybercom_unstoppableforce":
         self thread function_1c087aac(upgraded);
         break;
     }
@@ -593,7 +593,7 @@ function private function_1c087aac(upgraded) {
         var_3c351aaf = self.var_db92ee58 + 30000;
     }
     while (gettime() < var_3c351aaf) {
-        wait(0.1);
+        wait 0.1;
     }
     foreach (ability in level.cybercom.abilities) {
         self function_d8df9418(ability.name);
@@ -617,9 +617,9 @@ function private function_2d73d3d9(upgraded) {
         var_686e9a14 = 3;
     }
     while (self.var_cc7a6101 < 3) {
-        wait(0.1);
+        wait 0.1;
     }
-    wait(5);
+    wait 5;
     foreach (ability in level.cybercom.abilities) {
         self function_d8df9418(ability.name);
         self namespace_d00ec32::function_1364f13e(ability);
@@ -693,7 +693,7 @@ function function_4759fbcb() {
     self thread function_ac97a368();
     self clientfield::set_to_player("bonuszm_player_instakill_active_fx", 1);
     self.forceanhilateondeath = 1;
-    wait(15);
+    wait 15;
     self clientfield::set_to_player("bonuszm_player_instakill_active_fx", 0);
     self.forceanhilateondeath = 0;
 }
@@ -756,7 +756,7 @@ function function_eb0b4e74() {
     assert(!(isdefined(level.bzm_worldpaused) && level.bzm_worldpaused));
     level endon(#"hash_d864b21a");
     function_3dce4e74();
-    wait(8);
+    wait 8;
     level thread function_1dfabdfa();
 }
 
@@ -775,7 +775,7 @@ function function_3dce4e74() {
     level.var_5860b0ee playsound("zmb_instakill_upgraded_activate");
     level.var_5860b0ee playloopsound("zmb_instakill_upgraded_loop", 2);
     setslowmotion(1, 1.2, 2);
-    wait(2);
+    wait 2;
     setpauseworld(1);
     if (isdefined(level.heroes) && level.heroes.size) {
         foreach (hero in level.heroes) {
@@ -805,7 +805,7 @@ function function_1dfabdfa() {
     level.var_5860b0ee stoploopsound(2);
     level.var_5860b0ee playsound("zmb_instakill_upgraded_deactivate");
     setslowmotion(1.2, 1, 2);
-    wait(1);
+    wait 1;
     setpauseworld(0);
     foreach (player in level.activeplayers) {
         player clientfield::set_to_player("bonuszm_player_instakill_active_fx", 0);
@@ -835,7 +835,7 @@ function function_2a5eb705() {
             }
         }
         level.var_c85f5b9b = array::remove_undefined(level.var_c85f5b9b);
-        level notify(#"hash_cf7497c1");
+        level notify(#"BZM_kill_active_parasites_meatball_rocket");
     }
 }
 

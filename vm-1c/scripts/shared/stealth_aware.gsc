@@ -10,9 +10,9 @@
 #using scripts/shared/util_shared;
 #using scripts/shared/trigger_shared;
 
-#namespace namespace_80045451;
+#namespace stealth_aware;
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6f2fe7f1, Offset: 0x318
 // Size: 0xac
@@ -28,7 +28,7 @@ function init() {
     self thread function_a85b6c52();
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 0, eflags: 0x1 linked
 // Checksum 0x98439db6, Offset: 0x3d0
 // Size: 0x20
@@ -36,7 +36,7 @@ function enabled() {
     return isdefined(self.stealth) && isdefined(self.stealth.var_d1b49f30);
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6fc52195, Offset: 0x3f8
 // Size: 0x48c
@@ -51,7 +51,7 @@ function function_a2429809(var_12131b3c) {
     }
     self.awarenesslevelcurrent = var_12131b3c;
     var_1d811e47 = self.awarenesslevelcurrent != "combat";
-    parms = namespace_ad45a419::function_b3269823(var_12131b3c);
+    parms = stealth_level::function_b3269823(var_12131b3c);
     self.fovcosine = parms.fovcosine;
     self.fovcosinez = parms.fovcosinez;
     self.maxsightdist = parms.maxsightdist;
@@ -64,9 +64,9 @@ function function_a2429809(var_12131b3c) {
         self.stealth.var_b463484b = self.origin;
     }
     switch (self.awarenesslevelcurrent) {
-    case 2:
-    case 3:
-    default:
+    case "high_alert":
+    case "low_alert":
+    case "unaware":
         self function_216be1d1(1);
         break;
     }
@@ -83,7 +83,7 @@ function function_a2429809(var_12131b3c) {
             self thread ai::patrol(self.currentgoal);
         } else if (isdefined(self.stealth.var_b463484b)) {
             if (isactor(self)) {
-                self thread namespace_7829c86f::function_edba2e78(self.stealth.var_b463484b);
+                self thread stealth_behavior::function_edba2e78(self.stealth.var_b463484b);
             }
             self.stealth.var_b463484b = undefined;
         }
@@ -94,8 +94,8 @@ function function_a2429809(var_12131b3c) {
     if (self ai::has_behavior_attribute("disablearrivals")) {
         self ai::set_behavior_attribute("disablearrivals", var_1d811e47);
     }
-    if (self namespace_234a4910::enabled()) {
-        self namespace_234a4910::set_stealth_mode(var_1d811e47);
+    if (self stealth_vo::enabled()) {
+        self stealth_vo::set_stealth_mode(var_1d811e47);
     }
     if (var_b3c4b275 != var_12131b3c) {
         self notify(#"awareness", var_12131b3c);
@@ -105,7 +105,7 @@ function function_a2429809(var_12131b3c) {
     }
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa0b90120, Offset: 0x890
 // Size: 0xa
@@ -113,7 +113,7 @@ function function_739525d() {
     return self.awarenesslevelcurrent;
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 1, eflags: 0x0
 // Checksum 0xa8f6d3fe, Offset: 0x8a8
 // Size: 0x36
@@ -121,7 +121,7 @@ function function_e5e8ce80(entity) {
     return isdefined(self.stealth.var_c49c37ed[entity getentitynumber()]);
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd97730ba, Offset: 0x8e8
 // Size: 0x1dc
@@ -141,21 +141,21 @@ function function_c82b617b(delta) {
     }
     if (delta > 0) {
         switch (self.awarenesslevelcurrent) {
-        case 3:
-        default:
+        case "low_alert":
+        case "unaware":
             self function_a2429809("high_alert");
             break;
-        case 2:
+        case "high_alert":
             self function_a2429809("combat");
             break;
         }
     } else {
         switch (self.awarenesslevelcurrent) {
-        case 2:
-        case 3:
+        case "high_alert":
+        case "low_alert":
             self function_a2429809("unaware");
             break;
-        case 1:
+        case "combat":
             self function_a2429809("high_alert");
             break;
         }
@@ -163,7 +163,7 @@ function function_c82b617b(delta) {
     return var_f93ad764 != self.awarenesslevelcurrent;
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf71ac81a, Offset: 0xad0
 // Size: 0xe2
@@ -177,7 +177,7 @@ function function_216be1d1(ignore) {
     }
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 2, eflags: 0x1 linked
 // Checksum 0xe2aed551, Offset: 0xbc0
 // Size: 0xf4
@@ -195,7 +195,7 @@ function function_c62ada65(sentient, ignore) {
     #/
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2b0b1d2e, Offset: 0xcc0
 // Size: 0x84
@@ -203,13 +203,13 @@ function function_ca6a0809(var_904f1fb9) {
     self endon(#"death");
     self endon(#"disconnect");
     e_originator = var_904f1fb9.parms[0];
-    self notify(#"hash_234a4910", "alert");
+    self notify(#"stealth_vo", "alert");
     if (isplayer(e_originator)) {
-        e_originator namespace_10443be6::function_ca6a0809(self);
+        e_originator stealth_player::function_ca6a0809(self);
     }
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd5f98e8a, Offset: 0xd50
 // Size: 0x2ce
@@ -225,12 +225,12 @@ function function_617b90af(var_904f1fb9) {
     if (self stealth::function_2cfe5148(e_originator) && isalive(e_originator)) {
         var_1f6ae92b = "combat";
         /#
-            debugreason = "stealth_no_return";
+            debugreason = "<dev string:x28>";
         #/
     } else if (e_originator enabled() && e_originator function_739525d() == "combat") {
         var_1f6ae92b = "high_alert";
         /#
-            debugreason = "stealth_no_return";
+            debugreason = "<dev string:x32>";
         #/
     }
     var_edfa68f2 = 0;
@@ -250,11 +250,11 @@ function function_617b90af(var_904f1fb9) {
     }
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 1, eflags: 0x1 linked
 // Checksum 0xea238e8b, Offset: 0x1028
 // Size: 0x2fe
-function function_85b3a352(var_904f1fb9) {
+function on_sight_end(var_904f1fb9) {
     self endon(#"death");
     self endon(#"disconnect");
     if (getdvarint("stealth_no_return") && self function_739525d() == "combat") {
@@ -294,7 +294,7 @@ function function_85b3a352(var_904f1fb9) {
     }
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 1, eflags: 0x1 linked
 // Checksum 0x43368798, Offset: 0x1330
 // Size: 0x634
@@ -334,11 +334,11 @@ function function_6c10e440(var_904f1fb9) {
         }
         /#
             debugreason = self getcurrenteventtypename() + self getcurrenteventname();
-            if (!isdefined(debugreason) || debugreason == "stealth_no_return") {
-                debugreason = "stealth_no_return";
+            if (!isdefined(debugreason) || debugreason == "<dev string:x3d>") {
+                debugreason = "<dev string:x3e>";
             }
             if (isdefined(e_originator) && iscorpse(e_originator)) {
-                debugreason = "stealth_no_return";
+                debugreason = "<dev string:x43>";
             }
             if (var_904f1fb9.parms.size > 1) {
                 debugreason = var_904f1fb9.parms[var_904f1fb9.parms.size - 1];
@@ -348,14 +348,14 @@ function function_6c10e440(var_904f1fb9) {
             }
         #/
         if (str_typename == "explosion") {
-            self notify(#"hash_234a4910", "explosion");
+            self notify(#"stealth_vo", "explosion");
         } else if (isdefined(e_originator) && iscorpse(e_originator)) {
-            self notify(#"hash_234a4910", "corpse");
+            self notify(#"stealth_vo", "corpse");
         }
         self function_a2429809(var_d3a202ad);
         switch (var_d3a202ad) {
-        case 2:
-        case 3:
+        case "high_alert":
+        case "low_alert":
             self notify(#"investigate", v_origin, e_originator);
             break;
         }
@@ -364,11 +364,11 @@ function function_6c10e440(var_904f1fb9) {
         }
         if (isplayer(e_originator) && var_d3a202ad == "combat" && level.stealth.var_e7ad9c1f == 0) {
             if (isdefined(self.blindaim) && self.blindaim) {
-                e_originator namespace_234a4910::function_e3ae87b3("spotted_sniper", self, 2);
+                e_originator stealth_vo::function_e3ae87b3("spotted_sniper", self, 2);
             } else if (isvehicle(self)) {
-                e_originator namespace_234a4910::function_e3ae87b3("spotted_drone", self, 2);
+                e_originator stealth_vo::function_e3ae87b3("spotted_drone", self, 2);
             } else {
-                e_originator namespace_234a4910::function_e3ae87b3("spotted", self, 2);
+                e_originator stealth_vo::function_e3ae87b3("spotted", self, 2);
             }
         }
     }
@@ -380,7 +380,7 @@ function function_6c10e440(var_904f1fb9) {
     }
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd0a7d45e, Offset: 0x1970
 // Size: 0x9e
@@ -394,7 +394,7 @@ function function_101ac5(var_904f1fb9) {
     }
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4f3f1ec8, Offset: 0x1a18
 // Size: 0x244
@@ -427,7 +427,7 @@ function function_933965f6(var_904f1fb9) {
     }
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 4, eflags: 0x0
 // Checksum 0xa69f4bfb, Offset: 0x1c68
 // Size: 0x1c2
@@ -452,7 +452,7 @@ function function_ec265d65(group, var_d3a202ad, v_origin, e_originator) {
     }
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 2, eflags: 0x1 linked
 // Checksum 0xb0e20e5e, Offset: 0x1e38
 // Size: 0x25e
@@ -471,18 +471,18 @@ function function_20519577(lookat, delay) {
     }
     starttime = gettime();
     delayms = delay * 1000;
-    wait(0.2);
+    wait 0.2;
     while (isdefined(self.stealth_reacting) && isalive(self) && self.stealth_reacting) {
         if (gettime() - starttime >= delayms) {
             self lookatentity(ent);
             /#
-                if (namespace_e449108e::enabled()) {
+                if (stealth_debug::enabled()) {
                     line(self geteye(), ent.origin + (0, 0, 20), (0, 0, 1), 1, 1, 1);
                     debugstar(ent.origin + (0, 0, 20), 1, (0, 0, 1));
                 }
             #/
         }
-        wait(0.05);
+        wait 0.05;
     }
     if (isdefined(self)) {
         self lookatentity();
@@ -493,17 +493,17 @@ function function_20519577(lookat, delay) {
     }
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa0e34ab3, Offset: 0x20a0
 // Size: 0x3c
 function function_e7cf1d24(delay, id) {
     self endon(#"death");
-    wait(delay);
+    wait delay;
     self serviceevent(id);
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb38445ba, Offset: 0x20e8
 // Size: 0xbe
@@ -518,19 +518,19 @@ function function_a7964595(var_904f1fb9) {
     }
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 1, eflags: 0x0
 // Checksum 0x67f34230, Offset: 0x21b0
 // Size: 0x6c
 function function_a0693e3b(e_attacker) {
     self endon(#"death");
     if (isdefined(e_attacker) && self enabled()) {
-        wait(randomfloatrange(0.25, 0.75));
+        wait randomfloatrange(0.25, 0.75);
         self function_bc0ce0bf(e_attacker);
     }
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 1, eflags: 0x1 linked
 // Checksum 0xba707156, Offset: 0x2228
 // Size: 0x2b2
@@ -541,7 +541,7 @@ function function_bc0ce0bf(enemy) {
     if (!isdefined(enemy) || !self stealth::function_2cfe5148(enemy)) {
         return;
     }
-    self namespace_7829c86f::function_2481442d();
+    self stealth_behavior::function_2481442d();
     self stopanimscripted();
     enemyentnum = enemy getentitynumber();
     self function_a2429809("combat");
@@ -550,7 +550,7 @@ function function_bc0ce0bf(enemy) {
         self.stealth.var_d1b49f30[enemyentnum] = enemy;
         self.stealth.var_c49c37ed[enemyentnum] = enemy;
         self thread function_899ae538(enemy);
-        self notify(#"hash_234a4910", "enemy");
+        self notify(#"stealth_vo", "enemy");
     }
     if (issentient(enemy)) {
         self setstealthsightvalue(enemy, 1);
@@ -569,7 +569,7 @@ function function_bc0ce0bf(enemy) {
     }
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6b612cef, Offset: 0x24e8
 // Size: 0x1f4
@@ -579,12 +579,12 @@ function function_899ae538(enemy) {
     self endon(#"death");
     idletime = 0;
     while (true) {
-        wait(0.5);
+        wait 0.5;
         if (isdefined(self.silenced) && (!isdefined(enemy) || enemy.health <= 0 || self function_739525d() != "combat" || self.silenced)) {
             break;
         }
-        self namespace_c8814633::function_7dd521be(self.team, self.origin, -56, 100, 0, "combat_spread", "combat", enemy, self);
-        self namespace_c8814633::function_7dd521be(self.team, self.origin, 400, 300, 1, "combat_interest", enemy, self);
+        self stealth_event::function_7dd521be(self.team, self.origin, -56, 100, 0, "combat_spread", "combat", enemy, self);
+        self stealth_event::function_7dd521be(self.team, self.origin, 400, 300, 1, "combat_interest", enemy, self);
         if (!isdefined(self.enemy) || !self stealth::can_see(self.enemy)) {
             self setstealthsightawareness(self.awarenesslevelcurrent, 1);
             continue;
@@ -594,7 +594,7 @@ function function_899ae538(enemy) {
     self setstealthsightawareness(self.awarenesslevelcurrent, 1);
 }
 
-// Namespace namespace_80045451
+// Namespace stealth_aware
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd0fc0bcd, Offset: 0x26e8
 // Size: 0x11a
@@ -610,7 +610,7 @@ function function_a85b6c52() {
                 self.avoid_cover = undefined;
                 self.silentshot = 0;
             }
-            wait(0.05);
+            wait 0.05;
         }
         self notify(#"stealth_sight_end", self.enemy);
     }

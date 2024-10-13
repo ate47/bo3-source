@@ -1,9 +1,9 @@
 #using scripts/shared/system_shared;
 #using scripts/shared/clientfield_shared;
 
-#namespace namespace_5c41055a;
+#namespace zm_radio;
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 0, eflags: 0x2
 // Checksum 0xd8989ec8, Offset: 0xc0
 // Size: 0x3c
@@ -11,7 +11,7 @@ function autoexec function_2dc19561() {
     system::register("zm_radio", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x108
 // Size: 0x4
@@ -19,7 +19,7 @@ function __init__() {
     
 }
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x118
 // Size: 0x4
@@ -27,7 +27,7 @@ function __main__() {
     
 }
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 7, eflags: 0x1 linked
 // Checksum 0x43ab63f0, Offset: 0x128
 // Size: 0x204
@@ -45,10 +45,10 @@ function function_3d58bdce(localclientnum, oldval, newval, bnewent, binitialsnap
             if (soundplaying(level.var_f3006fa7)) {
                 fade(level.var_f3006fa7, 1);
             } else {
-                wait(0.5);
+                wait 0.5;
             }
             if (level.var_ce7032d4 < level.var_c017e2d5.size) {
-                println("<unknown string>" + level.var_c017e2d5[level.var_ce7032d4]);
+                println("<dev string:x28>" + level.var_c017e2d5[level.var_ce7032d4]);
                 level.var_f3006fa7 = playsound(0, level.var_c017e2d5[level.var_ce7032d4], self.origin);
             } else {
                 return;
@@ -61,7 +61,7 @@ function function_3d58bdce(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 1, eflags: 0x0
 // Checksum 0xeb3ee950, Offset: 0x338
 // Size: 0x3a
@@ -72,7 +72,7 @@ function function_1214cfea(song) {
     level.var_c017e2d5[level.var_c017e2d5.size] = song;
 }
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 7, eflags: 0x0
 // Checksum 0x5c12166d, Offset: 0x380
 // Size: 0x68
@@ -81,7 +81,7 @@ function function_2b7f281d(localclientnum, oldval, newval, bnewent, binitialsnap
     level.var_ce7032d4 = newval;
 }
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 2, eflags: 0x1 linked
 // Checksum 0xf6aafab2, Offset: 0x3f0
 // Size: 0x9c
@@ -92,11 +92,11 @@ function fade(n_id, n_time) {
     }
     setsoundvolumerate(n_id, n_rate);
     setsoundvolume(n_id, 0);
-    wait(n_time);
+    wait n_time;
     stopsound(n_id);
 }
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 0, eflags: 0x0
 // Checksum 0x98111f56, Offset: 0x498
 // Size: 0x60
@@ -107,7 +107,7 @@ function function_6378a934() {
         level thread function_3d58bdce();
         level waittill(#"hash_290b26e3");
         level.var_58522184 = 0;
-        wait(0.5);
+        wait 0.5;
     }
 }
 

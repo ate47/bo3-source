@@ -39,10 +39,10 @@ function function_80fe1bad(vehicle) {
     if (isdefined(vehicle.archetype)) {
         vehicle.var_9147087d = [];
         switch (vehicle.archetype) {
-        case 12:
+        case "hunter":
             vehicle.nocybercom = 1;
             break;
-        case 14:
+        case "quadtank":
             vehicle function_59965309("cybercom_surge");
             vehicle function_59965309("cybercom_servoshortout");
             vehicle function_59965309("cybercom_systemoverload");
@@ -53,7 +53,7 @@ function function_80fe1bad(vehicle) {
             vehicle.var_6c8af4c4 = 0;
             vehicle.var_ced13b2f = 1;
             break;
-        case 15:
+        case "siegebot":
             vehicle function_59965309("cybercom_surge");
             vehicle function_59965309("cybercom_servoshortout");
             vehicle function_59965309("cybercom_smokescreen");
@@ -63,8 +63,8 @@ function function_80fe1bad(vehicle) {
             vehicle.var_6c8af4c4 = 0;
             vehicle.var_ced13b2f = 1;
             break;
-        case 11:
-        case 13:
+        case "glaive":
+        case "parasite":
             vehicle.nocybercom = 1;
         default:
             break;
@@ -265,7 +265,7 @@ function function_674d724c(class_num_for_global_weapons, var_f4132a83, var_f69e7
     if (!isdefined(var_f69e782a)) {
         var_f69e782a = 1;
     }
-    self endon(#"hash_3f7b661c");
+    self endon(#"death_or_disconnect");
     if (!isdefined(self.var_fe7a7fe4) || self.var_fe7a7fe4 != 1) {
         for (var_f1362994 = 0; var_f1362994 <= 2; var_f1362994++) {
             self function_8b088b97(var_f1362994);
@@ -324,9 +324,9 @@ function function_4b8ac464(class_num, class_num_for_global_weapons, var_f4132a83
     }
     self cybercom_tacrig::function_78908229();
     if (!self flag::exists("in_training_sim") || !self flag::get("in_training_sim")) {
-        var_9e7e6766 = self savegame::function_36adbb9c("saved_rig1", undefined);
-        if (isdefined(var_9e7e6766)) {
-            var_40cc9116 = var_9e7e6766;
+        saved_rig1 = self savegame::function_36adbb9c("saved_rig1", undefined);
+        if (isdefined(saved_rig1)) {
+            var_40cc9116 = saved_rig1;
             var_65303699 = self savegame::function_36adbb9c("saved_rig1_upgraded", undefined);
             var_1aca16ad = self savegame::function_36adbb9c("saved_rig2", undefined);
             var_2e518e8 = self savegame::function_36adbb9c("saved_rig2_upgraded", undefined);
@@ -358,7 +358,7 @@ function function_2006f7d0(slot, weapon, var_775ebc1b) {
         self.cybercom.var_d1460543 = [];
     }
     locks = isdefined(var_775ebc1b) ? var_775ebc1b : getdvarint("scr_max_simLocks");
-    assert(locks <= 5, "cybercom_hijack");
+    assert(locks <= 5, "<dev string:x28>");
     self thread function_17fea3ed(slot, weapon, locks);
     self thread function_d4f9f451(slot, weapon);
     self thread function_348de0be(slot, weapon);
@@ -441,7 +441,7 @@ function function_d4f9f451(slot, weapon) {
                 return;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -482,10 +482,10 @@ function private function_7806352d(weapon) {
     self endon(#"death");
     self endon(#"hash_e9579630");
     event = self util::waittill_any_return(weapon.name + "_fired");
-    level notify(#"hash_825eb47e", self, weapon);
+    level notify(#"ccom_lock_fired", self, weapon);
     foreach (item in self.cybercom.var_d1460543) {
         if (isdefined(item.target)) {
-            item.target notify(#"hash_825eb47e", self, weapon);
+            item.target notify(#"ccom_lock_fired", self, weapon);
             if (isdefined(item.target.var_5001b74f) && item.target.var_5001b74f == self) {
                 item.target.var_5001b74f = undefined;
             }
@@ -824,8 +824,8 @@ function function_f5c2844(slot, target, maxrange, weapon) {
             function_c5b2f654(self);
             self weaponlocknoclearance(0, slot);
             self weaponlockfinalize(newitem.target, newitem.var_b88e0bc);
-            newitem.target notify(#"hash_92698df4", self);
-            level notify(#"hash_92698df4", newitem.target, self);
+            newitem.target notify(#"ccom_locked_on", self);
+            level notify(#"ccom_locked_on", newitem.target, self);
         } else {
             newitem.target notify(#"ccom_lock_being_targeted", self);
             level notify(#"ccom_lock_being_targeted", newitem.target, self);
@@ -1006,7 +1006,7 @@ function function_b5f4e597(weapon) {
             var_6f023b72 = 1;
         }
         self clientfield::set_player_uimodel("playerAbilities.inRange", var_6f023b72);
-        wait(0.05);
+        wait 0.05;
     }
     var_6f023b72 = 0;
     self clientfield::set_player_uimodel("playerAbilities.inRange", var_6f023b72);
@@ -1023,7 +1023,7 @@ function function_5ad57748() {
     self endon(#"hash_1bf7ef5");
     var_82361971 = int(getdvarfloat("scr_hacktime_decay_rate", 0.25) / 20 * 1000);
     while (self.var_6c8af4c4 > 0) {
-        wait(0.05);
+        wait 0.05;
         self.var_6c8af4c4 -= var_82361971;
         if (self.var_6c8af4c4 < 0) {
             self.var_6c8af4c4 = 0;
@@ -1096,7 +1096,7 @@ function function_17fea3ed(slot, weapon, maxtargets) {
     validtargets = [];
     dots = [];
     while (self hasweapon(weapon)) {
-        wait(0.05);
+        wait 0.05;
         self function_f5799ee1();
         self function_b04ec032();
         self.cybercom.var_b766574c = 0;
@@ -1201,7 +1201,7 @@ function function_17fea3ed(slot, weapon, maxtargets) {
         self endon(#"death");
         for (;;) {
             debug_arrow(self.origin, self.angles);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1519,7 +1519,7 @@ function debug_sphere(origin, radius, color, alpha, timeframes) {
 function function_d1686f4c(note, seconds) {
     self endon(note);
     self endon(#"death");
-    wait(seconds);
+    wait seconds;
     self notify(note);
 }
 
@@ -1559,7 +1559,7 @@ function function_f8669cbf(var_9b185703) {
 // Checksum 0x99770fb6, Offset: 0x6380
 // Size: 0x52
 function getentitypose() {
-    assert(isactor(self), "cybercom_hijack");
+    assert(isactor(self), "<dev string:x4f>");
     return blackboard::getblackboardattribute(self, "_stance");
 }
 
@@ -1568,7 +1568,7 @@ function getentitypose() {
 // Checksum 0xf4eeefae, Offset: 0x63e0
 // Size: 0x8e
 function function_5e3d3aa() {
-    assert(isactor(self), "cybercom_hijack");
+    assert(isactor(self), "<dev string:x4f>");
     stance = self getentitypose();
     if (stance == "stand") {
         return "stn";
@@ -1584,7 +1584,7 @@ function function_5e3d3aa() {
 // Checksum 0xd5d761fd, Offset: 0x6478
 // Size: 0x34
 function debugmsg(txt) {
-    println("cybercom_hijack" + txt);
+    println("<dev string:x6a>" + txt);
 }
 
 // Namespace cybercom
@@ -1620,13 +1620,13 @@ function function_adc40f11(weapon, fired) {
     if (fired) {
         self notify(weapon.name + "_fired");
         level notify(weapon.name + "_fired");
-        self notify(#"hash_81c0052c", weapon);
+        self notify(#"cybercom_activation_succeeded", weapon);
         bb::function_42ffd679(self, "fired", weapon);
         self gadgettargetresult(1);
         return;
     }
     self gadgettargetresult(0);
-    self notify(#"hash_2bc5d416", weapon);
+    self notify(#"cybercom_activation_failed", weapon);
 }
 
 // Namespace cybercom

@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_ad4c1fb2;
+#namespace mp_freerun_03_sound;
 
-// Namespace namespace_ad4c1fb2
+// Namespace mp_freerun_03_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x98
 // Size: 0x4

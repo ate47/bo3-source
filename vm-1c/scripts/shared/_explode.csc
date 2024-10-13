@@ -36,10 +36,10 @@ function __init__() {
     // Size: 0x98
     function updatedvars() {
         while (true) {
-            level.dirt_enable_explosion = getdvarint("<unknown string>", level.dirt_enable_explosion);
-            level.dirt_enable_slide = getdvarint("<unknown string>", level.dirt_enable_slide);
-            level.dirt_enable_fall_damage = getdvarint("<unknown string>", level.dirt_enable_fall_damage);
-            wait(1);
+            level.dirt_enable_explosion = getdvarint("<dev string:x28>", level.dirt_enable_explosion);
+            level.dirt_enable_slide = getdvarint("<dev string:x42>", level.dirt_enable_slide);
+            level.dirt_enable_fall_damage = getdvarint("<dev string:x58>", level.dirt_enable_fall_damage);
+            wait 1;
         }
     }
 
@@ -109,7 +109,7 @@ function watchforplayerslide(localclientnum) {
             self thread dothedirty(localclientnum, xdir, ydir, 1, 300, 300);
         }
         self.wasplayersliding = self.isplayersliding;
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -134,7 +134,7 @@ function dothedirty(localclientnum, right, up, distance, dirtduration, dirtfadet
         }
         filter::set_filter_sprite_dirt_source_position(self, 5, right, up, distance);
         filter::set_filter_sprite_dirt_elapsed(self, 5, currenttime);
-        wait(0.016);
+        wait 0.016;
         currenttime = getservertime(localclientnum);
     }
     filter::disable_filter_sprite_dirt(self, 5);

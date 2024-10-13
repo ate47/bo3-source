@@ -17,19 +17,19 @@
     // Size: 0x13c
     function debug_script_structs() {
         if (isdefined(level.struct)) {
-            println("waiting_for_teams" + level.struct.size);
-            println("waiting_for_teams");
+            println("<dev string:x28>" + level.struct.size);
+            println("<dev string:x39>");
             for (i = 0; i < level.struct.size; i++) {
                 struct = level.struct[i];
                 if (isdefined(struct.targetname)) {
-                    println("waiting_for_teams" + i + "waiting_for_teams" + struct.targetname);
+                    println("<dev string:x3a>" + i + "<dev string:x3e>" + struct.targetname);
                     continue;
                 }
-                println("waiting_for_teams" + i + "waiting_for_teams" + "waiting_for_teams");
+                println("<dev string:x3a>" + i + "<dev string:x3e>" + "<dev string:x42>");
             }
             return;
         }
-        println("waiting_for_teams");
+        println("<dev string:x47>");
     }
 
 #/
@@ -99,7 +99,7 @@ function locktimer() {
     level endon(#"host_migration_end");
     for (;;) {
         currtime = gettime();
-        wait(0.05);
+        wait 0.05;
         if (!level.timerstopped && isdefined(level.discardtime)) {
             level.discardtime += gettime() - currtime;
         }
@@ -116,7 +116,7 @@ function callback_hostmigration() {
     zm_utility::function_63f08cf();
     level.hostmigrationreturnedplayercount = 0;
     if (level.gameended) {
-        println("waiting_for_teams" + gettime() + "waiting_for_teams");
+        println("<dev string:x5f>" + gettime() + "<dev string:x7b>");
         return;
     }
     sethostmigrationstatus(1);
@@ -152,7 +152,7 @@ function callback_hostmigration() {
     if (level.inprematchperiod) {
         level waittill(#"prematch_over");
     }
-    println("waiting_for_teams" + gettime());
+    println("<dev string:x5f>" + gettime());
     level.hostmigrationtimer = 1;
     thread locktimer();
     if (isdefined(level.b_host_migration_force_player_respawn) && level.b_host_migration_force_player_respawn) {
@@ -201,7 +201,7 @@ function callback_hostmigration() {
     level.hostmigrationtimer = undefined;
     level._hm_should_pause_spawning = undefined;
     sethostmigrationstatus(0);
-    println("waiting_for_teams" + gettime());
+    println("<dev string:xa2>" + gettime());
     level notify(#"host_migration_end");
 }
 
@@ -220,7 +220,7 @@ function post_migration_become_vulnerable() {
 function post_migration_invulnerability() {
     self endon(#"disconnect");
     var_8a32e9d8 = self enableinvulnerability();
-    wait(3);
+    wait 3;
     self disableinvulnerability();
 }
 
@@ -229,7 +229,7 @@ function post_migration_invulnerability() {
 // Checksum 0x9b7fe140, Offset: 0xee8
 // Size: 0x110
 function host_migration_respawn() {
-    println("waiting_for_teams");
+    println("<dev string:xbe>");
     new_origin = undefined;
     if (isdefined(level.var_75eda423)) {
         new_origin = [[ level.var_75eda423 ]](self);
@@ -259,10 +259,10 @@ function matchstarttimerconsole_internal(counttime, matchstarttimer) {
     level endon(#"match_start_timer_beginning");
     while (counttime > 0 && !level.gameended) {
         matchstarttimer thread hud::function_5e2578bc(level);
-        wait(matchstarttimer.inframes * 0.05);
+        wait matchstarttimer.inframes * 0.05;
         matchstarttimer setvalue(counttime);
         counttime--;
-        wait(1 - matchstarttimer.inframes * 0.05);
+        wait 1 - matchstarttimer.inframes * 0.05;
     }
 }
 
@@ -273,7 +273,7 @@ function matchstarttimerconsole_internal(counttime, matchstarttimer) {
 function matchstarttimerconsole(type, duration) {
     thread function_ea08959e(duration);
     level notify(#"match_start_timer_beginning");
-    wait(0.05);
+    wait 0.05;
     var_a2ceaf69 = hud::createserverfontstring("objective", 1.5);
     var_a2ceaf69 hud::setpoint("CENTER", "CENTER", 0, -40);
     var_a2ceaf69.sort = 1001;
@@ -305,7 +305,7 @@ function function_ea08959e(duration) {
     fade_time = 4;
     n_black_screen = duration - fade_time;
     level thread zm::fade_out_intro_screen_zm(n_black_screen, fade_time, 1);
-    wait(fade_time);
+    wait fade_time;
 }
 
 // Namespace hostmigration
@@ -319,7 +319,7 @@ function hostmigrationwait() {
         hostmigrationwaitforplayers();
     }
     thread matchstarttimerconsole("match_starting_in", 9);
-    wait(5);
+    wait 5;
 }
 
 // Namespace hostmigration
@@ -328,7 +328,7 @@ function hostmigrationwait() {
 // Size: 0x14
 function hostmigrationwaitforplayers() {
     level endon(#"hostmigration_enoughplayers");
-    wait(15);
+    wait 15;
 }
 
 // Namespace hostmigration
@@ -348,7 +348,7 @@ function hostmigrationtimerthink_internal() {
         self linkto(ent);
         ent linkto(self._host_migration_link_entity, "tag_origin", self._host_migration_link_entity worldtolocalcoords(ent.origin), ent.angles + self._host_migration_link_entity.angles);
         self._host_migration_link_helper = ent;
-        println("waiting_for_teams" + self._host_migration_link_entity.targetname);
+        println("<dev string:xf0>" + self._host_migration_link_entity.targetname);
     }
     self.hostmigrationcontrolsfrozen = 1;
     self freezecontrols(1);
@@ -366,7 +366,7 @@ function hostmigrationtimerthink() {
     if (self.hostmigrationcontrolsfrozen) {
         self freezecontrols(0);
         self.hostmigrationcontrolsfrozen = 0;
-        println("waiting_for_teams");
+        println("<dev string:x107>");
     }
     if (isdefined(self._host_migration_link_entity)) {
         self unlink();
@@ -401,7 +401,7 @@ function waittillhostmigrationstarts(duration) {
         return;
     }
     level endon(#"host_migration_begin");
-    wait(duration);
+    wait duration;
 }
 
 // Namespace hostmigration
@@ -421,7 +421,7 @@ function waitlongdurationwithhostmigrationpause(duration) {
         }
     }
     if (gettime() != endtime) {
-        println("waiting_for_teams" + gettime() + "waiting_for_teams" + endtime);
+        println("<dev string:x129>" + gettime() + "<dev string:x146>" + endtime);
     }
     waittillhostmigrationdone();
     return gettime() - starttime;
@@ -443,18 +443,18 @@ function waitlongdurationwithgameendtimeupdate(duration) {
         while (isdefined(level.hostmigrationtimer)) {
             endtime += 1000;
             setgameendtime(int(endtime));
-            wait(1);
+            wait 1;
         }
     }
     /#
         if (gettime() != endtime) {
-            println("waiting_for_teams" + gettime() + "waiting_for_teams" + endtime);
+            println("<dev string:x129>" + gettime() + "<dev string:x146>" + endtime);
         }
     #/
     while (isdefined(level.hostmigrationtimer)) {
         endtime += 1000;
         setgameendtime(int(endtime));
-        wait(1);
+        wait 1;
     }
     return gettime() - starttime;
 }
@@ -538,7 +538,7 @@ function hostmigration_put_player_in_better_place() {
         if (!isdefined(spawnpoints) || spawnpoints.size == 0) {
             spawnpoints = struct::get_array("initial_spawn_points", "targetname");
         }
-        assert(isdefined(spawnpoints), "waiting_for_teams");
+        assert(isdefined(spawnpoints), "<dev string:x15f>");
         spawnpoint = zm::getfreespawnpoint(spawnpoints, self);
     }
     if (isdefined(spawnpoint)) {

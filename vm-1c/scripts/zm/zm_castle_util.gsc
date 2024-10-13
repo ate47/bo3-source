@@ -5,9 +5,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_744abc1c;
+#namespace zm_castle_util;
 
-// Namespace namespace_744abc1c
+// Namespace zm_castle_util
 // Params 4, eflags: 0x1 linked
 // Checksum 0x69792900, Offset: 0x180
 // Size: 0x15c
@@ -34,7 +34,7 @@ function create_unitrigger(str_hint, n_radius, var_616077d9, func_unitrigger_log
     zm_unitrigger::register_static_unitrigger(s_unitrigger, func_unitrigger_logic);
 }
 
-// Namespace namespace_744abc1c
+// Namespace zm_castle_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9c33223, Offset: 0x2e8
 // Size: 0x22
@@ -43,7 +43,7 @@ function function_fcc6aab1(player) {
     return b_visible;
 }
 
-// Namespace namespace_744abc1c
+// Namespace zm_castle_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0x24b3b4a0, Offset: 0x318
 // Size: 0xbc
@@ -66,7 +66,7 @@ function function_77c4e424() {
     }
 }
 
-// Namespace namespace_744abc1c
+// Namespace zm_castle_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0xac5e3585, Offset: 0x3e0
 // Size: 0x1f4
@@ -88,14 +88,14 @@ function function_fa7da172() {
             self clientfield::set_to_player("gravity_trap_rumble", 0);
             var_77b9bd02 = 0;
         }
-        wait(0.15);
+        wait 0.15;
     }
     self clientfield::set_to_player("gravity_trap_rumble", 0);
 }
 
 /#
 
-    // Namespace namespace_744abc1c
+    // Namespace zm_castle_util
     // Params 4, eflags: 0x1 linked
     // Checksum 0xc51fadf6, Offset: 0x5e0
     // Size: 0x108
@@ -104,15 +104,15 @@ function function_fa7da172() {
             v_color = (0, 0, 255);
         }
         if (!isdefined(var_8882142e)) {
-            var_8882142e = "<unknown string>";
+            var_8882142e = "<dev string:x28>";
         }
         if (!isdefined(n_scale)) {
             n_scale = 0.25;
         }
         if (!isdefined(str_endon)) {
-            str_endon = "<unknown string>";
+            str_endon = "<dev string:x2a>";
         }
-        if (getdvarint("<unknown string>") == 0) {
+        if (getdvarint("<dev string:x3c>") == 0) {
             return;
         }
         if (isdefined(str_endon)) {
@@ -121,11 +121,11 @@ function function_fa7da172() {
         origin = self.origin;
         while (true) {
             print3d(origin, var_8882142e, v_color, n_scale);
-            wait(0.1);
+            wait 0.1;
         }
     }
 
-    // Namespace namespace_744abc1c
+    // Namespace zm_castle_util
     // Params 5, eflags: 0x1 linked
     // Checksum 0xd3574411, Offset: 0x6f0
     // Size: 0x120
@@ -134,7 +134,7 @@ function function_fa7da172() {
             var_f0ee45c9 = -1;
         }
         setdvar(str_dvar, var_f0ee45c9);
-        adddebugcommand("<unknown string>" + var_2fa24527 + "<unknown string>" + str_dvar + "<unknown string>" + n_value + "<unknown string>");
+        adddebugcommand("<dev string:x49>" + var_2fa24527 + "<dev string:x56>" + str_dvar + "<dev string:x5a>" + n_value + "<dev string:x5c>");
         while (true) {
             var_608d58e3 = getdvarint(str_dvar);
             if (var_608d58e3 > var_f0ee45c9) {

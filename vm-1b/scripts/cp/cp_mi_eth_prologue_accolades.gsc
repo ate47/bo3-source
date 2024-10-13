@@ -56,7 +56,7 @@ function function_cbaf37cd(params) {
 // Checksum 0xbe90df95, Offset: 0x730
 // Size: 0x14
 function function_d248b92b(e_player) {
-    e_player notify(#"hash_2fa0b8e9");
+    e_player notify(#"crush_enemy_challenge");
 }
 
 // Namespace namespace_61c634f2
@@ -83,7 +83,7 @@ function function_ba997bef(params) {
 // Size: 0x46
 function function_f4e80c1e() {
     self endon(#"hash_ba63aab6");
-    wait(7);
+    wait 7;
     if (self.var_b27a2766 < 9) {
         if (self.var_b27a2766 > self.var_871eaf7b) {
             self.var_871eaf7b = self.var_b27a2766;
@@ -159,7 +159,7 @@ function function_2b1ec44e() {
 // Checksum 0x7aea6426, Offset: 0xaa8
 // Size: 0x14
 function function_51c49e5(e_player) {
-    e_player notify(#"hash_21c12b92");
+    e_player notify(#"pistol_challenge");
 }
 
 // Namespace namespace_61c634f2
@@ -167,7 +167,7 @@ function function_51c49e5(e_player) {
 // Checksum 0x26c7db7b, Offset: 0xac8
 // Size: 0x14
 function function_df19cf7c(e_player) {
-    e_player notify(#"hash_b5882829");
+    e_player notify(#"dark_battle_melee_challenge");
 }
 
 // Namespace namespace_61c634f2
@@ -175,7 +175,7 @@ function function_df19cf7c(e_player) {
 // Checksum 0xed6ee51f, Offset: 0xae8
 // Size: 0x14
 function function_b9175513(e_player) {
-    e_player notify(#"hash_c17355fc");
+    e_player notify(#"dark_battle_damage_challenge");
 }
 
 // Namespace namespace_61c634f2

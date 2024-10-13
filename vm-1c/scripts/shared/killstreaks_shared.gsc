@@ -97,8 +97,8 @@ function get_killstreak_weapon(killstreak) {
 // Size: 0x40
 function isheldinventorykillstreakweapon(killstreakweapon) {
     switch (killstreakweapon.name) {
-    case 1:
-    case 2:
+    case "inventory_m32":
+    case "inventory_minigun":
         return true;
     }
     return false;

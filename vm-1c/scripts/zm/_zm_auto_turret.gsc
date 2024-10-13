@@ -11,9 +11,9 @@
 #using scripts/shared/laststand_shared;
 #using scripts/shared/flag_shared;
 
-#namespace namespace_d1591a8d;
+#namespace zm_auto_turret;
 
-// Namespace namespace_d1591a8d
+// Namespace zm_auto_turret
 // Params 0, eflags: 0x2
 // Checksum 0xbca9ef29, Offset: 0x368
 // Size: 0x3c
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
     system::register("zm_auto_turret", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_d1591a8d
+// Namespace zm_auto_turret
 // Params 0, eflags: 0x1 linked
 // Checksum 0x26e38224, Offset: 0x3b0
 // Size: 0x3c
@@ -30,7 +30,7 @@ function __init__() {
     zm_spawner::register_zombie_death_event_callback(&death_check_for_challenge_updates);
 }
 
-// Namespace namespace_d1591a8d
+// Namespace zm_auto_turret
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa1f67b7e, Offset: 0x3f8
 // Size: 0x17e
@@ -54,12 +54,12 @@ function __main__() {
         level.var_c261c043[i] sethintstring(%ZOMBIE_NEED_POWER);
         level.var_c261c043[i] usetriggerrequirelookat();
         level.var_c261c043[i].curr_time = -1;
-        level.var_c261c043[i].var_980af03c = 0;
+        level.var_c261c043[i].turret_active = 0;
         level.var_c261c043[i] thread function_88738224();
     }
 }
 
-// Namespace namespace_d1591a8d
+// Namespace zm_auto_turret
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7717f804, Offset: 0x580
 // Size: 0x3f8
@@ -123,7 +123,7 @@ function function_88738224() {
     }
 }
 
-// Namespace namespace_d1591a8d
+// Namespace zm_auto_turret
 // Params 0, eflags: 0x0
 // Checksum 0x1c8ec4b3, Offset: 0x980
 // Size: 0xa4
@@ -138,7 +138,7 @@ function function_87d3b877() {
     }
 }
 
-// Namespace namespace_d1591a8d
+// Namespace zm_auto_turret
 // Params 0, eflags: 0x1 linked
 // Checksum 0x66943774, Offset: 0xa30
 // Size: 0x2c
@@ -146,7 +146,7 @@ function function_f422b6a2() {
     self zm_audio::create_and_play_dialog("general", "outofmoney");
 }
 
-// Namespace namespace_d1591a8d
+// Namespace zm_auto_turret
 // Params 0, eflags: 0x1 linked
 // Checksum 0x930e354, Offset: 0xa68
 // Size: 0x29c
@@ -162,7 +162,7 @@ function function_7b9aea27() {
             if (level.var_c261c043[i] == self) {
                 continue;
             }
-            if (!level.var_c261c043[i].var_980af03c) {
+            if (!level.var_c261c043[i].turret_active) {
                 continue;
             }
             if (var_e9da7021 < 0 || level.var_c261c043[i].curr_time < var_e9da7021) {
@@ -174,10 +174,10 @@ function function_7b9aea27() {
             var_9fd32ad3 function_ea0dbe46();
             continue;
         }
-        assert(0, "zombie_zapper_handle");
+        assert(0, "<dev string:x28>");
     }
     self.turret vehicle_ai::turnon();
-    self.var_980af03c = 1;
+    self.turret_active = 1;
     self.var_e4e74a64 = util::spawn_model("tag_origin", self.turret.origin, self.turret.angles);
     playfxontag(level._effect["auto_turret_light"], self.var_e4e74a64, "tag_origin");
     if (isdefined(self.turret.activated_by_player)) {
@@ -185,16 +185,16 @@ function function_7b9aea27() {
     }
     self.curr_time = level.var_b3e61155;
     self thread function_2eb14263();
-    wait(level.var_b3e61155);
+    wait level.var_b3e61155;
     self function_ea0dbe46();
 }
 
-// Namespace namespace_d1591a8d
+// Namespace zm_auto_turret
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe2b63765, Offset: 0xd10
 // Size: 0x72
 function function_ea0dbe46() {
-    self.var_980af03c = 0;
+    self.turret_active = 0;
     self.curr_time = -1;
     self.turret vehicle_ai::turnoff();
     self.turret notify(#"stop_burst_fire_unmanned");
@@ -202,19 +202,19 @@ function function_ea0dbe46() {
     self notify(#"hash_d7f84474");
 }
 
-// Namespace namespace_d1591a8d
+// Namespace zm_auto_turret
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8569ee95, Offset: 0xd90
 // Size: 0x30
 function function_2eb14263() {
     self endon(#"hash_d7f84474");
     while (self.curr_time > 0) {
-        wait(1);
+        wait 1;
         self.curr_time--;
     }
 }
 
-// Namespace namespace_d1591a8d
+// Namespace zm_auto_turret
 // Params 1, eflags: 0x1 linked
 // Checksum 0xced52821, Offset: 0xdc8
 // Size: 0x6c

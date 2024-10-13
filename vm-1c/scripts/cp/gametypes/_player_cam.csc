@@ -44,7 +44,7 @@ function function_db5afebe(localclientnum) {
     while (var_7233be3d <= 1) {
         var_7233be3d += 0.04;
         blurandtint_fx(localclientnum, 1, var_7233be3d);
-        wait(0.05);
+        wait 0.05;
     }
 }
 

@@ -373,7 +373,7 @@ function all_chunks_destroyed(barrier, barrier_chunks) {
             return false;
         }
     } else if (isdefined(barrier_chunks)) {
-        assert(isdefined(barrier_chunks), "super_sprint");
+        assert(isdefined(barrier_chunks), "<dev string:x28>");
         for (i = 0; i < barrier_chunks.size; i++) {
             if (barrier_chunks[i] get_chunk_state() != "destroyed") {
                 return false;
@@ -576,7 +576,7 @@ function debug_draw_new_attractor_positions() {
                 debugstar(attract[0], 6, (1, 0, 0));
             #/
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -690,13 +690,13 @@ function generated_radius_attract_positions(forward, offset, num_positions, attr
     function debug_draw_attractor_positions() {
         while (true) {
             while (!isdefined(self.attractor_positions)) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             for (i = 0; i < self.attractor_positions.size; i++) {
                 line(self.origin, self.attractor_positions[i][0], (1, 0, 0), 1, 1);
             }
-            wait(0.05);
+            wait 0.05;
             if (!isdefined(self)) {
                 return;
             }
@@ -710,13 +710,13 @@ function generated_radius_attract_positions(forward, offset, num_positions, attr
     function debug_draw_claimed_attractor_positions() {
         while (true) {
             while (!isdefined(self.claimed_attractor_positions)) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             for (i = 0; i < self.claimed_attractor_positions.size; i++) {
                 line(self.origin, self.claimed_attractor_positions[i][0], (0, 1, 0), 1, 1);
             }
-            wait(0.05);
+            wait 0.05;
             if (!isdefined(self)) {
                 return;
             }
@@ -1047,7 +1047,7 @@ function update_on_poi_removal(zombie_poi) {
 // Size: 0x1fa
 function invalidate_attractor_pos(attractor_pos, zombie) {
     if (!isdefined(self) || !isdefined(attractor_pos)) {
-        wait(0.1);
+        wait 0.1;
         return undefined;
     }
     if (isdefined(self.attractor_positions) && !array_check_for_dupes_using_compare(self.attractor_positions, attractor_pos, &poi_locations_equal)) {
@@ -1070,7 +1070,7 @@ function invalidate_attractor_pos(attractor_pos, zombie) {
             }
         }
     } else {
-        wait(0.1);
+        wait 0.1;
     }
     return get_zombie_point_of_interest(zombie.origin);
 }
@@ -1445,28 +1445,28 @@ function non_destroyed_grate_order(origin, chunks_grate) {
                     }
                     if (grate_order2[i].state == "repaired") {
                         /#
-                            iprintlnbold("super_sprint");
+                            iprintlnbold("<dev string:x68>");
                         #/
                         grate_order3[i] thread show_grate_pull();
                         return grate_order2[i];
                     }
                     if (grate_order3[i].state == "repaired") {
                         /#
-                            iprintlnbold("super_sprint");
+                            iprintlnbold("<dev string:x74>");
                         #/
                         grate_order4[i] thread show_grate_pull();
                         return grate_order3[i];
                     }
                     if (grate_order4[i].state == "repaired") {
                         /#
-                            iprintlnbold("super_sprint");
+                            iprintlnbold("<dev string:x80>");
                         #/
                         grate_order5[i] thread show_grate_pull();
                         return grate_order4[i];
                     }
                     if (grate_order5[i].state == "repaired") {
                         /#
-                            iprintlnbold("super_sprint");
+                            iprintlnbold("<dev string:x8c>");
                         #/
                         grate_order6[i] thread show_grate_pull();
                         return grate_order5[i];
@@ -1737,7 +1737,7 @@ function function_e9134e8(origin, var_bb064f8a) {
 // Checksum 0xdea660fa, Offset: 0x6848
 // Size: 0x5c
 function show_grate_pull() {
-    wait(0.53);
+    wait 0.53;
     self show();
     self vibrate((0, 270, 0), 0.2, 0.4, 0.4);
 }
@@ -1785,7 +1785,7 @@ function get_closest_2d(origin, ents) {
 function in_playable_area() {
     playable_area = getentarray("player_volume", "script_noteworthy");
     if (!isdefined(playable_area)) {
-        println("super_sprint");
+        println("<dev string:x98>");
         return true;
     }
     for (i = 0; i < playable_area.size; i++) {
@@ -2087,41 +2087,41 @@ function grate_order_destroyed(chunks_repair_grate) {
             if (isdefined(grate_repair_order1[i])) {
                 if (grate_repair_order6[i].state == "destroyed") {
                     /#
-                        iprintlnbold("super_sprint");
+                        iprintlnbold("<dev string:xdc>");
                     #/
                     return grate_repair_order6[i];
                 }
                 if (grate_repair_order5[i].state == "destroyed") {
                     /#
-                        iprintlnbold("super_sprint");
+                        iprintlnbold("<dev string:xe9>");
                     #/
                     grate_repair_order6[i] thread show_grate_repair();
                     return grate_repair_order5[i];
                 }
                 if (grate_repair_order4[i].state == "destroyed") {
                     /#
-                        iprintlnbold("super_sprint");
+                        iprintlnbold("<dev string:xf6>");
                     #/
                     grate_repair_order5[i] thread show_grate_repair();
                     return grate_repair_order4[i];
                 }
                 if (grate_repair_order3[i].state == "destroyed") {
                     /#
-                        iprintlnbold("super_sprint");
+                        iprintlnbold("<dev string:x103>");
                     #/
                     grate_repair_order4[i] thread show_grate_repair();
                     return grate_repair_order3[i];
                 }
                 if (grate_repair_order2[i].state == "destroyed") {
                     /#
-                        iprintlnbold("super_sprint");
+                        iprintlnbold("<dev string:x110>");
                     #/
                     grate_repair_order3[i] thread show_grate_repair();
                     return grate_repair_order2[i];
                 }
                 if (grate_repair_order1[i].state == "destroyed") {
                     /#
-                        iprintlnbold("super_sprint");
+                        iprintlnbold("<dev string:x11d>");
                     #/
                     grate_repair_order2[i] thread show_grate_repair();
                     return grate_repair_order1[i];
@@ -2136,7 +2136,7 @@ function grate_order_destroyed(chunks_repair_grate) {
 // Checksum 0xda45ef16, Offset: 0x7ee8
 // Size: 0x24
 function show_grate_repair() {
-    wait(0.34);
+    wait 0.34;
     self hide();
 }
 
@@ -2199,7 +2199,7 @@ function get_zombie_hint(ref) {
     if (isdefined(level.zombie_hints[ref])) {
         return level.zombie_hints[ref];
     }
-    println("super_sprint" + ref);
+    println("<dev string:x12a>" + ref);
     return level.zombie_hints["undefined"];
 }
 
@@ -2299,7 +2299,7 @@ function play_sound_at_pos(ref, pos, ent) {
         return;
     }
     if (!isdefined(level.zombie_sounds[ref])) {
-        assertmsg("super_sprint" + ref + "super_sprint");
+        assertmsg("<dev string:x146>" + ref + "<dev string:x14e>");
         return;
     }
     playsoundatposition(level.zombie_sounds[ref], pos);
@@ -2321,7 +2321,7 @@ function play_sound_on_ent(ref) {
         return;
     }
     if (!isdefined(level.zombie_sounds[ref])) {
-        assertmsg("super_sprint" + ref + "super_sprint");
+        assertmsg("<dev string:x146>" + ref + "<dev string:x14e>");
         return;
     }
     self playsound(level.zombie_sounds[ref]);
@@ -2339,7 +2339,7 @@ function play_loopsound_on_ent(ref) {
         return;
     }
     if (!isdefined(level.zombie_sounds[ref])) {
-        assertmsg("super_sprint" + ref + "super_sprint");
+        assertmsg("<dev string:x146>" + ref + "<dev string:x14e>");
         return;
     }
     self playsound(level.zombie_sounds[ref]);
@@ -2424,8 +2424,8 @@ function function_e1904220(table, var_d45c761e, value, is_float, column) {
             if (level.hudelem_count > max) {
                 max = level.hudelem_count;
             }
-            println("super_sprint" + level.hudelem_count + "super_sprint" + max + "super_sprint");
-            wait(0.05);
+            println("<dev string:x1b6>" + level.hudelem_count + "<dev string:x1c1>" + max + "<dev string:x1c9>");
+            wait 0.05;
         }
     }
 
@@ -2438,7 +2438,7 @@ function function_e1904220(table, var_d45c761e, value, is_float, column) {
             zombs = zombie_utility::get_round_enemy_array();
             for (i = 0; i < zombs.size; i++) {
                 zombs[i] dodamage(zombs[i].health + 666, (0, 0, 0));
-                wait(0.5);
+                wait 0.5;
             }
         }
     }
@@ -2451,7 +2451,7 @@ function function_e1904220(table, var_d45c761e, value, is_float, column) {
         self endon(#"death");
         while (true) {
             print3d(self.origin + (0, 0, 64), speed, (1, 1, 1));
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -2460,14 +2460,14 @@ function function_e1904220(table, var_d45c761e, value, is_float, column) {
     // Checksum 0x69de6cba, Offset: 0x8d60
     // Size: 0x98
     function draw_line_ent_to_ent(ent1, ent2) {
-        if (getdvarint("super_sprint") != 1) {
+        if (getdvarint("<dev string:x1cb>") != 1) {
             return;
         }
         ent1 endon(#"death");
         ent2 endon(#"death");
         while (true) {
             line(ent1.origin, ent2.origin);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -2479,7 +2479,7 @@ function function_e1904220(table, var_d45c761e, value, is_float, column) {
 // Size: 0xb8
 function draw_line_ent_to_pos(ent, pos, end_on) {
     /#
-        if (getdvarint("super_sprint") != 1) {
+        if (getdvarint("<dev string:x1cb>") != 1) {
             return;
         }
         ent endon(#"death");
@@ -2490,7 +2490,7 @@ function draw_line_ent_to_pos(ent, pos, end_on) {
         }
         while (true) {
             line(ent.origin, pos);
-            wait(0.05);
+            wait 0.05;
         }
     #/
 }
@@ -2502,8 +2502,8 @@ function draw_line_ent_to_pos(ent, pos, end_on) {
     // Checksum 0x3c45a5b4, Offset: 0x8ec0
     // Size: 0x54
     function debug_print(msg) {
-        if (getdvarint("super_sprint") > 0) {
-            println("super_sprint" + msg);
+        if (getdvarint("<dev string:x1cb>") > 0) {
+            println("<dev string:x1d8>" + msg);
         }
     }
 
@@ -2515,10 +2515,10 @@ function draw_line_ent_to_pos(ent, pos, end_on) {
         self notify(#"stop_debug_blocker");
         self endon(#"stop_debug_blocker");
         for (;;) {
-            if (getdvarint("super_sprint") != 1) {
+            if (getdvarint("<dev string:x1cb>") != 1) {
                 return;
             }
-            wait(0.05);
+            wait 0.05;
             drawcylinder(pos, rad, height);
         }
     }
@@ -2554,7 +2554,7 @@ function draw_line_ent_to_pos(ent, pos, end_on) {
         }
         while (true) {
             print3d(self.origin + offset, msg);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -2567,14 +2567,14 @@ function draw_line_ent_to_pos(ent, pos, end_on) {
         self notify(#"stop_debug_breadcrumbs");
         self endon(#"stop_debug_breadcrumbs");
         while (true) {
-            if (getdvarint("super_sprint") != 1) {
-                wait(1);
+            if (getdvarint("<dev string:x1cb>") != 1) {
+                wait 1;
                 continue;
             }
             for (i = 0; i < self.zombie_breadcrumbs.size; i++) {
                 drawcylinder(self.zombie_breadcrumbs[i], 5, 5);
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -2586,11 +2586,11 @@ function draw_line_ent_to_pos(ent, pos, end_on) {
         self notify(#"stop_debug_breadcrumbs");
         self endon(#"stop_debug_breadcrumbs");
         while (true) {
-            if (getdvarint("super_sprint") != 2) {
-                wait(1);
+            if (getdvarint("<dev string:x1cb>") != 2) {
+                wait 1;
                 continue;
             }
-            wait(0.05);
+            wait 0.05;
             count = 0;
             for (i = 0; i < self.attack_spots_taken.size; i++) {
                 if (self.attack_spots_taken[i]) {
@@ -2600,7 +2600,7 @@ function draw_line_ent_to_pos(ent, pos, end_on) {
                 }
                 circle(self.attack_spots[i], 12, (0, 1, 0), 0, 1, 1);
             }
-            msg = "super_sprint" + count + "super_sprint" + self.attack_spots_taken.size;
+            msg = "<dev string:x1eb>" + count + "<dev string:x1ec>" + self.attack_spots_taken.size;
             print3d(self.origin, msg);
         }
     }
@@ -2616,7 +2616,7 @@ function draw_line_ent_to_pos(ent, pos, end_on) {
         while (gettime() < time) {
             offset += (0, 0, 2);
             print3d(self.origin + offset, msg, (1, 1, 1));
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -2639,7 +2639,7 @@ function do_player_vo(snd, variation_count) {
         level.player_is_speaking = 1;
         self playsoundwithnotify(sound, "sound_done");
         self waittill(#"sound_done");
-        wait(2);
+        wait 2;
         level.player_is_speaking = 0;
     }
 }
@@ -2663,7 +2663,7 @@ function function_dce51c76(sound) {
     temp_ent = spawn("script_origin", (0, 0, 0));
     temp_ent playsoundwithnotify(sound, sound + "wait");
     temp_ent waittill(sound + "wait");
-    wait(0.05);
+    wait 0.05;
     temp_ent delete();
 }
 
@@ -2680,7 +2680,7 @@ function play_sound_2d(sound) {
 // Checksum 0x84f5c297, Offset: 0x97e8
 // Size: 0x6c
 function include_weapon(weapon_name, in_box) {
-    println("super_sprint" + weapon_name);
+    println("<dev string:x1f0>" + weapon_name);
     if (!isdefined(in_box)) {
         in_box = 1;
     }
@@ -2708,7 +2708,7 @@ function print3d_ent(text, color, scale, offset, end_msg, overwrite) {
     self endon(#"death");
     if (isdefined(overwrite) && overwrite && isdefined(self._debug_print3d_msg)) {
         self notify(#"end_print3d");
-        wait(0.05);
+        wait 0.05;
     }
     self endon(#"end_print3d");
     if (!isdefined(color)) {
@@ -2727,7 +2727,7 @@ function print3d_ent(text, color, scale, offset, end_msg, overwrite) {
     /#
         while (!(isdefined(level.disable_print3d_ent) && level.disable_print3d_ent)) {
             print3d(self.origin + offset, self._debug_print3d_msg, color, scale);
-            wait(0.05);
+            wait 0.05;
         }
     #/
 }
@@ -2956,7 +2956,7 @@ function function_36f941b3() {
     if (self.var_a500a39c > 0) {
         self.var_a500a39c--;
     } else {
-        assertmsg("super_sprint");
+        assertmsg("<dev string:x208>");
     }
     self.ignoreme = self.var_a500a39c > 0;
 }
@@ -2998,7 +2998,7 @@ function decrement_is_drinking() {
     if (self.is_drinking > 0) {
         self.is_drinking--;
     } else {
-        assertmsg("super_sprint");
+        assertmsg("<dev string:x229>");
     }
     if (self.is_drinking == 0) {
         self enableoffhandweapons();
@@ -3039,7 +3039,7 @@ function function_53d28288() {
     if (level.var_3dac2e6d > 0) {
         level.var_3dac2e6d--;
     } else {
-        assertmsg("super_sprint");
+        assertmsg("<dev string:x248>");
     }
     level.var_50a71706 = level.var_3dac2e6d > 0;
     if (!level.var_50a71706) {
@@ -3629,9 +3629,9 @@ function ignore_triggers(timer) {
     self endon(#"death");
     self.ignoretriggers = 1;
     if (isdefined(timer)) {
-        wait(timer);
+        wait timer;
     } else {
-        wait(0.5);
+        wait 0.5;
     }
     self.ignoretriggers = 0;
 }
@@ -3665,7 +3665,7 @@ function giveachievement_wrapper(achievement, all_players) {
         }
     } else {
         if (!isplayer(self)) {
-            println("super_sprint");
+            println("<dev string:x273>");
             return;
         }
         self giveachievement(achievement);
@@ -3707,7 +3707,7 @@ function getyawtospot(spot) {
 // Checksum 0x6a0b3ff4, Offset: 0xbc10
 // Size: 0x54
 function disable_react() {
-    assert(isalive(self), "super_sprint");
+    assert(isalive(self), "<dev string:x2b3>");
     self.a.var_c52872a0 = 1;
     self.allowreact = 0;
 }
@@ -3717,7 +3717,7 @@ function disable_react() {
 // Checksum 0xc18fa75c, Offset: 0xbc70
 // Size: 0x54
 function enable_react() {
-    assert(isalive(self), "super_sprint");
+    assert(isalive(self), "<dev string:x2d6>");
     self.a.var_c52872a0 = 0;
     self.allowreact = 1;
 }
@@ -3770,7 +3770,7 @@ function waittill_not_moving() {
         return;
     }
     for (prevorigin = self.origin; true; prevorigin = self.origin) {
-        wait(0.15);
+        wait 0.15;
         if (self.origin == prevorigin) {
             break;
         }
@@ -3841,7 +3841,7 @@ function track_players_intersection_tracker() {
     self endon(#"disconnect");
     self endon(#"death");
     level endon(#"end_game");
-    wait(5);
+    wait 5;
     while (true) {
         killed_players = 0;
         players = getplayers();
@@ -3868,7 +3868,7 @@ function track_players_intersection_tracker() {
                     continue;
                 }
                 /#
-                    iprintlnbold("super_sprint");
+                    iprintlnbold("<dev string:x2f8>");
                 #/
                 players[i] dodamage(1000, (0, 0, 0));
                 players[j] dodamage(1000, (0, 0, 0));
@@ -3884,7 +3884,7 @@ function track_players_intersection_tracker() {
                 killed_players = 1;
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -3893,7 +3893,7 @@ function track_players_intersection_tracker() {
 // Checksum 0x2a6e9621, Offset: 0xc448
 // Size: 0x170
 function is_player_looking_at(origin, dot, do_trace, ignore_ent) {
-    assert(isplayer(self), "super_sprint");
+    assert(isplayer(self), "<dev string:x316>");
     if (!isdefined(dot)) {
         dot = 0.7;
     }
@@ -4150,7 +4150,7 @@ function is_explosive_damage(mod) {
 // Size: 0x66
 function sndswitchannouncervox(who) {
     switch (who) {
-    case 111:
+    case "sam":
         game["zmbdialog"]["prefix"] = "vox_zmba_sam";
         level.zmb_laugh_alias = "zmb_laugh_sam";
         level.sndannouncerisrich = 0;
@@ -4179,13 +4179,13 @@ function do_player_general_vox(category, type, timer, chance) {
 // Size: 0xc4
 function general_vox_timer(timer, type) {
     level endon(#"end_game");
-    println("super_sprint" + type + "super_sprint" + timer + "super_sprint");
+    println("<dev string:x344>" + type + "<dev string:x362>" + timer + "<dev string:x366>");
     while (timer > 0) {
-        wait(1);
+        wait 1;
         timer--;
     }
     level.votimer[type] = timer;
-    println("super_sprint" + type + "super_sprint" + timer + "super_sprint");
+    println("<dev string:x368>" + type + "<dev string:x362>" + timer + "<dev string:x366>");
 }
 
 // Namespace zm_utility
@@ -4295,7 +4295,7 @@ function function_e9e262a6(str_model, var_d7f161b3, org, angles) {
     var_cdb03d1a = spawn("script_model", org);
     var_cdb03d1a setmodel(str_model);
     var_cdb03d1a.angles = angles;
-    wait(1);
+    wait 1;
     var_81aba672 = spawn("trigger_radius_use", org, 0, 84, 72);
     var_81aba672 setcursorhint("HINT_NOICON");
     var_81aba672 sethintstring(%ZOMBIE_NAVCARD_PICKUP);
@@ -4539,7 +4539,7 @@ function respawn_path_nodes() {
     }
     for (i = 0; i < level._spawned_path_nodes.size; i++) {
         node_struct = level._spawned_path_nodes[i];
-        println("super_sprint" + node_struct.origin);
+        println("<dev string:x384>" + node_struct.origin);
         node_struct.node = spawn_path_node_internal(node_struct.origin, node_struct.angles, node_struct.k1, node_struct.v1, node_struct.k2, node_struct.v2);
     }
 }
@@ -4556,10 +4556,10 @@ function function_8ac2557(list, func) {
         for (j = 0; j < var_80a9141c.size; j++) {
             if (isdefined(list[keys[i]].links[var_80a9141c[j]])) {
                 if (isdefined(list[keys[i]].var_504dca0f[var_80a9141c[j]]) && list[keys[i]].var_504dca0f[var_80a9141c[j]]) {
-                    println("super_sprint" + keys[i] + "super_sprint" + var_80a9141c[j] + "super_sprint");
+                    println("<dev string:x3a5>" + keys[i] + "<dev string:x3ae>" + var_80a9141c[j] + "<dev string:x3bb>");
                     continue;
                 }
-                println("super_sprint" + keys[i] + "super_sprint" + var_80a9141c[j]);
+                println("<dev string:x3a5>" + keys[i] + "<dev string:x3ae>" + var_80a9141c[j]);
                 [[ func ]](node, list[keys[i]].links[var_80a9141c[j]]);
             }
         }
@@ -4572,11 +4572,11 @@ function function_8ac2557(list, func) {
 // Size: 0xa4
 function function_851ffce9(var_5e184351, var_c47d548a) {
     if (isdefined(level.var_7791e57e)) {
-        println("super_sprint");
+        println("<dev string:x3c6>");
         function_8ac2557(level.var_7791e57e, var_5e184351);
     }
     if (isdefined(level.var_c4d21ca7)) {
-        println("super_sprint");
+        println("<dev string:x3d0>");
         function_8ac2557(level.var_c4d21ca7, var_c47d548a);
     }
 }
@@ -4607,9 +4607,9 @@ function function_62fc6c5a(a, b) {
 // Size: 0x94
 function undo_link_changes() {
     /#
-        println("super_sprint");
-        println("super_sprint");
-        println("super_sprint");
+        println("<dev string:x3dc>");
+        println("<dev string:x3dc>");
+        println("<dev string:x3e0>");
     #/
     function_851ffce9(&function_62fc6c5a, &function_ca1c2fbf);
     delete_spawned_path_nodes();
@@ -4621,9 +4621,9 @@ function undo_link_changes() {
 // Size: 0x94
 function redo_link_changes() {
     /#
-        println("super_sprint");
-        println("super_sprint");
-        println("super_sprint");
+        println("<dev string:x3dc>");
+        println("<dev string:x3dc>");
+        println("<dev string:x3f9>");
     #/
     respawn_path_nodes();
     function_851ffce9(&function_ca1c2fbf, &function_62fc6c5a);
@@ -4740,8 +4740,8 @@ function get_player_index(player) {
     assert(isplayer(player));
     assert(isdefined(player.characterindex));
     /#
-        if (player.entity_num == 0 && getdvarstring("super_sprint") != "super_sprint") {
-            new_vo_index = getdvarint("super_sprint");
+        if (player.entity_num == 0 && getdvarstring("<dev string:x412>") != "<dev string:x1eb>") {
+            new_vo_index = getdvarint("<dev string:x412>");
             return new_vo_index;
         }
     #/
@@ -4823,7 +4823,7 @@ function clear_streamer_hint() {
 // Size: 0x3c
 function wait_clear_streamer_hint(lifetime) {
     self endon(#"wait_clear_streamer_hint");
-    wait(lifetime);
+    wait lifetime;
     if (isdefined(self)) {
         self clear_streamer_hint();
     }
@@ -4876,7 +4876,7 @@ function approximate_path_dist(player) {
             }
         }
     }
-    assert(isdefined(level.var_1ace2307), "super_sprint");
+    assert(isdefined(level.var_1ace2307), "<dev string:x42d>");
     approx_dist = pathdistance(self.origin, goal_pos, 1, self, level.var_1ace2307);
     aiprofile_endentry();
     return approx_dist;
@@ -4903,7 +4903,7 @@ function function_447d3917(str_type) {
     self notify(#"starting_slowdown_ai");
     self endon(#"starting_slowdown_ai");
     self endon(#"death");
-    assert(isdefined(level.var_f7007373[str_type]), "super_sprint" + str_type + "super_sprint");
+    assert(isdefined(level.var_f7007373[str_type]), "<dev string:x469>" + str_type + "<dev string:x474>");
     if (!isdefined(self.a_n_slowdown_timeouts)) {
         self.a_n_slowdown_timeouts = [];
     }
@@ -4928,7 +4928,7 @@ function function_447d3917(str_type) {
         if (isdefined(str_lowest_type)) {
             self asmsetanimationrate(n_lowest_rate);
             n_duration = self.a_n_slowdown_timeouts[str_lowest_type] - n_time;
-            wait(n_duration);
+            wait n_duration;
             self.a_n_slowdown_timeouts[str_lowest_type] = undefined;
         }
     }

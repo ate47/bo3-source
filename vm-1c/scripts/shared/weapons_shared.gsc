@@ -109,7 +109,7 @@ function stow_on_back(current) {
     } else if (currentweapon != level.weaponnone) {
         for (idx = 0; idx < self.weapon_array_primary.size; idx++) {
             temp_index_weapon = self.weapon_array_primary[idx];
-            assert(isdefined(temp_index_weapon), "<unknown string>");
+            assert(isdefined(temp_index_weapon), "<dev string:x28>");
             if (temp_index_weapon == currentweapon) {
                 continue;
             }

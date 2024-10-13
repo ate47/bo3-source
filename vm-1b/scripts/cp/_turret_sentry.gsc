@@ -48,7 +48,7 @@ function __init__() {
     // Checksum 0x892bff9e, Offset: 0x678
     // Size: 0x52
     function function_6a14e39c(start, end, color) {
-        if (getdvarint("<unknown string>") != 0) {
+        if (getdvarint("<dev string:x28>") != 0) {
             line(start, end, color, 1, 0, 50);
         }
     }
@@ -83,7 +83,7 @@ function function_e606dad7() {
     eye = self gettagorigin("tag_barrel");
     /#
         if (function_ba2c6c94(eye, angles[1])) {
-            iprintln("<unknown string>");
+            iprintln("<dev string:x39>");
         }
     #/
     yaw = angleclamp180(angles[1]);
@@ -245,7 +245,7 @@ function function_8f042083() {
     self.state_machine statemachine::add_interrupt_connection("main", "scripted", "enter_vehicle");
     self.state_machine statemachine::add_interrupt_connection("scripted", "main", "exit_vehicle");
     self disconnectpaths();
-    self thread function_78a2820e();
+    self thread sentry_turret_death();
     self thread function_8109253b();
     self thread turret::track_lens_flare();
     self.overridevehicledamage = &function_df1adf01;
@@ -333,9 +333,9 @@ function function_21af94b3() {
 // Size: 0xce
 function function_4ebb4502() {
     for (i = 0; i < 6; i++) {
-        wait(0.1);
+        wait 0.1;
         vehicle::lights_off();
-        wait(0.1);
+        wait 0.1;
         vehicle::lights_on();
     }
     if (!isdefined(self.player)) {
@@ -343,7 +343,7 @@ function function_4ebb4502() {
         target_vec = self.origin + anglestoforward((self.var_e7379303, angles[1], 0)) * 1000;
         self.turretrotscale = 0.3;
         self function_63f13a8e(target_vec);
-        wait(1);
+        wait 1;
         self.turretrotscale = 1;
     }
 }
@@ -356,41 +356,41 @@ function function_2e229297() {
     self endon(#"death");
     self endon(#"change_state");
     var_65801466 = 0;
-    wait(0.2);
+    wait 0.2;
     origin = self gettagorigin("tag_barrel");
     while (true) {
         if (isdefined(self.enemy) && self function_4246bc05(self.enemy) && self function_e7857e05(self.enemy)) {
             self.turretrotscale = 1;
             if (var_65801466 > 0 && isplayer(self.enemy)) {
                 sentry_turret_alert_sound();
-                wait(0.5);
+                wait 0.5;
             }
             var_65801466 = 0;
             for (i = 0; i < 3; i++) {
                 if (isdefined(self.enemy) && isalive(self.enemy) && self function_4246bc05(self.enemy)) {
                     self setturrettargetent(self.enemy);
-                    wait(0.1);
+                    wait 0.1;
                     self sentry_turret_fire_for_time(randomfloatrange(0.4, 1.5), self.enemy);
                 } else {
                     self cleartargetentity();
                 }
                 if (isdefined(self.enemy) && isplayer(self.enemy)) {
-                    wait(randomfloatrange(0.3, 0.6));
+                    wait randomfloatrange(0.3, 0.6);
                     continue;
                 }
-                wait(randomfloatrange(0.3, 0.6) * 2);
+                wait randomfloatrange(0.3, 0.6) * 2;
             }
             if (isdefined(self.enemy) && isalive(self.enemy) && self function_4246bc05(self.enemy)) {
                 if (isplayer(self.enemy)) {
-                    wait(randomfloatrange(0.5, 1.3));
+                    wait randomfloatrange(0.5, 1.3);
                 } else {
-                    wait(randomfloatrange(0.5, 1.3) * 2);
+                    wait randomfloatrange(0.5, 1.3) * 2;
                 }
             }
         } else {
             self.turretrotscale = 0.5;
             var_65801466++;
-            wait(1);
+            wait 1;
             if (var_65801466 > 1) {
                 while (!isdefined(self.enemy) || !self function_4246bc05(self.enemy)) {
                     if (self.turretontarget) {
@@ -413,13 +413,13 @@ function function_2e229297() {
                         function_6a14e39c(origin, self.targetpoints[self.var_23b6e300].origin, (0, 1, 0));
                     #/
                     self setturrettargetvec(self.targetpoints[self.var_23b6e300].origin);
-                    wait(0.5);
+                    wait 0.5;
                 }
             } else {
                 self cleartargetentity();
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -498,7 +498,7 @@ function function_8109253b() {
             tag = "tag_fx";
             function_b212223b(effect, tag);
         }
-        wait(0.3);
+        wait 0.3;
     }
 }
 
@@ -506,8 +506,8 @@ function function_8109253b() {
 // Params 0, eflags: 0x0
 // Checksum 0xfcaee5a1, Offset: 0x1b38
 // Size: 0x1b2
-function function_78a2820e() {
-    wait(0.1);
+function sentry_turret_death() {
+    wait 0.1;
     if (!isdefined(self)) {
         return;
     }
@@ -559,12 +559,12 @@ function function_e99c1c2(attacker, hitdir) {
     self endon(#"crash_done");
     self endon(#"death");
     self playsound("veh_sentry_turret_dmg_hit");
-    wait(0.1);
+    wait 0.1;
     self.turretrotscale = 0.5;
     tag_angles = self gettagangles("tag_flash");
     target_pos = self.origin + anglestoforward((0, tag_angles[1], 0)) * 1000 + (0, 0, -1800);
     self setturrettargetvec(target_pos);
-    wait(4);
+    wait 4;
     self notify(#"crash_done");
 }
 
@@ -576,7 +576,7 @@ function sentry_turret_fire_for_time(totalfiretime, enemy) {
     self endon(#"crash_done");
     self endon(#"death");
     sentry_turret_alert_sound();
-    wait(0.1);
+    wait 0.1;
     weapon = self seatgetweapon(0);
     firetime = weapon.firetime;
     time = 0;
@@ -584,7 +584,7 @@ function sentry_turret_fire_for_time(totalfiretime, enemy) {
     if (issubstr(weapon.name, "minigun")) {
         is_minigun = 1;
         self setturretspinning(1);
-        wait(0.5);
+        wait 0.5;
     }
     while (time < totalfiretime) {
         if (isdefined(level.var_a753e7a8)) {
@@ -592,7 +592,7 @@ function sentry_turret_fire_for_time(totalfiretime, enemy) {
         } else {
             self fireweapon(0, enemy);
         }
-        wait(firetime);
+        wait firetime;
         time += firetime;
     }
     if (is_minigun) {
@@ -626,7 +626,7 @@ function function_ebdfd4e4(team) {
 function function_f08ad3e6() {
     self endon(#"death");
     self vehicle::lights_off();
-    wait(0.1);
+    wait 0.1;
     self vehicle::lights_on();
 }
 
@@ -652,7 +652,7 @@ function function_791c1a61() {
             playfxontag(level._effect["sentry_turret_stun"], self.stun_fx, "tag_origin");
         }
     }
-    wait(randomfloatrange(6, 10));
+    wait randomfloatrange(6, 10);
     self.stun_fx delete();
     self.emped = undefined;
     self function_21af94b3();
@@ -692,7 +692,7 @@ function function_2790de05(turret) {
                 luinotifyevent(%hud_cic_weapon_heat, 2, int(heat), overheat);
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -722,7 +722,7 @@ function turret_idle_sound() {
 function turret_idle_sound_stop(sndloop_ent) {
     self waittill(#"death");
     sndloop_ent stoploopsound(0.5);
-    wait(2);
+    wait 2;
     sndloop_ent delete();
 }
 

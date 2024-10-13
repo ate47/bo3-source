@@ -12,9 +12,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e82fdc69;
+#namespace cp_mi_sing_biodomes_patch;
 
-// Namespace namespace_e82fdc69
+// Namespace cp_mi_sing_biodomes_patch
 // Params 0, eflags: 0x1 linked
 // Checksum 0xed0274c8, Offset: 0x2e8
 // Size: 0x44c

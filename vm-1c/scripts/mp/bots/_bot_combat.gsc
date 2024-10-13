@@ -92,10 +92,10 @@ function function_252e5e7f(enemy) {
         return false;
     }
     switch (killstreaktype) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
+    case "counteruav":
+    case "helicopter_gunner":
+    case "satellite":
+    case "uav":
         return true;
     }
     return false;

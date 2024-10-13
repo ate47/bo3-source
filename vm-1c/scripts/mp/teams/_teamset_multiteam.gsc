@@ -3,14 +3,14 @@
 #using scripts/mp/teams/_teamset;
 #using scripts/codescripts/struct;
 
-#namespace namespace_8ff15f94;
+#namespace _teamset_multiteam;
 
-// Namespace namespace_8ff15f94
+// Namespace _teamset_multiteam
 // Params 0, eflags: 0x0
 // Checksum 0x4a4cca84, Offset: 0x460
 // Size: 0xec
 function main() {
-    namespace_5fc59ced::init();
+    _teamset::init();
     toggle = 0;
     foreach (team in level.teams) {
         if (toggle % 2) {
@@ -23,16 +23,16 @@ function main() {
     precache();
 }
 
-// Namespace namespace_8ff15f94
+// Namespace _teamset_multiteam
 // Params 0, eflags: 0x0
 // Checksum 0x1d58e302, Offset: 0x558
 // Size: 0x24
 function precache() {
-    namespace_5d42ff52::precache();
-    namespace_d58dbe33::precache();
+    _teamset_allies::precache();
+    _teamset_axis::precache();
 }
 
-// Namespace namespace_8ff15f94
+// Namespace _teamset_multiteam
 // Params 1, eflags: 0x0
 // Checksum 0xc91b41af, Offset: 0x588
 // Size: 0x32a
@@ -64,7 +64,7 @@ function init_allies(team) {
     game["carry_flagmodels"][team] = "mp_flag_allies_1_carry";
 }
 
-// Namespace namespace_8ff15f94
+// Namespace _teamset_multiteam
 // Params 1, eflags: 0x0
 // Checksum 0x90a9fbf4, Offset: 0x8c0
 // Size: 0x32a

@@ -80,13 +80,13 @@ function watchforexplosionnotetracks(localclientnum, up, forward) {
     while (true) {
         notetrack = self util::waittill_any_return("explode_1st", "explode_2nd", "explode_main", "entityshutdown");
         switch (notetrack) {
-        case 18:
+        case "explode_1st":
             playfx(localclientnum, level._effect["fx_betty_exp"], self.origin + up * level.explode_1st_offset, up, forward);
             break;
-        case 17:
+        case "explode_2nd":
             playfx(localclientnum, level._effect["fx_betty_exp"], self.origin + up * level.explode_2nd_offset, up, forward);
             break;
-        case 16:
+        case "explode_main":
             playfx(localclientnum, level._effect["fx_betty_exp"], self.origin + up * level.explode_main_offset, up, forward);
             playfx(localclientnum, level._effect["fx_betty_exp_death"], self.origin, up, forward);
             break;

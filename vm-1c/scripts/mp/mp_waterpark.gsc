@@ -6,16 +6,16 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_89648a;
+#namespace mp_waterpark;
 
-// Namespace namespace_89648a
+// Namespace mp_waterpark
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe7dc5d45, Offset: 0x238
 // Size: 0xe04
 function main() {
     precache();
-    namespace_3844b55f::main();
-    namespace_2a685566::main();
+    mp_waterpark_fx::main();
+    mp_waterpark_sound::main();
     load::main();
     compass::setupminimap("compass_map_mp_waterpark");
     setdvar("compassmaxrange", "2100");
@@ -70,7 +70,7 @@ function main() {
     level spawnkilltrigger();
 }
 
-// Namespace namespace_89648a
+// Namespace mp_waterpark
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x1048
 // Size: 0x4
@@ -78,7 +78,7 @@ function precache() {
     
 }
 
-// Namespace namespace_89648a
+// Namespace mp_waterpark
 // Params 0, eflags: 0x1 linked
 // Checksum 0x25588a5a, Offset: 0x1058
 // Size: 0x37c
@@ -107,7 +107,7 @@ function spawnkilltrigger() {
     trigger thread watchkilltrigger();
 }
 
-// Namespace namespace_89648a
+// Namespace mp_waterpark
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8162920f, Offset: 0x13e0
 // Size: 0x90

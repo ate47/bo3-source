@@ -64,7 +64,7 @@ function function_5556b03d(localclientnum) {
     self endon(#"entityshutdown");
     self endon(#"death");
     while (isdefined(level.var_34239e7c[localclientnum]) && level.var_34239e7c[localclientnum]) {
-        wait(randomintrange(5, 7));
+        wait randomintrange(5, 7);
         playfxoncamera(localclientnum, level._effect["player_cold_breath"], (0, 0, 0), (1, 0, 0), (0, 0, 1));
     }
 }
@@ -77,7 +77,7 @@ function function_ddc76be5(localclientnum, oldval, newval, bnewent, binitialsnap
     self endon(#"entityshutdown");
     self endon(#"death");
     while (isalive(self)) {
-        wait(randomintrange(6, 8));
+        wait randomintrange(6, 8);
         playfxontag(localclientnum, level._effect["ai_cold_breath"], self, "j_head");
     }
 }

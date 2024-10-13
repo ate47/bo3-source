@@ -25,9 +25,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/array_shared;
 
-#namespace namespace_f165e60d;
+#namespace cp_mi_zurich_coalescence;
 
-// Namespace namespace_f165e60d
+// Namespace cp_mi_zurich_coalescence
 // Params 0, eflags: 0x0
 // Checksum 0xf0b71cc2, Offset: 0xc08
 // Size: 0x32
@@ -36,7 +36,7 @@ function function_243693d4() {
     util::add_gametype("cpzm");
 }
 
-// Namespace namespace_f165e60d
+// Namespace cp_mi_zurich_coalescence
 // Params 0, eflags: 0x0
 // Checksum 0x7cc0e526, Offset: 0xc48
 // Size: 0x1d2
@@ -47,8 +47,8 @@ function main() {
     flag_init();
     level.var_75ba074a = 1;
     util::function_286a5010(9);
-    namespace_2ebd997a::main();
-    namespace_b301a1fd::main();
+    cp_mi_zurich_coalescence_fx::main();
+    cp_mi_zurich_coalescence_sound::main();
     namespace_bbb4ee72::main();
     namespace_3d19ef22::main();
     namespace_6a04e6cd::main();
@@ -69,7 +69,7 @@ function main() {
     level.oob_timelimit_ms = getdvarint("oob_timelimit_ms", 3000);
 }
 
-// Namespace namespace_f165e60d
+// Namespace cp_mi_zurich_coalescence
 // Params 0, eflags: 0x0
 // Checksum 0x990112cd, Offset: 0xe28
 // Size: 0xf2
@@ -82,7 +82,7 @@ function init_clientfields() {
     clientfield::register("world", "clearing_hide_ferris_wheel", 1, 1, "int");
 }
 
-// Namespace namespace_f165e60d
+// Namespace cp_mi_zurich_coalescence
 // Params 0, eflags: 0x0
 // Checksum 0xd4394be2, Offset: 0xf28
 // Size: 0x612
@@ -109,12 +109,12 @@ function function_673254cc() {
     skipto::function_d68e678e("clearing_hub_3", &namespace_29799936::function_1270c207, "Clearing Hub", &namespace_29799936::function_b42e7a80);
     skipto::function_d68e678e("root_singapore_start", &namespace_3d19ef22::function_9c1fc2fd, "Singapore Root", &namespace_3d19ef22::function_c68a0705);
     skipto::function_d68e678e("root_singapore_vortex", &namespace_3d19ef22::function_95b88092, "Singapore Root Vortex", &namespace_3d19ef22::function_53a05865);
-    skipto::function_d68e678e("outro_movie", &namespace_34c3982c::function_8c381165, "Outro Movie", &namespace_34c3982c::function_7c294f88);
-    skipto::add("server_interior", &namespace_34c3982c::function_618d5a98, "Server Interior", &namespace_34c3982c::function_d9ccb9e3);
-    skipto::add("zurich_outro", &namespace_34c3982c::function_313f113, "Outro", &namespace_34c3982c::function_f2f0f1ec);
+    skipto::function_d68e678e("outro_movie", &zurich_outro::function_8c381165, "Outro Movie", &zurich_outro::function_7c294f88);
+    skipto::add("server_interior", &zurich_outro::function_618d5a98, "Server Interior", &zurich_outro::function_d9ccb9e3);
+    skipto::add("zurich_outro", &zurich_outro::function_313f113, "Outro", &zurich_outro::function_f2f0f1ec);
 }
 
-// Namespace namespace_f165e60d
+// Namespace cp_mi_zurich_coalescence
 // Params 0, eflags: 0x0
 // Checksum 0xa1d3a569, Offset: 0x1548
 // Size: 0x1a
@@ -122,7 +122,7 @@ function init_level_vars() {
     setdvar("player_swimTime", 5000);
 }
 
-// Namespace namespace_f165e60d
+// Namespace cp_mi_zurich_coalescence
 // Params 0, eflags: 0x0
 // Checksum 0x7f91e0be, Offset: 0x1570
 // Size: 0x302

@@ -13,9 +13,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_521a050e;
+#namespace zm_stalingrad_zones;
 
-// Namespace namespace_521a050e
+// Namespace zm_stalingrad_zones
 // Params 0, eflags: 0x1 linked
 // Checksum 0x386efe02, Offset: 0x740
 // Size: 0x2424

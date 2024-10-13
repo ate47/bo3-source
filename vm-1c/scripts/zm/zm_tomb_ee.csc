@@ -7,9 +7,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_711a44f0;
+#namespace zm_tomb_ee;
 
-// Namespace namespace_711a44f0
+// Namespace zm_tomb_ee
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa7f49fe4, Offset: 0x440
 // Size: 0x2e4
@@ -24,22 +24,22 @@ function init() {
     clientfield::register("vehicle", "ee_plane_fx", 21000, 1, "int", &function_19452a40, 0, 0);
     clientfield::register("toplayer", "ee_beacon_reward", 21000, 1, "int", &function_b628a101, 0, 0);
     clientfield::register("world", "TombEndGameBlackScreen", 21000, 1, "int", &function_13792d2, 0, 0);
-    namespace_66d26454::main();
+    zm_tomb_ee_lights::main();
 }
 
-// Namespace namespace_711a44f0
+// Namespace zm_tomb_ee
 // Params 7, eflags: 0x1 linked
 // Checksum 0x90458fdb, Offset: 0x730
 // Size: 0x134
 function function_6db69694(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     switch (fieldname) {
-    case 1:
+    case "wagon_1_fire":
         var_a58a7b24 = "fxexp_211";
         break;
-    case 3:
+    case "wagon_2_fire":
         var_a58a7b24 = "fxexp_212";
         break;
-    case 4:
+    case "wagon_3_fire":
         var_a58a7b24 = "fxexp_213";
         break;
     default:
@@ -55,7 +55,7 @@ function function_6db69694(localclientnum, oldval, newval, bnewent, binitialsnap
     level thread function_1ebf0afe(0, fieldname);
 }
 
-// Namespace namespace_711a44f0
+// Namespace zm_tomb_ee
 // Params 2, eflags: 0x0
 // Checksum 0x5bb96156, Offset: 0x870
 // Size: 0xe8
@@ -65,11 +65,11 @@ function function_6e543e40(localclientnum, fieldname) {
     s_pos = struct::get(fieldname, "targetname");
     while (true) {
         playfx(localclientnum, level._effect["wagon_fire"], s_pos.origin, anglestoforward(s_pos.angles), anglestoup(s_pos.angles));
-        wait(0.5);
+        wait 0.5;
     }
 }
 
-// Namespace namespace_711a44f0
+// Namespace zm_tomb_ee
 // Params 2, eflags: 0x1 linked
 // Checksum 0x32f14aa9, Offset: 0x960
 // Size: 0xa4
@@ -83,7 +83,7 @@ function function_1ebf0afe(ison, fieldname) {
     audio::stoploopat("amb_fire_xlg", origin);
 }
 
-// Namespace namespace_711a44f0
+// Namespace zm_tomb_ee
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc51ee2f0, Offset: 0xa10
 // Size: 0x1d2
@@ -107,10 +107,10 @@ function function_64b44f6b(localclientnum, oldval, newval, bnewent, binitialsnap
         stopfx(localclientnum, self.var_8020f50b);
         stopfx(localclientnum, self.var_9c121695);
     }
-    self notify(#"hash_613e39fa");
+    self notify(#"sndDeleteEnt");
 }
 
-// Namespace namespace_711a44f0
+// Namespace zm_tomb_ee
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5ba95816, Offset: 0xbf0
 // Size: 0x54
@@ -119,7 +119,7 @@ function function_587c5a03(ent) {
     ent delete();
 }
 
-// Namespace namespace_711a44f0
+// Namespace zm_tomb_ee
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2289c365, Offset: 0xc50
 // Size: 0x20c
@@ -134,11 +134,11 @@ function function_a8fdf631(localclientnum, oldval, newval, bnewent, binitialsnap
     e_fx waittill(#"movedone");
     playsound(localclientnum, "zmb_squest_charge_soul_impact", v_dest);
     playfxontag(localclientnum, level._effect["staff_charge"], e_fx, "tag_origin");
-    wait(0.3);
+    wait 0.3;
     e_fx delete();
 }
 
-// Namespace namespace_711a44f0
+// Namespace zm_tomb_ee
 // Params 7, eflags: 0x1 linked
 // Checksum 0x9a1d1c0b, Offset: 0xe68
 // Size: 0x1bc
@@ -162,7 +162,7 @@ function function_aff1c5b2(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_711a44f0
+// Namespace zm_tomb_ee
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbf792f42, Offset: 0x1030
 // Size: 0x16c
@@ -171,18 +171,18 @@ function function_19452a40(localclientnum, oldval, newval, bnewent, binitialsnap
     self util::waittill_dobj(localclientnum);
     while (true) {
         e_player = getlocalplayer(localclientnum);
-        if (isdefined(e_player.var_c5eb485f) && isdefined(e_player) && e_player.var_c5eb485f && !isdefined(self.var_f37e5d12)) {
-            self.var_f37e5d12 = playfxontag(localclientnum, level._effect["biplane_glow"], self, "tag_origin");
+        if (isdefined(e_player.var_c5eb485f) && isdefined(e_player) && e_player.var_c5eb485f && !isdefined(self.plane_fx)) {
+            self.plane_fx = playfxontag(localclientnum, level._effect["biplane_glow"], self, "tag_origin");
         }
-        if (isdefined(e_player) && !(isdefined(e_player.var_c5eb485f) && e_player.var_c5eb485f) && isdefined(self.var_f37e5d12)) {
-            stopfx(localclientnum, self.var_f37e5d12);
-            self.var_f37e5d12 = undefined;
+        if (isdefined(e_player) && !(isdefined(e_player.var_c5eb485f) && e_player.var_c5eb485f) && isdefined(self.plane_fx)) {
+            stopfx(localclientnum, self.plane_fx);
+            self.plane_fx = undefined;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_711a44f0
+// Namespace zm_tomb_ee
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc2bf3970, Offset: 0x11a8
 // Size: 0x21c
@@ -198,11 +198,11 @@ function function_74610c8a(localclientnum, oldval, newval, bnewent, binitialsnap
     e_fx waittill(#"movedone");
     playsound(localclientnum, "zmb_squest_charge_soul_impact", e_fx.origin);
     playfxontag(localclientnum, level._effect["staff_charge"], e_fx, "tag_origin");
-    wait(0.3);
+    wait 0.3;
     e_fx delete();
 }
 
-// Namespace namespace_711a44f0
+// Namespace zm_tomb_ee
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8ab4c4b2, Offset: 0x13d0
 // Size: 0x12c
@@ -223,7 +223,7 @@ function function_b628a101(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_711a44f0
+// Namespace zm_tomb_ee
 // Params 1, eflags: 0x1 linked
 // Checksum 0x38a003a0, Offset: 0x1508
 // Size: 0x114
@@ -242,7 +242,7 @@ function function_17bc361f(localclientnum) {
     }
 }
 
-// Namespace namespace_711a44f0
+// Namespace zm_tomb_ee
 // Params 1, eflags: 0x1 linked
 // Checksum 0x65ae7554, Offset: 0x1628
 // Size: 0x80
@@ -251,11 +251,11 @@ function function_4e9276ed(localclientnum) {
     self endon(#"hash_7066982d");
     while (true) {
         playfx(localclientnum, level._effect["bottle_glow"], (-141, 4464, -322) + (60, 10, 25));
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_711a44f0
+// Namespace zm_tomb_ee
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf654a93b, Offset: 0x16b0
 // Size: 0x84

@@ -61,7 +61,7 @@ function doreveal(localclientnum, direction) {
         } else {
             startval += 0.032;
         }
-        wait(0.016);
+        wait 0.016;
     }
     flags_changed = self duplicate_render::set_dr_flag("active_camo_reveal", 0);
     flags_changed = self duplicate_render::set_dr_flag("active_camo_on", direction) || flags_changed;

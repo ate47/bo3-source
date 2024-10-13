@@ -92,21 +92,21 @@ function function_284c8a64() {
     battlechatter::function_d9f49fba(0);
     level thread function_48cd673e();
     level thread function_874bf7f();
-    level thread function_79c2bdec();
-    level thread function_341ece1b();
+    level thread clip_ai_garage();
+    level thread clip_player_garage();
     level thread function_38c8ec92();
     level thread function_9fb290a5();
     level thread function_94976a83();
     level thread function_4a895a11();
     level thread objectives::breadcrumb("breadcrumb_robot_horde");
     level thread function_96157f5d();
-    a_ai_allies = namespace_2cb3876f::function_6ee0e1a5();
+    a_ai_allies = cp_prologue_util::function_6ee0e1a5();
     foreach (var_e4463170 in a_ai_allies) {
         var_e4463170 ai::set_behavior_attribute("cqb", 1);
     }
     level flag::wait_till("player_in_alley");
-    namespace_2cb3876f::function_b50f5d52();
-    a_ai_allies = namespace_2cb3876f::function_6ee0e1a5();
+    cp_prologue_util::function_b50f5d52();
+    a_ai_allies = cp_prologue_util::function_6ee0e1a5();
     a_ai_allies[a_ai_allies.size] = level.var_f58c9f31;
     a_ai_allies[a_ai_allies.size] = level.var_2fd26037;
     a_ai_allies[a_ai_allies.size] = level.var_9db406db;
@@ -116,7 +116,7 @@ function function_284c8a64() {
         var_e4463170 ai::set_ignoreall(1);
         var_e4463170 ai::set_ignoreme(1);
     }
-    level thread function_90882a34();
+    level thread spawn_robot_horde();
     level thread function_59071a25();
     level thread function_f7a7c69a();
     util::delay(0.5, undefined, &exploder::exploder, "fx_exploder_fog_light_horde");
@@ -130,7 +130,7 @@ function function_284c8a64() {
         var_e4463170 thread function_54900cca();
     }
     level thread function_3d5fceb9();
-    wait(8);
+    wait 8;
     level flag::set("open_fire");
     foreach (var_e4463170 in a_ai_allies) {
         var_e4463170 ai::set_behavior_attribute("cqb", 0);
@@ -163,11 +163,11 @@ function function_284c8a64() {
 // Checksum 0x5c706a68, Offset: 0x1948
 // Size: 0x74
 function function_96157f5d() {
-    var_9a246ea8 = getent("t_robot_horde_oob", "targetname");
-    if (isdefined(var_9a246ea8)) {
+    t_robot_horde_oob = getent("t_robot_horde_oob", "targetname");
+    if (isdefined(t_robot_horde_oob)) {
         level flag::wait_till("vo_robot");
-        wait(1.9);
-        var_9a246ea8 triggerenable(1);
+        wait 1.9;
+        t_robot_horde_oob triggerenable(1);
     }
 }
 
@@ -186,8 +186,8 @@ function function_21350de5(a_ents) {
 // Checksum 0x4aec78af, Offset: 0x1a28
 // Size: 0x3c
 function function_4a895a11() {
-    level waittill(#"hash_d1ef0d27");
-    wait(1);
+    level waittill(#"sndStartFakeBattle");
+    wait 1;
     playsoundatposition("evt_robot_fake_battle", (15815, -745, 497));
 }
 
@@ -201,7 +201,7 @@ function function_94976a83() {
     trigger::use("triggercolor_allies_alley");
     level flag::wait_till("player_in_alley");
     trigger::use("triggercolor_allies_alley");
-    wait(1.5);
+    wait 1.5;
     trigger::use("robot_defend_color_chain1");
 }
 
@@ -213,7 +213,7 @@ function function_54900cca() {
     self endon(#"death");
     level flag::wait_till("garage_enter");
     self.ignoresuppression = 1;
-    wait(3);
+    wait 3;
     self ai::set_ignoreall(1);
     level flag::wait_till("allies_in_garage");
     self.ignoresuppression = 0;
@@ -237,10 +237,10 @@ function function_59071a25() {
 // Size: 0x11c
 function function_f7a7c69a() {
     t_entrance = getent("player_inside_garage", "targetname");
-    a_ai_allies = namespace_2cb3876f::function_6ee0e1a5();
+    a_ai_allies = cp_prologue_util::function_6ee0e1a5();
     foreach (var_e4463170 in a_ai_allies) {
         while (isalive(var_e4463170) && !var_e4463170 istouching(t_entrance)) {
-            wait(0.1);
+            wait 0.1;
         }
     }
     level flag::set("allies_in_garage");
@@ -250,17 +250,17 @@ function function_f7a7c69a() {
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2df9512e, Offset: 0x1d68
 // Size: 0x13c
-function function_90882a34() {
+function spawn_robot_horde() {
     level flag::wait_till("spawn_robot_horde");
     if (isdefined(level.var_3afb66ba)) {
         level thread [[ level.var_3afb66ba ]]();
     }
     spawn_manager::enable("sm_initial_robots");
-    wait(3);
+    wait 3;
     spawn_manager::enable("sm_robot_horde1");
-    wait(1);
+    wait 1;
     spawn_manager::enable("sm_robot_horde2");
-    wait(1);
+    wait 1;
     spawn_manager::enable("sm_robot_horde3");
     level flag::wait_till("players_in_garage");
     spawn_manager::kill("sm_initial_robots");
@@ -279,9 +279,9 @@ function function_9fb290a5() {
     ent = spawn("script_model", struct.origin);
     while (!flag::get("players_in_garage")) {
         ent playsound("evt_robot_reveal_step");
-        wait(0.3);
+        wait 0.3;
         ent clientfield::set("sndRattle", 1);
-        wait(0.8);
+        wait 0.8;
         ent clientfield::set("sndRattle", 0);
     }
     ent playloopsound("evt_robot_fake_battle_lp", 5);
@@ -294,13 +294,13 @@ function function_9fb290a5() {
 function function_51280ee5() {
     level flag::wait_till("garage_open");
     level thread scene::play("p7_fxanim_cp_prologue_apc_door_01_open_bundle");
-    wait(0.3);
+    wait 0.3;
     level thread scene::play("p7_fxanim_cp_prologue_apc_door_02_open_bundle");
     trigger::use("t_motorpool_spawns_enable", "targetname");
     level flag::wait_till("players_in_garage");
     level flag::wait_till("allies_in_garage");
     level thread scene::play("p7_fxanim_cp_prologue_apc_door_01_close_bundle");
-    wait(0.3);
+    wait 0.3;
     level flag::set("garage_closed");
     level scene::play("p7_fxanim_cp_prologue_apc_door_02_close_bundle");
     function_c2619de1();
@@ -311,11 +311,11 @@ function function_51280ee5() {
 // Checksum 0xd70f9f75, Offset: 0x2150
 // Size: 0x142
 function function_c2619de1() {
-    var_9869c63b = getent("t_kill_robots_inside_garage", "targetname");
+    t_kill_robots_inside_garage = getent("t_kill_robots_inside_garage", "targetname");
     a_ai_enemies = getaiteamarray("axis");
     foreach (ai_enemy in a_ai_enemies) {
         if (isalive(ai_enemy)) {
-            if (ai_enemy istouching(var_9869c63b)) {
+            if (ai_enemy istouching(t_kill_robots_inside_garage)) {
                 ai_enemy ai::bloody_death(randomfloat(0.25));
                 continue;
             }
@@ -355,7 +355,7 @@ function function_10302408() {
     level endon(#"hash_eecef59c");
     self endon(#"death");
     while (self.attackeraccuracy < 1) {
-        wait(1);
+        wait 1;
         self.attackeraccuracy += 0.1;
     }
 }
@@ -365,7 +365,7 @@ function function_10302408() {
 // Checksum 0xcdd7cb1c, Offset: 0x2410
 // Size: 0x98
 function function_12501af4() {
-    level endon(#"hash_64ad6809");
+    level endon(#"garage_closed");
     self endon(#"death");
     self.goalradius = 32;
     self thread function_e583f6c3();
@@ -373,7 +373,7 @@ function function_12501af4() {
     self thread robot_speed();
     self waittill(#"goal");
     self.goalradius = 2048;
-    wait(3);
+    wait 3;
     self.perfectaim = 1;
 }
 
@@ -395,7 +395,7 @@ function robot_stop() {
 function robot_speed() {
     self endon(#"death");
     level flag::wait_till("garage_open");
-    wait(5);
+    wait 5;
     self ai::set_behavior_attribute("move_mode", "marching");
 }
 
@@ -407,7 +407,7 @@ function function_e583f6c3() {
     self endon(#"death");
     self ai::set_ignoreall(1);
     level flag::wait_till("open_fire");
-    wait(3);
+    wait 3;
     self ai::set_ignoreall(0);
 }
 
@@ -450,11 +450,11 @@ function function_85de96a6(str_name) {
 // Size: 0x84
 function function_20e7e38e() {
     self endon(#"hash_8f3f5759");
-    wait(5);
+    wait 5;
     level.var_2fd26037 dialog::say("hend_c_mon_exfil_s_just_0");
-    wait(5);
+    wait 5;
     level.var_2fd26037 dialog::say("hend_we_gotta_get_the_min_0");
-    wait(5);
+    wait 5;
     level.var_2fd26037 dialog::say("hend_we_can_t_miss_our_pi_0");
 }
 
@@ -466,7 +466,7 @@ function function_874bf7f() {
     level thread function_c091ae43();
     level thread function_82869bf4();
     level thread function_f4e0744a();
-    level thread scene::add_scene_func("cin_pro_14_01_robothorde_vign_directing", &function_7ad76fc0, "play");
+    level thread scene::add_scene_func("cin_pro_14_01_robothorde_vign_directing", &taylor_direct, "play");
     if (!level flag::get("prom_point")) {
         level thread scene::play("cin_pro_14_01_robothorde_vign_directing");
         level flag::wait_till("taylor_direct");
@@ -477,7 +477,7 @@ function function_874bf7f() {
         level thread scene::play("cin_pro_14_01_robothorde_vign_directing");
     }
     level flag::wait_till("spawn_robot_horde");
-    wait(2);
+    wait 2;
     level thread scene::play("cin_pro_14_01_robothorde_vign_dismantle_new_prometheus");
     level waittill(#"hash_a4b8e7ad");
     objectives::set("cp_level_prologue_defend_theia", level.var_92d245e2);
@@ -490,7 +490,7 @@ function function_874bf7f() {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x119aa1f2, Offset: 0x2b08
 // Size: 0x2c
-function function_7ad76fc0(a_ents) {
+function taylor_direct(a_ents) {
     level flag::set("taylor_direct");
 }
 
@@ -543,7 +543,7 @@ function function_38c8ec92() {
     level flag::set("robot_contact");
     level.var_2fd26037 dialog::say("hend_holy_shit_0", 0.5);
     level.var_5d4087a6 dialog::say("mare_contact_contact_0", 0.5);
-    wait(0.5);
+    wait 0.5;
     function_e3231637(0);
     level.var_7f246cd7 dialog::say("diaz_incoming_bots_a_s_0", 0.5);
     level.var_92d245e2 dialog::say("tayr_we_need_that_door_op_0", 0.5);
@@ -568,7 +568,7 @@ function function_e3231637(var_8a4b0c9) {
         foreach (var_75443889 in level.var_681ad194) {
             var_75443889 ai::set_pacifist(var_8a4b0c9);
             if (var_8a4b0c9) {
-                wait(randomfloatrange(0.1, 0.75));
+                wait randomfloatrange(0.1, 0.75);
             }
         }
     }
@@ -579,14 +579,14 @@ function function_e3231637(var_8a4b0c9) {
 // Checksum 0x3f3e2563, Offset: 0x3108
 // Size: 0xf4
 function function_f0042481() {
-    level endon(#"hash_64b7ce47");
-    wait(4);
+    level endon(#"players_in_garage");
+    wait 4;
     level.var_92d245e2 dialog::say("tayr_you_re_dead_out_ther_0");
-    wait(5);
+    wait 5;
     level.var_92d245e2 dialog::say("tayr_we_gotta_move_come_0");
-    wait(5);
+    wait 5;
     level.var_92d245e2 dialog::say("tayr_drone_s_almost_here_0");
-    wait(5);
+    wait 5;
     level notify(#"failed");
     spawn_manager::kill("sm_robot_horde1");
     spawn_manager::kill("sm_robot_horde2");
@@ -619,7 +619,7 @@ function function_3d5fceb9() {
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7a7801c4, Offset: 0x3360
 // Size: 0xf4
-function function_341ece1b() {
+function clip_player_garage() {
     var_c8af31c9 = getent("clip_player_garage", "targetname");
     var_c8af31c9 movez(-56 * -1, 0.05);
     level flag::wait_till("garage_open");
@@ -633,14 +633,14 @@ function function_341ece1b() {
 // Params 0, eflags: 0x1 linked
 // Checksum 0x58e01218, Offset: 0x3460
 // Size: 0xf4
-function function_79c2bdec() {
+function clip_ai_garage() {
     mdl_clip = getent("clip_ai_garage", "targetname");
     level flag::wait_till("garage_open");
     mdl_clip notsolid();
     mdl_clip connectpaths();
     level flag::set("garage_enter");
     level flag::wait_till("garage_closed");
-    wait(1);
+    wait 1;
     mdl_clip solid();
     mdl_clip disconnectpaths();
 }

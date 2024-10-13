@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_ad522020;
+#namespace voice_lotus3;
 
-// Namespace namespace_ad522020
+// Namespace voice_lotus3
 // Params 0, eflags: 0x0
 // Checksum 0xd69536a, Offset: 0x1c78
 // Size: 0x1442

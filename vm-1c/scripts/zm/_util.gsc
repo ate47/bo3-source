@@ -16,10 +16,10 @@
     // Checksum 0xa1fd40f2, Offset: 0x270
     // Size: 0x74
     function error(msg) {
-        println("team", msg);
-        wait(0.05);
-        if (getdvarstring("team") != "team") {
-            assertmsg("team");
+        println("<dev string:x28>", msg);
+        wait 0.05;
+        if (getdvarstring("<dev string:x33>") != "<dev string:x39>") {
+            assertmsg("<dev string:x3b>");
         }
     }
 
@@ -28,7 +28,7 @@
     // Checksum 0xa02aa6f1, Offset: 0x2f0
     // Size: 0x34
     function warning(msg) {
-        println("team" + msg);
+        println("<dev string:x68>" + msg);
     }
 
 #/
@@ -40,9 +40,9 @@
 function brush_delete() {
     num = self.v["exploder"];
     if (isdefined(self.v["delay"])) {
-        wait(self.v["delay"]);
+        wait self.v["delay"];
     } else {
-        wait(0.05);
+        wait 0.05;
     }
     if (!isdefined(self.model)) {
         return;
@@ -61,7 +61,7 @@ function brush_delete() {
 // Size: 0x7c
 function brush_show() {
     if (isdefined(self.v["delay"])) {
-        wait(self.v["delay"]);
+        wait self.v["delay"];
     }
     assert(isdefined(self.model));
     self.model show();
@@ -74,7 +74,7 @@ function brush_show() {
 // Size: 0x20c
 function brush_throw() {
     if (isdefined(self.v["delay"])) {
-        wait(self.v["delay"]);
+        wait self.v["delay"];
     }
     ent = undefined;
     if (isdefined(self.v["target"])) {
@@ -95,7 +95,7 @@ function brush_throw() {
     self.model rotatevelocity((x, y, z), 12);
     self.model movegravity((x, y, z), 12);
     self.v["exploder"] = undefined;
-    wait(6);
+    wait 6;
     self.model delete();
 }
 
@@ -149,7 +149,7 @@ function waitrespawnbutton() {
     self endon(#"disconnect");
     self endon(#"end_respawn");
     while (self usebuttonpressed() != 1) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -245,7 +245,7 @@ function clearlowermessage(fadetime) {
     self.lowermessage.alpha = 0;
     self.lowertimer fadeovertime(fadetime);
     self.lowertimer.alpha = 0;
-    wait(fadetime);
+    wait fadetime;
     self setlowermessage("");
 }
 
@@ -426,7 +426,7 @@ function getotherteam(team) {
     } else {
         return "allies";
     }
-    assertmsg("team" + team);
+    assertmsg("<dev string:x74>" + team);
 }
 
 // Namespace util
@@ -488,7 +488,7 @@ function getotherteamsmask(skip_team) {
 // Checksum 0xe2a1b730, Offset: 0x1a40
 // Size: 0x50
 function getfx(fx) {
-    assert(isdefined(level._effect[fx]), "team" + fx + "team");
+    assert(isdefined(level._effect[fx]), "<dev string:x90>" + fx + "<dev string:x94>");
     return level._effect[fx];
 }
 

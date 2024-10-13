@@ -13,7 +13,7 @@
 // Size: 0x504
 function autoexec registerbehaviorscriptfunctions() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("isAtCrouchNode", &isatcrouchnode);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("isAtCoverCondition", &function_f09741fa);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("isAtCoverCondition", &isAtCoverCondition);
     behaviortreenetworkutility::registerbehaviortreescriptapi("isAtCoverStrictCondition", &isatcoverstrictcondition);
     behaviortreenetworkutility::registerbehaviortreescriptapi("isAtCoverModeOver", &isatcovermodeover);
     behaviortreenetworkutility::registerbehaviortreescriptapi("isAtCoverModeNone", &isatcovermodenone);
@@ -326,7 +326,7 @@ function isatcrouchnode(behaviortreeentity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe95d1fce, Offset: 0x1b00
 // Size: 0x54
-function function_f09741fa(behaviortreeentity) {
+function isAtCoverCondition(behaviortreeentity) {
     return behaviortreeentity isatcovernodestrict() && behaviortreeentity shouldusecovernode() && !behaviortreeentity haspath();
 }
 
@@ -514,7 +514,7 @@ function setcanbeflanked(behaviortreeentity, canbeflanked) {
 // Checksum 0xb57632bd, Offset: 0x23f8
 // Size: 0xec
 function cleanupcovermode(behaviortreeentity) {
-    if (function_f09741fa(behaviortreeentity)) {
+    if (isAtCoverCondition(behaviortreeentity)) {
         covermode = blackboard::getblackboardattribute(behaviortreeentity, "_cover_mode");
         blackboard::setblackboardattribute(behaviortreeentity, "_previous_cover_mode", covermode);
         blackboard::setblackboardattribute(behaviortreeentity, "_cover_mode", "cover_mode_none");

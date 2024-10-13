@@ -215,46 +215,46 @@ function get_hacked_health(killstreaktype) {
 function get_shots_to_kill(weapon, meansofdeath, bundle) {
     shotstokill = undefined;
     switch (weapon.rootweapon.name) {
-    case 23:
+    case "remote_missile_missile":
         shotstokill = bundle.ksremote_missile_missile;
         break;
-    case 11:
+    case "hero_annihilator":
         shotstokill = bundle.kshero_annihilator;
         break;
-    case 12:
+    case "hero_armblade":
         shotstokill = bundle.kshero_armblade;
         break;
-    case 13:
-    case 14:
-    case 15:
-    case 16:
+    case "hero_bowlauncher":
+    case "hero_bowlauncher2":
+    case "hero_bowlauncher3":
+    case "hero_bowlauncher4":
         if (meansofdeath == "MOD_PROJECTILE_SPLASH" || meansofdeath == "MOD_PROJECTILE") {
             shotstokill = bundle.kshero_bowlauncher;
         } else {
             shotstokill = -1;
         }
         break;
-    case 18:
+    case "hero_gravityspikes":
         shotstokill = bundle.kshero_gravityspikes;
         break;
-    case 19:
+    case "hero_lightninggun":
         shotstokill = bundle.kshero_lightninggun;
         break;
-    case 20:
-    case 21:
+    case "hero_minigun":
+    case "hero_minigun_body3":
         shotstokill = bundle.kshero_minigun;
         break;
-    case 22:
+    case "hero_pineapplegun":
         shotstokill = bundle.kshero_pineapplegun;
         break;
-    case 17:
+    case "hero_firefly_swarm":
         shotstokill = (isdefined(bundle.kshero_firefly_swarm) ? bundle.kshero_firefly_swarm : 0) * 4;
         break;
-    case 8:
-    case 9:
+    case "dart_blade":
+    case "dart_turret":
         shotstokill = bundle.ksdartstokill;
         break;
-    case 10:
+    case "gadget_heat_wave":
         shotstokill = bundle.kshero_heatwave;
         break;
     }

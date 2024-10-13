@@ -7,9 +7,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f26b66b7;
+#namespace zm_fog;
 
-// Namespace namespace_f26b66b7
+// Namespace zm_fog
 // Params 0, eflags: 0x2
 // Checksum 0x71835031, Offset: 0x198
 // Size: 0x34
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
     system::register("zm_fog", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_f26b66b7
+// Namespace zm_fog
 // Params 0, eflags: 0x1 linked
 // Checksum 0x578ca1b8, Offset: 0x1d8
 // Size: 0xcc
@@ -27,7 +27,7 @@ function __init__() {
     clientfield::register("world", "litfog_bank", 15000, 2, "int", &function_7ac70b3c, 0, 0);
 }
 
-// Namespace namespace_f26b66b7
+// Namespace zm_fog
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6af5d1c8, Offset: 0x2b0
 // Size: 0x5c
@@ -35,7 +35,7 @@ function function_83c92b90(localclientnum, oldval, newval, bnewent, binitialsnap
     setworldfogactivebank(localclientnum, newval + 1);
 }
 
-// Namespace namespace_f26b66b7
+// Namespace zm_fog
 // Params 7, eflags: 0x1 linked
 // Checksum 0x35f0ac60, Offset: 0x318
 // Size: 0x84

@@ -31,13 +31,13 @@ function __init__() {
     var_b4443147["trigger_unlock"] = &trigger_unlock;
     var_b4443147["flag_set"] = &flag_set_trigger;
     var_b4443147["flag_clear"] = &flag_clear_trigger;
-    var_b4443147["flag_set_touching"] = &function_c6742dfe;
+    var_b4443147["flag_set_touching"] = &flag_set_touching;
     var_b4443147["friendly_respawn_trigger"] = &friendly_respawn_trigger;
     var_b4443147["friendly_respawn_clear"] = &friendly_respawn_clear;
     var_b4443147["trigger_delete"] = &trigger_turns_off;
     var_b4443147["trigger_delete_on_touch"] = &trigger_delete_on_touch;
     var_b4443147["trigger_off"] = &trigger_turns_off;
-    var_b4443147["delete_link_chain"] = &function_62964ea9;
+    var_b4443147["delete_link_chain"] = &delete_link_chain;
     var_b4443147["no_crouch_or_prone"] = &function_5c8525c5;
     var_b4443147["no_prone"] = &function_555e49a2;
     var_b4443147["flood_spawner"] = &spawner::flood_trigger_think;
@@ -156,7 +156,7 @@ function wait_for_an_unlocked_trigger(triggers, noteworthy) {
 // Checksum 0xc11723ab, Offset: 0xe08
 // Size: 0x4c
 function report_trigger(ent, noteworthy) {
-    self endon(#"hash_323a0103");
+    self endon(#"relock");
     level endon("unlocked_trigger_hit" + noteworthy);
     self waittill(#"trigger");
     ent notify(#"trigger");
@@ -183,7 +183,7 @@ function get_trigger_look_target() {
         a_potential_target_structs = struct::get_array(self.target);
         a_targets = arraycombine(a_targets, a_potential_target_structs, 1, 0);
         if (a_targets.size > 0) {
-            assert(a_targets.size == 1, "trigger_delete_on_touch" + self.origin + "trigger_delete_on_touch");
+            assert(a_targets.size == 1, "<dev string:x28>" + self.origin + "<dev string:x38>");
             e_target = a_targets[0];
         }
     }
@@ -220,14 +220,14 @@ function trigger_look(trigger) {
                 } else if (isdefined(trigger.script_flag)) {
                     level flag::clear(trigger.script_flag);
                 }
-                wait(0.05);
+                wait 0.05;
             }
             if (isdefined(trigger.script_flag)) {
                 level flag::clear(trigger.script_flag);
             }
             continue;
         }
-        assertmsg("trigger_delete_on_touch");
+        assertmsg("<dev string:x5b>");
     }
 }
 
@@ -237,7 +237,7 @@ function trigger_look(trigger) {
 // Size: 0x12a
 function trigger_spawner(trigger) {
     a_spawners = getspawnerarray(trigger.target, "targetname");
-    assert(a_spawners.size > 0, "trigger_delete_on_touch" + trigger.origin + "trigger_delete_on_touch");
+    assert(a_spawners.size > 0, "<dev string:x7f>" + trigger.origin + "<dev string:xa4>");
     trigger endon(#"death");
     trigger wait_till();
     foreach (sp in a_spawners) {
@@ -357,9 +357,9 @@ function function_f1980fe1(trigger) {
 function friendly_respawn_trigger(trigger) {
     trigger endon(#"death");
     spawners = getentarray(trigger.target, "targetname");
-    assert(spawners.size == 1, "trigger_delete_on_touch" + trigger.target + "trigger_delete_on_touch");
+    assert(spawners.size == 1, "<dev string:xc7>" + trigger.target + "<dev string:x10a>");
     spawner = spawners[0];
-    assert(!isdefined(spawner.script_forcecolor), "trigger_delete_on_touch" + spawner.origin + "trigger_delete_on_touch");
+    assert(!isdefined(spawner.script_forcecolor), "<dev string:x12a>" + spawner.origin + "<dev string:x13f>");
     spawners = undefined;
     spawner endon(#"death");
     while (true) {
@@ -370,7 +370,7 @@ function friendly_respawn_trigger(trigger) {
             level.respawn_spawner = spawner;
         }
         level flag::set("respawn_friendlies");
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -383,7 +383,7 @@ function friendly_respawn_clear(trigger) {
     while (true) {
         trigger waittill(#"trigger");
         level flag::clear("respawn_friendlies");
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -418,10 +418,10 @@ function script_flag_set_touching(trigger) {
     trigger thread _detect_touched();
     while (true) {
         trigger.script_touched = 0;
-        wait(0.05);
+        wait 0.05;
         waittillframeend();
         if (!trigger.script_touched) {
-            wait(0.05);
+            wait 0.05;
             waittillframeend();
         }
         if (trigger.script_touched) {
@@ -471,7 +471,7 @@ function trigger_delete_on_touch(trigger) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5df9bef3, Offset: 0x1ec8
 // Size: 0x100
-function function_c6742dfe(trigger) {
+function flag_set_touching(trigger) {
     str_flag = trigger.script_flag;
     if (!isdefined(level.flag[str_flag])) {
         level flag::init(str_flag, undefined, 1);
@@ -480,7 +480,7 @@ function function_c6742dfe(trigger) {
         other = trigger waittill(#"trigger");
         level flag::set(str_flag);
         while (isalive(other) && other istouching(trigger) && isdefined(trigger)) {
-            wait(0.25);
+            wait 0.25;
         }
         level flag::clear(str_flag);
     }
@@ -501,9 +501,9 @@ function trigger_once(trig) {
     waittillframeend();
     if (isdefined(trig)) {
         /#
-            println("trigger_delete_on_touch");
-            println("trigger_delete_on_touch" + trig getentitynumber() + "trigger_delete_on_touch" + trig.origin);
-            println("trigger_delete_on_touch");
+            println("<dev string:x167>");
+            println("<dev string:x168>" + trig getentitynumber() + "<dev string:x198>" + trig.origin);
+            println("<dev string:x167>");
         #/
         trig delete();
     }
@@ -514,15 +514,15 @@ function trigger_once(trig) {
 // Checksum 0xf3289391, Offset: 0x20d0
 // Size: 0x174
 function trigger_hint(trigger) {
-    assert(isdefined(trigger.script_hint), "trigger_delete_on_touch" + trigger.origin + "trigger_delete_on_touch");
+    assert(isdefined(trigger.script_hint), "<dev string:x1a5>" + trigger.origin + "<dev string:x1b6>");
     trigger endon(#"death");
     if (!isdefined(level.displayed_hints)) {
         level.displayed_hints = [];
     }
     waittillframeend();
-    assert(isdefined(level.trigger_hint_string[trigger.script_hint]), "trigger_delete_on_touch" + trigger.script_hint + "trigger_delete_on_touch");
+    assert(isdefined(level.trigger_hint_string[trigger.script_hint]), "<dev string:x1cb>" + trigger.script_hint + "<dev string:x1e3>");
     other = trigger waittill(#"trigger");
-    assert(isplayer(other), "trigger_delete_on_touch");
+    assert(isplayer(other), "<dev string:x238>");
     if (isdefined(level.displayed_hints[trigger.script_hint])) {
         return;
     }
@@ -619,7 +619,7 @@ function function_bd4fb8ef(string, var_6647cf0c) {
 // Size: 0x82
 function function_5f1a1049(length, var_6647cf0c) {
     if (!isdefined(var_6647cf0c)) {
-        wait(length);
+        wait length;
         return;
     }
     timer = length * 20;
@@ -627,7 +627,7 @@ function function_5f1a1049(length, var_6647cf0c) {
         if ([[ var_6647cf0c ]]()) {
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -695,16 +695,16 @@ function get_all(type1, var_70753f2d, var_4a72c4c4, var_24704a5b, var_fe6dcff2, 
 // Size: 0x82
 function function_73e50955(type) {
     switch (type) {
-    case 17:
-    case 21:
-    case 22:
-    case 39:
-    case 19:
-    case 18:
-    case 42:
-    case 20:
-    case 40:
-    case 41:
+    case "trigger_box":
+    case "trigger_damage":
+    case "trigger_hurt":
+    case "trigger_lookat":
+    case "trigger_multiple":
+    case "trigger_once":
+    case "trigger_out_of_bounds":
+    case "trigger_radius":
+    case "trigger_use":
+    case "trigger_use_touch":
         return 1;
     default:
         return 0;
@@ -729,7 +729,7 @@ function wait_till(str_name, str_key, e_entity, b_assert) {
                 return;
             }
         } else {
-            assert(!b_assert || triggers.size > 0, "trigger_delete_on_touch" + str_name + "trigger_delete_on_touch" + str_key);
+            assert(!b_assert || triggers.size > 0, "<dev string:x26a>" + str_name + "<dev string:x27e>" + str_key);
         }
         if (triggers.size > 0) {
             if (triggers.size == 1) {
@@ -764,9 +764,9 @@ function _trigger_wait(e_entity) {
     }
     /#
         if (is_look_trigger(self)) {
-            assert(!isarray(e_entity), "trigger_delete_on_touch");
-        } else if (self.classname === "trigger_delete_on_touch") {
-            assert(!isarray(e_entity), "trigger_delete_on_touch");
+            assert(!isarray(e_entity), "<dev string:x285>");
+        } else if (self.classname === "<dev string:x2b0>") {
+            assert(!isarray(e_entity), "<dev string:x2bf>");
         }
     #/
     while (true) {
@@ -831,7 +831,7 @@ function use(str_name, str_key, ent, b_assert) {
         e_trig = getent(str_name, str_key);
         if (!isdefined(e_trig)) {
             if (b_assert) {
-                assertmsg("trigger_delete_on_touch" + str_name + "trigger_delete_on_touch" + str_key);
+                assertmsg("<dev string:x26a>" + str_name + "<dev string:x27e>" + str_key);
             }
             return;
         }
@@ -978,7 +978,7 @@ function trigger_on_timeout(n_time, b_cancel_on_triggered, str_name, str_key) {
         }
     }
     trig endon(#"death");
-    wait(n_time);
+    wait n_time;
     trig use();
 }
 
@@ -1072,7 +1072,7 @@ function get_script_linkto_targets() {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x670ce103, Offset: 0x3eb0
 // Size: 0x64
-function function_62964ea9(trigger) {
+function delete_link_chain(trigger) {
     trigger waittill(#"trigger");
     targets = trigger get_script_linkto_targets();
     array::thread_all(targets, &delete_links_then_self);
@@ -1101,7 +1101,7 @@ function function_5c8525c5(trigger) {
         while (other istouching(trigger)) {
             other allowprone(0);
             other allowcrouch(0);
-            wait(0.05);
+            wait 0.05;
         }
         other allowprone(1);
         other allowcrouch(1);
@@ -1120,7 +1120,7 @@ function function_555e49a2(trigger) {
         }
         while (other istouching(trigger)) {
             other allowprone(0);
-            wait(0.05);
+            wait 0.05;
         }
         other allowprone(1);
     }
@@ -1162,7 +1162,7 @@ function function_thread(ent, on_enter_payload, on_exit_payload) {
         [[ on_enter_payload ]](ent);
     }
     while (isdefined(ent) && ent istouching(self)) {
-        wait(0.01);
+        wait 0.01;
     }
     if (isdefined(ent) && isdefined(on_exit_payload)) {
         [[ on_exit_payload ]](ent);

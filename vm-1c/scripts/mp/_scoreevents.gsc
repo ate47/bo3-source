@@ -329,19 +329,19 @@ function scoreeventplayerkill(data, time) {
             attacker notify(#"hero_shutdown", victimheroability);
             attacker notify(#"hero_shutdown_gadget", victimheroability, victim);
             switch (victimheroability.name) {
-            case 56:
+            case "gadget_armor":
                 processscoreevent("kill_enemy_who_has_powerarmor", attacker, victim, weapon);
                 attacker util::player_contract_event("killed_hero_ability_enemy");
                 break;
-            case 59:
+            case "gadget_resurrect":
                 processscoreevent("kill_enemy_that_used_resurrect", attacker, victim, weapon);
                 attacker util::player_contract_event("killed_hero_ability_enemy");
                 break;
-            case 57:
+            case "gadget_camo":
                 processscoreevent("kill_enemy_that_is_using_optic_camo", attacker, victim, weapon);
                 attacker util::player_contract_event("killed_hero_ability_enemy");
                 break;
-            case 58:
+            case "gadget_clone":
                 processscoreevent("end_enemy_psychosis", attacker, victim, weapon);
                 attacker util::player_contract_event("killed_hero_ability_enemy");
                 break;
@@ -362,28 +362,28 @@ function scoreeventplayerkill(data, time) {
         if (attackerheroabilityactive && isdefined(attackerheroability)) {
             abilitytocheck = undefined;
             switch (attackerheroability.name) {
-            case 56:
+            case "gadget_armor":
                 processscoreevent("power_armor_kill", attacker, victim, weapon);
                 attacker hero_ability_kill_event(attackerheroability, get_equipped_hero_ability(victimheroabilityname));
                 attacker specialistmedalachievement();
                 attacker thread specialiststatabilityusage(4, 0);
                 abilitytocheck = attackerheroability.name;
                 break;
-            case 59:
+            case "gadget_resurrect":
                 processscoreevent("resurrect_kill", attacker, victim, weapon);
                 attacker hero_ability_kill_event(attackerheroability, get_equipped_hero_ability(victimheroabilityname));
                 attacker specialistmedalachievement();
                 attacker thread specialiststatabilityusage(4, 0);
                 abilitytocheck = attackerheroability.name;
                 break;
-            case 57:
+            case "gadget_camo":
                 processscoreevent("optic_camo_kill", attacker, victim, weapon);
                 attacker hero_ability_kill_event(attackerheroability, get_equipped_hero_ability(victimheroabilityname));
                 attacker specialistmedalachievement();
                 attacker thread specialiststatabilityusage(4, 0);
                 abilitytocheck = attackerheroability.name;
                 break;
-            case 58:
+            case "gadget_clone":
                 processscoreevent("kill_enemy_while_using_psychosis", attacker, victim, weapon);
                 attacker hero_ability_kill_event(attackerheroability, get_equipped_hero_ability(victimheroabilityname));
                 attacker specialistmedalachievement();
@@ -577,7 +577,7 @@ function scoreeventplayerkill(data, time) {
         }
     }
     switch (weapon.rootweapon.name) {
-    case 84:
+    case "hatchet":
         attacker.pers["tomahawks"]++;
         attacker.tomahawks = attacker.pers["tomahawks"];
         processscoreevent("hatchet_kill", attacker, victim, weapon);
@@ -586,10 +586,10 @@ function scoreeventplayerkill(data, time) {
             processscoreevent("bounce_hatchet_kill", attacker, victim, weapon);
         }
         break;
-    case 124:
-    case 125:
-    case 126:
-    case 127:
+    case "inventory_supplydrop":
+    case "inventory_supplydrop_marker":
+    case "supplydrop":
+    case "supplydrop_marker":
         if (meansofdeath == "MOD_HIT_BY_OBJECT" || meansofdeath == "MOD_CRUSH") {
             processscoreevent("kill_enemy_with_care_package_crush", attacker, victim, weapon);
         } else {
@@ -628,38 +628,38 @@ function function_3ae86df1(attacker, victim, weapon) {
         return;
     }
     switch (weapon.name) {
-    case 148:
-    case 149:
+    case "hero_minigun":
+    case "hero_minigun_body3":
         event = "minigun_kill";
         break;
-    case 145:
+    case "hero_flamethrower":
         event = "flamethrower_kill";
         break;
-    case 146:
-    case 147:
+    case "hero_lightninggun":
+    case "hero_lightninggun_arc":
         event = "lightninggun_kill";
         break;
-    case 143:
-    case 144:
+    case "hero_chemicalgelgun":
+    case "hero_firefly_swarm":
         event = "gelgun_kill";
         break;
-    case 150:
-    case 151:
+    case "hero_pineapple_grenade":
+    case "hero_pineapplegun":
         event = "pineapple_kill";
         break;
-    case 69:
+    case "hero_armblade":
         event = "armblades_kill";
         break;
-    case 139:
-    case 140:
-    case 141:
-    case 142:
+    case "hero_bowlauncher":
+    case "hero_bowlauncher2":
+    case "hero_bowlauncher3":
+    case "hero_bowlauncher4":
         event = "bowlauncher_kill";
         break;
-    case 16:
+    case "hero_gravityspikes":
         event = "gravityspikes_kill";
         break;
-    case 138:
+    case "hero_annihilator":
         event = "annihilator_kill";
         break;
     default:
@@ -680,33 +680,33 @@ function function_2a6156(attacker, victim, weapon, victim_weapon, victim_gadget_
         return;
     }
     switch (victim_weapon.name) {
-    case 148:
-    case 149:
+    case "hero_minigun":
+    case "hero_minigun_body3":
         event = "killed_minigun_enemy";
         break;
-    case 145:
+    case "hero_flamethrower":
         event = "killed_flamethrower_enemy";
         break;
-    case 146:
-    case 147:
+    case "hero_lightninggun":
+    case "hero_lightninggun_arc":
         event = "killed_lightninggun_enemy";
         break;
-    case 143:
+    case "hero_chemicalgelgun":
         event = "killed_gelgun_enemy";
         break;
-    case 151:
+    case "hero_pineapplegun":
         event = "killed_pineapple_enemy";
         break;
-    case 139:
-    case 140:
-    case 141:
-    case 142:
+    case "hero_bowlauncher":
+    case "hero_bowlauncher2":
+    case "hero_bowlauncher3":
+    case "hero_bowlauncher4":
         event = "killed_bowlauncher_enemy";
         break;
-    case 16:
+    case "hero_gravityspikes":
         event = "killed_gravityspikes_enemy";
         break;
-    case 138:
+    case "hero_annihilator":
         event = "killed_annihilator_enemy";
         break;
     default:
@@ -731,20 +731,20 @@ function specificweaponkill(attacker, victim, weapon, killstreak, inflictor) {
         switchweapon = killstreak;
     }
     switch (switchweapon) {
-    case 198:
-    case 204:
+    case "inventory_remote_missile":
+    case "remote_missile":
         event = "remote_missile_kill";
         break;
-    case 177:
-    case 186:
+    case "autoturret":
+    case "inventory_autoturret":
         event = "sentry_gun_kill";
         break;
-    case 195:
-    case 201:
+    case "inventory_planemortar":
+    case "planemortar":
         event = "plane_mortar_kill";
         break;
-    case 176:
-    case 185:
+    case "ai_tank_drop":
+    case "inventory_ai_tank_drop":
         event = "aitank_kill";
         if (isdefined(inflictor) && isdefined(inflictor.controlled)) {
             if (inflictor.controlled == 1) {
@@ -752,18 +752,18 @@ function specificweaponkill(attacker, victim, weapon, killstreak, inflictor) {
             }
         }
         break;
-    case 193:
-    case 194:
-    case 97:
-    case 200:
+    case "inventory_microwave_turret":
+    case "inventory_microwaveturret":
+    case "microwave_turret":
+    case "microwaveturret":
         event = "microwave_turret_kill";
         break;
-    case 196:
-    case 202:
+    case "inventory_raps":
+    case "raps":
         event = "raps_kill";
         break;
-    case 199:
-    case 205:
+    case "inventory_sentinel":
+    case "sentinel":
         event = "sentinel_kill";
         if (isdefined(inflictor) && isdefined(inflictor.controlled)) {
             if (inflictor.controlled == 1) {
@@ -771,31 +771,31 @@ function specificweaponkill(attacker, victim, weapon, killstreak, inflictor) {
             }
         }
         break;
-    case 178:
-    case 187:
+    case "combat_robot":
+    case "inventory_combat_robot":
         event = "combat_robot_kill";
         break;
-    case 197:
-    case 203:
+    case "inventory_rcbomb":
+    case "rcbomb":
         event = "hover_rcxd_kill";
         break;
-    case 183:
-    case 184:
-    case 191:
-    case 192:
+    case "helicopter_gunner":
+    case "helicopter_gunner_assistant":
+    case "inventory_helicopter_gunner":
+    case "inventory_helicopter_gunner_assistant":
         event = "vtol_mothership_kill";
         break;
-    case 182:
-    case 190:
+    case "helicopter_comlink":
+    case "inventory_helicopter_comlink":
         event = "helicopter_comlink_kill";
         break;
-    case 181:
-    case 189:
+    case "drone_strike":
+    case "inventory_drone_strike":
         event = "drone_strike_kill";
         break;
-    case 179:
-    case 180:
-    case 188:
+    case "dart":
+    case "dart_turret":
+    case "inventory_dart":
         event = "dart_kill";
         break;
     default:
@@ -931,12 +931,12 @@ function updatemultikills(weapon, weaponclass, killstreak, victim) {
     }
     if (isdefined(level.killstreakweapons) && isdefined(level.killstreakweapons[weapon])) {
         switch (level.killstreakweapons[weapon]) {
-        case 198:
-        case 204:
+        case "inventory_remote_missile":
+        case "remote_missile":
             self.recentremotemissilecount++;
             break;
-        case 197:
-        case 203:
+        case "inventory_rcbomb":
+        case "rcbomb":
             self.recentrcbombcount++;
             break;
         }
@@ -948,38 +948,38 @@ function updatemultikills(weapon, weaponclass, killstreak, victim) {
             self.var_c9da93ab[victim getentitynumber()] = victim;
         }
         switch (weapon.name) {
-        case 138:
+        case "hero_annihilator":
             self.recentanihilatorcount++;
             break;
-        case 148:
-        case 149:
+        case "hero_minigun":
+        case "hero_minigun_body3":
             self.recentminiguncount++;
             break;
-        case 139:
-        case 140:
-        case 141:
-        case 142:
+        case "hero_bowlauncher":
+        case "hero_bowlauncher2":
+        case "hero_bowlauncher3":
+        case "hero_bowlauncher4":
             self.recentbowlaunchercount++;
             break;
-        case 145:
+        case "hero_flamethrower":
             self.recentflamethrowercount++;
             break;
-        case 16:
+        case "hero_gravityspikes":
             self.var_a0ea7e5c++;
             break;
-        case 146:
-        case 147:
+        case "hero_lightninggun":
+        case "hero_lightninggun_arc":
             self.recentlightningguncount++;
             break;
-        case 150:
-        case 151:
+        case "hero_pineapple_grenade":
+        case "hero_pineapplegun":
             self.recentpineappleguncount++;
             break;
-        case 219:
-        case 144:
+        case "hero_chemicalgun":
+        case "hero_firefly_swarm":
             self.recentgelguncount++;
             break;
-        case 69:
+        case "hero_armblade":
             self.recentarmbladecount++;
             break;
         }
@@ -995,14 +995,14 @@ function updatemultikills(weapon, weaponclass, killstreak, victim) {
     }
     if (isdefined(killstreak)) {
         switch (killstreak) {
-        case 204:
+        case "remote_missile":
             self.recentremotemissilekillcount++;
             break;
-        case 203:
+        case "rcbomb":
             self.recentrcbombkillcount++;
             break;
-        case 220:
-        case 67:
+        case "inventory_m32":
+        case "m32":
             self.recentmglkillcount++;
             break;
         }
@@ -1162,7 +1162,7 @@ function resetrecentkillvariables() {
 // Size: 0x1c
 function waittilltimeoutordeath(timeout) {
     self endon(#"death");
-    wait(timeout);
+    wait timeout;
 }
 
 // Namespace scoreevents
@@ -1179,7 +1179,7 @@ function updateoneshotmultikills(victim, weapon, firsttimedamaged) {
     }
     self.oneshotmultikills++;
     self.oneshotmultikillsdamagetime = firsttimedamaged;
-    wait(1);
+    wait 1;
     if (self.oneshotmultikills > 1) {
         processscoreevent("kill_enemies_one_bullet", self, victim, weapon);
     } else {
@@ -1201,31 +1201,31 @@ function get_distance_for_weapon(weapon, weaponclass) {
         weaponclass = "weapon_cqb";
     }
     switch (weaponclass) {
-    case 216:
+    case "weapon_smg":
         distance = 2250000;
         break;
-    case 251:
+    case "weapon_assault":
         distance = 3062500;
         break;
-    case 215:
+    case "weapon_lmg":
         distance = 3062500;
         break;
-    case 253:
+    case "weapon_sniper":
         distance = 4000000;
         break;
-    case 252:
+    case "weapon_pistol":
         distance = 1000000;
         break;
-    case 250:
+    case "weapon_cqb":
         distance = 302500;
         break;
-    case 254:
+    case "weapon_special":
         baseweapon = challenges::getbaseweapon(weapon);
         if (baseweapon == level.weaponballisticknife || baseweapon == level.weaponspecialcrossbow || baseweapon == level.var_a0d4ce4d) {
             distance = 2250000;
         }
         break;
-    case 217:
+    case "weapon_grenade":
         if (weapon.rootweapon.name == "hatchet") {
             distance = 2250000;
         }

@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_e89da2ff;
+#namespace mp_freerun_02_sound;
 
-// Namespace namespace_e89da2ff
+// Namespace mp_freerun_02_sound
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x98
 // Size: 0x4

@@ -49,7 +49,7 @@ function function_cdfa9ce8(bird) {
         }
         bird animscripted("chicken_anim", bird.origin, bird.angles, curanim);
         animlength = getanimlength(curanim);
-        wait(animlength);
+        wait animlength;
         lastanim = curanim;
         switch (randomint(3)) {
         case 0:
@@ -193,7 +193,7 @@ function function_3118ca4d(player) {
             self rotateto(self.angles + (0, 180, 0), var_2e036f52);
             for (var_cf478564 = var_2e036f52; var_cf478564 > 0; var_cf478564 -= firetime) {
                 self function_cea0c915(player, weapon);
-                wait(firetime);
+                wait firetime;
             }
             self.var_f13ce5fc -= var_2e036f52;
         }
@@ -317,10 +317,10 @@ function function_8b81d592(player) {
         if (level flag::get("doa_game_is_over")) {
             self notify(#"hash_19b593a8");
         }
-        wait(0.05);
+        wait 0.05;
     }
     while (isdefined(self.var_efa2b784) && (isdefined(self.var_a732885d) && self.var_a732885d || self.var_efa2b784)) {
-        wait(1);
+        wait 1;
     }
     self notify(#"hash_19b593a8");
 }
@@ -403,7 +403,7 @@ function function_8fb467a7(player) {
         self function_cea0c915(player, weapon);
         extrawait = weapon.firetime - 0.05;
         if (extrawait > 0) {
-            wait(extrawait);
+            wait extrawait;
         }
     }
 }
@@ -442,7 +442,7 @@ function function_da8e9c9b() {
         if (rand > 70) {
             self thread namespace_1a381543::function_90118d8c("zmb_dblshot_squawk");
         }
-        wait(randomfloatrange(1, 3));
+        wait randomfloatrange(1, 3);
     }
 }
 
@@ -456,7 +456,7 @@ function function_4ef3ec52() {
     while (isdefined(self)) {
         self thread namespace_1a381543::function_90118d8c("zmb_dblshot_wingflap");
         self thread namespace_1a381543::function_90118d8c("zmb_dblshot_death");
-        wait(randomfloatrange(0.5, 1));
+        wait randomfloatrange(0.5, 1);
     }
 }
 
@@ -465,8 +465,8 @@ function function_4ef3ec52() {
 // Checksum 0xbdccf3a, Offset: 0x2098
 // Size: 0x11a
 function function_9d2031fa() {
-    self notify(#"hash_599dc0d7");
-    self endon(#"hash_599dc0d7");
+    self notify(#"chicken_disconnect_watch");
+    self endon(#"chicken_disconnect_watch");
     msg = self util::waittill_any_return("death", "disconnect", "chicken_disconnect_watch");
     foreach (chicken in self.doa.var_3cdd8203) {
         if (msg == "disconnect" || !(isdefined(chicken.special) && chicken.special)) {
@@ -536,7 +536,7 @@ function function_c397fab3(player) {
     while (true) {
         player waittill(#"player_died");
         /#
-            namespace_49107f3a::debugmsg("zmb_dblshot_end");
+            namespace_49107f3a::debugmsg("<dev string:x28>");
         #/
         var_141b6128 = self.var_fe6ede28 * 0.98;
         self.var_1f6fdc8f = 1;
@@ -544,12 +544,12 @@ function function_c397fab3(player) {
             self.var_fe6ede28 -= 0.05;
             self.bird setscale(self.basescale + self.var_fe6ede28);
             /#
-                namespace_49107f3a::debugmsg("zmb_dblshot_end" + self getentitynumber() + "zmb_dblshot_end" + self.var_fe6ede28);
+                namespace_49107f3a::debugmsg("<dev string:x4c>" + self getentitynumber() + "<dev string:x5f>" + self.var_fe6ede28);
             #/
-            wait(0.05);
+            wait 0.05;
         }
         /#
-            namespace_49107f3a::debugmsg("zmb_dblshot_end" + self getentitynumber() + "zmb_dblshot_end" + self.var_fe6ede28);
+            namespace_49107f3a::debugmsg("<dev string:x4c>" + self getentitynumber() + "<dev string:x75>" + self.var_fe6ede28);
         #/
         self.var_fe6ede28 = math::clamp(var_141b6128, 0, getdvarfloat("scr_doa_chicken_max_plump", 3));
         self.var_1f6fdc8f = undefined;
@@ -567,14 +567,14 @@ function function_cff32183(player) {
     self.var_5c667593 = 1;
     self thread function_c397fab3(player);
     while (true) {
-        wait(getdvarfloat("scr_doa_chicken_inc_interval", 15));
+        wait getdvarfloat("scr_doa_chicken_inc_interval", 15);
         if (level flag::get("doa_round_active")) {
             var_7cfd4c5f = player function_83df0c19() + 1;
             increment = getdvarfloat("scr_doa_chicken_inc_plump", 0.035) * var_7cfd4c5f;
             if (!(isdefined(self.var_1f6fdc8f) && self.var_1f6fdc8f)) {
                 self.var_fe6ede28 = math::clamp(self.var_fe6ede28 + increment, 0, getdvarfloat("scr_doa_chicken_max_plump", 3));
                 /#
-                    namespace_49107f3a::debugmsg("zmb_dblshot_end" + self getentitynumber() + "zmb_dblshot_end" + self.var_fe6ede28);
+                    namespace_49107f3a::debugmsg("<dev string:x4c>" + self getentitynumber() + "<dev string:x5f>" + self.var_fe6ede28);
                 #/
             }
             self.bird setscale(self.basescale + self.var_fe6ede28);
@@ -607,7 +607,7 @@ function function_cff32183(player) {
                 self.var_cdf31c46 = var_cdf31c46;
             }
             if (self.var_fe6ede28 == getdvarfloat("scr_doa_chicken_max_plump", 3)) {
-                wait(getdvarfloat("scr_doa_chicken_waitfull_plump", 30));
+                wait getdvarfloat("scr_doa_chicken_waitfull_plump", 30);
                 self function_2d0f96ef(player);
                 self.var_fe6ede28 = 0;
                 self.var_cdf31c46 = 0;
@@ -625,7 +625,7 @@ function function_2d0f96ef(player) {
     self endon(#"death");
     self endon(#"hash_46cd614a");
     /#
-        namespace_49107f3a::debugmsg("zmb_dblshot_end" + self getentitynumber());
+        namespace_49107f3a::debugmsg("<dev string:x89>" + self getentitynumber());
     #/
     self.var_a732885d = 1;
     self.var_18845184 = 1;
@@ -647,7 +647,7 @@ function function_2d0f96ef(player) {
             chicken thread function_5af02c44(self, i, offset);
         }
         self rotateto(self.angles + (0, 180, 0), 1);
-        wait(1);
+        wait 1;
     }
     self thread namespace_1a381543::function_90118d8c("zmb_golden_chicken_pop");
     chance = 100;
@@ -667,7 +667,7 @@ function function_2d0f96ef(player) {
     while (self.var_fe6ede28 > 0) {
         self.var_fe6ede28 -= 0.05;
         self.bird setscale(self.basescale + self.var_fe6ede28);
-        wait(0.05);
+        wait 0.05;
     }
     foreach (chicken in player.doa.var_3cdd8203) {
         chicken.var_a732885d = undefined;
@@ -769,7 +769,7 @@ function function_4c41e6af() {
                 self delete();
             }
         }
-        wait(1);
+        wait 1;
         self.var_111c7bbb = getclosestpointonnavmesh(self.origin, 64, 16);
     }
 }
@@ -790,13 +790,13 @@ function function_7b8c015c() {
     }
     self thread function_4c41e6af();
     self.team = "allies";
-    wait(1);
+    wait 1;
     self makesentient();
     self.threatbias = 0;
     namespace_49107f3a::addpoi(self);
     self.var_b2290d2d = 1;
     self waittill(#"pickup_timeout");
-    wait(1);
+    wait 1;
     self thread namespace_1a381543::function_90118d8c("zmb_egg_hatch");
     self thread namespace_eaa992c::function_285a2999("egg_hatch");
     if (isdefined(self.prize)) {

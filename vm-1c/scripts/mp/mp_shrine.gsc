@@ -9,9 +9,9 @@
 #using scripts/shared/_oob;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b709af10;
+#namespace mp_shrine;
 
-// Namespace namespace_b709af10
+// Namespace mp_shrine
 // Params 0, eflags: 0x1 linked
 // Checksum 0x532a352b, Offset: 0x2b8
 // Size: 0xc0c
@@ -43,8 +43,8 @@ function main() {
     level.levelkothdisable[level.levelkothdisable.size] = spawn("trigger_radius", (927.5, -1425.5, 84.5), 0, 50, -56);
     level.levelkothdisable[level.levelkothdisable.size] = spawn("trigger_radius", (1016, -1425.5, 84.5), 0, 50, -56);
     level.levelkothdisable[level.levelkothdisable.size] = spawn("trigger_radius", (1104.5, -1425.5, 84.5), 0, 50, -56);
-    namespace_77772e61::main();
-    namespace_704c92f4::main();
+    mp_shrine_fx::main();
+    mp_shrine_sound::main();
     compass::setupminimap("compass_map_mp_shrine");
     load::main();
     setdvar("compassmaxrange", "2100");
@@ -79,7 +79,7 @@ function main() {
     level thread function_83e6bfad();
 }
 
-// Namespace namespace_b709af10
+// Namespace mp_shrine
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xed0
 // Size: 0x4
@@ -87,7 +87,7 @@ function precache() {
     
 }
 
-// Namespace namespace_b709af10
+// Namespace mp_shrine
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7cbdf281, Offset: 0xee0
 // Size: 0x84
@@ -102,7 +102,7 @@ function function_19a0648() {
 
 /#
 
-    // Namespace namespace_b709af10
+    // Namespace mp_shrine
     // Params 0, eflags: 0x1 linked
     // Checksum 0xf65f1805, Offset: 0xf70
     // Size: 0x98
@@ -110,18 +110,18 @@ function function_19a0648() {
         level.var_9d27b884 = 0;
         level.var_bab0430d = 0;
         while (true) {
-            level.var_bab0430d = getdvarint("script_model", level.var_bab0430d);
+            level.var_bab0430d = getdvarint("<dev string:x28>", level.var_bab0430d);
             if (level.var_bab0430d && !level.var_9d27b884) {
                 function_aa8f2924();
             }
-            wait(1);
+            wait 1;
             level.var_9d27b884 = level.var_bab0430d;
         }
     }
 
 #/
 
-// Namespace namespace_b709af10
+// Namespace mp_shrine
 // Params 0, eflags: 0x1 linked
 // Checksum 0x16be0791, Offset: 0x1010
 // Size: 0x12a
@@ -138,7 +138,7 @@ function function_aa8f2924() {
     }
 }
 
-// Namespace namespace_b709af10
+// Namespace mp_shrine
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5f86ed70, Offset: 0x1148
 // Size: 0x10c

@@ -26,7 +26,7 @@ function __init__() {
     clientfield::register("world", "ball_away", 15000, 1, "int", &function_c27acbbf, 0, 1);
     clientfield::register("world", "ball_score_allies", 15000, 1, "int", &function_fe891abf, 0, 1);
     clientfield::register("world", "ball_score_axis", 15000, 1, "int", &function_7d1a6e7e, 0, 1);
-    clientfield::register("scriptmover", "ball_on_ground_fx", 15000, 1, "int", &function_c3fff6f9, 0, 0);
+    clientfield::register("scriptmover", "ball_on_ground_fx", 15000, 1, "int", &ball_on_ground_fx, 0, 0);
     callback::on_localclient_connect(&on_localclient_connect);
     callback::on_spawned(&on_player_spawned);
     level.effect_scriptbundles = [];
@@ -46,7 +46,7 @@ function on_localclient_connect(localclientnum) {
     while (!isdefined(var_1d2359d9["allies"])) {
         var_1d2359d9["allies"] = serverobjective_getobjective(localclientnum, "ball_goal_allies");
         var_1d2359d9["axis"] = serverobjective_getobjective(localclientnum, "ball_goal_axis");
-        wait(0.05);
+        wait 0.05;
     }
     foreach (key, objective in var_1d2359d9) {
         level.goals[key] = spawnstruct();
@@ -277,7 +277,7 @@ function watch_for_team_change(localclientnum) {
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd1e2cb69, Offset: 0x15a8
 // Size: 0x20e
-function function_c3fff6f9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function ball_on_ground_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         if (!isdefined(self.var_ff242ed4)) {
             self.var_ff242ed4 = playfx(localclientnum, level._effect["ball_on_ground"], self.origin + (0, 0, 72), (0, 0, 1), (1, 0, 0));

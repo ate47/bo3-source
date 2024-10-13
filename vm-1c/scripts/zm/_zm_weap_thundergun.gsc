@@ -68,20 +68,20 @@ function __main__() {
         if (!zm_weapons::is_weapon_included(level.var_65cd3ef2)) {
             return;
         }
-        setdvar("thundergun_fling_range", level.zombie_vars["thundergun_fling_range"]);
-        setdvar("thundergun_fling_range", level.zombie_vars["thundergun_fling_range"]);
-        setdvar("thundergun_fling_range", level.zombie_vars["thundergun_fling_range"]);
-        setdvar("thundergun_fling_range", level.zombie_vars["thundergun_fling_range"]);
-        setdvar("thundergun_fling_range", level.zombie_vars["thundergun_fling_range"]);
-        setdvar("thundergun_fling_range", level.zombie_vars["thundergun_fling_range"]);
+        setdvar("<dev string:x28>", level.zombie_vars["<dev string:x47>"]);
+        setdvar("<dev string:x62>", level.zombie_vars["<dev string:x7d>"]);
+        setdvar("<dev string:x94>", level.zombie_vars["<dev string:xad>"]);
+        setdvar("<dev string:xc2>", level.zombie_vars["<dev string:xdc>"]);
+        setdvar("<dev string:xf2>", level.zombie_vars["<dev string:x111>"]);
+        setdvar("<dev string:x12c>", level.zombie_vars["<dev string:x14c>"]);
         for (;;) {
-            level.zombie_vars["thundergun_fling_range"] = getdvarint("thundergun_fling_range");
-            level.zombie_vars["thundergun_fling_range"] = getdvarint("thundergun_fling_range");
-            level.zombie_vars["thundergun_fling_range"] = getdvarint("thundergun_fling_range");
-            level.zombie_vars["thundergun_fling_range"] = getdvarint("thundergun_fling_range");
-            level.zombie_vars["thundergun_fling_range"] = getdvarint("thundergun_fling_range");
-            level.zombie_vars["thundergun_fling_range"] = getdvarint("thundergun_fling_range");
-            wait(0.5);
+            level.zombie_vars["<dev string:x47>"] = getdvarint("<dev string:x28>");
+            level.zombie_vars["<dev string:x7d>"] = getdvarint("<dev string:x62>");
+            level.zombie_vars["<dev string:xad>"] = getdvarint("<dev string:x94>");
+            level.zombie_vars["<dev string:xdc>"] = getdvarint("<dev string:xc2>");
+            level.zombie_vars["<dev string:x111>"] = getdvarint("<dev string:xf2>");
+            level.zombie_vars["<dev string:x14c>"] = getdvarint("<dev string:x12c>");
+            wait 0.5;
         }
     }
 
@@ -178,11 +178,11 @@ function thundergun_get_enemies_in_range() {
     forward_view_angles = self getweaponforwarddir();
     end_pos = view_pos + vectorscale(forward_view_angles, level.zombie_vars["thundergun_knockdown_range"]);
     /#
-        if (2 == getdvarint("thundergun_fling_range")) {
+        if (2 == getdvarint("<dev string:x168>")) {
             near_circle_pos = view_pos + vectorscale(forward_view_angles, 2);
-            circle(near_circle_pos, level.zombie_vars["thundergun_fling_range"], (1, 0, 0), 0, 0, 100);
+            circle(near_circle_pos, level.zombie_vars["<dev string:x47>"], (1, 0, 0), 0, 0, 100);
             line(near_circle_pos, end_pos, (0, 0, 1), 1, 0, 100);
-            circle(end_pos, level.zombie_vars["thundergun_fling_range"], (1, 0, 0), 0, 0, 100);
+            circle(end_pos, level.zombie_vars["<dev string:x47>"], (1, 0, 0), 0, 0, 100);
         }
     #/
     for (i = 0; i < zombies.size; i++) {
@@ -241,7 +241,7 @@ function thundergun_get_enemies_in_range() {
 // Size: 0x8c
 function thundergun_debug_print(msg, color) {
     /#
-        if (!getdvarint("thundergun_fling_range")) {
+        if (!getdvarint("<dev string:x168>")) {
             return;
         }
         if (!isdefined(color)) {

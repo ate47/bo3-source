@@ -21,9 +21,9 @@
 #using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_35610d96;
+#namespace zm_genesis_spiders;
 
-// Namespace namespace_35610d96
+// Namespace zm_genesis_spiders
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7a9048da, Offset: 0x348
 // Size: 0x3c
@@ -34,7 +34,7 @@ function function_56aaef97() {
     level.fn_custom_round_ai_spawn = &function_33aa4940;
 }
 
-// Namespace namespace_35610d96
+// Namespace zm_genesis_spiders
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9fd5a688, Offset: 0x390
 // Size: 0x174
@@ -54,17 +54,17 @@ function function_33aa4940() {
     }
     if (var_c0692329) {
         s_spawn_point = function_99f6dbf1(var_aa671dd4);
-        assert(isdefined(s_spawn_point), "<unknown string>");
+        assert(isdefined(s_spawn_point), "<dev string:x28>");
         level.var_718361fb = function_3f180afe();
         namespace_27f8b154::function_f4bd92a2(1, s_spawn_point);
     }
     if (!var_c0692329) {
-        var_c0692329 = namespace_484ba32a::function_fd8b24f5();
+        var_c0692329 = zm_genesis_ai_spawning::function_fd8b24f5();
     }
     return var_c0692329;
 }
 
-// Namespace namespace_35610d96
+// Namespace zm_genesis_spiders
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4e8e678d, Offset: 0x510
 // Size: 0xb0
@@ -82,7 +82,7 @@ function function_99f6dbf1(var_aa671dd4) {
     return undefined;
 }
 
-// Namespace namespace_35610d96
+// Namespace zm_genesis_spiders
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4ee86d7a, Offset: 0x5c8
 // Size: 0x9a

@@ -3,9 +3,9 @@
 #using scripts/zm/_zm_utility;
 #using scripts/codescripts/struct;
 
-#namespace namespace_ba8619ac;
+#namespace _zm_weap_beacon;
 
-// Namespace namespace_ba8619ac
+// Namespace _zm_weap_beacon
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6fcd52f9, Offset: 0x358
 // Size: 0x204
@@ -20,10 +20,10 @@ function init() {
     clientfield::register("world", "play_launch_artillery_fx_robot_1", 21000, 1, "int", &function_59491961, 0, 0);
     clientfield::register("world", "play_launch_artillery_fx_robot_2", 21000, 1, "int", &function_59491961, 0, 0);
     clientfield::register("scriptmover", "play_beacon_fx", 21000, 1, "int", &function_dc4ed336, 0, 0);
-    clientfield::register("scriptmover", "play_artillery_barrage", 21000, 2, "int", &function_1e3322d1, 0, 0);
+    clientfield::register("scriptmover", "play_artillery_barrage", 21000, 2, "int", &play_artillery_barrage, 0, 0);
 }
 
-// Namespace namespace_ba8619ac
+// Namespace _zm_weap_beacon
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2310849f, Offset: 0x568
 // Size: 0x154
@@ -41,7 +41,7 @@ function function_59491961(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_ba8619ac
+// Namespace _zm_weap_beacon
 // Params 1, eflags: 0x1 linked
 // Checksum 0xac61e5ef, Offset: 0x6c8
 // Size: 0x7e
@@ -49,11 +49,11 @@ function function_d391c94e(origin) {
     playsound(0, "zmb_homingbeacon_missiile_alarm", origin);
     for (i = 0; i < 5; i++) {
         playsound(0, "zmb_homingbeacon_missile_fire", origin);
-        wait(0.15);
+        wait 0.15;
     }
 }
 
-// Namespace namespace_ba8619ac
+// Namespace _zm_weap_beacon
 // Params 7, eflags: 0x1 linked
 // Checksum 0x59668049, Offset: 0x750
 // Size: 0xb0
@@ -62,15 +62,15 @@ function function_dc4ed336(localclientnum, oldval, newval, bnewent, binitialsnap
     while (isdefined(self)) {
         playsound(0, "evt_beacon_beep", self.origin);
         playfxontag(localclientnum, level._effect["beacon_glow"], self, "origin_animate_jnt");
-        wait(1.5);
+        wait 1.5;
     }
 }
 
-// Namespace namespace_ba8619ac
+// Namespace _zm_weap_beacon
 // Params 7, eflags: 0x1 linked
 // Checksum 0x58bce7c3, Offset: 0x808
 // Size: 0x2ba
-function function_1e3322d1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function play_artillery_barrage(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     if (newval == 0) {
         return;
     }
@@ -117,7 +117,7 @@ function function_1e3322d1(localclientnum, oldval, newval, bnewent, binitialsnap
     self.var_f510f618[localclientnum]++;
 }
 
-// Namespace namespace_ba8619ac
+// Namespace _zm_weap_beacon
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6319ac46, Offset: 0xad0
 // Size: 0x88
@@ -131,7 +131,7 @@ function function_2978ee2d() {
     return var_a6604bff;
 }
 
-// Namespace namespace_ba8619ac
+// Namespace _zm_weap_beacon
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2d221072, Offset: 0xb60
 // Size: 0x96
@@ -145,7 +145,7 @@ function function_14e104a0() {
     return var_a6604bff;
 }
 
-// Namespace namespace_ba8619ac
+// Namespace _zm_weap_beacon
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9c82acc5, Offset: 0xc00
 // Size: 0x178
@@ -169,7 +169,7 @@ function function_8752cc8a() {
     return var_a6604bff;
 }
 
-// Namespace namespace_ba8619ac
+// Namespace _zm_weap_beacon
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf9455fbb, Offset: 0xd80
 // Size: 0x19a
@@ -193,7 +193,7 @@ function function_a6461985() {
     return var_a6604bff;
 }
 
-// Namespace namespace_ba8619ac
+// Namespace _zm_weap_beacon
 // Params 4, eflags: 0x1 linked
 // Checksum 0xa062f7ea, Offset: 0xf28
 // Size: 0x1d4
@@ -215,12 +215,12 @@ function function_3700164e(model, index, v_start, localclientnum) {
     self delete();
 }
 
-// Namespace namespace_ba8619ac
+// Namespace _zm_weap_beacon
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc674da7, Offset: 0x1108
 // Size: 0x34
 function function_42cb41ec(origin) {
-    wait(2);
+    wait 2;
     playsound(0, "zmb_homingbeacon_missile_incoming", origin);
 }
 

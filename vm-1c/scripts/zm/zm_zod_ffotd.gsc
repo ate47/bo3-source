@@ -10,9 +10,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b65ec48a;
+#namespace zm_zod_ffotd;
 
-// Namespace namespace_b65ec48a
+// Namespace zm_zod_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x74c57c4d, Offset: 0x488
 // Size: 0x194
@@ -33,7 +33,7 @@ function main_start() {
     }
 }
 
-// Namespace namespace_b65ec48a
+// Namespace zm_zod_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf1f49ef1, Offset: 0x628
 // Size: 0xa54
@@ -100,7 +100,7 @@ function main_end() {
     level thread function_e7337b94();
 }
 
-// Namespace namespace_b65ec48a
+// Namespace zm_zod_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6c405b91, Offset: 0x1088
 // Size: 0x3c
@@ -109,7 +109,7 @@ function function_320b9477() {
     self delete();
 }
 
-// Namespace namespace_b65ec48a
+// Namespace zm_zod_ffotd
 // Params 4, eflags: 0x1 linked
 // Checksum 0x5340ba65, Offset: 0x10d0
 // Size: 0xf4
@@ -125,7 +125,7 @@ function function_2cba29a8(zone, pos, radius, height) {
     level.var_e7337b94[zone][level.var_e7337b94[zone].size] = zm::spawn_kill_brush(pos, radius, height);
 }
 
-// Namespace namespace_b65ec48a
+// Namespace zm_zod_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2ba9416f, Offset: 0x11d0
 // Size: 0x9c
@@ -133,12 +133,12 @@ function function_e7337b94() {
     level.var_e7337b94 = [];
     function_2cba29a8("canal", (1031, -1726, 450), -128, -96);
     function_2cba29a8("canal", (818, -1512, 450), -128, -96);
-    wait(1);
+    wait 1;
     level.var_4e5a7cb5 = level.player_out_of_playable_area_monitor_callback;
     level.player_out_of_playable_area_monitor_callback = &player_out_of_playable_area_monitor_callback;
 }
 
-// Namespace namespace_b65ec48a
+// Namespace zm_zod_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x65a7f7c6, Offset: 0x1278
 // Size: 0xe4

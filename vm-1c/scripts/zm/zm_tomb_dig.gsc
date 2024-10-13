@@ -20,9 +20,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_99ea9186;
+#namespace zm_tomb_dig;
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x1 linked
 // Checksum 0x85f87348, Offset: 0x798
 // Size: 0x444
@@ -60,7 +60,7 @@ function function_301fce17() {
     #/
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5e0d2742, Offset: 0xbe8
 // Size: 0x6a
@@ -72,7 +72,7 @@ function function_98ef478d() {
     self.var_b5843b10["n_losing_streak"] = 0;
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5e6c7c48, Offset: 0xc60
 // Size: 0x174
@@ -94,7 +94,7 @@ function function_f1c57a23(var_cd807478) {
     zm_unitrigger::register_static_unitrigger(s_unitrigger_stub, &function_6161d0f4);
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0x80578424, Offset: 0xde0
 // Size: 0x80
@@ -105,7 +105,7 @@ function function_c18c3a9e(e_player) {
     return can_use;
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0x935185e9, Offset: 0xe68
 // Size: 0x84
@@ -120,7 +120,7 @@ function function_70fb5f53(e_player) {
     return true;
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6331cccc, Offset: 0xef8
 // Size: 0x20
@@ -128,7 +128,7 @@ function function_6e5f017f(n_player) {
     return "player" + n_player + "wearableItem";
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0x98b627ca, Offset: 0xf20
 // Size: 0x20
@@ -136,7 +136,7 @@ function function_f4768ce9(n_player) {
     return "player" + n_player + "hasItem";
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb7cf3e99, Offset: 0xf48
 // Size: 0x1a0
@@ -160,7 +160,7 @@ function function_6161d0f4() {
     }
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8b946a8c, Offset: 0x10f0
 // Size: 0x54
@@ -172,18 +172,18 @@ function function_45218586(str_category) {
     }
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x0
 // Checksum 0x24696cc3, Offset: 0x1150
 // Size: 0x2a
 function function_6ca8f779() {
     self endon(#"disconnect");
     self.var_8923b68d = 1;
-    wait(60);
+    wait 60;
     self.var_8923b68d = undefined;
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0x173d21e2, Offset: 0x1188
 // Size: 0x40
@@ -195,7 +195,7 @@ function function_5a0def14(e_player) {
     return true;
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 3, eflags: 0x1 linked
 // Checksum 0x6fcfa9a7, Offset: 0x11d0
 // Size: 0xf4
@@ -209,13 +209,13 @@ function function_4230e348(n_player, v_origin, v_angles) {
     function_f1c57a23(var_72842580);
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf0649b6d, Offset: 0x12d0
 // Size: 0x294
 function function_ab43eca6() {
     while (!level flag::exists("start_zombie_round_logic")) {
-        wait(0.5);
+        wait 0.5;
     }
     level flag::wait_till("start_zombie_round_logic");
     level.var_270d6825 = 0;
@@ -233,21 +233,21 @@ function function_ab43eca6() {
         var_49a9ddf8.str_zone = zm_zonemgr::get_zone_from_position(var_49a9ddf8.origin + (0, 0, 32), 1);
         if (!isdefined(var_49a9ddf8.str_zone)) {
             var_49a9ddf8.str_zone = "";
-            assertmsg("player2hasItem" + var_49a9ddf8.origin[0] + "player2hasItem" + var_49a9ddf8.origin[1] + "player2hasItem" + var_49a9ddf8.origin[2] + "player2hasItem");
+            assertmsg("<dev string:x28>" + var_49a9ddf8.origin[0] + "<dev string:x37>" + var_49a9ddf8.origin[1] + "<dev string:x37>" + var_49a9ddf8.origin[2] + "<dev string:x3a>");
         }
         util::wait_network_frame();
     }
     level thread function_496b8f6c();
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0x149275df, Offset: 0x1570
 // Size: 0x3e6
 function function_496b8f6c(var_aa00b64d) {
     while (true) {
         level waittill(#"end_of_round");
-        wait(2);
+        wait 2;
         var_aa00b64d = array::randomize(level.var_aa00b64d);
         var_d426d15b = 0;
         var_bbb1e95c = 3;
@@ -293,7 +293,7 @@ function function_496b8f6c(var_aa00b64d) {
     }
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x1 linked
 // Checksum 0x67fbbdfe, Offset: 0x1960
 // Size: 0x176
@@ -304,7 +304,7 @@ function function_b312418a() {
     self.var_2ec61a03.angles = self.angles;
     self.var_2ec61a03 moveto(self.origin, 3, 0, 1);
     self.var_2ec61a03 waittill(#"movedone");
-    var_ca89ebbe = namespace_d7c0ce12::function_52854313(self.origin + (0, 0, 20), 100, 1);
+    var_ca89ebbe = zm_tomb_utility::function_52854313(self.origin + (0, 0, 20), 100, 1);
     var_ca89ebbe.prompt_and_visibility_func = &function_17652aca;
     var_ca89ebbe.require_look_at = 1;
     var_ca89ebbe function_dc288ebe(self);
@@ -314,7 +314,7 @@ function function_b312418a() {
     self.var_2ec61a03 = undefined;
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf1e4ae98, Offset: 0x1ae0
 // Size: 0x80
@@ -327,7 +327,7 @@ function function_17652aca(player) {
     return true;
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5b05c3f9, Offset: 0x1b68
 // Size: 0x4e2
@@ -340,9 +340,9 @@ function function_dc288ebe(var_49a9ddf8) {
             level.var_270d6825--;
             playfx(level._effect["digging"], self.origin);
             player clientfield::set_to_player("player_rumble_and_shake", 1);
-            var_bcda0488 = var_49a9ddf8 namespace_73b257ea::function_56ba198b(player);
+            var_bcda0488 = var_49a9ddf8 zm_tomb_main_quest::function_56ba198b(player);
             if (isdefined(var_bcda0488)) {
-                var_bcda0488 namespace_73b257ea::function_906dacba(self.origin);
+                var_bcda0488 zm_tomb_main_quest::function_906dacba(self.origin);
                 player function_45218586("dig_staff_part");
             } else {
                 var_84fb2cde = 50;
@@ -394,7 +394,7 @@ function function_dc288ebe(var_49a9ddf8) {
     }
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 2, eflags: 0x1 linked
 // Checksum 0xdb0cb10e, Offset: 0x2058
 // Size: 0x1d4
@@ -412,12 +412,12 @@ function function_56cd0bc2(player, var_49a9ddf8) {
     var_e0d020c4 delete();
     ai_zombie show();
     ai_zombie playsound("evt_zombie_dig_dirt");
-    ai_zombie namespace_d7c0ce12::function_83fc6b30(var_49a9ddf8);
+    ai_zombie zm_tomb_utility::function_83fc6b30(var_49a9ddf8);
     find_flesh_struct_string = "find_flesh";
     ai_zombie notify(#"zombie_custom_think_done", find_flesh_struct_string);
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0x1b260c8b, Offset: 0x2238
 // Size: 0x274
@@ -451,7 +451,7 @@ function function_86d04e30(player) {
     powerup thread zm_powerups::powerup_grab();
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc760e6e0, Offset: 0x24b8
 // Size: 0x204
@@ -482,7 +482,7 @@ function function_66bb8c3f(player) {
     return var_5b8972c7;
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8c19a444, Offset: 0x26c8
 // Size: 0x124
@@ -494,21 +494,21 @@ function function_dd7a9aae(player) {
     player magicgrenadetype(w_grenade, v_spawnpt, (0, 0, 300), 3);
     player playsound("evt_grenade_digup");
     if (n_rand) {
-        wait(0.3);
+        wait 0.3;
         if (math::cointoss()) {
             player magicgrenadetype(w_grenade, v_spawnpt, (50, 50, 300), 3);
         }
     }
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe2e9372c, Offset: 0x27f8
 // Size: 0x4e8
-function function_e07a8850(var_19127c3b) {
+function function_e07a8850(digger) {
     var_43f586fe = array(getweapon("pistol_c96"), getweapon("ar_marksman"), getweapon("shotgun_pump"));
     var_63eba41d = array(getweapon("sniper_fastsemi"), getweapon("shotgun_fullauto"));
-    if (var_19127c3b.var_b5843b10["has_upgraded_shovel"]) {
+    if (digger.var_b5843b10["has_upgraded_shovel"]) {
         var_63eba41d = arraycombine(var_63eba41d, array(getweapon("bouncingbetty"), getweapon("ar_stg44"), getweapon("smg_standard"), getweapon("smg_mp40_1940"), getweapon("shotgun_precision")), 0, 0);
     }
     var_59d5868d = undefined;
@@ -519,15 +519,15 @@ function function_e07a8850(var_19127c3b) {
     }
     v_spawnpt = self.origin + (0, 0, 40);
     var_f8c6b1d7 = (0, 0, 0);
-    v_angles = var_19127c3b getplayerangles();
+    v_angles = digger getplayerangles();
     v_angles = (0, v_angles[1], 0) + (0, 90, 0) + var_f8c6b1d7;
-    m_weapon = zm_utility::spawn_buildkit_weapon_model(var_19127c3b, var_59d5868d, undefined, v_spawnpt, v_angles);
+    m_weapon = zm_utility::spawn_buildkit_weapon_model(digger, var_59d5868d, undefined, v_spawnpt, v_angles);
     m_weapon.angles = v_angles;
     m_weapon playloopsound("evt_weapon_digup");
     m_weapon thread timer_til_despawn(v_spawnpt, 40 * -1);
     m_weapon endon(#"hash_8bc1969d");
     playfxontag(level._effect["powerup_on_solo"], m_weapon, "tag_origin");
-    m_weapon.trigger = namespace_d7c0ce12::function_52854313(v_spawnpt, 100, 1, undefined, &function_3674f451);
+    m_weapon.trigger = zm_tomb_utility::function_52854313(v_spawnpt, 100, 1, undefined, &function_3674f451);
     m_weapon.trigger.cursor_hint = "HINT_WEAPON";
     m_weapon.trigger.cursor_hint_weapon = var_59d5868d;
     player = m_weapon.trigger waittill(#"trigger");
@@ -540,12 +540,12 @@ function function_e07a8850(var_19127c3b) {
     if (isdefined(m_weapon)) {
         m_weapon delete();
     }
-    if (player != var_19127c3b) {
-        var_19127c3b notify(#"hash_f8352f34");
+    if (player != digger) {
+        digger notify(#"hash_f8352f34");
     }
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0x701ba388, Offset: 0x2ce8
 // Size: 0xc8
@@ -558,7 +558,7 @@ function function_3674f451(player) {
     return true;
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 2, eflags: 0x1 linked
 // Checksum 0xb991ddcf, Offset: 0x2db8
 // Size: 0x224
@@ -582,7 +582,7 @@ function swap_weapon(var_375664a9, e_player) {
     e_player zm_weapons::weapon_give(var_375664a9);
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 2, eflags: 0x1 linked
 // Checksum 0x6cda5db3, Offset: 0x2fe8
 // Size: 0xc4
@@ -601,7 +601,7 @@ function timer_til_despawn(v_float, n_dist) {
     }
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9cb32c30, Offset: 0x30b8
 // Size: 0x1e
@@ -612,7 +612,7 @@ function get_player_perk_purchase_limit() {
     return level.perk_purchase_limit;
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x1 linked
 // Checksum 0x138f3c2b, Offset: 0x30e0
 // Size: 0x38
@@ -625,7 +625,7 @@ function function_83ea9c03() {
     }
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe9851fdc, Offset: 0x3120
 // Size: 0x23c
@@ -648,7 +648,7 @@ function function_b54a2b0() {
                 break;
             }
         }
-        assert(isdefined(n_index), "player2hasItem");
+        assert(isdefined(n_index), "<dev string:x4e>");
         var_19925afe = var_ff5371a6[n_index];
         var_19925afe.n_player = self getentitynumber();
         var_19925afe function_39402525(self);
@@ -658,7 +658,7 @@ function function_b54a2b0() {
     self.var_9df04ef0 delete();
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x0
 // Checksum 0x4672b3de, Offset: 0x3368
 // Size: 0x13a
@@ -678,7 +678,7 @@ function function_ebcc8c45() {
     }
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdffd28f4, Offset: 0x34b0
 // Size: 0x17e
@@ -691,7 +691,7 @@ function function_39402525(e_player) {
     self.var_2ec61a03 waittill(#"movedone");
     self.var_2ec61a03.e_unique_player = e_player;
     /#
-        self thread namespace_d7c0ce12::function_5de0d079("player2hasItem", (0, 0, 255), self.origin);
+        self thread zm_tomb_utility::function_5de0d079("<dev string:x84>", (0, 0, 255), self.origin);
     #/
     e_player.var_9df04ef0.origin = self.origin + (0, 0, 20);
     e_player.var_9df04ef0 function_8a8fa1f8(self);
@@ -700,7 +700,7 @@ function function_39402525(e_player) {
     #/
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb992617b, Offset: 0x3638
 // Size: 0x11a
@@ -719,7 +719,7 @@ function function_8a8fa1f8(var_49a9ddf8) {
     }
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 2, eflags: 0x1 linked
 // Checksum 0x13c99067, Offset: 0x3760
 // Size: 0x21c
@@ -737,7 +737,7 @@ function function_d292630f(v_origin, e_player) {
     var_e8463385 linkto(m_fx);
     m_fx thread function_7d28e149();
     while (isdefined(e_player) && !e_player istouching(var_e8463385)) {
-        wait(0.05);
+        wait 0.05;
     }
     var_e8463385 delete();
     m_fx delete();
@@ -746,7 +746,7 @@ function function_d292630f(v_origin, e_player) {
     }
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb16f96ab, Offset: 0x3988
 // Size: 0x44
@@ -758,7 +758,7 @@ function function_7d28e149() {
     }
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x1 linked
 // Checksum 0x87d54cb5, Offset: 0x39d8
 // Size: 0x32
@@ -767,7 +767,7 @@ function bonus_points_powerup_override() {
     return points;
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x1 linked
 // Checksum 0x63cef0cc, Offset: 0x3a18
 // Size: 0xf8
@@ -788,7 +788,7 @@ function function_90a38237() {
     }
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2389e47c, Offset: 0x3b18
 // Size: 0x3c
@@ -799,7 +799,7 @@ function function_c1d45c78(str_powerup) {
     return level.var_90a38237[str_powerup];
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc0b4b9e, Offset: 0x3b60
 // Size: 0x1e
@@ -807,7 +807,7 @@ function function_637de0(str_powerup) {
     level.var_90a38237[str_powerup] = 1;
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfd0560c9, Offset: 0x3b88
 // Size: 0xcc
@@ -824,32 +824,32 @@ function function_85eef9f2() {
     }
 }
 
-// Namespace namespace_99ea9186
+// Namespace zm_tomb_dig
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7259199e, Offset: 0x3c60
 // Size: 0x2a4
 function function_9b933c6a() {
     /#
-        setdvar("player2hasItem", "player2hasItem");
-        setdvar("player2hasItem", "player2hasItem");
-        setdvar("player2hasItem", "player2hasItem");
-        setdvar("player2hasItem", "player2hasItem");
-        setdvar("player2hasItem", "player2hasItem");
-        setdvar("player2hasItem", "player2hasItem");
-        setdvar("player2hasItem", "player2hasItem");
-        setdvar("player2hasItem", "player2hasItem");
-        setdvar("player2hasItem", "player2hasItem");
-        setdvar("player2hasItem", "player2hasItem");
-        adddebugcommand("player2hasItem");
-        adddebugcommand("player2hasItem");
-        adddebugcommand("player2hasItem");
-        adddebugcommand("player2hasItem");
-        adddebugcommand("player2hasItem");
-        adddebugcommand("player2hasItem");
-        adddebugcommand("player2hasItem");
-        adddebugcommand("player2hasItem");
-        adddebugcommand("player2hasItem");
-        adddebugcommand("player2hasItem");
+        setdvar("<dev string:x86>", "<dev string:x92>");
+        setdvar("<dev string:x96>", "<dev string:x92>");
+        setdvar("<dev string:xa9>", "<dev string:x92>");
+        setdvar("<dev string:xb5>", "<dev string:x92>");
+        setdvar("<dev string:xc6>", "<dev string:x92>");
+        setdvar("<dev string:xd7>", "<dev string:x92>");
+        setdvar("<dev string:xe9>", "<dev string:x92>");
+        setdvar("<dev string:xfc>", "<dev string:x92>");
+        setdvar("<dev string:x10f>", "<dev string:x92>");
+        setdvar("<dev string:x122>", "<dev string:x92>");
+        adddebugcommand("<dev string:x133>");
+        adddebugcommand("<dev string:x170>");
+        adddebugcommand("<dev string:x1bb>");
+        adddebugcommand("<dev string:x1f8>");
+        adddebugcommand("<dev string:x23f>");
+        adddebugcommand("<dev string:x286>");
+        adddebugcommand("<dev string:x2cf>");
+        adddebugcommand("<dev string:x30c>");
+        adddebugcommand("<dev string:x349>");
+        adddebugcommand("<dev string:x387>");
         level thread function_957042ca();
     #/
     level.var_aa00b64d = struct::get_array("dig_spot", "targetname");
@@ -858,45 +858,45 @@ function function_9b933c6a() {
 
 /#
 
-    // Namespace namespace_99ea9186
+    // Namespace zm_tomb_dig
     // Params 0, eflags: 0x1 linked
     // Checksum 0x33eb0ce1, Offset: 0x3f10
     // Size: 0xc80
     function function_957042ca() {
         while (true) {
-            if (getdvarstring("player2hasItem") == "player2hasItem") {
-                setdvar("player2hasItem", "player2hasItem");
+            if (getdvarstring("<dev string:x122>") == "<dev string:x3c2>") {
+                setdvar("<dev string:x122>", "<dev string:x92>");
                 player = getplayers()[0];
                 var_49a9ddf8 = arraygetclosest(player.origin, level.var_aa00b64d);
                 level thread function_56cd0bc2(player, var_49a9ddf8);
             }
-            if (getdvarstring("player2hasItem") == "player2hasItem") {
-                setdvar("player2hasItem", "player2hasItem");
+            if (getdvarstring("<dev string:x86>") == "<dev string:x3c2>") {
+                setdvar("<dev string:x86>", "<dev string:x92>");
                 foreach (player in getplayers()) {
-                    player.var_b5843b10["player2hasItem"] = 1;
+                    player.var_b5843b10["<dev string:x3c5>"] = 1;
                     level clientfield::set(function_f4768ce9(player getentitynumber()), 1);
                 }
             }
-            if (getdvarstring("player2hasItem") == "player2hasItem") {
-                setdvar("player2hasItem", "player2hasItem");
+            if (getdvarstring("<dev string:x96>") == "<dev string:x3c2>") {
+                setdvar("<dev string:x96>", "<dev string:x92>");
                 foreach (player in getplayers()) {
-                    player.var_b5843b10["player2hasItem"] = 1;
-                    player.var_b5843b10["player2hasItem"] = 1;
+                    player.var_b5843b10["<dev string:x3c5>"] = 1;
+                    player.var_b5843b10["<dev string:x3d0>"] = 1;
                     player thread function_b54a2b0();
                     level clientfield::set(function_f4768ce9(player getentitynumber()), 2);
                 }
             }
-            if (getdvarstring("player2hasItem") == "player2hasItem") {
-                setdvar("player2hasItem", "player2hasItem");
+            if (getdvarstring("<dev string:xa9>") == "<dev string:x3c2>") {
+                setdvar("<dev string:xa9>", "<dev string:x92>");
                 foreach (player in getplayers()) {
-                    player.var_b5843b10["player2hasItem"] = 1;
+                    player.var_b5843b10["<dev string:x3e4>"] = 1;
                     n_player = player getentitynumber() + 1;
                     level clientfield::set(function_6e5f017f(n_player - 1), 1);
                     player thread function_85eef9f2();
                 }
             }
-            if (getdvarstring("player2hasItem") == "player2hasItem") {
-                setdvar("player2hasItem", "player2hasItem");
+            if (getdvarstring("<dev string:xb5>") == "<dev string:x3c2>") {
+                setdvar("<dev string:xb5>", "<dev string:x92>");
                 var_aa00b64d = array::randomize(level.var_aa00b64d);
                 for (i = 0; i < var_aa00b64d.size; i++) {
                     if (isdefined(var_aa00b64d[i].var_cbe783) && var_aa00b64d[i].var_cbe783 && level.var_270d6825 <= level.var_59ff1fb1) {
@@ -906,8 +906,8 @@ function function_9b933c6a() {
                     }
                 }
             }
-            if (getdvarstring("player2hasItem") == "player2hasItem") {
-                setdvar("player2hasItem", "player2hasItem");
+            if (getdvarstring("<dev string:xc6>") == "<dev string:x3c2>") {
+                setdvar("<dev string:xc6>", "<dev string:x92>");
                 var_aa00b64d = array::randomize(level.var_aa00b64d);
                 for (i = 0; i < var_aa00b64d.size; i++) {
                     if (isdefined(var_aa00b64d[i].var_cbe783) && var_aa00b64d[i].var_cbe783) {
@@ -917,60 +917,60 @@ function function_9b933c6a() {
                     }
                 }
             }
-            if (getdvarstring("player2hasItem") == "player2hasItem") {
-                setdvar("player2hasItem", "player2hasItem");
-                var_f5b0e4f3 = struct::get_array("player2hasItem", "player2hasItem");
+            if (getdvarstring("<dev string:xd7>") == "<dev string:x3c2>") {
+                setdvar("<dev string:xd7>", "<dev string:x92>");
+                var_f5b0e4f3 = struct::get_array("<dev string:x3ef>", "<dev string:x405>");
                 foreach (s_spot in var_f5b0e4f3) {
-                    s_spot.var_2ec61a03 = spawn("player2hasItem", s_spot.origin + (0, 0, -40));
+                    s_spot.var_2ec61a03 = spawn("<dev string:x410>", s_spot.origin + (0, 0, -40));
                     s_spot.var_2ec61a03.angles = s_spot.angles;
-                    s_spot.var_2ec61a03 setmodel("player2hasItem");
+                    s_spot.var_2ec61a03 setmodel("<dev string:x41d>");
                     s_spot.var_2ec61a03 moveto(s_spot.origin, 3, 0, 1);
                     util::wait_network_frame();
                 }
             }
-            if (getdvarstring("player2hasItem") == "player2hasItem") {
-                setdvar("player2hasItem", "player2hasItem");
+            if (getdvarstring("<dev string:xe9>") == "<dev string:x3c2>") {
+                setdvar("<dev string:xe9>", "<dev string:x92>");
                 level.var_c95eeed7 = 0;
                 level.var_aa00c190 = 5;
                 level.var_43f919c6 = 1;
-                level clientfield::set("player2hasItem", level.var_aa00c190);
-                level clientfield::set("player2hasItem", level.var_c95eeed7);
-                wait(1);
+                level clientfield::set("<dev string:x437>", level.var_aa00c190);
+                level clientfield::set("<dev string:x442>", level.var_c95eeed7);
+                wait 1;
                 foreach (player in getplayers()) {
                     if (zombie_utility::is_player_valid(player, 0, 1)) {
-                        player namespace_d7c0ce12::function_c6592f0e();
+                        player zm_tomb_utility::function_c6592f0e();
                     }
                 }
             }
-            if (getdvarstring("player2hasItem") == "player2hasItem") {
-                setdvar("player2hasItem", "player2hasItem");
+            if (getdvarstring("<dev string:xfc>") == "<dev string:x3c2>") {
+                setdvar("<dev string:xfc>", "<dev string:x92>");
                 level.var_c95eeed7 = 5;
                 level.var_aa00c190 = 0;
                 level.var_43f919c6 = 2;
-                level clientfield::set("player2hasItem", level.var_aa00c190);
-                level clientfield::set("player2hasItem", level.var_c95eeed7);
-                wait(1);
+                level clientfield::set("<dev string:x437>", level.var_aa00c190);
+                level clientfield::set("<dev string:x442>", level.var_c95eeed7);
+                wait 1;
                 foreach (player in getplayers()) {
                     if (zombie_utility::is_player_valid(player, 0, 1)) {
-                        player namespace_d7c0ce12::function_c6592f0e();
+                        player zm_tomb_utility::function_c6592f0e();
                     }
                 }
             }
-            if (getdvarstring("player2hasItem") == "player2hasItem") {
-                setdvar("player2hasItem", "player2hasItem");
+            if (getdvarstring("<dev string:x10f>") == "<dev string:x3c2>") {
+                setdvar("<dev string:x10f>", "<dev string:x92>");
                 level.var_c95eeed7 = 0;
                 level.var_aa00c190 = 0;
                 level.var_43f919c6 = 3;
-                level clientfield::set("player2hasItem", level.var_aa00c190);
-                level clientfield::set("player2hasItem", level.var_c95eeed7);
-                wait(1);
+                level clientfield::set("<dev string:x437>", level.var_aa00c190);
+                level clientfield::set("<dev string:x442>", level.var_c95eeed7);
+                wait 1;
                 foreach (player in getplayers()) {
                     if (zombie_utility::is_player_valid(player, 0, 1)) {
-                        player namespace_d7c0ce12::function_c6592f0e();
+                        player zm_tomb_utility::function_c6592f0e();
                     }
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 

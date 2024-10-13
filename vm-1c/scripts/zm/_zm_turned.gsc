@@ -39,7 +39,7 @@ function init() {
 // Checksum 0x8e533754, Offset: 0x550
 // Size: 0x6c
 function setup_zombie_exerts() {
-    wait(0.05);
+    wait 0.05;
     level.exert_sounds[1]["burp"] = "null";
     level.exert_sounds[1]["hitmed"] = "null";
     level.exert_sounds[1]["hitlrg"] = "null";
@@ -53,7 +53,7 @@ function delay_turning_on_eyes() {
     self endon(#"death");
     self endon(#"disconnect");
     util::wait_network_frame();
-    wait(0.1);
+    wait 0.1;
     self clientfield::set("player_has_eyes", 1);
 }
 
@@ -69,7 +69,7 @@ function turn_to_zombie() {
         return;
     }
     while (isdefined(self.is_in_process_of_humanify) && self.is_in_process_of_humanify) {
-        wait(0.1);
+        wait 0.1;
     }
     if (!level flag::get("pregame")) {
         self playsoundtoplayer("evt_spawn", self);
@@ -166,7 +166,7 @@ function turn_to_human() {
         return;
     }
     while (isdefined(self.is_in_process_of_zombify) && self.is_in_process_of_zombify) {
-        wait(0.1);
+        wait 0.1;
     }
     self playsoundtoplayer("evt_spawn", self);
     playsoundatposition("evt_disappear_3d", self.origin);
@@ -243,7 +243,7 @@ function deletezombiesinradius(origin) {
                 playfx(level._effect["wood_chunk_destory"], zombie.origin);
                 zombie thread silentlyremovezombie();
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 }
@@ -281,22 +281,22 @@ function turned_player_buttons() {
                 self notify(#"bhtn_action_notify", "attack");
             }
             while (self attackbuttonpressed() || self adsbuttonpressed() || self meleebuttonpressed()) {
-                wait(0.05);
+                wait 0.05;
             }
         }
         if (self usebuttonpressed()) {
             self notify(#"bhtn_action_notify", "taunt");
             while (self usebuttonpressed()) {
-                wait(0.05);
+                wait 0.05;
             }
         }
         if (self issprinting()) {
             while (self issprinting()) {
                 self notify(#"bhtn_action_notify", "sprint");
-                wait(0.05);
+                wait 0.05;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -375,7 +375,7 @@ function get_farthest_available_zombie(player) {
                 return zombie;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

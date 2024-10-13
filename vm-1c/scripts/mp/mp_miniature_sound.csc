@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_d016ed63;
+#namespace mp_miniature_sound;
 
-// Namespace namespace_d016ed63
+// Namespace mp_miniature_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x98
 // Size: 0x4

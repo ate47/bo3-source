@@ -136,7 +136,7 @@ function fire_for_time(totalfiretime, turretidx, target, intervalscale) {
         turretidx = 0;
     }
     weapon = self seatgetweapon(turretidx);
-    assert(isdefined(weapon) && weapon.name != "near_goal" && weapon.firetime > 0);
+    assert(isdefined(weapon) && weapon.name != "<dev string:x28>" && weapon.firetime > 0);
     firetime = weapon.firetime * intervalscale;
     firecount = int(floor(totalfiretime / firetime)) + 1;
     __fire_for_rounds_internal(firecount, firetime, turretidx, target);
@@ -154,7 +154,7 @@ function fire_for_rounds(firecount, turretidx, target) {
         turretidx = 0;
     }
     weapon = self seatgetweapon(turretidx);
-    assert(isdefined(weapon) && weapon.name != "near_goal" && weapon.firetime > 0);
+    assert(isdefined(weapon) && weapon.name != "<dev string:x28>" && weapon.firetime > 0);
     __fire_for_rounds_internal(firecount, weapon.firetime, turretidx, target);
 }
 
@@ -177,7 +177,7 @@ function __fire_for_rounds_internal(firecount, fireinterval, turretidx, target) 
     counter = 0;
     while (counter < firecount) {
         if (self.avoid_shooting_owner === 1 && self owner_in_line_of_fire()) {
-            wait(fireinterval);
+            wait fireinterval;
             continue;
         }
         if (isdefined(target) && !isvec(target) && isdefined(target.attackeraccuracy) && target.attackeraccuracy == 0) {
@@ -188,7 +188,7 @@ function __fire_for_rounds_internal(firecount, fireinterval, turretidx, target) 
             self fireturret(turretidx);
         }
         counter++;
-        wait(fireinterval);
+        wait fireinterval;
     }
 }
 
@@ -236,7 +236,7 @@ function setturrettarget(target, turretidx, offset) {
         }
         return;
     }
-    assertmsg("near_goal");
+    assertmsg("<dev string:x2d>");
 }
 
 // Namespace vehicle_ai
@@ -258,13 +258,13 @@ function javelin_losetargetatrighttime(target) {
         return;
     }
     proj endon(#"death");
-    wait(2);
+    wait 2;
     while (isdefined(target)) {
         if (proj getvelocity()[2] < -150 && distancesquared(proj.origin, target.origin) < 1200 * 1200) {
             proj missile_settarget(undefined);
             break;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -314,7 +314,7 @@ function waittill_asm_timeout(timeout) {
     self endon(#"death");
     self notify(#"end_asm_timeout_thread");
     self endon(#"end_asm_timeout_thread");
-    wait(timeout);
+    wait timeout;
     self notify(#"asm_complete", "__timeout__");
 }
 
@@ -448,7 +448,7 @@ function level_out_for_landing() {
         ang_vel = self getangularvelocity() * 0.85;
         self setangularvelocity(ang_vel);
         self setvehvelocity(velocity + (0, 0, -60));
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -491,7 +491,7 @@ function burning_thread(attacker, inflictor) {
     interval = max(secondsperonedamage, 0.5);
     for (damage = 0; timesince(starttime) < lastingtime; damage -= damageint) {
         previoustime = gettime();
-        wait(interval);
+        wait interval;
         damage += timesince(previoustime) * damagepersecond;
         damageint = int(damage);
         self dodamage(damageint, self.origin, attacker, self, "none", "MOD_BURNED");
@@ -506,7 +506,7 @@ function burning_thread(attacker, inflictor) {
 // Size: 0x2e
 function iff_notifymeinnsec(time, note) {
     self endon(#"death");
-    wait(time);
+    wait time;
     self notify(note);
 }
 
@@ -551,12 +551,12 @@ function iff_override_team_switch_behavior(team) {
     self.ignoreme = 1;
     self start_scripted();
     self vehicle::lights_off();
-    wait(0.1);
-    wait(1);
+    wait 0.1;
+    wait 1;
     self setteam(team);
     self blink_lights_for_time(1);
     self stop_scripted();
-    wait(1);
+    wait 1;
     self.ignoreme = var_6a7b0a9f;
 }
 
@@ -568,12 +568,12 @@ function blink_lights_for_time(time) {
     self endon(#"death");
     starttime = gettime();
     self vehicle::lights_off();
-    wait(0.1);
+    wait 0.1;
     while (gettime() < starttime + time * 1000) {
         self vehicle::lights_off();
-        wait(0.2);
+        wait 0.2;
         self vehicle::lights_on();
-        wait(0.2);
+        wait 0.2;
     }
     self vehicle::lights_on();
 }
@@ -1078,7 +1078,7 @@ function death_radius_damage_special(radiusscale, meansofdamage) {
     radius = self.radiusdamageradius * radiusscale;
     damagemax = self.radiusdamagemax;
     damagemin = self.radiusdamagemin;
-    wait(0.05);
+    wait 0.05;
     if (isdefined(self)) {
         self radiusdamage(position, radius, damagemax, damagemin, undefined, meansofdamage);
     }
@@ -1184,13 +1184,13 @@ function defaultstate_death_update(params) {
     }
     death_type = isdefined(get_death_type(params)) ? get_death_type(params) : "default";
     switch (death_type) {
-    case 39:
+    case "burning":
         burning_death(params);
         break;
-    case 16:
+    case "emped":
         emped_death(params);
         break;
-    case 40:
+    case "gibbed":
         gibbed_death(params);
         break;
     default:
@@ -1288,12 +1288,12 @@ function defaultstate_emped_update(params) {
     cooldown("emped_timer", time);
     while (!iscooldownready("emped_timer")) {
         timeleft = max(getcooldownleft("emped_timer"), 0.5);
-        wait(timeleft);
+        wait timeleft;
     }
     self.abnormal_status.emped = 0;
     self vehicle::toggle_emp_fx(0);
     self emp_startup_fx();
-    wait(1);
+    wait 1;
     self evaluate_connections();
 }
 
@@ -1387,7 +1387,7 @@ function function_2995bfc0(params) {
                 self detonate(params.var_6e0794d4[0]);
             }
         }
-        wait(0.2);
+        wait 0.2;
     }
     if (isalive(self)) {
         self detonate(params.var_6e0794d4[0]);
@@ -1403,15 +1403,15 @@ function path_update_interrupt(closest, attacker) {
     self endon(#"change_state");
     self endon(#"near_goal");
     self endon(#"reached_end_node");
-    wait(0.1);
+    wait 0.1;
     while (!self try_detonate(closest, attacker)) {
         if (isdefined(self.current_pathto_pos)) {
             if (distance2dsquared(self.current_pathto_pos, self.goalpos) > self.goalradius * self.goalradius) {
-                wait(0.5);
+                wait 0.5;
                 self notify(#"near_goal");
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -1422,7 +1422,7 @@ function path_update_interrupt(closest, attacker) {
 function function_cae5a3fd(attacker) {
     self endon(#"death");
     self endon(#"change_state");
-    wait(0.25 * self.settings.var_f6a8f077);
+    wait 0.25 * self.settings.var_f6a8f077;
     self setteam(attacker.team);
 }
 
@@ -1461,13 +1461,13 @@ function function_bd32466() {
     self endon(#"change_state");
     while (true) {
         self vehicle::lights_off();
-        wait(0.1);
+        wait 0.1;
         self vehicle::lights_on("allies");
-        wait(0.1);
+        wait 0.1;
         self vehicle::lights_off();
-        wait(0.1);
+        wait 0.1;
         self vehicle::lights_on("axis");
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -1633,7 +1633,7 @@ function function_4796e657(sight_check_height) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["near_goal"] = point.distawayfromengagementarea * -1;
+                point._scoredebug["<dev string:x5a>"] = point.distawayfromengagementarea * -1;
             #/
             point.score += point.distawayfromengagementarea * -1;
             if (distance2dsquared(self.origin, point.origin) < 28900) {
@@ -1641,7 +1641,7 @@ function function_4796e657(sight_check_height) {
                     if (!isdefined(point._scoredebug)) {
                         point._scoredebug = [];
                     }
-                    point._scoredebug["near_goal"] = -170;
+                    point._scoredebug["<dev string:x69>"] = -170;
                 #/
                 point.score += -170;
             }
@@ -1650,25 +1650,25 @@ function function_4796e657(sight_check_height) {
                     if (!isdefined(point._scoredebug)) {
                         point._scoredebug = [];
                     }
-                    point._scoredebug["near_goal"] = -6;
+                    point._scoredebug["<dev string:x78>"] = -6;
                 #/
                 point.score += -6;
             }
-            if (isdefined(point.var_ffab01e6) && point.var_ffab01e6) {
+            if (isdefined(point.sight2) && point.sight2) {
                 /#
                     if (!isdefined(point._scoredebug)) {
                         point._scoredebug = [];
                     }
-                    point._scoredebug["near_goal"] = -106;
+                    point._scoredebug["<dev string:x7e>"] = -106;
                 #/
                 point.score += -106;
             }
-            if (isdefined(point.var_25ad7c4f) && point.var_25ad7c4f) {
+            if (isdefined(point.sight3) && point.sight3) {
                 /#
                     if (!isdefined(point._scoredebug)) {
                         point._scoredebug = [];
                     }
-                    point._scoredebug["near_goal"] = -106;
+                    point._scoredebug["<dev string:x85>"] = -106;
                 #/
                 point.score += -106;
             }
@@ -1684,7 +1684,7 @@ function function_4796e657(sight_check_height) {
                     if (!isdefined(point._scoredebug)) {
                         point._scoredebug = [];
                     }
-                    point._scoredebug["near_goal"] = -100;
+                    point._scoredebug["<dev string:x69>"] = -100;
                 #/
                 point.score += -100;
             }
@@ -1816,7 +1816,7 @@ function debugscore(entity) {
         if (!isdefined(self._scoredebug)) {
             return;
         }
-        if (!(isdefined(getdvarint("near_goal")) && getdvarint("near_goal"))) {
+        if (!(isdefined(getdvarint("<dev string:x8c>")) && getdvarint("<dev string:x8c>"))) {
             return;
         }
         step = 10;
@@ -1826,10 +1826,10 @@ function debugscore(entity) {
             color = (0, 1, 0);
         }
         recordstar(self.origin, color);
-        record3dtext("near_goal" + self.score + "near_goal", self.origin - (0, 0, step * count), color);
+        record3dtext("<dev string:xa4>" + self.score + "<dev string:xa5>", self.origin - (0, 0, step * count), color);
         foreach (name, score in self._scoredebug) {
             count++;
-            record3dtext(name + "near_goal" + score, self.origin - (0, 0, step * count), color);
+            record3dtext(name + "<dev string:xa7>" + score, self.origin - (0, 0, step * count), color);
         }
     #/
 }
@@ -1877,7 +1877,7 @@ function positionquery_filter_random(queryresult, min, max) {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["near_goal"] = score;
+            point._scoredebug["<dev string:xa9>"] = score;
         #/
         point.score += score;
     }
@@ -1910,7 +1910,7 @@ function positionquery_filter_outofgoalanchor(queryresult, tolerance) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["near_goal"] = score;
+                point._scoredebug["<dev string:xb0>"] = score;
             #/
             point.score += score;
         }
@@ -1983,7 +1983,7 @@ function positionquery_filter_distawayfromtarget(queryresult, targetarray, dista
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["near_goal"] = tooclosepenalty;
+                point._scoredebug["<dev string:xc0>"] = tooclosepenalty;
             #/
             point.score += tooclosepenalty;
         }

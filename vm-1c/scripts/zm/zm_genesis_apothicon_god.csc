@@ -10,9 +10,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_57c513b2;
+#namespace zm_genesis_apothicon_god;
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x1c0
 // Size: 0x4

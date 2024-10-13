@@ -3,9 +3,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/callbacks_shared;
 
-#namespace namespace_c9806b9;
+#namespace zm_weap_staff;
 
-// Namespace namespace_c9806b9
+// Namespace zm_weap_staff
 // Params 0, eflags: 0x2
 // Checksum 0xd504e4ef, Offset: 0x120
 // Size: 0x34
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
     system::register("zm_weap_staff", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_c9806b9
+// Namespace zm_weap_staff
 // Params 0, eflags: 0x1 linked
 // Checksum 0x22c0e03f, Offset: 0x160
 // Size: 0x34
@@ -22,7 +22,7 @@ function __init__() {
     callback::on_localplayer_spawned(&function_d10163c2);
 }
 
-// Namespace namespace_c9806b9
+// Namespace zm_weap_staff
 // Params 2, eflags: 0x1 linked
 // Checksum 0x2cd8922, Offset: 0x1a0
 // Size: 0x26
@@ -30,7 +30,7 @@ function function_4be5e665(w_weapon, fx) {
     level.var_27b5be99[w_weapon] = fx;
 }
 
-// Namespace namespace_c9806b9
+// Namespace zm_weap_staff
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc7652c7a, Offset: 0x1d0
 // Size: 0xb8
@@ -48,7 +48,7 @@ function function_d10163c2(localclientnum) {
     }
 }
 
-// Namespace namespace_c9806b9
+// Namespace zm_weap_staff
 // Params 2, eflags: 0x1 linked
 // Checksum 0x207fdc2b, Offset: 0x290
 // Size: 0xb0
@@ -63,11 +63,11 @@ function function_2b18ce1b(localclientnum, fx) {
         } else {
             function_d4c51f0(localclientnum);
         }
-        wait(0.15);
+        wait 0.15;
     }
 }
 
-// Namespace namespace_c9806b9
+// Namespace zm_weap_staff
 // Params 1, eflags: 0x1 linked
 // Checksum 0x1854de80, Offset: 0x348
 // Size: 0x3e

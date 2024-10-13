@@ -24,9 +24,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_766d6099;
+#namespace zm_genesis_portals;
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 0, eflags: 0x2
 // Checksum 0xa22642ac, Offset: 0x8f0
 // Size: 0x34
@@ -34,7 +34,7 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_portals", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3ef0fd2b, Offset: 0x930
 // Size: 0x2f4
@@ -57,7 +57,7 @@ function __init__() {
     callback::on_connect(&function_cfc89ca);
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 0, eflags: 0x1 linked
 // Checksum 0xef055a8a, Offset: 0xc30
 // Size: 0x1c4
@@ -76,7 +76,7 @@ function function_16616103() {
     level thread function_e4ff383e("power_on1", "prison_portal");
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 2, eflags: 0x1 linked
 // Checksum 0x195f9407, Offset: 0xe00
 // Size: 0x44
@@ -85,7 +85,7 @@ function function_e4ff383e(var_49e3dd2e, var_d16ec704) {
     level flag::set(var_d16ec704);
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 0, eflags: 0x0
 // Checksum 0x155f5f4f, Offset: 0xe50
 // Size: 0x9c
@@ -94,12 +94,12 @@ function function_ff160813() {
         if (level flag::get("power_on1") && level flag::get("power_on3") && level flag::get("power_on4")) {
             break;
         }
-        wait(1);
+        wait 1;
     }
     level flag::set("sheffield_portal");
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 2, eflags: 0x1 linked
 // Checksum 0xb7fd06aa, Offset: 0xef8
 // Size: 0x1f8
@@ -129,7 +129,7 @@ function create_portal(str_id, var_776628b2) {
     }
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 0, eflags: 0x0
 // Checksum 0xddd6991c, Offset: 0x10f8
 // Size: 0xcc
@@ -151,34 +151,34 @@ function function_a90ab0d7() {
     }
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdf02baf4, Offset: 0x11d0
 // Size: 0x296
 function portal_activate(var_d42f02cf) {
     switch (var_d42f02cf) {
-    case 29:
+    case "prison":
         level clientfield::set("power_pad_prison", 1);
         if (getdvarint("splitscreen_playerCount") < 3) {
             level thread scene::play("prison_power_door", "targetname");
             level thread scene::play("prison_power_door2", "targetname");
         }
         break;
-    case 26:
+    case "sheffield":
         level clientfield::set("power_pad_sheffield", 1);
         if (getdvarint("splitscreen_playerCount") < 3) {
             level thread scene::play("sheffield_power_door", "targetname");
             level thread scene::play("sheffield_power_door2", "targetname");
         }
         break;
-    case 23:
+    case "temple":
         level clientfield::set("power_pad_temple", 1);
         if (getdvarint("splitscreen_playerCount") < 3) {
             level thread scene::play("temple_power_door", "targetname");
             level thread scene::play("temple_power_door2", "targetname");
         }
         break;
-    case 20:
+    case "verruckt":
         level clientfield::set("power_pad_asylum", 1);
         if (getdvarint("splitscreen_playerCount") < 3) {
             level thread scene::play("verruckt_power_door", "targetname");
@@ -188,28 +188,28 @@ function portal_activate(var_d42f02cf) {
     }
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8e9b3e1e, Offset: 0x1470
 // Size: 0xb6
 function function_7fa2f44(var_d42f02cf) {
     switch (var_d42f02cf) {
-    case 26:
+    case "sheffield":
         exploder::stop_exploder("fxexp_212");
         break;
-    case 23:
+    case "temple":
         exploder::stop_exploder("fxexp_242");
         break;
-    case 20:
+    case "verruckt":
         exploder::stop_exploder("fxexp_232");
         break;
-    case 29:
+    case "prison":
         exploder::stop_exploder("fxexp_222");
         break;
     }
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 1, eflags: 0x1 linked
 // Checksum 0x3092c855, Offset: 0x1530
 // Size: 0x422
@@ -233,7 +233,7 @@ function portal_open(var_d42f02cf) {
         }
         var_9110bac3.portal_trig = var_50fc4fb[0];
     }
-    wait(2);
+    wait 2;
     var_ebfa395[0] thread portal_think();
     foreach (e_clip in var_a70f04bd) {
         e_clip delete();
@@ -244,7 +244,7 @@ function portal_open(var_d42f02cf) {
     }
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 2, eflags: 0x1 linked
 // Checksum 0x9aa5a641, Offset: 0x1960
 // Size: 0xd2
@@ -255,7 +255,7 @@ function function_4a4784d4(var_d42f02cf, b_enabled) {
     }
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 1, eflags: 0x1 linked
 // Checksum 0x71421e9, Offset: 0x1a40
 // Size: 0x1f0
@@ -289,7 +289,7 @@ function portal_think(var_60dd615c) {
     }
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 5, eflags: 0x1 linked
 // Checksum 0x28a715cc, Offset: 0x1c38
 // Size: 0x97c
@@ -324,7 +324,7 @@ function function_d0ff7e09(show_fx, var_71abf438, str_zone, v_portal, var_759fb3
     }
     if (zm_hero_weapon::function_f3451c9f()) {
         self switchtoweaponimmediate();
-        wait(0.05);
+        wait 0.05;
     }
     self disableoffhandweapons();
     self disableweapons();
@@ -348,27 +348,27 @@ function function_d0ff7e09(show_fx, var_71abf438, str_zone, v_portal, var_759fb3
     }
     if (isdefined(var_759fb311)) {
         switch (var_759fb311) {
-        case 67:
-        case 69:
-        case 71:
-        case 73:
+        case "prison_portal_bottom":
+        case "sheffield_portal_bottom":
+        case "temple_portal_bottom":
+        case "verruckt_portal_bottom":
             self function_eec1f014("prototype", 10, 1);
             break;
-        case 70:
+        case "sheffield_portal_top":
             self function_eec1f014("start", 2, 1);
             break;
-        case 68:
+        case "prison_portal_top":
             self function_eec1f014("prison", 4, 1);
             break;
-        case 74:
+        case "verruckt_portal_top":
             self function_eec1f014("asylum", 6, 1);
             break;
-        case 72:
+        case "temple_portal_top":
             self function_eec1f014("temple", 8, 1);
             break;
         }
     }
-    wait(4);
+    wait 4;
     if (show_fx) {
         self clientfield::set_to_player("player_stargate_fx", 0);
     }
@@ -386,7 +386,7 @@ function function_d0ff7e09(show_fx, var_71abf438, str_zone, v_portal, var_759fb3
                     var_cefa4b63 = 0;
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
     playfx(level._effect["portal_3p"], s_pos.origin);
@@ -413,14 +413,14 @@ function function_d0ff7e09(show_fx, var_71abf438, str_zone, v_portal, var_759fb3
     if (isdefined(var_759fb311)) {
         self clientfield::set_to_player("hint_" + var_759fb311, 0);
         /#
-            streamerskiptodebug("power_pad_prison" + var_759fb311);
+            streamerskiptodebug("<dev string:x28>" + var_759fb311);
         #/
     }
     self.b_teleporting = 0;
     self thread zm_audio::create_and_play_dialog("portal", "travel");
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc8a2633, Offset: 0x25c0
 // Size: 0x46
@@ -432,7 +432,7 @@ function function_bfba39d8() {
     }
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd820df84, Offset: 0x2610
 // Size: 0x464
@@ -467,12 +467,12 @@ function function_483df985(s_pos) {
                 ai zombie_utility::reset_attack_spot();
             }
             switch (ai.archetype) {
-            case 81:
+            case "margwa":
                 if (isdefined(ai.var_894f701d) && ai.var_894f701d) {
                     ai.var_9e59b56e = 1;
                 }
                 break;
-            case 82:
+            case "mechz":
                 if (!(isdefined(ai.stun) && ai.stun) && ai.var_e12b0a6c < gettime()) {
                     ai.stun = 1;
                 }
@@ -485,7 +485,7 @@ function function_483df985(s_pos) {
     }
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb81affa0, Offset: 0x2a80
 // Size: 0x72
@@ -496,13 +496,13 @@ function function_7807150a() {
         self endon(#"hash_450c36af");
         self.b_ignore_cleanup = 1;
         self.var_b6b1080c = 1;
-        wait(10);
+        wait 10;
         self.b_ignore_cleanup = undefined;
         self.var_b6b1080c = undefined;
     }
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 1, eflags: 0x1 linked
 // Checksum 0xaf790690, Offset: 0x2b00
 // Size: 0x2c4
@@ -521,7 +521,7 @@ function function_eb1242c8(var_5ee55fde) {
         var_5ee55fde.origin = var_594457ea.origin;
         var_5ee55fde.angles = var_594457ea.angles;
     }
-    wait(5);
+    wait 5;
     var_97bf7ab1 = array::random(self.var_71abf438);
     if (isactor(var_5ee55fde)) {
         var_5ee55fde forceteleport(var_97bf7ab1.origin, var_97bf7ab1.angles);
@@ -532,12 +532,12 @@ function function_eb1242c8(var_5ee55fde) {
     playsoundatposition("zmb_teleporter_teleport_in", var_97bf7ab1.origin);
     playfx(level._effect["portal_3p"], var_97bf7ab1.origin);
     var_5ee55fde solid();
-    wait(1);
+    wait 1;
     var_5ee55fde pathmode("move allowed");
     var_5ee55fde.b_teleporting = 0;
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb88e4cf4, Offset: 0x2dd0
 // Size: 0x464
@@ -554,35 +554,35 @@ function function_cfc89ca() {
     while (true) {
         if (isdefined(self.var_a3d40b8) && !(isdefined(self.is_flung) && self.is_flung)) {
             switch (self.var_a3d40b8) {
-            case 90:
+            case "start_island":
                 self function_eec1f014("start", 2, 1);
                 self function_eec1f014("prison", 3, 0);
                 self function_eec1f014("asylum", 5, 0);
                 self function_eec1f014("temple", 7, 0);
                 self function_eec1f014("prototype", 9, 0);
                 break;
-            case 88:
+            case "prison_island":
                 self function_eec1f014("prison", 4, 1);
                 self function_eec1f014("start", 1, 0);
                 self function_eec1f014("asylum", 5, 0);
                 self function_eec1f014("temple", 7, 0);
                 self function_eec1f014("prototype", 9, 0);
                 break;
-            case 87:
+            case "asylum_island":
                 self function_eec1f014("asylum", 6, 1);
                 self function_eec1f014("start", 1, 0);
                 self function_eec1f014("prison", 3, 0);
                 self function_eec1f014("temple", 7, 0);
                 self function_eec1f014("prototype", 9, 0);
                 break;
-            case 91:
+            case "temple_island":
                 self function_eec1f014("temple", 8, 1);
                 self function_eec1f014("start", 1, 0);
                 self function_eec1f014("prison", 3, 0);
                 self function_eec1f014("asylum", 5, 0);
                 self function_eec1f014("prototype", 9, 0);
                 break;
-            case 89:
+            case "prototype_island":
                 self function_eec1f014("prototype", 10, 1);
                 self function_eec1f014("start", 1, 0);
                 self function_eec1f014("prison", 3, 0);
@@ -591,11 +591,11 @@ function function_cfc89ca() {
                 break;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 3, eflags: 0x1 linked
 // Checksum 0xe219447f, Offset: 0x3240
 // Size: 0x9e
@@ -611,18 +611,18 @@ function function_eec1f014(str_name, n_value, b_toggle) {
     }
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 0, eflags: 0x1 linked
 // Checksum 0x59da525d, Offset: 0x32e8
 // Size: 0x6e
 function function_b64d33a7() {
     level waittill(#"start_zombie_round_logic");
-    wait(120);
+    wait 120;
     while (true) {
         level clientfield::set("genesis_light_exposure", 1);
-        wait(5);
+        wait 5;
         level clientfield::set("genesis_light_exposure", 0);
-        wait(120);
+        wait 120;
     }
 }
 

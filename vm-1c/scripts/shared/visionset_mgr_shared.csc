@@ -230,7 +230,7 @@ function finalize_clientfields() {
 // Checksum 0xd9b11d58, Offset: 0x1228
 // Size: 0x284
 function finalize_type_clientfields() {
-    println("int" + self.type + "int");
+    println("<dev string:x28>" + self.type + "<dev string:x38>");
     if (1 >= self.info.size) {
         return;
     }
@@ -242,7 +242,7 @@ function finalize_type_clientfields() {
         if (self.info[self.sorted_name_keys[i]].lerp_bit_count > self.cf_lerp_bit_count) {
             self.cf_lerp_bit_count = self.info[self.sorted_name_keys[i]].lerp_bit_count;
         }
-        println("int" + self.info[self.sorted_name_keys[i]].name + "int" + self.info[self.sorted_name_keys[i]].version + "int" + self.info[self.sorted_name_keys[i]].lerp_step_count + "int");
+        println("<dev string:x50>" + self.info[self.sorted_name_keys[i]].name + "<dev string:x5b>" + self.info[self.sorted_name_keys[i]].version + "<dev string:x67>" + self.info[self.sorted_name_keys[i]].lerp_step_count + "<dev string:x7b>");
     }
     clientfield::register("toplayer", self.cf_slot_name, self.highest_version, self.cf_slot_bit_count, "int", self.cf_slot_cb, 0, 1);
     if (1 < self.cf_lerp_bit_count) {
@@ -261,7 +261,7 @@ function validate_info(type, name, version) {
             break;
         }
     }
-    assert(i < keys.size, "int" + type + "int");
+    assert(i < keys.size, "<dev string:x7c>" + type + "<dev string:x95>");
     if (version > level.vsmgr[type].server_version) {
         return false;
     }
@@ -304,7 +304,7 @@ function add_info(type, name, version, lerp_step_count) {
 // Checksum 0xb1f5caff, Offset: 0x1780
 // Size: 0x15c
 function register_info(type, name, version, lerp_step_count) {
-    assert(level.vsmgr_initializing, "int");
+    assert(level.vsmgr_initializing, "<dev string:xa1>");
     lower_name = tolower(name);
     if (!validate_info(type, lower_name, version)) {
         return false;
@@ -479,7 +479,7 @@ function demo_spectate_monitor() {
             }
             level.vsmgr_is_spectating = 0;
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -489,7 +489,7 @@ function demo_spectate_monitor() {
 // Size: 0x1d4
 function monitor() {
     while (level.vsmgr_initializing) {
-        wait(0.016);
+        wait 0.016;
     }
     if (isdefined(level.isdemoplaying) && level.isdemoplaying) {
         level thread demo_spectate_monitor();
@@ -510,7 +510,7 @@ function monitor() {
                 }
             }
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -822,11 +822,11 @@ function function_73b98351() {
 // Size: 0x4e
 function function_3db57c32() {
     level waittill(#"hash_3b2c7a6f");
-    wait(3);
+    wait 3;
     /#
     #/
     function_980ca37e(level.var_bc3b1eb4, level.var_76903d98, 1);
-    wait(1);
+    wait 1;
     level notify(#"visionset_mgr_reset");
 }
 
@@ -843,7 +843,7 @@ function function_f5fdcb4d() {
     var_9f36107d[2] = 0;
     var_9f36107d[3] = 0;
     while (true) {
-        wait(0.016);
+        wait 0.016;
         waittillframeend();
         players = getlocalplayers();
         for (localclientnum = 0; localclientnum < players.size; localclientnum++) {

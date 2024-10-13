@@ -40,7 +40,7 @@ function initialize() {
     }
     self.behaviortracker = spawnstruct();
     self.behaviortracker.version = int(self function_16ff7316("version"));
-    self.behaviortracker.var_22b548f = int(self function_16ff7316("numRecords")) + 1;
+    self.behaviortracker.numRecords = int(self function_16ff7316("numRecords")) + 1;
     self function_c7516f2f();
     self.behaviortracker.valid = 1;
 }
@@ -82,7 +82,7 @@ function isallowed() {
 // Checksum 0xc8ad4098, Offset: 0x548
 // Size: 0xac
 function function_cca0db2d() {
-    bbprint("mpbehaviortracker", "username %s version %d numRecords %d effectiveSlideCombat %f effectiveDoubleJumpCombat %f effectiveWallRunCombat %f effectiveCombat %f", self.name, self.behaviortracker.version, self.behaviortracker.var_22b548f, self.behaviortracker.traits["effectiveSlideCombat"], self.behaviortracker.traits["effectiveDoubleJumpCombat"], self.behaviortracker.traits["effectiveWallRunCombat"], self.behaviortracker.traits["effectiveCombat"]);
+    bbprint("mpbehaviortracker", "username %s version %d numRecords %d effectiveSlideCombat %f effectiveDoubleJumpCombat %f effectiveWallRunCombat %f effectiveCombat %f", self.name, self.behaviortracker.version, self.behaviortracker.numRecords, self.behaviortracker.traits["effectiveSlideCombat"], self.behaviortracker.traits["effectiveDoubleJumpCombat"], self.behaviortracker.traits["effectiveWallRunCombat"], self.behaviortracker.traits["effectiveCombat"]);
 }
 
 // Namespace behaviortracker
@@ -198,8 +198,8 @@ function function_83084a92() {
     if (self.behaviortracker.version == 0) {
         return;
     }
-    self.behaviortracker.var_22b548f += 1;
-    self function_91ad671a("numRecords", self.behaviortracker.var_22b548f);
+    self.behaviortracker.numRecords += 1;
+    self function_91ad671a("numRecords", self.behaviortracker.numRecords);
     traits = getarraykeys(self.behaviortracker.traits);
     for (i = 0; i < traits.size; i++) {
         trait = traits[i];

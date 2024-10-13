@@ -51,14 +51,14 @@ function __init__() {
     // Size: 0x114
     function function_ce2898b2(movetype, surfacetype) {
         if (!isdefined(level.var_5e17f7ae[movetype][surfacetype])) {
-            println("fly_" + surfacetype + "fly_");
-            println("fly_");
-            println("fly_");
+            println("<dev string:x28>" + surfacetype + "<dev string:x3e>");
+            println("<dev string:x63>");
+            println("<dev string:x7b>");
             arraykeys = getarraykeys(level.var_5e17f7ae[movetype]);
             for (i = 0; i < arraykeys.size; i++) {
                 println(arraykeys[i]);
             }
-            println("fly_");
+            println("<dev string:x84>");
         }
     }
 
@@ -72,7 +72,7 @@ function function_2e13c5c2(client_num, player, surfacetype, firstperson, quiet, 
     if (isdefined(player.audiomaterialoverride)) {
         surfacetype = player.audiomaterialoverride;
         /#
-            function_ce2898b2("fly_", surfacetype);
+            function_ce2898b2("<dev string:x8b>", surfacetype);
         #/
     }
     sound_alias = level.var_5e17f7ae["step_run"][surfacetype][firstperson][var_7c95fc4];
@@ -87,7 +87,7 @@ function function_1aa3f5bd(client_num, player, surfacetype, firstperson, quiet, 
     if (isdefined(player.audiomaterialoverride)) {
         surfacetype = player.audiomaterialoverride;
         /#
-            function_ce2898b2("fly_", surfacetype);
+            function_ce2898b2("<dev string:x94>", surfacetype);
         #/
     }
     sound_alias = level.var_5e17f7ae["land"][surfacetype][firstperson][var_7c95fc4];
@@ -158,15 +158,15 @@ function function_2d42a17f(movementtype, surfacetype, firstperson, var_7c95fc4) 
 // Params 4, eflags: 0x0
 // Checksum 0x681fd8a3, Offset: 0xa18
 // Size: 0x158
-function function_29897e3b(client_num, var_9e38e41f, var_5305dd36, var_e069c441) {
+function function_29897e3b(client_num, var_9e38e41f, var_5305dd36, on_fire) {
     if (!isdefined(level.var_719a8c10)) {
         return;
     }
-    if (var_e069c441) {
+    if (on_fire) {
         var_9e38e41f = "fire";
     }
     /#
-        if (getdvarint("fly_")) {
+        if (getdvarint("<dev string:x99>")) {
             print3d(var_5305dd36, var_9e38e41f, (0.5, 0.5, 0.8), 1, 3, 30);
         }
     #/
@@ -189,9 +189,9 @@ function missing_ai_footstep_callback() {
     /#
         type = self.archetype;
         if (!isdefined(type)) {
-            type = "fly_";
+            type = "<dev string:xac>";
         }
-        println("fly_" + type + "fly_" + self._aitype + "fly_");
+        println("<dev string:xb4>" + type + "<dev string:xc3>" + self._aitype + "<dev string:x147>");
     #/
 }
 
@@ -201,7 +201,7 @@ function missing_ai_footstep_callback() {
 // Size: 0xe2
 function playaifootstep(client_num, pos, surface, notetrack, bone) {
     if (!isdefined(self.archetype)) {
-        println("fly_");
+        println("<dev string:x175>");
         footstepdoeverything();
         return;
     }

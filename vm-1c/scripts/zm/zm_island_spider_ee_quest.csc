@@ -5,23 +5,23 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_fdccf5c4;
+#namespace zm_island_spider_ee_quest;
 
-// Namespace namespace_fdccf5c4
+// Namespace zm_island_spider_ee_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x876d29c5, Offset: 0x210
 // Size: 0xdc
 function init() {
-    clientfield::register("vehicle", "spider_glow_fx", 9000, 1, "int", &function_b050960b, 0, 0);
+    clientfield::register("vehicle", "spider_glow_fx", 9000, 1, "int", &spider_glow_fx, 0, 0);
     clientfield::register("vehicle", "spider_drinks_fx", 9000, 2, "int", &function_f9f39b8e, 0, 0);
-    clientfield::register("scriptmover", "jungle_cage_charged_fx", 9000, 1, "int", &function_23e69e71, 0, 0);
+    clientfield::register("scriptmover", "jungle_cage_charged_fx", 9000, 1, "int", &jungle_cage_charged_fx, 0, 0);
 }
 
-// Namespace namespace_fdccf5c4
+// Namespace zm_island_spider_ee_quest
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf14bb4ba, Offset: 0x2f8
 // Size: 0xb4
-function function_b050960b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function spider_glow_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_6cbaf065 = playfxontag(localclientnum, level._effect["spider_glow_red"], self, "tag_driver");
         return;
@@ -31,7 +31,7 @@ function function_b050960b(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_fdccf5c4
+// Namespace zm_island_spider_ee_quest
 // Params 7, eflags: 0x1 linked
 // Checksum 0x7899c6d, Offset: 0x3b8
 // Size: 0x17c
@@ -56,11 +56,11 @@ function function_f9f39b8e(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_fdccf5c4
+// Namespace zm_island_spider_ee_quest
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2bba3a50, Offset: 0x540
 // Size: 0x104
-function function_23e69e71(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function jungle_cage_charged_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_da0d0e02[localclientnum] = playfxontag(localclientnum, level._effect["lightning_shield_control_panel"], self, "tag_origin");
         return;

@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_4cda09f7;
+#namespace mp_nuketown_x_sound;
 
-// Namespace namespace_4cda09f7
+// Namespace mp_nuketown_x_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x98
 // Size: 0x4

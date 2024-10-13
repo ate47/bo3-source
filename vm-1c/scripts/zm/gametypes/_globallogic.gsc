@@ -59,7 +59,7 @@ function init() {
     level.contractsenabled = !getgametypesetting("disableContracts");
     level.contractsenabled = 0;
     /#
-        if (getdvarint("disableContracts") == 1) {
+        if (getdvarint("<dev string:x28>") == 1) {
             level.rankedmatch = 1;
         }
     #/
@@ -117,7 +117,7 @@ function init() {
     level.oldschool = getdvarint("scr_oldschool") == 1;
     if (level.oldschool) {
         /#
-            print("disableContracts");
+            print("<dev string:x3d>");
         #/
         setdvar("jump_height", 64);
         setdvar("jump_slowdownEnable", 0);
@@ -346,9 +346,9 @@ function forceend(hostsucks) {
         winner = globallogic_score::gethighestscoringplayer();
         /#
             if (isdefined(winner)) {
-                print("disableContracts" + winner.name);
+                print("<dev string:x52>" + winner.name);
             } else {
-                print("disableContracts");
+                print("<dev string:x69>");
             }
         #/
     }
@@ -382,9 +382,9 @@ function killserverpc() {
         winner = globallogic_score::gethighestscoringplayer();
         /#
             if (isdefined(winner)) {
-                print("disableContracts" + winner.name);
+                print("<dev string:x52>" + winner.name);
             } else {
-                print("disableContracts");
+                print("<dev string:x69>");
             }
         #/
     }
@@ -392,7 +392,7 @@ function killserverpc() {
     level.hostforcedend = 1;
     level.killserver = 1;
     endstring = %MP_HOST_ENDED_GAME;
-    println("disableContracts");
+    println("<dev string:x7e>");
     thread endgame(winner, endstring);
 }
 
@@ -551,7 +551,7 @@ function doonelefteventupdates() {
 // Size: 0x1e0
 function updategameevents() {
     /#
-        if (getdvarint("disableContracts") == 1) {
+        if (getdvarint("<dev string:x98>") == 1) {
             return;
         }
     #/
@@ -619,7 +619,7 @@ function matchstarttimer() {
                 visionsetnaked(getdvarstring("mapname"), 3);
             }
             counttime--;
-            wait(1);
+            wait 1;
         }
     } else {
         visionsetnaked(getdvarstring("mapname"), 1);
@@ -659,7 +659,7 @@ function wavespawntimer() {
         foreach (team in level.teams) {
             notifyteamwavespawn(team, time);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -670,7 +670,7 @@ function wavespawntimer() {
 function hostidledout() {
     hostplayer = util::gethostplayer();
     /#
-        if (getdvarint("disableContracts") == 1 || getdvarint("disableContracts") == 1) {
+        if (getdvarint("<dev string:xae>") == 1 || getdvarint("<dev string:x98>") == 1) {
             return false;
         }
     #/
@@ -959,7 +959,7 @@ function gamehistoryplayerquit() {
         self.pers["matchesPlayedStatsTracked"] = undefined;
     }
     uploadstats(self);
-    wait(1);
+    wait 1;
 }
 
 // Namespace globallogic
@@ -1087,10 +1087,10 @@ function endgame(winner, endreasontext) {
     }
     level notify(#"sfade");
     /#
-        print("disableContracts");
+        print("<dev string:xc5>");
     #/
     if (!isdefined(level.skipgameend) || !level.skipgameend) {
-        wait(5);
+        wait 5;
     }
     exitlevel(0);
 }
@@ -1126,16 +1126,16 @@ function roundendwait(defaultdelay, matchbonus) {
             }
             notifiesdone = 0;
         }
-        wait(0.5);
+        wait 0.5;
     }
     if (!matchbonus) {
-        wait(defaultdelay);
+        wait defaultdelay;
         level notify(#"round_end_done");
         return;
     }
-    wait(defaultdelay / 2);
+    wait defaultdelay / 2;
     level notify(#"give_match_bonus");
-    wait(defaultdelay / 2);
+    wait defaultdelay / 2;
     notifiesdone = 0;
     while (!notifiesdone) {
         players = level.players;
@@ -1146,7 +1146,7 @@ function roundendwait(defaultdelay, matchbonus) {
             }
             notifiesdone = 0;
         }
-        wait(0.5);
+        wait 0.5;
     }
     level notify(#"round_end_done");
 }
@@ -1261,11 +1261,11 @@ function updategametypedvars() {
         thread checkscorelimit();
         if (isdefined(level.starttime)) {
             if (globallogic_utils::gettimeremaining() < 3000) {
-                wait(0.1);
+                wait 0.1;
                 continue;
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -1289,7 +1289,7 @@ function removedisconnectedplayerfromplacement() {
         return;
     }
     level.placement["all"][numplayers - 1] = undefined;
-    assert(level.placement["disableContracts"].size == numplayers - 1);
+    assert(level.placement["<dev string:xd0>"].size == numplayers - 1);
     /#
         globallogic_utils::assertproperplacement();
     #/
@@ -1466,7 +1466,7 @@ function updateteamstatus() {
     level endon(#"updating_team_status");
     level endon(#"game_ended");
     waittillframeend();
-    wait(0);
+    wait 0;
     if (game["state"] == "postgame") {
         return;
     }
@@ -1601,10 +1601,10 @@ function prematchperiod() {
     if (level.prematchperiod > 0) {
         thread matchstarttimer();
         waitforplayers();
-        wait(level.prematchperiod);
+        wait level.prematchperiod;
     } else {
         matchstarttimerskip();
-        wait(0.05);
+        wait 0.05;
     }
     level.inprematchperiod = 0;
     for (index = 0; index < level.players.size; index++) {
@@ -1625,10 +1625,10 @@ function graceperiod() {
     if (isdefined(level.graceperiodfunc)) {
         [[ level.graceperiodfunc ]]();
     } else {
-        wait(level.graceperiod);
+        wait level.graceperiod;
     }
     level notify(#"grace_period_ending");
-    wait(0.05);
+    wait 0.05;
     level.ingraceperiod = 0;
     if (game["state"] != "playing") {
         return;
@@ -1698,7 +1698,7 @@ function callback_startgametype() {
         if (!isdefined(game["defenders"])) {
             game["defenders"] = "axis";
         }
-        assert(game["disableContracts"] != game["disableContracts"]);
+        assert(game["<dev string:xd4>"] != game["<dev string:xde>"]);
         foreach (team in level.teams) {
             if (!isdefined(game[team])) {
                 game[team] = "pmc";
@@ -1783,7 +1783,7 @@ function callback_startgametype() {
     level.hardcoremode = getgametypesetting("hardcoreMode");
     if (level.hardcoremode) {
         /#
-            print("disableContracts");
+            print("<dev string:xe8>");
         #/
         if (!isdefined(level.friendlyfiredelaytime)) {
             level.friendlyfiredelaytime = 0;
@@ -1898,13 +1898,13 @@ function callback_startgametype() {
     level thread updategametypedvars();
     level thread simple_hostmigration::updatehostmigrationdata();
     /#
-        if (getdvarint("disableContracts") == 1) {
+        if (getdvarint("<dev string:xae>") == 1) {
             level.skipgameend = 1;
             level.roundlimit = 1;
-            wait(1);
+            wait 1;
             thread forceend(0);
         }
-        if (getdvarint("disableContracts") == 1) {
+        if (getdvarint("<dev string:x98>") == 1) {
             thread forcedebughostmigration();
         }
     #/
@@ -1919,7 +1919,7 @@ function callback_startgametype() {
     function forcedebughostmigration() {
         while (true) {
             hostmigration::waittillhostmigrationdone();
-            wait(60);
+            wait 60;
             starthostmigration();
             hostmigration::waittillhostmigrationdone();
         }
@@ -1955,7 +1955,7 @@ function checkroundswitch() {
     if (!isdefined(level.onroundswitch)) {
         return false;
     }
-    assert(game["disableContracts"] > 0);
+    assert(game["<dev string:xfc>"] > 0);
     if (game["roundsplayed"] % level.roundswitch == 0) {
         [[ level.onroundswitch ]]();
         return true;
@@ -2004,7 +2004,7 @@ function updaterankedmatch(winner) {
         if (hostidledout()) {
             level.hostforcedend = 1;
             /#
-                print("disableContracts");
+                print("<dev string:x109>");
             #/
             endlobby();
         }

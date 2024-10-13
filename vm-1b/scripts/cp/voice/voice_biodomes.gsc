@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_e66e2a8a;
+#namespace voice_biodomes;
 
-// Namespace namespace_e66e2a8a
+// Namespace voice_biodomes
 // Params 0, eflags: 0x0
 // Checksum 0x1742a04f, Offset: 0x2590
 // Size: 0x19c2

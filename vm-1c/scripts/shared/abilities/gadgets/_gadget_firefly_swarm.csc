@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_ea627bd3;
+#namespace _gadget_firefly_swarm;
 
-// Namespace namespace_ea627bd3
+// Namespace _gadget_firefly_swarm
 // Params 0, eflags: 0x2
 // Checksum 0xa72da558, Offset: 0x1f0
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_firefly_swarm", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_ea627bd3
+// Namespace _gadget_firefly_swarm
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x230
 // Size: 0x4

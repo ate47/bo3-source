@@ -1,9 +1,9 @@
 #using scripts/shared/fx_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_fc074aef;
+#namespace mp_chinatown_fx;
 
-// Namespace namespace_fc074aef
+// Namespace mp_chinatown_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xb0
 // Size: 0x4

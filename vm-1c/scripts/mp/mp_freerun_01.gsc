@@ -6,9 +6,9 @@
 #using scripts/shared/compass;
 #using scripts/codescripts/struct;
 
-#namespace namespace_49ee819c;
+#namespace mp_freerun_01;
 
-// Namespace namespace_49ee819c
+// Namespace mp_freerun_01
 // Params 0, eflags: 0x0
 // Checksum 0xc6a2dace, Offset: 0x1a8
 // Size: 0x34
@@ -18,7 +18,7 @@ function main() {
     init();
 }
 
-// Namespace namespace_49ee819c
+// Namespace mp_freerun_01
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1e8
 // Size: 0x4
@@ -26,7 +26,7 @@ function precache() {
     
 }
 
-// Namespace namespace_49ee819c
+// Namespace mp_freerun_01
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1f8
 // Size: 0x4
@@ -34,7 +34,7 @@ function init() {
     
 }
 
-// Namespace namespace_49ee819c
+// Namespace mp_freerun_01
 // Params 0, eflags: 0x0
 // Checksum 0x6f62621a, Offset: 0x208
 // Size: 0x1ac
@@ -53,7 +53,7 @@ function function_355278da() {
     var_aa19e1f thread function_29d8b21();
 }
 
-// Namespace namespace_49ee819c
+// Namespace mp_freerun_01
 // Params 0, eflags: 0x0
 // Checksum 0xf42e5cc3, Offset: 0x3c0
 // Size: 0x80
@@ -63,11 +63,11 @@ function function_29d8b21() {
         if (isplayer(player)) {
             self thread util::trigger_thread(player, &function_ba004d47, &function_93b59391);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_49ee819c
+// Namespace mp_freerun_01
 // Params 2, eflags: 0x0
 // Checksum 0x96e4303, Offset: 0x448
 // Size: 0xc2
@@ -83,7 +83,7 @@ function function_ba004d47(player, endon_string) {
     }
 }
 
-// Namespace namespace_49ee819c
+// Namespace mp_freerun_01
 // Params 1, eflags: 0x0
 // Checksum 0x94ce140a, Offset: 0x518
 // Size: 0x56

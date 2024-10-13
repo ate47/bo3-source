@@ -27,16 +27,16 @@ function set_difficulty(difficulty) {
     for (index = 0; index < turrets.size; index++) {
         if (isdefined(turrets[index].script_skilloverride)) {
             switch (turrets[index].script_skilloverride) {
-            case 8:
+            case "easy":
                 difficulty = "easy";
                 break;
-            case 9:
+            case "medium":
                 difficulty = "medium";
                 break;
-            case 10:
+            case "hard":
                 difficulty = "hard";
                 break;
-            case 11:
+            case "fu":
                 difficulty = "fu";
                 break;
             default:
@@ -99,11 +99,11 @@ function turret_suppression_fire(targets) {
     for (;;) {
         while (self.suppresionfire) {
             self settargetentity(targets[randomint(targets.size)]);
-            wait(2 + randomfloat(2));
+            wait 2 + randomfloat(2);
         }
         self cleartargetentity();
         while (!self.suppresionfire) {
-            wait(1);
+            wait 1;
         }
     }
 }
@@ -161,10 +161,10 @@ function burst_fire(turret, manual_target) {
             turret thread random_spread(manual_target);
         }
         turret do_shoot();
-        wait(turret_burst + randomfloat(turret_burst_range));
+        wait turret_burst + randomfloat(turret_burst_range);
         turret function_beb0f764();
         turret stopfiring();
-        wait(turret_delay + randomfloat(turret_delay_range));
+        wait turret_delay + randomfloat(turret_delay_range);
     }
 }
 
@@ -242,7 +242,7 @@ function avoid_synchronization(time) {
         level._zm_mgturret_firing = 0;
     }
     level._zm_mgturret_firing++;
-    wait(time);
+    wait time;
     level._zm_mgturret_firing--;
 }
 
@@ -255,11 +255,11 @@ function do_shoot() {
     self endon(#"turretstatechange");
     for (;;) {
         while (isdefined(level._zm_mgturret_firing) && level._zm_mgturret_firing) {
-            wait(0.1);
+            wait 0.1;
         }
         thread avoid_synchronization(0.1);
         self shootturret();
-        wait(0.112);
+        wait 0.112;
     }
 }
 
@@ -272,7 +272,7 @@ function turret_timer(duration) {
         return;
     }
     self endon(#"turretstatechange");
-    wait(duration);
+    wait duration;
     if (isdefined(self)) {
         self notify(#"turretstatechange");
     }
@@ -296,7 +296,7 @@ function random_spread(ent) {
             ent.origin = self.manual_target.origin;
         }
         ent.origin += (20 - randomfloat(40), 20 - randomfloat(40), 20 - randomfloat(60));
-        wait(0.2);
+        wait 0.2;
     }
 }
 

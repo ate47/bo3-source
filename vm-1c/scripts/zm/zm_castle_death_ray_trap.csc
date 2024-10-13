@@ -6,9 +6,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f2d05c13;
+#namespace zm_castle_death_ray_trap;
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe332f20f, Offset: 0x3d8
 // Size: 0x264
@@ -17,20 +17,20 @@ function main() {
     level._effect["console_red_light"] = "dlc1/castle/fx_glow_panel_red_castle";
     level._effect["tesla_zombie_shock"] = "dlc1/castle/fx_tesla_trap_body_shock";
     level._effect["tesla_zombie_explode"] = "dlc1/castle/fx_tesla_trap_body_exp";
-    clientfield::register("actor", "death_ray_shock_fx", 5000, 1, "int", &function_3852b0a4, 0, 0);
-    clientfield::register("actor", "death_ray_shock_eye_fx", 5000, 1, "int", &function_4513798e, 0, 0);
-    clientfield::register("actor", "death_ray_explode_fx", 5000, 1, "counter", &function_499e2d1f, 0, 0);
-    clientfield::register("scriptmover", "death_ray_status_light", 5000, 2, "int", &function_7939244, 0, 0);
+    clientfield::register("actor", "death_ray_shock_fx", 5000, 1, "int", &death_ray_shock_fx, 0, 0);
+    clientfield::register("actor", "death_ray_shock_eye_fx", 5000, 1, "int", &death_ray_shock_eye_fx, 0, 0);
+    clientfield::register("actor", "death_ray_explode_fx", 5000, 1, "counter", &death_ray_explode_fx, 0, 0);
+    clientfield::register("scriptmover", "death_ray_status_light", 5000, 2, "int", &death_ray_status_light, 0, 0);
     clientfield::register("actor", "tesla_beam_fx", 5000, 1, "counter", &function_200eea36, 0, 0);
     clientfield::register("toplayer", "tesla_beam_fx", 5000, 1, "counter", &function_200eea36, 0, 0);
-    clientfield::register("actor", "tesla_beam_mechz", 5000, 1, "int", &function_1dc0fcb2, 0, 0);
+    clientfield::register("actor", "tesla_beam_mechz", 5000, 1, "int", &tesla_beam_mechz, 0, 0);
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x7e36bedb, Offset: 0x648
 // Size: 0x124
-function function_3852b0a4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function death_ray_shock_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self function_51adc559(localclientnum);
     if (newval) {
         if (!isdefined(self.var_8f44671e)) {
@@ -47,7 +47,7 @@ function function_3852b0a4(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdc26ab0d, Offset: 0x778
 // Size: 0x4c
@@ -58,7 +58,7 @@ function function_7772592b(localclientnum) {
     self function_51adc559(localclientnum);
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb62d7854, Offset: 0x7d0
 // Size: 0x52
@@ -70,11 +70,11 @@ function function_51adc559(localclientnum) {
     self notify(#"hash_51adc559");
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x68d17467, Offset: 0x830
 // Size: 0xc6
-function function_4513798e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function death_ray_shock_eye_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         if (!isdefined(self.var_5f35d5e4)) {
             self.var_5f35d5e4 = playfxontag(localclientnum, level._effect["death_ray_shock_eyes"], self, "J_Eyeball_LE");
@@ -85,19 +85,19 @@ function function_4513798e(localclientnum, oldval, newval, bnewent, binitialsnap
     self.var_5f35d5e4 = undefined;
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc097a2b8, Offset: 0x900
 // Size: 0x6c
-function function_499e2d1f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function death_ray_explode_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     playfxontag(localclientnum, level._effect["tesla_zombie_explode"], self, "j_spine4");
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2cc74244, Offset: 0x978
 // Size: 0x17c
-function function_7939244(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function death_ray_status_light(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     v_forward = anglestoright(self.angles);
     v_forward *= -1;
     v_up = anglestoup(self.angles);
@@ -120,7 +120,7 @@ function function_7939244(localclientnum, oldval, newval, bnewent, binitialsnap,
     self.var_b99efa04 = playfxontag(localclientnum, level._effect[str_fx_name], self, tag);
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1abb6518, Offset: 0xb00
 // Size: 0x13c
@@ -137,7 +137,7 @@ function function_200eea36(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread function_ec4ecaed(localclientnum, s_source, str_beam);
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 3, eflags: 0x1 linked
 // Checksum 0x4e3ee856, Offset: 0xc48
 // Size: 0xfc
@@ -149,11 +149,11 @@ function function_ec4ecaed(localclientnum, s_source, str_beam) {
     var_e43465f2 delete();
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8e946630, Offset: 0xd50
 // Size: 0x1d4
-function function_1dc0fcb2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function tesla_beam_mechz(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         var_fda0d24 = [];
         array::add(var_fda0d24, struct::get("bolt_source_1"), 0);
@@ -174,7 +174,7 @@ function function_1dc0fcb2(localclientnum, oldval, newval, bnewent, binitialsnap
     function_1139a457(localclientnum);
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa92b0a90, Offset: 0xf30
 // Size: 0x4c
@@ -185,7 +185,7 @@ function function_3c5fc735(localclientnum) {
     function_1139a457(localclientnum);
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6ec0dc46, Offset: 0xf88
 // Size: 0x8a

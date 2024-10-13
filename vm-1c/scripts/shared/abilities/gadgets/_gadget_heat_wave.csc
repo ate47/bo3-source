@@ -11,9 +11,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_a31481e3;
+#namespace _gadget_heat_wave;
 
-// Namespace namespace_a31481e3
+// Namespace _gadget_heat_wave
 // Params 0, eflags: 0x2
 // Checksum 0x9867c537, Offset: 0x390
 // Size: 0x34
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_heat_wave", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_a31481e3
+// Namespace _gadget_heat_wave
 // Params 0, eflags: 0x1 linked
 // Checksum 0x16276cba, Offset: 0x3d0
 // Size: 0x164
@@ -39,20 +39,20 @@ function __init__() {
 
 /#
 
-    // Namespace namespace_a31481e3
+    // Namespace _gadget_heat_wave
     // Params 0, eflags: 0x1 linked
     // Checksum 0x58568507, Offset: 0x540
     // Size: 0x48
     function updatedvars() {
         while (true) {
-            level.var_ca9e7366 = getdvarint("scr_debug_heat_wave_traces", level.var_ca9e7366);
-            wait(1);
+            level.var_ca9e7366 = getdvarint("<dev string:x28>", level.var_ca9e7366);
+            wait 1;
         }
     }
 
 #/
 
-// Namespace namespace_a31481e3
+// Namespace _gadget_heat_wave
 // Params 7, eflags: 0x1 linked
 // Checksum 0x96781e0c, Offset: 0x590
 // Size: 0x64
@@ -62,7 +62,7 @@ function function_4bf284ca(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_a31481e3
+// Namespace _gadget_heat_wave
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1e653eca, Offset: 0x600
 // Size: 0xa4
@@ -75,7 +75,7 @@ function function_318dd491(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_a31481e3
+// Namespace _gadget_heat_wave
 // Params 7, eflags: 0x1 linked
 // Checksum 0xba2be5e3, Offset: 0x6b0
 // Size: 0x84
@@ -87,7 +87,7 @@ function function_35b42cb4(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_a31481e3
+// Namespace _gadget_heat_wave
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5aa95cc7, Offset: 0x740
 // Size: 0xaa
@@ -100,7 +100,7 @@ function function_45bc6290(localclientnum) {
     }
 }
 
-// Namespace namespace_a31481e3
+// Namespace _gadget_heat_wave
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2dcc08a7, Offset: 0x7f8
 // Size: 0x356
@@ -143,7 +143,7 @@ function aoe_fx(localclientnum) {
     }
 }
 
-// Namespace namespace_a31481e3
+// Namespace _gadget_heat_wave
 // Params 4, eflags: 0x1 linked
 // Checksum 0x2e0b8f5a, Offset: 0xb58
 // Size: 0x4c6
@@ -165,7 +165,7 @@ function function_89e1d77b(localclientnum, center, yaw_count, pitch) {
             /#
                 if (level.var_ca9e7366) {
                     sphere(fx_position, sphere_size, (1, 0, 1), 1, 1, 8, 300);
-                    sphere(trace["scr_debug_heat_wave_traces"], sphere_size, (1, 1, 0), 1, 1, 8, 300);
+                    sphere(trace["<dev string:x43>"], sphere_size, (1, 1, 0), 1, 1, 8, 300);
                 }
             #/
             normal = trace["normal"];
@@ -190,7 +190,7 @@ function function_89e1d77b(localclientnum, center, yaw_count, pitch) {
             self.var_c9a5771e[self.var_c9a5771e.size] = playfx(localclientnum, "player/fx_plyr_heat_wave_distortion_volume_air", fx_position, tracedir * -1, forward);
         }
         if (fxcount % 2) {
-            wait(0.016);
+            wait 0.016;
         }
     }
 }

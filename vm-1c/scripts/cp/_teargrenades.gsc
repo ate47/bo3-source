@@ -3,9 +3,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_5bd7fc09;
+#namespace _teargrenades;
 
-// Namespace namespace_5bd7fc09
+// Namespace _teargrenades
 // Params 0, eflags: 0x0
 // Checksum 0x5499b84f, Offset: 0x138
 // Size: 0xa4
@@ -20,7 +20,7 @@ function main() {
     perplayer::enable(var_f59a892e);
 }
 
-// Namespace namespace_5bd7fc09
+// Namespace _teargrenades
 // Params 0, eflags: 0x0
 // Checksum 0x503985bf, Offset: 0x1e8
 // Size: 0x1c
@@ -28,7 +28,7 @@ function function_b8add1a2() {
     self thread function_ba1b8fa();
 }
 
-// Namespace namespace_5bd7fc09
+// Namespace _teargrenades
 // Params 1, eflags: 0x0
 // Checksum 0xaee3c42c, Offset: 0x210
 // Size: 0x1a
@@ -36,13 +36,13 @@ function function_2641b450(disconnected) {
     self notify(#"hash_235a6bdd");
 }
 
-// Namespace namespace_5bd7fc09
+// Namespace _teargrenades
 // Params 0, eflags: 0x0
 // Checksum 0xd2559b5e, Offset: 0x238
 // Size: 0x274
 function function_ba1b8fa() {
     self endon(#"hash_235a6bdd");
-    wait(0.05);
+    wait 0.05;
     weapon = getweapon("tear_grenade");
     if (!self hasweapon(weapon)) {
         return;
@@ -74,21 +74,21 @@ function function_ba1b8fa() {
             }
         }
         var_c9443414 = ammo;
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_5bd7fc09
+// Namespace _teargrenades
 // Params 1, eflags: 0x0
 // Checksum 0xaba8ab64, Offset: 0x4b8
 // Size: 0x4c
 function function_b0dbd0d8(team) {
-    wait(level.var_969b009c);
+    wait level.var_969b009c;
     ent = spawnstruct();
     ent thread tear(self.origin);
 }
 
-// Namespace namespace_5bd7fc09
+// Namespace _teargrenades
 // Params 1, eflags: 0x0
 // Checksum 0x160b98fa, Offset: 0x510
 // Size: 0x228
@@ -124,16 +124,16 @@ function tear(pos) {
     }
 }
 
-// Namespace namespace_5bd7fc09
+// Namespace _teargrenades
 // Params 0, eflags: 0x0
 // Checksum 0x419f689a, Offset: 0x740
 // Size: 0x1a
 function function_700f69bc() {
-    wait(level.var_c3da1428);
+    wait level.var_c3da1428;
     self notify(#"hash_dcd5f169");
 }
 
-// Namespace namespace_5bd7fc09
+// Namespace _teargrenades
 // Params 0, eflags: 0x0
 // Checksum 0x60985c87, Offset: 0x768
 // Size: 0xd6
@@ -148,7 +148,7 @@ function function_580ff16b() {
         if (gettime() - self.var_fcc4fa8f > level.var_51c0f2d0 * 1000) {
             break;
         }
-        wait(1);
+        wait 1;
     }
     self shellshock("teargas", 1);
     if (self util::mayapplyscreeneffect()) {
@@ -158,7 +158,7 @@ function function_580ff16b() {
 
 /#
 
-    // Namespace namespace_5bd7fc09
+    // Namespace _teargrenades
     // Params 3, eflags: 0x0
     // Checksum 0xec7d4004, Offset: 0x848
     // Size: 0x2ec
@@ -182,7 +182,7 @@ function function_580ff16b() {
             if (time > level.var_c3da1428) {
                 break;
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 

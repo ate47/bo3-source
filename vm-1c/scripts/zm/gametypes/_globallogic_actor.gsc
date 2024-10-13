@@ -129,8 +129,8 @@ function callback_actordamage(einflictor, eattacker, idamage, idflags, smeansofd
         }
     }
     /#
-        if (getdvarint("destructible_car")) {
-            println("destructible_car" + self getentitynumber() + "destructible_car" + self.health + "destructible_car" + eattacker.clientid + "destructible_car" + isplayer(einflictor) + "destructible_car" + idamage + shitloc + "destructible_car" + boneindex + "destructible_car");
+        if (getdvarint("<dev string:x28>")) {
+            println("<dev string:x36>" + self getentitynumber() + "<dev string:x3d>" + self.health + "<dev string:x46>" + eattacker.clientid + "<dev string:x51>" + isplayer(einflictor) + "<dev string:x67>" + idamage + shitloc + "<dev string:x70>" + boneindex + "<dev string:x72>");
         }
     #/
     if (true) {

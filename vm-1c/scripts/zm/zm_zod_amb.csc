@@ -7,9 +7,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_c3257ae1;
+#namespace zm_zod_amb;
 
-// Namespace namespace_c3257ae1
+// Namespace zm_zod_amb
 // Params 0, eflags: 0x0
 // Checksum 0x93ca3e02, Offset: 0x1d0
 // Size: 0x1c
@@ -17,35 +17,35 @@ function main() {
     level thread function_bab3ea62();
 }
 
-// Namespace namespace_c3257ae1
+// Namespace zm_zod_amb
 // Params 0, eflags: 0x0
 // Checksum 0x9b5e5b47, Offset: 0x1f8
 // Size: 0x74
 function function_bab3ea62() {
     level thread function_53b9afad();
     var_29085ef = getentarray(0, "sndMusicTrig", "targetname");
-    array::thread_all(var_29085ef, &function_95d61fc1);
+    array::thread_all(var_29085ef, &sndMusicTrig);
 }
 
-// Namespace namespace_c3257ae1
+// Namespace zm_zod_amb
 // Params 0, eflags: 0x0
 // Checksum 0xb9f418fe, Offset: 0x278
 // Size: 0x94
-function function_95d61fc1() {
+function sndMusicTrig() {
     while (true) {
         trigplayer = self waittill(#"trigger");
         if (trigplayer islocalplayer()) {
             level notify(#"hash_51d7bc7c", self.script_sound);
             while (isdefined(trigplayer) && trigplayer istouching(self)) {
-                wait(0.016);
+                wait 0.016;
             }
             continue;
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_c3257ae1
+// Namespace zm_zod_amb
 // Params 0, eflags: 0x0
 // Checksum 0x64bbb2d, Offset: 0x318
 // Size: 0xe2
@@ -64,14 +64,14 @@ function function_53b9afad() {
     }
 }
 
-// Namespace namespace_c3257ae1
+// Namespace zm_zod_amb
 // Params 1, eflags: 0x0
 // Checksum 0xe9ef3e6d, Offset: 0x408
 // Size: 0x64
 function function_51d7bc7c(var_6d9d81aa) {
     level endon(#"hash_51d7bc7c");
     level.var_eb526c90 stopallloopsounds(2);
-    wait(1);
+    wait 1;
     level.var_9433cf5a = level.var_eb526c90 playloopsound(var_6d9d81aa, 2);
 }
 

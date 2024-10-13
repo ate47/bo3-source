@@ -176,7 +176,7 @@ function onstartgametype() {
     setdemointermissionpoint(spawnpoint.origin, spawnpoint.angles);
     level.spawn_all = spawnlogic::get_spawnpoint_array("mp_tdm_spawn");
     if (!level.spawn_all.size) {
-        println("objective");
+        println("<dev string:x28>");
         callback::abort_level();
         return;
     }
@@ -195,7 +195,7 @@ function function_602d8d45(delay) {
         level.radio = function_efe105f4();
     }
     /#
-        print("Radio at " + level.radio.trigorigin[0] + "<unknown string>" + level.radio.trigorigin[1] + "<unknown string>" + level.radio.trigorigin[2] + "<unknown string>");
+        print("<dev string:x50>" + level.radio.trigorigin[0] + "<dev string:x61>" + level.radio.trigorigin[1] + "<dev string:x61>" + level.radio.trigorigin[2] + "<dev string:x63>");
     #/
     level.radio spawning::enable_influencers(1);
 }
@@ -211,7 +211,7 @@ function function_813a2002() {
         level.radio = function_4dc1907d();
     }
     /#
-        print("Radio at " + level.radio.trigorigin[0] + "<unknown string>" + level.radio.trigorigin[1] + "<unknown string>" + level.radio.trigorigin[2] + "<unknown string>");
+        print("<dev string:x50>" + level.radio.trigorigin[0] + "<dev string:x61>" + level.radio.trigorigin[1] + "<dev string:x61>" + level.radio.trigorigin[2] + "<dev string:x63>");
     #/
     level.radio spawning::enable_influencers(1);
 }
@@ -234,9 +234,9 @@ function hqmainloop() {
     function_602d8d45();
     objective_name = istring("objective");
     while (level.inprematchperiod) {
-        wait(0.05);
+        wait 0.05;
     }
-    wait(5);
+    wait 5;
     timerdisplay = [];
     foreach (team in level.teams) {
         timerdisplay[team] = hud::createservertimer("objective", 1.4, team);
@@ -272,7 +272,7 @@ function hqmainloop() {
                 timerdisplay[team] settimer(level.var_bee57ade);
                 timerdisplay[team].alpha = 1;
             }
-            wait(level.var_bee57ade);
+            wait level.var_bee57ade;
             level.radio.gameobject gameobjects::set_flags(0);
             globallogic_audio::leader_dialog("hq_online");
         }
@@ -324,7 +324,7 @@ function hqmainloop() {
                 }
             }
             level thread function_78bd77f5();
-            destroy_team = level waittill(#"hash_d5ccf178");
+            destroy_team = level waittill(#"hq_destroyed");
             level.radio spawning::enable_influencers(0);
             if (!level.kothmode || level.hqdestroyedbytimer) {
                 break;
@@ -343,9 +343,9 @@ function hqmainloop() {
             timerdisplay[team].alpha = 0;
         }
         function_813a2002();
-        wait(0.05);
+        wait 0.05;
         thread forcespawnteam(ownerteam);
-        wait(3);
+        wait 3;
     }
 }
 
@@ -371,7 +371,7 @@ function forcespawnteam(team) {
         }
         if (player.pers["team"] == team) {
             player notify(#"force_spawn");
-            wait(0.1);
+            wait 0.1;
         }
     }
 }
@@ -404,7 +404,7 @@ function onenduse(team, player, success) {
 function onradiocapture(player) {
     capture_team = player.pers["team"];
     /#
-        print("<unknown string>");
+        print("<dev string:x65>");
     #/
     string = %MP_HQ_CAPTURED_BY;
     level.usestartspawns = 0;
@@ -436,7 +436,7 @@ function onradiocapture(player) {
 // Size: 0x1c6
 function give_capture_credit(touchlist, string) {
     time = gettime();
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     players = getarraykeys(touchlist);
     for (i = 0; i < players.size; i++) {
@@ -460,7 +460,7 @@ function give_capture_credit(touchlist, string) {
 // Size: 0x8a
 function dropalltoground(origin, radius, stickyobjectradius) {
     physicsexplosionsphere(origin, radius, radius, 0);
-    wait(0.05);
+    wait 0.05;
     weapons::drop_all_to_ground(origin, radius);
     supplydrop::dropcratestoground(origin, radius);
     level notify(#"drop_objects_to_ground", origin, stickyobjectradius);
@@ -487,7 +487,7 @@ function onradiodestroy(firstplayer) {
     foreach (index in var_51c64dfa) {
         player = touchlist[index].player;
         /#
-            print("<unknown string>");
+            print("<dev string:x74>");
         #/
         scoreevents::processscoreevent("hq_destroyed", player);
         player recordgameevent("destroy");
@@ -513,7 +513,7 @@ function onradiodestroy(firstplayer) {
         thread util::printonteam(var_2952248b, team);
         globallogic_audio::leader_dialog("hq_enemy_destroyed", team);
     }
-    level notify(#"hash_d5ccf178", var_9394096e);
+    level notify(#"hq_destroyed", var_9394096e);
     if (level.kothmode) {
         level thread awardhqpoints(var_9394096e);
     }
@@ -529,11 +529,11 @@ function destroyhqaftertime(time, ownerteam) {
     level endon(#"hash_8f036bdc");
     level.hqdestroytime = gettime() + time * 1000;
     level.hqdestroyedbytimer = 0;
-    wait(time);
+    wait time;
     globallogic_audio::leader_dialog("hq_offline");
     level.hqdestroyedbytimer = 1;
     function_c242acc9(ownerteam);
-    level notify(#"hash_d5ccf178");
+    level notify(#"hq_destroyed");
 }
 
 // Namespace hq
@@ -565,7 +565,7 @@ function function_c242acc9(ownerteam) {
 // Size: 0xe6
 function awardhqpoints(team) {
     level endon(#"game_ended");
-    level endon(#"hash_d5ccf178");
+    level endon(#"hq_destroyed");
     level notify(#"hash_4891279");
     level endon(#"hash_4891279");
     seconds = 5;
@@ -576,7 +576,7 @@ function awardhqpoints(team) {
             if (player.pers["team"] == team) {
             }
         }
-        wait(seconds);
+        wait seconds;
     }
 }
 
@@ -599,11 +599,11 @@ function function_43b8c1a1(var_533ecd6e, var_2d3c5305) {
         return false;
     }
     if (!isdefined(script_index_a) && isdefined(script_index_b)) {
-        println("<unknown string>" + var_533ecd6e.origin);
+        println("<dev string:x84>" + var_533ecd6e.origin);
         return true;
     }
     if (isdefined(script_index_a) && !isdefined(script_index_b)) {
-        println("<unknown string>" + var_2d3c5305.origin);
+        println("<dev string:x84>" + var_2d3c5305.origin);
         return false;
     }
     if (script_index_a > script_index_b) {
@@ -687,12 +687,12 @@ function setupradios() {
     }
     if (maperrors.size > 0) {
         /#
-            println("<unknown string>");
+            println("<dev string:xac>");
             for (i = 0; i < maperrors.size; i++) {
                 println(maperrors[i]);
             }
-            println("<unknown string>");
-            util::error("<unknown string>");
+            println("<dev string:xd3>");
+            util::error("<dev string:xfa>");
         #/
         callback::abort_level();
         return;

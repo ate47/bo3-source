@@ -120,9 +120,9 @@ function function_df3b7399(chest, player) {
     var_d804affa.player = player;
     var_d804affa.var_39787651 = 1;
     var_d804affa.chest = chest;
-    namespace_6d813654::function_66764564(var_d804affa, &function_bf34b3e4, &function_b9f3574d);
+    zm_equip_hacker::function_66764564(var_d804affa, &function_bf34b3e4, &function_b9f3574d);
     self.weapon_model util::waittill_either("death", "kill_respin_think_thread");
-    namespace_6d813654::function_fcbe2f17(var_d804affa);
+    zm_equip_hacker::function_fcbe2f17(var_d804affa);
 }
 
 // Namespace namespace_bcde73b7
@@ -190,9 +190,9 @@ function function_a624f359(chest, player) {
     var_d804affa.player = player;
     var_d804affa.var_39787651 = 1;
     var_d804affa.chest = chest;
-    namespace_6d813654::function_66764564(var_d804affa, &function_a7222c18, &function_b9f3574d);
+    zm_equip_hacker::function_66764564(var_d804affa, &function_a7222c18, &function_b9f3574d);
     self.weapon_model util::waittill_either("death", "kill_respin_respin_think_thread");
-    namespace_6d813654::function_fcbe2f17(var_d804affa);
+    zm_equip_hacker::function_fcbe2f17(var_d804affa);
 }
 
 // Namespace namespace_bcde73b7
@@ -202,7 +202,7 @@ function function_a624f359(chest, player) {
 function function_a7222c18(hacker) {
     org = self.chest.zbarrier.origin;
     if (isdefined(self.chest.zbarrier.weapon_model)) {
-        self.chest.zbarrier.weapon_model notify(#"hash_aa29f573");
+        self.chest.zbarrier.weapon_model notify(#"kill_respin_respin_think_thread");
         self.chest.zbarrier.weapon_model notify(#"kill_weapon_movement");
         self.chest.zbarrier.weapon_model moveto(org + (0, 0, 40), 0.5);
     }
@@ -238,7 +238,7 @@ function function_71eaab63(weapon1, weapon2) {
         if (isdefined(weapon2)) {
             weapon2 rotateto((-60 + randomint(120), yaw, -45 + randomint(90)), waittime, waittime * 0.5, waittime * 0.5);
         }
-        wait(randomfloat(waittime - 0.1));
+        wait randomfloat(waittime - 0.1);
     }
 }
 
@@ -248,7 +248,7 @@ function function_71eaab63(weapon1, weapon2) {
 // Size: 0x164
 function function_4dccfd98(weapon1, weapon2) {
     weapon1 endon(#"death");
-    wait(15);
+    wait 15;
     for (i = 0; i < 40; i++) {
         if (i % 2) {
             weapon1 hide();
@@ -262,14 +262,14 @@ function function_4dccfd98(weapon1, weapon2) {
             }
         }
         if (i < 15) {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         if (i < 25) {
-            wait(0.25);
+            wait 0.25;
             continue;
         }
-        wait(0.1);
+        wait 0.1;
     }
     self.chest notify(#"trigger", level);
     if (isdefined(weapon1)) {
@@ -299,7 +299,7 @@ function function_a464ab90() {
 function function_fcdcbf3d(create) {
     if (create) {
         if (isdefined(self.var_7c58c5e1)) {
-            namespace_6d813654::function_fcbe2f17(self.var_7c58c5e1);
+            zm_equip_hacker::function_fcbe2f17(self.var_7c58c5e1);
             self.var_7c58c5e1 = undefined;
         }
         struct = spawnstruct();
@@ -311,11 +311,11 @@ function function_fcdcbf3d(create) {
         struct.var_39787651 = 1;
         struct.chest = self;
         self.var_7c58c5e1 = struct;
-        namespace_6d813654::function_66764564(struct, &summon_box, &function_163fb8bf);
+        zm_equip_hacker::function_66764564(struct, &summon_box, &function_163fb8bf);
         return;
     }
     if (isdefined(self.var_7c58c5e1)) {
-        namespace_6d813654::function_fcbe2f17(self.var_7c58c5e1);
+        zm_equip_hacker::function_fcbe2f17(self.var_7c58c5e1);
         self.var_7c58c5e1 = undefined;
     }
 }
@@ -326,7 +326,7 @@ function function_fcdcbf3d(create) {
 // Size: 0x15c
 function function_35ff58ad(hacker) {
     self.chest.var_69fde2c9 = level.round_number + randomintrange(2, 5);
-    namespace_6d813654::function_fcbe2f17(self);
+    zm_equip_hacker::function_fcbe2f17(self);
     self.chest thread zm_magicbox::show_chest();
     self.chest notify(#"kill_chest_think");
     self.chest.auto_open = 1;

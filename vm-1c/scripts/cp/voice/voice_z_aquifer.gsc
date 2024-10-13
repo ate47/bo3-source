@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_f4f2fcc8;
+#namespace voice_z_aquifer;
 
-// Namespace namespace_f4f2fcc8
+// Namespace voice_z_aquifer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2b2141dc, Offset: 0x1270
 // Size: 0xba4

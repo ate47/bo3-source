@@ -20,9 +20,9 @@
 #using scripts/cp/_dialog;
 #using scripts/codescripts/struct;
 
-#namespace namespace_bfe2abac;
+#namespace cp_mi_sing_sgen_water_ride;
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 2, eflags: 0x1 linked
 // Checksum 0x690b9846, Offset: 0x710
 // Size: 0x484
@@ -65,7 +65,7 @@ function function_b2f17f19(str_objective, var_74cd64bc) {
     array::thread_all(var_b98e5eb8, &function_29a04809);
 }
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 4, eflags: 0x1 linked
 // Checksum 0xc14ad3d4, Offset: 0xba0
 // Size: 0x24
@@ -73,7 +73,7 @@ function function_88fd81d3(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     
 }
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa483068b, Offset: 0xbd0
 // Size: 0x26a
@@ -92,25 +92,25 @@ function function_1cbc58b8() {
     var_1787c657 triggerenable(1);
     level thread scene::play("p7_fxanim_cp_sgen_door_hendricks_explosion_bundle");
     level thread scene::play("cin_sgen_23_02_blow_door_vign_end", level.var_2fd26037);
-    wait(0.1);
+    wait 0.1;
     foreach (n_index, player in level.players) {
         player thread function_e5dfd798(n_index);
     }
 }
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 0, eflags: 0x1 linked
 // Checksum 0x69686709, Offset: 0xe48
 // Size: 0x84
 function vo() {
     level endon(#"hash_e48dacea");
-    wait(randomfloatrange(8, 13));
+    wait randomfloatrange(8, 13);
     level.var_2fd26037 dialog::say("hend_regroup_on_me_our_o_0");
-    wait(randomfloatrange(8, 13));
+    wait randomfloatrange(8, 13);
     level.var_2fd26037 dialog::say("hend_alright_stay_on_my_0");
 }
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 1, eflags: 0x1 linked
 // Checksum 0xcc02534e, Offset: 0xed8
 // Size: 0x24c
@@ -132,14 +132,14 @@ function function_e5dfd798(n_index) {
     self playrumbleonentity("cp_sgen_c4_explode");
     while (n_time < var_658763e6) {
         n_time += 0.5;
-        wait(0.5);
+        wait 0.5;
         self playrumbleonentity("cp_sgen_c4_explode");
     }
     self.var_36cc7e41 vehicle::get_on_path(nd_path_start);
     self thread function_6a35acee(n_index);
 }
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 1, eflags: 0x1 linked
 // Checksum 0x30cd35b4, Offset: 0x1130
 // Size: 0x12c
@@ -156,7 +156,7 @@ function function_6a35acee(n_index) {
     sndent delete();
 }
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 0, eflags: 0x1 linked
 // Checksum 0xca4be3cc, Offset: 0x1268
 // Size: 0x264
@@ -188,7 +188,7 @@ function function_c1262746() {
     var_5cbbdfca delete();
 }
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd1fd6421, Offset: 0x14d8
 // Size: 0xf8
@@ -209,7 +209,7 @@ function function_136b871d() {
     }
 }
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 0, eflags: 0x1 linked
 // Checksum 0x588bb071, Offset: 0x15d8
 // Size: 0xb0
@@ -224,7 +224,7 @@ function function_29a04809() {
     }
 }
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7dc2ff2f, Offset: 0x1690
 // Size: 0x50
@@ -232,11 +232,11 @@ function function_13629b3a() {
     self endon(#"hash_a93c476");
     while (true) {
         playfxontag(level._effect["current_effect"], self, "tag_origin");
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 0, eflags: 0x1 linked
 // Checksum 0xeb5788f6, Offset: 0x16e8
 // Size: 0x154
@@ -257,7 +257,7 @@ function function_a6779dd4() {
     }
 }
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdb28849, Offset: 0x1848
 // Size: 0x10c
@@ -266,7 +266,7 @@ function function_79c98cb(n_index) {
     self endon(#"switch_rail");
     self.var_36cc7e41 thread function_fcbee82b(self);
     self.var_36cc7e41 thread function_13629b3a();
-    wait(0.8);
+    wait 0.8;
     self thread scene::play("cin_sgen_24_01_ride_vign_body_player_flail_" + self.var_d7515e0, self);
     self.var_36cc7e41 vehicle::go_path();
     self.var_36cc7e41 function_4f28280b(self);
@@ -277,7 +277,7 @@ function function_79c98cb(n_index) {
     self namespace_cba4cc55::refill_ammo();
 }
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4863097c, Offset: 0x1960
 // Size: 0xd6
@@ -291,7 +291,7 @@ function function_4f28280b(player) {
     }
 }
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 1, eflags: 0x1 linked
 // Checksum 0x10d51d72, Offset: 0x1a40
 // Size: 0x260
@@ -330,11 +330,11 @@ function function_fcbee82b(player) {
         }
         println(self.y_offset);
         self pathfixedoffset((0, self.y_offset, self.z_offset));
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 2, eflags: 0x1 linked
 // Checksum 0xe3d86440, Offset: 0x1ca8
 // Size: 0x104
@@ -346,11 +346,11 @@ function function_5f1793f0(var_1db83aef, n_time) {
     earthquake(var_1db83aef, n_time, self.origin, 256);
     self playrumbleonentity("damage_heavy");
     self playlocalsound("evt_waterride_impact");
-    wait(n_time * 0.25);
+    wait n_time * 0.25;
     self.var_36cc7e41.var_7df4171f = 0;
 }
 
-// Namespace namespace_bfe2abac
+// Namespace cp_mi_sing_sgen_water_ride
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2d7343b4, Offset: 0x1db8
 // Size: 0x14

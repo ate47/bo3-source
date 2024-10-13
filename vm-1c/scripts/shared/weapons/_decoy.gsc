@@ -42,7 +42,7 @@ function on_spawn(watcher, owner) {
     weaponobjects::onspawnuseweaponobject(watcher, owner);
     self.var_8d009e7f = self getvelocity();
     delay = 1;
-    wait(delay);
+    wait delay;
     var_ac1978dd = 30;
     spawn_time = gettime();
     owner addweaponstat(self.weapon, "used", 1);
@@ -52,7 +52,7 @@ function on_spawn(watcher, owner) {
             self destroy(watcher, owner);
             return;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -82,7 +82,7 @@ function move(owner, count, fire_time, var_8195a6f6, var_34e933d5) {
         deltatime = (gettime() - start_time) * 0.001;
         up = (0, 0, var_7068061a - 800 * deltatime);
         self launch(dir + up, var_c1306e47);
-        wait(fire_time);
+        wait fire_time;
     }
 }
 
@@ -118,20 +118,20 @@ function function_a63701dd(owner) {
     self.var_34e933d5 = 30;
     weapon_class = util::getweaponclass(weapon);
     switch (weapon_class) {
-    case 8:
-    case 9:
-    case 10:
-    case 11:
-    case 14:
+    case "weapon_assault":
+    case "weapon_cqb":
+    case "weapon_hmg":
+    case "weapon_lmg":
+    case "weapon_smg":
         function_9d51e5e4(owner, weapon);
         break;
-    case 15:
+    case "weapon_sniper":
         function_3bf90541(owner, weapon);
         break;
-    case 12:
+    case "weapon_pistol":
         function_fcf76115(owner, weapon);
         break;
-    case 13:
+    case "weapon_shotgun":
         function_2d9e373e(owner, weapon);
         break;
     default:
@@ -266,10 +266,10 @@ function function_c222ce7e(owner, weapon, firetime, count, interrupt) {
         var_5e25e2cd = int(count * randomfloatrange(0.6, 0.8));
     }
     self fakefire(owner, self.origin, weapon, var_5e25e2cd);
-    wait(firetime * var_5e25e2cd);
+    wait firetime * var_5e25e2cd;
     if (interrupt) {
         self fakefire(owner, self.origin, weapon, count - var_5e25e2cd);
-        wait(firetime * (count - var_5e25e2cd));
+        wait firetime * (count - var_5e25e2cd);
     }
 }
 
@@ -282,7 +282,7 @@ function function_73d0b1f3(weapon, reloadtime, var_ea3aa22e, var_7cc2c3d0) {
         function_50198ce0(weapon, reloadtime);
         return;
     }
-    wait(randomfloatrange(var_ea3aa22e, var_7cc2c3d0));
+    wait randomfloatrange(var_ea3aa22e, var_7cc2c3d0);
 }
 
 // Namespace decoy
@@ -291,11 +291,11 @@ function function_73d0b1f3(weapon, reloadtime, var_ea3aa22e, var_7cc2c3d0) {
 // Size: 0x82
 function function_50198ce0(weapon, reloadtime) {
     var_d7706c7 = (reloadtime - 0.1) / 2;
-    wait(0.1);
+    wait 0.1;
     self playsound("fly_assault_reload_npc_mag_out");
-    wait(var_d7706c7);
+    wait var_d7706c7;
     self playsound("fly_assault_reload_npc_mag_in");
-    wait(var_d7706c7);
+    wait var_d7706c7;
 }
 
 // Namespace decoy
@@ -316,7 +316,7 @@ function function_dba6f0ce(owner, weapon) {
 // Size: 0x2e
 function function_547d67b1() {
     self waittill(#"death");
-    wait(0.1);
+    wait 0.1;
     if (isdefined(self)) {
         self notify(#"hash_deb9ad6f");
     }
@@ -330,7 +330,7 @@ function do_explosion(owner, pos, weapon, count) {
     var_fc4df9ff = 100;
     var_5f58e301 = 500;
     for (i = 0; i < count; i++) {
-        wait(randomfloatrange(0.1, 0.5));
+        wait randomfloatrange(0.1, 0.5);
         offset = (randomfloatrange(var_fc4df9ff, var_5f58e301) * (randomintrange(0, 2) * 2 - 1), randomfloatrange(var_fc4df9ff, var_5f58e301) * (randomintrange(0, 2) * 2 - 1), 0);
         owner fakefire(owner, pos + offset, weapon, 1);
     }
@@ -346,7 +346,7 @@ function function_b3d79ba3() {
         type = "semiauto";
     }
     randomval = randomintrange(0, level.var_69dcf9aa[type].size);
-    println("weapon_assault" + type + "weapon_assault" + level.var_69dcf9aa[type][randomval].name);
+    println("<dev string:x28>" + type + "<dev string:x35>" + level.var_69dcf9aa[type][randomval].name);
     return level.var_69dcf9aa[type][randomval];
 }
 

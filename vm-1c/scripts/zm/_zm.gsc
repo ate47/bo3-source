@@ -291,7 +291,7 @@ function init() {
     init_client_field_callback_funcs();
     zm_utility::register_offhand_weapons_for_level_defaults();
     level thread function_df2b6b41();
-    namespace_f37770c8::init();
+    zm_craftables::init();
     zm_perks::init();
     zm_powerups::init();
     zm_spawner::init();
@@ -380,7 +380,7 @@ function function_83b0d780() {
         var_88254cda = undefined;
         var_6222d271 = undefined;
         var_3c205808 = undefined;
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -431,9 +431,9 @@ function function_df2b6b41() {
 function fade_out_intro_screen_zm(hold_black_time, fade_out_time, var_47f9982a) {
     lui::screen_fade_out(0, undefined);
     if (isdefined(hold_black_time)) {
-        wait(hold_black_time);
+        wait hold_black_time;
     } else {
-        wait(0.2);
+        wait 0.2;
     }
     if (!isdefined(fade_out_time)) {
         fade_out_time = 1.5;
@@ -441,7 +441,7 @@ function fade_out_intro_screen_zm(hold_black_time, fade_out_time, var_47f9982a) 
     array::thread_all(getplayers(), &initialblackend);
     level clientfield::set("sndZMBFadeIn", 1);
     lui::screen_fade_in(fade_out_time, undefined);
-    wait(1.6);
+    wait 1.6;
     level.var_46df529e = 1;
     players = getplayers();
     for (i = 0; i < players.size; i++) {
@@ -453,12 +453,12 @@ function fade_out_intro_screen_zm(hold_black_time, fade_out_time, var_47f9982a) 
         if (!(isdefined(level.host_ended_game) && level.host_ended_game)) {
             if (isdefined(level.var_7679ccbb)) {
                 players[i] freezecontrols(level.var_7679ccbb);
-                println("gadget_smokescreen");
+                println("<dev string:x28>");
                 continue;
             }
             if (!(isdefined(players[i].hostmigrationcontrolsfrozen) && players[i].hostmigrationcontrolsfrozen)) {
                 players[i] freezecontrols(0);
-                println("gadget_smokescreen");
+                println("<dev string:x3d>");
             }
         }
     }
@@ -486,9 +486,9 @@ function function_4af767f3() {
 function onallplayersready() {
     timeout = gettime() + 5000;
     while (getnumexpectedplayers() == 0 && (isloadingcinematicplaying() || gettime() < timeout)) {
-        wait(0.1);
+        wait 0.1;
     }
-    println("gadget_smokescreen" + getnumexpectedplayers());
+    println("<dev string:x52>" + getnumexpectedplayers());
     player_count_actual = 0;
     while (getnumconnectedplayers() < getnumexpectedplayers() || player_count_actual != getnumexpectedplayers()) {
         players = getplayers();
@@ -499,13 +499,13 @@ function onallplayersready() {
                 player_count_actual++;
             }
         }
-        println("gadget_smokescreen" + getnumconnectedplayers() + "gadget_smokescreen" + getnumexpectedplayers());
-        wait(0.1);
+        println("<dev string:x6f>" + getnumconnectedplayers() + "<dev string:x85>" + getnumexpectedplayers());
+        wait 0.1;
     }
     setinitialplayersconnected();
     level flag::set("all_players_connected");
     setdvar("all_players_are_connected", "1");
-    println("gadget_smokescreen");
+    println("<dev string:x92>");
     if (1 == getnumconnectedplayers() && getdvarint("scr_zm_enable_bots") == 1) {
         level thread add_bots();
         level flag::set("initial_players_connected");
@@ -522,17 +522,17 @@ function onallplayersready() {
         level flag::set("initial_players_connected");
         array::thread_all(getplayers(), &initialblack);
         while (!aretexturesloaded()) {
-            wait(0.05);
+            wait 0.05;
         }
         if (isdefined(level.var_639d8432)) {
-            wait(level.var_639d8432);
+            wait level.var_639d8432;
         }
         thread function_816dcdcc(3);
     }
     set_intermission_point();
     n_black_screen = 5;
     level thread fade_out_intro_screen_zm(n_black_screen, 1.5, 1);
-    wait(n_black_screen);
+    wait n_black_screen;
     level.n_gameplay_start_time = gettime();
     clientfield::set("game_start_time", level.n_gameplay_start_time);
 }
@@ -559,7 +559,7 @@ function initialblackend() {
 // Checksum 0xf0ef5a50, Offset: 0x4e10
 // Size: 0x2c
 function function_816dcdcc(time_to_wait) {
-    wait(time_to_wait);
+    wait time_to_wait;
     level flag::set("start_zombie_round_logic");
 }
 
@@ -605,7 +605,7 @@ function updateplayernum(player) {
 function getfreespawnpoint(spawnpoints, player) {
     if (!isdefined(spawnpoints)) {
         /#
-            iprintlnbold("gadget_smokescreen");
+            iprintlnbold("<dev string:xc1>");
         #/
         return undefined;
     }
@@ -693,20 +693,20 @@ function delete_in_createfx() {
 // Size: 0x19c
 function add_bots() {
     for (host = util::gethostplayer(); !isdefined(host); host = util::gethostplayer()) {
-        wait(0.05);
+        wait 0.05;
     }
-    wait(4);
+    wait 4;
     function_55942d64();
     setdvar("bot_AllowMovement", "1");
     setdvar("bot_PressAttackBtn", "1");
     setdvar("bot_PressMeleeBtn", "1");
     while (getplayers().size < 2) {
-        wait(0.05);
+        wait 0.05;
     }
     players = getplayers();
     for (i = 0; i < players.size; i++) {
         players[i] freezecontrols(0);
-        println("gadget_smokescreen");
+        println("<dev string:xe3>");
     }
     level.var_168aa63a = 1;
     level flag::set("start_zombie_round_logic");
@@ -720,7 +720,7 @@ function function_55942d64() {
     player = util::gethostplayer();
     bot = addtestclient();
     if (!isdefined(bot)) {
-        println("gadget_smokescreen");
+        println("<dev string:xf8>");
         return;
     }
     spawnpoint = bot zm_gametype::onfindvalidspawnpoint();
@@ -741,7 +741,7 @@ function post_all_players_connected() {
     zm_utility::function_d691fa6("start_per_player", level.players.size);
     zm_utility::function_63f08cf();
     level.var_e656acd7 = level.players.size;
-    println("gadget_smokescreen", level.script, "gadget_smokescreen", getplayers().size);
+    println("<dev string:x112>", level.script, "<dev string:x125>", getplayers().size);
     level thread round_end_monitor();
     if (!level.zombie_anim_intro) {
         if (isdefined(level._round_start_func)) {
@@ -825,7 +825,7 @@ function player_track_ammo_count() {
     ammolowcount = 0;
     ammooutcount = 0;
     while (true) {
-        wait(0.5);
+        wait 0.5;
         weapon = self getcurrentweapon();
         if (weapon == level.weaponnone || weapon.skiplowammovox) {
             continue;
@@ -844,14 +844,14 @@ function player_track_ammo_count() {
                 ammolowcount++;
             }
         } else if (ammooutcount < 1) {
-            wait(0.5);
+            wait 0.5;
             if (self getcurrentweapon() !== weapon) {
                 continue;
             }
             self zm_audio::create_and_play_dialog("general", "ammo_out");
             ammooutcount++;
         }
-        wait(20);
+        wait 20;
     }
 }
 
@@ -860,7 +860,7 @@ function player_track_ammo_count() {
 // Checksum 0x770b2946, Offset: 0x5df0
 // Size: 0x9c
 function spawn_vo() {
-    wait(1);
+    wait 1;
     players = getplayers();
     if (players.size > 1) {
         player = array::random(players);
@@ -1163,7 +1163,7 @@ function codecallback_destructibleevent(event, param1, param2, param3) {
 function breakafter(time, damage, piece) {
     self notify(#"breakafter");
     self endon(#"breakafter");
-    wait(time);
+    wait time;
     self dodamage(damage, self.origin, undefined, undefined);
 }
 
@@ -1176,14 +1176,14 @@ function callback_playerdamage(einflictor, eattacker, idamage, idflags, smeansof
     if (isplayer(self)) {
         startedinlaststand = self laststand::player_is_in_laststand();
     }
-    println("gadget_smokescreen" + idamage + "gadget_smokescreen");
+    println("<dev string:x14c>" + idamage + "<dev string:x165>");
     if (isdefined(eattacker) && isplayer(eattacker) && eattacker.sessionteam == self.sessionteam && !eattacker hasperk("specialty_playeriszombie") && !(isdefined(self.is_zombie) && self.is_zombie)) {
         self process_friendly_fire_callbacks(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex);
         if (self != eattacker) {
-            println("gadget_smokescreen");
+            println("<dev string:x167>");
             return;
         } else if (smeansofdeath != "MOD_GRENADE_SPLASH" && smeansofdeath != "MOD_GRENADE" && smeansofdeath != "MOD_EXPLOSIVE" && smeansofdeath != "MOD_PROJECTILE" && smeansofdeath != "MOD_PROJECTILE_SPLASH" && smeansofdeath != "MOD_BURNED" && smeansofdeath != "MOD_SUICIDE") {
-            println("gadget_smokescreen");
+            println("<dev string:x190>");
             return;
         }
     }
@@ -1195,7 +1195,7 @@ function callback_playerdamage(einflictor, eattacker, idamage, idflags, smeansof
     } else if (isdefined(level.overrideplayerdamage)) {
         idamage = self [[ level.overrideplayerdamage ]](einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime);
     }
-    assert(isdefined(idamage), "gadget_smokescreen");
+    assert(isdefined(idamage), "<dev string:x1b1>");
     if (isdefined(self.magic_bullet_shield) && self.magic_bullet_shield) {
         maxhealth = self.maxhealth;
         self.health += idamage;
@@ -1212,7 +1212,7 @@ function callback_playerdamage(einflictor, eattacker, idamage, idflags, smeansof
             }
         }
     }
-    println("gadget_smokescreen");
+    println("<dev string:x1ea>");
     if (isdefined(level.prevent_player_damage)) {
         if (self [[ level.prevent_player_damage ]](einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime)) {
             return;
@@ -1222,16 +1222,16 @@ function callback_playerdamage(einflictor, eattacker, idamage, idflags, smeansof
     if (idamage > 0 && shitloc == "riotshield") {
         shitloc = "torso_upper";
     }
-    println("gadget_smokescreen");
+    println("<dev string:x1f0>");
     var_87cdb53f = 0;
     if (isplayer(self)) {
         var_87cdb53f = !startedinlaststand && self laststand::player_is_in_laststand();
     }
     /#
         if (isdefined(eattacker)) {
-            record3dtext("gadget_smokescreen" + idamage + "gadget_smokescreen" + self.health + "gadget_smokescreen" + eattacker getentitynumber(), self.origin, (1, 0, 0), "gadget_smokescreen", self);
+            record3dtext("<dev string:x20c>" + idamage + "<dev string:x20f>" + self.health + "<dev string:x214>" + eattacker getentitynumber(), self.origin, (1, 0, 0), "<dev string:x219>", self);
         } else {
-            record3dtext("gadget_smokescreen" + idamage + "gadget_smokescreen" + self.health + "gadget_smokescreen", self.origin, (1, 0, 0), "gadget_smokescreen", self);
+            record3dtext("<dev string:x20c>" + idamage + "<dev string:x20f>" + self.health + "<dev string:x220>", self.origin, (1, 0, 0), "<dev string:x219>", self);
         }
     #/
     self finishplayerdamagewrapper(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, boneindex, vsurfacenormal);
@@ -1389,7 +1389,7 @@ function zombie_intro_screen(string1, string2, string3, string4, string5) {
 function players_playing() {
     players = getplayers();
     level.players_playing = players.size;
-    wait(20);
+    wait 20;
     players = getplayers();
     level.players_playing = players.size;
 }
@@ -1443,7 +1443,7 @@ function onplayerspawned() {
         self waittill(#"spawned_player");
         if (!(isdefined(level.host_ended_game) && level.host_ended_game)) {
             self freezecontrols(0);
-            println("gadget_smokescreen");
+            println("<dev string:x22e>");
         }
         self.hits = 0;
         self zm_utility::init_player_offhand_weapons();
@@ -1454,7 +1454,7 @@ function onplayerspawned() {
         }
         self recordplayerrevivezombies(self);
         /#
-            if (getdvarint("gadget_smokescreen") >= 1 && getdvarint("gadget_smokescreen") <= 3) {
+            if (getdvarint("<dev string:x243>") >= 1 && getdvarint("<dev string:x243>") <= 3) {
                 self enableinvulnerability();
             }
         #/
@@ -1523,7 +1523,7 @@ function player_spawn_protection() {
     x = 0;
     while (x < 60) {
         x++;
-        wait(0.05);
+        wait 0.05;
     }
     self zm_utility::function_36f941b3();
 }
@@ -1625,28 +1625,28 @@ function player_out_of_playable_area_monitor() {
     self endon(#"disconnect");
     level endon(#"end_game");
     while (!isdefined(self.characterindex)) {
-        wait(0.05);
+        wait 0.05;
     }
-    wait(0.15 * self.characterindex);
+    wait 0.15 * self.characterindex;
     while (true) {
         if (self.sessionstate == "spectator") {
-            wait(get_player_out_of_playable_area_monitor_wait_time());
+            wait get_player_out_of_playable_area_monitor_wait_time();
             continue;
         }
         if (isdefined(level.var_c303b23b) && level.var_c303b23b) {
-            wait(get_player_out_of_playable_area_monitor_wait_time());
+            wait get_player_out_of_playable_area_monitor_wait_time();
             continue;
         }
         if (isdefined(self [[ level.player_out_of_playable_area_override ]]()) && isdefined(level.player_out_of_playable_area_override) && (self in_kill_brush() || !self in_enabled_playable_area() || !self in_life_brush() && self [[ level.player_out_of_playable_area_override ]]())) {
             if (!isdefined(level.player_out_of_playable_area_monitor_callback) || self [[ level.player_out_of_playable_area_monitor_callback ]]()) {
                 /#
                     if (isdefined(level.kill_thread_test_mode) && level.kill_thread_test_mode) {
-                        printtoprightln("gadget_smokescreen" + self.origin);
-                        wait(get_player_out_of_playable_area_monitor_wait_time());
+                        printtoprightln("<dev string:x250>" + self.origin);
+                        wait get_player_out_of_playable_area_monitor_wait_time();
                         continue;
                     }
-                    if (isdefined(level.disable_kill_thread) && (self isinmovemode("gadget_smokescreen", "gadget_smokescreen") || level.disable_kill_thread) || getdvarint("gadget_smokescreen") > 0) {
-                        wait(get_player_out_of_playable_area_monitor_wait_time());
+                    if (isdefined(level.disable_kill_thread) && (self isinmovemode("<dev string:x267>", "<dev string:x26b>") || level.disable_kill_thread) || getdvarint("<dev string:x243>") > 0) {
+                        wait get_player_out_of_playable_area_monitor_wait_time();
                         continue;
                     }
                 #/
@@ -1654,7 +1654,7 @@ function player_out_of_playable_area_monitor() {
                 self zm_stats::increment_client_stat("cheat_out_of_playable", 0);
                 self zm_stats::increment_client_stat("cheat_total", 0);
                 self playlocalsound(level.zmb_laugh_alias);
-                wait(0.5);
+                wait 0.5;
                 if (isdefined(self.waiting_to_revive) && getplayers().size == 1 && level flag::get("solo_game") && self.waiting_to_revive) {
                     level notify(#"end_game");
                 } else {
@@ -1665,7 +1665,7 @@ function player_out_of_playable_area_monitor() {
                 }
             }
         }
-        wait(get_player_out_of_playable_area_monitor_wait_time());
+        wait get_player_out_of_playable_area_monitor_wait_time();
     }
 }
 
@@ -1711,12 +1711,12 @@ function function_b730d298(var_2dbc495) {
         self playlocalsound(level.zmb_laugh_alias);
         self switchtoweapon(var_2dbc495[i]);
         self zm_score::player_reduce_points("take_specified", var_166fb977);
-        wait(3);
+        wait 3;
         self takeweapon(var_2dbc495[i]);
     }
     self playlocalsound(level.zmb_laugh_alias);
     self zm_score::player_reduce_points("take_all");
-    wait(1);
+    wait 1;
     self zm_utility::give_start_weapon(1);
     self zm_utility::decrement_is_drinking();
     self notify(#"hash_826ea773");
@@ -1735,15 +1735,15 @@ function function_67a71cec() {
     if (!isdefined(scalar)) {
         scalar = self getentitynumber();
     }
-    wait(0.15 * scalar);
+    wait 0.15 * scalar;
     while (true) {
         if (self zm_utility::has_powerup_weapon() || self laststand::player_is_in_laststand() || self.sessionstate == "spectator" || isdefined(self.laststandpistol)) {
-            wait(function_201bdf19());
+            wait function_201bdf19();
             continue;
         }
         /#
-            if (getdvarint("gadget_smokescreen") > 0) {
-                wait(function_201bdf19());
+            if (getdvarint("<dev string:x243>") > 0) {
+                wait function_201bdf19();
                 continue;
             }
         #/
@@ -1768,7 +1768,7 @@ function function_67a71cec() {
                 self waittill(#"hash_826ea773");
             }
         }
-        wait(function_201bdf19());
+        wait function_201bdf19();
     }
 }
 
@@ -1781,7 +1781,7 @@ function player_monitor_travel_dist() {
     self notify(#"stop_player_monitor_travel_dist");
     self endon(#"stop_player_monitor_travel_dist");
     for (prevpos = self.origin; true; prevpos = self.origin) {
-        wait(0.1);
+        wait 0.1;
         self.pers["distance_traveled"] = self.pers["distance_traveled"] + distance(self.origin, prevpos);
     }
 }
@@ -1796,7 +1796,7 @@ function player_monitor_time_played() {
     self endon(#"stop_player_monitor_time_played");
     level flag::wait_till("start_zombie_round_logic");
     for (;;) {
-        wait(1);
+        wait 1;
         zm_stats::increment_client_stat("time_played_total");
     }
 }
@@ -1919,7 +1919,7 @@ function player_revive_monitor() {
             if (!isdefined(points)) {
                 points = 0;
             }
-            println("gadget_smokescreen" + points);
+            println("<dev string:x272>" + points);
             reviver zm_score::player_add_points("reviver", points);
             self.score_lost_when_downed = 0;
             if (isplayer(reviver) && reviver != self) {
@@ -1971,7 +1971,7 @@ function function_4f798a75() {
 // Checksum 0x3149c58f, Offset: 0xa640
 // Size: 0x3b4
 function player_laststand(einflictor, attacker, idamage, smeansofdeath, weapon, vdir, shitloc, psoffsettime, deathanimduration) {
-    println("gadget_smokescreen");
+    println("<dev string:x28f>");
     var_54d1a8f4 = 0;
     self allowjump(0);
     currweapon = self getcurrentweapon();
@@ -2010,7 +2010,7 @@ function player_laststand(einflictor, attacker, idamage, smeansofdeath, weapon, 
         }
     }
     if (isdefined(self.intermission) && self.intermission) {
-        wait(0.5);
+        wait 0.5;
         self stopsounds();
         level waittill(#"forever");
     }
@@ -2025,14 +2025,14 @@ function player_laststand(einflictor, attacker, idamage, smeansofdeath, weapon, 
 // Size: 0x1a4
 function function_ec9a829e(var_43bf5f75) {
     for (i = 0; i < 10; i++) {
-        wait(0.05);
+        wait 0.05;
         players = getplayers();
         foreach (player in players) {
             if (player == var_43bf5f75 || !isdefined(player.var_30d551a2) || player zm_laststand::is_reviving_any()) {
                 continue;
             }
             /#
-                iprintlnbold("gadget_smokescreen");
+                iprintlnbold("<dev string:x2ba>");
             #/
             player zm_laststand::revive_give_back_weapons(level.weaponnone);
             if (isdefined(player.var_30d551a2)) {
@@ -2072,7 +2072,7 @@ function spawnspectator() {
         return;
     }
     if (isdefined(level.no_spectator) && level.no_spectator) {
-        wait(3);
+        wait 3;
         exitlevel();
     }
     self.is_zombie = 1;
@@ -2095,7 +2095,7 @@ function spawnspectator() {
     self.hasspawned = 1;
     self.spawntime = gettime();
     self.afk = 0;
-    println("gadget_smokescreen");
+    println("<dev string:x2e2>");
     self detachall();
     if (isdefined(level.var_586a584f)) {
         self [[ level.var_586a584f ]]();
@@ -2511,7 +2511,7 @@ function spectators_respawn() {
             e_player = players[i];
             e_player spectator_respawn_player();
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -2541,7 +2541,7 @@ function spectator_respawn_player() {
 // Checksum 0xf43261b8, Offset: 0xca68
 // Size: 0x300
 function spectator_respawn() {
-    println("gadget_smokescreen");
+    println("<dev string:x30f>");
     assert(isdefined(self.spectator_respawn));
     origin = self.spectator_respawn.origin;
     angles = self.spectator_respawn.angles;
@@ -2819,7 +2819,7 @@ function round_spawning() {
         return;
     }
     if (level.zm_loc_types["zombie_location"].size < 1) {
-        assertmsg("gadget_smokescreen");
+        assertmsg("<dev string:x33d>");
         return;
     }
     zombie_utility::ai_calculate_health(level.round_number);
@@ -2842,18 +2842,18 @@ function round_spawning() {
     old_spawn = undefined;
     while (true) {
         while (zombie_utility::get_current_zombie_count() >= level.zombie_ai_limit || level.zombie_total <= 0) {
-            wait(0.1);
+            wait 0.1;
         }
         while (zombie_utility::get_current_actor_count() >= level.zombie_actor_limit) {
             zombie_utility::clear_all_corpses();
-            wait(0.1);
+            wait 0.1;
         }
         if (flag::exists("world_is_paused")) {
             level flag::wait_till_clear("world_is_paused");
         }
         level flag::wait_till("spawn_zombies");
         while (level.zm_loc_types["zombie_location"].size <= 0) {
-            wait(0.1);
+            wait 0.1;
         }
         run_custom_ai_spawn_checks();
         if (isdefined(level.hostmigrationtimer) && level.hostmigrationtimer) {
@@ -2891,9 +2891,9 @@ function round_spawning() {
                 ai ai::set_behavior_attribute("can_juke", 0);
             }
             if (level.zombie_respawns > 0) {
-                wait(0.1);
+                wait 0.1;
             } else {
-                wait(level.zombie_vars["zombie_spawn_delay"]);
+                wait level.zombie_vars["zombie_spawn_delay"];
             }
         }
         util::wait_network_frame();
@@ -3000,7 +3000,7 @@ function round_spawning_test() {
         spawner = array::random(level.zombie_spawners);
         ai = zombie_utility::spawn_zombie(spawner, spawner.targetname, spawn_point);
         ai waittill(#"death");
-        wait(5);
+        wait 5;
     }
 }
 
@@ -3017,12 +3017,12 @@ function function_6765cd60(delay) {
     level.var_e07abad8.color = (1, 1, 1);
     level.var_e07abad8.alpha = 1;
     level.var_e07abad8 fadeovertime(2);
-    wait(2);
+    wait 2;
     level.var_e07abad8.color = (0.21, 0, 0);
     level.var_e07abad8 fadeovertime(3);
-    wait(3);
+    wait 3;
     while (delay >= 1) {
-        wait(1);
+        wait 1;
         delay--;
         level.var_e07abad8 setvalue(delay);
     }
@@ -3033,7 +3033,7 @@ function function_6765cd60(delay) {
     level.var_e07abad8 fadeovertime(1);
     level.var_e07abad8.color = (1, 1, 1);
     level.var_e07abad8.alpha = 0;
-    wait(1);
+    wait 1;
     level.var_e07abad8 zm_utility::function_ef76706b();
 }
 
@@ -3043,11 +3043,11 @@ function function_6765cd60(delay) {
 // Size: 0x254
 function round_start() {
     if (!isdefined(level.zombie_spawners) || level.zombie_spawners.size == 0) {
-        println("gadget_smokescreen");
+        println("<dev string:x3a2>");
         level flag::set("begin_spawning");
         return;
     }
-    println("gadget_smokescreen");
+    println("<dev string:x3d3>");
     if (isdefined(level.var_e9389b68)) {
         [[ level.var_e9389b68 ]]();
     } else {
@@ -3055,11 +3055,11 @@ function round_start() {
         if (isdefined(level.zombie_round_start_delay)) {
             n_delay = level.zombie_round_start_delay;
         }
-        wait(n_delay);
+        wait n_delay;
     }
     level.zombie_health = level.zombie_vars["zombie_health_start"];
     if (getdvarint("scr_writeconfigstrings") == 1) {
-        wait(5);
+        wait 5;
         exitlevel();
         return;
     }
@@ -3074,7 +3074,7 @@ function round_start() {
         level.move_spawn_func = &zm_utility::move_zombie_spawn_location;
     }
     /#
-        if (getdvarint("gadget_smokescreen")) {
+        if (getdvarint("<dev string:x3eb>")) {
             level.round_spawn_func = &round_spawning_test;
         }
     #/
@@ -3095,7 +3095,7 @@ function play_door_dialog() {
     self endon(#"warning_dialog");
     timer = 0;
     while (true) {
-        wait(0.05);
+        wait 0.05;
         players = getplayers();
         for (i = 0; i < players.size; i++) {
             dist = distancesquared(players[i].origin, self.origin);
@@ -3104,13 +3104,13 @@ function play_door_dialog() {
                 continue;
             }
             while (dist < 4900 && timer < 3) {
-                wait(0.5);
+                wait 0.5;
                 timer++;
             }
             if (dist > 4900 && timer >= 3) {
                 self playsound("door_deny");
                 players[i] zm_audio::create_and_play_dialog("general", "outofmoney");
-                wait(3);
+                wait 3;
                 self notify(#"warning_dialog");
             }
         }
@@ -3159,11 +3159,11 @@ function round_one_up() {
         if (isdefined(level.host_ended_game) && level.host_ended_game) {
             return;
         }
-        wait(6.25);
+        wait 6.25;
         level notify(#"intro_hud_done");
-        wait(2);
+        wait 2;
     } else {
-        wait(2.5);
+        wait 2.5;
     }
     reportmtu(level.round_number);
 }
@@ -3190,7 +3190,7 @@ function round_over() {
         }
     }
     recordzombieroundend();
-    wait(time);
+    wait time;
 }
 
 // Namespace zm
@@ -3261,7 +3261,7 @@ function round_think(restart) {
     if (!isdefined(restart)) {
         restart = 0;
     }
-    println("gadget_smokescreen");
+    println("<dev string:x3fc>");
     level endon(#"end_round_think");
     if (!(isdefined(restart) && restart)) {
         if (isdefined(level.var_b31c6007)) {
@@ -3272,7 +3272,7 @@ function round_think(restart) {
             foreach (player in players) {
                 if (!(isdefined(player.hostmigrationcontrolsfrozen) && player.hostmigrationcontrolsfrozen)) {
                     player freezecontrols(0);
-                    println("gadget_smokescreen");
+                    println("<dev string:x414>");
                 }
                 player zm_stats::set_global_stat("rounds", level.round_number);
             }
@@ -3309,10 +3309,10 @@ function round_think(restart) {
         if (!(isdefined(level.headshots_only) && level.headshots_only) && !restart) {
             level thread award_grenades_for_survivors();
         }
-        println("gadget_smokescreen" + level.round_number + "gadget_smokescreen" + players.size);
+        println("<dev string:x429>" + level.round_number + "<dev string:x443>" + players.size);
         level.round_start_time = gettime();
         while (level.zm_loc_types["zombie_location"].size <= 0) {
-            wait(0.1);
+            wait 0.1;
         }
         /#
             zkeys = getarraykeys(level.zones);
@@ -3481,22 +3481,22 @@ function get_zombie_spawn_delay(n_round) {
     // Size: 0x15c
     function print_zombie_counts() {
         while (true) {
-            if (getdvarint("gadget_smokescreen")) {
+            if (getdvarint("<dev string:x453>")) {
                 if (!isdefined(level.debug_zombie_count_hud)) {
                     level.debug_zombie_count_hud = newdebughudelem();
-                    level.debug_zombie_count_hud.alignx = "gadget_smokescreen";
+                    level.debug_zombie_count_hud.alignx = "<dev string:x471>";
                     level.debug_zombie_count_hud.x = 100;
                     level.debug_zombie_count_hud.y = 10;
-                    level.debug_zombie_count_hud settext("gadget_smokescreen");
+                    level.debug_zombie_count_hud settext("<dev string:x477>");
                 }
                 currentcount = zombie_utility::get_current_zombie_count();
                 number_to_kill = level.zombie_total;
-                level.debug_zombie_count_hud settext("gadget_smokescreen" + currentcount + "gadget_smokescreen" + number_to_kill);
+                level.debug_zombie_count_hud settext("<dev string:x47e>" + currentcount + "<dev string:x485>" + number_to_kill);
             } else if (isdefined(level.debug_zombie_count_hud)) {
                 level.debug_zombie_count_hud destroy();
                 level.debug_zombie_count_hud = undefined;
             }
-            wait(0.1);
+            wait 0.1;
         }
     }
 
@@ -3512,7 +3512,7 @@ function round_wait() {
         level endon(#"kill_round");
     #/
     /#
-        if (getdvarint("gadget_smokescreen")) {
+        if (getdvarint("<dev string:x3eb>")) {
             level waittill(#"forever");
         }
     #/
@@ -3520,11 +3520,11 @@ function round_wait() {
         level waittill(#"forever");
     }
     /#
-        if (getdvarint("gadget_smokescreen") == 0) {
+        if (getdvarint("<dev string:x48e>") == 0) {
             level waittill(#"forever");
         }
     #/
-    wait(1);
+    wait 1;
     /#
         level thread print_zombie_counts();
         level thread sndmusiconkillround();
@@ -3539,7 +3539,7 @@ function round_wait() {
             level thread zm_audio::sndmusicsystem_playstate("round_end");
             return;
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -3602,7 +3602,7 @@ function playerzombie_player_damage() {
     while (true) {
         amount, attacker, directionvec, point, type = self waittill(#"damage");
         if (!isdefined(attacker) || !isplayer(attacker)) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         self.zombiehealth -= amount;
@@ -3632,7 +3632,7 @@ function playerzombie_downed_state() {
     self allowcrouch(0);
     self allowprone(1);
     while (gettime() < endtime) {
-        wait(0.05);
+        wait 0.05;
     }
     self.playerzombie_soundboard_disable = 0;
     self thread zombie_utility::zombie_eye_glow();
@@ -3684,7 +3684,7 @@ function playerzombie_infinite_health() {
         if (self.health < bighealth) {
             self.health = bighealth;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -3711,7 +3711,7 @@ function playerzombie_soundboard() {
     self.inputsound_nexttime = gettime();
     while (true) {
         if (self.playerzombie_soundboard_disable) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         if (self usebuttonpressed()) {
@@ -3733,7 +3733,7 @@ function playerzombie_soundboard() {
                 self.adssound_nexttime = gettime() + self.adssound_waittime;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -3747,23 +3747,23 @@ function can_do_input(inputtype) {
     }
     cando = 0;
     switch (inputtype) {
-    case 418:
+    case "use":
         if (gettime() >= self.usesound_nexttime && !self.buttonpressed_use) {
             cando = 1;
         }
         break;
-    case 419:
+    case "attack":
         if (gettime() >= self.attacksound_nexttime && !self.buttonpressed_attack) {
             cando = 1;
         }
         break;
-    case 420:
+    case "ads":
         if (gettime() >= self.usesound_nexttime && !self.buttonpressed_ads) {
             cando = 1;
         }
         break;
     default:
-        assertmsg("gadget_smokescreen" + inputtype);
+        assertmsg("<dev string:x4a1>" + inputtype);
         break;
     }
     return cando;
@@ -3783,7 +3783,7 @@ function playerzombie_play_sound(alias) {
 // Size: 0x188
 function playerzombie_waitfor_buttonrelease(inputtype) {
     if (inputtype != "use" && inputtype != "attack" && inputtype != "ads") {
-        assertmsg("gadget_smokescreen" + inputtype + "gadget_smokescreen");
+        assertmsg("<dev string:x4d0>" + inputtype + "<dev string:x504>");
         return;
     }
     notifystring = "waitfor_buttonrelease_" + inputtype;
@@ -3792,7 +3792,7 @@ function playerzombie_waitfor_buttonrelease(inputtype) {
     if (inputtype == "use") {
         self.buttonpressed_use = 1;
         while (self usebuttonpressed()) {
-            wait(0.05);
+            wait 0.05;
         }
         self.buttonpressed_use = 0;
         return;
@@ -3800,7 +3800,7 @@ function playerzombie_waitfor_buttonrelease(inputtype) {
     if (inputtype == "attack") {
         self.buttonpressed_attack = 1;
         while (self attackbuttonpressed()) {
-            wait(0.05);
+            wait 0.05;
         }
         self.buttonpressed_attack = 0;
         return;
@@ -3808,7 +3808,7 @@ function playerzombie_waitfor_buttonrelease(inputtype) {
     if (inputtype == "ads") {
         self.buttonpressed_ads = 1;
         while (self adsbuttonpressed()) {
-            wait(0.05);
+            wait 0.05;
         }
         self.buttonpressed_ads = 0;
     }
@@ -3825,7 +3825,7 @@ function remove_ignore_attacker() {
     if (!isdefined(level.ignore_enemy_timer)) {
         level.ignore_enemy_timer = 0.4;
     }
-    wait(level.ignore_enemy_timer);
+    wait level.ignore_enemy_timer;
     self.ignoreattacker = undefined;
 }
 
@@ -4253,8 +4253,8 @@ function actor_damage_override(inflictor, attacker, damage, flags, meansofdeath,
         final_damage = [[ self.actor_damage_func ]](inflictor, attacker, damage, flags, meansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex);
     }
     /#
-        if (getdvarint("gadget_smokescreen")) {
-            println("gadget_smokescreen" + final_damage / old_damage + "gadget_smokescreen" + old_damage + "gadget_smokescreen" + final_damage);
+        if (getdvarint("<dev string:x518>")) {
+            println("<dev string:x526>" + final_damage / old_damage + "<dev string:x53d>" + old_damage + "<dev string:x54d>" + final_damage);
         }
     #/
     if (isdefined(self.in_water) && self.in_water) {
@@ -4380,16 +4380,16 @@ function actor_killed_override(einflictor, attacker, idamage, smeansofdeath, wea
         type = undefined;
         if (isdefined(self.animname)) {
             switch (self.animname) {
-            case 440:
+            case "quad_zombie":
                 type = "quadkill";
                 break;
-            case 458:
+            case "ape_zombie":
                 type = "apekill";
                 break;
-            case 459:
+            case "zombie":
                 type = "zombiekill";
                 break;
-            case 431:
+            case "zombie_dog":
                 type = "dogkill";
                 break;
             }
@@ -4416,7 +4416,7 @@ function round_end_monitor() {
         demo::bookmark("zm_round_end", gettime(), undefined, undefined, 1);
         bbpostdemostreamstatsforround(level.round_number);
         zm_utility::function_63f08cf();
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -4448,7 +4448,7 @@ function function_c67c5c4a() {
 function end_game() {
     level waittill(#"end_game");
     check_end_game_intermission_delay();
-    println("gadget_smokescreen");
+    println("<dev string:x55e>");
     setmatchflag("game_ended", 1);
     level clientfield::set("gameplay_started", 0);
     level clientfield::set("game_end_time", int((gettime() - level.n_gameplay_start_time + 500) / 1000));
@@ -4474,7 +4474,7 @@ function end_game() {
     level.zombie_vars["zombie_powerup_insta_kill_time"] = 0;
     level.zombie_vars["zombie_powerup_fire_sale_time"] = 0;
     level.zombie_vars["zombie_powerup_double_points_time"] = 0;
-    wait(0.1);
+    wait 0.1;
     game_over = [];
     survived = [];
     players = getplayers();
@@ -4574,18 +4574,18 @@ function end_game() {
             player thread end_game_player_was_spectator();
         }
     }
-    wait(0.05);
+    wait 0.05;
     /#
-        if (!(isdefined(level.host_ended_game) && level.host_ended_game) && getdvarint("gadget_smokescreen") > 1) {
-            luinotifyevent(%gadget_smokescreen, 0);
+        if (!(isdefined(level.host_ended_game) && level.host_ended_game) && getdvarint("<dev string:x572>") > 1) {
+            luinotifyevent(%"<dev string:x586>", 0);
             map_restart(1);
-            wait(666);
+            wait 666;
         }
     #/
     players = getplayers();
     luinotifyevent(%force_scoreboard, 1, 1);
     intermission();
-    wait(level.zombie_vars["zombie_intermission_time"]);
+    wait level.zombie_vars["zombie_intermission_time"];
     if (!isdefined(level._supress_survived_screen)) {
         for (i = 0; i < players.size; i++) {
             survived[i] destroy();
@@ -4603,20 +4603,20 @@ function end_game() {
     }
     level notify(#"stop_intermission");
     array::thread_all(getplayers(), &player_exit_level);
-    wait(1.5);
+    wait 1.5;
     players = getplayers();
     for (i = 0; i < players.size; i++) {
         players[i] cameraactivate(0);
     }
     /#
-        if (!(isdefined(level.host_ended_game) && level.host_ended_game) && getdvarint("gadget_smokescreen")) {
-            luinotifyevent(%gadget_smokescreen, 1, 0);
+        if (!(isdefined(level.host_ended_game) && level.host_ended_game) && getdvarint("<dev string:x572>")) {
+            luinotifyevent(%"<dev string:x586>", 1, 0);
             map_restart(1);
-            wait(666);
+            wait 666;
         }
     #/
     exitlevel(0);
-    wait(666);
+    wait 666;
 }
 
 // Namespace zm
@@ -4624,7 +4624,7 @@ function end_game() {
 // Checksum 0xbd8cf547, Offset: 0x14b70
 // Size: 0x3c
 function end_game_player_was_spectator() {
-    wait(0.05);
+    wait 0.05;
     self ghost();
     self freezecontrols(1);
 }
@@ -4635,7 +4635,7 @@ function end_game_player_was_spectator() {
 // Size: 0x26
 function disable_end_game_intermission(delay) {
     level.disable_intermission = 1;
-    wait(delay);
+    wait delay;
     level.disable_intermission = undefined;
 }
 
@@ -4649,7 +4649,7 @@ function check_end_game_intermission_delay() {
             if (!isdefined(level.disable_intermission)) {
                 break;
             }
-            wait(0.01);
+            wait 0.01;
         }
     }
 }
@@ -4703,7 +4703,7 @@ function player_fake_death() {
     self allowprone(1);
     self.ignoreme = 1;
     self enableinvulnerability();
-    wait(1);
+    wait 1;
     self freezecontrols(1);
 }
 
@@ -4745,7 +4745,7 @@ function function_39d714b5() {
     while (true) {
         wait_time = 0.1;
         if (self.ignoreme) {
-            wait(wait_time);
+            wait wait_time;
             continue;
         }
         var_9ca63ef4 = 1;
@@ -4776,7 +4776,7 @@ function function_39d714b5() {
             var_b89c46e9 = crumb;
             self function_9ca63ef4(crumb);
         }
-        wait(wait_time);
+        wait wait_time;
     }
 }
 
@@ -4851,7 +4851,7 @@ function intermission() {
         players[i] thread [[ level.custom_intermission ]]();
         players[i] stopsounds();
     }
-    wait(5.25);
+    wait 5.25;
     players = getplayers();
     for (i = 0; i < players.size; i++) {
         players[i] clientfield::set("zmbLastStand", 0);
@@ -4878,7 +4878,7 @@ function zombie_game_over_death() {
         if (isdefined(zombies[i].ignore_game_over_death) && zombies[i].ignore_game_over_death) {
             continue;
         }
-        wait(0.5 + randomfloat(2));
+        wait 0.5 + randomfloat(2);
         if (isdefined(zombies[i])) {
             if (!isvehicle(zombies[i])) {
                 zombies[i] zombie_utility::zombie_head_gib();
@@ -4894,7 +4894,7 @@ function zombie_game_over_death() {
 // Size: 0x4a
 function screen_fade_in(n_time, v_color, str_menu_id) {
     lui::screen_fade(n_time, 0, 1, v_color, 0, str_menu_id);
-    wait(n_time);
+    wait n_time;
 }
 
 // Namespace zm
@@ -4915,7 +4915,7 @@ function player_intermission() {
     if (!isdefined(points) || points.size == 0) {
         points = getentarray("info_intermission", "classname");
         if (points.size < 1) {
-            println("gadget_smokescreen");
+            println("<dev string:x597>");
             return;
         }
     }
@@ -4927,7 +4927,7 @@ function player_intermission() {
         points = array::randomize(points);
     }
     self zm_utility::create_streamer_hint(points[0].origin, points[0].angles, 0.9);
-    wait(5);
+    wait 5;
     self lui::screen_fade_out(1);
     self.sessionstate = "intermission";
     self.spectatorclient = -1;
@@ -4944,12 +4944,12 @@ function player_intermission() {
             nextpoint = points[i + 1];
             self setorigin(point.origin);
             self setplayerangles(point.angles);
-            wait(0.15);
+            wait 0.15;
             self notify(#"player_intermission_spawned");
             if (isdefined(nextpoint)) {
                 self zm_utility::create_streamer_hint(nextpoint.origin, nextpoint.angles, 0.9);
                 self screen_fade_in(2);
-                wait(3);
+                wait 3;
                 self lui::screen_fade_out(2);
                 continue;
             }
@@ -5005,7 +5005,7 @@ function default_delayed_exit() {
         if (!self.ignoreme) {
             break;
         }
-        wait(0.1);
+        wait 0.1;
     }
     self thread default_find_exit_point();
 }
@@ -5048,7 +5048,7 @@ function default_find_exit_point() {
         if (!level flag::get("wait_and_revive") && var_dd261077) {
             break;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -5057,7 +5057,7 @@ function default_find_exit_point() {
 // Checksum 0x52365a02, Offset: 0x16238
 // Size: 0x7c
 function play_level_start_vox_delayed() {
-    wait(3);
+    wait 3;
     players = getplayers();
     num = randomintrange(0, players.size);
     players[num] zm_audio::create_and_play_dialog("general", "intro");
@@ -5315,7 +5315,7 @@ function update_is_player_valid() {
     self.am_i_valid = 1;
     while (isdefined(self)) {
         self.am_i_valid = zm_utility::is_player_valid(self, 1);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -5335,7 +5335,7 @@ function update_zone_name() {
             self.previous_zone_name = self.zone_name;
         }
         self.zone_name = zm_utility::get_current_zone();
-        wait(randomfloatrange(0.5, 1));
+        wait randomfloatrange(0.5, 1);
     }
 }
 
@@ -5345,38 +5345,38 @@ function update_zone_name() {
 // Size: 0x494
 function printhashids() {
     /#
-        outputstring = "gadget_smokescreen";
-        outputstring += "gadget_smokescreen";
+        outputstring = "<dev string:x5ba>";
+        outputstring += "<dev string:x601>";
         foreach (var_3111271f in level.var_b09bbe80) {
-            outputstring += "gadget_smokescreen" + var_3111271f.name + "gadget_smokescreen" + var_3111271f.hash_id + "gadget_smokescreen";
+            outputstring += "<dev string:x613>" + var_3111271f.name + "<dev string:x615>" + var_3111271f.hash_id + "<dev string:x165>";
             if (!isdefined(var_3111271f.var_7a5f63bc)) {
                 continue;
             }
             foreach (var_b1028d0b in var_3111271f.var_7a5f63bc) {
-                outputstring += var_b1028d0b.piecename + "gadget_smokescreen" + var_b1028d0b.hash_id + "gadget_smokescreen";
+                outputstring += var_b1028d0b.piecename + "<dev string:x615>" + var_b1028d0b.hash_id + "<dev string:x165>";
             }
         }
-        outputstring += "gadget_smokescreen";
+        outputstring += "<dev string:x617>";
         foreach (powerup in level.zombie_powerups) {
-            outputstring += powerup.powerup_name + "gadget_smokescreen" + powerup.hash_id + "gadget_smokescreen";
+            outputstring += powerup.powerup_name + "<dev string:x615>" + powerup.hash_id + "<dev string:x165>";
         }
-        outputstring += "gadget_smokescreen";
+        outputstring += "<dev string:x627>";
         if (isdefined(level.aat_in_use) && level.aat_in_use) {
             foreach (aat in level.aat) {
-                if (!isdefined(aat) || !isdefined(aat.name) || aat.name == "gadget_smokescreen") {
+                if (!isdefined(aat) || !isdefined(aat.name) || aat.name == "<dev string:x632>") {
                     continue;
                 }
-                outputstring += aat.name + "gadget_smokescreen" + aat.hash_id + "gadget_smokescreen";
+                outputstring += aat.name + "<dev string:x615>" + aat.hash_id + "<dev string:x165>";
             }
         }
-        outputstring += "gadget_smokescreen";
+        outputstring += "<dev string:x637>";
         foreach (perk in level._custom_perks) {
             if (!isdefined(perk) || !isdefined(perk.alias)) {
                 continue;
             }
-            outputstring += perk.alias + "gadget_smokescreen" + perk.hash_id + "gadget_smokescreen";
+            outputstring += perk.alias + "<dev string:x615>" + perk.hash_id + "<dev string:x165>";
         }
-        outputstring += "gadget_smokescreen";
+        outputstring += "<dev string:x644>";
         println(outputstring);
     #/
 }

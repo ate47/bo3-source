@@ -15,9 +15,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_9d4ce396;
+#namespace zm_cosmodrome_lander;
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc3aaa2f3, Offset: 0xa38
 // Size: 0x4fc
@@ -61,7 +61,7 @@ function init() {
     callback::on_connect(&function_7a1aff0c);
     function_95a64d83();
     level notify(#"hash_8f27dcf0");
-    wait(0.1);
+    wait 0.1;
     level flag::wait_till("power_on");
     enable_callboxes();
     function_e8434a58();
@@ -69,7 +69,7 @@ function init() {
     level thread function_71f10e60();
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x21100c3d, Offset: 0xf40
 // Size: 0x30
@@ -79,7 +79,7 @@ function function_7a1aff0c() {
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe3cff25e, Offset: 0xf78
 // Size: 0x64
@@ -89,19 +89,19 @@ function function_95a64d83() {
     level clientfield::set("COSMO_LANDER_STORAGE_BAY", 1);
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x106bd433, Offset: 0xfe8
 // Size: 0xa6
 function function_15b83963() {
-    var_e55bef66 = getentarray("lander_poi", "targetname");
-    for (i = 0; i < var_e55bef66.size; i++) {
-        var_e55bef66[i] zm_utility::create_zombie_point_of_interest(undefined, 30, 0, 0);
-        var_e55bef66[i] thread zm_utility::create_zombie_point_of_interest_attractor_positions(4, 45);
+    lander_poi = getentarray("lander_poi", "targetname");
+    for (i = 0; i < lander_poi.size; i++) {
+        lander_poi[i] zm_utility::create_zombie_point_of_interest(undefined, 30, 0, 0);
+        lander_poi[i] thread zm_utility::create_zombie_point_of_interest_attractor_positions(4, 45);
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb0380fd, Offset: 0x1098
 // Size: 0x104
@@ -110,10 +110,10 @@ function function_c1f96b46(station) {
         return;
     }
     var_8ec169f9 = undefined;
-    var_e55bef66 = getentarray("lander_poi", "targetname");
-    for (i = 0; i < var_e55bef66.size; i++) {
-        if (var_e55bef66[i].script_string == station) {
-            var_8ec169f9 = var_e55bef66[i];
+    lander_poi = getentarray("lander_poi", "targetname");
+    for (i = 0; i < lander_poi.size; i++) {
+        if (lander_poi[i].script_string == station) {
+            var_8ec169f9 = lander_poi[i];
         }
     }
     var_8ec169f9 zm_utility::activate_zombie_point_of_interest();
@@ -121,7 +121,7 @@ function function_c1f96b46(station) {
     var_8ec169f9 zm_utility::deactivate_zombie_point_of_interest();
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x0
 // Checksum 0xbb854883, Offset: 0x11a8
 // Size: 0x24
@@ -129,7 +129,7 @@ function function_9857df93() {
     self setmodel("p_zom_lunar_control_scrn_on");
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 2, eflags: 0x1 linked
 // Checksum 0xaefad0b3, Offset: 0x11d8
 // Size: 0x136
@@ -150,7 +150,7 @@ function function_ca951cd(piece, var_a453023b) {
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 1, eflags: 0x1 linked
 // Checksum 0xaa458abc, Offset: 0x1318
 // Size: 0xac
@@ -163,7 +163,7 @@ function function_e11b107(time) {
     level flag::wait_till("lander_grounded");
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 1, eflags: 0x1 linked
 // Checksum 0x818a7461, Offset: 0x13d0
 // Size: 0x68
@@ -174,7 +174,7 @@ function function_e71897c5(time) {
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe667acb7, Offset: 0x1440
 // Size: 0xdc
@@ -186,7 +186,7 @@ function function_e8434a58() {
     lander.var_db1f86cb thread move_gate(var_204f913, 1);
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd4f7c597, Offset: 0x1528
 // Size: 0x11c
@@ -199,7 +199,7 @@ function function_f2e995a2(time) {
     lander.var_db1f86cb thread move_gate(var_204f913, 0, time);
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 3, eflags: 0x1 linked
 // Checksum 0xd77989ed, Offset: 0x1650
 // Size: 0x23c
@@ -236,7 +236,7 @@ function move_gate(pos, lower, time) {
     self linkto(lander.anchor);
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5a0dd003, Offset: 0x1898
 // Size: 0x44
@@ -245,7 +245,7 @@ function init_buy() {
     trigger thread function_9bb302f();
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb6d8348, Offset: 0x18e8
 // Size: 0xa6
@@ -258,7 +258,7 @@ function init_call_boxes() {
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4e4a52c, Offset: 0x1998
 // Size: 0x338
@@ -294,26 +294,26 @@ function call_box_think() {
             self playsound("zmb_push_button");
             self playsound("vox_ann_lander_current_0");
             switch (call_destination) {
-            case 13:
+            case "lander_station5":
                 level clientfield::set("COSMO_LANDER_DEST", 4);
                 break;
-            case 17:
+            case "lander_station1":
                 level clientfield::set("COSMO_LANDER_DEST", 3);
                 break;
-            case 19:
+            case "lander_station3":
                 level clientfield::set("COSMO_LANDER_DEST", 2);
                 break;
-            case 21:
+            case "lander_station4":
                 level clientfield::set("COSMO_LANDER_DEST", 1);
                 break;
             }
             self thread function_f0c6d0e1(call_destination);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdb5bffd8, Offset: 0x1cd8
 // Size: 0x77c
@@ -327,7 +327,7 @@ function function_9bb302f() {
     level clientfield::set("COSMO_LANDER_STATUS_LIGHTS", 1);
     level clientfield::set("COSMO_LANDER_STATION", 4);
     while (!lander.called) {
-        wait(1);
+        wait 1;
     }
     level.var_b10eb05f = 1;
     level flag::set("lander_connected");
@@ -389,16 +389,16 @@ function function_9bb302f() {
             lander playsound("zmb_lander_start");
             lander playloopsound("zmb_lander_exhaust_loop", 1);
             switch (call_box.destination) {
-            case 13:
+            case "lander_station5":
                 level clientfield::set("COSMO_LANDER_DEST", 4);
                 break;
-            case 17:
+            case "lander_station1":
                 level clientfield::set("COSMO_LANDER_DEST", 3);
                 break;
-            case 19:
+            case "lander_station3":
                 level clientfield::set("COSMO_LANDER_DEST", 2);
                 break;
-            case 21:
+            case "lander_station4":
                 level clientfield::set("COSMO_LANDER_DEST", 1);
                 break;
             }
@@ -408,11 +408,11 @@ function function_9bb302f() {
             who zm_audio::create_and_play_dialog("general", "no_money", 0);
             continue;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8c9f29c4, Offset: 0x2460
 // Size: 0x11c
@@ -420,27 +420,27 @@ function function_bd6e70fe() {
     var_60c1e5f7 = "";
     var_49df99ed = "";
     switch (self.station) {
-    case 17:
+    case "lander_station1":
         var_60c1e5f7 = "lander_a_used";
         var_49df99ed = "COSMO_LAUNCH_PANEL_BASEENTRY_STATUS";
         break;
-    case 19:
+    case "lander_station3":
         var_60c1e5f7 = "lander_b_used";
         var_49df99ed = "COSMO_LAUNCH_PANEL_CATWALK_STATUS";
         break;
-    case 21:
+    case "lander_station4":
         var_60c1e5f7 = "lander_c_used";
         var_49df99ed = "COSMO_LAUNCH_PANEL_STORAGE_STATUS";
         break;
     }
     level notify(#"hash_7b168fce");
     level flag::set(var_60c1e5f7);
-    wait(2);
+    wait 2;
     level flag::wait_till("lander_grounded");
     self clientfield::set(var_49df99ed, 1);
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe60414, Offset: 0x2588
 // Size: 0x16e
@@ -459,7 +459,7 @@ function enable_callboxes() {
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4b25c1d0, Offset: 0x2700
 // Size: 0x444
@@ -475,9 +475,9 @@ function function_21a92c45() {
     thread function_f2e995a2(0.05);
     level flag::wait_till("initial_players_connected");
     while (!aretexturesloaded()) {
-        wait(0.05);
+        wait 0.05;
     }
-    wait(3.5);
+    wait 3.5;
     lander = getent("lander", "targetname");
     lander function_a81835b4();
     lander playloopsound("zmb_lander_exhaust_loop");
@@ -487,7 +487,7 @@ function function_21a92c45() {
     lander.sound_ent playloopsound("zmb_lander_flying_low_loop");
     var_b5cc0771 = struct::get("lander_station5", "targetname");
     var_20089fb6 = var_b5cc0771.origin;
-    wait(1.5);
+    wait 1.5;
     level thread function_5dd9df7d();
     lander.anchor moveto(var_20089fb6, 8, 0.1, 7.9);
     level notify(#"hash_8f27dcf0");
@@ -495,7 +495,7 @@ function function_21a92c45() {
     lander.anchor waittill(#"movedone");
     level.var_110c2916 = 0;
     level flag::set("lander_grounded");
-    level thread namespace_9dd378ec::function_3cf7b8c9("vox_ann_startup");
+    level thread zm_cosmodrome_amb::function_3cf7b8c9("vox_ann_startup");
     lander.sound_ent stoploopsound(3);
     lander stoploopsound(3);
     playsoundatposition("zmb_lander_land", lander.sound_ent.origin);
@@ -504,7 +504,7 @@ function function_21a92c45() {
     level thread function_63c29eed();
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe67263ca, Offset: 0x2b50
 // Size: 0x84
@@ -512,11 +512,11 @@ function function_5f3adfa1() {
     trigger = getent("zip_buy", "script_noteworthy");
     trigger setcursorhint("HINT_NOICON");
     level flag::wait_till("lander_grounded");
-    wait(15);
+    wait 15;
     init_buy();
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 1, eflags: 0x1 linked
 // Checksum 0x488991a6, Offset: 0x2be0
 // Size: 0x754
@@ -526,7 +526,7 @@ function function_f0c6d0e1(dest) {
     lander = getent("lander", "targetname");
     level clientfield::set("COSMO_LANDER_STATUS_LIGHTS", 1);
     lander thread function_cb5ad6bb(dest);
-    level notify(#"hash_bfb727ec", lander.riders, self);
+    level notify(#"Lu", lander.riders, self);
     lander.var_bad629ca = lander.station;
     depart = getent(lander.station, "script_noteworthy");
     if (depart.target == "catwalk_zip_door") {
@@ -547,7 +547,7 @@ function function_f0c6d0e1(dest) {
     var_264552c2 = struct::get(station.target, "targetname");
     level flag::clear("spawn_zombies");
     level thread function_5dd9df7d();
-    wait(1);
+    wait 1;
     if (lander.called == 1) {
         lander.station = self.script_noteworthy;
     } else {
@@ -575,7 +575,7 @@ function function_f0c6d0e1(dest) {
     lander.anchor thread function_6fbfb6ae();
     level notify(#"hash_8f27dcf0");
     level flag::clear("lander_takeoff");
-    wait(3.1);
+    wait 3.1;
     lander clientfield::set("COSMO_LANDER_MOVE_FX", 1);
     lander.anchor function_fa20b471();
     if (isdefined(var_264552c2.target)) {
@@ -589,7 +589,7 @@ function function_f0c6d0e1(dest) {
     function_c68c0d82();
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc6a57975, Offset: 0x3340
 // Size: 0x104
@@ -612,7 +612,7 @@ function function_5f5d494f() {
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfd8af888, Offset: 0x3450
 // Size: 0x10c
@@ -621,10 +621,10 @@ function function_fa20b471() {
     var_8f759cfc = self.angles[1] + randomintrange(-3, 3);
     self rotateto((num, var_8f759cfc, randomfloatrange(0, 5)), 0.5);
     self moveto((self.origin[0], self.origin[1], self.origin[2] + 20), 0.5, 0.1);
-    wait(0.5);
+    wait 0.5;
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x72609dd6, Offset: 0x3568
 // Size: 0x308
@@ -653,10 +653,10 @@ function function_59e7837d() {
             }
         }
     }
-    wait(0.5);
+    wait 0.5;
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 1, eflags: 0x1 linked
 // Checksum 0x41d67280, Offset: 0x3878
 // Size: 0x620
@@ -712,7 +712,7 @@ function function_cb5ad6bb(destination) {
             players[i] clientfield::set("COSMO_PLAYER_LANDER_FOG", 1);
             lander.riders++;
         }
-        wait(0.25);
+        wait 0.25;
         x++;
         if (x == 4) {
             if (lander.riders == players.size) {
@@ -722,7 +722,7 @@ function function_cb5ad6bb(destination) {
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x238e2495, Offset: 0x3ea0
 // Size: 0xe4
@@ -733,7 +733,7 @@ function function_e323fa97() {
     self allowstand(0);
     self.lander = 1;
     while (self.lander === 1 && self laststand::player_is_in_laststand()) {
-        wait(0.05);
+        wait 0.05;
     }
     self.on_lander_last_stand = undefined;
     self allowcrouch(1);
@@ -741,7 +741,7 @@ function function_e323fa97() {
     self setstance("stand");
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd7a73ab1, Offset: 0x3f90
 // Size: 0x236
@@ -769,7 +769,7 @@ function function_a81835b4() {
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x51c79b78, Offset: 0x41d0
 // Size: 0x1d2
@@ -780,7 +780,7 @@ function unlock_players() {
         players[i] disableinvulnerability();
         players[i].on_lander_last_stand = undefined;
         /#
-            if (getdvarint("lander") >= 1 && getdvarint("lander") <= 3) {
+            if (getdvarint("<dev string:x28>") >= 1 && getdvarint("<dev string:x28>") <= 3) {
                 players[i] enableinvulnerability();
             }
         #/
@@ -794,7 +794,7 @@ function unlock_players() {
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x637c4718, Offset: 0x43b0
 // Size: 0x9cc
@@ -879,19 +879,19 @@ function function_c68c0d82() {
     lander.called = 0;
     if (isdefined(arrive.target)) {
         switch (arrive.target) {
-        case 72:
+        case "catwalk_zip_door":
             level clientfield::set("COSMO_LANDER_STATION", 2);
             level clientfield::set("COSMO_LANDER_CATWALK_BAY", 0);
             break;
-        case 73:
+        case "base_entry_zip_door":
             level clientfield::set("COSMO_LANDER_STATION", 3);
             level clientfield::set("COSMO_LANDER_BASE_ENTRY_BAY", 0);
             break;
-        case 74:
+        case "centrifuge_zip_door":
             level clientfield::set("COSMO_LANDER_STATION", 4);
             level clientfield::set("COSMO_LANDER_CENTRIFUGE_BAY", 0);
             break;
-        case 76:
+        case "storage_zip_door":
             level clientfield::set("COSMO_LANDER_STATION", 1);
             level clientfield::set("COSMO_LANDER_STORAGE_BAY", 0);
             break;
@@ -901,33 +901,33 @@ function function_c68c0d82() {
         level flag::set("launch_activated");
     }
     if (var_5021702 != "") {
-        wait(1);
+        wait 1;
         exploder::kill_exploder(var_5021702);
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x75d067e9, Offset: 0x4d88
 // Size: 0x10c
 function function_5dd9df7d() {
-    var_756db0f9 = getent("lander_base", "script_noteworthy");
-    var_756db0f9 clientfield::set("COSMO_LANDER_ENGINE_FX", 1);
-    var_756db0f9 clientfield::set("COSMO_LANDER_RUMBLE_AND_QUAKE", 1);
+    lander_base = getent("lander_base", "script_noteworthy");
+    lander_base clientfield::set("COSMO_LANDER_ENGINE_FX", 1);
+    lander_base clientfield::set("COSMO_LANDER_RUMBLE_AND_QUAKE", 1);
     level flag::wait_till("lander_grounded");
-    var_756db0f9 clientfield::set("COSMO_LANDER_RUMBLE_AND_QUAKE", 0);
-    wait(2.5);
-    playfx(level._effect["lunar_lander_dust"], var_756db0f9.origin);
-    var_756db0f9 clientfield::set("COSMO_LANDER_ENGINE_FX", 0);
+    lander_base clientfield::set("COSMO_LANDER_RUMBLE_AND_QUAKE", 0);
+    wait 2.5;
+    playfx(level._effect["lunar_lander_dust"], lander_base.origin);
+    lander_base clientfield::set("COSMO_LANDER_ENGINE_FX", 0);
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 4, eflags: 0x1 linked
 // Checksum 0x4ab8f159, Offset: 0x4ea0
 // Size: 0x12c
 function function_dbbe88ad(var_728eaa61, range, delay, trig) {
     if (isdefined(delay)) {
-        wait(delay);
+        wait delay;
     }
     zombies = getaispeciesarray("axis");
     spot = self.origin;
@@ -938,17 +938,17 @@ function function_dbbe88ad(var_728eaa61, range, delay, trig) {
         }
         zombies[i] thread function_634cc874();
     }
-    wait(0.5);
+    wait 0.5;
     function_31b150fd(spot, -6);
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2b146bc3, Offset: 0x4fd8
 // Size: 0xb4
 function function_634cc874() {
     self endon(#"death");
-    wait(randomfloatrange(0.2, 0.3));
+    wait randomfloatrange(0.2, 0.3);
     level.zombie_total++;
     playsoundatposition("nuked", self.origin);
     playfx(level._effect["zomb_gib"], self.origin);
@@ -958,7 +958,7 @@ function function_634cc874() {
     self delete();
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 2, eflags: 0x1 linked
 // Checksum 0x24c74af2, Offset: 0x5098
 // Size: 0xde
@@ -972,13 +972,13 @@ function function_8d996522(var_f2af12bd, max_range) {
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb3380a79, Offset: 0x5180
 // Size: 0x8c
 function zombie_knockdown() {
     self endon(#"death");
-    wait(randomfloatrange(0.2, 0.3));
+    wait randomfloatrange(0.2, 0.3);
     self.var_1474da36 = 1;
     if (isdefined(self.thundergun_knockdown_func)) {
         self [[ self.thundergun_knockdown_func ]](self, 0);
@@ -987,7 +987,7 @@ function zombie_knockdown() {
     self dodamage(1, self.origin);
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 2, eflags: 0x1 linked
 // Checksum 0x8459ba80, Offset: 0x5218
 // Size: 0xb6
@@ -1002,12 +1002,12 @@ function function_31b150fd(spot, range) {
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0xefdf9c8f, Offset: 0x52d8
 // Size: 0x74
 function function_7c569fb4() {
-    wait(randomfloatrange(0.05, 0.25));
+    wait randomfloatrange(0.05, 0.25);
     if (!isdefined(self)) {
         return;
     }
@@ -1015,7 +1015,7 @@ function function_7c569fb4() {
     self delete();
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 2, eflags: 0x1 linked
 // Checksum 0x118c00ce, Offset: 0x5358
 // Size: 0x3fe
@@ -1044,14 +1044,14 @@ function function_9aed2b6c(lander, final_dest) {
         } else {
             self rotateto((randomfloatrange(-5, 5), 0, randomfloatrange(-5, 5)), var_16d20f68);
         }
-        wait(var_16d20f68);
+        wait var_16d20f68;
         if (first_time) {
             first_time = 0;
         }
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2510ace8, Offset: 0x5760
 // Size: 0x70
@@ -1059,11 +1059,11 @@ function function_6fbfb6ae() {
     level endon(#"hash_8f27dcf0");
     while (true) {
         self rotateto((randomfloatrange(-10, 10), 0, randomfloatrange(-10, 10)), 0.5);
-        wait(0.5);
+        wait 0.5;
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7fb51ad2, Offset: 0x57d8
 // Size: 0xcc
@@ -1072,26 +1072,26 @@ function function_4c38d0bd(movetime) {
     timer = gettime() + time * 1000;
     while (gettime() < timer) {
         self rotateto((randomfloatrange(-5, 5), 0, randomfloatrange(-5, 5)), 0.75);
-        wait(0.75);
+        wait 0.75;
     }
     self rotateto((0, 0, 0), 0.75);
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbb66eddb, Offset: 0x58b0
 // Size: 0xc4
 function function_c914fbad() {
-    wait(3);
+    wait 3;
     self notify(#"hash_fdd25b82");
     self.old_angles = self.angles;
     self rotateto((self.angles[0] * -1, self.angles[1] * -1, self.angles[2] * -1), 2.75);
-    wait(3);
+    wait 3;
     self rotateto(self.old_angles, 2);
     level flag::set("lander_landing");
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8fd287b1, Offset: 0x5980
 // Size: 0x698
@@ -1100,7 +1100,7 @@ function function_9be6c7d0() {
     var_af727de5 = getentarray("zip_call_box", "targetname");
     lander = getent("lander", "targetname");
     while (true) {
-        riders, trig = level waittill(#"hash_bfb727ec");
+        riders, trig = level waittill(#"Lu");
         level flag::set("lander_inuse");
         players = getplayers();
         for (i = 0; i < players.size; i++) {
@@ -1116,7 +1116,7 @@ function function_9be6c7d0() {
             var_af727de5[i] setcursorhint("HINT_NOICON");
         }
         while (level.var_fb331fc7) {
-            wait(0.1);
+            wait 0.1;
         }
         level flag::clear("lander_inuse");
         level flag::set("lander_cooldown");
@@ -1145,9 +1145,9 @@ function function_9be6c7d0() {
             var_af727de5[i] setcursorhint("HINT_NOICON");
         }
         if (!isdefined(level.var_a1879e28) || level.var_a1879e28) {
-            wait(cooldown);
+            wait cooldown;
         } else {
-            wait(1);
+            wait 1;
         }
         lander stoploopsound(1.5);
         lander playsound("zmb_lander_pump_end");
@@ -1174,7 +1174,7 @@ function function_9be6c7d0() {
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x54871d5, Offset: 0x6020
 // Size: 0xbc
@@ -1182,23 +1182,23 @@ function function_71f10e60() {
     while (true) {
         level flag::wait_till("lander_grounded");
         if (level flag::get("lander_a_used") && level flag::get("lander_b_used") && level flag::get("lander_c_used")) {
-            level thread namespace_9dd378ec::function_3cf7b8c9("vox_ann_landers_used");
+            level thread zm_cosmodrome_amb::function_3cf7b8c9("vox_ann_landers_used");
             return;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x72f10bd4, Offset: 0x60e8
 // Size: 0x2c
 function function_63c29eed() {
-    wait(10);
-    level thread namespace_f23e8c1a::function_321f0d6f(undefined, "vox_gersh_egg_start", 0);
+    wait 10;
+    level thread zm_cosmodrome_eggs::function_321f0d6f(undefined, "vox_gersh_egg_start", 0);
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x78712dfd, Offset: 0x6120
 // Size: 0x14e
@@ -1217,7 +1217,7 @@ function function_d0c617aa() {
     }
 }
 
-// Namespace namespace_9d4ce396
+// Namespace zm_cosmodrome_lander
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5db606b8, Offset: 0x6278
 // Size: 0x13c

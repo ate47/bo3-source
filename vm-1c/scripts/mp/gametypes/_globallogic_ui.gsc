@@ -347,12 +347,12 @@ function closemenus() {
 // Checksum 0x57e9fbb8, Offset: 0x1340
 // Size: 0x1c4
 function beginclasschoice() {
-    assert(isdefined(level.teams[self.pers["menu_start_menu"]]));
+    assert(isdefined(level.teams[self.pers["<dev string:x28>"]]));
     team = self.pers["team"];
     if (isdefined(self.disableclassselection) && (level.disableclassselection == 1 || self.disableclassselection) || getdvarint("migration_soak") == 1) {
         started_waiting = gettime();
         while (!self isstreamerready(-1, 1) && started_waiting + 90000 > gettime()) {
-            wait(0.05);
+            wait 0.05;
         }
         self.pers["class"] = level.defaultclass;
         self.curclass = level.defaultclass;
@@ -372,7 +372,7 @@ function beginclasschoice() {
 // Checksum 0x60589b5f, Offset: 0x1510
 // Size: 0x74
 function showmainmenuforteam() {
-    assert(isdefined(level.teams[self.pers["menu_start_menu"]]));
+    assert(isdefined(level.teams[self.pers["<dev string:x28>"]]));
     team = self.pers["team"];
     self openmenu(game["menu_changeclass_" + team]);
 }
@@ -521,7 +521,7 @@ function removespawnmessageshortly(delay) {
     self endon(#"disconnect");
     waittillframeend();
     self endon(#"end_respawn");
-    wait(delay);
+    wait delay;
     self util::clearlowermessage(2);
 }
 

@@ -34,9 +34,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_502339f3;
+#namespace cp_mi_sing_blackstation;
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0x4f659a39, Offset: 0x1398
 // Size: 0x34
@@ -45,7 +45,7 @@ function function_243693d4() {
     util::add_gametype("cpzm");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa115ddc3, Offset: 0x13d8
 // Size: 0x31c
@@ -62,11 +62,11 @@ function main() {
     function_6364bd7d();
     function_aca49f84();
     namespace_23567e72::function_4d39a2af();
-    namespace_56310eec::main();
-    namespace_7a033503::main();
-    namespace_d754dd61::main();
-    namespace_8b9f718f::main();
-    namespace_ec2cabcf::init_voice();
+    cp_mi_sing_blackstation_fx::main();
+    cp_mi_sing_blackstation_sound::main();
+    cp_mi_sing_blackstation_qzone::main();
+    cp_mi_sing_blackstation_port::main();
+    voice_blackstation::init_voice();
     function_673254cc();
     util::function_286a5010(5);
     scene::add_wait_for_streamer_hint_scene("cin_bla_03_warlordintro_3rd_sh010");
@@ -76,7 +76,7 @@ function main() {
     callback::on_loadout(&on_player_loadout);
     level.var_1895e0f9 = &namespace_79e1cd97::function_8f7c9f3c;
     load::main();
-    namespace_814e90c0::function_7403e82b();
+    cp_mi_sing_blackstation_patch::function_7403e82b();
     setdvar("ui_newHud", 1);
     level thread namespace_79e1cd97::function_33942907();
     level scene::add_scene_func("cin_bla_03_warlordintro_3rd_sh170", &namespace_79e1cd97::function_746a2da4, "done", "objective_warlord");
@@ -87,7 +87,7 @@ function main() {
     level thread function_b3f6e2cd();
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9b27784c, Offset: 0x1700
 // Size: 0x15a
@@ -101,7 +101,7 @@ function function_aca49f84() {
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa90a47a4, Offset: 0x1868
 // Size: 0x1b4
@@ -117,7 +117,7 @@ function function_b3f6e2cd() {
     getent("barge_monitor_off", "targetname") hide();
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe71a1984, Offset: 0x1a28
 // Size: 0x4c
@@ -127,7 +127,7 @@ function function_2acd20f4() {
     hidemiscmodels("collapse_frogger_water");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbb016e46, Offset: 0x1a80
 // Size: 0xd2
@@ -140,7 +140,7 @@ function function_f92d2f1c() {
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0x248f3770, Offset: 0x1b60
 // Size: 0xc6
@@ -154,7 +154,7 @@ function precache() {
     level._effect["bubbles"] = "player/fx_plyr_swim_bubbles_body_blkstn";
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4f048411, Offset: 0x1c30
 // Size: 0xa44
@@ -243,7 +243,7 @@ function flag_init() {
     level flag::init("exterior_clear");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8410d0b3, Offset: 0x2680
 // Size: 0x108
@@ -258,7 +258,7 @@ function level_init() {
     level.var_4eef455c = [];
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaa9df145, Offset: 0x2790
 // Size: 0x506
@@ -279,61 +279,61 @@ function on_player_spawned() {
     self.var_62269fcc = 0;
     if (!getdvarint("art_review", 0)) {
         if (level.var_31aefea8 == "objective_qzone") {
-            self thread namespace_d754dd61::function_ec18f079();
+            self thread cp_mi_sing_blackstation_qzone::function_ec18f079();
         } else if (level.var_31aefea8 == "objective_warlord_igc") {
             self util::function_16c71b8(1);
         }
     }
     switch (level.var_31aefea8) {
-    case 142:
-    case 133:
+    case "objective_igc":
+    case "objective_warlord_igc":
         self thread function_cc28a20d("wind_effects_anchor", "anchor_intro_wind", "tanker_smash", 1);
         self thread function_cc28a20d("wind_effects", "trigger_pier_wind", "tanker_smash", 1);
         self.var_2d166751 = 0;
         break;
-    case 132:
-    case 6:
+    case "objective_qzone":
+    case "objective_warlord":
         self thread function_cc28a20d("wind_effects_anchor", "anchor_intro_wind", "tanker_smash", 1);
         self thread function_cc28a20d("wind_effects", "trigger_pier_wind", "tanker_smash", 1);
-        wait(0.1);
+        wait 0.1;
         self.var_2d166751 = 0.1;
         self clientfield::set_to_player("toggle_rain_sprite", 1);
         break;
-    case 139:
+    case "objective_anchor_intro":
         self thread function_cc28a20d("wind_effects_anchor", "anchor_intro_wind", "tanker_smash", 1);
         self thread function_cc28a20d("wind_effects", "trigger_pier_wind", "tanker_smash", 1);
         self thread namespace_79e1cd97::function_2c33b48e();
         self thread namespace_79e1cd97::function_f2e7ba4b();
         self thread namespace_79e1cd97::function_55221935();
-        self thread namespace_8b9f718f::function_b3d8d3f5();
-        wait(0.1);
+        self thread cp_mi_sing_blackstation_port::function_b3d8d3f5();
+        wait 0.1;
         self.var_2d166751 = 0.4;
         self clientfield::set_to_player("toggle_rain_sprite", 2);
         break;
-    case 144:
+    case "objective_port_assault":
         self thread function_cc28a20d("wind_effects_anchor", "anchor_intro_wind", "tanker_smash", 1);
         self thread function_cc28a20d("wind_effects", "trigger_pier_wind", "tanker_smash", 1);
         self thread namespace_79e1cd97::function_2c33b48e();
         self thread namespace_79e1cd97::function_f2e7ba4b();
         self thread namespace_79e1cd97::function_55221935();
-        self thread namespace_8b9f718f::function_b3d8d3f5();
+        self thread cp_mi_sing_blackstation_port::function_b3d8d3f5();
         break;
-    case 140:
-    case 145:
+    case "objective_barge_assault":
+    case "objective_storm_surge":
         self thread namespace_79e1cd97::function_2c33b48e();
         self thread namespace_79e1cd97::function_55221935();
-        self thread namespace_8b9f718f::function_b3d8d3f5();
+        self thread cp_mi_sing_blackstation_port::function_b3d8d3f5();
         break;
-    case 141:
-    case 143:
-        wait(0.1);
+    case "objective_cross_debris":
+    case "objective_police_station":
+        wait 0.1;
         self.var_2d166751 = 0.1;
         self clientfield::set_to_player("toggle_rain_sprite", 1);
         break;
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 4, eflags: 0x1 linked
 // Checksum 0x86af4e46, Offset: 0x2ca0
 // Size: 0x150
@@ -357,7 +357,7 @@ function function_cc28a20d(str_fx, str_trigger, str_flag, var_df107013) {
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 1, eflags: 0x1 linked
 // Checksum 0x69899f4b, Offset: 0x2df8
 // Size: 0x6c
@@ -368,7 +368,7 @@ function function_f891013e(str_flag) {
     self clientfield::set_to_player("wind_effects", 0);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0x17ac26c3, Offset: 0x2e70
 // Size: 0x44
@@ -377,7 +377,7 @@ function on_player_loadout() {
     self giveweapon(var_91c59c31);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0x847aa8ef, Offset: 0x2ec0
 // Size: 0x574
@@ -413,31 +413,31 @@ function register_clientfields() {
     clientfield::register("world", "qzone_debris", 1, 1, "counter");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0x39ce45a3, Offset: 0x3440
 // Size: 0x3bc
 function function_673254cc() {
-    skipto::add("objective_igc", &namespace_d754dd61::function_6ec9ed4d, undefined, &namespace_d754dd61::function_25dc0657);
-    skipto::add("objective_qzone", &namespace_d754dd61::function_a19cdfad, undefined, &namespace_d754dd61::function_58aef8b7);
-    skipto::function_d68e678e("objective_warlord_igc", &namespace_d754dd61::function_b457621f, undefined, &namespace_d754dd61::function_487563c5);
-    skipto::add("objective_warlord", &namespace_d754dd61::function_f1376b81, undefined, &namespace_d754dd61::function_68cbd90b);
-    skipto::function_d68e678e("objective_anchor_intro", &namespace_8b9f718f::function_bd209495, undefined, &namespace_8b9f718f::function_88ddfb38);
-    skipto::function_d68e678e("objective_port_assault", &namespace_8b9f718f::function_7a0b2bc4, undefined, &namespace_8b9f718f::function_93433fef);
-    skipto::function_d68e678e("objective_barge_assault", &namespace_8b9f718f::function_43296c4c, undefined, &namespace_8b9f718f::function_c57c7177);
-    skipto::function_d68e678e("objective_storm_surge", &namespace_8b9f718f::function_f93ea5f3, undefined, &namespace_8b9f718f::function_7cde31a6);
+    skipto::add("objective_igc", &cp_mi_sing_blackstation_qzone::function_6ec9ed4d, undefined, &cp_mi_sing_blackstation_qzone::objective_igc_done);
+    skipto::add("objective_qzone", &cp_mi_sing_blackstation_qzone::function_a19cdfad, undefined, &cp_mi_sing_blackstation_qzone::function_58aef8b7);
+    skipto::function_d68e678e("objective_warlord_igc", &cp_mi_sing_blackstation_qzone::function_b457621f, undefined, &cp_mi_sing_blackstation_qzone::function_487563c5);
+    skipto::add("objective_warlord", &cp_mi_sing_blackstation_qzone::function_f1376b81, undefined, &cp_mi_sing_blackstation_qzone::function_68cbd90b);
+    skipto::function_d68e678e("objective_anchor_intro", &cp_mi_sing_blackstation_port::function_bd209495, undefined, &cp_mi_sing_blackstation_port::function_88ddfb38);
+    skipto::function_d68e678e("objective_port_assault", &cp_mi_sing_blackstation_port::function_7a0b2bc4, undefined, &cp_mi_sing_blackstation_port::function_93433fef);
+    skipto::function_d68e678e("objective_barge_assault", &cp_mi_sing_blackstation_port::function_43296c4c, undefined, &cp_mi_sing_blackstation_port::function_c57c7177);
+    skipto::function_d68e678e("objective_storm_surge", &cp_mi_sing_blackstation_port::function_f93ea5f3, undefined, &cp_mi_sing_blackstation_port::function_7cde31a6);
     skipto::function_d68e678e("objective_subway", &function_e4a0bb, undefined, &function_b501c2d1);
-    skipto::function_d68e678e("objective_police_station", &namespace_933eb669::function_23a0cc93, undefined, &namespace_933eb669::function_88d892b9);
-    skipto::function_d68e678e("objective_kane_intro", &namespace_933eb669::function_1629236a, undefined, &namespace_933eb669::function_5d496554);
-    skipto::function_d68e678e("objective_comm_relay_traverse", &namespace_641b22d4::function_c9040e7d, undefined, &namespace_641b22d4::function_311be427);
-    skipto::function_d68e678e("objective_comm_relay", &namespace_641b22d4::function_a2073f94, undefined, &namespace_641b22d4::function_7e7b796a);
-    skipto::function_d68e678e("objective_cross_debris", &namespace_e785bfa0::function_e9acb08, undefined, &namespace_e785bfa0::function_508330ae);
-    skipto::function_d68e678e("objective_blackstation_exterior", &namespace_4040b6c2::function_3450aa78, undefined, &namespace_4040b6c2::function_b5e9c2fe);
-    skipto::function_d68e678e("objective_blackstation_interior", &namespace_4040b6c2::function_a870c9be, undefined, &namespace_4040b6c2::function_2846e098);
-    skipto::function_d68e678e("objective_end_igc", &namespace_4040b6c2::function_2783ca83, undefined, &namespace_4040b6c2::function_392085c9);
+    skipto::function_d68e678e("objective_police_station", &cp_mi_sing_blackstation_police_station::function_23a0cc93, undefined, &cp_mi_sing_blackstation_police_station::function_88d892b9);
+    skipto::function_d68e678e("objective_kane_intro", &cp_mi_sing_blackstation_police_station::function_1629236a, undefined, &cp_mi_sing_blackstation_police_station::function_5d496554);
+    skipto::function_d68e678e("objective_comm_relay_traverse", &cp_mi_sing_blackstation_comm_relay::function_c9040e7d, undefined, &cp_mi_sing_blackstation_comm_relay::function_311be427);
+    skipto::function_d68e678e("objective_comm_relay", &cp_mi_sing_blackstation_comm_relay::function_a2073f94, undefined, &cp_mi_sing_blackstation_comm_relay::function_7e7b796a);
+    skipto::function_d68e678e("objective_cross_debris", &cp_mi_sing_blackstation_cross_debris::function_e9acb08, undefined, &cp_mi_sing_blackstation_cross_debris::function_508330ae);
+    skipto::function_d68e678e("objective_blackstation_exterior", &cp_mi_sing_blackstation_station::function_3450aa78, undefined, &cp_mi_sing_blackstation_station::function_b5e9c2fe);
+    skipto::function_d68e678e("objective_blackstation_interior", &cp_mi_sing_blackstation_station::function_a870c9be, undefined, &cp_mi_sing_blackstation_station::function_2846e098);
+    skipto::function_d68e678e("objective_end_igc", &cp_mi_sing_blackstation_station::function_2783ca83, undefined, &cp_mi_sing_blackstation_station::function_392085c9);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x1 linked
 // Checksum 0x405f2bf7, Offset: 0x3808
 // Size: 0xdc
@@ -447,14 +447,14 @@ function function_e4a0bb(str_objective, var_74cd64bc) {
         namespace_79e1cd97::function_bff1a867("objective_subway");
         objectives::complete("cp_level_blackstation_intercept");
         load::function_a2995f22();
-        array::thread_all(level.activeplayers, &namespace_3dc5b645::function_99f304f0);
+        array::thread_all(level.activeplayers, &cp_mi_sing_blackstation_subway::function_99f304f0);
         level thread namespace_4297372::function_37f7c98d();
     }
     level thread namespace_79e1cd97::function_6778ea09("none");
-    namespace_3dc5b645::function_822cae8a();
+    cp_mi_sing_blackstation_subway::function_822cae8a();
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 4, eflags: 0x1 linked
 // Checksum 0x97b808e1, Offset: 0x38f0
 // Size: 0xc4
@@ -466,7 +466,7 @@ function function_b501c2d1(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     level thread scene::play("p7_fxanim_cp_blackstation_streetlight01_1on_s4_bundle");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0xbc2376a5, Offset: 0x39c0
 // Size: 0x34
@@ -474,43 +474,43 @@ function givecustomloadout(takeallweapons, alreadyspawned) {
     self takeweapon(self.grenadetypesecondary);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe06b8251, Offset: 0x3a00
 // Size: 0x146
 function function_73dee914() {
     self endon(#"death");
     switch (level.var_31aefea8) {
-    case 183:
-    case 184:
-    case 185:
-    case 181:
-    case 11:
+    case "objective_blackstation_exterior":
+    case "objective_blackstation_interior":
+    case "objective_end_igc":
+    case "objective_kane_intro":
+    case "objective_subway":
         self thread namespace_79e1cd97::function_6778ea09("none");
         break;
-    case 132:
-    case 6:
-    case 133:
+    case "objective_qzone":
+    case "objective_warlord":
+    case "objective_warlord_igc":
         self thread namespace_79e1cd97::function_6778ea09("light_se");
         break;
-    case 139:
-    case 144:
+    case "objective_anchor_intro":
+    case "objective_port_assault":
         self thread namespace_79e1cd97::function_6778ea09("med_se");
         break;
-    case 140:
-    case 145:
+    case "objective_barge_assault":
+    case "objective_storm_surge":
         self thread namespace_79e1cd97::function_6778ea09("drench_se");
         break;
-    case 182:
-    case 9:
-    case 141:
-    case 143:
+    case "objective_comm_relay":
+    case "objective_comm_relay_traverse":
+    case "objective_cross_debris":
+    case "objective_police_station":
         self thread namespace_79e1cd97::function_6778ea09("light_ne");
         break;
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdeef934e, Offset: 0x3b50
 // Size: 0xb2
@@ -521,7 +521,7 @@ function function_6364bd7d() {
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0x13d6d8d8, Offset: 0x3c10
 // Size: 0x118
@@ -541,7 +541,7 @@ function function_3187983c() {
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 1, eflags: 0x1 linked
 // Checksum 0xefbeaac4, Offset: 0x3d30
 // Size: 0xd4
@@ -559,7 +559,7 @@ function function_c0861aa3(e_trig) {
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 1, eflags: 0x1 linked
 // Checksum 0x294a11ed, Offset: 0x3e10
 // Size: 0x94

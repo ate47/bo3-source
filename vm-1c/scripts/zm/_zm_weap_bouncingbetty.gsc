@@ -30,9 +30,9 @@ function __init__() {
     level.bettydamagemin = 800;
     level.bettydamageheight = level.bettyjumpheight;
     /#
-        setdvar("<unknown string>", level.bettydamagemax);
-        setdvar("<unknown string>", level.bettydamagemin);
-        setdvar("<unknown string>", level.bettyjumpheight);
+        setdvar("<dev string:x28>", level.bettydamagemax);
+        setdvar("<dev string:x39>", level.bettydamagemin);
+        setdvar("<dev string:x4a>", level.bettyjumpheight);
     #/
 }
 

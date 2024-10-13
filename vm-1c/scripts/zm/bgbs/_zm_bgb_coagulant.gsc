@@ -8,9 +8,9 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_4e2ad0b7;
+#namespace zm_bgb_coagulant;
 
-// Namespace namespace_4e2ad0b7
+// Namespace zm_bgb_coagulant
 // Params 0, eflags: 0x2
 // Checksum 0xa8c7af2d, Offset: 0x1a8
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_coagulant", &__init__, undefined, "bgb");
 }
 
-// Namespace namespace_4e2ad0b7
+// Namespace zm_bgb_coagulant
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2dd2054a, Offset: 0x1e8
 // Size: 0x64
@@ -29,7 +29,7 @@ function __init__() {
     bgb::register("zm_bgb_coagulant", "time", 1200, &enable, &disable, undefined, undefined);
 }
 
-// Namespace namespace_4e2ad0b7
+// Namespace zm_bgb_coagulant
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7c9767ba, Offset: 0x258
 // Size: 0x68
@@ -44,7 +44,7 @@ function enable() {
     }
 }
 
-// Namespace namespace_4e2ad0b7
+// Namespace zm_bgb_coagulant
 // Params 0, eflags: 0x1 linked
 // Checksum 0x62d30f54, Offset: 0x2c8
 // Size: 0xe

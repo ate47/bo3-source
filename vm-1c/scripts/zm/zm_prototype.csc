@@ -34,9 +34,9 @@
 #using scripts/shared/util_shared;
 #using scripts/shared/clientfield_shared;
 
-#namespace namespace_fbe983bd;
+#namespace zm_prototype;
 
-// Namespace namespace_fbe983bd
+// Namespace zm_prototype
 // Params 0, eflags: 0x2
 // Checksum 0x98ee5ad8, Offset: 0x590
 // Size: 0x34
@@ -44,15 +44,15 @@ function autoexec function_2dc19561() {
     system::register("zm_prototype", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_fbe983bd
+// Namespace zm_prototype
 // Params 0, eflags: 0x1 linked
 // Checksum 0x28c4f651, Offset: 0x5d0
 // Size: 0x24
 function __init__() {
-    println("ZPOff");
+    println("<dev string:x28>");
 }
 
-// Namespace namespace_fbe983bd
+// Namespace zm_prototype
 // Params 0, eflags: 0x2
 // Checksum 0xcacf6a26, Offset: 0x600
 // Size: 0x1c
@@ -61,35 +61,35 @@ function autoexec function_d9af860b() {
     level.bgb_in_use = 1;
 }
 
-// Namespace namespace_fbe983bd
+// Namespace zm_prototype
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6f73405a, Offset: 0x628
 // Size: 0xbc
 function main() {
-    namespace_5150364b::main_start();
-    namespace_5b48d6ca::main();
+    zm_prototype_ffotd::main_start();
+    zm_prototype_fx::main();
     level.default_game_mode = "zclassic";
     level.default_start_location = "default";
     level._uses_sticky_grenades = 1;
     function_b211e563();
-    level thread namespace_f651e9a8::main();
+    level thread zm_prototype_amb::main();
     util::waitforclient(0);
     level thread function_6ac83719();
-    namespace_5150364b::main_end();
+    zm_prototype_ffotd::main_end();
 }
 
-// Namespace namespace_fbe983bd
+// Namespace zm_prototype
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3a1e6247, Offset: 0x6f0
 // Size: 0x4c
 function function_b211e563() {
     include_weapons();
     load::main();
-    namespace_570c8452::init();
+    _zm_weap_cymbal_monkey::init();
     level thread function_d87a7dcc();
 }
 
-// Namespace namespace_fbe983bd
+// Namespace zm_prototype
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1c24a6a, Offset: 0x748
 // Size: 0x24
@@ -97,7 +97,7 @@ function include_weapons() {
     zm_weapons::load_weapon_spec_from_table("gamedata/weapons/zm/zm_prototype_weapons.csv", 1);
 }
 
-// Namespace namespace_fbe983bd
+// Namespace zm_prototype
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7b8de698, Offset: 0x778
 // Size: 0xca
@@ -115,7 +115,7 @@ function function_d87a7dcc() {
     }
 }
 
-// Namespace namespace_fbe983bd
+// Namespace zm_prototype
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1fd1531d, Offset: 0x850
 // Size: 0x5c

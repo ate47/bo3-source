@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_a5c10e4b;
+#namespace mp_sector_sound;
 
-// Namespace namespace_a5c10e4b
+// Namespace mp_sector_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x90
 // Size: 0x4

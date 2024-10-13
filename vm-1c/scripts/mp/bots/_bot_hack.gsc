@@ -83,10 +83,10 @@ function function_e34eb514(tanks) {
 function function_a550d9c3() {
     if (function_4ace4348()) {
         self setstance("crouch");
-        wait(0.25);
+        wait 0.25;
         self function_cef3c19f(self.origin, 24, 4, "hack");
         self function_5b8cb97f(level.var_2e7f813d + 1);
-        wait(level.var_2e7f813d + 1);
+        wait level.var_2e7f813d + 1;
         self setstance("stand");
         self function_358b5b46("hack");
     }
@@ -130,7 +130,7 @@ function function_a550d9c3() {
             goal = self function_105453ff(tank);
             if (isdefined(goal)) {
                 self function_cef3c19f(goal, 24, 3, "hack");
-                wait(0.5);
+                wait 0.5;
                 return;
             }
         }

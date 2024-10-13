@@ -24,7 +24,7 @@ function function_4678364() {
         struct.height = 64;
         struct.script_float = 5;
         while (!isdefined(var_3be8a3b8[i].cost)) {
-            wait(0.05);
+            wait 0.05;
         }
         struct.script_int = int(var_3be8a3b8[i].cost * -1);
         struct.perk = var_3be8a3b8[i];
@@ -33,7 +33,7 @@ function function_4678364() {
         }
         var_3be8a3b8[i].hackable = struct;
         struct.var_39787651 = 1;
-        namespace_6d813654::function_66764564(struct, &function_b4d7ca0b, &function_194e8dfe);
+        zm_equip_hacker::function_66764564(struct, &function_b4d7ca0b, &function_194e8dfe);
     }
     level.var_d1834ad6 = &function_84c54257;
 }
@@ -44,7 +44,7 @@ function function_4678364() {
 // Size: 0x36
 function function_84c54257() {
     if (isdefined(self.hackable)) {
-        namespace_6d813654::function_fcbe2f17(self.hackable);
+        zm_equip_hacker::function_fcbe2f17(self.hackable);
         self.hackable = undefined;
     }
 }

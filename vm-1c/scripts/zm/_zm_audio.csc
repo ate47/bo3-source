@@ -52,7 +52,7 @@ function on_player_spawned(localclientnum) {
 function delay_set_exert_id(newval) {
     self endon(#"entityshutdown");
     self endon(#"sndendexertoverride");
-    wait(0.5);
+    wait 0.5;
     self.player_exert_id = newval;
 }
 
@@ -92,7 +92,7 @@ function isspeaking_cb(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 function zmbmuslooper() {
     ent = spawn(0, (0, 0, 0), "script_origin");
     playsound(0, "mus_zmb_gamemode_start", (0, 0, 0));
-    wait(10);
+    wait 10;
     ent playloopsound("mus_zmb_gamemode_loop", 0.05);
     ent thread waitfor_music_stop();
 }
@@ -105,7 +105,7 @@ function waitfor_music_stop() {
     level waittill(#"stpm");
     self stopallloopsounds(0.1);
     playsound(0, "mus_zmb_gamemode_end", (0, 0, 0));
-    wait(1);
+    wait 1;
     self delete();
 }
 
@@ -179,7 +179,7 @@ function sndvonotifydtp(localclientnum, notifystring) {
     player = undefined;
     while (!isdefined(player)) {
         player = getnonpredictedlocalplayer(localclientnum);
-        wait(0.05);
+        wait 0.05;
     }
     player endon(#"disconnect");
     for (;;) {
@@ -196,7 +196,7 @@ function sndmeleeswipe(localclientnum, notifystring) {
     player = undefined;
     while (!isdefined(player)) {
         player = getnonpredictedlocalplayer(localclientnum);
-        wait(0.05);
+        wait 0.05;
     }
     player endon(#"disconnect");
     for (;;) {
@@ -235,7 +235,7 @@ function sndvonotifyplain(localclientnum, notifystring) {
     player = undefined;
     while (!isdefined(player)) {
         player = getnonpredictedlocalplayer(localclientnum);
-        wait(0.05);
+        wait 0.05;
     }
     player endon(#"disconnect");
     for (;;) {
@@ -253,7 +253,7 @@ function sndvonotifyplain(localclientnum, notifystring) {
 // Size: 0x6c
 function end_gameover_snapshot() {
     level util::waittill_any("demo_jump", "demo_player_switch", "snd_clear_script_duck");
-    wait(1);
+    wait 1;
     audio::snd_set_snapshot("default");
     level thread gameover_snapshot();
 }

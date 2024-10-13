@@ -284,7 +284,7 @@ function challengekills(data, time) {
         }
     }
     switch (weaponclass) {
-    case 75:
+    case "weapon_pistol":
         if (data.smeansofdeath == "MOD_HEAD_SHOT") {
             player.pers["pistolHeadshot"]++;
             if (player.pers["pistolHeadshot"] >= 10) {
@@ -293,7 +293,7 @@ function challengekills(data, time) {
             }
         }
         break;
-    case 72:
+    case "weapon_assault":
         if (data.smeansofdeath == "MOD_HEAD_SHOT") {
             player.pers["assaultRifleHeadshot"]++;
             if (player.pers["assaultRifleHeadshot"] >= 5) {
@@ -302,10 +302,10 @@ function challengekills(data, time) {
             }
         }
         break;
-    case 74:
-    case 76:
+    case "weapon_lmg":
+    case "weapon_smg":
         break;
-    case 77:
+    case "weapon_sniper":
         if (isdefined(victim.firsttimedamaged) && victim.firsttimedamaged == time) {
             player addplayerstat("kill_enemy_one_bullet_sniper", 1);
             player addweaponstat(weapon, "kill_enemy_one_bullet_sniper", 1);
@@ -318,7 +318,7 @@ function challengekills(data, time) {
             }
         }
         break;
-    case 73:
+    case "weapon_cqb":
         if (isdefined(victim.firsttimedamaged) && victim.firsttimedamaged == time) {
             player addplayerstat("kill_enemy_one_bullet_shotgun", 1);
             player addweaponstat(weapon, "kill_enemy_one_bullet_shotgun", 1);
@@ -362,11 +362,11 @@ function challengekills(data, time) {
     }
     lethalgrenadekill = 0;
     switch (weapon.name) {
-    case 98:
+    case "bouncingbetty":
         lethalgrenadekill = 1;
         player notify(#"lethalgrenadekill");
         break;
-    case 102:
+    case "hatchet":
         player bladekill();
         lethalgrenadekill = 1;
         player notify(#"lethalgrenadekill");
@@ -377,7 +377,7 @@ function challengekills(data, time) {
             }
         }
         break;
-    case 99:
+    case "claymore":
         lethalgrenadekill = 1;
         player notify(#"lethalgrenadekill");
         player addplayerstat("kill_with_claymore", 1);
@@ -385,18 +385,18 @@ function challengekills(data, time) {
             player addplayerstat("kill_with_hacked_claymore", 1);
         }
         break;
-    case 103:
+    case "satchel_charge":
         lethalgrenadekill = 1;
         player notify(#"lethalgrenadekill");
         player addplayerstat("kill_with_c4", 1);
         break;
-    case 100:
+    case "destructible_car":
         player addplayerstat("kill_enemy_withcar", 1);
         if (isdefined(inflictor.destroyingweapon)) {
             player addweaponstat(inflictor.destroyingweapon, "kills_from_cars", 1);
         }
         break;
-    case 104:
+    case "sticky_grenade":
         lethalgrenadekill = 1;
         player notify(#"lethalgrenadekill");
         if (isdefined(victim.explosiveinfo["stuckToPlayer"]) && victim.explosiveinfo["stuckToPlayer"] == victim) {
@@ -407,7 +407,7 @@ function challengekills(data, time) {
             }
         }
         break;
-    case 101:
+    case "frag_grenade":
         lethalgrenadekill = 1;
         player notify(#"lethalgrenadekill");
         if (isdefined(data.victim.explosiveinfo["cookedKill"]) && data.victim.explosiveinfo["cookedKill"] == 1) {

@@ -26,9 +26,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_bd8be9f1;
+#namespace zm_ai_clone;
 
-// Namespace namespace_bd8be9f1
+// Namespace zm_ai_clone
 // Params 0, eflags: 0x2
 // Checksum 0x3656668a, Offset: 0x3a8
 // Size: 0x3c
@@ -36,20 +36,20 @@ function autoexec function_2dc19561() {
     system::register("zm_ai_clone", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_bd8be9f1
+// Namespace zm_ai_clone
 // Params 0, eflags: 0x1 linked
 // Checksum 0x82d72a9f, Offset: 0x3f0
 // Size: 0x64
 function __init__() {
     level flag::init("thrasher_round");
     /#
-        execdevgui("<unknown string>");
+        execdevgui("<dev string:x28>");
         thread function_78933fc2();
     #/
     init();
 }
 
-// Namespace namespace_bd8be9f1
+// Namespace zm_ai_clone
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5d118d13, Offset: 0x460
 // Size: 0x14
@@ -57,7 +57,7 @@ function __main__() {
     register_clientfields();
 }
 
-// Namespace namespace_bd8be9f1
+// Namespace zm_ai_clone
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x480
 // Size: 0x4
@@ -65,7 +65,7 @@ function register_clientfields() {
     
 }
 
-// Namespace namespace_bd8be9f1
+// Namespace zm_ai_clone
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf72a6783, Offset: 0x490
 // Size: 0x14
@@ -73,7 +73,7 @@ function init() {
     precache();
 }
 
-// Namespace namespace_bd8be9f1
+// Namespace zm_ai_clone
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x4b0
 // Size: 0x4
@@ -83,31 +83,31 @@ function precache() {
 
 /#
 
-    // Namespace namespace_bd8be9f1
+    // Namespace zm_ai_clone
     // Params 0, eflags: 0x1 linked
     // Checksum 0x1a73a026, Offset: 0x4c0
     // Size: 0x44
     function function_78933fc2() {
-        level flagsys::wait_till("<unknown string>");
+        level flagsys::wait_till("<dev string:x45>");
         zm_devgui::add_custom_devgui_callback(&function_46924c5);
     }
 
-    // Namespace namespace_bd8be9f1
+    // Namespace zm_ai_clone
     // Params 1, eflags: 0x1 linked
     // Checksum 0x52e3cfd0, Offset: 0x510
     // Size: 0x1e6
     function function_46924c5(cmd) {
         switch (cmd) {
-        case 8:
+        case "<dev string:x5e>":
             players = getplayers();
             queryresult = positionquery_source_navigation(players[0].origin, -128, 256, -128, 20);
             if (isdefined(queryresult) && queryresult.data.size > 0) {
-                clone = spawnactor("<unknown string>", queryresult.data[0].origin, (0, 0, 0), "<unknown string>", 1);
+                clone = spawnactor("<dev string:x6a>", queryresult.data[0].origin, (0, 0, 0), "<dev string:x82>", 1);
                 clone namespace_16383e98::function_c80742de(clone, players[0], players[0]);
             }
             break;
-        case 8:
-            clones = getaiarchetypearray("<unknown string>");
+        case "<dev string:x83>":
+            clones = getaiarchetypearray("<dev string:x8e>");
             if (clones.size > 0) {
                 foreach (clone in clones) {
                     clone kill();

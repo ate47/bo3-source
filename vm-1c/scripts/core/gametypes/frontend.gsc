@@ -59,13 +59,13 @@ function main() {
     /#
         level thread dailychallengedevguiinit();
         level thread function_4afc218();
-        setdvar("cp_bunk_anim_type", 0);
-        adddebugcommand("cp_bunk_anim_type");
-        setdvar("cp_bunk_anim_type", "cp_bunk_anim_type");
-        adddebugcommand("cp_bunk_anim_type");
-        adddebugcommand("cp_bunk_anim_type");
-        adddebugcommand("cp_bunk_anim_type");
-        adddebugcommand("cp_bunk_anim_type");
+        setdvar("<dev string:x28>", 0);
+        adddebugcommand("<dev string:x41>");
+        setdvar("<dev string:x91>", "<dev string:xa8>");
+        adddebugcommand("<dev string:xb0>");
+        adddebugcommand("<dev string:x104>");
+        adddebugcommand("<dev string:x15a>");
+        adddebugcommand("<dev string:x1b6>");
     #/
     level thread function_78987129();
     level thread zm_frontend_zm_bgb_chance::zm_frontend_bgb_slots_logic();
@@ -77,27 +77,27 @@ function main() {
 // Checksum 0x88cb220a, Offset: 0xb60
 // Size: 0x114
 function function_f7d50167() {
-    wait(0.05);
+    wait 0.05;
     if (world.var_1048aced !== 0) {
-        world.var_3dcac2e2 = 0;
+        world.cp_bunk_anim_type = 0;
         level clientfield::set("first_time_flow", 1);
         /#
-            printtoprightln("cp_bunk_anim_type", (1, 1, 1));
+            printtoprightln("<dev string:x20e>", (1, 1, 1));
         #/
         return;
     }
     if (math::cointoss()) {
-        world.var_3dcac2e2 = 0;
+        world.cp_bunk_anim_type = 0;
         /#
-            printtoprightln("cp_bunk_anim_type", (1, 1, 1));
+            printtoprightln("<dev string:x22e>", (1, 1, 1));
         #/
     } else {
-        world.var_3dcac2e2 = 1;
+        world.cp_bunk_anim_type = 1;
         /#
-            printtoprightln("cp_bunk_anim_type", (1, 1, 1));
+            printtoprightln("<dev string:x23b>", (1, 1, 1));
         #/
     }
-    level clientfield::set("cp_bunk_anim_type", world.var_3dcac2e2);
+    level clientfield::set("cp_bunk_anim_type", world.cp_bunk_anim_type);
 }
 
 // Namespace frontend
@@ -105,13 +105,13 @@ function function_f7d50167() {
 // Checksum 0xf94ac8b6, Offset: 0xc80
 // Size: 0x206
 function function_78987129() {
-    wait(5);
+    wait 5;
     var_765b3a01 = getentarray("sp_zombie_frontend", "targetname");
     while (true) {
         var_765b3a01 = array::randomize(var_765b3a01);
         foreach (sp_zombie in var_765b3a01) {
             while (getaicount() >= 20) {
-                wait(1);
+                wait 1;
             }
             ai_zombie = sp_zombie spawnfromspawner();
             if (isdefined(ai_zombie)) {
@@ -124,7 +124,7 @@ function function_78987129() {
                 ai_zombie.ignoreall = 1;
                 sp_zombie.count++;
             }
-            wait(randomfloatrange(3, 8));
+            wait randomfloatrange(3, 8);
         }
     }
 }
@@ -167,37 +167,37 @@ function function_c7410880() {
             continue;
         }
         switch (response) {
-        case 33:
+        case "greeting":
             thread function_d9abcfe();
             break;
-        case 35:
+        case "greeting_first":
             function_888326b9("vox_mark_greeting_first");
             break;
-        case 34:
+        case "greeting_broke":
             thread function_f174105a();
             break;
-        case 36:
+        case "roll":
             function_888326b9("vox_mark_roll_in_progress");
             break;
-        case 29:
+        case "complete_common":
             function_888326b9("vox_mark_complete_common");
             break;
-        case 32:
+        case "complete_rare":
             function_888326b9("vox_mark_complete_rare");
             break;
-        case 31:
+        case "complete_legendary":
             function_888326b9("vox_mark_complete_legendary");
             break;
-        case 30:
+        case "complete_epic":
             function_888326b9("vox_mark_complete_epic");
             break;
-        case 27:
+        case "burn_duplicates":
             thread function_ae2deb8();
             break;
-        case 37:
+        case "stopsounds":
             level.var_cc4f1e31 stopsounds();
             break;
-        case 28:
+        case "closed":
             level.var_cc4f1e31 stopsounds();
             level.var_cc4f1e31 thread animation::stop(0.2);
             level.var_bd18dfbe thread animation::stop(0.2);
@@ -317,13 +317,13 @@ function function_c0d629d(animname, idleanimname, var_19357182, tagangles) {
     // Checksum 0x95cc8cec, Offset: 0x16e0
     // Size: 0x15e
     function dailychallengedevguiinit() {
-        setdvar("cp_bunk_anim_type", 0);
-        num_rows = tablelookuprowcount("cp_bunk_anim_type");
+        setdvar("<dev string:x249>", 0);
+        num_rows = tablelookuprowcount("<dev string:x25d>");
         for (row_num = 2; row_num < num_rows; row_num++) {
-            challenge_name = tablelookupcolumnforrow("cp_bunk_anim_type", row_num, 5);
+            challenge_name = tablelookupcolumnforrow("<dev string:x25d>", row_num, 5);
             challenge_name = getsubstr(challenge_name, 11);
             display_row_num = row_num - 2;
-            devgui_string = "cp_bunk_anim_type" + "cp_bunk_anim_type" + (display_row_num < 10 ? "cp_bunk_anim_type" + display_row_num : display_row_num) + "cp_bunk_anim_type" + challenge_name + "cp_bunk_anim_type" + row_num + "cp_bunk_anim_type";
+            devgui_string = "<dev string:x284>" + "<dev string:x291>" + (display_row_num < 10 ? "<dev string:x2a6>" + display_row_num : display_row_num) + "<dev string:x2a8>" + challenge_name + "<dev string:x2aa>" + row_num + "<dev string:x2c2>";
             adddebugcommand(devgui_string);
         }
     }
@@ -335,18 +335,18 @@ function function_c0d629d(animname, idleanimname, var_19357182, tagangles) {
     function dailychallengedevguithink() {
         self endon(#"disconnect");
         while (true) {
-            daily_challenge_cmd = getdvarint("cp_bunk_anim_type");
+            daily_challenge_cmd = getdvarint("<dev string:x249>");
             if (daily_challenge_cmd == 0 || !sessionmodeiszombiesgame()) {
-                wait(1);
+                wait 1;
                 continue;
             }
             daily_challenge_row = daily_challenge_cmd;
-            daily_challenge_index = tablelookupcolumnforrow("cp_bunk_anim_type", daily_challenge_row, 0);
-            daily_challenge_stat = tablelookupcolumnforrow("cp_bunk_anim_type", daily_challenge_row, 4);
-            adddebugcommand("cp_bunk_anim_type" + daily_challenge_stat + "cp_bunk_anim_type" + "cp_bunk_anim_type");
-            adddebugcommand("cp_bunk_anim_type" + daily_challenge_index + "cp_bunk_anim_type");
-            adddebugcommand("cp_bunk_anim_type" + "cp_bunk_anim_type");
-            setdvar("cp_bunk_anim_type", 0);
+            daily_challenge_index = tablelookupcolumnforrow("<dev string:x25d>", daily_challenge_row, 0);
+            daily_challenge_stat = tablelookupcolumnforrow("<dev string:x25d>", daily_challenge_row, 4);
+            adddebugcommand("<dev string:x2c6>" + daily_challenge_stat + "<dev string:x2e4>" + "<dev string:x2f6>");
+            adddebugcommand("<dev string:x2f9>" + daily_challenge_index + "<dev string:x2f6>");
+            adddebugcommand("<dev string:x33c>" + "<dev string:x2f6>");
+            setdvar("<dev string:x249>", 0);
         }
     }
 
@@ -355,24 +355,24 @@ function function_c0d629d(animname, idleanimname, var_19357182, tagangles) {
     // Checksum 0x498c0abc, Offset: 0x19c8
     // Size: 0x194
     function function_4afc218() {
-        setdvar("cp_bunk_anim_type", 0);
+        setdvar("<dev string:x382>", 0);
         while (true) {
-            if (getdvarint("cp_bunk_anim_type") <= 0 || !sessionmodeiszombiesgame()) {
-                wait(1);
+            if (getdvarint("<dev string:x395>") <= 0 || !sessionmodeiszombiesgame()) {
+                wait 1;
                 continue;
             }
-            adddebugcommand("cp_bunk_anim_type");
-            adddebugcommand("cp_bunk_anim_type");
-            adddebugcommand("cp_bunk_anim_type");
-            adddebugcommand("cp_bunk_anim_type");
-            adddebugcommand("cp_bunk_anim_type");
-            adddebugcommand("cp_bunk_anim_type");
-            adddebugcommand("cp_bunk_anim_type");
-            adddebugcommand("cp_bunk_anim_type");
-            adddebugcommand("cp_bunk_anim_type");
-            adddebugcommand("cp_bunk_anim_type");
-            adddebugcommand("cp_bunk_anim_type");
-            adddebugcommand("cp_bunk_anim_type");
+            adddebugcommand("<dev string:x3a2>");
+            adddebugcommand("<dev string:x3e9>");
+            adddebugcommand("<dev string:x432>");
+            adddebugcommand("<dev string:x481>");
+            adddebugcommand("<dev string:x4d2>");
+            adddebugcommand("<dev string:x51f>");
+            adddebugcommand("<dev string:x56e>");
+            adddebugcommand("<dev string:x5bb>");
+            adddebugcommand("<dev string:x60a>");
+            adddebugcommand("<dev string:x65f>");
+            adddebugcommand("<dev string:x6b6>");
+            adddebugcommand("<dev string:x705>");
             break;
         }
     }
@@ -384,27 +384,27 @@ function function_c0d629d(animname, idleanimname, var_19357182, tagangles) {
     function function_ead1dc1a() {
         self endon(#"disconnect");
         while (true) {
-            if (getdvarstring("cp_bunk_anim_type") == "cp_bunk_anim_type") {
-                wait(0.2);
+            if (getdvarstring("<dev string:x382>") == "<dev string:x756>") {
+                wait 0.2;
                 continue;
             }
-            var_a508ba69 = getdvarstring("cp_bunk_anim_type");
+            var_a508ba69 = getdvarstring("<dev string:x382>");
             command = getsubstr(var_a508ba69, 0, 3);
             map_name = getsubstr(var_a508ba69, 4, var_a508ba69.size);
             switch (command) {
-            case 8:
-                adddebugcommand("cp_bunk_anim_type" + map_name + "cp_bunk_anim_type" + "cp_bunk_anim_type");
-                adddebugcommand("cp_bunk_anim_type" + map_name + "cp_bunk_anim_type");
-                adddebugcommand("cp_bunk_anim_type");
+            case "<dev string:x757>":
+                adddebugcommand("<dev string:x75b>" + map_name + "<dev string:x781>" + "<dev string:x2f6>");
+                adddebugcommand("<dev string:x75b>" + map_name + "<dev string:x797>");
+                adddebugcommand("<dev string:x7b4>");
                 break;
-            case 8:
-                adddebugcommand("cp_bunk_anim_type" + map_name + "cp_bunk_anim_type");
-                adddebugcommand("cp_bunk_anim_type" + map_name + "cp_bunk_anim_type");
-                adddebugcommand("cp_bunk_anim_type");
+            case "<dev string:x7c1>":
+                adddebugcommand("<dev string:x75b>" + map_name + "<dev string:x7c5>");
+                adddebugcommand("<dev string:x75b>" + map_name + "<dev string:x7dd>");
+                adddebugcommand("<dev string:x7b4>");
                 break;
             }
-            setdvar("cp_bunk_anim_type", "cp_bunk_anim_type");
-            wait(0.2);
+            setdvar("<dev string:x382>", "<dev string:x756>");
+            wait 0.2;
         }
     }
 

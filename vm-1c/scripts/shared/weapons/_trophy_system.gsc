@@ -143,11 +143,11 @@ function trophyactive(owner) {
             return;
         }
         if (level.missileentities.size < 1 || isdefined(self.disabled)) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         for (index = 0; index < level.missileentities.size; index++) {
-            wait(0.05);
+            wait 0.05;
             if (!isdefined(self)) {
                 return;
             }
@@ -162,7 +162,7 @@ function trophyactive(owner) {
                 continue;
             }
             switch (grenade.model) {
-            case 18:
+            case "t6_wpn_grenade_supply_projectile":
                 continue;
             }
             if (grenade.weapon == self.weapon) {

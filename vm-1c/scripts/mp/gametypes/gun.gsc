@@ -209,7 +209,7 @@ function inactivitykick() {
         return;
     }
     while (level.inactivitykick > self.timeplayed["total"]) {
-        wait(1);
+        wait 1;
     }
     if (self.pers["participation"] == 0 && self.pers["time_played_moving"] < 1) {
         globallogic::gamehistoryplayerkicked();
@@ -332,7 +332,7 @@ function setupteam(team) {
 function takeoldweapon(oldweapon) {
     self endon(#"death");
     self endon(#"disconnect");
-    wait(1);
+    wait 1;
     self takeweapon(oldweapon);
 }
 
@@ -377,7 +377,7 @@ function promoteplayer(weaponused) {
     self endon(#"disconnect");
     self endon(#"cancel_promotion");
     level endon(#"game_ended");
-    wait(0.05);
+    wait 0.05;
     if (isdefined(level.gunprogression[self.gunprogress].dualwieldweapon) && (weaponused.rootweapon == level.gunprogression[self.gunprogress].rootweapon || level.gunprogression[self.gunprogress].dualwieldweapon.rootweapon == weaponused.rootweapon)) {
         if (self.gunprogress < level.gunprogression.size - 1) {
             self.gunprogress++;
@@ -432,7 +432,7 @@ function infiniteammo() {
     self endon(#"death");
     self endon(#"disconnect");
     while (true) {
-        wait(0.1);
+        wait 0.1;
         weapon = self getcurrentweapon();
         if (weapon.rootweapon == level.var_a4fbd7a3) {
             continue;

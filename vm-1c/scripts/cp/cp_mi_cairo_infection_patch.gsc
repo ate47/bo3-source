@@ -12,9 +12,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_bb56f921;
+#namespace cp_mi_cairo_infection_patch;
 
-// Namespace namespace_bb56f921
+// Namespace cp_mi_cairo_infection_patch
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8f908a4c, Offset: 0x278
 // Size: 0x38c

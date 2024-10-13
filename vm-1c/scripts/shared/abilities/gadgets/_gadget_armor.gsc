@@ -25,7 +25,7 @@ function autoexec function_2dc19561() {
 // Checksum 0xe26d26b, Offset: 0x518
 // Size: 0x144
 function __init__() {
-    ability_player::register_gadget_activation_callbacks(4, &function_27d2ab93, &function_ef8f7527);
+    ability_player::register_gadget_activation_callbacks(4, &gadget_armor_on, &function_ef8f7527);
     ability_player::register_gadget_possession_callbacks(4, &function_f593f079, &function_c03e583);
     ability_player::register_gadget_flicker_callbacks(4, &function_9b27736e);
     ability_player::register_gadget_is_inuse_callbacks(4, &function_24782613);
@@ -89,7 +89,7 @@ function function_362bc1a8() {
 // Params 2, eflags: 0x1 linked
 // Checksum 0x3850d83c, Offset: 0x7b0
 // Size: 0xec
-function function_27d2ab93(slot, weapon) {
+function gadget_armor_on(slot, weapon) {
     if (isalive(self)) {
         self flagsys::set("gadget_armor_on");
         self.shock_onpain = 0;
@@ -137,7 +137,7 @@ function function_29961c34(slot, weapon) {
             self function_39b1b87b("Normal");
             return;
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -161,29 +161,29 @@ function function_39b1b87b(status, time) {
 // Size: 0x15a
 function function_46ec01fd(smeansofdeath) {
     switch (smeansofdeath) {
-    case 20:
-    case 21:
-    case 23:
-    case 26:
-    case 33:
-    case 34:
+    case "MOD_CRUSH":
+    case "MOD_DROWN":
+    case "MOD_FALLING":
+    case "MOD_HIT_BY_OBJECT":
+    case "MOD_SUICIDE":
+    case "MOD_TELEFRAG":
         return 0;
-    case 30:
+    case "MOD_PROJECTILE":
         return getdvarfloat("scr_armor_mod_proj_mult", 1);
-    case 27:
-    case 28:
+    case "MOD_MELEE":
+    case "MOD_MELEE_WEAPON_BUTT":
         return getdvarfloat("scr_armor_mod_melee_mult", 2);
-    case 22:
-    case 24:
-    case 25:
-    case 31:
+    case "MOD_EXPLOSIVE":
+    case "MOD_GRENADE":
+    case "MOD_GRENADE_SPLASH":
+    case "MOD_PROJECTILE_SPLASH":
         return getdvarfloat("scr_armor_mod_expl_mult", 1);
-    case 29:
-    case 32:
+    case "MOD_PISTOL_BULLET":
+    case "MOD_RIFLE_BULLET":
         return getdvarfloat("scr_armor_mod_bullet_mult", 0.7);
-    case 19:
-    case 35:
-    case 36:
+    case "MOD_BURNED":
+    case "MOD_TRIGGER_HURT":
+    case "MOD_UNKNOWN":
     default:
         return getdvarfloat("scr_armor_mod_misc_mult", 1);
     }
@@ -195,33 +195,33 @@ function function_46ec01fd(smeansofdeath) {
 // Size: 0x8a
 function function_db3ccbce(weapon, smeansofdeath) {
     switch (weapon.name) {
-    case 37:
-    case 38:
+    case "hero_lightninggun":
+    case "hero_lightninggun_arc":
         return false;
     default:
         break;
     }
     switch (smeansofdeath) {
-    case 19:
-    case 20:
-    case 21:
-    case 22:
-    case 23:
-    case 24:
-    case 25:
-    case 26:
-    case 27:
-    case 28:
-    case 31:
-    case 33:
-    case 34:
-    case 35:
-    case 36:
+    case "MOD_BURNED":
+    case "MOD_CRUSH":
+    case "MOD_DROWN":
+    case "MOD_EXPLOSIVE":
+    case "MOD_FALLING":
+    case "MOD_GRENADE":
+    case "MOD_GRENADE_SPLASH":
+    case "MOD_HIT_BY_OBJECT":
+    case "MOD_MELEE":
+    case "MOD_MELEE_WEAPON_BUTT":
+    case "MOD_PROJECTILE_SPLASH":
+    case "MOD_SUICIDE":
+    case "MOD_TELEFRAG":
+    case "MOD_TRIGGER_HURT":
+    case "MOD_UNKNOWN":
         return false;
-    case 29:
-    case 32:
+    case "MOD_PISTOL_BULLET":
+    case "MOD_RIFLE_BULLET":
         return true;
-    case 30:
+    case "MOD_PROJECTILE":
         if (weapon.explosionradius == 0) {
             return true;
         }
@@ -324,7 +324,7 @@ function function_98b378e(slot, weapon) {
             stage = 5;
         }
         self clientfield::set("armor_status", stage);
-        wait(0.05);
+        wait 0.05;
     }
     self clientfield::set("armor_status", 0);
 }

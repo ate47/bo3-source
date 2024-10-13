@@ -152,7 +152,7 @@ function function_7039f685() {
             n_index++;
         } while (!var_aca7cde1);
         self thread function_dedb7bff();
-        wait(10);
+        wait 10;
     }
 }
 
@@ -164,7 +164,7 @@ function function_dedb7bff() {
     self endon(#"disconnect");
     self endon(#"bled_out");
     self endon(#"bgb_update");
-    wait(5);
+    wait 5;
     self playsoundtoplayer("zmb_bgb_disorderly_5seconds", self);
 }
 
@@ -180,7 +180,7 @@ function disable_weapons() {
         waittillframeend();
         self disableweaponcycling();
         self disableoffhandweapons();
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -209,7 +209,7 @@ function function_4035ce17(n_index, b_upgraded, var_77bd95a) {
         self bgb::do_one_shot_use(1);
         return 1;
     }
-    println("zmb_bgb_disorderly_5seconds" + w_random.displayname);
+    println("<dev string:x28>" + w_random.displayname);
     return 0;
 }
 
@@ -219,15 +219,15 @@ function function_4035ce17(n_index, b_upgraded, var_77bd95a) {
 // Size: 0x96
 function function_f0cecf3c() {
     switch (self.name) {
-    case 9:
-    case 10:
-    case 3:
-    case 11:
-    case 12:
-    case 13:
-    case 14:
-    case 15:
-    case 16:
+    case "ar_marksman":
+    case "launcher_standard":
+    case "none":
+    case "pistol_burst":
+    case "pistol_c96":
+    case "pistol_m1911":
+    case "pistol_revolver38":
+    case "sniper_fastbolt":
+    case "sniper_powerbolt":
         return true;
     }
     if (zm_weapons::is_wonder_weapon(self) || level.start_weapon == self) {
@@ -293,7 +293,7 @@ function function_1f90c35a() {
 // Size: 0xd4
 function function_8a5ef15f() {
     while (self.is_drinking > 0 || zm_utility::is_placeable_mine(self.currentweapon) || zm_equipment::is_equipment(self.currentweapon) || self zm_utility::is_player_revive_tool(self.currentweapon) || level.weaponnone == self.currentweapon || self zm_equipment::hacker_active() || self laststand::player_is_in_laststand() || self function_1f90c35a()) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 

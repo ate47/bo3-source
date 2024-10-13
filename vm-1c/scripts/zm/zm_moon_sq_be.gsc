@@ -20,9 +20,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_ecd10753;
+#namespace zm_moon_sq_be;
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe5c1979e, Offset: 0x560
 // Size: 0x2dc
@@ -30,7 +30,7 @@ function init() {
     level.var_b1016b52 = struct::get("struct_motivation", "targetname");
     assert(isdefined(level.var_b1016b52.name));
     if (!isdefined(level.var_b1016b52)) {
-        println("stage_two");
+        println("<dev string:x28>");
         return;
     }
     level.var_8ccd5fae = strtok(level.var_b1016b52.script_parameters, ",");
@@ -51,7 +51,7 @@ function init() {
     namespace_6e97c459::function_5a90ed82("be", "stage_two", &function_f57f1713, &function_6163650d, &function_ef31d7b9);
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x848
 // Size: 0x4
@@ -59,7 +59,7 @@ function function_f57f1713() {
     
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 0, eflags: 0x1 linked
 // Checksum 0x227eaff0, Offset: 0x858
 // Size: 0x354
@@ -99,14 +99,14 @@ function function_6163650d() {
     namespace_6e97c459::function_2f3ced1f("be", "stage_two");
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 0, eflags: 0x1 linked
 // Checksum 0x27a767b9, Offset: 0xbb8
 // Size: 0xe4
 function function_d6777dd1() {
     level endon(#"hash_ba1a1d8a");
     self endon(#"death");
-    wait(25);
+    wait 25;
     while (true) {
         players = getplayers();
         for (i = 0; i < players.size; i++) {
@@ -115,11 +115,11 @@ function function_d6777dd1() {
                 return;
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 3, eflags: 0x1 linked
 // Checksum 0x7716a381, Offset: 0xca8
 // Size: 0x94
@@ -132,32 +132,32 @@ function function_1e3d1509(grenade, model, info) {
     return false;
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 2, eflags: 0x1 linked
 // Checksum 0x2a3e970c, Offset: 0xd48
 // Size: 0x1ea
 function function_50560fe8(grenade, model) {
     level.var_9c483a19 delete();
     level.var_9c483a19 = undefined;
-    wait(1);
+    wait 1;
     time = 3;
     model moveto(grenade.origin + (0, 0, 50), time, time - 0.05);
-    wait(time);
+    wait time;
     var_306ceb83 = struct::get_array("vista_rocket", "targetname");
     model ghost();
     playsoundatposition("zmb_gersh_teleporter_out", grenade.origin + (0, 0, 50));
-    wait(0.5);
+    wait 0.5;
     model stoploopsound(1);
-    wait(0.5);
+    wait 0.5;
     for (i = 0; i < var_306ceb83.size; i++) {
         playfx(level._effect["black_hole_bomb_event_horizon"], var_306ceb83[i].origin + (0, 0, 2500));
     }
     model playsound("zmb_gersh_teleporter_go");
-    wait(2);
+    wait 2;
     level notify(#"hash_fcd3e3f2");
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5549dee5, Offset: 0xf40
 // Size: 0x44
@@ -168,7 +168,7 @@ function function_ba1a1d8a(position) {
     return false;
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2457e2f, Offset: 0xf90
 // Size: 0x2c
@@ -176,7 +176,7 @@ function function_ef31d7b9(success) {
     level flag::set("be2");
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3272d2af, Offset: 0xfc8
 // Size: 0x1c
@@ -184,7 +184,7 @@ function function_8377a7d8() {
     level thread function_c247b014();
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcd2edc94, Offset: 0xff0
 // Size: 0x94
@@ -196,7 +196,7 @@ function function_8765df76() {
     namespace_6e97c459::function_2f3ced1f("be", "stage_one");
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe51d31b1, Offset: 0x1090
 // Size: 0xc
@@ -204,7 +204,7 @@ function function_15345222(success) {
     
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdb2fc40d, Offset: 0x10a8
 // Size: 0xac
@@ -214,12 +214,12 @@ function function_c247b014() {
         if (level flag::get("teleporter_breached") && !level flag::get("teleporter_blocked")) {
             level flag::set(level.var_8731d8b[0]);
         }
-        wait(0.1);
+        wait 0.1;
     }
     level thread function_6ccabece();
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3d171c6a, Offset: 0x1160
 // Size: 0x46c
@@ -228,8 +228,8 @@ function function_6ccabece() {
     var_4d89e942 = getvehiclenode("vs_stage_1a", "targetname");
     level.var_e9ab794e = 0;
     if (!isdefined(var_4d89e942)) {
-        println("stage_two");
-        wait(1);
+        println("<dev string:x44>");
+        wait 1;
         return;
     }
     level.var_8894208b = util::spawn_model("p7_zm_moo_egg_black", var_4d89e942.origin, var_4d89e942.angles);
@@ -263,7 +263,7 @@ function function_6ccabece() {
     level.var_aff8cada startpath();
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7fae5ea0, Offset: 0x15d8
 // Size: 0xaf8
@@ -305,7 +305,7 @@ function function_68ae41fb() {
                     }
                 }
                 self solid();
-                wait(0.05);
+                wait 0.05;
             }
             if (isdefined(var_75916bdb)) {
                 var_75916bdb thread function_1bd9f9d1(var_4ad253a5);
@@ -322,13 +322,13 @@ function function_68ae41fb() {
             self thread function_33193ba7();
             var_522d7a2c = function_68c18107(self.origin, level.var_831f6c80);
             if (!isdefined(var_522d7a2c)) {
-                println("stage_two");
-                wait(1);
+                println("<dev string:x72>");
+                wait 1;
                 continue;
             }
             if (!isdefined(level.var_831f6c80[var_522d7a2c]._door_open)) {
-                println("stage_two");
-                wait(1);
+                println("<dev string:x96>");
+                wait 1;
                 continue;
             }
             if (!level.var_831f6c80[var_522d7a2c]._door_open) {
@@ -337,7 +337,7 @@ function function_68ae41fb() {
                 level.var_8894208b.stopped = 1;
             }
             while (!level.var_831f6c80[var_522d7a2c]._door_open) {
-                wait(0.05);
+                wait 0.05;
             }
             if (isdefined(level.var_8894208b.stopped) && level.var_8894208b.stopped) {
                 level.var_8894208b playsound("evt_sq_blackegg_accel");
@@ -348,7 +348,7 @@ function function_68ae41fb() {
         }
         if (isdefined(node.script_noteworthy)) {
             switch (node.script_noteworthy) {
-            case 42:
+            case "flag_wait_for_osc":
                 self setspeedimmediate(0);
                 self thread function_33193ba7();
                 if (!isdefined(level.flag["flag_wait_for_osc"])) {
@@ -359,7 +359,7 @@ function function_68ae41fb() {
                 self thread function_dc66b274();
                 level.var_e9ab794e = 1;
                 break;
-            case 21:
+            case "complete_be_1":
                 self setspeedimmediate(0);
                 self thread function_33193ba7();
                 level flag::set("complete_be_1");
@@ -373,8 +373,8 @@ function function_68ae41fb() {
         if (isdefined(node.script_parameters)) {
             var_678fa15d = getvehiclenode(node.script_parameters, "targetname");
             if (!isdefined(var_678fa15d)) {
-                println("stage_two");
-                wait(1);
+                println("<dev string:xcb>");
+                wait 1;
                 continue;
             }
             self setspeedimmediate(0);
@@ -397,7 +397,7 @@ function function_68ae41fb() {
                             var_75916bdb = attacker;
                         }
                     }
-                    wait(0.05);
+                    wait 0.05;
                 }
                 var_476a0c04 delete();
             }
@@ -420,7 +420,7 @@ function function_68ae41fb() {
     }
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 1, eflags: 0x1 linked
 // Checksum 0x26d5eab1, Offset: 0x20d8
 // Size: 0x198
@@ -429,7 +429,7 @@ function function_5480bbe2(var_c66d4ba7) {
         return 0;
     }
     if (!isstring(var_c66d4ba7)) {
-        println("stage_two");
+        println("<dev string:xf2>");
         return 0;
     }
     var_dab9c24c = strtok(var_c66d4ba7, ",");
@@ -443,17 +443,17 @@ function function_5480bbe2(var_c66d4ba7) {
         }
     }
     if (!match) {
-        println("stage_two");
+        println("<dev string:x127>");
         if (isdefined(var_dab9c24c[0])) {
-            println("stage_two" + var_dab9c24c[0] + "stage_two");
+            println("<dev string:x148>" + var_dab9c24c[0] + "<dev string:x14e>");
         } else {
-            println("stage_two");
+            println("<dev string:x155>");
         }
         return 0;
     }
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 3, eflags: 0x1 linked
 // Checksum 0x835937c7, Offset: 0x2278
 // Size: 0xdc
@@ -476,7 +476,7 @@ function function_68c18107(org, array, dist) {
     return index;
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb30aa402, Offset: 0x2360
 // Size: 0xd4
@@ -490,7 +490,7 @@ function function_50917e4(var_6a3bb418) {
     self.var_e3302a4d animscripted("spin", self.var_e3302a4d.origin, self.var_e3302a4d.angles, "p7_fxanim_zm_sha_crystal_sml_anim");
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9309afb5, Offset: 0x2440
 // Size: 0x24
@@ -499,7 +499,7 @@ function function_33193ba7() {
     self.var_e3302a4d stopanimscripted();
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbed486b1, Offset: 0x2470
 // Size: 0xe4
@@ -514,7 +514,7 @@ function function_dc66b274() {
     self.var_e3302a4d animscripted("spin", self.var_e3302a4d.origin, self.var_e3302a4d.angles, "p7_fxanim_zm_sha_crystal_sml_anim");
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 0, eflags: 0x1 linked
 // Checksum 0x500ed3fd, Offset: 0x2560
 // Size: 0xc4
@@ -527,11 +527,11 @@ function function_36b79119() {
                 return;
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe7dd2671, Offset: 0x2630
 // Size: 0x54
@@ -542,7 +542,7 @@ function function_1bd9f9d1(num) {
     self thread zm_audio::create_and_play_dialog("eggs", "quest2", num);
 }
 
-// Namespace namespace_ecd10753
+// Namespace zm_moon_sq_be
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6881d2b4, Offset: 0x2690
 // Size: 0x64

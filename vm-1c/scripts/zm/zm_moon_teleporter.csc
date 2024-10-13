@@ -1,8 +1,8 @@
 #using scripts/shared/util_shared;
 
-#namespace namespace_591ce3c5;
+#namespace zm_moon_teleporter;
 
-// Namespace namespace_591ce3c5
+// Namespace zm_moon_teleporter
 // Params 0, eflags: 0x0
 // Checksum 0xa8e36342, Offset: 0x130
 // Size: 0xce
@@ -17,7 +17,7 @@ function main() {
     }
 }
 
-// Namespace namespace_591ce3c5
+// Namespace zm_moon_teleporter
 // Params 1, eflags: 0x0
 // Checksum 0x5c8f200e, Offset: 0x208
 // Size: 0x1a2
@@ -38,20 +38,20 @@ function function_c76c401c(clientnum) {
     }
 }
 
-// Namespace namespace_591ce3c5
+// Namespace zm_moon_teleporter
 // Params 3, eflags: 0x0
 // Checksum 0x98c2a46e, Offset: 0x3b8
 // Size: 0x1a6
 function function_fe2dfe37(clientnum, set, newent) {
     fx_array = level.fxents[clientnum];
     if (set && level.var_aef21231[clientnum] == 1) {
-        println("<unknown string>", clientnum);
+        println("<dev string:x28>", clientnum);
         level.var_aef21231[clientnum] = 0;
         for (i = 0; i < fx_array.size; i++) {
             if (isdefined(fx_array[i].portalfx)) {
                 deletefx(clientnum, fx_array[i].portalfx);
             }
-            wait(0.01);
+            wait 0.01;
             fx_array[i].portalfx = playfxontag(clientnum, level.var_80a2e709, fx_array[i], "tag_origin");
             playsound(clientnum, "evt_teleporter_start", fx_array[i].origin);
             fx_array[i] playloopsound("evt_teleporter_loop", 1.75);
@@ -59,7 +59,7 @@ function function_fe2dfe37(clientnum, set, newent) {
     }
 }
 
-// Namespace namespace_591ce3c5
+// Namespace zm_moon_teleporter
 // Params 1, eflags: 0x0
 // Checksum 0xdd8fd674, Offset: 0x568
 // Size: 0x218
@@ -84,11 +84,11 @@ function function_c19e773d(clientnum) {
                 self thread function_fb46767a(fx_pos, clientnum);
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_591ce3c5
+// Namespace zm_moon_teleporter
 // Params 2, eflags: 0x0
 // Checksum 0x17359d1f, Offset: 0x788
 // Size: 0xc8
@@ -103,7 +103,7 @@ function function_fb46767a(fx_pos, clientnum) {
     }
 }
 
-// Namespace namespace_591ce3c5
+// Namespace zm_moon_teleporter
 // Params 0, eflags: 0x0
 // Checksum 0x28ab658f, Offset: 0x858
 // Size: 0x6a
@@ -112,13 +112,13 @@ function function_7bbcd1cf() {
     self.defcon_active = 0;
     self thread function_4d04821d();
     while (!self.defcon_active && time < 20) {
-        wait(1);
+        wait 1;
         time++;
     }
     self notify(#"hash_9f9eb622");
 }
 
-// Namespace namespace_591ce3c5
+// Namespace zm_moon_teleporter
 // Params 0, eflags: 0x0
 // Checksum 0xc2021e56, Offset: 0x8d0
 // Size: 0x28
@@ -128,7 +128,7 @@ function function_4d04821d() {
     self.defcon_active = 1;
 }
 
-// Namespace namespace_591ce3c5
+// Namespace zm_moon_teleporter
 // Params 0, eflags: 0x0
 // Checksum 0x28b03046, Offset: 0x900
 // Size: 0x50

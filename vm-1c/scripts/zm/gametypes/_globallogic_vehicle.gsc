@@ -165,8 +165,8 @@ function callback_vehicledamage(einflictor, eattacker, idamage, idflags, smeanso
         }
     }
     /#
-        if (getdvarint("participation")) {
-            println("participation" + self getentitynumber() + "participation" + self.health + "participation" + eattacker.clientid + "participation" + isplayer(einflictor) + "participation" + idamage + "participation" + shitloc);
+        if (getdvarint("<dev string:x28>")) {
+            println("<dev string:x36>" + self getentitynumber() + "<dev string:x3d>" + self.health + "<dev string:x46>" + eattacker.clientid + "<dev string:x51>" + isplayer(einflictor) + "<dev string:x67>" + idamage + "<dev string:x70>" + shitloc);
         }
     #/
     if (true) {

@@ -4,9 +4,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_fd6bdadc;
+#namespace zm_stalingrad_timer;
 
-// Namespace namespace_fd6bdadc
+// Namespace zm_stalingrad_timer
 // Params 0, eflags: 0x2
 // Checksum 0x2ef31405, Offset: 0x1d0
 // Size: 0x3c
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
     system::register("zm_stalingrad_timer", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_fd6bdadc
+// Namespace zm_stalingrad_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x218
 // Size: 0x4
@@ -22,7 +22,7 @@ function __init__() {
     
 }
 
-// Namespace namespace_fd6bdadc
+// Namespace zm_stalingrad_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe39bf422, Offset: 0x228
 // Size: 0x64
@@ -31,7 +31,7 @@ function __main__() {
     level.var_606e6080 = &function_3ec869e2;
 }
 
-// Namespace namespace_fd6bdadc
+// Namespace zm_stalingrad_timer
 // Params 7, eflags: 0x1 linked
 // Checksum 0x9e44c41c, Offset: 0x298
 // Size: 0x48
@@ -39,7 +39,7 @@ function function_b94ee48a(var_6575414d, var_3bf16bb3, n_new_val, var_f16ed138, 
     level.var_dd724c18 = n_new_val;
 }
 
-// Namespace namespace_fd6bdadc
+// Namespace zm_stalingrad_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9c381c10, Offset: 0x2e8
 // Size: 0xde

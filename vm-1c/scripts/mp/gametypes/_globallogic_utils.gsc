@@ -17,7 +17,7 @@ function function_15b32a64() {
     self endon(#"death");
     self endon(#"disconnect");
     for (;;) {
-        wait(10);
+        wait 10;
         var_b444826e = spawnstruct();
         var_b444826e.var_c4a19800 = %MP_CHALLENGE_COMPLETED;
         var_b444826e.var_da258253 = "wheee";
@@ -34,12 +34,12 @@ function testshock() {
     self endon(#"death");
     self endon(#"disconnect");
     for (;;) {
-        wait(3);
+        wait 3;
         numshots = randomint(6);
         for (i = 0; i < numshots; i++) {
             iprintlnbold(numshots);
             self shellshock("frag_grenade_mp", 0.2);
-            wait(0.1);
+            wait 0.1;
         }
     }
 }
@@ -60,7 +60,7 @@ function testhps() {
         if (self thread killstreaks::give(hp)) {
             self playlocalsound(level.killstreaks[hp].informdialog);
         }
-        wait(20);
+        wait 20;
     }
 }
 
@@ -144,29 +144,29 @@ function getvalueinrange(value, minvalue, maxvalue) {
     // Checksum 0xfbd4a158, Offset: 0x7d8
     // Size: 0x2c2
     function assertproperplacement() {
-        numplayers = level.placement["roundMillisecondsAlreadyPassed"].size;
+        numplayers = level.placement["<dev string:x28>"].size;
         if (level.teambased) {
             for (i = 0; i < numplayers - 1; i++) {
-                if (level.placement["roundMillisecondsAlreadyPassed"][i].score < level.placement["roundMillisecondsAlreadyPassed"][i + 1].score) {
-                    println("roundMillisecondsAlreadyPassed");
+                if (level.placement["<dev string:x28>"][i].score < level.placement["<dev string:x28>"][i + 1].score) {
+                    println("<dev string:x2c>");
                     for (i = 0; i < numplayers; i++) {
-                        player = level.placement["roundMillisecondsAlreadyPassed"][i];
-                        println("roundMillisecondsAlreadyPassed" + i + "roundMillisecondsAlreadyPassed" + player.name + "roundMillisecondsAlreadyPassed" + player.score);
+                        player = level.placement["<dev string:x28>"][i];
+                        println("<dev string:x3f>" + i + "<dev string:x42>" + player.name + "<dev string:x45>" + player.score);
                     }
-                    assertmsg("roundMillisecondsAlreadyPassed");
+                    assertmsg("<dev string:x48>");
                     break;
                 }
             }
             return;
         }
         for (i = 0; i < numplayers - 1; i++) {
-            if (level.placement["roundMillisecondsAlreadyPassed"][i].pointstowin < level.placement["roundMillisecondsAlreadyPassed"][i + 1].pointstowin) {
-                println("roundMillisecondsAlreadyPassed");
+            if (level.placement["<dev string:x28>"][i].pointstowin < level.placement["<dev string:x28>"][i + 1].pointstowin) {
+                println("<dev string:x2c>");
                 for (i = 0; i < numplayers; i++) {
-                    player = level.placement["roundMillisecondsAlreadyPassed"][i];
-                    println("roundMillisecondsAlreadyPassed" + i + "roundMillisecondsAlreadyPassed" + player.name + "roundMillisecondsAlreadyPassed" + player.pointstowin);
+                    player = level.placement["<dev string:x28>"][i];
+                    println("<dev string:x3f>" + i + "<dev string:x42>" + player.name + "<dev string:x45>" + player.pointstowin);
                 }
-                assertmsg("roundMillisecondsAlreadyPassed");
+                assertmsg("<dev string:x48>");
                 break;
             }
         }
@@ -199,16 +199,16 @@ function playtickingsound(gametype_tick_sound) {
         self playsound(gametype_tick_sound);
         if (time > 10) {
             time -= 1;
-            wait(1);
+            wait 1;
         } else if (time > 4) {
             time -= 0.5;
-            wait(0.5);
+            wait 0.5;
         } else if (time > 1) {
             time -= 0.4;
-            wait(0.4);
+            wait 0.4;
         } else {
             time -= 0.3;
-            wait(0.3);
+            wait 0.3;
         }
         hostmigration::waittillhostmigrationdone();
     }
@@ -244,7 +244,7 @@ function gametimer() {
             game["playabletimepassed"] = game["playabletimepassed"] + gettime() - prevtime;
         }
         prevtime = gettime();
-        wait(1);
+        wait 1;
     }
 }
 
@@ -257,7 +257,7 @@ function disableplayerroundstartdelay() {
     player endon(#"death");
     player endon(#"disconnect");
     if (getroundstartdelay()) {
-        wait(getroundstartdelay());
+        wait getroundstartdelay();
     }
     player disableroundstartdelay();
 }
@@ -283,7 +283,7 @@ function applyroundstartdelay() {
     self endon(#"joined_spectators");
     self endon(#"death");
     if (isdefined(level.prematch_over) && level.prematch_over) {
-        wait(0.05);
+        wait 0.05;
     } else {
         level waittill(#"prematch_over");
     }
@@ -404,7 +404,7 @@ function getestimatedtimeuntilscorelimit(team) {
 function rumbler() {
     self endon(#"disconnect");
     while (true) {
-        wait(0.1);
+        wait 0.1;
         self playrumbleonentity("damage_heavy");
     }
 }
@@ -415,7 +415,7 @@ function rumbler() {
 // Size: 0x22
 function waitfortimeornotify(time, notifyname) {
     self endon(notifyname);
-    wait(time);
+    wait time;
 }
 
 // Namespace globallogic_utils
@@ -424,10 +424,10 @@ function waitfortimeornotify(time, notifyname) {
 // Size: 0x58
 function waitfortimeornotifynoartillery(time, notifyname) {
     self endon(notifyname);
-    wait(time);
+    wait time;
     while (isdefined(level.artilleryinprogress)) {
         assert(level.artilleryinprogress);
-        wait(0.25);
+        wait 0.25;
     }
 }
 
@@ -440,10 +440,10 @@ function isheadshot(weapon, shitloc, smeansofdeath, einflictor) {
         return false;
     }
     switch (smeansofdeath) {
-    case 18:
-    case 19:
+    case "MOD_MELEE":
+    case "MOD_MELEE_ASSASSINATE":
         return false;
-    case 17:
+    case "MOD_IMPACT":
         if (weapon.rootweapon != level.weaponballisticknife) {
             return false;
         }
@@ -463,29 +463,29 @@ function isheadshot(weapon, shitloc, smeansofdeath, einflictor) {
 // Size: 0xd6
 function gethitlocheight(shitloc) {
     switch (shitloc) {
-    case 15:
-    case 16:
-    case 27:
+    case "head":
+    case "helmet":
+    case "neck":
         return 60;
-    case 20:
-    case 21:
-    case 22:
-    case 24:
-    case 28:
-    case 29:
-    case 31:
-    case 35:
+    case "gun":
+    case "left_arm_lower":
+    case "left_arm_upper":
+    case "left_hand":
+    case "right_arm_lower":
+    case "right_arm_upper":
+    case "right_hand":
+    case "torso_upper":
         return 48;
-    case 34:
+    case "torso_lower":
         return 40;
-    case 26:
-    case 33:
+    case "left_leg_upper":
+    case "right_leg_upper":
         return 32;
-    case 25:
-    case 32:
+    case "left_leg_lower":
+    case "right_leg_lower":
         return 10;
-    case 23:
-    case 30:
+    case "left_foot":
+    case "right_foot":
         return 5;
     }
     return 48;
@@ -498,9 +498,9 @@ function gethitlocheight(shitloc) {
     // Checksum 0x81cbee3e, Offset: 0x1538
     // Size: 0x66
     function debugline(start, end) {
-                for (i = 0; i < 50; i++) {
+        for (i = 0; i < 50; i++) {
             line(start, end);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -527,7 +527,7 @@ function function_b59d6fa4(var_be260a2e) {
     var_9a8af909 = gettime();
     waitedtime = (gettime() - var_9a8af909) / 1000;
     if (waitedtime < var_be260a2e) {
-        wait(var_be260a2e - waitedtime);
+        wait var_be260a2e - waitedtime;
         return var_be260a2e;
     }
     return waitedtime;
@@ -542,10 +542,10 @@ function function_b59d6fa4(var_be260a2e) {
     function logteamwinstring(wintype, winner) {
         log_string = wintype;
         if (isdefined(winner)) {
-            log_string = log_string + "roundMillisecondsAlreadyPassed" + winner;
+            log_string = log_string + "<dev string:x70>" + winner;
         }
         foreach (team in level.teams) {
-            log_string = log_string + "roundMillisecondsAlreadyPassed" + team + "roundMillisecondsAlreadyPassed" + game["roundMillisecondsAlreadyPassed"][team];
+            log_string = log_string + "<dev string:x78>" + team + "<dev string:x45>" + game["<dev string:x7b>"][team];
         }
         print(log_string);
     }

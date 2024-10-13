@@ -7,9 +7,9 @@
 #using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_52adc03e;
+#namespace zm_audio_zhd;
 
-// Namespace namespace_52adc03e
+// Namespace zm_audio_zhd
 // Params 0, eflags: 0x2
 // Checksum 0xb5103422, Offset: 0x5f0
 // Size: 0x34
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
     system::register("zm_audio_zhd", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_52adc03e
+// Namespace zm_audio_zhd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x839bd7d2, Offset: 0x630
 // Size: 0xfc
@@ -30,7 +30,7 @@ function __init__() {
     level thread setup_personality_character_exerts();
 }
 
-// Namespace namespace_52adc03e
+// Namespace zm_audio_zhd
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf6f1245, Offset: 0x738
 // Size: 0x10c
@@ -46,7 +46,7 @@ function function_97d247be(localclientnum, oldval, newval, bnewent, binitialsnap
     playsound(0, "zmb_sam_egg_disappear", self.origin);
 }
 
-// Namespace namespace_52adc03e
+// Namespace zm_audio_zhd
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4d78cb81, Offset: 0x850
 // Size: 0x7c
@@ -56,7 +56,7 @@ function function_e312f684(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_52adc03e
+// Namespace zm_audio_zhd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x43dc65dd, Offset: 0x8d8
 // Size: 0x4da

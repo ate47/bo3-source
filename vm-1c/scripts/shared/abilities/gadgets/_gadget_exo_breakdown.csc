@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_32ddfacb;
+#namespace _gadget_exo_breakdown;
 
-// Namespace namespace_32ddfacb
+// Namespace _gadget_exo_breakdown
 // Params 0, eflags: 0x2
 // Checksum 0x7db1fb91, Offset: 0x1f0
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_exo_breakdown", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_32ddfacb
+// Namespace _gadget_exo_breakdown
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x230
 // Size: 0x4

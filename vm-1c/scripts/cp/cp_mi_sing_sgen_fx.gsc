@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_219c76cc;
+#namespace cp_mi_sing_sgen_fx;
 
-// Namespace namespace_219c76cc
+// Namespace cp_mi_sing_sgen_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x98
 // Size: 0x4

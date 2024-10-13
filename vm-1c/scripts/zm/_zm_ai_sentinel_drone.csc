@@ -5,9 +5,9 @@
 #using scripts/shared/postfx_shared;
 #using scripts/shared/clientfield_shared;
 
-#namespace namespace_8bc21961;
+#namespace zm_ai_sentinel_drone;
 
-// Namespace namespace_8bc21961
+// Namespace zm_ai_sentinel_drone
 // Params 0, eflags: 0x2
 // Checksum 0x4d561638, Offset: 0x500
 // Size: 0x3c
@@ -15,15 +15,15 @@ function autoexec function_2dc19561() {
     system::register("zm_ai_sentinel_drone", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_8bc21961
+// Namespace zm_ai_sentinel_drone
 // Params 0, eflags: 0x3 linked
 // Checksum 0xe80b5843, Offset: 0x548
 // Size: 0x69e
 function autoexec __init__() {
-    clientfield::register("world", "sentinel_round_fog", 12000, 1, "int", &function_6161cd1, 0, 0);
-    clientfield::register("toplayer", "sentinel_round_fx", 12000, 1, "int", &function_9a46f975, 0, 0);
-    clientfield::register("vehicle", "sentinel_spawn_fx", 12000, 1, "int", &function_11f14e16, 0, 0);
-    clientfield::register("vehicle", "necro_sentinel_fx", 12000, 1, "int", &function_af7e8dd4, 0, 0);
+    clientfield::register("world", "sentinel_round_fog", 12000, 1, "int", &sentinel_round_fog, 0, 0);
+    clientfield::register("toplayer", "sentinel_round_fx", 12000, 1, "int", &sentinel_round_fx, 0, 0);
+    clientfield::register("vehicle", "sentinel_spawn_fx", 12000, 1, "int", &sentinel_spawn_fx, 0, 0);
+    clientfield::register("vehicle", "necro_sentinel_fx", 12000, 1, "int", &necro_sentinel_fx, 0, 0);
     clientfield::register("actor", "sentinel_zombie_spawn_fx", 12000, 1, "int", &function_bc95cac0, 0, 0);
     level._effect["sentinel_round"] = "zombie/fx_meatball_round_tell_zod_zmb";
     level._effect["sentinel_spawn_in"] = "dlc3/stalingrad/fx_sentinel_drone_spawn_trail";
@@ -96,7 +96,7 @@ function autoexec __init__() {
     level.var_266194a[level.var_266194a.size] = "vox_valk_valkyrie_scanner_4";
 }
 
-// Namespace namespace_8bc21961
+// Namespace zm_ai_sentinel_drone
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7def5f1d, Offset: 0xbf0
 // Size: 0x2c
@@ -104,11 +104,11 @@ function __main__() {
     visionset_mgr::register_visionset_info("zm_sentinel_round_visionset", 12000, 31, undefined, "zm_sentinel_round_visionset");
 }
 
-// Namespace namespace_8bc21961
+// Namespace zm_ai_sentinel_drone
 // Params 7, eflags: 0x1 linked
 // Checksum 0x468ba76d, Offset: 0xc28
 // Size: 0xbc
-function function_6161cd1(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80, var_406ad39b, str_field, var_f9aa8824) {
+function sentinel_round_fog(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80, var_406ad39b, str_field, var_f9aa8824) {
     if (var_3a04fa7e) {
         setlitfogbank(var_6575414d, -1, 1, -1);
         setworldfogactivebank(var_6575414d, 2);
@@ -118,11 +118,11 @@ function function_6161cd1(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80
     setworldfogactivebank(var_6575414d, 1);
 }
 
-// Namespace namespace_8bc21961
+// Namespace zm_ai_sentinel_drone
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb624283d, Offset: 0xcf0
 // Size: 0xe4
-function function_9a46f975(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80, var_406ad39b, str_field, var_f9aa8824) {
+function sentinel_round_fx(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80, var_406ad39b, str_field, var_f9aa8824) {
     self endon(#"death");
     if (var_3a04fa7e) {
         if (isspectating(var_6575414d)) {
@@ -130,18 +130,18 @@ function function_9a46f975(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f8
         }
         self thread postfx::playpostfxbundle("pstfx_stalingrad_sentinel");
         self.var_8ffc609a = playfxoncamera(var_6575414d, level._effect["sentinel_round"]);
-        wait(3.5);
+        wait 3.5;
         if (isdefined(self)) {
             deletefx(var_6575414d, self.var_8ffc609a);
         }
     }
 }
 
-// Namespace namespace_8bc21961
+// Namespace zm_ai_sentinel_drone
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa970af4a, Offset: 0xde0
 // Size: 0x124
-function function_11f14e16(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80, var_406ad39b, str_field, var_f9aa8824) {
+function sentinel_spawn_fx(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80, var_406ad39b, str_field, var_f9aa8824) {
     if (var_3a04fa7e) {
         self.var_e43aab07 = playfxontag(var_6575414d, level._effect["sentinel_spawn_in"], self, "tag_origin");
         setfxignorepause(var_6575414d, self.var_e43aab07, 1);
@@ -151,17 +151,17 @@ function function_11f14e16(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f8
         stopfx(var_6575414d, self.var_e43aab07);
     }
     playfxontag(var_6575414d, level._effect["sentinel_spawn_impact"], self, "tag_origin");
-    wait(1);
+    wait 1;
     if (isdefined(self)) {
         function_36da0be3(var_6575414d, level.var_266194a);
     }
 }
 
-// Namespace namespace_8bc21961
+// Namespace zm_ai_sentinel_drone
 // Params 7, eflags: 0x1 linked
 // Checksum 0x477474fd, Offset: 0xf10
 // Size: 0xec
-function function_af7e8dd4(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80, var_406ad39b, str_field, var_f9aa8824) {
+function necro_sentinel_fx(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f80, var_406ad39b, str_field, var_f9aa8824) {
     if (var_3a04fa7e) {
         self.var_5ec69ff1 = playfxontag(var_6575414d, level._effect["sentinel_ground_radiation"], self, "tag_origin");
         setfxignorepause(var_6575414d, self.var_5ec69ff1, 1);
@@ -173,7 +173,7 @@ function function_af7e8dd4(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f8
     }
 }
 
-// Namespace namespace_8bc21961
+// Namespace zm_ai_sentinel_drone
 // Params 7, eflags: 0x1 linked
 // Checksum 0xfcbda34c, Offset: 0x1008
 // Size: 0x94
@@ -184,7 +184,7 @@ function function_bc95cac0(var_6575414d, var_d5fa7963, var_3a04fa7e, var_3a8c4f8
     self.var_e22d3880 = level._effect["rezzed_skeleton_spark_light"];
 }
 
-// Namespace namespace_8bc21961
+// Namespace zm_ai_sentinel_drone
 // Params 2, eflags: 0x1 linked
 // Checksum 0x6f9d589a, Offset: 0x10a8
 // Size: 0xa4

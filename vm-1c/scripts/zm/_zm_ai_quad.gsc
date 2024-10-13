@@ -17,9 +17,9 @@
 #using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_1d58b607;
+#namespace zm_ai_quad;
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 0, eflags: 0x2
 // Checksum 0xe64dec0e, Offset: 0x4f0
 // Size: 0x34
@@ -27,7 +27,7 @@ function autoexec function_2dc19561() {
     system::register("zm_ai_quad", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3d4bc3ea, Offset: 0x530
 // Size: 0xf4
@@ -37,27 +37,27 @@ function __init__() {
         function_1bf67b57();
     }
     animationstatenetwork::registernotetrackhandlerfunction("quad_melee", &function_b783ed6b);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("quadDeathAction", &function_ec996060);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("quadDeathAction", &quadDeathAction);
     level thread aat::register_immunity("zm_aat_dead_wire", "zombie_quad", 1, 1, 1);
     level thread aat::register_immunity("zm_aat_turned", "zombie_quad", 1, 1, 1);
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdafb50fd, Offset: 0x630
 // Size: 0x5c
 function function_b783ed6b(entity) {
     entity melee();
     /#
-        record3dtext("quads", self.origin, (1, 0, 0), "quads", entity);
+        record3dtext("<dev string:x28>", self.origin, (1, 0, 0), "<dev string:x2e>", entity);
     #/
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 1, eflags: 0x1 linked
 // Checksum 0x588ebf6, Offset: 0x698
 // Size: 0xc4
-function function_ec996060(entity) {
+function quadDeathAction(entity) {
     if (isdefined(entity.var_d98ae1ca)) {
         entity.var_d98ae1ca unlink();
         entity.var_d98ae1ca delete();
@@ -68,7 +68,7 @@ function function_ec996060(entity) {
     entity startragdoll();
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd9023778, Offset: 0x768
 // Size: 0x9c
@@ -78,7 +78,7 @@ function function_5af423f4() {
     zm::register_custom_ai_spawn_check("quads", &function_613fce7d, &function_da243141);
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x45139164, Offset: 0x810
 // Size: 0x54
@@ -89,7 +89,7 @@ function function_1bf67b57() {
     visionset_mgr::register_info("overlay", "zm_ai_quad_blur", 1, level.var_2ac737b1, 1, 1);
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfa5fe795, Offset: 0x870
 // Size: 0x32
@@ -97,7 +97,7 @@ function function_613fce7d() {
     return isdefined(level.zm_loc_types["quad_location"]) && level.zm_loc_types["quad_location"].size > 0;
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6adb06ac, Offset: 0x8b0
 // Size: 0xa
@@ -105,7 +105,7 @@ function function_da243141() {
     return level.var_889f4094;
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4da88ec0, Offset: 0x8c8
 // Size: 0x260
@@ -115,7 +115,7 @@ function function_6109f077() {
     self.no_eye_glow = 1;
     self.var_65eda69a = 1;
     self.canbetargetedbyturnedzombies = 1;
-    self.custom_location = &function_cd79a62a;
+    self.custom_location = &quad_location;
     self zm_spawner::zombie_spawn_init(1);
     self.var_ce31c8e8 = 0;
     self.maxhealth = int(self.maxhealth * 0.75);
@@ -146,7 +146,7 @@ function function_6109f077() {
     }
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe5f56071, Offset: 0xb30
 // Size: 0x3a
@@ -155,14 +155,14 @@ function function_820fd039() {
     level._effect["quad_trail"] = "dlc5/zmhd/fx_zombie_quad_trail";
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3d05cf78, Offset: 0xb78
 // Size: 0x336
-function function_cd79a62a() {
+function quad_location() {
     self endon(#"death");
     if (level.zm_loc_types["quad_location"].size <= 0) {
-        println("quads" + "quads");
+        println("<dev string:x35>" + "<dev string:x5c>");
         self dodamage(self.health * 2, self.origin);
         return;
     }
@@ -199,13 +199,13 @@ function function_cd79a62a() {
     self notify(#"risen", spot.script_string);
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 0, eflags: 0x0
 // Checksum 0x70e76a59, Offset: 0xeb8
 // Size: 0x198
 function function_65f011b2() {
     self endon(#"death");
-    wait(5);
+    wait 5;
     var_63f5b9d8 = 5;
     while (true) {
         players = getplayers();
@@ -221,14 +221,14 @@ function function_65f011b2() {
                 continue;
             }
             if (distancesquared(self.origin, players[i].origin) < 22500) {
-                wait(0.05);
+                wait 0.05;
             }
         }
-        wait(randomfloatrange(1, var_63f5b9d8));
+        wait randomfloatrange(1, var_63f5b9d8);
     }
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 0, eflags: 0x1 linked
 // Checksum 0xab57569c, Offset: 0x1058
 // Size: 0x28
@@ -238,7 +238,7 @@ function function_3c1837ec() {
     self.var_b8671742 = 0;
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 2, eflags: 0x1 linked
 // Checksum 0xab1980f4, Offset: 0x1088
 // Size: 0x7c
@@ -248,7 +248,7 @@ function function_962c408a(player, gib) {
     self dodamage(damage, player.origin, player);
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4630384c, Offset: 0x1110
 // Size: 0xcc
@@ -263,7 +263,7 @@ function function_d6bac202() {
     level thread function_8d8e0dae(self.origin, var_f45a89e6);
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 2, eflags: 0x1 linked
 // Checksum 0x3d2b81f6, Offset: 0x11e8
 // Size: 0x19c
@@ -286,7 +286,7 @@ function function_30937cb8(origin, var_f45a89e6) {
     self radiusdamage(origin, var_f45a89e6["explo_radius_zomb"], level.zombie_health, level.zombie_health, self, "MOD_EXPLOSIVE");
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 1, eflags: 0x0
 // Checksum 0x474c6499, Offset: 0x1390
 // Size: 0x22
@@ -297,7 +297,7 @@ function function_dedce615(player) {
     return self.meleedamage;
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 2, eflags: 0x1 linked
 // Checksum 0xe88d1de1, Offset: 0x13c0
 // Size: 0x244
@@ -317,7 +317,7 @@ function function_8d8e0dae(origin, var_f45a89e6) {
             }
             visionset_mgr::deactivate("overlay", "zm_ai_quad_blur", players[i]);
         }
-        wait(1);
+        wait 1;
     }
     players = getplayers();
     for (i = 0; i < players.size; i++) {
@@ -326,7 +326,7 @@ function function_8d8e0dae(origin, var_f45a89e6) {
     effectarea delete();
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcc35aacd, Offset: 0x1610
 // Size: 0xfc
@@ -339,7 +339,7 @@ function quad_trail() {
     zm_net::network_safe_play_fx_on_tag("quad_fx", 2, level._effect["quad_trail"], self.var_d98ae1ca, "tag_origin");
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 8, eflags: 0x1 linked
 // Checksum 0xa584d0be, Offset: 0x1718
 // Size: 0x5e
@@ -348,7 +348,7 @@ function function_17d5d016(einflictor, attacker, idamage, smeansofdeath, weapon,
     return false;
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 8, eflags: 0x1 linked
 // Checksum 0xb90ad64c, Offset: 0x1780
 // Size: 0xd8
@@ -367,7 +367,7 @@ function function_542e4c77(einflictor, attacker, idamage, smeansofdeath, weapon,
     }
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8fc7cd75, Offset: 0x1860
 // Size: 0x4c
@@ -375,11 +375,11 @@ function function_5b8fbcb4() {
     if (isdefined(self.var_d98ae1ca)) {
         self.var_d98ae1ca unlink();
         self.var_d98ae1ca delete();
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_1d58b607
+// Namespace zm_ai_quad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6c1829b4, Offset: 0x18b8
 // Size: 0x144

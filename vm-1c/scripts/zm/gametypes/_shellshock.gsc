@@ -71,7 +71,7 @@ function endondeath() {
 // Size: 0x2a
 function endontimer(timer) {
     self endon(#"disconnect");
-    wait(timer);
+    wait timer;
     self notify(#"end_on_timer");
 }
 

@@ -122,7 +122,7 @@ function function_90c432bd(weapon) {
 // Size: 0x6e
 function canprocesschallenges() {
     /#
-        if (getdvarint("destroy_5_tactical_inserts", 0)) {
+        if (getdvarint("<dev string:x28>", 0)) {
             return true;
         }
     #/
@@ -240,7 +240,7 @@ function function_ed2b9c30(time) {
     self endon(#"disconnect");
     self endon(#"death");
     self endon(#"hash_33251375");
-    wait(time);
+    wait time;
     self notify(#"hash_1dc38794");
 }
 
@@ -613,7 +613,7 @@ function challengeroundend(data) {
         loserscore = getlosersteamscores(winner);
     }
     switch (level.gametype) {
-    case 75:
+    case "sd":
         if (player.team == winner) {
             if (game["challenge"][winner]["allAlive"]) {
                 player addgametypestat("round_win_no_deaths", 1);
@@ -633,7 +633,7 @@ function challengeroundend(data) {
 // Checksum 0xcc098fab, Offset: 0x2da8
 // Size: 0x136
 function roundend(winner) {
-    wait(0.05);
+    wait 0.05;
     data = spawnstruct();
     data.time = gettime();
     if (level.teambased) {
@@ -657,7 +657,7 @@ function roundend(winner) {
 // Checksum 0xbd746bfe, Offset: 0x2ee8
 // Size: 0x1f6
 function gameend(winner) {
-    wait(0.05);
+    wait 0.05;
     data = spawnstruct();
     data.time = gettime();
     if (level.teambased) {
@@ -1007,7 +1007,7 @@ function challengegameend(data) {
         loserscore = getlosersteamscores(winner);
     }
     switch (level.gametype) {
-    case 135:
+    case "tdm":
         if (player.team == winner) {
             if (winnerscore >= loserscore + 20) {
                 player addgametypestat("CRUSH", 1);
@@ -1026,7 +1026,7 @@ function challengegameend(data) {
             player addgametypestat("most_kills_least_deaths", 1);
         }
         break;
-    case 131:
+    case "dm":
         if (player == winner) {
             if (level.placement["all"].size >= 2) {
                 secondplace = level.placement["all"][1];
@@ -1036,28 +1036,28 @@ function challengegameend(data) {
             }
         }
         break;
-    case 129:
+    case "ctf":
         if (player.team == winner) {
             if (loserscore == 0) {
                 player addgametypestat("SHUT_OUT", 1);
             }
         }
         break;
-    case 132:
+    case "dom":
         if (player.team == winner) {
             if (winnerscore >= loserscore + 70) {
                 player addgametypestat("CRUSH", 1);
             }
         }
         break;
-    case 133:
+    case "hq":
         if (player.team == winner && winnerscore > 0) {
             if (winnerscore >= loserscore + 70) {
                 player addgametypestat("CRUSH", 1);
             }
         }
         break;
-    case 134:
+    case "koth":
         if (player.team == winner && winnerscore > 0) {
             if (winnerscore >= loserscore + 70) {
                 player addgametypestat("CRUSH", 1);
@@ -1069,14 +1069,14 @@ function challengegameend(data) {
             }
         }
         break;
-    case 130:
+    case "dem":
         if (player.team == game["defenders"] && player.team == winner) {
             if (loserscore == 0) {
                 player addgametypestat("SHUT_OUT", 1);
             }
         }
         break;
-    case 75:
+    case "sd":
         if (player.team == winner) {
             if (loserscore <= 1) {
                 player addgametypestat("CRUSH", 1);
@@ -1133,13 +1133,13 @@ function totaldomination(team) {
 // Size: 0x9c
 function holdflagentirematch(team, label) {
     switch (label) {
-    case 146:
+    case "_a":
         event = "hold_a_entire_match";
         break;
-    case 147:
+    case "_b":
         event = "hold_b_entire_match";
         break;
-    case 148:
+    case "_c":
         event = "hold_c_entire_match";
         break;
     default:
@@ -1216,7 +1216,7 @@ function updatezonemultikills() {
         self.recentzonekillcount = 0;
     }
     self.recentzonekillcount++;
-    wait(4);
+    wait 4;
     if (self.recentzonekillcount > 1) {
         self addplayerstat("multikill_2_zone_attackers", 1);
     }
@@ -1674,7 +1674,7 @@ function waitandprocessplayerkilledcallback(data) {
     if (isdefined(data.attacker)) {
         data.attacker endon(#"disconnect");
     }
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     level thread dochallengecallback("playerKilled", data);
     level thread doscoreeventcallback("playerKilled", data);
@@ -1699,7 +1699,7 @@ function eventreceived(eventname) {
     self endon(#"disconnect");
     util::waittillslowprocessallowed();
     switch (level.gametype) {
-    case 135:
+    case "tdm":
         if (eventname == "killstreak_10") {
             self addgametypestat("killstreak_10", 1);
         } else if (eventname == "killstreak_15") {
@@ -1714,7 +1714,7 @@ function eventreceived(eventname) {
             self addgametypestat("kill_enemy_injuring_teammate", 1);
         }
         break;
-    case 131:
+    case "dm":
         if (eventname == "killstreak_10") {
             self addgametypestat("killstreak_10", 1);
         } else if (eventname == "killstreak_15") {
@@ -1725,7 +1725,7 @@ function eventreceived(eventname) {
             self addgametypestat("killstreak_30", 1);
         }
         break;
-    case 75:
+    case "sd":
         if (eventname == "defused_bomb_last_man_alive") {
             self addgametypestat("defused_bomb_last_man_alive", 1);
         } else if (eventname == "elimination_and_last_player_alive") {
@@ -1736,14 +1736,14 @@ function eventreceived(eventname) {
             self addgametypestat("killed_bomb_defuser", 1);
         }
         break;
-    case 129:
+    case "ctf":
         if (eventname == "kill_flag_carrier") {
             self addgametypestat("kill_flag_carrier", 1);
         } else if (eventname == "defend_flag_carrier") {
             self addgametypestat("defend_flag_carrier", 1);
         }
         break;
-    case 130:
+    case "dem":
         if (eventname == "killed_bomb_planter") {
             self addgametypestat("killed_bomb_planter", 1);
         } else if (eventname == "killed_bomb_defuser") {
@@ -1809,6 +1809,6 @@ function trophy_defense(origin, radius) {
 // Size: 0x1c
 function waittilltimeoutordeath(timeout) {
     self endon(#"death");
-    wait(timeout);
+    wait timeout;
 }
 

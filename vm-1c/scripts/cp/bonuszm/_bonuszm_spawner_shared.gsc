@@ -160,7 +160,7 @@ function function_d78435a0(b_force, str_targetname, v_origin, v_angles, bignores
     infinitespawn = 0;
     deleteonzerocount = 0;
     /#
-        if (getdvarstring("aitypeMale3") != "aitypeMale3") {
+        if (getdvarstring("<dev string:x28>") != "<dev string:x2d>") {
             return;
         }
     #/
@@ -172,7 +172,7 @@ function function_d78435a0(b_force, str_targetname, v_origin, v_angles, bignores
             spawner::global_spawn_throttle(1);
         }
         if (isdefined(self.lastspawntime) && self.lastspawntime >= gettime()) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         break;

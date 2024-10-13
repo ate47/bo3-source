@@ -224,7 +224,7 @@ function function_b6ef6322(params) {
             }
             params.eattacker.var_e2f09ac4++;
             if (params.eattacker.var_e2f09ac4 >= 5 && params.eattacker.var_11b787d4 util::get_time_left() > 0) {
-                params.eattacker notify(#"hash_4ca3efeb");
+                params.eattacker notify(#"robo_slapper");
                 return;
             }
             if (params.eattacker.var_11b787d4 util::get_time_left() <= 0) {
@@ -269,7 +269,7 @@ function function_dcf1dd8b(params) {
                 }
                 params.eattacker.var_1191fe8d++;
                 if (params.eattacker.var_1191fe8d >= 3) {
-                    params.eattacker notify(#"hash_fd0e8159");
+                    params.eattacker notify(#"exp_entertainment");
                     params.eattacker.var_56a9030 = 1;
                 }
             }
@@ -344,7 +344,7 @@ function function_99009628() {
     n_damage, eattacker, v_direction, v_point, var_4ae4f03b = self waittill(#"damage");
     if (eattacker.archetype === "raps") {
         level.var_aead8b98 = 1;
-        level notify(#"hash_1e4d3423");
+        level notify(#"friendly_raps_damaged");
     }
 }
 
@@ -384,7 +384,7 @@ function function_590aa5a5(params) {
         if (params.smeansofdeath == "MOD_PISTOL_BULLET" || isdefined(params.weapon) && !issubstr(params.weapon.name, "turret") && params.smeansofdeath == "MOD_RIFLE_BULLET") {
             if (isdefined(params.eattacker.var_c8397fe4)) {
                 if (params.eattacker.var_c8397fe4 == params.eattacker._bbdata["shots"]) {
-                    params.eattacker notify(#"hash_7a018db6");
+                    params.eattacker notify(#"2_kills_1_shot");
                     params.eattacker.var_5d4efbf2 = 1;
                 }
             }
@@ -428,7 +428,7 @@ function function_fa041c17(params) {
             }
             params.eattacker.var_f4415abf++;
             if (params.eattacker.var_f4415abf >= 5 && params.eattacker.var_3e18c869 util::get_time_left() > 0) {
-                params.eattacker notify(#"hash_dc8b2e3b");
+                params.eattacker notify(#"quick_slap");
                 return;
             }
             if (params.eattacker.var_3e18c869 util::get_time_left() <= 0) {
@@ -507,7 +507,7 @@ function function_13829246(params) {
 // Size: 0x57
 function function_baf56cfa(var_f37c20b3) {
     var_f37c20b3 endon(#"death");
-    self endon(#"hash_35d17c89");
+    self endon(#"dodge_this");
     while (true) {
         damage, eattacker = self waittill(#"damage");
         if (eattacker === var_f37c20b3) {
@@ -524,7 +524,7 @@ function function_b1f08628(var_f37c20b3) {
     var_f37c20b3 endon(#"hash_700a2ace");
     eattacker, damagefromunderneath, weapon, point, dir = var_f37c20b3 waittill(#"death");
     if (isplayer(eattacker)) {
-        self notify(#"hash_35d17c89");
+        self notify(#"dodge_this");
     }
 }
 
@@ -574,7 +574,7 @@ function function_3bf7b80a(params) {
             }
             params.eattacker.var_6d525c8b++;
             if (params.eattacker.var_6d525c8b >= 3 && params.eattacker.var_bbb7a4e5 util::get_time_left() > 0) {
-                params.eattacker notify(#"hash_72346d97");
+                params.eattacker notify(#"clip_their_wings");
                 return;
             }
             if (params.eattacker.var_bbb7a4e5 util::get_time_left() <= 0) {

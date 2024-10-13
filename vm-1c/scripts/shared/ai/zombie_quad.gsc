@@ -47,25 +47,25 @@ function function_deba043e() {
     blackboard::registerblackboardattribute(self, "_locomotion_speed", "locomotion_speed_walk", &zombiebehavior::function_f8ae4008);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("normal");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_quad_wall_crawl", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("normal");
+            self trackblackboardattribute("<dev string:x3a>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_quad_phase_direction", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("normal");
+            self trackblackboardattribute("<dev string:x4b>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_quad_phase_distance", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("normal");
+            self trackblackboardattribute("<dev string:x61>");
         #/
     }
     self.___archetypeonanimscriptedcallback = &function_7fcb8a90;
@@ -108,8 +108,8 @@ function function_45557eb8(entity, mocompanim, mocompanimblendouttime, mocompani
     entity animmode("normal");
     if (isdefined(entity.traverseendnode)) {
         /#
-            print3d(entity.traversestartnode.origin, "normal", (1, 0, 0), 1, 1, 60);
-            print3d(entity.traverseendnode.origin, "normal", (0, 1, 0), 1, 1, 60);
+            print3d(entity.traversestartnode.origin, "<dev string:x76>", (1, 0, 0), 1, 1, 60);
+            print3d(entity.traverseendnode.origin, "<dev string:x76>", (0, 1, 0), 1, 1, 60);
             line(entity.traversestartnode.origin, entity.traverseendnode.origin, (0, 1, 0), 1, 0, 60);
         #/
         entity forceteleport(entity.traverseendnode.origin, entity.traverseendnode.angles, 0);

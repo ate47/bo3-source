@@ -10,9 +10,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b237ad4b;
+#namespace cp_mi_sing_vengeance_patch_c;
 
-// Namespace namespace_b237ad4b
+// Namespace cp_mi_sing_vengeance_patch_c
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x1d0
 // Size: 0x4

@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_50be16fe;
+#namespace voice_z_blackstation;
 
-// Namespace namespace_50be16fe
+// Namespace voice_z_blackstation
 // Params 0, eflags: 0x1 linked
 // Checksum 0x96073f2c, Offset: 0xeb0
 // Size: 0x904

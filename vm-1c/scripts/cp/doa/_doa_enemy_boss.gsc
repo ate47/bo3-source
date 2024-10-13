@@ -18,9 +18,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_4973e019;
+#namespace DOA_BOSS;
 
-// Namespace namespace_4973e019
+// Namespace DOA_BOSS
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6e375a1d, Offset: 0x488
 // Size: 0x6c
@@ -31,7 +31,7 @@ function init() {
     }
 }
 
-// Namespace namespace_4973e019
+// Namespace DOA_BOSS
 // Params 1, eflags: 0x5 linked
 // Checksum 0x889a2704, Offset: 0x500
 // Size: 0x4a4
@@ -39,7 +39,7 @@ function private function_d95d34bd(spawner) {
     level notify(#"hash_d95d34bd");
     level endon(#"hash_d95d34bd");
     while (true) {
-        level waittill(#"hash_31b5dd0d");
+        level waittill(#"opening_exits");
         if (!getdvarint("scr_boss_force_spawn", 0)) {
             if (level.doa.round_number < level.doa.rules.var_cd6c242e) {
                 continue;
@@ -81,14 +81,14 @@ function private function_d95d34bd(spawner) {
             if (!isdefined(level.doa.boss)) {
                 continue;
             }
-            level.doa.boss thread function_2ca4656();
+            level.doa.boss thread _doaBossCollectPickups();
             level.doa.boss thread function_66efd1eb();
         }
         level waittill(#"exit_taken");
     }
 }
 
-// Namespace namespace_4973e019
+// Namespace DOA_BOSS
 // Params 0, eflags: 0x5 linked
 // Checksum 0xf576030c, Offset: 0x9b0
 // Size: 0x452
@@ -127,9 +127,9 @@ function private function_555608c7() {
     self unlink();
     self orientmode("face enemy");
     self animscripted("pissedoff", self.origin, self.angles, "ai_zombie_doa_simianaut_ground_pound");
-    self waittillmatch(#"hash_3cc81578", "zombie_melee");
+    self waittillmatch(#"pissedoff", "zombie_melee");
     playfx(level._effect["ground_pound"], self.origin);
-    self waittillmatch(#"hash_3cc81578", "end");
+    self waittillmatch(#"pissedoff", "end");
     self.anchor delete();
     self.var_faa677d7 = gettime() + 10000;
     self thread namespace_1a381543::function_90118d8c("zmb_simianaut_roar");
@@ -143,17 +143,17 @@ function private function_555608c7() {
     self.var_88168473 = undefined;
 }
 
-// Namespace namespace_4973e019
+// Namespace DOA_BOSS
 // Params 1, eflags: 0x5 linked
 // Checksum 0x3e01cd2c, Offset: 0xe10
 // Size: 0x2c
 function private function_4e81959(waittime) {
     self endon(#"death");
-    wait(waittime);
+    wait waittime;
     self.zombie_move_speed = "sprint";
 }
 
-// Namespace namespace_4973e019
+// Namespace DOA_BOSS
 // Params 0, eflags: 0x5 linked
 // Checksum 0x126ad4fb, Offset: 0xe48
 // Size: 0x154
@@ -176,7 +176,7 @@ function private function_a2756e92() {
     self thread function_4e81959(20);
 }
 
-// Namespace namespace_4973e019
+// Namespace DOA_BOSS
 // Params 0, eflags: 0x1 linked
 // Checksum 0xee2fcf87, Offset: 0xfa8
 // Size: 0x316
@@ -200,7 +200,7 @@ function function_ce73145c() {
         if (isdefined(self)) {
             if (!isplayer(guy)) {
                 self animscripted("pissedoff", self.origin, self.angles, "ai_zombie_doa_simianaut_attack_v1");
-                self waittillmatch(#"hash_3cc81578", "zombie_melee");
+                self waittillmatch(#"pissedoff", "zombie_melee");
                 if (isdefined(guy)) {
                     playfx(level._effect["ground_pound"], guy.origin);
                     if (isdefined(guy)) {
@@ -219,13 +219,13 @@ function function_ce73145c() {
             if (isdefined(guy.doa)) {
                 guy.doa.var_1db1e638 = gettime() + 10000;
                 self animscripted("pissedoff", self.origin, self.angles, "ai_zombie_doa_simianaut_chestbeat");
-                self waittillmatch(#"hash_3cc81578", "end");
+                self waittillmatch(#"pissedoff", "end");
             }
         }
     }
 }
 
-// Namespace namespace_4973e019
+// Namespace DOA_BOSS
 // Params 0, eflags: 0x5 linked
 // Checksum 0x7b38ad91, Offset: 0x12c8
 // Size: 0x330
@@ -233,7 +233,7 @@ function private function_66efd1eb() {
     self endon(#"death");
     self endon(#"hash_19503b17");
     while (isdefined(self)) {
-        wait(0.05);
+        wait 0.05;
         if (isdefined(self.var_faa677d7)) {
             if (gettime() < self.var_faa677d7) {
                 continue;
@@ -266,7 +266,7 @@ function private function_66efd1eb() {
                 if (getdvarint("scr_boss_debug", 0)) {
                     level thread namespace_2f63e553::function_5e6b8376(self.origin, 100, 0.5, (1, 0, 0));
                 }
-                wait(0.5);
+                wait 0.5;
                 break;
             }
         }
@@ -277,7 +277,7 @@ function private function_66efd1eb() {
     }
 }
 
-// Namespace namespace_4973e019
+// Namespace DOA_BOSS
 // Params 0, eflags: 0x5 linked
 // Checksum 0x44bc310e, Offset: 0x1600
 // Size: 0x6c
@@ -290,22 +290,22 @@ function private function_5bd24aae() {
     self delete();
 }
 
-// Namespace namespace_4973e019
+// Namespace DOA_BOSS
 // Params 0, eflags: 0x5 linked
 // Checksum 0x96f403e1, Offset: 0x1678
 // Size: 0x69c
-function private function_2ca4656() {
+function private _doaBossCollectPickups() {
     self endon(#"death");
-    wait(0.1);
+    wait 0.1;
     timeout = gettime() + 10000;
     while (isdefined(self.var_88168473) && self.var_88168473 && gettime() < timeout) {
-        wait(0.05);
+        wait 0.05;
     }
     tries = 5;
     for (failed = 0; tries; failed = 1) {
-        wait(0.05);
+        wait 0.05;
         if (self.ignoreall == 0) {
-            wait(1);
+            wait 1;
             tries--;
             continue;
         }
@@ -384,12 +384,12 @@ function private function_2ca4656() {
     }
     if (isdefined(level.doa.var_2836c8ee) && level.doa.var_2836c8ee) {
         self thread namespace_eaa992c::function_285a2999("spawnZombie");
-        wait(1);
+        wait 1;
     }
     self delete();
 }
 
-// Namespace namespace_4973e019
+// Namespace DOA_BOSS
 // Params 0, eflags: 0x5 linked
 // Checksum 0x924bab, Offset: 0x1d20
 // Size: 0xfc
@@ -406,11 +406,11 @@ function private function_e5e28b1b() {
                 }
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_4973e019
+// Namespace DOA_BOSS
 // Params 0, eflags: 0x1 linked
 // Checksum 0x83fcddb2, Offset: 0x1e28
 // Size: 0x6a
@@ -418,7 +418,7 @@ function function_76b30cc1() {
     self endon(#"death");
     amount = int(self.health * 0.15);
     while (self.health > 0) {
-        wait(3);
+        wait 3;
         self notify(#"damage", amount);
     }
 }

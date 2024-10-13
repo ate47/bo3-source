@@ -81,7 +81,7 @@ function physics_explosion_and_rumble(origin, radius, physics_explosion) {
     if (isdefined(physics_explosion) && physics_explosion) {
         radius += 1 << 9;
     }
-    wait(0.05);
+    wait 0.05;
     var_7d0c93e1 clientfield::set("start_destructible_explosion", radius);
     var_7d0c93e1.in_use = 0;
 }
@@ -110,21 +110,21 @@ function destructible_event_callback(destructible_event, attacker, weapon) {
         explosion_radius_type = tokens[3];
         explosion_radius = 300;
         switch (damage_type) {
-        case 14:
+        case "concussive":
             if (explosion_radius_type == "large") {
                 explosion_radius = 280;
             } else {
                 explosion_radius = -36;
             }
             break;
-        case 15:
+        case "electrical":
             if (explosion_radius_type == "large") {
                 explosion_radius = 60;
             } else {
                 explosion_radius = -46;
             }
             break;
-        case 16:
+        case "incendiary":
             if (explosion_radius_type == "large") {
                 explosion_radius = -6;
             } else {
@@ -138,40 +138,40 @@ function destructible_event_callback(destructible_event, attacker, weapon) {
         return;
     }
     switch (destructible_event) {
-    case 18:
+    case "destructible_car_explosion":
         self destructible_car_explosion(attacker);
         if (isdefined(weapon)) {
             self.destroyingweapon = weapon;
         }
         break;
-    case 19:
+    case "destructible_car_fire":
         self thread destructible_car_fire_think(attacker);
         if (isdefined(weapon)) {
             self.destroyingweapon = weapon;
         }
         break;
-    case 7:
+    case "explode":
         self thread simple_explosion(attacker);
         break;
-    case 11:
+    case "explode_complex":
         self thread complex_explosion(attacker, explosion_radius);
         break;
-    case 24:
-    case 25:
+    case "destructible_explosive_incendiary_large":
+    case "destructible_explosive_incendiary_small":
         self explosive_incendiary_explosion(attacker, explosion_radius, 0);
         if (isdefined(weapon)) {
             self.destroyingweapon = weapon;
         }
         break;
-    case 22:
-    case 23:
+    case "destructible_explosive_electrical_large":
+    case "destructible_explosive_electrical_small":
         self explosive_electrical_explosion(attacker, explosion_radius, 0);
         if (isdefined(weapon)) {
             self.destroyingweapon = weapon;
         }
         break;
-    case 20:
-    case 21:
+    case "destructible_explosive_concussive_large":
+    case "destructible_explosive_concussive_small":
         self explosive_concussive_explosion(attacker, explosion_radius, 0);
         if (isdefined(weapon)) {
             self.destroyingweapon = weapon;
@@ -216,7 +216,7 @@ function simple_timed_explosion(destructible_event, attacker) {
         wait_times[0] = 5;
         wait_times[1] = 10;
     }
-    wait(randomintrange(wait_times[0], wait_times[1]));
+    wait randomintrange(wait_times[0], wait_times[1]);
     simple_explosion(attacker);
 }
 
@@ -356,7 +356,7 @@ function destructible_car_death_notify() {
 // Size: 0x4c
 function destructible_car_fire_think(attacker) {
     self endon(#"death");
-    wait(randomintrange(7, 10));
+    wait randomintrange(7, 10);
     self thread destructible_car_explosion(attacker);
 }
 
@@ -389,7 +389,7 @@ function codecallback_destructibleevent(event, param1, param2, param3, param4) {
 function breakafter(time, damage, piece) {
     self notify(#"breakafter");
     self endon(#"breakafter");
-    wait(time);
+    wait time;
     self dodamage(damage, self.origin, undefined, undefined);
 }
 

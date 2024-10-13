@@ -20,17 +20,17 @@ function autoexec function_2dc19561() {
 // Checksum 0x58c0319b, Offset: 0x270
 // Size: 0x124
 function __init__() {
-    clientfield::register("scriptmover", "lockbox_light_1", 12000, 2, "int", &function_5f0e6212, 0, 0);
-    clientfield::register("scriptmover", "lockbox_light_2", 12000, 2, "int", &function_390be7a9, 0, 0);
-    clientfield::register("scriptmover", "lockbox_light_3", 12000, 2, "int", &function_13096d40, 0, 0);
-    clientfield::register("scriptmover", "lockbox_light_4", 12000, 2, "int", &function_1d1ac61f, 0, 0);
+    clientfield::register("scriptmover", "lockbox_light_1", 12000, 2, "int", &lockbox_light_1, 0, 0);
+    clientfield::register("scriptmover", "lockbox_light_2", 12000, 2, "int", &lockbox_light_2, 0, 0);
+    clientfield::register("scriptmover", "lockbox_light_3", 12000, 2, "int", &lockbox_light_3, 0, 0);
+    clientfield::register("scriptmover", "lockbox_light_4", 12000, 2, "int", &lockbox_light_4, 0, 0);
 }
 
 // Namespace namespace_19e79ea1
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3ca1eda7, Offset: 0x3a0
 // Size: 0xec
-function function_5f0e6212(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function lockbox_light_1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(self.var_fbe6c07a)) {
         stopfx(localclientnum, self.var_fbe6c07a);
     }
@@ -45,7 +45,7 @@ function function_5f0e6212(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5c8654a, Offset: 0x498
 // Size: 0xec
-function function_390be7a9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function lockbox_light_2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(self.var_d5e44611)) {
         stopfx(localclientnum, self.var_d5e44611);
     }
@@ -60,7 +60,7 @@ function function_390be7a9(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x582aae33, Offset: 0x590
 // Size: 0xec
-function function_13096d40(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function lockbox_light_3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(self.var_afe1cba8)) {
         stopfx(localclientnum, self.var_afe1cba8);
     }
@@ -75,7 +75,7 @@ function function_13096d40(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1b5c4922, Offset: 0x688
 // Size: 0xec
-function function_1d1ac61f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function lockbox_light_4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(self.var_b9f32487)) {
         stopfx(localclientnum, self.var_b9f32487);
     }

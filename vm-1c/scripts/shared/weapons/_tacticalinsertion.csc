@@ -87,7 +87,7 @@ function stopflareloopwatcher(looporigin) {
             audio::stoploopat("fly_tinsert_beep", looporigin);
             break;
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 

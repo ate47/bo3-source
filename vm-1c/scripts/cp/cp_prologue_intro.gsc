@@ -57,10 +57,10 @@ function function_d27bfdb0() {
     level thread util::function_46d3a558("CP_MI_ETH_PROLOGUE_INTRO_LINE_1_FULL", "CP_MI_ETH_PROLOGUE_INTRO_LINE_1_SHORT", "CP_MI_ETH_PROLOGUE_INTRO_LINE_2_FULL", "CP_MI_ETH_PROLOGUE_INTRO_LINE_2_SHORT", "CP_MI_ETH_PROLOGUE_INTRO_LINE_3_FULL", "CP_MI_ETH_PROLOGUE_INTRO_LINE_3_SHORT", "CP_MI_ETH_PROLOGUE_INTRO_LINE_4_FULL", "CP_MI_ETH_PROLOGUE_INTRO_LINE_4_SHORT", "CP_MI_ETH_PROLOGUE_INTRO_LINE_5_FULL", "CP_MI_ETH_PROLOGUE_INTRO_LINE_5_SHORT");
     lui::prime_movie("cp_prologue_env_controltower");
     exploder::exploder("fx_exploder_high_res_fire");
-    level namespace_2cb3876f::function_6a5f89cb("skipto_nrc_knocking");
-    wait(5);
+    level cp_prologue_util::function_6a5f89cb("skipto_nrc_knocking");
+    wait 5;
     level.var_2fd26037 thread dialog::say("hend_the_nrc_are_gonna_be_0");
-    wait(1.5);
+    wait 1.5;
     level clientfield::set("sndIGCsnapshot", 2);
     level thread namespace_21b2c1f2::function_5712e4e2();
     if (isdefined(level.var_b16d5c40)) {
@@ -73,7 +73,7 @@ function function_d27bfdb0() {
     videostop("cp_prologue_env_controltower");
     videostart("cp_prologue_env_post_crash", 1);
     level clientfield::set("sndIGCsnapshot", 0);
-    level thread namespace_2cb3876f::function_2a0bc326(level.var_2fd26037.origin, 1.4, 2, 5000, 12, "damage_heavy", "default");
+    level thread cp_prologue_util::function_2a0bc326(level.var_2fd26037.origin, 1.4, 2, 5000, 12, "damage_heavy", "default");
     playfxoncamera(level._effect["prologue_transition_debris"], (0, 0, 0), (1, 0, 0), (0, 0, 1));
     level thread scene::play("cin_pro_01_02_airtraffic_1st_hack_aftermath_ai");
     level scene::play("cin_pro_01_02_airtraffic_1st_hack_aftermath");

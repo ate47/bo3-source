@@ -76,7 +76,7 @@ function function_7b65c5ac(str_objective, var_74cd64bc) {
             e_trig.script_color_stay_on = 1;
         }
         load::function_a2995f22();
-        wait(0.05);
+        wait 0.05;
         var_77d44b28 = getent("garage_player_gather_trigger", "targetname");
         var_77d44b28 triggerenable(0);
         level thread function_3ae8447c();
@@ -112,7 +112,7 @@ function function_bd50a158() {
     e_trigger triggerenable(1);
     trigger::wait_till("quad_battle_qt_cleared_wall");
     var_2d4309d9 connectpaths();
-    wait(0.05);
+    wait 0.05;
     var_2d4309d9 delete();
 }
 
@@ -121,7 +121,7 @@ function function_bd50a158() {
 // Checksum 0x24f354ed, Offset: 0x1b08
 // Size: 0x3c2
 function function_590d6717() {
-    thread namespace_7c587e3e::function_10de79ba();
+    thread cp_mi_sing_vengeance_sound::function_10de79ba();
     level.var_2fd26037 namespace_63b4601c::function_5fbec645("hend_rally_on_me_and_let_0");
     level thread namespace_9fd035::function_973b77f9();
     objectives::set("cp_level_vengeance_go_to_safehouse");
@@ -141,8 +141,8 @@ function function_590d6717() {
     }
     level thread namespace_63b4601c::function_1c347e72("quad_wall_static1", "quad_wall_non_static1");
     var_70f21d83 thread scene::play("cin_ven_06_51_quadbattleintro_wall_vign");
-    level thread namespace_7c587e3e::function_5bd9fe4();
-    wait(0.75);
+    level thread cp_mi_sing_vengeance_sound::function_5bd9fe4();
+    wait 0.75;
     level.quadtank = spawner::simple_spawn_single("plaza_quadtank", &function_74c7f0db);
     level.quadtank thread namespace_855113f3::function_35209d64();
     callback::on_vehicle_damage(&function_4fc8c2e, level.quadtank);
@@ -152,7 +152,7 @@ function function_590d6717() {
         e_trig.script_color_stay_on = 1;
     }
     level flag::set("quad_battle_starts");
-    level thread function_e8676a98();
+    level thread quad_battle_enemies();
     level flag::wait_till("quad_enemies_done");
     level flag::set("quad_battle_ends");
     level.var_2fd26037 battlechatter::function_d9f49fba(0);
@@ -165,15 +165,15 @@ function function_590d6717() {
 // Params 0, eflags: 0x0
 // Checksum 0xf92b63a7, Offset: 0x1ed8
 // Size: 0x22a
-function function_e8676a98() {
+function quad_battle_enemies() {
     if (level.activeplayers.size > 1) {
-        wait(8);
+        wait 8;
         level notify(#"hash_349fb948");
         spawn_manager::enable("quad_battle_reinforcements");
         level flag::wait_till_any(array("quadtank_hijacked", "quad_tank_dead"));
         a_enemies = spawner::get_ai_group_ai("quad_battle_enemies");
         if (a_enemies.size > 0) {
-            wait(10);
+            wait 10;
             spawn_manager::disable("quad_battle_reinforcements");
         }
         var_2eebaf3b = getent("quad_battle_retreat_volume", "targetname");
@@ -184,7 +184,7 @@ function function_e8676a98() {
             }
         }
         if (a_enemies.size > 0) {
-            wait(6);
+            wait 6;
         }
         if (flag::get("quadtank_hijacked")) {
             level flag::wait_till("qt_hijack_enemies_dead");
@@ -209,7 +209,7 @@ function function_ee2d9cb4(volume) {
     self cleargoalvolume();
     self.fixednode = 0;
     self.forcegoal = 0;
-    wait(0.1);
+    wait 0.1;
     self setgoal(volume, 1);
     self waittill(#"goal");
     self delete();
@@ -239,7 +239,7 @@ function function_74c7f0db() {
 // Checksum 0xec2a1e5b, Offset: 0x22e0
 // Size: 0x65
 function function_c5cf1c5() {
-    level endon(#"hash_91e59520");
+    level endon(#"quad_tank_dead");
     while (true) {
         var_52b4a338 = level waittill(#"clonedentity");
         if (isdefined(var_52b4a338.scriptvehicletype) && var_52b4a338.scriptvehicletype == "quadtank") {
@@ -299,7 +299,7 @@ function function_b331b9b2(str_side) {
 function function_a5928078() {
     level.quadtank = spawner::simple_spawn_single("plaza_quadtank");
     var_136e4f5c = struct::get("quad_tank_checkpoint_death", "script_noteworthy");
-    wait(0.05);
+    wait 0.05;
     level flag::wait_till("all_players_spawned");
     level.quadtank.origin = var_136e4f5c.origin;
     level.quadtank setcandamage(1);
@@ -312,7 +312,7 @@ function function_a5928078() {
 // Checksum 0x73b98400, Offset: 0x2618
 // Size: 0x24a
 function function_7d7a1bdd() {
-    level endon(#"hash_52ec73a6");
+    level endon(#"quad_battle_ends");
     var_a3076518 = getent("sm_qt_hijack", "targetname");
     var_ab891f49 = getent("garage_enemy_n_goalvolume", "targetname");
     foreach (var_56b381f2 in getentarray(var_a3076518.target, "targetname")) {
@@ -325,7 +325,7 @@ function function_7d7a1bdd() {
     level flag::wait_till("quadtank_hijacked");
     spawn_manager::enable("sm_qt_hijack");
     spawn_manager::enable("sm_qt_hijack_normal");
-    wait(0.5);
+    wait 0.5;
     level thread function_18ed3322();
     level thread function_547cd992();
     level flag::wait_till_all(array("qt_hijack_warlords_dead", "qt_hijack_grunts_dead"));
@@ -390,7 +390,7 @@ function function_dfffe1a9() {
     level thread objectives::breadcrumb("goto_plaza_breadcrumb");
     level flag::wait_till("hendricks_exiting_market");
     self ai::set_behavior_attribute("sprint", 0);
-    level thread function_64ae9198();
+    level thread plaza_enemies();
     self waittill(#"goal");
     var_43605624 = getent("exit_to_plaza", "targetname");
     var_43605624 triggerenable(1);
@@ -428,7 +428,7 @@ function function_fd7b3b3b() {
     level.quadtank endon(#"death");
     level flag::wait_till("quad_tank_downstairs");
     self colors::enable();
-    wait(0.05);
+    wait 0.05;
     trigger::use("hendricks_qt_move_back");
 }
 
@@ -441,9 +441,9 @@ function function_1314293f() {
     while (true) {
         if (isdefined(self) && self isatcovernode()) {
             self ai::shoot_at_target("normal", level.quadtank, undefined, 5);
-            wait(5);
+            wait 5;
         }
-        wait(randomintrange(10, 20));
+        wait randomintrange(10, 20);
     }
 }
 
@@ -456,14 +456,14 @@ function function_745ca395() {
     level.var_2fd26037 battlechatter::function_d9f49fba(1);
     level.var_2fd26037.var_5d9fbd2d = 0;
     level flag::wait_till("players_at_market");
-    thread namespace_7c587e3e::function_af95bc45();
+    thread cp_mi_sing_vengeance_sound::function_af95bc45();
     level thread function_6f79b65d();
-    wait(1);
+    wait 1;
     level.var_2fd26037 thread namespace_63b4601c::function_5fbec645("hend_stop_do_you_hear_t_1");
-    wait(2);
+    wait 2;
     level flag::set("quad_tank_start_anim");
     level flag::wait_till("quad_tank_wall_broken");
-    wait(0.5);
+    wait 0.5;
     foreach (e_player in level.activeplayers) {
         e_player thread function_f14d81a9();
     }
@@ -480,7 +480,7 @@ function function_745ca395() {
         level thread function_f8295b7();
     }
     level flag::wait_till_any(array("quadtank_hijacked", "quad_tank_dead"));
-    wait(0.5);
+    wait 0.5;
     a_enemies = spawner::get_ai_group_ai("quad_battle_enemies");
     var_3d8a616b = spawner::get_ai_group_ai("qt_hijack_enemies");
     if (a_enemies.size > 0) {
@@ -494,7 +494,7 @@ function function_745ca395() {
     objectives::show("cp_level_vengeance_go_to_safehouse");
     level flag::wait_till("hendricks_exiting_market");
     level.var_2fd26037 namespace_63b4601c::function_5fbec645("hend_taylor_fucked_up_h_0");
-    wait(0.75);
+    wait 0.75;
     level.var_2fd26037 namespace_63b4601c::function_5fbec645("hend_now_we_don_t_know_wh_0");
     level waittill(#"hash_15c8f178");
     level.var_2fd26037 namespace_63b4601c::function_5fbec645("hend_even_if_they_ve_hack_0");
@@ -507,7 +507,7 @@ function function_745ca395() {
 function function_f14d81a9() {
     level.quadtank endon(#"death");
     self endon(#"hash_b8804640");
-    wait(20);
+    wait 20;
     level.var_2fd26037 namespace_63b4601c::function_5fbec645("hend_we_need_something_bi_0");
 }
 
@@ -533,7 +533,7 @@ function function_bc3db33d() {
 function function_43458bf2() {
     level.quadtank endon(#"death");
     self endon(#"hash_6530962c");
-    wait(20);
+    wait 20;
     var_c823b7c6 = [];
     var_c823b7c6[0] = "hend_shoot_out_its_weak_p_1";
     var_c823b7c6[1] = "hend_we_can_t_touch_this_0";
@@ -546,14 +546,14 @@ function function_43458bf2() {
         if (isdefined(var_c2667465) && var_c2667465 == var_616d3e3e) {
             while (var_c2667465 == var_616d3e3e) {
                 var_616d3e3e = array::random(var_c823b7c6);
-                wait(0.05);
+                wait 0.05;
             }
         }
         if (!isdefined(var_c2667465) || var_c2667465 != var_616d3e3e) {
             var_c2667465 = var_616d3e3e;
         }
         level.var_2fd26037 namespace_22334037::function_73a79ca0(var_616d3e3e);
-        wait(randomfloatrange(10, 15));
+        wait randomfloatrange(10, 15);
     }
 }
 
@@ -580,7 +580,7 @@ function function_55c599e4() {
 function function_455f3062() {
     self endon(#"death");
     self endon(#"hash_6530962c");
-    wait(20);
+    wait 20;
     namespace_22334037::function_73a79ca0("hend_it_s_defense_system_0");
 }
 
@@ -605,11 +605,11 @@ function function_4fc8c2e(obj, params) {
     if (isplayer(params.eattacker)) {
         if (params.smeansofdeath === "MOD_RIFLE_BULLET" || params.smeansofdeath === "MOD_PISTOL_BULLET") {
             if (params.partname != "tag_target_lower" && params.partname != "tag_target_upper" && params.partname != "tag_defense_active" && params.partname != "tag_body_animate") {
-                level notify(#"hash_52293e91");
+                level notify(#"vo_bullet_damage");
             }
         }
         if (params.weapon.name === "launcher_standard" || params.weapon.name === "turret_bo3_civ_truck_pickup_tech_54i_grenade") {
-            level notify(#"hash_e09e14de");
+            level notify(#"vo_direct_hit");
         }
     }
 }
@@ -620,7 +620,7 @@ function function_4fc8c2e(obj, params) {
 // Size: 0x2a
 function function_82671202() {
     self endon(#"death");
-    level waittill(#"hash_e09e14de");
+    level waittill(#"vo_direct_hit");
     namespace_22334037::function_73a79ca0("hend_that_outta_slow_it_d_0");
 }
 
@@ -642,7 +642,7 @@ function function_23dea593() {
     var_361ba23a = [];
     var_361ba23a[0] = "hend_keep_moving_don_t_l_2";
     while (true) {
-        wait(45);
+        wait 45;
         var_616d3e3e = array::random(var_361ba23a);
         namespace_22334037::function_73a79ca0(var_616d3e3e);
         var_361ba23a = array::exclude(var_361ba23a, var_616d3e3e);
@@ -659,7 +659,7 @@ function function_23dea593() {
 function function_3ae8447c() {
     hidemiscmodels("quad_wall_static3");
     level flag::wait_till("quad_battle_starts");
-    wait(1);
+    wait 1;
     level flag::set("quad_tank_wall_broken");
     hidemiscmodels("quad_wall_static2");
     var_1e8fa774 = getent("quad_battle_intro_wall_clip", "targetname");
@@ -679,14 +679,14 @@ function function_6f79b65d() {
     exploder::exploder("garage_wall_light_pulse");
     exploder::exploder("garage_wall_light_pulse_02");
     exploder::exploder("garage_dust_rattle");
-    wait(1);
+    wait 1;
     foreach (e_player in level.activeplayers) {
         screenshake(e_player.origin, 2, 1, 1, 0.5, 0, -1, 100, 7, 1, 1, 1, e_player);
         e_player playrumbleonentity("quadtank_footstep");
     }
     exploder::exploder("garage_wall_light_pulse_03");
     exploder::exploder("garage_dust_rattle");
-    wait(1);
+    wait 1;
     foreach (e_player in level.activeplayers) {
         screenshake(e_player.origin, 3, 2, 2, 0.5, 0, -1, 100, 7, 1, 1, 1, e_player);
         e_player playrumbleonentity("quadtank_footstep");
@@ -701,7 +701,7 @@ function function_6f79b65d() {
     }
     exploder::exploder("garage_wall_light_pulse_02");
     exploder::exploder("garage_dust_rattle");
-    wait(1);
+    wait 1;
     exploder::stop_exploder("garage_wall_light_pulse");
 }
 
@@ -722,7 +722,7 @@ function function_31629d62() {
     foreach (e_trigger in a_triggers) {
         var_ec523dd5 = getent(e_trigger.target, "targetname");
         var_ec523dd5 delete();
-        wait(0.1);
+        wait 0.1;
         e_trigger delete();
     }
 }
@@ -741,7 +741,7 @@ function function_6e671181(str_objective, var_74cd64bc) {
         e_car kill();
         level thread namespace_63b4601c::function_ef909043();
         namespace_63b4601c::function_66773296("hendricks", str_objective);
-        wait(0.05);
+        wait 0.05;
         level.var_2fd26037 colors::disable();
         level.var_2fd26037 ai::set_ignoreall(1);
         level.var_2fd26037 ai::set_ignoreme(1);
@@ -771,7 +771,7 @@ function function_6e671181(str_objective, var_74cd64bc) {
         thread namespace_63b4601c::function_ffaf4723("quad_tank_wall_umbra_vol", "bathroom_umbra_gate", "bathroom_gate", "noflag");
         thread namespace_63b4601c::function_ffaf4723("quad_tank_wall_umbra_vol", "bathroom_ceiling_umbra_gate", "bathroom_ceiling_gate", "noflag");
         level thread objectives::breadcrumb("trig_safehouse_plaza_breadcrumb");
-        level thread function_64ae9198(var_74cd64bc);
+        level thread plaza_enemies(var_74cd64bc);
         foreach (player in level.players) {
             player.ignoreme = 1;
         }
@@ -786,7 +786,7 @@ function function_6e671181(str_objective, var_74cd64bc) {
     namespace_523da15d::function_f03a38c7();
     level.var_2fd26037 thread function_fc4e0a9();
     level thread function_aecb2215();
-    level thread namespace_7c587e3e::function_d56e8ba6();
+    level thread cp_mi_sing_vengeance_sound::function_d56e8ba6();
     function_3a837c17();
 }
 
@@ -809,7 +809,7 @@ function function_e5fb7f0b(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
 // Checksum 0x274389, Offset: 0x42a0
 // Size: 0x67
 function function_88f591dc() {
-    wait(0.5);
+    wait 0.5;
     foreach (player in level.players) {
         player.ignoreme = 0;
     }
@@ -823,13 +823,13 @@ function function_3a837c17() {
     level thread function_214b5ddf();
     level flag::wait_till_all(array("hendricks_at_plaza", "players_at_plaza"));
     thread namespace_63b4601c::function_ffaf4723("rear_garage_umbra_vol", "rear_garage_umbra_gate", "rear_garage_gate", "noflag");
-    wait(0.5);
+    wait 0.5;
     if (isdefined(level.var_ec448797)) {
         level thread [[ level.var_ec448797 ]]();
     }
     objectives::hide("cp_level_vengeance_go_to_safehouse");
     level flag::set("plaza_hendricks_jump");
-    wait(1);
+    wait 1;
     objectives::set("cp_level_vengeance_clear_plaza");
     foreach (e_player in level.activeplayers) {
         e_player thread function_29587c78();
@@ -843,7 +843,7 @@ function function_3a837c17() {
     objectives::show("cp_level_vengeance_go_to_safehouse");
     level thread util::function_d8eaed3d(5);
     level scene::init("cin_ven_11_safehouse_3rd_sh010");
-    wait(2);
+    wait 2;
     level.var_4c62d05f = function_f7d00e6a();
     objectives::hide("cp_level_vengeance_go_to_safehouse");
     skipto::function_be8adfb8("safehouse_plaza");
@@ -894,7 +894,7 @@ function function_fc4e0a9() {
     self ai::set_ignoreall(0);
     self ai::set_ignoreme(0);
     self thread namespace_63b4601c::function_5a886ae0();
-    wait(10);
+    wait 10;
     e_trigger = getent("plaza_hendricks_color_sniper", "targetname");
     if (isdefined(e_trigger)) {
         trigger::use("plaza_hendricks_color_sniper", "targetname");
@@ -910,19 +910,19 @@ function function_fc4e0a9() {
 // Params 1, eflags: 0x0
 // Checksum 0x2ed802b6, Offset: 0x48c0
 // Size: 0x972
-function function_64ae9198(var_74cd64bc) {
+function plaza_enemies(var_74cd64bc) {
     if (!isdefined(var_74cd64bc)) {
         var_74cd64bc = 0;
     }
     function_61d293c6();
     level flag::init("initial_plaza_spawns");
-    level.var_b3e6718e = spawner::simple_spawn("remote_snipers");
+    level.remote_snipers = spawner::simple_spawn("remote_snipers");
     var_493d4f49 = vehicle::simple_spawn_single("plaza_enemies_technical_01");
     var_6f3fc9b2 = vehicle::simple_spawn_single("plaza_enemies_technical_02");
-    wait(0.05);
+    wait 0.05;
     spawner::simple_spawn("plaza_enemies_wave_01");
     spawner::simple_spawn("plaza_amws_0");
-    wait(0.05);
+    wait 0.05;
     spawn_manager::enable("plaza_allies_spawn_manager");
     setignoremegroup("54i_siegebots", "sh_allies");
     setignoremegroup("sh_wasps", "sh_allies");
@@ -1039,11 +1039,11 @@ function function_61d293c6() {
     spawner::add_spawn_function_group(var_443c7feb.target, "targetname", &function_db772ecc, 1750);
     spawner::add_spawn_function_group(var_443c7feb.target, "targetname", &function_688b4ed7);
     spawner::add_spawn_function_group("plaza_warlords", "targetname", &function_d824ba94, "54i_warlords");
-    spawner::add_spawn_function_group("plaza_warlords", "targetname", &function_b25bc7b2);
+    spawner::add_spawn_function_group("plaza_warlords", "targetname", &plaza_warlords);
     spawner::add_spawn_function_group("plaza_warlords_2", "targetname", &function_d824ba94, "54i_warlords");
-    spawner::add_spawn_function_group("plaza_warlords_2", "targetname", &function_b25bc7b2);
+    spawner::add_spawn_function_group("plaza_warlords_2", "targetname", &plaza_warlords);
     spawner::add_spawn_function_group("plaza_warlords_3", "targetname", &function_d824ba94, "54i_warlords");
-    spawner::add_spawn_function_group("plaza_warlords_3", "targetname", &function_b25bc7b2);
+    spawner::add_spawn_function_group("plaza_warlords_3", "targetname", &plaza_warlords);
     spawner::add_spawn_function_group("plaza_siegebots", "targetname", &function_d824ba94, "54i_siegebots");
     spawner::add_spawn_function_group("plaza_siegebots", "targetname", &function_3dc47c4e);
     var_4b4c408f = getent("plaza_allies_spawn_manager", "targetname");
@@ -1152,7 +1152,7 @@ function function_ea5edc3b(var_fe5aba79, var_242401fb, var_b21c92c0, var_d81f0d2
 // Params 0, eflags: 0x0
 // Checksum 0xf7e76df3, Offset: 0x5d68
 // Size: 0x9b
-function function_b25bc7b2() {
+function plaza_warlords() {
     self.goalheight = 512;
     var_eaf20b66 = getnodearray(self.script_noteworthy, "targetname");
     foreach (node in var_eaf20b66) {
@@ -1209,7 +1209,7 @@ function function_aecb2215() {
 // Checksum 0x4e05ed3c, Offset: 0x5fe8
 // Size: 0x6d
 function function_dcf7f342() {
-    level endon(#"hash_e02b4765");
+    level endon(#"plaza_combat_live");
     while (true) {
         curweapon = self waittill(#"weapon_fired");
         if (!weaponhasattachment(curweapon, "suppressed") || curweapon.name != "ar_marksman_veng_hero_weap") {
@@ -1235,7 +1235,7 @@ function function_68e4ea91(var_ab891f49) {
 // Size: 0x3a
 function function_47370bbe() {
     self endon(#"death");
-    wait(randomfloatrange(1.5, 5));
+    wait randomfloatrange(1.5, 5);
     self kill();
 }
 
@@ -1244,14 +1244,14 @@ function function_47370bbe() {
 // Checksum 0xd6f86488, Offset: 0x60e0
 // Size: 0x82
 function function_892fb7e0() {
-    level endon(#"hash_646ccd7c");
+    level endon(#"plaza_cleared");
     level thread function_5f5b64cf();
     exploder::exploder("sh_lhs_fire");
-    wait(2.5);
+    wait 2.5;
     exploder::exploder("sh_rhs_fire");
-    wait(10);
+    wait 10;
     exploder::exploder("sh_cent_fire");
-    wait(6);
+    wait 6;
     exploder::exploder("sh_upper_fire");
 }
 
@@ -1273,7 +1273,7 @@ function function_5f5b64cf() {
 // Size: 0x2a5
 function function_29587c78() {
     self endon(#"disconnect");
-    level endon(#"hash_646ccd7c");
+    level endon(#"plaza_cleared");
     while (true) {
         eye = self geteye();
         var_fd26df34 = anglestoforward(self getplayerangles());
@@ -1294,33 +1294,33 @@ function function_29587c78() {
                 if (sighttracepassed(var_bbf94a49, eye, 0, undefined)) {
                     if (isalive(var_daf22616)) {
                         if (issubstr(var_daf22616.classname, "warlord")) {
-                            wait(7);
+                            wait 7;
                             continue;
                         }
                         if (issubstr(var_daf22616.classname, "rpg")) {
                             if (math::cointoss()) {
-                                wait(7);
+                                wait 7;
                                 continue;
                             } else {
-                                wait(7);
+                                wait 7;
                                 continue;
                             }
                         }
                         if (isdefined(var_daf22616.script_vehicleride) && var_daf22616.script_startingposition == "gunner1") {
-                            wait(7);
+                            wait 7;
                             continue;
                         }
                         if (isvehicle(var_daf22616)) {
                             if (issubstr(var_daf22616.vehicletype, "wasp")) {
                                 level.var_2fd26037 namespace_63b4601c::function_5fbec645("hend_watch_the_skies_for_0", 0, 0, self);
-                                wait(7);
+                                wait 7;
                             }
                         }
                     }
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1337,7 +1337,7 @@ function function_9af0090() {
     nag_vo[2] = "hend_get_your_ass_down_he_0";
     self thread function_2b657656();
     while (true) {
-        wait(randomintrange(10, 15));
+        wait randomintrange(10, 15);
         var_616d3e3e = array::random(nag_vo);
         level.var_2fd26037 namespace_63b4601c::function_5fbec645(var_616d3e3e, 0, 0, self);
         nag_vo = array::exclude(nag_vo, var_616d3e3e);

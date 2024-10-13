@@ -145,7 +145,7 @@ function function_7b02a267() {
                 }
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -197,7 +197,7 @@ function function_7a8a936b() {
                 continue;
             }
             /#
-                namespace_49107f3a::debugmsg("hazard_activated");
+                namespace_49107f3a::debugmsg("<dev string:x28>");
             #/
         }
     }
@@ -286,7 +286,7 @@ function private function_fb78d226(triggervolume) {
     self asmsetanimationrate(0.8);
     self.in_water = 1;
     while (isdefined(triggervolume) && self istouching(triggervolume)) {
-        wait(0.25);
+        wait 0.25;
     }
     self asmsetanimationrate(1);
 }
@@ -326,11 +326,11 @@ function private function_6ec8176a() {
         if (isdefined(guy.takedamage) && isdefined(guy) && isalive(guy) && guy.takedamage && !(isdefined(guy.boss) && guy.boss)) {
             if (isdefined(self.script_noteworthy)) {
                 switch (self.script_noteworthy) {
-                case 20:
+                case "water":
                     guy thread namespace_1a381543::function_90118d8c("zmb_hazard_water_death");
                     guy thread namespace_eaa992c::function_285a2999("hazard_water");
                     break;
-                case 19:
+                case "lava":
                     break;
                 }
             }
@@ -367,7 +367,7 @@ function private function_70dbf276() {
                 guy notify(#"hash_d28ba89d");
             }
             switch (var_c99d2b6d) {
-            case 21:
+            case "spawn_at_safe":
                 spot = namespace_49107f3a::function_5ee38fe3(guy.origin, level.doa.arenas[level.doa.var_90873830].var_1d2ed40).origin;
                 break;
             default:
@@ -500,7 +500,7 @@ function private function_993013cd(trigger) {
         if (isdefined(self.active) && self.active && isdefined(trigger)) {
             namespace_2f63e553::drawcylinder(trigger.origin, self.def.width, self.def.height);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -554,7 +554,7 @@ function function_5d31907f() {
         return;
     }
     switch (self.def.type) {
-    case 2:
+    case "type_electric_mine":
         self thread function_bf0f9f64();
         if (!isdefined(level.doa.var_f6ba7ed2)) {
             level.doa.var_f6ba7ed2 = self.def;
@@ -573,20 +573,20 @@ function function_5d31907f() {
 function function_bf0f9f64() {
     self endon(#"death");
     self.active = 0;
-    self clientfield::set("hazard_type", isdefined(self.var_d05d7e08) ? self.var_d05d7e08 : 1);
-    wait(0.05);
+    self clientfield::set("hazard_type", isdefined(self.hazard_type) ? self.hazard_type : 1);
+    wait 0.05;
     self thread function_8a97d2c0(self.trigger);
     self clientfield::set("hazard_activated", 1);
-    wait(randomfloatrange(2.1, 8));
+    wait randomfloatrange(2.1, 8);
     while (true) {
         self clientfield::set("hazard_activated", 2);
-        wait(1.2);
+        wait 1.2;
         self clientfield::set("hazard_activated", 3);
         self.active = 1;
-        wait(randomfloatrange(4, 10));
+        wait randomfloatrange(4, 10);
         self clientfield::set("hazard_activated", 1);
         self.active = 0;
-        wait(randomfloatrange(3, 6));
+        wait randomfloatrange(3, 6);
     }
 }
 
@@ -632,7 +632,7 @@ function function_d8d20160() {
         self.health = level.doa.rules.var_5e3c9766;
         self.maxhealth = self.health;
         self.team = "axis";
-        self.var_febf89ad = 1;
+        self.trashcan = 1;
         self.var_1a563349 = 1;
         self.var_262e30aa = (0, 0, 42);
         self.death_func = &function_193a95a6;
@@ -643,7 +643,7 @@ function function_d8d20160() {
                 damage = int(max(self.health * 0.5, damage));
             }
             /#
-                namespace_49107f3a::debugmsg("hazard_activated" + damage + "hazard_activated" + meansofdeath + "hazard_activated" + self.health);
+                namespace_49107f3a::debugmsg("<dev string:x4a>" + damage + "<dev string:x5e>" + meansofdeath + "<dev string:x68>" + self.health);
             #/
             lasthealth = self.health;
             self.health -= damage;
@@ -695,7 +695,7 @@ function private function_441547f1() {
             }
             pickup thread namespace_a7e6beb5::function_6b4a5f81();
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -706,7 +706,7 @@ function private function_441547f1() {
 function function_ffe39afe() {
     count = 0;
     foreach (hazard in level.doa.var_7817fe3c) {
-        if (isdefined(hazard.var_febf89ad) && isdefined(hazard) && hazard.var_febf89ad) {
+        if (isdefined(hazard.trashcan) && isdefined(hazard) && hazard.trashcan) {
             count++;
         }
     }

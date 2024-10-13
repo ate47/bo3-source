@@ -99,7 +99,7 @@ function get_active_vortex_count() {
 function private stop_vortex_fx_after_time(vortex_fx_handle, vortex_position, vortex_explosion_fx, n_vortex_time) {
     n_starttime = gettime();
     for (n_curtime = gettime() - n_starttime; n_curtime < n_vortex_time; n_curtime = gettime() - n_starttime) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -128,9 +128,9 @@ function start_timed_vortex(v_vortex_origin, n_vortex_radius, var_8f8e4bb0, var_
     }
     self endon(#"death");
     self endon(#"disconnect");
-    assert(isdefined(v_vortex_origin), "scriptmover");
-    assert(isdefined(n_vortex_radius), "scriptmover");
-    assert(isdefined(var_8f8e4bb0), "scriptmover");
+    assert(isdefined(v_vortex_origin), "<dev string:x28>");
+    assert(isdefined(n_vortex_radius), "<dev string:x53>");
+    assert(isdefined(var_8f8e4bb0), "<dev string:x7d>");
     n_starttime = gettime();
     n_currtime = gettime() - n_starttime;
     a_e_players = getplayers();
@@ -210,12 +210,12 @@ function start_timed_vortex(v_vortex_origin, n_vortex_radius, var_8f8e4bb0, var_
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
         n_currtime = gettime() - n_starttime;
     }
     if (isdefined(var_63553a7e) && var_63553a7e) {
         n_time_to_wait_for_explosion = n_vortex_time_cl - n_vortex_time_sv + 0.35;
-        wait(n_time_to_wait_for_explosion);
+        wait n_time_to_wait_for_explosion;
         svortex.in_use = 0;
         arrayremovevalue(level.vortex_manager.a_active_vorticies, s_active_vortex);
         vortex_explosion(v_vortex_origin, eattacker, n_vortex_explosion_radius);
@@ -308,7 +308,7 @@ function player_vortex_visionset(name) {
     thread visionset_mgr::activate("visionset", name + "_visionset", self, 0.25, 2, 0.25);
     thread visionset_mgr::activate("overlay", name + "_blur", self, 0.25, 2, 0.25);
     self.idgun_vision_on = 1;
-    wait(2.5);
+    wait 2.5;
     self.idgun_vision_on = 0;
 }
 
@@ -373,7 +373,7 @@ function state_idgun_crush_update(params) {
             self.crush_anim_started = 1;
         }
         fly_ent.origin += veh_to_black_hole_vec * 8;
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -422,7 +422,7 @@ function switch_to_crush_asm(black_hole_center) {
             self asmrequestsubstate("idgun_crush@movement");
             return;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -436,7 +436,7 @@ function state_idgun_flying_death_update(params) {
         self.parasiteenemy.hunted_by--;
     }
     self playsound("zmb_parasite_explo");
-    wait(0.2);
+    wait 0.2;
     self delete();
 }
 

@@ -97,7 +97,7 @@ function function_ffe3f04() {
     self useanimtree(#generic);
     self clearanim(generic%ai_siegebot_base_mp_left_arm_retract, 0.2);
     self setanim(generic%ai_siegebot_base_mp_left_arm_extend, 1);
-    wait(0.1);
+    wait 0.1;
     if (self clientfield::get("siegebot_retract_left_arm") == 0) {
         self clearanim(generic%ai_siegebot_base_mp_left_arm_extend, 0.1);
     }
@@ -121,7 +121,7 @@ function function_ce4c51d5() {
     self useanimtree(#generic);
     self clearanim(generic%ai_siegebot_base_mp_right_arm_retract, 0.2);
     self setanim(generic%ai_siegebot_base_mp_right_arm_extend, 1);
-    wait(0.1);
+    wait 0.1;
     if (self clientfield::get("siegebot_retract_right_arm") == 0) {
         self clearanim(generic%ai_siegebot_base_mp_right_arm_extend, 0.1);
     }

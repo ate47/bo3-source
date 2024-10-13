@@ -36,7 +36,7 @@ function __init__() {
 // Checksum 0x6f52165, Offset: 0x490
 // Size: 0xbc
 function function_2d7e91bf(localclientnum, charactermodel, var_c55b8047) {
-    anim_name = namespace_3cadf69b::function_466e285f(localclientnum, charactermodel, var_c55b8047);
+    anim_name = end_game_taunts::function_466e285f(localclientnum, charactermodel, var_c55b8047);
     if (isdefined(anim_name)) {
         charactermodel util::waittill_dobj(localclientnum);
         if (!charactermodel hasanimtree()) {
@@ -141,14 +141,14 @@ function function_edb35629(localclientnum) {
         if (index < numclients) {
             thread function_d9779084(localclientnum, charactermodel, index);
             if (index == 0) {
-                thread namespace_3cadf69b::function_206ff6ca(localclientnum, charactermodel, index);
+                thread end_game_taunts::function_206ff6ca(localclientnum, charactermodel, index);
             }
         }
     }
     /#
-        level thread namespace_3cadf69b::function_93ddf1a2();
-        level thread namespace_3cadf69b::function_d90bdba7();
-        level thread namespace_3cadf69b::function_41f59618();
+        level thread end_game_taunts::function_93ddf1a2();
+        level thread end_game_taunts::function_d90bdba7();
+        level thread end_game_taunts::function_41f59618();
     #/
     position = struct::get("endgame_top_players_struct", "targetname");
     playmaincamxcam(localclientnum, level.endgamexcamname, 0, "cam_topscorers", "topscorers", position.origin, position.angles);
@@ -164,7 +164,7 @@ function function_edb35629(localclientnum) {
 // Size: 0x68
 function function_8fe32d5e(localclientnum) {
     while (true) {
-        wait(0.25);
+        wait 0.25;
         setuimodelvalue(createuimodel(getuimodelforcontroller(localclientnum), "displayTop3Players"), 1);
     }
 }
@@ -191,7 +191,7 @@ function function_8bb13743(localclientnum, localplayer, playerindex) {
     }
     charactermodel = level.var_62c15215[var_678d2f60];
     if (var_678d2f60 > 0) {
-        wait(3);
+        wait 3;
     } else if (isdefined(charactermodel.var_7ca854a3)) {
         charactermodel waittill(#"hash_447fd19");
     }
@@ -246,7 +246,7 @@ function function_5949cb92(localclientnum, var_c55b8047, gesturetype) {
     if (isdefined(charactermodel.var_1e465ba6) && (isdefined(charactermodel.var_7ca854a3) || charactermodel.var_1e465ba6)) {
         return;
     }
-    thread namespace_3cadf69b::function_2794f71c(localclientnum, charactermodel, var_c55b8047, gesturetype);
+    thread end_game_taunts::function_2794f71c(localclientnum, charactermodel, var_c55b8047, gesturetype);
 }
 
 // Namespace end_game_flow
@@ -257,7 +257,7 @@ function function_32cc2aa4() {
     while (true) {
         localclientnum = level waittill(#"streamfksl");
         function_6b822cb1(localclientnum);
-        namespace_3cadf69b::function_6eace780();
+        end_game_taunts::function_6eace780();
     }
 }
 
@@ -278,8 +278,8 @@ function function_ae4f634e(localclientnum, oldval, newval, bnewent, binitialsnap
 // Size: 0x150
 function showscoreboard(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(newval) && newval > 0 && isdefined(level.endgamexcamname)) {
-        namespace_3cadf69b::function_be586671();
-        namespace_3cadf69b::function_6a310293(undefined);
+        end_game_taunts::function_be586671();
+        end_game_taunts::function_6a310293(undefined);
         position = struct::get("endgame_top_players_struct", "targetname");
         playmaincamxcam(localclientnum, level.endgamexcamname, 0, "cam_topscorers", "", position.origin, position.angles);
         setuimodelvalue(createuimodel(getuimodelforcontroller(localclientnum), "forceScoreboard"), 1);

@@ -1,9 +1,9 @@
 #using scripts/shared/music_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_6cf6620e;
+#namespace cp_mi_cairo_lotus2_sound;
 
-// Namespace namespace_6cf6620e
+// Namespace cp_mi_cairo_lotus2_sound
 // Params 0, eflags: 0x0
 // Checksum 0x8784011e, Offset: 0x178
 // Size: 0x34

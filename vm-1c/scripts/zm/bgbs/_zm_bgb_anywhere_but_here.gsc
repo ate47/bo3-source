@@ -71,7 +71,7 @@ function activation() {
     if (isdefined(level.var_2300a8ad)) {
         self [[ level.var_2300a8ad ]]();
     }
-    wait(0.5);
+    wait 0.5;
     self show();
     playfx(level._effect["teleport_splash"], self.origin);
     playfx(level._effect["teleport_aoe"], self.origin);
@@ -89,10 +89,10 @@ function activation() {
             ai dodamage(ai.health + 1000, self.origin, self);
         }
     }
-    wait(0.2);
+    wait 0.2;
     self freezecontrols(0);
     self zm_stats::increment_challenge_stat("GUM_GOBBLER_ANYWHERE_BUT_HERE");
-    wait(3);
+    wait 3;
     zm_utility::function_36f941b3();
 }
 

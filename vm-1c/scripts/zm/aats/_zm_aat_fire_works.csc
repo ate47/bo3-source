@@ -2,9 +2,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/aat_shared;
 
-#namespace namespace_a7e7ef63;
+#namespace zm_aat_fire_works;
 
-// Namespace namespace_a7e7ef63
+// Namespace zm_aat_fire_works
 // Params 0, eflags: 0x2
 // Checksum 0x466d6962, Offset: 0x168
 // Size: 0x34
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
     system::register("zm_aat_fire_works", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_a7e7ef63
+// Namespace zm_aat_fire_works
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8db38e05, Offset: 0x1a8
 // Size: 0xa6
@@ -25,7 +25,7 @@ function __init__() {
     level._effect["zm_aat_fire_works"] = "zombie/fx_aat_fireworks_zmb";
 }
 
-// Namespace namespace_a7e7ef63
+// Namespace zm_aat_fire_works
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf595ef0e, Offset: 0x258
 // Size: 0x116
@@ -45,7 +45,7 @@ function function_272fb293(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_a7e7ef63
+// Namespace zm_aat_fire_works
 // Params 1, eflags: 0x1 linked
 // Checksum 0x68a80b30, Offset: 0x378
 // Size: 0x66

@@ -81,7 +81,7 @@ function end_on_death() {
 // Size: 0x2a
 function end_on_timer(timer) {
     self endon(#"disconnect");
-    wait(timer);
+    wait timer;
     self notify(#"end_on_timer");
 }
 
@@ -100,7 +100,7 @@ function rcbomb_earthquake(position) {
 // Size: 0x42
 function reset_meleesnd() {
     self endon(#"death");
-    wait(6);
+    wait 6;
     self clientfield::set_to_player("sndMelee", 0);
     self notify(#"snd_melee_end");
 }

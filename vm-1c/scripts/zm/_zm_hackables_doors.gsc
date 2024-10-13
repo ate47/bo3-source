@@ -13,7 +13,7 @@
 // Size: 0x12a
 function function_b58c2757() {
     while (true) {
-        wait(0.1);
+        wait 0.1;
         origin = self.origin;
         point = origin;
         for (i = 1; i < 5; i++) {
@@ -24,7 +24,7 @@ function function_b58c2757() {
                 color = (255, 0, 0);
             }
             /#
-                print3d(point, "<unknown string>", color, 1, 1);
+                print3d(point, "<dev string:x28>", color, 1, 1);
             #/
         }
     }
@@ -55,7 +55,7 @@ function function_96d11a0c(targetname, var_4706f85c) {
         struct.var_4706f85c = var_4706f85c;
         var_576f2bd7 = 0;
         door thread function_587a65c2(struct);
-        namespace_6d813654::function_66764564(struct, &function_db628e13);
+        zm_equip_hacker::function_66764564(struct, &function_db628e13);
         door thread function_1f3000dc(struct);
     }
 }
@@ -68,7 +68,7 @@ function function_587a65c2(var_3d380693) {
     self endon(#"death");
     self endon(#"hash_5b86d8c8");
     self endon(#"door_opened");
-    namespace_6d813654::function_4edfe9fb();
+    zm_equip_hacker::function_4edfe9fb();
 }
 
 // Namespace namespace_65fac977
@@ -106,7 +106,7 @@ function function_be5f5b6e(door) {
         }
     }
     for (i = 0; i < candidates.size; i++) {
-        namespace_6d813654::function_fcbe2f17(candidates[i]);
+        zm_equip_hacker::function_fcbe2f17(candidates[i]);
     }
 }
 

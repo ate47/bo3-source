@@ -12,9 +12,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f95f1bc4;
+#namespace zm_perk_doubletap2;
 
-// Namespace namespace_f95f1bc4
+// Namespace zm_perk_doubletap2
 // Params 0, eflags: 0x2
 // Checksum 0x99801de0, Offset: 0x340
 // Size: 0x34
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
     system::register("zm_perk_doubletap2", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_f95f1bc4
+// Namespace zm_perk_doubletap2
 // Params 0, eflags: 0x1 linked
 // Checksum 0x307a5aac, Offset: 0x380
 // Size: 0x14
@@ -30,7 +30,7 @@ function __init__() {
     function_67e7f8cd();
 }
 
-// Namespace namespace_f95f1bc4
+// Namespace zm_perk_doubletap2
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbbeab13c, Offset: 0x3a0
 // Size: 0xf4
@@ -42,7 +42,7 @@ function function_67e7f8cd() {
     zm_perks::register_perk_host_migration_params("specialty_doubletap2", "vending_doubletap", "doubletap2_light");
 }
 
-// Namespace namespace_f95f1bc4
+// Namespace zm_perk_doubletap2
 // Params 0, eflags: 0x1 linked
 // Checksum 0x93aa75ae, Offset: 0x4a0
 // Size: 0xe0
@@ -58,7 +58,7 @@ function function_150621ef() {
     level.machine_assets["specialty_doubletap2"].on_model = "p7_zm_vending_doubletap2";
 }
 
-// Namespace namespace_f95f1bc4
+// Namespace zm_perk_doubletap2
 // Params 0, eflags: 0x1 linked
 // Checksum 0x492d32f, Offset: 0x588
 // Size: 0x34
@@ -66,7 +66,7 @@ function function_90c13e4d() {
     clientfield::register("clientuimodel", "hudItems.perks.doubletap2", 1, 2, "int");
 }
 
-// Namespace namespace_f95f1bc4
+// Namespace zm_perk_doubletap2
 // Params 1, eflags: 0x1 linked
 // Checksum 0x682b1fa0, Offset: 0x5c8
 // Size: 0x2c
@@ -74,7 +74,7 @@ function function_7a56affa(state) {
     self clientfield::set_player_uimodel("hudItems.perks.doubletap2", state);
 }
 
-// Namespace namespace_f95f1bc4
+// Namespace zm_perk_doubletap2
 // Params 4, eflags: 0x1 linked
 // Checksum 0xbbcebed8, Offset: 0x600
 // Size: 0xbc

@@ -15,9 +15,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_80d0b0a9;
+#namespace zm_moon_sq_datalogs;
 
-// Namespace namespace_80d0b0a9
+// Namespace zm_moon_sq_datalogs
 // Params 0, eflags: 0x1 linked
 // Checksum 0xffae8298, Offset: 0x368
 // Size: 0x404
@@ -53,14 +53,14 @@ function init() {
         sound_ent = spawn("script_origin", player.origin);
         sound_ent playsoundwithnotify(var_cd9ea424[i], "sounddone");
         sound_ent playloopsound("vox_radio_egg_snapshot", 1);
-        wait(var_6fc7ca24[var_cd9ea424[i]]);
+        wait var_6fc7ca24[var_cd9ea424[i]];
         sound_ent stoploopsound(1);
         i++;
         arrayremovevalue(var_b3f5e95, var_53a5577b);
     }
 }
 
-// Namespace namespace_80d0b0a9
+// Namespace zm_moon_sq_datalogs
 // Params 0, eflags: 0x1 linked
 // Checksum 0x20a4eecd, Offset: 0x778
 // Size: 0x18

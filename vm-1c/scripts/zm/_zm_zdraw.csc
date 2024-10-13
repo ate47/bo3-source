@@ -18,7 +18,7 @@
     // Checksum 0x40ae5d3, Offset: 0x198
     // Size: 0x44
     function autoexec function_2dc19561() {
-        system::register("<unknown string>", &__init__, &__main__, undefined);
+        system::register("<dev string:x28>", &__init__, &__main__, undefined);
     }
 
     // Namespace zm_zdraw
@@ -26,7 +26,7 @@
     // Checksum 0xbcf0ce2d, Offset: 0x1e8
     // Size: 0x8c
     function __init__() {
-        setdvar("<unknown string>", "<unknown string>");
+        setdvar("<dev string:x28>", "<dev string:x2e>");
         level.zdraw = spawnstruct();
         function_3e630288();
         function_aa8545fe();
@@ -48,30 +48,30 @@
     // Size: 0x3be
     function function_3e630288() {
         level.zdraw.colors = [];
-        level.zdraw.colors["<unknown string>"] = (1, 0, 0);
-        level.zdraw.colors["<unknown string>"] = (0, 1, 0);
-        level.zdraw.colors["<unknown string>"] = (0, 0, 1);
-        level.zdraw.colors["<unknown string>"] = (1, 1, 0);
-        level.zdraw.colors["<unknown string>"] = (1, 0.5, 0);
-        level.zdraw.colors["<unknown string>"] = (0, 1, 1);
-        level.zdraw.colors["<unknown string>"] = (1, 0, 1);
-        level.zdraw.colors["<unknown string>"] = (0, 0, 0);
-        level.zdraw.colors["<unknown string>"] = (1, 1, 1);
-        level.zdraw.colors["<unknown string>"] = (0.75, 0.75, 0.75);
-        level.zdraw.colors["<unknown string>"] = (0.1, 0.1, 0.1);
-        level.zdraw.colors["<unknown string>"] = (0.2, 0.2, 0.2);
-        level.zdraw.colors["<unknown string>"] = (0.3, 0.3, 0.3);
-        level.zdraw.colors["<unknown string>"] = (0.4, 0.4, 0.4);
-        level.zdraw.colors["<unknown string>"] = (0.5, 0.5, 0.5);
-        level.zdraw.colors["<unknown string>"] = (0.6, 0.6, 0.6);
-        level.zdraw.colors["<unknown string>"] = (0.7, 0.7, 0.7);
-        level.zdraw.colors["<unknown string>"] = (0.8, 0.8, 0.8);
-        level.zdraw.colors["<unknown string>"] = (0.9, 0.9, 0.9);
-        level.zdraw.colors["<unknown string>"] = (0.439216, 0.501961, 0.564706);
-        level.zdraw.colors["<unknown string>"] = (1, 0.752941, 0.796078);
-        level.zdraw.colors["<unknown string>"] = (0.501961, 0.501961, 0);
-        level.zdraw.colors["<unknown string>"] = (0.545098, 0.270588, 0.0745098);
-        level.zdraw.colors["<unknown string>"] = (1, 1, 1);
+        level.zdraw.colors["<dev string:x2f>"] = (1, 0, 0);
+        level.zdraw.colors["<dev string:x33>"] = (0, 1, 0);
+        level.zdraw.colors["<dev string:x39>"] = (0, 0, 1);
+        level.zdraw.colors["<dev string:x3e>"] = (1, 1, 0);
+        level.zdraw.colors["<dev string:x45>"] = (1, 0.5, 0);
+        level.zdraw.colors["<dev string:x4c>"] = (0, 1, 1);
+        level.zdraw.colors["<dev string:x51>"] = (1, 0, 1);
+        level.zdraw.colors["<dev string:x58>"] = (0, 0, 0);
+        level.zdraw.colors["<dev string:x5e>"] = (1, 1, 1);
+        level.zdraw.colors["<dev string:x64>"] = (0.75, 0.75, 0.75);
+        level.zdraw.colors["<dev string:x69>"] = (0.1, 0.1, 0.1);
+        level.zdraw.colors["<dev string:x6f>"] = (0.2, 0.2, 0.2);
+        level.zdraw.colors["<dev string:x75>"] = (0.3, 0.3, 0.3);
+        level.zdraw.colors["<dev string:x7b>"] = (0.4, 0.4, 0.4);
+        level.zdraw.colors["<dev string:x81>"] = (0.5, 0.5, 0.5);
+        level.zdraw.colors["<dev string:x87>"] = (0.6, 0.6, 0.6);
+        level.zdraw.colors["<dev string:x8d>"] = (0.7, 0.7, 0.7);
+        level.zdraw.colors["<dev string:x93>"] = (0.8, 0.8, 0.8);
+        level.zdraw.colors["<dev string:x99>"] = (0.9, 0.9, 0.9);
+        level.zdraw.colors["<dev string:x9f>"] = (0.439216, 0.501961, 0.564706);
+        level.zdraw.colors["<dev string:xa5>"] = (1, 0.752941, 0.796078);
+        level.zdraw.colors["<dev string:xaa>"] = (0.501961, 0.501961, 0);
+        level.zdraw.colors["<dev string:xb0>"] = (0.545098, 0.270588, 0.0745098);
+        level.zdraw.colors["<dev string:xb6>"] = (1, 1, 1);
     }
 
     // Namespace zm_zdraw
@@ -80,17 +80,17 @@
     // Size: 0x1d6
     function function_aa8545fe() {
         level.zdraw.commands = [];
-        level.zdraw.commands["<unknown string>"] = &function_5ef6cf9b;
-        level.zdraw.commands["<unknown string>"] = &function_eae4114a;
-        level.zdraw.commands["<unknown string>"] = &function_f2f3c18e;
-        level.zdraw.commands["<unknown string>"] = &function_8f04ad79;
-        level.zdraw.commands["<unknown string>"] = &function_a13efe1c;
-        level.zdraw.commands["<unknown string>"] = &function_b3b92edc;
-        level.zdraw.commands["<unknown string>"] = &function_8c2ca616;
-        level.zdraw.commands["<unknown string>"] = &function_3145e33f;
-        level.zdraw.commands["<unknown string>"] = &function_f36ec3d2;
-        level.zdraw.commands["<unknown string>"] = &function_7bdd3089;
-        level.zdraw.commands["<unknown string>"] = &function_be7cf134;
+        level.zdraw.commands["<dev string:xbe>"] = &function_5ef6cf9b;
+        level.zdraw.commands["<dev string:xc4>"] = &function_eae4114a;
+        level.zdraw.commands["<dev string:xca>"] = &function_f2f3c18e;
+        level.zdraw.commands["<dev string:xd3>"] = &function_8f04ad79;
+        level.zdraw.commands["<dev string:xdb>"] = &function_a13efe1c;
+        level.zdraw.commands["<dev string:xe1>"] = &function_b3b92edc;
+        level.zdraw.commands["<dev string:xe8>"] = &function_8c2ca616;
+        level.zdraw.commands["<dev string:xee>"] = &function_3145e33f;
+        level.zdraw.commands["<dev string:xf3>"] = &function_f36ec3d2;
+        level.zdraw.commands["<dev string:xf8>"] = &function_7bdd3089;
+        level.zdraw.commands["<dev string:xff>"] = &function_be7cf134;
     }
 
     // Namespace zm_zdraw
@@ -98,7 +98,7 @@
     // Checksum 0x6298ca10, Offset: 0x838
     // Size: 0xf4
     function function_404ac348() {
-        level.zdraw.color = level.zdraw.colors["<unknown string>"];
+        level.zdraw.color = level.zdraw.colors["<dev string:xb6>"];
         level.zdraw.alpha = 1;
         level.zdraw.scale = 1;
         level.zdraw.duration = int(1 * 62.5);
@@ -106,7 +106,7 @@
         level.zdraw.sides = 10;
         level.zdraw.var_5f3c7817 = (0, 0, 0);
         level.zdraw.var_922ae5d = 0;
-        level.zdraw.var_c1953771 = "<unknown string>";
+        level.zdraw.var_c1953771 = "<dev string:x2e>";
     }
 
     // Namespace zm_zdraw
@@ -117,14 +117,14 @@
         level notify(#"hash_15f14510");
         level endon(#"hash_15f14510");
         for (;;) {
-            cmd = getdvarstring("<unknown string>");
+            cmd = getdvarstring("<dev string:x28>");
             if (cmd.size) {
                 function_404ac348();
-                params = strtok(cmd, "<unknown string>");
+                params = strtok(cmd, "<dev string:x104>");
                 function_4282fd75(params, 0, 1);
-                setdvar("<unknown string>", "<unknown string>");
+                setdvar("<dev string:x28>", "<dev string:x2e>");
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 
@@ -142,7 +142,7 @@
                 continue;
             }
             if (isdefined(toplevel) && toplevel) {
-                function_c69caf7e("<unknown string>" + var_859cfb21[startat]);
+                function_c69caf7e("<dev string:x108>" + var_859cfb21[startat]);
             }
             return startat;
         }
@@ -236,13 +236,13 @@
     // Checksum 0x3f83e1b0, Offset: 0xf70
     // Size: 0x204
     function function_3145e33f(var_859cfb21, startat) {
-        level.zdraw.text = "<unknown string>";
+        level.zdraw.text = "<dev string:x2e>";
         if (isdefined(var_859cfb21[startat])) {
             var_b78d9698 = function_ce50bae5(var_859cfb21, startat);
             if (var_b78d9698 > startat) {
                 startat = var_b78d9698;
                 level.zdraw.text = level.zdraw.var_c1953771;
-                level.zdraw.var_c1953771 = "<unknown string>";
+                level.zdraw.var_c1953771 = "<dev string:x2e>";
             }
         }
         while (isdefined(var_859cfb21[startat])) {
@@ -286,7 +286,7 @@
                     level.zdraw.color = level.zdraw.colors[var_859cfb21[startat]];
                 } else {
                     level.zdraw.color = (1, 1, 1);
-                    function_c69caf7e("<unknown string>" + var_859cfb21[startat]);
+                    function_c69caf7e("<dev string:x11e>" + var_859cfb21[startat]);
                 }
                 startat += 1;
             }
@@ -425,7 +425,7 @@
                 level.zdraw.var_5f3c7817 = (level.zdraw.var_922ae5d, level.zdraw.var_5f3c7817[1], level.zdraw.var_5f3c7817[2]);
                 level.zdraw.var_922ae5d = 0;
             } else {
-                function_c69caf7e("<unknown string>");
+                function_c69caf7e("<dev string:x132>");
                 return startat;
             }
             var_b78d9698 = function_33acda19(var_859cfb21, startat);
@@ -434,7 +434,7 @@
                 level.zdraw.var_5f3c7817 = (level.zdraw.var_5f3c7817[0], level.zdraw.var_922ae5d, level.zdraw.var_5f3c7817[2]);
                 level.zdraw.var_922ae5d = 0;
             } else {
-                function_c69caf7e("<unknown string>");
+                function_c69caf7e("<dev string:x132>");
                 return startat;
             }
             var_b78d9698 = function_33acda19(var_859cfb21, startat);
@@ -443,7 +443,7 @@
                 level.zdraw.var_5f3c7817 = (level.zdraw.var_5f3c7817[0], level.zdraw.var_5f3c7817[1], level.zdraw.var_922ae5d);
                 level.zdraw.var_922ae5d = 0;
             } else {
-                function_c69caf7e("<unknown string>");
+                function_c69caf7e("<dev string:x132>");
                 return startat;
             }
         }
@@ -481,7 +481,7 @@
     // Checksum 0x8cafbd4a, Offset: 0x1c28
     // Size: 0x34
     function function_c69caf7e(msg) {
-        println("<unknown string>" + msg);
+        println("<dev string:x155>" + msg);
     }
 
 #/

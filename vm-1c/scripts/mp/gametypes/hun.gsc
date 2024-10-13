@@ -8,9 +8,9 @@
 #using scripts/shared/math_shared;
 #using scripts/shared/gameobjects_shared;
 
-#namespace namespace_ee630fae;
+#namespace hun;
 
-// Namespace namespace_ee630fae
+// Namespace hun
 // Params 0, eflags: 0x0
 // Checksum 0x1f06cbe9, Offset: 0x378
 // Size: 0x1ec
@@ -35,7 +35,7 @@ function main() {
     globallogic::setvisiblescoreboardcolumns("score", "kills", "deaths", "kdratio", "headshots");
 }
 
-// Namespace namespace_ee630fae
+// Namespace hun
 // Params 0, eflags: 0x0
 // Checksum 0xdfb1d3f4, Offset: 0x570
 // Size: 0x2d4
@@ -74,7 +74,7 @@ function onstartgametype() {
     thread function_d67100ee();
 }
 
-// Namespace namespace_ee630fae
+// Namespace hun
 // Params 1, eflags: 0x0
 // Checksum 0xe39e3d58, Offset: 0x850
 // Size: 0x58
@@ -84,7 +84,7 @@ function onendgame(winningplayer) {
     }
 }
 
-// Namespace namespace_ee630fae
+// Namespace hun
 // Params 0, eflags: 0x0
 // Checksum 0x754da67c, Offset: 0x8b0
 // Size: 0x170
@@ -106,7 +106,7 @@ function givecustomloadout() {
     return weapon;
 }
 
-// Namespace namespace_ee630fae
+// Namespace hun
 // Params 0, eflags: 0x0
 // Checksum 0xdca4e648, Offset: 0xa28
 // Size: 0xc4
@@ -121,11 +121,11 @@ function onscoreclosemusic() {
                 return;
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
-// Namespace namespace_ee630fae
+// Namespace hun
 // Params 2, eflags: 0x0
 // Checksum 0xe9a4746b, Offset: 0xaf8
 // Size: 0xbe
@@ -147,7 +147,7 @@ function function_9ff676f3(node_origin, bounds) {
     return true;
 }
 
-// Namespace namespace_ee630fae
+// Namespace hun
 // Params 0, eflags: 0x0
 // Checksum 0x20acfcde, Offset: 0xbc0
 // Size: 0x130
@@ -166,7 +166,7 @@ function initdroplocations() {
     level.var_6f7acf19 = nodes;
 }
 
-// Namespace namespace_ee630fae
+// Namespace hun
 // Params 0, eflags: 0x0
 // Checksum 0x4d6a14e1, Offset: 0xcf8
 // Size: 0x1fc
@@ -181,7 +181,7 @@ function function_ca6c069a() {
     supplydrop::function_ce670156("hunted");
 }
 
-// Namespace namespace_ee630fae
+// Namespace hun
 // Params 1, eflags: 0x0
 // Checksum 0x3a7a4894, Offset: 0xf00
 // Size: 0x8c
@@ -195,7 +195,7 @@ function function_df09c95a(weapon) {
     self setweaponammostock(weapon, 0);
 }
 
-// Namespace namespace_ee630fae
+// Namespace hun
 // Params 1, eflags: 0x0
 // Checksum 0x183ccdee, Offset: 0xf98
 // Size: 0xd4
@@ -213,7 +213,7 @@ function function_deb51712(weapon) {
     self setoffhandprimaryclass(weapon);
 }
 
-// Namespace namespace_ee630fae
+// Namespace hun
 // Params 1, eflags: 0x0
 // Checksum 0xb047cb45, Offset: 0x1078
 // Size: 0xd4
@@ -231,7 +231,7 @@ function function_c62032e9(weapon) {
     self setoffhandsecondaryclass(weapon);
 }
 
-// Namespace namespace_ee630fae
+// Namespace hun
 // Params 4, eflags: 0x0
 // Checksum 0x47ef7fab, Offset: 0x1158
 // Size: 0x9c
@@ -243,7 +243,7 @@ function function_d8bb4921(crate, category, owner, team) {
     supplydrop::default_land_function(crate, category, owner, team);
 }
 
-// Namespace namespace_ee630fae
+// Namespace hun
 // Params 0, eflags: 0x0
 // Checksum 0xf96b2f9c, Offset: 0x1200
 // Size: 0xfe
@@ -266,7 +266,7 @@ function function_390f311() {
     return node.origin;
 }
 
-// Namespace namespace_ee630fae
+// Namespace hun
 // Params 0, eflags: 0x0
 // Checksum 0x34f5fae9, Offset: 0x1308
 // Size: 0x90
@@ -274,7 +274,7 @@ function function_d67100ee() {
     wait_time = level.var_6af67392;
     time = 10000;
     while (true) {
-        wait(wait_time);
+        wait wait_time;
         origin = function_390f311();
         self thread supplydrop::helidelivercrate(origin, "hunted", level.var_64e95656, "free", 0, 0);
     }

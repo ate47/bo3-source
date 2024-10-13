@@ -21,12 +21,12 @@ function __init__() {
     level.spawnprotectiontime = getgametypesetting("spawnprotectiontime");
     level.spawnprotectiontimems = int((isdefined(level.spawnprotectiontime) ? level.spawnprotectiontime : 0) * 1000);
     /#
-        setdvar("create_grenade_influencers", "create_grenade_influencers");
-        setdvar("create_grenade_influencers", "create_grenade_influencers");
-        setdvar("create_grenade_influencers", "create_grenade_influencers");
-        setdvar("create_grenade_influencers", "create_grenade_influencers");
+        setdvar("<dev string:x28>", "<dev string:x3f>");
+        setdvar("<dev string:x40>", "<dev string:x5c>");
+        setdvar("<dev string:x5e>", "<dev string:x7c>");
+        setdvar("<dev string:x7e>", "<dev string:x7c>");
         level.test_spawn_point_index = 0;
-        setdvar("create_grenade_influencers", "create_grenade_influencers");
+        setdvar("<dev string:x98>", "<dev string:x5c>");
     #/
 }
 
@@ -112,7 +112,7 @@ function ongrenadethrow() {
     while (true) {
         grenade, weapon = self waittill(#"grenade_fire");
         level thread create_grenade_influencers(self.pers["team"], weapon, grenade);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -373,7 +373,7 @@ function create_map_placed_influencer(influencer_entity) {
         team_mask = util::getteammask(influencer_entity.script_team);
         level create_enemy_influencer(influencer_entity.script_noteworty, influencer_entity.origin, team_mask);
     } else {
-        assertmsg("create_grenade_influencers");
+        assertmsg("<dev string:xb4>");
     }
     return influencer_id;
 }
@@ -408,7 +408,7 @@ function onspawnplayer_unified(predictedspawn) {
         predictedspawn = 0;
     }
     /#
-        if (getdvarint("create_grenade_influencers") != 0) {
+        if (getdvarint("<dev string:x7e>") != 0) {
             spawn_point = get_debug_spawnpoint(self);
             self spawn(spawn_point.origin, spawn_point.angles);
             return;
@@ -633,13 +633,13 @@ function initialspawnprotection(specialtyname, spawnmonitorspeed) {
     }
     if (specialtyname == "specialty_nottargetedbyairsupport") {
         self.specialty_nottargetedbyairsupport = 1;
-        wait(level.spawnprotectiontime);
+        wait level.spawnprotectiontime;
         self.specialty_nottargetedbyairsupport = undefined;
         return;
     }
     if (!self hasperk(specialtyname)) {
         self setperk(specialtyname);
-        wait(level.spawnprotectiontime);
+        wait level.spawnprotectiontime;
         self unsetperk(specialtyname);
     }
 }

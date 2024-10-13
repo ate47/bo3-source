@@ -13,9 +13,9 @@
 
 #using_animtree("all_player");
 
-#namespace namespace_3cadf69b;
+#namespace end_game_taunts;
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 0, eflags: 0x2
 // Checksum 0x807e8586, Offset: 0x20d0
 // Size: 0x34
@@ -23,7 +23,7 @@ function autoexec function_2dc19561() {
     system::register("end_game_taunts", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8780258c, Offset: 0x2110
 // Size: 0x3a4
@@ -52,24 +52,24 @@ function __init__() {
 
 /#
 
-    // Namespace namespace_3cadf69b
+    // Namespace end_game_taunts
     // Params 0, eflags: 0x1 linked
     // Checksum 0x7542072f, Offset: 0x24c0
     // Size: 0x238
     function function_93ddf1a2() {
         while (true) {
-            setdvar("taunts::deletecameraglass", "taunts::deletecameraglass");
-            wait(0.05);
-            taunt = getdvarstring("taunts::deletecameraglass");
-            if (taunt == "taunts::deletecameraglass") {
+            setdvar("<dev string:x28>", "<dev string:x33>");
+            wait 0.05;
+            taunt = getdvarstring("<dev string:x28>");
+            if (taunt == "<dev string:x33>") {
                 continue;
             }
             model = level.var_62c15215[0];
             if (isdefined(model.var_1e465ba6) && (!isdefined(model) || isdefined(model.var_7ca854a3) || model.var_1e465ba6)) {
                 continue;
             }
-            bodytype = getdvarint("taunts::deletecameraglass", -1);
-            setdvar("taunts::deletecameraglass", -1);
+            bodytype = getdvarint("<dev string:x34>", -1);
+            setdvar("<dev string:x34>", -1);
             if (bodytype >= 0) {
                 var_7941bf2e = function_dd121ebf(model.localclientnum, bodytype, model.origin, model.angles, model.showcaseweapon);
                 model hide();
@@ -85,16 +85,16 @@ function __init__() {
         }
     }
 
-    // Namespace namespace_3cadf69b
+    // Namespace end_game_taunts
     // Params 0, eflags: 0x1 linked
     // Checksum 0x3007c725, Offset: 0x2700
     // Size: 0x140
     function function_d90bdba7() {
         while (true) {
-            setdvar("taunts::deletecameraglass", "taunts::deletecameraglass");
-            wait(0.05);
-            gesture = getdvarstring("taunts::deletecameraglass");
-            if (gesture == "taunts::deletecameraglass") {
+            setdvar("<dev string:x47>", "<dev string:x33>");
+            wait 0.05;
+            gesture = getdvarstring("<dev string:x47>");
+            if (gesture == "<dev string:x33>") {
                 continue;
             }
             model = level.var_62c15215[0];
@@ -106,14 +106,14 @@ function __init__() {
         }
     }
 
-    // Namespace namespace_3cadf69b
+    // Namespace end_game_taunts
     // Params 0, eflags: 0x1 linked
     // Checksum 0x7143c398, Offset: 0x2848
     // Size: 0xda
     function function_41f59618() {
         while (true) {
-            wait(0.016);
-            if (!getdvarint("taunts::deletecameraglass", 0)) {
+            wait 0.016;
+            if (!getdvarint("<dev string:x54>", 0)) {
                 continue;
             }
             for (i = 1; i < 3; i++) {
@@ -123,18 +123,18 @@ function __init__() {
         }
     }
 
-    // Namespace namespace_3cadf69b
+    // Namespace end_game_taunts
     // Params 5, eflags: 0x1 linked
     // Checksum 0x37198b44, Offset: 0x2930
     // Size: 0x212
     function function_dd121ebf(localclientnum, characterindex, origin, angles, showcaseweapon) {
-        tempmodel = spawn(localclientnum, origin, "taunts::deletecameraglass");
+        tempmodel = spawn(localclientnum, origin, "<dev string:x62>");
         tempmodel.angles = angles;
         tempmodel.showcaseweapon = showcaseweapon;
         tempmodel.bodymodel = getcharacterbodymodel(characterindex, 0, currentsessionmode());
         tempmodel.var_f1a3fa15 = getcharacterhelmetmodel(characterindex, 0, currentsessionmode());
         tempmodel setmodel(tempmodel.bodymodel);
-        tempmodel attach(tempmodel.var_f1a3fa15, "taunts::deletecameraglass");
+        tempmodel attach(tempmodel.var_f1a3fa15, "<dev string:x33>");
         tempmodel.var_957cc42 = getcharactermoderenderoptions(currentsessionmode());
         tempmodel.var_6f30937d = getcharacterbodyrenderoptions(characterindex, 0, 0, 0, 0);
         tempmodel.var_d44a8060 = getcharacterhelmetrenderoptions(characterindex, 0, 0, 0, 0);
@@ -144,7 +144,7 @@ function __init__() {
 
 #/
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 3, eflags: 0x1 linked
 // Checksum 0x2984b9c6, Offset: 0x2b50
 // Size: 0x94
@@ -154,7 +154,7 @@ function function_206ff6ca(localclientnum, charactermodel, var_c55b8047) {
     function_f2a89d41(localclientnum, charactermodel, var_c55b8047, idleanimname, var_7b22aba9);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 4, eflags: 0x1 linked
 // Checksum 0xf74c229, Offset: 0x2bf0
 // Size: 0x7c
@@ -164,7 +164,7 @@ function function_b5457a9d(localclientnum, charactermodel, idleanimname, var_7b2
     function_f2a89d41(localclientnum, charactermodel, 0, idleanimname, var_7b22aba9, 0, 0);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2bf2e78c, Offset: 0x2c78
 // Size: 0x29c
@@ -203,7 +203,7 @@ function function_f2a89d41(localclientnum, charactermodel, var_c55b8047, idleani
     charactermodel function_cfed633a();
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 2, eflags: 0x1 linked
 // Checksum 0x2bfb978a, Offset: 0x2f20
 // Size: 0xbe
@@ -219,7 +219,7 @@ function function_7222354d(localclientnum, charactermodel) {
     charactermodel.var_bd3c8c = undefined;
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 4, eflags: 0x1 linked
 // Checksum 0x2ad0302c, Offset: 0x2fe8
 // Size: 0x9c
@@ -229,7 +229,7 @@ function function_2794f71c(localclientnum, charactermodel, var_c55b8047, gesture
     playgesture(localclientnum, charactermodel, var_c55b8047, idleanimname, var_77c5fbfc);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 4, eflags: 0x1 linked
 // Checksum 0xf2f74fe6, Offset: 0x3090
 // Size: 0x7c
@@ -239,7 +239,7 @@ function previewgesture(localclientnum, charactermodel, idleanimname, var_77c5fb
     playgesture(localclientnum, charactermodel, 0, idleanimname, var_77c5fbfc, 0);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 6, eflags: 0x1 linked
 // Checksum 0x7e7752dc, Offset: 0x3118
 // Size: 0x2bc
@@ -277,7 +277,7 @@ function playgesture(localclientnum, charactermodel, var_c55b8047, idleanimname,
     charactermodel notify(#"hash_27e17e90");
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x1fcd374e, Offset: 0x33e0
 // Size: 0x2c
@@ -286,7 +286,7 @@ function function_1926278(charactermodel) {
     charactermodel.var_1e465ba6 = 0;
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 4, eflags: 0x1 linked
 // Checksum 0xba3e102c, Offset: 0x3418
 // Size: 0x9c
@@ -304,7 +304,7 @@ function function_f7b75149(charactermodel, var_9753d2, blendintime, blendouttime
     charactermodel animation::play(var_9753d2, undefined, undefined, 1, blendintime, blendouttime);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2b49bbc0, Offset: 0x34c0
 // Size: 0x6a
@@ -319,7 +319,7 @@ function function_31dca0d6(charactermodel) {
     }
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdf6fa944, Offset: 0x3538
 // Size: 0x6a
@@ -334,7 +334,7 @@ function function_21c398b1(charactermodel) {
     }
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x866cee6a, Offset: 0x35b0
 // Size: 0x94
@@ -348,7 +348,7 @@ function hideweapon(charactermodel) {
     charactermodel notify(#"hash_7fdd4e6d");
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe9f9f1eb, Offset: 0x3650
 // Size: 0xfc
@@ -366,7 +366,7 @@ function function_6030b386(charactermodel) {
     charactermodel notify(#"hash_de430a8c");
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 3, eflags: 0x1 linked
 // Checksum 0xfaf2f370, Offset: 0x3758
 // Size: 0x10ae
@@ -432,109 +432,109 @@ function function_466e285f(localclientnum, charactermodel, var_c55b8047) {
     return anim_name;
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 2, eflags: 0x1 linked
 // Checksum 0x2d91fad9, Offset: 0x4810
 // Size: 0x4ae
 function function_3a5977e5(charactermodel, var_c55b8047) {
     weapon_group = getweapongroup(charactermodel);
     switch (weapon_group) {
-    case 51:
+    case "weapon_smg":
         return array("pb_smg_endgame_1stplace_out", "pb_smg_endgame_2ndplace_out", "pb_smg_endgame_3rdplace_out")[var_c55b8047];
-    case 149:
+    case "weapon_assault":
         return array("pb_rifle_endgame_1stplace_out", "pb_rifle_endgame_2ndplace_out", "pb_rifle_endgame_3rdplace_out")[var_c55b8047];
-    case 53:
+    case "weapon_cqb":
         return array("pb_shotgun_endgame_1stplace_out", "pb_shotgun_endgame_2ndplace_out", "pb_shotgun_endgame_3rdplace_out")[var_c55b8047];
-    case 142:
+    case "weapon_lmg":
         return array("pb_lmg_endgame_1stplace_out", "pb_lmg_endgame_2ndplace_out", "pb_lmg_endgame_3rdplace_out")[var_c55b8047];
-    case 138:
+    case "weapon_sniper":
         return array("pb_sniper_endgame_1stplace_out", "pb_sniper_endgame_2ndplace_out", "pb_sniper_endgame_3rdplace_out")[var_c55b8047];
-    case 49:
+    case "weapon_pistol":
         return array("pb_pistol_endgame_1stplace_out", "pb_pistol_endgame_2ndplace_out", "pb_pistol_endgame_3rdplace_out")[var_c55b8047];
-    case 50:
+    case "weapon_pistol_dw":
         return array("pb_pistol_dw_endgame_1stplace_out", "pb_pistol_dw_endgame_2ndplace_out", "pb_pistol_dw_endgame_3rdplace_out")[var_c55b8047];
-    case 43:
+    case "weapon_launcher":
         return array("pb_launcher_endgame_1stplace_out", "pb_launcher_endgame_2ndplace_out", "pb_launcher_endgame_3rdplace_out")[var_c55b8047];
-    case 46:
+    case "weapon_launcher_alt":
         return array("pb_launcher_alt_endgame_1stplace_out", "pb_launcher_alt_endgame_2ndplace_out", "pb_launcher_alt_endgame_3rdplace_out")[var_c55b8047];
-    case 61:
+    case "weapon_knife":
         return array("pb_knife_endgame_1stplace_out", "pb_knife_endgame_2ndplace_out", "pb_knife_endgame_3rdplace_out")[var_c55b8047];
-    case 119:
+    case "weapon_knuckles":
         return array("pb_brass_knuckles_endgame_1stplace_out", "pb_brass_knuckles_endgame_2ndplace_out", "pb_brass_knuckles_endgame_3rdplace_out")[var_c55b8047];
-    case 118:
+    case "weapon_boxing":
         return array("pb_boxing_gloves_endgame_1stplace_out", "pb_boxing_gloves_endgame_2ndplace_out", "pb_boxing_gloves_endgame_3rdplace_out")[var_c55b8047];
-    case 117:
+    case "weapon_wrench":
         return array("pb_wrench_endgame_1stplace_out", "pb_wrench_endgame_2ndplace_out", "pb_wrench_endgame_3rdplace_out")[var_c55b8047];
-    case 116:
+    case "weapon_sword":
         return array("pb_sword_endgame_1stplace_out", "pb_sword_endgame_2ndplace_out", "pb_sword_endgame_3rdplace_out")[var_c55b8047];
-    case 115:
+    case "weapon_nunchucks":
         return array("pb_nunchucks_endgame_1stplace_out", "pb_nunchucks_endgame_2ndplace_out", "pb_nunchucks_endgame_3rdplace_out")[var_c55b8047];
-    case 114:
+    case "weapon_mace":
         return array("pb_mace_endgame_1stplace_out", "pb_mace_endgame_2ndplace_out", "pb_mace_endgame_3rdplace_out")[var_c55b8047];
-    case 112:
+    case "weapon_prosthetic":
         return array("pb_prosthetic_arm_endgame_1stplace_out", "pb_prosthetic_arm_endgame_2ndplace_out", "pb_prosthetic_arm_endgame_3rdplace_out")[var_c55b8047];
-    case 111:
+    case "weapon_chainsaw":
         return array("pb_chainsaw_endgame_1stplace_idle_out", "pb_chainsaw_endgame_1stplace_idle_out", "pb_chainsaw_endgame_1stplace_idle_out")[var_c55b8047];
-    case 48:
+    case "weapon_smg_ppsh":
         return array("pb_smg_ppsh_endgame_1stplace_out", "pb_smg_ppsh_endgame_1stplace_out", "pb_smg_ppsh_endgame_1stplace_out")[var_c55b8047];
-    case 60:
+    case "weapon_knife_ballistic":
         return array("pb_b_knife_endgame_1stplace_out", "pb_b_knife_endgame_1stplace_out", "pb_b_knife_endgame_1stplace_out")[var_c55b8047];
     }
     return "";
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc84431fe, Offset: 0x4cc8
 // Size: 0x4ae
 function function_ae20af86(charactermodel, var_c55b8047) {
     weapon_group = getweapongroup(charactermodel);
     switch (weapon_group) {
-    case 51:
+    case "weapon_smg":
         return array("pb_smg_endgame_1stplace_in", "pb_smg_endgame_2ndplace_in", "pb_smg_endgame_3rdplace_in")[var_c55b8047];
-    case 149:
+    case "weapon_assault":
         return array("pb_rifle_endgame_1stplace_in", "pb_rifle_endgame_2ndplace_in", "pb_rifle_endgame_3rdplace_in")[var_c55b8047];
-    case 53:
+    case "weapon_cqb":
         return array("pb_shotgun_endgame_1stplace_in", "pb_shotgun_endgame_2ndplace_in", "pb_shotgun_endgame_3rdplace_in")[var_c55b8047];
-    case 142:
+    case "weapon_lmg":
         return array("pb_lmg_endgame_1stplace_in", "pb_lmg_endgame_2ndplace_in", "pb_lmg_endgame_3rdplace_in")[var_c55b8047];
-    case 138:
+    case "weapon_sniper":
         return array("pb_sniper_endgame_1stplace_in", "pb_sniper_endgame_2ndplace_in", "pb_sniper_endgame_3rdplace_in")[var_c55b8047];
-    case 49:
+    case "weapon_pistol":
         return array("pb_pistol_endgame_1stplace_in", "pb_pistol_endgame_2ndplace_in", "pb_pistol_endgame_3rdplace_in")[var_c55b8047];
-    case 50:
+    case "weapon_pistol_dw":
         return array("pb_pistol_dw_endgame_1stplace_in", "pb_pistol_dw_endgame_2ndplace_in", "pb_pistol_dw_endgame_3rdplace_in")[var_c55b8047];
-    case 43:
+    case "weapon_launcher":
         return array("pb_launcher_endgame_1stplace_in", "pb_launcher_endgame_2ndplace_in", "pb_launcher_endgame_3rdplace_in")[var_c55b8047];
-    case 46:
+    case "weapon_launcher_alt":
         return array("pb_launcher_alt_endgame_1stplace_in", "pb_launcher_alt_endgame_2ndplace_in", "pb_launcher_alt_endgame_3rdplace_in")[var_c55b8047];
-    case 61:
+    case "weapon_knife":
         return array("pb_knife_endgame_1stplace_in", "pb_knife_endgame_2ndplace_in", "pb_knife_endgame_3rdplace_in")[var_c55b8047];
-    case 119:
+    case "weapon_knuckles":
         return array("pb_brass_knuckles_endgame_1stplace_in", "pb_brass_knuckles_endgame_2ndplace_in", "pb_brass_knuckles_endgame_3rdplace_in")[var_c55b8047];
-    case 118:
+    case "weapon_boxing":
         return array("pb_boxing_gloves_endgame_1stplace_in", "pb_boxing_gloves_endgame_2ndplace_in", "pb_boxing_gloves_endgame_3rdplace_in")[var_c55b8047];
-    case 117:
+    case "weapon_wrench":
         return array("pb_wrench_endgame_1stplace_in", "pb_wrench_endgame_2ndplace_in", "pb_wrench_endgame_3rdplace_in")[var_c55b8047];
-    case 116:
+    case "weapon_sword":
         return array("pb_sword_endgame_1stplace_in", "pb_sword_endgame_2ndplace_in", "pb_sword_endgame_3rdplace_in")[var_c55b8047];
-    case 115:
+    case "weapon_nunchucks":
         return array("pb_nunchucks_endgame_1stplace_in", "pb_nunchucks_endgame_2ndplace_in", "pb_nunchucks_endgame_3rdplace_in")[var_c55b8047];
-    case 114:
+    case "weapon_mace":
         return array("pb_mace_endgame_1stplace_in", "pb_mace_endgame_2ndplace_in", "pb_mace_endgame_3rdplace_in")[var_c55b8047];
-    case 112:
+    case "weapon_prosthetic":
         return array("pb_prosthetic_arm_endgame_1stplace_in", "pb_prosthetic_arm_endgame_2ndplace_in", "pb_prosthetic_arm_endgame_3rdplace_in")[var_c55b8047];
-    case 111:
+    case "weapon_chainsaw":
         return array("pb_chainsaw_endgame_1stplace_idle_in", "pb_chainsaw_endgame_1stplace_idle_in", "pb_chainsaw_endgame_1stplace_idle_in")[var_c55b8047];
-    case 48:
+    case "weapon_smg_ppsh":
         return array("pb_smg_ppsh_endgame_1stplace_in", "pb_smg_ppsh_endgame_1stplace_in", "pb_smg_ppsh_endgame_1stplace_in")[var_c55b8047];
-    case 60:
+    case "weapon_knife_ballistic":
         return array("pb_b_knife_endgame_1stplace_in", "pb_b_knife_endgame_1stplace_in", "pb_b_knife_endgame_1stplace_in")[var_c55b8047];
     }
     return "";
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x80f9ed8, Offset: 0x5180
 // Size: 0x69c
@@ -593,7 +593,7 @@ function getweapongroup(charactermodel) {
     return weapon_group;
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc0b1a3ab, Offset: 0x5828
 // Size: 0x8a
@@ -603,7 +603,7 @@ function function_6eace780() {
     }
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3b56f213, Offset: 0x58c0
 // Size: 0x8a
@@ -613,7 +613,7 @@ function function_be586671() {
     }
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 2, eflags: 0x1 linked
 // Checksum 0x756dbdd1, Offset: 0x5958
 // Size: 0x280
@@ -623,21 +623,21 @@ function function_eb8cdf14(localclientnum, var_7b22aba9) {
         return false;
     }
     switch (var_7b22aba9) {
-    case 273:
+    case "t7_loot_taunt_e_reaper_01":
         self thread function_f39abb1e(localclientnum);
         break;
-    case 271:
+    case "t7_loot_taunt_e_nomad_03":
         self thread function_302396b4(localclientnum, "gi_unit_victim");
         break;
-    case 275:
+    case "t7_loot_taunt_e_seraph_04":
         self thread function_3d9257f3(localclientnum, "rap_1");
         self thread function_3d9257f3(localclientnum, "rap_2");
         break;
-    case 274:
+    case "t7_loot_taunt_e_reaper_main_03":
         self thread function_67866405(localclientnum, "reaper_l");
         self thread function_67866405(localclientnum, "reaper_r");
         break;
-    case 276:
+    case "t7_loot_taunt_e_spectre_03":
         if (getdvarstring("mapname") == "core_frontend") {
             self sethighdetail(1, 0);
             self function_c51bf7(self.localclientnum, 1);
@@ -646,7 +646,7 @@ function function_eb8cdf14(localclientnum, var_7b22aba9) {
         }
         self thread function_302396b4(localclientnum, "gi_unit_victim");
         break;
-    case 272:
+    case "t7_loot_taunt_e_outrider_05":
         self thread function_d435beb6(localclientnum, "talon_bro_1", 0.65);
         self thread function_d435beb6(localclientnum, "talon_bro_2", 0.65);
         break;
@@ -655,7 +655,7 @@ function function_eb8cdf14(localclientnum, var_7b22aba9) {
     return true;
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 2, eflags: 0x1 linked
 // Checksum 0x46049441, Offset: 0x5be0
 // Size: 0xbc
@@ -665,7 +665,7 @@ function function_5f04ba5e(localclientnum, var_7b22aba9) {
         return;
     }
     switch (var_7b22aba9) {
-    case 276:
+    case "t7_loot_taunt_e_spectre_03":
         if (getdvarstring("mapname") == "core_frontend") {
             self sethighdetail(1, 0);
         }
@@ -674,7 +674,7 @@ function function_5f04ba5e(localclientnum, var_7b22aba9) {
     self thread scene::stop(var_7b22aba9);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 3, eflags: 0x0
 // Checksum 0xaf4b0597, Offset: 0x5ca8
 // Size: 0x74
@@ -686,7 +686,7 @@ function function_6c468939(var_7b22aba9, func, state) {
     scene::add_scene_func(var_7b22aba9, func, state);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1e3c7e0, Offset: 0x5d28
 // Size: 0xc2
@@ -702,7 +702,7 @@ function function_cfed633a() {
     }
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x326600be, Offset: 0x5df8
 // Size: 0x24
@@ -710,7 +710,7 @@ function hidemodel(param) {
     self hide();
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x86b4a77f, Offset: 0x5e28
 // Size: 0x24
@@ -718,7 +718,7 @@ function showmodel(param) {
     self show();
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2f187be, Offset: 0x5e58
 // Size: 0xb4
@@ -732,7 +732,7 @@ function function_77868cd5(param) {
     level.var_cb631c4 thread function_1ac3684f();
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7fcd81e2, Offset: 0x5f18
 // Size: 0xc0
@@ -744,11 +744,11 @@ function function_1ac3684f() {
         fwd = anglestoforward(camangles);
         self.origin = campos + fwd * 60;
         self.angles = camangles + (0, 180, 0);
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x77db1c2d, Offset: 0x5fe0
 // Size: 0x3e
@@ -760,7 +760,7 @@ function function_6a310293(param) {
     level.var_cb631c4 = undefined;
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2086f689, Offset: 0x6028
 // Size: 0xe0
@@ -773,11 +773,11 @@ function function_bb6820f0(param) {
         }
         self function_6c7d3666(self.localclientnum, minigun, randomfloatrange(2, 12), i);
         self playsound(0, "pfx_magic_bullet_glass");
-        wait(minigun.firetime);
+        wait minigun.firetime;
     }
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x52a7eb9d, Offset: 0x6110
 // Size: 0x8c
@@ -791,7 +791,7 @@ function function_51285b7e(weaponname) {
     self playsound(0, "pfx_magic_bullet_glass");
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb89878cb, Offset: 0x61a8
 // Size: 0x2c
@@ -799,7 +799,7 @@ function function_7a6fc182(param) {
     self function_5f844ccd(-28, -10);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2abc79ee, Offset: 0x61e0
 // Size: 0x2c
@@ -807,7 +807,7 @@ function function_2b2136f1(param) {
     self function_5f844ccd(10, 28);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 2, eflags: 0x1 linked
 // Checksum 0x415873a1, Offset: 0x6218
 // Size: 0xee
@@ -820,11 +820,11 @@ function function_5f844ccd(yawmin, yawmax) {
         }
         self function_6c7d3666(self.localclientnum, minigun, randomfloatrange(4, 16), randomfloatrange(yawmin, yawmax));
         self playsound(0, "pfx_magic_bullet_glass");
-        wait(minigun.firetime);
+        wait minigun.firetime;
     }
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbd49f12f, Offset: 0x6310
 // Size: 0x134
@@ -840,10 +840,10 @@ function function_fedfdee8(param) {
     } else {
         self duplicate_render::update_dr_flag(self.localclientnum, "clone_enemy_on", 1);
     }
-    self thread namespace_1e7514ce::function_9bad5680(self.localclientnum);
+    self thread gadget_clone_render::function_9bad5680(self.localclientnum);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x564291c7, Offset: 0x6450
 // Size: 0x5c
@@ -852,7 +852,7 @@ function function_ce5743f6(param) {
     self duplicate_render::update_dr_flag(self.localclientnum, "clone_enemy_on", 0);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 2, eflags: 0x1 linked
 // Checksum 0x36e8f8c2, Offset: 0x64b8
 // Size: 0x13c
@@ -872,7 +872,7 @@ function function_c51bf7(localclientnum, var_7f56e8cf) {
     self thread gadget_camo_render::doreveal(self.localclientnum, 0);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0xeb61ccf2, Offset: 0x6600
 // Size: 0x7c
@@ -884,7 +884,7 @@ function function_66f2d7fd(param) {
     self thread gadget_camo_render::doreveal(self.localclientnum, 1);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x702fdfce, Offset: 0x6688
 // Size: 0x6c
@@ -896,7 +896,7 @@ function function_60217209(param) {
     self thread gadget_camo_render::doreveal(self.localclientnum, 0);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x89d96e8, Offset: 0x6700
 // Size: 0x90
@@ -909,11 +909,11 @@ function fireweapon(weaponname) {
     waittillframeend();
     while (1 && isdefined(self)) {
         self magicbullet(weapon, (0, 0, 0), (0, 0, 0));
-        wait(weapon.firetime);
+        wait weapon.firetime;
     }
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7e3b1268, Offset: 0x6798
 // Size: 0x1a
@@ -921,7 +921,7 @@ function stopfireweapon(param) {
     self notify(#"stopfireweapon");
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4e6681c8, Offset: 0x67c0
 // Size: 0x4c
@@ -932,7 +932,7 @@ function function_cb36d98c(beam) {
     self.beamfx = beamlaunch(self.localclientnum, self, "tag_flash", undefined, "none", beam);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb0a7aa00, Offset: 0x6818
 // Size: 0x46
@@ -944,7 +944,7 @@ function function_3ec7f964(param) {
     self.beamfx = undefined;
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdd69d537, Offset: 0x6868
 // Size: 0xbc
@@ -960,7 +960,7 @@ function function_8efd00a3(fxname) {
     }
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x98dd951a, Offset: 0x6930
 // Size: 0x8c
@@ -973,7 +973,7 @@ function function_e72c395d(fxname) {
     }
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 4, eflags: 0x1 linked
 // Checksum 0xbc5cd021, Offset: 0x69c8
 // Size: 0xac
@@ -984,7 +984,7 @@ function function_6c7d3666(localclientnum, weapon, var_8983d19e, yawangle) {
     self magicbullet(weapon, campos, var_4ebc5205);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 3, eflags: 0x0
 // Checksum 0xe1888072, Offset: 0x6a80
 // Size: 0xf4
@@ -998,7 +998,7 @@ function function_507afdb5(localclientnum, projectilemodel, var_86add0c8) {
     createdynentandlaunch(localclientnum, projectilemodel, launchorigin, (0, 0, 0), launchorigin, launchdir * getdvarfloat("launchspeed", 3.5), var_86add0c8);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x3c938b09, Offset: 0x6b80
 // Size: 0x1b2
@@ -1024,14 +1024,14 @@ function function_f39abb1e(localclientnum) {
     self.var_bd3c8c[self.var_bd3c8c.size] = model;
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 2, eflags: 0x1 linked
 // Checksum 0x9774556b, Offset: 0x6d40
 // Size: 0x13a
 function function_67866405(localclientnum, targetname) {
     clone = self function_9d823940(localclientnum, targetname, self.origin, self.angles, self.bodymodel, self.var_f1a3fa15, self.var_957cc42, self.var_6f30937d, self.var_d44a8060);
     clone setscale(0);
-    wait(0.016);
+    wait 0.016;
     clone hide();
     clone setscale(1);
     if (!isdefined(self.var_bd3c8c)) {
@@ -1042,7 +1042,7 @@ function function_67866405(localclientnum, targetname) {
     self.var_bd3c8c[self.var_bd3c8c.size] = clone;
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 5, eflags: 0x0
 // Checksum 0xcb6cfad, Offset: 0x6e88
 // Size: 0x12a
@@ -1055,7 +1055,7 @@ function function_802dd60f(localclientnum, targetname, origin, angles, var_c55b8
     return function_9d823940(localclientnum, targetname, origin, angles, bodymodel, var_f1a3fa15, var_957cc42, var_6f30937d, var_d44a8060);
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 9, eflags: 0x1 linked
 // Checksum 0x271fd9d1, Offset: 0x6fc0
 // Size: 0x158
@@ -1072,7 +1072,7 @@ function function_9d823940(localclientnum, targetname, origin, angles, bodymodel
     return model;
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 2, eflags: 0x1 linked
 // Checksum 0xaeafa648, Offset: 0x7120
 // Size: 0x142
@@ -1091,7 +1091,7 @@ function function_302396b4(localclientnum, targetname) {
     self.var_bd3c8c[self.var_bd3c8c.size] = model;
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 2, eflags: 0x1 linked
 // Checksum 0xbc048767, Offset: 0x7270
 // Size: 0x1ba
@@ -1117,7 +1117,7 @@ function function_3d9257f3(localclientnum, targetname) {
     self.var_bd3c8c[self.var_bd3c8c.size] = model;
 }
 
-// Namespace namespace_3cadf69b
+// Namespace end_game_taunts
 // Params 3, eflags: 0x1 linked
 // Checksum 0x7664f7d, Offset: 0x7438
 // Size: 0x242

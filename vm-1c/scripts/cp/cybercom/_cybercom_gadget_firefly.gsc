@@ -148,7 +148,7 @@ function function_2cba8648(target, var_9bc2efcb, upgraded) {
         self orientmode("face default");
         self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
         self playsound("gdt_firefly_activate_npc");
-        self waittillmatch(#"hash_39fa7e38", "fire");
+        self waittillmatch(#"ai_cybercom_anim", "fire");
     }
     if (isarray(target)) {
         foreach (guy in target) {
@@ -325,7 +325,7 @@ function function_519bddcd(upgraded, targetent, var_b15e885a, var_b6dd531c) {
 // Size: 0xe8
 function function_54bc061f() {
     self endon(#"death");
-    wait(0.1);
+    wait 0.1;
     for (;;) {
         self setspeed(self.settings.defaultmovespeed);
         self.current_pathto_pos = getnextmoveposition_tactical();
@@ -339,7 +339,7 @@ function function_54bc061f() {
                 self vehicle_ai::waittill_pathing_done();
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -351,15 +351,15 @@ function path_update_interrupt() {
     self endon(#"death");
     self endon(#"near_goal");
     self endon(#"reached_end_node");
-    wait(1);
+    wait 1;
     while (true) {
         if (isdefined(self.current_pathto_pos)) {
             if (distance2dsquared(self.current_pathto_pos, self.goalpos) > self.goalradius * self.goalradius) {
-                wait(0.2);
+                wait 0.2;
                 self notify(#"near_goal");
             }
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 
@@ -393,7 +393,7 @@ function getnextmoveposition_tactical() {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["fem_rifle"] = disttooriginscore;
+            point._scoredebug["<dev string:x28>"] = disttooriginscore;
         #/
         point.score += disttooriginscore;
         if (point.score > best_score) {
@@ -424,7 +424,7 @@ function function_744baaac(params) {
 // Checksum 0x7c4abdd6, Offset: 0x20f8
 // Size: 0x14
 function function_c57b33a(params) {
-    wait(0.05);
+    wait 0.05;
 }
 
 // Namespace namespace_3ed98204
@@ -522,9 +522,9 @@ function function_cad082e8(params) {
 function function_99d5c745() {
     self endon(#"hash_c547a8e7");
     self endon(#"death");
-    wait(3);
+    wait 3;
     while (self.var_3691675 > 0) {
-        wait(0.5);
+        wait 0.5;
         var_98949c32 = self function_3ab9233(getdvarint("scr_firefly_swarm_split_radius", 864));
         if (isdefined(var_98949c32)) {
             self thread function_519bddcd(0, var_98949c32);
@@ -592,11 +592,11 @@ function function_6fb6c7d7(target) {
         target clientfield::set("arch_actor_fire_fx", 1);
         target.health = 1;
     }
-    wait(1);
+    wait 1;
     if (isdefined(target)) {
         target.swarm = undefined;
     }
-    wait(randomintrange(3, 7));
+    wait randomintrange(3, 7);
     if (isdefined(target) && isalive(target)) {
         target dodamage(target.health, target.origin, undefined, undefined, "none", "MOD_BURNED");
     }
@@ -658,7 +658,7 @@ function function_36654cef(params) {
         self.state_machine statemachine::set_state("main");
         return;
     }
-    target notify(#"hash_f8c5dd60", getweapon("gadget_firefly_swarm"), self.owner);
+    target notify(#"cybercom_action", getweapon("gadget_firefly_swarm"), self.owner);
     if (!self.var_dd7b8ea) {
         target clientfield::set("firefly_state", 4);
     } else {
@@ -709,7 +709,7 @@ function private function_edd19e27(swarm, var_5b928902, weapon) {
     if (!self cybercom::function_421746e0()) {
         self waittillmatch(#"bhtn_action_terminate", "specialpain");
     }
-    self notify(#"hash_2a24f27a");
+    self notify(#"firebug_time_to_die");
 }
 
 // Namespace namespace_3ed98204
@@ -738,7 +738,7 @@ function private function_4c41b2f7(swarm, var_5b928902, weapon) {
     }
     if (!(isdefined(var_c318824b) && var_c318824b) && isdefined(var_5b928902["intro"])) {
         self animscripted("swarm_intro_anim", self.origin, self.angles, var_5b928902["intro"]);
-        self waittillmatch(#"hash_352d2dcc", "end");
+        self waittillmatch(#"swarm_intro_anim", "end");
     }
     self clientfield::set("arch_actor_fire_fx", 1);
     self thread function_6fffd543();
@@ -838,11 +838,11 @@ function private function_34de18ba(swarm, var_5b928902, weapon) {
     if (isdefined(var_5b928902["intro"])) {
         self animscripted("swarm_intro_anim", self.origin, self.angles, var_5b928902["intro"]);
         self thread cybercom::function_cf64f12c("damage", "swarm_intro_anim");
-        self waittillmatch(#"hash_352d2dcc", "end");
+        self waittillmatch(#"swarm_intro_anim", "end");
     }
     for (attack = 1; attack && isdefined(swarm); attack = isdefined(swarm) && !(isdefined(swarm.var_24bf6015) && swarm.var_24bf6015) && distancesquared(self.origin + (0, 0, 48), swarm.origin) < getdvarint("scr_firefly_swarm_attack_radius", 110) * getdvarint("scr_firefly_swarm_attack_radius", 110) && isalive(self)) {
         self dodamage(5, self.origin, swarm.owner, swarm, "none", "MOD_UNKNOWN", 0, weapon, -1, 1);
-        wait(0.05);
+        wait 0.05;
         self waittillmatch(#"bhtn_action_terminate", "specialpain");
     }
     self notify(#"hash_b07f7e73");
@@ -854,7 +854,7 @@ function private function_34de18ba(swarm, var_5b928902, weapon) {
         if (isdefined(var_5b928902["outro"])) {
             self animscripted("swarm_outro_anim", self.origin, self.angles, var_5b928902["outro"]);
             self thread cybercom::function_cf64f12c("damage", "swarm_outro_anim");
-            self waittillmatch(#"hash_f331901", "end");
+            self waittillmatch(#"swarm_outro_anim", "end");
         }
         self.is_disabled = undefined;
     }
@@ -889,10 +889,10 @@ function function_4169c117() {
 function function_55a395c8() {
     self endon(#"death");
     while (gettime() < self.lifetime) {
-        wait(1);
+        wait 1;
     }
     self.var_24bf6015 = 1;
-    wait(2);
+    wait 2;
     self function_4169c117();
 }
 
@@ -918,7 +918,7 @@ function function_b7b30921(params) {
     if (isdefined(self.owner)) {
         self.owner notify(#"bhtn_action_notify", "firefly_end");
     }
-    wait(3);
+    wait 3;
     self function_4169c117();
 }
 
@@ -1029,7 +1029,7 @@ function function_3ab9233(var_10a84c6e) {
         if (!function_602b28e9(closest)) {
             arrayremovevalue(var_d9574143, closest, 0);
             closest = undefined;
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         if (!isdefined(closest)) {
@@ -1043,7 +1043,7 @@ function function_3ab9233(var_10a84c6e) {
         if (!pathsuccess) {
             arrayremovevalue(var_d9574143, closest, 0);
             closest = undefined;
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         break;
@@ -1092,7 +1092,7 @@ function function_cf23fec8(params) {
     } else {
         self clientfield::set("firefly_state", 7);
     }
-    wait(0.5);
+    wait 0.5;
     self.goalradius = 12;
     self.goalheight = 12;
     if (!self.var_dd7b8ea) {

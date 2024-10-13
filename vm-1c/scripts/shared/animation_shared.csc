@@ -85,7 +85,7 @@ function _play(animation, v_origin_or_ent, v_angles_or_tag, n_rate, n_blend_in, 
     if (isvec(v_origin_or_ent) && isvec(v_angles_or_tag)) {
         self animscripted("_anim_notify_", v_origin_or_ent, v_angles_or_tag, animation, n_blend_in, n_rate);
     } else if (isstring(v_angles_or_tag)) {
-        assert(isdefined(v_origin_or_ent.model), "_anim_notify_" + animation + "_anim_notify_" + v_angles_or_tag + "_anim_notify_");
+        assert(isdefined(v_origin_or_ent.model), "<dev string:x28>" + animation + "<dev string:x41>" + v_angles_or_tag + "<dev string:x4c>");
         v_pos = v_origin_or_ent gettagorigin(v_angles_or_tag);
         v_ang = v_origin_or_ent gettagangles(v_angles_or_tag);
         self.origin = v_pos;
@@ -150,7 +150,7 @@ function _get_align_pos(v_origin_or_ent, v_angles_or_tag) {
     }
     s = spawnstruct();
     if (isvec(v_origin_or_ent)) {
-        assert(isvec(v_angles_or_tag), "_anim_notify_");
+        assert(isvec(v_angles_or_tag), "<dev string:x7f>");
         s.origin = v_origin_or_ent;
         s.angles = v_angles_or_tag;
     } else {
@@ -204,12 +204,12 @@ function add_notetrack_func(funcname, func) {
     if (!isdefined(level._animnotifyfuncs)) {
         level._animnotifyfuncs = [];
     }
-    assert(!isdefined(level._animnotifyfuncs[funcname]), "_anim_notify_");
+    assert(!isdefined(level._animnotifyfuncs[funcname]), "<dev string:xa5>");
     level._animnotifyfuncs[funcname] = func;
 }
 
 // Namespace animation
-// Params 3, eflags: 0x21 linked
+// Params 3, eflags: 0x21 linked variadic
 // Checksum 0xa1d627fb, Offset: 0xde8
 // Size: 0x104
 function add_global_notetrack_handler(str_note, func, ...) {
@@ -259,7 +259,7 @@ function call_notetrack_handler(str_note) {
                 self [[ func ]]();
                 break;
             default:
-                assertmsg("_anim_notify_");
+                assertmsg("<dev string:xc8>");
                 break;
             }
         }
@@ -308,16 +308,16 @@ function handle_notetracks() {
 // Size: 0xbe
 function cracks_on(str_type) {
     switch (str_type) {
-    case 24:
+    case "red":
         cf_cracks_on(self.localclientnum, 0, 1);
         break;
-    case 26:
+    case "green":
         cf_cracks_on(self.localclientnum, 0, 3);
         break;
-    case 28:
+    case "blue":
         cf_cracks_on(self.localclientnum, 0, 2);
         break;
-    case 30:
+    case "all":
         cf_cracks_on(self.localclientnum, 0, 4);
         break;
     }
@@ -329,16 +329,16 @@ function cracks_on(str_type) {
 // Size: 0xbe
 function cracks_off(str_type) {
     switch (str_type) {
-    case 24:
+    case "red":
         cf_cracks_off(self.localclientnum, 0, 1);
         break;
-    case 26:
+    case "green":
         cf_cracks_off(self.localclientnum, 0, 3);
         break;
-    case 28:
+    case "blue":
         cf_cracks_off(self.localclientnum, 0, 2);
         break;
-    case 30:
+    case "all":
         cf_cracks_off(self.localclientnum, 0, 4);
         break;
     }

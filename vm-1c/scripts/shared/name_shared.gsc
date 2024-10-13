@@ -35,38 +35,38 @@ function initialize_nationality(str_nationality) {
 // Size: 0x18e
 function add_nationality_names(str_nationality) {
     switch (str_nationality) {
-    case 1:
+    case "american":
         american_names();
         break;
-    case 4:
+    case "chinese":
         function_20b0d377();
         break;
-    case 5:
+    case "egyptian":
         function_4f7cc8e7();
         break;
-    case 8:
+    case "russian":
         function_d1c62dd1();
         break;
-    case 3:
+    case "agent":
         function_45e8e281();
         break;
-    case 7:
+    case "police":
         function_3a4b0ace();
         break;
-    case 9:
+    case "seal":
         function_a5d44d83();
         break;
-    case 6:
+    case "navy":
         function_3ff7174();
         break;
-    case 10:
+    case "security":
         function_b1ff3e5a();
         break;
-    case 11:
+    case "singapore_police":
         function_49c33890();
         break;
     default:
-        assertmsg("russian" + str_nationality);
+        assertmsg("<dev string:x28>" + str_nationality);
         break;
     }
 }
@@ -601,7 +601,7 @@ function add_override_name_func(nationality, func) {
     if (!isdefined(level._override_name_funcs)) {
         level._override_name_funcs = [];
     }
-    assert(!isdefined(level._override_name_funcs[nationality]), "russian");
+    assert(!isdefined(level._override_name_funcs[nationality]), "<dev string:x46>");
     level._override_name_funcs[nationality] = func;
 }
 
@@ -747,26 +747,26 @@ function getrankfromname(name) {
     assert(tokens.size);
     shortrank = tokens[0];
     switch (shortrank) {
-    case 331:
+    case "Pvt.":
         self.airank = "private";
         break;
-    case 330:
+    case "Pfc.":
         self.airank = "private";
         break;
-    case 327:
+    case "Cpl.":
         self.airank = "corporal";
         break;
-    case 332:
+    case "Sgt.":
         self.airank = "sergeant";
         break;
-    case 329:
+    case "Lt.":
         self.airank = "lieutenant";
         break;
-    case 328:
+    case "Cpt.":
         self.airank = "captain";
         break;
     default:
-        println("russian" + shortrank + "russian");
+        println("<dev string:x6e>" + shortrank + "<dev string:x89>");
         self.airank = "private";
         break;
     }
@@ -777,7 +777,7 @@ function getrankfromname(name) {
 // Checksum 0x1522352f, Offset: 0x4748
 // Size: 0xcc
 function issubstr_match_any(str_match, str_search_array) {
-    assert(str_search_array.size, "russian");
+    assert(str_search_array.size, "<dev string:x8b>");
     foreach (str_search in str_search_array) {
         if (issubstr(str_match, str_search)) {
             return true;

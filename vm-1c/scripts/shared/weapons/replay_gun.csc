@@ -7,9 +7,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_6ba28cbf;
+#namespace replay_gun;
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 0, eflags: 0x2
 // Checksum 0x2fa347fc, Offset: 0x1c0
 // Size: 0x34
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
     system::register("replay_gun", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc7683596, Offset: 0x200
 // Size: 0x4c
@@ -26,7 +26,7 @@ function __init__() {
     duplicate_render::set_dr_filter_offscreen("replay", 75, "replay_locked", undefined, 2, "mc/hud_outline_model_red", 0);
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 0, eflags: 0x1 linked
 // Checksum 0x22f3e668, Offset: 0x258
 // Size: 0xc2
@@ -38,7 +38,7 @@ function player_init() {
     }
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd0edc5dc, Offset: 0x328
 // Size: 0x176

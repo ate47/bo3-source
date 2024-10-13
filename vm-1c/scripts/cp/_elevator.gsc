@@ -39,7 +39,7 @@ function __init__() {
             }
         }
         if (!isdefined(trigger_target)) {
-            assertmsg("elevator_klaxon_speaker" + var_a383aee8[i].origin);
+            assertmsg("<dev string:x28>" + var_a383aee8[i].origin);
         }
         if (isdefined(trigger_target)) {
             var_3efc9d86 = getentarray(trigger_target.target, "targetname");
@@ -49,7 +49,7 @@ function __init__() {
     for (i = 0; i < var_e9a8af4f.size; i++) {
         platform = getent(var_e9a8af4f[i].target, "targetname");
         if (!isdefined(platform)) {
-            assertmsg("elevator_klaxon_speaker" + var_e9a8af4f[i].origin);
+            assertmsg("<dev string:x4e>" + var_e9a8af4f[i].origin);
             continue;
         }
         counter = 0;
@@ -87,7 +87,7 @@ function function_685e3ca() {
     var_963e7dc9 = [];
     var_38b2d855 = [];
     var_de4bc4e1 = [];
-    var_ccb74de5 = undefined;
+    platform_start = undefined;
     platform = self;
     var_8b70705a = platform.targetname;
     platform.var_e20864cf = 1;
@@ -106,7 +106,7 @@ function function_685e3ca() {
     var_b116754 = struct::get_array(platform.target, "targetname");
     var_3823bc4b = arraycombine(var_1564576c, var_b116754, 1, 0);
     if (var_3823bc4b.size <= 0) {
-        assertmsg("elevator_klaxon_speaker" + platform.origin);
+        assertmsg("<dev string:x77>" + platform.origin);
     }
     if (isdefined(var_3823bc4b)) {
         for (i = 0; i < var_3823bc4b.size; i++) {
@@ -121,13 +121,13 @@ function function_685e3ca() {
                     var_38b2d855[var_38b2d855.size] = var_3823bc4b[i];
                 }
                 if (var_3823bc4b[i].script_noteworthy == "platform_start") {
-                    var_ccb74de5 = function_dbaa007d(var_3823bc4b[i]);
+                    platform_start = function_dbaa007d(var_3823bc4b[i]);
                 }
             }
         }
     }
-    if (!isdefined(var_ccb74de5)) {
-        assertmsg("elevator_klaxon_speaker" + platform.origin);
+    if (!isdefined(platform_start)) {
+        assertmsg("<dev string:xa1>" + platform.origin);
     }
     if (isdefined(var_de4bc4e1) && var_de4bc4e1.size > 0) {
         array::thread_all(var_de4bc4e1, &function_9cdfa1cb, var_8b70705a, platform);
@@ -141,7 +141,7 @@ function function_685e3ca() {
     array::thread_all(var_a383aee8, &trigger_think, var_8b70705a);
     platform.var_be2ea7e9 = spawn("script_origin", self.origin);
     platform.var_be2ea7e9 linkto(self);
-    platform thread move_platform(var_ccb74de5, var_8b70705a, n_start_delay);
+    platform thread move_platform(platform_start, var_8b70705a, n_start_delay);
 }
 
 // Namespace elevator
@@ -189,9 +189,9 @@ function trigger_think(var_8b70705a) {
         level notify("start_" + var_8b70705a + "_klaxon");
         level notify("close_" + var_8b70705a + "_doors");
         if (isdefined(self.script_wait)) {
-            wait(self.script_wait);
+            wait self.script_wait;
         } else {
-            wait(2);
+            wait 2;
         }
         level notify("elevator_" + var_8b70705a + "_move");
         level waittill("elevator_" + var_8b70705a + "_stop");
@@ -208,7 +208,7 @@ function function_5eba01bd(var_8b70705a) {
     level endon("elevator_" + var_8b70705a + "_move");
     level endon(var_8b70705a + "_disabled");
     var_d93a8d4d = 0;
-    wait(1);
+    wait 1;
     while (true) {
         var_d93a8d4d = 1;
         foreach (hero in level.heroes) {
@@ -219,7 +219,7 @@ function function_5eba01bd(var_8b70705a) {
         } else {
             self triggerenable(0);
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 
@@ -241,13 +241,13 @@ function function_f8c94c1b(var_544bc7c7, notify_stop) {
 function function_9cdfa1cb(var_8b70705a, platform) {
     open_struct = struct::get(self.target, "targetname");
     if (!isdefined(open_struct)) {
-        assertmsg("elevator_klaxon_speaker" + self.origin);
+        assertmsg("<dev string:xfc>" + self.origin);
     }
     if (isdefined(open_struct.target)) {
         var_f0bc435f = struct::get(open_struct.target, "targetname");
     }
     if (!isdefined(var_f0bc435f)) {
-        assertmsg("elevator_klaxon_speaker" + self.origin);
+        assertmsg("<dev string:x13e>" + self.origin);
     }
     if (isdefined(open_struct.script_float)) {
         var_73345118 = open_struct.script_float;
@@ -259,9 +259,9 @@ function function_9cdfa1cb(var_8b70705a, platform) {
     } else {
         var_ef73127f = 1;
     }
-    var_b1d2ef55 = 0;
+    stay_closed = 0;
     if (isdefined(var_f0bc435f.script_noteworthy) && var_f0bc435f.script_noteworthy == "stay_closed") {
-        var_b1d2ef55 = 1;
+        stay_closed = 1;
     }
     self.origin = open_struct.origin;
     self.angles = open_struct.angles;
@@ -270,7 +270,7 @@ function function_9cdfa1cb(var_8b70705a, platform) {
     var_9a35a990 = self.origin - var_f0bc435f.origin;
     var_35a4cf2b = self.angles - var_f0bc435f.angles;
     self thread function_f8655445(var_8b70705a, "close_", platform, var_26dfbb14, var_ebf964d9, var_ef73127f);
-    if (!var_b1d2ef55) {
+    if (!stay_closed) {
         self thread function_f8655445(var_8b70705a, "open_", platform, var_9a35a990, var_35a4cf2b, var_73345118);
     }
 }
@@ -287,7 +287,7 @@ function function_f8655445(var_8b70705a, direction, platform, v_moveto, v_angles
         self unlink();
         self moveto(self.origin + v_moveto, n_time);
         self rotateto(self.angles + v_angles, n_time);
-        wait(n_time);
+        wait n_time;
         self linkto(platform);
     }
 }
@@ -296,13 +296,13 @@ function function_f8655445(var_8b70705a, direction, platform, v_moveto, v_angles
 // Params 3, eflags: 0x1 linked
 // Checksum 0xba4ce7d2, Offset: 0x1480
 // Size: 0x504
-function move_platform(var_ccb74de5, var_8b70705a, n_start_delay) {
+function move_platform(platform_start, var_8b70705a, n_start_delay) {
     level endon(var_8b70705a + "_disabled");
     move_path = [];
     var_95fa47b1 = 0;
-    if (isdefined(var_ccb74de5.script_objective)) {
-        self.origin = var_ccb74de5.origin;
-        self.angles = var_ccb74de5.angles;
+    if (isdefined(platform_start.script_objective)) {
+        self.origin = platform_start.origin;
+        self.angles = platform_start.angles;
     }
     self.var_8b70705a = var_8b70705a;
     if (!isdefined(move_path)) {
@@ -310,15 +310,15 @@ function move_platform(var_ccb74de5, var_8b70705a, n_start_delay) {
     } else if (!isarray(move_path)) {
         move_path = array(move_path);
     }
-    move_path[move_path.size] = var_ccb74de5;
-    if (isdefined(var_ccb74de5.target)) {
-        var_985798ea = struct::get(var_ccb74de5.target, "targetname");
+    move_path[move_path.size] = platform_start;
+    if (isdefined(platform_start.target)) {
+        var_985798ea = struct::get(platform_start.target, "targetname");
     }
     if (!isdefined(var_985798ea)) {
         return;
     }
     path = 1;
-    var_eef38cd8 = var_ccb74de5;
+    var_eef38cd8 = platform_start;
     while (path) {
         if (isdefined(var_eef38cd8.target)) {
             var_eef38cd8 = struct::get(var_eef38cd8.target, "targetname");
@@ -339,7 +339,7 @@ function move_platform(var_ccb74de5, var_8b70705a, n_start_delay) {
     }
     while (true) {
         level waittill("elevator_" + var_8b70705a + "_move");
-        wait(n_start_delay);
+        wait n_start_delay;
         if (isdefined(level.scr_sound) && isdefined(level.scr_sound["elevator_start"])) {
             self playsound(level.scr_sound["elevator_start"]);
         }
@@ -402,7 +402,7 @@ function function_8a110bd3(node, var_8b70705a) {
     }
     if (isdefined(node.script_wait)) {
         self playsound("veh_" + var_8b70705a + "_dc");
-        wait(node.script_wait);
+        wait node.script_wait;
         level notify("elevator_" + self.var_8b70705a + "_script_wait_done");
         self notify("elevator_" + self.var_8b70705a + "_script_wait_done");
     }

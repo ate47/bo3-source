@@ -2,9 +2,9 @@
 #using scripts/shared/visionset_mgr_shared;
 #using scripts/shared/system_shared;
 
-#namespace namespace_ef567265;
+#namespace zm_ai_mechz;
 
-// Namespace namespace_ef567265
+// Namespace zm_ai_mechz
 // Params 0, eflags: 0x2
 // Checksum 0x4d7f8d7a, Offset: 0xf8
 // Size: 0x3c
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
     system::register("zm_ai_mechz", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_ef567265
+// Namespace zm_ai_mechz
 // Params 0, eflags: 0x3 linked
 // Checksum 0x99ec1590, Offset: 0x140
 // Size: 0x4
@@ -20,7 +20,7 @@ function autoexec __init__() {
     
 }
 
-// Namespace namespace_ef567265
+// Namespace zm_ai_mechz
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf2af64d0, Offset: 0x150
 // Size: 0x2c

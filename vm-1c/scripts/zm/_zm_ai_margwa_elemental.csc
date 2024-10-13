@@ -18,8 +18,8 @@ function autoexec init() {
     clientfield::register("actor", "margwa_defense_actor_appear_disappear_fx", 15000, 1, "int", &function_345693f6, 0, 0);
     clientfield::register("scriptmover", "play_margwa_fire_attack_fx", 15000, 1, "counter", &function_c46381fc, 0, 0);
     clientfield::register("scriptmover", "margwa_defense_hovering_fx", 15000, 3, "int", &function_abb174cf, 0, 0);
-    clientfield::register("actor", "shadow_margwa_attack_portal_fx", 15000, 1, "int", &function_a9580308, 0, 0);
-    clientfield::register("actor", "margwa_shock_fx", 15000, 1, "int", &function_3852b0a4, 0, 0);
+    clientfield::register("actor", "shadow_margwa_attack_portal_fx", 15000, 1, "int", &shadow_margwa_attack_portal_fx, 0, 0);
+    clientfield::register("actor", "margwa_shock_fx", 15000, 1, "int", &death_ray_shock_fx, 0, 0);
     level._effect["margwa_fire_roar"] = "dlc4/genesis/fx_margwa_roar_fire";
     level._effect["margwa_fire_spawn"] = "dlc4/genesis/fx_margwa_spawn_fire";
     level._effect["margwa_fire_attack_explosion"] = "dlc4/genesis/fx_margwa_attack_fire";
@@ -68,7 +68,7 @@ function private function_1fb4e300(localclientnum, oldval, newval, bnewent, bini
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf052bff3, Offset: 0xc28
 // Size: 0x124
-function function_3852b0a4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function death_ray_shock_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self function_51adc559(localclientnum);
     if (newval) {
         if (!isdefined(self.var_8f44671e)) {
@@ -211,23 +211,23 @@ function private function_abb174cf(localclientnum, oldval, newval, bnewent, bini
 // Params 7, eflags: 0x5 linked
 // Checksum 0x6ab63b7c, Offset: 0x13d0
 // Size: 0x294
-function private function_a9580308(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function private shadow_margwa_attack_portal_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         vector = anglestoforward(self.angles);
         var_7c934a6c = self.origin + vector * 96 + (0, 0, 72);
-        self.var_a9580308 = playfx(localclientnum, level._effect["margwa_shadow_attack_portal_open"], var_7c934a6c, vector);
+        self.shadow_margwa_attack_portal_fx = playfx(localclientnum, level._effect["margwa_shadow_attack_portal_open"], var_7c934a6c, vector);
         playsound(0, "zmb_margwa_shadow_portal_open", var_7c934a6c);
         audio::playloopat("zmb_margwa_shadow_portal_lp", var_7c934a6c);
-        wait(0.45);
+        wait 0.45;
         if (isalive(self) && self clientfield::get("shadow_margwa_attack_portal_fx") == 1) {
-            self.var_a9580308 = playfx(localclientnum, level._effect["margwa_shadow_attack_portal_loop"], var_7c934a6c, vector);
+            self.shadow_margwa_attack_portal_fx = playfx(localclientnum, level._effect["margwa_shadow_attack_portal_loop"], var_7c934a6c, vector);
         }
     }
-    if (newval == 0 && isdefined(self.var_a9580308)) {
+    if (newval == 0 && isdefined(self.shadow_margwa_attack_portal_fx)) {
         vector = anglestoforward(self.angles);
         var_7c934a6c = self.origin + vector * 96 + (0, 0, 72);
-        if (isdefined(self.var_a9580308)) {
-            stopfx(localclientnum, self.var_a9580308);
+        if (isdefined(self.shadow_margwa_attack_portal_fx)) {
+            stopfx(localclientnum, self.shadow_margwa_attack_portal_fx);
         }
         playsound(0, "zmb_margwa_shadow_portal_close", var_7c934a6c);
         audio::stoploopat("zmb_margwa_shadow_portal_lp", var_7c934a6c);

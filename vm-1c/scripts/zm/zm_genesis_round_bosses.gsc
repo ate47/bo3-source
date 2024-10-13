@@ -36,9 +36,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_6929903c;
+#namespace zm_genesis_round_bosses;
 
-// Namespace namespace_6929903c
+// Namespace zm_genesis_round_bosses
 // Params 0, eflags: 0x2
 // Checksum 0xc9782b84, Offset: 0x578
 // Size: 0x34
@@ -46,7 +46,7 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_round_bosses", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_6929903c
+// Namespace zm_genesis_round_bosses
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf0124328, Offset: 0x5b8
 // Size: 0x3c
@@ -55,7 +55,7 @@ function __init__() {
     level thread function_755b4548();
 }
 
-// Namespace namespace_6929903c
+// Namespace zm_genesis_round_bosses
 // Params 0, eflags: 0x1 linked
 // Checksum 0x81f48886, Offset: 0x600
 // Size: 0xf0
@@ -77,7 +77,7 @@ function function_755b4548() {
     }
 }
 
-// Namespace namespace_6929903c
+// Namespace zm_genesis_round_bosses
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1e4a799, Offset: 0x6f8
 // Size: 0x36e
@@ -98,7 +98,7 @@ function function_c68599fd() {
         }
         break;
     }
-    wait(1);
+    wait 1;
     a_players = getplayers();
     if (a_players.size == 1) {
         return;
@@ -118,13 +118,13 @@ function function_c68599fd() {
             spawn_boss("mechz");
         } else if (a_players.size == 3) {
             spawn_boss("mechz");
-            wait(1);
+            wait 1;
             spawn_boss("margwa");
         } else if (a_players.size == 4) {
             spawn_boss("mechz");
-            wait(1);
+            wait 1;
             spawn_boss("margwa");
-            wait(1);
+            wait 1;
             spawn_boss("margwa");
         }
         break;
@@ -144,13 +144,13 @@ function function_c68599fd() {
             } else {
                 spawn_boss("mechz");
             }
-            wait(1);
+            wait 1;
         }
         break;
     }
 }
 
-// Namespace namespace_6929903c
+// Namespace zm_genesis_round_bosses
 // Params 2, eflags: 0x1 linked
 // Checksum 0x27a5f2dc, Offset: 0xa70
 // Size: 0x244
@@ -159,7 +159,7 @@ function spawn_boss(str_enemy, v_pos) {
     if (!isdefined(s_loc)) {
         return;
     }
-    level thread namespace_c149ef1::function_79eeee03(str_enemy);
+    level thread zm_genesis_vo::function_79eeee03(str_enemy);
     if (str_enemy == "margwa") {
         if (math::cointoss()) {
             e_boss = namespace_3de4ab6f::function_75b161ab(undefined, s_loc);
@@ -191,7 +191,7 @@ function spawn_boss(str_enemy, v_pos) {
     return e_boss;
 }
 
-// Namespace namespace_6929903c
+// Namespace zm_genesis_round_bosses
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe2cb723a, Offset: 0xcc0
 // Size: 0x1ba
@@ -221,7 +221,7 @@ function function_830cdf99() {
     return var_fffe05f0[0];
 }
 
-// Namespace namespace_6929903c
+// Namespace zm_genesis_round_bosses
 // Params 2, eflags: 0x1 linked
 // Checksum 0x814b8784, Offset: 0xe88
 // Size: 0x2e

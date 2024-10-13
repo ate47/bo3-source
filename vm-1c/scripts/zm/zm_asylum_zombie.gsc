@@ -20,23 +20,23 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e1bd9dd;
+#namespace zm_asylum_zombie;
 
-// Namespace namespace_e1bd9dd
+// Namespace zm_asylum_zombie
 // Params 0, eflags: 0x2
 // Checksum 0xdcce7cdb, Offset: 0x3b0
 // Size: 0xa4
 function autoexec init() {
     setdvar("scr_zm_use_code_enemy_selection", 0);
-    level.closest_player_override = &namespace_1d57720d::function_3ff94b60;
-    level thread namespace_1d57720d::function_72e6c1d6();
+    level.closest_player_override = &zm_remaster_zombie::function_3ff94b60;
+    level thread zm_remaster_zombie::function_72e6c1d6();
     level.var_11c66679 = 1;
     level.var_1ace2307 = 2;
     spawner::add_archetype_spawn_function("zombie", &function_87ff545e);
     level.var_ddb622e3 = &function_b271c3e6;
 }
 
-// Namespace namespace_e1bd9dd
+// Namespace zm_asylum_zombie
 // Params 0, eflags: 0x5 linked
 // Checksum 0xe71e7e3b, Offset: 0x460
 // Size: 0x1c
@@ -44,7 +44,7 @@ function private function_87ff545e() {
     self function_1762804b(0);
 }
 
-// Namespace namespace_e1bd9dd
+// Namespace zm_asylum_zombie
 // Params 0, eflags: 0x5 linked
 // Checksum 0x48308429, Offset: 0x488
 // Size: 0x8c

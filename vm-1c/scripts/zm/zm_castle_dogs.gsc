@@ -10,9 +10,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_2545f7c9;
+#namespace zm_castle_dogs;
 
-// Namespace namespace_2545f7c9
+// Namespace zm_castle_dogs
 // Params 0, eflags: 0x2
 // Checksum 0xf0196826, Offset: 0x208
 // Size: 0x2c
@@ -20,15 +20,15 @@ function autoexec init() {
     spawner::add_archetype_spawn_function("zombie_dog", &function_9f8cfcf5);
 }
 
-// Namespace namespace_2545f7c9
+// Namespace zm_castle_dogs
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4d9e405b, Offset: 0x240
 // Size: 0x1c
 function function_9f8cfcf5() {
-    self thread namespace_8e89abe3::function_f4766f6();
+    self thread zm_castle_low_grav::function_f4766f6();
 }
 
-// Namespace namespace_2545f7c9
+// Namespace zm_castle_dogs
 // Params 0, eflags: 0x1 linked
 // Checksum 0x348f1244, Offset: 0x268
 // Size: 0x22c
@@ -40,7 +40,7 @@ function dog_round_tracker() {
     while (true) {
         level waittill(#"between_round_over");
         /#
-            if (getdvarint("<unknown string>") > 0) {
+            if (getdvarint("<dev string:x28>") > 0) {
                 level.next_dog_round = level.round_number;
             }
         #/
@@ -54,7 +54,7 @@ function dog_round_tracker() {
             level clientfield::set("castle_fog_bank_switch", 1);
             level.next_dog_round = level.round_number + randomintrange(7, 14);
             /#
-                getplayers()[0] iprintln("<unknown string>" + level.next_dog_round);
+                getplayers()[0] iprintln("<dev string:x33>" + level.next_dog_round);
             #/
             continue;
         }
@@ -68,7 +68,7 @@ function dog_round_tracker() {
     }
 }
 
-// Namespace namespace_2545f7c9
+// Namespace zm_castle_dogs
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5ddb9281, Offset: 0x4a0
 // Size: 0x158
@@ -98,7 +98,7 @@ function function_33aa4940() {
     return var_88369d66;
 }
 
-// Namespace namespace_2545f7c9
+// Namespace zm_castle_dogs
 // Params 2, eflags: 0x1 linked
 // Checksum 0x729d73c, Offset: 0x600
 // Size: 0x13a
@@ -119,7 +119,7 @@ function function_92e4eaff(var_70e0fe97, var_19764360) {
     return var_2ad6ea05[0];
 }
 
-// Namespace namespace_2545f7c9
+// Namespace zm_castle_dogs
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7cac6e4f, Offset: 0x748
 // Size: 0x24
@@ -127,7 +127,7 @@ function function_8cf500c9() {
     self ai::set_behavior_attribute("sprint", 1);
 }
 
-// Namespace namespace_2545f7c9
+// Namespace zm_castle_dogs
 // Params 0, eflags: 0x1 linked
 // Checksum 0x68bd90b0, Offset: 0x778
 // Size: 0x10c

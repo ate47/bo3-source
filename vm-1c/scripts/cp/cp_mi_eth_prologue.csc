@@ -25,14 +25,14 @@ function main() {
     util::function_57b966c8(&function_71f88fc, 7);
     function_f45953c();
     function_b37230e4();
-    namespace_34e37984::main();
-    namespace_7685657b::main();
+    cp_mi_eth_prologue_fx::main();
+    cp_mi_eth_prologue_sound::main();
     visionset_mgr::function_3aea3c1a(0, "cp_mi_eth_prologue", 0);
     visionset_mgr::function_3aea3c1a(1, "cp_mi_eth_prologue", 0);
     load::main();
     util::waitforclient(0);
     setdvar("sv_mapswitch", 1);
-    namespace_ba84f16::function_7403e82b();
+    cp_mi_eth_prologue_patch_c::function_7403e82b();
 }
 
 // Namespace cp_mi_eth_prologue
@@ -48,26 +48,26 @@ function function_f45953c() {
 // Checksum 0xbc24811e, Offset: 0xbb8
 // Size: 0x6a4
 function function_b37230e4() {
-    clientfield::register("world", "tunnel_wall_explode", 1, 1, "int", &function_2e707998, 0, 0);
+    clientfield::register("world", "tunnel_wall_explode", 1, 1, "int", &tunnel_wall_explode, 0, 0);
     clientfield::register("toplayer", "unlimited_sprint_off", 1, 1, "int", &function_9e6eac31, 0, 0);
-    clientfield::register("world", "apc_rail_tower_collapse", 1, 1, "int", &function_5faba7ec, 1, 0);
-    clientfield::register("world", "vtol_missile_explode_trash_fx", 1, 1, "int", &function_b9aea50f, 1, 0);
+    clientfield::register("world", "apc_rail_tower_collapse", 1, 1, "int", &apc_rail_tower_collapse, 1, 0);
+    clientfield::register("world", "vtol_missile_explode_trash_fx", 1, 1, "int", &vtol_missile_explode_trash_fx, 1, 0);
     clientfield::register("toplayer", "turn_on_multicam", 1, 3, "int", &function_a014174b, 0, 0);
-    clientfield::register("world", "setup_security_cameras", 1, 1, "int", &function_edd36550, 0, 0);
+    clientfield::register("world", "setup_security_cameras", 1, 1, "int", &setup_security_cameras, 0, 0);
     clientfield::register("scriptmover", "update_camera_position", 1, 4, "int", &function_9fd7493, 0, 0);
     clientfield::register("world", "interrogate_physics", 1, 1, "int", &function_a1ad4aa7, 0, 0);
-    clientfield::register("toplayer", "set_cam_lookat_object", 1, 4, "int", &function_c2af0716, 0, 0);
-    clientfield::register("toplayer", "sndCameraScanner", 1, 3, "int", &function_8466bb27, 0, 0);
-    clientfield::register("world", "blend_in_cleanup", 1, 1, "int", &function_4551c159, 0, 0);
-    clientfield::register("world", "fuel_depot_truck_explosion", 1, 1, "int", &function_aea2e22e, 0, 0);
+    clientfield::register("toplayer", "set_cam_lookat_object", 1, 4, "int", &set_cam_lookat_object, 0, 0);
+    clientfield::register("toplayer", "sndCameraScanner", 1, 3, "int", &sndCameraScanner, 0, 0);
+    clientfield::register("world", "blend_in_cleanup", 1, 1, "int", &blend_in_cleanup, 0, 0);
+    clientfield::register("world", "fuel_depot_truck_explosion", 1, 1, "int", &fuel_depot_truck_explosion, 0, 0);
     clientfield::register("toplayer", "turn_off_tacmode_vfx", 1, 1, "int", &function_7e8cf38d, 0, 0);
     clientfield::register("toplayer", "dropship_rumble_loop", 1, 1, "int", &function_d376a908, 0, 0);
-    clientfield::register("toplayer", "apc_speed_blur", 1, 1, "int", &function_8515be07, 0, 0);
+    clientfield::register("toplayer", "apc_speed_blur", 1, 1, "int", &apc_speed_blur, 0, 0);
     clientfield::register("world", "diaz_break_1", 1, 2, "int", &function_35a91904, 0, 0);
     clientfield::register("world", "diaz_break_2", 1, 2, "int", &function_a7b0883f, 0, 0);
-    clientfield::register("toplayer", "player_tunnel_dust_fx_on_off", 1, 1, "int", &namespace_34e37984::function_fda9ad5f, 0, 0);
-    clientfield::register("toplayer", "player_tunnel_dust_fx", 1, 1, "int", &namespace_34e37984::function_ba9197c, 0, 0);
-    clientfield::register("toplayer", "player_blood_splatter", 1, 1, "int", &namespace_34e37984::function_55f87893, 0, 0);
+    clientfield::register("toplayer", "player_tunnel_dust_fx_on_off", 1, 1, "int", &cp_mi_eth_prologue_fx::player_tunnel_dust_fx_on_off, 0, 0);
+    clientfield::register("toplayer", "player_tunnel_dust_fx", 1, 1, "int", &cp_mi_eth_prologue_fx::function_ba9197c, 0, 0);
+    clientfield::register("toplayer", "player_blood_splatter", 1, 1, "int", &cp_mi_eth_prologue_fx::player_blood_splatter, 0, 0);
     clientfield::register("actor", "cyber_soldier_camo", 1, 2, "int", &function_f532bd65, 0, 1);
     duplicate_render::set_dr_filter_framebuffer("active_camo", 90, "actor_camo_on", "", 0, "mc/hud_outline_predator_camo_active_inf", 0);
     duplicate_render::set_dr_filter_framebuffer("active_camo_flicker", 80, "actor_camo_flicker", "", 0, "mc/hud_outline_predator_camo_disruption_inf", 0);
@@ -115,7 +115,7 @@ function function_f532bd65(local_client_num, oldval, newval, bnewent, binitialsn
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5c186a64, Offset: 0x1428
 // Size: 0x94
-function function_8515be07(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function apc_speed_blur(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         enablespeedblur(localclientnum, 0.25, 0.9, 1, 0, 1, 1, 1);
         return;
@@ -139,7 +139,7 @@ function function_d376a908(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2533a992, Offset: 0x1568
 // Size: 0x64
-function function_2e707998(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function tunnel_wall_explode(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level thread scene::play("p7_fxanim_cp_prologue_apc_rail_wall_explode_bundle");
     }
@@ -174,7 +174,7 @@ function function_a014174b(localclientnum, oldval, newval, bnewent, binitialsnap
     level thread function_5f6dad34(localclientnum, 0);
     level.var_3792d454 = 0;
     if (newval) {
-        function_c2af0716(localclientnum, oldval, 0, bnewent, binitialsnap, fieldname, bwastimejump);
+        set_cam_lookat_object(localclientnum, oldval, 0, bnewent, binitialsnap, fieldname, bwastimejump);
     }
 }
 
@@ -203,7 +203,7 @@ function function_5f6dad34(localclientnum, b_on) {
                     level.var_4073afd6 setshaderconstant(localclientnum, 1, 0, 0, math::linear_map(2 - st, 0, 1, 0, 1), 0);
                 }
                 i = gettime() - starttime;
-                wait(0.016);
+                wait 0.016;
             }
         }
         return;
@@ -234,7 +234,7 @@ function function_9fd7493(localclientnum, oldval, newval, bnewent, binitialsnap,
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5f0c3479, Offset: 0x1b40
 // Size: 0x124
-function function_c2af0716(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function set_cam_lookat_object(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (!isdefined(level.var_205cf3cb) || level.var_205cf3cb.size == 0) {
         return;
     }
@@ -253,7 +253,7 @@ function function_c2af0716(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x465380df, Offset: 0x1c70
 // Size: 0x19e
-function function_8466bb27(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function sndCameraScanner(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     switch (newval) {
     case 1:
         playsound(0, "evt_camera_scan_start", (0, 0, 0));
@@ -283,7 +283,7 @@ function function_8466bb27(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb47fc66f, Offset: 0x1e18
 // Size: 0x39c
-function function_edd36550(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function setup_security_cameras(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         if (!isdefined(level.var_205cf3cb)) {
             level.var_205cf3cb = [];
@@ -347,19 +347,19 @@ function function_b0867fa6(localclientnum, str_camera, var_81a24d4e, var_6516b55
 // Size: 0x11e
 function function_cd98eb8d() {
     self endon(#"death");
-    level endon(#"hash_4551c159");
+    level endon(#"blend_in_cleanup");
     v_angles = (0, -20, 0);
     n_move_time = 4;
     n_wait_time = 5;
     self rotateto(self.angles + v_angles, n_move_time / 2);
-    wait(n_wait_time / 2);
+    wait n_wait_time / 2;
     while (true) {
         v_angles = (0, 40, 0);
         self rotateto(self.angles + v_angles, n_move_time);
-        wait(n_wait_time);
+        wait n_wait_time;
         v_angles = (0, -40, 0);
         self rotateto(self.angles + v_angles, n_move_time);
-        wait(n_wait_time);
+        wait n_wait_time;
     }
 }
 
@@ -378,8 +378,8 @@ function function_a1ad4aa7(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc9a24a4e, Offset: 0x2540
 // Size: 0x12c
-function function_4551c159(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    level notify(#"hash_4551c159");
+function blend_in_cleanup(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+    level notify(#"blend_in_cleanup");
     scene::stop("tower_sparking_wire_01", "targetname");
     scene::stop("tower_sparking_wire_02", "targetname");
     scene::stop("tower_sparking_wire_03", "targetname");
@@ -393,7 +393,7 @@ function function_4551c159(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x37f7099e, Offset: 0x2678
 // Size: 0x9c
-function function_aea2e22e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function fuel_depot_truck_explosion(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level thread scene::play("p7_fxanim_gp_trash_newspaper_burst_out_01_bundle");
     level thread scene::play("p7_fxanim_gp_trash_newspaper_burst_up_01_bundle");
     level thread scene::play("p7_fxanim_gp_trash_paper_burst_up_01_bundle");
@@ -403,7 +403,7 @@ function function_aea2e22e(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x7569db4, Offset: 0x2720
 // Size: 0x6c
-function function_5faba7ec(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function apc_rail_tower_collapse(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level thread scene::play("rail_tower_collapse_start", "targetname");
     }
@@ -413,7 +413,7 @@ function function_5faba7ec(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x602fe7f3, Offset: 0x2798
 // Size: 0x94
-function function_b9aea50f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function vtol_missile_explode_trash_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level thread scene::play("vtol_hangar_trash_01", "targetname");
         level thread scene::play("vtol_hangar_trash_02", "targetname");

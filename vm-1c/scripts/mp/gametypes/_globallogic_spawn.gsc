@@ -160,7 +160,7 @@ function spawnplayerprediction() {
         return;
     }
     while (true) {
-        wait(0.5);
+        wait 0.5;
         spawning::onspawnplayer(1);
     }
 }
@@ -178,7 +178,7 @@ function doinitialspawnmessaging() {
     team = self.pers["team"];
     thread hud_message::function_c0025cfc(team);
     while (level.inprematchperiod) {
-        wait(0.05);
+        wait 0.05;
     }
     hintmessage = util::getobjectivehinttext(team);
     if (isdefined(hintmessage)) {
@@ -279,9 +279,9 @@ function spawnplayer() {
     pixbeginevent("onSpawnPlayer");
     self [[ level.onspawnplayer ]](0);
     if (isdefined(game["teamops"].var_a295ba07)) {
-        var_e21b687a = game["teamops"].data[game["teamops"].var_a295ba07];
-        function_cf51fcaa(game["teamops"].var_cdbaab59, game["teamops"].var_b7b1a955, game["teamops"].var_dfb9b8a5, var_e21b687a.time);
-        namespace_e21b687a::function_3d345413(undefined, undefined, self.team);
+        teamops = game["teamops"].data[game["teamops"].var_a295ba07];
+        function_cf51fcaa(game["teamops"].var_cdbaab59, game["teamops"].var_b7b1a955, game["teamops"].var_dfb9b8a5, teamops.time);
+        teamops::function_3d345413(undefined, undefined, self.team);
     }
     if (isdefined(level.playerspawnedcb)) {
         self [[ level.playerspawnedcb ]]();
@@ -391,14 +391,14 @@ function spawnplayer() {
     self thread globallogic_player::function_cf1cf1b3();
     self thread globallogic_player::player_monitor_inactivity();
     /#
-        print("player_spawned" + self.origin[0] + "player_spawned" + self.origin[1] + "player_spawned" + self.origin[2] + "player_spawned");
+        print("<dev string:x28>" + self.origin[0] + "<dev string:x2b>" + self.origin[1] + "<dev string:x2b>" + self.origin[2] + "<dev string:x2d>");
     #/
     setdvar("scr_selecting_location", "");
     if (!sessionmodeiszombiesgame()) {
         self thread killstreaks::function_afd201f4();
     }
     /#
-        if (getdvarint("player_spawned") > 0) {
+        if (getdvarint("<dev string:x2f>") > 0) {
             self thread globallogic_score::function_4e01d1c3();
         }
     #/
@@ -432,7 +432,7 @@ function function_a2c32efb(music) {
     self endon(#"death");
     self endon(#"disconnect");
     while (level.inprematchperiod) {
-        wait(0.05);
+        wait 0.05;
     }
     if (!(isdefined(level.freerun) && level.freerun)) {
         self thread globallogic_audio::set_music_on_player(music);
@@ -511,7 +511,7 @@ function forcespawn(time) {
     if (!isdefined(time)) {
         time = 60;
     }
-    wait(time);
+    wait time;
     if (self.hasspawned) {
         return;
     }
@@ -532,7 +532,7 @@ function forcespawn(time) {
 // Size: 0x5c
 function kickifdontspawn() {
     /#
-        if (getdvarint("player_spawned") == 1) {
+        if (getdvarint("<dev string:x3a>") == 1) {
             return;
         }
     #/
@@ -796,7 +796,7 @@ function waitandspawnclient(timealreadypassed) {
             util::setlowermessage(%MP_FRIENDLY_FIRE_WILL_NOT, teamkilldelay);
             self thread respawn_asspectator(self.origin + (0, 0, 60), self.angles);
             spawnedasspectator = 1;
-            wait(teamkilldelay);
+            wait teamkilldelay;
         }
         self.teamkillpunish = 0;
     }
@@ -883,7 +883,7 @@ function waitrespawnorsafespawnbutton() {
         if (self usebuttonpressed()) {
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

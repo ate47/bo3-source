@@ -18,9 +18,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e0df0f6f;
+#namespace zm_powerup_ww_grenade;
 
-// Namespace namespace_e0df0f6f
+// Namespace zm_powerup_ww_grenade
 // Params 0, eflags: 0x2
 // Checksum 0x6072768, Offset: 0x368
 // Size: 0x34
@@ -28,7 +28,7 @@ function autoexec function_2dc19561() {
     system::register("zm_powerup_ww_grenade", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_e0df0f6f
+// Namespace zm_powerup_ww_grenade
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3361d814, Offset: 0x3a8
 // Size: 0xdc
@@ -43,7 +43,7 @@ function __init__() {
     #/
 }
 
-// Namespace namespace_e0df0f6f
+// Namespace zm_powerup_ww_grenade
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5ca451f5, Offset: 0x490
 // Size: 0x44
@@ -52,7 +52,7 @@ function function_61dfda23(player) {
     player thread zm_powerups::powerup_vo("bonus_points_solo");
 }
 
-// Namespace namespace_e0df0f6f
+// Namespace zm_powerup_ww_grenade
 // Params 2, eflags: 0x1 linked
 // Checksum 0x6bd72d27, Offset: 0x4e0
 // Size: 0x144
@@ -70,19 +70,19 @@ function function_13ccb255(item, player) {
 
 /#
 
-    // Namespace namespace_e0df0f6f
+    // Namespace zm_powerup_ww_grenade
     // Params 0, eflags: 0x1 linked
     // Checksum 0x5787ea35, Offset: 0x630
     // Size: 0x7c
     function function_39ac3091() {
-        level flagsys::wait_till("specialty_widowswine");
-        wait(1);
+        level flagsys::wait_till("<dev string:x28>");
+        wait 1;
         zm_devgui::add_custom_devgui_callback(&function_dcedd7b5);
-        adddebugcommand("specialty_widowswine");
-        adddebugcommand("specialty_widowswine");
+        adddebugcommand("<dev string:x41>");
+        adddebugcommand("<dev string:x8c>");
     }
 
-    // Namespace namespace_e0df0f6f
+    // Namespace zm_powerup_ww_grenade
     // Params 0, eflags: 0x1 linked
     // Checksum 0x2f4519cf, Offset: 0x6b8
     // Size: 0x38
@@ -96,7 +96,7 @@ function function_13ccb255(item, player) {
         return 0;
     }
 
-    // Namespace namespace_e0df0f6f
+    // Namespace zm_powerup_ww_grenade
     // Params 1, eflags: 0x1 linked
     // Checksum 0x534e7a40, Offset: 0x6f8
     // Size: 0x110
@@ -104,13 +104,13 @@ function function_13ccb255(item, player) {
         players = getplayers();
         retval = 0;
         switch (cmd) {
-        case 8:
+        case "<dev string:xdf>":
             if (level function_2449723c()) {
                 return 1;
             }
             array::thread_all(players, &zm_devgui::zombie_devgui_give_powerup_player, cmd, 1);
             return 1;
-        case 8:
+        case "<dev string:xea>":
             if (level function_2449723c()) {
                 return 1;
             }

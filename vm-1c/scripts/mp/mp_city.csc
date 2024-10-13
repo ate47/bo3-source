@@ -10,9 +10,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_eb4f89c8;
+#namespace mp_city;
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0x778bd194, Offset: 0x2d8
 // Size: 0x154
@@ -22,8 +22,8 @@ function main() {
     if (var_ae867510 != -1) {
         setdvar("tu16_physicsPushOutThreshold", 10);
     }
-    namespace_d5826749::main();
-    namespace_d4bfdfc::main();
+    mp_city_fx::main();
+    mp_city_sound::main();
     load::main();
     level.domflagbasefxoverride = &dom_flag_base_fx_override;
     level.domflagcapfxoverride = &dom_flag_cap_fx_override;
@@ -32,22 +32,22 @@ function main() {
     level scene::play("p7_fxanim_gp_light_emergency_military_01_bundle");
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 2, eflags: 0x1 linked
 // Checksum 0x50640e14, Offset: 0x438
 // Size: 0x9e
 function dom_flag_base_fx_override(flag, team) {
     switch (flag.name) {
-    case 9:
+    case "a":
         if (team == "neutral") {
             return "ui/fx_dom_marker_neutral_r120";
         } else {
             return "ui/fx_dom_marker_team_r120";
         }
         break;
-    case 10:
+    case "b":
         break;
-    case 11:
+    case "c":
         if (team == "neutral") {
             return "ui/fx_dom_marker_neutral_r120";
         } else {
@@ -57,22 +57,22 @@ function dom_flag_base_fx_override(flag, team) {
     }
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 2, eflags: 0x1 linked
 // Checksum 0xad02c336, Offset: 0x4e0
 // Size: 0x9e
 function dom_flag_cap_fx_override(flag, team) {
     switch (flag.name) {
-    case 9:
+    case "a":
         if (team == "neutral") {
             return "ui/fx_dom_cap_indicator_neutral_r120";
         } else {
             return "ui/fx_dom_cap_indicator_team_r120";
         }
         break;
-    case 10:
+    case "b":
         break;
-    case 11:
+    case "c":
         if (team == "neutral") {
             return "ui/fx_dom_cap_indicator_neutral_r120";
         } else {
@@ -82,7 +82,7 @@ function dom_flag_cap_fx_override(flag, team) {
     }
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3adccad9, Offset: 0x588
 // Size: 0x10e
@@ -107,7 +107,7 @@ function function_d9f6a33c(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 6, eflags: 0x1 linked
 // Checksum 0xc44f1508, Offset: 0x6a0
 // Size: 0x1f4
@@ -129,12 +129,12 @@ function function_4b249f9b(localclientnum, time, var_728dd484, var_b9359340, var
         }
         self.var_a9e64a4e = lerpfloat(var_728dd484, var_b9359340, percent);
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, pow(self.var_a9e64a4e, 4), 0, 0);
-        wait(0.016);
+        wait 0.016;
         currtime = getservertime(localclientnum);
     }
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 7, eflags: 0x1 linked
 // Checksum 0xeb13a841, Offset: 0x8a0
 // Size: 0x29c
@@ -166,12 +166,12 @@ function function_6c36a9a7(localclientnum, time, var_728dd484, var_b9359340, var
         }
         self.var_a9e64a4e = lerpfloat(startintensity, finalintensity, percent);
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, pow(self.var_a9e64a4e, 4), 0, 0);
-        wait(0.016);
+        wait 0.016;
         currtime = getservertime(localclientnum);
     }
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 4, eflags: 0x1 linked
 // Checksum 0xf4b5db95, Offset: 0xb48
 // Size: 0x192
@@ -190,14 +190,14 @@ function function_211e661e(localclientnum, time, var_ecf795c3, var_1cf558a0) {
         }
         self.var_a9e64a4e = lerpfloat(startintensity, var_ecf795c3, percent);
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, pow(self.var_a9e64a4e, 4), 0, 0);
-        wait(0.016);
+        wait 0.016;
         currtime = getservertime(localclientnum);
     }
-    wait(0.016);
+    wait 0.016;
     self notify(#"hash_3adb36eb");
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe64f1d37, Offset: 0xce8
 // Size: 0xbc
@@ -210,7 +210,7 @@ function function_1afd2fff(localclientnum) {
     self thread function_4b249f9b(localclientnum, 2000, 0.15, 0.25, 1, 0.15);
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 1, eflags: 0x1 linked
 // Checksum 0x3ca4b640, Offset: 0xdb0
 // Size: 0x2c
@@ -218,7 +218,7 @@ function function_e5636218(localclientnum) {
     self thread function_211e661e(localclientnum, 2000, 1, 0);
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 1, eflags: 0x1 linked
 // Checksum 0x32941b30, Offset: 0xde8
 // Size: 0x44
@@ -226,7 +226,7 @@ function function_857cbaeb(localclientnum) {
     self thread function_4b249f9b(localclientnum, 2000, 0.25, 0.5, 0, 0.25);
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf7a58c08, Offset: 0xe38
 // Size: 0x3c

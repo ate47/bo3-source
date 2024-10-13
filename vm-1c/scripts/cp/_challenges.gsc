@@ -69,10 +69,10 @@ function function_7d1957ed(data, time) {
 function function_e0360654(data, time) {
     if (isdefined(data)) {
         switch (data.weapon.rootweapon.name) {
-        case 8:
+        case "emp_grenade":
             break;
-        case 9:
-        case 10:
+        case "ravage_core_emp_grenade":
+        case "ravage_core_emp_grenade_upg":
             if (!isdefined(data.victim.var_fcad099b) && data.victim.archetype != "human") {
                 data.attacker addplayerstat("cybercom_uses_esdamage", 1);
                 data.attacker addplayerstat("cybercom_uses_ravagecore", 1);
@@ -107,33 +107,33 @@ function function_9323a046(data, time) {
             }
         }
         switch (data.weapon.rootweapon.name) {
-        case 29:
-        case 30:
+        case "gadget_rapid_strike":
+        case "gadget_rapid_strike_upgraded":
             data.attacker notify(#"hash_e11b0770");
             data.attacker thread function_4c17acc8();
             break;
-        case 24:
-        case 23:
+        case "gadget_immolation":
+        case "gadget_immolation_upgraded":
             if (isdefined(data.victim) && isdefined(data.attacker) && !isdefined(data.victim.var_e9560d5)) {
                 data.victim.var_e9560d5 = 1;
                 data.attacker addplayerstat("cybercom_uses_immolation", 1);
                 data.attacker thread function_8ef347b3(data.victim.origin);
             }
             break;
-        case 31:
-        case 32:
+        case "gadget_unstoppable_force":
+        case "gadget_unstoppable_force_upgraded":
             data.attacker addplayerstat("cybercom_uses_force", 1);
             data.attacker addplayerstat("cybercom_uses_martial", 1);
             break;
-        case 9:
-        case 10:
+        case "ravage_core_emp_grenade":
+        case "ravage_core_emp_grenade_upg":
             if (isdefined(data.victim) && !isdefined(data.victim.var_fcad099b)) {
                 data.attacker addplayerstat("cybercom_uses_ravagecore", 1);
                 data.victim.var_fcad099b = 1;
             }
             break;
-        case 20:
-        case 21:
+        case "gadget_concussive_wave":
+        case "hero_gravityspikes_cybercom_upgraded":
             if (isvehicle(data.victim)) {
                 data.attacker addplayerstat("cybercom_uses_martial", 1);
                 data.attacker addplayerstat("cybercom_uses_concussive", 1);
@@ -152,7 +152,7 @@ function function_9323a046(data, time) {
 // Size: 0x128
 function function_8ef347b3(v_location) {
     self endon(#"death");
-    self endon(#"hash_31573b44");
+    self endon(#"stop_catching_immolation_secondaries");
     if (!isdefined(v_location)) {
         return;
     }
@@ -178,7 +178,7 @@ function function_8ef347b3(v_location) {
 // Size: 0x90
 function function_4c17acc8() {
     self endon(#"death");
-    self endon(#"hash_534b9c4b");
+    self endon(#"stop_catching_rapid_strike_attacks");
     self util::delay_notify(2, "stop_catching_rapid_strike_attacks");
     n_start_time = gettime();
     while (gettime() - n_start_time < 2) {
@@ -218,7 +218,7 @@ function function_8468b0b1(data) {
     if (isdefined(data.attacker)) {
         data.attacker endon(#"disconnect");
     }
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     level thread dochallengecallback("actorKilled", data);
     level thread doscoreeventcallback("actorKilled", data);
@@ -254,7 +254,7 @@ function function_2a703585(data) {
     if (isdefined(data.attacker)) {
         data.attacker endon(#"disconnect");
     }
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     level thread dochallengecallback("actorDamaged", data);
 }
@@ -290,7 +290,7 @@ function function_79c2e402(data) {
     if (isdefined(data.attacker)) {
         data.attacker endon(#"disconnect");
     }
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     level thread dochallengecallback("VehicleKilled", data);
 }
@@ -325,7 +325,7 @@ function function_c0fc6584(data) {
     if (isdefined(data.attacker)) {
         data.attacker endon(#"disconnect");
     }
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     level thread dochallengecallback("VehicleDamaged", data);
 }
@@ -386,9 +386,9 @@ function function_97666686(rewardxp, maxval, row, tablenumber, challengetype, it
     case 0:
         challengename = function_7fd6c70d(challengeindex);
         switch (challengename) {
-        case 42:
+        case "CP_CHALLENGES_CAREER_MASTERY":
             break;
-        case 41:
+        case "CP_CHALLENGES_ALL_COMPLETE":
             self givedecoration("cp_medal_all_calling_cards");
             break;
         }
@@ -431,13 +431,13 @@ function function_5bb05b72() {
                             var_9050c19b = "";
                             var_9050c19b = var_e4d70f97[16];
                             switch (var_9050c19b) {
-                            case 55:
+                            case "missions":
                                 self addplayerstat("conf_gamemode_mastery", 1);
                                 break;
-                            case 56:
+                            case "tott":
                                 self addplayerstat("hq_gamemode_mastery", 1);
                                 break;
-                            case 54:
+                            case "career":
                                 self addplayerstat("career_mastery", 1);
                                 break;
                             }
@@ -458,11 +458,11 @@ function function_5bb05b72() {
     // Size: 0x70
     function function_4f96d6bd() {
         while (true) {
-            if (getdvarint("emp_grenade", 0) == 1) {
+            if (getdvarint("<dev string:x28>", 0) == 1) {
                 self function_f2d8f1d0();
-                setdvar("emp_grenade", 0);
+                setdvar("<dev string:x28>", 0);
             }
-            wait(0.1);
+            wait 0.1;
         }
     }
 
@@ -472,42 +472,42 @@ function function_5bb05b72() {
     // Size: 0x4ca
     function function_f2d8f1d0() {
         var_2884746a = [];
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
-        array::add(var_2884746a, "emp_grenade");
+        array::add(var_2884746a, "<dev string:x44>");
+        array::add(var_2884746a, "<dev string:x55>");
+        array::add(var_2884746a, "<dev string:x66>");
+        array::add(var_2884746a, "<dev string:x77>");
+        array::add(var_2884746a, "<dev string:x88>");
+        array::add(var_2884746a, "<dev string:x99>");
+        array::add(var_2884746a, "<dev string:xaa>");
+        array::add(var_2884746a, "<dev string:xbb>");
+        array::add(var_2884746a, "<dev string:xcc>");
+        array::add(var_2884746a, "<dev string:xdd>");
+        array::add(var_2884746a, "<dev string:xee>");
+        array::add(var_2884746a, "<dev string:xff>");
+        array::add(var_2884746a, "<dev string:x115>");
+        array::add(var_2884746a, "<dev string:x12b>");
+        array::add(var_2884746a, "<dev string:x141>");
+        array::add(var_2884746a, "<dev string:x155>");
+        array::add(var_2884746a, "<dev string:x170>");
+        array::add(var_2884746a, "<dev string:x18a>");
+        array::add(var_2884746a, "<dev string:x1a3>");
+        array::add(var_2884746a, "<dev string:x1ba>");
+        array::add(var_2884746a, "<dev string:x1d3>");
+        array::add(var_2884746a, "<dev string:x1e7>");
+        array::add(var_2884746a, "<dev string:x200>");
+        array::add(var_2884746a, "<dev string:x218>");
+        array::add(var_2884746a, "<dev string:x231>");
+        array::add(var_2884746a, "<dev string:x242>");
+        array::add(var_2884746a, "<dev string:x250>");
+        array::add(var_2884746a, "<dev string:x264>");
+        array::add(var_2884746a, "<dev string:x27b>");
+        array::add(var_2884746a, "<dev string:x291>");
+        array::add(var_2884746a, "<dev string:x2a8>");
+        array::add(var_2884746a, "<dev string:x2bc>");
         foreach (challenge in var_2884746a) {
             self addplayerstat(challenge, 1000);
-            iprintln("emp_grenade" + challenge);
-            wait(1);
+            iprintln("<dev string:x2d5>" + challenge);
+            wait 1;
         }
     }
 

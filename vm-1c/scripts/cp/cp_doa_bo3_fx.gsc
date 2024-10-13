@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_e8effba5;
+#namespace cp_doa_bo3_fx;
 
-// Namespace namespace_e8effba5
+// Namespace cp_doa_bo3_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x567e5419, Offset: 0x188
 // Size: 0x8e
@@ -14,7 +14,7 @@ function main() {
     level._effect["raps_trail_ash"] = "zombie/fx_dog_ash_trail_zmb";
 }
 
-// Namespace namespace_e8effba5
+// Namespace cp_doa_bo3_fx
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb9768b45, Offset: 0x220
 // Size: 0x54

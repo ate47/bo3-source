@@ -1,9 +1,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_bf71ff59;
+#namespace zm_asylum_fx;
 
-// Namespace namespace_bf71ff59
+// Namespace zm_asylum_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3c90f6ac, Offset: 0x10f0
 // Size: 0x12c
@@ -20,7 +20,7 @@ function main() {
     level thread function_6b84da80("jugger_on", "electric_juggernog");
 }
 
-// Namespace namespace_bf71ff59
+// Namespace zm_asylum_fx
 // Params 2, eflags: 0x1 linked
 // Checksum 0x18e2801e, Offset: 0x1228
 // Size: 0x244
@@ -41,7 +41,7 @@ function function_dc095355(ent, localclientnum) {
     triggerfx(var_81af7cd1.loopfx);
 }
 
-// Namespace namespace_bf71ff59
+// Namespace zm_asylum_fx
 // Params 1, eflags: 0x1 linked
 // Checksum 0x771cf514, Offset: 0x1478
 // Size: 0xcc
@@ -54,7 +54,7 @@ function function_1c1a68e1(ent) {
     }
 }
 
-// Namespace namespace_bf71ff59
+// Namespace zm_asylum_fx
 // Params 2, eflags: 0x1 linked
 // Checksum 0xcc4957f, Offset: 0x1550
 // Size: 0x128
@@ -65,7 +65,7 @@ function function_6b84da80(var_7ff7f902, var_1dc3abd8) {
         for (i = 0; i < players.size; i++) {
             playfx(i, level._effect["electric_short_oneshot"], targ.origin);
         }
-        wait(0.075);
+        wait 0.075;
         if (isdefined(targ.target)) {
             targ = struct::get(targ.target, "targetname");
             continue;
@@ -73,7 +73,7 @@ function function_6b84da80(var_7ff7f902, var_1dc3abd8) {
     }
 }
 
-// Namespace namespace_bf71ff59
+// Namespace zm_asylum_fx
 // Params 7, eflags: 0x1 linked
 // Checksum 0x84ac52a0, Offset: 0x1680
 // Size: 0xbc
@@ -87,7 +87,7 @@ function function_93f91575(localclientnum, oldval, newval, bnewent, binitialsnap
     function_1c1a68e1("north");
 }
 
-// Namespace namespace_bf71ff59
+// Namespace zm_asylum_fx
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc9ce3e34, Offset: 0x1748
 // Size: 0xbc
@@ -101,7 +101,7 @@ function function_4c17ba1b(localclientnum, oldval, newval, bnewent, binitialsnap
     function_1c1a68e1("south");
 }
 
-// Namespace namespace_bf71ff59
+// Namespace zm_asylum_fx
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa29e99b7, Offset: 0x1810
 // Size: 0x178
@@ -113,17 +113,17 @@ function function_46f37b91(str_side, localclientnum) {
             if (randomint(100) > 50) {
                 playfx(localclientnum, level._effect["electric_short_oneshot"], targ.origin);
             }
-            wait(0.075);
+            wait 0.075;
             if (isdefined(targ.target)) {
                 targ = struct::get(targ.target, "targetname");
                 continue;
             }
         }
-        wait(randomintrange(10, 15));
+        wait randomintrange(10, 15);
     }
 }
 
-// Namespace namespace_bf71ff59
+// Namespace zm_asylum_fx
 // Params 1, eflags: 0x1 linked
 // Checksum 0xabe4814a, Offset: 0x1990
 // Size: 0x4e
@@ -132,7 +132,7 @@ function function_576a2cdd(str_side) {
     ent.fx = undefined;
 }
 
-// Namespace namespace_bf71ff59
+// Namespace zm_asylum_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd15e433c, Offset: 0x19e8
 // Size: 0x1fa
@@ -157,7 +157,7 @@ function function_f45953c() {
     level._effect["perk_machine_light_green"] = "dlc5/zmhd/fx_wonder_fizz_light_green";
 }
 
-// Namespace namespace_bf71ff59
+// Namespace zm_asylum_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc2ac7c3b, Offset: 0x1bf0
 // Size: 0x622

@@ -43,7 +43,7 @@ function function_254eefd6(player, time) {
     player endon(#"disconnect");
     player endon(#"hash_d28ba89d");
     level namespace_49107f3a::function_124b9a08();
-    wait(time);
+    wait time;
     player notify(#"hash_d28ba89d");
 }
 
@@ -52,10 +52,10 @@ function function_254eefd6(player, time) {
 // Checksum 0x663d9c23, Offset: 0x670
 // Size: 0x60
 function function_ab709357(heli) {
-    self endon(#"hash_e8bfbd2b");
+    self endon(#"doa_playerVehiclePickup");
     while (isdefined(heli)) {
         self.doa.var_8d2d32e7 = namespace_49107f3a::function_1c0abd70(heli.origin, -128, heli);
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -91,7 +91,7 @@ function function_f27a22c8(player, origin) {
     player thread function_ab709357(heli);
     heli thread function_254eefd6(player, int(player namespace_49107f3a::function_1ded48e6(level.doa.rules.var_cd899ae7)));
     player waittill(#"hash_d28ba89d");
-    player notify(#"hash_e8bfbd2b");
+    player notify(#"doa_playerVehiclePickup");
     if (isdefined(heli)) {
         heli makeusable();
         var_85f85940 = heli.origin;
@@ -116,7 +116,7 @@ function function_db948b3() {
     while (true) {
         pos = self function_d24a7ea9(0);
         self function_6521eb5d(pos, 1);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -130,10 +130,10 @@ function function_569d8fe3() {
     while (true) {
         if (self isgunnerfiring(0)) {
             self fireweapon(2);
-            wait(var_d22e1ab8.firetime);
+            wait var_d22e1ab8.firetime;
             continue;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -194,7 +194,7 @@ function function_2ef99744(player, origin) {
     siegebot hidepart("tag_light_attach_right", "", 1);
     siegebot thread function_cdfa9ce8(chicken);
     siegebot thread function_db948b3();
-    player notify(#"hash_e8bfbd2b");
+    player notify(#"doa_playerVehiclePickup");
     var_523635a2 = 1;
     if (player.doa.fate == 2) {
         var_523635a2 = level.doa.rules.var_f2d5f54d;
@@ -246,7 +246,7 @@ function function_21af9396(player, origin) {
     siegebot makeunusable();
     siegebot.health = 9999999;
     siegebot thread function_db948b3();
-    player notify(#"hash_e8bfbd2b");
+    player notify(#"doa_playerVehiclePickup");
     var_523635a2 = 1;
     if (player.doa.fate == 2) {
         var_523635a2 = level.doa.rules.var_f2d5f54d;
@@ -295,7 +295,7 @@ function function_1e663abe(player, origin) {
     var_e34a8df9 usevehicle(player, 0);
     var_e34a8df9 makeunusable();
     var_e34a8df9.health = 9999999;
-    player notify(#"hash_e8bfbd2b");
+    player notify(#"doa_playerVehiclePickup");
     var_e34a8df9 thread function_254eefd6(player, int(player namespace_49107f3a::function_1ded48e6(level.doa.rules.var_7196fe3d)));
     player waittill(#"hash_d28ba89d");
     if (isdefined(var_e34a8df9)) {
@@ -340,7 +340,7 @@ function function_e9f445ce(player, origin) {
     var_b22d6040 usevehicle(player, 0);
     var_b22d6040 makeunusable();
     var_b22d6040.health = 9999999;
-    player notify(#"hash_e8bfbd2b");
+    player notify(#"doa_playerVehiclePickup");
     var_b22d6040.owner = player;
     var_b22d6040 thread function_254eefd6(player, int(player namespace_49107f3a::function_1ded48e6(level.doa.rules.var_8b15034d)));
     player waittill(#"hash_d28ba89d");
@@ -371,11 +371,11 @@ function function_d460de4b() {
         return;
     }
     self thread namespace_831a4a7c::function_7f33210a();
-    self thread namespace_831a4a7c::function_f2507519(0);
+    self thread namespace_831a4a7c::turnOnFlashlight(0);
     self thread namespace_eaa992c::turnofffx("boots");
     self thread namespace_eaa992c::turnofffx("slow_feet");
     self.doa.var_c2b9d7d0 = gettime();
-    self notify(#"hash_8820b45b");
+    self notify(#"kill_shield");
     self notify(#"kill_chickens");
     util::wait_network_frame();
 }
@@ -391,9 +391,9 @@ function function_d41a4517() {
     self endon(#"disconnect");
     util::wait_network_frame();
     self thread namespace_831a4a7c::turnplayershieldon();
-    self thread namespace_831a4a7c::function_f2507519(level.doa.var_458c27d == 3);
+    self thread namespace_831a4a7c::turnOnFlashlight(level.doa.var_458c27d == 3);
     self thread namespace_831a4a7c::function_b5843d4f(level.doa.var_458c27d == 3);
-    if (isdefined(self.doa.var_d5c84825) && isdefined(self.doa) && self.doa.var_d5c84825) {
+    if (isdefined(self.doa.slow_feet) && isdefined(self.doa) && self.doa.slow_feet) {
         self thread namespace_eaa992c::function_285a2999("slow_feet");
     }
     if (isdefined(self.doa.fast_feet) && isdefined(self.doa) && self.doa.fast_feet) {
@@ -420,7 +420,7 @@ function function_3b1b644d(var_85f85940, vehicle) {
     self endon(#"disconnect");
     vehicle thread function_33f0cca4(self);
     self namespace_831a4a7c::function_4519b17(1);
-    wait(0.05);
+    wait 0.05;
     self.ignoreme = 0;
     self.doa.vehicle = undefined;
     self.doa.var_8d2d32e7 = undefined;
@@ -457,10 +457,10 @@ function function_cdfa9ce8(bird) {
     bird.animation = randomint(2) ? chicken_mech%a_chicken_mech_idle : chicken_mech%a_chicken_mech_lay_egg;
     while (isdefined(bird)) {
         bird clientfield::set("runsiegechickenanim", 1);
-        wait(randomintrange(1, 5));
+        wait randomintrange(1, 5);
         if (randomint(100) < 15) {
             bird clientfield::set("runsiegechickenanim", 2);
-            wait(1);
+            wait 1;
             self notify(#"hash_e15b53df");
         }
     }

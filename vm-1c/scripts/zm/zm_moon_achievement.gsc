@@ -11,9 +11,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_7c57d7e6;
+#namespace zm_moon_achievement;
 
-// Namespace namespace_7c57d7e6
+// Namespace zm_moon_achievement
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa2d7d7cb, Offset: 0x318
 // Size: 0x54
@@ -23,7 +23,7 @@ function init() {
     callback::on_connect(&onplayerconnect);
 }
 
-// Namespace namespace_7c57d7e6
+// Namespace zm_moon_achievement
 // Params 0, eflags: 0x1 linked
 // Checksum 0x493b2ea8, Offset: 0x378
 // Size: 0x64
@@ -34,7 +34,7 @@ function onplayerconnect() {
     self thread function_b8ed20bf();
 }
 
-// Namespace namespace_7c57d7e6
+// Namespace zm_moon_achievement
 // Params 1, eflags: 0x1 linked
 // Checksum 0x358a2d20, Offset: 0x3e8
 // Size: 0xb6
@@ -51,7 +51,7 @@ function function_e0fadbfc(stat_name) {
     }
 }
 
-// Namespace namespace_7c57d7e6
+// Namespace zm_moon_achievement
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6da61b3d, Offset: 0x4a8
 // Size: 0xbc
@@ -68,7 +68,7 @@ function function_655a4c66() {
     }
 }
 
-// Namespace namespace_7c57d7e6
+// Namespace zm_moon_achievement
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa10f1c60, Offset: 0x570
 // Size: 0x94
@@ -82,7 +82,7 @@ function function_42b8c382() {
     level zm_utility::giveachievement_wrapper("DLC5_ZOM_GROUND_CONTROL", 1);
 }
 
-// Namespace namespace_7c57d7e6
+// Namespace zm_moon_achievement
 // Params 0, eflags: 0x1 linked
 // Checksum 0x325f264d, Offset: 0x610
 // Size: 0x2c
@@ -94,7 +94,7 @@ function function_f22b525d() {
     #/
 }
 
-// Namespace namespace_7c57d7e6
+// Namespace zm_moon_achievement
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3b2a44d8, Offset: 0x648
 // Size: 0x68
@@ -110,7 +110,7 @@ function function_885001e() {
     }
 }
 
-// Namespace namespace_7c57d7e6
+// Namespace zm_moon_achievement
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd60cb6, Offset: 0x6b8
 // Size: 0x15c
@@ -139,7 +139,7 @@ function function_6d544bc9() {
     }
 }
 
-// Namespace namespace_7c57d7e6
+// Namespace zm_moon_achievement
 // Params 0, eflags: 0x1 linked
 // Checksum 0x97b8f5c3, Offset: 0x820
 // Size: 0xf6

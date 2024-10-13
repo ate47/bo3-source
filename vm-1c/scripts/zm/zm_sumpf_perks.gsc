@@ -4,9 +4,9 @@
 #using scripts/shared/flag_shared;
 #using scripts/shared/array_shared;
 
-#namespace namespace_42de9882;
+#namespace zm_sumpf_perks;
 
-// Namespace namespace_42de9882
+// Namespace zm_sumpf_perks
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7203552e, Offset: 0x408
 // Size: 0x432
@@ -54,7 +54,7 @@ function function_980b3cd5() {
     level notify(#"hash_57a00baa");
 }
 
-// Namespace namespace_42de9882
+// Namespace zm_sumpf_perks
 // Params 1, eflags: 0x1 linked
 // Checksum 0x458911a6, Offset: 0x848
 // Size: 0xe8
@@ -62,7 +62,7 @@ function function_bede3562(e_machine) {
     str_on = self.script_noteworthy + "_power_on";
     level waittill(str_on);
     e_machine.b_keep_when_turned_off = 1;
-    wait(10);
+    wait 10;
     e_machine zm_perks::perk_fx(undefined, 1);
     level waittill(self.script_noteworthy + "_unhide");
     str_fx_name = level._custom_perks[self.script_noteworthy].machine_light_effect;
@@ -70,7 +70,7 @@ function function_bede3562(e_machine) {
     e_machine.s_fxloc.angles = e_machine.angles;
 }
 
-// Namespace namespace_42de9882
+// Namespace zm_sumpf_perks
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6625fd84, Offset: 0x938
 // Size: 0x15e
@@ -96,7 +96,7 @@ function function_1b58b796(str_trigger) {
     return vending_machines;
 }
 
-// Namespace namespace_42de9882
+// Namespace zm_sumpf_perks
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdc574001, Offset: 0xaa0
 // Size: 0x24
@@ -105,7 +105,7 @@ function function_17db950e() {
     self.var_6ecf729b = 0;
 }
 
-// Namespace namespace_42de9882
+// Namespace zm_sumpf_perks
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8a82878b, Offset: 0xad0
 // Size: 0x110
@@ -121,11 +121,11 @@ function function_25413096() {
                 self.var_7054d602 = 1;
                 self playsoundontag(var_b5609476, "tag_origin", "sound_done");
                 if (issubstr(var_b5609476, "sting")) {
-                    wait(10);
+                    wait 10;
                 } else if (isdefined(self.var_e1405ef7)) {
-                    wait(60);
+                    wait 60;
                 } else {
-                    wait(30);
+                    wait 30;
                 }
                 self.var_7054d602 = 0;
             }
@@ -133,7 +133,7 @@ function function_25413096() {
     }
 }
 
-// Namespace namespace_42de9882
+// Namespace zm_sumpf_perks
 // Params 0, eflags: 0x0
 // Checksum 0x6f127c37, Offset: 0xbe8
 // Size: 0x54
@@ -143,7 +143,7 @@ function function_6ce17236() {
     self triggerenable(0);
 }
 
-// Namespace namespace_42de9882
+// Namespace zm_sumpf_perks
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa563579, Offset: 0xc48
 // Size: 0x178
@@ -171,31 +171,31 @@ function function_cd5bc54f(start_location) {
     return machine;
 }
 
-// Namespace namespace_42de9882
+// Namespace zm_sumpf_perks
 // Params 3, eflags: 0x1 linked
 // Checksum 0xfccb99c8, Offset: 0xdc8
 // Size: 0x18c
 function function_e91f62f2(machine, origin, entity) {
     level notify(#"hash_e60e72d2");
     switch (machine) {
-    case 24:
+    case "p7_zm_vending_jugg":
         var_da5a8677 = "mus_perks_jugganog_sting";
         level notify(#"hash_5203f90d");
         break;
-    case 23:
+    case "p7_zm_vending_doubletap2":
         var_da5a8677 = "mus_perks_doubletap_sting";
         level notify(#"hash_b5265d08");
         break;
-    case 25:
+    case "p7_zm_vending_revive":
         var_da5a8677 = "mus_perks_quickrevive_sting";
         level notify(#"hash_57a00baa");
         level.var_54b80118 = 0;
         break;
-    case 26:
+    case "p7_zm_vending_sleight":
         var_da5a8677 = "mus_perks_speed_sting";
         level notify(#"hash_5331339b");
         break;
-    case 27:
+    case "p7_zm_vending_three_gun":
         var_da5a8677 = "mus_perks_mulekick_sting";
         level notify(#"hash_d2e0b345");
         break;
@@ -204,11 +204,11 @@ function function_e91f62f2(machine, origin, entity) {
         e_trigger = getent(var_da5a8677, "script_label");
         e_trigger triggerenable(1);
     }
-    level notify(#"hash_a7912f12");
+    level notify(#"revive_on");
     function_d3ab4c59(machine, origin);
 }
 
-// Namespace namespace_42de9882
+// Namespace zm_sumpf_perks
 // Params 2, eflags: 0x1 linked
 // Checksum 0x8ffdec1f, Offset: 0xf60
 // Size: 0x1b6
@@ -225,22 +225,22 @@ function function_d3ab4c59(machine, origin) {
         return;
     }
     switch (machine) {
-    case 24:
+    case "p7_zm_vending_jugg":
         player thread zm_audio::create_and_play_dialog("level", "jugga");
         break;
-    case 23:
+    case "p7_zm_vending_doubletap2":
         player thread zm_audio::create_and_play_dialog("level", "doubletap");
         break;
-    case 25:
+    case "p7_zm_vending_revive":
         player thread zm_audio::create_and_play_dialog("level", "revive");
         break;
-    case 26:
+    case "p7_zm_vending_sleight":
         player thread zm_audio::create_and_play_dialog("level", "speed");
         break;
     }
 }
 
-// Namespace namespace_42de9882
+// Namespace zm_sumpf_perks
 // Params 1, eflags: 0x1 linked
 // Checksum 0xfb4c0729, Offset: 0x1120
 // Size: 0xa34
@@ -323,7 +323,7 @@ function function_5c025696(index) {
     modelindex = 0;
     machines[j] vibrate(machines[j].angles, 2, 1, 4);
     for (i = 0; i < 30; i++) {
-        wait(0.15);
+        wait 0.15;
         if (level.var_7c827139.size > 1) {
             while (!isdefined(level.var_7c827139[modelindex])) {
                 modelindex++;
@@ -342,10 +342,10 @@ function function_5c025696(index) {
     modelname = var_442e5cb3;
     machines[j] setmodel(modelname);
     machines[j] moveto(origin, 0.3, 0.3, 0);
-    wait(0.2);
+    wait 0.2;
     playfxontag(level._effect["zombie_perk_end"], machines[j], "tag_origin");
     playsoundatposition("zmb_drop_perk_machine", machines[j].origin);
-    wait(0.05);
+    wait 0.05;
     playfxontag(level._effect["zombie_perk_flash"], machines[j], "tag_origin");
     function_e91f62f2(var_442e5cb3, origin, machines[j]);
 }

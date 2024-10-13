@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e81d2518;
+#namespace dragon;
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 0, eflags: 0x2
 // Checksum 0x988819f1, Offset: 0x950
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("stalingrad_dragon", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 0, eflags: 0x1 linked
 // Checksum 0x28899976, Offset: 0x990
 // Size: 0xb4
@@ -31,7 +31,7 @@ function __init__() {
     level.var_9d63af9a = [];
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1dff18e, Offset: 0xa50
 // Size: 0x3cc
@@ -40,25 +40,25 @@ function init_clientfields() {
     clientfield::register("scriptmover", "dragon_notify_bullet_impact", 12000, 1, "int", &function_d6856592, 0, 0);
     clientfield::register("scriptmover", "dragon_wound_glow_on", 12000, 2, "int", &function_cb9fb04a, 0, 0);
     clientfield::register("scriptmover", "dragon_wound_glow_off", 12000, 2, "int", &function_bb6d58d0, 0, 0);
-    clientfield::register("scriptmover", "dragon_mouth_fx", 12000, 1, "int", &function_7893300d, 0, 0);
+    clientfield::register("scriptmover", "dragon_mouth_fx", 12000, 1, "int", &dragon_mouth_fx, 0, 0);
     n_bits = getminbitcountfornum(10);
     clientfield::register("scriptmover", "dragon_notetracks", 12000, n_bits, "counter", &function_47d133a9, 0, 0);
     clientfield::register("toplayer", "dragon_fire_burn_tell", 12000, 3, "int", &function_2d57594b, 0, 0);
     clientfield::register("world", "dragon_hazard_fx_anim_init", 12000, 1, "int", &function_b4311e07, 0, 0);
     clientfield::register("world", "dragon_hazard_fountain", 12000, 1, "int", &function_50d62870, 0, 0);
     clientfield::register("world", "dragon_hazard_library", 12000, 1, "counter", &function_6865d0d5, 0, 0);
-    clientfield::register("toplayer", "dragon_transportation_exploders", 12000, 1, "int", &function_9a134512, 0, 0);
+    clientfield::register("toplayer", "dragon_transportation_exploders", 12000, 1, "int", &dragon_transportation_exploders, 0, 0);
     clientfield::register("allplayers", "dragon_transport_eject", 12000, 1, "int", &function_9f54e892, 0, 0);
-    clientfield::register("world", "dragon_boss_guts", 12000, 2, "int", &function_30d64518, 0, 0);
+    clientfield::register("world", "dragon_boss_guts", 12000, 2, "int", &dragon_boss_guts, 0, 0);
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 7, eflags: 0x1 linked
 // Checksum 0x60b3ddb5, Offset: 0xe28
 // Size: 0x172
 function function_d28f5c87(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    self notify(#"hash_e77002d1");
-    self endon(#"hash_e77002d1");
+    self notify(#"dragon_body_glow");
+    self endon(#"dragon_body_glow");
     self endon(#"entityshutdown");
     self thread function_9b0f57cf(localclientnum, newval);
     if (newval) {
@@ -67,7 +67,7 @@ function function_d28f5c87(localclientnum, oldval, newval, bnewent, binitialsnap
                 return;
             }
             self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, i, 0, 0);
-            wait(0.016);
+            wait 0.016;
         }
         return;
     }
@@ -76,11 +76,11 @@ function function_d28f5c87(localclientnum, oldval, newval, bnewent, binitialsnap
             return;
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, i, 0, 0);
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 2, eflags: 0x1 linked
 // Checksum 0x4f4a53ed, Offset: 0xfa8
 // Size: 0x12a
@@ -93,7 +93,7 @@ function function_9b0f57cf(localclientnum, newval) {
                 return;
             }
             self mapshaderconstant(localclientnum, 0, "scriptVector6", 0, i, 0, 0);
-            wait(0.016);
+            wait 0.016;
         }
         return;
     }
@@ -102,15 +102,15 @@ function function_9b0f57cf(localclientnum, newval) {
             return;
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector6", 0, i, 0, 0);
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 7, eflags: 0x1 linked
 // Checksum 0x35236f2e, Offset: 0x10e0
 // Size: 0x156
-function function_7893300d(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138, var_406ad39b, str_field, var_ffbb7dc) {
+function dragon_mouth_fx(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138, var_406ad39b, str_field, var_ffbb7dc) {
     if (var_143c4e26) {
         playfxontag(var_6575414d, level._effect["dragon_tongue"], self, "tag_mouth_floor_fx");
         playfxontag(var_6575414d, level._effect["dragon_mouth"], self, "tag_throat_fx");
@@ -123,7 +123,7 @@ function function_7893300d(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed13
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 7, eflags: 0x1 linked
 // Checksum 0xac1488b9, Offset: 0x1240
 // Size: 0xb2
@@ -139,7 +139,7 @@ function function_d6856592(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 1, eflags: 0x1 linked
 // Checksum 0xcbd9c71c, Offset: 0x1300
 // Size: 0x19e
@@ -169,7 +169,7 @@ function function_2ce58010(var_6575414d) {
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 7, eflags: 0x1 linked
 // Checksum 0x28a7f27b, Offset: 0x14a8
 // Size: 0x8c
@@ -182,7 +182,7 @@ function function_cb9fb04a(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe5929d24, Offset: 0x1540
 // Size: 0x74
@@ -194,7 +194,7 @@ function function_bb6d58d0(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 3, eflags: 0x1 linked
 // Checksum 0xf12eed22, Offset: 0x15c0
 // Size: 0x33c
@@ -225,7 +225,7 @@ function function_bd038ea4(var_6575414d, var_2c17cb9d, var_116b515b) {
                 }
                 self mapshaderconstant(var_6575414d, 0, var_4361a688, 0, i, 0, 0);
                 self.var_6f4c2683[var_2c17cb9d] = i;
-                wait(0.01);
+                wait 0.01;
             }
             for (i = self.var_6f4c2683[var_2c17cb9d]; i > 0.1; i -= 0.05) {
                 if (!isdefined(self)) {
@@ -233,7 +233,7 @@ function function_bd038ea4(var_6575414d, var_2c17cb9d, var_116b515b) {
                 }
                 self mapshaderconstant(var_6575414d, 0, var_4361a688, 0, i, 0, 0);
                 self.var_6f4c2683[var_2c17cb9d] = i;
-                wait(0.01);
+                wait 0.01;
             }
         }
         return;
@@ -244,7 +244,7 @@ function function_bd038ea4(var_6575414d, var_2c17cb9d, var_116b515b) {
         }
         self mapshaderconstant(var_6575414d, 0, var_4361a688, 0, i, 0, 0);
         self.var_6f4c2683[var_2c17cb9d] = i;
-        wait(0.01);
+        wait 0.01;
     }
     for (i = 1; i > 0.1; i -= 0.01) {
         if (!isdefined(self)) {
@@ -252,12 +252,12 @@ function function_bd038ea4(var_6575414d, var_2c17cb9d, var_116b515b) {
         }
         self mapshaderconstant(var_6575414d, 0, var_4361a688, 0, i, 1, 0);
         self.var_6f4c2683[var_2c17cb9d] = i;
-        wait(0.01);
+        wait 0.01;
     }
     self mapshaderconstant(var_6575414d, 0, var_4361a688, 0, 0.1, 1, 0);
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 7, eflags: 0x1 linked
 // Checksum 0x9673c58b, Offset: 0x1908
 // Size: 0x3ee
@@ -310,7 +310,7 @@ function function_47d133a9(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed13
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3af728c8, Offset: 0x1d00
 // Size: 0x124
@@ -329,7 +329,7 @@ function function_2d57594b(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread postfx::exitpostfxbundle();
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc3ec6ed0, Offset: 0x1e30
 // Size: 0xec
@@ -342,7 +342,7 @@ function function_b4311e07(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 7, eflags: 0x1 linked
 // Checksum 0x898dd5e1, Offset: 0x1f28
 // Size: 0x74
@@ -353,7 +353,7 @@ function function_50d62870(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa9d71553, Offset: 0x1fa8
 // Size: 0xc4
@@ -361,12 +361,12 @@ function function_fa043827(localclientnum) {
     var_c2e32e84 = getent(localclientnum, "dh_fountain_banner_01", "targetname");
     level scene::stop("p7_fxanim_zm_stal_dragon_hazard_fountain_banner_01_idle_bundle");
     level thread scene::play("p7_fxanim_zm_stal_dragon_hazard_fountain_banner_01_gusty_bundle", var_c2e32e84);
-    wait(13.63);
+    wait 13.63;
     level scene::stop("p7_fxanim_zm_stal_dragon_hazard_fountain_banner_01_gusty_bundle");
     level scene::init("p7_fxanim_zm_stal_dragon_hazard_fountain_banner_01_idle_bundle", var_c2e32e84);
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 1, eflags: 0x1 linked
 // Checksum 0xab5da6f2, Offset: 0x2078
 // Size: 0xc4
@@ -374,12 +374,12 @@ function function_87fcc8ec(localclientnum) {
     var_34ea9dbf = getent(localclientnum, "dh_fountain_banner_02", "targetname");
     level scene::stop("p7_fxanim_zm_stal_dragon_hazard_fountain_banner_02_idle_bundle");
     level thread scene::play("p7_fxanim_zm_stal_dragon_hazard_fountain_banner_02_gusty_bundle", var_34ea9dbf);
-    wait(13.63);
+    wait 13.63;
     level scene::stop("p7_fxanim_zm_stal_dragon_hazard_fountain_banner_02_gusty_bundle");
     level scene::init("p7_fxanim_zm_stal_dragon_hazard_fountain_banner_02_idle_bundle", var_34ea9dbf);
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa9a3ea0c, Offset: 0x2148
 // Size: 0x15a
@@ -396,20 +396,20 @@ function function_6865d0d5(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd4a3669f, Offset: 0x22b0
 // Size: 0x3c
 function function_ae0e995e(a_ents) {
-    wait(8);
+    wait 8;
     a_ents["library_banner_01"] scene::init("p7_fxanim_zm_stal_dragon_hazard_library_banner_01_bundle", a_ents);
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2176542b, Offset: 0x22f8
 // Size: 0xc4
-function function_9a134512(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function dragon_transportation_exploders(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         playradiantexploder(localclientnum, "dragon_transportation");
         stopradiantexploder(localclientnum, "dragon_flight");
@@ -419,7 +419,7 @@ function function_9a134512(localclientnum, oldval, newval, bnewent, binitialsnap
     playradiantexploder(localclientnum, "dragon_flight");
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 7, eflags: 0x1 linked
 // Checksum 0xef11d185, Offset: 0x23c8
 // Size: 0x154
@@ -440,11 +440,11 @@ function function_9f54e892(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 7, eflags: 0x1 linked
 // Checksum 0x27effd77, Offset: 0x2528
 // Size: 0x10e
-function function_30d64518(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function dragon_boss_guts(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     switch (newval) {
     case 1:
         forcestreamxmodel("p7_fxanim_zm_stal_dragon_chunks_mod");

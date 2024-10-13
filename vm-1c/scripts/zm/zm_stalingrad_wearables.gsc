@@ -21,29 +21,29 @@
 
 #using_animtree("generic");
 
-#namespace namespace_23c72813;
+#namespace zm_stalingrad_wearables;
 
 /#
 
-    // Namespace namespace_23c72813
+    // Namespace zm_stalingrad_wearables
     // Params 0, eflags: 0x1 linked
     // Checksum 0xfe5fb99d, Offset: 0xa80
     // Size: 0x54
     function function_ea91e52b() {
-        adddebugcommand("ZM_STALINGRAD_WEARABLE_WINGS_EQUIP");
-        adddebugcommand("ZM_STALINGRAD_WEARABLE_WINGS_EQUIP");
-        adddebugcommand("ZM_STALINGRAD_WEARABLE_WINGS_EQUIP");
+        adddebugcommand("<dev string:x28>");
+        adddebugcommand("<dev string:x79>");
+        adddebugcommand("<dev string:xd4>");
     }
 
 #/
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdc6a3072, Offset: 0xae0
 // Size: 0x4bc
 function function_eed58360() {
     /#
-        if (getdvarint("ZM_STALINGRAD_WEARABLE_WINGS_EQUIP") > 0) {
+        if (getdvarint("<dev string:x12f>") > 0) {
             level thread function_ea91e52b();
         }
     #/
@@ -90,7 +90,7 @@ function function_eed58360() {
     level thread function_14b98ab6();
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf5de549f, Offset: 0xfa8
 // Size: 0x96
@@ -101,7 +101,7 @@ function function_ad78a144() {
     }
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0x299ca586, Offset: 0x1048
 // Size: 0x8c
@@ -114,7 +114,7 @@ function function_2436f867() {
     level clientfield::set("player" + self.entity_num + "wearableItem", 0);
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 1, eflags: 0x1 linked
 // Checksum 0x1ccc2213, Offset: 0x10e0
 // Size: 0x3c
@@ -122,7 +122,7 @@ function function_793f10ed(var_908867a0) {
     level clientfield::set("player" + self.entity_num + "wearableItem", var_908867a0);
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf0c1bf20, Offset: 0x1128
 // Size: 0xec
@@ -138,7 +138,7 @@ function function_8cde51de() {
     }
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0x316d6e06, Offset: 0x1220
 // Size: 0x16a
@@ -150,13 +150,13 @@ function function_1fc9779e() {
     while (true) {
         self waittill(#"hash_2e47bc4a");
         switch (level.var_9d19c7e) {
-        case 27:
+        case "judicial":
             level.var_f090ed38.var_f957bac3 = 1;
             break;
-        case 28:
+        case "library":
             level.var_f090ed38.var_c18c0bbb = 1;
             break;
-        case 26:
+        case "factory":
             level.var_f090ed38.var_a7e89eae = 1;
             break;
         }
@@ -171,7 +171,7 @@ function function_1fc9779e() {
     }
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe74d4058, Offset: 0x1398
 // Size: 0x14c
@@ -188,7 +188,7 @@ function function_1a6de86e() {
     level function_484ecd5();
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 1, eflags: 0x1 linked
 // Checksum 0x98cd440b, Offset: 0x14f0
 // Size: 0xce
@@ -204,7 +204,7 @@ function function_2c1e6f00(e_player) {
     return false;
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0x859dfed6, Offset: 0x15c8
 // Size: 0x1a8
@@ -231,7 +231,7 @@ function function_18dda0a0() {
     }
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe5ac651, Offset: 0x1778
 // Size: 0x1ba
@@ -253,7 +253,7 @@ function function_484ecd5() {
     }
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd59d7be6, Offset: 0x1940
 // Size: 0xc8
@@ -269,7 +269,7 @@ function function_7e873fe6() {
     }
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8efee36, Offset: 0x1a10
 // Size: 0x66
@@ -282,26 +282,26 @@ function function_9a167439(e_player) {
     return false;
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0x685d9e82, Offset: 0x1a80
 // Size: 0x130
 function function_cc32e7df() {
     self zm_utility::function_139befeb();
     self.var_fa6d2a24 = 1;
-    var_b80ee5b5 = struct::get_array("s_pavlov_player", "targetname");
+    s_pavlov_player = struct::get_array("s_pavlov_player", "targetname");
     var_8c78610d = self getentitynumber();
     self dontinterpolate();
-    self setorigin(var_b80ee5b5[var_8c78610d].origin);
-    self setplayerangles(var_b80ee5b5[var_8c78610d].angles + (0, 180, 0));
+    self setorigin(s_pavlov_player[var_8c78610d].origin);
+    self setplayerangles(s_pavlov_player[var_8c78610d].angles + (0, 180, 0));
     self notify(#"hash_2e47bc4a");
     level notify(#"hash_9a634383");
-    wait(3);
+    wait 3;
     self zm_utility::function_36f941b3();
     self.var_fa6d2a24 = 0;
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0x664f3f91, Offset: 0x1bb8
 // Size: 0x44
@@ -311,12 +311,12 @@ function function_588ad36a() {
     }
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf3a0af1a, Offset: 0x1c08
 // Size: 0xb8
 function function_42a9380e() {
-    level endon(#"hash_41f7942d");
+    level endon(#"wearables_raz_arms_complete");
     while (true) {
         level waittill(#"hash_826c20b");
         level.var_f090ed38.var_6755afc7++;
@@ -329,12 +329,12 @@ function function_42a9380e() {
     }
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0x79843760, Offset: 0x1cc8
 // Size: 0xb8
 function function_ac75c48f() {
-    level endon(#"hash_5b09a57a");
+    level endon(#"wearables_raz_mask_complete");
     while (true) {
         level waittill(#"hash_4de460e7");
         level.var_f090ed38.var_8fefef40++;
@@ -347,7 +347,7 @@ function function_ac75c48f() {
     }
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd4f19b2d, Offset: 0x1d88
 // Size: 0x134
@@ -363,7 +363,7 @@ function function_69f1fce3() {
     var_94cd901e.model setmodel("c_zom_dlc3_player_raz_facemask");
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9565e6cd, Offset: 0x1ec8
 // Size: 0xce
@@ -379,7 +379,7 @@ function function_449ba539(e_player) {
     return false;
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa3300b6e, Offset: 0x1fa0
 // Size: 0x190
@@ -406,7 +406,7 @@ function function_ad641a9f() {
     }
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4472df9, Offset: 0x2138
 // Size: 0xb8
@@ -424,12 +424,12 @@ function function_fe559f6c() {
     }
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9740cb5a, Offset: 0x21f8
 // Size: 0xb8
 function function_ba204ad8() {
-    level endon(#"hash_f0aef65a");
+    level endon(#"wearables_sentinel_camera_complete");
     while (true) {
         level waittill(#"hash_73c2bce5");
         level.var_f090ed38.var_24859f92++;
@@ -442,7 +442,7 @@ function function_ba204ad8() {
     }
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9d7ce7c, Offset: 0x22b8
 // Size: 0x134
@@ -458,7 +458,7 @@ function function_14b98ab6() {
     var_494ee1d1.model setmodel("c_zom_dlc3_player_sentinel_drone_hat");
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 1, eflags: 0x1 linked
 // Checksum 0x99861f05, Offset: 0x23f8
 // Size: 0xce
@@ -474,7 +474,7 @@ function function_a6595bd6(e_player) {
     return false;
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0x86a40f63, Offset: 0x24d0
 // Size: 0x198
@@ -501,7 +501,7 @@ function function_f3b06f8e() {
     }
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8b4b2c81, Offset: 0x2670
 // Size: 0x3c
@@ -509,7 +509,7 @@ function function_caffcf07() {
     self detach(self.var_bc5f242a.model, self.var_bc5f242a.tag);
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe8312dd2, Offset: 0x26b8
 // Size: 0x3c
@@ -517,34 +517,34 @@ function function_20f2df00() {
     self attach(self.var_bc5f242a.model, self.var_bc5f242a.tag);
 }
 
-// Namespace namespace_23c72813
+// Namespace zm_stalingrad_wearables
 // Params 10, eflags: 0x1 linked
 // Checksum 0xdc35553c, Offset: 0x2700
 // Size: 0x1da
 function function_9c197fbf(e_inflictor, e_attacker, var_b2d13ae2, idflags, str_meansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime) {
     if (isdefined(self.var_e7d196cc)) {
         switch (self.var_e7d196cc) {
-        case 51:
+        case "sentinel_hat":
             if (isdefined(e_attacker) && e_attacker.archetype === "sentinel_drone") {
                 var_b2d13ae2 *= 0.5;
                 return int(var_b2d13ae2);
             }
-        case 45:
+        case "raz_hat":
             if (isdefined(e_attacker) && e_attacker.archetype === "raz") {
                 var_b2d13ae2 *= 0.5;
                 return int(var_b2d13ae2);
             }
-        case 32:
+        case "dragon_wings":
             if (isdefined(str_meansofdeath)) {
                 switch (str_meansofdeath) {
-                case 56:
+                case "MOD_FIRE":
                     var_b2d13ae2 *= 0.5;
                     return int(var_b2d13ae2);
-                case 55:
-                case 57:
-                case 58:
-                case 59:
-                case 60:
+                case "MOD_EXPLOSIVE":
+                case "MOD_GRENADE":
+                case "MOD_GRENADE_SPLASH":
+                case "MOD_PROJECTILE":
+                case "MOD_PROJECTILE_SPLASH":
                     var_b2d13ae2 *= 0.5;
                     return int(var_b2d13ae2);
                 }
@@ -657,7 +657,7 @@ function function_5e8bb6cc() {
 // Checksum 0x7f1dd508, Offset: 0x3050
 // Size: 0x2d6
 function function_70aa26aa() {
-    level endon(#"hash_8f8b39a8");
+    level endon(#"drshup_rune_step_done");
     self endon(#"disconnect");
     while (true) {
         self waittill(#"hash_10fa975d");
@@ -733,7 +733,7 @@ function function_771fddfa() {
     var_8df43d42 movez(-150, 2);
     var_8df43d42 waittill(#"movedone");
     var_8df43d42 setmodel("wpn_t7_zmb_dlc3_dragon_shield_dmg0_upg_world");
-    wait(2);
+    wait 2;
     var_8df43d42 movez(-106, 4);
     var_8df43d42 waittill(#"movedone");
     var_8df43d42 delete();

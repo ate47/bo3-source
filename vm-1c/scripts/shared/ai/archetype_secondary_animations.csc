@@ -89,7 +89,7 @@ function buildandvalidatefacialanimationlist(localclientnum) {
         array::add(deathanims, animation);
     }
     foreach (deathanim in deathanims) {
-        assert(!isanimlooping(localclientnum, deathanim), "ai_face_male_aim_idle_3" + deathanim + "ai_face_male_aim_idle_3");
+        assert(!isanimlooping(localclientnum, deathanim), "<dev string:x28>" + deathanim + "<dev string:x4e>");
     }
 }
 
@@ -124,7 +124,7 @@ function private getfacialanimoverride(localclientnum) {
 // Checksum 0x7caae203, Offset: 0xcf8
 // Size: 0x5fc
 function private secondaryfacialanimationthink(localclientnum) {
-    assert(self.archetype == "ai_face_male_aim_idle_3" || isdefined(self.archetype) && self.archetype == "ai_face_male_aim_idle_3");
+    assert(self.archetype == "<dev string:x89>" || isdefined(self.archetype) && self.archetype == "<dev string:x8f>");
     self endon(#"entityshutdown");
     self endon(#"stopfacialthread");
     self._currentfacestate = "inactive";
@@ -132,16 +132,16 @@ function private secondaryfacialanimationthink(localclientnum) {
         if (self.archetype == "human" && self clientfield::get("facial_dial")) {
             self._currentfacestate = "inactive";
             self clearcurrentfacialanim(localclientnum);
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         animoverride = self getfacialanimoverride(localclientnum);
         asmstatus = self asmgetstatus(localclientnum);
         forcenewanim = 0;
         switch (asmstatus) {
-        case 32:
+        case "asm_status_terminated":
             return;
-        case 31:
+        case "asm_status_inactive":
             if (isdefined(animoverride)) {
                 scriptedanim = self getprimarydeltaanim();
                 if (!isdefined(self._scriptedanim) || isdefined(scriptedanim) && self._scriptedanim != scriptedanim) {
@@ -156,18 +156,18 @@ function private secondaryfacialanimationthink(localclientnum) {
                     self._currentfacestate = "inactive";
                     self clearcurrentfacialanim(localclientnum);
                 }
-                wait(0.5);
+                wait 0.5;
                 continue;
             }
             break;
         }
         closestplayer = arraygetclosest(self.origin, level.localplayers, getdvarint("ai_clientFacialCullDist", 2000));
         if (!isdefined(closestplayer)) {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         if (!self hasdobj(localclientnum) || !self hasanimtree()) {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         currfacestate = self._currentfacestate;
@@ -198,7 +198,7 @@ function private secondaryfacialanimationthink(localclientnum) {
             animtoplay = array::random(level.__facialanimationslist[self.archetype][nextfacestate]);
             if (isdefined(animoverride)) {
                 animtoplay = animoverride;
-                assert(nextfacestate != "ai_face_male_aim_idle_3" || !isanimlooping(localclientnum, animtoplay), "ai_face_male_aim_idle_3" + animtoplay + "ai_face_male_aim_idle_3");
+                assert(nextfacestate != "<dev string:x96>" || !isanimlooping(localclientnum, animtoplay), "<dev string:x28>" + animtoplay + "<dev string:x4e>");
             }
             applynewfaceanim(localclientnum, animtoplay, clearoncompletion);
             self._currentfacestate = nextfacestate;
@@ -206,7 +206,7 @@ function private secondaryfacialanimationthink(localclientnum) {
         if (self._currentfacestate == "death") {
             break;
         }
-        wait(0.25);
+        wait 0.25;
     }
 }
 
@@ -224,7 +224,7 @@ function private applynewfaceanim(localclientnum, animation, clearoncompletion) 
         if (self hasdobj(localclientnum) && self hasanimtree()) {
             self setflaggedanimknob("ai_secondary_facial_anim", animation, 1, 0.1, 1);
             if (clearoncompletion) {
-                wait(getanimlength(animation));
+                wait getanimlength(animation);
                 clearcurrentfacialanim(localclientnum);
             }
         }

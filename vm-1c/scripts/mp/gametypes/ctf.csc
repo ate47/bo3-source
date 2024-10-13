@@ -23,7 +23,7 @@ function on_localclient_connect(localclientnum) {
     while (!isdefined(var_1d2359d9["allies_base"])) {
         var_1d2359d9["allies_base"] = serverobjective_getobjective(localclientnum, "allies_base");
         var_1d2359d9["axis_base"] = serverobjective_getobjective(localclientnum, "axis_base");
-        wait(0.05);
+        wait 0.05;
     }
     foreach (key, objective in var_1d2359d9) {
         level.var_1267dd47[key] = spawnstruct();

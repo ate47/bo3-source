@@ -21,7 +21,7 @@ function function_7add387d() {
         struct.script_float = 5;
         struct.script_int = -1000;
         level.var_515d4af7 = struct;
-        namespace_6d813654::function_66764564(level.var_515d4af7, &function_e9bec753);
+        zm_equip_hacker::function_66764564(level.var_515d4af7, &function_e9bec753);
         level.var_515d4af7 function_13393d82();
     }
 }
@@ -38,7 +38,7 @@ function function_13393d82() {
         level flag::wait_till("enter_nml");
         self.script_int = -1000;
         while (level flag::get("enter_nml")) {
-            wait(1);
+            wait 1;
         }
     }
 }
@@ -48,8 +48,8 @@ function function_13393d82() {
 // Checksum 0x73d40910, Offset: 0x368
 // Size: 0x46
 function function_e9bec753(hacker) {
-    namespace_6d813654::function_fcbe2f17(level.var_515d4af7);
+    zm_equip_hacker::function_fcbe2f17(level.var_515d4af7);
     level.var_515d4af7.script_int = 0;
-    level notify(#"hash_b3066308");
+    level notify(#"packapunch_hacked");
 }
 

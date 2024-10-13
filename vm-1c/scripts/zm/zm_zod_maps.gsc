@@ -5,9 +5,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_9d6f65aa;
+#namespace zm_zod_maps;
 
-// Namespace namespace_9d6f65aa
+// Namespace zm_zod_maps
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2ed6eb9e, Offset: 0x310
 // Size: 0x14
@@ -15,7 +15,7 @@ function init() {
     thread function_ca1a937();
 }
 
-// Namespace namespace_9d6f65aa
+// Namespace zm_zod_maps
 // Params 0, eflags: 0x1 linked
 // Checksum 0x12300971, Offset: 0x330
 // Size: 0x432
@@ -25,25 +25,25 @@ function function_ca1a937() {
     var_1fb56ce6 = getentarray("map_city", "targetname");
     foreach (var_4d3ce43f in var_1fb56ce6) {
         switch (var_4d3ce43f.script_string) {
-        case 8:
+        case "canal":
             var_4d3ce43f showpart("tag_ur_here_canal");
             var_4d3ce43f hidepart("tag_ur_here_foot");
             var_4d3ce43f hidepart("tag_ur_here_junction");
             var_4d3ce43f hidepart("tag_ur_here_water");
             break;
-        case 9:
+        case "footlight":
             var_4d3ce43f hidepart("tag_ur_here_canal");
             var_4d3ce43f showpart("tag_ur_here_foot");
             var_4d3ce43f hidepart("tag_ur_here_junction");
             var_4d3ce43f hidepart("tag_ur_here_water");
             break;
-        case 10:
+        case "junction":
             var_4d3ce43f hidepart("tag_ur_here_canal");
             var_4d3ce43f hidepart("tag_ur_here_foot");
             var_4d3ce43f showpart("tag_ur_here_junction");
             var_4d3ce43f hidepart("tag_ur_here_water");
             break;
-        case 11:
+        case "waterfront":
             var_4d3ce43f hidepart("tag_ur_here_canal");
             var_4d3ce43f hidepart("tag_ur_here_foot");
             var_4d3ce43f hidepart("tag_ur_here_junction");
@@ -62,7 +62,7 @@ function function_ca1a937() {
     }
 }
 
-// Namespace namespace_9d6f65aa
+// Namespace zm_zod_maps
 // Params 0, eflags: 0x1 linked
 // Checksum 0x71feb0c0, Offset: 0x770
 // Size: 0x320
@@ -95,7 +95,7 @@ function function_87325d74() {
         if (level flag::get("memento_detective_found") && level flag::get("memento_boxer_found") && level flag::get("memento_magician_found") && level flag::get("memento_femme_found") && level flag::get("ritual_detective_complete") && level flag::get("ritual_boxer_complete") && level flag::get("ritual_magician_complete") && level flag::get("ritual_femme_complete")) {
             break;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 

@@ -5,9 +5,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_fad8bcc0;
+#namespace _zm_ai_thrasher;
 
-// Namespace namespace_fad8bcc0
+// Namespace _zm_ai_thrasher
 // Params 0, eflags: 0x2
 // Checksum 0x26529667, Offset: 0x210
 // Size: 0x4c
@@ -105,7 +105,7 @@ function private function_98817801(localclientnum, thrasher, player) {
         player thread lui::screen_fade_in(2);
         player thread postfx::playpostfxbundle("pstfx_thrasher_stomach");
         animtime = getanimlength("p7_fxanim_zm_island_thrasher_stomach_open_anim");
-        wait(animtime);
+        wait animtime;
         function_51fb721f(localclientnum, thrasher, player);
     }
 }
@@ -149,7 +149,7 @@ function private function_4cf5760d(localclientnum, thrasher, player) {
         }
         thrasher.var_18fd72ff.origin = var_bef3bf12 + var_622b2c1a;
         var_2f57a8ba = var_622b2c1a;
-        wait(var_4c3deb86);
+        wait var_4c3deb86;
     }
 }
 
@@ -168,7 +168,7 @@ function private function_785afcbe(localclientnum, thrasher, player) {
     var_ccd653c = 0.01;
     maxyawdiff = 2;
     lasttime = player getclienttime() / 1000;
-    wait(var_4c3deb86);
+    wait var_4c3deb86;
     while (isdefined(thrasher.var_18fd72ff)) {
         currenttime = player getclienttime() / 1000;
         timedelta = currenttime - lasttime;
@@ -180,7 +180,7 @@ function private function_785afcbe(localclientnum, thrasher, player) {
         }
         thrasher.var_18fd72ff.angles = (0, var_50a8bb46, 0);
         lasttime = currenttime - timedelta;
-        wait(var_4c3deb86);
+        wait var_4c3deb86;
     }
 }
 

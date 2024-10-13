@@ -26,9 +26,9 @@
 #using scripts/cp/_dialog;
 #using scripts/codescripts/struct;
 
-#namespace namespace_3b39ab74;
+#namespace lotus_start_riot;
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0xfe5048f6, Offset: 0x1140
 // Size: 0xca
@@ -40,10 +40,10 @@ function init() {
     level flag::init("khalil_in_door_vignette");
     level flag::init("hakim_security_door_open");
     clientfield::register("world", "sndHakimPaVox", 1, 3, "int");
-    namespace_431cac9::function_77bfc3b2();
+    lotus_util::function_77bfc3b2();
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 2, eflags: 0x0
 // Checksum 0x16679df5, Offset: 0x1218
 // Size: 0x26a
@@ -56,7 +56,7 @@ function function_e86a5395(str_objective, var_74cd64bc) {
     level.var_9db406db = util::function_740f8516("khalil");
     battlechatter::function_d9f49fba(0);
     function_47dcfae8();
-    level thread namespace_431cac9::function_484bc3aa(1);
+    level thread lotus_util::function_484bc3aa(1);
     objectives::set("cp_level_lotus_hakim_assassinate");
     objectives::set("cp_level_lotus_hakim_locate");
     level clientfield::set("sndIGCsnapshot", 1);
@@ -74,7 +74,7 @@ function function_e86a5395(str_objective, var_74cd64bc) {
     level scene::init("cin_lot_02_01_startriots_vign_overwhelm_siege1st");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x21109b6a, Offset: 0x1490
 // Size: 0x7a
@@ -86,17 +86,17 @@ function function_1320bd25(a_ents) {
     level flag::set("intro_igc_done");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 4, eflags: 0x0
 // Checksum 0xe51988d1, Offset: 0x1518
 // Size: 0x8a
 function function_88b5ab32(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
-    level thread util::delay(1, undefined, &namespace_431cac9::function_6fc3995f);
+    level thread util::delay(1, undefined, &lotus_util::function_6fc3995f);
     getent("kill_after_mobileride", "targetname") triggerenable(0);
     level thread scene::play("p7_fxanim_cp_lotus_atrium_ravens_bundle");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0xfb3789dd, Offset: 0x15b0
 // Size: 0x12a
@@ -115,7 +115,7 @@ function function_35dc675a() {
     var_5cf8a2dd trigger::use(undefined, undefined, var_5cf8a2dd);
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 2, eflags: 0x0
 // Checksum 0x24d15e68, Offset: 0x16e8
 // Size: 0x392
@@ -138,14 +138,14 @@ function function_5fb7ec5(str_objective, var_74cd64bc) {
     }
     level scene::init("hakim_assassination_ravens", "targetname");
     function_c5116fb2();
-    level thread namespace_431cac9::function_a516f0de("raven_decal_start_riots01", 5, 2);
+    level thread lotus_util::function_a516f0de("raven_decal_start_riots01", 5, 2);
     level util::clientnotify("sndLRstart");
-    level namespace_431cac9::function_484bc3aa(1);
+    level lotus_util::function_484bc3aa(1);
     level thread function_54e4839a();
     level thread function_e2d5189a();
     trigger::wait_till("riots_wave_two");
     level thread function_cf0c15cc();
-    level thread namespace_431cac9::function_a516f0de("raven_decal_start_riots02");
+    level thread lotus_util::function_a516f0de("raven_decal_start_riots02");
     level scene::init("cin_lot_02_02_startriots_vign_overridelock");
     trigger::wait_till("riots_wave_three");
     level thread function_8ded8093();
@@ -167,7 +167,7 @@ function function_5fb7ec5(str_objective, var_74cd64bc) {
     skipto::function_be8adfb8("start_the_riots");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0xa930bc52, Offset: 0x1a88
 // Size: 0xc2
@@ -180,16 +180,16 @@ function function_8ded8093() {
     var_f835ddae delete();
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 4, eflags: 0x0
 // Checksum 0x5642f291, Offset: 0x1b58
 // Size: 0x52
-function function_a3cc6d62(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
+function start_the_riots_done(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     level flag::wait_till("all_players_spawned");
     exploder::exploder("fx_interior_ambient_falling_debris_tower1");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 2, eflags: 0x0
 // Checksum 0x59d276c1, Offset: 0x1bb8
 // Size: 0x322
@@ -211,17 +211,17 @@ function function_92206070(str_objective, var_74cd64bc) {
         level scene::add_scene_func("cin_lot_03_01_hakim_1st_kill_player", &function_9030e073);
         level scene::init("cin_lot_03_01_hakim_1st_kill_player");
         load::function_a2995f22();
-        level namespace_431cac9::function_484bc3aa(1);
+        level lotus_util::function_484bc3aa(1);
         trigger::use("override_lock_done");
         level flag::wait_till("hakim_assassination_start");
     }
     while (!isdefined(level.var_81ba7f9e)) {
-        wait(0.05);
+        wait 0.05;
     }
     if (isdefined(level.var_f43e3f7)) {
         level thread [[ level.var_f43e3f7 ]]();
     }
-    level thread namespace_431cac9::function_511cba45("atrium_to_security", 3, "cp_lotus_projection_ravengrafitti3");
+    level thread lotus_util::function_511cba45("atrium_to_security", 3, "cp_lotus_projection_ravengrafitti3");
     level scene::add_scene_func("cin_lot_03_01_hakim_1st_kill_player", &function_cb65e794, "play");
     level thread scene::play("cin_lot_03_01_hakim_1st_kill_player", level.var_81ba7f9e);
     level.var_81ba7f9e = undefined;
@@ -229,7 +229,7 @@ function function_92206070(str_objective, var_74cd64bc) {
     level scene::add_scene_func("cin_lot_03_01_hakim_vign_toss", &function_caba12d2);
     level thread scene::play("cin_lot_03_01_hakim_vign_toss");
     if (!scene::function_b1f75ee9()) {
-        wait(1);
+        wait 1;
     }
     if (!scene::function_b1f75ee9()) {
         level thread scene::play("cin_lot_04_01_security_vign_finishoff");
@@ -242,7 +242,7 @@ function function_92206070(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x93521ee9, Offset: 0x1ee8
 // Size: 0x92
@@ -250,13 +250,13 @@ function function_cb65e794(a_ents) {
     level thread function_11c401c8();
     level thread function_fd777f22();
     level thread function_9fe3e84();
-    namespace_8e4b89e2::function_de57d320();
+    lotus_security_station::function_de57d320();
     level thread scene::init("cin_lot_03_01_hakim_vign_toss");
     level thread scene::init("cin_lot_04_01_security_vign_finishoff");
     level thread scene::init("cin_lot_04_01_security_vign_weaponcivs");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0xc651cbc8, Offset: 0x1f88
 // Size: 0xa2
@@ -270,7 +270,7 @@ function function_fd777f22() {
     level thread scene::play("cin_lot_04_01_security_vign_weaponguards");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0xdea6ff47, Offset: 0x2038
 // Size: 0x12b
@@ -284,13 +284,13 @@ function function_9fe3e84() {
     level clientfield::set("swap_crowd_to_riot", 1);
     level util::function_93831e79("apartments");
     skipto::function_be8adfb8("general_hakim");
-    wait(1);
+    wait 1;
     foreach (player in level.players) {
         player disableinvulnerability();
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x9701f84c, Offset: 0x2170
 // Size: 0x103
@@ -307,7 +307,7 @@ function function_9030e073(a_ents) {
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 4, eflags: 0x0
 // Checksum 0xa06d0a2a, Offset: 0x2280
 // Size: 0x9a
@@ -315,12 +315,12 @@ function function_14166bcb(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     objectives::complete("cp_level_lotus_hakim_assassinate");
     function_69903fa7(0);
     battlechatter::function_d9f49fba(1);
-    level thread namespace_431cac9::function_fda257c3();
+    level thread lotus_util::function_fda257c3();
     level flag::wait_till("all_players_spawned");
     exploder::exploder("fx_interior_ambient_tracer_fire_atrium");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0x2945c005, Offset: 0x2328
 // Size: 0x262
@@ -328,7 +328,7 @@ function function_6bf216f3() {
     level scene::add_scene_func("cin_lot_02_01_startriots_vign_open_door", &function_cd0fea70, "init");
     level scene::add_scene_func("cin_lot_02_01_startriots_vign_open_door", &function_90a05c64);
     level scene::add_scene_func("cin_lot_04_05_security_vign_melee_variation2", &function_198186d, "init");
-    level scene::add_scene_func("cin_lot_04_05_security_vign_melee_variation2", &namespace_431cac9::function_f2596cbe, "init");
+    level scene::add_scene_func("cin_lot_04_05_security_vign_melee_variation2", &lotus_util::function_f2596cbe, "init");
     level scene::add_scene_func("cin_lot_02_01_startriots_vign_scuffle_loop", &function_c1943fd, "init");
     level scene::add_scene_func("cin_lot_02_01_startriots_vign_overwhelm_siege2nd", &function_adfe9569, "init");
     level scene::add_scene_func("cin_lot_02_01_startriots_vign_overwhelm", &function_9f2861ce);
@@ -341,7 +341,7 @@ function function_6bf216f3() {
     level scene::add_scene_func("cin_lot_02_01_startriots_vign_subdued", &function_c0caa0cf, "init");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0xc022336c, Offset: 0x2598
 // Size: 0x1aa
@@ -355,7 +355,7 @@ function function_54e4839a() {
         level thread scene::play("cin_lot_02_01_startriots_vign_overwhelm_siege1st");
     }
     level scene::remove_scene_func("cin_lot_04_05_security_vign_melee_variation2", &function_198186d);
-    level scene::remove_scene_func("cin_lot_04_05_security_vign_melee_variation2", &namespace_431cac9::function_f2596cbe);
+    level scene::remove_scene_func("cin_lot_04_05_security_vign_melee_variation2", &lotus_util::function_f2596cbe);
     level thread scene::play("cin_lot_02_01_startriots_vign_overwhelm_siege2nd");
     trigger::wait_till("riots_wave_three");
     level thread scene::play("cin_lot_02_01_startriots_vign_overwhelm_end");
@@ -366,7 +366,7 @@ function function_54e4839a() {
     level thread scene::play("cin_lot_02_01_startriots_vign_subdued");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x3969c628, Offset: 0x2750
 // Size: 0x1aa
@@ -384,19 +384,19 @@ function function_c1943fd(a_ents) {
             level.var_2fd26037 ai::set_ignoreall(0);
             break;
         }
-        wait(0.25);
+        wait 0.25;
     }
     if (isalive(var_14c918e8)) {
         level thread scene::play("cin_lot_02_01_startriots_vign_scuffle_cuvrun");
-        wait(1);
+        wait 1;
         if (isalive(var_14c918e8)) {
             var_14c918e8 setgoal(getnode("scuffle_retreat_goal", "targetname"), 1);
-            var_14c918e8 thread namespace_431cac9::function_c8849158(500, 15);
+            var_14c918e8 thread lotus_util::function_c8849158(500, 15);
         }
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x1f340819, Offset: 0x2908
 // Size: 0x19a
@@ -404,7 +404,7 @@ function function_50b42010(a_ents) {
     foreach (ent in a_ents) {
         ent ai::set_ignoreall(1);
         ent ai::set_ignoreme(1);
-        ent thread namespace_431cac9::function_5b57004a();
+        ent thread lotus_util::function_5b57004a();
     }
     level thread function_c06f06a5(a_ents, self);
     level waittill(#"hash_f68ac3a");
@@ -419,7 +419,7 @@ function function_50b42010(a_ents) {
     level thread scene::play("cin_lot_02_01_startriots_vign_takeout_playerkills");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 2, eflags: 0x0
 // Checksum 0x4d1f1568, Offset: 0x2ab0
 // Size: 0xd3
@@ -435,7 +435,7 @@ function function_c06f06a5(a_ents, s_scene) {
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x31533e21, Offset: 0x2b90
 // Size: 0xf2
@@ -454,34 +454,34 @@ function function_693d9b17(a_ents) {
     self thread scene::stop();
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0xf5f1e98a, Offset: 0x2c90
 // Size: 0x4a
 function function_9ff47248(a_ents) {
     a_ents["takeout_guard"] waittill(#"point_of_no_return");
     a_ents["takeout_guard"].var_f8da79d2 = 1;
-    a_ents["takeout_guard"] thread namespace_431cac9::function_3e9f1592();
+    a_ents["takeout_guard"] thread lotus_util::function_3e9f1592();
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x9793aef9, Offset: 0x2ce8
 // Size: 0xed
 function function_da13419c(a_ents) {
     var_ac318b32 = getnodearray("takeout_retreat_goals", "targetname");
     var_52177c84 = 0;
-    wait(1);
+    wait 1;
     foreach (ent in a_ents) {
         if (isalive(ent) && ent.team == "allies") {
-            ent thread namespace_431cac9::function_c8849158(500, 15);
+            ent thread lotus_util::function_c8849158(500, 15);
             ent setgoal(var_ac318b32[var_52177c84], 1);
             var_52177c84++;
         }
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0xcc36b267, Offset: 0x2de0
 // Size: 0x142
@@ -494,8 +494,8 @@ function function_b73b584a(a_ents) {
             ent ai::set_ignoreme(1);
             level util::magic_bullet_shield(ent);
             if (ent.team == "allies") {
-                ent thread namespace_431cac9::function_c8849158(500, 15);
-                ent thread namespace_431cac9::function_5b57004a();
+                ent thread lotus_util::function_c8849158(500, 15);
+                ent thread lotus_util::function_5b57004a();
                 ent setgoal(var_ac318b32[var_52177c84], 1);
                 var_52177c84++;
             }
@@ -504,7 +504,7 @@ function function_b73b584a(a_ents) {
     level thread function_f4561e7c(self, a_ents);
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 2, eflags: 0x0
 // Checksum 0xf68be834, Offset: 0x2f30
 // Size: 0x14b
@@ -527,7 +527,7 @@ function function_f4561e7c(s_scene, a_ents) {
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0x2b0287ff, Offset: 0x3088
 // Size: 0x91
@@ -544,7 +544,7 @@ function function_b7323de8() {
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0xc4c62679, Offset: 0x3128
 // Size: 0x33
@@ -555,7 +555,7 @@ function function_51922beb() {
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0xebc8662, Offset: 0x3168
 // Size: 0x14a
@@ -573,13 +573,13 @@ function function_adfe9569(a_ents) {
                 var_52177c84++;
                 continue;
             }
-            ent thread namespace_431cac9::function_5b57004a();
+            ent thread lotus_util::function_5b57004a();
         }
     }
     level thread function_17d17b52(a_ents, self);
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x49bb0a6c, Offset: 0x32c0
 // Size: 0xab
@@ -588,18 +588,18 @@ function function_ace07855(a_ents) {
         if (isai(ent)) {
             ent util::stop_magic_bullet_shield();
             if (ent.team == "allies") {
-                ent thread namespace_431cac9::function_c8849158(500, 5);
+                ent thread lotus_util::function_c8849158(500, 5);
             }
         }
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 2, eflags: 0x0
 // Checksum 0xbcac1145, Offset: 0x3378
 // Size: 0xea
 function function_17d17b52(a_ents, str_scene) {
-    level endon(#"hash_2ff600cd");
+    level endon(#"start_hakim_speech");
     var_85e30c70 = array(a_ents["second_riots_civ_1"], a_ents["second_riots_civ_2"], a_ents["second_riots_guard_1"]);
     array::wait_any(var_85e30c70, "death");
     if (isalive(a_ents["second_riots_guard_1"])) {
@@ -610,7 +610,7 @@ function function_17d17b52(a_ents, str_scene) {
     level scene::stop(str_scene.scriptbundlename);
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x709150a2, Offset: 0x3470
 // Size: 0x54a
@@ -630,7 +630,7 @@ function function_cd0fea70(a_ents) {
     level.var_9db406db ai::set_behavior_attribute("sprint", 1);
     level.var_9db406db ai::set_behavior_attribute("cqb", 0);
     if (isalive(a_ents["open_door_guard"])) {
-        a_ents["open_door_guard"] thread namespace_431cac9::function_5b57004a();
+        a_ents["open_door_guard"] thread lotus_util::function_5b57004a();
         a_ents["open_door_guard"] thread function_ef4d5e6c();
         util::stop_magic_bullet_shield(a_ents["open_door_guard"]);
     }
@@ -661,7 +661,7 @@ function function_cd0fea70(a_ents) {
             self thread scene::play();
             level.var_9db406db util::waittill_notify_or_timeout("khalil_melee_started", 5);
             if (isalive(a_ents["open_door_guard"])) {
-                a_ents["open_door_guard"] thread namespace_431cac9::function_3e9f1592();
+                a_ents["open_door_guard"] thread lotus_util::function_3e9f1592();
             } else {
                 level scene::stop("cin_lot_02_01_startriots_vign_open_door_khalil");
             }
@@ -671,23 +671,23 @@ function function_cd0fea70(a_ents) {
     var_a8015c01 = getnode("post_door_open_khalil", "targetname");
     level.var_9db406db setgoal(var_a8015c01, 1);
     level.var_9db406db waittill(#"goal");
-    wait(0.5);
+    wait 0.5;
     level.var_9db406db ai::set_ignoreme(0);
     level.var_9db406db ai::set_ignoreall(0);
     level.var_9db406db colors::enable();
     level flag::clear("khalil_in_door_vignette");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0xc8a87bc4, Offset: 0x39c8
 // Size: 0x1e
 function function_ef4d5e6c() {
     self waittill(#"death");
-    level.var_9db406db notify(#"hash_fd767fe1");
+    level.var_9db406db notify(#"door_guard_killed");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x398afe5a, Offset: 0x39f0
 // Size: 0x10d
@@ -699,7 +699,7 @@ function function_90a05c64(a_ents) {
             ent ai::set_ignoreall(1);
             ent ai::set_ignoreme(1);
             if (ent.team == "allies") {
-                ent thread namespace_431cac9::function_c8849158(500, 15);
+                ent thread lotus_util::function_c8849158(500, 15);
                 ent setgoal(var_ac318b32[var_52177c84], 1);
                 var_52177c84++;
             }
@@ -707,31 +707,31 @@ function function_90a05c64(a_ents) {
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0xb155f2a5, Offset: 0x3b08
 // Size: 0x152
 function function_198186d(a_ents) {
-    level endon(#"hash_2ff600cd");
+    level endon(#"start_hakim_speech");
     var_ac318b32 = getnodearray("hallway_1_retreat_goals", "targetname");
     var_52177c84 = 0;
     foreach (ent in a_ents) {
         if (isai(ent)) {
             ent ai::set_ignoreall(1);
             ent ai::set_ignoreme(1);
-            ent thread namespace_431cac9::function_5b57004a();
+            ent thread lotus_util::function_5b57004a();
             if (ent.team == "allies") {
-                ent thread namespace_431cac9::function_c8849158(500, 15);
+                ent thread lotus_util::function_c8849158(500, 15);
                 ent setgoal(var_ac318b32[var_52177c84], 1);
                 var_52177c84++;
             }
         }
     }
     a_ents["vign_melee_nrc_1"] waittill(#"point_of_no_return");
-    a_ents["vign_melee_nrc_1"] thread namespace_431cac9::function_3e9f1592();
+    a_ents["vign_melee_nrc_1"] thread lotus_util::function_3e9f1592();
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x33323f94, Offset: 0x3c68
 // Size: 0xb3
@@ -740,23 +740,23 @@ function function_2e3bc362(a_ents) {
         if (isai(ent)) {
             ent ai::set_ignoreall(1);
             ent ai::set_ignoreme(1);
-            ent thread namespace_431cac9::function_c8849158(500, 15);
-            ent thread namespace_431cac9::function_5b57004a();
+            ent thread lotus_util::function_c8849158(500, 15);
+            ent thread lotus_util::function_5b57004a();
         }
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x70e16b2d, Offset: 0x3d28
 // Size: 0x4a
 function function_9f2861ce(a_ents) {
-    level endon(#"hash_2ff600cd");
+    level endon(#"start_hakim_speech");
     array::wait_any(a_ents, "death");
     trigger::use("riots_wave_three", "targetname");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0xbff2b6a1, Offset: 0x3d80
 // Size: 0x112
@@ -765,18 +765,18 @@ function function_e85196be(a_ents) {
         if (isai(ent)) {
             ent ai::set_ignoreall(1);
             ent ai::set_ignoreme(1);
-            ent thread namespace_431cac9::function_c8849158(500, 15);
-            ent thread namespace_431cac9::function_5b57004a();
+            ent thread lotus_util::function_c8849158(500, 15);
+            ent thread lotus_util::function_5b57004a();
         }
     }
     if (isalive(a_ents["overwhelm_alt_guard"])) {
-        a_ents["overwhelm_alt_guard"] thread namespace_431cac9::function_3e9f1592();
+        a_ents["overwhelm_alt_guard"] thread lotus_util::function_3e9f1592();
     }
     level thread function_2e629842(a_ents, a_ents["overwhelm_alt_shield"], self);
     level thread function_306be92b(a_ents, self);
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 3, eflags: 0x0
 // Checksum 0xed867708, Offset: 0x3ea0
 // Size: 0x92
@@ -788,7 +788,7 @@ function function_2e629842(a_ents, var_2d756179, s_scene) {
     var_2d756179 physicslaunch(var_2d756179.origin, (0, 0, -0.1));
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 2, eflags: 0x0
 // Checksum 0xe29270f6, Offset: 0x3f40
 // Size: 0x12d
@@ -796,31 +796,31 @@ function function_306be92b(a_ents, s_scene) {
     var_ac318b32 = getnodearray("overwhelm_alt_retreat_goals", "targetname");
     var_52177c84 = 0;
     do {
-        wait(0.2);
+        wait 0.2;
     } while (level scene::is_active(s_scene.scriptbundlename));
-    wait(0.05);
+    wait 0.05;
     foreach (ent in a_ents) {
         if (isalive(ent) && ent.team === "allies") {
             ent ai::set_ignoreme(0);
-            ent thread namespace_431cac9::function_c8849158(500, 15);
+            ent thread lotus_util::function_c8849158(500, 15);
             ent setgoal(var_ac318b32[var_52177c84], 1);
             var_52177c84++;
         }
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x1c620d3f, Offset: 0x4078
 // Size: 0x52
 function function_a5b8cd1e(a_ents) {
     level thread function_d6a7c0f4(a_ents, self);
     if (isalive(a_ents["overwhelm_alt2_guard"])) {
-        a_ents["overwhelm_alt2_guard"] thread namespace_431cac9::function_3e9f1592();
+        a_ents["overwhelm_alt2_guard"] thread lotus_util::function_3e9f1592();
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 2, eflags: 0x0
 // Checksum 0xff6a3f40, Offset: 0x40d8
 // Size: 0x135
@@ -829,18 +829,18 @@ function function_d6a7c0f4(a_ents, s_scene) {
     level scene::stop(s_scene.scriptbundlename);
     var_ac318b32 = getnodearray("overwhelm_alt2_retreat_goals", "targetname");
     var_52177c84 = 0;
-    wait(0.05);
+    wait 0.05;
     foreach (ent in a_ents) {
         if (isalive(ent) && ent.team === "allies") {
             ent ai::set_ignoreme(0);
-            ent thread namespace_431cac9::function_c8849158(500, 15);
+            ent thread lotus_util::function_c8849158(500, 15);
             ent setgoal(var_ac318b32[var_52177c84], 1);
             var_52177c84++;
         }
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0xe03379f3, Offset: 0x4218
 // Size: 0x1d2
@@ -849,12 +849,12 @@ function function_c0caa0cf(a_ents) {
         if (isai(ent)) {
             ent ai::set_ignoreall(1);
             ent ai::set_ignoreme(1);
-            ent thread namespace_431cac9::function_c8849158(500, 15);
+            ent thread lotus_util::function_c8849158(500, 15);
         }
     }
     trigger::wait_till("riots_wave_four");
     a_ents["subdued_guard"] util::waittill_any_timeout(6, "damage");
-    wait(0.05);
+    wait 0.05;
     foreach (ent in a_ents) {
         if (isalive(ent)) {
             if (ent.team == "axis") {
@@ -869,25 +869,25 @@ function function_c0caa0cf(a_ents) {
     level thread scene::play("cin_lot_02_01_startriots_vign_subdued_kill");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x55cfaf71, Offset: 0x43f8
 // Size: 0xed
 function function_80bcd913(a_ents) {
     var_ac318b32 = getnodearray("subdued_retreat_goals", "targetname");
     var_52177c84 = 0;
-    wait(1.5);
+    wait 1.5;
     foreach (ent in a_ents) {
         if (isalive(ent)) {
             ent ai::set_ignoreme(0);
-            ent thread namespace_431cac9::function_c8849158(500, 15);
+            ent thread lotus_util::function_c8849158(500, 15);
             ent setgoal(var_ac318b32[var_52177c84], 1);
             var_52177c84++;
         }
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0xa5b5af6d, Offset: 0x44f0
 // Size: 0x18a
@@ -899,9 +899,9 @@ function function_caba12d2(a_ents) {
         if (isai(ent)) {
             ent ai::set_ignoreall(1);
             ent ai::set_ignoreme(1);
-            ent thread namespace_431cac9::function_5b57004a();
+            ent thread lotus_util::function_5b57004a();
             if (ent.team == "allies") {
-                ent thread namespace_431cac9::function_c8849158(500, 15);
+                ent thread lotus_util::function_c8849158(500, 15);
                 ent setgoal(var_ac318b32[var_52177c84], 1);
                 var_52177c84++;
             }
@@ -911,12 +911,12 @@ function function_caba12d2(a_ents) {
     if (isdefined(a_ents["assassination_nrc"])) {
         a_ents["assassination_nrc"] waittill(#"point_of_no_return");
         if (isdefined(a_ents["assassination_nrc"])) {
-            a_ents["assassination_nrc"] thread namespace_431cac9::function_3e9f1592();
+            a_ents["assassination_nrc"] thread lotus_util::function_3e9f1592();
         }
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 2, eflags: 0x0
 // Checksum 0x6c49e92e, Offset: 0x4688
 // Size: 0x92
@@ -930,7 +930,7 @@ function function_461f82a0(a_ents, s_scene) {
     s_scene scene::stop();
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0x254234aa, Offset: 0x4728
 // Size: 0x2a
@@ -939,7 +939,7 @@ function function_cf0c15cc() {
     level thread function_8a2e81c3();
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0x5bc14f5a, Offset: 0x4760
 // Size: 0x9a
@@ -951,7 +951,7 @@ function function_e2d5189a() {
     level.var_9db406db dialog::say("khal_cairo_waits_to_attac_0", 3);
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0x72ab615c, Offset: 0x4808
 // Size: 0xaa
@@ -960,16 +960,16 @@ function function_f7410faa() {
     if (level.var_31aefea8 === "start_the_riots") {
         level flag::wait_till("start_hakim_speech");
         function_4410b0a7("haki_citizens_of_cairo_w_0", 1);
-        wait(0.5);
+        wait 0.5;
         function_4410b0a7("haki_the_nile_river_coali_0", 2);
-        wait(1);
+        wait 1;
     }
     function_4410b0a7("haki_ramses_was_meant_to_0", 3);
-    wait(0.7);
+    wait 0.7;
     function_4410b0a7("haki_anyone_seen_assistin_0", 4);
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0xf423de1c, Offset: 0x48c0
 // Size: 0x92
@@ -985,7 +985,7 @@ function function_11c401c8() {
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0x5641450, Offset: 0x4960
 // Size: 0x52
@@ -994,7 +994,7 @@ function function_c5116fb2() {
     level scene::init("hakim_speech", "targetname");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0xd5c04eb8, Offset: 0x49c0
 // Size: 0x3a
@@ -1005,7 +1005,7 @@ function function_8a3bdac(a_ents) {
     level thread function_f7410faa();
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 2, eflags: 0x0
 // Checksum 0xa282216f, Offset: 0x4a08
 // Size: 0x42
@@ -1014,7 +1014,7 @@ function function_4410b0a7(scriptid, var_56d74922) {
     level.var_6bd6767c dialog::say(scriptid);
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x6c0ac25, Offset: 0x4a58
 // Size: 0x4a
@@ -1027,7 +1027,7 @@ function function_69903fa7(b_ignore) {
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0x3faedda1, Offset: 0x4ab0
 // Size: 0xe2
@@ -1045,7 +1045,7 @@ function function_47dcfae8() {
     }
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0x4b1936f6, Offset: 0x4ba0
 // Size: 0x112
@@ -1061,10 +1061,10 @@ function function_786aab8d() {
     if (isdefined(level.var_da26fef8)) {
         level thread [[ level.var_da26fef8 ]]();
     }
-    level thread namespace_431cac9::function_e577c596("hakim_assassination_ravens", var_3f3fb113, "hakim_door", "cp_lotus_projection_ravengrafitti2");
+    level thread lotus_util::function_e577c596("hakim_assassination_ravens", var_3f3fb113, "hakim_door", "cp_lotus_projection_ravengrafitti2");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0x2d2362c1, Offset: 0x4cc0
 // Size: 0x32
@@ -1075,7 +1075,7 @@ function function_2f52df3() {
     self kill();
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0xa2a7093a, Offset: 0x4d00
 // Size: 0x23
@@ -1084,7 +1084,7 @@ function function_92c0ed5c() {
     level notify(#"hash_72d53556");
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 0, eflags: 0x0
 // Checksum 0xdd8d6518, Offset: 0x4d30
 // Size: 0x94
@@ -1095,7 +1095,7 @@ function function_8a2e81c3() {
     e_gameobject = util::function_14518e76(t_door, %cp_level_lotus_hakim_door, %CP_MI_CAIRO_LOTUS_OPEN, &function_c8f71637);
 }
 
-// Namespace namespace_3b39ab74
+// Namespace lotus_start_riot
 // Params 1, eflags: 0x0
 // Checksum 0x306d9530, Offset: 0x4dd0
 // Size: 0x82

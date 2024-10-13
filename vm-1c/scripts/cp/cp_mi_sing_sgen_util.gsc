@@ -23,7 +23,7 @@
 // Size: 0xb4
 function function_588a8011() {
     self endon(#"death");
-    assert(isdefined(self.target), "rogue_control_speed" + self.origin + "rogue_control_speed");
+    assert(isdefined(self.target), "<dev string:x28>" + self.origin + "<dev string:x3d>");
     var_598dabc3 = getentarray(self.target, "targetname");
     self waittill(#"trigger");
     self util::script_wait();
@@ -44,14 +44,14 @@ function function_2c2e94d1() {
         self.script_string = "move";
     }
     switch (self.script_string) {
-    case 2:
+    case "rotate":
         if (isdefined(self.script_angles)) {
             self rotateto(self.script_angles, time, 0, 0);
         } else if (isdefined(self.script_int)) {
             self rotateyaw(self.script_int, time, 0, 0);
         }
         break;
-    case 1:
+    case "move":
     default:
         self setmovingplatformenabled(1);
         if (isdefined(self.script_vector)) {
@@ -64,7 +64,7 @@ function function_2c2e94d1() {
         } else if (isdefined(self.script_int)) {
             self movez(self.script_int, time, 0, 0);
         }
-        wait(time);
+        wait time;
         self setmovingplatformenabled(0);
         break;
     }
@@ -79,7 +79,7 @@ function function_f20239(n_range) {
         n_range = 256;
     }
     self endon(#"death");
-    self endon(#"hash_5906526");
+    self endon(#"stop_head_track_player");
     var_175d1224 = self.angles;
     var_f1b873af = (270, 90, -76);
     while (isdefined(self)) {
@@ -88,7 +88,7 @@ function function_f20239(n_range) {
             if (self.angles != var_175d1224) {
                 self rotateto(var_175d1224, 1);
             }
-            wait(1);
+            wait 1;
             continue;
         }
         v_to_player = vectortoangles(e_player.origin - self.origin);
@@ -107,7 +107,7 @@ function function_359855(n_range) {
         n_range = 512;
     }
     self endon(#"death");
-    self endon(#"hash_5906526");
+    self endon(#"stop_head_track_player");
     while (true) {
         e_player = arraygetclosest(self.origin, level.players, n_range);
         if (!isdefined(e_player)) {
@@ -119,7 +119,7 @@ function function_359855(n_range) {
             self.var_960fdad0 = e_player;
             self lookatentity(self.var_960fdad0);
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -154,7 +154,7 @@ function function_8b31a9a3() {
                 corpse delete();
             }
         }
-        wait(10);
+        wait 10;
     }
 }
 
@@ -185,7 +185,7 @@ function function_36a6e271(var_a9fa335a, a_ai) {
             }
             break;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -204,7 +204,7 @@ function function_36a6e271(var_a9fa335a, a_ai) {
                 org = self.origin;
             }
             print3d(org, text, color);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -318,7 +318,7 @@ function function_40077528(n_mag, n_duration, v_org, n_range, var_77e1f19f, var_
     earthquake(n_mag, n_duration, v_org, n_range);
     if (n_mag >= 3) {
         foreach (player in level.players) {
-            player notify(#"hash_c468597b");
+            player notify(#"new_quake");
             visionset_mgr::activate("overlay", "earthquake_blur", player, 0.25);
             player util::delay(n_duration + 3, "new_quake", &visionset_mgr::deactivate, "overlay", "earthquake_blur", player);
             player shellshock("tankblast_mp", randomfloatrange(var_77e1f19f, var_cab96061));
@@ -502,7 +502,7 @@ function function_705fac33() {
 function function_45953c88() {
     assert(isdefined(level.var_d7c2e2b0));
     level.var_2b829c4e = level.var_d7c2e2b0;
-    level notify(#"hash_e9a8e69c");
+    level notify(#"hotjoin_enabled");
 }
 
 // Namespace namespace_cba4cc55
@@ -549,17 +549,17 @@ function function_c8849158(n_dist, n_delay) {
         self flagsys::wait_till_clear("scriptedanim");
     }
     if (isdefined(n_delay)) {
-        wait(n_delay);
+        wait n_delay;
     }
     while (!var_2540d664) {
-        wait(1);
+        wait 1;
         foreach (player in level.players) {
             if (isvehicle(self)) {
                 var_911c6902 = self function_4246bc05(player);
             } else if (isactor(self)) {
                 var_911c6902 = self cansee(player);
             } else {
-                assertmsg("rogue_control_speed");
+                assertmsg("<dev string:x5c>");
                 return;
             }
             if (!var_911c6902 && distance(self.origin, player.origin) > n_dist && player util::is_player_looking_at(self.origin, undefined, 0) == 0) {

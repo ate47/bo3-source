@@ -10,9 +10,9 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_a7758d0b;
+#namespace zm_bgb_self_medication;
 
-// Namespace namespace_a7758d0b
+// Namespace zm_bgb_self_medication
 // Params 0, eflags: 0x2
 // Checksum 0xd39f7aa2, Offset: 0x250
 // Size: 0x34
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_self_medication", &__init__, undefined, "bgb");
 }
 
-// Namespace namespace_a7758d0b
+// Namespace zm_bgb_self_medication
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99dff58a, Offset: 0x290
 // Size: 0xac
@@ -33,14 +33,14 @@ function __init__() {
     bgb::register_lost_perk_override("zm_bgb_self_medication", &lost_perk_override, 0);
 }
 
-// Namespace namespace_a7758d0b
+// Namespace zm_bgb_self_medication
 // Params 0, eflags: 0x1 linked
 // Checksum 0x94de5bae, Offset: 0x348
 // Size: 0xc8
 function event() {
     self endon(#"disconnect");
     self endon(#"bgb_update");
-    self endon(#"hash_1c39189f");
+    self endon(#"bgb_self_medication_complete");
     self.var_25b88da = 3;
     self.w_min_last_stand_pistol_override = getweapon("ray_gun");
     level zm_utility::function_fb450820();
@@ -52,7 +52,7 @@ function event() {
     }
 }
 
-// Namespace namespace_a7758d0b
+// Namespace zm_bgb_self_medication
 // Params 0, eflags: 0x1 linked
 // Checksum 0x898c956d, Offset: 0x418
 // Size: 0x22
@@ -63,7 +63,7 @@ function validation() {
     return true;
 }
 
-// Namespace namespace_a7758d0b
+// Namespace zm_bgb_self_medication
 // Params 0, eflags: 0x1 linked
 // Checksum 0x20389a43, Offset: 0x448
 // Size: 0x64
@@ -72,11 +72,11 @@ function function_5816d71a() {
     if (isdefined(self)) {
         self.w_min_last_stand_pistol_override = undefined;
     }
-    wait(0.2);
+    wait 0.2;
     level zm_utility::function_53d28288();
 }
 
-// Namespace namespace_a7758d0b
+// Namespace zm_bgb_self_medication
 // Params 1, eflags: 0x1 linked
 // Checksum 0xde13f5f, Offset: 0x4b8
 // Size: 0x74
@@ -87,7 +87,7 @@ function actor_death_override(e_attacker) {
     }
 }
 
-// Namespace namespace_a7758d0b
+// Namespace zm_bgb_self_medication
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7ca72261, Offset: 0x538
 // Size: 0x1a4
@@ -97,7 +97,7 @@ function function_cfc2c8d5() {
     while (true) {
         self waittill(#"hash_935cc366");
         while (self getcurrentweapon() !== self.laststandpistol) {
-            wait(0.05);
+            wait 0.05;
         }
         if (isdefined(self.has_specific_powerup_weapon["minigun"]) && isdefined(self.has_specific_powerup_weapon) && self.has_specific_powerup_weapon["minigun"]) {
             zm_powerups::weapon_powerup_remove(self, "minigun_time_over", "minigun", 1);
@@ -112,13 +112,13 @@ function function_cfc2c8d5() {
         self.var_25b88da--;
         self bgb::set_timer(self.var_25b88da, 3);
         if (self.var_25b88da == 0) {
-            self notify(#"hash_1c39189f");
+            self notify(#"bgb_self_medication_complete");
             return;
         }
     }
 }
 
-// Namespace namespace_a7758d0b
+// Namespace zm_bgb_self_medication
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaff20de, Offset: 0x6e8
 // Size: 0x5c
@@ -130,7 +130,7 @@ function function_a8fd61f4() {
     self.thrasher kill(self.thrasher.origin, self);
 }
 
-// Namespace namespace_a7758d0b
+// Namespace zm_bgb_self_medication
 // Params 3, eflags: 0x1 linked
 // Checksum 0x51cbb794, Offset: 0x750
 // Size: 0x7e

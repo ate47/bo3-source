@@ -4,9 +4,9 @@
 #using scripts/cp/_hacking;
 #using scripts/shared/flag_shared;
 
-#namespace namespace_cb380b88;
+#namespace cp_mi_cairo_aquifer_hackobjs;
 
-// Namespace namespace_cb380b88
+// Namespace cp_mi_cairo_aquifer_hackobjs
 // Params 0, eflags: 0x0
 // Checksum 0x30c5e008, Offset: 0x210
 // Size: 0x14
@@ -14,7 +14,7 @@ function main() {
     function_a9192543();
 }
 
-// Namespace namespace_cb380b88
+// Namespace cp_mi_cairo_aquifer_hackobjs
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x230
 // Size: 0x4
@@ -22,7 +22,7 @@ function function_a9192543() {
     
 }
 
-// Namespace namespace_cb380b88
+// Namespace cp_mi_cairo_aquifer_hackobjs
 // Params 2, eflags: 0x0
 // Checksum 0x1ce65449, Offset: 0x240
 // Size: 0xf4
@@ -32,12 +32,12 @@ function function_8f05da8(a, b) {
     level.var_72dad04.origin = var_56fa193b.origin;
     objectives::set("obj_attack_tanks", level.var_72dad04);
     iprintln("waiting placeholder for attack tanks");
-    wait(5);
+    wait 5;
     objectives::complete("obj_attack_tanks", level.var_72dad04);
     skipto::function_be8adfb8(a);
 }
 
-// Namespace namespace_cb380b88
+// Namespace cp_mi_cairo_aquifer_hackobjs
 // Params 2, eflags: 0x0
 // Checksum 0x4a49a2db, Offset: 0x340
 // Size: 0xf4
@@ -51,7 +51,7 @@ function function_1316b781(a, b) {
     skipto::function_be8adfb8(a);
 }
 
-// Namespace namespace_cb380b88
+// Namespace cp_mi_cairo_aquifer_hackobjs
 // Params 2, eflags: 0x0
 // Checksum 0x8ce95ad1, Offset: 0x440
 // Size: 0xf4
@@ -65,7 +65,7 @@ function function_391931ea(a, b) {
     skipto::function_be8adfb8(a);
 }
 
-// Namespace namespace_cb380b88
+// Namespace cp_mi_cairo_aquifer_hackobjs
 // Params 2, eflags: 0x0
 // Checksum 0xadc1679a, Offset: 0x540
 // Size: 0x104
@@ -80,7 +80,7 @@ function function_5f1bac53(a, b) {
     skipto::function_be8adfb8(a);
 }
 
-// Namespace namespace_cb380b88
+// Namespace cp_mi_cairo_aquifer_hackobjs
 // Params 4, eflags: 0x0
 // Checksum 0xa23e278a, Offset: 0x650
 // Size: 0x4c

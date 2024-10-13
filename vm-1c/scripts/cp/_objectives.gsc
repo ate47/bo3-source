@@ -74,7 +74,7 @@ class class_60c78d95 {
     // Size: 0x162
     function show(e_player) {
         if (isdefined(e_player)) {
-            assert(isplayer(e_player), "_complete");
+            assert(isplayer(e_player), "<dev string:x5b>");
             foreach (obj_id in self.m_a_game_obj) {
                 objective_setvisibletoplayer(obj_id, e_player);
             }
@@ -91,7 +91,7 @@ class class_60c78d95 {
     // Size: 0x162
     function hide(e_player) {
         if (isdefined(e_player)) {
-            assert(isplayer(e_player), "_complete");
+            assert(isplayer(e_player), "<dev string:x28>");
             foreach (obj_id in self.m_a_game_obj) {
                 objective_setinvisibletoplayer(obj_id, e_player);
             }
@@ -321,7 +321,7 @@ class class_1d3048b8 : class_60c78d95 {
     // Size: 0xfe
     function show(e_player) {
         if (isdefined(e_player)) {
-            assert(isplayer(e_player), "_complete");
+            assert(isplayer(e_player), "<dev string:x8e>");
             entnum = e_player getentitynumber();
             obj_id = self.m_a_player_game_obj[entnum];
             objective_setvisibletoplayer(obj_id, e_player);
@@ -339,7 +339,7 @@ class class_1d3048b8 : class_60c78d95 {
     // Size: 0xfe
     function hide(e_player) {
         if (isdefined(e_player)) {
-            assert(isplayer(e_player), "_complete");
+            assert(isplayer(e_player), "<dev string:x8e>");
             entnum = e_player getentitynumber();
             obj_id = self.m_a_player_game_obj[entnum];
             objective_setinvisibletoplayer(obj_id, e_player);
@@ -527,7 +527,7 @@ function breadcrumb(var_b93b5b10, var_15231088, var_684f50be) {
     var_14191e40 = set(var_15231088, undefined, 1);
     [[ var_14191e40 ]]->start(var_b93b5b10);
     while (![[ var_14191e40 ]]->is_done()) {
-        wait(0.05);
+        wait 0.05;
     }
     if (var_684f50be) {
         complete(var_15231088);
@@ -544,7 +544,7 @@ function hide(var_c0adf81f, e_player) {
         [[ var_14191e40 ]]->hide(e_player);
         return;
     }
-    assert(0, "_complete");
+    assert(0, "<dev string:xcb>");
 }
 
 // Namespace objectives
@@ -557,7 +557,7 @@ function function_66c6f97b(var_c0adf81f, e_target) {
         [[ var_14191e40 ]]->function_66c6f97b(e_target);
         return;
     }
-    assert(0, "_complete");
+    assert(0, "<dev string:xcb>");
 }
 
 // Namespace objectives
@@ -570,7 +570,7 @@ function show(var_c0adf81f, e_player) {
         [[ var_14191e40 ]]->show(e_player);
         return;
     }
-    assert(0, "_complete");
+    assert(0, "<dev string:x10c>");
 }
 
 // Namespace objectives
@@ -583,7 +583,7 @@ function function_c0eaea6e(var_c0adf81f, e_target) {
         [[ var_14191e40 ]]->function_c0eaea6e(e_target);
         return;
     }
-    assert(0, "_complete");
+    assert(0, "<dev string:xcb>");
 }
 
 // Namespace objectives
@@ -597,7 +597,7 @@ function function_e95d8ccb(var_c0adf81f, e_target) {
         id = [[ var_14191e40 ]]->function_e95d8ccb(e_target);
     }
     if (id < 0) {
-        assert(0, "_complete");
+        assert(0, "<dev string:x14d>");
     }
     return id;
 }
@@ -621,38 +621,38 @@ function function_fe46cd6(var_c0adf81f, var_95acca4a, v_pos, v_offset) {
         v_offset = (0, 0, 0);
     }
     switch (var_c0adf81f) {
-    case 31:
+    case "target":
         var_5cbd0572 = "waypoint_targetneutral";
         break;
-    case 22:
+    case "capture":
         var_5cbd0572 = "waypoint_capture";
         break;
-    case 23:
+    case "capture_a":
         var_5cbd0572 = "waypoint_capture_a";
         break;
-    case 24:
+    case "capture_b":
         var_5cbd0572 = "waypoint_capture_b";
         break;
-    case 25:
+    case "capture_c":
         var_5cbd0572 = "waypoint_capture_c";
         break;
-    case 26:
+    case "defend":
         var_5cbd0572 = "waypoint_defend";
         break;
-    case 27:
+    case "defend_a":
         var_5cbd0572 = "waypoint_defend_a";
         break;
-    case 28:
+    case "defend_b":
         var_5cbd0572 = "waypoint_defend_b";
         break;
-    case 29:
+    case "defend_c":
         var_5cbd0572 = "waypoint_defend_c";
         break;
-    case 30:
+    case "return":
         var_5cbd0572 = "waypoint_return";
         break;
     default:
-        assertmsg("_complete" + var_c0adf81f + "_complete");
+        assertmsg("<dev string:x18c>" + var_c0adf81f + "<dev string:x193>");
         break;
     }
     var_95ea7549 = objpoints::create(var_95acca4a, v_pos + v_offset, "all", var_5cbd0572);

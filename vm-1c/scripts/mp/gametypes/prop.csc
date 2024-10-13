@@ -45,7 +45,7 @@ function localplayerspectating(localclientnum) {
         if (player != var_cfcb9b39) {
             level notify("localPlayerSpectating" + localclientnum);
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -119,7 +119,7 @@ function setuppropplayernames(localclientnum) {
                 player.var_3a6ca2d4 = 0;
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 

@@ -5,9 +5,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_7cee2b44;
+#namespace mirg2000;
 
-// Namespace namespace_7cee2b44
+// Namespace mirg2000
 // Params 0, eflags: 0x2
 // Checksum 0xea92be10, Offset: 0x4d8
 // Size: 0x34
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
     system::register("mirg2000", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_7cee2b44
+// Namespace mirg2000
 // Params 0, eflags: 0x1 linked
 // Checksum 0x536a33d7, Offset: 0x518
 // Size: 0x2da
@@ -24,8 +24,8 @@ function __init__() {
     clientfield::register("vehicle", "mirg2000_spider_death_fx", 9000, 2, "int", &function_1d3d9723, 0, 0);
     clientfield::register("actor", "mirg2000_enemy_impact_fx", 9000, 2, "int", &function_15ad909d, 0, 0);
     clientfield::register("vehicle", "mirg2000_enemy_impact_fx", 9000, 2, "int", &function_15ad909d, 0, 0);
-    clientfield::register("allplayers", "mirg2000_fire_button_held_sound", 9000, 1, "int", &function_4c2164f8, 0, 0);
-    clientfield::register("toplayer", "mirg2000_charge_glow", 9000, 2, "int", &function_877c3ed1, 0, 0);
+    clientfield::register("allplayers", "mirg2000_fire_button_held_sound", 9000, 1, "int", &mirg2000_fire_button_held_sound, 0, 0);
+    clientfield::register("toplayer", "mirg2000_charge_glow", 9000, 2, "int", &mirg2000_charge_glow, 0, 0);
     level._effect["mirg2000_charged_shot_1"] = "dlc2/zmb_weapon/fx_mirg_impact_aoe_chrg2";
     level._effect["mirg2000_charged_shot_2"] = "dlc2/zmb_weapon/fx_mirg_impact_aoe_chrg3";
     level._effect["mirg2000_charged_shot_1_up"] = "dlc2/zmb_weapon/fx_mirg_impact_aoe_chrg2_ug";
@@ -38,7 +38,7 @@ function __init__() {
     level._effect["mirg2000_glow_up"] = "dlc2/zmb_weapon/fx_mirg_weapon_canister_light_blue";
 }
 
-// Namespace namespace_7cee2b44
+// Namespace mirg2000
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5f993857, Offset: 0x800
 // Size: 0x1de
@@ -69,7 +69,7 @@ function function_23a70949(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_7cee2b44
+// Namespace mirg2000
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa6e33b24, Offset: 0x9e8
 // Size: 0xbc
@@ -83,7 +83,7 @@ function function_15ad909d(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_7cee2b44
+// Namespace mirg2000
 // Params 7, eflags: 0x1 linked
 // Checksum 0xfe84fcff, Offset: 0xab0
 // Size: 0xbc
@@ -97,11 +97,11 @@ function function_1d3d9723(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_7cee2b44
+// Namespace mirg2000
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe0f014d9, Offset: 0xb78
 // Size: 0xce
-function function_4c2164f8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function mirg2000_fire_button_held_sound(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         if (!isdefined(self.var_c56da363)) {
             self.var_c56da363 = self playloopsound("wpn_mirg2k_hold_lp", 1.25);
@@ -116,11 +116,11 @@ function function_4c2164f8(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_7cee2b44
+// Namespace mirg2000
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf8d3e9ce, Offset: 0xc50
 // Size: 0x1b6
-function function_877c3ed1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function mirg2000_charge_glow(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     w_current = getcurrentweapon(localclientnum);
     str_weapon_name = w_current.name;
     self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, 1, newval, 0);

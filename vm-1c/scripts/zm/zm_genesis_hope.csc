@@ -14,9 +14,9 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_c30b09d6;
+#namespace zm_genesis_hope;
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 0, eflags: 0x2
 // Checksum 0x4f1d2e7, Offset: 0x358
 // Size: 0x34
@@ -24,7 +24,7 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_hope", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 0, eflags: 0x1 linked
 // Checksum 0xef1fa365, Offset: 0x398
 // Size: 0x13c
@@ -36,13 +36,13 @@ function __init__() {
     clientfield::register("scriptmover", "hope_spark", 15000, 1, "int", &function_2e70599d, 0, 0);
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4ec202b2, Offset: 0x4e0
 // Size: 0x156
 function function_7341c96b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    level notify(#"hash_89f142a1");
-    level endon(#"hash_89f142a1");
+    level notify(#"hope_state");
+    level endon(#"hope_state");
     var_d461c73e = struct::get("hope_spark", "targetname");
     switch (newval) {
     case 0:
@@ -61,7 +61,7 @@ function function_7341c96b(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd1103e4d, Offset: 0x640
 // Size: 0x106
@@ -80,7 +80,7 @@ function function_2e70599d(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 2, eflags: 0x1 linked
 // Checksum 0x5007424c, Offset: 0x750
 // Size: 0xec

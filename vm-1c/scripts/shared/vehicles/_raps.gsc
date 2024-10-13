@@ -106,7 +106,7 @@ function state_death_update(params) {
     }
     if (isai(attacker) || (!isdefined(self.owner) || attacker !== self && self.owner !== attacker) && isplayer(attacker)) {
         self.damage_on_death = 0;
-        wait(0.05);
+        wait 0.05;
         attacker = params.inflictor;
         if (!isdefined(attacker)) {
             attacker = params.attacker;
@@ -131,7 +131,7 @@ function state_emped_update(params) {
         forward = vectornormalize((self getvelocity()[0], self getvelocity()[1], 0));
         side = vectorcross(forward, (0, 0, 1)) * math::randomsign();
         self setvehgoalpos(self.origin + side * 500 + forward * randomfloat(400), 0, 0);
-        wait(0.6);
+        wait 0.6;
         self clearvehgoalpos();
         self util::waittill_any_timeout(1.5, "veh_collision", "change_state", "death");
         self kill(self.origin, self.abnormal_status.attacker, self.abnormal_status.inflictor, getweapon("emp"));
@@ -154,7 +154,7 @@ function state_combat_update(params) {
     self thread nudge_collision();
     for (;;) {
         if (isdefined(self.inpain) && self.inpain) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (isdefined(self.var_93e05b23) && (!isdefined(self.enemy) || self.var_93e05b23)) {
@@ -175,7 +175,7 @@ function state_combat_update(params) {
                     if (!isdefined(point._scoredebug)) {
                         point._scoredebug = [];
                     }
-                    point._scoredebug["combat"] = mapfloat(0, -56, 0, 100, point.disttoorigin2d);
+                    point._scoredebug["<dev string:x28>"] = mapfloat(0, -56, 0, 100, point.disttoorigin2d);
                 #/
                 point.score += mapfloat(0, -56, 0, 100, point.disttoorigin2d);
                 if (point.inclaimedlocation) {
@@ -183,7 +183,7 @@ function state_combat_update(params) {
                         if (!isdefined(point._scoredebug)) {
                             point._scoredebug = [];
                         }
-                        point._scoredebug["combat"] = -500;
+                        point._scoredebug["<dev string:x35>"] = -500;
                     #/
                     point.score += -500;
                 }
@@ -191,7 +191,7 @@ function state_combat_update(params) {
                     if (!isdefined(point._scoredebug)) {
                         point._scoredebug = [];
                     }
-                    point._scoredebug["combat"] = randomfloatrange(0, 50);
+                    point._scoredebug["<dev string:x47>"] = randomfloatrange(0, 50);
                 #/
                 point.score += randomfloatrange(0, 50);
                 if (isdefined(self.prevmovedir)) {
@@ -201,7 +201,7 @@ function state_combat_update(params) {
                             if (!isdefined(point._scoredebug)) {
                                 point._scoredebug = [];
                             }
-                            point._scoredebug["combat"] = randomfloatrange(50, -106);
+                            point._scoredebug["<dev string:x4e>"] = randomfloatrange(50, -106);
                         #/
                         point.score += randomfloatrange(50, -106);
                     }
@@ -216,7 +216,7 @@ function state_combat_update(params) {
             if (isdefined(best_point)) {
                 foundpath = self setvehgoalpos(best_point.origin, 0, 1);
             } else {
-                wait(1);
+                wait 1;
             }
             if (foundpath) {
                 self.prevmovedir = vectornormalize(best_point.origin - self.origin);
@@ -225,13 +225,13 @@ function state_combat_update(params) {
                 pathfailcount = 0;
                 self vehicle_ai::waittill_pathing_done();
             } else {
-                wait(1);
+                wait 1;
             }
             continue;
         }
         if (!self.enemy.allowdeath && self getpersonalthreatbias(self.enemy) == 0) {
             self setpersonalthreatbias(self.enemy, -2000, 30);
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         foundpath = 0;
@@ -249,14 +249,14 @@ function state_combat_update(params) {
                         if (!isdefined(point._scoredebug)) {
                             point._scoredebug = [];
                         }
-                        point._scoredebug["combat"] = mapfloat(0, -56, 0, -200, distance(point.origin, queryresult.origin));
+                        point._scoredebug["<dev string:x28>"] = mapfloat(0, -56, 0, -200, distance(point.origin, queryresult.origin));
                     #/
                     point.score += mapfloat(0, -56, 0, -200, distance(point.origin, queryresult.origin));
                     /#
                         if (!isdefined(point._scoredebug)) {
                             point._scoredebug = [];
                         }
-                        point._scoredebug["combat"] = mapfloat(50, -56, 0, -200, abs(point.origin[2] - queryresult.origin[2]));
+                        point._scoredebug["<dev string:x5d>"] = mapfloat(50, -56, 0, -200, abs(point.origin[2] - queryresult.origin[2]));
                     #/
                     point.score += mapfloat(50, -56, 0, -200, abs(point.origin[2] - queryresult.origin[2]));
                     if (point.inclaimedlocation === 1) {
@@ -264,7 +264,7 @@ function state_combat_update(params) {
                             if (!isdefined(point._scoredebug)) {
                                 point._scoredebug = [];
                             }
-                            point._scoredebug["combat"] = -500;
+                            point._scoredebug["<dev string:x35>"] = -500;
                         #/
                         point.score += -500;
                     }
@@ -288,7 +288,7 @@ function state_combat_update(params) {
                 pathfailcount = 0;
                 self vehicle_ai::waittill_pathing_done();
             } else {
-                wait(0.05);
+                wait 0.05;
             }
         }
         if (!foundpath) {
@@ -303,7 +303,7 @@ function state_combat_update(params) {
                     detonate();
                 }
             }
-            wait(0.2);
+            wait 0.2;
             pixbeginevent("_raps::state_combat_update 3");
             queryresult = positionquery_source_navigation(self.origin, 0, self.settings.max_move_dist, self.settings.max_move_dist, self.radius, self);
             pixbeginevent("_raps::state_combat_update 3");
@@ -312,11 +312,11 @@ function state_combat_update(params) {
                 self setvehgoalpos(point.origin, 0, 0);
                 self.current_pathto_pos = undefined;
                 self thread path_update_interrupt();
-                wait(2);
+                wait 2;
                 self notify(#"near_goal");
             }
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 
@@ -329,7 +329,7 @@ function prevent_stuck() {
     self endon(#"death");
     self notify(#"end_prevent_stuck");
     self endon(#"end_prevent_stuck");
-    wait(2);
+    wait 2;
     count = 0;
     previous_origin = undefined;
     while (true) {
@@ -342,7 +342,7 @@ function prevent_stuck() {
         if (count > 10) {
             detonate();
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -371,12 +371,12 @@ function jump_detonate() {
     }
     self launchvehicle((0, 0, 1) * self.jumpforce, (0, 0, 0), 1);
     self.is_jumping = 1;
-    wait(0.4);
+    wait 0.4;
     for (time_to_land = 0.6; time_to_land > 0; time_to_land -= 0.05) {
         if (check_detonation_dist(self.origin, self.enemy)) {
             self detonate();
         }
-        wait(0.05);
+        wait 0.05;
     }
     if (isalive(self)) {
         self.is_jumping = 0;
@@ -426,7 +426,7 @@ function detonation_monitor() {
     lastenemy = undefined;
     while (true) {
         try_detonate();
-        wait(0.2);
+        wait 0.2;
         if (isdefined(self.enemy) && isplayer(self.enemy)) {
             if (lastenemy !== self.enemy) {
                 lastdisttoenemysquared = 1e+08;
@@ -599,18 +599,18 @@ function path_update_interrupt() {
     self endon(#"reached_end_node");
     self notify(#"hash_5ce56002");
     self endon(#"hash_5ce56002");
-    wait(0.1);
+    wait 0.1;
     while (true) {
         if (isdefined(self.current_pathto_pos)) {
             if (distance2dsquared(self.current_pathto_pos, self.goalpos) > self.goalradius * self.goalradius) {
-                wait(0.5);
+                wait 0.5;
                 self notify(#"near_goal");
             }
             targetpos = function_70d73c6a();
             if (isdefined(targetpos)) {
                 if (distancesquared(self.origin, targetpos) > 400 * 400) {
                     repath_range = self.settings.repath_range * 2;
-                    wait(0.1);
+                    wait 0.1;
                 } else {
                     repath_range = self.settings.repath_range;
                 }
@@ -640,10 +640,10 @@ function path_update_interrupt() {
                 }
                 self setspeed(speedtouse);
             }
-            wait(0.2);
+            wait 0.2;
             continue;
         }
-        wait(0.4);
+        wait 0.4;
     }
 }
 
@@ -745,7 +745,7 @@ function slow_raps_trigger() {
         if (isvehicle(other) && isdefined(other.archetype) && other.archetype == "raps") {
             other thread slow_raps(self);
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -769,7 +769,7 @@ function slow_raps(trigger) {
     } else {
         self setspeed(0.5 * self.settings.defaultmovespeed);
     }
-    wait(1);
+    wait 1;
     self resumespeed();
     self.slow_trigger = undefined;
 }
@@ -869,7 +869,7 @@ function function_e1de20df() {
 // Size: 0x64
 function function_ac32a52e() {
     self endon(#"death");
-    wait(randomfloatrange(0.25, 1.5));
+    wait randomfloatrange(0.25, 1.5);
     if (isdefined(self.sndalias["spawn"])) {
         self playsound(self.sndalias["spawn"]);
     }

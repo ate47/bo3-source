@@ -17,8 +17,8 @@ function main() {
     precache();
     trigger = spawn("trigger_radius_out_of_bounds", (687.5, 2679, -356.5), 0, 300, 400);
     trigger thread oob::run_oob_trigger();
-    namespace_94bbd14::main();
-    namespace_a5c10e4b::main();
+    mp_sector_fx::main();
+    mp_sector_sound::main();
     level.var_c9aa825e = &function_c9aa825e;
     level.var_7bb6ebae = &function_7bb6ebae;
     level.remotemissile_kill_z = -680;

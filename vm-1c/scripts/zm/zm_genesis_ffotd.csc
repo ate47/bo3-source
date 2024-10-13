@@ -7,9 +7,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b6963cd7;
+#namespace zm_genesis_ffotd;
 
-// Namespace namespace_b6963cd7
+// Namespace zm_genesis_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x178
 // Size: 0x4
@@ -17,7 +17,7 @@ function main_start() {
     
 }
 
-// Namespace namespace_b6963cd7
+// Namespace zm_genesis_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x188
 // Size: 0x4

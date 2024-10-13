@@ -21,9 +21,9 @@
 #using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_af029029;
+#namespace zm_island_spiders;
 
-// Namespace namespace_af029029
+// Namespace zm_island_spiders
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf7cca825, Offset: 0x3e0
 // Size: 0x3c
@@ -33,12 +33,12 @@ function function_8e89793a() {
     level thread function_419bf2ad();
 }
 
-// Namespace namespace_af029029
+// Namespace zm_island_spiders
 // Params 0, eflags: 0x1 linked
 // Checksum 0x89bdfc37, Offset: 0x428
 // Size: 0x17a
 function function_c102a998() {
-    wait(6);
+    wait 6;
     level flag::clear("spider_round_in_progress");
     foreach (player in level.players) {
         if (player isplayerunderwater()) {
@@ -56,7 +56,7 @@ function function_c102a998() {
     }
 }
 
-// Namespace namespace_af029029
+// Namespace zm_island_spiders
 // Params 0, eflags: 0x1 linked
 // Checksum 0x89677d46, Offset: 0x5b0
 // Size: 0x398
@@ -112,7 +112,7 @@ function function_33aa4940() {
     return var_7ac5425b;
 }
 
-// Namespace namespace_af029029
+// Namespace zm_island_spiders
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbc786d21, Offset: 0x950
 // Size: 0x34

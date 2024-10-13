@@ -272,7 +272,7 @@ function private lc_flag_hit(enemy, hit) {
 function private lc_do_damage(source_enemy, arc_num, player, params) {
     player endon(#"disconnect");
     if (arc_num > 1) {
-        wait(randomfloatrange(0.2, 0.6) * arc_num);
+        wait randomfloatrange(0.2, 0.6) * arc_num;
     }
     if (!isdefined(self) || !isalive(self)) {
         return;
@@ -297,7 +297,7 @@ function private lc_do_damage(source_enemy, arc_num, player, params) {
     }
     while (player.tesla_network_death_choke > params.network_death_choke) {
         zm_utility::debug_print("TESLA: Choking Tesla Damage. Dead enemies this network frame: " + player.tesla_network_death_choke);
-        wait(0.05);
+        wait 0.05;
     }
     if (!isdefined(self) || !isalive(self)) {
         return;
@@ -378,7 +378,7 @@ function lc_play_death_fx(arc_num, params) {
 // Size: 0x2ac
 function lc_play_arc_fx(target, params) {
     if (!isdefined(self) || !isdefined(target)) {
-        wait(params.arc_travel_time);
+        wait params.arc_travel_time;
         return;
     }
     tag = "J_SpineUpper";
@@ -417,12 +417,12 @@ function lc_play_arc_fx(target, params) {
     // Checksum 0x95031da7, Offset: 0x1b40
     // Size: 0x6c
     function private lc_debug_arc(origin, distance) {
-        if (getdvarint("zombie/fx_tesla_shock_eyes_zmb") != 3) {
+        if (getdvarint("<dev string:x28>") != 3) {
             return;
         }
         start = gettime();
         while (gettime() < start + 3000) {
-            wait(0.05);
+            wait 0.05;
         }
     }
 

@@ -1,8 +1,8 @@
 #using scripts/shared/flagsys_shared;
 
-#namespace namespace_265ae7e9;
+#namespace zm_theater_fx;
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x192968b2, Offset: 0x1690
 // Size: 0x3c
@@ -12,7 +12,7 @@ function main() {
     level thread function_f205a5f1();
 }
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4404d4e6, Offset: 0x16d8
 // Size: 0xae
@@ -25,7 +25,7 @@ function function_f205a5f1() {
     level._effect["additionalprimaryweapon_light"] = "dlc5/zmhd/fx_perk_mule_kick";
 }
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe4b9ac2f, Offset: 0x1790
 // Size: 0x2a2
@@ -56,7 +56,7 @@ function function_2cef3bdd() {
     level._effect["auto_turret_light"] = "dlc5/zmhd/fx_zombie_auto_turret_light";
 }
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa45b0cba, Offset: 0x1a40
 // Size: 0x756

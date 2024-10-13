@@ -144,7 +144,7 @@ function spawnplayerprediction() {
     self endon(#"joined_spectators");
     self endon(#"spawned");
     while (true) {
-        wait(0.5);
+        wait 0.5;
         if (isdefined(level.onspawnplayerunified) && getdvarint("scr_disableunifiedspawning") == 0) {
             spawning::onspawnplayer_unified(1);
             continue;
@@ -360,11 +360,11 @@ function spawnplayer() {
     self notify(#"spawned_player");
     self callback::callback(#"hash_bc12b61f");
     /#
-        print("" + self.origin[0] + "" + self.origin[1] + "" + self.origin[2] + "");
+        print("<dev string:x28>" + self.origin[0] + "<dev string:x2b>" + self.origin[1] + "<dev string:x2b>" + self.origin[2] + "<dev string:x2d>");
     #/
     setdvar("scr_selecting_location", "");
     /#
-        if (getdvarint("") > 0) {
+        if (getdvarint("<dev string:x2f>") > 0) {
             self thread globallogic_score::function_4e01d1c3();
         }
     #/
@@ -448,7 +448,7 @@ function forcespawn(time) {
     if (!isdefined(time)) {
         time = 60;
     }
-    wait(time);
+    wait time;
     if (self.hasspawned) {
         return;
     }
@@ -469,7 +469,7 @@ function forcespawn(time) {
 // Size: 0x5c
 function kickifdontspawn() {
     /#
-        if (getdvarint("") == 1) {
+        if (getdvarint("<dev string:x3a>") == 1) {
             return;
         }
     #/
@@ -566,7 +566,7 @@ function spawnintermission(usedefaultcallback) {
             }
             self closeingamemenu();
             for (waittime = 4; waittime; waittime -= 0.25) {
-                wait(0.25);
+                wait 0.25;
             }
         }
     }
@@ -742,7 +742,7 @@ function waitandspawnclient(timealreadypassed) {
             util::setlowermessage(%MP_FRIENDLY_FIRE_WILL_NOT, teamkilldelay);
             self thread respawn_asspectator(self.origin + (0, 0, 60), self.angles);
             spawnedasspectator = 1;
-            wait(teamkilldelay);
+            wait teamkilldelay;
         }
         self.teamkillpunish = 0;
     }
@@ -809,7 +809,7 @@ function waitrespawnorsafespawnbutton() {
         if (self usebuttonpressed()) {
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

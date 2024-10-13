@@ -97,7 +97,7 @@ function function_f925b7b9() {
     init_parameters();
     /#
         if (level.pack_a_punch.triggers.size == 0) {
-            println("<unknown string>");
+            println("<dev string:x28>");
         }
     #/
     return level.pack_a_punch.triggers;

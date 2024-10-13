@@ -233,10 +233,10 @@ function function_d7943f6b(sensor_grenade) {
     origin = self function_23685d89();
     decoy_grenade = sys::spawn("script_model", origin);
     decoy_grenade.angles = -1 * self.angles;
-    wait(0.05);
+    wait 0.05;
     decoy_grenade.var_8d009e7f = -1 * self getvelocity();
     decoy_grenade thread decoy::function_a63701dd(self);
-    wait(15);
+    wait 15;
     decoy_grenade notify(#"done");
     decoy_grenade notify(#"hash_deb9ad6f");
     decoy_grenade delete();

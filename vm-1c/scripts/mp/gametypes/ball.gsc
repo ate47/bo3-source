@@ -232,7 +232,7 @@ function function_4dbb4a6a() {
         self.projectile endon(#"stationary");
         self.projectile endon(#"grenade_bounce");
         while (true) {
-            wait(1);
+            wait 1;
         }
     }
 }
@@ -303,9 +303,9 @@ function function_972a6af9() {
         winner = globallogic_score::gethighestscoringplayer();
         /#
             if (isdefined(winner)) {
-                print("ball_game_score" + winner.name);
+                print("<dev string:x28>" + winner.name);
             } else {
-                print("teamScores");
+                print("<dev string:x3a>");
             }
         #/
     }
@@ -341,17 +341,17 @@ function function_67cb1206() {
                 if (curweapon.isheroweapon) {
                     slot = self gadgetgetslot(curweapon);
                     if (!self ability_player::gadget_is_in_use(slot)) {
-                        wait(0.05);
+                        wait 0.05;
                         continue;
                     }
                 }
-                println("halftime");
+                println("<dev string:x4a>");
                 player switchtoweapon(ball);
                 player disableweaponcycling();
                 player disableoffhandweapons();
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -612,8 +612,8 @@ function setup_objectives() {
     level.ball_starts = [];
     level.balls = [];
     level.ball_starts = getentarray("ball_start", "targetname");
-    foreach (var_4f928387 in level.ball_starts) {
-        level.balls[level.balls.size] = function_dbf94d16(var_4f928387);
+    foreach (ball_start in level.ball_starts) {
+        level.balls[level.balls.size] = function_dbf94d16(ball_start);
     }
     if (level.ballcount > level.ball_starts.size) {
         width = 48;
@@ -1035,14 +1035,14 @@ function function_db6a152e(goal) {
     visual = self.visuals[0];
     visual moveto(goal.center, var_c3f5985e, 0, var_c3f5985e);
     visual rotatevelocity((1080, 1080, 0), total_time, total_time, 0);
-    wait(var_85678934);
+    wait var_85678934;
     goal.ball_in_goal = 0;
     self.visibleteam = "neutral";
     self gameobjects::function_85576d4d("friendly", 0);
     self gameobjects::function_85576d4d("enemy", 0);
     self gameobjects::update_objective();
     visual movez(4000, var_55f7566e, var_55f7566e * 0.1, 0);
-    wait(var_55f7566e);
+    wait var_55f7566e;
     self thread gameobjects::return_home();
 }
 
@@ -1065,7 +1065,7 @@ function function_7cd85c83() {
     self gameobjects::function_85576d4d("friendly", 1);
     self gameobjects::function_85576d4d("enemy", 1);
     self gameobjects::update_objective();
-    wait(fall_time);
+    wait fall_time;
     self gameobjects::set_flags(0);
     level clientfield::set("ball_away", 0);
     playfxontag("ui/fx_uplink_ball_trail", visual, "tag_origin");
@@ -1109,7 +1109,7 @@ function ball_pass_watch() {
         self thread ball_pass_or_throw_active();
         pass_target = self.pass_target;
         var_bd2ced7c = self.pass_target.origin;
-        wait(0.15);
+        wait 0.15;
         if (isdefined(self.pass_target)) {
             pass_target = self.pass_target;
             self.carryobject thread ball_pass_projectile(self, pass_target, var_bd2ced7c);
@@ -1227,7 +1227,7 @@ function function_40dff2cd(trigger) {
             }
         }
         self.balldropdelay = undefined;
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1277,7 +1277,7 @@ function ball_check_pass_kill_pickup(carryobj) {
 // Size: 0x2a
 function timer_run(time) {
     self endon(#"hash_a5c97639");
-    wait(time);
+    wait time;
     self notify(#"hash_88be9d37");
 }
 
@@ -1300,10 +1300,10 @@ function adjust_for_stance(ball) {
     while (isdefined(target) && isdefined(ball)) {
         var_e13766c7 = 50;
         switch (target getstance()) {
-        case 129:
+        case "crouch":
             var_e13766c7 = 30;
             break;
-        case 130:
+        case "prone":
             var_e13766c7 = 15;
             break;
         }
@@ -1311,7 +1311,7 @@ function adjust_for_stance(ball) {
             ball ballsettarget(target, (0, 0, var_e13766c7));
             var_e13766c7 = var_5fe7ebc7;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1430,7 +1430,7 @@ function ball_pass_or_throw_active() {
     self.pass_or_throw_active = 1;
     self allowmelee(0);
     while (getweapon("ball") == self getcurrentweapon()) {
-        wait(0.05);
+        wait 0.05;
     }
     self allowmelee(1);
     self.pass_or_throw_active = 0;
@@ -1530,7 +1530,7 @@ function function_96acd1aa() {
                 return;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1578,7 +1578,7 @@ function function_859e9fab() {
     var_a75918ba = level.ball_goals[util::getotherteam(self.lastcarrierteam)];
     while (true) {
         if (!var_a75918ba function_ce3bd9c9()) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         var_c64dfe9a = self.visuals[0];
@@ -1594,7 +1594,7 @@ function function_859e9fab() {
                 return;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1708,7 +1708,7 @@ function function_6746e980(projectile, timeout) {
     projectile endon(#"stationary");
     ret = self util::waittill_any_timeout(timeout, "reset", "pickup_object", "score_event");
     if (ret != "timeout" && isdefined(projectile)) {
-        projectile notify(#"hash_1be2c5a9");
+        projectile notify(#"abort_ball_physics");
     }
 }
 
@@ -1726,7 +1726,7 @@ function ball_physics_timeout() {
         var_394347f7 = 15;
     }
     if (isdefined(self.projectile)) {
-        self.projectile endon(#"hash_1be2c5a9");
+        self.projectile endon(#"abort_ball_physics");
         self thread function_6746e980(self.projectile, var_394347f7);
         var_2615ab42 = self.projectile util::waittill_any_timeout(var_394347f7, "stationary", "abort_ball_physics");
         if (!isdefined(var_2615ab42)) {
@@ -1734,7 +1734,7 @@ function ball_physics_timeout() {
         }
         if (var_2615ab42 == "stationary") {
             if (isdefined(self.autoresettime)) {
-                wait(self.autoresettime);
+                wait self.autoresettime;
             }
         }
     }
@@ -1804,7 +1804,7 @@ function player_update_pass_target(var_afffeadd) {
             }
         }
         self player_set_pass_target(new_target);
-        wait(0.05);
+        wait 0.05;
     }
 }
 

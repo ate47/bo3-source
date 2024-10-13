@@ -45,7 +45,7 @@ function start_gametype() {
     waittillframeend();
     if (can_process_contracts()) {
         /#
-            execdevgui("killed_hero_ability_enemy");
+            execdevgui("<dev string:x28>");
         #/
         challenges::registerchallengescallback("playerKilled", &contract_kills);
         challenges::registerchallengescallback("gameEnd", &function_ed438349);
@@ -139,9 +139,9 @@ function setup_player_contracts() {
         level endon(#"watch_contract_debug_singleton");
         level endon(#"game_ended");
         while (true) {
-            if (getdvarint("killed_hero_ability_enemy") > 0) {
+            if (getdvarint("<dev string:x46>") > 0) {
                 if (isdefined(level.players)) {
-                    new_index = getdvarint("killed_hero_ability_enemy", 0);
+                    new_index = getdvarint("<dev string:x68>", 0);
                     foreach (player in level.players) {
                         if (!isdefined(player)) {
                             continue;
@@ -150,17 +150,17 @@ function setup_player_contracts() {
                             continue;
                         }
                         for (slot = 0; slot < 10; slot++) {
-                            player function_4596db81(slot, "killed_hero_ability_enemy", 0);
+                            player function_4596db81(slot, "<dev string:x84>", 0);
                         }
-                        iprintln("killed_hero_ability_enemy" + player.name);
+                        iprintln("<dev string:x8b>" + player.name);
                         player setup_player_contracts();
                     }
                 }
-                setdvar("killed_hero_ability_enemy", 0);
+                setdvar("<dev string:x46>", 0);
             }
-            if (getdvarint("killed_hero_ability_enemy", 0) > 0) {
+            if (getdvarint("<dev string:x68>", 0) > 0) {
                 if (isdefined(level.players)) {
-                    new_index = getdvarint("killed_hero_ability_enemy", 0);
+                    new_index = getdvarint("<dev string:x68>", 0);
                     foreach (player in level.players) {
                         if (!isdefined(player)) {
                             continue;
@@ -168,21 +168,21 @@ function setup_player_contracts() {
                         if (player util::is_bot()) {
                             continue;
                         }
-                        var_593adc20 = getdvarint("killed_hero_ability_enemy", 9);
-                        player function_4596db81(var_593adc20, "killed_hero_ability_enemy", 1);
-                        player function_4596db81(var_593adc20, "killed_hero_ability_enemy", new_index);
-                        player function_4596db81(var_593adc20, "killed_hero_ability_enemy", 0);
-                        player function_4596db81(var_593adc20, "killed_hero_ability_enemy", 0);
+                        var_593adc20 = getdvarint("<dev string:xaf>", 9);
+                        player function_4596db81(var_593adc20, "<dev string:x84>", 1);
+                        player function_4596db81(var_593adc20, "<dev string:xc7>", new_index);
+                        player function_4596db81(var_593adc20, "<dev string:xcd>", 0);
+                        player function_4596db81(var_593adc20, "<dev string:xd6>", 0);
                         player setup_player_contracts();
-                        iprintln("killed_hero_ability_enemy" + var_593adc20 + "killed_hero_ability_enemy" + new_index + "killed_hero_ability_enemy" + player.name + "killed_hero_ability_enemy");
+                        iprintln("<dev string:xe2>" + var_593adc20 + "<dev string:xf1>" + new_index + "<dev string:x106>" + player.name + "<dev string:x10c>");
                     }
                 }
-                setdvar("killed_hero_ability_enemy", 0);
+                setdvar("<dev string:x68>", 0);
             }
-            if (getdvarint("killed_hero_ability_enemy", 0) > 0) {
+            if (getdvarint("<dev string:x11e>", 0) > 0) {
                 if (isdefined(level.players)) {
-                    var_593adc20 = getdvarint("killed_hero_ability_enemy", 9);
-                    iprintln("killed_hero_ability_enemy");
+                    var_593adc20 = getdvarint("<dev string:xaf>", 9);
+                    iprintln("<dev string:x141>");
                     foreach (player in level.players) {
                         if (!isdefined(player)) {
                             continue;
@@ -191,25 +191,25 @@ function setup_player_contracts() {
                             continue;
                         }
                         if (var_593adc20 >= 3) {
-                            player function_4596db81(var_593adc20, "killed_hero_ability_enemy", 0);
+                            player function_4596db81(var_593adc20, "<dev string:x84>", 0);
                             player setup_player_contracts();
-                            iprintln("killed_hero_ability_enemy" + var_593adc20 + "killed_hero_ability_enemy" + player.name);
+                            iprintln("<dev string:xe2>" + var_593adc20 + "<dev string:x154>" + player.name);
                             continue;
                         }
-                        iprintln("killed_hero_ability_enemy" + var_593adc20 + "killed_hero_ability_enemy" + player.name);
+                        iprintln("<dev string:xe2>" + var_593adc20 + "<dev string:x166>" + player.name);
                     }
                 }
-                setdvar("killed_hero_ability_enemy", 0);
+                setdvar("<dev string:x11e>", 0);
             }
-            if (getdvarint("killed_hero_ability_enemy", 0) > 0) {
-                iprintln("killed_hero_ability_enemy");
-                setdvar("killed_hero_ability_enemy", 0);
+            if (getdvarint("<dev string:x178>", 0) > 0) {
+                iprintln("<dev string:x198>");
+                setdvar("<dev string:x178>", 0);
             }
-            if (getdvarint("killed_hero_ability_enemy", 0) > 0) {
-                iprintln("killed_hero_ability_enemy");
-                setdvar("killed_hero_ability_enemy", 0);
+            if (getdvarint("<dev string:x1c8>", 0) > 0) {
+                iprintln("<dev string:x1e2>");
+                setdvar("<dev string:x1c8>", 0);
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 
@@ -335,30 +335,30 @@ function contract_kills(data) {
     if (player isitempurchased(var_aedadde)) {
         weaponclass = util::getweaponclass(weapon);
         switch (weaponclass) {
-        case 16:
+        case "weapon_assault":
             player function_159cc09f(1019);
             player function_159cc09f(3001);
             break;
-        case 21:
+        case "weapon_smg":
             player function_159cc09f(1020);
             player function_159cc09f(3000);
             break;
-        case 22:
+        case "weapon_sniper":
             player function_159cc09f(1021);
             player function_159cc09f(3004);
             break;
-        case 19:
+        case "weapon_lmg":
             player function_159cc09f(1022);
             player function_159cc09f(3003);
             break;
-        case 17:
+        case "weapon_cqb":
             player function_159cc09f(1023);
             player function_159cc09f(3002);
             break;
-        case 20:
+        case "weapon_pistol":
             player function_159cc09f(1024);
             break;
-        case 18:
+        case "weapon_knife":
             player function_159cc09f(3005);
             break;
         default:
@@ -392,8 +392,8 @@ function function_393b42c0(var_62d51442, delta) {
     slot = self.pers["contracts"][var_62d51442].slot;
     target_value = self.pers["contracts"][var_62d51442].target_value;
     /#
-        if (getdvarint("killed_hero_ability_enemy", 0) > 0) {
-            delta *= getdvarint("killed_hero_ability_enemy", 1);
+        if (getdvarint("<dev string:x208>", 0) > 0) {
+            delta *= getdvarint("<dev string:x208>", 1);
         }
     #/
     old_progress = get_contract_stat(slot, "progress");
@@ -448,10 +448,10 @@ function function_393b42c0(var_62d51442, delta) {
             self function_4596db81(3, "award_given", 1);
         }
         /#
-            var_593adc20 = getdvarint("killed_hero_ability_enemy", 9);
+            var_593adc20 = getdvarint("<dev string:xaf>", 9);
             if (slot == var_593adc20) {
                 if (var_62d51442 >= 1000 && var_62d51442 <= 2999) {
-                    event = %killed_hero_ability_enemy;
+                    event = %"<dev string:x226>";
                 }
                 var_4836ff5c = 1;
             }
@@ -459,8 +459,8 @@ function function_393b42c0(var_62d51442, delta) {
         self luinotifyevent(event, 2, var_62d51442, var_4836ff5c);
     }
     /#
-        if (getdvarint("killed_hero_ability_enemy", 0) > 0) {
-            iprintln("killed_hero_ability_enemy" + slot + "killed_hero_ability_enemy" + var_62d51442 + "killed_hero_ability_enemy" + new_progress + "killed_hero_ability_enemy" + target_value);
+        if (getdvarint("<dev string:x242>", 0) > 0) {
+            iprintln("<dev string:xe2>" + slot + "<dev string:x255>" + var_62d51442 + "<dev string:x263>" + new_progress + "<dev string:x26f>" + target_value);
         }
     #/
 }
@@ -543,7 +543,7 @@ function function_5e31a160(var_f059acbf, stat_value) {
     case 5:
         return self setdstat(var_c197d1f4, var_339f412f, var_d9cc6c6, var_4f9062b9, var_298de850, stat_value);
     default:
-        assertmsg("killed_hero_ability_enemy" + var_9a7d7935.size + "killed_hero_ability_enemy");
+        assertmsg("<dev string:x271>" + var_9a7d7935.size + "<dev string:x285>");
         break;
     }
 }
@@ -576,30 +576,30 @@ function get_hero_weapon_mask(attacker, weapon) {
         return 0;
     }
     switch (weapon.name) {
-    case 44:
-    case 45:
+    case "hero_minigun":
+    case "hero_minigun_body3":
         return 1;
-    case 40:
+    case "hero_flamethrower":
         return 2;
-    case 42:
-    case 43:
+    case "hero_lightninggun":
+    case "hero_lightninggun_arc":
         return 4;
-    case 38:
-    case 39:
+    case "hero_chemicalgelgun":
+    case "hero_firefly_swarm":
         return 8;
-    case 46:
-    case 47:
+    case "hero_pineapple_grenade":
+    case "hero_pineapplegun":
         return 16;
-    case 33:
+    case "hero_armblade":
         return 32;
-    case 34:
-    case 35:
-    case 36:
-    case 37:
+    case "hero_bowlauncher":
+    case "hero_bowlauncher2":
+    case "hero_bowlauncher3":
+    case "hero_bowlauncher4":
         return 64;
-    case 41:
+    case "hero_gravityspikes":
         return -128;
-    case 32:
+    case "hero_annihilator":
         return 256;
     default:
         return 0;
@@ -615,23 +615,23 @@ function get_hero_ability_mask(ability) {
         return 0;
     }
     switch (ability.name) {
-    case 50:
+    case "gadget_clone":
         return 1;
-    case 53:
+    case "gadget_heat_wave":
         return 2;
-    case 52:
+    case "gadget_flashback":
         return 4;
-    case 54:
+    case "gadget_resurrect":
         return 8;
-    case 48:
+    case "gadget_armor":
         return 16;
-    case 49:
+    case "gadget_camo":
         return 32;
-    case 56:
+    case "gadget_vision_pulse":
         return 64;
-    case 55:
+    case "gadget_speed_burst":
         return -128;
-    case 51:
+    case "gadget_combat_efficiency":
         return 256;
     default:
         return 0;
@@ -690,37 +690,37 @@ function contract_win(winner) {
 // Size: 0x1e2
 function function_6bbf5440(winner) {
     switch (level.gametype) {
-    case 67:
+    case "tdm":
         winner function_159cc09f(1002);
         break;
-    case 57:
+    case "ball":
         winner function_159cc09f(1003);
         break;
-    case 64:
+    case "escort":
         winner function_159cc09f(1004);
         break;
-    case 59:
+    case "conf":
         winner function_159cc09f(1005);
         break;
-    case 66:
+    case "sd":
         winner function_159cc09f(1006);
         break;
-    case 65:
+    case "koth":
         winner function_159cc09f(1007);
         break;
-    case 63:
+    case "dom":
         winner function_159cc09f(1008);
         break;
-    case 60:
+    case "ctf":
         winner function_159cc09f(1026);
         break;
-    case 61:
+    case "dem":
         winner function_159cc09f(1027);
         break;
-    case 62:
+    case "dm":
         winner function_159cc09f(1028);
         break;
-    case 58:
+    case "clean":
         winner function_159cc09f(1029);
         break;
     default:

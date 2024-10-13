@@ -71,7 +71,7 @@ function player_health_regen() {
     hurttime = 0;
     newhealth = 0;
     for (;;) {
-        wait(0.05);
+        wait 0.05;
         if (isdefined(self.healthregendisabled) && self.healthregendisabled) {
             continue;
         }
@@ -181,10 +181,10 @@ function decay_player_damages(decay) {
 // Size: 0xe2
 function player_breathing_sound(healthcap) {
     self endon(#"end_healthregen");
-    wait(2);
+    wait 2;
     player = self;
     for (;;) {
-        wait(0.2);
+        wait 0.2;
         if (player.health <= 0) {
             return;
         }
@@ -198,8 +198,8 @@ function player_breathing_sound(healthcap) {
             continue;
         }
         player notify(#"snd_breathing_hurt");
-        wait(0.784);
-        wait(0.1 + randomfloat(0.8));
+        wait 0.784;
+        wait 0.1 + randomfloat(0.8);
     }
 }
 
@@ -210,10 +210,10 @@ function player_breathing_sound(healthcap) {
 function player_heartbeat_sound(healthcap) {
     self endon(#"end_healthregen");
     self.hearbeatwait = 0.2;
-    wait(2);
+    wait 2;
     player = self;
     for (;;) {
-        wait(0.2);
+        wait 0.2;
         if (player.health <= 0) {
             return;
         }
@@ -229,7 +229,7 @@ function player_heartbeat_sound(healthcap) {
             continue;
         }
         player playlocalsound("mpl_player_heartbeat");
-        wait(self.hearbeatwait);
+        wait self.hearbeatwait;
         if (self.hearbeatwait <= 0.6) {
             self.hearbeatwait += 0.1;
         }

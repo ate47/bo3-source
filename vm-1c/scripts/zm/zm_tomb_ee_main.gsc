@@ -27,9 +27,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_69d27510;
+#namespace zm_tomb_ee_main;
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 0, eflags: 0x1 linked
 // Checksum 0xafea48ff, Offset: 0x8d0
 // Size: 0x374
@@ -57,17 +57,17 @@ function init() {
         level thread function_670b87e0();
     #/
     namespace_6e97c459::function_f59cfc65("little_girl_lost", &function_bb41e83b, &function_9b08126d, &function_e4eeb8b4, &function_c1d310ea, &function_cbdd7a61);
-    namespace_a159a601::init();
-    namespace_c75c206a::init();
-    namespace_ed5e9ad3::init();
-    namespace_1361153c::init();
-    namespace_39638fa5::init();
-    namespace_5f660a0e::init();
-    namespace_85688477::init();
-    namespace_4b435850::init();
+    zm_tomb_ee_main_step_1::init();
+    zm_tomb_ee_main_step_2::init();
+    zm_tomb_ee_main_step_3::init();
+    zm_tomb_ee_main_step_4::init();
+    zm_tomb_ee_main_step_5::init();
+    zm_tomb_ee_main_step_6::init();
+    zm_tomb_ee_main_step_7::init();
+    zm_tomb_ee_main_step_8::init();
 }
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4bdea872, Offset: 0xc50
 // Size: 0x3c
@@ -76,7 +76,7 @@ function main() {
     namespace_6e97c459::function_d9be8a5b("little_girl_lost");
 }
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa387ee0f, Offset: 0xc98
 // Size: 0x1c
@@ -85,7 +85,7 @@ function function_bb41e83b() {
     level.var_5ec263fe = 0;
 }
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa87c316, Offset: 0xcc0
 // Size: 0x280
@@ -99,27 +99,27 @@ function function_9b08126d() {
     level waittill(#"hash_e0898539");
     namespace_6e97c459::function_c09cb660("little_girl_lost", "step_2");
     level waittill(#"hash_dc144054");
-    level thread namespace_54a425fe::function_23155012("ee_main_1");
+    level thread zm_tomb_amb::function_23155012("ee_main_1");
     namespace_6e97c459::function_c09cb660("little_girl_lost", "step_3");
     level waittill(#"hash_972e03ef");
-    level thread namespace_54a425fe::function_23155012("ee_main_2");
+    level thread zm_tomb_amb::function_23155012("ee_main_2");
     namespace_6e97c459::function_c09cb660("little_girl_lost", "step_4");
     level waittill(#"hash_f397975a");
-    level thread namespace_54a425fe::function_23155012("ee_main_3");
+    level thread zm_tomb_amb::function_23155012("ee_main_3");
     namespace_6e97c459::function_c09cb660("little_girl_lost", "step_5");
     level waittill(#"hash_5fff9bfd");
-    level thread namespace_54a425fe::function_23155012("ee_main_4");
+    level thread zm_tomb_amb::function_23155012("ee_main_4");
     namespace_6e97c459::function_c09cb660("little_girl_lost", "step_6");
     level waittill(#"hash_9130e1d8");
-    level thread namespace_54a425fe::function_23155012("ee_main_5");
+    level thread zm_tomb_amb::function_23155012("ee_main_5");
     namespace_6e97c459::function_c09cb660("little_girl_lost", "step_7");
     level waittill(#"hash_26f53c83");
-    level thread namespace_54a425fe::function_23155012("ee_main_6");
+    level thread zm_tomb_amb::function_23155012("ee_main_6");
     namespace_6e97c459::function_c09cb660("little_girl_lost", "step_8");
     level waittill(#"hash_11477e");
 }
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9543f944, Offset: 0xf48
 // Size: 0x3e0
@@ -138,51 +138,51 @@ function function_de11f1ca() {
             }
         }
         if (!var_4e3c2af6[e_player.characterindex]) {
-            wait(randomfloatrange(3, 7));
+            wait randomfloatrange(3, 7);
             if (isdefined(e_player.var_98401a1a) && e_player.var_98401a1a) {
                 continue;
             }
             while (isdefined(level.var_8c80bd85) && level.var_8c80bd85) {
-                wait(0.05);
+                wait 0.05;
             }
             if (isdefined(e_player) && isplayer(e_player) && e_player.zombie_vars["zombie_powerup_zombie_blood_on"]) {
                 var_4e3c2af6[e_player.characterindex] = 1;
-                namespace_ad52727b::function_eee384d4(1);
+                zm_tomb_vo::function_eee384d4(1);
                 level.var_8c80bd85 = 1;
                 str_vox = function_5a1bf759();
                 e_player playsoundtoplayer(str_vox, e_player);
                 n_duration = soundgetplaybacktime(str_vox);
-                wait(n_duration / 1000);
+                wait n_duration / 1000;
                 level.var_8c80bd85 = 0;
-                namespace_ad52727b::function_eee384d4(0);
+                zm_tomb_vo::function_eee384d4(0);
             }
             continue;
         }
         if (randomint(100) < 20) {
-            wait(randomfloatrange(3, 7));
+            wait randomfloatrange(3, 7);
             if (isdefined(e_player.var_98401a1a) && e_player.var_98401a1a) {
                 continue;
             }
             while (isdefined(level.var_8c80bd85) && level.var_8c80bd85) {
-                wait(0.05);
+                wait 0.05;
             }
             if (isdefined(e_player) && isplayer(e_player) && e_player.zombie_vars["zombie_powerup_zombie_blood_on"]) {
                 str_vox = function_dd614043();
                 if (isdefined(str_vox)) {
-                    namespace_ad52727b::function_eee384d4(1);
+                    zm_tomb_vo::function_eee384d4(1);
                     level.var_8c80bd85 = 1;
                     e_player playsoundtoplayer(str_vox, e_player);
                     n_duration = soundgetplaybacktime(str_vox);
-                    wait(n_duration / 1000);
+                    wait n_duration / 1000;
                     level.var_8c80bd85 = 0;
-                    namespace_ad52727b::function_eee384d4(0);
+                    zm_tomb_vo::function_eee384d4(0);
                 }
             }
         }
     }
 }
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa1c5980f, Offset: 0x1330
 // Size: 0x4e
@@ -207,7 +207,7 @@ function function_95a742c() {
     }
 }
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd702fb28, Offset: 0x13d0
 // Size: 0x5c
@@ -218,7 +218,7 @@ function function_5a1bf759() {
     return "vox_sam_upgrade_staff_clue_" + level.var_102fa6cf + "_grbld_0";
 }
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcdebaaa4, Offset: 0x1438
 // Size: 0xd8
@@ -240,7 +240,7 @@ function function_dd614043() {
     return str_vo;
 }
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 0, eflags: 0x1 linked
 // Checksum 0x32d747dd, Offset: 0x1518
 // Size: 0x2ea
@@ -263,14 +263,14 @@ function function_e4eeb8b4() {
     level.custom_intermission = &function_94bc582e;
     level notify(#"end_game");
     level thread lui::screen_fade_in(2, "black", "starting_ee_screen");
-    wait(1.5);
+    wait 1.5;
     foreach (player in a_players) {
         player freezecontrols(0);
         player disableinvulnerability();
     }
 }
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 1, eflags: 0x0
 // Checksum 0x1fbca3d, Offset: 0x1810
 // Size: 0x2c
@@ -279,7 +279,7 @@ function function_202bf99e(var_87423d00) {
     self lui::screen_fade_in(var_87423d00);
 }
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 0, eflags: 0x1 linked
 // Checksum 0x18a1cb50, Offset: 0x1848
 // Size: 0x2c
@@ -289,7 +289,7 @@ function function_126afda0() {
     }
 }
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdd48341, Offset: 0x1880
 // Size: 0x44
@@ -300,7 +300,7 @@ function function_c1d310ea() {
     }
 }
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2be560b1, Offset: 0x18d0
 // Size: 0x5c
@@ -313,14 +313,14 @@ function function_cbdd7a61() {
     util::wait_network_frame();
 }
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe989e181, Offset: 0x1938
 // Size: 0xc6
 function function_f8ba2e08() {
     var_c88bbd58 = 0;
-    foreach (var_d16491f1 in level.var_b0d8f1fe) {
-        if (var_d16491f1.upgrade.var_43f3f5e5.var_2d46dee8) {
+    foreach (staff in level.var_b0d8f1fe) {
+        if (staff.upgrade.var_43f3f5e5.var_2d46dee8) {
             var_c88bbd58++;
         }
     }
@@ -330,20 +330,20 @@ function function_f8ba2e08() {
     return 0;
 }
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc5cb19d3, Offset: 0x1a08
 // Size: 0xcc
 function function_13f8b19b(str_vox) {
     level flag::wait_till_clear("story_vo_playing");
     level flag::set("story_vo_playing");
-    namespace_ad52727b::function_eee384d4(1);
-    namespace_ad52727b::function_10d15bb5(str_vox, getplayers()[0]);
-    namespace_ad52727b::function_eee384d4(0);
+    zm_tomb_vo::function_eee384d4(1);
+    zm_tomb_vo::function_10d15bb5(str_vox, getplayers()[0]);
+    zm_tomb_vo::function_eee384d4(0);
     level flag::clear("story_vo_playing");
 }
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 0, eflags: 0x1 linked
 // Checksum 0xde1d59b2, Offset: 0x1ae0
 // Size: 0x622
@@ -364,7 +364,7 @@ function function_94bc582e() {
     if (!isdefined(points) || points.size == 0) {
         points = getentarray("info_intermission", "classname");
         if (points.size < 1) {
-            println("TombEndGameBlackScreen");
+            println("<dev string:x28>");
             return;
         }
     }
@@ -410,15 +410,15 @@ function function_94bc582e() {
                 self.var_bff517de.alpha = 0;
                 org moveto(target_point.origin, time, var_57ae7e4a, var_57ae7e4a);
                 org rotateto(target_point.angles, time, var_57ae7e4a, var_57ae7e4a);
-                wait(time - var_57ae7e4a);
+                wait time - var_57ae7e4a;
                 self.var_bff517de fadeovertime(var_57ae7e4a);
                 self.var_bff517de.alpha = 1;
-                wait(var_57ae7e4a);
+                wait var_57ae7e4a;
                 continue;
             }
             self.var_bff517de fadeovertime(1);
             self.var_bff517de.alpha = 0;
-            wait(5);
+            wait 5;
             self.var_bff517de thread zm::fade_up_over_time(1);
         }
     }
@@ -426,108 +426,108 @@ function function_94bc582e() {
 
 /#
 
-    // Namespace namespace_69d27510
+    // Namespace zm_tomb_ee_main
     // Params 0, eflags: 0x1 linked
     // Checksum 0xf901b9c4, Offset: 0x2110
     // Size: 0x1ec
     function function_670b87e0() {
-        wait(5);
+        wait 5;
         b_activated = 0;
         while (!b_activated) {
             foreach (player in getplayers()) {
                 if (distance2d(player.origin, (2904, 5040, -336)) < 100 && player usebuttonpressed()) {
-                    wait(2);
+                    wait 2;
                     if (player usebuttonpressed()) {
                         b_activated = 1;
                     }
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
-        setdvar("TombEndGameBlackScreen", "TombEndGameBlackScreen");
-        setdvar("TombEndGameBlackScreen", "TombEndGameBlackScreen");
-        setdvar("TombEndGameBlackScreen", "TombEndGameBlackScreen");
-        adddebugcommand("TombEndGameBlackScreen");
-        adddebugcommand("TombEndGameBlackScreen");
-        adddebugcommand("TombEndGameBlackScreen");
+        setdvar("<dev string:x4b>", "<dev string:x5c>");
+        setdvar("<dev string:x60>", "<dev string:x5c>");
+        setdvar("<dev string:x72>", "<dev string:x5c>");
+        adddebugcommand("<dev string:x84>");
+        adddebugcommand("<dev string:xc4>");
+        adddebugcommand("<dev string:x10a>");
         level thread function_6783db5c();
     }
 
-    // Namespace namespace_69d27510
+    // Namespace zm_tomb_ee_main
     // Params 0, eflags: 0x1 linked
     // Checksum 0x19a833d3, Offset: 0x2308
     // Size: 0x478
     function function_6783db5c() {
         while (true) {
-            if (getdvarstring("TombEndGameBlackScreen") == "TombEndGameBlackScreen") {
-                setdvar("TombEndGameBlackScreen", "TombEndGameBlackScreen");
+            if (getdvarstring("<dev string:x4b>") == "<dev string:x14b>") {
+                setdvar("<dev string:x4b>", "<dev string:x5c>");
                 level.var_89b873d7 = 1;
-                level flag::set("TombEndGameBlackScreen");
+                level flag::set("<dev string:x14e>");
                 switch (level.var_ca733eed) {
-                case 8:
-                    level flag::set("TombEndGameBlackScreen");
-                    level flag::set("TombEndGameBlackScreen");
+                case "<dev string:x162>":
+                    level flag::set("<dev string:x169>");
+                    level flag::set("<dev string:x17f>");
                     break;
-                case 8:
-                    level flag::set("TombEndGameBlackScreen");
+                case "<dev string:x192>":
+                    level flag::set("<dev string:x199>");
                     level waittill(#"hash_e0898539");
                     break;
-                case 8:
-                    level flag::set("TombEndGameBlackScreen");
+                case "<dev string:x1b0>":
+                    level flag::set("<dev string:x1b7>");
                     level waittill(#"hash_dc144054");
                     break;
-                case 8:
-                    level flag::set("TombEndGameBlackScreen");
-                    var_7bf7eda5 = getent("TombEndGameBlackScreen", "TombEndGameBlackScreen");
+                case "<dev string:x1cc>":
+                    level flag::set("<dev string:x1d3>");
+                    var_7bf7eda5 = getent("<dev string:x1ee>", "<dev string:x206>");
                     if (isdefined(var_7bf7eda5)) {
                         var_7bf7eda5 delete();
                     }
                     level waittill(#"hash_972e03ef");
                     break;
-                case 8:
-                    level flag::set("TombEndGameBlackScreen");
-                    level flag::set("TombEndGameBlackScreen");
+                case "<dev string:x211>":
+                    level flag::set("<dev string:x218>");
+                    level flag::set("<dev string:x237>");
                     level waittill(#"hash_f397975a");
                     break;
-                case 8:
-                    level flag::set("TombEndGameBlackScreen");
-                    level flag::clear("TombEndGameBlackScreen");
+                case "<dev string:x24d>":
+                    level flag::set("<dev string:x254>");
+                    level flag::clear("<dev string:x237>");
                     level waittill(#"hash_5fff9bfd");
                     break;
-                case 8:
-                    level flag::set("TombEndGameBlackScreen");
+                case "<dev string:x26d>":
+                    level flag::set("<dev string:x274>");
                     level waittill(#"hash_9130e1d8");
                     break;
-                case 8:
-                    level flag::set("TombEndGameBlackScreen");
+                case "<dev string:x292>":
+                    level flag::set("<dev string:x299>");
                     level waittill(#"hash_26f53c83");
                     break;
-                case 8:
-                    level flag::set("TombEndGameBlackScreen");
+                case "<dev string:x2ab>":
+                    level flag::set("<dev string:x237>");
                     level waittill(#"hash_11477e");
                     break;
                 default:
                     break;
                 }
             }
-            if (getdvarstring("TombEndGameBlackScreen") == "TombEndGameBlackScreen") {
-                setdvar("TombEndGameBlackScreen", "TombEndGameBlackScreen");
-                level clientfield::set("TombEndGameBlackScreen", 2);
+            if (getdvarstring("<dev string:x60>") == "<dev string:x14b>") {
+                setdvar("<dev string:x60>", "<dev string:x5c>");
+                level clientfield::set("<dev string:x2b2>", 2);
                 function_e4eeb8b4();
             }
-            if (getdvarstring("TombEndGameBlackScreen") == "TombEndGameBlackScreen") {
-                setdvar("TombEndGameBlackScreen", "TombEndGameBlackScreen");
-                setdvar("TombEndGameBlackScreen", "TombEndGameBlackScreen");
-                level flag::set("TombEndGameBlackScreen");
-                array::thread_all(getplayers(), &zm_weapons::weapon_give, "TombEndGameBlackScreen");
+            if (getdvarstring("<dev string:x72>") == "<dev string:x14b>") {
+                setdvar("<dev string:x72>", "<dev string:x5c>");
+                setdvar("<dev string:x2c0>", "<dev string:x14b>");
+                level flag::set("<dev string:x2d8>");
+                array::thread_all(getplayers(), &zm_weapons::weapon_give, "<dev string:x2ea>");
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
 #/
 
-// Namespace namespace_69d27510
+// Namespace zm_tomb_ee_main
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf95ea982, Offset: 0x2788
 // Size: 0x1a2

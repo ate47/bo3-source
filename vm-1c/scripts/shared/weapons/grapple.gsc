@@ -64,7 +64,7 @@ function function_80c05bda() {
     self thread function_c83c076b("weapon_switch_started", "grapple_weapon_change");
     self thread function_c83c076b("weapon_change_complete", "grapple_weapon_change");
     while (true) {
-        event, weapon = self waittill(#"hash_17cf4048");
+        event, weapon = self waittill(#"grapple_weapon_change");
         if (isdefined(weapon.grappleweapon) && weapon.grappleweapon) {
             self thread watch_lockon(weapon);
             continue;
@@ -88,13 +88,13 @@ function watch_lockon(weapon) {
     self thread function_525a420a(weapon);
     self.var_e3c5dfe4 = 1;
     while (true) {
-        wait(0.05);
+        wait 0.05;
         if (!self isgrappling()) {
             target = self function_43c5e4e9(weapon);
             if (!self isgrappling() && !(target === self.lockonentity)) {
                 self weaponlocknoclearance(!(target === self.dummy_target));
                 self.lockonentity = target;
-                wait(0.1);
+                wait 0.1;
             }
         }
     }
@@ -132,7 +132,7 @@ function function_4f0d1ede(weapon) {
     self notify(#"hash_4f0d1ede");
     self endon(#"hash_4f0d1ede");
     while (true) {
-        wait(0.05);
+        wait 0.05;
         if (!self isgrappling()) {
             if (isdefined(self.lockonentity)) {
                 if (self.lockonentity === self.dummy_target) {
@@ -198,7 +198,7 @@ function function_43c5e4e9(weapon) {
     }
     for (i = 0; i < targets.size; i++) {
         if (var_827c64dc >= var_e5e6ca10) {
-            wait(0.05);
+            wait 0.05;
             origin = self getweaponmuzzlepoint();
             forward = self getweaponforwarddir();
             var_827c64dc = 0;
@@ -331,7 +331,7 @@ function can_see(target, target_origin, player_origin, player_forward, distance)
     var_ab69552f = self trace(start, end, target);
     if (distance2dsquared(end, var_ab69552f) > 9) {
         /#
-            if (getdvarint("script_origin")) {
+            if (getdvarint("<dev string:x28>")) {
                 line(start, var_ab69552f, (0, 0, 1), 1, 0, 50);
                 line(var_ab69552f, end, (1, 0, 0), 1, 0, 50);
             }
@@ -339,7 +339,7 @@ function can_see(target, target_origin, player_origin, player_forward, distance)
         return false;
     }
     /#
-        if (getdvarint("script_origin")) {
+        if (getdvarint("<dev string:x28>")) {
             line(start, end, (0, 1, 0), 1, 0, 30);
         }
     #/

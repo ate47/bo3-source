@@ -1,9 +1,9 @@
 #using scripts/mp/teams/_teamset;
 #using scripts/codescripts/struct;
 
-#namespace namespace_5d42ff52;
+#namespace _teamset_allies;
 
-// Namespace namespace_5d42ff52
+// Namespace _teamset_allies
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5dc4ff5c, Offset: 0x2f8
 // Size: 0xdc
@@ -15,16 +15,16 @@ function main() {
         }
         init(team);
     }
-    namespace_5fc59ced::customteam_init();
+    _teamset::customteam_init();
     precache();
 }
 
-// Namespace namespace_5d42ff52
+// Namespace _teamset_allies
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9b5c461f, Offset: 0x3e0
 // Size: 0x30a
 function init(team) {
-    namespace_5fc59ced::init();
+    _teamset::init();
     game[team] = "allies";
     game["attackers"] = team;
     game["entity_headicon_" + team] = "faction_allies";
@@ -51,7 +51,7 @@ function init(team) {
     game["flagmodels"]["neutral"] = "p7_mp_flag_neutral";
 }
 
-// Namespace namespace_5d42ff52
+// Namespace _teamset_allies
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x6f8
 // Size: 0x4

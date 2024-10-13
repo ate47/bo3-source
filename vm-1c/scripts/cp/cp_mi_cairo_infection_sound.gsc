@@ -2,14 +2,14 @@
 #using scripts/shared/music_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_5fae4ea;
+#namespace cp_mi_cairo_infection_sound;
 
-// Namespace namespace_5fae4ea
+// Namespace cp_mi_cairo_infection_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd3ac33f8, Offset: 0x188
 // Size: 0x14
 function main() {
-    namespace_67bf0840::init_voice();
+    voice_infection1::init_voice();
 }
 
 #namespace namespace_eccdd5d1;
@@ -19,7 +19,7 @@ function main() {
 // Checksum 0x7e60b677, Offset: 0x1a8
 // Size: 0x24
 function function_14588839() {
-    wait(1);
+    wait 1;
     playsoundatposition("evt_baby_cry", (0, 0, 0));
 }
 

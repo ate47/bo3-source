@@ -10,9 +10,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_7b9f2aa5;
+#namespace _gadget_vision_pulse;
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 0, eflags: 0x2
 // Checksum 0xae6a0676, Offset: 0x330
 // Size: 0x34
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_vision_pulse", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf61282e1, Offset: 0x370
 // Size: 0x18c
@@ -39,7 +39,7 @@ function __init__() {
     visionset_mgr::register_info("visionset", "vision_pulse", 1, level.vsmgr_prio_visionset_visionpulse, 12, 1, &visionset_mgr::ramp_in_out_thread_per_player_death_shutdown, 0);
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7d450a1c, Offset: 0x508
 // Size: 0x2a
@@ -47,7 +47,7 @@ function gadget_vision_pulse_is_inuse(slot) {
     return self flagsys::get("gadget_vision_pulse_on");
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 1, eflags: 0x1 linked
 // Checksum 0xad0be0e1, Offset: 0x540
 // Size: 0x22
@@ -55,7 +55,7 @@ function gadget_vision_pulse_is_flickering(slot) {
     return self gadgetflickering(slot);
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc7215618, Offset: 0x570
 // Size: 0x34
@@ -63,7 +63,7 @@ function gadget_vision_pulse_on_flicker(slot, weapon) {
     self thread gadget_vision_pulse_flicker(slot, weapon);
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 2, eflags: 0x1 linked
 // Checksum 0x9806817f, Offset: 0x5b0
 // Size: 0x14
@@ -71,7 +71,7 @@ function function_97e4169e(slot, weapon) {
     
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc012e195, Offset: 0x5d0
 // Size: 0x14
@@ -79,7 +79,7 @@ function function_bfa5bd70(slot, weapon) {
     
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x5f0
 // Size: 0x4
@@ -87,7 +87,7 @@ function function_e8ada75() {
     
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2bac4722, Offset: 0x600
 // Size: 0x54
@@ -101,7 +101,7 @@ function gadget_vision_pulse_on_spawn() {
     }
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbd564a9c, Offset: 0x660
 // Size: 0x2c
@@ -109,7 +109,7 @@ function gadget_vision_pulse_ramp_hold_func() {
     self util::waittill_any_timeout(5, "ramp_out_visionset");
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8444d48, Offset: 0x698
 // Size: 0x84
@@ -124,7 +124,7 @@ function gadget_vision_pulse_watch_death() {
     }
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 0, eflags: 0x1 linked
 // Checksum 0x22298a1b, Offset: 0x728
 // Size: 0xb4
@@ -138,14 +138,14 @@ function gadget_vision_pulse_watch_emp() {
             self notify(#"emp_vp_jammed");
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
     if (isdefined(self._pulse_ent)) {
         self._pulse_ent delete();
     }
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc768c0d7, Offset: 0x7e8
 // Size: 0xec
@@ -161,7 +161,7 @@ function gadget_vision_pulse_on(slot, weapon) {
     self clientfield::set_to_player("vision_pulse_active", 1);
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 2, eflags: 0x1 linked
 // Checksum 0xd588acc0, Offset: 0x8e0
 // Size: 0x54
@@ -170,7 +170,7 @@ function gadget_vision_pulse_off(slot, weapon) {
     self clientfield::set_to_player("vision_pulse_active", 0);
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 2, eflags: 0x1 linked
 // Checksum 0xaa4e3154, Offset: 0x940
 // Size: 0x37c
@@ -178,7 +178,7 @@ function gadget_vision_pulse_start(slot, weapon) {
     self endon(#"disconnect");
     self endon(#"death");
     self endon(#"emp_vp_jammed");
-    wait(0.1);
+    wait 0.1;
     if (isdefined(self._pulse_ent)) {
         return;
     }
@@ -198,7 +198,7 @@ function gadget_vision_pulse_start(slot, weapon) {
     self.visionpulsespottedenemy = [];
     self.visionpulsespottedenemytime = gettime();
     for (i = 0; i < visionpulsearray.size; i++) {
-        if (visionpulsearray[i] namespace_411f3e3f::function_6b246a0f() == 0) {
+        if (visionpulsearray[i] _gadget_camo::function_6b246a0f() == 0) {
             self.visionpulsearray[self.visionpulsearray.size] = visionpulsearray[i];
             self.visionpulseoriginarray[self.visionpulseoriginarray.size] = visionpulsearray[i].origin;
             if (isalive(visionpulsearray[i]) && visionpulsearray[i].team != self.team) {
@@ -218,14 +218,14 @@ function gadget_vision_pulse_start(slot, weapon) {
     self._pulse_ent delete();
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 2, eflags: 0x1 linked
 // Checksum 0x3832dac6, Offset: 0xcc8
 // Size: 0x5e
 function wait_until_is_done(slot, timepulse) {
     starttime = gettime();
     while (true) {
-        wait(0.25);
+        wait 0.25;
         currenttime = gettime();
         if (currenttime > starttime + timepulse) {
             return;
@@ -233,7 +233,7 @@ function wait_until_is_done(slot, timepulse) {
     }
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 2, eflags: 0x1 linked
 // Checksum 0x4e5fe86b, Offset: 0xd30
 // Size: 0xec
@@ -250,11 +250,11 @@ function gadget_vision_pulse_flicker(slot, weapon) {
             set_gadget_vision_pulse_status("^2" + "Normal");
             return;
         }
-        wait(0.25);
+        wait 0.25;
     }
 }
 
-// Namespace namespace_7b9f2aa5
+// Namespace _gadget_vision_pulse
 // Params 2, eflags: 0x1 linked
 // Checksum 0xd4c6c904, Offset: 0xe28
 // Size: 0x9c

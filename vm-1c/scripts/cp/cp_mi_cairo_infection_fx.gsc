@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_dff03fd3;
+#namespace cp_mi_cairo_infection_fx;
 
-// Namespace namespace_dff03fd3
+// Namespace cp_mi_cairo_infection_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x98
 // Size: 0x4

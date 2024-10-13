@@ -121,7 +121,7 @@ function function_677ed44f(weapon) {
         target, attacker, damage, weapon, var_f3edfe76 = level waittill(#"rapid_strike");
         self notify(weapon.name + "_fired");
         level notify(weapon.name + "_fired");
-        wait(0.05);
+        wait 0.05;
         if (isdefined(target)) {
         }
         if (isplayer(self)) {

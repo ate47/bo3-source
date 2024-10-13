@@ -281,14 +281,14 @@ function gravityspikes_stuck_above_zombie_watcher(var_87f03818) {
     var_24411a70 = 1;
     while (zm_utility::is_player_valid(self)) {
         if (!self isslamming()) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         while (self isslamming() && self getcurrentweapon() == var_87f03818) {
             player_angles = self getplayerangles();
             forward_vec = anglestoforward((0, player_angles[1], 0));
             if (forward_vec[0] == 0 && forward_vec[1] == 0 && forward_vec[2] == 0) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             forward_right_45_vec = rotatepoint(forward_vec, (0, 45, 0));
@@ -313,23 +313,23 @@ function gravityspikes_stuck_above_zombie_watcher(var_87f03818) {
             for (i = 0; i < 3; i++) {
                 trace = bullettrace(start_point, var_38811738[i], 1, self);
                 /#
-                    if (getdvarint("counter", 0) > 0) {
+                    if (getdvarint("<dev string:x28>", 0) > 0) {
                         line(start_point, var_38811738[i], (1, 1, 1), 1, 0, 60);
-                        recordline(start_point, var_38811738[i], (1, 1, 1), "counter", self);
+                        recordline(start_point, var_38811738[i], (1, 1, 1), "<dev string:x4b>", self);
                     }
                 #/
                 if (trace["fraction"] < 1) {
                     if (trace["entity"].archetype == "zombie" || isactor(trace["entity"]) && trace["entity"].health > 0 && trace["entity"].archetype == "zombie_dog") {
                         self thread knockdown_zombies_slam();
                         self thread no_damage_gravityspikes_slam();
-                        wait(1);
+                        wait 1;
                         break;
                     }
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -433,9 +433,9 @@ function chop_zombies(first_time, leftswing, weapon) {
 // Size: 0x7c
 function function_b2b16b7b(player) {
     player thread chop_zombies(1, 1, self);
-    wait(0.3);
+    wait 0.3;
     player thread chop_zombies(0, 1, self);
-    wait(0.5);
+    wait 0.5;
     player thread chop_zombies(0, 0, self);
 }
 
@@ -473,7 +473,7 @@ function function_6b90b056(player) {
 function function_e0511e28(weapon) {
     self zm_hero_weapon::function_194811c8(weapon);
     self notify(#"hash_8851ed94");
-    self notify(#"hash_c34ebaf4");
+    self notify(#"gravityspikes_timer_end");
 }
 
 // Namespace zm_weap_gravityspikes
@@ -493,7 +493,7 @@ function player_invulnerable_during_gravityspike_slam(einflictor, eattacker, ida
 // Size: 0x24
 function no_damage_gravityspikes_slam() {
     self.gravityspikes_slam = 1;
-    wait(1.5);
+    wait 1.5;
     self.gravityspikes_slam = 0;
 }
 
@@ -516,7 +516,7 @@ function player_near_gravity_vortex(v_vortex_origin) {
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -531,7 +531,7 @@ function function_55a5024b(e_player, v_vortex_origin) {
     e_player.var_d4e1840f = 1;
     e_player clientfield::set_to_player("gravity_trap_rumble", 1);
     while (distance(e_player.origin, v_vortex_origin) < float(64) && self.var_887585ba === 3) {
-        wait(0.05);
+        wait 0.05;
     }
     e_player clientfield::set_to_player("gravity_trap_rumble", 0);
     e_player.var_d4e1840f = undefined;
@@ -583,7 +583,7 @@ function plant_gravity_trap(var_87f03818) {
 // Checksum 0x6a783cb0, Offset: 0x2ad8
 // Size: 0x1ac
 function gravity_trap_loop(var_5da14f3b, var_87f03818) {
-    self endon(#"hash_2ccc1b84");
+    self endon(#"gravity_trap_spikes_retrieved");
     self endon(#"disconnect");
     self endon(#"bled_out");
     self endon(#"death");
@@ -604,7 +604,7 @@ function gravity_trap_loop(var_5da14f3b, var_87f03818) {
             }
             return;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -613,7 +613,7 @@ function gravity_trap_loop(var_5da14f3b, var_87f03818) {
 // Checksum 0x64f4091e, Offset: 0x2c90
 // Size: 0x1ac
 function gravity_trap_check(player) {
-    player endon(#"hash_2ccc1b84");
+    player endon(#"gravity_trap_spikes_retrieved");
     player endon(#"disconnect");
     player endon(#"bled_out");
     player endon(#"death");
@@ -651,7 +651,7 @@ function create_gravity_trap_spikes_in_ground(var_e987f01a) {
         self.mdl_gravity_trap_spikes[i].origin = var_e987f01a[i];
         self.mdl_gravity_trap_spikes[i].angles = self.angles;
         self.mdl_gravity_trap_spikes[i] show();
-        wait(0.05);
+        wait 0.05;
         self.mdl_gravity_trap_spikes[i] thread gravity_spike_planted_play();
         self.mdl_gravity_trap_spikes[i] clientfield::set("gravity_trap_spike_spark", 1);
         if (isdefined(level.var_e1885a4b)) {
@@ -665,7 +665,7 @@ function create_gravity_trap_spikes_in_ground(var_e987f01a) {
 // Checksum 0xfcca3bb1, Offset: 0x2fc8
 // Size: 0x34
 function gravity_spike_planted_play() {
-    wait(2);
+    wait 2;
     self thread scene::play("cin_zm_dlc1_spike_plant_loop", self);
 }
 
@@ -707,7 +707,7 @@ function gravity_trap_fx_on(v_spawn_pos) {
     }
     self.mdl_gravity_trap_fx_source.origin = v_spawn_pos;
     self.mdl_gravity_trap_fx_source show();
-    wait(0.05);
+    wait 0.05;
     self.mdl_gravity_trap_fx_source clientfield::set("gravity_trap_fx", 1);
 }
 
@@ -785,7 +785,7 @@ function function_23d2cc59() {
 // Size: 0x15a
 function function_6a359e28(var_91089b66, player) {
     if (player == var_91089b66.var_89b417e9) {
-        player notify(#"hash_2ccc1b84");
+        player notify(#"gravity_trap_spikes_retrieved");
         player playsound("fly_talon_pickup");
         if (player.var_887585ba == 3) {
             player.var_f26475de = player getcurrentweapon();
@@ -912,7 +912,7 @@ function zombie_lift(player, v_attack_source, n_push_away, n_lift_height, v_lift
                 n_fall_dist = abs(self.origin[2] - v_land_pos[2]);
                 n_slam_wait = n_fall_dist / -56 * 0.75;
                 if (n_slam_wait > 0) {
-                    wait(n_slam_wait);
+                    wait n_slam_wait;
                 }
             }
         }
@@ -945,7 +945,7 @@ function gravity_trap_timeout_watcher() {
     self endon(#"gravity_trap_complete");
     self.mdl_trap_mover util::waittill_any_timeout(4, "movedone", "gravity_trap_complete");
     if (isalive(self) && !(isdefined(self.b_melee_kill) && self.b_melee_kill)) {
-        wait(randomfloatrange(0.2, 1));
+        wait randomfloatrange(0.2, 1);
     }
     self notify(#"gravity_trap_complete");
 }
@@ -955,7 +955,7 @@ function gravity_trap_timeout_watcher() {
 // Checksum 0x9659b636, Offset: 0x4110
 // Size: 0x152
 function zombie_lift_wacky_rotate(n_lift_time, player) {
-    player endon(#"hash_c34ebaf4");
+    player endon(#"gravityspikes_timer_end");
     self endon(#"death");
     while (true) {
         negative_x = randomintrange(0, 10) < 5 ? 1 : -1;
@@ -1051,10 +1051,10 @@ function knockdown_zombies_slam() {
 // Size: 0xac
 function play_slam_fx(v_pos) {
     mdl_fx_pos = util::spawn_model("tag_origin", v_pos, (-90, 0, 0));
-    wait(0.05);
+    wait 0.05;
     mdl_fx_pos clientfield::set("gravity_slam_fx", 1);
     self clientfield::increment_to_player("gravity_slam_player_fx");
-    wait(0.05);
+    wait 0.05;
     mdl_fx_pos delete();
 }
 
@@ -1095,7 +1095,7 @@ function zombie_slam_direction(v_position) {
         self.knockdown_direction = "back";
         self.getup_direction = "getup_belly";
     }
-    wait(1);
+    wait 1;
     self.knockdown = 0;
 }
 
@@ -1106,62 +1106,62 @@ function zombie_slam_direction(v_position) {
     // Checksum 0x6d63cdd7, Offset: 0x4a48
     // Size: 0x5d0
     function function_81889ac5() {
-        wait(0.05);
+        wait 0.05;
         level waittill(#"start_zombie_round_logic");
-        wait(0.05);
-        var_87f03818 = getweapon("counter");
+        wait 0.05;
+        var_87f03818 = getweapon("<dev string:x52>");
         equipment_id = var_87f03818.name;
-        str_cmd = "counter" + equipment_id + "counter" + equipment_id + "counter";
+        str_cmd = "<dev string:x6b>" + equipment_id + "<dev string:x83>" + equipment_id + "<dev string:xa5>";
         adddebugcommand(str_cmd);
-        str_cmd = "counter" + equipment_id + "counter" + equipment_id + "counter";
+        str_cmd = "<dev string:x6b>" + equipment_id + "<dev string:xa8>" + equipment_id + "<dev string:xa5>";
         adddebugcommand(str_cmd);
-        str_cmd = "counter" + equipment_id + "counter" + equipment_id + "counter";
+        str_cmd = "<dev string:x6b>" + equipment_id + "<dev string:xd2>" + equipment_id + "<dev string:xa5>";
         adddebugcommand(str_cmd);
-        str_cmd = "counter" + equipment_id + "counter" + equipment_id + "counter";
+        str_cmd = "<dev string:x6b>" + equipment_id + "<dev string:xfe>" + equipment_id + "<dev string:xa5>";
         adddebugcommand(str_cmd);
         while (true) {
-            equipment_id = getdvarstring("counter");
-            if (equipment_id != "counter") {
+            equipment_id = getdvarstring("<dev string:x12c>");
+            if (equipment_id != "<dev string:x13f>") {
                 foreach (player in getplayers()) {
                     if (equipment_id == var_87f03818.name) {
                         player zm_weapons::weapon_give(var_87f03818, 0, 1);
-                        player thread zm_equipment::show_hint_text(%counter, 3);
+                        player thread zm_equipment::show_hint_text(%"<dev string:x140>", 3);
                         player gadgetpowerset(0, 100);
                         player update_gravityspikes_state(2);
                         player.var_9284dd5 = 1;
                         level notify(#"hash_71de5140");
                     }
                 }
-                setdvar("counter", "counter");
+                setdvar("<dev string:x12c>", "<dev string:x13f>");
             }
-            equipment_id = getdvarstring("counter");
-            if (equipment_id != "counter") {
+            equipment_id = getdvarstring("<dev string:x160>");
+            if (equipment_id != "<dev string:x13f>") {
                 foreach (player in getplayers()) {
                     if (equipment_id == var_87f03818.name) {
                         function_6b90b056(player);
                     }
                 }
-                setdvar("counter", "counter");
+                setdvar("<dev string:x160>", "<dev string:x13f>");
             }
-            equipment_id = getdvarstring("counter");
-            if (equipment_id != "counter") {
+            equipment_id = getdvarstring("<dev string:x177>");
+            if (equipment_id != "<dev string:x13f>") {
                 foreach (player in getplayers()) {
                     if (equipment_id == var_87f03818.name) {
-                        setdvar("counter", 1);
+                        setdvar("<dev string:x18d>", 1);
                     }
                 }
-                setdvar("counter", "counter");
+                setdvar("<dev string:x177>", "<dev string:x13f>");
             }
-            equipment_id = getdvarstring("counter");
-            if (equipment_id != "counter") {
+            equipment_id = getdvarstring("<dev string:x1aa>");
+            if (equipment_id != "<dev string:x13f>") {
                 foreach (player in getplayers()) {
                     if (equipment_id == var_87f03818.name) {
-                        setdvar("counter", 0);
+                        setdvar("<dev string:x18d>", 0);
                     }
                 }
-                setdvar("counter", "counter");
+                setdvar("<dev string:x1aa>", "<dev string:x13f>");
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 

@@ -27,9 +27,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_54bf13f5;
+#namespace zm_zod_idgun_quest;
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 0, eflags: 0x2
 // Checksum 0xc1ddeec0, Offset: 0x600
 // Size: 0x3c
@@ -37,7 +37,7 @@ function autoexec function_2dc19561() {
     system::register("zm_zod_idgun_quest", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5d65e931, Offset: 0x648
 // Size: 0x144
@@ -56,7 +56,7 @@ function __init__() {
     #/
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb38d215e, Offset: 0x798
 // Size: 0x1f0
@@ -65,23 +65,23 @@ function __main__() {
     level function_436486f7();
     zm_spawner::register_zombie_death_event_callback(&function_101cc4e2);
     for (i = 0; i < 2; i++) {
-        level.var_42517170[i] = spawnstruct();
-        level.var_42517170[i].kill_count = 0;
-        level.var_42517170[i].var_356fbd8b = i;
+        level.idgun[i] = spawnstruct();
+        level.idgun[i].kill_count = 0;
+        level.idgun[i].var_356fbd8b = i;
         var_fd261f68 = array::randomize(var_fd261f68);
-        level.var_42517170[i].var_e4be281f = array::pop_front(var_fd261f68);
-        zm_weapons::add_limited_weapon(level.var_42517170[i].var_e4be281f, 1);
+        level.idgun[i].var_e4be281f = array::pop_front(var_fd261f68);
+        zm_weapons::add_limited_weapon(level.idgun[i].var_e4be281f, 1);
         for (j = 0; j < level.idgun_weapons.size; j++) {
-            if (level.var_42517170[i].var_e4be281f == level.idgun_weapons[j].name) {
-                level.var_42517170[i].var_e787e99a = j;
+            if (level.idgun[i].var_e4be281f == level.idgun_weapons[j].name) {
+                level.idgun[i].var_e787e99a = j;
                 break;
             }
         }
     }
-    wait(0.5);
+    wait 0.5;
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8b83f51f, Offset: 0x990
 // Size: 0x8a
@@ -96,7 +96,7 @@ function function_e1efbc50(var_9727e47e) {
     }
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x283cfe5b, Offset: 0xa28
 // Size: 0x154
@@ -112,7 +112,7 @@ function function_436486f7() {
     function_e1efbc50(getweapon("idgun_upgraded_3"));
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xb88
 // Size: 0x4
@@ -120,7 +120,7 @@ function on_player_connect() {
     
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xb98
 // Size: 0x4
@@ -128,7 +128,7 @@ function on_player_spawned() {
     
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf6c8b2d9, Offset: 0xba8
 // Size: 0x248
@@ -161,14 +161,14 @@ function function_14e2eca6(params) {
         function_f5469e1(var_72cd7c0a, "part_xenomatter");
     }
     if (!level flag::get("part_xenomatter" + "_found")) {
-        mdl_part = level namespace_f37770c8::function_1f5d26ed("idgun", "part_xenomatter");
+        mdl_part = level zm_craftables::function_1f5d26ed("idgun", "part_xenomatter");
         var_55d0f940 = struct::get("safe_place_for_items", "targetname");
         mdl_part.origin = var_55d0f940.origin;
         level.var_689ff92e = 0;
     }
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x885cfa7e, Offset: 0xdf8
 // Size: 0x64
@@ -182,7 +182,7 @@ function function_c3ffc175() {
     }
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb1e0cc54, Offset: 0xe68
 // Size: 0x180
@@ -199,14 +199,14 @@ function function_44e0f6b4() {
     drop_point += (0, 0, 30);
     function_f5469e1(drop_point, "part_heart");
     if (!level flag::get("part_heart" + "_found")) {
-        mdl_part = level namespace_f37770c8::function_1f5d26ed("idgun", "part_heart");
+        mdl_part = level zm_craftables::function_1f5d26ed("idgun", "part_heart");
         var_55d0f940 = struct::get("safe_place_for_items", "targetname");
         mdl_part.origin = var_55d0f940.origin;
         level.var_359f6a1d = 0;
     }
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaa00d251, Offset: 0xff0
 // Size: 0x118
@@ -216,14 +216,14 @@ function function_6893c200() {
     drop_point += (0, 0, 30);
     function_f5469e1(drop_point, "part_skeleton");
     if (!level flag::get("part_skeleton" + "_found")) {
-        mdl_part = level namespace_f37770c8::function_1f5d26ed("idgun", "part_skeleton");
+        mdl_part = level zm_craftables::function_1f5d26ed("idgun", "part_skeleton");
         var_55d0f940 = struct::get("safe_place_for_items", "targetname");
         mdl_part.origin = var_55d0f940.origin;
         level.var_5fadf2ff = 0;
     }
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbde7df9, Offset: 0x1110
 // Size: 0x9c
@@ -235,7 +235,7 @@ function function_6baaa92e() {
     function_a3712047(var_5404ad23);
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0x84d2ff7f, Offset: 0x11b8
 // Size: 0x194
@@ -253,11 +253,11 @@ function function_a3712047(var_5404ad23) {
     var_5404ad23.unitrigger_stub.require_look_at = 0;
     var_5404ad23.unitrigger_stub.prompt_and_visibility_func = &function_12fffd19;
     zm_unitrigger::register_static_unitrigger(var_5404ad23.unitrigger_stub, &function_dd2f6fe3);
-    wait(5);
+    wait 5;
     var_5404ad23 delete();
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0x48a555f6, Offset: 0x1358
 // Size: 0x62
@@ -267,7 +267,7 @@ function function_12fffd19(player) {
     return !b_is_invis;
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe5974a5a, Offset: 0x13c8
 // Size: 0xba
@@ -289,7 +289,7 @@ function function_dd2f6fe3() {
     }
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5ba6e2f2, Offset: 0x1490
 // Size: 0xac
@@ -300,7 +300,7 @@ function function_32d36516(var_5404ad23) {
     var_5404ad23 delete();
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 4, eflags: 0x1 linked
 // Checksum 0x32c4dbc8, Offset: 0x1548
 // Size: 0x1ea
@@ -313,9 +313,9 @@ function function_f5469e1(v_origin, str_part, var_1907d45e, var_6a2f1c3a) {
     }
     level endon(#"hash_14edc619");
     if (!var_6a2f1c3a) {
-        mdl_part = level namespace_f37770c8::function_1f5d26ed("idgun", str_part);
+        mdl_part = level zm_craftables::function_1f5d26ed("idgun", str_part);
     } else {
-        mdl_part = level namespace_f37770c8::function_1f5d26ed("second_idgun", str_part);
+        mdl_part = level zm_craftables::function_1f5d26ed("second_idgun", str_part);
     }
     mdl_part.origin = v_origin;
     playable_area = getentarray("player_volume", "script_noteworthy");
@@ -333,14 +333,14 @@ function function_f5469e1(v_origin, str_part, var_1907d45e, var_6a2f1c3a) {
     if (!var_1907d45e) {
         return;
     }
-    wait(10);
+    wait 10;
     level thread function_21ad8866(mdl_part);
-    wait(10);
+    wait 10;
     mdl_part setinvisibletoall();
     level notify(#"hash_21ad8866");
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0x349e75f1, Offset: 0x1740
 // Size: 0x80
@@ -350,13 +350,13 @@ function function_21ad8866(mdl_part) {
     level endon(#"hash_14edc619");
     while (true) {
         mdl_part setinvisibletoall();
-        wait(0.5);
+        wait 0.5;
         mdl_part setvisibletoall();
-        wait(0.5);
+        wait 0.5;
     }
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 1, eflags: 0x0
 // Checksum 0x7ef2e29e, Offset: 0x17c8
 // Size: 0x34
@@ -366,7 +366,7 @@ function function_e70e794e(var_bd705d9a) {
     }
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe6dc09aa, Offset: 0x1808
 // Size: 0x12e
@@ -377,35 +377,35 @@ function function_101cc4e2(attacker) {
             return;
         }
         if (self.damageweapon === wpn) {
-            var_42517170 = function_b9729f28(self.attacker);
-            if (!isdefined(var_42517170)) {
+            idgun = function_b9729f28(self.attacker);
+            if (!isdefined(idgun)) {
                 return;
             }
-            var_42517170.kill_count++;
+            idgun.kill_count++;
             if (level flag::get("second_idgun_time")) {
                 return;
             }
-            if (var_42517170.kill_count > 10) {
+            if (idgun.kill_count > 10) {
                 level flag::set("second_idgun_time");
-                var_42517170.owner namespace_b8707f8e::function_1a180bd3("vox_idgun_upgrade_ready");
+                idgun.owner zm_zod_vo::function_1a180bd3("vox_idgun_upgrade_ready");
             }
         }
     }
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7114ff0d, Offset: 0x1940
 // Size: 0x64
 function function_b9729f28(player) {
     for (i = 0; i < 2; i++) {
-        if (level.var_42517170[i].owner === player) {
-            return level.var_42517170[i];
+        if (level.idgun[i].owner === player) {
+            return level.idgun[i];
         }
     }
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 0, eflags: 0x0
 // Checksum 0x78a12db5, Offset: 0x19b0
 // Size: 0x256
@@ -436,13 +436,13 @@ function function_b4c3b798() {
         var_e6d966e setmodel("p7_zm_zod_cocoon");
         var_e6d966e setcandamage(1);
         var_e6d966e thread function_47867b41(i, str_part);
-        if (isdefined(level.var_42517170[0].owner)) {
-            level.var_42517170[0].owner thread function_538643a3(i);
+        if (isdefined(level.idgun[0].owner)) {
+            level.idgun[0].owner thread function_538643a3(i);
         }
     }
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc809a9e1, Offset: 0x1c10
 // Size: 0x48
@@ -453,7 +453,7 @@ function function_1bfbfa4c(e_entity, var_d42f02cf) {
     return true;
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 2, eflags: 0x1 linked
 // Checksum 0x6fb988f5, Offset: 0x1c60
 // Size: 0x27a
@@ -473,7 +473,7 @@ function function_47867b41(var_3fbc06aa, str_part) {
         drop_point = trace["position"];
         drop_point += (0, 0, 10);
         self moveto(drop_point, 1);
-        wait(1);
+        wait 1;
         self hide();
         playfx(level._effect["idgun_cocoon_off"], self.origin);
         function_f5469e1(drop_point, str_part, 0, 1);
@@ -481,7 +481,7 @@ function function_47867b41(var_3fbc06aa, str_part) {
     }
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe68dd99b, Offset: 0x1ee8
 // Size: 0x3e4
@@ -500,9 +500,9 @@ function function_538643a3(var_3fbc06aa) {
     var_887c2fcb = undefined;
     while (true) {
         var_5cc8da3f = self getcurrentweapon();
-        var_3262a5f7 = getweapon(level.var_42517170[0].var_e4be281f);
+        var_3262a5f7 = getweapon(level.idgun[0].var_e4be281f);
         if (var_5cc8da3f !== var_3262a5f7) {
-            wait(0.1);
+            wait 0.1;
             break;
         }
         var_888da1cf = (var_e610614b[0], var_e610614b[1], self.origin[2]);
@@ -536,62 +536,62 @@ function function_538643a3(var_3fbc06aa) {
             return;
         }
         if (isdefined(var_ac3d0ec3)) {
-            wait(var_ac3d0ec3);
-            self namespace_8e578893::function_6edf48d5(2);
+            wait var_ac3d0ec3;
+            self zm_zod_util::function_6edf48d5(2);
             util::wait_network_frame();
-            self namespace_8e578893::function_6edf48d5(0);
+            self zm_zod_util::function_6edf48d5(0);
             continue;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_54bf13f5
+// Namespace zm_zod_idgun_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdb675b88, Offset: 0x22d8
 // Size: 0x17c
 function function_eaadff84(var_f7cef040) {
     if (var_f7cef040 == 0) {
-        var_566556d8 = getweapon(level.var_42517170[0].var_e4be281f);
+        var_566556d8 = getweapon(level.idgun[0].var_e4be281f);
     } else {
-        var_566556d8 = getweapon(level.var_42517170[0].var_e4be281f);
+        var_566556d8 = getweapon(level.idgun[0].var_e4be281f);
         var_566556d8 = zm_weapons::get_upgrade_weapon(var_566556d8, 0);
     }
     assert(isdefined(var_566556d8));
     self zm_weapons::weapon_give(var_566556d8, 0, 0);
     self switchtoweapon(var_566556d8);
-    if (!isdefined(level.var_42517170[0].owner)) {
+    if (!isdefined(level.idgun[0].owner)) {
         var_6aa62cd2 = 0;
-    } else if (!isdefined(level.var_42517170[1].owner)) {
+    } else if (!isdefined(level.idgun[1].owner)) {
         var_6aa62cd2 = 1;
     } else {
         return;
     }
-    level.var_42517170[var_6aa62cd2].owner = self;
-    self namespace_b8707f8e::function_aca1bc0c(0);
+    level.idgun[var_6aa62cd2].owner = self;
+    self zm_zod_vo::function_aca1bc0c(0);
 }
 
 /#
 
-    // Namespace namespace_54bf13f5
+    // Namespace zm_zod_idgun_quest
     // Params 0, eflags: 0x1 linked
     // Checksum 0xea757c4e, Offset: 0x2460
     // Size: 0xac
     function function_1c946455() {
-        level thread namespace_8e578893::function_72260d3a("idgun_3", "idgun_3", 0, &function_9e990d87);
-        level thread namespace_8e578893::function_72260d3a("idgun_3", "idgun_3", 1, &function_9e990d87);
-        level thread namespace_8e578893::function_72260d3a("idgun_3", "idgun_3", 1, &function_8c7ac1b9);
+        level thread zm_zod_util::function_72260d3a("<dev string:x28>", "<dev string:x3b>", 0, &function_9e990d87);
+        level thread zm_zod_util::function_72260d3a("<dev string:x4b>", "<dev string:x3b>", 1, &function_9e990d87);
+        level thread zm_zod_util::function_72260d3a("<dev string:x62>", "<dev string:x7b>", 1, &function_8c7ac1b9);
     }
 
-    // Namespace namespace_54bf13f5
+    // Namespace zm_zod_idgun_quest
     // Params 0, eflags: 0x1 linked
     // Checksum 0x8ad5c04e, Offset: 0x2518
     // Size: 0x3c
     function function_e4e5cd30() {
-        level thread namespace_8e578893::function_72260d3a("idgun_3", "idgun_3", 0, &function_1f7b4ebf);
+        level thread zm_zod_util::function_72260d3a("<dev string:x90>", "<dev string:xb4>", 0, &function_1f7b4ebf);
     }
 
-    // Namespace namespace_54bf13f5
+    // Namespace zm_zod_idgun_quest
     // Params 1, eflags: 0x1 linked
     // Checksum 0xf26f30e3, Offset: 0x2560
     // Size: 0xaa
@@ -602,15 +602,15 @@ function function_eaadff84(var_f7cef040) {
         }
     }
 
-    // Namespace namespace_54bf13f5
+    // Namespace zm_zod_idgun_quest
     // Params 1, eflags: 0x1 linked
     // Checksum 0xb3198b8e, Offset: 0x2618
     // Size: 0x2c
     function function_1f7b4ebf(n_val) {
-        level flag::set("idgun_3");
+        level flag::set("<dev string:xc4>");
     }
 
-    // Namespace namespace_54bf13f5
+    // Namespace zm_zod_idgun_quest
     // Params 1, eflags: 0x1 linked
     // Checksum 0x3ccd0851, Offset: 0x2650
     // Size: 0x3c

@@ -236,7 +236,7 @@ function state_stationary_update(params) {
     self notify(#"stop_rocket_firing_thread");
     vehicle_ai::clearalllookingandtargeting();
     vehicle_ai::clearallmovement();
-    wait(1);
+    wait 1;
     self cobra_raise();
     mintime = 6;
     maxtime = 12;
@@ -280,7 +280,7 @@ function state_stationary_update(params) {
                 }
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
     self notify(#"stop_rocket_firing_thread");
     vehicle_ai::clearalllookingandtargeting();
@@ -345,7 +345,7 @@ function turretfireupdate() {
     while (true) {
         if (self.avoid_shooting_owner === 1 && isdefined(self.owner)) {
             if (self vehicle_ai::owner_in_line_of_fire()) {
-                wait(0.5);
+                wait 0.5;
                 continue;
             }
         }
@@ -354,9 +354,9 @@ function turretfireupdate() {
             if (self is_ai_using_minigun()) {
                 self setturretspinning(1);
             }
-            wait(0.05);
+            wait 0.05;
             if (!self.gunner1ontarget) {
-                wait(0.5);
+                wait 0.5;
             }
             if (self.gunner1ontarget) {
                 if (isdefined(self.enemy) && self function_4246bc05(self.enemy)) {
@@ -366,16 +366,16 @@ function turretfireupdate() {
                     self setturretspinning(0);
                 }
                 if (isdefined(self.enemy) && isai(self.enemy)) {
-                    wait(randomfloatrange(self.settings.burstfireaidelaymin, self.settings.burstfireaidelaymax));
+                    wait randomfloatrange(self.settings.burstfireaidelaymin, self.settings.burstfireaidelaymax);
                 } else {
-                    wait(randomfloatrange(self.settings.burstfiredelaymin, self.settings.burstfiredelaymax));
+                    wait randomfloatrange(self.settings.burstfiredelaymin, self.settings.burstfiredelaymax);
                 }
             } else {
-                wait(0.5);
+                wait 0.5;
             }
             continue;
         }
-        wait(0.4);
+        wait 0.4;
     }
 }
 
@@ -419,7 +419,7 @@ function state_combat_update(params) {
             self.lock_evading |= self.locking_on_hacking;
         }
         if (isdefined(self.inpain) && self.inpain) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (!isdefined(self.enemy)) {
@@ -489,7 +489,7 @@ function aim_and_fire_rocket_launcher(aim_time) {
     self notify(#"stop_rocket_firing_thread");
     self endon(#"stop_rocket_firing_thread");
     if (!self.turretontarget) {
-        wait(aim_time);
+        wait aim_time;
     }
     if (isdefined(self.enemy) && self.turretontarget) {
         vehicle_ai::cooldown("rocket", self.settings.rocketcooldown);
@@ -540,7 +540,7 @@ function waittill_weapon_lock_or_timeout(wait_time) {
 // Checksum 0x9d8515ed, Offset: 0x2408
 // Size: 0x74
 function wait_evasion_reaction_time() {
-    wait(randomfloatrange(isdefined(self.settings.enemy_evasion_reaction_time_min) ? self.settings.enemy_evasion_reaction_time_min : 0.1, isdefined(self.settings.enemy_evasion_reaction_time_max) ? self.settings.enemy_evasion_reaction_time_max : 0.2));
+    wait randomfloatrange(isdefined(self.settings.enemy_evasion_reaction_time_min) ? self.settings.enemy_evasion_reaction_time_min : 0.1, isdefined(self.settings.enemy_evasion_reaction_time_max) ? self.settings.enemy_evasion_reaction_time_max : 0.2);
 }
 
 // Namespace amws
@@ -598,7 +598,7 @@ function getnextmoveposition_wander() {
     #/
     if (!isdefined(best_point)) {
         /#
-            self.debug_ai_movement_type = "combat" + queryresult.data.size + "combat";
+            self.debug_ai_movement_type = "<dev string:x28>" + queryresult.data.size + "<dev string:x36>";
         #/
         /#
             self.debug_ai_move_to_point = undefined;
@@ -606,7 +606,7 @@ function getnextmoveposition_wander() {
         return undefined;
     }
     /#
-        self.debug_ai_movement_type = "combat" + queryresult.data.size;
+        self.debug_ai_movement_type = "<dev string:x39>" + queryresult.data.size;
     #/
     /#
         self.debug_ai_move_to_point = best_point.origin;
@@ -630,7 +630,7 @@ function getnextmoveposition_evasive(client_flags) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["combat"] = -500;
+                point._scoredebug["<dev string:x43>"] = -500;
             #/
             point.score += -500;
         }
@@ -650,7 +650,7 @@ function getnextmoveposition_evasive(client_flags) {
                             if (!isdefined(point._scoredebug)) {
                                 point._scoredebug = [];
                             }
-                            point._scoredebug["combat"] = -56;
+                            point._scoredebug["<dev string:x55>"] = -56;
                         #/
                         point.score += -56;
                         continue;
@@ -660,7 +660,7 @@ function getnextmoveposition_evasive(client_flags) {
                             if (!isdefined(point._scoredebug)) {
                                 point._scoredebug = [];
                             }
-                            point._scoredebug["combat"] = -101;
+                            point._scoredebug["<dev string:x68>"] = -101;
                         #/
                         point.score += -101;
                     }
@@ -677,7 +677,7 @@ function getnextmoveposition_evasive(client_flags) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["combat"] = 105;
+                point._scoredebug["<dev string:x89>"] = 105;
             #/
             point.score += 105;
         }
@@ -697,7 +697,7 @@ function getnextmoveposition_evasive(client_flags) {
     #/
     if (!isdefined(best_point)) {
         /#
-            self.debug_ai_movement_type = "combat" + queryresult.data.size + "combat";
+            self.debug_ai_movement_type = "<dev string:x9f>" + queryresult.data.size + "<dev string:x36>";
         #/
         /#
             self.debug_ai_move_to_point = undefined;
@@ -705,7 +705,7 @@ function getnextmoveposition_evasive(client_flags) {
         return undefined;
     }
     /#
-        self.debug_ai_movement_type = "combat" + queryresult.data.size;
+        self.debug_ai_movement_type = "<dev string:xae>" + queryresult.data.size;
     #/
     /#
         self.debug_ai_move_to_point = best_point.origin;
@@ -756,21 +756,21 @@ function getnextmoveposition_tactical(enemy) {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["combat"] = point.directness;
+            point._scoredebug["<dev string:xb9>"] = point.directness;
         #/
         point.score += point.directness;
         /#
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["combat"] = directnessscore;
+            point._scoredebug["<dev string:xc7>"] = directnessscore;
         #/
         point.score += directnessscore;
         /#
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["combat"] = mapfloat(0, prefereddistawayfromorigin, 0, 100, point.disttoorigin2d);
+            point._scoredebug["<dev string:xd2>"] = mapfloat(0, prefereddistawayfromorigin, 0, 100, point.disttoorigin2d);
         #/
         point.score += mapfloat(0, prefereddistawayfromorigin, 0, 100, point.disttoorigin2d);
         targetdistscore = 0;
@@ -782,7 +782,7 @@ function getnextmoveposition_tactical(enemy) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["combat"] = -500;
+                point._scoredebug["<dev string:x43>"] = -500;
             #/
             point.score += -500;
         }
@@ -790,14 +790,14 @@ function getnextmoveposition_tactical(enemy) {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["combat"] = targetdistscore;
+            point._scoredebug["<dev string:xdf>"] = targetdistscore;
         #/
         point.score += targetdistscore;
         /#
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["combat"] = randomfloatrange(0, randomness);
+            point._scoredebug["<dev string:xec>"] = randomfloatrange(0, randomness);
         #/
         point.score += randomfloatrange(0, randomness);
         if (point.score > best_score) {
@@ -811,7 +811,7 @@ function getnextmoveposition_tactical(enemy) {
     #/
     if (!isdefined(best_point)) {
         /#
-            self.debug_ai_movement_type = "combat" + queryresult.data.size + "combat";
+            self.debug_ai_movement_type = "<dev string:xf3>" + queryresult.data.size + "<dev string:x36>";
         #/
         /#
             self.debug_ai_move_to_point = undefined;
@@ -819,13 +819,13 @@ function getnextmoveposition_tactical(enemy) {
         return undefined;
     }
     /#
-        if (isdefined(getdvarint("combat")) && getdvarint("combat")) {
+        if (isdefined(getdvarint("<dev string:x103>")) && getdvarint("<dev string:x103>")) {
             recordline(self.origin, best_point.origin, (0.3, 1, 0));
             recordline(self.origin, enemy.origin, (1, 0, 0.4));
         }
     #/
     /#
-        self.debug_ai_movement_type = "combat" + queryresult.data.size;
+        self.debug_ai_movement_type = "<dev string:x11b>" + queryresult.data.size;
     #/
     /#
         self.debug_ai_move_to_point = best_point.origin;
@@ -849,7 +849,7 @@ function path_update_interrupt_by_attacker() {
             self.debug_ai_move_to_points_considered = [];
         #/
         /#
-            self.debug_ai_movement_type = "combat";
+            self.debug_ai_movement_type = "<dev string:x127>";
         #/
         /#
             self.debug_ai_move_to_point = undefined;
@@ -870,11 +870,11 @@ function path_update_interrupt() {
     self endon(#"near_goal");
     self endon(#"reached_end_node");
     self endon(#"amws_end_interrupt_watch");
-    wait(1);
+    wait 1;
     while (true) {
         if (isdefined(self.current_pathto_pos)) {
             if (distance2dsquared(self.current_pathto_pos, self.goalpos) > self.goalradius * self.goalradius) {
-                wait(0.2);
+                wait 0.2;
                 self notify(#"near_goal");
             }
         }
@@ -887,7 +887,7 @@ function path_update_interrupt() {
                 self notify(#"near_goal");
             }
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 

@@ -44,7 +44,7 @@ function callback_botentereduseredge(startnode, endnode) {
         return;
     }
     self botreleasemanualcontrol();
-    println("<unknown string>", self.name, "<unknown string>");
+    println("<dev string:x28>", self.name, "<dev string:x2d>");
 }
 
 // Namespace bot
@@ -67,11 +67,11 @@ function function_46343d89(startnode, endnode) {
     self function_7b22f8c6(endnode.origin);
     while (self isplayerunderwater()) {
         self function_5e7eba3b();
-        wait(0.05);
+        wait 0.05;
     }
     while (true) {
         self function_dc2a7991();
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -84,7 +84,7 @@ function function_6185fafe(startnode, endnode) {
     level endon(#"game_ended");
     self endon(#"hash_4c7b12b7");
     self function_7b22f8c6(endnode.origin);
-    wait(0.5);
+    wait 0.5;
     self function_4c7b12b7();
 }
 
@@ -123,11 +123,11 @@ function jump_up_traversal(startnode, endnode) {
         return;
     }
     self botsetmovemagnitude(dist / movedist);
-    wait(0.05);
+    wait 0.05;
     self thread jump_to(ledgetop);
-    wait(0.05);
+    wait 0.05;
     while (self.origin[2] + 72 < ledgetop[2]) {
-        wait(0.05);
+        wait 0.05;
     }
     self botsetmovemagnitude(1);
 }
@@ -148,7 +148,7 @@ function jump_down_traversal(startnode, endnode) {
     result = bullettrace(start, end, 0, self);
     if (result["surfacetype"] != "none") {
         self function_7b22f8c6(endnode.origin);
-        wait(0.05);
+        wait 0.05;
         self function_793ac1aa();
         return;
     }
@@ -243,7 +243,7 @@ function function_30486e13(startnode, endnode, wallnormal, var_c1dc8db1) {
         vforward = 0;
     }
     while (true) {
-        wait(0.05);
+        wait 0.05;
         var_834051a9 = endnode.origin - self.origin;
         enddist = vectordot(var_834051a9, var_c1dc8db1);
         var_10d80214 = self function_a2e25eae();
@@ -280,16 +280,16 @@ function jump_to(target, vector) {
     velocity = self getvelocity();
     var_819400cd = vectornormalize((velocity[0], velocity[1], 0));
     if (vectordot(movedir, var_819400cd) < 0.94) {
-        wait(0.05);
+        wait 0.05;
     }
     self function_793ac1aa();
-    wait(0.05);
+    wait 0.05;
     while (!self isonground() && !self ismantling() && !self iswallrunning() && !self function_6918d9ba(target)) {
         function_dc2a7991();
         if (!isdefined(vector)) {
             self function_7b22f8c6(target);
         }
-        wait(0.05);
+        wait 0.05;
     }
     function_41b866d3();
 }
@@ -304,7 +304,7 @@ function function_6581f3cc(target) {
     level endon(#"game_ended");
     while (!self ismantling()) {
         self function_7b22f8c6(target);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -368,11 +368,11 @@ function function_fe1ccdcd() {
     self endon(#"hash_8a16cc3b");
     level endon(#"game_ended");
     while (self isplayerswimming()) {
-        wait(0.05);
+        wait 0.05;
     }
-    wait(0.05);
+    wait 0.05;
     while (!self isplayerswimming()) {
-        wait(0.05);
+        wait 0.05;
     }
     self thread function_4c7b12b7();
 }
@@ -386,7 +386,7 @@ function function_f0530225() {
     self endon(#"hash_4c7b12b7");
     self endon(#"hash_8a16cc3b");
     level endon(#"game_ended");
-    wait(8);
+    wait 8;
     self thread function_4c7b12b7();
     self function_5ee14aca();
 }

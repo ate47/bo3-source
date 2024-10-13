@@ -2,9 +2,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_ee5f5b26;
+#namespace zm_castle_rocket_trap;
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x102861ed, Offset: 0x270
 // Size: 0x14
@@ -12,22 +12,22 @@ function main() {
     register_clientfields();
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5f7bc4b5, Offset: 0x290
 // Size: 0x124
 function register_clientfields() {
-    clientfield::register("world", "rocket_trap_warning_smoke", 1, 1, "int", &function_9fc6fce2, 0, 0);
-    clientfield::register("world", "rocket_trap_warning_fire", 1, 1, "int", &function_455f796b, 0, 0);
-    clientfield::register("world", "sndRocketAlarm", 5000, 2, "int", &function_b50ae7c1, 0, 0);
-    clientfield::register("world", "sndRocketTrap", 5000, 3, "int", &function_f38bdbaf, 0, 0);
+    clientfield::register("world", "rocket_trap_warning_smoke", 1, 1, "int", &rocket_trap_warning_smoke, 0, 0);
+    clientfield::register("world", "rocket_trap_warning_fire", 1, 1, "int", &rocket_trap_warning_fire, 0, 0);
+    clientfield::register("world", "sndRocketAlarm", 5000, 2, "int", &sndRocketAlarm, 0, 0);
+    clientfield::register("world", "sndRocketTrap", 5000, 3, "int", &sndRocketTrap, 0, 0);
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbc4e0b2e, Offset: 0x3c0
 // Size: 0x1be
-function function_9fc6fce2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function rocket_trap_warning_smoke(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     var_52d911b7 = struct::get("rocket_trap_warning_smoke", "targetname");
     v_forward = anglestoforward(var_52d911b7.angles);
     v_up = anglestoup(var_52d911b7.angles);
@@ -45,11 +45,11 @@ function function_9fc6fce2(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3d4737cd, Offset: 0x588
 // Size: 0x1dc
-function function_455f796b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function rocket_trap_warning_fire(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     var_52d911b7 = struct::get("rocket_trap_warning_fire", "targetname");
     v_forward = anglestoforward(var_52d911b7.angles);
     v_up = anglestoup(var_52d911b7.angles);
@@ -66,45 +66,45 @@ function function_455f796b(localclientnum, oldval, newval, bnewent, binitialsnap
         var_52d911b7.var_e709b4fd[localclientnum] = playfx(localclientnum, level._effect["rocket_warning_fire"], var_52d911b7.origin, v_forward, v_up, 0);
         return;
     }
-    function_bdb5a3e2(localclientnum);
+    rocket_trap_blast(localclientnum);
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0xfe04f401, Offset: 0x770
 // Size: 0x1bc
-function function_bdb5a3e2(localclientnum) {
+function rocket_trap_blast(localclientnum) {
     var_52d911b7 = struct::get("rocket_trap_blast", "targetname");
     v_forward = anglestoforward(var_52d911b7.angles);
     v_up = anglestoup(var_52d911b7.angles);
     n_fx_id = playfx(localclientnum, level._effect["rocket_side_blast"], var_52d911b7.origin, v_forward, v_up, 0);
-    wait(0.4);
+    wait 0.4;
     var_a62b9cd7 = struct::get_array("rocket_trap_side_blast", "targetname");
     foreach (var_b25c0a2d in var_a62b9cd7) {
-        var_b25c0a2d thread function_c1e8be(localclientnum);
+        var_b25c0a2d thread rocket_trap_side_blast(localclientnum);
     }
-    wait(20);
+    wait 20;
     deletefx(localclientnum, n_fx_id, 0);
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0xfa2d34a0, Offset: 0x938
 // Size: 0xdc
-function function_c1e8be(localclientnum) {
+function rocket_trap_side_blast(localclientnum) {
     v_forward = anglestoforward(self.angles);
     v_up = anglestoup(self.angles);
-    wait(randomfloatrange(0, 1));
+    wait randomfloatrange(0, 1);
     n_id = playfx(localclientnum, level._effect["rocket_side_blast"], self.origin, v_forward, v_up, 0);
-    wait(20);
+    wait 20;
     deletefx(localclientnum, n_id, 0);
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbea0761d, Offset: 0xa20
 // Size: 0x104
-function function_b50ae7c1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function sndRocketAlarm(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         if (newval == 1) {
             audio::playloopat("evt_rocket_trap_alarm", (4202, -2096, -1438));
@@ -117,11 +117,11 @@ function function_b50ae7c1(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x65b9e015, Offset: 0xb30
 // Size: 0x1e4
-function function_f38bdbaf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function sndRocketTrap(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     var_dc3c5ca7 = (4202, -2249, -2127);
     if (newval) {
         if (newval == 1) {

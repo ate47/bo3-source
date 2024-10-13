@@ -10,9 +10,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_411f3e3f;
+#namespace _gadget_camo;
 
-// Namespace namespace_411f3e3f
+// Namespace _gadget_camo
 // Params 0, eflags: 0x2
 // Checksum 0xd3687de0, Offset: 0x2c0
 // Size: 0x34
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_camo", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_411f3e3f
+// Namespace _gadget_camo
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6c915674, Offset: 0x300
 // Size: 0x4c
@@ -28,7 +28,7 @@ function __init__() {
     clientfield::register("allplayers", "camo_shader", 1, 3, "int", &function_f532bd65, 0, 1);
 }
 
-// Namespace namespace_411f3e3f
+// Namespace _gadget_camo
 // Params 7, eflags: 0x1 linked
 // Checksum 0x689d464d, Offset: 0x358
 // Size: 0x274

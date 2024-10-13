@@ -1,8 +1,8 @@
 #using scripts/zm/_zm_sidequests;
 
-#namespace namespace_1e4bbaa5;
+#namespace zm_temple_sq;
 
-// Namespace namespace_1e4bbaa5
+// Namespace zm_temple_sq
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa114242e, Offset: 0xa0
 // Size: 0x64

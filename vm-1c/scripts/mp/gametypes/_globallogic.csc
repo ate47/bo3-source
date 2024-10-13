@@ -131,7 +131,7 @@ function play_plant_sound(localclientnum) {
     player = getlocalplayer(localclientnum);
     var_f919f008 = getweapon("briefcase_bomb");
     var_26f401f = getweapon("briefcase_bomb_defuse");
-    wait(0.25);
+    wait 0.25;
     while (true) {
         if (!isdefined(player)) {
             return;
@@ -142,7 +142,7 @@ function play_plant_sound(localclientnum) {
         if (player != self || isthirdperson(localclientnum)) {
             self playsound(localclientnum, "fly_bomb_buttons_npc");
         }
-        wait(0.15);
+        wait 0.15;
     }
 }
 
@@ -152,7 +152,7 @@ function play_plant_sound(localclientnum) {
 // Size: 0x5c
 function function_9350c173() {
     util::waitforallclients();
-    wait(5);
+    wait 5;
     var_57f81ff6 = getdvarint("sys_threadWatchdogTimeoutLive", 30000);
     setdvar("sys_threadWatchdogTimeout", var_57f81ff6);
 }

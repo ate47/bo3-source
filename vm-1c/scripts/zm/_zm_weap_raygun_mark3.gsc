@@ -12,9 +12,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/shared/ai_shared;
 
-#namespace namespace_e34d2245;
+#namespace _zm_weap_raygun_mark3;
 
-// Namespace namespace_e34d2245
+// Namespace _zm_weap_raygun_mark3
 // Params 0, eflags: 0x2
 // Checksum 0x83ccf4e0, Offset: 0x3e0
 // Size: 0x3c
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
     system::register("zm_weap_raygun_mark3", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_e34d2245
+// Namespace _zm_weap_raygun_mark3
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe6cd86ae, Offset: 0x428
 // Size: 0x294
@@ -44,7 +44,7 @@ function __init__() {
     callback::on_connect(&function_3aef849c);
 }
 
-// Namespace namespace_e34d2245
+// Namespace _zm_weap_raygun_mark3
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x6c8
 // Size: 0x4
@@ -52,7 +52,7 @@ function __main__() {
     
 }
 
-// Namespace namespace_e34d2245
+// Namespace _zm_weap_raygun_mark3
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5a416114, Offset: 0x6d8
 // Size: 0x34
@@ -63,7 +63,7 @@ function function_b2cc2acc(weapon) {
     return false;
 }
 
-// Namespace namespace_e34d2245
+// Namespace _zm_weap_raygun_mark3
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdea183e6, Offset: 0x718
 // Size: 0x34
@@ -74,7 +74,7 @@ function function_b08b743e(weapon) {
     return false;
 }
 
-// Namespace namespace_e34d2245
+// Namespace _zm_weap_raygun_mark3
 // Params 1, eflags: 0x1 linked
 // Checksum 0x53f7ac4f, Offset: 0x758
 // Size: 0x76
@@ -88,7 +88,7 @@ function function_4dc74fe3(var_48ea2f27) {
     return v_vortex_origin;
 }
 
-// Namespace namespace_e34d2245
+// Namespace _zm_weap_raygun_mark3
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf442aeec, Offset: 0x7d8
 // Size: 0xd8
@@ -103,7 +103,7 @@ function function_3aef849c() {
     }
 }
 
-// Namespace namespace_e34d2245
+// Namespace _zm_weap_raygun_mark3
 // Params 6, eflags: 0x1 linked
 // Checksum 0x49eb2492, Offset: 0x8b8
 // Size: 0x18c
@@ -123,7 +123,7 @@ function function_ec91716c(w_weapon, v_pos, var_7efa7e23, n_radius, e_attacker, 
     mdl_vortex thread function_38237edc();
 }
 
-// Namespace namespace_e34d2245
+// Namespace _zm_weap_raygun_mark3
 // Params 2, eflags: 0x1 linked
 // Checksum 0xea3fdb37, Offset: 0xa50
 // Size: 0x444
@@ -160,7 +160,7 @@ function function_64a32180(e_owner, w_weapon) {
                 continue;
             }
             if (distancesquared(self.origin, ai.origin) <= n_radius_squared) {
-                ai thread function_f0d5de4b(self.var_dfb28a5a, 2);
+                ai thread apply_vortex_fx(self.var_dfb28a5a, 2);
                 if (ai.health > var_4f2446c1) {
                     ai dodamage(var_4f2446c1, self.origin, e_owner, self, undefined, "MOD_UNKNOWN", 0, w_weapon);
                     continue;
@@ -177,14 +177,14 @@ function function_64a32180(e_owner, w_weapon) {
                 }
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
     self clientfield::set("slow_vortex_fx", 0);
     playsoundatposition("wpn_mk3_orb_disappear", self.origin);
     self delete();
 }
 
-// Namespace namespace_e34d2245
+// Namespace _zm_weap_raygun_mark3
 // Params 0, eflags: 0x1 linked
 // Checksum 0xae61586b, Offset: 0xea0
 // Size: 0xbc
@@ -195,11 +195,11 @@ function player_vortex_visionset() {
     thread visionset_mgr::activate("visionset", "raygun_mark3_vortex_visionset", self, 0.25, 2, 0.25);
     thread visionset_mgr::activate("overlay", "raygun_mark3_vortex_blur", self, 0.25, 2, 0.25);
     self.var_d1bcf259 = 1;
-    wait(2.5);
+    wait 2.5;
     self.var_d1bcf259 = 0;
 }
 
-// Namespace namespace_e34d2245
+// Namespace _zm_weap_raygun_mark3
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5a0afb37, Offset: 0xf68
 // Size: 0x1c8
@@ -216,7 +216,7 @@ function function_38237edc() {
             self.var_dfb28a5a = 2;
             self clientfield::set("slow_vortex_fx", self.var_dfb28a5a);
             self.n_end_time = gettime() + 3000;
-            wait(3);
+            wait 3;
             playsoundatposition("wpn_mk3_orb_disappear", self.origin);
             self delete();
             return;
@@ -225,7 +225,7 @@ function function_38237edc() {
     }
 }
 
-// Namespace namespace_e34d2245
+// Namespace _zm_weap_raygun_mark3
 // Params 13, eflags: 0x1 linked
 // Checksum 0xb6669e31, Offset: 0x1138
 // Size: 0x154
@@ -247,13 +247,13 @@ function function_aa1813ba(str_mod, var_5afff096, var_7c5a4ee4, e_player, n_amou
     return 0;
 }
 
-// Namespace namespace_e34d2245
+// Namespace _zm_weap_raygun_mark3
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa395dba5, Offset: 0x1298
 // Size: 0x164
-function function_f0d5de4b(var_dfb28a5a, n_time) {
-    self notify(#"hash_f0d5de4b");
-    self endon(#"hash_f0d5de4b");
+function apply_vortex_fx(var_dfb28a5a, n_time) {
+    self notify(#"apply_vortex_fx");
+    self endon(#"apply_vortex_fx");
     self endon(#"death");
     if (!(isdefined(self.var_9df1f7) && self.var_9df1f7)) {
         self.var_9df1f7 = 1;
@@ -274,7 +274,7 @@ function function_f0d5de4b(var_dfb28a5a, n_time) {
     self clientfield::set("ai_slow_vortex_fx", 0);
 }
 
-// Namespace namespace_e34d2245
+// Namespace _zm_weap_raygun_mark3
 // Params 3, eflags: 0x1 linked
 // Checksum 0xfc7ca3bc, Offset: 0x1408
 // Size: 0x1ac
@@ -287,7 +287,7 @@ function function_43cd4a49(e_inflictor, e_attacker, w_weapon) {
     self clientfield::set("ai_disintegrate", 1);
     if (isvehicle(self)) {
         self ai::set_ignoreall(1);
-        wait(1.1);
+        wait 1.1;
         self ghost();
         self dodamage(self.health, self.origin, e_attacker, e_inflictor, undefined, "MOD_UNKNOWN", 0, w_weapon);
         return;

@@ -3,9 +3,9 @@
 #using scripts/shared/music_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_7685657b;
+#namespace cp_mi_eth_prologue_sound;
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7d8f9123, Offset: 0x310
 // Size: 0xac
@@ -19,7 +19,7 @@ function main() {
     level thread namespace_21b2c1f2::function_7a818f3c();
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x431f3d21, Offset: 0x3c8
 // Size: 0x54
@@ -30,7 +30,7 @@ function function_b3c510e0() {
     }
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7b3b22d0, Offset: 0x428
 // Size: 0xbc
@@ -47,7 +47,7 @@ function function_96d9cac5() {
     }
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x231b564a, Offset: 0x4f0
 // Size: 0x76
@@ -58,7 +58,7 @@ function function_8066773b() {
     }
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3b7facf, Offset: 0x570
 // Size: 0x84
@@ -66,25 +66,25 @@ function function_55f749fc() {
     self playloopsound(self.script_sound);
     level waittill(#"hash_400d768d");
     self stoploopsound();
-    wait(randomfloatrange(0.2, 3.1));
+    wait randomfloatrange(0.2, 3.1);
     self playsound("amb_spark_generic");
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x40e4fe5a, Offset: 0x600
 // Size: 0x60
 function function_a4815b6c() {
     level endon(#"hash_8e1e9ee");
     level endon(#"game_ended");
-    level waittill(#"hash_62797210");
+    level waittill(#"siren");
     while (true) {
-        wait(2);
+        wait 2;
         playsoundatposition("amb_troop_alarm", (3529, 427, -334));
     }
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xeddaf010, Offset: 0x668
 // Size: 0x60
@@ -93,12 +93,12 @@ function function_44ee5cb7() {
     level endon(#"game_ended");
     level waittill(#"hash_5ea48ae9");
     while (true) {
-        wait(1);
+        wait 1;
         playsoundatposition("amb_troop_alarm", (5945, -2320, -119));
     }
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x24e3e374, Offset: 0x6d0
 // Size: 0x5e
@@ -106,9 +106,9 @@ function function_a4312bfe() {
     level endon(#"hash_f8e975b8");
     level waittill(#"hash_fc089399");
     while (true) {
-        wait(1);
+        wait 1;
         playsoundatposition("amb_phone_ring", (-1760, -1624, 384));
-        wait(2);
+        wait 2;
     }
 }
 
@@ -167,7 +167,7 @@ function function_e847067() {
 // Checksum 0xa1956eff, Offset: 0x828
 // Size: 0x24
 function function_fa2e45b8() {
-    wait(16);
+    wait 16;
     music::setmusicstate("battle_1");
 }
 
@@ -192,7 +192,7 @@ function function_d4c52995() {
 // Checksum 0xa41f761, Offset: 0x8a8
 // Size: 0x24
 function function_2f85277b() {
-    wait(1.5);
+    wait 1.5;
     music::setmusicstate("minister_rescued");
 }
 
@@ -233,7 +233,7 @@ function function_49fef8f4() {
 // Checksum 0xbb226428, Offset: 0x978
 // Size: 0x24
 function function_9f50ebc2() {
-    wait(3);
+    wait 3;
     music::setmusicstate("none");
 }
 
@@ -242,7 +242,7 @@ function function_9f50ebc2() {
 // Checksum 0xc43ecd20, Offset: 0x9a8
 // Size: 0x24
 function function_c4c71c7() {
-    wait(3);
+    wait 3;
     music::setmusicstate("drop_your_weapons");
 }
 
@@ -251,7 +251,7 @@ function function_c4c71c7() {
 // Checksum 0x89afb627, Offset: 0x9d8
 // Size: 0x2c
 function function_43ead72c(a_ents) {
-    wait(10);
+    wait 10;
     music::setmusicstate("taylor_entrance");
 }
 
@@ -260,7 +260,7 @@ function function_43ead72c(a_ents) {
 // Checksum 0x9ad2347, Offset: 0xa10
 // Size: 0x24
 function function_46333a8a() {
-    wait(3);
+    wait 3;
     music::setmusicstate("battle_3");
 }
 
@@ -286,7 +286,7 @@ function function_7a818f3c() {
 // Checksum 0xfb7005b0, Offset: 0xaa0
 // Size: 0x24
 function function_b83aa9c5() {
-    wait(6);
+    wait 6;
     music::setmusicstate("battle_4");
 }
 
@@ -384,7 +384,7 @@ function function_8feece84() {
 // Checksum 0xa74da0e3, Offset: 0xca0
 // Size: 0x24
 function function_92382f5c() {
-    wait(3);
+    wait 3;
     music::setmusicstate("battle_5");
 }
 

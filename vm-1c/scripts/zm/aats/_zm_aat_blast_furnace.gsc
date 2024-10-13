@@ -10,9 +10,9 @@
 #using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_d5a90c37;
+#namespace zm_aat_blast_furnace;
 
-// Namespace namespace_d5a90c37
+// Namespace zm_aat_blast_furnace
 // Params 0, eflags: 0x2
 // Checksum 0x45b18c7a, Offset: 0x2a0
 // Size: 0x34
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
     system::register("zm_aat_blast_furnace", &__init__, undefined, "aat");
 }
 
-// Namespace namespace_d5a90c37
+// Namespace zm_aat_blast_furnace
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3490d32e, Offset: 0x2e0
 // Size: 0x144
@@ -35,7 +35,7 @@ function __init__() {
     clientfield::register("vehicle", "zm_aat_blast_furnace" + "_burn_vehicle", 1, 1, "counter");
 }
 
-// Namespace namespace_d5a90c37
+// Namespace zm_aat_blast_furnace
 // Params 4, eflags: 0x1 linked
 // Checksum 0xd336c103, Offset: 0x430
 // Size: 0x44
@@ -43,7 +43,7 @@ function result(death, attacker, mod, weapon) {
     self thread function_6e8c313c(attacker, weapon);
 }
 
-// Namespace namespace_d5a90c37
+// Namespace zm_aat_blast_furnace
 // Params 2, eflags: 0x1 linked
 // Checksum 0xe49ec50e, Offset: 0x480
 // Size: 0x3cc
@@ -78,14 +78,14 @@ function function_6e8c313c(e_attacker, w_weapon) {
                 a_e_blasted_zombies[i] thread clientfield::increment("zm_aat_blast_furnace" + "_burn");
             }
         }
-        wait(0.25);
+        wait 0.25;
         a_e_blasted_zombies = array::remove_dead(a_e_blasted_zombies);
         a_e_blasted_zombies = array::remove_undefined(a_e_blasted_zombies);
         array::thread_all(a_e_blasted_zombies, &function_2ccbcfcb, e_attacker, w_weapon);
     }
 }
 
-// Namespace namespace_d5a90c37
+// Namespace zm_aat_blast_furnace
 // Params 2, eflags: 0x1 linked
 // Checksum 0x4dbbdce1, Offset: 0x858
 // Size: 0xd0
@@ -99,11 +99,11 @@ function function_2ccbcfcb(e_attacker, w_weapon) {
         }
         self dodamage(n_damage, self.origin, e_attacker, undefined, "none", "MOD_UNKNOWN", 0, w_weapon);
         i++;
-        wait(0.5);
+        wait 0.5;
     }
 }
 
-// Namespace namespace_d5a90c37
+// Namespace zm_aat_blast_furnace
 // Params 2, eflags: 0x1 linked
 // Checksum 0x8ad1d450, Offset: 0x930
 // Size: 0xec

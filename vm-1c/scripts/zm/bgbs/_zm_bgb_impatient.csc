@@ -5,9 +5,9 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_1958c5da;
+#namespace zm_bgb_impatient;
 
-// Namespace namespace_1958c5da
+// Namespace zm_bgb_impatient
 // Params 0, eflags: 0x2
 // Checksum 0xd8a8fe18, Offset: 0x140
 // Size: 0x34
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_impatient", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_1958c5da
+// Namespace zm_bgb_impatient
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8447d6e1, Offset: 0x180
 // Size: 0x3c

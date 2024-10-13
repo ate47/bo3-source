@@ -13,9 +13,9 @@
 function on_fire_timeout() {
     self endon(#"death");
     if (isdefined(self.flame_fx_timeout)) {
-        wait(self.flame_fx_timeout);
+        wait self.flame_fx_timeout;
     } else {
-        wait(12);
+        wait 12;
     }
     if (isdefined(self) && isalive(self)) {
         self.is_on_fire = 0;
@@ -51,7 +51,7 @@ function flame_death_fx() {
         }
         self.weapon_specific_fire_death_torso_fx = undefined;
     } else {
-        println("J_Elbow_RI");
+        println("<dev string:x28>");
     }
     if (isdefined(level._effect) && isdefined(level._effect["character_fire_death_sm"])) {
         if (self.archetype !== "parasite" && self.archetype !== "raps" && self.archetype !== "spider") {
@@ -62,7 +62,7 @@ function flame_death_fx() {
             if (isdefined(self.weapon_specific_fire_death_torso_fx)) {
                 fire_death_torso_fx = self.weapon_specific_fire_death_torso_fx;
             }
-            wait(1);
+            wait 1;
             tagarray = [];
             tagarray[0] = "J_Elbow_LE";
             tagarray[1] = "J_Elbow_RI";
@@ -70,7 +70,7 @@ function flame_death_fx() {
             tagarray[3] = "J_Knee_LE";
             tagarray = randomize_array(tagarray);
             playfxontag(fire_death_sm_fx, self, tagarray[0]);
-            wait(1);
+            wait 1;
             tagarray[0] = "J_Wrist_RI";
             tagarray[1] = "J_Wrist_LE";
             if (!isdefined(self.a.gib_ref) || self.a.gib_ref != "no_legs") {
@@ -84,7 +84,7 @@ function flame_death_fx() {
         }
         return;
     }
-    println("J_Elbow_RI");
+    println("<dev string:xc7>");
 }
 
 // Namespace zombie_death
@@ -108,7 +108,7 @@ function randomize_array(array) {
 function set_last_gib_time() {
     anim notify(#"stop_last_gib_time");
     anim endon(#"stop_last_gib_time");
-    wait(0.05);
+    wait 0.05;
     anim.lastgibtime = gettime();
     anim.totalgibs = randomintrange(anim.mingibs, anim.maxgibs);
 }
@@ -129,17 +129,17 @@ function get_gib_ref(direction) {
         anim thread set_last_gib_time();
         refs = [];
         switch (direction) {
-        case 24:
+        case "right":
             refs[refs.size] = "left_arm";
             refs[refs.size] = "left_leg";
             gib_ref = get_random(refs);
             break;
-        case 23:
+        case "left":
             refs[refs.size] = "right_arm";
             refs[refs.size] = "right_leg";
             gib_ref = get_random(refs);
             break;
-        case 22:
+        case "forward":
             refs[refs.size] = "right_arm";
             refs[refs.size] = "left_arm";
             refs[refs.size] = "right_leg";
@@ -148,7 +148,7 @@ function get_gib_ref(direction) {
             refs[refs.size] = "no_legs";
             gib_ref = get_random(refs);
             break;
-        case 21:
+        case "back":
             refs[refs.size] = "right_arm";
             refs[refs.size] = "left_arm";
             refs[refs.size] = "right_leg";
@@ -192,28 +192,28 @@ function do_gib() {
         return;
     }
     switch (self.a.gib_ref) {
-    case 18:
+    case "right_arm":
         gibserverutils::gibrightarm(self);
         break;
-    case 16:
+    case "left_arm":
         gibserverutils::gibleftarm(self);
         break;
-    case 19:
+    case "right_leg":
         gibserverutils::gibrightleg(self);
         break;
-    case 17:
+    case "left_leg":
         gibserverutils::gibleftleg(self);
         break;
-    case 13:
+    case "no_legs":
         gibserverutils::giblegs(self);
         break;
-    case 25:
+    case "head":
         gibserverutils::gibhead(self);
         break;
-    case 20:
+    case "guts":
         break;
     default:
-        assertmsg("J_Elbow_RI" + self.a.gib_ref + "J_Elbow_RI");
+        assertmsg("<dev string:x160>" + self.a.gib_ref + "<dev string:x172>");
         break;
     }
 }

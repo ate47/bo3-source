@@ -15,9 +15,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_ded850b0;
+#namespace zm_zod_transformer;
 
-// Namespace namespace_ded850b0
+// Namespace zm_zod_transformer
 // Params 0, eflags: 0x2
 // Checksum 0xcfe6ee67, Offset: 0x318
 // Size: 0x2c
@@ -25,7 +25,7 @@ function autoexec function_2dc19561() {
     system::register("zm_zod_transformer", undefined, &__main__, undefined);
 }
 
-// Namespace namespace_ded850b0
+// Namespace zm_zod_transformer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x896f7415, Offset: 0x350
 // Size: 0x74
@@ -35,7 +35,7 @@ function __main__() {
     level thread init_transformers();
 }
 
-// Namespace namespace_ded850b0
+// Namespace zm_zod_transformer
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb15d153a, Offset: 0x3d0
 // Size: 0x132
@@ -46,16 +46,16 @@ function init_transformers() {
     foreach (var_b46b59df in var_38d937f) {
         var_677edb82 = getent(var_b46b59df.target, "targetname");
         var_677edb82 thread function_7734548b(var_b46b59df);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_ded850b0
+// Namespace zm_zod_transformer
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd720bc3b, Offset: 0x510
 // Size: 0x14c
 function function_7734548b(var_b46b59df) {
-    assert(isdefined(self.script_int), "bminteract" + self.origin);
+    assert(isdefined(self.script_int), "<dev string:x28>" + self.origin);
     n_power_index = self.script_int;
     self thread namespace_215602b6::function_c5c7aef3(var_b46b59df);
     self clientfield::set("bminteract", 2);

@@ -102,7 +102,7 @@ function minigun_weapon_powerup(ent_player, time) {
         ent_player allowprone(0);
         stance_disabled = 1;
         while (ent_player getstance() != "stand") {
-            wait(0.05);
+            wait 0.05;
         }
     }
     zm_powerups::weapon_powerup(ent_player, time, "minigun", 1);
@@ -126,7 +126,7 @@ function minigun_powerup_last_stand() {
 // Size: 0x6e
 function minigun_countdown(ent_player, str_weapon_time) {
     while (ent_player.zombie_vars[str_weapon_time] > 0) {
-        wait(0.05);
+        wait 0.05;
         ent_player.zombie_vars[str_weapon_time] = ent_player.zombie_vars[str_weapon_time] - 0.05;
     }
 }

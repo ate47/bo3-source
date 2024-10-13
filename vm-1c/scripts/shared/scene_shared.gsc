@@ -96,10 +96,10 @@ class csceneobject : cscriptbundleobjectbase {
     // Size: 0x54
     function skip_scene(b_wait_one_frame) {
         if (isdefined(b_wait_one_frame)) {
-            wait(0.05);
+            wait 0.05;
         }
         if (function_2f52c963()) {
-            wait(0.05);
+            wait 0.05;
         }
         function_390406f();
     }
@@ -111,8 +111,8 @@ class csceneobject : cscriptbundleobjectbase {
     function function_390406f() {
         if (isdefined(self.current_playing_anim)) {
             /#
-                if (getdvarint("Align target '") > 0) {
-                    printtoprightln("Align target '" + self._s.mainanim + "Align target '" + gettime(), (1, 1, 1));
+                if (getdvarint("<dev string:x125>") > 0) {
+                    printtoprightln("<dev string:x2bb>" + self._s.mainanim + "<dev string:x121>" + gettime(), (1, 1, 1));
                 }
             #/
             if (is_shared_player()) {
@@ -132,8 +132,8 @@ class csceneobject : cscriptbundleobjectbase {
     function function_2f52c963() {
         if (isdefined(self.current_playing_anim)) {
             /#
-                if (getdvarint("Align target '") > 0) {
-                    printtoprightln("Align target '" + self._s.mainanim + "Align target '" + gettime(), (0.8, 0.8, 0.8));
+                if (getdvarint("<dev string:x125>") > 0) {
+                    printtoprightln("<dev string:x296>" + self._s.mainanim + "<dev string:x121>" + gettime(), (0.8, 0.8, 0.8));
                 }
             #/
             if (is_shared_player()) {
@@ -331,7 +331,7 @@ class csceneobject : cscriptbundleobjectbase {
         } else {
             player playerlinktodelta(self._e, "tag_player", 1, isdefined(self._s.viewclampright) ? self._s.viewclampright : 0, isdefined(self._s.viewclampleft) ? self._s.viewclampleft : 0, isdefined(self._s.viewclamptop) ? self._s.viewclamptop : 0, isdefined(self._s.viewclampbottom) ? self._s.viewclampbottom : 0, 1, 1);
         }
-        wait(self._s.cameratween > 0.2 ? self._s.cameratween : 0.2);
+        wait self._s.cameratween > 0.2 ? self._s.cameratween : 0.2;
         self._e show();
     }
 
@@ -408,8 +408,8 @@ class csceneobject : cscriptbundleobjectbase {
         /#
         #/
         /#
-            if (getdvarint("Align target '") > 0) {
-                printtoprightln("Align target '" + self.player_animation);
+            if (getdvarint("<dev string:x28>") > 0) {
+                printtoprightln("<dev string:x1bd>" + self.player_animation);
             }
         #/
         if (!isdefined(self.var_190b1ea2)) {
@@ -455,11 +455,11 @@ class csceneobject : cscriptbundleobjectbase {
         }
         if (n_time_frac < 1) {
             /#
-                if (getdvarint("Align target '") > 0) {
+                if (getdvarint("<dev string:x1f1>") > 0) {
                     player hide();
                 }
-                if (getdvarint("Align target '") > 0) {
-                    printtoprightln("Align target '" + self._s.name + "Align target '" + self.player_animation);
+                if (getdvarint("<dev string:x28>") > 0) {
+                    printtoprightln("<dev string:x203>" + self._s.name + "<dev string:x121>" + self.player_animation);
                 }
             #/
             str_animation = self.player_animation;
@@ -496,8 +496,8 @@ class csceneobject : cscriptbundleobjectbase {
                 self.current_playing_anim[player_num] = undefined;
             }
             /#
-                if (getdvarint("Align target '") > 0) {
-                    printtoprightln("Align target '" + self._s.name + "Align target '" + self.player_animation);
+                if (getdvarint("<dev string:x28>") > 0) {
+                    printtoprightln("<dev string:x248>" + self._s.name + "<dev string:x290>" + self.player_animation);
                 }
             #/
         }
@@ -509,8 +509,8 @@ class csceneobject : cscriptbundleobjectbase {
     // Size: 0x350
     function function_d1e0bafa(animation, align, tag, n_rate, n_time) {
         /#
-            if (getdvarint("Align target '") > 0) {
-                printtoprightln("Align target '" + animation);
+            if (getdvarint("<dev string:x28>") > 0) {
+                printtoprightln("<dev string:x194>" + animation);
             }
         #/
         self.player_animation = animation;
@@ -603,11 +603,11 @@ class csceneobject : cscriptbundleobjectbase {
             n_time = 0;
         }
         /#
-            if (getdvarint("Align target '") > 0) {
+            if (getdvarint("<dev string:x28>") > 0) {
                 if (isdefined(self._s.name)) {
-                    printtoprightln("Align target '" + self._s.name);
+                    printtoprightln("<dev string:xd6>" + self._s.name);
                 } else {
-                    printtoprightln("Align target '" + self._s.model);
+                    printtoprightln("<dev string:xd6>" + self._s.model);
                 }
             }
         #/
@@ -628,7 +628,7 @@ class csceneobject : cscriptbundleobjectbase {
         }
         if (n_delay > 0) {
             if (n_delay > 0) {
-                wait(n_delay);
+                wait n_delay;
             }
         }
         if (var_60629dda) {
@@ -682,15 +682,15 @@ class csceneobject : cscriptbundleobjectbase {
                     n_blend_out = 0;
                 }
                 /#
-                    if (getdvarint("Align target '") > 0) {
-                        printtoprightln("Align target '" + (isdefined(self._s.name) ? self._s.name : self._s.model) + "Align target '" + animation);
+                    if (getdvarint("<dev string:x28>") > 0) {
+                        printtoprightln("<dev string:xf2>" + (isdefined(self._s.name) ? self._s.name : self._s.model) + "<dev string:x121>" + animation);
                     }
                 #/
                 /#
-                    if (getdvarint("Align target '") > 0) {
+                    if (getdvarint("<dev string:x125>") > 0) {
                         if (!isdefined(level.animation_played)) {
                             level.animation_played = [];
-                            animation_played_name = (isdefined(self._s.name) ? self._s.name : self._s.model) + "Align target '" + animation;
+                            animation_played_name = (isdefined(self._s.name) ? self._s.name : self._s.model) + "<dev string:x121>" + animation;
                             if (!isdefined(level.animation_played)) {
                                 level.animation_played = [];
                             } else if (!isarray(level.animation_played)) {
@@ -709,10 +709,10 @@ class csceneobject : cscriptbundleobjectbase {
                     current_playing_anim = undefined;
                 }
                 /#
-                    if (getdvarint("Align target '") > 0) {
+                    if (getdvarint("<dev string:x125>") > 0) {
                         if (isdefined(level.animation_played)) {
                             for (i = 0; i < level.animation_played.size; i++) {
-                                animation_played_name = (isdefined(self._s.name) ? self._s.name : self._s.model) + "Align target '" + animation;
+                                animation_played_name = (isdefined(self._s.name) ? self._s.name : self._s.model) + "<dev string:x121>" + animation;
                                 if (level.animation_played[i] == animation_played_name) {
                                     arrayremovevalue(level.animation_played, animation_played_name);
                                     i--;
@@ -722,14 +722,14 @@ class csceneobject : cscriptbundleobjectbase {
                     }
                 #/
                 /#
-                    if (getdvarint("Align target '") > 0) {
-                        printtoprightln("Align target '" + (isdefined(self._s.name) ? self._s.name : self._s.model) + "Align target '" + animation);
+                    if (getdvarint("<dev string:x28>") > 0) {
+                        printtoprightln("<dev string:x136>" + (isdefined(self._s.name) ? self._s.name : self._s.model) + "<dev string:x121>" + animation);
                     }
                 #/
             }
         } else {
             /#
-                cscriptbundleobjectbase::log("Align target '" + animation + "Align target '");
+                cscriptbundleobjectbase::log("<dev string:x165>" + animation + "<dev string:x17f>");
             #/
         }
         self._is_valid = is_alive() && !in_a_different_scene();
@@ -856,8 +856,8 @@ class csceneobject : cscriptbundleobjectbase {
     // Size: 0x2dc
     function function_fc54390f(player) {
         /#
-            if (getdvarint("Align target '") > 0) {
-                printtoprightln("Align target '");
+            if (getdvarint("<dev string:x28>") > 0) {
+                printtoprightln("<dev string:xb9>");
             }
         #/
         player.scene_set_visible_time = level.time;
@@ -905,8 +905,8 @@ class csceneobject : cscriptbundleobjectbase {
             var_f8601b9 = 0;
         }
         /#
-            if (getdvarint("Align target '") > 0) {
-                printtoprightln("Align target '" + (isdefined(self._s.name) ? self._s.name : self._s.model));
+            if (getdvarint("<dev string:x28>") > 0) {
+                printtoprightln("<dev string:x7e>" + (isdefined(self._s.name) ? self._s.name : self._s.model));
             }
         #/
         if (isdefined(self._str_state)) {
@@ -939,15 +939,15 @@ class csceneobject : cscriptbundleobjectbase {
                 if (isdefined(self._s.removeweapon) && self._s.removeweapon && !(isdefined(self._e._scene_old_gun_removed) && self._e._scene_old_gun_removed)) {
                     if (isplayer(self._e)) {
                         /#
-                            if (getdvarint("Align target '") > 0) {
-                                printtoprightln("Align target '" + (isdefined(self._s.name) ? self._s.name : self._s.model));
+                            if (getdvarint("<dev string:x28>") > 0) {
+                                printtoprightln("<dev string:x95>" + (isdefined(self._s.name) ? self._s.name : self._s.model));
                             }
                         #/
                         self._e player::give_back_weapons();
                     } else {
                         /#
-                            if (getdvarint("Align target '") > 0) {
-                                printtoprightln("Align target '" + (isdefined(self._s.name) ? self._s.name : self._s.model));
+                            if (getdvarint("<dev string:x28>") > 0) {
+                                printtoprightln("<dev string:x95>" + (isdefined(self._s.name) ? self._s.name : self._s.model));
                             }
                         #/
                         self._e animation::attach_weapon();
@@ -1029,8 +1029,8 @@ class csceneobject : cscriptbundleobjectbase {
     // Size: 0x594
     function _prepare_player(player) {
         /#
-            if (getdvarint("Align target '") > 0) {
-                printtoprightln("Align target '");
+            if (getdvarint("<dev string:x28>") > 0) {
+                printtoprightln("<dev string:x60>");
             }
         #/
         if (isdefined(player.play_scene_transition_effect) && player.play_scene_transition_effect) {
@@ -1334,26 +1334,26 @@ class csceneobject : cscriptbundleobjectbase {
             while (!var_81c6c482) {
                 n_amount, e_attacker, v_org, v_dir, str_mod = self._e waittill(#"damage");
                 switch (str_mod) {
-                case 23:
-                case 26:
+                case "MOD_PISTOL_BULLET":
+                case "MOD_RIFLE_BULLET":
                     if (issubstr(str_damage_types, "bullet")) {
                         var_81c6c482 = 1;
                     }
                     break;
-                case 19:
-                case 20:
-                case 21:
+                case "MOD_EXPLOSIVE":
+                case "MOD_GRENADE":
+                case "MOD_GRENADE_SPLASH":
                     if (issubstr(str_damage_types, "explosive")) {
                         var_81c6c482 = 1;
                     }
                     break;
-                case 24:
-                case 25:
+                case "MOD_PROJECTILE":
+                case "MOD_PROJECTILE_SPLASH":
                     if (issubstr(str_damage_types, "projectile")) {
                         var_81c6c482 = 1;
                     }
                     break;
-                case 22:
+                case "MOD_MELEE":
                     if (issubstr(str_damage_types, "melee")) {
                         var_81c6c482 = 1;
                     }
@@ -1432,8 +1432,8 @@ class csceneobject : cscriptbundleobjectbase {
             b_finished = 0;
         }
         /#
-            if (getdvarint("Align target '") > 0) {
-                printtoprightln("Align target '" + (isdefined(self._s.name) ? self._s.name : self._s.model));
+            if (getdvarint("<dev string:x28>") > 0) {
+                printtoprightln("<dev string:x4a>" + (isdefined(self._s.name) ? self._s.name : self._s.model));
             }
         #/
         if (isalive(self._e)) {
@@ -1456,11 +1456,11 @@ class csceneobject : cscriptbundleobjectbase {
     // Size: 0x574
     function play() {
         /#
-            if (getdvarint("Align target '") > 0) {
+            if (getdvarint("<dev string:x28>") > 0) {
                 if (isdefined(self._s.name)) {
-                    printtoprightln("Align target '" + self._s.name);
+                    printtoprightln("<dev string:x34>" + self._s.name);
                 } else {
-                    printtoprightln("Align target '" + self._s.model);
+                    printtoprightln("<dev string:x34>" + self._s.model);
                 }
             }
         #/
@@ -1715,13 +1715,13 @@ class cscene : cscriptbundlebase {
     // Size: 0x14a
     function private _skip_scene() {
         self endon(#"stopped");
-        wait(0.05);
+        wait 0.05;
         foreach (o_scene_object in self._a_objects) {
             if (o_scene_object._is_valid) {
                 [[ o_scene_object ]]->function_2f52c963();
             }
         }
-        wait(0.05);
+        wait 0.05;
         foreach (o_scene_object in self._a_objects) {
             if (o_scene_object._is_valid) {
                 [[ o_scene_object ]]->function_390406f();
@@ -1736,8 +1736,8 @@ class cscene : cscriptbundlebase {
     // Size: 0x254
     function private function_6fb6722f() {
         /#
-            if (getdvarint("Align target '") > 0) {
-                printtoprightln("Align target '" + gettime(), (1, 0, 0));
+            if (getdvarint("<dev string:x125>") > 0) {
+                printtoprightln("<dev string:x539>" + gettime(), (1, 0, 0));
             }
         #/
         if (isdefined(level.var_cd66d9d1)) {
@@ -1756,12 +1756,12 @@ class cscene : cscriptbundlebase {
                 level thread [[ level.var_e032f90d ]](self._s.name);
             }
             /#
-                if (getdvarint("Align target '") > 0) {
-                    printtoprightln("Align target '" + gettime());
+                if (getdvarint("<dev string:x125>") > 0) {
+                    printtoprightln("<dev string:x480>" + gettime());
                 }
             #/
             /#
-                if (getdvarint("Align target '") == 0) {
+                if (getdvarint("<dev string:x4a2>") == 0) {
                     b_skip_fading = 0;
                 } else {
                     b_skip_fading = 1;
@@ -1782,32 +1782,32 @@ class cscene : cscriptbundlebase {
     function skip_scene(var_6b34ddbf) {
         if (isdefined(self._s.disablesceneskipping) && isdefined(var_6b34ddbf) && var_6b34ddbf && self._s.disablesceneskipping) {
             /#
-                if (getdvarint("Align target '") > 0) {
-                    printtoprightln("Align target '" + self._s.name + "Align target '" + gettime(), (1, 0, 0));
+                if (getdvarint("<dev string:x125>") > 0) {
+                    printtoprightln("<dev string:x439>" + self._s.name + "<dev string:x121>" + gettime(), (1, 0, 0));
                 }
             #/
             function_6fb6722f();
             return;
         }
         /#
-            if (getdvarint("Align target '") > 0) {
-                printtoprightln("Align target '" + self._s.name + "Align target '" + gettime(), (0, 1, 0));
+            if (getdvarint("<dev string:x125>") > 0) {
+                printtoprightln("<dev string:x46b>" + self._s.name + "<dev string:x121>" + gettime(), (0, 1, 0));
             }
         #/
         if (!(isdefined(var_6b34ddbf) && var_6b34ddbf)) {
             if (self._str_state == "init") {
                 while (self._str_state == "init") {
-                    wait(0.05);
+                    wait 0.05;
                 }
             }
             if (is_skipping_player_scene()) {
                 /#
-                    if (getdvarint("Align target '") > 0) {
-                        printtoprightln("Align target '" + gettime());
+                    if (getdvarint("<dev string:x125>") > 0) {
+                        printtoprightln("<dev string:x480>" + gettime());
                     }
                 #/
                 /#
-                    if (getdvarint("Align target '") == 0) {
+                    if (getdvarint("<dev string:x4a2>") == 0) {
                         b_skip_fading = 0;
                     } else {
                         b_skip_fading = 1;
@@ -1819,13 +1819,13 @@ class cscene : cscriptbundlebase {
                     }
                     level.var_840fdf22 = 1;
                     level thread lui::screen_fade(1, 1, 0, "black", 0, "scene_system");
-                    wait(1);
+                    wait 1;
                     level.var_840fdf22 = undefined;
                 }
                 setpauseworld(0);
             }
             while (isdefined(level.var_840fdf22) && level.var_840fdf22) {
-                wait(0.05);
+                wait 0.05;
             }
         }
         if (isdefined(self._s.nextscenebundle)) {
@@ -1834,35 +1834,35 @@ class cscene : cscriptbundlebase {
             var_eb2cccdb = 0;
         }
         function_2f376105();
-        wait(0.05);
+        wait 0.05;
         /#
-            if (getdvarint("Align target '") > 0) {
-                printtoprightln("Align target '" + self._s.name + "Align target '" + gettime(), (0, 0, 1));
+            if (getdvarint("<dev string:x125>") > 0) {
+                printtoprightln("<dev string:x4b5>" + self._s.name + "<dev string:x121>" + gettime(), (0, 0, 1));
             }
         #/
         _call_state_funcs("skip_started");
         thread _skip_scene();
         /#
-            if (getdvarint("Align target '") > 0) {
-                printtoprightln("Align target '" + gettime(), (0, 1, 0));
+            if (getdvarint("<dev string:x125>") > 0) {
+                printtoprightln("<dev string:x4d2>" + gettime(), (0, 1, 0));
             }
         #/
         /#
-            if (getdvarint("Align target '") > 0) {
+            if (getdvarint("<dev string:x125>") > 0) {
                 if (isdefined(level.animation_played)) {
                     for (i = 0; i < level.animation_played.size; i++) {
-                        printtoprightln("Align target '" + level.animation_played[i], (1, 0, 0), -1);
+                        printtoprightln("<dev string:x504>" + level.animation_played[i], (1, 0, 0), -1);
                     }
                 }
             }
         #/
         var_aa786a73 = gettime() + 4000;
         while (!(isdefined(self.scene_stopped) && self.scene_stopped) && gettime() < var_aa786a73) {
-            wait(0.05);
+            wait 0.05;
         }
         /#
-            if (getdvarint("Align target '") > 0) {
-                printtoprightln("Align target '" + self._s.name + "Align target '" + gettime(), (1, 0.5, 0));
+            if (getdvarint("<dev string:x125>") > 0) {
+                printtoprightln("<dev string:x51e>" + self._s.name + "<dev string:x121>" + gettime(), (1, 0.5, 0));
             }
         #/
         _call_state_funcs("skip_completed");
@@ -1872,7 +1872,7 @@ class cscene : cscriptbundlebase {
                 if (isdefined(level.var_109c74a6)) {
                     var_84f532ce = gettime() + 4000;
                     while (level.var_109c74a6.size > 0 && gettime() < var_84f532ce) {
-                        wait(0.05);
+                        wait 0.05;
                     }
                 }
                 function_6fb6722f();
@@ -1906,8 +1906,8 @@ class cscene : cscriptbundlebase {
             }
             if (!isdefined(var_ce0c77d5)) {
                 /#
-                    if (getdvarint("Align target '") > 0) {
-                        printtoprightln("Align target '" + gettime(), (1, 0, 0));
+                    if (getdvarint("<dev string:x125>") > 0) {
+                        printtoprightln("<dev string:x3ef>" + gettime(), (1, 0, 0));
                     }
                 #/
                 self notify(#"scene_skip_completed");
@@ -2117,7 +2117,7 @@ class cscene : cscriptbundlebase {
                     self._e_root thread [[ func ]](a_ents);
                     break;
                 default:
-                    assertmsg("Align target '");
+                    assertmsg("<dev string:x3cb>");
                     break;
                 }
             }
@@ -2144,7 +2144,7 @@ class cscene : cscriptbundlebase {
     // Checksum 0x78e38572, Offset: 0xba88
     // Size: 0x88
     function function_e28db46f() {
-        wait(0.05);
+        wait 0.05;
         foreach (o_obj in self._a_objects) {
             o_obj.var_190b1ea2 = undefined;
         }
@@ -2162,19 +2162,19 @@ class cscene : cscriptbundlebase {
             b_finished = 0;
         }
         /#
-            if (getdvarint("Align target '") > 0) {
-                printtoprightln("Align target '" + self._s.name);
+            if (getdvarint("<dev string:x28>") > 0) {
+                printtoprightln("<dev string:x383>" + self._s.name);
             }
         #/
         if (isdefined(self._str_state)) {
             /#
-                if (getdvarint("Align target '") > 0) {
-                    printtoprightln("Align target '" + self._s.name + "Align target '" + self._str_state);
+                if (getdvarint("<dev string:x28>") > 0) {
+                    printtoprightln("<dev string:x383>" + self._s.name + "<dev string:x121>" + self._str_state);
                 }
             #/
             /#
-                if (strstartswith(self._str_mode, "Align target '")) {
-                    adddebugcommand("Align target '");
+                if (strstartswith(self._str_mode, "<dev string:x393>")) {
+                    adddebugcommand("<dev string:x39b>");
                 }
             #/
             if (!b_finished) {
@@ -2207,8 +2207,8 @@ class cscene : cscriptbundlebase {
                 }
             #/
             /#
-                if (getdvarint("Align target '") > 0) {
-                    printtoprightln("Align target '" + self._s.name);
+                if (getdvarint("<dev string:x28>") > 0) {
+                    printtoprightln("<dev string:x3ac>" + self._s.name);
                 }
             #/
             self.scene_stopped = 1;
@@ -2254,8 +2254,8 @@ class cscene : cscriptbundlebase {
     // Size: 0x42c
     function run_next() {
         /#
-            if (getdvarint("Align target '") > 0) {
-                printtoprightln("Align target '" + gettime());
+            if (getdvarint("<dev string:x28>") > 0) {
+                printtoprightln("<dev string:x34b>" + gettime());
             }
         #/
         b_run_next_scene = 0;
@@ -2266,14 +2266,14 @@ class cscene : cscriptbundlebase {
                 if (b_skip_scene) {
                     self util::waittill_any_timeout(5, "scene_skip_completed");
                     /#
-                        if (getdvarint("Align target '") > 0) {
-                            printtoprightln("Align target '" + self._s.nextscenebundle + "Align target '" + gettime(), (1, 1, 0));
+                        if (getdvarint("<dev string:x125>") > 0) {
+                            printtoprightln("<dev string:x35f>" + self._s.nextscenebundle + "<dev string:x121>" + gettime(), (1, 1, 0));
                         }
                     #/
                 }
                 /#
-                    if (getdvarint("Align target '") > 0) {
-                        printtoprightln("Align target '" + self._s.nextscenebundle + "Align target '" + gettime(), (1, 0, 0));
+                    if (getdvarint("<dev string:x125>") > 0) {
+                        printtoprightln("<dev string:x34b>" + self._s.nextscenebundle + "<dev string:x121>" + gettime(), (1, 0, 0));
                     }
                 #/
                 if (self._s.scenetype == "fxanim" && self._s.nextscenemode === "init") {
@@ -2579,7 +2579,7 @@ class cscene : cscriptbundlebase {
             n_len = floor(n_len);
         }
         n_server_length = n_len * 0.05;
-        wait(n_server_length);
+        wait n_server_length;
     }
 
     // Namespace cscene
@@ -2597,8 +2597,8 @@ class cscene : cscriptbundlebase {
             str_mode = "";
         }
         /#
-            if (getdvarint("Align target '") > 0) {
-                printtoprightln("Align target '" + self._s.name);
+            if (getdvarint("<dev string:x28>") > 0) {
+                printtoprightln("<dev string:x30b>" + self._s.name);
             }
         #/
         self notify(#"new_state");
@@ -2634,7 +2634,7 @@ class cscene : cscriptbundlebase {
             } else {
                 var_25ac9a87.var_5de38e4.origin = v_origin;
             }
-            wait(15);
+            wait 15;
             thread _stop_camera_anims();
         }
         self thread sync_with_client_scene("play", b_testing);
@@ -2666,7 +2666,7 @@ class cscene : cscriptbundlebase {
             level flagsys::set(self._str_notify_name + "_ready");
             if (strstartswith(self._str_mode, "capture")) {
                 /#
-                    adddebugcommand("Align target '" + self._str_name + "Align target '" + self._str_name);
+                    adddebugcommand("<dev string:x31b>" + self._str_name + "<dev string:x349>" + self._str_name);
                 #/
             }
             if (self.n_start_time == 0) {
@@ -2873,7 +2873,7 @@ class cscene : cscriptbundlebase {
             }
             /#
                 foreach (i, ent in a_ents) {
-                    cscriptbundlebase::error(isstring(i), "Align target '" + i + "Align target '");
+                    cscriptbundlebase::error(isstring(i), "<dev string:x2ec>" + i + "<dev string:x308>");
                 }
             #/
         }
@@ -2923,25 +2923,25 @@ class cscene : cscriptbundlebase {
             n_val = undefined;
             if (b_test_run) {
                 switch (str_state) {
-                case 72:
+                case "stop":
                     n_val = 3;
                     break;
-                case 5:
+                case "init":
                     n_val = 4;
                     break;
-                case 7:
+                case "play":
                     n_val = 5;
                     break;
                 }
             } else {
                 switch (str_state) {
-                case 72:
+                case "stop":
                     n_val = 0;
                     break;
-                case 5:
+                case "init":
                     n_val = 1;
                     break;
-                case 7:
+                case "play":
                     n_val = 2;
                     break;
                 }
@@ -3051,11 +3051,11 @@ class cscene : cscriptbundlebase {
     // Size: 0x4a4
     function init(str_scenedef, s_scenedef, e_align, a_ents, b_test_run) {
         /#
-            if (getdvarint("Align target '") > 0) {
-                printtoprightln("Align target '" + str_scenedef);
+            if (getdvarint("<dev string:x28>") > 0) {
+                printtoprightln("<dev string:x2d6>" + str_scenedef);
             }
-            if (isdefined(level.var_3f831f3b["Align target '"][s_scenedef.name])) {
-                level.var_3f831f3b["Align target '"][s_scenedef.name].used = 1;
+            if (isdefined(level.scriptbundles["<dev string:x2e6>"][s_scenedef.name])) {
+                level.scriptbundles["<dev string:x2e6>"][s_scenedef.name].used = 1;
             }
         #/
         cscriptbundlebase::init(str_scenedef, s_scenedef, b_test_run);
@@ -3109,8 +3109,8 @@ class class_c0992da4 : cscriptbundleobjectbase, csceneobject {
         self endon(#"done");
         var_48cfed9f = self._e waittill(#"alert");
         /#
-            if (getdvarint("Align target '", 0)) {
-                print3d(self._e.origin, "Align target '", (1, 0, 0), 1, 0.5, 20);
+            if (getdvarint("<dev string:x559>", 0)) {
+                print3d(self._e.origin, "<dev string:x564>", (1, 0, 0), 1, 0.5, 20);
             }
         #/
         thread [[ csceneobject::scene() ]]->play(var_48cfed9f);
@@ -3143,7 +3143,7 @@ class class_c0992da4 : cscriptbundleobjectbase, csceneobject {
         cscriptbundleobjectbase::log("play");
         waittillframeend();
         switch (var_48cfed9f) {
-        case 111:
+        case "low_alert":
             cscriptbundleobjectbase::log("LOW ALERT");
             if (isdefined(self._s.var_a7fbafbe)) {
                 self.var_2b1650fa = self._s.var_bded27a8;
@@ -3151,7 +3151,7 @@ class class_c0992da4 : cscriptbundleobjectbase, csceneobject {
                 csceneobject::_play_anim(self._s.var_a7fbafbe);
             }
             break;
-        case 110:
+        case "high_alert":
             cscriptbundleobjectbase::log("HIGH ALERT");
             if (isdefined(self._s.var_f024885a)) {
                 self.var_2b1650fa = self._s.var_95122da4;
@@ -3159,7 +3159,7 @@ class class_c0992da4 : cscriptbundleobjectbase, csceneobject {
                 csceneobject::_play_anim(self._s.var_f024885a);
             }
             break;
-        case 109:
+        case "combat":
             cscriptbundleobjectbase::log("COMBAT ALERT");
             if (isdefined(self._s.var_41fa8106)) {
                 self.var_2b1650fa = self._s.var_6c542070;
@@ -3215,7 +3215,7 @@ function get_existing_ent(str_name, b_spawner_only, b_nodes_and_structs) {
         if (e_array.size == 0) {
             e_array = getspawnerarray(str_name, "targetname");
         }
-        assert(e_array.size <= 1, "Align target '");
+        assert(e_array.size <= 1, "<dev string:x56a>");
         foreach (ent in e_array) {
             if (!isdefined(ent.isdying)) {
                 e = ent;
@@ -3280,7 +3280,7 @@ function synced_delete() {
         sethideonclientwhenscriptedanimcompleted(self);
         self stopanimscripted();
     } else {
-        wait(0.05);
+        wait 0.05;
         self ghost();
     }
     self notsolid();
@@ -3292,7 +3292,7 @@ function synced_delete() {
             self pathmode("dont move");
         }
     }
-    wait(1);
+    wait 1;
     self delete();
 }
 
@@ -3534,14 +3534,14 @@ function _trigger_stop(trig) {
 }
 
 // Namespace scene
-// Params 4, eflags: 0x21 linked
+// Params 4, eflags: 0x21 linked variadic
 // Checksum 0x9fab0840, Offset: 0x11f20
 // Size: 0x12c
 function add_scene_func(str_scenedef, func, str_state, ...) {
     if (!isdefined(str_state)) {
         str_state = "play";
     }
-    assert(isdefined(get_scenedef(str_scenedef)), "Align target '" + str_scenedef + "Align target '");
+    assert(isdefined(get_scenedef(str_scenedef)), "<dev string:x583>" + str_scenedef + "<dev string:x5ae>");
     if (!isdefined(level.scene_funcs)) {
         level.scene_funcs = [];
     }
@@ -3562,7 +3562,7 @@ function remove_scene_func(str_scenedef, func, str_state) {
     if (!isdefined(str_state)) {
         str_state = "play";
     }
-    assert(isdefined(get_scenedef(str_scenedef)), "Align target '" + str_scenedef + "Align target '");
+    assert(isdefined(get_scenedef(str_scenedef)), "<dev string:x5c4>" + str_scenedef + "<dev string:x5ae>");
     if (!isdefined(level.scene_funcs)) {
         level.scene_funcs = [];
     }
@@ -3611,7 +3611,7 @@ function get_scenedefs(str_type) {
 // Size: 0x1a8
 function spawn(arg1, arg2, arg3, arg4, b_test_run) {
     str_scenedef = arg1;
-    assert(isdefined(str_scenedef), "Align target '");
+    assert(isdefined(str_scenedef), "<dev string:x5f2>");
     if (isvec(arg2)) {
         v_origin = arg2;
         v_angles = arg3;
@@ -3648,7 +3648,7 @@ function init(arg1, arg2, arg3, b_test_run) {
             }
             if (isdefined(str_key)) {
                 a_instances = struct::get_array(str_value, str_key);
-                assert(a_instances.size, "Align target '" + str_key + "Align target '" + str_value + "Align target '");
+                assert(a_instances.size, "<dev string:x61d>" + str_key + "<dev string:x63b>" + str_value + "<dev string:x308>");
             } else {
                 a_instances = struct::get_array(str_value, "targetname");
                 if (!a_instances.size) {
@@ -3694,8 +3694,8 @@ function _init_instance(str_scenedef, a_ents, b_test_run) {
     #/
     s_bundle = get_scenedef(str_scenedef);
     /#
-        assert(isdefined(str_scenedef), "Align target '" + (isdefined(self.origin) ? self.origin : "Align target '") + "Align target '");
-        assert(isdefined(s_bundle), "Align target '" + (isdefined(self.origin) ? self.origin : "Align target '") + "Align target '" + str_scenedef + "Align target '");
+        assert(isdefined(str_scenedef), "<dev string:x63f>" + (isdefined(self.origin) ? self.origin : "<dev string:x64a>") + "<dev string:x650>");
+        assert(isdefined(s_bundle), "<dev string:x63f>" + (isdefined(self.origin) ? self.origin : "<dev string:x64a>") + "<dev string:x66c>" + str_scenedef + "<dev string:x5ae>");
     #/
     o_scene = get_active_scene(str_scenedef);
     if (!isdefined(o_scene)) {
@@ -3766,11 +3766,11 @@ function play(arg1, arg2, arg3, b_test_run, str_state, str_mode) {
         str_mode = "";
     }
     /#
-        if (getdvarint("Align target '") > 0) {
+        if (getdvarint("<dev string:x28>") > 0) {
             if (isdefined(arg1) && isstring(arg1)) {
-                printtoprightln("Align target '" + arg1);
+                printtoprightln("<dev string:x686>" + arg1);
             } else {
-                printtoprightln("Align target '");
+                printtoprightln("<dev string:x695>");
             }
         }
     #/
@@ -3793,7 +3793,7 @@ function play(arg1, arg2, arg3, b_test_run, str_state, str_mode) {
             if (isdefined(str_key)) {
                 a_instances = struct::get_array(str_value, str_key);
                 str_scenedef = undefined;
-                assert(a_instances.size, "Align target '" + str_key + "Align target '" + str_value + "Align target '");
+                assert(a_instances.size, "<dev string:x61d>" + str_key + "<dev string:x63b>" + str_value + "<dev string:x308>");
             } else {
                 a_instances = struct::get_array(str_value, "targetname");
                 if (!a_instances.size) {
@@ -3848,7 +3848,7 @@ function _play_instance(s_tracker, str_scenedef, a_ents, b_test_run, str_state, 
             if (isdefined(self.scene_played) && self.scene_played && !b_test_run) {
                 waittillframeend();
                 while (is_playing(str_scenedef)) {
-                    wait(0.05);
+                    wait 0.05;
                 }
                 s_tracker notify(#"scene_done");
                 return;
@@ -3922,7 +3922,7 @@ function stop(arg1, arg2, arg3) {
             }
             if (isdefined(str_key)) {
                 a_instances = struct::get_array(str_value, str_key);
-                assert(a_instances.size, "Align target '" + str_key + "Align target '" + str_value + "Align target '");
+                assert(a_instances.size, "<dev string:x61d>" + str_key + "<dev string:x63b>" + str_value + "<dev string:x308>");
                 str_value = undefined;
             } else {
                 a_instances = struct::get_array(str_value, "targetname");
@@ -4122,8 +4122,8 @@ function get_active_scene(str_scenedef) {
 // Checksum 0xda0f40b2, Offset: 0x13f90
 // Size: 0x3e
 function delete_scene_data(str_scenename) {
-    if (isdefined(level.var_3f831f3b["scene"][str_scenename])) {
-        level.var_3f831f3b["scene"][str_scenename] = undefined;
+    if (isdefined(level.scriptbundles["scene"][str_scenename])) {
+        level.scriptbundles["scene"][str_scenename] = undefined;
     }
 }
 
@@ -4144,8 +4144,8 @@ function scene_disable_player_stuff(b_hide_hud) {
         b_hide_hud = 1;
     }
     /#
-        if (getdvarint("Align target '") > 0) {
-            printtoprightln("Align target '");
+        if (getdvarint("<dev string:x28>") > 0) {
+            printtoprightln("<dev string:x6a1>");
         }
     #/
     self notify(#"scene_disable_player_stuff");
@@ -4169,13 +4169,13 @@ function scene_enable_player_stuff(b_hide_hud) {
         b_hide_hud = 1;
     }
     /#
-        if (getdvarint("Align target '") > 0) {
-            printtoprightln("Align target '");
+        if (getdvarint("<dev string:x28>") > 0) {
+            printtoprightln("<dev string:x6c3>");
         }
     #/
     self endon(#"scene_disable_player_stuff");
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     self enableoffhandweapons();
     if (b_hide_hud) {
         set_igc_active(0);
@@ -4260,7 +4260,7 @@ function should_spectate_on_join() {
 // Size: 0x28
 function wait_until_spectate_on_join_completes() {
     while (isdefined(level.scene_should_spectate_on_hot_join) && level.scene_should_spectate_on_hot_join) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -4288,11 +4288,11 @@ function skip_scene(scene_name, var_6b34ddbf, b_player_scene, var_48ef9f9) {
         }
     }
     /#
-        if (getdvarint("Align target '") > 0) {
+        if (getdvarint("<dev string:x125>") > 0) {
             if (isdefined(scene_name)) {
-                printtoprightln("Align target '" + scene_name + "Align target '" + gettime(), (1, 0.5, 0));
+                printtoprightln("<dev string:x6e4>" + scene_name + "<dev string:x121>" + gettime(), (1, 0.5, 0));
             } else {
-                printtoprightln("Align target '" + gettime(), (1, 0.5, 0));
+                printtoprightln("<dev string:x703>" + gettime(), (1, 0.5, 0));
             }
         }
     #/
@@ -4436,7 +4436,7 @@ function function_bac0d34c(var_68612a53) {
 // Size: 0x1c
 function function_f69c7a83() {
     while (isdefined(level.var_cd66d9d1)) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -4515,11 +4515,11 @@ function function_b5cb230() {
     level endon(#"hash_14c06c0c");
     b_skip_scene = 0;
     clear_scene_skipping_ui();
-    wait(0.05);
+    wait 0.05;
     foreach (player in level.players) {
         if (isdefined(player.skip_scene_menu_handle)) {
             player closeluimenu(player.skip_scene_menu_handle);
-            wait(0.05);
+            wait 0.05;
         }
         player.skip_scene_menu_handle = player openluimenu("CPSkipSceneMenu");
         player setluimenudata(player.skip_scene_menu_handle, "showSkipButton", 0);
@@ -4568,11 +4568,11 @@ function function_b5cb230() {
         }
         if (isdefined(level.chyron_text_active) && level.chyron_text_active) {
             while (isdefined(level.chyron_text_active) && level.chyron_text_active) {
-                wait(0.05);
+                wait 0.05;
             }
-            wait(3);
+            wait 3;
         }
-        wait(0.05);
+        wait 0.05;
     }
     if (b_skip_scene) {
         self playsound("uin_igc_skip");
@@ -4663,7 +4663,7 @@ function private _wait_for_ordered_notify(id, group_obj, group_name, str_note) {
     if (group_obj.current_count == id) {
         group_obj.current_count++;
         self notify("scene_" + str_note);
-        wait(0.05);
+        wait 0.05;
         if (group_obj.current_count == group_obj.count) {
             group_obj.pending_notifies = undefined;
             level.scene_ordered_notetracks[group_name] = undefined;
@@ -4695,7 +4695,7 @@ function private _fire_ordered_notitifes(group_obj, group_name) {
         while (group_obj.pending_notifies.size > 0) {
             self notify("scene_" + group_obj.pending_notifies[0].str_note);
             arrayremoveindex(group_obj.pending_notifies, 0);
-            wait(0.05);
+            wait 0.05;
         }
     }
     group_obj.pending_notifies = undefined;

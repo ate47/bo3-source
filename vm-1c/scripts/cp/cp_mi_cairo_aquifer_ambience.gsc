@@ -14,9 +14,9 @@
 #using scripts/shared/scene_shared;
 #using scripts/shared/array_shared;
 
-#namespace namespace_1254c007;
+#namespace aquifer_ambience;
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 0, eflags: 0x2
 // Checksum 0x7ff6e376, Offset: 0x418
 // Size: 0x34
@@ -24,7 +24,7 @@ function autoexec function_2dc19561() {
     system::register("aquifer_ambience", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe8605dda, Offset: 0x458
 // Size: 0x124
@@ -37,7 +37,7 @@ function __init__() {
     clientfield::register("world", "kill_ambience", 1, 1, "int");
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7f6ac514, Offset: 0x588
 // Size: 0x94
@@ -50,7 +50,7 @@ function main() {
     thread function_bf52f93f();
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9b94703f, Offset: 0x628
 // Size: 0x1fc
@@ -76,26 +76,26 @@ function function_9f32fed2() {
     }
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf5f2ce85, Offset: 0x830
 // Size: 0x9c
 function function_4b099a44() {
     var_9ca5f644 = getentarray("aqu_intro_vista_cards_01", "targetname");
     if (level flag::exists("level_long_fly_in_completed") && !level flag::get("level_long_fly_in_completed")) {
-        level waittill(#"hash_1486d0dc");
+        level waittill(#"level_long_fly_in_completed");
     }
     if (isdefined(var_9ca5f644)) {
         array::delete_all(var_9ca5f644);
     }
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 0, eflags: 0x1 linked
 // Checksum 0x18028a, Offset: 0x8d8
 // Size: 0x1b8
 function function_febb5e1e() {
-    level endon(#"hash_935c5b8e");
+    level endon(#"intro_finished");
     var_f92ecad5 = [];
     var_8f76637c = 0;
     level flag::wait_till("player_active_in_level");
@@ -117,21 +117,21 @@ function function_febb5e1e() {
     }
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 3, eflags: 0x1 linked
 // Checksum 0x9182eeed, Offset: 0xa98
 // Size: 0x222
 function function_8f28e703(tname, start_flag, interval) {
     var_f2ceeb93 = struct::get_array(tname, "targetname");
     while (!flag::exists(start_flag)) {
-        wait(0.5);
+        wait 0.5;
     }
     level flag::wait_till(start_flag);
     foreach (hunter in var_f2ceeb93) {
-        wait(interval);
+        wait interval;
         seen = 1;
         while (seen == 1) {
-            wait(0.5);
+            wait 0.5;
             seen = 0;
             foreach (player in level.players) {
                 if (0 == player playersighttrace(hunter.origin, 50000, 0)) {
@@ -145,7 +145,7 @@ function function_8f28e703(tname, start_flag, interval) {
     }
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7123127a, Offset: 0xcc8
 // Size: 0x8c
@@ -154,7 +154,7 @@ function function_bf52f93f() {
     if (level flag::get("level_long_fly_in_completed")) {
         return;
     }
-    wait(1);
+    wait 1;
     level.players[0].var_8fedf36c waittill(#"hash_2bc810f9");
     clientfield::set("play_trucks", 1);
 }

@@ -385,7 +385,7 @@ function increment(var_5ba0c4e7, n_val, var_50f65478) {
     }
     /#
         if (!(isdefined(var_50f65478) && var_50f65478)) {
-            var_cacb0169 = tablelookupistring("RAMSES", 4, var_5ba0c4e7, 5);
+            var_cacb0169 = tablelookupistring("<dev string:x28>", 4, var_5ba0c4e7, 5);
             iprintln(var_cacb0169);
         }
         self.var_eb7d74bb = 1;
@@ -614,22 +614,22 @@ function on_player_disconnect() {
     function function_8082e9f0() {
         self endon(#"disconnect");
         while (true) {
-            cmd = getdvarstring("RAMSES");
-            if (isdefined(cmd) && cmd != "RAMSES") {
+            cmd = getdvarstring("<dev string:x4f>");
+            if (isdefined(cmd) && cmd != "<dev string:x66>") {
                 self function_a4b8b7d1(int(cmd));
             }
-            if (cmd != "RAMSES") {
-                setdvar("RAMSES", "RAMSES");
+            if (cmd != "<dev string:x66>") {
+                setdvar("<dev string:x4f>", "<dev string:x66>");
             }
             if (self.var_eb7d74bb == 1 && isdefined(self.var_ab872594)) {
                 function_7aaf1e5d();
             }
-            if (getdvarint("RAMSES") > 0) {
+            if (getdvarint("<dev string:x67>") > 0) {
                 self function_1ea616fe();
             } else {
                 self notify(#"hash_30b79005");
             }
-            wait(1);
+            wait 1;
         }
     }
 
@@ -671,10 +671,10 @@ function on_player_disconnect() {
     function function_1ea616fe() {
         x = 0;
         y = 100;
-        var_c06a516a = "RAMSES";
-        var_1c70e53e = "RAMSES";
-        var_16bed2ea = "RAMSES";
-        if (!isdefined(level.accolades) || isdefined(self.var_ab872594) || !isdefined(self savegame::function_36adbb9c("RAMSES"))) {
+        var_c06a516a = "<dev string:x66>";
+        var_1c70e53e = "<dev string:x66>";
+        var_16bed2ea = "<dev string:x66>";
+        if (!isdefined(level.accolades) || isdefined(self.var_ab872594) || !isdefined(self savegame::function_36adbb9c("<dev string:x7a>"))) {
             return;
         }
         self.var_ab872594 = [];
@@ -688,27 +688,27 @@ function on_player_disconnect() {
             if (var_c74eaab3 % 7 == 6) {
                 var_ab872594.x = x + 2;
                 var_ab872594.y = y + 2;
-                var_ab872594.alignx = "RAMSES";
-                var_ab872594.aligny = "RAMSES";
+                var_ab872594.alignx = "<dev string:x84>";
+                var_ab872594.aligny = "<dev string:x89>";
                 var_ab872594 settext(var_c06a516a);
                 var_ab872594.hidewheninmenu = 1;
-                var_ab872594.font = "RAMSES";
+                var_ab872594.font = "<dev string:x8d>";
                 var_ab872594.foreground = 1;
                 var_5922e3b8.x = x + 120;
                 var_5922e3b8.y = y + 2;
-                var_5922e3b8.alignx = "RAMSES";
-                var_5922e3b8.aligny = "RAMSES";
+                var_5922e3b8.alignx = "<dev string:x84>";
+                var_5922e3b8.aligny = "<dev string:x89>";
                 var_5922e3b8 settext(var_1c70e53e);
                 var_5922e3b8.hidewheninmenu = 1;
-                var_5922e3b8.font = "RAMSES";
+                var_5922e3b8.font = "<dev string:x8d>";
                 var_5922e3b8.foreground = 1;
                 var_87b86b14.x = x + -76;
                 var_87b86b14.y = y + 2;
-                var_87b86b14.alignx = "RAMSES";
-                var_87b86b14.aligny = "RAMSES";
+                var_87b86b14.alignx = "<dev string:x84>";
+                var_87b86b14.aligny = "<dev string:x89>";
                 var_87b86b14 settext(var_16bed2ea);
                 var_87b86b14.hidewheninmenu = 1;
-                var_87b86b14.font = "RAMSES";
+                var_87b86b14.font = "<dev string:x8d>";
                 var_87b86b14.foreground = 1;
                 self.var_ab872594[self.var_ab872594.size] = var_ab872594;
                 self.var_5922e3b8[self.var_5922e3b8.size] = var_5922e3b8;
@@ -718,47 +718,47 @@ function on_player_disconnect() {
                 var_87b86b14 = newclienthudelem(self);
                 y += 73;
                 var_c74eaab3 = 1;
-                var_c06a516a = var_5ba0c4e7 + "RAMSES";
+                var_c06a516a = var_5ba0c4e7 + "<dev string:x95>";
                 var_1c70e53e = self function_4f9d8dec(var_5ba0c4e7).current_value;
                 if (isdefined(self function_4f9d8dec(var_5ba0c4e7).is_completed) && self function_4f9d8dec(var_5ba0c4e7).is_completed) {
-                    var_1c70e53e += "RAMSES";
+                    var_1c70e53e += "<dev string:x97>";
                 }
-                var_1c70e53e += "RAMSES";
-                var_16bed2ea = self function_520227e6(var_8c03895d.index) + "RAMSES";
+                var_1c70e53e += "<dev string:x95>";
+                var_16bed2ea = self function_520227e6(var_8c03895d.index) + "<dev string:x95>";
                 continue;
             }
-            var_c06a516a += var_5ba0c4e7 + "RAMSES";
+            var_c06a516a += var_5ba0c4e7 + "<dev string:x95>";
             var_1c70e53e += self function_4f9d8dec(var_5ba0c4e7).current_value;
             if (isdefined(self function_4f9d8dec(var_5ba0c4e7).is_completed) && self function_4f9d8dec(var_5ba0c4e7).is_completed) {
-                var_1c70e53e += "RAMSES";
+                var_1c70e53e += "<dev string:x97>";
             }
-            var_1c70e53e += "RAMSES";
-            var_16bed2ea += self function_520227e6(var_8c03895d.index) + "RAMSES";
+            var_1c70e53e += "<dev string:x95>";
+            var_16bed2ea += self function_520227e6(var_8c03895d.index) + "<dev string:x95>";
             var_c74eaab3++;
         }
         var_ab872594.x = x + 2;
         var_ab872594.y = y + 2;
-        var_ab872594.alignx = "RAMSES";
-        var_ab872594.aligny = "RAMSES";
+        var_ab872594.alignx = "<dev string:x84>";
+        var_ab872594.aligny = "<dev string:x89>";
         var_ab872594 settext(var_c06a516a);
         var_ab872594.hidewheninmenu = 1;
-        var_ab872594.font = "RAMSES";
+        var_ab872594.font = "<dev string:x8d>";
         var_ab872594.foreground = 1;
         var_5922e3b8.x = x + 120;
         var_5922e3b8.y = y + 2;
-        var_5922e3b8.alignx = "RAMSES";
-        var_5922e3b8.aligny = "RAMSES";
+        var_5922e3b8.alignx = "<dev string:x84>";
+        var_5922e3b8.aligny = "<dev string:x89>";
         var_5922e3b8 settext(var_1c70e53e);
         var_5922e3b8.hidewheninmenu = 1;
-        var_5922e3b8.font = "RAMSES";
+        var_5922e3b8.font = "<dev string:x8d>";
         var_5922e3b8.foreground = 1;
         var_87b86b14.x = x + -76;
         var_87b86b14.y = y + 2;
-        var_87b86b14.alignx = "RAMSES";
-        var_87b86b14.aligny = "RAMSES";
+        var_87b86b14.alignx = "<dev string:x84>";
+        var_87b86b14.aligny = "<dev string:x89>";
         var_87b86b14 settext(var_16bed2ea);
         var_87b86b14.hidewheninmenu = 1;
-        var_87b86b14.font = "RAMSES";
+        var_87b86b14.font = "<dev string:x8d>";
         var_87b86b14.foreground = 1;
         self.var_ab872594[self.var_ab872594.size] = var_ab872594;
         self.var_5922e3b8[self.var_5922e3b8.size] = var_5922e3b8;
@@ -787,11 +787,11 @@ function on_player_disconnect() {
     // Checksum 0x76270097, Offset: 0x3308
     // Size: 0xd6
     function devgui_init() {
-        setdvar("RAMSES", "RAMSES");
-        setdvar("RAMSES", "RAMSES");
-        adddebugcommand("RAMSES");
+        setdvar("<dev string:x4f>", "<dev string:x66>");
+        setdvar("<dev string:x67>", "<dev string:xa4>");
+        adddebugcommand("<dev string:xa6>");
         for (i = 0; i < level.accolades.size; i++) {
-            adddebugcommand("RAMSES" + i + "RAMSES" + i + "RAMSES" + i + "RAMSES");
+            adddebugcommand("<dev string:xf6>" + i + "<dev string:x129>" + i + "<dev string:x12b>" + i + "<dev string:x14b>");
         }
     }
 

@@ -34,8 +34,8 @@ function function_9c1fc2fd(str_objective, var_74cd64bc) {
     spawner::add_spawn_function_group("plaza_battle_intro_redshirts", "targetname", &namespace_ca56958::function_adfa2b54);
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_8e9083ff::function_da579a5d(str_objective, 1);
-        namespace_8e9083ff::function_c049667c(1);
+        zurich_util::function_da579a5d(str_objective, 1);
+        zurich_util::function_c049667c(1);
         trigger::use("garage_kane_exit_colortrig");
         scene::add_scene_func("p7_fxanim_cp_zurich_car_crash_03_bundle", &namespace_1beb9396::function_5d018732, "done");
         level thread scene::skipto_end("p7_fxanim_cp_zurich_car_crash_03_bundle");
@@ -50,7 +50,7 @@ function function_9c1fc2fd(str_objective, var_74cd64bc) {
         level flag::set("rails_triage_regroup_start");
         level flag::set("flag_start_kane_it_won_t_vo_done");
     }
-    scene::add_scene_func("p7_fxanim_cp_zurich_coalescence_tower_door_open_bundle", &namespace_8e9083ff::function_162b9ea0, "init");
+    scene::add_scene_func("p7_fxanim_cp_zurich_coalescence_tower_door_open_bundle", &zurich_util::function_162b9ea0, "init");
     level scene::init("p7_fxanim_cp_zurich_coalescence_tower_door_open_bundle");
     array::thread_all(level.players, &function_d5b7d39e);
     level thread function_302750ab();
@@ -63,12 +63,12 @@ function function_9c1fc2fd(str_objective, var_74cd64bc) {
     level.var_438d2fd9 = [];
     level.ai_boss = spawner::simple_spawn_single("plaza_battle_boss");
     level notify(#"hash_4f700a7e");
-    level thread namespace_8e9083ff::function_2361541e("rails");
-    level thread namespace_8e9083ff::function_1eb6ea27("plaza_battle_intro_zone_trig", "rails");
+    level thread zurich_util::function_2361541e("rails");
+    level thread zurich_util::function_1eb6ea27("plaza_battle_intro_zone_trig", "rails");
     level.var_3d556bcd ai::set_ignoreall(1);
     level.var_3d556bcd ai::set_ignoreme(1);
-    level.var_3d556bcd thread namespace_8e9083ff::function_2a6e38e();
-    namespace_8e9083ff::function_c049667c(0);
+    level.var_3d556bcd thread zurich_util::function_2a6e38e();
+    zurich_util::function_c049667c(0);
     level thread function_5ea42950();
     trigger::wait_till("rails_exit_zone_trig");
     spawn_manager::enable("plaza_battle_allies_left_spawn_manager");
@@ -81,7 +81,7 @@ function function_9c1fc2fd(str_objective, var_74cd64bc) {
 // Checksum 0xc5b1e4e, Offset: 0xc10
 // Size: 0x4a
 function function_1a4dfaaa(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
-    namespace_8e9083ff::function_4d032f25(0);
+    zurich_util::function_4d032f25(0);
     level.var_ebb30c1a = undefined;
     namespace_f815059a::function_9b46fb9();
 }
@@ -128,13 +128,13 @@ function function_302750ab() {
 // Checksum 0x4b6dc125, Offset: 0xe90
 // Size: 0xca
 function function_5ea42950() {
-    level endon(#"hash_a835a95b");
+    level endon(#"plaza_battle_train_exit_reached");
     nd_spline = getvehiclenode("rails_hunter_spline", "targetname");
     s_look = struct::get("rails_hunter_look_spot");
-    while (!namespace_8e9083ff::function_f8645b6(-1, s_look.origin, 0.6)) {
-        wait(0.05);
+    while (!zurich_util::function_f8645b6(-1, s_look.origin, 0.6)) {
+        wait 0.05;
     }
-    var_782205f8 = nd_spline namespace_8e9083ff::function_a569867c();
+    var_782205f8 = nd_spline zurich_util::function_a569867c();
     var_782205f8 vehicle::god_on();
     var_782205f8 waittill(#"reached_end_node");
     var_782205f8 delete();
@@ -145,13 +145,13 @@ function function_5ea42950() {
 // Checksum 0xcb463302, Offset: 0xf68
 // Size: 0xaa
 function function_d5b7d39e() {
-    level endon(#"hash_a835a95b");
+    level endon(#"plaza_battle_train_exit_reached");
     trigger::wait_till("trig_rails_hallucination", "targetname", self);
     self clientfield::increment_to_player("postfx_hallucinations", 1);
-    wait(0.8);
+    wait 0.8;
     visionset_mgr::activate("visionset", "cp_zurich_hallucination", self);
     self playsoundtoplayer("vox_dying_infected_after", self);
-    wait(1.4);
+    wait 1.4;
     visionset_mgr::deactivate("visionset", "cp_zurich_hallucination", self);
 }
 

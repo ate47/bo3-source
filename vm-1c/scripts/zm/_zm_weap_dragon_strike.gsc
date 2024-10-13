@@ -18,9 +18,9 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_42aab40d;
+#namespace dragon_strike;
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x2
 // Checksum 0xaa9d02de, Offset: 0x648
 // Size: 0x3c
@@ -28,7 +28,7 @@ function autoexec function_2dc19561() {
     system::register("zm_weap_dragon_strike", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0x79a02a78, Offset: 0x690
 // Size: 0x2ec
@@ -52,7 +52,7 @@ function __init__() {
     zm::register_player_damage_callback(&function_43b5419a);
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0x97a6bf5c, Offset: 0x988
 // Size: 0xc4
@@ -68,7 +68,7 @@ function __main__() {
     zm_spawner::register_zombie_death_event_callback(&function_22664e38);
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc8b8c2c1, Offset: 0xa58
 // Size: 0x4c
@@ -78,7 +78,7 @@ function on_player_connect() {
     self thread function_1939853d();
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0x77392b1f, Offset: 0xab0
 // Size: 0xb4
@@ -93,7 +93,7 @@ function on_player_spawned() {
     self thread function_3e8c94e3();
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0x689ddb37, Offset: 0xb70
 // Size: 0x58
@@ -103,12 +103,12 @@ function function_1939853d() {
     self endon(#"hash_1939853d");
     for (;;) {
         self waittill(#"zmb_max_ammo");
-        wait(0.05);
+        wait 0.05;
         self add_ammo();
     }
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa588a6af, Offset: 0xbd0
 // Size: 0xfc
@@ -129,7 +129,7 @@ function add_ammo() {
     }
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0x93de40f1, Offset: 0xcd8
 // Size: 0x1e0
@@ -152,7 +152,7 @@ function function_ff07e778() {
     }
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd8d3c78c, Offset: 0xec0
 // Size: 0x94
@@ -161,12 +161,12 @@ function on_player_disconnect() {
     if (isdefined(self.mdl_target) && !self flag::get("dragon_strike_active")) {
         mdl_target = self.mdl_target;
         mdl_target clientfield::set("dragon_strike_marker_on", 0);
-        wait(0.3);
+        wait 0.3;
         mdl_target delete();
     }
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 11, eflags: 0x1 linked
 // Checksum 0x228f1a6c, Offset: 0xf60
 // Size: 0xd6
@@ -177,7 +177,7 @@ function function_43b5419a(einflictor, eattacker, idamage, idflags, smeansofdeat
     return -1;
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0x908059b5, Offset: 0x1040
 // Size: 0x74
@@ -192,7 +192,7 @@ function function_2d8749cd() {
     zm_equipment::show_hint_text(%ZM_STALINGRAD_DRAGON_STRIKE_USE);
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0x22fbbac7, Offset: 0x10c0
 // Size: 0x110
@@ -216,7 +216,7 @@ function function_d5acc054() {
     }
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0x52f2eb5c, Offset: 0x11d8
 // Size: 0x90
@@ -230,7 +230,7 @@ function function_3e8c94e3() {
     }
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 1, eflags: 0x1 linked
 // Checksum 0x747969fa, Offset: 0x1270
 // Size: 0x58
@@ -241,7 +241,7 @@ function function_9e0c324b(w_check) {
     return false;
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8643bb48, Offset: 0x12d0
 // Size: 0x21c
@@ -270,7 +270,7 @@ function function_8ad253d8(previous_weapon) {
     self thread function_8ad253d8(previous_weapon);
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8acc8f4a, Offset: 0x14f8
 // Size: 0x18
@@ -281,7 +281,7 @@ function function_f80cd2c9() {
     return false;
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5d7c7884, Offset: 0x1518
 // Size: 0x8c
@@ -296,7 +296,7 @@ function function_2864e2c1() {
     }
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdafd301f, Offset: 0x15b0
 // Size: 0x4c
@@ -305,7 +305,7 @@ function function_42ab5fbb(var_5d020ece) {
     self thread animation::play("ai_zm_dlc3_dragon_strike_1", self);
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 1, eflags: 0x1 linked
 // Checksum 0x210e2adf, Offset: 0x1608
 // Size: 0x1cc
@@ -332,7 +332,7 @@ function function_a3b69ec0(var_5d020ece) {
     self flag::clear("dragon_strike_active");
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 5, eflags: 0x1 linked
 // Checksum 0x9a90bc54, Offset: 0x17e0
 // Size: 0x242
@@ -356,18 +356,18 @@ function function_9af893e8(e_player, var_5d020ece, b_upgraded, var_35ab0c48, w_f
     }
     var_2fcea154 thread function_604af93b();
     while (isdefined(var_aa911866)) {
-        wait(0.05);
+        wait 0.05;
     }
     level notify(#"hash_d67e330d");
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 4, eflags: 0x1 linked
 // Checksum 0xa1f298ea, Offset: 0x1a30
 // Size: 0x17a
 function function_a6d19957(b_upgraded, var_aa911866, v_hitloc, n_range) {
     while (isdefined(var_aa911866)) {
-        wait(0.05);
+        wait 0.05;
     }
     a_ai_zombies = array::get_all_closest(v_hitloc, getaiarchetypearray("zombie"), undefined, undefined, n_range);
     if (b_upgraded) {
@@ -378,12 +378,12 @@ function function_a6d19957(b_upgraded, var_aa911866, v_hitloc, n_range) {
     foreach (ai_zombie in a_ai_zombies) {
         if (isdefined(ai_zombie) && !(isdefined(ai_zombie.var_4cfc625d) && ai_zombie.var_4cfc625d)) {
             ai_zombie clientfield::set("dragon_strike_zombie_fire", n_clientfield);
-            wait(randomfloat(0.1));
+            wait randomfloat(0.1);
         }
     }
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0x76b7f19d, Offset: 0x1bb8
 // Size: 0x6e
@@ -394,7 +394,7 @@ function function_adac83c4() {
     return var_8d74b778;
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 2, eflags: 0x1 linked
 // Checksum 0x28d76c74, Offset: 0x1c30
 // Size: 0x1ac
@@ -413,17 +413,17 @@ function function_6efadb82(var_825b87b9, var_5a0c399b) {
         }
     }
     var_1e43571f delete();
-    wait(3.5);
+    wait 3.5;
     if (isdefined(self)) {
         self clientfield::set("dragon_strike_marker_on", 0);
     }
-    wait(0.3);
+    wait 0.3;
     if (isdefined(self)) {
         self delete();
     }
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7a5604f8, Offset: 0x1de8
 // Size: 0x8c
@@ -435,7 +435,7 @@ function function_22664e38(e_attacker) {
     }
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0x636146c0, Offset: 0x1e80
 // Size: 0x34
@@ -445,7 +445,7 @@ function function_604af93b() {
     self delete();
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 0, eflags: 0x1 linked
 // Checksum 0x46958819, Offset: 0x1ec0
 // Size: 0x354
@@ -479,22 +479,22 @@ function function_7fcb14a8() {
         self.var_5d020ece = self function_c7832a90(self.var_be00572f);
         if (!isdefined(self.var_5d020ece)) {
             self function_5a9be7d8(var_854898eb);
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         self.mdl_target clientfield::increment(var_78f8828b);
         self.mdl_target moveto(self.var_be00572f + var_b912cdaf, 0.05);
-        wait(0.1);
+        wait 0.1;
     }
     if (self flag::get("dragon_strike_active")) {
         return;
     }
     self.mdl_target clientfield::set("dragon_strike_marker_on", 0);
-    wait(0.3);
+    wait 0.3;
     self.mdl_target delete();
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7d7dc027, Offset: 0x2220
 // Size: 0x2da
@@ -521,7 +521,7 @@ function function_c7832a90(v_loc) {
     return undefined;
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 1, eflags: 0x1 linked
 // Checksum 0x510127d9, Offset: 0x2508
 // Size: 0x5e
@@ -531,7 +531,7 @@ function function_5a9be7d8(var_854898eb) {
     self.var_be00572f = undefined;
 }
 
-// Namespace namespace_42aab40d
+// Namespace dragon_strike
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6a6625bf, Offset: 0x2570
 // Size: 0xc4

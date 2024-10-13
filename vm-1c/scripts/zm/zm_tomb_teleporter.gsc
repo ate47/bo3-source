@@ -17,9 +17,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_97bec092;
+#namespace zm_tomb_teleporter;
 
-// Namespace namespace_97bec092
+// Namespace zm_tomb_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd465d605, Offset: 0x760
 // Size: 0x4ec
@@ -64,7 +64,7 @@ function teleporter_init() {
     function_6a1abb61();
 }
 
-// Namespace namespace_97bec092
+// Namespace zm_tomb_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7b094424, Offset: 0xc58
 // Size: 0x54
@@ -73,7 +73,7 @@ function main() {
     array::thread_all(var_b360941e, &function_5d4ce9fb);
 }
 
-// Namespace namespace_97bec092
+// Namespace zm_tomb_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdbc81494, Offset: 0xcb8
 // Size: 0x1c0
@@ -91,11 +91,11 @@ function function_c5b0a85b() {
                 return;
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_97bec092
+// Namespace zm_tomb_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9255ff40, Offset: 0xe80
 // Size: 0xf4
@@ -106,14 +106,14 @@ function function_d65163bc(e_player) {
     level.var_e71cefc = 1;
     level flag::wait_till_clear("story_vo_playing");
     level flag::set("story_vo_playing");
-    namespace_ad52727b::function_eee384d4(1);
-    namespace_ad52727b::function_10d15bb5("vox_sam_enter_chamber_1_0", e_player, 1);
-    namespace_ad52727b::function_10d15bb5("vox_sam_enter_chamber_2_0", e_player);
-    namespace_ad52727b::function_eee384d4(0);
+    zm_tomb_vo::function_eee384d4(1);
+    zm_tomb_vo::function_10d15bb5("vox_sam_enter_chamber_1_0", e_player, 1);
+    zm_tomb_vo::function_10d15bb5("vox_sam_enter_chamber_2_0", e_player);
+    zm_tomb_vo::function_eee384d4(0);
     level flag::clear("story_vo_playing");
 }
 
-// Namespace namespace_97bec092
+// Namespace zm_tomb_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9569b4a7, Offset: 0xf80
 // Size: 0x618
@@ -124,26 +124,26 @@ function function_db713e86(var_abb52853) {
     var_ddcb6651 show();
     var_96c4396 = var_ddcb6651.targetname + "_building";
     level flag::init(var_96c4396);
-    var_ff43cb27.trigger_stub = namespace_d7c0ce12::function_52854313(var_ff43cb27.origin, 50, 1);
-    var_ff43cb27.trigger_stub namespace_d7c0ce12::function_d73e42e0(%ZM_TOMB_TELE);
+    var_ff43cb27.trigger_stub = zm_tomb_utility::function_52854313(var_ff43cb27.origin, 50, 1);
+    var_ff43cb27.trigger_stub zm_tomb_utility::function_d73e42e0(%ZM_TOMB_TELE);
     s_portal.target = var_ff43cb27.target;
     s_portal.origin = var_ddcb6651 gettagorigin("fx_portal_jnt");
     s_portal.angles = var_ddcb6651 gettagangles("fx_portal_jnt");
-    str_fx = namespace_d7c0ce12::function_61fce955(var_abb52853);
+    str_fx = zm_tomb_utility::function_61fce955(var_abb52853);
     var_727974e8 = getanimlength(generic%p7_fxanim_zm_ori_portal_collapse_anim);
     open_time = getanimlength(generic%p7_fxanim_zm_ori_portal_open_anim);
     var_ff7119bc = undefined;
     switch (s_portal.targetname) {
-    case 30:
+    case "portal_exit_fire":
         var_ff7119bc = "p7_fxanim_zm_ori_portal_open_fire_bundle";
         break;
-    case 28:
+    case "portal_exit_air":
         var_ff7119bc = "p7_fxanim_zm_ori_portal_open_air_bundle";
         break;
-    case 31:
+    case "portal_exit_ice":
         var_ff7119bc = "p7_fxanim_zm_ori_portal_open_ice_bundle";
         break;
-    case 29:
+    case "portal_exit_electric":
         var_ff7119bc = "p7_fxanim_zm_ori_portal_open_elec_bundle";
         break;
     default:
@@ -158,15 +158,15 @@ function function_db713e86(var_abb52853) {
         if (e_player.score < level.var_b01bd818) {
             continue;
         }
-        var_ff43cb27.trigger_stub namespace_d7c0ce12::function_d73e42e0("");
+        var_ff43cb27.trigger_stub zm_tomb_utility::function_d73e42e0("");
         if (level.var_b01bd818 > 0) {
             e_player zm_score::minus_to_player_score(level.var_b01bd818);
         }
         var_ddcb6651 playloopsound("zmb_teleporter_loop_pre", 1);
         var_ddcb6651 thread scene::play(var_ff7119bc, var_ddcb6651);
         level flag::set(var_96c4396);
-        var_ddcb6651 thread namespace_d7c0ce12::function_8b1b140c(var_96c4396);
-        wait(open_time);
+        var_ddcb6651 thread zm_tomb_utility::function_8b1b140c(var_96c4396);
+        wait open_time;
         var_ddcb6651 thread scene::play("p7_fxanim_zm_ori_portal_open_1frame_bundle", var_ddcb6651);
         util::wait_network_frame();
         level flag::clear(var_96c4396);
@@ -174,33 +174,33 @@ function function_db713e86(var_abb52853) {
         e_fx.angles = s_portal.angles + (0, 180, 0);
         e_fx setmodel("tag_origin");
         e_fx clientfield::set("element_glow_fx", var_abb52853 + 4);
-        namespace_d7c0ce12::rumble_nearby_players(e_fx.origin, 1000, 2);
+        zm_tomb_utility::rumble_nearby_players(e_fx.origin, 1000, 2);
         var_ddcb6651 playloopsound("zmb_teleporter_loop_post", 1);
         s_portal thread function_7a009c17();
-        wait(20);
+        wait 20;
         var_ddcb6651 thread scene::play("p7_fxanim_zm_ori_portal_collapse_bundle", var_ddcb6651);
         var_ddcb6651 stoploopsound(0.5);
         var_ddcb6651 playsound("zmb_teleporter_anim_collapse_pew");
         s_portal notify(#"hash_1ba8d029");
         e_fx clientfield::set("element_glow_fx", 0);
-        wait(var_727974e8);
+        wait var_727974e8;
         e_fx delete();
-        var_ff43cb27.trigger_stub namespace_d7c0ce12::function_d73e42e0(%ZM_TOMB_TELE);
+        var_ff43cb27.trigger_stub zm_tomb_utility::function_d73e42e0(%ZM_TOMB_TELE);
     }
 }
 
-// Namespace namespace_97bec092
+// Namespace zm_tomb_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4daca049, Offset: 0x15a0
 // Size: 0x620
 function function_5d4ce9fb() {
     self endon(#"death");
-    fx_glow = namespace_d7c0ce12::function_61fce955(self.script_int);
+    fx_glow = zm_tomb_utility::function_61fce955(self.script_int);
     e_model = level.var_3722c981[self.script_int];
     self.origin = e_model gettagorigin("fx_portal_jnt");
     self.angles = e_model gettagangles("fx_portal_jnt");
     self.angles = (self.angles[0], self.angles[1] + -76, self.angles[2]);
-    self.trigger_stub = namespace_d7c0ce12::function_52854313(self.origin - (0, 0, 30), 50);
+    self.trigger_stub = zm_tomb_utility::function_52854313(self.origin - (0, 0, 30), 50);
     level flag::init("enable_teleporter_" + self.script_int);
     var_96c4396 = "teleporter_building_" + self.script_int;
     level flag::init(var_96c4396);
@@ -208,45 +208,45 @@ function function_5d4ce9fb() {
     open_time = getanimlength(generic%p7_fxanim_zm_ori_portal_open_anim);
     level flag::wait_till("start_zombie_round_logic");
     e_model thread scene::play("p7_fxanim_zm_ori_portal_collapse_bundle", e_model);
-    wait(var_727974e8);
+    wait var_727974e8;
     while (true) {
         level flag::wait_till("enable_teleporter_" + self.script_int);
         level flag::set(var_96c4396);
         var_babde23d = undefined;
         var_ff7119bc = undefined;
         switch (self.target) {
-        case 49:
+        case "fire_teleport_player":
             var_babde23d = "lgtexp_fireCave_fade";
             var_ff7119bc = "p7_fxanim_zm_ori_portal_open_fire_bundle";
             break;
-        case 47:
+        case "air_teleport_player":
             var_babde23d = "lgtexp_airCave_fade";
             var_ff7119bc = "p7_fxanim_zm_ori_portal_open_air_bundle";
             break;
-        case 50:
+        case "water_teleport_player":
             var_babde23d = "lgtexp_iceCave_fade";
             var_ff7119bc = "p7_fxanim_zm_ori_portal_open_ice_bundle";
             break;
-        case 48:
+        case "electric_teleport_player":
             var_babde23d = "lgtexp_elecCave_fade";
             var_ff7119bc = "p7_fxanim_zm_ori_portal_open_elec_bundle";
             break;
         default:
             break;
         }
-        e_model thread namespace_d7c0ce12::function_8b1b140c(var_96c4396);
+        e_model thread zm_tomb_utility::function_8b1b140c(var_96c4396);
         if (isdefined(var_ff7119bc)) {
             e_model thread scene::play(var_ff7119bc, e_model);
         }
         e_model playloopsound("zmb_teleporter_loop_pre", 1);
-        wait(open_time);
+        wait open_time;
         e_model thread scene::play("p7_fxanim_zm_ori_portal_open_1frame_bundle", e_model);
         util::wait_network_frame();
         e_fx = spawn("script_model", self.origin);
         e_fx.angles = self.angles;
         e_fx setmodel("tag_origin");
         e_fx clientfield::set("element_glow_fx", self.script_int + 4);
-        namespace_d7c0ce12::rumble_nearby_players(e_fx.origin, 1000, 2);
+        zm_tomb_utility::rumble_nearby_players(e_fx.origin, 1000, 2);
         e_model playloopsound("zmb_teleporter_loop_post", 1);
         if (isdefined(var_babde23d)) {
             exploder::exploder(var_babde23d);
@@ -266,12 +266,12 @@ function function_5d4ce9fb() {
         if (isdefined(var_babde23d)) {
             exploder::kill_exploder(var_babde23d);
         }
-        wait(var_727974e8);
+        wait var_727974e8;
         e_fx delete();
     }
 }
 
-// Namespace namespace_97bec092
+// Namespace zm_tomb_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbead5eb0, Offset: 0x1bc8
 // Size: 0x1f8
@@ -295,7 +295,7 @@ function function_7a009c17(radius) {
     }
 }
 
-// Namespace namespace_97bec092
+// Namespace zm_tomb_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x246970ba, Offset: 0x1dc8
 // Size: 0x148
@@ -314,7 +314,7 @@ function function_5f30f5fb() {
     }
 }
 
-// Namespace namespace_97bec092
+// Namespace zm_tomb_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0xff792546, Offset: 0x1f18
 // Size: 0x2c
@@ -322,7 +322,7 @@ function function_b67726d8(n_index) {
     level flag::set("enable_teleporter_" + n_index);
 }
 
-// Namespace namespace_97bec092
+// Namespace zm_tomb_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7247448c, Offset: 0x1f50
 // Size: 0x2c
@@ -330,7 +330,7 @@ function function_2e709a83(n_index) {
     level flag::clear("enable_teleporter_" + n_index);
 }
 
-// Namespace namespace_97bec092
+// Namespace zm_tomb_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3dac4bb3, Offset: 0x1f88
 // Size: 0x5c
@@ -340,7 +340,7 @@ function function_691aa432() {
     self.e_fx clientfield::set("teleporter_fx", 0);
 }
 
-// Namespace namespace_97bec092
+// Namespace zm_tomb_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x21494f7e, Offset: 0x1ff0
 // Size: 0x17e
@@ -354,7 +354,7 @@ function function_6a1abb61() {
     }
 }
 
-// Namespace namespace_97bec092
+// Namespace zm_tomb_teleporter
 // Params 4, eflags: 0x1 linked
 // Checksum 0x3e21fba1, Offset: 0x2178
 // Size: 0x6ec
@@ -406,7 +406,7 @@ function function_67bfec1a(var_395ce040, player, var_20fd5da9, show_fx) {
         visionset_mgr::activate("overlay", "zm_factory_teleport", player);
     }
     var_c5af343b = 0.5;
-    wait(var_20fd5da9 - var_c5af343b);
+    wait var_20fd5da9 - var_c5af343b;
     if (show_fx) {
         player thread hud::fade_to_black_for_x_sec(0, var_c5af343b + 0.3, 0, 0.5, "white");
         util::wait_network_frame();
@@ -430,10 +430,10 @@ function function_67bfec1a(var_395ce040, player, var_20fd5da9, show_fx) {
     }
     player.teleporting = 0;
     player clientfield::increment("teleport_arrival_departure_fx");
-    player notify(#"hash_327f029");
+    player notify(#"teleport_finished");
 }
 
-// Namespace namespace_97bec092
+// Namespace zm_tomb_teleporter
 // Params 2, eflags: 0x1 linked
 // Checksum 0xbc98ac65, Offset: 0x2870
 // Size: 0xf2
@@ -448,7 +448,7 @@ function function_c2a1c70a(s_pos, n_radius) {
     return true;
 }
 
-// Namespace namespace_97bec092
+// Namespace zm_tomb_teleporter
 // Params 2, eflags: 0x1 linked
 // Checksum 0x36c867a9, Offset: 0x2970
 // Size: 0xf0
@@ -461,7 +461,7 @@ function function_a2355239(player, a_structs) {
                 return s_pos;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

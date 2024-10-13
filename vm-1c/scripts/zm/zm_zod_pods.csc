@@ -11,9 +11,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_81256d2f;
+#namespace zm_zod_pods;
 
-// Namespace namespace_81256d2f
+// Namespace zm_zod_pods
 // Params 0, eflags: 0x2
 // Checksum 0x2b3fb5ec, Offset: 0x5f0
 // Size: 0x34
@@ -21,17 +21,17 @@ function autoexec function_2dc19561() {
     system::register("zm_zod_pods", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_81256d2f
+// Namespace zm_zod_pods
 // Params 0, eflags: 0x0
 // Checksum 0xeb501313, Offset: 0x630
 // Size: 0x2d4
 function __init__() {
     clientfield::register("toplayer", "ZM_ZOD_UI_POD_SPRAYER_PICKUP", 1, 1, "int", &zm_utility::zm_ui_infotext, 0, 1);
-    clientfield::register("scriptmover", "update_fungus_pod_level", 1, 3, "int", &function_69377ddc, 0, 0);
-    clientfield::register("scriptmover", "pod_sprayer_glint", 1, 1, "int", &function_7b94eca8, 0, 0);
+    clientfield::register("scriptmover", "update_fungus_pod_level", 1, 3, "int", &update_fungus_pod_level, 0, 0);
+    clientfield::register("scriptmover", "pod_sprayer_glint", 1, 1, "int", &pod_sprayer_glint, 0, 0);
     clientfield::register("scriptmover", "pod_miasma", 1, 1, "counter", &function_59408649, 0, 0);
     clientfield::register("scriptmover", "pod_harvest", 1, 1, "counter", &function_1d1d005f, 0, 0);
-    clientfield::register("scriptmover", "pod_self_destruct", 1, 1, "counter", &function_8144ccdc, 0, 0);
+    clientfield::register("scriptmover", "pod_self_destruct", 1, 1, "counter", &pod_self_destruct, 0, 0);
     clientfield::register("toplayer", "pod_sprayer_held", 1, 1, "int", &zm_utility::setinventoryuimodels, 0, 1);
     clientfield::register("toplayer", "pod_sprayer_hint_range", 1, 1, "int", &zm_utility::setinventoryuimodels, 0, 0);
     scene::init("p7_fxanim_zm_zod_fungus_pod_stage1_bundle");
@@ -42,11 +42,11 @@ function __init__() {
     scene::init("p7_fxanim_zm_zod_fungus_pod_stage3_death_bundle");
 }
 
-// Namespace namespace_81256d2f
+// Namespace zm_zod_pods
 // Params 7, eflags: 0x0
 // Checksum 0xb537fec5, Offset: 0x910
 // Size: 0x382
-function function_69377ddc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function update_fungus_pod_level(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(self.var_aa0684b4)) {
         stopfx(localclientnum, self.var_aa0684b4);
         self stopallloopsounds();
@@ -95,7 +95,7 @@ function function_69377ddc(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_81256d2f
+// Namespace zm_zod_pods
 // Params 2, eflags: 0x0
 // Checksum 0x9c398ac2, Offset: 0xca0
 // Size: 0x7c
@@ -107,7 +107,7 @@ function scene_play(scene, mdl_pod) {
     self scene::stop();
 }
 
-// Namespace namespace_81256d2f
+// Namespace zm_zod_pods
 // Params 2, eflags: 0x0
 // Checksum 0x601d8249, Offset: 0xd28
 // Size: 0x3c
@@ -116,7 +116,7 @@ function function_6221b6b9(scene, mdl_pod) {
     self scene::play(scene, mdl_pod);
 }
 
-// Namespace namespace_81256d2f
+// Namespace zm_zod_pods
 // Params 7, eflags: 0x0
 // Checksum 0x4c45e64c, Offset: 0xd70
 // Size: 0x1b4
@@ -145,11 +145,11 @@ function function_1d1d005f(localclientnum, oldval, newval, bnewent, binitialsnap
         break;
     }
     level thread function_b77a78c9(localclientnum, "zombie/fx_sprayer_mist_zod_zmb", v_origin, 2, v_angles);
-    wait(0.3);
+    wait 0.3;
     level thread function_b77a78c9(localclientnum, var_ae4d7909, v_origin, 8, v_angles);
 }
 
-// Namespace namespace_81256d2f
+// Namespace zm_zod_pods
 // Params 5, eflags: 0x0
 // Checksum 0xec6c8210, Offset: 0xf30
 // Size: 0xb4
@@ -159,11 +159,11 @@ function function_b77a78c9(localclientnum, str_fx, v_origin, n_duration, v_angle
     } else {
         fx = playfx(localclientnum, str_fx, v_origin);
     }
-    wait(n_duration);
+    wait n_duration;
     stopfx(localclientnum, fx);
 }
 
-// Namespace namespace_81256d2f
+// Namespace zm_zod_pods
 // Params 7, eflags: 0x0
 // Checksum 0xd6c42eb8, Offset: 0xff0
 // Size: 0x74
@@ -173,21 +173,21 @@ function function_59408649(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_81256d2f
+// Namespace zm_zod_pods
 // Params 7, eflags: 0x0
 // Checksum 0x4b3b710a, Offset: 0x1070
 // Size: 0x7c
-function function_8144ccdc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function pod_self_destruct(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level thread function_b77a78c9(localclientnum, "zombie/fx_fungus_pod_explo_maxevo_zod_zmb", self.origin, 5, (0, 90, 0));
     }
 }
 
-// Namespace namespace_81256d2f
+// Namespace zm_zod_pods
 // Params 7, eflags: 0x0
 // Checksum 0xe245609f, Offset: 0x10f8
 // Size: 0x9c
-function function_7b94eca8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function pod_sprayer_glint(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(self.var_eb0a02e9)) {
         stopfx(localclientnum, self.var_eb0a02e9);
     }

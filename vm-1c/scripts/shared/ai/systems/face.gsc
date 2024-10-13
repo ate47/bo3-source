@@ -12,25 +12,25 @@ function saygenericdialogue(typestring) {
         return;
     }
     switch (typestring) {
-    case 0:
+    case "attack":
         importance = 0.5;
         break;
-    case 4:
+    case "swing":
         importance = 0.5;
         typestring = "attack";
         break;
-    case 1:
+    case "flashbang":
         importance = 0.7;
         break;
-    case 3:
+    case "pain_small":
         importance = 0.4;
         break;
-    case 2:
-        wait(0.01);
+    case "pain_bullet":
+        wait 0.01;
         importance = 0.4;
         break;
     default:
-        println(" " + typestring);
+        println("<dev string:x28>" + typestring);
         importance = 0.3;
         break;
     }
@@ -46,7 +46,7 @@ function saygenericdialoguewithimportance(typestring, importance) {
     if (isdefined(self.dds_characterid)) {
         soundalias += self.dds_characterid;
     } else {
-        println(" ");
+        println("<dev string:x4b>");
         return;
     }
     soundalias += "_" + typestring;
@@ -98,7 +98,7 @@ function playidleface() {
 function playfacethread(facialanim, str_script_alias, importance, notifystring, waitornot, timetowait, toplayer) {
     self endon(#"death");
     if (!isdefined(str_script_alias)) {
-        wait(1);
+        wait 1;
         self notify(notifystring);
         return;
     }
@@ -124,24 +124,24 @@ function playfacethread(facialanim, str_script_alias, importance, notifystring, 
     if (self.istalking) {
         if (isdefined(self.a.currentdialogimportance)) {
             if (importance < self.a.currentdialogimportance) {
-                wait(1);
+                wait 1;
                 self notify(notifystring);
                 return;
             } else if (importance == self.a.currentdialogimportance) {
                 if (self.a.facialsoundalias == str_script_alias) {
                     return;
                 }
-                println(" " + self.a.facialsoundalias + " " + str_script_alias);
+                println("<dev string:x73>" + self.a.facialsoundalias + "<dev string:x8c>" + str_script_alias);
                 while (self.istalking) {
-                    self waittill(#"hash_90f83311");
+                    self waittill(#"done speaking");
                 }
             }
         } else {
-            println(" " + self.a.facialsoundalias + " " + str_script_alias);
+            println("<dev string:x96>" + self.a.facialsoundalias + "<dev string:x8c>" + str_script_alias);
             self stopsound(self.a.facialsoundalias);
-            self notify(#"hash_ad4a3c97");
+            self notify(#"cancel speaking");
             while (self.istalking) {
-                self waittill(#"hash_90f83311");
+                self waittill(#"done speaking");
             }
         }
     }
@@ -161,7 +161,7 @@ function playfacethread(facialanim, str_script_alias, importance, notifystring, 
     }
     /#
         if (level.numberofimportantpeopletalking > 1) {
-            println(" " + str_script_alias);
+            println("<dev string:xb3>" + str_script_alias);
         }
     #/
     uniquenotify = notifystring + " " + level.talknotifyseed;
@@ -180,7 +180,7 @@ function playfacethread(facialanim, str_script_alias, importance, notifystring, 
             }
         } else {
             /#
-                println(" " + str_script_alias + " ");
+                println("<dev string:xf2>" + str_script_alias + "<dev string:x10e>");
                 self thread _missing_dialog(str_script_alias, str_vox_file, uniquenotify);
             #/
         }
@@ -200,7 +200,7 @@ function playfacethread(facialanim, str_script_alias, importance, notifystring, 
         self.a.currentdialogimportance = undefined;
         self.lastsaytime = gettime();
     }
-    self notify(#"hash_90f83311", str_notify_alias);
+    self notify(#"done speaking", str_notify_alias);
     self notify(notifystring);
 }
 
@@ -214,9 +214,9 @@ function _play_sound_to_player_with_notify(soundalias, toplayer, uniquenotify) {
     self playsoundtoplayer(soundalias, toplayer);
     n_playbacktime = soundgetplaybacktime(soundalias);
     if (n_playbacktime > 0) {
-        wait(n_playbacktime * 0.001);
+        wait n_playbacktime * 0.001;
     } else {
-        wait(1);
+        wait 1;
     }
     self notify(uniquenotify);
 }
@@ -283,7 +283,7 @@ function playface_waitfornotify(waitforstring, notifystring, killmestring) {
 function playface_waitfortime(time, notifystring, killmestring) {
     self endon(#"death");
     self endon(killmestring);
-    wait(time);
+    wait time;
     self.a.facewaitforresult = "time";
     self notify(notifystring);
 }

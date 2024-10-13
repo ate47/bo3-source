@@ -64,7 +64,7 @@ function add(entity, dyingplayer, team, timeout) {
     iconorg = entity.origin;
     dyingplayer endon(#"spawned_player");
     dyingplayer endon(#"disconnect");
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     assert(isdefined(level.teams[team]));
     assert(isdefined(level.teamindex[team]));
@@ -85,9 +85,9 @@ function add(entity, dyingplayer, team, timeout) {
 // Checksum 0x3d38e3d6, Offset: 0x418
 // Size: 0x6c
 function destroy_slowly(timeout, deathiconobjid) {
-    wait(timeout);
+    wait timeout;
     objective_state(deathiconobjid, "done");
-    wait(1);
+    wait 1;
     objective_delete(deathiconobjid);
     gameobjects::release_obj_id(deathiconobjid);
 }

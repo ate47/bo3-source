@@ -10,9 +10,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_eb45cc76;
+#namespace _gadget_shock_field;
 
-// Namespace namespace_eb45cc76
+// Namespace _gadget_shock_field
 // Params 0, eflags: 0x2
 // Checksum 0xed55d009, Offset: 0x2a0
 // Size: 0x34
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_shock_field", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_eb45cc76
+// Namespace _gadget_shock_field
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf1c73c81, Offset: 0x2e0
 // Size: 0x58
@@ -29,7 +29,7 @@ function __init__() {
     level.var_a01dacf5 = [];
 }
 
-// Namespace namespace_eb45cc76
+// Namespace _gadget_shock_field
 // Params 1, eflags: 0x1 linked
 // Checksum 0x73cf8c00, Offset: 0x340
 // Size: 0x58
@@ -42,7 +42,7 @@ function is_local_player(localclientnum) {
     return var_2389f10a;
 }
 
-// Namespace namespace_eb45cc76
+// Namespace _gadget_shock_field
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1f156b61, Offset: 0x3a0
 // Size: 0x150

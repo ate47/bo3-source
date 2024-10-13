@@ -8,9 +8,9 @@
 #using scripts/shared/compass;
 #using scripts/codescripts/struct;
 
-#namespace namespace_2c022880;
+#namespace mp_banzai;
 
-// Namespace namespace_2c022880
+// Namespace mp_banzai
 // Params 0, eflags: 0x1 linked
 // Checksum 0x516adaf8, Offset: 0x278
 // Size: 0xa34
@@ -28,8 +28,8 @@ function main() {
     trigger thread oob::run_oob_trigger();
     trigger = spawn("trigger_radius_out_of_bounds", (1308, -4924, -210.5), 0, 1000, 400);
     trigger thread oob::run_oob_trigger();
-    namespace_3212dfb1::main();
-    namespace_20455184::main();
+    mp_banzai_fx::main();
+    mp_banzai_sound::main();
     load::main();
     compass::setupminimap("compass_map_mp_banzai");
     setdvar("compassmaxrange", "2100");
@@ -66,7 +66,7 @@ function main() {
     level.cleandepositpoints = array((1345.41, -628, -319.875), (2762.61, -2015.93, -251.875), (2722.25, -247.549, -511.875), (705.101, 951.137, -295.875));
 }
 
-// Namespace namespace_2c022880
+// Namespace mp_banzai
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xcb8
 // Size: 0x4
@@ -74,7 +74,7 @@ function precache() {
     
 }
 
-// Namespace namespace_2c022880
+// Namespace mp_banzai
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc128b815, Offset: 0xcc8
 // Size: 0xdc
@@ -93,7 +93,7 @@ function function_c9aa825e(&var_6480c733) {
     var_6480c733[var_6480c733.size] = (687, -1457, -459);
 }
 
-// Namespace namespace_2c022880
+// Namespace mp_banzai
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8dfd0abd, Offset: 0xdb0
 // Size: 0x74
@@ -103,7 +103,7 @@ function spawnkilltrigger() {
     ball::function_10ecf402(trigger);
 }
 
-// Namespace namespace_2c022880
+// Namespace mp_banzai
 // Params 0, eflags: 0x1 linked
 // Checksum 0x633cdbc7, Offset: 0xe30
 // Size: 0x90
@@ -116,7 +116,7 @@ function watchkilltrigger() {
     }
 }
 
-// Namespace namespace_2c022880
+// Namespace mp_banzai
 // Params 1, eflags: 0x1 linked
 // Checksum 0x30a098e8, Offset: 0xec8
 // Size: 0x44

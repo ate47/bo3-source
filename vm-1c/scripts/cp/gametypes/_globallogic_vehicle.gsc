@@ -61,7 +61,7 @@ function callback_vehiclespawned(spawner) {
 // Size: 0x34
 function function_4aaf3176() {
     self endon(#"death");
-    wait(0.05);
+    wait 0.05;
     self clientfield::set_to_player("toggle_dnidamagefx", 0);
 }
 
@@ -97,7 +97,7 @@ function callback_vehicledamage(einflictor, eattacker, idamage, idflags, smeanso
     }
     self.idflags = idflags;
     self.idflagstime = gettime();
-    assert(isdefined(idamage), "explodable_barrel");
+    assert(isdefined(idamage), "<dev string:x28>");
     if (idamage == 0) {
         return;
     }
@@ -221,8 +221,8 @@ function callback_vehicledamage(einflictor, eattacker, idamage, idflags, smeanso
         }
     }
     /#
-        if (getdvarint("explodable_barrel")) {
-            println("explodable_barrel" + self getentitynumber() + "explodable_barrel" + self.health + "explodable_barrel" + eattacker.clientid + "explodable_barrel" + isplayer(einflictor) + "explodable_barrel" + idamage + "explodable_barrel" + shitloc);
+        if (getdvarint("<dev string:x61>")) {
+            println("<dev string:x6f>" + self getentitynumber() + "<dev string:x76>" + self.health + "<dev string:x7f>" + eattacker.clientid + "<dev string:x8a>" + isplayer(einflictor) + "<dev string:xa0>" + idamage + "<dev string:xa9>" + shitloc);
         }
     #/
     if (true) {

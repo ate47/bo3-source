@@ -48,7 +48,7 @@ function set_default_callbacks() {
 // Checksum 0x4a89d19c, Offset: 0x358
 // Size: 0x74
 function localclientconnect(localclientnum) {
-    println("<unknown string>" + localclientnum);
+    println("<dev string:x28>" + localclientnum);
     callback(#"hash_da8d7d74", localclientnum);
     if (isdefined(level.charactercustomizationsetup)) {
         [[ level.charactercustomizationsetup ]](localclientnum);
@@ -65,7 +65,7 @@ function playerspawned(localclientnum) {
         self thread [[ level._playerspawned_override ]](localclientnum);
         return;
     }
-    println("<unknown string>");
+    println("<dev string:x55>");
     if (self islocalplayer()) {
         callback(#"hash_842e788a", localclientnum);
     }
@@ -89,7 +89,7 @@ function entityspawned(localclientnum) {
         return;
     }
     if (!isdefined(self.type)) {
-        println("<unknown string>");
+        println("<dev string:x64>");
         return;
     }
     if (self.type == "missile") {
@@ -97,8 +97,8 @@ function entityspawned(localclientnum) {
             self thread [[ level._custom_weapon_cb_func ]](localclientnum);
         }
         switch (self.weapon.name) {
-        case 2:
-            self thread namespace_e381fc9e::spawned(localclientnum);
+        case "sticky_grenade":
+            self thread _sticky_grenade::spawned(localclientnum);
             break;
         }
         return;
@@ -138,6 +138,6 @@ function host_migration(localclientnum) {
 // Checksum 0xcfcd975c, Offset: 0x748
 // Size: 0xa
 function prevent_round_switch_animation() {
-    wait(3);
+    wait 3;
 }
 

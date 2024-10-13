@@ -45,7 +45,7 @@ function main() {
     level flagsys::wait_till("start_coop_logic");
     firsttime = 1;
     while (isloadingcinematicplaying()) {
-        wait(0.05);
+        wait 0.05;
     }
     level.var_de693c3 = 1;
     foreach (player in getplayers()) {
@@ -53,7 +53,7 @@ function main() {
     }
     while (true) {
         level thread function_3e351f83(firsttime);
-        level waittill(#"hash_24d3a44");
+        level waittill(#"doa_game_restart");
         util::wait_network_frame();
         firsttime = 0;
     }
@@ -66,11 +66,11 @@ function main() {
 function private _load() {
     timeout = gettime() + 5000;
     while (getnumexpectedplayers() == 0 && gettime() < timeout) {
-        wait(0.05);
+        wait 0.05;
     }
     var_8acfab2a = 0;
     do {
-        wait(0.05);
+        wait 0.05;
         var_f862b7b1 = getnumconnectedplayers(0);
         var_91f98264 = getnumexpectedplayers();
         player_count_actual = 0;
@@ -86,7 +86,7 @@ function private _load() {
             }
         }
         /#
-            namespace_49107f3a::debugmsg("load_main_complete" + getnumconnectedplayers() + "load_main_complete" + getnumexpectedplayers() + "load_main_complete" + var_a349db66);
+            namespace_49107f3a::debugmsg("<dev string:x28>" + getnumconnectedplayers() + "<dev string:x38>" + getnumexpectedplayers() + "<dev string:x45>" + var_a349db66);
         #/
     } while (var_f862b7b1 < var_91f98264 && player_count_actual + var_a349db66 < var_91f98264);
     setinitialplayersconnected();
@@ -111,7 +111,7 @@ function load() {
     system::wait_till("all");
     level flagsys::set("load_main_complete");
     while (!aretexturesloaded()) {
-        wait(0.05);
+        wait 0.05;
     }
     level flag::set("doa_load_complete");
 }
@@ -197,9 +197,9 @@ function registerclientfields() {
     clientfield::register("actor", "camera_focus_item", 1, 1, "int");
     clientfield::register("vehicle", "camera_focus_item", 1, 1, "int");
     /#
-        clientfield::register("load_main_complete", "load_main_complete", 1, 2, "load_main_complete");
-        clientfield::register("load_main_complete", "load_main_complete", 1, 30, "load_main_complete");
-        clientfield::register("load_main_complete", "load_main_complete", 1, 1, "load_main_complete");
+        clientfield::register("<dev string:x52>", "<dev string:x58>", 1, 2, "<dev string:x64>");
+        clientfield::register("<dev string:x52>", "<dev string:x68>", 1, 30, "<dev string:x64>");
+        clientfield::register("<dev string:x52>", "<dev string:x7b>", 1, 1, "<dev string:x64>");
     #/
     for (i = 0; i < 4; i++) {
         clientfield::register("world", "set_ui_gprDOA" + i, 1, 30, "int");
@@ -214,7 +214,7 @@ function registerclientfields() {
 // Size: 0xac
 function on_player_connect() {
     /#
-        namespace_49107f3a::debugmsg("load_main_complete" + (isdefined(self.name) ? self.name : "load_main_complete"));
+        namespace_49107f3a::debugmsg("<dev string:x87>" + (isdefined(self.name) ? self.name : "<dev string:x9c>"));
     #/
     self.ignoreme = 1;
     self.topdowncamera = 1;
@@ -249,7 +249,7 @@ function private function_154ab047(currentround, idx) {
         if (level.doa.round_number != currentround) {
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
     namespace_49107f3a::function_11f3f381(idx, 1);
 }
@@ -311,7 +311,7 @@ function function_437a340d(var_73419762) {
         self thread namespace_49107f3a::function_d1686f4c("menuresponse", 2, "menuresponse", "notarealmenu", "notarealresponse");
         menu, response = self waittill(#"menuresponse");
         /#
-            namespace_49107f3a::debugmsg("load_main_complete" + menu + "load_main_complete" + response);
+            namespace_49107f3a::debugmsg("<dev string:xa0>" + menu + "<dev string:xb0>" + response);
         #/
         timenow = gettime();
         if (timenow - timestart > 3 * 60000) {
@@ -345,7 +345,7 @@ function function_437a340d(var_73419762) {
 // Size: 0x254
 function on_player_spawned() {
     /#
-        namespace_49107f3a::debugmsg("load_main_complete" + (isdefined(self.name) ? self.name : "load_main_complete"));
+        namespace_49107f3a::debugmsg("<dev string:xb7>" + (isdefined(self.name) ? self.name : "<dev string:x9c>"));
     #/
     self.topdowncamera = 1;
     self thread namespace_831a4a7c::function_138c35de();
@@ -431,7 +431,7 @@ function init() {
     namespace_fba031c8::init();
     namespace_a7e6beb5::init();
     namespace_3f3eaecb::init();
-    namespace_4973e019::init();
+    DOA_BOSS::init();
     doa_enemy::init();
     namespace_3ca3c537::init();
     namespace_aa4730ec::init();
@@ -734,11 +734,11 @@ function function_3e351f83(firsttime) {
 // Checksum 0xa2dadac8, Offset: 0x4b38
 // Size: 0x178
 function function_dc4ffe5c() {
-    wait(1);
+    wait 1;
     self notify(#"hash_dc4ffe5c");
     self endon(#"hash_dc4ffe5c");
     for (var_97e9dd7 = 0; true; var_97e9dd7 = curcount) {
-        wait(0.05);
+        wait 0.05;
         if (!level flag::get("doa_game_is_running")) {
             continue;
         }
@@ -746,7 +746,7 @@ function function_dc4ffe5c() {
         curcount = players.size;
         if (curcount != var_97e9dd7) {
             /#
-                namespace_49107f3a::debugmsg("load_main_complete" + curcount);
+                namespace_49107f3a::debugmsg("<dev string:xcc>" + curcount);
             #/
         }
         foreach (player in players) {
@@ -765,7 +765,7 @@ function function_64a5cd5e() {
     level flag::clear("doa_round_active");
     level flag::clear("doa_round_abort");
     level notify(#"hash_3b432f18");
-    level notify(#"hash_d1f5acf7");
+    level notify(#"player_challenge_failure");
     level flag::clear("doa_game_is_running");
     level notify(#"hash_ba37290e", "gameover");
     level clientfield::set("gameplay_started", 0);
@@ -782,7 +782,7 @@ function function_64a5cd5e() {
     }
     level notify(#"hash_b96c96ac");
     level notify(#"hash_97276c43");
-    wait(1);
+    wait 1;
     namespace_a7e6beb5::function_c1869ec8();
     namespace_49107f3a::clearallcorpses();
     namespace_d88e3a06::function_116bb43();
@@ -805,12 +805,12 @@ function function_64a5cd5e() {
             continue;
         }
         /#
-            namespace_49107f3a::debugmsg("load_main_complete" + (isdefined(self.name) ? self.name : "load_main_complete"));
+            namespace_49107f3a::debugmsg("<dev string:xeb>" + (isdefined(self.name) ? self.name : "<dev string:x9c>"));
         #/
     }
-    wait(4);
+    wait 4;
     upload_leaderboards();
-    wait(2);
+    wait 2;
     namespace_49107f3a::function_44eb090b();
     level clientfield::set("set_scoreHidden", 0);
     level clientfield::set("scoreMenu", 0);
@@ -819,9 +819,9 @@ function function_64a5cd5e() {
     namespace_a7e6beb5::function_c1869ec8();
     namespace_49107f3a::clearallcorpses();
     namespace_d88e3a06::function_116bb43();
-    wait(1);
+    wait 1;
     level notify(#"doa_game_is_over");
-    level notify(#"hash_24d3a44");
+    level notify(#"doa_game_restart");
     util::wait_network_frame();
     missionrestart();
 }
@@ -854,25 +854,25 @@ function function_9ac615ee(gameover, round) {
     if (sessionmodeisonlinegame()) {
         self setdstat("deadOpsArcade", "skullsEarnedRound", self.doa.var_fda5a6e5);
         self setdstat("deadOpsArcade", "gemsEarnedRound", self.doa.var_6946711f);
-        self setdstat("deadOpsArcade", "silverbackKillsRound", self.doa.var_52e89a72);
+        self setdstat("deadOpsArcade", "silverbackKillsRound", self.doa.silverbackKillsRound);
         /#
-            namespace_49107f3a::debugmsg("load_main_complete" + self getdstat("load_main_complete", "load_main_complete"));
-            namespace_49107f3a::debugmsg("load_main_complete" + self getdstat("load_main_complete", "load_main_complete"));
-            namespace_49107f3a::debugmsg("load_main_complete" + self getdstat("load_main_complete", "load_main_complete"));
+            namespace_49107f3a::debugmsg("<dev string:x109>" + self getdstat("<dev string:x11f>", "<dev string:x12d>"));
+            namespace_49107f3a::debugmsg("<dev string:x13f>" + self getdstat("<dev string:x11f>", "<dev string:x153>"));
+            namespace_49107f3a::debugmsg("<dev string:x163>" + self getdstat("<dev string:x11f>", "<dev string:x176>"));
         #/
         self.doa.var_fda5a6e5 = 0;
         self.doa.var_6946711f = 0;
-        self.doa.var_52e89a72 = 0;
+        self.doa.silverbackKillsRound = 0;
         self setdstat("deadOpsArcade", "numPlayers", math::clamp(level.doa.var_e6653624.size, 1, 4));
-        self setdstat("deadOpsArcade", "silverbackKills", self.doa.var_53bd6cfa);
+        self setdstat("deadOpsArcade", "silverbackKills", self.doa.silverbackKills);
         self setdstat("deadOpsArcade", "gemsEarned", self.doa.gems);
         self setdstat("deadOpsArcade", "skullsEarned", self.doa.skulls);
         self setdstat("deadOpsArcade", "scoreAchieved", self namespace_64c6b720::getplayerscore());
         self setdstat("deadOpsArcade", "roundAchieved", round);
         /#
-            namespace_49107f3a::debugmsg("load_main_complete" + self getdstat("load_main_complete", "load_main_complete"));
-            namespace_49107f3a::debugmsg("load_main_complete" + self getdstat("load_main_complete", "load_main_complete"));
-            namespace_49107f3a::debugmsg("load_main_complete" + self getdstat("load_main_complete", "load_main_complete"));
+            namespace_49107f3a::debugmsg("<dev string:x18b>" + self getdstat("<dev string:x11f>", "<dev string:x19c>"));
+            namespace_49107f3a::debugmsg("<dev string:x1a9>" + self getdstat("<dev string:x11f>", "<dev string:x1b8>"));
+            namespace_49107f3a::debugmsg("<dev string:x1c3>" + self getdstat("<dev string:x11f>", "<dev string:x1d1>"));
         #/
         if (isdefined(gameover) && gameover) {
             var_be452d64 = self getdstat("deadOpsArcade", "totalGamesPlayed");
@@ -880,13 +880,13 @@ function function_9ac615ee(gameover, round) {
             kills = self getdstat("deadOpsArcade", "enemyKills");
             self setdstat("deadOpsArcade", "enemyKills", self.doa.kills + kills);
             wins = self getdstat("deadOpsArcade", "redinsWins");
-            self setdstat("deadOpsArcade", "redinsWins", self.doa.var_74c73153 + wins);
+            self setdstat("deadOpsArcade", "redinsWins", self.doa.redinsWins + wins);
             chickens = self getdstat("deadOpsArcade", "chickensTamed");
-            self setdstat("deadOpsArcade", "chickensTamed", self.doa.var_d92a8d3e + chickens);
+            self setdstat("deadOpsArcade", "chickensTamed", self.doa.chickensTamed + chickens);
             var_b5d121c9 = self getdstat("deadOpsArcade", "cowsExploded");
-            self setdstat("deadOpsArcade", "cowsExploded", self.doa.var_ec573900 + var_b5d121c9);
+            self setdstat("deadOpsArcade", "cowsExploded", self.doa.cowsExploded + var_b5d121c9);
             var_b5d121c9 = self getdstat("deadOpsArcade", "goldenCowsExploded");
-            self setdstat("deadOpsArcade", "goldenCowsExploded", self.doa.var_130471f + var_b5d121c9);
+            self setdstat("deadOpsArcade", "goldenCowsExploded", self.doa.goldenCowsExploded + var_b5d121c9);
         }
     }
 }
@@ -906,13 +906,13 @@ function function_780f83fd(round) {
         return;
     }
     /#
-        namespace_49107f3a::debugmsg("load_main_complete" + (isdefined(self.name) ? self.name : "load_main_complete") + "load_main_complete" + round + "load_main_complete" + self namespace_64c6b720::getplayerscore());
+        namespace_49107f3a::debugmsg("<dev string:x1e1>" + (isdefined(self.name) ? self.name : "<dev string:x9c>") + "<dev string:x1f6>" + round + "<dev string:x200>" + self namespace_64c6b720::getplayerscore());
     #/
     self function_9ac615ee(0, round);
-    wait(4);
+    wait 4;
     if (isdefined(self)) {
         /#
-            namespace_49107f3a::debugmsg("load_main_complete");
+            namespace_49107f3a::debugmsg("<dev string:x20a>");
         #/
         self uploadleaderboards();
         self.doa.var_a483af0a = gettime();
@@ -927,7 +927,7 @@ function function_780f83fd(round) {
 function function_688245f1() {
     resettimeout();
     /#
-        namespace_49107f3a::debugmsg("load_main_complete" + (isdefined(self.name) ? self.name : "load_main_complete"));
+        namespace_49107f3a::debugmsg("<dev string:x21a>" + (isdefined(self.name) ? self.name : "<dev string:x9c>"));
     #/
     self stopshellshock();
     self stoprumble("damage_heavy");
@@ -953,7 +953,7 @@ function function_d2450010() {
     self endon(#"disconnect");
     self waittill(#"loadout_given");
     /#
-        namespace_49107f3a::debugmsg("load_main_complete" + (isdefined(self.name) ? self.name : "load_main_complete"));
+        namespace_49107f3a::debugmsg("<dev string:x230>" + (isdefined(self.name) ? self.name : "<dev string:x9c>"));
     #/
     weapon = getweapon("zombietron_lmg");
     self takeallweapons();
@@ -968,7 +968,7 @@ function function_d2450010() {
 // Size: 0xb0
 function function_a90bdb51() {
     /#
-        namespace_49107f3a::debugmsg("load_main_complete" + (isdefined(self.name) ? self.name : "load_main_complete"));
+        namespace_49107f3a::debugmsg("<dev string:x25e>" + (isdefined(self.name) ? self.name : "<dev string:x9c>"));
     #/
     weapon = getweapon("zombietron_lmg");
     self takeallweapons();

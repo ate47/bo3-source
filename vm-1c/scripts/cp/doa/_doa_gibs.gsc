@@ -90,7 +90,7 @@ function function_deb7df37() {
         return;
     }
     if (randomint(100) < 50) {
-        wait(randomfloatrange(0.53, 1));
+        wait randomfloatrange(0.53, 1);
         gibserverutils::gibhead(self);
         return;
     }

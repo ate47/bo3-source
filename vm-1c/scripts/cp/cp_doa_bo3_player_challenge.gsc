@@ -42,7 +42,7 @@
 function function_4c171b8e() {
     self endon(#"disconnect");
     while (!isdefined(self.doa)) {
-        wait(0.05);
+        wait 0.05;
     }
     waittillframeend();
     startpoints = struct::get_array("spiral_player_spawnpoint");
@@ -58,7 +58,7 @@ function function_4c171b8e() {
 // Size: 0x7a
 function function_bb59f698() {
     level endon(#"hash_16154574");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"player_challenge_failure");
     trigger = getent("spiral_killAllEnemy", "targetname");
     trigger waittill(#"trigger");
     level thread namespace_49107f3a::function_f798b582();
@@ -110,7 +110,7 @@ function function_31c377e(room) {
         blocker thread function_e1b0de53(item.script_parameters);
         count++;
         if (count > 10) {
-            wait(0.05);
+            wait 0.05;
             count = 0;
         }
     }
@@ -133,7 +133,7 @@ function function_31c377e(room) {
 // Checksum 0x952940e0, Offset: 0x1878
 // Size: 0xa4
 function function_ffe2a6ea() {
-    wait(randomfloatrange(0, 1));
+    wait randomfloatrange(0, 1);
     self moveto((self.origin[0], self.origin[1], self.origin[2] + 2000), 1);
     self util::waittill_any_timeout(1.5, "movedone");
     self delete();
@@ -157,7 +157,7 @@ function triggernotify() {
 // Size: 0x4c
 function function_e1b0de53(note) {
     level endon(#"hash_16154574");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"player_challenge_failure");
     self.var_e2b2db7a = 1;
     level waittill(note);
     self thread function_ffe2a6ea();
@@ -169,7 +169,7 @@ function function_e1b0de53(note) {
 // Size: 0x1fe
 function function_8e0e22bb(room) {
     level endon(#"hash_16154574");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"player_challenge_failure");
     foreach (player in getplayers()) {
         player freezecontrols(1);
         player.room = room;
@@ -184,7 +184,7 @@ function function_8e0e22bb(room) {
     if (isdefined(level.var_1575b6db) && level.var_1575b6db) {
         level thread namespace_49107f3a::function_80409246("teleporter_triggered", 10);
     }
-    level waittill(#"hash_6df89d17");
+    level waittill(#"teleporter_triggered");
     level notify(#"hash_16154574");
 }
 
@@ -237,7 +237,7 @@ function function_eee6e911(room) {
 // Size: 0x32a
 function private function_533483a3(room) {
     level endon(#"hash_16154574");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"player_challenge_failure");
     level.doa.var_e0d67a74 = struct::get_array(room.name + "_rise_spot");
     var_48be25f5 = getent("spawner_zombietron_skeleton", "targetname");
     while (true) {
@@ -273,10 +273,10 @@ function private function_533483a3(room) {
                     ai.health = 500 + var_1db14d86;
                     ai thread function_c0808a91();
                 }
-                wait(0.05);
+                wait 0.05;
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -293,7 +293,7 @@ function function_c0808a91() {
                 self.var_535aff84[idx] = gettime() + 1000;
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -304,7 +304,7 @@ function function_c0808a91() {
 function function_b6c25c3c(spot) {
     self endon(#"disconnect");
     while (!isdefined(self.doa)) {
-        wait(0.05);
+        wait 0.05;
     }
     waittillframeend();
     if (!isdefined(spot)) {
@@ -331,7 +331,7 @@ function function_b6c25c3c(spot) {
     self.doa.var_f219339a = 0;
     self.ignoreme = 1;
     self freezecontrols(!level flag::get("doa_challenge_running"));
-    wait(0.05);
+    wait 0.05;
     self thread function_810ced6b();
     self namespace_5e6c5d1f::function_8397461e();
 }
@@ -355,7 +355,7 @@ function function_6aa91f48(room) {
     room.var_e01f23f0 = [];
     room.host_migration = &function_c2b99e74;
     level thread function_246d3adb(room);
-    level thread function_db531f2f(room);
+    level thread tankmaze_EnemySpawner(room);
     foreach (player in getplayers()) {
         player thread function_b6c25c3c();
     }
@@ -377,9 +377,9 @@ function function_246d3adb(room) {
             reward = "zombietron_beryl";
             if (isdefined(var_86a35fbd.script_parameters)) {
                 switch (var_86a35fbd.script_parameters) {
-                case 44:
-                case 45:
-                case 46:
+                case "1":
+                case "2":
+                case "3":
                     reward = "zombietron_beryl";
                     break;
                 default:
@@ -400,7 +400,7 @@ function function_246d3adb(room) {
             var_2bb5aeba++;
             total--;
         }
-        wait(0.05);
+        wait 0.05;
     }
     curtick = 0;
     room.var_e01f23f0 = array::remove_undefined(room.var_e01f23f0);
@@ -428,7 +428,7 @@ function function_246d3adb(room) {
 // Size: 0x40
 function function_5900e5de(room) {
     level endon(#"hash_16154574");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"player_challenge_failure");
     self waittill(#"death");
     room.var_74415e9d--;
 }
@@ -442,16 +442,16 @@ function function_a1151ae3(room) {
     self thread function_5900e5de(room);
     self endon(#"death");
     level endon(#"hash_16154574");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"player_challenge_failure");
 }
 
 // Namespace namespace_df93fc7c
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6d05b244, Offset: 0x2e50
 // Size: 0x370
-function function_db531f2f(room) {
+function tankmaze_EnemySpawner(room) {
     level endon(#"hash_16154574");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"player_challenge_failure");
     room.var_74415e9d = 0;
     level waittill(#"hash_c8bd32b9");
     while (true) {
@@ -480,9 +480,9 @@ function function_db531f2f(room) {
                 amws.script_noteworthy = "tankmaze_enemy";
                 amws thread function_a1151ae3(room);
             }
-            wait(1 + 4 - getplayers().size);
+            wait 1 + 4 - getplayers().size;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -493,9 +493,9 @@ function function_db531f2f(room) {
 function function_ee260997(room) {
     level waittill(#"hash_97276c43");
     level notify(#"hash_b0d5a848");
-    wait(1);
+    wait 1;
     level clientfield::set("startCountdown", 3);
-    wait(4);
+    wait 4;
     level clientfield::set("startCountdown", 0);
     level notify(#"hash_c8bd32b9");
     level flag::set("doa_challenge_ready");
@@ -521,7 +521,7 @@ function function_5f0b67a9(room) {
     }
     timeleft = gettime() + totaltime;
     while (gettime() < timeleft) {
-        wait(0.5);
+        wait 0.5;
     }
     level clientfield::set("pumpBannerBar", 0);
     util::wait_network_frame();
@@ -596,13 +596,13 @@ function function_fe1ce5f1(einflictor, eattacker, idamage, idflags, smeansofdeat
     idamage = 0;
     scale = 0;
     switch (smeansofdeath) {
-    case 58:
+    case "MOD_RIFLE_BULLET":
         scale = 0.1;
         break;
-    case 57:
+    case "MOD_PROJECTILE":
         scale = 1;
         break;
-    case 56:
+    case "MOD_EXPLOSIVE":
         scale = 0.4;
         break;
     }
@@ -659,13 +659,13 @@ function function_fe1ce5f1(einflictor, eattacker, idamage, idflags, smeansofdeat
 // Size: 0x31a
 function function_c2b99e74(room) {
     /#
-        namespace_49107f3a::debugmsg("spiralglow1");
+        namespace_49107f3a::debugmsg("<dev string:x28>");
     #/
     foreach (player in getplayers()) {
         player freezecontrols(1);
         if (isdefined(player.doa.vehicle) && player.doa.vehicle getvehicleowner() == player) {
             /#
-                namespace_49107f3a::debugmsg("spiralglow1" + player.name);
+                namespace_49107f3a::debugmsg("<dev string:x45>" + player.name);
             #/
             player.doa.vehicle makeusable();
             player.doa.vehicle usevehicle(player, 0);
@@ -676,7 +676,7 @@ function function_c2b99e74(room) {
     foreach (player in getplayers()) {
         if (isdefined(player.doa.vehicle)) {
             /#
-                namespace_49107f3a::debugmsg("spiralglow1" + player.name);
+                namespace_49107f3a::debugmsg("<dev string:x5d>" + player.name);
             #/
             player.doa.vehicle usevehicle(player, 0);
             player.doa.vehicle makeunusable();
@@ -703,7 +703,7 @@ function function_9c687a5d(player) {
 function function_14e75d7a(spot) {
     self endon(#"disconnect");
     while (!isdefined(self.doa)) {
-        wait(0.05);
+        wait 0.05;
     }
     waittillframeend();
     if (!isdefined(spot)) {
@@ -735,13 +735,13 @@ function function_14e75d7a(spot) {
     self thread function_c71e611c(truck);
     self thread function_d64204d9();
     self.doa.var_f219339a = 0;
-    self.doa.var_4b3052ec = 0;
+    self.doa.gpr2 = 0;
     level clientfield::set("set_ui_gprDOA" + self.entnum, 0);
     level clientfield::set("set_ui_gpr2DOA" + self.entnum, 0);
     self.doa.bombs = level.doa.var_52cccfb6.var_2f400c3b;
     self.doa.var_c5e98ad6 = self.doa.var_37efabf7;
     self freezecontrols(!level flag::get("doa_challenge_running"));
-    wait(0.05);
+    wait 0.05;
     self enableinvulnerability();
     self thread function_810ced6b();
     self namespace_5e6c5d1f::function_8397461e();
@@ -752,7 +752,7 @@ function function_14e75d7a(spot) {
 // Checksum 0xb6897c7d, Offset: 0x4480
 // Size: 0x1c
 function function_810ced6b() {
-    wait(1);
+    wait 1;
     self namespace_2848f8c2::function_d460de4b();
 }
 
@@ -813,7 +813,7 @@ function function_f14ef72f(room) {
         level clientfield::set("set_ui_GlobalGPR0", room.var_b57e2384);
     }
     room.var_25c09afd = %CP_DOA_BO3_REDINS_TITLE2_FAIL;
-    level notify(#"hash_d1f5acf7");
+    level notify(#"player_challenge_failure");
 }
 
 // Namespace namespace_df93fc7c
@@ -825,9 +825,9 @@ function function_10aa3e48(room) {
     level clientfield::set("redinstutorial", 1);
     level clientfield::set("redinsinstruct", room.var_2f400c3b + (room.var_b57e2384 << 4));
     level waittill(#"hash_97276c43");
-    wait(1);
+    wait 1;
     level clientfield::set("startCountdown", 3);
-    wait(4);
+    wait 4;
     level clientfield::set("redinstutorial", 0);
     level clientfield::set("startCountdown", 0);
     level clientfield::set("redinsinstruct", 0);
@@ -855,9 +855,9 @@ function function_9d1b24f7(room) {
 // Checksum 0xabcf65a6, Offset: 0x4b68
 // Size: 0x1aa
 function function_455c43ca() {
-    level endon(#"hash_276164a7");
+    level endon(#"redins_rally_complete");
     level endon(#"hash_16154574");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"player_challenge_failure");
     level endon(#"hash_9bc1268b");
     level waittill(#"hash_d9dd7818");
     var_48be25f5 = getent("doa_basic_spawner", "targetname");
@@ -868,10 +868,10 @@ function function_455c43ca() {
             ai = namespace_51bd792::function_45849d81(var_48be25f5, spawnpoints[randomint(spawnpoints.size)], undefined);
             ai forceteleport(ai.origin, (0, randomint(360), 0));
             ai.doa.var_4d252af6 = 1;
-            wait(randomfloatrange(0.1, 2));
+            wait randomfloatrange(0.1, 2);
             continue;
         }
-        wait(3);
+        wait 3;
     }
 }
 
@@ -921,7 +921,7 @@ function function_ce5fc0d(room) {
 // Size: 0xb4
 function function_67b5ba67() {
     var_efa02a6c = getent("redins_finish_line", "targetname");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"player_challenge_failure");
     level endon(#"hash_16154574");
     while (true) {
         truck = var_efa02a6c waittill(#"trigger");
@@ -937,7 +937,7 @@ function function_67b5ba67() {
 // Checksum 0x4c34f18b, Offset: 0x5170
 // Size: 0x6be
 function function_3ed913b4(room) {
-    level endon(#"hash_d1f5acf7");
+    level endon(#"player_challenge_failure");
     level endon(#"hash_16154574");
     var_e0762056 = getentarray("redins_trigger_lap_latch", "targetname");
     foreach (trigger in var_e0762056) {
@@ -994,7 +994,7 @@ function function_3ed913b4(room) {
                 break;
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
     foreach (player in getplayers()) {
         if (isdefined(player.doa.vehicle)) {
@@ -1004,13 +1004,13 @@ function function_3ed913b4(room) {
         }
     }
     level thread namespace_49107f3a::function_c5f3ece8(%CP_DOA_BO3_REDINS_WINNER);
-    wait(4);
+    wait 4;
     level thread namespace_49107f3a::function_37fb5c23(winner.name);
     winner.doa.var_74c73153++;
     spots = struct::get_array("redins_pickup_location");
     level notify(#"hash_e1dc3538");
     winner thread namespace_831a4a7c::function_139199e1();
-    level notify(#"hash_276164a7", winner);
+    level notify(#"redins_rally_complete", winner);
 }
 
 // Namespace namespace_df93fc7c
@@ -1032,8 +1032,8 @@ function function_2228a040(item) {
 // Checksum 0x7823e39a, Offset: 0x58f0
 // Size: 0xac
 function function_c218114a() {
-    level endon(#"hash_276164a7");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"redins_rally_complete");
+    level endon(#"player_challenge_failure");
     var_6c0d141d = int(self.script_parameters);
     level function_bbb36dbe(var_6c0d141d);
     while (true) {
@@ -1067,7 +1067,7 @@ function function_fa6d5f56() {
     }
     self vehicle::toggle_lights_group(1, 1);
     self playsound("veh_doa_boost");
-    wait(3);
+    wait 3;
     self vehicle::toggle_lights_group(1, 0);
 }
 
@@ -1076,8 +1076,8 @@ function function_fa6d5f56() {
 // Checksum 0xe12e46de, Offset: 0x5ad8
 // Size: 0x1b6
 function function_c71e611c(vehicle) {
-    level endon(#"hash_276164a7");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"redins_rally_complete");
+    level endon(#"player_challenge_failure");
     self notify(#"hash_89f9d324");
     self endon(#"hash_89f9d324");
     self endon(#"disconnect");
@@ -1085,7 +1085,7 @@ function function_c71e611c(vehicle) {
     level.launchforce = 500;
     vehicle vehicle::toggle_lights_group(1, 0);
     while (true) {
-        wait(0.05);
+        wait 0.05;
         if (!level flag::get("doa_challenge_running")) {
             continue;
         }
@@ -1095,9 +1095,9 @@ function function_c71e611c(vehicle) {
             vehicle launchvehicle(curdir, (0, 0, 0), 1);
             vehicle thread function_fa6d5f56();
             while (self changeseatbuttonpressed()) {
-                wait(0.05);
+                wait 0.05;
             }
-            wait(1);
+            wait 1;
         }
     }
 }
@@ -1116,8 +1116,8 @@ function function_36c315b() {
 // Checksum 0x2febcf83, Offset: 0x5cf0
 // Size: 0xc2
 function function_e812f929() {
-    level endon(#"hash_276164a7");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"redins_rally_complete");
+    level endon(#"player_challenge_failure");
     spots = struct::get_array("redins_pickup_location");
     foreach (spot in spots) {
         spot thread function_fb199a7c();
@@ -1129,8 +1129,8 @@ function function_e812f929() {
 // Checksum 0xc1d36911, Offset: 0x5dc0
 // Size: 0x1e8
 function function_fb199a7c() {
-    level endon(#"hash_276164a7");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"redins_rally_complete");
+    level endon(#"player_challenge_failure");
     level endon(#"hash_e1dc3538");
     var_df3be8f1 = getent(self.target, "targetname");
     self.gem = namespace_a7e6beb5::function_16237a19(self.origin, 1, 0, 0, 0, 5, self.script_noteworthy, undefined, 0, 0)[0];
@@ -1142,9 +1142,9 @@ function function_fb199a7c() {
         if (isdefined(truck) && isdefined(truck.owner) && isdefined(self.gem)) {
             self.gem.trigger notify(#"trigger", truck.owner);
         }
-        truck.owner.doa.var_4b3052ec++;
-        level clientfield::set("set_ui_gpr2DOA" + truck.owner.entnum, truck.owner.doa.var_4b3052ec);
-        wait(randomintrange(15, 45));
+        truck.owner.doa.gpr2++;
+        level clientfield::set("set_ui_gpr2DOA" + truck.owner.entnum, truck.owner.doa.gpr2);
+        wait randomintrange(15, 45);
         self.gem = namespace_a7e6beb5::function_16237a19(self.origin, 1, 0, 0, 0, 5, self.script_noteworthy, undefined, 0, 0)[0];
     }
 }
@@ -1154,8 +1154,8 @@ function function_fb199a7c() {
 // Checksum 0xbcc6b6fa, Offset: 0x5fb0
 // Size: 0x368
 function function_41ecdf7e(triggers) {
-    level endon(#"hash_276164a7");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"redins_rally_complete");
+    level endon(#"player_challenge_failure");
     while (true) {
         players = getplayers();
         foreach (player in players) {
@@ -1191,7 +1191,7 @@ function function_41ecdf7e(triggers) {
             }
             player.doa.var_e651a75e = 0;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -1200,9 +1200,9 @@ function function_41ecdf7e(triggers) {
 // Checksum 0xb5161a51, Offset: 0x6320
 // Size: 0x1ac
 function function_d64204d9() {
-    level endon(#"hash_276164a7");
+    level endon(#"redins_rally_complete");
     level endon(#"hash_16154574");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"player_challenge_failure");
     self endon(#"disconnect");
     self.doa.var_8779c24b = 0;
     while (true) {
@@ -1233,7 +1233,7 @@ function function_d64204d9() {
 function function_dae418ed() {
     self endon(#"disconnect");
     while (!isdefined(self.doa)) {
-        wait(0.05);
+        wait 0.05;
     }
     waittillframeend();
     startpoints = struct::get_array("truck_soccer_player_spawnpoint");
@@ -1263,7 +1263,7 @@ function function_dae418ed() {
     self thread function_e619ee5(truck);
     truck thread namespace_eaa992c::function_285a2999("gem_trail_" + namespace_831a4a7c::function_ee495f41(self.entnum));
     self freezecontrols(!level flag::get("doa_challenge_running"));
-    wait(0.05);
+    wait 0.05;
     self enableinvulnerability();
     self thread function_810ced6b();
     self namespace_5e6c5d1f::function_8397461e();
@@ -1294,7 +1294,7 @@ function function_c7e4d911(room) {
     }
     triggers = getentarray("truck_soccer_blowTrigger", "targetname");
     foreach (trigger in triggers) {
-        trigger thread function_5dac2dae(room);
+        trigger thread trucksoccer_BlowTriggerThink(room);
     }
     level thread function_88777838(room);
     level flag::set("doa_challenge_ready");
@@ -1305,14 +1305,14 @@ function function_c7e4d911(room) {
 // Checksum 0xc8c11d9b, Offset: 0x6c10
 // Size: 0x15c
 function function_5284e8dc(room) {
-    level endon(#"hash_4f4a6e14");
+    level endon(#"trucksoccer_rally_complete");
     if (room.var_677f63c8.size > getdvarint("scr_doa_chicken_balls_max", 3)) {
         return;
     }
     room.var_14ee1a58.ignorespawninglimit = 1;
     var_29833f21 = room.var_14ee1a58 spawner::spawn(1, undefined, (0, 0, 0));
     var_29833f21.origin = room.var_7daa1c03.origin;
-    wait(0.05);
+    wait 0.05;
     var_29833f21.health = 6000;
     var_29833f21.var_6977f7b9 = 1;
     var_29833f21 launchvehicle((0, 0, 100), (0, 0, 0), 1, 1);
@@ -1326,7 +1326,7 @@ function function_5284e8dc(room) {
 // Size: 0x168
 function function_76dd5557(room) {
     self endon(#"death");
-    wait(8);
+    wait 8;
     while (true) {
         if (isdefined(self) && !self istouching(room.var_d88cc53c)) {
             arrayremovevalue(room.var_677f63c8, self);
@@ -1337,12 +1337,12 @@ function function_76dd5557(room) {
             self thread namespace_1a381543::function_90118d8c("zmb_eggbowl_goal");
             level thread function_8f4c809d(room, self.var_a2d7b04a);
             arrayremovevalue(room.var_677f63c8, self);
-            wait(5);
+            wait 5;
             self thread namespace_eaa992c::function_285a2999("egg_hatch");
             util::wait_network_frame();
             self delete();
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1351,10 +1351,10 @@ function function_76dd5557(room) {
 // Checksum 0xe88a10d1, Offset: 0x6ee8
 // Size: 0x3e
 function function_90585f48(room) {
-    level endon(#"hash_4f4a6e14");
+    level endon(#"trucksoccer_rally_complete");
     while (true) {
         level thread function_5284e8dc(room);
-        wait(8);
+        wait 8;
     }
 }
 
@@ -1379,7 +1379,7 @@ function function_ebb572b(player) {
         break;
     }
     items = level namespace_a7e6beb5::function_16237a19(self.origin, var_516eed4b, 2, 0, 0, 3, gem);
-    wait(1);
+    wait 1;
     foreach (item in items) {
         if (!isdefined(item)) {
             continue;
@@ -1387,7 +1387,7 @@ function function_ebb572b(player) {
         if (isdefined(item.trigger)) {
             item.trigger notify(#"trigger", player);
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -1426,7 +1426,7 @@ function function_7c9617ef(var_7bb420a0, goaltrigger) {
 // Checksum 0x3f70f413, Offset: 0x7278
 // Size: 0x734
 function function_60fcd122(room, goaltrigger) {
-    level endon(#"hash_4f4a6e14");
+    level endon(#"trucksoccer_rally_complete");
     goaltrigger.movetime = getdvarfloat("scr_doa_chicken_bowl_glow_default_speed", 1.25);
     goaltrigger.var_363b3ac2 = [];
     goaltrigger.var_363b3ac2[goaltrigger.var_363b3ac2.size] = struct::get(goaltrigger.target, "targetname");
@@ -1459,7 +1459,7 @@ function function_60fcd122(room, goaltrigger) {
                 }
                 var_f14ce542 = 0;
             }
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         if (goaltrigger.var_f1e29613.size != var_f14ce542) {
@@ -1493,7 +1493,7 @@ function function_60fcd122(room, goaltrigger) {
             }
             var_f14ce542 = goaltrigger.var_f1e29613.size;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1501,8 +1501,8 @@ function function_60fcd122(room, goaltrigger) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbb709a70, Offset: 0x79b8
 // Size: 0x248
-function function_5dac2dae(room) {
-    level endon(#"hash_4f4a6e14");
+function trucksoccer_BlowTriggerThink(room) {
+    level endon(#"trucksoccer_rally_complete");
     self.org = spawn("script_model", self.origin);
     self.org.targetname = "trucksoccer_BlowTriggerThink";
     self.org setmodel("tag_origin");
@@ -1534,12 +1534,12 @@ function function_5dac2dae(room) {
 // Checksum 0x51dbd4eb, Offset: 0x7c08
 // Size: 0xc0
 function function_8f4c809d(room, goaltrigger) {
-    level endon(#"hash_4f4a6e14");
+    level endon(#"trucksoccer_rally_complete");
     goaltrigger notify(#"hash_8f4c809d");
     goaltrigger endon(#"hash_8f4c809d");
     room.var_efbfafed++;
     goaltrigger.movetime = getdvarfloat("scr_doa_chicken_bowl_glow_goal_speed", 0.1);
-    wait(getdvarfloat("scr_doa_chicken_bowl_glow_celebrate_time", 4));
+    wait getdvarfloat("scr_doa_chicken_bowl_glow_celebrate_time", 4);
     goaltrigger.movetime = getdvarfloat("scr_doa_chicken_bowl_glow_default_speed", 1.25);
 }
 
@@ -1548,7 +1548,7 @@ function function_8f4c809d(room, goaltrigger) {
 // Checksum 0xbe388ba4, Offset: 0x7cd0
 // Size: 0x268
 function function_71be5ae5(room) {
-    level endon(#"hash_4f4a6e14");
+    level endon(#"trucksoccer_rally_complete");
     self.var_f1e29613 = [];
     self.myteam = int(self.script_noteworthy);
     level thread function_60fcd122(room, self);
@@ -1574,7 +1574,7 @@ function function_71be5ae5(room) {
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1584,9 +1584,9 @@ function function_71be5ae5(room) {
 // Size: 0x72
 function function_88777838(room) {
     level waittill(#"hash_97276c43");
-    wait(1);
+    wait 1;
     level clientfield::set("startCountdown", 3);
-    wait(4);
+    wait 4;
     level clientfield::set("startCountdown", 0);
     level notify(#"hash_130fa748");
 }
@@ -1631,17 +1631,17 @@ function function_2ea4cb82(room) {
     level thread function_55e9043d();
     level thread function_90585f48(room);
     if (getdvarint("scr_doa_soak_think", 0) > 1) {
-        wait(5);
+        wait 5;
     } else {
-        wait(room.timeout - 1);
+        wait room.timeout - 1;
     }
     if (room.var_efbfafed > getplayers().size * 3) {
         level notify(#"hash_16154574");
     } else {
-        level notify(#"hash_d1f5acf7");
+        level notify(#"player_challenge_failure");
     }
     playsoundatposition("zmb_eggbowl_whistle", (0, 0, 0));
-    level notify(#"hash_4f4a6e14");
+    level notify(#"trucksoccer_rally_complete");
     namespace_a7e6beb5::function_c1869ec8();
 }
 
@@ -1674,8 +1674,8 @@ function function_baa38e65(room) {
 // Size: 0x1e2
 function function_55e9043d() {
     level endon(#"hash_16154574");
-    level endon(#"hash_d1f5acf7");
-    level endon(#"hash_4f4a6e14");
+    level endon(#"player_challenge_failure");
+    level endon(#"trucksoccer_rally_complete");
     while (true) {
         left = level waittill(#"hash_c62f5087");
         if (left == 50) {
@@ -1693,10 +1693,10 @@ function function_55e9043d() {
                 ai notify(#"hash_6e8326fc");
                 ai thread namespace_49107f3a::function_24245456(level, "trucksoccer_rally_complete");
             }
-            wait(randomfloatrange(0.05, 0.4));
+            wait randomfloatrange(0.05, 0.4);
             continue;
         }
-        wait(3);
+        wait 3;
     }
 }
 
@@ -1705,7 +1705,7 @@ function function_55e9043d() {
 // Checksum 0xc3360678, Offset: 0x86e8
 // Size: 0x2b2
 function function_b3939e94(room) {
-    level notify(#"hash_4f4a6e14");
+    level notify(#"trucksoccer_rally_complete");
     namespace_a7e6beb5::function_c1869ec8();
     level thread namespace_49107f3a::function_f798b582();
     function_baa38e65(room);
@@ -1744,7 +1744,7 @@ function function_6274a031() {
     }
     self vehicle::toggle_lights_group(1, 1);
     self playsound("veh_doa_boost");
-    wait(3);
+    wait 3;
     self vehicle::toggle_lights_group(1, 0);
 }
 
@@ -1753,8 +1753,8 @@ function function_6274a031() {
 // Checksum 0xa47a4758, Offset: 0x8a70
 // Size: 0x1e0
 function function_e619ee5(vehicle) {
-    level endon(#"hash_4f4a6e14");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"trucksoccer_rally_complete");
+    level endon(#"player_challenge_failure");
     self notify(#"hash_2747daf7");
     self endon(#"hash_2747daf7");
     self endon(#"disconnect");
@@ -1763,7 +1763,7 @@ function function_e619ee5(vehicle) {
     vehicle vehicle::toggle_lights_group(1, 0);
     self.doa.var_f6a4f3f = 0;
     while (true) {
-        wait(0.05);
+        wait 0.05;
         if (!level flag::get("doa_challenge_running")) {
             continue;
         }
@@ -1773,7 +1773,7 @@ function function_e619ee5(vehicle) {
             vehicle launchvehicle(curdir, (0, 0, 0), 1);
             vehicle thread function_fa6d5f56();
             while (self changeseatbuttonpressed()) {
-                wait(0.05);
+                wait 0.05;
             }
         }
     }
@@ -1785,28 +1785,28 @@ function function_e619ee5(vehicle) {
 // Size: 0x280
 function function_c0485deb(def) {
     level endon(#"exit_taken");
-    wait(7);
+    wait 7;
     level thread function_c35db0c1();
     var_a558424 = struct::get_array("farm_cow_spawn", "script_noteworthy");
     level.doa.var_99f9e71a["top"] = [];
     level.doa.var_99f9e71a["bottom"] = [];
     level.doa.var_99f9e71a["right"] = [];
     level.doa.var_99f9e71a["left"] = [];
-    foreach (var_87145c56 in var_a558424) {
-        level.doa.var_99f9e71a[var_87145c56.script_parameters][level.doa.var_99f9e71a[var_87145c56.script_parameters].size] = var_87145c56;
+    foreach (cow in var_a558424) {
+        level.doa.var_99f9e71a[cow.script_parameters][level.doa.var_99f9e71a[cow.script_parameters].size] = cow;
     }
     var_1d44023c = namespace_49107f3a::function_5b4fbaef();
     var_f11f9ddc = var_1d44023c;
     while (level flag::get("doa_round_spawning")) {
         side = namespace_49107f3a::function_5b4fbaef();
         if (side == var_1d44023c || side == var_f11f9ddc) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         var_f11f9ddc = var_1d44023c;
         var_1d44023c = side;
         level function_dfbad276(randomintrange(5, 10), side);
-        wait(randomintrange(1, 3));
+        wait randomintrange(1, 3);
     }
 }
 
@@ -1826,33 +1826,33 @@ function function_dfbad276(number, startside) {
         var_2d4a3b56 = (var_2d4a3b56.origin[0], var_2d4a3b56.origin[1], trace["position"][2]);
         var_35edc664 = vectortoangles(var_2d4a3b56 - spawn_point);
         desired_yaw = angleclamp180(var_35edc664[1]);
-        var_87145c56 = spawn("script_model", spawn_point);
-        var_87145c56.targetname = "cow";
-        var_87145c56.angles = (0, desired_yaw + 90, 0);
-        var_87145c56 setmodel("zombietron_water_buffalo");
-        var_87145c56 makefakeai();
-        var_87145c56 setcandamage(1);
-        var_87145c56.health = 3999999;
-        var_87145c56.team = "axis";
-        var_87145c56.script_noteworthy = "cow";
-        var_87145c56.var_755108a1 = distance(var_87145c56.origin, var_2d4a3b56);
-        var_87145c56.move_time = var_87145c56.var_755108a1 / getdvarint("cp_doa_cow_run_units_per_sec", -49);
-        var_87145c56 setplayercollision(1);
-        var_87145c56 playloopsound("zmb_cow_run_lp", 2);
+        cow = spawn("script_model", spawn_point);
+        cow.targetname = "cow";
+        cow.angles = (0, desired_yaw + 90, 0);
+        cow setmodel("zombietron_water_buffalo");
+        cow makefakeai();
+        cow setcandamage(1);
+        cow.health = 3999999;
+        cow.team = "axis";
+        cow.script_noteworthy = "cow";
+        cow.var_755108a1 = distance(cow.origin, var_2d4a3b56);
+        cow.move_time = cow.var_755108a1 / getdvarint("cp_doa_cow_run_units_per_sec", -49);
+        cow setplayercollision(1);
+        cow playloopsound("zmb_cow_run_lp", 2);
         if (randomint(getdvarint("cp_doa_sacred_cow_chance", 20)) == 0) {
-            var_87145c56.var_67e71889 = 1;
-            var_87145c56 thread namespace_eaa992c::function_285a2999("cow_sacred");
+            cow.var_67e71889 = 1;
+            cow thread namespace_eaa992c::function_285a2999("cow_sacred");
         }
-        trigger = spawn("trigger_radius", var_87145c56.origin + (0, 0, -10), 3, 34, 100);
+        trigger = spawn("trigger_radius", cow.origin + (0, 0, -10), 3, 34, 100);
         trigger.targetname = "cow";
         trigger enablelinkto();
-        trigger linkto(var_87145c56);
-        trigger thread function_d1dd8def(var_87145c56);
-        trigger thread namespace_49107f3a::function_981c685d(var_87145c56);
-        var_87145c56.trigger = trigger;
-        var_87145c56 thread function_9cee4436(var_2d4a3b56);
-        var_87145c56 thread function_57ff2866();
-        wait(randomfloatrange(0.65, 2.5));
+        trigger linkto(cow);
+        trigger thread function_d1dd8def(cow);
+        trigger thread namespace_49107f3a::function_981c685d(cow);
+        cow.trigger = trigger;
+        cow thread function_9cee4436(var_2d4a3b56);
+        cow thread function_57ff2866();
+        wait randomfloatrange(0.65, 2.5);
         number--;
     }
 }
@@ -1913,8 +1913,8 @@ function function_9cee4436(dest) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x61a5472f, Offset: 0x9640
 // Size: 0x278
-function function_d1dd8def(var_87145c56) {
-    var_87145c56 endon(#"death");
+function function_d1dd8def(cow) {
+    cow endon(#"death");
     while (true) {
         guy = self waittill(#"trigger");
         if (!isdefined(guy)) {
@@ -1999,7 +1999,7 @@ function function_204c35f0() {
     while (level flag::get("doa_round_active") && !level flag::get("doa_game_is_over")) {
         side = namespace_49107f3a::function_5b4fbaef();
         function_dfbad276(randomintrange(2, 6), side);
-        wait(randomintrange(10, 30));
+        wait randomintrange(10, 30);
     }
 }
 
@@ -2008,10 +2008,10 @@ function function_204c35f0() {
 // Checksum 0x139eb767, Offset: 0x9c58
 // Size: 0x58
 function function_c35db0c1() {
-    level endon(#"hash_6df89d17");
+    level endon(#"teleporter_triggered");
     while (!level flag::get("doa_game_is_over")) {
         level waittill(#"hash_c87feb68");
-        wait(10);
+        wait 10;
         level thread function_204c35f0();
     }
 }

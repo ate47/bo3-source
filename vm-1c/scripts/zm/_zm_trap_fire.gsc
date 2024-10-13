@@ -12,9 +12,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_96203a67;
+#namespace zm_trap_fire;
 
-// Namespace namespace_96203a67
+// Namespace zm_trap_fire
 // Params 0, eflags: 0x2
 // Checksum 0x52089e20, Offset: 0x3a0
 // Size: 0x34
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
     system::register("zm_trap_fire", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_96203a67
+// Namespace zm_trap_fire
 // Params 0, eflags: 0x1 linked
 // Checksum 0x14cdc0aa, Offset: 0x3e0
 // Size: 0x142
@@ -35,7 +35,7 @@ function __init__() {
     }
 }
 
-// Namespace namespace_96203a67
+// Namespace zm_trap_fire
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc3fd4487, Offset: 0x530
 // Size: 0x174
@@ -59,7 +59,7 @@ function trap_activate_fire() {
     level clientfield::set(self.target, 0);
 }
 
-// Namespace namespace_96203a67
+// Namespace zm_trap_fire
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9a5a6d3d, Offset: 0x6b0
 // Size: 0x144
@@ -72,25 +72,25 @@ function trap_audio(trap) {
     if (isdefined(sound_origin)) {
         playsoundatposition("wpn_zmb_inlevel_fire_trap_stop", sound_origin.origin);
         sound_origin stoploopsound();
-        wait(0.05);
+        wait 0.05;
         playsoundatposition("zmb_fire_trap_cooldown", sound_origin.origin);
         sound_origin delete();
     }
 }
 
-// Namespace namespace_96203a67
+// Namespace zm_trap_fire
 // Params 1, eflags: 0x1 linked
 // Checksum 0x32d66219, Offset: 0x800
 // Size: 0x68
 function function_c5d41372(trap) {
     trap endon(#"trap_done");
     while (true) {
-        wait(randomfloatrange(0.1, 0.5));
+        wait randomfloatrange(0.1, 0.5);
         playsoundatposition("amb_flame", self.origin);
     }
 }
 
-// Namespace namespace_96203a67
+// Namespace zm_trap_fire
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd8fe54af, Offset: 0x870
 // Size: 0x1a6
@@ -111,13 +111,13 @@ function player_damage() {
             return;
         }
         self dodamage(50, self.origin);
-        wait(0.1);
+        wait 0.1;
         self playsound("zmb_ignite");
         self.is_burning = undefined;
     }
 }
 
-// Namespace namespace_96203a67
+// Namespace zm_trap_fire
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf5259486, Offset: 0xa20
 // Size: 0x2a4
@@ -132,7 +132,7 @@ function damage(trap) {
             self playsound("zmb_ignite");
             self thread zombie_death::flame_death_fx();
             playfxontag(level._effect["character_fire_death_torso"], self, "J_SpineLower");
-            wait(randomfloat(1.25));
+            wait randomfloat(1.25);
         } else {
             refs[0] = "guts";
             refs[1] = "right_arm";
@@ -143,7 +143,7 @@ function damage(trap) {
             refs[6] = "head";
             self.a.gib_ref = refs[randomint(refs.size)];
             playsoundatposition("zmb_ignite", self.origin);
-            wait(randomfloat(1.25));
+            wait randomfloat(1.25);
             self playsound("zmb_vocals_zombie_death_fire");
         }
     }

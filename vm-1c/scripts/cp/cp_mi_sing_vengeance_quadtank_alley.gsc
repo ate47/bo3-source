@@ -39,8 +39,8 @@ function function_f9314d0e(str_objective, var_74cd64bc) {
         namespace_63b4601c::function_b87f9c13(str_objective, var_74cd64bc);
         namespace_63b4601c::function_66773296("hendricks", str_objective);
         callback::on_spawned(&namespace_63b4601c::give_hero_weapon);
-        level.var_831ab6b2 = struct::get("quadtank_alley_intro_org");
-        level.var_831ab6b2 thread scene::skipto_end("cin_ven_04_30_quadalleydoor_1st");
+        level.quadtank_alley_intro_org = struct::get("quadtank_alley_intro_org");
+        level.quadtank_alley_intro_org thread scene::skipto_end("cin_ven_04_30_quadalleydoor_1st");
         spawner::add_spawn_function_group("quadteaser_qt", "script_noteworthy", &function_5c60b4ee);
         level thread function_32620a97();
         namespace_63b4601c::function_e00864bd("dogleg_1_umbra_gate", 1, "dogleg_1_gate");
@@ -73,7 +73,7 @@ function function_3e0e217e(str_objective, var_74cd64bc) {
 function function_c231d685() {
     level flag::wait_till("move_quadtank_alley_hendricks_node_10");
     savegame::checkpoint_save();
-    wait(2);
+    wait 2;
     level.var_9c196273 = struct::get("quadtank_alley_breadcrumb_02");
     objectives::set("cp_level_vengeance_goto_quadtank_alley_rooftop", level.var_9c196273);
     level flag::wait_till("quadtank_alley_rooftop");
@@ -137,10 +137,10 @@ function function_5b72d473() {
 function function_958f5757() {
     self endon(#"death");
     while (true) {
-        self waittillmatch(#"hash_7f1f9f3c");
+        self waittillmatch(#"qt_fire_missile");
         level util::clientnotify("qt_fire_missile");
-        thread namespace_7c587e3e::function_b3768e28();
-        thread namespace_7c587e3e::function_2afbdce();
+        thread cp_mi_sing_vengeance_sound::function_b3768e28();
+        thread cp_mi_sing_vengeance_sound::function_2afbdce();
         self fireweapon(0);
     }
 }
@@ -155,7 +155,7 @@ function function_cf5fc4c7() {
         self waittillmatch(#"hash_870f582c");
         level util::clientnotify("qt_fire_mg");
         self playloopsound("wpn_qt_mg_loop");
-        thread namespace_7c587e3e::function_2afbdce();
+        thread cp_mi_sing_vengeance_sound::function_2afbdce();
         self thread turret::fire_for_time(-1, 1);
         self thread turret::fire_for_time(-1, 2);
         self waittillmatch(#"hash_c6db257a");
@@ -206,7 +206,7 @@ function function_c58f9e9a() {
 // Checksum 0xec9d3d07, Offset: 0x1420
 // Size: 0x34
 function function_323d0a39() {
-    level.var_2fd26037 waittill(#"hash_11488c47");
+    level.var_2fd26037 waittill(#"plyr_you_okay_hendricks_1");
     level dialog::function_13b3b16a("plyr_you_okay_hendricks_1");
 }
 

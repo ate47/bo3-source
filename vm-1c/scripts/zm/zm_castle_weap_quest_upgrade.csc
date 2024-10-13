@@ -10,9 +10,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_99cb5531;
+#namespace zm_castle_weap_quest_upgrade;
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 0, eflags: 0x1 linked
 // Checksum 0x830ed46f, Offset: 0x1058
 // Size: 0x147c
@@ -115,7 +115,7 @@ function main() {
     clientfield::register("clientuimodel", "zmInventory.widget_weap_quest_demon", 1, 1, "int", undefined, 0, 0);
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x81bf60a8, Offset: 0x24e0
 // Size: 0x218
@@ -134,7 +134,7 @@ function function_9de15a4d(localclientnum, oldval, newval, bnewent, binitialsnap
                 n_shader_value = mapfloat(n_start_time, n_end_time, 0, 1, n_time);
             }
             self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-            wait(0.01);
+            wait 0.01;
         }
         return;
     }
@@ -150,11 +150,11 @@ function function_9de15a4d(localclientnum, oldval, newval, bnewent, binitialsnap
             n_shader_value = mapfloat(n_start_time, n_end_time, 1, 0, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1df9380a, Offset: 0x2700
 // Size: 0x114
@@ -175,7 +175,7 @@ function function_fc150bb9(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_1c4fc326(localclientnum, b_show, var_ad3c7eb7);
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 3, eflags: 0x1 linked
 // Checksum 0xc7681374, Offset: 0x2820
 // Size: 0x2c0
@@ -196,7 +196,7 @@ function function_1c4fc326(localclientnum, b_show, var_ad3c7eb7) {
                 n_shader_value = mapfloat(n_start_time, n_end_time, 0, 1, n_time);
             }
             self mapshaderconstant(localclientnum, 0, "scriptVector0", n_shader_value, 0, 0);
-            wait(0.01);
+            wait 0.01;
         }
         if (var_ad3c7eb7) {
             if (isdefined(self.n_fx_id)) {
@@ -222,11 +222,11 @@ function function_1c4fc326(localclientnum, b_show, var_ad3c7eb7) {
             n_shader_value = mapfloat(n_start_time, n_end_time, 1, 0, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector0", n_shader_value, 0, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x7e406c07, Offset: 0x2ae8
 // Size: 0x74
@@ -236,7 +236,7 @@ function function_9a901aeb(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf6d6f4cd, Offset: 0x2b68
 // Size: 0x15a
@@ -261,7 +261,7 @@ function function_b2c9069f(localclientnum, oldval, newval, bnewent, binitialsnap
     self notify(#"hash_24d9d4f5");
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 2, eflags: 0x1 linked
 // Checksum 0x9eb01585, Offset: 0x2cd0
 // Size: 0xc8
@@ -276,7 +276,7 @@ function function_60670dd4(localclientnum, str_scene) {
     self.str_scene = str_scene;
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 2, eflags: 0x1 linked
 // Checksum 0x67e3a5eb, Offset: 0x2da0
 // Size: 0x64
@@ -288,7 +288,7 @@ function function_24d9d4f5(localclientnum, str_fx_name) {
     self scene::stop(1);
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xcffe24ce, Offset: 0x2e10
 // Size: 0x74
@@ -298,7 +298,7 @@ function function_f821e372(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6e5ffe71, Offset: 0x2e90
 // Size: 0x284
@@ -326,13 +326,13 @@ function function_543f9ebd(localclientnum, oldval, newval, bnewent, binitialsnap
     for (i = 0; i < level.var_f91a2b6a[localclientnum].size; i++) {
         if (isdefined(level.var_f91a2b6a[localclientnum][i]) && isdefined(level.var_f91a2b6a[localclientnum][i].var_89028fd1)) {
             level.var_f91a2b6a[localclientnum][i] thread scene::play(level.var_f91a2b6a[localclientnum][i].str_scene, level.var_f91a2b6a[localclientnum][i].var_89028fd1);
-            wait(randomfloatrange(1, 3));
+            wait randomfloatrange(1, 3);
         }
     }
     self scene::stop("o_zm_dlc1_chomper_demongate_swarm_trophy_room_active");
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x52680fd1, Offset: 0x3120
 // Size: 0x19c
@@ -359,7 +359,7 @@ function function_fec30c70(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe52d8c61, Offset: 0x32c8
 // Size: 0x1ea
@@ -386,14 +386,14 @@ function function_8739dc84(localclientnum, oldval, newval, bnewent, binitialsnap
     level.var_f91a2b6a = undefined;
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x25b7e9b8, Offset: 0x34c0
 // Size: 0x14c
 function function_e08420f7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         playfx(localclientnum, level._effect["quest_portal_open"], self.origin, anglestoforward(self.angles));
-        wait(0.45);
+        wait 0.45;
         self.var_fd0edd83 = playfx(localclientnum, level._effect["quest_portal_loop"], self.origin, anglestoforward(self.angles));
         return;
     }
@@ -401,7 +401,7 @@ function function_e08420f7(localclientnum, oldval, newval, bnewent, binitialsnap
     playfx(localclientnum, level._effect["quest_portal_close"], self.origin, anglestoforward(self.angles));
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8ced2d49, Offset: 0x3618
 // Size: 0x64
@@ -411,7 +411,7 @@ function function_414a0874(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb3385465, Offset: 0x3688
 // Size: 0x64
@@ -421,7 +421,7 @@ function function_8a7c68af(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3b47a714, Offset: 0x36f8
 // Size: 0x64
@@ -431,7 +431,7 @@ function function_71168013(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x60dc327c, Offset: 0x3768
 // Size: 0x64
@@ -441,7 +441,7 @@ function function_41a3306c(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb3273adb, Offset: 0x37d8
 // Size: 0x64
@@ -451,7 +451,7 @@ function function_e13571b8(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x7a51f57a, Offset: 0x3848
 // Size: 0x64
@@ -461,7 +461,7 @@ function function_2ccca749(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd342e1d7, Offset: 0x38b8
 // Size: 0x64
@@ -471,7 +471,7 @@ function function_8cd2582e(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x51eeebc1, Offset: 0x3928
 // Size: 0x64
@@ -481,7 +481,7 @@ function function_42fe618d(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xaecd7993, Offset: 0x3998
 // Size: 0x64
@@ -491,7 +491,7 @@ function function_ad13a872(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3aa94f22, Offset: 0x3a08
 // Size: 0x64
@@ -501,7 +501,7 @@ function function_9b445487(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5e3d803b, Offset: 0x3a78
 // Size: 0x64
@@ -511,7 +511,7 @@ function function_e2b77200(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x54a3de91, Offset: 0x3ae8
 // Size: 0x64
@@ -521,7 +521,7 @@ function function_4ab357d6(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6159d336, Offset: 0x3b58
 // Size: 0x64
@@ -531,7 +531,7 @@ function function_153cf9fc(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd35ccc70, Offset: 0x3bc8
 // Size: 0x8c
@@ -541,7 +541,7 @@ function function_7cc0d99b(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe27d8b0c, Offset: 0x3c60
 // Size: 0x15c
@@ -565,7 +565,7 @@ function function_475de8c4(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x16976fe4, Offset: 0x3dc8
 // Size: 0x428
@@ -593,7 +593,7 @@ function function_6103d0f7(localclientnum, oldval, newval, bnewent, binitialsnap
                 self.n_shader_value = mapfloat(n_start_time, var_b1382f05, var_c8a6e70a, var_2be3abbd, n_time);
             }
             self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, self.n_shader_value, 0);
-            wait(0.01);
+            wait 0.01;
         }
         return;
     }
@@ -611,7 +611,7 @@ function function_6103d0f7(localclientnum, oldval, newval, bnewent, binitialsnap
                 self.n_shader_value = mapfloat(n_start_time, n_end_time, var_c8a6e70a, 1, n_time);
             }
             self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, self.n_shader_value, 0);
-            wait(0.01);
+            wait 0.01;
         }
         return;
     }
@@ -628,11 +628,11 @@ function function_6103d0f7(localclientnum, oldval, newval, bnewent, binitialsnap
             self.n_shader_value = mapfloat(n_start_time, n_end_time, var_c8a6e70a, 0, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, self.n_shader_value, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbdc2250d, Offset: 0x41f8
 // Size: 0x19c
@@ -656,7 +656,7 @@ function function_f51349bf(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb83cc21c, Offset: 0x43a0
 // Size: 0x114
@@ -676,7 +676,7 @@ function function_3f451756(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xdae9b3db, Offset: 0x44c0
 // Size: 0xd2
@@ -691,7 +691,7 @@ function function_e92d950c(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc23944f6, Offset: 0x45a0
 // Size: 0xe4
@@ -708,7 +708,7 @@ function function_c31afa5(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf084e307, Offset: 0x4690
 // Size: 0xe4
@@ -725,7 +725,7 @@ function function_9db8b2b2(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x708cd7e4, Offset: 0x4780
 // Size: 0x258
@@ -748,7 +748,7 @@ function function_64bc7af0(localclientnum, oldval, newval, bnewent, binitialsnap
             n_shader_value = mapfloat(n_start_time, n_end_time, 1, 0, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector0", n_shader_value, 0, 0);
-        wait(0.01);
+        wait 0.01;
     }
     n_start_time = gettime();
     n_end_time = n_start_time + var_82acb0d9 * 1000;
@@ -762,11 +762,11 @@ function function_64bc7af0(localclientnum, oldval, newval, bnewent, binitialsnap
             n_shader_value = mapfloat(n_start_time, n_end_time, 0, 1, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector0", n_shader_value, 0, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa1c3c8b7, Offset: 0x49e0
 // Size: 0x190
@@ -789,11 +789,11 @@ function function_febf0bf4(localclientnum, oldval, newval, bnewent, binitialsnap
             n_shader_value = mapfloat(n_start_time, n_end_time, 1, 0, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector0", n_shader_value, 0, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4aef2648, Offset: 0x4b78
 // Size: 0x188
@@ -815,11 +815,11 @@ function function_5063c4f7(localclientnum, oldval, newval, bnewent, binitialsnap
             n_shader_value = mapfloat(n_start_time, n_end_time, 0, 1, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector0", n_shader_value, 0, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xfb361798, Offset: 0x4d08
 // Size: 0x218
@@ -838,7 +838,7 @@ function function_f32932c3(localclientnum, oldval, newval, bnewent, binitialsnap
                 n_shader_value = mapfloat(n_start_time, n_end_time, 0, 1, n_time);
             }
             self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-            wait(0.01);
+            wait 0.01;
         }
         return;
     }
@@ -854,11 +854,11 @@ function function_f32932c3(localclientnum, oldval, newval, bnewent, binitialsnap
             n_shader_value = mapfloat(n_start_time, n_end_time, 1, 0, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc8001f6d, Offset: 0x4f28
 // Size: 0x124
@@ -875,7 +875,7 @@ function function_3b5b1626(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb4343785, Offset: 0x5058
 // Size: 0x84
@@ -885,7 +885,7 @@ function function_d6434cf(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2906fab, Offset: 0x50e8
 // Size: 0x7c
@@ -897,7 +897,7 @@ function function_c069c332(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread postfx::stoppostfxbundle();
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x13d7fd2c, Offset: 0x5170
 // Size: 0xc4
@@ -907,12 +907,12 @@ function function_2514cb86(localclientnum, oldval, newval, bnewent, binitialsnap
         if (isdefined(var_c6a8f11b)) {
             var_c6a8f11b delete();
         }
-        wait(5);
+        wait 5;
         level thread struct::function_368120a1("scene", "p7_fxanim_zm_castle_quest_rune_orb_scale_down_bundle");
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xdfec91ff, Offset: 0x5240
 // Size: 0x218
@@ -931,7 +931,7 @@ function function_46f52afa(localclientnum, oldval, newval, bnewent, binitialsnap
                 n_shader_value = mapfloat(n_start_time, n_end_time, 0, 1, n_time);
             }
             self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-            wait(0.01);
+            wait 0.01;
         }
         return;
     }
@@ -947,11 +947,11 @@ function function_46f52afa(localclientnum, oldval, newval, bnewent, binitialsnap
             n_shader_value = mapfloat(n_start_time, n_end_time, 1, 0, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf103247f, Offset: 0x5460
 // Size: 0x210
@@ -969,7 +969,7 @@ function function_6f66f54d(localclientnum, oldval, newval, bnewent, binitialsnap
             n_shader_value = mapfloat(n_start_time, n_end_time, 0, 1, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-        wait(0.01);
+        wait 0.01;
     }
     n_start_time = gettime();
     n_end_time = n_start_time + 0.5 * 1000;
@@ -983,11 +983,11 @@ function function_6f66f54d(localclientnum, oldval, newval, bnewent, binitialsnap
             n_shader_value = mapfloat(n_start_time, n_end_time, 1, 0, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd05fcf53, Offset: 0x5678
 // Size: 0xfc
@@ -1004,7 +1004,7 @@ function function_65d81fc2(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb90b5c17, Offset: 0x5780
 // Size: 0x234
@@ -1037,7 +1037,7 @@ function function_aefa4e67(localclientnum, oldval, newval, bnewent, binitialsnap
     self.var_c35be71d = playfxontag(localclientnum, level._effect[var_2072b44e], self, "spine3_jnt");
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe4b21db6, Offset: 0x59c0
 // Size: 0x6e
@@ -1049,7 +1049,7 @@ function function_60ae2cd0(localclientnum, oldval, newval, bnewent, binitialsnap
     self notify(#"hash_5ad4a160");
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 2, eflags: 0x1 linked
 // Checksum 0x9fa26aec, Offset: 0x5a38
 // Size: 0x1f0
@@ -1060,7 +1060,7 @@ function function_a783453f(localclientnum, ai_wolf) {
     var_ab2a7b23 = 1;
     var_cc9030a = ai_wolf.origin;
     while (isdefined(ai_wolf)) {
-        wait(0.15);
+        wait 0.15;
         if (ai_wolf.origin != var_cc9030a) {
             var_cc9030a = ai_wolf.origin;
             if (isdefined(var_ab2a7b23) && var_ab2a7b23) {
@@ -1080,7 +1080,7 @@ function function_a783453f(localclientnum, ai_wolf) {
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xfa8eb61d, Offset: 0x5c30
 // Size: 0x2a0
@@ -1101,7 +1101,7 @@ function function_ccf12771(localclientnum, oldval, newval, bnewent, binitialsnap
                 var_11bb1597 = mapfloat(n_start_time, n_end_time, 0, 0.7, n_time);
             }
             self mapshaderconstant(localclientnum, 0, "scriptVector2", var_6d9840be, var_11bb1597, 0);
-            wait(0.01);
+            wait 0.01;
         }
         return;
     }
@@ -1119,11 +1119,11 @@ function function_ccf12771(localclientnum, oldval, newval, bnewent, binitialsnap
             var_11bb1597 = mapfloat(n_start_time, n_end_time, 0.7, 0, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector2", var_6d9840be, var_11bb1597, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x7e879a13, Offset: 0x5ed8
 // Size: 0x9c
@@ -1135,7 +1135,7 @@ function function_e051553d(localclientnum, oldval, newval, bnewent, binitialsnap
     deletefx(localclientnum, self.n_fx_id);
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0xba2b2f50, Offset: 0x5f80
 // Size: 0x64
@@ -1143,7 +1143,7 @@ function function_c75de902(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_1ee903c(localclientnum, "zombie_soul_demon", newval);
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2bebe8df, Offset: 0x5ff0
 // Size: 0x64
@@ -1151,7 +1151,7 @@ function function_3cb9b375(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_1ee903c(localclientnum, "zombie_soul_rune", newval);
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8846c2bc, Offset: 0x6060
 // Size: 0x64
@@ -1159,7 +1159,7 @@ function function_fa1ef690(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_1ee903c(localclientnum, "zombie_soul_storm", newval);
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 7, eflags: 0x1 linked
 // Checksum 0x11feafac, Offset: 0x60d0
 // Size: 0x64
@@ -1167,7 +1167,7 @@ function function_d0720a0d(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_1ee903c(localclientnum, "zombie_soul_wolf", newval);
 }
 
-// Namespace namespace_99cb5531
+// Namespace zm_castle_weap_quest_upgrade
 // Params 3, eflags: 0x1 linked
 // Checksum 0xb004a32e, Offset: 0x6140
 // Size: 0xc4

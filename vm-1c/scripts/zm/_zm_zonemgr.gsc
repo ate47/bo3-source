@@ -24,7 +24,7 @@ function autoexec function_2dc19561() {
 // Checksum 0x8cfddf95, Offset: 0x398
 // Size: 0x8c
 function __init__() {
-    println("info_volume");
+    println("<dev string:x28>");
     level flag::init("zones_initialized");
     level.zones = [];
     level.zone_flags = [];
@@ -218,7 +218,7 @@ function zone_init(zone_name, zone_tag) {
     if (isdefined(level.zones[zone_name])) {
         return;
     }
-    println("info_volume" + zone_name);
+    println("<dev string:x5f>" + zone_name);
     level.zones[zone_name] = spawnstruct();
     zone = level.zones[zone_name];
     zone.is_enabled = 0;
@@ -233,13 +233,13 @@ function zone_init(zone_name, zone_tag) {
     }
     zone.volumes = [];
     volumes = getentarray(zone_name, "targetname");
-    println("info_volume" + volumes.size);
+    println("<dev string:x76>" + volumes.size);
     for (i = 0; i < volumes.size; i++) {
         if (volumes[i].classname == "info_volume") {
             zone.volumes[zone.volumes.size] = volumes[i];
         }
     }
-    assert(isdefined(zone.volumes[0]), "info_volume" + zone_name);
+    assert(isdefined(zone.volumes[0]), "<dev string:x8d>" + zone_name);
     /#
         zone.total_spawn_count = 0;
         zone.round_spawn_count = 0;
@@ -262,10 +262,10 @@ function zone_init(zone_name, zone_tag) {
             tokens = strtok(spot.script_noteworthy, " ");
             foreach (token in tokens) {
                 switch (token) {
-                case 12:
-                case 13:
-                case 14:
-                case 15:
+                case "custom_spawner_entry":
+                case "faller_location":
+                case "riser_location":
+                case "spawn_location":
                     if (!isdefined(zone.a_loc_types["zombie_location"])) {
                         zone.a_loc_types["zombie_location"] = [];
                     } else if (!isarray(zone.a_loc_types["zombie_location"])) {
@@ -349,11 +349,11 @@ function reinit_zone_spawners() {
                 tokens = strtok(spot.script_noteworthy, " ");
                 foreach (token in tokens) {
                     switch (token) {
-                    case 12:
-                    case 13:
-                    case 14:
-                    case 15:
-                    case 19:
+                    case "custom_spawner_entry":
+                    case "faller_location":
+                    case "riser_location":
+                    case "spawn_location":
+                    case "spawner_location":
                         if (!isdefined(zone.a_loc_types["zombie_location"])) {
                             zone.a_loc_types["zombie_location"] = [];
                         } else if (!isarray(zone.a_loc_types["zombie_location"])) {
@@ -384,7 +384,7 @@ function reinit_zone_spawners() {
 // Checksum 0xa401b3cd, Offset: 0x1bd8
 // Size: 0x1cc
 function enable_zone(zone_name) {
-    assert(isdefined(level.zones) && isdefined(level.zones[zone_name]), "info_volume");
+    assert(isdefined(level.zones) && isdefined(level.zones[zone_name]), "<dev string:xb4>");
     if (level.zones[zone_name].is_enabled) {
         return;
     }
@@ -423,7 +423,7 @@ function make_zone_adjacent(main_zone_name, adj_zone_name, flag_name) {
         }
         return;
     }
-    assert(!isarray(flag_name), "info_volume");
+    assert(!isarray(flag_name), "<dev string:xdf>");
     adj_zone = main_zone.adjacent_zones[adj_zone_name];
     size = adj_zone.flags.size;
     adj_zone.flags_do_or_check = 1;
@@ -500,7 +500,7 @@ function wait_zone_flags_updating() {
         level.zone_flags_updating = 0;
     }
     while (level.zone_flags_updating > 0) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -515,7 +515,7 @@ function zone_flag_wait_throttle() {
     level.zone_flag_wait_throttle++;
     if (level.zone_flag_wait_throttle > 3) {
         level.zone_flag_wait_throttle = 0;
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -590,7 +590,7 @@ function zone_flag_wait(flag_name) {
 // Size: 0x5c
 function door_close_disconnect(flag_name) {
     while (level flag::get(flag_name)) {
-        wait(1);
+        wait 1;
     }
     self.is_connected = 0;
     level thread zone_flag_wait(flag_name);
@@ -625,27 +625,27 @@ function function_e54a2e19(zone_name_a, zone_name_b, one_way) {
 // Checksum 0x5b78664c, Offset: 0x29e0
 // Size: 0x88e
 function manage_zones(initial_zone) {
-    assert(isdefined(initial_zone), "info_volume");
+    assert(isdefined(initial_zone), "<dev string:x118>");
     deactivate_initial_barrier_goals();
     level.player_zone_found = 1;
     zone_choke = 0;
     spawn_points = zm_gametype::get_player_spawns_for_gametype();
     for (i = 0; i < spawn_points.size; i++) {
-        assert(isdefined(spawn_points[i].script_noteworthy), "info_volume");
+        assert(isdefined(spawn_points[i].script_noteworthy), "<dev string:x143>");
         spawn_points[i].locked = 1;
     }
     if (isdefined(level.zone_manager_init_func)) {
         [[ level.zone_manager_init_func ]]();
     }
-    println("info_volume" + initial_zone.size);
+    println("<dev string:x191>" + initial_zone.size);
     if (isarray(initial_zone)) {
-        println("info_volume" + initial_zone[0]);
+        println("<dev string:x1bc>" + initial_zone[0]);
         for (i = 0; i < initial_zone.size; i++) {
             zone_init(initial_zone[i]);
             enable_zone(initial_zone[i]);
         }
     } else {
-        println("info_volume" + initial_zone);
+        println("<dev string:x1e7>" + initial_zone);
         zone_init(initial_zone);
         enable_zone(initial_zone);
     }
@@ -705,7 +705,7 @@ function manage_zones(initial_zone) {
             zone_choke++;
             if (zone_choke >= 3) {
                 zone_choke = 0;
-                wait(0.05);
+                wait 0.05;
                 wait_zone_flags_updating();
             }
         }
@@ -733,7 +733,7 @@ function manage_zones(initial_zone) {
             debug_show_spawn_locations();
         #/
         level.active_zone_names = get_active_zone_names();
-        wait(1);
+        wait 1;
     }
 }
 
@@ -746,13 +746,13 @@ function manage_zones(initial_zone) {
     function debug_show_spawn_locations() {
         if (isdefined(level.toggle_show_spawn_locations) && level.toggle_show_spawn_locations) {
             host_player = util::gethostplayer();
-            foreach (location in level.zm_loc_types["info_volume"]) {
+            foreach (location in level.zm_loc_types["<dev string:x20c>"]) {
                 distance = distance(location.origin, host_player.origin);
                 color = (0, 0, 1);
-                if (distance > getdvarint("info_volume") * 12) {
+                if (distance > getdvarint("<dev string:x21c>") * 12) {
                     color = (1, 0, 0);
                 }
-                debugstar(location.origin, getdvarint("info_volume"), color);
+                debugstar(location.origin, getdvarint("<dev string:x23a>"), color);
             }
         }
     }
@@ -764,25 +764,25 @@ function manage_zones(initial_zone) {
 // Checksum 0x52d939f, Offset: 0x33e8
 // Size: 0x67e
 function function_a418911a(initial_zone) {
-    assert(isdefined(initial_zone), "info_volume");
+    assert(isdefined(initial_zone), "<dev string:x118>");
     deactivate_initial_barrier_goals();
     spawn_points = zm_gametype::get_player_spawns_for_gametype();
     for (i = 0; i < spawn_points.size; i++) {
-        assert(isdefined(spawn_points[i].script_noteworthy), "info_volume");
+        assert(isdefined(spawn_points[i].script_noteworthy), "<dev string:x143>");
         spawn_points[i].locked = 1;
     }
     if (isdefined(level.zone_manager_init_func)) {
         [[ level.zone_manager_init_func ]]();
     }
-    println("info_volume" + initial_zone.size);
+    println("<dev string:x191>" + initial_zone.size);
     if (isarray(initial_zone)) {
-        println("info_volume" + initial_zone[0]);
+        println("<dev string:x1bc>" + initial_zone[0]);
         for (i = 0; i < initial_zone.size; i++) {
             zone_init(initial_zone[i]);
             enable_zone(initial_zone[i]);
         }
     } else {
-        println("info_volume" + initial_zone);
+        println("<dev string:x1e7>" + initial_zone);
         zone_init(initial_zone);
         enable_zone(initial_zone);
     }
@@ -841,7 +841,7 @@ function function_a418911a(initial_zone) {
         }
         [[ level.create_spawner_list_func ]](zkeys);
         level.active_zone_names = get_active_zone_names();
-        wait(1);
+        wait 1;
     }
 }
 
@@ -864,10 +864,10 @@ function create_spawner_list(zkeys) {
                     tokens = strtok(loc.script_noteworthy, " ");
                     foreach (token in tokens) {
                         switch (token) {
-                        case 12:
-                        case 13:
-                        case 14:
-                        case 15:
+                        case "custom_spawner_entry":
+                        case "faller_location":
+                        case "riser_location":
+                        case "spawn_location":
                             array::add(level.zm_loc_types["zombie_location"], loc, 0);
                             break;
                         default:
@@ -894,7 +894,7 @@ function get_active_zone_names() {
         return ret_list;
     }
     while (level.zone_scanning_active) {
-        wait(0.05);
+        wait 0.05;
     }
     for (i = 0; i < level.zone_keys.size; i++) {
         if (level.zones[level.zone_keys[i]].is_active) {
@@ -945,9 +945,9 @@ function function_52a1c352() {
             for (j = 0; j < 6; j++) {
                 zone.debug_hud[j] = newdebughudelem();
                 if (!j) {
-                    zone.debug_hud[j].alignx = "info_volume";
+                    zone.debug_hud[j].alignx = "<dev string:x254>";
                 } else {
-                    zone.debug_hud[j].alignx = "info_volume";
+                    zone.debug_hud[j].alignx = "<dev string:x25a>";
                 }
                 zone.debug_hud[j].x = var_379274d7[j];
                 zone.debug_hud[j].y = current_y;
@@ -1056,12 +1056,12 @@ function _debug_zones() {
                     zone.debug_hud[4] settext("");
                 }
                 /#
-                    text += zone.a_loc_types["info_volume"].size + "info_volume";
-                    zone.debug_hud[5] settext(zone.a_loc_types["info_volume"].size + "info_volume" + zone.total_spawn_count + "info_volume" + zone.round_spawn_count);
+                    text += zone.a_loc_types["<dev string:x20c>"].size + "<dev string:x25f>";
+                    zone.debug_hud[5] settext(zone.a_loc_types["<dev string:x20c>"].size + "<dev string:x266>" + zone.total_spawn_count + "<dev string:x266>" + zone.round_spawn_count);
                 #/
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 

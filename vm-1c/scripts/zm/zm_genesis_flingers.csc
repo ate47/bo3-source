@@ -3,9 +3,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_d95aef6;
+#namespace zm_genesis_flingers;
 
-// Namespace namespace_d95aef6
+// Namespace zm_genesis_flingers
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc6c2070c, Offset: 0x3d8
 // Size: 0x2c
@@ -14,25 +14,25 @@ function main() {
     level thread function_4208db02();
 }
 
-// Namespace namespace_d95aef6
+// Namespace zm_genesis_flingers
 // Params 0, eflags: 0x1 linked
 // Checksum 0x66d4fc8b, Offset: 0x410
 // Size: 0x1fc
 function register_clientfields() {
-    clientfield::register("toplayer", "flinger_flying_postfx", 15000, 1, "int", &function_a1f3f959, 0, 0);
-    clientfield::register("toplayer", "flinger_land_smash", 15000, 1, "counter", &function_8dcf5001, 0, 0);
-    clientfield::register("toplayer", "flinger_cooldown_start", 15000, 4, "int", &function_f2c915dd, 0, 0);
-    clientfield::register("toplayer", "flinger_cooldown_end", 15000, 4, "int", &function_25a08bae, 0, 0);
+    clientfield::register("toplayer", "flinger_flying_postfx", 15000, 1, "int", &flinger_flying_postfx, 0, 0);
+    clientfield::register("toplayer", "flinger_land_smash", 15000, 1, "counter", &flinger_land_smash, 0, 0);
+    clientfield::register("toplayer", "flinger_cooldown_start", 15000, 4, "int", &flinger_cooldown_start, 0, 0);
+    clientfield::register("toplayer", "flinger_cooldown_end", 15000, 4, "int", &flinger_cooldown_end, 0, 0);
     clientfield::register("scriptmover", "player_visibility", 15000, 1, "int", &function_a0a5829, 0, 0);
     clientfield::register("scriptmover", "flinger_launch_fx", 15000, 1, "counter", &function_3762396c, 0, 0);
-    clientfield::register("scriptmover", "flinger_pad_active_fx", 15000, 4, "int", &function_7dd4913c, 0, 0);
+    clientfield::register("scriptmover", "flinger_pad_active_fx", 15000, 4, "int", &flinger_pad_active_fx, 0, 0);
 }
 
-// Namespace namespace_d95aef6
+// Namespace zm_genesis_flingers
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4c265362, Offset: 0x618
 // Size: 0x15c
-function function_a1f3f959(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function flinger_flying_postfx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_6f6f69f0 = playfxontag(localclientnum, level._effect["flinger_trail"], self, "tag_origin");
         self.var_bb0de733 = self playloopsound("zmb_fling_windwhoosh_2d");
@@ -50,7 +50,7 @@ function function_a1f3f959(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread postfx::exitpostfxbundle();
 }
 
-// Namespace namespace_d95aef6
+// Namespace zm_genesis_flingers
 // Params 2, eflags: 0x1 linked
 // Checksum 0x9624bf55, Offset: 0x780
 // Size: 0xc4
@@ -67,11 +67,11 @@ function function_ddcc2bf9(localclientnum, var_bfcf4a2a) {
     self showpart(localclientnum, "tag_blue");
 }
 
-// Namespace namespace_d95aef6
+// Namespace zm_genesis_flingers
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2cfeb18c, Offset: 0x850
 // Size: 0xf4
-function function_7dd4913c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function flinger_pad_active_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval > 0) {
         var_1143aa58 = getent(localclientnum, level.var_5646965[newval]["pad"], "targetname");
         var_1143aa58 thread function_ddcc2bf9(localclientnum, 0);
@@ -80,20 +80,20 @@ function function_7dd4913c(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_d95aef6
+// Namespace zm_genesis_flingers
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6d03cab9, Offset: 0x950
 // Size: 0x7c
-function function_8dcf5001(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function flinger_land_smash(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level notify(#"hash_92663c14");
     playfxontag(localclientnum, level._effect["flinger_land"], self, "tag_origin");
 }
 
-// Namespace namespace_d95aef6
+// Namespace zm_genesis_flingers
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe0045620, Offset: 0x9d8
 // Size: 0x1c4
-function function_f2c915dd(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function flinger_cooldown_start(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval > 0) {
         var_1143aa58 = getent(localclientnum, level.var_5646965[newval]["pad"], "targetname");
         var_1143aa58 thread function_ddcc2bf9(localclientnum, 1);
@@ -107,11 +107,11 @@ function function_f2c915dd(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_d95aef6
+// Namespace zm_genesis_flingers
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1087ebd4, Offset: 0xba8
 // Size: 0x1c4
-function function_25a08bae(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function flinger_cooldown_end(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval > 0) {
         var_1143aa58 = getent(localclientnum, level.var_5646965[newval]["pad"], "targetname");
         var_1143aa58 thread function_ddcc2bf9(localclientnum, 0);
@@ -125,7 +125,7 @@ function function_25a08bae(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_d95aef6
+// Namespace zm_genesis_flingers
 // Params 7, eflags: 0x1 linked
 // Checksum 0x42417813, Offset: 0xd78
 // Size: 0x6c
@@ -133,7 +133,7 @@ function function_3762396c(localclientnum, oldval, newval, bnewent, binitialsnap
     playfxontag(localclientnum, level._effect["flinger_launch"], self, "tag_origin");
 }
 
-// Namespace namespace_d95aef6
+// Namespace zm_genesis_flingers
 // Params 0, eflags: 0x1 linked
 // Checksum 0x49841dcd, Offset: 0xdf0
 // Size: 0x474
@@ -181,7 +181,7 @@ function function_4208db02() {
     level.var_5646965[8]["landpad"] = 1;
 }
 
-// Namespace namespace_d95aef6
+// Namespace zm_genesis_flingers
 // Params 7, eflags: 0x1 linked
 // Checksum 0x7fdd1481, Offset: 0x1270
 // Size: 0x84
@@ -193,7 +193,7 @@ function function_a0a5829(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_d95aef6
+// Namespace zm_genesis_flingers
 // Params 1, eflags: 0x1 linked
 // Checksum 0x887ed4ac, Offset: 0x1300
 // Size: 0x9c

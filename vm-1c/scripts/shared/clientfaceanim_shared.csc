@@ -106,7 +106,7 @@ function buildandvalidatefacialanimationlist(localclientnum) {
         level.__clientfacialanimationslist["wallrunning"] = array("mp_face_male_wall_run_1");
         deathanims = level.__clientfacialanimationslist["death"];
         foreach (deathanim in deathanims) {
-            assert(!isanimlooping(localclientnum, deathanim), "combat_shoot" + deathanim + "combat_shoot");
+            assert(!isanimlooping(localclientnum, deathanim), "<dev string:x28>" + deathanim + "<dev string:x4e>");
         }
     }
 }
@@ -161,7 +161,7 @@ function private function_48af690b(localclientnum) {
         if (!isdefined(wait_time)) {
             wait_time = 1;
         }
-        wait(wait_time);
+        wait wait_time;
     }
 }
 

@@ -33,7 +33,7 @@ function autoexec main() {
         }
         processedbundles[var_93dca242] = destructbundle;
     }
-    level.var_3f831f3b["destructiblecharacterdef"] = processedbundles;
+    level.scriptbundles["destructiblecharacterdef"] = processedbundles;
 }
 
 #namespace destructserverutils;

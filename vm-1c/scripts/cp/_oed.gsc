@@ -104,14 +104,14 @@ function function_cec8e852() {
     self endon(#"hash_3b109bff");
     while (true) {
         /#
-            level flagsys::wait_till_clear("hack_dni_fx");
+            level flagsys::wait_till_clear("<dev string:x28>");
         #/
         if (level.var_d829fe9f && self.var_d829fe9f && self actionslotonebuttonpressed()) {
             if (!scene::is_igc_active()) {
                 self.var_aa3f3ac2 = !(isdefined(self.var_aa3f3ac2) && self.var_aa3f3ac2);
                 self function_1c59df50(self.var_aa3f3ac2);
                 while (self actionslotonebuttonpressed()) {
-                    wait(0.05);
+                    wait 0.05;
                 }
             }
         }
@@ -120,13 +120,13 @@ function function_cec8e852() {
                 self.var_d5846b2c = !(isdefined(self.var_d5846b2c) && self.var_d5846b2c);
                 self function_12a9df06(self.var_d5846b2c);
                 visionset_mgr::activate("visionset", "tac_mode", self, 0.05, 0, 0.8);
-                wait(0.85);
+                wait 0.85;
                 while (self actionslotfourbuttonpressed()) {
-                    wait(0.05);
+                    wait 0.05;
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -254,7 +254,7 @@ function function_1c59df50(b_enabled) {
         self function_12a9df06(0, 0, 0);
     }
     if (self.var_aa3f3ac2) {
-        self notify(#"hash_2b839b92");
+        self notify(#"enhanced_vision_activated");
     } else {
         self notify(#"hash_49d8a575");
     }
@@ -406,7 +406,7 @@ function function_34347f5d() {
     if (!isdefined(self.angles)) {
         self.angles = (0, 0, 0);
     }
-    var_8b914409 = level.var_3f831f3b["sitrep"][self.scriptbundlename];
+    var_8b914409 = level.scriptbundles["sitrep"][self.scriptbundlename];
     var_92fa0808 = util::spawn_model(var_8b914409.model, self.origin, self.angles);
     if (isdefined(var_8b914409.var_259ea471)) {
         var_92fa0808.var_79c8542e = var_8b914409.var_259ea471;

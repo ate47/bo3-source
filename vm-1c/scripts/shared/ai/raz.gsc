@@ -50,7 +50,7 @@ function autoexec init() {
 // Checksum 0x5b252fb7, Offset: 0xcb0
 // Size: 0x2d4
 function private function_1e18c1b3() {
-    behaviortreenetworkutility::registerbehaviortreescriptapi("razTargetService", &function_abcc3970);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("razTargetService", &razTargetService);
     behaviortreenetworkutility::registerbehaviortreescriptapi("razSprintService", &razsprintservice);
     behaviortreenetworkutility::registerbehaviortreescriptapi("razShouldMelee", &razshouldmelee);
     behaviortreenetworkutility::registerbehaviortreescriptapi("razShouldShowPain", &razshouldshowpain);
@@ -63,8 +63,8 @@ function private function_1e18c1b3() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("razFinishMelee", &razfinishmelee);
     behaviortreenetworkutility::registerbehaviortreescriptapi("razFinishGroundTorpedo", &razfinishgroundtorpedo);
     behaviortreenetworkutility::registerbehaviortreescriptapi("razGoneBerserk", &razgoneberserk);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("razStartTraverseWindow", &function_364396ba);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("razFinishTraverseWindow", &function_86973c57);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("razStartTraverseWindow", &razStartTraverseWindow);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("razFinishTraverseWindow", &razFinishTraverseWindow);
     behaviortreenetworkutility::registerbehaviortreescriptapi("razTookPain", &raztookpain);
     behaviortreenetworkutility::registerbehaviortreescriptapi("razStartDeath", &razstartdeath);
     animationstatenetwork::registernotetrackhandlerfunction("mangler_fire", &function_abc3e24);
@@ -80,31 +80,31 @@ function private function_4e80e2d0() {
     blackboard::registerblackboardattribute(self, "_gibbed_limbs", "none", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("actor");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_speed", "locomotion_speed_walk", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("actor");
+            self trackblackboardattribute("<dev string:x36>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_should_turn", "should_not_turn", &bb_getshouldturn);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("actor");
+            self trackblackboardattribute("<dev string:x48>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_zombie_damageweapon_type", "regular", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("actor");
+            self trackblackboardattribute("<dev string:x60>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_gib_location", "legs", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("actor");
+            self trackblackboardattribute("<dev string:x7a>");
         #/
     }
     self.___archetypeonanimscriptedcallback = &function_d218e3b6;
@@ -158,7 +158,7 @@ function findnodesservice(behaviortreeentity) {
             }
         }
         behaviortreeentity.entrance_nodes[behaviortreeentity.entrance_nodes.size] = node;
-        assert(isdefined(node), "actor" + behaviortreeentity.find_flesh_struct_string + "actor");
+        assert(isdefined(node), "<dev string:x88>" + behaviortreeentity.find_flesh_struct_string + "<dev string:xbb>");
         behaviortreeentity.first_node = node;
         behaviortreeentity.goalradius = 80;
         behaviortreeentity.mocomp_barricade_offset = getdvarint("raz_node_origin_offset", -22);
@@ -233,7 +233,7 @@ function private function_9235fe6a(entity, var_d150e4b3) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x202b5c51, Offset: 0x1838
 // Size: 0x370
-function private function_abcc3970(entity) {
+function private razTargetService(entity) {
     if (isdefined(entity.ignoreall) && entity.ignoreall) {
         return 0;
     }
@@ -404,7 +404,7 @@ function private razgoneberserk(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x3b361966, Offset: 0x1fd8
 // Size: 0x7c
-function private function_364396ba(entity) {
+function private razStartTraverseWindow(entity) {
     var_8352f87c = anglestoforward(entity.first_node.angles);
     var_8352f87c = vectorscale(var_8352f87c, 100);
     entity setgoal(entity.origin + var_8352f87c);
@@ -414,7 +414,7 @@ function private function_364396ba(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7af1f812, Offset: 0x2060
 // Size: 0x84
-function private function_86973c57(entity) {
+function private razFinishTraverseWindow(entity) {
     entity setgoal(entity.origin);
     entity.var_7f90785e = undefined;
     entity.first_node = undefined;
@@ -443,7 +443,7 @@ function private razstartdeath(entity) {
         entity detach("c_zom_dlc3_raz_cannon_arm");
         entity hidepart("j_shouldertwist_ri_attach", "", 1);
         entity hidepart("j_shoulder_ri_attach");
-        wait(0.05);
+        wait 0.05;
         if (isdefined(entity)) {
             entity namespace_6a90a894::function_5da90c65();
         }
@@ -548,7 +548,7 @@ function private function_7f7ff86b(enemy) {
 // Size: 0x54
 function private razstartmelee(entity) {
     if (isdefined(entity.var_4fcd0611) && entity.var_4fcd0611) {
-        wait(1.1);
+        wait 1.1;
         function_9235fe6a(entity, 1);
     }
 }
@@ -576,7 +576,7 @@ function private razfinishgroundtorpedo(entity) {
 // Size: 0x164
 function private function_abc3e24(entity) {
     if (!isdefined(entity.enemy) && !(isdefined(entity.var_f4caf688) && entity.var_f4caf688)) {
-        println("actor");
+        println("<dev string:xcb>");
         return;
     }
     if (isdefined(entity.var_f4caf688) && entity.var_f4caf688) {
@@ -635,7 +635,7 @@ function private function_c5d7b1cd(var_7a82f1ae, var_b6ad162c) {
             var_169825b6 function_2e413eea(var_7a82f1ae);
             var_169825b6.var_dc16db5e += 1;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -652,7 +652,7 @@ function private function_b077c8b0(var_7a82f1ae, var_b6ad162c) {
         if (distancesquared(var_169825b6.origin, var_3756d92d) <= 4096) {
             var_169825b6 thread function_c8b09d11(0);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -780,7 +780,7 @@ function private function_329d0429(target) {
             a_zombies = getaiarchetypearray("zombie");
             var_abbab1d4 = array::filter(a_zombies, 0, &function_ecaf6b12, self, predicted_pos);
         } else {
-            wait(0.2);
+            wait 0.2;
             continue;
         }
         if (var_abbab1d4.size > 0) {
@@ -818,7 +818,7 @@ function private function_329d0429(target) {
                 zombie.getup_direction = "getup_belly";
             }
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 
@@ -852,7 +852,7 @@ function private function_c8b09d11(delay) {
     var_169825b6 = self;
     var_5429c84c = self.var_5429c84c;
     if (delay > 0) {
-        wait(delay);
+        wait delay;
     }
     if (isdefined(self)) {
         self function_a3101466();
@@ -862,7 +862,7 @@ function private function_c8b09d11(delay) {
         radiusdamage(explosion_point + (0, 0, 18), -128, 100, 50, self.var_5429c84c, "MOD_UNKNOWN", w_weapon);
         function_3412c871(explosion_point + (0, 0, 18));
         self clientfield::set("raz_torpedo_play_fx_on_self", 0);
-        wait(0.05);
+        wait 0.05;
         if (isdefined(level.var_4c5a7c47) && isdefined(var_5429c84c) && level.var_4c5a7c47) {
             var_5429c84c.var_e56ae26 = gettime();
         }

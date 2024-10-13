@@ -53,7 +53,7 @@ function function_26524bc8(str_objective, var_74cd64bc) {
     }
     namespace_63b4601c::function_4e8207e9("safehouse_explodes");
     function_429957e0();
-    thread namespace_7c587e3e::function_1fc1836b();
+    thread cp_mi_sing_vengeance_sound::function_1fc1836b();
     spawner::add_spawn_function_group("sniper", "script_noteworthy", &function_422af9d);
     function_bb642ec0(str_objective, var_74cd64bc);
 }
@@ -182,7 +182,7 @@ function function_29dad6e8(str_objective, var_74cd64bc) {
     if (isdefined(level.stealth)) {
         level stealth::stop();
     }
-    thread namespace_7c587e3e::function_1fc1836b();
+    thread cp_mi_sing_vengeance_sound::function_1fc1836b();
     spawner::add_spawn_function_group("sniper", "script_noteworthy", &function_422af9d);
     function_bb642ec0(str_objective, var_74cd64bc);
 }
@@ -208,7 +208,7 @@ function function_bb642ec0(str_objective, var_74cd64bc) {
     level thread function_7d2a7231();
     level thread function_fb60b7ca();
     level thread namespace_9fd035::function_b83aa9c5();
-    wait(3);
+    wait 3;
     level objectives::breadcrumb("find_kayne_breadcrumb");
     trigger::wait_till("obj_safehouse_int", "targetname");
     if (str_objective == "safehouse_explodes") {
@@ -274,7 +274,7 @@ function function_be8594ba() {
 // Checksum 0x7877f49a, Offset: 0x1ef8
 // Size: 0x118
 function function_2196c10e(scriptbundle, var_2d7613bb, trigger, delay, var_199e0d00) {
-    assert(isdefined(scriptbundle), "cin_ven_11_safehouse_3rd_sh020");
+    assert(isdefined(scriptbundle), "<dev string:x28>");
     if (isdefined(var_2d7613bb)) {
         var_5b01a37b = struct::get(var_2d7613bb, "targetname");
     }
@@ -282,7 +282,7 @@ function function_2196c10e(scriptbundle, var_2d7613bb, trigger, delay, var_199e0
         trigger::wait_till(trigger);
     }
     if (isdefined(delay)) {
-        wait(delay);
+        wait delay;
     }
     if (isdefined(var_5b01a37b)) {
         var_5b01a37b scene::play(scriptbundle);
@@ -312,7 +312,7 @@ function function_15d46e2e() {
     level waittill(#"hash_22368350");
     var_f0488808 delete();
     exploder::exploder("sh_lobby_case_glass");
-    wait(0.1);
+    wait 0.1;
     physicsexplosioncylinder(var_8f75db49.origin, 48, 40, 3);
 }
 
@@ -339,26 +339,26 @@ function function_422af9d() {
 // Checksum 0x4bf060ef, Offset: 0x2180
 // Size: 0x1bc
 function function_c50ccfbd() {
-    wait(1);
+    wait 1;
     level thread function_2d58165a();
-    wait(3);
+    wait 3;
     level thread function_d39f39b7();
     trigger::wait_till("shake_stairwell", "targetname");
-    thread namespace_7c587e3e::function_c4ece2ab();
+    thread cp_mi_sing_vengeance_sound::function_c4ece2ab();
     level util::clientnotify("start_debris_fall");
     level notify(#"hash_9bd485a5");
     level thread function_2d58165a();
-    wait(1.5);
+    wait 1.5;
     var_136e3a27 = getentarray("sh_stairs_glass_remove", "targetname");
     array::delete_all(var_136e3a27);
     var_f9fdee53 = struct::get("sh_stairwell_glass_damage", "targetname");
     glassradiusdamage(var_f9fdee53.origin, -128, -56, -81);
-    wait(1.5);
+    wait 1.5;
     level thread function_d39f39b7();
     trigger::wait_till("shake_ready_room", "targetname");
     level notify(#"hash_9bd485a5");
     level thread function_2d58165a();
-    wait(3);
+    wait 3;
     level thread function_d39f39b7();
 }
 
@@ -369,11 +369,11 @@ function function_c50ccfbd() {
 function function_d39f39b7() {
     level endon(#"hash_9bd485a5");
     while (true) {
-        wait(randomintrange(15, 25));
+        wait randomintrange(15, 25);
         var_ab2048f4 = randomfloatrange(2, 3);
         var_68397497 = randomfloatrange(2.5, 4);
         foreach (e_player in level.activeplayers) {
-            thread namespace_7c587e3e::function_a34878f1(e_player);
+            thread cp_mi_sing_vengeance_sound::function_a34878f1(e_player);
             screenshake(e_player.origin, var_ab2048f4, var_ab2048f4 / 3, var_ab2048f4 / 3, var_68397497, 0, -1, 100, 7, 1, 1, 1, e_player);
             e_player playrumbleonentity("cp_vengeance_rumble_sh_ran_shake");
         }
@@ -388,7 +388,7 @@ function function_2d58165a() {
     var_ab2048f4 = randomfloatrange(4, 5);
     var_68397497 = 4.5;
     foreach (e_player in level.activeplayers) {
-        thread namespace_7c587e3e::function_a34878f1(e_player);
+        thread cp_mi_sing_vengeance_sound::function_a34878f1(e_player);
         screenshake(e_player.origin, var_ab2048f4, var_ab2048f4 / 3, var_ab2048f4 / 3, var_68397497, 0, -1, 100, 8, 2, 2, 1, e_player);
         e_player playrumbleonentity("cp_vengeance_rumble_sh_big_shake");
     }
@@ -412,14 +412,14 @@ function function_7d2a7231() {
 // Size: 0x11c
 function function_f3b31be1(trigger, var_946cffe7, var_39c72159, exploder, struct, var_d5e92f6a) {
     trigger::wait_till(trigger, "targetname");
-    wait(randomfloatrange(var_946cffe7, var_39c72159));
+    wait randomfloatrange(var_946cffe7, var_39c72159);
     exploder::exploder(exploder);
     if (isdefined(var_d5e92f6a)) {
         level util::clientnotify(var_d5e92f6a);
     }
     if (isdefined(struct)) {
         s_struct = struct::get(struct, "targetname");
-        thread namespace_7c587e3e::function_f3b31be1(s_struct.origin);
+        thread cp_mi_sing_vengeance_sound::function_f3b31be1(s_struct.origin);
         glassradiusdamage(s_struct.origin, 96, -106, 125);
     }
 }
@@ -433,7 +433,7 @@ function function_fb60b7ca(var_74cd64bc) {
         trigger::wait_till("spawn_panic_room");
     }
     level.var_3d556bcd = spawner::simple_spawn_single("rachel", &function_87298438);
-    wait(1);
+    wait 1;
     var_35a1e4f8 = struct::get("tag_align_panic_room", "targetname");
     var_35a1e4f8 thread scene::init("cin_ven_08_80_enter_panicroom_1st");
     var_35a1e4f8 thread scene::init("cin_ven_12_01_1st_kane_rescue");
@@ -457,7 +457,7 @@ function function_6d9a830c(str_objective, var_74cd64bc) {
         load::function_a2995f22();
         trigger::use("shake_ready_room");
     }
-    thread namespace_7c587e3e::function_1a02fe3();
+    thread cp_mi_sing_vengeance_sound::function_1a02fe3();
     function_d128fa92(str_objective);
 }
 
@@ -588,7 +588,7 @@ function function_87298438() {
     e_trigger = getent("obj_panic", "targetname");
     e_trigger triggerenable(0);
     if (!level flag::get("starting_igc_12")) {
-        wait(2.5);
+        wait 2.5;
     }
     var_35a1e4f8 = struct::get("tag_align_panic_room", "targetname");
     var_35a1e4f8 thread scene::stop("cin_ven_08_80_enter_panicroom_1st");

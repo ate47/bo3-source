@@ -250,7 +250,7 @@ function getparamvalueforplayer(playername, paramname) {
     if (isdefined(game["gameRep"]["players"][playername][paramname])) {
         return game["gameRep"]["players"][playername][paramname];
     }
-    assertmsg("scorePerMin" + paramname + "scorePerMin");
+    assertmsg("<dev string:x28>" + paramname + "<dev string:x3b>");
 }
 
 // Namespace gamerep
@@ -302,7 +302,7 @@ function getgamerepparamlimit(paramname) {
     if (isdefined(game["gameRep"]["gameLimit"]["default"][paramname])) {
         return game["gameRep"]["gameLimit"]["default"][paramname];
     }
-    assertmsg("scorePerMin" + paramname + "scorePerMin");
+    assertmsg("<dev string:x51>" + paramname + "<dev string:x6f>");
 }
 
 // Namespace gamerep

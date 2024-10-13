@@ -72,7 +72,7 @@ function doublexp_timer() {
     if (!level.onlinegame) {
         return;
     }
-    wait(60);
+    wait 60;
     if (level.onlinegame) {
         if (!isdefined(self)) {
             return;
@@ -142,17 +142,17 @@ function player_add_points(event, mod, hit_location, var_ebd2ffea, zombie_team, 
         player_points = [[ level.a_func_score_events[event] ]](event, mod, hit_location, zombie_team, damage_weapon);
     } else {
         switch (event) {
-        case 38:
-        case 41:
+        case "death_raps":
+        case "death_wasp":
             player_points = mod;
             scoreevents::processscoreevent("kill", self, undefined, damage_weapon);
             break;
-        case 39:
+        case "death_spider":
             player_points = function_b2baf1b5();
             team_points = function_2400b2c5();
             scoreevents::processscoreevent("kill_spider", self, undefined, damage_weapon);
             break;
-        case 40:
+        case "death_thrasher":
             player_points = function_b2baf1b5();
             team_points = function_2400b2c5();
             points = self player_add_points_kill_bonus(mod, hit_location, damage_weapon);
@@ -170,7 +170,7 @@ function player_add_points(event, mod, hit_location, var_ebd2ffea, zombie_team, 
             }
             scoreevents::processscoreevent("kill_thrasher", self, undefined, damage_weapon);
             break;
-        case 36:
+        case "death":
             player_points = function_b2baf1b5();
             team_points = function_2400b2c5();
             points = self player_add_points_kill_bonus(mod, hit_location, damage_weapon, player_points);
@@ -186,60 +186,60 @@ function player_add_points(event, mod, hit_location, var_ebd2ffea, zombie_team, 
                 self zm_stats::increment_player_stat("grenade_kills");
             }
             break;
-        case 37:
+        case "death_mechz":
             player_points = mod;
             scoreevents::processscoreevent("kill_mechz", self, undefined, damage_weapon);
             break;
-        case 30:
+        case "ballistic_knife_death":
             player_points = function_b2baf1b5() + level.zombie_vars["zombie_score_bonus_melee"];
             self score_cf_increment_info("death_melee");
             break;
-        case 35:
+        case "damage_light":
             player_points = level.zombie_vars["zombie_score_damage_light"];
             self score_cf_increment_info("damage");
             break;
-        case 1:
+        case "damage":
             player_points = level.zombie_vars["zombie_score_damage_normal"];
             self score_cf_increment_info("damage");
             break;
-        case 34:
+        case "damage_ads":
             player_points = int(level.zombie_vars["zombie_score_damage_normal"] * 1.25);
             self score_cf_increment_info("damage");
             break;
-        case 33:
-        case 45:
+        case "carpenter_powerup":
+        case "rebuild_board":
             player_points = mod;
             break;
-        case 31:
+        case "bonus_points_powerup":
             player_points = mod;
             break;
-        case 44:
+        case "nuke_powerup":
             player_points = mod;
             team_points = mod;
             break;
-        case 43:
-        case 47:
-        case 48:
+        case "jetgun_fling":
+        case "riotshield_fling":
+        case "thundergun_fling":
             player_points = mod;
             scoreevents::processscoreevent("kill", self, undefined, damage_weapon);
             break;
-        case 42:
+        case "hacker_transfer":
             player_points = mod;
             break;
-        case 46:
+        case "reviver":
             player_points = mod;
             break;
-        case 49:
+        case "vulture":
             player_points = mod;
             break;
-        case 32:
+        case "build_wallbuy":
             player_points = mod;
             break;
-        case 50:
+        case "ww_webbed":
             player_points = mod;
             break;
         default:
-            assert(0, "hudItems.doublePointsActive");
+            assert(0, "<dev string:x28>");
             break;
         }
     }
@@ -341,17 +341,17 @@ function player_add_points_kill_bonus(mod, hit_location, weapon, player_points) 
     score = 0;
     if (isdefined(hit_location)) {
         switch (hit_location) {
-        case 58:
-        case 59:
+        case "head":
+        case "helmet":
             self score_cf_increment_info("death_head");
             score = level.zombie_vars["zombie_score_bonus_head"];
             break;
-        case 67:
+        case "neck":
             self score_cf_increment_info("death_neck");
             score = level.zombie_vars["zombie_score_bonus_neck"];
             break;
-        case 68:
-        case 69:
+        case "torso_lower":
+        case "torso_upper":
             self score_cf_increment_info("death_torso");
             score = level.zombie_vars["zombie_score_bonus_torso"];
             break;
@@ -373,31 +373,31 @@ function player_reduce_points(event, n_amount) {
     }
     points = 0;
     switch (event) {
-    case 76:
+    case "take_all":
         points = self.score;
         break;
-    case 77:
+    case "take_half":
         points = int(self.score / 2);
         break;
-    case 78:
+    case "take_specified":
         points = n_amount;
         break;
-    case 75:
+    case "no_revive_penalty":
         percent = level.zombie_vars["penalty_no_revive"];
         points = self.score * percent;
         break;
-    case 73:
+    case "died":
         percent = level.zombie_vars["penalty_died"];
         points = self.score * percent;
         break;
-    case 74:
+    case "downed":
         percent = level.zombie_vars["penalty_downed"];
         self notify(#"i_am_down");
         points = self.score * percent;
         self.score_lost_when_downed = zm_utility::round_up_to_ten(int(points));
         break;
     default:
-        assert(0, "hudItems.doublePointsActive");
+        assert(0, "<dev string:x28>");
         break;
     }
     points = self.score - zm_utility::round_up_to_ten(int(points));
@@ -451,7 +451,7 @@ function minus_to_player_score(points) {
     self incrementplayerstat("scoreSpent", points);
     level notify(#"spent_points", self, points);
     if (isdefined(level.bgb_in_use) && level.bgb_in_use && level.onlinegame) {
-        self namespace_ade8e118::function_51cf4361(points);
+        self bgb_token::function_51cf4361(points);
     }
 }
 
@@ -489,7 +489,7 @@ function player_died_penalty() {
 // Checksum 0x2586a463, Offset: 0x1e90
 // Size: 0x44
 function player_downed_penalty() {
-    println("hudItems.doublePointsActive");
+    println("<dev string:x3c>");
     self player_reduce_points("downed");
 }
 

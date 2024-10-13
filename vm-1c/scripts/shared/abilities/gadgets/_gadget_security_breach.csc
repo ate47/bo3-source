@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_5846e657;
+#namespace _gadget_security_breach;
 
-// Namespace namespace_5846e657
+// Namespace _gadget_security_breach
 // Params 0, eflags: 0x2
 // Checksum 0xfb747c75, Offset: 0x1f8
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_security_breach", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_5846e657
+// Namespace _gadget_security_breach
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x238
 // Size: 0x4

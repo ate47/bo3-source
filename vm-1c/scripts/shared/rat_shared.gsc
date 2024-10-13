@@ -15,10 +15,10 @@
             level.rat = spawnstruct();
             level.rat.common = spawnstruct();
             level.rat.script_command_list = [];
-            addratscriptcmd("<unknown string>", &rscteleport);
-            addratscriptcmd("<unknown string>", &function_edac6d3e);
-            addratscriptcmd("<unknown string>", &rscsimulatescripterror);
-            addratscriptcmd("<unknown string>", &rscrecteleport);
+            addratscriptcmd("<dev string:x28>", &rscteleport);
+            addratscriptcmd("<dev string:x31>", &function_edac6d3e);
+            addratscriptcmd("<dev string:x41>", &rscsimulatescripterror);
+            addratscriptcmd("<dev string:x55>", &rscrecteleport);
         }
     }
 
@@ -39,7 +39,7 @@
         init();
         assert(isdefined(params._cmd));
         assert(isdefined(params._id));
-        assert(isdefined(level.rat.script_command_list[params._cmd]), "<unknown string>" + params._cmd);
+        assert(isdefined(level.rat.script_command_list[params._cmd]), "<dev string:x62>" + params._cmd);
         callback = level.rat.script_command_list[params._cmd];
         level thread [[ callback ]](params);
     }
@@ -86,8 +86,8 @@
     // Checksum 0x1c804330, Offset: 0x6c0
     // Size: 0x8c
     function rscsimulatescripterror(params) {
-        if (params.errorlevel == "<unknown string>") {
-            assertmsg("<unknown string>");
+        if (params.errorlevel == "<dev string:x7e>") {
+            assertmsg("<dev string:x84>");
         } else {
             thisdoesntexist.orthis = 0;
         }
@@ -99,13 +99,13 @@
     // Checksum 0x8012e80, Offset: 0x758
     // Size: 0x15c
     function rscrecteleport(params) {
-        println("<unknown string>");
+        println("<dev string:x9d>");
         player = [[ level.rat.common.gethostplayer ]]();
         pos = player getorigin();
         angles = player getplayerangles();
-        cmd = "<unknown string>" + pos[0] + "<unknown string>" + pos[1] + "<unknown string>" + pos[2] + "<unknown string>" + angles[0] + "<unknown string>" + angles[1] + "<unknown string>" + angles[2];
-        ratrecordmessage(0, "<unknown string>", cmd);
-        setdvar("<unknown string>", "<unknown string>");
+        cmd = "<dev string:xbf>" + pos[0] + "<dev string:xd0>" + pos[1] + "<dev string:xd4>" + pos[2] + "<dev string:xd8>" + angles[0] + "<dev string:xdd>" + angles[1] + "<dev string:xe2>" + angles[2];
+        ratrecordmessage(0, "<dev string:xe7>", cmd);
+        setdvar("<dev string:xf4>", "<dev string:x110>");
     }
 
 #/

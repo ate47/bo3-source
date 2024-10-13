@@ -566,22 +566,22 @@ function gadget_checkheroabilitykill(attacker) {
     heroabilitystat = 0;
     if (isdefined(attacker.heroability)) {
         switch (attacker.heroability.name) {
-        case 8:
-        case 10:
-        case 13:
-        case 15:
+        case "gadget_armor":
+        case "gadget_clone":
+        case "gadget_heat_wave":
+        case "gadget_speed_burst":
             if (isdefined(attacker.heroabilitydectivatetime) && (isdefined(attacker.heroabilityactive) || attacker.heroabilitydectivatetime > gettime() - 100)) {
                 heroabilitystat = 1;
             }
             break;
-        case 9:
-        case 12:
-        case 14:
+        case "gadget_camo":
+        case "gadget_flashback":
+        case "gadget_resurrect":
             if (isdefined(attacker.heroabilitydectivatetime) && (isdefined(attacker.heroabilityactive) || attacker.heroabilitydectivatetime > gettime() - 6000)) {
                 heroabilitystat = 1;
             }
             break;
-        case 16:
+        case "gadget_vision_pulse":
             if (isdefined(attacker.visionpulsespottedenemytime)) {
                 timecutoff = gettime();
                 if (attacker.visionpulsespottedenemytime + 10000 > timecutoff) {
@@ -596,7 +596,7 @@ function gadget_checkheroabilitykill(attacker) {
                     }
                 }
             }
-        case 11:
+        case "gadget_combat_efficiency":
             if (isdefined(attacker._gadget_combat_efficiency) && attacker._gadget_combat_efficiency == 1) {
                 heroabilitystat = 1;
                 break;
@@ -694,7 +694,7 @@ function gadget_primed(slot, weapon) {
     // Checksum 0x99daabcb, Offset: 0x30d8
     // Size: 0x44
     function abilities_print(str) {
-        toprint = "gadget_armor" + str;
+        toprint = "<dev string:x28>" + str;
         println(toprint);
     }
 
@@ -703,13 +703,13 @@ function gadget_primed(slot, weapon) {
     // Checksum 0x2504e69e, Offset: 0x3128
     // Size: 0x9c
     function abilities_devgui_init() {
-        setdvar("gadget_armor", "gadget_armor");
-        setdvar("gadget_armor", "gadget_armor");
-        setdvar("gadget_armor", 0);
+        setdvar("<dev string:x3b>", "<dev string:x54>");
+        setdvar("<dev string:x55>", "<dev string:x54>");
+        setdvar("<dev string:x6e>", 0);
         if (isdedicated()) {
             return;
         }
-        level.abilities_devgui_base = "gadget_armor";
+        level.abilities_devgui_base = "<dev string:x8a>";
         level thread abilities_devgui_think();
     }
 
@@ -736,8 +736,8 @@ function gadget_primed(slot, weapon) {
     // Checksum 0x8af9fb44, Offset: 0x3288
     // Size: 0xb8
     function abilities_devgui_add_player_commands(root, pname, index) {
-        add_cmd_with_root = "gadget_armor" + root + pname + "gadget_armor";
-        pid = "gadget_armor" + index;
+        add_cmd_with_root = "<dev string:x9b>" + root + pname + "<dev string:xa7>";
+        pid = "<dev string:x54>" + index;
         menu_index = 1;
         menu_index = abilities_devgui_add_gadgets(add_cmd_with_root, pid, menu_index);
         menu_index = abilities_devgui_add_power(add_cmd_with_root, pid, menu_index);
@@ -749,9 +749,9 @@ function gadget_primed(slot, weapon) {
     // Size: 0xd4
     function abilities_devgui_add_player_command(root, pid, cmdname, menu_index, cmddvar, argdvar) {
         if (!isdefined(argdvar)) {
-            argdvar = "gadget_armor";
+            argdvar = "<dev string:xa9>";
         }
-        adddebugcommand(root + cmdname + "gadget_armor" + "gadget_armor" + "gadget_armor" + pid + "gadget_armor" + "gadget_armor" + "gadget_armor" + cmddvar + "gadget_armor" + "gadget_armor" + "gadget_armor" + argdvar + "gadget_armor");
+        adddebugcommand(root + cmdname + "<dev string:xb1>" + "<dev string:x6e>" + "<dev string:xb9>" + pid + "<dev string:xbb>" + "<dev string:x3b>" + "<dev string:xb9>" + cmddvar + "<dev string:xbb>" + "<dev string:x55>" + "<dev string:xb9>" + argdvar + "<dev string:xc1>");
     }
 
     // Namespace ability_player
@@ -759,9 +759,9 @@ function gadget_primed(slot, weapon) {
     // Checksum 0xb088df98, Offset: 0x3428
     // Size: 0xc0
     function abilities_devgui_add_power(add_cmd_with_root, pid, menu_index) {
-        root = add_cmd_with_root + "gadget_armor" + menu_index + "gadget_armor";
-        abilities_devgui_add_player_command(root, pid, "gadget_armor", 1, "gadget_armor", "gadget_armor");
-        abilities_devgui_add_player_command(root, pid, "gadget_armor", 2, "gadget_armor", "gadget_armor");
+        root = add_cmd_with_root + "<dev string:xc5>" + menu_index + "<dev string:xa7>";
+        abilities_devgui_add_player_command(root, pid, "<dev string:xcc>", 1, "<dev string:xd7>", "<dev string:x54>");
+        abilities_devgui_add_player_command(root, pid, "<dev string:xdf>", 2, "<dev string:xf0>", "<dev string:x54>");
         menu_index++;
         return menu_index;
     }
@@ -771,21 +771,21 @@ function gadget_primed(slot, weapon) {
     // Checksum 0x4550d7dc, Offset: 0x34f0
     // Size: 0x178
     function abilities_devgui_add_gadgets(add_cmd_with_root, pid, menu_index) {
-        a_weapons = enumerateweapons("gadget_armor");
+        a_weapons = enumerateweapons("<dev string:xfb>");
         var_5cea3801 = [];
         a_abilities = [];
         for (i = 0; i < a_weapons.size; i++) {
             if (a_weapons[i].isgadget) {
-                if (a_weapons[i].inventorytype == "gadget_armor") {
+                if (a_weapons[i].inventorytype == "<dev string:x102>") {
                     arrayinsert(var_5cea3801, a_weapons[i], 0);
                     continue;
                 }
                 arrayinsert(a_abilities, a_weapons[i], 0);
             }
         }
-        function_876574ac(add_cmd_with_root, pid, a_abilities, "gadget_armor", menu_index);
+        function_876574ac(add_cmd_with_root, pid, a_abilities, "<dev string:x107>", menu_index);
         menu_index++;
-        function_876574ac(add_cmd_with_root, pid, var_5cea3801, "gadget_armor", menu_index);
+        function_876574ac(add_cmd_with_root, pid, var_5cea3801, "<dev string:x116>", menu_index);
         menu_index++;
         return menu_index;
     }
@@ -796,10 +796,10 @@ function gadget_primed(slot, weapon) {
     // Size: 0xc6
     function function_876574ac(root, pid, a_weapons, weapon_type, menu_index) {
         if (isdefined(a_weapons)) {
-            player_devgui_root = root + weapon_type + "gadget_armor";
+            player_devgui_root = root + weapon_type + "<dev string:xa7>";
             for (i = 0; i < a_weapons.size; i++) {
                 function_79aa7c68(player_devgui_root, pid, a_weapons[i].name, i + 1);
-                wait(0.05);
+                wait 0.05;
             }
         }
     }
@@ -809,7 +809,7 @@ function gadget_primed(slot, weapon) {
     // Checksum 0xe2dae482, Offset: 0x3740
     // Size: 0xac
     function function_79aa7c68(root, pid, weap_name, cmdindex) {
-        adddebugcommand(root + weap_name + "gadget_armor" + "gadget_armor" + "gadget_armor" + pid + "gadget_armor" + "gadget_armor" + "gadget_armor" + "gadget_armor" + "gadget_armor" + "gadget_armor" + "gadget_armor" + weap_name + "gadget_armor");
+        adddebugcommand(root + weap_name + "<dev string:xb1>" + "<dev string:x6e>" + "<dev string:xb9>" + pid + "<dev string:xbb>" + "<dev string:x3b>" + "<dev string:xb9>" + "<dev string:x123>" + "<dev string:xbb>" + "<dev string:x55>" + "<dev string:xb9>" + weap_name + "<dev string:xc1>");
     }
 
     // Namespace ability_player
@@ -820,7 +820,7 @@ function gadget_primed(slot, weapon) {
         if (!isdefined(level.abilities_devgui_base)) {
             return;
         }
-        remove_cmd_with_root = "gadget_armor" + level.abilities_devgui_base + self.playername + "gadget_armor";
+        remove_cmd_with_root = "<dev string:x130>" + level.abilities_devgui_base + self.playername + "<dev string:xc1>";
         util::add_queued_debug_command(remove_cmd_with_root);
     }
 
@@ -830,28 +830,28 @@ function gadget_primed(slot, weapon) {
     // Size: 0x150
     function abilities_devgui_think() {
         for (;;) {
-            cmd = getdvarstring("gadget_armor");
-            if (cmd == "gadget_armor") {
-                wait(0.05);
+            cmd = getdvarstring("<dev string:x3b>");
+            if (cmd == "<dev string:x54>") {
+                wait 0.05;
                 continue;
             }
-            arg = getdvarstring("gadget_armor");
+            arg = getdvarstring("<dev string:x55>");
             switch (cmd) {
-            case 8:
+            case "<dev string:xd7>":
                 abilities_devgui_handle_player_command(cmd, &abilities_devgui_power_fill);
                 break;
-            case 8:
+            case "<dev string:xf0>":
                 abilities_devgui_handle_player_command(cmd, &abilities_devgui_power_toggle_auto_fill);
                 break;
-            case 8:
+            case "<dev string:x123>":
                 abilities_devgui_handle_player_command(cmd, &abilities_devgui_give, arg);
-            case 8:
+            case "<dev string:x54>":
                 break;
             default:
                 break;
             }
-            setdvar("gadget_armor", "gadget_armor");
-            wait(0.5);
+            setdvar("<dev string:x3b>", "<dev string:x54>");
+            wait 0.5;
         }
     }
 
@@ -882,7 +882,7 @@ function gadget_primed(slot, weapon) {
     // Checksum 0xac66a026, Offset: 0x3b08
     // Size: 0x10c
     function abilities_devgui_handle_player_command(cmd, playercallback, pcb_param) {
-        pid = getdvarint("gadget_armor");
+        pid = getdvarint("<dev string:x6e>");
         if (pid > 0) {
             player = getplayers()[pid - 1];
             if (isdefined(player)) {
@@ -895,7 +895,7 @@ function gadget_primed(slot, weapon) {
         } else {
             array::thread_all(getplayers(), playercallback, pcb_param);
         }
-        setdvar("gadget_armor", "gadget_armor");
+        setdvar("<dev string:x6e>", "<dev string:x13f>");
     }
 
     // Namespace ability_player
@@ -947,7 +947,7 @@ function gadget_primed(slot, weapon) {
                     }
                 }
             }
-            wait(1);
+            wait 1;
         }
     }
 

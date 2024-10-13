@@ -7,9 +7,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_c63a0940;
+#namespace zm_island_side_ee_spore_hallucinations;
 
-// Namespace namespace_c63a0940
+// Namespace zm_island_side_ee_spore_hallucinations
 // Params 0, eflags: 0x2
 // Checksum 0xec95ed3f, Offset: 0x300
 // Size: 0x34
@@ -17,13 +17,13 @@ function autoexec function_2dc19561() {
     system::register("zm_island_side_ee_spore_hallucinations", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_c63a0940
+// Namespace zm_island_side_ee_spore_hallucinations
 // Params 0, eflags: 0x1 linked
 // Checksum 0x33f5b985, Offset: 0x340
 // Size: 0x1da
 function __init__() {
-    clientfield::register("toplayer", "hallucinate_bloody_walls", 9000, 1, "int", &function_38943e4d, 0, 0);
-    clientfield::register("toplayer", "hallucinate_spooky_sounds", 9000, 1, "int", &function_f0aa6b80, 0, 0);
+    clientfield::register("toplayer", "hallucinate_bloody_walls", 9000, 1, "int", &hallucinate_bloody_walls, 0, 0);
+    clientfield::register("toplayer", "hallucinate_spooky_sounds", 9000, 1, "int", &hallucinate_spooky_sounds, 0, 0);
     var_68003f28 = findvolumedecalindexarray("side_ee_horror_room_lab_a");
     var_da07ae63 = findvolumedecalindexarray("side_ee_horror_room_lab_b");
     var_b40533fa = findvolumedecalindexarray("side_ee_horror_room_operation");
@@ -34,11 +34,11 @@ function __init__() {
     }
 }
 
-// Namespace namespace_c63a0940
+// Namespace zm_island_side_ee_spore_hallucinations
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb8e48930, Offset: 0x528
 // Size: 0x1ea
-function function_38943e4d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function hallucinate_bloody_walls(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self thread lui::screen_fade_in(1, "white");
     if (isdefined(newval) && newval) {
         foreach (var_78960d69 in level.var_d76c60c4) {
@@ -55,11 +55,11 @@ function function_38943e4d(localclientnum, oldval, newval, bnewent, binitialsnap
     level notify(#"hash_dad9c949");
 }
 
-// Namespace namespace_c63a0940
+// Namespace zm_island_side_ee_spore_hallucinations
 // Params 7, eflags: 0x1 linked
 // Checksum 0x133b1b78, Offset: 0x720
 // Size: 0x12a
-function function_f0aa6b80(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function hallucinate_spooky_sounds(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(newval) && newval) {
         playsound(0, "zmb_spore_hallucinate_start", (0, 0, 0));
         if (!isdefined(self.var_dafc6232)) {
@@ -76,7 +76,7 @@ function function_f0aa6b80(localclientnum, oldval, newval, bnewent, binitialsnap
     level notify(#"hash_dad9c949");
 }
 
-// Namespace namespace_c63a0940
+// Namespace zm_island_side_ee_spore_hallucinations
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5965ccaf, Offset: 0x858
 // Size: 0x80
@@ -86,7 +86,7 @@ function function_13d64112() {
     level endon(#"hash_dad9c949");
     self endon(#"disconnect");
     while (isdefined(self)) {
-        wait(randomintrange(1, 8));
+        wait randomintrange(1, 8);
         self playsound(0, "zmb_spore_hallucinate_whisper");
     }
 }

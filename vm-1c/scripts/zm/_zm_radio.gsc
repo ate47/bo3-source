@@ -3,9 +3,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/array_shared;
 
-#namespace namespace_5c41055a;
+#namespace zm_radio;
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 0, eflags: 0x2
 // Checksum 0x390225a4, Offset: 0x3b8
 // Size: 0x3c
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
     system::register("zm_radio", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x400
 // Size: 0x4
@@ -21,7 +21,7 @@ function __init__() {
     
 }
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf6577b17, Offset: 0x410
 // Size: 0x114
@@ -37,14 +37,14 @@ function __main__() {
     }
     var_903fae71 = getentarray(str_name, str_key);
     if (!isdefined(var_903fae71) || !var_903fae71.size) {
-        println("songdone");
+        println("<dev string:x28>");
         return;
     }
-    println("songdone" + var_903fae71.size);
+    println("<dev string:x32>" + var_903fae71.size);
     array::thread_all(var_903fae71, &function_8554d5da);
 }
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2ac82485, Offset: 0x530
 // Size: 0x172
@@ -69,7 +69,7 @@ function function_8554d5da() {
     }
 }
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf8d81c5a, Offset: 0x6b0
 // Size: 0xa8
@@ -80,7 +80,7 @@ function function_2d4f4459() {
         self waittill(#"hash_34d24635");
         if (isdefined(self.var_175c09e5)) {
             self stopsound(self.var_175c09e5);
-            wait(0.05);
+            wait 0.05;
         }
         self playsoundwithnotify("zmb_musicradio_switch", "sounddone");
         self waittill(#"sounddone");
@@ -88,7 +88,7 @@ function function_2d4f4459() {
     }
 }
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa8f28571, Offset: 0x760
 // Size: 0x9e
@@ -101,11 +101,11 @@ function function_c62f1c37() {
     if (self.tracknum >= level.var_2ec01df2.size) {
         self.tracknum = 0;
     }
-    self waittill(#"hash_2e6aeba2");
+    self waittill(#"songdone");
     self notify(#"hash_34d24635");
 }
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc920ea6b, Offset: 0x808
 // Size: 0x68
@@ -119,7 +119,7 @@ function function_f184004e() {
     }
 }
 
-// Namespace namespace_5c41055a
+// Namespace zm_radio
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6663012f, Offset: 0x878
 // Size: 0x114

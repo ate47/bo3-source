@@ -7,9 +7,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/ai_shared;
 
-#namespace namespace_df1a4a92;
+#namespace zm_shadow_zombie;
 
-// Namespace namespace_df1a4a92
+// Namespace zm_shadow_zombie
 // Params 0, eflags: 0x2
 // Checksum 0xe4d80363, Offset: 0x3c8
 // Size: 0x34
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
     system::register("zm_shadow_zombie", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_df1a4a92
+// Namespace zm_shadow_zombie
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfc736e13, Offset: 0x408
 // Size: 0x24
@@ -26,7 +26,7 @@ function __init__() {
     register_clientfields();
 }
 
-// Namespace namespace_df1a4a92
+// Namespace zm_shadow_zombie
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe77bbfa5, Offset: 0x438
 // Size: 0x8a
@@ -39,7 +39,7 @@ function init_fx() {
     }
 }
 
-// Namespace namespace_df1a4a92
+// Namespace zm_shadow_zombie
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf52ffac4, Offset: 0x4d0
 // Size: 0x124
@@ -47,10 +47,10 @@ function register_clientfields() {
     clientfield::register("actor", "shadow_zombie_clientfield_aura_fx", 15000, 1, "int", &function_384150e9, 0, 0);
     clientfield::register("actor", "shadow_zombie_clientfield_death_fx", 15000, 1, "int", &function_ac1abcb6, 0, 0);
     clientfield::register("actor", "shadow_zombie_clientfield_damaged_fx", 15000, 1, "counter", &function_b3071651, 0, 0);
-    clientfield::register("scriptmover", "shadow_zombie_cursetrap_fx", 15000, 1, "int", &function_d3580cb9, 0, 0);
+    clientfield::register("scriptmover", "shadow_zombie_cursetrap_fx", 15000, 1, "int", &shadow_zombie_cursetrap_fx, 0, 0);
 }
 
-// Namespace namespace_df1a4a92
+// Namespace zm_shadow_zombie
 // Params 7, eflags: 0x1 linked
 // Checksum 0x18e8e2ef, Offset: 0x600
 // Size: 0x98
@@ -60,7 +60,7 @@ function function_ac1abcb6(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_df1a4a92
+// Namespace zm_shadow_zombie
 // Params 7, eflags: 0x1 linked
 // Checksum 0x651a5efb, Offset: 0x6a0
 // Size: 0x144
@@ -80,7 +80,7 @@ function function_b3071651(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_df1a4a92
+// Namespace zm_shadow_zombie
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc2ab0e57, Offset: 0x7f0
 // Size: 0xec
@@ -95,11 +95,11 @@ function function_384150e9(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_df1a4a92
+// Namespace zm_shadow_zombie
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf50f6103, Offset: 0x8e8
 // Size: 0x114
-function function_d3580cb9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function shadow_zombie_cursetrap_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(self.sndlooper)) {
         self stoploopsound(self.sndlooper, 0.5);
         self.sndlooper = undefined;
@@ -112,7 +112,7 @@ function function_d3580cb9(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_267f859f(localclientnum, level._effect["mini_curse_circle"], newval, 1);
 }
 
-// Namespace namespace_df1a4a92
+// Namespace zm_shadow_zombie
 // Params 5, eflags: 0x1 linked
 // Checksum 0x98bcbf9a, Offset: 0xa08
 // Size: 0x18e

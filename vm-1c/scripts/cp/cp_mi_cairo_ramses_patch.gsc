@@ -12,9 +12,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e9e39773;
+#namespace cp_mi_cairo_ramses_patch;
 
-// Namespace namespace_e9e39773
+// Namespace cp_mi_cairo_ramses_patch
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x210
 // Size: 0x4

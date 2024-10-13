@@ -56,7 +56,7 @@ function __init__() {
 // Size: 0x18
 function updatedvars() {
     while (true) {
-        wait(1);
+        wait 1;
     }
 }
 
@@ -140,7 +140,7 @@ function function_24bfbfda(slot, weapon) {
     self playrumbleonentity("heat_wave_activate");
     self thread function_84bc744c();
     visionset_mgr::activate("visionset", "heatwave", self, 0.01, 0.1, 1.1);
-    self thread function_cd3aa110(slot, weapon);
+    self thread heat_wave_think(slot, weapon);
 }
 
 // Namespace heat_wave
@@ -277,18 +277,18 @@ function function_ce104e3f(weapon) {
 // Params 2, eflags: 0x1 linked
 // Checksum 0xe63cede6, Offset: 0xfc8
 // Size: 0x106
-function function_cd3aa110(slot, weapon) {
+function heat_wave_think(slot, weapon) {
     self endon(#"disconnect");
-    self notify(#"hash_cd3aa110");
-    self endon(#"hash_cd3aa110");
+    self notify(#"heat_wave_think");
+    self endon(#"heat_wave_think");
     self.heroabilityactive = 1;
     heatwave = function_ce104e3f(weapon);
     glassradiusdamage(heatwave.origin, heatwave.radius, 400, 400, "MOD_BURNED");
     self thread function_d43be497(weapon, heatwave);
     self thread function_73aa2b7a(weapon, heatwave);
-    wait(0.25);
+    wait 0.25;
     self.heroabilityactive = 0;
-    self notify(#"hash_3a204421");
+    self notify(#"heat_wave_think_finished");
 }
 
 // Namespace heat_wave
@@ -297,7 +297,7 @@ function function_cd3aa110(slot, weapon) {
 // Size: 0x258
 function function_d43be497(weapon, heatwave) {
     self endon(#"disconnect");
-    self endon(#"hash_cd3aa110");
+    self endon(#"heat_wave_think");
     starttime = gettime();
     var_39d3934f = 0;
     while (-6 + starttime > gettime()) {
@@ -315,7 +315,7 @@ function function_d43be497(weapon, heatwave) {
                 entity thread function_90c44fbc(heatwave);
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
     if (isdefined(var_39d3934f) && isalive(self) && var_39d3934f && isdefined(level.playgadgetsuccess)) {
         self [[ level.playgadgetsuccess ]](weapon, "heatwaveSuccessDelay");
@@ -364,16 +364,16 @@ function function_fd354153(weapon, entity, heatwave) {
 // Size: 0x298
 function function_73aa2b7a(weapon, heatwave) {
     self endon(#"disconnect");
-    self endon(#"hash_cd3aa110");
+    self endon(#"heat_wave_think");
     owner = self;
     starttime = gettime();
     while (-6 + starttime > gettime()) {
         if (level.missileentities.size < 1) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         for (index = 0; index < level.missileentities.size; index++) {
-            wait(0.05);
+            wait 0.05;
             grenade = level.missileentities[index];
             if (!isdefined(grenade)) {
                 continue;
@@ -382,7 +382,7 @@ function function_73aa2b7a(weapon, heatwave) {
                 continue;
             }
             switch (grenade.model) {
-            case 26:
+            case "t6_wpn_grenade_supply_projectile":
                 continue;
             }
             if (!isdefined(grenade.owner)) {
@@ -462,7 +462,7 @@ function function_90c44fbc(heatwave) {
     self endon(#"disconnect");
     self endon(#"death");
     self.var_87ddf012 = gettime();
-    wait(-6);
+    wait -6;
 }
 
 // Namespace heat_wave
@@ -473,7 +473,7 @@ function function_472efb77(var_2b155dcc) {
     var_291ac48b = spawn("script_origin", self.origin);
     var_291ac48b linkto(self, "tag_origin", (0, 0, 0), (0, 0, 0));
     var_291ac48b playloopsound("mpl_heatwave_burn_loop");
-    wait(var_2b155dcc);
+    wait var_2b155dcc;
     if (isdefined(var_291ac48b)) {
         var_291ac48b stoploopsound(0.5);
         util::wait_network_frame();

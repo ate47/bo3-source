@@ -7,9 +7,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_c3b98877;
+#namespace zm_temple_amb;
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x85c85b1, Offset: 0x2b0
 // Size: 0xf4
@@ -25,7 +25,7 @@ function main() {
     level thread function_45b4acf2();
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x23e3b70b, Offset: 0x3b0
 // Size: 0x42
@@ -34,21 +34,21 @@ function function_5d71efd7() {
     level.var_a89f567b["kill"]["explosive_response"] = undefined;
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x0
 // Checksum 0xe2033c6b, Offset: 0x400
 // Size: 0xa
 function function_d4b7774a() {
-    wait(10);
+    wait 10;
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf513140a, Offset: 0x418
 // Size: 0x154
 function function_8e7c8fe0() {
     level waittill(#"end_game");
-    wait(2);
+    wait 2;
     winner = undefined;
     players = getplayers();
     for (i = 0; i < players.size; i++) {
@@ -70,7 +70,7 @@ function function_8e7c8fe0() {
     }
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 2, eflags: 0x1 linked
 // Checksum 0xfda8abdf, Offset: 0x578
 // Size: 0x80
@@ -82,7 +82,7 @@ function function_621add9(weapon, magic_box) {
     return level.zombie_weapons[w_root].vox;
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x713ea969, Offset: 0x600
 // Size: 0x5c
@@ -92,32 +92,32 @@ function function_702b17be() {
     level thread zm_audio::sndmusicsystem_playstate("pareidolia");
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5bc3831b, Offset: 0x668
 // Size: 0x17c
 function function_517d4259() {
     playsoundatposition("evt_warp_in", (0, 0, 0));
-    wait(3);
+    wait 3;
     players = getplayers();
     if (players.size == 4 && randomintrange(0, 101) <= 10) {
         if (randomintrange(0, 101) <= 10) {
             players[randomintrange(0, players.size)] thread zm_audio::create_and_play_dialog("eggs", "rod");
         } else {
             num = randomintrange(0, 2);
-            level thread namespace_435c2400::function_acc79afb("start" + num, players);
+            level thread zm_temple_sq_skits::function_acc79afb("start" + num, players);
         }
         return;
     }
     players[randomintrange(0, players.size)] thread zm_audio::create_and_play_dialog("general", "start");
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x268a0bed, Offset: 0x7f0
 // Size: 0x134
 function function_6d5ecc2a(place) {
-    wait(3);
+    wait 3;
     struct = struct::get("vox_" + place, "targetname");
     if (!isdefined(struct)) {
         return;
@@ -128,7 +128,7 @@ function function_6d5ecc2a(place) {
         if (isplayer(who)) {
             who thread zm_audio::create_and_play_dialog("general", place);
             if (place == "location_maze") {
-                wait(90);
+                wait 90;
                 continue;
             }
             break;
@@ -137,7 +137,7 @@ function function_6d5ecc2a(place) {
     var_5cb1355d delete();
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8a3b85b4, Offset: 0x930
 // Size: 0x11c
@@ -163,12 +163,12 @@ function function_45b4acf2() {
     level flag::set("snd_zhdegg_activate");
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3644b6c2, Offset: 0xa58
 // Size: 0x148
 function function_19277046() {
-    level endon(#"hash_f9e823ac");
+    level endon(#"snd_zhdegg_activate");
     while (true) {
         damage, attacker, dir, loc, str_type, model, tag, part, weapon, flags = self waittill(#"damage");
         if (!level flag::get("gongs_resonating")) {

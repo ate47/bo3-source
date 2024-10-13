@@ -16,9 +16,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_1361153c;
+#namespace zm_tomb_ee_main_step_4;
 
-// Namespace namespace_1361153c
+// Namespace zm_tomb_ee_main_step_4
 // Params 0, eflags: 0x1 linked
 // Checksum 0x25e1d4a0, Offset: 0x478
 // Size: 0x54
@@ -26,7 +26,7 @@ function init() {
     namespace_6e97c459::function_5a90ed82("little_girl_lost", "step_4", &init_stage, &function_7747c56, &function_cc3f3f6a);
 }
 
-// Namespace namespace_1361153c
+// Namespace zm_tomb_ee_main_step_4
 // Params 0, eflags: 0x1 linked
 // Checksum 0x76365c99, Offset: 0x4d8
 // Size: 0x4c
@@ -38,13 +38,13 @@ function init_stage() {
     level.var_789c3e33 = &function_d8d82e7;
 }
 
-// Namespace namespace_1361153c
+// Namespace zm_tomb_ee_main_step_4
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4915408f, Offset: 0x530
 // Size: 0x174
 function function_7747c56() {
     /#
-        iprintln(level.var_ca733eed + "near_goal");
+        iprintln(level.var_ca733eed + "<dev string:x28>");
     #/
     level flag::wait_till("ee_quadrotor_disabled");
     level thread function_c13f73a1();
@@ -56,7 +56,7 @@ function function_7747c56() {
                 level.var_ef2b6bab++;
                 level.var_10532e02++;
             }
-            wait(randomfloatrange(0.5, 1));
+            wait randomfloatrange(0.5, 1);
         }
     }
     level flag::wait_till("ee_mech_zombie_fight_completed");
@@ -64,7 +64,7 @@ function function_7747c56() {
     namespace_6e97c459::function_2f3ced1f("little_girl_lost", level.var_ca733eed);
 }
 
-// Namespace namespace_1361153c
+// Namespace zm_tomb_ee_main_step_4
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb08b2f8d, Offset: 0x6b0
 // Size: 0x22
@@ -73,7 +73,7 @@ function function_cc3f3f6a(success) {
     level notify(#"hash_4f3f0441");
 }
 
-// Namespace namespace_1361153c
+// Namespace zm_tomb_ee_main_step_4
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2691beb0, Offset: 0x6e0
 // Size: 0x266
@@ -85,12 +85,12 @@ function function_d8d82e7() {
         s_goal = struct::get("ee_mech_hole_goal_1", "targetname");
         self setvehgoalpos(s_goal.origin, 1, 0);
         self util::waittill_any("near_goal", "force_goal", "reached_end_node");
-        wait(2);
+        wait 2;
         s_goal = struct::get("ee_mech_hole_goal_2", "targetname");
         self setvehgoalpos(s_goal.origin, 1, 0);
         self util::waittill_any("near_goal", "force_goal", "reached_end_node");
         playsoundatposition("zmb_squest_maxis_folly", s_goal.origin);
-        namespace_ad52727b::function_7dc74a72("vox_maxi_drone_upgraded_3", self);
+        zm_tomb_vo::function_7dc74a72("vox_maxi_drone_upgraded_3", self);
         level flag::set("ee_quadrotor_disabled");
         self dodamage(-56, self.origin);
         self delete();
@@ -98,7 +98,7 @@ function function_d8d82e7() {
     }
 }
 
-// Namespace namespace_1361153c
+// Namespace zm_tomb_ee_main_step_4
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa9efa350, Offset: 0x950
 // Size: 0x2ec
@@ -145,7 +145,7 @@ function function_560a9669(var_c45ee422) {
     self function_c6ef7f82(spawn_pos);
 }
 
-// Namespace namespace_1361153c
+// Namespace zm_tomb_ee_main_step_4
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6aa3fd5c, Offset: 0xc48
 // Size: 0xec
@@ -165,7 +165,7 @@ function function_c1e2974c() {
     }
 }
 
-// Namespace namespace_1361153c
+// Namespace zm_tomb_ee_main_step_4
 // Params 1, eflags: 0x1 linked
 // Checksum 0xde5f350e, Offset: 0xd40
 // Size: 0x358
@@ -173,13 +173,13 @@ function function_c6ef7f82(s_spawn_pos) {
     self endon(#"death");
     self endon(#"hash_517ec5c4");
     /#
-        if (getdvarint("near_goal") > 0) {
-            println("near_goal");
+        if (getdvarint("<dev string:x45>") > 0) {
+            println("<dev string:x51>");
         }
     #/
     /#
-        if (getdvarint("near_goal") > 1) {
-            println("near_goal");
+        if (getdvarint("<dev string:x45>") > 1) {
+            println("<dev string:x6b>");
         }
     #/
     self.var_d0ea20c0 = 1;
@@ -193,7 +193,7 @@ function function_c6ef7f82(s_spawn_pos) {
     var_b218b791 = self.var_34297332;
     self thread zombie_utility::zombie_eye_glow_stop();
     self animscripted("zm_fly_hover_finished", self.origin, self.angles, "ai_zombie_mech_exit_hover");
-    wait(level.var_2750d45b);
+    wait level.var_2750d45b;
     s_landing_point = struct::get(s_spawn_pos.target, "targetname");
     if (!isdefined(s_landing_point.angles)) {
         s_landing_point.angles = (0, 0, 0);
@@ -209,14 +209,14 @@ function function_c6ef7f82(s_spawn_pos) {
     self.var_d0ea20c0 = 0;
     self setfreecameralockonallowed(1);
     /#
-        if (getdvarint("near_goal") > 1) {
-            println("near_goal");
+        if (getdvarint("<dev string:x45>") > 1) {
+            println("<dev string:x90>");
         }
     #/
     self.var_2cd5dd3e = s_landing_point;
 }
 
-// Namespace namespace_1361153c
+// Namespace zm_tomb_ee_main_step_4
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbf2b1cf, Offset: 0x10a0
 // Size: 0x10c
@@ -232,18 +232,18 @@ function function_c13f73a1() {
     level flag::wait_till("ee_mech_zombie_fight_completed");
     level clientfield::set("mus_zmb_egg_snapshot_loop", 0);
     level.var_5738e0e5 = 0;
-    wait(0.05);
+    wait 0.05;
     ent delete();
 }
 
-// Namespace namespace_1361153c
+// Namespace zm_tomb_ee_main_step_4
 // Params 0, eflags: 0x1 linked
 // Checksum 0x25e7485, Offset: 0x11b8
 // Size: 0x50
 function function_84a3ca09() {
     counter = 0;
     while (isdefined(level.var_5738e0e5) && level.var_5738e0e5) {
-        wait(1);
+        wait 1;
         counter++;
         if (counter >= 60) {
             return false;

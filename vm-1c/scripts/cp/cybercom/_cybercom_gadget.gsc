@@ -252,7 +252,7 @@ function function_1364f13e(ability) {
 // Checksum 0xc5cfe761, Offset: 0x1270
 // Size: 0xd4
 function function_a724d44(name, upgrade) {
-    assert(getdvarint("gamedata/stats/cp/cp_statstable.csv"), "gamedata/stats/cp/cp_statstable.csv");
+    assert(getdvarint("<dev string:x28>"), "<dev string:x39>");
     ability = function_85c33215(name);
     if (!isdefined(ability)) {
         return;
@@ -280,7 +280,7 @@ function function_eb512967(name, var_a67a6c08) {
     if (!isdefined(var_a67a6c08)) {
         var_a67a6c08 = 0;
     }
-    assert(getdvarint("gamedata/stats/cp/cp_statstable.csv"), "gamedata/stats/cp/cp_statstable.csv");
+    assert(getdvarint("<dev string:x28>"), "<dev string:x78>");
     var_ab80161f = self function_1a9006bd(name);
     if (var_ab80161f == 0) {
         return;

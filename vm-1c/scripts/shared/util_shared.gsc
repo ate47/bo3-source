@@ -37,7 +37,7 @@ function wait_network_frame(n_count) {
         }
         return;
     }
-    wait(0.1 * n_count);
+    wait 0.1 * n_count;
 }
 
 // Namespace util
@@ -96,9 +96,9 @@ function streamer_wait(n_stream_request_id, n_wait_frames, n_timeout, var_9636cf
     // Checksum 0x899edffb, Offset: 0xe58
     // Size: 0x86
     function draw_debug_line(start, end, timer) {
-                for (i = 0; i < timer * 20; i++) {
+        for (i = 0; i < timer * 20; i++) {
             line(start, end, (1, 1, 0.5));
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -208,7 +208,7 @@ function waittill_level_string(msg, ent, otherent) {
 }
 
 // Namespace util
-// Params 1, eflags: 0x21 linked
+// Params 1, eflags: 0x21 linked variadic
 // Checksum 0xf39c1963, Offset: 0x1288
 // Size: 0xaa
 function waittill_multiple(...) {
@@ -250,7 +250,7 @@ function break_glass(n_radius) {
 }
 
 // Namespace util
-// Params 1, eflags: 0x21 linked
+// Params 1, eflags: 0x21 linked variadic
 // Checksum 0xc4c8467, Offset: 0x1430
 // Size: 0x1e2
 function waittill_multiple_ents(...) {
@@ -341,7 +341,7 @@ function waittill_any_return(string1, string2, string3, string4, string5, string
 }
 
 // Namespace util
-// Params 1, eflags: 0x21 linked
+// Params 1, eflags: 0x21 linked variadic
 // Checksum 0x4c6ef606, Offset: 0x1968
 // Size: 0x1cc
 function function_183e3618(...) {
@@ -414,7 +414,7 @@ function function_c7f20692(a_notifies) {
     } else if (!isarray(a_notifies)) {
         a_notifies = array(a_notifies);
     }
-    assert(isdefined(a_notifies[0]), "melee");
+    assert(isdefined(a_notifies[0]), "<dev string:x28>");
     for (i = 1; i < a_notifies.size; i++) {
         if (isdefined(a_notifies[i])) {
             self endon(a_notifies[i]);
@@ -490,7 +490,7 @@ function waittill_level_any_timeout(n_timeout, otherent, string1, string2, strin
 // Size: 0x32
 function _timeout(delay) {
     self endon(#"die");
-    wait(delay);
+    wait delay;
     self notify(#"returned", "timeout");
 }
 
@@ -615,7 +615,7 @@ function call_func(s_func) {
 // Checksum 0x99d39132, Offset: 0x2718
 // Size: 0x184
 function single_thread(entity, func, arg1, arg2, arg3, arg4, arg5, arg6) {
-    assert(isdefined(entity), "melee");
+    assert(isdefined(entity), "<dev string:x6d>");
     if (isdefined(arg6)) {
         entity thread [[ func ]](arg1, arg2, arg3, arg4, arg5, arg6);
         return;
@@ -649,13 +649,13 @@ function single_thread(entity, func, arg1, arg2, arg3, arg4, arg5, arg6) {
 // Size: 0x88
 function script_delay() {
     if (isdefined(self.script_delay)) {
-        wait(self.script_delay);
+        wait self.script_delay;
         return true;
     } else if (isdefined(self.script_delay_min) && isdefined(self.script_delay_max)) {
         if (self.script_delay_max > self.script_delay_min) {
-            wait(randomfloatrange(self.script_delay_min, self.script_delay_max));
+            wait randomfloatrange(self.script_delay_min, self.script_delay_max);
         } else {
-            wait(self.script_delay_min);
+            wait self.script_delay_min;
         }
         return true;
     }
@@ -697,7 +697,7 @@ function create_flags_and_return_tokens(flags) {
     // Size: 0x64
     function fileprint_start(file) {
         filename = file;
-        file = openfile(filename, "melee");
+        file = openfile(filename, "<dev string:x9e>");
         level.fileprint = file;
         level.fileprintlinecount = 0;
         level.fileprint_filename = filename;
@@ -708,7 +708,7 @@ function create_flags_and_return_tokens(flags) {
     // Checksum 0x22631536, Offset: 0x2b38
     // Size: 0x64
     function fileprint_map_start(file) {
-        file = "melee" + file + "melee";
+        file = "<dev string:xa4>" + file + "<dev string:xb0>";
         fileprint_start(file);
         level.fileprint_mapentcount = 0;
         fileprint_map_header(1);
@@ -721,7 +721,7 @@ function create_flags_and_return_tokens(flags) {
     function fileprint_chk(file, str) {
         level.fileprintlinecount++;
         if (level.fileprintlinecount > 400) {
-            wait(0.05);
+            wait 0.05;
             level.fileprintlinecount++;
             level.fileprintlinecount = 0;
         }
@@ -740,14 +740,14 @@ function fileprint_map_header(binclude_blank_worldspawn) {
     }
     assert(isdefined(level.fileprint));
     /#
-        fileprint_chk(level.fileprint, "melee");
-        fileprint_chk(level.fileprint, "melee");
-        fileprint_chk(level.fileprint, "melee");
+        fileprint_chk(level.fileprint, "<dev string:xb5>");
+        fileprint_chk(level.fileprint, "<dev string:xbd>");
+        fileprint_chk(level.fileprint, "<dev string:xd8>");
         if (!binclude_blank_worldspawn) {
             return;
         }
         fileprint_map_entity_start();
-        fileprint_map_keypairprint("melee", "melee");
+        fileprint_map_keypairprint("<dev string:xe8>", "<dev string:xf2>");
         fileprint_map_entity_end();
     #/
 }
@@ -760,7 +760,7 @@ function fileprint_map_header(binclude_blank_worldspawn) {
     // Size: 0x7c
     function fileprint_map_keypairprint(key1, key2) {
         assert(isdefined(level.fileprint));
-        fileprint_chk(level.fileprint, "melee" + key1 + "melee" + key2 + "melee");
+        fileprint_chk(level.fileprint, "<dev string:xfd>" + key1 + "<dev string:xff>" + key2 + "<dev string:xfd>");
     }
 
     // Namespace util
@@ -771,8 +771,8 @@ function fileprint_map_header(binclude_blank_worldspawn) {
         assert(!isdefined(level.fileprint_entitystart));
         level.fileprint_entitystart = 1;
         assert(isdefined(level.fileprint));
-        fileprint_chk(level.fileprint, "melee" + level.fileprint_mapentcount);
-        fileprint_chk(level.fileprint, "melee");
+        fileprint_chk(level.fileprint, "<dev string:x103>" + level.fileprint_mapentcount);
+        fileprint_chk(level.fileprint, "<dev string:x10e>");
         level.fileprint_mapentcount++;
     }
 
@@ -784,7 +784,7 @@ function fileprint_map_header(binclude_blank_worldspawn) {
         assert(isdefined(level.fileprint_entitystart));
         assert(isdefined(level.fileprint));
         level.fileprint_entitystart = undefined;
-        fileprint_chk(level.fileprint, "melee");
+        fileprint_chk(level.fileprint, "<dev string:x110>");
     }
 
     // Namespace util
@@ -795,26 +795,26 @@ function fileprint_map_header(binclude_blank_worldspawn) {
         assert(!isdefined(level.fileprint_entitystart));
         saved = closefile(level.fileprint);
         if (saved != 1) {
-            println("melee");
-            println("melee");
-            println("melee");
-            println("melee" + level.fileprint_filename);
-            println("melee");
-            println("melee");
-            println("melee");
-            println("melee");
-            println("melee");
-            println("melee");
-            println("melee");
-            println("melee");
-            println("melee");
-            println("melee");
-            println("melee");
-            println("melee");
-            println("melee");
-            println("melee");
-            println("melee");
-            println("melee");
+            println("<dev string:x112>");
+            println("<dev string:x136>");
+            println("<dev string:x138>");
+            println("<dev string:x14b>" + level.fileprint_filename);
+            println("<dev string:x15c>");
+            println("<dev string:x193>");
+            println("<dev string:x1cf>");
+            println("<dev string:x20b>");
+            println("<dev string:x251>");
+            println("<dev string:x136>");
+            println("<dev string:x26b>");
+            println("<dev string:x2ae>");
+            println("<dev string:x2f2>");
+            println("<dev string:x32e>");
+            println("<dev string:x372>");
+            println("<dev string:x3af>");
+            println("<dev string:x3ee>");
+            println("<dev string:x136>");
+            println("<dev string:x112>");
+            println("<dev string:x431>");
         }
         level.fileprint = undefined;
         level.fileprint_filename = undefined;
@@ -825,7 +825,7 @@ function fileprint_map_header(binclude_blank_worldspawn) {
     // Checksum 0x90472f71, Offset: 0x3140
     // Size: 0x64
     function fileprint_radiant_vec(vector) {
-        string = "melee" + vector[0] + "melee" + vector[1] + "melee" + vector[2] + "melee";
+        string = "<dev string:x45d>" + vector[0] + "<dev string:x136>" + vector[1] + "<dev string:x136>" + vector[2] + "<dev string:x45d>";
         return string;
     }
 
@@ -993,7 +993,7 @@ function _delay(time_or_notify, str_endon, func, arg1, arg2, arg3, arg4, arg5, a
     if (isstring(time_or_notify)) {
         self waittill(time_or_notify);
     } else {
-        wait(time_or_notify);
+        wait time_or_notify;
     }
     single_func(self, func, arg1, arg2, arg3, arg4, arg5, arg6);
 }
@@ -1039,7 +1039,7 @@ function _delay_notify(time_or_notify, str_notify, str_endon, arg1, arg2, arg3, 
     if (isstring(time_or_notify)) {
         self waittill(time_or_notify);
     } else {
-        wait(time_or_notify);
+        wait time_or_notify;
     }
     self notify(str_notify, arg1, arg2, arg3, arg4, arg5);
 }
@@ -1062,11 +1062,11 @@ function registerclientsys(ssysname) {
         level._clientsys = [];
     }
     if (level._clientsys.size >= 32) {
-        assertmsg("melee");
+        assertmsg("<dev string:x45e>");
         return;
     }
     if (isdefined(level._clientsys[ssysname])) {
-        assertmsg("melee" + ssysname);
+        assertmsg("<dev string:x47f>" + ssysname);
         return;
     }
     level._clientsys[ssysname] = spawnstruct();
@@ -1079,11 +1079,11 @@ function registerclientsys(ssysname) {
 // Size: 0x118
 function setclientsysstate(ssysname, ssysstate, player) {
     if (!isdefined(level._clientsys)) {
-        assertmsg("melee");
+        assertmsg("<dev string:x4a7>");
         return;
     }
     if (!isdefined(level._clientsys[ssysname])) {
-        assertmsg("melee" + ssysname);
+        assertmsg("<dev string:x4e4>" + ssysname);
         return;
     }
     if (isdefined(player)) {
@@ -1100,11 +1100,11 @@ function setclientsysstate(ssysname, ssysstate, player) {
 // Size: 0xc6
 function getclientsysstate(ssysname) {
     if (!isdefined(level._clientsys)) {
-        assertmsg("melee");
+        assertmsg("<dev string:x515>");
         return "";
     }
     if (!isdefined(level._clientsys[ssysname])) {
-        assertmsg("melee" + ssysname + "melee");
+        assertmsg("<dev string:x555>" + ssysname + "<dev string:x564>");
         return "";
     }
     if (isdefined(level._clientsys[ssysname].sysstate)) {
@@ -1146,7 +1146,7 @@ function is_looking_at(ent_or_org, n_dot_range, do_trace, v_offset) {
     if (!isdefined(do_trace)) {
         do_trace = 0;
     }
-    assert(isdefined(ent_or_org), "melee");
+    assert(isdefined(ent_or_org), "<dev string:x591>");
     v_point = isvec(ent_or_org) ? ent_or_org : ent_or_org.origin;
     if (isvec(v_offset)) {
         v_point += v_offset;
@@ -1259,7 +1259,7 @@ function waittill_player_looking_at(origin, arc_angle_degrees, do_trace, e_ignor
     arc_angle_degrees = absangleclamp360(arc_angle_degrees);
     dot = cos(arc_angle_degrees * 0.5);
     while (!is_player_looking_at(origin, dot, do_trace, e_ignore)) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1270,7 +1270,7 @@ function waittill_player_looking_at(origin, arc_angle_degrees, do_trace, e_ignor
 function waittill_player_not_looking_at(origin, dot, do_trace) {
     self endon(#"death");
     while (is_player_looking_at(origin, dot, do_trace)) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1279,7 +1279,7 @@ function waittill_player_not_looking_at(origin, dot, do_trace) {
 // Checksum 0x5c5791e6, Offset: 0x4430
 // Size: 0x160
 function is_player_looking_at(origin, dot, do_trace, ignore_ent) {
-    assert(isplayer(self), "melee");
+    assert(isplayer(self), "<dev string:x5c9>");
     if (!isdefined(dot)) {
         dot = 0.7;
     }
@@ -1315,7 +1315,7 @@ function wait_endon(waittime, endonstring, endonstring2, endonstring3, endonstri
     if (isdefined(endonstring4)) {
         self endon(endonstring4);
     }
-    wait(waittime);
+    wait waittime;
     return true;
 }
 
@@ -1406,7 +1406,7 @@ function timer_wait(n_wait) {
     if (isdefined(self.n_length)) {
         n_wait = min(n_wait, get_time_left());
     }
-    wait(n_wait);
+    wait n_wait;
     n_current_time = get_time_in_seconds();
     return n_current_time;
 }
@@ -1447,7 +1447,7 @@ function delete_on_death_or_notify(e_to_delete, str_notify, str_clientfield) {
     if (isdefined(e_to_delete)) {
         if (isdefined(str_clientfield)) {
             e_to_delete clientfield::set(str_clientfield, 0);
-            wait(0.1);
+            wait 0.1;
         }
         e_to_delete delete();
     }
@@ -1458,12 +1458,12 @@ function delete_on_death_or_notify(e_to_delete, str_notify, str_clientfield) {
 // Checksum 0xa2896e, Offset: 0x49e8
 // Size: 0xa4
 function wait_till_not_touching(e_to_check, e_to_touch) {
-    assert(isdefined(e_to_check), "melee");
-    assert(isdefined(e_to_touch), "melee");
+    assert(isdefined(e_to_check), "<dev string:x5f7>");
+    assert(isdefined(e_to_touch), "<dev string:x635>");
     e_to_check endon(#"death");
     e_to_touch endon(#"death");
     while (e_to_check istouching(e_to_touch)) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1486,7 +1486,7 @@ function any_player_is_touching(ent, str_team) {
 // Size: 0x26
 function waittill_notify_or_timeout(msg, timer) {
     self endon(msg);
-    wait(timer);
+    wait timer;
     return true;
 }
 
@@ -1498,13 +1498,13 @@ function set_console_status() {
     if (!isdefined(level.console)) {
         level.console = getdvarstring("consoleGame") == "true";
     } else {
-        assert(level.console == getdvarstring("melee") == "melee", "melee");
+        assert(level.console == getdvarstring("<dev string:x673>") == "<dev string:x67f>", "<dev string:x684>");
     }
     if (!isdefined(level.consolexenon)) {
         level.xenon = getdvarstring("xenonGame") == "true";
         return;
     }
-    assert(level.xenon == getdvarstring("melee") == "melee", "melee");
+    assert(level.xenon == getdvarstring("<dev string:x6a7>") == "<dev string:x67f>", "<dev string:x6b1>");
 }
 
 // Namespace util
@@ -1536,12 +1536,12 @@ function script_wait(var_bfefeedc) {
     }
     starttime = gettime();
     if (isdefined(self.script_wait)) {
-        wait(self.script_wait * var_714358d);
+        wait self.script_wait * var_714358d;
         if (isdefined(self.script_wait_add)) {
             self.script_wait += self.script_wait_add;
         }
     } else if (isdefined(self.script_wait_min) && isdefined(self.script_wait_max)) {
-        wait(randomfloatrange(self.script_wait_min, self.script_wait_max) * var_714358d);
+        wait randomfloatrange(self.script_wait_min, self.script_wait_max) * var_714358d;
         if (isdefined(self.script_wait_add)) {
             self.script_wait_min += self.script_wait_add;
             self.script_wait_max += self.script_wait_add;
@@ -1580,7 +1580,7 @@ function magic_bullet_shield(ent) {
         ent notify(#"_stop_magic_bullet_shield_debug");
         level thread debug_magic_bullet_shield_death(ent);
     #/
-    assert(isalive(ent), "melee");
+    assert(isalive(ent), "<dev string:x6d2>");
     if (isai(ent)) {
         if (isactor(ent)) {
             ent bloodimpact("hero");
@@ -1601,7 +1601,7 @@ function debug_magic_bullet_shield_death(guy) {
     guy endon(#"stop_magic_bullet_shield");
     guy endon(#"_stop_magic_bullet_shield_debug");
     guy waittill(#"death");
-    assert(!isdefined(guy), "melee" + targetname);
+    assert(!isdefined(guy), "<dev string:x70e>" + targetname);
 }
 
 // Namespace util
@@ -1765,7 +1765,7 @@ function button_held_think(which_button) {
         } else if (time_started != 0) {
             time_started = 0;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1840,7 +1840,7 @@ function button_right_held() {
 // Size: 0x2c
 function waittill_use_button_pressed() {
     while (!self usebuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1850,7 +1850,7 @@ function waittill_use_button_pressed() {
 // Size: 0x2c
 function waittill_use_button_held() {
     while (!self use_button_held()) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1860,7 +1860,7 @@ function waittill_use_button_held() {
 // Size: 0x2c
 function waittill_stance_button_pressed() {
     while (!self stancebuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1870,7 +1870,7 @@ function waittill_stance_button_pressed() {
 // Size: 0x2c
 function waittill_stance_button_held() {
     while (!self stance_button_held()) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1880,7 +1880,7 @@ function waittill_stance_button_held() {
 // Size: 0x2c
 function waittill_attack_button_pressed() {
     while (!self attackbuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1890,7 +1890,7 @@ function waittill_attack_button_pressed() {
 // Size: 0x2c
 function waittill_ads_button_pressed() {
     while (!self adsbuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1900,7 +1900,7 @@ function waittill_ads_button_pressed() {
 // Size: 0x2c
 function waittill_vehicle_move_up_button_pressed() {
     while (!self vehiclemoveupbuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1955,7 +1955,7 @@ function init_button_wrappers() {
     // Checksum 0x209f1ac9, Offset: 0x5c70
     // Size: 0x44
     function up_button_pressed() {
-        return self buttonpressed("melee") || self buttonpressed("melee");
+        return self buttonpressed("<dev string:x745>") || self buttonpressed("<dev string:x74d>");
     }
 
     // Namespace util
@@ -1964,7 +1964,7 @@ function init_button_wrappers() {
     // Size: 0x2c
     function waittill_up_button_pressed() {
         while (!self up_button_pressed()) {
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1973,7 +1973,7 @@ function init_button_wrappers() {
     // Checksum 0x29ecbe16, Offset: 0x5cf8
     // Size: 0x44
     function down_button_pressed() {
-        return self buttonpressed("melee") || self buttonpressed("melee");
+        return self buttonpressed("<dev string:x755>") || self buttonpressed("<dev string:x75f>");
     }
 
     // Namespace util
@@ -1982,7 +1982,7 @@ function init_button_wrappers() {
     // Size: 0x2c
     function waittill_down_button_pressed() {
         while (!self down_button_pressed()) {
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -2059,7 +2059,7 @@ function isenemyplayer(player) {
 // Size: 0x2c
 function waittillslowprocessallowed() {
     while (level.lastslowprocessframe == gettime()) {
-        wait(0.05);
+        wait 0.05;
     }
     level.lastslowprocessframe = gettime();
 }
@@ -2089,7 +2089,7 @@ function note_elapsed_time(start_time, label) {
         if (!level.orbis) {
             elapsed_time = int(elapsed_time);
         }
-        msg = label + "melee" + elapsed_time + "melee";
+        msg = label + "<dev string:x769>" + elapsed_time + "<dev string:x779>";
         iprintln(msg);
     #/
 }
@@ -2128,7 +2128,7 @@ function mayapplyscreeneffect() {
 // Size: 0x98
 function waittillnotmoving() {
     if (self ishacked()) {
-        wait(0.05);
+        wait 0.05;
         return;
     }
     if (self.classname == "grenade") {
@@ -2136,7 +2136,7 @@ function waittillnotmoving() {
         return;
     }
     for (prevorigin = self.origin; true; prevorigin = self.origin) {
-        wait(0.15);
+        wait 0.15;
         if (self.origin == prevorigin) {
             break;
         }
@@ -2149,7 +2149,7 @@ function waittillnotmoving() {
 // Size: 0x64
 function waittillrollingornotmoving() {
     if (self ishacked()) {
-        wait(0.05);
+        wait 0.05;
         return "stationary";
     }
     movestate = self waittill_any_return("stationary", "rolling");
@@ -2219,7 +2219,7 @@ function deleteaftertime(time) {
 // Size: 0x34
 function deleteaftertimethread(time) {
     self endon(#"death");
-    wait(time);
+    wait time;
     self delete();
 }
 
@@ -2232,7 +2232,7 @@ function waitfortime(time) {
         time = 0;
     }
     if (time > 0) {
-        wait(time);
+        wait time;
     }
 }
 
@@ -2249,7 +2249,7 @@ function waitfortimeandnetworkframe(time) {
     elapsed_time = (gettime() - start_time_ms) * 0.001;
     remaining_time = time - elapsed_time;
     if (remaining_time > 0) {
-        wait(remaining_time);
+        wait remaining_time;
     }
 }
 
@@ -2304,7 +2304,7 @@ function deleteaftertimeandnetworkframe(time) {
                 line(pos + (cos(theta) * currad, sin(theta) * currad, curheight), pos + (cos(theta2) * currad, sin(theta2) * currad, curheight), color, alpha);
                 line(pos + (cos(theta) * currad, sin(theta) * currad, 0), pos + (cos(theta) * currad, sin(theta) * currad, curheight), color, alpha);
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -2483,7 +2483,7 @@ function set_lighting_state(n_state) {
             self setlightingstate(self.lighting_state);
             return;
         }
-        assertmsg("melee");
+        assertmsg("<dev string:x77d>");
     }
 }
 
@@ -2510,7 +2510,7 @@ function set_sun_shadow_split_distance(f_distance) {
             self setsunshadowsplitdistance(self.sun_shadow_split_distance);
             return;
         }
-        assertmsg("melee");
+        assertmsg("<dev string:x7af>");
     }
 }
 
@@ -2552,7 +2552,7 @@ function auto_delete(n_mode, n_min_time_alive, n_dist_horizontal, n_dist_vertica
     }
     for (n_test_count = 0; true; n_test_count = 0) {
         do {
-            wait(randomfloatrange(n_think_time - n_think_time / 3, n_think_time + n_think_time / 3));
+            wait randomfloatrange(n_think_time - n_think_time / 3, n_think_time + n_think_time / 3);
         } while (isdefined(self.birthtime) && (gettime() - self.birthtime) / 1000 < n_min_time_alive);
         n_tests_passed = 0;
         foreach (player in level.players) {
@@ -2675,7 +2675,7 @@ function _query_ents_by_substring_helper(&a_ents, str_value, str_key, b_ignore_s
             continue;
         }
         switch (str_key) {
-        case 37:
+        case "targetname":
             if (isstring(ent.targetname) && issubstr(ent.targetname, str_value)) {
                 if (!isdefined(a_ret)) {
                     a_ret = [];
@@ -2685,7 +2685,7 @@ function _query_ents_by_substring_helper(&a_ents, str_value, str_key, b_ignore_s
                 a_ret[a_ret.size] = ent;
             }
             break;
-        case 41:
+        case "script_noteworthy":
             if (isstring(ent.script_noteworthy) && issubstr(ent.script_noteworthy, str_value)) {
                 if (!isdefined(a_ret)) {
                     a_ret = [];
@@ -2695,7 +2695,7 @@ function _query_ents_by_substring_helper(&a_ents, str_value, str_key, b_ignore_s
                 a_ret[a_ret.size] = ent;
             }
             break;
-        case 38:
+        case "classname":
             if (isstring(ent.classname) && issubstr(ent.classname, str_value)) {
                 if (!isdefined(a_ret)) {
                     a_ret = [];
@@ -2705,7 +2705,7 @@ function _query_ents_by_substring_helper(&a_ents, str_value, str_key, b_ignore_s
                 a_ret[a_ret.size] = ent;
             }
             break;
-        case 43:
+        case "vehicletype":
             if (isstring(ent.vehicletype) && issubstr(ent.vehicletype, str_value)) {
                 if (!isdefined(a_ret)) {
                     a_ret = [];
@@ -2715,7 +2715,7 @@ function _query_ents_by_substring_helper(&a_ents, str_value, str_key, b_ignore_s
                 a_ret[a_ret.size] = ent;
             }
             break;
-        case 42:
+        case "script_string":
             if (isstring(ent.script_string) && issubstr(ent.script_string, str_value)) {
                 if (!isdefined(a_ret)) {
                     a_ret = [];
@@ -2725,7 +2725,7 @@ function _query_ents_by_substring_helper(&a_ents, str_value, str_key, b_ignore_s
                 a_ret[a_ret.size] = ent;
             }
             break;
-        case 40:
+        case "script_color_axis":
             if (isstring(ent.script_color_axis) && issubstr(ent.script_color_axis, str_value)) {
                 if (!isdefined(a_ret)) {
                     a_ret = [];
@@ -2735,7 +2735,7 @@ function _query_ents_by_substring_helper(&a_ents, str_value, str_key, b_ignore_s
                 a_ret[a_ret.size] = ent;
             }
             break;
-        case 39:
+        case "script_color_allies":
             if (isstring(ent.script_color_axis) && issubstr(ent.script_color_axis, str_value)) {
                 if (!isdefined(a_ret)) {
                     a_ret = [];
@@ -2746,7 +2746,7 @@ function _query_ents_by_substring_helper(&a_ents, str_value, str_key, b_ignore_s
             }
             break;
         default:
-            assert("melee" + str_key + "melee");
+            assert("<dev string:x7ec>" + str_key + "<dev string:x7ff>");
             break;
         }
     }
@@ -3154,7 +3154,7 @@ function ground_position(v_start, n_max_dist, n_ground_offset, e_ignore, b_ignor
 // Checksum 0x4884d367, Offset: 0x9450
 // Size: 0x2c
 function delayed_notify(str_notify, f_delay_seconds) {
-    wait(f_delay_seconds);
+    wait f_delay_seconds;
     if (isdefined(self)) {
         self notify(str_notify);
     }
@@ -3166,7 +3166,7 @@ function delayed_notify(str_notify, f_delay_seconds) {
 // Size: 0x74
 function delayed_delete(str_notify, f_delay_seconds) {
     assert(isentity(self));
-    wait(f_delay_seconds);
+    wait f_delay_seconds;
     if (isdefined(self) && isentity(self)) {
         self delete();
     }
@@ -3208,7 +3208,7 @@ function function_9155d925(var_5b9e7d6a, var_b6f6ffa9, var_8e6b5bc3, var_9817cc4
         var_bd4a51b5 = "";
     }
     self endon(#"disconnect");
-    assert(isdefined(n_duration), "melee");
+    assert(isdefined(n_duration), "<dev string:x81c>");
     var_c2dc2b72 = self openluimenu("CPChyron");
     self setluimenudata(var_c2dc2b72, "line1full", var_5b9e7d6a);
     self setluimenudata(var_c2dc2b72, "line1short", var_b6f6ffa9);
@@ -3237,7 +3237,7 @@ function function_9155d925(var_5b9e7d6a, var_b6f6ffa9, var_8e6b5bc3, var_9817cc4
     } while (menu != "CPChyron" || response != "closed");
     self notify(#"chyron_menu_closed");
     level notify(#"chyron_menu_closed");
-    wait(5);
+    wait 5;
     self closeluimenu(var_c2dc2b72);
 }
 
@@ -3247,13 +3247,13 @@ function function_9155d925(var_5b9e7d6a, var_b6f6ffa9, var_8e6b5bc3, var_9817cc4
 // Size: 0x2e
 function function_3eb32a89(str_next_map) {
     switch (str_next_map) {
-    case 74:
-    case 75:
-    case 76:
+    case "cp_mi_sing_biodomes":
+    case "cp_mi_sing_blackstation":
+    case "cp_mi_sing_sgen":
         return "cp_sh_singapore";
-    case 71:
-    case 72:
-    case 73:
+    case "cp_mi_cairo_aquifer":
+    case "cp_mi_cairo_infection":
+    case "cp_mi_cairo_lotus":
         return "cp_sh_cairo";
     default:
         return "cp_sh_mobile";
@@ -3279,18 +3279,18 @@ function is_safehouse() {
 function is_new_cp_map() {
     mapname = tolower(getdvarstring("mapname"));
     switch (mapname) {
-    case 71:
-    case 72:
-    case 73:
-    case 77:
-    case 60:
-    case 74:
-    case 75:
-    case 78:
-    case 76:
-    case 79:
-    case 80:
-    case 81:
+    case "cp_mi_cairo_aquifer":
+    case "cp_mi_cairo_infection":
+    case "cp_mi_cairo_lotus":
+    case "cp_mi_cairo_ramses":
+    case "cp_mi_eth_prologue":
+    case "cp_mi_sing_biodomes":
+    case "cp_mi_sing_blackstation":
+    case "cp_mi_sing_chinatown":
+    case "cp_mi_sing_sgen":
+    case "cp_mi_sing_vengeance":
+    case "cp_mi_zurich_coalescene":
+    case "cp_mi_zurich_newworld":
         return true;
     default:
         return false;
@@ -3323,7 +3323,7 @@ function is_new_cp_map() {
             level.dbg_cmd_queue = [];
         }
         while (true) {
-            wait(0.05);
+            wait 0.05;
             if (level.dbg_cmd_queue.size == 0) {
                 level.dbg_cmd_queue = undefined;
                 return;

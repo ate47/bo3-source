@@ -471,7 +471,7 @@ function private shouldtacticalarrivecondition(behaviortreeentity) {
     }
     arrivaldistance = 35;
     /#
-        arrivaldvar = getdvarint("combatLocomotionUpdate");
+        arrivaldvar = getdvarint("<dev string:x28>");
         if (arrivaldvar != 0) {
             arrivaldistance = arrivaldvar;
         }
@@ -562,8 +562,8 @@ function private planhumanarrivalatcover(behaviortreeentity, arrivalanim) {
                 right = vectorscale(rightdir, premovedelta[1]);
                 coverenterpos = coverenterpos - forward + right;
                 /#
-                    recordline(postenterpos, nodeoffsetposition, (1, 0.5, 0), "combatLocomotionUpdate", behaviortreeentity);
-                    recordline(coverenterpos, postenterpos, (1, 0.5, 0), "combatLocomotionUpdate", behaviortreeentity);
+                    recordline(postenterpos, nodeoffsetposition, (1, 0.5, 0), "<dev string:x3b>", behaviortreeentity);
+                    recordline(coverenterpos, postenterpos, (1, 0.5, 0), "<dev string:x3b>", behaviortreeentity);
                 #/
                 if (!behaviortreeentity maymovefrompointtopoint(postenterpos, nodeoffsetposition, 1, 0)) {
                     return false;
@@ -587,7 +587,7 @@ function private planhumanarrivalatcover(behaviortreeentity, arrivalanim) {
             }
             if (ispointonnavmesh(coverenterpos, behaviortreeentity)) {
                 /#
-                    recordcircle(coverenterpos, 2, (1, 0, 0), "combatLocomotionUpdate", behaviortreeentity);
+                    recordcircle(coverenterpos, 2, (1, 0, 0), "<dev string:x46>", behaviortreeentity);
                 #/
                 behaviortreeentity useposition(coverenterpos, behaviortreeentity.pathgoalpos);
                 return true;
@@ -611,13 +611,13 @@ function private checkcoverarrivalconditions(coverenterpos, coverpos) {
     trace = groundtrace(coverenterpos + (0, 0, 72), coverenterpos + (0, 0, -72), 0, 0, 0);
     if (isdefined(trace["position"]) && abs(trace["position"][2] - coverpos[2]) > 30) {
         /#
-            if (getdvarint("combatLocomotionUpdate")) {
-                recordcircle(coverenterpos, 1, (1, 0, 0), "combatLocomotionUpdate");
-                record3dtext("combatLocomotionUpdate", coverenterpos, (1, 0, 0), "combatLocomotionUpdate", undefined, 0.4);
-                recordcircle(trace["combatLocomotionUpdate"], 1, (1, 0, 0), "combatLocomotionUpdate");
-                record3dtext("combatLocomotionUpdate" + int(abs(trace["combatLocomotionUpdate"][2] - coverpos[2])), trace["combatLocomotionUpdate"] + (0, 0, 5), (1, 0, 0), "combatLocomotionUpdate", undefined, 0.4);
-                record3dtext("combatLocomotionUpdate" + 30, trace["combatLocomotionUpdate"], (1, 0, 0), "combatLocomotionUpdate", undefined, 0.4);
-                recordline(coverenterpos, trace["combatLocomotionUpdate"], (1, 0, 0), "combatLocomotionUpdate");
+            if (getdvarint("<dev string:x4d>")) {
+                recordcircle(coverenterpos, 1, (1, 0, 0), "<dev string:x3b>");
+                record3dtext("<dev string:x5e>", coverenterpos, (1, 0, 0), "<dev string:x3b>", undefined, 0.4);
+                recordcircle(trace["<dev string:x75>"], 1, (1, 0, 0), "<dev string:x3b>");
+                record3dtext("<dev string:x7e>" + int(abs(trace["<dev string:x75>"][2] - coverpos[2])), trace["<dev string:x75>"] + (0, 0, 5), (1, 0, 0), "<dev string:x3b>", undefined, 0.4);
+                record3dtext("<dev string:x93>" + 30, trace["<dev string:x75>"], (1, 0, 0), "<dev string:x3b>", undefined, 0.4);
+                recordline(coverenterpos, trace["<dev string:x75>"], (1, 0, 0), "<dev string:x3b>");
             }
         #/
         return false;

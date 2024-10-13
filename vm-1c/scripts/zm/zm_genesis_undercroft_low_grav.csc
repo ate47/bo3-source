@@ -4,9 +4,9 @@
 #using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_a714a13e;
+#namespace zm_genesis_undercroft_low_grav;
 
-// Namespace namespace_a714a13e
+// Namespace zm_genesis_undercroft_low_grav
 // Params 0, eflags: 0x1 linked
 // Checksum 0x55165d48, Offset: 0x3d0
 // Size: 0x84
@@ -19,21 +19,21 @@ function main() {
     level thread function_554db684();
 }
 
-// Namespace namespace_a714a13e
+// Namespace zm_genesis_undercroft_low_grav
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9bd418cb, Offset: 0x460
 // Size: 0x1fc
 function register_clientfields() {
     clientfield::register("scriptmover", "low_grav_powerup_triggered", 15000, 1, "counter", &function_69e96b4d, 0, 0);
     clientfield::register("toplayer", "player_postfx", 15000, 1, "int", &function_df81c23d, 0, 0);
-    clientfield::register("toplayer", "player_screen_fx", 15000, 1, "int", &function_e6fd161a, 0, 1);
+    clientfield::register("toplayer", "player_screen_fx", 15000, 1, "int", &player_screen_fx, 0, 1);
     clientfield::register("scriptmover", "undercroft_emissives", 15000, 1, "int", &function_9a8a19ab, 0, 0);
     clientfield::register("scriptmover", "undercroft_wall_panel_shutdown", 15000, 1, "counter", &mm_katana_male_runjump_land_1f_l, 0, 0);
     clientfield::register("scriptmover", "floor_panel_emissives_glow", 15000, 1, "int", &function_23861dfe, 0, 0);
-    clientfield::register("world", "snd_low_gravity_state", 15000, 2, "int", &function_467479e8, 0, 0);
+    clientfield::register("world", "snd_low_gravity_state", 15000, 2, "int", &snd_low_gravity_state, 0, 0);
 }
 
-// Namespace namespace_a714a13e
+// Namespace zm_genesis_undercroft_low_grav
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc34b220a, Offset: 0x668
 // Size: 0xdc
@@ -47,7 +47,7 @@ function function_554db684() {
     setdvar("wallRun_peakTest_zm", 0);
 }
 
-// Namespace namespace_a714a13e
+// Namespace zm_genesis_undercroft_low_grav
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa940c708, Offset: 0x750
 // Size: 0x64
@@ -55,19 +55,19 @@ function function_69e96b4d(localclientnum, oldval, newval, bnewent, binitialsnap
     playsound(0, "zmb_cha_ching", self.origin);
 }
 
-// Namespace namespace_a714a13e
+// Namespace zm_genesis_undercroft_low_grav
 // Params 7, eflags: 0x0
 // Checksum 0x382bdaba, Offset: 0x7c0
 // Size: 0x6c
-function function_c9ee5588(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function wall_dust(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     playfx(localclientnum, level._effect["wall_dust"], self.origin);
 }
 
-// Namespace namespace_a714a13e
+// Namespace zm_genesis_undercroft_low_grav
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa4d3ac17, Offset: 0x838
 // Size: 0xfc
-function function_e6fd161a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function player_screen_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         if (isdefined(level.var_51541120[localclientnum])) {
             deletefx(localclientnum, level.var_51541120[localclientnum], 1);
@@ -80,7 +80,7 @@ function function_e6fd161a(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_a714a13e
+// Namespace zm_genesis_undercroft_low_grav
 // Params 7, eflags: 0x1 linked
 // Checksum 0x98a634b3, Offset: 0x940
 // Size: 0xbc
@@ -94,7 +94,7 @@ function function_df81c23d(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread postfx::exitpostfxbundle();
 }
 
-// Namespace namespace_a714a13e
+// Namespace zm_genesis_undercroft_low_grav
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4676c72c, Offset: 0xa08
 // Size: 0x278
@@ -115,7 +115,7 @@ function function_9a8a19ab(localclientnum, oldval, newval, bnewent, binitialsnap
                 n_shader_value = mapfloat(n_start_time, n_end_time, 0, 1, n_time);
             }
             self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-            wait(0.01);
+            wait 0.01;
         }
         return;
     }
@@ -131,11 +131,11 @@ function function_9a8a19ab(localclientnum, oldval, newval, bnewent, binitialsnap
             n_shader_value = mapfloat(n_start_time, n_end_time, 1, 0, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_a714a13e
+// Namespace zm_genesis_undercroft_low_grav
 // Params 7, eflags: 0x1 linked
 // Checksum 0x9d69e366, Offset: 0xc88
 // Size: 0x188
@@ -155,11 +155,11 @@ function mm_katana_male_runjump_land_1f_l(localclientnum, oldval, newval, bnewen
             n_shader_value = mapfloat(n_start_time, n_end_time, 1, 0, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_a714a13e
+// Namespace zm_genesis_undercroft_low_grav
 // Params 7, eflags: 0x1 linked
 // Checksum 0xeec7c234, Offset: 0xe18
 // Size: 0x288
@@ -180,7 +180,7 @@ function function_23861dfe(localclientnum, oldval, newval, bnewent, binitialsnap
                 n_shader_value = mapfloat(n_start_time, n_end_time, 0.3, 1, n_time);
             }
             self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-            wait(0.01);
+            wait 0.01;
         }
         return;
     }
@@ -196,11 +196,11 @@ function function_23861dfe(localclientnum, oldval, newval, bnewent, binitialsnap
             n_shader_value = mapfloat(n_start_time, n_end_time, 1, 0.3, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_a714a13e
+// Namespace zm_genesis_undercroft_low_grav
 // Params 7, eflags: 0x0
 // Checksum 0x883dcea7, Offset: 0x10a8
 // Size: 0xa4
@@ -214,21 +214,21 @@ function function_a81107fc(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_a714a13e
+// Namespace zm_genesis_undercroft_low_grav
 // Params 2, eflags: 0x5 linked
 // Checksum 0x8a9829e4, Offset: 0x1158
 // Size: 0x54
 function private function_10dcbf51(localclientnum, var_e6ddb5de) {
     var_e6ddb5de playsound(localclientnum, "evt_ai_explode");
-    wait(1);
+    wait 1;
     var_e6ddb5de delete();
 }
 
-// Namespace namespace_a714a13e
+// Namespace zm_genesis_undercroft_low_grav
 // Params 7, eflags: 0x1 linked
 // Checksum 0x80d3479, Offset: 0x11b8
 // Size: 0x14c
-function function_467479e8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function snd_low_gravity_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         audio::playloopat("zmb_low_grav_room_loop", (-44, -6680, -1228));
         audio::playloopat("zmb_low_grav_machine_loop", (-44, -6680, -1228));

@@ -254,7 +254,7 @@ function scorechaintimer() {
     self endon(#"score_chain_timer");
     self endon(#"death");
     self endon(#"disconnect");
-    wait(20);
+    wait 20;
     self thread resetscorechain();
 }
 
@@ -331,7 +331,7 @@ function giveplayermomentum(event, player, victim, descvalue, weapon) {
         return;
     }
     if (!isdefined(label)) {
-        errormsg(event + "team");
+        errormsg(event + "<dev string:x28>");
         player giveplayermomentumnotification(score, %SCORE_BLANK, descvalue, countstowardrampage, weapon, combatefficiencyscore);
         return;
     }
@@ -429,7 +429,7 @@ function _setplayerscore(player, score) {
     player.score = player.pers["score"];
     recordplayerstats(player, "score", player.pers["score"]);
     if (level.wagermatch) {
-        player thread namespace_93432369::function_40cb89b3();
+        player thread wager::function_40cb89b3();
     }
 }
 
@@ -446,7 +446,7 @@ function _getplayerscore(player) {
 // Checksum 0xd6e5b5c1, Offset: 0x2528
 // Size: 0x176
 function playtop3sounds() {
-    wait(0.05);
+    wait 0.05;
     globallogic::updateplacement();
     for (i = 0; i < level.placement["all"].size; i++) {
         prevscoreplace = level.placement["all"][i].prevscoreplace;
@@ -610,10 +610,10 @@ function _giveplayerkillstreakinternal(player, momentum, oldmomentum, killstreak
     // Checksum 0xd7f27887, Offset: 0x2f90
     // Size: 0xf0
     function setplayermomentumdebug() {
-        setdvar("team", 0);
+        setdvar("<dev string:x96>", 0);
         while (true) {
-            wait(1);
-            momentumpercent = getdvarfloat("team", 0);
+            wait 1;
+            momentumpercent = getdvarfloat("<dev string:x96>", 0);
             if (momentumpercent != 0) {
                 player = util::gethostplayer();
                 if (!isdefined(player)) {
@@ -732,7 +732,7 @@ function resetteamscores() {
 function resetallscores() {
     resetteamscores();
     resetplayerscores();
-    namespace_e21b687a::function_2f0859a2();
+    teamops::function_2f0859a2();
 }
 
 // Namespace globallogic_score
@@ -1352,7 +1352,7 @@ function givekillstats(smeansofdeath, weapon, evictim) {
     waittillframeend();
     if (level.rankedmatch && self [[ level.iskillboosting ]]()) {
         /#
-            self iprintlnbold("team");
+            self iprintlnbold("<dev string:xa9>");
         #/
         return;
     }
@@ -1424,7 +1424,7 @@ function setinflictorstat(einflictor, eattacker, weapon) {
 function processshieldassist(killedplayer) {
     self endon(#"disconnect");
     killedplayer endon(#"disconnect");
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     if (!isdefined(level.teams[self.pers["team"]])) {
         return;
@@ -1447,7 +1447,7 @@ function processshieldassist(killedplayer) {
 function processassist(killedplayer, damagedone, weapon) {
     self endon(#"disconnect");
     killedplayer endon(#"disconnect");
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     if (!isdefined(level.teams[self.pers["team"]])) {
         return;
@@ -1476,17 +1476,17 @@ function processassist(killedplayer, damagedone, weapon) {
         self addweaponstat(weapon, "assists", 1, self.class_num, weaponpickedup);
     }
     switch (weapon.name) {
-    case 120:
+    case "concussion_grenade":
         assist_level = "assist_concussion";
         break;
-    case 122:
+    case "flash_grenade":
         assist_level = "assist_flash";
         break;
-    case 121:
+    case "emp_grenade":
         assist_level = "assist_emp";
         break;
-    case 123:
-    case 124:
+    case "proximity_grenade":
+    case "proximity_grenade_aoe":
         assist_level = "assist_proximity";
         break;
     }
@@ -1602,12 +1602,12 @@ function function_bfe18d92(killstreak, scoregiven) {
         self endon(#"disconnect");
         level endon(#"game_ended");
         while (level.inprematchperiod) {
-            wait(0.05);
+            wait 0.05;
         }
         for (;;) {
-            wait(5);
-            if (isdefined(level.teams[level.players[0].pers["team"]])) {
-                self rank::giverankxp("team", int(min(getdvarint("team"), 50)));
+            wait 5;
+            if (isdefined(level.teams[level.players[0].pers["<dev string:xf0>"]])) {
+                self rank::giverankxp("<dev string:xf5>", int(min(getdvarint("<dev string:xfa>"), 50)));
             }
         }
     }

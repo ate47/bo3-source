@@ -11,9 +11,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_2afd69a;
+#namespace mapping_drone;
 
-// Namespace namespace_2afd69a
+// Namespace mapping_drone
 // Params 2, eflags: 0x1 linked
 // Checksum 0xfea59928, Offset: 0x248
 // Size: 0x180
@@ -38,7 +38,7 @@ function function_10dad989(var_cc525a1a, b_active) {
     }
 }
 
-// Namespace namespace_2afd69a
+// Namespace mapping_drone
 // Params 3, eflags: 0x1 linked
 // Checksum 0x218d5d8c, Offset: 0x3d0
 // Size: 0x104
@@ -56,7 +56,7 @@ function follow_path(var_cc525a1a, str_flag, var_178571be) {
     self vehicle::get_on_and_go_path(var_cc525a1a);
 }
 
-// Namespace namespace_2afd69a
+// Namespace mapping_drone
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9c0e144f, Offset: 0x4e0
 // Size: 0x3c
@@ -65,7 +65,7 @@ function function_6a8adcf6(n_speed) {
     self setspeed(self.var_764bad40, 35, 35);
 }
 
-// Namespace namespace_2afd69a
+// Namespace mapping_drone
 // Params 0, eflags: 0x1 linked
 // Checksum 0x162d9e4c, Offset: 0x528
 // Size: 0xe
@@ -73,7 +73,7 @@ function function_2dde6e87() {
     self.var_764bad40 = undefined;
 }
 
-// Namespace namespace_2afd69a
+// Namespace mapping_drone
 // Params 1, eflags: 0x1 linked
 // Checksum 0xead26998, Offset: 0x540
 // Size: 0x54
@@ -88,7 +88,7 @@ function function_74191a2(var_e3262ea5) {
     self vehicle::lights_on();
 }
 
-// Namespace namespace_2afd69a
+// Namespace mapping_drone
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6a7a756c, Offset: 0x5a0
 // Size: 0x468
@@ -104,7 +104,7 @@ function function_fb6d201d() {
         if (isdefined(self.var_764bad40)) {
             self.n_speed = self.var_764bad40;
             self setspeed(self.var_764bad40, 35, 35);
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         var_11d57f72 = 10000;
@@ -157,13 +157,13 @@ function function_fb6d201d() {
             }
         }
         self setspeed(self.n_speed, 35, 35);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
 /#
 
-    // Namespace namespace_2afd69a
+    // Namespace mapping_drone
     // Params 0, eflags: 0x1 linked
     // Checksum 0xe080b7f1, Offset: 0xa10
     // Size: 0xea
@@ -171,19 +171,19 @@ function function_fb6d201d() {
         self endon(#"hash_c4902f95");
         self endon(#"reached_end_node");
         while (true) {
-            wait(1);
+            wait 1;
             switch (self.n_speed) {
             case 35:
-                iprintln("<unknown string>");
+                iprintln("<dev string:x28>");
                 break;
             case 25:
-                iprintln("<unknown string>");
+                iprintln("<dev string:x3b>");
                 break;
             case 5:
-                iprintln("<unknown string>");
+                iprintln("<dev string:x4d>");
                 break;
             default:
-                iprintln("<unknown string>");
+                iprintln("<dev string:x60>");
                 break;
             }
         }
@@ -191,7 +191,7 @@ function function_fb6d201d() {
 
 #/
 
-// Namespace namespace_2afd69a
+// Namespace mapping_drone
 // Params 4, eflags: 0x1 linked
 // Checksum 0xfe7f8847, Offset: 0xb08
 // Size: 0x204
@@ -218,12 +218,12 @@ function function_517ced56(var_d3dc91f3, var_c6f8c0e6, var_6813d241, var_2e2d306
         var_e6df4d78 = var_1337ab43 + var_5721da1;
         var_84ced1da rotateto(var_e6df4d78, 0.5, 0.2, 0.2);
         var_84ced1da waittill(#"rotatedone");
-        wait(randomfloatrange(1, 2));
+        wait randomfloatrange(1, 2);
     }
     var_84ced1da delete();
 }
 
-// Namespace namespace_2afd69a
+// Namespace mapping_drone
 // Params 1, eflags: 0x0
 // Checksum 0xcb3fe5e2, Offset: 0xd18
 // Size: 0x1bc
@@ -247,13 +247,13 @@ function function_4f6daa65(b_on) {
     self clientfield::set("extra_cam_ent", 0);
 }
 
-// Namespace namespace_2afd69a
+// Namespace mapping_drone
 // Params 2, eflags: 0x5 linked
 // Checksum 0x4f0ff879, Offset: 0xee0
 // Size: 0x5c
 function private function_dbc35f5e(var_c2dc2b72, delay) {
     self setluimenudata(var_c2dc2b72, "close_current_menu", 1);
-    wait(delay);
+    wait delay;
     self closeluimenu(var_c2dc2b72);
 }
 

@@ -321,7 +321,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
                 scoreevents::processscoreevent("killed_defender", attacker, self, weapon);
             } else {
                 /#
-                    attacker iprintlnbold("bombexplosion");
+                    attacker iprintlnbold("<dev string:x28>");
                 #/
             }
         } else {
@@ -340,7 +340,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
                 scoreevents::processscoreevent("killed_attacker", attacker, self, weapon);
             } else {
                 /#
-                    attacker iprintlnbold("script_model");
+                    attacker iprintlnbold("<dev string:x6f>");
                 #/
             }
         }
@@ -359,7 +359,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 // Size: 0x11c
 function checkallowspectating() {
     self endon(#"disconnect");
-    wait(0.05);
+    wait 0.05;
     update = 0;
     livesleft = !(level.numlives && !self.pers["lives"]);
     if (!level.alivecount[game["attackers"]] && !livesleft) {
@@ -496,7 +496,7 @@ function givelastattackerwarning() {
         } else {
             fullhealthtime += interval;
         }
-        wait(interval);
+        wait interval;
         if (self.health == self.maxhealth && fullhealthtime >= 3) {
             break;
         }
@@ -759,7 +759,7 @@ function function_3fa7f3e6(player) {
         self gameobjects::set_flags(1);
         level thread bombplanted(self, player);
         /#
-            print("<unknown string>" + self.label);
+            print("<dev string:xb6>" + self.label);
         #/
         bbprint("mpobjective", "gametime %d objtype %s label %s team %s playerx %d playery %d playerz %d", gettime(), "dem_bombplant", self.label, team, player.origin);
         player notify(#"bomb_planted");
@@ -776,7 +776,7 @@ function function_3fa7f3e6(player) {
             player recordgameevent("plant");
         } else {
             /#
-                player iprintlnbold("<unknown string>");
+                player iprintlnbold("<dev string:xc5>");
             #/
         }
         level thread popups::displayteammessagetoall(%MP_EXPLOSIVES_PLANTED_BY, player);
@@ -786,7 +786,7 @@ function function_3fa7f3e6(player) {
     self gameobjects::set_flags(0);
     player notify(#"bomb_defused");
     /#
-        print("<unknown string>" + self.label);
+        print("<dev string:x108>" + self.label);
     #/
     self thread bombdefused(player);
     self resetbombzone();
@@ -802,7 +802,7 @@ function function_3fa7f3e6(player) {
         player recordgameevent("defuse");
     } else {
         /#
-            player iprintlnbold("<unknown string>");
+            player iprintlnbold("<dev string:x117>");
         #/
     }
     level thread popups::displayteammessagetoall(%MP_EXPLOSIVES_DEFUSED_BY, player);
@@ -820,9 +820,9 @@ function ondrop(player) {
         globallogic_audio::leader_dialog("bombFriendlyDropped", player.pers["team"]);
         /#
             if (isdefined(player)) {
-                print("<unknown string>");
+                print("<dev string:x15b>");
             } else {
-                print("<unknown string>");
+                print("<dev string:x15b>");
             }
         #/
     }
@@ -842,7 +842,7 @@ function onpickup(player) {
         thread sound::play_on_players("mus_sd_pickup" + "_" + level.teampostfix[player.pers["team"]], player.pers["team"]);
         globallogic_audio::leader_dialog("bombFriendlyTaken", player.pers["team"]);
         /#
-            print("<unknown string>");
+            print("<dev string:x168>");
         #/
     }
     sound::play_on_players(game["bomb_recovered_sound"], game["attackers"]);
@@ -985,7 +985,7 @@ function bombplanted(destroyedobj, player) {
         globallogic_utils::pausetimer();
         level.var_df6954d8 = 1;
         setgameendtime(0);
-        wait(3);
+        wait 3;
         function_3649f4f9(team, game["strings"]["target_destroyed"]);
         return;
     }
@@ -1057,18 +1057,18 @@ function function_c50057a0(var_4faa45a0, duration) {
         while (isdefined(level.hostmigrationtimer)) {
             endtime += -6;
             function_296d9a20(var_4faa45a0, endtime);
-            wait(0.25);
+            wait 0.25;
         }
     }
     /#
         if (gettime() != endtime) {
-            println("<unknown string>" + gettime() + "<unknown string>" + endtime);
+            println("<dev string:x173>" + gettime() + "<dev string:x190>" + endtime);
         }
     #/
     while (isdefined(level.hostmigrationtimer)) {
         endtime += -6;
         function_296d9a20(var_4faa45a0, endtime);
-        wait(0.25);
+        wait 0.25;
     }
     return gettime() - starttime;
 }
@@ -1109,7 +1109,7 @@ function bombdefused(player) {
 // Checksum 0x69217c5d, Offset: 0x5a50
 // Size: 0x74
 function function_ef279c85(team, enemyteam) {
-    wait(3);
+    wait 3;
     if (!isdefined(team) || !isdefined(enemyteam)) {
         return;
     }

@@ -26,8 +26,8 @@ function autoexec function_58d5283a() {
     level.var_24893e7 = spawn("script_model", (0, 0, 0));
     level.var_24893e7 sethighdetail(1);
     level.var_24893e7 ghost();
-    level.var_a432d965 = struct::get_script_bundle("bonuszmdata", mapname);
-    var_6a173bd1 = function_e8ef6cb0(level.var_a432d965, "weaponsTable");
+    level.bonuszmdata = struct::get_script_bundle("bonuszmdata", mapname);
+    var_6a173bd1 = function_e8ef6cb0(level.bonuszmdata, "weaponsTable");
     assert(isdefined(var_6a173bd1));
     function_549c28ac("gamedata/tables/cpzm/" + var_6a173bd1);
 }
@@ -88,7 +88,7 @@ function function_1e2e0936(var_1010f96a) {
 function function_53200e4d(var_1010f96a) {
     assert(isdefined(level.var_acba406b));
     assert(isdefined(level.var_ed11f8b7));
-    assert(isdefined(level.var_a9e78bf7["magicboxonlyweaponchance"]));
+    assert(isdefined(level.var_a9e78bf7["<dev string:x28>"]));
     var_82d771df = undefined;
     var_d9cb0358 = [];
     if (var_1010f96a && level.var_5e3f3853 < level.var_a9e78bf7["maxmagicboxonlyweapons"] && randomint(100) < level.var_a9e78bf7["magicboxonlyweaponchance"] && level.var_ed11f8b7.size) {
@@ -275,7 +275,7 @@ function function_132d9eee(weapon) {
     item = self dropitem(weapon, "tag_origin");
     if (!isdefined(item)) {
         /#
-            iprintlnbold("magicboxonlyweaponchance" + weapon.name + "magicboxonlyweaponchance");
+            iprintlnbold("<dev string:x41>" + weapon.name + "<dev string:x68>");
         #/
         return;
     }

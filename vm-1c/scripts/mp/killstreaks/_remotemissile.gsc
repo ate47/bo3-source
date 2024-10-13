@@ -135,7 +135,7 @@ function getbestspawnpoint(remotemissilespawnpoints) {
         drawtime = int(timeslice * 20);
         for (time = 0; time < drawtime; time++) {
             line(start, end, color, 0, 1);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -243,7 +243,7 @@ function hackedpostfunction(hacker) {
 // Size: 0x3c
 function function_45c10a49() {
     self endon(#"death");
-    wait(0.1);
+    wait 0.1;
     self clientfield::set("remote_missile_fired", 1);
 }
 
@@ -260,7 +260,7 @@ function watch_missile_kill_z() {
     rocket endon(#"remotemissle_killstreak_done");
     rocket endon(#"death");
     while (rocket.origin[2] > kill_z) {
-        wait(0.1);
+        wait 0.1;
     }
     rocket detonate();
 }
@@ -327,7 +327,7 @@ function missile_brake_timeout_watch() {
     self waittill(#"missile_brake");
     rocket playsound("wpn_remote_missile_brake_npc");
     player playlocalsound("wpn_remote_missile_brake_plr");
-    wait(1.5);
+    wait 1.5;
     if (isdefined(self)) {
         self setmissilebrake(0);
     }
@@ -400,7 +400,7 @@ function function_5e8614bc(duration) {
     static.sort = 20;
     static.immunetodemogamehudsettings = 1;
     self clientfield::set("remote_killstreak_static", 1);
-    wait(duration);
+    wait duration;
     self clientfield::set("remote_killstreak_static", 0);
     static destroy();
     var_d4e19fd2 destroy();
@@ -475,7 +475,7 @@ function missile_sound_impact(player, distance) {
             self playsound("wpn_remote_missile_inc");
             return;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -701,7 +701,7 @@ function targeting_hud_think(rocket) {
                 self.var_9f313f0a[index].alpha = 1;
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -715,14 +715,14 @@ function missile_deploy_watch(rocket) {
     rocket endon(#"remotemissile_bomblets_launched");
     rocket endon(#"death");
     level endon(#"game_ended");
-    wait(0.25);
+    wait 0.25;
     self thread create_missile_hud(rocket);
     while (true) {
         if (self attackbuttonpressed()) {
             self thread missile_deploy(rocket, 0);
             continue;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -781,7 +781,7 @@ function bomblet_camera_waiter(rocket) {
     level endon(#"game_ended");
     delay = getdvarfloat("scr_rmbomblet_camera_delaytime", 1);
     self waittill(#"bomblet_exploded");
-    wait(delay);
+    wait delay;
     rocket notify(#"death");
     self notify(#"remotemissile_done");
 }
@@ -792,7 +792,7 @@ function bomblet_camera_waiter(rocket) {
 // Size: 0x5c
 function setup_bomblet_map_icon() {
     self endon(#"death");
-    wait(0.1);
+    wait 0.1;
     self clientfield::set("remote_missile_bomblet_fired", 1);
     self clientfield::set("enemyvehicle", 1);
 }
@@ -816,7 +816,7 @@ function setup_bomblet(bomb) {
 function fire_bomblet(rocket, explosionradius, target, waitframes) {
     origin = rocket.origin;
     targetorigin = target.origin + (0, 0, 50);
-    wait(waitframes * 0.05);
+    wait waitframes * 0.05;
     if (isdefined(rocket)) {
         origin = rocket.origin;
     }
@@ -833,7 +833,7 @@ function fire_random_bomblet(rocket, explosionradius, quadrant, waitframes) {
     angles = rocket.angles;
     owner = rocket.owner;
     aimtarget = rocket.aimtarget;
-    wait(waitframes * 0.05);
+    wait waitframes * 0.05;
     angle = randomintrange(10 + 60 * quadrant, 50 + 60 * quadrant);
     radius = randomintrange(-56, 700);
     x = min(radius, 550) * cos(angle);

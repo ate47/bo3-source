@@ -62,7 +62,7 @@ function callback_vehicledamage(einflictor, eattacker, idamage, idflags, smeanso
     } else if (isdefined(level.overridevehicledamage)) {
         idamage = self [[ level.overridevehicledamage ]](einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, damagefromunderneath, modelindex, partname, vsurfacenormal);
     }
-    assert(isdefined(idamage), "participation");
+    assert(isdefined(idamage), "<dev string:x28>");
     if (idamage == 0) {
         return;
     }
@@ -163,8 +163,8 @@ function callback_vehicledamage(einflictor, eattacker, idamage, idflags, smeanso
         }
     }
     /#
-        if (getdvarint("participation")) {
-            println("participation" + self getentitynumber() + "participation" + self.health + "participation" + eattacker.clientid + "participation" + isplayer(einflictor) + "participation" + idamage + "participation" + shitloc);
+        if (getdvarint("<dev string:x61>")) {
+            println("<dev string:x6f>" + self getentitynumber() + "<dev string:x76>" + self.health + "<dev string:x7f>" + eattacker.clientid + "<dev string:x8a>" + isplayer(einflictor) + "<dev string:xa0>" + idamage + "<dev string:xa9>" + shitloc);
         }
     #/
     if (true) {
@@ -183,7 +183,7 @@ function callback_vehicledamage(einflictor, eattacker, idamage, idflags, smeanso
             lpattackerteam = "world";
         }
         /#
-            logprint("participation" + lpselfnum + "participation" + lpselfteam + "participation" + lpattackguid + "participation" + lpattacknum + "participation" + lpattackerteam + "participation" + lpattackname + "participation" + weapon.name + "participation" + idamage + "participation" + smeansofdeath + "participation" + shitloc + "participation");
+            logprint("<dev string:xb2>" + lpselfnum + "<dev string:xb6>" + lpselfteam + "<dev string:xb6>" + lpattackguid + "<dev string:xb6>" + lpattacknum + "<dev string:xb6>" + lpattackerteam + "<dev string:xb6>" + lpattackname + "<dev string:xb6>" + weapon.name + "<dev string:xb6>" + idamage + "<dev string:xb6>" + smeansofdeath + "<dev string:xb6>" + shitloc + "<dev string:xb8>");
         #/
     }
 }

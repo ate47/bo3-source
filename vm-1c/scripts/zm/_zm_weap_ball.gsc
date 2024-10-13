@@ -164,7 +164,7 @@ function function_f1b94849(willbekilled, inflictor, attacker, damage, flags, mea
 // Size: 0x44
 function __main__() {
     callback::on_connect(&function_cffd1019);
-    level.var_4f928387 = undefined;
+    level.ball_start = undefined;
     level.ball = undefined;
     level.objectivepingdelay = 1;
 }
@@ -222,7 +222,7 @@ function function_4dbb4a6a() {
         self.projectile endon(#"stationary");
         self.projectile endon(#"grenade_bounce");
         while (true) {
-            wait(1);
+            wait 1;
         }
     }
 }
@@ -280,9 +280,9 @@ function function_972a6af9() {
     } else {
         /#
             if (isdefined(winner)) {
-                print("ball_score_axis" + winner.name);
+                print("<dev string:x28>" + winner.name);
             } else {
-                print("ball_score_axis");
+                print("<dev string:x3a>");
             }
         #/
     }
@@ -321,7 +321,7 @@ function function_67cb1206() {
                 player disableoffhandweapons();
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -413,7 +413,7 @@ function function_a41df27c() {
         self.projectile delete();
     }
     self gameobjects::allow_carry("none");
-    level.var_4f928387 delete();
+    level.ball_start delete();
     level.ball = undefined;
 }
 
@@ -422,8 +422,8 @@ function function_a41df27c() {
 // Checksum 0xa72152b5, Offset: 0x1cd8
 // Size: 0x6c
 function function_5faeea5e(player) {
-    level.var_4f928387 = spawn("trigger_radius", player.origin + (0, 0, 0), 2, 50, 50);
-    level.ball = function_dbf94d16(level.var_4f928387);
+    level.ball_start = spawn("trigger_radius", player.origin + (0, 0, 0), 2, 50, 50);
+    level.ball = function_dbf94d16(level.ball_start);
 }
 
 // Namespace ball
@@ -463,8 +463,8 @@ function function_257ed160(player, var_501dd320) {
 // Checksum 0xb0d447ae, Offset: 0x1f68
 // Size: 0x5c
 function function_4bff2a85(v_pos) {
-    level.var_4f928387 = spawn("trigger_radius", v_pos, 2, 50, 50);
-    level.ball = function_dbf94d16(level.var_4f928387);
+    level.ball_start = spawn("trigger_radius", v_pos, 2, 50, 50);
+    level.ball = function_dbf94d16(level.ball_start);
 }
 
 // Namespace ball
@@ -584,7 +584,7 @@ function function_756cbdda(player) {
         return;
     }
     while (!zm_laststand::laststand_has_players_weapons_returned(player)) {
-        wait(0.05);
+        wait 0.05;
     }
     if (self.type == "carryObject") {
         if (isdefined(player.carryobject)) {
@@ -917,7 +917,7 @@ function function_98827162(var_fd894ecd, var_a987c5a2, var_6f3d4b2e) {
         }
     } else if (zm_utility::is_player_valid(self.lastcarrier)) {
         while (isdefined(self.lastcarrier.is_flung) && self.lastcarrier.is_flung) {
-            wait(0.1);
+            wait 0.1;
         }
         if (!self.lastcarrier isonground()) {
             var_195da49c = bullettrace(self.lastcarrier.origin, self.lastcarrier.origin + (0, 0, -100000), 0, self.lastcarrier)["position"] + (0, 0, 16);
@@ -952,14 +952,14 @@ function function_db6a152e(goal) {
     visual = self.visuals[0];
     visual moveto(self.trigger.origin, var_c3f5985e, 0, var_c3f5985e);
     visual rotatevelocity((1080, 1080, 0), total_time, total_time, 0);
-    wait(var_85678934);
+    wait var_85678934;
     goal.ball_in_goal = 0;
     self.visibleteam = "neutral";
     self gameobjects::function_85576d4d("friendly", 0);
     self gameobjects::function_85576d4d("enemy", 0);
     self gameobjects::update_objective();
     visual movez(4000, var_55f7566e, var_55f7566e * 0.1, 0);
-    wait(var_55f7566e);
+    wait var_55f7566e;
     self thread ball_return_home();
 }
 
@@ -987,7 +987,7 @@ function function_7cd85c83(var_fd894ecd, var_6f3d4b2e) {
     self gameobjects::function_85576d4d("friendly", 1);
     self gameobjects::function_85576d4d("enemy", 1);
     if (var_fd894ecd) {
-        wait(fall_time);
+        wait fall_time;
     }
     level clientfield::set("ball_away", 0);
     visual clientfield::set("ball_on_ground_fx", 1);
@@ -1024,7 +1024,7 @@ function function_b8faebaf(var_dbefa1ce) {
         self.projectile delete();
     }
     self gameobjects::allow_carry("none");
-    wait(var_dbefa1ce);
+    wait var_dbefa1ce;
     self gameobjects::allow_carry("any");
 }
 
@@ -1053,7 +1053,7 @@ function ball_pass_watch() {
         self thread ball_pass_or_throw_active();
         pass_target = self.pass_target;
         var_bd2ced7c = self.pass_target.origin;
-        wait(0.15);
+        wait 0.15;
         if (isdefined(self.pass_target)) {
             pass_target = self.pass_target;
             self.carryobject thread ball_pass_projectile(self, pass_target, var_bd2ced7c);
@@ -1172,7 +1172,7 @@ function function_40dff2cd(trigger) {
             }
         }
         self.balldropdelay = undefined;
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1219,7 +1219,7 @@ function ball_check_pass_kill_pickup(carryobj) {
 // Size: 0x2a
 function timer_run(time) {
     self endon(#"hash_a5c97639");
-    wait(time);
+    wait time;
     self notify(#"hash_88be9d37");
 }
 
@@ -1242,10 +1242,10 @@ function adjust_for_stance(ball) {
     while (isdefined(target) && isdefined(ball)) {
         var_e13766c7 = 50;
         switch (target getstance()) {
-        case 65:
+        case "crouch":
             var_e13766c7 = 30;
             break;
-        case 66:
+        case "prone":
             var_e13766c7 = 15;
             break;
         }
@@ -1253,7 +1253,7 @@ function adjust_for_stance(ball) {
             ball ballsettarget(target, (0, 0, var_e13766c7));
             var_e13766c7 = var_5fe7ebc7;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1370,7 +1370,7 @@ function ball_pass_or_throw_active() {
     self.pass_or_throw_active = 1;
     self allowmelee(0);
     while (getweapon("ball") == self getcurrentweapon()) {
-        wait(0.05);
+        wait 0.05;
     }
     self allowmelee(1);
     self.pass_or_throw_active = 0;
@@ -1389,7 +1389,7 @@ function ball_download_fx(var_7ee2b1c, waittime) {
 // Checksum 0xb9b95269, Offset: 0x56a0
 // Size: 0x1c
 function function_2635f289() {
-    ball_assign_start(level.var_4f928387);
+    ball_assign_start(level.ball_start);
 }
 
 // Namespace ball
@@ -1468,7 +1468,7 @@ function function_1b26c689() {
 function function_fed77788(var_bdc0f958, v_force) {
     visuals = self.visuals[0];
     visuals unlink();
-    wait(0.05);
+    wait 0.05;
     if (isdefined(self.projectile)) {
         self.projectile delete();
     }
@@ -1501,7 +1501,7 @@ function function_96acd1aa() {
                 return;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1734,7 +1734,7 @@ function player_update_pass_target(var_afffeadd) {
             }
         }
         self player_set_pass_target(new_target);
-        wait(0.05);
+        wait 0.05;
     }
 }
 

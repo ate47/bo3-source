@@ -143,9 +143,9 @@ function turn_revive_on() {
         }
         array::thread_all(machine_triggers, &zm_perks::set_power_on, 0);
         if (isdefined(level.var_44ebf6d) && level.var_44ebf6d) {
-            level waittill(#"hash_a7912f12");
+            level waittill(#"revive_on");
         } else if (!var_2d92a626) {
-            level waittill(#"hash_a7912f12");
+            level waittill(#"revive_on");
         }
         for (i = 0; i < machine.size; i++) {
             if (isdefined(machine[i].classname) && machine[i].classname == "script_model") {
@@ -205,7 +205,7 @@ function function_ba808584(machine_clip, var_2d92a626) {
     if (isdefined(level.var_d627adfb) && !(isdefined(level.var_d627adfb) && level.var_d627adfb)) {
         return;
     }
-    wait(0.1);
+    wait 0.1;
     var_fb07f42a = 0;
     if (isdefined(var_2d92a626) && var_2d92a626) {
         var_fb07f42a = 1;
@@ -233,13 +233,13 @@ function function_ba808584(machine_clip, var_2d92a626) {
         unhide_quickrevive();
         restart_quickrevive();
         level notify(#"revive_off");
-        wait(0.1);
+        wait 0.1;
         level notify(#"stop_quickrevive_logic");
     } else {
         if (!(isdefined(level.var_54b80118) && level.var_54b80118)) {
             unhide_quickrevive();
             level notify(#"revive_off");
-            wait(0.1);
+            wait 0.1;
         }
         level notify(#"revive_hide");
         level notify(#"stop_quickrevive_logic");
@@ -266,8 +266,8 @@ function function_ba808584(machine_clip, var_2d92a626) {
     level thread turn_revive_on();
     if (var_fb07f42a) {
         zm_perks::perk_unpause("specialty_quickrevive");
-        level notify(#"hash_a7912f12");
-        wait(0.1);
+        level notify(#"revive_on");
+        wait 0.1;
         level notify(#"specialty_quickrevive_power_on");
     } else {
         zm_perks::perk_pause("specialty_quickrevive");
@@ -329,7 +329,7 @@ function function_faffdf64() {
     level endon(#"hash_1d63cfa4");
     var_2d92a626 = 0;
     var_c7a4c008 = 0;
-    wait(0.05);
+    wait 0.05;
     players = getplayers();
     if (isdefined(level.var_1bc2b35c) && (players.size == 1 || level.var_1bc2b35c)) {
         var_2d92a626 = 1;
@@ -369,7 +369,7 @@ function function_934dbe0d(machine_clip, blocker_model) {
     if (isdefined(level.var_2b07e0c2)) {
         level thread [[ level.var_2b07e0c2 ]]();
     }
-    wait(2);
+    wait 2;
     self playsound("zmb_box_move");
     playsoundatposition("zmb_whoosh", self.origin);
     if (isdefined(self._linked_ent)) {
@@ -468,7 +468,7 @@ function function_ff716478(machine_clip) {
 // Size: 0x418
 function unhide_quickrevive() {
     while (zm_perks::players_are_in_perk_area(level.quick_revive_machine)) {
-        wait(0.1);
+        wait 0.1;
     }
     if (isdefined(level.quick_revive_machine_clip)) {
         level.quick_revive_machine_clip show();
@@ -595,7 +595,7 @@ function function_5522faa5(var_f1e9b08) {
         return;
     }
     while (self.lives > 0) {
-        wait(0.1);
+        wait 0.1;
     }
     var_f1e9b08 setvisibletoplayer(self);
 }

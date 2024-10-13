@@ -143,11 +143,11 @@ function function_25291ec1(position, yaw, team, killstreak_id) {
         self thread spawndrone(startpoint + rightoffset, forwardoffset + rightoffset, targetpoint, angles, self.team, killstreak_id);
         self thread spawndrone(startpoint - rightoffset, forwardoffset - rightoffset, targetpoint, angles, self.team, killstreak_id);
         self thread spawndrone(startpoint + leftoffset, forwardoffset + leftoffset, targetpoint, angles, self.team, killstreak_id);
-        wait(1);
+        wait 1;
         self playsound("mpl_thunder_flyover_wash");
     }
-    wait(3);
-    self notify(#"hash_6c0f0160");
+    wait 3;
+    self notify(#"drone_strike_complete");
 }
 
 // Namespace drone_strike
@@ -175,7 +175,7 @@ function spawndrone(startpoint, endpoint, targetpoint, angles, team, killstreak_
     drone function_d3f5bb28();
     drone thread watchforemp(self);
     drone moveto(endpoint, 1.8, 0, 0);
-    wait(1.8);
+    wait 1.8;
     weapon = getweapon("drone_strike");
     velocity = drone getvelocity();
     halfgravity = 386;
@@ -198,9 +198,9 @@ function spawndrone(startpoint, endpoint, targetpoint, angles, team, killstreak_
     bomb function_d3f5bb28();
     bomb thread watchforemp(self);
     bomb.owner thread watchownerevents(bomb);
-    wait(0.05);
+    wait 0.05;
     drone hide();
-    wait(0.05);
+    wait 0.05;
     drone delete();
 }
 
@@ -235,7 +235,7 @@ function function_d04637c1(attacker, weapon) {
         playfxontag(params.ksexplosionfx, self, "tag_origin");
     }
     self setmodel("tag_origin");
-    wait(0.5);
+    wait 0.5;
     self delete();
 }
 

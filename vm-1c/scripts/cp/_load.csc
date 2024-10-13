@@ -70,7 +70,7 @@ function levelnotifyhandler(clientnum, state, oldstate) {
 // Checksum 0x1d397cf3, Offset: 0x838
 // Size: 0x1bc
 function main() {
-    assert(isdefined(level.first_frame), "sndHealth");
+    assert(isdefined(level.first_frame), "<dev string:x28>");
     if (isdefined(level._loadstarted) && level._loadstarted) {
         return;
     }
@@ -80,8 +80,8 @@ function main() {
     level thread register_clientfields();
     util::registersystem("levelNotify", &levelnotifyhandler);
     level.createfx_disable_fx = getdvarint("disable_fx") == 1;
-    level thread namespace_7df5be44::init();
-    level thread namespace_3d2de961::main();
+    level thread _claymore::init();
+    level thread _explosive_bolt::main();
     callback::add_callback(#"hash_da8d7d74", &basic_player_connect);
     callback::on_spawned(&on_player_spawned);
     system::wait_till("all");
@@ -117,9 +117,9 @@ function on_player_spawned(localclientnum) {
 function force_update_player_clientfields(localclientnum) {
     self endon(#"entityshutdown");
     while (!clienthassnapshot(localclientnum)) {
-        wait(0.25);
+        wait 0.25;
     }
-    wait(0.25);
+    wait 0.25;
     self processclientfieldsasifnew();
 }
 

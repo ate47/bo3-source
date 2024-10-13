@@ -19,7 +19,7 @@ function init_shared() {
     callback::on_spawned(&on_player_spawned);
     level.fx_flare = "killstreaks/fx_heli_chaff";
     /#
-        setdvar("top", "top");
+        setdvar("<dev string:x28>", "<dev string:x35>");
     #/
 }
 
@@ -92,8 +92,8 @@ function stingerfirednotify() {
         level endon(#"debug_missile");
         level.debug_missile_dots = [];
         while (true) {
-            if (getdvarint("top", 0) == 0) {
-                wait(0.5);
+            if (getdvarint("<dev string:x37>", 0) == 0) {
+                wait 0.5;
                 continue;
             }
             if (isdefined(missile)) {
@@ -112,7 +112,7 @@ function stingerfirednotify() {
                 dot_color = isdefined(missile_info.targetentnum) ? (1, 0, 0) : (0, 1, 0);
                 dev::debug_sphere(missile_info.origin, 10, dot_color, 0.66, 1);
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -124,7 +124,7 @@ function stingerfirednotify() {
 // Size: 0x70
 function stingerwaitforads() {
     while (!self playerstingerads()) {
-        wait(0.05);
+        wait 0.05;
         currentweapon = self getcurrentweapon();
         if (currentweapon.lockontype != "Legacy Single") {
             return false;
@@ -144,7 +144,7 @@ function stingertoggleloop() {
         weapon = self waittill(#"weapon_change");
         while (weapon.lockontype == "Legacy Single") {
             if (self getweaponammoclip(weapon) == 0) {
-                wait(0.05);
+                wait 0.05;
                 weapon = self getcurrentweapon();
                 continue;
             }
@@ -153,7 +153,7 @@ function stingertoggleloop() {
             }
             self thread stingerirtloop(weapon);
             while (self playerstingerads()) {
-                wait(0.05);
+                wait 0.05;
             }
             self notify(#"stinger_irt_off");
             self clearirtarget();
@@ -172,7 +172,7 @@ function stingerirtloop(weapon) {
     self endon(#"stinger_irt_off");
     locklength = self getlockonspeed();
     for (;;) {
-        wait(0.05);
+        wait 0.05;
         if (!self hasweapon(weapon)) {
             break;
         }
@@ -275,8 +275,8 @@ function stingerirtloop(weapon) {
 // Size: 0x170
 function targetwithinrangeofplayspace(target) {
     /#
-        if (getdvarint("top", 0) > 0) {
-            extraradiusdvar = getdvarint("top", 5000);
+        if (getdvarint("<dev string:x49>", 0) > 0) {
+            extraradiusdvar = getdvarint("<dev string:x81>", 5000);
             if (extraradiusdvar != (isdefined(level.missilelockplayspacecheckextraradius) ? level.missilelockplayspacecheckextraradius : 0)) {
                 level.missilelockplayspacecheckextraradius = extraradiusdvar;
                 level.missilelockplayspacecheckradiussqr = undefined;
@@ -348,7 +348,7 @@ function getbeststingertarget(weapon) {
     targetsvalid = [];
     for (idx = 0; idx < targetsall.size; idx++) {
         /#
-            if (getdvarstring("top") == "top") {
+            if (getdvarstring("<dev string:x28>") == "<dev string:xa8>") {
                 if (self insidestingerreticlenolock(targetsall[idx], weapon)) {
                     targetsvalid[targetsvalid.size] = targetsall[idx];
                 }
@@ -505,7 +505,7 @@ function looplocalseeksound(alias, interval) {
     for (;;) {
         self playsoundforlocalplayer(alias);
         self playrumbleonentity("stinger_lock_rumble");
-        wait(interval / 2);
+        wait interval / 2;
     }
 }
 
@@ -539,13 +539,13 @@ function looplocallocksound(alias, interval) {
     for (;;) {
         self playsoundforlocalplayer(alias);
         self playrumbleonentity("stinger_lock_rumble");
-        wait(interval / 6);
+        wait interval / 6;
         self playsoundforlocalplayer(alias);
         self playrumbleonentity("stinger_lock_rumble");
-        wait(interval / 6);
+        wait interval / 6;
         self playsoundforlocalplayer(alias);
         self playrumbleonentity("stinger_lock_rumble");
-        wait(interval / 6);
+        wait interval / 6;
         self stoprumble("stinger_lock_rumble");
     }
     self.stingerlocksound = undefined;
@@ -631,7 +631,7 @@ function lockingon(target, lock) {
     assert(isdefined(target.locking_on));
     clientnum = self getentitynumber();
     if (lock) {
-        target notify(#"hash_b081980b");
+        target notify(#"locking on");
         target.locking_on |= 1 << clientnum;
         self thread watchclearlockingon(target, clientnum);
         return;
@@ -675,7 +675,7 @@ function targetinghacking(target, lock) {
     assert(isdefined(target.locking_on_hacking));
     clientnum = self getentitynumber();
     if (lock) {
-        target notify(#"hash_e1494b46");
+        target notify(#"locking on hacking");
         target.locking_on_hacking |= 1 << clientnum;
         self thread watchclearhacking(target, clientnum);
         return;
@@ -865,7 +865,7 @@ function missiletarget_lockonmonitor(player, endon1, endon2) {
                 self clientfield::set("heli_warn_locked", 0);
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -1036,7 +1036,7 @@ function missiletarget_proximitydetonate(missile, attacker, weapon, endon1, endo
             missile thread _missiledetonate(attacker, weapon, 500, 600, 600, allowdirectdamage);
             return;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1107,7 +1107,7 @@ function missiletarget_deployflares(origin, angles) {
         target endon(#"death");
         while (true) {
             dev::debug_sphere(target.origin, 10, (1, 0, 0), 1, 1);
-            wait(0.05);
+            wait 0.05;
         }
     }
 

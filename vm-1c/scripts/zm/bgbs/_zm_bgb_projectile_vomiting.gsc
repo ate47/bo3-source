@@ -7,9 +7,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_a5a0319c;
+#namespace zm_bgb_projectile_vomiting;
 
-// Namespace namespace_a5a0319c
+// Namespace zm_bgb_projectile_vomiting
 // Params 0, eflags: 0x2
 // Checksum 0xf631c93, Offset: 0x210
 // Size: 0x34
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_projectile_vomiting", &__init__, undefined, "bgb");
 }
 
-// Namespace namespace_a5a0319c
+// Namespace zm_bgb_projectile_vomiting
 // Params 0, eflags: 0x1 linked
 // Checksum 0x34d7b1e0, Offset: 0x250
 // Size: 0xb4
@@ -30,7 +30,7 @@ function __init__() {
     bgb::register_actor_death_override("zm_bgb_projectile_vomiting", &actor_death_override);
 }
 
-// Namespace namespace_a5a0319c
+// Namespace zm_bgb_projectile_vomiting
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x310
 // Size: 0x4
@@ -38,7 +38,7 @@ function enable() {
     
 }
 
-// Namespace namespace_a5a0319c
+// Namespace zm_bgb_projectile_vomiting
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x320
 // Size: 0x4
@@ -46,18 +46,18 @@ function disable() {
     
 }
 
-// Namespace namespace_a5a0319c
+// Namespace zm_bgb_projectile_vomiting
 // Params 1, eflags: 0x1 linked
 // Checksum 0xad3199e8, Offset: 0x330
 // Size: 0x76
 function actor_death_override(attacker) {
     if (isdefined(self.damagemod)) {
         switch (self.damagemod) {
-        case 6:
-        case 7:
-        case 8:
-        case 9:
-        case 10:
+        case "MOD_EXPLOSIVE":
+        case "MOD_GRENADE":
+        case "MOD_GRENADE_SPLASH":
+        case "MOD_PROJECTILE":
+        case "MOD_PROJECTILE_SPLASH":
             clientfield::increment("projectile_vomit", 1);
             break;
         }

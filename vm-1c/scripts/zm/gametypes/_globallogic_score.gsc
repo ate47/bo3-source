@@ -63,7 +63,7 @@ function scorechaintimer() {
     self endon(#"score_chain_timer");
     self endon(#"death");
     self endon(#"disconnect");
-    wait(20);
+    wait 20;
     self thread resetscorechain();
 }
 
@@ -206,10 +206,10 @@ function _giveplayerkillstreakinternal(player, momentum, oldmomentum, killstreak
     // Checksum 0x9af048a7, Offset: 0xcf8
     // Size: 0xf0
     function setplayermomentumdebug() {
-        setdvar("mpteamscores", 0);
+        setdvar("<dev string:x28>", 0);
         while (true) {
-            wait(1);
-            momentumpercent = getdvarfloat("mpteamscores", 0);
+            wait 1;
+            momentumpercent = getdvarfloat("<dev string:x28>", 0);
             if (momentumpercent != 0) {
                 player = util::gethostplayer();
                 if (!isdefined(player)) {
@@ -584,7 +584,7 @@ function givekillstats(smeansofdeath, weapon, evictim) {
     waittillframeend();
     if (level.rankedmatch && self [[ level.iskillboosting ]]()) {
         /#
-            self iprintlnbold("mpteamscores");
+            self iprintlnbold("<dev string:x3b>");
         #/
         return;
     }
@@ -650,7 +650,7 @@ function setinflictorstat(einflictor, eattacker, weapon) {
 function processshieldassist(killedplayer) {
     self endon(#"disconnect");
     killedplayer endon(#"disconnect");
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     if (!isdefined(level.teams[self.pers["team"]])) {
         return;
@@ -672,7 +672,7 @@ function processshieldassist(killedplayer) {
 function processassist(killedplayer, damagedone, weapon) {
     self endon(#"disconnect");
     killedplayer endon(#"disconnect");
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     if (!isdefined(level.teams[self.pers["team"]])) {
         return;
@@ -694,17 +694,17 @@ function processassist(killedplayer, damagedone, weapon) {
     self incpersstat("assists", 1, 1, 1);
     self.assists = self getpersstat("assists");
     switch (weapon.name) {
-    case 41:
+    case "concussion_grenade":
         assist_level = "assist_concussion";
         break;
-    case 53:
+    case "flash_grenade":
         assist_level = "assist_flash";
         break;
-    case 52:
+    case "emp_grenade":
         assist_level = "assist_emp";
         break;
-    case 54:
-    case 55:
+    case "proximity_grenade":
+    case "proximity_grenade_aoe":
         assist_level = "assist_proximity";
         break;
     }

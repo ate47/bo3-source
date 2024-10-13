@@ -1,9 +1,9 @@
 #using scripts/shared/music_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_a7ac3fc4;
+#namespace zm_genesis_amb;
 
-// Namespace namespace_a7ac3fc4
+// Namespace zm_genesis_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x33d448ff, Offset: 0xd8
 // Size: 0x14
@@ -11,7 +11,7 @@ function main() {
     thread startzmbspawnersoundloops();
 }
 
-// Namespace namespace_a7ac3fc4
+// Namespace zm_genesis_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xba4561fa, Offset: 0xf8
 // Size: 0x15c
@@ -20,27 +20,27 @@ function startzmbspawnersoundloops() {
     if (isdefined(loopers) && loopers.size > 0) {
         delay = 0;
         /#
-            if (getdvarint("<unknown string>") > 0) {
-                println("<unknown string>" + loopers.size + "<unknown string>");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x34>" + loopers.size + "<dev string:x6c>");
             }
         #/
         for (i = 0; i < loopers.size; i++) {
             loopers[i] thread soundloopthink();
             delay += 1;
             if (delay % 20 == 0) {
-                wait(0.016);
+                wait 0.016;
             }
         }
         return;
     }
     /#
-        if (getdvarint("<unknown string>") > 0) {
-            println("<unknown string>");
+        if (getdvarint("<dev string:x28>") > 0) {
+            println("<dev string:x77>");
         }
     #/
 }
 
-// Namespace namespace_a7ac3fc4
+// Namespace zm_genesis_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x72bff574, Offset: 0x260
 // Size: 0x16c

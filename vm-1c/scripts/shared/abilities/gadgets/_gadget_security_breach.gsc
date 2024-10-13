@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_5846e657;
+#namespace _gadget_security_breach;
 
-// Namespace namespace_5846e657
+// Namespace _gadget_security_breach
 // Params 0, eflags: 0x2
 // Checksum 0x325425cd, Offset: 0x208
 // Size: 0x34
@@ -18,12 +18,12 @@ function autoexec function_2dc19561() {
     system::register("gadget_security_breach", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_5846e657
+// Namespace _gadget_security_breach
 // Params 0, eflags: 0x1 linked
 // Checksum 0x261418fb, Offset: 0x248
 // Size: 0x104
 function __init__() {
-    ability_player::register_gadget_activation_callbacks(23, &function_c5d34eae, &function_ae24e944);
+    ability_player::register_gadget_activation_callbacks(23, &gadget_security_breach_on, &function_ae24e944);
     ability_player::register_gadget_possession_callbacks(23, &function_2f62c66a, &function_957ab904);
     ability_player::register_gadget_flicker_callbacks(23, &function_612f0337);
     ability_player::register_gadget_is_inuse_callbacks(23, &function_439b773e);
@@ -32,7 +32,7 @@ function __init__() {
     callback::on_connect(&function_3ee9b19);
 }
 
-// Namespace namespace_5846e657
+// Namespace _gadget_security_breach
 // Params 1, eflags: 0x1 linked
 // Checksum 0x59b207ff, Offset: 0x358
 // Size: 0x2a
@@ -40,7 +40,7 @@ function function_439b773e(slot) {
     return self flagsys::get("gadget_security_breach_on");
 }
 
-// Namespace namespace_5846e657
+// Namespace _gadget_security_breach
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe942b942, Offset: 0x390
 // Size: 0x50
@@ -50,7 +50,7 @@ function function_aab070f0(slot) {
     }
 }
 
-// Namespace namespace_5846e657
+// Namespace _gadget_security_breach
 // Params 2, eflags: 0x1 linked
 // Checksum 0xb4356e45, Offset: 0x3e8
 // Size: 0x5c
@@ -60,7 +60,7 @@ function function_612f0337(slot, weapon) {
     }
 }
 
-// Namespace namespace_5846e657
+// Namespace _gadget_security_breach
 // Params 2, eflags: 0x1 linked
 // Checksum 0x5b44aba4, Offset: 0x450
 // Size: 0x5c
@@ -70,7 +70,7 @@ function function_2f62c66a(slot, weapon) {
     }
 }
 
-// Namespace namespace_5846e657
+// Namespace _gadget_security_breach
 // Params 2, eflags: 0x1 linked
 // Checksum 0x1e55dfb7, Offset: 0x4b8
 // Size: 0x5c
@@ -80,7 +80,7 @@ function function_957ab904(slot, weapon) {
     }
 }
 
-// Namespace namespace_5846e657
+// Namespace _gadget_security_breach
 // Params 0, eflags: 0x1 linked
 // Checksum 0x60f5fc23, Offset: 0x520
 // Size: 0x44
@@ -90,18 +90,18 @@ function function_3ee9b19() {
     }
 }
 
-// Namespace namespace_5846e657
+// Namespace _gadget_security_breach
 // Params 2, eflags: 0x1 linked
 // Checksum 0xe829d52c, Offset: 0x570
 // Size: 0x7c
-function function_c5d34eae(slot, weapon) {
+function gadget_security_breach_on(slot, weapon) {
     self flagsys::set("gadget_security_breach_on");
     if (isdefined(level.cybercom) && isdefined(level.cybercom.var_76af92c1)) {
         return self [[ level.cybercom.var_76af92c1._on ]](slot, weapon);
     }
 }
 
-// Namespace namespace_5846e657
+// Namespace _gadget_security_breach
 // Params 2, eflags: 0x1 linked
 // Checksum 0x233804a1, Offset: 0x5f8
 // Size: 0x7c
@@ -112,7 +112,7 @@ function function_ae24e944(slot, weapon) {
     }
 }
 
-// Namespace namespace_5846e657
+// Namespace _gadget_security_breach
 // Params 2, eflags: 0x1 linked
 // Checksum 0xfc9f1239, Offset: 0x680
 // Size: 0x5c

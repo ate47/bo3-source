@@ -1,9 +1,9 @@
 #using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_7685657b;
+#namespace cp_mi_eth_prologue_sound;
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x0
 // Checksum 0x638f2517, Offset: 0x218
 // Size: 0xa2
@@ -20,7 +20,7 @@ function main() {
     level thread function_889a9ace();
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x0
 // Checksum 0x231d057e, Offset: 0x2c8
 // Size: 0x82
@@ -31,7 +31,7 @@ function function_4b8b96fe() {
     level audio::playloopat("amb_jail_scene_5", (5530, -1634, -265));
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x0
 // Checksum 0xf711774d, Offset: 0x358
 // Size: 0xda
@@ -46,7 +46,7 @@ function function_aca4761() {
     level audio::stoploopat("evt_firehose", (-169, -585, -95));
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x0
 // Checksum 0x9cf783d2, Offset: 0x440
 // Size: 0x42
@@ -55,7 +55,7 @@ function function_669e0ca5() {
     level audio::playloopat("vox_garbled_radio_b", (-1003, -580, -13262));
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x0
 // Checksum 0x6b5aa60d, Offset: 0x490
 // Size: 0x22
@@ -63,7 +63,7 @@ function function_6ce0e63() {
     level audio::playloopat("evt_halway_equipment", (3437, 597, -341));
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x0
 // Checksum 0x9e10f440, Offset: 0x4c0
 // Size: 0x42
@@ -74,7 +74,7 @@ function function_eddf6028() {
     audio::snd_set_snapshot("default");
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x0
 // Checksum 0xe9c07cd6, Offset: 0x510
 // Size: 0x2
@@ -82,7 +82,7 @@ function function_35acdae6() {
     
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x0
 // Checksum 0x8ec9f7ed, Offset: 0x520
 // Size: 0xbb
@@ -100,32 +100,32 @@ function function_9806d032() {
         if (count > 10) {
             level thread function_ab91e7b9(var_c291c0f3);
         }
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 1, eflags: 0x0
 // Checksum 0xae4de7cb, Offset: 0x5e8
 // Size: 0x3a
 function function_ab91e7b9(location) {
-    wait(randomfloatrange(0.25, 2));
+    wait randomfloatrange(0.25, 2);
     playsound(0, "evt_garage_robot_hit", location);
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x0
 // Checksum 0x82b53ee0, Offset: 0x630
 // Size: 0x5a
 function function_c943c5e5() {
-    level waittill(#"hash_cd190858");
-    wait(5);
+    level waittill(#"saw");
+    wait 5;
     level notify(#"hash_f8c8ddf6");
     audio::playloopat("amb_base_distant_walla", (12187, -167, 1183));
     audio::playloopat("amb_base_alert_outside", (14740, -1188, 751));
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x0
 // Checksum 0xcf3db763, Offset: 0x698
 // Size: 0x6a
@@ -137,7 +137,7 @@ function function_7ec0e1ae() {
     audio::stoploopat("amb_distant_soldier_walla", (8160, 756, 270));
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x0
 // Checksum 0x924a7bac, Offset: 0x710
 // Size: 0x62
@@ -148,7 +148,7 @@ function function_eb4e50fb() {
     audio::stoploopat("amb_distant_soldier_walla", (12604, 1857, 357));
 }
 
-// Namespace namespace_7685657b
+// Namespace cp_mi_eth_prologue_sound
 // Params 0, eflags: 0x0
 // Checksum 0xc29f3fd8, Offset: 0x780
 // Size: 0x212

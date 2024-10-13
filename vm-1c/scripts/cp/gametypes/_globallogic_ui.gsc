@@ -102,7 +102,7 @@ function function_79bc3ebf() {
         } else {
             self clientfield::set_player_uimodel("hudItems.playerInCombat", 0);
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -351,7 +351,7 @@ function closemenus() {
 // Checksum 0x36e13dad, Offset: 0x1818
 // Size: 0x2ac
 function beginclasschoice() {
-    assert(isdefined(level.teams[self.pers["serverDifficulty"]]));
+    assert(isdefined(level.teams[self.pers["<dev string:x28>"]]));
     team = self.pers["team"];
     self closemenu(game["menu_start_menu"]);
     if (!getdvarint("art_review", 0)) {
@@ -364,7 +364,7 @@ function beginclasschoice() {
         if (isdefined(self.disableclassselection) && (isdefined(level.disableclassselection) && (isdefined(prevclass) || var_54fdb1d6 || level.disableclassselection) || self.disableclassselection) || getdvarint("migration_soak") == 1) {
             self.curclass = isdefined(prevclass) ? prevclass : level.defaultclass;
             self.pers["class"] = self.curclass;
-            wait(0.05);
+            wait 0.05;
             if (self.sessionstate != "playing" && game["state"] == "playing") {
                 self thread [[ level.spawnclient ]]();
             }
@@ -393,7 +393,7 @@ function function_b381d26() {
     self.var_6c56bb = 1;
     self thread function_e185d3f4();
     self hide();
-    wait(0.05);
+    wait 0.05;
     if (isdefined(level.var_d83bc14d) || isdefined(level.var_8f7c5cd0)) {
         function_bf7a95e2();
         self thread function_52326035();
@@ -406,15 +406,15 @@ function function_b381d26() {
     }
     if (var_e90e1424 && !(isdefined(level.is_safehouse) && level.is_safehouse)) {
         while (self.sessionstate !== "playing") {
-            wait(0.05);
+            wait 0.05;
         }
         self thread function_52326035();
         while (self isloadingcinematicplaying()) {
-            wait(0.05);
+            wait 0.05;
         }
         self flag::wait_till("loadout_given");
         waittillframeend();
-        wait(2);
+        wait 2;
         self util::streamer_wait(undefined, 5, 5);
         self thread lui::screen_fade_in(0.3, "black", "hot_join");
     }
@@ -427,7 +427,7 @@ function function_b381d26() {
     self.var_6c56bb = undefined;
     util::show_hud(1);
     /#
-        printtoprightln("serverDifficulty" + gettime() + "serverDifficulty" + self getentitynumber(), (1, 1, 1));
+        printtoprightln("<dev string:x2d>" + gettime() + "<dev string:x2f>" + self getentitynumber(), (1, 1, 1));
         streamerskiptodebug(getskiptos());
     #/
 }
@@ -438,7 +438,7 @@ function function_b381d26() {
 // Size: 0x8c
 function function_e185d3f4() {
     self endon(#"disconnect");
-    self endon(#"hash_73146bff");
+    self endon(#"kill_fullscreen_black");
     var_67fa9f87 = self.var_6c56bb;
     level waittill(#"save_restore");
     if (isdefined(var_67fa9f87) && var_67fa9f87) {
@@ -470,7 +470,7 @@ function function_52326035() {
     self flagsys::wait_till("loadout_given");
     self disableweapons();
     self freezecontrols(1);
-    wait(0.1);
+    wait 0.1;
     waittillframeend();
     self freezecontrols(1);
     self disableweapons();
@@ -485,7 +485,7 @@ function function_52326035() {
 // Checksum 0x40f1396b, Offset: 0x20a8
 // Size: 0x74
 function showmainmenuforteam() {
-    assert(isdefined(level.teams[self.pers["serverDifficulty"]]));
+    assert(isdefined(level.teams[self.pers["<dev string:x28>"]]));
     team = self.pers["team"];
     self openmenu(game["menu_changeclass_" + team]);
 }
@@ -672,7 +672,7 @@ function removespawnmessageshortly(delay) {
     self endon(#"disconnect");
     waittillframeend();
     self endon(#"end_respawn");
-    wait(delay);
+    wait delay;
     self util::clearlowermessage(2);
 }
 
@@ -684,14 +684,14 @@ function function_c1f135ab(var_6f7b69cd) {
     self endon(#"death");
     self endon(#"hash_94f19cd5");
     while (true) {
-        bonename, event = self waittill(#"hash_902a6d9f");
+        bonename, event = self waittill(#"weakpoint_update");
         if (bonename == var_6f7b69cd) {
             if (event == "damage") {
                 luinotifyevent(%weakpoint_update, 3, 2, self getentitynumber(), var_6f7b69cd);
             } else if (event == "repulse") {
                 luinotifyevent(%weakpoint_update, 3, 3, self getentitynumber(), var_6f7b69cd);
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 }
@@ -731,7 +731,7 @@ function function_8ee5a301(var_6f7b69cd, closestatemaxdistance, mediumstatemaxdi
 // Checksum 0xec2a034d, Offset: 0x2e60
 // Size: 0x26
 function function_2d11c5e4(var_6f7b69cd) {
-    self notify(#"hash_902a6d9f", var_6f7b69cd, "damage");
+    self notify(#"weakpoint_update", var_6f7b69cd, "damage");
 }
 
 // Namespace globallogic_ui
@@ -739,6 +739,6 @@ function function_2d11c5e4(var_6f7b69cd) {
 // Checksum 0xa0e41bc5, Offset: 0x2e90
 // Size: 0x26
 function function_8c6f9f69(var_6f7b69cd) {
-    self notify(#"hash_902a6d9f", var_6f7b69cd, "repulse");
+    self notify(#"weakpoint_update", var_6f7b69cd, "repulse");
 }
 

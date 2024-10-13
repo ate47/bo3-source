@@ -142,7 +142,7 @@ function crateland(crate, category, owner, team, context) {
     context.max_dist_from_location = 96;
     if (owner emp::enemyempactive() && (!crate is_location_good(crate.origin, context) || !isdefined(owner) || team != owner.team || !owner hasperk("specialty_immuneemp"))) {
         killstreakrules::killstreakstop(category, team, crate.package_contents_id);
-        wait(10);
+        wait 10;
         if (isdefined(crate)) {
             crate delete();
         }
@@ -330,7 +330,7 @@ function function_9e843a04() {
     var_5be12bc8 = (1, 1, 1);
     while (true) {
         if (getdvarint("scr_ai_tank_think_debug") == 0) {
-            wait(5);
+            wait 5;
             continue;
         }
         target_name = "unknown";
@@ -407,7 +407,7 @@ function function_9e843a04() {
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -547,7 +547,7 @@ function tank_damage_think() {
         self.maxhealth = 999999;
         self.health = self.maxhealth;
         /#
-            self.damage_debug = damage + "amws_launcher_turret" + weapon.name + "amws_launcher_turret";
+            self.damage_debug = damage + "<dev string:x28>" + weapon.name + "<dev string:x2b>";
         #/
         if (weapon.isemp && mod == "MOD_GRENADE_SPLASH") {
             emp_damage_to_apply = killstreak_bundles::get_emp_grenade_damage("ai_tank_drop", maxhealth);
@@ -621,7 +621,7 @@ function tank_low_health_fx() {
     }
     self.damage_fx setmodel("tag_origin");
     self.damage_fx linkto(self, "tag_turret", (0, 0, -14), (0, 0, 0));
-    wait(0.1);
+    wait 0.1;
     playfxontag(level.ai_tank_damage_fx, self.damage_fx, "tag_origin");
 }
 
@@ -642,7 +642,7 @@ function deleteonkillbrush(player) {
                 return;
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -671,7 +671,7 @@ function tank_stun(duration) {
     if (self.controlled) {
         self.owner clientfield::set_to_player("static_postfx", 1);
     }
-    wait(duration);
+    wait duration;
     self clientfield::set("ai_tank_stun", 0);
     if (self.controlled) {
         self.owner clientfield::set_to_player("static_postfx", 0);
@@ -704,12 +704,12 @@ function emp_crazy_death() {
             }
         }
         time += 0.05;
-        wait(0.05);
+        wait 0.05;
     }
     self clientfield::set("ai_tank_death", 1);
     playfx(level.ai_tank_explode_fx, self.origin, (0, 0, 1));
     playsoundatposition("wpn_agr_explode", self.origin);
-    wait(0.05);
+    wait 0.05;
     self hide();
 }
 
@@ -807,7 +807,7 @@ function tank_too_far_from_nav_mesh_abort_think() {
     self endon(#"death");
     not_on_nav_mesh_count = 0;
     for (;;) {
-        wait(1);
+        wait 1;
         not_on_nav_mesh_count = isdefined(getclosestpointonnavmesh(self.origin, 480)) ? 0 : not_on_nav_mesh_count + 1;
         if (not_on_nav_mesh_count >= 4) {
             self notify(#"death");
@@ -906,7 +906,7 @@ function valid_target(target, team, owner) {
             return false;
         }
         /#
-            if (target isinmovemode("amws_launcher_turret", "amws_launcher_turret")) {
+            if (target isinmovemode("<dev string:x2d>", "<dev string:x31>")) {
                 return false;
             }
         #/
@@ -1078,10 +1078,10 @@ function reload_rockets(player) {
     weapon_wait_duration_ms = int(bundle.ksweaponreloadtime * 1000);
     player setvehicleweaponwaitduration(weapon_wait_duration_ms);
     player setvehicleweaponwaitendtime(gettime() + weapon_wait_duration_ms);
-    wait(bundle.ksweaponreloadtime);
+    wait bundle.ksweaponreloadtime;
     self.numberrockets = 3;
     self update_client_ammo(self.numberrockets);
-    wait(0.4);
+    wait 0.4;
     if (!self.isstunned) {
         self disabledriverfiring(0);
     }
@@ -1095,7 +1095,7 @@ function watchwater() {
     self endon(#"death");
     inwater = 0;
     while (!inwater) {
-        wait(0.3);
+        wait 0.3;
         trace = physicstrace(self.origin + (0, 0, 42), self.origin + (0, 0, 12), (-2, -2, -2), (2, 2, 2), self, 4);
         inwater = trace["fraction"] < (42 - 36) / (42 - 12) && trace["fraction"] != 1;
         var_8e1f933b = 42 - 12 - trace["fraction"] * (42 - 12);
@@ -1117,13 +1117,13 @@ function watchwater() {
     // Checksum 0x8e0ebc57, Offset: 0x5030
     // Size: 0xa8
     function function_56aef0f() {
-        setdvar("amws_launcher_turret", "amws_launcher_turret");
+        setdvar("<dev string:x38>", "<dev string:x44>");
         for (;;) {
-            wait(0.25);
+            wait 0.25;
             level.var_466bc1b3 = level.var_551d9a16.firetime;
-            if (getdvarstring("amws_launcher_turret") == "amws_launcher_turret") {
+            if (getdvarstring("<dev string:x38>") == "<dev string:x45>") {
                 function_d20cb955();
-                setdvar("amws_launcher_turret", "amws_launcher_turret");
+                setdvar("<dev string:x38>", "<dev string:x44>");
             }
         }
     }
@@ -1138,10 +1138,10 @@ function watchwater() {
         for (;;) {
             self setvehgoalpos(node1.origin, 1);
             self waittill(#"reached_end_node");
-            wait(1);
+            wait 1;
             self setvehgoalpos(node2.origin, 1);
             self waittill(#"reached_end_node");
-            wait(1);
+            wait 1;
         }
     }
 
@@ -1150,14 +1150,14 @@ function watchwater() {
     // Checksum 0x8f8fedae, Offset: 0x5190
     // Size: 0x152
     function function_d20cb955() {
-        iprintln("amws_launcher_turret");
+        iprintln("<dev string:x4c>");
         nodes = dev::dev_get_node_pair();
         if (!isdefined(nodes)) {
-            iprintln("amws_launcher_turret");
+            iprintln("<dev string:x79>");
             return;
         }
-        iprintln("amws_launcher_turret");
-        tanks = getentarray("amws_launcher_turret", "amws_launcher_turret");
+        iprintln("<dev string:x8f>");
+        tanks = getentarray("<dev string:xae>", "<dev string:xb4>");
         foreach (tank in tanks) {
             tank notify(#"hash_9d163ef3");
             tank thread function_a06e2866(nodes[0], nodes[1]);
@@ -1169,28 +1169,28 @@ function watchwater() {
     // Checksum 0xb9f02065, Offset: 0x52f0
     // Size: 0x268
     function function_cd2a55ac() {
-                for (host = util::gethostplayer(); !isdefined(host); host = util::gethostplayer()) {
-            wait(0.25);
+        for (host = util::gethostplayer(); !isdefined(host); host = util::gethostplayer()) {
+            wait 0.25;
         }
         x = 80;
         y = 40;
         level.var_816d4dd0 = newclienthudelem(host);
         level.var_816d4dd0.x = x + 80;
         level.var_816d4dd0.y = y + 2;
-        level.var_816d4dd0.alignx = "amws_launcher_turret";
-        level.var_816d4dd0.aligny = "amws_launcher_turret";
-        level.var_816d4dd0.horzalign = "amws_launcher_turret";
-        level.var_816d4dd0.vertalign = "amws_launcher_turret";
+        level.var_816d4dd0.alignx = "<dev string:xbf>";
+        level.var_816d4dd0.aligny = "<dev string:xc4>";
+        level.var_816d4dd0.horzalign = "<dev string:xc8>";
+        level.var_816d4dd0.vertalign = "<dev string:xc8>";
         level.var_816d4dd0.alpha = 0;
         level.var_816d4dd0.foreground = 0;
-        level.var_816d4dd0 setshader("amws_launcher_turret", 1, 8);
+        level.var_816d4dd0 setshader("<dev string:xd3>", 1, 8);
         level.var_a8366348 = newclienthudelem(host);
         level.var_a8366348.x = x + 80;
         level.var_a8366348.y = y;
-        level.var_a8366348.alignx = "amws_launcher_turret";
-        level.var_a8366348.aligny = "amws_launcher_turret";
-        level.var_a8366348.horzalign = "amws_launcher_turret";
-        level.var_a8366348.vertalign = "amws_launcher_turret";
+        level.var_a8366348.alignx = "<dev string:xbf>";
+        level.var_a8366348.aligny = "<dev string:xc4>";
+        level.var_a8366348.horzalign = "<dev string:xc8>";
+        level.var_a8366348.vertalign = "<dev string:xc8>";
         level.var_a8366348.alpha = 0;
         level.var_a8366348.fontscale = 1;
         level.var_a8366348.foreground = 1;
@@ -1201,11 +1201,11 @@ function watchwater() {
     // Checksum 0x15b8a2af, Offset: 0x5560
     // Size: 0x158
     function function_11381be6() {
-        self.damage_debug = "amws_launcher_turret";
+        self.damage_debug = "<dev string:x44>";
         level.var_816d4dd0.alpha = 1;
         level.var_a8366348.alpha = 1;
         for (;;) {
-            wait(0.05);
+            wait 0.05;
             if (!isdefined(self) || !isalive(self)) {
                 level.var_816d4dd0.alpha = 0;
                 level.var_a8366348.alpha = 0;
@@ -1213,8 +1213,8 @@ function watchwater() {
             }
             width = self.health / self.maxhealth * 300;
             width = int(max(width, 1));
-            level.var_816d4dd0 setshader("amws_launcher_turret", width, 8);
-            str = self.health + "amws_launcher_turret" + self.damage_debug;
+            level.var_816d4dd0 setshader("<dev string:xd3>", width, 8);
+            str = self.health + "<dev string:xd9>" + self.damage_debug;
             level.var_a8366348 settext(str);
         }
     }

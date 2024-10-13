@@ -342,11 +342,11 @@ function function_52951bdf() {
         if (foundpath) {
             msg = self util::waittill_any_timeout(var_fc9d1e61, "near_goal", "force_goal", "reached_end_node", "goal");
             if (var_9a745b6c) {
-                wait(randomfloatrange(0.5 * var_3728fd9e, var_3728fd9e));
+                wait randomfloatrange(0.5 * var_3728fd9e, var_3728fd9e);
             }
             continue;
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -468,7 +468,7 @@ function function_d5b7537e(params) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["tag_rocket2"] = distancethreshold * -1;
+                point._scoredebug["<dev string:x28>"] = distancethreshold * -1;
             #/
             point.score += distancethreshold * -1;
         }
@@ -476,7 +476,7 @@ function function_d5b7537e(params) {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["tag_rocket2"] = sqrt(var_9742f62b);
+            point._scoredebug["<dev string:x28>"] = sqrt(var_9742f62b);
         #/
         point.score += sqrt(var_9742f62b);
         difftoprefereddirectness = abs(point.directness - 0);
@@ -488,14 +488,14 @@ function function_d5b7537e(params) {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["tag_rocket2"] = point.directness;
+            point._scoredebug["<dev string:x31>"] = point.directness;
         #/
         point.score += point.directness;
         /#
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["tag_rocket2"] = directnessscore;
+            point._scoredebug["<dev string:x3f>"] = directnessscore;
         #/
         point.score += directnessscore;
         if (point.directionchange < 0.6) {
@@ -503,7 +503,7 @@ function function_d5b7537e(params) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["tag_rocket2"] = -2000;
+                point._scoredebug["<dev string:x4a>"] = -2000;
             #/
             point.score += -2000;
         }
@@ -511,7 +511,7 @@ function function_d5b7537e(params) {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["tag_rocket2"] = point.directionchange;
+            point._scoredebug["<dev string:x5a>"] = point.directionchange;
         #/
         point.score += point.directionchange;
     }
@@ -573,7 +573,7 @@ function getnextmoveposition_tactical(enemy) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["tag_rocket2"] = -600;
+                point._scoredebug["<dev string:x6d>"] = -600;
             #/
             point.score += -600;
         }
@@ -581,14 +581,14 @@ function getnextmoveposition_tactical(enemy) {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["tag_rocket2"] = point.distawayfromengagementarea * -1;
+            point._scoredebug["<dev string:x7b>"] = point.distawayfromengagementarea * -1;
         #/
         point.score += point.distawayfromengagementarea * -1;
         /#
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["tag_rocket2"] = mapfloat(0, prefereddistawayfromorigin, 0, 600, point.disttoorigin2d);
+            point._scoredebug["<dev string:x8a>"] = mapfloat(0, prefereddistawayfromorigin, 0, 600, point.disttoorigin2d);
         #/
         point.score += mapfloat(0, prefereddistawayfromorigin, 0, 600, point.disttoorigin2d);
         if (point.inclaimedlocation) {
@@ -596,7 +596,7 @@ function getnextmoveposition_tactical(enemy) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["tag_rocket2"] = -500;
+                point._scoredebug["<dev string:x97>"] = -500;
             #/
             point.score += -500;
         }
@@ -608,7 +608,7 @@ function getnextmoveposition_tactical(enemy) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["tag_rocket2"] = heightscore;
+                point._scoredebug["<dev string:xa9>"] = heightscore;
             #/
             point.score += heightscore;
         }
@@ -634,7 +634,7 @@ function function_d19e6907() {
     while (true) {
         enemy = self.enemy;
         if (!isdefined(enemy)) {
-            wait(1);
+            wait 1;
             continue;
         }
         usepathfinding = 1;
@@ -667,7 +667,7 @@ function function_d19e6907() {
                     stucklocation = self.origin;
                 } else if (stuckcount > 10) {
                     /#
-                        assert(0, "tag_rocket2" + self.origin);
+                        assert(0, "<dev string:xb0>" + self.origin);
                         v_box_min = (self.radius * -1, self.radius * -1, self.radius * -1);
                         v_box_max = (self.radius, self.radius, self.radius);
                         box(self.origin, v_box_min, v_box_max, self.angles[1], (1, 0, 0), 1, 0, 1000000);
@@ -695,7 +695,7 @@ function function_d19e6907() {
             }
         }
         if (!isdefined(self.current_pathto_pos)) {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         distancetogoalsq = distancesquared(self.current_pathto_pos, self.origin);
@@ -708,14 +708,14 @@ function function_d19e6907() {
         foundpath = self setvehgoalpos(self.current_pathto_pos, 1, usepathfinding);
         if (foundpath) {
             /#
-                if (isdefined(getdvarint("tag_rocket2")) && getdvarint("tag_rocket2")) {
+                if (isdefined(getdvarint("<dev string:xd5>")) && getdvarint("<dev string:xd5>")) {
                     recordline(self.origin, self.current_pathto_pos, (0.3, 1, 0));
                     recordline(self.origin, enemy.origin, (1, 0, 0.4));
                 }
             #/
             msg = self util::waittill_any_timeout(var_fc9d1e61, "near_goal", "force_goal", "goal");
         } else {
-            wait(0.5);
+            wait 0.5;
         }
         enemy = self.enemy;
         if (isdefined(enemy)) {
@@ -729,13 +729,13 @@ function function_d19e6907() {
                 if (msg == "enemy_not_visible") {
                     msg = self util::waittill_any_timeout(1, "enemy_visible");
                     if (msg != "timeout") {
-                        wait(1);
+                        wait 1;
                     }
                 }
             }
             continue;
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -763,10 +763,10 @@ function function_ea4bbd0d(point, enemy, var_5e1bf73c) {
     }
     while (gettime() < timestart + var_5e1bf73c * 1000) {
         self.var_fa144784.origin = lerpvector(point, enemy.origin + offset, (gettime() - timestart) / var_5e1bf73c * 1000);
-        wait(0.05);
+        wait 0.05;
     }
     self.var_fa144784.origin = enemy.origin + offset;
-    wait(0.05);
+    wait 0.05;
     self.var_fa144784 linkto(enemy);
 }
 
@@ -790,18 +790,18 @@ function function_e2183396() {
                 self clearturrettarget();
                 self function_d013f7fa((15, 0, 0), 0);
                 if (isdefined(enemy) && isai(enemy)) {
-                    wait(2.5 + randomfloat(0.5));
+                    wait 2.5 + randomfloat(0.5);
                 } else {
-                    wait(2 + randomfloat(0.4));
+                    wait 2 + randomfloat(0.4);
                 }
             } else {
-                wait(0.4);
+                wait 0.4;
             }
             continue;
         }
         self clearturrettarget();
         self clearlookatent();
-        wait(0.4);
+        wait 0.4;
     }
 }
 
@@ -816,7 +816,7 @@ function function_76333d5f() {
     while (true) {
         enemy = self.enemy;
         if (!isdefined(enemy)) {
-            wait(1);
+            wait 1;
             continue;
         }
         if (isdefined(enemy) && self function_4246bc05(enemy) && vehicle_ai::iscooldownready("rocket_launcher")) {
@@ -827,7 +827,7 @@ function function_76333d5f() {
             target = enemy.origin;
             self setlookatent(enemy);
             self function_45bbe5dd();
-            wait(1.5);
+            wait 1.5;
             eye = self gettagorigin("tag_eye");
             if (isdefined(enemy)) {
                 var_c64af691 = vectortoangles(enemy.origin - eye);
@@ -846,7 +846,7 @@ function function_76333d5f() {
             offset[0] = rightdir * -1 * randomrange * 2 + (randomfloatrange(randomrange * -1, randomrange), randomfloatrange(randomrange * -1, randomrange), 0);
             offset[1] = rightdir * randomrange * 2 + (randomfloatrange(randomrange * -1, randomrange), randomfloatrange(randomrange * -1, randomrange), 0);
             self function_ed543896(0, target, offset[0]);
-            wait(0.5);
+            wait 0.5;
             if (isdefined(enemy)) {
                 eye = self gettagorigin("tag_eye");
                 angles = vectortoangles(enemy.origin - eye) - self.angles;
@@ -855,10 +855,10 @@ function function_76333d5f() {
                 }
             }
             self function_ed543896(1, target, offset[1]);
-            wait(1);
+            wait 1;
             self thread function_d19e6907();
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -900,7 +900,7 @@ function function_ed543896(var_e569678c, target, offset, var_d5ccbff6, var_8d0a4
     if (isdefined(var_d5ccbff6) && var_d5ccbff6) {
         self vehicle_ai::blink_lights_for_time(1);
         if (isdefined(var_8d0a485e) && var_8d0a485e > 0) {
-            wait(var_8d0a485e);
+            wait var_8d0a485e;
         }
     }
     if (!isdefined(offset)) {
@@ -1033,7 +1033,7 @@ function function_d92edef5() {
     self.var_5772ae4.var_f56360bf = 0;
     self.var_5772ae4.var_966f680a = spawn("script_origin", self.var_5772ae4.origin + anglestoforward(self.angles) * 1000);
     self.var_5772ae4.var_966f680a linkto(self.var_5772ae4);
-    wait(0.25);
+    wait 0.25;
     if (false) {
         playfxontag(self.settings.var_1ce01d35, self.var_5772ae4, "tag_origin");
     }
@@ -1093,7 +1093,7 @@ function function_18fb105e() {
     while (true) {
         var_845c3483 = self.var_5772ae4.origin;
         if (isdefined(self.inpain) && self.inpain) {
-            wait(0.3);
+            wait 0.3;
             offset = (50, 0, 0) + (math::randomsign() * randomfloatrange(1, 2) * pitchrange, math::randomsign() * randomfloatrange(1, 2) * yawrange, 0);
             var_488ceea8 = anglestoforward(self.angles + offset);
         } else if (!isdefined(self.enemy)) {
@@ -1128,7 +1128,7 @@ function function_18fb105e() {
         /#
             line(var_845c3483, self.var_5772ae4.targetpos, (0, 1, 0), 1, 1000);
         #/
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -1192,7 +1192,7 @@ function function_bf3c27f8() {
         if (self isdriverfiring()) {
             self fireweapon(1);
         }
-        wait(firetime);
+        wait firetime;
     }
 }
 
@@ -1210,7 +1210,7 @@ function function_31439733() {
         if (self isdriverfiring()) {
             self fireweapon(2);
         }
-        wait(firetime);
+        wait firetime;
     }
 }
 
@@ -1233,9 +1233,9 @@ function function_9d3d995e() {
             target = self function_6e7cf0c4(0);
             magicbullet(weapon, origin0, target);
             magicbullet(weapon, origin1, target);
-            wait(firetime);
+            wait firetime;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1268,13 +1268,13 @@ function function_f47e4a8f() {
         var_eb59fb11 = abs(self getspeed() / self getmaxspeed());
         if (var_eb59fb11 < 0.1) {
             level.player playrumbleonentity("hunter_fly");
-            wait(0.35);
+            wait 0.35;
             continue;
         }
         time = randomfloatrange(0.1, 0.2);
         earthquake(randomfloatrange(0.1, 0.15), time, self.origin, -56);
         level.player playrumbleonentity("hunter_fly");
-        wait(time);
+        wait time;
     }
 }
 
@@ -1293,11 +1293,11 @@ function function_c2f7d68d() {
                 self_destruct = 1;
                 var_2b2fe37c = 5;
             }
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         iprintlnbold(var_2b2fe37c);
-        wait(1);
+        wait 1;
         var_2b2fe37c -= 1;
         if (var_2b2fe37c == 0) {
             driver = self getseatoccupant(0);
@@ -1326,7 +1326,7 @@ function function_295ee7d() {
         ang_vel = self getangularvelocity() * 0.85;
         self setangularvelocity(ang_vel);
         self setvehvelocity(velocity);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1338,7 +1338,7 @@ function function_b5c19eaf(params) {
     self endon(#"death");
     self endon(#"emped");
     self.emped = 1;
-    wait(randomfloatrange(4, 7));
+    wait randomfloatrange(4, 7);
     self vehicle_ai::evaluate_connections();
 }
 
@@ -1354,7 +1354,7 @@ function function_dd1df31a(time, var_f7558f2d, var_78b17090, restorelookpoint) {
         while (gettime() < self.painstarttime + time * 1000) {
             self setvehvelocity(self.velocity * var_f7558f2d);
             self setangularvelocity(self getangularvelocity() * var_78b17090);
-            wait(0.1);
+            wait 0.1;
         }
         if (isdefined(restorelookpoint)) {
             restorelookent = spawn("script_model", restorelookpoint);
@@ -1362,7 +1362,7 @@ function function_dd1df31a(time, var_f7558f2d, var_78b17090, restorelookpoint) {
             self clearlookatent();
             self setlookatent(restorelookent);
             self setturrettargetent(restorelookent);
-            wait(1.5);
+            wait 1.5;
             self clearlookatent();
             self clearturrettarget();
             restorelookent delete();

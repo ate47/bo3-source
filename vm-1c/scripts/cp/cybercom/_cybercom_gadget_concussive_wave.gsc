@@ -149,7 +149,7 @@ function function_73688d2e(damage, var_9bc2efcb) {
         type = self cybercom::function_5e3d3aa();
         self orientmode("face default");
         self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
-        self waittillmatch(#"hash_39fa7e38", "fire");
+        self waittillmatch(#"ai_cybercom_anim", "fire");
     }
     self function_9ba0286c(damage);
 }
@@ -215,7 +215,7 @@ function function_ffd5ab29(damage, attacker) {
             if (!cybercom::function_7a7d1608(enemy, weapon)) {
                 continue;
             }
-            enemy notify(#"hash_f8c5dd60", weapon, attacker);
+            enemy notify(#"cybercom_action", weapon, attacker);
             attacker notify(#"hash_f045e164");
             if (enemy cybercom::function_421746e0()) {
                 enemy kill(enemy.origin, attacker);
@@ -261,7 +261,7 @@ function function_ffd5ab29(damage, attacker) {
 // Size: 0x74
 function function_74fb2002(n_time, attacker, weapon) {
     self endon(#"death");
-    wait(n_time);
+    wait n_time;
     self dodamage(self.health + 1, self.origin, attacker, attacker, "none", "MOD_UNKNOWN", 0, weapon);
 }
 
@@ -282,7 +282,7 @@ function function_f98dd1a9(enemy, attacker) {
 function function_78e146a3() {
     self endon(#"death");
     self endon(#"hash_c76d622a");
-    wait(1.75);
+    wait 1.75;
     self notify(#"bhtn_action_notify", "concussiveReact");
 }
 
@@ -311,13 +311,13 @@ function function_9ba0286c(damage, slot, weapon) {
     if (self function_1a9006bd("cybercom_concussive") == 2) {
         failsafe = gettime() + 800;
         while (self is_jumping() == 0 && self hasweapon(var_47063871) && gettime() < failsafe) {
-            wait(0.05);
+            wait 0.05;
         }
         while (self is_jumping() == 1 && self hasweapon(var_47063871) && gettime() < failsafe) {
-            wait(0.05);
+            wait 0.05;
         }
     } else {
-        wait(0.6);
+        wait 0.6;
     }
     self playrumbleonentity("grenade_rumble");
     earthquake(0.6, 0.5, self.origin, 256);
@@ -326,11 +326,11 @@ function function_9ba0286c(damage, slot, weapon) {
     }
     self.cybercom.var_ebeecfd5 = undefined;
     level thread function_ffd5ab29(damage, self);
-    wait(getdvarint("scr_concussive_wave_no_sprint", 1));
+    wait getdvarint("scr_concussive_wave_no_sprint", 1);
     self allowsprint(self.var_bdd60914);
     self.var_bdd60914 = undefined;
     self.cybercom.var_dd2f3b84 = undefined;
     self clientfield::set_to_player("cybercom_disabled", 0);
-    wait(0.1);
+    wait 0.1;
 }
 

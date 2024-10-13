@@ -60,7 +60,7 @@ function function_c27610f9(var_8e087689, var_70b01bd3) {
 // Checksum 0x565ddbf2, Offset: 0x860
 // Size: 0x2a
 function function_dab879d0() {
-    level.var_e9a8d710 = 0;
+    level.apartment_enemies_killed = 0;
     callback::on_ai_killed(&function_9d6f9365);
 }
 
@@ -79,8 +79,8 @@ function function_6b863b66() {
 function function_9d6f9365(params) {
     if (isplayer(params.eattacker)) {
         if (array::contains(level.var_1dca7888, self)) {
-            level.var_e9a8d710++;
-            if (level.var_e9a8d710 == level.var_7819b21b) {
+            level.apartment_enemies_killed++;
+            if (level.apartment_enemies_killed == level.var_7819b21b) {
                 level function_c27610f9("apartment_enemies_killed", &function_6b863b66);
             }
         }
@@ -314,7 +314,7 @@ function function_e4b54cbf(params) {
             if (isdefined(params.eattacker.var_f329477a)) {
                 if (params.eattacker.var_f329477a == params.eattacker._bbdata["shots"]) {
                     if (!level flag::get("stealth_combat") && !level flag::get("stealth_discovered")) {
-                        params.eattacker notify(#"hash_41510dc5");
+                        params.eattacker notify(#"temple_stealth_double_kill");
                     }
                 }
             }
@@ -349,7 +349,7 @@ function function_612cfe91() {
 // Size: 0x65
 function function_2cb00a9b() {
     self endon(#"death");
-    level endon(#"hash_d72a35d0");
+    level endon(#"garage_enemies_dead");
     while (true) {
         damage, attacker = self waittill(#"damage");
         if (isdefined(attacker.script_aigroup) && attacker.script_aigroup == "garage_snipers") {

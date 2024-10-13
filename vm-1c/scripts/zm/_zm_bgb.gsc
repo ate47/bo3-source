@@ -94,7 +94,7 @@ function private function_52dbea8c() {
     if (!(isdefined(self.var_c2d95bad) && self.var_c2d95bad)) {
         self.var_c2d95bad = 1;
         self globallogic_score::initpersstat("bgb_tokens_gained_this_game", 0);
-        self.var_f191a1fc = 0;
+        self.bgb_tokens_gained_this_game = 0;
     }
 }
 
@@ -140,7 +140,7 @@ function private bgb_end_game() {
     self waittill(#"report_bgb_consumption");
     self thread take();
     self function_e1f3d6d7();
-    self zm_stats::set_global_stat("bgb_tokens_gained_this_game", self.var_f191a1fc);
+    self zm_stats::set_global_stat("bgb_tokens_gained_this_game", self.bgb_tokens_gained_this_game);
     foreach (bgb in self.bgb_pack) {
         if (!isdefined(self.bgb_stats[bgb]) || !self.bgb_stats[bgb].bgb_used_this_game) {
             continue;
@@ -207,18 +207,18 @@ function private bgb_player_monitor() {
     // Size: 0x264
     function private setup_devgui() {
         waittillframeend();
-        setdvar("bgb_timer", "bgb_timer");
-        setdvar("bgb_timer", -1);
-        bgb_devgui_base = "bgb_timer";
+        setdvar("<dev string:x28>", "<dev string:x3b>");
+        setdvar("<dev string:x3c>", -1);
+        bgb_devgui_base = "<dev string:x4e>";
         keys = getarraykeys(level.bgb);
         foreach (key in keys) {
-            adddebugcommand(bgb_devgui_base + key + "bgb_timer" + "bgb_timer" + "bgb_timer" + key + "bgb_timer");
+            adddebugcommand(bgb_devgui_base + key + "<dev string:x62>" + "<dev string:x28>" + "<dev string:x70>" + key + "<dev string:x72>");
         }
-        adddebugcommand(bgb_devgui_base + "bgb_timer" + "bgb_timer" + "bgb_timer" + "bgb_timer" + "bgb_timer");
-        adddebugcommand(bgb_devgui_base + "bgb_timer" + "bgb_timer" + "bgb_timer" + "bgb_timer" + "bgb_timer");
+        adddebugcommand(bgb_devgui_base + "<dev string:x76>" + "<dev string:x28>" + "<dev string:x70>" + "<dev string:x8b>" + "<dev string:x72>");
+        adddebugcommand(bgb_devgui_base + "<dev string:x90>" + "<dev string:x3c>" + "<dev string:x70>" + "<dev string:xa3>" + "<dev string:x72>");
         for (i = 0; i < 4; i++) {
             playernum = i + 1;
-            adddebugcommand(bgb_devgui_base + "bgb_timer" + playernum + "bgb_timer" + "bgb_timer" + "bgb_timer" + i + "bgb_timer");
+            adddebugcommand(bgb_devgui_base + "<dev string:xa6>" + playernum + "<dev string:xb5>" + "<dev string:x3c>" + "<dev string:x70>" + i + "<dev string:x72>");
         }
         level thread bgb_devgui_think();
     }
@@ -229,12 +229,12 @@ function private bgb_player_monitor() {
     // Size: 0x80
     function private bgb_devgui_think() {
         for (;;) {
-            var_fe9a7d67 = getdvarstring("bgb_timer");
-            if (var_fe9a7d67 != "bgb_timer") {
+            var_fe9a7d67 = getdvarstring("<dev string:x28>");
+            if (var_fe9a7d67 != "<dev string:x3b>") {
                 bgb_devgui_acquire(var_fe9a7d67);
             }
-            setdvar("bgb_timer", "bgb_timer");
-            wait(0.5);
+            setdvar("<dev string:x28>", "<dev string:x3b>");
+            wait 0.5;
         }
     }
 
@@ -243,13 +243,13 @@ function private bgb_player_monitor() {
     // Checksum 0xab92deaa, Offset: 0x1600
     // Size: 0x11e
     function private bgb_devgui_acquire(bgb_name) {
-        playerid = getdvarint("bgb_timer");
+        playerid = getdvarint("<dev string:x3c>");
         players = getplayers();
         for (i = 0; i < players.size; i++) {
             if (playerid != -1 && playerid != i) {
                 continue;
             }
-            if ("bgb_timer" == bgb_name) {
+            if ("<dev string:x8b>" == bgb_name) {
                 players[i] thread take();
                 continue;
             }
@@ -265,13 +265,13 @@ function private bgb_player_monitor() {
     // Size: 0x144
     function private bgb_debug_text_display_init() {
         self.bgb_debug_text = newclienthudelem(self);
-        self.bgb_debug_text.elemtype = "bgb_timer";
-        self.bgb_debug_text.font = "bgb_timer";
+        self.bgb_debug_text.elemtype = "<dev string:xbd>";
+        self.bgb_debug_text.font = "<dev string:xc2>";
         self.bgb_debug_text.fontscale = 1.8;
-        self.bgb_debug_text.horzalign = "bgb_timer";
-        self.bgb_debug_text.vertalign = "bgb_timer";
-        self.bgb_debug_text.alignx = "bgb_timer";
-        self.bgb_debug_text.aligny = "bgb_timer";
+        self.bgb_debug_text.horzalign = "<dev string:xcc>";
+        self.bgb_debug_text.vertalign = "<dev string:xd1>";
+        self.bgb_debug_text.alignx = "<dev string:xcc>";
+        self.bgb_debug_text.aligny = "<dev string:xd1>";
         self.bgb_debug_text.x = 15;
         self.bgb_debug_text.y = 35;
         self.bgb_debug_text.sort = 2;
@@ -292,27 +292,27 @@ function private bgb_set_debug_text(name, activations_remaining) {
             return;
         }
         if (isdefined(activations_remaining)) {
-            self clientfield::set_player_uimodel("bgb_timer", 1);
+            self clientfield::set_player_uimodel("<dev string:xd5>", 1);
         } else {
-            self clientfield::set_player_uimodel("bgb_timer", 0);
+            self clientfield::set_player_uimodel("<dev string:xd5>", 0);
         }
         self notify(#"bgb_set_debug_text_thread");
         self endon(#"bgb_set_debug_text_thread");
         self endon(#"disconnect");
         self.bgb_debug_text fadeovertime(0.05);
         self.bgb_debug_text.alpha = 1;
-        prefix = "bgb_timer";
+        prefix = "<dev string:xe9>";
         short_name = name;
         if (issubstr(name, prefix)) {
             short_name = getsubstr(name, prefix.size);
         }
         if (isdefined(activations_remaining)) {
-            self.bgb_debug_text settext("bgb_timer" + short_name + "bgb_timer" + activations_remaining + "bgb_timer");
+            self.bgb_debug_text settext("<dev string:xf1>" + short_name + "<dev string:xf7>" + activations_remaining + "<dev string:x119>");
         } else {
-            self.bgb_debug_text settext("bgb_timer" + short_name);
+            self.bgb_debug_text settext("<dev string:xf1>" + short_name);
         }
-        wait(1);
-        if ("bgb_timer" == name) {
+        wait 1;
+        if ("<dev string:x8b>" == name) {
             self.bgb_debug_text fadeovertime(1);
             self.bgb_debug_text.alpha = 0;
         }
@@ -326,10 +326,10 @@ function private bgb_set_debug_text(name, activations_remaining) {
     // Checksum 0x5b63e5fa, Offset: 0x1a70
     // Size: 0xf4
     function bgb_print_stats(bgb) {
-        printtoprightln(bgb + "bgb_timer" + self.bgb_stats[bgb].var_e0b06b47, (1, 1, 1));
-        printtoprightln(bgb + "bgb_timer" + self.bgb_stats[bgb].bgb_used_this_game, (1, 1, 1));
+        printtoprightln(bgb + "<dev string:x120>" + self.bgb_stats[bgb].var_e0b06b47, (1, 1, 1));
+        printtoprightln(bgb + "<dev string:x13a>" + self.bgb_stats[bgb].bgb_used_this_game, (1, 1, 1));
         n_available = self.bgb_stats[bgb].var_e0b06b47 - self.bgb_stats[bgb].bgb_used_this_game;
-        printtoprightln(bgb + "bgb_timer" + n_available, (1, 1, 1));
+        printtoprightln(bgb + "<dev string:x14f>" + n_available, (1, 1, 1));
     }
 
 #/
@@ -551,7 +551,7 @@ function private bgb_limit_monitor() {
     self clientfield::set_player_uimodel("bgb_display", 1);
     self thread function_5fc6d844(self.bgb);
     switch (level.bgb[self.bgb].limit_type) {
-    case 50:
+    case "activated":
         self thread bgb_activation_monitor();
         for (i = level.bgb[self.bgb].limit; i > 0; i--) {
             level.bgb[self.bgb].var_32fa3cb7 = i;
@@ -564,7 +564,7 @@ function private bgb_limit_monitor() {
             self thread bgb_set_debug_text(self.bgb, i);
             self waittill(#"bgb_activation");
             while (isdefined(self get_active()) && self get_active()) {
-                wait(0.05);
+                wait 0.05;
             }
             self playsoundtoplayer("zmb_bgb_power_decrement", self);
         }
@@ -572,16 +572,16 @@ function private bgb_limit_monitor() {
         self playsoundtoplayer("zmb_bgb_power_done_delayed", self);
         self set_timer(0, level.bgb[self.bgb].limit);
         while (isdefined(self.bgb_activation_in_progress) && self.bgb_activation_in_progress) {
-            wait(0.05);
+            wait 0.05;
         }
         break;
-    case 53:
+    case "time":
         self thread bgb_set_debug_text(self.bgb);
         self thread run_timer(level.bgb[self.bgb].limit);
-        wait(level.bgb[self.bgb].limit);
+        wait level.bgb[self.bgb].limit;
         self playsoundtoplayer("zmb_bgb_power_done", self);
         break;
-    case 52:
+    case "rounds":
         self thread bgb_set_debug_text(self.bgb);
         count = level.bgb[self.bgb].limit + 1;
         for (i = 0; i < count; i++) {
@@ -591,14 +591,14 @@ function private bgb_limit_monitor() {
         }
         self playsoundtoplayer("zmb_bgb_power_done_delayed", self);
         break;
-    case 51:
+    case "event":
         self thread bgb_set_debug_text(self.bgb);
         self bgb_set_timer_clientfield(1);
         self [[ level.bgb[self.bgb].limit ]]();
         self playsoundtoplayer("zmb_bgb_power_done_delayed", self);
         break;
     default:
-        assert(0, "bgb_timer" + self.bgb + "bgb_timer" + level.bgb[self.bgb].limit_type + "bgb_timer");
+        assert(0, "<dev string:x15c>" + self.bgb + "<dev string:x17c>" + level.bgb[self.bgb].limit_type + "<dev string:x18c>");
         break;
     }
     self thread take();
@@ -615,7 +615,7 @@ function private bgb_bled_out_monitor() {
     self endon(#"bgb_bled_out_monitor");
     self waittill(#"bled_out");
     self notify(#"bgb_about_to_take_on_bled_out");
-    wait(0.1);
+    wait 0.1;
     self thread take();
 }
 
@@ -823,7 +823,7 @@ function private function_f9fad8b3(var_eeab9300, percent) {
     while (var_6d8b0ec7 > percent) {
         var_6d8b0ec7 = lerpfloat(percent, var_eeab9300, calc_remaining_duration_lerp(start_time, end_time));
         self clientfield::set_player_uimodel("bgb_timer", var_6d8b0ec7);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -867,7 +867,7 @@ function run_timer(max) {
     self endon(#"bgb_run_timer");
     for (current = max; current > 0; current -= 0.05) {
         self set_timer(current, max);
-        wait(0.05);
+        wait 0.05;
     }
     self clear_timer();
 }
@@ -886,27 +886,27 @@ function clear_timer() {
 // Checksum 0x294e0264, Offset: 0x3710
 // Size: 0x530
 function register(name, limit_type, limit, enable_func, disable_func, validation_func, activation_func) {
-    assert(isdefined(name), "bgb_timer");
-    assert("bgb_timer" != name, "bgb_timer" + "bgb_timer" + "bgb_timer");
-    assert(!isdefined(level.bgb[name]), "bgb_timer" + name + "bgb_timer");
-    assert(isdefined(limit_type), "bgb_timer" + name + "bgb_timer");
-    assert(isdefined(limit), "bgb_timer" + name + "bgb_timer");
-    assert(!isdefined(enable_func) || isfunctionptr(enable_func), "bgb_timer" + name + "bgb_timer");
-    assert(!isdefined(disable_func) || isfunctionptr(disable_func), "bgb_timer" + name + "bgb_timer");
+    assert(isdefined(name), "<dev string:x19f>");
+    assert("<dev string:x8b>" != name, "<dev string:x1c5>" + "<dev string:x8b>" + "<dev string:x1e7>");
+    assert(!isdefined(level.bgb[name]), "<dev string:x21e>" + name + "<dev string:x235>");
+    assert(isdefined(limit_type), "<dev string:x21e>" + name + "<dev string:x253>");
+    assert(isdefined(limit), "<dev string:x21e>" + name + "<dev string:x271>");
+    assert(!isdefined(enable_func) || isfunctionptr(enable_func), "<dev string:x21e>" + name + "<dev string:x28a>");
+    assert(!isdefined(disable_func) || isfunctionptr(disable_func), "<dev string:x21e>" + name + "<dev string:x2c1>");
     switch (limit_type) {
-    case 50:
-        assert(!isdefined(validation_func) || isfunctionptr(validation_func), "bgb_timer" + name + "bgb_timer" + limit_type + "bgb_timer");
-        assert(isdefined(activation_func), "bgb_timer" + name + "bgb_timer" + limit_type + "bgb_timer");
-        assert(isfunctionptr(activation_func), "bgb_timer" + name + "bgb_timer" + limit_type + "bgb_timer");
-    case 52:
-    case 53:
-        assert(isint(limit), "bgb_timer" + name + "bgb_timer" + limit + "bgb_timer" + limit_type + "bgb_timer");
+    case "activated":
+        assert(!isdefined(validation_func) || isfunctionptr(validation_func), "<dev string:x21e>" + name + "<dev string:x2f9>" + limit_type + "<dev string:x345>");
+        assert(isdefined(activation_func), "<dev string:x21e>" + name + "<dev string:x347>" + limit_type + "<dev string:x345>");
+        assert(isfunctionptr(activation_func), "<dev string:x21e>" + name + "<dev string:x37b>" + limit_type + "<dev string:x345>");
+    case "rounds":
+    case "time":
+        assert(isint(limit), "<dev string:x21e>" + name + "<dev string:x3ba>" + limit + "<dev string:x3c5>" + limit_type + "<dev string:x345>");
         break;
-    case 51:
-        assert(isfunctionptr(limit), "bgb_timer" + name + "bgb_timer" + limit_type + "bgb_timer");
+    case "event":
+        assert(isfunctionptr(limit), "<dev string:x21e>" + name + "<dev string:x3e7>" + limit_type + "<dev string:x345>");
         break;
     default:
-        assert(0, "bgb_timer" + name + "bgb_timer" + limit_type + "bgb_timer");
+        assert(0, "<dev string:x21e>" + name + "<dev string:x17c>" + limit_type + "<dev string:x18c>");
         break;
     }
     level.bgb[name] = spawnstruct();
@@ -928,7 +928,7 @@ function register(name, limit_type, limit, enable_func, disable_func, validation
 // Checksum 0xb600ce11, Offset: 0x3c48
 // Size: 0x68
 function register_actor_damage_override(name, actor_damage_override_func) {
-    assert(isdefined(level.bgb[name]), "bgb_timer" + name + "bgb_timer");
+    assert(isdefined(level.bgb[name]), "<dev string:x41c>" + name + "<dev string:x449>");
     level.bgb[name].actor_damage_override_func = actor_damage_override_func;
 }
 
@@ -937,7 +937,7 @@ function register_actor_damage_override(name, actor_damage_override_func) {
 // Checksum 0x28f077e3, Offset: 0x3cb8
 // Size: 0x68
 function register_vehicle_damage_override(name, vehicle_damage_override_func) {
-    assert(isdefined(level.bgb[name]), "bgb_timer" + name + "bgb_timer");
+    assert(isdefined(level.bgb[name]), "<dev string:x460>" + name + "<dev string:x449>");
     level.bgb[name].vehicle_damage_override_func = vehicle_damage_override_func;
 }
 
@@ -946,7 +946,7 @@ function register_vehicle_damage_override(name, vehicle_damage_override_func) {
 // Checksum 0xb5137758, Offset: 0x3d28
 // Size: 0x68
 function register_actor_death_override(name, actor_death_override_func) {
-    assert(isdefined(level.bgb[name]), "bgb_timer" + name + "bgb_timer");
+    assert(isdefined(level.bgb[name]), "<dev string:x48f>" + name + "<dev string:x449>");
     level.bgb[name].actor_death_override_func = actor_death_override_func;
 }
 
@@ -955,7 +955,7 @@ function register_actor_death_override(name, actor_death_override_func) {
 // Checksum 0x75a50890, Offset: 0x3d98
 // Size: 0x8c
 function register_lost_perk_override(name, lost_perk_override_func, lost_perk_override_func_always_run) {
-    assert(isdefined(level.bgb[name]), "bgb_timer" + name + "bgb_timer");
+    assert(isdefined(level.bgb[name]), "<dev string:x4bb>" + name + "<dev string:x449>");
     level.bgb[name].lost_perk_override_func = lost_perk_override_func;
     level.bgb[name].lost_perk_override_func_always_run = lost_perk_override_func_always_run;
 }
@@ -965,7 +965,7 @@ function register_lost_perk_override(name, lost_perk_override_func, lost_perk_ov
 // Checksum 0xcd6631bb, Offset: 0x3e30
 // Size: 0x8c
 function function_ff4b2998(name, add_to_player_score_override_func, add_to_player_score_override_func_always_run) {
-    assert(isdefined(level.bgb[name]), "bgb_timer" + name + "bgb_timer");
+    assert(isdefined(level.bgb[name]), "<dev string:x4e5>" + name + "<dev string:x449>");
     level.bgb[name].add_to_player_score_override_func = add_to_player_score_override_func;
     level.bgb[name].add_to_player_score_override_func_always_run = add_to_player_score_override_func_always_run;
 }
@@ -975,7 +975,7 @@ function function_ff4b2998(name, add_to_player_score_override_func, add_to_playe
 // Checksum 0xc631f42d, Offset: 0x3ec8
 // Size: 0x68
 function function_4cda71bf(name, var_7ca0e2a7) {
-    assert(isdefined(level.bgb[name]), "bgb_timer" + name + "bgb_timer");
+    assert(isdefined(level.bgb[name]), "<dev string:x519>" + name + "<dev string:x449>");
     level.bgb[name].var_7ca0e2a7 = var_7ca0e2a7;
 }
 
@@ -984,7 +984,7 @@ function function_4cda71bf(name, var_7ca0e2a7) {
 // Checksum 0xe1943fd8, Offset: 0x3f38
 // Size: 0x68
 function function_93da425(name, var_35e23ba2) {
-    assert(isdefined(level.bgb[name]), "bgb_timer" + name + "bgb_timer");
+    assert(isdefined(level.bgb[name]), "<dev string:x54f>" + name + "<dev string:x449>");
     level.bgb[name].var_35e23ba2 = var_35e23ba2;
 }
 
@@ -993,7 +993,7 @@ function function_93da425(name, var_35e23ba2) {
 // Checksum 0x1163c55b, Offset: 0x3fa8
 // Size: 0x60
 function function_2060b89(name) {
-    assert(isdefined(level.bgb[name]), "bgb_timer" + name + "bgb_timer");
+    assert(isdefined(level.bgb[name]), "<dev string:x57b>" + name + "<dev string:x449>");
     level.bgb[name].var_50fe45f6 = 1;
 }
 
@@ -1002,7 +1002,7 @@ function function_2060b89(name) {
 // Checksum 0x3f20e3af, Offset: 0x4010
 // Size: 0x60
 function function_f132da9c(name) {
-    assert(isdefined(level.bgb[name]), "bgb_timer" + name + "bgb_timer");
+    assert(isdefined(level.bgb[name]), "<dev string:x59e>" + name + "<dev string:x449>");
     level.bgb[name].var_7ea552f4 = 1;
 }
 
@@ -1026,7 +1026,7 @@ function give(name) {
     if ("none" == name) {
         return;
     }
-    assert(isdefined(level.bgb[name]), "bgb_timer" + name + "bgb_timer");
+    assert(isdefined(level.bgb[name]), "<dev string:x5ce>" + name + "<dev string:x449>");
     self notify(#"bgb_update", name, self.bgb);
     self notify("bgb_update_give_" + name);
     self.bgb = name;
@@ -1120,7 +1120,7 @@ function function_dea74fb0(str_powerup, v_origin) {
         v_origin = self get_player_dropped_powerup_origin();
     }
     e_powerup = zm_powerups::specific_powerup_drop(str_powerup, v_origin);
-    wait(1);
+    wait 1;
     if (!e_powerup zm::in_enabled_playable_area() && isdefined(e_powerup) && !e_powerup zm::in_life_brush()) {
         level thread function_434235f9(e_powerup);
     }
@@ -1327,7 +1327,7 @@ function function_4ed517b9(n_max_distance, var_98a3e738, var_287a7adb) {
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1392,7 +1392,7 @@ function function_378bff5d() {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8adbaae7, Offset: 0x5698
 // Size: 0x1a4
-function function_41ed378b(perk) {
+function revive_and_return_perk_on_bgb_activation(perk) {
     self notify("revive_and_return_perk_on_bgb_activation" + perk);
     self endon("revive_and_return_perk_on_bgb_activation" + perk);
     self endon(#"disconnect");
@@ -1405,7 +1405,7 @@ function function_41ed378b(perk) {
         if (zm_perks::function_23ee6fc() && perk == "specialty_quickrevive") {
             level.solo_game_free_player_quickrevive = 1;
         }
-        wait(0.05);
+        wait 0.05;
         self thread zm_perks::give_perk(perk, 0);
         if (perk == "specialty_widowswine" && isdefined(var_376ad33c)) {
             self setweaponammoclip(self.var_8980476, var_376ad33c);
@@ -1422,7 +1422,7 @@ function bgb_revive_watcher() {
     self endon(#"death");
     self.var_df0decf1 = 1;
     e_reviver = self waittill(#"player_revived");
-    wait(0.05);
+    wait 0.05;
     if (isdefined(self.var_df0decf1) && self.var_df0decf1) {
         self notify(#"bgb_revive");
         self.var_df0decf1 = undefined;

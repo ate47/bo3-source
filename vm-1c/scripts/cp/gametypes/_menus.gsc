@@ -163,10 +163,10 @@ function on_menu_response() {
         }
         if (menu == game["menu_team"] && level.allow_teamchange == "1") {
             switch (response) {
-            case 50:
+            case "autoassign":
                 self [[ level.autoassign ]](1);
                 break;
-            case 51:
+            case "spectator":
                 self [[ level.spectator ]]();
                 break;
             default:

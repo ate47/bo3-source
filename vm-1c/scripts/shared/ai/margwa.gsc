@@ -89,31 +89,31 @@ function private function_618e8c7d() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldSwipeAttack", &margwashouldswipeattack);
     behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldShowPain", &margwashouldshowpain);
     behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldReactStun", &margwashouldreactstun);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldReactIDGun", &function_177ffb7f);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldReactSword", &function_f779aea3);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldReactIDGun", &margwaShouldReactIDGun);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldReactSword", &margwaShouldReactSword);
     behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldSpawn", &margwashouldspawn);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldFreeze", &function_41769342);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldTeleportIn", &function_9782fb97);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldTeleportOut", &function_ee830c62);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldWait", &function_8526bc6c);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldFreeze", &margwaShouldFreeze);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldTeleportIn", &margwaShouldTeleportIn);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldTeleportOut", &margwaShouldTeleportOut);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldWait", &margwaShouldWait);
     behaviortreenetworkutility::registerbehaviortreescriptapi("margwaShouldReset", &margwashouldreset);
     behaviortreenetworkutility::registerbehaviortreeaction("margwaReactStunAction", &margwareactstunaction, undefined, undefined);
     behaviortreenetworkutility::registerbehaviortreeaction("margwaSwipeAttackAction", &margwaswipeattackaction, &function_43d6f899, undefined);
     behaviortreenetworkutility::registerbehaviortreescriptapi("margwaIdleStart", &margwaidlestart);
     behaviortreenetworkutility::registerbehaviortreescriptapi("margwaMoveStart", &margwamovestart);
     behaviortreenetworkutility::registerbehaviortreescriptapi("margwaTraverseActionStart", &margwatraverseactionstart);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaTeleportInStart", &function_f4326d46);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaTeleportInTerminate", &function_d6861357);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaTeleportOutStart", &function_a3b5ed13);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaTeleportOutTerminate", &function_9bf18b02);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaTeleportInStart", &margwaTeleportInStart);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaTeleportInTerminate", &margwaTeleportInTerminate);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaTeleportOutStart", &margwaTeleportOutStart);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaTeleportOutTerminate", &margwaTeleportOutTerminate);
     behaviortreenetworkutility::registerbehaviortreescriptapi("margwaPainStart", &margwapainstart);
     behaviortreenetworkutility::registerbehaviortreescriptapi("margwaPainTerminate", &margwapainterminate);
     behaviortreenetworkutility::registerbehaviortreescriptapi("margwaReactStunStart", &margwareactstunstart);
     behaviortreenetworkutility::registerbehaviortreescriptapi("margwaReactStunTerminate", &margwareactstunterminate);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaReactIDGunStart", &function_bd904c32);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaReactIDGunTerminate", &function_8219ce43);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaReactSwordStart", &function_78a5c7d6);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaReactSwordTerminate", &function_976fb907);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaReactIDGunStart", &margwaReactIDGunStart);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaReactIDGunTerminate", &margwaReactIDGunTerminate);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaReactSwordStart", &margwaReactSwordStart);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("margwaReactSwordTerminate", &margwaReactSwordTerminate);
     behaviortreenetworkutility::registerbehaviortreescriptapi("margwaSpawnStart", &margwaspawnstart);
     behaviortreenetworkutility::registerbehaviortreescriptapi("margwaSmashAttackStart", &margwasmashattackstart);
     behaviortreenetworkutility::registerbehaviortreescriptapi("margwaSmashAttackTerminate", &margwasmashattackterminate);
@@ -135,25 +135,25 @@ function private function_6c01c950() {
     blackboard::registerblackboardattribute(self, "_locomotion_speed", "locomotion_speed_walk", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("margwa_fx_out");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_board_attack_spot", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("margwa_fx_out");
+            self trackblackboardattribute("<dev string:x3a>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_should_turn", "should_not_turn", &bb_getshouldturn);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("margwa_fx_out");
+            self trackblackboardattribute("<dev string:x4d>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_zombie_damageweapon_type", "regular", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("margwa_fx_out");
+            self trackblackboardattribute("<dev string:x65>");
         #/
     }
     self.___archetypeonanimscriptedcallback = &function_4bc01a36;
@@ -321,13 +321,13 @@ function private margwashouldshowpain(entity) {
     if (isdefined(entity.headdestroyed)) {
         headinfo = entity.head[entity.headdestroyed];
         switch (headinfo.cf) {
-        case 2:
+        case "margwa_head_left":
             blackboard::setblackboardattribute(self, "_margwa_head", "left");
             break;
-        case 4:
+        case "margwa_head_mid":
             blackboard::setblackboardattribute(self, "_margwa_head", "middle");
             break;
-        case 5:
+        case "margwa_head_right":
             blackboard::setblackboardattribute(self, "_margwa_head", "right");
             break;
         }
@@ -351,7 +351,7 @@ function private margwashouldreactstun(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x99e54d21, Offset: 0x2140
 // Size: 0x3a
-function private function_177ffb7f(entity) {
+function private margwaShouldReactIDGun(entity) {
     if (isdefined(entity.var_843f1731) && entity.var_843f1731) {
         return true;
     }
@@ -362,7 +362,7 @@ function private function_177ffb7f(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x5502adc7, Offset: 0x2188
 // Size: 0x3a
-function private function_f779aea3(entity) {
+function private margwaShouldReactSword(entity) {
     if (isdefined(entity.var_70e85a9d) && entity.var_70e85a9d) {
         return true;
     }
@@ -384,7 +384,7 @@ function private margwashouldspawn(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xc130f05, Offset: 0x2218
 // Size: 0x3a
-function private function_41769342(entity) {
+function private margwaShouldFreeze(entity) {
     if (isdefined(entity.isfrozen) && entity.isfrozen) {
         return true;
     }
@@ -395,7 +395,7 @@ function private function_41769342(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x3bcaedeb, Offset: 0x2260
 // Size: 0x3a
-function private function_9782fb97(entity) {
+function private margwaShouldTeleportIn(entity) {
     if (isdefined(entity.var_b830cb9) && entity.var_b830cb9) {
         return true;
     }
@@ -406,7 +406,7 @@ function private function_9782fb97(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x244ff5fb, Offset: 0x22a8
 // Size: 0x3a
-function private function_ee830c62(entity) {
+function private margwaShouldTeleportOut(entity) {
     if (isdefined(entity.var_3993b370) && entity.var_3993b370) {
         return true;
     }
@@ -417,7 +417,7 @@ function private function_ee830c62(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x87da610, Offset: 0x22f0
 // Size: 0x3a
-function private function_8526bc6c(entity) {
+function private margwaShouldWait(entity) {
     if (isdefined(entity.waiting) && entity.waiting) {
         return true;
     }
@@ -525,16 +525,16 @@ function private margwatraverseactionstart(entity) {
     if (isdefined(entity.traversestartnode.animscript)) {
         if (entity namespace_c96301ee::function_33361523()) {
             switch (entity.traversestartnode.animscript) {
-            case 83:
+            case "jump_down_36":
                 entity clientfield::set("margwa_jaw", 21);
                 break;
-            case 84:
+            case "jump_down_96":
                 entity clientfield::set("margwa_jaw", 22);
                 break;
-            case 85:
+            case "jump_up_36":
                 entity clientfield::set("margwa_jaw", 24);
                 break;
-            case 86:
+            case "jump_up_96":
                 entity clientfield::set("margwa_jaw", 25);
                 break;
             }
@@ -546,7 +546,7 @@ function private margwatraverseactionstart(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x84b64ec8, Offset: 0x2880
 // Size: 0x154
-function private function_f4326d46(entity) {
+function private margwaTeleportInStart(entity) {
     entity unlink();
     if (isdefined(entity.var_16410986)) {
         entity forceteleport(entity.var_16410986);
@@ -568,7 +568,7 @@ function private function_f4326d46(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb1cfcfc2, Offset: 0x29e0
 // Size: 0x4c
-function function_d6861357(entity) {
+function margwaTeleportInTerminate(entity) {
     if (isdefined(self.var_58ce2260)) {
         self.var_58ce2260 clientfield::set("margwa_fx_travel", 0);
     }
@@ -579,7 +579,7 @@ function function_d6861357(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x646d917e, Offset: 0x2a38
 // Size: 0xcc
-function private function_a3b5ed13(entity) {
+function private margwaTeleportOutStart(entity) {
     entity.var_3993b370 = 0;
     entity.isteleporting = 1;
     entity.var_e9eccbbc = entity.origin;
@@ -594,7 +594,7 @@ function private function_a3b5ed13(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x70776916, Offset: 0x2b10
 // Size: 0x134
-function private function_9bf18b02(entity) {
+function private margwaTeleportOutTerminate(entity) {
     if (isdefined(entity.var_58ce2260)) {
         entity.var_58ce2260.origin = entity gettagorigin("j_spine_1");
         entity.var_58ce2260 clientfield::set("margwa_fx_travel", 1);
@@ -620,13 +620,13 @@ function private margwapainstart(entity) {
     if (entity namespace_c96301ee::function_33361523()) {
         head = blackboard::getblackboardattribute(self, "_margwa_head");
         switch (head) {
-        case 76:
+        case "left":
             entity clientfield::set("margwa_jaw", 3);
             break;
-        case 78:
+        case "middle":
             entity clientfield::set("margwa_jaw", 4);
             break;
-        case 79:
+        case "right":
             entity clientfield::set("margwa_jaw", 5);
             break;
         }
@@ -675,7 +675,7 @@ function margwareactstunterminate(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6ea2d157, Offset: 0x2ec8
 // Size: 0x13c
-function private function_bd904c32(entity) {
+function private margwaReactIDGunStart(entity) {
     entity.var_843f1731 = undefined;
     entity.var_894f701d = 0;
     var_15006cdd = 0;
@@ -700,7 +700,7 @@ function private function_bd904c32(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x417f8cef, Offset: 0x3010
 // Size: 0x44
-function function_8219ce43(entity) {
+function margwaReactIDGunTerminate(entity) {
     entity.var_894f701d = 1;
     blackboard::setblackboardattribute(entity, "_zombie_damageweapon_type", "regular");
 }
@@ -709,7 +709,7 @@ function function_8219ce43(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb22073ae, Offset: 0x3060
 // Size: 0x58
-function private function_78a5c7d6(entity) {
+function private margwaReactSwordStart(entity) {
     entity.var_70e85a9d = undefined;
     entity.var_894f701d = 0;
     if (isdefined(entity.var_337c5d83)) {
@@ -721,7 +721,7 @@ function private function_78a5c7d6(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xff73c378, Offset: 0x30c0
 // Size: 0x20
-function private function_976fb907(entity) {
+function private margwaReactSwordTerminate(entity) {
     entity.var_894f701d = 1;
 }
 
@@ -802,7 +802,7 @@ function private function_95847de7(entity, mocompanim, mocompanimblendouttime, m
 // Checksum 0x897d052c, Offset: 0x33b0
 // Size: 0x44
 function private function_8bdd20c9(entity, mocompanim, mocompanimblendouttime, mocompanimflag, mocompduration) {
-    function_9bf18b02(entity);
+    margwaTeleportOutTerminate(entity);
 }
 
 #namespace namespace_c96301ee;
@@ -880,19 +880,19 @@ function private function_ba853eca(headmodel, var_edc01299) {
     model = headmodel;
     var_23a2fd22 = undefined;
     switch (headmodel) {
-    case 97:
+    case "c_zom_margwa_chunks_le":
         if (isdefined(level.var_2c028bba)) {
             model = level.var_2c028bba;
             var_23a2fd22 = level.var_4182a531;
         }
         break;
-    case 99:
+    case "c_zom_margwa_chunks_mid":
         if (isdefined(level.var_72374095)) {
             model = level.var_72374095;
             var_23a2fd22 = level.var_7ff16e00;
         }
         break;
-    case 101:
+    case "c_zom_margwa_chunks_ri":
         if (isdefined(level.var_c9a18bd)) {
             model = level.var_c9a18bd;
             var_23a2fd22 = level.var_b9c5d5f0;
@@ -912,7 +912,7 @@ function private function_ba853eca(headmodel, var_edc01299) {
     self.head[model].closed = 2;
     self.head[model].smash = 3;
     switch (headmodel) {
-    case 97:
+    case "c_zom_margwa_chunks_le":
         self.head[model].cf = "margwa_head_left";
         self.head[model].var_92dc0464 = "margwa_head_left_hit";
         self.head[model].gore = "c_zom_margwa_gore_le";
@@ -922,7 +922,7 @@ function private function_ba853eca(headmodel, var_edc01299) {
         self.head[model].var_ac197c3f = 1;
         self.var_5e150e0b = model;
         break;
-    case 99:
+    case "c_zom_margwa_chunks_mid":
         self.head[model].cf = "margwa_head_mid";
         self.head[model].var_92dc0464 = "margwa_head_mid_hit";
         self.head[model].gore = "c_zom_margwa_gore_mid";
@@ -932,7 +932,7 @@ function private function_ba853eca(headmodel, var_edc01299) {
         self.head[model].var_ac197c3f = 2;
         self.var_170dfeda = model;
         break;
-    case 101:
+    case "c_zom_margwa_chunks_ri":
         self.head[model].cf = "margwa_head_right";
         self.head[model].var_92dc0464 = "margwa_head_right_hit";
         self.head[model].gore = "c_zom_margwa_gore_ri";
@@ -1035,7 +1035,7 @@ function private function_6d2d2ad3(headinfo) {
 // Size: 0x3c
 function private function_78a5758c(headinfo, candamage) {
     self endon(#"death");
-    wait(0.1);
+    wait 0.1;
     headinfo.candamage = candamage;
 }
 
@@ -1241,7 +1241,7 @@ function function_b59ae4e9(inflictor, attacker, damage, dflags, mod, weapon, poi
     if (isdefined(partname)) {
         /#
             if (isdefined(self.var_c5dc6229) && self.var_c5dc6229) {
-                printtoprightln(partname + "margwa_fx_out" + damage);
+                printtoprightln(partname + "<dev string:x7f>" + damage);
             }
         #/
         var_9c967ca3 = self function_db2d5def(self, partname);
@@ -1282,14 +1282,14 @@ function function_b59ae4e9(inflictor, attacker, damage, dflags, mod, weapon, poi
 // Size: 0x70
 function private function_db2d5def(entity, partname) {
     switch (partname) {
-    case 96:
-    case 110:
+    case "j_chunk_head_bone_le":
+    case "j_jaw_lower_1_le":
         return self.var_5e150e0b;
-    case 98:
-    case 109:
+    case "j_chunk_head_bone":
+    case "j_jaw_lower_1":
         return self.var_170dfeda;
-    case 100:
-    case 111:
+    case "j_chunk_head_bone_ri":
+    case "j_jaw_lower_1_ri":
         return self.var_b406e5f2;
     }
     return undefined;

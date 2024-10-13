@@ -1,9 +1,9 @@
 #using scripts/zm/_zm;
 #using scripts/codescripts/struct;
 
-#namespace namespace_dd1df788;
+#namespace zm_temple_ffotd;
 
-// Namespace namespace_dd1df788
+// Namespace zm_temple_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0xff76f463, Offset: 0x248
 // Size: 0x13e
@@ -18,7 +18,7 @@ function main_start() {
     level._effect["powerup_on_red"] = "zombie/fx_powerup_on_red_zmb";
 }
 
-// Namespace namespace_dd1df788
+// Namespace zm_temple_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4134d4a9, Offset: 0x390
 // Size: 0x46c

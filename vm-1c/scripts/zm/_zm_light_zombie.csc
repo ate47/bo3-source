@@ -7,9 +7,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/ai_shared;
 
-#namespace namespace_6727c59c;
+#namespace zm_light_zombie;
 
-// Namespace namespace_6727c59c
+// Namespace zm_light_zombie
 // Params 0, eflags: 0x2
 // Checksum 0xb1b5eb6e, Offset: 0x2f0
 // Size: 0x34
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
     system::register("zm_light_zombie", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_6727c59c
+// Namespace zm_light_zombie
 // Params 0, eflags: 0x1 linked
 // Checksum 0x57c1363b, Offset: 0x330
 // Size: 0x24
@@ -26,7 +26,7 @@ function __init__() {
     register_clientfields();
 }
 
-// Namespace namespace_6727c59c
+// Namespace zm_light_zombie
 // Params 0, eflags: 0x1 linked
 // Checksum 0x40a47149, Offset: 0x360
 // Size: 0x56
@@ -36,7 +36,7 @@ function init_fx() {
     level._effect["dlc1/zmb_weapon/fx_bow_wolf_impact_zm"] = "lihgt_zombie_damage_fx";
 }
 
-// Namespace namespace_6727c59c
+// Namespace zm_light_zombie
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfd5b8fd5, Offset: 0x3c0
 // Size: 0xdc
@@ -46,7 +46,7 @@ function register_clientfields() {
     clientfield::register("actor", "light_zombie_clientfield_damaged_fx", 15000, 1, "counter", &function_ad4789b4, 0, 0);
 }
 
-// Namespace namespace_6727c59c
+// Namespace zm_light_zombie
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd3c8763, Offset: 0x4a8
 // Size: 0x98
@@ -56,7 +56,7 @@ function function_9127e2f8(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_6727c59c
+// Namespace zm_light_zombie
 // Params 7, eflags: 0x1 linked
 // Checksum 0x19e4adf, Offset: 0x548
 // Size: 0x144
@@ -76,7 +76,7 @@ function function_ad4789b4(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_6727c59c
+// Namespace zm_light_zombie
 // Params 7, eflags: 0x1 linked
 // Checksum 0x577939d8, Offset: 0x698
 // Size: 0xac

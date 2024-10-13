@@ -7,9 +7,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_186add48;
+#namespace zm_moon_ffotd;
 
-// Namespace namespace_186add48
+// Namespace zm_moon_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x79bc6f84, Offset: 0x220
 // Size: 0x1c
@@ -17,7 +17,7 @@ function main_start() {
     level thread function_b620b1d6();
 }
 
-// Namespace namespace_186add48
+// Namespace zm_moon_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0xffc7c037, Offset: 0x248
 // Size: 0x43c
@@ -39,7 +39,7 @@ function main_end() {
     spawncollision("collision_player_slick_wedge_32x256", "collider", (-155.692, 3850.08, -52.5), (0, 175.099, 0));
 }
 
-// Namespace namespace_186add48
+// Namespace zm_moon_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7fe1b62, Offset: 0x690
 // Size: 0x3a

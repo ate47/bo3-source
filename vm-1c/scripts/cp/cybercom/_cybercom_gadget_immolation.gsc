@@ -254,7 +254,7 @@ function private function_972e7bf2(attacker, upgraded, immediate) {
     self clientfield::set("cybercom_immolate", 1);
     self.is_disabled = 1;
     if (!immediate) {
-        wait(randomfloatrange(0, 0.75));
+        wait randomfloatrange(0, 0.75);
     }
     self thread vehicle_ai::immolate(attacker);
 }
@@ -267,7 +267,7 @@ function private function_9e65a7de(attacker, upgraded, immediate, weapon) {
     if (!isdefined(immediate)) {
         immediate = 0;
     }
-    self notify(#"hash_f8c5dd60", weapon, attacker);
+    self notify(#"cybercom_action", weapon, attacker);
     if (self cybercom::function_421746e0()) {
         if (isvehicle(self)) {
             self kill(self.origin, isdefined(attacker) ? attacker : undefined, undefined, weapon);
@@ -326,7 +326,7 @@ function function_ce51c2a1(attacker, upgraded, immediate) {
         self kill(self.origin, isdefined(attacker) ? attacker : undefined, undefined, weapon);
         return;
     }
-    wait(randomfloatrange(0.1, 0.75));
+    wait randomfloatrange(0.1, 0.75);
     if (!attacker cybercom::function_7a7d1608(self, weapon, 0)) {
         return;
     }
@@ -339,13 +339,13 @@ function function_ce51c2a1(attacker, upgraded, immediate) {
         self thread function_1ed56488("tag_inhand", 1, attacker, weapon);
         self animscripted("immo_anim", self.origin, self.angles, "ai_base_rifle_stn_exposed_immolate_explode_midthrow");
         self thread cybercom::function_cf64f12c("damage_pain", "immo_anim", 1, attacker, weapon);
-        self waittillmatch(#"hash_9670a76d", "grenade_right");
+        self waittillmatch(#"immo_anim", "grenade_right");
         self.var_c4da69e3 = spawn("script_model", self gettagorigin("tag_inhand"));
         self.var_c4da69e3 setmodel("wpn_t7_grenade_frag_world");
         self.var_c4da69e3 enablelinkto();
         self.var_c4da69e3 linkto(self, "tag_inhand");
         playfxontag("light/fx_ability_light_chest_immolation", self.var_c4da69e3, "tag_origin");
-        self waittillmatch(#"hash_9670a76d", "explode");
+        self waittillmatch(#"immo_anim", "explode");
         self stopsound("gdt_immolation_human_countdown");
         self notify(#"explode");
         return;
@@ -378,7 +378,7 @@ function function_c7fa793a(attacker, upgraded, immediate) {
     }
     self endon(#"death");
     if (!immediate) {
-        wait(randomfloatrange(0.1, 0.75));
+        wait randomfloatrange(0.1, 0.75);
     }
     weapon = getweapon("gadget_immolation");
     if (!attacker cybercom::function_7a7d1608(self, weapon, 0)) {
@@ -391,7 +391,7 @@ function function_c7fa793a(attacker, upgraded, immediate) {
         self function_5a760e8b(attacker, upgraded);
         origin = self.origin;
         self dodamage(self.health, self.origin, isdefined(attacker) ? attacker : undefined, isdefined(attacker) ? attacker : undefined, "none", "MOD_BURNED", 0, weapon, -1, 1);
-        wait(0.1);
+        wait 0.1;
         radiusdamage(origin, getdvarint("scr_immolation_outer_radius", -21), 500, 30, isdefined(attacker) ? attacker : undefined, "MOD_EXPLOSIVE", weapon);
         return;
     }
@@ -409,7 +409,7 @@ function function_c7fa793a(attacker, upgraded, immediate) {
     var_ebfa18e1 = gettime() + var_a30bdd5a * 1000;
     self dodamage(5, self.origin, isdefined(attacker) ? attacker : undefined, undefined, "none", "MOD_UNKNOWN", 0, weapon, -1, 1);
     while (gettime() < var_ebfa18e1) {
-        wait(0.1);
+        wait 0.1;
     }
     self clientfield::set("cybercom_immolate", 2);
     self function_5a760e8b(attacker, upgraded);
@@ -451,7 +451,7 @@ function private function_843196fe(guy, chance, var_d9346487) {
         var_d9346487 = randomint(getdvarint("scr_immolation_gcount", 3)) + 1;
     }
     while (var_d9346487 && isdefined(self) && isdefined(guy)) {
-        wait(randomfloatrange(getdvarfloat("scr_immolation_grenade_wait_timeMIN", 0.3), getdvarfloat("scr_immolation_grenade_wait_timeMAX", 0.9)));
+        wait randomfloatrange(getdvarfloat("scr_immolation_grenade_wait_timeMIN", 0.3), getdvarfloat("scr_immolation_grenade_wait_timeMAX", 0.9));
         var_d9346487--;
         if (randomint(100) > chance) {
             continue;
@@ -578,7 +578,7 @@ function function_9eebfb7(target, var_9bc2efcb, upgraded) {
         type = self cybercom::function_5e3d3aa();
         self orientmode("face default");
         self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
-        self waittillmatch(#"hash_39fa7e38", "fire");
+        self waittillmatch(#"ai_cybercom_anim", "fire");
     }
     weapon = getweapon("gadget_immolation");
     foreach (guy in validtargets) {
@@ -586,7 +586,7 @@ function function_9eebfb7(target, var_9bc2efcb, upgraded) {
             continue;
         }
         guy thread function_9e65a7de(self, upgraded, 0, getweapon("gadget_immolation"));
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -597,7 +597,7 @@ function function_9eebfb7(target, var_9bc2efcb, upgraded) {
 function function_4f174738() {
     self endon(#"death");
     self.var_a691a602 = 0;
-    wait(2);
+    wait 2;
     self.var_a691a602 = undefined;
 }
 

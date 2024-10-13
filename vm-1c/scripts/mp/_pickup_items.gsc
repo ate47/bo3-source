@@ -166,7 +166,7 @@ function get_item_from_string_perk(perks_string) {
     item_struct = spawnstruct();
     if (!isdefined(level.perkspecialties[perks_string])) {
         /#
-            util::error("ammo" + perks_string + "ammo" + self.origin);
+            util::error("<dev string:x28>" + perks_string + "<dev string:x3b>" + self.origin);
         #/
         return;
     }
@@ -199,15 +199,15 @@ function get_item_from_string_weapon(weapon_and_attachments_string) {
 // Size: 0xc2
 function get_item_from_string(item_string) {
     switch (self.script_noteworthy) {
-    case 8:
+    case "ammo":
         return self get_item_from_string_ammo(item_string);
-    case 10:
+    case "damage":
         return self get_item_from_string_damage(item_string);
-    case 12:
+    case "health":
         return self get_item_from_string_health(item_string);
-    case 17:
+    case "perk":
         return self get_item_from_string_perk(item_string);
-    case 18:
+    case "weapon":
         return self get_item_from_string_weapon(item_string);
     }
 }
@@ -232,15 +232,15 @@ function init_items_for_pickup() {
 // Size: 0x5e
 function pickup_item_respawn_time() {
     switch (self.script_noteworthy) {
-    case 8:
+    case "ammo":
         return 10;
-    case 10:
+    case "damage":
         return 60;
-    case 12:
+    case "health":
         return 10;
-    case 17:
+    case "perk":
         return 10;
-    case 18:
+    case "weapon":
         return 30;
     }
 }
@@ -251,15 +251,15 @@ function pickup_item_respawn_time() {
 // Size: 0x6a
 function pickup_item_sound_pickup() {
     switch (self.script_noteworthy) {
-    case 8:
+    case "ammo":
         return "wpn_ammo_pickup_oldschool";
-    case 10:
+    case "damage":
         return "wpn_weap_pickup_oldschool";
-    case 12:
+    case "health":
         return "wpn_weap_pickup_oldschool";
-    case 17:
+    case "perk":
         return "wpn_weap_pickup_oldschool";
-    case 18:
+    case "weapon":
         return "wpn_weap_pickup_oldschool";
     }
 }
@@ -270,15 +270,15 @@ function pickup_item_sound_pickup() {
 // Size: 0x6a
 function pickup_item_sound_respawn() {
     switch (self.script_noteworthy) {
-    case 8:
+    case "ammo":
         return "wpn_ammo_pickup_oldschool";
-    case 10:
+    case "damage":
         return "wpn_weap_pickup_oldschool";
-    case 12:
+    case "health":
         return "wpn_weap_pickup_oldschool";
-    case 17:
+    case "perk":
         return "wpn_weap_pickup_oldschool";
-    case 18:
+    case "weapon":
         return "wpn_weap_pickup_oldschool";
     }
 }
@@ -306,19 +306,19 @@ function on_touch(player) {
     self endon(#"respawned");
     pickup_item = self.visuals[0];
     switch (pickup_item.script_noteworthy) {
-    case 8:
+    case "ammo":
         pickup_item on_touch_ammo(player);
         break;
-    case 10:
+    case "damage":
         pickup_item on_touch_damage(player);
         break;
-    case 12:
+    case "health":
         pickup_item on_touch_health(player);
         break;
-    case 17:
+    case "perk":
         pickup_item on_touch_perk(player);
         break;
-    case 18:
+    case "weapon":
         if (!pickup_item on_touch_weapon(player)) {
             return;
         }
@@ -328,7 +328,7 @@ function on_touch(player) {
     self gameobjects::set_model_visibility(0);
     self gameobjects::allow_use("none");
     if (level.pickupitemrespawn) {
-        wait(pickup_item.respawn_time);
+        wait pickup_item.respawn_time;
         self thread respawn_pickup();
     }
 }

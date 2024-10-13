@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_5fc59ced;
+#namespace _teamset;
 
-// Namespace namespace_5fc59ced
+// Namespace _teamset
 // Params 0, eflags: 0x0
 // Checksum 0xc69dd9a8, Offset: 0x98
 // Size: 0x24

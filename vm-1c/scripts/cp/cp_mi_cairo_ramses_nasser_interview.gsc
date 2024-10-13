@@ -24,9 +24,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e55eaf53;
+#namespace cp_mi_cairo_ramses_nasser_interview;
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 1, eflags: 0x1 linked
 // Checksum 0xfbbb10f8, Offset: 0x898
 // Size: 0x1f4
@@ -37,7 +37,7 @@ function main(var_74cd64bc) {
         function_e29f0dd6();
         level thread function_2ed0dd8e();
         level scene::skipto_end("cin_ram_02_04_walk_1st_introduce_04");
-        level thread namespace_7434c6b7::function_bc43c2f8(0);
+        level thread cp_mi_cairo_ramses_station_walk::function_bc43c2f8(0);
         load::function_a2995f22();
         function_b760b954();
         namespace_391e4301::function_e7ebe596();
@@ -51,7 +51,7 @@ function main(var_74cd64bc) {
     function_bf7cc686(var_74cd64bc);
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xa98
 // Size: 0x4
@@ -59,7 +59,7 @@ function precache() {
     
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4a3f1fc6, Offset: 0xaa8
 // Size: 0x84
@@ -70,7 +70,7 @@ function function_e29f0dd6() {
     skipto::teleport_ai("interview_dr_nasser", level.var_9db406db);
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe3bbcaab, Offset: 0xb38
 // Size: 0x3c
@@ -79,17 +79,17 @@ function function_2ed0dd8e() {
     scene::play("cin_ram_02_04_interview_salim_wait");
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc2f902ea, Offset: 0xb80
 // Size: 0x44
 function function_1bcd464b() {
-    self notify(#"hash_638e4884");
+    self notify(#"kill_player_walkspeed_adjustment");
     self util::function_16c71b8(1);
     self setmovespeedscale(1);
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 1, eflags: 0x1 linked
 // Checksum 0x21fcc2a8, Offset: 0xbd0
 // Size: 0x19c
@@ -113,7 +113,7 @@ function function_bf7cc686(var_74cd64bc) {
     skipto::function_be8adfb8("interview_dr_nasser");
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 1, eflags: 0x1 linked
 // Checksum 0x43db97cb, Offset: 0xd78
 // Size: 0x11c
@@ -127,11 +127,11 @@ function function_830dd1fa(a_ents) {
     level util::clientnotify("alert_on");
     level thread function_66a8939();
     battlechatter::function_d9f49fba(1, "bc");
-    level thread namespace_7434c6b7::function_bbd12ed2(0);
+    level thread cp_mi_cairo_ramses_station_walk::function_bbd12ed2(0);
     level thread function_7452fdb5();
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7f8daf25, Offset: 0xea0
 // Size: 0xcc
@@ -145,7 +145,7 @@ function function_7995f971() {
     level thread namespace_bedc6a60::function_91e74b85();
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4614d1c4, Offset: 0xf78
 // Size: 0x24
@@ -153,7 +153,7 @@ function function_f568f95f(a_ents) {
     util::function_93831e79("interview_igc_done");
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5ef200, Offset: 0xfa8
 // Size: 0x7c
@@ -164,7 +164,7 @@ function function_370a5671() {
     self forceteleport(var_8279bcd1.origin, var_8279bcd1.angles);
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 2, eflags: 0x1 linked
 // Checksum 0x32d9de77, Offset: 0x1030
 // Size: 0x28
@@ -174,7 +174,7 @@ function function_57bc36e6(a_ents, b_on) {
     }
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8edda486, Offset: 0x1060
 // Size: 0xac
@@ -183,11 +183,11 @@ function function_66a8939() {
     sndent playloopsound("evt_postint_battle_walla", 0.25);
     flag::wait_till("raps_door_used");
     sndent stoploopsound(2);
-    wait(2);
+    wait 2;
     sndent delete();
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8f3ac47, Offset: 0x1118
 // Size: 0xac
@@ -198,7 +198,7 @@ function function_7452fdb5(a_ents) {
     var_94312345 moveto(var_da30185c.origin, 0.05);
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 2, eflags: 0x1 linked
 // Checksum 0x9a8350d6, Offset: 0x11d0
 // Size: 0x20a
@@ -224,7 +224,7 @@ function function_6a80eecf(var_41b16c2b, var_a083aff5) {
     }
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe5c0c3d5, Offset: 0x13e8
 // Size: 0x17a
@@ -241,7 +241,7 @@ function function_e4a01869(a_ents) {
     }
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 0, eflags: 0x1 linked
 // Checksum 0x306550a3, Offset: 0x1570
 // Size: 0x134
@@ -256,7 +256,7 @@ function function_b760b954() {
     util::function_14518e76(cmodel2_t, %cp_level_ramses_start_interview, %CP_MI_CAIRO_RAMSES_START_INTERVIEW, &function_4f753dd2);
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2fcd504b, Offset: 0x16b0
 // Size: 0x64
@@ -267,7 +267,7 @@ function function_4f753dd2(e_player) {
     self gameobjects::destroy_object(1);
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbf0fc942, Offset: 0x1720
 // Size: 0xfc
@@ -280,7 +280,7 @@ function function_7648e769() {
     util::function_14518e76(t_exit, %cp_level_ramses_exit_interview, %CP_MI_CAIRO_RAMSES_EXIT_INTERVIEW, &function_c4bcf67b);
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 1, eflags: 0x1 linked
 // Checksum 0x99045231, Offset: 0x1828
 // Size: 0x7c
@@ -292,7 +292,7 @@ function function_c4bcf67b(e_player) {
     self gameobjects::destroy_object(1);
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdb9fa396, Offset: 0x18b0
 // Size: 0x134
@@ -318,7 +318,7 @@ function function_c99967dc(var_2f9491f0) {
     }
 }
 
-// Namespace namespace_e55eaf53
+// Namespace cp_mi_cairo_ramses_nasser_interview
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf882d9b, Offset: 0x19f0
 // Size: 0x292

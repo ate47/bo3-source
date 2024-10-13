@@ -7,9 +7,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_4787588d;
+#namespace zm_factory_vo;
 
-// Namespace namespace_4787588d
+// Namespace zm_factory_vo
 // Params 0, eflags: 0x2
 // Checksum 0xe2924806, Offset: 0xa38
 // Size: 0x3c
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
     system::register("zm_factory_vo", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_4787588d
+// Namespace zm_factory_vo
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xa80
 // Size: 0x4
@@ -25,7 +25,7 @@ function __init__() {
     
 }
 
-// Namespace namespace_4787588d
+// Namespace zm_factory_vo
 // Params 0, eflags: 0x1 linked
 // Checksum 0x57bc9cac, Offset: 0xa90
 // Size: 0x1c
@@ -33,7 +33,7 @@ function __main__() {
     level thread function_7884e6b8();
 }
 
-// Namespace namespace_4787588d
+// Namespace zm_factory_vo
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa35586b8, Offset: 0xab8
 // Size: 0xb88
@@ -83,7 +83,7 @@ function function_7884e6b8() {
     array::add(var_4c7aad4a, array("vox_plr_1_interaction_niko_demp_5_0", "vox_plr_0_interaction_niko_demp_5_0"));
     var_22f40782 = 0;
     level waittill(#"all_players_spawned");
-    wait(1);
+    wait 1;
     while (true) {
         if (level.round_number > 4) {
             level waittill(#"end_of_round");
@@ -128,11 +128,11 @@ function function_7884e6b8() {
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_4787588d
+// Namespace zm_factory_vo
 // Params 5, eflags: 0x1 linked
 // Checksum 0xc8ca1a8a, Offset: 0x1648
 // Size: 0xe4
@@ -146,13 +146,13 @@ function function_c23e3a71(var_49fefccd, n_index, b_wait_if_busy, var_7e649f23, 
     if (!isdefined(var_d1295208)) {
         var_d1295208 = 0;
     }
-    assert(isdefined(var_49fefccd), "vox_plr_3_interaction_takeo_rich_4_0");
-    assert(n_index < var_49fefccd.size, "vox_plr_3_interaction_takeo_rich_4_0");
+    assert(isdefined(var_49fefccd), "<dev string:x28>");
+    assert(n_index < var_49fefccd.size, "<dev string:x61>");
     var_3b5e4c24 = var_49fefccd[n_index];
     function_7aa5324a(var_3b5e4c24, b_wait_if_busy, var_7e649f23, var_d1295208);
 }
 
-// Namespace namespace_4787588d
+// Namespace zm_factory_vo
 // Params 4, eflags: 0x1 linked
 // Checksum 0xa73fc471, Offset: 0x1738
 // Size: 0x10c
@@ -178,7 +178,7 @@ function function_7aa5324a(a_str_vo, b_wait_if_busy, n_priority, var_d1295208) {
     function_218256bd(0);
 }
 
-// Namespace namespace_4787588d
+// Namespace zm_factory_vo
 // Params 1, eflags: 0x1 linked
 // Checksum 0x69594eec, Offset: 0x1850
 // Size: 0x16a
@@ -192,13 +192,13 @@ function function_218256bd(var_eca8128e) {
     if (var_eca8128e) {
         foreach (player in level.activeplayers) {
             while (isdefined(player.isspeaking) && isdefined(player) && player.isspeaking) {
-                wait(0.1);
+                wait 0.1;
             }
         }
     }
 }
 
-// Namespace namespace_4787588d
+// Namespace zm_factory_vo
 // Params 5, eflags: 0x1 linked
 // Checksum 0x23700ed8, Offset: 0x19c8
 // Size: 0x17c
@@ -221,14 +221,14 @@ function function_897246e4(str_vo_alias, n_wait, b_wait_if_busy, n_priority, var
         e_speaker = zm_utility::function_a157d632(var_edf0b06);
     } else {
         e_speaker = undefined;
-        assert(0, "vox_plr_3_interaction_takeo_rich_4_0" + str_vo_alias + "vox_plr_3_interaction_takeo_rich_4_0");
+        assert(0, "<dev string:xb2>" + str_vo_alias + "<dev string:xcf>");
     }
     if (zm_utility::is_player_valid(e_speaker)) {
         e_speaker vo_say(str_vo_alias, n_wait, b_wait_if_busy, n_priority);
     }
 }
 
-// Namespace namespace_4787588d
+// Namespace zm_factory_vo
 // Params 5, eflags: 0x1 linked
 // Checksum 0x2830973f, Offset: 0x1b50
 // Size: 0x30c
@@ -254,19 +254,19 @@ function vo_say(str_vo_alias, n_delay, b_wait_if_busy, n_priority, var_d1295208)
         if (isdefined(level.sndvoxoverride) && (isdefined(self.isspeaking) && self.isspeaking || level.sndvoxoverride)) {
             if (isdefined(b_wait_if_busy) && b_wait_if_busy) {
                 while (isdefined(level.sndvoxoverride) && (self.isspeaking || level.sndvoxoverride)) {
-                    wait(0.1);
+                    wait 0.1;
                 }
-                wait(0.35);
+                wait 0.35;
             } else {
                 return;
             }
         }
         if (n_delay > 0) {
-            wait(n_delay);
+            wait n_delay;
         }
         if (isdefined(self.b_wait_if_busy) && isdefined(self.isspeaking) && self.isspeaking && self.b_wait_if_busy) {
             while (self.isspeaking) {
-                wait(0.1);
+                wait 0.1;
             }
         } else if (isdefined(level.sndvoxoverride) && (isdefined(self.isspeaking) && self.isspeaking && !(isdefined(self.b_wait_if_busy) && self.b_wait_if_busy) || level.sndvoxoverride)) {
             return;
@@ -286,7 +286,7 @@ function vo_say(str_vo_alias, n_delay, b_wait_if_busy, n_priority, var_d1295208)
     }
 }
 
-// Namespace namespace_4787588d
+// Namespace zm_factory_vo
 // Params 0, eflags: 0x1 linked
 // Checksum 0x86c0863e, Offset: 0x1e68
 // Size: 0xf4

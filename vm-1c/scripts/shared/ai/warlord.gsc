@@ -56,13 +56,13 @@ function autoexec registerbehaviorscriptfunctions() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("warlordCanJukeCondition", &function_80e7735);
     behaviortreenetworkutility::registerbehaviortreescriptapi("warlordCanTacticalJukeCondition", &function_f663699c);
     behaviortreenetworkutility::registerbehaviortreescriptapi("warlordShouldBeAngryCondition", &function_cb636409);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("warlordShouldNormalMelee", &function_c532c1b0);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("warlordShouldNormalMelee", &warlordShouldNormalMelee);
     behaviortreenetworkutility::registerbehaviortreescriptapi("warlordCanTakePainCondition", &function_47cb87ef);
     behaviortreenetworkutility::registerbehaviortreescriptapi("warlordExposedPainActionStart", &function_a778e8e3);
     behaviortreenetworkutility::registerbehaviortreeaction("warlordDeathAction", &function_5e6a5213, undefined, undefined);
     behaviortreenetworkutility::registerbehaviortreeaction("warlordJukeAction", &function_296ed07c, undefined, &function_4daf9b71);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("chooseBetterPositionService", &function_655ad686);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("WarlordAngryAttack", &function_9de5522f);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("chooseBetterPositionService", &chooseBetterPositionService);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("WarlordAngryAttack", &WarlordAngryAttack);
 }
 
 // Namespace namespace_c7ab8fce
@@ -115,7 +115,7 @@ function private function_9b66e9bc(entity) {
     }
     if (entity.var_b654f978) {
         /#
-            namespace_e585b400::function_3d68d6d1(3, (1, 0, 1), "warlordCanTacticalJukeCondition");
+            namespace_e585b400::function_3d68d6d1(3, (1, 0, 1), "<dev string:x28>");
         #/
         return false;
     }
@@ -158,7 +158,7 @@ function private function_9b66e9bc(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb162a48f, Offset: 0xf40
 // Size: 0x1284
-function function_655ad686(entity) {
+function chooseBetterPositionService(entity) {
     if (entity asmistransitionrunning() || entity getbehaviortreestatus() != 5 || entity asmissubstatepending() || entity asmistransdecrunning()) {
         return 0;
     }
@@ -188,7 +188,7 @@ function function_655ad686(entity) {
         searchorigin = entity.lastenemysightpos;
     } else {
         /#
-            entity namespace_e585b400::function_3d68d6d1(undefined, (1, 0, 0), "warlordCanTacticalJukeCondition");
+            entity namespace_e585b400::function_3d68d6d1(undefined, (1, 0, 0), "<dev string:x43>");
         #/
         searchorigin = entity.goalpos;
     }
@@ -203,7 +203,7 @@ function function_655ad686(entity) {
     }
     if (isdefined(entity.enemy) && !entity seerecently(entity.enemy, 2) && isdefined(entity.lastenemysightpos)) {
         /#
-            entity namespace_e585b400::function_3d68d6d1(undefined, (1, 1, 1), "warlordCanTacticalJukeCondition");
+            entity namespace_e585b400::function_3d68d6d1(undefined, (1, 1, 1), "<dev string:x5f>");
         #/
         var_cb05c034 = 1;
         if (isdefined(entity.pathgoalpos)) {
@@ -364,7 +364,7 @@ function function_655ad686(entity) {
                 goalposition = randompoints[index];
             }
             /#
-                if (getdvarint("warlordCanTacticalJukeCondition") > 0 && isdefined(getentbynum(getdvarint("warlordCanTacticalJukeCondition"))) && entity == getentbynum(getdvarint("warlordCanTacticalJukeCondition"))) {
+                if (getdvarint("<dev string:x74>") > 0 && isdefined(getentbynum(getdvarint("<dev string:x74>"))) && entity == getentbynum(getdvarint("<dev string:x74>"))) {
                     as_debug::debugdrawweightedpoint(entity, randompoints[index], var_1fe6d199, -1.25, 1.75);
                 }
             #/
@@ -381,7 +381,7 @@ function function_655ad686(entity) {
                 var_34862dbe = point;
             }
             /#
-                if (getdvarint("warlordCanTacticalJukeCondition") > 0 && isdefined(getentbynum(getdvarint("warlordCanTacticalJukeCondition"))) && entity == getentbynum(getdvarint("warlordCanTacticalJukeCondition"))) {
+                if (getdvarint("<dev string:x74>") > 0 && isdefined(getentbynum(getdvarint("<dev string:x74>"))) && entity == getentbynum(getdvarint("<dev string:x74>"))) {
                     as_debug::debugdrawweightedpoint(entity, point.origin, var_1fe6d199, -1.25, 1.75);
                 }
             #/
@@ -434,11 +434,11 @@ function function_f663699c(behaviortreeentity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xac318479, Offset: 0x2280
 // Size: 0x298
-function function_c532c1b0(behaviortreeentity) {
+function warlordShouldNormalMelee(behaviortreeentity) {
     if (isdefined(behaviortreeentity.enemy) && !(isdefined(behaviortreeentity.enemy.allowdeath) && behaviortreeentity.enemy.allowdeath)) {
         return false;
     }
-    if (aiutility::function_90d01729(behaviortreeentity) && !isalive(behaviortreeentity.enemy)) {
+    if (aiutility::hasEnemy(behaviortreeentity) && !isalive(behaviortreeentity.enemy)) {
         return false;
     }
     if (!issentient(behaviortreeentity.enemy)) {
@@ -491,10 +491,10 @@ function function_296ed07c(behaviortreeentity, asmstatename) {
     animationstatenetworkutility::requeststate(behaviortreeentity, asmstatename);
     jukedirection = blackboard::getblackboardattribute(behaviortreeentity, "_juke_direction");
     switch (jukedirection) {
-    case 20:
+    case "left":
         clientfield::set("warlord_thruster_direction", 4);
         break;
-    case 21:
+    case "right":
         clientfield::set("warlord_thruster_direction", 3);
         break;
     }
@@ -564,9 +564,9 @@ function function_cb636409(behaviortreeentity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf2d3e11f, Offset: 0x29b8
 // Size: 0x2e0
-function function_9de5522f(entity) {
+function WarlordAngryAttack(entity) {
     /#
-        namespace_e585b400::function_3d68d6d1(1, (0, 1, 0), "warlordCanTacticalJukeCondition");
+        namespace_e585b400::function_3d68d6d1(1, (0, 1, 0), "<dev string:x8c>");
     #/
     entity.var_b654f978 = 1;
     entity.forcefire = 1;
@@ -610,7 +610,7 @@ function function_c698ce8a(entity, var_7d0a379a) {
         }
     }
     /#
-        namespace_e585b400::function_3d68d6d1(1, (0, 0, 1), "warlordCanTacticalJukeCondition");
+        namespace_e585b400::function_3d68d6d1(1, (0, 0, 1), "<dev string:x95>");
     #/
     entity.forcefire = 0;
     entity.var_b654f978 = 0;
@@ -653,13 +653,13 @@ function function_13ed0a8b(entity, var_ef60116) {
 function function_da308a83(entity, position, min_duration, max_duration, name) {
     positiononnavmesh = getclosestpointonnavmesh(position, -56, 25);
     if (!isdefined(positiononnavmesh)) {
-        println("warlordCanTacticalJukeCondition" + position);
+        println("<dev string:x9c>" + position);
         return;
     } else {
         position = positiononnavmesh;
     }
     if (!entity isposatgoal(position)) {
-        println("warlordCanTacticalJukeCondition" + position);
+        println("<dev string:xfd>" + position);
     }
     point = spawnstruct();
     point.origin = position;
@@ -1129,13 +1129,13 @@ function function_c55ceac8(entity, attacker, threat) {
     entity.var_f8d4f481 = attacker;
     entity.var_3968f41e = threat;
     /#
-        namespace_e585b400::function_3d68d6d1(0, (0, 1, 0), "warlordCanTacticalJukeCondition");
+        namespace_e585b400::function_3d68d6d1(0, (0, 1, 0), "<dev string:x8c>");
     #/
     shoottime = getdvarfloat("warlordangryattack", 3);
     entity ai::shoot_at_target("normal", attacker, undefined, shoottime, undefined, 1);
     entity.var_f8d4f481 = undefined;
     /#
-        namespace_e585b400::function_3d68d6d1(0, (0, 0, 1), "warlordCanTacticalJukeCondition");
+        namespace_e585b400::function_3d68d6d1(0, (0, 0, 1), "<dev string:x95>");
     #/
 }
 
@@ -1197,7 +1197,7 @@ function function_b65f3cc0() {
     clientfield::set("warlord_damage_state", 0);
     clientfield::set("warlord_lights_state", 1);
     switch (entity.classname) {
-    case 42:
+    case "actor_spawner_bo3_warlord_enemy_hvt":
         clientfield::set("warlord_type", 2);
         break;
     default:
@@ -1227,7 +1227,7 @@ function function_dd8d3882() {
         missile_deleteattractor(self.var_3ab5b78c);
         self.var_3ab5b78c = undefined;
     }
-    wait(0.5);
+    wait 0.5;
     if (isdefined(self)) {
         self function_afb9d85b();
     }
@@ -1271,9 +1271,9 @@ function function_8334ee5f() {
     // Checksum 0x90caf4ec, Offset: 0x5260
     // Size: 0x274
     function function_3d68d6d1(state, color, string) {
-        if (getdvarint("warlordCanTacticalJukeCondition") > 0) {
+        if (getdvarint("<dev string:x145>") > 0) {
             if (!isdefined(string)) {
-                string = "warlordCanTacticalJukeCondition";
+                string = "<dev string:x155>";
             }
             if (!isdefined(state)) {
                 if (!isdefined(self) || !isdefined(self.lastmessage) || self.lastmessage != string) {
@@ -1283,31 +1283,31 @@ function function_8334ee5f() {
                 return;
             }
             if (state == 0) {
-                printtoprightln("warlordCanTacticalJukeCondition" + string + gettime(), color, -1);
+                printtoprightln("<dev string:x156>" + string + gettime(), color, -1);
                 return;
             }
             if (state == 1) {
-                printtoprightln("warlordCanTacticalJukeCondition" + string + gettime(), color, -1);
+                printtoprightln("<dev string:x16c>" + string + gettime(), color, -1);
                 return;
             }
             if (state == 2) {
-                printtoprightln("warlordCanTacticalJukeCondition" + string + gettime(), color, -1);
+                printtoprightln("<dev string:x181>" + string + gettime(), color, -1);
                 return;
             }
             if (state == 3) {
-                printtoprightln("warlordCanTacticalJukeCondition" + string + gettime(), color, -1);
+                printtoprightln("<dev string:x1a1>" + string + gettime(), color, -1);
                 return;
             }
             if (state == 4) {
-                printtoprightln("warlordCanTacticalJukeCondition" + string + gettime(), color, -1);
+                printtoprightln("<dev string:x1b5>" + string + gettime(), color, -1);
                 return;
             }
             if (state == 5) {
-                printtoprightln("warlordCanTacticalJukeCondition" + string + gettime(), color, -1);
+                printtoprightln("<dev string:x1d3>" + string + gettime(), color, -1);
                 return;
             }
             if (state == 6) {
-                printtoprightln("warlordCanTacticalJukeCondition" + string + gettime(), color, -1);
+                printtoprightln("<dev string:x1ef>" + string + gettime(), color, -1);
             }
         }
     }
@@ -1317,7 +1317,7 @@ function function_8334ee5f() {
     // Checksum 0x656e1237, Offset: 0x54e0
     // Size: 0x94
     function function_3f561bff(entity, state, var_db3a489f) {
-        if (getdvarint("warlordCanTacticalJukeCondition") > 0) {
+        if (getdvarint("<dev string:x145>") > 0) {
             if (!(isdefined(var_db3a489f) && isnewstate(entity, state))) {
                 color = (1, 1, 1);
                 entity function_3d68d6d1(state, color);
@@ -1336,7 +1336,7 @@ function function_4160d34d(entity, state, var_4b0cc01e) {
         var_4b0cc01e = 0;
     }
     /#
-        if (getdvarint("warlordCanTacticalJukeCondition") > 0) {
+        if (getdvarint("<dev string:x145>") > 0) {
             if (!isdefined(var_4b0cc01e) || isnewstate(entity, state)) {
                 color = (0, 1, 0);
             } else {
@@ -1344,7 +1344,7 @@ function function_4160d34d(entity, state, var_4b0cc01e) {
             }
             if (!isdefined(state)) {
                 color = (0, 0, 1);
-                entity function_3d68d6d1(entity.currentstate, color, "warlordCanTacticalJukeCondition");
+                entity function_3d68d6d1(entity.currentstate, color, "<dev string:x95>");
             }
             entity function_3d68d6d1(state, color);
         }
@@ -1359,7 +1359,7 @@ function function_4160d34d(entity, state, var_4b0cc01e) {
     // Checksum 0x5896e1e2, Offset: 0x56a0
     // Size: 0x6c
     function function_c2db5ca5(entity, state) {
-        if (getdvarint("warlordCanTacticalJukeCondition") > 0) {
+        if (getdvarint("<dev string:x145>") > 0) {
             color = (1, 1, 0);
             entity function_3d68d6d1(state, color);
         }

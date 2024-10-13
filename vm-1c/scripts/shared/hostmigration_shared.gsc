@@ -13,19 +13,19 @@
     // Size: 0x13c
     function debug_script_structs() {
         if (isdefined(level.struct)) {
-            println("<unknown string>" + level.struct.size);
-            println("<unknown string>");
+            println("<dev string:x28>" + level.struct.size);
+            println("<dev string:x39>");
             for (i = 0; i < level.struct.size; i++) {
                 struct = level.struct[i];
                 if (isdefined(struct.targetname)) {
-                    println("<unknown string>" + i + "<unknown string>" + struct.targetname);
+                    println("<dev string:x3a>" + i + "<dev string:x3e>" + struct.targetname);
                     continue;
                 }
-                println("<unknown string>" + i + "<unknown string>" + "<unknown string>");
+                println("<dev string:x3a>" + i + "<dev string:x3e>" + "<dev string:x42>");
             }
             return;
         }
-        println("<unknown string>");
+        println("<dev string:x47>");
     }
 
 #/
@@ -74,7 +74,7 @@ function locktimer() {
     level endon(#"host_migration_end");
     for (;;) {
         currtime = gettime();
-        wait(0.05);
+        wait 0.05;
         if (!level.timerstopped && isdefined(level.discardtime)) {
             level.discardtime += gettime() - currtime;
         }
@@ -90,13 +90,13 @@ function matchstarttimerconsole_internal(counttime, matchstarttimer) {
     level endon(#"match_start_timer_beginning");
     while (counttime > 0 && !level.gameended) {
         matchstarttimer thread hud::function_5e2578bc(level);
-        wait(matchstarttimer.inframes * 0.05);
+        wait matchstarttimer.inframes * 0.05;
         matchstarttimer setvalue(counttime);
         if (counttime == 2) {
             visionsetnaked(getdvarstring("mapname"), 3);
         }
         counttime--;
-        wait(1 - matchstarttimer.inframes * 0.05);
+        wait 1 - matchstarttimer.inframes * 0.05;
     }
 }
 
@@ -106,7 +106,7 @@ function matchstarttimerconsole_internal(counttime, matchstarttimer) {
 // Size: 0x27c
 function matchstarttimerconsole(type, duration) {
     level notify(#"match_start_timer_beginning");
-    wait(0.05);
+    wait 0.05;
     var_a2ceaf69 = hud::createserverfontstring("objective", 1.5);
     var_a2ceaf69 hud::setpoint("CENTER", "CENTER", 0, -40);
     var_a2ceaf69.sort = 1001;
@@ -147,7 +147,7 @@ function hostmigrationwait() {
     }
     level notify(#"host_migration_countdown_begin");
     thread matchstarttimerconsole("match_starting_in", 5);
-    wait(5);
+    wait 5;
 }
 
 // Namespace hostmigration
@@ -168,7 +168,7 @@ function waittillhostmigrationcountdown() {
 // Size: 0x14
 function hostmigrationwaitforplayers() {
     level endon(#"hostmigration_enoughplayers");
-    wait(15);
+    wait 15;
 }
 
 // Namespace hostmigration
@@ -222,7 +222,7 @@ function waittillhostmigrationstarts(duration) {
         return;
     }
     level endon(#"host_migration_begin");
-    wait(duration);
+    wait duration;
 }
 
 // Namespace hostmigration
@@ -243,7 +243,7 @@ function waitlongdurationwithhostmigrationpause(duration) {
     }
     /#
         if (gettime() != endtime) {
-            println("<unknown string>" + gettime() + "<unknown string>" + endtime);
+            println("<dev string:x5f>" + gettime() + "<dev string:x7c>" + endtime);
         }
     #/
     waittillhostmigrationdone();
@@ -273,7 +273,7 @@ function waitlongdurationwithhostmigrationpauseemp(duration) {
     }
     /#
         if (gettime() != empendtime) {
-            println("<unknown string>" + gettime() + "<unknown string>" + empendtime);
+            println("<dev string:x5f>" + gettime() + "<dev string:x95>" + empendtime);
         }
     #/
     waittillhostmigrationdone();
@@ -297,18 +297,18 @@ function waitlongdurationwithgameendtimeupdate(duration) {
         while (isdefined(level.hostmigrationtimer)) {
             endtime += 1000;
             setgameendtime(int(endtime));
-            wait(1);
+            wait 1;
         }
     }
     /#
         if (gettime() != endtime) {
-            println("<unknown string>" + gettime() + "<unknown string>" + endtime);
+            println("<dev string:x5f>" + gettime() + "<dev string:x7c>" + endtime);
         }
     #/
     while (isdefined(level.hostmigrationtimer)) {
         endtime += 1000;
         setgameendtime(int(endtime));
-        wait(1);
+        wait 1;
     }
     return gettime() - starttime;
 }

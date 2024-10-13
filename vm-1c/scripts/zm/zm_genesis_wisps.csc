@@ -14,9 +14,9 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_44f858d8;
+#namespace zm_genesis_wisps;
 
-// Namespace namespace_44f858d8
+// Namespace zm_genesis_wisps
 // Params 0, eflags: 0x2
 // Checksum 0x428f823f, Offset: 0x308
 // Size: 0x3c
@@ -24,16 +24,16 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_wisps", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_44f858d8
+// Namespace zm_genesis_wisps
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc5e553eb, Offset: 0x350
 // Size: 0x94
 function __init__() {
-    clientfield::register("toplayer", "set_funfact_fx", 15000, 3, "int", &function_2c251c80, 0, 0);
+    clientfield::register("toplayer", "set_funfact_fx", 15000, 3, "int", &set_funfact_fx, 0, 0);
     clientfield::register("scriptmover", "wisp_fx", 15000, 2, "int", &wisp_fx, 0, 0);
 }
 
-// Namespace namespace_44f858d8
+// Namespace zm_genesis_wisps
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x3f0
 // Size: 0x4
@@ -41,7 +41,7 @@ function __main__() {
     
 }
 
-// Namespace namespace_44f858d8
+// Namespace zm_genesis_wisps
 // Params 7, eflags: 0x1 linked
 // Checksum 0xaab4bf93, Offset: 0x400
 // Size: 0xbc
@@ -54,11 +54,11 @@ function wisp_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldnam
     }
 }
 
-// Namespace namespace_44f858d8
+// Namespace zm_genesis_wisps
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe7c5e163, Offset: 0x4c8
 // Size: 0x194
-function function_2c251c80(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function set_funfact_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         if (!isdefined(self.var_ab2ca08f)) {
             var_6aa3898e = array("stub", "s_fx_funfact_demp", "s_fx_funfact_niko", "s_fx_funfact_rich", "s_fx_funfact_take");

@@ -27,7 +27,7 @@ function function_a0e51d80(point, timesec, size, color) {
             line(var_5e2b69e1, var_842de44a, color, 1, 0, 1);
             line(var_e4d48d14, var_56dbfc4f, color, 1, 0, 1);
         #/
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -38,7 +38,7 @@ function function_a0e51d80(point, timesec, size, color) {
     // Checksum 0xfdd5b616, Offset: 0x4e0
     // Size: 0x3c
     function function_b9907dab() {
-        execdevgui("Clearing all abilities on all players");
+        execdevgui("<dev string:x28>");
         level thread function_7874d5f4();
     }
 
@@ -54,7 +54,7 @@ function function_244cbceb() {
     self endon(#"disconnect");
     self endon(#"spawned");
     while (true) {
-        wait(1);
+        wait 1;
         if (isdefined(self.cybercom.var_ebeecfd5) && self.cybercom.var_ebeecfd5) {
             continue;
         }
@@ -78,7 +78,7 @@ function function_7874d5f4() {
     while (true) {
         cmd = getdvarstring("devgui_cybercore");
         if (cmd == "") {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         playernum = getdvarint("scr_player_number") - 1;

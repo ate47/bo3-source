@@ -30,12 +30,12 @@
     // Checksum 0x9cb49404, Offset: 0x228
     // Size: 0xb1c
     function updateminimapsetting() {
-        requiredmapaspectratio = getdvarfloat("<unknown string>");
+        requiredmapaspectratio = getdvarfloat("<dev string:x28>");
         if (!isdefined(level.minimapheight)) {
-            setdvar("<unknown string>", "<unknown string>");
+            setdvar("<dev string:x43>", "<dev string:x56>");
             level.minimapheight = 0;
         }
-        minimapheight = getdvarfloat("<unknown string>");
+        minimapheight = getdvarfloat("<dev string:x43>");
         if (minimapheight != level.minimapheight) {
             if (minimapheight <= 0) {
                 util::gethostplayer() cameraactivate(0);
@@ -47,7 +47,7 @@
                 players = getplayers();
                 if (players.size > 0) {
                     player = util::gethostplayer();
-                    corners = getentarray("<unknown string>", "<unknown string>");
+                    corners = getentarray("<dev string:x58>", "<dev string:x67>");
                     if (corners.size == 2) {
                         viewpos = corners[0].origin + corners[1].origin;
                         viewpos = (viewpos[0] * 0.5, viewpos[1] * 0.5, viewpos[2] * 0.5);
@@ -116,23 +116,23 @@
                         player camerasetposition(viewpos, (90, getnorthyaw(), 0));
                         player cameraactivate(1);
                         player takeallweapons();
-                        setdvar("<unknown string>", 0);
-                        setdvar("<unknown string>", 0);
-                        setdvar("<unknown string>", 0);
-                        setdvar("<unknown string>", 0);
-                        setdvar("<unknown string>", 0);
-                        setdvar("<unknown string>", 0);
-                        setdvar("<unknown string>", znear);
-                        setdvar("<unknown string>", 0.1);
-                        setdvar("<unknown string>", 0);
-                        setdvar("<unknown string>", 1);
-                        setdvar("<unknown string>", 90);
-                        setdvar("<unknown string>", 0);
-                        setdvar("<unknown string>", 1);
-                        setdvar("<unknown string>", 1);
-                        setdvar("<unknown string>", 0);
-                        setdvar("<unknown string>", 0);
-                        setdvar("<unknown string>", "<unknown string>");
+                        setdvar("<dev string:x72>", 0);
+                        setdvar("<dev string:x7d>", 0);
+                        setdvar("<dev string:x87>", 0);
+                        setdvar("<dev string:x92>", 0);
+                        setdvar("<dev string:x9c>", 0);
+                        setdvar("<dev string:xa2>", 0);
+                        setdvar("<dev string:xb0>", znear);
+                        setdvar("<dev string:xb8>", 0.1);
+                        setdvar("<dev string:xc8>", 0);
+                        setdvar("<dev string:xd7>", 1);
+                        setdvar("<dev string:xe1>", 90);
+                        setdvar("<dev string:xf8>", 0);
+                        setdvar("<dev string:x10d>", 1);
+                        setdvar("<dev string:x11c>", 1);
+                        setdvar("<dev string:x131>", 0);
+                        setdvar("<dev string:x13e>", 0);
+                        setdvar("<dev string:x149>", "<dev string:x56>");
                         if (isdefined(level.objpoints)) {
                             for (i = 0; i < level.objpointnames.size; i++) {
                                 if (isdefined(level.objpoints[level.objpointnames[i]])) {
@@ -144,11 +144,11 @@
                         }
                         thread drawminimapbounds(viewpos, mincorner, maxcorner);
                     } else {
-                        println("<unknown string>");
+                        println("<dev string:x15c>");
                     }
                     return;
                 }
-                setdvar("<unknown string>", "<unknown string>");
+                setdvar("<dev string:x43>", "<dev string:x56>");
             }
         }
     }
@@ -191,8 +191,8 @@
             line(corner1, corner2);
             line(corner2, corner3);
             line(corner3, corner0);
-            print3d(toppos, "<unknown string>", (1, 1, 1), 1, textscale);
-            wait(0.05);
+            print3d(toppos, "<dev string:x1a5>", (1, 1, 1), 1, textscale);
+            wait 0.05;
         }
     }
 
@@ -208,15 +208,15 @@
         height = int(height);
         if (abs(width - height) > threshold) {
             for (;;) {
-                iprintln("<unknown string>" + width + "<unknown string>" + height + "<unknown string>");
+                iprintln("<dev string:x1b2>" + width + "<dev string:x1eb>" + height + "<dev string:x1f5>");
                 if (height > width) {
                     scale = height / width;
-                    iprintln("<unknown string>" + scale + "<unknown string>");
+                    iprintln("<dev string:x1f8>" + scale + "<dev string:x229>");
                 } else {
                     scale = width / height;
-                    iprintln("<unknown string>" + scale + "<unknown string>");
+                    iprintln("<dev string:x1f8>" + scale + "<dev string:x24b>");
                 }
-                wait(10);
+                wait 10;
             }
         }
     }
@@ -247,11 +247,11 @@
     // Checksum 0xcaeb5420, Offset: 0x14f0
     // Size: 0x21e
     function body_customization_process_command(character_index) {
-        split = strtok(character_index, "<unknown string>");
+        split = strtok(character_index, "<dev string:x26d>");
         switch (split.size) {
         case 1:
         default:
-            command0 = strtok(split[0], "<unknown string>");
+            command0 = strtok(split[0], "<dev string:x26f>");
             character_index = int(command0[1]);
             body_index = 0;
             var_9a65c47f = 0;
@@ -259,13 +259,13 @@
             function_5fcfe5a4(character_index, body_index);
             break;
         case 2:
-            command0 = strtok(split[0], "<unknown string>");
+            command0 = strtok(split[0], "<dev string:x26f>");
             character_index = int(command0[1]);
-            command1 = strtok(split[1], "<unknown string>");
-            if (command1[0] == "<unknown string>") {
+            command1 = strtok(split[1], "<dev string:x26f>");
+            if (command1[0] == "<dev string:x271>") {
                 body_index = int(command1[1]);
                 function_5fcfe5a4(character_index, body_index);
-            } else if (command1[0] == "<unknown string>") {
+            } else if (command1[0] == "<dev string:x27b>") {
                 var_9a65c47f = int(command1[1]);
                 function_dfab5e4f(var_9a65c47f);
             }
@@ -279,19 +279,19 @@
     // Size: 0x2e6
     function body_customization_populate(mode) {
         bodies = getallcharacterbodies(mode);
-        body_customization_devgui_base = "<unknown string>";
+        body_customization_devgui_base = "<dev string:x282>";
         foreach (playerbodytype in bodies) {
-            body_name = makelocalizedstring(getcharacterdisplayname(playerbodytype, mode)) + "<unknown string>" + getcharacterassetname(playerbodytype, mode) + "<unknown string>";
-            adddebugcommand(body_customization_devgui_base + body_name + "<unknown string>" + "<unknown string>" + "<unknown string>" + "<unknown string>" + "<unknown string>" + playerbodytype + "<unknown string>");
+            body_name = makelocalizedstring(getcharacterdisplayname(playerbodytype, mode)) + "<dev string:x2a9>" + getcharacterassetname(playerbodytype, mode) + "<dev string:x2ac>";
+            adddebugcommand(body_customization_devgui_base + body_name + "<dev string:x2ae>" + "<dev string:x2b7>" + "<dev string:x2bf>" + "<dev string:x2cb>" + "<dev string:x2cd>" + playerbodytype + "<dev string:x2d7>");
             for (i = 0; i < getcharacterbodymodelcount(playerbodytype, mode); i++) {
-                adddebugcommand(body_customization_devgui_base + body_name + "<unknown string>" + i + "<unknown string>" + "<unknown string>" + "<unknown string>" + "<unknown string>" + playerbodytype + "<unknown string>" + "<unknown string>" + i + "<unknown string>");
-                wait(0.05);
+                adddebugcommand(body_customization_devgui_base + body_name + "<dev string:x2db>" + i + "<dev string:x2b7>" + "<dev string:x2bf>" + "<dev string:x2cb>" + "<dev string:x2cd>" + playerbodytype + "<dev string:x26d>" + "<dev string:x2ee>" + i + "<dev string:x2d7>");
+                wait 0.05;
             }
             for (i = 0; i < getcharacterhelmetmodelcount(playerbodytype, mode); i++) {
-                adddebugcommand(body_customization_devgui_base + body_name + "<unknown string>" + i + "<unknown string>" + "<unknown string>" + "<unknown string>" + "<unknown string>" + playerbodytype + "<unknown string>" + "<unknown string>" + i + "<unknown string>");
-                wait(0.05);
+                adddebugcommand(body_customization_devgui_base + body_name + "<dev string:x2f9>" + i + "<dev string:x2b7>" + "<dev string:x2bf>" + "<dev string:x2cb>" + "<dev string:x2cd>" + playerbodytype + "<dev string:x26d>" + "<dev string:x30a>" + i + "<dev string:x2d7>");
+                wait 0.05;
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -302,12 +302,12 @@
     function body_customization_devgui(mode) {
         thread body_customization_populate(mode);
         for (;;) {
-            character_index = getdvarstring("<unknown string>");
-            if (character_index != "<unknown string>") {
+            character_index = getdvarstring("<dev string:x2bf>");
+            if (character_index != "<dev string:x312>") {
                 body_customization_process_command(character_index);
             }
-            setdvar("<unknown string>", "<unknown string>");
-            wait(0.5);
+            setdvar("<dev string:x2bf>", "<dev string:x312>");
+            wait 0.5;
         }
     }
 
@@ -316,10 +316,10 @@
     // Checksum 0xa9980c64, Offset: 0x1aa8
     // Size: 0xdc
     function add_perk_devgui(name, specialties) {
-        perk_devgui_base = "<unknown string>";
+        perk_devgui_base = "<dev string:x313>";
         perk_name = makelocalizedstring(name);
-        test = perk_devgui_base + perk_name + "<unknown string>" + "<unknown string>" + "<unknown string>" + specialties + "<unknown string>";
-        adddebugcommand(perk_devgui_base + perk_name + "<unknown string>" + "<unknown string>" + "<unknown string>" + specialties + "<unknown string>");
+        test = perk_devgui_base + perk_name + "<dev string:x2b7>" + "<dev string:x337>" + "<dev string:x2cb>" + specialties + "<dev string:x2d7>";
+        adddebugcommand(perk_devgui_base + perk_name + "<dev string:x2b7>" + "<dev string:x337>" + "<dev string:x2cb>" + specialties + "<dev string:x2d7>");
     }
 
 #/

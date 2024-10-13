@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_32af6759;
+#namespace mp_aerospace_fx;
 
-// Namespace namespace_32af6759
+// Namespace mp_aerospace_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x90
 // Size: 0x4

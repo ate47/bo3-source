@@ -59,15 +59,15 @@ function add(skipto, func, var_d01f133f, cleanup_func, var_46c5ea43, var_c3efda9
         level.var_574eb415 = skipto;
     }
     if (is_dev(skipto)) {
-        errormsg("world");
+        errormsg("<dev string:x28>");
         return;
     }
     if (isdefined(var_46c5ea43) || isdefined(var_c3efda96)) {
-        errormsg("world");
+        errormsg("<dev string:x4c>");
         return;
     }
     if (level flag::get("level_has_skipto_branches")) {
-        errormsg("world");
+        errormsg("<dev string:x86>");
     }
     if (!isdefined(var_46c5ea43)) {
         if (isdefined(level.var_8b767436)) {
@@ -88,7 +88,7 @@ function add(skipto, func, var_d01f133f, cleanup_func, var_46c5ea43, var_c3efda9
         level.var_8b767436 = skipto;
     }
     if (!isdefined(func)) {
-        assert(isdefined(func), "world");
+        assert(isdefined(func), "<dev string:xd6>");
     }
     struct = function_fcea19f2(skipto, func, var_d01f133f, cleanup_func, var_46c5ea43, var_c3efda96);
     struct.public = 1;
@@ -104,11 +104,11 @@ function function_731571ad(skipto, func, var_d01f133f, cleanup_func, var_46c5ea4
         level.var_574eb415 = skipto;
     }
     if (is_dev(skipto)) {
-        errormsg("world");
+        errormsg("<dev string:x28>");
         return;
     }
     if (!isdefined(var_46c5ea43) && !isdefined(var_c3efda96)) {
-        errormsg("world");
+        errormsg("<dev string:x104>");
         return;
     }
     if (!isdefined(var_46c5ea43)) {
@@ -130,7 +130,7 @@ function function_731571ad(skipto, func, var_d01f133f, cleanup_func, var_46c5ea4
         level.var_8b767436 = skipto;
     }
     if (!isdefined(func)) {
-        assert(isdefined(func), "world");
+        assert(isdefined(func), "<dev string:xd6>");
     }
     struct = function_fcea19f2(skipto, func, var_d01f133f, cleanup_func, var_46c5ea43, var_c3efda96);
     struct.public = 1;
@@ -151,7 +151,7 @@ function add_dev(skipto, func, var_d01f133f, cleanup_func, var_46c5ea43, var_c3e
         struct.var_3c612393 = 1;
         return;
     }
-    errormsg("world");
+    errormsg("<dev string:x136>");
 }
 
 // Namespace skipto
@@ -159,7 +159,7 @@ function add_dev(skipto, func, var_d01f133f, cleanup_func, var_46c5ea43, var_c3e
 // Checksum 0x3adc9a1f, Offset: 0xce0
 // Size: 0xc6
 function function_fcea19f2(msg, func, var_d01f133f, cleanup_func, var_46c5ea43, var_c3efda96) {
-    assert(!isdefined(level._loadstarted), "world");
+    assert(!isdefined(level._loadstarted), "<dev string:x15f>");
     msg = tolower(msg);
     struct = function_b545fa58(msg, func, var_d01f133f, cleanup_func, var_46c5ea43, var_c3efda96);
     level.var_e07f6589[msg] = struct;

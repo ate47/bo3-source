@@ -5,9 +5,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_c3b98877;
+#namespace zm_temple_amb;
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x31d1fb4f, Offset: 0x258
 // Size: 0xdc
@@ -18,10 +18,10 @@ function main() {
     level thread function_3f54bb5();
     level thread function_113b7a0a();
     level thread startzmbspawnersoundloops();
-    clientfield::register("scriptmover", "meteor_shrink", 21000, 1, "counter", &function_fb1d31bf, 0, 0);
+    clientfield::register("scriptmover", "meteor_shrink", 21000, 1, "counter", &meteor_shrink, 0, 0);
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x599c5c2a, Offset: 0x340
 // Size: 0x1e
@@ -30,7 +30,7 @@ function function_28416c1e() {
     level notify(#"hash_91064368");
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x444c1da6, Offset: 0x368
 // Size: 0xe
@@ -38,7 +38,7 @@ function function_a96d8fc7() {
     level.var_15e33496 = undefined;
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x34dc33de, Offset: 0x380
 // Size: 0x6c
@@ -48,7 +48,7 @@ function function_418a175a(var_ef677c68) {
     audio::playloopat("evt_sq_gen_bg", (0, 0, 0));
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 3, eflags: 0x1 linked
 // Checksum 0xc24a6a0d, Offset: 0x3f8
 // Size: 0x9c
@@ -60,7 +60,7 @@ function function_e3a6a660(bnewent, binitialsnap, bwasdemojump) {
     audio::stoploopat("evt_sq_gen_bg", (0, 0, 0));
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd232cc20, Offset: 0x4a0
 // Size: 0x34
@@ -69,7 +69,7 @@ function function_b11e8fe8() {
     level thread function_e2433f87(1);
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x80b4f551, Offset: 0x4e0
 // Size: 0x58
@@ -77,26 +77,26 @@ function function_e2433f87(num) {
     while (true) {
         level waittill("ge" + num);
         level notify("evt_geyser_blast_" + num);
-        wait(14.5);
+        wait 14.5;
         level notify("evt_geyser_blast_" + num);
     }
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 7, eflags: 0x1 linked
 // Checksum 0x737d4442, Offset: 0x540
 // Size: 0x6c
-function function_fb1d31bf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function meteor_shrink(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     audio::snd_set_snapshot("zmb_temple_egg");
     level thread function_762642a6();
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xeeb455c4, Offset: 0x5b8
 // Size: 0x54
 function function_762642a6() {
-    wait(5.5);
+    wait 5.5;
     if (isdefined(level.var_15e33496)) {
         audio::snd_set_snapshot("zmb_temple_sq");
         return;
@@ -104,7 +104,7 @@ function function_762642a6() {
     audio::snd_set_snapshot("default");
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99a42b81, Offset: 0x618
 // Size: 0x2c
@@ -113,7 +113,7 @@ function function_3f54bb5() {
     audio::snd_set_snapshot("zmb_temple_egg");
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7f6162af, Offset: 0x650
 // Size: 0x24
@@ -121,7 +121,7 @@ function function_113b7a0a() {
     audio::snd_play_auto_fx("fx_ztem_torch", "amb_fire_medium");
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x0
 // Checksum 0xe6879b3d, Offset: 0x680
 // Size: 0x94
@@ -131,15 +131,15 @@ function function_60a32834() {
         if (trigplayer islocalplayer()) {
             level notify(#"hash_51d7bc7c", self.script_sound);
             while (isdefined(trigplayer) && trigplayer istouching(self)) {
-                wait(0.016);
+                wait 0.016;
             }
             continue;
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x0
 // Checksum 0x9beea0ce, Offset: 0x720
 // Size: 0xf8
@@ -158,18 +158,18 @@ function function_d667714e() {
     }
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x602551ba, Offset: 0x820
 // Size: 0x64
 function function_b234849(var_6d9d81aa) {
     level endon(#"hash_51d7bc7c");
     level.var_eb526c90 stopallloopsounds(2);
-    wait(1);
+    wait 1;
     level.var_9433cf5a = level.var_eb526c90 playloopsound(var_6d9d81aa, 2);
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1b4285b8, Offset: 0x890
 // Size: 0x15c
@@ -178,27 +178,27 @@ function startzmbspawnersoundloops() {
     if (isdefined(loopers) && loopers.size > 0) {
         delay = 0;
         /#
-            if (getdvarint("ge") > 0) {
-                println("ge" + loopers.size + "ge");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x34>" + loopers.size + "<dev string:x6c>");
             }
         #/
         for (i = 0; i < loopers.size; i++) {
             loopers[i] thread soundloopthink();
             delay += 1;
             if (delay % 20 == 0) {
-                wait(0.016);
+                wait 0.016;
             }
         }
         return;
     }
     /#
-        if (getdvarint("ge") > 0) {
-            println("ge");
+        if (getdvarint("<dev string:x28>") > 0) {
+            println("<dev string:x77>");
         }
     #/
 }
 
-// Namespace namespace_c3b98877
+// Namespace zm_temple_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x88d1e5a3, Offset: 0x9f8
 // Size: 0x16c

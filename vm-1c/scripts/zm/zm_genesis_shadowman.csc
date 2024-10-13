@@ -16,9 +16,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_553efdc;
+#namespace zm_genesis_shadowman;
 
-// Namespace namespace_553efdc
+// Namespace zm_genesis_shadowman
 // Params 0, eflags: 0x2
 // Checksum 0x80f065f8, Offset: 0x378
 // Size: 0x34
@@ -26,19 +26,19 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_shadowman", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_553efdc
+// Namespace zm_genesis_shadowman
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4c0b4543, Offset: 0x3b8
 // Size: 0x4c
 function __init__() {
-    clientfield::register("scriptmover", "shadowman_fx", 15000, 3, "int", &function_97a44b14, 0, 0);
+    clientfield::register("scriptmover", "shadowman_fx", 15000, 3, "int", &shadowman_fx, 0, 0);
 }
 
-// Namespace namespace_553efdc
+// Namespace zm_genesis_shadowman
 // Params 7, eflags: 0x1 linked
 // Checksum 0xfb9d61a5, Offset: 0x410
 // Size: 0x3da
-function function_97a44b14(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function shadowman_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(self.var_6067fcbe)) {
         stopfx(localclientnum, self.var_6067fcbe);
     }
@@ -85,13 +85,13 @@ function function_97a44b14(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_553efdc
+// Namespace zm_genesis_shadowman
 // Params 4, eflags: 0x1 linked
 // Checksum 0xf747eb5b, Offset: 0x7f8
 // Size: 0x74
 function function_705b696b(localclientnum, str_fx, v_origin, n_seconds) {
     fx_id = playfx(localclientnum, str_fx, v_origin);
-    wait(n_seconds);
+    wait n_seconds;
     stopfx(localclientnum, fx_id);
 }
 

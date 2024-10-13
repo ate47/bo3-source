@@ -102,8 +102,8 @@ function function_8d5c3682() {
 // Checksum 0xf2dc44aa, Offset: 0x9f8
 // Size: 0xd4
 function function_21d887cd() {
-    assert(ispointonnavmesh(self.origin), "initial" + self.origin + "initial");
-    s_stub = level namespace_cb655c88::function_d095318(self.origin, 256, undefined, &function_f8c1234b);
+    assert(ispointonnavmesh(self.origin), "<dev string:x28>" + self.origin + "<dev string:x48>");
+    s_stub = level zm_genesis_util::function_d095318(self.origin, 256, undefined, &function_f8c1234b);
     while (true) {
         e_player = s_stub waittill(#"trigger");
         e_player thread function_4ab898f4(self);
@@ -124,21 +124,21 @@ function function_f8c1234b(e_player) {
 // Checksum 0x853238e0, Offset: 0xaf8
 // Size: 0x14c
 function function_e8ef758e() {
-    if (!isdefined(level.var_eb56d6a)) {
-        level.var_eb56d6a = struct::get("apothicon_grapple_source");
+    if (!isdefined(level.apothicon_grapple_source)) {
+        level.apothicon_grapple_source = struct::get("apothicon_grapple_source");
     }
-    if (!isdefined(level.var_eb56d6a)) {
-        level.var_eb56d6a = spawnstruct();
-        level.var_eb56d6a.origin = (1894, -438, -127);
-        level.var_eb56d6a.angles = (0, 180, 0);
-        level.var_eb56d6a.targetname = "apothicon_grapple_source";
+    if (!isdefined(level.apothicon_grapple_source)) {
+        level.apothicon_grapple_source = spawnstruct();
+        level.apothicon_grapple_source.origin = (1894, -438, -127);
+        level.apothicon_grapple_source.angles = (0, 180, 0);
+        level.apothicon_grapple_source.targetname = "apothicon_grapple_source";
     }
-    if (isdefined(level.var_eb56d6a)) {
+    if (isdefined(level.apothicon_grapple_source)) {
         e_player = self;
         e_player.grapple_tag = "j_spine4";
         if (!(isdefined(e_player.var_1533bb11) && e_player.var_1533bb11)) {
             e_player.var_1533bb11 = 1;
-            zm_grappler::start_grapple(level.var_eb56d6a, e_player, 2, 3300);
+            zm_grappler::start_grapple(level.apothicon_grapple_source, e_player, 2, 3300);
             e_player.var_1533bb11 = 0;
         }
     }
@@ -163,7 +163,7 @@ function function_4ab898f4(nd_start) {
     self notsolid();
     if (self getstance() != "stand") {
         self setstance("stand");
-        wait(1);
+        wait 1;
     }
     var_413ea50f = vehicle::spawn(undefined, "player_vehicle", "flinger_vehicle", nd_start.origin, nd_start.angles);
     var_116e109f = struct::get(nd_start.target);
@@ -171,8 +171,8 @@ function function_4ab898f4(nd_start) {
     self playerlinktodelta(var_413ea50f);
     self playrumbleonentity("zm_castle_flinger_launch");
     self clientfield::set_to_player("apothicon_entry_postfx", 1);
-    self thread namespace_d95aef6::function_c1f1756a();
-    var_6a7beeb2 = namespace_d95aef6::function_cbac68fe(self);
+    self thread zm_genesis_flingers::function_c1f1756a();
+    var_6a7beeb2 = zm_genesis_flingers::function_cbac68fe(self);
     var_6a7beeb2 linkto(var_413ea50f);
     w_current = self.currentweapon;
     var_f5434f17 = zm_utility::spawn_buildkit_weapon_model(self, w_current, undefined, var_6a7beeb2 gettagorigin("tag_weapon_right"), var_6a7beeb2 gettagangles("tag_weapon_right"));
@@ -185,11 +185,11 @@ function function_4ab898f4(nd_start) {
     var_413ea50f setignorepauseworld(1);
     var_413ea50f vehicle::get_on_and_go_path(nd_start);
     while (positionwouldtelefrag(var_f28a4a19.origin)) {
-        wait(0.05);
+        wait 0.05;
     }
     var_413ea50f vehicle::get_on_and_go_path(var_f28a4a19);
     self thread function_3298b25f();
-    self thread namespace_d95aef6::function_29c06608();
+    self thread zm_genesis_flingers::function_29c06608();
     self playrumbleonentity("zm_castle_flinger_land");
     self clientfield::set_to_player("apothicon_entry_postfx", 0);
     var_6a7beeb2 clientfield::set("player_visibility", 0);
@@ -198,14 +198,14 @@ function function_4ab898f4(nd_start) {
     var_f5434f17 delete();
     self show();
     self solid();
-    self thread namespace_d95aef6::function_9f131b98();
+    self thread zm_genesis_flingers::function_9f131b98();
     var_6a7beeb2 hide();
     util::wait_network_frame();
     var_6a7beeb2 delete();
     self thread function_10171438();
     self.is_flung = undefined;
     self thread function_2c36a1ea(var_413ea50f);
-    wait(2);
+    wait 2;
     self allowcrouch(1);
     self allowprone(1);
     self freezecontrols(0);
@@ -232,7 +232,7 @@ function function_2c36a1ea(var_413ea50f) {
 function function_10171438() {
     self endon(#"death");
     self endon(#"disconnect");
-    wait(3);
+    wait 3;
     self.var_a393601c = 0;
 }
 
@@ -247,7 +247,7 @@ function function_fc804fdd(var_16caea3d) {
             return nd_spline;
         }
     }
-    assert(isdefined(nd_spline), "initial" + var_16caea3d + "initial" + self.origin + "initial");
+    assert(isdefined(nd_spline), "<dev string:x5c>" + var_16caea3d + "<dev string:x67>" + self.origin + "<dev string:x80>");
 }
 
 // Namespace namespace_3ddd867f
@@ -263,7 +263,7 @@ function function_3298b25f() {
     self unlink();
     self setorigin(var_16f5c370);
     self clientfield::increment_to_player("flinger_land_smash");
-    self thread namespace_c149ef1::function_e1bf753b();
+    self thread zm_genesis_vo::function_e1bf753b();
     self.var_3298b25f = 1;
 }
 
@@ -309,7 +309,7 @@ function function_9278bc8a(var_181e2689) {
     }
     level notify(#"hash_80f97945");
     if (isplayer(attacker)) {
-        attacker thread namespace_c149ef1::function_57f3d77();
+        attacker thread zm_genesis_vo::function_57f3d77();
     }
     exploder::exploder("fxexp_" + 106 + var_181e2689);
     level thread scene::play(self.current_scene);
@@ -324,13 +324,13 @@ function function_d2b266ee(a_ents) {
     str_key = a_str_keys[0];
     var_9f585353 = a_ents[str_key];
     switch (str_key) {
-    case 36:
+    case "pap_sac_lft_arm":
         var_9f585353 thread function_9278bc8a(1);
         break;
-    case 35:
+    case "pap_sac_cnt_arm":
         var_9f585353 thread function_9278bc8a(2);
         break;
-    case 37:
+    case "pap_sac_rt_arm":
         var_9f585353 thread function_9278bc8a(3);
         break;
     }
@@ -342,8 +342,8 @@ function function_d2b266ee(a_ents) {
 // Size: 0x54
 function function_dc681bed(a_ents) {
     mdl_pap = a_ents["pap_sac_vending"];
-    level waittill(#"hash_e4411b8f");
-    wait(0.2);
+    level waittill(#"apotho_pack_freed");
+    wait 0.2;
     mdl_pap delete();
 }
 

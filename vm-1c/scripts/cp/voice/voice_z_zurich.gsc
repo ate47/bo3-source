@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_738cec14;
+#namespace voice_z_zurich;
 
-// Namespace namespace_738cec14
+// Namespace voice_z_zurich
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1ddf6fa8, Offset: 0x1a60
 // Size: 0x1084

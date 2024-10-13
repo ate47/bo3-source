@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_c49c3ddb;
+#namespace zm_stalingrad_fx;
 
-// Namespace namespace_c49c3ddb
+// Namespace zm_stalingrad_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf930f3aa, Offset: 0x880
 // Size: 0x14
@@ -10,7 +10,7 @@ function init() {
     function_f45953c();
 }
 
-// Namespace namespace_c49c3ddb
+// Namespace zm_stalingrad_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe46f271a, Offset: 0x8a0
 // Size: 0x39e

@@ -4,9 +4,9 @@
 #using scripts/shared/util_shared;
 #using scripts/shared/trigger_shared;
 
-#namespace namespace_f917b91a;
+#namespace stealth_tagging;
 
-// Namespace namespace_f917b91a
+// Namespace stealth_tagging
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x148
 // Size: 0x4
@@ -14,7 +14,7 @@ function init() {
     
 }
 
-// Namespace namespace_f917b91a
+// Namespace stealth_tagging
 // Params 0, eflags: 0x1 linked
 // Checksum 0xce06e423, Offset: 0x158
 // Size: 0x20
@@ -22,7 +22,7 @@ function enabled() {
     return isdefined(self.stealth) && isdefined(self.stealth.tagging);
 }
 
-// Namespace namespace_f917b91a
+// Namespace stealth_tagging
 // Params 0, eflags: 0x0
 // Checksum 0xe5f3d06a, Offset: 0x180
 // Size: 0x56
@@ -30,7 +30,7 @@ function function_b6579d92() {
     return isdefined(self.stealth.tagging.tagged) && isdefined(self.stealth) && isdefined(self.stealth.tagging) && self.stealth.tagging.tagged;
 }
 
-// Namespace namespace_f917b91a
+// Namespace stealth_tagging
 // Params 0, eflags: 0x0
 // Checksum 0x93d85160, Offset: 0x1e0
 // Size: 0x580
@@ -39,7 +39,7 @@ function function_fe19d58d() {
     assert(self enabled());
     self endon(#"disconnect");
     var_9c648312 = 0.25;
-    wait(randomfloatrange(0.05, 1));
+    wait randomfloatrange(0.05, 1);
     while (true) {
         if (self playerads() > 0.3) {
             var_cdb312b = anglestoforward(self getplayerangles());
@@ -84,11 +84,11 @@ function function_fe19d58d() {
                 }
             }
         }
-        wait(var_9c648312);
+        wait var_9c648312;
     }
 }
 
-// Namespace namespace_f917b91a
+// Namespace stealth_tagging
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdf939e08, Offset: 0x768
 // Size: 0xbc
@@ -106,7 +106,7 @@ function function_a10a834e(tagged) {
     }
 }
 
-// Namespace namespace_f917b91a
+// Namespace stealth_tagging
 // Params 2, eflags: 0x1 linked
 // Checksum 0xd87d8997, Offset: 0x830
 // Size: 0x114

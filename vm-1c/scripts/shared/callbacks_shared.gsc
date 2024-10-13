@@ -41,7 +41,7 @@ function callback(event, params) {
 // Checksum 0xf8621dc8, Offset: 0x328
 // Size: 0x18c
 function add_callback(event, func, obj) {
-    assert(isdefined(event), "CP_ALL_DECORATIONS");
+    assert(isdefined(event), "<dev string:x28>");
     if (!isdefined(level._callbacks) || !isdefined(level._callbacks[event])) {
         level._callbacks[event] = [];
     }
@@ -72,8 +72,8 @@ function remove_callback_on_death(event, func) {
 // Checksum 0x47454813, Offset: 0x508
 // Size: 0x13e
 function remove_callback(event, func, obj) {
-    assert(isdefined(event), "CP_ALL_DECORATIONS");
-    assert(isdefined(level._callbacks[event]), "CP_ALL_DECORATIONS");
+    assert(isdefined(event), "<dev string:x58>");
+    assert(isdefined(level._callbacks[event]), "<dev string:x8b>");
     foreach (index, func_group in level._callbacks[event]) {
         if (func_group[0] == func) {
             if (func_group[1] === obj) {
@@ -479,7 +479,7 @@ function codecallback_playerdisconnect() {
 // Checksum 0x7ff90849, Offset: 0x1280
 // Size: 0x34
 function codecallback_migration_setupgametype() {
-    println("CP_ALL_DECORATIONS");
+    println("<dev string:xb8>");
     simple_hostmigration::migration_setupgametype();
 }
 
@@ -488,7 +488,7 @@ function codecallback_migration_setupgametype() {
 // Checksum 0xa3e742c0, Offset: 0x12c0
 // Size: 0x34
 function codecallback_hostmigration() {
-    println("CP_ALL_DECORATIONS");
+    println("<dev string:xe5>");
     [[ level.callbackhostmigration ]]();
 }
 
@@ -497,7 +497,7 @@ function codecallback_hostmigration() {
 // Checksum 0x1da9cab5, Offset: 0x1300
 // Size: 0x34
 function codecallback_hostmigrationsave() {
-    println("CP_ALL_DECORATIONS");
+    println("<dev string:x108>");
     [[ level.callbackhostmigrationsave ]]();
 }
 
@@ -506,7 +506,7 @@ function codecallback_hostmigrationsave() {
 // Checksum 0x5bd0d6fd, Offset: 0x1340
 // Size: 0x34
 function codecallback_prehostmigrationsave() {
-    println("CP_ALL_DECORATIONS");
+    println("<dev string:x12f>");
     [[ level.callbackprehostmigrationsave ]]();
 }
 
@@ -515,7 +515,7 @@ function codecallback_prehostmigrationsave() {
 // Checksum 0xeeabbfa5, Offset: 0x1380
 // Size: 0x34
 function codecallback_playermigrated() {
-    println("CP_ALL_DECORATIONS");
+    println("<dev string:x159>");
     [[ level.callbackplayermigrated ]]();
 }
 
@@ -710,7 +710,7 @@ function menu_response_queue_pump() {
         do {
             level.menuresponsequeue[0].ent notify(#"menuresponse", level.menuresponsequeue[0].action, level.menuresponsequeue[0].arg);
             arrayremoveindex(level.menuresponsequeue, 0, 0);
-            wait(0.05);
+            wait 0.05;
         } while (level.menuresponsequeue.size > 0);
     }
 }
@@ -748,7 +748,7 @@ function codecallback_callserverscriptonlevel(label, param) {
 function codecallback_launchsidemission(var_e5152480, str_gametype, var_d7bc23c2, var_c5147073) {
     switchmap_preload(var_e5152480, str_gametype, var_c5147073);
     luinotifyevent(%open_side_mission_countdown, 1, var_d7bc23c2);
-    wait(10);
+    wait 10;
     luinotifyevent(%close_side_mission_countdown);
     switchmap_switch();
 }
@@ -778,7 +778,7 @@ function function_f39f3bec(var_4ffca9e2) {
 // Checksum 0x2f23f6ef, Offset: 0x2128
 // Size: 0x1a4
 function abort_level() {
-    println("CP_ALL_DECORATIONS");
+    println("<dev string:x17d>");
     level.callbackstartgametype = &callback_void;
     level.callbackplayerconnect = &callback_void;
     level.callbackplayerdisconnect = &callback_void;

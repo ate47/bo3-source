@@ -32,11 +32,11 @@ function private __init__() {
 // Checksum 0xc478bd7c, Offset: 0x220
 // Size: 0x178
 function register(name, localized_string, icon) {
-    assert(isdefined(level.aat_initializing) && level.aat_initializing, "<unknown string>");
-    assert(isdefined(name), "<unknown string>");
-    assert(!isdefined(level.aat[name]), "<unknown string>" + name + "<unknown string>");
-    assert(isdefined(localized_string), "<unknown string>");
-    assert(isdefined(icon), "<unknown string>");
+    assert(isdefined(level.aat_initializing) && level.aat_initializing, "<dev string:x28>");
+    assert(isdefined(name), "<dev string:x93>");
+    assert(!isdefined(level.aat[name]), "<dev string:xb9>" + name + "<dev string:xd0>");
+    assert(isdefined(localized_string), "<dev string:xee>");
+    assert(isdefined(icon), "<dev string:x120>");
     level.aat[name] = spawnstruct();
     level.aat[name].name = name;
     level.aat[name].localized_string = localized_string;
@@ -58,14 +58,14 @@ function aat_hud_manager(localclientnum, oldval, newval, bnewent, binitialsnap, 
 // Checksum 0xd278f4b0, Offset: 0x420
 // Size: 0x190
 function finalize_clientfields() {
-    println("<unknown string>");
+    println("<dev string:x146>");
     if (level.aat.size > 1) {
         array::alphabetize(level.aat);
         i = 0;
         foreach (aat in level.aat) {
             aat.n_index = i;
             i++;
-            println("<unknown string>" + aat.name);
+            println("<dev string:x160>" + aat.name);
         }
         n_bits = getminbitcountfornum(level.aat.size - 1);
         clientfield::register("toplayer", "aat_current", 1, n_bits, "int", &aat_hud_manager, 0, 1);

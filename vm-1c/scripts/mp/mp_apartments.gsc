@@ -15,12 +15,12 @@
 // Checksum 0x515000ad, Offset: 0x258
 // Size: 0x63c
 function main() {
-    namespace_8a0e01ed::main();
+    mp_apartments_fx::main();
     level.var_7bb6ebae = &function_7bb6ebae;
     level.remotemissile_kill_z = 650 + 50;
     load::main();
     compass::setupminimap("compass_map_mp_apartments");
-    namespace_ad0e5c15::main();
+    mp_apartments_amb::main();
     setdvar("compassmaxrange", "2100");
     setdvar("phys_buoyancy", 1);
     setdvar("phys_ragdoll_buoyancy", 1);

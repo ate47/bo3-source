@@ -24,7 +24,7 @@ function register_game_module(index, module_name, pre_init_func, post_init_func,
             continue;
         }
         if (isdefined(level._game_modules[i].index) && level._game_modules[i].index == index) {
-            assert(level._game_modules[i].index != index, "fw_trail_cheap" + index + "fw_trail_cheap");
+            assert(level._game_modules[i].index != index, "<dev string:x28>" + index + "<dev string:x58>");
         }
     }
     level._game_modules[level._num_registered_game_modules] = spawnstruct();
@@ -50,7 +50,7 @@ function set_current_game_module(game_module_index) {
     }
     game_module = get_game_module(game_module_index);
     if (!isdefined(game_module)) {
-        assert(isdefined(game_module), "fw_trail_cheap" + game_module_index + "fw_trail_cheap");
+        assert(isdefined(game_module), "<dev string:x5a>" + game_module_index + "<dev string:x58>");
         return;
     }
     level.current_game_module = game_module_index;
@@ -179,7 +179,7 @@ function zombie_goto_round(target_round) {
         }
     }
     respawn_players();
-    wait(1);
+    wait 1;
 }
 
 // Namespace zm_game_module
@@ -229,7 +229,7 @@ function function_ed1075e3(var_17837263) {
     }
     self.var_bff517de fadeovertime(2);
     self.var_bff517de.alpha = 0;
-    wait(2);
+    wait 2;
     self.var_bff517de thread zm::fade_up_over_time(1);
 }
 
@@ -245,9 +245,9 @@ function create_fireworks(launch_spots, min_wait, max_wait, randomize) {
         }
         foreach (spot in launch_spots) {
             level thread fireworks_launch(spot);
-            wait(randomfloatrange(min_wait, max_wait));
+            wait randomfloatrange(min_wait, max_wait);
         }
-        wait(randomfloatrange(min_wait, max_wait));
+        wait randomfloatrange(min_wait, max_wait);
     }
 }
 

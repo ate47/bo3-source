@@ -74,7 +74,7 @@ function function_a3a42df2(watcher, owner) {
         self util::waittill_notify_or_timeout("stationary", 10);
         delaytimesec = self.weapon.proximityalarmactivationdelay / 1000;
         if (delaytimesec > 0) {
-            wait(delaytimesec);
+            wait delaytimesec;
         }
         self stoploopsound(0.1);
     }

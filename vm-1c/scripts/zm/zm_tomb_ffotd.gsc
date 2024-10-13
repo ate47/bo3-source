@@ -9,9 +9,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_239f5449;
+#namespace zm_tomb_ffotd;
 
-// Namespace namespace_239f5449
+// Namespace zm_tomb_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc534ac31, Offset: 0x288
 // Size: 0x5c
@@ -22,7 +22,7 @@ function main_start() {
     level.var_361ee139 = &function_acf1c4da;
 }
 
-// Namespace namespace_239f5449
+// Namespace zm_tomb_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb037e1, Offset: 0x2f0
 // Size: 0x2c8
@@ -43,7 +43,7 @@ function main_end() {
     var_b5c860b9.script_noteworthy = "kill_brush";
 }
 
-// Namespace namespace_239f5449
+// Namespace zm_tomb_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe185e6d1, Offset: 0x5c0
 // Size: 0x6c
@@ -55,7 +55,7 @@ function function_3fd88dcb() {
     }
 }
 
-// Namespace namespace_239f5449
+// Namespace zm_tomb_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0xec082254, Offset: 0x638
 // Size: 0x3a
@@ -65,7 +65,7 @@ function function_b620b1d6() {
     }
 }
 
-// Namespace namespace_239f5449
+// Namespace zm_tomb_ffotd
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa526d938, Offset: 0x680
 // Size: 0xec
@@ -81,7 +81,7 @@ function function_acf1c4da(machine) {
     self zm_audio::create_and_play_dialog("bgb", "eat");
 }
 
-// Namespace namespace_239f5449
+// Namespace zm_tomb_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa658742c, Offset: 0x778
 // Size: 0xb0

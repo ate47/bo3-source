@@ -20,214 +20,214 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_bde177cb;
+#namespace zm_stalingrad_devgui;
 
 /#
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 0, eflags: 0x1 linked
     // Checksum 0xa3b3488f, Offset: 0x338
     // Size: 0x434
     function function_91912a79() {
         zm_devgui::add_custom_devgui_callback(&function_17d8768b);
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        if (getdvarint("<unknown string>") > 0) {
+        adddebugcommand("<dev string:x28>");
+        adddebugcommand("<dev string:x78>");
+        adddebugcommand("<dev string:xbf>");
+        adddebugcommand("<dev string:x116>");
+        adddebugcommand("<dev string:x16f>");
+        adddebugcommand("<dev string:x1c6>");
+        adddebugcommand("<dev string:x21b>");
+        adddebugcommand("<dev string:x267>");
+        adddebugcommand("<dev string:x2c3>");
+        adddebugcommand("<dev string:x310>");
+        adddebugcommand("<dev string:x35f>");
+        adddebugcommand("<dev string:x3a7>");
+        adddebugcommand("<dev string:x401>");
+        adddebugcommand("<dev string:x45c>");
+        adddebugcommand("<dev string:x4b3>");
+        adddebugcommand("<dev string:x505>");
+        adddebugcommand("<dev string:x559>");
+        adddebugcommand("<dev string:x59c>");
+        adddebugcommand("<dev string:x5de>");
+        adddebugcommand("<dev string:x622>");
+        adddebugcommand("<dev string:x674>");
+        adddebugcommand("<dev string:x6c0>");
+        adddebugcommand("<dev string:x706>");
+        adddebugcommand("<dev string:x76c>");
+        adddebugcommand("<dev string:x7c8>");
+        adddebugcommand("<dev string:x81c>");
+        adddebugcommand("<dev string:x870>");
+        adddebugcommand("<dev string:x8b8>");
+        adddebugcommand("<dev string:x904>");
+        adddebugcommand("<dev string:x95d>");
+        adddebugcommand("<dev string:x9b8>");
+        adddebugcommand("<dev string:xa13>");
+        adddebugcommand("<dev string:xa6e>");
+        adddebugcommand("<dev string:xac9>");
+        adddebugcommand("<dev string:xb24>");
+        adddebugcommand("<dev string:xb77>");
+        adddebugcommand("<dev string:xbd6>");
+        adddebugcommand("<dev string:xc1e>");
+        adddebugcommand("<dev string:xc66>");
+        adddebugcommand("<dev string:xcbf>");
+        adddebugcommand("<dev string:xd15>");
+        if (getdvarint("<dev string:xd77>") > 0) {
             level thread function_867cb8b1();
         }
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 0, eflags: 0x1 linked
     // Checksum 0xb8c147ca, Offset: 0x778
     // Size: 0x18c
     function function_867cb8b1() {
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
-        adddebugcommand("<unknown string>");
+        adddebugcommand("<dev string:xd84>");
+        adddebugcommand("<dev string:xde8>");
+        adddebugcommand("<dev string:xe4c>");
+        adddebugcommand("<dev string:xe90>");
+        adddebugcommand("<dev string:xed2>");
+        adddebugcommand("<dev string:xf2c>");
+        adddebugcommand("<dev string:xf83>");
+        adddebugcommand("<dev string:xfdf>");
+        adddebugcommand("<dev string:x103f>");
+        adddebugcommand("<dev string:x10a5>");
+        adddebugcommand("<dev string:x1107>");
+        adddebugcommand("<dev string:x117b>");
+        adddebugcommand("<dev string:x11db>");
+        adddebugcommand("<dev string:x126e>");
+        adddebugcommand("<dev string:x12c7>");
+        adddebugcommand("<dev string:x131b>");
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 1, eflags: 0x1 linked
     // Checksum 0xe0e6b68, Offset: 0x910
     // Size: 0x7ae
     function function_17d8768b(cmd) {
         switch (cmd) {
-        case 8:
+        case "<dev string:x136d>":
             level thread function_2b22d1f9();
             return 1;
-        case 8:
+        case "<dev string:x137a>":
             level thread function_a7e8b47b();
             return 1;
-        case 8:
+        case "<dev string:x1387>":
             level thread function_31f1d173(0);
             return 1;
-        case 8:
+        case "<dev string:x139c>":
             level thread function_31f1d173(1);
             return 1;
-        case 8:
+        case "<dev string:x13b2>":
             level thread function_31f1d173(2);
             return 1;
-        case 8:
+        case "<dev string:x13c7>":
             level thread function_31f1d173(3);
             return 1;
-        case 8:
+        case "<dev string:x13db>":
             level thread function_cc40b263();
             return 1;
-        case 8:
-        case 8:
-        case 8:
-        case 8:
-        case 8:
-        case 8:
-        case 8:
-        case 8:
-        case 8:
-        case 8:
-        case 8:
-        case 8:
+        case "<dev string:x144e>":
+        case "<dev string:x1449>":
+        case "<dev string:x1440>":
+        case "<dev string:x1456>":
+        case "<dev string:x1437>":
+        case "<dev string:x142d>":
+        case "<dev string:x1423>":
+        case "<dev string:x1419>":
+        case "<dev string:x140f>":
+        case "<dev string:x1406>":
+        case "<dev string:x13fd>":
+        case "<dev string:x13eb>":
             level.var_8cc024f2 = level.var_583e4a97.var_5d8406ed[cmd];
             level thread namespace_2e6e7fce::function_d1a91c4f(level.var_8cc024f2);
             return 1;
-        case 8:
-            level thread namespace_e81d2518::function_16734812();
+        case "<dev string:x145d>":
+            level thread dragon::function_16734812();
             return 1;
-        case 8:
-            level thread namespace_e81d2518::function_e7982921();
+        case "<dev string:x1466>":
+            level thread dragon::function_e7982921();
             return 1;
-        case 8:
-            level thread namespace_e81d2518::function_cfe0d523();
+        case "<dev string:x146c>":
+            level thread dragon::function_cfe0d523();
             return 1;
-        case 8:
-            level thread namespace_e81d2518::function_5f0cb06e();
+        case "<dev string:x1482>":
+            level thread dragon::function_5f0cb06e();
             return 1;
-        case 8:
-            level thread namespace_e81d2518::function_84bd37c8();
+        case "<dev string:x1493>":
+            level thread dragon::function_84bd37c8();
             return 1;
-        case 8:
-            level thread namespace_e81d2518::function_8bf8d33b();
+        case "<dev string:x14a0>":
+            level thread dragon::dragon_hazard_library();
             return 1;
-        case 8:
-            level thread namespace_e81d2518::function_7977857();
+        case "<dev string:x14ad>":
+            level thread dragon::function_7977857();
             return 1;
-        case 8:
-            level thread namespace_e81d2518::function_b8de630a();
+        case "<dev string:x14b6>":
+            level thread dragon::function_b8de630a();
             return 1;
-        case 8:
-            level thread namespace_e81d2518::function_941c2339();
+        case "<dev string:x14bd>":
+            level thread dragon::function_941c2339();
             return 1;
-        case 8:
-            level thread namespace_e81d2518::function_ef4a09c3();
+        case "<dev string:x14c3>":
+            level thread dragon::function_ef4a09c3();
             return 1;
-        case 8:
-            level thread namespace_e81d2518::function_c09859f();
+        case "<dev string:x14c8>":
+            level thread dragon::function_c09859f();
             return 1;
-        case 8:
-            level thread namespace_e81d2518::function_372d0868();
+        case "<dev string:x14d9>":
+            level thread dragon::function_372d0868();
             break;
-        case 8:
-            level thread namespace_e81d2518::function_21b70393();
+        case "<dev string:x14e0>":
+            level thread dragon::function_21b70393();
             break;
-        case 8:
-            level thread namespace_e81d2518::function_482eea0f(1);
+        case "<dev string:x14e8>":
+            level thread dragon::function_482eea0f(1);
             break;
-        case 8:
-            level thread namespace_e81d2518::function_482eea0f(2);
+        case "<dev string:x14ef>":
+            level thread dragon::function_482eea0f(2);
             break;
-        case 8:
-            level thread namespace_e81d2518::function_482eea0f(3);
+        case "<dev string:x14f6>":
+            level thread dragon::function_482eea0f(3);
             break;
-        case 8:
-            level thread namespace_e81d2518::function_482eea0f(4);
+        case "<dev string:x14fd>":
+            level thread dragon::function_482eea0f(4);
             break;
-        case 8:
+        case "<dev string:x1504>":
             level notify(#"hash_2b2c1420");
             break;
-        case 8:
+        case "<dev string:x151e>":
             level thread function_4b210fe6();
             return 1;
-        case 8:
-            level thread function_4b210fe6("<unknown string>");
+        case "<dev string:x1536>":
+            level thread function_4b210fe6("<dev string:x154d>");
             return 1;
-        case 8:
-            level thread function_4b210fe6("<unknown string>");
+        case "<dev string:x155f>":
+            level thread function_4b210fe6("<dev string:x1579>");
             return 1;
-        case 8:
-            level thread function_4b210fe6("<unknown string>");
+        case "<dev string:x158e>":
+            level thread function_4b210fe6("<dev string:x15a8>");
             return 1;
-        case 8:
+        case "<dev string:x15bd>":
             level thread function_a5a0adb4();
             return 1;
-        case 8:
+        case "<dev string:x15d5>":
             level thread function_bf490b3c();
             return 1;
-        case 8:
+        case "<dev string:x15f9>":
             level thread function_1b0d61c5();
             return 1;
-        case 8:
+        case "<dev string:x160c>":
             level thread function_fd68eee0();
             return 1;
-        case 8:
-            level thread namespace_b205ff9c::function_ddb9991b();
+        case "<dev string:x1628>":
+            level thread zm_stalingrad_finger_trap::function_ddb9991b();
             return 1;
-        case 8:
-            level thread namespace_b205ff9c::function_fc99caf5();
+        case "<dev string:x1634>":
+            level thread zm_stalingrad_finger_trap::function_fc99caf5();
             return 1;
-        case 8:
-            level flag::set("<unknown string>");
-            level flag::set("<unknown string>");
+        case "<dev string:x1646>":
+            level flag::set("<dev string:x165e>");
+            level flag::set("<dev string:x1672>");
             util::wait_network_frame();
             level notify(#"hash_68bf9f79");
             util::wait_network_frame();
@@ -235,32 +235,32 @@
             util::wait_network_frame();
             level notify(#"hash_9b46a273");
             return 1;
-        case 8:
-            level flag::set("<unknown string>");
-            level flag::set("<unknown string>");
+        case "<dev string:x167f>":
+            level flag::set("<dev string:x168d>");
+            level flag::set("<dev string:x16a9>");
             return 1;
-        case 8:
-            level flag::set("<unknown string>");
-            level flag::set("<unknown string>");
+        case "<dev string:x16c5>":
+            level flag::set("<dev string:x16d8>");
+            level flag::set("<dev string:x16f9>");
             return 1;
-        case 8:
-            level flag::set("<unknown string>");
-            level flag::set("<unknown string>");
+        case "<dev string:x171c>":
+            level flag::set("<dev string:x172f>");
+            level flag::set("<dev string:x174a>");
             level notify(#"hash_b7bed0ed");
             return 1;
-        case 8:
+        case "<dev string:x1764>":
             function_c072d3dc();
             return 1;
-        case 8:
+        case "<dev string:x1775>":
             function_4be43f4d();
             return 1;
-        case 8:
+        case "<dev string:x1786>":
             function_354ff582();
             return 1;
-        case 8:
+        case "<dev string:x179e>":
             function_f0aaa402();
             return 1;
-        case 8:
+        case "<dev string:x17b0>":
             function_b221d46();
             return 1;
         default:
@@ -268,44 +268,44 @@
         }
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 0, eflags: 0x1 linked
     // Checksum 0x39a2b7b6, Offset: 0x10c8
     // Size: 0x13c
     function function_2b22d1f9() {
-        level flag::set("<unknown string>");
-        var_b80ee5b5 = struct::get_array("<unknown string>", "<unknown string>");
+        level flag::set("<dev string:x17c8>");
+        s_pavlov_player = struct::get_array("<dev string:x17db>", "<dev string:x17eb>");
         var_9544a498 = 0;
         foreach (player in level.activeplayers) {
-            player setorigin(var_b80ee5b5[var_9544a498].origin);
-            player setplayerangles(var_b80ee5b5[var_9544a498].angles);
+            player setorigin(s_pavlov_player[var_9544a498].origin);
+            player setplayerangles(s_pavlov_player[var_9544a498].angles);
         }
-        level flag::set("<unknown string>");
+        level flag::set("<dev string:x17f6>");
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 0, eflags: 0x1 linked
     // Checksum 0xcf7324ab, Offset: 0x1210
     // Size: 0x44
     function function_cc40b263() {
         if (isdefined(level.var_8cc024f2)) {
-            iprintlnbold("<unknown string>");
+            iprintlnbold("<dev string:x180f>");
             return 0;
         }
         level namespace_b57650e4::function_809fbbff();
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 0, eflags: 0x1 linked
     // Checksum 0x794c1ee5, Offset: 0x1260
     // Size: 0x7da
     function function_a7e8b47b() {
-        var_1a0a3da9 = getentarray("<unknown string>", "<unknown string>");
-        var_ff1b68c0 = getent("<unknown string>", "<unknown string>");
-        var_4562cbcf = getentarray("<unknown string>", "<unknown string>");
-        var_50e0150f = getentarray("<unknown string>", "<unknown string>");
-        var_b9e116c5 = getentarray("<unknown string>", "<unknown string>");
-        var_6f3f4356 = getnodearray("<unknown string>", "<unknown string>");
+        var_1a0a3da9 = getentarray("<dev string:x1831>", "<dev string:x17eb>");
+        var_ff1b68c0 = getent("<dev string:x1848>", "<dev string:x17eb>");
+        var_4562cbcf = getentarray("<dev string:x185b>", "<dev string:x17eb>");
+        var_50e0150f = getentarray("<dev string:x1871>", "<dev string:x17eb>");
+        var_b9e116c5 = getentarray("<dev string:x1884>", "<dev string:x17eb>");
+        var_6f3f4356 = getnodearray("<dev string:x1891>", "<dev string:x17eb>");
         if (level.var_de98e3ce.var_1467b926) {
             level.var_de98e3ce.var_1467b926 = 0;
             foreach (e_collision in var_4562cbcf) {
@@ -326,7 +326,7 @@
                 unlinktraversal(var_b0a376a4);
             }
             var_ff1b68c0 movey(-84, 1);
-            level thread scene::play("<unknown string>");
+            level thread scene::play("<dev string:x18b1>");
         } else {
             level.var_de98e3ce.var_1467b926 = 1;
             foreach (e_collision in var_4562cbcf) {
@@ -347,19 +347,19 @@
                 linktraversal(var_b0a376a4);
             }
             var_ff1b68c0 movey(84, 1);
-            var_21ce8765 = getent("<unknown string>", "<unknown string>");
-            var_21ce8765 thread scene::play("<unknown string>");
+            var_21ce8765 = getent("<dev string:x18da>", "<dev string:x17eb>");
+            var_21ce8765 thread scene::play("<dev string:x18e5>");
         }
         return 1;
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 1, eflags: 0x1 linked
     // Checksum 0xc241e14c, Offset: 0x1a48
     // Size: 0x234
     function function_31f1d173(var_41ef115f) {
         level notify(#"hash_31f1d173");
-        wait(1);
+        wait 1;
         switch (var_41ef115f) {
         case 0:
             var_e0320b0b = 1;
@@ -388,28 +388,28 @@
         if (isdefined(var_942d1639)) {
             level thread namespace_b57650e4::function_187a933f(var_942d1639);
         }
-        exploder::exploder("<unknown string>");
-        exploder::exploder("<unknown string>" + var_40c04fc3);
-        level util::waittill_any_timeout(20, "<unknown string>");
+        exploder::exploder("<dev string:x190c>");
+        exploder::exploder("<dev string:x1915>" + var_40c04fc3);
+        level util::waittill_any_timeout(20, "<dev string:x191d>");
         level thread namespace_b57650e4::function_a71517e1(var_e0320b0b);
         level thread namespace_b57650e4::function_a71517e1(var_6e2a9bd0);
         if (isdefined(var_942d1639)) {
             level thread namespace_b57650e4::function_a71517e1(var_942d1639);
         }
-        exploder::kill_exploder("<unknown string>" + var_40c04fc3);
-        exploder::kill_exploder("<unknown string>");
+        exploder::kill_exploder("<dev string:x1915>" + var_40c04fc3);
+        exploder::kill_exploder("<dev string:x190c>");
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 1, eflags: 0x1 linked
     // Checksum 0xba4a5a60, Offset: 0x1c88
     // Size: 0x144
     function function_4b210fe6(var_b87a2184) {
-        namespace_e81d2518::function_30560c4b();
-        namespace_e81d2518::function_cf119cfd();
-        level flag::set("<unknown string>");
-        level namespace_48c05c81::function_3804dbf1();
-        namespace_48c05c81::function_adf4d1d0();
+        dragon::function_30560c4b();
+        dragon::function_cf119cfd();
+        level flag::set("<dev string:x1934>");
+        level zm_stalingrad_util::function_3804dbf1();
+        zm_stalingrad_util::function_adf4d1d0();
         if (isdefined(level.var_ef9c43d7)) {
             if (isdefined(level.var_ef9c43d7.var_fa4643fb)) {
                 level.var_ef9c43d7.var_fa4643fb delete();
@@ -417,34 +417,34 @@
             level.var_ef9c43d7 delete();
             level.var_ef9c43d7 = undefined;
         }
-        level zm_zonemgr::enable_zone("<unknown string>");
+        level zm_zonemgr::enable_zone("<dev string:x1942>");
         if (isdefined(var_b87a2184)) {
-            level flag::init("<unknown string>");
+            level flag::init("<dev string:x1952>");
             level flag::init(var_b87a2184, 1);
         }
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 0, eflags: 0x1 linked
     // Checksum 0x63b0c4f2, Offset: 0x1dd8
     // Size: 0x5c
     function function_a5a0adb4() {
-        if (level flag::get("<unknown string>")) {
+        if (level flag::get("<dev string:x1934>")) {
             level namespace_5ace0f0e::function_ad853d21(6);
             return;
         }
-        iprintlnbold("<unknown string>");
+        iprintlnbold("<dev string:x195b>");
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 0, eflags: 0x1 linked
     // Checksum 0x1ef3fc2c, Offset: 0x1e40
     // Size: 0xe8
     function function_bf490b3c() {
         level endon(#"_zombie_game_over");
-        level flag::wait_till("<unknown string>");
+        level flag::wait_till("<dev string:x1934>");
         while (!isdefined(level.var_cf6e9729)) {
-            wait(0.05);
+            wait 0.05;
         }
         level.var_cf6e9729.var_65850094[1] = 1;
         level.var_cf6e9729.var_65850094[2] = 1;
@@ -454,67 +454,67 @@
         level.var_cf6e9729.var_dad3d9bd = 9999999;
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 0, eflags: 0x1 linked
     // Checksum 0xf200cbc8, Offset: 0x1f30
     // Size: 0xaa
     function function_1b0d61c5() {
-        level flag::clear("<unknown string>");
+        level flag::clear("<dev string:x197d>");
         foreach (e_player in level.players) {
             e_player namespace_19e79ea1::function_8258d71c();
         }
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 0, eflags: 0x1 linked
     // Checksum 0x3cbde1e7, Offset: 0x1fe8
     // Size: 0xaa
     function function_fd68eee0() {
-        level flag::set("<unknown string>");
+        level flag::set("<dev string:x197d>");
         foreach (e_player in level.players) {
             e_player namespace_19e79ea1::function_8258d71c();
         }
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 0, eflags: 0x1 linked
     // Checksum 0xce313653, Offset: 0x20a0
     // Size: 0x2c
     function function_c072d3dc() {
-        luinotifyevent(%"<unknown string>", 1, 1);
+        luinotifyevent(%"<dev string:x1991>", 1, 1);
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 0, eflags: 0x1 linked
     // Checksum 0x9f30d1cd, Offset: 0x20d8
     // Size: 0x24
     function function_4be43f4d() {
-        luinotifyevent(%"<unknown string>", 1, 0);
+        luinotifyevent(%"<dev string:x1991>", 1, 0);
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 0, eflags: 0x1 linked
     // Checksum 0xacb0a3f5, Offset: 0x2108
     // Size: 0x7c
     function function_354ff582() {
-        level clientfield::set("<unknown string>", int((level.time - level.n_gameplay_start_time + 500) / 1000));
-        level clientfield::set("<unknown string>", level.round_number);
+        level clientfield::set("<dev string:x19a2>", int((level.time - level.n_gameplay_start_time + 500) / 1000));
+        level clientfield::set("<dev string:x19b6>", level.round_number);
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 0, eflags: 0x1 linked
     // Checksum 0xcbaafd63, Offset: 0x2190
     // Size: 0x54
     function function_f0aaa402() {
-        level clientfield::set("<unknown string>", int((level.time - level.n_gameplay_start_time + 500) / 1000));
+        level clientfield::set("<dev string:x19c9>", int((level.time - level.n_gameplay_start_time + 500) / 1000));
     }
 
-    // Namespace namespace_bde177cb
+    // Namespace zm_stalingrad_devgui
     // Params 0, eflags: 0x1 linked
     // Checksum 0x27e7b5a8, Offset: 0x21f0
     // Size: 0x54
     function function_b221d46() {
-        level clientfield::set("<unknown string>", int((level.time - level.n_gameplay_start_time + 500) / 1000));
+        level clientfield::set("<dev string:x19d7>", int((level.time - level.n_gameplay_start_time + 500) / 1000));
     }
 
 #/

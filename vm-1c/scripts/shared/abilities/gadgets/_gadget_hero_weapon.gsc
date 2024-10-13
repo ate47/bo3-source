@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_9470bbaa;
+#namespace _gadget_hero_weapon;
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 0, eflags: 0x2
 // Checksum 0x3a7d22bd, Offset: 0x240
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_hero_weapon", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 0, eflags: 0x1 linked
 // Checksum 0x87386b55, Offset: 0x280
 // Size: 0xe4
@@ -31,7 +31,7 @@ function __init__() {
     ability_player::register_gadget_ready_callbacks(14, &gadget_hero_weapon_ready);
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa5d54ba9, Offset: 0x370
 // Size: 0x22
@@ -39,7 +39,7 @@ function gadget_hero_weapon_is_inuse(slot) {
     return self gadgetisactive(slot);
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 1, eflags: 0x1 linked
 // Checksum 0x709d7d04, Offset: 0x3a0
 // Size: 0x22
@@ -47,7 +47,7 @@ function gadget_hero_weapon_is_flickering(slot) {
     return self gadgetflickering(slot);
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 2, eflags: 0x1 linked
 // Checksum 0xce16c13b, Offset: 0x3d0
 // Size: 0x14
@@ -55,7 +55,7 @@ function function_967bd520(slot, weapon) {
     
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 2, eflags: 0x1 linked
 // Checksum 0xac8f379b, Offset: 0x3f0
 // Size: 0x194
@@ -79,7 +79,7 @@ function gadget_hero_weapon_on_give(slot, weapon) {
     self gadgetcharging(slot, 1);
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 2, eflags: 0x1 linked
 // Checksum 0x8ac5dcb9, Offset: 0x590
 // Size: 0x14
@@ -87,7 +87,7 @@ function gadget_hero_weapon_on_take(slot, weapon) {
     
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x5b0
 // Size: 0x4
@@ -95,7 +95,7 @@ function function_fb88e576() {
     
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x5c0
 // Size: 0x4
@@ -103,7 +103,7 @@ function function_c4a7cc89() {
     
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 2, eflags: 0x1 linked
 // Checksum 0xabb89c15, Offset: 0x5d0
 // Size: 0x84
@@ -117,7 +117,7 @@ function gadget_hero_weapon_on_activate(slot, weapon) {
     }
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 2, eflags: 0x1 linked
 // Checksum 0x63ff5311, Offset: 0x660
 // Size: 0x44
@@ -127,7 +127,7 @@ function gadget_hero_weapon_on_off(slot, weapon) {
     }
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 2, eflags: 0x1 linked
 // Checksum 0x5b045b9a, Offset: 0x6b0
 // Size: 0x44
@@ -137,7 +137,7 @@ function gadget_hero_weapon_ready(slot, weapon) {
     }
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 2, eflags: 0x1 linked
 // Checksum 0xdaa9a4ef, Offset: 0x700
 // Size: 0x54
@@ -146,7 +146,7 @@ function hero_give_ammo(slot, weapon) {
     self setweaponammoclip(weapon, weapon.clipsize);
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 2, eflags: 0x1 linked
 // Checksum 0x48a25928, Offset: 0x760
 // Size: 0x74
@@ -156,7 +156,7 @@ function hero_handle_ammo_save(slot, weapon) {
     self thread hero_wait_for_death(slot, weapon);
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 2, eflags: 0x1 linked
 // Checksum 0xece65a54, Offset: 0x7e0
 // Size: 0x7c
@@ -170,7 +170,7 @@ function function_20226d3a(slot, weapon) {
     }
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa86036a7, Offset: 0x868
 // Size: 0x64
@@ -182,7 +182,7 @@ function hero_wait_for_death(slot, weapon) {
     self hero_save_ammo(slot, weapon);
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 2, eflags: 0x1 linked
 // Checksum 0xd369c5fb, Offset: 0x8d8
 // Size: 0x44
@@ -190,7 +190,7 @@ function hero_save_ammo(slot, weapon) {
     self.pers["held_hero_weapon_ammo_count"][weapon] = self getammocount(weapon);
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 2, eflags: 0x1 linked
 // Checksum 0xb33d04fa, Offset: 0x928
 // Size: 0xc4
@@ -200,7 +200,7 @@ function hero_wait_for_out_of_ammo(slot, weapon) {
     self notify(#"hero_noammo");
     self endon(#"hero_noammo");
     while (true) {
-        wait(0.1);
+        wait 0.1;
         n_ammo = self getammocount(weapon);
         if (n_ammo == 0) {
             break;
@@ -210,7 +210,7 @@ function hero_wait_for_out_of_ammo(slot, weapon) {
     self gadgetcharging(slot, 1);
 }
 
-// Namespace namespace_9470bbaa
+// Namespace _gadget_hero_weapon
 // Params 3, eflags: 0x0
 // Checksum 0x7e8d0856, Offset: 0x9f8
 // Size: 0xb4

@@ -75,13 +75,13 @@ function state_off_update(params) {
     self endon(#"change_state");
     self endon(#"death");
     while (!isdefined(self.parent)) {
-        wait(0.1);
+        wait 0.1;
     }
     self.parent endon(#"death");
     while (true) {
         self setspeed(400);
         if (isdefined(self.inpain) && self.inpain) {
-            wait(0.1);
+            wait 0.1;
         }
         self clearlookatent();
         self.current_pathto_pos = undefined;
@@ -100,7 +100,7 @@ function state_off_update(params) {
                     if (!isdefined(point._scoredebug)) {
                         point._scoredebug = [];
                     }
-                    point._scoredebug["veh_wasp_vox"] = disttooriginscore;
+                    point._scoredebug["<dev string:x28>"] = disttooriginscore;
                 #/
                 point.score += disttooriginscore;
                 if (point.score > best_score) {
@@ -131,7 +131,7 @@ function state_off_update(params) {
             self updateflakdronespeed();
             self setvehgoalpos(self.current_pathto_pos, 1, 0);
         }
-        wait(randomfloatrange(0.1, 0.2));
+        wait randomfloatrange(0.1, 0.2);
     }
 }
 
@@ -196,11 +196,11 @@ function spawnflakrocket(missile, spawnpos, parent) {
     curdist = distance(missile.origin, rocket.origin);
     tooclosetopredictedparent = 0;
     /#
-        debug_draw = getdvarint("veh_wasp_vox", 0);
-        debug_duration = getdvarint("veh_wasp_vox", 400);
+        debug_draw = getdvarint("<dev string:x35>", 0);
+        debug_duration = getdvarint("<dev string:x51>", 400);
     #/
     while (true) {
-        wait(0.05);
+        wait 0.05;
         prevdist = curdist;
         if (isdefined(rocket)) {
             curdist = distance(missile.origin, rocket.origin);
@@ -250,7 +250,7 @@ function spawnflakrocket(missile, spawnpos, parent) {
 function cleanupaftermissiledeath(rocket, flak_drone) {
     missile = self;
     missile waittill(#"death");
-    wait(0.5);
+    wait 0.5;
     if (isdefined(rocket)) {
         rocket delete();
     }
@@ -284,7 +284,7 @@ function state_death_update(params) {
         playfxontag("explosions/fx_vexp_wasp_gibb_death", self, "tag_origin");
         self ghost();
         self notsolid();
-        wait(5);
+        wait 5;
         if (isdefined(self)) {
             self delete();
         }
@@ -305,7 +305,7 @@ function drone_pain_for_time(time, stablizeparam, restorelookpoint) {
         while (gettime() < self.painstarttime + time * 1000) {
             self setvehvelocity(self.velocity * stablizeparam);
             self setangularvelocity(self getangularvelocity() * stablizeparam);
-            wait(0.1);
+            wait 0.1;
         }
         if (isdefined(restorelookpoint)) {
             restorelookent = spawn("script_model", restorelookpoint);
@@ -313,7 +313,7 @@ function drone_pain_for_time(time, stablizeparam, restorelookpoint) {
             self clearlookatent();
             self setlookatent(restorelookent);
             self setturrettargetent(restorelookent);
-            wait(1.5);
+            wait 1.5;
             self clearlookatent();
             self clearturrettarget();
             restorelookent delete();
@@ -357,7 +357,7 @@ function flakdronedamageoverride(einflictor, eattacker, idamage, idflags, smeans
 function spawn(parent, ondeathcallback) {
     if (!isnavvolumeloaded()) {
         /#
-            iprintlnbold("veh_wasp_vox");
+            iprintlnbold("<dev string:x76>");
         #/
         return undefined;
     }
@@ -456,7 +456,7 @@ function shutdown(explode) {
     if (isdefined(drone) && !isdefined(drone.parent)) {
         drone ghost();
         drone notsolid();
-        wait(5);
+        wait 5;
         if (isdefined(drone)) {
             drone delete();
         }

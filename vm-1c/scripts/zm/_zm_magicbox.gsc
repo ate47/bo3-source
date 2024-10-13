@@ -60,7 +60,7 @@ function __main__() {
     if (!isdefined(level.magic_box_check_equipment)) {
         level.magic_box_check_equipment = &default_magic_box_check_equipment;
     }
-    wait(0.05);
+    wait 0.05;
     if (zm_utility::is_classic()) {
         level.chests = struct::get_array("treasure_chest_use", "targetname");
         treasure_chest_init(level.start_chest_name);
@@ -368,7 +368,7 @@ function default_pandora_fx_func() {
         level flag::wait_till("start_zombie_round_logic");
         level._box_initialized = 1;
     }
-    wait(1);
+    wait 1;
     if (isdefined(self) && isdefined(self.pandora_light)) {
         playfxontag(level._effect["lght_marker"], self.pandora_light, "tag_origin");
     }
@@ -420,23 +420,23 @@ function treasure_chest_think() {
             user = self.forced_user;
         }
         if (user zm_utility::in_revive_trigger()) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (user.is_drinking > 0) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (isdefined(self.disabled) && self.disabled) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (user getcurrentweapon() == level.weaponnone) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (isdefined(self.being_removed) && self.being_removed) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         reduced_cost = undefined;
@@ -467,7 +467,7 @@ function treasure_chest_think() {
             user zm_audio::create_and_play_dialog("general", "outofmoney");
             continue;
         }
-        wait(0.05);
+        wait 0.05;
     }
     level flag::set("chest_has_been_used");
     demo::bookmark("zm_player_use_magicbox", gettime(), user);
@@ -537,11 +537,11 @@ function treasure_chest_think() {
                 self namespace_25f8c2ad::function_61be7933(user, grabber);
             }
             if (isdefined(grabber.is_drinking) && grabber.is_drinking > 0) {
-                wait(0.1);
+                wait 0.1;
                 continue;
             }
             if (grabber == user && user getcurrentweapon() == level.weaponnone) {
-                wait(0.1);
+                wait 0.1;
                 continue;
             }
             if (isdefined(self.box_rerespun) && grabber != level && self.box_rerespun) {
@@ -582,7 +582,7 @@ function treasure_chest_think() {
                     break;
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
         self.grab_weapon_hint = 0;
         self.zbarrier notify(#"weapon_grabbed");
@@ -597,9 +597,9 @@ function treasure_chest_think() {
             self.zbarrier set_magic_box_zbarrier_state("close");
             zm_utility::play_sound_at_pos("close_chest", self.origin);
             self.zbarrier waittill(#"closed");
-            wait(1);
+            wait 1;
         } else {
-            wait(3);
+            wait 3;
         }
         if (isdefined(level.zombie_vars["zombie_powerup_fire_sale_on"]) && level.zombie_vars["zombie_powerup_fire_sale_on"] && self [[ level._zombiemode_check_firesale_loc_valid_func ]]() || self == level.chests[level.chest_index]) {
             thread zm_unitrigger::register_static_unitrigger(self.unitrigger_stub, &magicbox_unitrigger_think);
@@ -646,7 +646,7 @@ function watch_for_emp_close() {
             self.zbarrier.weapon_model_dw notify(#"kill_weapon_movement");
         }
     }
-    wait(0.1);
+    wait 0.1;
     self notify(#"trigger", level);
 }
 
@@ -719,7 +719,7 @@ function treasure_chest_move(player_vox) {
     if (isdefined(self.zbarrier)) {
         self hide_chest(1);
     }
-    wait(0.1);
+    wait 0.1;
     post_selection_wait_duration = 7;
     if (level.zombie_vars["zombie_powerup_fire_sale_on"] == 1 && self [[ level._zombiemode_check_firesale_loc_valid_func ]]()) {
         current_sale_time = level.zombie_vars["zombie_powerup_fire_sale_time"];
@@ -727,7 +727,7 @@ function treasure_chest_move(player_vox) {
         self thread fire_sale_fix();
         level.zombie_vars["zombie_powerup_fire_sale_time"] = current_sale_time;
         while (level.zombie_vars["zombie_powerup_fire_sale_time"] > 0) {
-            wait(0.1);
+            wait 0.1;
         }
     } else {
         post_selection_wait_duration += 5;
@@ -741,7 +741,7 @@ function treasure_chest_move(player_vox) {
     if (isdefined(level.chests[level.chest_index].box_hacks["summon_box"])) {
         level.chests[level.chest_index] [[ level.chests[level.chest_index].box_hacks["summon_box"] ]](0);
     }
-    wait(post_selection_wait_duration);
+    wait post_selection_wait_duration;
     playfx(level._effect["poltergeist"], level.chests[level.chest_index].zbarrier.origin, anglestoup(level.chests[level.chest_index].zbarrier.angles), anglestoforward(level.chests[level.chest_index].zbarrier.angles));
     level.chests[level.chest_index] show_chest();
     level flag::clear("moving_chest_now");
@@ -764,7 +764,7 @@ function fire_sale_fix() {
         util::wait_network_frame();
         level waittill(#"fire_sale_off");
         while (isdefined(self._box_open) && self._box_open) {
-            wait(0.1);
+            wait 0.1;
         }
         self hide_chest(1);
         self.zombie_cost = self.old_cost;
@@ -790,7 +790,7 @@ function check_for_desirable_chest_location() {
         }
     }
     /#
-        iprintln(level.desirable_chest_location + "int");
+        iprintln(level.desirable_chest_location + "<dev string:x28>");
     #/
     level.desirable_chest_location = undefined;
     return level.chest_index;
@@ -805,10 +805,10 @@ function rotateroll_box() {
     angles2 = 0;
     while (isdefined(self)) {
         self rotateroll(angles + angles2, 0.5);
-        wait(0.7);
+        wait 0.7;
         angles2 = 40;
         self rotateroll(angles * -2, 0.5);
-        wait(0.7);
+        wait 0.7;
     }
 }
 
@@ -836,7 +836,7 @@ function treasure_chest_timeout() {
     self endon(#"user_grabbed_weapon");
     self.zbarrier endon(#"box_hacked_respin");
     self.zbarrier endon(#"box_hacked_rerespin");
-    wait(12);
+    wait 12;
     self notify(#"trigger", level);
 }
 
@@ -912,9 +912,9 @@ function function_f4e72416(player) {
         keys = player [[ level.customrandomweaponweights ]](keys);
     }
     /#
-        forced_weapon_name = getdvarstring("int");
+        forced_weapon_name = getdvarstring("<dev string:x45>");
         forced_weapon = getweapon(forced_weapon_name);
-        if (forced_weapon_name != "int" && isdefined(level.zombie_weapons[forced_weapon])) {
+        if (forced_weapon_name != "<dev string:x56>" && isdefined(level.zombie_weapons[forced_weapon])) {
             arrayinsert(keys, forced_weapon, 0);
         }
     #/
@@ -934,7 +934,7 @@ function function_f4e72416(player) {
 function weapon_show_hint_choke() {
     level._weapon_show_hint_choke = 0;
     while (true) {
-        wait(0.05);
+        wait 0.05;
         level._weapon_show_hint_choke = 0;
     }
 }
@@ -984,10 +984,10 @@ function decide_hide_show_hint(endon_notify, second_endon_notify, onlyplayer, ca
         }
         if (use_choke) {
             while (level._weapon_show_hint_choke > 4 && gettime() < last_update + -106) {
-                wait(0.05);
+                wait 0.05;
             }
         } else {
-            wait(0.1);
+            wait 0.1;
         }
         level._weapon_show_hint_choke++;
     }
@@ -1151,19 +1151,19 @@ function treasure_chest_weapon_spawn(chest, player, respin) {
     }
     for (i = 0; i < var_5b9e73d8; i++) {
         if (i < 20) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         if (i < 30) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (i < 35) {
-            wait(0.2);
+            wait 0.2;
             continue;
         }
         if (i < 38) {
-            wait(0.3);
+            wait 0.3;
         }
     }
     if (isdefined(level.var_c6955e8b)) {
@@ -1183,7 +1183,7 @@ function treasure_chest_weapon_spawn(chest, player, respin) {
     if (isdefined(level.func_magicbox_weapon_spawned)) {
         self thread [[ level.func_magicbox_weapon_spawned ]](self.weapon);
     }
-    wait(0.1);
+    wait 0.1;
     if (isdefined(level.custom_magicbox_float_height)) {
         v_float = anglestoup(self.angles) * level.custom_magicbox_float_height;
     } else {
@@ -1225,9 +1225,9 @@ function treasure_chest_weapon_spawn(chest, player, respin) {
             self.weapon_model = spawn("script_model", v_origin);
             self.weapon_model setmodel(level.chest_joker_model);
             self.weapon_model.angles = self.angles + (0, 180, 0);
-            wait(0.5);
+            wait 0.5;
             level notify(#"weapon_fly_away_start");
-            wait(2);
+            wait 2;
             if (isdefined(self.weapon_model)) {
                 v_fly_away = self.origin + anglestoup(self.angles) * 500;
                 self.weapon_model moveto(v_fly_away, 4, 3);
@@ -1326,7 +1326,7 @@ function timer_til_despawn(v_float) {
     self endon(#"kill_weapon_movement");
     putbacktime = 12;
     self moveto(self.origin - v_float * 0.85, putbacktime, putbacktime * 0.5);
-    wait(putbacktime);
+    wait putbacktime;
     if (isdefined(self)) {
         self delete();
     }
@@ -1410,9 +1410,9 @@ function function_7496cc77() {
     self endon(#"zbarrier_state_change");
     self setzbarrierpiecestate(0, "closed");
     while (true) {
-        wait(randomfloatrange(-76, 1800));
+        wait randomfloatrange(-76, 1800);
         self setzbarrierpiecestate(0, "opening");
-        wait(randomfloatrange(-76, 1800));
+        wait randomfloatrange(-76, 1800);
         self setzbarrierpiecestate(0, "closing");
     }
 }
@@ -1433,7 +1433,7 @@ function function_fea04511() {
 function function_4831fb0d() {
     self setzbarrierpiecestate(1, "opening");
     while (self getzbarrierpiecestate(1) == "opening") {
-        wait(0.05);
+        wait 0.05;
     }
     self notify(#"arrived");
 }
@@ -1445,7 +1445,7 @@ function function_4831fb0d() {
 function function_fd5f77b3() {
     self setzbarrierpiecestate(1, "closing");
     while (self getzbarrierpiecestate(1) == "closing") {
-        wait(0.1);
+        wait 0.1;
     }
     self notify(#"left");
 }
@@ -1457,7 +1457,7 @@ function function_fd5f77b3() {
 function function_63e09f12() {
     self setzbarrierpiecestate(2, "opening");
     while (self getzbarrierpiecestate(2) == "opening") {
-        wait(0.1);
+        wait 0.1;
     }
     self notify(#"opened");
 }
@@ -1469,7 +1469,7 @@ function function_63e09f12() {
 function function_fe30a0c8() {
     self setzbarrierpiecestate(2, "closing");
     while (self getzbarrierpiecestate(2) == "closing") {
-        wait(0.1);
+        wait 0.1;
     }
     self notify(#"closed");
 }
@@ -1490,7 +1490,7 @@ function magic_box_do_weapon_rise() {
     self setzbarrierpiecestate(3, "opening");
     self setzbarrierpiecestate(4, "opening");
     while (self getzbarrierpiecestate(3) != "open") {
-        wait(0.5);
+        wait 0.5;
     }
     self hidezbarrierpiece(3);
     self hidezbarrierpiece(4);
@@ -1546,33 +1546,33 @@ function set_magic_box_zbarrier_state(state) {
 // Size: 0x252
 function process_magic_box_zbarrier_state(state) {
     switch (state) {
-    case 39:
+    case "away":
         self showzbarrierpiece(0);
         self thread function_7496cc77();
         self.state = "away";
         break;
-    case 34:
+    case "arriving":
         self showzbarrierpiece(1);
         self thread function_4831fb0d();
         self.state = "arriving";
         break;
-    case 23:
+    case "initial":
         self showzbarrierpiece(1);
         self thread function_fea04511();
         thread zm_unitrigger::register_static_unitrigger(self.owner.unitrigger_stub, &magicbox_unitrigger_think);
         self.state = "initial";
         break;
-    case 53:
+    case "open":
         self showzbarrierpiece(2);
         self thread function_63e09f12();
         self.state = "open";
         break;
-    case 63:
+    case "close":
         self showzbarrierpiece(2);
         self thread function_fe30a0c8();
         self.state = "close";
         break;
-    case 40:
+    case "leaving":
         self showzbarrierpiece(1);
         self thread function_fd5f77b3();
         self.state = "leaving";
@@ -1624,7 +1624,7 @@ function function_14a6411c() {
                 return;
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 

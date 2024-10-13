@@ -142,7 +142,7 @@ function doreveal(local_client_num, direction) {
             }
         }
         priorvalue = startval;
-        wait(0.016);
+        wait 0.016;
     }
     self mapshaderconstant(local_client_num, 0, "scriptVector0", endval, 0, 0, 0);
     flags_changed = self duplicate_render::set_dr_flag("active_camo_reveal", 0);
@@ -280,24 +280,24 @@ function startfx(localclientnum) {
             self.exhaustrightfxhandle = playfxontag(localclientnum, self.exhaustfx, self, "tag_engine_right");
         }
     } else {
-        println("killstreaks/fx_sc_lights_grn");
+        println("<dev string:x28>");
     }
     if (isdefined(self.vehicletype)) {
         light_fx = undefined;
         prop_fx = undefined;
         switch (self.vehicletype) {
-        case 56:
+        case "heli_ai_mp":
             light_fx = "heli_comlink_light";
             break;
-        case 58:
+        case "heli_player_gunner_mp":
             self.vtolleftfxid = playfxontag(localclientnum, level._effect["heli_gunner"]["vtol_fx"], self, "tag_engine_left");
             self.vtolrightfxid = playfxontag(localclientnum, level._effect["heli_gunner"]["vtol_fx_ft"], self, "tag_engine_right");
             light_fx = "heli_gunner_light";
             break;
-        case 57:
+        case "heli_guard_mp":
             light_fx = "heli_guard_light";
             break;
-        case 59:
+        case "qrdrone_mp":
             prop_fx = "qrdrone_prop";
             break;
         }
@@ -330,7 +330,7 @@ function startfx_loop(localclientnum) {
             heli_deletefx(localclientnum);
             startfx(localclientnum);
         }
-        wait(0.05);
+        wait 0.05;
         lastservertime = servertime;
         servertime = getservertime(0);
     }
@@ -364,7 +364,7 @@ function function_91f14f33(localclientnum) {
             }
             var_2f9cc55d = self gethelidamagestate();
         }
-        wait(0.25);
+        wait 0.25;
     }
 }
 
@@ -384,7 +384,7 @@ function trail_fx(localclientnum, trail_fx, trail_tag) {
 function heli_comlink_lights_on_after_wait(localclientnum, wait_time) {
     self endon(#"entityshutdown");
     self endon(#"heli_comlink_lights_off");
-    wait(wait_time);
+    wait wait_time;
     self heli_comlink_lights_on(localclientnum);
 }
 
@@ -436,7 +436,7 @@ function updatemarkerthread(localclientnum) {
         forwardvector = vectorscale(anglestoforward(viewangles), killstreakcorebundle.ksmaxairdroptargetrange);
         results = bullettrace(player geteye(), player geteye() + forwardvector, 0, player);
         player.markerobj.origin = results["position"];
-        wait(0.016);
+        wait 0.016;
     }
 }
 

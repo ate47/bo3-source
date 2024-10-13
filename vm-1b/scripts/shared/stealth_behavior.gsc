@@ -6,9 +6,9 @@
 #using scripts/shared/util_shared;
 #using scripts/shared/trigger_shared;
 
-#namespace namespace_7829c86f;
+#namespace stealth_behavior;
 
-// Namespace namespace_7829c86f
+// Namespace stealth_behavior
 // Params 1, eflags: 0x0
 // Checksum 0x4b78bb73, Offset: 0x1a8
 // Size: 0x92
@@ -24,7 +24,7 @@ function function_de77b9e6(var_904f1fb9) {
     }
 }
 
-// Namespace namespace_7829c86f
+// Namespace stealth_behavior
 // Params 3, eflags: 0x0
 // Checksum 0xa75cb894, Offset: 0x248
 // Size: 0x1af
@@ -57,7 +57,7 @@ function function_a1dec77(v_origin, var_3c58247b, var_9b351631) {
     return goalpoint;
 }
 
-// Namespace namespace_7829c86f
+// Namespace stealth_behavior
 // Params 0, eflags: 0x0
 // Checksum 0x17c219ea, Offset: 0x400
 // Size: 0x1b
@@ -66,7 +66,7 @@ function function_2481442d() {
     self notify(#"hash_2481442d");
 }
 
-// Namespace namespace_7829c86f
+// Namespace stealth_behavior
 // Params 3, eflags: 0x0
 // Checksum 0x72d4e575, Offset: 0x428
 // Size: 0x2da
@@ -74,9 +74,9 @@ function function_b78807a5(v_origin, e_originator, str_type) {
     self notify(#"hash_b78807a5");
     self endon(#"hash_b78807a5");
     self endon(#"death");
-    self endon(#"hash_94ff6d85");
+    self endon(#"stop_stealth");
     self endon(#"hash_2481442d");
-    assert(self namespace_aec89ff8::enabled());
+    assert(self stealth_actor::enabled());
     if (!isdefined(str_type)) {
         str_type = "default";
     }
@@ -84,8 +84,8 @@ function function_b78807a5(v_origin, e_originator, str_type) {
     self.stealth.investigating = str_type;
     self notify(#"hash_565daac6");
     self laseroff();
-    if (isplayer(e_originator) && e_originator namespace_10443be6::enabled()) {
-        e_originator namespace_234a4910::function_e3ae87b3("investigating", self, 1);
+    if (isplayer(e_originator) && e_originator stealth_player::enabled()) {
+        e_originator stealth_vo::function_e3ae87b3("investigating", self, 1);
     }
     nearestnode = undefined;
     goalradius = -128;
@@ -98,7 +98,7 @@ function function_b78807a5(v_origin, e_originator, str_type) {
     if (var_d0808a0e > 0) {
         self thread function_628d42af((var_d0808a0e - gettime()) / 1000);
     }
-    self notify(#"hash_234a4910", "alert");
+    self notify(#"stealth_vo", "alert");
     if (isdefined(self.patroller) && self.patroller) {
         self ai::end_and_clean_patrol_behaviors();
     }
@@ -112,42 +112,42 @@ function function_b78807a5(v_origin, e_originator, str_type) {
             result = self function_edba2e78(var_ee99fa5c);
             if (result == "bad_path") {
                 /#
-                    self.stealth.var_85e6f33c = "<unknown string>";
+                    self.stealth.var_85e6f33c = "<dev string:x28>";
                 #/
                 v_origin = self.origin;
-                wait(1);
+                wait 1;
             } else {
                 self waittill(#"stealthidleterminate");
             }
             continue;
         }
         /#
-            self.stealth.var_85e6f33c = "<unknown string>";
+            self.stealth.var_85e6f33c = "<dev string:x3f>";
         #/
         v_origin = self.origin;
-        wait(1);
+        wait 1;
     }
-    self namespace_80045451::function_a2429809("unaware");
+    self stealth_aware::function_a2429809("unaware");
     self function_2481442d();
 }
 
-// Namespace namespace_7829c86f
+// Namespace stealth_behavior
 // Params 1, eflags: 0x0
 // Checksum 0xae6c414c, Offset: 0x710
 // Size: 0x6a
 function function_628d42af(delayseconds) {
     self endon(#"hash_b78807a5");
     self endon(#"death");
-    self endon(#"hash_94ff6d85");
+    self endon(#"stop_stealth");
     self endon(#"hash_2481442d");
-    wait(delayseconds);
+    wait delayseconds;
     self.stealth_resume_after_idle = 1;
-    self notify(#"hash_234a4910", "resume");
-    self namespace_80045451::function_a2429809("unaware");
+    self notify(#"stealth_vo", "resume");
+    self stealth_aware::function_a2429809("unaware");
     self function_2481442d();
 }
 
-// Namespace namespace_7829c86f
+// Namespace stealth_behavior
 // Params 1, eflags: 0x0
 // Checksum 0xd8538fe1, Offset: 0x788
 // Size: 0xcf
@@ -156,8 +156,8 @@ function function_edba2e78(v_origin) {
     self endon(#"hash_edba2e78");
     self endon(#"hash_b78807a5");
     self endon(#"death");
-    self endon(#"hash_94ff6d85");
-    assert(self namespace_aec89ff8::enabled());
+    self endon(#"stop_stealth");
+    assert(self stealth_actor::enabled());
     self setgoalpos(v_origin, 1, 8);
     /#
         self.stealth.var_edba2e78 = v_origin;

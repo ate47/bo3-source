@@ -5,9 +5,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_72c864a4;
+#namespace zm_castle_characters;
 
-// Namespace namespace_72c864a4
+// Namespace zm_castle_characters
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x748
 // Size: 0x4
@@ -15,7 +15,7 @@ function precachecustomcharacters() {
     
 }
 
-// Namespace namespace_72c864a4
+// Namespace zm_castle_characters
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5a5dd539, Offset: 0x758
 // Size: 0x24
@@ -23,7 +23,7 @@ function initcharacterstartindex() {
     level.characterstartindex = randomint(4);
 }
 
-// Namespace namespace_72c864a4
+// Namespace zm_castle_characters
 // Params 0, eflags: 0x0
 // Checksum 0x114a29d7, Offset: 0x788
 // Size: 0x3e
@@ -36,7 +36,7 @@ function selectcharacterindextouse() {
     return self.characterindex;
 }
 
-// Namespace namespace_72c864a4
+// Namespace zm_castle_characters
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6ebaf324, Offset: 0x7d0
 // Size: 0x214
@@ -78,7 +78,7 @@ function assign_lowest_unused_character_index() {
     return 0;
 }
 
-// Namespace namespace_72c864a4
+// Namespace zm_castle_characters
 // Params 0, eflags: 0x1 linked
 // Checksum 0x535ad2a0, Offset: 0x9f0
 // Size: 0x2a4
@@ -90,8 +90,8 @@ function givecustomcharacters() {
     self.favorite_wall_weapons_list = [];
     self.talks_in_danger = 0;
     /#
-        if (getdvarstring("vox_plr_0_exert_burp_2") != "vox_plr_0_exert_burp_2") {
-            self.characterindex = getdvarint("vox_plr_0_exert_burp_2");
+        if (getdvarstring("<dev string:x28>") != "<dev string:x33>") {
+            self.characterindex = getdvarint("<dev string:x28>");
         }
     #/
     self setcharacterbodytype(self.characterindex);
@@ -121,7 +121,7 @@ function givecustomcharacters() {
     self thread set_exert_id();
 }
 
-// Namespace namespace_72c864a4
+// Namespace zm_castle_characters
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd002341d, Offset: 0xca0
 // Size: 0x54
@@ -132,7 +132,7 @@ function set_exert_id() {
     self zm_audio::setexertvoice(self.characterindex + 1);
 }
 
-// Namespace namespace_72c864a4
+// Namespace zm_castle_characters
 // Params 0, eflags: 0x0
 // Checksum 0xbbf2f9fb, Offset: 0xd00
 // Size: 0x8ba

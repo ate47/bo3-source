@@ -6,15 +6,15 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_27da2c28;
+#namespace mp_metro;
 
-// Namespace namespace_27da2c28
+// Namespace mp_metro
 // Params 0, eflags: 0x1 linked
 // Checksum 0xee30ca84, Offset: 0x278
 // Size: 0x114
 function main() {
-    namespace_dbba1d69::main();
-    namespace_4dd2d99c::main();
+    mp_metro_fx::main();
+    mp_metro_sound::main();
     clientfield::register("scriptmover", "mp_metro_train_timer", 1, 1, "int", &function_272a236, 1, 0);
     load::main();
     level.domflagbasefxoverride = &dom_flag_base_fx_override;
@@ -25,7 +25,7 @@ function main() {
     setdvar("phys_ragdoll_buoyancy", 1);
 }
 
-// Namespace namespace_27da2c28
+// Namespace mp_metro
 // Params 1, eflags: 0x1 linked
 // Checksum 0xfdbfc8bb, Offset: 0x398
 // Size: 0x448
@@ -57,11 +57,11 @@ function function_610d5819(localclientnum) {
         var_38f78f6a setmodel("p7_3d_txt_antiqua_bold_0" + var_8a0c8642 % 10 + "_brushed_aluminum");
         var_55c7a409 setmodel("p7_3d_txt_antiqua_bold_0" + int(var_8a0c8642 % 60 / 10) + "_brushed_aluminum");
         var_b9aef0d0 setmodel("p7_3d_txt_antiqua_bold_0" + int(var_8a0c8642 / 60) + "_brushed_aluminum");
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_27da2c28
+// Namespace mp_metro
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6323aed2, Offset: 0x7e8
 // Size: 0x6c
@@ -74,27 +74,27 @@ function function_272a236(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_27da2c28
+// Namespace mp_metro
 // Params 2, eflags: 0x1 linked
 // Checksum 0x146d954, Offset: 0x860
 // Size: 0xc2
 function dom_flag_base_fx_override(flag, team) {
     switch (flag.name) {
-    case 12:
+    case "a":
         if (team == "neutral") {
             return "ui/fx_dom_marker_neutral_r120";
         } else {
             return "ui/fx_dom_marker_team_r120";
         }
         break;
-    case 13:
+    case "b":
         if (team == "neutral") {
             return "ui/fx_dom_marker_neutral_r120";
         } else {
             return "ui/fx_dom_marker_team_r120";
         }
         break;
-    case 14:
+    case "c":
         if (team == "neutral") {
             return "ui/fx_dom_marker_neutral_r120";
         } else {
@@ -104,27 +104,27 @@ function dom_flag_base_fx_override(flag, team) {
     }
 }
 
-// Namespace namespace_27da2c28
+// Namespace mp_metro
 // Params 2, eflags: 0x1 linked
 // Checksum 0xff48e7b, Offset: 0x930
 // Size: 0xc2
 function dom_flag_cap_fx_override(flag, team) {
     switch (flag.name) {
-    case 12:
+    case "a":
         if (team == "neutral") {
             return "ui/fx_dom_cap_indicator_neutral_r120";
         } else {
             return "ui/fx_dom_cap_indicator_team_r120";
         }
         break;
-    case 13:
+    case "b":
         if (team == "neutral") {
             return "ui/fx_dom_cap_indicator_neutral_r120";
         } else {
             return "ui/fx_dom_cap_indicator_team_r120";
         }
         break;
-    case 14:
+    case "c":
         if (team == "neutral") {
             return "ui/fx_dom_cap_indicator_neutral_r120";
         } else {

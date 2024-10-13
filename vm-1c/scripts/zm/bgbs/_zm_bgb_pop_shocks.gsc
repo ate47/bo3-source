@@ -41,7 +41,7 @@ function event() {
     self endon(#"bgb_update");
     self.var_69d5dd7c = 5;
     while (self.var_69d5dd7c > 0) {
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -141,7 +141,7 @@ function arc_damage_init(player) {
 function tesla_death() {
     self endon(#"death");
     self thread function_862aadab(1);
-    wait(2);
+    wait 2;
     self dodamage(self.health + 1, self.origin);
 }
 

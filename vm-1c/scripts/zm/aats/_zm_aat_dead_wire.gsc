@@ -11,9 +11,9 @@
 #using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_d85da9ae;
+#namespace zm_aat_dead_wire;
 
-// Namespace namespace_d85da9ae
+// Namespace zm_aat_dead_wire
 // Params 0, eflags: 0x2
 // Checksum 0x2b13c541, Offset: 0x290
 // Size: 0x34
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
     system::register("zm_aat_dead_wire", &__init__, undefined, "aat");
 }
 
-// Namespace namespace_d85da9ae
+// Namespace zm_aat_dead_wire
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4f38e0da, Offset: 0x2d0
 // Size: 0x13c
@@ -38,7 +38,7 @@ function __init__() {
     level.var_763a59fc.challenge_stat_name = "ZOMBIE_HUNTER_DEAD_WIRE";
 }
 
-// Namespace namespace_d85da9ae
+// Namespace zm_aat_dead_wire
 // Params 4, eflags: 0x1 linked
 // Checksum 0x193c00a1, Offset: 0x418
 // Size: 0xcc

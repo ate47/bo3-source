@@ -11,9 +11,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_42b119c2;
+#namespace zm_bgb_mind_blown;
 
-// Namespace namespace_42b119c2
+// Namespace zm_bgb_mind_blown
 // Params 0, eflags: 0x2
 // Checksum 0x50aedd93, Offset: 0x260
 // Size: 0x34
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_mind_blown", &__init__, undefined, "bgb");
 }
 
-// Namespace namespace_42b119c2
+// Namespace zm_bgb_mind_blown
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1648f2df, Offset: 0x2a0
 // Size: 0x114
@@ -35,7 +35,7 @@ function __init__() {
     level.var_3e825919 = lightning_chain::create_lightning_chain_params(0, 1, 300, 20, 100, 0.11, 10, 0, 4, 1, 0, undefined, 1, 1);
 }
 
-// Namespace namespace_42b119c2
+// Namespace zm_bgb_mind_blown
 // Params 0, eflags: 0x1 linked
 // Checksum 0x407677ef, Offset: 0x3c0
 // Size: 0x22
@@ -46,7 +46,7 @@ function validation() {
     return true;
 }
 
-// Namespace namespace_42b119c2
+// Namespace zm_bgb_mind_blown
 // Params 0, eflags: 0x1 linked
 // Checksum 0x91f886d3, Offset: 0x3f0
 // Size: 0x3c
@@ -56,17 +56,17 @@ function activation() {
     level thread function_80e37569();
 }
 
-// Namespace namespace_42b119c2
+// Namespace zm_bgb_mind_blown
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8898c747, Offset: 0x438
 // Size: 0x20
 function function_80e37569() {
     level.var_398d0113 = 1;
-    wait(5);
+    wait 5;
     level.var_398d0113 = 0;
 }
 
-// Namespace namespace_42b119c2
+// Namespace zm_bgb_mind_blown
 // Params 0, eflags: 0x1 linked
 // Checksum 0x138b871, Offset: 0x460
 // Size: 0x304
@@ -100,7 +100,7 @@ function function_2a8862aa() {
     function_2ca71d8b(closeai, 0, 75);
 }
 
-// Namespace namespace_42b119c2
+// Namespace zm_bgb_mind_blown
 // Params 3, eflags: 0x5 linked
 // Checksum 0x8d63b5e0, Offset: 0x770
 // Size: 0x152
@@ -120,7 +120,7 @@ function private function_2ca71d8b(allai, trace, degree) {
     }
 }
 
-// Namespace namespace_42b119c2
+// Namespace zm_bgb_mind_blown
 // Params 1, eflags: 0x1 linked
 // Checksum 0xcc76e78f, Offset: 0x8d0
 // Size: 0xa4
@@ -133,14 +133,14 @@ function function_1bb7ee0(ai) {
     ai lightning_chain::arc_damage(ai, self, 1, level.var_3e825919);
 }
 
-// Namespace namespace_42b119c2
+// Namespace zm_bgb_mind_blown
 // Params 0, eflags: 0x1 linked
 // Checksum 0x74bbafea, Offset: 0x980
 // Size: 0xac
 function zombie_head_gib() {
     self endon(#"death");
     self clientfield::set("zm_bgb_mind_ray_fx", 1);
-    wait(randomfloatrange(0.65, 2.5));
+    wait randomfloatrange(0.65, 2.5);
     self clientfield::set("zm_bgb_mind_pop_fx", 1);
     self playsoundontag("zmb_bgb_mindblown_pop", "tag_eye");
     self zombie_utility::zombie_head_gib();

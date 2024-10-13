@@ -174,7 +174,7 @@ function function_62ffcc2c() {
         if (weapon.name == "electroball_grenade") {
             self damageplayerinradius(eattacker);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -202,11 +202,11 @@ function damageplayerinradius(eattacker) {
         self thread watch_death();
         self util::show_hud(0);
         if (gettime() - g_time < 100) {
-            wait((gettime() - g_time) / 1000);
+            wait (gettime() - g_time) / 1000;
         }
         self util::show_hud(1);
     } else {
-        wait(level.proximitygrenadeprotectedtime);
+        wait level.proximitygrenadeprotectedtime;
     }
     self clientfield::set_to_player("tazered", 0);
 }
@@ -238,7 +238,7 @@ function deleteentonownerdeath(owner) {
 // Size: 0x26
 function deleteentaftertime() {
     self endon(#"delete");
-    wait(10);
+    wait 10;
     self notify(#"deletesound");
 }
 
@@ -333,7 +333,7 @@ function function_cb55123a() {
                 }
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 

@@ -1,24 +1,24 @@
 #using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b5a65bd6;
+#namespace cp_mi_zurich_newworld_sound;
 
-// Namespace namespace_b5a65bd6
+// Namespace cp_mi_zurich_newworld_sound
 // Params 0, eflags: 0x0
 // Checksum 0xd615b062, Offset: 0x158
 // Size: 0x42
 function main() {
-    level thread function_9f9f219();
+    level thread security_det();
     level thread function_cfd80c1b();
-    level thread function_166fca02();
+    level thread train_horn_dist();
     level thread function_694458bd();
 }
 
-// Namespace namespace_b5a65bd6
+// Namespace cp_mi_zurich_newworld_sound
 // Params 0, eflags: 0x0
 // Checksum 0x4c15f936, Offset: 0x1a8
 // Size: 0x91
-function function_9f9f219() {
+function security_det() {
     trigger = getent(0, "security_det", "targetname");
     if (!isdefined(trigger)) {
         return;
@@ -32,7 +32,7 @@ function function_9f9f219() {
     }
 }
 
-// Namespace namespace_b5a65bd6
+// Namespace cp_mi_zurich_newworld_sound
 // Params 0, eflags: 0x0
 // Checksum 0xd63834c3, Offset: 0x248
 // Size: 0x91
@@ -50,11 +50,11 @@ function function_cfd80c1b() {
     }
 }
 
-// Namespace namespace_b5a65bd6
+// Namespace cp_mi_zurich_newworld_sound
 // Params 0, eflags: 0x0
 // Checksum 0x43789a82, Offset: 0x2e8
 // Size: 0x91
-function function_166fca02() {
+function train_horn_dist() {
     trigger = getent(0, "train_horn_dist", "targetname");
     if (!isdefined(trigger)) {
         return;
@@ -68,7 +68,7 @@ function function_166fca02() {
     }
 }
 
-// Namespace namespace_b5a65bd6
+// Namespace cp_mi_zurich_newworld_sound
 // Params 0, eflags: 0x0
 // Checksum 0x19c050d9, Offset: 0x388
 // Size: 0xa2
@@ -80,11 +80,11 @@ function function_694458bd() {
     soundloopemitter("anb_snow_plow", (-14281, 15331, 4235));
 }
 
-// Namespace namespace_b5a65bd6
+// Namespace cp_mi_zurich_newworld_sound
 // Params 7, eflags: 0x0
 // Checksum 0xf197cd09, Offset: 0x438
 // Size: 0xb5
-function function_98d2df25(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function sndTrainContext(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         setsoundcontext("train", "country");
         return;

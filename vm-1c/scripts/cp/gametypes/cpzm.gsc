@@ -1,9 +1,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/cp/gametypes/coop;
 
-#namespace namespace_d749077;
+#namespace cpzm;
 
-// Namespace namespace_d749077
+// Namespace cpzm
 // Params 0, eflags: 0x0
 // Checksum 0x6e9219c2, Offset: 0xb0
 // Size: 0x1c

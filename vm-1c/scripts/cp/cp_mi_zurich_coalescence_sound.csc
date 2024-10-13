@@ -3,9 +3,9 @@
 #using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b301a1fd;
+#namespace cp_mi_zurich_coalescence_sound;
 
-// Namespace namespace_b301a1fd
+// Namespace cp_mi_zurich_coalescence_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x619ba62c, Offset: 0x220
 // Size: 0x94
@@ -18,7 +18,7 @@ function main() {
     level thread function_252e5c74();
 }
 
-// Namespace namespace_b301a1fd
+// Namespace cp_mi_zurich_coalescence_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2ec20b91, Offset: 0x2c0
 // Size: 0x444
@@ -52,7 +52,7 @@ function function_c24abe63() {
     level audio::playloopat("amb_blood_waterfall", (-20099, 5149, 271));
 }
 
-// Namespace namespace_b301a1fd
+// Namespace cp_mi_zurich_coalescence_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x394a490f, Offset: 0x710
 // Size: 0x1f4
@@ -72,7 +72,7 @@ function function_61bfc68f() {
     level audio::stoploopat("amb_broadcast_00", (-8486, 3163, 52));
 }
 
-// Namespace namespace_b301a1fd
+// Namespace cp_mi_zurich_coalescence_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1a309ada, Offset: 0x910
 // Size: 0x2c
@@ -80,7 +80,7 @@ function function_7d065157() {
     level audio::playloopat("evt_waterrise", (-31478, 3175, 1286));
 }
 
-// Namespace namespace_b301a1fd
+// Namespace cp_mi_zurich_coalescence_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1cf6a40f, Offset: 0x948
 // Size: 0x4c
@@ -90,12 +90,12 @@ function function_2a3f78bf() {
     level thread function_bf9775f1();
 }
 
-// Namespace namespace_b301a1fd
+// Namespace cp_mi_zurich_coalescence_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfe08b0cf, Offset: 0x9a0
 // Size: 0xbc
 function function_79e0ed83() {
-    level waittill(#"hash_2aa4d79b");
+    level waittill(#"stSINmus");
     audio::playloopat("amb_data_tunnel", (0, 0, 0));
     level thread function_357ee4f7();
     target_origin = (-2152, 3613, 1506);
@@ -104,12 +104,12 @@ function function_79e0ed83() {
     level function_8b5fd6e1(player, target_origin, "mus_i_live_data_tunnel", 0, 1, -56, 3600);
 }
 
-// Namespace namespace_b301a1fd
+// Namespace cp_mi_zurich_coalescence_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4387dda, Offset: 0xa68
 // Size: 0xc4
 function function_15dcdc5a() {
-    level waittill(#"hash_ac8697e8");
+    level waittill(#"stZURmus");
     audio::playloopat("amb_data_tunnel", (0, 0, 0));
     level thread function_357ee4f7();
     target_origin = (-74, 3271, 1383);
@@ -118,12 +118,12 @@ function function_15dcdc5a() {
     level function_8b5fd6e1(player, target_origin, "mus_i_live_data_tunnel", 0.4, 1, -56, 3600);
 }
 
-// Namespace namespace_b301a1fd
+// Namespace cp_mi_zurich_coalescence_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xadbcfce9, Offset: 0xb38
 // Size: 0xbc
 function function_bf9775f1() {
-    level waittill(#"hash_3b4ac71a");
+    level waittill(#"stCAMU");
     audio::playloopat("amb_data_tunnel", (0, 0, 0));
     level thread function_357ee4f7();
     target_origin = (2256, 2635, 1676);
@@ -132,18 +132,18 @@ function function_bf9775f1() {
     level function_8b5fd6e1(player, target_origin, "mus_i_live_data_tunnel", 0, 1, -56, 3600);
 }
 
-// Namespace namespace_b301a1fd
+// Namespace cp_mi_zurich_coalescence_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6b11d557, Offset: 0xc00
 // Size: 0x40
 function function_357ee4f7() {
-    level waittill(#"hash_cbb8610c");
-    wait(5);
+    level waittill(#"stp_mus");
+    wait 5;
     audio::stoploopat("amb_data_tunnel", (0, 0, 0));
     level.var_69a1bedf = 0;
 }
 
-// Namespace namespace_b301a1fd
+// Namespace cp_mi_zurich_coalescence_sound
 // Params 13, eflags: 0x1 linked
 // Checksum 0x9e830b1e, Offset: 0xc48
 // Size: 0x404
@@ -191,7 +191,7 @@ function function_8b5fd6e1(player, target_origin, alias1, min_vol1, max_vol1, va
             volume2 = abs(1 - volume2);
             setsoundvolume(var_59b1545e, volume2);
         }
-        wait(0.1);
+        wait 0.1;
     }
     level notify(#"hash_61477803");
     if (isdefined(var_d8bcfff1)) {
@@ -205,7 +205,7 @@ function function_8b5fd6e1(player, target_origin, alias1, min_vol1, max_vol1, va
     }
 }
 
-// Namespace namespace_b301a1fd
+// Namespace cp_mi_zurich_coalescence_sound
 // Params 4, eflags: 0x1 linked
 // Checksum 0x8a8b399f, Offset: 0x1058
 // Size: 0xdc
@@ -215,30 +215,30 @@ function function_860d167b(ent1, ent2, id1, id2) {
     ent1 delete();
     id1 = undefined;
     target_origin = (2256, 2635, 1676);
-    wait(2);
+    wait 2;
     player = getlocalplayer(0);
     if (isdefined(player)) {
         level thread function_8b5fd6e1(player, target_origin, "mus_i_live_data_tunnel", 0, 1, -56, 3600);
     }
 }
 
-// Namespace namespace_b301a1fd
+// Namespace cp_mi_zurich_coalescence_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x735ccaa6, Offset: 0x1140
 // Size: 0x13c
 function function_6f4cea1d() {
-    level waittill(#"hash_166d2243");
+    level waittill(#"sndPA");
     level audio::playloopat("mus_whiterabbit_diagetic", (-10397, 39703, 601));
     level audio::playloopat("mus_whiterabbit_diagetic", (-9550, 39146, 426));
     level audio::playloopat("mus_whiterabbit_diagetic", (-8409, 37890, 585));
-    level waittill(#"hash_166d2243");
-    wait(5);
+    level waittill(#"sndPA");
+    wait 5;
     level audio::stoploopat("mus_whiterabbit_diagetic", (-10397, 39703, 601));
     level audio::stoploopat("mus_whiterabbit_diagetic", (-9550, 39146, 426));
     level audio::stoploopat("mus_whiterabbit_diagetic", (-8409, 37890, 585));
 }
 
-// Namespace namespace_b301a1fd
+// Namespace cp_mi_zurich_coalescence_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x684e3f09, Offset: 0x1288
 // Size: 0x54

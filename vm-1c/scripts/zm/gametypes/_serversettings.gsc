@@ -66,7 +66,7 @@ function main() {
     function_11d2785d(level.mapsize);
     for (;;) {
         updateserversettings();
-        wait(5);
+        wait 5;
     }
 }
 

@@ -172,7 +172,7 @@ function private function_641f53cd(localclientnum) {
     self thread function_da40a496(localclientnum);
     while (isdefined(self)) {
         var_77a21079 = randomintrange(5, 12);
-        wait(var_77a21079);
+        wait var_77a21079;
         if (isdefined(level.var_6f29d418) && level.var_6f29d418) {
             continue;
         }

@@ -46,9 +46,9 @@ function function_9c1fc2fd(str_objective, var_74cd64bc) {
     spawner::add_spawn_function_group("hq_elevator_siegebot", "targetname", &function_e877afeb);
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_8e9083ff::function_da579a5d(str_objective, 0);
+        zurich_util::function_da579a5d(str_objective, 0);
         level thread function_44ee5cb7();
-        scene::add_scene_func("p7_fxanim_cp_zurich_coalescence_tower_door_open_bundle", &namespace_8e9083ff::function_162b9ea0, "init");
+        scene::add_scene_func("p7_fxanim_cp_zurich_coalescence_tower_door_open_bundle", &zurich_util::function_162b9ea0, "init");
         level scene::init("p7_fxanim_cp_zurich_coalescence_tower_door_open_bundle");
         level clientfield::set("hq_amb", 1);
         load::function_a2995f22();
@@ -58,14 +58,14 @@ function function_9c1fc2fd(str_objective, var_74cd64bc) {
     }
     level thread namespace_67110270::function_ce97ecac();
     umbragate_set("hq_entrance_umbra_gate", 1);
-    var_306008cd = namespace_8e9083ff::function_b0dd51f4("hq_iff_override_robots", "script_string");
+    var_306008cd = zurich_util::function_b0dd51f4("hq_iff_override_robots", "script_string");
     level.var_3d556bcd thread function_87324847();
     exploder::stop_exploder("streets_tower_wasp_swarm");
     level thread function_371b16ae();
     level thread function_f8e4b283();
     level thread function_c5e1700c();
-    level thread namespace_8e9083ff::function_2361541e("hq");
-    level thread namespace_8e9083ff::function_c049667c(1);
+    level thread zurich_util::function_2361541e("hq");
+    level thread zurich_util::function_c049667c(1);
     level thread function_f05c4095();
     level thread function_4cf537aa();
     level thread function_9006ed1d();
@@ -85,7 +85,7 @@ function function_9c1fc2fd(str_objective, var_74cd64bc) {
 function function_44ee5cb7() {
     level endon(#"game_ended");
     while (true) {
-        wait(1);
+        wait 1;
         playsoundatposition("amb_troop_alarm", (-8326, 37739, 559));
     }
 }
@@ -95,7 +95,7 @@ function function_44ee5cb7() {
 // Checksum 0xebb41828, Offset: 0x13d8
 // Size: 0x3c
 function function_1a4dfaaa(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
-    namespace_8e9083ff::function_4d032f25(0);
+    zurich_util::function_4d032f25(0);
 }
 
 // Namespace namespace_b73b0f52
@@ -116,7 +116,7 @@ function function_68b74f29() {
 // Checksum 0xd9f280b3, Offset: 0x1508
 // Size: 0x44
 function function_c198b862() {
-    namespace_8e9083ff::function_1b3dfa61("enter_facility_vo_struct_trig", undefined, 256);
+    zurich_util::function_1b3dfa61("enter_facility_vo_struct_trig", undefined, 256);
     level dialog::function_13b3b16a("plyr_it_s_just_like_in_si_0");
 }
 
@@ -126,7 +126,7 @@ function function_c198b862() {
 // Size: 0x4c
 function function_2436a71e() {
     self lookatpos(struct::get("hq_kane_lookat_pos").origin);
-    wait(4);
+    wait 4;
     self lookatpos();
 }
 
@@ -220,7 +220,7 @@ function function_9006ed1d() {
 // Checksum 0xdf62ed95, Offset: 0x1bd8
 // Size: 0x44
 function function_187d0cba() {
-    level endon(#"hash_13a0547d");
+    level endon(#"hq_exit_zone_trig");
     e_who = self waittill(#"trigger");
     e_who util::break_glass(-56);
 }
@@ -240,7 +240,7 @@ function function_6c64938e() {
                 var_530f952d thread function_eaedd1eb();
             }
         }
-        wait(3);
+        wait 3;
     }
 }
 
@@ -297,7 +297,7 @@ function function_51e389ee(var_74cd64bc) {
 // Checksum 0x99f29eac, Offset: 0x2010
 // Size: 0x44
 function function_196e4f52() {
-    level endon(#"hash_ad88abee");
+    level endon(#"flag_hq_passed_turrets");
     level flag::wait_till("flag_hq_security_room_move_upstairs");
     objectives::breadcrumb("hq_lab_approach_breadcrumb_trig");
 }
@@ -330,7 +330,7 @@ function function_c5e1700c() {
 // Size: 0x7c
 function function_e2ca7f8f() {
     var_5cca3f31 = getent("trig_zurich_hq_door_hack", "targetname");
-    var_5cca3f31 namespace_8e9083ff::function_d1996775();
+    var_5cca3f31 zurich_util::function_d1996775();
     level function_e6db4b20();
     level flag::set("flag_hq_hack_door_open");
 }
@@ -347,7 +347,7 @@ function function_e6db4b20() {
     mdl_door playsound("evt_decon_door_open");
     mdl_door moveto(mdl_door.v_end, n_open_time);
     mdl_door thread function_45d5a571();
-    wait(n_open_time / 2);
+    wait n_open_time / 2;
 }
 
 // Namespace namespace_b73b0f52
@@ -367,7 +367,7 @@ function function_2950b33d() {
     level thread function_ae937789();
     level flag::wait_till("hq_decon_active");
     level clientfield::set("decon_spray", 1);
-    wait(12);
+    wait 12;
     level function_3319c9ae();
     level flag::set("flag_decon_door_open");
     level clientfield::set("decon_spray", 0);
@@ -386,10 +386,10 @@ function function_ae937789() {
     e_clip solid();
     mdl_door movez(-86, 2);
     mdl_door playsound("evt_decon_door_close");
-    wait(2);
+    wait 2;
     spawn_manager::kill("hq_stairs_robots_spawn_manager", 1);
     a_ai_enemies = getaiteamarray();
-    array::thread_all(a_ai_enemies, &namespace_8e9083ff::function_48463818);
+    array::thread_all(a_ai_enemies, &zurich_util::function_48463818);
     level notify(#"hash_7871b80b");
 }
 
@@ -496,11 +496,11 @@ function function_ee7e8dd7() {
 // Checksum 0x452dffac, Offset: 0x29f0
 // Size: 0x8c
 function function_3b671c19() {
-    level endon(#"hash_ae9347d9");
+    level endon(#"flag_start_elevator_siege_bot");
     if (level.players.size < 3) {
         n_health_threshold = self.health / 2;
         while (self.health > n_health_threshold) {
-            wait(1);
+            wait 1;
         }
     } else {
         self waittill(#"death");
@@ -561,7 +561,7 @@ function function_348d993a() {
     foreach (n_index, var_f074d981 in var_f765f588) {
         var_53acb497[n_index] = spawner::simple_spawn_single(var_f074d981);
         var_53acb497[n_index] thread turret_think();
-        wait(0.05);
+        wait 0.05;
     }
     return var_53acb497;
 }
@@ -582,7 +582,7 @@ function turret_think() {
     self linkto(self.var_61ba68c8, "tag_origin");
     self.var_61ba68c8 moveto(s_moveto.origin, n_move_time);
     self.var_61ba68c8 waittill(#"movedone");
-    wait(var_39178da3);
+    wait var_39178da3;
     self turret_activate();
 }
 
@@ -614,7 +614,7 @@ function function_87324847() {
     self thread function_f3b250de();
     self ai::set_behavior_attribute("forceTacticalWalk", 1);
     self setgoalnode(getnode("plaza_battle_kane_lobby_node", "targetname"));
-    wait(3);
+    wait 3;
     self colors::set_force_color("r");
     trigger::use("trig_color_kane_hq_start");
     level flag::wait_till("flag_hq_kane_enter_security_room");
@@ -631,7 +631,7 @@ function function_87324847() {
     trigger::use("trig_color_kane_hq_door_hack");
     self battlechatter::function_d9f49fba(0);
     if (level flag::get("flag_hq_move_kane_to_locker_room")) {
-        wait(1);
+        wait 1;
     } else {
         level flag::wait_till("flag_hq_move_kane_to_locker_room");
     }
@@ -647,8 +647,8 @@ function function_87324847() {
 // Checksum 0x89a84ea5, Offset: 0x32a8
 // Size: 0x4c
 function function_ee4479b3() {
-    level endon(#"hash_ad88abee");
-    level endon(#"hash_f95b7888");
+    level endon(#"flag_hq_passed_turrets");
+    level endon(#"flag_hq_security_room_clear");
     level flag::wait_till("flag_hq_security_room_move_upstairs");
     trigger::use("trig_color_kane_hq_security_room_upstairs");
 }
@@ -668,7 +668,7 @@ function function_f3b250de() {
 // Checksum 0x4fcf3db4, Offset: 0x3360
 // Size: 0x4c
 function function_371b16ae() {
-    namespace_8e9083ff::function_1b3dfa61("hq_start_ravens_struct_trig", undefined, 600, 512);
+    zurich_util::function_1b3dfa61("hq_start_ravens_struct_trig", undefined, 600, 512);
     playsoundatposition("mus_coalescence_theme_lobby", (-8698, 38395, 594));
 }
 
@@ -677,9 +677,9 @@ function function_371b16ae() {
 // Checksum 0x5cc79a3a, Offset: 0x33b8
 // Size: 0xf4
 function function_f8e4b283() {
-    level scene::add_scene_func("cin_gen_ambient_raven_idle_eating_raven", &namespace_8e9083ff::function_e547724d, "init");
-    level scene::add_scene_func("cin_gen_ambient_raven_idle", &namespace_8e9083ff::function_e547724d, "init");
-    level scene::add_scene_func("cin_gen_traversal_raven_fly_away", &namespace_8e9083ff::function_86b1cd8a);
+    level scene::add_scene_func("cin_gen_ambient_raven_idle_eating_raven", &zurich_util::function_e547724d, "init");
+    level scene::add_scene_func("cin_gen_ambient_raven_idle", &zurich_util::function_e547724d, "init");
+    level scene::add_scene_func("cin_gen_traversal_raven_fly_away", &zurich_util::function_86b1cd8a);
     level thread function_762c95f0("hq_start_ravens", 600, 512);
     level thread function_762c95f0("hq_locker_room_ravens", 466, -128);
     level thread function_6e7da34e();
@@ -690,18 +690,18 @@ function function_f8e4b283() {
 // Checksum 0xa637efa6, Offset: 0x34b8
 // Size: 0x28a
 function function_762c95f0(var_af782668, var_4d9cdec3, var_9895c1a4) {
-    namespace_8e9083ff::function_1b3dfa61(var_af782668 + "_struct_trig", undefined, var_4d9cdec3, var_9895c1a4);
+    zurich_util::function_1b3dfa61(var_af782668 + "_struct_trig", undefined, var_4d9cdec3, var_9895c1a4);
     a_scenes = struct::get_array(var_af782668);
     foreach (s_scene in a_scenes) {
         s_scene util::delay(randomfloat(0.15), undefined, &scene::play);
     }
-    wait(0.5);
+    wait 0.5;
     array::thread_all(level.players, &clientfield::increment_to_player, "postfx_hallucinations", 1);
-    wait(0.5);
+    wait 0.5;
     foreach (player in level.players) {
         visionset_mgr::activate("visionset", "cp_zurich_hallucination", player);
     }
-    wait(1.8);
+    wait 1.8;
     foreach (player in level.players) {
         visionset_mgr::deactivate("visionset", "cp_zurich_hallucination", player);
     }
@@ -715,9 +715,9 @@ function function_6e7da34e() {
     a_scenes = struct::get_array("hq_airlock_ravens");
     array::thread_all(a_scenes, &scene::init);
     level flag::wait_till("hq_decon_active");
-    wait(7);
+    wait 7;
     array::thread_all(level.players, &clientfield::increment_to_player, "postfx_hallucinations", 1);
-    wait(0.8);
+    wait 0.8;
     foreach (player in level.players) {
         visionset_mgr::activate("visionset", "cp_zurich_hallucination", player);
     }
@@ -727,11 +727,11 @@ function function_6e7da34e() {
     }
     level flag::wait_till("flag_decon_door_open");
     array::thread_all(level.players, &clientfield::increment_to_player, "postfx_hallucinations", 1);
-    wait(0.8);
+    wait 0.8;
     foreach (player in level.players) {
         visionset_mgr::deactivate("visionset", "cp_zurich_hallucination", player);
     }
-    wait(0.5);
+    wait 0.5;
     array::thread_all(a_scenes, &scene::stop);
 }
 

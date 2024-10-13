@@ -85,7 +85,7 @@ function init() {
 // Size: 0x52
 function function_34e6a594() {
     /#
-        return getdvarint("bot_maxAxis", 0);
+        return getdvarint("<dev string:x28>", 0);
     #/
     return isdedicated() && getdvarint("sv_botsoak", 0);
 }
@@ -100,7 +100,7 @@ function function_43bf6297() {
         return;
     }
     for (host = util::gethostplayerforbots(); !isdefined(host); host = util::gethostplayerforbots()) {
-        wait(0.25);
+        wait 0.25;
     }
 }
 
@@ -156,12 +156,12 @@ function on_bot_spawned() {
     self.bot.var_a0f31e50 = undefined;
     /#
         weapon = undefined;
-        if (getdvarint("bot_maxAxis") != 0) {
+        if (getdvarint("<dev string:x33>") != 0) {
             player = util::gethostplayer();
             weapon = player getcurrentweapon();
         }
-        if (getdvarstring("bot_maxAxis", "bot_maxAxis") != "bot_maxAxis") {
-            weapon = getweapon(getdvarstring("bot_maxAxis"));
+        if (getdvarstring("<dev string:x4b>", "<dev string:x5d>") != "<dev string:x5d>") {
+            weapon = getweapon(getdvarstring("<dev string:x4b>"));
         }
         if (isdefined(weapon) && level.weaponnone != weapon) {
             self weapons::detach_all_weapons();
@@ -183,7 +183,7 @@ function on_bot_killed() {
     level endon(#"game_ended");
     self endon(#"spawned");
     self waittill(#"death_delay_finished");
-    wait(0.1);
+    wait 0.1;
     if (self function_33d8423() && level.playerforcerespawn) {
         return;
     }
@@ -200,7 +200,7 @@ function respawn() {
     level endon(#"game_ended");
     while (true) {
         self function_ec17d837();
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -274,7 +274,7 @@ function function_429af6de(crate) {
     self endon(#"bot_goal_reached");
     level endon(#"game_ended");
     while (isdefined(crate) && !self namespace_5cd60c9f::function_231137e6()) {
-        wait(level.var_93fffa7b.var_d74d136c);
+        wait level.botsettings.var_d74d136c;
     }
     self function_b4a0b3c5(self.origin);
 }
@@ -306,7 +306,7 @@ function monitor_bot_team_population(maxallies, maxaxis) {
     }
     fill_balanced_teams(maxallies, maxaxis);
     while (true) {
-        wait(3);
+        wait 3;
         allies = getplayers("allies");
         axis = getplayers("axis");
         if (allies.size > maxallies && remove_best_bot(allies)) {
@@ -328,7 +328,7 @@ function monitor_bot_team_population(maxallies, maxaxis) {
 function fill_balanced_teams(maxallies, maxaxis) {
     allies = getplayers("allies");
     for (axis = getplayers("axis"); (allies.size < maxallies || axis.size < maxaxis) && add_balanced_bot(allies, maxallies, axis, maxaxis); axis = getplayers("axis")) {
-        wait(0.05);
+        wait 0.05;
         allies = getplayers("allies");
     }
 }
@@ -358,10 +358,10 @@ function monitor_bot_population(maxfree) {
     }
     for (players = getplayers(); players.size < maxfree; players = getplayers()) {
         add_bot();
-        wait(0.05);
+        wait 0.05;
     }
     while (true) {
-        wait(3);
+        wait 3;
         players = getplayers();
         if (players.size < maxfree) {
             add_bot();
@@ -408,7 +408,7 @@ function function_33d8423() {
         return false;
     }
     var_962c078f = self bot_loadout::function_bef7ccf4();
-    if (!isdefined(var_962c078f) || randomint(100) < (isdefined(level.var_93fffa7b.var_3edbf1a3) ? level.var_93fffa7b.var_3edbf1a3 : 0)) {
+    if (!isdefined(var_962c078f) || randomint(100) < (isdefined(level.botsettings.var_3edbf1a3) ? level.botsettings.var_3edbf1a3 : 0)) {
         classindex = randomint(self.var_c77c87c9.size);
         classname = self.var_c77c87c9[classindex].name;
     }
@@ -447,12 +447,12 @@ function use_killstreak() {
     }
     killstreak_ref = killstreaks::get_menu_name(killstreak);
     switch (killstreak_ref) {
-    case 13:
-    case 14:
-    case 15:
-    case 16:
-    case 17:
-    case 18:
+    case "killstreak_counteruav":
+    case "killstreak_helicopter_player_gunner":
+    case "killstreak_raps":
+    case "killstreak_satellite":
+    case "killstreak_sentinel":
+    case "killstreak_uav":
         self switchtoweapon(useweapon);
         break;
     }
@@ -494,7 +494,7 @@ function function_22f478a2(var_f9e0a43) {
     enemies = self getenemies();
     /#
         for (i = 0; i < enemies.size; i++) {
-            if (isplayer(enemies[i]) && enemies[i] isinmovemode("bot_maxAxis", "bot_maxAxis")) {
+            if (isplayer(enemies[i]) && enemies[i] isinmovemode("<dev string:x5e>", "<dev string:x62>")) {
                 arrayremoveindex(enemies, i);
                 i--;
             }
@@ -551,7 +551,7 @@ function set_rank() {
     s = math::array_std_deviation(ranks, avg);
     rank = int(math::random_normal_distribution(avg, s, 0, level.maxrank));
     while (!isdefined(self.pers["codpoints"])) {
-        wait(0.1);
+        wait 0.1;
     }
     self.pers["rank"] = rank;
     self.pers["rankxp"] = rank::getrankinfominxp(rank);
@@ -565,40 +565,40 @@ function set_rank() {
 // Size: 0x178
 function function_64c6bbf2() {
     switch (level.gametype) {
-    case 22:
+    case "ball":
         namespace_898f98f0::init();
         return true;
-    case 24:
+    case "conf":
         namespace_3a008251::init();
         return true;
-    case 25:
+    case "ctf":
         namespace_6f2d2560::init();
         return true;
-    case 26:
+    case "dem":
         namespace_c34670eb::init();
         return true;
-    case 27:
+    case "dm":
         return true;
-    case 28:
+    case "dom":
         namespace_5f1d8415::init();
         return true;
-    case 29:
+    case "escort":
         namespace_ebd80b8b::init();
         return true;
-    case 31:
+    case "infect":
         return true;
-    case 30:
+    case "gun":
         return true;
-    case 32:
+    case "koth":
         namespace_366cf615::init();
         return true;
-    case 33:
+    case "sd":
         namespace_8d1d9f92::init();
         return true;
-    case 23:
+    case "clean":
         namespace_934c83ce::init();
         return true;
-    case 34:
+    case "tdm":
         return true;
     }
     return false;
@@ -690,16 +690,16 @@ function function_2ab0a76e(var_61550980) {
     // Checksum 0xd22845a2, Offset: 0x2438
     // Size: 0x38a
     function function_682f20bc(cmd) {
-        var_d03a6f21 = strtok(cmd, "bot_maxAxis");
+        var_d03a6f21 = strtok(cmd, "<dev string:x69>");
         if (var_d03a6f21.size == 0) {
             return 0;
         }
         host = util::gethostplayerforbots();
         team = function_b6063908();
         switch (var_d03a6f21[0]) {
-        case 8:
+        case "<dev string:x6b>":
             team = util::getotherteam(team);
-        case 8:
+        case "<dev string:x77>":
             count = 1;
             if (var_d03a6f21.size > 1) {
                 count = int(var_d03a6f21[1]);
@@ -708,20 +708,20 @@ function function_2ab0a76e(var_61550980) {
                 add_bot(team);
             }
             return 1;
-        case 8:
+        case "<dev string:x86>":
             team = util::getotherteam(team);
-        case 8:
+        case "<dev string:x93>":
             remove_bots(undefined, team);
             return 1;
-        case 8:
+        case "<dev string:xa3>":
             team = util::getotherteam(team);
-        case 8:
+        case "<dev string:xb5>":
             bot = function_9fda6f90(team);
             if (isdefined(bot)) {
                 bot thread fixed_spawn_override();
             }
             return 1;
-        case 8:
+        case "<dev string:xca>":
             players = getplayers();
             foreach (player in players) {
                 if (!player util::is_bot()) {
@@ -745,13 +745,13 @@ function function_2ab0a76e(var_61550980) {
     // Checksum 0xd5d02109, Offset: 0x27d0
     // Size: 0xb8
     function function_9342628b() {
-        setdvar("bot_maxAxis", "bot_maxAxis");
+        setdvar("<dev string:xd8>", "<dev string:x5d>");
         for (;;) {
-            wait(1);
-            gadget = getdvarstring("bot_maxAxis");
-            if (gadget != "bot_maxAxis") {
+            wait 1;
+            gadget = getdvarstring("<dev string:xd8>");
+            if (gadget != "<dev string:x5d>") {
                 function_1d07d711(getweapon(gadget));
-                setdvar("bot_maxAxis", "bot_maxAxis");
+                setdvar("<dev string:xd8>", "<dev string:x5d>");
             }
         }
     }
@@ -769,7 +769,7 @@ function function_2ab0a76e(var_61550980) {
             host = util::gethostplayer();
             weapon = host getcurrentweapon();
             if (!isdefined(weapon) || weapon == level.weaponnone || weapon == level.weaponnull) {
-                weapon = getweapon("bot_maxAxis");
+                weapon = getweapon("<dev string:xea>");
             }
             player weapons::detach_all_weapons();
             player takeallweapons();

@@ -33,7 +33,7 @@ function init() {
 // Checksum 0xd9e1cc2, Offset: 0x598
 // Size: 0x94
 function init_clientfields() {
-    clientfield::register("vehicle", "firefly_state", 1, 4, "int", &function_44167a82, 0, 0);
+    clientfield::register("vehicle", "firefly_state", 1, 4, "int", &firefly_state, 0, 0);
     clientfield::register("actor", "firefly_state", 1, 4, "int", &function_595dab90, 0, 0);
 }
 
@@ -41,7 +41,7 @@ function init_clientfields() {
 // Params 7, eflags: 0x1 linked
 // Checksum 0x88f23bf1, Offset: 0x638
 // Size: 0x370
-function function_44167a82(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function firefly_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 0 || newval == oldval) {
         return;
     }

@@ -14,7 +14,7 @@
     // Checksum 0xb809ca91, Offset: 0x130
     // Size: 0x34
     function autoexec function_2dc19561() {
-        system::register("<unknown string>", &__init__, undefined, undefined);
+        system::register("<dev string:x28>", &__init__, undefined, undefined);
     }
 
     // Namespace dev_class
@@ -34,96 +34,96 @@
         dev_cac_camera_on = 0;
         level thread dev_cac_gdt_update_think();
         for (;;) {
-            wait(0.5);
+            wait 0.5;
             reset = 1;
-            if (getdvarstring("<unknown string>") != "<unknown string>") {
+            if (getdvarstring("<dev string:x32>") != "<dev string:x44>") {
                 continue;
             }
             host = util::gethostplayer();
             if (!isdefined(level.dev_cac_player)) {
                 level.dev_cac_player = host;
             }
-            switch (getdvarstring("<unknown string>")) {
-            case 8:
+            switch (getdvarstring("<dev string:x45>")) {
+            case "<dev string:x44>":
                 reset = 0;
                 break;
-            case 8:
-                host thread dev_cac_dpad_think("<unknown string>", &dev_cac_cycle_body, "<unknown string>");
+            case "<dev string:x54>":
+                host thread dev_cac_dpad_think("<dev string:x5e>", &dev_cac_cycle_body, "<dev string:x44>");
                 break;
-            case 8:
-                host thread dev_cac_dpad_think("<unknown string>", &dev_cac_cycle_head, "<unknown string>");
+            case "<dev string:x63>":
+                host thread dev_cac_dpad_think("<dev string:x6d>", &dev_cac_cycle_head, "<dev string:x44>");
                 break;
-            case 8:
-                host thread dev_cac_dpad_think("<unknown string>", &dev_cac_cycle_character, "<unknown string>");
+            case "<dev string:x72>":
+                host thread dev_cac_dpad_think("<dev string:x81>", &dev_cac_cycle_character, "<dev string:x44>");
                 break;
-            case 8:
+            case "<dev string:x8b>":
                 dev_cac_cycle_player(1);
                 break;
-            case 8:
+            case "<dev string:x97>":
                 dev_cac_cycle_player(0);
                 break;
-            case 8:
+            case "<dev string:xa3>":
                 level notify(#"dev_cac_overlay_think");
                 if (!dev_cac_overlay) {
                     level thread dev_cac_overlay_think();
                 }
                 dev_cac_overlay = !dev_cac_overlay;
                 break;
-            case 8:
-                dev_cac_set_model_range(&sort_greatest, "<unknown string>");
+            case "<dev string:xaf>":
+                dev_cac_set_model_range(&sort_greatest, "<dev string:xc1>");
                 break;
-            case 8:
-                dev_cac_set_model_range(&sort_least, "<unknown string>");
+            case "<dev string:xce>":
+                dev_cac_set_model_range(&sort_least, "<dev string:xc1>");
                 break;
-            case 8:
-                dev_cac_set_model_range(&sort_greatest, "<unknown string>");
+            case "<dev string:xe1>":
+                dev_cac_set_model_range(&sort_greatest, "<dev string:xf6>");
                 break;
-            case 8:
-                dev_cac_set_model_range(&sort_least, "<unknown string>");
+            case "<dev string:x106>":
+                dev_cac_set_model_range(&sort_least, "<dev string:xf6>");
                 break;
-            case 8:
-                dev_cac_set_model_range(&sort_greatest, "<unknown string>");
+            case "<dev string:x11c>":
+                dev_cac_set_model_range(&sort_greatest, "<dev string:x12a>");
                 break;
-            case 8:
-                dev_cac_set_model_range(&sort_least, "<unknown string>");
+            case "<dev string:x133>":
+                dev_cac_set_model_range(&sort_least, "<dev string:x12a>");
                 break;
-            case 8:
+            case "<dev string:x142>":
                 dev_cac_camera_on = !dev_cac_camera_on;
                 dev_cac_camera(dev_cac_camera_on);
                 break;
-            case 8:
-                host thread dev_cac_dpad_think("<unknown string>", &dev_cac_cycle_render_options, "<unknown string>");
+            case "<dev string:x149>":
+                host thread dev_cac_dpad_think("<dev string:x153>", &dev_cac_cycle_render_options, "<dev string:x153>");
                 break;
-            case 8:
-                host thread dev_cac_dpad_think("<unknown string>", &dev_cac_cycle_render_options, "<unknown string>");
+            case "<dev string:x158>":
+                host thread dev_cac_dpad_think("<dev string:x167>", &dev_cac_cycle_render_options, "<dev string:x167>");
                 break;
-            case 8:
-                host thread dev_cac_dpad_think("<unknown string>", &dev_cac_cycle_render_options, "<unknown string>");
+            case "<dev string:x171>":
+                host thread dev_cac_dpad_think("<dev string:x17b>", &dev_cac_cycle_render_options, "<dev string:x17b>");
                 break;
-            case 8:
-                host thread dev_cac_dpad_think("<unknown string>", &dev_cac_cycle_render_options, "<unknown string>");
+            case "<dev string:x180>":
+                host thread dev_cac_dpad_think("<dev string:x18d>", &dev_cac_cycle_render_options, "<dev string:x18d>");
                 break;
-            case 8:
-                host thread dev_cac_dpad_think("<unknown string>", &dev_cac_cycle_render_options, "<unknown string>");
+            case "<dev string:x195>":
+                host thread dev_cac_dpad_think("<dev string:x1a8>", &dev_cac_cycle_render_options, "<dev string:x1b6>");
                 break;
-            case 8:
-                host thread dev_cac_dpad_think("<unknown string>", &dev_cac_cycle_render_options, "<unknown string>");
+            case "<dev string:x1c4>":
+                host thread dev_cac_dpad_think("<dev string:x1d0>", &dev_cac_cycle_render_options, "<dev string:x1d0>");
                 break;
-            case 8:
-                host thread dev_cac_dpad_think("<unknown string>", &dev_cac_cycle_render_options, "<unknown string>");
+            case "<dev string:x1d7>":
+                host thread dev_cac_dpad_think("<dev string:x1e0>", &dev_cac_cycle_render_options, "<dev string:x1e0>");
                 break;
-            case 8:
-                host thread dev_cac_dpad_think("<unknown string>", &dev_cac_cycle_render_options, "<unknown string>");
+            case "<dev string:x1e4>":
+                host thread dev_cac_dpad_think("<dev string:x1fb>", &dev_cac_cycle_render_options, "<dev string:x20d>");
                 break;
-            case 8:
-                host thread dev_cac_dpad_think("<unknown string>", &dev_cac_cycle_render_options, "<unknown string>");
+            case "<dev string:x21f>":
+                host thread dev_cac_dpad_think("<dev string:x234>", &dev_cac_cycle_render_options, "<dev string:x244>");
                 break;
-            case 8:
+            case "<dev string:x254>":
                 host notify(#"dev_cac_dpad_think");
                 break;
             }
             if (reset) {
-                setdvar("<unknown string>", "<unknown string>");
+                setdvar("<dev string:x45>", "<dev string:x44>");
             }
         }
     }
@@ -135,13 +135,13 @@
     function dev_cac_camera(on) {
         if (on) {
             self setclientthirdperson(1);
-            setdvar("<unknown string>", "<unknown string>");
-            setdvar("<unknown string>", "<unknown string>");
-            setdvar("<unknown string>", "<unknown string>");
+            setdvar("<dev string:x25f>", "<dev string:x273>");
+            setdvar("<dev string:x277>", "<dev string:x28b>");
+            setdvar("<dev string:x28f>", "<dev string:x296>");
             return;
         }
         self setclientthirdperson(0);
-        setdvar("<unknown string>", getdvarstring("<unknown string>"));
+        setdvar("<dev string:x28f>", getdvarstring("<dev string:x299>"));
     }
 
     // Namespace dev_class
@@ -152,27 +152,27 @@
         self notify(#"dev_cac_dpad_think");
         self endon(#"dev_cac_dpad_think");
         self endon(#"disconnect");
-        iprintln("<unknown string>" + part_name + "<unknown string>");
-        iprintln("<unknown string>" + part_name + "<unknown string>");
+        iprintln("<dev string:x2a8>" + part_name + "<dev string:x2b2>");
+        iprintln("<dev string:x2c7>" + part_name + "<dev string:x2cd>");
         dpad_left = 0;
         dpad_right = 0;
         level.dev_cac_player thread highlight_player();
         for (;;) {
-            self setactionslot(3, "<unknown string>");
-            self setactionslot(4, "<unknown string>");
-            if (!dpad_left && self buttonpressed("<unknown string>")) {
+            self setactionslot(3, "<dev string:x44>");
+            self setactionslot(4, "<dev string:x44>");
+            if (!dpad_left && self buttonpressed("<dev string:x2e3>")) {
                 [[ cycle_function ]](0, tag);
                 dpad_left = 1;
-            } else if (!self buttonpressed("<unknown string>")) {
+            } else if (!self buttonpressed("<dev string:x2e3>")) {
                 dpad_left = 0;
             }
-            if (!dpad_right && self buttonpressed("<unknown string>")) {
+            if (!dpad_right && self buttonpressed("<dev string:x2ed>")) {
                 [[ cycle_function ]](1, tag);
                 dpad_right = 1;
-            } else if (!self buttonpressed("<unknown string>")) {
+            } else if (!self buttonpressed("<dev string:x2ed>")) {
                 dpad_right = 0;
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -236,7 +236,7 @@
             return;
         }
         player = level.dev_cac_player;
-        keys = getarraykeys(level.cac_functions["<unknown string>"]);
+        keys = getarraykeys(level.cac_functions["<dev string:x2f8>"]);
         if (forward) {
             player.cac_body_type = next_in_list(player.cac_body_type, keys);
         } else {
@@ -254,13 +254,13 @@
             return;
         }
         player = level.dev_cac_player;
-        keys = getarraykeys(level.cac_functions["<unknown string>"]);
+        keys = getarraykeys(level.cac_functions["<dev string:x307>"]);
         if (forward) {
             player.cac_head_type = next_in_list(player.cac_head_type, keys);
         } else {
             player.cac_head_type = prev_in_list(player.cac_head_type, keys);
         }
-        player.cac_hat_type = "<unknown string>";
+        player.cac_hat_type = "<dev string:x316>";
         player dev_cac_set_player_model();
     }
 
@@ -273,13 +273,13 @@
             return;
         }
         player = level.dev_cac_player;
-        keys = getarraykeys(level.cac_functions["<unknown string>"]);
+        keys = getarraykeys(level.cac_functions["<dev string:x2f8>"]);
         if (forward) {
             player.cac_body_type = next_in_list(player.cac_body_type, keys);
         } else {
             player.cac_body_type = prev_in_list(player.cac_body_type, keys);
         }
-        player.cac_hat_type = "<unknown string>";
+        player.cac_hat_type = "<dev string:x316>";
         player dev_cac_set_player_model();
     }
 
@@ -299,7 +299,7 @@
     // Checksum 0xd5f94212, Offset: 0x1010
     // Size: 0x2e
     function dev_cac_player_valid() {
-        return isdefined(level.dev_cac_player) && level.dev_cac_player.sessionstate == "<unknown string>";
+        return isdefined(level.dev_cac_player) && level.dev_cac_player.sessionstate == "<dev string:x31b>";
     }
 
     // Namespace dev_class
@@ -328,7 +328,7 @@
     // Size: 0x44
     function highlight_player() {
         self sethighlighted(1);
-        wait(1);
+        wait 1;
         self sethighlighted(0);
     }
 
@@ -356,11 +356,11 @@
     // Checksum 0x8237cc71, Offset: 0x1210
     // Size: 0xa4
     function dev_cac_overlay_destroy(hud) {
-                for (i = 0; i < hud.menu.size; i++) {
+        for (i = 0; i < hud.menu.size; i++) {
             hud.menu[i] destroy();
         }
         hud destroy();
-        setdvar("<unknown string>", "<unknown string>");
+        setdvar("<dev string:x323>", "<dev string:x336>");
     }
 
     // Namespace dev_class
@@ -370,62 +370,62 @@
     function dev_cac_overlay_create() {
         x = -80;
         y = -116;
-        menu_name = "<unknown string>";
+        menu_name = "<dev string:x338>";
         hud = dev::new_hud(menu_name, undefined, x, y, 1);
-        hud setshader("<unknown string>", -71, 285);
-        hud.alignx = "<unknown string>";
-        hud.aligny = "<unknown string>";
+        hud setshader("<dev string:x346>", -71, 285);
+        hud.alignx = "<dev string:x34c>";
+        hud.aligny = "<dev string:x351>";
         hud.sort = 10;
         hud.alpha = 0.6;
         hud.color = (0, 0, 0.5);
         x_offset = 100;
-        hud.menu[0] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + 10, 1.3);
-        hud.menu[1] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + 25, 1);
-        hud.menu[2] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + 35, 1);
-        hud.menu[3] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + 45, 1);
-        hud.menu[4] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + 55, 1);
-        hud.menu[5] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + 70, 1);
-        hud.menu[6] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + 80, 1);
-        hud.menu[7] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + 90, 1);
-        hud.menu[8] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + 100, 1);
-        hud.menu[9] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + 110, 1);
-        hud.menu[10] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + 120, 1);
-        hud.menu[11] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + -121, 1);
-        hud.menu[12] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + -111, 1);
-        hud.menu[13] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + -101, 1);
-        hud.menu[14] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + -86, 1);
-        hud.menu[15] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + -76, 1);
-        hud.menu[16] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + -66, 1);
-        hud.menu[17] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + -51, 1);
-        hud.menu[18] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + -41, 1);
-        hud.menu[19] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + -31, 1);
-        hud.menu[20] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + -21, 1);
-        hud.menu[21] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + -11, 1);
-        hud.menu[22] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + -1, 1);
-        hud.menu[23] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + 265, 1);
-        hud.menu[24] = dev::new_hud(menu_name, "<unknown string>", x + 5, y + 275, 1);
+        hud.menu[0] = dev::new_hud(menu_name, "<dev string:x355>", x + 5, y + 10, 1.3);
+        hud.menu[1] = dev::new_hud(menu_name, "<dev string:x35a>", x + 5, y + 25, 1);
+        hud.menu[2] = dev::new_hud(menu_name, "<dev string:x361>", x + 5, y + 35, 1);
+        hud.menu[3] = dev::new_hud(menu_name, "<dev string:x369>", x + 5, y + 45, 1);
+        hud.menu[4] = dev::new_hud(menu_name, "<dev string:x371>", x + 5, y + 55, 1);
+        hud.menu[5] = dev::new_hud(menu_name, "<dev string:x37e>", x + 5, y + 70, 1);
+        hud.menu[6] = dev::new_hud(menu_name, "<dev string:x361>", x + 5, y + 80, 1);
+        hud.menu[7] = dev::new_hud(menu_name, "<dev string:x371>", x + 5, y + 90, 1);
+        hud.menu[8] = dev::new_hud(menu_name, "<dev string:x387>", x + 5, y + 100, 1);
+        hud.menu[9] = dev::new_hud(menu_name, "<dev string:x396>", x + 5, y + 110, 1);
+        hud.menu[10] = dev::new_hud(menu_name, "<dev string:x3a9>", x + 5, y + 120, 1);
+        hud.menu[11] = dev::new_hud(menu_name, "<dev string:x3bc>", x + 5, y + -121, 1);
+        hud.menu[12] = dev::new_hud(menu_name, "<dev string:x361>", x + 5, y + -111, 1);
+        hud.menu[13] = dev::new_hud(menu_name, "<dev string:x371>", x + 5, y + -101, 1);
+        hud.menu[14] = dev::new_hud(menu_name, "<dev string:x3cb>", x + 5, y + -86, 1);
+        hud.menu[15] = dev::new_hud(menu_name, "<dev string:x361>", x + 5, y + -76, 1);
+        hud.menu[16] = dev::new_hud(menu_name, "<dev string:x371>", x + 5, y + -66, 1);
+        hud.menu[17] = dev::new_hud(menu_name, "<dev string:x3dd>", x + 5, y + -51, 1);
+        hud.menu[18] = dev::new_hud(menu_name, "<dev string:x3e4>", x + 5, y + -41, 1);
+        hud.menu[19] = dev::new_hud(menu_name, "<dev string:x3ec>", x + 5, y + -31, 1);
+        hud.menu[20] = dev::new_hud(menu_name, "<dev string:x3f8>", x + 5, y + -21, 1);
+        hud.menu[21] = dev::new_hud(menu_name, "<dev string:x401>", x + 5, y + -11, 1);
+        hud.menu[22] = dev::new_hud(menu_name, "<dev string:x40e>", x + 5, y + -1, 1);
+        hud.menu[23] = dev::new_hud(menu_name, "<dev string:x41a>", x + 5, y + 265, 1);
+        hud.menu[24] = dev::new_hud(menu_name, "<dev string:x424>", x + 5, y + 275, 1);
         x_offset = 65;
-        hud.menu[25] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + 35, 1);
-        hud.menu[26] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + 45, 1);
-        hud.menu[27] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + 55, 1);
+        hud.menu[25] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + 35, 1);
+        hud.menu[26] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + 45, 1);
+        hud.menu[27] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + 55, 1);
         x_offset = 100;
-        hud.menu[28] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + 80, 1);
-        hud.menu[29] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + 90, 1);
-        hud.menu[30] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + 100, 1);
-        hud.menu[31] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + 110, 1);
-        hud.menu[32] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + 120, 1);
-        hud.menu[33] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + -111, 1);
-        hud.menu[34] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + -101, 1);
-        hud.menu[35] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + -76, 1);
-        hud.menu[36] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + -66, 1);
+        hud.menu[28] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + 80, 1);
+        hud.menu[29] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + 90, 1);
+        hud.menu[30] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + 100, 1);
+        hud.menu[31] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + 110, 1);
+        hud.menu[32] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + 120, 1);
+        hud.menu[33] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + -111, 1);
+        hud.menu[34] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + -101, 1);
+        hud.menu[35] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + -76, 1);
+        hud.menu[36] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + -66, 1);
         x_offset = 65;
-        hud.menu[37] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + -41, 1);
-        hud.menu[38] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + -31, 1);
-        hud.menu[39] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + -21, 1);
-        hud.menu[40] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + -11, 1);
-        hud.menu[41] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + -1, 1);
-        hud.menu[42] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + 265, 1);
-        hud.menu[43] = dev::new_hud(menu_name, "<unknown string>", x + x_offset, y + 275, 1);
+        hud.menu[37] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + -41, 1);
+        hud.menu[38] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + -31, 1);
+        hud.menu[39] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + -21, 1);
+        hud.menu[40] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + -11, 1);
+        hud.menu[41] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + -1, 1);
+        hud.menu[42] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + 265, 1);
+        hud.menu[43] = dev::new_hud(menu_name, "<dev string:x44>", x + x_offset, y + 275, 1);
         return hud;
     }
 
@@ -454,23 +454,23 @@
     function dev_cac_gdt_update_think() {
         for (;;) {
             asset, keyvalue = level waittill(#"gdt_update");
-            keyvalue = strtok(keyvalue, "<unknown string>");
+            keyvalue = strtok(keyvalue, "<dev string:x42d>");
             key = keyvalue[0];
             switch (key) {
-            case 8:
-                key = "<unknown string>";
+            case "<dev string:x42f>":
+                key = "<dev string:xc1>";
                 break;
-            case 8:
-                key = "<unknown string>";
+            case "<dev string:x43b>":
+                key = "<dev string:xf6>";
                 break;
-            case 8:
-                key = "<unknown string>";
+            case "<dev string:x44a>":
+                key = "<dev string:x12a>";
                 break;
-            case 8:
-                key = "<unknown string>";
+            case "<dev string:x454>":
+                key = "<dev string:x464>";
                 break;
-            case 8:
-                key = "<unknown string>";
+            case "<dev string:x476>":
+                key = "<dev string:x489>";
                 break;
             default:
                 key = undefined;
@@ -526,9 +526,9 @@
             return;
         }
         player = level.dev_cac_player;
-        player.cac_body_type = [[ sort_function ]]("<unknown string>", attribute);
-        player.cac_head_type = [[ sort_function ]]("<unknown string>", attribute);
-        player.cac_hat_type = [[ sort_function ]]("<unknown string>", attribute);
+        player.cac_body_type = [[ sort_function ]]("<dev string:x2f8>", attribute);
+        player.cac_head_type = [[ sort_function ]]("<dev string:x307>", attribute);
+        player.cac_hat_type = [[ sort_function ]]("<dev string:x49e>", attribute);
         player dev_cac_set_player_model();
     }
 

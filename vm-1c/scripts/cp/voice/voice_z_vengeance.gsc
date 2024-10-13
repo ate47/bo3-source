@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_10893d25;
+#namespace voice_z_vengeance;
 
-// Namespace namespace_10893d25
+// Namespace voice_z_vengeance
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcd02ae3a, Offset: 0x780
 // Size: 0x464

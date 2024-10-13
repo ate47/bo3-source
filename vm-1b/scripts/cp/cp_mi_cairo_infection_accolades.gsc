@@ -155,7 +155,7 @@ function function_15b29a5a() {
 function function_918d0428(params) {
     if (params.eattacker.classname == "player") {
         if (destructserverutils::getpiececount(self) >= 1 && destructserverutils::isdestructed(self, 1) && !function_3dc86a1(params)) {
-            params.eattacker notify(#"hash_8cd8aeae");
+            params.eattacker notify(#"ch05_helmet_shot");
         }
     }
 }
@@ -183,7 +183,7 @@ function function_c081e535() {
 function function_e7e68fa2(params) {
     if (params.eattacker.classname == "player" && params.eattacker.team !== self.team) {
         if (params.weapon.name == "turret_bo3_germans") {
-            params.eattacker notify(#"hash_f8f73c2a");
+            params.eattacker notify(#"ch06_mg42_kill");
         }
     }
 }
@@ -214,7 +214,7 @@ function function_423d8d8c(params) {
         if (isplayer(params.eattacker)) {
             player = params.eattacker;
             if (isdefined(self.var_e91cc22f) && self.var_e91cc22f) {
-                player notify(#"hash_115383d3");
+                player notify(#"ch09_wolf_midair_kills_granted");
             }
         }
     }
@@ -321,7 +321,7 @@ function function_74b401d8() {
     callback::remove_on_spawned(&function_b59240f2);
     foreach (player in level.activeplayers) {
         if (player.var_a1930cfd && player.var_63b33b24 > 0) {
-            player notify(#"hash_a4d9772b");
+            player notify(#"ch10_wolf_melee_granted");
         }
     }
 }
@@ -353,7 +353,7 @@ function function_6bc56950() {
 function function_d9aaed7d() {
     self endon(#"death");
     self endon(#"hash_f07948a5");
-    self endon(#"hash_c0e469ca");
+    self endon(#"ch11_wolf_bite_granted");
     while (true) {
         damage, attacker, direction_vec, point, type, modelname, tagname, partname, weapon, idflags = self waittill(#"damage");
         if (attacker.archetype === "direwolf") {
@@ -373,7 +373,7 @@ function function_b3cf52bf() {
     callback::remove_on_spawned(&function_6bc56950);
     foreach (player in level.activeplayers) {
         if (player.var_1bece4df && player.var_63b33b24 > 0) {
-            player notify(#"hash_c0e469ca");
+            player notify(#"ch11_wolf_bite_granted");
         }
     }
 }
@@ -399,7 +399,7 @@ function function_2c3b4c78() {
     if (isdefined(self)) {
         if (self.var_b42f169e == 0) {
             foreach (player in level.activeplayers) {
-                player notify(#"hash_6182e6ea");
+                player notify(#"ch12_tank_killer_granted");
             }
         }
     }
@@ -434,7 +434,7 @@ function function_2c8ffdaf() {
     callback::remove_on_player_damage(&function_9f9141fd);
     foreach (player in level.activeplayers) {
         if (player.var_a400c99f) {
-            player notify(#"hash_de1125ba");
+            player notify(#"ch14_cathedral_untouchable_grant");
         }
     }
 }
@@ -468,7 +468,7 @@ function function_335ecd05() {
 function function_e9c21474() {
     foreach (player in level.activeplayers) {
         if (player.var_1cd562c7 === 1) {
-            player notify(#"hash_c708c742");
+            player notify(#"ch15_zombies_untouchable_grant");
         }
     }
 }
@@ -512,7 +512,7 @@ function function_bbb224b7() {
     callback::remove_on_spawned(&function_7eac16b1);
     foreach (player in level.activeplayers) {
         if (player.var_abed6924 >= 4) {
-            player notify(#"hash_a5e46a2e");
+            player notify(#"ch16_zombie_bonfire");
         }
     }
 }
@@ -546,7 +546,7 @@ function function_7dfda27d(params) {
         if (params.shitloc == "head" || params.shitloc == "helmet" || params.shitloc == "neck") {
             params.eattacker.var_5bfcdcf4++;
             if (params.eattacker.var_5bfcdcf4 >= 10) {
-                params.eattacker notify(#"hash_f9d95f8c");
+                params.eattacker notify(#"ch17_confirmed_hit");
             }
             return;
         }
@@ -560,7 +560,7 @@ function function_7dfda27d(params) {
 // Size: 0x5d
 function function_cce60169() {
     foreach (player in level.activeplayers) {
-        player notify(#"hash_98743ed4");
+        player notify(#"ch18_sarah_grenaded");
     }
 }
 

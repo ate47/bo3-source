@@ -7,9 +7,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_45003ce0;
+#namespace factory_cleanup;
 
-// Namespace namespace_45003ce0
+// Namespace factory_cleanup
 // Params 0, eflags: 0x2
 // Checksum 0xeb34bd10, Offset: 0x1b8
 // Size: 0x3c
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
     system::register("factory_cleanup", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_45003ce0
+// Namespace factory_cleanup
 // Params 0, eflags: 0x1 linked
 // Checksum 0x44981523, Offset: 0x200
 // Size: 0x10
@@ -25,7 +25,7 @@ function __init__() {
     level.n_cleanups_processed_this_frame = 0;
 }
 
-// Namespace namespace_45003ce0
+// Namespace factory_cleanup
 // Params 0, eflags: 0x1 linked
 // Checksum 0xeacef5d9, Offset: 0x218
 // Size: 0x1c
@@ -33,7 +33,7 @@ function __main__() {
     level thread cleanup_main();
 }
 
-// Namespace namespace_45003ce0
+// Namespace factory_cleanup
 // Params 0, eflags: 0x0
 // Checksum 0x1e0b6b8, Offset: 0x240
 // Size: 0x12
@@ -41,7 +41,7 @@ function force_check_now() {
     level notify(#"pump_distance_check");
 }
 
-// Namespace namespace_45003ce0
+// Namespace factory_cleanup
 // Params 0, eflags: 0x5 linked
 // Checksum 0xa44aac62, Offset: 0x260
 // Size: 0x246
@@ -83,7 +83,7 @@ function private cleanup_main() {
     }
 }
 
-// Namespace namespace_45003ce0
+// Namespace factory_cleanup
 // Params 1, eflags: 0x1 linked
 // Checksum 0xcc36d44c, Offset: 0x4b0
 // Size: 0x274
@@ -131,7 +131,7 @@ function do_cleanup_check(n_override_cleanup_dist) {
     }
 }
 
-// Namespace namespace_45003ce0
+// Namespace factory_cleanup
 // Params 0, eflags: 0x5 linked
 // Checksum 0x25e2f71a, Offset: 0x730
 // Size: 0x26c
@@ -164,7 +164,7 @@ function private delete_zombie_noone_looking() {
     }
     self zombie_utility::reset_attack_spot();
     self kill();
-    wait(0.05);
+    wait 0.05;
     if (isdefined(self)) {
         /#
             debugstar(self.origin, 1000, (1, 1, 1));
@@ -173,7 +173,7 @@ function private delete_zombie_noone_looking() {
     }
 }
 
-// Namespace namespace_45003ce0
+// Namespace factory_cleanup
 // Params 1, eflags: 0x5 linked
 // Checksum 0xad211ae3, Offset: 0x9a8
 // Size: 0xd8
@@ -189,7 +189,7 @@ function private player_can_see_me(player) {
     return true;
 }
 
-// Namespace namespace_45003ce0
+// Namespace factory_cleanup
 // Params 1, eflags: 0x5 linked
 // Checksum 0xa793ceb9, Offset: 0xa88
 // Size: 0xb4
@@ -204,7 +204,7 @@ function private player_ahead_of_me(player) {
     return true;
 }
 
-// Namespace namespace_45003ce0
+// Namespace factory_cleanup
 // Params 0, eflags: 0x1 linked
 // Checksum 0xba0bf5e6, Offset: 0xb48
 // Size: 0xb4
@@ -222,7 +222,7 @@ function get_escape_position() {
     return s_farthest;
 }
 
-// Namespace namespace_45003ce0
+// Namespace factory_cleanup
 // Params 1, eflags: 0x1 linked
 // Checksum 0x16b22c75, Offset: 0xc08
 // Size: 0x11e
@@ -243,7 +243,7 @@ function get_adjacencies_to_zone(str_zone) {
     return a_adjacencies;
 }
 
-// Namespace namespace_45003ce0
+// Namespace factory_cleanup
 // Params 1, eflags: 0x5 linked
 // Checksum 0x2758909, Offset: 0xd30
 // Size: 0xd2
@@ -255,7 +255,7 @@ function private get_wait_locations_in_zones(a_zones) {
     return a_wait_locations;
 }
 
-// Namespace namespace_45003ce0
+// Namespace factory_cleanup
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7dbc0887, Offset: 0xe10
 // Size: 0xd6
@@ -275,7 +275,7 @@ function private get_farthest_wait_location(a_wait_locations) {
     return a_wait_locations[var_61c71098];
 }
 
-// Namespace namespace_45003ce0
+// Namespace factory_cleanup
 // Params 1, eflags: 0x5 linked
 // Checksum 0xf87ba1b4, Offset: 0xef0
 // Size: 0x88
@@ -288,7 +288,7 @@ function private get_wait_locations_in_zone(zone) {
     return undefined;
 }
 
-// Namespace namespace_45003ce0
+// Namespace factory_cleanup
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf9b1529e, Offset: 0xf80
 // Size: 0x9c

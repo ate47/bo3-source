@@ -12,9 +12,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b3116a5e;
+#namespace zm_perk_sleight_of_hand;
 
-// Namespace namespace_b3116a5e
+// Namespace zm_perk_sleight_of_hand
 // Params 0, eflags: 0x2
 // Checksum 0xa7f3d051, Offset: 0x348
 // Size: 0x34
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
     system::register("zm_perk_sleight_of_hand", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_b3116a5e
+// Namespace zm_perk_sleight_of_hand
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa26dca17, Offset: 0x388
 // Size: 0x14
@@ -30,7 +30,7 @@ function __init__() {
     function_ec609c41();
 }
 
-// Namespace namespace_b3116a5e
+// Namespace zm_perk_sleight_of_hand
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1ef8e0cf, Offset: 0x3a8
 // Size: 0xf4
@@ -42,7 +42,7 @@ function function_ec609c41() {
     zm_perks::register_perk_host_migration_params("specialty_fastreload", "vending_sleight", "sleight_light");
 }
 
-// Namespace namespace_b3116a5e
+// Namespace zm_perk_sleight_of_hand
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe8f09156, Offset: 0x4a8
 // Size: 0xe0
@@ -58,7 +58,7 @@ function function_1f07387f() {
     level.machine_assets["specialty_fastreload"].on_model = "p7_zm_vending_sleight";
 }
 
-// Namespace namespace_b3116a5e
+// Namespace zm_perk_sleight_of_hand
 // Params 0, eflags: 0x1 linked
 // Checksum 0x242fe200, Offset: 0x590
 // Size: 0x34
@@ -66,7 +66,7 @@ function function_1fff78dd() {
     clientfield::register("clientuimodel", "hudItems.perks.sleight_of_hand", 1, 2, "int");
 }
 
-// Namespace namespace_b3116a5e
+// Namespace zm_perk_sleight_of_hand
 // Params 1, eflags: 0x1 linked
 // Checksum 0x545cf648, Offset: 0x5d0
 // Size: 0x2c
@@ -74,7 +74,7 @@ function function_86e1cb2a(state) {
     self clientfield::set_player_uimodel("hudItems.perks.sleight_of_hand", state);
 }
 
-// Namespace namespace_b3116a5e
+// Namespace zm_perk_sleight_of_hand
 // Params 4, eflags: 0x1 linked
 // Checksum 0xd2a699d9, Offset: 0x608
 // Size: 0xbc

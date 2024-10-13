@@ -134,7 +134,7 @@ function init() {
 // Checksum 0x334835c5, Offset: 0x1888
 // Size: 0x7e
 function function_ce931b57(name, type) {
-    assert(type < -128, "zmb_pickup_chicken");
+    assert(type < -128, "<dev string:x28>");
     if (!isdefined(level.doa.var_4a6df8b3)) {
         level.doa.var_4a6df8b3 = [];
     }
@@ -146,7 +146,7 @@ function function_ce931b57(name, type) {
 // Checksum 0x67dbbb33, Offset: 0x1910
 // Size: 0x58
 function function_7ad8eb52(name) {
-    assert(isdefined(level.doa.var_4a6df8b3[name]), "zmb_pickup_chicken");
+    assert(isdefined(level.doa.var_4a6df8b3[name]), "<dev string:x3b>");
     return level.doa.var_4a6df8b3[name];
 }
 
@@ -166,10 +166,10 @@ function function_9ab759da(&queue, flag, var_a6cc22d4) {
     if (queue.size >= 64) {
         /#
             foreach (item in queue) {
-                namespace_49107f3a::debugmsg("zmb_pickup_chicken" + item);
+                namespace_49107f3a::debugmsg("<dev string:x60>" + item);
             }
         #/
-        assert(0, "zmb_pickup_chicken" + queue[63]);
+        assert(0, "<dev string:x6b>" + queue[63]);
     }
     if (queue.size == 0) {
         self notify(#"hash_99963757");

@@ -98,8 +98,8 @@ function stop(n_blend) {
     // Checksum 0x708ee70e, Offset: 0x718
     // Size: 0x1b4
     function debug_print(str_animation, str_msg) {
-        str_dvar = getdvarstring("end", "end");
-        if (str_dvar != "end") {
+        str_dvar = getdvarstring("<dev string:x28>", "<dev string:x3a>");
+        if (str_dvar != "<dev string:x3a>") {
             b_print = 0;
             if (strisnumber(str_dvar)) {
                 if (int(str_dvar) > 0) {
@@ -109,7 +109,7 @@ function stop(n_blend) {
                 b_print = 1;
             }
             if (b_print) {
-                printtoprightln(str_animation + "end" + string::function_8e23acba(str_msg, 10) + "end" + string::function_8e23acba("end" + self getentitynumber(), 4) + "end" + string::function_8e23acba("end" + gettime(), 6) + "end", (1, 1, 0), -1);
+                printtoprightln(str_animation + "<dev string:x3b>" + string::function_8e23acba(str_msg, 10) + "<dev string:x3b>" + string::function_8e23acba("<dev string:x3a>" + self getentitynumber(), 4) + "<dev string:x3f>" + string::function_8e23acba("<dev string:x3a>" + gettime(), 6) + "<dev string:x42>", (1, 1, 0), -1);
             }
         }
     }
@@ -125,7 +125,7 @@ function _play(animation, v_origin_or_ent, v_angles_or_tag, n_rate, n_blend_in, 
     self notify(#"new_scripted_anim");
     self endon(#"new_scripted_anim");
     /#
-        debug_print(animation, "end");
+        debug_print(animation, "<dev string:x44>");
     #/
     flagsys::set_val("firstframe", n_rate == 0);
     flagsys::set("scripted_anim_this_frame");
@@ -140,7 +140,7 @@ function _play(animation, v_origin_or_ent, v_angles_or_tag, n_rate, n_blend_in, 
     if (isvec(v_origin_or_ent) && isvec(v_angles_or_tag)) {
         self animscripted(animation, v_origin_or_ent, v_angles_or_tag, animation, "normal", undefined, n_rate, n_blend_in, n_lerp, n_start_time, 1, b_show_player_firstperson_weapon);
     } else if (isstring(v_angles_or_tag)) {
-        assert(isdefined(v_origin_or_ent.model), "end" + animation + "end" + v_angles_or_tag + "end");
+        assert(isdefined(v_origin_or_ent.model), "<dev string:x4c>" + animation + "<dev string:x65>" + v_angles_or_tag + "<dev string:x70>");
         v_pos = v_origin_or_ent gettagorigin(v_angles_or_tag);
         v_ang = v_origin_or_ent gettagangles(v_angles_or_tag);
         if (n_lerp > 0) {
@@ -187,7 +187,7 @@ function _play(animation, v_origin_or_ent, v_angles_or_tag, n_rate, n_blend_in, 
     if (getanimframecount(animation) > 1 || isanimlooping(animation)) {
         self waittillmatch(animation, "end");
     } else {
-        wait(0.05);
+        wait 0.05;
     }
     if (isdefined(b_unlink_after_completed) && b_link && b_unlink_after_completed) {
         self unlink();
@@ -195,7 +195,7 @@ function _play(animation, v_origin_or_ent, v_angles_or_tag, n_rate, n_blend_in, 
     flagsys::clear("scriptedanim");
     flagsys::clear("firstframe");
     /#
-        debug_print(animation, "end");
+        debug_print(animation, "<dev string:xa3>");
     #/
     waittillframeend();
     flagsys::clear("scripted_anim_this_frame");
@@ -218,7 +218,7 @@ function _blend_out(animation, n_blend, n_rate, n_start_time) {
             self stopanimscripted(n_blend);
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -250,7 +250,7 @@ function _get_align_pos(v_origin_or_ent, v_angles_or_tag) {
     }
     s = spawnstruct();
     if (isvec(v_origin_or_ent)) {
-        assert(isvec(v_angles_or_tag), "end");
+        assert(isvec(v_angles_or_tag), "<dev string:xa9>");
         s.origin = v_origin_or_ent;
         s.angles = v_angles_or_tag;
     } else {
@@ -364,9 +364,9 @@ function _reach(s_tracker, animation, v_origin_or_ent, v_angles_or_tag, b_disabl
         self endon(#"new_scripted_anim");
         self endon(#"stop_scripted_anim");
         while (true) {
-            level flagsys::wait_till("end");
-            print3d(self.origin, "end", (1, 0, 0), 1, 1, 1);
-            wait(0.05);
+            level flagsys::wait_till("<dev string:xcf>");
+            print3d(self.origin, "<dev string:xda>", (1, 0, 0), 1, 1, 1);
+            wait 0.05;
         }
     }
 
@@ -416,12 +416,12 @@ function add_notetrack_func(funcname, func) {
     if (!isdefined(level._animnotifyfuncs)) {
         level._animnotifyfuncs = [];
     }
-    assert(!isdefined(level._animnotifyfuncs[funcname]), "end");
+    assert(!isdefined(level._animnotifyfuncs[funcname]), "<dev string:xe5>");
     level._animnotifyfuncs[funcname] = func;
 }
 
 // Namespace animation
-// Params 4, eflags: 0x21 linked
+// Params 4, eflags: 0x21 linked variadic
 // Checksum 0x2d08f2b6, Offset: 0x1b00
 // Size: 0x114
 function add_global_notetrack_handler(str_note, func, pass_notify_params, ...) {
@@ -476,7 +476,7 @@ function call_notetrack_handler(str_note, param1, param2) {
                 self [[ func ]]();
                 break;
             default:
-                assertmsg("end");
+                assertmsg("<dev string:x108>");
                 break;
             }
         }
@@ -535,16 +535,16 @@ function handle_notetracks(animation) {
 // Size: 0xbe
 function cracks_on(str_type) {
     switch (str_type) {
-    case 27:
+    case "red":
         clientfield::set("cracks_on", 1);
         break;
-    case 29:
+    case "green":
         clientfield::set("cracks_on", 3);
         break;
-    case 31:
+    case "blue":
         clientfield::set("cracks_on", 2);
         break;
-    case 33:
+    case "all":
         clientfield::set("cracks_on", 4);
         break;
     }
@@ -556,16 +556,16 @@ function cracks_on(str_type) {
 // Size: 0xbe
 function cracks_off(str_type) {
     switch (str_type) {
-    case 27:
+    case "red":
         clientfield::set("cracks_off", 1);
         break;
-    case 29:
+    case "green":
         clientfield::set("cracks_off", 3);
         break;
-    case 31:
+    case "blue":
         clientfield::set("cracks_off", 2);
         break;
-    case 33:
+    case "all":
         clientfield::set("cracks_off", 4);
         break;
     }

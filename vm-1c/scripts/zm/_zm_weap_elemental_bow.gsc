@@ -99,7 +99,7 @@ function function_7fba300(e_player, var_289e02fc) {
             var_9450d281 = (var_9450d281[0], var_9450d281[1], 0.8);
         }
         self launchragdoll(var_9450d281 * 96 * var_37f1fb21);
-        wait(0.1);
+        wait 0.1;
         self zm_spawner::zombie_explodes_intopieces(0);
     }
     if (isdefined(self)) {
@@ -204,33 +204,33 @@ function function_b252290e(str_weapon_name, var_93fff756) {
         return false;
     }
     switch (var_93fff756) {
-    case 1:
+    case "elemental_bow":
         if (str_weapon_name == "elemental_bow" || str_weapon_name == "elemental_bow2" || str_weapon_name == "elemental_bow3" || str_weapon_name == "elemental_bow4") {
             return true;
         }
         break;
-    case 19:
+    case "elemental_bow_demongate":
         if (str_weapon_name == "elemental_bow_demongate" || str_weapon_name == "elemental_bow_demongate2" || str_weapon_name == "elemental_bow_demongate3" || str_weapon_name == "elemental_bow_demongate4") {
             return true;
         }
         break;
-    case 23:
+    case "elemental_bow_rune_prison":
         if (str_weapon_name == "elemental_bow_rune_prison" || str_weapon_name == "elemental_bow_rune_prison_ricochet" || str_weapon_name == "elemental_bow_rune_prison2" || str_weapon_name == "elemental_bow_rune_prison3" || str_weapon_name == "elemental_bow_rune_prison4" || str_weapon_name == "elemental_bow_rune_prison4_ricochet") {
             return true;
         }
         break;
-    case 29:
+    case "elemental_bow_storm":
         if (str_weapon_name == "elemental_bow_storm" || str_weapon_name == "elemental_bow_storm_ricochet" || str_weapon_name == "elemental_bow_storm2" || str_weapon_name == "elemental_bow_storm3" || str_weapon_name == "elemental_bow_storm4" || str_weapon_name == "elemental_bow_storm4_ricochet") {
             return true;
         }
         break;
-    case 35:
+    case "elemental_bow_wolf_howl":
         if (str_weapon_name == "elemental_bow_wolf_howl" || str_weapon_name == "elemental_bow_wolf_howl2" || str_weapon_name == "elemental_bow_wolf_howl3" || str_weapon_name == "elemental_bow_wolf_howl4") {
             return true;
         }
         break;
     default:
-        assert(0, "bg_chargeShotUseOneAmmoForMultipleBullets");
+        assert(0, "<dev string:x28>");
         break;
     }
     return false;
@@ -410,7 +410,7 @@ function function_d1e69389(var_63f884ec) {
             self.knockdown_direction = "back";
             self.getup_direction = "getup_belly";
         }
-        wait(2.5);
+        wait 2.5;
         self setplayercollision(1);
         self.knockdown = 0;
     }
@@ -455,7 +455,7 @@ function function_866906f(var_7c5a4ee4, str_weapon_name, var_3fee16b8, var_a5018
 // Checksum 0x467ba268, Offset: 0x2240
 // Size: 0x54
 function function_99de7ff2(str_weapon_name, v_source, v_destination) {
-    wait(0.1);
+    wait 0.1;
     magicbullet(getweapon(str_weapon_name), v_source, v_destination, self);
 }
 

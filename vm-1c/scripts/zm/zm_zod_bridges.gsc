@@ -13,9 +13,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_f76f5b63;
+#namespace zm_zod_bridges;
 
-// Namespace namespace_f76f5b63
+// Namespace zm_zod_bridges
 // Method(s) 7 Total 7
 class class_1f041243 {
 
@@ -25,7 +25,7 @@ class class_1f041243 {
     // Size: 0x44
     function function_64c24459() {
         self moveto(self.origin - (0, 0, 10000), 0.05);
-        wait(0.05);
+        wait 0.05;
     }
 
     // Namespace namespace_1f041243
@@ -56,7 +56,7 @@ class class_1f041243 {
         self.var_c7107160 clientfield::set("bminteract", 0);
         self.var_c7107160 setgrapplabletype(0);
         level.var_701d7eb = array::exclude(level.var_701d7eb, self.var_c7107160);
-        wait(1);
+        wait 1;
         self.var_17d1cc44 function_64c24459();
         self.var_17d1cc44 connectpaths();
         function_35b36f55();
@@ -109,7 +109,7 @@ class class_1f041243 {
 
 }
 
-// Namespace namespace_f76f5b63
+// Namespace zm_zod_bridges
 // Params 0, eflags: 0x2
 // Checksum 0xd1f51ee3, Offset: 0x330
 // Size: 0x2c
@@ -117,7 +117,7 @@ function autoexec function_2dc19561() {
     system::register("zm_zod_bridges", undefined, &__main__, undefined);
 }
 
-// Namespace namespace_f76f5b63
+// Namespace zm_zod_bridges
 // Params 0, eflags: 0x0
 // Checksum 0x9b24a9a6, Offset: 0x368
 // Size: 0x1c
@@ -125,7 +125,7 @@ function __main__() {
     level thread function_cc211d40();
 }
 
-// Namespace namespace_f76f5b63
+// Namespace zm_zod_bridges
 // Params 0, eflags: 0x0
 // Checksum 0xee322fe9, Offset: 0x390
 // Size: 0x94
@@ -141,7 +141,7 @@ function function_cc211d40() {
     }
 }
 
-// Namespace namespace_f76f5b63
+// Namespace zm_zod_bridges
 // Params 2, eflags: 0x0
 // Checksum 0x645bb9c5, Offset: 0x430
 // Size: 0x50

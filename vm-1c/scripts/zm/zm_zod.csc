@@ -84,7 +84,7 @@ function autoexec opt_in() {
 // Checksum 0x4850d5db, Offset: 0x17e8
 // Size: 0x364
 function main() {
-    namespace_b65ec48a::main_start();
+    zm_zod_ffotd::main_start();
     forcestreamxmodel("p7_zm_vending_widows_wine");
     forcestreamxmodel("p7_zm_vending_jugg");
     forcestreamxmodel("p7_zm_vending_sleight");
@@ -97,7 +97,7 @@ function main() {
     register_clientfields();
     level.setupcustomcharacterexerts = &setup_personality_character_exerts;
     level.debug_keyline_zombies = 0;
-    namespace_47b9c241::main();
+    zm_zod_fx::main();
     level._effect["eye_glow"] = "zombie/fx_glow_eye_orange_zod";
     level._effect["headshot"] = "zombie/fx_bul_flesh_head_fatal_zmb";
     level._effect["headshot_nochunks"] = "zombie/fx_bul_flesh_head_nochunks_zmb";
@@ -112,14 +112,14 @@ function main() {
     level._uses_taser_knuckles = 1;
     include_weapons();
     namespace_cfbe948b::init();
-    namespace_4624f91a::function_3ebec56b();
-    namespace_4624f91a::function_95743e9f();
-    namespace_bb738c6::init();
+    zm_zod_craftables::function_3ebec56b();
+    zm_zod_craftables::function_95743e9f();
+    zm_zod_perks::init();
     load::main();
-    thread namespace_c3257ae1::main();
+    thread zm_zod_amb::main();
     callback::on_spawned(&on_player_spawned);
     duplicate_render::set_dr_filter_framebuffer("zod_ghost", 90, "zod_ghost", undefined, 0, "mc/hud_zod_ghost", 0);
-    namespace_b65ec48a::main_end();
+    zm_zod_ffotd::main_end();
     util::waitforclient(0);
 }
 
@@ -130,11 +130,11 @@ function main() {
 function register_clientfields() {
     clientfield::register("toplayer", "fullscreen_rain_fx", 1, 1, "int", &function_40c5bbcf, 0, 1);
     clientfield::register("world", "rain_state", 1, 1, "int", undefined, 0, 0);
-    clientfield::register("world", "junction_crane_state", 1, 1, "int", &function_b339a5f5, 0, 1);
-    clientfield::register("toplayer", "devgui_lightning_test", 1, 1, "counter", &function_2cf3dd37, 0, 0);
+    clientfield::register("world", "junction_crane_state", 1, 1, "int", &junction_crane_state, 0, 1);
+    clientfield::register("toplayer", "devgui_lightning_test", 1, 1, "counter", &devgui_lightning_test, 0, 0);
     n_bits = getminbitcountfornum(8);
-    clientfield::register("toplayer", "player_rumble_and_shake", 1, n_bits, "int", &namespace_8e578893::function_f118a0e7, 0, 0);
-    clientfield::register("actor", "ghost_actor", 1, 1, "int", &function_b48f294, 0, 0);
+    clientfield::register("toplayer", "player_rumble_and_shake", 1, n_bits, "int", &zm_zod_util::player_rumble_and_shake, 0, 0);
+    clientfield::register("actor", "ghost_actor", 1, 1, "int", &ghost_actor, 0, 0);
     n_bits = getminbitcountfornum(4);
     clientfield::register("clientuimodel", "zmInventory.player_character_identity", 1, n_bits, "int", undefined, 0, 0);
     clientfield::register("clientuimodel", "zmInventory.player_using_sprayer", 1, 1, "int", undefined, 0, 0);
@@ -150,7 +150,7 @@ function register_clientfields() {
     clientfield::register("clientuimodel", "zmInventory.widget_fuses", 1, 1, "int", undefined, 0, 0);
     clientfield::register("clientuimodel", "zmInventory.widget_egg", 1, 1, "int", undefined, 0, 0);
     clientfield::register("clientuimodel", "zmInventory.widget_sprayer", 1, 1, "int", undefined, 0, 0);
-    clientfield::register("world", "hide_perf_static_models", 1, 1, "int", &function_f8cdd387, 0, 1);
+    clientfield::register("world", "hide_perf_static_models", 1, 1, "int", &hide_perf_static_models, 0, 1);
     clientfield::register("world", "breakable_show", 1, 3, "int", &function_66fdd0a3, 0, 1);
     clientfield::register("world", "breakable_hide", 1, 3, "int", &function_5a6fb328, 0, 1);
     visionset_mgr::register_visionset_info("zombie_noire", 1, 1, undefined, "zombie_noire");
@@ -175,10 +175,10 @@ function on_player_spawned(localclientnum) {
 // Size: 0x84
 function function_40c5bbcf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
-        println("actor");
+        println("<dev string:x28>");
         return;
     }
-    println("fxanim_crate_junction_static");
+    println("<dev string:x42>");
 }
 
 // Namespace zm_zod
@@ -202,7 +202,7 @@ function function_48d14da2(localclientnum) {
             fxid = playfx(localclientnum, level._effect["rain_heavy"], self.origin);
         }
         setfxoutdoor(localclientnum, fxid);
-        wait(0.25);
+        wait 0.25;
     }
 }
 
@@ -210,8 +210,8 @@ function function_48d14da2(localclientnum) {
 // Params 7, eflags: 0x0
 // Checksum 0x87889480, Offset: 0x23e0
 // Size: 0x29c
-function function_b339a5f5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    wait(0.016);
+function junction_crane_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+    wait 0.016;
     var_4cec7cba = getent(localclientnum, "junction_crane_crate_phrase", "targetname");
     var_1da6fd34 = getent(localclientnum, "quest_personal_item_junction_crane", "targetname");
     e_crate = getent(localclientnum, "junction_crane_crate", "targetname");
@@ -241,7 +241,7 @@ function function_b339a5f5(localclientnum, oldval, newval, bnewent, binitialsnap
 // Checksum 0x58d8fa7, Offset: 0x2688
 // Size: 0x2c
 function function_8db965a5(var_df899b02) {
-    wait(9.5);
+    wait 9.5;
     unhidestaticmodel(var_df899b02);
 }
 
@@ -378,7 +378,7 @@ function function_7d846745(localclientnum, oldval, newval, bnewent, binitialsnap
         foreach (i, model in var_3082faeb) {
             unhidestaticmodel(model);
             if (i % 25 == 0) {
-                wait(0.016);
+                wait 0.016;
             }
         }
         return;
@@ -386,7 +386,7 @@ function function_7d846745(localclientnum, oldval, newval, bnewent, binitialsnap
     foreach (i, model in var_3082faeb) {
         hidestaticmodel(model);
         if (i % 10 == 0) {
-            wait(0.016);
+            wait 0.016;
         }
     }
 }
@@ -395,21 +395,21 @@ function function_7d846745(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x0
 // Checksum 0xc24e7569, Offset: 0x3940
 // Size: 0x184
-function function_2cf3dd37(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function devgui_lightning_test(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     setukkoscriptindex(localclientnum, 2, 1);
     exploder::exploder("fx_exploder_lightning_dock");
     playsound(0, "amb_lightning_dist_low", (0, 0, 0));
-    wait(0.15);
+    wait 0.15;
     setukkoscriptindex(localclientnum, 3, 1);
-    wait(0.2);
+    wait 0.2;
     setukkoscriptindex(localclientnum, 2, 1);
-    wait(0.1);
+    wait 0.1;
     setukkoscriptindex(localclientnum, 3, 1);
-    wait(0.25);
+    wait 0.25;
     setukkoscriptindex(localclientnum, 4, 1);
-    wait(0.05);
+    wait 0.05;
     setukkoscriptindex(localclientnum, 5, 1);
-    wait(0.05);
+    wait 0.05;
     setukkoscriptindex(localclientnum, 1, 1);
 }
 
@@ -431,7 +431,7 @@ function function_f650f42a(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x0
 // Checksum 0x8ede04d, Offset: 0x3bd8
 // Size: 0x74
-function function_b48f294(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function ghost_actor(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self duplicate_render::set_dr_flag("zod_ghost", newval);
     self duplicate_render::update_dr_filters(localclientnum);
 }
@@ -440,7 +440,7 @@ function function_b48f294(localclientnum, oldval, newval, bnewent, binitialsnap,
 // Params 7, eflags: 0x0
 // Checksum 0x43fda5a5, Offset: 0x3c58
 // Size: 0x264
-function function_f8cdd387(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function hide_perf_static_models(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     var_bc94ac00 = findstaticmodelindexarray("fxanim_crate_waterfront_break_static");
     var_90dba62a = findstaticmodelindexarray("fxanim_crate_canal_static");
     for (i = 0; i < var_bc94ac00.size; i++) {

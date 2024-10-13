@@ -20,9 +20,9 @@
 #using scripts/cp/_dialog;
 #using scripts/cp/_skipto;
 
-#namespace namespace_90072e58;
+#namespace cp_mi_cairo_lotus_anim;
 
-// Namespace namespace_90072e58
+// Namespace cp_mi_cairo_lotus_anim
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x2f8
 // Size: 0x4

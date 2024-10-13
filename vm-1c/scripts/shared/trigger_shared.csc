@@ -14,7 +14,7 @@ function function_thread(ent, on_enter_payload, on_exit_payload) {
         [[ on_enter_payload ]](ent);
     }
     while (isdefined(ent) && ent istouching(self)) {
-        wait(0.016);
+        wait 0.016;
     }
     if (isdefined(ent) && isdefined(on_exit_payload)) {
         [[ on_exit_payload ]](ent);

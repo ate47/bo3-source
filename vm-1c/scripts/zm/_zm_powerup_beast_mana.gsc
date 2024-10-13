@@ -15,9 +15,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_6500cb2b;
+#namespace zm_powerup_beast_mana;
 
-// Namespace namespace_6500cb2b
+// Namespace zm_powerup_beast_mana
 // Params 0, eflags: 0x2
 // Checksum 0x10d4fc6b, Offset: 0x340
 // Size: 0x34
@@ -25,7 +25,7 @@ function autoexec function_2dc19561() {
     system::register("zm_powerup_beast_mana", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_6500cb2b
+// Namespace zm_powerup_beast_mana
 // Params 0, eflags: 0x0
 // Checksum 0x23a9d5cf, Offset: 0x380
 // Size: 0xa4
@@ -36,7 +36,7 @@ function __init__() {
     }
 }
 
-// Namespace namespace_6500cb2b
+// Namespace zm_powerup_beast_mana
 // Params 1, eflags: 0x0
 // Checksum 0x7fed1127, Offset: 0x430
 // Size: 0x44
@@ -45,7 +45,7 @@ function function_fb2447d7(player) {
     player thread zm_powerups::powerup_vo("bonus_points_solo");
 }
 
-// Namespace namespace_6500cb2b
+// Namespace zm_powerup_beast_mana
 // Params 2, eflags: 0x0
 // Checksum 0x168e0b4d, Offset: 0x480
 // Size: 0x12c
@@ -63,7 +63,7 @@ function function_98d4dd81(item, player) {
     level thread function_5cff02a2(item, player.team);
 }
 
-// Namespace namespace_6500cb2b
+// Namespace zm_powerup_beast_mana
 // Params 2, eflags: 0x0
 // Checksum 0x189de10b, Offset: 0x5b8
 // Size: 0x124
@@ -81,20 +81,20 @@ function function_5cff02a2(drop_item, player_team) {
     hudelem thread full_ammo_move_hud(player_team);
 }
 
-// Namespace namespace_6500cb2b
+// Namespace zm_powerup_beast_mana
 // Params 1, eflags: 0x0
 // Checksum 0x4ee9d9a3, Offset: 0x6e8
 // Size: 0xd4
 function full_ammo_move_hud(player_team) {
     players = getplayers(player_team);
     players[0] playsoundtoteam("zmb_full_ammo", player_team);
-    wait(0.5);
+    wait 0.5;
     move_fade_time = 1.5;
     self fadeovertime(move_fade_time);
     self moveovertime(move_fade_time);
     self.y = 270;
     self.alpha = 0;
-    wait(move_fade_time);
+    wait move_fade_time;
     self destroy();
 }
 

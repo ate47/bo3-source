@@ -17,9 +17,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_502339f3;
+#namespace cp_mi_sing_blackstation;
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0x607e9d62, Offset: 0x1420
 // Size: 0x202
@@ -41,50 +41,50 @@ function main() {
     level._effect["water_debris"] = "water/fx_underwater_debris_player_loop_blkstn";
     duplicate_render::set_dr_filter_offscreen("sitrep_keyline_red", 25, "keyline_active_red", "keyfill_active_red", 2, "mc/hud_outline_model_red", 0);
     callback::on_spawned(&on_player_spawned);
-    namespace_56310eec::main();
-    namespace_7a033503::main();
+    cp_mi_sing_blackstation_fx::main();
+    cp_mi_sing_blackstation_sound::main();
     function_673254cc();
     load::main();
     util::waitforclient(0);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0xf47001b5, Offset: 0x1630
 // Size: 0x65a
 function register_clientfields() {
     clientfield::register("actor", "kill_target_keyline", 1, 4, "int", &function_e722258b, 0, 0);
     clientfield::register("allplayers", "zipline_sound_loop", 1, 1, "int", &function_982d4d35, 0, 0);
-    clientfield::register("scriptmover", "water_disturbance", 1, 1, "int", &function_f354307b, 0, 0);
+    clientfield::register("scriptmover", "water_disturbance", 1, 1, "int", &water_disturbance, 0, 0);
     clientfield::register("scriptmover", "water_splash_lrg", 1, 1, "counter", &function_fedbe3ab, 0, 0);
     clientfield::register("toplayer", "player_rain", 1, 3, "int", &function_42998a0f, 0, 0);
     clientfield::register("toplayer", "rumble_loop", 1, 1, "int", &function_989f7c26, 0, 0);
-    clientfield::register("toplayer", "sndWindSystem", 1, 2, "int", &namespace_7a033503::function_879c3b17, 0, 1);
+    clientfield::register("toplayer", "sndWindSystem", 1, 2, "int", &cp_mi_sing_blackstation_sound::sndWindSystem, 0, 1);
     clientfield::register("toplayer", "zipline_rumble_loop", 1, 1, "int", &function_85392f32, 0, 0);
     clientfield::register("toplayer", "player_water_swept", 1, 1, "int", &function_fd89a017, 0, 0);
     clientfield::register("toplayer", "toggle_ukko", 1, 2, "int", &function_983b5ccf, 0, 0);
-    clientfield::register("toplayer", "toggle_rain_sprite", 1, 2, "int", &function_e951f9d2, 0, 0);
+    clientfield::register("toplayer", "toggle_rain_sprite", 1, 2, "int", &toggle_rain_sprite, 0, 0);
     clientfield::register("toplayer", "wind_blur", 1, 1, "int", &function_4a01cc4e, 0, 0);
     clientfield::register("toplayer", "wind_effects", 1, 2, "int", &function_ffa95b91, 0, 0);
     clientfield::register("toplayer", "subway_water", 1, 1, "int", &function_c170b293, 0, 0);
     clientfield::register("toplayer", "play_bubbles", 1, 1, "int", &function_58e931d1, 0, 0);
-    clientfield::register("toplayer", "toggle_water_fx", 1, 1, "int", &function_65582e9e, 0, 0);
+    clientfield::register("toplayer", "toggle_water_fx", 1, 1, "int", &toggle_water_fx, 0, 0);
     clientfield::register("toplayer", "wave_hit", 1, 1, "int", &function_40788165, 0, 0);
-    clientfield::register("world", "subway_entrance_crash", 1, 1, "int", &function_adfd4203, 0, 0);
+    clientfield::register("world", "subway_entrance_crash", 1, 1, "int", &subway_entrance_crash, 0, 0);
     clientfield::register("world", "water_level", 1, 3, "int", &function_ec1c5731, 0, 0);
     clientfield::register("world", "roof_panels_init", 1, 1, "int", &function_59e9894a, 0, 0);
     clientfield::register("world", "roof_panels_play", 1, 1, "int", &function_db90ecbe, 0, 0);
     clientfield::register("world", "subway_tiles", 1, 1, "int", &function_33d0325b, 0, 0);
     clientfield::register("world", "warlord_exposure", 1, 1, "int", &function_f6681c64, 0, 0);
     clientfield::register("world", "outro_exposure", 1, 1, "int", &function_c1835b73, 0, 0);
-    clientfield::register("world", "sndDrillWalla", 1, 2, "int", &namespace_7a033503::function_598a3b92, 0, 0);
-    clientfield::register("world", "sndBlackStationSounds", 1, 1, "int", &namespace_7a033503::function_c6d82f9d, 0, 0);
+    clientfield::register("world", "sndDrillWalla", 1, 2, "int", &cp_mi_sing_blackstation_sound::sndDrillWalla, 0, 0);
+    clientfield::register("world", "sndBlackStationSounds", 1, 1, "int", &cp_mi_sing_blackstation_sound::sndBlackStationSounds, 0, 0);
     clientfield::register("world", "flotsam", 1, 1, "int", &function_5d2e29ca, 0, 0);
-    clientfield::register("world", "sndStationWalla", 1, 1, "int", &namespace_7a033503::function_fb96c813, 0, 0);
+    clientfield::register("world", "sndStationWalla", 1, 1, "int", &cp_mi_sing_blackstation_sound::sndStationWalla, 0, 0);
     clientfield::register("world", "qzone_debris", 1, 1, "counter", &function_dadc58c3, 0, 0);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0x89e8f901, Offset: 0x1c98
 // Size: 0x1a
@@ -92,7 +92,7 @@ function flag_init() {
     level flag::init("building_break");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0xfb3828c0, Offset: 0x1cc0
 // Size: 0xb2
@@ -107,12 +107,12 @@ function function_983b5ccf(localclientnum, oldval, newval, bnewent, binitialsnap
             break;
         }
         setukkoscriptindex(localclientnum, n_index, 1);
-        wait(0.1);
+        wait 0.1;
         setukkoscriptindex(localclientnum, 2, 1);
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0x53448043, Offset: 0x1d80
 // Size: 0x72
@@ -124,7 +124,7 @@ function function_f6681c64(localclientnum, oldval, newval, bnewent, binitialsnap
     setexposureactivebank(localclientnum, 1);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0xbc60d794, Offset: 0x1e00
 // Size: 0x82
@@ -137,7 +137,7 @@ function function_c1835b73(localclientnum, oldval, newval, bnewent, binitialsnap
     setexposureactivebank(localclientnum, 1);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0xdd40bff4, Offset: 0x1e90
 // Size: 0x6a
@@ -149,7 +149,7 @@ function function_58e931d1(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread function_6fb5501(localclientnum);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 1, eflags: 0x0
 // Checksum 0x21f13083, Offset: 0x1f08
 // Size: 0x82
@@ -160,7 +160,7 @@ function function_6e954d4(localclientnum) {
     self thread function_738868d4(localclientnum);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 1, eflags: 0x0
 // Checksum 0x1a3460be, Offset: 0x1f98
 // Size: 0x53
@@ -174,7 +174,7 @@ function function_6fb5501(localclientnum) {
     self notify(#"hash_a48959b9");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 1, eflags: 0x0
 // Checksum 0x2b3c7db, Offset: 0x1ff8
 // Size: 0x32
@@ -184,7 +184,7 @@ function function_738868d4(localclientnum) {
     self function_6fb5501(localclientnum);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0x169c23f1, Offset: 0x2038
 // Size: 0x82
@@ -196,7 +196,7 @@ function function_4a01cc4e(localclientnum, oldval, newval, bnewent, binitialsnap
     disablespeedblur(localclientnum);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0xf0ecf0ae, Offset: 0x20c8
 // Size: 0x4a
@@ -206,11 +206,11 @@ function function_967477f8(localclientnum, var_2d166751) {
     filter::function_e4987221(localplayer);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0xb9cc13fb, Offset: 0x2120
 // Size: 0xc2
-function function_e951f9d2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function toggle_rain_sprite(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         var_2d166751 = 0.1;
     } else if (newval == 2) {
@@ -227,7 +227,7 @@ function function_e951f9d2(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0xc61676, Offset: 0x21f0
 // Size: 0xfd
@@ -251,11 +251,11 @@ function function_f26e8536(localclientnum, n_opacity) {
         }
         filter::set_filter_sprite_rain_opacity(self, 0, self.rainopacity);
         filter::set_filter_sprite_rain_elapsed(self, 0, self getclienttime());
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 1, eflags: 0x0
 // Checksum 0x6204e68b, Offset: 0x22f8
 // Size: 0xb2
@@ -267,14 +267,14 @@ function function_643ad70d(localclientnum) {
             self.rainopacity = self.rainopacity - 0.005;
             filter::set_filter_sprite_rain_opacity(self, 0, self.rainopacity);
             filter::set_filter_sprite_rain_elapsed(self, 0, self getclienttime());
-            wait(0.016);
+            wait 0.016;
         }
     }
     self.rainopacity = 0;
     filter::disable_filter_sprite_rain(self, 0);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0xfa62c577, Offset: 0x23b8
 // Size: 0x62
@@ -286,7 +286,7 @@ function function_fd89a017(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread postfx::stoppostfxbundle();
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0x3713ea3e, Offset: 0x2428
 // Size: 0x7a
@@ -298,7 +298,7 @@ function function_85392f32(localclientnum, oldval, newval, bnewent, binitialsnap
     self stoprumble(localclientnum, "cp_blackstation_zipline_loop_rumble");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 1, eflags: 0x0
 // Checksum 0x33b690a8, Offset: 0x24b0
 // Size: 0x75
@@ -317,7 +317,7 @@ function function_71f88fc(n_index) {
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0x31453ce0, Offset: 0x2530
 // Size: 0x192
@@ -326,27 +326,27 @@ function function_42998a0f(localclientnum, oldval, newval, bnewent, binitialsnap
         switch (newval) {
         case 1:
             str_fx = "rain_light_se";
-            self thread function_5c196beb(localclientnum, str_fx);
+            self thread player_rain(localclientnum, str_fx);
             break;
         case 2:
             str_fx = "rain_med_se";
-            self thread function_5c196beb(localclientnum, str_fx);
+            self thread player_rain(localclientnum, str_fx);
             break;
         case 3:
             str_fx = "rain_drench_se";
-            self thread function_5c196beb(localclientnum, str_fx);
+            self thread player_rain(localclientnum, str_fx);
             break;
         case 4:
             str_fx = "rain_light_ne";
-            self thread function_5c196beb(localclientnum, str_fx);
+            self thread player_rain(localclientnum, str_fx);
             break;
         case 5:
             str_fx = "rain_med_ne";
-            self thread function_5c196beb(localclientnum, str_fx);
+            self thread player_rain(localclientnum, str_fx);
             break;
         case 6:
             str_fx = "rain_drench_ne";
-            self thread function_5c196beb(localclientnum, str_fx);
+            self thread player_rain(localclientnum, str_fx);
             break;
         }
         return;
@@ -359,11 +359,11 @@ function function_42998a0f(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0x92cb6a18, Offset: 0x26d0
 // Size: 0xfa
-function function_5c196beb(localclientnum, str_fx) {
+function player_rain(localclientnum, str_fx) {
     if (isdefined(self.var_88aec2ed)) {
         stopfx(localclientnum, self.var_88aec2ed);
     }
@@ -377,7 +377,7 @@ function function_5c196beb(localclientnum, str_fx) {
     self.var_88aec2ed = playfxontag(localclientnum, level._effect[str_fx], self.e_link, "tag_origin");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0xfa1fc981, Offset: 0x27d8
 // Size: 0x6a
@@ -388,7 +388,7 @@ function function_59e9894a(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0x36166892, Offset: 0x2850
 // Size: 0x6a
@@ -399,7 +399,7 @@ function function_db90ecbe(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0x8f23da72, Offset: 0x28c8
 // Size: 0x52
@@ -409,7 +409,7 @@ function function_33d0325b(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0x63b86f6b, Offset: 0x2928
 // Size: 0xea
@@ -419,13 +419,13 @@ function function_e722258b(localclientnum, oldval, newval, bnewent, binitialsnap
     if (!isdefined(e_player) || newval != e_player getentitynumber() + 1) {
         return;
     }
-    assert(isdefined(self), "zipline_rumble_loop");
+    assert(isdefined(self), "<dev string:x28>");
     level flagsys::wait_till("duplicaterender_registry_ready");
-    assert(isdefined(self), "objective_qzone");
+    assert(isdefined(self), "<dev string:x4e>");
     self duplicate_render::change_dr_flags(localclientnum, "keyline_active_red", "keyfill_active_red");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0x47da98e3, Offset: 0x2a20
 // Size: 0xb5
@@ -444,7 +444,7 @@ function function_ec1c5731(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0x1248d3ab, Offset: 0x2ae0
 // Size: 0x91
@@ -463,11 +463,11 @@ function function_218d833() {
                 var_416478aa = 1;
             }
         }
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0x504562cc, Offset: 0x2b80
 // Size: 0x81
@@ -485,11 +485,11 @@ function function_176dacb() {
                 var_416478aa = 0;
             }
         }
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 1, eflags: 0x0
 // Checksum 0x121e0cac, Offset: 0x2c10
 // Size: 0x1a
@@ -497,7 +497,7 @@ function on_player_spawned(localclientnum) {
     filter::function_5c4aeccd(self);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0x2acc08c7, Offset: 0x2c38
 // Size: 0x7a
@@ -509,7 +509,7 @@ function function_982d4d35(localclientnum, oldval, newval, bnewent, binitialsnap
     self stopallloopsounds(0.5);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0xf5c9ea8f, Offset: 0x2cc0
 // Size: 0x7a
@@ -521,7 +521,7 @@ function function_989f7c26(localclientnum, oldval, newval, bnewent, binitialsnap
     self stoprumble(localclientnum, "tank_rumble");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0xcf4a1164, Offset: 0x2d48
 // Size: 0x2fa
@@ -545,7 +545,7 @@ function function_673254cc() {
     skipto::add("objective_end_igc", &function_6a18d1d4);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0x863110e4, Offset: 0x3050
 // Size: 0x7a
@@ -557,7 +557,7 @@ function function_a796eb5e(str_objective, var_74cd64bc) {
     level scene::init("p7_fxanim_cp_blackstation_qzone_ground_debris_bundle");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0xd51dd2dc, Offset: 0x30d8
 // Size: 0x2a
@@ -565,7 +565,7 @@ function function_40b9b738(str_objective, var_74cd64bc) {
     level thread scene::play("p7_fxanim_gp_lamp_hanging_sin_lamppost_02_bundle");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0x67d55c9b, Offset: 0x3110
 // Size: 0x82
@@ -579,7 +579,7 @@ function function_39bffbde(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0xb32bc059, Offset: 0x31a0
 // Size: 0x5a
@@ -591,7 +591,7 @@ function function_bb306d90(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0x892de496, Offset: 0x3208
 // Size: 0x6a
@@ -604,7 +604,7 @@ function function_4c07b70a(str_objective, var_74cd64bc) {
     level thread function_3802e537();
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0x11ffb354, Offset: 0x3280
 // Size: 0x7a
@@ -618,7 +618,7 @@ function function_3cf0ef2b(str_objective, var_74cd64bc) {
     level thread function_d2829c38();
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0x8e272c83, Offset: 0x3308
 // Size: 0xba
@@ -634,7 +634,7 @@ function function_f5ac779c(str_objective, var_74cd64bc) {
     level thread function_f8ff4031();
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0x2abd587b, Offset: 0x33d0
 // Size: 0x1aa
@@ -658,7 +658,7 @@ function function_3aec2(str_objective, var_74cd64bc) {
     level thread scene::stop("p7_fxanim_cp_blackstation_anchor_beginning_idle_04_bundle", 1);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0xc8574a73, Offset: 0x3588
 // Size: 0x7a
@@ -672,7 +672,7 @@ function function_def9d38e(str_objective, var_74cd64bc) {
     level thread function_1bbce270();
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0xf18f389b, Offset: 0x3610
 // Size: 0xa2
@@ -688,7 +688,7 @@ function function_68e5c597(str_objective, var_74cd64bc) {
     level thread function_6f3570de();
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0x53cd12cf, Offset: 0x36c0
 // Size: 0x1aa
@@ -712,7 +712,7 @@ function function_d78cf96d(str_objective, var_74cd64bc) {
     level thread scene::stop("p7_fxanim_cp_blackstation_pier_container_bundle", 1);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0x3992a39d, Offset: 0x3878
 // Size: 0x5a
@@ -724,7 +724,7 @@ function function_ec466e32(str_objective, var_74cd64bc) {
     setwavewaterenabled("port_water", 0);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0x22da2e9b, Offset: 0x38e0
 // Size: 0x72
@@ -737,7 +737,7 @@ function function_f3a694a6(str_objective, var_74cd64bc) {
     level thread scene::play("p7_fxanim_gp_rope_scaffold_01_bundle");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0xd2d3e171, Offset: 0x3960
 // Size: 0x4a
@@ -748,7 +748,7 @@ function function_4fbcb062(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0xf6069c2e, Offset: 0x39b8
 // Size: 0x9a
@@ -761,7 +761,7 @@ function function_d96d8db5(str_objective, var_74cd64bc) {
     level thread scene::play("p7_fxanim_gp_rope_scaffold_01_bundle");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0x236d9fe6, Offset: 0x3a60
 // Size: 0x4a
@@ -772,7 +772,7 @@ function function_4cdd3a9a(str_objective, var_74cd64bc) {
     setwavewaterenabled("frogger_water", 1);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0xf84ec328, Offset: 0x3ab8
 // Size: 0x4a
@@ -783,7 +783,7 @@ function function_9ba92728(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0xeb1665f7, Offset: 0x3b10
 // Size: 0x4a
@@ -794,7 +794,7 @@ function function_f3ba72a4(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0x54401d8a, Offset: 0x3b68
 // Size: 0x2a
@@ -802,7 +802,7 @@ function function_4d38ae0f(str_objective, var_74cd64bc) {
     level thread scene::stop("p7_fxanim_gp_rope_scaffold_01_bundle", 1);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0x93928ae9, Offset: 0x3ba0
 // Size: 0x112
@@ -822,7 +822,7 @@ function function_112a3f23(str_objective, var_74cd64bc) {
     level thread scene::stop("p7_fxanim_cp_blackstation_river_debris02_bundle", 1);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0x9c47aad3, Offset: 0x3cc0
 // Size: 0x4a
@@ -833,43 +833,43 @@ function function_6a18d1d4(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0xa5c48294, Offset: 0x3d18
 // Size: 0x6a
 function function_9570c674() {
     level thread scene::play("p7_fxanim_cp_blackstation_medical_divider_01_s5_bundle");
     level thread scene::play("p7_fxanim_cp_blackstation_medical_divider_02_s5_bundle");
-    wait(0.016);
+    wait 0.016;
     level thread scene::play("p7_fxanim_gp_trash_cardboard_box_04_bundle");
     level thread scene::play("p7_fxanim_gp_trash_cardboard_box_03_bundle");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0x6dea57bc, Offset: 0x3d90
 // Size: 0x11a
 function function_42c55e18() {
     level thread scene::init("p7_fxanim_cp_blackstation_tents_military_end_l_bundle");
-    wait(0.016);
+    wait 0.016;
     level thread scene::init("p7_fxanim_cp_blackstation_tents_military_end_l_dbl_bundle");
-    wait(0.016);
+    wait 0.016;
     level thread scene::init("p7_fxanim_cp_blackstation_tents_military_end_r_bundle");
-    wait(0.016);
+    wait 0.016;
     level thread scene::init("p7_fxanim_cp_blackstation_tents_military_end_r_dbl_bundle");
-    wait(0.016);
+    wait 0.016;
     level thread scene::init("p7_fxanim_cp_blackstation_tents_military_end_r_open_bundle");
-    wait(0.016);
+    wait 0.016;
     level thread scene::init("p7_fxanim_cp_blackstation_tents_military_end_side_dbl_bundle");
-    wait(0.016);
+    wait 0.016;
     level thread scene::init("p7_fxanim_cp_blackstation_tents_white_military_end_l_bundle");
-    wait(0.016);
+    wait 0.016;
     level thread scene::init("p7_fxanim_cp_blackstation_tents_white_military_end_r_bundle");
-    wait(0.016);
+    wait 0.016;
     level thread scene::init("p7_fxanim_cp_blackstation_tents_white_military_end_side_dbl_bundle");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0xfb93ce4a, Offset: 0x3eb8
 // Size: 0x4a
@@ -879,21 +879,21 @@ function function_d2829c38() {
     level thread scene::play("p7_fxanim_gp_floating_buoy_03_upright_fast_bundle");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0x50c57708, Offset: 0x3f10
 // Size: 0x7a
 function function_3802e537() {
     level thread scene::play("p7_fxanim_cp_blackstation_anchor_beginning_idle_01_bundle");
-    wait(0.016);
+    wait 0.016;
     level thread scene::play("p7_fxanim_cp_blackstation_anchor_beginning_idle_02_bundle");
-    wait(0.016);
+    wait 0.016;
     level thread scene::play("p7_fxanim_cp_blackstation_anchor_beginning_idle_03_bundle");
-    wait(0.016);
+    wait 0.016;
     level thread scene::play("p7_fxanim_cp_blackstation_anchor_beginning_idle_04_bundle");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0xad29fed9, Offset: 0x3f98
 // Size: 0x32
@@ -902,7 +902,7 @@ function function_5005007a() {
     level thread scene::play("p7_fxanim_gp_wire_sparking_med_thick_bundle");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0xb65c36d7, Offset: 0x3fd8
 // Size: 0x32
@@ -911,7 +911,7 @@ function function_96838a27() {
     level thread scene::play("p7_fxanim_cp_blackstation_river_debris02_bundle");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0x494f8b53, Offset: 0x4018
 // Size: 0x1a
@@ -919,7 +919,7 @@ function function_13a8d1c5() {
     level thread scene::play("blackstation_exterior_shutters");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0x16817572, Offset: 0x4040
 // Size: 0xe9
@@ -930,11 +930,11 @@ function function_1bbce270() {
         foreach (s_pulse in var_10ec3c1e) {
             physicsexplosionsphere(0, s_pulse.origin, 400, 0, 0.01, 0, 0, 0, 1);
         }
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0x9338d16b, Offset: 0x4138
 // Size: 0xca
@@ -954,7 +954,7 @@ function function_ffa95b91(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread function_26d7266e(localclientnum);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 2, eflags: 0x0
 // Checksum 0x1b852182, Offset: 0x4210
 // Size: 0x52
@@ -964,7 +964,7 @@ function function_fbc6b3e8(localclientnum, str_fx) {
     self thread function_82b37a9c(localclientnum);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 1, eflags: 0x0
 // Checksum 0xd7e2c4b0, Offset: 0x4270
 // Size: 0x33
@@ -975,7 +975,7 @@ function function_26d7266e(localclientnum) {
     self notify(#"hash_944ec624");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 1, eflags: 0x0
 // Checksum 0x474900f6, Offset: 0x42b0
 // Size: 0x32
@@ -985,7 +985,7 @@ function function_82b37a9c(localclientnum) {
     self function_26d7266e(localclientnum);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0xba0a10fc, Offset: 0x42f0
 // Size: 0x6a
@@ -997,11 +997,11 @@ function function_c170b293(localclientnum, oldval, newval, bnewent, binitialsnap
     exploder::stop_exploder("subway_underwater_volumetric");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0x998db71b, Offset: 0x4368
 // Size: 0x6a
-function function_adfd4203(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function subway_entrance_crash(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         exploder::exploder("subway_entrance_crash");
         return;
@@ -1009,7 +1009,7 @@ function function_adfd4203(localclientnum, oldval, newval, bnewent, binitialsnap
     exploder::stop_exploder("subway_entrance_crash");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0xa58cf8c9, Offset: 0x43e0
 // Size: 0x32
@@ -1018,11 +1018,11 @@ function function_6f3570de() {
     level scene::play("p7_fxanim_cp_blackstation_tanker_building_smash_bundle");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0xf6efb58d, Offset: 0x4420
 // Size: 0x10e
-function function_f354307b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function water_disturbance(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (!isdefined(self.var_2e7c1306)) {
         str_tag = "wave_trigger_jnt";
         self.var_2e7c1306 = util::spawn_model(localclientnum, "tag_origin", self gettagorigin(str_tag), self gettagangles(str_tag));
@@ -1036,7 +1036,7 @@ function function_f354307b(localclientnum, oldval, newval, bnewent, binitialsnap
     self.var_2e7c1306.waterdisturbance = 0;
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0x1e8ccc3b, Offset: 0x4538
 // Size: 0x62
@@ -1044,7 +1044,7 @@ function function_fedbe3ab(localclientnum, oldval, newval, bnewent, binitialsnap
     playfxontag(localclientnum, level._effect["water_spash_lrg"], self, "tag_origin");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 1, eflags: 0x0
 // Checksum 0x3fb0f6d4, Offset: 0x45a8
 // Size: 0x52
@@ -1052,7 +1052,7 @@ function function_a3efe3eb(a_ents) {
     a_ents["boat_room_glass"] siegecmd("set_anim", "p7_fxanim_cp_blackstation_boatroom_glass_sanim", "set_shot", "default", "pause", "goto_end");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0x9d87803e, Offset: 0x4608
 // Size: 0x3d3
@@ -1132,11 +1132,11 @@ function function_f8ff4031() {
     var_179127c2[var_179127c2.size] = "p7_fxanim_cp_blackstation_pier_container_bundle";
     foreach (str_bundle in var_179127c2) {
         level thread scene::play(str_bundle);
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0x771968a, Offset: 0x49e8
 // Size: 0x72
@@ -1148,7 +1148,7 @@ function function_5d2e29ca(localclientnum, oldval, newval, bnewent, binitialsnap
     setdvar("phys_buoyancy", 0);
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0x18b4283f, Offset: 0x4a68
 // Size: 0x52
@@ -1156,11 +1156,11 @@ function function_dadc58c3(localclientnum, oldval, newval, bnewent, binitialsnap
     level scene::play("p7_fxanim_cp_blackstation_qzone_ground_debris_bundle");
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0xfd4a2ff4, Offset: 0x4ac8
 // Size: 0x72
-function function_65582e9e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function toggle_water_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self notify(#"underwaterwatchbegin");
         self notify(#"underwaterwatchend");
@@ -1170,7 +1170,7 @@ function function_65582e9e(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread water_surface::underwaterwatchend();
 }
 
-// Namespace namespace_502339f3
+// Namespace cp_mi_sing_blackstation
 // Params 7, eflags: 0x0
 // Checksum 0xc2f407fe, Offset: 0x4b48
 // Size: 0x9a

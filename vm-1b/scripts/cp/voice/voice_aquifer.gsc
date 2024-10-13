@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_b9b93cab;
+#namespace voice_aquifer;
 
-// Namespace namespace_b9b93cab
+// Namespace voice_aquifer
 // Params 0, eflags: 0x0
 // Checksum 0x528f0503, Offset: 0x47d8
 // Size: 0x3162

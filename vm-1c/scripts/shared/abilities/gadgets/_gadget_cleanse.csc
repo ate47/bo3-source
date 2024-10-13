@@ -10,9 +10,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_6b73d11e;
+#namespace _gadget_cleanse;
 
-// Namespace namespace_6b73d11e
+// Namespace _gadget_cleanse
 // Params 0, eflags: 0x2
 // Checksum 0x69ed21a6, Offset: 0x290
 // Size: 0x34
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_cleanse", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_6b73d11e
+// Namespace _gadget_cleanse
 // Params 0, eflags: 0x1 linked
 // Checksum 0x38dbf947, Offset: 0x2d0
 // Size: 0x7c
@@ -29,7 +29,7 @@ function __init__() {
     duplicate_render::set_dr_filter_offscreen("cleanse_pl", 50, "cleanse_player", undefined, 2, "mc/hud_outline_model_z_green");
 }
 
-// Namespace namespace_6b73d11e
+// Namespace _gadget_cleanse
 // Params 7, eflags: 0x1 linked
 // Checksum 0x144bab3b, Offset: 0x358
 // Size: 0x6c

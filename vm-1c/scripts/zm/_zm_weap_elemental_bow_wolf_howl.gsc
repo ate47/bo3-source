@@ -20,9 +20,9 @@
 #using scripts/shared/ai/zombie_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_d37f1c72;
+#namespace _zm_weap_elemental_bow_wolf_howl;
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 0, eflags: 0x2
 // Checksum 0x9f8a924c, Offset: 0x538
 // Size: 0x3c
@@ -30,7 +30,7 @@ function autoexec function_2dc19561() {
     system::register("_zm_weap_elemental_bow_wolf_howl", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe30d834c, Offset: 0x580
 // Size: 0x24c
@@ -50,7 +50,7 @@ function __init__() {
     zm_spawner::register_zombie_damage_callback(&function_5fded2aa);
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x7d8
 // Size: 0x4
@@ -58,7 +58,7 @@ function __main__() {
     
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcd829a50, Offset: 0x7e8
 // Size: 0xe4
@@ -76,7 +76,7 @@ function function_b1b2ffc8() {
     function_71ad33d4();
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 2, eflags: 0x1 linked
 // Checksum 0x379c3abe, Offset: 0x8d8
 // Size: 0xa4
@@ -88,7 +88,7 @@ function function_9b74f1f4(projectile, weapon) {
     }
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 5, eflags: 0x1 linked
 // Checksum 0xea519a23, Offset: 0x988
 // Size: 0x74
@@ -98,7 +98,7 @@ function function_dd4f7cba(weapon, position, radius, attacker, normal) {
     }
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1bd750ad, Offset: 0xa08
 // Size: 0x3c
@@ -108,7 +108,7 @@ function function_f9c890ed() {
     self delete();
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9e37d88c, Offset: 0xa50
 // Size: 0x19c
@@ -128,7 +128,7 @@ function function_27bcaea1(var_307bab92) {
     function_a2209df2(self, var_307bab92, var_c807e383, v_up, 1);
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 6, eflags: 0x1 linked
 // Checksum 0x18c161fd, Offset: 0xbf8
 // Size: 0x3fc
@@ -183,7 +183,7 @@ function function_a2209df2(e_player, var_307bab92, var_c807e383, v_up, var_5c447
     }
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa1269aaf, Offset: 0x1000
 // Size: 0x1d6
@@ -205,7 +205,7 @@ function function_71ad33d4() {
     }
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 4, eflags: 0x1 linked
 // Checksum 0x14ecd4e4, Offset: 0x11e0
 // Size: 0x276
@@ -241,14 +241,14 @@ function function_4f87899e(var_307bab92, var_c807e383, v_up, var_5c44718b) {
     return undefined;
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 3, eflags: 0x1 linked
 // Checksum 0x28bc6429, Offset: 0x1460
 // Size: 0x5c8
 function function_2abb74b7(e_player, var_8f0f462c, var_c807e383) {
     var_28388a90 = var_8f0f462c[0];
     var_28388a90 endon(#"movedone");
-    var_28388a90 endon(#"hash_b850f1f5");
+    var_28388a90 endon(#"mechz_impact");
     var_7839cab3 = 409600;
     var_a90ad319 = vectortoangles(var_c807e383);
     var_200ee8c9 = 1920 * 0.1 * 2;
@@ -302,11 +302,11 @@ function function_2abb74b7(e_player, var_8f0f462c, var_c807e383) {
                 ai_enemy thread function_720f6454(var_32769d76);
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2c28ca6c, Offset: 0x1a30
 // Size: 0x30
@@ -314,7 +314,7 @@ function function_e02cfeee(ai_enemy) {
     return !(isdefined(ai_enemy.var_a4557598) && ai_enemy.var_a4557598);
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 3, eflags: 0x1 linked
 // Checksum 0xa0b9d275, Offset: 0x1a68
 // Size: 0x15c
@@ -325,7 +325,7 @@ function function_3af108ec(e_player, ai_enemy, v_launch) {
         ai_enemy startragdoll();
         ai_enemy launchragdoll(90 * v_launch + (0, 0, randomfloatrange(var_f5cc78c2, var_a5211278)));
         ai_enemy thread function_49dba034();
-        wait(0.1);
+        wait 0.1;
         ai_enemy clientfield::set("zombie_hit_by_wolf_howl_charge", 1);
     }
     ai_enemy dodamage(ai_enemy.health, ai_enemy.origin, e_player, e_player, undefined, "MOD_UNKNOWN", 0, level.var_30611368);
@@ -333,19 +333,19 @@ function function_3af108ec(e_player, ai_enemy, v_launch) {
     ai_enemy.var_98056717 = 0;
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbaef14ce, Offset: 0x1bd0
 // Size: 0x64
 function function_49dba034() {
     self endon(#"actor_corpse");
     self thread function_7f218268();
-    wait(0.7 + randomfloat(0.5));
+    wait 0.7 + randomfloat(0.5);
     self notify(#"hash_251ee66c");
     self thread do_zombie_explode();
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6dd377bd, Offset: 0x1c40
 // Size: 0x3c
@@ -355,7 +355,7 @@ function function_7f218268() {
     e_corpse thread do_zombie_explode();
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4ddf7999, Offset: 0x1c88
 // Size: 0x7c
@@ -366,7 +366,7 @@ function do_zombie_explode() {
     self util::delay(0.25, undefined, &zm_utility::self_delete);
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 1, eflags: 0x1 linked
 // Checksum 0xcc030d25, Offset: 0x1d10
 // Size: 0xf0
@@ -382,17 +382,17 @@ function function_720f6454(var_63f884ec) {
     if (n_damage > 0) {
         self thread namespace_790026d5::function_d1e69389(var_63f884ec);
         self dodamage(n_damage, self.origin, self, self, undefined, "MOD_UNKNOWN", 0, level.var_30611368);
-        wait(2.5);
+        wait 2.5;
         self.var_a4557598 = 0;
     }
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 3, eflags: 0x1 linked
 // Checksum 0x461ae8e7, Offset: 0x1e08
 // Size: 0x184
 function function_cd61021a(e_player, var_99c3dd59, var_28388a90) {
-    wait(0.1);
+    wait 0.1;
     if (isdefined(var_99c3dd59) && isalive(var_99c3dd59)) {
         var_3bb42832 = level.var_53cc405d;
         if (isdefined(level.var_f4dc2834)) {
@@ -402,13 +402,13 @@ function function_cd61021a(e_player, var_99c3dd59, var_28388a90) {
         var_99c3dd59 dodamage(n_damage, var_99c3dd59 getcentroid(), e_player, e_player, undefined, "MOD_PROJECTILE_SPLASH", 0, level.var_30611368);
         var_e1664ef3 = var_99c3dd59 getcentroid() - anglestoforward(var_28388a90.angles) * 96;
         var_28388a90.origin = var_e1664ef3;
-        wait(0.05);
-        var_28388a90 notify(#"hash_b850f1f5");
+        wait 0.05;
+        var_28388a90 notify(#"mechz_impact");
         var_99c3dd59.var_a4557598 = 0;
     }
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 2, eflags: 0x1 linked
 // Checksum 0x64759f6, Offset: 0x1f98
 // Size: 0x294
@@ -434,7 +434,7 @@ function function_6b3aa15a(v_hit_pos, var_8f0f462c) {
     var_3c5572a7 clientfield::set("elemental_bow_wolf_howl4" + "_arrow_impact_fx", 0);
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 2, eflags: 0x1 linked
 // Checksum 0xd7af7f8f, Offset: 0x2238
 // Size: 0x64
@@ -446,7 +446,7 @@ function function_cc1bf02e(var_8f0f462c, b_show) {
     array::run_all(var_8f0f462c, &ghost);
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 1, eflags: 0x1 linked
 // Checksum 0xeb3ab9d0, Offset: 0x22a8
 // Size: 0xe8
@@ -455,31 +455,31 @@ function function_a6220124(var_8f0f462c) {
     var_9259c91b = var_8f0f462c[1];
     var_205259e0 = var_8f0f462c[2];
     var_28388a90 endon(#"movedone");
-    var_28388a90 endon(#"hash_b850f1f5");
+    var_28388a90 endon(#"mechz_impact");
     var_28388a90 thread function_81703066(var_9259c91b, 1);
     var_28388a90 thread function_81703066(var_205259e0, -1);
     while (true) {
         var_28388a90 rotateroll(360, 0.6);
-        wait(0.6);
+        wait 0.6;
     }
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 2, eflags: 0x1 linked
 // Checksum 0x7fd53e88, Offset: 0x2398
 // Size: 0xa0
 function function_81703066(var_ea1975a2, var_dad28a75) {
     self endon(#"movedone");
-    self endon(#"hash_b850f1f5");
+    self endon(#"mechz_impact");
     while (true) {
         v_up = anglestoup(self.angles);
         v_offset = v_up * 24 * var_dad28a75;
         var_ea1975a2.origin = self.origin + v_offset;
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 2, eflags: 0x1 linked
 // Checksum 0x44dddb0c, Offset: 0x2440
 // Size: 0xfc
@@ -496,7 +496,7 @@ function function_b7d621a1(e_player, var_8f0f462c) {
     var_205259e0 clientfield::set("wolf_howl_arrow_charged_spiral", 1);
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 13, eflags: 0x1 linked
 // Checksum 0x97edc913, Offset: 0x2548
 // Size: 0x132
@@ -511,7 +511,7 @@ function function_5fded2aa(mod, hit_location, var_8a2b6fe5, e_player, amount, we
     return 0;
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 4, eflags: 0x1 linked
 // Checksum 0x96e4a222, Offset: 0x2688
 // Size: 0x3a4
@@ -544,10 +544,10 @@ function function_88bf0c4e(e_player, n_damage, var_7c5a4ee4, weapon) {
         self.var_ec71e17a = var_55e8a42 < self.var_ec71e17a ? var_55e8a42 : self.var_ec71e17a;
         self asmsetanimationrate(self.var_ec71e17a);
         n_timer += 0.1;
-        wait(0.1);
+        wait 0.1;
     }
     self asmsetanimationrate(0.7);
-    wait(4);
+    wait 4;
     n_timer = 0;
     self.var_ec71e17a = 0.73;
     while (self.var_ec71e17a < 1) {
@@ -557,14 +557,14 @@ function function_88bf0c4e(e_player, n_damage, var_7c5a4ee4, weapon) {
         }
         self asmsetanimationrate(self.var_ec71e17a);
         n_timer += 0.1;
-        wait(0.1);
+        wait 0.1;
     }
     self clientfield::set("wolf_howl_slow_snow_fx", 0);
     self.var_ec71e17a = 1;
     self asmsetanimationrate(1);
 }
 
-// Namespace namespace_d37f1c72
+// Namespace _zm_weap_elemental_bow_wolf_howl
 // Params 0, eflags: 0x1 linked
 // Checksum 0x91ccfba6, Offset: 0x2a38
 // Size: 0x34

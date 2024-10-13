@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_ec2cabcf;
+#namespace voice_blackstation;
 
-// Namespace namespace_ec2cabcf
+// Namespace voice_blackstation
 // Params 0, eflags: 0x0
 // Checksum 0x540e2f6f, Offset: 0x3108
 // Size: 0x2082

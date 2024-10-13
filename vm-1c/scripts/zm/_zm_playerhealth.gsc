@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_2547ab20;
+#namespace zm_playerhealth;
 
-// Namespace namespace_2547ab20
+// Namespace zm_playerhealth
 // Params 0, eflags: 0x2
 // Checksum 0x31e42b91, Offset: 0x2e8
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("zm_playerhealth", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_2547ab20
+// Namespace zm_playerhealth
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1e9db964, Offset: 0x328
 // Size: 0x33c
@@ -53,7 +53,7 @@ function __init__() {
         break;
     }
     /#
-        print("GAMESKILL_EASY" + level.gameskill);
+        print("<dev string:x28>" + level.gameskill);
     #/
     level.player_deathinvulnerabletime = 1700;
     level.longregentime = 5000;
@@ -70,17 +70,17 @@ function __init__() {
     visionset_mgr::register_info("overlay", "zm_health_blur", 1, level.var_2f04d4bd, 1, 1, &visionset_mgr::ramp_in_out_thread_per_player, 1);
 }
 
-// Namespace namespace_2547ab20
+// Namespace zm_playerhealth
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc7762652, Offset: 0x670
 // Size: 0x44
 function on_player_spawned() {
     self zm_perks::function_78f42790("health_reboot", 1, 0);
-    self notify(#"hash_a5d08426");
+    self notify(#"noHealthOverlay");
     self thread playerhealthregen();
 }
 
-// Namespace namespace_2547ab20
+// Namespace zm_playerhealth
 // Params 0, eflags: 0x0
 // Checksum 0xb14fa474, Offset: 0x6c0
 // Size: 0x54
@@ -89,12 +89,12 @@ function function_8f07d3ea() {
     visionset_mgr::activate("overlay", "zm_health_blur", self, 0, 1, 1);
 }
 
-// Namespace namespace_2547ab20
+// Namespace zm_playerhealth
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8af64608, Offset: 0x720
 // Size: 0xcc
 function function_fabc32f() {
-    self endon(#"hash_a5d08426");
+    self endon(#"noHealthOverlay");
     self.var_1428596a = 0;
     for (;;) {
         amount, attacker, dir, point, mod = self waittill(#"damage");
@@ -107,7 +107,7 @@ function function_fabc32f() {
     }
 }
 
-// Namespace namespace_2547ab20
+// Namespace zm_playerhealth
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8d589359, Offset: 0x7f8
 // Size: 0x730
@@ -146,7 +146,7 @@ function playerhealthregen() {
     }
     var_a43f2f3 = getdvarfloat("scr_playerInvulTimeScale");
     for (;;) {
-        wait(0.05);
+        wait 0.05;
         waittillframeend();
         if (self.health == self.maxhealth) {
             if (self flag::get("player_has_red_flashing_overlay")) {
@@ -218,7 +218,7 @@ function playerhealthregen() {
                     level.var_6ab88489 = 0;
                 }
                 if (level.var_6ab88489 < gettime()) {
-                    level.var_6ab88489 = gettime() + getdvarint("GAMESKILL_EASY");
+                    level.var_6ab88489 = gettime() + getdvarint("<dev string:x35>");
                 }
             #/
         }
@@ -255,7 +255,7 @@ function playerhealthregen() {
     }
 }
 
-// Namespace namespace_2547ab20
+// Namespace zm_playerhealth
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7c3c6426, Offset: 0xf30
 // Size: 0x6c
@@ -266,18 +266,18 @@ function function_bd76f2fc(timer) {
         /#
             level.var_76f0070e = gettime() + timer * 1000;
         #/
-        wait(timer);
+        wait timer;
     }
     self flag::clear("player_is_invulnerable");
 }
 
-// Namespace namespace_2547ab20
+// Namespace zm_playerhealth
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5bb3085f, Offset: 0xfa8
 // Size: 0x1e0
 function healthoverlay() {
     self endon(#"disconnect");
-    self endon(#"hash_a5d08426");
+    self endon(#"noHealthOverlay");
     if (!isdefined(self.var_90f9d92b)) {
         self.var_90f9d92b = newclienthudelem(self);
         self.var_90f9d92b.x = 0;
@@ -303,7 +303,7 @@ function healthoverlay() {
     }
 }
 
-// Namespace namespace_2547ab20
+// Namespace zm_playerhealth
 // Params 4, eflags: 0x1 linked
 // Checksum 0x7e454e0b, Offset: 0x1190
 // Size: 0x240
@@ -323,22 +323,22 @@ function function_bbe24e91(overlay, severity, mult, var_7170800d) {
     var_833e5b9c = 0.5 + severity * 0.3;
     overlay fadeovertime(fadeintime);
     overlay.alpha = mult * 1;
-    wait(fadeintime + var_a93d5122);
+    wait fadeintime + var_a93d5122;
     overlay fadeovertime(var_ac705df5);
     overlay.alpha = mult * var_84c9a0be;
-    wait(var_ac705df5);
+    wait var_ac705df5;
     overlay fadeovertime(var_97b1675d);
     overlay.alpha = mult * var_833e5b9c;
-    wait(var_97b1675d);
-    wait(remainingtime);
+    wait var_97b1675d;
+    wait remainingtime;
 }
 
-// Namespace namespace_2547ab20
+// Namespace zm_playerhealth
 // Params 1, eflags: 0x1 linked
 // Checksum 0x58cbcec4, Offset: 0x13d8
 // Size: 0xae
 function function_129bb55f(overlay) {
-    self endon(#"hash_3f7b661c");
+    self endon(#"death_or_disconnect");
     while (isdefined(overlay)) {
         self waittill(#"clear_red_flashing_overlay");
         self clientfield::set_to_player("sndZombieHealth", 0);
@@ -349,7 +349,7 @@ function function_129bb55f(overlay) {
     }
 }
 
-// Namespace namespace_2547ab20
+// Namespace zm_playerhealth
 // Params 1, eflags: 0x1 linked
 // Checksum 0xaa59a084, Offset: 0x1490
 // Size: 0x24a
@@ -376,11 +376,11 @@ function function_131503b4(overlay) {
     overlay.alpha = 0;
     self flag::clear("player_has_red_flashing_overlay");
     self clientfield::set_to_player("sndZombieHealth", 0);
-    wait(0.5);
+    wait 0.5;
     self notify(#"hash_4bd1d9d5");
 }
 
-// Namespace namespace_2547ab20
+// Namespace zm_playerhealth
 // Params 1, eflags: 0x1 linked
 // Checksum 0x15591e96, Offset: 0x16e8
 // Size: 0x6c
@@ -391,7 +391,7 @@ function function_2d8009b8(overlay) {
     overlay.alpha = 0;
 }
 
-// Namespace namespace_2547ab20
+// Namespace zm_playerhealth
 // Params 5, eflags: 0x1 linked
 // Checksum 0xb17f6bcb, Offset: 0x1760
 // Size: 0x2c
@@ -401,7 +401,7 @@ function function_79977f70(type, loc, point, attacker, amount) {
 
 /#
 
-    // Namespace namespace_2547ab20
+    // Namespace zm_playerhealth
     // Params 2, eflags: 0x1 linked
     // Checksum 0x59f3e9d, Offset: 0x1798
     // Size: 0x18
@@ -409,7 +409,7 @@ function function_79977f70(type, loc, point, attacker, amount) {
         
     }
 
-    // Namespace namespace_2547ab20
+    // Namespace zm_playerhealth
     // Params 1, eflags: 0x1 linked
     // Checksum 0x1acf3c81, Offset: 0x17b8
     // Size: 0x10
@@ -417,7 +417,7 @@ function function_79977f70(type, loc, point, attacker, amount) {
         
     }
 
-    // Namespace namespace_2547ab20
+    // Namespace zm_playerhealth
     // Params 0, eflags: 0x1 linked
     // Checksum 0x1c49d3a3, Offset: 0x17d0
     // Size: 0x8
@@ -425,35 +425,35 @@ function function_79977f70(type, loc, point, attacker, amount) {
         
     }
 
-    // Namespace namespace_2547ab20
+    // Namespace zm_playerhealth
     // Params 0, eflags: 0x1 linked
     // Checksum 0x13442feb, Offset: 0x17e0
     // Size: 0x110
     function function_610dfe1() {
-        if (getdvarstring("GAMESKILL_EASY") == "GAMESKILL_EASY") {
-            setdvar("GAMESKILL_EASY", "GAMESKILL_EASY");
+        if (getdvarstring("<dev string:x52>") == "<dev string:x63>") {
+            setdvar("<dev string:x52>", "<dev string:x64>");
         }
         waittillframeend();
         while (true) {
             while (true) {
-                if (getdvarstring("GAMESKILL_EASY") != "GAMESKILL_EASY") {
+                if (getdvarstring("<dev string:x52>") != "<dev string:x64>") {
                     break;
                 }
-                wait(0.5);
+                wait 0.5;
             }
             thread function_6227a919();
             while (true) {
-                if (getdvarstring("GAMESKILL_EASY") == "GAMESKILL_EASY") {
+                if (getdvarstring("<dev string:x52>") == "<dev string:x64>") {
                     break;
                 }
-                wait(0.5);
+                wait 0.5;
             }
             level notify(#"hash_31415269");
             function_b75a45fc();
         }
     }
 
-    // Namespace namespace_2547ab20
+    // Namespace zm_playerhealth
     // Params 0, eflags: 0x1 linked
     // Checksum 0x28e276b8, Offset: 0x18f8
     // Size: 0x66e
@@ -463,9 +463,9 @@ function function_79977f70(type, loc, point, attacker, amount) {
         x = 40;
         y = 40;
         level.var_7e842153 = [];
-        level.var_fbe7c2fe[0] = "GAMESKILL_EASY";
-        level.var_fbe7c2fe[1] = "GAMESKILL_EASY";
-        level.var_fbe7c2fe[2] = "GAMESKILL_EASY";
+        level.var_fbe7c2fe[0] = "<dev string:x66>";
+        level.var_fbe7c2fe[1] = "<dev string:x6d>";
+        level.var_fbe7c2fe[2] = "<dev string:x79>";
         if (!isdefined(level.var_76f0070e)) {
             level.var_76f0070e = 0;
         }
@@ -477,38 +477,38 @@ function function_79977f70(type, loc, point, attacker, amount) {
             var_31704579 = newhudelem();
             var_31704579.x = x;
             var_31704579.y = y;
-            var_31704579.alignx = "GAMESKILL_EASY";
-            var_31704579.aligny = "GAMESKILL_EASY";
-            var_31704579.horzalign = "GAMESKILL_EASY";
-            var_31704579.vertalign = "GAMESKILL_EASY";
+            var_31704579.alignx = "<dev string:x85>";
+            var_31704579.aligny = "<dev string:x8a>";
+            var_31704579.horzalign = "<dev string:x8e>";
+            var_31704579.vertalign = "<dev string:x8e>";
             var_31704579 settext(key);
             bgbar = newhudelem();
             bgbar.x = x + 79;
             bgbar.y = y + 1;
-            bgbar.alignx = "GAMESKILL_EASY";
-            bgbar.aligny = "GAMESKILL_EASY";
-            bgbar.horzalign = "GAMESKILL_EASY";
-            bgbar.vertalign = "GAMESKILL_EASY";
+            bgbar.alignx = "<dev string:x85>";
+            bgbar.aligny = "<dev string:x8a>";
+            bgbar.horzalign = "<dev string:x8e>";
+            bgbar.vertalign = "<dev string:x8e>";
             bgbar.maxwidth = 3;
-            bgbar setshader("GAMESKILL_EASY", bgbar.maxwidth, 10);
+            bgbar setshader("<dev string:x99>", bgbar.maxwidth, 10);
             bgbar.color = (0.5, 0.5, 0.5);
             bar = newhudelem();
             bar.x = x + 80;
             bar.y = y + 2;
-            bar.alignx = "GAMESKILL_EASY";
-            bar.aligny = "GAMESKILL_EASY";
-            bar.horzalign = "GAMESKILL_EASY";
-            bar.vertalign = "GAMESKILL_EASY";
-            bar setshader("GAMESKILL_EASY", 1, 8);
+            bar.alignx = "<dev string:x85>";
+            bar.aligny = "<dev string:x8a>";
+            bar.horzalign = "<dev string:x8e>";
+            bar.vertalign = "<dev string:x8e>";
+            bar setshader("<dev string:x9f>", 1, 8);
             var_31704579.bar = bar;
             var_31704579.bgbar = bgbar;
             var_31704579.key = key;
             y += 10;
             level.var_7e842153[key] = var_31704579;
         }
-        level flag::wait_till("GAMESKILL_EASY");
+        level flag::wait_till("<dev string:xa5>");
         while (true) {
-            wait(0.05);
+            wait 0.05;
             players = getplayers();
             for (i = 0; i < level.var_fbe7c2fe.size && players.size > 0; i++) {
                 key = level.var_fbe7c2fe[i];
@@ -524,18 +524,18 @@ function function_79977f70(type, loc, point, attacker, amount) {
                 width = int(max(width, 1));
                 width = int(min(width, 300));
                 bar = level.var_7e842153[key].bar;
-                bar setshader("GAMESKILL_EASY", width, 8);
+                bar setshader("<dev string:x9f>", width, 8);
                 bgbar = level.var_7e842153[key].bgbar;
                 if (width + 2 > bgbar.maxwidth) {
                     bgbar.maxwidth = width + 2;
-                    bgbar setshader("GAMESKILL_EASY", bgbar.maxwidth, 10);
+                    bgbar setshader("<dev string:x99>", bgbar.maxwidth, 10);
                     bgbar.color = (0.5, 0.5, 0.5);
                 }
             }
         }
     }
 
-    // Namespace namespace_2547ab20
+    // Namespace zm_playerhealth
     // Params 0, eflags: 0x1 linked
     // Checksum 0x96689f7b, Offset: 0x1f70
     // Size: 0xce

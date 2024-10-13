@@ -9,9 +9,9 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_1958c5da;
+#namespace zm_bgb_impatient;
 
-// Namespace namespace_1958c5da
+// Namespace zm_bgb_impatient
 // Params 0, eflags: 0x2
 // Checksum 0x89f94fb2, Offset: 0x1b0
 // Size: 0x34
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_impatient", &__init__, undefined, "bgb");
 }
 
-// Namespace namespace_1958c5da
+// Namespace zm_bgb_impatient
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf31290cf, Offset: 0x1f0
 // Size: 0x54
@@ -30,7 +30,7 @@ function __init__() {
     bgb::register("zm_bgb_impatient", "event", &event, undefined, undefined, undefined);
 }
 
-// Namespace namespace_1958c5da
+// Namespace zm_bgb_impatient
 // Params 0, eflags: 0x1 linked
 // Checksum 0x47ed6a2e, Offset: 0x250
 // Size: 0x3c
@@ -41,15 +41,15 @@ function event() {
     self thread special_revive();
 }
 
-// Namespace namespace_1958c5da
+// Namespace zm_bgb_impatient
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe0c33368, Offset: 0x298
 // Size: 0x5c
 function special_revive() {
     self endon(#"disconnect");
-    wait(1);
+    wait 1;
     while (level.zombie_total > 0) {
-        wait(0.05);
+        wait 0.05;
     }
     self zm::spectator_respawn_player();
     self bgb::do_one_shot_use();

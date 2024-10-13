@@ -5,15 +5,15 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b4cb0c94;
+#namespace mp_kung_fu;
 
-// Namespace namespace_b4cb0c94
+// Namespace mp_kung_fu
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9f8af208, Offset: 0x1b8
 // Size: 0x8c
 function main() {
-    namespace_9fa744bd::main();
-    namespace_b19eb620::main();
+    mp_kung_fu_fx::main();
+    mp_kung_fu_sound::main();
     level.domflagbasefxoverride = &dom_flag_base_fx_override;
     level.domflagcapfxoverride = &dom_flag_cap_fx_override;
     load::main();
@@ -21,27 +21,27 @@ function main() {
     level.endgamexcamname = "ui_cam_endgame_mp_kung_fu";
 }
 
-// Namespace namespace_b4cb0c94
+// Namespace mp_kung_fu
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa81ae929, Offset: 0x250
 // Size: 0xc2
 function dom_flag_base_fx_override(flag, team) {
     switch (flag.name) {
-    case 4:
+    case "a":
         if (team == "neutral") {
             return "ui/fx_dom_marker_neutral_r120";
         } else {
             return "ui/fx_dom_marker_team_r120";
         }
         break;
-    case 5:
+    case "b":
         if (team == "neutral") {
             return "ui/fx_dom_marker_neutral_r120";
         } else {
             return "ui/fx_dom_marker_team_r120";
         }
         break;
-    case 6:
+    case "c":
         if (team == "neutral") {
             return "ui/fx_dom_marker_neutral_r120";
         } else {
@@ -51,27 +51,27 @@ function dom_flag_base_fx_override(flag, team) {
     }
 }
 
-// Namespace namespace_b4cb0c94
+// Namespace mp_kung_fu
 // Params 2, eflags: 0x1 linked
 // Checksum 0x97715e73, Offset: 0x320
 // Size: 0xc2
 function dom_flag_cap_fx_override(flag, team) {
     switch (flag.name) {
-    case 4:
+    case "a":
         if (team == "neutral") {
             return "ui/fx_dom_cap_indicator_neutral_r120";
         } else {
             return "ui/fx_dom_cap_indicator_team_r120";
         }
         break;
-    case 5:
+    case "b":
         if (team == "neutral") {
             return "ui/fx_dom_cap_indicator_neutral_r120";
         } else {
             return "ui/fx_dom_cap_indicator_team_r120";
         }
         break;
-    case 6:
+    case "c":
         if (team == "neutral") {
             return "ui/fx_dom_cap_indicator_neutral_r120";
         } else {

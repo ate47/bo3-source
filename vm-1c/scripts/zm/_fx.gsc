@@ -13,15 +13,15 @@
     // Checksum 0x692da508, Offset: 0x110
     // Size: 0x184
     function print_org(fxcommand, fxid, fxpos, waittime) {
-        if (getdvarstring("<unknown string>") == "<unknown string>") {
-            println("<unknown string>");
-            println("<unknown string>" + fxpos[0] + "<unknown string>" + fxpos[1] + "<unknown string>" + fxpos[2] + "<unknown string>");
-            println("<unknown string>");
-            println("<unknown string>");
-            println("<unknown string>" + fxcommand + "<unknown string>");
-            println("<unknown string>" + fxid + "<unknown string>");
-            println("<unknown string>" + waittime + "<unknown string>");
-            println("<unknown string>");
+        if (getdvarstring("<dev string:x28>") == "<dev string:x2e>") {
+            println("<dev string:x30>");
+            println("<dev string:x32>" + fxpos[0] + "<dev string:x3d>" + fxpos[1] + "<dev string:x3d>" + fxpos[2] + "<dev string:x3f>");
+            println("<dev string:x41>");
+            println("<dev string:x5c>");
+            println("<dev string:x69>" + fxcommand + "<dev string:x3f>");
+            println("<dev string:x7e>" + fxid + "<dev string:x3f>");
+            println("<dev string:x8e>" + waittime + "<dev string:x3f>");
+            println("<dev string:x9f>");
         }
     }
 
@@ -41,7 +41,7 @@ function gunfireloopfx(fxid, fxpos, shotsmin, shotsmax, shotdelaymin, shotdelaym
 // Size: 0x232
 function gunfireloopfxthread(fxid, fxpos, shotsmin, shotsmax, shotdelaymin, shotdelaymax, betweensetsmin, betweensetsmax) {
     level endon(#"hash_ce9de5d2");
-    wait(0.05);
+    wait 0.05;
     if (betweensetsmax < betweensetsmin) {
         temp = betweensetsmax;
         betweensetsmax = betweensetsmin;
@@ -68,9 +68,9 @@ function gunfireloopfxthread(fxid, fxpos, shotsmin, shotsmax, shotdelaymin, shot
         shotnum = shotsbase + randomint(shotsrange);
         for (i = 0; i < shotnum; i++) {
             triggerfx(fxent);
-            wait(shotdelaybase + randomfloat(shotdelayrange));
+            wait shotdelaybase + randomfloat(shotdelayrange);
         }
-        wait(betweensetsbase + randomfloat(betweensetsrange));
+        wait betweensetsbase + randomfloat(betweensetsrange);
     }
 }
 
@@ -88,7 +88,7 @@ function gunfireloopfxvec(fxid, fxpos, fxpos2, shotsmin, shotsmax, shotdelaymin,
 // Size: 0x2d2
 function gunfireloopfxvecthread(fxid, fxpos, fxpos2, shotsmin, shotsmax, shotdelaymin, shotdelaymax, betweensetsmin, betweensetsmax) {
     level endon(#"hash_ce9de5d2");
-    wait(0.05);
+    wait 0.05;
     if (betweensetsmax < betweensetsmin) {
         temp = betweensetsmax;
         betweensetsmax = betweensetsmin;
@@ -120,10 +120,10 @@ function gunfireloopfxvecthread(fxid, fxpos, fxpos2, shotsmin, shotsmax, shotdel
             if (delay < 0.05) {
                 delay = 0.05;
             }
-            wait(delay);
+            wait delay;
         }
-        wait(shotdelaybase + randomfloat(shotdelayrange));
-        wait(betweensetsbase + randomfloat(betweensetsrange));
+        wait shotdelaybase + randomfloat(shotdelayrange);
+        wait betweensetsbase + randomfloat(betweensetsrange);
     }
 }
 

@@ -33,9 +33,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_36e484c6;
+#namespace dark_battle;
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x6747036a, Offset: 0xf30
 // Size: 0x42
@@ -46,7 +46,7 @@ function function_6feca657() {
     level thread function_82858e32();
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x5f84be28, Offset: 0xf80
 // Size: 0x1a
@@ -54,7 +54,7 @@ function function_e1c5444e() {
     level flag::init("flag_player_fired_early");
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0xa084f2f9, Offset: 0xfa8
 // Size: 0x202
@@ -84,7 +84,7 @@ function function_283b0091() {
     }
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x1c9e8567, Offset: 0x11b8
 // Size: 0x4ba
@@ -119,7 +119,7 @@ function function_82858e32() {
     level thread function_7bd8c5a3();
     battlechatter::function_d9f49fba(0);
     level scene::init("cin_pro_13_01_vtoltackle_vign_takedown");
-    wait(0.05);
+    wait 0.05;
     level.var_5d4087a6 setgoal(getnode("hyperion_dark_battle_final", "targetname"), 1);
     level.var_2fd26037 setgoal(getnode("hendricks_dark_battle_final", "targetname"), 1);
     level.var_2fd26037 waittill(#"goal");
@@ -143,7 +143,7 @@ function function_82858e32() {
     skipto::function_be8adfb8("skipto_dark_battle");
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x70962fe0, Offset: 0x1680
 // Size: 0x1f
@@ -153,7 +153,7 @@ function function_7cd37960() {
     level notify(#"hash_9babf62");
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x5559dc24, Offset: 0x16a8
 // Size: 0x33
@@ -163,7 +163,7 @@ function function_997d6fdc() {
     level notify(#"hash_9babf62");
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0xe6c4ada, Offset: 0x16e8
 // Size: 0x83
@@ -176,7 +176,7 @@ function function_f7eee26d() {
     level notify(#"hash_9babf62");
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 1, eflags: 0x0
 // Checksum 0x91f0f552, Offset: 0x1778
 // Size: 0x2a
@@ -184,7 +184,7 @@ function function_e6296f02(a_ents) {
     array::thread_all(a_ents, &function_dabc0173);
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0xef8ecc63, Offset: 0x17b0
 // Size: 0x7a
@@ -199,7 +199,7 @@ function function_dabc0173() {
     self thread function_ff2c3e0c();
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x85c250e6, Offset: 0x1838
 // Size: 0x15a
@@ -219,12 +219,12 @@ function function_4d2734fa() {
                 break;
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
     function_62e89023(0, 0);
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x3d7c23e6, Offset: 0x19a0
 // Size: 0x152
@@ -239,26 +239,26 @@ function function_4e24163f() {
     var_5c50a8aa moveto(var_ebf82f1, move_time);
     var_181a23a4 waittill(#"movedone");
     level.var_9db406db setgoal(getnode("khalil_dark_battle_final", "targetname"), 1);
-    wait(1);
+    wait 1;
     level.var_4d5a4697 setgoal(getnode("minister_dark_battle_final", "targetname"), 1);
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0xd0d661d6, Offset: 0x1b00
 // Size: 0xca
 function function_b3666179() {
     t_door = getent("t_vtol_tackle_doors", "targetname");
     var_634d0729 = array(level.var_4d5a4697, level.var_2fd26037, level.var_9db406db, level.var_5d4087a6);
-    level thread namespace_2cb3876f::function_21f52196("vtol_tackle_doors", t_door);
-    level thread namespace_2cb3876f::function_2e61b3e8("vtol_tackle_doors", t_door, var_634d0729);
-    while (!namespace_2cb3876f::function_cdd726fb("vtol_tackle_doors")) {
-        wait(0.1);
+    level thread cp_prologue_util::function_21f52196("vtol_tackle_doors", t_door);
+    level thread cp_prologue_util::function_2e61b3e8("vtol_tackle_doors", t_door, var_634d0729);
+    while (!cp_prologue_util::function_cdd726fb("vtol_tackle_doors")) {
+        wait 0.1;
     }
     function_62e89023(0, 0);
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 2, eflags: 0x0
 // Checksum 0x546a1733, Offset: 0x1bd8
 // Size: 0x18d
@@ -290,7 +290,7 @@ function function_62e89023(b_open, var_abf03d83) {
     var_3c301126 waittill(#"movedone");
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0xcb984909, Offset: 0x1d70
 // Size: 0x222
@@ -304,7 +304,7 @@ function function_43d5fd7a() {
     level.var_2fd26037 setgoal(getnode("hendricks_dark_battle_start", "targetname"), 1);
     level.var_5d4087a6 setgoal(getnode("diaz_dark_battle_start", "targetname"), 1);
     util::waittill_multiple_ents(level.var_5d4087a6, "goal", level.var_2fd26037, "goal");
-    wait(1);
+    wait 1;
     level flag::wait_till_any(array("dark_battle_player_upstairs", "flag_player_fired_early"));
     level scene::play("cin_pro_12_01_darkbattle_vign_dive_kill_start");
     level.var_5d4087a6 thread function_619c28d();
@@ -318,20 +318,20 @@ function function_43d5fd7a() {
     level thread function_51caefff();
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x3eb8b683, Offset: 0x1fa0
 // Size: 0x52
 function function_619c28d() {
     level endon(#"hash_a9e3188");
     self dialog::say("mare_remember_they_ain_0");
-    wait(5);
+    wait 5;
     self dialog::say("mare_take_it_slow_pick_0");
-    wait(10);
+    wait 10;
     self dialog::say("mare_use_your_advantage_0");
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0xb5d57a1a, Offset: 0x2000
 // Size: 0x3a
@@ -341,7 +341,7 @@ function function_356b8cd9() {
     level scene::stop("cin_pro_12_01_darkbattle_vign_dive_kill_enemyloop");
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0xf0df407d, Offset: 0x2048
 // Size: 0x16b
@@ -350,21 +350,21 @@ function function_51caefff() {
     var_72069915 = getnode("hyperion_dark_battle_1", "targetname");
     level.var_5d4087a6 setgoal(var_72069915, 1);
     level.var_5d4087a6 waittill(#"goal");
-    wait(5);
+    wait 5;
     var_9809137e = getnode("hyperion_dark_battle_2", "targetname");
     level.var_5d4087a6 setgoal(var_9809137e, 1);
     level.var_5d4087a6 waittill(#"goal");
-    wait(5);
+    wait 5;
     var_be0b8de7 = getnode("hyperion_dark_battle_3", "targetname");
     level.var_5d4087a6 setgoal(var_be0b8de7, 1);
     level.var_5d4087a6 waittill(#"goal");
-    wait(5);
+    wait 5;
     var_b3fa3508 = getnode("hyperion_dark_battle_4", "targetname");
     level.var_5d4087a6 setgoal(var_b3fa3508, 1);
     level.var_5d4087a6 waittill(#"goal");
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x8affaacf, Offset: 0x21c0
 // Size: 0x14b
@@ -376,17 +376,17 @@ function function_312ac345() {
     var_900c9df2 = getnode("hendricks_dark_battle_1", "targetname");
     level.var_2fd26037 setgoal(var_900c9df2, 1);
     level.var_2fd26037 waittill(#"goal");
-    wait(6);
+    wait 6;
     var_6a0a2389 = getnode("hendricks_dark_battle_2", "targetname");
     level.var_2fd26037 setgoal(var_6a0a2389, 1);
     level.var_2fd26037 waittill(#"goal");
-    wait(6);
+    wait 6;
     var_4407a920 = getnode("hendricks_dark_battle_3", "targetname");
     level.var_2fd26037 setgoal(var_4407a920, 1);
     level.var_2fd26037 waittill(#"goal");
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x9a48fdf8, Offset: 0x2318
 // Size: 0x202
@@ -409,12 +409,12 @@ function function_c2326e34() {
     level waittill(#"hash_113f3cd3");
     array::thread_all(level.activeplayers, &oed::function_35ce409, 1);
     level flag::set("ev_enabled");
-    wait(1);
+    wait 1;
     level notify(#"hash_4289520f");
     level thread namespace_21b2c1f2::function_a0f24f9b();
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0xe6cf2af3, Offset: 0x2528
 // Size: 0x122
@@ -434,29 +434,29 @@ function function_edbf19b4() {
     var_280d5f68 connectpaths();
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0xbce60147, Offset: 0x2658
 // Size: 0xca
 function function_7bd8c5a3() {
     level.var_5d4087a6 dialog::say("mare_clear_0", 1);
     level.var_5d4087a6 thread dialog::say("mare_disabling_tactical_f_0", 0.5);
-    wait(1);
+    wait 1;
     array::thread_all(level.players, &oed::function_35ce409, 0);
     level flag::clear("ev_enabled");
-    wait(1);
+    wait 1;
     exploder::exploder("light_exploder_darkbattle");
     level util::clientnotify("sndDBBe");
     level thread namespace_21b2c1f2::function_2a66b344();
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0xd6e18b01, Offset: 0x2730
 // Size: 0x1d7
 function function_fc0859f() {
     level waittill(#"hash_400d768d");
-    wait(0.5);
+    wait 0.5;
     while (spawner::get_ai_group_count("aig_darkroom") > 6) {
         var_7b3a5649 = getaiteamarray("axis");
         var_e248524d = array::get_all_closest(level.players[0].origin, var_7b3a5649, undefined, 4);
@@ -466,7 +466,7 @@ function function_fc0859f() {
                 var_e248524d[i] function_11c60e29(var_1f76714[i]);
             }
         }
-        wait(1);
+        wait 1;
     }
     while (spawner::get_ai_group_count("aig_darkroom") > 1) {
         var_7b3a5649 = getaiteamarray("axis");
@@ -477,23 +477,23 @@ function function_fc0859f() {
                 var_e248524d[i] function_11c60e29(var_1f76714[i]);
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 1, eflags: 0x0
 // Checksum 0x152dc834, Offset: 0x2910
 // Size: 0x57
 function function_11c60e29(s_vo) {
     n_wait_time = randomfloatrange(0.4, 1);
-    wait(n_wait_time);
+    wait n_wait_time;
     if (isalive(self)) {
         self notify(#"hash_2605e152", s_vo);
     }
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x204d7354, Offset: 0x2970
 // Size: 0x92
@@ -505,7 +505,7 @@ function function_a06c6f96() {
     level.var_2fd26037 thread function_2310d9a6();
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0xbd6255d7, Offset: 0x2a10
 // Size: 0x192
@@ -533,11 +533,11 @@ function function_ff2c3e0c() {
         str_anim = "cin_gen_vign_confusion_03";
         break;
     default:
-        assert(0, "mare_take_it_slow_pick_0");
+        assert(0, "<dev string:x28>");
         break;
     }
     delay = randomfloatrange(0.1, 0.5);
-    wait(delay);
+    wait delay;
     self thread scene::play(str_anim, self);
     level waittill(#"hash_307c99bd");
     if (self scene::is_playing(str_anim)) {
@@ -545,7 +545,7 @@ function function_ff2c3e0c() {
     }
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x78cb0bee, Offset: 0x2bb0
 // Size: 0x52
@@ -559,7 +559,7 @@ function function_494e04e8() {
     self.goalradius = 96;
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x97e38563, Offset: 0x2c10
 // Size: 0x41
@@ -569,11 +569,11 @@ function function_e7ad7b2d() {
     while (true) {
         self waittill(#"weapon_fired");
         self thread function_894eda11(1);
-        wait(3);
+        wait 3;
     }
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x6f401fd7, Offset: 0x2c60
 // Size: 0x41
@@ -583,11 +583,11 @@ function function_2310d9a6() {
     while (true) {
         self waittill(#"about_to_fire");
         self thread function_894eda11(0.25);
-        wait(3);
+        wait 3;
     }
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 1, eflags: 0x0
 // Checksum 0xeabfaf71, Offset: 0x2cb0
 // Size: 0xdb
@@ -604,7 +604,7 @@ function function_894eda11(n_chance) {
     }
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 2, eflags: 0x0
 // Checksum 0x22a5c52f, Offset: 0x2d98
 // Size: 0x1c5
@@ -626,7 +626,7 @@ function function_d930bc63(e_target, duration) {
     }
     self setgoal(self.origin, 1);
     self thread ai::shoot_at_target("shoot_until_target_dead", var_a03ca40a, undefined, duration);
-    wait(duration);
+    wait duration;
     self thread ai::stop_shoot_at_target();
     self.var_a1da348d = 0;
     a_nodes = getcovernodearray(self.origin, -64);
@@ -638,7 +638,7 @@ function function_d930bc63(e_target, duration) {
     }
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 2, eflags: 0x0
 // Checksum 0xef8c75d9, Offset: 0x2f68
 // Size: 0x15f
@@ -661,16 +661,16 @@ function move_target(e_target, var_c73fc1db) {
     }
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 1, eflags: 0x0
 // Checksum 0xb79fcfb9, Offset: 0x30d0
 // Size: 0x1a
 function function_8b09dfcd(duration) {
-    wait(duration);
+    wait duration;
     self delete();
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 1, eflags: 0x0
 // Checksum 0x51ee874, Offset: 0x30f8
 // Size: 0x16a
@@ -691,22 +691,22 @@ function function_43fd3f0f(height_offset) {
         duration = 1.5;
         self setgoal(self.origin, 1);
         self ai::shoot_at_target("normal", var_a03ca40a, undefined, duration);
-        wait(duration);
+        wait duration;
         var_a03ca40a delete();
     }
     self.var_a1da348d = 0;
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0xccb3fbc0, Offset: 0x3270
 // Size: 0x52
 function function_25c6144e() {
-    spawner::add_spawn_function_group("vtol_tackle_guy", "script_noteworthy", &namespace_2cb3876f::function_35be2939, "vtol_guards_alerted");
+    spawner::add_spawn_function_group("vtol_tackle_guy", "script_noteworthy", &cp_prologue_util::function_35be2939, "vtol_guards_alerted");
     spawn_manager::enable("vtol_tackle_spwn_mgr2");
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x6480d4bd, Offset: 0x32d0
 // Size: 0x6a
@@ -719,7 +719,7 @@ function function_2909799b() {
     self flag::clear("no_damage_taken");
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0xde84b61e, Offset: 0x3348
 // Size: 0x4a
@@ -730,7 +730,7 @@ function function_4933d21a() {
     }
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x78b98518, Offset: 0x33a0
 // Size: 0x52
@@ -741,7 +741,7 @@ function function_b7634680() {
     self thread function_5f41b7ea();
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 1, eflags: 0x0
 // Checksum 0xe49cb95, Offset: 0x3400
 // Size: 0x82
@@ -753,7 +753,7 @@ function function_e2b1615a(params) {
     }
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0xbbfacc6f, Offset: 0x3490
 // Size: 0x3a
@@ -762,7 +762,7 @@ function function_b12285b9() {
     self flag::clear("used_only_melee");
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x56841e5e, Offset: 0x34d8
 // Size: 0x22
@@ -771,7 +771,7 @@ function function_5f41b7ea() {
     self flag::clear("used_only_melee");
 }
 
-// Namespace namespace_36e484c6
+// Namespace dark_battle
 // Params 0, eflags: 0x0
 // Checksum 0x1d46c41e, Offset: 0x3508
 // Size: 0x62
@@ -798,11 +798,11 @@ function function_e9166d2d(var_74cd64bc) {
     trigger::use("post_vtol_tackle_colors");
     level.var_2fd26037 colors::enable();
     savegame::checkpoint_save();
-    level thread function_551feb8e();
+    level thread vtol_tackle_enemies();
     level waittill(#"hash_147f8c7");
-    level namespace_2cb3876f::function_6a5f89cb("skipto_vtol_tackle_ai");
+    level cp_prologue_util::function_6a5f89cb("skipto_vtol_tackle_ai");
     foreach (var_e4463170 in level.var_681ad194) {
-        var_e4463170 thread namespace_d51ba4::function_f1dda14f("ally_0" + var_e4463170.var_a89679b6 + "_vtol_tackle_node");
+        var_e4463170 thread Hangar::function_f1dda14f("ally_0" + var_e4463170.var_a89679b6 + "_vtol_tackle_node");
         var_e4463170 function_b243f34();
     }
     level thread objectives::breadcrumb("dark_battle_breadcrumb_5");
@@ -828,7 +828,7 @@ function function_e9166d2d(var_74cd64bc) {
 // Params 0, eflags: 0x0
 // Checksum 0xdaa3f794, Offset: 0x38a0
 // Size: 0x32
-function function_551feb8e() {
+function vtol_tackle_enemies() {
     spawn_manager::enable("vtol_tackle_spwn_mgr_door");
     spawner::simple_spawn_single("vtol_tackle_staircase_guard");
 }
@@ -872,7 +872,7 @@ function function_46853a2(var_74cd64bc) {
     vehicle::simple_spawn_single_and_drive("vtol_vehicle");
     level thread function_623731e2();
     level thread function_321578a8();
-    level thread function_1e5dba01();
+    level thread vtol_tackle_doors();
     level waittill(#"hash_7ab4e268");
     level flag::set("vtol_has_crashed");
     level flag::set("vtol_guards_alerted");
@@ -887,23 +887,23 @@ function function_46853a2(var_74cd64bc) {
 function function_b007992c(a_ents) {
     var_edc6e0e1 = a_ents["vtol"];
     var_edc6e0e1.script_crashtypeoverride = "none";
-    var_edc6e0e1 thread namespace_2cb3876f::vehicle_rumble("buzz_high", "stop_vh_rumble", 0.05, 0.1, 3000, 20);
-    var_edc6e0e1 thread namespace_2cb3876f::function_c56034b7();
+    var_edc6e0e1 thread cp_prologue_util::vehicle_rumble("buzz_high", "stop_vh_rumble", 0.05, 0.1, 3000, 20);
+    var_edc6e0e1 thread cp_prologue_util::function_c56034b7();
     level waittill(#"hash_3af3e792");
     var_edc6e0e1 notify(#"death");
-    var_edc6e0e1 notify(#"hash_c5b436ee");
+    var_edc6e0e1 notify(#"stop_vh_rumble");
     var_edc6e0e1 setmodel("veh_t7_mil_vtol_nrc_no_interior_d");
-    level thread namespace_2cb3876f::function_2a0bc326(var_edc6e0e1.origin, 0.6, 2, 5000, 6);
+    level thread cp_prologue_util::function_2a0bc326(var_edc6e0e1.origin, 0.6, 2, 5000, 6);
     exploder::exploder("light_exploder_vtol_tackle_fire");
-    wait(1);
-    level thread namespace_2cb3876f::function_2a0bc326(var_edc6e0e1.origin, 0.3, 2, 5000, 6);
+    wait 1;
+    level thread cp_prologue_util::function_2a0bc326(var_edc6e0e1.origin, 0.3, 2, 5000, 6);
 }
 
 // Namespace namespace_1c6b20b7
 // Params 0, eflags: 0x0
 // Checksum 0xb9c71350, Offset: 0x3cb0
 // Size: 0x10b
-function function_1e5dba01() {
+function vtol_tackle_doors() {
     level waittill(#"hash_ec873a98");
     var_280d5f68 = getent("intelstation_exit_door_l", "targetname");
     var_3c301126 = getent("intelstation_exit_door_r", "targetname");
@@ -1013,12 +1013,12 @@ function function_ecf2e565() {
     var_6d8dbcae = getent("vtol", "animname");
     while (true) {
         if (!isdefined(var_6d8dbcae)) {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         var_30299a05 = (randomintrange(-150, -106), randomintrange(-150, -106), randomintrange(-150, -106));
         magicbullet(getweapon("turret_bo3_mil_vtol_nrc"), var_6d8dbcae gettagorigin("tag_gunner_barrel3") + (0, -40, 0), self.origin + var_30299a05);
-        wait(0.05);
+        wait 0.05;
     }
 }
 

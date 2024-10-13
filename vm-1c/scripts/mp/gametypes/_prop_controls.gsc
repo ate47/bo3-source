@@ -52,55 +52,55 @@ function function_e17a8f06(command, key) {
     self notify(command + "_" + key);
     self endon(command + "_" + key);
     switch (key) {
-    case 5:
+    case "+attack":
         function_c6639fc9(&attackbuttonpressed, command);
         break;
-    case 11:
+    case "+toggleads_throw":
         function_c6639fc9(&adsbuttonpressed, command);
         break;
-    case 17:
+    case "weapnext":
         function_c6639fc9(&weaponswitchbuttonpressed, command);
         break;
-    case 12:
+    case "+usereload":
         function_c6639fc9(&usebuttonpressed, command);
         break;
-    case 9:
+    case "+smoke":
         function_c6639fc9(&secondaryoffhandbuttonpressed, command);
         break;
-    case 7:
+    case "+frag":
         function_c6639fc9(&fragbuttonpressed, command);
         break;
-    case 1:
+    case "+actionslot 1":
         function_c6639fc9(&actionslotonebuttonpressed, command);
         break;
-    case 2:
+    case "+actionslot 2":
         function_c6639fc9(&actionslottwobuttonpressed, command);
         break;
-    case 3:
+    case "+actionslot 3":
         function_c6639fc9(&actionslotthreebuttonpressed, command);
         break;
-    case 4:
+    case "+actionslot 4":
         function_c6639fc9(&actionslotfourbuttonpressed, command);
         break;
-    case 13:
+    case "-actionslot 1":
         function_b01c4bcb(&actionslotonebuttonpressed, command);
         break;
-    case 14:
+    case "-actionslot 2":
         function_b01c4bcb(&actionslottwobuttonpressed, command);
         break;
-    case 15:
+    case "-actionslot 3":
         function_b01c4bcb(&actionslotthreebuttonpressed, command);
         break;
-    case 16:
+    case "-actionslot 4":
         function_b01c4bcb(&actionslotfourbuttonpressed, command);
         break;
-    case 10:
+    case "+stance":
         function_b01c4bcb(&stancebuttonpressed, command);
         break;
-    case 6:
+    case "+breath_sprint":
         function_b01c4bcb(&sprintbuttonpressed, command);
         break;
-    case 8:
+    case "+melee":
         function_b01c4bcb(&meleebuttonpressed, command);
         break;
     }
@@ -113,11 +113,11 @@ function function_e17a8f06(command, key) {
 function function_c6639fc9(buttonfunc, command) {
     while (true) {
         while (!self [[ buttonfunc ]]()) {
-            wait(0.05);
+            wait 0.05;
         }
         self notify(command);
         while (self [[ buttonfunc ]]()) {
-            wait(0.05);
+            wait 0.05;
         }
     }
 }
@@ -129,10 +129,10 @@ function function_c6639fc9(buttonfunc, command) {
 function function_b01c4bcb(buttonfunc, command) {
     while (true) {
         while (!self [[ buttonfunc ]]()) {
-            wait(0.05);
+            wait 0.05;
         }
         while (self [[ buttonfunc ]]()) {
-            wait(0.05);
+            wait 0.05;
         }
         self notify(command);
     }
@@ -315,7 +315,7 @@ function updatetextongamepadchange() {
                 self.spinpropkey.label = %MP_PH_SPIN_PC;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -436,7 +436,7 @@ function propchange() {
     registerpreviousprop(self);
     self.prop.info = prop::getnextprop(self);
     /#
-        if (getdvarint("MP_PH_SLOPED", 0) != 0) {
+        if (getdvarint("<dev string:x28>", 0) != 0) {
             self.prop.info = level.proplist[self.debugnextpropindex];
             self.debugnextpropindex++;
             if (self.debugnextpropindex >= level.proplist.size) {
@@ -457,7 +457,7 @@ function propchange() {
         self.clonekey.alpha = 1;
     }
     /#
-        if (getdvarint("MP_PH_SLOPED", 0) != 0) {
+        if (getdvarint("<dev string:x28>", 0) != 0) {
             return;
         }
     #/
@@ -787,7 +787,7 @@ function get_ground_normal(traceignore, debug) {
         /#
             if (debug) {
                 if (tracehit) {
-                    line(point, point + trace["mpl_emp_equip_stun"] * 30, (0, 1, 0));
+                    line(point, point + trace["<dev string:x3b>"] * 30, (0, 1, 0));
                     continue;
                 }
                 sphere(point, 3, (1, 0, 0));
@@ -824,7 +824,7 @@ function propmoveunlock() {
     var_bc31618a = 0;
     var_449744f5 = 0;
     while (true) {
-        wait(0.05);
+        wait 0.05;
         movement = self getnormalizedmovement();
         jumping = self jumpbuttonpressed();
         if (!isdefined(movement)) {
@@ -902,7 +902,7 @@ function flashlockpropkey() {
     newscale = self.lockpropkey.startfontscale + 0.75;
     self.lockpropkey changefontscaleovertime(0.1);
     self.lockpropkey.fontscale = newscale;
-    wait(0.1);
+    wait 0.1;
     if (isdefined(self.lockpropkey)) {
         self.lockpropkey changefontscaleovertime(0.1);
         self.lockpropkey.fontscale = self.lockpropkey.startfontscale;
@@ -973,14 +973,14 @@ function canlock() {
     foreach (trigger in triggers) {
         if (trigger istouchingvolume(self.origin, self getmins(), self getmaxs())) {
             /#
-                function_2dff88ca(0, "objective", self, trigger.origin, trigger.classname);
+                function_2dff88ca(0, "<dev string:x42>", self, trigger.origin, trigger.classname);
             #/
             return 0;
         }
     }
     if (self isplayerswimming()) {
         /#
-            function_2dff88ca(1, "clone_was_destroyed", self);
+            function_2dff88ca(1, "<dev string:x48>", self);
         #/
         return 1;
     }
@@ -990,14 +990,14 @@ function canlock() {
         org1 = trace1["position"];
         if (frac == 1) {
             /#
-                function_2dff88ca(0, "top", self, org1, "MP_PH_PING");
+                function_2dff88ca(0, "<dev string:x4d>", self, org1, "<dev string:x54>");
             #/
             return 0;
         }
         foreach (trigger in triggers) {
             if (trigger istouchingvolume(org1, self getmins(), self getmaxs())) {
                 /#
-                    function_2dff88ca(0, "ping", self, trigger.origin, trigger.classname);
+                    function_2dff88ca(0, "<dev string:x55>", self, trigger.origin, trigger.classname);
                 #/
                 return 0;
             }
@@ -1005,7 +1005,7 @@ function canlock() {
         point = getnearestpathpoint(org1, 256);
         if (!isdefined(point)) {
             /#
-                function_2dff88ca(0, "disconnect", self, org1);
+                function_2dff88ca(0, "<dev string:x5c>", self, org1);
             #/
             return 0;
         }
@@ -1014,7 +1014,7 @@ function canlock() {
             point2 = getnearestpathpoint(org1, 50);
             if (!isdefined(point2)) {
                 /#
-                    function_2dff88ca(0, "<unknown string>", self, org1, "<unknown string>", point, "disconnect");
+                    function_2dff88ca(0, "<dev string:x61>", self, org1, "<dev string:x6b>", point, "<dev string:x5c>");
                 #/
                 return 0;
             }
@@ -1022,7 +1022,7 @@ function canlock() {
         dist2d = distance2d(point, org1);
         if (dist2d > 100) {
             /#
-                function_2dff88ca(0, "<unknown string>", self, org1, "<unknown string>", point, "disconnect");
+                function_2dff88ca(0, "<dev string:x71>", self, org1, "<dev string:x6b>", point, "<dev string:x5c>");
             #/
             return 0;
         }
@@ -1030,18 +1030,18 @@ function canlock() {
         foreach (trigger in triggers) {
             if (trigger istouchingvolume(org2, self getmins(), self getmaxs())) {
                 /#
-                    function_2dff88ca(0, "<unknown string>", self, trigger.origin, trigger.classname);
+                    function_2dff88ca(0, "<dev string:x78>", self, trigger.origin, trigger.classname);
                 #/
                 return 0;
             }
         }
         /#
-            function_2dff88ca(1, "<unknown string>", self, org1, "ping", org2, "<unknown string>", point, "<unknown string>" + distance(org1, point));
+            function_2dff88ca(1, "<dev string:x7c>", self, org1, "<dev string:x55>", org2, "<dev string:x78>", point, "<dev string:x80>" + distance(org1, point));
         #/
         return 1;
     }
     /#
-        function_2dff88ca(1, "<unknown string>", self);
+        function_2dff88ca(1, "<dev string:x86>", self);
     #/
     return 1;
 }
@@ -1086,11 +1086,11 @@ function propcamerazoom() {
 // Size: 0x66
 function setnewabilityhud() {
     switch (self.currentability) {
-    case 57:
+    case "FLASH":
         self.abilitykey.label = %MP_PH_FLASH;
         break;
     default:
-        assertmsg("<unknown string>");
+        assertmsg("<dev string:x8d>");
         break;
     }
 }
@@ -1101,20 +1101,20 @@ function setnewabilityhud() {
 // Size: 0xd6
 function setnewabilitycount(var_9c968389, count) {
     switch (var_9c968389) {
-    case 57:
+    case "FLASH":
         if (!isdefined(count)) {
             count = level.phsettings.propnumflashes;
         }
         propsetflashesleft(count);
         break;
-    case 44:
+    case "CLONE":
         if (!isdefined(count)) {
             count = level.phsettings.propnumclones;
         }
         propsetclonesleft(count);
         break;
     default:
-        assertmsg("<unknown string>" + var_9c968389);
+        assertmsg("<dev string:xa5>" + var_9c968389);
         break;
     }
 }
@@ -1391,7 +1391,7 @@ function function_7244ebc6(var_ad5f9a75, fade_in_time, fade_out_time) {
     overlay.horzalign = "fullscreen";
     overlay.vertalign = "fullscreen";
     overlay.alpha = 0;
-    wait(0.05);
+    wait 0.05;
     if (fade_in_time > 0) {
         overlay fadeovertime(fade_in_time);
     }
@@ -1409,7 +1409,7 @@ function function_7244ebc6(var_ad5f9a75, fade_in_time, fade_out_time) {
     self setvisionsetforplayer("blackout_ph", fade_out_time);
     self prop::function_da184fd(fade_out_time);
     self setclientuivisibilityflag("hud_visible", 1);
-    wait(0.05);
+    wait 0.05;
     safedestroy(overlay);
 }
 
@@ -1446,10 +1446,10 @@ function trackgrenade(grenade) {
     if (!isdefined(index)) {
         index = function_141daf3d(self, damageorigin, weapon, 1, "MOD_GRENADE_SPLASH");
     }
-    wait(0.05);
-    wait(0.05);
+    wait 0.05;
+    wait 0.05;
     self function_af4e8351(index);
-    wait(0.05);
+    wait 0.05;
     level.var_56d3e86e[index] = undefined;
 }
 

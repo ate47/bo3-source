@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_e15266b8;
+#namespace voice_z_hypocenter;
 
-// Namespace namespace_e15266b8
+// Namespace voice_z_hypocenter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7ac7966, Offset: 0xb10
 // Size: 0x6a4

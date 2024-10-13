@@ -17,9 +17,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_3ae2a359;
+#namespace zm_stalingrad_pavlov_trap;
 
-// Namespace namespace_3ae2a359
+// Namespace zm_stalingrad_pavlov_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x41a27a2c, Offset: 0x430
 // Size: 0x17a
@@ -35,7 +35,7 @@ function main() {
     }
 }
 
-// Namespace namespace_3ae2a359
+// Namespace zm_stalingrad_pavlov_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf6d017f8, Offset: 0x5b8
 // Size: 0x8c
@@ -50,7 +50,7 @@ function function_41b278b3() {
     zm_unitrigger::register_static_unitrigger(self, &function_335dff5e);
 }
 
-// Namespace namespace_3ae2a359
+// Namespace zm_stalingrad_pavlov_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0x1e9e3ab3, Offset: 0x650
 // Size: 0x19a
@@ -79,7 +79,7 @@ function function_fbea6a64(e_player) {
     return 1;
 }
 
-// Namespace namespace_3ae2a359
+// Namespace zm_stalingrad_pavlov_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x94d734e2, Offset: 0x7f8
 // Size: 0x18e
@@ -102,7 +102,7 @@ function function_335dff5e() {
     return;
 }
 
-// Namespace namespace_3ae2a359
+// Namespace zm_stalingrad_pavlov_trap
 // Params 2, eflags: 0x1 linked
 // Checksum 0x32350c07, Offset: 0x990
 // Size: 0x466
@@ -114,7 +114,7 @@ function function_d9a07413(e_player, var_a70a7d09) {
             s_struct.var_66a9cd70 = 1;
         }
     }
-    self namespace_48c05c81::function_903f6b36(1);
+    self zm_stalingrad_util::function_903f6b36(1);
     var_b4f536a1 = struct::get(var_a70a7d09.target);
     var_ebbae7d4 = getent(var_b4f536a1.target, "targetname");
     v_fling = anglestoforward(var_b4f536a1.angles);
@@ -124,14 +124,14 @@ function function_d9a07413(e_player, var_a70a7d09) {
     }
     n_start_time = gettime();
     n_total_time = 0;
-    e_player thread namespace_dcf9c464::function_96153834();
+    e_player thread zm_stalingrad_vo::function_96153834();
     while (30 > n_total_time) {
         function_e0c7ad1e(var_a70a7d09);
         function_54227761(var_a70a7d09, v_fling, e_player);
         playrumbleonposition("zm_stalingrad_bridge_closing", var_d617e29b.origin);
         var_d617e29b scene::play("p7_fxanim_zm_stal_flinger_trap_bundle", array(var_d617e29b));
         n_total_time = (gettime() - n_start_time) / 1000;
-        wait(0.5);
+        wait 0.5;
     }
     self.var_66a9cd70 = 0;
     self.var_dd690f31 = 0;
@@ -142,8 +142,8 @@ function function_d9a07413(e_player, var_a70a7d09) {
             s_struct.var_66a9cd70 = 0;
         }
     }
-    wait(120);
-    self namespace_48c05c81::function_903f6b36(0);
+    wait 120;
+    self zm_stalingrad_util::function_903f6b36(0);
     self.var_dd690f31 = 1;
     if (self.target === "flinger_pavlov_street") {
         foreach (s_struct in var_76b899c0) {
@@ -152,7 +152,7 @@ function function_d9a07413(e_player, var_a70a7d09) {
     }
 }
 
-// Namespace namespace_3ae2a359
+// Namespace zm_stalingrad_pavlov_trap
 // Params 3, eflags: 0x1 linked
 // Checksum 0x1ff3382d, Offset: 0xe00
 // Size: 0x18c
@@ -169,7 +169,7 @@ function function_54227761(var_a70a7d09, v_fling, e_player) {
             n_count++;
             n_kill_count++;
             if (n_count >= 3) {
-                wait(0.05);
+                wait 0.05;
                 n_count = 0;
             }
         }
@@ -179,7 +179,7 @@ function function_54227761(var_a70a7d09, v_fling, e_player) {
     }
 }
 
-// Namespace namespace_3ae2a359
+// Namespace zm_stalingrad_pavlov_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0xeafed0d3, Offset: 0xf98
 // Size: 0xb2
@@ -191,7 +191,7 @@ function function_e0c7ad1e(var_a70a7d09) {
     }
 }
 
-// Namespace namespace_3ae2a359
+// Namespace zm_stalingrad_pavlov_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcedafe99, Offset: 0x1058
 // Size: 0x1a4
@@ -207,14 +207,14 @@ function function_fce6cca8() {
     var_848f1155 notsolid();
     self.var_fa6d2a24 = 1;
     n_time = var_848f1155 zm_utility::fake_physicslaunch(var_8e692aea[var_5733bd24], 400);
-    wait(n_time);
+    wait n_time;
     self dodamage(self.maxhealth * 0.34, self.origin);
     self solid();
     self.var_fa6d2a24 = 0;
     var_848f1155 delete();
 }
 
-// Namespace namespace_3ae2a359
+// Namespace zm_stalingrad_pavlov_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf78b0f2e, Offset: 0x1208
 // Size: 0x94

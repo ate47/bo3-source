@@ -93,7 +93,7 @@ function autoexec main() {
         var_5ec70049 = spawnstruct();
         var_5ec70049.var_5ce61d20 = [];
         var_5ec70049.name = var_7c95de4b;
-        var_5df7afe0 = 0;
+        default_player = 0;
         foreach (var_79390ec7, var_f815bc88 in gibpiecelookup) {
             gibstruct = spawnstruct();
             gibstruct.gibmodel = function_e8ef6cb0(definition, gibpiecelookup[var_79390ec7] + "_gibmodel");
@@ -104,17 +104,17 @@ function autoexec main() {
             gibstruct.gibsound = function_e8ef6cb0(definition, gibpiecelookup[var_79390ec7] + "_gibsound");
             gibstruct.gibhidetag = function_e8ef6cb0(definition, gibpiecelookup[var_79390ec7] + "_gibhidetag");
             if (sessionmodeismultiplayergame() && function_5eb8a046(var_79390ec7, gibstruct)) {
-                var_5df7afe0 = 1;
+                default_player = 1;
             }
             var_5ec70049.var_5ce61d20[var_79390ec7] = gibstruct;
         }
-        if (sessionmodeismultiplayergame() && var_5df7afe0) {
+        if (sessionmodeismultiplayergame() && default_player) {
             processedbundles[var_7c95de4b] = level.var_ee3edcd4;
             continue;
         }
         processedbundles[var_7c95de4b] = var_5ec70049;
     }
-    level.var_3f831f3b["gibcharacterdef"] = processedbundles;
+    level.scriptbundles["gibcharacterdef"] = processedbundles;
     if (!isdefined(level.gib_throttle)) {
         level.gib_throttle = new throttle();
         [[ level.gib_throttle ]]->initialize(2, 0.2);
@@ -144,7 +144,7 @@ function private _getgibextramodel(entity, gibflag) {
     if (gibflag == 8) {
         return (isdefined(entity.gib_data) ? entity.gib_data.head : entity.head);
     }
-    assertmsg("leftarm");
+    assertmsg("<dev string:x28>");
 }
 
 // Namespace gibserverutils

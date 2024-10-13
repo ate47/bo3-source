@@ -265,12 +265,12 @@ function gettimelimit() {
 // Size: 0x124
 function updategametypedvars() {
     level.flagcapturetime = getgametypesetting("captureTime");
-    level.var_6149e6b8 = getgametypesetting("flagDecayTime");
+    level.flagDecayTime = getgametypesetting("flagDecayTime");
     level.var_d311af1 = getgametypesetting("objectiveSpawnTime");
     level.var_6aae7bde = getgametypesetting("idleFlagResetTime");
     level.var_5fe77e56 = getgametypesetting("idleFlagDecay");
     level.extratime = getgametypesetting("extraTime");
-    level.var_bc06038e = getgametypesetting("flagCaptureGracePeriod");
+    level.flagCaptureGracePeriod = getgametypesetting("flagCaptureGracePeriod");
     level.playeroffensivemax = getgametypesetting("maxPlayerOffensive");
     level.playerdefensivemax = getgametypesetting("maxPlayerDefensive");
 }
@@ -287,7 +287,7 @@ function function_361b0234() {
     level.flagmodel["neutral"] = teams::get_flag_model("neutral");
     primaryflags = getentarray("res_flag_primary", "targetname");
     if (primaryflags.size < 2) {
-        println("mp_res_spawn_allies");
+        println("<dev string:x28>");
         callback::abort_level();
         return;
     }
@@ -309,7 +309,7 @@ function function_361b0234() {
         var_e5ce1ae3 gameobjects::allow_use("none");
         var_e5ce1ae3 gameobjects::set_use_time(level.flagcapturetime);
         var_e5ce1ae3 gameobjects::set_use_text(%MP_CAPTURING_FLAG);
-        var_e5ce1ae3 gameobjects::set_decay_time(level.var_6149e6b8);
+        var_e5ce1ae3 gameobjects::set_decay_time(level.flagDecayTime);
         label = var_e5ce1ae3 gameobjects::get_label();
         var_e5ce1ae3.label = label;
         var_e5ce1ae3 gameobjects::set_model_visibility(0);
@@ -318,7 +318,7 @@ function function_361b0234() {
         var_e5ce1ae3.onuseupdate = &onuseupdate;
         var_e5ce1ae3.onuseclear = &onuseclear;
         var_e5ce1ae3.onenduse = &onenduse;
-        var_e5ce1ae3.claimgraceperiod = level.var_bc06038e;
+        var_e5ce1ae3.claimgraceperiod = level.flagCaptureGracePeriod;
         var_e5ce1ae3.decayprogress = level.var_5fe77e56;
         tracestart = visuals[0].origin + (0, 0, 32);
         traceend = visuals[0].origin + (0, 0, -32);
@@ -445,7 +445,7 @@ function function_68125934(flagindex) {
         level.timerdisplay["axis"].label = var_c7d5d8ae;
         level.timerdisplay["axis"] settimer(level.var_d311af1);
         level.timerdisplay["axis"].alpha = 1;
-        wait(level.var_d311af1);
+        wait level.var_d311af1;
         objpoints::delete(var_95ea7549);
         objective_state(level.var_279d8218, "invisible");
         globallogic_audio::leader_dialog("hq_online");
@@ -613,17 +613,17 @@ function onuse(player, team) {
     oldteam = self gameobjects::get_owner_team();
     label = self gameobjects::get_label();
     /#
-        print("waypoint_capture" + self.label);
+        print("<dev string:x56>" + self.label);
     #/
     function_d2ea5c61(self.orderindex + 1);
     if (self.orderindex + 1 == level.var_2b613fd2.size || level.overtime) {
         setgameendtime(0);
-        wait(1);
+        wait 1;
         function_e9c2ac15(player.team, game["strings"]["flags_capped"]);
         return;
     }
     level.usestartspawns = 0;
-    assert(team != "lost_all");
+    assert(team != "<dev string:x66>");
     if ([[ level.gettimelimit ]]() > 0 && level.extratime) {
         level.usingextratime = 1;
         if (!level.hardcoremode) {
@@ -647,25 +647,25 @@ function onuse(player, team) {
     spawning::updateallspawnpoints();
     string = %;
     switch (label) {
-    case 66:
+    case "_a":
         string = %MP_DOM_FLAG_A_CAPTURED_BY;
         break;
-    case 67:
+    case "_b":
         string = %MP_DOM_FLAG_B_CAPTURED_BY;
         break;
-    case 68:
+    case "_c":
         string = %MP_DOM_FLAG_C_CAPTURED_BY;
         break;
-    case 69:
+    case "_d":
         string = %MP_DOM_FLAG_D_CAPTURED_BY;
         break;
-    case 70:
+    case "_e":
         string = %MP_DOM_FLAG_E_CAPTURED_BY;
         break;
     default:
         break;
     }
-    assert(string != %killed_defender);
+    assert(string != %"<dev string:x6e>");
     touchlist = [];
     touchkeys = getarraykeys(self.touchlist[team]);
     for (i = 0; i < touchkeys.size; i++) {
@@ -689,7 +689,7 @@ function onuse(player, team) {
 // Checksum 0xd4bf53f0, Offset: 0x3778
 // Size: 0x176
 function give_capture_credit(touchlist, string) {
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     players = getarraykeys(touchlist);
     for (i = 0; i < players.size; i++) {
@@ -710,7 +710,7 @@ function give_capture_credit(touchlist, string) {
 // Checksum 0x3f1c2ba6, Offset: 0x38f8
 // Size: 0x44
 function delayedleaderdialog(sound, team) {
-    wait(0.1);
+    wait 0.1;
     util::waittillslowprocessallowed();
     globallogic_audio::leader_dialog(sound, team);
 }
@@ -737,14 +737,14 @@ function onscoreclosemusic() {
     }
     if (getdvarint("debug_music") > 0) {
         /#
-            println("defending" + scoredif);
-            println("<unknown string>" + axisscore);
-            println("<unknown string>" + alliedscore);
-            println("<unknown string>" + scorelimit);
-            println("<unknown string>" + currentscore);
-            println("<unknown string>" + scorethreshold);
-            println("defending" + scoredif);
-            println("<unknown string>" + scorethresholdstart);
+            println("<dev string:x6f>" + scoredif);
+            println("<dev string:x93>" + axisscore);
+            println("<dev string:xb8>" + alliedscore);
+            println("<dev string:xdf>" + scorelimit);
+            println("<dev string:x105>" + currentscore);
+            println("<dev string:x12d>" + scorethreshold);
+            println("<dev string:x6f>" + scoredif);
+            println("<dev string:x157>" + scorethresholdstart);
         #/
     }
     if (scoredif <= scorethreshold && scorethresholdstart <= currentscore && level.playingactionmusic != 1) {

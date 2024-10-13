@@ -43,7 +43,7 @@ function function_22bc5906() {
         struct.var_ae10f09 = 1;
         struct.var_69fde2c9 = 0;
         struct.var_306a0884 = 0;
-        namespace_6d813654::function_66764564(struct, &function_8550d095, &function_5c288522);
+        zm_equip_hacker::function_66764564(struct, &function_8550d095, &function_5c288522);
     }
 }
 
@@ -52,7 +52,7 @@ function function_22bc5906() {
 // Checksum 0x1e06e7dd, Offset: 0x430
 // Size: 0x364
 function function_8550d095(hacker) {
-    namespace_6d813654::function_fcbe2f17(self);
+    zm_equip_hacker::function_fcbe2f17(self);
     num_chunks_checked = 0;
     last_repaired_chunk = undefined;
     if (self.var_69fde2c9 != level.round_number) {
@@ -93,17 +93,17 @@ function function_8550d095(hacker) {
     if (isdefined(self.window.zbarrier)) {
         if (isdefined(last_repaired_chunk)) {
             while (self.window.zbarrier getzbarrierpiecestate(last_repaired_chunk) == "closing") {
-                wait(0.05);
+                wait 0.05;
             }
         }
     } else {
         while (isdefined(last_repaired_chunk) && last_repaired_chunk.state == "mid_repair") {
-            wait(0.05);
+            wait 0.05;
         }
     }
-    namespace_6d813654::function_66764564(self, &function_8550d095, &function_5c288522);
+    zm_equip_hacker::function_66764564(self, &function_8550d095, &function_5c288522);
     self.window notify(#"blocker_hacked");
-    self.window notify(#"hash_46d36511");
+    self.window notify(#"no valid boards");
 }
 
 // Namespace namespace_b1d3fbb7

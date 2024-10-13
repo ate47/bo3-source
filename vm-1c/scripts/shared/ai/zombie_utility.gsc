@@ -154,7 +154,7 @@ function initanimtree(animscript) {
     if (animscript != "pain" && animscript != "death") {
         self.a.special = "none";
     }
-    assert(isdefined(animscript), "_crawl");
+    assert(isdefined(animscript), "<dev string:x28>");
     self.a.script = animscript;
 }
 
@@ -163,7 +163,7 @@ function initanimtree(animscript) {
 // Checksum 0x4f1fb2ef, Offset: 0xd98
 // Size: 0xa6
 function updateanimpose() {
-    assert(self.a.movement == "_crawl" || self.a.movement == "_crawl" || self.a.movement == "_crawl", "_crawl" + self.a.pose + "_crawl" + self.a.movement);
+    assert(self.a.movement == "<dev string:x51>" || self.a.movement == "<dev string:x56>" || self.a.movement == "<dev string:x5b>", "<dev string:x5f>" + self.a.pose + "<dev string:x6f>" + self.a.movement);
     self.desired_anim_pose = undefined;
 }
 
@@ -585,7 +585,7 @@ function isinset(input, set) {
 function notifyaftertime(notifystring, killmestring, time) {
     self endon(#"death");
     self endon(killmestring);
-    wait(time);
+    wait time;
     self notify(notifystring);
 }
 
@@ -599,7 +599,7 @@ function notifyaftertime(notifystring, killmestring, time) {
         maxtime = timer * 20;
         for (i = 0; i < maxtime; i++) {
             print3d(org, msg, color, 1, 1);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -614,13 +614,13 @@ function notifyaftertime(notifystring, killmestring, time) {
         if (!isvalidenemy(self.enemy)) {
             return;
         }
-        if (self.enemy.team == "_crawl") {
+        if (self.enemy.team == "<dev string:x71>") {
             color = (0.4, 0.7, 1);
         } else {
             color = (1, 0.7, 0.4);
         }
         while (true) {
-            wait(0.05);
+            wait 0.05;
             if (!isdefined(self.lastenemysightpos)) {
                 continue;
             }
@@ -635,7 +635,7 @@ function notifyaftertime(notifystring, killmestring, time) {
 // Checksum 0xc4e4f278, Offset: 0x2330
 // Size: 0x16
 function debugtimeout() {
-    wait(5);
+    wait 5;
     self notify(#"timeout");
 }
 
@@ -646,18 +646,18 @@ function debugtimeout() {
 function debugposinternal(org, string, size) {
     /#
         self endon(#"death");
-        self notify("_crawl" + org);
-        self endon("_crawl" + org);
+        self notify("<dev string:x78>" + org);
+        self endon("<dev string:x78>" + org);
         ent = spawnstruct();
         ent thread debugtimeout();
         ent endon(#"timeout");
-        if (self.enemy.team == "_crawl") {
+        if (self.enemy.team == "<dev string:x71>") {
             color = (0.4, 0.7, 1);
         } else {
             color = (1, 0.7, 0.4);
         }
         while (true) {
-            wait(0.05);
+            wait 0.05;
             print3d(org, string, color, 1, size);
         }
     #/
@@ -688,7 +688,7 @@ function showdebugproc(frompoint, topoint, color, printtime) {
         self endon(#"death");
         timer = printtime * 20;
         for (i = 0; i < timer; i += 1) {
-            wait(0.05);
+            wait 0.05;
             line(frompoint, topoint, color);
         }
     #/
@@ -721,30 +721,30 @@ function getnodeoffset(node) {
     right = anglestoright(node.angles);
     forward = anglestoforward(node.angles);
     switch (node.type) {
-    case 23:
-    case 24:
+    case "Cover Left":
+    case "Cover Left Wide":
         if (node isnodedontstand() && !node isnodedontcrouch()) {
             nodeoffset = calculatenodeoffset(right, forward, cover_left_crouch_offset);
         } else {
             nodeoffset = calculatenodeoffset(right, forward, cover_left_stand_offset);
         }
         break;
-    case 25:
-    case 26:
+    case "Cover Right":
+    case "Cover Right Wide":
         if (node isnodedontstand() && !node isnodedontcrouch()) {
             nodeoffset = calculatenodeoffset(right, forward, cover_right_crouch_offset);
         } else {
             nodeoffset = calculatenodeoffset(right, forward, cover_right_stand_offset);
         }
         break;
-    case 13:
-    case 27:
-    case 28:
+    case "Conceal Stand":
+    case "Cover Stand":
+    case "Turret":
         nodeoffset = calculatenodeoffset(right, forward, cover_stand_offset);
         break;
-    case 12:
-    case 21:
-    case 22:
+    case "Conceal Crouch":
+    case "Cover Crouch":
+    case "Cover Crouch Window":
         nodeoffset = calculatenodeoffset(right, forward, cover_crouch_offset);
         break;
     }
@@ -786,9 +786,9 @@ function checkpitchvisibility(frompoint, topoint, atnode) {
     function showlines(start, end, end2) {
         for (;;) {
             line(start, end, (1, 0, 0), 1);
-            wait(0.05);
+            wait 0.05;
             line(start, end2, (0, 0, 1), 1);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -850,7 +850,7 @@ function forcedcover(msg) {
         newtime = timer / 0.05;
         for (i = 0; i < newtime; i++) {
             print3d(org, msg, color, alpha, scale);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -865,7 +865,7 @@ function forcedcover(msg) {
         for (i = 0; i < newtime; i++) {
             up += 0.5;
             print3d(org + (0, 0, up), msg, color, alpha, scale);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -893,7 +893,7 @@ function scriptchange() {
 // Checksum 0xf526f987, Offset: 0x2f58
 // Size: 0x1c
 function delayedscriptchange() {
-    wait(0.05);
+    wait 0.05;
     scriptchange();
 }
 
@@ -951,8 +951,8 @@ function random_weight(array) {
 // Checksum 0x9506e38d, Offset: 0x3120
 // Size: 0xd4
 function setfootstepeffect(name, fx) {
-    assert(isdefined(name), "_crawl");
-    assert(isdefined(fx), "_crawl");
+    assert(isdefined(name), "<dev string:x84>");
+    assert(isdefined(fx), "<dev string:xae>");
     if (!isdefined(anim.optionalstepeffects)) {
         anim.optionalstepeffects = [];
     }
@@ -973,7 +973,7 @@ function setfootstepeffect(name, fx) {
         level endon(#"newdebugline");
         for (;;) {
             line(start, end, (0.3, 1, 0), 1);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1003,7 +1003,7 @@ function doesnodeallowstance(stance) {
     if (stance == "stand") {
         return !self isnodedontstand();
     }
-    assert(stance == "_crawl");
+    assert(stance == "<dev string:xd6>");
     return !self isnodedontcrouch();
 }
 
@@ -1016,7 +1016,7 @@ function animarray(animname) {
     /#
         if (!isdefined(self.a.array[animname])) {
             dumpanimarray();
-            assert(isdefined(self.a.array[animname]), "_crawl" + animname + "_crawl");
+            assert(isdefined(self.a.array[animname]), "<dev string:xdd>" + animname + "<dev string:xed>");
         }
     #/
     return self.a.array[animname];
@@ -1031,7 +1031,7 @@ function animarrayanyexist(animname) {
     /#
         if (!isdefined(self.a.array[animname])) {
             dumpanimarray();
-            assert(isdefined(self.a.array[animname]), "_crawl" + animname + "_crawl");
+            assert(isdefined(self.a.array[animname]), "<dev string:xdd>" + animname + "<dev string:xed>");
         }
     #/
     return self.a.array[animname].size > 0;
@@ -1046,7 +1046,7 @@ function animarraypickrandom(animname) {
     /#
         if (!isdefined(self.a.array[animname])) {
             dumpanimarray();
-            assert(isdefined(self.a.array[animname]), "_crawl" + animname + "_crawl");
+            assert(isdefined(self.a.array[animname]), "<dev string:xdd>" + animname + "<dev string:xed>");
         }
     #/
     assert(self.a.array[animname].size > 0);
@@ -1065,14 +1065,14 @@ function animarraypickrandom(animname) {
     // Checksum 0x8e04679c, Offset: 0x3620
     // Size: 0x14e
     function dumpanimarray() {
-        println("_crawl");
+        println("<dev string:xfe>");
         keys = getarraykeys(self.a.array);
         for (i = 0; i < keys.size; i++) {
             if (isarray(self.a.array[keys[i]])) {
-                println("_crawl" + keys[i] + "_crawl" + self.a.array[keys[i]].size + "_crawl");
+                println("<dev string:x10c>" + keys[i] + "<dev string:x116>" + self.a.array[keys[i]].size + "<dev string:x12c>");
                 continue;
             }
-            println("_crawl" + keys[i] + "_crawl", self.a.array[keys[i]]);
+            println("<dev string:x10c>" + keys[i] + "<dev string:x12e>", self.a.array[keys[i]]);
         }
     }
 
@@ -1185,13 +1185,13 @@ function ragdolldeath(moveanim) {
     lastorg = self.origin;
     movevec = (0, 0, 0);
     for (;;) {
-        wait(0.05);
+        wait 0.05;
         force = distance(self.origin, lastorg);
         lastorg = self.origin;
         if (self.health == 1) {
             self.a.nodeath = 1;
             self startragdoll();
-            wait(0.05);
+            wait 0.05;
             physicsexplosionsphere(lastorg, 600, 0, force * 0.1);
             self notify(#"killanimscript");
             return;
@@ -1301,9 +1301,9 @@ function set_orient_mode(mode, val1) {
     /#
         if (level.dog_debug_orient == self getentnum()) {
             if (isdefined(val1)) {
-                println("_crawl" + mode + "_crawl" + val1 + "_crawl" + gettime());
+                println("<dev string:x135>" + mode + "<dev string:x6f>" + val1 + "<dev string:x6f>" + gettime());
             } else {
-                println("_crawl" + mode + "_crawl" + gettime());
+                println("<dev string:x135>" + mode + "<dev string:x6f>" + gettime());
             }
         }
     #/
@@ -1322,10 +1322,10 @@ function set_orient_mode(mode, val1) {
     // Size: 0x9c
     function debug_anim_print(text) {
         if (isdefined(level.dog_debug_anims) && level.dog_debug_anims) {
-            println(text + "_crawl" + gettime());
+            println(text + "<dev string:x6f>" + gettime());
         }
         if (isdefined(level.dog_debug_anims_ent) && level.dog_debug_anims_ent == self getentnum()) {
-            println(text + "_crawl" + gettime());
+            println(text + "<dev string:x6f>" + gettime());
         }
     }
 
@@ -1344,7 +1344,7 @@ function set_orient_mode(mode, val1) {
             lookaheaddir = self.lookaheaddir;
             lookaheadangles = vectortoangles(lookaheaddir);
             lookaheadyaw = angleclamp180(lookaheadangles[1]);
-            println(text + "_crawl" + gettime() + "_crawl" + currentyaw + "_crawl" + lookaheadyaw + "_crawl" + desiredyaw);
+            println(text + "<dev string:x6f>" + gettime() + "<dev string:x151>" + currentyaw + "<dev string:x158>" + lookaheadyaw + "<dev string:x160>" + desiredyaw);
         }
     }
 
@@ -1356,7 +1356,7 @@ function set_orient_mode(mode, val1) {
 // Size: 0x30
 function function_e0c8af4f() {
     /#
-        return function_65ee983f("_crawl", "_crawl");
+        return function_65ee983f("<dev string:x16b>", "<dev string:x182>");
     #/
     return 1;
 }
@@ -1367,7 +1367,7 @@ function function_e0c8af4f() {
 // Size: 0x30
 function function_5f551b9c() {
     /#
-        return function_65ee983f("_crawl", "_crawl");
+        return function_65ee983f("<dev string:x184>", "<dev string:x182>");
     #/
     return 1;
 }
@@ -1408,11 +1408,11 @@ function set_zombie_var(zvar, value, is_float, column, is_team_based) {
 // Size: 0x372
 function spawn_zombie(spawner, target_name, spawn_point, round_number) {
     if (!isdefined(spawner)) {
-        println("_crawl");
+        println("<dev string:x19d>");
         return undefined;
     }
     while (getfreeactorcount() < 1) {
-        wait(0.05);
+        wait 0.05;
     }
     spawner.script_moveoverride = 1;
     if (isdefined(spawner.script_forcespawn) && spawner.script_forcespawn) {
@@ -1455,11 +1455,11 @@ function spawn_zombie(spawner, target_name, spawn_point, round_number) {
             #/
             return guy;
         } else {
-            println("_crawl", spawner.origin);
+            println("<dev string:x1c5>", spawner.origin);
             return undefined;
         }
     } else {
-        println("_crawl", spawner.origin);
+        println("<dev string:x204>", spawner.origin);
         return undefined;
     }
     return undefined;
@@ -1491,7 +1491,7 @@ function get_desired_origin() {
         if (!isdefined(ent)) {
             ent = getnode(self.target, "targetname");
         }
-        assert(isdefined(ent), "_crawl" + self.target + "_crawl" + self.origin);
+        assert(isdefined(ent), "<dev string:x23f>" + self.target + "<dev string:x26b>" + self.origin);
         return ent.origin;
     }
     return undefined;
@@ -1504,7 +1504,7 @@ function get_desired_origin() {
 function hide_pop() {
     self endon(#"death");
     self ghost();
-    wait(0.5);
+    wait 0.5;
     if (isdefined(self)) {
         self show();
         util::wait_network_frame();
@@ -1530,7 +1530,7 @@ function finish_rise_notetracks(note, spot) {
     if (note == "deathout" || note == "deathhigh") {
         self.zombie_rise_death_out = 1;
         self notify(#"zombie_rise_death_out");
-        wait(2);
+        wait 2;
         spot notify(#"stop_zombie_rise_fx");
     }
 }
@@ -1599,10 +1599,10 @@ function delayed_zombie_eye_glow() {
     self endon(#"death");
     if (isdefined(self.in_the_ceiling) && (isdefined(self.in_the_ground) && self.in_the_ground || self.in_the_ceiling)) {
         while (!isdefined(self.create_eyes)) {
-            wait(0.1);
+            wait 0.1;
         }
     } else {
-        wait(0.5);
+        wait 0.5;
     }
     self zombie_eye_glow();
 }
@@ -1642,10 +1642,10 @@ function round_spawn_failsafe_debug_draw() {
     for (prevorigin = self.origin; true; prevorigin = self.origin) {
         if (isdefined(level.toggle_keyline_always) && level.toggle_keyline_always) {
             self clientfield::set("zombie_keyline_render", 1);
-            wait(1);
+            wait 1;
             continue;
         }
-        wait(4);
+        wait 4;
         if (isdefined(self.lastchunk_destroy_time)) {
             if (gettime() - self.lastchunk_destroy_time < 8000) {
                 continue;
@@ -1678,9 +1678,9 @@ function round_spawn_failsafe() {
         if (!isdefined(level.failsafe_waittime)) {
             level.failsafe_waittime = 30;
         }
-        wait(level.failsafe_waittime);
+        wait level.failsafe_waittime;
         if (self.missinglegs) {
-            wait(10);
+            wait 10;
         }
         if (isdefined(self.is_inert) && self.is_inert) {
             continue;
@@ -1742,7 +1742,7 @@ function ai_calculate_health(round_number) {
 // Size: 0x17c
 function default_max_zombie_func(max_num, n_round) {
     /#
-        count = getdvarint("_crawl", -1);
+        count = getdvarint("<dev string:x271>", -1);
         if (count > -1) {
             return count;
         }
@@ -1775,7 +1775,7 @@ function function_9d8e8d95() {
     level endon(#"restart_round");
     level endon(#"kill_round");
     while (level.zombie_total > 4) {
-        wait(3);
+        wait 3;
     }
     for (a_ai_zombies = get_round_enemy_array(); a_ai_zombies.size > 0 || level.zombie_total > 0; a_ai_zombies = get_round_enemy_array()) {
         if (a_ai_zombies.size == 1) {
@@ -1789,7 +1789,7 @@ function function_9d8e8d95() {
                 }
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -1884,7 +1884,7 @@ function set_zombie_run_cycle(new_move_speed) {
     if (isdefined(level.zm_variant_type_max)) {
         /#
             if (false) {
-                debug_variant_type = getdvarint("_crawl", -1);
+                debug_variant_type = getdvarint("<dev string:x284>", -1);
                 if (debug_variant_type != -1) {
                     if (debug_variant_type <= level.zm_variant_type_max[self.zombie_move_speed][self.zombie_arms_position]) {
                         self.variant_type = debug_variant_type;
@@ -1902,7 +1902,7 @@ function set_zombie_run_cycle(new_move_speed) {
             } else if (isdefined(level.zm_variant_type_max[self.zombie_move_speed])) {
                 self.variant_type = randomint(level.zm_variant_type_max[self.zombie_move_speed][self.zombie_arms_position]);
             } else {
-                errormsg("_crawl" + self.zombie_move_speed);
+                errormsg("<dev string:x29c>" + self.zombie_move_speed);
                 self.variant_type = 0;
             }
         }
@@ -2049,29 +2049,29 @@ function zombie_gib_on_damage() {
             }
             self.stumble = undefined;
             switch (self.damagelocation) {
-            case 73:
-            case 74:
+            case "torso_lower":
+            case "torso_upper":
                 if (!gibserverutils::isgibbed(self, 32)) {
                     gibserverutils::gibrightarm(self);
                 }
                 break;
-            case 67:
-            case 68:
-            case 70:
+            case "right_arm_lower":
+            case "right_arm_upper":
+            case "right_hand":
                 if (!gibserverutils::isgibbed(self, 32)) {
                     gibserverutils::gibrightarm(self);
                 }
                 break;
-            case 61:
-            case 62:
-            case 64:
+            case "left_arm_lower":
+            case "left_arm_upper":
+            case "left_hand":
                 if (!gibserverutils::isgibbed(self, 16)) {
                     gibserverutils::gibleftarm(self);
                 }
                 break;
-            case 69:
-            case 71:
-            case 72:
+            case "right_foot":
+            case "right_leg_lower":
+            case "right_leg_upper":
                 if (self.health <= 0) {
                     gibserverutils::gibrightleg(self);
                     if (randomint(100) > 75) {
@@ -2080,9 +2080,9 @@ function zombie_gib_on_damage() {
                     self.missinglegs = 1;
                 }
                 break;
-            case 63:
-            case 65:
-            case 66:
+            case "left_foot":
+            case "left_leg_lower":
+            case "left_leg_upper":
                 if (self.health <= 0) {
                     gibserverutils::gibleftleg(self);
                     if (randomint(100) > 75) {
@@ -2253,14 +2253,14 @@ function zombie_should_gib(amount, attacker, type) {
         }
     }
     switch (type) {
-    case 53:
-    case 76:
-    case 78:
-    case 79:
-    case 80:
-    case 81:
+    case "MOD_BURNED":
+    case "MOD_FALLING":
+    case "MOD_SUICIDE":
+    case "MOD_TELEFRAG":
+    case "MOD_TRIGGER_HURT":
+    case "MOD_UNKNOWN":
         return false;
-    case 77:
+    case "MOD_MELEE":
         return false;
     }
     if (type == "MOD_PISTOL_BULLET" || type == "MOD_RIFLE_BULLET") {
@@ -2381,7 +2381,7 @@ function function_62277a3f(dmg, delay, attacker, means_of_death) {
     var_29d8f4bd = self.damageweapon;
     while (true) {
         if (isdefined(delay)) {
-            wait(delay);
+            wait delay;
         }
         if (isdefined(self)) {
             if (isdefined(self.no_gib) && self.no_gib) {
@@ -2608,8 +2608,8 @@ function autoexec init_ignore_player_handler() {
 // Checksum 0x8b94aae4, Offset: 0x78c0
 // Size: 0x8e
 function register_ignore_player_handler(archetype, ignore_player_func) {
-    assert(isdefined(archetype), "_crawl");
-    assert(!isdefined(level._ignore_player_handler[archetype]), "_crawl" + archetype + "_crawl");
+    assert(isdefined(archetype), "<dev string:x2bf>");
+    assert(!isdefined(level._ignore_player_handler[archetype]), "<dev string:x2e8>" + archetype + "<dev string:x301>");
     level._ignore_player_handler[archetype] = ignore_player_func;
 }
 

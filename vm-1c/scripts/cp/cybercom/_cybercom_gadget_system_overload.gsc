@@ -261,7 +261,7 @@ function function_5839c4ac(target, var_9bc2efcb, var_ba115ce0) {
         type = self cybercom::function_5e3d3aa();
         self orientmode("face default");
         self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
-        self waittillmatch(#"hash_39fa7e38", "fire");
+        self waittillmatch(#"ai_cybercom_anim", "fire");
     }
     weapon = getweapon("gadget_system_overload");
     foreach (guy in validtargets) {
@@ -269,7 +269,7 @@ function function_5839c4ac(target, var_9bc2efcb, var_ba115ce0) {
             continue;
         }
         guy thread system_overload(self, var_ba115ce0);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -285,7 +285,7 @@ function system_overload(attacker, var_ba115ce0, weapon, var_9caedf97) {
     if (!isdefined(weapon)) {
         weapon = getweapon("gadget_system_overload");
     }
-    self notify(#"hash_f8c5dd60", weapon, attacker);
+    self notify(#"cybercom_action", weapon, attacker);
     if (isvehicle(self)) {
         self thread function_b4223599(attacker, weapon);
         return;
@@ -307,7 +307,7 @@ function system_overload(attacker, var_ba115ce0, weapon, var_9caedf97) {
         disabletime = getdvarfloat("scr_system_overload_lifetime", 6.3) * 1000;
     }
     self clientfield::set("cybercom_sysoverload", 1);
-    wait(randomfloatrange(0, 0.75));
+    wait randomfloatrange(0, 0.75);
     var_8e113fac = gettime() + disabletime + randomint(3000);
     type = self cybercom::function_5e3d3aa();
     var_c60a5dd5 = type == "crc";
@@ -323,7 +323,7 @@ function system_overload(attacker, var_ba115ce0, weapon, var_9caedf97) {
     self thread cybercom::function_cf64f12c("damage_pain", "shutdown_anim", 1, attacker, weapon);
     self thread cybercom::function_cf64f12c("notify_melee_damage", "shutdown_anim", 1, attacker, weapon);
     self thread cybercom::function_cf64f12c("breakout_sysoverload_loop", "shutdown_anim", 0, attacker, weapon);
-    self waittillmatch(#"hash_a2645c65", "end");
+    self waittillmatch(#"shutdown_anim", "end");
     waittillframeend();
     self ai::set_behavior_attribute("robot_lights", 2);
     self.ignoreall = 1;
@@ -341,7 +341,7 @@ function system_overload(attacker, var_ba115ce0, weapon, var_9caedf97) {
         self animscripted("restart_anim", self.origin, self.angles, "ai_robot_base_" + type + "_shutdown_2_alert");
         self thread cybercom::function_cf64f12c("damage_pain", "restart_anim", 1, attacker, weapon);
         self thread cybercom::function_cf64f12c("notify_melee_damage", "restart_anim", 1, attacker, weapon);
-        self waittillmatch(#"hash_82518b16", "end");
+        self waittillmatch(#"restart_anim", "end");
         if (var_c60a5dd5) {
             blackboard::setblackboardattribute(self, "_stance", "crouch");
         }
@@ -362,7 +362,7 @@ function system_overload(attacker, var_ba115ce0, weapon, var_9caedf97) {
 // Size: 0x3a
 function function_53cfe88a() {
     self endon(#"death");
-    wait(getdvarfloat("scr_system_overload_loop_time", 5.9));
-    self notify(#"hash_355afb47");
+    wait getdvarfloat("scr_system_overload_loop_time", 5.9);
+    self notify(#"breakout_sysoverload_loop");
 }
 

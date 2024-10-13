@@ -2,9 +2,9 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_c49c3ddb;
+#namespace zm_stalingrad_fx;
 
-// Namespace namespace_c49c3ddb
+// Namespace zm_stalingrad_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xddd33384, Offset: 0x628
 // Size: 0x24
@@ -13,7 +13,7 @@ function init() {
     function_e6258024();
 }
 
-// Namespace namespace_c49c3ddb
+// Namespace zm_stalingrad_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3e0c4437, Offset: 0x658
 // Size: 0x1fa
@@ -38,7 +38,7 @@ function function_f45953c() {
     level._effect["meatball_impact"] = "zombie/fx_meatball_impact_ground_tell_zod_zmb";
 }
 
-// Namespace namespace_c49c3ddb
+// Namespace zm_stalingrad_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x860
 // Size: 0x4
@@ -46,7 +46,7 @@ function function_e6258024() {
     
 }
 
-// Namespace namespace_c49c3ddb
+// Namespace zm_stalingrad_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd5ad6fbd, Offset: 0x870
 // Size: 0xaa

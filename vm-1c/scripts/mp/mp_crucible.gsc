@@ -6,16 +6,16 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_dae40e52;
+#namespace mp_crucible;
 
-// Namespace namespace_dae40e52
+// Namespace mp_crucible
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9760110c, Offset: 0x240
 // Size: 0xcac
 function main() {
     precache();
-    namespace_86acebf7::main();
-    namespace_59e8c21e::main();
+    mp_crucible_fx::main();
+    mp_crucible_sound::main();
     load::main();
     compass::setupminimap("compass_map_mp_crucible");
     setdvar("compassmaxrange", "2100");
@@ -70,7 +70,7 @@ function main() {
     level.cleandepositpoints = array((45.3433, -262.815, 148.125), (-998.58, -772.263, 40.125), (-857.997, 719.979, 33.625), (1402.7, -1330.99, 32.125));
 }
 
-// Namespace namespace_dae40e52
+// Namespace mp_crucible
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xef8
 // Size: 0x4

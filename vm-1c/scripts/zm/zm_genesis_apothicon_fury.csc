@@ -13,9 +13,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_c21dfba4;
+#namespace zm_genesis_apothicon_fury;
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 0, eflags: 0x2
 // Checksum 0x9a29205b, Offset: 0x320
 // Size: 0x34
@@ -23,7 +23,7 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_apothicon_fury", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe9ab9c79, Offset: 0x360
 // Size: 0x9a
@@ -35,18 +35,18 @@ function __init__() {
     level._effect["apothicon_fury_meteor_exp"] = "dlc4/genesis/fx_apothicon_fury_spawn_in_exp";
 }
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 7, eflags: 0x1 linked
 // Checksum 0x41dcbda8, Offset: 0x408
 // Size: 0x14c
 function function_87fb20f7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval === 0) {
-        if (isdefined(self.var_7b71ef61)) {
-            stopfx(localclientnum, self.var_7b71ef61);
+        if (isdefined(self.apothicon_fury_meteor_fx)) {
+            stopfx(localclientnum, self.apothicon_fury_meteor_fx);
         }
     }
     if (newval === 1) {
-        self.var_7b71ef61 = playfxontag(localclientnum, level._effect["apothicon_fury_meteor_fx"], self, "tag_origin");
+        self.apothicon_fury_meteor_fx = playfxontag(localclientnum, level._effect["apothicon_fury_meteor_fx"], self, "tag_origin");
     }
     if (newval == 2) {
         playfxontag(localclientnum, level._effect["apothicon_fury_meteor_exp"], self, "tag_origin");

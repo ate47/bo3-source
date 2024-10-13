@@ -42,9 +42,9 @@ function network_choke_safe(id) {
 // Checksum 0x53e1a62c, Offset: 0x1b0
 // Size: 0xfe
 function network_choke_action(id, choke_action, arg1, arg2, arg3) {
-    assert(isdefined(level.zombie_network_choke_ids_max[id]), "<unknown string>" + id + "<unknown string>");
+    assert(isdefined(level.zombie_network_choke_ids_max[id]), "<dev string:x28>" + id + "<dev string:x38>");
     while (!network_choke_safe(id)) {
-        wait(0.05);
+        wait 0.05;
     }
     level.zombie_network_choke_ids_count[id]++;
     if (!isdefined(arg1)) {

@@ -24,10 +24,10 @@ function __init__() {
     clientfield::register("allplayers", "ds_ammo", 12000, 1, "int", &function_3b8ce539, 0, 0);
     clientfield::register("allplayers", "burninate", 12000, 1, "counter", &function_adc7474a, 0, 0);
     clientfield::register("allplayers", "burninate_upgraded", 12000, 1, "counter", &function_627dd7e5, 0, 0);
-    clientfield::register("actor", "dragonshield_snd_projectile_impact", 12000, 1, "counter", &function_7ba84100, 0, 0);
-    clientfield::register("vehicle", "dragonshield_snd_projectile_impact", 12000, 1, "counter", &function_7ba84100, 0, 0);
-    clientfield::register("actor", "dragonshield_snd_zombie_knockdown", 12000, 1, "counter", &function_d2012501, 0, 0);
-    clientfield::register("vehicle", "dragonshield_snd_zombie_knockdown", 12000, 1, "counter", &function_d2012501, 0, 0);
+    clientfield::register("actor", "dragonshield_snd_projectile_impact", 12000, 1, "counter", &dragonshield_snd_projectile_impact, 0, 0);
+    clientfield::register("vehicle", "dragonshield_snd_projectile_impact", 12000, 1, "counter", &dragonshield_snd_projectile_impact, 0, 0);
+    clientfield::register("actor", "dragonshield_snd_zombie_knockdown", 12000, 1, "counter", &dragonshield_snd_zombie_knockdown, 0, 0);
+    clientfield::register("vehicle", "dragonshield_snd_zombie_knockdown", 12000, 1, "counter", &dragonshield_snd_zombie_knockdown, 0, 0);
 }
 
 // Namespace namespace_8215525
@@ -70,7 +70,7 @@ function function_627dd7e5(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x221ee2b3, Offset: 0x778
 // Size: 0x8c
-function function_7ba84100(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function dragonshield_snd_projectile_impact(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     playsound(localclientnum, "vox_dragonshield_forcehit", self.origin);
     playsound(localclientnum, "wpn_dragonshield_proj_impact", self.origin);
 }
@@ -79,7 +79,7 @@ function function_7ba84100(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6d37b590, Offset: 0x810
 // Size: 0x64
-function function_d2012501(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function dragonshield_snd_zombie_knockdown(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     playsound(localclientnum, "fly_dragonshield_forcehit", self.origin);
 }
 

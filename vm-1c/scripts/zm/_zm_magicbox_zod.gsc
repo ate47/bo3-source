@@ -47,11 +47,11 @@ function custom_joker_movement() {
     var_2dfb577c setmodel(level.chest_joker_model);
     var_2dfb577c.angles = self.angles + (0, 180, 0);
     var_2dfb577c playsound("zmb_hellbox_bear");
-    wait(0.5);
+    wait 0.5;
     level notify(#"weapon_fly_away_start");
-    wait(1);
+    wait 1;
     var_2dfb577c rotateyaw(3000, 4.5, 4.5);
-    wait(3);
+    wait 3;
     v_angles = anglestoforward(self.angles - (90, 90, 0));
     var_2dfb577c moveto(var_2dfb577c.origin + 35 * v_angles, 1.5, 1);
     var_2dfb577c waittill(#"movedone");
@@ -71,7 +71,7 @@ function custom_magic_box_timer_til_despawn(magic_box) {
     putbacktime = 12;
     v_float = anglestoup(self.angles) * level.custom_magicbox_float_height;
     self moveto(self.origin - v_float * 0.4, putbacktime, putbacktime * 0.5);
-    wait(putbacktime);
+    wait putbacktime;
     if (isdefined(self)) {
         self delete();
     }
@@ -96,7 +96,7 @@ function custom_pandora_fx_func() {
         level flag::wait_till("start_zombie_round_logic");
         level._box_initialized = 1;
     }
-    wait(1);
+    wait 1;
     if (isdefined(self.pandora_light)) {
         playfxontag(level._effect["box_light_marker"], self.pandora_light, "tag_origin");
     }
@@ -121,7 +121,7 @@ function custom_pandora_show_func() {
 // Checksum 0xae86640a, Offset: 0x9d8
 // Size: 0xc
 function function_c6955e8b() {
-    wait(0.5);
+    wait 0.5;
 }
 
 // Namespace namespace_cfbe948b
@@ -134,33 +134,33 @@ function set_magic_box_zbarrier_state(state) {
     }
     self notify(#"zbarrier_state_change");
     switch (state) {
-    case 16:
+    case "away":
         self showzbarrierpiece(0);
         self.state = "away";
         self.owner.is_locked = 0;
         break;
-    case 17:
+    case "arriving":
         self showzbarrierpiece(1);
         self thread function_4831fb0d();
         self.state = "arriving";
         break;
-    case 21:
+    case "initial":
         self showzbarrierpiece(1);
         self thread function_fea04511();
         self thread zm_unitrigger::register_static_unitrigger(self.owner.unitrigger_stub, &zm_magicbox::magicbox_unitrigger_think);
         self.state = "close";
         break;
-    case 19:
+    case "open":
         self showzbarrierpiece(2);
         self thread function_63e09f12();
         self.state = "open";
         break;
-    case 18:
+    case "close":
         self showzbarrierpiece(2);
         self thread function_fe30a0c8();
         self.state = "close";
         break;
-    case 20:
+    case "leaving":
         self showzbarrierpiece(1);
         self thread function_fd5f77b3();
         self.state = "leaving";
@@ -193,7 +193,7 @@ function function_fea04511() {
 function function_4831fb0d() {
     self setzbarrierpiecestate(1, "opening");
     while (self getzbarrierpiecestate(1) == "opening") {
-        wait(0.05);
+        wait 0.05;
     }
     self notify(#"arrived");
     self.state = "close";
@@ -209,7 +209,7 @@ function function_fd5f77b3() {
     self setzbarrierpiecestate(1, "closing");
     self playsound("zmb_hellbox_rise");
     while (self getzbarrierpiecestate(1) == "closing") {
-        wait(0.1);
+        wait 0.1;
     }
     self notify(#"left");
     self clientfield::set("magicbox_open_fx", 2);
@@ -228,7 +228,7 @@ function function_63e09f12() {
     self setzbarrierpiecestate(2, "opening");
     self playsound("zmb_hellbox_open");
     while (self getzbarrierpiecestate(2) == "opening") {
-        wait(0.1);
+        wait 0.1;
     }
     self notify(#"opened");
     self thread function_e0c48214();
@@ -245,7 +245,7 @@ function function_e0c48214() {
     while (true) {
         self setzbarrierpiecestate(5, "opening");
         while (self getzbarrierpiecestate(5) != "open") {
-            wait(0.05);
+            wait 0.05;
         }
     }
 }
@@ -262,7 +262,7 @@ function function_fe30a0c8() {
     self playsound("zmb_hellbox_close");
     self clientfield::set("magicbox_open_fx", 0);
     while (self getzbarrierpiecestate(2) == "closing") {
-        wait(0.1);
+        wait 0.1;
     }
     self notify(#"closed");
 }
@@ -273,7 +273,7 @@ function function_fe30a0c8() {
 // Size: 0x16c
 function custom_magic_box_do_weapon_rise() {
     self endon(#"box_hacked_respin");
-    wait(0.5);
+    wait 0.5;
     self setzbarrierpiecestate(3, "closed");
     self setzbarrierpiecestate(4, "closed");
     util::wait_network_frame();
@@ -284,7 +284,7 @@ function custom_magic_box_do_weapon_rise() {
     self setzbarrierpiecestate(3, "opening");
     self setzbarrierpiecestate(4, "opening");
     while (self getzbarrierpiecestate(3) != "open") {
-        wait(0.5);
+        wait 0.5;
     }
     self hidezbarrierpiece(3);
     self hidezbarrierpiece(4);

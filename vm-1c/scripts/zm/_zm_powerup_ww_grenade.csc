@@ -2,9 +2,9 @@
 #using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e0df0f6f;
+#namespace zm_powerup_ww_grenade;
 
-// Namespace namespace_e0df0f6f
+// Namespace zm_powerup_ww_grenade
 // Params 0, eflags: 0x2
 // Checksum 0xab281d26, Offset: 0xf8
 // Size: 0x34
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
     system::register("zm_powerup_ww_grenade", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_e0df0f6f
+// Namespace zm_powerup_ww_grenade
 // Params 0, eflags: 0x1 linked
 // Checksum 0x78fe77de, Offset: 0x138
 // Size: 0x34

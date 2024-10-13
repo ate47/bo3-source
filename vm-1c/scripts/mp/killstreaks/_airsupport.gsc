@@ -23,19 +23,19 @@ function init() {
     airsupport_heights = struct::get_array("air_support_height", "targetname");
     /#
         if (airsupport_heights.size > 1) {
-            util::error("used");
+            util::error("<dev string:x28>");
         }
     #/
     airsupport_heights = getentarray("air_support_height", "targetname");
     /#
         if (airsupport_heights.size > 0) {
-            util::error("used");
+            util::error("<dev string:x64>");
         }
     #/
     heli_height_meshes = getentarray("heli_height_lock", "classname");
     /#
         if (heli_height_meshes.size > 1) {
-            util::error("used");
+            util::error("<dev string:xc7>");
         }
     #/
     initrotatingrig();
@@ -47,7 +47,7 @@ function init() {
 // Size: 0x4c
 function function_b49a99ff(location, usedcallback) {
     self notify(#"used");
-    wait(0.05);
+    wait 0.05;
     if (isdefined(usedcallback)) {
         return self [[ usedcallback ]](location);
     }
@@ -60,7 +60,7 @@ function function_b49a99ff(location, usedcallback) {
 // Size: 0x48
 function function_c92c5dd5(var_1bc5675c, var_6376ee77, usedcallback) {
     self notify(#"used");
-    wait(0.05);
+    wait 0.05;
     return self [[ usedcallback ]](var_1bc5675c, var_6376ee77);
 }
 
@@ -130,7 +130,7 @@ function clearuplocationselection() {
 // Size: 0x34
 function stoploopsoundaftertime(time) {
     self endon(#"death");
-    wait(time);
+    wait time;
     self stoploopsound(2);
 }
 
@@ -164,7 +164,7 @@ function getminimumflyheight() {
     if (isdefined(airsupport_height)) {
         planeflyheight = airsupport_height.origin[2];
     } else {
-        println("used");
+        println("<dev string:x103>");
         planeflyheight = 850;
         if (isdefined(level.airsupportheightscale)) {
             level.airsupportheightscale = getdvarint("scr_airsupportHeightScale", level.airsupportheightscale);
@@ -185,7 +185,7 @@ function callstrike(flightplan) {
     level.bomberdamagedents = [];
     level.bomberdamagedentscount = 0;
     level.bomberdamagedentsindex = 0;
-    assert(flightplan.distance != 0, "used");
+    assert(flightplan.distance != 0, "<dev string:x152>");
     planehalfdistance = flightplan.distance / 2;
     path = getstrikepath(flightplan.target, flightplan.height, planehalfdistance);
     startpoint = path["start"];
@@ -205,9 +205,9 @@ function callstrike(flightplan) {
     plane_seperation = 25;
     side_offset = vectorscale(side, plane_seperation);
     level thread planestrike(flightplan.owner, requireddeathcount, startpoint, endpoint, bombtime, flytime, flightplan.speed, flightplan.bombspeedscale, direction, flightplan.planespawncallback);
-    wait(flightplan.planespacing);
+    wait flightplan.planespacing;
     level thread planestrike(flightplan.owner, requireddeathcount, startpoint + side_offset, endpoint + side_offset, bombtime, flytime, flightplan.speed, flightplan.bombspeedscale, direction, flightplan.planespawncallback);
-    wait(flightplan.planespacing);
+    wait flightplan.planespacing;
     side_offset = vectorscale(side, -1 * plane_seperation);
     level thread planestrike(flightplan.owner, requireddeathcount, startpoint + side_offset, endpoint + side_offset, bombtime, flytime, flightplan.speed, flightplan.bombspeedscale, direction, flightplan.planespawncallback);
 }
@@ -227,7 +227,7 @@ function planestrike(owner, requireddeathcount, pathstart, pathend, bombtime, fl
     if (isdefined(planespawnedfunction)) {
         plane [[ planespawnedfunction ]](owner, requireddeathcount, pathstart, pathend, bombtime, bombspeedscale, flytime, flyspeed);
     }
-    wait(flytime);
+    wait flytime;
     plane notify(#"delete");
     plane delete();
 }
@@ -609,7 +609,7 @@ function getstrikepath(target, height, halfdistance, yaw) {
 // Checksum 0x289984a2, Offset: 0x23b0
 // Size: 0x74
 function doglassdamage(pos, radius, max, min, mod) {
-    wait(randomfloatrange(0.05, 0.15));
+    wait randomfloatrange(0.05, 0.15);
     glassradiusdamage(pos, radius, max, min, mod);
 }
 
@@ -729,7 +729,7 @@ function initrotatingrig() {
 function rotaterig() {
     for (;;) {
         self rotateyaw(-360, 60);
-        wait(60);
+        wait 60;
     }
 }
 
@@ -743,11 +743,11 @@ function swayrig() {
         z = randomintrange(-200, -100);
         time = randomintrange(3, 6);
         self moveto(centerorigin + (0, 0, z), time, 1, 1);
-        wait(time);
+        wait time;
         z = randomintrange(100, -56);
         time = randomintrange(3, 6);
         self moveto(centerorigin + (0, 0, z), time, 1, 1);
-        wait(time);
+        wait time;
     }
 }
 
@@ -757,7 +757,7 @@ function swayrig() {
 // Size: 0x34
 function stoprotation(time) {
     self endon(#"death");
-    wait(time);
+    wait time;
     self stoploopsound();
 }
 
@@ -773,7 +773,7 @@ function flattenyaw(goal) {
     }
     while (abs(self.angles[1] - goal) > 3) {
         self.angles = (self.angles[0], self.angles[1] + increment, self.angles[2]);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -785,7 +785,7 @@ function flattenroll() {
     self endon(#"death");
     while (self.angles[2] < 0) {
         self.angles = (self.angles[0], self.angles[1], self.angles[2] + 2.5);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -841,7 +841,7 @@ function getrandomhelicopterstartorigin() {
     start_origin = anglestoforward(direction) * dist;
     start_origin += ((randomfloat(2) - 1) * pathrandomness, (randomfloat(2) - 1) * pathrandomness, 0);
     /#
-        if (getdvarint("used", 0)) {
+        if (getdvarint("<dev string:x183>", 0)) {
             if (level.noflyzones.size) {
                 index = randomintrange(0, level.noflyzones.size);
                 delta = level.noflyzones[index].origin;
@@ -861,7 +861,7 @@ function getrandomhelicopterstartorigin() {
     // Checksum 0x83e51dd, Offset: 0x3468
     // Size: 0x96
     function debug_no_fly_zones() {
-                for (i = 0; i < level.noflyzones.size; i++) {
+        for (i = 0; i < level.noflyzones.size; i++) {
             debug_airsupport_cylinder(level.noflyzones[i].origin, level.noflyzones[i].radius, level.noflyzones[i].height, (1, 1, 1), undefined, 5000);
         }
     }
@@ -886,7 +886,7 @@ function debug_plane_line(flytime, flyspeed, pathstart, pathend) {
 // Size: 0x94
 function debug_draw_bomb_explosion(prevpos) {
     self notify(#"draw_explosion");
-    wait(0.05);
+    wait 0.05;
     self endon(#"draw_explosion");
     weapon, position = self waittill(#"projectile_impact");
     thread debug_line(prevpos, position, (0.5, 1, 0));
@@ -901,7 +901,7 @@ function debug_draw_bomb_explosion(prevpos) {
     // Size: 0x118
     function debug_draw_bomb_path(projectile, color, time) {
         self endon(#"death");
-        level.airsupport_debug = getdvarint("used", 0);
+        level.airsupport_debug = getdvarint("<dev string:x198>", 0);
         if (!isdefined(color)) {
             color = (0.5, 1, 0);
         }
@@ -913,7 +913,7 @@ function debug_draw_bomb_explosion(prevpos) {
                 if (isdefined(projectile) && projectile) {
                     thread debug_draw_bomb_explosion(prevpos);
                 }
-                wait(0.2);
+                wait 0.2;
             }
         }
     }
@@ -923,7 +923,7 @@ function debug_draw_bomb_explosion(prevpos) {
     // Checksum 0x6ba8bb3f, Offset: 0x3798
     // Size: 0xd4
     function debug_print3d_simple(message, ent, offset, frames) {
-        level.airsupport_debug = getdvarint("used", 0);
+        level.airsupport_debug = getdvarint("<dev string:x198>", 0);
         if (isdefined(level.airsupport_debug) && level.airsupport_debug == 1) {
             if (isdefined(frames)) {
                 thread draw_text(message, (0.8, 0.8, 0.8), ent, offset, frames);
@@ -941,7 +941,7 @@ function debug_draw_bomb_explosion(prevpos) {
         if (frames == 0) {
             while (isdefined(ent) && isdefined(ent.origin)) {
                 print3d(ent.origin + offset, msg, color, 0.5, 4);
-                wait(0.05);
+                wait 0.05;
             }
             return;
         }
@@ -950,7 +950,7 @@ function debug_draw_bomb_explosion(prevpos) {
                 break;
             }
             print3d(ent.origin + offset, msg, color, 0.5, 4);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -959,7 +959,7 @@ function debug_draw_bomb_explosion(prevpos) {
     // Checksum 0x4a7c9a94, Offset: 0x39a0
     // Size: 0x9c
     function debug_print3d(message, color, ent, origin_offset, frames) {
-        level.airsupport_debug = getdvarint("used", 0);
+        level.airsupport_debug = getdvarint("<dev string:x198>", 0);
         if (isdefined(level.airsupport_debug) && level.airsupport_debug == 1) {
             self thread draw_text(message, color, ent, origin_offset, frames);
         }
@@ -973,7 +973,7 @@ function debug_draw_bomb_explosion(prevpos) {
 // Size: 0xec
 function debug_line(from, to, color, time, depthtest) {
     /#
-        level.airsupport_debug = getdvarint("used", 0);
+        level.airsupport_debug = getdvarint("<dev string:x198>", 0);
         if (isdefined(level.airsupport_debug) && level.airsupport_debug == 1) {
             if (distancesquared(from, to) < 0.01) {
                 return;
@@ -995,7 +995,7 @@ function debug_line(from, to, color, time, depthtest) {
 // Size: 0xac
 function debug_star(origin, color, time) {
     /#
-        level.airsupport_debug = getdvarint("used", 0);
+        level.airsupport_debug = getdvarint("<dev string:x198>", 0);
         if (isdefined(level.airsupport_debug) && level.airsupport_debug == 1) {
             if (!isdefined(time)) {
                 time = 1000;
@@ -1015,7 +1015,7 @@ function debug_star(origin, color, time) {
     // Checksum 0xc97d38c7, Offset: 0x3bf8
     // Size: 0xbc
     function debug_circle(origin, radius, color, time) {
-        level.airsupport_debug = getdvarint("used", 0);
+        level.airsupport_debug = getdvarint("<dev string:x198>", 0);
         if (isdefined(level.airsupport_debug) && level.airsupport_debug == 1) {
             if (!isdefined(time)) {
                 time = 1000;
@@ -1035,7 +1035,7 @@ function debug_star(origin, color, time) {
 // Size: 0x104
 function debug_sphere(origin, radius, color, alpha, time) {
     /#
-        level.airsupport_debug = getdvarint("used", 0);
+        level.airsupport_debug = getdvarint("<dev string:x198>", 0);
         if (isdefined(level.airsupport_debug) && level.airsupport_debug == 1) {
             if (!isdefined(time)) {
                 time = 1000;
@@ -1056,7 +1056,7 @@ function debug_sphere(origin, radius, color, alpha, time) {
     // Checksum 0xb12ada07, Offset: 0x3dd0
     // Size: 0xa4
     function debug_airsupport_cylinder(origin, radius, height, color, mustrenderheight, time) {
-        level.airsupport_debug = getdvarint("used", 0);
+        level.airsupport_debug = getdvarint("<dev string:x198>", 0);
         if (isdefined(level.airsupport_debug) && level.airsupport_debug == 1) {
             debug_cylinder(origin, radius, height, color, mustrenderheight, time);
         }
@@ -1130,7 +1130,7 @@ function monitorspeed(spawnprotectiontime) {
     }
     self.nottargettedai_underminspeedtimer = 0;
     if (isdefined(spawnprotectiontime)) {
-        wait(spawnprotectiontime);
+        wait spawnprotectiontime;
     }
     while (true) {
         velocity = self getvelocity();
@@ -1140,7 +1140,7 @@ function monitorspeed(spawnprotectiontime) {
         } else {
             self.nottargettedai_underminspeedtimer = 0;
         }
-        wait(waitperiod);
+        wait waitperiod;
     }
 }
 

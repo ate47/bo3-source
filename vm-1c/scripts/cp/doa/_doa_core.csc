@@ -49,7 +49,7 @@ function main() {
     level.var_46418da4 = 2;
     level.var_bd436f37 = 0.5;
     level.var_e3119165 = array("zombietron_gib_chunk_fat", "zombietron_gib_chunk_bone_01", "zombietron_gib_chunk_bone_02", "zombietron_gib_chunk_bone_03", "zombietron_gib_chunk_flesh_01", "zombietron_gib_chunk_flesh_02", "zombietron_gib_chunk_flesh_03", "zombietron_gib_chunk_meat_01", "zombietron_gib_chunk_meat_02", "zombietron_gib_chunk_meat_03");
-    clientfield::register("world", "podiumEvent", 1, 1, "int", &function_10093dd7, 0, 0);
+    clientfield::register("world", "podiumEvent", 1, 1, "int", &podiumEvent, 0, 0);
     clientfield::register("world", "overworld", 1, 1, "int", &function_a6c926fc, 0, 0);
     clientfield::register("world", "scoreMenu", 1, 1, "int", &function_d3b4c89d, 0, 0);
     clientfield::register("world", "overworldlevel", 1, 5, "int", &function_22de3f7, 0, 0);
@@ -80,12 +80,12 @@ function main() {
     clientfield::register("toplayer", "controlBinding", 1, 1, "counter", &function_f8c69ca4, 0, 0);
     clientfield::register("toplayer", "goFPS", 1, 1, "counter", &function_ca593121, 0, 0);
     clientfield::register("toplayer", "exitFPS", 1, 1, "counter", &function_9e1eca0b, 0, 0);
-    clientfield::register("world", "cleanUpGibs", 1, 1, "counter", &function_efeeaa92, 0, 0);
-    clientfield::register("world", "killweather", 1, 1, "counter", &namespace_3ca3c537::function_22f2039b, 0, 0);
-    clientfield::register("world", "killfog", 1, 1, "counter", &namespace_3ca3c537::function_9977953, 0, 0);
+    clientfield::register("world", "cleanUpGibs", 1, 1, "counter", &cleanUpGibs, 0, 0);
+    clientfield::register("world", "killweather", 1, 1, "counter", &namespace_3ca3c537::killweather, 0, 0);
+    clientfield::register("world", "killfog", 1, 1, "counter", &namespace_3ca3c537::killfog, 0, 0);
     clientfield::register("world", "flipCamera", 1, 2, "int", &namespace_3ca3c537::flipcamera, 0, 0);
     clientfield::register("world", "arenaUpdate", 1, 8, "int", &namespace_3ca3c537::setarena, 0, 0);
-    clientfield::register("world", "arenaRound", 1, 3, "int", &namespace_3ca3c537::function_836d1e22, 0, 0);
+    clientfield::register("world", "arenaRound", 1, 3, "int", &namespace_3ca3c537::arenaRound, 0, 0);
     clientfield::register("actor", "enemy_ragdoll_explode", 1, 1, "int", &zombie_ragdoll_explode_cb, 0, 0);
     clientfield::register("actor", "zombie_gut_explosion", 1, 1, "int", &zombie_gut_explosion_cb, 0, 0);
     clientfield::register("actor", "zombie_chunk", 1, 1, "counter", &function_3a1ccea7, 0, 0);
@@ -97,13 +97,13 @@ function main() {
     clientfield::register("actor", "zombie_riser_fx", 1, 1, "int", &handle_zombie_risers, 0, 0);
     clientfield::register("actor", "zombie_bloodriser_fx", 1, 1, "int", &function_cb806a9b, 0, 0);
     clientfield::register("scriptmover", "heartbeat", 1, 3, "int", &function_d277a961, 0, 0);
-    clientfield::register("actor", "burnType", 1, 2, "int", &namespace_eaa992c::function_7aac5112, 0, 0);
-    clientfield::register("actor", "burnZombie", 1, 1, "counter", &namespace_eaa992c::function_f6008bb4, 0, 0);
+    clientfield::register("actor", "burnType", 1, 2, "int", &namespace_eaa992c::burnType, 0, 0);
+    clientfield::register("actor", "burnZombie", 1, 1, "counter", &namespace_eaa992c::burnZombie, 0, 0);
     clientfield::register("actor", "burnCorpse", 1, 1, "counter", &namespace_eaa992c::burncorpse, 0, 0);
     clientfield::register("toplayer", "changeCamera", 1, 1, "counter", &changecamera, 0, 0);
     clientfield::register("actor", "zombie_has_eyes", 1, 1, "int", &namespace_eaa992c::zombie_eyes_clientfield_cb, 0, 0);
     clientfield::register("world", "cameraHeight", 1, 3, "int", &function_b868b40f, 0, 0);
-    clientfield::register("world", "cleanupGiblets", 1, 1, "int", &function_23f655ed, 0, 0);
+    clientfield::register("world", "cleanupGiblets", 1, 1, "int", &cleanupGiblets, 0, 0);
     clientfield::register("scriptmover", "camera_focus_item", 1, 1, "int", &function_354ec425, 0, 0);
     clientfield::register("actor", "camera_focus_item", 1, 1, "int", &function_354ec425, 0, 0);
     clientfield::register("vehicle", "camera_focus_item", 1, 1, "int", &function_354ec425, 0, 0);
@@ -111,9 +111,9 @@ function main() {
     callback::on_shutdown(&on_player_shutdown);
     callback::on_localclient_connect(&player_on_connect);
     /#
-        clientfield::register("zombietron_gib_chunk_bone_01", "zombietron_gib_chunk_bone_01", 1, 1, "zombietron_gib_chunk_bone_01", &function_bbb7743c, 0, 0);
-        clientfield::register("zombietron_gib_chunk_bone_01", "zombietron_gib_chunk_bone_01", 1, 2, "zombietron_gib_chunk_bone_01", &function_cee29ae7, 0, 0);
-        clientfield::register("zombietron_gib_chunk_bone_01", "zombietron_gib_chunk_bone_01", 1, 30, "zombietron_gib_chunk_bone_01", &function_cd844947, 0, 0);
+        clientfield::register("<dev string:x28>", "<dev string:x2e>", 1, 1, "<dev string:x3a>", &function_bbb7743c, 0, 0);
+        clientfield::register("<dev string:x28>", "<dev string:x3e>", 1, 2, "<dev string:x3a>", &function_cee29ae7, 0, 0);
+        clientfield::register("<dev string:x28>", "<dev string:x4a>", 1, 30, "<dev string:x3a>", &function_cd844947, 0, 0);
         level.var_83a34f19 = 0;
         level.var_e9c73e06 = 0;
         level.var_7a6087fd = 0;
@@ -226,13 +226,13 @@ function function_ae0a4fc5() {
             }
             if (isdefined(doa.player) && doa.player != player) {
                 /#
-                    debugmsg("zombietron_gib_chunk_bone_01" + player.name + "zombietron_gib_chunk_bone_01" + doa.player.name + "zombietron_gib_chunk_bone_01" + player getentitynumber() + "zombietron_gib_chunk_bone_01" + doa.player getentitynumber());
+                    debugmsg("<dev string:x5d>" + player.name + "<dev string:x7d>" + doa.player.name + "<dev string:x9e>" + player getentitynumber() + "<dev string:xa8>" + doa.player getentitynumber());
                 #/
                 continue;
             }
             player function_12c2fbcb();
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -279,7 +279,7 @@ function on_player_shutdown(localclientnum) {
 // Size: 0x4c
 function function_fc05827f(localclientnum) {
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     disablespeedblur(localclientnum);
     self blood::function_14cd2c76(localclientnum);
 }
@@ -290,7 +290,7 @@ function function_fc05827f(localclientnum) {
 // Size: 0xfc
 function function_2eaf8a3f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     /#
-        debugmsg("zombietron_gib_chunk_bone_01" + newval + "zombietron_gib_chunk_bone_01" + level.doa.roundnumber);
+        debugmsg("<dev string:xb5>" + newval + "<dev string:xcc>" + level.doa.roundnumber);
     #/
     if (newval) {
         setuimodelvalue(getuimodel(level.var_7e2a814c, "round"), level.doa.roundnumber);
@@ -314,7 +314,7 @@ function function_c97b97ae(localclientnum, oldval, newval, bnewent, binitialsnap
 function function_e3bb35e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level.doa.roundnumber = newval;
     /#
-        debugmsg("zombietron_gib_chunk_bone_01" + level.doa.roundnumber);
+        debugmsg("<dev string:xe0>" + level.doa.roundnumber);
     #/
 }
 
@@ -325,7 +325,7 @@ function function_e3bb35e(localclientnum, oldval, newval, bnewent, binitialsnap,
 function function_c86d63f6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     setuimodelvalue(getuimodel(level.var_7e2a814c, "numexits"), newval);
     /#
-        debugmsg("zombietron_gib_chunk_bone_01" + newval);
+        debugmsg("<dev string:xee>" + newval);
     #/
 }
 
@@ -336,7 +336,7 @@ function function_c86d63f6(localclientnum, oldval, newval, bnewent, binitialsnap
 function function_91976e37(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     setuimodelvalue(getuimodel(level.var_7e2a814c, "gameover"), newval > 0 ? level.doa.roundnumber : 0);
     /#
-        debugmsg("zombietron_gib_chunk_bone_01" + level.doa.roundnumber);
+        debugmsg("<dev string:xff>" + level.doa.roundnumber);
     #/
 }
 
@@ -347,7 +347,7 @@ function function_91976e37(localclientnum, oldval, newval, bnewent, binitialsnap
 function function_e63081e8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     setuimodelvalue(getuimodel(level.var_7e2a814c, "doafps"), newval);
     /#
-        debugmsg("zombietron_gib_chunk_bone_01" + newval);
+        debugmsg("<dev string:x110>" + newval);
     #/
     if (newval) {
         if (newval && getlocalplayers().size > 1) {
@@ -359,7 +359,7 @@ function function_e63081e8(localclientnum, oldval, newval, bnewent, binitialsnap
         }
         level.doa.var_6e0195ea = "fx_exploder_" + level.doa.arenas[level.doa.var_90873830].name + "_FPS";
         /#
-            debugmsg("zombietron_gib_chunk_bone_01" + level.doa.var_6e0195ea + "zombietron_gib_chunk_bone_01" + localclientnum);
+            debugmsg("<dev string:x11c>" + level.doa.var_6e0195ea + "<dev string:x132>" + localclientnum);
         #/
         playradiantexploder(localclientnum, level.doa.var_6e0195ea);
     } else {
@@ -404,13 +404,13 @@ function function_ca593121(localclientnum, oldval, newval, bnewent, binitialsnap
         level.doa.var_db180da = spawn(localclientnum, level.var_6383030e, "script_model");
         level.doa.var_db180da setmodel("tag_origin");
         level.doa.var_db180da moveto(self.origin + (0, 0, 72), 0.15);
-        wait(0.1);
+        wait 0.1;
         playfx(localclientnum, level._effect["bomb"], self.origin);
         level.doa.var_db180da util::waittill_any_timeout(0.1, "movedone");
         playfx(localclientnum, level._effect["turret_impact"], self.origin);
         self earthquake(1, 0.8, self.origin, 1000);
         playrumbleonposition(localclientnum, "damage_heavy", self.origin);
-        wait(0.1);
+        wait 0.1;
         if (isdefined(level.doa.var_db180da)) {
             level.doa.var_db180da delete();
             level.doa.var_db180da = undefined;
@@ -482,7 +482,7 @@ function function_a6c926fc(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xda31140a, Offset: 0x3438
 // Size: 0x1fe
-function function_10093dd7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function podiumEvent(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(level.var_c065e9ed) && isdefined(level.var_c065e9ed[localclientnum])) {
         stopfx(localclientnum, level.var_c065e9ed[localclientnum]);
         level.var_c065e9ed[localclientnum] = 0;
@@ -539,7 +539,7 @@ function function_354ec425(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2f02471d, Offset: 0x3760
 // Size: 0x4c
-function function_23f655ed(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function cleanupGiblets(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     cleanupspawneddynents();
 }
 
@@ -642,7 +642,7 @@ function function_10477d98(localclientnum) {
     stepsize = 20;
     while (gettime() < endtime) {
         if (self onground()) {
-            wait(0.2);
+            wait 0.2;
             if (!(isdefined(level.doa.var_2836c8ee) && level.doa.var_2836c8ee) && localclientnum != 0) {
                 continue;
             }
@@ -661,7 +661,7 @@ function function_10477d98(localclientnum) {
             lastposition = self.origin;
             continue;
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -684,7 +684,7 @@ function function_b868b40f(localclientnum, oldval, newval, bnewent, binitialsnap
 // Size: 0xce
 function function_409fa9ce(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     /#
-        debugmsg("zombietron_gib_chunk_bone_01" + (isdefined(self.name) ? self.name : "zombietron_gib_chunk_bone_01") + "zombietron_gib_chunk_bone_01" + newval + "zombietron_gib_chunk_bone_01" + localclientnum);
+        debugmsg("<dev string:x145>" + (isdefined(self.name) ? self.name : "<dev string:x151>") + "<dev string:x155>" + newval + "<dev string:x15b>" + localclientnum);
     #/
     if (newval) {
         self thread function_10477d98(localclientnum);
@@ -743,11 +743,11 @@ function rise_dust_fx(localclientnum, type, billow_fx, burst_fx, var_cf929ddb) {
     if (isdefined(burst_fx)) {
         playfx(localclientnum, burst_fx, self.origin + (0, 0, randomintrange(5, 10)));
     }
-    wait(0.25);
+    wait 0.25;
     if (isdefined(billow_fx)) {
         playfx(localclientnum, billow_fx, self.origin + (randomintrange(-10, 10), randomintrange(-10, 10), randomintrange(5, 10)));
     }
-    wait(2);
+    wait 2;
     dust_time = 5.5;
     dust_interval = 0.3;
     self util::waittill_dobj(localclientnum);
@@ -755,7 +755,7 @@ function rise_dust_fx(localclientnum, type, billow_fx, burst_fx, var_cf929ddb) {
         if (self hasdobj(localclientnum)) {
             playfxontag(localclientnum, var_cf929ddb, self, dust_tag);
         }
-        wait(dust_interval);
+        wait dust_interval;
     }
 }
 
@@ -766,7 +766,7 @@ function rise_dust_fx(localclientnum, type, billow_fx, burst_fx, var_cf929ddb) {
 function function_20671f0(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level.doa.var_7817fe3c[level.doa.var_7817fe3c.size] = self;
     arrayremovevalue(level.doa.var_7817fe3c, undefined);
-    self.var_d05d7e08 = newval;
+    self.hazard_type = newval;
     self thread function_38452435(localclientnum);
 }
 
@@ -775,10 +775,10 @@ function function_20671f0(localclientnum, oldval, newval, bnewent, binitialsnap,
 // Checksum 0xc1efda95, Offset: 0x4500
 // Size: 0xde
 function function_ec2caec3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    if (!isdefined(self.var_d05d7e08)) {
-        self.var_d05d7e08 = 0;
+    if (!isdefined(self.hazard_type)) {
+        self.hazard_type = 0;
     }
-    switch (self.var_d05d7e08) {
+    switch (self.hazard_type) {
     case 3:
         self.activefx = level._effect["electric_trap2"];
     case 1:
@@ -821,7 +821,7 @@ function function_b54615b2() {
         if (hazard == self) {
             continue;
         }
-        if (hazard.var_d05d7e08 != self.var_d05d7e08) {
+        if (hazard.hazard_type != self.hazard_type) {
             continue;
         }
         distsq = distancesquared(hazard.origin, self.origin);
@@ -953,18 +953,18 @@ function function_f7c0d598(mapping) {
     self endon(#"entityshutdown");
     self endon(#"disconnect");
     /#
-        debugmsg("zombietron_gib_chunk_bone_01" + (isdefined(self.name) ? self.name : "zombietron_gib_chunk_bone_01") + "zombietron_gib_chunk_bone_01" + mapping + "zombietron_gib_chunk_bone_01" + (self islocalplayer() ? "zombietron_gib_chunk_bone_01" : "zombietron_gib_chunk_bone_01"));
+        debugmsg("<dev string:x169>" + (isdefined(self.name) ? self.name : "<dev string:x18a>") + "<dev string:x195>" + mapping + "<dev string:x1a1>" + (self islocalplayer() ? "<dev string:x1b1>" : "<dev string:x1b6>"));
     #/
     if (self islocalplayer()) {
         clientnum = self getlocalclientnumber();
         /#
-            debugmsg("zombietron_gib_chunk_bone_01" + clientnum);
+            debugmsg("<dev string:x1bc>" + clientnum);
         #/
         forcegamemodemappings(clientnum, mapping);
         return;
     }
     /#
-        debugmsg("zombietron_gib_chunk_bone_01");
+        debugmsg("<dev string:x1e7>");
     #/
 }
 
@@ -1003,7 +1003,7 @@ function function_f87ff72d(localclientnum, oldval, newval, bnewent, binitialsnap
         player earthquake(1, 0.8, var_ec8a4984, 1000);
     }
     bomb delete();
-    wait(0.2);
+    wait 0.2;
     playfx(localclientnum, level._effect["nuke_dust"], var_ec8a4984);
 }
 
@@ -1133,7 +1133,7 @@ function zombie_wait_explode(localclientnum) {
                 where = self.origin;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
     if (isdefined(level._effect["zombie_guts_explosion"]) && util::is_mature()) {
         playfx(localclientnum, level._effect["zombie_guts_explosion"], where);
@@ -1171,7 +1171,7 @@ function function_36c61ba6(localclientnum, var_4faf5231, var_ad5de66e) {
             if (var_4faf5231) {
                 self.angles += (0, 1, 1);
             }
-            wait(0.016);
+            wait 0.016;
         }
         while (currentscale > var_ad5de66e) {
             currentscale -= var_ba7af42;
@@ -1186,10 +1186,10 @@ function function_36c61ba6(localclientnum, var_4faf5231, var_ad5de66e) {
             if (var_4faf5231) {
                 self.angles -= (0, 1, 1);
             }
-            wait(0.016);
+            wait 0.016;
         }
         self rotateto(baseangles, 0.6 - self.rate / 10);
-        wait(0.6 - self.rate / 10);
+        wait 0.6 - self.rate / 10;
     }
 }
 
@@ -1245,11 +1245,11 @@ function function_d277a961(localclientnum, oldval, newval, bnewent, binitialsnap
 // Checksum 0xa71f10d3, Offset: 0x6180
 // Size: 0x52
 function delay_for_clients_then_execute(func) {
-    wait(0.1);
+    wait 0.1;
     while (!clienthassnapshot(self.localclientnum)) {
-        wait(0.016);
+        wait 0.016;
     }
-    wait(0.1);
+    wait 0.1;
     self thread [[ func ]]();
 }
 
@@ -1317,7 +1317,7 @@ function changecamera(localclientnum, oldval, newval, bnewent, binitialsnap, fie
         }
     }
     /#
-        debugmsg("zombietron_gib_chunk_bone_01" + self getentitynumber() + "zombietron_gib_chunk_bone_01" + self.cameramode);
+        debugmsg("<dev string:x21d>" + self getentitynumber() + "<dev string:x225>" + self.cameramode);
     #/
 }
 
@@ -1325,7 +1325,7 @@ function changecamera(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbefb77a3, Offset: 0x65e0
 // Size: 0xb8
-function function_bbb7743c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function fixCameraOn(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     player = getlocalplayers()[0];
     if (newval) {
         level.doa.var_20e9a021 = 1;
@@ -1340,7 +1340,7 @@ function function_bbb7743c(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbe0e84ae, Offset: 0x66a0
 // Size: 0xb4
-function function_cee29ae7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function debugCamera(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level.var_7a6087fd = newval;
     player = getlocalplayers()[0];
     if (level.var_7a6087fd == 1) {
@@ -1354,7 +1354,7 @@ function function_cee29ae7(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5b01a10e, Offset: 0x6760
 // Size: 0x414
-function function_cd844947(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function debugCameraPayload(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     low = newval & 65535;
     high = newval >> 16;
     forward = anglestoforward(level.var_a32fbbc0);
@@ -1396,7 +1396,7 @@ function function_cd844947(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc530b83a, Offset: 0x6b80
 // Size: 0x4c
-function function_efeeaa92(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function cleanUpGibs(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     cleanupspawneddynents();
 }
 
@@ -1407,7 +1407,7 @@ function function_efeeaa92(localclientnum, oldval, newval, bnewent, binitialsnap
     // Checksum 0x9913422e, Offset: 0x6bd8
     // Size: 0x34
     function debugmsg(txt) {
-        println("zombietron_gib_chunk_bone_01" + txt);
+        println("<dev string:x23e>" + txt);
     }
 
 #/
@@ -1425,14 +1425,14 @@ function function_12c2fbcb() {
         self.doa = level.var_29e6f519[self.entnum];
         if (isdefined(self.doa.player)) {
             /#
-                debugmsg("zombietron_gib_chunk_bone_01" + (isdefined(self.name) ? self.name : "zombietron_gib_chunk_bone_01") + "zombietron_gib_chunk_bone_01" + (isdefined(self.doa.player) ? self.doa.player.name : "zombietron_gib_chunk_bone_01") + "zombietron_gib_chunk_bone_01" + self getentitynumber() + "zombietron_gib_chunk_bone_01" + (isdefined(self.doa.player) ? self.doa.player getentitynumber() : -1));
+                debugmsg("<dev string:x249>" + (isdefined(self.name) ? self.name : "<dev string:x151>") + "<dev string:x26b>" + (isdefined(self.doa.player) ? self.doa.player.name : "<dev string:x284>") + "<dev string:x9e>" + self getentitynumber() + "<dev string:x28b>" + (isdefined(self.doa.player) ? self.doa.player getentitynumber() : -1));
             #/
             assert(self.doa.player == self);
         }
         namespace_64c6b720::function_e06716c7(self.doa);
         self.doa.player = self;
         /#
-            debugmsg("zombietron_gib_chunk_bone_01" + (isdefined(self.name) ? self.name : "zombietron_gib_chunk_bone_01") + "zombietron_gib_chunk_bone_01" + self.entnum + "zombietron_gib_chunk_bone_01" + (isdefined(self.doa.player) ? self.doa.player getentitynumber() : -1));
+            debugmsg("<dev string:x298>" + (isdefined(self.name) ? self.name : "<dev string:x151>") + "<dev string:x9e>" + self.entnum + "<dev string:x28b>" + (isdefined(self.doa.player) ? self.doa.player getentitynumber() : -1));
         #/
         self cameraforcedisablescriptcam(0);
         self camerasetupdatecallback(&namespace_ad544aeb::function_d207ecc1);
@@ -1470,37 +1470,37 @@ function function_12c2fbcb() {
 function function_c33d3992(localclientnum) {
     if (!clienthassnapshot(localclientnum)) {
         /#
-            debugmsg("zombietron_gib_chunk_bone_01" + (isdefined(self.name) ? self.name : "zombietron_gib_chunk_bone_01") + "zombietron_gib_chunk_bone_01");
+            debugmsg("<dev string:x2ae>" + (isdefined(self.name) ? self.name : "<dev string:x151>") + "<dev string:x2c7>");
         #/
         return false;
     }
     if (!self isplayer()) {
         /#
-            debugmsg("zombietron_gib_chunk_bone_01" + (isdefined(self.name) ? self.name : "zombietron_gib_chunk_bone_01") + "zombietron_gib_chunk_bone_01");
+            debugmsg("<dev string:x2ae>" + (isdefined(self.name) ? self.name : "<dev string:x151>") + "<dev string:x2df>");
         #/
         return false;
     }
     if (!self hasdobj(localclientnum)) {
         /#
-            debugmsg("zombietron_gib_chunk_bone_01" + (isdefined(self.name) ? self.name : "zombietron_gib_chunk_bone_01") + "zombietron_gib_chunk_bone_01");
+            debugmsg("<dev string:x2ae>" + (isdefined(self.name) ? self.name : "<dev string:x151>") + "<dev string:x2f5>");
         #/
         return false;
     }
     if (self islocalplayer() && !isdefined(self getlocalclientnumber())) {
         /#
-            debugmsg("zombietron_gib_chunk_bone_01" + (isdefined(self.name) ? self.name : "zombietron_gib_chunk_bone_01") + "zombietron_gib_chunk_bone_01");
+            debugmsg("<dev string:x2ae>" + (isdefined(self.name) ? self.name : "<dev string:x151>") + "<dev string:x306>");
         #/
         return false;
     }
     if (isspectating(localclientnum)) {
         /#
-            debugmsg("zombietron_gib_chunk_bone_01" + (isdefined(self.name) ? self.name : "zombietron_gib_chunk_bone_01") + "zombietron_gib_chunk_bone_01");
+            debugmsg("<dev string:x2ae>" + (isdefined(self.name) ? self.name : "<dev string:x151>") + "<dev string:x326>");
         #/
         return false;
     }
     if (isdemoplaying()) {
         /#
-            debugmsg("zombietron_gib_chunk_bone_01" + (isdefined(self.name) ? self.name : "zombietron_gib_chunk_bone_01") + "zombietron_gib_chunk_bone_01");
+            debugmsg("<dev string:x2ae>" + (isdefined(self.name) ? self.name : "<dev string:x151>") + "<dev string:x33d>");
         #/
         return false;
     }
@@ -1508,7 +1508,7 @@ function function_c33d3992(localclientnum) {
         spectated = playerbeingspectated(self getlocalclientnumber());
         if (self != spectated) {
             /#
-                debugmsg("zombietron_gib_chunk_bone_01" + (isdefined(self.name) ? self.name : "zombietron_gib_chunk_bone_01") + "zombietron_gib_chunk_bone_01");
+                debugmsg("<dev string:x2ae>" + (isdefined(self.name) ? self.name : "<dev string:x151>") + "<dev string:x356>");
             #/
             return false;
         }
@@ -1516,7 +1516,7 @@ function function_c33d3992(localclientnum) {
     doa = level.var_29e6f519[self getentitynumber()];
     if (isdefined(doa.player) && doa.player != self) {
         /#
-            debugmsg("zombietron_gib_chunk_bone_01" + (isdefined(self.name) ? self.name : "zombietron_gib_chunk_bone_01") + "zombietron_gib_chunk_bone_01" + doa.player.name + "zombietron_gib_chunk_bone_01" + self getentitynumber() + "zombietron_gib_chunk_bone_01" + doa.player getentitynumber());
+            debugmsg("<dev string:x2ae>" + (isdefined(self.name) ? self.name : "<dev string:x151>") + "<dev string:x7d>" + doa.player.name + "<dev string:x9e>" + self getentitynumber() + "<dev string:xa8>" + doa.player getentitynumber());
         #/
         return false;
     }
@@ -1569,7 +1569,7 @@ function drawcylinder(pos, rad, height, frames, color) {
                 line(pos + (cos(theta) * currad, sin(theta) * currad, curheight), pos + (cos(theta2) * currad, sin(theta2) * currad, curheight), color);
                 line(pos + (cos(theta) * currad, sin(theta) * currad, 0), pos + (cos(theta) * currad, sin(theta) * currad, curheight), color);
             }
-            wait(0.016);
+            wait 0.016;
         }
     #/
 }

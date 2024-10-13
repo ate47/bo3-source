@@ -159,21 +159,21 @@ function pain_protection_check() {
 // Size: 0xe8
 function function_610dfe1() {
     /#
-        setdvar("No Die Time", "No Die Time");
+        setdvar("<dev string:x28>", "<dev string:x39>");
         waittillframeend();
         while (true) {
             while (true) {
-                if (getdvarstring("No Die Time") != "No Die Time") {
+                if (getdvarstring("<dev string:x28>") != "<dev string:x39>") {
                     break;
                 }
-                wait(0.5);
+                wait 0.5;
             }
             thread function_6227a919();
             while (true) {
-                if (getdvarstring("No Die Time") == "No Die Time") {
+                if (getdvarstring("<dev string:x28>") == "<dev string:x39>") {
                     break;
                 }
-                wait(0.5);
+                wait 0.5;
             }
             level notify(#"hash_31415269");
             function_b75a45fc();
@@ -237,7 +237,7 @@ function function_6227a919() {
     }
     level flag::wait_till("all_players_spawned");
     while (true) {
-        wait(0.05);
+        wait 0.05;
         players = level.players;
         for (i = 0; i < level.var_fbe7c2fe.size && players.size > 0; i++) {
             key = level.var_fbe7c2fe[i];
@@ -395,7 +395,7 @@ function playerhealthregen() {
     }
     self.var_65e2ccf7 = 0;
     for (;;) {
-        wait(0.05);
+        wait 0.05;
         waittillframeend();
         if (self.health == self.maxhealth) {
             if (self flag::get("player_has_red_flashing_overlay")) {
@@ -477,11 +477,11 @@ function reducetakecoverwarnings() {
     // Checksum 0x34adc747, Offset: 0x1b90
     // Size: 0xac
     function function_4b54a797() {
-        if (getdvarstring("No Die Time") == "No Die Time") {
-            setdvar("No Die Time", "No Die Time");
+        if (getdvarstring("<dev string:x3b>") == "<dev string:x4e>") {
+            setdvar("<dev string:x3b>", "<dev string:x39>");
         }
-        if (getdvarstring("No Die Time") == "No Die Time") {
-            iprintln("No Die Time", getlocalprofileint("No Die Time") - 3);
+        if (getdvarstring("<dev string:x3b>") == "<dev string:x4f>") {
+            iprintln("<dev string:x51>", getlocalprofileint("<dev string:x66>") - 3);
         }
     }
 
@@ -499,7 +499,7 @@ function function_bd76f2fc(timer) {
         self.attackeraccuracy = 0;
         self.ignorebulletdamage = 1;
         level.var_76f0070e = gettime() + timer * 1000;
-        wait(timer);
+        wait timer;
     }
     self.attackeraccuracy = self.var_b13e596e;
     self.ignorebulletdamage = 0;
@@ -539,11 +539,11 @@ function grenadeawareness() {
 function function_7d69a720(healthcap) {
     self endon(#"disconnect");
     self endon(#"killed_player");
-    wait(2);
+    wait 2;
     player = self;
     ent = undefined;
     for (;;) {
-        wait(0.2);
+        wait 0.2;
         if (player.health >= healthcap) {
             if (isdefined(ent)) {
                 ent stoploopsound(1.5);
@@ -561,7 +561,7 @@ function function_7d69a720(healthcap) {
 // Checksum 0x292fb450, Offset: 0x1f00
 // Size: 0x3c
 function delayed_delete(ent, time) {
-    wait(time);
+    wait time;
     ent delete();
     ent = undefined;
 }
@@ -574,7 +574,7 @@ function function_5cad004c(overlay, var_4fa2ad65) {
     self notify(#"hash_48d7d8e0");
     self endon(#"hash_48d7d8e0");
     while (!(isdefined(level.var_a250f238) && level.var_a250f238) && var_4fa2ad65 > 0) {
-        wait(0.05);
+        wait 0.05;
         var_4fa2ad65 -= 0.05;
     }
     if (isdefined(level.var_a250f238) && level.var_a250f238) {
@@ -597,7 +597,7 @@ function function_8ddec31d() {
 // Size: 0x2c
 function healthoverlay() {
     self endon(#"disconnect");
-    self endon(#"hash_a5d08426");
+    self endon(#"noHealthOverlay");
     function_8ddec31d();
 }
 
@@ -694,7 +694,7 @@ function function_24c9c57a(fadeout) {
     if (fadeout) {
         self fadeovertime(0.5);
         self.alpha = 0;
-        wait(0.5);
+        wait 0.5;
     }
     self util::death_notify_wrapper();
     self destroy();
@@ -742,20 +742,20 @@ function function_cd0999e2() {
             for (i = 0; i < 7; i++) {
                 var_72edb94e += 0.03;
                 var_17dfcbe.color = (1, var_72edb94e, 0);
-                wait(0.05);
+                wait 0.05;
             }
             for (i = 0; i < 7; i++) {
                 var_72edb94e -= 0.03;
                 var_17dfcbe.color = (1, var_72edb94e, 0);
-                wait(0.05);
+                wait 0.05;
             }
         }
         if (function_f651876d(var_17dfcbe)) {
             var_17dfcbe fadeovertime(0.5);
             var_17dfcbe.alpha = 0;
         }
-        wait(0.5);
-        wait(5);
+        wait 0.5;
+        wait 5;
         var_17dfcbe destroy();
     }
 }
@@ -795,7 +795,7 @@ function function_bbe24e91(overlay, var_17dfcbe, severity, mult, var_7170800d) {
     if (isdefined(var_17dfcbe)) {
         var_17dfcbe thread function_fd208a76(1, fadeintime);
     }
-    wait(fadeintime + var_a93d5122);
+    wait fadeintime + var_a93d5122;
     overlay fadeovertime(var_ac705df5);
     overlay.alpha = mult * var_84c9a0be;
     if (function_f651876d(var_17dfcbe)) {
@@ -804,7 +804,7 @@ function function_bbe24e91(overlay, var_17dfcbe, severity, mult, var_7170800d) {
             var_17dfcbe.alpha = mult * var_84c9a0be;
         }
     }
-    wait(var_ac705df5);
+    wait var_ac705df5;
     overlay fadeovertime(var_97b1675d);
     overlay.alpha = mult * var_833e5b9c;
     if (function_f651876d(var_17dfcbe)) {
@@ -816,8 +816,8 @@ function function_bbe24e91(overlay, var_17dfcbe, severity, mult, var_7170800d) {
     if (isdefined(var_17dfcbe)) {
         var_17dfcbe thread function_fd208a76(0.9, var_97b1675d);
     }
-    wait(var_97b1675d);
-    wait(remainingtime);
+    wait var_97b1675d;
+    wait remainingtime;
 }
 
 // Namespace gameskill
@@ -918,7 +918,7 @@ function function_2fb240f(var_4f8d5b23) {
                 level.currentdifficulty = "realistic";
                 break;
             }
-            println("No Die Time" + level.gameskill);
+            println("<dev string:x78>" + level.gameskill);
             var_1fc6cd58 = level.gameskill;
             if (level.gameskill < level.var_57830ddc) {
                 level.var_57830ddc = level.gameskill;
@@ -932,7 +932,7 @@ function function_2fb240f(var_4f8d5b23) {
                 player clientfield::set_player_uimodel("serverDifficulty", level.gameskill);
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -946,7 +946,7 @@ function function_4e14dca9() {
     while (level.players.size > 1) {
         players = getplayers("allies");
         level.var_82243644 = function_6979803c();
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -960,7 +960,7 @@ function function_a3f0621e() {
     while (level.players.size > 1) {
         players = getplayers("allies");
         level.var_b8384d83 = function_c29e1b7d();
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -972,7 +972,7 @@ function function_80e52fad() {
     self endon(#"death");
     initialvalue = self.baseaccuracy;
     self.baseaccuracy = initialvalue * function_6979803c();
-    wait(randomfloatrange(3, 5));
+    wait randomfloatrange(3, 5);
 }
 
 // Namespace gameskill
@@ -984,11 +984,11 @@ function function_e2c49328() {
     initialvalue = self.baseaccuracy;
     while (level.players.size > 1) {
         if (!isdefined(level.var_b8384d83)) {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         self.baseaccuracy = initialvalue * level.var_b8384d83;
-        wait(randomfloatrange(3, 5));
+        wait randomfloatrange(3, 5);
     }
 }
 
@@ -998,7 +998,7 @@ function function_e2c49328() {
 // Size: 0x8a
 function function_4c34249a() {
     while (true) {
-        wait(5);
+        wait 5;
         if (level.var_f5410582) {
             players = getplayers("allies");
             for (i = 0; i < players.size; i++) {
@@ -1612,7 +1612,7 @@ function function_58f840ea() {
         if (self.health >= self.maxhealth) {
             self.var_73881ee1 = 1;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

@@ -44,14 +44,14 @@ function function_9f1677e1(localclientnum, oldval, newval, bnewent, binitialsnap
     if (getinkillcam(localclientnum)) {
         return;
     }
-    if (!isdefined(self.var_20f03684)) {
-        self.var_20f03684 = createluimenu(localclientnum, "CPKillcam");
+    if (!isdefined(self.killcam_menu)) {
+        self.killcam_menu = createluimenu(localclientnum, "CPKillcam");
     }
     if (newval) {
-        openluimenu(localclientnum, self.var_20f03684);
+        openluimenu(localclientnum, self.killcam_menu);
         return;
     }
-    closeluimenu(localclientnum, self.var_20f03684);
+    closeluimenu(localclientnum, self.killcam_menu);
 }
 
 // Namespace coop

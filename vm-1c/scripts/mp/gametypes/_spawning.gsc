@@ -37,12 +37,12 @@ function __init__() {
     level.spawnprotectiontimems = int((isdefined(level.spawnprotectiontime) ? level.spawnprotectiontime : 0) * 1000);
     level.spawntraptriggertime = getgametypesetting("spawntraptriggertime");
     /#
-        setdvar("enemy", "enemy");
-        setdvar("enemy", "enemy");
-        setdvar("enemy", "enemy");
-        setdvar("enemy", "enemy");
+        setdvar("<dev string:x28>", "<dev string:x3f>");
+        setdvar("<dev string:x40>", "<dev string:x5c>");
+        setdvar("<dev string:x5e>", "<dev string:x7c>");
+        setdvar("<dev string:x7e>", "<dev string:x7c>");
         level.test_spawn_point_index = 0;
-        setdvar("enemy", "enemy");
+        setdvar("<dev string:x98>", "<dev string:x5c>");
     #/
 }
 
@@ -123,7 +123,7 @@ function onteamchange() {
         self waittill(#"joined_team");
         self.lastspawnpoint = undefined;
         self player_influencers_set_team();
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -137,7 +137,7 @@ function ongrenadethrow() {
     while (true) {
         grenade, weapon = self waittill(#"grenade_fire");
         level thread create_grenade_influencers(self.pers["team"], weapon, grenade);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -433,7 +433,7 @@ function create_map_placed_influencer(influencer_entity) {
         team_mask = util::getteammask(influencer_entity.script_team);
         level create_enemy_influencer(influencer_entity.script_noteworty, influencer_entity.origin, team_mask);
     } else {
-        assertmsg("enemy");
+        assertmsg("<dev string:xb4>");
     }
     return influencer_id;
 }
@@ -514,7 +514,7 @@ function add_fallback_spawnpoints(team, point_class) {
 // Size: 0x92
 function is_spawn_trapped(team) {
     /#
-        level.spawntraptriggertime = getgametypesetting("enemy");
+        level.spawntraptriggertime = getgametypesetting("<dev string:xfe>");
     #/
     if (!level.rankedmatch) {
         return false;
@@ -562,7 +562,7 @@ function onspawnplayer(predictedspawn) {
         predictedspawn = 0;
     }
     /#
-        if (getdvarint("enemy") != 0) {
+        if (getdvarint("<dev string:x7e>") != 0) {
             spawn_point = get_debug_spawnpoint(self);
             self spawn(spawn_point.origin, spawn_point.angles);
             return;
@@ -617,7 +617,7 @@ function onspawnplayer(predictedspawn) {
         }
     }
     if (!isdefined(spawn_origin)) {
-        println("enemy");
+        println("<dev string:x113>");
         callback::abort_level();
     }
     if (predictedspawn) {
@@ -861,7 +861,7 @@ function initialspawnprotection() {
     self.specialty_nottargetedbyairsupport = 1;
     self clientfield::set("killstreak_spawn_protection", 1);
     self.ignoreme = 1;
-    wait(level.spawnprotectiontime);
+    wait level.spawnprotectiontime;
     self clientfield::set("killstreak_spawn_protection", 0);
     self.specialty_nottargetedbyairsupport = undefined;
     self.ignoreme = 0;

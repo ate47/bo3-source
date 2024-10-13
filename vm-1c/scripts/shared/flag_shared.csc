@@ -18,7 +18,7 @@ function init(str_flag, b_val, b_is_trigger) {
     }
     /#
         if (!isdefined(level.first_frame)) {
-            assert(!isdefined(self.flag[str_flag]), "<unknown string>" + str_flag + "<unknown string>");
+            assert(!isdefined(self.flag[str_flag]), "<dev string:x28>" + str_flag + "<dev string:x50>");
         }
     #/
     self.flag[str_flag] = b_val;
@@ -37,7 +37,7 @@ function exists(str_flag) {
 // Checksum 0xde799908, Offset: 0x1a0
 // Size: 0x70
 function set(str_flag) {
-    assert(exists(str_flag), "<unknown string>" + str_flag + "<unknown string>");
+    assert(exists(str_flag), "<dev string:x5d>" + str_flag + "<dev string:x78>");
     self.flag[str_flag] = 1;
     self notify(str_flag);
 }
@@ -59,7 +59,7 @@ function _delay_set(n_delay, str_flag, str_cancel) {
         self endon(str_cancel);
     }
     self endon(#"death");
-    wait(n_delay);
+    wait n_delay;
     set(str_flag);
 }
 
@@ -71,7 +71,7 @@ function set_for_time(n_time, str_flag) {
     self notify("__flag::set_for_time__" + str_flag);
     self endon("__flag::set_for_time__" + str_flag);
     set(str_flag);
-    wait(n_time);
+    wait n_time;
     clear(str_flag);
 }
 
@@ -80,7 +80,7 @@ function set_for_time(n_time, str_flag) {
 // Checksum 0x7dd30fee, Offset: 0x338
 // Size: 0x78
 function clear(str_flag) {
-    assert(exists(str_flag), "<unknown string>" + str_flag + "<unknown string>");
+    assert(exists(str_flag), "<dev string:x92>" + str_flag + "<dev string:x78>");
     if (self.flag[str_flag]) {
         self.flag[str_flag] = 0;
         self notify(str_flag);
@@ -104,7 +104,7 @@ function toggle(str_flag) {
 // Checksum 0x68d1a7a0, Offset: 0x418
 // Size: 0x58
 function get(str_flag) {
-    assert(exists(str_flag), "<unknown string>" + str_flag + "<unknown string>");
+    assert(exists(str_flag), "<dev string:xaf>" + str_flag + "<dev string:x78>");
     return self.flag[str_flag];
 }
 
@@ -277,6 +277,6 @@ function delete(str_flag) {
         self.flag[str_flag] = undefined;
         return;
     }
-    println("<unknown string>" + str_flag);
+    println("<dev string:xc3>" + str_flag);
 }
 

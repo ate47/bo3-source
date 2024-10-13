@@ -111,7 +111,7 @@ function init() {
     level.contractsenabled = 0;
     level.disablevehicleburndamage = 1;
     /#
-        if (getdvarint("orbisGame") == 1) {
+        if (getdvarint("<dev string:x28>") == 1) {
             level.rankedmatch = 1;
         }
     #/
@@ -174,7 +174,7 @@ function init() {
     }
     thread gameadvertisement::init();
     thread gamerep::init();
-    thread namespace_e21b687a::init();
+    thread teamops::init();
     level.disablechallenges = 0;
     if (level.leaguematch || getdvarint("scr_disableChallenges") > 0) {
         level.disablechallenges = 1;
@@ -517,9 +517,9 @@ function forceend(hostsucks) {
         winner = globallogic_score::gethighestscoringplayer();
         /#
             if (isdefined(winner)) {
-                print("orbisGame" + winner.name);
+                print("<dev string:x3d>" + winner.name);
             } else {
-                print("orbisGame");
+                print("<dev string:x54>");
             }
         #/
     }
@@ -553,9 +553,9 @@ function killserverpc() {
         winner = globallogic_score::gethighestscoringplayer();
         /#
             if (isdefined(winner)) {
-                print("orbisGame" + winner.name);
+                print("<dev string:x3d>" + winner.name);
             } else {
-                print("orbisGame");
+                print("<dev string:x54>");
             }
         #/
     }
@@ -563,7 +563,7 @@ function killserverpc() {
     level.hostforcedend = 1;
     level.killserver = 1;
     endstring = %MP_HOST_ENDED_GAME;
-    println("orbisGame");
+    println("<dev string:x69>");
     thread endgame(winner, endstring);
 }
 
@@ -743,7 +743,7 @@ function doonelefteventupdates() {
 // Size: 0x1f0
 function updategameevents() {
     /#
-        if (getdvarint("orbisGame") == 1) {
+        if (getdvarint("<dev string:x83>") == 1) {
             return;
         }
     #/
@@ -794,7 +794,7 @@ function mpintro_visionset_ramp_hold_func() {
         for (player_index = 0; player_index < level.players.size; player_index++) {
             self visionset_mgr::set_state_active(level.players[player_index], 1);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -841,7 +841,7 @@ function matchstarttimer() {
             foreach (player in level.players) {
                 player playlocalsound("uin_start_count_down");
             }
-            wait(1);
+            wait 1;
         }
         luinotifyevent(%prematch_timer_ended, 0);
         return;
@@ -871,7 +871,7 @@ function matchstarttimerskip() {
 // Checksum 0x5041b301, Offset: 0x5090
 // Size: 0x34
 function sndsetmatchsnapshot(num) {
-    wait(0.05);
+    wait 0.05;
     level clientfield::set("sndMatchSnapshot", num);
 }
 
@@ -898,7 +898,7 @@ function wavespawntimer() {
         foreach (team in level.teams) {
             notifyteamwavespawn(team, time);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -909,7 +909,7 @@ function wavespawntimer() {
 function hostidledout() {
     hostplayer = util::gethostplayer();
     /#
-        if (getdvarint("orbisGame") == 1 || getdvarint("orbisGame") == 1) {
+        if (getdvarint("<dev string:x99>") == 1 || getdvarint("<dev string:x83>") == 1) {
             return false;
         }
     #/
@@ -1052,7 +1052,7 @@ function getplayerbyname(name) {
 // Size: 0x746
 function sendafteractionreport() {
     /#
-        if (getdvarint("orbisGame") == 1) {
+        if (getdvarint("<dev string:x99>") == 1) {
             return;
         }
     #/
@@ -1118,7 +1118,7 @@ function sendafteractionreport() {
 // Size: 0x534
 function updateandfinalizematchrecord() {
     /#
-        if (getdvarint("orbisGame") == 1) {
+        if (getdvarint("<dev string:x99>") == 1) {
             return;
         }
     #/
@@ -1198,7 +1198,7 @@ function gamehistoryplayerkicked() {
         self.pers["matchesPlayedStatsTracked"] = undefined;
     }
     uploadstats(self);
-    wait(1);
+    wait 1;
 }
 
 // Namespace globallogic
@@ -1223,7 +1223,7 @@ function gamehistoryplayerquit() {
     }
     uploadstats(self);
     if (!self ishost()) {
-        wait(1);
+        wait 1;
     }
 }
 
@@ -1516,7 +1516,7 @@ function function_fe2db310() {
                 if (level.multiteam) {
                     level.placement["all"][index] addplayerstat("TOP3ANY_MULTITEAM", 1);
                 }
-                level.placement["all"][index] notify(#"hash_e3f895a5");
+                level.placement["all"][index] notify(#"TOP3");
             }
         }
         for (index = 3; index < placement.size; index++) {
@@ -1659,7 +1659,7 @@ function function_cbd5605a() {
 // Checksum 0xa493b83e, Offset: 0x8710
 // Size: 0x4c
 function waitanduploadstats(player, waittime) {
-    wait(waittime);
+    wait waittime;
     if (isplayer(player)) {
         uploadstats(player);
     }
@@ -1873,14 +1873,14 @@ function endgame(winner, endreasontext) {
     }
     level notify(#"sfade");
     /#
-        print("orbisGame");
+        print("<dev string:xb0>");
     #/
     if (!isdefined(level.skipgameend) || !level.skipgameend) {
-        wait(5);
+        wait 5;
     }
     if (isdefined(level.end_game_video)) {
         level thread lui::play_movie(level.end_game_video.name, "fullscreen", 1);
-        wait(level.end_game_video.duration + 4.5);
+        wait level.end_game_video.duration + 4.5;
     }
     exit_level();
 }
@@ -1890,7 +1890,7 @@ function endgame(winner, endreasontext) {
 // Checksum 0x170dc6e4, Offset: 0x95c0
 // Size: 0xaa
 function function_db2dd5c9(delay, players) {
-    wait(delay);
+    wait delay;
     foreach (player in players) {
         if (!isdefined(player)) {
             continue;
@@ -1956,7 +1956,7 @@ function function_4d13985c(var_c55b8047) {
     self endon(#"disconnect");
     fieldname = "playTop" + var_c55b8047 + "Gesture";
     level clientfield::set(fieldname, 7);
-    wait(0.05);
+    wait 0.05;
     while (true) {
         if (isdefined(self)) {
             if (self actionslotonebuttonpressed()) {
@@ -1967,7 +1967,7 @@ function function_4d13985c(var_c55b8047) {
                 self function_af10dfb7(fieldname, 2);
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1979,7 +1979,7 @@ function function_af10dfb7(fieldname, gesturetype) {
     self notify(#"hash_af10dfb7");
     self endon(#"hash_af10dfb7");
     level clientfield::set(fieldname, gesturetype);
-    wait(0.05);
+    wait 0.05;
     level clientfield::set(fieldname, 7);
 }
 
@@ -2000,13 +2000,13 @@ function function_c33296a0() {
             switchmap_preload("core_frontend");
         }
         /#
-            while (getdvarint("orbisGame", 0)) {
-                wait(0.05);
+            while (getdvarint("<dev string:xbb>", 0)) {
+                wait 0.05;
             }
         #/
-        wait(15);
+        wait 15;
         level clientfield::set("triggerScoreboardCamera", 1);
-        wait(5);
+        wait 5;
         setmatchflag("enable_popups", 0);
         return;
     }
@@ -2074,16 +2074,16 @@ function roundendwait(defaultdelay, matchbonus) {
             }
             notifiesdone = 0;
         }
-        wait(0.5);
+        wait 0.5;
     }
     if (!matchbonus) {
-        wait(defaultdelay);
+        wait defaultdelay;
         level notify(#"round_end_done");
         return;
     }
-    wait(defaultdelay / 2);
+    wait defaultdelay / 2;
     level notify(#"give_match_bonus");
-    wait(defaultdelay / 2);
+    wait defaultdelay / 2;
     notifiesdone = 0;
     while (!notifiesdone) {
         players = level.players;
@@ -2094,7 +2094,7 @@ function roundendwait(defaultdelay, matchbonus) {
             }
             notifiesdone = 0;
         }
-        wait(0.5);
+        wait 0.5;
     }
     level notify(#"round_end_done");
 }
@@ -2259,11 +2259,11 @@ function updategametypedvars() {
         thread checkroundscorelimit();
         if (isdefined(level.starttime)) {
             if (globallogic_utils::gettimeremaining() < 3000) {
-                wait(0.1);
+                wait 0.1;
                 continue;
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -2287,7 +2287,7 @@ function removedisconnectedplayerfromplacement() {
         return;
     }
     level.placement["all"][numplayers - 1] = undefined;
-    assert(level.placement["orbisGame"].size == numplayers - 1);
+    assert(level.placement["<dev string:xce>"].size == numplayers - 1);
     /#
         globallogic_utils::assertproperplacement();
     #/
@@ -2391,7 +2391,7 @@ function getplacementforplayer(player) {
 function istopscoringplayer(player) {
     topscoringplayer = 0;
     updateplacement();
-    assert(level.placement["orbisGame"].size > 0);
+    assert(level.placement["<dev string:xce>"].size > 0);
     if (level.placement["all"].size == 0) {
         return 0;
     }
@@ -2523,7 +2523,7 @@ function updateteamstatus() {
     level endon(#"updating_team_status");
     level endon(#"game_ended");
     waittillframeend();
-    wait(0);
+    wait 0;
     if (game["state"] == "postgame") {
         return;
     }
@@ -2642,8 +2642,8 @@ function updatealivetimes(team) {
     }
     level.alivetimesaverage[team] = average_player_spawn_time / total_player_count;
     /#
-        if (getdvarint("orbisGame")) {
-            iprintln("orbisGame" + level.alivetimesaverage["orbisGame"] + "orbisGame" + level.alivetimesaverage["orbisGame"]);
+        if (getdvarint("<dev string:xd2>")) {
+            iprintln("<dev string:xe4>" + level.alivetimesaverage["<dev string:xfa>"] + "<dev string:x101>" + level.alivetimesaverage["<dev string:x109>"]);
         }
     #/
 }
@@ -2706,7 +2706,7 @@ function checkplayerscorelimitsoon() {
 // Size: 0x29c
 function timelimitclock() {
     level endon(#"game_ended");
-    wait(0.05);
+    wait 0.05;
     clockobject = spawn("script_origin", (0, 0, 0));
     while (game["state"] == "playing") {
         if (!level.timerstopped && level.timelimit) {
@@ -2741,10 +2741,10 @@ function timelimitclock() {
                 clockobject playsound("mpl_ui_timer_countdown");
             }
             if (timeleft - floor(timeleft) >= 0.05) {
-                wait(timeleft - floor(timeleft));
+                wait timeleft - floor(timeleft);
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -2756,11 +2756,11 @@ function timelimitclock_intermission(waittime) {
     setgameendtime(gettime() + int(waittime * 1000));
     clockobject = spawn("script_origin", (0, 0, 0));
     if (waittime >= 10) {
-        wait(waittime - 10);
+        wait waittime - 10;
     }
     for (;;) {
         clockobject playsound("mpl_ui_timer_countdown");
-        wait(1);
+        wait 1;
     }
 }
 
@@ -2777,7 +2777,7 @@ function recordbreadcrumbdata() {
                 recordbreadcrumbdataforplayer(player, player.lastshotby);
             }
         }
-        wait(2);
+        wait 2;
     }
 }
 
@@ -2833,21 +2833,21 @@ function startgame() {
     // Size: 0x19c
     function function_1d225b5(activeteamcount, starttime) {
         if (!isdefined(level.prematchrequirement)) {
-            println("orbisGame");
+            println("<dev string:x10e>");
             return;
         }
-        str = "orbisGame" + level.prematchrequirement;
-        if (isdefined(level.var_fad83777)) {
-            str += "orbisGame" + level.var_fad83777;
+        str = "<dev string:x12e>" + level.prematchrequirement;
+        if (isdefined(level.prematchRequirementTime)) {
+            str += "<dev string:x150>" + level.prematchRequirementTime;
         }
         if (isdefined(starttime)) {
-            str += "orbisGame" + starttime + "orbisGame" + gettime() - starttime;
+            str += "<dev string:x15a>" + starttime + "<dev string:x162>" + gettime() - starttime;
         }
         if (isdefined(activeteamcount)) {
-            str += "orbisGame" + activeteamcount.size;
+            str += "<dev string:x16f>" + activeteamcount.size;
             if (activeteamcount.size > 1) {
                 foreach (team, teamcount in activeteamcount) {
-                    str += "orbisGame" + team + "orbisGame" + teamcount;
+                    str += "<dev string:x178>" + team + "<dev string:x17b>" + teamcount;
                 }
             }
         }
@@ -2867,7 +2867,7 @@ function isprematchrequirementconditionmet(activeteamcount, starttime) {
     if (level.prematchrequirement == 0) {
         return true;
     }
-    if (level.var_fad83777 > 0 && gettime() - starttime > level.var_fad83777 * 1000) {
+    if (level.prematchRequirementTime > 0 && gettime() - starttime > level.prematchRequirementTime * 1000) {
         return true;
     }
     if (util::isinfectedgametype()) {
@@ -2878,7 +2878,7 @@ function isprematchrequirementconditionmet(activeteamcount, starttime) {
         if (var_e9ed40ff != level.prematchrequirement) {
             return false;
         }
-    } else if (level.teambased && level.var_fad83777 > 0) {
+    } else if (level.teambased && level.prematchRequirementTime > 0) {
         if (activeteamcount.size <= 1) {
             return false;
         }
@@ -2952,7 +2952,7 @@ function waitforplayers() {
             }
         }
         player_read = temp_player_ready;
-        wait(0.05);
+        wait 0.05;
         if (gettime() - starttime > 20000) {
             if (level.rankedmatch == 0 && level.arenamatch == 0) {
                 accepttestclient = 1;
@@ -2961,7 +2961,7 @@ function waitforplayers() {
         if (level.rankedmatch && gettime() - starttime > 120000) {
             exit_level();
             while (true) {
-                wait(10);
+                wait 10;
             }
         }
         if (!isdefined(var_6b989ec4) && playerready && activeplayercount != 0) {
@@ -3014,7 +3014,7 @@ function function_d95d1608(player) {
     player endon(#"disconnect");
     while (true) {
         if (isdefined(player.hasspawned) && player.hasspawned) {
-            wait(2);
+            wait 2;
             player luinotifyevent(%prematch_waiting_for_players);
             return;
         }
@@ -3035,10 +3035,10 @@ function prematchperiod() {
         thread prematchwaitingforplayers();
         waitforplayers();
         level notify(#"hash_32c1c011");
-        wait(level.prematchperiod);
+        wait level.prematchperiod;
     } else {
         matchstarttimerskip();
-        wait(0.05);
+        wait 0.05;
     }
     level.inprematchperiod = 0;
     level thread sndsetmatchsnapshot(0);
@@ -3060,10 +3060,10 @@ function graceperiod() {
     if (isdefined(level.graceperiodfunc)) {
         [[ level.graceperiodfunc ]]();
     } else {
-        wait(level.graceperiod);
+        wait level.graceperiod;
     }
     level notify(#"grace_period_ending");
-    wait(0.05);
+    wait 0.05;
     level.ingraceperiod = 0;
     if (game["state"] != "playing") {
         return;
@@ -3097,16 +3097,16 @@ function watchmatchendingsoon() {
 // Size: 0x332
 function assertteamvariables() {
     foreach (team in level.teams) {
-        assert(isdefined(game["orbisGame"][team + "orbisGame"]), "orbisGame" + team + "orbisGame");
-        assert(isdefined(game["orbisGame"][team + "orbisGame"]), "orbisGame" + team + "orbisGame");
-        assert(isdefined(game["orbisGame"][team + "orbisGame"]), "orbisGame" + team + "orbisGame");
-        assert(isdefined(game["orbisGame"][team + "orbisGame"]), "orbisGame" + team + "orbisGame");
-        assert(isdefined(game["orbisGame"][team + "orbisGame"]), "orbisGame" + team + "orbisGame");
-        assert(isdefined(game["orbisGame"][team + "orbisGame"]), "orbisGame" + team + "orbisGame");
-        assert(isdefined(game["orbisGame"]["orbisGame" + team]), "orbisGame" + team + "orbisGame");
-        assert(isdefined(game["orbisGame"]["orbisGame" + team]), "orbisGame" + team + "orbisGame");
-        assert(isdefined(game["orbisGame"][team]), "orbisGame" + team + "orbisGame");
-        assert(isdefined(game["orbisGame"][team]), "orbisGame" + team + "orbisGame");
+        assert(isdefined(game["<dev string:x17f>"][team + "<dev string:x187>"]), "<dev string:x18c>" + team + "<dev string:x19e>");
+        assert(isdefined(game["<dev string:x17f>"][team + "<dev string:x1b4>"]), "<dev string:x18c>" + team + "<dev string:x1bf>");
+        assert(isdefined(game["<dev string:x17f>"][team + "<dev string:x1db>"]), "<dev string:x18c>" + team + "<dev string:x1f1>");
+        assert(isdefined(game["<dev string:x17f>"][team + "<dev string:x218>"]), "<dev string:x18c>" + team + "<dev string:x224>");
+        assert(isdefined(game["<dev string:x17f>"][team + "<dev string:x241>"]), "<dev string:x18c>" + team + "<dev string:x24c>");
+        assert(isdefined(game["<dev string:x17f>"][team + "<dev string:x268>"]), "<dev string:x18c>" + team + "<dev string:x26e>");
+        assert(isdefined(game["<dev string:x285>"]["<dev string:x28b>" + team]), "<dev string:x292>" + team + "<dev string:x2a8>");
+        assert(isdefined(game["<dev string:x285>"]["<dev string:x2ba>" + team]), "<dev string:x2c3>" + team + "<dev string:x2a8>");
+        assert(isdefined(game["<dev string:x2db>"][team]), "<dev string:x2e1>" + team + "<dev string:x2a8>");
+        assert(isdefined(game["<dev string:x2f1>"][team]), "<dev string:x2f7>" + team + "<dev string:x2a8>");
     }
 }
 
@@ -3146,7 +3146,7 @@ function callback_startgametype() {
         if (!isdefined(game["defenders"])) {
             game["defenders"] = "axis";
         }
-        assert(game["orbisGame"] != game["orbisGame"]);
+        assert(game["<dev string:x307>"] != game["<dev string:x311>"]);
         foreach (team in level.teams) {
             if (!isdefined(game[team])) {
                 game[team] = "pmc";
@@ -3194,7 +3194,7 @@ function callback_startgametype() {
             game["totalKillsTeam"][team] = 0;
         }
         level.prematchrequirement = getgametypesetting("prematchRequirement");
-        level.var_fad83777 = getgametypesetting("prematchRequirementTime");
+        level.prematchRequirementTime = getgametypesetting("prematchRequirementTime");
         level.prematchperiod = getgametypesetting("prematchperiod");
         if (getdvarint("xblive_clanmatch") != 0) {
             foreach (team in level.teams) {
@@ -3260,7 +3260,7 @@ function callback_startgametype() {
     level.hardcoremode = getgametypesetting("hardcoreMode");
     if (level.hardcoremode) {
         /#
-            print("orbisGame");
+            print("<dev string:x31b>");
         #/
         if (!isdefined(level.friendlyfiredelaytime)) {
             level.friendlyfiredelaytime = 0;
@@ -3319,7 +3319,7 @@ function callback_startgametype() {
     level.voip.deadhearkiller = getgametypesetting("voipDeadHearKiller");
     level.voip.killershearvictim = getgametypesetting("voipKillersHearVictim");
     level.droppedtagrespawn = getgametypesetting("droppedTagRespawn");
-    level.var_c1c50ef2 = getgametypesetting("disableVehicleSpawners");
+    level.disableVehicleSpawners = getgametypesetting("disableVehicleSpawners");
     if (isdefined(level.droppedtagrespawn) && level.droppedtagrespawn) {
         dogtags::init();
     }
@@ -3408,13 +3408,13 @@ function callback_startgametype() {
     level thread updategametypedvars();
     level thread simple_hostmigration::updatehostmigrationdata();
     /#
-        if (getdvarint("orbisGame") == 1) {
+        if (getdvarint("<dev string:x99>") == 1) {
             level.skipgameend = 1;
             level.roundlimit = 1;
-            wait(1);
+            wait 1;
             thread forceend(0);
         }
-        if (getdvarint("orbisGame") == 1) {
+        if (getdvarint("<dev string:x83>") == 1) {
             thread forcedebughostmigration();
         }
     #/
@@ -3429,7 +3429,7 @@ function callback_startgametype() {
     function forcedebughostmigration() {
         while (true) {
             hostmigration::waittillhostmigrationdone();
-            wait(60);
+            wait 60;
             starthostmigration();
             hostmigration::waittillhostmigrationdone();
         }
@@ -3465,7 +3465,7 @@ function checkroundswitch() {
     if (!isdefined(level.onroundswitch)) {
         return false;
     }
-    assert(game["orbisGame"] > 0);
+    assert(game["<dev string:x32f>"] > 0);
     if (game["roundsplayed"] % level.roundswitch == 0) {
         [[ level.onroundswitch ]]();
         return true;
@@ -3479,13 +3479,13 @@ function checkroundswitch() {
 // Size: 0x8c
 function function_aa9e547b() {
     while (true) {
-        var_fedc247f = getdvarint("sv_endmatch", 0);
-        if (isdefined(var_fedc247f) && var_fedc247f != 0) {
+        endmatch = getdvarint("sv_endmatch", 0);
+        if (isdefined(endmatch) && endmatch != 0) {
             setdvar("sv_endmatch", 0);
             level thread forceend();
             return;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -3530,7 +3530,7 @@ function updaterankedmatch(winner) {
         if (hostidledout()) {
             level.hostforcedend = 1;
             /#
-                print("orbisGame");
+                print("<dev string:x33c>");
             #/
             endlobby();
         }
@@ -3544,9 +3544,9 @@ function updaterankedmatch(winner) {
 // Size: 0x124
 function annihilatorgunplayerkilleffect(attacker, weapon) {
     if (weapon.fusetime != 0) {
-        wait(weapon.fusetime * 0.001);
+        wait weapon.fusetime * 0.001;
     } else {
-        wait(0.45);
+        wait 0.45;
     }
     if (!isdefined(self)) {
         return;
@@ -3555,7 +3555,7 @@ function annihilatorgunplayerkilleffect(attacker, weapon) {
     self playsoundtoallbutplayer("evt_annihilation_npc", attacker);
     codesetclientfield(self, "annihilate_effect", 1);
     self shake_and_rumble(0, 0.3, 0.75, 1);
-    wait(0.1);
+    wait 0.1;
     if (!isdefined(self)) {
         return;
     }
@@ -3570,9 +3570,9 @@ function annihilatorgunplayerkilleffect(attacker, weapon) {
 function annihilatorgunactorkilleffect(attacker, weapon) {
     body = self waittill(#"actor_corpse");
     if (weapon.fusetime != 0) {
-        wait(weapon.fusetime * 0.001);
+        wait weapon.fusetime * 0.001;
     } else {
-        wait(0.45);
+        wait 0.45;
     }
     if (!isdefined(self)) {
         return;
@@ -3593,14 +3593,14 @@ function annihilatorgunactorkilleffect(attacker, weapon) {
 // Checksum 0x41821d, Offset: 0xfa10
 // Size: 0xc4
 function pineapplegunplayerkilleffect(attacker) {
-    wait(0.1);
+    wait 0.1;
     if (!isdefined(self)) {
         return;
     }
     playsoundatposition("evt_annihilation_npc", self.origin);
     codesetclientfield(self, "pineapplegun_effect", 1);
     self shake_and_rumble(0, 0.3, 0.35, 1);
-    wait(0.1);
+    wait 0.1;
     if (!isdefined(self)) {
         return;
     }
@@ -3613,7 +3613,7 @@ function pineapplegunplayerkilleffect(attacker) {
 // Checksum 0x2f05d9f8, Offset: 0xfae0
 // Size: 0xb4
 function bowplayerkilleffect() {
-    wait(0.05);
+    wait 0.05;
     if (!isdefined(self)) {
         return;
     }
@@ -3633,7 +3633,7 @@ function bowplayerkilleffect() {
 // Size: 0xdc
 function pineapplegunactorkilleffect() {
     body = self waittill(#"actor_corpse");
-    wait(0.75);
+    wait 0.75;
     if (!isdefined(self)) {
         return;
     }
@@ -3653,7 +3653,7 @@ function pineapplegunactorkilleffect() {
 // Size: 0xf6
 function shake_and_rumble(n_delay, shake_size, shake_time, rumble_num) {
     if (isdefined(n_delay) && n_delay > 0) {
-        wait(n_delay);
+        wait n_delay;
     }
     nmagnitude = shake_size;
     nduration = shake_time;
@@ -3662,7 +3662,7 @@ function shake_and_rumble(n_delay, shake_size, shake_time, rumble_num) {
     earthquake(nmagnitude, nduration, v_pos, nradius);
     for (i = 0; i < rumble_num; i++) {
         self playrumbleonentity("damage_heavy");
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -3712,7 +3712,7 @@ function doweaponspecificcorpseeffects(body, einflictor, attacker, idamage, smea
 function burncorpse() {
     self endon(#"death");
     codesetclientfield(self, "burned_effect", 1);
-    wait(3);
+    wait 3;
     codesetclientfield(self, "burned_effect", 0);
 }
 

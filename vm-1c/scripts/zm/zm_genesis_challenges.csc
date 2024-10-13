@@ -4,9 +4,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_ed811526;
+#namespace zm_genesis_challenges;
 
-// Namespace namespace_ed811526
+// Namespace zm_genesis_challenges
 // Params 0, eflags: 0x2
 // Checksum 0xb5a7f82c, Offset: 0x228
 // Size: 0x34
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
     system::register("zm_stalingrad_challenges", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_ed811526
+// Namespace zm_genesis_challenges
 // Params 0, eflags: 0x1 linked
 // Checksum 0x69ac929c, Offset: 0x268
 // Size: 0x288
@@ -37,7 +37,7 @@ function __init__() {
     }
 }
 
-// Namespace namespace_ed811526
+// Namespace zm_genesis_challenges
 // Params 7, eflags: 0x1 linked
 // Checksum 0x104ba44a, Offset: 0x4f8
 // Size: 0xbc
@@ -51,7 +51,7 @@ function function_4ff59189(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_ed811526
+// Namespace zm_genesis_challenges
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd57104c8, Offset: 0x5c0
 // Size: 0x226
@@ -76,7 +76,7 @@ function function_1664174d(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_ed811526
+// Namespace zm_genesis_challenges
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5c046e5b, Offset: 0x7f0
 // Size: 0x6c
@@ -84,7 +84,7 @@ function function_aae53847(localclientnum, oldval, newval, bnewent, binitialsnap
     playfxontag(localclientnum, level._effect["challenge_base"], self, "tag_fx_box_base");
 }
 
-// Namespace namespace_ed811526
+// Namespace zm_genesis_challenges
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5a0cd566, Offset: 0x868
 // Size: 0xbc

@@ -59,7 +59,7 @@ function gadget_hero_weapon_on_off(slot, weapon) {
 // Checksum 0x91877935, Offset: 0x460
 // Size: 0xb8
 function function_66dc358a(slot, weapon) {
-    wait(1);
+    wait 1;
     if (isdefined(self)) {
         w_current = self getcurrentweapon();
         if (isdefined(w_current) && zm_utility::is_hero_weapon(w_current)) {
@@ -311,7 +311,7 @@ function function_ebde8383(w_weapon) {
                 self [[ level.var_e1cac31a[w_weapon].var_58fa5951 ]](w_weapon);
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -332,7 +332,7 @@ function function_bde51ee1(w_weapon) {
         if (self.hero_power != self.var_2ff8e129) {
             self gadgetpowerset(0, self.hero_power);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

@@ -26,7 +26,7 @@ function autoexec function_2dc19561() {
 // Size: 0x16c
 function __init__() {
     clientfield::register("toplayer", "speed_burst", 1, 1, "int");
-    ability_player::register_gadget_activation_callbacks(13, &function_4471717e, &function_51b450f4);
+    ability_player::register_gadget_activation_callbacks(13, &gadget_speed_burst_on, &function_51b450f4);
     ability_player::register_gadget_possession_callbacks(13, &function_41c1ea5a, &function_65a0fef4);
     ability_player::register_gadget_flicker_callbacks(13, &function_70950c7);
     ability_player::register_gadget_is_inuse_callbacks(13, &function_15880b4e);
@@ -92,7 +92,7 @@ function function_bfafa469() {
 // Params 2, eflags: 0x1 linked
 // Checksum 0x81291a6a, Offset: 0x5e8
 // Size: 0xc8
-function function_4471717e(slot, weapon) {
+function gadget_speed_burst_on(slot, weapon) {
     self flagsys::set("gadget_speed_burst_on");
     self gadgetsetactivatetime(slot, gettime());
     self clientfield::set_to_player("speed_burst", 1);
@@ -134,7 +134,7 @@ function function_5b8d7647(slot, weapon) {
             self function_39b1b87b("Normal");
             return;
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 

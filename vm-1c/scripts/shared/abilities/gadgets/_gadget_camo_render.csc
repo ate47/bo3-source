@@ -2,9 +2,9 @@
 #using scripts/shared/duplicaterender_mgr;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f0278666;
+#namespace _gadget_camo_render;
 
-// Namespace namespace_f0278666
+// Namespace _gadget_camo_render
 // Params 0, eflags: 0x2
 // Checksum 0x9a5421e1, Offset: 0x420
 // Size: 0x34
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_camo_render", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_f0278666
+// Namespace _gadget_camo_render
 // Params 0, eflags: 0x1 linked
 // Checksum 0xab0ec71b, Offset: 0x460
 // Size: 0x184
@@ -63,7 +63,7 @@ function doreveal(local_client_num, direction) {
                 var_b805d9b7 = 1;
                 self duplicate_render::update_dr_flag(local_client_num, "hide_model", 1);
             }
-            wait(0.016);
+            wait 0.016;
         }
         self mapshaderconstant(local_client_num, 0, "scriptVector0", 1, 0, 0, 0);
         self duplicate_render::set_dr_flag("gadget_camo_reveal", 0);
@@ -80,7 +80,7 @@ function doreveal(local_client_num, direction) {
             self duplicate_render::update_dr_flag(local_client_num, "hide_model", 0);
             var_b805d9b7 = 0;
         }
-        wait(0.016);
+        wait 0.016;
     }
     self mapshaderconstant(local_client_num, 0, "scriptVector0", 0, 0, 0, 0);
     self duplicate_render::set_dr_flag("gadget_camo_reveal", 0);

@@ -92,7 +92,7 @@ function _on(slot, weapon) {
     if (flagsys::get("gadget_overdrive_on")) {
         return;
     }
-    wait(getdvarfloat("scr_overdrive_activationDelay_sec", 0.4));
+    wait getdvarfloat("scr_overdrive_activationDelay_sec", 0.4);
     self.var_7d73f4ba = self hasperk("specialty_deadshot");
     if (!(isdefined(self.var_7d73f4ba) && self.var_7d73f4ba)) {
         self setperk("specialty_deadshot");

@@ -59,7 +59,7 @@ function checkdvarupdates() {
         level.fx_tabun_radius1 = getdvarint("scr_fx_tabun_radius1", level.fx_tabun_radius1);
         level.fx_tabun_radius2 = getdvarint("scr_fx_tabun_radius2", level.fx_tabun_radius2);
         level.fx_tabun_radius3 = getdvarint("scr_fx_tabun_radius3", level.fx_tabun_radius3);
-        wait(1);
+        wait 1;
     }
 }
 
@@ -90,8 +90,8 @@ function damageeffectarea(owner, position, radius, height, killcament) {
     shockeffectarea = spawn("trigger_radius", position, 0, radius, height);
     gaseffectarea = spawn("trigger_radius", position, 0, radius, height);
     /#
-        if (getdvarint("scr_tabun_effect_radius")) {
-            level thread util::drawcylinder(position, radius, height, undefined, "scr_tabun_effect_radius");
+        if (getdvarint("<dev string:x28>")) {
+            level thread util::drawcylinder(position, radius, height, undefined, "<dev string:x3a>");
         }
     #/
     if (isdefined(level.dogsonflashdogs)) {
@@ -124,15 +124,15 @@ function damageeffectarea(owner, position, radius, height, killcament) {
                 }
             }
         }
-        wait(loopwaittime);
+        wait loopwaittime;
     }
     if (level.tabungasduration < level.poisonduration) {
-        wait(level.poisonduration - level.tabungasduration);
+        wait level.poisonduration - level.tabungasduration;
     }
     shockeffectarea delete();
     gaseffectarea delete();
     /#
-        if (getdvarint("scr_tabun_effect_radius")) {
+        if (getdvarint("<dev string:x28>")) {
             level notify(#"tabun_draw_cylinder_stop");
         }
     #/
@@ -177,13 +177,13 @@ function damageinpoisonarea(gaseffectarea, killcament, trace, position) {
             }
             self function_87a4a08b();
         }
-        wait(1);
+        wait 1;
         trace = bullettrace(position, self.origin + (0, 0, 12), 0, self);
     }
     tabunshocksound stoploopsound(0.5);
-    wait(0.5);
+    wait 0.5;
     thread sound::play_in_space(level.sound_shock_tabun_stop, position);
-    wait(0.5);
+    wait 0.5;
     tabunshocksound notify(#"delete");
     tabunshocksound delete();
     self show_hud();
@@ -234,7 +234,7 @@ function generatelocations(position, owner) {
     onefoot = (0, 0, 12);
     startpos = position + onefoot;
     /#
-        level.tabun_debug = getdvarint("scr_tabun_effect_radius", 0);
+        level.tabun_debug = getdvarint("<dev string:x53>", 0);
         if (level.tabun_debug) {
             black = (0.2, 0.2, 0.2);
             debugstar(startpos, 2000, black);
@@ -262,11 +262,11 @@ function singlelocation(position, owner) {
 function hitpos(start, end, color) {
     trace = bullettrace(start, end, 0, undefined);
     /#
-        level.tabun_debug = getdvarint("scr_tabun_effect_radius", 0);
+        level.tabun_debug = getdvarint("<dev string:x53>", 0);
         if (level.tabun_debug) {
-            debugstar(trace["scr_tabun_effect_radius"], 2000, color);
+            debugstar(trace["<dev string:x63>"], 2000, color);
         }
-        thread tabun_debug_line(start, trace["scr_tabun_effect_radius"], color, 1, 80);
+        thread tabun_debug_line(start, trace["<dev string:x63>"], color, 1, 80);
     #/
     return trace["position"];
 }
@@ -387,10 +387,10 @@ function playtabunsound(position) {
     tabunsound.origin = position;
     tabunsound playsound(level.sound_tabun_start);
     tabunsound playloopsound(level.sound_tabun_loop);
-    wait(level.tabungasduration);
+    wait level.tabungasduration;
     thread sound::play_in_space(level.sound_tabun_stop, position);
     tabunsound stoploopsound(0.5);
-    wait(0.5);
+    wait 0.5;
     tabunsound delete();
 }
 
@@ -436,7 +436,7 @@ function getcenteroflocations(locations) {
         centroid += locations["loc"][i] / locations["loc"].size;
     }
     /#
-        level.tabun_debug = getdvarint("scr_tabun_effect_radius", 0);
+        level.tabun_debug = getdvarint("<dev string:x53>", 0);
         if (level.tabun_debug) {
             purple = (0.9, 0.2, 0.9);
             debugstar(centroid, 2000, purple);
@@ -477,7 +477,7 @@ function getcenter(locations) {
     avgy = (maxy + miny) / 2;
     center = (avgx, avgy, locations["tracePos"][0][2]);
     /#
-        level.tabun_debug = getdvarint("scr_tabun_effect_radius", 0);
+        level.tabun_debug = getdvarint("<dev string:x53>", 0);
         if (level.tabun_debug) {
             cyan = (0.2, 0.9, 0.9);
             debugstar(center, 2000, cyan);
@@ -493,8 +493,8 @@ function getcenter(locations) {
     // Checksum 0x93c5b9bc, Offset: 0x25c0
     // Size: 0xbc
     function tabun_debug_line(from, to, color, depthtest, time) {
-        debug_rcbomb = getdvarint("scr_tabun_effect_radius", 0);
-        if (debug_rcbomb == "scr_tabun_effect_radius") {
+        debug_rcbomb = getdvarint("<dev string:x53>", 0);
+        if (debug_rcbomb == "<dev string:x6c>") {
             if (!isdefined(time)) {
                 time = 100;
             }

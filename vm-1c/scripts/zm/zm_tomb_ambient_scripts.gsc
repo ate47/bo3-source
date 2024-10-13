@@ -10,9 +10,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_a2c37c4f;
+#namespace zm_tomb_ambient_scripts;
 
-// Namespace namespace_a2c37c4f
+// Namespace zm_tomb_ambient_scripts
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb9151ec8, Offset: 0x348
 // Size: 0x34
@@ -20,7 +20,7 @@ function function_c6ff3260() {
     clientfield::register("scriptmover", "zeppelin_fx", 21000, 1, "int");
 }
 
-// Namespace namespace_a2c37c4f
+// Namespace zm_tomb_ambient_scripts
 // Params 0, eflags: 0x1 linked
 // Checksum 0x84934736, Offset: 0x388
 // Size: 0x9c
@@ -30,7 +30,7 @@ function main() {
     util::delay(40, undefined, &function_f903959b, "sky_cowbell_zeppelin_high", "stop_ambient_zeppelins");
 }
 
-// Namespace namespace_a2c37c4f
+// Namespace zm_tomb_ambient_scripts
 // Params 2, eflags: 0x1 linked
 // Checksum 0x40ce1a5f, Offset: 0x430
 // Size: 0xd8
@@ -47,7 +47,7 @@ function function_f903959b(str_script_noteworthy, str_ender) {
     }
 }
 
-// Namespace namespace_a2c37c4f
+// Namespace zm_tomb_ambient_scripts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8db9a111, Offset: 0x510
 // Size: 0x1e0
@@ -59,16 +59,16 @@ function function_68c49762(a_structs) {
     self waittill(#"movedone");
     self show();
     if (!isdefined(var_ef3ca11f.goal_struct)) {
-        assert(isdefined(var_ef3ca11f.target), "veh_t7_dlc_zm_zeppelin" + var_ef3ca11f.origin + "veh_t7_dlc_zm_zeppelin");
+        assert(isdefined(var_ef3ca11f.target), "<dev string:x28>" + var_ef3ca11f.origin + "<dev string:x5b>");
         var_ef3ca11f.goal_struct = struct::get(var_ef3ca11f.target, "targetname");
-        assert(isdefined(var_ef3ca11f.goal_struct), "veh_t7_dlc_zm_zeppelin" + var_ef3ca11f.origin);
+        assert(isdefined(var_ef3ca11f.goal_struct), "<dev string:x95>" + var_ef3ca11f.origin);
     }
     n_move_time = randomfloatrange(120, 150);
     self moveto(var_ef3ca11f.goal_struct.origin, n_move_time);
     self waittill(#"movedone");
 }
 
-// Namespace namespace_a2c37c4f
+// Namespace zm_tomb_ambient_scripts
 // Params 1, eflags: 0x1 linked
 // Checksum 0x370dba90, Offset: 0x6f8
 // Size: 0x190
@@ -96,7 +96,7 @@ function function_f779394c(a_structs) {
     return var_7ed4443d;
 }
 
-// Namespace namespace_a2c37c4f
+// Namespace zm_tomb_ambient_scripts
 // Params 0, eflags: 0x1 linked
 // Checksum 0x20a75e48, Offset: 0x890
 // Size: 0x16c
@@ -119,7 +119,7 @@ function function_add29756() {
     var_7170dfe delete();
 }
 
-// Namespace namespace_a2c37c4f
+// Namespace zm_tomb_ambient_scripts
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8cbbd44e, Offset: 0xa08
 // Size: 0x70
@@ -131,7 +131,7 @@ function function_b6165329() {
     }
 }
 
-// Namespace namespace_a2c37c4f
+// Namespace zm_tomb_ambient_scripts
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbf47243d, Offset: 0xa80
 // Size: 0x230

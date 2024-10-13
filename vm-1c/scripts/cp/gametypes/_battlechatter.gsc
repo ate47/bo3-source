@@ -120,7 +120,7 @@ function function_c8397d24() {
     self endon(#"disconnect");
     level endon(#"game_ended");
     while (true) {
-        wait(randomintrange(6, 14));
+        wait randomintrange(6, 14);
         if (isdefined(self)) {
             var_49f3ceea = array("action_peek", "action_moving", "enemy_contact");
             line = var_49f3ceea[randomintrange(0, var_49f3ceea.size)];
@@ -140,82 +140,82 @@ function function_9f9445a7() {
     while (true) {
         notify_string = self waittill(#"bhtn_action_notify");
         switch (notify_string) {
-        case 78:
+        case "pain":
             if (!(isdefined(self.archetype) && self.archetype == "robot")) {
                 level thread function_f3de557b(self, "exert_pain");
             }
             break;
-        case 62:
+        case "concussiveReact":
             if (!(isdefined(self.archetype) && self.archetype == "robot")) {
                 level thread function_f3de557b(self, "exert_cough", undefined, undefined, 1);
             }
             break;
-        case 66:
+        case "enemyKill":
             if (!(isdefined(self.archetype) && self.archetype == "robot") && !(self.voiceprefix == "vox_germ" || isdefined(self.voiceprefix) && self.voiceprefix == "vox_usa")) {
                 if (randomintrange(0, 100) <= 50) {
                     level thread function_f3de557b(self, "enemy_kill");
                 }
             }
             break;
-        case 75:
+        case "meleeKill":
             if (!(isdefined(self.archetype) && self.archetype == "robot") && !(self.voiceprefix == "vox_germ" || isdefined(self.voiceprefix) && self.voiceprefix == "vox_usa")) {
                 if (randomintrange(0, 100) <= 50) {
                     level thread function_f3de557b(self, "melee_kill");
                 }
             }
             break;
-        case 58:
-        case 96:
-        case 83:
-        case 73:
-        case 74:
-        case 77:
-        case 101:
-        case 102:
+        case "asp_incoming":
+        case "robots_incoming":
+        case "raps_incoming":
+        case "hounds_incoming":
+        case "manticore_incoming":
+        case "orthrus_incoming":
+        case "talon_incoming":
+        case "technical_incoming":
             if (!(isdefined(self.archetype) && self.archetype == "robot") && !(self.voiceprefix == "vox_germ" || isdefined(self.voiceprefix) && self.voiceprefix == "vox_usa")) {
                 level thread function_f3de557b(self, notify_string);
             }
             break;
-        case 65:
-        case 81:
+        case "electrocute":
+        case "pukeStart":
             if (!(isdefined(self.archetype) && self.archetype == "robot")) {
                 level thread function_f3de557b(self, "exert_electrocution", undefined, undefined, 1);
             }
             break;
-        case 80:
+        case "puke":
             if (!(isdefined(self.archetype) && self.archetype == "robot")) {
                 level thread function_f3de557b(self, "exert_sonic", undefined, undefined, 1);
             }
             break;
-        case 98:
+        case "scream":
             if (!(isdefined(self.archetype) && self.archetype == "robot")) {
                 level thread function_f3de557b(self, "exert_scream");
             }
             break;
-        case 99:
+        case "scriptedRobotvox":
             if (isdefined(self.archetype) && self.archetype == "robot") {
                 level thread function_f3de557b(self, "action_intocover");
             }
             break;
-        case 95:
+        case "reload":
             if (randomintrange(0, 100) <= 20) {
                 level thread function_f3de557b(self, "action_reloading", 1);
             }
             break;
-        case 67:
+        case "enemycontact":
             self thread function_bf2c3663();
             break;
-        case 63:
+        case "cover_shoot":
             if (randomintrange(0, 100) <= 10) {
                 level thread function_f3de557b(self, "enemy_contact");
             }
             break;
-        case 64:
+        case "cover_stance":
             if (randomintrange(0, 100) <= 45) {
                 level thread function_f3de557b(self, "action_intocover");
             }
             break;
-        case 61:
+        case "charge":
             if (!(isdefined(self.archetype) && self.archetype == "robot")) {
                 if (!(self.voiceprefix == "vox_hend" || self.voiceprefix == "vox_khal" || self.voiceprefix == "vox_kane" || self.voiceprefix == "vox_hall" || self.voiceprefix == "vox_mare" || isdefined(self.voiceprefix) && self.voiceprefix == "vox_diaz")) {
                     soundalias = "vox_generic_exert_charge_male";
@@ -228,7 +228,7 @@ function function_9f9445a7() {
                 }
             }
             break;
-        case 59:
+        case "attack_melee":
             if (!(isdefined(self.archetype) && self.archetype == "robot")) {
                 if (!(self.voiceprefix == "vox_hend" || self.voiceprefix == "vox_khal" || self.voiceprefix == "vox_kane" || self.voiceprefix == "vox_hall" || self.voiceprefix == "vox_mare" || isdefined(self.voiceprefix) && self.voiceprefix == "vox_diaz")) {
                     soundalias = "vox_generic_exert_melee_male";
@@ -241,43 +241,43 @@ function function_9f9445a7() {
                 }
             }
             break;
-        case 60:
+        case "blindfire":
             level thread function_f3de557b(self, "action_blindfire");
             break;
-        case 72:
+        case "flanked":
             level thread function_f3de557b(self, "action_flanked");
             break;
-        case 79:
-        case 97:
+        case "peek":
+        case "scan":
             if (randomintrange(0, 100) <= 25) {
                 level thread function_f3de557b(self, "action_peek");
             }
             break;
-        case 68:
+        case "exposed":
             level thread function_f3de557b(self, "action_exposed");
             break;
-        case 100:
+        case "taking_cover":
             if (randomintrange(0, 100) <= 75) {
                 level thread function_f3de557b(self, "action_intocover");
             }
             break;
-        case 76:
+        case "moving_up":
             if (randomintrange(0, 100) <= 6) {
                 level thread function_f3de557b(self, "action_moving");
             }
             break;
-        case 84:
-        case 85:
-        case 87:
-        case 88:
+        case "rbCharge":
+        case "rbCrawler":
+        case "rbPhalanx":
+        case "rbTakeover":
             level thread function_f3de557b(self, "action_exposed");
             break;
-        case 86:
+        case "rbJuke":
             if (randomintrange(0, 100) <= 30) {
                 level thread function_f3de557b(self, "action_moving");
             }
             break;
-        case 71:
+        case "firefly_swarm":
             if (randomintrange(0, 100) <= 50) {
                 level thread function_f3de557b(self, "firefly_response");
             }
@@ -288,7 +288,7 @@ function function_9f9445a7() {
                 }
             }
             break;
-        case 49:
+        case "firefly_explode":
             if (randomintrange(0, 100) <= 50) {
                 teammate = function_c0d9abd6(self);
                 if (isdefined(teammate)) {
@@ -296,39 +296,39 @@ function function_9f9445a7() {
                 }
             }
             break;
-        case 69:
+        case "fireflyAttack":
             level thread function_f3de557b(self, "exert_firefly", undefined, undefined, 1);
             break;
-        case 70:
+        case "fireflyAttackUpg":
             level thread function_f3de557b(self, "exert_firefly_burning", undefined, undefined, 1);
             break;
-        case 82:
+        case "rapidstrike":
             level thread function_f3de557b(self, "rapidstrike_response");
             break;
-        case 103:
-        case 104:
+        case "warlord_angry":
+        case "warlord_juke":
             var_49f3ceea = array("action_peek", "action_moving", "enemy_contact");
             line = var_49f3ceea[randomintrange(0, var_49f3ceea.size)];
             level thread function_f3de557b(self, line);
             break;
-        case 91:
+        case "reactImmolation":
             level thread function_f3de557b(self, "exert_immolation", undefined, undefined, 1);
             break;
-        case 92:
+        case "reactImmolationLong":
             level thread function_f3de557b(self, "exert_immolation", undefined, undefined, 1);
             break;
-        case 94:
+        case "reactSensory":
             level thread function_f3de557b(self, "exert_screaming", undefined, undefined, 1);
             break;
-        case 105:
+        case "weaponmalfunction":
             level thread function_f3de557b(self, "exert_malfunction", undefined, undefined, 1);
             break;
-        case 90:
+        case "reactExosuit":
             level thread function_f3de557b(self, "exert_breakdown", undefined, undefined, 1);
             break;
-        case 93:
+        case "reactMisdirection":
             break;
-        case 89:
+        case "reactBodyBlow":
             level thread function_f3de557b(self, "exert_body_blow", undefined, undefined, 1);
             break;
         default:
@@ -372,7 +372,7 @@ function function_bf2c3663() {
 // Size: 0x20
 function function_23b803bd() {
     level.var_bf2c3663 = 1;
-    wait(15);
+    wait 15;
     level.var_bf2c3663 = 0;
 }
 
@@ -400,7 +400,7 @@ function function_5980aba1() {
 // Size: 0xf4
 function function_e94dcde5(thrower, grenade) {
     if (randomintrange(0, 100) <= 95) {
-        wait(1);
+        wait 1;
         if (!isdefined(thrower) || !isdefined(grenade)) {
             return;
         }
@@ -504,7 +504,7 @@ function function_f921f5a3() {
 // Checksum 0x506c278f, Offset: 0x2438
 // Size: 0xc4
 function function_bf5d6349(object, type) {
-    wait(randomfloatrange(0.1, 0.4));
+    wait randomfloatrange(0.1, 0.4);
     ai = function_5c9a0c2("both", object, 500);
     if (isdefined(ai)) {
         if (type == "car") {
@@ -521,8 +521,8 @@ function function_bf5d6349(object, type) {
 // Size: 0x4b2
 function function_66309b54() {
     level endon(#"unloaded");
-    self endon(#"hash_3f7b661c");
-    self endon(#"hash_f8c5dd60");
+    self endon(#"death_or_disconnect");
+    self endon(#"cybercom_action");
     if (!isdefined(level.var_218d7320)) {
         level.var_218d7320 = 0;
         enemies = getaiteamarray("axis", "team3");
@@ -534,7 +534,7 @@ function function_66309b54() {
         }
     }
     while (true) {
-        wait(1);
+        wait 1;
         t = gettime();
         if (t > level.var_218d7320 + 1000) {
             level.var_218d7320 = t;
@@ -575,7 +575,7 @@ function function_66309b54() {
             }
         }
         if (played_sound) {
-            wait(5);
+            wait 5;
         }
     }
 }
@@ -742,9 +742,9 @@ function function_a19a4a61() {
     while (true) {
         notify_string = self waittill(#"bhtn_action_notify");
         switch (notify_string) {
-        case 134:
+        case "firefly_deploy":
             break;
-        case 135:
+        case "firefly_end":
             break;
         default:
             break;
@@ -786,7 +786,7 @@ function pain_vox() {
                 self thread function_81d8fcf2(soundalias, 1);
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -807,7 +807,7 @@ function function_7c4151cc() {
             self thread function_81d8fcf2("vox_pm1_gas_gasp", 1);
             self notify(#"hash_d1d64fcc");
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -831,7 +831,7 @@ function function_a01d72bd() {
 // Size: 0x68
 function function_7e9c7abd() {
     self endon(#"melee_cybercom");
-    wait(2);
+    wait 2;
     if (isdefined(self)) {
         ai = level function_5c9a0c2("axis", self, 700);
         if (isdefined(ai)) {
@@ -851,9 +851,9 @@ function wait_playback_time(soundalias, timeout) {
     self.isspeaking = 1;
     if (playbacktime >= 0) {
         waittime = playbacktime * 0.001;
-        wait(waittime);
+        wait waittime;
     } else {
-        wait(1);
+        wait 1;
     }
     self notify(soundalias);
     self.isspeaking = 0;
@@ -946,7 +946,7 @@ function function_d9f49fba(b_allow, str_category) {
     if (!isdefined(str_category)) {
         str_category = "bc";
     }
-    assert(isdefined(b_allow), "axis");
+    assert(isdefined(b_allow), "<dev string:x28>");
     level.allowbattlechatter[str_category] = b_allow;
 }
 

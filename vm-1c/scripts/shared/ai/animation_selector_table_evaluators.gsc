@@ -35,14 +35,14 @@ function private evaluator_checkanimationagainstgeo(entity, animation) {
     midpoint = entity localtoworldcoords(localdeltahalfvector);
     midpoint = (midpoint[0], midpoint[1], entity.origin[2]);
     /#
-        recordline(entity.origin, midpoint, (1, 0.5, 0), "<unknown string>", entity);
+        recordline(entity.origin, midpoint, (1, 0.5, 0), "<dev string:x28>", entity);
     #/
     if (entity maymovetopoint(midpoint, 1, 1)) {
         localdeltavector = getmovedelta(animation, 0, 1, entity);
         endpoint = entity localtoworldcoords(localdeltavector);
         endpoint = (endpoint[0], endpoint[1], entity.origin[2]);
         /#
-            recordline(midpoint, endpoint, (1, 0.5, 0), "<unknown string>", entity);
+            recordline(midpoint, endpoint, (1, 0.5, 0), "<dev string:x28>", entity);
         #/
         if (entity maymovefrompointtopoint(midpoint, endpoint, 1, 1)) {
             pixendevent();
@@ -128,8 +128,8 @@ function private evaluator_checkanimationarrivalposition(entity, animation) {
 // Checksum 0xdbfa0def, Offset: 0x9f0
 // Size: 0x1ce
 function private evaluator_findfirstvalidanimation(entity, animations, tests) {
-    assert(isarray(animations), "<unknown string>");
-    assert(isarray(tests), "<unknown string>");
+    assert(isarray(animations), "<dev string:x33>");
+    assert(isarray(tests), "<dev string:x71>");
     foreach (aliasanimations in animations) {
         if (aliasanimations.size > 0) {
             valid = 1;
@@ -169,7 +169,7 @@ function private evaluatehumanturnanimations(entity, animations) {
         }
     #/
     /#
-        record3dtext("<unknown string>" + gettime() + "<unknown string>", entity.origin, (1, 0.5, 0), "<unknown string>", entity);
+        record3dtext("<dev string:xb8>" + gettime() + "<dev string:xb9>", entity.origin, (1, 0.5, 0), "<dev string:x28>", entity);
     #/
     if (animations.size > 0) {
         return evaluator_findfirstvalidanimation(entity, animations, array(&evaluator_checkanimationforovershootinggoal, &evaluator_checkanimationagainstgeo, &evaluator_checkanimationagainstnavmesh));

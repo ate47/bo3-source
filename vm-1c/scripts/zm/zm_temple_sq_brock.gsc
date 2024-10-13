@@ -6,9 +6,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_abd6a8a5;
+#namespace zm_temple_sq_brock;
 
-// Namespace namespace_abd6a8a5
+// Namespace zm_temple_sq_brock
 // Params 0, eflags: 0x1 linked
 // Checksum 0x50d3e64c, Offset: 0x208
 // Size: 0x64
@@ -19,7 +19,7 @@ function init() {
     level.var_fd3a0c76 = struct::get_array("sq_radios", "targetname");
 }
 
-// Namespace namespace_abd6a8a5
+// Namespace zm_temple_sq_brock
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb7c30401, Offset: 0x278
 // Size: 0x7e
@@ -33,7 +33,7 @@ function function_62cde5c8() {
     }
 }
 
-// Namespace namespace_abd6a8a5
+// Namespace zm_temple_sq_brock
 // Params 0, eflags: 0x1 linked
 // Checksum 0x962b93f3, Offset: 0x300
 // Size: 0x1c
@@ -41,7 +41,7 @@ function function_ac4ad5b0() {
     level thread function_62cde5c8();
 }
 
-// Namespace namespace_abd6a8a5
+// Namespace zm_temple_sq_brock
 // Params 0, eflags: 0x1 linked
 // Checksum 0x68f4c0aa, Offset: 0x328
 // Size: 0x3c
@@ -53,22 +53,22 @@ function function_b58e4e4e() {
     }
 }
 
-// Namespace namespace_abd6a8a5
+// Namespace zm_temple_sq_brock
 // Params 0, eflags: 0x1 linked
 // Checksum 0x315fe699, Offset: 0x370
 // Size: 0x6e
 function function_5be153a() {
     self endon(#"death");
-    level endon(#"hash_7a9a61a6");
+    level endon(#"radio_7_played");
     /#
         while (!(isdefined(level.disable_print3d_ent) && level.disable_print3d_ent)) {
-            print3d(self.origin, "radio_9_played", (0, -1, -1), 1);
-            wait(1);
+            print3d(self.origin, "<dev string:x28>", (0, -1, -1), 1);
+            wait 1;
         }
     #/
 }
 
-// Namespace namespace_abd6a8a5
+// Namespace zm_temple_sq_brock
 // Params 1, eflags: 0x1 linked
 // Checksum 0xca01e1d0, Offset: 0x3e8
 // Size: 0x304
@@ -104,12 +104,12 @@ function function_f38875fe(struct) {
     snd = "vox_radio_egg_" + self.script_int - 1;
     self playsound(snd);
     self playloopsound("vox_radio_egg_snapshot", 1);
-    wait(self.var_55a5f7cd);
+    wait self.var_55a5f7cd;
     self stoploopsound(1);
     level flag::set("radio_9_played");
 }
 
-// Namespace namespace_abd6a8a5
+// Namespace zm_temple_sq_brock
 // Params 1, eflags: 0x1 linked
 // Checksum 0xaf8cd1c8, Offset: 0x6f8
 // Size: 0x44
@@ -119,7 +119,7 @@ function function_437f8b58(struct) {
     level flag::set("radio_7_played");
 }
 
-// Namespace namespace_abd6a8a5
+// Namespace zm_temple_sq_brock
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7f699553, Offset: 0x748
 // Size: 0x44
@@ -129,7 +129,7 @@ function function_4b89aecd(struct) {
     level flag::set("radio_4_played");
 }
 
-// Namespace namespace_abd6a8a5
+// Namespace zm_temple_sq_brock
 // Params 1, eflags: 0x1 linked
 // Checksum 0x62d263e3, Offset: 0x798
 // Size: 0x184
@@ -159,11 +159,11 @@ function function_942b1627(struct) {
     snd = "vox_radio_egg_" + self.script_int - 1 + "" + var_bc7547cb;
     self playsoundwithnotify(snd, "radiodone");
     self playloopsound("vox_radio_egg_snapshot", 1);
-    self waittill(#"hash_b022f226");
+    self waittill(#"radiodone");
     self stoploopsound(1);
 }
 
-// Namespace namespace_abd6a8a5
+// Namespace zm_temple_sq_brock
 // Params 0, eflags: 0x1 linked
 // Checksum 0xebe5cdef, Offset: 0x928
 // Size: 0xb4
@@ -175,11 +175,11 @@ function function_67bda13d() {
     snd = "vox_radio_egg_" + self.script_int - 1;
     self playsound(snd);
     self playloopsound("vox_radio_egg_snapshot", 1);
-    wait(self.var_55a5f7cd);
+    wait self.var_55a5f7cd;
     self stoploopsound(1);
 }
 
-// Namespace namespace_abd6a8a5
+// Namespace zm_temple_sq_brock
 // Params 2, eflags: 0x1 linked
 // Checksum 0x87564af8, Offset: 0x9e8
 // Size: 0x2c8
@@ -193,7 +193,7 @@ function function_67e052f1(var_246d8227, thread_func) {
         }
     }
     if (!isdefined(var_def302fa)) {
-        println("radio_9_played" + var_246d8227);
+        println("<dev string:x2a>" + var_246d8227);
         return;
     }
     radio = spawn("script_model", var_def302fa.origin);
@@ -216,7 +216,7 @@ function function_67e052f1(var_246d8227, thread_func) {
     level.var_be16ea09 = radio;
 }
 
-// Namespace namespace_abd6a8a5
+// Namespace zm_temple_sq_brock
 // Params 1, eflags: 0x1 linked
 // Checksum 0xce6d9fcc, Offset: 0xcb8
 // Size: 0x118

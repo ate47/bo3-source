@@ -12,9 +12,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_643bc20;
+#namespace cp_mi_sing_sgen_patch;
 
-// Namespace namespace_643bc20
+// Namespace cp_mi_sing_sgen_patch
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb2bebc25, Offset: 0x268
 // Size: 0x334

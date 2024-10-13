@@ -6,9 +6,9 @@
 #using scripts/shared/compass;
 #using scripts/codescripts/struct;
 
-#namespace namespace_82e4b148;
+#namespace mp_infection;
 
-// Namespace namespace_82e4b148
+// Namespace mp_infection
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc13691c0, Offset: 0x220
 // Size: 0xc14
@@ -24,8 +24,8 @@ function main() {
     level.var_c9aa825e = &function_c9aa825e;
     level.var_7bb6ebae = &function_7bb6ebae;
     level.remotemissile_kill_z = -800;
-    namespace_5d379c9::main();
-    namespace_83fbe97c::main();
+    mp_infection_fx::main();
+    mp_infection_sound::main();
     load::main();
     compass::setupminimap("compass_map_mp_infection");
     setdvar("compassmaxrange", "2100");
@@ -72,7 +72,7 @@ function main() {
     level.cleandepositpoints = array((-353.721, -175.155, 9), (563.775, -119.256, 84.125), (-654.231, -1578.36, -5.74457), (-1059.83, 1145.25, 80));
 }
 
-// Namespace namespace_82e4b148
+// Namespace mp_infection
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xe40
 // Size: 0x4
@@ -80,7 +80,7 @@ function precache() {
     
 }
 
-// Namespace namespace_82e4b148
+// Namespace mp_infection
 // Params 1, eflags: 0x1 linked
 // Checksum 0x15fe86b8, Offset: 0xe50
 // Size: 0x1ac
@@ -111,7 +111,7 @@ function function_c9aa825e(&var_6480c733) {
     var_6480c733[var_6480c733.size] = (1139, -2779, -20);
 }
 
-// Namespace namespace_82e4b148
+// Namespace mp_infection
 // Params 1, eflags: 0x1 linked
 // Checksum 0x626fd65d, Offset: 0x1008
 // Size: 0xdc

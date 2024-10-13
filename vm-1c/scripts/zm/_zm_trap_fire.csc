@@ -4,9 +4,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_96203a67;
+#namespace zm_trap_fire;
 
-// Namespace namespace_96203a67
+// Namespace zm_trap_fire
 // Params 0, eflags: 0x2
 // Checksum 0xa7481c0e, Offset: 0x160
 // Size: 0x34
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
     system::register("zm_trap_fire", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_96203a67
+// Namespace zm_trap_fire
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd5e3e2a7, Offset: 0x1a0
 // Size: 0xe2
@@ -25,7 +25,7 @@ function __init__() {
     }
 }
 
-// Namespace namespace_96203a67
+// Namespace zm_trap_fire
 // Params 7, eflags: 0x1 linked
 // Checksum 0x92b72f08, Offset: 0x290
 // Size: 0x172
@@ -48,7 +48,7 @@ function trap_fx_monitor(localclientnum, oldval, newval, bnewent, binitialsnap, 
     }
 }
 
-// Namespace namespace_96203a67
+// Namespace zm_trap_fire
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd5b0be98, Offset: 0x410
 // Size: 0x12c
@@ -68,7 +68,7 @@ function asset_pool_scriptbundlelist() {
     }
 }
 
-// Namespace namespace_96203a67
+// Namespace zm_trap_fire
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1d332b26, Offset: 0x548
 // Size: 0x88

@@ -17,36 +17,36 @@
 
 #using_animtree("generic");
 
-#namespace namespace_5f2c95ae;
+#namespace zm_island_skullquest;
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd237f9ca, Offset: 0x680
 // Size: 0x31c
 function init() {
-    clientfield::register("world", "keeper_spawn_portals", 1, 1, "int", &function_a17c1f53, 0, 0);
-    clientfield::register("actor", "keeper_fx", 1, 1, "int", &function_4b50c64, 0, 0);
-    clientfield::register("actor", "ritual_attacker_fx", 1, 1, "int", &function_4bcd15cf, 0, 0);
-    clientfield::register("world", "skullquest_ritual_1_fx", 1, 3, "int", &function_92982f75, 0, 0);
-    clientfield::register("world", "skullquest_ritual_2_fx", 1, 3, "int", &function_4ded18a8, 0, 0);
-    clientfield::register("world", "skullquest_ritual_3_fx", 1, 3, "int", &function_ddd543db, 0, 0);
-    clientfield::register("world", "skullquest_ritual_4_fx", 1, 3, "int", &function_7c9daad6, 0, 0);
-    clientfield::register("scriptmover", "skullquest_finish_start_fx", 1, 1, "int", &function_4f126a12, 0, 0);
-    clientfield::register("scriptmover", "skullquest_finish_trail_fx", 1, 1, "int", &function_14555bf6, 0, 0);
-    clientfield::register("scriptmover", "skullquest_finish_end_fx", 1, 1, "int", &function_a35770b3, 0, 0);
-    clientfield::register("scriptmover", "skullquest_finish_done_glow_fx", 1, 1, "int", &function_936bf24a, 0, 0);
+    clientfield::register("world", "keeper_spawn_portals", 1, 1, "int", &keeper_spawn_portals, 0, 0);
+    clientfield::register("actor", "keeper_fx", 1, 1, "int", &keeper_fx, 0, 0);
+    clientfield::register("actor", "ritual_attacker_fx", 1, 1, "int", &ritual_attacker_fx, 0, 0);
+    clientfield::register("world", "skullquest_ritual_1_fx", 1, 3, "int", &skullquest_ritual_1_fx, 0, 0);
+    clientfield::register("world", "skullquest_ritual_2_fx", 1, 3, "int", &skullquest_ritual_2_fx, 0, 0);
+    clientfield::register("world", "skullquest_ritual_3_fx", 1, 3, "int", &skullquest_ritual_3_fx, 0, 0);
+    clientfield::register("world", "skullquest_ritual_4_fx", 1, 3, "int", &skullquest_ritual_4_fx, 0, 0);
+    clientfield::register("scriptmover", "skullquest_finish_start_fx", 1, 1, "int", &skullquest_finish_start_fx, 0, 0);
+    clientfield::register("scriptmover", "skullquest_finish_trail_fx", 1, 1, "int", &skullquest_finish_trail_fx, 0, 0);
+    clientfield::register("scriptmover", "skullquest_finish_end_fx", 1, 1, "int", &skullquest_finish_end_fx, 0, 0);
+    clientfield::register("scriptmover", "skullquest_finish_done_glow_fx", 1, 1, "int", &skullquest_finish_done_glow_fx, 0, 0);
 }
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2389690d, Offset: 0x9a8
 // Size: 0x6c
-function function_a17c1f53(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function keeper_spawn_portals(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     var_eebff756 = "s_spawnpt_skullroom";
     function_46df8306(localclientnum, var_eebff756, newval);
 }
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 3, eflags: 0x1 linked
 // Checksum 0xb7e64cba, Offset: 0xa20
 // Size: 0x252
@@ -71,11 +71,11 @@ function function_46df8306(localclientnum, str_name, b_on) {
             playsound(0, "evt_keeper_portal_end", s_spawn_point.origin);
             audio::stoploopat("evt_keeper_portal_loop", s_spawn_point.origin);
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 3, eflags: 0x1 linked
 // Checksum 0x79b67a64, Offset: 0xc80
 // Size: 0x2b2
@@ -104,43 +104,43 @@ function function_f58977cd(localclientnum, str_name, b_on) {
                 audio::stoploopat("zmb_skull_ritual_portal_lp", s_spawn_point.origin);
             }
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 7, eflags: 0x1 linked
 // Checksum 0x34401ff1, Offset: 0xf40
 // Size: 0x5c
-function function_92982f75(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function skullquest_ritual_1_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_4dcbb3a6(localclientnum, 1, newval);
 }
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 7, eflags: 0x1 linked
 // Checksum 0x7ea0a920, Offset: 0xfa8
 // Size: 0x5c
-function function_4ded18a8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function skullquest_ritual_2_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_4dcbb3a6(localclientnum, 2, newval);
 }
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 7, eflags: 0x1 linked
 // Checksum 0x56e08271, Offset: 0x1010
 // Size: 0x5c
-function function_ddd543db(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function skullquest_ritual_3_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_4dcbb3a6(localclientnum, 3, newval);
 }
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf0e869e6, Offset: 0x1078
 // Size: 0x5c
-function function_7c9daad6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function skullquest_ritual_4_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_4dcbb3a6(localclientnum, 4, newval);
 }
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 3, eflags: 0x1 linked
 // Checksum 0x481f07cf, Offset: 0x10e0
 // Size: 0x49c
@@ -190,14 +190,14 @@ function function_4dcbb3a6(localclientnum, var_f2e38849, var_a1e9c985) {
             var_4b429234 function_267f859f(localclientnum, level._effect["ritual_progress_skulltar"], 0);
         }
     }
-    wait(0.2);
+    wait 0.2;
 }
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa81ab803, Offset: 0x1588
 // Size: 0xbe
-function function_4f126a12(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function skullquest_finish_start_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_2c75d806 = playfxontag(localclientnum, level._effect["skullquest_finish_start"], self, "tag_origin");
         return;
@@ -208,11 +208,11 @@ function function_4f126a12(localclientnum, oldval, newval, bnewent, binitialsnap
     self.var_2c75d806 = undefined;
 }
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4f20ffda, Offset: 0x1650
 // Size: 0xbe
-function function_14555bf6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function skullquest_finish_trail_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_8d24a0fa = playfxontag(localclientnum, level._effect["skullquest_finish_trail"], self, "tag_origin");
         return;
@@ -223,11 +223,11 @@ function function_14555bf6(localclientnum, oldval, newval, bnewent, binitialsnap
     self.var_8d24a0fa = undefined;
 }
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3870ce87, Offset: 0x1718
 // Size: 0xbe
-function function_a35770b3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function skullquest_finish_end_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_f88006a5 = playfxontag(localclientnum, level._effect["skullquest_finish_end"], self, "tag_origin");
         return;
@@ -238,11 +238,11 @@ function function_a35770b3(localclientnum, oldval, newval, bnewent, binitialsnap
     self.var_f88006a5 = undefined;
 }
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd0b5e4d4, Offset: 0x17e0
 // Size: 0xbe
-function function_936bf24a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function skullquest_finish_done_glow_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_f88006a5 = playfxontag(localclientnum, level._effect["skullquest_skull_done_glow"], self, "tag_origin");
         return;
@@ -253,11 +253,11 @@ function function_936bf24a(localclientnum, oldval, newval, bnewent, binitialsnap
     self.var_f88006a5 = undefined;
 }
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4b7dc518, Offset: 0x18a8
 // Size: 0x29c
-function function_4b50c64(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function keeper_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self util::waittill_dobj(localclientnum);
     if (isdefined(self)) {
         if (newval === 1) {
@@ -290,11 +290,11 @@ function function_4b50c64(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa5f91755, Offset: 0x1b50
 // Size: 0x214
-function function_4bcd15cf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function ritual_attacker_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self util::waittill_dobj(localclientnum);
     if (isdefined(self)) {
         if (newval === 1) {
@@ -321,7 +321,7 @@ function function_4bcd15cf(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_5f2c95ae
+// Namespace zm_island_skullquest
 // Params 5, eflags: 0x1 linked
 // Checksum 0x858ea291, Offset: 0x1d70
 // Size: 0x1a8

@@ -14,8 +14,8 @@
 // Size: 0x40c
 function main() {
     precache();
-    namespace_fd054d15::main();
-    namespace_f0d8a318::main();
+    mp_ethiopia_fx::main();
+    mp_ethiopia_sound::main();
     level.var_7bb6ebae = &function_7bb6ebae;
     load::main();
     compass::setupminimap("compass_map_mp_ethiopia");

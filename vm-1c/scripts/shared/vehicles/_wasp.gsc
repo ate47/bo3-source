@@ -157,13 +157,13 @@ function state_death_update(params) {
 function state_emped_update(params) {
     self endon(#"death");
     self endon(#"change_state");
-    wait(0.05);
+    wait 0.05;
     gravity = 400;
     self notify(#"end_nudge_collision");
     empdowntime = params.var_6e0794d4[0];
     assert(isdefined(empdowntime));
     vehicle_ai::cooldown("emped_timer", empdowntime);
-    wait(randomfloat(0.2));
+    wait randomfloat(0.2);
     ang_vel = self getangularvelocity();
     pitch_vel = math::randomsign() * randomfloatrange(-56, -6);
     yaw_vel = math::randomsign() * randomfloatrange(-56, -6);
@@ -186,16 +186,16 @@ function state_emped_update(params) {
     self setangularvelocity((0, 0, 0));
     while (!vehicle_ai::iscooldownready("emped_timer")) {
         timeleft = max(vehicle_ai::getcooldownleft("emped_timer"), 0.5);
-        wait(timeleft);
+        wait timeleft;
     }
     self.abnormal_status.emped = 0;
     self vehicle::toggle_emp_fx(0);
     self vehicle_ai::emp_startup_fx();
     for (bootup_timer = 1.6; bootup_timer > 0; bootup_timer -= 0.8) {
         self vehicle::lights_on();
-        wait(0.4);
+        wait 0.4;
         self vehicle::lights_off();
-        wait(0.4);
+        wait 0.4;
     }
     self vehicle::lights_on();
     if (isdefined(self.position_before_fall)) {
@@ -212,14 +212,14 @@ function state_emped_update(params) {
             foundgoal = self setvehgoalpos(self.current_pathto_pos, 1, 1);
             while (!foundgoal && vehicle_ai::timesince(starttime) < 3) {
                 foundgoal = self setvehgoalpos(self.current_pathto_pos, 1, 1);
-                wait(0.3);
+                wait 0.3;
             }
             if (foundgoal) {
                 self util::waittill_any_timeout(1, "near_goal", "goal", "change_state", "death");
             } else {
                 self setvehgoalpos(self.origin, 1, 0);
             }
-            wait(1);
+            wait 1;
             self.position_before_fall = undefined;
             self vehicle_ai::evaluate_connections();
         }
@@ -341,12 +341,12 @@ function init_guard_points() {
         while (true) {
             foreach (point in self.debugpointsarray) {
                 color = (1, 0, 0);
-                if (ispointinnavvolume(point, "combat")) {
+                if (ispointinnavvolume(point, "<dev string:x28>")) {
                     color = (0, 1, 0);
                 }
                 debugstar(point, 5, color);
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -357,7 +357,7 @@ function init_guard_points() {
 // Checksum 0x78cc2892, Offset: 0x1c58
 // Size: 0x38e
 function get_guard_points(owner) {
-    assert(self._guard_points.size > 0, "combat");
+    assert(self._guard_points.size > 0, "<dev string:x38>");
     points_array = [];
     foreach (point in self._guard_points) {
         offset = rotatepoint(point, owner.angles);
@@ -465,7 +465,7 @@ function test_get_back_queryresult(queryresult) {
             return point.origin;
         }
         if (testresult == 0) {
-            wait(0.05);
+            wait 0.05;
         }
     }
     return undefined;
@@ -485,12 +485,12 @@ function state_guard_update(params) {
     while (true) {
         if (isdefined(self.enemy) && distancesquared(self.owner.origin, self.enemy.origin) < 1000 * 1000 && self function_6d424c6f(self.enemy, 1) && ispointinnavvolume(self.origin, "navvolume_small")) {
             self vehicle_ai::evaluate_connections();
-            wait(1);
+            wait 1;
             continue;
         }
         owner = self.owner;
         if (!isdefined(owner)) {
-            wait(1);
+            wait 1;
             continue;
         }
         usepathfinding = 1;
@@ -525,7 +525,7 @@ function state_guard_update(params) {
                     stucklocation = self.origin;
                 } else if (stuckcount > 10) {
                     /#
-                        assert(0, "combat" + self.origin);
+                        assert(0, "<dev string:x51>" + self.origin);
                         v_box_min = (self.radius * -1, self.radius * -1, self.radius * -1);
                         v_box_max = (self.radius, self.radius, self.radius);
                         box(self.origin, v_box_min, v_box_max, self.angles[1], (1, 0, 0), 1, 0, 1000000);
@@ -542,7 +542,7 @@ function state_guard_update(params) {
             if (owner.main_guard === self) {
                 guardpoints = get_guard_points(owner);
                 if (guardpoints.size < 1) {
-                    wait(1);
+                    wait 1;
                     continue;
                 }
                 stuckcount = 0;
@@ -579,7 +579,7 @@ function state_guard_update(params) {
                     pointindex = randomint(self._guard_points.size);
                     timenotatgoal = gettime();
                 }
-                wait(0.2);
+                wait 0.2;
                 continue;
             }
             if (self setvehgoalpos(self.current_pathto_pos, 1, usepathfinding)) {
@@ -593,11 +593,11 @@ function state_guard_update(params) {
                     self vehicle_ai::waittill_pathing_done();
                 }
             } else {
-                wait(0.5);
+                wait 0.5;
             }
             continue;
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -634,14 +634,14 @@ function turretfireupdate() {
                 }
                 startaim = gettime();
                 while (!self.turretontarget && vehicle_ai::timesince(startaim) < 3) {
-                    wait(0.2);
+                    wait 0.2;
                 }
                 if (isdefined(self.enemy) && self.turretontarget && self.noshoot !== 1) {
                     if (isrockettype) {
                         for (i = 0; i < 2 && isdefined(self.enemy); i++) {
                             self fireweapon(0, self.enemy);
                             fired = 1;
-                            wait(0.25);
+                            wait 0.25;
                         }
                     } else {
                         self vehicle_ai::fire_for_time(randomfloatrange(self.settings.turret_fire_burst_min, self.settings.turret_fire_burst_max), 0, self.enemy);
@@ -650,27 +650,27 @@ function turretfireupdate() {
                         if (!isdefined(self.settings.turret_cooldown_min)) {
                             self.settings.turret_cooldown_min = 0;
                         }
-                        wait(randomfloatrange(self.settings.turret_cooldown_min, self.settings.turret_cooldown_max));
+                        wait randomfloatrange(self.settings.turret_cooldown_min, self.settings.turret_cooldown_max);
                     }
                 } else if (isdefined(self.settings.turret_enemy_detect_freq)) {
-                    wait(self.settings.turret_enemy_detect_freq);
+                    wait self.settings.turret_enemy_detect_freq;
                 }
                 self function_d013f7fa((15, 0, 0), 0);
             }
             if (isrockettype) {
                 if (isdefined(self.enemy) && isai(self.enemy)) {
-                    wait(randomfloatrange(4, 7));
+                    wait randomfloatrange(4, 7);
                 } else {
-                    wait(randomfloatrange(3, 5));
+                    wait randomfloatrange(3, 5);
                 }
             } else if (isdefined(self.enemy) && isai(self.enemy)) {
-                wait(randomfloatrange(2, 2.5));
+                wait randomfloatrange(2, 2.5);
             } else {
-                wait(randomfloatrange(0.5, 1.5));
+                wait randomfloatrange(0.5, 1.5);
             }
             continue;
         }
-        wait(0.4);
+        wait 0.4;
     }
 }
 
@@ -684,11 +684,11 @@ function path_update_interrupt() {
     self endon(#"near_goal");
     self endon(#"reached_end_node");
     old_enemy = self.enemy;
-    wait(1);
+    wait 1;
     while (true) {
         if (isdefined(self.current_pathto_pos)) {
             if (distance2dsquared(self.current_pathto_pos, self.goalpos) > self.goalradius * self.goalradius) {
-                wait(0.2);
+                wait 0.2;
                 self notify(#"near_goal");
             }
         }
@@ -706,7 +706,7 @@ function path_update_interrupt() {
                 self notify(#"near_goal");
             }
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 
@@ -717,7 +717,7 @@ function path_update_interrupt() {
 function wait_till_something_happens(timeout) {
     self endon(#"change_state");
     self endon(#"death");
-    wait(0.1);
+    wait 0.1;
     time = timeout;
     cant_see_count = 0;
     while (time > 0) {
@@ -745,7 +745,7 @@ function wait_till_something_happens(timeout) {
             }
             if (isplayer(self.enemy) && self.enemy islookingat(self)) {
                 if (math::cointoss()) {
-                    wait(randomfloatrange(0.1, 0.5));
+                    wait randomfloatrange(0.1, 0.5);
                 }
                 self drop_leader();
                 break;
@@ -756,7 +756,7 @@ function wait_till_something_happens(timeout) {
                 break;
             }
         }
-        wait(0.3);
+        wait 0.3;
         time -= 0.3;
     }
 }
@@ -846,13 +846,13 @@ function should_fly_forward(distancetogoalsq) {
 function state_combat_update(params) {
     self endon(#"change_state");
     self endon(#"death");
-    wait(0.1);
+    wait 0.1;
     stuckcount = 0;
     for (;;) {
         self setspeed(self.settings.defaultmovespeed);
         self update_leader();
         if (isdefined(self.inpain) && self.inpain) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (self.enable_guard === 1) {
@@ -873,7 +873,7 @@ function state_combat_update(params) {
             foreach (player in players) {
                 self getperfectinfo(player);
             }
-            wait(1);
+            wait 1;
         }
         usepathfinding = 1;
         onnavvolume = ispointinnavvolume(self.origin, "navvolume_small");
@@ -908,7 +908,7 @@ function state_combat_update(params) {
                     stucklocation = self.origin;
                 } else if (stuckcount > 10) {
                     /#
-                        assert(0, "combat" + self.origin);
+                        assert(0, "<dev string:x51>" + self.origin);
                         v_box_min = (self.radius * -1, self.radius * -1, self.radius * -1);
                         v_box_max = (self.radius, self.radius, self.radius);
                         box(self.origin, v_box_min, v_box_max, self.angles[1], (1, 0, 0), 1, 0, 1000000);
@@ -984,7 +984,7 @@ function getnextmoveposition_wander() {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["combat"] = disttooriginscore;
+            point._scoredebug["<dev string:x74>"] = disttooriginscore;
         #/
         point.score += disttooriginscore;
         if (point.score > best_score) {
@@ -1032,7 +1032,7 @@ function getnextmoveposition_tactical() {
                             if (!isdefined(point._scoredebug)) {
                                 point._scoredebug = [];
                             }
-                            point._scoredebug["combat"] = 300;
+                            point._scoredebug["<dev string:x81>"] = 300;
                         #/
                         point.score += 300;
                     }
@@ -1041,7 +1041,7 @@ function getnextmoveposition_tactical() {
                             if (!isdefined(point._scoredebug)) {
                                 point._scoredebug = [];
                             }
-                            point._scoredebug["combat"] = 300;
+                            point._scoredebug["<dev string:x8a>"] = 300;
                         #/
                         point.score += 300;
                     }
@@ -1077,21 +1077,21 @@ function getnextmoveposition_tactical() {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["combat"] = randomfloatrange(0, randomness);
+            point._scoredebug["<dev string:x93>"] = randomfloatrange(0, randomness);
         #/
         point.score += randomfloatrange(0, randomness);
         /#
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["combat"] = point.distawayfromengagementarea * -1;
+            point._scoredebug["<dev string:x9a>"] = point.distawayfromengagementarea * -1;
         #/
         point.score += point.distawayfromengagementarea * -1;
         /#
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["combat"] = point.distengagementheight * -1 * 1.4;
+            point._scoredebug["<dev string:xa9>"] = point.distengagementheight * -1 * 1.4;
         #/
         point.score += point.distengagementheight * -1 * 1.4;
         if (point.disttoorigin2d < 120) {
@@ -1099,7 +1099,7 @@ function getnextmoveposition_tactical() {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["combat"] = (120 - point.disttoorigin2d) * -1.5;
+                point._scoredebug["<dev string:xb0>"] = (120 - point.disttoorigin2d) * -1.5;
             #/
             point.score += (120 - point.disttoorigin2d) * -1.5;
         }
@@ -1109,7 +1109,7 @@ function getnextmoveposition_tactical() {
                     if (!isdefined(point._scoredebug)) {
                         point._scoredebug = [];
                     }
-                    point._scoredebug["combat"] = avoid_radius * -1;
+                    point._scoredebug["<dev string:xbf>"] = avoid_radius * -1;
                 #/
                 point.score += avoid_radius * -1;
             }
@@ -1119,7 +1119,7 @@ function getnextmoveposition_tactical() {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["combat"] = -500;
+                point._scoredebug["<dev string:xd0>"] = -500;
             #/
             point.score += -500;
         }
@@ -1133,7 +1133,7 @@ function getnextmoveposition_tactical() {
         return undefined;
     }
     /#
-        if (isdefined(getdvarint("combat")) && getdvarint("combat")) {
+        if (isdefined(getdvarint("<dev string:xe2>")) && getdvarint("<dev string:xe2>")) {
             recordline(self.origin, best_point.origin, (0.3, 1, 0));
             recordline(self.origin, self.enemy.origin, (1, 0, 0.4));
         }

@@ -1,9 +1,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_4fca3ee8;
+#namespace cp_doa_bo3_sound;
 
-// Namespace namespace_4fca3ee8
+// Namespace cp_doa_bo3_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xd0
 // Size: 0x4
@@ -32,7 +32,7 @@ function function_68fdd800() {
 function function_42b6c406() {
     level waittill(#"hash_37480f48");
     self stoploopsound();
-    wait(1);
+    wait 1;
     self delete();
 }
 

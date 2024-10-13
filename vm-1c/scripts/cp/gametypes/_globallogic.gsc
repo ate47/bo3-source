@@ -76,7 +76,7 @@ function init() {
     level.contractsenabled = !getgametypesetting("disableContracts");
     level.contractsenabled = 0;
     /#
-        if (getdvarint("g_gametype") == 1) {
+        if (getdvarint("<dev string:x28>") == 1) {
             level.rankedmatch = 1;
         }
     #/
@@ -137,7 +137,7 @@ function init() {
     level.oldschool = getdvarint("scr_oldschool") == 1;
     if (level.oldschool) {
         /#
-            print("g_gametype");
+            print("<dev string:x3d>");
         #/
         setdvar("jump_height", 64);
         setdvar("jump_slowdownEnable", 0);
@@ -277,10 +277,10 @@ function precache_mp_leaderboards() {
     globalleaderboards = "LB_MP_GB_XPPRESTIGE LB_MP_GB_SCORE LB_MP_GB_KDRATIO LB_MP_GB_KILLS LB_MP_GB_WINS LB_MP_GB_DEATHS LB_MP_GB_XPMAXPERGAME LB_MP_GB_TACTICALINSERTS LB_MP_GB_TACTICALINSERTSKILLS LB_MP_GB_PRESTIGEXP LB_MP_GB_HEADSHOTS LB_MP_GB_WEAPONS_PRIMARY LB_MP_GB_WEAPONS_SECONDARY";
     careerleaderboard = "";
     switch (level.gametype) {
-    case 41:
-    case 42:
-    case 43:
-    case 44:
+    case "gun":
+    case "oic":
+    case "sas":
+    case "shrp":
         break;
     default:
         careerleaderboard = " LB_MP_GB_SCOREPERMINUTE";
@@ -401,9 +401,9 @@ function forceend(hostsucks) {
         winner = globallogic_score::gethighestscoringplayer();
         /#
             if (isdefined(winner)) {
-                print("g_gametype" + winner.name);
+                print("<dev string:x52>" + winner.name);
             } else {
-                print("g_gametype");
+                print("<dev string:x69>");
             }
         #/
     }
@@ -437,9 +437,9 @@ function killserverpc() {
         winner = globallogic_score::gethighestscoringplayer();
         /#
             if (isdefined(winner)) {
-                print("g_gametype" + winner.name);
+                print("<dev string:x52>" + winner.name);
             } else {
-                print("g_gametype");
+                print("<dev string:x69>");
             }
         #/
     }
@@ -447,7 +447,7 @@ function killserverpc() {
     level.hostforcedend = 1;
     level.killserver = 1;
     endstring = %MP_HOST_ENDED_GAME;
-    println("g_gametype");
+    println("<dev string:x7e>");
     thread endgame(winner, endstring);
 }
 
@@ -677,7 +677,7 @@ function function_3eec45b4() {
 // Size: 0x1f8
 function updategameevents() {
     /#
-        if (getdvarint("g_gametype") == 1) {
+        if (getdvarint("<dev string:x98>") == 1) {
             return;
         }
     #/
@@ -753,7 +753,7 @@ function matchstarttimer() {
             foreach (player in level.players) {
                 player playlocalsound("uin_start_count_down");
             }
-            wait(1);
+            wait 1;
         }
     } else {
         visionsetnaked(getdvarstring("mapname"), 1);
@@ -793,7 +793,7 @@ function wavespawntimer() {
         foreach (team in level.teams) {
             notifyteamwavespawn(team, time);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -804,7 +804,7 @@ function wavespawntimer() {
 function hostidledout() {
     hostplayer = util::gethostplayer();
     /#
-        if (getdvarint("g_gametype") == 1 || getdvarint("g_gametype") == 1) {
+        if (getdvarint("<dev string:xae>") == 1 || getdvarint("<dev string:x98>") == 1) {
             return false;
         }
     #/
@@ -892,7 +892,7 @@ function getnexthighestscore(score) {
 // Size: 0x8b6
 function sendafteractionreport(winner) {
     /#
-        if (getdvarint("g_gametype") == 1) {
+        if (getdvarint("<dev string:xae>") == 1) {
             return;
         }
     #/
@@ -993,7 +993,7 @@ function gamehistoryplayerkicked() {
         self.pers["matchesPlayedStatsTracked"] = undefined;
     }
     uploadstats(self);
-    wait(1);
+    wait 1;
 }
 
 // Namespace globallogic
@@ -1018,7 +1018,7 @@ function gamehistoryplayerquit() {
     }
     uploadstats(self);
     if (!self ishost()) {
-        wait(1);
+        wait 1;
     }
 }
 
@@ -1250,7 +1250,7 @@ function function_fe2db310() {
                 if (level.multiteam) {
                     level.placement["all"][index] addplayerstat("TOP3ANY_MULTITEAM", 1);
                 }
-                level.placement["all"][index] notify(#"hash_e3f895a5");
+                level.placement["all"][index] notify(#"TOP3");
             }
         }
         for (index = 3; index < placement.size; index++) {
@@ -1401,7 +1401,7 @@ function endgame(winner, endreasontext, var_b091fbbb) {
     function_fe2db310();
     thread challenges::gameend(winner);
     level lui::screen_fade_out(1);
-    wait(0.3);
+    wait 0.3;
     if (!isdefined(level.skipgameend) || !level.skipgameend) {
         displaygameend(winner, endreasontext, var_b091fbbb);
     }
@@ -1432,7 +1432,7 @@ function endgame(winner, endreasontext, var_b091fbbb) {
     }
     level notify(#"sfade");
     /#
-        print("g_gametype");
+        print("<dev string:xc5>");
     #/
     if (isdefined(level.var_4c3d1a55)) {
         [[ level.var_4c3d1a55 ]]();
@@ -1580,11 +1580,11 @@ function updategametypedvars() {
         if (isdefined(level.starttime)) {
             remaining_time = globallogic_utils::gettimeremaining();
             if (isdefined(remaining_time) && remaining_time < 3000) {
-                wait(0.1);
+                wait 0.1;
                 continue;
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -1608,7 +1608,7 @@ function removedisconnectedplayerfromplacement() {
         return;
     }
     level.placement["all"][numplayers - 1] = undefined;
-    assert(level.placement["g_gametype"].size == numplayers - 1);
+    assert(level.placement["<dev string:xd0>"].size == numplayers - 1);
     /#
         globallogic_utils::assertproperplacement();
     #/
@@ -1712,7 +1712,7 @@ function getplacementforplayer(player) {
 function istopscoringplayer(player) {
     topplayer = 0;
     updateplacement();
-    assert(level.placement["g_gametype"].size > 0);
+    assert(level.placement["<dev string:xd0>"].size > 0);
     if (level.placement["all"].size == 0) {
         return 0;
     }
@@ -1956,7 +1956,7 @@ function checkplayerscorelimitsoon() {
 // Size: 0x29c
 function timelimitclock() {
     level endon(#"game_ended");
-    wait(0.05);
+    wait 0.05;
     clockobject = spawn("script_origin", (0, 0, 0));
     while (game["state"] == "playing") {
         if (!level.timerstopped && level.timelimit) {
@@ -1991,10 +1991,10 @@ function timelimitclock() {
                 clockobject playsound("mpl_ui_timer_countdown");
             }
             if (timeleft - floor(timeleft) >= 0.05) {
-                wait(timeleft - floor(timeleft));
+                wait timeleft - floor(timeleft);
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -2006,11 +2006,11 @@ function timelimitclock_intermission(waittime) {
     setgameendtime(gettime() + int(waittime * 1000));
     clockobject = spawn("script_origin", (0, 0, 0));
     if (waittime >= 10) {
-        wait(waittime - 10);
+        wait waittime - 10;
     }
     for (;;) {
         clockobject playsound("mpl_ui_timer_countdown");
-        wait(1);
+        wait 1;
     }
 }
 
@@ -2027,7 +2027,7 @@ function function_59b8efe0() {
                 recordbreadcrumbdataforplayer(player, undefined);
             }
         }
-        wait(15);
+        wait 15;
     }
 }
 
@@ -2068,7 +2068,7 @@ function startgame() {
 function waitforplayers() {
     starttime = gettime();
     while (getnumconnectedplayers() < 1) {
-        wait(0.05);
+        wait 0.05;
         if (gettime() - starttime > 120000) {
             exitlevel(0);
         }
@@ -2085,10 +2085,10 @@ function prematchperiod() {
     if (level.prematchperiod > 0) {
         thread matchstarttimer();
         waitforplayers();
-        wait(level.prematchperiod);
+        wait level.prematchperiod;
     } else {
         matchstarttimerskip();
-        wait(0.05);
+        wait 0.05;
     }
     level.inprematchperiod = 0;
     for (index = 0; index < level.players.size; index++) {
@@ -2110,10 +2110,10 @@ function graceperiod() {
     if (isdefined(level.graceperiodfunc)) {
         [[ level.graceperiodfunc ]]();
     } else {
-        wait(level.graceperiod);
+        wait level.graceperiod;
     }
     level notify(#"grace_period_ending");
-    wait(0.05);
+    wait 0.05;
     level.ingraceperiod = 0;
     if (game["state"] != "playing") {
         return;
@@ -2175,7 +2175,7 @@ function callback_startgametype() {
         if (!isdefined(game["defenders"])) {
             game["defenders"] = "axis";
         }
-        assert(game["g_gametype"] != game["g_gametype"]);
+        assert(game["<dev string:xd4>"] != game["<dev string:xde>"]);
         foreach (team in level.teams) {
             if (!isdefined(game[team])) {
                 game[team] = "pmc";
@@ -2268,7 +2268,7 @@ function callback_startgametype() {
     level.hardcoremode = getgametypesetting("hardcoreMode");
     if (level.hardcoremode) {
         /#
-            print("g_gametype");
+            print("<dev string:xe8>");
         #/
         if (!isdefined(level.friendlyfiredelaytime)) {
             level.friendlyfiredelaytime = 0;
@@ -2390,13 +2390,13 @@ function callback_startgametype() {
     level thread updategametypedvars();
     level thread simple_hostmigration::updatehostmigrationdata();
     /#
-        if (getdvarint("g_gametype") == 1) {
+        if (getdvarint("<dev string:xae>") == 1) {
             level.skipgameend = 1;
             level.roundlimit = 1;
-            wait(1);
+            wait 1;
             thread forceend(0);
         }
-        if (getdvarint("g_gametype") == 1) {
+        if (getdvarint("<dev string:x98>") == 1) {
             thread forcedebughostmigration();
         }
     #/
@@ -2411,7 +2411,7 @@ function callback_startgametype() {
     function forcedebughostmigration() {
         while (true) {
             hostmigration::waittillhostmigrationdone();
-            wait(60);
+            wait 60;
             starthostmigration();
             hostmigration::waittillhostmigrationdone();
         }
@@ -2447,7 +2447,7 @@ function checkroundswitch() {
     if (!isdefined(level.onroundswitch)) {
         return false;
     }
-    assert(game["g_gametype"] > 0);
+    assert(game["<dev string:xfc>"] > 0);
     if (game["roundsplayed"] % level.roundswitch == 0) {
         [[ level.onroundswitch ]]();
         return true;
@@ -2497,7 +2497,7 @@ function updaterankedmatch(winner) {
         if (hostidledout()) {
             level.hostforcedend = 1;
             /#
-                print("g_gametype");
+                print("<dev string:x109>");
             #/
             endlobby();
         }

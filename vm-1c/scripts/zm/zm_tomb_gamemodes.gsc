@@ -1,6 +1,6 @@
-#namespace namespace_d354b820;
+#namespace zm_tomb_gamemodes;
 
-// Namespace namespace_d354b820
+// Namespace zm_tomb_gamemodes
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x78
 // Size: 0x4

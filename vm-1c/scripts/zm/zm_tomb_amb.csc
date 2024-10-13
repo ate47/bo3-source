@@ -6,9 +6,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_54a425fe;
+#namespace zm_tomb_amb;
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x670b28c1, Offset: 0x700
 // Size: 0x174
@@ -30,7 +30,7 @@ function main() {
     level thread startzmbspawnersoundloops();
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x93928687, Offset: 0x880
 // Size: 0xb0
@@ -49,18 +49,18 @@ function function_af7b8418(str_name) {
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x18477a54, Offset: 0x938
 // Size: 0x74
 function function_c9207335() {
-    wait(3);
+    wait 3;
     level thread function_d667714e();
     var_13a52dfe = getentarray(0, "sndMusicTrig", "targetname");
     array::thread_all(var_13a52dfe, &function_60a32834);
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3c7f9978, Offset: 0x9b8
 // Size: 0xb4
@@ -71,16 +71,16 @@ function function_60a32834() {
             level notify(#"hash_51d7bc7c", self.script_sound);
             self thread function_89793e8f();
             while (isdefined(trigplayer) && trigplayer istouching(self)) {
-                wait(0.016);
+                wait 0.016;
             }
             self notify(#"hash_ae459976");
             continue;
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2c09ab09, Offset: 0xa78
 // Size: 0xf8
@@ -99,7 +99,7 @@ function function_d667714e() {
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4b699896, Offset: 0xb78
 // Size: 0x56
@@ -108,22 +108,22 @@ function function_89793e8f() {
     self endon(#"hash_6c4e5e2e");
     level endon(#"hash_51d7bc7c");
     self waittill(#"hash_ae459976");
-    wait(0.1);
+    wait 0.1;
     level notify(#"hash_51d7bc7c", "null");
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6c78fcb3, Offset: 0xbd8
 // Size: 0x64
 function function_b234849(var_6d9d81aa) {
     level endon(#"hash_51d7bc7c");
     level.var_eb526c90 stopallloopsounds(2);
-    wait(1);
+    wait 1;
     level.var_9433cf5a = level.var_eb526c90 playloopsound(var_6d9d81aa, 2);
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3468e135, Offset: 0xc48
 // Size: 0xd0
@@ -142,7 +142,7 @@ function function_c052f9b8() {
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4ad49724, Offset: 0xd20
 // Size: 0x44
@@ -152,16 +152,16 @@ function function_33be1969() {
     level.var_1c69bb12.var_308c43c8 = 0;
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 2, eflags: 0x1 linked
 // Checksum 0xde974e92, Offset: 0xd70
 // Size: 0x96
 function function_da1a3c87(room, player) {
     switch (room) {
-    case 19:
-    case 20:
-    case 21:
-    case 22:
+    case "tomb_cave":
+    case "tomb_large_chamber":
+    case "tomb_robot_head":
+    case "tomb_spiral_staircase_bot":
         setsoundcontext("grass", "in_grass");
         break;
     default:
@@ -170,7 +170,7 @@ function function_da1a3c87(room, player) {
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x0
 // Checksum 0xbea9063c, Offset: 0xe10
 // Size: 0xea
@@ -185,7 +185,7 @@ function function_6fae68d7() {
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb35220d4, Offset: 0xf08
 // Size: 0xf0
@@ -202,17 +202,17 @@ function function_6576aaa4() {
                 self thread function_3abd927c();
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x14170cf6, Offset: 0x1000
 // Size: 0x76
 function function_8e8fcdfc(player) {
     while (isdefined(self) && isdefined(player) && player istouching(self)) {
-        wait(0.1);
+        wait 0.1;
     }
     self.players--;
     if (isdefined(player)) {
@@ -221,7 +221,7 @@ function function_8e8fcdfc(player) {
     self notify(#"hash_961b140e");
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x26cd2e68, Offset: 0x1080
 // Size: 0xb4
@@ -234,7 +234,7 @@ function function_3abd927c() {
     playsound(0, "zmb_zone_plate_up", self.origin);
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa2cc9afd, Offset: 0x1140
 // Size: 0x42
@@ -248,7 +248,7 @@ function function_74c85975() {
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4bac2fd1, Offset: 0x1190
 // Size: 0x7c
@@ -258,7 +258,7 @@ function function_6cc11add() {
     level.sndchargeshot_func = &function_6442a8c2;
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc0c165a3, Offset: 0x1218
 // Size: 0x7c
@@ -270,7 +270,7 @@ function function_ec990408(localclientnum, oldval, newval, bnewent, binitialsnap
     audio::stoploopat(fieldname, (0, 0, 0));
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5f53cfe8, Offset: 0x12a0
 // Size: 0x2da
@@ -303,7 +303,7 @@ function function_3599b48b(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7c01cae4, Offset: 0x1588
 // Size: 0x34
@@ -313,7 +313,7 @@ function function_714746a6() {
     thread function_57a479e1();
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x23d0890e, Offset: 0x15c8
 // Size: 0xf4
@@ -326,18 +326,18 @@ function function_113b7a0a() {
     audio::snd_play_auto_fx("fx_tomb_light_md", "amb_light_md", 0, 0, 0, 0);
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd3f6e262, Offset: 0x16c8
 // Size: 0x50
 function function_81bedf7d() {
     while (true) {
         playsound(0, "amb_flyover", (1310, 859, 3064));
-        wait(randomintrange(2, 8));
+        wait randomintrange(2, 8);
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6660265f, Offset: 0x1720
 // Size: 0x54
@@ -346,11 +346,11 @@ function function_57a479e1() {
     audio::playloopat("amb_dist_battle_back", (4190, -1050, 910));
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 7, eflags: 0x1 linked
 // Checksum 0xce72d353, Offset: 0x1780
 // Size: 0x94
-function function_8189f66f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function sndMudSlow(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     if (!isspectating(localclientnum, 0)) {
         if (newval == 1) {
             self thread function_c85630a7();
@@ -360,7 +360,7 @@ function function_8189f66f(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcd801760, Offset: 0x1820
 // Size: 0x160
@@ -379,11 +379,11 @@ function function_c85630a7() {
         var_3ec2ad89 = abs(self getspeed());
         var_fef3a6cb = audio::scale_speed(21, 285, 0.01, 1, var_3ec2ad89);
         self.var_29fe0572 setloopstate("zmb_tomb_slowed_movement_loop", var_fef3a6cb, 1);
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc12ee60, Offset: 0x1988
 // Size: 0x52
@@ -393,7 +393,7 @@ function function_555b3a00() {
     self.var_29fe0572.var_8d8259d3 = undefined;
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb07b2d44, Offset: 0x19e8
 // Size: 0x15c
@@ -404,14 +404,14 @@ function init() {
     init_heli_sound_values("qrdrone", "turbine_moving", 30, 0, 0.9, 20, 0.9, 1.1);
     init_heli_sound_values("qrdrone", "turn", 5, 0, 1, 1, 1, 1);
     /#
-        if (getdvarstring("targetname") == "targetname") {
-            setdvar("targetname", "targetname");
+        if (getdvarstring("<dev string:x28>") == "<dev string:x33>") {
+            setdvar("<dev string:x28>", "<dev string:x33>");
         }
         level thread command_parser();
     #/
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 8, eflags: 0x1 linked
 // Checksum 0x71bc7015, Offset: 0x1b50
 // Size: 0x28c
@@ -429,54 +429,54 @@ function init_heli_sound_values(heli_type, part_type, max_speed_vol, min_vol, ma
     level.helisoundvalues[heli_type][part_type].pitchmin = min_pitch;
     level.helisoundvalues[heli_type][part_type].pitchmax = max_pitch;
     /#
-        if (getdvarint("targetname") > 0) {
-            println("targetname" + heli_type);
-            println("targetname" + part_type);
-            println("targetname" + max_speed_vol);
-            println("targetname" + min_vol);
-            println("targetname" + max_vol);
-            println("targetname" + max_speed_pitch);
-            println("targetname" + min_pitch);
-            println("targetname" + max_pitch);
+        if (getdvarint("<dev string:x34>") > 0) {
+            println("<dev string:x3f>" + heli_type);
+            println("<dev string:x5c>" + part_type);
+            println("<dev string:x79>" + max_speed_vol);
+            println("<dev string:x9a>" + min_vol);
+            println("<dev string:xb5>" + max_vol);
+            println("<dev string:xd0>" + max_speed_pitch);
+            println("<dev string:xf3>" + min_pitch);
+            println("<dev string:x110>" + max_pitch);
         }
     #/
 }
 
 /#
 
-    // Namespace namespace_54a425fe
+    // Namespace zm_tomb_amb
     // Params 0, eflags: 0x1 linked
     // Checksum 0x859507f9, Offset: 0x1de8
     // Size: 0x558
     function command_parser() {
         while (true) {
-            command = getdvarstring("targetname");
-            if (command != "targetname") {
+            command = getdvarstring("<dev string:x28>");
+            if (command != "<dev string:x33>") {
                 success = 1;
-                tokens = strtok(command, "targetname");
+                tokens = strtok(command, "<dev string:x12d>");
                 if (!isdefined(tokens[0]) || !isdefined(level.helisoundvalues[tokens[0]])) {
                     if (isdefined(tokens[0])) {
-                        println("targetname" + tokens[0]);
+                        println("<dev string:x12f>" + tokens[0]);
                     } else {
-                        println("targetname");
+                        println("<dev string:x15f>");
                     }
-                    println("targetname");
+                    println("<dev string:x18c>");
                     success = 0;
                 } else if (!isdefined(tokens[1])) {
                     if (isdefined(tokens[1])) {
-                        println("targetname" + tokens[0] + "targetname" + tokens[1]);
+                        println("<dev string:x1d6>" + tokens[0] + "<dev string:x206>" + tokens[1]);
                     } else {
-                        println("targetname" + tokens[0]);
+                        println("<dev string:x212>" + tokens[0]);
                     }
-                    println("targetname");
+                    println("<dev string:x18c>");
                     success = 0;
                 } else if (!isdefined(tokens[2])) {
-                    println("targetname" + tokens[0] + "targetname" + tokens[1]);
-                    println("targetname");
+                    println("<dev string:x24a>" + tokens[0] + "<dev string:x287>" + tokens[1]);
+                    println("<dev string:x18c>");
                     success = 0;
                 } else if (!isdefined(tokens[3])) {
-                    println("targetname" + tokens[0] + "targetname" + tokens[1]);
-                    println("targetname");
+                    println("<dev string:x28f>" + tokens[0] + "<dev string:x287>" + tokens[1]);
+                    println("<dev string:x18c>");
                     success = 0;
                 }
                 if (success) {
@@ -485,44 +485,44 @@ function init_heli_sound_values(heli_type, part_type, max_speed_vol, min_vol, ma
                     value_name = tokens[2];
                     value = float(tokens[3]);
                     switch (value_name) {
-                    case 8:
+                    case "<dev string:x2c7>":
                         level.helisoundvalues[heli_type][heli_part].volumemin = value;
-                        println("targetname" + value);
+                        println("<dev string:x2d1>" + value);
                         break;
-                    case 8:
+                    case "<dev string:x2e7>":
                         level.helisoundvalues[heli_type][heli_part].volumemax = value;
-                        println("targetname" + value);
+                        println("<dev string:x2f1>" + value);
                         break;
-                    case 8:
+                    case "<dev string:x307>":
                         level.helisoundvalues[heli_type][heli_part].pitchmin = value;
-                        println("targetname" + value);
+                        println("<dev string:x310>" + value);
                         break;
-                    case 8:
+                    case "<dev string:x325>":
                         level.helisoundvalues[heli_type][heli_part].pitchmax = value;
-                        println("targetname" + value);
+                        println("<dev string:x32e>" + value);
                         break;
-                    case 8:
+                    case "<dev string:x343>":
                         level.helisoundvalues[heli_type][heli_part].speedvolumemax = value;
-                        println("targetname" + value);
+                        println("<dev string:x352>" + value);
                         break;
-                    case 8:
+                    case "<dev string:x36d>":
                         level.helisoundvalues[heli_type][heli_part].speedpitchmax = value;
-                        println("targetname" + value);
+                        println("<dev string:x37b>" + value);
                         break;
                     default:
-                        println("targetname");
+                        println("<dev string:x395>");
                         break;
                     }
                 }
-                setdvar("targetname", "targetname");
+                setdvar("<dev string:x28>", "<dev string:x33>");
             }
-            wait(0.1);
+            wait 0.1;
         }
     }
 
 #/
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcab746f0, Offset: 0x2348
 // Size: 0x9e
@@ -533,7 +533,7 @@ function init_heli_sounds_player_drone() {
     self.warning_tag = undefined;
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 2, eflags: 0x1 linked
 // Checksum 0xfaa1fc99, Offset: 0x23f0
 // Size: 0x64
@@ -545,7 +545,7 @@ function sound_linkto(parent, tag) {
     self linkto(parent, "tag_body");
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3043b00d, Offset: 0x2460
 // Size: 0x38c
@@ -576,7 +576,7 @@ function setup_heli_sounds(bone_location, type, tag, run, dmg1, dmg2, dmg3) {
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x91a39c03, Offset: 0x27f8
 // Size: 0x9c
@@ -594,7 +594,7 @@ function start_helicopter_sounds(localclientnum) {
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0xee5e2368, Offset: 0x28a0
 // Size: 0x5c
@@ -605,7 +605,7 @@ function heli_loop_sound_delete(real_ent) {
     real_ent delete();
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 2, eflags: 0x1 linked
 // Checksum 0xe774fae6, Offset: 0x2908
 // Size: 0x24
@@ -613,24 +613,24 @@ function heli_linkto_sound_ents_delete(localclientnum, entity) {
     entity notify(#"entityshutdown");
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 1, eflags: 0x0
 // Checksum 0x1d828fd9, Offset: 0x2938
 // Size: 0xbe
 function heli_sound_play(heli_bone) {
     switch (heli_bone.sound_type) {
-    case 57:
+    case "engine":
         heli_bone.run playloopsound(heli_bone.run.alias, 2);
         break;
-    case 60:
+    case "wind":
         break;
     default:
-        println("targetname" + heli_bone.type + "targetname");
+        println("<dev string:x3ef>" + heli_bone.type + "<dev string:x40c>");
         break;
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x72ce6f4a, Offset: 0x2a00
 // Size: 0xa4
@@ -641,7 +641,7 @@ function play_player_drone_sounds() {
     self thread drone_rotate_angle("qrdrone", "turn");
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 4, eflags: 0x1 linked
 // Checksum 0xfa93c1e9, Offset: 0x2ab0
 // Size: 0x45e
@@ -654,7 +654,7 @@ function heli_idle_run_transition(heli_type, heli_part, wait_time, updown) {
     }
     while (isdefined(self)) {
         if (!isdefined(level.helisoundvalues[heli_type]) || !isdefined(level.helisoundvalues[heli_type][heli_part])) {
-            println("targetname");
+            println("<dev string:x42a>");
             return;
         }
         max_speed_vol = level.helisoundvalues[heli_type][heli_part].speedvolumemax;
@@ -677,19 +677,19 @@ function heli_idle_run_transition(heli_type, heli_part, wait_time, updown) {
         if (isdefined(run_volume) && isdefined(run_pitch)) {
             heli_bone.run setloopstate(heli_bone.run.alias, run_volume, run_pitch, 1, 0.15);
             /#
-                if (getdvarint("targetname") > 0) {
-                    println("targetname" + self.cur_speed);
-                    println("targetname" + run_pitch);
-                    println("targetname" + self.cur_speed);
-                    println("targetname" + run_volume);
+                if (getdvarint("<dev string:x34>") > 0) {
+                    println("<dev string:x459>" + self.cur_speed);
+                    println("<dev string:x46f>" + run_pitch);
+                    println("<dev string:x459>" + self.cur_speed);
+                    println("<dev string:x480>" + run_volume);
                 }
             #/
         }
-        wait(wait_time);
+        wait wait_time;
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x52705573, Offset: 0x2f18
 // Size: 0xb0
@@ -706,7 +706,7 @@ function get_heli_sound_ent(sound_ent) {
     return sound_ent;
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x0
 // Checksum 0x86ee9b2c, Offset: 0x2fd0
 // Size: 0x2a
@@ -715,7 +715,7 @@ function get_lock_sound_ent() {
     return self.lock_sound_ent;
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x0
 // Checksum 0x5bab6901, Offset: 0x3008
 // Size: 0x2a
@@ -724,7 +724,7 @@ function get_leaving_sound_ent() {
     return self.leaving_sound_ent;
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x89d568e7, Offset: 0x3040
 // Size: 0x4c
@@ -734,7 +734,7 @@ function heli_sound_ent_delete(real_ent) {
     real_ent delete();
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf4bdb435, Offset: 0x3098
 // Size: 0x528
@@ -761,7 +761,7 @@ function drone_up_down_transition() {
     self thread drone_button_watch();
     while (true) {
         last_pos = self.origin[2];
-        wait(0.1);
+        wait 0.1;
         self.qrdrone_z_difference = last_pos - self.origin[2];
         if (self.qrdrone_z_difference < 0) {
             up_difference = self.qrdrone_z_difference * -1;
@@ -783,7 +783,7 @@ function drone_up_down_transition() {
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6100c9d0, Offset: 0x35c8
 // Size: 0x2c
@@ -792,7 +792,7 @@ function qr_ent_cleanup(veh_ent) {
     self delete();
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 2, eflags: 0x1 linked
 // Checksum 0xf0b8915e, Offset: 0x3600
 // Size: 0x230
@@ -808,7 +808,7 @@ function drone_rotate_angle(heli_type, heli_part) {
     qr_ent_angle linkto(self, tag);
     while (true) {
         last_angle = abs(self.angles[1]);
-        wait(0.1);
+        wait 0.1;
         turning_speed = last_angle - abs(self.angles[1]);
         abs_turning_speed = abs(turning_speed);
         jet_stick_vol = audio::scale_speed(0, 5, 0, 0.4, abs_turning_speed);
@@ -817,7 +817,7 @@ function drone_rotate_angle(heli_type, heli_part) {
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x951ed9fd, Offset: 0x3838
 // Size: 0xe4
@@ -832,11 +832,11 @@ function drone_button_watch() {
         } else if (abs(self.qrdrone_z_difference) < 5 && !return_to_zero) {
             return_to_zero = 1;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x18f96593, Offset: 0x3928
 // Size: 0x694
@@ -885,7 +885,7 @@ function function_3f26c2a4() {
     audio::playloopat("amb_robot_fans", (-5677, -6501, 405));
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 3, eflags: 0x1 linked
 // Checksum 0x46d7a96c, Offset: 0x3fc8
 // Size: 0x194
@@ -911,19 +911,19 @@ function function_6442a8c2(localclientnum, weapon, chargeshotlevel) {
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf309f496, Offset: 0x4168
 // Size: 0x60
 function function_6ee5be43() {
     level notify(#"hash_df9ed1b6");
     level endon(#"hash_df9ed1b6");
-    wait(0.5);
+    wait 0.5;
     self.var_d159d52b stoploopsound(self.var_710dd188, 0.1);
     self.var_4dde9ce5 = 0;
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x41d0
 // Size: 0x4
@@ -931,7 +931,7 @@ function function_ee449b54() {
     
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 1, eflags: 0x0
 // Checksum 0x74ef3744, Offset: 0x41e0
 // Size: 0xc6
@@ -946,11 +946,11 @@ function function_8b8dd551(localclientnum) {
             self.sndent notify(#"hash_9d70babf");
             self.sndent thread function_bca19b62(self.var_c5cda021);
         }
-        wait(2);
+        wait 2;
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 1, eflags: 0x0
 // Checksum 0x108f668f, Offset: 0x42b0
 // Size: 0xd8
@@ -967,11 +967,11 @@ function function_4ff80996(localclientnum) {
             }
             who thread function_bc0edf8b();
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1c157040, Offset: 0x4390
 // Size: 0x60
@@ -979,13 +979,13 @@ function function_bc0edf8b() {
     self notify(#"hash_11d444cc");
     self endon(#"disconnect");
     self endon(#"hash_11d444cc");
-    wait(4);
+    wait 4;
     if (isdefined(self) && self islocalplayer()) {
         self.var_c5cda021 = "mus_underscore_default";
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x12c80bc0, Offset: 0x43f8
 // Size: 0x5c
@@ -993,29 +993,29 @@ function function_bca19b62(alias) {
     self endon(#"hash_9d70babf");
     self endon(#"death");
     self stoploopsound(2);
-    wait(2);
+    wait 2;
     self playloopsound(alias, 2);
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 7, eflags: 0x1 linked
 // Checksum 0x10546557, Offset: 0x4460
 // Size: 0xd6
-function function_e33eeb14(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function sndMaelstrom(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     level thread function_572d945d();
     if (newval == 1) {
-        if (!isdefined(self.var_e33eeb14)) {
-            self.var_e33eeb14 = self playloopsound("amb_maelstrom", 3);
+        if (!isdefined(self.sndMaelstrom)) {
+            self.sndMaelstrom = self playloopsound("amb_maelstrom", 3);
         }
         return;
     }
-    if (isdefined(self.var_e33eeb14)) {
-        self stoploopsound(self.var_e33eeb14);
-        self.var_e33eeb14 = undefined;
+    if (isdefined(self.sndMaelstrom)) {
+        self stoploopsound(self.sndMaelstrom);
+        self.sndMaelstrom = undefined;
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9694f800, Offset: 0x4540
 // Size: 0x68
@@ -1024,12 +1024,12 @@ function function_572d945d() {
         level.var_ca141ce8 = 1;
     }
     while (level.var_ca141ce8 == 1) {
-        wait(randomintrange(5, 15));
+        wait randomintrange(5, 15);
         playsound(0, "amb_distant_explosion", (0, 0, 0));
     }
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xecb7f1ef, Offset: 0x45b0
 // Size: 0x15c
@@ -1038,27 +1038,27 @@ function startzmbspawnersoundloops() {
     if (isdefined(loopers) && loopers.size > 0) {
         delay = 0;
         /#
-            if (getdvarint("targetname") > 0) {
-                println("targetname" + loopers.size + "targetname");
+            if (getdvarint("<dev string:x491>") > 0) {
+                println("<dev string:x49d>" + loopers.size + "<dev string:x4d5>");
             }
         #/
         for (i = 0; i < loopers.size; i++) {
             loopers[i] thread soundloopthink();
             delay += 1;
             if (delay % 20 == 0) {
-                wait(0.016);
+                wait 0.016;
             }
         }
         return;
     }
     /#
-        if (getdvarint("targetname") > 0) {
-            println("targetname");
+        if (getdvarint("<dev string:x491>") > 0) {
+            println("<dev string:x4e0>");
         }
     #/
 }
 
-// Namespace namespace_54a425fe
+// Namespace zm_tomb_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf4b7bf50, Offset: 0x4718
 // Size: 0x16c

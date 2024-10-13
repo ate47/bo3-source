@@ -65,9 +65,9 @@ function function_bdb47551(slot, weapon) {
 // Checksum 0x93e8d6d6, Offset: 0x638
 // Size: 0x3a
 function function_39ea6a1b(slot, weapon) {
-    self notify(#"hash_1d75a6cc");
-    self notify(#"hash_d3706a8a");
-    self notify(#"hash_acc47db4");
+    self notify(#"active_camo_off");
+    self notify(#"active_camo_taken");
+    self notify(#"delete_false_target");
 }
 
 // Namespace namespace_eda43fb2
@@ -83,9 +83,9 @@ function function_5d2fec30() {
 // Checksum 0x4ad88a8d, Offset: 0x690
 // Size: 0x2a
 function function_75fd531c() {
-    self notify(#"hash_acc47db4");
-    self notify(#"hash_1d75a6cc");
-    self notify(#"hash_d3706a8a");
+    self notify(#"delete_false_target");
+    self notify(#"active_camo_off");
+    self notify(#"active_camo_taken");
 }
 
 // Namespace namespace_eda43fb2
@@ -93,7 +93,7 @@ function function_75fd531c() {
 // Checksum 0x1938cdf, Offset: 0x6c8
 // Size: 0x21c
 function _on(slot, weapon) {
-    self endon(#"hash_1d75a6cc");
+    self endon(#"active_camo_off");
     self endon(#"death");
     self endon(#"disconnect");
     self clientfield::set("camo_shader", 1);
@@ -131,11 +131,11 @@ function _off(slot, weapon) {
     self.active_camo = undefined;
     /#
         if (isdefined(self.ignoreme) && self.ignoreme) {
-            iprintlnbold("cybercom_camo");
+            iprintlnbold("<dev string:x28>");
         }
     #/
-    self notify(#"hash_acc47db4");
-    self notify(#"hash_1d75a6cc");
+    self notify(#"delete_false_target");
+    self notify(#"active_camo_off");
 }
 
 // Namespace namespace_eda43fb2
@@ -146,7 +146,7 @@ function function_cba091b7(slot, weapon) {
     self notify(#"hash_cba091b7");
     self endon(#"hash_cba091b7");
     self endon(#"disconnect");
-    self endon(#"hash_1d75a6cc");
+    self endon(#"active_camo_off");
     self flagsys::wait_till("mobile_armory_in_use");
     self gadgetdeactivate(slot, weapon);
 }
@@ -170,14 +170,14 @@ function function_b4902c73(slot, weapon, var_7ad67496, endnote) {
 // Params 4, eflags: 0x4
 // Checksum 0xccc0772e, Offset: 0xb78
 // Size: 0xc2
-function private function_8f371c2b(slot, note, var_696db07, var_a9769379) {
+function private _camo_killReActivateOnNotify(slot, note, var_696db07, var_a9769379) {
     if (!isdefined(var_696db07)) {
         var_696db07 = 300;
     }
     if (!isdefined(var_a9769379)) {
         var_a9769379 = 1000;
     }
-    self endon(#"hash_d3706a8a");
+    self endon(#"active_camo_taken");
     self endon(#"disconnect");
     self notify("_camo_killReActivateOnNotify" + slot + note);
     self endon("_camo_killReActivateOnNotify" + slot + note);
@@ -192,8 +192,8 @@ function private function_8f371c2b(slot, note, var_696db07, var_a9769379) {
 // Checksum 0x1faa3acf, Offset: 0xc48
 // Size: 0x224
 function private function_e784c8b3() {
-    self notify(#"hash_acc47db4");
-    self endon(#"hash_acc47db4");
+    self notify(#"delete_false_target");
+    self endon(#"delete_false_target");
     var_d0c5bbcc = spawn("script_model", self.origin);
     var_d0c5bbcc setmodel("tag_origin");
     var_d0c5bbcc makesentient();
@@ -209,7 +209,7 @@ function private function_e784c8b3() {
         if (var_d0c5bbcc.origin[2] < zmin) {
             var_d0c5bbcc.origin = (var_d0c5bbcc.origin[0], var_d0c5bbcc.origin[1], zmin);
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -233,12 +233,12 @@ function private function_c51ef296(fakeent) {
 function private function_d349a475() {
     self notify(#"hash_d349a475");
     self endon(#"hash_d349a475");
-    self endon(#"hash_d3706a8a");
+    self endon(#"active_camo_taken");
     self endon(#"hash_64558d25");
     while (true) {
         slot, weapon = self waittill(#"gadget_forced_off");
         if (isdefined(weapon) && weapon == level.cybercom.var_1bafc2c2) {
-            wait(getdvarint("scr_active_camo_melee_escape_duration_SEC", 1));
+            wait getdvarint("scr_active_camo_melee_escape_duration_SEC", 1);
             if (!self gadgetisactive(slot)) {
                 self gadgetactivate(slot, weapon, 0);
             }

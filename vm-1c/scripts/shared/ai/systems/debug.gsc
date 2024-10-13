@@ -10,7 +10,7 @@
     // Checksum 0x59872824, Offset: 0xc0
     // Size: 0x34
     function autoexec function_2dc19561() {
-        system::register("<unknown string>", &__init__, undefined, undefined);
+        system::register("<dev string:x28>", &__init__, undefined, undefined);
     }
 
     // Namespace as_debug
@@ -27,10 +27,10 @@
     // Size: 0x50
     function debugdvars() {
         while (true) {
-            if (getdvarint("<unknown string>", 0)) {
+            if (getdvarint("<dev string:x31>", 0)) {
                 delete_all_ai_corpses();
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -39,7 +39,7 @@
     // Checksum 0x24117f0f, Offset: 0x180
     // Size: 0x4c
     function isdebugon() {
-        return isdefined(anim.debugent) && (getdvarint("<unknown string>") == 1 || anim.debugent == self);
+        return isdefined(anim.debugent) && (getdvarint("<dev string:x48>") == 1 || anim.debugent == self);
     }
 
     // Namespace as_debug
@@ -47,9 +47,9 @@
     // Checksum 0xdccef656, Offset: 0x1d8
     // Size: 0x76
     function drawdebuglineinternal(frompoint, topoint, color, durationframes) {
-                for (i = 0; i < durationframes; i++) {
+        for (i = 0; i < durationframes; i++) {
             line(frompoint, topoint, color);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -68,9 +68,9 @@
     // Checksum 0x5d0ba0d, Offset: 0x2c8
     // Size: 0x7e
     function debugline(frompoint, topoint, color, durationframes) {
-                for (i = 0; i < durationframes * 20; i++) {
+        for (i = 0; i < durationframes * 20; i++) {
             line(frompoint, topoint, color);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -97,12 +97,12 @@
     function updatedebuginfo() {
         self endon(#"death");
         self.debuginfo = spawnstruct();
-        self.debuginfo.enabled = getdvarint("<unknown string>") > 0;
+        self.debuginfo.enabled = getdvarint("<dev string:x52>") > 0;
         debugclearstate();
         while (true) {
-            wait(0.05);
+            wait 0.05;
             updatedebuginfointernal();
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -115,9 +115,9 @@
             doinfo = 1;
             return;
         }
-        doinfo = getdvarint("<unknown string>") > 0;
+        doinfo = getdvarint("<dev string:x52>") > 0;
         if (doinfo) {
-            ai_entnum = getdvarint("<unknown string>");
+            ai_entnum = getdvarint("<dev string:x65>");
             if (ai_entnum > -1 && ai_entnum != self getentitynumber()) {
                 doinfo = 0;
             }
@@ -134,7 +134,7 @@
     // Size: 0x144
     function drawdebugenttext(text, ent, color, channel) {
         assert(isdefined(ent));
-        if (!getdvarint("<unknown string>")) {
+        if (!getdvarint("<dev string:x76>")) {
             if (!isdefined(ent.debuganimscripttime) || gettime() > ent.debuganimscripttime) {
                 ent.debuganimscriptlevel = 0;
                 ent.debuganimscripttime = gettime();
@@ -152,10 +152,10 @@
     // Checksum 0x16828103, Offset: 0x7b0
     // Size: 0x1a2
     function debugpushstate(statename, extrainfo) {
-        if (!getdvarint("<unknown string>")) {
+        if (!getdvarint("<dev string:x52>")) {
             return;
         }
-        ai_entnum = getdvarint("<unknown string>");
+        ai_entnum = getdvarint("<dev string:x65>");
         if (ai_entnum > -1 && ai_entnum != self getentitynumber()) {
             return;
         }
@@ -168,7 +168,7 @@
         state.statevalid = 1;
         self.debuginfo.statelevel++;
         if (isdefined(extrainfo)) {
-            state.extrainfo = extrainfo + "<unknown string>";
+            state.extrainfo = extrainfo + "<dev string:x89>";
         }
         self.debuginfo.states[self.debuginfo.states.size] = state;
     }
@@ -178,10 +178,10 @@
     // Checksum 0xa3cbf9ff, Offset: 0x960
     // Size: 0x2f8
     function debugaddstateinfo(statename, extrainfo) {
-        if (!getdvarint("<unknown string>")) {
+        if (!getdvarint("<dev string:x52>")) {
             return;
         }
-        ai_entnum = getdvarint("<unknown string>");
+        ai_entnum = getdvarint("<dev string:x65>");
         if (ai_entnum > -1 && ai_entnum != self getentitynumber()) {
             return;
         }
@@ -191,9 +191,9 @@
                 assert(isdefined(self.debuginfo.states[i]));
                 if (self.debuginfo.states[i].statename == statename) {
                     if (!isdefined(self.debuginfo.states[i].extrainfo)) {
-                        self.debuginfo.states[i].extrainfo = "<unknown string>";
+                        self.debuginfo.states[i].extrainfo = "<dev string:x8b>";
                     }
-                    self.debuginfo.states[i].extrainfo = self.debuginfo.states[i].extrainfo + extrainfo + "<unknown string>";
+                    self.debuginfo.states[i].extrainfo = self.debuginfo.states[i].extrainfo + extrainfo + "<dev string:x89>";
                     break;
                 }
             }
@@ -203,9 +203,9 @@
             lastindex = self.debuginfo.states.size - 1;
             assert(isdefined(self.debuginfo.states[lastindex]));
             if (!isdefined(self.debuginfo.states[lastindex].extrainfo)) {
-                self.debuginfo.states[lastindex].extrainfo = "<unknown string>";
+                self.debuginfo.states[lastindex].extrainfo = "<dev string:x8b>";
             }
-            self.debuginfo.states[lastindex].extrainfo = self.debuginfo.states[lastindex].extrainfo + extrainfo + "<unknown string>";
+            self.debuginfo.states[lastindex].extrainfo = self.debuginfo.states[lastindex].extrainfo + extrainfo + "<dev string:x89>";
         }
     }
 
@@ -214,10 +214,10 @@
     // Checksum 0x88caa3aa, Offset: 0xc60
     // Size: 0x352
     function debugpopstate(statename, exitreason) {
-        if (!getdvarint("<unknown string>") || self.debuginfo.states.size <= 0) {
+        if (!getdvarint("<dev string:x52>") || self.debuginfo.states.size <= 0) {
             return;
         }
-        ai_entnum = getdvarint("<unknown string>");
+        ai_entnum = getdvarint("<dev string:x65>");
         if (!isdefined(self) || !isalive(self)) {
             return;
         }
@@ -289,9 +289,9 @@
     // Checksum 0xcffebbbd, Offset: 0x1110
     // Size: 0x66
     function indent(depth) {
-        indent = "<unknown string>";
+        indent = "<dev string:x8b>";
         for (i = 0; i < depth; i++) {
-            indent += "<unknown string>";
+            indent += "<dev string:x89>";
         }
         return indent;
     }
@@ -329,11 +329,11 @@
         }
         if (weight <= midvalue) {
             redcolor = 1 - abs((weight - lowestvalue) / halfdeltavalue);
-            recordcircle(point, 2, (redcolor, 0, 0), "<unknown string>", entity);
+            recordcircle(point, 2, (redcolor, 0, 0), "<dev string:x8c>", entity);
             return;
         }
         greencolor = 1 - abs((highestvalue - weight) / halfdeltavalue);
-        recordcircle(point, 2, (0, greencolor, 0), "<unknown string>", entity);
+        recordcircle(point, 2, (0, greencolor, 0), "<dev string:x8c>", entity);
     }
 
     // Namespace as_debug
@@ -341,7 +341,7 @@
     // Checksum 0x99621017, Offset: 0x1410
     // Size: 0xda
     function delete_all_ai_corpses() {
-        setdvar("<unknown string>", 0);
+        setdvar("<dev string:x31>", 0);
         corpses = getcorpsearray();
         foreach (corpse in corpses) {
             if (isactorcorpse(corpse)) {

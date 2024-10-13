@@ -2,9 +2,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/aat_shared;
 
-#namespace namespace_2ffd891d;
+#namespace zm_aat_thunder_wall;
 
-// Namespace namespace_2ffd891d
+// Namespace zm_aat_thunder_wall
 // Params 0, eflags: 0x2
 // Checksum 0x15edfc, Offset: 0x128
 // Size: 0x34
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
     system::register("zm_aat_thunder_wall", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_2ffd891d
+// Namespace zm_aat_thunder_wall
 // Params 0, eflags: 0x1 linked
 // Checksum 0x66732e47, Offset: 0x168
 // Size: 0x44

@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_6880f16f;
+#namespace _gadget_surge;
 
-// Namespace namespace_6880f16f
+// Namespace _gadget_surge
 // Params 0, eflags: 0x2
 // Checksum 0xbcc14f7b, Offset: 0x1e0
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_surge", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_6880f16f
+// Namespace _gadget_surge
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x220
 // Size: 0x4

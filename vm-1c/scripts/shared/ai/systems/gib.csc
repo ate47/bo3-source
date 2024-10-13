@@ -36,7 +36,7 @@ function autoexec main() {
         }
         processedbundles[var_7c95de4b] = var_5ec70049;
     }
-    level.var_3f831f3b["gibcharacterdef"] = processedbundles;
+    level.scriptbundles["gibcharacterdef"] = processedbundles;
     level thread _annihilatecorpse();
 }
 
@@ -145,7 +145,7 @@ function private _getgibextramodel(localclientnumm, entity, gibflag) {
     if (gibflag == 8) {
         return (isdefined(entity.gib_data) ? entity.gib_data.head : entity.head);
     }
-    assertmsg("leftarm");
+    assertmsg("<dev string:x28>");
 }
 
 // Namespace gibclientutils
@@ -336,7 +336,7 @@ function _gibpiece(localclientnum, entity, gibmodel, gibtag, gibfx, gibdir) {
         forwardvector = gibdir;
         forwardvector *= randomfloatrange(100, 500);
     } else {
-        wait(0.016);
+        wait 0.016;
         if (isdefined(entity)) {
             endposition = entity gettagorigin(gibtag);
             endangles = entity gettagangles(gibtag);

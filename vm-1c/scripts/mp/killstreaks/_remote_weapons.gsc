@@ -128,7 +128,7 @@ function watchremoveremotecontrolledweapon() {
     weapon util::waittill_any("death", "remote_weapon_shutdown");
     weapon endremotecontrolweaponuse(0);
     while (isdefined(weapon)) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -203,7 +203,7 @@ function watchremotetriggerdisable() {
     weapon.usetrigger endon(#"death");
     while (true) {
         weapon.usetrigger triggerenable(!weapon.remoteowner iswallrunning());
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -337,9 +337,9 @@ function watchremotecontroldeactivate() {
                 weapon thread endremotecontrolweaponuse(1);
                 return;
             }
-            wait(0.05);
+            wait 0.05;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -356,25 +356,25 @@ function endremotecontrolweaponuse(exitrequestedbyowner) {
     remote_controlled = isdefined(weapon.controlled) && (isdefined(weapon.control_initiated) && weapon.control_initiated || weapon.controlled);
     while (isdefined(weapon) && weapon.forcewaitremotecontrol === 1 && remote_controlled == 0) {
         remote_controlled = isdefined(weapon.controlled) && (isdefined(weapon.control_initiated) && weapon.control_initiated || weapon.controlled);
-        wait(0.05);
+        wait 0.05;
     }
     if (!isdefined(weapon)) {
         return;
     }
     if (isdefined(weapon.remoteowner) && remote_controlled) {
         if (isdefined(weapon.remoteweaponshutdowndelay)) {
-            wait(weapon.remoteweaponshutdowndelay);
+            wait weapon.remoteweaponshutdowndelay;
         }
         player = weapon.remoteowner;
         if (player.dofutz === 1) {
             player clientfield::set_to_player("static_postfx", 1);
-            wait(1);
+            wait 1;
             if (isdefined(player)) {
                 player clientfield::set_to_player("static_postfx", 0);
                 player.dofutz = 0;
             }
         } else if (!exitrequestedbyowner && weapon.watch_remote_weapon_death === 1 && !isalive(weapon)) {
-            wait(isdefined(weapon.watch_remote_weapon_death_duration) ? weapon.watch_remote_weapon_death_duration : 1);
+            wait isdefined(weapon.watch_remote_weapon_death_duration) ? weapon.watch_remote_weapon_death_duration : 1;
         }
         if (isdefined(player)) {
             player thread fadetoblackandbackin();
@@ -425,7 +425,7 @@ function fadetoblackandbackin() {
     self endon(#"disconnect");
     lui::screen_fade_out(0.1);
     self qrdrone::destroyhud();
-    wait(0.05);
+    wait 0.05;
     self notify(#"fade2black");
     lui::screen_fade_in(0.2);
 }
@@ -437,10 +437,10 @@ function fadetoblackandbackin() {
 function stunstaticfx(duration) {
     self endon(#"remove_remote_weapon");
     self.var_f04f433.alpha = 0.65;
-    wait(duration - 0.5);
+    wait duration - 0.5;
     time = duration - 0.5;
     while (time < duration) {
-        wait(0.05);
+        wait 0.05;
         time += 0.05;
         self.var_f04f433.alpha -= 0.05;
     }
@@ -480,7 +480,7 @@ function set_static(val) {
 function do_static_fx() {
     self endon(#"death");
     self set_static(1);
-    wait(2);
+    wait 2;
     self set_static(0);
     self notify(#"static_fx_done");
 }

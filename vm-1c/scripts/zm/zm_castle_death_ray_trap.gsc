@@ -19,9 +19,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f2d05c13;
+#namespace zm_castle_death_ray_trap;
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe807c748, Offset: 0x648
 // Size: 0x2c
@@ -30,7 +30,7 @@ function main() {
     level thread function_b8bad181();
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3d019548, Offset: 0x680
 // Size: 0x154
@@ -44,7 +44,7 @@ function register_clientfields() {
     clientfield::register("actor", "tesla_beam_mechz", 5000, 1, "int");
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x38cca624, Offset: 0x7e0
 // Size: 0x84
@@ -52,14 +52,14 @@ function function_b8bad181() {
     level flag::init("tesla_coil_on");
     level flag::init("tesla_coil_cooldown");
     var_144aea6c = getent("tesla_coil_activate", "targetname");
-    var_144aea6c thread function_26dbeb40();
+    var_144aea6c thread tesla_coil_activate();
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6dec6f65, Offset: 0x870
 // Size: 0x164
-function function_26dbeb40() {
+function tesla_coil_activate() {
     level waittill(#"power_on");
     exploder::exploder("fxexp_710");
     exploder::exploder("fxexp_720");
@@ -78,7 +78,7 @@ function function_26dbeb40() {
     zm_unitrigger::register_static_unitrigger(unitrigger_stub, &function_3d3feaa2);
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa84d0188, Offset: 0x9e0
 // Size: 0xc8
@@ -93,7 +93,7 @@ function function_66bab678() {
     }
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1844b06, Offset: 0xab0
 // Size: 0x190
@@ -114,7 +114,7 @@ function function_40bac98d() {
     }
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1ed8adca, Offset: 0xc48
 // Size: 0x1c
@@ -122,7 +122,7 @@ function function_79ce76bb() {
     exploder::exploder("lgt_deathray_green");
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb8c063e5, Offset: 0xc70
 // Size: 0x9c
@@ -130,14 +130,14 @@ function function_2f45472d() {
     exploder::stop_exploder("lgt_deathray_green");
     while (level flag::get("tesla_coil_on")) {
         exploder::exploder("lgt_deathray_red");
-        wait(0.25);
+        wait 0.25;
         exploder::stop_exploder("lgt_deathray_red");
-        wait(0.25);
+        wait 0.25;
     }
     exploder::exploder("lgt_deathray_green");
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6b6a989d, Offset: 0xd18
 // Size: 0xe2
@@ -154,7 +154,7 @@ function function_1b068db6(player) {
     return 1;
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6931e360, Offset: 0xe08
 // Size: 0x1f0
@@ -184,7 +184,7 @@ function function_3d3feaa2() {
     }
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8256fe6e, Offset: 0x1000
 // Size: 0x16c
@@ -201,7 +201,7 @@ function function_f796bd32(player) {
     exploder::stop_exploder("fxexp_700");
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0xfbc2e72c, Offset: 0x1178
 // Size: 0x40c
@@ -233,7 +233,7 @@ function function_65680b09(player) {
                 e_player thread function_383d6ca4(var_9ffdb9e2, self);
             }
         }
-        wait(0.1);
+        wait 0.1;
         n_total_time = (gettime() - n_start_time) / 1000;
     }
     level flag::clear("tesla_coil_on");
@@ -246,7 +246,7 @@ function function_65680b09(player) {
     level flag::clear("tesla_coil_cooldown");
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc7d1841b, Offset: 0x1590
 // Size: 0x1ba
@@ -268,7 +268,7 @@ function function_98484afb() {
     return var_d5157ddf;
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf8310348, Offset: 0x1758
 // Size: 0x76
@@ -284,7 +284,7 @@ function function_9eaff330() {
     self.var_5e3b2ce3 = undefined;
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 2, eflags: 0x1 linked
 // Checksum 0x4ee98181, Offset: 0x17d8
 // Size: 0x6a
@@ -292,12 +292,12 @@ function function_172d425(ai_enemy, var_2c11866b) {
     return isalive(ai_enemy) && !(isdefined(ai_enemy.var_98056717) && ai_enemy.var_98056717) && !(ai_enemy.var_1ea49cd7 === 1);
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 2, eflags: 0x1 linked
 // Checksum 0xba8d40b5, Offset: 0x1850
 // Size: 0x202
 function function_383d6ca4(var_9ffdb9e2, var_2c11866b) {
-    level endon(#"hash_4b40ae8");
+    level endon(#"tesla_coil_cooldown");
     /#
         if (isgodmode(self)) {
             return;
@@ -320,13 +320,13 @@ function function_383d6ca4(var_9ffdb9e2, var_2c11866b) {
                 self dodamage(n_damage, self.origin, undefined, undefined, undefined, "MOD_ELECTROCUTED");
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
     self.var_1ea49cd7 = undefined;
     self.var_bf3163c8 = undefined;
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa90d43da, Offset: 0x1a60
 // Size: 0xb6
@@ -342,7 +342,7 @@ function function_55b881b7(var_2c11866b) {
     return false;
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 2, eflags: 0x1 linked
 // Checksum 0x5b0e5259, Offset: 0x1b20
 // Size: 0x3a4
@@ -357,7 +357,7 @@ function function_120a8b07(var_ecf98bb6, e_panel) {
             self clientfield::set("death_ray_shock_fx", 1);
             self clientfield::set("tesla_beam_mechz", 1);
             self thread function_41ecbdf9();
-            wait(randomfloatrange(0.2, 0.5));
+            wait randomfloatrange(0.2, 0.5);
             self.var_ab0efcf6 = self.origin;
             self thread scene::play("cin_zm_dlc1_mechz_dth_deathray_01", self);
             level flag::wait_till_clear("tesla_coil_on");
@@ -366,7 +366,7 @@ function function_120a8b07(var_ecf98bb6, e_panel) {
             self clientfield::set("death_ray_shock_fx", 0);
             self clientfield::set("tesla_beam_mechz", 0);
             self.var_bce6e774 = undefined;
-            wait(randomfloatrange(0.5, 1.5));
+            wait randomfloatrange(0.5, 1.5);
             self.var_128cd975 = 0;
         }
         self.var_1ea49cd7 = undefined;
@@ -396,7 +396,7 @@ function function_120a8b07(var_ecf98bb6, e_panel) {
     self thread function_67cc41d(var_ecf98bb6, e_panel);
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 2, eflags: 0x1 linked
 // Checksum 0x10d33b70, Offset: 0x1ed0
 // Size: 0xec
@@ -414,7 +414,7 @@ function function_67cc41d(attacker, e_panel) {
     self util::delay(0.25, undefined, &zm_utility::self_delete);
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x307c02ac, Offset: 0x1fc8
 // Size: 0x64
@@ -426,11 +426,11 @@ function function_41ecbdf9() {
         if (!self.var_128cd975) {
             self.var_128cd975 = 1;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd6807f8e, Offset: 0x2038
 // Size: 0x6c
@@ -443,7 +443,7 @@ function function_991ffb6c(var_1a8c0e14) {
     self clientfield::increment("tesla_beam_fx");
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9e6a59fa, Offset: 0x20b0
 // Size: 0x8c
@@ -454,27 +454,27 @@ function function_43b12d8e(v_position) {
     playsoundatposition("vox_maxis_tesla_pa_begin_0", v_position);
 }
 
-// Namespace namespace_f2d05c13
+// Namespace zm_castle_death_ray_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe09ef1eb, Offset: 0x2148
 // Size: 0x44
 function function_90df19() {
     self endon(#"death");
     self endon(#"disconnect");
-    wait(3);
+    wait 3;
     self zm_audio::create_and_play_dialog("trap", "start");
 }
 
 /#
 
-    // Namespace namespace_f2d05c13
+    // Namespace zm_castle_death_ray_trap
     // Params 2, eflags: 0x0
     // Checksum 0xa0fb05b5, Offset: 0x2198
     // Size: 0x72
     function debug_line(v_start, v_end) {
-                for (n_timer = 0; n_timer < 10; n_timer += 0.05) {
+        for (n_timer = 0; n_timer < 10; n_timer += 0.05) {
             line(v_start, v_end, (1, 0, 0));
-            wait(0.05);
+            wait 0.05;
         }
     }
 

@@ -56,7 +56,7 @@ function event() {
         if (2 <= var_63a08f52) {
             return;
         }
-        wait(1.5);
+        wait 1.5;
     }
 }
 

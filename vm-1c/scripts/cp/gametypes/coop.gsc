@@ -93,8 +93,8 @@ function function_54ba8dfa() {
 // Checksum 0x8f80e6a3, Offset: 0xcf8
 // Size: 0x34
 function function_79eba3d6(time) {
-    self endon(#"hash_3f7b661c");
-    wait(time);
+    self endon(#"death_or_disconnect");
+    wait time;
     self disableinvulnerability();
 }
 
@@ -267,7 +267,7 @@ function onscoreclosemusic() {
         if (scoredif <= scorethreshold && scorethresholdstart <= topscore) {
             return;
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -359,7 +359,7 @@ function function_5ed5738a(var_b90e5c2c, var_c878636f) {
         }
     }
     if (isdefined(var_e13f49eb)) {
-        wait(3.8);
+        wait 3.8;
     }
     var_d5b5f12 = 1.25;
     if (isdefined(level.var_33287bb1)) {
@@ -374,7 +374,7 @@ function function_5ed5738a(var_b90e5c2c, var_c878636f) {
             }
         }
         level thread lui::screen_fade(var_d5b5f12, 1, 0, "black", 0);
-        wait(var_d5b5f12);
+        wait var_d5b5f12;
         var_ac4d13a6 = 1;
         if (isdefined(level.var_3a9f9a38) && level.var_3a9f9a38) {
             foreach (player in level.players) {
@@ -386,10 +386,10 @@ function function_5ed5738a(var_b90e5c2c, var_c878636f) {
     }
     if (!isdefined(var_ac4d13a6)) {
         level thread lui::screen_fade(var_d5b5f12, 1, 0, "black", 0);
-        wait(var_d5b5f12);
+        wait var_d5b5f12;
     }
     if (isdefined(level.gameended) && level.gameended) {
-        wait(1000);
+        wait 1000;
     }
     foreach (player in level.players) {
         player notify(#"hash_1528244e");
@@ -397,7 +397,7 @@ function function_5ed5738a(var_b90e5c2c, var_c878636f) {
         player util::freeze_player_controls(0);
     }
     checkpointrestore();
-    wait(0.5);
+    wait 0.5;
     map_restart();
 }
 
@@ -406,7 +406,7 @@ function function_5ed5738a(var_b90e5c2c, var_c878636f) {
 // Checksum 0xcb4a30dd, Offset: 0x2328
 // Size: 0x130
 function function_7a243f7c() {
-    wait(1.2);
+    wait 1.2;
     self.var_51a0d4ef = newclienthudelem(self);
     self.var_51a0d4ef.alignx = "center";
     self.var_51a0d4ef.aligny = "middle";
@@ -426,7 +426,7 @@ function function_7a243f7c() {
 // Checksum 0xa259a4e0, Offset: 0x2460
 // Size: 0x140
 function function_4f6eaa7(var_34ab38ea) {
-    wait(1);
+    wait 1;
     self.var_d1a09d1e = newclienthudelem(self);
     self.var_d1a09d1e.alignx = "center";
     self.var_d1a09d1e.aligny = "middle";
@@ -451,13 +451,13 @@ function function_c14603ce() {
     level endon(#"game_ended");
     self clientfield::set_to_player("killcam_menu", 1);
     /#
-        printtoprightln("teamScorePerKill", (1, 0, 1));
+        printtoprightln("<dev string:x28>", (1, 0, 1));
     #/
     while (self usebuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
     while (!self usebuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
     self.var_acfedf1c = 1;
     self clientfield::set_to_player("killcam_menu", 0);
@@ -502,13 +502,13 @@ function function_44e35f1a() {
     level endon(#"game_ended");
     self function_e82a1210();
     /#
-        printtoprightln("teamScorePerKill", (1, 0, 1));
+        printtoprightln("<dev string:x28>", (1, 0, 1));
     #/
     while (self usebuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
     while (!self usebuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
     self.var_acfedf1c = 1;
     self.var_ee8c475a.alpha = 0;
@@ -542,7 +542,7 @@ function function_6dc12009() {
     level.level_ending = 1;
     /#
         if (!(isdefined(level.level_ending) && level.level_ending)) {
-            errormsg("teamScorePerKill");
+            errormsg("<dev string:x3d>");
         }
     #/
 }
@@ -622,17 +622,17 @@ function function_e9f7384d() {
             if (isdefined(self.var_928b1776)) {
                 if (gettime() - self.var_928b1776 > 90000) {
                     switch (w_hero.rootweapon.name) {
-                    case 84:
+                    case "launcher_standard":
                         if (self.var_9b416318 < 5) {
                             self util::show_hint_text(%COOP_EQUIP_XM53);
                         }
                         break;
-                    case 86:
+                    case "spike_launcher":
                         if (self.var_9b416318 < 10) {
                             self util::show_hint_text(%COOP_EQUIP_SPIKE_LAUNCHER);
                         }
                         break;
-                    case 85:
+                    case "micromissile_launcher":
                         if (self.var_9b416318 < 10) {
                             self util::show_hint_text(%COOP_EQUIP_MICROMISSILE);
                         }

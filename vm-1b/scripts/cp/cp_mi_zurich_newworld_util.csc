@@ -7,9 +7,9 @@
 #using scripts/cp/_load;
 #using scripts/codescripts/struct;
 
-#namespace namespace_ce0e5f06;
+#namespace newworld_util;
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 0, eflags: 0x2
 // Checksum 0x46391438, Offset: 0xab8
 // Size: 0x2a
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
     system::register("newworld_util", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 0, eflags: 0x0
 // Checksum 0xf0b3f52f, Offset: 0xaf0
 // Size: 0x12
@@ -25,7 +25,7 @@ function __init__() {
     init_clientfields();
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 0, eflags: 0x0
 // Checksum 0xde6db1bb, Offset: 0xb10
 // Size: 0x542
@@ -53,10 +53,10 @@ function init_clientfields() {
     clientfield::register("world", "waterplant_rotate_fans", 1, 1, "int", &function_1e2a542f, 0, 0);
     clientfield::register("world", "train_main_fx_occlude", 1, 1, "int", &function_4f8cc662, 0, 0);
     clientfield::register("toplayer", "train_rumble_loop", 1, 1, "int", &function_b45c2459, 0, 0);
-    clientfield::register("toplayer", "postfx_futz", 1, 1, "counter", &function_baae4949, 0, 0);
+    clientfield::register("toplayer", "postfx_futz", 1, 1, "counter", &postfx_futz, 0, 0);
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0x2e97a575, Offset: 0x1060
 // Size: 0x1c2
@@ -77,7 +77,7 @@ function function_ecc75bea(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0x9d34ea35, Offset: 0x1230
 // Size: 0x1c2
@@ -112,7 +112,7 @@ function function_e416b7db(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 1, eflags: 0x0
 // Checksum 0xd6e1677, Offset: 0x1400
 // Size: 0x2a
@@ -122,7 +122,7 @@ function function_7683b584(player) {
     self delete();
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 2, eflags: 0x0
 // Checksum 0xaf67d10f, Offset: 0x1438
 // Size: 0x69
@@ -134,11 +134,11 @@ function function_120f324e(localclientnum, n_delay) {
     }
     while (isdefined(self)) {
         playfxontag(localclientnum, "weather/fx_snow_player_slow_os_nworld", self, "none");
-        wait(n_delay);
+        wait n_delay;
     }
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 1, eflags: 0x0
 // Checksum 0x12008e2c, Offset: 0x14b0
 // Size: 0x122
@@ -164,7 +164,7 @@ function function_ff1b6796(localclientnum) {
     e_origin function_88a10e85(localclientnum, "brake_flap_snow", str_fx, "tag_origin");
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 1, eflags: 0x0
 // Checksum 0x37f8ee02, Offset: 0x15e0
 // Size: 0x32
@@ -172,7 +172,7 @@ function function_52bc98a1(localclientnum) {
     self function_88a10e85(localclientnum, "robot_snow_impact", "snow/fx_snow_train_robot_fall_impact", "tag_origin", 0);
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0xe5bdbbd9, Offset: 0x1620
 // Size: 0x8a
@@ -184,7 +184,7 @@ function function_aebc5072(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_be968491(localclientnum, "objective_light", "player/fx_ai_dni_rez_in_hero_clean");
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0x7a99cb23, Offset: 0x16b8
 // Size: 0x1ba
@@ -205,7 +205,7 @@ function function_9b9abce4(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0xbaa4f1af, Offset: 0x1880
 // Size: 0x1ba
@@ -226,7 +226,7 @@ function function_be66c05b(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 2, eflags: 0x0
 // Checksum 0x9fc38f41, Offset: 0x1a48
 // Size: 0x142
@@ -255,13 +255,13 @@ function function_1c2b3dda(localclientnum, var_21082827) {
             n_opacity = var_e65455e6 / 0.5;
         }
         self mapshaderconstant(0, 0, "scriptVector0", n_opacity, 0, 0);
-        wait(0.01);
+        wait 0.01;
     }
-    wait(0.05);
+    wait 0.05;
     self mapshaderconstant(0, 0, "scriptVector0", 0, 0, 0);
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 3, eflags: 0x0
 // Checksum 0xd63f06da, Offset: 0x1b98
 // Size: 0x52
@@ -270,7 +270,7 @@ function function_bd23b431(localclientnum, str_fx, str_tag) {
     setfxignorepause(localclientnum, n_fx_id, 1);
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0x19c3c26b, Offset: 0x1bf8
 // Size: 0x122
@@ -286,7 +286,7 @@ function function_6e7d0ca2(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_be968491(localclientnum, "suspect_trail_feet_right", "player/fx_plyr_ghost_trail_feet_nworld");
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0xbd966267, Offset: 0x1d28
 // Size: 0xda
@@ -300,7 +300,7 @@ function function_752d4412(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_be968491(localclientnum, "suspect_trail_feet_right", "player/fx_plyr_ghost_trail_feet_nworld");
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0x7522d5c3, Offset: 0x1e10
 // Size: 0x92
@@ -312,7 +312,7 @@ function function_ec9960ef(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_be968491(localclientnum, "wasp_hack", "vehicle/fx_light_wasp_friendly_hacked");
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0xa23d02ec, Offset: 0x1eb0
 // Size: 0x92
@@ -324,7 +324,7 @@ function function_258012a1(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_be968491(localclientnum, "truck_explosion", "explosions/fx_exp_truck_slomo_nworld");
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0xce99bbf8, Offset: 0x1f50
 // Size: 0x5a
@@ -334,7 +334,7 @@ function function_aad321ae(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0x6bbb26df, Offset: 0x1fb8
 // Size: 0x112
@@ -351,7 +351,7 @@ function function_73c10276(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0xdfc780d9, Offset: 0x20d8
 // Size: 0x28b
@@ -371,7 +371,7 @@ function function_4f8cc662(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0x2b0cfbd, Offset: 0x2370
 // Size: 0x8a
@@ -385,7 +385,7 @@ function function_ce461171(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0xbc46301e, Offset: 0x2408
 // Size: 0xd2
@@ -399,7 +399,7 @@ function function_1e4e8925(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_be968491(localclientnum, "frag_grenade", "explosions/fx_exp_grenade_default");
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0x2fb00f5e, Offset: 0x24e8
 // Size: 0xd2
@@ -413,7 +413,7 @@ function function_c8c87ed0(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_be968491(localclientnum, "wall_break", "destruct/fx_dest_wall_nworld");
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0xab225996, Offset: 0x25c8
 // Size: 0x92
@@ -425,7 +425,7 @@ function function_8d759480(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_be968491(localclientnum, "train_explosion", "explosions/fx_exp_train_car_nworld");
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0xa5b36386, Offset: 0x2668
 // Size: 0x92
@@ -437,29 +437,29 @@ function function_ddee6a4e(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_be968491(localclientnum, "emp_vehicles", "electric/fx_elec_emp_machines_nworld");
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0x5e3e0aa3, Offset: 0x2708
 // Size: 0x5f
 function function_b45c2459(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
-        self thread function_dd551c54(localclientnum);
+        self thread train_rumble_loop(localclientnum);
         return;
     }
     self notify(#"hash_2608c3ca");
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 1, eflags: 0x0
 // Checksum 0xada95b6, Offset: 0x2770
 // Size: 0x16d
-function function_dd551c54(localclientnum) {
+function train_rumble_loop(localclientnum) {
     self endon(#"death");
     self endon(#"entityshutdown");
     self endon(#"hash_2608c3ca");
     while (true) {
         var_ffb35e3f = randomfloatrange(2, 7.5);
-        wait(var_ffb35e3f);
+        wait var_ffb35e3f;
         var_725460af = randomint(5) + 1;
         v_source = self.origin;
         switch (var_725460af) {
@@ -484,7 +484,7 @@ function function_dd551c54(localclientnum) {
     }
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 2, eflags: 0x0
 // Checksum 0x15a3e727, Offset: 0x28e8
 // Size: 0x9d
@@ -499,11 +499,11 @@ function function_bfff202d(localclientnum, n_duration) {
     }
     while (true) {
         self playrumbleonentity(localclientnum, "cp_newworld_rumble_train_roof_loop");
-        wait(0.185);
+        wait 0.185;
     }
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 3, eflags: 0x0
 // Checksum 0xcadc5487, Offset: 0x2990
 // Size: 0xc0
@@ -524,7 +524,7 @@ function function_be968491(localclientnum, str_type, str_fx) {
     }
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 3, eflags: 0x0
 // Checksum 0x9d96d5de, Offset: 0x2a58
 // Size: 0xcb
@@ -541,7 +541,7 @@ function function_400e6e82(localclientnum, str_type, var_91599cfb) {
     }
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 6, eflags: 0x0
 // Checksum 0xb5030377, Offset: 0x2b30
 // Size: 0xdd
@@ -566,7 +566,7 @@ function function_88a10e85(localclientnum, str_type, str_fx, str_tag, var_cffd17
     self.var_62bb476b[localclientnum][str_type][str_fx] = n_fx_id;
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 8, eflags: 0x0
 // Checksum 0x97dbfd1f, Offset: 0x2c18
 // Size: 0x11d
@@ -592,17 +592,17 @@ function function_ea0e7704(localclientnum, str_type, str_fx, var_cffd17f8, v_pos
     self.var_62bb476b[localclientnum][str_type][str_fx] = n_fx_id;
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0x2bc277a7, Offset: 0x2d40
 // Size: 0x5a
-function function_baae4949(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function postfx_futz(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self postfx::playpostfxbundle("pstfx_dni_screen_futz");
     }
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 7, eflags: 0x0
 // Checksum 0x7aa69d61, Offset: 0x2da8
 // Size: 0x19a
@@ -613,11 +613,11 @@ function function_1e2a542f(localclientnum, oldval, newval, bnewent, binitialsnap
     var_591c1278 = getent(localclientnum, "wt_fan_04", "targetname");
     if (newval != oldval && newval == 1) {
         var_17287685 thread function_65012f08();
-        wait(0.1);
+        wait 0.1;
         var_3d2af0ee thread function_65012f08();
-        wait(0.1);
+        wait 0.1;
         var_632d6b57 thread function_65012f08();
-        wait(0.1);
+        wait 0.1;
         var_591c1278 thread function_65012f08();
     }
     if (newval == 0) {
@@ -629,7 +629,7 @@ function function_1e2a542f(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_ce0e5f06
+// Namespace newworld_util
 // Params 0, eflags: 0x0
 // Checksum 0x4e51152b, Offset: 0x2f50
 // Size: 0x3f

@@ -71,7 +71,7 @@ function entity_callback(event, localclientnum, params) {
 // Checksum 0x3a916861, Offset: 0x490
 // Size: 0x18c
 function add_callback(event, func, obj) {
-    assert(isdefined(event), "FullScreenBlack");
+    assert(isdefined(event), "<dev string:x28>");
     if (!isdefined(level._callbacks) || !isdefined(level._callbacks[event])) {
         level._callbacks[event] = [];
     }
@@ -93,7 +93,7 @@ function add_callback(event, func, obj) {
 // Checksum 0x47b03572, Offset: 0x628
 // Size: 0x164
 function add_entity_callback(event, func, obj) {
-    assert(isdefined(event), "FullScreenBlack");
+    assert(isdefined(event), "<dev string:x28>");
     if (!isdefined(self._callbacks) || !isdefined(self._callbacks[event])) {
         self._callbacks[event] = [];
     }
@@ -121,8 +121,8 @@ function remove_callback_on_death(event, func) {
 // Checksum 0xf6dbdc0b, Offset: 0x7e0
 // Size: 0x13a
 function remove_callback(event, func, obj) {
-    assert(isdefined(event), "FullScreenBlack");
-    assert(isdefined(level._callbacks[event]), "FullScreenBlack");
+    assert(isdefined(event), "<dev string:x58>");
+    assert(isdefined(level._callbacks[event]), "<dev string:x8b>");
     foreach (index, func_group in level._callbacks[event]) {
         if (func_group[0] == func) {
             if (func_group[1] === obj) {
@@ -238,7 +238,7 @@ function codecallback_statechange(clientnum, system, newstate) {
         [[ level._systemstates[system].callback ]](clientnum, newstate);
         return;
     }
-    println("FullScreenBlack" + system + "FullScreenBlack");
+    println("<dev string:xb8>" + system + "<dev string:xe4>");
 }
 
 // Namespace callback
@@ -246,7 +246,7 @@ function codecallback_statechange(clientnum, system, newstate) {
 // Checksum 0xb1a144af, Offset: 0xce0
 // Size: 0x54
 function codecallback_maprestart() {
-    println("FullScreenBlack");
+    println("<dev string:x10c>");
     util::waitforclient(0);
     level thread util::init_utility();
 }
@@ -256,7 +256,7 @@ function codecallback_maprestart() {
 // Checksum 0xa3189630, Offset: 0xd40
 // Size: 0x48
 function codecallback_localclientconnect(localclientnum) {
-    println("FullScreenBlack" + localclientnum);
+    println("<dev string:x12e>" + localclientnum);
     [[ level.callbacklocalclientconnect ]](localclientnum);
 }
 
@@ -267,7 +267,7 @@ function codecallback_localclientconnect(localclientnum) {
     // Checksum 0xc07545d1, Offset: 0xd90
     // Size: 0x34
     function function_4d2792d4(clientnum) {
-        println("FullScreenBlack" + clientnum);
+        println("<dev string:x15b>" + clientnum);
     }
 
 #/
@@ -309,7 +309,7 @@ function codecallback_soundplayuidecodeloop(decodestring, playtimems) {
 // Checksum 0xa19a4e89, Offset: 0xed0
 // Size: 0x40
 function codecallback_playerspawned(localclientnum) {
-    println("FullScreenBlack");
+    println("<dev string:x18b>");
     [[ level.callbackplayerspawned ]](localclientnum);
 }
 
@@ -358,7 +358,7 @@ function codecallback_entityspawned(localclientnum) {
 // Size: 0x76
 function codecallback_soundnotify(localclientnum, entity, note) {
     switch (note) {
-    case 2:
+    case "scr_bomb_beep":
         if (getgametypesetting("silentPlant") == 0) {
             entity playsound(localclientnum, "fly_bomb_buttons_npc");
         }
@@ -526,7 +526,7 @@ function codecallback_chargeshotweaponsoundnotify(localclientnum, weapon, charge
 // Checksum 0xf810ae0a, Offset: 0x1610
 // Size: 0x4c
 function codecallback_hostmigration(localclientnum) {
-    println("FullScreenBlack");
+    println("<dev string:x1ae>");
     if (isdefined(level.callbackhostmigration)) {
         [[ level.callbackhostmigration ]](localclientnum);
     }
@@ -799,7 +799,7 @@ function scene_black_screen() {
             openluimenu(i, player.lui_black);
         }
     }
-    wait(0.016);
+    wait 0.016;
     foreach (i, player in level.localplayers) {
         if (isdefined(player.lui_black)) {
             closeluimenu(i, player.lui_black);

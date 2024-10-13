@@ -13,31 +13,31 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_19487f32;
+#namespace cp_mi_cairo_aquifer;
 
-// Namespace namespace_19487f32
+// Namespace cp_mi_cairo_aquifer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x644eced5, Offset: 0x3d8
 // Size: 0x94
 function main() {
     util::function_57b966c8(&function_71f88fc, 11);
     function_4b0a421();
-    namespace_d6728217::main();
-    namespace_1d1d22be::main();
+    cp_mi_cairo_aquifer_fx::main();
+    cp_mi_cairo_aquifer_sound::main();
     load::main();
     util::waitforclient(0);
-    namespace_a24425cb::function_7403e82b();
+    cp_mi_cairo_aquifer_patch_c::function_7403e82b();
 }
 
-// Namespace namespace_19487f32
+// Namespace cp_mi_cairo_aquifer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x434ffe1c, Offset: 0x478
 // Size: 0x4c
 function function_4b0a421() {
-    clientfield::register("world", "water_room_exit_scenes", 1, 1, "int", &function_fb25b781, 0, 0);
+    clientfield::register("world", "water_room_exit_scenes", 1, 1, "int", &water_room_exit_scenes, 0, 0);
 }
 
-// Namespace namespace_19487f32
+// Namespace cp_mi_cairo_aquifer
 // Params 1, eflags: 0x1 linked
 // Checksum 0x26e4596, Offset: 0x4d0
 // Size: 0x1aa
@@ -80,7 +80,7 @@ function function_71f88fc(n_zone) {
     }
 }
 
-// Namespace namespace_19487f32
+// Namespace cp_mi_cairo_aquifer
 // Params 3, eflags: 0x0
 // Checksum 0x59c561be, Offset: 0x688
 // Size: 0x7c
@@ -89,7 +89,7 @@ function function_93df2062(player, filterid, var_5a938650) {
     setfilterpassenabled(player.localclientnum, filterid, 0, 1);
 }
 
-// Namespace namespace_19487f32
+// Namespace cp_mi_cairo_aquifer
 // Params 1, eflags: 0x1 linked
 // Checksum 0x21a259b2, Offset: 0x710
 // Size: 0x30
@@ -100,11 +100,11 @@ function mapped_material_id(materialname) {
     return level.filter_matid[materialname];
 }
 
-// Namespace namespace_19487f32
+// Namespace cp_mi_cairo_aquifer
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc0474d19, Offset: 0x748
 // Size: 0x84
-function function_fb25b781(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function water_room_exit_scenes(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level thread scene::init("cin_aqu_03_01_platform_1st_secureplatform_ambient");
         return;

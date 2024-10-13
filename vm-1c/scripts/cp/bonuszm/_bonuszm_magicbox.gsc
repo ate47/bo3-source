@@ -20,9 +20,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_293e8aad;
+#namespace bonuszm;
 
-// Namespace namespace_293e8aad
+// Namespace bonuszm
 // Method(s) 12 Total 12
 class class_dafbfd8e {
 
@@ -42,10 +42,10 @@ class class_dafbfd8e {
         self.var_b8eeb0fe.weapon_model clientfield::set("weapon_disappear_fx", 1);
         util::wait_network_frame();
         self.var_b8eeb0fe.weapon_model delete();
-        wait(1);
+        wait 1;
         self.var_b8eeb0fe setzbarrierpiecestate(2, "closing");
         while (self.var_b8eeb0fe getzbarrierpiecestate(2) == "closing") {
-            wait(0.1);
+            wait 0.1;
         }
         self.var_b8eeb0fe notify(#"closed");
     }
@@ -57,7 +57,7 @@ class class_dafbfd8e {
     function function_cf5042c5() {
         self.var_b8eeb0fe setzbarrierpiecestate(2, "opening");
         while (self.var_b8eeb0fe getzbarrierpiecestate(2) != "open") {
-            wait(0.1);
+            wait 0.1;
         }
         self.var_b8eeb0fe setzbarrierpiecestate(3, "closed");
         self.var_b8eeb0fe setzbarrierpiecestate(4, "closed");
@@ -69,7 +69,7 @@ class class_dafbfd8e {
         self.var_b8eeb0fe setzbarrierpiecestate(3, "opening");
         self.var_b8eeb0fe setzbarrierpiecestate(4, "opening");
         while (self.var_b8eeb0fe getzbarrierpiecestate(3) != "open") {
-            wait(0.5);
+            wait 0.5;
         }
         self.var_b8eeb0fe hidezbarrierpiece(3);
         self.var_b8eeb0fe hidezbarrierpiece(4);
@@ -96,22 +96,22 @@ class class_dafbfd8e {
         self thread function_cf5042c5();
         for (i = 0; i < var_5b9e73d8; i++) {
             if (i < 20) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             if (i < 30) {
-                wait(0.1);
+                wait 0.1;
                 continue;
             }
             if (i < 35) {
-                wait(0.2);
+                wait 0.2;
                 continue;
             }
             if (i < 38) {
-                wait(0.3);
+                wait 0.3;
             }
         }
-        wait(1);
+        wait 1;
         self.var_b8eeb0fe.weaponinfo = function_f555c05b();
         v_float = anglestoup(self.var_b8eeb0fe.angles) * 40;
         self.var_b8eeb0fe.weapon_model = spawn("script_model", self.var_b8eeb0fe.origin + v_float, 0);
@@ -128,7 +128,7 @@ class class_dafbfd8e {
     function function_7429abd1(var_7983c848, weaponinfo, e_player) {
         assert(isdefined(weaponinfo));
         e_player namespace_fdfaa57d::function_43128d49(weaponinfo, 0);
-        var_7983c848 notify(#"hash_1285c563");
+        var_7983c848 notify(#"player_took_weapon");
         e_player unlink();
     }
 
@@ -249,7 +249,7 @@ class class_dafbfd8e {
 
 }
 
-// Namespace namespace_293e8aad
+// Namespace bonuszm
 // Params 0, eflags: 0x2
 // Checksum 0xca80034, Offset: 0x4c0
 // Size: 0x3c
@@ -257,7 +257,7 @@ function autoexec function_2dc19561() {
     system::register("cp_mobile_magicbox", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_293e8aad
+// Namespace bonuszm
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaba8e5c8, Offset: 0x508
 // Size: 0xec
@@ -273,7 +273,7 @@ function __init__() {
     clientfield::register("scriptmover", "weapon_disappear_fx", 1, 1, "int");
 }
 
-// Namespace namespace_293e8aad
+// Namespace bonuszm
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe339b3e7, Offset: 0x600
 // Size: 0x302
@@ -281,7 +281,7 @@ function __main__() {
     if (!sessionmodeiscampaignzombiesgame()) {
         return;
     }
-    wait(0.05);
+    wait 0.05;
     var_7422b1d5 = getentarray("mobile_armory_clip", "script_noteworthy");
     foreach (clip in var_7422b1d5) {
         clip delete();
@@ -307,7 +307,7 @@ function __main__() {
     }
 }
 
-// Namespace namespace_293e8aad
+// Namespace bonuszm
 // Params 1, eflags: 0x1 linked
 // Checksum 0xabf81680, Offset: 0x910
 // Size: 0x54
@@ -317,7 +317,7 @@ function function_2816573(var_96eb5b14) {
     var_96eb5b14.var_b10011b8 = var_6982c48a;
 }
 
-// Namespace namespace_293e8aad
+// Namespace bonuszm
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2b34b239, Offset: 0x970
 // Size: 0xb2
@@ -328,7 +328,7 @@ function function_999eb742() {
     }
 }
 
-// Namespace namespace_293e8aad
+// Namespace bonuszm
 // Params 0, eflags: 0x1 linked
 // Checksum 0xab63d8b8, Offset: 0x1bd8
 // Size: 0x122
@@ -345,7 +345,7 @@ function function_89a0f2a6() {
     }
 }
 
-// Namespace namespace_293e8aad
+// Namespace bonuszm
 // Params 1, eflags: 0x1 linked
 // Checksum 0x26114334, Offset: 0x1d08
 // Size: 0x7c
@@ -358,7 +358,7 @@ function function_76eab3e(magicbox) {
     }
 }
 
-// Namespace namespace_293e8aad
+// Namespace bonuszm
 // Params 1, eflags: 0x1 linked
 // Checksum 0x301860b3, Offset: 0x1d90
 // Size: 0x5c

@@ -171,10 +171,10 @@ function function_92823005() {
     for (;;) {
         ret = util::waittill_any_return("doublejump_begin", "doublejump_end", "disconnect");
         switch (ret) {
-        case 21:
+        case "doublejump_begin":
             self.var_150f7cf6 = gettime();
             break;
-        case 20:
+        case "doublejump_end":
             self.var_fdd0883a = gettime();
             break;
         }
@@ -193,10 +193,10 @@ function watchjump() {
     for (;;) {
         ret = util::waittill_any_return("jump_begin", "jump_end", "disconnect");
         switch (ret) {
-        case 23:
+        case "jump_begin":
             self.challenge_jump_begin = gettime();
             break;
-        case 22:
+        case "jump_end":
             self.challenge_jump_end = gettime();
             break;
         }
@@ -215,10 +215,10 @@ function watchswimming() {
     for (;;) {
         ret = util::waittill_any_return("swimming_begin", "swimming_end", "disconnect");
         switch (ret) {
-        case 25:
+        case "swimming_begin":
             self.challenge_swimming_begin = gettime();
             break;
-        case 24:
+        case "swimming_end":
             self.challenge_swimming_end = gettime();
             break;
         }
@@ -237,10 +237,10 @@ function function_7f4a227d() {
     for (;;) {
         ret = util::waittill_any_return("wallrun_begin", "wallrun_end", "disconnect");
         switch (ret) {
-        case 27:
+        case "wallrun_begin":
             self.var_da3759c8 = gettime();
             break;
-        case 26:
+        case "wallrun_end":
             self.var_77c2a8fc = gettime();
             break;
         }
@@ -259,10 +259,10 @@ function watchslide() {
     for (;;) {
         ret = util::waittill_any_return("slide_begin", "slide_end", "disconnect");
         switch (ret) {
-        case 29:
+        case "slide_begin":
             self.challenge_slide_begin = gettime();
             break;
-        case 28:
+        case "slide_end":
             self.challenge_slide_end = gettime();
             break;
         }
@@ -281,10 +281,10 @@ function watchsprint() {
     for (;;) {
         ret = util::waittill_any_return("sprint_begin", "sprint_end", "disconnect");
         switch (ret) {
-        case 31:
+        case "sprint_begin":
             self.challenge_sprint_begin = gettime();
             break;
-        case 30:
+        case "sprint_end":
             self.challenge_sprint_end = gettime();
             break;
         }
@@ -755,10 +755,10 @@ function challengekills(data) {
                         continue;
                     }
                     switch (activestreak.killstreaktype) {
-                    case 131:
-                    case 132:
-                    case 133:
-                    case 134:
+                    case "drone_striked":
+                    case "helicopter_comlink":
+                    case "sentinel":
+                    case "uav":
                         player addplayerstat("kill_blindeye_ghost_aircraft", 1);
                         awarded_kill_blindeye_ghost_aircraft = 1;
                         break;
@@ -1239,24 +1239,24 @@ function killedbaseoffender(objective, weapon) {
     killstreak = killstreaks::get_from_weapon(weapon);
     if (isdefined(killstreak)) {
         switch (killstreak) {
-        case 198:
-        case 200:
-        case 202:
-        case 203:
-        case 204:
-        case 205:
+        case "drone_strike":
+        case "inventory_drone_strike":
+        case "inventory_planemortar":
+        case "inventory_remote_missile":
+        case "planemortar":
+        case "remote_missile":
             self.challenge_offenderprojectilemultikillcount++;
             break;
-        case 132:
-        case 201:
+        case "helicopter_comlink":
+        case "inventory_helicopter_comlink":
             self.challenge_offendercomlinkkillcount++;
             break;
-        case 108:
-        case 199:
+        case "combat_robot":
+        case "inventory_combat_robot":
             self addplayerstat("kill_attacker_with_robot_or_tank", 1);
             break;
-        case 104:
-        case 105:
+        case "autoturret":
+        case "inventory_autoturret":
             self.challenge_offendersentryturretkillcount++;
             self addplayerstat("kill_attacker_with_robot_or_tank", 1);
             break;
@@ -1312,7 +1312,7 @@ function killedbasedefender(objective) {
 // Size: 0x1c
 function waittilltimeoutordeath(timeout) {
     self endon(#"death");
-    wait(timeout);
+    wait timeout;
 }
 
 // Namespace challenges
@@ -1332,13 +1332,13 @@ function killstreak_30_noscorestreaks() {
 function heroabilityactivateneardeath() {
     if (isdefined(self.heroability) && self.pers["canSetSpecialistStat"]) {
         switch (self.heroability.name) {
-        case 217:
-        case 218:
-        case 219:
-        case 220:
-        case 221:
-        case 222:
-        case 223:
+        case "gadget_armor":
+        case "gadget_camo":
+        case "gadget_clone":
+        case "gadget_flashback":
+        case "gadget_heat_wave":
+        case "gadget_speed_burst":
+        case "gadget_vision_pulse":
             self thread checkforherosurvival();
             break;
         }
@@ -1534,9 +1534,9 @@ function function_de32795d() {
                 break;
             }
         }
-        wait(0.05);
+        wait 0.05;
         while (!player isonground()) {
-            wait(0.05);
+            wait 0.05;
         }
     }
 }

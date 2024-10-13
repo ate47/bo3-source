@@ -87,7 +87,7 @@ function perk_random_machine_init() {
         machine.uses_at_current_location = 0;
         machine create_perk_random_machine_unitrigger_stub();
         machine clientfield::set("init_perk_random_machine", 1);
-        wait(0.5);
+        wait 0.5;
         machine thread set_perk_random_machine_state("power_off");
     }
     level.perk_random_machines = array::randomize(level.perk_random_machines);
@@ -281,13 +281,13 @@ function machine_think() {
         self thread set_perk_random_machine_state("arrive");
         self waittill(#"arrived");
         self thread set_perk_random_machine_state("initial");
-        wait(1);
+        wait 1;
     }
     if (isdefined(level.zm_custom_perk_random_power_flag)) {
         level flag::wait_till(level.zm_custom_perk_random_power_flag);
     } else {
         while (!is_power_on(self.script_int)) {
-            wait(1);
+            wait 1;
         }
     }
     self thread set_perk_random_machine_state("idle");
@@ -318,18 +318,18 @@ function machine_think() {
             random_perk = get_weighted_random_perk(player);
             self playsound("zmb_rand_perk_start");
             self playloopsound("zmb_rand_perk_loop", 1);
-            wait(1);
+            wait 1;
             self notify(#"bottle_spawned");
             self thread start_perk_bottle_cycling();
             self thread perk_bottle_motion();
             model = get_perk_weapon_model(random_perk);
-            wait(3);
+            wait 3;
             self notify(#"done_cycling");
             if (self.num_time_used >= self.num_til_moved && level.perk_random_machine_count > 1) {
                 level.bottle_spawn_location setmodel("wpn_t7_zmb_perk_bottle_bear_world");
                 self stoploopsound(0.5);
                 self thread set_perk_random_machine_state("leaving");
-                wait(3);
+                wait 3;
                 player zm_score::add_to_player_score(level._random_zombie_perk_cost);
                 level.bottle_spawn_location setmodel("tag_origin");
                 self thread machine_selector();
@@ -367,7 +367,7 @@ function grab_check(player, random_perk) {
         e_triggerer = self waittill(#"trigger");
         if (e_triggerer == player) {
             if (isdefined(player.is_drinking) && player.is_drinking > 0) {
-                wait(0.1);
+                wait 0.1;
                 continue;
             }
             if (player zm_utility::can_player_purchase_perk()) {
@@ -411,7 +411,7 @@ function monitor_when_player_acquires_perk() {
 // Size: 0x44
 function time_out_check() {
     self endon(#"grab_check");
-    wait(10);
+    wait 10;
     self notify(#"time_out_check");
     level flag::set("machine_can_reset");
 }
@@ -447,7 +447,7 @@ function machine_selector() {
     } while (new_machine.current_perk_random_machine == 1);
     new_machine.current_perk_random_machine = 1;
     self.current_perk_random_machine = 0;
-    wait(10);
+    wait 10;
     new_machine thread machine_think();
 }
 
@@ -477,8 +477,8 @@ function get_weighted_random_perk(player) {
         keys = player [[ level.custom_random_perk_weights ]]();
     }
     /#
-        forced_perk = getdvarstring("turn_active_perk_light_green");
-        if (forced_perk != "turn_active_perk_light_green" && isdefined(level._random_perk_machine_perk_list[forced_perk])) {
+        forced_perk = getdvarstring("<dev string:x28>");
+        if (forced_perk != "<dev string:x37>" && isdefined(level._random_perk_machine_perk_list[forced_perk])) {
             arrayinsert(keys, forced_perk, 0);
         }
     #/
@@ -527,7 +527,7 @@ function start_perk_bottle_cycling() {
                 model = getweaponmodel(level.perk_bottle_weapon_array[array_key[i]].perk_bottle_weapon);
             }
             level.bottle_spawn_location setmodel(model);
-            wait(0.2);
+            wait 0.2;
         }
     }
 }
@@ -568,11 +568,11 @@ function perk_random_loop_anim(n_piece, s_anim_1, s_anim_2) {
     while (self.state == current_state) {
         self setzbarrierpiecestate(n_piece, s_anim_1);
         while (self getzbarrierpiecestate(n_piece) == s_anim_1) {
-            wait(0.05);
+            wait 0.05;
         }
         self setzbarrierpiecestate(n_piece, s_anim_2);
         while (self getzbarrierpiecestate(n_piece) == s_anim_2) {
-            wait(0.05);
+            wait 0.05;
         }
     }
 }
@@ -609,7 +609,7 @@ function perk_random_idle() {
     }
     self clientfield::set("lightning_bolt_FX_toggle", 1);
     while (self.state == "idle") {
-        wait(0.05);
+        wait 0.05;
     }
     self clientfield::set("lightning_bolt_FX_toggle", 0);
 }
@@ -620,7 +620,7 @@ function perk_random_idle() {
 // Size: 0x42
 function perk_random_arrive() {
     while (self getzbarrierpiecestate(0) == "opening") {
-        wait(0.05);
+        wait 0.05;
     }
     self notify(#"arrived");
 }
@@ -631,9 +631,9 @@ function perk_random_arrive() {
 // Size: 0x5c
 function perk_random_leaving() {
     while (self getzbarrierpiecestate(0) == "closing") {
-        wait(0.05);
+        wait 0.05;
     }
-    wait(0.05);
+    wait 0.05;
     self thread set_perk_random_machine_state("away");
 }
 
@@ -642,7 +642,7 @@ function perk_random_leaving() {
 // Checksum 0x4c476de6, Offset: 0x2950
 // Size: 0x88
 function set_perk_random_machine_state(state) {
-    wait(0.1);
+    wait 0.1;
     for (i = 0; i < self getnumzbarrierpieces(); i++) {
         self hidezbarrierpiece(i);
     }
@@ -656,7 +656,7 @@ function set_perk_random_machine_state(state) {
 // Size: 0x49a
 function process_perk_random_machine_state(state) {
     switch (state) {
-    case 37:
+    case "arrive":
         self showzbarrierpiece(0);
         self showzbarrierpiece(1);
         self setzbarrierpiecestate(0, "opening");
@@ -665,7 +665,7 @@ function process_perk_random_machine_state(state) {
         self thread perk_random_arrive();
         self.state = "arrive";
         break;
-    case 30:
+    case "idle":
         self showzbarrierpiece(5);
         self showzbarrierpiece(2);
         self setzbarrierpiecestate(2, "opening");
@@ -673,13 +673,13 @@ function process_perk_random_machine_state(state) {
         self.state = "idle";
         self thread perk_random_idle();
         break;
-    case 24:
+    case "power_off":
         self showzbarrierpiece(2);
         self setzbarrierpiecestate(2, "closing");
         self clientfield::set("set_client_light_state", 0);
         self.state = "power_off";
         break;
-    case 31:
+    case "vending":
         self showzbarrierpiece(5);
         self showzbarrierpiece(3);
         self showzbarrierpiece(4);
@@ -687,7 +687,7 @@ function process_perk_random_machine_state(state) {
         self.state = "vending";
         self thread perk_random_vending();
         break;
-    case 45:
+    case "leaving":
         self showzbarrierpiece(1);
         self showzbarrierpiece(0);
         self setzbarrierpiecestate(0, "closing");
@@ -696,13 +696,13 @@ function process_perk_random_machine_state(state) {
         self thread perk_random_leaving();
         self.state = "leaving";
         break;
-    case 58:
+    case "away":
         self showzbarrierpiece(2);
         self setzbarrierpiecestate(2, "closing");
         self clientfield::set("set_client_light_state", 3);
         self.state = "away";
         break;
-    case 26:
+    case "initial":
         self showzbarrierpiece(3);
         self setzbarrierpiecestate(3, "opening");
         self showzbarrierpiece(5);
@@ -775,30 +775,30 @@ function is_power_on(n_power_index) {
     // Size: 0x1d6
     function wunderfizz_devgui_callback(cmd) {
         players = getplayers();
-        a_e_wunderfizzes = getentarray("turn_active_perk_light_green", "turn_active_perk_light_green");
+        a_e_wunderfizzes = getentarray("<dev string:x38>", "<dev string:x4c>");
         e_wunderfizz = arraygetclosest(getplayers()[0].origin, a_e_wunderfizzes);
         switch (cmd) {
-        case 8:
-            e_wunderfizz thread set_perk_random_machine_state("turn_active_perk_light_green");
+        case "<dev string:x57>":
+            e_wunderfizz thread set_perk_random_machine_state("<dev string:x6a>");
             break;
-        case 8:
-            e_wunderfizz thread set_perk_random_machine_state("turn_active_perk_light_green");
+        case "<dev string:x72>":
+            e_wunderfizz thread set_perk_random_machine_state("<dev string:x86>");
             break;
-        case 8:
-            e_wunderfizz thread set_perk_random_machine_state("turn_active_perk_light_green");
+        case "<dev string:x8d>":
+            e_wunderfizz thread set_perk_random_machine_state("<dev string:xa0>");
             e_wunderfizz notify(#"bottle_spawned");
             break;
-        case 8:
-            e_wunderfizz thread set_perk_random_machine_state("turn_active_perk_light_green");
+        case "<dev string:xa8>":
+            e_wunderfizz thread set_perk_random_machine_state("<dev string:xb8>");
             break;
-        case 8:
-            e_wunderfizz thread set_perk_random_machine_state("turn_active_perk_light_green");
+        case "<dev string:xbd>":
+            e_wunderfizz thread set_perk_random_machine_state("<dev string:xd2>");
             break;
-        case 8:
-            e_wunderfizz thread set_perk_random_machine_state("turn_active_perk_light_green");
+        case "<dev string:xdc>":
+            e_wunderfizz thread set_perk_random_machine_state("<dev string:xef>");
             break;
-        case 8:
-            e_wunderfizz thread set_perk_random_machine_state("turn_active_perk_light_green");
+        case "<dev string:xf7>":
+            e_wunderfizz thread set_perk_random_machine_state("<dev string:x107>");
             break;
         }
     }

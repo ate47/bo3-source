@@ -3,9 +3,9 @@
 #using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e581e076;
+#namespace zm_powerup_demonic_rune;
 
-// Namespace namespace_e581e076
+// Namespace zm_powerup_demonic_rune
 // Params 0, eflags: 0x2
 // Checksum 0xd7ff5007, Offset: 0x1d0
 // Size: 0x34
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
     system::register("zm_powerup_demonic_rune", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_e581e076
+// Namespace zm_powerup_demonic_rune
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe4ced1f7, Offset: 0x210
 // Size: 0x16c
@@ -33,7 +33,7 @@ function __init__() {
     zm_powerups::add_zombie_powerup("demonic_rune_uja");
 }
 
-// Namespace namespace_e581e076
+// Namespace zm_powerup_demonic_rune
 // Params 7, eflags: 0x1 linked
 // Checksum 0x50a77ded, Offset: 0x388
 // Size: 0x6c

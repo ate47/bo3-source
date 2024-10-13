@@ -146,7 +146,7 @@ function autoexec ignore_systems() {
 // Checksum 0x30efbc66, Offset: 0x1cc0
 // Size: 0x3f4
 function init() {
-    println("gadget_immolation");
+    println("<dev string:x28>");
     level thread zm_ffotd::main_start();
     level.onlinegame = sessionmodeisonlinegame();
     level.swimmingfeature = 0;
@@ -159,7 +159,7 @@ function init() {
     util::register_system("lsm", &last_stand_monitor);
     level.clientvoicesetup = &zm_audio::clientvoicesetup;
     level.playerfalldamagesound = &zm_audio::playerfalldamagesound;
-    println("gadget_immolation");
+    println("<dev string:x58>");
     init_clientfields();
     zm_perks::init();
     zm_powerups::init();
@@ -205,14 +205,14 @@ function init() {
 // Checksum 0xbe7cc57b, Offset: 0x20c0
 // Size: 0x96
 function delay_for_clients_then_execute(func) {
-    wait(0.1);
+    wait 0.1;
     players = getlocalplayers();
     for (x = 0; x < players.size; x++) {
         while (!clienthassnapshot(x)) {
-            wait(0.05);
+            wait 0.05;
         }
     }
-    wait(0.1);
+    wait 0.1;
     level thread [[ func ]]();
 }
 
@@ -223,29 +223,29 @@ function delay_for_clients_then_execute(func) {
     // Checksum 0xbdf70b76, Offset: 0x2160
     // Size: 0x1b6
     function function_9fee0219() {
-        wait(0.1);
+        wait 0.1;
         players = getlocalplayers();
         for (x = 0; x < players.size; x++) {
             while (!clienthassnapshot(x)) {
-                wait(0.05);
+                wait 0.05;
             }
         }
-        wait(0.1);
+        wait 0.1;
         if (!isdefined(level.var_478e3c32)) {
             level.var_478e3c32 = [];
         }
         var_d38a76f6 = 0;
         while (true) {
-            dvar_value = getdvarint("gadget_immolation");
+            dvar_value = getdvarint("<dev string:x7b>");
             if (dvar_value != var_d38a76f6) {
                 players = level.var_478e3c32;
                 foreach (player in players) {
-                    player duplicate_render::set_dr_flag("gadget_immolation", !dvar_value);
+                    player duplicate_render::set_dr_flag("<dev string:x93>", !dvar_value);
                     player duplicate_render::update_dr_filters(0);
                 }
             }
             var_d38a76f6 = dvar_value;
-            wait(1);
+            wait 1;
         }
     }
 
@@ -325,9 +325,9 @@ function basic_player_connect(localclientnum) {
 function force_update_player_clientfields(localclientnum) {
     self endon(#"entityshutdown");
     while (!clienthassnapshot(localclientnum)) {
-        wait(0.25);
+        wait 0.25;
     }
-    wait(0.25);
+    wait 0.25;
     self processclientfieldsasifnew();
 }
 
@@ -364,7 +364,7 @@ function init_riser_fx() {
 // Checksum 0xd5279033, Offset: 0x2880
 // Size: 0x55c
 function init_clientfields() {
-    println("gadget_immolation");
+    println("<dev string:xa2>");
     clientfield::register("actor", "zombie_riser_fx", 1, 1, "int", &handle_zombie_risers, 1, 1);
     if (isdefined(level.use_water_risers) && level.use_water_risers) {
         clientfield::register("actor", "zombie_riser_fx_water", 1, 1, "int", &handle_zombie_risers_water, 1, 1);
@@ -602,7 +602,7 @@ function function_55e6ff0a(localclientnum, oldval, newval, bnewent, binitialsnap
 // Size: 0xcc
 function function_189bc7b4(localclientnum) {
     self endon(#"entityshutdown");
-    self endon(#"hash_3f7b661c");
+    self endon(#"death_or_disconnect");
     self endon(#"hash_e5c01d40");
     while (true) {
         level util::waittill_any("demo_jump", "demo_player_switch");
@@ -618,7 +618,7 @@ function function_189bc7b4(localclientnum) {
 // Size: 0x260
 function function_47cf4ac3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"entityshutdown");
-    self endon(#"hash_3f7b661c");
+    self endon(#"death_or_disconnect");
     self endon(#"hash_e5c01d40");
     self thread function_189bc7b4(localclientnum);
     if (newval) {
@@ -634,7 +634,7 @@ function function_47cf4ac3(localclientnum, oldval, newval, bnewent, binitialsnap
                 self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, get_eyeball_off_luminance(), self get_eyeball_color());
                 self.var_900fec00 = 0;
             }
-            wait(0.016);
+            wait 0.016;
         }
         return;
     }
@@ -778,7 +778,7 @@ function zombie_wait_explode(localclientnum) {
                 where = self.origin;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
     if (isdefined(level._effect["zombie_guts_explosion"]) && util::is_mature()) {
         playfx(localclientnum, level._effect["zombie_guts_explosion"], where);
@@ -827,7 +827,7 @@ function do_headshot_gib_fx() {
         playfx(i, level._effect["headshot_nochunks"], fxorigin, forwardvec, upvec);
     }
     playsound(0, "zmb_zombie_head_gib", fxorigin);
-    wait(0.3);
+    wait 0.3;
     if (isdefined(self)) {
         players = level.localplayers;
         for (i = 0; i < players.size; i++) {
@@ -855,7 +855,7 @@ function do_gib_fx(tag) {
 function do_gib(model, tag) {
     start_pos = self gettagorigin(tag);
     start_angles = self gettagangles(tag);
-    wait(0.016);
+    wait 0.016;
     end_pos = undefined;
     angles = undefined;
     if (!isdefined(self)) {
@@ -911,7 +911,7 @@ function check_should_gib() {
 function resetgibcounter() {
     self endon(#"disconnect");
     while (true) {
-        wait(level.gibresettime);
+        wait level.gibresettime;
         level.gibtimer = 0;
         level.gibcount = 0;
     }
@@ -1247,11 +1247,11 @@ function rise_dust_fx(clientnum, type, billow_fx, burst_fx) {
     if (isdefined(burst_fx)) {
         playfx(clientnum, burst_fx, self.origin + (0, 0, randomintrange(5, 10)));
     }
-    wait(0.25);
+    wait 0.25;
     if (isdefined(billow_fx)) {
         playfx(clientnum, billow_fx, self.origin + (randomintrange(-10, 10), randomintrange(-10, 10), randomintrange(5, 10)));
     }
-    wait(2);
+    wait 2;
     dust_time = 5.5;
     dust_interval = 0.3;
     player = level.localplayers[clientnum];
@@ -1270,7 +1270,7 @@ function rise_dust_fx(clientnum, type, billow_fx, burst_fx) {
             return;
         }
         playfxontag(clientnum, effect, self, dust_tag);
-        wait(dust_interval);
+        wait dust_interval;
     }
 }
 
@@ -1280,9 +1280,9 @@ function rise_dust_fx(clientnum, type, billow_fx, burst_fx) {
 // Size: 0x84
 function end_last_stand(clientnum) {
     self waittill(#"laststandend");
-    println("gadget_immolation" + clientnum);
-    wait(0.7);
-    println("gadget_immolation");
+    println("<dev string:xcb>" + clientnum);
+    wait 0.7;
+    println("<dev string:xe9>");
     playsound(clientnum, "revive_gasp");
 }
 
@@ -1293,12 +1293,12 @@ function end_last_stand(clientnum) {
 function last_stand_thread(clientnum) {
     self thread end_last_stand(clientnum);
     self endon(#"laststandend");
-    println("gadget_immolation" + clientnum);
+    println("<dev string:xef>" + clientnum);
     pause = 0.5;
     for (vol = 0.5; true; vol = 1) {
         id = playsound(clientnum, "chr_heart_beat");
         setsoundvolume(id, vol);
-        wait(pause);
+        wait pause;
         if (pause < 2) {
             pause *= 1.05;
             if (pause > 2) {

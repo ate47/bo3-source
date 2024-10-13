@@ -140,7 +140,7 @@ class class_c164643e {
             } else {
                 var_e402428d settext(%TEAM_GATHER_HOLD_TO_GO_NOW);
             }
-            wait(0.05);
+            wait 0.05;
         }
         var_79a345fb destroy();
         var_2f2b830d destroy();
@@ -169,7 +169,7 @@ class class_c164643e {
             var_29a6199e settext(%TEAM_GATHER_PLAYERS_READY, self.var_9166aa4c, self.var_352f3198);
             time_remaining = function_c6f593e0();
             var_6b6fe792 settext(var_8ee8faf7[time_remaining]);
-            wait(0.05);
+            wait 0.05;
         }
         var_6780bff4 destroy();
         var_29a6199e destroy();
@@ -343,7 +343,7 @@ class class_c164643e {
                 function_b8c81ff2(1);
                 break;
             }
-            wait(0.05);
+            wait 0.05;
         }
         if (self.var_551fe492 == 1) {
             function_a08ae386(1);
@@ -510,7 +510,7 @@ class class_c164643e {
             e_player = a_players[i];
             e_player.var_65930d27 = e_player function_f5a9ba65("center", "middle", "center", "top", var_9bce0ee1, var_9d21dc7c, self.var_58308c20, self.var_8b14783f, %TEAM_GATHER_TEAM_EVENT_ABORTED);
         }
-        wait(0);
+        wait 0;
         for (i = 0; i < a_players.size; i++) {
             e_player = a_players[i];
             e_player.var_65930d27 destroy();
@@ -530,7 +530,7 @@ class class_c164643e {
                 e_player = a_players[i];
                 e_player.var_639d6222 = e_player function_f5a9ba65("center", "middle", "center", "top", var_9bce0ee1, var_9d21dc7c, self.var_58308c20, self.var_8b14783f, %TEAM_GATHER_GATHER_SUCCESS);
             }
-            wait(0);
+            wait 0;
             for (i = 0; i < a_players.size; i++) {
                 e_player = a_players[i];
                 e_player.var_639d6222 destroy();
@@ -609,7 +609,7 @@ function function_a8111e80(v1, v2) {
         /#
             line(v1, v2, (0, 0, 1));
         #/
-        wait(0.1);
+        wait 0.1;
     }
 }
 

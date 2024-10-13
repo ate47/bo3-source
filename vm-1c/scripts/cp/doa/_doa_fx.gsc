@@ -147,7 +147,7 @@ function init() {
 // Checksum 0x6bd2e76c, Offset: 0x19b0
 // Size: 0x7e
 function function_6dcb1bbc(name, type) {
-    assert(type < -128, "zombie/fx_turret_impact_doa");
+    assert(type < -128, "<dev string:x28>");
     if (!isdefined(level.doa.var_1142e0a2)) {
         level.doa.var_1142e0a2 = [];
     }
@@ -162,7 +162,7 @@ function function_39dbe45b(name) {
     if (!isdefined(name)) {
         return;
     }
-    assert(isdefined(level.doa.var_1142e0a2[name]), "zombie/fx_turret_impact_doa");
+    assert(isdefined(level.doa.var_1142e0a2[name]), "<dev string:x3b>");
     return level.doa.var_1142e0a2[name];
 }
 
@@ -173,7 +173,7 @@ function function_39dbe45b(name) {
 function function_81e169ac() {
     self endon(#"death");
     while (isdefined(self) && gettime() < self.var_b2ce38d9) {
-        wait(0.05);
+        wait 0.05;
     }
     if (isdefined(self)) {
         self.var_b2ce38d9 = gettime() + -56;
@@ -187,7 +187,7 @@ function function_81e169ac() {
 function function_1f8cb1fa() {
     self endon(#"death");
     while (isdefined(self) && gettime() < self.var_78c14ec2) {
-        wait(0.05);
+        wait 0.05;
     }
     if (isdefined(self)) {
         self.var_78c14ec2 = gettime() + -56;
@@ -210,10 +210,10 @@ function function_64bc2503(&queue, flag, waitfunc, var_a6cc22d4) {
     if (queue.size >= 16) {
         /#
             foreach (item in queue) {
-                namespace_49107f3a::debugmsg("zombie/fx_turret_impact_doa" + item);
+                namespace_49107f3a::debugmsg("<dev string:x60>" + item);
             }
         #/
-        assert(0, "zombie/fx_turret_impact_doa" + queue[15]);
+        assert(0, "<dev string:x6a>" + queue[15]);
     }
     self [[ waitfunc ]]();
     if (queue.size == 0 && isdefined(self)) {
@@ -240,8 +240,8 @@ function turnofffx(name) {
     self notify(#"turnofffx");
     self endon(#"turnofffx");
     self endon(#"death");
-    assert(!(isplayer(self) && name == "zombie/fx_turret_impact_doa"));
-    assert(!(isplayer(self) && name == "zombie/fx_turret_impact_doa"));
+    assert(!(isplayer(self) && name == "<dev string:x9c>"));
+    assert(!(isplayer(self) && name == "<dev string:xaf>"));
     if (!isdefined(self.var_350c7e91)) {
         self.var_350c7e91 = [];
         self.var_78c14ec2 = 0;
@@ -253,7 +253,7 @@ function turnofffx(name) {
         self.var_350c7e91[self.var_350c7e91.size] = name;
     }
     self function_64bc2503(self.var_350c7e91, "off_fx", &function_1f8cb1fa);
-    level notify(#"hash_67a1310c");
+    level notify(#"off_fx_queue_processed");
 }
 
 // Namespace namespace_eaa992c
@@ -267,8 +267,8 @@ function function_285a2999(name) {
     self notify(#"hash_285a2999");
     self endon(#"hash_285a2999");
     self endon(#"death");
-    assert(!(isplayer(self) && name == "zombie/fx_turret_impact_doa"));
-    assert(!(isplayer(self) && name == "zombie/fx_turret_impact_doa"));
+    assert(!(isplayer(self) && name == "<dev string:x9c>"));
+    assert(!(isplayer(self) && name == "<dev string:xaf>"));
     if (!isdefined(self.var_3930cdff)) {
         self.var_3930cdff = [];
         self.var_b2ce38d9 = 0;
@@ -352,20 +352,20 @@ function function_2aa1c0b3(victim, damage, attacker, dir, smeansofdeath, weapon)
     }
     if (issubstr(weapon.name, "_1")) {
         victim clientfield::set("burnType", 2);
-        victim.var_7aac5112 = 2;
+        victim.burnType = 2;
     } else if (issubstr(weapon.name, "_2")) {
         victim clientfield::set("burnType", 3);
-        victim.var_7aac5112 = 3;
+        victim.burnType = 3;
     } else {
         victim clientfield::set("burnType", 1);
-        victim.var_7aac5112 = 1;
+        victim.burnType = 1;
     }
     victim.burning = 1;
-    wait(0.05);
+    wait 0.05;
     if (isdefined(victim) && isactor(victim)) {
-        victim thread function_32bcda58(victim.var_7aac5112, attacker);
+        victim thread function_32bcda58(victim.burnType, attacker);
         victim clientfield::increment("burnZombie");
-        victim thread function_9fc6e261(victim.var_7aac5112);
+        victim thread function_9fc6e261(victim.burnType);
         if (!isdefined(victim.var_dd70dacd)) {
             victim asmsetanimationrate(0.75);
         }
@@ -376,18 +376,18 @@ function function_2aa1c0b3(victim, damage, attacker, dir, smeansofdeath, weapon)
 // Params 2, eflags: 0x1 linked
 // Checksum 0x993d9b9c, Offset: 0x2660
 // Size: 0x150
-function function_32bcda58(var_7aac5112, attacker) {
+function function_32bcda58(burnType, attacker) {
     self notify(#"hash_e32770a3");
     self endon(#"hash_e32770a3");
     self endon(#"death");
-    dmg = getdvarint("scr_doa_dot_burn_dmg", 120) * var_7aac5112;
+    dmg = getdvarint("scr_doa_dot_burn_dmg", 120) * burnType;
     if (!isdefined(self.var_a27665f9)) {
         self.var_a27665f9 = 0;
     }
     var_1b22f058 = getdvarint("scr_doa_dot_max_inc", 3);
     while (isalive(self)) {
         self dodamage(dmg, self.origin, attacker);
-        wait(0.3);
+        wait 0.3;
         if (var_1b22f058 > 0 && self.var_a27665f9 % getdvarint("scr_doa_dot_burn_fx_rate", 30) == 0) {
             var_1b22f058--;
             self clientfield::increment("burnZombie");
@@ -402,10 +402,10 @@ function function_32bcda58(var_7aac5112, attacker) {
 // Size: 0xc4
 function private function_9fc6e261(type) {
     corpse = self waittill(#"actor_corpse");
-    wait(0.05);
+    wait 0.05;
     if (isdefined(corpse)) {
         corpse clientfield::set("burnType", type);
-        wait(0.05);
+        wait 0.05;
         if (isdefined(corpse)) {
             corpse clientfield::increment("burnCorpse");
             if (randomint(100) < 50) {

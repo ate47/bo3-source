@@ -83,7 +83,7 @@ function function_3ceed68a(model) {
 // Size: 0x54
 function stream_model_for_time(localclientnum, model, time) {
     function_85cbbac5(model);
-    wait(time);
+    wait time;
     function_3ceed68a(model);
 }
 
@@ -138,7 +138,7 @@ function function_7ceee06f(localclientnum, newval, fx) {
         fx_obj setmodel("tag_origin");
         fx_obj.angles = self.angles;
         self.var_7e140a2e[localclientnum] = fx_obj;
-        wait(0.016);
+        wait 0.016;
     }
     self function_f40b6915(localclientnum);
     if (newval) {

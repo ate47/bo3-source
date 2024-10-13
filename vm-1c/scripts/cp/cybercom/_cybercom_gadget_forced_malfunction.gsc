@@ -242,7 +242,7 @@ function private function_609fcb0a(attacker, var_8e113fac, weapon) {
             continue;
         }
         var_c1972f81 += 10;
-        wait(randomintrange(1, 3));
+        wait randomintrange(1, 3);
     }
     self clientfield::set("forced_malfunction", 0);
     self.is_disabled = 0;
@@ -255,7 +255,7 @@ function private function_609fcb0a(attacker, var_8e113fac, weapon) {
 function private function_91adcf0e(attacker, var_ba115ce0) {
     self endon(#"death");
     weapon = getweapon("gadget_forced_malfunction");
-    self notify(#"hash_f8c5dd60", weapon, attacker);
+    self notify(#"cybercom_action", weapon, attacker);
     if (isdefined(var_ba115ce0)) {
         disabletime = var_ba115ce0;
     } else {
@@ -277,7 +277,7 @@ function private function_91adcf0e(attacker, var_ba115ce0) {
         self thread function_586fec95(attacker, var_8e113fac, weapon);
         return;
     }
-    assert(self.archetype == "riotshield" || self.archetype == "riotshield");
+    assert(self.archetype == "<dev string:x28>" || self.archetype == "<dev string:x2e>");
     type = self cybercom::function_5e3d3aa();
     self clientfield::set("forced_malfunction", 1);
     goalpos = self.goalpos;
@@ -295,7 +295,7 @@ function private function_91adcf0e(attacker, var_ba115ce0) {
         self animscripted("malfunction_intro_anim", self.origin, self.angles, "ai_" + base + "_" + type + "_exposed_rifle_malfunction" + variant);
         self thread cybercom::function_cf64f12c("damage_pain", "malfunction_intro_anim", 1, attacker, weapon);
         self thread cybercom::function_cf64f12c("notify_melee_damage", "malfunction_intro_anim", 1, attacker, weapon);
-        self waittillmatch(#"hash_8a1e1e3e", "end");
+        self waittillmatch(#"malfunction_intro_anim", "end");
     }
     var_ac712236 = 0;
     while (isalive(self) && gettime() < var_8e113fac) {
@@ -307,7 +307,7 @@ function private function_91adcf0e(attacker, var_ba115ce0) {
                 self.malfunctionreaction = 0;
             }
         }
-        wait(0.2);
+        wait 0.2;
     }
     self clientfield::set("forced_malfunction", 0);
     self.malfunctionreaction = undefined;
@@ -347,7 +347,7 @@ function function_638ad739(target, var_9bc2efcb) {
     if (isdefined(var_9bc2efcb) && var_9bc2efcb) {
         type = self cybercom::function_5e3d3aa();
         self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
-        self waittillmatch(#"hash_39fa7e38", "fire");
+        self waittillmatch(#"ai_cybercom_anim", "fire");
     }
     weapon = getweapon("gadget_forced_malfunction");
     foreach (guy in validtargets) {
@@ -355,7 +355,7 @@ function function_638ad739(target, var_9bc2efcb) {
             continue;
         }
         guy thread function_91adcf0e(self);
-        wait(0.05);
+        wait 0.05;
     }
 }
 

@@ -33,9 +33,9 @@ function __init__() {
     // Checksum 0x99e6f959, Offset: 0x250
     // Size: 0x74
     function gadgets_print(str) {
-        if (getdvarint("<unknown string>")) {
+        if (getdvarint("<dev string:x28>")) {
             toprint = str;
-            println(self.playername + "<unknown string>" + "<unknown string>" + toprint);
+            println(self.playername + "<dev string:x3a>" + "<dev string:x3d>" + toprint);
         }
     }
 
@@ -74,7 +74,7 @@ function on_player_spawned() {
 // Size: 0x6c
 function gadget_give_callback(ent, slot, weapon) {
     /#
-        ent gadgets_print("<unknown string>" + slot + "<unknown string>");
+        ent gadgets_print("<dev string:x46>" + slot + "<dev string:x47>");
     #/
     ent ability_player::give_gadget(slot, weapon);
 }
@@ -85,7 +85,7 @@ function gadget_give_callback(ent, slot, weapon) {
 // Size: 0x6c
 function gadget_take_callback(ent, slot, weapon) {
     /#
-        ent gadgets_print("<unknown string>" + slot + "<unknown string>");
+        ent gadgets_print("<dev string:x46>" + slot + "<dev string:x51>");
     #/
     ent ability_player::take_gadget(slot, weapon);
 }
@@ -96,7 +96,7 @@ function gadget_take_callback(ent, slot, weapon) {
 // Size: 0x6c
 function gadget_primed_callback(ent, slot, weapon) {
     /#
-        ent gadgets_print("<unknown string>" + slot + "<unknown string>");
+        ent gadgets_print("<dev string:x46>" + slot + "<dev string:x5b>");
     #/
     ent ability_player::gadget_primed(slot, weapon);
 }
@@ -107,7 +107,7 @@ function gadget_primed_callback(ent, slot, weapon) {
 // Size: 0x6c
 function gadget_ready_callback(ent, slot, weapon) {
     /#
-        ent gadgets_print("<unknown string>" + slot + "<unknown string>");
+        ent gadgets_print("<dev string:x46>" + slot + "<dev string:x67>");
     #/
     ent ability_player::gadget_ready(slot, weapon);
 }
@@ -118,7 +118,7 @@ function gadget_ready_callback(ent, slot, weapon) {
 // Size: 0x8c
 function gadget_on_callback(ent, slot, weapon) {
     /#
-        ent gadgets_print("<unknown string>" + slot + "<unknown string>");
+        ent gadgets_print("<dev string:x46>" + slot + "<dev string:x72>");
     #/
     if (isdefined(level.var_26432505)) {
         level thread [[ level.var_26432505 ]](ent);
@@ -132,7 +132,7 @@ function gadget_on_callback(ent, slot, weapon) {
 // Size: 0x6c
 function gadget_off_callback(ent, slot, weapon) {
     /#
-        ent gadgets_print("<unknown string>" + slot + "<unknown string>");
+        ent gadgets_print("<dev string:x46>" + slot + "<dev string:x7a>");
     #/
     ent ability_player::turn_gadget_off(slot, weapon);
 }
@@ -143,7 +143,7 @@ function gadget_off_callback(ent, slot, weapon) {
 // Size: 0x6c
 function gadget_flicker_callback(ent, slot, weapon) {
     /#
-        ent gadgets_print("<unknown string>" + slot + "<unknown string>");
+        ent gadgets_print("<dev string:x46>" + slot + "<dev string:x83>");
     #/
     ent ability_player::gadget_flicker(slot, weapon);
 }

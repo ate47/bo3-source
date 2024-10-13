@@ -48,7 +48,7 @@ function add_zombie_powerup(powerup_name, client_field_name, clientfield_version
 // Checksum 0xa55f1e7a, Offset: 0x408
 // Size: 0xb6
 function function_ced9fed2() {
-    wait(0.1);
+    wait 0.1;
     powerup_keys = getarraykeys(level.zombie_powerups);
     var_52fbf591 = undefined;
     for (powerup_key_index = 0; powerup_key_index < powerup_keys.size; powerup_key_index++) {

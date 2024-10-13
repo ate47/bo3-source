@@ -7,9 +7,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e59f4632;
+#namespace zm_factory_fx;
 
-// Namespace namespace_e59f4632
+// Namespace zm_factory_fx
 // Params 0, eflags: 0x2
 // Checksum 0x4381e234, Offset: 0x778
 // Size: 0x34
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
     system::register("zm_factory_fx", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_e59f4632
+// Namespace zm_factory_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb670329, Offset: 0x7b8
 // Size: 0xec
@@ -29,7 +29,7 @@ function __init__() {
     clientfield::register("clientuimodel", "player_lives", 1, 2, "int");
 }
 
-// Namespace namespace_e59f4632
+// Namespace zm_factory_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1e1e29b3, Offset: 0x8b0
 // Size: 0x24
@@ -38,7 +38,7 @@ function main() {
     function_e6258024();
 }
 
-// Namespace namespace_e59f4632
+// Namespace zm_factory_fx
 // Params 3, eflags: 0x1 linked
 // Checksum 0xf2abef00, Offset: 0x8e0
 // Size: 0x8c
@@ -53,7 +53,7 @@ function function_b273df73(str_flag, str_scene, str_exploder) {
     }
 }
 
-// Namespace namespace_e59f4632
+// Namespace zm_factory_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xab3a9274, Offset: 0x978
 // Size: 0x216
@@ -79,7 +79,7 @@ function function_f45953c() {
     level._effect["powerup_on"] = "zombie/fx_powerup_on_green_zmb";
 }
 
-// Namespace namespace_e59f4632
+// Namespace zm_factory_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x65b34d3b, Offset: 0xb98
 // Size: 0xfe

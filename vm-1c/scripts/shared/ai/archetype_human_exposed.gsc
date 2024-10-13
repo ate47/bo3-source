@@ -18,7 +18,7 @@ function autoexec registerbehaviorscriptfunctions() {
     behaviortreenetworkutility::registerbehaviortreescriptapi("resetReactionToEnemy", &resetreactiontoenemy);
     behaviortreenetworkutility::registerbehaviortreescriptapi("exposedSetDesiredStanceToStand", &exposedsetdesiredstancetostand);
     behaviortreenetworkutility::registerbehaviortreescriptapi("setPathMoveDelayedRandom", &setpathmovedelayedrandom);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("vengeanceService", &function_5a7b478e);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("vengeanceService", &vengeanceService);
 }
 
 // Namespace archetype_human_exposed
@@ -78,7 +78,7 @@ function private function_672e0d90(entity, neighbor) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe945a739, Offset: 0x530
 // Size: 0x152
-function private function_5a7b478e(entity) {
+function private vengeanceService(entity) {
     actors = getaiarray();
     if (!isdefined(entity.attacker)) {
         return;

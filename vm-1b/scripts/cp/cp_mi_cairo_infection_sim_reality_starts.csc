@@ -5,9 +5,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_34269b51;
+#namespace cp_mi_cairo_infection_sim_reality_starts;
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 0, eflags: 0x0
 // Checksum 0x71465994, Offset: 0x3b0
 // Size: 0x12
@@ -15,7 +15,7 @@ function main() {
     init_clientfields();
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 0, eflags: 0x0
 // Checksum 0x8514e98a, Offset: 0x3d0
 // Size: 0x34a
@@ -37,7 +37,7 @@ function init_clientfields() {
     clientfield::register("world", "break_baby", 1, 1, "int", &function_8422b90b, 0, 0);
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 7, eflags: 0x0
 // Checksum 0x1970d8cb, Offset: 0x728
 // Size: 0x6e
@@ -47,7 +47,7 @@ function function_1d3b6fae(localclientnum, oldval, newval, bnewent, binitialsnap
     player.var_8afc17fb = 0;
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 7, eflags: 0x0
 // Checksum 0x3e68ef49, Offset: 0x7a0
 // Size: 0x62
@@ -59,7 +59,7 @@ function function_883e8035(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 7, eflags: 0x0
 // Checksum 0x6226a62f, Offset: 0x810
 // Size: 0x62
@@ -71,7 +71,7 @@ function function_ae40fa9e(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 7, eflags: 0x0
 // Checksum 0x35943017, Offset: 0x880
 // Size: 0x62
@@ -83,7 +83,7 @@ function function_d4437507(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 7, eflags: 0x0
 // Checksum 0x8e05f5f9, Offset: 0x8f0
 // Size: 0x62
@@ -95,7 +95,7 @@ function function_ca321c28(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 7, eflags: 0x0
 // Checksum 0x9d5326b6, Offset: 0x960
 // Size: 0x7a
@@ -108,7 +108,7 @@ function function_f0349691(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 7, eflags: 0x0
 // Checksum 0xc746dff5, Offset: 0x9e8
 // Size: 0x62
@@ -120,7 +120,7 @@ function function_c27ea863(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 7, eflags: 0x0
 // Checksum 0xe7096072, Offset: 0xa58
 // Size: 0x99
@@ -135,7 +135,7 @@ function function_c0197ff(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 7, eflags: 0x0
 // Checksum 0xe28653e0, Offset: 0xb00
 // Size: 0xc2
@@ -151,7 +151,7 @@ function function_fa9ecbf7(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 7, eflags: 0x0
 // Checksum 0x3f6ad617, Offset: 0xbd0
 // Size: 0xc2
@@ -167,7 +167,7 @@ function function_a34472c4(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 7, eflags: 0x0
 // Checksum 0xcfd8778a, Offset: 0xca0
 // Size: 0xaa
@@ -179,7 +179,7 @@ function function_8e717c36(localclientnum, oldval, newval, bnewent, binitialsnap
     playsound(0, "evt_freeze_start", (0, 0, 0));
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 7, eflags: 0x0
 // Checksum 0xbcd757c0, Offset: 0xd58
 // Size: 0x62
@@ -188,7 +188,7 @@ function function_9d61ff9d(localclientnum, oldval, newval, bnewent, binitialsnap
     player thread postfx::exitpostfxbundle();
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 7, eflags: 0x0
 // Checksum 0x1da1bfd4, Offset: 0xdc8
 // Size: 0x72
@@ -202,7 +202,7 @@ function function_972dc8a2(localclientnum, oldval, newval, bnewent, binitialsnap
     setworldfogactivebank(localclientnum, var_4780a11e);
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 7, eflags: 0x0
 // Checksum 0xccdee0a9, Offset: 0xe48
 // Size: 0x82
@@ -215,7 +215,7 @@ function function_8422b90b(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_34269b51
+// Namespace cp_mi_cairo_infection_sim_reality_starts
 // Params 7, eflags: 0x0
 // Checksum 0x1c15d884, Offset: 0xed8
 // Size: 0x165
@@ -245,7 +245,7 @@ function function_e43dc74b(localclientnum, oldval, newval, bnewent, binitialsnap
         }
         self mapshaderconstant(0, 0, "scriptVector1", var_1d8a2dd1, var_9f45473e, 0, 0);
         self mapshaderconstant(0, 0, "scriptVector0", var_be6c1800, 0, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 

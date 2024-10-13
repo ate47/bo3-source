@@ -6,9 +6,9 @@
 #using scripts/shared/util_shared;
 #using scripts/shared/trigger_shared;
 
-#namespace namespace_c8814633;
+#namespace stealth_event;
 
-// Namespace namespace_c8814633
+// Namespace stealth_event
 // Params 0, eflags: 0x0
 // Checksum 0x7ec38d94, Offset: 0x210
 // Size: 0xb2
@@ -26,7 +26,7 @@ function init() {
     self function_78e2e218();
 }
 
-// Namespace namespace_c8814633
+// Namespace stealth_event
 // Params 0, eflags: 0x0
 // Checksum 0xa4da884b, Offset: 0x2d0
 // Size: 0x1e
@@ -34,29 +34,29 @@ function enabled() {
     return isdefined(self.stealth) && isdefined(self.stealth.event);
 }
 
-// Namespace namespace_c8814633
+// Namespace stealth_event
 // Params 0, eflags: 0x0
 // Checksum 0x5e6a3888, Offset: 0x2f8
 // Size: 0x202
 function function_78e2e218() {
-    self register_handler("alert", &namespace_80045451::function_6c10e440, 3);
+    self register_handler("alert", &stealth_aware::function_6c10e440, 3);
     if (isactor(self)) {
         self register_handler("pain", &function_26f273e1, 2);
         self register_handler("death", &function_26f273e1, 2);
         self register_handler("damage", &function_26f273e1, 2);
-        self register_handler("combat_spread", &namespace_80045451::function_101ac5, 1);
-        self register_handler("combat_interest", &namespace_80045451::function_933965f6, 2);
-        self register_handler("stealth_sight_start", &namespace_80045451::function_ca6a0809, 1);
-        self register_handler("stealth_sight_max", &namespace_80045451::function_617b90af, 1);
-        self register_handler("stealth_sight_end", &namespace_80045451::function_85b3a352, 1);
-        self register_handler("witness_combat", &namespace_80045451::function_a7964595, 2);
-        self register_handler("investigate", &namespace_7829c86f::function_de77b9e6, 3);
-        self register_handler("stealth_vo", &namespace_234a4910::function_2756e5d4, 1);
+        self register_handler("combat_spread", &stealth_aware::function_101ac5, 1);
+        self register_handler("combat_interest", &stealth_aware::function_933965f6, 2);
+        self register_handler("stealth_sight_start", &stealth_aware::function_ca6a0809, 1);
+        self register_handler("stealth_sight_max", &stealth_aware::function_617b90af, 1);
+        self register_handler("stealth_sight_end", &stealth_aware::on_sight_end, 1);
+        self register_handler("witness_combat", &stealth_aware::function_a7964595, 2);
+        self register_handler("investigate", &stealth_behavior::function_de77b9e6, 3);
+        self register_handler("stealth_vo", &stealth_vo::function_2756e5d4, 1);
     }
     self thread function_b349369d();
 }
 
-// Namespace namespace_c8814633
+// Namespace stealth_event
 // Params 0, eflags: 0x0
 // Checksum 0xc4860d46, Offset: 0x508
 // Size: 0x2b
@@ -65,7 +65,7 @@ function function_b349369d() {
     self notify(#"hash_2bbc4f84");
 }
 
-// Namespace namespace_c8814633
+// Namespace stealth_event
 // Params 3, eflags: 0x0
 // Checksum 0x457ea54f, Offset: 0x540
 // Size: 0x14d
@@ -98,13 +98,13 @@ function register_handler(eventname, func, var_8a0dd434) {
         break;
     default:
         /#
-            iprintlnbold("<unknown string>" + var_8a0dd434);
+            iprintlnbold("<dev string:x28>" + var_8a0dd434);
         #/
         break;
     }
 }
 
-// Namespace namespace_c8814633
+// Namespace stealth_event
 // Params 1, eflags: 0x0
 // Checksum 0x33aaa1c6, Offset: 0x698
 // Size: 0x35
@@ -116,7 +116,7 @@ function function_44782a56(eventname) {
     }
 }
 
-// Namespace namespace_c8814633
+// Namespace stealth_event
 // Params 1, eflags: 0x0
 // Checksum 0xff62b60d, Offset: 0x6d8
 // Size: 0x3d
@@ -128,7 +128,7 @@ function function_6a7aa4bf(eventname) {
     }
 }
 
-// Namespace namespace_c8814633
+// Namespace stealth_event
 // Params 1, eflags: 0x0
 // Checksum 0xf1413c0b, Offset: 0x720
 // Size: 0x4d
@@ -140,17 +140,17 @@ function function_f8733584(eventname) {
     }
 }
 
-// Namespace namespace_c8814633
+// Namespace stealth_event
 // Params 0, eflags: 0x0
 // Checksum 0x22e9db40, Offset: 0x778
 // Size: 0x42
 function function_551bd4f3() {
-    self endon(#"hash_94ff6d85");
+    self endon(#"stop_stealth");
     arg1, arg2 = self waittill(#"death");
     self thread function_5b52d0d9("death", arg1, arg2);
 }
 
-// Namespace namespace_c8814633
+// Namespace stealth_event
 // Params 1, eflags: 0x0
 // Checksum 0xfa58b943, Offset: 0x7c8
 // Size: 0x55
@@ -162,12 +162,12 @@ function function_1e75afed(eventname) {
     }
 }
 
-// Namespace namespace_c8814633
+// Namespace stealth_event
 // Params 4, eflags: 0x4
 // Checksum 0xe3d2bbef, Offset: 0x828
 // Size: 0x239
 function private function_5b52d0d9(eventname, arg1, arg2, arg3) {
-    self endon(#"hash_94ff6d85");
+    self endon(#"stop_stealth");
     assert(isdefined(eventname));
     assert(isdefined(level.stealth.eventhandler[eventname]));
     if (!isdefined(self)) {
@@ -185,12 +185,12 @@ function private function_5b52d0d9(eventname, arg1, arg2, arg3) {
         }
     }
     /#
-        if (namespace_e449108e::enabled() && isdefined(self) && isentity(self)) {
-            args = "<unknown string>";
+        if (stealth_debug::enabled() && isdefined(self) && isentity(self)) {
+            args = "<dev string:x5f>";
             if (isdefined(arg1)) {
-                args = "<unknown string>" + namespace_e449108e::debug_text(arg1) + args;
+                args = "<dev string:x60>" + stealth_debug::debug_text(arg1) + args;
             }
-            self thread namespace_e449108e::function_1c1f41ef(eventname + "<unknown string>" + args + "<unknown string>", (0.75, 0.75, 0.75), 1, 0.5, self.origin + (0, 0, 30), 3);
+            self thread stealth_debug::function_1c1f41ef(eventname + "<dev string:x62>" + args + "<dev string:x65>", (0.75, 0.75, 0.75), 1, 0.5, self.origin + (0, 0, 30), 3);
         }
     #/
     self.stealth.event.package.name = eventname;
@@ -200,7 +200,7 @@ function private function_5b52d0d9(eventname, arg1, arg2, arg3) {
     self [[ level.stealth.eventhandler[eventname] ]](self.stealth.event.package);
 }
 
-// Namespace namespace_c8814633
+// Namespace stealth_event
 // Params 1, eflags: 0x0
 // Checksum 0xa609f4c5, Offset: 0xa70
 // Size: 0xfa
@@ -212,7 +212,7 @@ function function_26f273e1(var_904f1fb9) {
     if (!isentity(e_attacker)) {
         e_attacker = var_904f1fb9.parms[1];
     }
-    wait(0.05);
+    wait 0.05;
     if (!isdefined(self) || !isdefined(self.team)) {
         return;
     }
@@ -224,7 +224,7 @@ function function_26f273e1(var_904f1fb9) {
     }
 }
 
-// Namespace namespace_c8814633
+// Namespace stealth_event
 // Params 11, eflags: 0x0
 // Checksum 0x425d5186, Offset: 0xb78
 // Size: 0x1d9
@@ -236,7 +236,7 @@ function function_7dd521be(str_team, v_origin, radius, maxheightdiff, requiresig
             continue;
         }
         if ((!isdefined(self) || !(agent === self)) && distancesquared(v_origin, agent.origin) < radiussq) {
-            if (agent namespace_80045451::enabled() && agent namespace_80045451::function_739525d() == "combat") {
+            if (agent stealth_aware::enabled() && agent stealth_aware::function_739525d() == "combat") {
                 continue;
             }
             if (abs(agent.origin[2] - self.origin[2]) > maxheightdiff) {

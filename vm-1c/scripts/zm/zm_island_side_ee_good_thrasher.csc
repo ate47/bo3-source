@@ -5,27 +5,27 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f777c489;
+#namespace zm_island_side_ee_good_thrasher;
 
-// Namespace namespace_f777c489
+// Namespace zm_island_side_ee_good_thrasher
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbd4be237, Offset: 0x2d8
 // Size: 0x1ac
 function init() {
     var_b20c97f = getminbitcountfornum(7);
     var_1b7d5552 = getminbitcountfornum(3);
-    clientfield::register("scriptmover", "side_ee_gt_spore_glow_fx", 9000, 1, "int", &function_f72d6a5e, 0, 0);
-    clientfield::register("scriptmover", "side_ee_gt_spore_cloud_fx", 9000, var_b20c97f, "int", &function_7583072e, 0, 0);
+    clientfield::register("scriptmover", "side_ee_gt_spore_glow_fx", 9000, 1, "int", &side_ee_gt_spore_glow_fx, 0, 0);
+    clientfield::register("scriptmover", "side_ee_gt_spore_cloud_fx", 9000, var_b20c97f, "int", &side_ee_gt_spore_cloud_fx, 0, 0);
     clientfield::register("actor", "side_ee_gt_spore_trail_enemy_fx", 9000, 1, "int", &function_f68bb4e3, 0, 0);
     clientfield::register("allplayers", "side_ee_gt_spore_trail_player_fx", 9000, var_1b7d5552, "int", &function_f68bb4e3, 0, 0);
-    clientfield::register("actor", "good_thrasher_fx", 9000, 1, "int", &function_9993f1d3, 0, 0);
+    clientfield::register("actor", "good_thrasher_fx", 9000, 1, "int", &good_thrasher_fx, 0, 0);
 }
 
-// Namespace namespace_f777c489
+// Namespace zm_island_side_ee_good_thrasher
 // Params 7, eflags: 0x1 linked
 // Checksum 0x87eea4de, Offset: 0x490
 // Size: 0x116
-function function_f72d6a5e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function side_ee_gt_spore_glow_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         if (isdefined(self.var_a1aff3d8)) {
             stopfx(localclientnum, self.var_a1aff3d8);
@@ -39,11 +39,11 @@ function function_f72d6a5e(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f777c489
+// Namespace zm_island_side_ee_good_thrasher
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5ecc3137, Offset: 0x5b0
 // Size: 0x19e
-function function_7583072e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function side_ee_gt_spore_cloud_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval >= 1) {
         var_74df34f7 = arraygetclosest(self.origin, struct::get_array("s_side_ee_gt_spore_pos"));
         var_38c08794 = var_74df34f7;
@@ -59,7 +59,7 @@ function function_7583072e(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f777c489
+// Namespace zm_island_side_ee_good_thrasher
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb0becb6b, Offset: 0x758
 // Size: 0xee
@@ -78,11 +78,11 @@ function function_f68bb4e3(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f777c489
+// Namespace zm_island_side_ee_good_thrasher
 // Params 7, eflags: 0x1 linked
 // Checksum 0x960bc75, Offset: 0x850
 // Size: 0x28a
-function function_9993f1d3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function good_thrasher_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         if (isdefined(self.fx_ids)) {
             foreach (fx_id in self.fx_ids) {

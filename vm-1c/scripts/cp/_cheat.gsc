@@ -94,7 +94,7 @@ function function_c73833ba() {
         for (index = 0; index < level.var_e56c7cd0.size; index++) {
             function_2276c67c(level.var_e56c7cd0[index]);
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 

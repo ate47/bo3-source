@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_5fc59ced;
+#namespace _teamset;
 
-// Namespace namespace_5fc59ced
+// Namespace _teamset
 // Params 0, eflags: 0x0
 // Checksum 0x91a53073, Offset: 0x120
 // Size: 0x82
@@ -19,7 +19,7 @@ function init() {
     game["flagmodels"]["neutral"] = "mp_flag_neutral";
 }
 
-// Namespace namespace_5fc59ced
+// Namespace _teamset
 // Params 0, eflags: 0x0
 // Checksum 0xe8151c0e, Offset: 0x1b0
 // Size: 0xb4

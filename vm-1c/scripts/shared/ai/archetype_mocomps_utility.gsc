@@ -138,10 +138,10 @@ function private debuglocoexplosion(entity) {
         damageyawforward = anglestoforward((0, entity.damageyaw - entity.angles[1], 0));
         starttime = gettime();
         while (gettime() - starttime < 10000) {
-            recordsphere(startorigin, 5, (1, 0, 0), "stand", entity);
-            recordline(startorigin, startorigin + startyawforward * 100, (0, 0, 1), "stand", entity);
-            recordline(startorigin, startorigin + damageyawforward * 100, (1, 0, 0), "stand", entity);
-            wait(0.05);
+            recordsphere(startorigin, 5, (1, 0, 0), "<dev string:x28>", entity);
+            recordline(startorigin, startorigin + startyawforward * 100, (0, 0, 1), "<dev string:x28>", entity);
+            recordline(startorigin, startorigin + damageyawforward * 100, (1, 0, 0), "<dev string:x28>", entity);
+            wait 0.05;
         }
     #/
 }
@@ -168,7 +168,7 @@ function private mocomplocoexplosioninit(entity, mocompanim, mocompanimblendoutt
     entity animmode("nogravity", 0);
     entity orientmode("face angle", entity.angles[1]);
     /#
-        if (getdvarint("stand")) {
+        if (getdvarint("<dev string:x33>")) {
             entity thread debuglocoexplosion(entity);
         }
     #/
@@ -217,13 +217,13 @@ function private mocompadjusttocoverupdate(entity, mocompanim, mocompanimblendou
         entity animmode("normal", 0);
     }
     /#
-        if (getdvarint("stand")) {
-            record3dtext(entity.mocompanglestarttime, entity.origin + (0, 0, 5), (0, 1, 0), "stand");
-            hiptagorigin = entity gettagorigin("stand");
-            recordline(entity.nodeoffsetorigin, entity.nodeoffsetorigin + entity.nodeoffsetforward * 30, (1, 0.5, 0), "stand", entity);
-            recordline(entity.adjustnode.origin, entity.adjustnode.origin + entity.nodeforward * 20, (0, 1, 0), "stand", entity);
-            recordline(entity.origin, entity.origin + anglestoforward(entity.angles) * 10, (1, 0, 0), "stand", entity);
-            recordline(hiptagorigin, (hiptagorigin[0], hiptagorigin[1], entity.origin[2]), (0, 0, 1), "stand", entity);
+        if (getdvarint("<dev string:x4f>")) {
+            record3dtext(entity.mocompanglestarttime, entity.origin + (0, 0, 5), (0, 1, 0), "<dev string:x28>");
+            hiptagorigin = entity gettagorigin("<dev string:x64>");
+            recordline(entity.nodeoffsetorigin, entity.nodeoffsetorigin + entity.nodeoffsetforward * 30, (1, 0.5, 0), "<dev string:x28>", entity);
+            recordline(entity.adjustnode.origin, entity.adjustnode.origin + entity.nodeforward * 20, (0, 1, 0), "<dev string:x28>", entity);
+            recordline(entity.origin, entity.origin + anglestoforward(entity.angles) * 10, (1, 0, 0), "<dev string:x28>", entity);
+            recordline(hiptagorigin, (hiptagorigin[0], hiptagorigin[1], entity.origin[2]), (0, 0, 1), "<dev string:x28>", entity);
         }
     #/
 }

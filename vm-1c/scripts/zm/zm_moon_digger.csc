@@ -6,9 +6,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_98c95ca3;
+#namespace zm_moon_digger;
 
-// Namespace namespace_98c95ca3
+// Namespace zm_moon_digger
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4f4eed3c, Offset: 0x268
 // Size: 0x1c
@@ -16,7 +16,7 @@ function main() {
     level thread function_c360b5f6();
 }
 
-// Namespace namespace_98c95ca3
+// Namespace zm_moon_digger
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe01f350f, Offset: 0x290
 // Size: 0x1aa
@@ -47,7 +47,7 @@ function function_4ec92a54(localclientnum, oldval, newval, bnewent, binitialsnap
     self notify(#"hash_54d1e0d6");
 }
 
-// Namespace namespace_98c95ca3
+// Namespace zm_moon_digger
 // Params 7, eflags: 0x1 linked
 // Checksum 0x11b4843c, Offset: 0x448
 // Size: 0x5c
@@ -57,7 +57,7 @@ function function_a0cf54a0(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_98c95ca3
+// Namespace zm_moon_digger
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb3dabe75, Offset: 0x4b0
 // Size: 0x148
@@ -78,7 +78,7 @@ function function_1e254f15() {
     }
 }
 
-// Namespace namespace_98c95ca3
+// Namespace zm_moon_digger
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdbfff6d0, Offset: 0x600
 // Size: 0x7e
@@ -86,11 +86,11 @@ function function_e718a459(localclientnum) {
     self endon(#"disconnect");
     for (i = 0; i < 10; i++) {
         self playrumbleonentity(localclientnum, "damage_heavy");
-        wait(randomfloatrange(0.1, 0.2));
+        wait randomfloatrange(0.1, 0.2);
     }
 }
 
-// Namespace namespace_98c95ca3
+// Namespace zm_moon_digger
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc8bae123, Offset: 0x688
 // Size: 0xae
@@ -107,7 +107,7 @@ function function_f0b2bcb7(localclientnum, oldval, newval, bnewent, binitialsnap
     self notify(#"hash_3b09ee3");
 }
 
-// Namespace namespace_98c95ca3
+// Namespace zm_moon_digger
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa0b22697, Offset: 0x740
 // Size: 0x1d8
@@ -130,11 +130,11 @@ function function_e41acae4(localclientnum, var_719f80ce) {
         if (distancesquared(var_719f80ce.origin, player.origin) < var_54736a3c) {
             player playrumbleonentity(localclientnum, "slide_rumble");
         }
-        wait(randomfloatrange(0.05, 0.15));
+        wait randomfloatrange(0.05, 0.15);
     }
 }
 
-// Namespace namespace_98c95ca3
+// Namespace zm_moon_digger
 // Params 2, eflags: 0x1 linked
 // Checksum 0x39b1720f, Offset: 0x920
 // Size: 0x198
@@ -155,15 +155,15 @@ function function_f4616a07(localclientnum, var_719f80ce) {
         if (distancesquared(var_719f80ce.origin, player.origin) < dist && abs(var_719f80ce.origin[2] - player.origin[2]) < 750) {
             player playrumbleonentity(localclientnum, "grenade_rumble");
         }
-        wait(randomfloatrange(0.1, 0.25));
+        wait randomfloatrange(0.1, 0.25);
     }
 }
 
-// Namespace namespace_98c95ca3
+// Namespace zm_moon_digger
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa4d7b11b, Offset: 0xac0
 // Size: 0x15e
-function function_5567a905(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function digger_arm_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     if (localclientnum != 0) {
         return;
     }
@@ -186,7 +186,7 @@ function function_5567a905(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_98c95ca3
+// Namespace zm_moon_digger
 // Params 2, eflags: 0x1 linked
 // Checksum 0x405bec01, Offset: 0xc28
 // Size: 0x90
@@ -199,7 +199,7 @@ function function_3f672255(localclientnum, ent) {
     ent.var_5f9ccb3a = playfxontag(localclientnum, level._effect["exca_arm_all"], ent, "tag_origin");
 }
 
-// Namespace namespace_98c95ca3
+// Namespace zm_moon_digger
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa1753ab6, Offset: 0xcc0
 // Size: 0x8c
@@ -211,7 +211,7 @@ function function_245b13ce(localclientnum, oldval, newval, bnewent, binitialsnap
     level thread function_cf66dde9(localclientnum, "show");
 }
 
-// Namespace namespace_98c95ca3
+// Namespace zm_moon_digger
 // Params 2, eflags: 0x1 linked
 // Checksum 0x2f718ed7, Offset: 0xd58
 // Size: 0x33a
@@ -219,7 +219,7 @@ function function_cf66dde9(localclient, visible) {
     var_3943b1da = getentarray(localclient, "digger_body", "targetname");
     tracks = getentarray(localclient, "tracks", "targetname");
     switch (visible) {
-    case 10:
+    case "hide":
         for (i = 0; i < tracks.size; i++) {
             tracks[i] hide();
         }
@@ -232,7 +232,7 @@ function function_cf66dde9(localclient, visible) {
             blade hide();
         }
         break;
-    case 11:
+    case "show":
         for (i = 0; i < tracks.size; i++) {
             tracks[i] show();
         }
@@ -248,12 +248,12 @@ function function_cf66dde9(localclient, visible) {
     }
 }
 
-// Namespace namespace_98c95ca3
+// Namespace zm_moon_digger
 // Params 0, eflags: 0x1 linked
 // Checksum 0x31b1cc67, Offset: 0x10a0
 // Size: 0x176
 function function_c360b5f6() {
-    wait(15);
+    wait 15;
     for (index = 0; index < level.localplayers.size; index++) {
         if (!level clientfield::get("TCA")) {
             mdl_console = getent(index, "tunnel_console", "targetname");
@@ -270,19 +270,19 @@ function function_c360b5f6() {
     }
 }
 
-// Namespace namespace_98c95ca3
+// Namespace zm_moon_digger
 // Params 7, eflags: 0x1 linked
 // Checksum 0x77da2126, Offset: 0x1220
 // Size: 0x10c
 function function_774edb15(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     switch (fieldname) {
-    case 14:
+    case "TCA":
         var_ffc320da = "tunnel_console";
         break;
-    case 16:
+    case "HCA":
         var_ffc320da = "hangar_console";
         break;
-    case 18:
+    case "BCA":
         var_ffc320da = "biodome_console";
         break;
     }
@@ -294,7 +294,7 @@ function function_774edb15(localclientnum, oldval, newval, bnewent, binitialsnap
     function_9b3daafa(localclientnum, mdl_console, 0);
 }
 
-// Namespace namespace_98c95ca3
+// Namespace zm_moon_digger
 // Params 3, eflags: 0x1 linked
 // Checksum 0x7278c0de, Offset: 0x1338
 // Size: 0xe8

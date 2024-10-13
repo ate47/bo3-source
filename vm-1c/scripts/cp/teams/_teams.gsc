@@ -49,12 +49,12 @@ function init() {
         callback::on_joined_team(&on_joined_team);
         callback::on_joined_spectate(&on_joined_spectators);
         level thread update_balance_dvar();
-        wait(0.15);
+        wait 0.15;
         level thread update_player_times();
         return;
     }
     callback::on_connect(&on_free_player_connect);
-    wait(0.15);
+    wait 0.15;
     level thread update_player_times();
 }
 
@@ -79,7 +79,7 @@ function on_free_player_connect() {
 // Checksum 0xca5bbfcb, Offset: 0x5e0
 // Size: 0x4c
 function on_joined_team() {
-    println("1800" + self.pers["1800"]);
+    println("<dev string:x28>" + self.pers["<dev string:x36>"]);
     self update_time();
 }
 
@@ -108,7 +108,7 @@ function function_e7a40e44() {
         self.timeplayed["total"] = 0;
     }
     while (level.inprematchperiod) {
-        wait(0.05);
+        wait 0.05;
     }
     for (;;) {
         if (game["state"] == "playing") {
@@ -122,7 +122,7 @@ function function_e7a40e44() {
                 self.timeplayed["other"]++;
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -139,7 +139,7 @@ function update_player_times() {
         if (nexttoupdate >= level.players.size) {
             nexttoupdate = 0;
             if (var_b3b708df > 0) {
-                wait(var_b3b708df);
+                wait var_b3b708df;
             }
             var_b3b708df = 10;
         }
@@ -147,7 +147,7 @@ function update_player_times() {
             level.players[nexttoupdate] update_played_time();
             level.players[nexttoupdate] persistence::function_b526d623();
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -208,7 +208,7 @@ function update_balance_dvar() {
         if (level.timeplayedcap != timeplayedcap) {
             level.timeplayedcap = int(getdvarint("scr_timeplayedcap"));
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -285,7 +285,7 @@ function track_free_played_time() {
                 self.timeplayed["other"]++;
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -305,8 +305,8 @@ function function_37fd0a0f(team, weapon) {
 // Checksum 0x9b518bcf, Offset: 0x1338
 // Size: 0x6c
 function get_flag_model(teamref) {
-    assert(isdefined(game["1800"]));
-    assert(isdefined(game["1800"][teamref]));
+    assert(isdefined(game["<dev string:x3b>"]));
+    assert(isdefined(game["<dev string:x3b>"][teamref]));
     return game["flagmodels"][teamref];
 }
 
@@ -315,8 +315,8 @@ function get_flag_model(teamref) {
 // Checksum 0x2e219fd, Offset: 0x13b0
 // Size: 0x6c
 function get_flag_carry_model(teamref) {
-    assert(isdefined(game["1800"]));
-    assert(isdefined(game["1800"][teamref]));
+    assert(isdefined(game["<dev string:x46>"]));
+    assert(isdefined(game["<dev string:x46>"][teamref]));
     return game["carry_flagmodels"][teamref];
 }
 
@@ -325,8 +325,8 @@ function get_flag_carry_model(teamref) {
 // Checksum 0xd80f8b81, Offset: 0x1428
 // Size: 0x6c
 function function_3370313c(teamref) {
-    assert(isdefined(game["1800"]));
-    assert(isdefined(game["1800"][teamref]));
+    assert(isdefined(game["<dev string:x57>"]));
+    assert(isdefined(game["<dev string:x57>"][teamref]));
     return game["carry_icon"][teamref];
 }
 

@@ -69,10 +69,10 @@ function trap_init() {
             self._trap_activate_func = level._custom_traps[self.script_noteworthy].activate;
         } else {
             switch (self.script_noteworthy) {
-            case 7:
+            case "rotating":
                 self._trap_activate_func = &trap_activate_rotating;
                 break;
-            case 6:
+            case "flipper":
                 self._trap_activate_func = &trap_activate_flipper;
                 break;
             default:
@@ -95,56 +95,56 @@ function trap_init() {
     for (i = 0; i < components.size; i++) {
         if (isdefined(components[i].script_noteworthy)) {
             switch (components[i].script_noteworthy) {
-            case 10:
+            case "counter_1s":
                 self.counter_1s = components[i];
                 continue;
-            case 9:
+            case "counter_10s":
                 self.counter_10s = components[i];
                 continue;
-            case 8:
+            case "counter_100s":
                 self.counter_100s = components[i];
                 continue;
-            case 12:
+            case "mover":
                 self._trap_movers[self._trap_movers.size] = components[i];
                 continue;
-            case 13:
+            case "switch":
                 self._trap_switches[self._trap_switches.size] = components[i];
                 continue;
-            case 11:
+            case "light":
                 self._trap_lights[self._trap_lights.size] = components[i];
                 continue;
             }
         }
         if (isdefined(components[i].script_string)) {
             switch (components[i].script_string) {
-            case 14:
+            case "flipper1":
                 self.flipper1 = components[i];
                 continue;
-            case 16:
+            case "flipper2":
                 self.flipper2 = components[i];
                 continue;
-            case 15:
+            case "flipper1_radius_check":
                 self.flipper1_radius_check = components[i];
                 continue;
-            case 17:
+            case "flipper2_radius_check":
                 self.flipper2_radius_check = components[i];
                 continue;
-            case 18:
+            case "target1":
                 self.target1 = components[i];
                 continue;
-            case 19:
+            case "target2":
                 self.target2 = components[i];
                 continue;
-            case 20:
+            case "target3":
                 self.target3 = components[i];
                 continue;
             }
         }
         switch (components[i].classname) {
-        case 22:
+        case "trigger_use":
             self._trap_use_trigs[self._trap_use_trigs.size] = components[i];
             break;
-        case 21:
+        case "script_model":
             if (components[i].model == self._trap_light_model_off) {
                 self._trap_lights[self._trap_lights.size] = components[i];
             } else if (components[i].model == self._trap_switch_model) {
@@ -162,7 +162,7 @@ function trap_init() {
         }
         self._trap_fx_structs[self._trap_fx_structs.size] = components[i];
     }
-    assert(self._trap_use_trigs.size > 0, "counter_100s" + self.target);
+    assert(self._trap_use_trigs.size > 0, "<dev string:x28>" + self.target);
     if (!isdefined(self.zombie_cost)) {
         self.zombie_cost = 1000;
     }
@@ -246,11 +246,11 @@ function trap_use_think(trap) {
             trap.var_58acf3b0 = 1;
             trap trap_set_string(%ZOMBIE_TRAP_COOLDOWN);
             /#
-                if (getdvarint("counter_100s") >= 1) {
+                if (getdvarint("<dev string:x52>") >= 1) {
                     trap._trap_cooldown_time = 5;
                 }
             #/
-            wait(trap._trap_cooldown_time);
+            wait trap._trap_cooldown_time;
             trap.var_58acf3b0 = 0;
             playsoundatposition("zmb_trap_ready", trap.origin);
             if (isdefined(level.sndtrapfunc)) {
@@ -279,7 +279,7 @@ function private update_trigger_visibility() {
                 self setinvisibletoplayer(level.players[i], 0);
             }
         }
-        wait(0.25);
+        wait 0.25;
     }
 }
 
@@ -369,7 +369,7 @@ function trap_activate_fire() {
         fx_points[i] thread trap_audio_fx(self);
     }
     self thread trap_damage();
-    wait(self._trap_duration);
+    wait self._trap_duration;
     self notify(#"trap_done");
 }
 
@@ -387,18 +387,18 @@ function trap_activate_rotating() {
     for (i = 0; i < self._trap_movers.size; i++) {
         self._trap_movers[i] rotateyaw(360, 5, 4.5);
     }
-    wait(5);
+    wait 5;
     step = 1.5;
     for (t = 0; t < self._trap_duration; t += step) {
         for (i = 0; i < self._trap_movers.size; i++) {
             self._trap_movers[i] rotateyaw(360, step);
         }
-        wait(step);
+        wait step;
     }
     for (i = 0; i < self._trap_movers.size; i++) {
         self._trap_movers[i] rotateyaw(360, 5, 0, 4.5);
     }
-    wait(5);
+    wait 5;
     for (i = 0; i < self._trap_movers.size; i++) {
         self._trap_movers[i].angles = old_angles;
     }
@@ -427,7 +427,7 @@ function trap_audio_fx(trap) {
     if (isdefined(sound_origin)) {
         playsoundatposition("wpn_zmb_electrap_stop", sound_origin.origin);
         sound_origin stoploopsound();
-        wait(0.05);
+        wait 0.05;
         sound_origin delete();
     }
 }
@@ -446,10 +446,10 @@ function trap_damage() {
                 goto LOC_00000174;
             } else {
                 switch (self._trap_type) {
-                case 48:
+                case "rocket":
                     ent thread player_fire_damage();
                     break;
-                case 7:
+                case "rotating":
                     if (ent getstance() == "stand") {
                         ent dodamage(50, ent.origin + (0, 0, 20));
                         ent setstance("crouch");
@@ -467,10 +467,10 @@ function trap_damage() {
                 continue;
             }
             switch (self._trap_type) {
-            case 48:
+            case "rocket":
                 ent thread zombie_trap_death(self, 100);
                 break;
-            case 7:
+            case "rotating":
                 ent thread zombie_trap_death(self, -56);
                 break;
             default:
@@ -490,7 +490,7 @@ function trig_update(parent) {
     start_angles = self.angles;
     while (true) {
         self.angles = parent.angles;
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -529,7 +529,7 @@ function player_elec_damage() {
             return;
         }
         self dodamage(50, self.origin);
-        wait(0.1);
+        wait 0.1;
         self.is_burning = undefined;
     }
 }
@@ -555,7 +555,7 @@ function player_fire_damage() {
             return;
         }
         self dodamage(50, self.origin);
-        wait(0.1);
+        wait 0.1;
         self.is_burning = undefined;
     }
 }
@@ -568,7 +568,7 @@ function zombie_trap_death(trap, param) {
     self endon(#"death");
     self.marked_for_death = 1;
     switch (trap._trap_type) {
-    case 48:
+    case "rocket":
         if (isdefined(self.animname) && self.animname != "zombie_dog") {
             if (param > 90 && level.burning_zombies.size < 6) {
                 level.burning_zombies[level.burning_zombies.size] = self;
@@ -576,7 +576,7 @@ function zombie_trap_death(trap, param) {
                 self playsound("zmb_ignite");
                 self thread zombie_death::flame_death_fx();
                 playfxontag(level._effect["character_fire_death_torso"], self, "J_SpineLower");
-                wait(randomfloat(1.25));
+                wait randomfloat(1.25);
             } else {
                 refs[0] = "guts";
                 refs[1] = "right_arm";
@@ -587,7 +587,7 @@ function zombie_trap_death(trap, param) {
                 refs[6] = "head";
                 self.a.gib_ref = refs[randomint(refs.size)];
                 playsoundatposition("wpn_zmb_electrap_zap", self.origin);
-                wait(randomfloat(1.25));
+                wait randomfloat(1.25);
                 self playsound("wpn_zmb_electrap_zap");
             }
         }
@@ -598,8 +598,8 @@ function zombie_trap_death(trap, param) {
             self dodamage(self.health + 666, self.origin, trap);
         }
         break;
-    case 67:
-    case 7:
+    case "centrifuge":
+    case "rotating":
         ang = vectortoangles(trap.origin - self.origin);
         direction_vec = vectorscale(anglestoright(ang), param);
         if (isdefined(self.var_16180c77)) {
@@ -635,7 +635,7 @@ function zombie_flame_watch() {
 function play_elec_vocals() {
     if (isdefined(self)) {
         org = self.origin;
-        wait(0.15);
+        wait 0.15;
         playsoundatposition("zmb_elec_vocals", org);
         playsoundatposition("wpn_zmb_electrap_zap", org);
         playsoundatposition("zmb_exp_jib_zombie", org);
@@ -661,7 +661,7 @@ function electroctute_death_fx() {
         playfxontag(level._effect["elec_torso"], self, "J_SpineLower");
     }
     self playsound("zmb_elec_jib_zombie");
-    wait(1);
+    wait 1;
     tagarray = [];
     tagarray[0] = "J_Elbow_LE";
     tagarray[1] = "J_Elbow_RI";
@@ -672,7 +672,7 @@ function electroctute_death_fx() {
         playfxontag(level._effect["elec_md"], self, tagarray[0]);
     }
     self playsound("zmb_elec_jib_zombie");
-    wait(1);
+    wait 1;
     self playsound("zmb_elec_jib_zombie");
     tagarray[0] = "J_Wrist_RI";
     tagarray[1] = "J_Wrist_LE";
@@ -694,7 +694,7 @@ function electroctute_death_fx() {
 function electrocute_timeout() {
     self endon(#"death");
     self playloopsound("amb_fire_manager_0");
-    wait(12);
+    wait 12;
     self stoploopsound();
     if (isdefined(self) && isalive(self)) {
         self.is_electrocuted = 0;
@@ -711,7 +711,7 @@ function trap_dialog() {
     level endon(#"switch_flipped");
     timer = 0;
     while (true) {
-        wait(0.5);
+        wait 0.5;
         players = getplayers();
         for (i = 0; i < players.size; i++) {
             if (!isdefined(players[i])) {
@@ -723,13 +723,13 @@ function trap_dialog() {
                 continue;
             }
             if (dist < 4900 && timer < 3) {
-                wait(0.5);
+                wait 0.5;
                 timer++;
             }
             if (dist < 4900 && timer == 3) {
                 index = zm_utility::get_player_index(players[i]);
                 plr = "plr_" + index + "_";
-                wait(3);
+                wait 3;
                 self notify(#"warning_dialog");
             }
         }
@@ -785,13 +785,13 @@ function trap_model_type_init() {
         self.script_parameters = "default";
     }
     switch (self.script_parameters) {
-    case 93:
+    case "pentagon_electric":
         self._trap_light_model_off = "zombie_trap_switch_light";
         self._trap_light_model_green = "zombie_trap_switch_light_on_green";
         self._trap_light_model_red = "zombie_trap_switch_light_on_red";
         self._trap_switch_model = "zombie_trap_switch_handle";
         break;
-    case 86:
+    case "default":
     default:
         self._trap_light_model_off = "zombie_zapper_cagelight";
         self._trap_light_model_green = "zombie_zapper_cagelight";
@@ -814,9 +814,9 @@ function is_trap_registered(a_registered_traps) {
 // Checksum 0x697ad7f, Offset: 0x3300
 // Size: 0xe4
 function register_trap_basic_info(str_trap, func_activate, func_audio) {
-    assert(isdefined(str_trap), "counter_100s");
-    assert(isdefined(func_activate), "counter_100s");
-    assert(isdefined(func_audio), "counter_100s");
+    assert(isdefined(str_trap), "<dev string:x5f>");
+    assert(isdefined(func_activate), "<dev string:x9d>");
+    assert(isdefined(func_audio), "<dev string:xdc>");
     _register_undefined_trap(str_trap);
     level._custom_traps[str_trap].activate = func_activate;
     level._custom_traps[str_trap].audio = func_audio;
@@ -840,7 +840,7 @@ function _register_undefined_trap(str_trap) {
 // Checksum 0xc9fe2270, Offset: 0x3458
 // Size: 0x94
 function register_trap_damage(str_trap, func_player_damage, func_damage) {
-    assert(isdefined(str_trap), "counter_100s");
+    assert(isdefined(str_trap), "<dev string:x5f>");
     _register_undefined_trap(str_trap);
     level._custom_traps[str_trap].player_damage = func_player_damage;
     level._custom_traps[str_trap].damage = func_damage;

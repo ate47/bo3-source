@@ -100,85 +100,85 @@ function archetypezombieblackboardinit() {
     blackboard::registerblackboardattribute(self, "_arms_position", "arms_up", &bb_getarmsposition);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zombieTraversalService");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_speed", "locomotion_speed_walk", &function_f8ae4008);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zombieTraversalService");
+            self trackblackboardattribute("<dev string:x37>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_has_legs", "has_legs_yes", &bb_gethaslegsstatus);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zombieTraversalService");
+            self trackblackboardattribute("<dev string:x49>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_variant_type", 0, &bb_getvarianttype);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zombieTraversalService");
+            self trackblackboardattribute("<dev string:x53>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_which_board_pull", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zombieTraversalService");
+            self trackblackboardattribute("<dev string:x61>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_board_attack_spot", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zombieTraversalService");
+            self trackblackboardattribute("<dev string:x73>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_grapple_direction", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zombieTraversalService");
+            self trackblackboardattribute("<dev string:x86>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_should_turn", "should_not_turn", &bb_getshouldturn);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zombieTraversalService");
+            self trackblackboardattribute("<dev string:x99>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_idgun_damage_direction", "back", &bb_idgungetdamagedirection);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zombieTraversalService");
+            self trackblackboardattribute("<dev string:xb1>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_low_gravity_variant", 0, &bb_getlowgravityvariant);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zombieTraversalService");
+            self trackblackboardattribute("<dev string:xc9>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_knockdown_direction", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zombieTraversalService");
+            self trackblackboardattribute("<dev string:xde>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_knockdown_type", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zombieTraversalService");
+            self trackblackboardattribute("<dev string:xf3>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_whirlwind_speed", "whirlwind_normal", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zombieTraversalService");
+            self trackblackboardattribute("<dev string:x103>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_zombie_blackholebomb_pull_state", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zombieTraversalService");
+            self trackblackboardattribute("<dev string:x114>");
         #/
     }
     self.___archetypeonanimscriptedcallback = &archetypezombieonanimscriptedcallback;
@@ -440,7 +440,7 @@ function zombienotetrackmeleefire(entity) {
     }
     entity melee();
     /#
-        record3dtext("zombieTraversalService", self.origin, (1, 0, 0), "zombieTraversalService", entity);
+        record3dtext("<dev string:x135>", self.origin, (1, 0, 0), "<dev string:x13b>", entity);
     #/
     if (zombieshouldattackobject(entity)) {
         if (isdefined(level.attackablecallback)) {
@@ -550,9 +550,9 @@ function zombieupdatezigzaggoal() {
             self.keep_moving_time = gettime() + -6;
             path = self calcapproximatepathtoposition(goalpos, 0);
             /#
-                if (getdvarint("zombieTraversalService")) {
+                if (getdvarint("<dev string:x142>")) {
                     for (index = 1; index < path.size; index++) {
-                        recordline(path[index - 1], path[index], (1, 0.5, 0), "zombieTraversalService", self);
+                        recordline(path[index - 1], path[index], (1, 0.5, 0), "<dev string:x151>", self);
                     }
                 }
             #/
@@ -571,7 +571,7 @@ function zombieupdatezigzaggoal() {
                     remaininglength = deviationdistance - segmentlength;
                     seedposition = path[index - 1] + vectornormalize(path[index] - path[index - 1]) * remaininglength;
                     /#
-                        recordcircle(seedposition, 2, (1, 0.5, 0), "zombieTraversalService", self);
+                        recordcircle(seedposition, 2, (1, 0.5, 0), "<dev string:x151>", self);
                     #/
                     innerzigzagradius = 0;
                     outerzigzagradius = 96;
@@ -881,11 +881,11 @@ function zombiejuke(behaviortreeentity) {
                 jukedistance = 101;
                 behaviortreeentity.jukedistance = "long";
                 switch (behaviortreeentity function_f8ae4008()) {
-                case 71:
-                case 48:
+                case "locomotion_speed_run":
+                case "locomotion_speed_walk":
                     forwardoffset = 122;
                     break;
-                case 73:
+                case "locomotion_speed_sprint":
                     forwardoffset = -127;
                     break;
                 }
@@ -895,11 +895,11 @@ function zombiejuke(behaviortreeentity) {
                 jukedistance = 69;
                 behaviortreeentity.jukedistance = "short";
                 switch (behaviortreeentity function_f8ae4008()) {
-                case 71:
-                case 48:
+                case "locomotion_speed_run":
+                case "locomotion_speed_walk":
                     forwardoffset = 127;
                     break;
-                case 73:
+                case "locomotion_speed_sprint":
                     forwardoffset = -108;
                     break;
                 }
@@ -983,13 +983,13 @@ function zombiemeleejumpmocompupdate(entity, mocompanim, mocompanimblendouttime,
     speed = 5;
     if (isdefined(entity.zombie_move_speed)) {
         switch (entity.zombie_move_speed) {
-        case 69:
+        case "walk":
             speed = 5;
             break;
-        case 70:
+        case "run":
             speed = 6;
             break;
-        case 72:
+        case "sprint":
             speed = 7;
             break;
         }

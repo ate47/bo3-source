@@ -6,25 +6,25 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_435c2400;
+#namespace zm_temple_sq_skits;
 
-// Namespace namespace_435c2400
+// Namespace zm_temple_sq_skits
 // Params 2, eflags: 0x1 linked
 // Checksum 0xf6d2b9a2, Offset: 0x9c8
 // Size: 0xd4
 function function_98e846ee(character, vo) {
     entry = spawnstruct();
     switch (character) {
-    case 0:
+    case "dempsey":
         entry.character = 0;
         break;
-    case 1:
+    case "nikolai":
         entry.character = 1;
         break;
-    case 3:
+    case "takeo":
         entry.character = 3;
         break;
-    case 2:
+    case "richtofen":
         entry.character = 2;
         break;
     }
@@ -32,7 +32,7 @@ function function_98e846ee(character, vo) {
     return entry;
 }
 
-// Namespace namespace_435c2400
+// Namespace zm_temple_sq_skits
 // Params 0, eflags: 0x1 linked
 // Checksum 0x74b0a6c1, Offset: 0xaa8
 // Size: 0xdb6
@@ -58,7 +58,7 @@ function function_2387a156() {
     }
 }
 
-// Namespace namespace_435c2400
+// Namespace zm_temple_sq_skits
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa983f838, Offset: 0x1868
 // Size: 0x444
@@ -108,7 +108,7 @@ function function_22d442e8(var_3b02d9c2, group) {
         if (var_2ce017e2 > 518400) {
             break;
         }
-        wait(0.1);
+        wait 0.1;
     }
     level notify(#"hash_22d442e8");
     speaker = getplayers()[0];
@@ -117,7 +117,7 @@ function function_22d442e8(var_3b02d9c2, group) {
     }
     if (isdefined(speaker.var_d7c2ba50) && speaker.var_d7c2ba50) {
         while (isdefined(speaker) && speaker.var_d7c2ba50) {
-            wait(0.2);
+            wait 0.2;
         }
     }
     character = speaker.characterindex;
@@ -133,14 +133,14 @@ function function_22d442e8(var_3b02d9c2, group) {
         return;
     }
     /#
-        iprintln(character + "vox_egg_skit_travel_1_0" + snd);
+        iprintln(character + "<dev string:x28>" + snd);
     #/
     speaker playsoundwithnotify(snd, "line_done");
-    speaker waittill(#"hash_aca755da");
+    speaker waittill(#"line_done");
     level.var_c502e691 = 0;
 }
 
-// Namespace namespace_435c2400
+// Namespace zm_temple_sq_skits
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9173ff5d, Offset: 0x1cb8
 // Size: 0x1ba
@@ -166,15 +166,15 @@ function function_909060e5(var_a0bbcaa5) {
         return;
     }
     /#
-        iprintln(var_3b1f0101 getentitynumber() + "vox_egg_skit_travel_1_0" + var_a0bbcaa5.vo);
+        iprintln(var_3b1f0101 getentitynumber() + "<dev string:x28>" + var_a0bbcaa5.vo);
     #/
     var_3b1f0101 playsoundwithnotify(var_a0bbcaa5.vo, "line_done");
-    var_3b1f0101 waittill(#"hash_aca755da");
+    var_3b1f0101 waittill(#"line_done");
     var_3b1f0101.var_d7c2ba50 = 0;
-    level notify(#"hash_7d032c08");
+    level notify(#"line_spoken");
 }
 
-// Namespace namespace_435c2400
+// Namespace zm_temple_sq_skits
 // Params 2, eflags: 0x1 linked
 // Checksum 0x740cc220, Offset: 0x1e80
 // Size: 0xe4
@@ -188,12 +188,12 @@ function function_acc79afb(skit_name, group) {
             level notify(#"hash_f180f1ce");
         }
         level thread function_909060e5(script[i]);
-        level waittill(#"hash_7d032c08");
+        level waittill(#"line_spoken");
     }
     level.var_c502e691 = 0;
 }
 
-// Namespace namespace_435c2400
+// Namespace zm_temple_sq_skits
 // Params 1, eflags: 0x1 linked
 // Checksum 0x430fdb2c, Offset: 0x1f70
 // Size: 0x35c
@@ -234,12 +234,12 @@ function function_b6268f3d(first_time) {
         level thread function_22d442e8(pos, var_fb29795b);
         for (i = 0; i < var_fb29795b.size; i++) {
             level thread function_909060e5(skit[var_fb29795b[i].characterindex]);
-            level waittill(#"hash_7d032c08");
+            level waittill(#"line_spoken");
         }
     } else {
         player = players[randomintrange(0, players.size)];
         level thread function_909060e5(skit[player.characterindex]);
-        level waittill(#"hash_7d032c08");
+        level waittill(#"line_spoken");
     }
     level.var_c502e691 = 0;
 }

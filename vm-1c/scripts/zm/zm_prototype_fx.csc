@@ -1,6 +1,6 @@
-#namespace namespace_5b48d6ca;
+#namespace zm_prototype_fx;
 
-// Namespace namespace_5b48d6ca
+// Namespace zm_prototype_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6922e1cb, Offset: 0x398
 // Size: 0x54
@@ -11,7 +11,7 @@ function main() {
     }
 }
 
-// Namespace namespace_5b48d6ca
+// Namespace zm_prototype_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2de1dd6, Offset: 0x3f8
 // Size: 0x17e
@@ -31,7 +31,7 @@ function function_f45953c() {
     level._effect["perk_machine_location"] = "dlc5/prototype/fx_wonder_fizz_lightning_all_interior";
 }
 
-// Namespace namespace_5b48d6ca
+// Namespace zm_prototype_fx
 // Params 0, eflags: 0x0
 // Checksum 0xd52b60d1, Offset: 0x580
 // Size: 0x56

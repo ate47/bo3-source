@@ -39,19 +39,19 @@ function archetypezombiedogblackboardinit() {
     blackboard::registerblackboardattribute(self, "_low_gravity", "normal", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("_low_gravity");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_should_run", "walk", &bb_getshouldrunstatus);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("_low_gravity");
+            self trackblackboardattribute("<dev string:x35>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_should_howl", "dont_howl", &bb_getshouldhowlstatus);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("_low_gravity");
+            self trackblackboardattribute("<dev string:x41>");
         #/
     }
     self.___archetypeonanimscriptedcallback = &archetypezombiedogonanimscriptedcallback;
@@ -77,7 +77,7 @@ function private archetypezombiedogonanimscriptedcallback(entity) {
 function bb_getshouldrunstatus() {
     /#
         if (isdefined(self.ispuppet) && self.ispuppet) {
-            return "_low_gravity";
+            return "<dev string:x4e>";
         }
     #/
     if (ai::hasaiattribute(self, "sprint") && (isdefined(self.hasseenfavoriteenemy) && self.hasseenfavoriteenemy || ai::getaiattribute(self, "sprint"))) {

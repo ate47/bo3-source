@@ -124,7 +124,7 @@ function function_eb5051f4(spawner, targetname, var_f9ebd43e, s_location) {
         level.var_7ff16e00 = undefined;
         level.var_b9c5d5f0 = undefined;
         switch (var_f9ebd43e) {
-        case 75:
+        case "fire":
             level.var_2c028bba = "c_zom_dlc4_margwa_chunks_le_fire";
             level.var_72374095 = "c_zom_dlc4_margwa_chunks_mid_fire";
             level.var_c9a18bd = "c_zom_dlc4_margwa_chunks_ri_fire";
@@ -132,7 +132,7 @@ function function_eb5051f4(spawner, targetname, var_f9ebd43e, s_location) {
             level.var_7ff16e00 = "c_zom_dlc4_margwa_gore_mid_fire";
             level.var_b9c5d5f0 = "c_zom_dlc4_margwa_gore_ri_fire";
             break;
-        case 76:
+        case "shadow":
             level.var_2c028bba = "c_zom_dlc4_margwa_chunks_le_shadow";
             level.var_72374095 = "c_zom_dlc4_margwa_chunks_mid_shadow";
             level.var_c9a18bd = "c_zom_dlc4_margwa_chunks_ri_shadow";
@@ -164,16 +164,16 @@ function function_eb5051f4(spawner, targetname, var_f9ebd43e, s_location) {
         ai.holdfire = 1;
         ai function_c0ff1e9(var_f9ebd43e);
         switch (var_f9ebd43e) {
-        case 75:
+        case "fire":
             ai clientfield::set("margwa_elemental_type", 1);
             break;
-        case 83:
+        case "electric":
             ai clientfield::set("margwa_elemental_type", 2);
             break;
-        case 84:
+        case "light":
             ai clientfield::set("margwa_elemental_type", 3);
             break;
-        case 76:
+        case "shadow":
             ai clientfield::set("margwa_elemental_type", 4);
             break;
         }
@@ -212,7 +212,7 @@ function function_75b161ab(spawner, s_location) {
         var_fda751f9 = getspawnerarray("zombie_margwa_fire_spawner", "script_noteworthy");
         if (var_fda751f9.size <= 0) {
             /#
-                iprintln("margwa_defense_hovering_fx");
+                iprintln("<dev string:x28>");
             #/
             return;
         }
@@ -233,7 +233,7 @@ function function_26efbc37(spawner, s_location) {
         var_5e8312fd = getspawnerarray("zombie_margwa_shadow_spawner", "script_noteworthy");
         if (var_5e8312fd.size <= 0) {
             /#
-                iprintln("margwa_defense_hovering_fx");
+                iprintln("<dev string:x46>");
             #/
             return;
         }
@@ -254,7 +254,7 @@ function function_12301fd1(spawner, s_location) {
         var_1977e3bb = getspawnerarray("zombie_margwa_light_spawner", "script_noteworthy");
         if (var_1977e3bb.size <= 0) {
             /#
-                iprintln("margwa_defense_hovering_fx");
+                iprintln("<dev string:x66>");
             #/
             return;
         }
@@ -275,7 +275,7 @@ function function_5b1c9e5c(spawner, s_location) {
         var_9ceb03c8 = getspawnerarray("zombie_margwa_electricity_spawner", "script_noteworthy");
         if (var_9ceb03c8.size <= 0) {
             /#
-                iprintln("margwa_defense_hovering_fx");
+                iprintln("<dev string:x85>");
             #/
             return;
         }
@@ -294,7 +294,7 @@ function function_5b1c9e5c(spawner, s_location) {
 function private function_3d56f587() {
     util::wait_network_frame();
     self clientfield::increment("margwa_fx_spawn");
-    wait(3);
+    wait 3;
     self function_26c35525();
     self.candamage = 1;
     self.var_c7ae07c2 = 1;
@@ -1104,7 +1104,7 @@ function private function_ced695a8() {
         self.var_df7b3a97 clientfield::set("margwa_defense_hovering_fx", 1);
     }
     self forceteleport(self.var_58b84a32);
-    wait(1);
+    wait 1;
     self.waiting = 0;
     self.var_847ae832 = 1;
 }
@@ -1135,7 +1135,7 @@ function private function_75f40972(entity) {
     if (isdefined(self.var_df7b3a97)) {
         self.var_df7b3a97 clientfield::set("margwa_defense_hovering_fx", 0);
     }
-    wait(0.05);
+    wait 0.05;
     if (isdefined(self.var_937645c5)) {
         self.var_937645c5 delete();
     }
@@ -1269,7 +1269,7 @@ function private function_11d72a03(entity) {
 function private function_226a6f4a(entity) {
     entity function_1da8deb6();
     /#
-        printtoprightln("margwa_defense_hovering_fx");
+        printtoprightln("<dev string:xa7>");
     #/
 }
 
@@ -1282,7 +1282,7 @@ function private function_9c7737ef(entity) {
     entity.isteleporting = 1;
     entity.var_623927af = 0;
     /#
-        printtoprightln("margwa_defense_hovering_fx");
+        printtoprightln("<dev string:xb4>");
     #/
 }
 
@@ -1306,7 +1306,7 @@ function private function_f10db74e() {
     var_6ab55afd = array::randomize(queryresult.data);
     self.var_58b84a32 = var_6ab55afd[0].origin;
     self forceteleport(self.var_58b84a32);
-    wait(0.5);
+    wait 0.5;
     self.waiting = 0;
     self.var_5df615f0 = 1;
 }
@@ -1337,20 +1337,20 @@ function private function_9a9f35ac(entity) {
     var_1be3af57 = entity.angles;
     entity waittill(#"hash_64a0057e");
     entity clientfield::set("shadow_margwa_attack_portal_fx", 1);
-    wait(0.5);
+    wait 0.5;
     target = undefined;
     if (isdefined(entity.favoriteenemy)) {
         position = var_bc39bd09 + var_5ba5953 * 96;
         target = spawn("script_model", position);
         target setmodel("tag_origin");
-        target.var_8002cc8a = entity.favoriteenemy;
+        target.move_to_target = entity.favoriteenemy;
         target.owner = entity;
         target thread function_9a821f95();
     }
     while (var_3e944f2d < 4) {
         entity function_8969ba81(var_bc39bd09, var_1be3af57, target);
         var_3e944f2d += 1;
-        wait(0.25);
+        wait 0.25;
     }
     entity clientfield::set("shadow_margwa_attack_portal_fx", 0);
 }
@@ -1389,13 +1389,13 @@ function private function_9a821f95() {
     self.owner util::waittill_any("shadow_margwa_skull_launched", "death");
     self.owner.var_ed0c0558 = array::remove_undefined(self.owner.var_ed0c0558, 0);
     margwa = self.owner;
-    while (isdefined(self) && isdefined(self.var_8002cc8a) && isalive(self.var_8002cc8a) && isdefined(self.owner) && isdefined(self.owner.var_ed0c0558) && self.owner.var_ed0c0558.size > 0) {
-        eye_position = self.var_8002cc8a gettagorigin("tag_eye");
+    while (isdefined(self) && isdefined(self.move_to_target) && isalive(self.move_to_target) && isdefined(self.owner) && isdefined(self.owner.var_ed0c0558) && self.owner.var_ed0c0558.size > 0) {
+        eye_position = self.move_to_target gettagorigin("tag_eye");
         self.owner.var_ed0c0558 = array::remove_undefined(self.owner.var_ed0c0558, 0);
         if (distancesquared(self.origin, eye_position) <= 10000) {
             if (!(isdefined(self.var_d7c0356e) && self.var_d7c0356e)) {
                 self.origin = eye_position;
-                self linkto(self.var_8002cc8a, "tag_eye");
+                self linkto(self.move_to_target, "tag_eye");
                 self.var_d7c0356e = 1;
             }
         } else {
@@ -1404,13 +1404,13 @@ function private function_9a821f95() {
             var_4037a81b = var_6c4cc94d * 50;
             var_5ae4b928 = self.origin + var_4037a81b;
             var_81e4178f = eye_position[2] - self.origin[2];
-            bullet_trace = bullettrace(var_5ae4b928 + (0, 0, var_81e4178f), var_5ae4b928 - (0, 0, var_81e4178f), 0, self.var_8002cc8a);
+            bullet_trace = bullettrace(var_5ae4b928 + (0, 0, var_81e4178f), var_5ae4b928 - (0, 0, var_81e4178f), 0, self.move_to_target);
             if (isdefined(bullet_trace["position"])) {
                 var_5ae4b928 = bullet_trace["position"] + (0, 0, var_81e4178f);
             }
             self moveto(var_5ae4b928, 0.2);
         }
-        wait(0.2);
+        wait 0.2;
     }
     margwa function_e268d040();
     if (isdefined(self)) {
@@ -1445,13 +1445,13 @@ function private function_8969ba81(var_bc39bd09, var_1be3af57, target) {
         skull = entity magicmissile(weapon, var_bc39bd09, var_4126099a);
         skull thread function_16cddcb6();
         entity.var_ed0c0558[entity.var_ed0c0558.size] = skull;
-        entity notify(#"hash_891e6dc2");
+        entity notify(#"shadow_margwa_skull_launched");
         return;
     }
     skull = entity magicmissile(weapon, var_bc39bd09, var_4126099a, target);
     skull thread function_16cddcb6();
     entity.var_ed0c0558[entity.var_ed0c0558.size] = skull;
-    entity notify(#"hash_891e6dc2");
+    entity notify(#"shadow_margwa_skull_launched");
 }
 
 // Namespace namespace_3de4ab6f
@@ -1514,7 +1514,7 @@ function private function_2f67316c() {
         self.var_df7b3a97 clientfield::set("margwa_defense_hovering_fx", 4);
     }
     self forceteleport(self.var_58b84a32);
-    wait(1);
+    wait 1;
     self.waiting = 0;
     self.var_5760b1de = 1;
 }
@@ -1545,7 +1545,7 @@ function private function_34067c01() {
     if (isdefined(self.var_df7b3a97)) {
         self.var_df7b3a97 clientfield::set("margwa_defense_hovering_fx", 0);
     }
-    wait(0.05);
+    wait 0.05;
     if (isdefined(self.var_937645c5)) {
         self.var_937645c5 delete();
     }
@@ -1701,7 +1701,7 @@ function function_3f3b0b14(margwa) {
     if (isdefined(margwa) && isalive(margwa) && isdefined(margwa.var_3abf1eec)) {
         var_c430eda8 = margwa gettagorigin("tag_eye");
         /#
-            recordline(margwa.origin, var_c430eda8, (0, 255, 0), "margwa_defense_hovering_fx", margwa);
+            recordline(margwa.origin, var_c430eda8, (0, 255, 0), "<dev string:xc5>", margwa);
         #/
         trace = bullettrace(var_c430eda8, margwa.origin, 0, margwa);
         if (trace["position"] !== margwa.origin) {
@@ -1721,39 +1721,39 @@ function function_3f3b0b14(margwa) {
     // Checksum 0x214498e1, Offset: 0x6790
     // Size: 0x248
     function function_15492d9b() {
-        wait(0.05);
+        wait 0.05;
         level waittill(#"start_zombie_round_logic");
-        wait(0.05);
-        str_cmd = "margwa_defense_hovering_fx";
+        wait 0.05;
+        str_cmd = "<dev string:xcc>";
         adddebugcommand(str_cmd);
-        str_cmd = "margwa_defense_hovering_fx";
+        str_cmd = "<dev string:x11d>";
         adddebugcommand(str_cmd);
-        str_cmd = "margwa_defense_hovering_fx";
+        str_cmd = "<dev string:x172>";
         adddebugcommand(str_cmd);
-        str_cmd = "margwa_defense_hovering_fx";
+        str_cmd = "<dev string:x1bf>";
         adddebugcommand(str_cmd);
         while (true) {
-            string = getdvarstring("margwa_defense_hovering_fx");
-            if (string === "margwa_defense_hovering_fx") {
+            string = getdvarstring("<dev string:x210>");
+            if (string === "<dev string:x21c>") {
                 level thread function_a06aa49e();
-                setdvar("margwa_defense_hovering_fx", "margwa_defense_hovering_fx");
+                setdvar("<dev string:x210>", "<dev string:x222>");
             }
-            string = getdvarstring("margwa_defense_hovering_fx");
-            if (string === "margwa_defense_hovering_fx") {
+            string = getdvarstring("<dev string:x223>");
+            if (string === "<dev string:x22e>") {
                 level thread function_50a5b7b6();
-                setdvar("margwa_defense_hovering_fx", "margwa_defense_hovering_fx");
+                setdvar("<dev string:x223>", "<dev string:x222>");
             }
-            string = getdvarstring("margwa_defense_hovering_fx");
-            if (string === "margwa_defense_hovering_fx") {
+            string = getdvarstring("<dev string:x223>");
+            if (string === "<dev string:x233>") {
                 level thread function_d11bf3e();
-                setdvar("margwa_defense_hovering_fx", "margwa_defense_hovering_fx");
+                setdvar("<dev string:x223>", "<dev string:x222>");
             }
-            string = getdvarstring("margwa_defense_hovering_fx");
-            if (string === "margwa_defense_hovering_fx") {
+            string = getdvarstring("<dev string:x23a>");
+            if (string === "<dev string:x21c>") {
                 level thread function_156bbea2();
-                setdvar("margwa_defense_hovering_fx", "margwa_defense_hovering_fx");
+                setdvar("<dev string:x23a>", "<dev string:x222>");
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1763,9 +1763,9 @@ function function_3f3b0b14(margwa) {
     // Size: 0x174
     function function_a06aa49e() {
         players = getplayers();
-        var_fda751f9 = getspawnerarray("margwa_defense_hovering_fx", "margwa_defense_hovering_fx");
+        var_fda751f9 = getspawnerarray("<dev string:x248>", "<dev string:x263>");
         if (var_fda751f9.size <= 0) {
-            iprintln("margwa_defense_hovering_fx");
+            iprintln("<dev string:x28>");
             return;
         }
         var_ec316ddb = var_fda751f9[0];
@@ -1784,9 +1784,9 @@ function function_3f3b0b14(margwa) {
     // Size: 0x174
     function function_156bbea2() {
         players = getplayers();
-        var_5e8312fd = getspawnerarray("margwa_defense_hovering_fx", "margwa_defense_hovering_fx");
+        var_5e8312fd = getspawnerarray("<dev string:x275>", "<dev string:x263>");
         if (var_5e8312fd.size <= 0) {
-            iprintln("margwa_defense_hovering_fx");
+            iprintln("<dev string:x46>");
             return;
         }
         var_ec316ddb = var_5e8312fd[0];
@@ -1805,9 +1805,9 @@ function function_3f3b0b14(margwa) {
     // Size: 0x174
     function function_f6720b6e() {
         players = getplayers();
-        var_1977e3bb = getspawnerarray("margwa_defense_hovering_fx", "margwa_defense_hovering_fx");
+        var_1977e3bb = getspawnerarray("<dev string:x292>", "<dev string:x263>");
         if (var_1977e3bb.size <= 0) {
-            iprintln("margwa_defense_hovering_fx");
+            iprintln("<dev string:x66>");
             return;
         }
         var_ec316ddb = var_1977e3bb[0];
@@ -1826,9 +1826,9 @@ function function_3f3b0b14(margwa) {
     // Size: 0x174
     function function_812b0245() {
         players = getplayers();
-        var_9ceb03c8 = getspawnerarray("margwa_defense_hovering_fx", "margwa_defense_hovering_fx");
+        var_9ceb03c8 = getspawnerarray("<dev string:x2ae>", "<dev string:x263>");
         if (var_9ceb03c8.size <= 0) {
-            iprintln("margwa_defense_hovering_fx");
+            iprintln("<dev string:x66>");
             return;
         }
         var_ec316ddb = var_9ceb03c8[0];
@@ -1846,7 +1846,7 @@ function function_3f3b0b14(margwa) {
     // Checksum 0xb1f9038a, Offset: 0x6fe0
     // Size: 0xb2
     function function_50a5b7b6() {
-        var_9ca661a2 = getaiarchetypearray("margwa_defense_hovering_fx");
+        var_9ca661a2 = getaiarchetypearray("<dev string:x2d0>");
         foreach (margwa in var_9ca661a2) {
             margwa kill();
         }
@@ -1857,7 +1857,7 @@ function function_3f3b0b14(margwa) {
     // Checksum 0xc53687f9, Offset: 0x70a0
     // Size: 0xea
     function function_d11bf3e() {
-        var_9ca661a2 = getaiarchetypearray("margwa_defense_hovering_fx");
+        var_9ca661a2 = getaiarchetypearray("<dev string:x2d0>");
         foreach (margwa in var_9ca661a2) {
             if (!isdefined(margwa.var_9e2d6dc4)) {
                 margwa.var_9e2d6dc4 = 1;

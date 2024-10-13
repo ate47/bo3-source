@@ -2,30 +2,30 @@
 #using scripts/shared/music_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b5a65bd6;
+#namespace cp_mi_zurich_newworld_sound;
 
-// Namespace namespace_b5a65bd6
+// Namespace cp_mi_zurich_newworld_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6405a8ca, Offset: 0x230
 // Size: 0x5c
 function main() {
-    namespace_398aada::init_voice();
+    voice_newworld::init_voice();
     level thread function_9c5a4eb0();
     level thread function_9c09862a();
     level thread function_3c510972();
 }
 
-// Namespace namespace_b5a65bd6
+// Namespace cp_mi_zurich_newworld_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x68f5f2fb, Offset: 0x298
 // Size: 0x2c
 function function_9c5a4eb0() {
     level waittill(#"hash_d195be99");
-    wait(2);
+    wait 2;
     music::setmusicstate("brave");
 }
 
-// Namespace namespace_b5a65bd6
+// Namespace cp_mi_zurich_newworld_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x57b98341, Offset: 0x2d0
 // Size: 0x2c
@@ -34,13 +34,13 @@ function function_9c09862a() {
     music::setmusicstate("intro");
 }
 
-// Namespace namespace_b5a65bd6
+// Namespace cp_mi_zurich_newworld_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2d910a52, Offset: 0x308
 // Size: 0x2c
 function function_3c510972() {
     level waittill(#"hash_79929eec");
-    wait(3);
+    wait 3;
     music::setmusicstate("hall_introduction");
 }
 
@@ -155,7 +155,7 @@ function function_bb8ce831() {
 // Checksum 0xe1899e4c, Offset: 0x548
 // Size: 0x24
 function function_57c68b7b() {
-    wait(3);
+    wait 3;
     music::setmusicstate("inside_man");
 }
 
@@ -207,7 +207,7 @@ function function_5a7ad30() {
     if (!isdefined(level.var_485316b5)) {
         level.var_485316b5 = spawn("script_origin", (-25886, 39179, 4219));
     }
-    wait(5);
+    wait 5;
     level.var_485316b5 playloopsound("vox_civ_train_walla");
     level waittill(#"panic");
     level.var_485316b5 stoploopsound();
@@ -227,7 +227,7 @@ function function_c132cd41() {
     level.var_de0151a7 playloopsound("amb_train_interior_ending");
     level waittill(#"hash_c053b2ca");
     level.var_de0151a7 stoploopsound(1);
-    wait(1);
+    wait 1;
     level.var_de0151a7 delete();
 }
 

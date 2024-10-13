@@ -170,7 +170,7 @@ function trigger_process(trigger) {
         }
         if (isdefined(trigger.script_vehiclegroupdelete)) {
             if (!isdefined(level.vehicle_deletegroup[trigger.script_vehiclegroupdelete])) {
-                println("toggle_lights", trigger.script_vehiclegroupdelete);
+                println("<dev string:x28>", trigger.script_vehiclegroupdelete);
                 level.vehicle_deletegroup[trigger.script_vehiclegroupdelete] = [];
             }
             array::delete_all(level.vehicle_deletegroup[trigger.script_vehiclegroupdelete]);
@@ -184,7 +184,7 @@ function trigger_process(trigger) {
         }
         if (isdefined(trigger) && isdefined(trigger.script_vehiclestartmove)) {
             if (!isdefined(level.vehicle_startmovegroup[trigger.script_vehiclestartmove])) {
-                println("toggle_lights", trigger.script_vehiclestartmove);
+                println("<dev string:x78>", trigger.script_vehiclestartmove);
                 return;
             }
             foreach (vehicle in arraycopy(level.vehicle_startmovegroup[trigger.script_vehiclestartmove])) {
@@ -421,7 +421,7 @@ function islastnode(node) {
 // Size: 0xb84
 function paths(node) {
     self endon(#"death");
-    assert(isdefined(node) || isdefined(self.attachedpath), "toggle_lights");
+    assert(isdefined(node) || isdefined(self.attachedpath), "<dev string:x95>");
     self notify(#"newpath");
     if (isdefined(node)) {
         self.attachedpath = node;
@@ -658,9 +658,9 @@ function get_on_path(path_start, str_key) {
     }
     if (!isdefined(path_start)) {
         if (isdefined(self.targetname)) {
-            assertmsg("toggle_lights" + self.targetname);
+            assertmsg("<dev string:xba>" + self.targetname);
         } else {
-            assertmsg("toggle_lights" + self.targetname);
+            assertmsg("<dev string:xba>" + self.targetname);
         }
     }
     if (isdefined(self.hasstarted)) {
@@ -725,7 +725,7 @@ function go_path() {
         arrayremovevalue(level.vehicle_startmovegroup[self.script_vehiclestartmove], self);
     }
     if (isdefined(self.hasstarted)) {
-        println("toggle_lights");
+        println("<dev string:xdf>");
         return;
     } else {
         self.hasstarted = 1;
@@ -737,7 +737,7 @@ function go_path() {
     } else {
         self startpath();
     }
-    wait(0.05);
+    wait 0.05;
     self connect_paths();
     self waittill(#"reached_end_node");
     if (self.disconnectpathonstop === 1 && !issentient(self)) {
@@ -754,7 +754,7 @@ function go_path() {
 // Size: 0x30
 function path_gate_open(node) {
     node.gateopen = 1;
-    node notify(#"hash_91ff5153");
+    node notify(#"gate opened");
 }
 
 // Namespace vehicle
@@ -765,7 +765,7 @@ function path_gate_wait_till_open(pathspot) {
     self endon(#"death");
     self.waitingforgate = 1;
     self set_speed(0, 15, "path gate closed");
-    pathspot waittill(#"hash_91ff5153");
+    pathspot waittill(#"gate opened");
     self.waitingforgate = 0;
     if (self.health > 0) {
         script_resume_speed("gate opened", level.vehicle_resumespeed);
@@ -1060,7 +1060,7 @@ function _disconnect_paths_when_stopped() {
     }
     self endon(#"death");
     self endon(#"hash_a2ded463");
-    wait(1);
+    wait 1;
     threshold = 3;
     while (isdefined(self)) {
         if (lengthsquared(self.velocity) < threshold * threshold) {
@@ -1069,12 +1069,12 @@ function _disconnect_paths_when_stopped() {
                 self notify(#"hash_fbf26c3c");
             }
             while (lengthsquared(self.velocity) < threshold * threshold) {
-                wait(0.05);
+                wait 0.05;
             }
         }
         self connect_paths();
         while (lengthsquared(self.velocity) >= threshold * threshold) {
-            wait(0.05);
+            wait 0.05;
         }
     }
 }
@@ -1105,11 +1105,11 @@ function set_speed(speed, rate, msg) {
         self endon(#"hash_eeaec2a0");
         self endon(#"death");
         while (true) {
-            while (getdvarstring("toggle_lights") != "toggle_lights") {
-                print3d(self.origin + (0, 0, 192), "toggle_lights" + msg, (1, 1, 1), 1, 3);
-                wait(0.05);
+            while (getdvarstring("<dev string:x116>") != "<dev string:x12c>") {
+                print3d(self.origin + (0, 0, 192), "<dev string:x130>" + msg, (1, 1, 1), 1, 3);
+                wait 0.05;
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 
@@ -1144,7 +1144,7 @@ function script_resume_speed(msg, rate) {
     }
     self notify(#"hash_eeaec2a0");
     /#
-        self thread debug_resume(msg + "toggle_lights" + type);
+        self thread debug_resume(msg + "<dev string:x143>" + type);
     #/
 }
 
@@ -1155,14 +1155,14 @@ function script_resume_speed(msg, rate) {
     // Checksum 0xe01afe90, Offset: 0x48a8
     // Size: 0x114
     function debug_resume(msg) {
-        if (getdvarstring("toggle_lights") == "toggle_lights") {
+        if (getdvarstring("<dev string:x146>") == "<dev string:x12c>") {
             return;
         }
         self endon(#"death");
         number = self.resumemsgs.size;
         self.resumemsgs[number] = msg;
         self thread print_resume_speed(gettime() + 3 * 1000);
-        wait(3);
+        wait 3;
         newarray = [];
         for (i = 0; i < self.resumemsgs.size; i++) {
             if (i != number) {
@@ -1191,10 +1191,10 @@ function print_resume_speed(timer) {
         for (i = start; i < self.resumemsgs.size; i++) {
             position = i * 32;
             /#
-                print3d(self.origin + (0, 0, position), "toggle_lights" + self.resumemsgs[i], (0, 1, 0), 1, 3);
+                print3d(self.origin + (0, 0, position), "<dev string:x15a>" + self.resumemsgs[i], (0, 1, 0), 1, 3);
             #/
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1233,7 +1233,7 @@ function get_normal_anim_time(animation) {
 // Size: 0x6c
 function setup_dynamic_detour(pathnode, get_func) {
     prevnode = [[ get_func ]](pathnode.targetname);
-    assert(isdefined(prevnode), "toggle_lights");
+    assert(isdefined(prevnode), "<dev string:x16b>");
     prevnode.detoured = 0;
 }
 
@@ -1286,7 +1286,7 @@ function node_trigger_process() {
         level.vehicle_detourpaths = array_2d_add(level.vehicle_detourpaths, self.script_vehicledetour, self);
         /#
             if (level.vehicle_detourpaths[self.script_vehicledetour].size > 2) {
-                println("toggle_lights", self.script_vehicledetour);
+                println("<dev string:x189>", self.script_vehicledetour);
             }
         #/
     }
@@ -1462,7 +1462,7 @@ function play_looped_fx_on_tag(effect, durration, tag) {
     thread _play_looped_fx_on_tag_origin_update(tag, effectorigin);
     while (true) {
         playfx(effect, effectorigin.origin, effectorigin.upvec);
-        wait(durration);
+        wait durration;
     }
 }
 
@@ -1481,7 +1481,7 @@ function _play_looped_fx_on_tag_origin_update(tag, effectorigin) {
         effectorigin.origin = emodel gettagorigin(tag);
         effectorigin.forwardvec = anglestoforward(effectorigin.angles);
         effectorigin.upvec = anglestoup(effectorigin.angles);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1491,11 +1491,11 @@ function _play_looped_fx_on_tag_origin_update(tag, effectorigin) {
 // Size: 0x9c
 function setup_dvars() {
     /#
-        if (getdvarstring("toggle_lights") == "toggle_lights") {
-            setdvar("toggle_lights", "toggle_lights");
+        if (getdvarstring("<dev string:x146>") == "<dev string:x1c6>") {
+            setdvar("<dev string:x146>", "<dev string:x12c>");
         }
-        if (getdvarstring("toggle_lights") == "toggle_lights") {
-            setdvar("toggle_lights", "toggle_lights");
+        if (getdvarstring("<dev string:x116>") == "<dev string:x1c6>") {
+            setdvar("<dev string:x116>", "<dev string:x12c>");
         }
     #/
 }
@@ -1659,12 +1659,12 @@ function _vehicle_bad_place() {
     while (true) {
         if (!self.script_badplace) {
             while (!self.script_badplace) {
-                wait(0.5);
+                wait 0.5;
             }
         }
         speed = self getspeedmph();
         if (speed <= 0) {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         if (speed < 5) {
@@ -1683,7 +1683,7 @@ function _vehicle_bad_place() {
         } else {
             bp_direction = anglestoforward(self.angles);
         }
-        wait(0.5 + 0.05);
+        wait 0.5 + 0.05;
     }
 }
 
@@ -1697,10 +1697,10 @@ function get_vehiclenode_any_dynamic(target) {
         path_start = getent(target, "targetname");
     } else if (isdefined(self.vehicleclass) && self.vehicleclass == "plane") {
         /#
-            println("toggle_lights" + path_start.targetname);
-            println("toggle_lights" + self.vehicletype);
+            println("<dev string:x1c7>" + path_start.targetname);
+            println("<dev string:x1e4>" + self.vehicletype);
         #/
-        assertmsg("toggle_lights");
+        assertmsg("<dev string:x1f2>");
     }
     if (!isdefined(path_start)) {
         path_start = struct::get(target, "targetname");
@@ -1779,7 +1779,7 @@ function wait_till_stable() {
         if (gettime() > timer) {
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1890,7 +1890,7 @@ function simple_spawn(name, b_supress_assert) {
     if (!isdefined(b_supress_assert)) {
         b_supress_assert = 0;
     }
-    assert(b_supress_assert || isdefined(level.var_869abcf6[name]), "toggle_lights" + name);
+    assert(b_supress_assert || isdefined(level.var_869abcf6[name]), "<dev string:x225>" + name);
     vehicles = [];
     if (isdefined(level.var_869abcf6[name])) {
         array = level.var_869abcf6[name];
@@ -1914,7 +1914,7 @@ function simple_spawn_single(name, b_supress_assert) {
         b_supress_assert = 0;
     }
     vehicle_array = simple_spawn(name, b_supress_assert);
-    assert(b_supress_assert || vehicle_array.size == 1, "toggle_lights" + name + "toggle_lights" + vehicle_array.size + "toggle_lights");
+    assert(b_supress_assert || vehicle_array.size == 1, "<dev string:x249>" + name + "<dev string:x273>" + vehicle_array.size + "<dev string:x285>");
     if (vehicle_array.size > 0) {
         return vehicle_array[0];
     }
@@ -1926,7 +1926,7 @@ function simple_spawn_single(name, b_supress_assert) {
 // Size: 0x9c
 function simple_spawn_single_and_drive(name) {
     vehiclearray = simple_spawn(name);
-    assert(vehiclearray.size == 1, "toggle_lights" + name + "toggle_lights" + vehiclearray.size + "toggle_lights");
+    assert(vehiclearray.size == 1, "<dev string:x249>" + name + "<dev string:x273>" + vehiclearray.size + "<dev string:x285>");
     vehiclearray[0] thread go_path();
     return vehiclearray[0];
 }
@@ -1976,7 +1976,7 @@ function function_b4f0c34(model) {
         if (repeatrate <= 0) {
             repeatrate = 1;
         }
-        wait(repeatrate);
+        wait repeatrate;
         if (!isdefined(self)) {
             return;
         }
@@ -2006,8 +2006,8 @@ function function_b4f0c34(model) {
         if (!isdefined(trace["surfacetype"])) {
             trace["surfacetype"] = "dirt";
         }
-        assert(isdefined(level.var_a3082174[self.vehicletype]), self.vehicletype + "toggle_lights");
-        assert(isdefined(level.var_a3082174[self.vehicletype][trace["toggle_lights"]]), "toggle_lights" + trace["toggle_lights"]);
+        assert(isdefined(level.var_a3082174[self.vehicletype]), self.vehicletype + "<dev string:x29d>");
+        assert(isdefined(level.var_a3082174[self.vehicletype][trace["<dev string:x2c9>"]]), "<dev string:x2d5>" + trace["<dev string:x2c9>"]);
         if (level.var_a3082174[self.vehicletype][trace["surfacetype"]] != -1) {
             playfx(level.var_a3082174[self.vehicletype][trace["surfacetype"]], trace["position"]);
         }
@@ -2329,7 +2329,7 @@ function attack_group_think() {
     self endon(#"hash_11675b4c");
     self endon(#"hash_9696a8ad");
     if (isdefined(self.script_vehicleattackgroupwait)) {
-        wait(self.script_vehicleattackgroupwait);
+        wait self.script_vehicleattackgroupwait;
     }
     for (;;) {
         group = getentarray("script_vehicle", "classname");
@@ -2350,7 +2350,7 @@ function attack_group_think() {
             }
         }
         if (valid_targets.size == 0) {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         for (;;) {
@@ -2369,9 +2369,9 @@ function attack_group_think() {
                 if (self.fire_delay_max < self.fire_delay_min) {
                     self.fire_delay_max = self.fire_delay_min;
                 }
-                wait(randomintrange(self.fire_delay_min, self.fire_delay_max));
+                wait randomintrange(self.fire_delay_min, self.fire_delay_max);
             } else {
-                wait(randomintrange(4, 6));
+                wait randomintrange(4, 6);
             }
             self fireweapon();
         }
@@ -2406,14 +2406,14 @@ function get_nearest_target(valid_targets) {
     // Size: 0xc0
     function debug_vehicle() {
         self endon(#"death");
-        if (getdvarstring("toggle_lights") == "toggle_lights") {
-            setdvar("toggle_lights", "toggle_lights");
+        if (getdvarstring("<dev string:x2ec>") == "<dev string:x1c6>") {
+            setdvar("<dev string:x2ec>", "<dev string:x301>");
         }
         while (true) {
-            if (getdvarint("toggle_lights") > 0) {
-                print3d(self.origin, "toggle_lights" + self.health, (1, 1, 1), 1, 3);
+            if (getdvarint("<dev string:x2ec>") > 0) {
+                print3d(self.origin, "<dev string:x303>" + self.health, (1, 1, 1), 1, 3);
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -2426,12 +2426,12 @@ function get_nearest_target(valid_targets) {
         self endon(#"newpath");
         self endon(#"reached_dynamic_path_end");
         for (nextnode = self.currentnode; true; nextnode = self.nextnode) {
-            if (getdvarint("toggle_lights") > 0) {
-                recordline(self.origin, self.currentnode.origin, (1, 0, 0), "toggle_lights", self);
-                recordline(self.origin, nextnode.origin, (0, 1, 0), "toggle_lights", self);
-                recordline(self.currentnode.origin, nextnode.origin, (1, 1, 1), "toggle_lights", self);
+            if (getdvarint("<dev string:x30c>") > 0) {
+                recordline(self.origin, self.currentnode.origin, (1, 0, 0), "<dev string:x320>", self);
+                recordline(self.origin, nextnode.origin, (0, 1, 0), "<dev string:x320>", self);
+                recordline(self.currentnode.origin, nextnode.origin, (1, 1, 1), "<dev string:x320>", self);
             }
-            wait(0.05);
+            wait 0.05;
             if (isdefined(self.nextnode) && self.nextnode != nextnode) {
             }
         }
@@ -2462,7 +2462,7 @@ function add_main_callback(vehicletype, main) {
     }
     /#
         if (isdefined(level.vehicle_main_callback[vehicletype])) {
-            println("toggle_lights" + vehicletype + "toggle_lights");
+            println("<dev string:x327>" + vehicletype + "<dev string:x354>");
         }
     #/
     level.vehicle_main_callback[vehicletype] = main;
@@ -2675,7 +2675,7 @@ function init_target_group() {
 // Checksum 0x6b6dc23c, Offset: 0x9130
 // Size: 0xa2
 function add_to_target_group(target_ent) {
-    assert(isdefined(self.target_group), "toggle_lights");
+    assert(isdefined(self.target_group), "<dev string:x37e>");
     if (!isdefined(self.target_group)) {
         self.target_group = [];
     } else if (!isarray(self.target_group)) {
@@ -2689,7 +2689,7 @@ function add_to_target_group(target_ent) {
 // Checksum 0xd3b10db0, Offset: 0x91e0
 // Size: 0x54
 function remove_from_target_group(target_ent) {
-    assert(isdefined(self.target_group), "toggle_lights");
+    assert(isdefined(self.target_group), "<dev string:x37e>");
     arrayremovevalue(self.target_group, target_ent);
 }
 
@@ -2703,14 +2703,14 @@ function monitor_missiles_locked_on_to_me(player, wait_time) {
     }
     monitored_entity = self;
     monitored_entity endon(#"death");
-    assert(isdefined(monitored_entity.target_group), "toggle_lights");
+    assert(isdefined(monitored_entity.target_group), "<dev string:x39e>");
     player endon(#"stop_monitor_missile_locked_on_to_me");
     player endon(#"disconnect");
     player endon(#"joined_team");
     while (true) {
         closest_attacker = player get_closest_attacker_with_missile_locked_on_to_me(monitored_entity);
         player setvehiclelockedonbyent(closest_attacker);
-        wait(wait_time);
+        wait wait_time;
     }
 }
 
@@ -2727,7 +2727,7 @@ function stop_monitor_missiles_locked_on_to_me() {
 // Checksum 0x988c90ae, Offset: 0x9358
 // Size: 0x2aa
 function get_closest_attacker_with_missile_locked_on_to_me(monitored_entity) {
-    assert(isdefined(monitored_entity.target_group), "toggle_lights");
+    assert(isdefined(monitored_entity.target_group), "<dev string:x39e>");
     player = self;
     closest_attacker = undefined;
     closest_attacker_dot = -999;
@@ -2805,7 +2805,7 @@ function monitor_damage_as_occupant(player) {
     if (!isdefined(self.maxhealth)) {
         self.maxhealth = self.healthdefault;
     }
-    wait(0.1);
+    wait 0.1;
     player update_damage_as_occupant(self.maxhealth - self.health, self.maxhealth);
     while (true) {
         self waittill(#"damage");
@@ -2848,33 +2848,33 @@ function player_is_driver() {
     // Checksum 0x2b7d6323, Offset: 0x9940
     // Size: 0x7f6
     function vehicle_spawner_tool() {
-        allvehicles = getentarray("toggle_lights", "toggle_lights");
+        allvehicles = getentarray("<dev string:x3bf>", "<dev string:x3ce>");
         vehicletypes = [];
         foreach (veh in allvehicles) {
             vehicletypes[veh.vehicletype] = veh.model;
         }
-        if (isassetloaded("toggle_lights", "toggle_lights")) {
-            veh = spawnvehicle("toggle_lights", (0, 0, 10000), (0, 0, 0), "toggle_lights");
+        if (isassetloaded("<dev string:x3d8>", "<dev string:x3e0>")) {
+            veh = spawnvehicle("<dev string:x3e0>", (0, 0, 10000), (0, 0, 0), "<dev string:x3f0>");
             vehicletypes[veh.vehicletype] = veh.model;
             veh delete();
         }
-        if (isassetloaded("toggle_lights", "toggle_lights")) {
-            veh = spawnvehicle("toggle_lights", (0, 0, 10000), (0, 0, 0), "toggle_lights");
+        if (isassetloaded("<dev string:x3d8>", "<dev string:x404>")) {
+            veh = spawnvehicle("<dev string:x404>", (0, 0, 10000), (0, 0, 0), "<dev string:x3f0>");
             vehicletypes[veh.vehicletype] = veh.model;
             veh delete();
         }
-        if (isassetloaded("toggle_lights", "toggle_lights")) {
-            veh = spawnvehicle("toggle_lights", (0, 0, 10000), (0, 0, 0), "toggle_lights");
+        if (isassetloaded("<dev string:x3d8>", "<dev string:x408>")) {
+            veh = spawnvehicle("<dev string:x408>", (0, 0, 10000), (0, 0, 0), "<dev string:x3f0>");
             vehicletypes[veh.vehicletype] = veh.model;
             veh delete();
         }
-        if (isassetloaded("toggle_lights", "toggle_lights")) {
-            veh = spawnvehicle("toggle_lights", (0, 0, 10000), (0, 0, 0), "toggle_lights");
+        if (isassetloaded("<dev string:x3d8>", "<dev string:x415>")) {
+            veh = spawnvehicle("<dev string:x415>", (0, 0, 10000), (0, 0, 0), "<dev string:x3f0>");
             vehicletypes[veh.vehicletype] = veh.model;
             veh delete();
         }
-        if (isassetloaded("toggle_lights", "toggle_lights")) {
-            veh = spawnvehicle("toggle_lights", (0, 0, 10000), (0, 0, 0), "toggle_lights");
+        if (isassetloaded("<dev string:x3d8>", "<dev string:x422>")) {
+            veh = spawnvehicle("<dev string:x422>", (0, 0, 10000), (0, 0, 0), "<dev string:x3f0>");
             vehicletypes[veh.vehicletype] = veh.model;
             veh delete();
         }
@@ -2884,56 +2884,56 @@ function player_is_driver() {
         }
         type_index = 0;
         while (true) {
-            if (getdvarint("toggle_lights") > 0) {
+            if (getdvarint("<dev string:x432>") > 0) {
                 player = getplayers()[0];
                 dynamic_spawn_hud = newclienthudelem(player);
-                dynamic_spawn_hud.alignx = "toggle_lights";
+                dynamic_spawn_hud.alignx = "<dev string:x446>";
                 dynamic_spawn_hud.x = 20;
                 dynamic_spawn_hud.y = 395;
                 dynamic_spawn_hud.fontscale = 2;
-                dynamic_spawn_dummy_model = sys::spawn("toggle_lights", (0, 0, 0));
-                while (getdvarint("toggle_lights") > 0) {
+                dynamic_spawn_dummy_model = sys::spawn("<dev string:x44b>", (0, 0, 0));
+                while (getdvarint("<dev string:x432>") > 0) {
                     origin = player.origin + anglestoforward(player getplayerangles()) * 270;
                     origin += (0, 0, 40);
                     if (player usebuttonpressed()) {
                         dynamic_spawn_dummy_model hide();
-                        vehicle = spawnvehicle(types[type_index], origin, player.angles, "toggle_lights");
+                        vehicle = spawnvehicle(types[type_index], origin, player.angles, "<dev string:x3f0>");
                         vehicle makevehicleusable();
-                        if (getdvarint("toggle_lights") == 1) {
-                            setdvar("toggle_lights", "toggle_lights");
+                        if (getdvarint("<dev string:x432>") == 1) {
+                            setdvar("<dev string:x432>", "<dev string:x301>");
                             continue;
                         }
-                        wait(0.3);
+                        wait 0.3;
                     }
-                    if (player buttonpressed("toggle_lights")) {
+                    if (player buttonpressed("<dev string:x458>")) {
                         dynamic_spawn_dummy_model hide();
                         type_index++;
                         if (type_index >= types.size) {
                             type_index = 0;
                         }
-                        wait(0.3);
+                        wait 0.3;
                     }
-                    if (player buttonpressed("toggle_lights")) {
+                    if (player buttonpressed("<dev string:x463>")) {
                         dynamic_spawn_dummy_model hide();
                         type_index--;
                         if (type_index < 0) {
                             type_index = types.size - 1;
                         }
-                        wait(0.3);
+                        wait 0.3;
                     }
                     type = types[type_index];
-                    dynamic_spawn_hud settext("toggle_lights" + type);
+                    dynamic_spawn_hud settext("<dev string:x46d>" + type);
                     dynamic_spawn_dummy_model setmodel(vehicletypes[type]);
                     dynamic_spawn_dummy_model show();
                     dynamic_spawn_dummy_model notsolid();
                     dynamic_spawn_dummy_model.origin = origin;
                     dynamic_spawn_dummy_model.angles = player.angles;
-                    wait(0.05);
+                    wait 0.05;
                 }
                 dynamic_spawn_hud destroy();
                 dynamic_spawn_dummy_model delete();
             }
-            wait(2);
+            wait 2;
         }
     }
 
@@ -2942,11 +2942,11 @@ function player_is_driver() {
     // Checksum 0x8c624a52, Offset: 0xa140
     // Size: 0x80
     function spline_debug() {
-        level flag::init("toggle_lights");
+        level flag::init("<dev string:x487>");
         level thread _spline_debug();
         while (true) {
-            level flag::set_val("toggle_lights", getdvarint("toggle_lights"));
-            wait(0.05);
+            level flag::set_val("<dev string:x487>", getdvarint("<dev string:x49d>"));
+            wait 0.05;
         }
     }
 
@@ -2956,11 +2956,11 @@ function player_is_driver() {
     // Size: 0xc8
     function _spline_debug() {
         while (true) {
-            level flag::wait_till("toggle_lights");
+            level flag::wait_till("<dev string:x487>");
             foreach (nd in getallvehiclenodes()) {
                 nd show_node_debug_info();
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -2971,13 +2971,13 @@ function player_is_driver() {
     function show_node_debug_info() {
         self.n_debug_display_count = 0;
         if (is_unload_node()) {
-            print_debug_info("toggle_lights" + self.script_unload + "toggle_lights");
+            print_debug_info("<dev string:x4b2>" + self.script_unload + "<dev string:x4bc>");
         }
         if (isdefined(self.script_notify)) {
-            print_debug_info("toggle_lights" + self.script_notify + "toggle_lights");
+            print_debug_info("<dev string:x4be>" + self.script_notify + "<dev string:x4bc>");
         }
         if (isdefined(self.script_delete) && self.script_delete) {
-            print_debug_info("toggle_lights");
+            print_debug_info("<dev string:x4c8>");
         }
     }
 

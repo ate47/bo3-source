@@ -42,9 +42,9 @@ function private handlenotetrack(entity, notetrack) {
 // Checksum 0x2ffe03ed, Offset: 0x218
 // Size: 0xd6
 function registernotetrackhandlerfunction(notetrackname, notetrackfuncptr) {
-    assert(isstring(notetrackname), "<unknown string>");
-    assert(isfunctionptr(notetrackfuncptr), "<unknown string>");
-    assert(!isdefined(level._notetrack_handler[notetrackname]), "<unknown string>" + notetrackname + "<unknown string>");
+    assert(isstring(notetrackname), "<dev string:x28>");
+    assert(isfunctionptr(notetrackfuncptr), "<dev string:x61>");
+    assert(!isdefined(level._notetrack_handler[notetrackname]), "<dev string:xa9>" + notetrackname + "<dev string:xcc>");
     level._notetrack_handler[notetrackname] = notetrackfuncptr;
 }
 

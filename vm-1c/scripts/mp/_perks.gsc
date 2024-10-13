@@ -60,7 +60,7 @@ function monitorflight() {
             self clientfield::set("flying", flying);
             self.flying = flying;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -103,10 +103,10 @@ function monitorgpsjammer() {
     gpsjammerprotection = 0;
     while (true) {
         /#
-            graceperiods = getdvarint("perk_gpsjammer_min_distance", graceperiods);
-            minspeed = getdvarint("perk_gpsjammer_min_distance", minspeed);
-            mindistance = getdvarint("perk_gpsjammer_min_distance", mindistance);
-            timeperiod = getdvarint("perk_gpsjammer_min_distance", timeperiod);
+            graceperiods = getdvarint("<dev string:x28>", graceperiods);
+            minspeed = getdvarint("<dev string:x44>", minspeed);
+            mindistance = getdvarint("<dev string:x5d>", mindistance);
+            timeperiod = getdvarint("<dev string:x79>", timeperiod);
             timeperiodsec = timeperiod / 1000;
             minspeedsq = minspeed * minspeed;
             mindistancesq = mindistance * mindistance;
@@ -132,7 +132,7 @@ function monitorgpsjammer() {
         }
         if (gpsjammerprotection == 1 && self hasperk("specialty_gpsjammer")) {
             /#
-                if (getdvarint("perk_gpsjammer_min_distance") != 0) {
+                if (getdvarint("<dev string:x94>") != 0) {
                     sphere(self.origin + (0, 0, 70), 12, (0, 0, 1), 1, 1, 16, 3);
                 }
             #/
@@ -154,7 +154,7 @@ function monitorgpsjammer() {
             level notify(#"radar_status_change");
         }
         timesincedistancecheck += timeperiodsec;
-        wait(timeperiodsec);
+        wait timeperiodsec;
     }
 }
 
@@ -197,10 +197,10 @@ function monitorsengrenjammer() {
     sgjammerprotection = 0;
     while (true) {
         /#
-            graceperiods = getdvarint("perk_gpsjammer_min_distance", graceperiods);
-            minspeed = getdvarint("perk_gpsjammer_min_distance", minspeed);
-            mindistance = getdvarint("perk_gpsjammer_min_distance", mindistance);
-            timeperiod = getdvarint("perk_gpsjammer_min_distance", timeperiod);
+            graceperiods = getdvarint("<dev string:xad>", graceperiods);
+            minspeed = getdvarint("<dev string:xc8>", minspeed);
+            mindistance = getdvarint("<dev string:xe0>", mindistance);
+            timeperiod = getdvarint("<dev string:xfb>", timeperiod);
             timeperiodsec = timeperiod / 1000;
             minspeedsq = minspeed * minspeed;
             mindistancesq = mindistance * mindistance;
@@ -226,7 +226,7 @@ function monitorsengrenjammer() {
         }
         if (sgjammerprotection == 1 && self hasperk("specialty_sengrenjammer")) {
             /#
-                if (getdvarint("perk_gpsjammer_min_distance") != 0) {
+                if (getdvarint("<dev string:x115>") != 0) {
                     sphere(self.origin + (0, 0, 65), 12, (0, 1, 0), 1, 1, 16, 3);
                 }
             #/
@@ -248,7 +248,7 @@ function monitorsengrenjammer() {
             level notify(#"radar_status_change");
         }
         timesincedistancecheck += timeperiodsec;
-        wait(timeperiodsec);
+        wait timeperiodsec;
     }
 }
 

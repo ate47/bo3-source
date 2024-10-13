@@ -78,7 +78,7 @@ function lightning_bolt_fx_toggle(localclientnum, oldval, newval, bnewent, binit
             stopfx(localclientnum, self._location_indicator[localclientnum]);
             self._location_indicator[localclientnum] = undefined;
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -148,7 +148,7 @@ function rock_emissive_fade(localclientnum, n_max_val, n_min_val) {
             self mapshaderconstant(localclientnum, 0, "scriptVector0", 0, n_shader_value, 0);
             self mapshaderconstant(localclientnum, 0, "scriptVector0", 0, 0, n_shader_value);
         }
-        wait(0.01);
+        wait 0.01;
     }
 }
 
@@ -261,7 +261,7 @@ function start_vortex_fx(localclientnum) {
     }
     self thread fx_activation_electric_loop(localclientnum);
     self thread fx_artifact_pulse_thread(localclientnum);
-    wait(0.5);
+    wait 0.5;
     self thread fx_bottle_cycling(localclientnum);
 }
 
@@ -272,7 +272,7 @@ function start_vortex_fx(localclientnum) {
 function stop_vortex_fx(localclientnum) {
     self endon(#"entityshutdown");
     self notify(#"bottle_cycling_finished");
-    wait(0.5);
+    wait 0.5;
     if (!isdefined(self)) {
         return;
     }
@@ -301,7 +301,7 @@ function fx_artifact_pulse_thread(localclientnum) {
         self.artifact_glow_setting = shader_amount;
         self.machinery_glow_setting = 1;
         self setshaderconstant(localclientnum, 1, self.artifact_glow_setting, 0, self.machinery_glow_setting, 0);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -315,7 +315,7 @@ function fx_activation_electric_loop(localclientnum) {
     while (true) {
         if (isdefined(self.glow_location)) {
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -328,7 +328,7 @@ function fx_bottle_cycling(localclientnum) {
     while (true) {
         if (isdefined(self.glow_location)) {
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 

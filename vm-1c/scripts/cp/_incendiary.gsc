@@ -44,12 +44,12 @@ function init_shared() {
     // Checksum 0x92c4fe82, Offset: 0x608
     // Size: 0xfc
     function function_f981c352() {
-        level.var_bb2e86bc = getdvarint("script_model", level.var_bb2e86bc);
-        level.var_deee66a6 = getdvarint("script_model", level.var_deee66a6);
-        level.var_8b6a49fb = getdvarint("script_model", level.var_8b6a49fb);
-        level.var_e20975d2 = getdvarint("script_model", level.var_e20975d2);
-        level.var_4857ef20 = getdvarfloat("script_model", level.var_4857ef20);
-        level.var_f0f3c565 = getdvarfloat("script_model", level.var_f0f3c565);
+        level.var_bb2e86bc = getdvarint("<dev string:x28>", level.var_bb2e86bc);
+        level.var_deee66a6 = getdvarint("<dev string:x41>", level.var_deee66a6);
+        level.var_8b6a49fb = getdvarint("<dev string:x62>", level.var_8b6a49fb);
+        level.var_e20975d2 = getdvarint("<dev string:x7d>", level.var_e20975d2);
+        level.var_4857ef20 = getdvarfloat("<dev string:x98>", level.var_4857ef20);
+        level.var_f0f3c565 = getdvarfloat("<dev string:xb9>", level.var_f0f3c565);
     }
 
 #/
@@ -204,7 +204,7 @@ function spawnalllocs(owner, startpos, normal, multiplier, rotation, killcament,
     // Checksum 0xea38398a, Offset: 0x1290
     // Size: 0xbc
     function incendiary_debug_line(from, to, color, depthtest, time) {
-        debug_rcbomb = getdvarint("script_model", 0);
+        debug_rcbomb = getdvarint("<dev string:xd2>", 0);
         if (debug_rcbomb == 1) {
             if (!isdefined(time)) {
                 time = 100;
@@ -227,8 +227,8 @@ function damageeffectarea(owner, position, radius, height, killcament) {
     trigger_radius_height = height * 2;
     fireeffectarea = spawn("trigger_radius", trigger_radius_position, 0, radius, trigger_radius_height);
     /#
-        if (getdvarint("script_model")) {
-            level thread util::drawcylinder(trigger_radius_position, radius, trigger_radius_height, undefined, "script_model");
+        if (getdvarint("<dev string:xe7>")) {
+            level thread util::drawcylinder(trigger_radius_position, radius, trigger_radius_height, undefined, "<dev string:xf9>");
         }
     #/
     if (isdefined(level.var_bf238099)) {
@@ -243,14 +243,14 @@ function damageeffectarea(owner, position, radius, height, killcament) {
         foreach (target in potential_targets) {
             self trytoapplyfiredamage(target, owner, position, fireeffectarea, loopwaittime, killcament);
         }
-        wait(loopwaittime);
+        wait loopwaittime;
     }
     if (isdefined(killcament)) {
         killcament entityheadicons::destroyentityheadicons();
     }
     fireeffectarea delete();
     /#
-        if (getdvarint("script_model")) {
+        if (getdvarint("<dev string:xe7>")) {
             level notify(#"hash_7e5be7f8");
         }
     #/
@@ -332,7 +332,7 @@ function damageinfirearea(fireeffectarea, killcament, trace, position, resetfire
     }
     if (candofiredamage(killcament, self, resetfiretime)) {
         /#
-            level.var_8296d89b = getdvarint("script_model", 0);
+            level.var_8296d89b = getdvarint("<dev string:xd2>", 0);
             if (level.var_8296d89b) {
                 if (!isdefined(level.incendiarydamagetime)) {
                     level.incendiarydamagetime = gettime();
@@ -363,7 +363,7 @@ function sndfiredamage() {
         self thread sndfiredamage_deleteent(self.sndfireent);
     }
     self.sndfireent playloopsound("chr_burn_start_loop", 0.5);
-    wait(3);
+    wait 3;
     self.sndfireent delete();
     self.sndfireent = undefined;
 }
@@ -387,11 +387,11 @@ function sndfiredamage_deleteent(ent) {
 function hitpos(start, end, color) {
     trace = bullettrace(start, end, 0, undefined);
     /#
-        level.var_8296d89b = getdvarint("script_model", 0);
+        level.var_8296d89b = getdvarint("<dev string:xd2>", 0);
         if (level.var_8296d89b) {
-            debugstar(trace["script_model"], 2000, color);
+            debugstar(trace["<dev string:x117>"], 2000, color);
         }
-        thread incendiary_debug_line(start, trace["script_model"], color, 1, 80);
+        thread incendiary_debug_line(start, trace["<dev string:x117>"], color, 1, 80);
     #/
     return trace;
 }
@@ -416,7 +416,7 @@ function candofiredamage(killcament, victim, resetfiretime) {
 // Size: 0x40
 function resetfiredamage(entnum, time) {
     if (time > 0.05) {
-        wait(time - 0.05);
+        wait time - 0.05;
     }
     level.var_c19e19ab[entnum] = undefined;
 }

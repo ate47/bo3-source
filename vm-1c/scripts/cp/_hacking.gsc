@@ -42,7 +42,7 @@ function __init__() {
 // Size: 0x4c
 function hack(var_498bbabf, var_c08cc2da) {
     onbeginuse(var_c08cc2da);
-    wait(var_498bbabf);
+    wait var_498bbabf;
     onenduse(undefined, var_c08cc2da, 1);
 }
 

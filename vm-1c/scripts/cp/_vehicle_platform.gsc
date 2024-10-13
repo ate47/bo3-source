@@ -24,7 +24,7 @@ class class_fa0d90fd {
             var_d5b66a0 unlink();
             var_d5b66a0 moveto(var_d5b66a0.origin + v_moveto, n_time);
             var_d5b66a0 rotateto(var_d5b66a0.angles + v_angles, n_time);
-            wait(n_time);
+            wait n_time;
             var_d5b66a0 linkto(self.var_86d0e1a0);
         }
     }
@@ -35,15 +35,15 @@ class class_fa0d90fd {
     // Size: 0x314
     function function_9cdfa1cb(var_d5b66a0) {
         open_struct = struct::get(var_d5b66a0.target, "targetname");
-        assert(isdefined(open_struct), "target" + var_d5b66a0.origin);
-        assert(isdefined(open_struct.target), "target" + var_d5b66a0.origin);
+        assert(isdefined(open_struct), "<dev string:xc2>" + var_d5b66a0.origin);
+        assert(isdefined(open_struct.target), "<dev string:x104>" + var_d5b66a0.origin);
         var_f0bc435f = struct::get(open_struct.target, "targetname");
-        assert(isdefined(var_f0bc435f), "target" + var_d5b66a0.origin);
+        assert(isdefined(var_f0bc435f), "<dev string:x150>" + var_d5b66a0.origin);
         var_73345118 = isdefined(open_struct.script_float) ? open_struct.script_float : 1;
         var_ef73127f = isdefined(var_f0bc435f.script_float) ? var_f0bc435f.script_float : 1;
-        var_b1d2ef55 = 0;
+        stay_closed = 0;
         if (isdefined(var_f0bc435f.script_noteworthy) && var_f0bc435f.script_noteworthy == "stay_closed") {
-            var_b1d2ef55 = 1;
+            stay_closed = 1;
         }
         var_d5b66a0.origin = open_struct.origin;
         var_d5b66a0.angles = open_struct.angles;
@@ -52,7 +52,7 @@ class class_fa0d90fd {
         var_9a35a990 = var_d5b66a0.origin - var_f0bc435f.origin;
         var_35a4cf2b = var_d5b66a0.angles - var_f0bc435f.angles;
         self thread function_f8655445(var_d5b66a0, "close_", var_26dfbb14, var_ebf964d9, var_ef73127f);
-        if (!var_b1d2ef55) {
+        if (!stay_closed) {
             self thread function_f8655445(var_d5b66a0, "open_", var_9a35a990, var_35a4cf2b, var_73345118);
         }
     }
@@ -129,7 +129,7 @@ class class_fa0d90fd {
     // Size: 0x84
     function function_99848f4e(var_87b2bbe5) {
         self.var_e0473e16 = getvehiclenode(var_87b2bbe5, "targetname");
-        assert(isdefined(self.var_e0473e16), "target" + var_87b2bbe5);
+        assert(isdefined(self.var_e0473e16), "<dev string:x9f>" + var_87b2bbe5);
         self.var_6c951b00 vehicle::get_on_path(self.var_e0473e16);
     }
 
@@ -146,9 +146,9 @@ class class_fa0d90fd {
             level notify("start_" + self.var_950bb2b2 + "_klaxon");
             level notify("close_" + self.var_950bb2b2 + "_doors");
             if (isdefined(e_trigger.script_wait)) {
-                wait(e_trigger.script_wait);
+                wait e_trigger.script_wait;
             } else {
-                wait(2);
+                wait 2;
             }
             if (self.var_e0473e16 != var_2c96ba3c) {
                 var_e00aef4b = 1;
@@ -173,7 +173,7 @@ class class_fa0d90fd {
         self.var_6265e5b9 waittill(#"death");
         self.var_3a0cae84 = 1;
         self thread fx::play("mobile_shop_fall_explosion", self.var_6c951b00.origin, (0, 0, 0));
-        wait(0.3);
+        wait 0.3;
         self thread fx::play("mobile_shop_fall_explosion", self.var_6c951b00.origin - (0, 200, 0), (0, 0, 0));
         self.var_6265e5b9 hide();
         a_ai = getaiarray(self.var_950bb2b2, "groupname");
@@ -189,7 +189,7 @@ class class_fa0d90fd {
     // Size: 0x70
     function function_845aae7f(var_87b2bbe5) {
         nd_start = getvehiclenode(var_87b2bbe5, "targetname");
-        assert(isdefined(self.var_e0473e16), "target" + var_87b2bbe5);
+        assert(isdefined(self.var_e0473e16), "<dev string:x9f>" + var_87b2bbe5);
         self.var_e0473e16 = nd_start;
     }
 
@@ -217,7 +217,7 @@ class class_fa0d90fd {
     // Size: 0x6fc
     function init(var_e6d08de, var_87b2bbe5) {
         if (!level flag::get("first_player_spawned")) {
-            wait(0.05);
+            wait 0.05;
         }
         self.var_950bb2b2 = var_e6d08de;
         self.var_3a0cae84 = 0;
@@ -227,17 +227,17 @@ class class_fa0d90fd {
         }
         self.var_6c951b00.team = "spectator";
         self.var_6c951b00 setmovingplatformenabled(1);
-        assert(isdefined(self.var_6c951b00), "target" + self.var_950bb2b2 + "target");
+        assert(isdefined(self.var_6c951b00), "<dev string:x28>" + self.var_950bb2b2 + "<dev string:x46>");
         self.var_1a144436 = getentarray(self.var_950bb2b2, "targetname");
         foreach (var_4efa37e7 in self.var_1a144436) {
             var_4efa37e7 enablelinkto();
             var_4efa37e7 linkto(self.var_6c951b00);
             if (var_4efa37e7.classname == "script_brushmodel") {
-                assert(!isdefined(self.var_86d0e1a0), "target" + self.var_950bb2b2);
+                assert(!isdefined(self.var_86d0e1a0), "<dev string:x4f>" + self.var_950bb2b2);
                 self.var_86d0e1a0 = var_4efa37e7;
             }
         }
-        assert(isdefined(self.var_86d0e1a0), "target" + self.var_950bb2b2);
+        assert(isdefined(self.var_86d0e1a0), "<dev string:x81>" + self.var_950bb2b2);
         self.var_86d0e1a0 setmovingplatformenabled(1);
         self.var_bfd6a2f9 = spawn("script_origin", self.var_86d0e1a0.origin);
         self.var_bfd6a2f9 linkto(self.var_86d0e1a0);
@@ -265,13 +265,13 @@ class class_fa0d90fd {
                 continue;
             }
             switch (var_d5b66a0.script_noteworthy) {
-            case 16:
+            case "audio_point":
                 self thread function_dbec37e0(var_d5b66a0, "start_" + self.var_950bb2b2 + "_klaxon", "stop_" + self.var_950bb2b2 + "_klaxon");
                 break;
-            case 17:
+            case "elevator_door":
                 self thread function_9cdfa1cb(var_d5b66a0);
                 break;
-            case 18:
+            case "elevator_klaxon_speaker":
                 self thread function_dbec37e0(var_d5b66a0, "vehicle_platform_" + self.var_950bb2b2 + "_move", "stop_" + self.var_950bb2b2 + "_movement_sound");
                 break;
             }

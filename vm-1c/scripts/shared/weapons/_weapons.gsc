@@ -267,32 +267,32 @@ function drop_for_death(attacker, sweapon, smeansofdeath) {
     }
     if (!isdefined(weapon)) {
         /#
-            if (getdvarstring("_t6/misc/fx_equip_tac_insert_exp") == "_t6/misc/fx_equip_tac_insert_exp") {
-                println("_t6/misc/fx_equip_tac_insert_exp");
+            if (getdvarstring("<dev string:x28>") == "<dev string:x36>") {
+                println("<dev string:x38>");
             }
         #/
         return;
     }
     if (weapon == level.weaponnone) {
         /#
-            if (getdvarstring("_t6/misc/fx_equip_tac_insert_exp") == "_t6/misc/fx_equip_tac_insert_exp") {
-                println("_t6/misc/fx_equip_tac_insert_exp");
+            if (getdvarstring("<dev string:x28>") == "<dev string:x36>") {
+                println("<dev string:x58>");
             }
         #/
         return;
     }
     if (!self hasweapon(weapon)) {
         /#
-            if (getdvarstring("_t6/misc/fx_equip_tac_insert_exp") == "_t6/misc/fx_equip_tac_insert_exp") {
-                println("_t6/misc/fx_equip_tac_insert_exp" + weapon.name + "_t6/misc/fx_equip_tac_insert_exp");
+            if (getdvarstring("<dev string:x28>") == "<dev string:x36>") {
+                println("<dev string:x7b>" + weapon.name + "<dev string:xa7>");
             }
         #/
         return;
     }
     if (!self anyammoforweaponmodes(weapon)) {
         /#
-            if (getdvarstring("_t6/misc/fx_equip_tac_insert_exp") == "_t6/misc/fx_equip_tac_insert_exp") {
-                println("_t6/misc/fx_equip_tac_insert_exp");
+            if (getdvarstring("<dev string:x28>") == "<dev string:x36>") {
+                println("<dev string:xa9>");
             }
         #/
         return;
@@ -308,8 +308,8 @@ function drop_for_death(attacker, sweapon, smeansofdeath) {
     clip_and_stock_ammo = clipammo + stockammo;
     if (!clip_and_stock_ammo && !(isdefined(weapon.unlimitedammo) && weapon.unlimitedammo)) {
         /#
-            if (getdvarstring("_t6/misc/fx_equip_tac_insert_exp") == "_t6/misc/fx_equip_tac_insert_exp") {
-                println("_t6/misc/fx_equip_tac_insert_exp");
+            if (getdvarstring("<dev string:x28>") == "<dev string:x36>") {
+                println("<dev string:xd6>");
             }
         #/
         return;
@@ -324,13 +324,13 @@ function drop_for_death(attacker, sweapon, smeansofdeath) {
     item = self dropitem(weapon);
     if (!isdefined(item)) {
         /#
-            iprintlnbold("_t6/misc/fx_equip_tac_insert_exp" + weapon.name);
+            iprintlnbold("<dev string:xf2>" + weapon.name);
         #/
         return;
     }
     /#
-        if (getdvarstring("_t6/misc/fx_equip_tac_insert_exp") == "_t6/misc/fx_equip_tac_insert_exp") {
-            println("_t6/misc/fx_equip_tac_insert_exp" + weapon.name);
+        if (getdvarstring("<dev string:x28>") == "<dev string:x36>") {
+            println("<dev string:x119>" + weapon.name);
         }
     #/
     drop_limited_weapon(weapon, self, item);
@@ -353,7 +353,7 @@ function drop_for_death(attacker, sweapon, smeansofdeath) {
 // Size: 0x34
 function delete_pickup_after_awhile() {
     self endon(#"death");
-    wait(60);
+    wait 60;
     if (!isdefined(self)) {
         return;
     }
@@ -383,8 +383,8 @@ function watch_pickup() {
         }
     }
     /#
-        if (getdvarstring("_t6/misc/fx_equip_tac_insert_exp") == "_t6/misc/fx_equip_tac_insert_exp") {
-            println("_t6/misc/fx_equip_tac_insert_exp" + weapon.name + "_t6/misc/fx_equip_tac_insert_exp" + isdefined(self.ownersattacker));
+        if (getdvarstring("<dev string:x28>") == "<dev string:x36>") {
+            println("<dev string:x12a>" + weapon.name + "<dev string:x13d>" + isdefined(self.ownersattacker));
         }
     #/
     assert(isdefined(player.tookweaponfrom));
@@ -430,17 +430,17 @@ function function_1748a15e() {
         self.lastfiretime = gettime();
         self.hasdonecombat = 1;
         switch (curweapon.weapclass) {
-        case 22:
-        case 23:
-        case 24:
-        case 25:
-        case 27:
-        case 28:
+        case "mg":
+        case "pistol":
+        case "pistol spread":
+        case "rifle":
+        case "smg":
+        case "spread":
             self track_fire(curweapon);
             level.globalshotsfired++;
             break;
-        case 21:
-        case 26:
+        case "grenade":
+        case "rocketlauncher":
             self addweaponstat(curweapon, "shots", 1, self.class_num, 0);
             break;
         default:
@@ -657,20 +657,20 @@ function begin_grenade_tracking() {
         self.grenadesused++;
     }
     switch (weapon.rootweapon.name) {
-    case 47:
+    case "frag_grenade":
         level.globalfraggrenadesfired++;
-    case 48:
+    case "sticky_grenade":
         self addweaponstat(weapon, "used", 1);
         grenade setteam(self.pers["team"]);
         grenade setowner(self);
-    case 46:
+    case "explosive_bolt":
         grenade.originalowner = self;
         break;
-    case 7:
+    case "satchel_charge":
         level.globalsatchelchargefired++;
         break;
-    case 45:
-    case 6:
+    case "concussion_grenade":
+    case "flash_grenade":
         self addweaponstat(weapon, "used", 1);
         break;
     }
@@ -698,18 +698,18 @@ function begin_other_grenade_tracking() {
             continue;
         }
         switch (weapon.rootweapon.name) {
-        case 51:
+        case "tabun_gas":
             grenade thread tabun::watchtabungrenadedetonation(self);
             break;
-        case 48:
+        case "sticky_grenade":
             grenade thread check_stuck_to_player(1, 1, weapon);
             grenade thread riotshield::check_stuck_to_shield();
             break;
-        case 49:
-        case 7:
+        case "c4":
+        case "satchel_charge":
             grenade thread check_stuck_to_player(1, 0, weapon);
             break;
-        case 50:
+        case "hatchet":
             grenade.lastweaponbeforetoss = self util::getlastweapon();
             grenade thread check_hatchet_bounce();
             grenade thread check_stuck_to_player(0, 0, weapon);
@@ -796,7 +796,7 @@ function function_aea44179() {
 // Size: 0x3c
 function wait_and_delete_dud(waittime) {
     self endon(#"death");
-    wait(waittime);
+    wait waittime;
     if (isdefined(self)) {
         self delete();
     }
@@ -1027,7 +1027,7 @@ function debugline(a, b, color) {
     /#
         for (i = 0; i < 600; i++) {
             line(a, b, color);
-            wait(0.05);
+            wait 0.05;
         }
     #/
 }
@@ -1046,7 +1046,7 @@ function on_damage(eattacker, einflictor, weapon, meansofdeath, damage) {
         }
     }
     switch (weapon.rootweapon.name) {
-    case 45:
+    case "concussion_grenade":
         if (isdefined(self.concussionimmune) && self.concussionimmune) {
             return;
         }
@@ -1059,7 +1059,7 @@ function on_damage(eattacker, einflictor, weapon, meansofdeath, damage) {
             scale = 0;
         }
         time = 0.25 + 4 * scale;
-        wait(0.05);
+        wait 0.05;
         if (meansofdeath != "MOD_IMPACT") {
             if (self hasperk("specialty_stunprotection")) {
                 time *= 0.1;
@@ -1093,11 +1093,11 @@ function play_concussion_sound(duration) {
     concussionsound playsound("");
     concussionsound playloopsound("");
     if (duration > 0.5) {
-        wait(duration - 0.5);
+        wait duration - 0.5;
     }
     concussionsound playsound("");
     concussionsound stoploopsound(0.5);
-    wait(0.5);
+    wait 0.5;
     concussionsound notify(#"delete");
     concussionsound delete();
 }
@@ -1138,8 +1138,8 @@ function function_43de9900() {
         weaponslist = self getweaponslist();
         for (idx = 0; idx < weaponslist.size; idx++) {
             switch (weaponslist[idx].name) {
-            case 72:
-            case 73:
+            case "m32":
+            case "minigun":
                 continue;
             default:
                 break;
@@ -1454,7 +1454,7 @@ function ninebang_doninebang(attacker, weapon, pos, cooktime) {
     } else {
         var_b7bc3121 = 9;
     }
-    wait(randomfloatrange(mindelay, maxdelay));
+    wait randomfloatrange(mindelay, maxdelay);
     for (i = 1; i < var_b7bc3121; i++) {
         newpos = level function_3bb8b559(pos, maxradius);
         playsoundatposition("wpn_flash_grenade_explode", newpos);
@@ -1486,7 +1486,7 @@ function ninebang_doninebang(attacker, weapon, pos, cooktime) {
             var_49317b64 = 0.5 * (1 + vectordot(forward, var_57060e68));
             player notify(#"flashbang", var_be1937a, var_49317b64, attacker);
         }
-        wait(randomfloatrange(mindelay, maxdelay));
+        wait randomfloatrange(mindelay, maxdelay);
     }
 }
 

@@ -1,9 +1,9 @@
 #using scripts/shared/exploder_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e7a4a9df;
+#namespace mp_apartments_lighting;
 
-// Namespace namespace_e7a4a9df
+// Namespace mp_apartments_lighting
 // Params 0, eflags: 0x1 linked
 // Checksum 0xca6617c4, Offset: 0x120
 // Size: 0x230
@@ -34,7 +34,7 @@ function function_c667ac79() {
         } else if (laststate == 3) {
             exploder::kill_exploder("light_em_tv_02_bright");
         }
-        wait(0.25);
+        wait 0.25;
         laststate = state;
         if (state % 2) {
             state -= 1;
@@ -49,7 +49,7 @@ function function_c667ac79() {
     }
 }
 
-// Namespace namespace_e7a4a9df
+// Namespace mp_apartments_lighting
 // Params 0, eflags: 0x0
 // Checksum 0x9473caa5, Offset: 0x358
 // Size: 0x14

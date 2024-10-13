@@ -43,11 +43,11 @@ function function_1337b040(a_gametypes) {
     // Checksum 0x76616890, Offset: 0x340
     // Size: 0x44
     function function_f679bcf6() {
-        if (getdvarstring(".notification") != ".notification") {
+        if (getdvarstring("<dev string:x28>") != "<dev string:x3d>") {
             return;
         }
         while (true) {
-            wait(1);
+            wait 1;
         }
     }
 
@@ -152,27 +152,27 @@ function function_f59cfc65(name, init_func, var_4dfe0d36, complete_func, var_89a
     }
     /#
         if (isdefined(level.var_d24533c5[name])) {
-            println(".notification" + name);
+            println("<dev string:x3f>" + name);
             return;
         }
     #/
-    var_18d84fad = spawnstruct();
-    var_18d84fad.name = name;
-    var_18d84fad.stages = [];
-    var_18d84fad.var_c5d90674 = -1;
-    var_18d84fad.var_451a400c = -1;
-    var_18d84fad.var_5ea5f0b8 = 0;
-    var_18d84fad.init_func = init_func;
-    var_18d84fad.var_4dfe0d36 = var_4dfe0d36;
-    var_18d84fad.complete_func = complete_func;
-    var_18d84fad.var_89a4d66b = var_89a4d66b;
-    var_18d84fad.var_6e1c2e3e = var_6e1c2e3e;
-    var_18d84fad.assets = [];
-    var_18d84fad.var_6d88edb0 = 0;
-    var_18d84fad.var_c3624ed5 = [];
-    var_18d84fad.icons = [];
-    var_18d84fad.var_57800922 = 0;
-    level.var_d24533c5[name] = var_18d84fad;
+    sq = spawnstruct();
+    sq.name = name;
+    sq.stages = [];
+    sq.var_c5d90674 = -1;
+    sq.var_451a400c = -1;
+    sq.var_5ea5f0b8 = 0;
+    sq.init_func = init_func;
+    sq.var_4dfe0d36 = var_4dfe0d36;
+    sq.complete_func = complete_func;
+    sq.var_89a4d66b = var_89a4d66b;
+    sq.var_6e1c2e3e = var_6e1c2e3e;
+    sq.assets = [];
+    sq.var_6d88edb0 = 0;
+    sq.var_c3624ed5 = [];
+    sq.icons = [];
+    sq.var_57800922 = 0;
+    level.var_d24533c5[name] = sq;
 }
 
 // Namespace namespace_6e97c459
@@ -182,15 +182,15 @@ function function_f59cfc65(name, init_func, var_4dfe0d36, complete_func, var_89a
 function function_5a90ed82(var_76221a40, var_35927d25, init_func, var_4dfe0d36, exit_func) {
     /#
         if (!isdefined(level.var_d24533c5)) {
-            println(".notification");
+            println("<dev string:x75>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40])) {
-            println(".notification" + var_35927d25 + ".notification" + var_76221a40 + ".notification");
+            println("<dev string:xc3>" + var_35927d25 + "<dev string:xe5>" + var_76221a40 + "<dev string:xf5>");
             return;
         }
         if (isdefined(level.var_d24533c5[var_76221a40].stages[var_35927d25])) {
-            println(".notification" + var_76221a40 + ".notification" + var_35927d25);
+            println("<dev string:x115>" + var_76221a40 + "<dev string:x12b>" + var_35927d25);
             return;
         }
     #/
@@ -214,15 +214,15 @@ function function_5a90ed82(var_76221a40, var_35927d25, init_func, var_4dfe0d36, 
 function function_b9676730(var_76221a40, var_35927d25, time_limit, var_fa7fcd81) {
     /#
         if (!isdefined(level.var_d24533c5)) {
-            println(".notification");
+            println("<dev string:x148>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40])) {
-            println(".notification" + var_35927d25 + ".notification" + var_76221a40 + ".notification");
+            println("<dev string:x19d>" + var_35927d25 + "<dev string:x1cc>" + var_76221a40 + "<dev string:xf5>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40].stages[var_35927d25])) {
-            println(".notification" + var_35927d25 + ".notification" + var_76221a40 + ".notification");
+            println("<dev string:x1dc>" + var_35927d25 + "<dev string:x20a>" + var_76221a40 + "<dev string:x219>");
             return;
         }
     #/
@@ -238,19 +238,19 @@ function function_9a85e396(var_76221a40, var_35927d25, target_name, thread_func,
     structs = struct::get_array(target_name, "targetname");
     /#
         if (!isdefined(level.var_d24533c5)) {
-            println(".notification" + target_name + ".notification");
+            println("<dev string:x234>" + target_name + "<dev string:x267>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40])) {
-            println(".notification" + target_name + ".notification" + var_76221a40 + ".notification");
+            println("<dev string:x284>" + target_name + "<dev string:xe5>" + var_76221a40 + "<dev string:xf5>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40].stages[var_35927d25])) {
-            println(".notification" + target_name + ".notification" + var_76221a40 + ".notification" + var_35927d25 + ".notification");
+            println("<dev string:x284>" + target_name + "<dev string:xe5>" + var_76221a40 + "<dev string:x2a6>" + var_35927d25 + "<dev string:x2aa>");
             return;
         }
         if (!structs.size) {
-            println(".notification" + target_name + ".notification");
+            println("<dev string:x2c5>" + target_name + "<dev string:x2e1>");
             return;
         }
     #/
@@ -271,15 +271,15 @@ function function_9a85e396(var_76221a40, var_35927d25, target_name, thread_func,
 function function_f2dc5f55(var_76221a40, var_35927d25, title) {
     /#
         if (!isdefined(level.var_d24533c5)) {
-            println(".notification" + title + ".notification");
+            println("<dev string:x2ed>" + title + "<dev string:x267>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40])) {
-            println(".notification" + title + ".notification" + var_76221a40 + ".notification");
+            println("<dev string:x2ed>" + title + "<dev string:xe5>" + var_76221a40 + "<dev string:xf5>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40].stages[var_35927d25])) {
-            println(".notification" + title + ".notification" + var_76221a40 + ".notification" + var_35927d25 + ".notification");
+            println("<dev string:x31b>" + title + "<dev string:xe5>" + var_76221a40 + "<dev string:x2a6>" + var_35927d25 + "<dev string:x2aa>");
             return;
         }
     #/
@@ -294,19 +294,19 @@ function function_ff87971b(var_76221a40, var_35927d25, target_name, thread_func,
     ents = getentarray(target_name, "targetname");
     /#
         if (!isdefined(level.var_d24533c5)) {
-            println(".notification" + target_name + ".notification");
+            println("<dev string:x234>" + target_name + "<dev string:x267>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40])) {
-            println(".notification" + target_name + ".notification" + var_76221a40 + ".notification");
+            println("<dev string:x284>" + target_name + "<dev string:xe5>" + var_76221a40 + "<dev string:xf5>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40].stages[var_35927d25])) {
-            println(".notification" + target_name + ".notification" + var_76221a40 + ".notification" + var_35927d25 + ".notification");
+            println("<dev string:x284>" + target_name + "<dev string:xe5>" + var_76221a40 + "<dev string:x2a6>" + var_35927d25 + "<dev string:x2aa>");
             return;
         }
         if (!ents.size) {
-            println(".notification" + target_name + ".notification");
+            println("<dev string:x347>" + target_name + "<dev string:x2e1>");
             return;
         }
     #/
@@ -328,15 +328,15 @@ function function_93b970b8(var_76221a40, target_name, thread_func, var_5ce07c2b)
     ents = getentarray(target_name, "targetname");
     /#
         if (!isdefined(level.var_d24533c5)) {
-            println(".notification" + target_name + ".notification");
+            println("<dev string:x234>" + target_name + "<dev string:x267>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40])) {
-            println(".notification" + target_name + ".notification" + var_76221a40 + ".notification");
+            println("<dev string:x284>" + target_name + "<dev string:xe5>" + var_76221a40 + "<dev string:xf5>");
             return;
         }
         if (!ents.size) {
-            println(".notification" + target_name + ".notification");
+            println("<dev string:x347>" + target_name + "<dev string:x2e1>");
             return;
         }
     #/
@@ -360,15 +360,15 @@ function function_f1e70f21(var_76221a40, target_name, thread_func, var_5ce07c2b)
     structs = struct::get_array(target_name, "targetname");
     /#
         if (!isdefined(level.var_d24533c5)) {
-            println(".notification" + target_name + ".notification");
+            println("<dev string:x234>" + target_name + "<dev string:x267>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40])) {
-            println(".notification" + target_name + ".notification" + var_76221a40 + ".notification");
+            println("<dev string:x284>" + target_name + "<dev string:xe5>" + var_76221a40 + "<dev string:xf5>");
             return;
         }
         if (!structs.size) {
-            println(".notification" + target_name + ".notification");
+            println("<dev string:x2c5>" + target_name + "<dev string:x2e1>");
             return;
         }
     #/
@@ -419,9 +419,9 @@ function function_457aaf75() {
     for (i = 0; i < self.var_c3624ed5.size; i++) {
         asset = self.var_c3624ed5[i];
         switch (asset.type) {
-        case 10:
+        case "struct":
             if (isdefined(asset.trigger)) {
-                println(".notification");
+                println("<dev string:x360>");
                 if (!(isdefined(asset.trigger.var_b82c7478) && asset.trigger.var_b82c7478)) {
                     asset.trigger delete();
                 }
@@ -429,9 +429,9 @@ function function_457aaf75() {
             }
             asset delete();
             break;
-        case 11:
+        case "entity":
             if (isdefined(asset.trigger)) {
-                println(".notification");
+                println("<dev string:x389>");
                 asset.trigger delete();
                 asset.trigger = undefined;
             }
@@ -455,11 +455,11 @@ function function_51c2cc01() {
     for (i = 0; i < self.assets.size; i++) {
         asset = undefined;
         switch (self.assets[i].type) {
-        case 10:
+        case "struct":
             asset = self.assets[i].struct;
             self.var_c3624ed5[self.var_c3624ed5.size] = function_e36b045f(asset, self.assets[i]);
             break;
-        case 11:
+        case "entity":
             for (j = 0; j < self.var_c3624ed5.size; j++) {
                 if (self.var_c3624ed5[j] == self.assets[i].ent) {
                     asset = self.var_c3624ed5[j];
@@ -471,7 +471,7 @@ function function_51c2cc01() {
             self.var_c3624ed5[self.var_c3624ed5.size] = asset;
             break;
         default:
-            println(".notification" + self.assets.type);
+            println("<dev string:x3af>" + self.assets.type);
             break;
         }
         if (self.assets[i].type == "entity" && isdefined(asset.script_noteworthy) && !isdefined(asset.trigger) || isdefined(asset.script_noteworthy)) {
@@ -492,7 +492,7 @@ function function_51c2cc01() {
                 trigger_offset = asset.script_vector;
             }
             switch (asset.script_noteworthy) {
-            case 13:
+            case "trigger_radius_use":
                 use_trigger = spawn("trigger_radius_use", asset.origin + trigger_offset, var_8677d6f8, trigger_radius, trigger_height);
                 use_trigger setcursorhint("HINT_NOICON");
                 use_trigger triggerignoreteam();
@@ -507,7 +507,7 @@ function function_51c2cc01() {
                 }
                 self.var_c3624ed5[self.var_c3624ed5.size - 1].trigger = use_trigger;
                 break;
-            case 18:
+            case "trigger_radius_damage":
                 var_b9f32367 = spawn("trigger_damage", asset.origin + trigger_offset, var_8677d6f8, trigger_radius, trigger_height);
                 var_b9f32367.angles = asset.angles;
                 var_b9f32367.var_bbca234 = self.var_c3624ed5[self.var_c3624ed5.size - 1];
@@ -518,7 +518,7 @@ function function_51c2cc01() {
                 }
                 self.var_c3624ed5[self.var_c3624ed5.size - 1].trigger = var_b9f32367;
                 break;
-            case 16:
+            case "trigger_radius":
                 var_d17f5d3a = spawn("trigger_radius", asset.origin + trigger_offset, var_8677d6f8, trigger_radius, trigger_height);
                 if (isdefined(asset.radius)) {
                     var_d17f5d3a.radius = asset.radius;
@@ -531,7 +531,7 @@ function function_51c2cc01() {
                 }
                 self.var_c3624ed5[self.var_c3624ed5.size - 1].trigger = var_d17f5d3a;
                 break;
-            case 17:
+            case "entity_damage":
                 asset.var_d0dd151f setcandamage(1);
                 asset.var_bbca234 = self.var_c3624ed5[self.var_c3624ed5.size - 1];
                 if (isdefined(asset.var_5ce07c2b)) {
@@ -564,7 +564,7 @@ function function_6def6f41() {
         }
         self.var_bbca234 notify(#"triggered");
         while (player istouching(self)) {
-            wait(0.05);
+            wait 0.05;
         }
         self.var_bbca234 notify(#"hash_ee0bfc57");
     }
@@ -600,11 +600,11 @@ function function_c84afbfb(var_da5d3a32, stage) {
 function function_d9be8a5b(var_76221a40) {
     /#
         if (!isdefined(level.var_d24533c5)) {
-            println(".notification" + var_76221a40 + ".notification");
+            println("<dev string:x3e1>" + var_76221a40 + "<dev string:x267>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40])) {
-            println(".notification" + var_76221a40 + ".notification");
+            println("<dev string:x40f>" + var_76221a40 + "<dev string:xf5>");
             return;
         }
     #/
@@ -655,8 +655,8 @@ function function_c09cb660(var_da5d3a32, stage) {
 // Size: 0x1dc
 function function_68003601(var_c8111181) {
     if (var_c8111181) {
-        level waittill(#"hash_d424b253");
-        wait(2);
+        level waittill(#"teleport_done");
+        wait 2;
     }
     var_3fab4871 = newhudelem();
     var_3fab4871.location = 0;
@@ -674,10 +674,10 @@ function function_68003601(var_c8111181) {
     var_3fab4871 settext(self.title);
     var_3fab4871 fadeovertime(0.5);
     var_3fab4871.alpha = 1;
-    wait(5);
+    wait 5;
     var_3fab4871 fadeovertime(1);
     var_3fab4871.alpha = 0;
-    wait(1);
+    wait 1;
     var_3fab4871 destroy();
 }
 
@@ -686,7 +686,7 @@ function function_68003601(var_c8111181) {
 // Checksum 0x72de4e23, Offset: 0x29c8
 // Size: 0x174
 function function_6591a62a(var_da5d3a32) {
-    println(".notification" + var_da5d3a32.name + ".notification" + self.name + ".notification" + self.time_limit + ".notification");
+    println("<dev string:x42d>" + var_da5d3a32.name + "<dev string:x44f>" + self.name + "<dev string:x2a6>" + self.time_limit + "<dev string:x457>");
     level endon(var_da5d3a32.name + "_" + self.name + "_over");
     level endon(#"hash_bd6f486d");
     level endon(#"end_game");
@@ -696,15 +696,15 @@ function function_6591a62a(var_da5d3a32) {
     } else {
         time_limit = self.time_limit * 0.25;
     }
-    wait(time_limit);
+    wait time_limit;
     level notify(#"hash_5102f256");
-    wait(time_limit);
+    wait time_limit;
     level notify(#"hash_c466afcd");
-    wait(time_limit);
+    wait time_limit;
     level notify(#"hash_643b1d89");
-    wait(time_limit - 10);
+    wait time_limit - 10;
     level notify(#"hash_b455418");
-    wait(10);
+    wait 10;
     function_7332e9d3(var_da5d3a32, self);
 }
 
@@ -715,7 +715,7 @@ function function_6591a62a(var_da5d3a32) {
     // Checksum 0x22f0bca, Offset: 0x2b48
     // Size: 0x54
     function function_ff948a5c(str) {
-        if (getdvarstring(".notification") != ".notification") {
+        if (getdvarstring("<dev string:x28>") != "<dev string:x3d>") {
             return;
         }
         println(str);
@@ -738,11 +738,11 @@ function function_11e71d56() {
 function function_5ea5f0b8(var_76221a40) {
     /#
         if (!isdefined(level.var_d24533c5)) {
-            println(".notification" + var_76221a40 + ".notification");
+            println("<dev string:x461>" + var_76221a40 + "<dev string:x267>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40])) {
-            println(".notification" + var_76221a40 + ".notification");
+            println("<dev string:x461>" + var_76221a40 + "<dev string:xf5>");
             return;
         }
     #/
@@ -756,18 +756,18 @@ function function_5ea5f0b8(var_76221a40) {
 function function_2f3ced1f(var_76221a40, var_35927d25) {
     /#
         if (!isdefined(level.var_d24533c5)) {
-            println(".notification" + var_76221a40 + ".notification");
+            println("<dev string:x49f>" + var_76221a40 + "<dev string:x267>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40])) {
-            println(".notification" + var_76221a40 + ".notification");
+            println("<dev string:x49f>" + var_76221a40 + "<dev string:xf5>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40].stages[var_35927d25])) {
-            println(".notification" + var_76221a40 + ".notification" + var_35927d25 + ".notification");
+            println("<dev string:x4d9>" + var_76221a40 + "<dev string:x2a6>" + var_35927d25 + "<dev string:x2aa>");
             return;
         }
-        println(".notification");
+        println("<dev string:x50b>");
     #/
     var_da5d3a32 = level.var_d24533c5[var_76221a40];
     stage = var_da5d3a32.stages[var_35927d25];
@@ -782,11 +782,11 @@ function function_978ff1d9(var_da5d3a32, stage) {
     level notify(var_da5d3a32.name + "_" + stage.name + "_over");
     level notify(var_da5d3a32.name + "_" + stage.name + "_completed");
     if (isdefined(var_da5d3a32.var_6e1c2e3e)) {
-        println(".notification");
+        println("<dev string:x527>");
         stage [[ var_da5d3a32.var_6e1c2e3e ]]();
     }
     if (isdefined(stage.exit_func)) {
-        println(".notification");
+        println("<dev string:x541>");
         stage [[ stage.exit_func ]](1);
     }
     stage.completed = 1;
@@ -832,7 +832,7 @@ function function_e9502c05(var_da5d3a32, stage) {
 // Checksum 0x3a3503f, Offset: 0x3158
 // Size: 0xb4
 function function_7332e9d3(var_da5d3a32, stage) {
-    println(".notification");
+    println("<dev string:x559>");
     if (isstring(var_da5d3a32)) {
         var_da5d3a32 = level.var_d24533c5[var_da5d3a32];
     }
@@ -894,7 +894,7 @@ function function_26ae18ee() {
     while (true) {
         player = self waittill(#"trigger");
         self.var_bbca234 notify(#"triggered", player);
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -918,11 +918,11 @@ function function_c0c0cab6(var_76221a40, var_35927d25) {
 function function_513e3f2a(var_76221a40) {
     /#
         if (!isdefined(level.var_d24533c5)) {
-            println(".notification" + var_76221a40 + ".notification");
+            println("<dev string:x572>" + var_76221a40 + "<dev string:x267>");
             return;
         }
         if (!isdefined(level.var_d24533c5[var_76221a40])) {
-            println(".notification" + var_76221a40 + ".notification");
+            println("<dev string:x5ac>" + var_76221a40 + "<dev string:xf5>");
             return;
         }
     #/
@@ -938,7 +938,7 @@ function function_513e3f2a(var_76221a40) {
     }
     stage = function_adf7ce94(var_da5d3a32, var_c242a0db);
     if (!isdefined(stage)) {
-        println(".notification" + var_76221a40 + ".notification" + var_c242a0db);
+        println("<dev string:x5e6>" + var_76221a40 + "<dev string:x5fd>" + var_c242a0db);
         return;
     }
     function_c09cb660(var_da5d3a32, stage);
@@ -980,7 +980,7 @@ function function_dd92f786(notify_string, qualifier_func) {
             return;
         }
         /#
-            print3d(self.origin, ".notification", (0, 255, 0), 1);
+            print3d(self.origin, "<dev string:x613>", (0, 255, 0), 1);
         #/
         players = getplayers();
         for (i = 0; i < players.size; i++) {
@@ -997,7 +997,7 @@ function function_dd92f786(notify_string, qualifier_func) {
                 }
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 

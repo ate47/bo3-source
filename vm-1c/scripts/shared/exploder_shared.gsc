@@ -74,7 +74,7 @@ function __main__() {
             script_exploders[script_exploders.size] = potentialexploders[i];
         }
     }
-    println("origin" + potentialexploders.size);
+    println("<dev string:x28>" + potentialexploders.size);
     potentialexploders = getentarray("script_model", "classname");
     for (i = 0; i < potentialexploders.size; i++) {
         if (isdefined(potentialexploders[i].script_prefab_exploder)) {
@@ -84,7 +84,7 @@ function __main__() {
             script_exploders[script_exploders.size] = potentialexploders[i];
         }
     }
-    println("origin" + potentialexploders.size);
+    println("<dev string:x57>" + potentialexploders.size);
     potentialexploders = getentarray("item_health", "classname");
     for (i = 0; i < potentialexploders.size; i++) {
         if (isdefined(potentialexploders[i].script_prefab_exploder)) {
@@ -94,7 +94,7 @@ function __main__() {
             script_exploders[script_exploders.size] = potentialexploders[i];
         }
     }
-    println("origin" + potentialexploders.size);
+    println("<dev string:x87>" + potentialexploders.size);
     if (!isdefined(level.createfxent)) {
         level.createfxent = [];
     }
@@ -129,7 +129,7 @@ function __main__() {
             ent.v["fxid"] = exploder.script_fxid;
         }
         ent.v["exploder"] = exploder.script_exploder;
-        assert(isdefined(exploder.script_exploder), "origin" + exploder.origin + "origin");
+        assert(isdefined(exploder.script_exploder), "<dev string:xb6>" + exploder.origin + "<dev string:xca>");
         if (!isdefined(ent.v["delay"])) {
             ent.v["delay"] = 0;
         }
@@ -220,7 +220,7 @@ function exploder_stop(num) {
 // Size: 0x3c
 function exploder_sound() {
     if (isdefined(self.script_delay)) {
-        wait(self.script_delay);
+        wait self.script_delay;
     }
     self playsound(level.scr_sound[self.script_sound]);
 }
@@ -321,7 +321,7 @@ function trail_effect() {
     if (!isdefined(self.v["trailfxtimeout"])) {
         return;
     }
-    wait(self.v["trailfxtimeout"]);
+    wait self.v["trailfxtimeout"];
     if (isdefined(temp_ent)) {
         temp_ent delete();
     }
@@ -354,7 +354,7 @@ function exploder_delay() {
         max_delay = self.v["delay_max"];
     }
     if (min_delay > 0) {
-        wait(randomfloatrange(min_delay, max_delay));
+        wait randomfloatrange(min_delay, max_delay);
     }
 }
 
@@ -376,9 +376,9 @@ function exploder_playsound() {
 function brush_delete() {
     num = self.v["exploder"];
     if (isdefined(self.v["delay"])) {
-        wait(self.v["delay"]);
+        wait self.v["delay"];
     } else {
-        wait(0.05);
+        wait 0.05;
     }
     if (!isdefined(self.model)) {
         return;
@@ -397,7 +397,7 @@ function brush_delete() {
 // Size: 0x7c
 function brush_show() {
     if (isdefined(self.v["delay"])) {
-        wait(self.v["delay"]);
+        wait self.v["delay"];
     }
     assert(isdefined(self.model));
     self.model show();
@@ -410,7 +410,7 @@ function brush_show() {
 // Size: 0x20c
 function brush_throw() {
     if (isdefined(self.v["delay"])) {
-        wait(self.v["delay"]);
+        wait self.v["delay"];
     }
     ent = undefined;
     if (isdefined(self.v["target"])) {
@@ -431,7 +431,7 @@ function brush_throw() {
     self.model rotatevelocity((x, y, z), 12);
     self.model movegravity((x, y, z), 12);
     self.v["exploder"] = undefined;
-    wait(6);
+    wait 6;
     self.model delete();
 }
 
@@ -445,9 +445,9 @@ function exploder_trigger(trigger, script_value) {
     trigger trigger::wait_till();
     if (isdefined(trigger.script_chance) && randomfloat(1) > trigger.script_chance) {
         if (isdefined(trigger.script_delay)) {
-            wait(trigger.script_delay);
+            wait trigger.script_delay;
         } else {
-            wait(4);
+            wait 4;
         }
         level thread exploder_trigger(trigger, script_value);
         return;
@@ -466,9 +466,9 @@ function reportexploderids() {
     }
     keys = getarraykeys(level._exploder_ids);
     /#
-        println("origin");
+        println("<dev string:xe2>");
         for (i = 0; i < keys.size; i++) {
-            println(keys[i] + "origin" + level._exploder_ids[keys[i]]);
+            println(keys[i] + "<dev string:x100>" + level._exploder_ids[keys[i]]);
         }
     #/
 }
@@ -540,7 +540,7 @@ function activate_radiant_exploder(string) {
 function activate_individual_exploder(num) {
     level notify("exploder" + self.v["exploder"]);
     if (!level.clientscripts || !isdefined(level._exploder_ids[int(self.v["exploder"])]) || isdefined(self.v["exploder_server"])) {
-        println("origin" + self.v["origin"] + "origin");
+        println("<dev string:x104>" + self.v["<dev string:x10e>"] + "<dev string:x117>");
         if (isdefined(self.v["firefx"])) {
             self thread fire_effect();
         }
@@ -637,7 +637,7 @@ function kill_exploder(exploder_string) {
         killclientradiantexploder(exploder_string);
         return;
     }
-    assertmsg("origin");
+    assertmsg("<dev string:x12b>");
 }
 
 // Namespace exploder
@@ -657,7 +657,7 @@ function exploder_damage() {
     }
     damage = self.v["damage"];
     origin = self.v["origin"];
-    wait(delay);
+    wait delay;
     self.model radiusdamage(origin, radius, damage, damage / 3);
 }
 
@@ -667,7 +667,7 @@ function exploder_damage() {
 // Size: 0xdc
 function earthquake() {
     earthquake_name = self.v["earthquake"];
-    assert(isdefined(level.earthquake) && isdefined(level.earthquake[earthquake_name]), "origin" + earthquake_name + "origin");
+    assert(isdefined(level.earthquake) && isdefined(level.earthquake[earthquake_name]), "<dev string:x167>" + earthquake_name + "<dev string:x177>");
     self exploder_delay();
     eq = level.earthquake[earthquake_name];
     earthquake(eq["magnitude"], eq["duration"], self.v["origin"], eq["radius"]);
@@ -683,7 +683,7 @@ function rumble() {
     if (isdefined(self.v["damage_radius"])) {
         n_rumble_threshold_squared = self.v["damage_radius"] * self.v["damage_radius"];
     } else {
-        println("origin" + self.v["origin"] + "origin");
+        println("<dev string:x1bc>" + self.v["<dev string:x10e>"] + "<dev string:x1c7>");
         n_rumble_threshold_squared = 16384;
     }
     for (i = 0; i < a_players.size; i++) {
@@ -699,7 +699,7 @@ function rumble() {
 // Checksum 0xfee2c177, Offset: 0x2c58
 // Size: 0x34
 function stop_after_duration(name, duration) {
-    wait(duration);
+    wait duration;
     stop_exploder(name);
 }
 

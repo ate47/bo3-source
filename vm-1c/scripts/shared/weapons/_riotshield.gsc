@@ -69,9 +69,9 @@ function watchriotshieldpickup() {
     self endon(#"watch_riotshield_pickup");
     self waittill(#"pickup_riotshield");
     self endon(#"weapon_change");
-    println("spectator");
-    wait(0.5);
-    println("spectator");
+    println("<dev string:x28>");
+    wait 0.5;
+    println("<dev string:x60>");
     currentweapon = self getcurrentweapon();
     self.hasriotshield = self hasriotshield();
     self.hasriotshieldequipped = currentweapon.isriotshield;
@@ -266,7 +266,7 @@ function watchriotshielddeploy() {
                 assert(isdefined(item_ent));
                 assert(!isdefined(self.riotshieldretrievetrigger));
                 assert(!isdefined(self.riotshieldentity));
-                if (level.gametype != "spectator") {
+                if (level.gametype != "<dev string:x97>") {
                     assert(primaries.size > 0);
                 }
             #/
@@ -315,7 +315,7 @@ function riotshielddistancetest(origin) {
         if (isdefined(level.players[i].riotshieldentity)) {
             dist_squared = distancesquared(level.players[i].riotshieldentity.origin, origin);
             if (min_dist_squared > dist_squared) {
-                println("spectator");
+                println("<dev string:x9c>");
                 return false;
             }
         }
@@ -405,7 +405,7 @@ function damagethendestroyriotshield(attacker, weapon) {
     if (isdefined(attacker) && attacker != self.owner && isplayer(attacker)) {
         scoreevents::processscoreevent("destroyed_shield", attacker, self.owner, weapon);
     }
-    wait(getdvarfloat("riotshield_destroyed_cleanup_time"));
+    wait getdvarfloat("riotshield_destroyed_cleanup_time");
     self delete();
 }
 
@@ -477,9 +477,9 @@ function begin_other_grenade_tracking() {
             continue;
         }
         switch (weapon.name) {
-        case 44:
-        case 45:
-        case 46:
+        case "explosive_bolt":
+        case "proximity_grenade":
+        case "sticky_grenade":
             grenade thread check_stuck_to_shield();
             break;
         }

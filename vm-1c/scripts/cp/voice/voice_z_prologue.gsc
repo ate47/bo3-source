@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_babdccbe;
+#namespace voice_z_prologue;
 
-// Namespace namespace_babdccbe
+// Namespace voice_z_prologue
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe4de514e, Offset: 0xd90
 // Size: 0x844

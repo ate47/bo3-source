@@ -194,7 +194,7 @@ function domflags() {
     level.flagmodel["neutral"] = "tag_origin";
     primaryflags = getentarray("flag_primary", "targetname");
     if (primaryflags.size < 2) {
-        println("securing_b");
+        println("<dev string:x28>");
         callback::abort_level();
         return;
     }
@@ -207,12 +207,12 @@ function domflags() {
                 trigger.script_label = dom_flag.script_label;
             } else {
                 /#
-                    util::error("securing_b" + dom_flag.script_label + "securing_b" + dom_flag.target);
+                    util::error("<dev string:x56>" + dom_flag.script_label + "<dev string:x76>" + dom_flag.target);
                 #/
             }
         } else {
             /#
-                util::error("securing_b" + dom_flag.script_label);
+                util::error("<dev string:x56>" + dom_flag.script_label);
             #/
         }
         level.flags[level.flags.size] = trigger;
@@ -297,12 +297,12 @@ function getunownedflagneareststart(team, excludeflag) {
     // Size: 0x288
     function domdebug() {
         while (true) {
-            if (getdvarstring("securing_b") != "securing_b") {
-                wait(2);
+            if (getdvarstring("<dev string:x88>") != "<dev string:x95>") {
+                wait 2;
                 continue;
             }
             while (true) {
-                if (getdvarstring("securing_b") != "securing_b") {
+                if (getdvarstring("<dev string:x88>") != "<dev string:x95>") {
                     break;
                 }
                 for (i = 0; i < level.flags.size; i++) {
@@ -312,14 +312,14 @@ function getunownedflagneareststart(team, excludeflag) {
                     for (j = 0; j < level.flags[i].nearbyspawns.size; j++) {
                         line(level.flags[i].origin, level.flags[i].nearbyspawns[j].origin, (0.2, 0.2, 0.6));
                     }
-                    if (level.flags[i] == level.bestspawnflag["securing_b"]) {
-                        print3d(level.flags[i].origin, "securing_b");
+                    if (level.flags[i] == level.bestspawnflag["<dev string:x97>"]) {
+                        print3d(level.flags[i].origin, "<dev string:x9e>");
                     }
-                    if (level.flags[i] == level.bestspawnflag["securing_b"]) {
-                        print3d(level.flags[i].origin, "securing_b");
+                    if (level.flags[i] == level.bestspawnflag["<dev string:xb5>"]) {
+                        print3d(level.flags[i].origin, "<dev string:xba>");
                     }
                 }
-                wait(0.05);
+                wait 0.05;
             }
         }
     }
@@ -478,19 +478,19 @@ function getdomflagusestring(label, neutralized) {
     string = %;
     if (neutralized) {
         switch (label) {
-        case 102:
+        case "_a":
             string = %MP_DOM_FLAG_A_NEUTRALIZED_BY;
             break;
-        case 103:
+        case "_b":
             string = %MP_DOM_FLAG_B_NEUTRALIZED_BY;
             break;
-        case 104:
+        case "_c":
             string = %MP_DOM_FLAG_C_NEUTRALIZED_BY;
             break;
-        case 105:
+        case "_d":
             string = %MP_DOM_FLAG_D_NEUTRALIZED_BY;
             break;
-        case 106:
+        case "_e":
             string = %MP_DOM_FLAG_E_NEUTRALIZED_BY;
             break;
         default:
@@ -498,19 +498,19 @@ function getdomflagusestring(label, neutralized) {
         }
     } else {
         switch (label) {
-        case 102:
+        case "_a":
             string = %MP_DOM_FLAG_A_CAPTURED_BY;
             break;
-        case 103:
+        case "_b":
             string = %MP_DOM_FLAG_B_CAPTURED_BY;
             break;
-        case 104:
+        case "_c":
             string = %MP_DOM_FLAG_C_CAPTURED_BY;
             break;
-        case 105:
+        case "_d":
             string = %MP_DOM_FLAG_D_CAPTURED_BY;
             break;
-        case 106:
+        case "_e":
             string = %MP_DOM_FLAG_E_CAPTURED_BY;
             break;
         default:
@@ -529,10 +529,10 @@ function onusewithneutralizingflag(player) {
     oldteam = self gameobjects::get_owner_team();
     label = self gameobjects::get_label();
     /#
-        print("securing_b" + self.label);
+        print("<dev string:xcf>" + self.label);
     #/
     level.usestartspawns = 0;
-    assert(team != "securing_b");
+    assert(team != "<dev string:xdf>");
     string = %;
     if (oldteam == "neutral") {
         level notify(#"flag_captured");
@@ -552,7 +552,7 @@ function onusewithneutralizingflag(player) {
         self update_spawn_influencers("neutral");
         self flagneutralized(team, oldteam);
     }
-    assert(string != %securing_b);
+    assert(string != %"<dev string:xe7>");
     touchlist = [];
     touchkeys = getarraykeys(self.touchlist[team]);
     for (i = 0; i < touchkeys.size; i++) {
@@ -583,19 +583,19 @@ function onusewithoutneutralizingflag(player) {
     oldteam = self gameobjects::get_owner_team();
     label = self gameobjects::get_label();
     /#
-        print("securing_b" + self.label);
+        print("<dev string:xcf>" + self.label);
     #/
     self gameobjects::set_owner_team(team);
     self.visuals[0] setmodel(level.flagmodel[team]);
     setdvar("scr_obj" + self gameobjects::get_label(), team);
     level.usestartspawns = 0;
-    assert(team != "securing_b");
+    assert(team != "<dev string:xdf>");
     isbflag = 0;
     if (label == "_b") {
         isbflag = 1;
     }
     string = getdomflagusestring(label, 0);
-    assert(string != %securing_b);
+    assert(string != %"<dev string:xe7>");
     touchlist = [];
     touchkeys = getarraykeys(self.touchlist[team]);
     for (i = 0; i < touchkeys.size; i++) {
@@ -634,7 +634,7 @@ function onuse(player) {
 function totaldomination(team) {
     level endon(#"flag_captured");
     level endon(#"game_ended");
-    wait(-76);
+    wait -76;
     challenges::totaldomination(team);
 }
 
@@ -658,7 +658,7 @@ function watchforbflagcap() {
 // Size: 0x2a
 function endwatchforbflagcapaftertime(time) {
     level endon(#"game_ended");
-    wait(60);
+    wait 60;
     level notify(#"endwatchforbflagcapaftertime");
 }
 
@@ -668,7 +668,7 @@ function endwatchforbflagcapaftertime(time) {
 // Size: 0x316
 function give_capture_credit(touchlist, string, lastownerteam, isbflag, neutralizing) {
     time = gettime();
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     self updatecapsperminute(lastownerteam);
     players = getarraykeys(touchlist);
@@ -701,7 +701,7 @@ function give_capture_credit(touchlist, string, lastownerteam, isbflag, neutrali
             player_from_touchlist addplayerstatwithgametype("CAPTURES", 1);
         } else {
             /#
-                player_from_touchlist iprintlnbold("securing_b");
+                player_from_touchlist iprintlnbold("<dev string:xe8>");
             #/
         }
         level thread popups::displayteammessagetoall(string, player_from_touchlist);
@@ -714,7 +714,7 @@ function give_capture_credit(touchlist, string, lastownerteam, isbflag, neutrali
 // Size: 0x1f6
 function give_neutralized_credit(touchlist, string, lastownerteam, isbflag) {
     time = gettime();
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     players = getarraykeys(touchlist);
     for (i = 0; i < players.size; i++) {
@@ -730,7 +730,7 @@ function give_neutralized_credit(touchlist, string, lastownerteam, isbflag) {
             demo::bookmark("event", gettime(), player_from_touchlist);
         } else {
             /#
-                player_from_touchlist iprintlnbold("securing_b");
+                player_from_touchlist iprintlnbold("<dev string:xe8>");
             #/
         }
         level thread popups::displayteammessagetoall(string, player_from_touchlist);
@@ -807,7 +807,7 @@ function updatedomscores() {
             thread globallogic::endgame("tie", game["strings"]["time_limit_reached"]);
             return;
         }
-        wait(5);
+        wait 5;
         hostmigration::waittillhostmigrationdone();
     }
 }
@@ -836,15 +836,15 @@ function onscoreclosemusic() {
         currentscore = axisscore;
     }
     /#
-        if (getdvarint("securing_b") > 0) {
-            println("securing_b" + scoredif);
-            println("securing_b" + axisscore);
-            println("securing_b" + alliedscore);
-            println("securing_b" + scorelimit);
-            println("securing_b" + currentscore);
-            println("securing_b" + scorethreshold);
-            println("securing_b" + scoredif);
-            println("securing_b" + scorethresholdstart);
+        if (getdvarint("<dev string:x12d>") > 0) {
+            println("<dev string:x139>" + scoredif);
+            println("<dev string:x15d>" + axisscore);
+            println("<dev string:x182>" + alliedscore);
+            println("<dev string:x1a9>" + scorelimit);
+            println("<dev string:x1cf>" + currentscore);
+            println("<dev string:x1f7>" + scorethreshold);
+            println("<dev string:x139>" + scoredif);
+            println("<dev string:x221>" + scorethresholdstart);
         }
     #/
     if (scoredif <= scorethreshold && scorethresholdstart <= currentscore && level.playingactionmusic != 1) {
@@ -933,7 +933,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
                         break;
                     } else {
                         /#
-                            attacker iprintlnbold("securing_b");
+                            attacker iprintlnbold("<dev string:x250>");
                         #/
                     }
                 }
@@ -956,7 +956,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
                         break;
                     }
                     /#
-                        attacker iprintlnbold("securing_b");
+                        attacker iprintlnbold("<dev string:x297>");
                     #/
                 }
             }
@@ -1017,7 +1017,7 @@ function updateattackermultikills() {
         self.recentdomattackerkillcount = 0;
     }
     self.recentdomattackerkillcount++;
-    wait(4);
+    wait 4;
     if (self.recentdomattackerkillcount > 1) {
         self challenges::domattackermultikill(self.recentdomattackerkillcount);
     }
@@ -1227,12 +1227,12 @@ function flagsetup() {
     }
     if (maperrors.size > 0) {
         /#
-            println("securing_b");
+            println("<dev string:x2de>");
             for (i = 0; i < maperrors.size; i++) {
                 println(maperrors[i]);
             }
-            println("securing_b");
-            util::error("securing_b");
+            println("<dev string:x305>");
+            util::error("<dev string:x32c>");
         #/
         callback::abort_level();
         return;

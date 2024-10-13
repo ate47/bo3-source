@@ -63,7 +63,7 @@ function add(entity, dyingplayer, team, timeout) {
     iconorg = entity.origin;
     dyingplayer endon(#"spawned_player");
     dyingplayer endon(#"disconnect");
-    wait(0.05);
+    wait 0.05;
     util::waittillslowprocessallowed();
     assert(isdefined(level.teams[team]));
     if (getdvarstring("ui_hud_showdeathicons") == "0") {
@@ -97,10 +97,10 @@ function add(entity, dyingplayer, team, timeout) {
 // Size: 0x64
 function destroy_slowly(timeout) {
     self endon(#"death");
-    wait(timeout);
+    wait timeout;
     self fadeovertime(1);
     self.alpha = 0;
-    wait(1);
+    wait 1;
     self destroy();
 }
 

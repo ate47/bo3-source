@@ -4,9 +4,9 @@
 #using scripts/shared/ai/systems/behavior_state_machine;
 #using scripts/shared/ai_shared;
 
-#namespace namespace_3ae1c2fc;
+#namespace behavior_state_machine_planners_utility;
 
-// Namespace namespace_3ae1c2fc
+// Namespace behavior_state_machine_planners_utility
 // Params 0, eflags: 0x2
 // Checksum 0x99ec1590, Offset: 0x150
 // Size: 0x4

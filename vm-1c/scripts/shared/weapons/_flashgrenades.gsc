@@ -4,9 +4,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f5f10e8c;
+#namespace flashgrenades;
 
-// Namespace namespace_f5f10e8c
+// Namespace flashgrenades
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd8fafa1f, Offset: 0x180
 // Size: 0x54
@@ -17,7 +17,7 @@ function init_shared() {
     callback::on_connect(&monitorflash);
 }
 
-// Namespace namespace_f5f10e8c
+// Namespace flashgrenades
 // Params 1, eflags: 0x1 linked
 // Checksum 0xff5c74e, Offset: 0x1e0
 // Size: 0x80
@@ -28,11 +28,11 @@ function flashrumbleloop(duration) {
     goaltime = gettime() + duration * 1000;
     while (gettime() < goaltime) {
         self playrumbleonentity("damage_heavy");
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_f5f10e8c
+// Namespace flashgrenades
 // Params 4, eflags: 0x1 linked
 // Checksum 0xefab220d, Offset: 0x268
 // Size: 0x3e4
@@ -94,7 +94,7 @@ function function_8e149bc3(amount_distance, var_b5b15795, attacker, var_b4b1c76e
     }
 }
 
-// Namespace namespace_f5f10e8c
+// Namespace flashgrenades
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2f99d114, Offset: 0x658
 // Size: 0xa0
@@ -111,7 +111,7 @@ function monitorflash() {
     }
 }
 
-// Namespace namespace_f5f10e8c
+// Namespace flashgrenades
 // Params 0, eflags: 0x0
 // Checksum 0xf4fe401a, Offset: 0x700
 // Size: 0xc8
@@ -128,7 +128,7 @@ function function_de4f854a() {
     }
 }
 
-// Namespace namespace_f5f10e8c
+// Namespace flashgrenades
 // Params 3, eflags: 0x1 linked
 // Checksum 0x5e910e82, Offset: 0x7d0
 // Size: 0x14e
@@ -140,7 +140,7 @@ function applyflash(duration, rumbleduration, attacker) {
         self.var_b3800d86 = rumbleduration;
     }
     self thread function_125a6838(duration);
-    wait(0.05);
+    wait 0.05;
     if (isdefined(self.var_53c623c1)) {
         if (self hasperk("specialty_flashprotection") == 0) {
             self shellshock("flashbang", self.var_53c623c1, 0);
@@ -155,7 +155,7 @@ function applyflash(duration, rumbleduration, attacker) {
     self.var_b3800d86 = undefined;
 }
 
-// Namespace namespace_f5f10e8c
+// Namespace flashgrenades
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb469a9ee, Offset: 0x928
 // Size: 0x154
@@ -169,16 +169,16 @@ function function_125a6838(duration) {
     var_d514ab92 playsound(level.var_ffec0318);
     var_d514ab92 playloopsound(level.var_330113ce);
     if (duration > 0.5) {
-        wait(duration - 0.5);
+        wait duration - 0.5;
     }
     var_d514ab92 playsound(level.var_ffec0318);
     var_d514ab92 stoploopsound(0.5);
-    wait(0.5);
+    wait 0.5;
     var_d514ab92 notify(#"delete");
     var_d514ab92 delete();
 }
 
-// Namespace namespace_f5f10e8c
+// Namespace flashgrenades
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4d8194b, Offset: 0xa88
 // Size: 0x3c

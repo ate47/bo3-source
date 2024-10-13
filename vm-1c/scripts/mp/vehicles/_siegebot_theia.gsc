@@ -22,9 +22,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_a28cc5ab;
+#namespace siegebot_theia;
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x2
 // Checksum 0xe64c428f, Offset: 0x670
 // Size: 0x34
@@ -32,7 +32,7 @@ function autoexec function_2dc19561() {
     system::register("siegebot_theia", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf02c09f3, Offset: 0x6b0
 // Size: 0x8c
@@ -42,7 +42,7 @@ function __init__() {
     clientfield::register("vehicle", "sarah_minigun_spin", 1, 1, "int");
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7fe42769, Offset: 0x748
 // Size: 0x35c
@@ -90,7 +90,7 @@ function function_fcf49d56() {
     self.var_b1f078bb = self.maxhealth;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc042d678, Offset: 0xab0
 // Size: 0x9c
@@ -102,7 +102,7 @@ function init_clientfields() {
     self clientfield::set("sarah_minigun_spin", 0);
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x0
 // Checksum 0xf6ece250, Offset: 0xb58
 // Size: 0x4b4
@@ -136,7 +136,7 @@ function defaultrole() {
     vehicle_ai::startinitialstate("groundCombat");
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0xeee2e7f9, Offset: 0x1018
 // Size: 0xfc
@@ -153,7 +153,7 @@ function state_death_update(params) {
     self playsound("veh_quadtank_sparks");
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbab4823e, Offset: 0x1120
 // Size: 0xf2
@@ -171,7 +171,7 @@ function function_84e7c9e7() {
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0xee9000fe, Offset: 0x1220
 // Size: 0x18
@@ -179,7 +179,7 @@ function function_d56305c8(enabled) {
     self.var_72861401 = enabled;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9dddb55, Offset: 0x1240
 // Size: 0x42
@@ -188,7 +188,7 @@ function function_c423e168() {
     return isdefined(state) && state != "pain" && self.var_72861401;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf2aa6147, Offset: 0x1290
 // Size: 0x24
@@ -196,7 +196,7 @@ function function_5b4ac0fe(params) {
     self function_144b90e8();
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x28ab4281, Offset: 0x12c0
 // Size: 0x24
@@ -204,7 +204,7 @@ function function_a3bf4514(params) {
     self setbrake(0);
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb96f4079, Offset: 0x12f0
 // Size: 0x13c
@@ -224,7 +224,7 @@ function function_f71fc8b7(params) {
     self vehicle_ai::evaluate_connections();
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 3, eflags: 0x1 linked
 // Checksum 0x11ba8d6d, Offset: 0x1438
 // Size: 0x56
@@ -236,7 +236,7 @@ function function_3a70e7d7(from_state, to_state, connection) {
     return 0;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6627f5fa, Offset: 0x1498
 // Size: 0x1f4
@@ -248,10 +248,10 @@ function function_975d9d5f(params) {
     self thread function_76333d5f();
     function_59d0ca33();
     starttime = gettime();
-    while (distance2dsquared(self.origin, self.var_d66ee1d2) > 1200 && vehicle_ai::timesince(starttime) < 8) {
-        self setvehgoalpos(self.var_d66ee1d2, 0, 1);
+    while (distance2dsquared(self.origin, self.death_goal_point) > 1200 && vehicle_ai::timesince(starttime) < 8) {
+        self setvehgoalpos(self.death_goal_point, 0, 1);
         self setbrake(0);
-        wait(1);
+        wait 1;
     }
     self cancelaimove();
     self clearvehgoalpos();
@@ -265,7 +265,7 @@ function function_975d9d5f(params) {
     self function_5151f00b(params);
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6ac33a80, Offset: 0x1698
 // Size: 0x4c
@@ -274,7 +274,7 @@ function function_7901b73e(params) {
     vehicle_ai::cooldown("jumpUp", 33);
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6d416bb5, Offset: 0x16f0
 // Size: 0x354
@@ -289,8 +289,8 @@ function function_5a6e3cac() {
     self.jump.var_425f84b1 = 0;
     self.jump.var_6829bbf7 = struct::get_array("balcony_point");
     self.jump.groundpoints = struct::get_array("ground_point");
-    self.var_c8241452 = struct::get("arena_center").origin;
-    self.var_d66ee1d2 = struct::get("death_goal_point").origin;
+    self.arena_center = struct::get("arena_center").origin;
+    self.death_goal_point = struct::get("death_goal_point").origin;
     self.var_e35f8efa = getent("theia_combat_region", "targetname");
     foreach (point in self.jump.var_6829bbf7) {
         if (distancesquared(point.origin, (-24566.2, 23972.5, -20000)) < 100 * 100) {
@@ -303,10 +303,10 @@ function function_5a6e3cac() {
     }
     assert(self.jump.var_6829bbf7.size > 0);
     assert(self.jump.groundpoints.size > 0);
-    assert(isdefined(self.var_c8241452));
+    assert(isdefined(self.arena_center));
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 3, eflags: 0x1 linked
 // Checksum 0xbebb8c61, Offset: 0x1a50
 // Size: 0xc0
@@ -322,7 +322,7 @@ function function_d1c640f8(from_state, to_state, connection) {
     return 0;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9c326b7d, Offset: 0x1b18
 // Size: 0x1fc
@@ -334,10 +334,10 @@ function function_54c6085f(params) {
             debugstar(goal, 60000, (0, 1, 0));
         #/
         /#
-            debugstar(trace["pain"], 60000, (0, 1, 0));
+            debugstar(trace["<dev string:x28>"], 60000, (0, 1, 0));
         #/
         /#
-            line(goal, trace["pain"], (0, 1, 0), 1, 0, 60000);
+            line(goal, trace["<dev string:x28>"], (0, 1, 0), 1, 0, 60000);
         #/
     }
     if (trace["fraction"] < 1) {
@@ -353,7 +353,7 @@ function function_54c6085f(params) {
     self function_144b90e8();
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 3, eflags: 0x1 linked
 // Checksum 0xf865765b, Offset: 0x1d20
 // Size: 0xa0
@@ -369,7 +369,7 @@ function function_a4f97767(from_state, to_state, connection) {
     return 0;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x74b95fd5, Offset: 0x1dc8
 // Size: 0x1f4
@@ -381,10 +381,10 @@ function function_b76c2c48(params) {
             debugstar(goal, 60000, (0, 1, 0));
         #/
         /#
-            debugstar(trace["pain"], 60000, (0, 1, 0));
+            debugstar(trace["<dev string:x28>"], 60000, (0, 1, 0));
         #/
         /#
-            line(goal, trace["pain"], (0, 1, 0), 1, 0, 60000);
+            line(goal, trace["<dev string:x28>"], (0, 1, 0), 1, 0, 60000);
         #/
     }
     if (trace["fraction"] < 1) {
@@ -400,7 +400,7 @@ function function_b76c2c48(params) {
     self function_144b90e8();
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 3, eflags: 0x1 linked
 // Checksum 0x6b58f74c, Offset: 0x1fc8
 // Size: 0x90
@@ -416,7 +416,7 @@ function function_d257637c(from_state, to_state, connection) {
     return 0;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6137176e, Offset: 0x2060
 // Size: 0x24
@@ -424,7 +424,7 @@ function function_309fca92(params) {
     self function_d56305c8(1);
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x263c14a9, Offset: 0x2090
 // Size: 0x5c
@@ -433,7 +433,7 @@ function function_21ee6e62(params) {
     self vehicle_ai::cooldown("jumpUp", 11 + randomfloatrange(-1, 3));
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2c870e74, Offset: 0x20f8
 // Size: 0xd14
@@ -444,7 +444,7 @@ function function_911f1aa5(params) {
     self face_target(goal);
     self.jump.linkent.origin = self.origin;
     self.jump.linkent.angles = self.angles;
-    wait(0.05);
+    wait 0.05;
     self linkto(self.jump.linkent);
     self.jump.var_425f84b1 = 1;
     if (false) {
@@ -509,7 +509,7 @@ function function_911f1aa5(params) {
                 debugstar(self.jump.linkent.origin, 60000, (1, 0, 0));
             #/
         }
-        wait(0.05);
+        wait 0.05;
     }
     self.jump.linkent.origin = (self.jump.linkent.origin[0], self.jump.linkent.origin[1], 0) + (0, 0, goal[2]);
     self notify(#"hash_12789372");
@@ -539,9 +539,9 @@ function function_911f1aa5(params) {
     self vehicle::impact_fx(self.settings.var_9f4c9669);
     self function_144b90e8();
     self clientfield::increment("sarah_rumble_on_landing");
-    wait(0.3);
+    wait 0.3;
     self unlink();
-    wait(0.05);
+    wait 0.05;
     self.jump.var_425f84b1 = 0;
     self notify(#"hash_48269e0e");
     vehicle_ai::cooldown("jump", 11);
@@ -550,7 +550,7 @@ function function_911f1aa5(params) {
     self vehicle_ai::evaluate_connections();
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x13d8a433, Offset: 0x2e18
 // Size: 0xbc
@@ -563,7 +563,7 @@ function function_dbe3c90a(params) {
     self function_d013f7fa((0, 0, 0), 4);
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x412db5d2, Offset: 0x2ee0
 // Size: 0x2e8
@@ -584,32 +584,32 @@ function function_5151f00b(params) {
     forward = anglestoforward(var_1181b4ed.angles);
     while (true) {
         while (!isdefined(self.enemy)) {
-            wait(1);
+            wait 1;
         }
         self face_target(self.origin + forward * 10000);
         var_35e1c37a = self.damagelevel * 0.15;
         if (randomfloat(1) < var_35e1c37a) {
             function_5e2157f5();
-            level notify(#"hash_38559d8c");
+            level notify(#"theia_finished_platform_attack");
             self vehicle_ai::evaluate_connections();
-            wait(0.8);
+            wait 0.8;
         }
         function_6909a1a4();
-        level notify(#"hash_38559d8c");
+        level notify(#"theia_finished_platform_attack");
         self vehicle_ai::evaluate_connections();
         if (randomfloat(1) > 0.4 && self.var_12c7e390 !== 1) {
-            wait(0.2);
+            wait 0.2;
             self function_e5af3b61();
         }
-        wait(0.8);
+        wait 0.8;
         function_42fa8354();
-        level notify(#"hash_38559d8c");
+        level notify(#"theia_finished_platform_attack");
         self vehicle_ai::evaluate_connections();
-        wait(0.8);
+        wait 0.8;
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6aa6a686, Offset: 0x31d0
 // Size: 0x2f4
@@ -650,7 +650,7 @@ function function_e5af3b61() {
     return false;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5d489f12, Offset: 0x34d0
 // Size: 0xbc
@@ -663,7 +663,7 @@ function function_3344e4e8(params) {
     self function_d013f7fa((0, 0, 0), 4);
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc55166ba, Offset: 0x3598
 // Size: 0xfe
@@ -680,11 +680,11 @@ function function_c05314da(params) {
     self thread function_7080094f();
     while (true) {
         self vehicle_ai::evaluate_connections();
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd03dd5a6, Offset: 0x36a0
 // Size: 0x1fa
@@ -704,7 +704,7 @@ function function_a812ea81(tag_name) {
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa301812b, Offset: 0x38a8
 // Size: 0x68
@@ -719,7 +719,7 @@ function function_6f90eaa6() {
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3aae550a, Offset: 0x3918
 // Size: 0x68
@@ -734,13 +734,13 @@ function function_7080094f() {
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 4, eflags: 0x1 linked
 // Checksum 0x929fa4ef, Offset: 0x3988
 // Size: 0x346
 function function_44598626(var_4ff43c77, var_34ff10c9, pointsarray, idealdist) {
     /#
-        record3dtext("pain" + var_4ff43c77 + "pain" + var_34ff10c9 + "pain", self.origin, (1, 0.5, 0), "pain", self);
+        record3dtext("<dev string:x31>" + var_4ff43c77 + "<dev string:x3a>" + var_34ff10c9 + "<dev string:x3c>", self.origin, (1, 0.5, 0), "<dev string:x3e>", self);
     #/
     bestscore = 1000000;
     result = undefined;
@@ -751,7 +751,7 @@ function function_44598626(var_4ff43c77, var_34ff10c9, pointsarray, idealdist) {
                 recordstar(point.origin, (1, 0.5, 0));
             #/
             /#
-                record3dtext("pain" + distancetotarget, point.origin, (1, 0.5, 0), "pain", self);
+                record3dtext("<dev string:x45>" + distancetotarget, point.origin, (1, 0.5, 0), "<dev string:x3e>", self);
             #/
             continue;
         }
@@ -766,7 +766,7 @@ function function_44598626(var_4ff43c77, var_34ff10c9, pointsarray, idealdist) {
             recordstar(point.origin, (1, 0.5, 0));
         #/
         /#
-            record3dtext("pain" + distancetotarget + "pain" + score, point.origin, (1, 0.5, 0), "pain", self);
+            record3dtext("<dev string:x54>" + distancetotarget + "<dev string:x5b>" + score, point.origin, (1, 0.5, 0), "<dev string:x3e>", self);
         #/
         if (score < bestscore) {
             bestscore = score;
@@ -779,7 +779,7 @@ function function_44598626(var_4ff43c77, var_34ff10c9, pointsarray, idealdist) {
     return undefined;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4e1b650c, Offset: 0x3cd8
 // Size: 0x54
@@ -790,7 +790,7 @@ function function_3b3e7a3d(params) {
     self setturretspinning(0);
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0xefb756ba, Offset: 0x3d38
 // Size: 0x76
@@ -803,7 +803,7 @@ function function_ea8eac3c(player) {
     return undefined;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x0
 // Checksum 0xd5a6d768, Offset: 0x3db8
 // Size: 0x144
@@ -825,7 +825,7 @@ function function_a9cc4c74() {
     return targets;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x44418681, Offset: 0x3f08
 // Size: 0x10c
@@ -842,7 +842,7 @@ function function_9ce79c2c(player) {
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0xddc9b7fb, Offset: 0x4020
 // Size: 0xea
@@ -855,7 +855,7 @@ function function_a849d3e8() {
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6fe7bd61, Offset: 0x4118
 // Size: 0x188
@@ -879,7 +879,7 @@ function function_cdc7d6d5(player) {
     self.var_236a6361[index].var_5b4cf339 = 0;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 2, eflags: 0x0
 // Checksum 0xb902752c, Offset: 0x42a8
 // Size: 0x6c
@@ -888,7 +888,7 @@ function function_ffea59d7(player, damage) {
     self.var_236a6361[index].damage = self.var_236a6361[index].damage + damage;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 3, eflags: 0x0
 // Checksum 0xcb51b727, Offset: 0x4320
 // Size: 0xd4
@@ -901,7 +901,7 @@ function function_b95b6735(player, boost, timeseconds) {
     self.var_236a6361[index].var_5b4cf339 = gettime() + timeseconds * 1000;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2eb00ec5, Offset: 0x4400
 // Size: 0x230
@@ -940,7 +940,7 @@ function function_765debac(player) {
     return threat;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb0f8f895, Offset: 0x4638
 // Size: 0xe6
@@ -956,7 +956,7 @@ function update_target_player() {
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf2d40e4e, Offset: 0x4728
 // Size: 0x94
@@ -970,7 +970,7 @@ function function_50256641(target) {
     self vehicle_ai::setturrettarget(target, 4);
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 3, eflags: 0x1 linked
 // Checksum 0xcf018020, Offset: 0x47c8
 // Size: 0xc0
@@ -984,26 +984,26 @@ function function_347f88f3(target, time, color) {
             /#
                 line(point1, point2, color, 1, 0, 3);
             #/
-            wait(0.05);
+            wait 0.05;
         }
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0xaebd4631, Offset: 0x4890
 // Size: 0x96
 function function_30ecb08(delay) {
     self endon(#"death");
-    wait(delay);
+    wait delay;
     for (i = 0; i < 3 && i < self.var_b66afa28.size; i++) {
-        var_41ae2fa1 = self.var_b66afa28[i];
-        var_41ae2fa1 function_d9cdf83c();
-        wait(0.15);
+        spike = self.var_b66afa28[i];
+        spike function_d9cdf83c();
+        wait 0.15;
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x80ba572b, Offset: 0x4930
 // Size: 0x3c0
@@ -1017,12 +1017,12 @@ function function_57c5370f() {
         enemy = self.enemy;
         if (!isdefined(enemy)) {
             self function_d013f7fa((0, 0, 0));
-            wait(0.4);
+            wait 0.4;
             continue;
         }
         if (!enemy.allowdeath && !isplayer(enemy)) {
             self setpersonalthreatbias(enemy, -2000, 8);
-            wait(0.4);
+            wait 0.4;
             continue;
         }
         distsq = distancesquared(enemy.origin, self.origin);
@@ -1037,7 +1037,7 @@ function function_57c5370f() {
         var_cc58fc9d = gettime();
         self setturretspinning(1);
         while (isdefined(enemy) && !self.gunner1ontarget && vehicle_ai::timesince(var_cc58fc9d) < 2) {
-            wait(0.4);
+            wait 0.4;
         }
         if (!isdefined(enemy)) {
             self setturretspinning(0);
@@ -1047,16 +1047,16 @@ function function_57c5370f() {
         while (isdefined(enemy) && enemy === self.enemy && self function_6d424c6f(enemy, 1) && vehicle_ai::timesince(var_2c0fecbc) < 5) {
             self vehicle_ai::fire_for_time(1 + randomfloat(0.4), 1);
             if (isdefined(enemy) && isplayer(enemy)) {
-                wait(0.6 + randomfloat(0.2));
+                wait 0.6 + randomfloat(0.2);
             }
-            wait(0.1);
+            wait 0.1;
         }
         self setturretspinning(0);
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9debfe80, Offset: 0x4cf8
 // Size: 0x7fc
@@ -1069,14 +1069,14 @@ function function_76333d5f() {
     while (true) {
         enemy = self.enemy;
         if (!isdefined(enemy)) {
-            wait(0.4);
+            wait 0.4;
             continue;
         }
         if (vehicle_ai::iscooldownready("spike_on_ground", 2) && self.var_5c05fe94 !== 1) {
             self function_7e56865f(1);
         }
         if (!vehicle_ai::iscooldownready("spike_on_ground")) {
-            wait(0.4);
+            wait 0.4;
             continue;
         }
         var_7136ec77 = enemy;
@@ -1122,40 +1122,40 @@ function function_76333d5f() {
             var_810d699b = math::clamp(disttoenemy * 0.35, 100, 350);
             points = generatepointsaroundcenter(enemy.origin + (0, 0, var_810d699b), 300, 80, 50);
             var_3e2886cb = mapfloat(300, 700, 0.1, 1, disttoenemy);
-            var_41ae2fa1 = self.var_b66afa28[0];
-            var_41ae2fa1.origin = points[0];
-            self function_9af49228(var_41ae2fa1, (0, 0, 0), 1);
+            spike = self.var_b66afa28[0];
+            spike.origin = points[0];
+            self function_9af49228(spike, (0, 0, 0), 1);
             var_7aa511a9 = gettime();
             while (!self.gunner2ontarget && vehicle_ai::timesince(var_7aa511a9) < 2) {
-                wait(0.4);
+                wait 0.4;
             }
             self thread function_30ecb08(var_3e2886cb);
             for (i = 0; i < 3 && i < self.var_b66afa28.size && i < points.size; i++) {
-                var_41ae2fa1 = self.var_b66afa28[i];
-                var_41ae2fa1.origin = points[i];
-                self function_9af49228(var_41ae2fa1, (0, 0, 0), 1);
+                spike = self.var_b66afa28[i];
+                spike.origin = points[i];
+                self function_9af49228(spike, (0, 0, 0), 1);
                 self fireweapon(2, enemy);
                 vehicle_ai::cooldown("spike_on_ground", randomfloatrange(6, 10));
                 if (false) {
                     /#
-                        debugstar(var_41ae2fa1.origin, -56, (1, 0, 0));
+                        debugstar(spike.origin, -56, (1, 0, 0));
                     #/
                     /#
-                        circle(var_41ae2fa1.origin, -106, (1, 0, 0), 0, 1, -56);
+                        circle(spike.origin, -106, (1, 0, 0), 0, 1, -56);
                     #/
                 }
-                wait(0.1);
+                wait 0.1;
             }
-            wait(0.5);
+            wait 0.5;
             self function_d013f7fa((0, 0, 0), 2);
             self function_7e56865f(0);
             continue;
         }
-        wait(0.4);
+        wait 0.4;
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x571a24a9, Offset: 0x5500
 // Size: 0x2c
@@ -1164,7 +1164,7 @@ function function_7e56865f(is_aiming) {
     self function_59d0ca33();
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x67407689, Offset: 0x5538
 // Size: 0x54
@@ -1177,7 +1177,7 @@ function function_59d0ca33() {
     self asmrequestsubstate(locomotion);
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x299ccad7, Offset: 0x5598
 // Size: 0x1b0
@@ -1199,7 +1199,7 @@ function function_13a5941d() {
     return undefined;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x46579eb8, Offset: 0x5750
 // Size: 0x2e8
@@ -1222,7 +1222,7 @@ function movement_thread() {
             enemy = self.enemy;
         }
         if (!isdefined(enemy)) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         self.current_pathto_pos = self function_cbe64bb2(enemy);
@@ -1240,11 +1240,11 @@ function movement_thread() {
             self clearvehgoalpos();
             self setbrake(1);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5f1205e5, Offset: 0x5a40
 // Size: 0xb4
@@ -1260,11 +1260,11 @@ function path_update_interrupt() {
                 self notify(#"near_goal");
             }
         }
-        wait(0.8);
+        wait 0.8;
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x66e0bcc0, Offset: 0x5b00
 // Size: 0x6c6
@@ -1296,7 +1296,7 @@ function function_cbe64bb2(enemy) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["pain"] = -700;
+                point._scoredebug["<dev string:x64>"] = -700;
             #/
             point.score += -700;
         }
@@ -1305,7 +1305,7 @@ function function_cbe64bb2(enemy) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["pain"] = point.distawayfromengagementarea * -1;
+                point._scoredebug["<dev string:x73>"] = point.distawayfromengagementarea * -1;
             #/
             point.score += point.distawayfromengagementarea * -1;
             if (!point.visibility) {
@@ -1313,7 +1313,7 @@ function function_cbe64bb2(enemy) {
                     if (!isdefined(point._scoredebug)) {
                         point._scoredebug = [];
                     }
-                    point._scoredebug["pain"] = -600;
+                    point._scoredebug["<dev string:x82>"] = -600;
                 #/
                 point.score += -600;
             }
@@ -1325,7 +1325,7 @@ function function_cbe64bb2(enemy) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["pain"] = 600;
+                point._scoredebug["<dev string:x8d>"] = 600;
             #/
             point.score += 600;
             continue;
@@ -1335,7 +1335,7 @@ function function_cbe64bb2(enemy) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["pain"] = 0;
+                point._scoredebug["<dev string:x8d>"] = 0;
             #/
             point.score += 0;
             continue;
@@ -1345,7 +1345,7 @@ function function_cbe64bb2(enemy) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["pain"] = -600;
+                point._scoredebug["<dev string:x8d>"] = -600;
             #/
             point.score += -600;
             continue;
@@ -1354,7 +1354,7 @@ function function_cbe64bb2(enemy) {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["pain"] = -1200;
+            point._scoredebug["<dev string:x8d>"] = -1200;
         #/
         point.score += -1200;
     }
@@ -1366,7 +1366,7 @@ function function_cbe64bb2(enemy) {
     return queryresult.data[0].origin;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 3, eflags: 0x1 linked
 // Checksum 0x43de2bcf, Offset: 0x61d0
 // Size: 0x82
@@ -1376,7 +1376,7 @@ function function_9dfac374(left, right, point) {
     return var_c8c31226 > var_d69cdbbd;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 2, eflags: 0x1 linked
 // Checksum 0x7d076f1b, Offset: 0x6260
 // Size: 0xcc
@@ -1389,7 +1389,7 @@ function function_feedbcc3(point, mindistance) {
     return false;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 6, eflags: 0x1 linked
 // Checksum 0xd1e51f8, Offset: 0x6338
 // Size: 0x8e6
@@ -1409,18 +1409,18 @@ function function_c323eed7(var_4ff43c77, var_34ff10c9, idealdist, var_a83a9c, va
         recordstar(self.origin, (1, 0.5, 0));
     #/
     /#
-        record3dtext("pain", self.origin, (1, 0.5, 0), "pain", self);
+        record3dtext("<dev string:x9b>", self.origin, (1, 0.5, 0), "<dev string:x3e>", self);
     #/
     foreach (target in targets) {
         if (!is_valid_target(target) || !target.allowdeath || isairborne(target)) {
             continue;
         }
-        if (distance2dsquared(self.var_c8241452, target.origin) > var_50e99cbf * var_50e99cbf) {
+        if (distance2dsquared(self.arena_center, target.origin) > var_50e99cbf * var_50e99cbf) {
             /#
                 recordstar(target.origin, (0, 0.5, 1));
             #/
             /#
-                record3dtext("pain" + distance2d(self.var_c8241452, target.origin), target.origin, (0, 0.5, 1), "pain", self);
+                record3dtext("<dev string:xaa>" + distance2d(self.arena_center, target.origin), target.origin, (0, 0.5, 1), "<dev string:x3e>", self);
             #/
             continue;
         }
@@ -1429,7 +1429,7 @@ function function_c323eed7(var_4ff43c77, var_34ff10c9, idealdist, var_a83a9c, va
                 recordstar(target.origin, (0, 0.5, 1));
             #/
             /#
-                record3dtext("pain", target.origin, (0, 0.5, 1), "pain", self);
+                record3dtext("<dev string:xc0>", target.origin, (0, 0.5, 1), "<dev string:x3e>", self);
             #/
             continue;
         }
@@ -1439,7 +1439,7 @@ function function_c323eed7(var_4ff43c77, var_34ff10c9, idealdist, var_a83a9c, va
                 recordstar(target.origin, (1, 0.5, 0));
             #/
             /#
-                record3dtext("pain" + distancetotarget, target.origin, (1, 0.5, 0), "pain", self);
+                record3dtext("<dev string:x45>" + distancetotarget, target.origin, (1, 0.5, 0), "<dev string:x3e>", self);
             #/
             continue;
         }
@@ -1456,7 +1456,7 @@ function function_c323eed7(var_4ff43c77, var_34ff10c9, idealdist, var_a83a9c, va
             recordstar(target.origin, (1, 0.5, 0));
         #/
         /#
-            record3dtext("pain" + distancetotarget + "pain" + score, target.origin, (1, 0.5, 0), "pain", self);
+            record3dtext("<dev string:x54>" + distancetotarget + "<dev string:x5b>" + score, target.origin, (1, 0.5, 0), "<dev string:x3e>", self);
         #/
         if (isplayer(target) && !isvehicle(target)) {
             minradius = 0;
@@ -1480,7 +1480,7 @@ function function_c323eed7(var_4ff43c77, var_34ff10c9, idealdist, var_a83a9c, va
     if (var_b716a4e2 === 0) {
         return undefined;
     }
-    queryresult = positionquery_source_navigation(self.var_c8241452, 100, 1300, 500, self.radius, self.radius * 1.1);
+    queryresult = positionquery_source_navigation(self.arena_center, 100, 1300, 500, self.radius, self.radius * 1.1);
     assert(queryresult.data.size > 0);
     var_6ab55afd = array::randomize(queryresult.data);
     foreach (point in var_6ab55afd) {
@@ -1489,10 +1489,10 @@ function function_c323eed7(var_4ff43c77, var_34ff10c9, idealdist, var_a83a9c, va
             return point.origin;
         }
     }
-    return self.var_c8241452;
+    return self.arena_center;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x522f1823, Offset: 0x6c28
 // Size: 0x94
@@ -1506,7 +1506,7 @@ function function_144b90e8() {
     self setbrake(1);
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc48a11b8, Offset: 0x6cc8
 // Size: 0x244
@@ -1532,7 +1532,7 @@ function face_target(position, var_cd8c9d1a) {
             #/
         }
         anglediff = absangleclamp180(self.angles[1] - goalangles[1]);
-        wait(0.05);
+        wait 0.05;
     }
     self clearvehgoalpos();
     self clearlookatent();
@@ -1540,7 +1540,7 @@ function face_target(position, var_cd8c9d1a) {
     self cancelaimove();
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 14, eflags: 0x1 linked
 // Checksum 0x260e6158, Offset: 0x6f18
 // Size: 0x1e8
@@ -1568,7 +1568,7 @@ function function_93219dbe(einflictor, eattacker, idamage, idflags, smeansofdeat
     return idamage;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x40118291, Offset: 0x7108
 // Size: 0x30c
@@ -1584,7 +1584,7 @@ function function_5e2157f5() {
     shootpos = self.origin + forward * -56 + (0, 0, 500);
     self asmrequestsubstate("javelin@stationary");
     self waittill(#"hash_91162229");
-    level notify(#"hash_380ae1f4", enemy);
+    level notify(#"theia_preparing_javelin_attack", enemy);
     current_weapon = self seatgetweapon(0);
     weapon = getweapon("siegebot_javelin_turret");
     self thread function_c73f719e(weapon);
@@ -1607,7 +1607,7 @@ function function_5e2157f5() {
     self function_59d0ca33();
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x81e15c6e, Offset: 0x7420
 // Size: 0x124
@@ -1617,7 +1617,7 @@ function function_c73f719e(projectile) {
     projectile = self waittill(#"weapon_fired");
     distance = 1400;
     alias = "prj_javelin_incoming";
-    wait(3);
+    wait 3;
     if (!isdefined(projectile)) {
         return;
     }
@@ -1629,11 +1629,11 @@ function function_c73f719e(projectile) {
                 return;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x602f4710, Offset: 0x7550
 // Size: 0x13c
@@ -1656,7 +1656,7 @@ function function_fac6ca3e() {
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfcdbccb1, Offset: 0x7698
 // Size: 0xa8
@@ -1669,31 +1669,31 @@ function function_d9cdf83c() {
     self.origin += (0, 0, -500);
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1b841b2, Offset: 0x7748
 // Size: 0x1ba
 function function_ab984a0f() {
     self endon(#"death");
-    wait(0.1);
+    wait 0.1;
     var_c07ddbf5 = array::randomize(self.var_b66afa28);
     foreach (target in var_c07ddbf5) {
         target function_d9cdf83c();
-        wait(randomfloatrange(0.05, 0.1));
+        wait randomfloatrange(0.05, 0.1);
     }
     if (false) {
-        foreach (var_41ae2fa1 in var_c07ddbf5) {
+        foreach (spike in var_c07ddbf5) {
             /#
-                debugstar(var_41ae2fa1.origin, -56, (1, 0, 0));
+                debugstar(spike.origin, -56, (1, 0, 0));
             #/
             /#
-                circle(var_41ae2fa1.origin, -106, (1, 0, 0), 0, 1, -56);
+                circle(spike.origin, -106, (1, 0, 0), 0, 1, -56);
             #/
         }
     }
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd3be44e4, Offset: 0x7910
 // Size: 0x98
@@ -1709,7 +1709,7 @@ function function_a22c73c2(target) {
     return score;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 3, eflags: 0x1 linked
 // Checksum 0x5015b85d, Offset: 0x79b0
 // Size: 0x11c
@@ -1724,7 +1724,7 @@ function function_ad4f5bb6(target, var_afd2f52a, radius) {
     return var_1e946c1e;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x68a330af, Offset: 0x7ad8
 // Size: 0x5cc
@@ -1759,7 +1759,7 @@ function function_6909a1a4() {
         }
     }
     if (!isdefined(besttarget)) {
-        besttarget = array::random(generatepointsaroundcenter(self.var_c8241452, 2000, -56));
+        besttarget = array::random(generatepointsaroundcenter(self.arena_center, 2000, -56));
     } else {
         besttarget = besttarget.origin;
     }
@@ -1776,17 +1776,17 @@ function function_6909a1a4() {
     targetpoints = generatepointsaroundcenter(targetorigin, 1200, 120);
     var_e4ca448a = 0;
     for (i = 0; i < self.var_b66afa28.size && i < targetpoints.size; i++) {
-        var_41ae2fa1 = self.var_b66afa28[i];
-        var_41ae2fa1.origin = targetpoints[i];
+        spike = self.var_b66afa28[i];
+        spike.origin = targetpoints[i];
         var_e4ca448a++;
     }
     self asmrequestsubstate("arm_rocket@stationary");
     self waittill(#"hash_e5fb1439");
     for (i = 0; i < var_e4ca448a; i++) {
-        var_41ae2fa1 = self.var_b66afa28[i];
-        self function_9af49228(var_41ae2fa1, (0, 0, 0), 1);
+        spike = self.var_b66afa28[i];
+        self function_9af49228(spike, (0, 0, 0), 1);
         self fireweapon(2);
-        wait(0.05);
+        wait 0.05;
     }
     self thread function_ab984a0f();
     self function_bb5f9faa(1);
@@ -1795,7 +1795,7 @@ function function_6909a1a4() {
     self function_59d0ca33();
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 3, eflags: 0x1 linked
 // Checksum 0x137136d8, Offset: 0x80b0
 // Size: 0x1e4
@@ -1814,15 +1814,15 @@ function function_ea4bbd0d(point, enemy, var_5e1bf73c) {
                     debugstar(self.var_fa144784.origin, 100, (0, 1, 0));
                 #/
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
     self.var_fa144784.origin = enemy.origin + offset;
-    wait(0.05);
+    wait 0.05;
     self.var_fa144784 linkto(enemy);
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7aada0a0, Offset: 0x82a0
 // Size: 0xd8
@@ -1837,7 +1837,7 @@ function is_valid_target(target) {
     return true;
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe14860e4, Offset: 0x8380
 // Size: 0x1b0
@@ -1862,7 +1862,7 @@ function get_enemy() {
     return targets[0];
 }
 
-// Namespace namespace_a28cc5ab
+// Namespace siegebot_theia
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8338f27, Offset: 0x8538
 // Size: 0x4cc
@@ -1912,6 +1912,6 @@ function function_42fa8354() {
     self waittill(#"hash_27c60d8b");
     self clientfield::set("sarah_minigun_spin", 0);
     self.turretrotscale = 1;
-    wait(0.2);
+    wait 0.2;
 }
 

@@ -24,9 +24,9 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_bc3b809c;
+#namespace zm_genesis_radios;
 
-// Namespace namespace_bc3b809c
+// Namespace zm_genesis_radios
 // Params 0, eflags: 0x2
 // Checksum 0x5850a557, Offset: 0x5c0
 // Size: 0x3c
@@ -34,7 +34,7 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_radios", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_bc3b809c
+// Namespace zm_genesis_radios
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6950c7eb, Offset: 0x608
 // Size: 0x24
@@ -42,7 +42,7 @@ function __init__() {
     callback::on_disconnect(&on_player_disconnect);
 }
 
-// Namespace namespace_bc3b809c
+// Namespace zm_genesis_radios
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2ee61a66, Offset: 0x638
 // Size: 0x3c
@@ -54,7 +54,7 @@ function __main__() {
     level thread function_a999a42a();
 }
 
-// Namespace namespace_bc3b809c
+// Namespace zm_genesis_radios
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x680
 // Size: 0x4
@@ -62,7 +62,7 @@ function on_player_disconnect() {
     
 }
 
-// Namespace namespace_bc3b809c
+// Namespace zm_genesis_radios
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc4040217, Offset: 0x690
 // Size: 0x3b6
@@ -95,24 +95,24 @@ function function_a999a42a() {
     }
 }
 
-// Namespace namespace_bc3b809c
+// Namespace zm_genesis_radios
 // Params 1, eflags: 0x1 linked
 // Checksum 0x1f2a9cdc, Offset: 0xa50
 // Size: 0x80
 function function_2c776a2a(e_player) {
     if (isdefined(self.stub.b_on) && self.stub.b_on) {
         /#
-            self sethintstring("vox_sfx_radio_stem_mob_log_2_0");
+            self sethintstring("<dev string:x28>");
         #/
         return 1;
     }
     /#
-        self sethintstring("vox_sfx_radio_stem_mob_log_2_0");
+        self sethintstring("<dev string:x38>");
     #/
     return 0;
 }
 
-// Namespace namespace_bc3b809c
+// Namespace zm_genesis_radios
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe6879e94, Offset: 0xad8
 // Size: 0xe2
@@ -127,7 +127,7 @@ function function_795f4e6() {
     }
 }
 
-// Namespace namespace_bc3b809c
+// Namespace zm_genesis_radios
 // Params 0, eflags: 0x1 linked
 // Checksum 0x259a6fe9, Offset: 0xbc8
 // Size: 0x174
@@ -147,7 +147,7 @@ function function_35f4f25f() {
     }
 }
 
-// Namespace namespace_bc3b809c
+// Namespace zm_genesis_radios
 // Params 1, eflags: 0x1 linked
 // Checksum 0x81be40bc, Offset: 0xd48
 // Size: 0x1b4
@@ -172,7 +172,7 @@ function function_66d50897(var_ffc8395e) {
                 if (var_5cd02106 > 0) {
                     var_269117b2 = var_5cd02106 / 1000;
                     playsoundatposition(str_vo, var_c46d7830);
-                    wait(var_269117b2);
+                    wait var_269117b2;
                 }
                 arrayremovevalue(level.var_66b7ed7e, self);
             }
@@ -180,7 +180,7 @@ function function_66d50897(var_ffc8395e) {
     }
 }
 
-// Namespace namespace_bc3b809c
+// Namespace zm_genesis_radios
 // Params 1, eflags: 0x1 linked
 // Checksum 0xcc885a81, Offset: 0xf08
 // Size: 0xb4
@@ -201,40 +201,40 @@ function function_94b3b616(n_range) {
 
 /#
 
-    // Namespace namespace_bc3b809c
+    // Namespace zm_genesis_radios
     // Params 0, eflags: 0x1 linked
     // Checksum 0x2495d42f, Offset: 0xfc8
     // Size: 0x5bc
     function function_9ef4291() {
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 1, &function_418d5e87);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 1, &function_dda18b8e);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 2, &function_418d5e87);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 2, &function_dda18b8e);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 3, &function_418d5e87);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 3, &function_dda18b8e);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 4, &function_418d5e87);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 4, &function_dda18b8e);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 5, &function_418d5e87);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 5, &function_dda18b8e);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 6, &function_418d5e87);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 6, &function_dda18b8e);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 7, &function_418d5e87);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 7, &function_dda18b8e);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 8, &function_418d5e87);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 8, &function_dda18b8e);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 9, &function_418d5e87);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 9, &function_dda18b8e);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 10, &function_418d5e87);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 10, &function_dda18b8e);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 11, &function_418d5e87);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 11, &function_dda18b8e);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 12, &function_418d5e87);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 12, &function_dda18b8e);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 13, &function_418d5e87);
-        level thread namespace_cb655c88::function_72260d3a("vox_sfx_radio_stem_mob_log_2_0", "vox_sfx_radio_stem_mob_log_2_0", 13, &function_dda18b8e);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x49>", "<dev string:x71>", 1, &function_418d5e87);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x80>", "<dev string:xa4>", 1, &function_dda18b8e);
+        level thread zm_genesis_util::function_72260d3a("<dev string:xb2>", "<dev string:x71>", 2, &function_418d5e87);
+        level thread zm_genesis_util::function_72260d3a("<dev string:xda>", "<dev string:xa4>", 2, &function_dda18b8e);
+        level thread zm_genesis_util::function_72260d3a("<dev string:xfe>", "<dev string:x71>", 3, &function_418d5e87);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x126>", "<dev string:xa4>", 3, &function_dda18b8e);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x14a>", "<dev string:x71>", 4, &function_418d5e87);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x172>", "<dev string:xa4>", 4, &function_dda18b8e);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x196>", "<dev string:x71>", 5, &function_418d5e87);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x1be>", "<dev string:xa4>", 5, &function_dda18b8e);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x1e2>", "<dev string:x71>", 6, &function_418d5e87);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x20a>", "<dev string:xa4>", 6, &function_dda18b8e);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x22e>", "<dev string:x71>", 7, &function_418d5e87);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x256>", "<dev string:xa4>", 7, &function_dda18b8e);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x27a>", "<dev string:x71>", 8, &function_418d5e87);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x2a2>", "<dev string:xa4>", 8, &function_dda18b8e);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x2c6>", "<dev string:x71>", 9, &function_418d5e87);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x2ee>", "<dev string:xa4>", 9, &function_dda18b8e);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x312>", "<dev string:x71>", 10, &function_418d5e87);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x33a>", "<dev string:xa4>", 10, &function_dda18b8e);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x35e>", "<dev string:x71>", 11, &function_418d5e87);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x386>", "<dev string:xa4>", 11, &function_dda18b8e);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x3aa>", "<dev string:x71>", 12, &function_418d5e87);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x3d2>", "<dev string:xa4>", 12, &function_dda18b8e);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x3f6>", "<dev string:x71>", 13, &function_418d5e87);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x41e>", "<dev string:xa4>", 13, &function_dda18b8e);
     }
 
-    // Namespace namespace_bc3b809c
+    // Namespace zm_genesis_radios
     // Params 1, eflags: 0x1 linked
     // Checksum 0x76a068ae, Offset: 0x1590
     // Size: 0x34
@@ -242,19 +242,19 @@ function function_94b3b616(n_range) {
         level.var_1ee7893[n_val - 1] thread function_66d50897();
     }
 
-    // Namespace namespace_bc3b809c
+    // Namespace zm_genesis_radios
     // Params 1, eflags: 0x1 linked
     // Checksum 0xe19ea38b, Offset: 0x15d0
     // Size: 0x11c
     function function_418d5e87(n_val) {
-        str_dest = "vox_sfx_radio_stem_mob_log_2_0" + n_val;
+        str_dest = "<dev string:x442>" + n_val;
         s_dest = struct::get(str_dest);
         if (isdefined(s_dest)) {
             player = level.activeplayers[0];
-            var_5d8a4d6d = util::spawn_model("vox_sfx_radio_stem_mob_log_2_0", player.origin, player.angles);
+            var_5d8a4d6d = util::spawn_model("<dev string:x454>", player.origin, player.angles);
             player linkto(var_5d8a4d6d);
             var_5d8a4d6d.origin = s_dest.origin;
-            wait(0.5);
+            wait 0.5;
             player unlink();
             var_5d8a4d6d delete();
         }

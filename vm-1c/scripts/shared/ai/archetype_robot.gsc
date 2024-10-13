@@ -349,11 +349,11 @@ function robotcalcproceduraltraversal(entity, asmstatename) {
         traversal.speedoncurve *= 1.2;
     }
     /#
-        recordline(traversal.startpoint1, traversal.startpoint2, (1, 0.5, 0), "robotStepOutAction", entity);
-        recordline(traversal.startpoint1, traversal.endpoint1, (1, 0.5, 0), "robotStepOutAction", entity);
-        recordline(traversal.endpoint1, traversal.endpoint2, (1, 0.5, 0), "robotStepOutAction", entity);
-        recordline(traversal.startpoint2, traversal.endpoint2, (1, 0.5, 0), "robotStepOutAction", entity);
-        record3dtext(traversal.abslengthtoend, traversal.endpoint1 + (0, 0, 12), (1, 0.5, 0), "robotStepOutAction", entity);
+        recordline(traversal.startpoint1, traversal.startpoint2, (1, 0.5, 0), "<dev string:x28>", entity);
+        recordline(traversal.startpoint1, traversal.endpoint1, (1, 0.5, 0), "<dev string:x28>", entity);
+        recordline(traversal.endpoint1, traversal.endpoint2, (1, 0.5, 0), "<dev string:x28>", entity);
+        recordline(traversal.startpoint2, traversal.endpoint2, (1, 0.5, 0), "<dev string:x28>", entity);
+        record3dtext(traversal.abslengthtoend, traversal.endpoint1 + (0, 0, 12), (1, 0.5, 0), "<dev string:x28>", entity);
     #/
     segments = 10;
     previouspoint = traversal.startpoint1;
@@ -362,7 +362,7 @@ function robotcalcproceduraltraversal(entity, asmstatename) {
         t = index / segments;
         nextpoint = calculatecubicbezier(t, traversal.startpoint1, traversal.startpoint2, traversal.endpoint2, traversal.endpoint1);
         /#
-            recordline(previouspoint, nextpoint, (0, 1, 0), "robotStepOutAction", entity);
+            recordline(previouspoint, nextpoint, (0, 1, 0), "<dev string:x28>", entity);
         #/
         traversal.curvelength += distance(previouspoint, nextpoint);
         previouspoint = nextpoint;
@@ -477,7 +477,7 @@ function private mocomprobotstartwallrunupdate(entity, mocompanim, mocompanimble
         forwardpositiononwall = getclosestpointonnavmesh(positiononwall + movedirection * 12, 30, 0);
         anglestoend = vectortoangles(forwardpositiononwall - positiononwall);
         /#
-            recordline(positiononwall, forwardpositiononwall, (1, 0, 0), "robotStepOutAction", entity);
+            recordline(positiononwall, forwardpositiononwall, (1, 0, 0), "<dev string:x28>", entity);
         #/
         entity orientmode("face angle", anglestoend[1]);
     }
@@ -527,10 +527,10 @@ function private mocomprobotstarttraversalinit(entity, mocompanim, mocompanimble
             movedirection *= -1;
         }
         /#
-            recordline(endnode.origin, endnode.origin + facenormal * 20, (1, 0, 0), "robotStepOutAction", entity);
+            recordline(endnode.origin, endnode.origin + facenormal * 20, (1, 0, 0), "<dev string:x28>", entity);
         #/
         /#
-            recordline(endnode.origin, endnode.origin + movedirection * 20, (1, 0, 0), "robotStepOutAction", entity);
+            recordline(endnode.origin, endnode.origin + movedirection * 20, (1, 0, 0), "<dev string:x28>", entity);
         #/
         angles = vectortoangles(movedirection);
         entity orientmode("face angle", angles[1]);
@@ -658,11 +658,11 @@ function private _calculatewallrundirection(startposition, endposition) {
     entity = self;
     facenormal = getnavmeshfacenormal(endposition, 30);
     /#
-        recordline(startposition, endposition, (1, 0.5, 0), "robotStepOutAction", entity);
+        recordline(startposition, endposition, (1, 0.5, 0), "<dev string:x28>", entity);
     #/
     if (isdefined(facenormal)) {
         /#
-            recordline(endposition, endposition + facenormal * 12, (1, 0.5, 0), "robotStepOutAction", entity);
+            recordline(endposition, endposition + facenormal * 12, (1, 0.5, 0), "<dev string:x28>", entity);
         #/
         angles = vectortoangles(facenormal);
         right = anglestoright(angles);
@@ -823,55 +823,55 @@ function private archetyperobotblackboardinit() {
     blackboard::registerblackboardattribute(self, "_locomotion_speed", "locomotion_speed_sprint", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("robotStepOutAction");
+            self trackblackboardattribute("<dev string:x33>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_mind_control", "normal", &robotismindcontrolled);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("robotStepOutAction");
+            self trackblackboardattribute("<dev string:x45>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_move_mode", "normal", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("robotStepOutAction");
+            self trackblackboardattribute("<dev string:x53>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_gibbed_limbs", undefined, &function_4ab7ac39);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("robotStepOutAction");
+            self trackblackboardattribute("<dev string:x5e>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_robot_jump_direction", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("robotStepOutAction");
+            self trackblackboardattribute("<dev string:x6c>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_robot_locomotion_type", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("robotStepOutAction");
+            self trackblackboardattribute("<dev string:x82>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_robot_traversal_type", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("robotStepOutAction");
+            self trackblackboardattribute("<dev string:x99>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_robot_wallrun_direction", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("robotStepOutAction");
+            self trackblackboardattribute("<dev string:xaf>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_robot_mode", "normal", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("robotStepOutAction");
+            self trackblackboardattribute("<dev string:xc8>");
         #/
     }
     entity.___archetypeonanimscriptedcallback = &archetyperobotonanimscriptedcallback;
@@ -1040,7 +1040,7 @@ function robotcanpreemptivejuke(entity) {
     if (distancesquared(entity.origin, entity.enemy.origin) < jukemaxdistance * jukemaxdistance) {
         angledifference = absangleclamp180(entity.angles[1] - entity.enemy.angles[1]);
         /#
-            record3dtext(angledifference, entity.origin + (0, 0, 5), (0, 1, 0), "robotStepOutAction");
+            record3dtext(angledifference, entity.origin + (0, 0, 5), (0, 1, 0), "<dev string:x28>");
         #/
         if (angledifference > -121) {
             enemyangles = entity.enemy getgunangles();
@@ -1048,7 +1048,7 @@ function robotcanpreemptivejuke(entity) {
             forward = anglestoforward(enemyangles);
             dotproduct = abs(vectordot(vectornormalize(toenemy), forward));
             /#
-                record3dtext(acos(dotproduct), entity.origin + (0, 0, 10), (0, 1, 0), "robotStepOutAction");
+                record3dtext(acos(dotproduct), entity.origin + (0, 0, 10), (0, 1, 0), "<dev string:x28>");
             #/
             if (dotproduct > 0.9848) {
                 return robotcanjuke(entity);
@@ -1135,11 +1135,11 @@ function private robotlocomotionspeed() {
     entity = self;
     if (robotismindcontrolled() == "mind_controlled") {
         switch (ai::getaiattribute(entity, "rogue_control_speed")) {
-        case 167:
+        case "walk":
             return "locomotion_speed_walk";
-        case 165:
+        case "run":
             return "locomotion_speed_run";
-        case 166:
+        case "sprint":
             return "locomotion_speed_sprint";
         }
     } else if (ai::getaiattribute(entity, "sprint")) {
@@ -1503,8 +1503,8 @@ function private canmovetoenemycondition(entity) {
     findpathresult = entity findpath(positiononnavmesh, enemypositiononnavmesh, 1, 0);
     /#
         if (!findpathresult) {
-            record3dtext("robotStepOutAction", enemypositiononnavmesh + (0, 0, 5), (1, 0.5, 0), "robotStepOutAction");
-            recordline(positiononnavmesh, enemypositiononnavmesh, (1, 0.5, 0), "robotStepOutAction", entity);
+            record3dtext("<dev string:xd4>", enemypositiononnavmesh + (0, 0, 5), (1, 0.5, 0), "<dev string:x28>");
+            recordline(positiononnavmesh, enemypositiononnavmesh, (1, 0.5, 0), "<dev string:x28>", entity);
         }
     #/
     return findpathresult;
@@ -1621,9 +1621,9 @@ function private movetoplayerupdate(entity, asmstatename) {
             if (distancesquared(entity.origin, entity.lastvalidenemypos) > -16 * -16) {
                 path = entity calcapproximatepathtoposition(entity.lastvalidenemypos, 0);
                 /#
-                    if (getdvarint("robotStepOutAction")) {
+                    if (getdvarint("<dev string:xdc>")) {
                         for (index = 1; index < path.size; index++) {
-                            recordline(path[index - 1], path[index], (1, 0.5, 0), "robotStepOutAction", entity);
+                            recordline(path[index - 1], path[index], (1, 0.5, 0), "<dev string:x28>", entity);
                         }
                     }
                 #/
@@ -1635,7 +1635,7 @@ function private movetoplayerupdate(entity, asmstatename) {
                         remaininglength = deviationdistance - segmentlength;
                         seedposition = path[index - 1] + vectornormalize(path[index] - path[index - 1]) * remaininglength;
                         /#
-                            recordcircle(seedposition, 2, (1, 0.5, 0), "robotStepOutAction", entity);
+                            recordcircle(seedposition, 2, (1, 0.5, 0), "<dev string:x28>", entity);
                         #/
                         innerzigzagradius = 0;
                         outerzigzagradius = 64;
@@ -1932,7 +1932,7 @@ function private _robotcoverposition(entity) {
     }
     shouldlookforbettercover = !shouldusecovernode || itsbeenawhile || !isatscriptgoal;
     /#
-        recordenttext("robotStepOutAction" + shouldusecovernode + "robotStepOutAction" + itsbeenawhile + "robotStepOutAction" + isatscriptgoal, entity, shouldlookforbettercover ? (0, 1, 0) : (1, 0, 0), "robotStepOutAction");
+        recordenttext("<dev string:xeb>" + shouldusecovernode + "<dev string:x118>" + itsbeenawhile + "<dev string:x128>" + isatscriptgoal, entity, shouldlookforbettercover ? (0, 1, 0) : (1, 0, 0), "<dev string:x28>");
     #/
     if (shouldlookforbettercover && isdefined(entity.enemy) && !entity.keepclaimednode) {
         transitionrunning = entity asmistransitionrunning();
@@ -2130,10 +2130,10 @@ function private _robotguardposition(entity) {
 // Size: 0x28e
 function private robotpositionservice(entity) {
     /#
-        if (getdvarint("robotStepOutAction") && isdefined(entity.enemy)) {
+        if (getdvarint("<dev string:x139>") && isdefined(entity.enemy)) {
             lastknownpos = entity lastknownpos(entity.enemy);
-            recordline(entity.origin, lastknownpos, (1, 0.5, 0), "robotStepOutAction", entity);
-            record3dtext("robotStepOutAction", lastknownpos + (0, 0, 5), (1, 0.5, 0), "robotStepOutAction");
+            recordline(entity.origin, lastknownpos, (1, 0.5, 0), "<dev string:x28>", entity);
+            record3dtext("<dev string:x14b>", lastknownpos + (0, 0, 5), (1, 0.5, 0), "<dev string:x28>");
         }
     #/
     if (!isalive(entity)) {
@@ -2277,13 +2277,13 @@ function private robottryreacquireservice(entity) {
 // Size: 0xc8
 function private takeoverinitialize(entity, asmstatename) {
     switch (entity ai::get_behavior_attribute("rogue_control")) {
-    case 196:
+    case "level_1":
         entity robotsoldierserverutils::forcerobotsoldiermindcontrollevel1();
         break;
-    case 195:
+    case "level_2":
         entity robotsoldierserverutils::forcerobotsoldiermindcontrollevel2();
         break;
-    case 189:
+    case "level_3":
         entity robotsoldierserverutils::forcerobotsoldiermindcontrollevel3();
         break;
     }
@@ -2297,8 +2297,8 @@ function private takeoverinitialize(entity, asmstatename) {
 // Size: 0x72
 function private takeoverterminate(entity, asmstatename) {
     switch (entity ai::get_behavior_attribute("rogue_control")) {
-    case 195:
-    case 189:
+    case "level_2":
+    case "level_3":
         entity thread shared::dropaiweapon();
         break;
     }
@@ -2620,10 +2620,10 @@ function private robotdamageoverride(inflictor, attacker, damage, flags, meansof
     }
     if (weapon.name == "sticky_grenade") {
         switch (meansofdamage) {
-        case 230:
+        case "MOD_IMPACT":
             entity.stuckwithstickygrenade = 1;
             break;
-        case 192:
+        case "MOD_GRENADE_SPLASH":
             if (isdefined(entity.stuckwithstickygrenade) && entity.stuckwithstickygrenade) {
                 damage = entity.health;
             }
@@ -2713,8 +2713,8 @@ function private robotsoldierspawnsetup() {
     gibserverutils::togglespawngibs(entity, 1);
     clientfield::set("robot_mind_control", 0);
     /#
-        if (getdvarint("robotStepOutAction")) {
-            entity ai::set_behavior_attribute("robotStepOutAction", "robotStepOutAction");
+        if (getdvarint("<dev string:x158>")) {
+            entity ai::set_behavior_attribute("<dev string:x170>", "<dev string:x17b>");
         }
     #/
     entity thread cleanupequipment(entity);
@@ -2726,19 +2726,19 @@ function private robotsoldierspawnsetup() {
     aiutility::addaioverridekilledcallback(entity, &robotgibdeathoverride);
     aiutility::addaioverridekilledcallback(entity, &robotdestructdeathoverride);
     /#
-        if (getdvarint("robotStepOutAction") == 1) {
-            entity ai::set_behavior_attribute("robotStepOutAction", "robotStepOutAction");
-        } else if (getdvarint("robotStepOutAction") == 2) {
-            entity ai::set_behavior_attribute("robotStepOutAction", "robotStepOutAction");
-        } else if (getdvarint("robotStepOutAction") == 3) {
-            entity ai::set_behavior_attribute("robotStepOutAction", "robotStepOutAction");
+        if (getdvarint("<dev string:x186>") == 1) {
+            entity ai::set_behavior_attribute("<dev string:x19b>", "<dev string:x1a9>");
+        } else if (getdvarint("<dev string:x186>") == 2) {
+            entity ai::set_behavior_attribute("<dev string:x19b>", "<dev string:x1b1>");
+        } else if (getdvarint("<dev string:x186>") == 3) {
+            entity ai::set_behavior_attribute("<dev string:x19b>", "<dev string:x1b9>");
         }
-        if (getdvarint("robotStepOutAction") == 1) {
-            entity ai::set_behavior_attribute("robotStepOutAction", "robotStepOutAction");
-        } else if (getdvarint("robotStepOutAction") == 2) {
-            entity ai::set_behavior_attribute("robotStepOutAction", "robotStepOutAction");
-        } else if (getdvarint("robotStepOutAction") == 3) {
-            entity ai::set_behavior_attribute("robotStepOutAction", "robotStepOutAction");
+        if (getdvarint("<dev string:x1c1>") == 1) {
+            entity ai::set_behavior_attribute("<dev string:x19b>", "<dev string:x1db>");
+        } else if (getdvarint("<dev string:x1c1>") == 2) {
+            entity ai::set_behavior_attribute("<dev string:x19b>", "<dev string:x1ea>");
+        } else if (getdvarint("<dev string:x1c1>") == 3) {
+            entity ai::set_behavior_attribute("<dev string:x19b>", "<dev string:x1f9>");
         }
     #/
     if (getdvarint("ai_robotForceCrawler") == 1) {
@@ -2770,11 +2770,11 @@ function private robotgivewasp(entity) {
 // Size: 0x132
 function private robotdeploywasp(entity) {
     entity endon(#"death");
-    wait(randomfloatrange(7, 10));
+    wait randomfloatrange(7, 10);
     if (isdefined(entity) && isdefined(entity.wasp)) {
         spawnoffset = (5, -15, 0);
         while (!ispointinnavvolume(entity.wasp.origin + spawnoffset, "small volume")) {
-            wait(1);
+            wait 1;
         }
         entity.wasp unlink();
         wasp = spawnvehicle("spawner_bo3_wasp_enemy", entity.wasp.origin + spawnoffset, (0, 0, 0));
@@ -2789,7 +2789,7 @@ function private robotdeploywasp(entity) {
 // Size: 0x44
 function private rapsdetonatecountdown(entity) {
     entity endon(#"death");
-    wait(randomfloatrange(20, 30));
+    wait randomfloatrange(20, 30);
     raps::detonate();
 }
 
@@ -2946,12 +2946,12 @@ function randomgibroguerobot(entity) {
 // Size: 0x176
 function roguecontrolattributecallback(entity, attribute, oldvalue, value) {
     switch (value) {
-    case 252:
+    case "forced_level_1":
         if (entity.controllevel <= 0) {
             forcerobotsoldiermindcontrollevel1();
         }
         break;
-    case 253:
+    case "forced_level_2":
         if (entity.controllevel <= 1) {
             forcerobotsoldiermindcontrollevel2();
             destructserverutils::togglespawngibs(entity, 0);
@@ -2960,7 +2960,7 @@ function roguecontrolattributecallback(entity, attribute, oldvalue, value) {
             }
         }
         break;
-    case 254:
+    case "forced_level_3":
         if (entity.controllevel <= 2) {
             forcerobotsoldiermindcontrollevel3();
             destructserverutils::togglespawngibs(entity, 0);
@@ -2983,16 +2983,16 @@ function robotmovemodeattributecallback(entity, attribute, oldvalue, value) {
         entity.guardposition = undefined;
     }
     switch (value) {
-    case 132:
+    case "normal":
         break;
-    case 256:
+    case "rambo":
         entity.ignorepathenemyfightdist = 1;
         break;
-    case 160:
+    case "marching":
         entity.ignorepathenemyfightdist = 1;
         blackboard::setblackboardattribute(entity, "_move_mode", "marching");
         break;
-    case 172:
+    case "rusher":
         if (!entity ai::get_behavior_attribute("can_become_rusher")) {
             entity ai::set_behavior_attribute("move_mode", oldvalue);
         }
@@ -3012,13 +3012,13 @@ function robotforcecrawler(entity, attribute, oldvalue, value) {
         return;
     }
     switch (value) {
-    case 132:
+    case "normal":
         return;
-    case 235:
+    case "gib_legs":
         gibserverutils::togglespawngibs(entity, 1);
         destructserverutils::togglespawngibs(entity, 1);
         break;
-    case 237:
+    case "remove_legs":
         gibserverutils::togglespawngibs(entity, 0);
         destructserverutils::togglespawngibs(entity, 0);
         break;
@@ -3069,13 +3069,13 @@ function roguecontrolforcegoalattributecallback(entity, attribute, oldvalue, val
 // Size: 0xc6
 function roguecontrolspeedattributecallback(entity, attribute, oldvalue, value) {
     switch (value) {
-    case 167:
+    case "walk":
         blackboard::setblackboardattribute(entity, "_locomotion_speed", "locomotion_speed_walk");
         break;
-    case 165:
+    case "run":
         blackboard::setblackboardattribute(entity, "_locomotion_speed", "locomotion_speed_run");
         break;
-    case 166:
+    case "sprint":
         blackboard::setblackboardattribute(entity, "_locomotion_speed", "locomotion_speed_sprint");
         break;
     }
@@ -3087,10 +3087,10 @@ function roguecontrolspeedattributecallback(entity, attribute, oldvalue, value) 
 // Size: 0x72
 function robottraversalattributecallback(entity, attribute, oldvalue, value) {
     switch (value) {
-    case 132:
+    case "normal":
         entity.manualtraversemode = 0;
         break;
-    case 109:
+    case "procedural":
         entity.manualtraversemode = 1;
         break;
     }

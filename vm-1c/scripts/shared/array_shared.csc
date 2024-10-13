@@ -108,8 +108,8 @@ function notify_all(&array, str_notify) {
 // Checksum 0xe0409060, Offset: 0x610
 // Size: 0x4cc
 function thread_all(&entities, func, arg1, arg2, arg3, arg4, arg5, arg6) {
-    assert(isdefined(entities), "<unknown string>");
-    assert(isdefined(func), "<unknown string>");
+    assert(isdefined(entities), "<dev string:x28>");
+    assert(isdefined(func), "<dev string:x5b>");
     if (isarray(entities)) {
         if (isdefined(arg6)) {
             foreach (ent in entities) {
@@ -150,8 +150,8 @@ function thread_all(&entities, func, arg1, arg2, arg3, arg4, arg5, arg6) {
 // Checksum 0x25d9a24f, Offset: 0xae8
 // Size: 0x16c
 function thread_all_ents(&entities, func, arg1, arg2, arg3, arg4, arg5) {
-    assert(isdefined(entities), "<unknown string>");
-    assert(isdefined(func), "<unknown string>");
+    assert(isdefined(entities), "<dev string:x8a>");
+    assert(isdefined(func), "<dev string:xc2>");
     if (isarray(entities)) {
         if (entities.size) {
             keys = getarraykeys(entities);
@@ -169,8 +169,8 @@ function thread_all_ents(&entities, func, arg1, arg2, arg3, arg4, arg5) {
 // Checksum 0x36deb30, Offset: 0xc60
 // Size: 0x4cc
 function run_all(&entities, func, arg1, arg2, arg3, arg4, arg5, arg6) {
-    assert(isdefined(entities), "<unknown string>");
-    assert(isdefined(func), "<unknown string>");
+    assert(isdefined(entities), "<dev string:xf6>");
+    assert(isdefined(func), "<dev string:x126>");
     if (isarray(entities)) {
         if (isdefined(arg6)) {
             foreach (ent in entities) {
@@ -309,7 +309,7 @@ function flagsys_wait(&array, str_flag) {
 }
 
 // Namespace array
-// Params 2, eflags: 0x21 linked
+// Params 2, eflags: 0x21 linked variadic
 // Checksum 0x1733a161, Offset: 0x15e0
 // Size: 0x138
 function flagsys_wait_any_flag(&array, ...) {
@@ -466,8 +466,8 @@ function remove_keys(array) {
 // Checksum 0xc64da545, Offset: 0x1da0
 // Size: 0xaa
 function swap(&array, index1, index2) {
-    assert(index1 < array.size, "<unknown string>");
-    assert(index2 < array.size, "<unknown string>");
+    assert(index1 < array.size, "<dev string:x152>");
+    assert(index2 < array.size, "<dev string:x16e>");
     temp = array[index1];
     array[index1] = array[index2];
     array[index2] = temp;
@@ -539,7 +539,7 @@ function function_b02c2d9b(org, &array, dist) {
     if (!isdefined(dist)) {
         dist = undefined;
     }
-    assert(0, "<unknown string>");
+    assert(0, "<dev string:x18a>");
 }
 
 // Namespace array
@@ -550,7 +550,7 @@ function function_8e7b4ab7(org, &array, dist) {
     if (!isdefined(dist)) {
         dist = undefined;
     }
-    assert(0, "<unknown string>");
+    assert(0, "<dev string:x1be>");
 }
 
 // Namespace array
@@ -776,16 +776,16 @@ function merge(left, right, func_sort, param) {
 // Checksum 0x69a07e96, Offset: 0x2b50
 // Size: 0x1b4
 function spread_all(&entities, func, arg1, arg2, arg3, arg4, arg5) {
-    assert(isdefined(entities), "<unknown string>");
-    assert(isdefined(func), "<unknown string>");
+    assert(isdefined(entities), "<dev string:x1f3>");
+    assert(isdefined(func), "<dev string:x22b>");
     if (isarray(entities)) {
         foreach (ent in entities) {
             util::single_thread(ent, func, arg1, arg2, arg3, arg4, arg5);
-            wait(randomfloatrange(0.0666667, 0.133333));
+            wait randomfloatrange(0.0666667, 0.133333);
         }
         return;
     }
     util::single_thread(entities, func, arg1, arg2, arg3, arg4, arg5);
-    wait(randomfloatrange(0.0666667, 0.133333));
+    wait randomfloatrange(0.0666667, 0.133333);
 }
 

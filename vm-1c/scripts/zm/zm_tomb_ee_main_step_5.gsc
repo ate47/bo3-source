@@ -14,9 +14,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_39638fa5;
+#namespace zm_tomb_ee_main_step_5;
 
-// Namespace namespace_39638fa5
+// Namespace zm_tomb_ee_main_step_5
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7394ab09, Offset: 0x470
 // Size: 0x54
@@ -24,7 +24,7 @@ function init() {
     namespace_6e97c459::function_5a90ed82("little_girl_lost", "step_5", &init_stage, &function_7747c56, &function_cc3f3f6a);
 }
 
-// Namespace namespace_39638fa5
+// Namespace zm_tomb_ee_main_step_5
 // Params 0, eflags: 0x1 linked
 // Checksum 0x119a68a1, Offset: 0x4d0
 // Size: 0x34
@@ -34,13 +34,13 @@ function init_stage() {
     level.zombie_ai_limit--;
 }
 
-// Namespace namespace_39638fa5
+// Namespace zm_tomb_ee_main_step_5
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb43ebf60, Offset: 0x510
 // Size: 0x94
 function function_7747c56() {
     /#
-        iprintln(level.var_ca733eed + "zmb_zombieblood_3rd_plane_loop");
+        iprintln(level.var_ca733eed + "<dev string:x28>");
     #/
     level thread function_4100e141();
     level flag::wait_till("ee_maxis_drone_retrieved");
@@ -48,7 +48,7 @@ function function_7747c56() {
     namespace_6e97c459::function_2f3ced1f("little_girl_lost", level.var_ca733eed);
 }
 
-// Namespace namespace_39638fa5
+// Namespace zm_tomb_ee_main_step_5
 // Params 1, eflags: 0x1 linked
 // Checksum 0xae415ba0, Offset: 0x5b0
 // Size: 0x22
@@ -57,7 +57,7 @@ function function_cc3f3f6a(success) {
     level notify(#"hash_8b0d379e");
 }
 
-// Namespace namespace_39638fa5
+// Namespace zm_tomb_ee_main_step_5
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbe347344, Offset: 0x5e0
 // Size: 0x514
@@ -107,7 +107,7 @@ function function_4100e141() {
     level thread function_6337b233(var_239be310.origin, var_239be310.angles);
 }
 
-// Namespace namespace_39638fa5
+// Namespace zm_tomb_ee_main_step_5
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd6241b94, Offset: 0xb00
 // Size: 0xbc
@@ -116,12 +116,12 @@ function function_dd080460(var_239be310) {
     sndent playloopsound("zmb_zombieblood_3rd_loop_other");
     while (isdefined(var_239be310) && isalive(var_239be310)) {
         sndent.origin = var_239be310.origin;
-        wait(0.3);
+        wait 0.3;
     }
     sndent delete();
 }
 
-// Namespace namespace_39638fa5
+// Namespace zm_tomb_ee_main_step_5
 // Params 1, eflags: 0x1 linked
 // Checksum 0x77b8383, Offset: 0xbc8
 // Size: 0x9c
@@ -133,7 +133,7 @@ function function_1ec0c311(s_start) {
     }
 }
 
-// Namespace namespace_39638fa5
+// Namespace zm_tomb_ee_main_step_5
 // Params 15, eflags: 0x1 linked
 // Checksum 0x6a7b560e, Offset: 0xc70
 // Size: 0x104
@@ -147,7 +147,7 @@ function function_a43eafbe(e_inflictor, e_attacker, n_damage, n_dflags, str_mean
     return n_damage;
 }
 
-// Namespace namespace_39638fa5
+// Namespace zm_tomb_ee_main_step_5
 // Params 2, eflags: 0x1 linked
 // Checksum 0x7cf6eca9, Offset: 0xd80
 // Size: 0x19c
@@ -169,7 +169,7 @@ function function_6337b233(v_origin, v_angles) {
     zm_unitrigger::unregister_unitrigger(unitrigger_stub);
 }
 
-// Namespace namespace_39638fa5
+// Namespace zm_tomb_ee_main_step_5
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4af01401, Offset: 0xf28
 // Size: 0xd0

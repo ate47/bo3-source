@@ -25,7 +25,7 @@
                 self.barricade_enter = 0;
             }
             player = getplayers()[0];
-            if (isdefined(player) && player buttonpressed("<unknown string>")) {
+            if (isdefined(player) && player buttonpressed("<dev string:x28>")) {
                 if (self.iscurrentlypuppet) {
                     if (zm_utility::check_point_in_playable_area(self.goalpos) && !zm_utility::check_point_in_playable_area(self.origin)) {
                         self.backedupgoal = self.goalpos;
@@ -36,7 +36,7 @@
                     }
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 

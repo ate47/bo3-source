@@ -3,9 +3,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_40b4687d;
+#namespace _zm_weap_tesla;
 
-// Namespace namespace_40b4687d
+// Namespace _zm_weap_tesla
 // Params 0, eflags: 0x1 linked
 // Checksum 0x39173044, Offset: 0x340
 // Size: 0x184
@@ -27,7 +27,7 @@ function init() {
     level thread function_2727564b();
 }
 
-// Namespace namespace_40b4687d
+// Namespace _zm_weap_tesla
 // Params 0, eflags: 0x1 linked
 // Checksum 0x138c1440, Offset: 0x4d0
 // Size: 0x10e
@@ -45,7 +45,7 @@ function player_init() {
     }
 }
 
-// Namespace namespace_40b4687d
+// Namespace _zm_weap_tesla
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8c079fe, Offset: 0x5e8
 // Size: 0x1b8
@@ -53,7 +53,7 @@ function tesla_fx_rail(localclientnum) {
     self endon(#"disconnect");
     self endon(#"entityshutdown");
     for (;;) {
-        wait(randomfloatrange(8, 12));
+        wait randomfloatrange(8, 12);
         if (!level.var_f1cff8ac[localclientnum]) {
             continue;
         }
@@ -79,7 +79,7 @@ function tesla_fx_rail(localclientnum) {
     }
 }
 
-// Namespace namespace_40b4687d
+// Namespace _zm_weap_tesla
 // Params 1, eflags: 0x1 linked
 // Checksum 0x706565e0, Offset: 0x7a8
 // Size: 0x350
@@ -87,7 +87,7 @@ function tesla_fx_tube(localclientnum) {
     self endon(#"disconnect");
     self endon(#"entityshutdown");
     for (;;) {
-        wait(0.1);
+        wait 0.1;
         if (!level.var_f1cff8ac[localclientnum]) {
             continue;
         }
@@ -149,7 +149,7 @@ function tesla_fx_tube(localclientnum) {
     }
 }
 
-// Namespace namespace_40b4687d
+// Namespace _zm_weap_tesla
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6b077315, Offset: 0xb00
 // Size: 0x7a
@@ -157,34 +157,34 @@ function function_2727564b() {
     for (;;) {
         localclientnum, note = level waittill(#"notetrack");
         switch (note) {
-        case 22:
+        case "tesla_play_fx_off":
             level.var_f1cff8ac[localclientnum] = 0;
             break;
-        case 23:
+        case "tesla_play_fx_on":
             level.var_f1cff8ac[localclientnum] = 1;
             break;
         }
     }
 }
 
-// Namespace namespace_40b4687d
+// Namespace _zm_weap_tesla
 // Params 1, eflags: 0x1 linked
 // Checksum 0x10ee4991, Offset: 0xb88
 // Size: 0xa0
 function function_42b7c319(localclientnum) {
     for (;;) {
-        level waittill(#"hash_d323b64a");
+        level waittill(#"TGH");
         currentweapon = getcurrentweapon(localclientnum);
         if (currentweapon == level.var_168d703f || currentweapon == level.var_d22a87eb) {
             playsound(localclientnum, "wpn_tesla_happy", (0, 0, 0));
             level.var_c82683aa = 0;
-            wait(2);
+            wait 2;
             level.var_c82683aa = 1;
         }
     }
 }
 
-// Namespace namespace_40b4687d
+// Namespace _zm_weap_tesla
 // Params 1, eflags: 0x1 linked
 // Checksum 0x34b84b69, Offset: 0xc30
 // Size: 0x48
@@ -196,7 +196,7 @@ function function_a99414e8(localclientnum) {
     }
 }
 
-// Namespace namespace_40b4687d
+// Namespace _zm_weap_tesla
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8a8836, Offset: 0xc80
 // Size: 0x7c

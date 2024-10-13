@@ -138,7 +138,7 @@ function function_e8b1e8b2(localclientnum, newval) {
         self evenable(newval);
         return;
     }
-    println("hack_dni_fx");
+    println("<dev string:x28>");
     gadgetsetinfrared(localclientnum, newval);
 }
 
@@ -149,7 +149,7 @@ function function_e8b1e8b2(localclientnum, newval) {
 function function_22ee3552(localclientnum) {
     audio::stoploopat("gdt_oed_loop", (1, 2, 3));
     function_843d23d0(localclientnum);
-    wait(0.016);
+    wait 0.016;
     self function_e8b1e8b2(localclientnum, 0);
     level flag::clear("activate_thermal");
 }
@@ -161,7 +161,7 @@ function function_22ee3552(localclientnum) {
 function function_357cbbf0(localclientnum) {
     self tmodeenable(0);
     self thread function_bcc974a(localclientnum);
-    wait(0.016);
+    wait 0.016;
     level flag::clear("activate_tmode");
 }
 
@@ -186,7 +186,7 @@ function function_a36d7529(lcn, newval) {
     playsound(lcn, "gdt_oed_off", (0, 0, 0));
     audio::stoploopat("gdt_oed_loop", (1, 2, 3));
     function_843d23d0(lcn);
-    wait(0.016);
+    wait 0.016;
     self function_e8b1e8b2(lcn, newval);
     level flag::clear("activate_thermal");
 }
@@ -198,7 +198,7 @@ function function_a36d7529(lcn, newval) {
 function function_ff9664ce(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"entityshutdown");
     level flagsys::wait_till("duplicaterender_registry_ready");
-    assert(isdefined(self), "hack_dni_fx");
+    assert(isdefined(self), "<dev string:x33>");
     if (newval == 0) {
         self.var_de2e098b = 0;
         self set_entity_thermal(localclientnum, 0);
@@ -265,7 +265,7 @@ function function_843d23d0(localclientnum) {
 function function_aa868720(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"entityshutdown");
     level flagsys::wait_till("duplicaterender_registry_ready");
-    assert(isdefined(self), "hack_dni_fx");
+    assert(isdefined(self), "<dev string:x33>");
     if (newval) {
         self duplicate_render::set_item_enemy_equipment(localclientnum, newval);
     }
@@ -413,9 +413,9 @@ function function_9532d33d(lcn, newval) {
 // Size: 0x184
 function function_29cf4c66(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"entityshutdown");
-    assert(isdefined(self), "hack_dni_fx");
+    assert(isdefined(self), "<dev string:x78>");
     level flagsys::wait_till("duplicaterender_registry_ready");
-    assert(isdefined(self), "hack_dni_fx");
+    assert(isdefined(self), "<dev string:x9e>");
     if (newval == 0) {
         self notify(#"hash_1b32b83b");
         self.var_6c4eaf38 = undefined;
@@ -459,7 +459,7 @@ function function_537efcea(localclientnum) {
             self tmodesetflag(2);
             self.var_ac0e7241 = 1;
         }
-        wait(0.016 * randomintrange(1, 10));
+        wait 0.016 * randomintrange(1, 10);
     }
 }
 

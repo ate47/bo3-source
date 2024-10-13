@@ -1,8 +1,8 @@
 #using scripts/shared/flagsys_shared;
 
-#namespace namespace_5b48d6ca;
+#namespace zm_prototype_fx;
 
-// Namespace namespace_5b48d6ca
+// Namespace zm_prototype_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x98208ae6, Offset: 0x1f8
 // Size: 0x2c
@@ -11,7 +11,7 @@ function main() {
     level thread function_f205a5f1();
 }
 
-// Namespace namespace_5b48d6ca
+// Namespace zm_prototype_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd148b8b5, Offset: 0x230
 // Size: 0xaa
@@ -24,7 +24,7 @@ function function_2cef3bdd() {
     level._effect["zombie_grain"] = "misc/fx_zombie_grain_cloud";
 }
 
-// Namespace namespace_5b48d6ca
+// Namespace zm_prototype_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3884262c, Offset: 0x2e8
 // Size: 0x3e

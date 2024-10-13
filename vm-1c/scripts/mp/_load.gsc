@@ -90,7 +90,7 @@
 // Checksum 0x6d2c6807, Offset: 0xce0
 // Size: 0x104
 function main() {
-    assert(isdefined(level.first_frame), "concrete");
+    assert(isdefined(level.first_frame), "<dev string:x28>");
     level._loadstarted = 1;
     setclearanceceiling(30);
     register_clientfields();
@@ -108,8 +108,8 @@ function main() {
 // Checksum 0x71cace33, Offset: 0xdf0
 // Size: 0xba
 function setfootstepeffect(name, fx) {
-    assert(isdefined(name), "concrete");
-    assert(isdefined(fx), "concrete");
+    assert(isdefined(name), "<dev string:x54>");
+    assert(isdefined(fx), "<dev string:x7e>");
     if (!isdefined(anim.optionalstepeffects)) {
         anim.optionalstepeffects = [];
     }

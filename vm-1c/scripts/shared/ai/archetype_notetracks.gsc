@@ -163,7 +163,7 @@ function private notetrackstartragdoll(entity) {
 // Checksum 0x210ee748, Offset: 0xcd0
 // Size: 0x4c
 function _delayedragdoll(entity) {
-    wait(0.25);
+    wait 0.25;
     if (isdefined(entity) && !entity isragdoll()) {
         entity startragdoll();
     }

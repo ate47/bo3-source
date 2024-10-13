@@ -9,7 +9,7 @@
     // Checksum 0x6fedd873, Offset: 0x98
     // Size: 0x34
     function autoexec function_2dc19561() {
-        system::register("<unknown string>", &__init__, undefined, undefined);
+        system::register("<dev string:x28>", &__init__, undefined, undefined);
     }
 
     // Namespace radiant_live_update
@@ -43,7 +43,7 @@
         self endon(#"stop_struct_render");
         while (isdefined(selected_struct) && isdefined(selected_struct.origin)) {
             box(selected_struct.origin, (-16, -16, -16), (16, 16, 16), 0, (1, 0.4, 0.4));
-            wait(0.01);
+            wait 0.01;
         }
     }
 

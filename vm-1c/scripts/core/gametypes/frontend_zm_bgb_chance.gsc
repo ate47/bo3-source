@@ -25,16 +25,16 @@
     // Checksum 0xaba81fc3, Offset: 0x1d0
     // Size: 0x1bc
     function zm_frontend_bgb_devgui() {
-        setdvar("<unknown string>", "<unknown string>");
-        setdvar("<unknown string>", "<unknown string>");
-        bgb_devgui_base = "<unknown string>";
+        setdvar("<dev string:x28>", "<dev string:x44>");
+        setdvar("<dev string:x45>", "<dev string:x44>");
+        bgb_devgui_base = "<dev string:x62>";
         a_n_amounts = array(1, 5, 10, 100);
         for (i = 0; i < a_n_amounts.size; i++) {
             n_amount = a_n_amounts[i];
-            adddebugcommand(bgb_devgui_base + i + "<unknown string>" + n_amount + "<unknown string>" + n_amount + "<unknown string>");
+            adddebugcommand(bgb_devgui_base + i + "<dev string:x7c>" + n_amount + "<dev string:x84>" + n_amount + "<dev string:x95>");
         }
-        adddebugcommand("<unknown string>" + "<unknown string>" + "<unknown string>" + "<unknown string>" + 1 + "<unknown string>");
-        adddebugcommand("<unknown string>" + "<unknown string>" + "<unknown string>" + "<unknown string>" + 1 + "<unknown string>");
+        adddebugcommand("<dev string:x99>" + "<dev string:xc6>" + "<dev string:x28>" + "<dev string:xca>" + 1 + "<dev string:xcc>");
+        adddebugcommand("<dev string:xcf>" + "<dev string:xc6>" + "<dev string:x45>" + "<dev string:xca>" + 1 + "<dev string:xcc>");
         level thread bgb_devgui_think();
     }
 
@@ -46,29 +46,29 @@
         b_powerboost_toggle = 0;
         b_successfail_toggle = 0;
         for (;;) {
-            n_val_powerboost = getdvarstring("<unknown string>");
-            n_val_successfail = getdvarstring("<unknown string>");
-            if (n_val_powerboost != "<unknown string>") {
+            n_val_powerboost = getdvarstring("<dev string:x28>");
+            n_val_successfail = getdvarstring("<dev string:x45>");
+            if (n_val_powerboost != "<dev string:x44>") {
                 b_powerboost_toggle = !b_powerboost_toggle;
-                level clientfield::set("<unknown string>", b_powerboost_toggle);
+                level clientfield::set("<dev string:xfd>", b_powerboost_toggle);
                 if (b_powerboost_toggle) {
-                    iprintlnbold("<unknown string>");
+                    iprintlnbold("<dev string:x118>");
                 } else {
-                    iprintlnbold("<unknown string>");
+                    iprintlnbold("<dev string:x12e>");
                 }
             }
-            if (n_val_successfail != "<unknown string>") {
+            if (n_val_successfail != "<dev string:x44>") {
                 b_successfail_toggle = !b_successfail_toggle;
-                level clientfield::set("<unknown string>", b_successfail_toggle);
+                level clientfield::set("<dev string:x145>", b_successfail_toggle);
                 if (b_successfail_toggle) {
-                    iprintlnbold("<unknown string>");
+                    iprintlnbold("<dev string:x161>");
                 } else {
-                    iprintlnbold("<unknown string>");
+                    iprintlnbold("<dev string:x16e>");
                 }
             }
-            setdvar("<unknown string>", "<unknown string>");
-            setdvar("<unknown string>", "<unknown string>");
-            wait(0.5);
+            setdvar("<dev string:x28>", "<dev string:x44>");
+            setdvar("<dev string:x45>", "<dev string:x44>");
+            wait 0.5;
         }
     }
 

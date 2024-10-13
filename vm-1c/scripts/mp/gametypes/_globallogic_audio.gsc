@@ -106,7 +106,7 @@ function set_leader_gametype_dialog(startgamedialogkey, starthcgamedialogkey, of
 // Size: 0x15c
 function announce_round_winner(winner, delay) {
     if (delay > 0) {
-        wait(delay);
+        wait delay;
     }
     if (!isdefined(winner) || isplayer(winner)) {
         return;
@@ -130,7 +130,7 @@ function announce_game_winner(winner) {
     if (level.gametype == "fr") {
         return;
     }
-    wait(battlechatter::mpdialog_value("announceWinnerDelay", 0));
+    wait battlechatter::mpdialog_value("announceWinnerDelay", 0);
     if (level.teambased) {
         if (isdefined(level.teams[winner])) {
             leader_dialog("gameWon", winner);
@@ -138,7 +138,7 @@ function announce_game_winner(winner) {
         } else {
             leader_dialog("gameDraw");
         }
-        wait(battlechatter::mpdialog_value("commanderDialogBuffer", 0));
+        wait battlechatter::mpdialog_value("commanderDialogBuffer", 0);
     }
     battlechatter::game_end_vox(winner);
 }
@@ -299,7 +299,7 @@ function wait_for_player_dialog() {
     self endon(#"flush_dialog");
     level endon(#"game_ended");
     while (self.playingdialog) {
-        wait(0.5);
+        wait 0.5;
     }
     self thread play_next_killstreak_dialog();
 }
@@ -361,7 +361,7 @@ function wait_next_killstreak_dialog() {
     self endon(#"disconnect");
     self endon(#"flush_dialog");
     level endon(#"game_ended");
-    wait(battlechatter::mpdialog_value("killstreakDialogBuffer", 0));
+    wait battlechatter::mpdialog_value("killstreakDialogBuffer", 0);
     self thread play_next_killstreak_dialog();
 }
 
@@ -512,7 +512,7 @@ function wait_next_leader_dialog(dialogbuffer) {
     self endon(#"disconnect");
     self endon(#"flush_dialog");
     level endon(#"game_ended");
-    wait(dialogbuffer);
+    wait dialogbuffer;
     self thread play_next_leader_dialog();
 }
 
@@ -522,113 +522,113 @@ function wait_next_leader_dialog(dialogbuffer) {
 // Size: 0x378
 function dialogkey_priority(dialogkey) {
     switch (dialogkey) {
-    case 43:
-    case 38:
-    case 37:
-    case 120:
-    case 121:
-    case 22:
-    case 21:
-    case 26:
-    case 25:
-    case 30:
-    case 29:
-    case 46:
-    case 45:
-    case 34:
-    case 50:
-    case 42:
-    case 41:
-    case 49:
-    case 36:
-    case 35:
-    case 40:
-    case 39:
-    case 119:
-    case 44:
-    case 33:
-    case 48:
-    case 47:
+    case "enemyRapsMultiple":
+    case "enemyRcBomb":
+    case "enemyRcBombMultiple":
+    case "enemyRemoteMissile":
+    case "enemyRemoteMissileMultiple":
+    case "enemyAiTank":
+    case "enemyAiTankMultiple":
+    case "enemyCombatRobot":
+    case "enemyCombatRobotMultiple":
+    case "enemyDart":
+    case "enemyDartMultiple":
+    case "enemyDroneStrike":
+    case "enemyDroneStrikeMultiple":
+    case "enemySentinel":
+    case "enemyHelicopter":
+    case "enemyHelicopterGunner":
+    case "enemyHelicopterGunnerMultiple":
+    case "enemyHelicopterMultiple":
+    case "enemyMicrowaveTurret":
+    case "enemyMicrowaveTurretMultiple":
+    case "enemyPlaneMortar":
+    case "enemyPlaneMortarMultiple":
+    case "enemyPlaneMortarUsed":
+    case "enemyRaps":
+    case "enemySentinelMultiple":
+    case "enemyTurret":
+    case "enemyTurretMultiple":
         return 1;
-    case 122:
-    case 123:
-    case 124:
-    case 125:
-    case 138:
-    case 139:
-    case 140:
-    case 141:
+    case "gameLeadLost":
+    case "gameLeadTaken":
+    case "gameLosing":
+    case "gameWinning":
+    case "nearDrawing":
+    case "nearLosing":
+    case "nearWinning":
+    case "roundEncourageLastPlayer":
         return 1;
-    case 101:
-    case 102:
-    case 104:
-    case 105:
-    case 106:
-    case 107:
-    case 108:
-    case 109:
-    case 110:
-    case 111:
-    case 112:
-    case 113:
-    case 114:
-    case 115:
-    case 116:
-    case 117:
-    case 118:
-    case 103:
-    case 90:
-    case 91:
-    case 92:
-    case 93:
-    case 94:
-    case 95:
-    case 96:
-    case 126:
-    case 127:
-    case 128:
-    case 129:
-    case 130:
-    case 131:
-    case 132:
-    case 133:
-    case 134:
-    case 135:
-    case 136:
-    case 137:
-    case 97:
-    case 98:
-    case 99:
-    case 100:
-    case 142:
-    case 143:
-    case 144:
-    case 145:
-    case 146:
-    case 147:
-    case 148:
-    case 149:
-    case 150:
-    case 151:
-    case 152:
-    case 153:
-    case 154:
-    case 155:
-    case 156:
-    case 157:
-    case 158:
-    case 159:
-    case 160:
-    case 161:
-    case 162:
-    case 163:
-    case 164:
-    case 165:
-    case 166:
-    case 167:
-    case 168:
-    case 169:
-    case 170:
+    case "ctfFriendlyFlagReturned":
+    case "ctfFriendlyFlagTaken":
+    case "domEnemyHasB":
+    case "domEnemyHasC":
+    case "domEnemySecuredA":
+    case "domEnemySecuredB":
+    case "domEnemySecuredC":
+    case "domEnemySecuringA":
+    case "domEnemySecuringB":
+    case "domEnemySecuringC":
+    case "domFriendlySecuredA":
+    case "domFriendlySecuredAll":
+    case "domFriendlySecuredB":
+    case "domFriendlySecuredC":
+    case "domFriendlySecuringA":
+    case "domFriendlySecuringB":
+    case "domFriendlySecuringC":
+    case "domEnemyHasA":
+    case "bombDefused":
+    case "bombEnemyTaken":
+    case "bombFriendlyDropped":
+    case "bombFriendlyTaken":
+    case "bombPlanted":
+    case "ctfEnemyFlagCaptured":
+    case "ctfEnemyFlagDropped":
+    case "hubMoved":
+    case "hubOffline":
+    case "hubOnline":
+    case "hubsMoved":
+    case "hubsOffline":
+    case "hubsOnline":
+    case "kothCaptured":
+    case "kothContested":
+    case "kothLocated":
+    case "kothLost":
+    case "kothOnline":
+    case "kothSecured":
+    case "ctfEnemyFlagReturned":
+    case "ctfEnemyFlagTaken":
+    case "ctfFriendlyFlagCaptured":
+    case "ctfFriendlyFlagDropped":
+    case "sfgRobotCloseAttacker":
+    case "sfgRobotCloseDefender":
+    case "sfgRobotDisabledAttacker":
+    case "sfgRobotDisabledDefender":
+    case "sfgRobotNeedReboot":
+    case "sfgRobotRebootedAttacker":
+    case "sfgRobotRebootedDefender":
+    case "sfgRobotRebootedTowAttacker":
+    case "sfgRobotRebootedTowDefender":
+    case "sfgRobotUnderFire":
+    case "sfgRobotUnderFireNeutral":
+    case "sfgStartAttack":
+    case "sfgStartDefend":
+    case "sfgStartHrAttack":
+    case "sfgStartHrDefend":
+    case "sfgStartTow":
+    case "sfgTheyReturn":
+    case "sfgWeReturn":
+    case "uplOrders":
+    case "uplReset":
+    case "uplTheyDrop":
+    case "uplTheyTake":
+    case "uplTheyUplink":
+    case "uplTheyUplinkRemote":
+    case "uplTransferred":
+    case "uplWeDrop":
+    case "uplWeTake":
+    case "uplWeUplink":
+    case "uplWeUplinkRemote":
         return 1;
     }
     return undefined;
@@ -732,9 +732,9 @@ function play_2d_on_team(alias, team) {
 // Size: 0x2e
 function get_round_switch_dialog(switchtype) {
     switch (switchtype) {
-    case 180:
+    case "halftime":
         return "roundHalftime";
-    case 181:
+    case "overtime":
         return "roundOvertime";
     default:
         return "roundSwitchSides";
@@ -811,19 +811,19 @@ function sndmusicunlock() {
     level waittill(#"game_ended");
     unlockname = undefined;
     switch (game["musicSet"]) {
-    case 194:
+    case "_01":
         unlockname = "mus_dystopia_intro";
         break;
-    case 195:
+    case "_02":
         unlockname = "mus_filter_intro";
         break;
-    case 196:
+    case "_03":
         unlockname = "mus_immersion_intro";
         break;
-    case 197:
+    case "_04":
         unlockname = "mus_ruin_intro";
         break;
-    case 198:
+    case "_05":
         unlockname = "mus_cod_bites_intro";
         break;
     }
@@ -878,7 +878,7 @@ function sndmusictimelimitwatcher() {
             level notify(#"sndmusichalfway");
             return;
         }
-        wait(2);
+        wait 2;
     }
 }
 

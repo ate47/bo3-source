@@ -96,7 +96,7 @@ function sticky_indicator(player, localclientnum) {
     setuimodelvalue(stickyimagemodel, "hud_icon_stuck_semtex");
     player thread function_d3627562(stickyimagemodel);
     while (isdefined(self)) {
-        wait(0.016);
+        wait 0.016;
     }
     setuimodelvalue(stickyimagemodel, "blacktransparent");
     player notify(#"sticky_shutdown");

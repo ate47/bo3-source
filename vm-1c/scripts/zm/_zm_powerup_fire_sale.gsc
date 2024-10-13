@@ -50,7 +50,7 @@ function grab_fire_sale(player) {
 function start_fire_sale(item) {
     if (isdefined(level.custom_firesale_box_leave) && level.custom_firesale_box_leave) {
         while (firesale_chest_is_leaving()) {
-            wait(0.05);
+            wait 0.05;
         }
     }
     if (isdefined(level.zombie_vars["zombie_powerup_fire_sale_on"]) && level.zombie_vars["zombie_powerup_fire_sale_time"] > 0 && level.zombie_vars["zombie_powerup_fire_sale_on"]) {
@@ -68,7 +68,7 @@ function start_fire_sale(item) {
         level.zombie_vars["zombie_powerup_fire_sale_time"] = level.zombie_vars["zombie_powerup_fire_sale_time"] + 30;
     }
     while (level.zombie_vars["zombie_powerup_fire_sale_time"] > 0) {
-        wait(0.05);
+        wait 0.05;
         level.zombie_vars["zombie_powerup_fire_sale_time"] = level.zombie_vars["zombie_powerup_fire_sale_time"] - 0.05;
     }
     level thread check_to_clear_fire_sale();
@@ -82,7 +82,7 @@ function start_fire_sale(item) {
 // Size: 0x2e
 function check_to_clear_fire_sale() {
     while (firesale_chest_is_leaving()) {
-        wait(0.05);
+        wait 0.05;
     }
     level.disable_firesale_drop = undefined;
 }
@@ -112,7 +112,7 @@ function toggle_fire_sale_on() {
         return;
     }
     level thread sndfiresalemusic_start();
-    namespace_c92f7448::function_38b2a067();
+    bgb_machine::function_38b2a067();
     for (i = 0; i < level.chests.size; i++) {
         show_firesale_box = level.chests[i] [[ level._zombiemode_check_firesale_loc_valid_func ]]();
         if (show_firesale_box) {
@@ -129,7 +129,7 @@ function toggle_fire_sale_on() {
     level waittill(#"fire_sale_off");
     waittillframeend();
     level thread sndfiresalemusic_stop();
-    namespace_c92f7448::function_3364cc51();
+    bgb_machine::function_3364cc51();
     for (i = 0; i < level.chests.size; i++) {
         show_firesale_box = level.chests[i] [[ level._zombiemode_check_firesale_loc_valid_func ]]();
         if (show_firesale_box) {
@@ -149,11 +149,11 @@ function toggle_fire_sale_on() {
 function apply_fire_sale_to_chest() {
     if (self.zbarrier getzbarrierpiecestate(1) == "closing") {
         while (self.zbarrier getzbarrierpiecestate(1) == "closing") {
-            wait(0.1);
+            wait 0.1;
         }
         self.zbarrier waittill(#"left");
     }
-    wait(0.1);
+    wait 0.1;
     self thread zm_magicbox::show_chest();
 }
 

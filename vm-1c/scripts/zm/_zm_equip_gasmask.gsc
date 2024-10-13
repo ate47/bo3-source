@@ -8,9 +8,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/callbacks_shared;
 
-#namespace namespace_11fcf241;
+#namespace zm_equip_gasmask;
 
-// Namespace namespace_11fcf241
+// Namespace zm_equip_gasmask
 // Params 0, eflags: 0x2
 // Checksum 0x6efafa2b, Offset: 0x2e8
 // Size: 0x3c
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("zm_equip_gasmask", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_11fcf241
+// Namespace zm_equip_gasmask
 // Params 0, eflags: 0x1 linked
 // Checksum 0x66f61c76, Offset: 0x330
 // Size: 0x12c
@@ -32,7 +32,7 @@ function __init__() {
     level.var_f486078e = getweapon("equip_gasmask");
 }
 
-// Namespace namespace_11fcf241
+// Namespace zm_equip_gasmask
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4c492b5e, Offset: 0x468
 // Size: 0x4c
@@ -42,7 +42,7 @@ function __main__() {
     zm_equipment::include("equip_gasmask");
 }
 
-// Namespace namespace_11fcf241
+// Namespace zm_equip_gasmask
 // Params 0, eflags: 0x1 linked
 // Checksum 0x743cba77, Offset: 0x4c0
 // Size: 0xdc
@@ -57,7 +57,7 @@ function on_player_spawned() {
     self zm_equipment::set_equipment_invisibility_to_player(level.var_f486078e, 0);
 }
 
-// Namespace namespace_11fcf241
+// Namespace zm_equip_gasmask
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc63e9c3d, Offset: 0x5a8
 // Size: 0x160
@@ -88,7 +88,7 @@ function function_7cd9aa57() {
     }
 }
 
-// Namespace namespace_11fcf241
+// Namespace zm_equip_gasmask
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3eeb0a44, Offset: 0x710
 // Size: 0x4ee
@@ -135,7 +135,7 @@ function function_28d41431() {
             self takeweapon(level.var_f486078e);
             self giveweapon(var_f499fcb0);
             self switchtoweapon(var_f499fcb0);
-            wait(0.05);
+            wait 0.05;
             self clientfield::set_to_player("gasmaskoverlay", 0);
             visionset_mgr::deactivate("overlay", "zm_gasmask_postfx", self);
             level clientfield::set("player" + self getentitynumber() + "wearableItem", 0);
@@ -161,7 +161,7 @@ function function_28d41431() {
     }
 }
 
-// Namespace namespace_11fcf241
+// Namespace zm_equip_gasmask
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa52ff89, Offset: 0xc08
 // Size: 0xe8
@@ -185,7 +185,7 @@ function function_4933258e() {
     }
 }
 
-// Namespace namespace_11fcf241
+// Namespace zm_equip_gasmask
 // Params 0, eflags: 0x1 linked
 // Checksum 0x10fd02fc, Offset: 0xcf8
 // Size: 0xe0
@@ -201,7 +201,7 @@ function function_86a7986e() {
     }
 }
 
-// Namespace namespace_11fcf241
+// Namespace zm_equip_gasmask
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd9eafe79, Offset: 0xde0
 // Size: 0x64
@@ -214,7 +214,7 @@ function function_ec63e67() {
     }
 }
 
-// Namespace namespace_11fcf241
+// Namespace zm_equip_gasmask
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8c59d722, Offset: 0xe50
 // Size: 0x22
@@ -224,12 +224,12 @@ function function_7dd87435() {
 
 /#
 
-    // Namespace namespace_11fcf241
+    // Namespace zm_equip_gasmask
     // Params 2, eflags: 0x0
     // Checksum 0x5c06f647, Offset: 0xe80
     // Size: 0x8c
     function function_6af10a60(msg, color) {
-        if (!getdvarint("ZOMBIE_EQUIP_GASMASK_PICKUP_HINT_STRING")) {
+        if (!getdvarint("<dev string:x28>")) {
             return;
         }
         if (!isdefined(color)) {
@@ -240,7 +240,7 @@ function function_7dd87435() {
 
 #/
 
-// Namespace namespace_11fcf241
+// Namespace zm_equip_gasmask
 // Params 4, eflags: 0x1 linked
 // Checksum 0x8a00934, Offset: 0xf18
 // Size: 0xbc

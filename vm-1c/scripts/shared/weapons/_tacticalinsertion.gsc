@@ -85,7 +85,7 @@ function overridespawn(ispredictedspawn) {
 // Size: 0x34
 function waitanddelete(time) {
     self endon(#"death");
-    wait(0.05);
+    wait 0.05;
     self delete();
 }
 
@@ -331,7 +331,7 @@ function cancel_button_press() {
     self endon(#"end_killcam");
     self endon(#"abort_killcam");
     while (true) {
-        wait(0.05);
+        wait 0.05;
         if (self canceltackinsertionbutton()) {
             break;
         }
@@ -394,7 +394,7 @@ function tacticalinsertiondestroyedbytrophysystem(attacker, trophysystem) {
     if (isdefined(owner)) {
         owner endon(#"death");
         owner endon(#"disconnect");
-        wait(0.05);
+        wait 0.05;
         if (isdefined(level.globallogic_audio_dialog_on_player_override)) {
             owner [[ level.globallogic_audio_dialog_on_player_override ]]("tact_destroyed", "item_destroyed");
         }

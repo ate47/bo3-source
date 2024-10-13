@@ -120,14 +120,14 @@ function rumble(localclientnum) {
     zoffset = -1 * self.rumbleradius;
     self.player_touching = 0;
     radius_squared = self.rumbleradius * self.rumbleradius;
-    wait(2);
+    wait 2;
     while (true) {
         if (!isdefined(level.localplayers[localclientnum]) || distancesquared(self.origin, level.localplayers[localclientnum].origin) > radius_squared || self getspeed() == 0) {
-            wait(0.2);
+            wait 0.2;
             continue;
         }
         if (isdefined(self.rumbleon) && !self.rumbleon) {
-            wait(0.2);
+            wait 0.2;
             continue;
         }
         self playrumblelooponentity(localclientnum, self.rumbletype);
@@ -137,12 +137,12 @@ function rumble(localclientnum) {
             if (time_to_wait <= 0) {
                 time_to_wait = 0.05;
             }
-            wait(time_to_wait);
+            wait time_to_wait;
         }
         if (isdefined(level.localplayers[localclientnum])) {
             self stoprumble(localclientnum, self.rumbletype);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -173,7 +173,7 @@ function play_exhaust(localclientnum) {
     }
     if (isdefined(self.exhaust_fx) && isdefined(self.exhaustfxtag1)) {
         if (isalive(self)) {
-            assert(isdefined(self.exhaustfxtag1), self.vehicletype + "toggle_lights");
+            assert(isdefined(self.exhaustfxtag1), self.vehicletype + "<dev string:x28>");
             self endon(#"entityshutdown");
             self function_b7c7870e(localclientnum);
             self.exhaust_id_left = playfxontag(localclientnum, self.exhaust_fx, self, self.exhaustfxtag1);
@@ -240,7 +240,7 @@ function aircraft_dustkick() {
         if (self.vehicleclass == "plane_mig17" || self.vehicleclass == "plane_mig21") {
             repeatrate = 0.02;
         }
-        wait(repeatrate);
+        wait repeatrate;
         if (!isdefined(self)) {
             return;
         }
@@ -304,11 +304,11 @@ function function_b7c7870e(localclientnum) {
     for (count = 30; !self hasdobj(localclientnum); count -= 1) {
         if (count < 0) {
             /#
-                iprintlnbold("toggle_lights");
+                iprintlnbold("<dev string:x84>");
             #/
             return;
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -649,7 +649,7 @@ function delayed_fx_thread(localclientnum, name, fx, tag, delay) {
         return;
     }
     if (isdefined(delay) && delay > 0) {
-        wait(delay);
+        wait delay;
     }
     fx_handle = playfxontag(localclientnum, fx, self, tag);
     if (!isdefined(self.fx_handles[name])) {
@@ -779,7 +779,7 @@ function update_ui_fullscreen_filter_model(localclientnum, vision_set_value) {
 // Size: 0x234
 function field_toggle_treadfx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(self.vehicleclass) && (isdefined(self.vehicleclass) && self.vehicleclass == "helicopter" || self.vehicleclass == "plane")) {
-        println("toggle_lights");
+        println("<dev string:xc7>");
         if (newval) {
             if (isdefined(bnewent) && bnewent) {
                 self.csf_no_tread = 1;
@@ -796,17 +796,17 @@ function field_toggle_treadfx(localclientnum, oldval, newval, bnewent, binitials
         return;
     }
     if (newval) {
-        println("toggle_lights");
+        println("<dev string:xe7>");
         if (isdefined(bnewent) && bnewent) {
-            println("toggle_lights" + self getentitynumber());
+            println("<dev string:x10e>" + self getentitynumber());
             self.csf_no_tread = 1;
         } else {
-            println("toggle_lights" + self getentitynumber());
+            println("<dev string:x12c>" + self getentitynumber());
             self kill_treads_forever();
         }
         return;
     }
-    println("toggle_lights");
+    println("<dev string:x148>");
     if (isdefined(self.csf_no_tread)) {
         self.csf_no_tread = 0;
     }
@@ -1277,7 +1277,7 @@ function damage_filter_off(localclientnum) {
             level.localplayers[0].damage_filter_intensity = 0;
         }
         filter::set_filter_vehicle_damage_amount(level.localplayers[0], 3, level.localplayers[0].damage_filter_intensity);
-        wait(0.016667);
+        wait 0.016667;
     }
 }
 
@@ -1295,7 +1295,7 @@ function damage_filter_light(localclientnum) {
             level.localplayers[0].damage_filter_intensity = 0.5;
         }
         filter::set_filter_vehicle_damage_amount(level.localplayers[0], 3, level.localplayers[0].damage_filter_intensity);
-        wait(0.016667);
+        wait 0.016667;
     }
 }
 
@@ -1312,7 +1312,7 @@ function damage_filter_heavy(localclientnum) {
             level.localplayers[0].damage_filter_intensity = 1;
         }
         filter::set_filter_vehicle_damage_amount(level.localplayers[0], 3, level.localplayers[0].damage_filter_intensity);
-        wait(0.016667);
+        wait 0.016667;
     }
 }
 

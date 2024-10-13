@@ -281,7 +281,7 @@ function watchforleave(trigger, entity) {
         } else {
             self resetoobtimer();
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 

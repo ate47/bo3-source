@@ -34,9 +34,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/callbacks_shared;
 
-#namespace namespace_e722cafc;
+#namespace zm_sumpf;
 
-// Namespace namespace_e722cafc
+// Namespace zm_sumpf
 // Params 0, eflags: 0x2
 // Checksum 0xf5c67de7, Offset: 0x628
 // Size: 0x1c
@@ -45,33 +45,33 @@ function autoexec function_d9af860b() {
     level.aat_in_use = 1;
 }
 
-// Namespace namespace_e722cafc
+// Namespace zm_sumpf
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbbfebb54, Offset: 0x650
 // Size: 0x244
 function main() {
-    level thread namespace_50c3fea6::main_start();
+    level thread zm_sumpf_ffotd::main_start();
     level.default_game_mode = "zclassic";
     level.default_start_location = "default";
     level.use_water_risers = 1;
-    namespace_ca9187f5::main();
+    zm_sumpf_fx::main();
     function_b211e563();
-    level thread namespace_c4b8f4ed::main();
+    level thread zm_sumpf_amb::main();
     clientfield::register("world", "SUMPF_VISIONSET_DOGS", 21000, 1, "int", &function_166277c8, 0, 0);
     clientfield::register("actor", "zombie_flogger_trap", 21000, 1, "int", &function_f79e9b4f, 0, 0);
-    clientfield::register("allplayers", "player_legs_hide", 21000, 1, "int", &function_197274ad, 0, 0);
+    clientfield::register("allplayers", "player_legs_hide", 21000, 1, "int", &player_legs_hide, 0, 0);
     load::main();
     util::waitforclient(0);
-    namespace_40b4687d::init();
+    _zm_weap_tesla::init();
     callback::on_localclient_connect(&function_794950d2);
     setdvar("player_shallowWaterWadeScale", 0.5);
     setdvar("player_waistWaterWadeScale", 0.5);
     level thread function_4e327cec();
-    println("allplayers");
-    level thread namespace_50c3fea6::main_end();
+    println("<dev string:x28>");
+    level thread zm_sumpf_ffotd::main_end();
 }
 
-// Namespace namespace_e722cafc
+// Namespace zm_sumpf
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd8779ffe, Offset: 0x8a0
 // Size: 0x2c
@@ -79,11 +79,11 @@ function function_794950d2(localclientnum) {
     setsaveddvar("phys_buoyancy", 1);
 }
 
-// Namespace namespace_e722cafc
+// Namespace zm_sumpf
 // Params 7, eflags: 0x1 linked
 // Checksum 0x37ce1928, Offset: 0x8d8
 // Size: 0x74
-function function_197274ad(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function player_legs_hide(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     if (newval) {
         self hideviewlegs();
         return;
@@ -91,7 +91,7 @@ function function_197274ad(localclientnum, oldval, newval, bnewent, binitialsnap
     self showviewlegs();
 }
 
-// Namespace namespace_e722cafc
+// Namespace zm_sumpf
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8f01fc6b, Offset: 0x958
 // Size: 0x7c
@@ -103,7 +103,7 @@ function function_166277c8(localclientnum, oldval, newval, bnewent, binitialsnap
     setworldfogactivebank(localclientnum, 1);
 }
 
-// Namespace namespace_e722cafc
+// Namespace zm_sumpf
 // Params 7, eflags: 0x1 linked
 // Checksum 0x670a1bef, Offset: 0x9e0
 // Size: 0x74
@@ -113,16 +113,16 @@ function function_f79e9b4f(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_e722cafc
+// Namespace zm_sumpf
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1e44edf2, Offset: 0xa60
 // Size: 0x24
 function function_b211e563() {
     include_weapons();
-    namespace_570c8452::init();
+    _zm_weap_cymbal_monkey::init();
 }
 
-// Namespace namespace_e722cafc
+// Namespace zm_sumpf
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe985534, Offset: 0xa90
 // Size: 0x24
@@ -130,7 +130,7 @@ function include_weapons() {
     zm_weapons::load_weapon_spec_from_table("gamedata/weapons/zm/zm_sumpf_weapons.csv", 1);
 }
 
-// Namespace namespace_e722cafc
+// Namespace zm_sumpf
 // Params 0, eflags: 0x1 linked
 // Checksum 0x423429e1, Offset: 0xac0
 // Size: 0xea
@@ -143,7 +143,7 @@ function function_4e327cec() {
     }
 }
 
-// Namespace namespace_e722cafc
+// Namespace zm_sumpf
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdb50ee1b, Offset: 0xbb8
 // Size: 0x98
@@ -156,11 +156,11 @@ function function_938d448f() {
                 who thread function_387efde5(self);
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_e722cafc
+// Namespace zm_sumpf
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc3e91a56, Offset: 0xc58
 // Size: 0xac
@@ -171,7 +171,7 @@ function function_387efde5(trigger) {
         if (self getspeed() > 5) {
             playsound(0, "fly_water_wade_plr", (0, 0, 0));
         }
-        wait(randomfloatrange(0.5, 1));
+        wait randomfloatrange(0.5, 1);
     }
     self.var_b115a3e6 = 0;
 }

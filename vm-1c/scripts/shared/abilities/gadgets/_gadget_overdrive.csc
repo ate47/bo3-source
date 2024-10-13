@@ -11,9 +11,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_509b4eb;
+#namespace _gadget_overdrive;
 
-// Namespace namespace_509b4eb
+// Namespace _gadget_overdrive
 // Params 0, eflags: 0x2
 // Checksum 0xa4d5624, Offset: 0x3f8
 // Size: 0x34
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_overdrive", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_509b4eb
+// Namespace _gadget_overdrive
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6c8159d9, Offset: 0x438
 // Size: 0xd4
@@ -33,7 +33,7 @@ function __init__() {
     visionset_mgr::register_visionset_info("overdrive", 1, 15, undefined, "overdrive_initialize");
 }
 
-// Namespace namespace_509b4eb
+// Namespace _gadget_overdrive
 // Params 1, eflags: 0x1 linked
 // Checksum 0x987d8de2, Offset: 0x518
 // Size: 0x24
@@ -41,7 +41,7 @@ function on_localplayer_shutdown(localclientnum) {
     self function_8e10aa46(localclientnum);
 }
 
-// Namespace namespace_509b4eb
+// Namespace _gadget_overdrive
 // Params 1, eflags: 0x1 linked
 // Checksum 0x1f8814c4, Offset: 0x548
 // Size: 0x6c
@@ -54,7 +54,7 @@ function on_localplayer_spawned(localclientnum) {
     disablespeedblur(localclientnum);
 }
 
-// Namespace namespace_509b4eb
+// Namespace _gadget_overdrive
 // Params 1, eflags: 0x1 linked
 // Checksum 0x47f48451, Offset: 0x5c0
 // Size: 0xc
@@ -62,7 +62,7 @@ function on_player_connect(local_client_num) {
     
 }
 
-// Namespace namespace_509b4eb
+// Namespace _gadget_overdrive
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3a5806b7, Offset: 0x5d8
 // Size: 0x20c
@@ -83,7 +83,7 @@ function function_6c1d8418(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_509b4eb
+// Namespace _gadget_overdrive
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd920f6e5, Offset: 0x7f0
 // Size: 0x146
@@ -96,12 +96,12 @@ function function_435df4ae(localclientnum) {
     self endon(#"disable_cybercom");
     self.var_e9fb6bcc = 1;
     lui::screen_fade(getdvarfloat("scr_overdrive_flash_fade_in_time", 0.075), getdvarfloat("scr_overdrive_flash_alpha", 0.7), 0, "white");
-    wait(getdvarfloat("scr_overdrive_flash_fade_in_time", 0.075));
+    wait getdvarfloat("scr_overdrive_flash_fade_in_time", 0.075);
     lui::screen_fade(getdvarfloat("scr_overdrive_flash_fade_out_time", 0.45), 0, getdvarfloat("scr_overdrive_flash_alpha", 0.7), "white");
     self.var_e9fb6bcc = undefined;
 }
 
-// Namespace namespace_509b4eb
+// Namespace _gadget_overdrive
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd6d4c26b, Offset: 0x940
 // Size: 0x8c
@@ -114,7 +114,7 @@ function function_f8cd963(localclientnum) {
     self thread function_795d8024(localclientnum, self.var_f913815c);
 }
 
-// Namespace namespace_509b4eb
+// Namespace _gadget_overdrive
 // Params 2, eflags: 0x1 linked
 // Checksum 0xeef4f843, Offset: 0x9d8
 // Size: 0x96
@@ -129,7 +129,7 @@ function function_795d8024(localclientnum, fx) {
     }
 }
 
-// Namespace namespace_509b4eb
+// Namespace _gadget_overdrive
 // Params 1, eflags: 0x1 linked
 // Checksum 0x48452796, Offset: 0xa78
 // Size: 0x8c
@@ -140,7 +140,7 @@ function function_26d7266e(localclientnum) {
     }
 }
 
-// Namespace namespace_509b4eb
+// Namespace _gadget_overdrive
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa37afb7d, Offset: 0xb10
 // Size: 0x6c
@@ -152,7 +152,7 @@ function function_2e0c658b(localclientnum) {
     self function_8e10aa46(localclientnum);
 }
 
-// Namespace namespace_509b4eb
+// Namespace _gadget_overdrive
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc8707e66, Offset: 0xb88
 // Size: 0x82
@@ -166,7 +166,7 @@ function function_8e10aa46(localclientnum) {
     }
 }
 
-// Namespace namespace_509b4eb
+// Namespace _gadget_overdrive
 // Params 1, eflags: 0x1 linked
 // Checksum 0x924a16ff, Offset: 0xc18
 // Size: 0x1c8
@@ -177,7 +177,7 @@ function function_7f9030dd(localclientnum) {
     self endon(#"disconnect");
     self function_f8cd963(localclientnum);
     self thread function_2e0c658b(localclientnum);
-    wait(getdvarfloat("scr_overdrive_boost_fx_time", 0.75));
+    wait getdvarfloat("scr_overdrive_boost_fx_time", 0.75);
     while (isdefined(self)) {
         v_player_velocity = self getvelocity();
         v_player_forward = anglestoforward(self.angles);
@@ -190,7 +190,7 @@ function function_7f9030dd(localclientnum) {
         } else if (isdefined(self.var_f913815c)) {
             self function_26d7266e(localclientnum);
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 

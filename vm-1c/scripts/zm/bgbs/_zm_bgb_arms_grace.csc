@@ -5,9 +5,9 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_fec23565;
+#namespace zm_bgb_arms_grace;
 
-// Namespace namespace_fec23565
+// Namespace zm_bgb_arms_grace
 // Params 0, eflags: 0x2
 // Checksum 0xa0328dbf, Offset: 0x140
 // Size: 0x34
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_arms_grace", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_fec23565
+// Namespace zm_bgb_arms_grace
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdadbbf1a, Offset: 0x180
 // Size: 0x3c

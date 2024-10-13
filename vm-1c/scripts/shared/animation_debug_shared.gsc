@@ -11,15 +11,15 @@
     // Checksum 0x49208920, Offset: 0xe0
     // Size: 0xd0
     function autoexec __init__() {
-        setdvar("<unknown string>", 0);
-        setdvar("<unknown string>", 0);
+        setdvar("<dev string:x28>", 0);
+        setdvar("<dev string:x33>", 0);
         while (true) {
-            anim_debug = getdvarint("<unknown string>", 0) || getdvarint("<unknown string>", 0);
-            level flagsys::set_val("<unknown string>", anim_debug);
+            anim_debug = getdvarint("<dev string:x28>", 0) || getdvarint("<dev string:x33>", 0);
+            level flagsys::set_val("<dev string:x28>", anim_debug);
             if (!anim_debug) {
                 level notify(#"kill_anim_debug");
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -37,13 +37,13 @@
         }
         recordent(self);
         while (true) {
-            level flagsys::wait_till("<unknown string>");
+            level flagsys::wait_till("<dev string:x28>");
             var_109b63b9 = 1;
             _init_frame();
-            str_extra_info = "<unknown string>";
+            str_extra_info = "<dev string:x44>";
             color = (1, 1, 0);
-            if (flagsys::get("<unknown string>")) {
-                str_extra_info += "<unknown string>";
+            if (flagsys::get("<dev string:x45>")) {
+                str_extra_info += "<dev string:x50>";
             }
             s_pos = _get_align_pos(v_origin_or_ent, v_angles_or_tag);
             self anim_origin_render(s_pos.origin, s_pos.angles, undefined, undefined, !var_109b63b9);
@@ -51,10 +51,10 @@
                 line(self.origin, s_pos.origin, color, 0.5, 1);
                 sphere(s_pos.origin, 2, (0.3, 0.3, 0.3), 0.5, 1);
             }
-            recordline(self.origin, s_pos.origin, color, "<unknown string>");
-            recordsphere(s_pos.origin, 2, (0.3, 0.3, 0.3), "<unknown string>");
+            recordline(self.origin, s_pos.origin, color, "<dev string:x5e>");
+            recordsphere(s_pos.origin, 2, (0.3, 0.3, 0.3), "<dev string:x5e>");
             if (v_origin_or_ent != self && !isvec(v_origin_or_ent) && v_origin_or_ent != level) {
-                str_name = "<unknown string>";
+                str_name = "<dev string:x6b>";
                 if (isdefined(v_origin_or_ent.animname)) {
                     str_name = v_origin_or_ent.animname;
                 } else if (isdefined(v_origin_or_ent.targetname)) {
@@ -63,10 +63,10 @@
                 if (var_109b63b9) {
                     print3d(v_origin_or_ent.origin + (0, 0, 5), str_name, (0.3, 0.3, 0.3), 1, 0.15);
                 }
-                record3dtext(str_name, v_origin_or_ent.origin + (0, 0, 5), (0.3, 0.3, 0.3), "<unknown string>");
+                record3dtext(str_name, v_origin_or_ent.origin + (0, 0, 5), (0.3, 0.3, 0.3), "<dev string:x5e>");
             }
             self anim_origin_render(self.origin, self.angles, undefined, undefined, !var_109b63b9);
-            str_name = "<unknown string>";
+            str_name = "<dev string:x6b>";
             if (isdefined(self.anim_debug_name)) {
                 str_name = self.anim_debug_name;
             } else if (isdefined(self.animname)) {
@@ -75,19 +75,19 @@
                 str_name = self.targetname;
             }
             if (var_109b63b9) {
-                print3d(self.origin, self getentnum() + get_ent_type() + "<unknown string>" + str_name, color, 0.8, 0.3);
-                print3d(self.origin - (0, 0, 5), "<unknown string>" + animation, color, 0.8, 0.3);
+                print3d(self.origin, self getentnum() + get_ent_type() + "<dev string:x73>" + str_name, color, 0.8, 0.3);
+                print3d(self.origin - (0, 0, 5), "<dev string:x7a>" + animation, color, 0.8, 0.3);
                 print3d(self.origin - (0, 0, 7), str_extra_info, color, 0.8, 0.15);
             }
-            record3dtext(self getentnum() + get_ent_type() + "<unknown string>" + str_name, self.origin, color, "<unknown string>");
-            record3dtext("<unknown string>" + animation, self.origin - (0, 0, 5), color, "<unknown string>");
-            record3dtext(str_extra_info, self.origin - (0, 0, 7), color, "<unknown string>");
-            render_tag("<unknown string>", "<unknown string>", !var_109b63b9);
-            render_tag("<unknown string>", "<unknown string>", !var_109b63b9);
-            render_tag("<unknown string>", "<unknown string>", !var_109b63b9);
-            render_tag("<unknown string>", "<unknown string>", !var_109b63b9);
+            record3dtext(self getentnum() + get_ent_type() + "<dev string:x73>" + str_name, self.origin, color, "<dev string:x5e>");
+            record3dtext("<dev string:x7a>" + animation, self.origin - (0, 0, 5), color, "<dev string:x5e>");
+            record3dtext(str_extra_info, self.origin - (0, 0, 7), color, "<dev string:x5e>");
+            render_tag("<dev string:x85>", "<dev string:x96>", !var_109b63b9);
+            render_tag("<dev string:x9c>", "<dev string:xac>", !var_109b63b9);
+            render_tag("<dev string:xb1>", "<dev string:xbc>", !var_109b63b9);
+            render_tag("<dev string:xc3>", "<dev string:xce>", !var_109b63b9);
             _reset_frame();
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -97,12 +97,12 @@
     // Size: 0x6e
     function get_ent_type() {
         if (isactor(self)) {
-            return "<unknown string>";
+            return "<dev string:xd5>";
         }
         if (isvehicle(self)) {
-            return "<unknown string>";
+            return "<dev string:xda>";
         }
-        return "<unknown string>" + self.classname + "<unknown string>";
+        return "<dev string:xe4>" + self.classname + "<dev string:xe6>";
     }
 
     // Namespace animation
@@ -139,7 +139,7 @@
             if (!b_recorder_only) {
                 line(self.v_centroid, v_tag_org, (0.3, 0.3, 0.3), 0.5, 1);
             }
-            recordline(self.v_centroid, v_tag_org, (0.3, 0.3, 0.3), "<unknown string>");
+            recordline(self.v_centroid, v_tag_org, (0.3, 0.3, 0.3), "<dev string:x5e>");
         }
     }
 
@@ -160,14 +160,14 @@
                 line(org, originrightpoint, (0, 1, 0));
                 line(org, originuppoint, (0, 0, 1));
             }
-            recordline(org, originendpoint, (1, 0, 0), "<unknown string>");
-            recordline(org, originrightpoint, (0, 1, 0), "<unknown string>");
-            recordline(org, originuppoint, (0, 0, 1), "<unknown string>");
+            recordline(org, originendpoint, (1, 0, 0), "<dev string:x5e>");
+            recordline(org, originrightpoint, (0, 1, 0), "<dev string:x5e>");
+            recordline(org, originuppoint, (0, 0, 1), "<dev string:x5e>");
             if (isdefined(str_label)) {
                 if (!b_recorder_only) {
                     print3d(org, str_label, (1, 0.752941, 0.796078), 1, 0.05);
                 }
-                record3dtext(str_label, org, (1, 0.752941, 0.796078), "<unknown string>");
+                record3dtext(str_label, org, (1, 0.752941, 0.796078), "<dev string:x5e>");
             }
         }
     }

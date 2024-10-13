@@ -6,16 +6,16 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e67b01cd;
+#namespace mp_conduit;
 
-// Namespace namespace_e67b01cd
+// Namespace mp_conduit
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa11ad5f5, Offset: 0x268
 // Size: 0x4e4
 function main() {
     precache();
-    namespace_ce5ca93a::main();
-    namespace_ca681cbd::main();
+    mp_conduit_fx::main();
+    mp_conduit_sound::main();
     load::main();
     compass::setupminimap("compass_map_mp_conduit");
     setdvar("compassmaxrange", "2100");
@@ -44,7 +44,7 @@ function main() {
     level.cleandepositpoints = array((2.38261, 270.152, 64.125), (1272.74, 958.804, 64.125), (-1235.76, 969.544, 64.125), (868.229, -915.133, -0.875));
 }
 
-// Namespace namespace_e67b01cd
+// Namespace mp_conduit
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x758
 // Size: 0x4
@@ -52,7 +52,7 @@ function precache() {
     
 }
 
-// Namespace namespace_e67b01cd
+// Namespace mp_conduit
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaa5fbe7b, Offset: 0x768
 // Size: 0x188
@@ -61,7 +61,7 @@ function function_d9a32821() {
     var_813a45c = var_2f9b716b[0];
     for (;;) {
         pausetime = randomfloatrange(5, 10);
-        wait(pausetime);
+        wait pausetime;
         var_55596a7c = randomfloatrange(-180, -76);
         rotatetime = randomfloatrange(25, 30);
         var_813a45c playsound("amb_tower_start");
@@ -73,7 +73,7 @@ function function_d9a32821() {
     }
 }
 
-// Namespace namespace_e67b01cd
+// Namespace mp_conduit
 // Params 0, eflags: 0x1 linked
 // Checksum 0x69e6982f, Offset: 0x8f8
 // Size: 0x1be
@@ -94,7 +94,7 @@ function function_c4a5736e() {
     }
 }
 
-// Namespace namespace_e67b01cd
+// Namespace mp_conduit
 // Params 3, eflags: 0x1 linked
 // Checksum 0xfb1be27c, Offset: 0xac0
 // Size: 0xe8
@@ -102,7 +102,7 @@ function function_730358f4(train, startpoint, endpoint) {
     while (true) {
         train ghost();
         train.origin = startpoint;
-        wait(3);
+        wait 3;
         train show();
         train moveto(endpoint, 20, 5, 5);
         train playloopsound("amb_train_engine");

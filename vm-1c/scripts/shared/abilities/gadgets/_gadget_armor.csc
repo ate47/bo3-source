@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_53aa1388;
+#namespace _gadget_armor;
 
-// Namespace namespace_53aa1388
+// Namespace _gadget_armor
 // Params 0, eflags: 0x2
 // Checksum 0xd2f680b0, Offset: 0x2f0
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_armor", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_53aa1388
+// Namespace _gadget_armor
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8982a122, Offset: 0x330
 // Size: 0xfc
@@ -32,7 +32,7 @@ function __init__() {
     #/
 }
 
-// Namespace namespace_53aa1388
+// Namespace _gadget_armor
 // Params 1, eflags: 0x1 linked
 // Checksum 0x506372ad, Offset: 0x438
 // Size: 0x6c
@@ -44,7 +44,7 @@ function on_local_player_spawned(localclientnum) {
     self function_692ec98e(localclientnum, newval);
 }
 
-// Namespace namespace_53aa1388
+// Namespace _gadget_armor
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1ac1566d, Offset: 0x4b0
 // Size: 0x5c
@@ -52,7 +52,7 @@ function function_6cba068c(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_b465810a(localclientnum, newval);
 }
 
-// Namespace namespace_53aa1388
+// Namespace _gadget_armor
 // Params 7, eflags: 0x1 linked
 // Checksum 0x92c36ae1, Offset: 0x518
 // Size: 0x5c
@@ -60,7 +60,7 @@ function function_373db61f(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_692ec98e(localclientnum, newval);
 }
 
-// Namespace namespace_53aa1388
+// Namespace _gadget_armor
 // Params 2, eflags: 0x1 linked
 // Checksum 0xe55162b3, Offset: 0x580
 // Size: 0x54
@@ -69,7 +69,7 @@ function function_692ec98e(localclientnum, newval) {
     self function_43f40987(localclientnum, newval);
 }
 
-// Namespace namespace_53aa1388
+// Namespace _gadget_armor
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc661cae3, Offset: 0x5e0
 // Size: 0x224
@@ -95,7 +95,7 @@ function function_43f40987(localclientnum, var_57594972) {
     self duplicate_render::update_dr_flag(localclientnum, "armor_on", 0);
 }
 
-// Namespace namespace_53aa1388
+// Namespace _gadget_armor
 // Params 1, eflags: 0x1 linked
 // Checksum 0x682c141d, Offset: 0x810
 // Size: 0x36
@@ -104,7 +104,7 @@ function function_19075b3d(var_57594972) {
     return color;
 }
 
-// Namespace namespace_53aa1388
+// Namespace _gadget_armor
 // Params 2, eflags: 0x1 linked
 // Checksum 0x5aa83e2a, Offset: 0x850
 // Size: 0xac
@@ -121,7 +121,7 @@ function function_b465810a(localclientnum, var_1a45af95) {
     setsoundcontext("plr_impact", "");
 }
 
-// Namespace namespace_53aa1388
+// Namespace _gadget_armor
 // Params 2, eflags: 0x0
 // Checksum 0x6d03d5bb, Offset: 0x908
 // Size: 0x150
@@ -146,12 +146,12 @@ function function_f8f6f7ec(localclientnum, var_57594972) {
     var_51dad171 = getvisionsetnaked(localclientnum);
     visionsetnaked(localclientnum, "taser_mine_shock", transition);
     self playsound(0, "wpn_taser_mine_tacmask");
-    wait(0.3);
+    wait 0.3;
     visionsetnaked(localclientnum, var_51dad171, transition);
     self.var_a9f82ff9 = 0;
 }
 
-// Namespace namespace_53aa1388
+// Namespace _gadget_armor
 // Params 1, eflags: 0x1 linked
 // Checksum 0x282f2f3a, Offset: 0xa60
 // Size: 0x4a
@@ -163,16 +163,16 @@ function function_9f08a633(localclientnum) {
 
 /#
 
-    // Namespace namespace_53aa1388
+    // Namespace _gadget_armor
     // Params 0, eflags: 0x1 linked
     // Checksum 0xef0a8c9a, Offset: 0xab8
     // Size: 0x140
     function function_cc0cff2a() {
         var_72e51998 = 0;
-        setdvar("armor_pl", 0);
+        setdvar("<dev string:x28>", 0);
         while (true) {
-            wait(0.1);
-            var_57594972 = getdvarint("armor_pl");
+            wait 0.1;
+            var_57594972 = getdvarint("<dev string:x28>");
             if (var_57594972 != var_72e51998) {
                 players = getlocalplayers();
                 foreach (i, localplayer in players) {

@@ -9,9 +9,9 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_128a1bda;
+#namespace zm_bgb_eye_candy;
 
-// Namespace namespace_128a1bda
+// Namespace zm_bgb_eye_candy
 // Params 0, eflags: 0x2
 // Checksum 0xb32c977, Offset: 0x418
 // Size: 0x34
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_eye_candy", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_128a1bda
+// Namespace zm_bgb_eye_candy
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3a707045, Offset: 0x458
 // Size: 0x334
@@ -46,7 +46,7 @@ function __init__() {
     clientfield::register("vehicle", "eye_candy_active", 21000, 1, "int", &function_697cc62, 0, 0);
 }
 
-// Namespace namespace_128a1bda
+// Namespace zm_bgb_eye_candy
 // Params 7, eflags: 0x1 linked
 // Checksum 0x84ac0683, Offset: 0x798
 // Size: 0x94
@@ -59,7 +59,7 @@ function function_7021da92(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_c1a20a24(localclientnum);
 }
 
-// Namespace namespace_128a1bda
+// Namespace zm_bgb_eye_candy
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd4bee5d, Offset: 0x838
 // Size: 0xfa
@@ -72,7 +72,7 @@ function function_a358ec33(localclientnum) {
     }
 }
 
-// Namespace namespace_128a1bda
+// Namespace zm_bgb_eye_candy
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb88f3161, Offset: 0x940
 // Size: 0xea
@@ -86,14 +86,14 @@ function function_c1a20a24(localclientnum) {
     self.var_73021e86 = undefined;
 }
 
-// Namespace namespace_128a1bda
+// Namespace zm_bgb_eye_candy
 // Params 7, eflags: 0x1 linked
 // Checksum 0x722d2435, Offset: 0xa38
 // Size: 0x124
 function function_697cc62(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"entityshutdown");
     level flagsys::wait_till("duplicaterender_registry_ready");
-    assert(isdefined(self), "zm_bgb_candy_greenz");
+    assert(isdefined(self), "<dev string:x28>");
     if (newval == 0) {
         self.var_d8bd114f = 0;
         self function_56029f33(localclientnum, 0);
@@ -106,7 +106,7 @@ function function_697cc62(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_128a1bda
+// Namespace zm_bgb_eye_candy
 // Params 3, eflags: 0x1 linked
 // Checksum 0x743fdb2f, Offset: 0xb68
 // Size: 0xac

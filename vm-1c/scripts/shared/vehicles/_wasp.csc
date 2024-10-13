@@ -46,7 +46,7 @@ function handle_lod_display_for_driver(localclientnum, oldval, newval, bnewent, 
     if (isdefined(self)) {
         if (self islocalclientdriver(localclientnum)) {
             self sethighdetail(1);
-            wait(0.05);
+            wait 0.05;
             self vehicle::lights_off(localclientnum);
         }
     }

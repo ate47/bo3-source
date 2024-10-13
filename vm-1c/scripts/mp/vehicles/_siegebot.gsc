@@ -206,7 +206,7 @@ function function_cc487332() {
             driver = self getseatoccupant(0);
             self kill(self.origin);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -226,10 +226,10 @@ function function_5beec115() {
     while (isdefined(driver)) {
         if (driver fragbuttonpressed() && !self.var_f9eb37d1) {
             self fireweapon(2);
-            wait(weapon.firetime);
+            wait weapon.firetime;
             continue;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -260,7 +260,7 @@ function function_bd6a90ca() {
             self function_6521eb5d(self function_d24a7ea9(0), 1);
             var_25aad16e = 0;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -354,7 +354,7 @@ function state_unaware_update(params) {
     self thread function_ef0b7db5();
     while (true) {
         self vehicle_ai::evaluate_connections();
-        wait(1);
+        wait 1;
     }
 }
 
@@ -379,9 +379,9 @@ function function_ef0b7db5() {
             self clearvehgoalpos();
             scan();
         } else {
-            wait(1);
+            wait 1;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -406,7 +406,7 @@ function function_d92aa446() {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["tag_turret_canopy_animate"] = randomfloatrange(0, 30);
+            point._scoredebug["<dev string:x28>"] = randomfloatrange(0, 30);
         #/
         point.score += randomfloatrange(0, 30);
         pointdirection = vectornormalize(point.origin - self.origin);
@@ -416,7 +416,7 @@ function function_d92aa446() {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["tag_turret_canopy_animate"] = 600;
+                point._scoredebug["<dev string:x2f>"] = 600;
             #/
             point.score += 600;
             continue;
@@ -426,7 +426,7 @@ function function_d92aa446() {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["tag_turret_canopy_animate"] = 0;
+                point._scoredebug["<dev string:x2f>"] = 0;
             #/
             point.score += 0;
             continue;
@@ -436,7 +436,7 @@ function function_d92aa446() {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["tag_turret_canopy_animate"] = -600;
+                point._scoredebug["<dev string:x2f>"] = -600;
             #/
             point.score += -600;
             continue;
@@ -445,7 +445,7 @@ function function_d92aa446() {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["tag_turret_canopy_animate"] = -1200;
+            point._scoredebug["<dev string:x2f>"] = -1200;
         #/
         point.score += -1200;
     }
@@ -518,10 +518,10 @@ function function_bf7dfc58(params) {
             debugstar(goal, 60000, (0, 1, 0));
         #/
         /#
-            debugstar(trace["tag_turret_canopy_animate"], 60000, (0, 1, 0));
+            debugstar(trace["<dev string:x3d>"], 60000, (0, 1, 0));
         #/
         /#
-            line(goal, trace["tag_turret_canopy_animate"], (0, 1, 0), 1, 0, 60000);
+            line(goal, trace["<dev string:x3d>"], (0, 1, 0), 1, 0, 60000);
         #/
     }
     if (trace["fraction"] < 1) {
@@ -547,7 +547,7 @@ function function_911f1aa5(params) {
     self face_target(goal);
     self.jump.linkent.origin = self.origin;
     self.jump.linkent.angles = self.angles;
-    wait(0.05);
+    wait 0.05;
     self linkto(self.jump.linkent);
     self.jump.var_425f84b1 = 1;
     if (false) {
@@ -614,7 +614,7 @@ function function_911f1aa5(params) {
                 debugstar(self.jump.linkent.origin, 60000, (1, 0, 0));
             #/
         }
-        wait(0.05);
+        wait 0.05;
     }
     self.jump.linkent.origin = (self.jump.linkent.origin[0], self.jump.linkent.origin[1], 0) + (0, 0, goal[2]);
     self notify(#"hash_12789372");
@@ -641,9 +641,9 @@ function function_911f1aa5(params) {
     }
     self vehicle::impact_fx(self.settings.var_9f4c9669);
     self function_144b90e8();
-    wait(0.3);
+    wait 0.3;
     self unlink();
-    wait(0.05);
+    wait 0.05;
     self.jump.var_425f84b1 = 0;
     self notify(#"hash_48269e0e");
     vehicle_ai::cooldown("jump", 7);
@@ -715,7 +715,7 @@ function getnextmoveposition_tactical() {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["tag_turret_canopy_animate"] = randomfloatrange(0, 30);
+            point._scoredebug["<dev string:x28>"] = randomfloatrange(0, 30);
         #/
         point.score += randomfloatrange(0, 30);
         if (point.disttoorigin2d < 120) {
@@ -723,7 +723,7 @@ function getnextmoveposition_tactical() {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["tag_turret_canopy_animate"] = (120 - point.disttoorigin2d) * -1.5;
+                point._scoredebug["<dev string:x46>"] = (120 - point.disttoorigin2d) * -1.5;
             #/
             point.score += (120 - point.disttoorigin2d) * -1.5;
         }
@@ -732,7 +732,7 @@ function getnextmoveposition_tactical() {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["tag_turret_canopy_animate"] = point.distawayfromengagementarea * -1;
+                point._scoredebug["<dev string:x55>"] = point.distawayfromengagementarea * -1;
             #/
             point.score += point.distawayfromengagementarea * -1;
             if (!point.visibility) {
@@ -740,7 +740,7 @@ function getnextmoveposition_tactical() {
                     if (!isdefined(point._scoredebug)) {
                         point._scoredebug = [];
                     }
-                    point._scoredebug["tag_turret_canopy_animate"] = -600;
+                    point._scoredebug["<dev string:x64>"] = -600;
                 #/
                 point.score += -600;
             }
@@ -768,7 +768,7 @@ function path_update_interrupt() {
     startpath = gettime();
     old_origin = self.origin;
     var_755108a1 = 300;
-    wait(1.5);
+    wait 1.5;
     while (true) {
         self setmaxspeedscale(1);
         self setmaxaccelerationscale(1);
@@ -808,7 +808,7 @@ function path_update_interrupt() {
                 self notify(#"near_goal");
             }
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 
@@ -824,7 +824,7 @@ function function_92467705(isopen, waittime) {
     self notify(#"hash_92467705");
     self endon(#"hash_92467705");
     if (isdefined(waittime) && waittime > 0) {
-        wait(waittime);
+        wait waittime;
     }
     self vehicle::toggle_ambient_anim_group(1, isopen);
 }
@@ -845,9 +845,9 @@ function movement_thread() {
                 params = spawnstruct();
                 params.var_dbe18cc = self.current_pathto_pos;
                 function_59d0ca33();
-                wait(0.5);
+                wait 0.5;
                 self vehicle_ai::evaluate_connections(undefined, params);
-                wait(0.5);
+                wait 0.5;
             }
         }
         foundpath = self setvehgoalpos(self.current_pathto_pos, 0, 1);
@@ -866,10 +866,10 @@ function movement_thread() {
                 self face_target(self.enemy.origin);
             }
         }
-        wait(1);
+        wait 1;
         var_2d0a77d9 = gettime();
         while (isdefined(self.enemy) && self function_4246bc05(self.enemy) && vehicle_ai::timesince(var_2d0a77d9) < 1.5) {
-            wait(0.4);
+            wait 0.4;
         }
     }
 }
@@ -909,7 +909,7 @@ function face_target(position, var_cd8c9d1a) {
     var_278525e3 = gettime();
     while (anglediff > var_cd8c9d1a && vehicle_ai::timesince(var_278525e3) < 4) {
         anglediff = absangleclamp180(self.angles[1] - goalangles[1]);
-        wait(0.05);
+        wait 0.05;
     }
     self clearvehgoalpos();
     self clearlookatent();
@@ -932,7 +932,7 @@ function scan() {
         aimpos = self.origin + forward * 1000;
         self setturrettargetvec(aimpos);
         msg = self util::waittill_any_timeout(0.5, "turret_on_target");
-        wait(0.1);
+        wait 0.1;
         if (isdefined(self.enemy) && self function_4246bc05(self.enemy)) {
             self setturrettargetent(self.enemy);
             self setlookatent(self.enemy);
@@ -966,16 +966,16 @@ function function_3a94fda4() {
             if (!spinning) {
                 spinning = 1;
                 self setturretspinning(1);
-                wait(0.5);
+                wait 0.5;
                 continue;
             }
             self function_9af49228(self.enemy, (0, 0, 0), 0);
             self function_9af49228(self.enemy, (0, 0, 0), 1);
             self vehicle_ai::fire_for_time(randomfloatrange(0.75, 1.5) * self.var_cf0b2b03, 1);
             if (isdefined(self.enemy) && isai(self.enemy)) {
-                wait(randomfloatrange(0.1, 0.2));
+                wait randomfloatrange(0.1, 0.2);
             } else {
-                wait(randomfloatrange(0.2, 0.3) * self.var_e8674008);
+                wait randomfloatrange(0.2, 0.3) * self.var_e8674008;
             }
             continue;
         }
@@ -983,7 +983,7 @@ function function_3a94fda4() {
         self setturretspinning(0);
         self function_bb5f9faa(0);
         self function_bb5f9faa(1);
-        wait(0.4);
+        wait 0.4;
     }
 }
 
@@ -1017,11 +1017,11 @@ function function_76333d5f() {
             self function_9af49228(self.enemy, (0, 0, 0), 0);
             self function_9af49228(self.enemy, (0, 0, -10), 2);
             self thread function_92467705(1);
-            wait(1.5);
+            wait 1.5;
             if (isdefined(self.enemy) && self function_6d424c6f(self.enemy, 1)) {
                 vehicle_ai::cooldown("rocket", 5);
                 function_b04ee378(self.enemy);
-                wait(1);
+                wait 1;
                 if (isdefined(self.enemy)) {
                     function_b04ee378(self.enemy);
                 }
@@ -1033,7 +1033,7 @@ function function_76333d5f() {
         }
         self function_bb5f9faa(0);
         self function_bb5f9faa(1);
-        wait(0.4);
+        wait 0.4;
     }
 }
 
@@ -1160,7 +1160,7 @@ function emped(down_time) {
     self setbrake(1);
     self.emped = 1;
     self function_909adbe5();
-    wait(down_time);
+    wait down_time;
     self setbrake(0);
     self.emped = 0;
     self function_909adbe5();
@@ -1211,7 +1211,7 @@ function function_8a453ed4() {
 // Checksum 0x3ae8c6ab, Offset: 0x52e0
 // Size: 0x2c
 function function_23b7fd8f(wait_time) {
-    wait(wait_time);
+    wait wait_time;
     if (isdefined(self)) {
         self hide();
     }
@@ -1280,9 +1280,9 @@ function reload_rockets(player) {
     weapon_wait_duration_ms = int(bundle.ksweaponreloadtime * 1000);
     player setvehicleweaponwaitduration(weapon_wait_duration_ms);
     player setvehicleweaponwaitendtime(gettime() + weapon_wait_duration_ms);
-    wait(bundle.ksweaponreloadtime);
+    wait bundle.ksweaponreloadtime;
     self function_526fb1ce(3);
-    wait(0.4);
+    wait 0.4;
     if (!self.isstunned) {
         self function_59477890();
     }
@@ -1370,10 +1370,10 @@ function update_client_ammo(ammo_count, driver_only_update) {
         while (true) {
             self thread function_5c502497();
             self thread function_d12a9af0();
-            wait(delay);
+            wait delay;
             self thread function_ffe3f04();
             self thread function_ce4c51d5();
-            wait(delay);
+            wait delay;
         }
     }
 
@@ -1413,7 +1413,7 @@ function function_ffe3f04() {
     self clientfield::set("siegebot_retract_left_arm", 0);
     self clearanim(generic%ai_siegebot_base_mp_left_arm_retract, 0.2);
     self setanim(generic%ai_siegebot_base_mp_left_arm_extend, 1, 0);
-    wait(0.1);
+    wait 0.1;
     if (self.var_98333a80 == 0) {
         self clearanim(generic%ai_siegebot_base_mp_left_arm_extend, 0.1);
     }
@@ -1453,7 +1453,7 @@ function function_ce4c51d5() {
     self clientfield::set("siegebot_retract_right_arm", 0);
     self clearanim(generic%ai_siegebot_base_mp_right_arm_retract, 0.2);
     self setanim(generic%ai_siegebot_base_mp_right_arm_extend, 1);
-    wait(0.1);
+    wait 0.1;
     if (self.var_14670f4f == 0) {
         self clearanim(generic%ai_siegebot_base_mp_right_arm_extend, 0.1);
     }
@@ -1466,7 +1466,7 @@ function function_ce4c51d5() {
 function function_b2e25d35() {
     self endon(#"death");
     self endon(#"exit_vehicle");
-    wait(randomfloatrange(0.05, 0.3));
+    wait randomfloatrange(0.05, 0.3);
     while (true) {
         var_c33c5d95 = self gettagorigin("tag_turret");
         var_f49e0cbb = self gettagangles("tag_turret");
@@ -1481,7 +1481,7 @@ function function_b2e25d35() {
         } else {
             self function_ffe3f04();
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 
@@ -1492,7 +1492,7 @@ function function_b2e25d35() {
 function function_f4b605de() {
     self endon(#"death");
     self endon(#"exit_vehicle");
-    wait(randomfloatrange(0.05, 0.3));
+    wait randomfloatrange(0.05, 0.3);
     while (true) {
         var_c33c5d95 = self gettagorigin("tag_turret");
         var_f49e0cbb = self gettagangles("tag_turret");
@@ -1507,7 +1507,7 @@ function function_f4b605de() {
         } else {
             self function_ce4c51d5();
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 

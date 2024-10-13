@@ -12,9 +12,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_aa27450a;
+#namespace zm_zod_sword;
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 0, eflags: 0x2
 // Checksum 0x73194443, Offset: 0x890
 // Size: 0x34
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
     system::register("zm_zod_sword", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 0, eflags: 0x0
 // Checksum 0x2ac8d5ee, Offset: 0x8d0
 // Size: 0x662
@@ -34,7 +34,7 @@ function __init__() {
     level._effect["sword_quest_sword_glow"] = "zombie/fx_sword_quest_glow_zod_zmb";
     clientfield::register("scriptmover", "zod_egg_glow", 1, 1, "int", &function_a70287ee, 0, 0);
     clientfield::register("scriptmover", "zod_egg_soul", 1, 1, "int", &function_d4d5b3f0, 0, 0);
-    clientfield::register("scriptmover", "sword_statue_glow", 1, 1, "int", &function_ba060b19, 0, 0);
+    clientfield::register("scriptmover", "sword_statue_glow", 1, 1, "int", &sword_statue_glow, 0, 0);
     n_bits = getminbitcountfornum(5);
     clientfield::register("toplayer", "magic_circle_state_0", 1, n_bits, "int", &function_528aad40, 0, 1);
     clientfield::register("toplayer", "magic_circle_state_1", 1, n_bits, "int", &function_1d308217, 0, 1);
@@ -61,11 +61,11 @@ function __init__() {
     level.var_e91b9e85[3] = "wpn_t7_zmb_zod_sword2_mag_world";
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 3, eflags: 0x0
 // Checksum 0x80e9111f, Offset: 0xf40
 // Size: 0x3f6
-function function_3803b991(localclientnum, newval, var_67a8b57) {
+function magic_circle_state_internal(localclientnum, newval, var_67a8b57) {
     self notify("magic_circle_state_internal" + localclientnum);
     self endon("magic_circle_state_internal" + localclientnum);
     var_4126c532 = function_5dab7fb(localclientnum, var_67a8b57);
@@ -110,7 +110,7 @@ function function_3803b991(localclientnum, newval, var_67a8b57) {
     }
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 2, eflags: 0x0
 // Checksum 0x79cdddde, Offset: 0x1340
 // Size: 0x9c
@@ -124,7 +124,7 @@ function function_cf043736(var_4126c532, var_cbdba0c5) {
     var_4126c532.var_6a0d8b03 show();
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 3, eflags: 0x0
 // Checksum 0x9b3a461f, Offset: 0x13e8
 // Size: 0xeaa
@@ -244,7 +244,7 @@ function function_4d020922(localclientnum, newval, n_character_index) {
         break;
     case 8:
         var_4126c532.e_sword notify("remove_" + "sword_quest_sword_glow");
-        wait(0.016);
+        wait 0.016;
         var_4126c532.var_d88e6f5f show();
         var_4126c532.e_sword hide();
         var_4126c532.var_42bd22b8 hide();
@@ -254,25 +254,25 @@ function function_4d020922(localclientnum, newval, n_character_index) {
         var_4126c532.var_d88e6f5f notify(#"hash_274ba0e6");
         var_4126c532.var_d88e6f5f animation::play("ai_zombie_zod_keeper_give_me_sword_outro", undefined, undefined, 1);
         var_4126c532.var_d88e6f5f thread function_274ba0e6("ai_zombie_zod_keeper_idle");
-        wait(2);
+        wait 2;
         var_4126c532.var_5ab40ec3 = playfxontag(localclientnum, level._effect["keeper_spawn"], var_4126c532.var_d88e6f5f, "tag_origin");
-        wait(0.5);
+        wait 0.5;
         var_4126c532.var_d88e6f5f hide();
         break;
     }
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 2, eflags: 0x0
 // Checksum 0xbb9f12c0, Offset: 0x22a0
 // Size: 0x8c
 function function_bd205438(localclientnum, var_4126c532) {
     var_4126c532.var_5ab40ec3 = playfxontag(localclientnum, level._effect["keeper_spawn"], var_4126c532.var_d88e6f5f, "tag_origin");
-    wait(1);
+    wait 1;
     stopfx(localclientnum, var_4126c532.var_5ab40ec3);
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 1, eflags: 0x0
 // Checksum 0xd956a7ee, Offset: 0x2338
 // Size: 0xac
@@ -283,7 +283,7 @@ function function_5b78bb9e(v_origin) {
     self animation::play("p7_fxanim_zm_zod_egg_keeper_idle_anim", v_origin, (0, 0, 1), 1);
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 1, eflags: 0x0
 // Checksum 0xe4da7dd0, Offset: 0x23f0
 // Size: 0x58
@@ -295,39 +295,39 @@ function function_274ba0e6(var_f521672b) {
     }
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 7, eflags: 0x0
 // Checksum 0x5e7eab09, Offset: 0x2450
 // Size: 0x5c
 function function_528aad40(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    function_3803b991(localclientnum, newval, 0);
+    magic_circle_state_internal(localclientnum, newval, 0);
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 7, eflags: 0x0
 // Checksum 0x1c42a4f5, Offset: 0x24b8
 // Size: 0x5c
 function function_1d308217(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    function_3803b991(localclientnum, newval, 1);
+    magic_circle_state_internal(localclientnum, newval, 1);
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 7, eflags: 0x0
 // Checksum 0xb9894bd8, Offset: 0x2520
 // Size: 0x5c
 function function_b17464d4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    function_3803b991(localclientnum, newval, 2);
+    magic_circle_state_internal(localclientnum, newval, 2);
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 7, eflags: 0x0
 // Checksum 0x7b63602e, Offset: 0x2588
 // Size: 0x5c
 function function_b6499939(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    function_3803b991(localclientnum, newval, 3);
+    magic_circle_state_internal(localclientnum, newval, 3);
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 7, eflags: 0x0
 // Checksum 0xaea98577, Offset: 0x25f0
 // Size: 0x5c
@@ -335,7 +335,7 @@ function function_9ba2b995(localclientnum, oldval, newval, bnewent, binitialsnap
     function_4d020922(localclientnum, newval, 0);
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 7, eflags: 0x0
 // Checksum 0x6a865ee6, Offset: 0x2658
 // Size: 0x5c
@@ -343,7 +343,7 @@ function function_fd8ec03a(localclientnum, oldval, newval, bnewent, binitialsnap
     function_4d020922(localclientnum, newval, 1);
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 7, eflags: 0x0
 // Checksum 0x9bcbc289, Offset: 0x26c0
 // Size: 0x5c
@@ -351,7 +351,7 @@ function function_32002235(localclientnum, oldval, newval, bnewent, binitialsnap
     function_4d020922(localclientnum, newval, 2);
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 7, eflags: 0x0
 // Checksum 0x98c846a0, Offset: 0x2728
 // Size: 0x5c
@@ -359,25 +359,25 @@ function function_4fd5e276(localclientnum, oldval, newval, bnewent, binitialsnap
     function_4d020922(localclientnum, newval, 3);
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 2, eflags: 0x0
 // Checksum 0xd8c85672, Offset: 0x2790
 // Size: 0xb4
 function function_5dab7fb(localclientnum, var_67a8b57) {
-    if (!isdefined(level.var_15954023)) {
-        level.var_15954023 = [];
+    if (!isdefined(level.sword_quest)) {
+        level.sword_quest = [];
     }
-    if (!isdefined(level.var_15954023[localclientnum])) {
-        level.var_15954023[localclientnum] = [];
+    if (!isdefined(level.sword_quest[localclientnum])) {
+        level.sword_quest[localclientnum] = [];
     }
-    if (!isdefined(level.var_15954023[localclientnum][var_67a8b57])) {
-        level.var_15954023[localclientnum][var_67a8b57] = spawnstruct();
+    if (!isdefined(level.sword_quest[localclientnum][var_67a8b57])) {
+        level.sword_quest[localclientnum][var_67a8b57] = spawnstruct();
     }
-    var_4126c532 = level.var_15954023[localclientnum][var_67a8b57];
+    var_4126c532 = level.sword_quest[localclientnum][var_67a8b57];
     return var_4126c532;
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 2, eflags: 0x0
 // Checksum 0x7380d20b, Offset: 0x2850
 // Size: 0x3d0
@@ -420,7 +420,7 @@ function function_6890ca81(localclientnum, n_character_index) {
     return var_4126c532;
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 1, eflags: 0x0
 // Checksum 0x719a89eb, Offset: 0x2c28
 // Size: 0x5e
@@ -437,7 +437,7 @@ function function_12955cc8(var_67a8b57) {
     }
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 1, eflags: 0x0
 // Checksum 0x43595057, Offset: 0x2c90
 // Size: 0xce
@@ -450,7 +450,7 @@ function function_85b951d8(var_181b74a5) {
     }
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 2, eflags: 0x0
 // Checksum 0xf4556cb3, Offset: 0x2d68
 // Size: 0xd4
@@ -463,7 +463,7 @@ function function_96ae1a10(var_181b74a5, n_character_index) {
     }
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 3, eflags: 0x0
 // Checksum 0xe937124, Offset: 0x2e48
 // Size: 0xcc
@@ -478,11 +478,11 @@ function play_fx(localclientnum, str_fx, str_tag) {
     stopfx(localclientnum, fx);
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 7, eflags: 0x0
 // Checksum 0x91987208, Offset: 0x2f20
 // Size: 0x88
-function function_ba060b19(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function sword_statue_glow(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self thread play_fx(localclientnum, "sword_quest_sword_glow", "tag_knife_fx");
         return;
@@ -490,7 +490,7 @@ function function_ba060b19(localclientnum, oldval, newval, bnewent, binitialsnap
     self notify("remove_" + "sword_quest_sword_glow");
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 7, eflags: 0x0
 // Checksum 0xd8c0c34d, Offset: 0x2fb0
 // Size: 0x80
@@ -502,7 +502,7 @@ function function_a70287ee(localclientnum, oldval, newval, bnewent, binitialsnap
     self notify("remove_" + "egg_glow");
 }
 
-// Namespace namespace_aa27450a
+// Namespace zm_zod_sword
 // Params 7, eflags: 0x0
 // Checksum 0x37ccdec7, Offset: 0x3038
 // Size: 0x7e

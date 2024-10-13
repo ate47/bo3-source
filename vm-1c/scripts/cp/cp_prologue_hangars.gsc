@@ -32,9 +32,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_d51ba4;
+#namespace Hangar;
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1b8199d1, Offset: 0x1ac8
 // Size: 0x9c
@@ -46,7 +46,7 @@ function function_83921c71() {
     level thread function_10d2e714();
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5eb40e3e, Offset: 0x1b70
 // Size: 0x9c
@@ -58,7 +58,7 @@ function function_ce233fb8() {
     level flag::init("fireflies_used");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x781cc63c, Offset: 0x1c18
 // Size: 0x2f8
@@ -93,12 +93,12 @@ function function_5a60627b() {
     level.var_4d5a4697.goalradius = 16;
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbdaf13ed, Offset: 0x1f18
 // Size: 0x1fc
 function function_10d2e714() {
-    level thread function_bd564a09();
+    level thread hangar_vtol_flyby();
     level thread scene::init("p7_fxanim_cp_prologue_hangar_window_rip_bundle");
     level thread namespace_21b2c1f2::function_46333a8a();
     level util::clientnotify("sndStartFakeBattle");
@@ -110,7 +110,7 @@ function function_10d2e714() {
     level thread function_644150a();
     vehicle::add_spawn_function("vtol_collapse_apc_initial", &function_75381a71);
     level.var_fac57550 = vehicle::simple_spawn_single("vtol_collapse_apc_initial");
-    wait(0.15);
+    wait 0.15;
     level.var_2fd26037 thread function_d418516(level.var_fac57550);
     level.var_9db406db thread function_d418516(level.var_fac57550);
     level.var_7f246cd7 thread function_e3521c43();
@@ -119,25 +119,25 @@ function function_10d2e714() {
     skipto::function_be8adfb8("skipto_hangar");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdd6fd973, Offset: 0x2120
 // Size: 0x74
 function function_b439650f() {
     level endon(#"hash_71456dc2");
-    wait(60);
+    wait 60;
     level flag::set("move_plane_hangar_vehicles");
     level flag::set("move_plane_hangar_enemies");
-    wait(60);
+    wait 60;
     level flag::set("move_catwalk_enemies");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xef3dd4eb, Offset: 0x21a0
 // Size: 0x122
 function function_75381a71() {
-    wait(1);
+    wait 1;
     foreach (ai_rider in self.riders) {
         ai_rider thread util::magic_bullet_shield();
     }
@@ -147,22 +147,22 @@ function function_75381a71() {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x536c3bd3, Offset: 0x22d0
 // Size: 0x54
-function function_bd564a09() {
+function hangar_vtol_flyby() {
     self endon(#"hash_d11bfa2f");
     level flag::wait_till("hangar_vtol_flyby");
-    level thread namespace_2cb3876f::function_42da021e("vh_vtol_flyby", 119, 100);
+    level thread cp_prologue_util::function_42da021e("vh_vtol_flyby", 119, 100);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x40143cba, Offset: 0x2330
 // Size: 0x364
 function function_4cf04b95() {
-    spawner::add_spawn_function_group("aig_plane_hangar_enemies_main", "script_aigroup", &namespace_2cb3876f::remove_grenades);
+    spawner::add_spawn_function_group("aig_plane_hangar_enemies_main", "script_aigroup", &cp_prologue_util::remove_grenades);
     level flag::wait_till("spawn_plane_hangar_enemies");
     spawner::simple_spawn("catwalk_window_enemies", &function_55a0215c);
     spawner::simple_spawn("shooter_enemy", &function_c9e0c14b);
@@ -187,7 +187,7 @@ function function_4cf04b95() {
     level thread function_2810938e();
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x25d4e8f3, Offset: 0x26a0
 // Size: 0xe4
@@ -198,21 +198,21 @@ function function_4514b4cf() {
     self setignoreent(level.var_7f246cd7, 1);
     level.var_7f246cd7 setignoreent(self, 1);
     level flag::wait_till("plane_hangar_enemies_fallback1");
-    wait(5);
+    wait 5;
     self setignoreent(level.var_7f246cd7, 0);
     level.var_7f246cd7 setignoreent(self, 0);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x87fb2dcb, Offset: 0x2790
 // Size: 0x2c
 function function_8f45c05e() {
-    level waittill(#"hash_94f1877f");
+    level waittill(#"window_broken");
     level flag::set("alert_plane_hangar_enemies");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3ad81d57, Offset: 0x27c8
 // Size: 0x2c
@@ -221,7 +221,7 @@ function function_2af9c6c4() {
     level flag::set("alert_plane_hangar_enemies");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 3, eflags: 0x1 linked
 // Checksum 0xa8f46499, Offset: 0x2800
 // Size: 0x18c
@@ -244,7 +244,7 @@ function function_fb6ce428(var_3cee21ba, var_16eba751, var_f0e92ce8) {
     self ai::set_ignoreall(0);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb97cf20e, Offset: 0x2998
 // Size: 0xbc
@@ -257,7 +257,7 @@ function function_147616e2() {
     self setgoal(var_773965fe);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x123bb60d, Offset: 0x2a60
 // Size: 0x1b4
@@ -277,7 +277,7 @@ function function_c9e0c14b() {
     self function_fb6ce428(var_c5fb606f, var_53f3f134, var_79f66b9d);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xeacd336a, Offset: 0x2c20
 // Size: 0xcc
@@ -292,7 +292,7 @@ function function_55a0215c() {
     self ai::set_ignoreall(0);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 3, eflags: 0x1 linked
 // Checksum 0xbf01e4a, Offset: 0x2cf8
 // Size: 0xbc
@@ -307,7 +307,7 @@ function function_4ee77dbb(vehiclename, name, targets) {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9fe58d83, Offset: 0x2dc0
 // Size: 0x354
@@ -323,7 +323,7 @@ function function_30b7d0f9() {
     var_edd777e6 thread vehicle::go_path();
     var_edd777e6 thread function_28d41b1d();
     var_edd777e6 playsound("evt_hangar_jeep_driveaway");
-    wait(1);
+    wait 1;
     var_280d5f68 = getent("plane_hangar_gate_l", "targetname");
     var_3c301126 = getent("plane_hangar_gate_r", "targetname");
     var_9c7511b4 = struct::get("plane_hangar_gate_move_pos_l", "targetname");
@@ -339,7 +339,7 @@ function function_30b7d0f9() {
     function_4ee77dbb(var_a9993ca4, "passenger1", var_9b59c867);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd81ba7e5, Offset: 0x3120
 // Size: 0xe4
@@ -357,7 +357,7 @@ function function_28d41b1d() {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x72c6d307, Offset: 0x3210
 // Size: 0x1ec
@@ -376,11 +376,11 @@ function function_2810938e() {
         var_f6f0207c[i] setgoal(var_46b9d820);
     }
     function_e966c1c0(1);
-    wait(5);
+    wait 5;
     trigger::use("plane_hangar_empty_color_allies", "targetname");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x248ea2a7, Offset: 0x3408
 // Size: 0x4c
@@ -389,20 +389,20 @@ function function_ed437e33() {
     level flag::set("plane_hangar_enemies_fallback3");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8c3bcf3, Offset: 0x3460
 // Size: 0x9c
 function function_f1b38a6e(var_234899cf) {
     var_e70be898 = self.origin;
-    wait(10);
+    wait 10;
     if (distancesquared(self.origin, var_e70be898) < 262144) {
         var_9de10fe3 = getnode(var_234899cf, "targetname");
         self forceteleport(var_9de10fe3.origin);
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x17b2896e, Offset: 0x3508
 // Size: 0x38c
@@ -414,14 +414,14 @@ function function_e92ad8ae() {
     level.var_9db406db thread function_f1b38a6e("node_cyber_khalil");
     level.var_4d5a4697 thread function_f1b38a6e("node_cyber_minister");
     level flag::wait_till("trig_hangar01_enemies");
-    wait(4.5);
+    wait 4.5;
     level.var_2fd26037 colors::disable();
     level.var_9db406db colors::disable();
     level.var_4d5a4697 colors::disable();
     level.var_2fd26037 thread function_3683e3dd("cin_pro_10_01_hangar_vign_traverse_hendricks_start_idle");
-    wait(1);
+    wait 1;
     level.var_9db406db thread function_7ae90dbb("cin_pro_10_01_hangar_vign_traverse_khalil_start_idle");
-    wait(2.5);
+    wait 2.5;
     level.var_4d5a4697 thread function_7a87693b("cin_pro_10_01_hangar_vign_traverse_minister_start_idle");
     level thread function_bae363ed();
     level flag::wait_till("pallas_jump_inside_catwalk");
@@ -436,7 +436,7 @@ function function_e92ad8ae() {
     level.var_2fd26037 ai::set_ignoreme(0);
     level thread scene::play("cin_pro_10_01_hangar_vign_traverse_khalil_end_idle");
     level thread scene::play("cin_pro_10_01_hangar_vign_traverse_minister_end_idle");
-    wait(3);
+    wait 3;
     level thread scene::stop("cin_pro_10_01_hangar_vign_traverse_khalil_end_idle");
     level thread scene::stop("cin_pro_10_01_hangar_vign_traverse_minister_end_idle");
     level.var_9db406db colors::enable();
@@ -445,7 +445,7 @@ function function_e92ad8ae() {
     level.var_9db406db ai::set_ignoreme(0);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 1, eflags: 0x1 linked
 // Checksum 0x52f57f5a, Offset: 0x38a0
 // Size: 0xdc
@@ -460,7 +460,7 @@ function function_3683e3dd(var_c2777dd9) {
     level flag::set("plane_hangar_hendricks_ready_flag");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc444c969, Offset: 0x3988
 // Size: 0x18c
@@ -481,7 +481,7 @@ function function_7ae90dbb(var_c2777dd9) {
     level flag::set("plane_hangar_khalil_ready_flag");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 1, eflags: 0x1 linked
 // Checksum 0xac6c9832, Offset: 0x3b20
 // Size: 0x18c
@@ -502,7 +502,7 @@ function function_7a87693b(var_c2777dd9) {
     level flag::set("plane_hangar_minister_ready_flag");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaac4a37c, Offset: 0x3cb8
 // Size: 0x7a
@@ -513,7 +513,7 @@ function function_cf13969b() {
     level notify(#"hash_f38af553");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5d23ff7e, Offset: 0x3d40
 // Size: 0x13c
@@ -527,11 +527,11 @@ function function_e6515192() {
     if (!scene::is_playing("cin_pro_10_01_hangar_vign_traverse_hendricks_khalil_minister_move_01")) {
         level thread scene::skipto_end("cin_pro_10_01_hangar_vign_traverse_hendricks_khalil_minister_move_01", undefined, undefined, 0.65);
     }
-    wait(0.1);
+    wait 0.1;
     level.var_2fd26037 stopanimscripted();
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x84312c58, Offset: 0x3e88
 // Size: 0x124
@@ -545,7 +545,7 @@ function function_bae363ed() {
     var_3c301126 moveto(var_fcd5dfa1.origin, 0.5);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaa0a571f, Offset: 0x3fb8
 // Size: 0x124
@@ -561,7 +561,7 @@ function function_590acc37() {
     level thread function_25e65862();
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x49cb639c, Offset: 0x40e8
 // Size: 0x54
@@ -571,26 +571,26 @@ function function_c218ce54() {
     mdl_blocker delete();
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa88a998e, Offset: 0x4148
 // Size: 0x2c
 function function_25e65862() {
-    wait(3);
+    wait 3;
     level.var_7f246cd7 thread dialog::say("diaz_move_into_the_next_h_0");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x257d7202, Offset: 0x4180
 // Size: 0x2c
 function function_b5a28004() {
     self endon(#"death");
-    wait(30);
+    wait 30;
     self kill();
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf65392bf, Offset: 0x41b8
 // Size: 0xd4
@@ -606,7 +606,7 @@ function function_211f2948() {
     self startragdoll(1);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa88513f9, Offset: 0x4298
 // Size: 0x6c
@@ -618,7 +618,7 @@ function function_fd0a6295() {
     self playloopsound("gdt_sensory_feedback_lp_upg");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2b8d30, Offset: 0x4310
 // Size: 0x64
@@ -629,7 +629,7 @@ function function_aaf033f6() {
     self setgoal(var_be53b69c, 1);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa73c1e42, Offset: 0x4380
 // Size: 0x9c
@@ -637,11 +637,11 @@ function function_644150a() {
     sndent = spawn("script_origin", (7553, 1157, -49));
     sndent playloopsound("evt_sensory_dudes_walla", 2);
     level flag::wait_till("trig_hangar01_enemies");
-    wait(3);
+    wait 3;
     sndent delete();
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdbf60e50, Offset: 0x4428
 // Size: 0x37c
@@ -666,7 +666,7 @@ function function_e3521c43() {
     self setgoal(n_node, 1);
     self waittill(#"goal");
     self thread function_ee8e1349();
-    wait(0.5);
+    wait 0.5;
     self ai::set_ignoreall(0);
     self ai::set_ignoreme(0);
     self setgoal(n_node, 1);
@@ -682,19 +682,19 @@ function function_e3521c43() {
     level clientfield::set("diaz_break_1", 2);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2e2f1ee5, Offset: 0x47b0
 // Size: 0x7c
 function function_d11463aa() {
-    level waittill(#"hash_94f1877f");
+    level waittill(#"window_broken");
     level thread scene::play("p7_fxanim_cp_prologue_hangar_window_rip_bundle");
     level waittill(#"hash_cab72ab7");
     var_61ee9c31 = getent("hangar_glass_window", "targetname");
     var_61ee9c31 delete();
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa2de58e8, Offset: 0x4838
 // Size: 0x19c
@@ -715,12 +715,12 @@ function function_ee8e1349() {
     level flag::set("fireflies_used");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaeba9423, Offset: 0x49e0
 // Size: 0x78
 function function_cc32afb9() {
-    level endon(#"hash_3e0bebe1");
+    level endon(#"plane_hangar_complete");
     level.var_95790224 = [];
     while (true) {
         swarm = level waittill(#"hash_61df3d1c");
@@ -731,27 +731,27 @@ function function_cc32afb9() {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8d97b0c3, Offset: 0x4a60
 // Size: 0x62
 function function_b81dfc22() {
     self endon(#"death");
-    wait(0.5);
+    wait 0.5;
     self util::waittill_player_looking_at(level.var_7f246cd7.origin + (0, 0, 50), 30);
     level notify(#"hash_35d2241b");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcfa1e76c, Offset: 0x4ad0
 // Size: 0x16
 function function_2d8450d7() {
-    wait(15);
+    wait 15;
     level notify(#"hash_35d2241b");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7e1c158d, Offset: 0x4af0
 // Size: 0x2c
@@ -759,22 +759,22 @@ function function_84a7642b(a_ents) {
     level flag::set("pallas_at_window");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x665bb58a, Offset: 0x4b28
 // Size: 0x94
 function function_e0540704() {
     level endon(#"hash_28b81543");
     self waittill(#"goal");
-    wait(4);
+    wait 4;
     level.var_7f246cd7 dialog::say("diaz_pick_up_the_damn_pac_0");
-    wait(4);
+    wait 4;
     level.var_7f246cd7 dialog::say("diaz_you_wanna_get_the_mi_0");
-    wait(5);
+    wait 5;
     level.var_7f246cd7 dialog::say("diaz_we_gotta_move_to_exf_0");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9387bdbf, Offset: 0x4bc8
 // Size: 0xa4
@@ -786,7 +786,7 @@ function function_507f685c() {
     var_49b32118 dialog::say("nrcp_infiltrators_moving_0", 0, 1);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x73cba09c, Offset: 0x4c78
 // Size: 0x44
@@ -795,7 +795,7 @@ function function_c8af325f() {
     level flag::set("pallas_jump_to_window");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x0
 // Checksum 0x22e7190c, Offset: 0x4cc8
 // Size: 0x5c
@@ -804,7 +804,7 @@ function function_3dc00a0b() {
     self thread ai::shoot_at_target("normal", e_target, undefined, 100, 10000);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 1, eflags: 0x1 linked
 // Checksum 0x74b6e677, Offset: 0x4d30
 // Size: 0x6c
@@ -813,7 +813,7 @@ function function_f1dda14f(var_bf0873ca) {
     self forceteleport(node.origin, node.angles, 1);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8b526cbe, Offset: 0x4da8
 // Size: 0x108
@@ -835,7 +835,7 @@ function function_78f61bf2() {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbe77485a, Offset: 0x4eb8
 // Size: 0x74
@@ -848,7 +848,7 @@ function function_33ec51ea() {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf2ea3269, Offset: 0x4f38
 // Size: 0x102
@@ -864,7 +864,7 @@ function function_6ad5d018() {
     level notify(#"hash_bf48d580");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x802f2782, Offset: 0x5048
 // Size: 0x13c
@@ -873,32 +873,32 @@ function function_1053dd4e() {
     level flag::wait_till("side_cyberbattle_go");
     array::thread_all(level.players, &function_1232fdd1);
     level waittill(#"hash_8f285b1d");
-    wait(1);
+    wait 1;
     a_enemies = spawner::get_ai_group_ai("hangar_ambient_ai");
     if (a_enemies.size > 0) {
         level.var_92d245e2 cybercom::function_d240e350("cybercom_immolation", a_enemies);
     }
-    wait(3);
+    wait 3;
     level.var_f58c9f31 cybercom::function_d240e350("cybercom_smokescreen");
-    wait(4);
+    wait 4;
     a_enemies = spawner::get_ai_group_ai("hangar_ambient_ai");
     if (a_enemies.size > 0) {
         level.var_5d4087a6 cybercom::function_d240e350("cybercom_immolation", a_enemies);
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8426d243, Offset: 0x5190
 // Size: 0x62
 function function_1232fdd1() {
     self endon(#"hash_8f285b1d");
-    wait(0.5);
+    wait 0.5;
     self util::waittill_player_looking_at(level.var_f58c9f31.origin + (0, 0, 64), 90, 1);
     level notify(#"hash_8f285b1d");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xace1865b, Offset: 0x5200
 // Size: 0xf0
@@ -907,13 +907,13 @@ function function_90b59893() {
     var_8164b942 = getentarray("origin_ambient_grenade", "targetname");
     while (true) {
         n_rand = randomintrange(4, 8);
-        wait(n_rand);
+        wait n_rand;
         var_b311d2b0 = randomintrange(0, var_8164b942.size);
         level.var_2fd26037 magicgrenadetype(getweapon("frag_grenade"), var_8164b942[var_b311d2b0].origin, (0, 0, 0), 0.05);
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa35da687, Offset: 0x52f8
 // Size: 0x254
@@ -921,7 +921,7 @@ function function_47f306da(var_5b01a37b, var_74cd64bc) {
     n_node = getnode(var_5b01a37b, "targetname");
     self forceteleport(n_node.origin, n_node.angles, 1);
     self setgoal(n_node);
-    wait(0.5);
+    wait 0.5;
     self show();
     self namespace_dccf27b3::function_9110a277(0);
     self ai::set_ignoreall(0);
@@ -940,7 +940,7 @@ function function_47f306da(var_5b01a37b, var_74cd64bc) {
     self delete();
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x53db373d, Offset: 0x5558
 // Size: 0x224
@@ -961,7 +961,7 @@ function function_5f6c69c0() {
     self setgoal(var_257bbc01);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x0
 // Checksum 0xa6f9e0e1, Offset: 0x5788
 // Size: 0x78
@@ -974,7 +974,7 @@ function function_de617dc2() {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2459dad1, Offset: 0x5808
 // Size: 0x54
@@ -985,7 +985,7 @@ function function_31427ccd() {
     level thread function_8b7b1958();
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf0d05dc7, Offset: 0x5868
 // Size: 0x64
@@ -995,7 +995,7 @@ function function_99cdcfac() {
     level flag::init("vtol_hit");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6beb86ad, Offset: 0x58d8
 // Size: 0x130
@@ -1014,12 +1014,12 @@ function function_71e6db7() {
     level.var_4d5a4697.goalradius = 16;
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x28a17c20, Offset: 0x5a10
 // Size: 0x25c
 function function_8b7b1958() {
-    level thread namespace_2cb3876f::function_42da021e("vh_vtol_flyby_b", 50, 100);
+    level thread cp_prologue_util::function_42da021e("vh_vtol_flyby_b", 50, 100);
     level thread function_4422735b();
     level thread function_8efb9b5c();
     level.var_7f246cd7 thread function_f9196d1d();
@@ -1044,17 +1044,17 @@ function function_8b7b1958() {
     skipto::function_be8adfb8("skipto_vtol_collapse");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x162e137c, Offset: 0x5c78
 // Size: 0x25e
 function function_4422735b() {
     t_door = getent("vtol_collapse_door_open", "targetname");
     var_634d0729 = array(level.var_4d5a4697, level.var_2fd26037, level.var_9db406db);
-    level thread namespace_2cb3876f::function_21f52196("vtol_collapse_doors", t_door);
-    level thread namespace_2cb3876f::function_2e61b3e8("vtol_collapse_doors", t_door, var_634d0729);
-    while (!namespace_2cb3876f::function_cdd726fb("vtol_collapse_doors")) {
-        wait(0.1);
+    level thread cp_prologue_util::function_21f52196("vtol_collapse_doors", t_door);
+    level thread cp_prologue_util::function_2e61b3e8("vtol_collapse_doors", t_door, var_634d0729);
+    while (!cp_prologue_util::function_cdd726fb("vtol_collapse_doors")) {
+        wait 0.1;
     }
     var_ac769486 = getent("clip_player_vtol_collapse_backtrack_doorway", "targetname");
     var_ac769486 movez(100 * -1, 0.05);
@@ -1067,7 +1067,7 @@ function function_4422735b() {
     level notify(#"hash_e3977daa");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x67d68b1, Offset: 0x5ee0
 // Size: 0x3c
@@ -1077,7 +1077,7 @@ function function_d43c2e1a() {
     level thread clientfield::set("vtol_missile_explode_trash_fx", 1);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6707e3a5, Offset: 0x5f28
 // Size: 0x134
@@ -1094,7 +1094,7 @@ function function_9ea7f8ae() {
     level flag::set("vtol_hit");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8fe631b7, Offset: 0x6068
 // Size: 0xd4
@@ -1106,13 +1106,13 @@ function function_414c1d0() {
     self thread function_23e5e896();
     level flag::wait_till("hend_grenade_timeout");
     /#
-        iprintln("fireflies_used");
+        iprintln("<dev string:x28>");
     #/
-    wait(2);
+    wait 2;
     level flag::set("vtol_hit");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbccd46c5, Offset: 0x6148
 // Size: 0xe4
@@ -1120,20 +1120,20 @@ function function_23e5e896() {
     level endon(#"hash_36ad3c2e");
     self dialog::say("hend_our_weapons_are_no_g_0");
     if (vehicle::is_corpse(level.var_199de689)) {
-        wait(1);
+        wait 1;
     } else {
         level waittill(#"hash_723b53fc");
     }
     self thread dialog::say("hend_we_gotta_bring_down_1", 0.25);
-    wait(1);
+    wait 1;
     level flag::set("vtol_destroy_obj");
-    wait(7);
+    wait 7;
     self dialog::say("hend_we_ain_t_doing_shit_0");
-    wait(5);
+    wait 5;
     level flag::set("hend_grenade_timeout");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x0
 // Checksum 0x1b2d1b48, Offset: 0x6238
 // Size: 0x7c
@@ -1141,7 +1141,7 @@ function function_10ed8bd7() {
     var_c3adecbb = 0;
     n_starttime = gettime();
     while (true) {
-        wait(0.5);
+        wait 0.5;
         var_c3adecbb = (gettime() - n_starttime) / 1000;
         if (var_c3adecbb >= 20) {
             break;
@@ -1150,7 +1150,7 @@ function function_10ed8bd7() {
     level flag::set("hend_grenade_timeout");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe6c53003, Offset: 0x62c0
 // Size: 0xcc
@@ -1166,7 +1166,7 @@ function function_11855253() {
     trigger::use("vtol_hendricks_move_up_initial");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x74408061, Offset: 0x6398
 // Size: 0x24
@@ -1174,7 +1174,7 @@ function function_15ce0cb4() {
     level.var_2fd26037 dialog::say("hend_apc_s_out_of_commiss_0");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf2ccfdd0, Offset: 0x63c8
 // Size: 0xa2
@@ -1184,28 +1184,28 @@ function function_d418516(var_c83dc06e) {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9a6293b3, Offset: 0x6478
 // Size: 0x20c
 function function_55039e89() {
     spawner::add_spawn_function_group("sp_vtol_initial", "targetname", &function_d7dad356);
-    spawner::add_spawn_function_group("sp_vtol_initial", "targetname", &namespace_2cb3876f::remove_grenades);
+    spawner::add_spawn_function_group("sp_vtol_initial", "targetname", &cp_prologue_util::remove_grenades);
     spawner::simple_spawn("sp_vtol_initial");
     spawner::add_spawn_function_group("sp_vtol_hangar_sideroom", "targetname", &function_d7dad356);
-    spawner::add_spawn_function_group("sp_vtol_hangar_sideroom", "targetname", &namespace_2cb3876f::remove_grenades);
+    spawner::add_spawn_function_group("sp_vtol_hangar_sideroom", "targetname", &cp_prologue_util::remove_grenades);
     spawner::simple_spawn("sp_vtol_hangar_sideroom");
     spawner::add_spawn_function_group("aig_vtol_hangar_lower", "script_aigroup", &function_b7846718);
-    spawner::add_spawn_function_group("aig_vtol_hangar_lower", "script_aigroup", &namespace_2cb3876f::remove_grenades);
+    spawner::add_spawn_function_group("aig_vtol_hangar_lower", "script_aigroup", &cp_prologue_util::remove_grenades);
     spawn_manager::enable("sm_vtol_hangar_rear");
     spawner::add_spawn_function_group("aig_vtol_hangar_upper", "script_aigroup", &function_5d48dce7);
-    spawner::add_spawn_function_group("aig_vtol_hangar_upper", "script_aigroup", &namespace_2cb3876f::remove_grenades);
+    spawner::add_spawn_function_group("aig_vtol_hangar_upper", "script_aigroup", &cp_prologue_util::remove_grenades);
     spawn_manager::enable("sm_vtol_hangar_upper");
     level waittill(#"hash_ccdbd3be");
     spawner::simple_spawn("sp_vtol_hangar_top_front");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4d434afa, Offset: 0x6690
 // Size: 0x104
@@ -1223,7 +1223,7 @@ function function_d7dad356() {
     self ai::set_ignoreall(1);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4aeaf074, Offset: 0x67a0
 // Size: 0x104
@@ -1239,7 +1239,7 @@ function function_1e82f4b7() {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb3297d52, Offset: 0x68b0
 // Size: 0x94
@@ -1251,7 +1251,7 @@ function function_b7846718() {
     self setgoal(var_3f0f1f46);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99fdd4c9, Offset: 0x6950
 // Size: 0x7c
@@ -1263,7 +1263,7 @@ function function_5d48dce7() {
     trigger::use("vtol_hangar_upper_color", "targetname");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6e5d7e79, Offset: 0x69d8
 // Size: 0x54
@@ -1272,7 +1272,7 @@ function function_d2bdf93e() {
     self ai::set_ignoreall(0);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x20607cdf, Offset: 0x6a38
 // Size: 0x94
@@ -1285,7 +1285,7 @@ function function_f647689b() {
     self ai::set_ignoreme(0);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6d2aa3e, Offset: 0x6ad8
 // Size: 0x38
@@ -1296,7 +1296,7 @@ function function_f547728f() {
     self.script_accuracy = 1;
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7aa2911a, Offset: 0x6b18
 // Size: 0x28a
@@ -1321,16 +1321,16 @@ function function_d81a4ec() {
     spawner::waittill_ai_group_ai_count("aig_vtol_hangar_upper", 0);
     spawner::waittill_ai_group_ai_count("aig_vtol_hangar_initial", 0);
     spawner::waittill_ai_group_ai_count("aig_plane_hangar_enemies_main", 0);
-    wait(2);
+    wait 2;
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x53a24afb, Offset: 0x6db0
 // Size: 0x21a
 function function_c1bac28() {
     level thread function_f6c934d0();
-    wait(15);
+    wait 15;
     var_d2315634 = getent("trig_vtol_goal_vol_fallback_final_defend_exit", "targetname");
     var_4b64857a = spawner::get_ai_group_ai("aig_vtol_hangar_upper");
     var_f694cded = spawner::get_ai_group_ai("aig_vtol_hangar_lower");
@@ -1342,13 +1342,13 @@ function function_c1bac28() {
     foreach (enemy in var_20cedf03) {
         if (isalive(enemy)) {
             enemy cleargoalvolume();
-            wait(0.1);
+            wait 0.1;
             enemy setgoalvolume(var_d2315634);
         }
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x271fbe6a, Offset: 0x6fd8
 // Size: 0x3c
@@ -1358,7 +1358,7 @@ function function_f6c934d0() {
     util::clear_streamer_hint();
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x0
 // Checksum 0xf447287b, Offset: 0x7020
 // Size: 0x7c
@@ -1369,7 +1369,7 @@ function function_896f0868() {
     self ai::set_behavior_attribute("move_mode", "rambo");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1c4f2721, Offset: 0x70a8
 // Size: 0x9c
@@ -1377,12 +1377,12 @@ function function_114b96c0() {
     var_25002d73 = 6;
     while (var_25002d73 > 5) {
         var_25002d73 = spawner::get_ai_group_sentient_count("aig_vtol_hangar_lower") + spawner::get_ai_group_sentient_count("aig_vtol_hangar_initial") + spawner::get_ai_group_sentient_count("aig_plane_hangar_enemies_main");
-        wait(0.5);
+        wait 0.5;
     }
     level flag::set("vtol_final_fallback");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 1, eflags: 0x1 linked
 // Checksum 0x85cf9813, Offset: 0x7150
 // Size: 0xb6
@@ -1395,7 +1395,7 @@ function function_19352a82(var_1f6e1fda) {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x37156aed, Offset: 0x7210
 // Size: 0x3fc
@@ -1411,11 +1411,11 @@ function function_8efb9b5c() {
             level.var_fac57550 thread turret::shoot_at_target(e_target, 2.25, (0, 0, 0), 1, 0);
             level.var_fac57550 thread turret::shoot_at_target(e_target, 2.25, (0, 0, 0), 2, 0);
             level thread function_5792f76d(var_2df9fcc1, e_target.origin);
-            wait(2.25);
+            wait 2.25;
             level notify(#"hash_1a6f8b52");
         }
     }
-    wait(2.25);
+    wait 2.25;
     foreach (player in level.players) {
         player.overrideplayerdamage = undefined;
     }
@@ -1433,13 +1433,13 @@ function function_8efb9b5c() {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 2, eflags: 0x1 linked
 // Checksum 0x85f6416d, Offset: 0x7618
 // Size: 0x94
 function function_5792f76d(var_2df9fcc1, v_loc) {
     self endon(#"death");
-    level endon(#"hash_1d072da3");
+    level endon(#"vtol_collapse_done");
     level endon(#"hash_1a6f8b52");
     e_who = var_2df9fcc1 waittill(#"trigger");
     if (e_who.team === "axis") {
@@ -1447,7 +1447,7 @@ function function_5792f76d(var_2df9fcc1, v_loc) {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xda8d8393, Offset: 0x76b8
 // Size: 0x4d4
@@ -1460,7 +1460,7 @@ function function_8bd46c9() {
     e_target = getent("second_apc_target", "targetname");
     var_199de689 thread turret::shoot_at_target(e_target, 2, (0, 0, 0), 1, 0);
     var_199de689 thread turret::shoot_at_target(e_target, 2, (0, 0, 0), 2, 0);
-    wait(2);
+    wait 2;
     var_199de689 turret::set_burst_parameters(level.var_41d1cac6, level.var_26dc9f18, level.var_3534f286, level.var_1a3fc6d8, 1);
     var_199de689 turret::set_burst_parameters(level.var_41d1cac6, level.var_26dc9f18, level.var_3534f286, level.var_1a3fc6d8, 2);
     var_199de689 turret::enable(1, 1);
@@ -1477,10 +1477,10 @@ function function_8bd46c9() {
     level thread function_2226d83();
     level thread scene::play("p7_fxanim_cp_prologue_vtol_hangar_bundle");
     var_2ef9d306 = getent("vtol_hangar_drop", "targetname");
-    var_2ef9d306 thread namespace_2cb3876f::function_d723979e("swap_vtol_to_destroyed", "veh_t7_mil_vtol_nrc_no_interior_d", "vtol_collapse_done");
+    var_2ef9d306 thread cp_prologue_util::function_d723979e("swap_vtol_to_destroyed", "veh_t7_mil_vtol_nrc_no_interior_d", "vtol_collapse_done");
     level notify(#"hash_5a11bfd7");
     var_199de689 delete();
-    wait(0.05);
+    wait 0.05;
     level.var_fac57550 delete();
     level waittill(#"hash_ccdbd3be");
     var_fa3fe683 = getent("vtol_hangar_explosion_origin", "targetname");
@@ -1492,7 +1492,7 @@ function function_8bd46c9() {
     util::delay(3, undefined, &function_62732b9d, var_fa3fe683.origin);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa9879df6, Offset: 0x7b98
 // Size: 0x13e
@@ -1511,7 +1511,7 @@ function function_62732b9d(s_origin, n_radius) {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3c7fec43, Offset: 0x7ce0
 // Size: 0xc4
@@ -1525,7 +1525,7 @@ function function_2226d83() {
     playrumbleonposition("cp_prologue_rumble_hangar_vtol_collapse_hit_ground", var_c9510c8e.origin);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdd0c6848, Offset: 0x7db0
 // Size: 0x124
@@ -1539,7 +1539,7 @@ function function_b5a6b879() {
     level flag::set("door_close");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x657c09ae, Offset: 0x7ee0
 // Size: 0x324
@@ -1576,26 +1576,26 @@ function function_f9196d1d() {
     function_e966c1c0(1);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6fa33c89, Offset: 0x8210
 // Size: 0x52
 function function_5b79ea07() {
-    wait(0.5);
+    wait 0.5;
     self util::waittill_player_looking_at(level.var_7f246cd7.origin + (0, 0, 64), 90);
     level notify(#"hash_4939dbfa");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5d25b98c, Offset: 0x8270
 // Size: 0x16
 function function_570a8f9e() {
-    wait(5);
+    wait 5;
     level notify(#"hash_4939dbfa");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa753dcbc, Offset: 0x8290
 // Size: 0x1da
@@ -1604,7 +1604,7 @@ function function_f87b8938() {
     level flag::wait_till("friendlies_jump_out_window");
     level.var_92d245e2 thread scene::play("cin_pro_10_04_hangar_vign_coverfire_prometheus");
     level thread function_5f5d84df();
-    wait(1.5);
+    wait 1.5;
     spawn_manager::enable("hangars_taylor_vign_fodder_manager");
     level.var_92d245e2 dialog::say("tayr_get_to_exfil_i_got_0");
     level.var_92d245e2 thread function_e547f97a();
@@ -1618,7 +1618,7 @@ function function_f87b8938() {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6a77c238, Offset: 0x8478
 // Size: 0x148
@@ -1629,7 +1629,7 @@ function function_e547f97a() {
     while (true) {
         a_enemies = spawner::get_ai_group_ai("taylor_fodder_ai");
         if (a_enemies.size === 0) {
-            wait(2);
+            wait 2;
             continue;
         }
         foreach (enemy in a_enemies) {
@@ -1637,11 +1637,11 @@ function function_e547f97a() {
                 self ai::shoot_at_target("normal", enemy, undefined, randomfloatrange(1, 3));
             }
         }
-        wait(1.5);
+        wait 1.5;
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4b148ff1, Offset: 0x85c8
 // Size: 0x136
@@ -1660,7 +1660,7 @@ function function_5f5d84df() {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7a6daa2d, Offset: 0x8708
 // Size: 0x102
@@ -1678,19 +1678,19 @@ function function_e3e4f0b8() {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xafd62008, Offset: 0x8818
 // Size: 0x7c
 function function_e37c0060() {
     level waittill(#"hash_8413e49c");
-    wait(6);
+    wait 6;
     level dialog::remote("hall_diaz_i_m_in_positio_0", undefined, "normal");
     level.var_7f246cd7 dialog::say("diaz_copy_that_to_us_h_0");
     level flag::set("hangar_5_bc");
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 13, eflags: 0x1 linked
 // Checksum 0x9c8e27fe, Offset: 0x88a0
 // Size: 0x80
@@ -1700,7 +1700,7 @@ function function_e8443509(einflictor, eattacker, idamage, idflags, smeansofdeat
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1960b4fb, Offset: 0x8928
 // Size: 0xcc
@@ -1715,7 +1715,7 @@ function function_a2041661() {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 7, eflags: 0x1 linked
 // Checksum 0x7f86be11, Offset: 0x8a00
 // Size: 0x2dc
@@ -1748,7 +1748,7 @@ function function_a8cd091b(var_a334437f, var_280d5f68, var_3c301126, var_9c7511b
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0xca9e620c, Offset: 0x8ce8
 // Size: 0xe4
@@ -1760,7 +1760,7 @@ function function_10ab649() {
     var_3c301126 moveto(s_door_loc.origin, 0.5);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x64dec6f6, Offset: 0x8dd8
 // Size: 0xec
@@ -1769,7 +1769,7 @@ function function_9ada4a46() {
     var_32400ae0 = getent("trig_dam_vtol_grenade_accolade", "targetname");
     var_32400ae0 setcandamage(0);
     level flag::wait_till("2nd_hangar_apc_in_pos");
-    wait(0.5);
+    wait 0.5;
     var_32400ae0 setcandamage(1);
     var_32400ae0 trigger::wait_till();
     if (isplayer(var_32400ae0.who)) {
@@ -1777,7 +1777,7 @@ function function_9ada4a46() {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7c0cc7ba, Offset: 0x8ed0
 // Size: 0x48
@@ -1787,7 +1787,7 @@ function function_e966c1c0(var_eb6e3c93) {
     level.var_7f246cd7.perfectaim = var_eb6e3c93;
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 2, eflags: 0x0
 // Checksum 0x22ce66cc, Offset: 0x8f20
 // Size: 0x294
@@ -1804,7 +1804,7 @@ function function_ba29155a(var_c047ec73, var_3b15866b) {
     self endon(#"hash_a2ba32d");
     self thread function_a2ba32d();
     while (true) {
-        wait(0.05);
+        wait 0.05;
         if (!isdefined(self.goalpos)) {
             continue;
         }
@@ -1831,7 +1831,7 @@ function function_ba29155a(var_c047ec73, var_3b15866b) {
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1b5ab6f9, Offset: 0x91c0
 // Size: 0x64
@@ -1843,7 +1843,7 @@ function function_a2ba32d() {
     self ai::set_behavior_attribute("sprint", 0);
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5b8ca4cc, Offset: 0x9230
 // Size: 0xdc
@@ -1858,13 +1858,13 @@ function function_ce858cd3(b_up) {
     } else {
         e_collision movez(-1000, 0.05);
     }
-    wait(0.05);
+    wait 0.05;
     if (isdefined(e_collision)) {
         e_collision disconnectpaths(0, 0);
     }
 }
 
-// Namespace namespace_d51ba4
+// Namespace Hangar
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa7bb8fac, Offset: 0x9318
 // Size: 0xcc

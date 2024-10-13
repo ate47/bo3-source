@@ -19,9 +19,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e1bd9dd;
+#namespace zm_asylum_zombie;
 
-// Namespace namespace_e1bd9dd
+// Namespace zm_asylum_zombie
 // Params 0, eflags: 0x2
 // Checksum 0x4788eca5, Offset: 0x3e8
 // Size: 0x64
@@ -33,17 +33,17 @@ function autoexec init() {
     level.var_1ace2307 = 2;
 }
 
-// Namespace namespace_e1bd9dd
+// Namespace zm_asylum_zombie
 // Params 0, eflags: 0x5 linked
 // Checksum 0x442110ad, Offset: 0x458
 // Size: 0x84
 function private function_ee90a52a() {
     animationstatenetwork::registeranimationmocomp("mocomp_teleport_traversal@zombie", &function_5683b5d5, undefined, undefined);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("zodShouldMove", &function_d0ef2cea);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("zodShouldMove", &zodShouldMove);
     spawner::add_archetype_spawn_function("zombie", &function_5bf6989a);
 }
 
-// Namespace namespace_e1bd9dd
+// Namespace zm_asylum_zombie
 // Params 5, eflags: 0x1 linked
 // Checksum 0xa12ef3a8, Offset: 0x4e8
 // Size: 0x19c
@@ -52,19 +52,19 @@ function function_5683b5d5(entity, mocompanim, mocompanimblendouttime, mocompani
     entity animmode("normal");
     if (isdefined(entity.traverseendnode)) {
         /#
-            print3d(entity.traversestartnode.origin, "<unknown string>", (1, 0, 0), 1, 1, 60);
-            print3d(entity.traverseendnode.origin, "<unknown string>", (0, 1, 0), 1, 1, 60);
+            print3d(entity.traversestartnode.origin, "<dev string:x28>", (1, 0, 0), 1, 1, 60);
+            print3d(entity.traverseendnode.origin, "<dev string:x28>", (0, 1, 0), 1, 1, 60);
             line(entity.traversestartnode.origin, entity.traverseendnode.origin, (0, 1, 0), 1, 0, 60);
         #/
         entity forceteleport(entity.traverseendnode.origin, entity.traverseendnode.angles, 0);
     }
 }
 
-// Namespace namespace_e1bd9dd
+// Namespace zm_asylum_zombie
 // Params 1, eflags: 0x1 linked
 // Checksum 0x98bdd08b, Offset: 0x690
 // Size: 0x18a
-function function_d0ef2cea(entity) {
+function zodShouldMove(entity) {
     if (isdefined(entity.var_128cd975) && entity.var_128cd975 && !(isdefined(entity.tesla_death) && entity.tesla_death)) {
         return false;
     }
@@ -97,7 +97,7 @@ function function_d0ef2cea(entity) {
     return false;
 }
 
-// Namespace namespace_e1bd9dd
+// Namespace zm_asylum_zombie
 // Params 0, eflags: 0x5 linked
 // Checksum 0x98553d4c, Offset: 0x828
 // Size: 0x1c
@@ -105,7 +105,7 @@ function private function_5bf6989a() {
     self.cant_move_cb = &function_9f18c3b1;
 }
 
-// Namespace namespace_e1bd9dd
+// Namespace zm_asylum_zombie
 // Params 0, eflags: 0x5 linked
 // Checksum 0x57fab375, Offset: 0x850
 // Size: 0x2c

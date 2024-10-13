@@ -3,9 +3,9 @@
 #using scripts/shared/fx_shared;
 #using scripts/shared/clientfield_shared;
 
-#namespace namespace_a528e918;
+#namespace zm_challenges_tomb;
 
-// Namespace namespace_a528e918
+// Namespace zm_challenges_tomb
 // Params 0, eflags: 0x2
 // Checksum 0x316af679, Offset: 0x140
 // Size: 0x34
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
     system::register("zm_tomb_chamber", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_a528e918
+// Namespace zm_challenges_tomb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe27b5683, Offset: 0x180
 // Size: 0x4c
@@ -21,7 +21,7 @@ function __init__() {
     clientfield::register("scriptmover", "divider_fx", 21000, 1, "counter", &function_fa586bee, 0, 0);
 }
 
-// Namespace namespace_a528e918
+// Namespace zm_challenges_tomb
 // Params 7, eflags: 0x1 linked
 // Checksum 0x68ecc20c, Offset: 0x1d8
 // Size: 0xa6

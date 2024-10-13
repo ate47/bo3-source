@@ -2,9 +2,9 @@
 #using scripts/shared/math_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e381fc9e;
+#namespace _sticky_grenade;
 
-// Namespace namespace_e381fc9e
+// Namespace _sticky_grenade
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe389ef65, Offset: 0x128
 // Size: 0x1e
@@ -12,7 +12,7 @@ function main() {
     level._effect["grenade_light"] = "weapon/fx_equip_light_os";
 }
 
-// Namespace namespace_e381fc9e
+// Namespace _sticky_grenade
 // Params 1, eflags: 0x1 linked
 // Checksum 0x14e3a2cb, Offset: 0x150
 // Size: 0x44
@@ -23,7 +23,7 @@ function spawned(localclientnum) {
     self thread fx_think(localclientnum);
 }
 
-// Namespace namespace_e381fc9e
+// Namespace _sticky_grenade
 // Params 1, eflags: 0x1 linked
 // Checksum 0x39e3a1fc, Offset: 0x1a0
 // Size: 0x12c
@@ -41,7 +41,7 @@ function fx_think(localclientnum) {
     }
 }
 
-// Namespace namespace_e381fc9e
+// Namespace _sticky_grenade
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2d1ddc93, Offset: 0x2d8
 // Size: 0x6c
@@ -50,7 +50,7 @@ function start_light_fx(localclientnum) {
     self.fx = playfxontag(localclientnum, level._effect["grenade_light"], self, "tag_fx");
 }
 
-// Namespace namespace_e381fc9e
+// Namespace _sticky_grenade
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbd4eae3a, Offset: 0x350
 // Size: 0x4e
@@ -61,7 +61,7 @@ function stop_light_fx(localclientnum) {
     }
 }
 
-// Namespace namespace_e381fc9e
+// Namespace _sticky_grenade
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb8bf10a4, Offset: 0x3a8
 // Size: 0xf4

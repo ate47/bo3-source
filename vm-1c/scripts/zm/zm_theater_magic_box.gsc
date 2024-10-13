@@ -3,9 +3,9 @@
 #using scripts/shared/flag_shared;
 #using scripts/shared/callbacks_shared;
 
-#namespace namespace_5daad52;
+#namespace zm_theater_magic_box;
 
-// Namespace namespace_5daad52
+// Namespace zm_theater_magic_box
 // Params 0, eflags: 0x1 linked
 // Checksum 0x43a16d54, Offset: 0x1d0
 // Size: 0xf4
@@ -20,7 +20,7 @@ function function_2a476331() {
     callback::on_connect(&function_72feb26b);
 }
 
-// Namespace namespace_5daad52
+// Namespace zm_theater_magic_box
 // Params 0, eflags: 0x1 linked
 // Checksum 0x28e6571a, Offset: 0x2d0
 // Size: 0x5c
@@ -30,7 +30,7 @@ function function_72feb26b() {
     }
 }
 
-// Namespace namespace_5daad52
+// Namespace zm_theater_magic_box
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbe7d5bf1, Offset: 0x338
 // Size: 0x9c
@@ -41,39 +41,39 @@ function get_location_from_chest_index(chest_index) {
             return i;
         }
     }
-    assertmsg("foyer_chest" + chest_loc);
+    assertmsg("<dev string:x28>" + chest_loc);
 }
 
-// Namespace namespace_5daad52
+// Namespace zm_theater_magic_box
 // Params 0, eflags: 0x1 linked
 // Checksum 0x442c0b2b, Offset: 0x3e0
 // Size: 0x160
 function magic_box_update() {
-    wait(2);
+    wait 2;
     level flag::wait_till("power_on");
     box_mode = "Box Available";
     util::setclientsysstate("box_indicator", get_location_from_chest_index(level.chest_index));
     while (true) {
         switch (box_mode) {
-        case 11:
+        case "Box Available":
             if (level flag::get("moving_chest_now")) {
                 util::setclientsysstate("box_indicator", level._box_indicator_flash_lights_moving);
                 box_mode = "Box is Moving";
             }
             break;
-        case 13:
+        case "Box is Moving":
             while (level flag::get("moving_chest_now")) {
-                wait(0.1);
+                wait 0.1;
             }
             util::setclientsysstate("box_indicator", get_location_from_chest_index(level.chest_index));
             box_mode = "Box Available";
             break;
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
-// Namespace namespace_5daad52
+// Namespace zm_theater_magic_box
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb5219cb, Offset: 0x548
 // Size: 0x98
@@ -82,7 +82,7 @@ function function_87812219() {
         level waittill(#"hash_3b3c2756");
         util::setclientsysstate("box_indicator", level.var_21469639);
         while (level.zombie_vars["zombie_powerup_fire_sale_time"] > 0) {
-            wait(0.1);
+            wait 0.1;
         }
         util::setclientsysstate("box_indicator", get_location_from_chest_index(level.chest_index));
     }

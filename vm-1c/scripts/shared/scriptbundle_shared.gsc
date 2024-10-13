@@ -51,7 +51,7 @@ class cscriptbundleobjectbase {
     // Checksum 0xfb9ca0a7, Offset: 0x168
     // Size: 0xbc
     function log(str_msg) {
-        println([[ self.var_190b1ea2 ]]->get_type() + "x" + [[ self.var_190b1ea2 ]]->get_name() + "x" + (isdefined("x") ? "x" + "x" : isdefined(self._s.name) ? "x" + self._s.name : "x") + "x" + str_msg);
+        println([[ self.var_190b1ea2 ]]->get_type() + "<dev string:x28>" + [[ self.var_190b1ea2 ]]->get_name() + "<dev string:x2a>" + (isdefined("<dev string:x2f>") ? "<dev string:x2e>" + "<dev string:x2f>" : isdefined(self._s.name) ? "<dev string:x2e>" + self._s.name : "<dev string:x2e>") + "<dev string:x37>" + str_msg);
     }
 
     // Namespace cscriptbundleobjectbase
@@ -102,7 +102,7 @@ class cscriptbundlebase {
             if (self._testing) {
                 scriptbundle::error_on_screen(str_msg);
             } else {
-                assertmsg(self._s.type + "x" + self._str_name + "x" + str_msg);
+                assertmsg(self._s.type + "<dev string:x28>" + self._str_name + "<dev string:x3a>" + str_msg);
             }
             thread on_error();
             return true;
@@ -115,7 +115,7 @@ class cscriptbundlebase {
     // Checksum 0x76dbfee2, Offset: 0x798
     // Size: 0x54
     function log(str_msg) {
-        println(self._s.type + "x" + self._str_name + "x" + str_msg);
+        println(self._s.type + "<dev string:x28>" + self._str_name + "<dev string:x3a>" + str_msg);
     }
 
     // Namespace cscriptbundlebase
@@ -237,16 +237,16 @@ function _destroy_error_on_screen() {
     // Checksum 0x6a7dd4e6, Offset: 0xde0
     // Size: 0x18c
     function warning_on_screen(str_msg) {
-        if (str_msg != "x") {
+        if (str_msg != "<dev string:x2e>") {
             if (!isdefined(level.scene_warning_hud)) {
-                level.scene_warning_hud = level.players[0] openluimenu("x");
-                level.players[0] setluimenudata(level.scene_warning_hud, "x", 2);
-                level.players[0] setluimenudata(level.scene_warning_hud, "x", 0);
-                level.players[0] setluimenudata(level.scene_warning_hud, "x", 1060);
-                level.players[0] setluimenudata(level.scene_warning_hud, "x", 1280);
+                level.scene_warning_hud = level.players[0] openluimenu("<dev string:x3d>");
+                level.players[0] setluimenudata(level.scene_warning_hud, "<dev string:x4c>", 2);
+                level.players[0] setluimenudata(level.scene_warning_hud, "<dev string:x56>", 0);
+                level.players[0] setluimenudata(level.scene_warning_hud, "<dev string:x58>", 1060);
+                level.players[0] setluimenudata(level.scene_warning_hud, "<dev string:x5a>", 1280);
                 level.players[0] lui::set_color(level.scene_warning_hud, (1, 1, 0));
             }
-            level.players[0] setluimenudata(level.scene_warning_hud, "x", str_msg);
+            level.players[0] setluimenudata(level.scene_warning_hud, "<dev string:x60>", str_msg);
             self thread _destroy_warning_on_screen();
         }
     }

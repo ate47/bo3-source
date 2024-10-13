@@ -32,7 +32,7 @@ function init() {
     }
     level thread onplayerconnect();
     if (level._uses_sticky_grenades) {
-        namespace_e381fc9e::init();
+        _sticky_grenade::init();
     }
 }
 
@@ -235,32 +235,32 @@ function dropweaponfordeath(attacker) {
     }
     if (!isdefined(weapon)) {
         /#
-            if (getdvarstring("minigun") == "minigun") {
-                println("minigun");
+            if (getdvarstring("<dev string:x28>") == "<dev string:x36>") {
+                println("<dev string:x38>");
             }
         #/
         return;
     }
     if (weapon == level.weaponnone) {
         /#
-            if (getdvarstring("minigun") == "minigun") {
-                println("minigun");
+            if (getdvarstring("<dev string:x28>") == "<dev string:x36>") {
+                println("<dev string:x58>");
             }
         #/
         return;
     }
     if (!self hasweapon(weapon)) {
         /#
-            if (getdvarstring("minigun") == "minigun") {
-                println("minigun" + weapon.name + "minigun");
+            if (getdvarstring("<dev string:x28>") == "<dev string:x36>") {
+                println("<dev string:x7b>" + weapon.name + "<dev string:xa7>");
             }
         #/
         return;
     }
     if (!self anyammoforweaponmodes(weapon)) {
         /#
-            if (getdvarstring("minigun") == "minigun") {
-                println("minigun");
+            if (getdvarstring("<dev string:x28>") == "<dev string:x36>") {
+                println("<dev string:xa9>");
             }
         #/
         return;
@@ -273,8 +273,8 @@ function dropweaponfordeath(attacker) {
     clip_and_stock_ammo = clipammo + stockammo;
     if (!clip_and_stock_ammo) {
         /#
-            if (getdvarstring("minigun") == "minigun") {
-                println("minigun");
+            if (getdvarstring("<dev string:x28>") == "<dev string:x36>") {
+                println("<dev string:xd6>");
             }
         #/
         return;
@@ -286,13 +286,13 @@ function dropweaponfordeath(attacker) {
     item = self dropitem(weapon);
     if (!isdefined(item)) {
         /#
-            iprintlnbold("minigun" + weapon.name);
+            iprintlnbold("<dev string:xf2>" + weapon.name);
         #/
         return;
     }
     /#
-        if (getdvarstring("minigun") == "minigun") {
-            println("minigun" + weapon.name);
+        if (getdvarstring("<dev string:x28>") == "<dev string:x36>") {
+            println("<dev string:x119>" + weapon.name);
         }
     #/
     function_26bed480(weapon, self, item);
@@ -310,7 +310,7 @@ function dropweaponfordeath(attacker) {
 // Size: 0x34
 function deletepickupafterawhile() {
     self endon(#"death");
-    wait(60);
+    wait 60;
     if (!isdefined(self)) {
         return;
     }
@@ -331,8 +331,8 @@ function watchpickup() {
         }
     }
     /#
-        if (getdvarstring("minigun") == "minigun") {
-            println("minigun" + weapon.name + "minigun" + isdefined(self.ownersattacker));
+        if (getdvarstring("<dev string:x28>") == "<dev string:x36>") {
+            println("<dev string:x12a>" + weapon.name + "<dev string:x13d>" + isdefined(self.ownersattacker));
         }
     #/
     assert(isdefined(player.tookweaponfrom));
@@ -385,16 +385,16 @@ function watchweaponusage() {
         self.lastfiretime = gettime();
         self.hasdonecombat = 1;
         switch (curweapon.weapclass) {
-        case 16:
-        case 17:
-        case 18:
-        case 20:
-        case 21:
+        case "mg":
+        case "pistol":
+        case "rifle":
+        case "smg":
+        case "spread":
             self trackweaponfire(curweapon);
             level.globalshotsfired++;
             break;
-        case 15:
-        case 19:
+        case "grenade":
+        case "rocketlauncher":
             self addweaponstat(curweapon, "shots", 1);
             break;
         default:
@@ -588,10 +588,10 @@ function begingrenadetracking() {
         grenade.iscooked = 1;
     }
     switch (weapon.name) {
-    case 32:
-    case 33:
+    case "frag_grenade":
+    case "sticky_grenade":
         self addweaponstat(weapon, "used", 1);
-    case 31:
+    case "explosive_bolt":
         grenade.originalowner = self;
         break;
     }
@@ -890,9 +890,9 @@ function damageent(einflictor, eattacker, idamage, smeansofdeath, weapon, damage
     // Checksum 0x74ea9136, Offset: 0x3380
     // Size: 0x6e
     function debugline(a, b, color) {
-                for (i = 0; i < 600; i++) {
+        for (i = 0; i < 600; i++) {
             line(a, b, color);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -906,7 +906,7 @@ function onweapondamage(eattacker, einflictor, weapon, meansofdeath, damage) {
     self endon(#"death");
     self endon(#"disconnect");
     switch (weapon.name) {
-    case 54:
+    case "concussion_grenade":
         radius = 512;
         if (self == eattacker) {
             radius *= 0.5;
@@ -916,7 +916,7 @@ function onweapondamage(eattacker, einflictor, weapon, meansofdeath, damage) {
             scale = 0;
         }
         time = 2 + 4 * scale;
-        wait(0.05);
+        wait 0.05;
         if (self hasperk("specialty_stunprotection")) {
             time *= 0.1;
         }
@@ -948,11 +948,11 @@ function function_6e7cac34(duration) {
     concussionsound playsound("");
     concussionsound playloopsound("");
     if (duration > 0.5) {
-        wait(duration - 0.5);
+        wait duration - 0.5;
     }
     concussionsound playsound("");
     concussionsound stoploopsound(0.5);
-    wait(0.5);
+    wait 0.5;
     concussionsound notify(#"delete");
     concussionsound delete();
 }
@@ -988,12 +988,12 @@ function function_2988df5a() {
         weaponslist = self getweaponslist();
         for (idx = 0; idx < weaponslist.size; idx++) {
             switch (weaponslist[idx]) {
-            case 10:
-            case 11:
-            case 9:
-            case 8:
-            case 12:
-            case 57:
+            case "m202_flash":
+            case "m220_tow":
+            case "m32":
+            case "minigun":
+            case "mp40_blinged":
+            case "zipline":
                 continue;
             default:
                 break;
@@ -1101,12 +1101,12 @@ function scavenger_think() {
             continue;
         }
         switch (weapon.name) {
-        case 65:
-        case 66:
-        case 32:
-        case 69:
-        case 73:
-        case 33:
+        case "bouncingbetty":
+        case "claymore":
+        case "frag_grenade":
+        case "hatchet":
+        case "satchel_charge":
+        case "sticky_grenade":
             if (isdefined(player.grenadetypeprimarycount) && player.grenadetypeprimarycount < 1) {
                 break;
             }
@@ -1118,16 +1118,16 @@ function scavenger_think() {
                 player.var_9fe1fa37 = 0;
                 player.var_ab681ed8 = 0;
             }
-        case 54:
-        case 67:
-        case 68:
-        case 70:
-        case 71:
-        case 72:
-        case 74:
-        case 75:
-        case 76:
-        case 77:
+        case "concussion_grenade":
+        case "emp_grenade":
+        case "flash_grenade":
+        case "nightingale":
+        case "pda_hack":
+        case "proximity_grenade":
+        case "sensor_grenade":
+        case "tabun_gas":
+        case "trophy_system":
+        case "willy_pete":
             if (isdefined(player.grenadetypesecondarycount) && player.grenadetypesecondarycount < 1) {
                 break;
             }

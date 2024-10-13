@@ -1,9 +1,9 @@
 #using scripts/shared/flagsys_shared;
 #using scripts/shared/util_shared;
 
-#namespace namespace_bf71ff59;
+#namespace zm_asylum_fx;
 
-// Namespace namespace_bf71ff59
+// Namespace zm_asylum_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x56c7900a, Offset: 0x10c8
 // Size: 0x3c
@@ -13,7 +13,7 @@ function main() {
     level thread function_f205a5f1();
 }
 
-// Namespace namespace_bf71ff59
+// Namespace zm_asylum_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x686713e2, Offset: 0x1110
 // Size: 0x622
@@ -76,7 +76,7 @@ function function_e6258024() {
     level._effect["fx_zm_asylum_water_leak"] = "maps/zombie/fx_zm_asylum_water_leak";
 }
 
-// Namespace namespace_bf71ff59
+// Namespace zm_asylum_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdac18e90, Offset: 0x1740
 // Size: 0x1de
@@ -100,7 +100,7 @@ function function_f45953c() {
     level._effect["elec_trail_one_shot"] = "maps/zombie/fx_zombie_elec_trail_oneshot";
 }
 
-// Namespace namespace_bf71ff59
+// Namespace zm_asylum_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe545c443, Offset: 0x1928
 // Size: 0xae

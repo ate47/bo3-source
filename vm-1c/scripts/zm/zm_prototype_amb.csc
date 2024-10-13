@@ -5,9 +5,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f651e9a8;
+#namespace zm_prototype_amb;
 
-// Namespace namespace_f651e9a8
+// Namespace zm_prototype_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x22d1981b, Offset: 0x1b8
 // Size: 0x1c
@@ -15,18 +15,18 @@ function main() {
     level thread startzmbspawnersoundloops();
 }
 
-// Namespace namespace_f651e9a8
+// Namespace zm_prototype_amb
 // Params 0, eflags: 0x0
 // Checksum 0xf3237079, Offset: 0x1e0
 // Size: 0x74
 function function_c9207335() {
-    wait(3);
+    wait 3;
     level thread function_d667714e();
     var_13a52dfe = getentarray(0, "sndMusicTrig", "targetname");
     array::thread_all(var_13a52dfe, &function_60a32834);
 }
 
-// Namespace namespace_f651e9a8
+// Namespace zm_prototype_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc1b3fbae, Offset: 0x260
 // Size: 0x94
@@ -36,15 +36,15 @@ function function_60a32834() {
         if (trigplayer islocalplayer()) {
             level notify(#"hash_51d7bc7c", self.script_sound);
             while (isdefined(trigplayer) && trigplayer istouching(self)) {
-                wait(0.016);
+                wait 0.016;
             }
             continue;
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_f651e9a8
+// Namespace zm_prototype_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x231f953e, Offset: 0x300
 // Size: 0xf8
@@ -63,18 +63,18 @@ function function_d667714e() {
     }
 }
 
-// Namespace namespace_f651e9a8
+// Namespace zm_prototype_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8d55a209, Offset: 0x400
 // Size: 0x64
 function function_b234849(var_6d9d81aa) {
     level endon(#"hash_51d7bc7c");
     level.var_eb526c90 stopallloopsounds(2);
-    wait(1);
+    wait 1;
     level.var_9433cf5a = level.var_eb526c90 playloopsound(var_6d9d81aa, 2);
 }
 
-// Namespace namespace_f651e9a8
+// Namespace zm_prototype_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xeae27673, Offset: 0x470
 // Size: 0x15c
@@ -83,27 +83,27 @@ function startzmbspawnersoundloops() {
     if (isdefined(loopers) && loopers.size > 0) {
         delay = 0;
         /#
-            if (getdvarint("<unknown string>") > 0) {
-                println("<unknown string>" + loopers.size + "<unknown string>");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x34>" + loopers.size + "<dev string:x6c>");
             }
         #/
         for (i = 0; i < loopers.size; i++) {
             loopers[i] thread soundloopthink();
             delay += 1;
             if (delay % 20 == 0) {
-                wait(0.016);
+                wait 0.016;
             }
         }
         return;
     }
     /#
-        if (getdvarint("<unknown string>") > 0) {
-            println("<unknown string>");
+        if (getdvarint("<dev string:x28>") > 0) {
+            println("<dev string:x77>");
         }
     #/
 }
 
-// Namespace namespace_f651e9a8
+// Namespace zm_prototype_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdb06ac4f, Offset: 0x5d8
 // Size: 0x16c

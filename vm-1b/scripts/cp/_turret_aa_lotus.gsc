@@ -9,9 +9,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_275ad7d4;
+#namespace turret_aa_lotus;
 
-// Namespace namespace_275ad7d4
+// Namespace turret_aa_lotus
 // Params 0, eflags: 0x2
 // Checksum 0xa8db9ae0, Offset: 0x250
 // Size: 0x2a
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
     system::register("turret_aa_lotus", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_275ad7d4
+// Namespace turret_aa_lotus
 // Params 0, eflags: 0x0
 // Checksum 0x4b8f5f56, Offset: 0x288
 // Size: 0x2a
@@ -27,7 +27,7 @@ function __init__() {
     vehicle::add_main_callback("turret_aa_lotus", &function_bd5a9ba5);
 }
 
-// Namespace namespace_275ad7d4
+// Namespace turret_aa_lotus
 // Params 0, eflags: 0x0
 // Checksum 0x721bc6e9, Offset: 0x2c0
 // Size: 0x1a
@@ -36,7 +36,7 @@ function function_bd5a9ba5() {
     self thread main();
 }
 
-// Namespace namespace_275ad7d4
+// Namespace turret_aa_lotus
 // Params 1, eflags: 0x0
 // Checksum 0x8a4bf811, Offset: 0x2e8
 // Size: 0x22
@@ -44,7 +44,7 @@ function isads(player) {
     return player playerads() > 0.7;
 }
 
-// Namespace namespace_275ad7d4
+// Namespace turret_aa_lotus
 // Params 0, eflags: 0x0
 // Checksum 0x421c2801, Offset: 0x318
 // Size: 0x85
@@ -57,11 +57,11 @@ function main() {
         }
         self thread function_f811fbe6();
         self waittill(#"exit_vehicle");
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_275ad7d4
+// Namespace turret_aa_lotus
 // Params 0, eflags: 0x0
 // Checksum 0xfb23d5bd, Offset: 0x3a8
 // Size: 0x407
@@ -108,7 +108,7 @@ function function_f811fbe6() {
                             iprintln("Turret: lock failed");
                             break;
                         }
-                        wait(0.05);
+                        wait 0.05;
                     }
                     if (var_41c7ab8c) {
                         iprintln("Turret: lock succeed");
@@ -117,7 +117,7 @@ function function_f811fbe6() {
                         while (isdefined(driver) && isdefined(bestenemy) && gettime() < starttime + var_67faddb3 * 1000) {
                             util::debug_line(driver.origin, bestenemy.origin, (0, 0, 1), 0.8, 0, 1);
                             driver weaponlockfinalize(bestenemy);
-                            wait(0.05);
+                            wait 0.05;
                         }
                     }
                 } else {
@@ -125,11 +125,11 @@ function function_f811fbe6() {
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_275ad7d4
+// Namespace turret_aa_lotus
 // Params 1, eflags: 0x0
 // Checksum 0x58402b15, Offset: 0x7b8
 // Size: 0xda
@@ -150,7 +150,7 @@ function function_137a24fd(angles) {
     }
 }
 
-// Namespace namespace_275ad7d4
+// Namespace turret_aa_lotus
 // Params 0, eflags: 0x0
 // Checksum 0x6488f036, Offset: 0x8a0
 // Size: 0x72

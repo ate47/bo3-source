@@ -10,9 +10,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f7e00735;
+#namespace zm_zod_poweronswitch;
 
-// Namespace namespace_f7e00735
+// Namespace zm_zod_poweronswitch
 // Method(s) 8 Total 8
 class class_b025d12c {
 

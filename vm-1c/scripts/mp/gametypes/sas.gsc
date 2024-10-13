@@ -56,7 +56,7 @@ function main() {
         level.setbackweapon = level.weapon_sas_secondary_weapon;
         break;
     default:
-        assert(1, "OBJECTIVES_SAS_SCORE");
+        assert(1, "<dev string:x28>");
         break;
     }
     game["dialog"]["gametype"] = "sns_start";
@@ -109,7 +109,7 @@ function givecustomloadout() {
     self notify(#"hash_8fb75c18");
     defaultweapon = level.weapon_sas_primary_weapon;
     loadout::function_1d84af77(self.curclass);
-    self namespace_93432369::function_937040bd(1, 1, defaultweapon);
+    self wager::function_937040bd(1, 1, defaultweapon);
     self giveperks();
     self giveweapon(defaultweapon);
     self setweaponammoclip(defaultweapon, 6);
@@ -285,17 +285,17 @@ function function_238fd5eb() {
     var_a40af05c.glowalpha = 0;
     var_a40af05c.hidewheninmenu = 0;
     self thread function_71a0cd6d(var_a40af05c);
-    wait(0.1);
+    wait 0.1;
     var_a40af05c fadeovertime(0.2);
     var_a40af05c.color = (1, 0, 0);
     var_a40af05c changefontscaleovertime(0.2);
     var_a40af05c.fontscale = 3;
-    wait(0.5);
+    wait 0.5;
     var_a40af05c fadeovertime(0.5);
     var_a40af05c.color = (1, 1, 1);
     var_a40af05c changefontscaleovertime(0.5);
     var_a40af05c.fontscale = 2.5;
-    wait(1);
+    wait 1;
     self notify(#"hash_c8d75045");
     var_a40af05c destroy();
 }

@@ -22,9 +22,9 @@
 #using scripts/cp/_collectibles;
 #using scripts/cp/_ammo_cache;
 
-#namespace namespace_7cb27be0;
+#namespace cp_mi_cairo_lotus;
 
-// Namespace namespace_7cb27be0
+// Namespace cp_mi_cairo_lotus
 // Params 0, eflags: 0x0
 // Checksum 0x3c30d552, Offset: 0x690
 // Size: 0x32
@@ -33,7 +33,7 @@ function function_243693d4() {
     util::add_gametype("cpzm");
 }
 
-// Namespace namespace_7cb27be0
+// Namespace cp_mi_cairo_lotus
 // Params 0, eflags: 0x0
 // Checksum 0x1346e04b, Offset: 0x6d0
 // Size: 0xda
@@ -49,7 +49,7 @@ function function_70a1a72e() {
     unlinktraversal(var_ba891ade);
 }
 
-// Namespace namespace_7cb27be0
+// Namespace cp_mi_cairo_lotus
 // Params 0, eflags: 0x0
 // Checksum 0x64252995, Offset: 0x7b8
 // Size: 0x26a
@@ -65,7 +65,7 @@ function main() {
         level.var_173c585e = 1;
         callback::on_spawned(&on_player_spawned);
     }
-    namespace_f95714f2::init_voice();
+    voice_lotus1::init_voice();
     util::function_286a5010(3);
     precache();
     init_clientfields();
@@ -73,26 +73,26 @@ function main() {
     function_673254cc();
     function_e8474b63();
     collectibles::function_93523442("p7_nc_cai_lot_05", 45, (0, -20, 0));
-    namespace_90072e58::main();
-    namespace_9bdf8ed1::main();
-    namespace_9750c824::main();
-    namespace_3b39ab74::init();
-    namespace_8e4b89e2::init();
+    cp_mi_cairo_lotus_anim::main();
+    cp_mi_cairo_lotus_fx::main();
+    cp_mi_cairo_lotus_sound::main();
+    lotus_start_riot::init();
+    lotus_security_station::init();
     load::main();
     skipto::function_f3e035ef();
-    level thread namespace_431cac9::function_d720c23e("atrium_battle_a");
-    level thread namespace_431cac9::function_d720c23e("atrium_battle_b");
-    level thread namespace_431cac9::function_d720c23e("atrium_battle_c");
-    level thread namespace_431cac9::function_d720c23e("atrium_battle_d");
-    level thread namespace_431cac9::function_d720c23e("atrium_battle_e");
-    level thread namespace_431cac9::function_d720c23e("atrium_battle_f");
-    level thread namespace_431cac9::function_d720c23e("atrium_battle_g");
+    level thread lotus_util::function_d720c23e("atrium_battle_a");
+    level thread lotus_util::function_d720c23e("atrium_battle_b");
+    level thread lotus_util::function_d720c23e("atrium_battle_c");
+    level thread lotus_util::function_d720c23e("atrium_battle_d");
+    level thread lotus_util::function_d720c23e("atrium_battle_e");
+    level thread lotus_util::function_d720c23e("atrium_battle_f");
+    level thread lotus_util::function_d720c23e("atrium_battle_g");
     level.var_dc236bc8 = 1;
     level.var_6e1075a2 = 0;
-    namespace_f4ff722a::function_66df416f();
+    lotus_accolades::function_66df416f();
 }
 
-// Namespace namespace_7cb27be0
+// Namespace cp_mi_cairo_lotus
 // Params 0, eflags: 0x0
 // Checksum 0xe9c07cd6, Offset: 0xa30
 // Size: 0x2
@@ -100,7 +100,7 @@ function precache() {
     
 }
 
-// Namespace namespace_7cb27be0
+// Namespace cp_mi_cairo_lotus
 // Params 0, eflags: 0x0
 // Checksum 0xa58ffcc8, Offset: 0xa40
 // Size: 0x62
@@ -111,7 +111,7 @@ function init_flags() {
     level flag::init("security_shop_stopped");
 }
 
-// Namespace namespace_7cb27be0
+// Namespace cp_mi_cairo_lotus
 // Params 0, eflags: 0x0
 // Checksum 0x5304a72b, Offset: 0xab0
 // Size: 0x1a
@@ -119,7 +119,7 @@ function function_e8474b63() {
     level scene::init("p7_fxanim_cp_lotus_monitors_atrium_fall_bundle");
 }
 
-// Namespace namespace_7cb27be0
+// Namespace cp_mi_cairo_lotus
 // Params 0, eflags: 0x0
 // Checksum 0x1a846df0, Offset: 0xad8
 // Size: 0x2aa
@@ -143,85 +143,85 @@ function init_clientfields() {
     clientfield::register("toplayer", "player_dust_fx", 1, 1, "int");
 }
 
-// Namespace namespace_7cb27be0
+// Namespace cp_mi_cairo_lotus
 // Params 0, eflags: 0x0
 // Checksum 0x2a79f6a4, Offset: 0xd90
 // Size: 0x252
 function function_673254cc() {
-    skipto::add("plan_b", &namespace_3b39ab74::function_e86a5395, undefined, &namespace_3b39ab74::function_88b5ab32);
-    skipto::add("start_the_riots", &namespace_3b39ab74::function_5fb7ec5, undefined, &namespace_3b39ab74::function_a3cc6d62);
-    skipto::function_d68e678e("general_hakim", &namespace_3b39ab74::function_92206070, undefined, &namespace_3b39ab74::function_14166bcb);
-    skipto::function_d68e678e("apartments", &namespace_8e4b89e2::function_cd269efc, undefined, &namespace_8e4b89e2::function_46593e07);
-    skipto::function_d68e678e("atrium_battle", &namespace_8e4b89e2::function_963d89c4, undefined, &namespace_8e4b89e2::function_57b2d9ef);
-    skipto::function_d68e678e("to_security_station", &namespace_8e4b89e2::function_41534d2a, undefined, &namespace_8e4b89e2::function_2d424c3d);
-    skipto::function_d68e678e("hack_the_system", &namespace_8e4b89e2::function_f5f5e18e, undefined, &namespace_8e4b89e2::function_2f8e8d25);
+    skipto::add("plan_b", &lotus_start_riot::function_e86a5395, undefined, &lotus_start_riot::function_88b5ab32);
+    skipto::add("start_the_riots", &lotus_start_riot::function_5fb7ec5, undefined, &lotus_start_riot::function_a3cc6d62);
+    skipto::function_d68e678e("general_hakim", &lotus_start_riot::function_92206070, undefined, &lotus_start_riot::function_14166bcb);
+    skipto::function_d68e678e("apartments", &lotus_security_station::function_cd269efc, undefined, &lotus_security_station::function_46593e07);
+    skipto::function_d68e678e("atrium_battle", &lotus_security_station::atrium_battle, undefined, &lotus_security_station::function_57b2d9ef);
+    skipto::function_d68e678e("to_security_station", &lotus_security_station::to_security_station, undefined, &lotus_security_station::function_2d424c3d);
+    skipto::function_d68e678e("hack_the_system", &lotus_security_station::function_f5f5e18e, undefined, &lotus_security_station::function_2f8e8d25);
     /#
-        skipto::add_dev("hendricks_frost_breath", &function_a56ed2d0);
-        skipto::add_dev("<unknown string>", &function_cb714d39);
-        skipto::add_dev("<unknown string>", &function_50499b8);
-        skipto::add_dev("<unknown string>", &function_770c08f3);
-        skipto::add_dev("<unknown string>", &function_51098e8a);
+        skipto::add_dev("<dev string:x28>", &function_a56ed2d0);
+        skipto::add_dev("<dev string:x3f>", &function_cb714d39);
+        skipto::add_dev("<dev string:x56>", &function_50499b8);
+        skipto::add_dev("<dev string:x68>", &function_770c08f3);
+        skipto::add_dev("<dev string:x7a>", &function_51098e8a);
     #/
 }
 
 /#
 
-    // Namespace namespace_7cb27be0
+    // Namespace cp_mi_cairo_lotus
     // Params 2, eflags: 0x0
     // Checksum 0x9b23dcf, Offset: 0xff0
     // Size: 0x42
     function function_a56ed2d0(str_objective, var_74cd64bc) {
-        switchmap_load("<unknown string>");
-        wait(0.05);
+        switchmap_load("<dev string:x8c>");
+        wait 0.05;
         switchmap_switch();
     }
 
-    // Namespace namespace_7cb27be0
+    // Namespace cp_mi_cairo_lotus
     // Params 2, eflags: 0x0
     // Checksum 0x6e9fac29, Offset: 0x1040
     // Size: 0x42
     function function_cb714d39(str_objective, var_74cd64bc) {
-        switchmap_load("<unknown string>");
-        wait(0.05);
+        switchmap_load("<dev string:x9f>");
+        wait 0.05;
         switchmap_switch();
     }
 
-    // Namespace namespace_7cb27be0
+    // Namespace cp_mi_cairo_lotus
     // Params 2, eflags: 0x0
     // Checksum 0xdec1b2ec, Offset: 0x1090
     // Size: 0x2a
     function function_50499b8(str_objective, var_74cd64bc) {
-        function_3330eab6("<unknown string>");
+        function_3330eab6("<dev string:xb2>");
     }
 
-    // Namespace namespace_7cb27be0
+    // Namespace cp_mi_cairo_lotus
     // Params 2, eflags: 0x0
     // Checksum 0x8a2691aa, Offset: 0x10c8
     // Size: 0x2a
     function function_770c08f3(str_objective, var_74cd64bc) {
-        function_3330eab6("<unknown string>");
+        function_3330eab6("<dev string:xda>");
     }
 
-    // Namespace namespace_7cb27be0
+    // Namespace cp_mi_cairo_lotus
     // Params 2, eflags: 0x0
     // Checksum 0x523f9d86, Offset: 0x1100
     // Size: 0x2a
     function function_51098e8a(str_objective, var_74cd64bc) {
-        function_3330eab6("<unknown string>");
+        function_3330eab6("<dev string:x102>");
     }
 
-    // Namespace namespace_7cb27be0
+    // Namespace cp_mi_cairo_lotus
     // Params 1, eflags: 0x0
     // Checksum 0x77eae6df, Offset: 0x1138
     // Size: 0x32
     function function_3330eab6(str_anim) {
-        level flag::wait_till("<unknown string>");
+        level flag::wait_till("<dev string:x12a>");
         scene::play(str_anim);
     }
 
 #/
 
-// Namespace namespace_7cb27be0
+// Namespace cp_mi_cairo_lotus
 // Params 0, eflags: 0x0
 // Checksum 0xe9c07cd6, Offset: 0x1178
 // Size: 0x2

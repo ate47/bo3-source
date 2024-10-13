@@ -24,8 +24,8 @@ function main() {
     foreach (hand in second_hand) {
         hand.targetname = "minute_hand";
     }
-    namespace_94bbd14::main();
-    namespace_a5c10e4b::main();
+    mp_sector_fx::main();
+    mp_sector_sound::main();
     level.disablefxaniminsplitscreencount = 3;
     load::main();
     level.domflagbasefxoverride = &dom_flag_base_fx_override;
@@ -40,16 +40,16 @@ function main() {
 // Size: 0x9e
 function dom_flag_base_fx_override(flag, team) {
     switch (flag.name) {
-    case 10:
+    case "a":
         break;
-    case 11:
+    case "b":
         if (team == "neutral") {
             return "ui/fx_dom_marker_neutral_r90";
         } else {
             return "ui/fx_dom_marker_team_r90";
         }
         break;
-    case 12:
+    case "c":
         if (team == "neutral") {
             return "ui/fx_dom_marker_neutral_r120";
         } else {
@@ -65,16 +65,16 @@ function dom_flag_base_fx_override(flag, team) {
 // Size: 0x9e
 function dom_flag_cap_fx_override(flag, team) {
     switch (flag.name) {
-    case 10:
+    case "a":
         break;
-    case 11:
+    case "b":
         if (team == "neutral") {
             return "ui/fx_dom_cap_indicator_neutral_r90";
         } else {
             return "ui/fx_dom_cap_indicator_team_r90";
         }
         break;
-    case 12:
+    case "c":
         if (team == "neutral") {
             return "ui/fx_dom_cap_indicator_neutral_r120";
         } else {

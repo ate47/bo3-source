@@ -138,7 +138,7 @@ function function_deaff58c() {
         foreach (mannequin in mannequins) {
             mannequin function_8ad7149e(mannequin.var_dc83068c);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

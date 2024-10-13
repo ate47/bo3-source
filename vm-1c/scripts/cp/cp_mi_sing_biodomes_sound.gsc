@@ -2,23 +2,23 @@
 #using scripts/cp/voice/voice_biodomes;
 #using scripts/codescripts/struct;
 
-#namespace namespace_a46315e2;
+#namespace cp_mi_sing_biodomes_sound;
 
-// Namespace namespace_a46315e2
+// Namespace cp_mi_sing_biodomes_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb654e7f9, Offset: 0x178
 // Size: 0x2c
 function main() {
-    namespace_e66e2a8a::init_voice();
+    voice_biodomes::init_voice();
     level thread function_ced15c18();
 }
 
-// Namespace namespace_a46315e2
+// Namespace cp_mi_sing_biodomes_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x763566bc, Offset: 0x1b0
 // Size: 0x5c
 function function_ced15c18() {
-    wait(2);
+    wait 2;
     var_a66f2065 = spawn("script_origin", (15049, 15030, -120));
     var_a66f2065 playloopsound("mus_bar_background");
 }

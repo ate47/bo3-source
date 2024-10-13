@@ -10,9 +10,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_16a77fe2;
+#namespace zm_theater_ffotd;
 
-// Namespace namespace_16a77fe2
+// Namespace zm_theater_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x2a0
 // Size: 0x4
@@ -20,7 +20,7 @@ function main_start() {
     
 }
 
-// Namespace namespace_16a77fe2
+// Namespace zm_theater_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x80826b6d, Offset: 0x2b0
 // Size: 0x364

@@ -104,7 +104,7 @@ function function_e003d8c2() {
         if (isdefined(entity)) {
             if (isdefined(entity.targetname)) {
                 if (entity.targetname == "rcbomb") {
-                    entity notify(#"hash_dc4432bd");
+                    entity notify(#"rcbomb_shutdown");
                 } else if (entity.targetname == "talon" && !(isdefined(entity.dead) && entity.dead)) {
                     entity notify(#"death");
                 }
@@ -287,7 +287,7 @@ function function_bd0af061(effects, var_8962bd6e) {
         if (isdefined(effects.var_5d63722)) {
             playfxontag(effects.var_5d63722, self, effects.var_7a93ee5a);
         }
-        wait(waittime);
+        wait waittime;
     }
 }
 
@@ -370,7 +370,7 @@ function init_vehicle() {
         self.maxhealth = level.var_9cc6b64c[self.vehicletype];
     } else {
         self.maxhealth = getdvarint("scr_veh_health_tank");
-        println("120" + self.vehicletype + "120");
+        println("<dev string:x28>" + self.vehicletype + "<dev string:x4e>");
     }
     self.health = self.maxhealth;
     self function_96630c9();
@@ -580,10 +580,10 @@ function function_47d6caa6() {
     self endon(#"delete");
     /#
         while (true) {
-            if (isdefined(self.debug_message) && getdvarint("120") != 0) {
+            if (isdefined(self.debug_message) && getdvarint("<dev string:x61>") != 0) {
                 print3d(self.origin + (0, 0, 150), self.debug_message, (0, 1, 0), 1, 1, 1);
             }
-            wait(0.01);
+            wait 0.01;
         }
     #/
 }
@@ -716,7 +716,7 @@ function function_3d454a47(test_name) {
             break;
         }
         self function_5754ab8b(test_name + ": Waiting " + var_77457d03 - var_b5d2021c + "s");
-        wait(var_657e084);
+        wait var_657e084;
         var_b5d2021c += var_657e084;
     }
 }
@@ -731,7 +731,7 @@ function function_e6f48d52(test_name) {
     var_657e084 = 1;
     while (var_ceb2e4cf < var_1bc2b672) {
         self function_5754ab8b(test_name + ": Waiting " + var_1bc2b672 - var_ceb2e4cf + "s");
-        wait(var_657e084);
+        wait var_657e084;
         var_ceb2e4cf += var_657e084;
     }
 }
@@ -750,8 +750,8 @@ function cleanup(test_name, var_ba2883c9, cleanup_func) {
         }
         keep_waiting = 0;
         /#
-            self function_5754ab8b("120" + test_name + "120" + var_ba2883c9 + "120");
-            wait(5);
+            self function_5754ab8b("<dev string:x7b>" + test_name + "<dev string:x91>" + var_ba2883c9 + "<dev string:x9c>");
+            wait 5;
             keep_waiting = 1;
         #/
     }
@@ -798,7 +798,7 @@ function function_c29fa4e6() {
         } else {
             break;
         }
-        wait(var_fb92acf8);
+        wait var_fb92acf8;
     }
 }
 
@@ -991,7 +991,7 @@ function function_73cacc65() {
             }
         }
         if (!var_fecd0441) {
-            wait(1);
+            wait 1;
         }
     }
 }
@@ -1009,7 +1009,7 @@ function function_766de9be() {
         if (isdefined(level.var_4892cc47)) {
             [[ level.var_4892cc47 ]]();
         }
-        wait(0.25);
+        wait 0.25;
     }
 }
 
@@ -1038,7 +1038,7 @@ function function_4f6ab888() {
     self endon(#"delete");
     self function_73cacc65();
     seconds = randomfloatrange(5, 7);
-    wait(seconds);
+    wait seconds;
     damageorigin = self.origin + (0, 0, 25);
     self finishvehicleradiusdamage(self, self, 32000, 32000, 32000, 0, "MOD_EXPLOSIVE", level.weaponnone, damageorigin, 400, -1, (0, 0, 1), 0);
 }
@@ -1130,11 +1130,11 @@ function function_da95f656(var_96b43d6a) {
     mintime = getdvarint("scr_veh_respawntimemin");
     maxtime = getdvarint("scr_veh_respawntimemax");
     seconds = randomfloatrange(mintime, maxtime);
-    wait(seconds);
+    wait seconds;
     function_db15022(var_96b43d6a.origin);
     if (!function_bd1ad094()) {
         /#
-            iprintln("120");
+            iprintln("<dev string:x9f>");
         #/
         return;
     }
@@ -1184,7 +1184,7 @@ function function_ae45d625() {
 function function_c372b430() {
     var_5dbea6ec = (self.origin[0], self.origin[1], self.origin[2] - 10000);
     self.origin = var_5dbea6ec;
-    wait(0.1);
+    wait 0.1;
     self hide();
     self notify(#"hash_5a8ded57");
 }
@@ -1222,7 +1222,7 @@ function function_2f2c0be3() {
         if (var_128322a4) {
             return;
         }
-        wait(var_fb92acf8);
+        wait var_fb92acf8;
     }
 }
 
@@ -1237,7 +1237,7 @@ function function_db15022(position) {
         if (!function_cd2a44a9(position)) {
             return;
         }
-        wait(var_fb92acf8);
+        wait var_fb92acf8;
     }
 }
 
@@ -1322,12 +1322,12 @@ function function_df2e8ee8() {
                     earthquake(damage / 400, 1, players[i].origin, 512, players[i]);
                 }
                 if (damage > 100) {
-                    println("120");
+                    println("<dev string:x109>");
                     players[i] playrumbleonentity("tank_damage_heavy_mp");
                     continue;
                 }
                 if (damage > 10) {
-                    println("120");
+                    println("<dev string:x11f>");
                     players[i] playrumbleonentity("tank_damage_light_mp");
                 }
             }
@@ -1495,7 +1495,7 @@ function function_8da271e5() {
 // Size: 0x164
 function follow_path(node) {
     self endon(#"death");
-    assert(isdefined(node), "120");
+    assert(isdefined(node), "<dev string:x135>");
     self notify(#"newpath");
     if (isdefined(node)) {
         self.attachedpath = node;
@@ -1539,7 +1539,7 @@ function initvehiclemap() {
 // Checksum 0x3ba61492, Offset: 0x5bd8
 // Size: 0x188
 function vehiclemainthread() {
-    if (level.var_c1c50ef2 === 1) {
+    if (level.disableVehicleSpawners === 1) {
         return;
     }
     spawn_nodes = struct::get_array("veh_spawn_point", "targetname");
@@ -1556,7 +1556,7 @@ function vehiclemainthread() {
         if (isdefined(level.var_692b3bc7)) {
             level [[ level.var_692b3bc7 ]](var_f8e744ad, veh_name, spawn_node.origin, spawn_node.angles);
         }
-        wait(0.05);
+        wait 0.05;
     }
     if (isdefined(level.var_cb38303b)) {
         level thread [[ level.var_cb38303b ]]();
@@ -1578,13 +1578,13 @@ function vehiclespawnthread(var_f8e744ad, veh_name, origin, angles, time_interva
     while (true) {
         vehicle = veh_spawner spawnfromspawner(veh_name, 1, 1, 1);
         if (!isdefined(vehicle)) {
-            wait(randomfloatrange(1, 2));
+            wait randomfloatrange(1, 2);
             continue;
         }
         if (isdefined(vehicle.archetype)) {
             vehicle asmrequestsubstate("locomotion@movement");
         }
-        wait(0.05);
+        wait 0.05;
         vehicle.origin = origin;
         vehicle.angles = angles;
         vehicle.var_f8e744ad = var_f8e744ad;
@@ -1599,8 +1599,8 @@ function vehiclespawnthread(var_f8e744ad, veh_name, origin, angles, time_interva
         }
         /#
             time_interval = var_45b6c208;
-            if (getdvarfloat("120", 0) != 0) {
-                time_interval = getdvarfloat("120", 0);
+            if (getdvarfloat("<dev string:x15a>", 0) != 0) {
+                time_interval = getdvarfloat("<dev string:x15a>", 0);
                 if (time_interval < 5.1) {
                     time_interval = 5.1;
                 }
@@ -1608,7 +1608,7 @@ function vehiclespawnthread(var_f8e744ad, veh_name, origin, angles, time_interva
         #/
         if (isdefined(time_interval)) {
             level thread function_a1616d94(var_f8e744ad, veh_name, origin, angles, time_interval, kill_trigger);
-            wait(time_interval);
+            wait time_interval;
         }
     }
 }
@@ -1620,16 +1620,16 @@ function vehiclespawnthread(var_f8e744ad, veh_name, origin, angles, time_interva
 function function_a1616d94(var_f8e744ad, veh_name, origin, angles, spawn_delay, kill_trigger) {
     var_3b888c8e = 5;
     var_ab8a23ef = spawn_delay - var_3b888c8e;
-    wait(var_ab8a23ef);
+    wait var_ab8a23ef;
     if (isdefined(level.var_76013c83)) {
         level thread [[ level.var_76013c83 ]](var_f8e744ad, veh_name, origin, angles, var_3b888c8e);
     }
     var_a1e9d8d7 = 0.1;
     var_d524727f = var_3b888c8e - var_a1e9d8d7;
-    wait(var_d524727f);
+    wait var_d524727f;
     var_e56dfaeb = var_a1e9d8d7 * 2 * 1000;
     level thread function_6b9c1b4e(kill_trigger, var_e56dfaeb);
-    wait(var_a1e9d8d7);
+    wait var_a1e9d8d7;
 }
 
 // Namespace vehicle
@@ -1672,7 +1672,7 @@ function function_6b9c1b4e(kill_trigger, var_e56dfaeb) {
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1693,14 +1693,14 @@ function function_131c3c10(vehicle) {
     function function_87e9a4ad(veh_name, origin, angles) {
         var_3b888c8e = 5;
         while (true) {
-            if (getdvarint("120", 0) == 0) {
-                wait(1);
+            if (getdvarint("<dev string:x171>", 0) == 0) {
+                wait 1;
                 continue;
             }
             if (isdefined(level.var_76013c83)) {
                 level thread [[ level.var_76013c83 ]](veh_name, origin, angles, var_3b888c8e);
             }
-            wait(6);
+            wait 6;
         }
     }
 
@@ -1710,12 +1710,12 @@ function function_131c3c10(vehicle) {
     // Size: 0x80
     function function_4b28749d(vehicle) {
         vehicle endon(#"death");
-        setdvar("120", 0);
+        setdvar("<dev string:x18c>", 0);
         while (true) {
-            if (getdvarint("120") != 0) {
+            if (getdvarint("<dev string:x18c>") != 0) {
                 function_131c3c10(vehicle);
             }
-            wait(1);
+            wait 1;
         }
     }
 
@@ -1777,7 +1777,7 @@ function watchplayerexitrequestthread(player) {
     player endon(#"disconnect");
     vehicle = self;
     vehicle endon(#"death");
-    wait(1.5);
+    wait 1.5;
     while (true) {
         timeused = 0;
         while (player usebuttonpressed()) {
@@ -1786,9 +1786,9 @@ function watchplayerexitrequestthread(player) {
                 player unlink();
                 return;
             }
-            wait(0.05);
+            wait 0.05;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

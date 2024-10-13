@@ -7,9 +7,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_c71bfefb;
+#namespace zm_stalingrad_ambient;
 
-// Namespace namespace_c71bfefb
+// Namespace zm_stalingrad_ambient
 // Params 0, eflags: 0x2
 // Checksum 0x5d309f37, Offset: 0x298
 // Size: 0x3c
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
     system::register("zm_stalingrad_ambient", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_c71bfefb
+// Namespace zm_stalingrad_ambient
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd151ed8e, Offset: 0x2e0
 // Size: 0xcc
@@ -29,7 +29,7 @@ function __init__() {
     level thread function_8c898920();
 }
 
-// Namespace namespace_c71bfefb
+// Namespace zm_stalingrad_ambient
 // Params 0, eflags: 0x1 linked
 // Checksum 0x45ce0ef6, Offset: 0x3b8
 // Size: 0x1c
@@ -37,7 +37,7 @@ function __main__() {
     level thread wait_for_power();
 }
 
-// Namespace namespace_c71bfefb
+// Namespace zm_stalingrad_ambient
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb4cb2b8f, Offset: 0x3e0
 // Size: 0x1fe
@@ -63,7 +63,7 @@ function function_46a16b31() {
     }
 }
 
-// Namespace namespace_c71bfefb
+// Namespace zm_stalingrad_ambient
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd6ed29ec, Offset: 0x5e8
 // Size: 0x348
@@ -74,7 +74,7 @@ function function_8c898920() {
     }
     level flag::set("ambient_mortar_fire_on");
     function_46a16b31();
-    wait(randomfloatrange(20, 30));
+    wait randomfloatrange(20, 30);
     while (true) {
         if (!level flag::get("ambient_mortar_fire_on")) {
             level flag::wait_till("ambient_mortar_fire_on");
@@ -93,7 +93,7 @@ function function_8c898920() {
                     }
                 }
             }
-            wait(0.05);
+            wait 0.05;
         } while (!isdefined(str_zone) || !isdefined(level.var_10752e7a[str_zone]));
         if (str_zone == "pavlovs" || str_zone == "alley") {
             var_e3975fbf = 1;
@@ -106,27 +106,27 @@ function function_8c898920() {
             if (isdefined(var_620fe12a)) {
                 var_620fe12a thread function_8affee60(var_e3975fbf);
             }
-            wait(randomfloatrange(0.5, 1.5));
+            wait randomfloatrange(0.5, 1.5);
         }
         if (flag::get("nikolai_start") && (!flag::get("nikolai_start") || flag::get("nikolai_complete"))) {
             level function_20bdb71();
         }
-        wait(randomfloatrange(45, 60));
+        wait randomfloatrange(45, 60);
     }
 }
 
-// Namespace namespace_c71bfefb
+// Namespace zm_stalingrad_ambient
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb1812fce, Offset: 0x938
 // Size: 0x42
 function function_20bdb71() {
-    level endon(#"hash_cb701c27");
+    level endon(#"nikolai_start");
     for (i = 0; i < 2; i++) {
         level waittill(#"start_of_round");
     }
 }
 
-// Namespace namespace_c71bfefb
+// Namespace zm_stalingrad_ambient
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe2d1a99f, Offset: 0x988
 // Size: 0x16c
@@ -146,13 +146,13 @@ function function_7af373ba(str_zone) {
         if (!var_b8f2d177.size) {
             var_1bbdbab3 = 1;
         }
-        wait(0.05);
+        wait 0.05;
     }
     var_b058183b = array::random(var_b8f2d177);
     return var_b058183b;
 }
 
-// Namespace namespace_c71bfefb
+// Namespace zm_stalingrad_ambient
 // Params 1, eflags: 0x1 linked
 // Checksum 0x3b6a51c1, Offset: 0xb00
 // Size: 0x160
@@ -162,7 +162,7 @@ function function_8affee60(var_e3975fbf) {
         i++;
         if (i == level.var_2b8ea588.size) {
             i = 0;
-            wait(0.05);
+            wait 0.05;
         }
     }
     level.var_2b8ea588[i].origin = self.origin;
@@ -174,12 +174,12 @@ function function_8affee60(var_e3975fbf) {
     }
     var_23919be6 = self.script_int + 1;
     level.var_2b8ea588[i] clientfield::set(var_efccacc4, var_23919be6);
-    wait(3);
+    wait 3;
     level.var_2b8ea588[i] clientfield::set(var_efccacc4, 0);
     level.var_2b8ea588[i].b_in_use = 0;
 }
 
-// Namespace namespace_c71bfefb
+// Namespace zm_stalingrad_ambient
 // Params 0, eflags: 0x1 linked
 // Checksum 0x57b82cd3, Offset: 0xc68
 // Size: 0x44

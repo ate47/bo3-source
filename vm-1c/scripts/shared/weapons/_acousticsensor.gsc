@@ -7,9 +7,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_efc40536;
+#namespace acousticsensor;
 
-// Namespace namespace_efc40536
+// Namespace acousticsensor
 // Params 0, eflags: 0x0
 // Checksum 0xeffdb9b0, Offset: 0x280
 // Size: 0x5c
@@ -19,7 +19,7 @@ function init_shared() {
     callback::function_367a33a8(&function_f7da464e);
 }
 
-// Namespace namespace_efc40536
+// Namespace acousticsensor
 // Params 0, eflags: 0x0
 // Checksum 0xa24f1a71, Offset: 0x2e8
 // Size: 0xc0
@@ -33,14 +33,14 @@ function function_f7da464e() {
     watcher.ondamage = &function_1e59bb1a;
 }
 
-// Namespace namespace_efc40536
+// Namespace acousticsensor
 // Params 2, eflags: 0x0
 // Checksum 0x8b5d3bd7, Offset: 0x3b0
 // Size: 0x10c
 function function_ed275b60(watcher, player) {
     self endon(#"death");
     self thread weaponobjects::onspawnuseweaponobject(watcher, player);
-    player.var_efc40536 = self;
+    player.acousticsensor = self;
     self setowner(player);
     self setteam(player.team);
     self.owner = player;
@@ -51,7 +51,7 @@ function function_ed275b60(watcher, player) {
     self thread watchshutdown(player, self.origin);
 }
 
-// Namespace namespace_efc40536
+// Namespace acousticsensor
 // Params 3, eflags: 0x0
 // Checksum 0xe3739fa, Offset: 0x4c8
 // Size: 0x104
@@ -69,7 +69,7 @@ function function_46660dce(attacker, weapon, target) {
     self destroyent();
 }
 
-// Namespace namespace_efc40536
+// Namespace acousticsensor
 // Params 0, eflags: 0x0
 // Checksum 0x8135d255, Offset: 0x5d8
 // Size: 0x1c
@@ -77,18 +77,18 @@ function destroyent() {
     self delete();
 }
 
-// Namespace namespace_efc40536
+// Namespace acousticsensor
 // Params 2, eflags: 0x0
 // Checksum 0x9939efbf, Offset: 0x600
 // Size: 0x52
 function watchshutdown(player, origin) {
     self util::waittill_any("death", "hacked");
     if (isdefined(player)) {
-        player.var_efc40536 = undefined;
+        player.acousticsensor = undefined;
     }
 }
 
-// Namespace namespace_efc40536
+// Namespace acousticsensor
 // Params 1, eflags: 0x0
 // Checksum 0x8499f6b3, Offset: 0x660
 // Size: 0x38a

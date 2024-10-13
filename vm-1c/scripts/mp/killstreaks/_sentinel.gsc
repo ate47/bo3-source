@@ -113,7 +113,7 @@ function drone_pain_for_time(time, stablizeparam, restorelookpoint, weapon) {
         while (gettime() < self.painstarttime + time * 1000) {
             self setvehvelocity(self.velocity * stablizeparam);
             self setangularvelocity(self getangularvelocity() * stablizeparam);
-            wait(0.1);
+            wait 0.1;
         }
         if (isdefined(restorelookpoint) && isdefined(self.health) && self.health > 0) {
             restorelookent = spawn("script_model", restorelookpoint);
@@ -121,7 +121,7 @@ function drone_pain_for_time(time, stablizeparam, restorelookpoint, weapon) {
             self clearlookatent();
             self setlookatent(restorelookent);
             self setturrettargetent(restorelookent);
-            wait(1.5);
+            wait 1.5;
             self clearlookatent();
             self clearturrettarget();
             restorelookent delete();
@@ -244,7 +244,7 @@ function function_95a79a4a(killstreaktype) {
     player = self;
     if (!isnavvolumeloaded()) {
         /#
-            iprintlnbold("requestSentinel");
+            iprintlnbold("<dev string:x28>");
         #/
         self iprintlnbold(%KILLSTREAK_SENTINEL_NOT_AVAILABLE);
         return false;
@@ -432,7 +432,7 @@ function function_c3616f87() {
                 playfxontag(params.fxlowhealth, self, "tag_origin");
                 break;
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 }
@@ -493,7 +493,7 @@ function watchwater() {
     sentinel = self;
     sentinel endon(#"sentinel_shutdown");
     while (true) {
-        wait(0.1);
+        wait 0.1;
         trace = physicstrace(self.origin + (0, 0, 10), self.origin + (0, 0, 6), (-2, -2, -2), (2, 2, 2), self, 4);
         if (trace["fraction"] < 1) {
             break;
@@ -512,7 +512,7 @@ function watchshutdown() {
     if (isdefined(sentinel.controlled) && (isdefined(sentinel.control_initiated) && sentinel.control_initiated || sentinel.controlled)) {
         sentinel remote_weapons::endremotecontrolweaponuse(0);
         while (isdefined(sentinel.controlled) && (isdefined(sentinel.control_initiated) && sentinel.control_initiated || sentinel.controlled)) {
-            wait(0.05);
+            wait 0.05;
         }
     }
     if (isdefined(sentinel.owner)) {

@@ -3,9 +3,9 @@
 #using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_172c963;
+#namespace cp_mi_sing_sgen_sound;
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0xdeac2539, Offset: 0x288
 // Size: 0xb2
@@ -14,8 +14,8 @@ function main() {
     thread function_153b7792();
     thread function_efd49790();
     level thread function_a0c5a719();
-    level thread function_a768b615();
-    level thread function_75bb865();
+    level thread sndScares();
+    level thread sndJumpLand();
     level thread function_4e5472a7();
     level thread function_45100b4d();
     level thread function_2b64c5fe();
@@ -23,7 +23,7 @@ function main() {
     level thread function_66507a64();
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0x806d6078, Offset: 0x348
 // Size: 0xb
@@ -31,23 +31,23 @@ function function_2c912bd() {
     level notify(#"hash_17d831e1");
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0x2be97c66, Offset: 0x360
 // Size: 0xc
 function function_153b7792() {
-    level waittill(#"hash_cf6daea2");
+    level waittill(#"tuwc");
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0xbb54dc26, Offset: 0x378
 // Size: 0xc
 function function_efd49790() {
-    level waittill(#"hash_de9f3fa1");
+    level waittill(#"tuwco");
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0xa36dfdf1, Offset: 0x390
 // Size: 0x12
@@ -55,12 +55,12 @@ function function_a0c5a719() {
     level thread function_c05308a7();
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0x1747a8f1, Offset: 0x3b0
 // Size: 0x92
 function function_c05308a7() {
-    level waittill(#"hash_ad7eaa98");
+    level waittill(#"sndRHStart");
     level thread function_61f01886();
     target_origin = (-163, -2934, -5050);
     player = getlocalplayer(0);
@@ -68,16 +68,16 @@ function function_c05308a7() {
     level function_8b5fd6e1(player, target_origin, "mus_robothall_layer_1", 0, 1, 400, 1600, "mus_robothall_layer_2", 0, 1, -6, 1000, "mus_robothall_end");
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0xf051a564, Offset: 0x450
 // Size: 0x16
 function function_61f01886() {
-    level waittill(#"hash_b3e68f04");
+    level waittill(#"sndRHStop");
     level.var_69a1bedf = 0;
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 13, eflags: 0x0
 // Checksum 0x72b6088e, Offset: 0x470
 // Size: 0x302
@@ -125,7 +125,7 @@ function function_8b5fd6e1(player, target_origin, alias1, min_vol1, max_vol1, va
             volume2 = abs(1 - volume2);
             setsoundvolume(var_59b1545e, volume2);
         }
-        wait(0.1);
+        wait 0.1;
     }
     level notify(#"hash_61477803");
     if (isdefined(var_d8bcfff1)) {
@@ -139,7 +139,7 @@ function function_8b5fd6e1(player, target_origin, alias1, min_vol1, max_vol1, va
     }
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 4, eflags: 0x0
 // Checksum 0x81e3f4d1, Offset: 0x780
 // Size: 0xca
@@ -151,18 +151,18 @@ function function_860d167b(ent1, ent2, id1, id2) {
     id1 = undefined;
     id2 = undefined;
     target_origin = (-163, -2934, -5050);
-    wait(2);
+    wait 2;
     player = getlocalplayer(0);
     if (isdefined(player)) {
         level thread function_8b5fd6e1(player, target_origin, "mus_robothall_layer_1", 0, 1, 400, 1600, "mus_robothall_layer_2", 0, 1, -6, 1000, "mus_robothall_end");
     }
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0xb94d0f01, Offset: 0x858
 // Size: 0x5a
-function function_a768b615() {
+function sndScares() {
     var_5f6e94d0 = getentarray(0, "sndScares", "targetname");
     if (!isdefined(var_5f6e94d0) || var_5f6e94d0.size <= 0) {
         return;
@@ -170,7 +170,7 @@ function function_a768b615() {
     array::thread_all(var_5f6e94d0, &function_bccbeb90);
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0x55e5dc51, Offset: 0x8c0
 // Size: 0x89
@@ -185,11 +185,11 @@ function function_bccbeb90() {
     }
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0xba095936, Offset: 0x958
 // Size: 0x5a
-function function_75bb865() {
+function sndJumpLand() {
     var_b9230b42 = getentarray(0, "sndJumpLand", "targetname");
     if (!isdefined(var_b9230b42) || var_b9230b42.size <= 0) {
         return;
@@ -197,7 +197,7 @@ function function_75bb865() {
     array::thread_all(var_b9230b42, &function_c2d4afb7);
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0xdb9874d, Offset: 0x9c0
 // Size: 0x3d
@@ -208,7 +208,7 @@ function function_c2d4afb7() {
     }
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 1, eflags: 0x0
 // Checksum 0x40b37bc3, Offset: 0xa08
 // Size: 0x2a
@@ -216,19 +216,19 @@ function function_c2f42d4e(ent) {
     playsound(0, self.script_sound, ent.origin);
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0xaaeb3418, Offset: 0xa40
 // Size: 0x62
 function function_4e5472a7() {
-    level waittill(#"hash_fc92edec");
-    wait(3);
+    level waittill(#"escp");
+    wait 3;
     audio::playloopat("evt_escape_walla", (20225, 2651, -6631));
-    level waittill(#"hash_188db8ef");
+    level waittill(#"escps");
     audio::stoploopat("evt_escape_walla", (20225, 2651, -6631));
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0xd0345458, Offset: 0xab0
 // Size: 0x75
@@ -237,13 +237,13 @@ function function_45100b4d() {
     level waittill(#"sw");
     while (true) {
         playsound(0, "vox_walla_call", (-1045, -4195, 564));
-        wait(4);
+        wait 4;
         playsound(0, "vox_walla_call_response", (621, -5090, 376));
-        wait(randomintrange(2, 7));
+        wait randomintrange(2, 7);
     }
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0xe79bbdf9, Offset: 0xb30
 // Size: 0x2a
@@ -252,12 +252,12 @@ function function_2b64c5fe() {
     playsound(0, "vox_walla_battlecry", (-138, -4871, 311));
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0x358baf09, Offset: 0xb68
 // Size: 0x1ca
 function function_6c080ebb() {
-    level waittill(#"hash_fc92edec");
+    level waittill(#"escp");
     level thread function_9d912a9d(20210, 4156, -6727);
     level thread function_9d912a9d(20369, 3460, -6700);
     level thread function_9d912a9d(20369, 3460, -6700);
@@ -274,7 +274,7 @@ function function_6c080ebb() {
     level thread function_9d912a9d(25516, 1302, -6511);
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 3, eflags: 0x0
 // Checksum 0xb223f8fd, Offset: 0xd40
 // Size: 0x3a
@@ -282,11 +282,11 @@ function function_9d912a9d(pos1, pos2, pos3) {
     audio::playloopat("evt_escape_alarm", (pos1, pos2, pos3));
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 7, eflags: 0x0
 // Checksum 0x19c947f0, Offset: 0xd88
 // Size: 0xad
-function function_698dfbe4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function sndLabWalla(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         soundloopemitter("amb_lab_walla", (1240, 285, -1203));
         return;
@@ -295,7 +295,7 @@ function function_698dfbe4(localclientnum, oldval, newval, bnewent, binitialsnap
     playsound(0, "amb_lab_walla_stop", (1240, 285, -1203));
 }
 
-// Namespace namespace_172c963
+// Namespace cp_mi_sing_sgen_sound
 // Params 0, eflags: 0x0
 // Checksum 0xae496c0e, Offset: 0xe40
 // Size: 0x302

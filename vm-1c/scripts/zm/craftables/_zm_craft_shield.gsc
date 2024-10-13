@@ -16,9 +16,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_abd96e8b;
+#namespace zm_craft_shield;
 
-// Namespace namespace_abd96e8b
+// Namespace zm_craft_shield
 // Params 0, eflags: 0x2
 // Checksum 0xbcdfead9, Offset: 0x438
 // Size: 0x3c
@@ -26,7 +26,7 @@ function autoexec function_2dc19561() {
     system::register("zm_craft_shield", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_abd96e8b
+// Namespace zm_craft_shield
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x480
 // Size: 0x4
@@ -34,7 +34,7 @@ function __init__() {
     
 }
 
-// Namespace namespace_abd96e8b
+// Namespace zm_craft_shield
 // Params 6, eflags: 0x1 linked
 // Checksum 0xd1de82a4, Offset: 0x490
 // Size: 0x47c
@@ -53,9 +53,9 @@ function init(var_fcfc23b7, var_4524a629, shield_model, var_d6fd6d9d, var_6cabc9
     level.var_a2d03ee5 = shield_model;
     level.var_55d294f8 = var_6dddeed3;
     level.var_5ebd48c7 = 0;
-    var_c5395759 = namespace_f37770c8::function_5cf75ff1(level.var_a081b24e, "dolly", 32, 64, 0, undefined, &function_314a523b, &function_5e1c958e, undefined, undefined, undefined, undefined, "piece_riotshield_dolly", 1, "build_zs");
-    var_b2c078b7 = namespace_f37770c8::function_5cf75ff1(level.var_a081b24e, "door", 48, 15, 25, undefined, &function_314a523b, &function_5e1c958e, undefined, undefined, undefined, undefined, "piece_riotshield_door", 1, "build_zs");
-    var_c6948090 = namespace_f37770c8::function_5cf75ff1(level.var_a081b24e, "clamp", 48, 15, 25, undefined, &function_314a523b, &function_5e1c958e, undefined, undefined, undefined, undefined, "piece_riotshield_clamp", 1, "build_zs");
+    var_c5395759 = zm_craftables::function_5cf75ff1(level.var_a081b24e, "dolly", 32, 64, 0, undefined, &function_314a523b, &function_5e1c958e, undefined, undefined, undefined, undefined, "piece_riotshield_dolly", 1, "build_zs");
+    var_b2c078b7 = zm_craftables::function_5cf75ff1(level.var_a081b24e, "door", 48, 15, 25, undefined, &function_314a523b, &function_5e1c958e, undefined, undefined, undefined, undefined, "piece_riotshield_door", 1, "build_zs");
+    var_c6948090 = zm_craftables::function_5cf75ff1(level.var_a081b24e, "clamp", 48, 15, 25, undefined, &function_314a523b, &function_5e1c958e, undefined, undefined, undefined, undefined, "piece_riotshield_clamp", 1, "build_zs");
     registerclientfield("world", "piece_riotshield_dolly", 1, 1, "int", undefined, 0);
     registerclientfield("world", "piece_riotshield_door", 1, 1, "int", undefined, 0);
     registerclientfield("world", "piece_riotshield_clamp", 1, 1, "int", undefined, 0);
@@ -64,18 +64,18 @@ function init(var_fcfc23b7, var_4524a629, shield_model, var_d6fd6d9d, var_6cabc9
     riotshield = spawnstruct();
     riotshield.name = level.var_a081b24e;
     riotshield.weaponname = level.var_8a69e1e;
-    riotshield namespace_f37770c8::function_b0deb4e6(var_c5395759);
-    riotshield namespace_f37770c8::function_b0deb4e6(var_b2c078b7);
-    riotshield namespace_f37770c8::function_b0deb4e6(var_c6948090);
+    riotshield zm_craftables::function_b0deb4e6(var_c5395759);
+    riotshield zm_craftables::function_b0deb4e6(var_b2c078b7);
+    riotshield zm_craftables::function_b0deb4e6(var_c6948090);
     riotshield.var_71a0cc1e = &function_3a4a378;
     riotshield.var_41f0f8cd = &function_70a15daf;
-    namespace_f37770c8::function_ac4e44a7(riotshield);
-    namespace_f37770c8::function_8421d708(level.var_a081b24e, var_d6fd6d9d, "ERROR", var_6cabc9d6, &function_a8c317e7, 1);
-    namespace_f37770c8::function_b2caef35(level.var_a081b24e, "build_zs");
-    namespace_f37770c8::function_c86d092(level.var_a081b24e, level.var_a2d03ee5, (0, -90, 0), (0, 0, 26));
+    zm_craftables::function_ac4e44a7(riotshield);
+    zm_craftables::function_8421d708(level.var_a081b24e, var_d6fd6d9d, "ERROR", var_6cabc9d6, &function_a8c317e7, 1);
+    zm_craftables::function_b2caef35(level.var_a081b24e, "build_zs");
+    zm_craftables::function_c86d092(level.var_a081b24e, level.var_a2d03ee5, (0, -90, 0), (0, 0, 26));
 }
 
-// Namespace namespace_abd96e8b
+// Namespace zm_craft_shield
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf6e2a1b7, Offset: 0x918
 // Size: 0x1c
@@ -85,53 +85,53 @@ function __main__() {
     #/
 }
 
-// Namespace namespace_abd96e8b
+// Namespace zm_craft_shield
 // Params 0, eflags: 0x1 linked
 // Checksum 0x36dded58, Offset: 0x940
 // Size: 0x3c
 function function_70a15daf() {
-    namespace_f37770c8::function_4f91b11d("riotshield_zm_craftable_trigger", level.var_a081b24e, level.var_8a69e1e, level.var_55d294f8, 1, 1);
+    zm_craftables::function_4f91b11d("riotshield_zm_craftable_trigger", level.var_a081b24e, level.var_8a69e1e, level.var_55d294f8, 1, 1);
 }
 
-// Namespace namespace_abd96e8b
+// Namespace zm_craft_shield
 // Params 2, eflags: 0x1 linked
 // Checksum 0xad949706, Offset: 0x988
 // Size: 0x54
 function function_69e0fb83(var_55ce4248, n_duration) {
     self clientfield::set_to_player(var_55ce4248, 1);
-    wait(n_duration);
+    wait n_duration;
     self clientfield::set_to_player(var_55ce4248, 0);
 }
 
-// Namespace namespace_abd96e8b
+// Namespace zm_craft_shield
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb9caaef0, Offset: 0x9e8
 // Size: 0x148
 function function_314a523b(player) {
-    println("door");
+    println("<dev string:x28>");
     player playsound("zmb_craftable_pickup");
     if (isdefined(level.var_fc2bdb4a)) {
         player thread [[ level.var_fc2bdb4a ]]();
     }
     foreach (e_player in level.players) {
-        e_player thread namespace_f37770c8::function_97be99b3("zmInventory.player_crafted_shield", "zmInventory.widget_shield_parts", 0);
+        e_player thread zm_craftables::function_97be99b3("zmInventory.player_crafted_shield", "zmInventory.widget_shield_parts", 0);
         e_player thread function_69e0fb83("ZMUI_SHIELD_PART_PICKUP", 3.5);
     }
     self function_15eb00ae();
     self.var_77a0498d = player;
 }
 
-// Namespace namespace_abd96e8b
+// Namespace zm_craft_shield
 // Params 1, eflags: 0x1 linked
 // Checksum 0x557ab9c5, Offset: 0xb38
 // Size: 0x4e
 function function_5e1c958e(player) {
-    println("door");
+    println("<dev string:x4e>");
     self function_b908e870(player);
     self.var_77a0498d = undefined;
 }
 
-// Namespace namespace_abd96e8b
+// Namespace zm_craft_shield
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe41d3e73, Offset: 0xb90
 // Size: 0x20
@@ -141,7 +141,7 @@ function function_15eb00ae() {
     }
 }
 
-// Namespace namespace_abd96e8b
+// Namespace zm_craft_shield
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6b2c9e53, Offset: 0xbb8
 // Size: 0xee
@@ -149,14 +149,14 @@ function function_a8c317e7() {
     players = level.players;
     foreach (e_player in players) {
         if (zm_utility::is_player_valid(e_player)) {
-            e_player thread namespace_f37770c8::function_97be99b3("zmInventory.player_crafted_shield", "zmInventory.widget_shield_parts", 1);
+            e_player thread zm_craftables::function_97be99b3("zmInventory.player_crafted_shield", "zmInventory.widget_shield_parts", 1);
             e_player thread function_69e0fb83("ZMUI_SHIELD_CRAFTED", 3.5);
         }
     }
     return true;
 }
 
-// Namespace namespace_abd96e8b
+// Namespace zm_craft_shield
 // Params 1, eflags: 0x1 linked
 // Checksum 0x67da6688, Offset: 0xcb0
 // Size: 0x28
@@ -166,7 +166,7 @@ function function_b908e870(player) {
     }
 }
 
-// Namespace namespace_abd96e8b
+// Namespace zm_craft_shield
 // Params 1, eflags: 0x1 linked
 // Checksum 0xaa9dcebc, Offset: 0xce0
 // Size: 0x96
@@ -183,21 +183,21 @@ function function_3a4a378(player) {
 
 /#
 
-    // Namespace namespace_abd96e8b
+    // Namespace zm_craft_shield
     // Params 0, eflags: 0x1 linked
     // Checksum 0x4c2e5071, Offset: 0xd80
     // Size: 0xf4
     function shield_devgui() {
-        level flagsys::wait_till("door");
-        wait(1);
+        level flagsys::wait_till("<dev string:x72>");
+        wait 1;
         zm_devgui::add_custom_devgui_callback(&shield_devgui_callback);
-        setdvar("door", 0);
-        adddebugcommand("door" + level.var_a081b24e + "door");
-        adddebugcommand("door" + level.var_a081b24e + "door");
-        adddebugcommand("door" + level.var_a081b24e + "door");
+        setdvar("<dev string:x8b>", 0);
+        adddebugcommand("<dev string:xaf>" + level.var_a081b24e + "<dev string:xca>");
+        adddebugcommand("<dev string:xaf>" + level.var_a081b24e + "<dev string:x119>");
+        adddebugcommand("<dev string:xaf>" + level.var_a081b24e + "<dev string:x156>");
     }
 
-    // Namespace namespace_abd96e8b
+    // Namespace zm_craft_shield
     // Params 1, eflags: 0x1 linked
     // Checksum 0x40b6bd33, Offset: 0xe80
     // Size: 0x1d0
@@ -205,35 +205,35 @@ function function_3a4a378(player) {
         players = getplayers();
         retval = 0;
         switch (cmd) {
-        case 8:
+        case "<dev string:x187>":
             array::thread_all(players, &function_2b0b208f);
             retval = 1;
             break;
-        case 8:
+        case "<dev string:x196>":
             if (players.size >= 1) {
                 players[0] thread function_2b0b208f();
             }
             retval = 1;
             break;
-        case 8:
+        case "<dev string:x1ad>":
             if (players.size >= 2) {
                 players[1] thread function_2b0b208f();
             }
             retval = 1;
             break;
-        case 8:
+        case "<dev string:x1c4>":
             if (players.size >= 3) {
                 players[2] thread function_2b0b208f();
             }
             retval = 1;
             break;
-        case 8:
+        case "<dev string:x1db>":
             if (players.size >= 4) {
                 players[3] thread function_2b0b208f();
             }
             retval = 1;
             break;
-        case 8:
+        case "<dev string:x1f2>":
             array::thread_all(level.players, &function_70d7908d);
             retval = 1;
             break;
@@ -241,7 +241,7 @@ function function_3a4a378(player) {
         return retval;
     }
 
-    // Namespace namespace_abd96e8b
+    // Namespace zm_craft_shield
     // Params 0, eflags: 0x1 linked
     // Checksum 0xf5ae50b3, Offset: 0x1058
     // Size: 0x38
@@ -255,7 +255,7 @@ function function_3a4a378(player) {
         return 0;
     }
 
-    // Namespace namespace_abd96e8b
+    // Namespace zm_craft_shield
     // Params 0, eflags: 0x1 linked
     // Checksum 0x5cff49e3, Offset: 0x1098
     // Size: 0x198
@@ -266,8 +266,8 @@ function function_3a4a378(player) {
         self notify(#"hash_2b0b208f");
         self endon(#"hash_2b0b208f");
         self.var_74469a7a = !(isdefined(self.var_74469a7a) && self.var_74469a7a);
-        println("door" + self.name + "door" + (self.var_74469a7a ? "door" : "door"));
-        iprintlnbold("door" + self.name + "door" + (self.var_74469a7a ? "door" : "door"));
+        println("<dev string:x202>" + self.name + "<dev string:x212>" + (self.var_74469a7a ? "<dev string:x228>" : "<dev string:x22b>"));
+        iprintlnbold("<dev string:x202>" + self.name + "<dev string:x212>" + (self.var_74469a7a ? "<dev string:x228>" : "<dev string:x22b>"));
         if (self.var_74469a7a) {
             while (isdefined(self)) {
                 damagemax = level.weaponriotshield.weaponstarthitpoints;
@@ -277,12 +277,12 @@ function function_3a4a378(player) {
                 shieldhealth = damagemax;
                 shieldhealth = self damageriotshield(0);
                 self damageriotshield(shieldhealth - damagemax);
-                wait(0.05);
+                wait 0.05;
             }
         }
     }
 
-    // Namespace namespace_abd96e8b
+    // Namespace zm_craft_shield
     // Params 0, eflags: 0x1 linked
     // Checksum 0xef6668b6, Offset: 0x1238
     // Size: 0x54

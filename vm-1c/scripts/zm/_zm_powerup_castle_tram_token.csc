@@ -4,9 +4,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_cb5bc243;
+#namespace zm_powerup_castle_tram_token;
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 0, eflags: 0x2
 // Checksum 0x9f18ed32, Offset: 0x250
 // Size: 0x34
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
     system::register("zm_powerup_castle_tram_token", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc95fe51b, Offset: 0x290
 // Size: 0x5e
@@ -25,7 +25,7 @@ function __init__() {
     level._effect["fuse_pickup_fx"] = "dlc1/castle/fx_glow_115_fuse_pickup_castle";
 }
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5b5c23b2, Offset: 0x2f8
 // Size: 0x1ac
@@ -40,13 +40,13 @@ function register_clientfields() {
     clientfield::register("clientuimodel", "zmInventory.widget_sprayer", 1, 1, "int", undefined, 0, 0);
 }
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa5bea765, Offset: 0x4b0
 // Size: 0x84
 function function_4f546258(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
-        self.var_300f73ce = playfxontag(localclientnum, level._effect["fuse_pickup_fx"], self, "j_fuse_main");
+        self.powerup_fuse_fx = playfxontag(localclientnum, level._effect["fuse_pickup_fx"], self, "j_fuse_main");
     }
 }
 

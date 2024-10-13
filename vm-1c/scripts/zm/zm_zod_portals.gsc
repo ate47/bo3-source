@@ -20,9 +20,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_8e2647d0;
+#namespace zm_zod_portals;
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 0, eflags: 0x2
 // Checksum 0x9a169138, Offset: 0x600
 // Size: 0x34
@@ -30,7 +30,7 @@ function autoexec function_2dc19561() {
     system::register("zm_zod_portals", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 0, eflags: 0x0
 // Checksum 0xd5a08ec2, Offset: 0x640
 // Size: 0x294
@@ -51,7 +51,7 @@ function __init__() {
     visionset_mgr::register_info("overlay", "zm_zod_transported", 1, 20, 15, 1, &visionset_mgr::duration_lerp_thread_per_player, 0);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 1, eflags: 0x0
 // Checksum 0xe64e3602, Offset: 0x8e0
 // Size: 0x2bc
@@ -79,12 +79,12 @@ function function_54ec766b(str_id) {
     zm_unitrigger::register_static_unitrigger(s_loc.unitrigger_stub, &function_a90ab0d7);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 1, eflags: 0x0
 // Checksum 0x33a38e3e, Offset: 0xba8
 // Size: 0xf2
 function function_16fca6d(player) {
-    level endon(#"hash_7c61dd0");
+    level endon(#"ritual_pap_complete");
     var_d42f02cf = self.stub.var_d42f02cf;
     var_8f5050e8 = level clientfield::get("portal_state_" + var_d42f02cf);
     if (var_8f5050e8 !== 1 && !(isdefined(player.beastmode) && player.beastmode)) {
@@ -97,12 +97,12 @@ function function_16fca6d(player) {
     return !b_is_invis;
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 0, eflags: 0x0
 // Checksum 0x2e7a084c, Offset: 0xca8
 // Size: 0xac
 function function_a90ab0d7() {
-    level endon(#"hash_7c61dd0");
+    level endon(#"ritual_pap_complete");
     while (true) {
         player = self waittill(#"trigger");
         if (player zm_utility::in_revive_trigger()) {
@@ -119,7 +119,7 @@ function function_a90ab0d7() {
     }
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 1, eflags: 0x0
 // Checksum 0x82f69d4b, Offset: 0xd60
 // Size: 0xe6
@@ -134,7 +134,7 @@ function function_42ed55f2(var_d42f02cf) {
     return var_216e113e;
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 1, eflags: 0x0
 // Checksum 0x1f443c9f, Offset: 0xe50
 // Size: 0x4c
@@ -143,7 +143,7 @@ function function_e0c93f92(var_d42f02cf) {
     portal_open(var_d42f02cf);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 2, eflags: 0x0
 // Checksum 0x7f93ac8a, Offset: 0xea8
 // Size: 0x38c
@@ -173,13 +173,13 @@ function portal_open(var_d42f02cf, var_14429fc9) {
         }
         var_9110bac3.portal_trig = var_50fc4fb[0];
     }
-    wait(2.5);
+    wait 2.5;
     var_ebfa395[0] thread portal_think();
     var_50fc4fb[0] thread portal_think();
     level flag::set("activate_underground");
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 1, eflags: 0x0
 // Checksum 0xba3be233, Offset: 0x1240
 // Size: 0xd2
@@ -192,7 +192,7 @@ function function_7679b497(str_input) {
     }
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 0, eflags: 0x0
 // Checksum 0xf0b3fe88, Offset: 0x1320
 // Size: 0x174
@@ -215,7 +215,7 @@ function portal_think() {
     }
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 2, eflags: 0x0
 // Checksum 0xba9ca66d, Offset: 0x14a0
 // Size: 0x924
@@ -258,7 +258,7 @@ function function_d0ff7e09(player, show_fx) {
     player.teleport_origin.angles = var_594457ea.angles;
     util::wait_network_frame();
     player.teleport_origin.angles = var_594457ea.angles;
-    wait(2);
+    wait 2;
     if (show_fx) {
         player clientfield::set_to_player("player_stargate_fx", 0);
     }
@@ -276,7 +276,7 @@ function function_d0ff7e09(player, show_fx) {
                     var_cefa4b63 = 0;
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
     playfx(level._effect["portal_3p"], s_pos.origin);
@@ -312,7 +312,7 @@ function function_d0ff7e09(player, show_fx) {
     player thread zm_audio::create_and_play_dialog("portal", "travel");
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 0, eflags: 0x0
 // Checksum 0x1e9b6cdc, Offset: 0x1dd0
 // Size: 0x5e
@@ -322,12 +322,12 @@ function function_7807150a() {
         self endon(#"death");
         self endon(#"hash_450c36af");
         self.b_ignore_cleanup = 1;
-        wait(10);
+        wait 10;
         self.b_ignore_cleanup = undefined;
     }
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 1, eflags: 0x0
 // Checksum 0x45bad9c8, Offset: 0x1e38
 // Size: 0x2c4
@@ -345,7 +345,7 @@ function function_eb1242c8(var_5ee55fde) {
         var_5ee55fde.origin = var_594457ea.origin;
         var_5ee55fde.angles = var_594457ea.angles;
     }
-    wait(2);
+    wait 2;
     var_97bf7ab1 = array::random(self.var_71abf438);
     if (isactor(var_5ee55fde)) {
         var_5ee55fde forceteleport(var_97bf7ab1.origin, var_97bf7ab1.angles);
@@ -356,7 +356,7 @@ function function_eb1242c8(var_5ee55fde) {
     level clientfield::increment("pulse_" + self.var_dec5db15.script_noteworthy);
     playsoundatposition("zmb_teleporter_teleport_in", var_97bf7ab1.origin);
     playfx(level._effect["portal_3p"], var_97bf7ab1.origin);
-    wait(1);
+    wait 1;
     var_5ee55fde pathmode("move allowed");
     var_5ee55fde.teleporting = 0;
 }

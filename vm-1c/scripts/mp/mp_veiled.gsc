@@ -8,17 +8,17 @@
 #using scripts/shared/compass;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b949d622;
+#namespace mp_veiled;
 
-// Namespace namespace_b949d622
+// Namespace mp_veiled
 // Params 0, eflags: 0x1 linked
 // Checksum 0xad65a792, Offset: 0x2d8
 // Size: 0x33c
 function main() {
     precache();
     spawnlogic::move_spawn_point("mp_dm_spawn_start", (1687.56, -465.166, 45.625), (-1164.6, 603.783, 29.625), (0, 315.516, 0));
-    namespace_f7008227::main();
-    namespace_8f273e4e::main();
+    mp_veiled_fx::main();
+    mp_veiled_sound::main();
     load::main();
     compass::setupminimap("compass_map_mp_veiled");
     setdvar("compassmaxrange", "2100");
@@ -35,7 +35,7 @@ function main() {
     level thread function_e8eaac79();
 }
 
-// Namespace namespace_b949d622
+// Namespace mp_veiled
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x620
 // Size: 0x4
@@ -43,7 +43,7 @@ function precache() {
     
 }
 
-// Namespace namespace_b949d622
+// Namespace mp_veiled
 // Params 0, eflags: 0x1 linked
 // Checksum 0x80b207eb, Offset: 0x630
 // Size: 0x1bc
@@ -52,15 +52,15 @@ function function_e8eaac79() {
     var_810de4c4 = 45;
     var_7b825480 = 120;
     var_da509659 = 120;
-    wait(var_c6821b9b + var_810de4c4);
+    wait var_c6821b9b + var_810de4c4;
     var_13d61abf = struct::get("tag_align_rocket_2", "targetname");
     var_13d61abf thread scene::play("p7_fxanim_mp_veiled_rocket_launch_2");
     playsoundatposition("evt_rocket_launch_01", (-4313, 623, 316));
-    wait(var_7b825480);
+    wait var_7b825480;
     var_a1ceab84 = struct::get("tag_align_rocket_1", "targetname");
     var_a1ceab84 thread scene::play("p7_fxanim_mp_veiled_rocket_launch_1");
     playsoundatposition("evt_rocket_launch_01", (-4313, 623, 316));
-    wait(var_da509659);
+    wait var_da509659;
     var_edd3a056 = struct::get("tag_align_rocket_3", "targetname");
     var_edd3a056 thread scene::play("p7_fxanim_mp_veiled_rocket_launch_3");
     playsoundatposition("evt_rocket_launch_01", (-3696, -2879, 322));

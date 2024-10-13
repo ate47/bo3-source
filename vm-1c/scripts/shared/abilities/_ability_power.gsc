@@ -32,17 +32,17 @@ function __init__() {
     // Checksum 0x8576c243, Offset: 0x2f8
     // Size: 0x10c
     function cpower_print(slot, str) {
-        color = "killed actor";
-        toprint = color + "killed actor" + str;
-        weaponname = "killed actor";
+        color = "<dev string:x28>";
+        toprint = color + "<dev string:x2b>" + str;
+        weaponname = "<dev string:x3c>";
         if (isdefined(self._gadgets_player[slot])) {
             weaponname = self._gadgets_player[slot].name;
         }
-        if (getdvarint("killed actor") > 0) {
+        if (getdvarint("<dev string:x41>") > 0) {
             self iprintlnbold(toprint);
             return;
         }
-        println(self.playername + "killed actor" + weaponname + "killed actor" + toprint);
+        println(self.playername + "<dev string:x59>" + weaponname + "<dev string:x59>" + toprint);
     }
 
 #/
@@ -169,7 +169,7 @@ function power_gain_event(slot, eattacker, val, source) {
     if (powertoadd > 0.1 || powertoadd < -0.1) {
         powerleft = self gadgetpowerchange(slot, powertoadd);
         /#
-            self cpower_print(slot, "killed actor" + powertoadd + "killed actor" + source + "killed actor" + powerleft);
+            self cpower_print(slot, "<dev string:x5c>" + powertoadd + "<dev string:x66>" + source + "<dev string:x71>" + powerleft);
         #/
     }
 }
@@ -209,7 +209,7 @@ function power_loss_event(slot, eattacker, val, source) {
     if (powertoremove > 0.1 || powertoremove < -0.1) {
         powerleft = self gadgetpowerchange(slot, powertoremove);
         /#
-            self cpower_print(slot, "killed actor" + powertoremove + "killed actor" + source + "killed actor" + powerleft);
+            self cpower_print(slot, "<dev string:x80>" + powertoremove + "<dev string:x66>" + source + "<dev string:x71>" + powerleft);
         #/
     }
 }
@@ -242,7 +242,7 @@ function power_consume_timer_think(slot, weapon) {
     self endon(#"death");
     time = gettime();
     while (true) {
-        wait(0.1);
+        wait 0.1;
         if (!isdefined(self._gadgets_player[slot])) {
             return;
         }

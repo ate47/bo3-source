@@ -60,8 +60,8 @@ function __init__() {
     // Size: 0x40
     function updatedvars() {
         while (true) {
-            level.var_4e101858 = getdvarint("clientuimodel", 0);
-            wait(1);
+            level.var_4e101858 = getdvarint("<dev string:x28>", 0);
+            wait 1;
         }
     }
 
@@ -158,7 +158,7 @@ function function_f0dd0e3a(slot, weapon) {
 function function_81f89e3() {
     self.pers[#"hash_c5c4a13f"] = 1;
     /#
-        level.var_bc61f38b = getdvarint("clientuimodel", 0);
+        level.var_bc61f38b = getdvarint("<dev string:x41>", 0);
         if (level.var_bc61f38b) {
             self thread function_8da00c80();
         }
@@ -225,31 +225,31 @@ function function_7fa5bb36(gadget) {
     if (gadget.isheroweapon == 0) {
         var_9341e29 = "";
         switch (gadget.name) {
-        case 35:
+        case "gadget_flashback":
             var_9341e29 = "hero_lightninggun";
             break;
-        case 34:
+        case "gadget_combat_efficiency":
             var_9341e29 = "hero_annihilator";
             break;
-        case 36:
+        case "gadget_heat_wave":
             var_9341e29 = "hero_flamethrower";
             break;
-        case 38:
+        case "gadget_vision_pulse":
             var_9341e29 = "hero_bowlauncher";
             break;
-        case 17:
+        case "gadget_speed_burst":
             var_9341e29 = "hero_gravityspikes";
             break;
-        case 32:
+        case "gadget_camo":
             var_9341e29 = "hero_armblade";
             break;
-        case 31:
+        case "gadget_armor":
             var_9341e29 = "hero_pineapplegun";
             break;
-        case 37:
+        case "gadget_resurrect":
             var_9341e29 = "hero_chemicalgelgun";
             break;
-        case 33:
+        case "gadget_clone":
             var_9341e29 = "hero_minigun";
             break;
         }
@@ -269,7 +269,7 @@ function function_7fa5bb36(gadget) {
 function function_1208ecd9(delay) {
     self notify(#"hash_2bd7947a");
     self endon(#"hash_2bd7947a");
-    wait(delay);
+    wait delay;
     self clientfield::set_player_uimodel("playerAbilities.playerGadget3.flashStart", 0);
     self clientfield::set_player_uimodel("playerAbilities.playerGadget3.flashEnd", 0);
 }
@@ -383,7 +383,7 @@ function function_57d5323b(slot, victim, heroweapon) {
     }
     elapsed_time = (gettime() - (isdefined(self.var_57f13765) ? self.var_57f13765 : 0)) * 0.001;
     if (elapsed_time < 0.75) {
-        wait(0.75 - elapsed_time);
+        wait 0.75 - elapsed_time;
     }
     self clientfield::set_to_player("thief_state", 2);
     self thread function_acd87de5(slot, var_1c7e5537, 0);
@@ -411,7 +411,7 @@ function function_834ca490(duration) {
     self endon(#"disconnect");
     self endon(#"hash_1b499703");
     self disableoffhandspecial();
-    wait(duration);
+    wait duration;
     self enableoffhandspecial();
 }
 
@@ -421,7 +421,7 @@ function function_834ca490(duration) {
 // Size: 0x34
 function function_12fae26() {
     self endon(#"hash_ab02b20c");
-    wait(3);
+    wait 3;
     if (isdefined(self)) {
         self enableoffhandspecial();
     }
@@ -433,46 +433,46 @@ function function_12fae26() {
 // Size: 0x204
 function function_ed78a948(heroweapon) {
     switch (heroweapon.name) {
-    case 30:
-    case 18:
+    case "hero_minigun":
+    case "hero_minigun_body3":
         event = "minigun_stolen";
         label = "SCORE_MINIGUN_STOLEN";
         break;
-    case 24:
+    case "hero_flamethrower":
         event = "flamethrower_stolen";
         label = "SCORE_FLAMETHROWER_STOLEN";
         break;
-    case 22:
-    case 19:
+    case "hero_lightninggun":
+    case "hero_lightninggun_arc":
         event = "lightninggun_stolen";
         label = "SCORE_LIGHTNINGGUN_STOLEN";
         break;
-    case 29:
-    case 64:
+    case "hero_chemicalgelgun":
+    case "hero_firefly_swarm":
         event = "gelgun_stolen";
         label = "SCORE_GELGUN_STOLEN";
         break;
-    case 16:
-    case 28:
+    case "hero_pineapple_grenade":
+    case "hero_pineapplegun":
         event = "pineapple_stolen";
         label = "SCORE_PINEAPPLE_STOLEN";
         break;
-    case 27:
+    case "hero_armblade":
         event = "armblades_stolen";
         label = "SCORE_ARMBLADES_STOLEN";
         break;
-    case 25:
-    case 13:
-    case 14:
-    case 15:
+    case "hero_bowlauncher":
+    case "hero_bowlauncher2":
+    case "hero_bowlauncher3":
+    case "hero_bowlauncher4":
         event = "bowlauncher_stolen";
         label = "SCORE_BOWLAUNCHER_STOLEN";
         break;
-    case 26:
+    case "hero_gravityspikes":
         event = "gravityspikes_stolen";
         label = "SCORE_GRAVITYSPIKES_STOLEN";
         break;
-    case 23:
+    case "hero_annihilator":
         event = "annihilator_stolen";
         label = "SCORE_ANNIHILATOR_STOLEN";
         break;
@@ -532,8 +532,8 @@ function function_3ba16324(origin) {
         while (true) {
             victim = self waittill(#"killed_enemy_player");
             self function_3ba16324(victim.origin);
-            var_aac40aca = spawn("clientuimodel", victim.origin);
-            var_aac40aca clientfield::set("clientuimodel", 1);
+            var_aac40aca = spawn("<dev string:x59>", victim.origin);
+            var_aac40aca clientfield::set("<dev string:x66>", 1);
             var_aac40aca thread waitthendelete(5);
         }
     }
@@ -545,7 +545,7 @@ function function_3ba16324(origin) {
 // Checksum 0x5d3f197c, Offset: 0x23f0
 // Size: 0x24
 function waitthendelete(time) {
-    wait(time);
+    wait time;
     self delete();
 }
 
@@ -571,8 +571,8 @@ function function_dbe98d36(slot, weapon, var_74232a9d, justspawned) {
     }
     selectedweapon = weapon;
     /#
-        if (getdvarint("clientuimodel", -1) != -1) {
-            selectedweapon = level.var_22a1096a[getdvarint("clientuimodel", -1)];
+        if (getdvarint("<dev string:x76>", -1) != -1) {
+            selectedweapon = level.var_22a1096a[getdvarint("<dev string:x76>", -1)];
         }
     #/
     self giveweapon(selectedweapon);
@@ -601,7 +601,7 @@ function function_acd87de5(slot, var_1c7e5537, justspawned) {
     self clientfield::set_to_player("thief_weapon_option", var_1c7e5537 + 1);
     self.pers[#"hash_6de3aefa"] = var_1c7e5537;
     if (!justspawned) {
-        wait(0.85);
+        wait 0.85;
         self enableoffhandspecial();
         self notify(#"hash_ab02b20c");
     }
@@ -618,7 +618,7 @@ function function_acd87de5(slot, var_1c7e5537, justspawned) {
             }
             return;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -722,35 +722,35 @@ function function_4c1c1b75(victim, heroweapon) {
     bodyindex = victim getcharacterbodytype();
     if (bodyindex == 9) {
         switch (heroweapon.name) {
-        case 30:
-        case 18:
+        case "hero_minigun":
+        case "hero_minigun_body3":
             bodyindex = 6;
             break;
-        case 24:
+        case "hero_flamethrower":
             bodyindex = 8;
             break;
-        case 22:
+        case "hero_lightninggun":
             bodyindex = 2;
             break;
-        case 29:
+        case "hero_chemicalgelgun":
             bodyindex = 5;
             break;
-        case 28:
+        case "hero_pineapplegun":
             bodyindex = 3;
             break;
-        case 27:
+        case "hero_armblade":
             bodyindex = 7;
             break;
-        case 25:
-        case 13:
-        case 14:
-        case 15:
+        case "hero_bowlauncher":
+        case "hero_bowlauncher2":
+        case "hero_bowlauncher3":
+        case "hero_bowlauncher4":
             bodyindex = 1;
             break;
-        case 26:
+        case "hero_gravityspikes":
             bodyindex = 0;
             break;
-        case 23:
+        case "hero_annihilator":
         default:
             bodyindex = 4;
             break;

@@ -14,8 +14,8 @@
 // Checksum 0x993aee67, Offset: 0x618
 // Size: 0x55c
 function autoexec registerbehaviorscriptfunctions() {
-    behaviortreenetworkutility::registerbehaviortreescriptapi("locomotionBehaviorCondition", &function_6d9627b7);
-    behaviorstatemachine::registerbsmscriptapiinternal("locomotionBehaviorCondition", &function_6d9627b7);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("locomotionBehaviorCondition", &locomotionBehaviorCondition);
+    behaviorstatemachine::registerbsmscriptapiinternal("locomotionBehaviorCondition", &locomotionBehaviorCondition);
     behaviortreenetworkutility::registerbehaviortreescriptapi("nonCombatLocomotionCondition", &noncombatlocomotioncondition);
     behaviortreenetworkutility::registerbehaviortreescriptapi("setDesiredStanceForMovement", &setdesiredstanceformovement);
     behaviortreenetworkutility::registerbehaviortreescriptapi("clearPathFromScript", &clearpathfromscript);
@@ -101,12 +101,12 @@ function private locomotionshouldlooponstairs(behaviortreeentity) {
     numoutsteps = 2;
     if (direction == "staircase_up") {
         switch (exittype) {
-        case 32:
-        case 34:
+        case "staircase_up_exit_l_3_stairs":
+        case "staircase_up_exit_r_3_stairs":
             numoutsteps = 3;
             break;
-        case 33:
-        case 35:
+        case "staircase_up_exit_l_4_stairs":
+        case "staircase_up_exit_r_4_stairs":
             numoutsteps = 4;
             break;
         }
@@ -247,7 +247,7 @@ function private combatlocomotioncondition(behaviortreeentity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x95d61dda, Offset: 0x1508
 // Size: 0x22
-function function_6d9627b7(behaviortreeentity) {
+function locomotionBehaviorCondition(behaviortreeentity) {
     return behaviortreeentity haspath();
 }
 
@@ -291,7 +291,7 @@ function traverseactionstart(behaviortreeentity, asmstatename) {
     traversesetup(behaviortreeentity);
     /#
         var_be841c75 = behaviortreeentity astsearch(istring(asmstatename));
-        assert(isdefined(var_be841c75["adjustStanceToFaceEnemyTerminate"]), behaviortreeentity.archetype + "adjustStanceToFaceEnemyTerminate" + behaviortreeentity.traversestartnode.animscript + "adjustStanceToFaceEnemyTerminate" + behaviortreeentity.traversestartnode.origin + "adjustStanceToFaceEnemyTerminate");
+        assert(isdefined(var_be841c75["<dev string:x28>"]), behaviortreeentity.archetype + "<dev string:x32>" + behaviortreeentity.traversestartnode.animscript + "<dev string:x57>" + behaviortreeentity.traversestartnode.origin + "<dev string:x5b>");
     #/
     animationstatenetworkutility::requeststate(behaviortreeentity, asmstatename);
     return 5;

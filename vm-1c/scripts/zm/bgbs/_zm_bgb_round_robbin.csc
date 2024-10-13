@@ -5,9 +5,9 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_98efd7b6;
+#namespace zm_bgb_round_robbin;
 
-// Namespace namespace_98efd7b6
+// Namespace zm_bgb_round_robbin
 // Params 0, eflags: 0x2
 // Checksum 0x9a0891f7, Offset: 0x148
 // Size: 0x34
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_round_robbin", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_98efd7b6
+// Namespace zm_bgb_round_robbin
 // Params 0, eflags: 0x1 linked
 // Checksum 0x68317636, Offset: 0x188
 // Size: 0x3c

@@ -58,9 +58,9 @@
 #using scripts/shared/beam_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_320a344e;
+#namespace zm_stalingrad;
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 0, eflags: 0x2
 // Checksum 0x6f6f64c6, Offset: 0x1b98
 // Size: 0x1c
@@ -69,7 +69,7 @@ function autoexec opt_in() {
     level.bgb_in_use = 1;
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x1bc0
 // Size: 0x4
@@ -77,13 +77,13 @@ function function_8de36410() {
     
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x31d930, Offset: 0x1bd0
 // Size: 0x214
 function main() {
     scene::add_scene_func("p7_fxanim_gp_tracer_fire_01_bundle", &function_1c53c4e1);
-    namespace_15d4d4c0::main_start();
+    zm_stalingrad_ffotd::main_start();
     level.debug_keyline_zombies = 0;
     level.setupcustomcharacterexerts = &setup_personality_character_exerts;
     level._effect["eye_glow"] = "dlc3/stalingrad/fx_glow_eye_red_stal";
@@ -94,23 +94,23 @@ function main() {
     level._effect["animscript_gibtrail_fx"] = "trail/fx_trail_blood_streak";
     level._uses_sticky_grenades = 1;
     level._uses_taser_knuckles = 1;
-    namespace_e81d2518::init_clientfields();
+    dragon::init_clientfields();
     register_clientfields();
-    namespace_f058d6e4::function_3ebec56b();
-    namespace_f058d6e4::function_95743e9f();
-    namespace_23c72813::function_ad78a144();
+    zm_stalingrad_craftables::function_3ebec56b();
+    zm_stalingrad_craftables::function_95743e9f();
+    zm_stalingrad_wearables::function_ad78a144();
     include_weapons();
     load::main();
-    namespace_c49c3ddb::init();
+    zm_stalingrad_fx::init();
     function_8de36410();
     level thread function_3a429aee();
-    thread namespace_db83306f::main();
+    thread zm_stalingrad_amb::main();
     util::waitforclient(0);
-    namespace_15d4d4c0::main_end();
+    zm_stalingrad_ffotd::main_end();
     level thread function_38b57afd();
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6df4bf3e, Offset: 0x1df0
 // Size: 0xc8
@@ -118,17 +118,17 @@ function function_1c53c4e1(a_ents) {
     level endon(#"zesn");
     while (true) {
         while (!isdefined(level.localplayers[0]) || !isigcactive(level.localplayers[0].localclientnum)) {
-            wait(1);
+            wait 1;
         }
         self scene::stop(1);
         while (isigcactive(level.localplayers[0].localclientnum)) {
-            wait(1);
+            wait 1;
         }
         self scene::play();
     }
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8b40fd1f, Offset: 0x1ec0
 // Size: 0x6a4
@@ -144,7 +144,7 @@ function register_clientfields() {
     clientfield::register("actor", "drop_pod_score_beam_fx", 12000, 1, "counter", &namespace_b57650e4::function_c86c0cdd, 0, 0);
     clientfield::register("scriptmover", "drop_pod_active", 12000, 1, "int", &namespace_b57650e4::function_5858bdaf, 0, 0);
     clientfield::register("scriptmover", "drop_pod_hp_light", 12000, 2, "int", &namespace_b57650e4::function_5e369bd2, 0, 0);
-    clientfield::register("world", "drop_pod_streaming", 12000, 1, "int", &namespace_b57650e4::function_7a72544b, 0, 0);
+    clientfield::register("world", "drop_pod_streaming", 12000, 1, "int", &namespace_b57650e4::drop_pod_streaming, 0, 0);
     clientfield::register("toplayer", "tp_water_sheeting", 12000, 1, "int", &function_6be6da89, 0, 0);
     clientfield::register("toplayer", "sewer_landing_rumble", 12000, 1, "counter", &function_931fa0e1, 0, 0);
     clientfield::register("scriptmover", "dragon_egg_heat_fx", 12000, 1, "int", &function_3931d3fe, 0, 0);
@@ -152,7 +152,7 @@ function register_clientfields() {
     clientfield::register("actor", "dragon_egg_score_beam_fx", 12000, 1, "counter", &function_bfdc67e3, 0, 0);
     clientfield::register("world", "force_stream_dragon_egg", 12000, 1, "int", &function_b116183d, 0, 0);
     clientfield::register("scriptmover", "ethereal_audio_log_fx", 12000, 1, "int", &function_a96968f2, 0, 0);
-    clientfield::register("world", "deactivate_ai_vox", 12000, 1, "int", &function_27fb11e6, 0, 0);
+    clientfield::register("world", "deactivate_ai_vox", 12000, 1, "int", &deactivate_ai_vox, 0, 0);
     clientfield::register("world", "sophia_intro_outro", 12000, 1, "int", &function_21deab84, 0, 0);
     clientfield::register("allplayers", "sophia_follow", 12000, 3, "int", &function_a431bec5, 0, 0);
     clientfield::register("scriptmover", "sophia_eye_shader", 12000, 1, "int", &function_70b3b237, 0, 0);
@@ -162,7 +162,7 @@ function register_clientfields() {
     level.var_48c1095e = [];
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbe52b7c9, Offset: 0x2570
 // Size: 0x34
@@ -171,7 +171,7 @@ function include_weapons() {
     zm_weapons::function_9e8dccbe();
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5c4870ed, Offset: 0x25b0
 // Size: 0x1072
@@ -286,7 +286,7 @@ function setup_personality_character_exerts() {
     level.exert_sounds[4]["dtplandsoundplayer"][3] = "vox_plr_3_exert_pain_medium_3";
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1d7aab7e, Offset: 0x3630
 // Size: 0x19c
@@ -310,7 +310,7 @@ function function_3a429aee() {
     forcestreamxmodel("p7_zm_sta_code_cylinder_yellow");
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1f8f77c, Offset: 0x37d8
 // Size: 0x1a4
@@ -329,7 +329,7 @@ function function_38b57afd() {
     level thread scene::play("ambient_fxanim", "targetname");
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 7, eflags: 0x1 linked
 // Checksum 0x9400e8c7, Offset: 0x3988
 // Size: 0x1b2
@@ -349,7 +349,7 @@ function function_6be6da89(localclientnum, oldval, newval, bnewent, binitialsnap
     self notify(#"hash_e7cca3ce");
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 2, eflags: 0x1 linked
 // Checksum 0x92e8458c, Offset: 0x3b48
 // Size: 0xda
@@ -360,14 +360,14 @@ function function_da4ab728(localclientnum, var_b81de649) {
         if (who islocalplayer()) {
             playsound(localclientnum, "zmb_stalingrad_sewer_pipe_exit");
             self stoploopsound(self.var_5962d89c);
-            wait(0.1);
+            wait 0.1;
             self.var_5962d89c = self playloopsound("zmb_stalingrad_sewer_air_lp", 0.3);
             return;
         }
     }
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 7, eflags: 0x1 linked
 // Checksum 0xae0ad506, Offset: 0x3c30
 // Size: 0x64
@@ -377,7 +377,7 @@ function function_931fa0e1(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd9e1b74, Offset: 0x3ca0
 // Size: 0x4e
@@ -385,7 +385,7 @@ function function_4b1f1b87(localclientnum, oldval, newval, bnewent, binitialsnap
     level.var_48c1095e[localclientnum] = self;
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2622d9d1, Offset: 0x3cf8
 // Size: 0x114
@@ -396,21 +396,21 @@ function function_bfdc67e3(localclientnum, oldval, newval, bnewent, binitialsnap
     var_e43465f2 thread function_10e7e603(mdl_target);
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 1, eflags: 0x1 linked
 // Checksum 0x98980533, Offset: 0x3e18
 // Size: 0xe4
 function function_10e7e603(mdl_target) {
     level beam::launch(self, "tag_origin", mdl_target, "tag_origin", "electric_arc_zombie_to_drop_pod");
     mdl_target playsound(0, "zmb_pod_electrocute");
-    wait(0.2);
+    wait 0.2;
     self playsound(0, "zmb_pod_electrocute_zmb");
     level beam::kill(self, "tag_origin", mdl_target, "tag_origin", "electric_arc_zombie_to_drop_pod");
     mdl_target delete();
     self delete();
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 7, eflags: 0x1 linked
 // Checksum 0x60a02a77, Offset: 0x3f08
 // Size: 0xb4
@@ -424,7 +424,7 @@ function function_3931d3fe(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 7, eflags: 0x1 linked
 // Checksum 0x11b68f70, Offset: 0x3fc8
 // Size: 0x7c
@@ -436,7 +436,7 @@ function function_b116183d(localclientnum, oldval, newval, bnewent, binitialsnap
     stopforcestreamingxmodel("p7_fxanim_zm_stal_dragon_incubator_egg_mod");
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 7, eflags: 0x1 linked
 // Checksum 0x93761c2f, Offset: 0x4050
 // Size: 0xb4
@@ -450,7 +450,7 @@ function function_a96968f2(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2b52df5c, Offset: 0x4110
 // Size: 0x144
@@ -465,13 +465,13 @@ function function_21deab84(localclientnum, oldval, newval, bnewent, binitialsnap
         return;
     }
     level notify(#"hash_deeb3634");
-    wait(0.5);
+    wait 0.5;
     var_1c7b6837 rotateto((0, 0, 0), 0.2);
     level waittill(#"hash_7dde7b99");
     var_1c7b6837 delete();
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 7, eflags: 0x1 linked
 // Checksum 0xadde615e, Offset: 0x4260
 // Size: 0xfc
@@ -482,7 +482,7 @@ function function_a431bec5(localclientnum, oldval, newval, bnewent, binitialsnap
         return;
     }
     level notify(#"hash_deeb3634");
-    wait(0.5);
+    wait 0.5;
     if (!isdefined(var_1c7b6837)) {
         return;
     }
@@ -494,7 +494,7 @@ function function_a431bec5(localclientnum, oldval, newval, bnewent, binitialsnap
     var_1c7b6837 thread function_36666e11(self);
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 1, eflags: 0x1 linked
 // Checksum 0x82463136, Offset: 0x4368
 // Size: 0x1d8
@@ -518,11 +518,11 @@ function function_36666e11(e_player) {
             var_933e0d32 = (var_933e0d32[0], var_cf92fd4e, var_933e0d32[2]);
         }
         self rotateto(var_933e0d32, 0.1);
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa17d2129, Offset: 0x4548
 // Size: 0x64
@@ -530,7 +530,7 @@ function function_70b3b237(localclientnum, oldval, newval, bnewent, binitialsnap
     self mapshaderconstant(localclientnum, 0, "scriptVector2", newval, 0, 0);
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe13581c6, Offset: 0x45b8
 // Size: 0x10c
@@ -548,7 +548,7 @@ function function_6cfcd54d(localclientnum, oldval, newval, bnewent, binitialsnap
     var_1c7b6837 hidepart(localclientnum, "wave_jnt");
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd54e9199, Offset: 0x46d0
 // Size: 0x64
@@ -558,11 +558,11 @@ function function_bbbdcfd5(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_320a344e
+// Namespace zm_stalingrad
 // Params 7, eflags: 0x1 linked
 // Checksum 0xefb38616, Offset: 0x4740
 // Size: 0x72
-function function_27fb11e6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function deactivate_ai_vox(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     switch (newval) {
     case 0:
         level.var_6f29d418 = 0;

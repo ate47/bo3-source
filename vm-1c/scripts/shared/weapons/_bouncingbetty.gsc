@@ -61,19 +61,19 @@ function register() {
     // Size: 0x1ee
     function bouncingbettydvarupdate() {
         for (;;) {
-            level.bettyradius = getdvarint("betty_damage_radius", level.bettyradius);
-            level.bettyactivationdelay = getdvarfloat("betty_damage_radius", level.bettyactivationdelay);
-            level.bettygraceperiod = getdvarfloat("betty_damage_radius", level.bettygraceperiod);
-            level.bettydamageradius = getdvarint("betty_damage_radius", level.bettydamageradius);
-            level.bettydamagemax = getdvarint("betty_damage_radius", level.bettydamagemax);
-            level.bettydamagemin = getdvarint("betty_damage_radius", level.bettydamagemin);
-            level.bettydamageheight = getdvarint("betty_damage_radius", level.bettydamageheight);
-            level.bettyjumpheight = getdvarint("betty_damage_radius", level.bettyjumpheight);
-            level.bettyjumpheightwall = getdvarint("betty_damage_radius", level.bettyjumpheightwall);
-            level.bettyjumpheightwallangle = getdvarint("betty_damage_radius", level.bettyjumpheightwallangle);
+            level.bettyradius = getdvarint("<dev string:x28>", level.bettyradius);
+            level.bettyactivationdelay = getdvarfloat("<dev string:x3c>", level.bettyactivationdelay);
+            level.bettygraceperiod = getdvarfloat("<dev string:x53>", level.bettygraceperiod);
+            level.bettydamageradius = getdvarint("<dev string:x66>", level.bettydamageradius);
+            level.bettydamagemax = getdvarint("<dev string:x7a>", level.bettydamagemax);
+            level.bettydamagemin = getdvarint("<dev string:x8b>", level.bettydamagemin);
+            level.bettydamageheight = getdvarint("<dev string:x9c>", level.bettydamageheight);
+            level.bettyjumpheight = getdvarint("<dev string:xb9>", level.bettyjumpheight);
+            level.bettyjumpheightwall = getdvarint("<dev string:xd4>", level.bettyjumpheightwall);
+            level.bettyjumpheightwallangle = getdvarint("<dev string:xeb>", level.bettyjumpheightwallangle);
             level.bettyjumpheightwallanglecos = cos(level.bettyjumpheightwallangle);
-            level.bettyjumptime = getdvarfloat("betty_damage_radius", level.bettyjumptime);
-            wait(3);
+            level.bettyjumptime = getdvarfloat("<dev string:x10a>", level.bettyjumptime);
+            wait 3;
         }
     }
 
@@ -305,7 +305,7 @@ function bouncingbettyjumpandexplode() {
     explodepos = self.origin + jumpdir * jumpheight;
     self.killcament moveto(explodepos + self.killcamoffset, level.bettyjumptime, 0, level.bettyjumptime);
     self clientfield::set("bouncingbetty_state", 1);
-    wait(level.bettyjumptime);
+    wait level.bettyjumptime;
     self thread mineexplode(jumpdir, explodepos);
 }
 
@@ -319,13 +319,13 @@ function mineexplode(explosiondir, explodepos) {
     }
     self playsound("wpn_betty_explo");
     self clientfield::set("sndRattle", 1);
-    wait(0.05);
+    wait 0.05;
     if (!isdefined(self) || !isdefined(self.owner)) {
         return;
     }
     self cylinderdamage(explosiondir * level.bettydamageheight, explodepos, level.bettydamageradius, level.bettydamageradius, level.bettydamagemax, level.bettydamagemin, self.owner, "MOD_EXPLOSIVE", self.weapon);
     self ghost();
-    wait(0.1);
+    wait 0.1;
     if (!isdefined(self) || !isdefined(self.owner)) {
         return;
     }

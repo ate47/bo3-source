@@ -134,7 +134,7 @@ function function_677ed44f(weapon) {
     self endon(#"disconnect");
     while (true) {
         target, attacker, damage, weapon, var_f3edfe76 = level waittill(#"es_strike");
-        wait(0.05);
+        wait 0.05;
         if (isdefined(target)) {
             if (target cybercom::function_8fd8f5b1("cybercom_es_strike")) {
                 continue;
@@ -147,7 +147,7 @@ function function_677ed44f(weapon) {
             self thread challenges::function_96ed590f("cybercom_uses_control");
             status = self function_1a9006bd("cybercom_es_strike", 1);
             upgraded = status == 2;
-            target notify(#"hash_f8c5dd60", weapon, attacker);
+            target notify(#"cybercom_action", weapon, attacker);
             target thread function_b4ff98a3(attacker, attacker, upgraded, var_f3edfe76);
             target thread function_dd1b6b0b(attacker, upgraded);
             if (isdefined(target.archetype) && target.archetype == "human") {
@@ -198,9 +198,9 @@ function function_c48e06e3(var_16502c0b) {
     self endon(#"hash_bc032f12");
     while (true) {
         target, attacker, damage, weapon, var_f3edfe76 = level waittill(#"es_strike");
-        wait(0.05);
+        wait 0.05;
         if (isdefined(target)) {
-            target notify(#"hash_f8c5dd60", weapon, attacker);
+            target notify(#"cybercom_action", weapon, attacker);
             upgraded = var_16502c0b == 2;
             target thread function_b4ff98a3(attacker, attacker, upgraded, var_f3edfe76);
             target thread function_dd1b6b0b(attacker, upgraded);
@@ -265,23 +265,23 @@ function function_b4ff98a3(attacker, source, upgraded, contactpoint, secondary) 
     }
     if (isdefined(self.archetype)) {
         switch (self.archetype) {
-        case 19:
+        case "human":
             self clientfield::set("arch_actor_char", 1);
             self thread function_71a4f1d5();
-        case 28:
-        case 32:
+        case "human_riotshield":
+        case "zombie":
             fx = level._effect["es_effect_human"];
             tag = "j_spine4";
             break;
-        case 29:
+        case "robot":
             fx = level._effect["es_effect_robot"];
             tag = "j_spine4";
             break;
-        case 31:
+        case "wasp":
             fx = level._effect["es_effect_wasp"];
             tag = "tag_body";
             break;
-        case 30:
+        case "warlord":
             fx = level._effect["es_effect_warlord"];
             tag = "j_spine4";
             break;
@@ -324,7 +324,7 @@ function function_b4ff98a3(attacker, source, upgraded, contactpoint, secondary) 
         if (!(isdefined(self.is_disabled) && self.is_disabled) && isalive(self)) {
             self thread namespace_528b4613::system_overload(attacker, undefined, undefined, 0);
         }
-        wait(2.5);
+        wait 2.5;
         if (isdefined(self)) {
             self ai::set_behavior_attribute("robot_lights", 2);
         }
@@ -347,7 +347,7 @@ function function_dd1b6b0b(player, upgraded) {
     if (!upgraded) {
         return;
     }
-    wait(0.05);
+    wait 0.05;
     var_5c31f5fb = getdvarint("scr_es_arc_range", 72);
     if (upgraded) {
         var_5c31f5fb = getdvarint("scr_es_upgraded_arc_range", -128);

@@ -167,7 +167,7 @@ function function_935679b0() {
             var_e274e0c3 = self.var_a3d40b8;
             self notify(#"hash_421672a9");
         }
-        wait(randomfloatrange(0.5, 1));
+        wait randomfloatrange(0.5, 1);
     }
 }
 
@@ -186,7 +186,7 @@ function function_f17c9ba1() {
         return;
     }
     self waittill(#"hash_421672a9");
-    wait(120);
+    wait 120;
     if (isdefined(self.var_88f45a31)) {
         array::add(self.var_88f45a31, var_a43542cc, 0);
     }

@@ -15,9 +15,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_786319bb;
+#namespace aquifer_util;
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 0, eflags: 0x2
 // Checksum 0xa2f97bb6, Offset: 0xd80
 // Size: 0x34
@@ -25,7 +25,7 @@ function autoexec function_2dc19561() {
     system::register("aquifer_util", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc30be9cf, Offset: 0xdc0
 // Size: 0xe4
@@ -39,18 +39,18 @@ function __init__() {
     thread function_8f62f317();
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0xeb7a95fd, Offset: 0xeb0
 // Size: 0x67c
 function init_clientfields() {
-    clientfield::register("toplayer", "play_body_loop", 1, 1, "int", &function_d00289ef, 0, 0);
+    clientfield::register("toplayer", "play_body_loop", 1, 1, "int", &play_body_loop, 0, 0);
     clientfield::register("toplayer", "player_snow_fx", 1, 1, "int", &function_e9ccaf60, 0, 0);
     clientfield::register("toplayer", "player_bubbles_fx", 1, 1, "int", &function_a0fd353d, 0, 0);
     clientfield::register("toplayer", "player_dust_fx", 1, 1, "int", &function_779fd2e3, 0, 0);
     clientfield::register("toplayer", "water_motes", 1, 1, "int", &function_5c9a971, 0, 0);
-    clientfield::register("toplayer", "frost_post_fx", 1, 1, "int", &function_d823aea7, 0, 0);
-    clientfield::register("toplayer", "splash_post_fx", 1, 1, "int", &function_90020e42, 0, 0);
+    clientfield::register("toplayer", "frost_post_fx", 1, 1, "int", &frost_post_fx, 0, 0);
+    clientfield::register("toplayer", "splash_post_fx", 1, 1, "int", &splash_post_fx, 0, 0);
     clientfield::register("toplayer", "highlight_ai", 1, 1, "int", &function_cd1f36a6, 0, 0);
     clientfield::register("actor", "robot_bubbles_fx", 1, 1, "int", &function_a57705db, 0, 0);
     clientfield::register("actor", "kane_bubbles_fx", 1, 1, "int", &function_a57705db, 0, 0);
@@ -69,7 +69,7 @@ function init_clientfields() {
     clientfield::register("world", "toggle_pbg_banks", 1, 1, "int", &function_5240a6bb, 0, 0);
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8157cc63, Offset: 0x1538
 // Size: 0x21a
@@ -111,7 +111,7 @@ function on_player_spawned(localclientnum) {
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x59f0ff7d, Offset: 0x1760
 // Size: 0x3c
@@ -120,7 +120,7 @@ function function_256950b0(localclientnum) {
     umbra_setminimumcontributionthreshold(localclientnum, 0);
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaf702099, Offset: 0x17a8
 // Size: 0x126
@@ -128,7 +128,7 @@ function function_8f62f317() {
     while (true) {
         level waittill(#"save_restore");
         while (getlocalplayers().size == 0) {
-            wait(0.016);
+            wait 0.016;
         }
         foreach (player in getlocalplayers()) {
             veh = getplayervehicle(player);
@@ -140,7 +140,7 @@ function function_8f62f317() {
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0x101c99ee, Offset: 0x18d8
 // Size: 0x76
@@ -155,7 +155,7 @@ function watch_player_death() {
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 5, eflags: 0x0
 // Checksum 0xabd13a8c, Offset: 0x1958
 // Size: 0x8c
@@ -172,11 +172,11 @@ function function_b69b9863(localclientnum, oldval, newval, bnewent, binitialsnap
     return true;
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x90376db4, Offset: 0x19f0
 // Size: 0x94
-function function_d00289ef(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function play_body_loop(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (binitialsnap) {
         return;
     }
@@ -184,7 +184,7 @@ function function_d00289ef(localclientnum, oldval, newval, bnewent, binitialsnap
     struct thread scene::play("cin_aqu_03_20_water_room_body_loop");
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6d6c7cd8, Offset: 0x1a90
 // Size: 0x12e
@@ -203,15 +203,15 @@ function function_cd1f36a6(localclientnum, oldval, newval, bnewent, binitialsnap
     }
     switch (newval) {
     case 0:
-        self thread namespace_68dfcbbe::function_5f9074e0(localclientnum);
+        self thread enemy_highlight::function_5f9074e0(localclientnum);
         break;
     case 1:
-        self thread namespace_68dfcbbe::function_a2489af5(localclientnum, "compassping_enemysatellite_diamond", 64, 1, 2, 1, "compassping_friendly");
+        self thread enemy_highlight::function_a2489af5(localclientnum, "compassping_enemysatellite_diamond", 64, 1, 2, 1, "compassping_friendly");
         break;
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1788d9d1, Offset: 0x1bc8
 // Size: 0xfc
@@ -234,7 +234,7 @@ function function_5c9a971(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2f6a810f, Offset: 0x1cd0
 // Size: 0x146
@@ -262,11 +262,11 @@ function function_779fd2e3(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x88805bdd, Offset: 0x1e20
 // Size: 0x7c
-function function_d823aea7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function frost_post_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self thread postfx::playpostfxbundle("pstfx_frost_loop");
         return;
@@ -274,11 +274,11 @@ function function_d823aea7(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread postfx::exitpostfxbundle();
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd0a80379, Offset: 0x1ea8
 // Size: 0x7c
-function function_90020e42(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function splash_post_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self thread postfx::playpostfxbundle("pstfx_water_t_out");
         return;
@@ -286,7 +286,7 @@ function function_90020e42(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread postfx::exitpostfxbundle();
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8efddaeb, Offset: 0x1f30
 // Size: 0x17e
@@ -316,7 +316,7 @@ function function_e9ccaf60(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2167820d, Offset: 0x20b8
 // Size: 0x146
@@ -344,7 +344,7 @@ function function_a0fd353d(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd2b22413, Offset: 0x2208
 // Size: 0x134
@@ -371,7 +371,7 @@ function function_a57705db(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x0
 // Checksum 0x41a167e, Offset: 0x2348
 // Size: 0xee
@@ -397,7 +397,7 @@ function function_48637c84(localclientnum, oldval, newval, bnewent, binitialsnap
 
 /#
 
-    // Namespace namespace_786319bb
+    // Namespace aquifer_util
     // Params 7, eflags: 0x0
     // Checksum 0xa601ec69, Offset: 0x2440
     // Size: 0x16e
@@ -413,21 +413,21 @@ function function_48637c84(localclientnum, oldval, newval, bnewent, binitialsnap
         }
         switch (newval) {
         case 0:
-            setsaveddvar("play_body_loop", 40);
-            setsaveddvar("play_body_loop", 50);
-            setsaveddvar("play_body_loop", 6000);
-            setsaveddvar("play_body_loop", 10000);
+            setsaveddvar("<dev string:x28>", 40);
+            setsaveddvar("<dev string:x49>", 50);
+            setsaveddvar("<dev string:x6a>", 6000);
+            setsaveddvar("<dev string:x88>", 10000);
             break;
         case 1:
-            setsaveddvar("play_body_loop", 50);
-            setsaveddvar("play_body_loop", -106);
+            setsaveddvar("<dev string:x28>", 50);
+            setsaveddvar("<dev string:x49>", -106);
             break;
         }
     }
 
 #/
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x7d5b6160, Offset: 0x25b8
 // Size: 0x144
@@ -436,18 +436,18 @@ function function_31d10546(localclientnum, oldval, newval, bnewent, binitialsnap
     self endon(#"hash_31d10546");
     local_player = getlocalplayer(localclientnum);
     for (player_vehicle = getplayervehicle(local_player); !isdefined(player_vehicle) && isdefined(local_player) && isalive(local_player); player_vehicle = getplayervehicle(local_player)) {
-        wait(0.05);
+        wait 0.05;
         if (isdefined(local_player)) {
         }
     }
     if (!isdefined(player_vehicle) || !isdefined(local_player) || self != player_vehicle) {
         return;
     }
-    local_player.var_d7bfa708 = newval;
+    local_player.vtol_damage_state = newval;
     local_player notify(#"hash_751c841");
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe2bbb9f4, Offset: 0x2708
 // Size: 0x286
@@ -458,7 +458,7 @@ function function_1f92134d(localclientnum, oldval, newval, bnewent, binitialsnap
     }
     switch (newval) {
     case 0:
-        self.var_3b4d6693 = 0;
+        self.dogfighting = 0;
         if (isdefined(player_vehicle) && player_vehicle == self) {
             playsound(localclientnum, "veh_bullshark_dogfight_exit");
             if (isdefined(self.var_163163d4)) {
@@ -475,7 +475,7 @@ function function_1f92134d(localclientnum, oldval, newval, bnewent, binitialsnap
         }
         break;
     case 1:
-        self.var_3b4d6693 = 1;
+        self.dogfighting = 1;
         if (isdefined(player_vehicle) && player_vehicle == self) {
             playsound(localclientnum, "veh_bullshark_dogfight_enter");
             self.var_163163d4 = self playloopsound("veh_bullshark_dogfight_maneuvers");
@@ -489,7 +489,7 @@ function function_1f92134d(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xadf67f29, Offset: 0x2998
 // Size: 0xb6
@@ -500,12 +500,12 @@ function function_ae9fc4ae(localclientnum, oldval, newval, bnewent, binitialsnap
         break;
     case 1:
         self flagsys::set("show_damage_stages");
-        self thread function_38f84ce8(localclientnum);
+        self thread vtol_show_damage_stages(localclientnum);
         break;
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x674d9f02, Offset: 0x2a58
 // Size: 0x13c
@@ -522,7 +522,7 @@ function function_4aa99a51(localclientnum, oldval, newval, bnewent, binitialsnap
     self setanim(anims[!newval], 0, 0, 1);
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1ae75320, Offset: 0x2ba0
 // Size: 0x1a4
@@ -544,7 +544,7 @@ function function_c289f3ee(localclientnum, oldval, newval, bnewent, binitialsnap
     self setanim(generic%v_aqu_vtol_engine_idle, 0, 0, 1);
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x0
 // Checksum 0x89b43415, Offset: 0x2d50
 // Size: 0x9c
@@ -561,7 +561,7 @@ function function_7c706c83(localclientnum, oldval, newval, bnewent, binitialsnap
     self.var_443f7e14 = newval;
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd80822ce, Offset: 0x2df8
 // Size: 0x444
@@ -570,7 +570,7 @@ function function_791c5d3e(localclientnum, oldval, newval, bnewent, binitialsnap
     self endon(#"hash_791c5d3e");
     local_player = getlocalplayer(localclientnum);
     for (player_vehicle = getplayervehicle(local_player); !isdefined(player_vehicle) && isdefined(local_player) && isalive(local_player); player_vehicle = getplayervehicle(local_player)) {
-        wait(0.05);
+        wait 0.05;
         if (isdefined(local_player)) {
         }
     }
@@ -604,7 +604,7 @@ function function_791c5d3e(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x28635bf9, Offset: 0x3248
 // Size: 0x244
@@ -613,7 +613,7 @@ function function_58e7b684(localclientnum, oldval, newval, bnewent, binitialsnap
     self endon(#"hash_58e7b684");
     local_player = getlocalplayer(localclientnum);
     for (player_vehicle = getplayervehicle(local_player); !isdefined(player_vehicle) && isdefined(local_player) && isalive(local_player); player_vehicle = getplayervehicle(local_player)) {
-        wait(0.05);
+        wait 0.05;
         if (isdefined(local_player)) {
         }
     }
@@ -635,7 +635,7 @@ function function_58e7b684(localclientnum, oldval, newval, bnewent, binitialsnap
     local_player.var_14351725 = newval;
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x834f1b46, Offset: 0x3498
 // Size: 0x134
@@ -644,7 +644,7 @@ function function_ec8280b9(localclientnum, oldval, newval, bnewent, binitialsnap
     self endon(#"hash_ec8280b9");
     local_player = getlocalplayer(localclientnum);
     for (player_vehicle = getplayervehicle(local_player); !isdefined(player_vehicle) && isdefined(local_player) && isalive(local_player); player_vehicle = getplayervehicle(local_player)) {
-        wait(0.05);
+        wait 0.05;
         if (isdefined(local_player)) {
         }
     }
@@ -654,7 +654,7 @@ function function_ec8280b9(localclientnum, oldval, newval, bnewent, binitialsnap
     local_player.var_b83262c7 = newval;
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3e3b061a, Offset: 0x35d8
 // Size: 0x23a
@@ -663,7 +663,7 @@ function function_51990240(localclientnum, oldval, newval, bnewent, binitialsnap
     self endon(#"hash_51990240");
     local_player = getlocalplayer(localclientnum);
     for (player_vehicle = getplayervehicle(local_player); !isdefined(player_vehicle) && isdefined(local_player) && isalive(local_player); player_vehicle = getplayervehicle(local_player)) {
-        wait(0.05);
+        wait 0.05;
         if (isdefined(local_player)) {
         }
     }
@@ -672,20 +672,20 @@ function function_51990240(localclientnum, oldval, newval, bnewent, binitialsnap
     }
     scale = 0.1;
     if (newval) {
-        while (isdefined(self) && isdefined(local_player) && !(isdefined(self.var_3b4d6693) && self.var_3b4d6693)) {
+        while (isdefined(self) && isdefined(local_player) && !(isdefined(self.dogfighting) && self.dogfighting)) {
             local_player earthquake(scale, 0.05, local_player.origin, 1000);
-            wait(0.05);
+            wait 0.05;
         }
         return;
     }
-    while (isdefined(self) && scale >= 0.01 && isdefined(local_player) && !(isdefined(self.var_3b4d6693) && self.var_3b4d6693)) {
+    while (isdefined(self) && scale >= 0.01 && isdefined(local_player) && !(isdefined(self.dogfighting) && self.dogfighting)) {
         local_player earthquake(scale, 0.05, local_player.origin, 1000);
-        wait(0.05);
+        wait 0.05;
         scale *= 0.99;
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe3feca1f, Offset: 0x3820
 // Size: 0xcc
@@ -702,7 +702,7 @@ function function_efde18b9(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread function_7946d98(localclientnum);
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6058bc5e, Offset: 0x38f8
 // Size: 0x218
@@ -727,11 +727,11 @@ function function_7946d98(localclientnum) {
                 self.var_594d1ec6 function_88a10e85(localclientnum, "wash", "dirt/fx_dust_rotorwash_vtol_loop", "tag_origin");
             }
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0xeda452a4, Offset: 0x3b18
 // Size: 0x394
@@ -764,7 +764,7 @@ function function_3b907fc(localclientnum) {
     self.var_58eaeac1 = var_535afdd7;
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc2520e6b, Offset: 0x3eb8
 // Size: 0x14c
@@ -780,13 +780,13 @@ function function_1a818d12(localclientnum) {
     if (isdefined(self)) {
         self function_3b907fc(localclientnum);
         setluimenudata(localclientnum, self.var_58eaeac1, "close_current_menu", 1);
-        wait(0.75);
+        wait 0.75;
         self function_3b907fc(localclientnum);
         closeluimenu(localclientnum, self.var_58eaeac1);
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x61b38aa1, Offset: 0x4010
 // Size: 0x114
@@ -804,11 +804,11 @@ function function_11381ece(localclientnum) {
             self.missile_target = undefined;
             self notify(#"hash_6c567715");
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb32ef818, Offset: 0x4130
 // Size: 0x464
@@ -835,7 +835,7 @@ function function_d2243c73(localclientnum) {
                 entpos = self.missile_target.origin;
             }
             self.missile_target.var_e7323f20 = project3dto2d(localclientnum, entpos);
-            wait(0.016);
+            wait 0.016;
         }
         if (!isdefined(self)) {
             return;
@@ -851,7 +851,7 @@ function function_d2243c73(localclientnum) {
             self function_3b907fc(localclientnum);
             setluimenudata(localclientnum, self.var_58eaeac1, "targetX", self.missile_target.var_e7323f20[0]);
             setluimenudata(localclientnum, self.var_58eaeac1, "targetY", self.missile_target.var_e7323f20[1]);
-            wait(0.016);
+            wait 0.016;
         }
         if (!isdefined(self)) {
             return;
@@ -863,7 +863,7 @@ function function_d2243c73(localclientnum) {
     setluimenudata(localclientnum, self.var_58eaeac1, "newTarget", 0);
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x55d07b42, Offset: 0x45a0
 // Size: 0xa30
@@ -884,7 +884,7 @@ function function_21e63f39(localclientnum) {
     while (isdefined(self) && isalive(self)) {
         self waittill(#"hash_6c567715");
         while (isdefined(self) && !(isdefined(self.var_b83262c7) && self.var_b83262c7)) {
-            wait(0.016);
+            wait 0.016;
         }
         while (isdefined(self) && isdefined(self.missile_target) && isalive(self.missile_target) && !self.missile_target ishidden()) {
             self function_3b907fc(localclientnum);
@@ -932,7 +932,7 @@ function function_21e63f39(localclientnum) {
                 setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetGreen", 1);
                 setluimenudata(localclientnum, self.var_58eaeac1, "missileLockTargetBlue", 1);
             }
-            wait(0.016);
+            wait 0.016;
         }
         if (!isdefined(self)) {
             return;
@@ -951,7 +951,7 @@ function function_21e63f39(localclientnum) {
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2b83ccdd, Offset: 0x4fd8
 // Size: 0xb2
@@ -967,7 +967,7 @@ function function_458ed430() {
     return array::randomize(var_50e4abf2);
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd1ad0251, Offset: 0x5098
 // Size: 0x410
@@ -976,7 +976,7 @@ function function_63bf76ee(localclientnum) {
     self endon(#"hash_63bf76ee");
     self endon(#"disconnect");
     var_7276535a = 2;
-    self.var_d7bfa708 = 0;
+    self.vtol_damage_state = 0;
     var_614619a5 = [];
     for (i = 0; i < var_7276535a; i++) {
         var_614619a5[i] = [];
@@ -987,10 +987,10 @@ function function_63bf76ee(localclientnum) {
     var_59fc256[var_59fc256.size] = 3;
     while (isdefined(self) && isdefined(self.vehicle)) {
         self waittill(#"hash_751c841");
-        if (!isdefined(self) || !isdefined(self.vehicle) || !isdefined(self.var_d7bfa708)) {
+        if (!isdefined(self) || !isdefined(self.vehicle) || !isdefined(self.vtol_damage_state)) {
             break;
         }
-        if (self.var_d7bfa708 == 0) {
+        if (self.vtol_damage_state == 0) {
             foreach (damage_state in var_614619a5) {
                 foreach (damage_fx in damage_state) {
                     killfx(localclientnum, damage_fx);
@@ -1000,9 +1000,9 @@ function function_63bf76ee(localclientnum) {
             var_50e4abf2 = function_458ed430();
             continue;
         }
-        index = self.var_d7bfa708 - 1;
+        index = self.vtol_damage_state - 1;
         damage_fx = "electric/fx_elec_vtol_dmg_runner";
-        if (self.var_d7bfa708 > 1) {
+        if (self.vtol_damage_state > 1) {
             damage_fx = "electric/fx_elec_vtol_dmg_runner";
         }
         for (i = 0; i < var_59fc256[index]; i++) {
@@ -1017,15 +1017,15 @@ function function_63bf76ee(localclientnum) {
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x506dcace, Offset: 0x54b0
 // Size: 0x28a
-function function_38f84ce8(localclientnum) {
-    if (isdefined(self.var_38f84ce8) && self.var_38f84ce8) {
+function vtol_show_damage_stages(localclientnum) {
+    if (isdefined(self.vtol_show_damage_stages) && self.vtol_show_damage_stages) {
         return;
     }
-    self.var_38f84ce8 = 1;
+    self.vtol_show_damage_stages = 1;
     damage_fx = [];
     var_b1e0b5bc = -1;
     ent = self;
@@ -1047,17 +1047,17 @@ function function_38f84ce8(localclientnum) {
                 break;
             }
         }
-        level waittill(#"hash_fb60a9dc");
+        level waittill(#"damage_stage_changed");
     }
     foreach (fx in damage_fx) {
         killfx(localclientnum, fx);
     }
     if (isdefined(self)) {
-        self.var_38f84ce8 = undefined;
+        self.vtol_show_damage_stages = undefined;
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4cf8d9fa, Offset: 0x5748
 // Size: 0xc0
@@ -1066,19 +1066,19 @@ function function_4c53e7bf(localclientnum) {
     while (isdefined(self) && isdefined(self.var_14351725) && isalive(self)) {
         if (self.var_14351725 > 0 && self.var_14351725 < 1) {
             self playsound(localclientnum, "veh_bullshark_missile_locking");
-            wait((1 - self.var_14351725) * 0.5);
+            wait (1 - self.var_14351725) * 0.5;
             continue;
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2b73a533, Offset: 0x5810
 // Size: 0xac
 function function_14bb5165(localclientnum) {
-    self.var_3b4d6693 = 0;
+    self.dogfighting = 0;
     self.var_dad0e5c1 = 1;
     self thread function_c0623e13(localclientnum);
     self useanimtree(#generic);
@@ -1086,7 +1086,7 @@ function function_14bb5165(localclientnum) {
     self setanim(generic%v_aqu_vtol_engine_idle, 1, 0, 1);
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf3792d7, Offset: 0x58c8
 // Size: 0x18
@@ -1094,7 +1094,7 @@ function function_d996daca(localclientnum) {
     self.var_dad0e5c1 = 1;
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x88242485, Offset: 0x58e8
 // Size: 0xf14
@@ -1118,7 +1118,7 @@ function function_c0623e13(localclientnum) {
         angle_diff = self.angles - var_594f1b7d;
         angle_diff = (angleclamp180(angle_diff[0]), angleclamp180(angle_diff[1]), angleclamp180(angle_diff[2]));
         var_d13d119c = angle_diff / 0.016;
-        if (self.var_3b4d6693) {
+        if (self.dogfighting) {
             if (var_2cdec570 != "off") {
                 self function_400e6e82(localclientnum, "vtol_hover_thrust");
                 var_2cdec570 = "off";
@@ -1223,7 +1223,7 @@ function function_c0623e13(localclientnum) {
         }
         var_594f1b7d = self.angles;
         var_48ca4678 = velocity;
-        wait(0.016);
+        wait 0.016;
     }
     if (isdefined(self)) {
         if (var_2cdec570 != "off") {
@@ -1258,7 +1258,7 @@ function function_c0623e13(localclientnum) {
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4a30e53, Offset: 0x6808
 // Size: 0x6ac
@@ -1308,7 +1308,7 @@ function function_5e259b76(localclientnum) {
             var_80cad4ec = "on";
         }
         var_80d8531 = var_f9fab1b1;
-        wait(0.016);
+        wait 0.016;
     }
     if (isdefined(self)) {
         if (var_a2c58ba3 != "off") {
@@ -1327,7 +1327,7 @@ function function_5e259b76(localclientnum) {
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 1, eflags: 0x0
 // Checksum 0x5ec62894, Offset: 0x6ec0
 // Size: 0x2c
@@ -1335,7 +1335,7 @@ function function_863ee84(vel) {
     return length(vel) / 17.6;
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 2, eflags: 0x1 linked
 // Checksum 0xab33cdf8, Offset: 0x6ef8
 // Size: 0x9c
@@ -1346,7 +1346,7 @@ function function_766878c8(localclientnum, str_type) {
     return false;
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 4, eflags: 0x1 linked
 // Checksum 0x433b498d, Offset: 0x6fa0
 // Size: 0x1d6
@@ -1377,7 +1377,7 @@ function function_835cb7d(localclientnum, str_type, str_fx, clear) {
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 3, eflags: 0x1 linked
 // Checksum 0x7d17e200, Offset: 0x7180
 // Size: 0x190
@@ -1396,7 +1396,7 @@ function function_400e6e82(localclientnum, str_type, var_91599cfb) {
     }
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 6, eflags: 0x1 linked
 // Checksum 0xf150cb8, Offset: 0x7318
 // Size: 0x13c
@@ -1419,7 +1419,7 @@ function function_88a10e85(localclientnum, str_type, str_fx, str_tag, var_cffd17
     self.var_62bb476b[localclientnum][str_type][str_fx][array_size] = n_fx_id;
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 8, eflags: 0x1 linked
 // Checksum 0xd4fb2ec3, Offset: 0x7460
 // Size: 0x1ac
@@ -1445,7 +1445,7 @@ function function_ea0e7704(localclientnum, str_type, str_fx, v_pos, v_forward, v
     self.var_62bb476b[localclientnum][str_type][str_fx][array_size] = n_fx_id;
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9e05c5, Offset: 0x7618
 // Size: 0x11c
@@ -1454,14 +1454,14 @@ function function_3e82b262() {
     smodelanimcmd("boss_tree", "pause", "unloop", "goto_start");
     smodelanimcmd("boss_hallucinate_glass", "pause", "unloop", "goto_start");
     smodelanimcmd("boss_room_glass", "pause", "unloop", "goto_start");
-    level waittill(#"hash_4fd5d268");
+    level waittill(#"start_boss_tree");
     smodelanimcmd("boss_tree", "unpause");
     smodelanimcmd("boss_hallucinate_glass", "unpause");
     level waittill(#"hash_e830ddcf");
     smodelanimcmd("boss_room_glass", "unpause");
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5a9c2ae5, Offset: 0x7740
 // Size: 0x5e
@@ -1473,7 +1473,7 @@ function function_af7432f(localclientnum, oldval, newval, bnewent, binitialsnap,
     self.var_dad0e5c1 = undefined;
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xede5de48, Offset: 0x77a8
 // Size: 0x84
@@ -1485,7 +1485,7 @@ function function_34474782(localclientnum, oldval, newval, bnewent, binitialsnap
     setworldfogactivebank(localclientnum, var_4780a11e);
 }
 
-// Namespace namespace_786319bb
+// Namespace aquifer_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc41761ea, Offset: 0x7838
 // Size: 0x84

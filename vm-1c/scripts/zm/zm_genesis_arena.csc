@@ -17,9 +17,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_f153ce01;
+#namespace zm_genesis_arena;
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 0, eflags: 0x2
 // Checksum 0xabac82cd, Offset: 0x878
 // Size: 0x34
@@ -27,34 +27,34 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_arena", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 0, eflags: 0x1 linked
 // Checksum 0x86409fd2, Offset: 0x8b8
 // Size: 0x7ac
 function __init__() {
     level.var_51541120 = [];
-    clientfield::register("world", "arena_state", 15000, getminbitcountfornum(5), "int", &function_6d54bbfc, 0, 0);
-    clientfield::register("world", "circle_state", 15000, getminbitcountfornum(6), "int", &function_82eec527, 0, 0);
+    clientfield::register("world", "arena_state", 15000, getminbitcountfornum(5), "int", &arena_state, 0, 0);
+    clientfield::register("world", "circle_state", 15000, getminbitcountfornum(6), "int", &circle_state, 0, 0);
     clientfield::register("world", "circle_challenge_identity", 15000, getminbitcountfornum(6), "int", undefined, 0, 0);
-    clientfield::register("world", "summoning_key_charge_state", 15000, getminbitcountfornum(4), "int", &function_27bc8ef9, 0, 1);
-    clientfield::register("toplayer", "fire_postfx_set", 15000, 1, "int", &function_2a4ba289, 0, 0);
-    clientfield::register("scriptmover", "fire_column", 15000, 1, "int", &function_12d2195a, 0, 0);
-    clientfield::register("scriptmover", "summoning_circle_fx", 15000, 1, "int", &function_fa762da4, 0, 0);
-    clientfield::register("toplayer", "darkness_postfx_set", 15000, 1, "int", &function_cca0826e, 0, 0);
-    clientfield::register("toplayer", "electricity_postfx_set", 15000, 1, "int", &function_25564e, 0, 0);
-    clientfield::register("world", "light_challenge_floor", 15000, 1, "int", &function_4906c6c6, 0, 0);
-    clientfield::register("actor", "arena_margwa_init", 15000, 1, "int", &function_9fdd5be3, 0, 0);
-    clientfield::register("scriptmover", "arena_tornado", 15000, 1, "int", &function_646dab34, 0, 0);
-    clientfield::register("scriptmover", "arena_shadow_pillar", 15000, 1, "int", &function_1a0568f8, 0, 0);
-    clientfield::register("scriptmover", "elec_wall_tell", 15000, 1, "counter", &function_15141049, 0, 0);
-    clientfield::register("world", "summoning_key_pickup", 15000, getminbitcountfornum(3), "int", &function_cdca4773, 0, 0);
-    clientfield::register("world", "arena_timeout_warning", 15000, 1, "int", &function_60eb7d3f, 0, 0);
-    clientfield::register("world", "basin_state_0", 15000, getminbitcountfornum(5), "int", &function_2af6ffb, 0, 1);
-    clientfield::register("world", "basin_state_1", 15000, getminbitcountfornum(5), "int", &function_dcacf592, 0, 1);
-    clientfield::register("world", "basin_state_2", 15000, getminbitcountfornum(5), "int", &function_b6aa7b29, 0, 1);
-    clientfield::register("world", "basin_state_3", 15000, getminbitcountfornum(5), "int", &function_90a800c0, 0, 1);
-    clientfield::register("scriptmover", "runeprison_rock_fx", 5000, 1, "int", &function_63be352d, 0, 0);
-    clientfield::register("scriptmover", "runeprison_explode_fx", 5000, 1, "int", &function_409bb06f, 0, 0);
+    clientfield::register("world", "summoning_key_charge_state", 15000, getminbitcountfornum(4), "int", &summoning_key_charge_state, 0, 1);
+    clientfield::register("toplayer", "fire_postfx_set", 15000, 1, "int", &fire_postfx_set, 0, 0);
+    clientfield::register("scriptmover", "fire_column", 15000, 1, "int", &fire_column, 0, 0);
+    clientfield::register("scriptmover", "summoning_circle_fx", 15000, 1, "int", &summoning_circle_fx, 0, 0);
+    clientfield::register("toplayer", "darkness_postfx_set", 15000, 1, "int", &darkness_postfx_set, 0, 0);
+    clientfield::register("toplayer", "electricity_postfx_set", 15000, 1, "int", &electricity_postfx_set, 0, 0);
+    clientfield::register("world", "light_challenge_floor", 15000, 1, "int", &light_challenge_floor, 0, 0);
+    clientfield::register("actor", "arena_margwa_init", 15000, 1, "int", &arena_margwa_init, 0, 0);
+    clientfield::register("scriptmover", "arena_tornado", 15000, 1, "int", &arena_tornado, 0, 0);
+    clientfield::register("scriptmover", "arena_shadow_pillar", 15000, 1, "int", &arena_shadow_pillar, 0, 0);
+    clientfield::register("scriptmover", "elec_wall_tell", 15000, 1, "counter", &elec_wall_tell, 0, 0);
+    clientfield::register("world", "summoning_key_pickup", 15000, getminbitcountfornum(3), "int", &summoning_key_pickup, 0, 0);
+    clientfield::register("world", "arena_timeout_warning", 15000, 1, "int", &arena_timeout_warning, 0, 0);
+    clientfield::register("world", "basin_state_0", 15000, getminbitcountfornum(5), "int", &basin_state_0, 0, 1);
+    clientfield::register("world", "basin_state_1", 15000, getminbitcountfornum(5), "int", &basin_state_1, 0, 1);
+    clientfield::register("world", "basin_state_2", 15000, getminbitcountfornum(5), "int", &basin_state_2, 0, 1);
+    clientfield::register("world", "basin_state_3", 15000, getminbitcountfornum(5), "int", &basin_state_3, 0, 1);
+    clientfield::register("scriptmover", "runeprison_rock_fx", 5000, 1, "int", &runeprison_rock_fx, 0, 0);
+    clientfield::register("scriptmover", "runeprison_explode_fx", 5000, 1, "int", &runeprison_explode_fx, 0, 0);
     var_29441edd = struct::get_array("powerup_visual", "targetname");
     foreach (var_f05dfe32 in var_29441edd) {
         var_f05dfe32.var_90369c89 = [];
@@ -62,11 +62,11 @@ function __init__() {
     clientfield::register("toplayer", "powerup_visual_marker", 15000, 2, "int", &function_b9c422c3, 0, 1);
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa9179433, Offset: 0x1070
 // Size: 0x124
-function function_27bc8ef9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function summoning_key_charge_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_244d3483(localclientnum);
     level.var_530ae70[localclientnum] util::waittill_dobj(localclientnum);
     if (isdefined(level.var_530ae70[localclientnum].var_1397ba8a)) {
@@ -75,11 +75,11 @@ function function_27bc8ef9(localclientnum, oldval, newval, bnewent, binitialsnap
     level.var_530ae70[localclientnum].var_1397ba8a = playfxontag(localclientnum, level._effect["summoning_key_charge_" + newval + 1], level.var_530ae70[localclientnum], "key_root_jnt");
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd00ef7da, Offset: 0x11a0
 // Size: 0x12a
-function function_60eb7d3f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function arena_timeout_warning(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     a_players = getplayers(localclientnum);
     foreach (player in a_players) {
         if (newval > 0) {
@@ -87,15 +87,15 @@ function function_60eb7d3f(localclientnum, oldval, newval, bnewent, binitialsnap
         } else {
             var_946b7723 = 0;
         }
-        player thread namespace_cb655c88::function_f118a0e7(localclientnum, oldval, var_946b7723, bnewent, binitialsnap, fieldname, bwastimejump);
+        player thread zm_genesis_util::player_rumble_and_shake(localclientnum, oldval, var_946b7723, bnewent, binitialsnap, fieldname, bwastimejump);
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4e2c699c, Offset: 0x12d8
 // Size: 0x12c
-function function_15141049(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function elec_wall_tell(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self util::waittill_dobj(localclientnum);
     if (!isdefined(self)) {
         return;
@@ -103,7 +103,7 @@ function function_15141049(localclientnum, oldval, newval, bnewent, binitialsnap
     if (newval) {
         playfxontag(localclientnum, level._effect["elec_wall_tell"], self, "tag_origin");
         v_origin = self.origin;
-        wait(0.25);
+        wait 0.25;
         if (isdefined(self)) {
             fx = playfx(localclientnum, level._effect["elec_wall_arc"], v_origin, anglestoforward(self.angles));
             self waittill(#"entityshutdown");
@@ -112,11 +112,11 @@ function function_15141049(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8e5c403e, Offset: 0x1410
 // Size: 0x176
-function function_63be352d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function runeprison_rock_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     switch (newval) {
     case 0:
         self.var_f8ac8c8b animation::play("p7_fxanim_zm_bow_rune_prison_02_anim");
@@ -136,7 +136,7 @@ function function_63be352d(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdbda4f78, Offset: 0x1590
 // Size: 0x118
@@ -154,53 +154,53 @@ function function_79854312(localclientnum) {
             n_shader_value = mapfloat(n_start_time, n_end_time, 1, 0, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector0", n_shader_value, 0, 0);
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3973cc21, Offset: 0x16b0
 // Size: 0x7c
-function function_409bb06f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function runeprison_explode_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         playfx(localclientnum, level._effect["rune_fire_eruption"], self.origin, (0, 0, 1), (1, 0, 0));
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x21e9d9f7, Offset: 0x1738
 // Size: 0x5c
-function function_2af6ffb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function basin_state_0(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_bb70f55a(localclientnum, newval, 0);
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbf945907, Offset: 0x17a0
 // Size: 0x5c
-function function_dcacf592(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function basin_state_1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_bb70f55a(localclientnum, newval, 1);
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x86561420, Offset: 0x1808
 // Size: 0x5c
-function function_b6aa7b29(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function basin_state_2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_bb70f55a(localclientnum, newval, 2);
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbadf53eb, Offset: 0x1870
 // Size: 0x5c
-function function_90a800c0(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function basin_state_3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_bb70f55a(localclientnum, newval, 3);
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 3, eflags: 0x1 linked
 // Checksum 0xad58c89c, Offset: 0x18d8
 // Size: 0xaee
@@ -313,7 +313,7 @@ function function_bb70f55a(localclientnum, newval, var_549b41ba) {
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x0
 // Checksum 0xaf37010c, Offset: 0x23d0
 // Size: 0x116
@@ -332,11 +332,11 @@ function function_4c31bb81(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x93a36279, Offset: 0x24f0
 // Size: 0xb4
-function function_fa762da4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function summoning_circle_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self.var_63082da9 = playfx(localclientnum, level._effect["summoning_circle_fx"], self.origin, self.angles);
         return;
@@ -346,13 +346,13 @@ function function_fa762da4(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x40e29b38, Offset: 0x25b0
 // Size: 0x466
-function function_cdca4773(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    level notify(#"hash_cdca4773");
-    level endon(#"hash_cdca4773");
+function summoning_key_pickup(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+    level notify(#"summoning_key_pickup");
+    level endon(#"summoning_key_pickup");
     function_244d3483(localclientnum);
     level.var_530ae70[localclientnum] util::waittill_dobj(localclientnum);
     var_1f5092c = struct::get("arena_reward_pickup", "targetname");
@@ -393,13 +393,13 @@ function function_cdca4773(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x372afd03, Offset: 0x2a20
 // Size: 0xca
-function function_6d54bbfc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    level notify(#"hash_6d54bbfc");
-    level endon(#"hash_6d54bbfc");
+function arena_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+    level notify(#"arena_state");
+    level endon(#"arena_state");
     if (!isdefined(level.var_b175da10)) {
         function_8fbd23f4(localclientnum);
     }
@@ -417,24 +417,24 @@ function function_6d54bbfc(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x93cccae4, Offset: 0x2af8
 // Size: 0x20e
-function function_82eec527(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    level notify(#"hash_82eec527");
-    level endon(#"hash_82eec527");
+function circle_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+    level notify(#"circle_state");
+    level endon(#"circle_state");
     n_challenge_index = clientfield::get("circle_challenge_identity");
     switch (newval) {
     case 0:
         if (n_challenge_index == 0) {
-            level thread function_e6fd161a(localclientnum, 0);
+            level thread player_screen_fx(localclientnum, 0);
             level thread function_df81c23d(localclientnum, 0);
         }
         break;
     case 1:
         if (n_challenge_index == 0) {
-            level thread function_e6fd161a(localclientnum, 0);
+            level thread player_screen_fx(localclientnum, 0);
             level thread function_df81c23d(localclientnum, 0);
         }
         break;
@@ -442,26 +442,26 @@ function function_82eec527(localclientnum, oldval, newval, bnewent, binitialsnap
         break;
     case 3:
         if (n_challenge_index == 0) {
-            level thread function_e6fd161a(localclientnum, 1);
+            level thread player_screen_fx(localclientnum, 1);
             level thread function_df81c23d(localclientnum, 1);
         }
         break;
     case 4:
         if (n_challenge_index == 0) {
-            level thread function_e6fd161a(localclientnum, 0);
+            level thread player_screen_fx(localclientnum, 0);
             level thread function_df81c23d(localclientnum, 0);
         }
         break;
     case 5:
         if (n_challenge_index == 0) {
-            level thread function_e6fd161a(localclientnum, 0);
+            level thread player_screen_fx(localclientnum, 0);
             level thread function_df81c23d(localclientnum, 0);
         }
         break;
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 1, eflags: 0x1 linked
 // Checksum 0x60312c7d, Offset: 0x2d10
 // Size: 0x24
@@ -469,7 +469,7 @@ function function_8fbd23f4(localclientnum) {
     level.var_b175da10 = spawnstruct();
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd53e48e7, Offset: 0x2d40
 // Size: 0x19c
@@ -489,7 +489,7 @@ function function_244d3483(localclientnum) {
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 3, eflags: 0x0
 // Checksum 0x554d3560, Offset: 0x2ee8
 // Size: 0xb0
@@ -503,7 +503,7 @@ function function_a8a110ed(localclientnum, s_location, v_angle_offset) {
     return var_244bacb5;
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 1, eflags: 0x0
 // Checksum 0x33419f08, Offset: 0x2fa0
 // Size: 0x94
@@ -516,7 +516,7 @@ function function_3d5c3a74(var_9494ad2f) {
     self moveto(s_summoning_key.origin + v_offset, 3);
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 0, eflags: 0x0
 // Checksum 0xa4d77e9c, Offset: 0x3040
 // Size: 0x11e
@@ -528,14 +528,14 @@ function function_17ef53cd() {
     while (true) {
         self.mdl_light moveto(v_origin + (0, 0, 4), n_duration);
         self.var_4100f709 moveto(v_origin + (0, 0, 4), n_duration);
-        wait(n_duration);
+        wait n_duration;
         self.mdl_light moveto(v_origin, n_duration);
         self.var_4100f709 moveto(v_origin, n_duration);
-        wait(n_duration);
+        wait n_duration;
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 1, eflags: 0x0
 // Checksum 0xbb058083, Offset: 0x3168
 // Size: 0x56
@@ -545,7 +545,7 @@ function function_5ce8eb7d(n_height) {
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 1, eflags: 0x1 linked
 // Checksum 0x1b08a6a4, Offset: 0x31c8
 // Size: 0x1de
@@ -570,7 +570,7 @@ function function_fad1f25a(n_height) {
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 1, eflags: 0x0
 // Checksum 0x7327a660, Offset: 0x33b0
 // Size: 0x4e
@@ -580,7 +580,7 @@ function function_99a05235(b_on) {
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 2, eflags: 0x1 linked
 // Checksum 0xcb4859e1, Offset: 0x3408
 // Size: 0xc4
@@ -594,7 +594,7 @@ function function_7277f824(n_index, b_on) {
     level.var_8962a8a0[n_index].var_4100f709 show();
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 2, eflags: 0x0
 // Checksum 0xd8e85edc, Offset: 0x34d8
 // Size: 0x32e
@@ -627,7 +627,7 @@ function function_3de943fb(state, e_model) {
         for (pitch = 0.5; true; pitch += 0.05) {
             setsoundpitch(looper, pitch);
             setsoundpitchrate(looper, 0.1);
-            wait(1);
+            wait 1;
         }
         break;
     case 4:
@@ -640,7 +640,7 @@ function function_3de943fb(state, e_model) {
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 2, eflags: 0x0
 // Checksum 0x276aa2ea, Offset: 0x3810
 // Size: 0x4ce
@@ -673,7 +673,7 @@ function function_2bcc6bd2(state, e_model) {
         for (pitch = 0.5; true; pitch += 0.05) {
             setsoundpitch(looper, pitch);
             setsoundpitchrate(looper, 0.1);
-            wait(1);
+            wait 1;
         }
         break;
     case 3:
@@ -686,7 +686,7 @@ function function_2bcc6bd2(state, e_model) {
         for (pitch = 0.5; true; pitch += 0.05) {
             setsoundpitch(looper, pitch);
             setsoundpitchrate(looper, 0.1);
-            wait(1);
+            wait 1;
         }
         break;
     case 4:
@@ -706,7 +706,7 @@ function function_2bcc6bd2(state, e_model) {
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x64f401c8, Offset: 0x3ce8
 // Size: 0x1ce
@@ -726,19 +726,19 @@ function function_b9c422c3(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x469db4b7, Offset: 0x3ec0
 // Size: 0x54
-function function_9fdd5be3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function arena_margwa_init(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self.var_12c4e9d2 = level._effect["arena_margwa_spawn"];
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc8265b11, Offset: 0x3f20
 // Size: 0x7c
-function function_25564e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function electricity_postfx_set(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self thread postfx::playpostfxbundle("pstfx_shock_charge");
         return;
@@ -746,11 +746,11 @@ function function_25564e(localclientnum, oldval, newval, bnewent, binitialsnap, 
     self thread postfx::exitpostfxbundle();
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x893202b, Offset: 0x3fa8
 // Size: 0x7c
-function function_cca0826e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function darkness_postfx_set(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self thread postfx::playpostfxbundle("pstfx_gen_chal_shadow");
         return;
@@ -758,11 +758,11 @@ function function_cca0826e(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread postfx::exitpostfxbundle();
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x46dc7963, Offset: 0x4030
 // Size: 0x7c
-function function_2a4ba289(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function fire_postfx_set(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self thread postfx::playpostfxbundle("pstfx_burn_loop");
         return;
@@ -770,11 +770,11 @@ function function_2a4ba289(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread postfx::exitpostfxbundle();
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x91814dc1, Offset: 0x40b8
 // Size: 0xbe
-function function_12d2195a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function fire_column(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self.var_7dec59b4 = playfx(localclientnum, level._effect["fire_column"], self.origin + (0, 0, -90), (0, -1, 0));
         return;
@@ -783,11 +783,11 @@ function function_12d2195a(localclientnum, oldval, newval, bnewent, binitialsnap
     self.var_7dec59b4 = undefined;
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 2, eflags: 0x1 linked
 // Checksum 0xbb9d48bb, Offset: 0x4180
 // Size: 0xd4
-function function_e6fd161a(localclientnum, newval) {
+function player_screen_fx(localclientnum, newval) {
     if (newval == 1) {
         if (isdefined(level.var_51541120[localclientnum])) {
             deletefx(localclientnum, level.var_51541120[localclientnum], 1);
@@ -800,7 +800,7 @@ function function_e6fd161a(localclientnum, newval) {
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc65774aa, Offset: 0x4260
 // Size: 0xa4
@@ -814,11 +814,11 @@ function function_df81c23d(localclientnum, newval) {
     level.localplayers[0] thread postfx::exitpostfxbundle();
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x18559008, Offset: 0x4310
 // Size: 0xe4
-function function_4906c6c6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function light_challenge_floor(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         var_377bdd93 = struct::get("arena_light_challenge_floor", "targetname");
         level.var_be73cf11 = util::spawn_model(localclientnum, var_377bdd93.model, var_377bdd93.origin, var_377bdd93.angles);
@@ -829,11 +829,11 @@ function function_4906c6c6(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2c40c50c, Offset: 0x4400
 // Size: 0xac
-function function_646dab34(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function arena_tornado(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self.var_247afb5a = playfxontag(localclientnum, level._effect["arena_tornado"], self, "tag_origin");
         return;
@@ -843,11 +843,11 @@ function function_646dab34(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_f153ce01
+// Namespace zm_genesis_arena
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1a0a0ec1, Offset: 0x44b8
 // Size: 0xac
-function function_1a0568f8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function arena_shadow_pillar(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self.var_e29992ef = playfxontag(localclientnum, level._effect["arena_shadow_pillar"], self, "tag_origin");
         return;

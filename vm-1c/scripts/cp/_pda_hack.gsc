@@ -5,9 +5,9 @@
 #using scripts/shared/system_shared;
 #using scripts/cp/_util;
 
-#namespace namespace_4cb2c123;
+#namespace _pda_hack;
 
-// Namespace namespace_4cb2c123
+// Namespace _pda_hack
 // Method(s) 14 Total 14
 class class_d86d3a6 {
 
@@ -50,9 +50,9 @@ class class_d86d3a6 {
     // Checksum 0x6f1c2cfe, Offset: 0xde8
     // Size: 0x168
     function function_4336408f(v_origin, n_radius, n_height, str_hint) {
-        assert(isdefined(v_origin), "<unknown string>");
-        assert(isdefined(n_radius), "<unknown string>");
-        assert(isdefined(n_height), "<unknown string>");
+        assert(isdefined(v_origin), "<dev string:xb4>");
+        assert(isdefined(n_radius), "<dev string:xe2>");
+        assert(isdefined(n_height), "<dev string:x110>");
         e_trigger = spawn("trigger_radius", v_origin, 0, n_radius, n_height);
         e_trigger triggerignoreteam();
         e_trigger setvisibletoall();
@@ -136,7 +136,7 @@ class class_d86d3a6 {
             level.primaryprogressbarwidth = 120;
             level.var_f0aa5b7d = 280;
             e_triggerer function_e1c61785(self.var_a2d77bbb);
-            wait(0.8);
+            wait 0.8;
             n_start_time = 0;
             var_319ed91d = self.var_63f3839a;
             if (self.var_724f1b05) {
@@ -156,7 +156,7 @@ class class_d86d3a6 {
                     self.var_3ac7294a = e_triggerer hud::createprimaryprogressbar();
                     self.var_3ac7294a thread function_62faa634(var_319ed91d);
                 }
-                wait(0.05);
+                wait 0.05;
                 var_98d5021b = distance2dsquared(e_triggerer.origin, self.var_a2d77bbb.origin);
                 var_af239af9 = e_triggerer util::is_player_looking_at(self.var_a2d77bbb.origin, 0.75, 0);
             }
@@ -175,7 +175,7 @@ class class_d86d3a6 {
                 self thread [[ self.var_69e7c65d ]](e_triggerer);
             }
             while (e_triggerer usebuttonpressed()) {
-                wait(0.1);
+                wait 0.1;
             }
         }
     }
@@ -252,7 +252,7 @@ class class_d86d3a6 {
     // Checksum 0xdf0f4703, Offset: 0x278
     // Size: 0x194
     function function_808cd5de(v_origin, str_hint_string, v_angles, var_a65e7c1a, var_5152e048) {
-        assert(isdefined(v_origin), "<unknown string>");
+        assert(isdefined(v_origin), "<dev string:x28>");
         if (!isdefined(v_angles)) {
             v_angles = (0, 0, 0);
         }
@@ -264,7 +264,7 @@ class class_d86d3a6 {
         self.var_c7295a83 = spawn("script_model", v_origin);
         self.var_c7295a83 setmodel("");
         self.var_c7295a83 notsolid();
-        assert(!self.var_f6ed93ab, "<unknown string>");
+        assert(!self.var_f6ed93ab, "<dev string:x63>");
         self.var_f6ed93ab = 1;
         enable_hacking();
         self thread function_341b7c41();
@@ -272,7 +272,7 @@ class class_d86d3a6 {
 
 }
 
-// Namespace namespace_4cb2c123
+// Namespace _pda_hack
 // Params 0, eflags: 0x2
 // Checksum 0x2df759d0, Offset: 0x180
 // Size: 0x34
@@ -280,7 +280,7 @@ function autoexec function_2dc19561() {
     system::register("pda_hack", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_4cb2c123
+// Namespace _pda_hack
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1c0
 // Size: 0x4

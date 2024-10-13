@@ -132,13 +132,13 @@ function default_vending_precaching() {
 // Size: 0x9c
 function do_initial_power_off_callback(machine_array, perkname) {
     if (!isdefined(level.machine_assets[perkname])) {
-        println("target");
+        println("<dev string:x28>");
         return;
     }
     if (!isdefined(level.machine_assets[perkname].power_off_callback)) {
         return;
     }
-    wait(0.05);
+    wait 0.05;
     array::thread_all(machine_array, level.machine_assets[perkname].power_off_callback);
 }
 
@@ -216,7 +216,7 @@ function perk_fx(fx, turnofffx) {
         }
         return;
     }
-    wait(3);
+    wait 3;
     if (!isdefined(self)) {
         return;
     }
@@ -240,7 +240,7 @@ function perk_fx(fx, turnofffx) {
 // Size: 0x1fa
 function electric_perks_dialog() {
     self endon(#"death");
-    wait(0.01);
+    wait 0.01;
     level flag::wait_till("start_zombie_round_logic");
     players = getplayers();
     if (players.size == 1) {
@@ -250,7 +250,7 @@ function electric_perks_dialog() {
     level endon(#"switch_flipped");
     timer = 0;
     while (true) {
-        wait(0.5);
+        wait 0.5;
         players = getplayers();
         for (i = 0; i < players.size; i++) {
             if (!isdefined(players[i])) {
@@ -262,7 +262,7 @@ function electric_perks_dialog() {
                 continue;
             }
             if (dist < 4900 && timer < 3) {
-                wait(0.5);
+                wait 0.5;
                 timer++;
             }
             if (dist < 4900 && timer == 3) {
@@ -270,10 +270,10 @@ function electric_perks_dialog() {
                     continue;
                 }
                 players[i] thread zm_utility::do_player_vo("vox_start", 5);
-                wait(3);
+                wait 3;
                 self notify(#"warning_dialog");
                 /#
-                    iprintlnbold("target");
+                    iprintlnbold("<dev string:x87>");
                 #/
             }
         }
@@ -331,7 +331,7 @@ function vending_trigger_can_player_use(player) {
 // Size: 0x800
 function vending_trigger_think() {
     self endon(#"death");
-    wait(0.01);
+    wait 0.01;
     perk = self.script_noteworthy;
     var_b93a49d8 = 0;
     start_on = 0;
@@ -391,13 +391,13 @@ function vending_trigger_think() {
         player = self waittill(#"trigger");
         index = zm_utility::get_player_index(player);
         if (!vending_trigger_can_player_use(player)) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (player hasperk(perk) || player has_perk_paused(perk)) {
             cheat = 0;
             /#
-                if (getdvarint("target") >= 5) {
+                if (getdvarint("<dev string:x95>") >= 5) {
                     cheat = 1;
                 }
             #/
@@ -472,7 +472,7 @@ function vending_trigger_post_think(player, perk) {
     }
     player.perk_purchased = undefined;
     if (!(isdefined(self.power_on) && self.power_on)) {
-        wait(1);
+        wait 1;
         perk_pause(self.script_noteworthy);
     }
 }
@@ -521,7 +521,7 @@ function give_perk_presentation(perk) {
         self util::delay(1.5, undefined, &zm_audio::create_and_play_dialog, "perk", perk);
     }
     self setblur(9, 0.1);
-    wait(0.1);
+    wait 0.1;
     self setblur(0, 0.1);
 }
 
@@ -570,13 +570,13 @@ function give_perk(perk, bought) {
 function function_78f42790(str_perk, var_f8fab6db, var_b64a6b1b) {
     var_74f58142 = undefined;
     switch (str_perk) {
-    case 40:
+    case "specialty_armorvest":
         if (var_f8fab6db) {
             self.var_7012456c = self.maxhealth;
         }
         var_74f58142 = self.maxhealth + level.zombie_vars["zombie_perk_juggernaut_health"];
         break;
-    case 43:
+    case "jugg_upgrade":
         if (var_f8fab6db) {
             self.var_7012456c = self.maxhealth;
         }
@@ -586,7 +586,7 @@ function function_78f42790(str_perk, var_f8fab6db, var_b64a6b1b) {
             var_74f58142 = level.zombie_vars["player_base_health"];
         }
         break;
-    case 42:
+    case "health_reboot":
         var_74f58142 = level.zombie_vars["player_base_health"];
         if (isdefined(self.var_5feb5a44)) {
             var_74f58142 += self.var_5feb5a44;
@@ -617,7 +617,7 @@ function function_78f42790(str_perk, var_f8fab6db, var_b64a6b1b) {
 function check_player_has_perk(perk) {
     self endon(#"death");
     /#
-        if (getdvarint("target") >= 5) {
+        if (getdvarint("<dev string:x95>") >= 5) {
             return;
         }
     #/
@@ -633,7 +633,7 @@ function check_player_has_perk(perk) {
                 self setinvisibletoplayer(players[i], 1);
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -643,7 +643,7 @@ function check_player_has_perk(perk) {
 // Size: 0x2a
 function vending_set_hintstring(perk) {
     switch (perk) {
-    case 40:
+    case "specialty_armorvest":
         break;
     }
 }
@@ -655,7 +655,7 @@ function vending_set_hintstring(perk) {
 function perk_think(perk) {
     self endon(#"disconnect");
     /#
-        if (getdvarint("target") >= 5) {
+        if (getdvarint("<dev string:x95>") >= 5) {
             if (isdefined(self.var_df099d9b[perk])) {
                 return;
             }
@@ -688,7 +688,7 @@ function perk_think(perk) {
     if (isdefined(self.perks_active) && isinarray(self.perks_active, perk)) {
         arrayremovevalue(self.perks_active, perk, 0);
     }
-    self notify(#"hash_3d708932");
+    self notify(#"perk_lost");
 }
 
 // Namespace zm_perks
@@ -785,7 +785,7 @@ function perk_abort_drinking(post_delay) {
         self zm_utility::decrement_is_drinking();
         self zm_utility::enable_player_move_states();
         if (isdefined(post_delay)) {
-            wait(post_delay);
+            wait post_delay;
         }
     }
 }
@@ -922,7 +922,7 @@ function perk_pause(perk) {
             if (isdefined(level._custom_perks[perk]) && isdefined(level._custom_perks[perk].player_thread_take)) {
                 player thread [[ level._custom_perks[perk].player_thread_take ]](1);
             }
-            println("target" + player.name + "target" + perk + "target");
+            println("<dev string:xa2>" + player.name + "<dev string:xad>" + perk + "<dev string:xbb>");
         }
     }
 }
@@ -944,7 +944,7 @@ function perk_unpause(perk) {
             player.var_46793f8f[perk] = 0;
             player set_perk_clientfield(perk, 1);
             player setperk(perk);
-            println("target" + player.name + "target" + perk + "target");
+            println("<dev string:xa2>" + player.name + "<dev string:xbd>" + perk + "<dev string:xbb>");
             player function_78f42790(perk, 0, 0);
             if (isdefined(level._custom_perks[perk]) && isdefined(level._custom_perks[perk].player_thread_give)) {
                 player thread [[ level._custom_perks[perk].player_thread_give ]]();
@@ -1220,7 +1220,7 @@ function thread_bump_trigger() {
         trigplayer = self waittill(#"trigger");
         trigplayer playsound(self.script_sound);
         while (zm_utility::is_player_valid(trigplayer) && trigplayer istouching(self)) {
-            wait(0.5);
+            wait 0.5;
         }
     }
 }
@@ -1315,7 +1315,7 @@ function check_for_change() {
             zm_utility::play_sound_at_pos("purchase", player.origin);
             break;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -1362,11 +1362,11 @@ function register_revive_success_perk_func(revive_func) {
 // Checksum 0xd1bbc6ea, Offset: 0x5628
 // Size: 0x1a8
 function register_perk_basic_info(str_perk, str_alias, n_perk_cost, str_hint_string, w_perk_bottle_weapon) {
-    assert(isdefined(str_perk), "target");
-    assert(isdefined(str_alias), "target");
-    assert(isdefined(n_perk_cost), "target");
-    assert(isdefined(str_hint_string), "target");
-    assert(isdefined(w_perk_bottle_weapon), "target");
+    assert(isdefined(str_perk), "<dev string:xcd>");
+    assert(isdefined(str_alias), "<dev string:x10b>");
+    assert(isdefined(n_perk_cost), "<dev string:x14a>");
+    assert(isdefined(str_hint_string), "<dev string:x18b>");
+    assert(isdefined(w_perk_bottle_weapon), "<dev string:x1d0>");
     _register_undefined_perk(str_perk);
     level._custom_perks[str_perk].alias = str_alias;
     level._custom_perks[str_perk].hash_id = hashstring(str_alias);
@@ -1380,8 +1380,8 @@ function register_perk_basic_info(str_perk, str_alias, n_perk_cost, str_hint_str
 // Checksum 0x6fdda2e5, Offset: 0x57d8
 // Size: 0x100
 function register_perk_machine(str_perk, func_perk_machine_setup, func_perk_machine_thread) {
-    assert(isdefined(str_perk), "target");
-    assert(isdefined(func_perk_machine_setup), "target");
+    assert(isdefined(str_perk), "<dev string:x21a>");
+    assert(isdefined(func_perk_machine_setup), "<dev string:x255>");
     _register_undefined_perk(str_perk);
     if (!isdefined(level._custom_perks[str_perk].perk_machine_set_kvps)) {
         level._custom_perks[str_perk].perk_machine_set_kvps = func_perk_machine_setup;
@@ -1396,8 +1396,8 @@ function register_perk_machine(str_perk, func_perk_machine_setup, func_perk_mach
 // Checksum 0x4c26a367, Offset: 0x58e0
 // Size: 0xc0
 function register_perk_machine_power_override(str_perk, func_perk_machine_power_override) {
-    assert(isdefined(str_perk), "target");
-    assert(isdefined(func_perk_machine_power_override), "target");
+    assert(isdefined(str_perk), "<dev string:x29f>");
+    assert(isdefined(func_perk_machine_power_override), "<dev string:x2e9>");
     _register_undefined_perk(str_perk);
     if (!isdefined(level._custom_perks[str_perk].perk_machine_power_override_thread) && isdefined(func_perk_machine_power_override)) {
         level._custom_perks[str_perk].perk_machine_power_override_thread = func_perk_machine_power_override;
@@ -1409,8 +1409,8 @@ function register_perk_machine_power_override(str_perk, func_perk_machine_power_
 // Checksum 0x9f7294c5, Offset: 0x59a8
 // Size: 0xb4
 function register_perk_precache_func(str_perk, func_precache) {
-    assert(isdefined(str_perk), "target");
-    assert(isdefined(func_precache), "target");
+    assert(isdefined(str_perk), "<dev string:x34b>");
+    assert(isdefined(func_precache), "<dev string:x38c>");
     _register_undefined_perk(str_perk);
     if (!isdefined(level._custom_perks[str_perk].precache_func)) {
         level._custom_perks[str_perk].precache_func = func_precache;
@@ -1422,8 +1422,8 @@ function register_perk_precache_func(str_perk, func_precache) {
 // Checksum 0x81ba92ce, Offset: 0x5a68
 // Size: 0x100
 function register_perk_threads(str_perk, func_give_player_perk, func_take_player_perk) {
-    assert(isdefined(str_perk), "target");
-    assert(isdefined(func_give_player_perk), "target");
+    assert(isdefined(str_perk), "<dev string:x3d2>");
+    assert(isdefined(func_give_player_perk), "<dev string:x40d>");
     _register_undefined_perk(str_perk);
     if (!isdefined(level._custom_perks[str_perk].player_thread_give)) {
         level._custom_perks[str_perk].player_thread_give = func_give_player_perk;
@@ -1440,9 +1440,9 @@ function register_perk_threads(str_perk, func_give_player_perk, func_take_player
 // Checksum 0xa4e28c8b, Offset: 0x5b70
 // Size: 0x11c
 function register_perk_clientfields(str_perk, func_clientfield_register, func_clientfield_set) {
-    assert(isdefined(str_perk), "target");
-    assert(isdefined(func_clientfield_register), "target");
-    assert(isdefined(func_clientfield_set), "target");
+    assert(isdefined(str_perk), "<dev string:x455>");
+    assert(isdefined(func_clientfield_register), "<dev string:x495>");
+    assert(isdefined(func_clientfield_set), "<dev string:x4e6>");
     _register_undefined_perk(str_perk);
     if (!isdefined(level._custom_perks[str_perk].clientfield_register)) {
         level._custom_perks[str_perk].clientfield_register = func_clientfield_register;
@@ -1457,9 +1457,9 @@ function register_perk_clientfields(str_perk, func_clientfield_register, func_cl
 // Checksum 0xfe9d97ac, Offset: 0x5c98
 // Size: 0x11c
 function register_perk_host_migration_params(str_perk, str_radiant_name, str_effect_name) {
-    assert(isdefined(str_perk), "target");
-    assert(isdefined(str_radiant_name), "target");
-    assert(isdefined(str_effect_name), "target");
+    assert(isdefined(str_perk), "<dev string:x532>");
+    assert(isdefined(str_radiant_name), "<dev string:x57b>");
+    assert(isdefined(str_effect_name), "<dev string:x5cc>");
     _register_undefined_perk(str_perk);
     if (!isdefined(level._custom_perks[str_perk].var_cc657044)) {
         level._custom_perks[str_perk].radiant_machine_name = str_radiant_name;
@@ -1487,7 +1487,7 @@ function _register_undefined_perk(str_perk) {
 // Checksum 0x3d65efe7, Offset: 0x5e28
 // Size: 0x6c
 function register_perk_damage_override_func(func_damage_override) {
-    assert(isdefined(func_damage_override), "target");
+    assert(isdefined(func_damage_override), "<dev string:x61c>");
     if (!isdefined(level.perk_damage_override)) {
         level.perk_damage_override = [];
     }

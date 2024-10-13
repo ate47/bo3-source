@@ -17,9 +17,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_b361ecc3;
+#namespace zm_zod_beastcode;
 
-// Namespace namespace_b361ecc3
+// Namespace zm_zod_beastcode
 // Method(s) 25 Total 25
 class class_b43ec356 {
 
@@ -72,7 +72,7 @@ class class_b43ec356 {
     // Size: 0x3b8
     function function_d081c849(player) {
         self endon(#"kill_trigger");
-        player endon(#"hash_3f7b661c");
+        player endon(#"death_or_disconnect");
         str_hint = %;
         var_b7b6d234 = %;
         var_3d791fac = [[ self.stub.var_7aae7803 ]]->function_113a1256();
@@ -123,7 +123,7 @@ class class_b43ec356 {
                     self sethintstring(self.stub.hint_string);
                 }
             }
-            wait(0.1);
+            wait 0.1;
         }
     }
 
@@ -158,7 +158,7 @@ class class_b43ec356 {
                     player.var_ab153665 settext("You sense the number " + n_number);
                     player.var_ab153665 hud::showelem();
                 }
-                wait(0.05);
+                wait 0.05;
                 if (isdefined(player.var_ab153665)) {
                     player.var_ab153665 hud::destroyelem();
                     player.var_ab153665 = undefined;
@@ -222,7 +222,7 @@ class class_b43ec356 {
         playsoundatposition("zmb_zod_sword_symbol_wrong", (2624, -5104, -312));
         if (self.var_71f130fa > 0) {
             function_5b0296e8(1);
-            wait(3);
+            wait 3;
             function_5b0296e8(0);
             self.var_116811f0 = 1;
             return;
@@ -420,7 +420,7 @@ class class_b43ec356 {
 
 }
 
-// Namespace namespace_b361ecc3
+// Namespace zm_zod_beastcode
 // Params 0, eflags: 0x2
 // Checksum 0xf5ac61d0, Offset: 0x438
 // Size: 0x34
@@ -428,7 +428,7 @@ function autoexec function_2dc19561() {
     system::register("zm_zod_beastcode", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_b361ecc3
+// Namespace zm_zod_beastcode
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x478
 // Size: 0x4
@@ -436,7 +436,7 @@ function __init__() {
     
 }
 
-// Namespace namespace_b361ecc3
+// Namespace zm_zod_beastcode
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf86350c0, Offset: 0x488
 // Size: 0x200
@@ -461,7 +461,7 @@ function init() {
     [[ level.var_ca7eab3b ]]->function_110d42fa(var_f90df519);
 }
 
-// Namespace namespace_b361ecc3
+// Namespace zm_zod_beastcode
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa3b990ef, Offset: 0x690
 // Size: 0x24

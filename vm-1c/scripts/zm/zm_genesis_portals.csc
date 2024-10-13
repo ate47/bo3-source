@@ -17,9 +17,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_766d6099;
+#namespace zm_genesis_portals;
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 0, eflags: 0x2
 // Checksum 0x146ec814, Offset: 0x568
 // Size: 0x34
@@ -27,15 +27,15 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_portals", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 0, eflags: 0x1 linked
 // Checksum 0x970e7e6f, Offset: 0x5a8
 // Size: 0x464
 function __init__() {
     visionset_mgr::register_overlay_info_style_transported("zm_zod", 15000, 15, 2);
     clientfield::register("toplayer", "player_stargate_fx", 15000, 1, "int", &player_stargate_fx, 0, 0);
-    clientfield::register("toplayer", "player_light_exploder", 15000, 4, "int", &function_c4b73c11, 0, 0);
-    clientfield::register("world", "genesis_light_exposure", 15000, 1, "int", &function_d4327374, 0, 0);
+    clientfield::register("toplayer", "player_light_exploder", 15000, 4, "int", &player_light_exploder, 0, 0);
+    clientfield::register("world", "genesis_light_exposure", 15000, 1, "int", &genesis_light_exposure, 0, 0);
     clientfield::register("world", "power_pad_sheffield", 15000, 1, "int", &function_7e1ae25a, 0, 0);
     clientfield::register("world", "power_pad_prison", 15000, 1, "int", &function_7e1ae25a, 0, 0);
     clientfield::register("world", "power_pad_asylum", 15000, 1, "int", &function_7e1ae25a, 0, 0);
@@ -50,7 +50,7 @@ function __init__() {
     clientfield::register("toplayer", "hint_prison_portal_bottom", 15000, 1, "int", &function_44c843d5, 0, 0);
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5b09edd, Offset: 0xa18
 // Size: 0xde
@@ -65,10 +65,10 @@ function player_stargate_fx(localclientnum, oldval, newval, bnewent, binitialsna
         self thread postfx::playpostfxbundle("pstfx_zm_wormhole");
         return;
     }
-    self notify(#"hash_ee477153");
+    self notify(#"player_portal_complete");
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5924945f, Offset: 0xb00
 // Size: 0x4c
@@ -77,11 +77,11 @@ function function_e7a8756e(localclientnum) {
     self postfx::exitpostfxbundle();
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 7, eflags: 0x1 linked
 // Checksum 0x90f4ca8c, Offset: 0xb58
 // Size: 0x1de
-function function_c4b73c11(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function player_light_exploder(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     switch (newval) {
     case 1:
         exploder::exploder("lgt_island_underside_sheff", localclientnum);
@@ -116,11 +116,11 @@ function function_c4b73c11(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 7, eflags: 0x1 linked
 // Checksum 0x146146c6, Offset: 0xd40
 // Size: 0xb4
-function function_d4327374(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function genesis_light_exposure(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         setpbgactivebank(localclientnum, 2);
         setexposureactivebank(localclientnum, 2);
@@ -130,7 +130,7 @@ function function_d4327374(localclientnum, oldval, newval, bnewent, binitialsnap
     setexposureactivebank(localclientnum, 1);
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 7, eflags: 0x1 linked
 // Checksum 0x25b6ec63, Offset: 0xe00
 // Size: 0x7c
@@ -142,22 +142,22 @@ function function_44c843d5(localclientnum, oldval, newval, bnewent, binitialsnap
     clearstreamerrequest(localclientnum);
 }
 
-// Namespace namespace_766d6099
+// Namespace zm_genesis_portals
 // Params 7, eflags: 0x1 linked
 // Checksum 0xdc270e20, Offset: 0xe88
 // Size: 0x262
 function function_7e1ae25a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     switch (fieldname) {
-    case 9:
+    case "power_pad_prison":
         var_2cedcd81 = array("fxexp_220", "fxexp_222", "fxexp_223", "lgt_power_prison");
         break;
-    case 8:
+    case "power_pad_sheffield":
         var_2cedcd81 = array("fxexp_210", "fxexp_212", "fxexp_213", "lgt_power_sheffield");
         break;
-    case 11:
+    case "power_pad_temple":
         var_2cedcd81 = array("fxexp_240", "fxexp_242", "fxexp_243", "lgt_power_temple");
         break;
-    case 10:
+    case "power_pad_asylum":
         var_2cedcd81 = array("fxexp_230", "fxexp_232", "fxexp_233", "lgt_power_asylum");
         break;
     }

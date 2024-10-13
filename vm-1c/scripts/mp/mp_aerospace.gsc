@@ -6,9 +6,9 @@
 #using scripts/shared/compass;
 #using scripts/codescripts/struct;
 
-#namespace namespace_228a7338;
+#namespace mp_aerospace;
 
-// Namespace namespace_228a7338
+// Namespace mp_aerospace
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf55a6857, Offset: 0x1e8
 // Size: 0xc04
@@ -21,8 +21,8 @@ function main() {
     level.uav_z_offset = 4500;
     level.var_657b4cf2 = 10;
     level.var_e8668efc = 11;
-    namespace_32af6759::main();
-    namespace_8a2f364c::main();
+    mp_aerospace_fx::main();
+    mp_aerospace_sound::main();
     load::main();
     compass::setupminimap("compass_map_mp_aerospace");
     setdvar("compassmaxrange", "2100");
@@ -69,7 +69,7 @@ function main() {
     level.cleandepositpoints = array((-1218.64, -2.68421, -127.875), (-212.3, 1109, 0.125), (-615.996, -1818.27, 0.125), (743.387, -2.99098, -55.875));
 }
 
-// Namespace namespace_228a7338
+// Namespace mp_aerospace
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xdf8
 // Size: 0x4

@@ -3,9 +3,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_136a0c13;
+#namespace zm_cosmodrome_magic_box;
 
-// Namespace namespace_136a0c13
+// Namespace zm_cosmodrome_magic_box
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb4e22bc9, Offset: 0x220
 // Size: 0xe4
@@ -19,7 +19,7 @@ function function_2a476331() {
     setdvar("zombiemode_path_minz_bias", 28);
 }
 
-// Namespace namespace_136a0c13
+// Namespace zm_cosmodrome_magic_box
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa18d0f9a, Offset: 0x310
 // Size: 0xb4
@@ -32,15 +32,15 @@ function get_location_from_chest_index(chest_index) {
             }
         }
     }
-    assertmsg("chest2" + chest_index);
+    assertmsg("<dev string:x28>" + chest_index);
 }
 
-// Namespace namespace_136a0c13
+// Namespace zm_cosmodrome_magic_box
 // Params 0, eflags: 0x1 linked
 // Checksum 0x26ee666, Offset: 0x3d0
 // Size: 0x2c4
 function magic_box_update() {
-    wait(2);
+    wait 2;
     util::setclientsysstate("box_indicator", level.var_89cc7a20);
     box_mode = "no_power";
     while (true) {
@@ -52,33 +52,33 @@ function magic_box_update() {
             box_mode = "box_available";
         }
         switch (box_mode) {
-        case 12:
+        case "no_power":
             util::setclientsysstate("box_indicator", level.var_89cc7a20);
             while (!level flag::get("power_on") && level.zombie_vars["zombie_powerup_fire_sale_on"] == 0) {
-                wait(0.1);
+                wait 0.1;
             }
             break;
-        case 16:
+        case "fire_sale":
             util::setclientsysstate("box_indicator", level.var_8f49e1f3);
             while (level.zombie_vars["zombie_powerup_fire_sale_on"] == 1) {
-                wait(0.1);
+                wait 0.1;
             }
             break;
-        case 17:
+        case "box_available":
             util::setclientsysstate("box_indicator", get_location_from_chest_index(level.chest_index));
             while (!level flag::get("moving_chest_now") && level.zombie_vars["zombie_powerup_fire_sale_on"] == 0 && !level flag::get("launch_activated")) {
-                wait(0.1);
+                wait 0.1;
             }
             break;
         default:
             util::setclientsysstate("box_indicator", level.var_89cc7a20);
             break;
         }
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_136a0c13
+// Namespace zm_cosmodrome_magic_box
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5d5a895c, Offset: 0x6a0
 // Size: 0x15c

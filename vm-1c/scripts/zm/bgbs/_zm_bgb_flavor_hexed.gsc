@@ -11,9 +11,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_3ecfcb30;
+#namespace zm_bgb_flavor_hexed;
 
-// Namespace namespace_3ecfcb30
+// Namespace zm_bgb_flavor_hexed
 // Params 0, eflags: 0x2
 // Checksum 0xd8bfb07, Offset: 0x240
 // Size: 0x34
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_flavor_hexed", &__init__, undefined, "bgb");
 }
 
-// Namespace namespace_3ecfcb30
+// Namespace zm_bgb_flavor_hexed
 // Params 0, eflags: 0x1 linked
 // Checksum 0x85b9d166, Offset: 0x280
 // Size: 0x54
@@ -32,7 +32,7 @@ function __init__() {
     bgb::register("zm_bgb_flavor_hexed", "event", &event, undefined, undefined, undefined);
 }
 
-// Namespace namespace_3ecfcb30
+// Namespace zm_bgb_flavor_hexed
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1c0336dd, Offset: 0x2e0
 // Size: 0x1c4
@@ -53,24 +53,24 @@ function event() {
             }
         }
     }
-    assert(self.var_c3a5a8.size, "<unknown string>");
+    assert(self.var_c3a5a8.size, "<dev string:x28>");
     var_50f0f8bb = array::random(self.var_c3a5a8);
     self thread function_9a45adfb(var_50f0f8bb);
 }
 
-// Namespace namespace_3ecfcb30
+// Namespace zm_bgb_flavor_hexed
 // Params 1, eflags: 0x1 linked
 // Checksum 0x82b521a0, Offset: 0x4b0
 // Size: 0x84
 function function_9a45adfb(var_50f0f8bb) {
-    wait(1);
+    wait 1;
     self thread function_655e0571(var_50f0f8bb);
     self playsoundtoplayer("zmb_bgb_flavorhex", self);
     self thread bgb::give(var_50f0f8bb);
     arrayremovevalue(self.var_c3a5a8, var_50f0f8bb);
 }
 
-// Namespace namespace_3ecfcb30
+// Namespace zm_bgb_flavor_hexed
 // Params 1, eflags: 0x1 linked
 // Checksum 0x218d34aa, Offset: 0x540
 // Size: 0x104
@@ -89,7 +89,7 @@ function function_655e0571(var_50f0f8bb) {
     }
 }
 
-// Namespace namespace_3ecfcb30
+// Namespace zm_bgb_flavor_hexed
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8ed1a3ad, Offset: 0x650
 // Size: 0x48

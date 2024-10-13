@@ -2,9 +2,9 @@
 #using scripts/shared/system_shared;
 #using scripts/shared/ai_shared;
 
-#namespace namespace_d2ddc550;
+#namespace _zm_ai_monkey;
 
-// Namespace namespace_d2ddc550
+// Namespace _zm_ai_monkey
 // Params 0, eflags: 0x2
 // Checksum 0x1aff4f1b, Offset: 0x130
 // Size: 0x34
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
     system::register("monkey", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_d2ddc550
+// Namespace _zm_ai_monkey
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf6fe3408, Offset: 0x170
 // Size: 0x8e
@@ -22,7 +22,7 @@ function __init__() {
     level._effect["monkey_eye_glow"] = "dlc5/zmhd/fx_zmb_monkey_eyes";
 }
 
-// Namespace namespace_d2ddc550
+// Namespace _zm_ai_monkey
 // Params 1, eflags: 0x5 linked
 // Checksum 0x19f02544, Offset: 0x208
 // Size: 0x24
@@ -30,7 +30,7 @@ function private function_70fb871f(localclientnum) {
     self function_ec8b2835(1);
 }
 
-// Namespace namespace_d2ddc550
+// Namespace _zm_ai_monkey
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2d016d55, Offset: 0x238
 // Size: 0x158

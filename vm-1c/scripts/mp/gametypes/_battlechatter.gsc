@@ -95,7 +95,7 @@ function __init__() {
 // Checksum 0x7aa0497c, Offset: 0x17c8
 // Size: 0x3c
 function pick_boost_number() {
-    wait(5);
+    wait 5;
     level clientfield::set("boost_number", randomint(4));
 }
 
@@ -235,10 +235,10 @@ function water_vox() {
     while (true) {
         interval = mpdialog_value("underwaterInterval", 0.05);
         if (interval <= 0) {
-            assert(interval > 0, "threatRpg");
+            assert(interval > 0, "<dev string:x28>");
             return;
         }
-        wait(interval);
+        wait interval;
         if (util::isprophuntgametype() && self util::isprop()) {
             continue;
         }
@@ -436,7 +436,7 @@ function say_kill_battle_chatter(attacker, weapon, victim, inflictor) {
                 attacker.speedburstkill = 1;
             }
         }
-    } else if (isdefined(attacker.var_9b8eaff2) && (attacker namespace_411f3e3f::function_6b246a0f() || attacker.var_9b8eaff2 + mpdialog_value("camoKillTime", 0) * 1000 >= gettime())) {
+    } else if (isdefined(attacker.var_9b8eaff2) && (attacker _gadget_camo::function_6b246a0f() || attacker.var_9b8eaff2 + mpdialog_value("camoKillTime", 0) * 1000 >= gettime())) {
         if (!(isdefined(attacker.playedgadgetsuccess) && attacker.playedgadgetsuccess)) {
             attacker thread play_gadget_success(getweapon("gadget_camo"), "enemyKillDelay", victim);
         }
@@ -505,14 +505,14 @@ function missile_tracking() {
 function incoming_projectile_alert(thrower, projectile, dialogkey, waittime) {
     level endon(#"game_ended");
     if (waittime <= 0) {
-        assert(waittime > 0, "threatRpg");
+        assert(waittime > 0, "<dev string:x6e>");
         return;
     }
     if (util::isprophuntgametype()) {
         return;
     }
     while (true) {
-        wait(waittime);
+        wait waittime;
         if (waittime > 0.2) {
             waittime /= 2;
         }
@@ -576,9 +576,9 @@ function function_98b960de() {
         }
         allies[allies.size] = player;
     }
-    wait(mpdialog_value("enemyKillDelay", 0) + 0.1);
+    wait mpdialog_value("enemyKillDelay", 0) + 0.1;
     while (self.playingdialog) {
-        wait(0.5);
+        wait 0.5;
     }
     allies = arraysort(allies, self.origin);
     foreach (player in allies) {
@@ -607,7 +607,7 @@ function play_promotion_reaction() {
     if (util::isprophuntgametype() && self util::isprop()) {
         return;
     }
-    wait(9);
+    wait 9;
     players = self get_friendly_players();
     players = arraysort(players, self.origin);
     selfdialog = self getmpdialogname();
@@ -661,21 +661,21 @@ function get_death_vox(weapon, meansofdeath) {
     }
     if (isdefined(meansofdeath)) {
         switch (meansofdeath) {
-        case 106:
+        case "MOD_BURNED":
             return "exertDeathBurned";
-        case 65:
+        case "MOD_DROWN":
             return "exertDeathDrowned";
         }
     }
     if (isdefined(weapon) && meansofdeath !== "MOD_MELEE_WEAPON_BUTT") {
         switch (weapon.rootweapon.name) {
-        case 110:
-        case 111:
-        case 114:
+        case "hatchet":
+        case "hero_armblade":
+        case "knife_loadout":
             return "exertDeathStabbed";
-        case 112:
+        case "hero_firefly_swarm":
             return "exertDeathBurned";
-        case 113:
+        case "hero_lightninggun_arc":
             return "exertDeathElectrocuted";
         }
     }
@@ -704,7 +704,7 @@ function wait_play_dialog(waittime, dialogkey, dialogflags, dialogbuffer, enemy,
         if (isdefined(endnotify)) {
             self endon(endnotify);
         }
-        wait(waittime);
+        wait waittime;
     }
     self thread play_dialog(dialogkey, dialogflags, dialogbuffer, enemy);
 }
@@ -740,7 +740,7 @@ function play_dialog(dialogkey, dialogflags, dialogbuffer, enemy) {
             return;
         }
         self stopsounds();
-        wait(0.05);
+        wait 0.05;
     }
     if (dialogflags & 32) {
         self.playinggadgetreadydialog = 1;
@@ -779,7 +779,7 @@ function wait_dialog_buffer(dialogbuffer) {
     level endon(#"game_ended");
     self.playingdialog = 1;
     if (isdefined(dialogbuffer) && dialogbuffer > 0) {
-        wait(dialogbuffer);
+        wait dialogbuffer;
     }
     self.playingdialog = 0;
     self.playinggadgetreadydialog = 0;
@@ -870,63 +870,63 @@ function play_gadget_ready(weapon, userflip) {
     }
     dialogkey = undefined;
     switch (weapon.name) {
-    case 150:
+    case "hero_gravityspikes":
         dialogkey = "gravspikesWeaponReady";
         break;
-    case 141:
+    case "gadget_speed_burst":
         dialogkey = "overdriveAbilityReady";
         break;
-    case 144:
-    case 145:
-    case 146:
-    case 147:
+    case "hero_bowlauncher":
+    case "hero_bowlauncher2":
+    case "hero_bowlauncher3":
+    case "hero_bowlauncher4":
         dialogkey = "sparrowWeaponReady";
         break;
-    case 142:
+    case "gadget_vision_pulse":
         dialogkey = "visionpulseAbilityReady";
         break;
-    case 151:
-    case 113:
+    case "hero_lightninggun":
+    case "hero_lightninggun_arc":
         dialogkey = "tempestWeaponReady";
         break;
-    case 138:
+    case "gadget_flashback":
         dialogkey = "glitchAbilityReady";
         break;
-    case 154:
+    case "hero_pineapplegun":
         dialogkey = "warmachineWeaponREady";
         break;
-    case 135:
+    case "gadget_armor":
         dialogkey = "kineticArmorAbilityReady";
         break;
-    case 143:
+    case "hero_annihilator":
         dialogkey = "annihilatorWeaponReady";
         break;
-    case 137:
+    case "gadget_combat_efficiency":
         dialogkey = "combatfocusAbilityReady";
         break;
-    case 148:
+    case "hero_chemicalgelgun":
         dialogkey = "hiveWeaponReady";
         break;
-    case 140:
+    case "gadget_resurrect":
         dialogkey = "rejackAbilityReady";
         break;
-    case 152:
-    case 153:
+    case "hero_minigun":
+    case "hero_minigun_body3":
         dialogkey = "scytheWeaponReady";
         break;
-    case 136:
+    case "gadget_clone":
         dialogkey = "psychosisAbilityReady";
         break;
-    case 111:
+    case "hero_armblade":
         dialogkey = "ripperWeaponReady";
         break;
-    case 89:
+    case "gadget_camo":
         dialogkey = "activeCamoAbilityReady";
         break;
-    case 149:
+    case "hero_flamethrower":
         dialogkey = "purifierWeaponReady";
         break;
-    case 139:
+    case "gadget_heat_wave":
         dialogkey = "heatwaveAbilityReady";
         break;
     default:
@@ -994,65 +994,65 @@ function play_gadget_activate(weapon) {
     }
     dialogkey = undefined;
     switch (weapon.name) {
-    case 150:
+    case "hero_gravityspikes":
         dialogkey = "gravspikesWeaponUse";
         dialogflags = 22;
         dialogbuffer = 0.05;
         break;
-    case 141:
+    case "gadget_speed_burst":
         dialogkey = "overdriveAbilityUse";
         break;
-    case 144:
-    case 145:
-    case 146:
-    case 147:
+    case "hero_bowlauncher":
+    case "hero_bowlauncher2":
+    case "hero_bowlauncher3":
+    case "hero_bowlauncher4":
         dialogkey = "sparrowWeaponUse";
         break;
-    case 142:
+    case "gadget_vision_pulse":
         dialogkey = "visionpulseAbilityUse";
         break;
-    case 151:
-    case 113:
+    case "hero_lightninggun":
+    case "hero_lightninggun_arc":
         dialogkey = "tempestWeaponUse";
         break;
-    case 138:
+    case "gadget_flashback":
         dialogkey = "glitchAbilityUse";
         break;
-    case 154:
+    case "hero_pineapplegun":
         dialogkey = "warmachineWeaponUse";
         break;
-    case 135:
+    case "gadget_armor":
         dialogkey = "kineticArmorAbilityUse";
         break;
-    case 143:
+    case "hero_annihilator":
         dialogkey = "annihilatorWeaponUse";
         break;
-    case 137:
+    case "gadget_combat_efficiency":
         dialogkey = "combatfocusAbilityUse";
         break;
-    case 148:
+    case "hero_chemicalgelgun":
         dialogkey = "hiveWeaponUse";
         break;
-    case 140:
+    case "gadget_resurrect":
         dialogkey = "rejackAbilityUse";
         break;
-    case 152:
-    case 153:
+    case "hero_minigun":
+    case "hero_minigun_body3":
         dialogkey = "scytheWeaponUse";
         break;
-    case 136:
+    case "gadget_clone":
         dialogkey = "psychosisAbilityUse";
         break;
-    case 111:
+    case "hero_armblade":
         dialogkey = "ripperWeaponUse";
         break;
-    case 89:
+    case "gadget_camo":
         dialogkey = "activeCamoAbilityUse";
         break;
-    case 149:
+    case "hero_flamethrower":
         dialogkey = "purifierWeaponUse";
         break;
-    case 139:
+    case "gadget_heat_wave":
         dialogkey = "heatwaveAbilityUse";
         break;
     default:
@@ -1071,63 +1071,63 @@ function play_gadget_success(weapon, waitkey, victim) {
     }
     dialogkey = undefined;
     switch (weapon.name) {
-    case 150:
+    case "hero_gravityspikes":
         dialogkey = "gravspikesWeaponSuccess";
         break;
-    case 141:
+    case "gadget_speed_burst":
         dialogkey = "overdriveAbilitySuccess";
         break;
-    case 144:
-    case 145:
-    case 146:
-    case 147:
+    case "hero_bowlauncher":
+    case "hero_bowlauncher2":
+    case "hero_bowlauncher3":
+    case "hero_bowlauncher4":
         dialogkey = "sparrowWeaponSuccess";
         break;
-    case 142:
+    case "gadget_vision_pulse":
         dialogkey = "visionpulseAbilitySuccess";
         break;
-    case 151:
-    case 113:
+    case "hero_lightninggun":
+    case "hero_lightninggun_arc":
         dialogkey = "tempestWeaponSuccess";
         break;
-    case 138:
+    case "gadget_flashback":
         dialogkey = "glitchAbilitySuccess";
         break;
-    case 154:
+    case "hero_pineapplegun":
         dialogkey = "warmachineWeaponSuccess";
         break;
-    case 135:
+    case "gadget_armor":
         dialogkey = "kineticArmorAbilitySuccess";
         break;
-    case 143:
+    case "hero_annihilator":
         dialogkey = "annihilatorWeaponSuccess";
         break;
-    case 137:
+    case "gadget_combat_efficiency":
         dialogkey = "combatfocusAbilitySuccess";
         break;
-    case 148:
+    case "hero_chemicalgelgun":
         dialogkey = "hiveWeaponSuccess";
         break;
-    case 140:
+    case "gadget_resurrect":
         dialogkey = "rejackAbilitySuccess";
         break;
-    case 152:
-    case 153:
+    case "hero_minigun":
+    case "hero_minigun_body3":
         dialogkey = "scytheWeaponSuccess";
         break;
-    case 136:
+    case "gadget_clone":
         dialogkey = "psychosisAbilitySuccess";
         break;
-    case 111:
+    case "hero_armblade":
         dialogkey = "ripperWeaponSuccess";
         break;
-    case 89:
+    case "gadget_camo":
         dialogkey = "activeCamoAbilitySuccess";
         break;
-    case 149:
+    case "hero_flamethrower":
         dialogkey = "purifierWeaponSuccess";
         break;
-    case 139:
+    case "gadget_heat_wave":
         dialogkey = "heatwaveAbilitySuccess";
         break;
     default:
@@ -1314,58 +1314,58 @@ function game_end_vox(winner) {
     // Checksum 0x58db8a52, Offset: 0x5618
     // Size: 0x380
     function devgui_think() {
-        setdvar("threatRpg", "threatRpg");
-        setdvar("threatRpg", "threatRpg");
-        setdvar("threatRpg", "threatRpg");
-        setdvar("threatRpg", "threatRpg");
+        setdvar("<dev string:xa8>", "<dev string:xb8>");
+        setdvar("<dev string:xb9>", "<dev string:xca>");
+        setdvar("<dev string:xe5>", "<dev string:xf6>");
+        setdvar("<dev string:x110>", "<dev string:x124>");
         while (true) {
-            wait(1);
+            wait 1;
             player = util::gethostplayer();
             if (!isdefined(player)) {
                 continue;
             }
-            spacing = getdvarfloat("threatRpg", 0.25);
-            switch (getdvarstring("threatRpg", "threatRpg")) {
-            case 8:
+            spacing = getdvarfloat("<dev string:x145>", 0.25);
+            switch (getdvarstring("<dev string:xa8>", "<dev string:xb8>")) {
+            case "<dev string:x158>":
                 player thread test_player_dialog(0);
                 player thread test_taacom_dialog(spacing);
                 player thread test_commander_dialog(2 * spacing);
                 break;
-            case 8:
+            case "<dev string:x16e>":
                 player thread test_player_dialog(0);
                 player thread test_commander_dialog(spacing);
                 break;
-            case 8:
+            case "<dev string:x17d>":
                 player thread test_other_dialog(0);
                 player thread test_commander_dialog(spacing);
                 break;
-            case 8:
+            case "<dev string:x18d>":
                 player thread test_taacom_dialog(0);
                 player thread test_commander_dialog(spacing);
                 break;
-            case 8:
+            case "<dev string:x19e>":
                 player thread test_player_dialog(0);
                 player thread test_taacom_dialog(spacing);
                 break;
-            case 8:
+            case "<dev string:x1aa>":
                 player thread test_other_dialog(0);
                 player thread test_taacom_dialog(spacing);
                 break;
-            case 8:
+            case "<dev string:x1b7>":
                 player thread test_other_dialog(0);
                 player thread test_player_dialog(spacing);
                 break;
-            case 8:
+            case "<dev string:x1c2>":
                 player thread play_conv_self_other();
                 break;
-            case 8:
+            case "<dev string:x1d2>":
                 player thread play_conv_other_self();
                 break;
-            case 8:
+            case "<dev string:x1e2>":
                 player thread play_conv_other_other();
                 break;
             }
-            setdvar("threatRpg", "threatRpg");
+            setdvar("<dev string:xa8>", "<dev string:xb8>");
         }
     }
 
@@ -1391,8 +1391,8 @@ function game_end_vox(winner) {
         if (!isdefined(delay)) {
             delay = 0;
         }
-        wait(delay);
-        self playsoundontag(getdvarstring("threatRpg", "threatRpg"), "threatRpg");
+        wait delay;
+        self playsoundontag(getdvarstring("<dev string:xb9>", "<dev string:xb8>"), "<dev string:x1f3>");
     }
 
     // Namespace battlechatter
@@ -1403,8 +1403,8 @@ function game_end_vox(winner) {
         if (!isdefined(delay)) {
             delay = 0;
         }
-        wait(delay);
-        self playlocalsound(getdvarstring("threatRpg", "threatRpg"));
+        wait delay;
+        self playlocalsound(getdvarstring("<dev string:xe5>", "<dev string:xb8>"));
     }
 
     // Namespace battlechatter
@@ -1415,8 +1415,8 @@ function game_end_vox(winner) {
         if (!isdefined(delay)) {
             delay = 0;
         }
-        wait(delay);
-        self playlocalsound(getdvarstring("threatRpg", "threatRpg"));
+        wait delay;
+        self playlocalsound(getdvarstring("<dev string:x110>", "<dev string:xb8>"));
     }
 
     // Namespace battlechatter
@@ -1425,7 +1425,7 @@ function game_end_vox(winner) {
     // Size: 0x5c
     function play_test_dialog(dialogkey) {
         dialogalias = self get_player_dialog_alias(dialogkey);
-        self playsoundontag(dialogalias, "threatRpg");
+        self playsoundontag(dialogalias, "<dev string:x1f3>");
     }
 
     // Namespace battlechatter
@@ -1434,26 +1434,26 @@ function game_end_vox(winner) {
     // Size: 0xc4
     function response_key() {
         switch (self getmpdialogname()) {
-        case 8:
-            return "threatRpg";
-        case 8:
-            return "threatRpg";
-        case 8:
-            return "threatRpg";
-        case 8:
-            return "threatRpg";
-        case 8:
-            return "threatRpg";
-        case 8:
-            return "threatRpg";
-        case 8:
-            return "threatRpg";
-        case 8:
-            return "threatRpg";
-        case 8:
-            return "threatRpg";
+        case "<dev string:x1fa>":
+            return "<dev string:x203>";
+        case "<dev string:x20b>":
+            return "<dev string:x215>";
+        case "<dev string:x21f>":
+            return "<dev string:x228>";
+        case "<dev string:x231>":
+            return "<dev string:x239>";
+        case "<dev string:x246>":
+            return "<dev string:x24b>";
+        case "<dev string:x255>":
+            return "<dev string:x25c>";
+        case "<dev string:x263>":
+            return "<dev string:x268>";
+        case "<dev string:x272>":
+            return "<dev string:x279>";
+        case "<dev string:x282>":
+            return "<dev string:x28a>";
         }
-        return "threatRpg";
+        return "<dev string:xb8>";
     }
 
     // Namespace battlechatter
@@ -1462,12 +1462,12 @@ function game_end_vox(winner) {
     // Size: 0x156
     function play_conv_self_other() {
         num = randomintrange(0, 4);
-        self play_test_dialog("threatRpg" + num);
-        wait(4);
+        self play_test_dialog("<dev string:x292>" + num);
+        wait 4;
         players = arraysort(level.players, self.origin);
         foreach (player in players) {
             if (player != self && isalive(player)) {
-                player play_test_dialog("threatRpg" + self response_key() + num);
+                player play_test_dialog("<dev string:x29d>" + self response_key() + num);
                 break;
             }
         }
@@ -1482,12 +1482,12 @@ function game_end_vox(winner) {
         players = arraysort(level.players, self.origin);
         foreach (player in players) {
             if (player != self && isalive(player)) {
-                player play_test_dialog("threatRpg" + num);
+                player play_test_dialog("<dev string:x292>" + num);
                 break;
             }
         }
-        wait(4);
-        self play_test_dialog("threatRpg" + player response_key() + num);
+        wait 4;
+        self play_test_dialog("<dev string:x29d>" + player response_key() + num);
     }
 
     // Namespace battlechatter
@@ -1499,15 +1499,15 @@ function game_end_vox(winner) {
         players = arraysort(level.players, self.origin);
         foreach (player in players) {
             if (player != self && isalive(player)) {
-                player play_test_dialog("threatRpg" + num);
+                player play_test_dialog("<dev string:x292>" + num);
                 firstplayer = player;
                 break;
             }
         }
-        wait(4);
+        wait 4;
         foreach (player in players) {
             if (player != self && player !== firstplayer && isalive(player)) {
-                player play_test_dialog("threatRpg" + firstplayer response_key() + num);
+                player play_test_dialog("<dev string:x29d>" + firstplayer response_key() + num);
                 break;
             }
         }

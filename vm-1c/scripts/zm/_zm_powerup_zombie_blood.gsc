@@ -116,7 +116,7 @@ function zombie_blood_powerup(mdl_powerup, e_player) {
     }
     e_player thread watch_zombie_blood_early_exit();
     while (e_player.zombie_vars["zombie_powerup_zombie_blood_time"] >= 0) {
-        wait(0.05);
+        wait 0.05;
         e_player.zombie_vars["zombie_powerup_zombie_blood_time"] = e_player.zombie_vars["zombie_powerup_zombie_blood_time"] - 0.05;
     }
     e_player setcharacterbodystyle(0);
@@ -167,7 +167,7 @@ function watch_zombie_blood_early_exit() {
 // Checksum 0x407f8505, Offset: 0xec0
 // Size: 0x192
 function make_zombie_blood_entity() {
-    assert(isdefined(level.a_zombie_blood_entities), "zombie_blood_1st");
+    assert(isdefined(level.a_zombie_blood_entities), "<dev string:x28>");
     if (!isdefined(level.a_zombie_blood_entities)) {
         level.a_zombie_blood_entities = [];
     } else if (!isarray(level.a_zombie_blood_entities)) {

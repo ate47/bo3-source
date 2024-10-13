@@ -10,7 +10,7 @@
 // Checksum 0xf1bb0efd, Offset: 0x520
 // Size: 0x24
 function deleteatlimit() {
-    wait(30);
+    wait 30;
     self delete();
 }
 
@@ -27,9 +27,9 @@ function lookatentity(var_22ba4c26, lookduration, lookspeed, eyesonly, interrupt
 // Checksum 0x78b2033d, Offset: 0x588
 // Size: 0x1b2
 function lookatposition(looktargetpos, lookduration, lookspeed, eyesonly, interruptothers) {
-    assert(isai(self), "aml");
-    assert(self.a.targetlookinitilized == 1, "aml");
-    assert(lookspeed == "aml" || lookspeed == "aml", "aml");
+    assert(isai(self), "<dev string:x28>");
+    assert(self.a.targetlookinitilized == 1, "<dev string:x57>");
+    assert(lookspeed == "<dev string:x95>" || lookspeed == "<dev string:x9c>", "<dev string:xa2>");
     if (!isdefined(interruptothers) || interruptothers == "interrupt others" || gettime() > self.a.lookendtime) {
         self.a.looktargetpos = looktargetpos;
         self.a.lookendtime = gettime() + lookduration * 1000;
@@ -297,36 +297,36 @@ function handlenotetrack(note, flagname, customfunction, var1) {
         }
     }
     switch (note) {
-    case 68:
-    case 69:
-    case 75:
+    case "end":
+    case "finish":
+    case "undefined":
         if (isai(self) && self.a.pose == "back") {
         }
         return note;
-    case 74:
+    case "swish small":
         self thread sound::play_in_space("fly_gear_enemy", self gettagorigin("TAG_WEAPON_RIGHT"));
         break;
-    case 73:
+    case "swish large":
         self thread sound::play_in_space("fly_gear_enemy_large", self gettagorigin("TAG_WEAPON_RIGHT"));
         break;
-    case 70:
+    case "no death":
         self.a.nodeath = 1;
         break;
-    case 71:
+    case "no pain":
         self.allowpain = 0;
         break;
-    case 63:
+    case "allow pain":
         self.allowpain = 1;
         break;
-    case 65:
-    case 67:
+    case "anim_melee = \"right\"":
+    case "anim_melee = right":
         self.a.meleestate = "right";
         break;
-    case 64:
-    case 66:
+    case "anim_melee = \"left\"":
+    case "anim_melee = left":
         self.a.meleestate = "left";
         break;
-    case 72:
+    case "swap taghelmet to tagleft":
         if (isdefined(self.hatmodel)) {
             if (isdefined(self.helmetsidemodel)) {
                 self detach(self.helmetsidemodel, "TAG_HELMETSIDE");
@@ -384,8 +384,8 @@ function donotetracksforeverproc(notetracksfunc, flagname, killstring, customfun
             returnednote = [[ notetracksfunc ]](flagname, customfunction, var1);
             timetaken = gettime() - time;
             if (timetaken < 0.05) {
-                println(gettime() + "aml" + flagname + "aml" + returnednote + "aml");
-                wait(0.05 - timetaken);
+                println(gettime() + "<dev string:xc4>" + flagname + "<dev string:x111>" + returnednote + "<dev string:x11d>");
+                wait 0.05 - timetaken;
             }
         }
     }
@@ -423,7 +423,7 @@ function donotetracksfortime(time, flagname, customfunction, var1) {
 // Checksum 0x132b5aab, Offset: 0x1818
 // Size: 0x1e
 function donotetracksfortimeendnotify(time) {
-    wait(time);
+    wait time;
     self notify(#"stop_notetracks");
 }
 
@@ -485,7 +485,7 @@ function playfootstepeffect(foot, groundtype) {
 function movetooriginovertime(origin, time) {
     self endon(#"killanimscript");
     if (distancesquared(self.origin, origin) > 256 && !self maymovetopoint(origin)) {
-        println("aml" + origin + "aml");
+        println("<dev string:x11f>" + origin + "<dev string:x14c>");
         return;
     }
     self.keepclaimednodeingoal = 1;
@@ -495,7 +495,7 @@ function movetooriginovertime(origin, time) {
     for (i = 0; i < frames; i++) {
         offset -= offsetreduction;
         self teleport(origin + offset);
-        wait(0.05);
+        wait 0.05;
     }
     self.keepclaimednodeingoal = 0;
 }
@@ -604,7 +604,7 @@ function trackloop() {
             weight = pitchdelta / self.downaimlimit * self.a.aimweight;
             updown = -1 * weight;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

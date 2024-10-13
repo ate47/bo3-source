@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_ca9187f5;
+#namespace zm_sumpf_fx;
 
-// Namespace namespace_ca9187f5
+// Namespace zm_sumpf_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf1d6c74c, Offset: 0xdc8
 // Size: 0xc4
@@ -15,7 +15,7 @@ function main() {
     level thread trap_fx_monitor("south_east_tgt", "south_east_elec_light");
 }
 
-// Namespace namespace_ca9187f5
+// Namespace zm_sumpf_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7f3d1f97, Offset: 0xe98
 // Size: 0x232
@@ -42,7 +42,7 @@ function function_f45953c() {
     level._effect["perk_machine_light_green"] = "dlc5/zmhd/fx_wonder_fizz_light_green";
 }
 
-// Namespace namespace_ca9187f5
+// Namespace zm_sumpf_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf0a4e329, Offset: 0x10d8
 // Size: 0x42a
@@ -87,7 +87,7 @@ function function_e6258024() {
     level._effect["fx_light_god_ray_sm_sumpf_warm_v1"] = "env/light/fx_light_god_ray_sm_sumpf_warm_v1";
 }
 
-// Namespace namespace_ca9187f5
+// Namespace zm_sumpf_fx
 // Params 2, eflags: 0x1 linked
 // Checksum 0x9a367dc5, Offset: 0x1510
 // Size: 0xa2
@@ -101,7 +101,7 @@ function trap_fx_monitor(name, side) {
     }
 }
 
-// Namespace namespace_ca9187f5
+// Namespace zm_sumpf_fx
 // Params 2, eflags: 0x1 linked
 // Checksum 0xb1f683a5, Offset: 0x15c0
 // Size: 0x1f0
@@ -130,7 +130,7 @@ function function_1fc3f4ef(name, side) {
     self.loopfx = [];
 }
 
-// Namespace namespace_ca9187f5
+// Namespace zm_sumpf_fx
 // Params 1, eflags: 0x0
 // Checksum 0xc994532a, Offset: 0x17b8
 // Size: 0x3ec
@@ -162,7 +162,7 @@ function function_965cd1af(ent) {
             var_81af7cd1.loopfx[i] = spawnfx(i, level._effect["zapper_fx"], var_81af7cd1.origin, 0, var_6acb4c1, var_93aca931);
             triggerfx(var_81af7cd1.loopfx[i]);
         }
-        wait(30);
+        wait 30;
         for (i = 0; i < var_519c4c0b.loopfx.size; i++) {
             var_519c4c0b.loopfx[i] delete();
             var_81af7cd1.loopfx[i] delete();

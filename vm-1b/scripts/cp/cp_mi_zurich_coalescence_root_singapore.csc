@@ -24,8 +24,8 @@ function main() {
 // Size: 0xaa
 function init_clientfields() {
     clientfield::register("scriptmover", "sm_depth_charge_fx", 1, 1, "int", &function_21197c95, 0, 0);
-    clientfield::register("scriptmover", "water_disturbance", 1, 1, "int", &function_f354307b, 0, 0);
-    clientfield::register("toplayer", "umbra_tome_singapore", 1, 1, "counter", &function_2b6fcfd1, 0, 0);
+    clientfield::register("scriptmover", "water_disturbance", 1, 1, "int", &water_disturbance, 0, 0);
+    clientfield::register("toplayer", "umbra_tome_singapore", 1, 1, "counter", &umbra_tome_singapore, 0, 0);
 }
 
 // Namespace namespace_3d19ef22
@@ -69,7 +69,7 @@ function skipto_end(str_objective, var_74cd64bc) {
     level thread scene::stop("cin_zur_16_02_singapore_vign_pulled03");
     level thread scene::stop("cin_zur_16_02_singapore_hanging_shortrope");
     level thread scene::stop("cin_zur_16_02_singapore_hanging_shortrope_2");
-    level notify(#"hash_1c383277");
+    level notify(#"root_singapore_cleanup");
     level thread namespace_8e9083ff::function_3bf27f88(str_objective);
 }
 
@@ -77,7 +77,7 @@ function skipto_end(str_objective, var_74cd64bc) {
 // Params 7, eflags: 0x0
 // Checksum 0xc1df4434, Offset: 0x808
 // Size: 0x52
-function function_2b6fcfd1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function umbra_tome_singapore(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     umbra_settometrigger(localclientnum, "");
 }
 
@@ -109,9 +109,9 @@ function function_5f80268d() {
 function function_b087f50() {
     level thread scene::init("p7_fxanim_cp_zurich_roots_water01_bundle");
     level thread scene::init("p7_fxanim_cp_zurich_roots_water02_bundle");
-    wait(2.5);
+    wait 2.5;
     level thread scene::play("p7_fxanim_cp_zurich_roots_water01_bundle");
-    wait(2);
+    wait 2;
     level thread scene::play("p7_fxanim_cp_zurich_roots_water02_bundle");
 }
 
@@ -131,9 +131,9 @@ function function_69ec3f06() {
 // Size: 0x6a
 function function_320f5638() {
     level thread scene::play("cin_zur_16_02_singapore_vign_pulled01");
-    wait(randomfloatrange(2, 5));
+    wait randomfloatrange(2, 5);
     level thread scene::play("cin_zur_16_02_singapore_vign_pulled02");
-    wait(randomfloatrange(2, 5));
+    wait randomfloatrange(2, 5);
     level thread scene::play("cin_zur_16_02_singapore_vign_pulled03");
 }
 
@@ -143,7 +143,7 @@ function function_320f5638() {
 // Size: 0x42
 function function_a9bc976() {
     level thread scene::play("cin_zur_16_02_singapore_hanging_shortrope");
-    wait(randomfloatrange(2, 5));
+    wait randomfloatrange(2, 5);
     level thread scene::play("cin_zur_16_02_singapore_hanging_shortrope_2");
 }
 
@@ -151,7 +151,7 @@ function function_a9bc976() {
 // Params 7, eflags: 0x0
 // Checksum 0xd1297380, Offset: 0xd20
 // Size: 0x12a
-function function_f354307b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function water_disturbance(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (!isdefined(self.var_2e7c1306)) {
         str_tag = "zur_wave_jnt";
         self.var_2e7c1306 = util::spawn_model(localclientnum, "tag_origin", self gettagorigin(str_tag), self gettagangles(str_tag));
@@ -163,7 +163,7 @@ function function_f354307b(localclientnum, oldval, newval, bnewent, binitialsnap
         return;
     }
     self.var_2e7c1306.waterdisturbance = 0;
-    wait(0.016);
+    wait 0.016;
     self.var_2e7c1306 delete();
 }
 

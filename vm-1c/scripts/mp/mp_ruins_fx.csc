@@ -1,9 +1,9 @@
 #using scripts/shared/fx_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_7d071377;
+#namespace mp_ruins_fx;
 
-// Namespace namespace_7d071377
+// Namespace mp_ruins_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xa8
 // Size: 0x4

@@ -23,8 +23,8 @@ function start_gametype() {
         return;
     }
     level.var_3d8a3717 = 1;
-    assert(isdefined(game["<unknown string>"]), "<unknown string>");
-    assert(isdefined(game["<unknown string>"]), "<unknown string>");
+    assert(isdefined(game["<dev string:x28>"]), "<dev string:x3f>");
+    assert(isdefined(game["<dev string:x85>"]), "<dev string:x9a>");
     if (!level.teambased) {
         return;
     }
@@ -85,7 +85,7 @@ function setentityheadicon(team, owner, offset, objective, var_cc32611f) {
     if (isdefined(objective)) {
         if (isdefined(owner) && !level.teambased) {
             if (!isplayer(owner)) {
-                assert(isdefined(owner.owner), "<unknown string>");
+                assert(isdefined(owner.owner), "<dev string:xde>");
                 owner = owner.owner;
             }
             if (isstring(objective)) {

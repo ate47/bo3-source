@@ -7,9 +7,9 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_7ea42b03;
+#namespace zm_temple_sq_std;
 
-// Namespace namespace_7ea42b03
+// Namespace zm_temple_sq_std
 // Params 0, eflags: 0x1 linked
 // Checksum 0x592dc8db, Offset: 0x2f8
 // Size: 0x154
@@ -24,7 +24,7 @@ function init() {
     level flag::init("std_plot_vo_done");
 }
 
-// Namespace namespace_7ea42b03
+// Namespace zm_temple_sq_std
 // Params 0, eflags: 0x1 linked
 // Checksum 0x115d0cac, Offset: 0x458
 // Size: 0xfc
@@ -37,19 +37,19 @@ function init_stage() {
     level flag::clear("std_plot_vo_done");
     level thread function_9873f186();
     level thread function_610191ea();
-    namespace_abd6a8a5::function_ac4ad5b0();
+    zm_temple_sq_brock::function_ac4ad5b0();
 }
 
-// Namespace namespace_7ea42b03
+// Namespace zm_temple_sq_std
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb0791ac9, Offset: 0x560
 // Size: 0x2c
 function function_9873f186() {
-    wait(0.5);
-    level thread namespace_435c2400::function_acc79afb("tt5");
+    wait 0.5;
+    level thread zm_temple_sq_skits::function_acc79afb("tt5");
 }
 
-// Namespace namespace_7ea42b03
+// Namespace zm_temple_sq_std
 // Params 0, eflags: 0x1 linked
 // Checksum 0xadf62339, Offset: 0x598
 // Size: 0xee
@@ -63,12 +63,12 @@ function function_610191ea() {
     level.var_fc91036b playloopsound("evt_sq_std_waterthrash_loop", 2);
     level waittill(#"hash_77126d3d");
     level.var_fc91036b stoploopsound(5);
-    wait(5);
+    wait 5;
     level.var_fc91036b delete();
     level.var_fc91036b = undefined;
 }
 
-// Namespace namespace_7ea42b03
+// Namespace zm_temple_sq_std
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdb4bc310, Offset: 0x690
 // Size: 0x70
@@ -77,13 +77,13 @@ function function_63d30912() {
         self endon(#"death");
         self endon(#"hash_5d50fcb7");
         while (!(isdefined(level.disable_print3d_ent) && level.disable_print3d_ent)) {
-            print3d(self.origin, "SR", (0, 255, 0), 1);
-            wait(0.1);
+            print3d(self.origin, "<dev string:x28>", (0, 255, 0), 1);
+            wait 0.1;
         }
     #/
 }
 
-// Namespace namespace_7ea42b03
+// Namespace zm_temple_sq_std
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8f3a812, Offset: 0x708
 // Size: 0x31c
@@ -121,7 +121,7 @@ function function_3ea85f63() {
     trigger delete();
 }
 
-// Namespace namespace_7ea42b03
+// Namespace zm_temple_sq_std
 // Params 0, eflags: 0x1 linked
 // Checksum 0x123e5142, Offset: 0xa30
 // Size: 0x10
@@ -129,7 +129,7 @@ function function_4fdfc508() {
     level.var_b19e3661 = 0;
 }
 
-// Namespace namespace_7ea42b03
+// Namespace zm_temple_sq_std
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb7a882cc, Offset: 0xa48
 // Size: 0x6a
@@ -141,7 +141,7 @@ function function_1d8712b1() {
     level notify(#"hash_21d222c8");
 }
 
-// Namespace namespace_7ea42b03
+// Namespace zm_temple_sq_std
 // Params 0, eflags: 0x1 linked
 // Checksum 0x58e86079, Offset: 0xac0
 // Size: 0x10c
@@ -158,11 +158,11 @@ function function_c62997df() {
                 return;
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_7ea42b03
+// Namespace zm_temple_sq_std
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcd7642dd, Offset: 0xbd8
 // Size: 0xdc
@@ -178,11 +178,11 @@ function function_19fed3e() {
                 return;
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_7ea42b03
+// Namespace zm_temple_sq_std
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbde3fcb0, Offset: 0xcc0
 // Size: 0x23c
@@ -208,11 +208,11 @@ function function_7747c56() {
     level notify(#"hash_adb5537c", 1);
     level waittill(#"hash_ccdffdea");
     level flag::wait_till("std_plot_vo_done");
-    wait(5);
+    wait 5;
     namespace_6e97c459::function_2f3ced1f("sq", "StD");
 }
 
-// Namespace namespace_7ea42b03
+// Namespace zm_temple_sq_std
 // Params 1, eflags: 0x1 linked
 // Checksum 0xec8ba215, Offset: 0xf08
 // Size: 0x196
@@ -224,11 +224,11 @@ function function_cc3f3f6a(success) {
     level flag::clear("std_target_3");
     level flag::clear("std_target_4");
     if (success) {
-        namespace_abd6a8a5::function_67e052f1(6);
-        namespace_1e4bbaa5::function_439a6a14();
+        zm_temple_sq_brock::function_67e052f1(6);
+        zm_temple_sq::function_439a6a14();
     } else {
-        namespace_abd6a8a5::function_67e052f1(5);
-        level thread namespace_435c2400::function_b6268f3d();
+        zm_temple_sq_brock::function_67e052f1(5);
+        level thread zm_temple_sq_skits::function_b6268f3d();
     }
     if (isdefined(level.var_e650672d)) {
         level.var_e650672d delete();
@@ -240,7 +240,7 @@ function function_cc3f3f6a(success) {
     }
 }
 
-// Namespace namespace_7ea42b03
+// Namespace zm_temple_sq_std
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe3c52305, Offset: 0x10a8
 // Size: 0x152
@@ -256,14 +256,14 @@ function function_fd63e028(player) {
     level.var_e650672d waittill(#"sounddone");
     if (isdefined(player)) {
         level.var_c502e691 = 1;
-        player playsoundwithnotify("vox_egg_story_4_1" + namespace_1e4bbaa5::function_26186755(player.characterindex), "vox_egg_sounddone");
-        player waittill(#"hash_a1f549aa");
+        player playsoundwithnotify("vox_egg_story_4_1" + zm_temple_sq::function_26186755(player.characterindex), "vox_egg_sounddone");
+        player waittill(#"vox_egg_sounddone");
         level.var_c502e691 = 0;
     }
     level notify(#"hash_99d9566e");
 }
 
-// Namespace namespace_7ea42b03
+// Namespace zm_temple_sq_std
 // Params 0, eflags: 0x1 linked
 // Checksum 0xad7b3bcb, Offset: 0x1208
 // Size: 0x18e

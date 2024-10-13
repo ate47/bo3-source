@@ -8,9 +8,9 @@
 #using scripts/shared/_oob;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b4cb0c94;
+#namespace mp_kung_fu;
 
-// Namespace namespace_b4cb0c94
+// Namespace mp_kung_fu
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4238920b, Offset: 0x2a8
 // Size: 0xbe4
@@ -18,8 +18,8 @@ function main() {
     precache();
     trigger = spawn("trigger_radius_out_of_bounds", (674, 2622.5, 137.5), 0, 256, 300);
     trigger thread oob::run_oob_trigger();
-    namespace_9fa744bd::main();
-    namespace_b19eb620::main();
+    mp_kung_fu_fx::main();
+    mp_kung_fu_sound::main();
     load::main();
     compass::setupminimap("compass_map_mp_kung_fu");
     setdvar("compassmaxrange", "2100");
@@ -88,7 +88,7 @@ function main() {
     level spawnkilltrigger();
 }
 
-// Namespace namespace_b4cb0c94
+// Namespace mp_kung_fu
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xe98
 // Size: 0x4
@@ -96,7 +96,7 @@ function precache() {
     
 }
 
-// Namespace namespace_b4cb0c94
+// Namespace mp_kung_fu
 // Params 3, eflags: 0x1 linked
 // Checksum 0x629f07e4, Offset: 0xea8
 // Size: 0xe2
@@ -111,7 +111,7 @@ function function_8bf0b925(str_value, str_key, b_enable) {
     }
 }
 
-// Namespace namespace_b4cb0c94
+// Namespace mp_kung_fu
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4d4edad0, Offset: 0xf98
 // Size: 0x5c
@@ -120,7 +120,7 @@ function spawnkilltrigger() {
     trigger thread watchkilltrigger();
 }
 
-// Namespace namespace_b4cb0c94
+// Namespace mp_kung_fu
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7dca3478, Offset: 0x1000
 // Size: 0x90

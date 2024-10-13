@@ -25,9 +25,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f7d4f63b;
+#namespace zm_island_pap_quest;
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1d8a6296, Offset: 0x9e0
 // Size: 0x44
@@ -38,7 +38,7 @@ function main() {
     function_4fdc8e70();
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xce15ceec, Offset: 0xa30
 // Size: 0xac
@@ -51,7 +51,7 @@ function init() {
     #/
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8d3e8b21, Offset: 0xae8
 // Size: 0x2f4
@@ -79,7 +79,7 @@ function function_16f0344e() {
     level thread function_851f0b97();
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x88ddb86c, Offset: 0xde8
 // Size: 0x1c
@@ -87,7 +87,7 @@ function on_player_spawned() {
     self thread function_145f4b1a();
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0xeeb98fa5, Offset: 0xe10
 // Size: 0xa4
@@ -96,11 +96,11 @@ function function_b6d4787d(a_ents) {
     mdl_part hidepart("p7_zm_isl_pap_elements_gauge_jnt");
     level flag::wait_till("pap_gauge");
     mdl_part showpart("p7_zm_isl_pap_elements_gauge_jnt");
-    wait(1);
+    wait 1;
     level scene::play("p7_fxanim_zm_island_pap_elements_gauge_bundle");
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb7502ab1, Offset: 0xec0
 // Size: 0xa4
@@ -109,11 +109,11 @@ function function_e0bc0bdc(a_ents) {
     mdl_part hidepart("p7_zm_isl_pap_elements_whistle_jnt");
     level flag::wait_till("pap_whistle");
     mdl_part showpart("p7_zm_isl_pap_elements_whistle_jnt");
-    wait(1);
+    wait 1;
     level scene::play("p7_fxanim_zm_island_pap_elements_whistle_bundle");
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0x89649a30, Offset: 0xf70
 // Size: 0xa4
@@ -122,11 +122,11 @@ function function_f7c8e279(a_ents) {
     mdl_part hidepart("p7_zm_isl_pap_elements_wheel_jnt");
     level flag::wait_till("pap_wheel");
     mdl_part showpart("p7_zm_isl_pap_elements_wheel_jnt");
-    wait(1);
+    wait 1;
     level scene::play("p7_fxanim_zm_island_pap_elements_wheel_bundle");
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1333e8e, Offset: 0x1020
 // Size: 0x20c
@@ -142,7 +142,7 @@ function function_aa37ce2d() {
     }
     mdl_gate moveto(mdl_gate.s_pos.origin, 3);
     mdl_gate playsound("zmb_papquest_gate_move");
-    level thread namespace_f333593c::function_3bf2d62a("pap_opens", 0, 1, 0);
+    level thread zm_island_vo::function_3bf2d62a("pap_opens", 0, 1, 0);
     mdl_gate waittill(#"movedone");
     level flag::set("pap_open");
     var_b1e70b95 delete();
@@ -150,7 +150,7 @@ function function_aa37ce2d() {
     t_door zm_blockers::door_opened(0);
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x46c3c586, Offset: 0x1238
 // Size: 0x256
@@ -174,16 +174,16 @@ function function_4c046b1b() {
     level.pack_a_punch.triggers[0] playsound("zmb_papquest_drain_oneshot");
     level flag::set("pap_water_is_draining");
     level clientfield::set("lower_pap_water", level.var_12542033);
-    wait(3);
+    wait 3;
     level flag::clear("pap_water_is_draining");
     switch (level.var_12542033) {
     case 1:
         exploder::exploder_stop("fxexp_300");
-        level thread namespace_f333593c::function_3bf2d62a("drain_pap", 0, 1, 0);
+        level thread zm_island_vo::function_3bf2d62a("drain_pap", 0, 1, 0);
         break;
     case 2:
         exploder::exploder_stop("fxexp_301");
-        level thread namespace_f333593c::function_3bf2d62a("drain_pap", 0, 1, 0);
+        level thread zm_island_vo::function_3bf2d62a("drain_pap", 0, 1, 0);
         break;
     case 3:
         exploder::exploder_stop("fxexp_302");
@@ -191,17 +191,17 @@ function function_4c046b1b() {
     }
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0x90894943, Offset: 0x1498
 // Size: 0x224
 function function_dd9ccb8(n_id) {
     if (n_id == 1) {
-        self.trigger = namespace_8aed53c9::function_d095318(self.origin, 50, 1, &function_72a105ff);
+        self.trigger = zm_island_util::function_d095318(self.origin, 50, 1, &function_72a105ff);
     } else if (n_id == 2) {
-        self.trigger = namespace_8aed53c9::function_d095318(self.origin, 50, 1, &function_e35907c);
+        self.trigger = zm_island_util::function_d095318(self.origin, 50, 1, &function_e35907c);
     } else {
-        self.trigger = namespace_8aed53c9::function_d095318(self.origin, 50, 1, &function_578e801d);
+        self.trigger = zm_island_util::function_d095318(self.origin, 50, 1, &function_578e801d);
     }
     while (true) {
         player = self.trigger waittill(#"trigger");
@@ -223,7 +223,7 @@ function function_dd9ccb8(n_id) {
     }
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd6f40f17, Offset: 0x16c8
 // Size: 0x44
@@ -234,7 +234,7 @@ function private function_72a105ff(e_player) {
     return %ZOMBIE_BUILD_PIECE_MORE;
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 1, eflags: 0x5 linked
 // Checksum 0xedf00cbe, Offset: 0x1718
 // Size: 0x44
@@ -245,7 +245,7 @@ function private function_e35907c(e_player) {
     return %ZOMBIE_BUILD_PIECE_MORE;
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 1, eflags: 0x5 linked
 // Checksum 0x14c0791, Offset: 0x1768
 // Size: 0x44
@@ -256,7 +256,7 @@ function private function_578e801d(e_player) {
     return %ZOMBIE_BUILD_PIECE_MORE;
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0xaf5617ae, Offset: 0x17b8
 // Size: 0xec
@@ -276,7 +276,7 @@ function function_1a519eae(str_flag) {
     }
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0x81644225, Offset: 0x18b0
 // Size: 0x2b6
@@ -290,28 +290,28 @@ function function_90913542(str_flag) {
         return;
     }
     switch (str_flag) {
-    case 7:
+    case "valve1_found":
         foreach (player in a_players) {
             player clientfield::set_to_player("valvethree_part_lever", 1);
-            player thread namespace_f37770c8::function_97be99b3("zmInventory.valveone_part_lever", "zmInventory.widget_machinetools_parts", 0);
+            player thread zm_craftables::function_97be99b3("zmInventory.valveone_part_lever", "zmInventory.widget_machinetools_parts", 0);
         }
         break;
-    case 8:
+    case "valve2_found":
         foreach (player in a_players) {
             player clientfield::set_to_player("valveone_part_lever", 1);
-            player thread namespace_f37770c8::function_97be99b3("zmInventory.valvetwo_part_lever", "zmInventory.widget_machinetools_parts", 0);
+            player thread zm_craftables::function_97be99b3("zmInventory.valvetwo_part_lever", "zmInventory.widget_machinetools_parts", 0);
         }
         break;
-    case 9:
+    case "valve3_found":
         foreach (player in a_players) {
             player clientfield::set_to_player("valvetwo_part_lever", 1);
-            player thread namespace_f37770c8::function_97be99b3("zmInventory.valvethree_part_lever", "zmInventory.widget_machinetools_parts", 0);
+            player thread zm_craftables::function_97be99b3("zmInventory.valvethree_part_lever", "zmInventory.widget_machinetools_parts", 0);
         }
         break;
     }
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x539d5c33, Offset: 0x1b70
 // Size: 0x1a2
@@ -330,7 +330,7 @@ function function_d0901c34() {
     }
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x12ae27a, Offset: 0x1d20
 // Size: 0x15c
@@ -348,13 +348,13 @@ function function_c762197b() {
         ai_zombie.b_ignore_cleanup = 1;
         ai_zombie.no_damage_points = 1;
         ai_zombie.deathpoints_already_given = 1;
-        ai_zombie thread namespace_8aed53c9::function_acd04dc9();
-        wait(0.1);
+        ai_zombie thread zm_island_util::function_acd04dc9();
+        wait 0.1;
         self thread scene::play("zm_dlc2_zombie_spawn_cocoon_v" + randomint(3) + 1, ai_zombie);
     }
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xda978203, Offset: 0x1e88
 // Size: 0x14c
@@ -375,7 +375,7 @@ function function_bd8082d1() {
     var_696dc555.var_166a0518 = 1;
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5270cdaf, Offset: 0x1fe0
 // Size: 0xcc
@@ -393,7 +393,7 @@ function function_7a0ede5() {
     }
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 1, eflags: 0x0
 // Checksum 0xb66053a7, Offset: 0x20b8
 // Size: 0x3e
@@ -404,7 +404,7 @@ function function_b09adc86(str_mod) {
     return false;
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x43d790da, Offset: 0x2100
 // Size: 0xdc
@@ -412,11 +412,11 @@ function function_14c57bc9() {
     mdl_part = util::spawn_model("p7_zm_isl_pap_elements_gauge", self.origin + (0, 0, -154));
     mdl_part clientfield::set("show_part", 1);
     mdl_part setscale(1.5);
-    mdl_part.trigger = namespace_8aed53c9::function_d095318(mdl_part.origin, 50, 1, &function_9bd3096f);
+    mdl_part.trigger = zm_island_util::function_d095318(mdl_part.origin, 50, 1, &function_9bd3096f);
     mdl_part thread function_1a519eae("valve1_found");
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 1, eflags: 0x5 linked
 // Checksum 0x37b09b4, Offset: 0x21e8
 // Size: 0x12
@@ -424,7 +424,7 @@ function private function_9bd3096f(player) {
     return %ZOMBIE_BUILD_PIECE_GRAB;
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6353ba5, Offset: 0x2208
 // Size: 0x1cc
@@ -444,13 +444,13 @@ function function_f4a071bb() {
     level thread defend_start();
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x95b89443, Offset: 0x23e0
 // Size: 0x398
 function defend_start() {
     while (!level flag::exists("penstock_debris_cleared")) {
-        wait(1);
+        wait 1;
     }
     a_s_spawns = struct::get_array("defend_valve_spawnpt");
     level.var_74049442 = 0;
@@ -484,10 +484,10 @@ function defend_start() {
         a_s_spawns = array::randomize(a_s_spawns);
         for (i = 0; i < a_s_spawns.size; i++) {
             while (getfreeactorcount() < 1) {
-                wait(0.05);
+                wait 0.05;
             }
             while (function_a3ebebe() >= var_4cf30066) {
-                wait(0.05);
+                wait 0.05;
             }
             ai_zombie = zombie_utility::spawn_zombie(level.zombie_spawners[0], "defend_zombie", a_s_spawns[i]);
             if (isdefined(ai_zombie)) {
@@ -499,20 +499,20 @@ function defend_start() {
                 if (level.var_74049442 >= 13) {
                     break;
                 }
-                wait(1.5);
+                wait 1.5;
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8663754, Offset: 0x2780
 // Size: 0xe6
 function function_3d4e00c() {
-    level endon(#"hash_9e77115a");
-    wait(5);
+    level endon(#"defend_over");
+    wait 5;
     while (true) {
         n_zombies = function_a3ebebe();
         var_4cba8874 = function_2870b97d();
@@ -522,22 +522,22 @@ function function_3d4e00c() {
             level flag::set("spawn_zombies");
             level flag::set("defend_over");
         }
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf0570e49, Offset: 0x2870
 // Size: 0x1cc
 function function_9fcd89f7() {
-    level notify(#"hash_d5fa4175");
+    level notify(#"defend_success");
     exploder::exploder("fxexp_201");
     exploder::exploder_stop("lgt_penstock_event");
     level.var_ced49fc moveto(level.var_ced49fc.v_org, 3);
     level.var_ced49fc rotateto(level.var_ced49fc.v_ang, 3);
     level.var_ced49fc waittill(#"movedone");
-    level.var_ced49fc.trigger = namespace_8aed53c9::function_d095318(level.var_ced49fc.origin, 50, 1, &function_9bd3096f);
+    level.var_ced49fc.trigger = zm_island_util::function_d095318(level.var_ced49fc.origin, 50, 1, &function_9bd3096f);
     level.var_ced49fc thread function_1a519eae("valve3_found");
     level flag::set("defend_success");
     level.mdl_gate moveto(level.mdl_gate.v_org, 3);
@@ -547,7 +547,7 @@ function function_9fcd89f7() {
     level.mdl_clip delete();
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe042da91, Offset: 0x2a48
 // Size: 0x12c
@@ -563,7 +563,7 @@ function function_a3ebebe() {
     return var_ca238230;
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd744ba4b, Offset: 0x2b80
 // Size: 0x15c
@@ -583,7 +583,7 @@ function function_2870b97d() {
     return var_4399a34;
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x0
 // Checksum 0xc19922, Offset: 0x2ce8
 // Size: 0x15c
@@ -600,7 +600,7 @@ function function_55dac330() {
     level flag::set("spawn_zombies");
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1ae44fb1, Offset: 0x2e50
 // Size: 0x88
@@ -618,7 +618,7 @@ function function_2392e644() {
     self.script_string = "find_flesh";
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2049c179, Offset: 0x2ee0
 // Size: 0x54
@@ -628,7 +628,7 @@ function function_318ec9ba() {
     self clientfield::set("zombie_splash", 1);
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd7d0724a, Offset: 0x2f40
 // Size: 0xd8
@@ -636,22 +636,22 @@ function function_83af0b87(var_c80d3f8f) {
     self endon(#"death");
     while (true) {
         while (!self istouching(var_c80d3f8f)) {
-            wait(0.1);
+            wait 0.1;
         }
         if (!self.var_5ea9c8b7) {
             self.var_5ea9c8b7 = 1;
             self asmsetanimationrate(0.8);
         }
         while (self istouching(var_c80d3f8f)) {
-            wait(0.1);
+            wait 0.1;
         }
         self.var_5ea9c8b7 = 0;
         self asmsetanimationrate(1);
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x33717e3c, Offset: 0x3020
 // Size: 0x12c
@@ -661,11 +661,11 @@ function function_4fdc8e70() {
     mdl_part = util::spawn_model("p7_zm_isl_pap_elements_wheel", array::random(var_f89319f8).origin);
     mdl_part clientfield::set("show_part", 1);
     mdl_part setscale(1.5);
-    mdl_part.trigger = namespace_8aed53c9::function_d095318(mdl_part.origin, 50, 1, &function_9bd3096f);
+    mdl_part.trigger = zm_island_util::function_d095318(mdl_part.origin, 50, 1, &function_9bd3096f);
     mdl_part thread function_1a519eae("valve2_found");
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdac05af1, Offset: 0x3158
 // Size: 0x4c
@@ -674,7 +674,7 @@ function function_851f0b97() {
     var_1af0fcd8 clientfield::set("do_emissive_material", 0);
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1332f842, Offset: 0x31b0
 // Size: 0x7c
@@ -682,11 +682,11 @@ function function_145f4b1a() {
     self endon(#"disconnect");
     level endon(#"hash_62f73de6");
     var_1af0fcd8 = getent("bunker_penstock_blue_sign_reveal", "targetname");
-    self namespace_8aed53c9::function_7448e472(var_1af0fcd8);
+    self zm_island_util::function_7448e472(var_1af0fcd8);
     var_1af0fcd8 thread function_336744d2();
 }
 
-// Namespace namespace_f7d4f63b
+// Namespace zm_island_pap_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0x51c31969, Offset: 0x3238
 // Size: 0x54
@@ -698,34 +698,34 @@ function function_336744d2() {
 
 /#
 
-    // Namespace namespace_f7d4f63b
+    // Namespace zm_island_pap_quest
     // Params 0, eflags: 0x1 linked
     // Checksum 0xba8b39b2, Offset: 0x3298
     // Size: 0x74
     function function_7cd896fc() {
         zm_devgui::add_custom_devgui_callback(&function_9e3140d6);
-        adddebugcommand("valve2_found");
-        adddebugcommand("valve2_found");
-        adddebugcommand("valve2_found");
+        adddebugcommand("<dev string:x28>");
+        adddebugcommand("<dev string:x95>");
+        adddebugcommand("<dev string:xfa>");
     }
 
-    // Namespace namespace_f7d4f63b
+    // Namespace zm_island_pap_quest
     // Params 1, eflags: 0x1 linked
     // Checksum 0x76a27351, Offset: 0x3318
     // Size: 0xfe
     function function_9e3140d6(cmd) {
         switch (cmd) {
-        case 8:
-            level flag::set("valve2_found");
-            level thread function_90913542("valve2_found");
+        case "<dev string:x159>":
+            level flag::set("<dev string:x173>");
+            level thread function_90913542("<dev string:x173>");
             return 1;
-        case 8:
-            level flag::set("valve2_found");
-            level thread function_90913542("valve2_found");
+        case "<dev string:x180>":
+            level flag::set("<dev string:x19b>");
+            level thread function_90913542("<dev string:x19b>");
             return 1;
-        case 8:
-            level flag::set("valve2_found");
-            level thread function_90913542("valve2_found");
+        case "<dev string:x1a8>":
+            level flag::set("<dev string:x1bb>");
+            level thread function_90913542("<dev string:x1bb>");
             return 1;
         }
         return 0;

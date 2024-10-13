@@ -5,9 +5,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_c024ffd;
+#namespace cp_mi_cairo_infection_theia_battle;
 
-// Namespace namespace_c024ffd
+// Namespace cp_mi_cairo_infection_theia_battle
 // Params 0, eflags: 0x0
 // Checksum 0xc7243470, Offset: 0x4e0
 // Size: 0x15a
@@ -30,7 +30,7 @@ function main() {
     init_clientfields();
 }
 
-// Namespace namespace_c024ffd
+// Namespace cp_mi_cairo_infection_theia_battle
 // Params 0, eflags: 0x0
 // Checksum 0xbcfb153d, Offset: 0x648
 // Size: 0x6f
@@ -43,23 +43,23 @@ function function_6b2436b8() {
     }
 }
 
-// Namespace namespace_c024ffd
+// Namespace cp_mi_cairo_infection_theia_battle
 // Params 0, eflags: 0x0
 // Checksum 0xbf1dad43, Offset: 0x6c0
 // Size: 0xfa
 function init_clientfields() {
     n_clientbits = getminbitcountfornum(8);
-    clientfield::register("world", "building_destruction_callback", 1, n_clientbits, "int", &function_a77a502, 0, 0);
-    clientfield::register("world", "building_end_callback", 1, 1, "int", &function_cc506aa7, 0, 0);
+    clientfield::register("world", "building_destruction_callback", 1, n_clientbits, "int", &building_destruction_callback, 0, 0);
+    clientfield::register("world", "building_end_callback", 1, 1, "int", &building_end_callback, 0, 0);
     clientfield::register("world", "vtol_fog_bank", 1, 1, "int", &function_68142842, 0, 0);
-    clientfield::register("scriptmover", "sarah_tac_mode_disable", 1, 1, "int", &function_a722d56a, 0, 0);
+    clientfield::register("scriptmover", "sarah_tac_mode_disable", 1, 1, "int", &sarah_tac_mode_disable, 0, 0);
 }
 
-// Namespace namespace_c024ffd
+// Namespace cp_mi_cairo_infection_theia_battle
 // Params 7, eflags: 0x0
 // Checksum 0x6cba0fb9, Offset: 0x7c8
 // Size: 0x6a
-function function_a722d56a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function sarah_tac_mode_disable(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self tmodesetflag(9);
         return;
@@ -67,11 +67,11 @@ function function_a722d56a(localclientnum, oldval, newval, bnewent, binitialsnap
     self tmodeclearflag(9);
 }
 
-// Namespace namespace_c024ffd
+// Namespace cp_mi_cairo_infection_theia_battle
 // Params 7, eflags: 0x0
 // Checksum 0xb1fe690e, Offset: 0x840
 // Size: 0xb2
-function function_a77a502(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function building_destruction_callback(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         str_name = "p7_fxanim_cp_infection_sarah_building_0" + newval + "_bundle";
         var_666ebfcb = struct::get(str_name, "scriptbundlename");
@@ -82,11 +82,11 @@ function function_a77a502(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_c024ffd
+// Namespace cp_mi_cairo_infection_theia_battle
 // Params 7, eflags: 0x0
 // Checksum 0x3f0f7932, Offset: 0x900
 // Size: 0xd1
-function function_cc506aa7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function building_end_callback(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (!binitialsnap) {
         if (newval) {
             for (i = 3; i <= 8; i++) {
@@ -101,7 +101,7 @@ function function_cc506aa7(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_c024ffd
+// Namespace cp_mi_cairo_infection_theia_battle
 // Params 3, eflags: 0x0
 // Checksum 0xb2d40efe, Offset: 0x9e0
 // Size: 0x103
@@ -121,7 +121,7 @@ function function_6712dcb2(localclientnum, str_targetname, b_show) {
     }
 }
 
-// Namespace namespace_c024ffd
+// Namespace cp_mi_cairo_infection_theia_battle
 // Params 7, eflags: 0x0
 // Checksum 0xf07958ef, Offset: 0xaf0
 // Size: 0x7a
@@ -135,7 +135,7 @@ function function_68142842(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_c024ffd
+// Namespace cp_mi_cairo_infection_theia_battle
 // Params 1, eflags: 0x0
 // Checksum 0xb5452292, Offset: 0xb78
 // Size: 0x52
@@ -143,7 +143,7 @@ function function_9bd322a9(a_ents) {
     a_ents["sarah_building_03"] siegecmd("set_anim", "p7_fxanim_cp_infection_sarah_building_03_sanim", "set_shot", "default", "pause", "goto_end");
 }
 
-// Namespace namespace_c024ffd
+// Namespace cp_mi_cairo_infection_theia_battle
 // Params 1, eflags: 0x0
 // Checksum 0xd479156b, Offset: 0xbd8
 // Size: 0x52
@@ -151,7 +151,7 @@ function function_362b8d1c(a_ents) {
     a_ents["sarah_building_04"] siegecmd("set_anim", "p7_fxanim_cp_infection_sarah_building_04_sanim", "set_shot", "default", "pause", "goto_end");
 }
 
-// Namespace namespace_c024ffd
+// Namespace cp_mi_cairo_infection_theia_battle
 // Params 1, eflags: 0x0
 // Checksum 0x10f2f558, Offset: 0xc38
 // Size: 0x52
@@ -159,7 +159,7 @@ function function_538e886b(a_ents) {
     a_ents["sarah_building_05"] siegecmd("set_anim", "p7_fxanim_cp_infection_sarah_building_05_sanim", "set_shot", "default", "pause", "goto_end");
 }
 
-// Namespace namespace_c024ffd
+// Namespace cp_mi_cairo_infection_theia_battle
 // Params 1, eflags: 0x0
 // Checksum 0x36356029, Offset: 0xc98
 // Size: 0x52
@@ -167,7 +167,7 @@ function function_8cb957be(a_ents) {
     a_ents["sarah_building_06"] siegecmd("set_anim", "p7_fxanim_cp_infection_sarah_building_06_sanim", "set_shot", "default", "pause", "goto_end");
 }
 
-// Namespace namespace_c024ffd
+// Namespace cp_mi_cairo_infection_theia_battle
 // Params 1, eflags: 0x0
 // Checksum 0xc30b43a1, Offset: 0xcf8
 // Size: 0x52
@@ -175,7 +175,7 @@ function function_c22685d5(a_ents) {
     a_ents["sarah_building_07"] siegecmd("set_anim", "p7_fxanim_cp_infection_sarah_building_07_sanim", "set_shot", "default", "pause", "goto_end");
 }
 
-// Namespace namespace_c024ffd
+// Namespace cp_mi_cairo_infection_theia_battle
 // Params 1, eflags: 0x0
 // Checksum 0x6b5f82f6, Offset: 0xd58
 // Size: 0x52

@@ -5,9 +5,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_36389e13;
+#namespace zm_moon_fx;
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x27558d1b, Offset: 0x10d8
 // Size: 0xbc
@@ -23,20 +23,20 @@ function main() {
     level thread function_e7f5550b();
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbdaed5a8, Offset: 0x11a0
 // Size: 0x86
 function function_11100deb() {
     util::waitforclient(0);
-    wait(3);
+    wait 3;
     players = getlocalplayers();
     for (i = 0; i < players.size; i++) {
         level thread function_bbc51c7e(i);
     }
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x313e8033, Offset: 0x1230
 // Size: 0x7e
@@ -44,15 +44,15 @@ function function_2f56cbec() {
     util::waitforallclients();
     players = getlocalplayers();
     for (i = 0; i < players.size; i++) {
-        players[i] thread function_95cb438f(i);
+        players[i] thread airlock_fx(i);
     }
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2e319dce, Offset: 0x12b8
 // Size: 0x14e
-function function_95cb438f(localclientnum) {
+function airlock_fx(localclientnum) {
     level waittill(#"power_on");
     var_2043fd45 = struct::get_array("s_airlock_jambs_fx", "targetname");
     for (i = 0; i < var_2043fd45.size; i++) {
@@ -65,7 +65,7 @@ function function_95cb438f(localclientnum) {
     }
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x52797ece, Offset: 0x1410
 // Size: 0x3ba
@@ -106,7 +106,7 @@ function function_f45953c() {
     level._effect["perk_machine_light_green"] = "dlc5/zmhd/fx_wonder_fizz_light_green";
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x25aa980f, Offset: 0x17d8
 // Size: 0x382
@@ -145,7 +145,7 @@ function function_e6258024() {
     level._effect["fx_quad_vent_break"] = "maps/zombie/fx_zombie_crawler_vent_break";
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x372eacb2, Offset: 0x1b68
 // Size: 0x10
@@ -153,7 +153,7 @@ function function_e7f5550b() {
     level waittill(#"power_on");
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 3, eflags: 0x0
 // Checksum 0x17e182a, Offset: 0x1b80
 // Size: 0xb2
@@ -167,7 +167,7 @@ function trap_fx_monitor(name, side, trap_type) {
     }
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcd634da9, Offset: 0x1c40
 // Size: 0x7a
@@ -179,7 +179,7 @@ function function_885ea84e() {
     level notify(#"hash_147d1558");
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1b420036, Offset: 0x1cc8
 // Size: 0x86
@@ -192,7 +192,7 @@ function function_4d92f4d4() {
     level notify(#"hash_f88bf3ce");
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x97857759, Offset: 0x1d58
 // Size: 0x7a
@@ -204,7 +204,7 @@ function function_a9bf6d81() {
     level notify(#"hash_ac86fefc");
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 3, eflags: 0x1 linked
 // Checksum 0xfba9c75a, Offset: 0x1de0
 // Size: 0x270
@@ -224,10 +224,10 @@ function function_1fc3f4ef(name, side, trap_type) {
     players = getlocalplayers();
     for (i = 0; i < players.size; i++) {
         switch (trap_type) {
-        case 144:
+        case "electric":
             self.loopfx[i] = spawnfx(i, level._effect["zapper"], self.origin, 0, forward, up);
             break;
-        case 145:
+        case "fire":
         default:
             self.loopfx[i] = spawnfx(i, level._effect["fire_trap_med"], self.origin, 0, forward, up);
             break;
@@ -241,7 +241,7 @@ function function_1fc3f4ef(name, side, trap_type) {
     self.loopfx = [];
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 1, eflags: 0x1 linked
 // Checksum 0x606f9567, Offset: 0x2058
 // Size: 0x224
@@ -260,7 +260,7 @@ function function_bbc51c7e(localclientnum) {
     }
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 1, eflags: 0x1 linked
 // Checksum 0x3f12a206, Offset: 0x2288
 // Size: 0x68
@@ -273,7 +273,7 @@ function function_fd0916fe(var_c4d905ce) {
     }
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 1, eflags: 0x1 linked
 // Checksum 0x19b8d9c5, Offset: 0x22f8
 // Size: 0x1dc
@@ -303,7 +303,7 @@ function function_59554ebd(ent_player) {
     setclientvolumetricfog(var_82267cf6, var_370979c5, half_height, var_ce3acb38, var_4f40cb18, var_ad258895, var_ef192488, var_e6f7f220, var_ffae135d, var_e17a08c0, var_9f866ccd, var_706cff38, var_966f79a1, var_bc71f40a, var_14c07505, var_7b5a55b1, time, var_d6eebf82);
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 1, eflags: 0x1 linked
 // Checksum 0x24c03f06, Offset: 0x24e0
 // Size: 0x1dc
@@ -333,7 +333,7 @@ function function_faf77143(ent_player) {
     setclientvolumetricfog(var_82267cf6, var_370979c5, half_height, var_ce3acb38, var_4f40cb18, var_ad258895, var_ef192488, var_e6f7f220, var_ffae135d, var_e17a08c0, var_9f866ccd, var_706cff38, var_966f79a1, var_bc71f40a, var_14c07505, var_7b5a55b1, time, var_d6eebf82);
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8dac57ed, Offset: 0x26c8
 // Size: 0x1dc
@@ -363,7 +363,7 @@ function function_1decddc(ent_player) {
     setclientvolumetricfog(var_82267cf6, var_370979c5, half_height, var_ce3acb38, var_4f40cb18, var_ad258895, var_ef192488, var_e6f7f220, var_ffae135d, var_e17a08c0, var_9f866ccd, var_706cff38, var_966f79a1, var_bc71f40a, var_14c07505, var_7b5a55b1, time, var_d6eebf82);
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 1, eflags: 0x1 linked
 // Checksum 0xcfcc9bdf, Offset: 0x28b0
 // Size: 0x1dc
@@ -393,7 +393,7 @@ function function_6a3198a(ent_player) {
     setclientvolumetricfog(var_82267cf6, var_370979c5, half_height, var_ce3acb38, var_4f40cb18, var_ad258895, var_ef192488, var_e6f7f220, var_ffae135d, var_e17a08c0, var_9f866ccd, var_706cff38, var_966f79a1, var_bc71f40a, var_14c07505, var_7b5a55b1, time, var_d6eebf82);
 }
 
-// Namespace namespace_36389e13
+// Namespace zm_moon_fx
 // Params 1, eflags: 0x1 linked
 // Checksum 0x99218139, Offset: 0x2a98
 // Size: 0x1f4

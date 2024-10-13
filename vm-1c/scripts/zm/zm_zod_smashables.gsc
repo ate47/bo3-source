@@ -14,9 +14,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_783690d8;
+#namespace zm_zod_smashables;
 
-// Namespace namespace_783690d8
+// Namespace zm_zod_smashables
 // Method(s) 19 Total 19
 class class_1143ac18 {
 
@@ -186,7 +186,7 @@ class class_1143ac18 {
     // Size: 0x36
     function private function_d8055c34() {
         self thread function_387c449e();
-        wait(10);
+        wait 10;
         if (isdefined(self)) {
             self notify(#"hash_13f02a5d");
         }
@@ -222,7 +222,7 @@ class class_1143ac18 {
     // Checksum 0x28b91ca8, Offset: 0xae0
     // Size: 0x54
     function function_82bc26b5() {
-        wait(1);
+        wait 1;
         level clientfield::set("breakable_show", self.var_afea543d);
         level clientfield::set("breakable_hide", self.var_6e27ff4);
     }
@@ -246,7 +246,7 @@ class class_1143ac18 {
                 level scene::init(self.m_e_trigger.target, "targetname");
             }
             var_5b3a6271 = function_3408f1a2();
-            add_callback(&namespace_783690d8::function_31bb7714, var_5b3a6271, self.var_afea543d, self.var_6e27ff4);
+            add_callback(&zm_zod_smashables::function_31bb7714, var_5b3a6271, self.var_afea543d, self.var_6e27ff4);
         }
     }
 
@@ -288,7 +288,7 @@ class class_1143ac18 {
         foreach (var_b57e3a38 in a_params) {
             self.var_22f50938[var_b57e3a38] = 1;
             if (var_b57e3a38 == "connect_paths") {
-                add_callback(&namespace_783690d8::function_1e436158);
+                add_callback(&zm_zod_smashables::function_1e436158);
                 continue;
             }
             if (var_b57e3a38 == "any_damage") {
@@ -297,7 +297,7 @@ class class_1143ac18 {
                 }
                 continue;
             }
-            assertmsg("bminteract" + var_b57e3a38 + "bminteract" + self.m_e_trigger.targetname + "bminteract");
+            assertmsg("<dev string:x28>" + var_b57e3a38 + "<dev string:x43>" + self.m_e_trigger.targetname + "<dev string:x54>");
         }
     }
 
@@ -333,7 +333,7 @@ class class_1143ac18 {
 
 }
 
-// Namespace namespace_783690d8
+// Namespace zm_zod_smashables
 // Params 0, eflags: 0x2
 // Checksum 0x873314bf, Offset: 0x408
 // Size: 0x34
@@ -341,7 +341,7 @@ function autoexec function_2dc19561() {
     system::register("zm_zod_smashables", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_783690d8
+// Namespace zm_zod_smashables
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6a6bfee7, Offset: 0x19e0
 // Size: 0xb2
@@ -352,7 +352,7 @@ function __init__() {
     }
 }
 
-// Namespace namespace_783690d8
+// Namespace zm_zod_smashables
 // Params 1, eflags: 0x5 linked
 // Checksum 0xee087432, Offset: 0x1aa0
 // Size: 0xbe
@@ -365,7 +365,7 @@ function private function_98f24ad1(str_targetname) {
     return undefined;
 }
 
-// Namespace namespace_783690d8
+// Namespace zm_zod_smashables
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd83fc7c7, Offset: 0x1b68
 // Size: 0xe6
@@ -381,7 +381,7 @@ function private function_b0597c09(a_models) {
     }
 }
 
-// Namespace namespace_783690d8
+// Namespace zm_zod_smashables
 // Params 0, eflags: 0x5 linked
 // Checksum 0xe898167c, Offset: 0x1c58
 // Size: 0x29a
@@ -398,28 +398,28 @@ function private function_9303865() {
             n_id++;
         }
         if (isdefined(level.var_ac1aab64[str_id])) {
-            assertmsg("bminteract" + str_id + "bminteract");
+            assertmsg("<dev string:x56>" + str_id + "<dev string:x81>");
             continue;
         }
         var_bb87fb61 = new class_1143ac18();
         level.var_ac1aab64[str_id] = var_bb87fb61;
         if (issubstr(str_id, "portal")) {
-            [[ var_bb87fb61 ]]->function_32f1f123(&namespace_8e2647d0::function_54ec766b, str_id);
+            [[ var_bb87fb61 ]]->function_32f1f123(&zm_zod_portals::function_54ec766b, str_id);
         }
         if (issubstr(str_id, "memento")) {
-            [[ var_bb87fb61 ]]->function_32f1f123(&namespace_1f61c67f::function_c2c28545, str_id);
+            [[ var_bb87fb61 ]]->function_32f1f123(&zm_zod_quest::function_c2c28545, str_id);
         }
         if (issubstr(str_id, "beast_kiosk")) {
             [[ var_bb87fb61 ]]->function_32f1f123(&function_98a01ab9, str_id);
         }
         if (str_id === "unlock_quest_key") {
-            [[ var_bb87fb61 ]]->function_32f1f123(&function_1c061892, str_id);
+            [[ var_bb87fb61 ]]->function_32f1f123(&unlock_quest_key, str_id);
         }
         [[ var_bb87fb61 ]]->init(trigger);
     }
 }
 
-// Namespace namespace_783690d8
+// Namespace zm_zod_smashables
 // Params 1, eflags: 0x1 linked
 // Checksum 0x194d5801, Offset: 0x1f00
 // Size: 0x4c
@@ -428,7 +428,7 @@ function function_98a01ab9(str_id) {
     function_14a1c32c("beast_mode_kiosk", str_id);
 }
 
-// Namespace namespace_783690d8
+// Namespace zm_zod_smashables
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc71a8978, Offset: 0x1f58
 // Size: 0xda
@@ -441,28 +441,28 @@ function function_14a1c32c(str_targetname, str_id) {
     }
 }
 
-// Namespace namespace_783690d8
+// Namespace zm_zod_smashables
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbd1dd1bd, Offset: 0x2040
 // Size: 0x18
-function function_1c061892(str_id) {
+function unlock_quest_key(str_id) {
     level.var_c913a45f = 1;
 }
 
-// Namespace namespace_783690d8
+// Namespace zm_zod_smashables
 // Params 5, eflags: 0x1 linked
 // Checksum 0xf72c2cb0, Offset: 0x2060
 // Size: 0xa8
 function add_callback(targetname, fn_callback, param1, param2, param3) {
     var_bb87fb61 = level.var_ac1aab64[targetname];
     if (!isdefined(var_bb87fb61)) {
-        assertmsg("bminteract" + targetname + "bminteract");
+        assertmsg("<dev string:x83>" + targetname + "<dev string:xc4>");
         return;
     }
     [[ var_bb87fb61 ]]->add_callback(fn_callback, param1, param2, param3);
 }
 
-// Namespace namespace_783690d8
+// Namespace zm_zod_smashables
 // Params 0, eflags: 0x5 linked
 // Checksum 0x3e491af4, Offset: 0x2110
 // Size: 0xe2
@@ -477,7 +477,7 @@ function private function_1e436158() {
     }
 }
 
-// Namespace namespace_783690d8
+// Namespace zm_zod_smashables
 // Params 3, eflags: 0x5 linked
 // Checksum 0xef2183cd, Offset: 0x2200
 // Size: 0xd4

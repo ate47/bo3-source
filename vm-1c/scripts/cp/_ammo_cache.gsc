@@ -39,7 +39,7 @@ class class_1e7268a3 {
         }
         var_60a09143.var_ce22f999 = 1;
         var_60a09143 scene::play("p7_fxanim_gp_ammo_resupply_02_open_bundle", var_60a09143);
-        wait(1);
+        wait 1;
         var_d3571721 = 1;
         while (var_d3571721 > 0) {
             var_d3571721 = 0;
@@ -49,7 +49,7 @@ class class_1e7268a3 {
                     var_d3571721++;
                 }
             }
-            wait(0.5);
+            wait 0.5;
         }
         var_60a09143 scene::play("p7_fxanim_gp_ammo_resupply_02_close_bundle", var_60a09143);
         var_60a09143.var_ce22f999 = 0;
@@ -79,7 +79,7 @@ class class_1e7268a3 {
     // Size: 0x3c
     function function_57e40211(w_weapon) {
         switch (w_weapon.name) {
-        case 19:
+        case "minigun_warlord_raid":
             return true;
         }
         return false;
@@ -214,7 +214,7 @@ function __init__() {
 // Checksum 0x647b572c, Offset: 0x388
 // Size: 0x204
 function __main__() {
-    wait(0.05);
+    wait 0.05;
     if (isdefined(level.var_7ba8d184)) {
         level thread [[ level.var_7ba8d184 ]]();
         return;

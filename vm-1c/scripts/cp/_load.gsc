@@ -72,7 +72,7 @@
 // Checksum 0x6c5e9934, Offset: 0xbd8
 // Size: 0x2d4
 function main() {
-    assert(isdefined(level.first_frame), "instant_revive");
+    assert(isdefined(level.first_frame), "<dev string:x28>");
     if (isdefined(level._loadstarted) && level._loadstarted) {
         return;
     }
@@ -138,17 +138,17 @@ function function_c32ba481(var_87423d00, v_color) {
     setdvar("ui_allowDisplayContinue", 1);
     if (isloadingcinematicplaying()) {
         do {
-            wait(0.05);
+            wait 0.05;
         } while (isloadingcinematicplaying());
     } else {
-        wait(1);
+        wait 1;
     }
     foreach (player in level.players) {
         player thread function_84454eb5();
     }
     level flag::wait_till("all_players_spawned");
     level util::streamer_wait(undefined, 0, 10);
-    level notify(#"hash_c79c2551");
+    level notify(#"level_is_go");
     level thread function_dbd0026c(var_87423d00, v_color);
 }
 
@@ -193,10 +193,10 @@ function function_dbd0026c(var_87423d00, v_color) {
     if (level flagsys::get("chyron_active")) {
         level flagsys::wait_till_clear("chyron_active");
     } else {
-        wait(1);
+        wait 1;
     }
     if (isdefined(level.var_75ba074a)) {
-        wait(level.var_75ba074a);
+        wait level.var_75ba074a;
     }
     level util::delay(0.3, undefined, &flag::set, level.var_d83bc14d);
     level util::delay(0.3, undefined, &lui::screen_fade_in, var_87423d00, v_color, "go_fade");
@@ -209,7 +209,7 @@ function function_dbd0026c(var_87423d00, v_color) {
 function function_f063419c() {
     if (isloadingcinematicplaying()) {
         while (isloadingcinematicplaying()) {
-            wait(0.05);
+            wait 0.05;
         }
         level notify(#"hash_b28e9639");
     }
@@ -223,7 +223,7 @@ function function_4dd1a4b() {
     checkpointcreate();
     checkpointcommit();
     flag::wait_till("all_players_spawned");
-    wait(0.5);
+    wait 0.5;
     checkpointcreate();
     checkpointcommit();
 }
@@ -308,7 +308,7 @@ function player_fake_death() {
     self allowprone(1);
     self.ignoreme = 1;
     self enableinvulnerability();
-    wait(1);
+    wait 1;
     self freezecontrols(1);
 }
 
@@ -317,8 +317,8 @@ function player_fake_death() {
 // Checksum 0xc26c13a0, Offset: 0x1888
 // Size: 0xba
 function setfootstepeffect(name, fx) {
-    assert(isdefined(name), "instant_revive");
-    assert(isdefined(fx), "instant_revive");
+    assert(isdefined(name), "<dev string:x54>");
+    assert(isdefined(fx), "<dev string:x7e>");
     if (!isdefined(anim.optionalstepeffects)) {
         anim.optionalstepeffects = [];
     }
@@ -388,7 +388,7 @@ function setup_traversals() {
     // Checksum 0xc8d2bded, Offset: 0x1ce8
     // Size: 0x24
     function function_19d17757() {
-        assert(0, "instant_revive");
+        assert(0, "<dev string:xa6>");
     }
 
 #/
@@ -409,7 +409,7 @@ function function_9b37c2bc() {
 function end_game() {
     level waittill(#"end_game");
     check_end_game_intermission_delay();
-    println("instant_revive");
+    println("<dev string:xbb>");
     util::clientnotify("zesn");
     players = getplayers();
     for (i = 0; i < players.size; i++) {
@@ -422,7 +422,7 @@ function end_game() {
     }
     stopallrumbles();
     level.intermission = 1;
-    wait(0.1);
+    wait 0.1;
     game_over = [];
     survived = [];
     players = getplayers();
@@ -459,8 +459,8 @@ function end_game() {
         players[i] setclientminiscoreboardhide(1);
     }
     uploadstats();
-    wait(1);
-    wait(3.95);
+    wait 1;
+    wait 3.95;
     foreach (icon in survived) {
         icon destroy();
     }
@@ -473,17 +473,17 @@ function end_game() {
         level.var_4c3d1a55 = undefined;
     } else {
         intermission();
-        wait(15);
+        wait 15;
         level notify(#"stop_intermission");
     }
     array::thread_all(getplayers(), &player_exit_level);
-    wait(1.5);
+    wait 1.5;
     players = getplayers();
     for (i = 0; i < players.size; i++) {
         players[i] cameraactivate(0);
     }
     exitlevel(0);
-    wait(666);
+    wait 666;
 }
 
 // Namespace load
@@ -502,7 +502,7 @@ function intermission() {
         players[i] thread player_intermission();
         players[i] stopsounds();
     }
-    wait(0.25);
+    wait 0.25;
     players = getplayers();
     for (i = 0; i < players.size; i++) {
         util::setclientsysstate("lsm", "0", players[i]);
@@ -528,7 +528,7 @@ function player_intermission() {
     if (!isdefined(points) || points.size == 0) {
         points = getentarray("info_intermission", "classname");
         if (points.size < 1) {
-            println("instant_revive");
+            println("<dev string:xcf>");
             return;
         }
     }
@@ -573,15 +573,15 @@ function player_intermission() {
                 self.var_bff517de.alpha = 0;
                 org moveto(target_point.origin, time, var_57ae7e4a, var_57ae7e4a);
                 org rotateto(target_point.angles, time, var_57ae7e4a, var_57ae7e4a);
-                wait(time - var_57ae7e4a);
+                wait time - var_57ae7e4a;
                 self.var_bff517de fadeovertime(var_57ae7e4a);
                 self.var_bff517de.alpha = 1;
-                wait(var_57ae7e4a);
+                wait var_57ae7e4a;
                 continue;
             }
             self.var_bff517de fadeovertime(1);
             self.var_bff517de.alpha = 0;
-            wait(5);
+            wait 5;
             self.var_bff517de thread fade_up_over_time(1);
         }
     }
@@ -618,7 +618,7 @@ function player_exit_level() {
 // Size: 0x26
 function disable_end_game_intermission(delay) {
     level.disable_intermission = 1;
-    wait(delay);
+    wait delay;
     level.disable_intermission = undefined;
 }
 
@@ -632,7 +632,7 @@ function check_end_game_intermission_delay() {
             if (!isdefined(level.disable_intermission)) {
                 break;
             }
-            wait(0.01);
+            wait 0.01;
         }
     }
 }
@@ -644,9 +644,9 @@ function check_end_game_intermission_delay() {
 function onallplayersready() {
     level flag::init("start_coop_logic");
     level thread end_game();
-    println("instant_revive" + getnumexpectedplayers());
+    println("<dev string:xf2>" + getnumexpectedplayers());
     do {
-        wait(0.05);
+        wait 0.05;
         var_f862b7b1 = getnumconnectedplayers(0);
         var_91f98264 = getnumexpectedplayers();
         player_count_actual = 0;
@@ -655,12 +655,12 @@ function onallplayersready() {
                 player_count_actual++;
             }
         }
-        println("instant_revive" + getnumconnectedplayers() + "instant_revive" + getnumexpectedplayers());
+        println("<dev string:x10f>" + getnumconnectedplayers() + "<dev string:x125>" + getnumexpectedplayers());
     } while (var_f862b7b1 < var_91f98264 || player_count_actual < var_91f98264);
     setinitialplayersconnected();
     setdvar("all_players_are_connected", "1");
     /#
-        printtoprightln("instant_revive", (1, 1, 1));
+        printtoprightln("<dev string:x132>", (1, 1, 1));
     #/
     disablegrenadesuicide();
     level flag::set("all_players_connected");

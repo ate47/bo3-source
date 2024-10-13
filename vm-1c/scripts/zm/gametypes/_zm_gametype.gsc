@@ -175,7 +175,7 @@ function do_game_mode_shellshock() {
     self endon(#"disconnect");
     self._being_shellshocked = 1;
     self shellshock("grief_stab_zm", 0.75);
-    wait(0.75);
+    wait 0.75;
     self._being_shellshocked = 0;
 }
 
@@ -218,7 +218,7 @@ function onspawnintermission() {
     spawnpointname = "info_intermission";
     spawnpoints = getentarray(spawnpointname, "classname");
     if (spawnpoints.size < 1) {
-        println("mode" + spawnpointname + "mode");
+        println("<dev string:x28>" + spawnpointname + "<dev string:x2c>");
         return;
     }
     spawnpoint = spawnpoints[randomint(spawnpoints.size)];
@@ -289,12 +289,12 @@ function onspawnplayerunified() {
 // Checksum 0xa136a1f9, Offset: 0x1ac0
 // Size: 0x31c
 function onfindvalidspawnpoint() {
-    println("mode");
+    println("<dev string:x40>");
     if (level flag::get("begin_spawning")) {
         spawnpoint = zm::check_for_valid_spawn_near_team(self, 1);
         /#
             if (!isdefined(spawnpoint)) {
-                println("mode");
+                println("<dev string:x5c>");
             }
         #/
     }
@@ -322,7 +322,7 @@ function onfindvalidspawnpoint() {
         if (!isdefined(spawnpoints) || spawnpoints.size == 0) {
             spawnpoints = struct::get_array("initial_spawn_points", "targetname");
         }
-        assert(isdefined(spawnpoints), "mode");
+        assert(isdefined(spawnpoints), "<dev string:xae>");
         spawnpoint = zm::getfreespawnpoint(spawnpoints, self);
     }
     return spawnpoint;
@@ -345,13 +345,13 @@ function onspawnplayer(predictedspawn) {
         return;
     }
     if (isdefined(level.customspawnlogic)) {
-        println("mode");
+        println("<dev string:xd3>");
         spawnpoint = self [[ level.customspawnlogic ]](predictedspawn);
         if (predictedspawn) {
             return;
         }
     } else {
-        println("mode");
+        println("<dev string:x40>");
         spawnpoint = self onfindvalidspawnpoint();
         if (predictedspawn) {
             self predictspawnpoint(spawnpoint.origin, spawnpoint.angles);
@@ -368,7 +368,7 @@ function onspawnplayer(predictedspawn) {
     self.score = self globallogic_score::getpersstat("score");
     self.pers["participation"] = 0;
     /#
-        if (getdvarint("mode") >= 1) {
+        if (getdvarint("<dev string:xed>") >= 1) {
             self.score = 100000;
         }
     #/
@@ -578,16 +578,16 @@ function menu_onmenuresponse() {
         }
         if (menu == game["menu_team"] && level.allow_teamchange == "1") {
             switch (response) {
-            case 53:
+            case "allies":
                 self [[ level.allies ]]();
                 break;
-            case 55:
+            case "axis":
                 self [[ level.teammenu ]](response);
                 break;
-            case 104:
+            case "autoassign":
                 self [[ level.autoassign ]](1);
                 break;
-            case 105:
+            case "spectator":
                 self [[ level.spectator ]]();
                 break;
             }
@@ -722,7 +722,7 @@ function onplayerspawned() {
 // Size: 0xa4
 function onplayerconnect_check_for_hotjoin() {
     /#
-        if (getdvarint("mode") > 0) {
+        if (getdvarint("<dev string:xfa>") > 0) {
             return;
         }
     #/
@@ -742,7 +742,7 @@ function player_hotjoin() {
     self initialblack();
     self.rebuild_barrier_reward = 1;
     self.is_hotjoining = 1;
-    wait(0.5);
+    wait 0.5;
     if (isdefined(level.givecustomcharacters)) {
         self [[ level.givecustomcharacters ]]();
     }
@@ -766,7 +766,7 @@ function player_hotjoin() {
 function function_e675a6d3() {
     self util::streamer_wait(undefined, 0, 30);
     if (isdefined(level.var_20ae5b37)) {
-        wait(level.var_20ae5b37);
+        wait level.var_20ae5b37;
     }
     initialblackend();
 }

@@ -63,7 +63,7 @@ function grappler_beam(localclientnum, oldval, newval, bnewent, binitialsnap, fi
 // Size: 0x54
 function function_55af4b5b(player, tag, pivot, delay) {
     player endon(#"grappler_done");
-    wait(delay);
+    wait delay;
     thread grapple_beam(player, tag, pivot);
 }
 

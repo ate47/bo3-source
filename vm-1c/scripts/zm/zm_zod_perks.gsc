@@ -22,9 +22,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_bb738c6;
+#namespace zm_zod_perks;
 
-// Namespace namespace_bb738c6
+// Namespace zm_zod_perks
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd342191d, Offset: 0x4f0
 // Size: 0x1f4
@@ -42,7 +42,7 @@ function init() {
     thread function_9a03e439();
 }
 
-// Namespace namespace_bb738c6
+// Namespace zm_zod_perks
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfac6088e, Offset: 0x6f0
 // Size: 0x3f4
@@ -59,13 +59,13 @@ function function_9a03e439() {
     foreach (var_5bca5a82 in var_58b16a23) {
         str_zone = zm_zonemgr::get_zone_from_position(var_5bca5a82.origin, 1);
         switch (str_zone) {
-        case 20:
+        case "zone_slums_high_B":
             n_loc = 1;
             break;
-        case 19:
+        case "zone_canal_high_B":
             n_loc = 2;
             break;
-        case 21:
+        case "zone_theater_high_A":
             n_loc = 3;
             break;
         }
@@ -79,15 +79,15 @@ function function_9a03e439() {
         var_575e35b2 = struct::get(var_8de7611a.target, "targetname");
         var_bcc9fed = util::spawn_model("tag_origin", var_575e35b2.origin, (0, 0, 0));
         switch (var_5bca5a82.script_string) {
-        case 24:
+        case "speedcola_perk":
             thread function_e840e164(n_loc);
             var_bcc9fed thread clientfield::set("perk_bottle_speed_cola_fx", 1);
             break;
-        case 23:
+        case "jugg_perk":
             thread function_588068b3(n_loc);
             var_bcc9fed thread clientfield::set("perk_bottle_juggernog_fx", 1);
             break;
-        case 25:
+        case "tap_perk":
             thread function_8b929f79(n_loc);
             var_bcc9fed thread clientfield::set("perk_bottle_doubletap_fx", 1);
             break;
@@ -95,16 +95,16 @@ function function_9a03e439() {
     }
 }
 
-// Namespace namespace_bb738c6
+// Namespace zm_zod_perks
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe0fd8dca, Offset: 0xaf0
 // Size: 0x2c
 function function_5508b348() {
-    level waittill(#"hash_a7912f12");
+    level waittill(#"revive_on");
     clientfield::set("perk_light_quick_revive", 1);
 }
 
-// Namespace namespace_bb738c6
+// Namespace zm_zod_perks
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb3fb7d4c, Offset: 0xb28
 // Size: 0x2c
@@ -113,7 +113,7 @@ function function_4a2261fa() {
     clientfield::set("perk_light_widows_wine", 1);
 }
 
-// Namespace namespace_bb738c6
+// Namespace zm_zod_perks
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc7000354, Offset: 0xb60
 // Size: 0x2c
@@ -122,7 +122,7 @@ function function_6753e7bb() {
     clientfield::set("perk_light_mule_kick", 1);
 }
 
-// Namespace namespace_bb738c6
+// Namespace zm_zod_perks
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbf64466, Offset: 0xb98
 // Size: 0x34
@@ -131,7 +131,7 @@ function function_55b919e6() {
     level clientfield::set("perk_light_staminup", 1);
 }
 
-// Namespace namespace_bb738c6
+// Namespace zm_zod_perks
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7b9b9062, Offset: 0xbd8
 // Size: 0x3c
@@ -140,7 +140,7 @@ function function_e840e164(var_d80a2da2) {
     level clientfield::set("perk_light_speed_cola", var_d80a2da2);
 }
 
-// Namespace namespace_bb738c6
+// Namespace zm_zod_perks
 // Params 1, eflags: 0x1 linked
 // Checksum 0x75b15369, Offset: 0xc20
 // Size: 0x3c
@@ -149,12 +149,12 @@ function function_588068b3(var_d80a2da2) {
     level clientfield::set("perk_light_juggernog", var_d80a2da2);
 }
 
-// Namespace namespace_bb738c6
+// Namespace zm_zod_perks
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd8053f79, Offset: 0xc68
 // Size: 0x3c
 function function_8b929f79(var_d80a2da2) {
-    level waittill(#"hash_bd00857f");
+    level waittill(#"doubletap_on");
     level clientfield::set("perk_light_doubletap", var_d80a2da2);
 }
 

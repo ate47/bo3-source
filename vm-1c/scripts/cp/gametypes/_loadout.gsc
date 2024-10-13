@@ -270,7 +270,7 @@ function weapon_class_register(weaponname, weapon_type) {
         level.inventory_array[getweapon(weaponname)] = 1;
         return;
     }
-    assert(0, "CLASS_LMG" + weapon_type);
+    assert(0, "<dev string:x28>" + weapon_type);
 }
 
 // Namespace loadout
@@ -488,20 +488,20 @@ function giveloadout(team, weaponclass, var_dc236bc8, var_5a13c491) {
         pixendevent();
     } else {
         pixbeginevent("default class");
-        assert(isdefined(self.pers["CLASS_LMG"]), "CLASS_LMG");
+        assert(isdefined(self.pers["<dev string:x5b>"]), "<dev string:x61>");
         class_num = level.classtoclassnum[weaponclass];
         if (!isdefined(class_num)) {
             if (self util::is_bot()) {
                 class_num = array::random(level.classtoclassnum);
             } else {
-                assert(0, "CLASS_LMG" + weaponclass + "CLASS_LMG");
+                assert(0, "<dev string:x8f>" + weaponclass + "<dev string:xc4>");
             }
         }
         self.class_num = class_num;
         pixendevent();
     }
     var_bb5ce82a = self calcweaponoptions(class_num, 2);
-    println("CLASS_LMG" + self.name + "CLASS_LMG" + level.weaponbasemelee.name + "CLASS_LMG");
+    println("<dev string:xc6>" + self.name + "<dev string:xd1>" + level.weaponbasemelee.name + "<dev string:xdf>");
     self giveweapon(level.weaponbasemelee, var_bb5ce82a);
     self.specialty = self getloadoutperks(class_num);
     if (level.leaguematch) {
@@ -543,7 +543,7 @@ function giveloadout(team, weaponclass, var_dc236bc8, var_5a13c491) {
         if (isdefined(var_5a13c491)) {
             secondaryweaponoptions = var_5a13c491 calcweaponoptions(class_num, 1);
         }
-        println("CLASS_LMG" + self.name + "CLASS_LMG" + sidearm.name + "CLASS_LMG");
+        println("<dev string:xc6>" + self.name + "<dev string:xd1>" + sidearm.name + "<dev string:xfd>");
         var_65ce895e = self getattachmentcosmeticvariantforweapon(class_num, "secondary");
         if (isdefined(var_5a13c491)) {
             var_65ce895e = var_5a13c491 getattachmentcosmeticvariantforweapon(class_num, "secondary");
@@ -565,7 +565,7 @@ function giveloadout(team, weaponclass, var_dc236bc8, var_5a13c491) {
         if (isdefined(var_5a13c491)) {
             primaryweaponoptions = var_5a13c491 calcweaponoptions(class_num, 0);
         }
-        println("CLASS_LMG" + self.name + "CLASS_LMG" + primaryweapon.name + "CLASS_LMG");
+        println("<dev string:xc6>" + self.name + "<dev string:xd1>" + primaryweapon.name + "<dev string:x10b>");
         var_65ce895e = self getattachmentcosmeticvariantforweapon(class_num, "primary");
         if (isdefined(var_5a13c491)) {
             var_65ce895e = var_5a13c491 getattachmentcosmeticvariantforweapon(class_num, "primary");
@@ -591,7 +591,7 @@ function giveloadout(team, weaponclass, var_dc236bc8, var_5a13c491) {
     }
     if (!self hasmaxprimaryweapons()) {
         if (!isusingt7melee()) {
-            println("CLASS_LMG" + self.name + "CLASS_LMG" + level.weaponbasemeleeheld.name + "CLASS_LMG");
+            println("<dev string:xc6>" + self.name + "<dev string:xd1>" + level.weaponbasemeleeheld.name + "<dev string:x119>");
             self giveweapon(level.weaponbasemeleeheld, var_bb5ce82a);
         }
         if (var_1ddab10 == 0) {
@@ -649,7 +649,7 @@ function giveloadout(team, weaponclass, var_dc236bc8, var_5a13c491) {
         primaryoffhandcount = 0;
     }
     if (primaryoffhand != level.weaponnull) {
-        println("CLASS_LMG" + self.name + "CLASS_LMG" + primaryoffhand.name + "CLASS_LMG");
+        println("<dev string:xc6>" + self.name + "<dev string:xd1>" + primaryoffhand.name + "<dev string:x13b>");
         self giveweapon(primaryoffhand);
         self setweaponammoclip(primaryoffhand, primaryoffhandcount);
         self switchtooffhand(primaryoffhand);
@@ -685,7 +685,7 @@ function giveloadout(team, weaponclass, var_dc236bc8, var_5a13c491) {
         secondaryoffhandcount = 0;
     }
     if (secondaryoffhand != level.weaponnull) {
-        println("CLASS_LMG" + self.name + "CLASS_LMG" + secondaryoffhand.name + "CLASS_LMG");
+        println("<dev string:xc6>" + self.name + "<dev string:xd1>" + secondaryoffhand.name + "<dev string:x150>");
         self giveweapon(secondaryoffhand);
         self setweaponammoclip(secondaryoffhand, secondaryoffhandcount);
         self switchtooffhand(secondaryoffhand);
@@ -709,7 +709,7 @@ function giveloadout(team, weaponclass, var_dc236bc8, var_5a13c491) {
         specialoffhandcount = 0;
     }
     if (specialoffhand != level.weaponnull) {
-        println("CLASS_LMG" + self.name + "CLASS_LMG" + specialoffhand.name + "CLASS_LMG");
+        println("<dev string:xc6>" + self.name + "<dev string:xd1>" + specialoffhand.name + "<dev string:x167>");
         self giveweapon(specialoffhand);
         self setweaponammoclip(specialoffhand, specialoffhandcount);
         self switchtooffhand(specialoffhand);
@@ -813,7 +813,7 @@ function onplayerconnecting() {
 // Checksum 0x31393425, Offset: 0x3d20
 // Size: 0x40
 function fadeaway(waitdelay, fadedelay) {
-    wait(waitdelay);
+    wait waitdelay;
     self fadeovertime(fadedelay);
     self.alpha = 0;
 }
@@ -869,7 +869,7 @@ function register_perks() {
         if (!level.perksenabled) {
             continue;
         }
-        println("CLASS_LMG" + self.name + "CLASS_LMG" + perk + "CLASS_LMG");
+        println("<dev string:xc6>" + self.name + "<dev string:x17c>" + perk + "<dev string:x187>");
         self setperk(perk);
     }
     /#
@@ -893,16 +893,16 @@ function cac_modified_vehicle_damage(victim, attacker, damage, meansofdeath, wea
     if (attacker hasperk("specialty_bulletdamage") && isprimarydamage(meansofdeath)) {
         final_damage = damage * (100 + level.cac_bulletdamage_data) / 100;
         /#
-            if (getdvarint("CLASS_LMG")) {
-                println("CLASS_LMG" + attacker.name + "CLASS_LMG");
+            if (getdvarint("<dev string:x192>")) {
+                println("<dev string:x1a0>" + attacker.name + "<dev string:x1a8>");
             }
         #/
     } else {
         final_damage = old_damage;
     }
     /#
-        if (getdvarint("CLASS_LMG")) {
-            println("CLASS_LMG" + final_damage / old_damage + "CLASS_LMG" + old_damage + "CLASS_LMG" + final_damage);
+        if (getdvarint("<dev string:x192>")) {
+            println("<dev string:x1d5>" + final_damage / old_damage + "<dev string:x1ec>" + old_damage + "<dev string:x1fc>" + final_damage);
         }
     #/
     return int(final_damage);
@@ -921,7 +921,7 @@ function cac_modified_damage(victim, attacker, damage, mod, weapon, inflictor, h
     }
     /#
         debug = 0;
-        if (getdvarint("CLASS_LMG")) {
+        if (getdvarint("<dev string:x192>")) {
             debug = 1;
         }
     #/
@@ -930,14 +930,14 @@ function cac_modified_damage(victim, attacker, damage, mod, weapon, inflictor, h
         if (victim hasperk("specialty_armorvest") && !function_1b2a8c(hitloc)) {
             /#
                 if (debug) {
-                    println("CLASS_LMG" + victim.name + "CLASS_LMG" + attacker.name + "CLASS_LMG");
+                    println("<dev string:x1a0>" + victim.name + "<dev string:x20d>" + attacker.name + "<dev string:x221>");
                 }
             #/
         } else {
             final_damage = damage * (100 + level.cac_bulletdamage_data) / 100;
             /#
                 if (debug) {
-                    println("CLASS_LMG" + attacker.name + "CLASS_LMG" + victim.name);
+                    println("<dev string:x1a0>" + attacker.name + "<dev string:x23c>" + victim.name);
                 }
             #/
         }
@@ -945,14 +945,14 @@ function cac_modified_damage(victim, attacker, damage, mod, weapon, inflictor, h
         final_damage = damage * level.cac_armorvest_data * 0.01;
         /#
             if (debug) {
-                println("CLASS_LMG" + attacker.name + "CLASS_LMG" + victim.name);
+                println("<dev string:x1a0>" + attacker.name + "<dev string:x262>" + victim.name);
             }
         #/
     } else if (victim hasperk("specialty_fireproof") && isfiredamage(weapon, mod)) {
         final_damage = damage * (100 - level.cac_fireproof_data) / 100;
         /#
             if (debug) {
-                println("CLASS_LMG" + attacker.name + "CLASS_LMG" + victim.name);
+                println("<dev string:x1a0>" + attacker.name + "<dev string:x287>" + victim.name);
             }
         #/
     } else if (victim hasperk("specialty_flakjacket") && isexplosivedamage(mod) && !weapon.ignoresflakjacket && !victim function_c44068e7(inflictor)) {
@@ -965,7 +965,7 @@ function cac_modified_damage(victim, attacker, damage, mod, weapon, inflictor, h
         final_damage = int(damage * cac_data / 100);
         /#
             if (debug) {
-                println("CLASS_LMG" + victim.name + "CLASS_LMG" + attacker.name + "CLASS_LMG");
+                println("<dev string:x1a0>" + victim.name + "<dev string:x2a5>" + attacker.name + "<dev string:x2bf>");
             }
         #/
     }
@@ -977,7 +977,7 @@ function cac_modified_damage(victim, attacker, damage, mod, weapon, inflictor, h
         victim.cac_debug_weapon = tolower(weapon.name);
         victim.cac_debug_range = int(distance(attacker.origin, victim.origin));
         if (debug) {
-            println("CLASS_LMG" + final_damage / damage + "CLASS_LMG" + damage + "CLASS_LMG" + final_damage);
+            println("<dev string:x1d5>" + final_damage / damage + "<dev string:x1ec>" + damage + "<dev string:x1fc>" + final_damage);
         }
     #/
     final_damage = int(final_damage);
@@ -993,10 +993,10 @@ function cac_modified_damage(victim, attacker, damage, mod, weapon, inflictor, h
 // Size: 0x44
 function isexplosivedamage(meansofdeath) {
     switch (meansofdeath) {
-    case 124:
-    case 125:
-    case 126:
-    case 127:
+    case "MOD_EXPLOSIVE":
+    case "MOD_GRENADE":
+    case "MOD_GRENADE_SPLASH":
+    case "MOD_PROJECTILE_SPLASH":
         return true;
     }
     return false;

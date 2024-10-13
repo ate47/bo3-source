@@ -277,7 +277,7 @@ function spectate_player_watcher() {
             if (!self.watchingactiveclient) {
                 self hud_message::function_b17b90b9();
                 self freezecontrols(0);
-                println("matchesHostedStatsTracked");
+                println("<dev string:x28>");
             }
             self.watchingactiveclient = 1;
         } else {
@@ -288,7 +288,7 @@ function spectate_player_watcher() {
             }
             self.watchingactiveclient = 0;
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -297,14 +297,14 @@ function spectate_player_watcher() {
 // Checksum 0x25a445ba, Offset: 0x2088
 // Size: 0xd2
 function callback_playermigrated() {
-    println("matchesHostedStatsTracked" + self.name + "matchesHostedStatsTracked" + gettime());
+    println("<dev string:x3d>" + self.name + "<dev string:x45>" + gettime());
     if (isdefined(self.connected) && self.connected) {
         self globallogic_ui::updateobjectivetext();
     }
     self thread inform_clientvm_of_migration();
     level.hostmigrationreturnedplayercount++;
     if (level.hostmigrationreturnedplayercount >= level.players.size * 2 / 3) {
-        println("matchesHostedStatsTracked");
+        println("<dev string:x62>");
         level notify(#"hostmigration_enoughplayers");
     }
 }
@@ -315,7 +315,7 @@ function callback_playermigrated() {
 // Size: 0x34
 function inform_clientvm_of_migration() {
     self endon(#"disconnect");
-    wait(1);
+    wait 1;
     self util::clientnotify("hmo");
 }
 
@@ -384,7 +384,7 @@ function callback_playerdisconnect() {
     }
     if (isdefined(self.score) && isdefined(self.pers["team"])) {
         /#
-            print("matchesHostedStatsTracked" + self.pers["matchesHostedStatsTracked"] + "matchesHostedStatsTracked" + self.score);
+            print("<dev string:x89>" + self.pers["<dev string:x96>"] + "<dev string:x9b>" + self.score);
         #/
         level.dropteam += 1;
     }
@@ -664,8 +664,8 @@ function callback_playerdamage(einflictor, eattacker, idamage, idflags, smeansof
     }
     pixbeginevent("PlayerDamage log");
     /#
-        if (getdvarint("matchesHostedStatsTracked")) {
-            println("matchesHostedStatsTracked" + self getentitynumber() + "matchesHostedStatsTracked" + self.health + "matchesHostedStatsTracked" + eattacker.clientid + "matchesHostedStatsTracked" + isplayer(einflictor) + "matchesHostedStatsTracked" + idamage + "matchesHostedStatsTracked" + shitloc);
+        if (getdvarint("<dev string:x9d>")) {
+            println("<dev string:xab>" + self getentitynumber() + "<dev string:xb3>" + self.health + "<dev string:xbc>" + eattacker.clientid + "<dev string:xc7>" + isplayer(einflictor) + "<dev string:xdd>" + idamage + "<dev string:xe6>" + shitloc);
         }
     #/
     if (self.sessionstate != "dead") {
@@ -771,7 +771,7 @@ function isaikillstreakdamage(weapon, einflictor) {
 function finishplayerdamagewrapper(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, psoffsettime, boneindex, vsurfacenormal) {
     pixbeginevent("finishPlayerDamageWrapper");
     if (!level.console && idflags & level.idflags_penetration && isplayer(eattacker)) {
-        println("matchesHostedStatsTracked" + self getentitynumber() + "matchesHostedStatsTracked" + self.health + "matchesHostedStatsTracked" + eattacker.clientid + "matchesHostedStatsTracked" + isplayer(einflictor) + "matchesHostedStatsTracked" + idamage + "matchesHostedStatsTracked" + shitloc);
+        println("<dev string:xef>" + self getentitynumber() + "<dev string:xb3>" + self.health + "<dev string:xbc>" + eattacker.clientid + "<dev string:xc7>" + isplayer(einflictor) + "<dev string:xdd>" + idamage + "<dev string:xe6>" + shitloc);
         eattacker addplayerstat("penetration_shots", 1);
     }
     if (getdvarstring("scr_csmode") != "") {
@@ -972,7 +972,7 @@ function callback_playerkilled(einflictor, attacker, idamage, smeansofdeath, wea
     self.pers["weapon"] = undefined;
     self.killedplayerscurrent = [];
     self.deathcount++;
-    println("matchesHostedStatsTracked" + self.clientid + "matchesHostedStatsTracked" + self.deathcount);
+    println("<dev string:xfb>" + self.clientid + "<dev string:x104>" + self.deathcount);
     if (!isdefined(self.switching_teams)) {
         if (isplayer(attacker) && level.teambased && attacker != self && self.team == attacker.team) {
             self.pers["cur_kill_streak"] = 0;
@@ -1163,7 +1163,7 @@ function callback_playerkilled(einflictor, attacker, idamage, smeansofdeath, wea
         attackerstring = attacker getxuid() + "(" + lpattackname + ")";
     }
     /#
-        print("matchesHostedStatsTracked" + smeansofdeath + "matchesHostedStatsTracked" + weapon.name + "matchesHostedStatsTracked" + attackerstring + "matchesHostedStatsTracked" + idamage + "matchesHostedStatsTracked" + shitloc + "matchesHostedStatsTracked" + int(self.origin[0]) + "matchesHostedStatsTracked" + int(self.origin[1]) + "matchesHostedStatsTracked" + int(self.origin[2]));
+        print("<dev string:x117>" + smeansofdeath + "<dev string:x11a>" + weapon.name + "<dev string:x11c>" + attackerstring + "<dev string:x121>" + idamage + "<dev string:x125>" + shitloc + "<dev string:x129>" + int(self.origin[0]) + "<dev string:x12d>" + int(self.origin[1]) + "<dev string:x12d>" + int(self.origin[2]));
     #/
     level thread globallogic::updateteamstatus();
     killcamentity = self getkillcamentity(attacker, einflictor, weapon);
@@ -1218,7 +1218,7 @@ function callback_playerkilled(einflictor, attacker, idamage, smeansofdeath, wea
         self thread [[ level.spawnplayerprediction ]]();
     }
     profilelog_endtiming(7, "gs=" + game["state"] + " zom=" + sessionmodeiszombiesgame());
-    wait(0.25);
+    wait 0.25;
     self.cancelkillcam = 0;
     defaultplayerdeathwatchtime = 1.75;
     if (smeansofdeath == "MOD_MELEE_ASSASSINATE" || 0 > weapon.deathcamtime) {
@@ -1232,7 +1232,7 @@ function callback_playerkilled(einflictor, attacker, idamage, smeansofdeath, wea
     globallogic_utils::function_b59d6fa4(defaultplayerdeathwatchtime);
     self notify(#"death_delay_finished");
     /#
-        if (getdvarint("matchesHostedStatsTracked") != 0) {
+        if (getdvarint("<dev string:x12f>") != 0) {
             dokillcam = 1;
             if (lpattacknum < 0) {
                 lpattacknum = self getentitynumber();
@@ -1287,9 +1287,9 @@ function function_188bdae1() {
         starttime = gettime();
         waittime = self.var_814158b9 * 1000;
         while (gettime() < starttime + waittime && isdefined(self.var_814158b9)) {
-            wait(0.1);
+            wait 0.1;
         }
-        wait(2);
+        wait 2;
         self.var_814158b9 = undefined;
     }
 }
@@ -1364,7 +1364,7 @@ function function_a1ea27f6() {
                 break;
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -1516,14 +1516,14 @@ function delaystartragdoll(ent, shitloc, vdir, weapon, einflictor, smeansofdeath
             var_a207fba7 = 2.5;
         }
         ent startragdoll(1);
-        wait(0.05);
+        wait 0.05;
         if (!isdefined(ent)) {
             return;
         }
         physicsexplosionsphere(explosionpos, explosionradius, explosionradius / 2, var_a207fba7);
         return;
     }
-    wait(0.2);
+    wait 0.2;
     if (!isdefined(ent)) {
         return;
     }
@@ -1539,7 +1539,7 @@ function delaystartragdoll(ent, shitloc, vdir, weapon, einflictor, smeansofdeath
         }
     }
     waittime = startfrac * getanimlength(deathanim);
-    wait(waittime);
+    wait waittime;
     if (isdefined(ent)) {
         ent startragdoll(1);
     }
@@ -1614,18 +1614,18 @@ function giveattackerandinflictorownerassist(eattacker, einflictor, idamage, sme
 // Size: 0xb6
 function function_889dbeab(weapon, smeansofdeath) {
     switch (weapon.name) {
-    case 196:
+    case "knife_ballistic":
         if (smeansofdeath != "MOD_HEAD_SHOT" && smeansofdeath != "MOD_MELEE") {
             smeansofdeath = "MOD_PISTOL_BULLET";
         }
         break;
-    case 195:
+    case "dog_bite":
         smeansofdeath = "MOD_PISTOL_BULLET";
         break;
-    case 116:
+    case "destructible_car":
         smeansofdeath = "MOD_EXPLOSIVE";
         break;
-    case 114:
+    case "explodable_barrel":
         smeansofdeath = "MOD_EXPLOSIVE";
         break;
     }

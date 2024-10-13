@@ -17,9 +17,9 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_c30b09d6;
+#namespace zm_genesis_hope;
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 0, eflags: 0x2
 // Checksum 0x531d19bf, Offset: 0x430
 // Size: 0x3c
@@ -27,7 +27,7 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_hope", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf78e035d, Offset: 0x478
 // Size: 0x134
@@ -39,21 +39,21 @@ function __init__() {
     level flag::init("hope_done");
     level.var_fa9755d7 = 0;
     /#
-        if (getdvarint("scriptmover") > 0) {
+        if (getdvarint("<dev string:x28>") > 0) {
             level thread function_dfd4e9f8();
         }
     #/
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf73896c0, Offset: 0x5b8
 // Size: 0xc
 function __main__() {
-    wait(0.1);
+    wait 0.1;
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9b872365, Offset: 0x5d0
 // Size: 0x2a4
@@ -79,7 +79,7 @@ function start() {
         }
     }
     /#
-        iprintlnbold("scriptmover" + var_61d59a5a.size + "scriptmover");
+        iprintlnbold("<dev string:x35>" + var_61d59a5a.size + "<dev string:x4d>");
     #/
     if (var_61d59a5a.size == var_d028d3a8.size) {
         level clientfield::set("hope_state", 1);
@@ -87,7 +87,7 @@ function start() {
     }
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9bb66ca9, Offset: 0x880
 // Size: 0x11c
@@ -102,7 +102,7 @@ function function_bb1fbc7f() {
     var_8dc2ea89 zm_unitrigger::create_unitrigger("", 64, &function_2650d73f, &function_46cfcb01, "unitrigger_radius_use");
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 1, eflags: 0x1 linked
 // Checksum 0xda506515, Offset: 0x9a8
 // Size: 0x6c
@@ -115,7 +115,7 @@ function function_4903bec6(player) {
     return false;
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf713338a, Offset: 0xa20
 // Size: 0xc0
@@ -136,7 +136,7 @@ function function_ed25d0f2() {
     }
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 1, eflags: 0x1 linked
 // Checksum 0x58f2fe43, Offset: 0xae8
 // Size: 0x64
@@ -146,12 +146,12 @@ function function_b38baf01(e_triggerer) {
     e_triggerer playsound("zmb_overachiever_spark_pickup");
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 0, eflags: 0x1 linked
 // Checksum 0x76a7fbf3, Offset: 0xb58
 // Size: 0xd4
 function function_ba9b0148() {
-    level endon(#"hash_94736a8a");
+    level endon(#"hope_done");
     self clientfield::set_to_player("hope_spark", 1);
     self clientfield::set_player_uimodel("zmInventory.super_ee", 1);
     self waittill(#"damage");
@@ -159,11 +159,11 @@ function function_ba9b0148() {
     self clientfield::set_player_uimodel("zmInventory.super_ee", 0);
     self playsound("zmb_overachiever_spark_lose");
     /#
-        iprintlnbold("scriptmover");
+        iprintlnbold("<dev string:x58>");
     #/
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 1, eflags: 0x1 linked
 // Checksum 0x50a964c9, Offset: 0xc38
 // Size: 0xd4
@@ -183,7 +183,7 @@ function function_2650d73f(player) {
     return false;
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc61d6b27, Offset: 0xd18
 // Size: 0xf8
@@ -208,7 +208,7 @@ function function_46cfcb01() {
     }
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 1, eflags: 0x1 linked
 // Checksum 0x39521246, Offset: 0xe18
 // Size: 0x2b4
@@ -220,10 +220,10 @@ function function_6143b210(e_triggerer) {
     util::wait_network_frame();
     var_8ccfc8c3 playsound("zmb_overachiever_spark_spawn");
     var_8ccfc8c3 clientfield::set("hope_spark", 1);
-    wait(2);
+    wait 2;
     s_target = struct::get(s_start.target);
     var_8ccfc8c3 moveto(s_target.origin, 2);
-    wait(3);
+    wait 3;
     s_target = struct::get(s_target.target);
     var_8ccfc8c3 moveto(s_target.origin, 2);
     var_8ccfc8c3 waittill(#"movedone");
@@ -232,12 +232,12 @@ function function_6143b210(e_triggerer) {
     playsoundatposition("zmb_overachiever_spark_success", (0, 0, 0));
     level.var_5d888f14 = &function_afddb902;
     level.magicbox_should_upgrade_weapon_override = &function_7e7eb906;
-    namespace_6cd5f23f::function_cc8ae246(-56);
+    zm_genesis_timer::function_cc8ae246(-56);
     level thread bgb::function_93da425("zm_bgb_crate_power", &function_f648c43);
     level thread bgb::function_93da425("zm_bgb_wall_power", &function_f648c43);
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 2, eflags: 0x1 linked
 // Checksum 0xec32bbab, Offset: 0x10d8
 // Size: 0x18
@@ -245,7 +245,7 @@ function function_7e7eb906(e_player, w_weapon) {
     return true;
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 0, eflags: 0x1 linked
 // Checksum 0x987b40f3, Offset: 0x10f8
 // Size: 0x8
@@ -253,7 +253,7 @@ function function_afddb902() {
     return true;
 }
 
-// Namespace namespace_c30b09d6
+// Namespace zm_genesis_hope
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe9909b22, Offset: 0x1108
 // Size: 0x6
@@ -263,54 +263,54 @@ function function_f648c43() {
 
 /#
 
-    // Namespace namespace_c30b09d6
+    // Namespace zm_genesis_hope
     // Params 0, eflags: 0x1 linked
     // Checksum 0x2bab5dca, Offset: 0x1118
     // Size: 0xec
     function function_dfd4e9f8() {
-        level thread namespace_cb655c88::function_72260d3a("scriptmover", "scriptmover", 1, &function_7ecb414e);
-        level thread namespace_cb655c88::function_72260d3a("scriptmover", "scriptmover", 1, &function_3246e71d);
-        level thread namespace_cb655c88::function_72260d3a("scriptmover", "scriptmover", 1, &function_3ff1131a);
-        level thread namespace_cb655c88::function_72260d3a("scriptmover", "scriptmover", 1, &function_8070468);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x82>", "<dev string:xc1>", 1, &function_7ecb414e);
+        level thread zm_genesis_util::function_72260d3a("<dev string:xd1>", "<dev string:xf4>", 1, &function_3246e71d);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x103>", "<dev string:x128>", 1, &function_3ff1131a);
+        level thread zm_genesis_util::function_72260d3a("<dev string:x139>", "<dev string:x15d>", 1, &function_8070468);
     }
 
-    // Namespace namespace_c30b09d6
+    // Namespace zm_genesis_hope
     // Params 1, eflags: 0x1 linked
     // Checksum 0xb1e1ccfc, Offset: 0x1210
     // Size: 0x4c
     function function_3246e71d(n_val) {
-        level clientfield::set("scriptmover", 1);
+        level clientfield::set("<dev string:x16d>", 1);
         level thread function_bb1fbc7f();
     }
 
-    // Namespace namespace_c30b09d6
+    // Namespace zm_genesis_hope
     // Params 1, eflags: 0x1 linked
     // Checksum 0xd74b28be, Offset: 0x1268
     // Size: 0x4c
     function function_3ff1131a(n_val) {
-        level clientfield::set("scriptmover", 2);
+        level clientfield::set("<dev string:x16d>", 2);
         level thread function_bb1fbc7f();
     }
 
-    // Namespace namespace_c30b09d6
+    // Namespace zm_genesis_hope
     // Params 1, eflags: 0x1 linked
     // Checksum 0xb8a5bb70, Offset: 0x12c0
     // Size: 0x6c
     function function_8070468(n_val) {
-        level clientfield::set("scriptmover", 3);
+        level clientfield::set("<dev string:x16d>", 3);
         level thread function_bb1fbc7f();
-        level flag::set("scriptmover");
+        level flag::set("<dev string:x178>");
     }
 
-    // Namespace namespace_c30b09d6
+    // Namespace zm_genesis_hope
     // Params 1, eflags: 0x1 linked
     // Checksum 0x18277b2f, Offset: 0x1338
     // Size: 0x6c
     function function_7ecb414e(n_val) {
-        level clientfield::set("scriptmover", 1);
+        level clientfield::set("<dev string:x16d>", 1);
         level thread function_bb1fbc7f();
         /#
-            iprintlnbold("scriptmover");
+            iprintlnbold("<dev string:x182>");
         #/
     }
 

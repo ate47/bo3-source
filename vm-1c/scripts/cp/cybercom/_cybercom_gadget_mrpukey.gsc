@@ -188,7 +188,7 @@ function private function_2de61c3f(slot, weapon) {
                     continue;
                 }
                 self thread challenges::function_96ed590f("cybercom_uses_chaos");
-                item.target thread function_25411db1(upgraded, 0, self, weapon);
+                item.target thread _puke(upgraded, 0, self, weapon);
                 fired++;
                 continue;
             }
@@ -215,14 +215,14 @@ function private function_2de61c3f(slot, weapon) {
 // Params 4, eflags: 0x5 linked
 // Checksum 0xbdb74fcd, Offset: 0x10b8
 // Size: 0x1ec
-function private function_25411db1(upgraded, secondary, attacker, weapon) {
+function private _puke(upgraded, secondary, attacker, weapon) {
     if (!isdefined(upgraded)) {
         upgraded = 0;
     }
     if (!isdefined(secondary)) {
         secondary = 0;
     }
-    self notify(#"hash_f8c5dd60", weapon, attacker);
+    self notify(#"cybercom_action", weapon, attacker);
     weapon = getweapon("gadget_mrpukey");
     self.ignoreall = 1;
     self.is_disabled = 1;
@@ -235,7 +235,7 @@ function private function_25411db1(upgraded, secondary, attacker, weapon) {
         }
         return;
     }
-    wait(0.2);
+    wait 0.2;
     if (isdefined(self)) {
         if (isdefined(self.voiceprefix) && isdefined(self.var_273d3e89)) {
             self thread battlechatter::function_81d8fcf2(self.voiceprefix + self.var_273d3e89 + "_exert_sonic", 1);
@@ -290,15 +290,15 @@ function function_da7ef8ba(target, var_9bc2efcb, upgraded) {
         type = self cybercom::function_5e3d3aa();
         self orientmode("face default");
         self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
-        self waittillmatch(#"hash_39fa7e38", "fire");
+        self waittillmatch(#"ai_cybercom_anim", "fire");
     }
     weapon = getweapon("gadget_mrpukey");
     foreach (guy in validtargets) {
         if (!cybercom::function_7a7d1608(guy, weapon)) {
             continue;
         }
-        guy thread function_25411db1(upgraded, 0, self);
-        wait(0.05);
+        guy thread _puke(upgraded, 0, self);
+        wait 0.05;
     }
 }
 

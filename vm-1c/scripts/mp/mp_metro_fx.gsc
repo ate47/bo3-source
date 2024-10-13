@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_dbba1d69;
+#namespace mp_metro_fx;
 
-// Namespace namespace_dbba1d69
+// Namespace mp_metro_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x90
 // Size: 0x4

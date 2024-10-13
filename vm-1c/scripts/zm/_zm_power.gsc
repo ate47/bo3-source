@@ -50,14 +50,14 @@ function __main__() {
     // Size: 0xf0
     function debug_powered_items() {
         while (true) {
-            if (getdvarint("zmb_turn_on")) {
+            if (getdvarint("<dev string:x28>")) {
                 if (isdefined(level.local_power)) {
                     foreach (localpower in level.local_power) {
                         circle(localpower.origin, localpower.radius, (1, 0, 0), 0, 1, 1);
                     }
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -330,7 +330,7 @@ function revert_power_to_list(delta, origin, radius, powered_list) {
 function revert_power(delta, origin, radius, powered_list) {
     if (delta > 0) {
         self.depowered_count--;
-        assert(self.depowered_count >= 0, "zmb_turn_on");
+        assert(self.depowered_count >= 0, "<dev string:x40>");
         if (self.depowered_count == 0 && self.powered_count > 0 && !self.power) {
             self.power = 1;
             self [[ self.power_on_func ]](origin, radius);
@@ -339,7 +339,7 @@ function revert_power(delta, origin, radius, powered_list) {
     }
     if (delta < 0) {
         self.powered_count--;
-        assert(self.powered_count >= 0, "zmb_turn_on");
+        assert(self.powered_count >= 0, "<dev string:x62>");
         if (self.powered_count == 0 && self.power) {
             self.power = 0;
             self [[ self.power_off_func ]](origin, radius);
@@ -353,7 +353,7 @@ function revert_power(delta, origin, radius, powered_list) {
 // Size: 0xda
 function add_local_power(origin, radius) {
     localpower = spawnstruct();
-    println("zmb_turn_on" + origin + "zmb_turn_on" + radius + "zmb_turn_on");
+    println("<dev string:x84>" + origin + "<dev string:xa1>" + radius + "<dev string:xaa>");
     localpower.origin = origin;
     localpower.radius = radius;
     localpower.enabled_list = change_power_in_radius(1, origin, radius);
@@ -393,7 +393,7 @@ function move_local_power(localpower, origin) {
 // Checksum 0xf495497b, Offset: 0x1a70
 // Size: 0x134
 function end_local_power(localpower) {
-    println("zmb_turn_on" + localpower.origin + "zmb_turn_on" + localpower.radius + "zmb_turn_on");
+    println("<dev string:xac>" + localpower.origin + "<dev string:xa1>" + localpower.radius + "<dev string:xaa>");
     if (isdefined(localpower.enabled_list)) {
         revert_power_to_list(-1, localpower.origin, localpower.radius, localpower.enabled_list);
     }
@@ -480,7 +480,7 @@ function set_global_power(on_off) {
 // Size: 0xe8
 function global_power(on_off) {
     if (on_off) {
-        println("zmb_turn_on");
+        println("<dev string:xca>");
         if (!self.power) {
             self.power = 1;
             self [[ self.power_on_func ]]();
@@ -488,9 +488,9 @@ function global_power(on_off) {
         self.powered_count++;
         return;
     }
-    println("zmb_turn_on");
+    println("<dev string:xe5>");
     self.powered_count--;
-    assert(self.powered_count >= 0, "zmb_turn_on");
+    assert(self.powered_count >= 0, "<dev string:x62>");
     if (self.powered_count == 0 && self.power) {
         self.power = 0;
         self [[ self.power_off_func ]]();
@@ -577,7 +577,7 @@ function door_range(delta, origin, radius) {
 // Checksum 0xc771f54d, Offset: 0x2240
 // Size: 0x5c
 function door_power_on(origin, radius) {
-    println("zmb_turn_on");
+    println("<dev string:x101>");
     self.target.power_on = 1;
     self.target notify(#"power_on");
 }
@@ -587,7 +587,7 @@ function door_power_on(origin, radius) {
 // Checksum 0xc649f6, Offset: 0x22a8
 // Size: 0x5c
 function door_power_off(origin, radius) {
-    println("zmb_turn_on");
+    println("<dev string:x116>");
     self.target notify(#"power_off");
     self.target.power_on = 0;
 }
@@ -597,7 +597,7 @@ function door_power_off(origin, radius) {
 // Checksum 0x2210bc04, Offset: 0x2310
 // Size: 0x5c
 function door_local_power_on(origin, radius) {
-    println("zmb_turn_on");
+    println("<dev string:x12c>");
     self.target.local_power_on = 1;
     self.target notify(#"local_power_on");
 }
@@ -607,7 +607,7 @@ function door_local_power_on(origin, radius) {
 // Checksum 0x4e5d2eb9, Offset: 0x2378
 // Size: 0x5c
 function door_local_power_off(origin, radius) {
-    println("zmb_turn_on");
+    println("<dev string:x149>");
     self.target notify(#"local_power_off");
     self.target.local_power_on = 0;
 }
@@ -653,10 +653,10 @@ function zombie_range(delta, origin, radius) {
 // Checksum 0x6937ec36, Offset: 0x2510
 // Size: 0x86
 function zombie_power_off(origin, radius) {
-    println("zmb_turn_on");
+    println("<dev string:x167>");
     for (i = 0; i < self.zombies.size; i++) {
         self.zombies[i] thread stun_zombie();
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -670,7 +670,7 @@ function stun_zombie() {
     self endon(#"stun_zombie");
     if (self.health <= 0) {
         /#
-            iprintln("zmb_turn_on");
+            iprintln("<dev string:x180>");
         #/
         return;
     }
@@ -707,7 +707,7 @@ function perk_range(delta, origin, radius) {
 // Checksum 0x8bad1c29, Offset: 0x2738
 // Size: 0x9c
 function perk_power_on(origin, radius) {
-    println("zmb_turn_on" + self.target zm_perks::getvendingmachinenotify() + "zmb_turn_on");
+    println("<dev string:x19d>" + self.target zm_perks::getvendingmachinenotify() + "<dev string:x1af>");
     level notify(self.target zm_perks::getvendingmachinenotify() + "_on");
     zm_perks::perk_unpause(self.target.script_noteworthy);
 }
@@ -723,7 +723,7 @@ function perk_power_off(origin, radius) {
             return;
         }
     }
-    println("zmb_turn_on" + self.target.script_noteworthy + "zmb_turn_on");
+    println("<dev string:x19d>" + self.target.script_noteworthy + "<dev string:x1b4>");
     self.target notify(#"death");
     self.target thread zm_perks::vending_trigger_think();
     if (isdefined(self.target.perk_hum)) {

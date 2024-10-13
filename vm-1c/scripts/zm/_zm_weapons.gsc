@@ -130,7 +130,7 @@ function makegrenadedudanddestroy() {
     self endon(#"death");
     self notify(#"grenade_dud");
     self makegrenadedud();
-    wait(3);
+    wait 3;
     if (isdefined(self)) {
         self delete();
     }
@@ -180,7 +180,7 @@ function function_5846b5e2(time) {
     self endon(#"grenade_dud");
     self endon(#"done");
     self endon(#"explode");
-    wait(time);
+    wait time;
     if (isdefined(self)) {
         self notify(#"done");
     }
@@ -332,18 +332,18 @@ function function_4f42dd4c() {
         self.lastfiretime = gettime();
         self.hasdonecombat = 1;
         switch (curweapon.weapclass) {
-        case 8:
-        case 9:
-        case 10:
-        case 11:
-        case 12:
-        case 14:
-        case 15:
+        case "mg":
+        case "pistol":
+        case "pistol spread":
+        case "pistolspread":
+        case "rifle":
+        case "smg":
+        case "spread":
             self weapons::trackweaponfire(curweapon);
             level.globalshotsfired++;
             break;
-        case 7:
-        case 13:
+        case "grenade":
+        case "rocketlauncher":
             self addweaponstat(curweapon, "shots", 1);
             break;
         default:
@@ -472,8 +472,8 @@ function function_fc84698b() {
 // Size: 0x8c
 function function_10ac3f1(weaponname) {
     watcher = self weaponobjects::createuseweaponobjectwatcher(weaponname, self.team);
-    watcher.onspawn = &namespace_d5fba823::on_spawn;
-    watcher.onspawnretrievetriggers = &namespace_d5fba823::on_spawn_retrieve_trigger;
+    watcher.onspawn = &_zm_weap_ballistic_knife::on_spawn;
+    watcher.onspawnretrievetriggers = &_zm_weap_ballistic_knife::on_spawn_retrieve_trigger;
     watcher.storedifferentobject = 1;
     watcher.headicon = 0;
 }
@@ -524,12 +524,12 @@ function add_zombie_weapon(weapon_name, upgrade_name, hint, cost, weaponvo, weap
     struct.var_e44dc8f1 = [];
     if ("" != var_e44dc8f1) {
         var_334cc84c = strtok(var_e44dc8f1, " ");
-        assert(6 >= var_334cc84c.size, weapon_name + "mg");
+        assert(6 >= var_334cc84c.size, weapon_name + "<dev string:x28>");
         foreach (attachment in var_334cc84c) {
             struct.var_e44dc8f1[struct.var_e44dc8f1.size] = attachment;
         }
     }
-    println("mg" + weapon_name);
+    println("<dev string:x51>" + weapon_name);
     struct.is_in_box = level.zombie_include_weapons[weapon];
     if (!isdefined(ammo_cost)) {
         ammo_cost = zm_utility::round_up_to_ten(int(cost * 0.5));
@@ -605,7 +605,7 @@ function include_zombie_weapon(weapon_name, in_box) {
     if (!isdefined(in_box)) {
         in_box = 1;
     }
-    println("mg" + weapon_name);
+    println("<dev string:x6d>" + weapon_name);
     level.zombie_include_weapons[getweapon(weapon_name)] = in_box;
 }
 
@@ -871,11 +871,11 @@ function add_dynamic_wallbuy(weapon, wallbuy, pristine) {
         }
     }
     if (!isdefined(spawned_wallbuy)) {
-        assertmsg("mg");
+        assertmsg("<dev string:x87>");
         return;
     }
     if (isdefined(spawned_wallbuy.trigger_stub)) {
-        assertmsg("mg");
+        assertmsg("<dev string:xa3>");
         return;
     }
     target_struct = struct::get(wallbuy, "targetname");
@@ -1131,7 +1131,7 @@ function init_weapon_upgrade() {
 // Checksum 0xc5d047a7, Offset: 0x4a50
 // Size: 0x5a
 function get_weapon_hint(weapon) {
-    assert(isdefined(level.zombie_weapons[weapon]), weapon.name + "mg");
+    assert(isdefined(level.zombie_weapons[weapon]), weapon.name + "<dev string:xc1>");
     return level.zombie_weapons[weapon].hint;
 }
 
@@ -1140,7 +1140,7 @@ function get_weapon_hint(weapon) {
 // Checksum 0xdff295ff, Offset: 0x4ab8
 // Size: 0x5a
 function get_weapon_cost(weapon) {
-    assert(isdefined(level.zombie_weapons[weapon]), weapon.name + "mg");
+    assert(isdefined(level.zombie_weapons[weapon]), weapon.name + "<dev string:xc1>");
     return level.zombie_weapons[weapon].cost;
 }
 
@@ -1149,7 +1149,7 @@ function get_weapon_cost(weapon) {
 // Checksum 0xebbf3f4f, Offset: 0x4b20
 // Size: 0x5a
 function get_ammo_cost(weapon) {
-    assert(isdefined(level.zombie_weapons[weapon]), weapon.name + "mg");
+    assert(isdefined(level.zombie_weapons[weapon]), weapon.name + "<dev string:xc1>");
     return level.zombie_weapons[weapon].ammo_cost;
 }
 
@@ -1158,7 +1158,7 @@ function get_ammo_cost(weapon) {
 // Checksum 0x7049ba4, Offset: 0x4b88
 // Size: 0x7c
 function get_upgraded_ammo_cost(weapon) {
-    assert(isdefined(level.zombie_weapons[weapon]), weapon.name + "mg");
+    assert(isdefined(level.zombie_weapons[weapon]), weapon.name + "<dev string:xc1>");
     if (isdefined(level.zombie_weapons[weapon].upgraded_ammo_cost)) {
         return level.zombie_weapons[weapon].upgraded_ammo_cost;
     }
@@ -1200,7 +1200,7 @@ function get_ammo_cost_for_weapon(w_current, n_base_non_wallbuy_cost, n_upgraded
 // Checksum 0xb857a559, Offset: 0x4d70
 // Size: 0x5a
 function get_is_in_box(weapon) {
-    assert(isdefined(level.zombie_weapons[weapon]), weapon.name + "mg");
+    assert(isdefined(level.zombie_weapons[weapon]), weapon.name + "<dev string:xc1>");
     return level.zombie_weapons[weapon].is_in_box;
 }
 
@@ -1209,7 +1209,7 @@ function get_is_in_box(weapon) {
 // Checksum 0xe92b5690, Offset: 0x4dd8
 // Size: 0x5a
 function function_4f54ceec(weapon) {
-    assert(isdefined(level.zombie_weapons[weapon]), weapon.name + "mg");
+    assert(isdefined(level.zombie_weapons[weapon]), weapon.name + "<dev string:xc1>");
     return level.zombie_weapons[weapon].var_e44dc8f1;
 }
 
@@ -1294,7 +1294,7 @@ function get_attachment_index(weapon) {
             }
         }
     }
-    println("mg" + weapon.name);
+    println("<dev string:xfd>" + weapon.name);
     return -1;
 }
 
@@ -1647,7 +1647,7 @@ function weapon_spawn_think() {
             continue;
         }
         if (!player zm_magicbox::can_buy_weapon()) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (isdefined(self.stub.require_look_from) && isdefined(self.stub) && self.stub.require_look_from) {
@@ -1659,7 +1659,7 @@ function weapon_spawn_think() {
             }
         }
         if (player zm_utility::has_powerup_weapon()) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         player_has_weapon = player has_weapon_or_upgrade(self.weapon);
@@ -1887,7 +1887,7 @@ function weapon_show(player) {
     }
     self.og_origin = self.origin;
     self.origin += anglestoforward((0, yaw, 0)) * 8;
-    wait(0.05);
+    wait 0.05;
     self show();
     zm_utility::play_sound_at_pos("weapon_show", self.origin, self);
     time = 1;
@@ -1944,8 +1944,8 @@ function get_pack_a_punch_weapon_options(weapon) {
         reticle_index = plain_reticle_index;
     }
     /#
-        if (getdvarint("mg") >= 0) {
-            reticle_index = getdvarint("mg");
+        if (getdvarint("<dev string:x131>") >= 0) {
+            reticle_index = getdvarint("<dev string:x131>");
         }
     #/
     var_87239a14 = 8;
@@ -1999,13 +1999,13 @@ function give_build_kit_weapon(weapon) {
             camo = 0;
         }
         weapon_options = self calcweaponoptions(camo, 0, 0);
-        var_65ce895e = 0;
+        acvi = 0;
     } else {
         weapon = self getbuildkitweapon(weapon, upgraded);
         weapon_options = self getbuildkitweaponoptions(weapon, camo);
-        var_65ce895e = self getbuildkitattachmentcosmeticvariantindexes(weapon, upgraded);
+        acvi = self getbuildkitattachmentcosmeticvariantindexes(weapon, upgraded);
     }
-    self giveweapon(weapon, weapon_options, var_65ce895e);
+    self giveweapon(weapon, weapon_options, acvi);
     return weapon;
 }
 
@@ -2044,7 +2044,7 @@ function weapon_give(weapon, var_f9f5d998, magic_box, nosound, b_switch_weapon) 
     }
     if (self hasweapon(weapon)) {
         if (weapon.isballisticknife) {
-            self notify(#"hash_987c489b");
+            self notify(#"zmb_lost_knife");
         }
         self givestartammo(weapon);
         if (!zm_utility::is_offhand_weapon(weapon)) {
@@ -2114,7 +2114,7 @@ function weapon_give(weapon, var_f9f5d998, magic_box, nosound, b_switch_weapon) 
         if (isdefined(current_weapon)) {
             if (!zm_utility::is_offhand_weapon(weapon)) {
                 if (current_weapon.isballisticknife) {
-                    self notify(#"hash_987c489b");
+                    self notify(#"zmb_lost_knife");
                 }
                 self weapon_take(current_weapon);
                 if (isdefined(initial_current_weapon) && issubstr(initial_current_weapon.name, "dualoptic")) {
@@ -2482,7 +2482,7 @@ function create_loadout(weapons) {
             weapon = getweapon(weapon);
         }
         if (weapon == weaponnone) {
-            println("mg" + weapon.name);
+            println("<dev string:x149>" + weapon.name);
         }
         loadout.weapons[weapon.name] = get_default_weapondata(weapon);
         if (!isdefined(loadout.current)) {

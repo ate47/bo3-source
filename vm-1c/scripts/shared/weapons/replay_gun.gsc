@@ -8,9 +8,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_6ba28cbf;
+#namespace replay_gun;
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 0, eflags: 0x2
 // Checksum 0xe680f5db, Offset: 0x1d0
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("replay_gun", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8ae866dd, Offset: 0x210
 // Size: 0x24
@@ -26,7 +26,7 @@ function __init__() {
     callback::on_spawned(&function_c0abd95b);
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdd7341a9, Offset: 0x240
 // Size: 0xb0
@@ -44,7 +44,7 @@ function function_c0abd95b() {
     }
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7b092f85, Offset: 0x2f8
 // Size: 0xec
@@ -54,7 +54,7 @@ function watch_lockon(weapon) {
     self endon(#"spawned_player");
     self endon(#"weapon_change_complete");
     while (true) {
-        wait(0.05);
+        wait 0.05;
         if (!isdefined(self.lockonentity)) {
             ads = self playerads() == 1;
             if (ads) {
@@ -68,7 +68,7 @@ function watch_lockon(weapon) {
     }
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 1, eflags: 0x1 linked
 // Checksum 0x411a8683, Offset: 0x3f0
 // Size: 0x2ea
@@ -86,7 +86,7 @@ function function_43c5e4e9(weapon) {
     var_827c64dc = 0;
     for (i = 0; i < targets.size; i++) {
         if (var_827c64dc) {
-            wait(0.05);
+            wait 0.05;
             origin = self getweaponmuzzlepoint();
             forward = self getweaponforwarddir();
             var_827c64dc = 0;
@@ -117,7 +117,7 @@ function function_43c5e4e9(weapon) {
     return function_c0064c09(validtargets);
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 0, eflags: 0x1 linked
 // Checksum 0xef543ee7, Offset: 0x6e8
 // Size: 0xfe
@@ -141,7 +141,7 @@ function function_42a6831f() {
     return potentialtargets;
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 1, eflags: 0x1 linked
 // Checksum 0x3e45cf2b, Offset: 0x7f0
 // Size: 0x120
@@ -169,7 +169,7 @@ function function_c0064c09(targets) {
     return besttarget;
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 2, eflags: 0x1 linked
 // Checksum 0xde141c1c, Offset: 0x918
 // Size: 0x3c
@@ -177,7 +177,7 @@ function trace(from, to) {
     return bullettrace(from, to, 0, self)["position"];
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 5, eflags: 0x1 linked
 // Checksum 0x99ebe69d, Offset: 0x960
 // Size: 0xec
@@ -194,7 +194,7 @@ function function_e96cb1d5(target, target_origin, player_origin, player_forward,
     return true;
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe3d519d4, Offset: 0xa58
 // Size: 0x2a
@@ -202,7 +202,7 @@ function is_valid_target(ent) {
     return isdefined(ent) && isalive(ent);
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 2, eflags: 0x1 linked
 // Checksum 0x2857b355, Offset: 0xa90
 // Size: 0x4a
@@ -211,7 +211,7 @@ function function_891f41a2(testorigin, weapon) {
     return self function_9814bbcd(testorigin, radius);
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 1, eflags: 0x0
 // Checksum 0xc419f5be, Offset: 0xae8
 // Size: 0x4a
@@ -220,7 +220,7 @@ function function_2718edba(targetorigin) {
     return self function_9814bbcd(targetorigin, radius);
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 2, eflags: 0x1 linked
 // Checksum 0x3321cba0, Offset: 0xb40
 // Size: 0x3a
@@ -228,7 +228,7 @@ function function_9814bbcd(targetorigin, radius) {
     return target_originisincircle(targetorigin, self, 65, radius);
 }
 
-// Namespace namespace_6ba28cbf
+// Namespace replay_gun
 // Params 1, eflags: 0x1 linked
 // Checksum 0xda063c6e, Offset: 0xb88
 // Size: 0x22

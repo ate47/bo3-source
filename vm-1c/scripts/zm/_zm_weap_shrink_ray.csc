@@ -8,9 +8,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e822cb43;
+#namespace zm_weap_shrink_ray;
 
-// Namespace namespace_e822cb43
+// Namespace zm_weap_shrink_ray
 // Params 0, eflags: 0x2
 // Checksum 0x83664836, Offset: 0x1b0
 // Size: 0x3c
@@ -18,15 +18,15 @@ function autoexec function_2dc19561() {
     system::register("zm_weap_shrink_ray", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_e822cb43
+// Namespace zm_weap_shrink_ray
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2acdbb0b, Offset: 0x1f8
 // Size: 0x4c
 function __init__() {
-    clientfield::register("actor", "fun_size", 5000, 1, "int", &function_891e0258, 0, 0);
+    clientfield::register("actor", "fun_size", 5000, 1, "int", &fun_size, 0, 0);
 }
 
-// Namespace namespace_e822cb43
+// Namespace zm_weap_shrink_ray
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x250
 // Size: 0x4
@@ -34,12 +34,12 @@ function __main__() {
     
 }
 
-// Namespace namespace_e822cb43
+// Namespace zm_weap_shrink_ray
 // Params 7, eflags: 0x1 linked
 // Checksum 0x37dc10be, Offset: 0x260
 // Size: 0x60
-function function_891e0258(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function fun_size(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self function_ec8b2835(newval);
-    self.var_f71294d7 = newval;
+    self.shrunken = newval;
 }
 

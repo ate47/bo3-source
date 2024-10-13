@@ -5,24 +5,24 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_14b4d4ab;
+#namespace zm_island_traps;
 
-// Namespace namespace_14b4d4ab
+// Namespace zm_island_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdf5d7f41, Offset: 0x218
 // Size: 0x124
 function init() {
-    clientfield::register("world", "proptrap_downdraft_rumble", 9000, 1, "int", &function_a9e415bd, 0, 0);
-    clientfield::register("toplayer", "proptrap_downdraft_blur", 9000, 1, "int", &function_fb8158d9, 0, 0);
-    clientfield::register("world", "walltrap_draft_rumble", 9000, 1, "int", &function_4736704, 0, 0);
-    clientfield::register("toplayer", "walltrap_draft_blur", 9000, 1, "int", &function_3abeaee0, 0, 0);
+    clientfield::register("world", "proptrap_downdraft_rumble", 9000, 1, "int", &proptrap_downdraft_rumble, 0, 0);
+    clientfield::register("toplayer", "proptrap_downdraft_blur", 9000, 1, "int", &proptrap_downdraft_blur, 0, 0);
+    clientfield::register("world", "walltrap_draft_rumble", 9000, 1, "int", &walltrap_draft_rumble, 0, 0);
+    clientfield::register("toplayer", "walltrap_draft_blur", 9000, 1, "int", &walltrap_draft_blur, 0, 0);
 }
 
-// Namespace namespace_14b4d4ab
+// Namespace zm_island_traps
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc9d4db6d, Offset: 0x348
 // Size: 0x2ee
-function function_a9e415bd(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function proptrap_downdraft_rumble(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     player = getlocalplayer(localclientnum);
     if (isdefined(newval) && newval) {
         if (!isdefined(player.var_69abefde)) {
@@ -47,11 +47,11 @@ function function_a9e415bd(localclientnum, oldval, newval, bnewent, binitialsnap
     player.var_69abefde = undefined;
 }
 
-// Namespace namespace_14b4d4ab
+// Namespace zm_island_traps
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa8befd82, Offset: 0x640
 // Size: 0x8c
-function function_fb8158d9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function proptrap_downdraft_blur(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self thread function_24f1be38(localclientnum, "s_proptrap_downdraft_rumble");
         return;
@@ -60,11 +60,11 @@ function function_fb8158d9(localclientnum, oldval, newval, bnewent, binitialsnap
     disablespeedblur(localclientnum);
 }
 
-// Namespace namespace_14b4d4ab
+// Namespace zm_island_traps
 // Params 7, eflags: 0x1 linked
 // Checksum 0x27daf088, Offset: 0x6d8
 // Size: 0x2ee
-function function_4736704(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function walltrap_draft_rumble(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     player = getlocalplayer(localclientnum);
     if (isdefined(newval) && newval) {
         if (!isdefined(player.var_d33c558c)) {
@@ -89,11 +89,11 @@ function function_4736704(localclientnum, oldval, newval, bnewent, binitialsnap,
     player.var_d33c558c = undefined;
 }
 
-// Namespace namespace_14b4d4ab
+// Namespace zm_island_traps
 // Params 7, eflags: 0x1 linked
 // Checksum 0x82eaeb21, Offset: 0x9d0
 // Size: 0x8c
-function function_3abeaee0(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function walltrap_draft_blur(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self thread function_24f1be38(localclientnum, "s_walltrap_draft_rumble");
         return;
@@ -102,7 +102,7 @@ function function_3abeaee0(localclientnum, oldval, newval, bnewent, binitialsnap
     disablespeedblur(localclientnum);
 }
 
-// Namespace namespace_14b4d4ab
+// Namespace zm_island_traps
 // Params 2, eflags: 0x1 linked
 // Checksum 0x81875fd7, Offset: 0xa68
 // Size: 0x150
@@ -118,7 +118,7 @@ function function_24f1be38(localclientnum, var_3f5c9bdb) {
             }
             disablespeedblur(localclientnum);
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 

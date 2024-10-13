@@ -20,9 +20,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_4bf13193;
+#namespace cp_mi_sing_sgen;
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa93c6299, Offset: 0x1398
 // Size: 0x164
@@ -30,21 +30,21 @@ function main() {
     util::function_57b966c8(&function_71f88fc, 6);
     init_clientfields();
     function_fe72942e();
-    namespace_219c76cc::main();
-    namespace_172c963::main();
+    cp_mi_sing_sgen_fx::main();
+    cp_mi_sing_sgen_sound::main();
     callback::on_spawned(&on_player_spawned);
     util::function_b499f765();
     function_673254cc();
     load::main();
     util::waitforclient(0);
-    namespace_dc4413fe::function_7403e82b();
+    cp_mi_sing_sgen_patch_c::function_7403e82b();
     level thread scene::init("p7_fxanim_gp_crane_pallet_01_bundle");
     level thread scene::init("p7_fxanim_cp_sgen_silo_twins_revenge_flood_bldg_01_bundle");
     level thread scene::init("p7_fxanim_cp_sgen_silo_twins_revenge_flood_bldg_02_bundle");
     level thread scene::init("p7_fxanim_cp_sgen_silo_twins_revenge_flood_bldg_03_bundle");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 1, eflags: 0x1 linked
 // Checksum 0x46cf472b, Offset: 0x1508
 // Size: 0x108
@@ -56,41 +56,41 @@ function on_player_spawned(localclientnum) {
         return;
     }
     if (isdefined(level.var_d9cf9150)) {
-        self thread function_e76aa170(localclientnum, undefined, level.var_d9cf9150);
+        self thread pallas_monitors_state(localclientnum, undefined, level.var_d9cf9150);
     }
     self.var_65ff120a = 0;
     self.var_580d2ee1 = 0;
     self.var_97b77690 = 0;
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x120aa837, Offset: 0x1618
 // Size: 0xd74
 function init_clientfields() {
-    clientfield::register("world", "w_fxa_truck_flip", 1, 1, "int", &function_39252d24, 0, 0);
+    clientfield::register("world", "w_fxa_truck_flip", 1, 1, "int", &truck_flip, 0, 0);
     clientfield::register("world", "w_robot_window_break", 1, 2, "int", &function_2f6bc99e, 0, 0);
-    clientfield::register("world", "testing_lab_wires", 1, 1, "int", &function_f8965920, 0, 0);
-    clientfield::register("world", "silo_swim_bridge_fall", 1, 1, "int", &function_6a3af99, 0, 0);
+    clientfield::register("world", "testing_lab_wires", 1, 1, "int", &testing_lab_wires, 0, 0);
+    clientfield::register("world", "silo_swim_bridge_fall", 1, 1, "int", &silo_swim_bridge_fall, 0, 0);
     clientfield::register("world", "w_underwater_state", 1, 1, "int", &function_3fd63c17, 0, 0);
     clientfield::register("world", "w_flood_combat_windows_b", 1, 1, "int", &function_43174f13, 0, 0);
     clientfield::register("world", "w_flood_combat_windows_c", 1, 1, "int", &function_1d14d4aa, 0, 0);
     clientfield::register("world", "elevator_light_probe", 1, 1, "int", &function_5ac1b440, 0, 0);
-    clientfield::register("world", "flood_defend_hallway_flood_siege", 1, 1, "int", &function_34e88b9c, 0, 0);
-    clientfield::register("world", "tower_chunks1", 1, 1, "int", &function_2b219c66, 0, 0);
-    clientfield::register("world", "tower_chunks2", 1, 1, "int", &function_51f21fd, 0, 0);
-    clientfield::register("world", "tower_chunks3", 1, 1, "int", &function_df1ca794, 0, 0);
-    clientfield::register("world", "observation_deck_destroy", 1, 1, "counter", &function_492309fc, 0, 0);
-    clientfield::register("world", "fallen_soldiers_client_fxanims", 1, 1, "int", &function_f81dc3f2, 0, 0);
+    clientfield::register("world", "flood_defend_hallway_flood_siege", 1, 1, "int", &flood_defend_hallway_flood_siege, 0, 0);
+    clientfield::register("world", "tower_chunks1", 1, 1, "int", &tower_chunks1, 0, 0);
+    clientfield::register("world", "tower_chunks2", 1, 1, "int", &tower_chunks2, 0, 0);
+    clientfield::register("world", "tower_chunks3", 1, 1, "int", &tower_chunks3, 0, 0);
+    clientfield::register("world", "observation_deck_destroy", 1, 1, "counter", &observation_deck_destroy, 0, 0);
+    clientfield::register("world", "fallen_soldiers_client_fxanims", 1, 1, "int", &fallen_soldiers_client_fxanims, 0, 0);
     clientfield::register("world", "w_flyover_buoys", 1, 1, "int", &function_95af50c, 0, 0);
     clientfield::register("world", "w_twin_igc_fxanim", 1, 2, "int", &function_ff1a4bbc, 0, 0);
-    clientfield::register("world", "set_exposure_bank", 1, 1, "int", &function_1e832062, 0, 0);
-    clientfield::register("world", "silo_debris", 1, 3, "int", &function_6688e3e0, 0, 0);
-    clientfield::register("world", "ceiling_collapse", 1, 3, "int", &function_66617c6c, 0, 0);
-    clientfield::register("world", "debris_catwalk", 1, 1, "counter", &function_19ebac1e, 0, 0);
-    clientfield::register("world", "debris_wall", 1, 1, "counter", &function_e0e27617, 0, 0);
-    clientfield::register("world", "debris_fall", 1, 1, "counter", &function_b309e328, 0, 0);
-    clientfield::register("world", "debris_bridge", 1, 1, "counter", &function_73dfc2c8, 0, 0);
+    clientfield::register("world", "set_exposure_bank", 1, 1, "int", &set_exposure_bank, 0, 0);
+    clientfield::register("world", "silo_debris", 1, 3, "int", &silo_debris, 0, 0);
+    clientfield::register("world", "ceiling_collapse", 1, 3, "int", &ceiling_collapse, 0, 0);
+    clientfield::register("world", "debris_catwalk", 1, 1, "counter", &debris_catwalk, 0, 0);
+    clientfield::register("world", "debris_wall", 1, 1, "counter", &debris_wall, 0, 0);
+    clientfield::register("world", "debris_fall", 1, 1, "counter", &debris_fall, 0, 0);
+    clientfield::register("world", "debris_bridge", 1, 1, "counter", &debris_bridge, 0, 0);
     clientfield::register("scriptmover", "structural_weakness", 1, 1, "int", &function_d69a238f, 0, 0);
     clientfield::register("scriptmover", "sm_elevator_shader", 1, 2, "int", &function_a30fa29c, 0, 0);
     clientfield::register("scriptmover", "sm_elevator_door_state", 1, 2, "int", &function_31d56bb1, 0, 0);
@@ -99,26 +99,26 @@ function init_clientfields() {
     clientfield::register("scriptmover", "sm_depth_charge_fx", 1, 2, "int", &function_21197c95, 0, 0);
     clientfield::register("scriptmover", "dni_eye", 1, 1, "int", &function_1561b96d, 1, 0);
     clientfield::register("scriptmover", "turn_fake_robot_eye", 1, 1, "int", &function_be719f1, 0, 0);
-    clientfield::register("scriptmover", "play_cia_robot_rogue_control", 1, 1, "int", &function_4fdcffa3, 0, 0);
+    clientfield::register("scriptmover", "play_cia_robot_rogue_control", 1, 1, "int", &play_cia_robot_rogue_control, 0, 0);
     clientfield::register("scriptmover", "cooling_tower_damage", 1, 1, "int", &function_ef39e6b6, 0, 0);
-    clientfield::register("toplayer", "pallas_monitors_state", 1, getminbitcountfornum(3), "int", &function_e76aa170, 0, 0);
+    clientfield::register("toplayer", "pallas_monitors_state", 1, getminbitcountfornum(3), "int", &pallas_monitors_state, 0, 0);
     clientfield::register("toplayer", "tp_water_sheeting", 1, 1, "int", &function_6be6da89, 0, 0);
-    clientfield::register("toplayer", "oed_interference", 1, 1, "int", &function_ba68067e, 0, 0);
-    clientfield::register("toplayer", "sndSiloBG", 1, 1, "int", &function_594a4308, 0, 0);
-    clientfield::register("toplayer", "dust_motes", 1, 1, "int", &function_c9e9a72c, 0, 0);
-    clientfield::register("toplayer", "water_motes", 1, 1, "int", &function_5cefaf77, 0, 0);
+    clientfield::register("toplayer", "oed_interference", 1, 1, "int", &oed_interference, 0, 0);
+    clientfield::register("toplayer", "sndSiloBG", 1, 1, "int", &sndSiloBG, 0, 0);
+    clientfield::register("toplayer", "dust_motes", 1, 1, "int", &dust_motes, 0, 0);
+    clientfield::register("toplayer", "water_motes", 1, 1, "int", &water_motes, 0, 0);
     clientfield::register("toplayer", "water_teleport", 1, 1, "int", &function_a93a4b6a, 0, 0);
     clientfield::register("vehicle", "extra_cam_ent", 1, 2, "int", &function_fe61b5f4, 0, 0);
     clientfield::register("vehicle", "sm_depth_charge_fx", 1, 2, "int", &function_21197c95, 0, 0);
     clientfield::register("vehicle", "quad_tank_tac_mode", 1, 1, "int", &function_8b62fa9d, 0, 0);
     clientfield::register("actor", "robot_bubbles", 1, 1, "int", &function_59c47b1, 0, 0);
-    clientfield::register("actor", "sndStepSet", 1, 1, "int", &function_fb081b8c, 1, 0);
-    clientfield::register("actor", "disable_tmode", 1, 1, "int", &function_47257e43, 0, 0);
-    clientfield::register("world", "sndLabWalla", 1, 1, "int", &namespace_172c963::function_698dfbe4, 0, 0);
+    clientfield::register("actor", "sndStepSet", 1, 1, "int", &sndStepSet, 1, 0);
+    clientfield::register("actor", "disable_tmode", 1, 1, "int", &disable_tmode, 0, 0);
+    clientfield::register("world", "sndLabWalla", 1, 1, "int", &cp_mi_sing_sgen_sound::sndLabWalla, 0, 0);
     visionset_mgr::register_overlay_info_style_blur("earthquake_blur", 1, 1, 0.1, 0.25, 4);
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1b349b70, Offset: 0x2398
 // Size: 0xc2
@@ -131,7 +131,7 @@ function function_fe72942e() {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x407bb393, Offset: 0x2468
 // Size: 0x4e4
@@ -163,7 +163,7 @@ function function_673254cc() {
     skipto::add("silo_swim", &function_12a6900b, "Silo Swim");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0x72f1078e, Offset: 0x2958
 // Size: 0x14
@@ -171,7 +171,7 @@ function function_6a18d1d4(str_objective, var_74cd64bc) {
     
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0x76b641ea, Offset: 0x2978
 // Size: 0x34
@@ -181,7 +181,7 @@ function function_70fafd70(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0xdd44438e, Offset: 0x29b8
 // Size: 0x44
@@ -191,7 +191,7 @@ function function_12a6900b(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0x84f7fcb6, Offset: 0x2a08
 // Size: 0x34
@@ -199,7 +199,7 @@ function function_1eba9086(str_objective, var_74cd64bc) {
     level scene::init("p7_fxanim_cp_sgen_observation_deck_break_01_bundle");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0x34e8c15a, Offset: 0x2a48
 // Size: 0x2c
@@ -207,7 +207,7 @@ function function_c1c92a60(str_objective, var_74cd64bc) {
     level thread function_6dddaec0();
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0x44f38788, Offset: 0x2a80
 // Size: 0x34
@@ -217,7 +217,7 @@ function function_f591a5d3(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0x2484b2c1, Offset: 0x2ac0
 // Size: 0x34
@@ -227,7 +227,7 @@ function function_41d43f98(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0x4c5be7fd, Offset: 0x2b00
 // Size: 0x34
@@ -237,7 +237,7 @@ function function_64b835d1(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0x7027df8b, Offset: 0x2b40
 // Size: 0x14
@@ -245,7 +245,7 @@ function function_8903df94(str_objective, var_74cd64bc) {
     
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa164809c, Offset: 0x2b60
 // Size: 0x34
@@ -255,7 +255,7 @@ function function_b5bc2e86(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0xdf655d44, Offset: 0x2ba0
 // Size: 0x34
@@ -265,7 +265,7 @@ function function_d70d27cf(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0x13f0532a, Offset: 0x2be0
 // Size: 0x34
@@ -275,7 +275,7 @@ function function_b8453b40(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0x27b6ad21, Offset: 0x2c20
 // Size: 0x34
@@ -285,7 +285,7 @@ function function_c9a9671f(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0x12df905b, Offset: 0x2c60
 // Size: 0x34
@@ -295,7 +295,7 @@ function function_69d3873d(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0x32556aab, Offset: 0x2ca0
 // Size: 0x34
@@ -305,7 +305,7 @@ function function_7f2d460(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0xea77f8bd, Offset: 0x2ce0
 // Size: 0x34
@@ -315,22 +315,22 @@ function function_7ed6c252(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0x878bab9d, Offset: 0x2d20
 // Size: 0x8c
 function function_e3f81a25(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
-        wait(1);
+        wait 1;
     }
     if (scene::is_active("p7_fxanim_gp_raven_circle_ccw_01_bundle")) {
         level scene::stop("p7_fxanim_gp_raven_circle_ccw_01_bundle", "scriptbundlename", 1);
     }
-    wait(0.1);
+    wait 0.1;
     struct::function_368120a1("scene", "p7_fxanim_gp_raven_circle_ccw_01_bundle");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0xe4ec689f, Offset: 0x2db8
 // Size: 0x34
@@ -340,7 +340,7 @@ function function_82a600e0(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa0c87153, Offset: 0x2df8
 // Size: 0x14
@@ -348,7 +348,7 @@ function function_8a68f6ae(str_objective, var_74cd64bc) {
     
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0xe62058f0, Offset: 0x2e18
 // Size: 0x14
@@ -356,7 +356,7 @@ function function_9dd018de(str_objective, var_74cd64bc) {
     
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb9f28222, Offset: 0x2e38
 // Size: 0x44
@@ -365,7 +365,7 @@ function function_6dddaec0() {
     level thread scene::play("p7_fxanim_gp_crane_pallet_01_bundle");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x82e09b6d, Offset: 0x2e88
 // Size: 0x24
@@ -373,7 +373,7 @@ function function_941e3519() {
     level scene::play("p7_fxanim_gp_crane_pallet_01_bundle");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6425f6e, Offset: 0x2eb8
 // Size: 0x24
@@ -381,7 +381,7 @@ function function_32a8709a() {
     level scene::play("p7_fxanim_gp_crane_pallet_01_bundle");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3dfa3670, Offset: 0x2ee8
 // Size: 0x9c
@@ -393,7 +393,7 @@ function function_1561b96d(localclientnum, oldval, newval, bnewent, binitialsnap
     self mapshaderconstant(localclientnum, 0, "scriptVector0", 0, 0, 0, 0);
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x46cb469e, Offset: 0x2f90
 // Size: 0xac
@@ -407,11 +407,11 @@ function function_8b62fa9d(localclientnum, oldval, newval, bnewent, binitialsnap
     self tmodeclearflag(10);
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3f891635, Offset: 0x3048
 // Size: 0x74
-function function_47257e43(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function disable_tmode(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self tmodesetflag(0);
         return;
@@ -419,7 +419,7 @@ function function_47257e43(localclientnum, oldval, newval, bnewent, binitialsnap
     self tmodeclearflag(0);
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 4, eflags: 0x1 linked
 // Checksum 0xf3ac569e, Offset: 0x30c8
 // Size: 0x86
@@ -434,7 +434,7 @@ function function_2370f00f(localclientnum, newval, str_value, str_key) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3e6c6f5b, Offset: 0x3158
 // Size: 0x64
@@ -442,23 +442,23 @@ function function_2f6bc99e(localclientnum, oldval, newval, bnewent, binitialsnap
     function_2370f00f(localclientnum, newval, "robot_window_break_start", "targetname");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe400ac43, Offset: 0x31c8
 // Size: 0x5c
-function function_73dfc2c8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function debris_bridge(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_2370f00f(localclientnum, newval, "p7_fxanim_cp_sgen_silo_debris_bridge_bundle");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x689bc3bd, Offset: 0x3230
 // Size: 0x5c
-function function_e0e27617(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function debris_wall(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_2370f00f(localclientnum, newval, "p7_fxanim_cp_sgen_silo_debris_wall_bundle");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 0, eflags: 0x1 linked
 // Checksum 0x490f630b, Offset: 0x3298
 // Size: 0x24
@@ -466,37 +466,37 @@ function function_4b788e97() {
     level thread scene::play("uw_battle_fxanims");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xca0f2b0c, Offset: 0x32c8
 // Size: 0x64
-function function_b309e328(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function debris_fall(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level thread scene::play("p7_fxanim_cp_sgen_silo_debris_fall_bundle");
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x272d0c4e, Offset: 0x3338
 // Size: 0x64
-function function_19ebac1e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function debris_catwalk(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level thread scene::play("p7_fxanim_cp_sgen_silo_debris_catwalk_bundle");
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x53644441, Offset: 0x33a8
 // Size: 0x6c
-function function_39252d24(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function truck_flip(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level thread scene::play("truck_flip", "targetname");
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4cb4e56e, Offset: 0x3420
 // Size: 0x5c
@@ -504,17 +504,17 @@ function function_d69a238f(localclientnum, oldval, newval, bnewent, binitialsnap
     self duplicate_render::set_item_enemy_equipment(localclientnum, newval);
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbcef9925, Offset: 0x3488
 // Size: 0x6c
-function function_6a3af99(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function silo_swim_bridge_fall(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level thread scene::play("bridge_collapse", "targetname");
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x965e6955, Offset: 0x3500
 // Size: 0x27c
@@ -546,11 +546,11 @@ function function_fe61b5f4(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb61f2e23, Offset: 0x3788
 // Size: 0x9c
-function function_ba68067e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function oed_interference(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self.var_97b77690 = 0.004;
         self.var_45d466a1 = 0;
@@ -561,7 +561,7 @@ function function_ba68067e(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread function_248868ae(localclientnum);
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd9c6e257, Offset: 0x3830
 // Size: 0x248
@@ -605,15 +605,15 @@ function function_248868ae(localclientnum) {
                 evsetranges(localclientnum, n_range, var_864ac2d9);
             }
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2ae92e2a, Offset: 0x3a80
 // Size: 0xd4
-function function_f8965920(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function testing_lab_wires(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (binitialsnap || newval && oldval != newval) {
         level thread scene::play("p7_fxanim_gp_wire_sparking_sml_bundle");
         level thread scene::play("p7_fxanim_gp_wire_sparking_med_thick_bundle");
@@ -622,7 +622,7 @@ function function_f8965920(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbb49c0c1, Offset: 0x3b60
 // Size: 0xc8
@@ -640,21 +640,21 @@ function function_ef39e6b6(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2f558f96, Offset: 0x3c30
 // Size: 0x6c
-function function_66617c6c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function ceiling_collapse(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level scene::play("hallway_ceiling_collapse_0" + newval, "targetname");
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8f45adba, Offset: 0x3ca8
 // Size: 0x14a
-function function_e76aa170(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function pallas_monitors_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level notify(#"hash_2fdfc947");
     level.var_d9cf9150 = newval;
     switch (newval) {
@@ -678,7 +678,7 @@ function function_e76aa170(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 1, eflags: 0x1 linked
 // Checksum 0x17f32832, Offset: 0x3e00
 // Size: 0x17c
@@ -701,11 +701,11 @@ function function_cacf88e6(localclientnum) {
             var_969f33c9 hide();
             var_969f33c9.str_state = undefined;
         }
-        wait(0.75);
+        wait 0.75;
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 0, eflags: 0x0
 // Checksum 0xfe231596, Offset: 0x3f88
 // Size: 0x5e
@@ -713,11 +713,11 @@ function function_5799c6c0() {
     level endon(#"hash_2fdfc947");
     self.str_state = "off";
     self hide();
-    wait(randomfloatrange(2, 5));
+    wait randomfloatrange(2, 5);
     self.str_state = undefined;
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 0, eflags: 0x0
 // Checksum 0x140c6426, Offset: 0x3ff0
 // Size: 0x10e
@@ -732,13 +732,13 @@ function function_39b5ac35() {
         } else {
             self hide();
         }
-        wait(0.05);
+        wait 0.05;
     }
     self hide();
     self.str_state = undefined;
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 1, eflags: 0x1 linked
 // Checksum 0x54d14f5a, Offset: 0x4108
 // Size: 0x130
@@ -755,11 +755,11 @@ function function_b84a3557(localclientnum) {
             }
             mdl_monitor hide();
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 1, eflags: 0x1 linked
 // Checksum 0x32ee39fc, Offset: 0x4240
 // Size: 0xca
@@ -771,7 +771,7 @@ function function_6f15ec64(localclientnum) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xdce9f7cf, Offset: 0x4318
 // Size: 0x7c
@@ -783,7 +783,7 @@ function function_6be6da89(localclientnum, oldval, newval, bnewent, binitialsnap
     stopwatersheetingfx(localclientnum, 1);
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x7107c2af, Offset: 0x43a0
 // Size: 0xf4
@@ -799,7 +799,7 @@ function function_3fd63c17(localclientnum, oldval, newval, bnewent, binitialsnap
     setdvar("player_useWaterFriction", 1);
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe8ce9bef, Offset: 0x44a0
 // Size: 0x6c
@@ -809,7 +809,7 @@ function function_43174f13(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x119e3209, Offset: 0x4518
 // Size: 0x6c
@@ -819,7 +819,7 @@ function function_1d14d4aa(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x959d3af5, Offset: 0x4590
 // Size: 0x1e2
@@ -835,17 +835,17 @@ function function_5ac1b440(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd415c06f, Offset: 0x4780
 // Size: 0x64
-function function_34e88b9c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function flood_defend_hallway_flood_siege(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level scene::play("p7_fxanim_cp_sgen_water_hallway_flood_bundle");
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x9506e98d, Offset: 0x47f0
 // Size: 0x1fe
@@ -864,20 +864,20 @@ function function_a30fa29c(localclientnum, oldval, newval, bnewent, binitialsnap
     case 1:
         for (i = 0; i < 2; i += 0.01) {
             self.var_10ff82f3 mapshaderconstant(0, 0, "scriptVector0", i / 2, 0, 0, 0);
-            wait(0.01);
+            wait 0.01;
         }
         break;
     case 0:
         for (i = 3; i > 0; i -= 0.01) {
             self.var_10ff82f3 mapshaderconstant(0, 0, "scriptVector0", i / 3, 0, 0, 0);
-            wait(0.01);
+            wait 0.01;
         }
         self.var_10ff82f3 hide();
         break;
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x124365de, Offset: 0x49f8
 // Size: 0xee
@@ -894,11 +894,11 @@ function function_31d56bb1(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x16ff1d78, Offset: 0x4af0
 // Size: 0x9c
-function function_492309fc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function observation_deck_destroy(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (!isdefined(level.anchor_delete_watcher)) {
         level.anchor_delete_watcher = 0;
     }
@@ -909,31 +909,31 @@ function function_492309fc(localclientnum, oldval, newval, bnewent, binitialsnap
     level scene::play("p7_fxanim_cp_sgen_observation_deck_break_0" + level.anchor_delete_watcher + "_bundle");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x75e4fd54, Offset: 0x4b98
 // Size: 0x64
-function function_2b219c66(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function tower_chunks1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level scene::play("server_tower_chunks_01", "targetname");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xade1995c, Offset: 0x4c08
 // Size: 0x64
-function function_51f21fd(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function tower_chunks2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level scene::play("server_tower_chunks_02", "targetname");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb34f1aab, Offset: 0x4c78
 // Size: 0x64
-function function_df1ca794(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function tower_chunks3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level scene::play("server_tower_chunks_03", "targetname");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc218116d, Offset: 0x4ce8
 // Size: 0x5c
@@ -941,11 +941,11 @@ function function_be719f1(localclientnum, oldval, newval, bnewent, binitialsnap,
     fxclientutils::playfxbundle(localclientnum, self, "c_54i_robot_grunt_fx_def_4_rogue");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x770476c2, Offset: 0x4d50
 // Size: 0x8c
-function function_4fdcffa3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function play_cia_robot_rogue_control(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         fxclientutils::playfxbundle(localclientnum, self, "c_cia_robot_grunt_fx_def_1_rogue");
         return;
@@ -953,11 +953,11 @@ function function_4fdcffa3(localclientnum, oldval, newval, bnewent, binitialsnap
     fxclientutils::stopfxbundle(localclientnum, self, "c_cia_robot_grunt_fx_def_1_rogue");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x57fffb47, Offset: 0x4de8
 // Size: 0x86
-function function_594a4308(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function sndSiloBG(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self thread primarygroup("amb_descent_bg_top", "amb_descent_bg_mid", "amb_descent_bg_bot");
         return;
@@ -965,7 +965,7 @@ function function_594a4308(localclientnum, oldval, newval, bnewent, binitialsnap
     level notify(#"hash_bf6420ee");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 3, eflags: 0x1 linked
 // Checksum 0x8a1a26bd, Offset: 0x4e78
 // Size: 0x6f6
@@ -998,7 +998,7 @@ function primarygroup(arg1, arg2, arg3) {
         var_fbeded78 linkto(var_47f2e24a);
     }
     level thread function_c87bd675(var_47f2e24a, var_21f067e1, var_fbeded78);
-    wait(0.5);
+    wait 0.5;
     if (!isdefined(self)) {
         return;
     }
@@ -1035,12 +1035,12 @@ function primarygroup(arg1, arg2, arg3) {
             var_63e79b91 = endorigin[2];
         }
         var_47f2e24a moveto((var_afec9063, var_3de52128, var_63e79b91), 0.2);
-        wait(0.2);
+        wait 0.2;
     }
     level notify(#"hash_bf6420ee");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 3, eflags: 0x1 linked
 // Checksum 0x24065c5, Offset: 0x5578
 // Size: 0x6c
@@ -1051,12 +1051,12 @@ function function_c87bd675(ent1, ent2, ent3) {
     ent3 delete();
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2c739866, Offset: 0x55f0
 // Size: 0xc4
-function function_c9e9a72c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    wait(0.1);
+function dust_motes(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+    wait 0.1;
     if (newval) {
         if (isdefined(self)) {
             self.n_fx_id = playviewmodelfx(localclientnum, level._effect["dust_motes"], "tag_camera");
@@ -1068,12 +1068,12 @@ function function_c9e9a72c(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbe996b2e, Offset: 0x56c0
 // Size: 0xc4
-function function_5cefaf77(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    wait(0.1);
+function water_motes(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+    wait 0.1;
     if (newval) {
         if (isdefined(self)) {
             self.var_8e8c7340 = playviewmodelfx(localclientnum, level._effect["water_motes"], "tag_camera");
@@ -1085,7 +1085,7 @@ function function_5cefaf77(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x963804a0, Offset: 0x5790
 // Size: 0x134
@@ -1109,11 +1109,11 @@ function function_a93a4b6a(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x904ef5f9, Offset: 0x58d0
 // Size: 0xc6
-function function_6688e3e0(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function silo_debris(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval < 6) {
         level scene::play("p7_fxanim_cp_sgen_underwater_silo_debris_0" + newval + "_bundle");
         return;
@@ -1123,7 +1123,7 @@ function function_6688e3e0(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 1, eflags: 0x1 linked
 // Checksum 0x40a47d58, Offset: 0x59a0
 // Size: 0x2ee
@@ -1169,7 +1169,7 @@ function function_71f88fc(n_zone) {
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xdf95f507, Offset: 0x5c98
 // Size: 0xcc
@@ -1183,17 +1183,17 @@ function weakpoint(localclientnum, oldval, newval, bnewent, binitialsnap, fieldn
     self weakpoint_enable(0);
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe2443e2a, Offset: 0x5d70
 // Size: 0x74
-function function_f81dc3f2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function fallen_soldiers_client_fxanims(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (binitialsnap || newval && oldval != newval) {
         level scene::play("p7_fxanim_gp_wire_sparking_xsml_bundle");
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x9bf2c1e9, Offset: 0x5df0
 // Size: 0x84
@@ -1205,11 +1205,11 @@ function function_95af50c(localclientnum, oldval, newval, bnewent, binitialsnap,
     level scene::stop("p7_fxanim_gp_floating_buoy_02_upright_bundle");
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf9bdff7a, Offset: 0x5e80
 // Size: 0x12c
-function function_fb081b8c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function sndStepSet(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         match = "fly_water_wade";
         triggers = getentarray(0, "audio_step_trigger", "targetname");
@@ -1222,7 +1222,7 @@ function function_fb081b8c(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa789b8dc, Offset: 0x5fb8
 // Size: 0xd0
@@ -1240,11 +1240,11 @@ function function_df9260b7(trigger, alias) {
             self.var_111461f1 = 0;
             self clearsteptriggersound();
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe4f72ac1, Offset: 0x6090
 // Size: 0xac
@@ -1256,7 +1256,7 @@ function function_59c47b1(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5677f476, Offset: 0x6148
 // Size: 0x13e
@@ -1280,7 +1280,7 @@ function function_21197c95(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0x857f8e65, Offset: 0x6290
 // Size: 0x176
@@ -1304,11 +1304,11 @@ function function_ff1a4bbc(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4bf13193
+// Namespace cp_mi_sing_sgen
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf39f43c2, Offset: 0x6410
 // Size: 0x7c
-function function_1e832062(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function set_exposure_bank(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         setexposureactivebank(localclientnum, 4);
         return;

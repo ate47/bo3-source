@@ -46,12 +46,12 @@ function should_play_sound(mod) {
         return false;
     }
     switch (mod) {
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-    case 7:
-    case 8:
+    case "MOD_CRUSH":
+    case "MOD_GRENADE_SPLASH":
+    case "MOD_HIT_BY_OBJECT":
+    case "MOD_MELEE":
+    case "MOD_MELEE_ASSASSINATE":
+    case "MOD_MELEE_WEAPON_BUTT":
         return false;
     }
     return true;
@@ -68,22 +68,22 @@ function updatedamagefeedback(mod, inflictor, perkfeedback) {
     if (should_play_sound(mod)) {
         if (isdefined(inflictor) && isdefined(inflictor.soundmod)) {
             switch (inflictor.soundmod) {
-            case 19:
+            case "player":
                 self thread function_624a623b(mod, "mpl_hit_alert");
                 break;
-            case 17:
+            case "heli":
                 self thread function_624a623b(mod, "mpl_hit_alert_air");
                 break;
-            case 18:
+            case "hpm":
                 self thread function_624a623b(mod, "mpl_hit_alert_hpm");
                 break;
-            case 21:
+            case "taser_spike":
                 self thread function_624a623b(mod, "mpl_hit_alert_taser_spike");
                 break;
-            case 16:
-            case 20:
+            case "dog":
+            case "straferun":
                 break;
-            case 15:
+            case "default_loud":
                 self thread function_624a623b(mod, "mpl_hit_heli_gunner");
                 break;
             default:
@@ -112,7 +112,7 @@ function function_624a623b(mod, alert) {
     if (self.hitsoundtracker) {
         self.hitsoundtracker = 0;
         self playlocalsound(alert);
-        wait(0.05);
+        wait 0.05;
         self.hitsoundtracker = 1;
     }
 }
@@ -131,7 +131,7 @@ function function_cffe043d(hitent) {
     if (!isplayer(hitent)) {
         return;
     }
-    wait(0.05);
+    wait 0.05;
     if (!isdefined(self.var_3f443551)) {
         self.var_3f443551 = [];
         var_1dbcf329 = hitent getentitynumber();

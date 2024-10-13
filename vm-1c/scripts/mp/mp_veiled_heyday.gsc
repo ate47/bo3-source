@@ -9,16 +9,16 @@
 #using scripts/shared/compass;
 #using scripts/codescripts/struct;
 
-#namespace namespace_3c836f69;
+#namespace mp_veiled_heyday;
 
-// Namespace namespace_3c836f69
+// Namespace mp_veiled_heyday
 // Params 0, eflags: 0x1 linked
 // Checksum 0x275e14d8, Offset: 0x290
 // Size: 0x2f4
 function main() {
     precache();
-    namespace_afeeaece::main();
-    namespace_5ec3f81::main();
+    mp_veiled_heyday_fx::main();
+    mp_veiled_heyday_sound::main();
     load::main();
     compass::setupminimap("compass_map_mp_veiled_heyday");
     setdvar("compassmaxrange", "2100");
@@ -36,7 +36,7 @@ function main() {
     level thread function_706ce0e3();
 }
 
-// Namespace namespace_3c836f69
+// Namespace mp_veiled_heyday
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x590
 // Size: 0x4
@@ -44,22 +44,22 @@ function precache() {
     
 }
 
-// Namespace namespace_3c836f69
+// Namespace mp_veiled_heyday
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc4090aca, Offset: 0x5a0
 // Size: 0xbc
 function function_706ce0e3() {
-    wait(0.5);
+    wait 0.5;
     level thread scene::play("vld_hd_anim_crane_01", "targetname");
-    wait(2.33);
+    wait 2.33;
     level thread scene::play("vld_hd_anim_crane_02", "targetname");
-    wait(3);
+    wait 3;
     level thread scene::play("vld_hd_anim_crane_03", "targetname");
-    wait(5.75);
+    wait 5.75;
     level thread scene::play("vld_hd_anim_crane_04", "targetname");
 }
 
-// Namespace namespace_3c836f69
+// Namespace mp_veiled_heyday
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc9f399ee, Offset: 0x668
 // Size: 0x90

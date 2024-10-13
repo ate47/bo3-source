@@ -4,33 +4,33 @@
 #using scripts/shared/util_shared;
 #using scripts/shared/trigger_shared;
 
-#namespace namespace_e449108e;
+#namespace stealth_debug;
 
 /#
 
-    // Namespace namespace_e449108e
+    // Namespace stealth_debug
     // Params 0, eflags: 0x0
     // Checksum 0xf826e9fe, Offset: 0x110
     // Size: 0x6a
     function init() {
         if (isdefined(self.stealth)) {
-            self.stealth.var_6926a825 = "<unknown string>";
+            self.stealth.var_6926a825 = "<dev string:x28>";
         }
-        var_c39a9f3e = getdvarint("<unknown string>", -1);
+        var_c39a9f3e = getdvarint("<dev string:x29>", -1);
         if (var_c39a9f3e == -1) {
-            setdvar("<unknown string>", 0);
+            setdvar("<dev string:x29>", 0);
         }
     }
 
-    // Namespace namespace_e449108e
+    // Namespace stealth_debug
     // Params 0, eflags: 0x0
     // Checksum 0x2b4ec350, Offset: 0x188
     // Size: 0x1a
     function enabled() {
-        return getdvarint("<unknown string>", 0);
+        return getdvarint("<dev string:x29>", 0);
     }
 
-    // Namespace namespace_e449108e
+    // Namespace stealth_debug
     // Params 0, eflags: 0x0
     // Checksum 0xe101a692, Offset: 0x1b0
     // Size: 0x5a
@@ -44,7 +44,7 @@
         }
     }
 
-    // Namespace namespace_e449108e
+    // Namespace stealth_debug
     // Params 0, eflags: 0x0
     // Checksum 0x59f8572d, Offset: 0x218
     // Size: 0x1bb
@@ -57,14 +57,14 @@
                 entities = getentarray();
                 if (enabled()) {
                     foreach (entity in entities) {
-                        if (isactor(entity) && entity namespace_aec89ff8::enabled()) {
+                        if (isactor(entity) && entity stealth_actor::enabled()) {
                             entity thread function_53d6792c();
                             entity thread function_2dd1012();
                         }
                     }
                 } else {
                     foreach (entity in entities) {
-                        if (isactor(entity) && entity namespace_aec89ff8::enabled()) {
+                        if (isactor(entity) && entity stealth_actor::enabled()) {
                             entity notify(#"hash_53d6792c");
                             entity notify(#"hash_2dd1012");
                         }
@@ -72,11 +72,11 @@
                 }
                 prevvalue = enabled();
             }
-            wait(1);
+            wait 1;
         }
     }
 
-    // Namespace namespace_e449108e
+    // Namespace stealth_debug
     // Params 0, eflags: 0x0
     // Checksum 0xa16d0449, Offset: 0x3e0
     // Size: 0x2c5
@@ -84,21 +84,21 @@
         self notify(#"hash_53d6792c");
         self endon(#"hash_53d6792c");
         self endon(#"death");
-        self endon(#"hash_94ff6d85");
+        self endon(#"stop_stealth");
         while (true) {
             if (enabled()) {
                 origin = self.origin;
-                print3d(origin, "<unknown string>" + self.awarenesslevelcurrent, stealth::function_b7ff7c00(self.awarenesslevelcurrent), 1, 0.5, 1);
+                print3d(origin, "<dev string:x28>" + self.awarenesslevelcurrent, stealth::function_b7ff7c00(self.awarenesslevelcurrent), 1, 0.5, 1);
                 origin = (origin[0], origin[1], origin[2] + 15);
-                if (isdefined(self.stealth.var_6926a825) && self.stealth.var_6926a825 != "<unknown string>" && self.awarenesslevelcurrent != "<unknown string>") {
+                if (isdefined(self.stealth.var_6926a825) && self.stealth.var_6926a825 != "<dev string:x28>" && self.awarenesslevelcurrent != "<dev string:x37>") {
                     print3d(origin, self.stealth.var_6926a825, stealth::function_b7ff7c00(self.awarenesslevelcurrent), 1, 0.5, 1);
                     origin = (origin[0], origin[1], origin[2] + 15);
                 }
                 if (isdefined(self.enemy)) {
-                    print3d(origin, "<unknown string>" + self.enemy getentitynumber() + "<unknown string>", stealth::function_b7ff7c00(self.awarenesslevelcurrent), 1, 0.5, 1);
+                    print3d(origin, "<dev string:x3f>" + self.enemy getentitynumber() + "<dev string:x48>", stealth::function_b7ff7c00(self.awarenesslevelcurrent), 1, 0.5, 1);
                     origin = (origin[0], origin[1], origin[2] + 15);
                 }
-                if (isdefined(self.stealth.var_85e6f33c) && self.stealth.var_85e6f33c != "<unknown string>") {
+                if (isdefined(self.stealth.var_85e6f33c) && self.stealth.var_85e6f33c != "<dev string:x28>") {
                     print3d(origin, self.stealth.var_85e6f33c, stealth::function_b7ff7c00(self.awarenesslevelcurrent), 1, 0.5, 1);
                     origin = (origin[0], origin[1], origin[2] + 15);
                 }
@@ -107,11 +107,11 @@
                     line(self.origin + (0, 0, 80), self.stealth.var_edba2e78 + (0, 0, 60), (1, 0, 1));
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
-    // Namespace namespace_e449108e
+    // Namespace stealth_debug
     // Params 0, eflags: 0x0
     // Checksum 0xf97d947b, Offset: 0x6b0
     // Size: 0x245
@@ -119,18 +119,18 @@
         self notify(#"hash_2dd1012");
         self endon(#"hash_2dd1012");
         self endon(#"death");
-        self endon(#"hash_94ff6d85");
+        self endon(#"stop_stealth");
         if (!isactor(self)) {
             return;
         }
-        wait(0.05);
+        wait 0.05;
         while (true) {
-            wait(0.05);
+            wait 0.05;
             if (enabled()) {
-                awareness = self namespace_80045451::function_739525d();
+                awareness = self stealth_aware::function_739525d();
                 var_1118b447 = level.stealth.var_1118b447.awareness[awareness];
                 if (enabled() > 1) {
-                    var_80364fb2 = (0, self gettagangles("<unknown string>")[1], 0);
+                    var_80364fb2 = (0, self gettagangles("<dev string:x4b>")[1], 0);
                     color = (0.5, 0.5, 0.5);
                     foreach (enemy in level.stealth.enemies[self.team]) {
                         if (self cansee(enemy)) {
@@ -138,7 +138,7 @@
                             break;
                         }
                     }
-                    if (awareness != "<unknown string>") {
+                    if (awareness != "<dev string:x53>") {
                         self function_2188901b(self.origin + (0, 0, 16), var_80364fb2, self.fovcosine, self.fovcosinez, sqrt(self.maxsightdistsqrd), color);
                     }
                 }
@@ -152,7 +152,7 @@
         }
     }
 
-    // Namespace namespace_e449108e
+    // Namespace stealth_debug
     // Params 6, eflags: 0x0
     // Checksum 0x48f8d3eb, Offset: 0x900
     // Size: 0x2b5
@@ -188,7 +188,7 @@
         }
     }
 
-    // Namespace namespace_e449108e
+    // Namespace stealth_debug
     // Params 6, eflags: 0x0
     // Checksum 0xadae54e9, Offset: 0xbc0
     // Size: 0x37e
@@ -215,7 +215,7 @@
         }
         draworigin = self.stealth.debug_rising[myid];
         while (gettime() - start < life * 1000) {
-            wait(0.05);
+            wait 0.05;
             if (isdefined(self) && isalive(self) && isdefined(self.stealth) && isdefined(self.stealth.debug_rising) && isdefined(self.stealth.debug_rising[myid])) {
                 draworigin = self.stealth.debug_rising[myid];
             }
@@ -230,21 +230,21 @@
         }
     }
 
-    // Namespace namespace_e449108e
+    // Namespace stealth_debug
     // Params 1, eflags: 0x0
     // Checksum 0x4d22bd5c, Offset: 0xf48
     // Size: 0x8d
     function debug_text(var_37b8a117) {
         if (!isdefined(var_37b8a117)) {
-            return "<unknown string>";
+            return "<dev string:x5a>";
         }
         if (isweapon(var_37b8a117)) {
-            return ("<unknown string>" + var_37b8a117.name + "<unknown string>");
+            return ("<dev string:x66>" + var_37b8a117.name + "<dev string:x6e>");
         }
         if (isentity(var_37b8a117)) {
-            return ("<unknown string>" + var_37b8a117 getentitynumber() + "<unknown string>");
+            return ("<dev string:x70>" + var_37b8a117 getentitynumber() + "<dev string:x6e>");
         }
-        return "<unknown string>" + var_37b8a117;
+        return "<dev string:x28>" + var_37b8a117;
     }
 
 #/

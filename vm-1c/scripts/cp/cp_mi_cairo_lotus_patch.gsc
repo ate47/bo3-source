@@ -12,9 +12,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_91f7aee3;
+#namespace cp_mi_cairo_lotus_patch;
 
-// Namespace namespace_91f7aee3
+// Namespace cp_mi_cairo_lotus_patch
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1615d283, Offset: 0x258
 // Size: 0x214

@@ -51,7 +51,7 @@ function teamoutcomenotify(winner, endtype, endreasontext) {
         team = "allies";
     }
     while (self.var_decbf609) {
-        wait(0.05);
+        wait 0.05;
     }
     self endon(#"reset_outcome");
     outcometext = "";
@@ -180,10 +180,10 @@ function teamoutcomenotify(winner, endtype, endreasontext) {
             losingtime = 0;
         }
         switch (winner) {
-        case 49:
+        case "allies":
             winnerenum = 1;
             break;
-        case 55:
+        case "axis":
             winnerenum = 2;
             break;
         default:
@@ -230,7 +230,7 @@ function function_8cab5867(winner, isround, endreasontext) {
         team = "allies";
     }
     while (self.var_decbf609) {
-        wait(0.05);
+        wait 0.05;
     }
     self endon(#"reset_outcome");
     if (level.splitscreen) {
@@ -262,7 +262,7 @@ function outcomenotify(winner, var_a913a63a, endreasontext) {
     self endon(#"disconnect");
     self notify(#"reset_outcome");
     while (self.var_decbf609) {
-        wait(0.05);
+        wait 0.05;
     }
     self endon(#"reset_outcome");
     outcometext = "";
@@ -286,7 +286,7 @@ function outcomenotify(winner, var_a913a63a, endreasontext) {
     if (isdefined(self.pers["totalMatchBonus"])) {
         matchbonus = self.pers["totalMatchBonus"];
     }
-    wait(2);
+    wait 2;
     team = self.pers["team"];
     if (isdefined(team) && team == "spectator" && overridespectator) {
         outcometext = game["strings"]["cod_caster_team_wins"];
@@ -304,7 +304,7 @@ function function_d5235f38(winner, endreasontext) {
     self endon(#"disconnect");
     self notify(#"reset_outcome");
     while (self.var_decbf609) {
-        wait(0.05);
+        wait 0.05;
     }
     self endon(#"reset_outcome");
     var_eed1ba45 = "extrabig";
@@ -429,7 +429,7 @@ function function_d5235f38(winner, endreasontext) {
                 var_f3940c57 = 1;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -444,9 +444,9 @@ function function_de9a72bf(winner, var_a913a63a, endreasontext) {
     if (!isdefined(team) || !isdefined(level.teams[team])) {
         team = "allies";
     }
-    wait(0.05);
+    wait 0.05;
     while (self.var_decbf609) {
-        wait(0.05);
+        wait 0.05;
     }
     self endon(#"reset_outcome");
     var_eed1ba45 = "extrabig";

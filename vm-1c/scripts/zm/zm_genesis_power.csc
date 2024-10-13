@@ -18,9 +18,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_4c9147;
+#namespace zm_genesis_power;
 
-// Namespace namespace_4c9147
+// Namespace zm_genesis_power
 // Params 0, eflags: 0x2
 // Checksum 0x63b9d68c, Offset: 0x4f0
 // Size: 0x34
@@ -28,20 +28,20 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_power", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_4c9147
+// Namespace zm_genesis_power
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe1133cc0, Offset: 0x530
 // Size: 0x116
 function __init__() {
     clientfield::register("scriptmover", "power_zombie_soul", 15000, 1, "int", &function_cb47574e, 0, 0);
-    clientfield::register("scriptmover", "power_cables_shader", 15000, 1, "int", &function_dd34c5fb, 0, 0);
+    clientfield::register("scriptmover", "power_cables_shader", 15000, 1, "int", &power_cables_shader, 0, 0);
     for (i = 1; i <= 4; i++) {
         str_name = "corruption_tower" + i;
-        clientfield::register("world", str_name, 15000, 7, "float", &function_a05ffab0, 0, 0);
+        clientfield::register("world", str_name, 15000, 7, "float", &corruption_tower, 0, 0);
     }
 }
 
-// Namespace namespace_4c9147
+// Namespace zm_genesis_power
 // Params 7, eflags: 0x1 linked
 // Checksum 0x45d99c80, Offset: 0x650
 // Size: 0xbc
@@ -53,11 +53,11 @@ function function_cb47574e(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_4c9147
+// Namespace zm_genesis_power
 // Params 7, eflags: 0x1 linked
 // Checksum 0x34e936a2, Offset: 0x718
 // Size: 0xa4
-function function_dd34c5fb(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function power_cables_shader(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, 1, 0, 0);
         return;
@@ -65,11 +65,11 @@ function function_dd34c5fb(localclientnum, oldval, newval, bnewent, binitialsnap
     self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, 0, 0, 0);
 }
 
-// Namespace namespace_4c9147
+// Namespace zm_genesis_power
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd3048bf4, Offset: 0x7c8
 // Size: 0x5fc
-function function_a05ffab0(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138, var_406ad39b, str_field, var_ffbb7dc) {
+function corruption_tower(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed138, var_406ad39b, str_field, var_ffbb7dc) {
     var_6bf7783a = getent(var_6575414d, str_field, "targetname");
     var_6bf7783a util::waittill_dobj(var_6575414d);
     if (!isdefined(var_6bf7783a.var_62bb476b)) {
@@ -128,7 +128,7 @@ function function_a05ffab0(var_6575414d, var_a53f7c1b, var_143c4e26, var_f16ed13
     }
 }
 
-// Namespace namespace_4c9147
+// Namespace zm_genesis_power
 // Params 5, eflags: 0x1 linked
 // Checksum 0x253433ea, Offset: 0xdd0
 // Size: 0x2e4

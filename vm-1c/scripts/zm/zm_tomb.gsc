@@ -119,12 +119,12 @@ function autoexec opt_in() {
 // Checksum 0x5cf4f1e8, Offset: 0x22a8
 // Size: 0xd74
 function main() {
-    namespace_239f5449::main_start();
+    zm_tomb_ffotd::main_start();
     level._no_equipment_activated_clientfield = 1;
     level.var_f8683afc = 1;
     level._wallbuy_override_num_bits = 1;
     level.player_out_of_playable_area_monitor_callback = &player_out_of_playable_area_override;
-    namespace_e0f9e0c4::main();
+    zm_tomb_fx::main();
     level.default_game_mode = "zclassic";
     level.default_start_location = "tomb";
     function_243693d4();
@@ -143,7 +143,7 @@ function main() {
     level.riser_fx_on_client = 1;
     level._round_start_func = &zm::round_start;
     level.var_f2eb9c0d = 0;
-    level.var_cfba6d83 = &namespace_d7c0ce12::function_f25ae454;
+    level.var_cfba6d83 = &zm_tomb_utility::function_f25ae454;
     level._limited_equipment = [];
     level._limited_equipment[level._limited_equipment.size] = getweapon("equip_dieseldrone");
     level._limited_equipment[level._limited_equipment.size] = getweapon("staff_air");
@@ -161,10 +161,10 @@ function main() {
     var_31a58239 spawner::add_spawn_function(&function_c24bc100);
     level.var_fe571972 = 0;
     level.givecustomcharacters = &function_796dd6da;
-    level.setupcustomcharacterexerts = &namespace_ad52727b::setup_personality_character_exerts;
+    level.setupcustomcharacterexerts = &zm_tomb_vo::setup_personality_character_exerts;
     initcharacterstartindex();
-    level thread namespace_ad52727b::init_flags();
-    level._zmbvoxlevelspecific = &namespace_ad52727b::function_30a8bcac;
+    level thread zm_tomb_vo::init_flags();
+    level._zmbvoxlevelspecific = &zm_tomb_vo::function_30a8bcac;
     level.custom_player_fake_death = &function_336b1965;
     level.var_3ecd9b3a = &function_3b22b3bc;
     level.custom_player_track_ammo_count = &function_782ac8a6;
@@ -173,8 +173,8 @@ function main() {
     level.random_pandora_box_start = 1;
     level.custom_electric_cherry_perk_threads = zm_perks::register_perk_threads("specialty_electriccherry", &function_ded9e30a, &zm_perk_electric_cherry::electric_cherry_perk_lost);
     level.custom_laststand_func = &function_f357616c;
-    level.perk_random_vo_func_usemachine = &namespace_ad52727b::function_673d2153;
-    level.var_f6bcb70c = &namespace_cdc4d06c::function_4a8fd3eb;
+    level.perk_random_vo_func_usemachine = &zm_tomb_vo::function_673d2153;
+    level.var_f6bcb70c = &zm_tomb_capture_zones::function_4a8fd3eb;
     zm_pap_util::function_5e0cf34(80);
     level.var_f55453ea = &offhand_weapon_overrride;
     level.zombiemode_offhand_weapon_give_override = &offhand_weapon_give_override;
@@ -185,9 +185,9 @@ function main() {
     level.var_d1f24ab6 = 1;
     function_5dacef79();
     function_a823cd4e();
-    level thread namespace_69d27510::init();
-    level thread namespace_8d777412::init();
-    level namespace_2282064b::init();
+    level thread zm_tomb_ee_main::init();
+    level thread zm_tomb_ee_side::init();
+    level zm_tomb_achievement::init();
     if (level.splitscreen && getdvarint("splitscreen_playerCount") > 2) {
         level.var_d960a2b6 = 1;
     } else {
@@ -198,43 +198,43 @@ function main() {
     level.dont_unset_perk_when_machine_paused = 1;
     function_f33db9af();
     function_194dd963();
-    namespace_e6d36abe::init();
-    namespace_d1b0a244::function_e73fe92b();
-    namespace_d1b0a244::function_1e8f6f14();
-    level.can_revive = &namespace_d1b0a244::function_a27207b;
-    namespace_cdc4d06c::function_5e78485c();
-    namespace_a2c37c4f::function_c6ff3260();
-    namespace_99ea9186::function_301fce17();
-    level thread namespace_97bec092::teleporter_init();
-    namespace_f37770c8::init();
-    namespace_f7a613cf::function_3ebec56b();
-    namespace_f7a613cf::function_95743e9f();
-    namespace_f7a613cf::register_clientfields();
-    namespace_f7a613cf::function_cdc13aec();
-    namespace_ba8619ac::init();
-    namespace_c70bea9a::init();
-    namespace_5d5ba750::challenges_init();
-    namespace_54a425fe::init();
+    zm_tomb_tank::init();
+    zm_tomb_giant_robot::function_e73fe92b();
+    zm_tomb_giant_robot::function_1e8f6f14();
+    level.can_revive = &zm_tomb_giant_robot::function_a27207b;
+    zm_tomb_capture_zones::function_5e78485c();
+    zm_tomb_ambient_scripts::function_c6ff3260();
+    zm_tomb_dig::function_301fce17();
+    level thread zm_tomb_teleporter::teleporter_init();
+    zm_craftables::init();
+    zm_tomb_craftables::function_3ebec56b();
+    zm_tomb_craftables::function_95743e9f();
+    zm_tomb_craftables::register_clientfields();
+    zm_tomb_craftables::function_cdc13aec();
+    _zm_weap_beacon::init();
+    _zm_weap_one_inch_punch::init();
+    zm_tomb_challenges::challenges_init();
+    zm_tomb_amb::init();
     load::main();
     level thread function_89182d9b();
     function_67268668();
-    namespace_e6d36abe::main();
-    namespace_97bec092::main();
-    namespace_a2c37c4f::main();
+    zm_tomb_tank::main();
+    zm_tomb_teleporter::main();
+    zm_tomb_ambient_scripts::main();
     init_sounds();
     level thread setupmusic();
-    namespace_54a425fe::main();
-    level thread namespace_69d27510::main();
+    zm_tomb_amb::main();
+    level thread zm_tomb_ee_main::main();
     level.callbackactordamage = &function_739ff042;
     level._weaponobjects_on_player_connect_override = &function_37d1f958;
     zm_spawner::register_zombie_death_event_callback(&function_7ffc8f44);
     level.player_intersection_tracker_override = &function_25d30c89;
-    namespace_570c8452::init();
+    _zm_weap_cymbal_monkey::init();
     level._melee_weapons = [];
     level.var_97392b41 = getentarray("player_slow_area", "targetname");
-    level thread namespace_baebcb1::init();
+    level thread zm_tomb_mech::init();
     level.var_28c01b1f = 0;
-    level thread namespace_73b257ea::function_d0ef4f2();
+    level thread zm_tomb_main_quest::function_d0ef4f2();
     level.closest_player_override = &j_shouldercounterhalftwist_le;
     level.validate_enemy_path_length = &function_53b96cb8;
     level.zones = [];
@@ -258,7 +258,7 @@ function main() {
     level.start_weapon = level.default_laststandpistol;
     level thread zm::function_e7cfa7b8();
     level thread function_d33ee699();
-    level thread namespace_d7c0ce12::function_a2cc4f96();
+    level thread zm_tomb_utility::function_a2cc4f96();
     callback::on_connect(&on_player_connect);
     callback::on_ai_spawned(&function_7b72be0d);
     zm::register_player_damage_callback(&function_cec1cb5f);
@@ -269,24 +269,24 @@ function main() {
     util::wait_network_frame();
     level notify(#"hash_62ee2b14");
     zombie_utility::set_zombie_var("zombie_use_failsafe", 0);
-    level namespace_d7c0ce12::check_solo_status();
-    level thread namespace_d7c0ce12::adjustments_for_solo();
-    level thread namespace_d7c0ce12::function_20c78add();
-    level thread namespace_d7c0ce12::function_5a9d2dde();
+    level zm_tomb_utility::check_solo_status();
+    level thread zm_tomb_utility::adjustments_for_solo();
+    level thread zm_tomb_utility::function_20c78add();
+    level thread zm_tomb_utility::function_5a9d2dde();
     level clientfield::set("lantern_fx", 1);
-    level thread namespace_435339fc::function_21560ef4();
+    level thread zm_tomb_chamber::function_21560ef4();
     /#
-        namespace_d7c0ce12::setup_devgui();
+        zm_tomb_utility::setup_devgui();
     #/
-    namespace_d7c0ce12::function_ab2adcaa();
-    namespace_cdc4d06c::function_b0debead();
+    zm_tomb_utility::function_ab2adcaa();
+    zm_tomb_capture_zones::function_b0debead();
     level.zm_bgb_anywhere_but_here_validation_override = &function_869d6f66;
     level.var_9f5c2c50 = &function_e36dbcf4;
     level.var_2d4e3645 = &function_d9e1ec4d;
     level.var_2d0e5eb6 = &function_2d0e5eb6;
-    level thread namespace_a2c37c4f::function_add29756();
+    level thread zm_tomb_ambient_scripts::function_add29756();
     level thread zm_perks::spare_change();
-    namespace_239f5449::main_end();
+    zm_tomb_ffotd::main_end();
 }
 
 // Namespace zm_tomb
@@ -372,7 +372,7 @@ function function_2d0e5eb6() {
 // Checksum 0x3305db06, Offset: 0x37d8
 // Size: 0x196
 function function_56848b85() {
-    var_14f6b8a4 = namespace_435339fc::function_34b281af(self.origin);
+    var_14f6b8a4 = zm_tomb_chamber::function_34b281af(self.origin);
     a_players = getplayers();
     for (i = 0; i < a_players.size; i++) {
         if (isdefined(a_players[i].ignoreme) && (!zombie_utility::is_player_valid(a_players[i]) || a_players[i].ignoreme)) {
@@ -386,7 +386,7 @@ function function_56848b85() {
             }
             continue;
         }
-        var_fd78cf4b = namespace_435339fc::function_34b281af(a_players[i].origin);
+        var_fd78cf4b = zm_tomb_chamber::function_34b281af(a_players[i].origin);
         if (var_fd78cf4b != var_14f6b8a4) {
         }
     }
@@ -403,7 +403,7 @@ function private function_ce3464b9(players) {
     }
     self.var_13ed8adf = undefined;
     foreach (player in players) {
-        if (isdefined(player.am_i_valid) && player.am_i_valid && namespace_d7c0ce12::function_d39fc97a(player)) {
+        if (isdefined(player.am_i_valid) && player.am_i_valid && zm_tomb_utility::function_d39fc97a(player)) {
             self.last_closest_player = player;
             return;
         }
@@ -451,8 +451,8 @@ function j_shouldercounterhalftwist_le(v_zombie_origin, var_1ab6445e) {
             self function_ce3464b9(var_1ab6445e);
             return self.last_closest_player;
         }
-        var_13f318d = namespace_d7c0ce12::function_e046126e(v_zombie_origin, var_1ab6445e);
-        a_players = namespace_e6d36abe::function_6e2be6b3(1);
+        var_13f318d = zm_tomb_utility::function_e046126e(v_zombie_origin, var_1ab6445e);
+        a_players = zm_tomb_tank::function_6e2be6b3(1);
         if (a_players.size > 0) {
             var_f7d4ba79 = undefined;
             var_da9610be = 99999999;
@@ -554,12 +554,12 @@ function function_cec1cb5f(e_inflictor, e_attacker, n_damage, n_dflags, str_mean
             return 0;
         }
         switch (w_weapon.name) {
-        case 69:
-        case 70:
-        case 71:
-        case 72:
-        case 73:
-        case 74:
+        case "quadrotorturret":
+        case "quadrotorturret_upgraded":
+        case "t72_turret":
+        case "zombie_markiv_cannon":
+        case "zombie_markiv_side_cannon":
+        case "zombie_markiv_turret":
             return 0;
         }
     }
@@ -601,7 +601,7 @@ function function_cebd4d0c() {
 function on_player_connect() {
     self thread function_dc50cc67();
     util::wait_network_frame();
-    self thread namespace_d7c0ce12::function_b8710279();
+    self thread zm_tomb_utility::function_b8710279();
     level thread function_a5d4f26d();
 }
 
@@ -610,11 +610,11 @@ function on_player_connect() {
 // Checksum 0x1b40e612, Offset: 0x4440
 // Size: 0x66
 function function_dc50cc67() {
-    self endon(#"hash_3f7b661c");
+    self endon(#"death_or_disconnect");
     while (true) {
         self waittill(#"do_revive_ended_normally");
         if (self hasperk("specialty_quickrevive")) {
-            self notify(#"hash_81f55766");
+            self notify(#"quick_revived_player");
             continue;
         }
         self notify(#"revived_player");
@@ -673,7 +673,7 @@ function function_df9f5719() {
             return sp_zombie;
         }
     }
-    assert(isdefined(sp_zombie), "bg_chargeShotExponentialAmmoPerChargeLevel" + var_343b1937);
+    assert(isdefined(sp_zombie), "<dev string:x28>" + var_343b1937);
 }
 
 // Namespace zm_tomb
@@ -696,7 +696,7 @@ function function_3bc1a76e() {
         if (isdefined(self.ignore_round_spawn_failsafe) && self.ignore_round_spawn_failsafe) {
             return;
         }
-        wait(15);
+        wait 15;
         if (isdefined(self.is_inert) && self.is_inert) {
             continue;
         }
@@ -755,8 +755,8 @@ function function_796dd6da() {
     self.favorite_wall_weapons_list = [];
     self.talks_in_danger = 0;
     /#
-        if (getdvarstring("bg_chargeShotExponentialAmmoPerChargeLevel") != "bg_chargeShotExponentialAmmoPerChargeLevel") {
-            self.characterindex = getdvarint("bg_chargeShotExponentialAmmoPerChargeLevel");
+        if (getdvarstring("<dev string:x52>") != "<dev string:x5d>") {
+            self.characterindex = getdvarint("<dev string:x52>");
         }
     #/
     self setcharacterbodytype(self.characterindex);
@@ -877,13 +877,13 @@ function function_336b1965(vdir) {
         self allowprone(1);
         self allowcrouch(0);
         self allowstand(0);
-        wait(0.25);
+        wait 0.25;
         self freezecontrols(1);
         return;
     }
     self freezecontrols(1);
     self thread function_b2e1c0cd(vdir, stance);
-    wait(1);
+    wait 1;
 }
 
 // Namespace zm_tomb
@@ -936,7 +936,7 @@ function function_b2e1c0cd(vdir, stance) {
         linker waittill(#"movedone");
         linker moveto(origin, 5, 0);
     }
-    wait(15);
+    wait 15;
     linker delete();
 }
 
@@ -1009,7 +1009,7 @@ function function_25d30c89(e_player) {
 // Checksum 0x8b3ad997, Offset: 0x5a00
 // Size: 0x1c
 function function_bfcd93b0() {
-    self namespace_2282064b::function_477a1c55();
+    self zm_tomb_achievement::function_477a1c55();
 }
 
 // Namespace zm_tomb
@@ -1080,8 +1080,8 @@ function function_ed06d487(s_powerup, e_player) {
     // Checksum 0x1fe5fd5f, Offset: 0x5c58
     // Size: 0x5c
     function function_8b47715a() {
-        setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
-        adddebugcommand("bg_chargeShotExponentialAmmoPerChargeLevel");
+        setdvar("<dev string:x5e>", "<dev string:x6b>");
+        adddebugcommand("<dev string:x6f>");
         level thread function_4faf44d9();
     }
 
@@ -1090,18 +1090,18 @@ function function_ed06d487(s_powerup, e_player) {
     // Checksum 0xcefb4e0, Offset: 0x5cc0
     // Size: 0x174
     function function_37dc370c() {
-        setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
-        adddebugcommand("bg_chargeShotExponentialAmmoPerChargeLevel");
-        setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
-        adddebugcommand("bg_chargeShotExponentialAmmoPerChargeLevel");
-        setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
-        adddebugcommand("bg_chargeShotExponentialAmmoPerChargeLevel");
-        setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
-        adddebugcommand("bg_chargeShotExponentialAmmoPerChargeLevel");
-        setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
-        adddebugcommand("bg_chargeShotExponentialAmmoPerChargeLevel");
-        setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
-        adddebugcommand("bg_chargeShotExponentialAmmoPerChargeLevel");
+        setdvar("<dev string:xb2>", "<dev string:x6b>");
+        adddebugcommand("<dev string:xc4>");
+        setdvar("<dev string:x10b>", "<dev string:x6b>");
+        adddebugcommand("<dev string:x126>");
+        setdvar("<dev string:x17f>", "<dev string:x6b>");
+        adddebugcommand("<dev string:x195>");
+        setdvar("<dev string:x1e4>", "<dev string:x6b>");
+        adddebugcommand("<dev string:x1fb>");
+        setdvar("<dev string:x24c>", "<dev string:x6b>");
+        adddebugcommand("<dev string:x262>");
+        setdvar("<dev string:x2b1>", "<dev string:x6b>");
+        adddebugcommand("<dev string:x2cd>");
         level thread function_32e657f2();
     }
 
@@ -1111,48 +1111,48 @@ function function_ed06d487(s_powerup, e_player) {
     // Size: 0x5d0
     function function_32e657f2() {
         while (true) {
-            if (getdvarstring("bg_chargeShotExponentialAmmoPerChargeLevel") == "bg_chargeShotExponentialAmmoPerChargeLevel") {
-                setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
+            if (getdvarstring("<dev string:xb2>") == "<dev string:x328>") {
+                setdvar("<dev string:xb2>", "<dev string:x6b>");
                 foreach (player in getplayers()) {
-                    player thread namespace_c70bea9a::function_3898d995();
+                    player thread _zm_weap_one_inch_punch::function_3898d995();
                 }
-            } else if (getdvarstring("bg_chargeShotExponentialAmmoPerChargeLevel") == "bg_chargeShotExponentialAmmoPerChargeLevel") {
-                setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
+            } else if (getdvarstring("<dev string:x10b>") == "<dev string:x328>") {
+                setdvar("<dev string:x10b>", "<dev string:x6b>");
                 foreach (player in getplayers()) {
                     player.var_21412003 = 1;
-                    player.var_b37dabd2 = "bg_chargeShotExponentialAmmoPerChargeLevel";
-                    player thread namespace_c70bea9a::function_3898d995();
+                    player.var_b37dabd2 = "<dev string:x32b>";
+                    player thread _zm_weap_one_inch_punch::function_3898d995();
                 }
-            } else if (getdvarstring("bg_chargeShotExponentialAmmoPerChargeLevel") == "bg_chargeShotExponentialAmmoPerChargeLevel") {
-                setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
+            } else if (getdvarstring("<dev string:x17f>") == "<dev string:x328>") {
+                setdvar("<dev string:x17f>", "<dev string:x6b>");
                 foreach (player in getplayers()) {
                     player.var_21412003 = 1;
-                    player.var_b37dabd2 = "bg_chargeShotExponentialAmmoPerChargeLevel";
-                    player thread namespace_c70bea9a::function_3898d995();
+                    player.var_b37dabd2 = "<dev string:x334>";
+                    player thread _zm_weap_one_inch_punch::function_3898d995();
                 }
-            } else if (getdvarstring("bg_chargeShotExponentialAmmoPerChargeLevel") == "bg_chargeShotExponentialAmmoPerChargeLevel") {
-                setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
+            } else if (getdvarstring("<dev string:x1e4>") == "<dev string:x328>") {
+                setdvar("<dev string:x1e4>", "<dev string:x6b>");
                 foreach (player in getplayers()) {
                     player.var_21412003 = 1;
-                    player.var_b37dabd2 = "bg_chargeShotExponentialAmmoPerChargeLevel";
-                    player thread namespace_c70bea9a::function_3898d995();
+                    player.var_b37dabd2 = "<dev string:x338>";
+                    player thread _zm_weap_one_inch_punch::function_3898d995();
                 }
-            } else if (getdvarstring("bg_chargeShotExponentialAmmoPerChargeLevel") == "bg_chargeShotExponentialAmmoPerChargeLevel") {
-                setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
+            } else if (getdvarstring("<dev string:x24c>") == "<dev string:x328>") {
+                setdvar("<dev string:x24c>", "<dev string:x6b>");
                 foreach (player in getplayers()) {
                     player.var_21412003 = 1;
-                    player.var_b37dabd2 = "bg_chargeShotExponentialAmmoPerChargeLevel";
-                    player thread namespace_c70bea9a::function_3898d995();
+                    player.var_b37dabd2 = "<dev string:x33d>";
+                    player thread _zm_weap_one_inch_punch::function_3898d995();
                 }
-            } else if (getdvarstring("bg_chargeShotExponentialAmmoPerChargeLevel") == "bg_chargeShotExponentialAmmoPerChargeLevel") {
-                setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
+            } else if (getdvarstring("<dev string:x2b1>") == "<dev string:x328>") {
+                setdvar("<dev string:x2b1>", "<dev string:x6b>");
                 foreach (player in getplayers()) {
                     player.var_21412003 = 1;
-                    player.var_b37dabd2 = "bg_chargeShotExponentialAmmoPerChargeLevel";
-                    player thread namespace_c70bea9a::function_3898d995();
+                    player.var_b37dabd2 = "<dev string:x341>";
+                    player thread _zm_weap_one_inch_punch::function_3898d995();
                 }
             }
-            wait(0.1);
+            wait 0.1;
         }
     }
 
@@ -1161,10 +1161,10 @@ function function_ed06d487(s_powerup, e_player) {
     // Checksum 0xb42c4a0e, Offset: 0x6418
     // Size: 0x8c
     function function_6f620f44() {
-        setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
-        adddebugcommand("bg_chargeShotExponentialAmmoPerChargeLevel");
-        adddebugcommand("bg_chargeShotExponentialAmmoPerChargeLevel");
-        adddebugcommand("bg_chargeShotExponentialAmmoPerChargeLevel");
+        setdvar("<dev string:x34b>", "<dev string:x35e>");
+        adddebugcommand("<dev string:x360>");
+        adddebugcommand("<dev string:x3a4>");
+        adddebugcommand("<dev string:x3e9>");
         level thread function_1cb223e();
     }
 
@@ -1174,13 +1174,13 @@ function function_ed06d487(s_powerup, e_player) {
     // Size: 0xe0
     function function_1cb223e() {
         while (true) {
-            if (getdvarstring("bg_chargeShotExponentialAmmoPerChargeLevel") != "bg_chargeShotExponentialAmmoPerChargeLevel") {
+            if (getdvarstring("<dev string:x34b>") != "<dev string:x35e>") {
                 player = getplayers()[0];
-                var_47620996 = int(getdvarint("bg_chargeShotExponentialAmmoPerChargeLevel"));
-                player clientfield::set_to_player("bg_chargeShotExponentialAmmoPerChargeLevel", var_47620996);
-                setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
+                var_47620996 = int(getdvarint("<dev string:x34b>"));
+                player clientfield::set_to_player("<dev string:x42e>", var_47620996);
+                setdvar("<dev string:x34b>", "<dev string:x35e>");
             }
-            wait(0.1);
+            wait 0.1;
         }
     }
 
@@ -1190,11 +1190,11 @@ function function_ed06d487(s_powerup, e_player) {
     // Size: 0x88
     function function_4faf44d9() {
         while (true) {
-            if (getdvarstring("bg_chargeShotExponentialAmmoPerChargeLevel") == "bg_chargeShotExponentialAmmoPerChargeLevel") {
-                setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
-                level thread zm_devgui::zombie_devgui_give_powerup("bg_chargeShotExponentialAmmoPerChargeLevel", 1);
+            if (getdvarstring("<dev string:x5e>") == "<dev string:x328>") {
+                setdvar("<dev string:x5e>", "<dev string:x6b>");
+                level thread zm_devgui::zombie_devgui_give_powerup("<dev string:x5e>", 1);
             }
-            wait(0.1);
+            wait 0.1;
         }
     }
 
@@ -1204,12 +1204,12 @@ function function_ed06d487(s_powerup, e_player) {
     // Size: 0xa0
     function function_23e72289() {
         while (true) {
-            if (getdvarstring("bg_chargeShotExponentialAmmoPerChargeLevel") == "bg_chargeShotExponentialAmmoPerChargeLevel") {
-                setdvar("bg_chargeShotExponentialAmmoPerChargeLevel", "bg_chargeShotExponentialAmmoPerChargeLevel");
-                level thread zm_devgui::zombie_devgui_give_powerup("bg_chargeShotExponentialAmmoPerChargeLevel", 1);
-                iprintlnbold("bg_chargeShotExponentialAmmoPerChargeLevel");
+            if (getdvarstring("<dev string:x442>") == "<dev string:x328>") {
+                setdvar("<dev string:x442>", "<dev string:x6b>");
+                level thread zm_devgui::zombie_devgui_give_powerup("<dev string:x442>", 1);
+                iprintlnbold("<dev string:x450>");
             }
-            wait(0.1);
+            wait 0.1;
         }
     }
 
@@ -1431,7 +1431,7 @@ function function_c0b30e75() {
         if (activezone == "zone_bunker_3") {
             break;
         }
-        wait(1);
+        wait 1;
     }
     level flag::set("activate_zone_nml");
 }
@@ -1464,7 +1464,7 @@ function function_d33ee699() {
                 zbarrier hidezbarrierpiece(i);
                 zbarrier setzbarrierpiecestate(i, "open");
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 }
@@ -1522,12 +1522,12 @@ function function_739ff042(einflictor, eattacker, idamage, idflags, smeansofdeat
     return_val = self zm::actor_damage_override_wrapper(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, timeoffset, boneindex, modelindex, surfacetype, surfacenormal);
     if (self.health <= 0) {
         if (weapon.name == "zombie_markiv_cannon" && smeansofdeath == "MOD_CRUSH") {
-            self thread namespace_d7c0ce12::function_cc964a18();
+            self thread zm_tomb_utility::function_cc964a18();
         } else if (isdefined(self.var_27ea7da4) && (isdefined(self.var_326bf116) && self.var_326bf116 || self.var_27ea7da4)) {
-            self namespace_e6d36abe::function_1f659c12(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, timeoffset, boneindex, modelindex, surfacetype, surfacenormal);
+            self zm_tomb_tank::function_1f659c12(einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, vdamageorigin, timeoffset, boneindex, modelindex, surfacetype, surfacenormal);
         }
         if (isdefined(eattacker) && isdefined(eattacker.targetname) && eattacker.targetname == "quadrotor_ai") {
-            eattacker thread namespace_ad52727b::function_860b0710();
+            eattacker thread zm_tomb_vo::function_860b0710();
         }
     }
     return return_val;
@@ -1539,8 +1539,8 @@ function function_739ff042(einflictor, eattacker, idamage, idflags, smeansofdeat
 // Size: 0xd4
 function function_7ffc8f44(attacker) {
     if (isdefined(self) && isdefined(self.damagelocation) && isdefined(self.damagemod) && isdefined(self.damageweapon) && isdefined(self.attacker) && isplayer(self.attacker)) {
-        if (zm_utility::is_headshot(self.damageweapon, self.damagelocation, self.damagemod) && namespace_a528e918::function_db40117f("zc_headshots") && !(self.script_noteworthy === "capture_zombie")) {
-            self.attacker namespace_a528e918::function_6b433789("zc_headshots");
+        if (zm_utility::is_headshot(self.damageweapon, self.damagelocation, self.damagemod) && zm_challenges_tomb::function_db40117f("zc_headshots") && !(self.script_noteworthy === "capture_zombie")) {
+            self.attacker zm_challenges_tomb::function_6b433789("zc_headshots");
         }
     }
 }
@@ -1571,7 +1571,7 @@ function function_53b96cb8(player) {
 // Checksum 0x9029e003, Offset: 0x8a40
 // Size: 0x9e
 function function_d2782f7f() {
-    self endon(#"hash_3f7b661c");
+    self endon(#"death_or_disconnect");
     level flag::wait_till("start_zombie_round_logic");
     while (true) {
         var_17167d70 = zombie_utility::get_current_zombie_count();
@@ -1579,7 +1579,7 @@ function function_d2782f7f() {
         /#
             iprintlnbold(str_hint);
         #/
-        wait(5);
+        wait 5;
     }
 }
 
@@ -1593,7 +1593,7 @@ function function_f357616c() {
         playfx(level._effect["electric_cherry_explode"], self.origin);
         self playsound("zmb_cherry_explode");
         self notify(#"electric_cherry_start");
-        wait(0.05);
+        wait 0.05;
         a_zombies = getaispeciesarray("axis", "all");
         a_zombies = util::get_array_of_closest(self.origin, a_zombies, undefined, undefined, 500);
         for (i = 0; i < a_zombies.size; i++) {
@@ -1608,7 +1608,7 @@ function function_f357616c() {
                     a_zombies[i] thread zm_perk_electric_cherry::electric_cherry_stun();
                     a_zombies[i] thread zm_perk_electric_cherry::electric_cherry_shock_fx();
                 }
-                wait(0.1);
+                wait 0.1;
                 a_zombies[i] dodamage(1000, self.origin, self, self, "none");
             }
         }
@@ -1690,7 +1690,7 @@ function function_ded9e30a() {
                         }
                         a_zombies[i] thread zm_perk_electric_cherry::electric_cherry_shock_fx();
                     }
-                    wait(0.1);
+                    wait 0.1;
                     if (isalive(a_zombies[i])) {
                         a_zombies[i] dodamage(perk_dmg, self.origin, self, self, "none");
                     }
@@ -1712,7 +1712,7 @@ function function_782ac8a6() {
     ammolowcount = 0;
     ammooutcount = 0;
     while (true) {
-        wait(0.5);
+        wait 0.5;
         weap = self getcurrentweapon();
         if (!isdefined(weap) || weap == level.weaponnone || !function_72eeced1(weap)) {
             continue;
@@ -1731,7 +1731,7 @@ function function_782ac8a6() {
             self zm_audio::create_and_play_dialog("general", "ammo_out");
             ammooutcount++;
         }
-        wait(20);
+        wait 20;
     }
 }
 
@@ -1744,27 +1744,27 @@ function function_72eeced1(weap) {
         return false;
     }
     switch (weap.name) {
-    case 242:
-    case 2:
-    case 243:
-    case 244:
-    case 245:
-    case 246:
-    case 236:
-    case 247:
-    case 248:
-    case 249:
-    case 250:
-    case 251:
-    case 252:
-    case 253:
-    case 254:
-    case 255:
-    case 256:
-    case 257:
-    case 258:
-    case 259:
-    case 260:
+    case "death_throe":
+    case "equip_dieseldrone":
+    case "falling_hands_tomb":
+    case "hero_annihilator":
+    case "minigun":
+    case "no_hands":
+    case "none":
+    case "one_inch_punch":
+    case "one_inch_punch_air":
+    case "one_inch_punch_fire":
+    case "one_inch_punch_ice":
+    case "one_inch_punch_lightning":
+    case "one_inch_punch_upgraded":
+    case "riotshield":
+    case "staff_revive":
+    case "zombie_bowie_flourish":
+    case "zombie_builder":
+    case "zombie_fists":
+    case "zombie_knuckle_crack":
+    case "zombie_one_inch_punch_flourish":
+    case "zombie_one_inch_punch_upgrade_flourish":
         return false;
     default:
         if (weap.isperkbottle || zm_utility::is_placeable_mine(weap) || zm_equipment::is_equipment(weap) || issubstr(weap.name, "knife_ballistic_") || getsubstr(weap.name, 0, 3) == "gl_") {
@@ -1780,22 +1780,22 @@ function function_72eeced1(weap) {
 // Checksum 0xf90fae3b, Offset: 0x9528
 // Size: 0x27e
 function function_89182d9b() {
-    level.machine_assets["specialty_additionalprimaryweapon"].power_on_callback = &namespace_cdc4d06c::function_3f903f04;
-    level.machine_assets["specialty_additionalprimaryweapon"].power_off_callback = &namespace_cdc4d06c::function_31c032;
-    level.machine_assets["specialty_armorvest"].power_on_callback = &namespace_cdc4d06c::function_3f903f04;
-    level.machine_assets["specialty_armorvest"].power_off_callback = &namespace_cdc4d06c::function_31c032;
-    level.machine_assets["specialty_fastreload"].power_on_callback = &namespace_cdc4d06c::function_3f903f04;
-    level.machine_assets["specialty_fastreload"].power_off_callback = &namespace_cdc4d06c::function_31c032;
-    level.machine_assets["specialty_quickrevive"].power_on_callback = &namespace_cdc4d06c::function_3f903f04;
-    level.machine_assets["specialty_quickrevive"].power_off_callback = &namespace_cdc4d06c::function_31c032;
-    level.machine_assets["specialty_staminup"].power_on_callback = &namespace_cdc4d06c::function_3f903f04;
-    level.machine_assets["specialty_staminup"].power_off_callback = &namespace_cdc4d06c::function_31c032;
+    level.machine_assets["specialty_additionalprimaryweapon"].power_on_callback = &zm_tomb_capture_zones::function_3f903f04;
+    level.machine_assets["specialty_additionalprimaryweapon"].power_off_callback = &zm_tomb_capture_zones::function_31c032;
+    level.machine_assets["specialty_armorvest"].power_on_callback = &zm_tomb_capture_zones::function_3f903f04;
+    level.machine_assets["specialty_armorvest"].power_off_callback = &zm_tomb_capture_zones::function_31c032;
+    level.machine_assets["specialty_fastreload"].power_on_callback = &zm_tomb_capture_zones::function_3f903f04;
+    level.machine_assets["specialty_fastreload"].power_off_callback = &zm_tomb_capture_zones::function_31c032;
+    level.machine_assets["specialty_quickrevive"].power_on_callback = &zm_tomb_capture_zones::function_3f903f04;
+    level.machine_assets["specialty_quickrevive"].power_off_callback = &zm_tomb_capture_zones::function_31c032;
+    level.machine_assets["specialty_staminup"].power_on_callback = &zm_tomb_capture_zones::function_3f903f04;
+    level.machine_assets["specialty_staminup"].power_off_callback = &zm_tomb_capture_zones::function_31c032;
     level flag::wait_till("start_zombie_round_logic");
-    wait(0.5);
+    wait 0.5;
     foreach (var_3b5635b9 in level.powered_items) {
         if (var_3b5635b9.target.script_noteworthy != "pack_a_punch") {
-            var_3b5635b9.power_on_func = &namespace_cdc4d06c::function_3f903f04;
-            var_3b5635b9.power_off_func = &namespace_cdc4d06c::function_31c032;
+            var_3b5635b9.power_on_func = &zm_tomb_capture_zones::function_3f903f04;
+            var_3b5635b9.power_off_func = &zm_tomb_capture_zones::function_31c032;
         }
     }
 }
@@ -1815,7 +1815,7 @@ function function_67268668() {
 // Size: 0x34
 function init_sounds() {
     level thread custom_add_vox();
-    level thread namespace_ad52727b::function_30a8bcac();
+    level thread zm_tomb_vo::function_30a8bcac();
 }
 
 // Namespace zm_tomb

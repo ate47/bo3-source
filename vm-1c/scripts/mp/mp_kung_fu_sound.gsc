@@ -2,9 +2,9 @@
 #using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b19eb620;
+#namespace mp_kung_fu_sound;
 
-// Namespace namespace_b19eb620
+// Namespace mp_kung_fu_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaa730e1f, Offset: 0x138
 // Size: 0x64
@@ -15,7 +15,7 @@ function main() {
     level thread function_cdb55fa3();
 }
 
-// Namespace namespace_b19eb620
+// Namespace mp_kung_fu_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe1b40f71, Offset: 0x1a8
 // Size: 0x98
@@ -32,7 +32,7 @@ function function_3fbccede() {
     }
 }
 
-// Namespace namespace_b19eb620
+// Namespace mp_kung_fu_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x369e041d, Offset: 0x248
 // Size: 0x98
@@ -49,7 +49,7 @@ function function_19ba5475() {
     }
 }
 
-// Namespace namespace_b19eb620
+// Namespace mp_kung_fu_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1fdef59d, Offset: 0x2e8
 // Size: 0x98
@@ -66,7 +66,7 @@ function function_f3b7da0c() {
     }
 }
 
-// Namespace namespace_b19eb620
+// Namespace mp_kung_fu_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4c0bb51f, Offset: 0x388
 // Size: 0x98

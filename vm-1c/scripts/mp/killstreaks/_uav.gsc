@@ -177,7 +177,7 @@ function destroyuav(attacker, weapon) {
     self setmodel("tag_origin");
     target_remove(self);
     self unlink();
-    wait(0.5);
+    wait 0.5;
     arrayremovevalue(level.spawneduavs, self);
     self notify(#"delete");
     self delete();
@@ -227,7 +227,7 @@ function ontimeout() {
     self.leaving = 1;
     self removeactiveuav();
     airsupport::leave(10);
-    wait(10);
+    wait 10;
     target_remove(self);
     arrayremovevalue(level.spawneduavs, self);
     self delete();
@@ -247,7 +247,7 @@ function ontimecheck() {
 // Size: 0x84
 function startuavfx() {
     self endon(#"death");
-    wait(0.1);
+    wait 0.1;
     if (isdefined(self)) {
         playfxontag("killstreaks/fx_uav_lights", self, "tag_origin");
         playfxontag("killstreaks/fx_uav_bunner", self, "tag_origin");
@@ -261,7 +261,7 @@ function startuavfx() {
 // Size: 0xa4
 function playafterburnerfx() {
     self endon(#"death");
-    wait(0.1);
+    wait 0.1;
     if (isdefined(self)) {
         playfxontag("killstreaks/fx_uav_bunner", self, "tag_origin");
         self stoploopsound();

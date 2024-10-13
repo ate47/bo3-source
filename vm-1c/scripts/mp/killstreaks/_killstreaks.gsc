@@ -112,7 +112,7 @@ function init() {
     emp::init();
     flak_drone::init();
     helicopter::init();
-    namespace_ba7e0f70::init();
+    helicopter_gunner::init();
     killstreakrules::init();
     microwave_turret::init();
     planemortar::init();
@@ -128,7 +128,7 @@ function init() {
     /#
         level.killstreak_init_end_time = getmillisecondsraw();
         elapsed_time = level.killstreak_init_end_time - level.killstreak_init_start_time;
-        println("killstreak" + elapsed_time + "killstreak");
+        println("<dev string:x28>" + elapsed_time + "<dev string:x46>");
     #/
     callback::on_spawned(&on_player_spawned);
     callback::on_joined_team(&on_joined_team);
@@ -136,7 +136,7 @@ function init() {
         level thread killstreak_debug_think();
     #/
     if (getdvarint("teamOpsEnabled") == 1) {
-        level namespace_e21b687a::main();
+        level teamops::main();
     }
 }
 
@@ -157,9 +157,9 @@ function register(killstreaktype, killstreakweaponname, killstreakmenuname, kill
     if (!isdefined(registerinventory)) {
         registerinventory = 1;
     }
-    assert(isdefined(killstreaktype), "killstreak");
-    assert(!isdefined(level.killstreaks[killstreaktype]), "killstreak" + killstreaktype + "killstreak");
-    assert(isdefined(killstreakusefunction), "killstreak" + killstreaktype);
+    assert(isdefined(killstreaktype), "<dev string:x4a>");
+    assert(!isdefined(level.killstreaks[killstreaktype]), "<dev string:x83>" + killstreaktype + "<dev string:x8f>");
+    assert(isdefined(killstreakusefunction), "<dev string:xa3>" + killstreaktype);
     level.killstreaks[killstreaktype] = spawnstruct();
     var_a804a5cf = util::function_bc37a245();
     level.killstreaks[killstreaktype].killstreaklevel = int(tablelookup(var_a804a5cf, 4, killstreakmenuname, 5));
@@ -175,14 +175,14 @@ function register(killstreaktype, killstreakweaponname, killstreakmenuname, kill
     level.killstreaks[killstreaktype].teamkillpenaltyscale = 1;
     /#
         level.killstreaks[killstreaktype].uiname = tablelookup(var_a804a5cf, 4, killstreakmenuname, 3);
-        if (level.killstreaks[killstreaktype].uiname == "killstreak") {
+        if (level.killstreaks[killstreaktype].uiname == "<dev string:xcb>") {
             level.killstreaks[killstreaktype].uiname = killstreakmenuname;
         }
     #/
     if (isdefined(killstreakweaponname)) {
         killstreakweapon = getweapon(killstreakweaponname);
         assert(killstreakweapon != level.weaponnone);
-        assert(!isdefined(level.killstreakweapons[killstreakweapon]), "killstreak");
+        assert(!isdefined(level.killstreakweapons[killstreakweapon]), "<dev string:xcc>");
         level.killstreaks[killstreaktype].weapon = killstreakweapon;
         level.killstreakweapons[killstreakweapon] = killstreaktype;
     }
@@ -221,8 +221,8 @@ function function_f79fd1e9(killstreaktype, receivedtext, notusabletext, inboundt
     if (!isdefined(isinventory)) {
         isinventory = 0;
     }
-    assert(isdefined(killstreaktype), "killstreak");
-    assert(isdefined(level.killstreaks[killstreaktype]), "killstreak");
+    assert(isdefined(killstreaktype), "<dev string:x4a>");
+    assert(isdefined(level.killstreaks[killstreaktype]), "<dev string:x108>");
     level.killstreaks[killstreaktype].receivedtext = receivedtext;
     level.killstreaks[killstreaktype].notavailabletext = notusabletext;
     level.killstreaks[killstreaktype].inboundtext = inboundtext;
@@ -239,8 +239,8 @@ function function_f79fd1e9(killstreaktype, receivedtext, notusabletext, inboundt
 // Checksum 0x9f62f508, Offset: 0x1b68
 // Size: 0x3a4
 function register_dialog(killstreaktype, informdialog, taacomdialogbundlekey, pilotdialogarraykey, startdialogkey, enemystartdialogkey, enemystartmultipledialogkey, hackeddialogkey, hackedstartdialogkey, requestdialogkey, threatdialogkey, isinventory) {
-    assert(isdefined(killstreaktype), "killstreak");
-    assert(isdefined(level.killstreaks[killstreaktype]), "killstreak");
+    assert(isdefined(killstreaktype), "<dev string:x4a>");
+    assert(isdefined(level.killstreaks[killstreaktype]), "<dev string:x14b>");
     level.killstreaks[killstreaktype].informdialog = informdialog;
     level.killstreaks[killstreaktype].taacomdialogbundlekey = taacomdialogbundlekey;
     level.killstreaks[killstreaktype].startdialogkey = startdialogkey;
@@ -276,8 +276,8 @@ function register_dialog(killstreaktype, informdialog, taacomdialogbundlekey, pi
 // Checksum 0xd8b605cb, Offset: 0x1f18
 // Size: 0x1a4
 function register_alt_weapon(killstreaktype, weaponname, isinventory) {
-    assert(isdefined(killstreaktype), "killstreak");
-    assert(isdefined(level.killstreaks[killstreaktype]), "killstreak");
+    assert(isdefined(killstreaktype), "<dev string:x4a>");
+    assert(isdefined(level.killstreaks[killstreaktype]), "<dev string:x18d>");
     weapon = getweapon(weaponname);
     if (weapon == level.weaponnone) {
         return;
@@ -302,8 +302,8 @@ function register_alt_weapon(killstreaktype, weaponname, isinventory) {
 // Checksum 0x1eaf05a5, Offset: 0x20c8
 // Size: 0x18c
 function register_remote_override_weapon(killstreaktype, weaponname, isinventory) {
-    assert(isdefined(killstreaktype), "killstreak");
-    assert(isdefined(level.killstreaks[killstreaktype]), "killstreak");
+    assert(isdefined(killstreaktype), "<dev string:x4a>");
+    assert(isdefined(level.killstreaks[killstreaktype]), "<dev string:x1d3>");
     weapon = getweapon(weaponname);
     if (level.killstreaks[killstreaktype].weapon == weapon) {
         return;
@@ -341,11 +341,11 @@ function is_remote_override_weapon(killstreaktype, weapon) {
 // Size: 0x12c
 function register_dev_dvars(killstreaktype) {
     /#
-        assert(isdefined(killstreaktype), "killstreak");
-        assert(isdefined(level.killstreaks[killstreaktype]), "killstreak");
-        level.killstreaks[killstreaktype].devdvar = "killstreak" + killstreaktype + "killstreak";
-        level.killstreaks[killstreaktype].devenemydvar = "killstreak" + killstreaktype + "killstreak";
-        level.killstreaks[killstreaktype].devtimeoutdvar = "killstreak" + killstreaktype + "killstreak";
+        assert(isdefined(killstreaktype), "<dev string:x4a>");
+        assert(isdefined(level.killstreaks[killstreaktype]), "<dev string:x225>");
+        level.killstreaks[killstreaktype].devdvar = "<dev string:x269>" + killstreaktype + "<dev string:x26e>";
+        level.killstreaks[killstreaktype].devenemydvar = "<dev string:x269>" + killstreaktype + "<dev string:x274>";
+        level.killstreaks[killstreaktype].devtimeoutdvar = "<dev string:x269>" + killstreaktype + "<dev string:x27f>";
         setdvar(level.killstreaks[killstreaktype].devtimeoutdvar, 0);
         level thread register_devgui(killstreaktype);
     #/
@@ -358,9 +358,9 @@ function register_dev_dvars(killstreaktype) {
     // Checksum 0xcab22944, Offset: 0x2440
     // Size: 0xbc
     function register_dev_debug_dvar(killstreaktype) {
-        assert(isdefined(killstreaktype), "killstreak");
-        assert(isdefined(level.killstreaks[killstreaktype]), "killstreak");
-        level.killstreaks[killstreaktype].devdebugdvar = "killstreak" + killstreaktype + "killstreak";
+        assert(isdefined(killstreaktype), "<dev string:x4a>");
+        assert(isdefined(level.killstreaks[killstreaktype]), "<dev string:x225>");
+        level.killstreaks[killstreaktype].devdebugdvar = "<dev string:x269>" + killstreaktype + "<dev string:x28a>";
         devgui_scorestreak_command_debugdvar(killstreaktype, level.killstreaks[killstreaktype].devdebugdvar);
     }
 
@@ -370,9 +370,9 @@ function register_dev_dvars(killstreaktype) {
     // Size: 0x14c
     function register_devgui(killstreaktype) {
         level endon(#"game_ended");
-        wait(randomintrange(2, 20) * 0.05);
-        give_type_all = "killstreak";
-        give_type_enemy = "killstreak";
+        wait randomintrange(2, 20) * 0.05;
+        give_type_all = "<dev string:x291>";
+        give_type_enemy = "<dev string:x296>";
         if (isdefined(level.killstreaks[killstreaktype].devdvar)) {
             devgui_scorestreak_command_givedvar(killstreaktype, give_type_all, level.killstreaks[killstreaktype].devdvar);
         }
@@ -389,7 +389,7 @@ function register_dev_dvars(killstreaktype) {
     // Checksum 0x935c2fb0, Offset: 0x2660
     // Size: 0x54
     function devgui_scorestreak_command_givedvar(killstreaktype, give_type, dvar) {
-        devgui_scorestreak_command(killstreaktype, give_type, "killstreak" + dvar + "killstreak");
+        devgui_scorestreak_command(killstreaktype, give_type, "<dev string:x2a1>" + dvar + "<dev string:x2a6>");
     }
 
     // Namespace killstreaks
@@ -397,7 +397,7 @@ function register_dev_dvars(killstreaktype) {
     // Checksum 0x4f8c6196, Offset: 0x26c0
     // Size: 0x3c
     function devgui_scorestreak_command_timeoutdvar(killstreaktype, dvar) {
-        devgui_scorestreak_dvar_toggle(killstreaktype, "killstreak", dvar);
+        devgui_scorestreak_dvar_toggle(killstreaktype, "<dev string:x2a9>", dvar);
     }
 
     // Namespace killstreaks
@@ -405,7 +405,7 @@ function register_dev_dvars(killstreaktype) {
     // Checksum 0x4cec49f9, Offset: 0x2708
     // Size: 0x3c
     function devgui_scorestreak_command_debugdvar(killstreaktype, dvar) {
-        devgui_scorestreak_dvar_toggle(killstreaktype, "killstreak", dvar);
+        devgui_scorestreak_dvar_toggle(killstreaktype, "<dev string:x2b2>", dvar);
     }
 
 #/
@@ -425,11 +425,11 @@ function devgui_scorestreak_dvar_toggle(killstreaktype, title, dvar) {
 // Size: 0x114
 function devgui_scorestreak_command(killstreaktype, title, command) {
     /#
-        assert(isdefined(killstreaktype), "killstreak");
-        assert(isdefined(level.killstreaks[killstreaktype]), "killstreak");
-        root = "killstreak";
+        assert(isdefined(killstreaktype), "<dev string:x4a>");
+        assert(isdefined(level.killstreaks[killstreaktype]), "<dev string:x225>");
+        root = "<dev string:x2b8>";
         user_name = makelocalizedstring(level.killstreaks[killstreaktype].uiname);
-        adddebugcommand(root + user_name + "killstreak" + killstreaktype + "killstreak" + title + "killstreak" + command + "killstreak");
+        adddebugcommand(root + user_name + "<dev string:x2d5>" + killstreaktype + "<dev string:x2d8>" + title + "<dev string:x2db>" + command + "<dev string:x2df>");
     #/
 }
 
@@ -439,7 +439,7 @@ function devgui_scorestreak_command(killstreaktype, title, command) {
 // Size: 0x8e
 function should_draw_debug(killstreak) {
     /#
-        assert(isdefined(killstreak), "killstreak");
+        assert(isdefined(killstreak), "<dev string:x4a>");
         if (isdefined(level.killstreaks[killstreak]) && isdefined(level.killstreaks[killstreak].devdebugdvar)) {
             return getdvarint(level.killstreaks[killstreak].devdebugdvar);
         }
@@ -538,13 +538,13 @@ function give_if_streak_count_matches(index, killstreak, streakcount) {
     pixbeginevent("giveKillstreakIfStreakCountMatches");
     /#
         if (!isdefined(killstreak)) {
-            println("killstreak");
+            println("<dev string:x2e3>");
         }
         if (isdefined(killstreak)) {
-            println("killstreak" + killstreak + "killstreak");
+            println("<dev string:x2fa>" + killstreak + "<dev string:x310>");
         }
         if (!is_available(killstreak)) {
-            println("killstreak");
+            println("<dev string:x312>");
         }
     #/
     if (self.pers["killstreaksEarnedThisKillstreak"] > index && util::isroundbased()) {
@@ -837,8 +837,8 @@ function give_weapon(weapon, isinventory, usestoredammo) {
                 continue;
             }
             switch (carriedweapon.name) {
-            case 30:
-            case 31:
+            case "m32":
+            case "minigun":
                 continue;
             }
             if (is_killstreak_weapon(carriedweapon)) {
@@ -866,12 +866,12 @@ function give_weapon(weapon, isinventory, usestoredammo) {
                 return weapon.maxammo;
             } else if (isdefined(usestoredammo) && usestoredammo && self.pers["killstreak_ammo_count"][self.pers["killstreak_ammo_count"].size - 1] > 0) {
                 switch (weapon.name) {
-                case 36:
+                case "inventory_minigun":
                     if (isdefined(self.minigunactive) && self.minigunactive) {
                         return self.pers["held_killstreak_ammo_count"][weapon];
                     }
                     break;
-                case 35:
+                case "inventory_m32":
                     if (isdefined(self.m32active) && self.m32active) {
                         return self.pers["held_killstreak_ammo_count"][weapon];
                     }
@@ -889,17 +889,17 @@ function give_weapon(weapon, isinventory, usestoredammo) {
             return self.pers["held_killstreak_ammo_count"][weapon];
         } else {
             switch (weapon.name) {
-            case 37:
-            case 38:
-            case 39:
-            case 40:
-            case 41:
-            case 42:
-            case 43:
-            case 44:
-            case 45:
-            case 46:
-            case 47:
+            case "ai_tank_marker":
+            case "combat_robot_marker":
+            case "dart":
+            case "inventory_ai_tank_marker":
+            case "inventory_combat_robot_marker":
+            case "inventory_dart":
+            case "inventory_m32_drop":
+            case "inventory_minigun_drop":
+            case "inventory_missile_drone":
+            case "inventory_supplydrop_marker":
+            case "supplydrop_marker":
                 delta = 1;
                 break;
             default:
@@ -935,7 +935,7 @@ function activate_next(do_not_update_death_count) {
         return false;
     }
     weapon = level.killstreaks[killstreaktype].weapon;
-    wait(0.05);
+    wait 0.05;
     ammocount = give_weapon(weapon, 0, 1);
     if (weapon.iscarriedkillstreak) {
         self setweaponammoclip(weapon, self.pers["held_killstreak_clip_count"][weapon]);
@@ -1052,7 +1052,7 @@ function remove_when_done(killstreak, haskillstreakbeenused, isfrominventory) {
     }
     if (successful) {
         /#
-            print("killstreak" + get_menu_name(killstreak));
+            print("<dev string:x32d>" + get_menu_name(killstreak));
         #/
         killstreak_weapon = get_killstreak_weapon(killstreak);
         recordstreakindex = undefined;
@@ -1334,7 +1334,7 @@ function function_4fc0056c(weapon) {
             self.lastnonkillstreakweapon = weapon;
             return;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1540,7 +1540,7 @@ function display_unavailable_time() {
 // Checksum 0x9e61ee2f, Offset: 0x61e0
 // Size: 0x198
 function trigger_killstreak(killstreaktype, isfrominventory) {
-    assert(isdefined(level.killstreaks[killstreaktype].usefunction), "killstreak" + killstreaktype);
+    assert(isdefined(level.killstreaks[killstreaktype].usefunction), "<dev string:xa3>" + killstreaktype);
     self.usingkillstreakfrominventory = isfrominventory;
     if (level.infinalkillcam) {
         return false;
@@ -1582,7 +1582,7 @@ function add_to_killstreak_count(weapon) {
 // Checksum 0x17eab85b, Offset: 0x63d8
 // Size: 0xde
 function get_first_valid_killstreak_alt_weapon(killstreaktype) {
-    assert(isdefined(level.killstreaks[killstreaktype]), "killstreak");
+    assert(isdefined(level.killstreaks[killstreaktype]), "<dev string:x33a>");
     if (isdefined(level.killstreaks[killstreaktype].altweapons)) {
         for (i = 0; i < level.killstreaks[killstreaktype].altweapons.size; i++) {
             if (isdefined(level.killstreaks[killstreaktype].altweapons[i])) {
@@ -1762,7 +1762,7 @@ function play_killstreak_ready_dialog(killstreaktype, taacomwaittime) {
         return;
     }
     if (isdefined(taacomwaittime)) {
-        wait(taacomwaittime);
+        wait taacomwaittime;
     }
     self globallogic_audio::play_taacom_dialog("ready", killstreaktype);
 }
@@ -1893,11 +1893,11 @@ function player_killstreak_threat_tracking(killstreaktype) {
                 if (battlechatter::dialog_chance("killstreakSpotChance")) {
                     player battlechatter::play_killstreak_threat(killstreaktype);
                 }
-                wait(battlechatter::mpdialog_value("killstreakSpotDelay", 0));
+                wait battlechatter::mpdialog_value("killstreakSpotDelay", 0);
                 break;
             }
         }
-        wait(battlechatter::mpdialog_value("killstreakSpotInterval", 0.05));
+        wait battlechatter::mpdialog_value("killstreakSpotInterval", 0.05);
     }
 }
 
@@ -1917,7 +1917,7 @@ function get_killstreak_inform_dialog(killstreaktype) {
 // Checksum 0x8a0b133e, Offset: 0x75b8
 // Size: 0x62
 function get_killstreak_usage_by_killstreak(killstreaktype) {
-    assert(isdefined(level.killstreaks[killstreaktype]), "killstreak");
+    assert(isdefined(level.killstreaks[killstreaktype]), "<dev string:x355>");
     return get_killstreak_usage(level.killstreaks[killstreaktype].usagekey);
 }
 
@@ -2089,7 +2089,7 @@ function init_ride_killstreak_internal(streak, always_allow) {
 function clear_ride_intro(delay) {
     self endon(#"disconnect");
     if (isdefined(delay)) {
-        wait(delay);
+        wait delay;
     }
     self thread hud::screen_fade_in(0);
 }
@@ -2101,18 +2101,18 @@ function clear_ride_intro(delay) {
     // Checksum 0xa5f95008, Offset: 0x7e18
     // Size: 0xc0
     function killstreak_debug_think() {
-        setdvar("killstreak", "killstreak");
+        setdvar("<dev string:x39c>", "<dev string:xcb>");
         for (;;) {
-            cmd = getdvarstring("killstreak");
+            cmd = getdvarstring("<dev string:x39c>");
             switch (cmd) {
-            case 8:
+            case "<dev string:x3ad>":
                 killstreak_data_dump();
                 break;
             }
-            if (cmd != "killstreak") {
-                setdvar("killstreak", "killstreak");
+            if (cmd != "<dev string:xcb>") {
+                setdvar("<dev string:x39c>", "<dev string:xcb>");
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 
@@ -2121,25 +2121,25 @@ function clear_ride_intro(delay) {
     // Checksum 0xae66b3d5, Offset: 0x7ee0
     // Size: 0x36c
     function killstreak_data_dump() {
-        iprintln("killstreak");
-        println("killstreak");
-        println("killstreak");
+        iprintln("<dev string:x3b7>");
+        println("<dev string:x3d7>");
+        println("<dev string:x3f3>");
         keys = getarraykeys(level.killstreaks);
         for (i = 0; i < keys.size; i++) {
             data = level.killstreaks[keys[i]];
             type_data = level.killstreaktype[keys[i]];
-            print(keys[i] + "killstreak");
-            print(data.killstreaklevel + "killstreak");
-            print(data.weapon.name + "killstreak");
+            print(keys[i] + "<dev string:x459>");
+            print(data.killstreaklevel + "<dev string:x459>");
+            print(data.weapon.name + "<dev string:x459>");
             alt = 0;
             if (isdefined(data.altweapons)) {
                 assert(data.altweapons.size <= 4);
                 for (alt = 0; alt < data.altweapons.size; alt++) {
-                    print(data.altweapons[alt].name + "killstreak");
+                    print(data.altweapons[alt].name + "<dev string:x459>");
                 }
             }
             while (alt < 4) {
-                print("killstreak");
+                print("<dev string:x459>");
                 alt++;
             }
             type = 0;
@@ -2148,18 +2148,18 @@ function clear_ride_intro(delay) {
                 type_keys = getarraykeys(type_data);
                 while (type < type_keys.size) {
                     if (type_data[type_keys[type]] == 1) {
-                        print(type_keys[type] + "killstreak");
+                        print(type_keys[type] + "<dev string:x459>");
                     }
                     type++;
                 }
             }
             while (type < 4) {
-                print("killstreak");
+                print("<dev string:x459>");
                 type++;
             }
-            println("killstreak");
+            println("<dev string:xcb>");
         }
-        println("killstreak");
+        println("<dev string:x45b>");
     }
 
 #/
@@ -2218,7 +2218,7 @@ function clear_using_remote(immediate, skipnotify) {
 // Size: 0x34
 function hide_tablet() {
     self endon(#"disconnect");
-    wait(0.2);
+    wait 0.2;
     self clientfield::set_player_uimodel("hudItems.remoteKillstreakActivated", 0);
 }
 
@@ -2288,7 +2288,7 @@ function monitordamage(killstreak_ref, max_health, destroyed_callback, low_healt
     self.health = 9999999;
     self.damagetaken = 0;
     self setup_health(killstreak_ref, max_health, low_health);
-    assert(!isvehicle(self) || !issentient(self), "killstreak");
+    assert(!isvehicle(self) || !issentient(self), "<dev string:x47b>");
     while (true) {
         weapon_damage = undefined;
         damage, attacker, direction, point, type, tagname, modelname, partname, weapon, flags, inflictor, chargelevel = self waittill(#"damage");
@@ -2350,9 +2350,9 @@ function monitordamage(killstreak_ref, max_health, destroyed_callback, low_healt
         if (self.damagetaken > self.maxhealth) {
             weaponstatname = "destroyed";
             switch (weapon.name) {
-            case 89:
-            case 90:
-            case 91:
+            case "auto_tow":
+            case "tow_turret":
+            case "tow_turret_drop":
                 weaponstatname = "kills";
                 break;
             }
@@ -2458,8 +2458,8 @@ function ondamageperweapon(killstreak_ref, attacker, damage, flags, type, weapon
 // Size: 0x1de
 function get_old_damage(attacker, weapon, type, damage, allow_bullet_damage) {
     switch (type) {
-    case 96:
-    case 99:
+    case "MOD_PISTOL_BULLET":
+    case "MOD_RIFLE_BULLET":
         if (!allow_bullet_damage) {
             damage = 0;
             break;
@@ -2471,9 +2471,9 @@ function get_old_damage(attacker, weapon, type, damage, allow_bullet_damage) {
             damage = int(damage * level.cac_armorpiercing_data);
         }
         break;
-    case 95:
-    case 97:
-    case 98:
+    case "MOD_EXPLOSIVE":
+    case "MOD_PROJECTILE":
+    case "MOD_PROJECTILE_SPLASH":
         if (weapon.statindex == level.weaponpistolenergy.statindex || weapon.statindex != level.weaponshotgunenergy.statindex || weapon.statindex == level.weaponspecialcrossbow.statindex) {
             break;
         }
@@ -2540,7 +2540,7 @@ function configure_team_internal(owner, ishacked) {
             killstreak thread killstreak_hacking::killstreak_switch_team(owner);
         #/
     } else {
-        assert(killstreak.killstreakteamconfigured, "killstreak");
+        assert(killstreak.killstreakteamconfigured, "<dev string:x4ef>");
     }
     if (isdefined(killstreak.killstreakconfigureteamprefunction)) {
         killstreak thread [[ killstreak.killstreakconfigureteamprefunction ]](owner, ishacked);
@@ -2596,8 +2596,8 @@ function watchteamchange(teamchangenotify) {
 // Size: 0xae
 function should_not_timeout(killstreak) {
     /#
-        assert(isdefined(killstreak), "killstreak");
-        assert(isdefined(level.killstreaks[killstreak]), "killstreak");
+        assert(isdefined(killstreak), "<dev string:x4a>");
+        assert(isdefined(level.killstreaks[killstreak]), "<dev string:x225>");
         if (isdefined(level.killstreaks[killstreak].devtimeoutdvar)) {
             return getdvarint(level.killstreaks[killstreak].devtimeoutdvar);
         }
@@ -2842,7 +2842,7 @@ function killstreak_assist(victim, assister, killstreak) {
 function add_ricochet_protection(killstreak_id, owner, origin, ricochet_distance) {
     testing = 0;
     /#
-        testing = getdvarint("killstreak", 0) == 2;
+        testing = getdvarint("<dev string:x52f>", 0) == 2;
     #/
     if (!level.hardcoremode && !testing) {
         return;
@@ -2923,11 +2923,11 @@ function function_124328c2() {
         debug_wait = 0.5;
         debug_frames = int(debug_wait / 0.05) + 1;
         while (true) {
-            if (getdvarint("killstreak", 0) == 0) {
-                wait(2);
+            if (getdvarint("<dev string:x52f>", 0) == 0) {
+                wait 2;
                 continue;
             }
-            wait(debug_wait);
+            wait debug_wait;
             foreach (player in level.players) {
                 if (!isdefined(player)) {
                     continue;

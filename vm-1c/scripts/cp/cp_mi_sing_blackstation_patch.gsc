@@ -12,9 +12,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_814e90c0;
+#namespace cp_mi_sing_blackstation_patch;
 
-// Namespace namespace_814e90c0
+// Namespace cp_mi_sing_blackstation_patch
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5886deaa, Offset: 0x310
 // Size: 0xa1c

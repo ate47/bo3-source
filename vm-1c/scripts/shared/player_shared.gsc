@@ -55,20 +55,20 @@ function last_valid_position() {
     self endon(#"stop_last_valid_position");
     while (!isdefined(self.last_valid_position)) {
         self.last_valid_position = getclosestpointonnavmesh(self.origin, 2048, 0);
-        wait(0.1);
+        wait 0.1;
     }
     while (true) {
         if (distance2dsquared(self.origin, self.last_valid_position) < 15 * 15 && (self.origin[2] - self.last_valid_position[2]) * (self.origin[2] - self.last_valid_position[2]) < 16 * 16) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (isdefined(level.var_ddb622e3) && self [[ level.var_ddb622e3 ]]()) {
-            wait(0.1);
+            wait 0.1;
             continue;
         } else if (ispointonnavmesh(self.origin, self)) {
             self.last_valid_position = self.origin;
         } else if (!ispointonnavmesh(self.origin, self) && ispointonnavmesh(self.last_valid_position, self) && distance2dsquared(self.origin, self.last_valid_position) < 32 * 32) {
-            wait(0.1);
+            wait 0.1;
             continue;
         } else {
             position = getclosestpointonnavmesh(self.origin, 100, 15);
@@ -76,7 +76,7 @@ function last_valid_position() {
                 self.last_valid_position = position;
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -341,17 +341,17 @@ function allow_stance_change(b_allow) {
     }
     str_stance = self getstance();
     switch (str_stance) {
-    case 22:
+    case "prone":
         self allowprone(1);
         self allowcrouch(0);
         self allowstand(0);
         break;
-    case 21:
+    case "crouch":
         self allowprone(0);
         self allowcrouch(1);
         self allowstand(0);
         break;
-    case 23:
+    case "stand":
         self allowprone(0);
         self allowcrouch(0);
         self allowstand(1);

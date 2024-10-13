@@ -12,9 +12,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_baebcb1;
+#namespace zm_tomb_mech;
 
-// Namespace namespace_baebcb1
+// Namespace zm_tomb_mech
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdbda6c5d, Offset: 0x238
 // Size: 0x4c
@@ -22,7 +22,7 @@ function init() {
     clientfield::register("actor", "tomb_mech_eye", 21000, 1, "int", &function_8c8b6484, 0, 0);
 }
 
-// Namespace namespace_baebcb1
+// Namespace zm_tomb_mech
 // Params 7, eflags: 0x1 linked
 // Checksum 0x78e40cc4, Offset: 0x290
 // Size: 0xb8

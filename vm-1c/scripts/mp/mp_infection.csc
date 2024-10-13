@@ -5,15 +5,15 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_82e4b148;
+#namespace mp_infection;
 
-// Namespace namespace_82e4b148
+// Namespace mp_infection
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1bee8b2b, Offset: 0x138
 // Size: 0x5c
 function main() {
-    namespace_5d379c9::main();
-    namespace_83fbe97c::main();
+    mp_infection_fx::main();
+    mp_infection_sound::main();
     load::main();
     util::waitforclient(0);
     level.endgamexcamname = "ui_cam_endgame_mp_infection";

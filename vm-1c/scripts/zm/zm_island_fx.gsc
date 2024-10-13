@@ -2,9 +2,9 @@
 #using scripts/shared/system_shared;
 #using scripts/shared/clientfield_shared;
 
-#namespace namespace_1a868593;
+#namespace zm_island_fx;
 
-// Namespace namespace_1a868593
+// Namespace zm_island_fx
 // Params 0, eflags: 0x2
 // Checksum 0x249a992e, Offset: 0x860
 // Size: 0x34
@@ -12,7 +12,7 @@ function autoexec function_2dc19561() {
     system::register("zm_island_fx", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_1a868593
+// Namespace zm_island_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x8a0
 // Size: 0x4
@@ -20,7 +20,7 @@ function __init__() {
     
 }
 
-// Namespace namespace_1a868593
+// Namespace zm_island_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd51bdd39, Offset: 0x8b0
 // Size: 0x3ae
@@ -61,7 +61,7 @@ function main() {
     level._effect["doorbuy_web_ww_dissolve_ug"] = "dlc2/island/fx_vinegate_open_mirg_ug";
 }
 
-// Namespace namespace_1a868593
+// Namespace zm_island_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xc68
 // Size: 0x4

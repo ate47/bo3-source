@@ -16,10 +16,10 @@
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3ca3ada0, Offset: 0x5b0
 // Size: 0x514
-function function_f20d1dcf() {
+function boxingPickupUpdate() {
     note = namespace_49107f3a::function_2ccf4b82("end_boxing_pickup");
     self endon(note);
-    self notify(#"hash_3924e234");
+    self notify(#"kill_duplicate_shields");
     org = spawn("script_model", self.origin);
     org.targetname = "boxingPickupUpdate";
     org.angles = (0, randomint(-76), 0);
@@ -112,7 +112,7 @@ function barrelupdate() {
     while (isdefined(org) && isdefined(self)) {
         org.origin = self.origin;
         org rotateto(org.angles + (0, 180, 0), 1.2);
-        wait(1.2);
+        wait 1.2;
     }
 }
 
@@ -169,9 +169,9 @@ function private function_3c5a0d64(org, note, var_3587f608, var_eaac4dd5) {
     }
     level namespace_49107f3a::function_c8f4d63a();
     time = self namespace_49107f3a::function_1ded48e6(level.doa.rules.var_f53cdb6e);
-    wait(time - 3);
+    wait time - 3;
     self notify(#"hash_eda7663d");
-    wait(3);
+    wait 3;
     if (isdefined(var_3587f608)) {
         self stoploopsound(0.5);
     }
@@ -206,7 +206,7 @@ function private function_121caed2(player) {
     if (isdefined(self.var_40b7d0fa)) {
         self.var_40b7d0fa unlink();
     }
-    wait(5);
+    wait 5;
     if (isdefined(self.barrel1)) {
         self.barrel1 delete();
     }
@@ -278,7 +278,7 @@ function private function_6143f535(org, note) {
     if (isdefined(org) && isdefined(org.barrel2)) {
         org.barrel2 thread namespace_1a381543::function_90118d8c("zmb_pwup_barrel_fall_1");
     }
-    wait(5);
+    wait 5;
     if (isdefined(org) && isdefined(org.barrel1)) {
         org.barrel1 delete();
     }
@@ -304,7 +304,7 @@ function private function_a0a646c2() {
     self endon(#"death");
     self.doa.stunned = 1;
     self thread namespace_eaa992c::function_285a2999("stunbear_affected");
-    wait(level.doa.rules.var_83dda8f2);
+    wait level.doa.rules.var_83dda8f2;
     self.doa.stunned = 0;
     self thread namespace_eaa992c::turnofffx("stunbear_affected");
 }
@@ -314,7 +314,7 @@ function private function_a0a646c2() {
 // Checksum 0x329a811a, Offset: 0x1bb0
 // Size: 0x138
 function private function_5f0b5579(player) {
-    player endon(#"hash_792240f4");
+    player endon(#"end_teddybear_stun");
     player endon(#"disconnect");
     self endon(#"death");
     while (true) {
@@ -339,15 +339,15 @@ function private function_5f0b5579(player) {
 // Checksum 0xc083a8ac, Offset: 0x1cf0
 // Size: 0xb2
 function private function_813e9dbd() {
-    self endon(#"hash_792240f4");
+    self endon(#"end_teddybear_stun");
     self endon(#"disconnect");
     self endon(#"death");
     level namespace_49107f3a::function_c8f4d63a();
     self.doa.var_1a9bbba7 = gettime() + self namespace_49107f3a::function_1ded48e6(level.doa.rules.var_4f139db6) * 1000;
     while (gettime() < self.doa.var_1a9bbba7) {
-        wait(1);
+        wait 1;
     }
-    self notify(#"hash_792240f4");
+    self notify(#"end_teddybear_stun");
 }
 
 // Namespace namespace_6df66aa5
@@ -357,13 +357,13 @@ function private function_813e9dbd() {
 function private function_e6abac68(trigger) {
     self util::waittill_any("end_teddybear_stun", "disconnect", "player_died", "kill_shield", "disconnect");
     if (isdefined(self)) {
-        self notify(#"hash_792240f4");
+        self notify(#"end_teddybear_stun");
         self.doa.var_908e6b76 = undefined;
         self thread namespace_eaa992c::turnofffx("stunbear");
         self thread namespace_eaa992c::function_285a2999("stunbear_fade");
         self stoploopsound(2);
     }
-    wait(0.5);
+    wait 0.5;
     util::wait_network_frame();
     if (isdefined(self)) {
         self thread namespace_1a381543::function_90118d8c("zmb_pwup_bear_end");
@@ -383,8 +383,8 @@ function function_affe0c28() {
         self.doa.var_1a9bbba7 = gettime() + self namespace_49107f3a::function_1ded48e6(level.doa.rules.var_4f139db6) * 1000;
         return;
     }
-    self notify(#"hash_792240f4");
-    self endon(#"hash_792240f4");
+    self notify(#"end_teddybear_stun");
+    self endon(#"end_teddybear_stun");
     self.doa.var_908e6b76 = 1;
     self.doa.var_21520b4e = spawn("trigger_radius", self.origin, 9, -126, 50);
     self.doa.var_21520b4e.targetname = "stunBear";
@@ -447,7 +447,7 @@ function sawbladeupdate() {
         }
         org.origin = self.origin;
         org rotateto(org.angles + (0, 180, 0), 0.4);
-        wait(0.4);
+        wait 0.4;
     }
 }
 
@@ -491,7 +491,7 @@ function private function_f797c54(org, note) {
     level namespace_49107f3a::function_c8f4d63a();
     time_left = gettime() + self namespace_49107f3a::function_1ded48e6(level.doa.rules.var_fb13151a) * 1000;
     while (gettime() < time_left) {
-        wait(0.05);
+        wait 0.05;
         /#
         #/
     }
@@ -519,7 +519,7 @@ function private function_595842c5(org, note) {
         }
         org.var_ca081b8[i] thread namespace_1a381543::function_90118d8c("zmb_pwup_blade_fall_0");
     }
-    wait(5);
+    wait 5;
     for (i = 0; i < org.var_ca081b8.size; i++) {
         org.var_ca081b8[i] delete();
     }
@@ -541,7 +541,7 @@ function function_64bb8338(orb) {
     }
     orb thread namespace_eaa992c::turnofffx("magnet_on");
     orb thread namespace_eaa992c::function_285a2999("magnet_fade");
-    wait(1);
+    wait 1;
     if (isdefined(self)) {
         self thread namespace_1a381543::function_4f06fb8("zmb_pwup_magnet_loop");
         self thread namespace_1a381543::function_90118d8c("zmb_pwup_magnet_end");
@@ -553,9 +553,9 @@ function function_64bb8338(orb) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x74d19b07, Offset: 0x2b18
 // Size: 0x1b2
-function function_2016b381(time) {
-    self notify(#"hash_2016b381");
-    self endon(#"hash_2016b381");
+function magnet_update(time) {
+    self notify(#"magnet_update");
+    self endon(#"magnet_update");
     self endon(#"player_died");
     self endon(#"disconnect");
     orb = spawn("script_model", self.origin);
@@ -568,11 +568,11 @@ function function_2016b381(time) {
     orb thread namespace_eaa992c::function_285a2999("magnet_on");
     level namespace_49107f3a::function_c8f4d63a();
     if (isdefined(time)) {
-        wait(time);
+        wait time;
     } else {
-        wait(self namespace_49107f3a::function_1ded48e6(level.doa.rules.var_2a59d58f));
+        wait self namespace_49107f3a::function_1ded48e6(level.doa.rules.var_2a59d58f);
     }
-    self notify(#"hash_f327cf19");
+    self notify(#"magnet_expired");
     self.doa.var_3df27425 = undefined;
 }
 

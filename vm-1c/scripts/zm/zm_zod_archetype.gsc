@@ -2,9 +2,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_29da2c3c;
+#namespace zm_zod_archetype;
 
-// Namespace namespace_29da2c3c
+// Namespace zm_zod_archetype
 // Params 0, eflags: 0x2
 // Checksum 0xe7a39eb6, Offset: 0xe8
 // Size: 0x84
@@ -15,7 +15,7 @@ function autoexec init() {
     level.var_979a9287 = &function_979a9287;
 }
 
-// Namespace namespace_29da2c3c
+// Namespace zm_zod_archetype
 // Params 0, eflags: 0x5 linked
 // Checksum 0x3bee7064, Offset: 0x178
 // Size: 0x216
@@ -45,7 +45,7 @@ function private function_478e89a7() {
     }
 }
 
-// Namespace namespace_29da2c3c
+// Namespace zm_zod_archetype
 // Params 0, eflags: 0x1 linked
 // Checksum 0xffd17d44, Offset: 0x398
 // Size: 0x22
@@ -56,7 +56,7 @@ function function_66c4cad4() {
     return false;
 }
 
-// Namespace namespace_29da2c3c
+// Namespace zm_zod_archetype
 // Params 1, eflags: 0x1 linked
 // Checksum 0x895c738a, Offset: 0x3c8
 // Size: 0x84

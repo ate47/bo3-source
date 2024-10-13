@@ -5,44 +5,44 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_90429ef7;
+#namespace zm_tomb_quest_fire;
 
-// Namespace namespace_90429ef7
+// Namespace zm_tomb_quest_fire
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9f4233fc, Offset: 0x1a8
 // Size: 0x4c
 function main() {
-    clientfield::register("scriptmover", "barbecue_fx", 21000, 1, "int", &function_63c3c25d, 0, 0);
+    clientfield::register("scriptmover", "barbecue_fx", 21000, 1, "int", &barbecue_fx, 0, 0);
 }
 
-// Namespace namespace_90429ef7
+// Namespace zm_tomb_quest_fire
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7bec3a4f, Offset: 0x200
 // Size: 0x78
 function function_f53f6b0a(localclientnum) {
-    self notify(#"hash_b9e014c3");
-    self endon(#"hash_b9e014c3");
+    self notify(#"stop_bbq_fx_loop");
+    self endon(#"stop_bbq_fx_loop");
     self endon(#"entityshutdown");
     while (true) {
         playfxontag(localclientnum, level._effect["fire_sacrifice_flame"], self, "tag_origin");
-        wait(0.5);
+        wait 0.5;
     }
 }
 
-// Namespace namespace_90429ef7
+// Namespace zm_tomb_quest_fire
 // Params 7, eflags: 0x1 linked
 // Checksum 0x47660f45, Offset: 0x280
 // Size: 0x86
-function function_63c3c25d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function barbecue_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     if (newval) {
         self thread function_f53f6b0a(localclientnum);
         level thread function_ebebc90(self);
         return;
     }
-    self notify(#"hash_b9e014c3");
+    self notify(#"stop_bbq_fx_loop");
 }
 
-// Namespace namespace_90429ef7
+// Namespace zm_tomb_quest_fire
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2ca25794, Offset: 0x310
 // Size: 0x8c

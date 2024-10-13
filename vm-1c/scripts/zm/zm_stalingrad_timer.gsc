@@ -15,9 +15,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_fd6bdadc;
+#namespace zm_stalingrad_timer;
 
-// Namespace namespace_fd6bdadc
+// Namespace zm_stalingrad_timer
 // Params 0, eflags: 0x2
 // Checksum 0x744b49de, Offset: 0x360
 // Size: 0x3c
@@ -25,7 +25,7 @@ function autoexec function_2dc19561() {
     system::register("zm_stalingrad_timer", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_fd6bdadc
+// Namespace zm_stalingrad_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x3a8
 // Size: 0x4
@@ -33,7 +33,7 @@ function __init__() {
     
 }
 
-// Namespace namespace_fd6bdadc
+// Namespace zm_stalingrad_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfec4a344, Offset: 0x3b8
 // Size: 0x14c
@@ -51,7 +51,7 @@ function __main__() {
     level thread function_86419da();
 }
 
-// Namespace namespace_fd6bdadc
+// Namespace zm_stalingrad_timer
 // Params 1, eflags: 0x1 linked
 // Checksum 0x54e521e1, Offset: 0x510
 // Size: 0xf0
@@ -66,7 +66,7 @@ function function_6ac3689a(player) {
     return 0;
 }
 
-// Namespace namespace_fd6bdadc
+// Namespace zm_stalingrad_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3be65786, Offset: 0x608
 // Size: 0x3bc
@@ -177,7 +177,7 @@ function function_86419da() {
     } while (var_99870abd < 50);
 }
 
-// Namespace namespace_fd6bdadc
+// Namespace zm_stalingrad_timer
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6b3e463, Offset: 0x9d0
 // Size: 0x26c
@@ -219,7 +219,7 @@ function function_cc8ae246(str_reward) {
     level flag::set("time_attack_weapon_awarded");
 }
 
-// Namespace namespace_fd6bdadc
+// Namespace zm_stalingrad_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd2a28f06, Offset: 0xc48
 // Size: 0xe4
@@ -245,7 +245,7 @@ function function_3d5b5002() {
     }
 }
 
-// Namespace namespace_fd6bdadc
+// Namespace zm_stalingrad_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x88ccf2d6, Offset: 0xd38
 // Size: 0x1c
@@ -253,18 +253,18 @@ function on_player_spawned() {
     self thread function_88b9bf27();
 }
 
-// Namespace namespace_fd6bdadc
+// Namespace zm_stalingrad_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6217008d, Offset: 0xd60
 // Size: 0x2c
 function function_88b9bf27() {
     if (!isdefined(self.num_perks)) {
-        wait(0.1);
+        wait 0.1;
     }
     self zm_utility::function_82a5cc4();
 }
 
-// Namespace namespace_fd6bdadc
+// Namespace zm_stalingrad_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x75b3ce55, Offset: 0xd98
 // Size: 0x60

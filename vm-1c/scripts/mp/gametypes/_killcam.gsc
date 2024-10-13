@@ -159,7 +159,7 @@ function post_round_final_killcam() {
 function do_final_killcam() {
     level waittill(#"play_final_killcam");
     luinotifyevent(%pre_killcam_transition);
-    wait(0.35);
+    wait 0.35;
     level.infinalkillcam = 1;
     winner = "none";
     if (isdefined(level.finalkillcam_winner)) {
@@ -187,9 +187,9 @@ function do_final_killcam() {
         player closeingamemenu();
         player thread final_killcam(winner);
     }
-    wait(0.1);
+    wait 0.1;
     while (are_any_players_watching()) {
-        wait(0.05);
+        wait 0.05;
     }
     level notify(#"final_killcam_done");
     level.infinalkillcam = 0;
@@ -225,7 +225,7 @@ function are_any_players_watching() {
 function watch_for_skip_killcam() {
     self endon(#"begin_killcam");
     self util::waittill_any("disconnect", "spawned");
-    wait(0.05);
+    wait 0.05;
     level.numplayerswaitingtoenterkillcam--;
 }
 
@@ -244,10 +244,10 @@ function killcam(attackernum, targetnum, killcam_entity_info, weapon, meansofdea
     level.numplayerswaitingtoenterkillcam++;
     assert(level.numplayerswaitingtoenterkillcam < 20);
     if (level.numplayerswaitingtoenterkillcam > 1) {
-        println("mannequin");
-        wait(0.05 * (level.numplayerswaitingtoenterkillcam - 1));
+        println("<dev string:x28>");
+        wait 0.05 * (level.numplayerswaitingtoenterkillcam - 1);
     }
-    wait(0.05);
+    wait 0.05;
     level.numplayerswaitingtoenterkillcam--;
     assert(level.numplayerswaitingtoenterkillcam > -1);
     postdeathdelay = (gettime() - deathtime) / 1000;
@@ -289,7 +289,7 @@ function killcam(attackernum, targetnum, killcam_entity_info, weapon, meansofdea
     self allowspectateteam("freelook", 1);
     self allowspectateteam("none", 1);
     self thread function_548eaf1e();
-    wait(0.05);
+    wait 0.05;
     if (self.archivetime <= predelay) {
         self.sessionstate = "dead";
         self.spectatorclient = -1;
@@ -334,7 +334,7 @@ function set_entity(killcamentityindex, delayms) {
     self endon(#"end_killcam");
     self endon(#"spawned");
     if (delayms > 0) {
-        wait(delayms / 1000);
+        wait delayms / 1000;
     }
     self.killcamentity = killcamentityindex;
 }
@@ -360,7 +360,7 @@ function set_killcam_entities(entity_info, killcamstarttime) {
 function wait_killcam_time() {
     self endon(#"disconnect");
     self endon(#"end_killcam");
-    wait(self.killcamlength - 0.05);
+    wait self.killcamlength - 0.05;
     self notify(#"end_killcam");
 }
 
@@ -377,12 +377,12 @@ function wait_final_killcam_slowdown(deathtime, starttime) {
     secondsuntildeath = (deathtime - starttime) / 1000;
     deathtime = gettime() + secondsuntildeath * 1000;
     waitbeforedeath = 2;
-    wait(max(0, secondsuntildeath - waitbeforedeath));
+    wait max(0, secondsuntildeath - waitbeforedeath);
     util::setclientsysstate("levelNotify", "sndFKsl");
     setslowmotion(1, 0.25, waitbeforedeath);
-    wait(waitbeforedeath + 0.5);
+    wait waitbeforedeath + 0.5;
     setslowmotion(0.25, 1, 1);
-    wait(0.5);
+    wait 0.5;
 }
 
 // Namespace killcam
@@ -393,10 +393,10 @@ function wait_skip_killcam_button() {
     self endon(#"disconnect");
     self endon(#"end_killcam");
     while (self usebuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
     while (!self usebuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
     if (isdefined(self.killcamsskipped)) {
         self.killcamsskipped++;
@@ -426,10 +426,10 @@ function wait_skip_killcam_safe_spawn_button() {
     self endon(#"disconnect");
     self endon(#"end_killcam");
     while (self fragbuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
     while (!self fragbuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
     self.wantsafespawn = 1;
     self notify(#"end_killcam");
@@ -461,7 +461,7 @@ function check_for_abrupt_end() {
         if (self.archivetime <= 0) {
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
     self notify(#"end_killcam");
 }
@@ -487,7 +487,7 @@ function spectator_killcam_cleanup(attacker) {
     attacker endon(#"disconnect");
     var_ce2fdf61 = attacker waittill(#"begin_killcam");
     waittime = max(0, var_ce2fdf61 - self.deathtime - 50);
-    wait(waittime);
+    wait waittime;
     self end(0);
 }
 
@@ -565,13 +565,13 @@ function cancel_on_use_specific_button(pressingbuttonfunc, finishedfunc) {
     level endon(#"game_ended");
     for (;;) {
         if (!self [[ pressingbuttonfunc ]]()) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         buttontime = 0;
         while (self [[ pressingbuttonfunc ]]()) {
             buttontime += 0.05;
-            wait(0.05);
+            wait 0.05;
         }
         if (buttontime >= 0.5) {
             continue;
@@ -579,7 +579,7 @@ function cancel_on_use_specific_button(pressingbuttonfunc, finishedfunc) {
         buttontime = 0;
         while (!self [[ pressingbuttonfunc ]]() && buttontime < 0.5) {
             buttontime += 0.05;
-            wait(0.05);
+            wait 0.05;
         }
         if (buttontime >= 0.5) {
             continue;
@@ -622,7 +622,7 @@ function final_killcam_internal(winner) {
     self allowspectateteam("freelook", 1);
     self allowspectateteam("none", 1);
     self thread function_5551058f();
-    wait(0.05);
+    wait 0.05;
     if (!util::isprophuntgametype() && self.archivetime <= predelay) {
         self.spectatorclient = -1;
         self.killcamentity = -1;
@@ -657,16 +657,16 @@ function final_killcam(winner) {
         setmatchflag("round_end_killcam", 1);
     }
     /#
-        if (getdvarint("mannequin") == 1) {
-            setmatchflag("mannequin", 1);
-            setmatchflag("mannequin", 0);
+        if (getdvarint("<dev string:x63>") == 1) {
+            setmatchflag("<dev string:x7a>", 1);
+            setmatchflag("<dev string:x88>", 0);
         }
     #/
     if (!util::isprophuntgametype() && level.console) {
         self globallogic_spawn::setthirdperson(0);
     }
     /#
-        while (getdvarint("mannequin") == 1) {
+        while (getdvarint("<dev string:x9a>") == 1) {
             final_killcam_internal(winner);
         }
     #/
@@ -674,7 +674,7 @@ function final_killcam(winner) {
     util::setclientsysstate("levelNotify", "sndFKe");
     luinotifyevent(%post_killcam_transition);
     self freezecontrols(1);
-    wait(1.5);
+    wait 1.5;
     self end(1);
     setmatchflag("final_killcam", 0);
     setmatchflag("round_end_killcam", 0);

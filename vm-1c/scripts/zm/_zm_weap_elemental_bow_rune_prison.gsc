@@ -20,9 +20,9 @@
 #using scripts/shared/ai/systems/gib;
 #using scripts/codescripts/struct;
 
-#namespace namespace_2d73d751;
+#namespace _zm_weap_elemental_bow_rune_prison;
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 0, eflags: 0x2
 // Checksum 0xd8499016, Offset: 0x580
 // Size: 0x3c
@@ -30,7 +30,7 @@ function autoexec function_2dc19561() {
     system::register("_zm_weap_elemental_bow_rune_prison", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb1d54156, Offset: 0x5c8
 // Size: 0x22c
@@ -49,7 +49,7 @@ function __init__() {
     callback::on_connect(&function_4d344d97);
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x800
 // Size: 0x4
@@ -57,7 +57,7 @@ function __main__() {
     
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 0, eflags: 0x1 linked
 // Checksum 0x32a563fb, Offset: 0x810
 // Size: 0x7c
@@ -67,7 +67,7 @@ function function_4d344d97() {
     self thread namespace_790026d5::function_7bc6b9d("elemental_bow_rune_prison", "elemental_bow_rune_prison4", &function_c8b11b89);
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 5, eflags: 0x1 linked
 // Checksum 0x9726569d, Offset: 0x898
 // Size: 0xb4
@@ -79,7 +79,7 @@ function function_c8b11b89(weapon, position, radius, attacker, normal) {
     level thread function_48899f7(self, position, weapon.name, attacker);
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 6, eflags: 0x1 linked
 // Checksum 0xc35e50ac, Offset: 0x958
 // Size: 0x8b4
@@ -109,7 +109,7 @@ function function_94ba3a15(e_player, var_7c5a4ee4, str_weapon_name, var_3fee16b8
     }
     if (!isdefined(v_spawn_pos)) {
         /#
-            iprintlnbold("runeprison_rock_fx");
+            iprintlnbold("<dev string:x28>");
         #/
         return;
     }
@@ -130,13 +130,13 @@ function function_94ba3a15(e_player, var_7c5a4ee4, str_weapon_name, var_3fee16b8
             self dodamage(self.health, var_c8bd3127.origin, e_player, e_player, undefined, "MOD_BURNED", 0, level.var_791ba87b);
         }
     }
-    wait(1.8 + 0.07 * var_8b30ffd9);
+    wait 1.8 + 0.07 * var_8b30ffd9;
     var_c8bd3127 clientfield::set("runeprison_explode_fx", 1);
     if (isdefined(self) && isalive(self) && self.archetype === "zombie") {
         self notify(#"hash_9d9f16be");
         self clientfield::set("runeprison_zombie_charring", 1);
     }
-    wait(2);
+    wait 2;
     if (isdefined(self) && isai(self) && isalive(self)) {
         if (self.archetype === "mechz") {
             var_3bb42832 = level.var_53cc405d;
@@ -166,16 +166,16 @@ function function_94ba3a15(e_player, var_7c5a4ee4, str_weapon_name, var_3fee16b8
         var_b4aadf6b dodamage(var_b4aadf6b.health, var_c8bd3127.origin, e_player, e_player, undefined, "MOD_BURNED", 0, level.var_791ba87b);
     }
     var_c8bd3127 clientfield::set("runeprison_rock_fx", 0);
-    wait(6);
+    wait 6;
     var_c8bd3127 delete();
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbf9e88a6, Offset: 0x1218
 // Size: 0x15a
 function function_378db90d(v_pos) {
-    wait(0.1);
+    wait 0.1;
     var_852420bf = array::get_all_closest(v_pos, getaiteamarray(level.zombie_team), undefined, undefined, 96);
     var_852420bf = array::filter(var_852420bf, 0, &namespace_790026d5::function_5aec3adc);
     var_852420bf = array::filter(var_852420bf, 0, &function_cece5ffb);
@@ -185,18 +185,18 @@ function function_378db90d(v_pos) {
     }
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe7a48d4f, Offset: 0x1380
 // Size: 0x2c
 function function_62837b3a() {
     self endon(#"death");
     self.var_d3c478a0 = 1;
-    wait(16);
+    wait 16;
     self.var_d3c478a0 = 0;
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 2, eflags: 0x1 linked
 // Checksum 0x7ea1a1b9, Offset: 0x13b8
 // Size: 0xaa
@@ -204,7 +204,7 @@ function function_71c4b12e(ai_enemy, var_289e02fc) {
     return bullettracepassed(ai_enemy getcentroid(), var_289e02fc, 0, undefined) || !(isdefined(ai_enemy.var_a320d911) && ai_enemy.var_a320d911) && bullettracepassed(ai_enemy getcentroid(), var_289e02fc + (0, 0, 48), 0, undefined);
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5c3fbd6a, Offset: 0x1470
 // Size: 0x80
@@ -212,7 +212,7 @@ function function_cece5ffb(ai_enemy) {
     return !(isdefined(ai_enemy.var_a320d911) && ai_enemy.var_a320d911) && !(isdefined(ai_enemy.knockdown) && ai_enemy.knockdown) && !(isdefined(ai_enemy.missinglegs) && ai_enemy.missinglegs);
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 1, eflags: 0x1 linked
 // Checksum 0x56896156, Offset: 0x14f8
 // Size: 0x30
@@ -220,18 +220,18 @@ function function_e381ab3a(ai_enemy) {
     return !(isdefined(ai_enemy.var_a320d911) && ai_enemy.var_a320d911);
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcf2a4f25, Offset: 0x1530
 // Size: 0xf4
 function function_5c74632() {
     self endon(#"death");
-    wait(0.1);
+    wait 0.1;
     if (self.archetype === "zombie") {
         var_5606e343 = randomintrange(1, 5);
         self thread scene::play("ai_zm_dlc1_zombie_runeprison_locked_struggle_0" + var_5606e343, self);
         self waittill(#"hash_9d9f16be");
-        wait(0.5);
+        wait 0.5;
         self scene::play("ai_zm_dlc1_zombie_runeprison_death_loop_0" + randomintrange(1, 5), self);
         return;
     }
@@ -240,7 +240,7 @@ function function_5c74632() {
     }
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 4, eflags: 0x1 linked
 // Checksum 0x14517aa7, Offset: 0x1630
 // Size: 0x1f4
@@ -258,14 +258,14 @@ function function_48899f7(e_player, var_7c5a4ee4, str_weapon_name, var_3fee16b8)
         var_852420bf = array::filter(var_852420bf, 0, &namespace_790026d5::function_5aec3adc);
         var_852420bf = array::filter(var_852420bf, 0, &function_6a1a0b32, var_3c817f0d);
         array::thread_all(var_852420bf, &function_e7abbbb8, var_3c817f0d, e_player);
-        wait(0.05);
+        wait 0.05;
         n_timer += 0.05;
     }
-    wait(6);
+    wait 6;
     var_3c817f0d delete();
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 2, eflags: 0x1 linked
 // Checksum 0x98ca8260, Offset: 0x1830
 // Size: 0x38
@@ -273,7 +273,7 @@ function function_6a1a0b32(ai_enemy, var_3c817f0d) {
     return !(isdefined(ai_enemy.var_ca25d40c) && ai_enemy.var_ca25d40c);
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 2, eflags: 0x1 linked
 // Checksum 0xe323869c, Offset: 0x1870
 // Size: 0x260
@@ -298,7 +298,7 @@ function function_e7abbbb8(var_3c817f0d, e_player) {
     var_c18df445 = n_max_damage * 0.1;
     while (n_timer < 6 && var_2a8dacd1 < n_max_damage) {
         var_e1fd6746 = randomfloatrange(0.4, 1);
-        wait(var_e1fd6746);
+        wait var_e1fd6746;
         n_timer += var_e1fd6746;
         self dodamage(var_c18df445, self.origin, e_player, e_player, undefined, str_mod, 0, level.var_fb620116);
         var_2a8dacd1 += var_c18df445;
@@ -307,7 +307,7 @@ function function_e7abbbb8(var_3c817f0d, e_player) {
     self.var_ca25d40c = 0;
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 1, eflags: 0x1 linked
 // Checksum 0x55141cbb, Offset: 0x1ad8
 // Size: 0x16c
@@ -316,7 +316,7 @@ function function_46a00a8e(ai_enemy) {
     while (isdefined(ai_enemy) && isalive(ai_enemy) && !(isdefined(ai_enemy.var_98056717) && ai_enemy.var_98056717) && n_z_diff > 12) {
         var_c6f6381a = bullettrace(ai_enemy.origin, ai_enemy.origin - (0, 0, 1000), 0, undefined);
         n_z_diff = ai_enemy.origin[2] - var_c6f6381a["position"][2];
-        wait(0.1);
+        wait 0.1;
     }
     if (isdefined(ai_enemy) && isalive(ai_enemy) && !(isdefined(ai_enemy.var_98056717) && ai_enemy.var_98056717)) {
         return ai_enemy.origin;
@@ -324,12 +324,12 @@ function function_46a00a8e(ai_enemy) {
     return undefined;
 }
 
-// Namespace namespace_2d73d751
+// Namespace _zm_weap_elemental_bow_rune_prison
 // Params 3, eflags: 0x1 linked
 // Checksum 0x843ab344, Offset: 0x1c50
 // Size: 0x7c
 function function_1ed3d96d(str_weapon_name, v_source, v_destination) {
-    wait(0.1);
+    wait 0.1;
     str_weapon_name = str_weapon_name == "elemental_bow_rune_prison4" ? "elemental_bow_rune_prison4_ricochet" : "elemental_bow_rune_prison_ricochet";
     magicbullet(getweapon(str_weapon_name), v_source, v_destination, self);
 }

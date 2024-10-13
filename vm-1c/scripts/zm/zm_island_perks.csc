@@ -19,26 +19,26 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_c8222934;
+#namespace zm_island_perks;
 
-// Namespace namespace_c8222934
+// Namespace zm_island_perks
 // Params 0, eflags: 0x1 linked
 // Checksum 0x93a98cde, Offset: 0x408
 // Size: 0x1b4
 function init() {
-    clientfield::register("world", "perk_light_speed_cola", 1, 3, "int", &function_c574aa0c, 0, 0);
-    clientfield::register("world", "perk_light_doubletap", 1, 3, "int", &function_59525d83, 0, 0);
-    clientfield::register("world", "perk_light_quick_revive", 1, 3, "int", &function_e63629a0, 0, 0);
-    clientfield::register("world", "perk_light_staminup", 1, 3, "int", &function_b169f826, 0, 0);
-    clientfield::register("world", "perk_light_juggernog", 1, 3, "int", &function_3cfbcaf5, 0, 0);
-    clientfield::register("world", "perk_light_mule_kick", 1, 1, "int", &function_eb0b323d, 0, 0);
+    clientfield::register("world", "perk_light_speed_cola", 1, 3, "int", &perk_light_speed_cola, 0, 0);
+    clientfield::register("world", "perk_light_doubletap", 1, 3, "int", &perk_light_doubletap, 0, 0);
+    clientfield::register("world", "perk_light_quick_revive", 1, 3, "int", &perk_light_quick_revive, 0, 0);
+    clientfield::register("world", "perk_light_staminup", 1, 3, "int", &perk_light_staminup, 0, 0);
+    clientfield::register("world", "perk_light_juggernog", 1, 3, "int", &perk_light_juggernog, 0, 0);
+    clientfield::register("world", "perk_light_mule_kick", 1, 1, "int", &perk_light_mule_kick, 0, 0);
 }
 
-// Namespace namespace_c8222934
+// Namespace zm_island_perks
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc551649f, Offset: 0x5c8
 // Size: 0x9c
-function function_c574aa0c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function perk_light_speed_cola(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level.var_7202315c = "lgt_sleight_" + newval;
         exploder::exploder(level.var_7202315c);
@@ -49,11 +49,11 @@ function function_c574aa0c(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_c8222934
+// Namespace zm_island_perks
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa140f3a3, Offset: 0x670
 // Size: 0x9c
-function function_59525d83(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function perk_light_doubletap(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level.var_c09154cb = "lgt_doubletap_" + newval;
         exploder::exploder(level.var_c09154cb);
@@ -64,11 +64,11 @@ function function_59525d83(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_c8222934
+// Namespace zm_island_perks
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd38c1140, Offset: 0x718
 // Size: 0x9c
-function function_e63629a0(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function perk_light_quick_revive(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level.var_2ff875ec = "lgt_revive_" + newval;
         exploder::exploder(level.var_2ff875ec);
@@ -79,11 +79,11 @@ function function_e63629a0(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_c8222934
+// Namespace zm_island_perks
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbaaf4844, Offset: 0x7c0
 // Size: 0x9c
-function function_b169f826(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function perk_light_staminup(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level.var_d3ce4f8e = "lgt_staminup_" + newval;
         exploder::exploder(level.var_d3ce4f8e);
@@ -94,11 +94,11 @@ function function_b169f826(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_c8222934
+// Namespace zm_island_perks
 // Params 7, eflags: 0x1 linked
 // Checksum 0x92ce3ed7, Offset: 0x868
 // Size: 0x9c
-function function_3cfbcaf5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function perk_light_juggernog(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level.var_7202315c = "lgt_jugg_" + newval;
         exploder::exploder(level.var_7202315c);
@@ -109,11 +109,11 @@ function function_3cfbcaf5(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_c8222934
+// Namespace zm_island_perks
 // Params 7, eflags: 0x1 linked
 // Checksum 0xeb8f6421, Offset: 0x910
 // Size: 0x7c
-function function_eb0b323d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function perk_light_mule_kick(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         exploder::exploder("lgt_island_vending_mulekick_on");
         return;

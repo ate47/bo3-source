@@ -16,9 +16,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_8e2647d0;
+#namespace zm_zod_portals;
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 0, eflags: 0x2
 // Checksum 0x92f345a3, Offset: 0x6c8
 // Size: 0x34
@@ -26,7 +26,7 @@ function autoexec function_2dc19561() {
     system::register("zm_zod_portals", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 0, eflags: 0x0
 // Checksum 0xd35fa7b8, Offset: 0x708
 // Size: 0x424
@@ -41,10 +41,10 @@ function __init__() {
     level._effect["portal_shortcut_ending"] = "zombie/fx_quest_portal_close_igc_zod_zmb";
     n_bits = getminbitcountfornum(3);
     clientfield::register("toplayer", "player_stargate_fx", 1, 1, "int", &player_stargate_fx, 0, 0);
-    clientfield::register("world", "portal_state_canal", 1, n_bits, "int", &function_b3ee6c81, 0, 1);
-    clientfield::register("world", "portal_state_slums", 1, n_bits, "int", &function_8e86ff36, 0, 1);
-    clientfield::register("world", "portal_state_theater", 1, n_bits, "int", &function_ec77bf, 0, 1);
-    clientfield::register("world", "portal_state_ending", 1, 1, "int", &function_2876d055, 0, 0);
+    clientfield::register("world", "portal_state_canal", 1, n_bits, "int", &portal_state_canal, 0, 1);
+    clientfield::register("world", "portal_state_slums", 1, n_bits, "int", &portal_state_slums, 0, 1);
+    clientfield::register("world", "portal_state_theater", 1, n_bits, "int", &portal_state_theater, 0, 1);
+    clientfield::register("world", "portal_state_ending", 1, 1, "int", &portal_state_ending, 0, 0);
     clientfield::register("world", "pulse_canal_portal_top", 1, 1, "counter", &function_4bc7c0a1, 0, 0);
     clientfield::register("world", "pulse_canal_portal_bottom", 1, 1, "counter", &function_bd6fa919, 0, 0);
     clientfield::register("world", "pulse_slums_portal_top", 1, 1, "counter", &function_e66eb44e, 0, 0);
@@ -53,7 +53,7 @@ function __init__() {
     clientfield::register("world", "pulse_theater_portal_bottom", 1, 1, "counter", &function_8fbd3c13, 0, 0);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 7, eflags: 0x0
 // Checksum 0x40ec73ea, Offset: 0xb38
 // Size: 0xde
@@ -68,10 +68,10 @@ function player_stargate_fx(localclientnum, oldval, newval, bnewent, binitialsna
         self thread postfx::playpostfxbundle("pstfx_zm_wormhole");
         return;
     }
-    self notify(#"hash_ee477153");
+    self notify(#"player_portal_complete");
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 1, eflags: 0x0
 // Checksum 0x40a309d, Offset: 0xc20
 // Size: 0x4c
@@ -80,11 +80,11 @@ function function_e7a8756e(localclientnum) {
     self postfx::exitpostfxbundle();
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 7, eflags: 0x0
 // Checksum 0x7f005dc4, Offset: 0xc78
 // Size: 0xac
-function function_dcfb71f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function portal_3p(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"death");
     if (newval == 1) {
         self.var_e4e89382 = playfxontag(localclientnum, level._effect["portal_3p"], self, "j_spineupper");
@@ -93,31 +93,31 @@ function function_dcfb71f(localclientnum, oldval, newval, bnewent, binitialsnap,
     function_f9eb885e(localclientnum, self.var_e4e89382);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 7, eflags: 0x0
 // Checksum 0xef329b2d, Offset: 0xd30
 // Size: 0x5c
-function function_b3ee6c81(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function portal_state_canal(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_35d5bf67(localclientnum, "canal", newval);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 7, eflags: 0x0
 // Checksum 0x53303e56, Offset: 0xd98
 // Size: 0x5c
-function function_8e86ff36(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function portal_state_slums(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_35d5bf67(localclientnum, "slums", newval);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 7, eflags: 0x0
 // Checksum 0xc7e76287, Offset: 0xe00
 // Size: 0x5c
-function function_ec77bf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function portal_state_theater(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     function_35d5bf67(localclientnum, "theater", newval);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 3, eflags: 0x0
 // Checksum 0x55790fd6, Offset: 0xe68
 // Size: 0x2ae
@@ -146,11 +146,11 @@ function function_35d5bf67(localclientnum, var_d42f02cf, newval) {
     }
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 7, eflags: 0x0
 // Checksum 0xe3f5e50a, Offset: 0x1120
 // Size: 0x334
-function function_2876d055(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function portal_state_ending(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     s_loc = struct::get("ending_igc_portal", "targetname");
     v_fwd = anglestoforward(s_loc.angles);
     if (newval) {
@@ -178,7 +178,7 @@ function function_2876d055(localclientnum, oldval, newval, bnewent, binitialsnap
     level thread function_c968dcbc(s_loc.origin, "zmb_teleporter_igc_lp", "zmb_teleporter_igc_end");
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 7, eflags: 0x0
 // Checksum 0x4bf9ca9a, Offset: 0x1460
 // Size: 0x5c
@@ -186,7 +186,7 @@ function function_4bc7c0a1(localclientnum, oldval, newval, bnewent, binitialsnap
     function_11ac3c33(localclientnum, "canal", 1);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 7, eflags: 0x0
 // Checksum 0x5f4f27f5, Offset: 0x14c8
 // Size: 0x5c
@@ -194,7 +194,7 @@ function function_bd6fa919(localclientnum, oldval, newval, bnewent, binitialsnap
     function_11ac3c33(localclientnum, "canal", 0);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 7, eflags: 0x0
 // Checksum 0xf05ed988, Offset: 0x1530
 // Size: 0x5c
@@ -202,7 +202,7 @@ function function_e66eb44e(localclientnum, oldval, newval, bnewent, binitialsnap
     function_11ac3c33(localclientnum, "slums", 1);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 7, eflags: 0x0
 // Checksum 0xc61c7511, Offset: 0x1598
 // Size: 0x5c
@@ -210,7 +210,7 @@ function function_9be42b84(localclientnum, oldval, newval, bnewent, binitialsnap
     function_11ac3c33(localclientnum, "slums", 0);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 7, eflags: 0x0
 // Checksum 0xf06ef5d0, Offset: 0x1600
 // Size: 0x5c
@@ -218,7 +218,7 @@ function function_7acc82f(localclientnum, oldval, newval, bnewent, binitialsnap,
     function_11ac3c33(localclientnum, "theater", 1);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 7, eflags: 0x0
 // Checksum 0x70b01f5f, Offset: 0x1668
 // Size: 0x5c
@@ -226,7 +226,7 @@ function function_8fbd3c13(localclientnum, oldval, newval, bnewent, binitialsnap
     function_11ac3c33(localclientnum, "theater", 0);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 3, eflags: 0x0
 // Checksum 0x433aa3ac, Offset: 0x16d0
 // Size: 0xe6
@@ -240,7 +240,7 @@ function function_11ac3c33(localclientnum, var_d42f02cf, var_a5e295bc) {
     }
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 4, eflags: 0x0
 // Checksum 0xf11f38ce, Offset: 0x17c0
 // Size: 0x3c6
@@ -266,7 +266,7 @@ function function_c0c1771a(localclientnum, s_loc, b_open, var_9c9cfb54) {
     mdl_portal = function_86743484(localclientnum, s_loc);
     mdl_portal hidepart(localclientnum, "tag_portal_open");
     if (b_open) {
-        wait(1.3);
+        wait 1.3;
         mdl_portal showpart(localclientnum, "tag_portal_open");
         for (i = 1; i < 25; i++) {
             playfxontag(localclientnum, level._effect["portal_shortcut_open_border"], mdl_portal, "tag_fx_ring_" + i);
@@ -286,7 +286,7 @@ function function_c0c1771a(localclientnum, s_loc, b_open, var_9c9cfb54) {
     s_loc.var_7c0ed442[localclientnum] = playfx(localclientnum, level._effect["portal_shortcut_closed"], s_loc.origin, v_fwd);
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 2, eflags: 0x0
 // Checksum 0xd73fd268, Offset: 0x1b90
 // Size: 0x24e
@@ -311,7 +311,7 @@ function function_86743484(localclientnum, s_loc) {
     return level.var_ef51ee6d[localclientnum][str_name].mdl_portal;
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 3, eflags: 0x0
 // Checksum 0x55b9ddd4, Offset: 0x1de8
 // Size: 0x13c
@@ -332,7 +332,7 @@ function function_227344a6(str_targetname, var_d42f02cf, var_a5e295bc) {
     return var_216e113e;
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 2, eflags: 0x0
 // Checksum 0x5be78a7a, Offset: 0x1f30
 // Size: 0x3c
@@ -342,7 +342,7 @@ function function_f9eb885e(localclientnum, var_55518655) {
     }
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 5, eflags: 0x0
 // Checksum 0x985783ee, Offset: 0x1f78
 // Size: 0xe4
@@ -352,7 +352,7 @@ function function_a2d0d0e4(origin1, origin2, var_4358f968, var_2978dbc6, activat
     if (isdefined(activation)) {
         playsound(0, activation, origin1);
     }
-    wait(0.05);
+    wait 0.05;
     audio::playloopat(var_4358f968, origin2);
     audio::stoploopat(var_2978dbc6, origin2);
     if (isdefined(activation)) {
@@ -360,7 +360,7 @@ function function_a2d0d0e4(origin1, origin2, var_4358f968, var_2978dbc6, activat
     }
 }
 
-// Namespace namespace_8e2647d0
+// Namespace zm_zod_portals
 // Params 4, eflags: 0x0
 // Checksum 0xb0537fc8, Offset: 0x2068
 // Size: 0xa4

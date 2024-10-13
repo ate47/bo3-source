@@ -355,9 +355,9 @@ function zombieupdategoal() {
                 self.keep_moving_time = gettime() + -6;
                 path = self calcapproximatepathtoposition(goalpos, 0);
                 /#
-                    if (getdvarint("zombieHasAttackSpotAlready")) {
+                    if (getdvarint("<dev string:x28>")) {
                         for (index = 1; index < path.size; index++) {
-                            recordline(path[index - 1], path[index], (1, 0.5, 0), "zombieHasAttackSpotAlready", self);
+                            recordline(path[index - 1], path[index], (1, 0.5, 0), "<dev string:x37>", self);
                         }
                     }
                 #/
@@ -372,7 +372,7 @@ function zombieupdategoal() {
                         remaininglength = deviationdistance - segmentlength;
                         seedposition = path[index - 1] + vectornormalize(path[index] - path[index - 1]) * remaininglength;
                         /#
-                            recordcircle(seedposition, 2, (1, 0.5, 0), "zombieHasAttackSpotAlready", self);
+                            recordcircle(seedposition, 2, (1, 0.5, 0), "<dev string:x37>", self);
                         #/
                         innerzigzagradius = level.inner_zigzag_radius;
                         outerzigzagradius = level.outer_zigzag_radius;
@@ -426,9 +426,9 @@ function zombieupdategoalcode() {
                 self.keep_moving_time = gettime() + -6;
                 path = self calcapproximatepathtoposition(goalpos, 0);
                 /#
-                    if (getdvarint("zombieHasAttackSpotAlready")) {
+                    if (getdvarint("<dev string:x28>")) {
                         for (index = 1; index < path.size; index++) {
-                            recordline(path[index - 1], path[index], (1, 0.5, 0), "zombieHasAttackSpotAlready", self);
+                            recordline(path[index - 1], path[index], (1, 0.5, 0), "<dev string:x37>", self);
                         }
                     }
                 #/
@@ -440,7 +440,7 @@ function zombieupdategoalcode() {
                         remaininglength = deviationdistance - segmentlength;
                         seedposition = path[index - 1] + vectornormalize(path[index] - path[index - 1]) * remaininglength;
                         /#
-                            recordcircle(seedposition, 2, (1, 0.5, 0), "zombieHasAttackSpotAlready", self);
+                            recordcircle(seedposition, 2, (1, 0.5, 0), "<dev string:x37>", self);
                         #/
                         innerzigzagradius = level.inner_zigzag_radius;
                         outerzigzagradius = level.outer_zigzag_radius;
@@ -953,7 +953,7 @@ function findnodesservice(behaviortreeentity) {
             }
         }
         behaviortreeentity.entrance_nodes[behaviortreeentity.entrance_nodes.size] = node;
-        assert(isdefined(node), "zombieHasAttackSpotAlready" + behaviortreeentity.find_flesh_struct_string + "zombieHasAttackSpotAlready");
+        assert(isdefined(node), "<dev string:x42>" + behaviortreeentity.find_flesh_struct_string + "<dev string:x75>");
         behaviortreeentity.first_node = node;
         behaviortreeentity.goalradius = -128;
         behaviortreeentity setgoal(node.origin);
@@ -1289,7 +1289,7 @@ function notetrackboardtear(animationentity) {
 // Checksum 0xe96dd3c0, Offset: 0x5698
 // Size: 0x2e4
 function notetrackboardmelee(animationentity) {
-    assert(animationentity.meleeweapon != level.weaponnone, "zombieHasAttackSpotAlready");
+    assert(animationentity.meleeweapon != level.weaponnone, "<dev string:x85>");
     if (isdefined(animationentity.first_node)) {
         meleedistsq = 8100;
         if (isdefined(level.attack_player_thru_boards_range)) {

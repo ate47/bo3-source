@@ -105,10 +105,10 @@ function private bgb_finalize() {
 // Checksum 0x8c8068f6, Offset: 0x960
 // Size: 0x144
 function register(name, limit_type) {
-    assert(isdefined(name), "bgb_activations_remaining");
-    assert("bgb_activations_remaining" != name, "bgb_activations_remaining" + "bgb_activations_remaining" + "bgb_activations_remaining");
-    assert(!isdefined(level.bgb[name]), "bgb_activations_remaining" + name + "bgb_activations_remaining");
-    assert(isdefined(limit_type), "bgb_activations_remaining" + name + "bgb_activations_remaining");
+    assert(isdefined(name), "<dev string:x28>");
+    assert("<dev string:x4e>" != name, "<dev string:x53>" + "<dev string:x4e>" + "<dev string:x75>");
+    assert(!isdefined(level.bgb[name]), "<dev string:xac>" + name + "<dev string:xc3>");
+    assert(isdefined(limit_type), "<dev string:xac>" + name + "<dev string:xe1>");
     level.bgb[name] = spawnstruct();
     level.bgb[name].name = name;
     level.bgb[name].limit_type = limit_type;
@@ -128,23 +128,23 @@ function private function_78c4bfa(localclientnum, time) {
         return;
     }
     switch (level.bgb[self.bgb].limit_type) {
-    case 22:
+    case "activated":
         color = (25, 0, 50) / -1;
         break;
-    case 23:
+    case "event":
         color = (100, 50, 0) / -1;
         break;
-    case 24:
+    case "rounds":
         color = (1, -107, -12) / -1;
         break;
-    case 25:
+    case "time":
         color = (19, -12, 20) / -1;
         break;
     default:
         return;
     }
     self setcontrollerlightbarcolor(localclientnum, color);
-    wait(time);
+    wait time;
     if (isdefined(self)) {
         self setcontrollerlightbarcolor(localclientnum);
     }

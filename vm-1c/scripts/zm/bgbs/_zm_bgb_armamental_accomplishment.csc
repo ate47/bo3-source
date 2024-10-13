@@ -5,9 +5,9 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_4754119d;
+#namespace zm_bgb_armamental_accomplishment;
 
-// Namespace namespace_4754119d
+// Namespace zm_bgb_armamental_accomplishment
 // Params 0, eflags: 0x2
 // Checksum 0x2e8579, Offset: 0x160
 // Size: 0x34
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_armamental_accomplishment", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_4754119d
+// Namespace zm_bgb_armamental_accomplishment
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdfff17d3, Offset: 0x1a0
 // Size: 0x3c

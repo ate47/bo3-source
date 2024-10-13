@@ -15,9 +15,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_5b19fee7;
+#namespace zm_island_zombie;
 
-// Namespace namespace_5b19fee7
+// Namespace zm_island_zombie
 // Params 0, eflags: 0x2
 // Checksum 0x5821bc50, Offset: 0x488
 // Size: 0xbc
@@ -31,15 +31,15 @@ function autoexec init() {
     spawner::add_archetype_spawn_function("zombie", &function_1d7e9058);
 }
 
-// Namespace namespace_5b19fee7
+// Namespace zm_island_zombie
 // Params 0, eflags: 0x5 linked
 // Checksum 0xf58059dd, Offset: 0x550
 // Size: 0x2c
 function private function_f4226854() {
-    behaviortreenetworkutility::registerbehaviortreescriptapi("ZmIslandAttackableObjectService", &function_e5272d25);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("ZmIslandAttackableObjectService", &ZmIslandAttackableObjectService);
 }
 
-// Namespace namespace_5b19fee7
+// Namespace zm_island_zombie
 // Params 0, eflags: 0x5 linked
 // Checksum 0xdff6e1ba, Offset: 0x588
 // Size: 0x3c
@@ -48,7 +48,7 @@ function private function_1d7e9058() {
     self.cant_move_cb = &function_69768b33;
 }
 
-// Namespace namespace_5b19fee7
+// Namespace zm_island_zombie
 // Params 0, eflags: 0x5 linked
 // Checksum 0xf4408998, Offset: 0x5d0
 // Size: 0x1bc
@@ -71,7 +71,7 @@ function private function_69768b33() {
     }
 }
 
-// Namespace namespace_5b19fee7
+// Namespace zm_island_zombie
 // Params 2, eflags: 0x5 linked
 // Checksum 0xd876c509, Offset: 0x798
 // Size: 0x60
@@ -80,11 +80,11 @@ function private function_b3de8aa4(ent, radius) {
     return ent != self && distancesquared(self.origin, ent.origin) <= radius_sq;
 }
 
-// Namespace namespace_5b19fee7
+// Namespace zm_island_zombie
 // Params 1, eflags: 0x5 linked
 // Checksum 0x16a49482, Offset: 0x800
 // Size: 0x5c
-function private function_e5272d25(entity) {
+function private ZmIslandAttackableObjectService(entity) {
     if (isdefined(entity.var_7d79a6) && entity.var_7d79a6) {
         entity.attackable = undefined;
         return 0;
@@ -92,7 +92,7 @@ function private function_e5272d25(entity) {
     zm_behavior::zombieattackableobjectservice(entity);
 }
 
-// Namespace namespace_5b19fee7
+// Namespace zm_island_zombie
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8f0ed33c, Offset: 0x868
 // Size: 0x404
@@ -114,29 +114,29 @@ function function_2d4f3007(player) {
     }
     if (isdefined(self.zone_name)) {
         switch (self.zone_name) {
-        case 5:
+        case "zone_spider_boss":
             if (!level flag::get("spider_queen_dead")) {
                 var_334f2464 = var_6841e023;
             }
             break;
-        case 6:
+        case "zone_bunker_underwater_defend":
             if (level flag::get("penstock_debris_cleared") && !level flag::get("defend_over")) {
                 var_334f2464 = var_930276ab;
             }
             break;
-        case 8:
+        case "zone_flooded_bunker_tunnel":
             var_334f2464 = var_bae90b42;
             break;
-        case 9:
-        case 10:
+        case "zone_bunker_prison":
+        case "zone_bunker_prison_entrance":
             var_334f2464 = var_a2c1d9c5;
             break;
-        case 11:
+        case "zone_bunker_interior_elevator":
             if (level flag::get("elevator_door_closed")) {
                 var_334f2464 = var_8ea2cdb6;
             }
             break;
-        case 7:
+        case "zone_ruins_underground":
             if (isdefined(self.var_2f846873) && (isdefined(level.var_a5db31a9) && level.var_a5db31a9 || self.var_2f846873)) {
                 var_334f2464 = var_1ac852d;
             }
@@ -145,35 +145,35 @@ function function_2d4f3007(player) {
     }
     if (isdefined(player.zone_name)) {
         switch (player.zone_name) {
-        case 5:
+        case "zone_spider_boss":
             if (!level flag::get("spider_queen_dead")) {
                 str_player_zone = var_6841e023;
             }
             break;
-        case 6:
+        case "zone_bunker_underwater_defend":
             if (level flag::get("penstock_debris_cleared") && !level flag::get("defend_over")) {
                 str_player_zone = var_930276ab;
             }
             break;
-        case 8:
+        case "zone_flooded_bunker_tunnel":
             str_player_zone = var_bae90b42;
             break;
-        case 10:
+        case "zone_bunker_prison_entrance":
             if (!level flag::get("prison_vines_cleared")) {
                 str_player_zone = var_101826e8;
             } else {
                 str_player_zone = var_a2c1d9c5;
             }
             break;
-        case 9:
+        case "zone_bunker_prison":
             str_player_zone = var_a2c1d9c5;
             break;
-        case 11:
+        case "zone_bunker_interior_elevator":
             if (level flag::get("elevator_door_closed")) {
                 str_player_zone = var_8ea2cdb6;
             }
             break;
-        case 7:
+        case "zone_ruins_underground":
             if (isdefined(level.var_a5db31a9) && level.var_a5db31a9) {
                 str_player_zone = var_1ac852d;
             }
@@ -186,7 +186,7 @@ function function_2d4f3007(player) {
     return true;
 }
 
-// Namespace namespace_5b19fee7
+// Namespace zm_island_zombie
 // Params 1, eflags: 0x5 linked
 // Checksum 0x9ad3ec5c, Offset: 0xc78
 // Size: 0xee
@@ -204,7 +204,7 @@ function private function_f8e95ea2(players) {
     self.last_closest_player = undefined;
 }
 
-// Namespace namespace_5b19fee7
+// Namespace zm_island_zombie
 // Params 2, eflags: 0x5 linked
 // Checksum 0xb7c70c19, Offset: 0xd70
 // Size: 0x312
@@ -275,7 +275,7 @@ function private function_c3d4cc46(origin, players) {
     return self.last_closest_player;
 }
 
-// Namespace namespace_5b19fee7
+// Namespace zm_island_zombie
 // Params 0, eflags: 0x5 linked
 // Checksum 0x596c4655, Offset: 0x1090
 // Size: 0x18c
@@ -297,11 +297,11 @@ function private function_72e6c1d6() {
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_5b19fee7
+// Namespace zm_island_zombie
 // Params 1, eflags: 0x1 linked
 // Checksum 0xaa9dbbe6, Offset: 0x1228
 // Size: 0x1d4
@@ -329,14 +329,14 @@ function function_50565360(s_spot) {
     }
 }
 
-// Namespace namespace_5b19fee7
+// Namespace zm_island_zombie
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7d97fee3, Offset: 0x1408
 // Size: 0x70
 function function_cd5d6101() {
     self endon(#"death");
     self ghost();
-    wait(0.4);
+    wait 0.4;
     if (isdefined(self)) {
         self show();
         util::wait_network_frame();

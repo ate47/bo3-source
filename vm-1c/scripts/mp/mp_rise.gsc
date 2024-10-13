@@ -5,17 +5,17 @@
 #using scripts/shared/compass;
 #using scripts/codescripts/struct;
 
-#namespace namespace_bf9a7466;
+#namespace mp_rise;
 
-// Namespace namespace_bf9a7466
+// Namespace mp_rise
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9cd17334, Offset: 0x2b8
 // Size: 0x2a4
 function main() {
-    namespace_45ed63a3::main();
+    mp_rise_fx::main();
     load::main();
     compass::setupminimap("compass_map_mp_rise");
-    namespace_b81d7907::main();
+    mp_rise_amb::main();
     setdvar("compassmaxrange", "2100");
     spawncollision("collision_clip_wall_128x128x10", "collider", (-626, -1033, 421.5), (0, 270, 0));
     spawncollision("collision_clip_wall_128x128x10", "collider", (-692.5, -1033, 421.5), (0, 270, 0));

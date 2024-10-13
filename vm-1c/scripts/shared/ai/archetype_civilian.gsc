@@ -31,8 +31,8 @@ function registerbehaviorscriptfunctions() {
     behaviortreenetworkutility::registerbehaviortreeaction("civilianMoveAction", &civilianmoveactioninitialize, undefined, &civilianmoveactionfinalize);
     behaviortreenetworkutility::registerbehaviortreeaction("civilianCowerAction", &function_d752eb0e, undefined, undefined);
     behaviortreenetworkutility::registerbehaviortreescriptapi("civilianIsPanicked", &civilianispanicked);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("civilianPanic", &function_8e0e957);
-    behaviorstatemachine::registerbsmscriptapiinternal("civilianPanic", &function_8e0e957);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("civilianPanic", &civilianPanic);
+    behaviorstatemachine::registerbsmscriptapiinternal("civilianPanic", &civilianPanic);
 }
 
 // Namespace archetypecivilian
@@ -46,13 +46,13 @@ function private civilianblackboardinit() {
     blackboard::registerblackboardattribute(self, "_panic", "calm", &function_e0be6cd5);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("_panic");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_human_locomotion_variation", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("_panic");
+            self trackblackboardattribute("<dev string:x2f>");
         #/
     }
     self.___archetypeonanimscriptedcallback = &civilianonanimscriptedcallback;
@@ -143,7 +143,7 @@ function private civilianispanicked(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x58b3c3ee, Offset: 0x8e8
 // Size: 0x30
-function private function_8e0e957(entity) {
+function private civilianPanic(entity) {
     entity ai::set_behavior_attribute("panic", 1);
     return true;
 }

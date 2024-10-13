@@ -11,9 +11,9 @@
 #using scripts/zm/zm_island;
 #using scripts/codescripts/struct;
 
-#namespace namespace_1c690923;
+#namespace zm_island_cleanup;
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 0, eflags: 0x2
 // Checksum 0xacc26b74, Offset: 0x240
 // Size: 0x3c
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
     system::register("zm_island_cleanup", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4d917da7, Offset: 0x288
 // Size: 0x10
@@ -29,7 +29,7 @@ function __init__() {
     level.n_cleanups_processed_this_frame = 0;
 }
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2d0edf1f, Offset: 0x2a0
 // Size: 0x1c
@@ -37,7 +37,7 @@ function __main__() {
     level thread cleanup_main();
 }
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 0, eflags: 0x5 linked
 // Checksum 0x13db4dcd, Offset: 0x2c8
 // Size: 0x29e
@@ -84,7 +84,7 @@ function private cleanup_main() {
     }
 }
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 1, eflags: 0x1 linked
 // Checksum 0x755c15a5, Offset: 0x570
 // Size: 0x2e4
@@ -138,7 +138,7 @@ function do_cleanup_check(n_override_cleanup_dist) {
     }
 }
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 0, eflags: 0x5 linked
 // Checksum 0x531ff317, Offset: 0x860
 // Size: 0xdc
@@ -157,7 +157,7 @@ function private delete_zombie_noone_looking() {
     self function_e89cc6dd();
 }
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 0, eflags: 0x5 linked
 // Checksum 0xbccc6d01, Offset: 0x948
 // Size: 0x24
@@ -166,7 +166,7 @@ function private function_cc0c7e36() {
     self thread delete_zombie_noone_looking();
 }
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 0, eflags: 0x5 linked
 // Checksum 0x6f52d7f2, Offset: 0x978
 // Size: 0x1ec
@@ -199,7 +199,7 @@ function private function_e89cc6dd() {
     }
 }
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 1, eflags: 0x5 linked
 // Checksum 0xa6d8dcaa, Offset: 0xb70
 // Size: 0xd8
@@ -215,7 +215,7 @@ function private player_can_see_me(player) {
     return true;
 }
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 1, eflags: 0x5 linked
 // Checksum 0x2689ee81, Offset: 0xc50
 // Size: 0xb4
@@ -230,7 +230,7 @@ function private player_ahead_of_me(player) {
     return true;
 }
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 0, eflags: 0x0
 // Checksum 0x1a2f9b8b, Offset: 0xd10
 // Size: 0xcc
@@ -248,7 +248,7 @@ function get_escape_position() {
     return s_farthest;
 }
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 1, eflags: 0x1 linked
 // Checksum 0xfc31ea47, Offset: 0xde8
 // Size: 0x11e
@@ -269,7 +269,7 @@ function get_adjacencies_to_zone(str_zone) {
     return a_adjacencies;
 }
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 1, eflags: 0x5 linked
 // Checksum 0x1c186094, Offset: 0xf10
 // Size: 0xd2
@@ -281,7 +281,7 @@ function private get_wait_locations_in_zones(a_zones) {
     return a_wait_locations;
 }
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 1, eflags: 0x5 linked
 // Checksum 0x45b9f0ec, Offset: 0xff0
 // Size: 0xd6
@@ -301,7 +301,7 @@ function private get_farthest_wait_location(a_wait_locations) {
     return a_wait_locations[var_61c71098];
 }
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4cb39629, Offset: 0x10d0
 // Size: 0x88
@@ -314,7 +314,7 @@ function private get_wait_locations_in_zone(zone) {
     return undefined;
 }
 
-// Namespace namespace_1c690923
+// Namespace zm_island_cleanup
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf32084ac, Offset: 0x1160
 // Size: 0xb4

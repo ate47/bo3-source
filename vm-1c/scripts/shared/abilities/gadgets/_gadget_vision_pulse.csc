@@ -58,10 +58,10 @@ function function_d0c5071a(localclientnum) {
     while (true) {
         if (self isempjammed()) {
             self thread function_2902f0fc(localclientnum, 0);
-            self notify(#"hash_3fca355b");
+            self notify(#"emp_jammed_vp");
             break;
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -75,7 +75,7 @@ function function_2902f0fc(localclientnum, duration) {
     self endon(#"entityshutdown");
     self notify(#"hash_7cc7626e");
     self endon(#"hash_7cc7626e");
-    wait(duration);
+    wait duration;
     filter::function_3255f545(localclientnum, 3);
 }
 
@@ -105,7 +105,7 @@ function function_2cf010aa(localclientnum) {
     filter::function_7fe7fc80(localclientnum, 3, 3, 0);
     filter::function_7fe7fc80(localclientnum, 3, 4, 1);
     starttime = getservertime(localclientnum);
-    wait(0.016);
+    wait 0.016;
     amount = 1;
     irisamount = 0;
     pulsemaxradius = 0;
@@ -124,7 +124,7 @@ function function_2cf010aa(localclientnum) {
         filter::function_7fe7fc80(localclientnum, 3, 0, pulseradius);
         filter::function_7fe7fc80(localclientnum, 3, 3, irisamount);
         filter::function_7fe7fc80(localclientnum, 3, 11, pulsemaxradius);
-        wait(0.016);
+        wait 0.016;
     }
     filter::function_7fe7fc80(localclientnum, 3, 0, pulsemaxradius + 1);
     self thread function_2902f0fc(localclientnum, 4);
@@ -186,7 +186,7 @@ function do_vision_local_pulse(localclientnum) {
             pulseradius = (getservertime(localclientnum) - starttime) / 2000 * 2000;
         }
         filter::function_7fe7fc80(localclientnum, 3, 10, pulseradius);
-        wait(0.016);
+        wait 0.016;
     }
     filter::function_7fe7fc80(localclientnum, 3, 7, 0);
     self thread function_2902f0fc(localclientnum, 4);
@@ -226,7 +226,7 @@ function function_4ebdb91d(localclientnum) {
             value = float((currtime - starttime - 3500) / 500);
             self mapshaderconstant(localclientnum, 0, "scriptVector7", value, 0, 0, 0);
         }
-        wait(0.016);
+        wait 0.016;
         currtime = getservertime(localclientnum);
     }
 }

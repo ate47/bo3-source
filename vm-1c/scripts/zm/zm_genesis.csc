@@ -77,9 +77,9 @@
 #using scripts/shared/ai/margwa;
 #using scripts/codescripts/struct;
 
-#namespace namespace_9d0831d9;
+#namespace zm_genesis;
 
-// Namespace namespace_9d0831d9
+// Namespace zm_genesis
 // Params 0, eflags: 0x2
 // Checksum 0x672dab30, Offset: 0x1788
 // Size: 0x28
@@ -89,48 +89,48 @@ function autoexec opt_in() {
     level.clientfieldaicheck = 1;
 }
 
-// Namespace namespace_9d0831d9
+// Namespace zm_genesis
 // Params 0, eflags: 0x1 linked
 // Checksum 0x321aa31d, Offset: 0x17b8
 // Size: 0x21c
 function main() {
     callback::on_localclient_connect(&on_player_connected);
-    namespace_b6963cd7::main_start();
-    namespace_d7c5f6de::main();
-    namespace_a714a13e::main();
+    zm_genesis_ffotd::main_start();
+    zm_genesis_fx::main();
+    zm_genesis_undercroft_low_grav::main();
     level.debug_keyline_zombies = 0;
     level.setupcustomcharacterexerts = &setup_personality_character_exerts;
     level._effect["eye_glow"] = "dlc3/stalingrad/fx_glow_eye_red_stal";
     level._uses_sticky_grenades = 1;
     level._uses_taser_knuckles = 1;
     include_weapons();
-    namespace_d95aef6::main();
-    namespace_57c513b2::main();
+    zm_genesis_flingers::main();
+    zm_genesis_apothicon_god::main();
     setdvar("waypointVerticalSeparation", -2001);
-    namespace_50411410::function_ad78a144();
+    zm_genesis_wearables::function_ad78a144();
     clientfield::register("clientuimodel", "zmInventory.widget_shield_parts", 12000, 1, "int", undefined, 0, 0);
     clientfield::register("clientuimodel", "zmInventory.widget_dragon_strike", 12000, 1, "int", undefined, 0, 0);
     clientfield::register("clientuimodel", "zmInventory.player_crafted_shield", 12000, 1, "int", undefined, 0, 0);
     load::main();
-    level thread namespace_a7ac3fc4::main();
-    level thread namespace_d7c5f6de::function_2c301fae();
+    level thread zm_genesis_amb::main();
+    level thread zm_genesis_fx::function_2c301fae();
     util::waitforclient(0);
-    namespace_b6963cd7::main_end();
+    zm_genesis_ffotd::main_end();
 }
 
-// Namespace namespace_9d0831d9
+// Namespace zm_genesis
 // Params 1, eflags: 0x1 linked
 // Checksum 0x281d24c9, Offset: 0x19e0
 // Size: 0x24
 function on_player_connected(var_6575414d) {
-    self thread function_1407a431(var_6575414d);
+    self thread sun_flame(var_6575414d);
 }
 
-// Namespace namespace_9d0831d9
+// Namespace zm_genesis
 // Params 1, eflags: 0x1 linked
 // Checksum 0x374ad294, Offset: 0x1a10
 // Size: 0x198
-function function_1407a431(var_6575414d) {
+function sun_flame(var_6575414d) {
     self endon(#"disconnect");
     self endon(#"death");
     self endon(#"entityshutdown");
@@ -140,20 +140,20 @@ function function_1407a431(var_6575414d) {
     while (isdefined(player)) {
         if (!var_c2a0c80a hasdobj(var_6575414d)) {
             var_c2a0c80a util::waittill_dobj(var_6575414d);
-            wait(0.016);
+            wait 0.016;
         }
         if (!isdefined(player)) {
             player = getlocalplayer(var_6575414d);
-            wait(0.016);
+            wait 0.016;
         }
         v_to_player = player.origin - var_c2a0c80a.origin;
         var_b514ffc0 = vectortoangles(v_to_player) + (89, 0, 0);
         var_c2a0c80a.angles = var_b514ffc0;
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_9d0831d9
+// Namespace zm_genesis
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf4ca3379, Offset: 0x1bb0
 // Size: 0x34
@@ -162,7 +162,7 @@ function include_weapons() {
     zm_weapons::function_9e8dccbe();
 }
 
-// Namespace namespace_9d0831d9
+// Namespace zm_genesis
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6db0a5e6, Offset: 0x1bf0
 // Size: 0x1072

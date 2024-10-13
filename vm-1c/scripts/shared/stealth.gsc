@@ -29,7 +29,7 @@ function autoexec function_2dc19561() {
 function __init__() {
     init_client_field_callback_funcs();
     /#
-        namespace_e449108e::init();
+        stealth_debug::init();
     #/
 }
 
@@ -83,7 +83,7 @@ function stop() {
     if (!isdefined(self.stealth)) {
         return;
     }
-    self notify(#"hash_94ff6d85");
+    self notify(#"stop_stealth");
     if (isdefined(self.stealth.agents)) {
         foreach (agent in self.stealth.agents) {
             if (!isdefined(agent)) {
@@ -92,7 +92,7 @@ function stop() {
             if (agent == self) {
                 continue;
             }
-            agent notify(#"hash_94ff6d85");
+            agent notify(#"stop_stealth");
             agent function_7aa44f83();
         }
     }
@@ -131,13 +131,13 @@ function agent_init() {
         return 0;
     }
     if (isplayer(object)) {
-        object namespace_10443be6::init();
+        object stealth_player::init();
     } else if (isactor(object)) {
-        object namespace_aec89ff8::init();
+        object stealth_actor::init();
     } else if (isvehicle(object)) {
-        object namespace_594759f3::init();
+        object stealth_vehicle::init();
     } else if (object == level) {
-        object namespace_ad45a419::init();
+        object stealth_level::init();
     }
     function_ca3d344(object);
 }
@@ -152,16 +152,16 @@ function function_7aa44f83() {
         return 0;
     }
     if (isplayer(object)) {
-        return object namespace_10443be6::stop();
+        return object stealth_player::stop();
     }
     if (isactor(object)) {
-        return object namespace_aec89ff8::stop();
+        return object stealth_actor::stop();
     }
     if (isvehicle(object)) {
-        return object namespace_594759f3::stop();
+        return object stealth_vehicle::stop();
     }
     if (object == level) {
-        return object namespace_ad45a419::stop();
+        return object stealth_level::stop();
     }
     return 0;
 }
@@ -176,16 +176,16 @@ function function_e8434f94() {
         return 0;
     }
     if (isplayer(object)) {
-        return object namespace_10443be6::reset();
+        return object stealth_player::reset();
     }
     if (isactor(object)) {
-        return object namespace_aec89ff8::reset();
+        return object stealth_actor::reset();
     }
     if (isvehicle(object)) {
-        return object namespace_594759f3::reset();
+        return object stealth_vehicle::reset();
     }
     if (object == level) {
-        return object namespace_ad45a419::reset();
+        return object stealth_level::reset();
     }
     return 0;
 }
@@ -211,9 +211,9 @@ function function_2cfe5148(entity) {
 function enemy_team() {
     assert(isdefined(self.team));
     switch (self.team) {
-    case 6:
+    case "allies":
         return "axis";
-    case 5:
+    case "axis":
         return "allies";
     }
     return "allies";
@@ -250,7 +250,7 @@ function function_8ab6cff5(waitfor) {
     } else {
         self endon(#"death");
     }
-    self endon(#"hash_94ff6d85");
+    self endon(#"stop_stealth");
     level waittill(waitfor);
     self notify(waitfor);
 }
@@ -406,7 +406,7 @@ function function_f8aaae39(delay) {
         level.stealth.music_ent["combat"] = spawn("script_origin", (0, 0, 0));
     }
     state = level.stealth.music_state;
-    wait(delay);
+    wait delay;
     if (state == level.stealth.music_state) {
         foreach (key, ent in level.stealth.music_ent) {
             if (state == key && isdefined(level.stealth.music[key])) {
@@ -428,7 +428,7 @@ function function_26f24c93(b_enabled) {
         return;
     }
     if (isdefined(b_enabled) && b_enabled) {
-        assert(0, "TAG_EYE");
+        assert(0, "<dev string:x28>");
     }
 }
 
@@ -448,10 +448,10 @@ function private function_762607ad() {
     level notify(#"hash_762607ad");
     level endon(#"hash_762607ad");
     level endon(#"save_restore");
-    level endon(#"hash_94ff6d85");
+    level endon(#"stop_stealth");
     var_b5d2021c = 0;
     while (var_b5d2021c < 10) {
-        var_62de14e3 = level flag::get("stealth_alert") || level flag::get("stealth_combat") || level namespace_ad45a419::enabled() && level flag::get("stealth_discovered");
+        var_62de14e3 = level flag::get("stealth_alert") || level flag::get("stealth_combat") || level stealth_level::enabled() && level flag::get("stealth_discovered");
         if (!var_62de14e3) {
             enemies = getaiteamarray("axis");
             for (i = 0; i < enemies.size && !var_62de14e3; i++) {
@@ -459,7 +459,7 @@ function private function_762607ad() {
                 if (!isdefined(enemy) || isalive(enemy)) {
                     continue;
                 }
-                if (!enemy namespace_80045451::enabled()) {
+                if (!enemy stealth_aware::enabled()) {
                     continue;
                 }
                 foreach (player in level.activeplayers) {
@@ -473,7 +473,7 @@ function private function_762607ad() {
             var_62de14e3 = !function_fd413bf3();
         }
         if (var_62de14e3) {
-            wait(1);
+            wait 1;
             var_b5d2021c++;
             continue;
         }

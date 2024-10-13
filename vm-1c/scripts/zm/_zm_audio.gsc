@@ -30,7 +30,7 @@ function autoexec function_2dc19561() {
 function __init__() {
     clientfield::register("allplayers", "charindex", 1, 3, "int");
     clientfield::register("toplayer", "isspeaking", 1, 1, "int");
-    println("vox_zmba_");
+    println("<dev string:x28>");
     level.var_cdd49d24 = &function_72475c49;
     level zmbvox();
     callback::on_connect(&init_audio_functions);
@@ -90,7 +90,7 @@ function playerexert(exert, notifywait) {
 // Size: 0x38
 function exert_timer() {
     self endon(#"disconnect");
-    wait(randomfloatrange(1.5, 3));
+    wait randomfloatrange(1.5, 3);
     self.isexerting = 0;
 }
 
@@ -137,13 +137,13 @@ function init_audio_functions() {
 // Size: 0x2f8
 function zombie_behind_vox() {
     level endon(#"unloaded");
-    self endon(#"hash_3f7b661c");
+    self endon(#"death_or_disconnect");
     if (!isdefined(level._zbv_vox_last_update_time)) {
         level._zbv_vox_last_update_time = 0;
         level._audio_zbv_shared_ent_list = zombie_utility::get_zombie_array();
     }
     while (true) {
-        wait(1);
+        wait 1;
         t = gettime();
         if (t > level._zbv_vox_last_update_time + 1000) {
             level._zbv_vox_last_update_time = t;
@@ -163,13 +163,13 @@ function zombie_behind_vox() {
             alias = level.vox_behind_zombie;
             if (isdefined(zombs[i].zombie_move_speed)) {
                 switch (zombs[i].zombie_move_speed) {
-                case 17:
+                case "walk":
                     dist = -106;
                     break;
-                case 15:
+                case "run":
                     dist = -81;
                     break;
-                case 16:
+                case "sprint":
                     dist = -56;
                     break;
                 }
@@ -185,7 +185,7 @@ function zombie_behind_vox() {
             }
         }
         if (played_sound) {
-            wait(3.5);
+            wait 3.5;
         }
     }
 }
@@ -195,9 +195,9 @@ function zombie_behind_vox() {
 // Checksum 0x96b82e50, Offset: 0xfb8
 // Size: 0x16e
 function oh_shit_vox() {
-    self endon(#"hash_3f7b661c");
+    self endon(#"death_or_disconnect");
     while (true) {
-        wait(1);
+        wait 1;
         players = getplayers();
         zombs = zombie_utility::get_round_enemy_array();
         if (players.size >= 1) {
@@ -211,7 +211,7 @@ function oh_shit_vox() {
             }
             if (var_6c755991 > 4) {
                 self create_and_play_dialog("general", "oh_shit");
-                wait(4);
+                wait 4;
             }
         }
     }
@@ -270,7 +270,7 @@ function player_zombie_kill_vox(hit_location, player, mod, zombie) {
     if (!(isdefined(player.var_cc7fd45a) && player.var_cc7fd45a)) {
         player.var_cc7fd45a = 1;
         player create_and_play_dialog("kill", death);
-        wait(2);
+        wait 2;
         if (isdefined(player)) {
             player.var_cc7fd45a = 0;
         }
@@ -377,13 +377,13 @@ function timer_actual(kills, time) {
     while (gettime() < timer) {
         if (self.killcounter > kills) {
             self create_and_play_dialog("kill", "streak");
-            wait(1);
+            wait 1;
             self.killcounter = 0;
             timer = -1;
         }
-        wait(0.1);
+        wait 0.1;
     }
-    wait(10);
+    wait 10;
     self.killcounter = 0;
     self.timerisrunning = 0;
 }
@@ -421,7 +421,7 @@ function custom_kill_damaged_vo(player) {
     self endon(#"death");
     self endon(#"sound_damage_player_updated");
     self.sound_damage_player = player;
-    wait(2);
+    wait 2;
     self.sound_damage_player = undefined;
 }
 
@@ -536,8 +536,8 @@ function create_and_play_dialog(category, subcategory, force_variant) {
     }
     if (!isdefined(level.sndplayervox[category][subcategory])) {
         /#
-            if (getdvarint("vox_zmba_") > 0) {
-                println("vox_zmba_" + category + "vox_zmba_" + subcategory + "vox_zmba_");
+            if (getdvarint("<dev string:x5d>") > 0) {
+                println("<dev string:x69>" + category + "<dev string:x84>" + subcategory + "<dev string:x95>");
             }
         #/
         return;
@@ -557,8 +557,8 @@ function create_and_play_dialog(category, subcategory, force_variant) {
         return;
     }
     /#
-        if (getdvarint("vox_zmba_") > 0) {
-            iprintln("vox_zmba_");
+        if (getdvarint("<dev string:x5d>") > 0) {
+            iprintln("<dev string:xab>");
         }
     #/
 }
@@ -568,7 +568,7 @@ function create_and_play_dialog(category, subcategory, force_variant) {
 // Checksum 0x958e9326, Offset: 0x2230
 // Size: 0x32c
 function do_player_or_npc_playvox(sound_to_play, category, subcategory) {
-    self endon(#"hash_3f7b661c");
+    self endon(#"death_or_disconnect");
     if (self flag::exists("in_beastmode") && self flag::get("in_beastmode")) {
         return;
     }
@@ -596,10 +596,10 @@ function do_player_or_npc_playvox(sound_to_play, category, subcategory) {
         }
         if (isdefined(level.var_c71571c2)) {
             self thread [[ level.var_c71571c2 ]](sound_to_play, playbacktime);
-            wait(playbacktime);
+            wait playbacktime;
         } else if (!self istestclient()) {
             self playsoundontag(sound_to_play, "J_Head");
-            wait(playbacktime);
+            wait playbacktime;
         }
         if (isplayer(self) && isdefined(self.last_vo_played_time)) {
             if (gettime() < self.last_vo_played_time + 5000) {
@@ -607,7 +607,7 @@ function do_player_or_npc_playvox(sound_to_play, category, subcategory) {
                 waittime = 7;
             }
         }
-        wait(waittime);
+        wait waittime;
         self.isspeaking = 0;
         if (isplayer(self)) {
             self clientfield::set_to_player("isspeaking", 0);
@@ -779,8 +779,8 @@ function zmbvoxgetlinevariant(prefix, suffix, force_variant) {
         num_variants = zm_spawner::get_number_variants(prefix + suffix);
         if (num_variants <= 0) {
             /#
-                if (getdvarint("vox_zmba_") > 0) {
-                    println("vox_zmba_" + prefix + suffix);
+                if (getdvarint("<dev string:x5d>") > 0) {
+                    println("<dev string:xd7>" + prefix + suffix);
                 }
             #/
             return undefined;
@@ -948,7 +948,7 @@ function playstate(state) {
     mustoplay = musarray[randomintrange(0, musarray.size)];
     m.currentplaytype = m.states[state].playtype;
     m.currentstate = state;
-    wait(0.1);
+    wait 0.1;
     if (isdefined(level.sndplaystateoverride)) {
         perplayer = level [[ level.sndplaystateoverride ]](state);
         if (!(isdefined(perplayer) && perplayer)) {
@@ -964,7 +964,7 @@ function playstate(state) {
     } else {
         waittime = playbacktime * 0.001;
     }
-    wait(waittime);
+    wait waittime;
     m.currentplaytype = 0;
     m.currentstate = undefined;
 }
@@ -982,7 +982,7 @@ function sndmusicsystem_queuestate(state) {
     }
     m.queue = 1;
     while (m.currentplaytype > 0) {
-        wait(0.5);
+        wait 0.5;
         count++;
         if (count >= 25) {
             m.queue = 0;
@@ -1044,7 +1044,7 @@ function function_f8cbdf9(var_ab59bedf) {
     m = level.musicsystem;
     while (true) {
         activezone = level waittill(#"newzoneactive");
-        wait(0.1);
+        wait 0.1;
         if (!function_3459a7ac(var_ab59bedf, activezone)) {
             continue;
         }
@@ -1110,7 +1110,7 @@ function function_755b5e07(var_6437472a, activezone, var_32d2281, num) {
 function function_b55a93f8(zone) {
     level endon(#"newzoneactive");
     while (level.musicsystem.currentplaytype >= 3) {
-        wait(0.5);
+        wait 0.5;
     }
     level notify(#"newzoneactive", zone);
 }
@@ -1211,7 +1211,7 @@ function secretuse(notify_string, color, qualifier_func, arg1, arg2) {
             return;
         }
         /#
-            print3d(self.origin, "vox_zmba_", color, 1);
+            print3d(self.origin, "<dev string:x101>", color, 1);
         #/
         players = level.players;
         foreach (player in players) {
@@ -1228,7 +1228,7 @@ function secretuse(notify_string, color, qualifier_func, arg1, arg2) {
                 }
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -1278,7 +1278,7 @@ function sndannouncerplayvox(type, player) {
             temp_ent = spawn("script_origin", (0, 0, 0));
             temp_ent playsoundwithnotify(prefix + suffix, prefix + suffix + "wait");
             temp_ent waittill(prefix + suffix + "wait");
-            wait(0.05);
+            wait 0.05;
             temp_ent delete();
             level.zmannouncertalking = 0;
             return;
@@ -1300,38 +1300,38 @@ function zmbaivox_notifyconvert() {
     while (true) {
         notify_string = self waittill(#"bhtn_action_notify");
         switch (notify_string) {
-        case 100:
+        case "pain":
             level thread zmbaivox_playvox(self, notify_string, 1, 9);
             break;
-        case 98:
+        case "death":
             if (isdefined(self.bgb_tone_death) && self.bgb_tone_death) {
                 level thread zmbaivox_playvox(self, "death_whimsy", 1, 10);
             } else {
                 level thread zmbaivox_playvox(self, notify_string, 1, 10);
             }
             break;
-        case 18:
+        case "behind":
             level thread zmbaivox_playvox(self, notify_string, 1, 9);
             break;
-        case 95:
+        case "attack_melee":
             if (self.animname != "zombie" && (!isdefined(self.animname) || self.animname != "quad_zombie")) {
                 level thread zmbaivox_playvox(self, notify_string, 1, 8, 1);
             }
             break;
-        case 97:
+        case "attack_melee_zhd":
             level thread zmbaivox_playvox(self, "attack_melee", 1, 8, 1);
             break;
-        case 99:
+        case "electrocute":
             level thread zmbaivox_playvox(self, notify_string, 1, 7);
             break;
-        case 51:
+        case "close":
             level thread zmbaivox_playvox(self, notify_string, 1, 6);
             break;
-        case 96:
-        case 50:
-        case 16:
-        case 101:
-        case 102:
+        case "ambient":
+        case "crawler":
+        case "sprint":
+        case "taunt":
+        case "teardown":
             level thread zmbaivox_playvox(self, notify_string, 0);
             break;
         default:
@@ -1406,7 +1406,7 @@ function zmbaivox_playvox(zombie, type, override, priority, delayambientvox) {
         } else {
             playbacktime = 1;
         }
-        wait(playbacktime);
+        wait playbacktime;
         zombie.talking = 0;
         zombie.currentvox = undefined;
         zombie.currentvoxpriority = 1;
@@ -1453,7 +1453,7 @@ function zmbaivox_ambientdelay() {
     self endon(#"sndambientdelay");
     self endon(#"death");
     self endon(#"disconnect");
-    wait(2);
+    wait 2;
     self.delayambientvox = 0;
 }
 
@@ -1561,7 +1561,7 @@ function function_ff22a5f2(var_6ac79f92, var_154f146d, origin1, origin2, origin3
 function function_713e84b0(origin, radio, var_154f146d, num) {
     temp_ent = spawn("script_origin", origin);
     temp_ent thread secretuse("sndRadioHit", (0, 0, 255), &function_9db08cfa, radio);
-    player = temp_ent waittill(#"hash_678c47ee");
+    player = temp_ent waittill(#"sndRadioHit");
     if (!(isdefined(var_154f146d) && var_154f146d)) {
         var_48a5e056 = num;
     } else {
@@ -1582,7 +1582,7 @@ function function_713e84b0(origin, radio, var_154f146d, num) {
             } else {
                 playbacktime = 1;
             }
-            wait(playbacktime);
+            wait playbacktime;
         }
     }
     radio.counter++;
@@ -1611,7 +1611,7 @@ function sndperksjingles_timer() {
         self.sndjinglecooldown = 0;
     }
     while (true) {
-        wait(randomfloatrange(30, 60));
+        wait randomfloatrange(30, 60);
         if (randomintrange(0, 100) <= 10 && !(isdefined(self.sndjinglecooldown) && self.sndjinglecooldown)) {
             self thread sndperksjingles_player(0);
         }
@@ -1644,7 +1644,7 @@ function sndperksjingles_player(type) {
         } else {
             waittime = playbacktime * 0.001;
         }
-        wait(waittime);
+        wait waittime;
         if (type == 0) {
             self.sndjinglecooldown = 1;
             self thread sndperksjingles_cooldown();
@@ -1661,10 +1661,10 @@ function sndperksjingles_cooldown() {
     self endon(#"death");
     if (isdefined(self.var_1afc1154)) {
         while (isdefined(self.var_1afc1154) && self.var_1afc1154) {
-            wait(1);
+            wait 1;
         }
     }
-    wait(45);
+    wait 45;
     self.sndjinglecooldown = 0;
 }
 
@@ -1732,10 +1732,10 @@ function function_20b36810(name) {
         level endon(var_4b58e3de.var_2009b1c2);
     }
     while (function_cb7b7167()) {
-        wait(0.5);
+        wait 0.5;
     }
     while (isdefined(level.sndvoxoverride) && level.sndvoxoverride) {
-        wait(0.5);
+        wait 0.5;
     }
     level.sndvoxoverride = 1;
     for (i = 0; i < var_4b58e3de.line.size; i++) {
@@ -1795,7 +1795,7 @@ function waitplaybacktime(alias) {
     } else {
         playbacktime = 1;
     }
-    wait(playbacktime);
+    wait playbacktime;
 }
 
 // Namespace zm_audio
@@ -1881,7 +1881,7 @@ function function_27e4fddc() {
         if (count == level.players.size - 1) {
             break;
         }
-        wait(0.25);
+        wait 0.25;
     }
     level thread function_f6e37de7();
 }
@@ -1921,7 +1921,7 @@ function water_vox() {
                 self.voxunderwatertime = 0;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1991,7 +1991,7 @@ function sndplayerhitalert_playsound(str_alias) {
     if (self.hitsoundtracker) {
         self.hitsoundtracker = 0;
         self playsoundtoplayer(str_alias, self);
-        wait(0.05);
+        wait 0.05;
         self.hitsoundtracker = 1;
     }
 }
@@ -2005,12 +2005,12 @@ function checkforvalidmod(str_meansofdeath) {
         return false;
     }
     switch (str_meansofdeath) {
-    case 116:
-    case 44:
-    case 117:
-    case 37:
-    case 118:
-    case 119:
+    case "MOD_CRUSH":
+    case "MOD_GRENADE_SPLASH":
+    case "MOD_HIT_BY_OBJECT":
+    case "MOD_MELEE":
+    case "MOD_MELEE_ASSASSINATE":
+    case "MOD_MELEE_WEAPON_BUTT":
         return false;
     }
     return true;

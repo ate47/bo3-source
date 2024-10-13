@@ -113,7 +113,7 @@ function function_f352670b() {
         var_3fbec512[team] = 0;
     }
     switch (level.gametype) {
-    case 1:
+    case "dem":
         var_90259f7d = 0;
         for (index = 0; index < level.bombzones.size; index++) {
             if (!isdefined(level.bombzones[index].bombexploded) || !level.bombzones[index].bombexploded) {
@@ -123,7 +123,7 @@ function function_f352670b() {
             level.globaldembombsdestroyed++;
         }
         break;
-    case 2:
+    case "sab":
         foreach (team in level.teams) {
             var_3fbec512[team] = level.globalbombsdestroyedbyteam[team];
         }
@@ -139,7 +139,7 @@ function function_f352670b() {
     if (!util::waslastround()) {
         return;
     }
-    wait(0.05);
+    wait 0.05;
     players = getplayers();
     for (i = 0; i < players.size; i++) {
         player = players[i];
@@ -153,19 +153,19 @@ function function_f352670b() {
             totaltimeplayed += int(min(player.timeplayed["alive"], level.timeplayedcap));
         }
         switch (level.gametype) {
-        case 5:
+        case "ctf":
             var_639d35e8 += player.captures;
             var_4f996c2b += player.returns;
             break;
-        case 6:
+        case "koth":
             var_aefd4904 += player.destructions;
             var_e8d3218d += player.captures;
             break;
-        case 7:
+        case "sd":
             var_c0810d02 += player.defuses;
             var_5d7be06e += player.plants;
             break;
-        case 2:
+        case "sab":
             if (isdefined(player.team) && isdefined(level.teams[player.team])) {
                 var_3fbec512[player.team] = var_3fbec512[player.team] + player.destructions;
             }
@@ -210,10 +210,10 @@ function get_gametype_name() {
 // Size: 0x44
 function is_party_gamemode() {
     switch (level.gametype) {
-    case 12:
-    case 13:
-    case 14:
-    case 15:
+    case "gun":
+    case "oic":
+    case "sas":
+    case "shrp":
         return true;
     }
     return false;
@@ -250,7 +250,7 @@ function function_e885624a(dataname, value, incvalue) {
 // Size: 0x64
 function adjust_recent_stats() {
     /#
-        if (getdvarint("StatValue") == 1 || getdvarint("StatValue") == 1) {
+        if (getdvarint("<dev string:x28>") == 1 || getdvarint("<dev string:x3f>") == 1) {
             return;
         }
     #/
@@ -408,7 +408,7 @@ function function_2eb5e93(statname, value, index) {
         return;
     }
     /#
-        if (getdvarint("StatValue") == 1 || getdvarint("StatValue") == 1) {
+        if (getdvarint("<dev string:x28>") == 1 || getdvarint("<dev string:x3f>") == 1) {
             return;
         }
     #/
@@ -449,22 +449,22 @@ function codecallback_challengecomplete(rewardxp, maxval, row, tablenumber, chal
     challengetier = int(tablelookupcolumnforrow(tablename, row, 1));
     matchrecordlogchallengecomplete(self, tablenumber, challengetier, itemindex, challengestring);
     /#
-        if (getdvarint("StatValue", 0) != 0) {
-            challengedescstring = challengestring + "StatValue";
+        if (getdvarint("<dev string:x55>", 0) != 0) {
+            challengedescstring = challengestring + "<dev string:x69>";
             challengetiernext = int(tablelookupcolumnforrow(tablename, row + 1, 1));
-            tiertext = "StatValue" + challengetier;
-            var_a804a5cf = "StatValue";
+            tiertext = "<dev string:x6f>" + challengetier;
+            var_a804a5cf = "<dev string:x7f>";
             herostring = tablelookup(var_a804a5cf, 0, itemindex, 3);
-            if (getdvarint("StatValue") == 1) {
-                iprintlnbold(makelocalizedstring(challengestring) + "StatValue" + maxval + "StatValue" + makelocalizedstring(herostring));
+            if (getdvarint("<dev string:x55>") == 1) {
+                iprintlnbold(makelocalizedstring(challengestring) + "<dev string:xa3>" + maxval + "<dev string:xa7>" + makelocalizedstring(herostring));
                 return;
             }
-            if (getdvarint("StatValue") == 2) {
-                self iprintlnbold(makelocalizedstring(challengestring) + "StatValue" + maxval + "StatValue" + makelocalizedstring(herostring));
+            if (getdvarint("<dev string:x55>") == 2) {
+                self iprintlnbold(makelocalizedstring(challengestring) + "<dev string:xa3>" + maxval + "<dev string:xa7>" + makelocalizedstring(herostring));
                 return;
             }
-            if (getdvarint("StatValue") == 3) {
-                iprintln(makelocalizedstring(challengestring) + "StatValue" + maxval + "StatValue" + makelocalizedstring(herostring));
+            if (getdvarint("<dev string:x55>") == 3) {
+                iprintln(makelocalizedstring(challengestring) + "<dev string:xa3>" + maxval + "<dev string:xa7>" + makelocalizedstring(herostring));
             }
         }
     #/
@@ -515,7 +515,7 @@ function upload_stats_soon() {
     self notify(#"upload_stats_soon");
     self endon(#"upload_stats_soon");
     self endon(#"disconnect");
-    wait(1);
+    wait 1;
     uploadstats(self);
 }
 

@@ -6,9 +6,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_860ef124;
+#namespace zm_cosmodrome_traps;
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcddb22db, Offset: 0x480
 // Size: 0x4c
@@ -18,7 +18,7 @@ function init_traps() {
     level thread function_395fdbce();
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 2, eflags: 0x1 linked
 // Checksum 0x5deffd6b, Offset: 0x4d8
 // Size: 0x8e
@@ -29,7 +29,7 @@ function function_b16a68c0(arm, var_916d086e) {
     }
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 2, eflags: 0x1 linked
 // Checksum 0x8c47cced, Offset: 0x570
 // Size: 0x86
@@ -40,13 +40,13 @@ function function_3b7290e2(arm, var_916d086e) {
     }
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0x620caddf, Offset: 0x600
 // Size: 0x4c4
 function function_86339996() {
     level flag::wait_till("start_zombie_round_logic");
-    wait(1);
+    wait 1;
     var_1c8831d1 = struct::get("claw_l_retract", "targetname");
     var_30aae38f = struct::get("claw_r_retract", "targetname");
     var_3d6a412c = struct::get("claw_l_extend", "targetname");
@@ -57,10 +57,10 @@ function function_86339996() {
     level.var_56499fb7 = var_21791fa2.origin;
     level.var_82af40b9 = getent("claw_arm_l", "targetname");
     level.var_36aa4be7 = getent("claw_arm_r", "targetname");
-    level.var_9701c946 = getent("claw_l_arm", "targetname");
-    function_b16a68c0(level.var_9701c946, "claw_l");
-    level.var_82df1788 = getent("claw_r_arm", "targetname");
-    function_b16a68c0(level.var_82df1788, "claw_r");
+    level.claw_arm_l = getent("claw_l_arm", "targetname");
+    function_b16a68c0(level.claw_arm_l, "claw_l");
+    level.claw_arm_r = getent("claw_r_arm", "targetname");
+    function_b16a68c0(level.claw_arm_r, "claw_r");
     level.rocket = getent("zombie_rocket", "targetname");
     var_547ac401 = getentarray(level.rocket.target, "targetname");
     for (i = 0; i < var_547ac401.size; i++) {
@@ -84,15 +84,15 @@ function function_86339996() {
     level thread function_6588791f();
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfc356a73, Offset: 0xad0
 // Size: 0x244
 function function_6588791f() {
     var_6ecbf6aa = struct::get("rail_start_spot", "targetname");
     var_15ebca1f = struct::get("rail_dock_spot", "targetname");
-    level.var_82df1788 moveto(level.var_c234410e, 0.05);
-    level.var_9701c946 moveto(level.var_eebefbf0, 0.05);
+    level.claw_arm_r moveto(level.var_c234410e, 0.05);
+    level.claw_arm_l moveto(level.var_eebefbf0, 0.05);
     level.var_ee72aac2 moveto(var_6ecbf6aa.origin, 0.05);
     level.var_ee72aac2 waittill(#"movedone");
     level.var_3bc3f8d1 unlink();
@@ -100,7 +100,7 @@ function function_6588791f() {
     level.var_3bc3f8d1 waittill(#"rotatedone");
     function_b5bedb73();
     level waittill(#"power_on");
-    wait(5);
+    wait 5;
     function_3015c292();
     level.var_3bc3f8d1 linkto(level.var_ee72aac2);
     level.var_ee72aac2 moveto(var_15ebca1f.origin, 10, 3, 3);
@@ -111,24 +111,24 @@ function function_6588791f() {
     function_b5bedb73();
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0x535bbd8, Offset: 0xd20
 // Size: 0x122
 function function_7ce1fc24() {
     level thread function_d1419acd();
     level.var_3bc3f8d1 rotateto((90, 0, 0), 15, 3, 5);
-    wait(16);
+    wait 16;
     level.rocket unlink();
     level.rocket movez(-20, 3);
-    level.var_82df1788 playsound("evt_rocket_claw_arm");
-    level.var_82df1788 moveto(level.var_56499fb7, 3);
-    level.var_9701c946 moveto(level.var_ab813bf9, 3);
-    level thread namespace_9dd378ec::function_3cf7b8c9("vox_ann_rocket_anim");
-    wait(3);
+    level.claw_arm_r playsound("evt_rocket_claw_arm");
+    level.claw_arm_r moveto(level.var_56499fb7, 3);
+    level.claw_arm_l moveto(level.var_ab813bf9, 3);
+    level thread zm_cosmodrome_amb::function_3cf7b8c9("vox_ann_rocket_anim");
+    wait 3;
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcd16d319, Offset: 0xe50
 // Size: 0x16c
@@ -140,12 +140,12 @@ function function_eee1cbd0() {
     level.var_3bc3f8d1 rotateto((0, 0, 0), 15);
     level.var_3bc3f8d1 moveto(var_6ecbf6aa.origin + offset, 15, 3, 3);
     level.var_ee72aac2 moveto(var_6ecbf6aa.origin, 15, 3, 3);
-    wait(15);
-    function_3b7290e2(level.var_9701c946, "claw_l");
-    function_3b7290e2(level.var_82df1788, "claw_r");
+    wait 15;
+    function_3b7290e2(level.claw_arm_l, "claw_l");
+    function_3b7290e2(level.claw_arm_r, "claw_r");
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0x94096748, Offset: 0xfc8
 // Size: 0x24c
@@ -155,13 +155,13 @@ function function_e0d31800() {
     var_3ad29684 enablelinkto();
     var_3ad29684 linkto(var_abde0fe3);
     var_6c0c6027 = getent("rotating_trap_collision", "targetname");
-    assert(isdefined(var_6c0c6027.target), "claw_l_arm");
+    assert(isdefined(var_6c0c6027.target), "<dev string:x28>");
     var_6c0c6027 linkto(getent(var_6c0c6027.target, "targetname"));
     var_8aa1e590 = getentarray("origin_centrifuge_spinning_sound", "targetname");
     array::thread_all(var_8aa1e590, &function_e0b3d0ff);
     level flag::wait_till("start_zombie_round_logic");
     var_abde0fe3 clientfield::set("COSMO_CENTRIFUGE_LIGHTS", 1);
-    wait(4);
+    wait 4;
     var_abde0fe3 rotateyaw(720, 10, 0, 4.5);
     var_abde0fe3 waittill(#"rotatedone");
     var_abde0fe3 playsound("zmb_cent_end");
@@ -169,7 +169,7 @@ function function_e0d31800() {
     level thread function_6226d8bf();
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 0, eflags: 0x0
 // Checksum 0xeb963764, Offset: 0x1220
 // Size: 0x44a
@@ -177,7 +177,7 @@ function function_40732131() {
     self._trap_duration = 30;
     self._trap_cooldown_time = 60;
     /#
-        if (getdvarint("claw_l_arm") >= 1) {
+        if (getdvarint("<dev string:x41>") >= 1) {
             self._trap_cooldown_time = 5;
         }
     #/
@@ -187,16 +187,16 @@ function function_40732131() {
     for (i = 0; i < self._trap_movers.size; i++) {
         self._trap_movers[i] rotateyaw(360, 5, 4.5);
     }
-    wait(2);
+    wait 2;
     self thread function_ff0615a5();
-    wait(3);
+    wait 3;
     self playloopsound("zmb_cent_mach_loop", 0.6);
     step = 3;
     for (t = 0; t < self._trap_duration; t += step) {
         for (i = 0; i < self._trap_movers.size; i++) {
             self._trap_movers[i] rotateyaw(360, step);
         }
-        wait(step);
+        wait step;
     }
     end_angle = randomint(360);
     var_6218f4fd = int(centrifuge.angles[1]) % 360;
@@ -209,24 +209,24 @@ function function_40732131() {
         for (i = 0; i < self._trap_movers.size; i++) {
             self._trap_movers[i] rotateyaw(degrees, time);
         }
-        wait(time);
+        wait time;
     }
     self stoploopsound(2);
     self playsound("zmb_cent_end");
     for (i = 0; i < self._trap_movers.size; i++) {
         self._trap_movers[i] rotateyaw(360, 5, 0, 4);
     }
-    wait(5);
+    wait 5;
     self notify(#"trap_done");
     for (i = 0; i < self._trap_movers.size; i++) {
         self._trap_movers[i] rotateto((0, end_angle % 360, 0), 1, 0, 0.9);
     }
-    wait(1);
+    wait 1;
     self playsound("zmb_cent_lockdown");
     self notify(#"hash_6bde7592");
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0xade46c63, Offset: 0x1678
 // Size: 0x2b8
@@ -243,7 +243,7 @@ function function_6226d8bf() {
                 level waittill(#"between_round_over");
                 level waittill(#"between_round_over");
             }
-            wait(randomintrange(24, 90));
+            wait randomintrange(24, 90);
         }
         var_e14a0d12 = randomintrange(3, 7) * 360;
         wait_time = randomintrange(4, 7);
@@ -251,7 +251,7 @@ function function_6226d8bf() {
         var_11a40c45 clientfield::set("COSMO_CENTRIFUGE_RUMBLE", 1);
         var_11a40c45 rotateyaw(var_e14a0d12, wait_time, 1, 2);
         var_c0ae568c thread function_ff0615a5();
-        wait(3);
+        wait 3;
         var_11a40c45 stoploopsound(4);
         var_11a40c45 playsound("zmb_cent_end");
         var_11a40c45 waittill(#"rotatedone");
@@ -262,7 +262,7 @@ function function_6226d8bf() {
     }
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 1, eflags: 0x1 linked
 // Checksum 0xade3f95c, Offset: 0x1938
 // Size: 0xcc
@@ -270,14 +270,14 @@ function function_1e54c003(var_20fc8f3f) {
     var_20fc8f3f clientfield::set("COSMO_CENTRIFUGE_LIGHTS", 1);
     var_20fc8f3f playsound("zmb_cent_alarm");
     var_20fc8f3f playsound("vox_ann_centrifuge_spins_1");
-    wait(1);
+    wait 1;
     var_20fc8f3f playsound("zmb_cent_start");
-    wait(2);
+    wait 2;
     var_20fc8f3f playloopsound("zmb_cent_mach_loop", 0.6);
-    wait(1);
+    wait 1;
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0xda43a2ef, Offset: 0x1a10
 // Size: 0x1f8
@@ -292,7 +292,7 @@ function function_ff0615a5() {
                 if (players.size == 1) {
                     ent dodamage(50, ent.origin + (0, 0, 20));
                     ent setstance("crouch");
-                    wait(1);
+                    wait 1;
                 } else {
                     ent dodamage(125, ent.origin + (0, 0, 20));
                     ent setstance("crouch");
@@ -308,12 +308,12 @@ function function_ff0615a5() {
     }
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0x47535b22, Offset: 0x1c10
 // Size: 0x108
 function function_e0b3d0ff() {
-    assert(isdefined(self.target), "claw_l_arm");
+    assert(isdefined(self.target), "<dev string:x4e>");
     if (!isdefined(self.target)) {
         return;
     }
@@ -323,21 +323,21 @@ function function_e0b3d0ff() {
         self playloopsound("zmb_cent_close_loop", 0.5);
         level flag::wait_till("fuge_slowdown");
         self stoploopsound(2);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7af65900, Offset: 0x1d20
 // Size: 0x4c
 function function_d1419acd() {
     level.var_ee72aac2 playsound("evt_rocket_set_main");
-    wait(13.8);
+    wait 13.8;
     level.var_ee72aac2 playsound("evt_rocket_set_impact");
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0x28edbf12, Offset: 0x1d78
 // Size: 0x18c
@@ -359,13 +359,13 @@ function function_395fdbce() {
     level flag::set("base_door_opened");
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9e920b2a, Offset: 0x1f10
 // Size: 0x196
 function function_b5bedb73() {
-    function_3b7290e2(level.var_9701c946, "claw_l");
-    function_3b7290e2(level.var_82df1788, "claw_r");
+    function_3b7290e2(level.claw_arm_l, "claw_l");
+    function_3b7290e2(level.claw_arm_r, "claw_r");
     var_547ac401 = getentarray(level.rocket.target, "targetname");
     for (i = 0; i < var_547ac401.size; i++) {
         var_547ac401[i] unlink();
@@ -380,14 +380,14 @@ function function_b5bedb73() {
     }
 }
 
-// Namespace namespace_860ef124
+// Namespace zm_cosmodrome_traps
 // Params 0, eflags: 0x1 linked
 // Checksum 0x44fcf602, Offset: 0x20b0
 // Size: 0x1d6
 function function_3015c292() {
-    function_b16a68c0(level.var_9701c946, "claw_l");
-    level.var_82df1788 = getent("claw_r_arm", "targetname");
-    function_b16a68c0(level.var_82df1788, "claw_r");
+    function_b16a68c0(level.claw_arm_l, "claw_l");
+    level.claw_arm_r = getent("claw_r_arm", "targetname");
+    function_b16a68c0(level.claw_arm_r, "claw_r");
     var_547ac401 = getentarray(level.rocket.target, "targetname");
     for (i = 0; i < var_547ac401.size; i++) {
         var_547ac401[i] linkto(level.rocket);

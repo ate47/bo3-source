@@ -41,17 +41,17 @@ function function_66df416f() {
     callback::on_spawned(&function_d5c2bb53);
     level flag::wait_till("all_players_spawned");
     switch (level.var_c0e97bd) {
-    case 31:
+    case "post_intro":
         function_6a1ab5fc();
         function_b2309b8();
         function_6a2780bc();
         break;
-    case 30:
+    case "enter_sgen":
         function_6a1ab5fc();
         function_b2309b8();
         function_6a2780bc();
         break;
-    case 32:
+    case "silo_swim":
         function_f3915502();
     default:
         break;
@@ -95,7 +95,7 @@ function function_6b1e8f3c(params) {
         if (params.smeansofdeath == "MOD_PISTOL_BULLET" || isdefined(params.weapon) && params.smeansofdeath == "MOD_RIFLE_BULLET") {
             if (isdefined(params.eattacker.var_f329477a)) {
                 if (params.eattacker.var_f329477a == params.eattacker._bbdata["shots"]) {
-                    params.eattacker notify(#"hash_450a5f27");
+                    params.eattacker notify(#"accolade_3_doubleshot_success");
                 }
             }
             params.eattacker.var_f329477a = params.eattacker._bbdata["shots"];
@@ -140,7 +140,7 @@ function function_ed6cec59(s_params) {
                 }
             }
             if (var_84abbef6 >= 4) {
-                s_params.eattacker notify(#"hash_be3e251c");
+                s_params.eattacker notify(#"accolade_04_immolate_grant");
             }
         }
     }
@@ -162,7 +162,7 @@ function function_25a5bc35(params) {
     if (self.archetype == "robot" && self.movemode == "run") {
         if (isplayer(params.eattacker)) {
             if (function_3dc86a1(params)) {
-                params.eattacker notify(#"hash_55b52735");
+                params.eattacker notify(#"accolade_05_melee_kill");
             }
         }
     }
@@ -225,7 +225,7 @@ function function_d77515b3(params) {
                 if (params.eattacker.var_ad217527 == params.eattacker._bbdata["shots"]) {
                     params.eattacker.var_ad8b41e2++;
                     if (params.eattacker.var_ad8b41e2 >= 5) {
-                        params.eattacker notify(#"hash_d90d93fc");
+                        params.eattacker notify(#"accolade_06_confirmed_hit");
                     }
                 } else {
                     params.eattacker.var_ad217527 = params.eattacker._bbdata["shots"];
@@ -253,7 +253,7 @@ function function_6a1ab5fc() {
 function function_94847029(params) {
     if (isplayer(params.eattacker)) {
         if (!level flag::get("exterior_gone_hot")) {
-            params.eattacker notify(#"hash_8ff5db7c");
+            params.eattacker notify(#"accolade_07_stealth_kill");
         }
     }
 }
@@ -282,7 +282,7 @@ function function_52b96b46(params) {
     if (isplayer(params.eattacker)) {
         if (!level flag::get("exterior_gone_hot")) {
             if (self.scoretype == "_sniper") {
-                params.eattacker notify(#"hash_4a89e4c7");
+                params.eattacker notify(#"accolade_08_sniper_kill");
             }
         }
     }
@@ -313,7 +313,7 @@ function function_707a731a(params) {
         var_701fc082 = params.eattacker.origin;
         v_target_loc = self.origin;
         if (distance(var_701fc082, v_target_loc) > 2500) {
-            params.eattacker notify(#"hash_f1d371eb");
+            params.eattacker notify(#"accolade_09_long_shot_success");
         }
     }
 }
@@ -345,7 +345,7 @@ function function_e7cebc20(params) {
                 if (params.eattacker.var_e6cc8b44 == params.einflictor) {
                     params.eattacker.var_60d52155++;
                     if (params.eattacker.var_60d52155 == 2) {
-                        params.eattacker notify(#"hash_b6737fd1");
+                        params.eattacker notify(#"accolade_10_electro_bots_success");
                     }
                 } else {
                     function_5fc826b3(params);
@@ -382,7 +382,7 @@ function function_5fc826b3(params) {
 function function_bc2458f5() {
     if (!level flag::get("flood_runner_escaped")) {
         foreach (player in level.activeplayers) {
-            player notify(#"hash_ff15c287");
+            player notify(#"accolade_11_flood_exterminate_grant");
         }
     }
 }
@@ -393,7 +393,7 @@ function function_bc2458f5() {
 // Size: 0x82
 function function_c75f9c25() {
     foreach (player in level.players) {
-        player notify(#"hash_4b80918a");
+        player notify(#"accolade_13_stay_awhile_grant");
     }
 }
 
@@ -441,7 +441,7 @@ function function_962154a7() {
 function function_fde8c3ce() {
     foreach (player in level.activeplayers) {
         if (!player.var_bae308b3) {
-            player notify(#"hash_cdcbe1e7");
+            player notify(#"accolade_15_depth_charge_damage_granted");
         }
     }
 }
@@ -451,7 +451,7 @@ function function_fde8c3ce() {
 // Checksum 0x7b01ffb6, Offset: 0x1b58
 // Size: 0x1c
 function function_e85e2afd(e_attacker) {
-    e_attacker notify(#"hash_5a5ed90f");
+    e_attacker notify(#"accolade_16_kill_depth_charge_success");
 }
 
 // Namespace namespace_99202726
@@ -483,7 +483,7 @@ function function_89c51083(params) {
             if (params.weapon.weapclass == "rocketlauncher") {
                 if (isdefined(params.eattacker.var_9dbb738f)) {
                     if (params.eattacker.var_9dbb738f == params.eattacker._bbdata["shots"]) {
-                        params.eattacker notify(#"hash_ed8b1690");
+                        params.eattacker notify(#"accolade_17_rocket_kill_success");
                     }
                 }
                 params.eattacker.var_9dbb738f = params.eattacker._bbdata["shots"];

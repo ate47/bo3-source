@@ -183,9 +183,9 @@ function private covercleanuptothrowgrenade(behaviortreeentity) {
 // Size: 0x9c
 function private canchangestanceatcovercondition(behaviortreeentity) {
     switch (blackboard::getblackboardattribute(behaviortreeentity, "_stance")) {
-    case 34:
+    case "stand":
         return aiutility::isstanceallowedatnode("crouch", behaviortreeentity.node);
-    case 33:
+    case "crouch":
         return aiutility::isstanceallowedatnode("stand", behaviortreeentity.node);
     }
     return 0;
@@ -359,10 +359,10 @@ function private coverchangestanceactionstart(behaviortreeentity, asmstatename) 
     blackboard::setblackboardattribute(behaviortreeentity, "_cover_mode", "cover_alert");
     aiutility::keepclaimnode(behaviortreeentity);
     switch (blackboard::getblackboardattribute(behaviortreeentity, "_stance")) {
-    case 34:
+    case "stand":
         blackboard::setblackboardattribute(behaviortreeentity, "_desired_stance", "crouch");
         break;
-    case 33:
+    case "crouch":
         blackboard::setblackboardattribute(behaviortreeentity, "_desired_stance", "stand");
         break;
     }

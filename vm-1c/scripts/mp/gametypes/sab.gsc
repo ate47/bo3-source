@@ -199,7 +199,7 @@ function function_5e994bd3() {
             waittime += 1;
             setgameendtime(gettime() + (90 - waittime) * 1000);
         }
-        wait(1);
+        wait 1;
     }
     thread globallogic::endgame("tie", game["strings"]["tie"]);
 }
@@ -264,7 +264,7 @@ function updategametypedvars() {
     level.planttime = getgametypesetting("plantTime");
     level.defusetime = getgametypesetting("defuseTime");
     level.bombtimer = getgametypesetting("bombTimer");
-    level.var_1e5986db = getgametypesetting("hotPotato");
+    level.hotPotato = getgametypesetting("hotPotato");
 }
 
 // Namespace sab
@@ -302,13 +302,13 @@ function function_158500a5() {
     level.var_b3f3e65d.autoresettime = 60;
     if (!isdefined(getent("sab_bomb_axis", "targetname"))) {
         /#
-            util::error("OBJECTIVES_TDM_SCORE");
+            util::error("<dev string:x28>");
         #/
         return;
     }
     if (!isdefined(getent("sab_bomb_allies", "targetname"))) {
         /#
-            util::error("sab_bomb_allies");
+            util::error("<dev string:x4f>");
         #/
         return;
     }
@@ -389,7 +389,7 @@ function onpickup(player) {
     }
     player playlocalsound("mp_suitcase_pickup");
     /#
-        print("mpl_sab_ui_suitcasebomb_timer");
+        print("<dev string:x78>");
     #/
     excludelist[0] = player;
     if (gettime() - level.var_c2a60b96 > 10000) {
@@ -436,9 +436,9 @@ function ondrop(player) {
     sound::play_on_players(game["bomb_dropped_sound"], self gameobjects::get_owner_team());
     /#
         if (isdefined(player)) {
-            print("compass_waypoint_defuse");
+            print("<dev string:x83>");
         } else {
-            print("compass_waypoint_defuse");
+            print("<dev string:x83>");
         }
     #/
     globallogic_audio::leader_dialog("bomb_lost", self gameobjects::get_owner_team());
@@ -454,7 +454,7 @@ function ondrop(player) {
 // Size: 0x1cc
 function function_49ac7e58(delay) {
     level endon(#"hash_8520aca0");
-    wait(delay);
+    wait delay;
     if (isdefined(self.carrier)) {
         return;
     }
@@ -484,7 +484,7 @@ function onuse(player) {
     if (!self gameobjects::is_friendly_team(player.pers["team"])) {
         player notify(#"bomb_planted");
         /#
-            print("<unknown string>");
+            print("<dev string:x90>");
         #/
         if (isdefined(player.pers["plants"])) {
             player.pers["plants"]++;
@@ -511,7 +511,7 @@ function onuse(player) {
     }
     player notify(#"bomb_defused");
     /#
-        print("<unknown string>");
+        print("<dev string:x9d>");
     #/
     if (isdefined(player.pers["defuses"])) {
         player.pers["defuses"]++;
@@ -559,7 +559,7 @@ function bombplanted(destroyedobj, team) {
     setmatchflag("bomb_timer", 0);
     destroyedobj.visuals[0] globallogic_utils::stoptickingsound();
     if (!level.bombplanted) {
-        if (level.var_1e5986db) {
+        if (level.hotPotato) {
             timepassed = (gettime() - starttime) / 1000;
             level.bombtimer -= timepassed;
         }
@@ -586,7 +586,7 @@ function bombplanted(destroyedobj, team) {
     setgameendtime(0);
     level.bombzones["allies"] gameobjects::set_visible_team("none");
     level.bombzones["axis"] gameobjects::set_visible_team("none");
-    wait(3);
+    wait 3;
     thread globallogic::endgame(team, game["strings"]["target_destroyed"]);
 }
 

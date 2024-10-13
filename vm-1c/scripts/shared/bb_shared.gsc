@@ -144,7 +144,7 @@ function function_543e7299(var_758db14b) {
                 player function_6a33da3c(var_758db14b);
             }
         }
-        wait(2);
+        wait 2;
     }
 }
 

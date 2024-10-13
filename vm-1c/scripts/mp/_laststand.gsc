@@ -114,7 +114,7 @@ function function_1ca09cb() {
         if (self getcurrentweapon() != self.resurrect_weapon) {
             self switchtoweapon(self.resurrect_weapon);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

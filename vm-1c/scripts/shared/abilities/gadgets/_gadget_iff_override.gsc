@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_20d60703;
+#namespace _gadget_iff_override;
 
-// Namespace namespace_20d60703
+// Namespace _gadget_iff_override
 // Params 0, eflags: 0x2
 // Checksum 0xaa3ebfbf, Offset: 0x200
 // Size: 0x34
@@ -18,12 +18,12 @@ function autoexec function_2dc19561() {
     system::register("gadget_iff_override", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_20d60703
+// Namespace _gadget_iff_override
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8e026f0f, Offset: 0x240
 // Size: 0x104
 function __init__() {
-    ability_player::register_gadget_activation_callbacks(24, &function_3e1f85fc, &function_4377752a);
+    ability_player::register_gadget_activation_callbacks(24, &gadget_iff_override_on, &function_4377752a);
     ability_player::register_gadget_possession_callbacks(24, &function_2b859620, &function_bdd75256);
     ability_player::register_gadget_flicker_callbacks(24, &function_4c6c9561);
     ability_player::register_gadget_is_inuse_callbacks(24, &function_dd752664);
@@ -32,7 +32,7 @@ function __init__() {
     callback::on_connect(&function_96787fdf);
 }
 
-// Namespace namespace_20d60703
+// Namespace _gadget_iff_override
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc7e626e1, Offset: 0x350
 // Size: 0x2a
@@ -40,7 +40,7 @@ function function_dd752664(slot) {
     return self flagsys::get("gadget_iff_override_on");
 }
 
-// Namespace namespace_20d60703
+// Namespace _gadget_iff_override
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa0c72c4, Offset: 0x388
 // Size: 0x52
@@ -51,7 +51,7 @@ function function_5dda9d3a(slot) {
     return 0;
 }
 
-// Namespace namespace_20d60703
+// Namespace _gadget_iff_override
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc8b79216, Offset: 0x3e8
 // Size: 0x5c
@@ -61,7 +61,7 @@ function function_4c6c9561(slot, weapon) {
     }
 }
 
-// Namespace namespace_20d60703
+// Namespace _gadget_iff_override
 // Params 2, eflags: 0x1 linked
 // Checksum 0x3c891c08, Offset: 0x450
 // Size: 0x5c
@@ -71,7 +71,7 @@ function function_2b859620(slot, weapon) {
     }
 }
 
-// Namespace namespace_20d60703
+// Namespace _gadget_iff_override
 // Params 2, eflags: 0x1 linked
 // Checksum 0x851aadbb, Offset: 0x4b8
 // Size: 0x5c
@@ -81,7 +81,7 @@ function function_bdd75256(slot, weapon) {
     }
 }
 
-// Namespace namespace_20d60703
+// Namespace _gadget_iff_override
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4c291b07, Offset: 0x520
 // Size: 0x44
@@ -91,18 +91,18 @@ function function_96787fdf() {
     }
 }
 
-// Namespace namespace_20d60703
+// Namespace _gadget_iff_override
 // Params 2, eflags: 0x1 linked
 // Checksum 0xebd41df2, Offset: 0x570
 // Size: 0x7c
-function function_3e1f85fc(slot, weapon) {
+function gadget_iff_override_on(slot, weapon) {
     self flagsys::set("gadget_iff_override_on");
     if (isdefined(level.cybercom) && isdefined(level.cybercom.iff_override)) {
         self [[ level.cybercom.iff_override._on ]](slot, weapon);
     }
 }
 
-// Namespace namespace_20d60703
+// Namespace _gadget_iff_override
 // Params 2, eflags: 0x1 linked
 // Checksum 0x91eb604, Offset: 0x5f8
 // Size: 0x7c
@@ -113,7 +113,7 @@ function function_4377752a(slot, weapon) {
     }
 }
 
-// Namespace namespace_20d60703
+// Namespace _gadget_iff_override
 // Params 2, eflags: 0x1 linked
 // Checksum 0xf8cad14c, Offset: 0x680
 // Size: 0x5c

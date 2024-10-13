@@ -41,12 +41,12 @@ function private function_a55a134f() {
 // Size: 0x2c
 function function_bd3519f2(name) {
     switch (name) {
-    case 5:
+    case "safehouse":
         return 500;
-    case 4:
-    case 6:
+    case "redins":
+    case "tankmaze":
         return 1000;
-    case 3:
+    case "combat":
         return 1800;
     default:
         return 600;
@@ -114,14 +114,14 @@ function init() {
         var_5fabae4f = struct::get(arena.name + "_camera_fixed_point");
         if (isdefined(var_5fabae4f) && isdefined(var_5fabae4f.script_parameters)) {
             campos = strtok(var_5fabae4f.script_parameters, " ");
-            assert(isdefined(campos.size == 3), "_doa_exit" + arena.name + "_doa_exit");
+            assert(isdefined(campos.size == 3), "<dev string:x28>" + arena.name + "<dev string:x2f>");
             arena.var_2ac7f133 = (float(campos[0]), float(campos[1]), float(campos[2]));
         } else {
             arena.var_2ac7f133 = (0, 0, 0);
         }
         if (isdefined(var_5fabae4f) && isdefined(var_5fabae4f.script_noteworthy)) {
             var_b5091c96 = strtok(var_5fabae4f.script_noteworthy, " ");
-            assert(isdefined(var_b5091c96.size == 3), "_doa_exit" + arena.name + "_doa_exit");
+            assert(isdefined(var_b5091c96.size == 3), "<dev string:x28>" + arena.name + "<dev string:x65>");
             arena.var_5fec1234 = (float(var_b5091c96[0]), float(var_b5091c96[1]), float(var_b5091c96[2]));
         } else {
             arena.var_5fec1234 = (60, 0, 0);
@@ -132,14 +132,14 @@ function init() {
         if (isdefined(var_5fabae4f)) {
             if (isdefined(var_5fabae4f.script_parameters)) {
                 campos = strtok(var_5fabae4f.script_parameters, " ");
-                assert(isdefined(campos.size == 3), "_doa_exit" + arena.name + "_doa_exit");
+                assert(isdefined(campos.size == 3), "<dev string:x28>" + arena.name + "<dev string:x2f>");
                 arena.var_5a97f5e9 = (float(campos[0]), float(campos[1]), float(campos[2]));
             } else {
                 arena.var_5a97f5e9 = (0, 0, 0);
             }
             if (isdefined(var_5fabae4f.script_noteworthy)) {
                 var_b5091c96 = strtok(var_5fabae4f.script_noteworthy, " ");
-                assert(isdefined(var_b5091c96.size == 3), "_doa_exit" + arena.name + "_doa_exit");
+                assert(isdefined(var_b5091c96.size == 3), "<dev string:x28>" + arena.name + "<dev string:x65>");
                 arena.var_a8b67ea4 = (float(var_b5091c96[0]), float(var_b5091c96[1]), float(var_b5091c96[2]));
             } else {
                 arena.var_5fec1234 = (60, -76, 0);
@@ -291,14 +291,14 @@ function restart() {
 // Size: 0x176
 function function_a83dfb2c() {
     while (!clienthassnapshot(0)) {
-        wait(0.016);
+        wait 0.016;
     }
     foreach (arena in level.doa.arenas) {
         arena.exits = getentarray(0, arena.name + "_doa_exit", "targetname");
     }
     var_99ccb8b4 = getentarray(0);
     foreach (entity in var_99ccb8b4) {
-        wait(0.01);
+        wait 0.01;
     }
 }
 
@@ -405,7 +405,7 @@ function function_d2d75f5d() {
 // Params 7, eflags: 0x1 linked
 // Checksum 0x24e95917, Offset: 0x2310
 // Size: 0x8e
-function function_22f2039b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function killweather(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(level.var_c065e9ed) && isdefined(level.var_c065e9ed[localclientnum])) {
         stopfx(localclientnum, level.var_c065e9ed[localclientnum]);
         level.var_c065e9ed[localclientnum] = 0;
@@ -416,7 +416,7 @@ function function_22f2039b(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd86cd486, Offset: 0x23a8
 // Size: 0x54
-function function_9977953(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function killfog(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     setworldfogactivebank(localclientnum, 0);
 }
 
@@ -424,7 +424,7 @@ function function_9977953(localclientnum, oldval, newval, bnewent, binitialsnap,
 // Params 7, eflags: 0x1 linked
 // Checksum 0x146d6662, Offset: 0x2408
 // Size: 0x3a4
-function function_836d1e22(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function arenaRound(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(level.doa.var_1a3f3152)) {
         stopradiantexploder(localclientnum, level.doa.var_1a3f3152);
         level.doa.var_1a3f3152 = undefined;
@@ -457,7 +457,7 @@ function function_836d1e22(localclientnum, oldval, newval, bnewent, binitialsnap
     }
     level.doa.var_1a3f3152 = "fx_exploder_" + level.doa.arenas[level.doa.var_90873830].name + "_" + level.doa.var_d94564a5;
     /#
-        namespace_693feb87::debugmsg("_doa_exit" + level.doa.var_1a3f3152 + "_doa_exit" + localclientnum);
+        namespace_693feb87::debugmsg("<dev string:xa2>" + level.doa.var_1a3f3152 + "<dev string:xb8>" + localclientnum);
     #/
     playradiantexploder(localclientnum, level.doa.var_1a3f3152);
     level function_43141563(localclientnum);
@@ -484,7 +484,7 @@ function setarena(localclientnum, oldval, newval, bnewent, binitialsnap, fieldna
     level.doa.var_708cc739 = undefined;
     level notify(#"hash_ec7ca67b");
     /#
-        namespace_693feb87::debugmsg("_doa_exit" + level.doa.arenas[level.doa.var_90873830].name + "_doa_exit" + level.doa.arenas[newval].name);
+        namespace_693feb87::debugmsg("<dev string:xcb>" + level.doa.arenas[level.doa.var_90873830].name + "<dev string:xda>" + level.doa.arenas[newval].name);
     #/
     level.doa.var_95e3fdf9 = level.doa.var_90873830;
     level.doa.var_90873830 = newval;
@@ -500,7 +500,7 @@ function setarena(localclientnum, oldval, newval, bnewent, binitialsnap, fieldna
     players = getlocalplayers();
     while (players.size == 0) {
         players = getlocalplayers();
-        wait(0.016);
+        wait 0.016;
     }
     players[0].cameramode = function_9f1a0b26(players[0].cameramode);
     function_986ae2b3(localclientnum);

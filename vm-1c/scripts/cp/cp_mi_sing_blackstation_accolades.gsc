@@ -92,7 +92,7 @@ function function_feac00a() {
     self notify(#"hash_dff0891a");
     self endon(#"hash_dff0891a");
     self endon(#"death");
-    wait(3);
+    wait 3;
     self.var_8477b47b = 0;
     self.var_3a4bbe6b = undefined;
 }
@@ -110,7 +110,7 @@ function function_e83f24(params) {
         if (abs(params.eattacker.var_3a4bbe6b - params.einflictor.birthtime) <= 400) {
             params.eattacker.var_8477b47b++;
             if (params.eattacker.var_8477b47b == 5) {
-                params.eattacker notify(#"hash_38460066");
+                params.eattacker notify(#"micromissile_kill_challenge");
             }
         }
     }
@@ -130,7 +130,7 @@ function function_86716d12() {
 // Size: 0x68
 function function_2f913423(params) {
     if (isplayer(params.eattacker) && params.weapon.name == "turret_bo3_civ_truck_pickup_tech_54i") {
-        params.eattacker notify(#"hash_4a4fc79");
+        params.eattacker notify(#"technical_turret_challenge");
     }
 }
 
@@ -149,7 +149,7 @@ function function_80f71baf() {
 function function_41954f8f() {
     self endon(#"death");
     level flag::wait_till("warlord_fight");
-    wait(1);
+    wait 1;
     self.overrideactordamage = &function_587c487b;
     self thread function_5d3711fa();
 }
@@ -173,12 +173,12 @@ function function_5d3711fa() {
     eattacker, damagefromunderneath, weapon, point, dir = self waittill(#"death");
     if (level.var_76663db9 && isplayer(eattacker)) {
         foreach (player in level.activeplayers) {
-            player notify(#"hash_c5775d94");
+            player notify(#"warlord_pistol_challenge");
         }
         return;
     }
     if (isplayer(eattacker) && weapon.name == "turret_bo3_civ_truck_pickup_tech_54i") {
-        eattacker notify(#"hash_3f3be7cb");
+        eattacker notify(#"warlord_turret_challenge");
     }
 }
 
@@ -212,7 +212,7 @@ function function_9cb470ce(params) {
         }
         params.eattacker.var_d7f34b97++;
         if (params.eattacker.var_d7f34b97 >= 3 && params.eattacker.s_timer util::get_time_left() > 0) {
-            params.eattacker notify(#"hash_2a10a12a");
+            params.eattacker notify(#"speed_distance_challenge");
             return;
         }
         if (params.eattacker.s_timer util::get_time_left() <= 0) {
@@ -251,7 +251,7 @@ function function_55a74563(params) {
         }
         params.eattacker.var_65338a8f++;
         if (params.eattacker.var_65338a8f >= 2 && params.eattacker.s_timer util::get_time_left() > 0) {
-            params.eattacker notify(#"hash_f70d22e7");
+            params.eattacker notify(#"rpg_kill_challenge");
             return;
         }
         if (params.eattacker.s_timer util::get_time_left() <= 0) {
@@ -304,7 +304,7 @@ function function_635e0947(params) {
             params.eattacker.var_27d2276e++;
         }
         if (params.eattacker.var_6fd54591 > 0 && params.eattacker.var_27d2276e > 0) {
-            params.eattacker notify(#"hash_b92df4b");
+            params.eattacker notify(#"robot_human_challenge");
         }
     }
 }
@@ -327,7 +327,7 @@ function function_69b1ee49() {
     spawner::waittill_ai_group_cleared("group_roof_workers");
     if (level.var_8454c072) {
         foreach (player in level.activeplayers) {
-            player notify(#"hash_74cdbe17");
+            player notify(#"powerstation_roof_challenge");
         }
     }
 }
@@ -360,7 +360,7 @@ function function_92bc12da(params) {
         if (params.shitloc == "head" || params.shitloc == "helmet" || params.shitloc == "neck") {
             params.eattacker.var_a7590ae5++;
             if (params.eattacker.var_a7590ae5 >= 3) {
-                params.eattacker notify(#"hash_9fa2e64b");
+                params.eattacker notify(#"headshot_breach_challenge");
             }
         }
     }
@@ -394,7 +394,7 @@ function function_8c9ce56(params) {
         if (issubstr(self.targetname, "comm_relay_awaken_robot") && !isdefined(self.b_activated)) {
             params.eattacker.var_10276781++;
             if (params.eattacker.var_10276781 >= 4) {
-                params.eattacker notify(#"hash_4e109d00");
+                params.eattacker notify(#"robot_powerup_challenge");
             }
         }
     }
@@ -440,7 +440,7 @@ function function_328b2c47() {
 function function_b82c8e7b(params) {
     if (isplayer(params.eattacker) && self.archetype == "warlord") {
         if (params.einflictor.targetname === "destructible") {
-            params.eattacker notify(#"hash_729650f9");
+            params.eattacker notify(#"warlord_barrel_challenge");
         }
     }
 }
@@ -482,10 +482,10 @@ function function_aa2360ca(einflictor, eattacker, idamage, idflags, smeansofdeat
 // Size: 0xbe
 function function_ccfcd136(a_ai) {
     array::wait_till(a_ai, "death");
-    wait(1);
+    wait 1;
     if (level.var_63855bec) {
         foreach (player in level.activeplayers) {
-            player notify(#"hash_22e4c723");
+            player notify(#"riotshield_melee_challenge");
         }
     }
 }
@@ -528,7 +528,7 @@ function function_cdf3285b(params) {
     if (isplayer(params.eattacker) && self.archetype == "human_riotshield") {
         if (params.shitloc == "head" || params.shitloc == "helmet" || params.shitloc == "neck") {
             params.eattacker.var_a7590ae5++;
-            params.eattacker notify(#"hash_d34814eb");
+            params.eattacker notify(#"riotshield_headshot_challenge");
         }
     }
 }

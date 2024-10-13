@@ -8,9 +8,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_66d26454;
+#namespace zm_tomb_ee_lights;
 
-// Namespace namespace_66d26454
+// Namespace zm_tomb_ee_lights
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb7b91082, Offset: 0x388
 // Size: 0x3de
@@ -19,7 +19,7 @@ function main() {
     level flag::init("show_morse_code");
     function_d4d827dc();
     while (!level flag::exists("start_zombie_round_logic")) {
-        wait(0.5);
+        wait 0.5;
     }
     level flag::wait_till("start_zombie_round_logic");
     var_c0617dfa = getentarray("crypt_puzzle_disc", "script_noteworthy");
@@ -34,26 +34,26 @@ function main() {
         clientfield::set("light_show", 1);
         if (randomint(100) < 10) {
             turn_all_lights_off(var_9e71f2a3);
-            wait(10);
+            wait 10;
             clientfield::set("light_show", 3);
             function_8859f58a(var_9e71f2a3, "GIOVAN BATTISTA BELLASO");
             clientfield::set("light_show", 1);
         }
         turn_all_lights_off(var_9e71f2a3);
-        wait(10);
+        wait 10;
         clientfield::set("light_show", 2);
         function_8859f58a(var_9e71f2a3, level.var_39f432c0);
         foreach (message in level.var_3f7b1f4c) {
             clientfield::set("light_show", 1);
             var_ff05a5e4 = function_bd0e42fc(message, level.var_39f432c0);
             turn_all_lights_off(var_9e71f2a3);
-            wait(10);
+            wait 10;
             function_8859f58a(var_9e71f2a3, var_ff05a5e4);
         }
     }
 }
 
-// Namespace namespace_66d26454
+// Namespace zm_tomb_ee_lights
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaf88a798, Offset: 0x770
 // Size: 0x3bc
@@ -97,27 +97,27 @@ function function_d4d827dc() {
     level.var_39f432c0 = "INFERNO";
 }
 
-// Namespace namespace_66d26454
+// Namespace zm_tomb_ee_lights
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8b90e740, Offset: 0xb38
 // Size: 0x92
 function turn_all_lights_off(var_8cbb315d) {
     foreach (var_5868c432 in var_8cbb315d) {
-        var_5868c432 namespace_acbbd1f9::function_f78a1a6c(0);
+        var_5868c432 zm_tomb_quest_crypt::function_f78a1a6c(0);
     }
 }
 
-// Namespace namespace_66d26454
+// Namespace zm_tomb_ee_lights
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf8128bc9, Offset: 0xbd8
 // Size: 0x92
 function function_d0b291ec(var_8cbb315d) {
     foreach (var_5868c432 in var_8cbb315d) {
-        var_5868c432 namespace_acbbd1f9::function_f78a1a6c(1);
+        var_5868c432 zm_tomb_quest_crypt::function_f78a1a6c(1);
     }
 }
 
-// Namespace namespace_66d26454
+// Namespace zm_tomb_ee_lights
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa8cec5f8, Offset: 0xc78
 // Size: 0x1ac
@@ -148,7 +148,7 @@ function function_bd0e42fc(var_cc38a712, str_key) {
     return var_67c63931;
 }
 
-// Namespace namespace_66d26454
+// Namespace zm_tomb_ee_lights
 // Params 2, eflags: 0x1 linked
 // Checksum 0xb4e90173, Offset: 0xe30
 // Size: 0x12e
@@ -160,17 +160,17 @@ function function_8859f58a(var_8cbb315d, message) {
             for (j = 0; j < var_b3e9f5b.size; j++) {
                 function_d0b291ec(var_8cbb315d);
                 if (var_b3e9f5b[j] == ".") {
-                    wait(0.2);
+                    wait 0.2;
                 } else if (var_b3e9f5b[j] == "-") {
-                    wait(1);
+                    wait 1;
                 }
                 turn_all_lights_off(var_8cbb315d);
-                wait(0.5);
+                wait 0.5;
             }
         } else {
-            wait(2);
+            wait 2;
         }
-        wait(1.5);
+        wait 1.5;
     }
 }
 

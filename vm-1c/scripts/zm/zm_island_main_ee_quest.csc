@@ -7,24 +7,24 @@
 
 #using_animtree("generic");
 
-#namespace namespace_78528370;
+#namespace zm_island_main_ee_quest;
 
-// Namespace namespace_78528370
+// Namespace zm_island_main_ee_quest
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf0fb6c74, Offset: 0x3b0
 // Size: 0x254
 function init_quest() {
     clientfield::register("vehicle", "plane_hit_by_aa_gun", 9000, 1, "int", &function_3b831537, 0, 0);
-    clientfield::register("scriptmover", "zipline_lightning_fx", 9000, 1, "int", &function_bd9975bc, 0, 0);
-    clientfield::register("allplayers", "lightning_shield_fx", 9000, 1, "int", &function_ac5c6f58, 1, 1);
-    clientfield::register("scriptmover", "smoke_trail_fx", 9000, 1, "int", &function_65a49466, 0, 0);
+    clientfield::register("scriptmover", "zipline_lightning_fx", 9000, 1, "int", &zipline_lightning_fx, 0, 0);
+    clientfield::register("allplayers", "lightning_shield_fx", 9000, 1, "int", &lightning_shield_fx, 1, 1);
+    clientfield::register("scriptmover", "smoke_trail_fx", 9000, 1, "int", &smoke_trail_fx, 0, 0);
     clientfield::register("scriptmover", "smoke_smolder_fx", 9000, 1, "int", &function_67a61c, 0, 0);
-    clientfield::register("zbarrier", "bgb_lightning_fx", 9000, 1, "int", &function_4a5ead3a, 0, 0);
-    clientfield::register("scriptmover", "perk_lightning_fx", 9000, getminbitcountfornum(6), "int", &function_46605813, 0, 0);
-    clientfield::register("world", "umbra_tome_outro_igc", 9000, 1, "int", &function_b87c4724, 0, 0);
+    clientfield::register("zbarrier", "bgb_lightning_fx", 9000, 1, "int", &bgb_lightning_fx, 0, 0);
+    clientfield::register("scriptmover", "perk_lightning_fx", 9000, getminbitcountfornum(6), "int", &perk_lightning_fx, 0, 0);
+    clientfield::register("world", "umbra_tome_outro_igc", 9000, 1, "int", &umbra_tome_outro_igc, 0, 0);
 }
 
-// Namespace namespace_78528370
+// Namespace zm_island_main_ee_quest
 // Params 7, eflags: 0x0
 // Checksum 0x11ddca99, Offset: 0x610
 // Size: 0x6c
@@ -32,7 +32,7 @@ function function_f0e89ab2(localclientnum, oldval, newval, bnewent, binitialsnap
     playfxontag(localclientnum, level._effect["glow_formula_piece"], self, "j_spineupper");
 }
 
-// Namespace namespace_78528370
+// Namespace zm_island_main_ee_quest
 // Params 7, eflags: 0x0
 // Checksum 0xd3e5a533, Offset: 0x688
 // Size: 0x6c
@@ -40,14 +40,14 @@ function function_e9572f40(localclientnum, oldval, newval, bnewent, binitialsnap
     playfxontag(localclientnum, level._effect["glow_formula_piece"], self, "j_spineupper");
 }
 
-// Namespace namespace_78528370
+// Namespace zm_island_main_ee_quest
 // Params 7, eflags: 0x1 linked
 // Checksum 0x643c761c, Offset: 0x700
 // Size: 0x11c
 function function_3b831537(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_563d869a = playfxontag(localclientnum, level._effect["bomber_explode"], self, "tag_engine_inner_left");
-        wait(1);
+        wait 1;
         self.var_303b0c31 = playfxontag(localclientnum, level._effect["bomber_fire_trail"], self, "tag_engine_inner_right");
         return;
     }
@@ -59,11 +59,11 @@ function function_3b831537(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_78528370
+// Namespace zm_island_main_ee_quest
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf78e26ae, Offset: 0x828
 // Size: 0x104
-function function_bd9975bc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function zipline_lightning_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_1f5ac1dc[localclientnum] = playfxontag(localclientnum, level._effect["lightning_shield_control_panel"], self, "tag_origin");
         return;
@@ -76,11 +76,11 @@ function function_bd9975bc(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_78528370
+// Namespace zm_island_main_ee_quest
 // Params 7, eflags: 0x1 linked
 // Checksum 0xea003b22, Offset: 0x938
 // Size: 0x278
-function function_ac5c6f58(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function lightning_shield_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     player = getlocalplayer(localclientnum);
     var_ae6a34c0 = player getlocalclientnumber();
     if (newval == 1) {
@@ -88,7 +88,7 @@ function function_ac5c6f58(localclientnum, oldval, newval, bnewent, binitialsnap
         self.var_42ad0d0c = [];
         if (!isspectating(localclientnum)) {
             if (player === self) {
-                self.var_ac5c6f58 = playviewmodelfx(localclientnum, level._effect["lightning_shield_1p"], "tag_shield_lightning_fx");
+                self.lightning_shield_fx = playviewmodelfx(localclientnum, level._effect["lightning_shield_1p"], "tag_shield_lightning_fx");
             } else {
                 self.var_42ad0d0c[var_ae6a34c0] = undefined;
                 self.var_257ef9e4[var_ae6a34c0] = playfxontag(var_ae6a34c0, level._effect["lightning_shield_3p"], self, "tag_shield_lightning_fx");
@@ -100,9 +100,9 @@ function function_ac5c6f58(localclientnum, oldval, newval, bnewent, binitialsnap
     self notify(#"hash_1a229bcb");
     if (!isspectating(localclientnum)) {
         if (player === self) {
-            if (isdefined(self.var_ac5c6f58)) {
-                deletefx(localclientnum, self.var_ac5c6f58);
-                self.var_ac5c6f58 = undefined;
+            if (isdefined(self.lightning_shield_fx)) {
+                deletefx(localclientnum, self.lightning_shield_fx);
+                self.lightning_shield_fx = undefined;
             }
             return;
         }
@@ -117,7 +117,7 @@ function function_ac5c6f58(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_78528370
+// Namespace zm_island_main_ee_quest
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7a53d024, Offset: 0xbb8
 // Size: 0x2f6
@@ -132,8 +132,8 @@ function function_7ddd182c(localclientnum) {
         if (!isspectating(localclientnum)) {
             if (isdefined(currentweapon.isriotshield) && currentweapon.isriotshield) {
                 if (player === self) {
-                    if (!isdefined(self.var_ac5c6f58)) {
-                        self.var_ac5c6f58 = playviewmodelfx(localclientnum, level._effect["lightning_shield_1p"], "tag_shield_lightning_fx");
+                    if (!isdefined(self.lightning_shield_fx)) {
+                        self.lightning_shield_fx = playviewmodelfx(localclientnum, level._effect["lightning_shield_1p"], "tag_shield_lightning_fx");
                     }
                 } else {
                     if (isdefined(self.var_42ad0d0c) && isdefined(self.var_42ad0d0c[var_ae6a34c0])) {
@@ -149,9 +149,9 @@ function function_7ddd182c(localclientnum) {
             }
             if (!isspectating(localclientnum)) {
                 if (player === self) {
-                    if (isdefined(self.var_ac5c6f58)) {
-                        deletefx(localclientnum, self.var_ac5c6f58);
-                        self.var_ac5c6f58 = undefined;
+                    if (isdefined(self.lightning_shield_fx)) {
+                        deletefx(localclientnum, self.lightning_shield_fx);
+                        self.lightning_shield_fx = undefined;
                     }
                     continue;
                 }
@@ -168,11 +168,11 @@ function function_7ddd182c(localclientnum) {
     }
 }
 
-// Namespace namespace_78528370
+// Namespace zm_island_main_ee_quest
 // Params 7, eflags: 0x1 linked
 // Checksum 0xdd1ccf0, Offset: 0xeb8
 // Size: 0xb4
-function function_65a49466(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function smoke_trail_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_43991df3 = playfxontag(localclientnum, level._effect["gear_smoke_trail"], self, "tag_origin");
         return;
@@ -182,7 +182,7 @@ function function_65a49466(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_78528370
+// Namespace zm_island_main_ee_quest
 // Params 7, eflags: 0x1 linked
 // Checksum 0xeae35c42, Offset: 0xf78
 // Size: 0xb4
@@ -196,11 +196,11 @@ function function_67a61c(localclientnum, oldval, newval, bnewent, binitialsnap, 
     }
 }
 
-// Namespace namespace_78528370
+// Namespace zm_island_main_ee_quest
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbd7d6777, Offset: 0x1038
 // Size: 0x236
-function function_46605813(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function perk_lightning_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     switch (newval) {
     case 0:
         if (isdefined(self.var_99de3d90)) {
@@ -228,11 +228,11 @@ function function_46605813(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_78528370
+// Namespace zm_island_main_ee_quest
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5f587176, Offset: 0x1278
 // Size: 0xcc
-function function_4a5ead3a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function bgb_lightning_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_543f3d1d = playfxontag(localclientnum, level._effect["bgb_lightning_fx"], self zbarriergetpiece(5), "tag_origin");
         return;
@@ -242,11 +242,11 @@ function function_4a5ead3a(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_78528370
+// Namespace zm_island_main_ee_quest
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2216789d, Offset: 0x1350
 // Size: 0x64
-function function_b87c4724(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function umbra_tome_outro_igc(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         umbra_settometrigger(localclientnum, "bunker_armory_tome");
     }

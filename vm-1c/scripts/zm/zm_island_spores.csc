@@ -7,9 +7,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_7a07aa2f;
+#namespace zm_island_spores;
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 0, eflags: 0x1 linked
 // Checksum 0xebf3c173, Offset: 0x580
 // Size: 0x268
@@ -17,21 +17,21 @@ function init() {
     var_d1cfa380 = getminbitcountfornum(7);
     var_a15256dd = getminbitcountfornum(3);
     var_a17d01a1 = getminbitcountfornum(5);
-    clientfield::register("scriptmover", "spore_glow_fx", 9000, 1, "int", &function_4d352e71, 0, 0);
-    clientfield::register("scriptmover", "spore_cloud_fx", 9000, var_d1cfa380, "int", &function_63a5615b, 0, 0);
+    clientfield::register("scriptmover", "spore_glow_fx", 9000, 1, "int", &spore_glow_fx, 0, 0);
+    clientfield::register("scriptmover", "spore_cloud_fx", 9000, var_d1cfa380, "int", &spore_cloud_fx, 0, 0);
     clientfield::register("actor", "spore_trail_enemy_fx", 9000, var_a15256dd, "int", &function_d4effeda, 0, 0);
     clientfield::register("allplayers", "spore_trail_player_fx", 9000, var_a15256dd, "int", &function_d4effeda, 0, 0);
-    clientfield::register("scriptmover", "spore_grows", 9000, var_a17d01a1, "int", &function_36be307d, 0, 0);
+    clientfield::register("scriptmover", "spore_grows", 9000, var_a17d01a1, "int", &spore_grows, 0, 0);
     clientfield::register("toplayer", "play_spore_bubbles", 9000, 1, "int", &function_6225657f, 0, 0);
-    clientfield::register("toplayer", "spore_camera_fx", 9000, var_a15256dd, "int", &function_194bfed3, 0, 0);
+    clientfield::register("toplayer", "spore_camera_fx", 9000, var_a15256dd, "int", &spore_camera_fx, 0, 0);
     level.var_ad621bee = 1;
 }
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 7, eflags: 0x1 linked
 // Checksum 0xad508920, Offset: 0x7f0
 // Size: 0x17e
-function function_4d352e71(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function spore_glow_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (!isdefined(self.var_b5a2b77f)) {
         self.var_b5a2b77f = arraygetclosest(self.origin, struct::get_array("spore_fx_org", "script_noteworthy"));
     }
@@ -48,11 +48,11 @@ function function_4d352e71(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 7, eflags: 0x1 linked
 // Checksum 0x43a789fd, Offset: 0x978
 // Size: 0x85e
-function function_63a5615b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function spore_cloud_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isspectating(localclientnum)) {
         return;
     }
@@ -113,7 +113,7 @@ function function_63a5615b(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4b9acf25, Offset: 0x11e0
 // Size: 0x11e
@@ -135,11 +135,11 @@ function function_d4effeda(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf8f0141b, Offset: 0x1308
 // Size: 0x60c
-function function_36be307d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function spore_grows(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (!isdefined(self.var_baeb5712)) {
         if (self.model == "p7_zm_isl_spore_flat") {
             self.var_baeb5712 = 1;
@@ -228,7 +228,7 @@ function function_36be307d(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread scene::init("p7_fxanim_zm_island_spores_rock_stage_01_bundle");
 }
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 1, eflags: 0x1 linked
 // Checksum 0x584b5e1e, Offset: 0x1920
 // Size: 0x6c
@@ -240,7 +240,7 @@ function scene_play(scene) {
     self scene::stop();
 }
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 2, eflags: 0x1 linked
 // Checksum 0x10c21c44, Offset: 0x1998
 // Size: 0x34
@@ -249,7 +249,7 @@ function function_6221b6b9(scene, mdl_pod) {
     self scene::play(scene);
 }
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2b6675a4, Offset: 0x19d8
 // Size: 0x4c
@@ -260,7 +260,7 @@ function function_dd0015d(a_ents) {
     self.var_4df7e11b = arraycombine(self.var_4df7e11b, a_ents, 0, 0);
 }
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb37ab55d, Offset: 0x1a30
 // Size: 0x9c
@@ -275,7 +275,7 @@ function function_6225657f(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread function_7be165af(localclientnum);
 }
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 1, eflags: 0x1 linked
 // Checksum 0x19ed3a56, Offset: 0x1ad8
 // Size: 0x7c
@@ -287,7 +287,7 @@ function function_3ba5e2ae(localclientnum) {
     }
 }
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6582da54, Offset: 0x1b60
 // Size: 0x52
@@ -299,7 +299,7 @@ function function_7be165af(localclientnum) {
     self notify(#"hash_a48959b9");
 }
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc9ad6a81, Offset: 0x1bc0
 // Size: 0x3c
@@ -309,11 +309,11 @@ function function_9067dab6(localclientnum) {
     self function_7be165af(localclientnum);
 }
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 7, eflags: 0x1 linked
 // Checksum 0x87175bb5, Offset: 0x1c08
 // Size: 0xd4
-function function_194bfed3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function spore_camera_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isspectating(localclientnum)) {
         return;
     }
@@ -328,7 +328,7 @@ function function_194bfed3(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread function_b8071fc(localclientnum);
 }
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 2, eflags: 0x1 linked
 // Checksum 0xe27d639d, Offset: 0x1ce8
 // Size: 0xcc
@@ -344,7 +344,7 @@ function function_4ff31749(localclientnum, var_c55abf21) {
     }
 }
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb6aabca5, Offset: 0x1dc0
 // Size: 0x52
@@ -356,7 +356,7 @@ function function_b8071fc(localclientnum) {
     self notify(#"hash_6cc118c6");
 }
 
-// Namespace namespace_7a07aa2f
+// Namespace zm_island_spores
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe7be9a04, Offset: 0x1e20
 // Size: 0x3c

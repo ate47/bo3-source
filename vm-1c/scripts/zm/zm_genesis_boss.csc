@@ -16,9 +16,9 @@
 
 #using_animtree("zm_genesis");
 
-#namespace namespace_175db697;
+#namespace zm_genesis_boss;
 
-// Namespace namespace_175db697
+// Namespace zm_genesis_boss
 // Params 0, eflags: 0x2
 // Checksum 0xbce2bc2f, Offset: 0x688
 // Size: 0x34
@@ -26,23 +26,23 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_boss", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_175db697
+// Namespace zm_genesis_boss
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb30dc8b1, Offset: 0x6c8
 // Size: 0x12c
 function __init__() {
     level._effect["boss_shield"] = "zombie/fx_ee_shadowman_shield_loop_zod";
     level._effect["powerup_column"] = "dlc4/genesis/fx_darkarena_powerup_pillar";
-    clientfield::register("scriptmover", "boss_clone_fx", 15000, getminbitcountfornum(3), "int", &function_3f149cf1, 0, 0);
-    clientfield::register("world", "sophia_state", 15000, getminbitcountfornum(4), "int", &function_50d7b3, 0, 1);
-    clientfield::register("world", "boss_beam_state", 15000, 1, "int", &function_435effa6, 0, 1);
+    clientfield::register("scriptmover", "boss_clone_fx", 15000, getminbitcountfornum(3), "int", &boss_clone_fx, 0, 0);
+    clientfield::register("world", "sophia_state", 15000, getminbitcountfornum(4), "int", &sophia_state, 0, 1);
+    clientfield::register("world", "boss_beam_state", 15000, 1, "int", &boss_beam_state, 0, 1);
 }
 
-// Namespace namespace_175db697
+// Namespace zm_genesis_boss
 // Params 7, eflags: 0x1 linked
 // Checksum 0x94b90d76, Offset: 0x800
 // Size: 0x25e
-function function_3f149cf1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function boss_clone_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (isdefined(self.var_83ba4dad)) {
         stopfx(localclientnum, self.var_83ba4dad);
     }
@@ -74,13 +74,13 @@ function function_3f149cf1(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_175db697
+// Namespace zm_genesis_boss
 // Params 7, eflags: 0x1 linked
 // Checksum 0x9d9e9a45, Offset: 0xa68
 // Size: 0x50e
-function function_50d7b3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    level notify(#"hash_50d7b3");
-    level endon(#"hash_50d7b3");
+function sophia_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+    level notify(#"sophia_state");
+    level endon(#"sophia_state");
     function_eec997a(localclientnum);
     level.var_f0444f1b[localclientnum] util::waittill_dobj(localclientnum);
     var_b19b9bc4 = struct::get("boss_sophia_hover", "targetname");
@@ -120,19 +120,19 @@ function function_50d7b3(localclientnum, oldval, newval, bnewent, binitialsnap, 
     }
 }
 
-// Namespace namespace_175db697
+// Namespace zm_genesis_boss
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc446d7ba, Offset: 0xf80
 // Size: 0x74
 function function_54a08d82(localclientnum) {
     var_c6f38611 = playfxontag(localclientnum, level._effect["sophia_transition"], self, "tag_origin");
-    wait(1.8);
+    wait 1.8;
     if (isdefined(var_c6f38611)) {
         deletefx(localclientnum, var_c6f38611, 0);
     }
 }
 
-// Namespace namespace_175db697
+// Namespace zm_genesis_boss
 // Params 1, eflags: 0x1 linked
 // Checksum 0x95bbebf7, Offset: 0x1000
 // Size: 0x184
@@ -142,18 +142,18 @@ function function_24b59946(localclientnum) {
     level beam::launch(self, "tag_beam", var_f929ecf4, "tag_origin", "dlc4_skull_turret_beam");
     self playsound(0, "zmb_finafight_sophia_laser_start");
     self.var_36ffe62d = self playloopsound("zmb_finafight_sophia_laser_lp", 0.25);
-    wait(2);
+    wait 2;
     self playsound(0, "zmb_finafight_sophia_laser_end");
     self stoploopsound(self.var_36ffe62d);
     level beam::kill(self, "tag_beam", var_f929ecf4, "tag_origin", "dlc4_skull_turret_beam");
     var_f929ecf4 delete();
 }
 
-// Namespace namespace_175db697
+// Namespace zm_genesis_boss
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc117e575, Offset: 0x1190
 // Size: 0x26c
-function function_435effa6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function boss_beam_state(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         s_start = struct::get("ee_book_arena", "targetname");
         level.var_7e52585c = util::spawn_model(localclientnum, "tag_origin", s_start.origin);
@@ -173,7 +173,7 @@ function function_435effa6(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_175db697
+// Namespace zm_genesis_boss
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4d9719b2, Offset: 0x1408
 // Size: 0x120
@@ -191,7 +191,7 @@ function function_eec997a(localclientnum) {
     return level.var_f0444f1b[localclientnum];
 }
 
-// Namespace namespace_175db697
+// Namespace zm_genesis_boss
 // Params 2, eflags: 0x0
 // Checksum 0x1ee5d344, Offset: 0x1530
 // Size: 0x3c

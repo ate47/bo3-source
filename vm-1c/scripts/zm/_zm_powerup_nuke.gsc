@@ -57,7 +57,7 @@ function nuke_powerup(drop_item, player_team) {
         playfx(drop_item.fx, location);
     }
     level thread nuke_flash(player_team);
-    wait(0.5);
+    wait 0.5;
     zombies = getaiteamarray(level.zombie_team);
     zombies = arraysort(zombies, location);
     zombies_nuked = [];
@@ -83,7 +83,7 @@ function nuke_powerup(drop_item, player_team) {
         }
     }
     for (i = 0; i < zombies_nuked.size; i++) {
-        wait(randomfloatrange(0.1, 0.7));
+        wait randomfloatrange(0.1, 0.7);
         if (!isdefined(zombies_nuked[i])) {
             continue;
         }
@@ -134,7 +134,7 @@ function nuke_delay_spawning(n_spawn_delay) {
     if (isdefined(level.disable_nuke_delay_spawning) && level.disable_nuke_delay_spawning) {
         return;
     }
-    wait(n_spawn_delay);
+    wait n_spawn_delay;
     if (b_spawn_zombies_before_nuke) {
         level flag::set("spawn_zombies");
     }

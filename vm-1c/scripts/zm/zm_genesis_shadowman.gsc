@@ -25,9 +25,9 @@
 
 #using_animtree("zm_genesis");
 
-#namespace namespace_553efdc;
+#namespace zm_genesis_shadowman;
 
-// Namespace namespace_553efdc
+// Namespace zm_genesis_shadowman
 // Params 0, eflags: 0x2
 // Checksum 0x39f22b80, Offset: 0x448
 // Size: 0x3c
@@ -35,7 +35,7 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_shadowman", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_553efdc
+// Namespace zm_genesis_shadowman
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1a15fb5e, Offset: 0x490
 // Size: 0x6c
@@ -45,7 +45,7 @@ function __init__() {
     clientfield::register("scriptmover", "shadowman_fx", 15000, 3, "int");
 }
 
-// Namespace namespace_553efdc
+// Namespace zm_genesis_shadowman
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x508
 // Size: 0x4
@@ -53,7 +53,7 @@ function __main__() {
     
 }
 
-// Namespace namespace_553efdc
+// Namespace zm_genesis_shadowman
 // Params 4, eflags: 0x1 linked
 // Checksum 0x113788f1, Offset: 0x518
 // Size: 0x1cc

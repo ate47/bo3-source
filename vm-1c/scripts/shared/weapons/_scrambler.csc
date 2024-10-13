@@ -240,7 +240,7 @@ function function_2fbb0cd5(localclientnum) {
                 setdvar("snd_futz", var_4cf86dcf);
             }
         }
-        wait(0.25);
+        wait 0.25;
         util::waitforallclients();
     }
 }
@@ -281,7 +281,7 @@ function function_ddc2c972(scramblerent, var_aa893e08, var_5d749438, localclient
 // Size: 0x5e
 function function_900e2038(localclientnum) {
     /#
-        if (getdvarint("<unknown string>", 0)) {
+        if (getdvarint("<dev string:x28>", 0)) {
             return 1;
         }
     #/

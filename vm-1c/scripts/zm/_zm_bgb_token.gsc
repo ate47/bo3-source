@@ -10,9 +10,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_ade8e118;
+#namespace bgb_token;
 
-// Namespace namespace_ade8e118
+// Namespace bgb_token
 // Params 0, eflags: 0x2
 // Checksum 0xe9dc99bf, Offset: 0x200
 // Size: 0x3c
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
     system::register("bgb_token", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_ade8e118
+// Namespace bgb_token
 // Params 0, eflags: 0x5 linked
 // Checksum 0x52543f79, Offset: 0x248
 // Size: 0x3c
@@ -31,7 +31,7 @@ function private __init__() {
     callback::on_spawned(&on_player_spawned);
 }
 
-// Namespace namespace_ade8e118
+// Namespace bgb_token
 // Params 0, eflags: 0x5 linked
 // Checksum 0xc773b658, Offset: 0x290
 // Size: 0xfc
@@ -68,19 +68,19 @@ function private __main__() {
     #/
 }
 
-// Namespace namespace_ade8e118
+// Namespace bgb_token
 // Params 0, eflags: 0x5 linked
 // Checksum 0xc86cd741, Offset: 0x398
 // Size: 0x60
 function private on_player_spawned() {
-    if (!isdefined(self.var_27b6cdab)) {
-        self.var_27b6cdab = self zm_stats::get_global_stat("BGB_TOKEN_LAST_GIVEN_TIME");
-        self.var_f191a1fc = 0;
+    if (!isdefined(self.BGB_TOKEN_LAST_GIVEN_TIME)) {
+        self.BGB_TOKEN_LAST_GIVEN_TIME = self zm_stats::get_global_stat("BGB_TOKEN_LAST_GIVEN_TIME");
+        self.bgb_tokens_gained_this_game = 0;
         self.var_bc978de9 = level.var_bc978de9 + level.round_number - 1;
     }
 }
 
-// Namespace namespace_ade8e118
+// Namespace bgb_token
 // Params 0, eflags: 0x5 linked
 // Checksum 0xded9743f, Offset: 0x400
 // Size: 0x66
@@ -94,7 +94,7 @@ function private function_4922937f() {
     return true;
 }
 
-// Namespace namespace_ade8e118
+// Namespace bgb_token
 // Params 1, eflags: 0x0
 // Checksum 0xe77678e5, Offset: 0x470
 // Size: 0xc6
@@ -111,36 +111,36 @@ function function_c2f81136(increment) {
 
 /#
 
-    // Namespace namespace_ade8e118
+    // Namespace bgb_token
     // Params 0, eflags: 0x5 linked
     // Checksum 0x519b1518, Offset: 0x540
     // Size: 0x8c
     function private setup_devgui() {
         waittillframeend();
-        setdvar("<unknown string>", "<unknown string>");
-        bgb_devgui_base = "<unknown string>";
-        adddebugcommand(bgb_devgui_base + "<unknown string>" + "<unknown string>" + "<unknown string>");
+        setdvar("<dev string:x28>", "<dev string:x3f>");
+        bgb_devgui_base = "<dev string:x40>";
+        adddebugcommand(bgb_devgui_base + "<dev string:x59>" + "<dev string:x28>" + "<dev string:x67>");
         level thread function_a29384f8();
     }
 
-    // Namespace namespace_ade8e118
+    // Namespace bgb_token
     // Params 0, eflags: 0x5 linked
     // Checksum 0xd305b917, Offset: 0x5d8
     // Size: 0x88
     function private function_a29384f8() {
         for (;;) {
-            var_2e29895e = getdvarstring("<unknown string>");
-            if (var_2e29895e != "<unknown string>") {
+            var_2e29895e = getdvarstring("<dev string:x28>");
+            if (var_2e29895e != "<dev string:x3f>") {
                 level.players[0] function_32692a60();
             }
-            setdvar("<unknown string>", "<unknown string>");
-            wait(0.5);
+            setdvar("<dev string:x28>", "<dev string:x3f>");
+            wait 0.5;
         }
     }
 
 #/
 
-// Namespace namespace_ade8e118
+// Namespace bgb_token
 // Params 0, eflags: 0x5 linked
 // Checksum 0xa9e07aba, Offset: 0x668
 // Size: 0x12c
@@ -149,15 +149,15 @@ function private function_32692a60() {
     for (count = 0; count < var_90491adb; count++) {
         self incrementbgbtokensgained();
     }
-    self.var_f191a1fc += var_90491adb;
+    self.bgb_tokens_gained_this_game += var_90491adb;
     self.var_bc978de9 += level.var_c50e9bdb;
-    self.var_27b6cdab = self zm_stats::get_global_stat("TIME_PLAYED_TOTAL");
-    self zm_stats::set_global_stat("BGB_TOKEN_LAST_GIVEN_TIME", self.var_27b6cdab);
+    self.BGB_TOKEN_LAST_GIVEN_TIME = self zm_stats::get_global_stat("TIME_PLAYED_TOTAL");
+    self zm_stats::set_global_stat("BGB_TOKEN_LAST_GIVEN_TIME", self.BGB_TOKEN_LAST_GIVEN_TIME);
     uploadstats(self);
     self reportlootreward("3", var_90491adb);
 }
 
-// Namespace namespace_ade8e118
+// Namespace bgb_token
 // Params 1, eflags: 0x5 linked
 // Checksum 0xfb292a0, Offset: 0x7a0
 // Size: 0x34
@@ -168,7 +168,7 @@ function private function_2d75b98d(var_ce9d31c4) {
     return false;
 }
 
-// Namespace namespace_ade8e118
+// Namespace bgb_token
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9fef18d2, Offset: 0x7e0
 // Size: 0x1ec
@@ -176,11 +176,11 @@ function function_51cf4361(var_5561679e) {
     if (!function_4922937f()) {
         return;
     }
-    if (0 <= level.var_a73c4888 && self.var_f191a1fc >= level.var_a73c4888) {
+    if (0 <= level.var_a73c4888 && self.bgb_tokens_gained_this_game >= level.var_a73c4888) {
         return;
     }
     time_played_total = self zm_stats::get_global_stat("TIME_PLAYED_TOTAL");
-    if (time_played_total - level.var_baa8fd09 > self.var_27b6cdab) {
+    if (time_played_total - level.var_baa8fd09 > self.BGB_TOKEN_LAST_GIVEN_TIME) {
         if (function_2d75b98d(level.var_342aa5b2)) {
             self function_32692a60();
         }

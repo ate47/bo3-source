@@ -2,14 +2,14 @@
 #using scripts/shared/music_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b301a1fd;
+#namespace cp_mi_zurich_coalescence_sound;
 
-// Namespace namespace_b301a1fd
+// Namespace cp_mi_zurich_coalescence_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x832b06b7, Offset: 0x260
 // Size: 0x14
 function main() {
-    namespace_2fedc4ad::init_voice();
+    voice_zurich::init_voice();
 }
 
 #namespace namespace_67110270;
@@ -60,7 +60,7 @@ function function_228c7b0f() {
 // Size: 0x4c
 function function_ce97ecac() {
     playsoundatposition("mus_sgen_hq_logo_glitched", (-8763, 38522, 681));
-    wait(3);
+    wait 3;
     music::setmusicstate("igc_2_dark_ambience");
 }
 
@@ -149,7 +149,7 @@ function function_38a68128() {
 // Checksum 0x33d39b6f, Offset: 0x530
 // Size: 0x24
 function function_1935b4aa() {
-    wait(15);
+    wait 15;
     music::setmusicstate("cairo_root_battle");
 }
 

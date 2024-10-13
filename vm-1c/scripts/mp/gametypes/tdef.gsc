@@ -170,7 +170,7 @@ function ondrop(player) {
         }
         player addplayerstatwithgametype("DESTRUCTIONS", var_45a5813e);
         player.tdef_flagtime = undefined;
-        player notify(#"hash_f4e8514a");
+        player notify(#"dropped_flag");
     }
     team = self gameobjects::get_owner_team();
     otherteam = util::getotherteam(team);
@@ -247,7 +247,7 @@ function applyflagcarrierclass() {
     level endon(#"game_ended");
     if (isdefined(self.iscarrying) && self.iscarrying == 1) {
         self notify(#"hash_ba19385f");
-        wait(0.05);
+        wait 0.05;
     }
     self.pers["gamemodeLoadout"] = level.var_e15444d0[self.team];
     spawnpoint = spawn("script_model", self.origin);
@@ -280,7 +280,7 @@ function waitattachflag() {
 // Checksum 0xfa032e3e, Offset: 0x1968
 // Size: 0x104
 function watchforendgame() {
-    self endon(#"hash_f4e8514a");
+    self endon(#"dropped_flag");
     self endon(#"disconnect");
     level waittill(#"game_ended");
     if (isdefined(self)) {
@@ -364,7 +364,7 @@ function function_62317c10() {
             self.trigger.baseorigin = self.safeorigin;
             self.visuals[0].baseorigin = self.safeorigin;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -410,7 +410,7 @@ function getflagradarowner(team) {
                 return player;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -424,7 +424,7 @@ function flagradarmover() {
     self.portable_radar endon(#"death");
     for (;;) {
         self.portable_radar moveto(self.currentcarrier.origin, 0.05);
-        wait(0.05);
+        wait 0.05;
     }
 }
 

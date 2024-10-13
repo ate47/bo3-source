@@ -70,7 +70,7 @@ function get_attackable() {
             }
         }
         /#
-            if (getdvarint("<unknown string>") > 1) {
+            if (getdvarint("<dev string:x28>") > 1) {
                 if (attackable get_attackable_slot(self)) {
                     return attackable;
                 }

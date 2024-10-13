@@ -99,7 +99,7 @@ function trig_enter_waterfall(localplayer) {
     playsound(0, "amb_waterfall_hit", (0, 0, 0));
     while (trigger istouching(localplayer)) {
         localplayer playrumbleonentity(localclientnum, "waterfall_rumble");
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -145,7 +145,7 @@ function trig_enter_waterfall_mist(localplayer) {
         }
         filter::set_filter_sprite_rain_opacity(localplayer, 0, localplayer.rainopacity);
         filter::set_filter_sprite_rain_elapsed(localplayer, 0, localplayer getclienttime());
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -166,7 +166,7 @@ function trig_leave_waterfall_mist(localplayer) {
             localplayer.rainopacity -= 0.005;
             filter::set_filter_sprite_rain_opacity(localplayer, 0, localplayer.rainopacity);
             filter::set_filter_sprite_rain_elapsed(localplayer, 0, localplayer getclienttime());
-            wait(0.016);
+            wait 0.016;
         }
     }
     localplayer.rainopacity = 0;

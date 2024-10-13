@@ -11,9 +11,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_3d62d712;
+#namespace zm_genesis_keeper;
 
-// Namespace namespace_3d62d712
+// Namespace zm_genesis_keeper
 // Params 0, eflags: 0x2
 // Checksum 0x3462193b, Offset: 0x228
 // Size: 0x34
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_keeper", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_3d62d712
+// Namespace zm_genesis_keeper
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8cd9d433, Offset: 0x268
 // Size: 0x8c
@@ -32,7 +32,7 @@ function __init__() {
     }
 }
 
-// Namespace namespace_3d62d712
+// Namespace zm_genesis_keeper
 // Params 1, eflags: 0x1 linked
 // Checksum 0x244ff664, Offset: 0x300
 // Size: 0x24
@@ -40,7 +40,7 @@ function function_6ded398b(localclientnum) {
     self thread function_ea48e71e(localclientnum);
 }
 
-// Namespace namespace_3d62d712
+// Namespace zm_genesis_keeper
 // Params 1, eflags: 0x1 linked
 // Checksum 0x1a010f33, Offset: 0x330
 // Size: 0x140
@@ -62,7 +62,7 @@ function function_ea48e71e(localclientnum) {
     s_timer notify(#"hash_88be9d37");
 }
 
-// Namespace namespace_3d62d712
+// Namespace zm_genesis_keeper
 // Params 1, eflags: 0x1 linked
 // Checksum 0x3f9bf60f, Offset: 0x478
 // Size: 0x58
@@ -73,7 +73,7 @@ function new_timer(localclientnum) {
     return s_timer;
 }
 
-// Namespace namespace_3d62d712
+// Namespace zm_genesis_keeper
 // Params 2, eflags: 0x1 linked
 // Checksum 0xedbcc95e, Offset: 0x4d8
 // Size: 0x68
@@ -86,7 +86,7 @@ function function_ec23b7a7(localclientnum, entity) {
     }
 }
 
-// Namespace namespace_3d62d712
+// Namespace zm_genesis_keeper
 // Params 0, eflags: 0x0
 // Checksum 0xee270e23, Offset: 0x548
 // Size: 0x10
@@ -94,7 +94,7 @@ function get_time() {
     return self.n_time_current * 1000;
 }
 
-// Namespace namespace_3d62d712
+// Namespace zm_genesis_keeper
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd575c899, Offset: 0x560
 // Size: 0xa
@@ -102,7 +102,7 @@ function get_time_in_seconds() {
     return self.n_time_current;
 }
 
-// Namespace namespace_3d62d712
+// Namespace zm_genesis_keeper
 // Params 0, eflags: 0x0
 // Checksum 0x4ec7c232, Offset: 0x578
 // Size: 0x10
@@ -110,7 +110,7 @@ function function_799c46b8() {
     self.n_time_current = 0;
 }
 
-// Namespace namespace_3d62d712
+// Namespace zm_genesis_keeper
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1d179980, Offset: 0x590
 // Size: 0x27c

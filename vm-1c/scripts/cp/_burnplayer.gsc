@@ -290,10 +290,10 @@ function watchforwater(time) {
     self endon(#"disconnect");
     self notify(#"hash_bbb80fa");
     self endon(#"hash_bbb80fa");
-    wait(0.1);
+    wait 0.1;
     looptime = 0.1;
     while (time > 0) {
-        wait(looptime);
+        wait looptime;
         if (self depthofplayerinwater() > 0) {
             function_2b4f1bd8();
             time = 0;
@@ -339,7 +339,7 @@ function function_aec07428(attacker, inflictor, mod) {
     self endon(#"hash_3e41273b");
     while (isdefined(level.var_f808fd37) && isdefined(self) && self depthofplayerinwater() < 1) {
         self dodamage(level.var_f808fd37, self.origin, attacker, attacker, "none", mod, 0, getweapon("napalm"));
-        wait(1);
+        wait 1;
     }
 }
 
@@ -390,7 +390,7 @@ function function_214dd4fb(attacker, inflictor, mod) {
             if (isplayer(self)) {
                 self setburn(1.1);
             }
-            wait(1);
+            wait 1;
             waittime -= 1;
         }
     }
@@ -407,7 +407,7 @@ function function_fa572a1e(attacker, inflictor, mod) {
     self endon(#"hash_3e41273b");
     while (isdefined(level.var_f808fd37) && isdefined(self)) {
         self dodamage(level.var_f808fd37, self.origin, attacker, attacker, "none", mod);
-        wait(1);
+        wait 1;
     }
 }
 
@@ -421,7 +421,7 @@ function function_425abcad(attacker, inflictor, mod) {
     self endon(#"hash_3e41273b");
     while (isdefined(level.var_a10a574c) && isdefined(self)) {
         self dodamage(level.var_a10a574c, self.origin, attacker, attacker, "none", mod, 0, getweapon("napalm"));
-        wait(1);
+        wait 1;
     }
 }
 
@@ -432,7 +432,7 @@ function function_425abcad(attacker, inflictor, mod) {
 function function_f8ca07a9() {
     self endon(#"disconnect");
     self endon(#"death");
-    wait(3);
+    wait 3;
     self.burning = undefined;
 }
 
@@ -463,7 +463,7 @@ function function_72d46630(attacker, inflictor, weapon, time) {
         } else {
             self dodamage(level.var_97bb6c9d, self.origin);
         }
-        wait(wait_time);
+        wait wait_time;
         time -= wait_time;
     }
     self thread function_2b4f1bd8();
@@ -484,7 +484,7 @@ function function_65e5cf8e(attacker, inflictor, weapon, time) {
     wait_time = 1;
     while (isdefined(level.var_97bb6c9d) && isdefined(self) && time > 0) {
         self dodamage(level.var_97bb6c9d, self.origin, attacker, inflictor, "none", "MOD_BURNED", 0, weapon);
-        wait(wait_time);
+        wait wait_time;
         time -= wait_time;
     }
 }
@@ -496,7 +496,7 @@ function function_65e5cf8e(attacker, inflictor, weapon, time) {
 function function_1824cc36(time) {
     self endon(#"disconnect");
     self endon(#"death");
-    wait(time);
+    wait time;
     self function_78f01691();
 }
 
@@ -515,11 +515,11 @@ function function_de3344dc() {
     if (isdefined(var_291ac48b)) {
         var_291ac48b stoploopsound(0.5);
     }
-    wait(0.5);
+    wait 0.5;
     if (isdefined(var_291ac48b)) {
         var_291ac48b delete();
     }
-    println("<unknown string>");
+    println("<dev string:x28>");
 }
 
 // Namespace burnplayer
@@ -539,6 +539,6 @@ function function_40125168(ent) {
     ent endon(#"death");
     self util::waittill_any("death", "disconnect");
     ent delete();
-    println("<unknown string>");
+    println("<dev string:x3b>");
 }
 

@@ -12,9 +12,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_12b4f23c;
+#namespace zm_prototype_achievements;
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 0, eflags: 0x2
 // Checksum 0x59b7336a, Offset: 0x270
 // Size: 0x34
@@ -22,7 +22,7 @@ function autoexec function_2dc19561() {
     system::register("zm_theater_achievements", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb19a3f5c, Offset: 0x2b0
 // Size: 0x5c
@@ -32,7 +32,7 @@ function __init__() {
     callback::on_connect(&onplayerconnect);
 }
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2747d07e, Offset: 0x318
 // Size: 0xac
@@ -47,7 +47,7 @@ function achievement_sound_func(var_43e4662) {
     self thread zm_utility::do_player_general_vox("general", "achievement");
 }
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5af04496, Offset: 0x3d0
 // Size: 0xac
@@ -61,7 +61,7 @@ function onplayerconnect() {
     self thread function_32909149();
 }
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcbca027d, Offset: 0x488
 // Size: 0x84
@@ -72,15 +72,15 @@ function function_2eb61ef5() {
     while (isdefined(self)) {
         if (isdefined(level.round_number) && level.round_number == 5) {
             /#
-                self iprintln("<unknown string>");
+                self iprintln("<dev string:x28>");
             #/
             return;
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4dbb7beb, Offset: 0x518
 // Size: 0x7a
@@ -89,17 +89,17 @@ function function_94fa04f0() {
     self endon(#"disconnect");
     while (true) {
         self waittill(#"nuke_triggered");
-        wait(2);
+        wait 2;
         if (isdefined(self.zombie_nuked) && self.zombie_nuked.size == 1) {
             /#
-                self iprintln("<unknown string>");
+                self iprintln("<dev string:x4b>");
             #/
             return;
         }
     }
 }
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3e06af20, Offset: 0x5a0
 // Size: 0x7a
@@ -116,7 +116,7 @@ function function_a634891() {
     #/
 }
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6079b6bd, Offset: 0x628
 // Size: 0x50
@@ -130,7 +130,7 @@ function function_a2ee1b6c() {
     }
 }
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2777e7f6, Offset: 0x680
 // Size: 0x40
@@ -142,7 +142,7 @@ function function_47ae7759() {
     self.var_88c6ab10 = 0;
 }
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdd401f07, Offset: 0x6c8
 // Size: 0x74
@@ -152,15 +152,15 @@ function function_2a1b645a() {
     while (true) {
         if (self.score_total >= 75000) {
             /#
-                self iprintln("<unknown string>");
+                self iprintln("<dev string:x7c>");
             #/
             return;
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb6b9e5ad, Offset: 0x748
 // Size: 0x74
@@ -170,15 +170,15 @@ function function_b44fefa1() {
     while (true) {
         if (isdefined(self.var_df099d9b) && self.var_df099d9b.size == 4) {
             /#
-                self iprintln("<unknown string>");
+                self iprintln("<dev string:x9c>");
             #/
             return;
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 0, eflags: 0x0
 // Checksum 0xcc8c113d, Offset: 0x7c8
 // Size: 0x7e
@@ -191,12 +191,12 @@ function function_f67810a2() {
         self.var_dcd9b1e7++;
     }
     /#
-        self iprintln("<unknown string>");
+        self iprintln("<dev string:xbe>");
     #/
     self.var_dcd9b1e7 = undefined;
 }
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc9aecdaa, Offset: 0x850
 // Size: 0x76
@@ -208,12 +208,12 @@ function function_25062f55() {
         self waittill(#"hash_cae861a8");
     }
     /#
-        self iprintln("<unknown string>");
+        self iprintln("<dev string:xe2>");
     #/
     self.var_498c9df8 = undefined;
 }
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0x59dfc8b4, Offset: 0x8d0
 // Size: 0x8a
@@ -224,13 +224,13 @@ function function_32909149() {
         self function_f8c272e8();
     } while (self.var_59179d2c.size < 3);
     /#
-        self iprintln("<unknown string>");
+        self iprintln("<dev string:x100>");
     #/
     self zm_utility::giveachievement_wrapper("DLC2_ZOMBIE_ALL_TRAPS", 0);
     self notify(#"hash_ea373971");
 }
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 0, eflags: 0x1 linked
 // Checksum 0x57cfa358, Offset: 0x968
 // Size: 0x62
@@ -245,7 +245,7 @@ function function_f8c272e8() {
     } while (isdefined(self) && self.var_59179d2c.size < 3);
 }
 
-// Namespace namespace_12b4f23c
+// Namespace zm_prototype_achievements
 // Params 1, eflags: 0x1 linked
 // Checksum 0x520290a2, Offset: 0x9d8
 // Size: 0x2dc

@@ -16,9 +16,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_8847920b;
+#namespace zm_theater_teleporter;
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x2
 // Checksum 0xfe1c64cb, Offset: 0x818
 // Size: 0x34
@@ -26,7 +26,7 @@ function autoexec function_2dc19561() {
     system::register("zm_theater_teleporter", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa7a8d320, Offset: 0x858
 // Size: 0x174
@@ -41,7 +41,7 @@ function __init__() {
     callback::on_spawned(&init_player);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0xad4926cc, Offset: 0x9d8
 // Size: 0x43c
@@ -90,7 +90,7 @@ function teleporter_init() {
     scene::add_scene_func("p7_fxanim_zm_kino_wormhole_bundle", &function_d11d2c50, "play");
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa73b5bc0, Offset: 0xe20
 // Size: 0x1c
@@ -99,18 +99,18 @@ function init_player() {
     self.var_a7ffe97c = 0;
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x82dcda95, Offset: 0xe48
 // Size: 0x30
 function function_9272aa0() {
     while (true) {
         level function_a73df8c4();
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa8a59323, Offset: 0xe80
 // Size: 0x350
@@ -141,7 +141,7 @@ function function_8811855f(index) {
                 trigger player_teleporting(index);
                 level.var_4f3df77f clientfield::set("teleporter_link_cable_mtl", 0);
                 trigger sethintstring(%ZOMBIE_TELEPORT_COOLDOWN);
-                wait(90);
+                wait 90;
                 active = 0;
                 exploder::delete_exploder_on_clients("fxexp_202");
                 level flag::clear("teleporter_linked");
@@ -153,7 +153,7 @@ function function_8811855f(index) {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf19a4bf, Offset: 0x11d8
 // Size: 0x168
@@ -175,7 +175,7 @@ function function_361084a() {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x80c7810e, Offset: 0x1348
 // Size: 0x114
@@ -190,7 +190,7 @@ function function_160dd0e9() {
     pad sethintstring(%ZM_THEATER_START_CORE);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa452162e, Offset: 0x1468
 // Size: 0x170
@@ -211,7 +211,7 @@ function function_49539bfb() {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0xec8a4772, Offset: 0x15e0
 // Size: 0x464
@@ -220,7 +220,7 @@ function player_teleporting(index) {
     self thread function_5e48550f(undefined);
     self thread function_aabb419a();
     self thread function_40b54710(undefined, 300);
-    wait(level.var_276703f8);
+    wait level.var_276703f8;
     exploder::exploder("fxexp_202");
     self notify(#"hash_d75099e");
     var_1bea176e = self teleport_players(var_1bea176e, "projroom");
@@ -231,7 +231,7 @@ function player_teleporting(index) {
     foreach (e_player in var_1bea176e) {
         e_player.var_35c3d096 = 1;
     }
-    wait(30);
+    wait 30;
     var_1bea176e = array::filter(var_1bea176e, 0, &function_1488cf91);
     level.var_dfa06af9 clientfield::set("extra_screen", 0);
     if (randomint(100) > 24 && !isdefined(level.var_3144fad5)) {
@@ -246,19 +246,19 @@ function player_teleporting(index) {
     }
     self thread function_5e48550f(var_1bea176e);
     self thread function_492a85ce(var_1bea176e);
-    wait(level.var_276703f8);
+    wait level.var_276703f8;
     var_1bea176e = array::filter(var_1bea176e, 0, &function_1488cf91);
     self notify(#"hash_d75099e");
     self thread function_668410f0(var_1bea176e);
     self teleport_players(var_1bea176e, loc);
     if (isdefined(loc) && loc == "eerooms") {
         loc = "theater";
-        wait(4);
+        wait 4;
         var_1bea176e = array::filter(var_1bea176e, 0, &function_1488cf91);
         self thread function_492a85ce(var_1bea176e);
         exploder::exploder(301);
         self thread function_5e48550f(var_1bea176e);
-        wait(level.var_276703f8);
+        wait level.var_276703f8;
         var_1bea176e = array::filter(var_1bea176e, 0, &function_1488cf91);
         self notify(#"hash_d75099e");
         self thread function_668410f0(var_1bea176e);
@@ -266,7 +266,7 @@ function player_teleporting(index) {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x0
 // Checksum 0x65d004a2, Offset: 0x1a50
 // Size: 0x86
@@ -279,7 +279,7 @@ function function_5f0f1e6d(enable) {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0x992a2c38, Offset: 0x1ae0
 // Size: 0x2e
@@ -290,7 +290,7 @@ function function_5f4a2230(player) {
     return false;
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9b58cf61, Offset: 0x1b18
 // Size: 0xd0
@@ -309,11 +309,11 @@ function function_5e48550f(players) {
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0x24c5a8b1, Offset: 0x1bf0
 // Size: 0x82
@@ -322,7 +322,7 @@ function function_1488cf91(e_player) {
     return isalive(e_player) && e_player.sessionstate !== "spectator" && e_player istouching(var_1de511b3);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 2, eflags: 0x1 linked
 // Checksum 0x6ffef777, Offset: 0x1c80
 // Size: 0xc04
@@ -393,7 +393,7 @@ function teleport_players(var_1bea176e, loc) {
     if (isdefined(var_1bea176e) && (!isdefined(var_1bea176e) || var_1bea176e.size < 1)) {
         return;
     }
-    wait(2);
+    wait 2;
     var_1bea176e = array::filter(var_1bea176e, 0, &function_1488cf91);
     var_9eed0845 = [];
     if (loc == "projroom") {
@@ -464,12 +464,12 @@ function teleport_players(var_1bea176e, loc) {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2a208cc6, Offset: 0x2890
 // Size: 0xb6
 function function_91f69b8f() {
-    wait(2);
+    wait 2;
     level.var_dfa06af9 show();
     level.var_dfa06af9 clientfield::set("extra_screen", 1);
     players = level.players;
@@ -478,7 +478,7 @@ function function_91f69b8f() {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 2, eflags: 0x1 linked
 // Checksum 0x7095a11c, Offset: 0x2950
 // Size: 0x6c
@@ -489,7 +489,7 @@ function function_784ee767(sname, spots) {
     return spots;
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc749dba4, Offset: 0x29c8
 // Size: 0x4e
@@ -499,7 +499,7 @@ function function_dcb14347(spots) {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 3, eflags: 0x1 linked
 // Checksum 0xbc2e2822, Offset: 0x2a20
 // Size: 0x104
@@ -518,7 +518,7 @@ function function_c4cf74dc(dest, players, player_radius) {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0xce7f1113, Offset: 0x2b30
 // Size: 0xce
@@ -526,7 +526,7 @@ function function_aabb419a() {
     self endon(#"hash_d75099e");
     util::clientnotify("tpa");
     players = getplayers();
-    wait(1.7);
+    wait 1.7;
     for (i = 0; i < players.size; i++) {
         if (isdefined(players[i])) {
             if (self function_5f4a2230(players[i])) {
@@ -536,7 +536,7 @@ function function_aabb419a() {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x0
 // Checksum 0xbaa7f15f, Offset: 0x2c08
 // Size: 0x7e
@@ -549,7 +549,7 @@ function function_74cbcb97(player) {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0x70c034a1, Offset: 0x2c90
 // Size: 0x7e
@@ -562,7 +562,7 @@ function function_492a85ce(player) {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc70e6316, Offset: 0x2d18
 // Size: 0x7e
@@ -575,7 +575,7 @@ function function_668410f0(player) {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 2, eflags: 0x1 linked
 // Checksum 0xb1159cd4, Offset: 0x2da0
 // Size: 0x1ee
@@ -583,7 +583,7 @@ function function_40b54710(var_728eaa61, range) {
     zombies = getaispeciesarray("axis");
     zombies = util::get_array_of_closest(self.origin, zombies, undefined, var_728eaa61, range);
     for (i = 0; i < zombies.size; i++) {
-        wait(randomfloatrange(0.2, 0.3));
+        wait randomfloatrange(0.2, 0.3);
         if (!isdefined(zombies[i])) {
             continue;
         }
@@ -595,7 +595,7 @@ function function_40b54710(var_728eaa61, range) {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 2, eflags: 0x0
 // Checksum 0x1bd82af2, Offset: 0x2f98
 // Size: 0x94
@@ -605,11 +605,11 @@ function function_9113fdce(var_58d36ef3, var_edba2860) {
     }
     index = zm_utility::get_player_index(self);
     plr = "plr_" + index + "_";
-    wait(var_edba2860);
+    wait var_edba2860;
     self zm_audio::create_and_play_dialog(plr, var_58d36ef3, 0.25);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdaa96321, Offset: 0x3038
 // Size: 0x32
@@ -617,87 +617,87 @@ function function_77a0f55b() {
     self thread [[ level.teleport_ae_funcs[randomint(level.teleport_ae_funcs.size)] ]]();
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc7378116, Offset: 0x3078
 // Size: 0x44
 function function_ef0e774f() {
-    println("player_teleport_fx");
+    println("<dev string:x28>");
     self shellshock("explosion", 3);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0xccf7912d, Offset: 0x30c8
 // Size: 0x44
 function function_fd27ac1b() {
-    println("player_teleport_fx");
+    println("<dev string:x46>");
     self shellshock("electrocution", 3);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4397c74, Offset: 0x3118
 // Size: 0xc2
 function function_f710e21c() {
-    println("player_teleport_fx");
+    println("<dev string:x62>");
     var_27bb5e5b = 30;
     var_400a1590 = 65;
     duration = 0.5;
     for (i = 0; i < duration; i += 0.017) {
         fov = var_27bb5e5b + (var_400a1590 - var_27bb5e5b) * i / duration;
-        wait(0.017);
+        wait 0.017;
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0x94f3e28b, Offset: 0x31e8
 // Size: 0x74
 function function_340c1c45(localclientnum) {
-    println("player_teleport_fx");
+    println("<dev string:x79>");
     visionset_mgr::activate("visionset", "cheat_bw_invert_contrast", self);
-    wait(1.25);
+    wait 1.25;
     visionset_mgr::deactivate("visionset", "cheat_bw_invert_contrast", self);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0x72ae6d8f, Offset: 0x3268
 // Size: 0x74
 function function_2c0612f7(localclientnum) {
-    println("player_teleport_fx");
+    println("<dev string:x90>");
     visionset_mgr::activate("visionset", "zombie_turned", self);
-    wait(1.25);
+    wait 1.25;
     visionset_mgr::deactivate("visionset", "zombie_turned", self);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0x3e990e5, Offset: 0x32e8
 // Size: 0xbc
 function function_5716654b(localclientnum) {
-    println("player_teleport_fx");
+    println("<dev string:xa7>");
     visionset_mgr::activate("visionset", "cheat_bw_invert_contrast", self);
-    wait(0.4);
+    wait 0.4;
     visionset_mgr::deactivate("visionset", "cheat_bw_invert_contrast", self);
     visionset_mgr::activate("visionset", "cheat_bw_contrast", self);
-    wait(1.2);
+    wait 1.2;
     visionset_mgr::deactivate("visionset", "cheat_bw_contrast", self);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0x11a51149, Offset: 0x33b0
 // Size: 0x74
 function function_9fcee6e8(localclientnum) {
-    println("player_teleport_fx");
+    println("<dev string:xc1>");
     visionset_mgr::activate("visionset", "flare", self);
-    wait(1.25);
+    wait 1.25;
     visionset_mgr::deactivate("visionset", "flare", self);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x96cb61b2, Offset: 0x3430
 // Size: 0x274
@@ -734,7 +734,7 @@ function function_a73df8c4() {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x0
 // Checksum 0xd3d98c54, Offset: 0x36b0
 // Size: 0x11c
@@ -745,7 +745,7 @@ function function_7861a40a(position) {
     self.ignoreall = 1;
     self.goalradius = -128;
     /#
-        iprintlnbold("player_teleport_fx", var_880db4d3);
+        iprintlnbold("<dev string:xda>", var_880db4d3);
     #/
     self setgoalpos(position.origin + (randomfloatrange(-40, 40), randomfloatrange(-40, 40), 0));
     self waittill(#"goal");
@@ -754,7 +754,7 @@ function function_7861a40a(position) {
     self orientmode("face point", level.var_dfa06af9.origin);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9b922bfa, Offset: 0x37d8
 // Size: 0xac
@@ -763,13 +763,13 @@ function function_cd646ef5() {
     self waittill(#"rotatedone");
     for (var_dba9c206 = 0; var_dba9c206 != 30; var_dba9c206++) {
         self rotatepitch(6, 0.1);
-        wait(1);
+        wait 1;
     }
-    wait(5);
+    wait 5;
     self rotateto(level.var_95c67712, 0.05);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8175714, Offset: 0x3890
 // Size: 0x12c
@@ -788,7 +788,7 @@ function function_3ed03f95() {
     level thread zm_powerups::specific_powerup_drop(var_f687758d[0], struct_array[0].origin);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6b4e3703, Offset: 0x39c8
 // Size: 0x8c
@@ -799,7 +799,7 @@ function function_185746d8() {
     var_ff02c9fa thread function_b258e70b();
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2a4cc46a, Offset: 0x3a60
 // Size: 0x120
@@ -825,7 +825,7 @@ function function_2cdd3a26() {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2c3004d7, Offset: 0x3b88
 // Size: 0x8e
@@ -836,14 +836,14 @@ function function_edc40283(var_4e54c41) {
     while (self.var_d88a7e9 < 5) {
         if (self jumpbuttonpressed()) {
             self.var_d88a7e9 += 1;
-            wait(0.9);
+            wait 0.9;
         }
-        wait(0.05);
+        wait 0.05;
     }
     self notify(#"hash_7bde7d2d");
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa550d8f4, Offset: 0x3c20
 // Size: 0x94
@@ -851,7 +851,7 @@ function function_bc057378(var_4e54c41) {
     self endon(#"hash_7bde7d2d");
     var_4e54c41 endon(#"death");
     while (self istouching(var_4e54c41)) {
-        wait(0.05);
+        wait 0.05;
     }
     if (self.var_d88a7e9 < 5) {
         self.var_d88a7e9 = 0;
@@ -860,7 +860,7 @@ function function_bc057378(var_4e54c41) {
     arrayremovevalue(var_4e54c41.a_e_players, self);
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4fc2db47, Offset: 0x3cc0
 // Size: 0xf6
@@ -871,7 +871,7 @@ function function_b258e70b() {
     while (isdefined(self)) {
         e_player = self waittill(#"trigger");
         if (!isdefined(e_player.var_d88a7e9) || e_player.var_d88a7e9 < 5) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         if (isdefined(e_player.var_d88a7e9) && e_player.var_d88a7e9 >= 5) {
@@ -881,14 +881,14 @@ function function_b258e70b() {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdd252f88, Offset: 0x3dc0
 // Size: 0x164
 function function_b895d388() {
     ship = getent("model_zombie_rocket", "targetname");
     var_349c239a = ship.origin;
-    wait(0.05);
+    wait 0.05;
     ship clientfield::set("play_fly_me_to_the_moon_fx", 1);
     ship movez(120, 3, 0.7, 0);
     ship waittill(#"movedone");
@@ -900,7 +900,7 @@ function function_b895d388() {
     var_ff02c9fa delete();
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 2, eflags: 0x1 linked
 // Checksum 0x45c3250a, Offset: 0x3f30
 // Size: 0xfc
@@ -917,13 +917,13 @@ function function_7e0ed731(var_f7b84b84, v_offset) {
     }
 }
 
-// Namespace namespace_8847920b
+// Namespace zm_theater_teleporter
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd95b146f, Offset: 0x4038
 // Size: 0x64
 function function_d11d2c50(a_ents) {
     a_ents["fxanim_kino_wormhole"] setignorepauseworld(1);
-    wait(0.05);
+    wait 0.05;
     a_ents["fxanim_kino_wormhole"] clientfield::increment("teleporter_fx");
 }
 

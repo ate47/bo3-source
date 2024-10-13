@@ -13,9 +13,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/callbacks_shared;
 
-#namespace namespace_ecdcc148;
+#namespace zm_weap_staff_fire;
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 0, eflags: 0x2
 // Checksum 0xfc988dc9, Offset: 0x378
 // Size: 0x34
@@ -23,7 +23,7 @@ function autoexec function_2dc19561() {
     system::register("zm_weap_staff_fire", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 0, eflags: 0x1 linked
 // Checksum 0xeb75acf4, Offset: 0x3b8
 // Size: 0x104
@@ -37,7 +37,7 @@ function __init__() {
     level.var_a7e44c35 = getweapon("staff_fire_upgraded");
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2b10fe23, Offset: 0x4c8
 // Size: 0x54
@@ -45,10 +45,10 @@ function onplayerspawned() {
     self endon(#"disconnect");
     self thread function_db4f0c5c();
     self thread function_3ff00371();
-    self thread namespace_d7c0ce12::function_56cd26ed();
+    self thread zm_tomb_utility::function_56cd26ed();
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 0, eflags: 0x1 linked
 // Checksum 0x583592a9, Offset: 0x528
 // Size: 0xd8
@@ -67,7 +67,7 @@ function function_3ff00371() {
     }
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 0, eflags: 0x1 linked
 // Checksum 0x610aea1a, Offset: 0x608
 // Size: 0x108
@@ -88,7 +88,7 @@ function function_db4f0c5c() {
     }
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd89373ba, Offset: 0x718
 // Size: 0x2d4
@@ -118,7 +118,7 @@ function function_52ec8b27(w_weapon) {
     var_e40110b0.var_a7ef7139 = 1;
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 2, eflags: 0x1 linked
 // Checksum 0xfc77509f, Offset: 0x9f8
 // Size: 0x2b4
@@ -127,7 +127,7 @@ function function_f98583de(e_attacker, w_weapon) {
     ent = spawn("script_origin", v_pos);
     ent playloopsound("wpn_firestaff_grenade_loop", 1);
     /#
-        level thread namespace_d7c0ce12::function_5de0d079("staff_fire_upgraded", (255, 0, 0), v_pos, undefined, 5);
+        level thread zm_tomb_utility::function_5de0d079("<dev string:x28>", (255, 0, 0), v_pos, undefined, 5);
     #/
     var_17c602a5 = 5;
     aoe_radius = 80;
@@ -141,7 +141,7 @@ function function_f98583de(e_attacker, w_weapon) {
         }
         a_targets = getaiarray();
         a_targets = util::get_array_of_closest(v_pos, a_targets, undefined, undefined, aoe_radius);
-        wait(var_97057cde);
+        wait var_97057cde;
         var_17c602a5 -= var_97057cde;
         foreach (e_target in a_targets) {
             if (isdefined(e_target) && isalive(e_target)) {
@@ -155,14 +155,14 @@ function function_f98583de(e_attacker, w_weapon) {
     ent delete();
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1fcd6f55, Offset: 0xcb8
 // Size: 0x6c
 function function_3e4aaf36() {
     self endon(#"death");
     self endon(#"grenade_bounce");
-    wait(0.5);
+    wait 0.5;
     do {
         prev_origin = self.origin;
         util::wait_network_frame();
@@ -170,7 +170,7 @@ function function_3e4aaf36() {
     } while (prev_origin != self.origin);
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 0, eflags: 0x1 linked
 // Checksum 0x34f479a8, Offset: 0xd30
 // Size: 0x54
@@ -181,7 +181,7 @@ function function_4268f623() {
     self resetmissiledetonationtime(0);
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 1, eflags: 0x1 linked
 // Checksum 0x49f26318, Offset: 0xd90
 // Size: 0x256
@@ -193,7 +193,7 @@ function function_29e0fee1(w_weapon) {
         n_shots = 2;
     }
     for (i = 1; i <= n_shots; i++) {
-        wait(0.35);
+        wait 0.35;
         if (isdefined(self) && self getcurrentweapon() == level.var_a7e44c35) {
             v_player_angles = vectortoangles(self getweaponforwarddir());
             var_96d51930 = v_player_angles[0];
@@ -211,7 +211,7 @@ function function_29e0fee1(w_weapon) {
     }
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 13, eflags: 0x1 linked
 // Checksum 0x402bb281, Offset: 0xff0
 // Size: 0xd4
@@ -223,7 +223,7 @@ function function_7effcb1f(mod, hit_location, var_8a2b6fe5, player, amount, weap
     return false;
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 1, eflags: 0x1 linked
 // Checksum 0x288fa6d1, Offset: 0x10d0
 // Size: 0x98
@@ -231,7 +231,7 @@ function function_81557bff(weapon) {
     return (weapon.name == "staff_fire" || weapon.name == "staff_fire_upgraded" || weapon.name == "staff_fire_upgraded2" || isdefined(weapon) && weapon.name == "staff_fire_upgraded3") && !(isdefined(self.var_6fb1ac4a) && self.var_6fb1ac4a);
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 4, eflags: 0x1 linked
 // Checksum 0x78e7f6c1, Offset: 0x1170
 // Size: 0x104
@@ -251,7 +251,7 @@ function function_1e34975d(mod, damageweapon, player, amount) {
     }
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 1, eflags: 0x1 linked
 // Checksum 0xae97007a, Offset: 0x1280
 // Size: 0x9c
@@ -264,18 +264,18 @@ function function_e1c5d52e(attacker) {
     }
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 1, eflags: 0x1 linked
 // Checksum 0x1e4297be, Offset: 0x1328
 // Size: 0x36
 function on_fire_timeout(n_duration) {
     self endon(#"death");
-    wait(n_duration);
+    wait n_duration;
     self.is_on_fire = 0;
     self notify(#"stop_flame_damage");
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 3, eflags: 0x1 linked
 // Checksum 0x7a8c7bea, Offset: 0x1368
 // Size: 0x21c
@@ -287,27 +287,27 @@ function function_e571e237(damageweapon, e_attacker, var_ca8e270a) {
     var_ea7e78d5 = function_4b513520(damageweapon) * var_ca8e270a;
     is_upgraded = damageweapon.name == "staff_fire_upgraded" || damageweapon.name == "staff_fire_upgraded2" || damageweapon.name == "staff_fire_upgraded3";
     if (is_upgraded && var_ca8e270a > 0.5 && var_ea7e78d5 > self.health && math::cointoss()) {
-        self namespace_d7c0ce12::function_2f31684b(e_attacker, self.health, damageweapon, "MOD_BURNED");
+        self zm_tomb_utility::function_2f31684b(e_attacker, self.health, damageweapon, "MOD_BURNED");
         if (math::cointoss()) {
-            self thread namespace_d7c0ce12::function_8a97fd20();
+            self thread zm_tomb_utility::function_8a97fd20();
             return;
         }
-        self thread namespace_d7c0ce12::function_cc964a18();
+        self thread zm_tomb_utility::function_cc964a18();
         return;
     }
     self endon(#"death");
     if (!var_93eb1403) {
         self.is_on_fire = 1;
         self thread function_55d1c405();
-        wait(0.5);
+        wait 0.5;
         self thread function_cb3b7cb9(e_attacker, damageweapon, var_ca8e270a);
     }
     if (var_ea7e78d5 > 0) {
-        self namespace_d7c0ce12::function_2f31684b(e_attacker, var_ea7e78d5, damageweapon, "MOD_BURNED");
+        self zm_tomb_utility::function_2f31684b(e_attacker, var_ea7e78d5, damageweapon, "MOD_BURNED");
     }
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 2, eflags: 0x1 linked
 // Checksum 0xea2694fa, Offset: 0x1590
 // Size: 0x68
@@ -321,7 +321,7 @@ function function_d396e2c(do_stun, var_2d8e64d3) {
     self.var_262d5062 = do_stun;
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf84305e0, Offset: 0x1600
 // Size: 0x174
@@ -353,73 +353,73 @@ function function_55d1c405() {
     self clientfield::set("fire_char_fx", 0);
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd146d702, Offset: 0x1780
 // Size: 0x50
 function function_4b513520(damageweapon) {
     str_name = damageweapon.name;
     switch (str_name) {
-    case 7:
+    case "staff_fire":
         return 2050;
-    case 8:
+    case "staff_fire_upgraded":
         return 3300;
-    case 9:
+    case "staff_fire_upgraded2":
         return 11500;
-    case 10:
+    case "staff_fire_upgraded3":
         return 20000;
-    case 21:
+    case "one_inch_punch_fire":
         return 0;
     default:
         return 0;
     }
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 1, eflags: 0x1 linked
 // Checksum 0x61eb51b7, Offset: 0x1818
 // Size: 0x56
 function function_42fcae3c(damageweapon) {
     str_name = damageweapon.name;
     switch (str_name) {
-    case 7:
+    case "staff_fire":
         return 75;
-    case 8:
+    case "staff_fire_upgraded":
         return -106;
-    case 9:
+    case "staff_fire_upgraded2":
         return 300;
-    case 10:
+    case "staff_fire_upgraded3":
         return 450;
-    case 21:
+    case "one_inch_punch_fire":
         return -6;
     default:
         return self.health;
     }
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe0f6bb4, Offset: 0x18b0
 // Size: 0x54
 function function_5ede48b0(damageweapon) {
     str_name = damageweapon.name;
     switch (str_name) {
-    case 7:
+    case "staff_fire":
         return 8;
-    case 8:
+    case "staff_fire_upgraded":
         return 8;
-    case 9:
+    case "staff_fire_upgraded2":
         return 8;
-    case 10:
+    case "staff_fire_upgraded3":
         return 8;
-    case 21:
+    case "one_inch_punch_fire":
         return 8;
     default:
         return 8;
     }
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 3, eflags: 0x1 linked
 // Checksum 0xae1688d9, Offset: 0x1948
 // Size: 0x130
@@ -437,12 +437,12 @@ function function_cb3b7cb9(e_attacker, damageweapon, var_ca8e270a) {
                 n_damage = self.health;
             }
         }
-        self namespace_d7c0ce12::function_2f31684b(e_attacker, n_damage, damageweapon, "MOD_BURNED");
-        wait(1);
+        self zm_tomb_utility::function_2f31684b(e_attacker, n_damage, damageweapon, "MOD_BURNED");
+        wait 1;
     }
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 3, eflags: 0x1 linked
 // Checksum 0x3949c6ae, Offset: 0x1a80
 // Size: 0x7c
@@ -450,11 +450,11 @@ function function_d1aaab68(damageweapon, e_attacker, var_ca8e270a) {
     self endon(#"death");
     var_ea7e78d5 = function_4b513520(damageweapon);
     if (var_ea7e78d5 > 0) {
-        self namespace_d7c0ce12::function_2f31684b(e_attacker, var_ea7e78d5, damageweapon, "MOD_BURNED");
+        self zm_tomb_utility::function_2f31684b(e_attacker, var_ea7e78d5, damageweapon, "MOD_BURNED");
     }
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 0, eflags: 0x0
 // Checksum 0xd62c5cf1, Offset: 0x1b08
 // Size: 0x94
@@ -467,7 +467,7 @@ function function_f59d7b4e() {
     var_e0d020c4 delete();
 }
 
-// Namespace namespace_ecdcc148
+// Namespace zm_weap_staff_fire
 // Params 1, eflags: 0x1 linked
 // Checksum 0x54b5971c, Offset: 0x1ba8
 // Size: 0x2e6

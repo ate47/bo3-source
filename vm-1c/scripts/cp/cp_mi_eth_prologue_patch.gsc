@@ -12,9 +12,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_8cf14dc8;
+#namespace cp_mi_eth_prologue_patch;
 
-// Namespace namespace_8cf14dc8
+// Namespace cp_mi_eth_prologue_patch
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcfea1cd7, Offset: 0x250
 // Size: 0x134

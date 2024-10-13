@@ -366,7 +366,7 @@ function screen_fade(n_time, n_target_alpha, n_start_alpha, str_color, b_force_c
 // Size: 0x3a
 function screen_fade_out(n_time, str_color) {
     screen_fade(n_time, 1, 0, str_color, 0);
-    wait(n_time);
+    wait n_time;
 }
 
 // Namespace lui
@@ -375,7 +375,7 @@ function screen_fade_out(n_time, str_color) {
 // Size: 0x42
 function screen_fade_in(n_time, str_color) {
     screen_fade(n_time, 0, 1, str_color, 1);
-    wait(n_time);
+    wait n_time;
 }
 
 // Namespace lui
@@ -433,14 +433,14 @@ function private _screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_
     str_menu = "FullScreenBlack";
     if (isstring(v_color)) {
         switch (v_color) {
-        case 10:
+        case "black":
             v_color = (0, 0, 0);
             break;
-        case 13:
+        case "white":
             v_color = (1, 1, 1);
             break;
         default:
-            assertmsg("ui_execdemo_e3");
+            assertmsg("<dev string:x28>");
             break;
         }
     }
@@ -463,7 +463,7 @@ function private _screen_fade(n_time, n_target_alpha, n_start_alpha, v_color, b_
     setluimenudata(self.localclientnum, lui_menu, "endAlpha", n_target_alpha);
     setluimenudata(self.localclientnum, lui_menu, "fadeOverTime", n_time_ms);
     openluimenu(self.localclientnum, lui_menu);
-    wait(n_time);
+    wait n_time;
     if (b_force_close_menu || n_target_alpha == 0) {
         closeluimenu(self.localclientnum, self.screen_fade_menus[str_menu].lui_menu);
         self.screen_fade_menus[str_menu] = undefined;

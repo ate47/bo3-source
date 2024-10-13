@@ -5,9 +5,9 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_fb5c506f;
+#namespace zm_bgb_fatal_contraption;
 
-// Namespace namespace_fb5c506f
+// Namespace zm_bgb_fatal_contraption
 // Params 0, eflags: 0x2
 // Checksum 0x47ad38b0, Offset: 0x158
 // Size: 0x34
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_fatal_contraption", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_fb5c506f
+// Namespace zm_bgb_fatal_contraption
 // Params 0, eflags: 0x1 linked
 // Checksum 0x97df8f34, Offset: 0x198
 // Size: 0x3c

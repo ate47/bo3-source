@@ -111,7 +111,7 @@ function aptoggleloop() {
         while (weapon.lockontype == "AP Multi") {
             abort = 0;
             while (!(self playerads() == 1)) {
-                wait(0.05);
+                wait 0.05;
                 currentweapon = self getcurrentweapon();
                 if (currentweapon.lockontype != "AP Multi") {
                     abort = 1;
@@ -123,7 +123,7 @@ function aptoggleloop() {
             }
             self thread aplockloop(weapon);
             while (self playerads() == 1) {
-                wait(0.05);
+                wait 0.05;
             }
             self notify(#"ap_off");
             self clearaptarget(weapon);
@@ -143,7 +143,7 @@ function aplockloop(weapon) {
     locklength = self getlockonspeed();
     self.multilocklist = [];
     for (;;) {
-        wait(0.05);
+        wait 0.05;
         do {
             done = 1;
             foreach (target in self.multilocklist) {
@@ -384,7 +384,7 @@ function seekersound(alias, looping, id) {
         time = soundgetplaybacktime(alias) * 0.001;
         do {
             self playlocalsound(alias);
-            wait(time);
+            wait time;
         } while (looping);
         self stoprumble("stinger_lock_rumble");
     }

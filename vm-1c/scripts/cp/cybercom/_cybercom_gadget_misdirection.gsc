@@ -332,7 +332,7 @@ function function_7ca046a9(lifetime, player) {
     if (getdvarint("scr_misdirection_debug", 0)) {
         level thread namespace_afd2f70b::function_a0e51d80(self.origin, waittime, 20, (1, 0, 0));
     }
-    wait(waittime);
+    wait waittime;
     self clientfield::set("makedecoy", 0);
     util::wait_network_frame();
     self delete();

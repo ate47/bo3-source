@@ -320,7 +320,7 @@ function function_6c141a2d(var_1e41d598) {
     self.cybercom.var_3e73c959 = self gadgetpowerget(1);
     self.cybercom.var_647643c2 = self gadgetpowerget(1);
     self.cybercom.var_384c5e6e = var_1e41d598;
-    self notify(#"hash_d867b4de");
+    self notify(#"cybercom_disabled");
     if (isdefined(self.cybercom.var_90eb6ca7) && self hasweapon(self.cybercom.var_90eb6ca7)) {
         self.cybercom.var_7116dac7 = self.cybercom.var_90eb6ca7;
         self takeweapon(self.cybercom.var_90eb6ca7);
@@ -445,50 +445,50 @@ function function_d240e350(var_7872e02, target, var_9bc2efcb, upgraded) {
     }
     self endon(#"death");
     while (var_9bc2efcb && self isplayinganimscripted()) {
-        wait(0.1);
+        wait 0.1;
     }
     switch (var_7872e02) {
-    case 53:
+    case "cybercom_iffoverride":
         namespace_ea01175::function_c26a7c6(target, var_9bc2efcb);
         break;
-    case 59:
+    case "cybercom_systemoverload":
         namespace_528b4613::function_5839c4ac(target, var_9bc2efcb);
         break;
-    case 57:
+    case "cybercom_servoshortout":
         namespace_4bc37cb1::function_b1101fa6(target, var_9bc2efcb);
         break;
-    case 50:
+    case "cybercom_exosuitbreakdown":
         namespace_491e7803::function_2e537afb(target, var_9bc2efcb);
         break;
-    case 10:
+    case "cybercom_surge":
         namespace_63d98895::function_9eb4d79d(target, var_9bc2efcb, upgraded);
         break;
-    case 56:
+    case "cybercom_sensoryoverload":
         namespace_64276cf9::function_58f5574a(target, var_9bc2efcb);
         break;
-    case 52:
+    case "cybercom_forcedmalfunction":
         namespace_9c3956fd::function_638ad739(target, var_9bc2efcb);
         break;
-    case 51:
+    case "cybercom_fireflyswarm":
         namespace_3ed98204::function_2cba8648(target, var_9bc2efcb, upgraded);
         break;
-    case 54:
+    case "cybercom_immolation":
         namespace_a56eec64::function_9eebfb7(target, var_9bc2efcb, upgraded);
         break;
-    case 55:
+    case "cybercom_mrpukey":
         namespace_e44205a2::function_da7ef8ba(target, var_9bc2efcb, upgraded);
         break;
-    case 49:
+    case "cybercom_concussive":
         namespace_687c8387::function_73688d2e(target, var_9bc2efcb);
         break;
-    case 58:
+    case "cybercom_smokescreen":
         namespace_11fb1f28::function_d25acb0(var_9bc2efcb, upgraded);
         break;
-    case 42:
+    case "cybercom_es_strike":
         namespace_690a49a::function_aae59b93(upgraded);
         break;
     default:
-        assert(0, "cybercom_immolate");
+        assert(0, "<dev string:x28>");
         break;
     }
     self playsound("gdt_cybercore_activate_ai");

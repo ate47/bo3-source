@@ -144,7 +144,7 @@ function function_c81e1083(name) {
 // Checksum 0xf178379b, Offset: 0xd10
 // Size: 0x698
 function main() {
-    level endon(#"hash_24d3a44");
+    level endon(#"doa_game_restart");
     foreach (player in getplayers()) {
         player thread namespace_831a4a7c::function_7d7a7fde();
     }
@@ -153,7 +153,7 @@ function main() {
     function_d9345c74();
     while (!level flag::get("doa_game_is_over")) {
         /#
-            namespace_49107f3a::debugmsg("left" + level.doa.round_number + "left" + gettime());
+            namespace_49107f3a::debugmsg("<dev string:x28>" + level.doa.round_number + "<dev string:x2f>" + gettime());
         #/
         level.doa.rules.max_enemy_count = namespace_3ca3c537::function_b0e9983(namespace_3ca3c537::function_d2d75f5d());
         level.doa.var_a3a11449 = 0;
@@ -168,9 +168,9 @@ function main() {
         }
         /#
             if (isdefined(level.doa.var_33749c8)) {
-                flag::clear("left");
+                flag::clear("<dev string:x3d>");
                 namespace_49107f3a::function_f798b582();
-                wait(1);
+                wait 1;
                 namespace_49107f3a::function_f798b582();
             }
         #/
@@ -189,7 +189,7 @@ function main() {
             level.doa.var_677d1262 = 0;
             level.doa.var_5cd9f23f = gettime();
             /#
-                namespace_49107f3a::debugmsg("left" + level.doa.round_number + "left" + level.doa.var_5cd9f23f);
+                namespace_49107f3a::debugmsg("<dev string:x28>" + level.doa.round_number + "<dev string:x4e>" + level.doa.var_5cd9f23f);
             #/
             flag::clear("doa_round_active");
             level notify(#"hash_e9dfbb22");
@@ -201,7 +201,7 @@ function main() {
             }
             level.doa.var_b351e5fb = 0;
             while (level flag::get("doa_round_paused")) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             level thread namespace_a7e6beb5::function_22d0e830(0, 3);
@@ -237,15 +237,15 @@ function main() {
 function private function_d87cb356() {
     self notify(#"hash_d87cb356");
     self endon(#"hash_d87cb356");
-    level endon(#"hash_24d3a44");
+    level endon(#"doa_game_restart");
     while (!level flag::get("doa_game_is_over")) {
         level.doa.var_5890c17b = 0;
         while (level flag::get("doa_round_active")) {
-            wait(1);
+            wait 1;
         }
         level.doa.var_5890c17b = 1;
         while (!level flag::get("doa_round_active")) {
-            wait(1);
+            wait 1;
         }
     }
 }
@@ -281,7 +281,7 @@ function function_40bfe842(entnum) {
         if (isdefined(points) && points.size) {
             if (!isdefined(points[entnum])) {
                 /#
-                    namespace_49107f3a::debugmsg("left" + level.doa.var_90873830 + "left" + level.doa.var_3f3f577d + "left" + entnum);
+                    namespace_49107f3a::debugmsg("<dev string:x59>" + level.doa.var_90873830 + "<dev string:x62>" + level.doa.var_3f3f577d + "<dev string:x6f>" + entnum);
                 #/
                 return points[0].origin;
             }
@@ -313,7 +313,7 @@ function function_fe0946ac(spawn_origin, var_97887a95) {
     }
     self endon(#"disconnect");
     while (!isdefined(self.doa)) {
-        wait(0.05);
+        wait 0.05;
     }
     if (!isdefined(spawn_origin)) {
         spawn_origin = function_40bfe842(self.entnum);
@@ -384,7 +384,7 @@ function function_21a582ff(var_6808cc14, endnote) {
         if (level flag::get("doa_game_is_over") || level flag::get("doa_round_abort")) {
             break;
         }
-        wait(getdvarfloat("scr_doa_spawn_delay", 0.35));
+        wait getdvarfloat("scr_doa_spawn_delay", 0.35);
         spawnpoint = spawn_locations[randomint(spawn_locations.size)];
         var_48be25f5 = level.doa.var_c838db72[randomint(level.doa.var_c838db72.size)];
         if (isdefined(level.doa.var_d0cde02c) && function_ff7f941a(level.doa.var_d0cde02c)) {
@@ -416,7 +416,7 @@ function function_21a582ff(var_6808cc14, endnote) {
                 }
                 if (level.doa.var_b351e5fb >= level.doa.rules.max_enemy_count) {
                     namespace_49107f3a::function_fe180f6f(2);
-                    wait(0.05);
+                    wait 0.05;
                 }
                 spawnpoint = spawn_locations[randomint(spawn_locations.size)];
                 ai = [[ var_9f7a6d48.spawnfunc ]](var_9f7a6d48.spawner, spawnpoint, var_9f7a6d48);
@@ -452,9 +452,9 @@ function function_21a582ff(var_6808cc14, endnote) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2ed0f03e, Offset: 0x21b8
 // Size: 0x584
-function function_87703158(var_372a8daa) {
-    if (!isdefined(var_372a8daa)) {
-        var_372a8daa = 0;
+function function_87703158(bossRound) {
+    if (!isdefined(bossRound)) {
+        bossRound = 0;
     }
     level notify(#"hash_50be1db3");
     level endon(#"hash_50be1db3");
@@ -472,7 +472,7 @@ function function_87703158(var_372a8daa) {
     do {
         for (wave = 0; wave < level.doa.var_d9933f22.size; wave++) {
             while (isdefined(level.hostmigrationtimer) && (level flag::get("doa_round_paused") || level.hostmigrationtimer)) {
-                wait(0.05);
+                wait 0.05;
             }
             if (level flag::get("doa_game_is_over")) {
                 break;
@@ -484,14 +484,14 @@ function function_87703158(var_372a8daa) {
             level.doa.var_6808cc14 = level.doa.var_d9933f22[wave];
             level thread function_21a582ff(level.doa.var_6808cc14);
             /#
-                namespace_49107f3a::debugmsg("left" + level.doa.var_6808cc14.wavenumber + "left" + level.doa.var_6808cc14.spawn_side);
+                namespace_49107f3a::debugmsg("<dev string:x7c>" + level.doa.var_6808cc14.wavenumber + "<dev string:x8a>" + level.doa.var_6808cc14.spawn_side);
             #/
-            wait(level.doa.var_6808cc14.var_1112b648);
+            wait level.doa.var_6808cc14.var_1112b648;
             while (level.players.size == 1 && level.doa.var_9a1cbf58 && level.doa.var_3706f843.size > 10) {
                 /#
-                    namespace_49107f3a::debugmsg("left");
+                    namespace_49107f3a::debugmsg("<dev string:x94>");
                 #/
-                wait(1);
+                wait 1;
             }
         }
         if (level flag::get("doa_game_is_over")) {
@@ -510,10 +510,10 @@ function function_87703158(var_372a8daa) {
         if (!var_81b4b863 && !level flag::get("doa_round_active")) {
             break;
         }
-        wait(0.05);
+        wait 0.05;
     } while (var_81b4b863);
     while (level.doa.var_3706f843.size > 0) {
-        wait(1);
+        wait 1;
     }
     flag::clear("doa_round_spawning");
 }
@@ -573,7 +573,7 @@ function private function_d9345c74() {
         if (isdefined(level.doa.var_33749c8)) {
             if (level.doa.round_number > level.doa.var_33749c8) {
                 level.doa.var_33749c8 = undefined;
-                setdvar("left", "left");
+                setdvar("<dev string:xcb>", "<dev string:xd5>");
             }
         }
     #/

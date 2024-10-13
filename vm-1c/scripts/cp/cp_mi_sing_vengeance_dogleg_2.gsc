@@ -159,7 +159,7 @@ function function_9d26d0d6() {
 // Size: 0x34
 function function_8aac7e91() {
     level endon(#"hash_42cabc57");
-    wait(25);
+    wait 25;
     level.var_2fd26037 namespace_63b4601c::function_5fbec645("hend_check_that_balcony_1");
 }
 

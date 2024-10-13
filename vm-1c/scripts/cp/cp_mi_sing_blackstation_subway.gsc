@@ -21,9 +21,9 @@
 #using scripts/cp/_dialog;
 #using scripts/codescripts/struct;
 
-#namespace namespace_3dc5b645;
+#namespace cp_mi_sing_blackstation_subway;
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x1 linked
 // Checksum 0x550ec314, Offset: 0x760
 // Size: 0x284
@@ -53,7 +53,7 @@ function function_822cae8a() {
     exploder::exploder("fx_expl_tanker_splashes_mist");
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x1 linked
 // Checksum 0x97bdf95f, Offset: 0x9f0
 // Size: 0x7c
@@ -64,7 +64,7 @@ function function_eb060258() {
     level dialog::function_13b3b16a("plyr_understood_1");
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdaa60392, Offset: 0xa78
 // Size: 0xf4
@@ -77,7 +77,7 @@ function function_27e6ca54() {
     var_40eadcd7 thread function_62437267();
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5f8773fb, Offset: 0xb78
 // Size: 0x24
@@ -85,7 +85,7 @@ function function_62437267() {
     self thread scene::play(self.script_noteworthy, self);
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x1 linked
 // Checksum 0x40491f38, Offset: 0xba8
 // Size: 0x3c
@@ -94,7 +94,7 @@ function function_c7ea2242() {
     clientfield::set("subway_tiles", 1);
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x1 linked
 // Checksum 0x47f17581, Offset: 0xbf0
 // Size: 0x182
@@ -103,7 +103,7 @@ function function_99f304f0() {
     self.var_15caaa0c = 0;
     while (!level flag::get("flag_kane_intro_complete")) {
         while (!self isplayerunderwater()) {
-            wait(0.1);
+            wait 0.1;
         }
         if (!self.var_15caaa0c) {
             self.var_15caaa0c = 1;
@@ -112,17 +112,17 @@ function function_99f304f0() {
         self clientfield::set_to_player("play_bubbles", 1);
         self fx::play("bubbles", self.origin, (0, 0, 0), "swim_done", 1, "j_spineupper");
         while (self isplayerunderwater()) {
-            wait(0.1);
+            wait 0.1;
         }
         self clientfield::set_to_player("play_bubbles", 0);
         self notify(#"swim_done");
-        wait(0.1);
+        wait 0.1;
     }
     self clientfield::set_to_player("play_bubbles", 0);
     self notify(#"swim_done");
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x1 linked
 // Checksum 0xeff535e7, Offset: 0xd80
 // Size: 0x6c
@@ -132,28 +132,28 @@ function function_d721f6c3() {
     level objectives::breadcrumb("trigger_breadcrumb_police_street", "cp_level_blackstation_climb");
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x1 linked
 // Checksum 0x32e30d4, Offset: 0xdf8
 // Size: 0x5c
 function function_5c54db13() {
     level flag::wait_till("flag_waypoint_subway01");
-    wait(2);
+    wait 2;
     level thread scene::play("p7_fxanim_cp_blackstation_subway_stair_debris_bundle");
     skipto::function_be8adfb8("objective_subway");
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x1 linked
 // Checksum 0x85de0b4d, Offset: 0xe60
 // Size: 0x4c
 function function_4ad8a5f1() {
     trigger::wait_till("trig_hendricks_swim");
     level thread namespace_4297372::function_37f7c98d();
-    level thread namespace_933eb669::function_a7bb8a82();
+    level thread cp_mi_sing_blackstation_police_station::function_a7bb8a82();
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5371479c, Offset: 0xeb8
 // Size: 0x1f4
@@ -176,16 +176,16 @@ function function_95e21012() {
     level.var_2fd26037 ai::set_behavior_attribute("forceTacticalWalk", 0);
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa520390d, Offset: 0x10b8
 // Size: 0x5c
 function function_561cae8a(a_ents) {
-    wait(2);
+    wait 2;
     level.var_2fd26037 fx::play("bubbles", level.var_2fd26037.origin, (0, 0, 0), "swim_done", 1, "j_spineupper");
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 1, eflags: 0x1 linked
 // Checksum 0x47df79d8, Offset: 0x1120
 // Size: 0x20
@@ -193,7 +193,7 @@ function function_5f8ce82c(a_ents) {
     level.var_2fd26037 notify(#"swim_done");
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x1 linked
 // Checksum 0x33e2b795, Offset: 0x1148
 // Size: 0x5c
@@ -203,7 +203,7 @@ function function_9d32ab8e() {
     array::thread_all(var_11d618f2, &function_f9af1ae2);
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf4ffc240, Offset: 0x11b0
 // Size: 0x70
@@ -214,11 +214,11 @@ function function_f9af1ae2() {
     n_rotate_angle = 60;
     while (true) {
         e_body rotatepitch(n_rotate_angle, 5);
-        wait(4.5);
+        wait 4.5;
     }
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2b438832, Offset: 0x1228
 // Size: 0x1f4
@@ -241,7 +241,7 @@ function function_70ff0b50() {
     e_linkto moveto(e_corpse.origin - (0, 50, 25), 5);
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x1 linked
 // Checksum 0x83f5abe5, Offset: 0x1428
 // Size: 0x124
@@ -258,7 +258,7 @@ function function_e3067a8b() {
     e_corpse moveto(e_corpse.origin - (0, -50, 50), 5);
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x1 linked
 // Checksum 0x46210b46, Offset: 0x1558
 // Size: 0x114
@@ -274,7 +274,7 @@ function function_bd040022() {
     e_corpse moveto(e_corpse.origin - (25, 25, 75), 5);
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 1, eflags: 0x1 linked
 // Checksum 0x57b50964, Offset: 0x1678
 // Size: 0x16

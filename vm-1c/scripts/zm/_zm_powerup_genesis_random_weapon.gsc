@@ -19,9 +19,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f54133b9;
+#namespace zm_powerup_genesis_random_weapon;
 
-// Namespace namespace_f54133b9
+// Namespace zm_powerup_genesis_random_weapon
 // Params 0, eflags: 0x2
 // Checksum 0xe565d991, Offset: 0x4e0
 // Size: 0x34
@@ -29,7 +29,7 @@ function autoexec function_2dc19561() {
     system::register("zm_powerup_genesis_random_weapon", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_f54133b9
+// Namespace zm_powerup_genesis_random_weapon
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe32e26b0, Offset: 0x520
 // Size: 0x144
@@ -42,13 +42,13 @@ function __init__() {
         zm_powerups::powerup_set_player_specific("genesis_random_weapon", 1);
     }
     /#
-        if (getdvarint("p7_zm_power_up_max_ammo") > 0) {
+        if (getdvarint("<dev string:x28>") > 0) {
             level thread function_15732f56();
         }
     #/
 }
 
-// Namespace namespace_f54133b9
+// Namespace zm_powerup_genesis_random_weapon
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x670
 // Size: 0x4
@@ -56,7 +56,7 @@ function function_f99a1ed4() {
     
 }
 
-// Namespace namespace_f54133b9
+// Namespace zm_powerup_genesis_random_weapon
 // Params 1, eflags: 0x1 linked
 // Checksum 0x77c9a73f, Offset: 0x680
 // Size: 0x674
@@ -109,11 +109,11 @@ function function_984a38e(e_player) {
         e_player takeweapon(var_1d7eacf9);
     }
     e_player zm_weapons::weapon_give(w_weapon, 0, 0, 1);
-    wait(0.1);
+    wait 0.1;
     e_player setweaponammostock(w_weapon, int(w_weapon.maxammo * 0.3));
 }
 
-// Namespace namespace_f54133b9
+// Namespace zm_powerup_genesis_random_weapon
 // Params 0, eflags: 0x0
 // Checksum 0x8b5028cf, Offset: 0xd00
 // Size: 0x3c
@@ -126,26 +126,26 @@ function function_89d232d2() {
 
 /#
 
-    // Namespace namespace_f54133b9
+    // Namespace zm_powerup_genesis_random_weapon
     // Params 0, eflags: 0x1 linked
     // Checksum 0x22d31693, Offset: 0xd48
     // Size: 0x64
     function function_15732f56() {
-        level flagsys::wait_till("p7_zm_power_up_max_ammo");
-        wait(1);
+        level flagsys::wait_till("<dev string:x35>");
+        wait 1;
         zm_devgui::add_custom_devgui_callback(&function_9677023e);
-        adddebugcommand("p7_zm_power_up_max_ammo");
+        adddebugcommand("<dev string:x4e>");
     }
 
-    // Namespace namespace_f54133b9
+    // Namespace zm_powerup_genesis_random_weapon
     // Params 1, eflags: 0x1 linked
     // Checksum 0x2a273be5, Offset: 0xdb8
     // Size: 0xa4
     function function_9677023e(cmd) {
         var_c533fd32 = 0;
         switch (cmd) {
-        case 8:
-            var_30fbd0e8 = level thread zm_powerups::specific_powerup_drop("p7_zm_power_up_max_ammo", level.players[0].origin + (0, 80, 0), undefined, undefined, undefined, level.players[0]);
+        case "<dev string:xaa>":
+            var_30fbd0e8 = level thread zm_powerups::specific_powerup_drop("<dev string:xc0>", level.players[0].origin + (0, 80, 0), undefined, undefined, undefined, level.players[0]);
             return 1;
         }
         return var_c533fd32;

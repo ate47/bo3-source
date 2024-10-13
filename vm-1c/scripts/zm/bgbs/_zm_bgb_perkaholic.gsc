@@ -37,6 +37,6 @@ function event() {
     self endon(#"bgb_update");
     self zm_utility::function_82a5cc4();
     self bgb::do_one_shot_use(1);
-    wait(0.05);
+    wait 0.05;
 }
 

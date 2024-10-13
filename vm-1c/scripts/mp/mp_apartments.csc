@@ -13,12 +13,12 @@
 // Size: 0xbc
 function main() {
     load::main();
-    namespace_8a0e01ed::main();
-    thread namespace_ad0e5c15::main();
+    mp_apartments_fx::main();
+    thread mp_apartments_amb::main();
     util::waitforclient(0);
     level.endgamexcamname = "ui_cam_endgame_mp_apartments";
     setdvar("phys_buoyancy", 1);
     setdvar("phys_ragdoll_buoyancy", 1);
-    println("<unknown string>");
+    println("<dev string:x28>");
 }
 

@@ -104,14 +104,14 @@ function function_53f54d29() {
     while (!b_done) {
         var_8379db89 = 0;
         while (!self laststand::player_is_in_laststand() && self isplayerunderwater() && zombie_utility::is_player_valid(self) && !b_done) {
-            wait(1);
+            wait 1;
             var_8379db89++;
             if (var_8379db89 >= 60) {
                 self giveachievement("ZM_ISLAND_STAY_UNDERWATER");
                 b_done = 1;
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 

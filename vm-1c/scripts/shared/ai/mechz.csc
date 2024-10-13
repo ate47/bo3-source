@@ -71,7 +71,7 @@ function private function_cda3f485(localclientnum) {
 // Checksum 0x47788208, Offset: 0xd78
 // Size: 0x44
 function function_f4421436(mechz) {
-    wait(1);
+    wait 1;
     if (isdefined(mechz)) {
         mechz setsoundentcontext("movement", "normal");
     }

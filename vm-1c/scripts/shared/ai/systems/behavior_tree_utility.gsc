@@ -9,8 +9,8 @@ function function_2b3cf3b0(functionname, functionptr) {
         level._behaviortreescriptfunctions = [];
     }
     functionname = tolower(functionname);
-    assert(isdefined(functionname) && isdefined(functionptr), "<unknown string>");
-    assert(!isdefined(level._behaviortreescriptfunctions[functionname]), "<unknown string>");
+    assert(isdefined(functionname) && isdefined(functionptr), "<dev string:x28>");
+    assert(!isdefined(level._behaviortreescriptfunctions[functionname]), "<dev string:x97>");
     level._behaviortreescriptfunctions[functionname] = functionptr;
 }
 
@@ -23,19 +23,19 @@ function function_d3aec141(actionname, startfuncptr, updatefuncptr, terminatefun
         level._behaviortreeactions = [];
     }
     actionname = tolower(actionname);
-    assert(isstring(actionname), "<unknown string>");
-    assert(!isdefined(level._behaviortreeactions[actionname]), "<unknown string>" + actionname + "<unknown string>");
+    assert(isstring(actionname), "<dev string:xf4>");
+    assert(!isdefined(level._behaviortreeactions[actionname]), "<dev string:x13c>" + actionname + "<dev string:x172>");
     level._behaviortreeactions[actionname] = array();
     if (isdefined(startfuncptr)) {
-        assert(isfunctionptr(startfuncptr), "<unknown string>");
+        assert(isfunctionptr(startfuncptr), "<dev string:x18a>");
         level._behaviortreeactions[actionname]["bhtn_action_start"] = startfuncptr;
     }
     if (isdefined(updatefuncptr)) {
-        assert(isfunctionptr(updatefuncptr), "<unknown string>");
+        assert(isfunctionptr(updatefuncptr), "<dev string:x1cc>");
         level._behaviortreeactions[actionname]["bhtn_action_update"] = updatefuncptr;
     }
     if (isdefined(terminatefuncptr)) {
-        assert(isfunctionptr(terminatefuncptr), "<unknown string>");
+        assert(isfunctionptr(terminatefuncptr), "<dev string:x20f>");
         level._behaviortreeactions[actionname]["bhtn_action_terminate"] = terminatefuncptr;
     }
 }

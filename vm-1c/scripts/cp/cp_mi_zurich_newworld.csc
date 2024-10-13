@@ -13,23 +13,23 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_9925365a;
+#namespace cp_mi_zurich_newworld;
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1d003013, Offset: 0xd68
 // Size: 0x94
 function main() {
     util::function_57b966c8(&function_71f88fc, 10);
     init_clientfields();
-    namespace_bbfcd64f::main();
-    namespace_b5a65bd6::main();
+    cp_mi_zurich_newworld_fx::main();
+    cp_mi_zurich_newworld_sound::main();
     load::main();
     util::waitforclient(0);
-    namespace_c415b483::function_7403e82b();
+    cp_mi_zurich_newworld_patch_c::function_7403e82b();
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdf4634b7, Offset: 0xe08
 // Size: 0x8dc
@@ -37,38 +37,38 @@ function init_clientfields() {
     clientfield::register("actor", "diaz_camo_shader", 1, 2, "int", &function_f532bd65, 0, 1);
     duplicate_render::set_dr_filter_framebuffer("active_camo", 90, "actor_camo_on", "", 0, "mc/hud_outline_predator_camo_active_inf", 0);
     duplicate_render::set_dr_filter_framebuffer("active_camo_flicker", 80, "actor_camo_flicker", "", 0, "mc/hud_outline_predator_camo_disruption_inf", 0);
-    clientfield::register("vehicle", "name_diaz_wasp", 1, 1, "int", &function_7998d02b, 0, 1);
+    clientfield::register("vehicle", "name_diaz_wasp", 1, 1, "int", &name_diaz_wasp, 0, 1);
     clientfield::register("scriptmover", "weakpoint", 1, 1, "int", &weakpoint, 0, 0);
     duplicate_render::set_dr_filter_offscreen("weakpoint_keyline", 100, "weakpoint_keyline_show_z", "weakpoint_keyline_hide_z", 2, "mc/hud_outline_model_z_orange", 1);
-    clientfield::register("world", "factory_exterior_vents", 1, 1, "int", &function_bb2c3dcf, 0, 0);
+    clientfield::register("world", "factory_exterior_vents", 1, 1, "int", &factory_exterior_vents, 0, 0);
     clientfield::register("scriptmover", "open_vat_doors", 1, 1, "int", &function_2920b522, 0, 0);
-    clientfield::register("world", "chase_pedestrian_blockers", 1, 1, "int", &function_a48088b, 0, 0);
-    clientfield::register("toplayer", "chase_train_rumble", 1, 1, "int", &function_c9af9d76, 0, 0);
-    clientfield::register("world", "spinning_vent_fxanim", 1, 1, "int", &function_54776d63, 0, 0);
-    clientfield::register("world", "crane_fxanim", 1, 1, "int", &function_f46455d6, 0, 0);
-    clientfield::register("toplayer", "ability_wheel_tutorial", 1, 1, "int", &function_8aaa2512, 0, 0);
-    clientfield::register("world", "underground_subway_debris", 1, 2, "int", &function_a2a14d16, 0, 0);
+    clientfield::register("world", "chase_pedestrian_blockers", 1, 1, "int", &chase_pedestrian_blockers, 0, 0);
+    clientfield::register("toplayer", "chase_train_rumble", 1, 1, "int", &chase_train_rumble, 0, 0);
+    clientfield::register("world", "spinning_vent_fxanim", 1, 1, "int", &spinning_vent_fxanim, 0, 0);
+    clientfield::register("world", "crane_fxanim", 1, 1, "int", &crane_fxanim, 0, 0);
+    clientfield::register("toplayer", "ability_wheel_tutorial", 1, 1, "int", &ability_wheel_tutorial, 0, 0);
+    clientfield::register("world", "underground_subway_debris", 1, 2, "int", &underground_subway_debris, 0, 0);
     clientfield::register("world", "underground_subway_wires", 1, 1, "int", &function_9eeb165f, 0, 0);
-    clientfield::register("world", "inbound_igc_glass", 1, 2, "int", &function_1dfb5937, 0, 0);
-    clientfield::register("world", "train_robot_swing_glass_left", 1, 2, "int", &function_21d4cd3e, 0, 0);
-    clientfield::register("world", "train_robot_swing_glass_right", 1, 2, "int", &function_d5d4675, 0, 0);
+    clientfield::register("world", "inbound_igc_glass", 1, 2, "int", &inbound_igc_glass, 0, 0);
+    clientfield::register("world", "train_robot_swing_glass_left", 1, 2, "int", &train_robot_swing_glass_left, 0, 0);
+    clientfield::register("world", "train_robot_swing_glass_right", 1, 2, "int", &train_robot_swing_glass_right, 0, 0);
     clientfield::register("world", "train_robot_swing_left_extra", 1, 1, "int", &function_54711778, 0, 0);
     clientfield::register("world", "train_robot_swing_right_extra", 1, 1, "int", &function_92f89bed, 0, 0);
-    clientfield::register("world", "train_dropdown_glass", 1, 2, "int", &function_510d6e0e, 0, 0);
-    clientfield::register("world", "train_lockdown_glass_left", 1, 2, "int", &function_b57c42f8, 0, 0);
-    clientfield::register("world", "train_lockdown_glass_right", 1, 2, "int", &function_eaa27407, 0, 0);
-    clientfield::register("world", "train_lockdown_shutters_1", 1, 1, "int", &function_3c3eadc2, 0, 0);
-    clientfield::register("world", "train_lockdown_shutters_2", 1, 1, "int", &function_163c3359, 0, 0);
-    clientfield::register("world", "train_lockdown_shutters_3", 1, 1, "int", &function_f039b8f0, 0, 0);
-    clientfield::register("world", "train_lockdown_shutters_4", 1, 1, "int", &function_fa4b11cf, 0, 0);
-    clientfield::register("world", "train_lockdown_shutters_5", 1, 1, "int", &function_d4489766, 0, 0);
+    clientfield::register("world", "train_dropdown_glass", 1, 2, "int", &train_dropdown_glass, 0, 0);
+    clientfield::register("world", "train_lockdown_glass_left", 1, 2, "int", &train_lockdown_glass_left, 0, 0);
+    clientfield::register("world", "train_lockdown_glass_right", 1, 2, "int", &train_lockdown_glass_right, 0, 0);
+    clientfield::register("world", "train_lockdown_shutters_1", 1, 1, "int", &train_lockdown_shutters_1, 0, 0);
+    clientfield::register("world", "train_lockdown_shutters_2", 1, 1, "int", &train_lockdown_shutters_2, 0, 0);
+    clientfield::register("world", "train_lockdown_shutters_3", 1, 1, "int", &train_lockdown_shutters_3, 0, 0);
+    clientfield::register("world", "train_lockdown_shutters_4", 1, 1, "int", &train_lockdown_shutters_4, 0, 0);
+    clientfield::register("world", "train_lockdown_shutters_5", 1, 1, "int", &train_lockdown_shutters_5, 0, 0);
     clientfield::register("actor", "train_throw_robot_corpses", 1, 1, "int", &function_b758d8f, 0, 0);
     clientfield::register("scriptmover", "train_throw_robot_corpses", 1, 1, "int", &function_b758d8f, 0, 0);
-    clientfield::register("world", "train_brake_flaps", 1, 2, "int", &function_417ec9c, 0, 0);
-    clientfield::register("world", "sndTrainContext", 1, 2, "int", &namespace_b5a65bd6::function_98d2df25, 0, 0);
+    clientfield::register("world", "train_brake_flaps", 1, 2, "int", &train_brake_flaps, 0, 0);
+    clientfield::register("world", "sndTrainContext", 1, 2, "int", &cp_mi_zurich_newworld_sound::sndTrainContext, 0, 0);
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 1, eflags: 0x1 linked
 // Checksum 0x1ece4ad5, Offset: 0x16f0
 // Size: 0x2be
@@ -116,11 +116,11 @@ function function_71f88fc(n_zone) {
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb31b7d20, Offset: 0x19b8
 // Size: 0x94
-function function_bb2c3dcf(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function factory_exterior_vents(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         smodelanimcmd("factory_vents", "pause");
         return;
@@ -128,7 +128,7 @@ function function_bb2c3dcf(local_client_num, oldval, newval, bnewent, binitialsn
     smodelanimcmd("factory_vents", "unpause");
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0x631cf453, Offset: 0x1a58
 // Size: 0xa4
@@ -138,7 +138,7 @@ function function_f532bd65(local_client_num, oldval, newval, bnewent, binitialsn
     self duplicate_render::change_dr_flags(local_client_num);
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0x557bb92a, Offset: 0x1b08
 // Size: 0xcc
@@ -152,21 +152,21 @@ function weakpoint(localclientnum, oldval, newval, bnewent, binitialsnap, fieldn
     self weakpoint_enable(0);
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8fbb0d25, Offset: 0x1be0
 // Size: 0x64
-function function_7998d02b(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function name_diaz_wasp(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self setdrawname("Diaz", 1);
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0xfa0c5d1e, Offset: 0x1c50
 // Size: 0x84
-function function_a48088b(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function chase_pedestrian_blockers(local_client_num, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         function_1583bd50(local_client_num, 1);
         return;
@@ -174,7 +174,7 @@ function function_a48088b(local_client_num, oldval, newval, bnewent, binitialsna
     function_1583bd50(local_client_num, 0);
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc6d7ec7b, Offset: 0x1ce0
 // Size: 0x272
@@ -205,11 +205,11 @@ function function_1583bd50(localclientnum, var_f4d36bbd) {
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe6de1e94, Offset: 0x1f60
 // Size: 0x94
-function function_c9af9d76(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function chase_train_rumble(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self playrumblelooponentity(localclientnum, "cp_newworld_rumble_chase_train_near");
         return;
@@ -217,11 +217,11 @@ function function_c9af9d76(localclientnum, oldval, newval, bnewent, binitialsnap
     self stoprumble(localclientnum, "cp_newworld_rumble_chase_train_near");
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa4193bb8, Offset: 0x2000
 // Size: 0xcc
-function function_54776d63(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function spinning_vent_fxanim(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         level thread scene::play("p7_fxanim_gp_vent_roof_wobble_bundle");
         level thread scene::play("p7_fxanim_gp_vent_roof_slow_bundle");
@@ -231,11 +231,11 @@ function function_54776d63(localclientnum, oldval, newval, bnewent, binitialsnap
     level thread scene::stop("p7_fxanim_gp_vent_roof_slow_bundle", 1);
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0x64854150, Offset: 0x20d8
 // Size: 0xcc
-function function_f46455d6(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function crane_fxanim(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         level thread scene::play("p7_fxanim_gp_crane_hook_small_01_bundle");
         level thread scene::play("p7_fxanim_gp_crane_pallet_01_bundle");
@@ -245,19 +245,19 @@ function function_f46455d6(localclientnum, oldval, newval, bnewent, binitialsnap
     level thread scene::stop("p7_fxanim_gp_crane_pallet_01_bundle", 1);
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbb8fc06d, Offset: 0x21b0
 // Size: 0x3c
-function function_8aaa2512(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function ability_wheel_tutorial(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0xae6b064a, Offset: 0x21f8
 // Size: 0xac
-function function_a2a14d16(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function underground_subway_debris(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         scene::init("p7_fxanim_cp_newworld_subway_debris_01_bundle");
         return;
@@ -269,11 +269,11 @@ function function_a2a14d16(localclientnum, oldval, newval, bnewent, binitialsnap
     scene::stop("p7_fxanim_cp_newworld_subway_debris_01_bundle", 1);
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0xae206d12, Offset: 0x22b0
 // Size: 0xe4
-function function_1dfb5937(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function inbound_igc_glass(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         scene::init("p7_fxanim_cp_newworld_train_glass_01_bundle");
         return;
@@ -288,11 +288,11 @@ function function_1dfb5937(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc25c284b, Offset: 0x23a0
 // Size: 0x16a
-function function_21d4cd3e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function train_robot_swing_glass_left(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         scene::init("p7_fxanim_cp_newworld_train_glass_02_bundle");
         return;
@@ -308,11 +308,11 @@ function function_21d4cd3e(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0x7d382f42, Offset: 0x2518
 // Size: 0x16a
-function function_d5d4675(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function train_robot_swing_glass_right(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         scene::init("p7_fxanim_cp_newworld_train_glass_03_bundle");
         return;
@@ -328,7 +328,7 @@ function function_d5d4675(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe413309, Offset: 0x2690
 // Size: 0x8c
@@ -339,7 +339,7 @@ function function_54711778(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa1fa10ca, Offset: 0x2728
 // Size: 0x8c
@@ -350,11 +350,11 @@ function function_92f89bed(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0xfbbd417a, Offset: 0x27c0
 // Size: 0xe4
-function function_510d6e0e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function train_dropdown_glass(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         scene::init("p7_fxanim_cp_newworld_train_glass_06_bundle");
         return;
@@ -369,11 +369,11 @@ function function_510d6e0e(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6c447fd1, Offset: 0x28b0
 // Size: 0x10c
-function function_b57c42f8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function train_lockdown_glass_left(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         scene::init("p7_fxanim_cp_newworld_train_glass_04_bundle");
         return;
@@ -389,11 +389,11 @@ function function_b57c42f8(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0xfa08f401, Offset: 0x29c8
 // Size: 0xf2
-function function_eaa27407(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function train_lockdown_glass_right(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         scene::init("p7_fxanim_cp_newworld_train_glass_05_bundle");
     } else if (newval == 2) {
@@ -407,11 +407,11 @@ function function_eaa27407(localclientnum, oldval, newval, bnewent, binitialsnap
     level notify(#"hash_6b336e59");
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0x951ada5a, Offset: 0x2ac8
 // Size: 0x142
-function function_3c3eadc2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function train_lockdown_shutters_1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         s_scene = struct::get("train_shutter_01", "targetname");
         s_scene scene::play();
@@ -423,51 +423,51 @@ function function_3c3eadc2(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0x89aa7ec2, Offset: 0x2c18
 // Size: 0x8c
-function function_163c3359(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function train_lockdown_shutters_2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         s_scene = struct::get("train_shutter_02", "targetname");
         s_scene scene::play();
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4c1bbe3e, Offset: 0x2cb0
 // Size: 0x8c
-function function_f039b8f0(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function train_lockdown_shutters_3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         s_scene = struct::get("train_shutter_03", "targetname");
         s_scene scene::play();
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc4a2307d, Offset: 0x2d48
 // Size: 0x8c
-function function_fa4b11cf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function train_lockdown_shutters_4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         s_scene = struct::get("train_shutter_04", "targetname");
         s_scene scene::play();
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0x117b8102, Offset: 0x2de0
 // Size: 0x8c
-function function_d4489766(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function train_lockdown_shutters_5(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         s_scene = struct::get("train_shutter_05", "targetname");
         s_scene scene::play();
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8559655e, Offset: 0x2e78
 // Size: 0x96
@@ -481,7 +481,7 @@ function function_b758d8f(localclientnum, oldval, newval, bnewent, binitialsnap,
     level notify(#"hash_4ce164a6");
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf67fdfc, Offset: 0x2f18
 // Size: 0x1a4
@@ -500,14 +500,14 @@ function function_965a6439(localclientnum) {
             n_y = randomfloatrange(-100, 100);
             n_z = randomfloatrange(10, 100);
             self launchragdoll((n_x, n_y, n_z));
-            self thread namespace_ce0e5f06::function_52bc98a1(localclientnum);
+            self thread newworld_util::function_52bc98a1(localclientnum);
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbb857e31, Offset: 0x30c8
 // Size: 0x3e4
@@ -551,16 +551,16 @@ function function_a860cb86(localclientnum) {
                     }
                     self launchragdoll((0, n_y, n_z));
                     level thread function_a251bd0b(localclientnum, var_9881fa10);
-                    wait(0.25);
+                    wait 0.25;
                     break;
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 2, eflags: 0x1 linked
 // Checksum 0xb0927fe1, Offset: 0x34b8
 // Size: 0xbc
@@ -571,15 +571,15 @@ function function_a251bd0b(localclientnum, var_9881fa10) {
     var_9881fa10 waittill(#"rotatedone");
     var_9881fa10 rotatepitch(-25, 0.5);
     var_9881fa10 thread function_20e68acf(localclientnum);
-    wait(0.5);
+    wait 0.5;
     var_9881fa10.var_a3256cdc = 0;
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0x9adca36c, Offset: 0x3580
 // Size: 0x3ba
-function function_417ec9c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function train_brake_flaps(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         var_a1ec3453 = getentarray(localclientnum, "train_roof_flap", "targetname");
         foreach (var_13f418 in var_a1ec3453) {
@@ -598,18 +598,18 @@ function function_417ec9c(localclientnum, oldval, newval, bnewent, binitialsnap,
             }
             var_13f418 rotatepitch(-90, 0.5);
             var_13f418 thread function_20e68acf(localclientnum);
-            var_13f418 thread namespace_ce0e5f06::function_ff1b6796(localclientnum);
+            var_13f418 thread newworld_util::function_ff1b6796(localclientnum);
             var_13f418 playloopsound("evt_airbreak_loop");
             var_13f418 playsound(0, "evt_airbreak_deploy");
             n_count++;
             if (n_count % 3 == 0) {
-                wait(0.25);
+                wait 0.25;
             }
         }
         return;
     }
     if (newval == 2) {
-        level notify(#"hash_1576c4c2");
+        level notify(#"newworld_train_complete");
         var_a1ec3453 = getentarray(localclientnum, "train_roof_flap", "targetname");
         foreach (var_13f418 in var_a1ec3453) {
             if (isdefined(var_13f418.var_f3f44e9)) {
@@ -620,12 +620,12 @@ function function_417ec9c(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 1, eflags: 0x1 linked
 // Checksum 0x3475560b, Offset: 0x3948
 // Size: 0xf4
 function function_20e68acf(localclientnum) {
-    level endon(#"hash_1576c4c2");
+    level endon(#"newworld_train_complete");
     self endon(#"hash_47e64fc0");
     self waittill(#"rotatedone");
     while (true) {
@@ -639,7 +639,7 @@ function function_20e68acf(localclientnum) {
     }
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6bebaa4c, Offset: 0x3a48
 // Size: 0x274
@@ -662,7 +662,7 @@ function function_2920b522(localclientnum, oldval, newval, bnewent, binitialsnap
     var_3c301126 playsound(0, "evt_vat_door_close");
 }
 
-// Namespace namespace_9925365a
+// Namespace cp_mi_zurich_newworld
 // Params 7, eflags: 0x1 linked
 // Checksum 0x869ace88, Offset: 0x3cc8
 // Size: 0x10c

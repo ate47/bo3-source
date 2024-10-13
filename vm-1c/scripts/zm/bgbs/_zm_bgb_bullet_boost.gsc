@@ -67,7 +67,7 @@ function activation() {
     current_weapon = self zm_weapons::switch_from_alt_weapon(current_weapon);
     var_3a5329e8 = 0;
     while (current_weapon === level.weaponnone || !zm_weapons::weapon_supports_aat(current_weapon)) {
-        wait(0.05);
+        wait 0.05;
         current_weapon = self getcurrentweapon();
         var_3a5329e8++;
         if ((current_weapon === level.weaponnone || !zm_weapons::weapon_supports_aat(current_weapon)) && var_3a5329e8 > 300) {

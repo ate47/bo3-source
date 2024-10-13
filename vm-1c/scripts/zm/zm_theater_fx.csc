@@ -4,9 +4,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_265ae7e9;
+#namespace zm_theater_fx;
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd7417bc, Offset: 0x15d0
 // Size: 0x18c
@@ -25,7 +25,7 @@ function main() {
     level thread function_d0afe567();
 }
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x779924ef, Offset: 0x1768
 // Size: 0x286
@@ -55,7 +55,7 @@ function function_f45953c() {
     level._effect["perk_machine_light_green"] = "dlc5/zmhd/fx_wonder_fizz_light_green";
 }
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd2504200, Offset: 0x19f8
 // Size: 0x6e6
@@ -125,7 +125,7 @@ function function_e6258024() {
     level._effect["fx_quad_dust_roof"] = "maps/zombie/fx_zombie_crawler_dust_roof";
 }
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 3, eflags: 0x1 linked
 // Checksum 0x7f2c747a, Offset: 0x20e8
 // Size: 0x11a
@@ -145,7 +145,7 @@ function trap_fx_monitor(name, loc, trap_type) {
     }
 }
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 2, eflags: 0x1 linked
 // Checksum 0xdc301033, Offset: 0x2210
 // Size: 0x260
@@ -164,13 +164,13 @@ function function_68c9b7de(loc, trap_type) {
     }
     fx_name = "";
     switch (trap_type) {
-    case 3:
+    case "electric":
         fx_name = "zapper";
         break;
-    case 0:
+    case "electric_tall":
         fx_name = "zapper_tall";
         break;
-    case 10:
+    case "fire":
     default:
         fx_name = "fire_trap_med";
         break;
@@ -187,12 +187,12 @@ function function_68c9b7de(loc, trap_type) {
     self.loopfx = [];
 }
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 2, eflags: 0x1 linked
 // Checksum 0x11bb608b, Offset: 0x2478
 // Size: 0xe8
 function function_30e2d0b9(name, model) {
-    level waittill(#"hash_a39e7bd2");
+    level waittill(#"pl1");
     players = getlocalplayers();
     for (p = 0; p < players.size; p++) {
         var_8f5c2f5e = getentarray(p, name, "targetname");
@@ -202,7 +202,7 @@ function function_30e2d0b9(name, model) {
     }
 }
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2051bed1, Offset: 0x2568
 // Size: 0x374
@@ -220,7 +220,7 @@ function function_d0afe567() {
     if (!isdefined(var_846b23bf.script_string)) {
         var_846b23bf.script_string = "ps0";
     }
-    wait(0.016);
+    wait 0.016;
     if (!level clientfield::get("zm_theater_screen_in_place")) {
         level waittill(#"hash_503bca4f");
     }
@@ -240,7 +240,7 @@ function function_d0afe567() {
     function_4c75814e(var_3c94eadd);
 }
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4fef4caa, Offset: 0x28e8
 // Size: 0x6c
@@ -250,7 +250,7 @@ function function_4c75814e(var_37708867) {
     level thread function_66aca41c(var_37708867, "ps3");
 }
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 2, eflags: 0x1 linked
 // Checksum 0x9be687e2, Offset: 0x2960
 // Size: 0x118
@@ -268,17 +268,17 @@ function function_66aca41c(var_72515d6d, var_47653dff) {
     }
 }
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 7, eflags: 0x1 linked
 // Checksum 0x57412156, Offset: 0x2a80
 // Size: 0x96
 function function_e4b3e1ca(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     switch (newval) {
     case 1:
-        level notify(#"hash_90645a63");
+        level notify(#"ps1");
         break;
     case 2:
-        level notify(#"hash_1e5ceb28");
+        level notify(#"ps2");
         break;
     case 3:
         level notify(#"ps3");
@@ -286,7 +286,7 @@ function function_e4b3e1ca(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe4d4a6d6, Offset: 0x2b20
 // Size: 0x82
@@ -300,7 +300,7 @@ function function_54ae2c5f() {
     }
 }
 
-// Namespace namespace_265ae7e9
+// Namespace zm_theater_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x78281ab3, Offset: 0x2bb0
 // Size: 0x82

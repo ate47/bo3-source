@@ -164,7 +164,7 @@ function scoreeventplayerkill(data, time) {
         }
     }
     switch (weapon.name) {
-    case 23:
+    case "hatchet":
         attacker.pers["tomahawks"]++;
         attacker.tomahawks = attacker.pers["tomahawks"];
         processscoreevent("hatchet_kill", attacker, victim, weapon);
@@ -173,8 +173,8 @@ function scoreeventplayerkill(data, time) {
             processscoreevent("bounce_hatchet_kill", attacker, victim, weapon);
         }
         break;
-    case 24:
-    case 25:
+    case "inventory_supplydrop":
+    case "supplydrop":
         if (meansofdeath == "MOD_HIT_BY_OBJECT" || meansofdeath == "MOD_CRUSH") {
             processscoreevent("kill_enemy_with_care_package_crush", attacker, victim, weapon);
         } else {
@@ -375,14 +375,14 @@ function updatemultikills(weapon, weaponclass, killstreak) {
     }
     if (isdefined(killstreak)) {
         switch (killstreak) {
-        case 66:
+        case "remote_missile":
             self.recentremotemissilekillcount++;
             break;
-        case 65:
+        case "rcbomb":
             self.recentrcbombkillcount++;
             break;
-        case 64:
-        case 28:
+        case "inventory_m32":
+        case "m32":
             self.recentmglkillcount++;
             break;
         }
@@ -423,7 +423,7 @@ function updatemultikills(weapon, weaponclass, killstreak) {
 // Size: 0x1c
 function waittilltimeoutordeath(timeout) {
     self endon(#"death");
-    wait(timeout);
+    wait timeout;
 }
 
 // Namespace scoreevents
@@ -439,7 +439,7 @@ function updateoneshotmultikills(victim, weapon, firsttimedamaged) {
         self.oneshotmultikills = 0;
     }
     self.oneshotmultikills++;
-    wait(1);
+    wait 1;
     if (self.oneshotmultikills > 1) {
         processscoreevent("kill_enemies_one_bullet", self, victim, weapon);
     } else {
@@ -455,30 +455,30 @@ function updateoneshotmultikills(victim, weapon, firsttimedamaged) {
 function get_distance_for_weapon(weapon, weaponclass) {
     distance = 0;
     switch (weaponclass) {
-    case 63:
+    case "weapon_smg":
         distance = 1562500;
         break;
-    case 71:
+    case "weapon_assault":
         distance = 2250000;
         break;
-    case 62:
+    case "weapon_lmg":
         distance = 2250000;
         break;
-    case 51:
+    case "weapon_sniper":
         distance = 3062500;
         break;
-    case 74:
+    case "weapon_pistol":
         distance = 490000;
         break;
-    case 72:
+    case "weapon_cqb":
         distance = 422500;
         break;
-    case 75:
+    case "weapon_special":
         if (weapon == level.weaponballisticknife) {
             distance = 2250000;
         }
         break;
-    case 73:
+    case "weapon_grenade":
         if (weapon.name == "hatchet") {
             distance = 6250000;
         }

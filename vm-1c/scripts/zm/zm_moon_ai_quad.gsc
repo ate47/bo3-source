@@ -21,9 +21,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_c7d03b9b;
+#namespace zm_moon_ai_quad;
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 0, eflags: 0x2
 // Checksum 0xa925bffa, Offset: 0x620
 // Size: 0x3c
@@ -32,15 +32,15 @@ function autoexec init() {
     spawner::add_archetype_spawn_function("zombie_quad", &function_5076473f);
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 0, eflags: 0x5 linked
 // Checksum 0xa4112eb7, Offset: 0x668
 // Size: 0x174
 function private function_e9b3dfb0() {
-    behaviortreenetworkutility::registerbehaviortreescriptapi("quadPhasingService", &function_22590b59);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("shouldPhase", &function_3293af29);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("phaseActionStart", &function_a4506abc);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("phaseActionTerminate", &function_ef291bc5);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("quadPhasingService", &quadPhasingService);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("shouldPhase", &shouldPhase);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("phaseActionStart", &phaseActionStart);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("phaseActionTerminate", &phaseActionTerminate);
     behaviortreenetworkutility::registerbehaviortreescriptapi("moonQuadKilledByMicrowaveGunDw", &function_3679b8f9);
     behaviortreenetworkutility::registerbehaviortreescriptapi("moonQuadKilledByMicrowaveGun", &function_8defac52);
     animationstatenetwork::registernotetrackhandlerfunction("phase_start", &function_51ab54f7);
@@ -48,11 +48,11 @@ function private function_e9b3dfb0() {
     animationstatenetwork::registeranimationmocomp("quad_phase", &function_4e0a671e, undefined, undefined);
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 1, eflags: 0x5 linked
 // Checksum 0x500b30f7, Offset: 0x7e8
 // Size: 0x39c
-function private function_22590b59(entity) {
+function private quadPhasingService(entity) {
     if (isdefined(entity.is_phasing) && entity.is_phasing) {
         return false;
     }
@@ -97,11 +97,11 @@ function private function_22590b59(entity) {
     return false;
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb53c5092, Offset: 0xb90
 // Size: 0x22c
-function private function_3293af29(entity) {
+function private shouldPhase(entity) {
     if (!(isdefined(entity.can_phase) && entity.can_phase)) {
         return false;
     }
@@ -140,11 +140,11 @@ function private function_3293af29(entity) {
     return true;
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 1, eflags: 0x5 linked
 // Checksum 0x7bc2833c, Offset: 0xdc8
 // Size: 0x7c
-function private function_a4506abc(entity) {
+function private phaseActionStart(entity) {
     entity.is_phasing = 1;
     if (entity.var_3b07930a == "quad_phase_left") {
         entity.var_20535e44--;
@@ -155,16 +155,16 @@ function private function_a4506abc(entity) {
     }
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 1, eflags: 0x5 linked
 // Checksum 0x682f8065, Offset: 0xe50
 // Size: 0x2c
-function private function_ef291bc5(entity) {
+function private phaseActionTerminate(entity) {
     entity.var_b7d765b3 = gettime();
     entity.is_phasing = 0;
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb4d12f1d, Offset: 0xe88
 // Size: 0x2e
@@ -172,7 +172,7 @@ function private function_3679b8f9(entity) {
     return isdefined(entity.var_bac7b83d) && entity.var_bac7b83d;
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4f24dc7b, Offset: 0xec0
 // Size: 0x2e
@@ -180,7 +180,7 @@ function private function_8defac52(entity) {
     return isdefined(entity.microwavegun_death) && entity.microwavegun_death;
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 1, eflags: 0x5 linked
 // Checksum 0x53349f2e, Offset: 0xef8
 // Size: 0x44
@@ -189,7 +189,7 @@ function private function_51ab54f7(entity) {
     entity ghost();
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 1, eflags: 0x5 linked
 // Checksum 0xa29b838f, Offset: 0xf48
 // Size: 0x44
@@ -198,7 +198,7 @@ function private function_428f351c(entity) {
     entity show();
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 5, eflags: 0x5 linked
 // Checksum 0xe29d6ad6, Offset: 0xf98
 // Size: 0x4c
@@ -206,7 +206,7 @@ function private function_4e0a671e(entity, mocompanim, mocompanimblendouttime, m
     entity animmode("gravity", 0);
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3c6524ed, Offset: 0xff0
 // Size: 0x17e
@@ -224,7 +224,7 @@ function function_5076473f() {
     }
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 0, eflags: 0x0
 // Checksum 0x82f11bf4, Offset: 0x1178
 // Size: 0x54
@@ -236,7 +236,7 @@ function function_e23e8d13() {
     self.var_1562ef49 = &function_1fe01b05;
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 2, eflags: 0x1 linked
 // Checksum 0x498f4ad1, Offset: 0x11d8
 // Size: 0x164
@@ -263,7 +263,7 @@ function function_11b04bf0(animname, var_1f230408) {
     }
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 0, eflags: 0x1 linked
 // Checksum 0x256543ad, Offset: 0x1348
 // Size: 0x2a
@@ -274,7 +274,7 @@ function function_1fe01b05() {
     return "super_sprint";
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 1, eflags: 0x1 linked
 // Checksum 0x45746c11, Offset: 0x1380
 // Size: 0x92
@@ -282,26 +282,26 @@ function function_734565f2(var_1f230408) {
     self endon(#"death");
     self endon(#"hash_acf98edd");
     anim_length = getanimlength(var_1f230408);
-    wait(anim_length);
+    wait anim_length;
     self thread function_4474334d("quad_phasing_in");
     self show();
     self notify(#"hash_8e875043");
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4a91a0b, Offset: 0x1420
 // Size: 0x6a
 function function_73d82859(var_1f230408) {
     self endon(#"death");
     anim_length = getanimlength(var_1f230408);
-    wait(anim_length);
+    wait anim_length;
     if (!(isdefined(self.exit_align) && self.exit_align)) {
         self notify(#"hash_1f230408", "exit_align");
     }
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8bb9db1, Offset: 0x1498
 // Size: 0x54
@@ -312,7 +312,7 @@ function function_4474334d(var_99a8589b) {
     }
 }
 
-// Namespace namespace_c7d03b9b
+// Namespace zm_moon_ai_quad
 // Params 0, eflags: 0x0
 // Checksum 0xa44a2e4a, Offset: 0x14f8
 // Size: 0x1a

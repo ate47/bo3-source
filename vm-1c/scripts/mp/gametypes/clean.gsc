@@ -161,12 +161,12 @@ function function_7ae0a91b() {
     // Size: 0xde
     function debug_print() {
         while (true) {
-            iprintln("EnemyOrange" + level.activedrops);
-            iprintln("clean_objective_scatter_trig" + level.var_48919db8);
-            iprintln("hubOffline" + level.var_b24377b2);
-            iprintln("mpl_fracture_deposit_4" + level.var_6a17c1e8);
-            iprintln("mpl_fracture_enemy_pickup_l" + level.var_dcae370c);
-            wait(5);
+            iprintln("<dev string:x28>" + level.activedrops);
+            iprintln("<dev string:x31>" + level.var_48919db8);
+            iprintln("<dev string:x3f>" + level.var_b24377b2);
+            iprintln("<dev string:x4b>" + level.var_6a17c1e8);
+            iprintln("<dev string:x57>" + level.var_dcae370c);
+            wait 5;
         }
     }
 
@@ -413,7 +413,7 @@ function function_31778038() {
         }
         self.trigger.origin = self.var_88b94427.origin;
         objective_position(self.objectiveid, self.trigger.origin);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -447,7 +447,7 @@ function function_3073cc55() {
 function timeout_wait() {
     level endon(#"game_ended");
     self endon(#"reset");
-    wait(60);
+    wait 60;
     /#
         level.var_b24377b2++;
     #/
@@ -503,7 +503,7 @@ function function_f4229f9e() {
     function_afb9f455();
     if (!isdefined(level.cleandepositpoints)) {
         /#
-            util::error("<unknown string>");
+            util::error("<dev string:x60>");
         #/
         return;
     }
@@ -574,7 +574,7 @@ function function_9bc55b1b() {
     if (wait_time < 0) {
         wait_time = level.cleandepositonlinetime * 0.05;
     }
-    wait(wait_time);
+    wait wait_time;
     if (!isdefined(self.baseeffect)) {
         return;
     }
@@ -595,7 +595,7 @@ function function_9bc55b1b() {
 function function_5b1f87d2() {
     level endon(#"game_ended");
     while (level.inprematchperiod) {
-        wait(0.05);
+        wait 0.05;
     }
     setbombtimer("A", 0);
     setmatchflag("bomb_timer_a", 0);
@@ -610,7 +610,7 @@ function function_5b1f87d2() {
                     globallogic_audio::play_2d_on_team("mpl_fracture_sting_powerdown", team);
                 }
             }
-            wait(level.var_c8a5fbc4);
+            wait level.var_c8a5fbc4;
         }
         var_ad07d7b1 = function_a293cd04(var_1bc0e62e);
         deposithub = level.cleandeposithubs[var_ad07d7b1];
@@ -632,7 +632,7 @@ function function_5b1f87d2() {
             }
         }
         var_1bc0e62e = var_ad07d7b1;
-        wait(level.cleandepositonlinetime);
+        wait level.cleandepositonlinetime;
         deposithub gameobjects::allow_use("none");
         deposithub gameobjects::set_visible_team("none");
         deposithub spawning::enable_influencers(0);
@@ -796,12 +796,12 @@ function function_aaca5c8e(var_b9fd331) {
     self endon(#"disconnect");
     level endon(#"hash_9c7ac0c3");
     self thread function_cde390a2();
-    wait(0.1);
+    wait 0.1;
     while (true) {
         if (distance2dsquared(self.origin, var_b9fd331.origin) > 90 * 90) {
             break;
         }
-        wait(0.1);
+        wait 0.1;
     }
     self.var_3d64ac00 = 0;
 }
@@ -931,7 +931,7 @@ function function_5d5411e2(attacker, yawangle) {
     self clientfield::set_player_uimodel("hudItems.cleanCarryCount", self.carriedtacos);
     self function_65ae6452();
     /#
-        dropcount += getdvarint("<unknown string>", 0);
+        dropcount += getdvarint("<dev string:x9d>", 0);
     #/
     var_cdaa100d = 360 / (dropcount + 1);
     for (i = 0; i < dropcount; i++) {

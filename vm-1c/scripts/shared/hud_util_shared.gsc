@@ -79,46 +79,46 @@ function setpoint(point, relativepoint, xoffset, yoffset, movetime) {
     self.alignx = "center";
     self.aligny = "middle";
     switch (point) {
-    case 12:
+    case "CENTER":
         break;
-    case 0:
+    case "TOP":
         self.aligny = "top";
         break;
-    case 7:
+    case "BOTTOM":
         self.aligny = "bottom";
         break;
-    case 13:
+    case "LEFT":
         self.alignx = "left";
         break;
-    case 14:
+    case "RIGHT":
         self.alignx = "right";
         break;
-    case 17:
-    case 19:
+    case "TOPRIGHT":
+    case "TOP_RIGHT":
         self.aligny = "top";
         self.alignx = "right";
         break;
-    case 16:
-    case 18:
+    case "TOPLEFT":
+    case "TOP_LEFT":
         self.aligny = "top";
         self.alignx = "left";
         break;
-    case 15:
+    case "TOPCENTER":
         self.aligny = "top";
         self.alignx = "center";
         break;
-    case 9:
-    case 11:
+    case "BOTTOM RIGHT":
+    case "BOTTOM_RIGHT":
         self.aligny = "bottom";
         self.alignx = "right";
         break;
-    case 8:
-    case 10:
+    case "BOTTOM LEFT":
+    case "BOTTOM_LEFT":
         self.aligny = "bottom";
         self.alignx = "left";
         break;
     default:
-        println("BOTTOM LEFT" + point);
+        println("<dev string:x28>" + point);
         break;
     }
     if (!isdefined(relativepoint)) {
@@ -128,46 +128,46 @@ function setpoint(point, relativepoint, xoffset, yoffset, movetime) {
     relativex = "center";
     relativey = "middle";
     switch (relativepoint) {
-    case 12:
+    case "CENTER":
         break;
-    case 0:
+    case "TOP":
         relativey = "top";
         break;
-    case 7:
+    case "BOTTOM":
         relativey = "bottom";
         break;
-    case 13:
+    case "LEFT":
         relativex = "left";
         break;
-    case 14:
+    case "RIGHT":
         relativex = "right";
         break;
-    case 17:
-    case 19:
+    case "TOPRIGHT":
+    case "TOP_RIGHT":
         relativey = "top";
         relativex = "right";
         break;
-    case 16:
-    case 18:
+    case "TOPLEFT":
+    case "TOP_LEFT":
         relativey = "top";
         relativex = "left";
         break;
-    case 15:
+    case "TOPCENTER":
         relativey = "top";
         relativex = "center";
         break;
-    case 9:
-    case 11:
+    case "BOTTOM RIGHT":
+    case "BOTTOM_RIGHT":
         relativey = "bottom";
         relativex = "right";
         break;
-    case 8:
-    case 10:
+    case "BOTTOM LEFT":
+    case "BOTTOM_LEFT":
         relativey = "bottom";
         relativex = "left";
         break;
     default:
-        println("BOTTOM LEFT" + relativepoint);
+        println("<dev string:x58>" + relativepoint);
         break;
     }
     if (element == level.uiparent) {
@@ -218,7 +218,7 @@ function setpoint(point, relativepoint, xoffset, yoffset, movetime) {
     self.x += self.xoffset;
     self.y += self.yoffset;
     switch (self.elemtype) {
-    case 20:
+    case "bar":
         setpointbar(point, relativepoint, xoffset, yoffset);
         self.barframe setparent(self getparent());
         self.barframe setpoint(point, relativepoint, xoffset, yoffset);
@@ -273,13 +273,13 @@ function updatebarscale(barfrac, rateofchange) {
     }
     self.bar.frac = barfrac;
     self.bar setshader(self.bar.shader, barwidth, self.height);
-    assert(barwidth <= self.width, "BOTTOM LEFT" + barwidth + "BOTTOM LEFT" + self.width + "BOTTOM LEFT" + barfrac);
+    assert(barwidth <= self.width, "<dev string:x90>" + barwidth + "<dev string:xa9>" + self.width + "<dev string:xae>" + barfrac);
     if (isdefined(rateofchange) && barwidth < self.width) {
         if (rateofchange > 0) {
-            assert((1 - barfrac) / rateofchange > 0, "BOTTOM LEFT" + barfrac + "BOTTOM LEFT" + rateofchange);
+            assert((1 - barfrac) / rateofchange > 0, "<dev string:xbe>" + barfrac + "<dev string:xc8>" + rateofchange);
             self.bar scaleovertime((1 - barfrac) / rateofchange, self.width, self.height);
         } else if (rateofchange < 0) {
-            assert(barfrac / -1 * rateofchange > 0, "BOTTOM LEFT" + barfrac + "BOTTOM LEFT" + rateofchange);
+            assert(barfrac / -1 * rateofchange > 0, "<dev string:xbe>" + barfrac + "<dev string:xc8>" + rateofchange);
             self.bar scaleovertime(barfrac / -1 * rateofchange, 1, self.height);
         }
     }
@@ -729,17 +729,17 @@ function flashthread() {
             if (!self.hidden) {
                 self fadeovertime(0.3);
                 self.alpha = 0.2;
-                wait(0.35);
+                wait 0.35;
                 self fadeovertime(0.3);
                 self.alpha = 1;
             }
-            wait(0.7);
+            wait 0.7;
             continue;
         }
         if (!self.hidden && self.alpha != 1) {
             self.alpha = 1;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -922,7 +922,7 @@ function showperks() {
 // Checksum 0x6af53447, Offset: 0x31f8
 // Size: 0x2dc
 function function_ae77a5ba(index, perk, ypos) {
-    assert(game["BOTTOM LEFT"] != "BOTTOM LEFT");
+    assert(game["<dev string:xd7>"] != "<dev string:xdd>");
     if (!isdefined(self.perkicon)) {
         self.perkicon = [];
         self.perkname = [];
@@ -979,7 +979,7 @@ function function_74b6cb2d(index, fadetime, var_deead00e) {
 // Checksum 0xe166c355, Offset: 0x3668
 // Size: 0x15c
 function function_8842ffe4(index, killstreak, xpos, ypos) {
-    assert(game["BOTTOM LEFT"] != "BOTTOM LEFT");
+    assert(game["<dev string:xd7>"] != "<dev string:xdd>");
     if (!isdefined(self.killstreakicon)) {
         self.killstreakicon = [];
     }

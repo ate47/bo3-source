@@ -3,9 +3,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_68dfcbbe;
+#namespace enemy_highlight;
 
-// Namespace namespace_68dfcbbe
+// Namespace enemy_highlight
 // Params 7, eflags: 0x0
 // Checksum 0xf052860f, Offset: 0x160
 // Size: 0x82
@@ -16,7 +16,7 @@ function function_a2489af5(localclientnum, materialname, size, var_e9190fc5, var
     self thread function_43ee2d3f(localclientnum, materialname, size, var_e9190fc5, var_125eba4d, var_fe79589d);
 }
 
-// Namespace namespace_68dfcbbe
+// Namespace enemy_highlight
 // Params 3, eflags: 0x0
 // Checksum 0x57480220, Offset: 0x1f0
 // Size: 0x245
@@ -57,11 +57,11 @@ function function_eab5058b(localclientnum, var_63949c1d, var_fe79589d) {
                 }
             }
         }
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_68dfcbbe
+// Namespace enemy_highlight
 // Params 6, eflags: 0x0
 // Checksum 0xaa300ab, Offset: 0x440
 // Size: 0x6dd
@@ -158,18 +158,18 @@ function function_43ee2d3f(localclientnum, materialname, size, var_e9190fc5, var
             closeluimenu(localclientnum, self.var_e88f18d7[entnum]);
             self.var_e88f18d7[entnum] = undefined;
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_68dfcbbe
+// Namespace enemy_highlight
 // Params 1, eflags: 0x0
 // Checksum 0xfeacc03, Offset: 0xb28
 // Size: 0xa1
 function function_5f9074e0(localclientnum) {
     self notify(#"hash_a2489af5");
     self endon(#"hash_a2489af5");
-    wait(0.016);
+    wait 0.016;
     if (isdefined(self.var_e88f18d7)) {
         foreach (hudelem in self.var_e88f18d7) {
             closeluimenu(localclientnum, hudelem);
@@ -179,7 +179,7 @@ function function_5f9074e0(localclientnum) {
     self.var_a2489af5 = undefined;
 }
 
-// Namespace namespace_68dfcbbe
+// Namespace enemy_highlight
 // Params 4, eflags: 0x0
 // Checksum 0x567bda0f, Offset: 0xbd8
 // Size: 0x194

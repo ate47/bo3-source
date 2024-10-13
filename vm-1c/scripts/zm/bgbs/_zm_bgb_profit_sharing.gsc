@@ -8,9 +8,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_19b2be8a;
+#namespace zm_bgb_profit_sharing;
 
-// Namespace namespace_19b2be8a
+// Namespace zm_bgb_profit_sharing
 // Params 0, eflags: 0x2
 // Checksum 0x349e44d2, Offset: 0x288
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_profit_sharing", &__init__, undefined, "bgb");
 }
 
-// Namespace namespace_19b2be8a
+// Namespace zm_bgb_profit_sharing
 // Params 0, eflags: 0x1 linked
 // Checksum 0x56cf753d, Offset: 0x2c8
 // Size: 0xf4
@@ -32,7 +32,7 @@ function __init__() {
     bgb::function_ff4b2998("zm_bgb_profit_sharing", &add_to_player_score_override, 1);
 }
 
-// Namespace namespace_19b2be8a
+// Namespace zm_bgb_profit_sharing
 // Params 0, eflags: 0x1 linked
 // Checksum 0x835a979a, Offset: 0x3c8
 // Size: 0x74
@@ -44,7 +44,7 @@ function enable() {
     self thread function_677e212b();
 }
 
-// Namespace namespace_19b2be8a
+// Namespace zm_bgb_profit_sharing
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x448
 // Size: 0x4
@@ -52,7 +52,7 @@ function disable() {
     
 }
 
-// Namespace namespace_19b2be8a
+// Namespace zm_bgb_profit_sharing
 // Params 0, eflags: 0x1 linked
 // Checksum 0x68b0a1b8, Offset: 0x458
 // Size: 0x82
@@ -61,10 +61,10 @@ function function_677e212b() {
     self clientfield::set("zm_bgb_profit_sharing_3p_fx", 1);
     self util::waittill_either("bled_out", "bgb_update");
     self clientfield::set("zm_bgb_profit_sharing_3p_fx", 0);
-    self notify(#"hash_13182d68");
+    self notify(#"profit_sharing_complete");
 }
 
-// Namespace namespace_19b2be8a
+// Namespace zm_bgb_profit_sharing
 // Params 3, eflags: 0x1 linked
 // Checksum 0x487fe3a7, Offset: 0x4e8
 // Size: 0x236
@@ -73,10 +73,10 @@ function add_to_player_score_override(n_points, str_awarded_by, var_1ed9bd9b) {
         return n_points;
     }
     switch (str_awarded_by) {
-    case 10:
-    case 11:
-    case 12:
-    case 13:
+    case "bgb_machine_ghost_ball":
+    case "equip_hacker":
+    case "magicbox_bear":
+    case "reviver":
         return n_points;
     default:
         break;
@@ -99,7 +99,7 @@ function add_to_player_score_override(n_points, str_awarded_by, var_1ed9bd9b) {
     return n_points;
 }
 
-// Namespace namespace_19b2be8a
+// Namespace zm_bgb_profit_sharing
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9cae7a35, Offset: 0x728
 // Size: 0xdc
@@ -116,7 +116,7 @@ function function_ff41ae2d(e_player) {
     }
 }
 
-// Namespace namespace_19b2be8a
+// Namespace zm_bgb_profit_sharing
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe52af0dc, Offset: 0x810
 // Size: 0x3e
@@ -125,7 +125,7 @@ function function_3c1690be(e_player) {
     e_player notify(str_notify);
 }
 
-// Namespace namespace_19b2be8a
+// Namespace zm_bgb_profit_sharing
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6534358c, Offset: 0x858
 // Size: 0x60
@@ -138,7 +138,7 @@ function function_d1d595b5() {
     self.var_95b54++;
 }
 
-// Namespace namespace_19b2be8a
+// Namespace zm_bgb_profit_sharing
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd977b079, Offset: 0x8c0
 // Size: 0x3c

@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_f95714f2;
+#namespace voice_lotus1;
 
-// Namespace namespace_f95714f2
+// Namespace voice_lotus1
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9050be3f, Offset: 0x1100
 // Size: 0xb24

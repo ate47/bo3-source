@@ -12,9 +12,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_ee5f5b26;
+#namespace zm_castle_rocket_trap;
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2f473a2b, Offset: 0x680
 // Size: 0x6c
@@ -28,7 +28,7 @@ function main() {
     #/
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3fa75aba, Offset: 0x6f8
 // Size: 0xc4
@@ -39,18 +39,18 @@ function register_clientfields() {
     clientfield::register("world", "sndRocketTrap", 5000, 3, "int");
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4aacd98c, Offset: 0x7c8
 // Size: 0x12c
 function function_6827f93b() {
     n_timeout = randomintrange(30, -16);
-    level waittill(#"hash_7b91560c");
+    level waittill(#"castle_teleporter_used");
     level thread function_79ce76bb();
     level.zones["zone_v10_pad_exterior"].is_spawning_allowed = 1;
     level.zones["zone_v10_pad_door"].is_spawning_allowed = 1;
     level.zones["zone_v10_pad"].adjacent_zones["zone_v10_pad_door"].is_connected = 1;
-    wait(60);
+    wait 60;
     while (true) {
         level util::waittill_any_timeout(n_timeout, "rocket_blast", "powerup_dropped");
         function_713600fe();
@@ -58,7 +58,7 @@ function function_6827f93b() {
     }
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd4f22463, Offset: 0x900
 // Size: 0x63c
@@ -75,7 +75,7 @@ function function_713600fe(var_44f606ad) {
     var_1b5666fb = getentarray("rocket_tunnel_door_l", "targetname");
     var_1b5666fb array::thread_all(var_1b5666fb, &function_e52f317f, 1, 10);
     level flag::set("rocket_firing");
-    namespace_fa1b0620::function_ee24bc2e();
+    zm_castle_teleporter::function_ee24bc2e();
     level thread function_563e8bc8();
     level clientfield::set("sndRocketAlarm", 1);
     exploder::exploder("fx_rocket_trap_01");
@@ -83,7 +83,7 @@ function function_713600fe(var_44f606ad) {
     if (!(isdefined(level.var_99cccf77) && level.var_99cccf77)) {
         playsoundatposition("vox_maxis_rocket_pa_begin_0", (5231, -2514, -2150));
     }
-    wait(7);
+    wait 7;
     exploder::exploder("fx_rocket_trap_02");
     level thread function_92008f69(0);
     level thread function_fe2fe879("zm_castle_rocket_trap_warning_rumble", var_69192d95.origin, 0.125);
@@ -92,10 +92,10 @@ function function_713600fe(var_44f606ad) {
         playsoundatposition("vox_maxis_rocket_pa_doors_0", (5231, -2514, -2150));
     }
     level thread function_447a5d62();
-    wait(2);
+    wait 2;
     level notify(#"hash_d6ba1e76");
     level thread function_3a4d6d70();
-    wait(1);
+    wait 1;
     function_60a8040b(10);
     level clientfield::set("sndRocketAlarm", 2);
     exploder::exploder("fx_rocket_trap_03");
@@ -107,7 +107,7 @@ function function_713600fe(var_44f606ad) {
     level.zones["zone_v10_pad_exterior"].is_spawning_allowed = 0;
     level.zones["zone_v10_pad_door"].is_spawning_allowed = 0;
     level.zones["zone_v10_pad"].adjacent_zones["zone_v10_pad_door"].is_connected = 0;
-    wait(20);
+    wait 20;
     exploder::stop_exploder("fx_rocket_trap_03");
     exploder::stop_exploder("lgt_rocket_fire");
     level notify(#"hash_1b4db1d1");
@@ -115,7 +115,7 @@ function function_713600fe(var_44f606ad) {
     level.zones["zone_v10_pad_exterior"].is_spawning_allowed = 1;
     level.zones["zone_v10_pad_door"].is_spawning_allowed = 1;
     level.zones["zone_v10_pad"].adjacent_zones["zone_v10_pad_door"].is_connected = 1;
-    level notify(#"hash_c3c346b0");
+    level notify(#"open_a10_doors");
     if (isdefined(level.var_c62829c7) && !level flag::get("rune_prison_obelisk")) {
         level thread flag::set_for_time(7.5, "rune_prison_obelisk_magma_enabled");
     }
@@ -124,13 +124,13 @@ function function_713600fe(var_44f606ad) {
     }
     level waittill(#"hash_c009e96d");
     level flag::clear("rocket_firing");
-    namespace_fa1b0620::function_ee24bc2e();
+    zm_castle_teleporter::function_ee24bc2e();
     if (!(isdefined(var_44f606ad) && var_44f606ad)) {
-        wait(120);
+        wait 120;
     }
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 2, eflags: 0x1 linked
 // Checksum 0x5d493bc, Offset: 0xf48
 // Size: 0x118
@@ -149,12 +149,12 @@ function function_e52f317f(is_left_door, n_time) {
     while (true) {
         level waittill(#"hash_d6ba1e76");
         self moveto(self.origin + (n_move_x, var_80b1884b, 0), n_time);
-        level waittill(#"hash_c3c346b0");
+        level waittill(#"open_a10_doors");
         self moveto(v_original_origin, n_time * 0.75);
     }
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdb682194, Offset: 0x1068
 // Size: 0x74
@@ -162,7 +162,7 @@ function function_34ad16fc() {
     level.var_66385c9a = array("vox_maxis_rocket_pa_ten_0", "vox_maxis_rocket_pa_nine_0", "vox_maxis_rocket_pa_eight_0", "vox_maxis_rocket_pa_seven_0", "vox_maxis_rocket_pa_six_0", "vox_maxis_rocket_pa_five_0", "vox_maxis_rocket_pa_four_0", "vox_maxis_rocket_pa_three_0", "vox_maxis_rocket_pa_two_0", "vox_maxis_rocket_pa_one_0", "vox_maxis_rocket_pa_initiating_0");
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x63bcbbc4, Offset: 0x10e8
 // Size: 0x7c
@@ -171,11 +171,11 @@ function function_3a4d6d70() {
         if (!(isdefined(level.var_99cccf77) && level.var_99cccf77)) {
             playsoundatposition(level.var_66385c9a[i], (5231, -2514, -2150));
         }
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x55cd03c1, Offset: 0x1170
 // Size: 0x1dc
@@ -197,23 +197,23 @@ function function_447a5d62() {
     if (var_f96c9da7.size) {
         e_vo_player = array::random(var_f96c9da7);
         /#
-            iprintlnbold("zone_v10_pad");
+            iprintlnbold("<dev string:x28>");
         #/
-        e_vo_player thread namespace_97ddfc0d::vo_say("vox_plr_" + e_vo_player.characterindex + "_rocket_start_" + randomint(5), 1, 1);
+        e_vo_player thread zm_castle_vo::vo_say("vox_plr_" + e_vo_player.characterindex + "_rocket_start_" + randomint(5), 1, 1);
     }
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5d60db0b, Offset: 0x1358
 // Size: 0x3a
 function function_60a8040b(var_d15b8c83) {
     for (i = var_d15b8c83; i > 0; i--) {
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0x1632b86e, Offset: 0x13a0
 // Size: 0x1e8
@@ -231,11 +231,11 @@ function function_92008f69(var_ec7cc126) {
             array::thread_all(level.activeplayers, &function_76de618f, var_5f1ce845, 0);
             array::thread_all(getaiteamarray(level.zombie_team), &function_76de618f, var_5f1ce845, 0);
         }
-        wait(0.4);
+        wait 0.4;
     }
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 2, eflags: 0x1 linked
 // Checksum 0x26a473e5, Offset: 0x1590
 // Size: 0x71c
@@ -326,7 +326,7 @@ function function_76de618f(vol_area, var_ec7cc126) {
     self dodamage(var_499440d9, self.origin + (0, 100, 0), undefined, undefined, undefined, "MOD_BURNED");
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 3, eflags: 0x1 linked
 // Checksum 0x25d9ff93, Offset: 0x1cb8
 // Size: 0x56
@@ -334,16 +334,16 @@ function function_fe2fe879(str_rumble, var_6e456024, n_duration) {
     level endon(#"hash_1b4db1d1");
     while (true) {
         playrumbleonposition(str_rumble, var_6e456024);
-        wait(n_duration);
+        wait n_duration;
     }
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0xce035761, Offset: 0x1d18
 // Size: 0x20c
 function function_5acfb0f() {
-    wait(1);
+    wait 1;
     if (!isalive(self)) {
         return;
     }
@@ -369,7 +369,7 @@ function function_5acfb0f() {
     }
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2e7ecd61, Offset: 0x1f30
 // Size: 0x1c
@@ -377,7 +377,7 @@ function function_79ce76bb() {
     exploder::exploder("lgt_rocket_green");
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6b1445e8, Offset: 0x1f58
 // Size: 0x9c
@@ -385,37 +385,37 @@ function function_563e8bc8() {
     exploder::stop_exploder("lgt_rocket_green");
     while (level flag::get("rocket_firing")) {
         exploder::exploder("lgt_rocket_red");
-        wait(0.25);
+        wait 0.25;
         exploder::stop_exploder("lgt_rocket_red");
-        wait(0.25);
+        wait 0.25;
     }
     exploder::exploder("lgt_rocket_green");
 }
 
 /#
 
-    // Namespace namespace_ee5f5b26
+    // Namespace zm_castle_rocket_trap
     // Params 0, eflags: 0x1 linked
     // Checksum 0x52127f9, Offset: 0x2000
     // Size: 0xb8
     function function_65b37e40() {
-        wait(0.05);
+        wait 0.05;
         level waittill(#"start_zombie_round_logic");
-        wait(0.05);
-        setdvar("zone_v10_pad", 0);
-        adddebugcommand("zone_v10_pad");
+        wait 0.05;
+        setdvar("<dev string:x4f>", 0);
+        adddebugcommand("<dev string:x6b>");
         while (true) {
-            if (getdvarint("zone_v10_pad")) {
-                setdvar("zone_v10_pad", 0);
+            if (getdvarint("<dev string:x4f>")) {
+                setdvar("<dev string:x4f>", 0);
                 level thread function_713600fe(1);
             }
-            wait(0.5);
+            wait 0.5;
         }
     }
 
 #/
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa89d822b, Offset: 0x20c0
 // Size: 0x1d4
@@ -432,7 +432,7 @@ function function_343a73a4() {
     level.var_f363d488 = undefined;
     self stoploopsound();
     self playsound("evt_rocket_door_stop");
-    level waittill(#"hash_c3c346b0");
+    level waittill(#"open_a10_doors");
     self playsound("evt_rocket_door_start");
     self playloopsound("evt_rocket_door_lp");
     self waittill(#"movedone");
@@ -441,7 +441,7 @@ function function_343a73a4() {
     self playsound("evt_rocket_door_stop");
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 2, eflags: 0x1 linked
 // Checksum 0xef8f1ab3, Offset: 0x22a0
 // Size: 0xf4
@@ -450,13 +450,13 @@ function function_ff1f70cd(e_grenade, var_412615f9) {
     e_grenade endon(#"explode");
     if (e_grenade zm_zonemgr::entity_in_zone("zone_v10_pad_door") || e_grenade.weapon.name === "cymbal_monkey" && e_grenade zm_zonemgr::entity_in_zone("zone_v10_pad_exterior")) {
         while (isdefined(level.zones["zone_v10_pad_door"].is_spawning_allowed) && level.zones["zone_v10_pad_door"].is_spawning_allowed) {
-            wait(0.1);
+            wait 0.1;
         }
         e_grenade detonate();
     }
 }
 
-// Namespace namespace_ee5f5b26
+// Namespace zm_castle_rocket_trap
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5918d898, Offset: 0x23a0
 // Size: 0x15e

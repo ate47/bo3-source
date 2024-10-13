@@ -10,9 +10,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_fec23565;
+#namespace zm_bgb_arms_grace;
 
-// Namespace namespace_fec23565
+// Namespace zm_bgb_arms_grace
 // Params 0, eflags: 0x2
 // Checksum 0xa0b58439, Offset: 0x1e8
 // Size: 0x34
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_arms_grace", &__init__, undefined, "bgb");
 }
 
-// Namespace namespace_fec23565
+// Namespace zm_bgb_arms_grace
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6faa7cb9, Offset: 0x228
 // Size: 0x6c
@@ -32,7 +32,7 @@ function __init__() {
     level.givestartloadout = &givestartloadout;
 }
 
-// Namespace namespace_fec23565
+// Namespace zm_bgb_arms_grace
 // Params 0, eflags: 0x1 linked
 // Checksum 0x38795b6c, Offset: 0x2a0
 // Size: 0x50
@@ -44,7 +44,7 @@ function event() {
     self.var_e445bfc6 = 1;
 }
 
-// Namespace namespace_fec23565
+// Namespace zm_bgb_arms_grace
 // Params 0, eflags: 0x1 linked
 // Checksum 0x43beadfe, Offset: 0x2f8
 // Size: 0x5c
@@ -59,7 +59,7 @@ function givestartloadout() {
     }
 }
 
-// Namespace namespace_fec23565
+// Namespace zm_bgb_arms_grace
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9c90067d, Offset: 0x360
 // Size: 0x35c

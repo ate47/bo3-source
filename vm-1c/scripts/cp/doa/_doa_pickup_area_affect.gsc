@@ -27,7 +27,7 @@ function function_be253d27(var_53e67bd3) {
     self endon(#"death");
     while (isdefined(self)) {
         self rotateto(self.angles + (0, 180, 0), var_53e67bd3);
-        wait(var_53e67bd3);
+        wait var_53e67bd3;
     }
 }
 
@@ -49,7 +49,7 @@ function function_c4e6a6fb(startscale, endscale, timems) {
     while (isdefined(self) && gettime() < endtime) {
         var_1a6998e1 += var_aa32d9f9;
         self setscale(var_1a6998e1);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -57,7 +57,7 @@ function function_c4e6a6fb(startscale, endscale, timems) {
 // Params 2, eflags: 0x1 linked
 // Checksum 0x10a8d466, Offset: 0x510
 // Size: 0x39c
-function function_ca06d008(player, origin) {
+function teamShifterUpdate(player, origin) {
     var_a2dfe760 = playerphysicstrace(origin + (0, 0, 72), origin + (0, 0, -500));
     origin = (origin[0], origin[1], var_a2dfe760[2]);
     org = spawn("script_model", origin + (0, 0, 36));
@@ -69,7 +69,7 @@ function function_ca06d008(player, origin) {
         coat.angles = (0, 270, 75);
         coat thread function_be253d27();
         coat.targetname = "coat_of_arms";
-        coat setmodel(level.doa.var_46e741fa);
+        coat setmodel(level.doa.coat_of_arms);
         coat thread namespace_1a381543::function_90118d8c("zmb_coat_of_arms");
     }
     trigger = spawn("trigger_radius", coat.origin, 9, level.doa.rules.var_942b8706, 60);
@@ -81,11 +81,11 @@ function function_ca06d008(player, origin) {
     playfx("zombie/fx_exp_rpg_red_doa", coat.origin);
     org thread namespace_eaa992c::function_285a2999("teamShift");
     trigger thread function_963e13a0();
-    wait(2);
+    wait 2;
     if (isdefined(org)) {
         org delete();
     }
-    wait(1);
+    wait 1;
     if (isdefined(trigger)) {
         trigger delete();
     }
@@ -152,7 +152,7 @@ function private function_770e1327(trigger) {
     self.team = "allies";
     self.favoriteenemy = undefined;
     self clearenemy();
-    wait(level.doa.rules.var_a29b8bda);
+    wait level.doa.rules.var_a29b8bda;
     self.team = team;
     self thread namespace_eaa992c::turnofffx("teamShift_contact");
     self thread namespace_eaa992c::turnofffx("zombie_angry");
@@ -188,7 +188,7 @@ function timeshifterupdate(player, origin) {
     trigger thread function_78d20ce0();
     level util::waittill_any_timeout(player namespace_49107f3a::function_1ded48e6(level.doa.rules.var_ecfc4359), "exit_taken");
     clock thread namespace_1a381543::function_90118d8c("zmb_pwup_clock_end");
-    wait(1);
+    wait 1;
     if (isdefined(clock)) {
         clock delete();
     }
@@ -250,10 +250,10 @@ function private function_59a20c67(trigger) {
     while (isalive(self) && isdefined(trigger) && self istouching(trigger)) {
         /#
         #/
-        wait(0.5);
+        wait 0.5;
     }
     self thread namespace_eaa992c::turnofffx("timeshift_contact");
-    wait(0.75);
+    wait 0.75;
     self asmsetanimationrate(isdefined(self.doa.anim_rate) ? self.doa.anim_rate : 1);
     self.var_dd70dacd = undefined;
 }
@@ -270,7 +270,7 @@ function function_d171e15a(player, origin) {
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc93f1ff3, Offset: 0x1338
 // Size: 0x29c
-function function_159bb1dd(player, origin) {
+function monkeyUpdate(player, origin) {
     var_a2dfe760 = playerphysicstrace(origin + (0, 0, 72), origin + (0, 0, -500));
     origin = (origin[0], origin[1], var_a2dfe760[2]);
     mark = origin + (0, 0, 12);
@@ -288,7 +288,7 @@ function function_159bb1dd(player, origin) {
     monkey endon(#"death");
     level thread function_254f3480(monkey);
     monkey thread function_2271edf2(player);
-    wait(player namespace_49107f3a::function_1ded48e6(level.doa.rules.var_b8f1a3ce));
+    wait player namespace_49107f3a::function_1ded48e6(level.doa.rules.var_b8f1a3ce);
     monkey notify(#"hash_2271edf2");
 }
 

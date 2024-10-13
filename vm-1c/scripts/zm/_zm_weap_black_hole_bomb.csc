@@ -8,9 +8,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_d6b63386;
+#namespace zm_weap_black_hole_bomb;
 
-// Namespace namespace_d6b63386
+// Namespace zm_weap_black_hole_bomb
 // Params 0, eflags: 0x2
 // Checksum 0xacd98a2a, Offset: 0x390
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("zm_weap_black_hole_bomb", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_d6b63386
+// Namespace zm_weap_black_hole_bomb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x59e6f1eb, Offset: 0x3d0
 // Size: 0x1bc
@@ -33,16 +33,16 @@ function __init__() {
     level.var_f5d32c5f = 1;
     level.var_4c04cef3 = 10;
     visionset_mgr::register_visionset_info("zombie_cosmodrome_blackhole", 21000, 30, undefined, "zombie_cosmodrome_blackhole");
-    clientfield::register("toplayer", "bhb_viewlights", 21000, 2, "int", &function_2076deb2, 0, 0);
+    clientfield::register("toplayer", "bhb_viewlights", 21000, 2, "int", &bhb_viewlights, 0, 0);
     clientfield::register("scriptmover", "toggle_black_hole_deployed", 21000, 1, "int", &function_437a4164, 0, 0);
     clientfield::register("actor", "toggle_black_hole_being_pulled", 21000, 1, "int", &function_13471301, 0, 1);
 }
 
-// Namespace namespace_d6b63386
+// Namespace zm_weap_black_hole_bomb
 // Params 7, eflags: 0x1 linked
 // Checksum 0xff77edf9, Offset: 0x598
 // Size: 0xa4
-function function_2076deb2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function bhb_viewlights(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, 100, newval, 0);
         return;
@@ -50,7 +50,7 @@ function function_2076deb2(localclientnum, oldval, newval, bnewent, binitialsnap
     self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, 0, 0, 0);
 }
 
-// Namespace namespace_d6b63386
+// Namespace zm_weap_black_hole_bomb
 // Params 7, eflags: 0x1 linked
 // Checksum 0x933466e6, Offset: 0x648
 // Size: 0xae
@@ -64,7 +64,7 @@ function function_437a4164(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_d6b63386
+// Namespace zm_weap_black_hole_bomb
 // Params 2, eflags: 0x1 linked
 // Checksum 0xaf4a9b68, Offset: 0x700
 // Size: 0x224
@@ -83,11 +83,11 @@ function function_65616fbd(local_client_num, var_d89c34cf) {
     var_864fa4e6 setmodel("tag_origin");
     var_a2931b79 delete();
     playfxontag(local_client_num, level._effect["black_hole_bomb_event_horizon"], var_864fa4e6, "tag_origin");
-    wait(0.2);
+    wait 0.2;
     var_864fa4e6 delete();
 }
 
-// Namespace namespace_d6b63386
+// Namespace zm_weap_black_hole_bomb
 // Params 2, eflags: 0x0
 // Checksum 0x726acbc3, Offset: 0x930
 // Size: 0xa4
@@ -98,10 +98,10 @@ function function_2aac6f7b(ent_model, var_26cba5b) {
     array::add(level.var_b328ac02, var_97b57ad6);
     ent_model waittill(#"entityshutdown");
     var_97b57ad6.var_87bd727f = 0;
-    wait(0.2);
+    wait 0.2;
 }
 
-// Namespace namespace_d6b63386
+// Namespace zm_weap_black_hole_bomb
 // Params 7, eflags: 0x1 linked
 // Checksum 0xab804352, Offset: 0x9e0
 // Size: 0x1e4
@@ -130,7 +130,7 @@ function function_13471301(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_d6b63386
+// Namespace zm_weap_black_hole_bomb
 // Params 2, eflags: 0x1 linked
 // Checksum 0x675d8ea9, Offset: 0xbd0
 // Size: 0x5c

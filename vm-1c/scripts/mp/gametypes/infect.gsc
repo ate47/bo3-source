@@ -378,7 +378,7 @@ function function_485556b(player, comingfrommenu) {
 function function_dc5fbf33() {
     started_waiting = gettime();
     while (!self isstreamerready(-1, 1) && started_waiting + 90000 > gettime()) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -485,7 +485,7 @@ function function_e523aca(victim, wassuicide) {
             return;
         }
     }
-    wait(0.05);
+    wait 0.05;
     if (isdefined(victim)) {
         level thread function_34c8bd01();
         function_f65059ce(victim);
@@ -581,13 +581,13 @@ function finalsurvivoruav(finalsurvivor) {
     removeuav = 0;
     while (true) {
         prevpos = finalsurvivor.origin;
-        wait(4);
+        wait 4;
         if (removeuav) {
             setteamspyplane(game["attackers"], 0);
             util::set_team_radar(game["attackers"], 0);
             removeuav = 0;
         }
-        wait(6);
+        wait 6;
         if (distancesquared(prevpos, finalsurvivor.origin) < -56 * -56) {
             setteamspyplane(game["attackers"], 1);
             util::set_team_radar(game["attackers"], 1);
@@ -611,12 +611,12 @@ function enduavonlatejoiner(finalsurvivor) {
         var_7dc99dab = [[ level._getteamscore ]](game["defenders"]);
         if (var_7dc99dab > 1) {
             level notify(#"hash_be948b8c");
-            wait(0.05);
+            wait 0.05;
             setteamspyplane(game["attackers"], 1);
             util::set_team_radar(game["attackers"], 1);
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -701,7 +701,7 @@ function function_ca9945d6() {
     }
     var_c2df8eb5 = function_d418a8fd(game["defenders"]);
     if (var_c2df8eb5.size < 1) {
-        level notify(#"hash_8bbda586");
+        level notify(#"infect_stopCountdown");
     }
 }
 
@@ -843,7 +843,7 @@ function function_39be730b() {
 // Size: 0x164
 function choosefirstinfected() {
     level endon(#"game_ended");
-    level endon(#"hash_8bbda586");
+    level endon(#"infect_stopCountdown");
     level.infect_allowsuicide = 0;
     level.var_93e2155b = undefined;
     if (level.inprematchperiod) {
@@ -886,7 +886,7 @@ function function_d07961fd() {
 function function_34c8bd01() {
     level notify(#"timeextended");
     level endon(#"game_ended");
-    level endon(#"hash_4714ebcd");
+    level endon(#"infect_stopTimeExtended");
     level endon(#"timeextended");
     timeout = 0;
     while (isdefined(level.var_796fada2) && level.var_796fada2.alpha > 0) {
@@ -947,17 +947,17 @@ function setfirstinfected() {
     self endon(#"disconnect");
     self.infect_isbeingchosen = 1;
     while (!isalive(self) || self util::isusingremote()) {
-        wait(0.05);
+        wait 0.05;
     }
     if (isdefined(self.iscarrying) && self.iscarrying) {
         self notify(#"hash_ba19385f");
-        wait(0.05);
+        wait 0.05;
     }
     while (self ismantling()) {
-        wait(0.05);
+        wait 0.05;
     }
     while (!self isonground() && !self isonladder()) {
-        wait(0.05);
+        wait 0.05;
     }
     function_f65059ce(self);
     self.switching_teams = undefined;
@@ -1283,7 +1283,7 @@ function function_93f386c5() {
     level endon(#"game_ended");
     level notify(#"hash_10030d46");
     level endon(#"hash_10030d46");
-    wait(30);
+    wait 30;
     forcespawnteam(game["defenders"]);
 }
 
@@ -1302,15 +1302,15 @@ function function_e7129db9(weaponitem) {
     // Checksum 0xabd69782, Offset: 0x4eb8
     // Size: 0x134
     function function_fb550fe9(dvarname, var_c0c93d2) {
-        setdvar(dvarname, "MPUI_INFECTED");
+        setdvar(dvarname, "<dev string:x28>");
         while (true) {
-            wait(0.05);
+            wait 0.05;
             dvarvalue = getdvarstring(dvarname);
-            if (dvarvalue == "MPUI_INFECTED") {
+            if (dvarvalue == "<dev string:x28>") {
                 continue;
             }
-            setdvar(dvarname, "MPUI_INFECTED");
-            tokens = strtok(dvarvalue, "MPUI_SURVIVORS");
+            setdvar(dvarname, "<dev string:x28>");
+            tokens = strtok(dvarvalue, "<dev string:x29>");
             if (!isdefined(tokens) || tokens.size < 1) {
                 continue;
             }
@@ -1326,7 +1326,7 @@ function function_e7129db9(weaponitem) {
     // Size: 0xe2
     function function_27ccd53(command, args) {
         switch (command) {
-        case 0:
+        case "<dev string:x2b>":
             foreach (player in level.players) {
                 if (player util::is_bot()) {
                     player kill();
@@ -1343,10 +1343,10 @@ function function_e7129db9(weaponitem) {
     // Checksum 0x90f50a9, Offset: 0x50e8
     // Size: 0xa4
     function function_897ac191() {
-        level thread function_fb550fe9("roundswon", &function_27ccd53);
-        level flag::wait_till("strings");
-        var_126022b3 = "teamScores";
-        adddebugcommand(var_126022b3 + "<unknown string>" + "<unknown string>" + "roundswon" + "<unknown string>");
+        level thread function_fb550fe9("<dev string:x38>", &function_27ccd53);
+        level flag::wait_till("<dev string:x4a>");
+        var_126022b3 = "<dev string:x5e>";
+        adddebugcommand(var_126022b3 + "<dev string:x74>" + "<dev string:x82>" + "<dev string:x38>" + "<dev string:x8a>");
     }
 
 #/

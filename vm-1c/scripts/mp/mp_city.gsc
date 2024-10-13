@@ -15,9 +15,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_eb4f89c8;
+#namespace mp_city;
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0x275b5a20, Offset: 0x3d8
 // Size: 0x26c
@@ -35,8 +35,8 @@ function main() {
     level.var_a5427f76 = 1;
     function_f0cb6507();
     level flag::init("city_vortex_sequence_playing");
-    namespace_d5826749::main();
-    namespace_d4bfdfc::main();
+    mp_city_fx::main();
+    mp_city_sound::main();
     load::main();
     compass::setupminimap("compass_map_mp_city");
     setdvar("compassmaxrange", "2100");
@@ -46,7 +46,7 @@ function main() {
     level thread function_73cc292();
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x650
 // Size: 0x4
@@ -54,7 +54,7 @@ function precache() {
     
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa4ba7100, Offset: 0x660
 // Size: 0x194
@@ -73,7 +73,7 @@ function function_f0cb6507() {
     level.var_5355f796[3].angles = (0, 0, 0);
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa228fd60, Offset: 0x800
 // Size: 0x74
@@ -86,7 +86,7 @@ function function_6c91e817(origin) {
     return 0;
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb6c06aa, Offset: 0x880
 // Size: 0xcc
@@ -94,13 +94,13 @@ function function_573ef330() {
     scene::add_scene_func("p7_fxanim_mp_city_vista_energy_ball_bundle", &function_a26d4506, "done");
     level thread function_8b863b50();
     /#
-        mapname = getdvarstring("done");
-        adddebugcommand("done" + mapname + "done");
-        adddebugcommand("done" + mapname + "done");
+        mapname = getdvarstring("<dev string:x28>");
+        adddebugcommand("<dev string:x30>" + mapname + "<dev string:x3e>");
+        adddebugcommand("<dev string:x30>" + mapname + "<dev string:x96>");
     #/
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbcbef152, Offset: 0x958
 // Size: 0x9a
@@ -110,7 +110,7 @@ function function_ed2ffe3e(state) {
     }
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 2, eflags: 0x1 linked
 // Checksum 0x3933f55b, Offset: 0xa00
 // Size: 0xda
@@ -122,7 +122,7 @@ function function_5d8520c1(ringindex, state) {
     }
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5f482e2e, Offset: 0xae8
 // Size: 0x124
@@ -140,7 +140,7 @@ function function_8b863b50() {
     function_ed2ffe3e(3);
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7639b36c, Offset: 0xc18
 // Size: 0x64
@@ -151,7 +151,7 @@ function function_73cc292() {
     level thread function_a71ab527();
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5d948103, Offset: 0xc88
 // Size: 0x66
@@ -159,13 +159,13 @@ function function_216797ea() {
     played = 0;
     while (played < 2) {
         waittime = randomintrange(120, 360);
-        wait(waittime);
+        wait waittime;
         played++;
         level notify(#"hash_c84a6138");
     }
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcc60ce11, Offset: 0xcf8
 // Size: 0xa8
@@ -176,11 +176,11 @@ function function_9c9f20e6() {
         level waittill(#"hash_c84a6138");
         level flag::set("city_vortex_sequence_playing");
         level thread scene::play("p7_fxanim_mp_city_vista_energy_ball_bundle");
-        level array::thread_all(level.var_a439908d, &namespace_d4bfdfc::function_56481761);
+        level array::thread_all(level.var_a439908d, &mp_city_sound::function_56481761);
     }
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0x685426a5, Offset: 0xda8
 // Size: 0x64
@@ -191,7 +191,7 @@ function function_e1a5f5b4() {
     level thread function_362bb0a8();
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa7c63487, Offset: 0xe18
 // Size: 0x90
@@ -199,16 +199,16 @@ function function_8637c721() {
     for (;;) {
         level waittill(#"hash_2716af92");
         function_5d8520c1(1, 0);
-        wait(1);
+        wait 1;
         function_5d8520c1(2, 0);
-        wait(1);
+        wait 1;
         function_5d8520c1(3, 0);
-        wait(1);
+        wait 1;
         function_5d8520c1(4, 0);
     }
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99dbbc60, Offset: 0xeb0
 // Size: 0x28
@@ -219,7 +219,7 @@ function function_4bac34c2() {
     }
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb7b5836e, Offset: 0xee0
 // Size: 0x28
@@ -230,7 +230,7 @@ function function_34dbb1db() {
     }
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe29b1510, Offset: 0xf10
 // Size: 0x28
@@ -241,7 +241,7 @@ function function_362bb0a8() {
     }
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 1, eflags: 0x1 linked
 // Checksum 0x86695587, Offset: 0xf40
 // Size: 0x2c
@@ -249,7 +249,7 @@ function function_a26d4506(ents) {
     level thread scene::init("p7_fxanim_mp_city_vista_energy_ball_bundle");
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0x465e34f3, Offset: 0xf78
 // Size: 0x60
@@ -262,7 +262,7 @@ function function_a71ab527() {
     }
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 4, eflags: 0x1 linked
 // Checksum 0x5945d8bf, Offset: 0xfe0
 // Size: 0x19c
@@ -282,31 +282,31 @@ function function_692b3bc7(var_f8e744ad, veh_name, origin, angles) {
     level thread function_938a8c2b(var_f8e744ad, 1);
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdf4393c3, Offset: 0x1188
 // Size: 0x2c
 function function_cb38303b() {
-    wait(5);
+    wait 5;
     level.var_5355f796 = [];
     level.var_692b3bc7 = [];
-    wait(1);
+    wait 1;
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 2, eflags: 0x1 linked
 // Checksum 0x3414ce96, Offset: 0x11c0
 // Size: 0xc4
 function function_938a8c2b(var_f8e744ad, delay) {
-    wait(delay);
+    wait delay;
     triggerfx(level.var_f0d5ca04[var_f8e744ad].var_96997dd6);
     triggerfx(level.var_f0d5ca04[var_f8e744ad].var_3bfd5383);
-    wait(0.1);
+    wait 0.1;
     level.var_f0d5ca04[var_f8e744ad].var_96997dd6 hide();
     level.var_f0d5ca04[var_f8e744ad].var_3bfd5383 hide();
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 5, eflags: 0x1 linked
 // Checksum 0xadd96c41, Offset: 0x1290
 // Size: 0xc4
@@ -316,7 +316,7 @@ function function_76013c83(var_f8e744ad, veh_name, origin, angles, var_d47ecfec)
     level thread function_8464fee5(var_f8e744ad, veh_name, origin, angles, var_d47ecfec);
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 5, eflags: 0x1 linked
 // Checksum 0x1c67c695, Offset: 0x1360
 // Size: 0x1dc
@@ -327,19 +327,19 @@ function function_8464fee5(var_f8e744ad, veh_name, origin, angles, var_d47ecfec)
         playsoundatposition("evt_siegepad_yellow", level.var_f0d5ca04[var_f8e744ad].var_96997dd6.origin + (0, 0, 10));
         var_35c1d8a6 show();
         var_349e89f3 = max(remaining_time / 20, min(0.1, remaining_time));
-        wait(var_349e89f3);
+        wait var_349e89f3;
         var_35c1d8a6 hide();
-        wait(0.1);
+        wait 0.1;
         remaining_time -= var_349e89f3 + 0.1;
     }
     if (remaining_time > 0) {
-        wait(remaining_time);
+        wait remaining_time;
     }
     level.var_f0d5ca04[var_f8e744ad].var_96997dd6 hide();
     playsoundatposition("evt_siegepad_green", origin + (0, 0, 10));
 }
 
-// Namespace namespace_eb4f89c8
+// Namespace mp_city
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7d0752d, Offset: 0x1548
 // Size: 0x7c

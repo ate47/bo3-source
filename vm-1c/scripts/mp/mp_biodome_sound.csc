@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_8911e65c;
+#namespace mp_biodome_sound;
 
-// Namespace namespace_8911e65c
+// Namespace mp_biodome_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x90
 // Size: 0x4

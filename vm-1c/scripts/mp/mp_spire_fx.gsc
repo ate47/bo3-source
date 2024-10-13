@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_d4c614ff;
+#namespace mp_spire_fx;
 
-// Namespace namespace_d4c614ff
+// Namespace mp_spire_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x19a14452, Offset: 0x98
 // Size: 0x24
@@ -11,7 +11,7 @@ function main() {
     function_f45953c();
 }
 
-// Namespace namespace_d4c614ff
+// Namespace mp_spire_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xc8
 // Size: 0x4
@@ -19,7 +19,7 @@ function function_f45953c() {
     
 }
 
-// Namespace namespace_d4c614ff
+// Namespace mp_spire_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2ceb8e25, Offset: 0xd8
 // Size: 0x26

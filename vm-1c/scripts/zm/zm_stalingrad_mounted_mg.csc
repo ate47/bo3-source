@@ -4,9 +4,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_6d9dd78a;
+#namespace zm_stalingrad_mounted_mg;
 
-// Namespace namespace_6d9dd78a
+// Namespace zm_stalingrad_mounted_mg
 // Params 0, eflags: 0x2
 // Checksum 0x8989e3b4, Offset: 0x190
 // Size: 0x34
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
     system::register("zm_stalingrad_mounted_mg", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_6d9dd78a
+// Namespace zm_stalingrad_mounted_mg
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfdc67ffc, Offset: 0x1d0
 // Size: 0x64
@@ -23,7 +23,7 @@ function __init__() {
     clientfield::register("vehicle", "overheat_fx", 12000, 1, "int", &function_c71f5e4a, 0, 0);
 }
 
-// Namespace namespace_6d9dd78a
+// Namespace zm_stalingrad_mounted_mg
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc81e841f, Offset: 0x240
 // Size: 0xac

@@ -229,7 +229,7 @@ function function_52d6b4dc(e_player, str_notify) {
     self endon(#"disconnect");
     self endon(#"zm_bgb_near_death_experience_complete");
     while (!self function_73277c01(e_player) && !e_player function_73277c01(self)) {
-        wait(0.1);
+        wait 0.1;
     }
     return true;
 }
@@ -244,7 +244,7 @@ function function_c8cee225(e_player, str_notify) {
     self endon(#"disconnect");
     self endon(#"zm_bgb_near_death_experience_complete");
     while (self function_73277c01(e_player) || e_player function_73277c01(self)) {
-        wait(0.1);
+        wait 0.1;
     }
 }
 

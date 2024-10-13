@@ -82,7 +82,7 @@ function function_127dc5ca(player) {
         } else {
             player bgb::function_ca189700();
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

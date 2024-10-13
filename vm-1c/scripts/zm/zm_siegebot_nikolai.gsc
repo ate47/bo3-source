@@ -29,9 +29,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_48757881;
+#namespace siegebot_nikolai;
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x2
 // Checksum 0xfe793309, Offset: 0x9e8
 // Size: 0x34
@@ -39,7 +39,7 @@ function autoexec function_2dc19561() {
     system::register("zm_siegebot_nikolai", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5659df15, Offset: 0xa28
 // Size: 0x3ec
@@ -67,7 +67,7 @@ function __init__() {
     level thread aat::register_immunity("zm_aat_turned", "raps", 1, 1, 1);
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfc5fe919, Offset: 0xe20
 // Size: 0x3f4
@@ -119,7 +119,7 @@ function function_fcf49d56() {
     defaultrole();
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x0
 // Checksum 0xf4bf2298, Offset: 0x1220
 // Size: 0x7c
@@ -130,7 +130,7 @@ function init_clientfields() {
     self vehicle::toggle_lights_group(3, 1);
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3ee2a51b, Offset: 0x12a8
 // Size: 0x1dc
@@ -148,27 +148,27 @@ function defaultrole() {
     vehicle_ai::startinitialstate("combat");
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0x92195d1c, Offset: 0x1490
 // Size: 0x132
-function function_f7035c2f(var_b58fd987) {
+function function_f7035c2f(nikolai_driver) {
     self endon(#"death");
-    var_b58fd987 endon(#"death");
-    self.var_b58fd987 = var_b58fd987;
+    nikolai_driver endon(#"death");
+    self.nikolai_driver = nikolai_driver;
     self enablelinkto();
-    var_b58fd987.origin = self gettagorigin("tag_driver");
-    var_b58fd987.angles = self gettagangles("tag_driver");
-    var_b58fd987.targetname = "nikolai_driver";
-    var_b58fd987 linkto(self, "tag_driver");
+    nikolai_driver.origin = self gettagorigin("tag_driver");
+    nikolai_driver.angles = self gettagangles("tag_driver");
+    nikolai_driver.targetname = "nikolai_driver";
+    nikolai_driver linkto(self, "tag_driver");
     while (true) {
-        var_b58fd987 scene::play("cin_zm_stalingrad_nikolai_cockpit_drink");
-        var_b58fd987 thread scene::play("cin_zm_stalingrad_nikolai_cockpit_idle");
-        wait(10 + randomfloat(10));
+        nikolai_driver scene::play("cin_zm_stalingrad_nikolai_cockpit_drink");
+        nikolai_driver thread scene::play("cin_zm_stalingrad_nikolai_cockpit_idle");
+        wait 10 + randomfloat(10);
     }
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0x118b434d, Offset: 0x15d0
 // Size: 0x1e4
@@ -186,16 +186,16 @@ function state_death_update(params) {
     self function_d013f7fa((0, 0, 0), 2);
     level flag::set("nikolai_complete");
     self asmrequestsubstate("death@stationary");
-    self.var_b58fd987 thread scene::play("cin_zm_stalingrad_nikolai_cockpit_death");
+    self.nikolai_driver thread scene::play("cin_zm_stalingrad_nikolai_cockpit_death");
     self waittill(#"model_swap");
     self vehicle_death::death_fx();
-    wait(10);
+    wait 10;
     self vehicle_death::set_death_model(self.deathmodel, self.modelswapdelay);
     self playsound("veh_quadtank_sparks");
     self vehicle_death::freewhensafe(-106);
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8dc6c62f, Offset: 0x17c0
 // Size: 0x34
@@ -205,7 +205,7 @@ function function_84e7c9e7() {
     }
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbf97604d, Offset: 0x1800
 // Size: 0x18
@@ -213,7 +213,7 @@ function function_d56305c8(enabled) {
     self.var_72861401 = enabled;
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x0
 // Checksum 0x28255848, Offset: 0x1820
 // Size: 0x42
@@ -222,7 +222,7 @@ function function_c423e168() {
     return isdefined(state) && state != "pain" && self.var_72861401;
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc8255081, Offset: 0x1870
 // Size: 0x24
@@ -230,7 +230,7 @@ function function_5b4ac0fe(params) {
     self function_144b90e8();
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0x91cbf7df, Offset: 0x18a0
 // Size: 0x24
@@ -238,7 +238,7 @@ function function_a3bf4514(params) {
     self setbrake(0);
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0x92ad65fc, Offset: 0x18d0
 // Size: 0xfc
@@ -256,7 +256,7 @@ function function_f71fc8b7(params) {
     self vehicle_ai::evaluate_connections();
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5512e890, Offset: 0x19d8
 // Size: 0x174
@@ -280,7 +280,7 @@ function jump_to(target) {
     return false;
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfbb79d4a, Offset: 0x1b58
 // Size: 0x104
@@ -293,11 +293,11 @@ function function_5a6e3cac() {
     self.jump = spawnstruct();
     self.jump.linkent = spawn("script_origin", self.origin);
     self.jump.var_425f84b1 = 0;
-    self.var_c8241452 = struct::get("boss_arena_center").origin;
-    assert(isdefined(self.var_c8241452));
+    self.arena_center = struct::get("boss_arena_center").origin;
+    assert(isdefined(self.arena_center));
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe62cd6b0, Offset: 0x1c68
 // Size: 0x14c
@@ -316,7 +316,7 @@ function function_bf7dfc58(params) {
     self function_144b90e8();
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd560c746, Offset: 0x1dc0
 // Size: 0x24
@@ -324,7 +324,7 @@ function function_309fca92(params) {
     self function_d56305c8(1);
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0x890a2369, Offset: 0x1df0
 // Size: 0xb5c
@@ -335,7 +335,7 @@ function function_911f1aa5(params) {
     self face_target(goal);
     self.jump.linkent.origin = self.origin;
     self.jump.linkent.angles = self.angles;
-    wait(0.05);
+    wait 0.05;
     self linkto(self.jump.linkent);
     self.jump.var_425f84b1 = 1;
     totaldistance = distance2d(goal, self.jump.linkent.origin);
@@ -385,7 +385,7 @@ function function_911f1aa5(params) {
             }
             self asmrequestsubstate(params.var_fb532e19);
         }
-        wait(0.05);
+        wait 0.05;
     }
     self.jump.linkent.origin = (self.jump.linkent.origin[0], self.jump.linkent.origin[1], 0) + (0, 0, goal[2]);
     self notify(#"hash_12789372");
@@ -404,9 +404,9 @@ function function_911f1aa5(params) {
     self vehicle::impact_fx(self.settings.var_9f4c9669);
     self function_144b90e8();
     playrumbleonposition("nikolai_siegebot_land", self.origin);
-    wait(0.3);
+    wait 0.3;
     self unlink();
-    wait(0.05);
+    wait 0.05;
     self.jump.var_425f84b1 = 0;
     self setgoal(self.origin, 0, self.goalradius, self.goalheight);
     self vehicle_ai::waittill_asm_complete(params.var_fb532e19, 3);
@@ -416,7 +416,7 @@ function function_911f1aa5(params) {
     self vehicle_ai::evaluate_connections();
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x0
 // Checksum 0xf64c9088, Offset: 0x2958
 // Size: 0xb4
@@ -429,7 +429,7 @@ function function_f9508f9e() {
     self function_d013f7fa((0, 0, 0), 4);
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x0
 // Checksum 0x9400d642, Offset: 0x2a18
 // Size: 0x274
@@ -460,7 +460,7 @@ function function_e5af3b61() {
     return false;
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0x96a3fa7c, Offset: 0x2c98
 // Size: 0xa6
@@ -473,11 +473,11 @@ function function_c05314da(params) {
     self thread function_7080094f();
     while (true) {
         self vehicle_ai::evaluate_connections();
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0x57a3f432, Offset: 0x2d48
 // Size: 0x4c
@@ -486,7 +486,7 @@ function function_a812ea81(tag_name) {
     self function_75775e52(origin, 80);
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf85f7f4e, Offset: 0x2da0
 // Size: 0x68
@@ -501,7 +501,7 @@ function function_6f90eaa6() {
     }
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8d74778b, Offset: 0x2e10
 // Size: 0x68
@@ -516,7 +516,7 @@ function function_7080094f() {
     }
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6fb04aac, Offset: 0x2e80
 // Size: 0x1f0
@@ -545,11 +545,11 @@ function movement_thread() {
                 self setbrake(1);
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2dfe1b7c, Offset: 0x3078
 // Size: 0x3c
@@ -559,7 +559,7 @@ function function_3b3e7a3d(params) {
     self clearturrettarget();
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0x56a75ab2, Offset: 0x30c0
 // Size: 0x260
@@ -573,14 +573,14 @@ function function_57c5370f() {
         e_enemy = self.enemy;
         if (!isdefined(e_enemy) || self.var_a7cd606 === 1) {
             self function_d013f7fa((0, 0, 0));
-            wait(0.4);
+            wait 0.4;
             continue;
         }
         self vehicle_ai::setturrettarget(e_enemy, 0);
         self vehicle_ai::setturrettarget(e_enemy, 1);
         var_eb3cc6f2 = gettime();
         while (isdefined(e_enemy) && !self.gunner1ontarget && vehicle_ai::timesince(var_eb3cc6f2) < 2) {
-            wait(0.4);
+            wait 0.4;
         }
         if (!isdefined(e_enemy)) {
             continue;
@@ -592,15 +592,15 @@ function function_57c5370f() {
             }
             self vehicle_ai::fire_for_time(1 + randomfloat(0.4), 1);
             if (isdefined(e_enemy) && isplayer(e_enemy)) {
-                wait(0.6 + randomfloat(0.2));
+                wait 0.6 + randomfloat(0.2);
             }
-            wait(0.1);
+            wait 0.1;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0x252a44af, Offset: 0x3328
 // Size: 0x34
@@ -609,7 +609,7 @@ function function_59d0ca33() {
     self asmrequestsubstate(locomotion);
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x0
 // Checksum 0xd853847d, Offset: 0x3368
 // Size: 0x12
@@ -617,7 +617,7 @@ function function_7fcc2a80() {
     self notify(#"near_goal");
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 3, eflags: 0x0
 // Checksum 0x26ffb85a, Offset: 0x3388
 // Size: 0x82
@@ -627,7 +627,7 @@ function function_9dfac374(left, right, point) {
     return var_c8c31226 > var_d69cdbbd;
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb91ca6e3, Offset: 0x3418
 // Size: 0x94
@@ -641,7 +641,7 @@ function function_144b90e8() {
     self setbrake(1);
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 3, eflags: 0x1 linked
 // Checksum 0x1f13fb41, Offset: 0x34b8
 // Size: 0x23c
@@ -667,7 +667,7 @@ function face_target(position, var_cd8c9d1a, var_a39fa3d8) {
     var_278525e3 = gettime();
     while (anglediff > var_cd8c9d1a && vehicle_ai::timesince(var_278525e3) < 4) {
         anglediff = absangleclamp180(self.angles[1] - goalangles[1]);
-        wait(0.05);
+        wait 0.05;
     }
     self clearvehgoalpos();
     self clearlookatent();
@@ -677,7 +677,7 @@ function face_target(position, var_cd8c9d1a, var_a39fa3d8) {
     self cancelaimove();
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 2, eflags: 0x1 linked
 // Checksum 0x4b48cb19, Offset: 0x3700
 // Size: 0x16a
@@ -690,7 +690,7 @@ function function_75775e52(point, range) {
     }
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7eb1b075, Offset: 0x3878
 // Size: 0x5c
@@ -704,7 +704,7 @@ function function_86cc3c11() {
     return count;
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 15, eflags: 0x1 linked
 // Checksum 0xd8764e20, Offset: 0x38e0
 // Size: 0x584
@@ -763,7 +763,7 @@ function function_b9b039e0(einflictor, eattacker, idamage, idflags, smeansofdeat
     eattacker.var_b3a9099 += idamage;
     eattacker show_hit_marker();
     if (var_cf402baf) {
-        self notify(#"hash_d4ba4cd");
+        self notify(#"nikolai_weakpoint_destroyed");
         if (n_index == 1) {
             self hidepart("tag_heat_vent_01_d0_col");
             self notify(#"hash_5eb926b6");
@@ -788,7 +788,7 @@ function function_b9b039e0(einflictor, eattacker, idamage, idflags, smeansofdeat
     return false;
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9f774e71, Offset: 0x3e70
 // Size: 0x88
@@ -801,7 +801,7 @@ function show_hit_marker() {
     }
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 2, eflags: 0x1 linked
 // Checksum 0x968fa3b8, Offset: 0x3f00
 // Size: 0x194
@@ -830,7 +830,7 @@ function function_efdfbbf7(var_9d838914, var_e7f2a029) {
     self clientfield::set(str_clientfield, 0);
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8899a5a5, Offset: 0x40a0
 // Size: 0xa4
@@ -852,7 +852,7 @@ function function_37a64cff(var_ce1b5a05) {
     self clientfield::set(str_clientfield, 1);
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7a8a2e53, Offset: 0x4150
 // Size: 0x3fc
@@ -886,7 +886,7 @@ function function_a3258c2a(var_f8b7c9a1) {
         velocityoffset = self.enemy getvelocity() * -0.3;
         targetposition = self.enemy.origin + angleoffset + velocityoffset;
         self vehicle_ai::setturrettarget(targetposition, 1);
-        wait(fireinterval);
+        wait fireinterval;
         self fireweapon(1, undefined, angleoffset + velocityoffset, self);
     }
     self notify(#"fire_stop");
@@ -899,7 +899,7 @@ function function_a3258c2a(var_f8b7c9a1) {
     self vehicle_ai::set_state("combat");
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7e69090d, Offset: 0x4558
 // Size: 0x5ec
@@ -937,7 +937,7 @@ function function_59fe8c9c(targetposition) {
             var_5d7a8c53 = anglestoup(tagangles);
             var_3e32f05a = spawnvehicle("spawner_zm_dlc3_vehicle_raps_nikolai", spawntag, self.angles);
             if (!isdefined(var_3e32f05a)) {
-                wait(0.1);
+                wait 0.1;
             }
         }
         var_3e32f05a.exclude_cleanup_adding_to_total = 1;
@@ -946,11 +946,11 @@ function function_59fe8c9c(targetposition) {
         playfxontag("dlc3/stalingrad/fx_mech_wpn_raps_launcher_muz", self, "tag_flash");
         var_3e32f05a hide();
         var_3e32f05a.takedamage = 0;
-        wait(0.05);
+        wait 0.05;
         var_3e32f05a.origin = spawntag + var_5d7a8c53 * 40;
-        wait(0.05);
+        wait 0.05;
         var_3e32f05a show();
-        wait(0.05);
+        wait 0.05;
         if (!isdefined(level.var_c3c3ffc5)) {
             level.var_c3c3ffc5 = [];
         } else if (!isarray(level.var_c3c3ffc5)) {
@@ -958,14 +958,14 @@ function function_59fe8c9c(targetposition) {
         }
         level.var_c3c3ffc5[level.var_c3c3ffc5.size] = var_3e32f05a;
         level.var_6d27427c++;
-        var_3e32f05a namespace_48c05c81::function_d48ad6b4();
+        var_3e32f05a zm_stalingrad_util::function_d48ad6b4();
         var_3e32f05a thread function_6deb3e8d();
         var_3e32f05a.takedamage = 1;
         var_3e32f05a thread function_3b145bbb();
         offset = anglestoforward((0, i * var_a3f49a09, 0));
         launchforce = var_5d7a8c53 * 300 + offset * 40;
         var_3e32f05a thread function_853d3b2b(targetposition + offset * 60, launchforce);
-        wait(0.1);
+        wait 0.1;
     }
     if (self.var_65850094[1] > 0) {
         self function_efdfbbf7(0, 1);
@@ -981,7 +981,7 @@ function function_59fe8c9c(targetposition) {
     self vehicle_ai::set_state("combat");
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 2, eflags: 0x1 linked
 // Checksum 0xbf633414, Offset: 0x4b50
 // Size: 0x1dc
@@ -992,11 +992,11 @@ function function_853d3b2b(var_ff72f147, launchforce) {
     self vehicle::toggle_sounds(0);
     launchstart = gettime();
     self launchvehicle(launchforce);
-    wait(0.5);
+    wait 0.5;
     self applyballistictarget(var_ff72f147);
     self show();
     while (!isdefined(getclosestpointonnavmesh(self.origin, -56)) && vehicle_ai::timesince(launchstart) < 4) {
-        wait(0.1);
+        wait 0.1;
     }
     self clientfield::set("play_raps_trail_fx", 0);
     self vehicle_ai::set_state("combat");
@@ -1007,21 +1007,21 @@ function function_853d3b2b(var_ff72f147, launchforce) {
     self thread function_902a2c47();
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbeb2a4c, Offset: 0x4d38
 // Size: 0x94
 function function_902a2c47() {
-    wait(10);
+    wait 10;
     while (level flag::get("world_is_paused")) {
-        wait(1);
+        wait 1;
     }
     if (isdefined(self) && !(isdefined(self zm_zonemgr::entity_in_zone("boss_arena_zone", 0)) && self zm_zonemgr::entity_in_zone("boss_arena_zone", 0))) {
         self kill();
     }
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbcc39e64, Offset: 0x4dd8
 // Size: 0xa8
@@ -1035,7 +1035,7 @@ function function_6deb3e8d() {
     }
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0x595a59e2, Offset: 0x4e88
 // Size: 0x32
@@ -1047,41 +1047,41 @@ function function_3b145bbb() {
     }
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 2, eflags: 0x1 linked
 // Checksum 0x3fbadc8f, Offset: 0x4ec8
 // Size: 0x2e8
-function function_ab984a0f(var_41ae2fa1, targetorigin) {
-    var_41ae2fa1 endon(#"death");
-    targetdist = distance2d(var_41ae2fa1.origin, targetorigin) - 400 + randomfloat(60);
-    startorigin = var_41ae2fa1.origin;
-    while (distance2dsquared(var_41ae2fa1.origin, startorigin) < targetdist * 0.4 * targetdist * 0.4) {
-        wait(0.05);
+function function_ab984a0f(spike, targetorigin) {
+    spike endon(#"death");
+    targetdist = distance2d(spike.origin, targetorigin) - 400 + randomfloat(60);
+    startorigin = spike.origin;
+    while (distance2dsquared(spike.origin, startorigin) < targetdist * 0.4 * targetdist * 0.4) {
+        wait 0.05;
     }
     fallspeed = 1;
     maxpitch = 10;
-    while (distance2dsquared(var_41ae2fa1.origin, startorigin) < max(targetdist * targetdist, -106 * -106)) {
-        pitch = angleclamp180(var_41ae2fa1.angles[0]);
+    while (distance2dsquared(spike.origin, startorigin) < max(targetdist * targetdist, -106 * -106)) {
+        pitch = angleclamp180(spike.angles[0]);
         if (pitch < maxpitch) {
             pitch += min(fallspeed, maxpitch - pitch);
-            var_41ae2fa1.angles = (pitch, var_41ae2fa1.angles[1], var_41ae2fa1.angles[2]);
+            spike.angles = (pitch, spike.angles[1], spike.angles[2]);
         }
-        wait(0.05);
+        wait 0.05;
     }
     fallspeed = 16;
     maxpitch = 76;
-    while (var_41ae2fa1.angles[0] < maxpitch) {
-        pitch = angleclamp180(var_41ae2fa1.angles[0]);
+    while (spike.angles[0] < maxpitch) {
+        pitch = angleclamp180(spike.angles[0]);
         pitch += fallspeed;
         if (pitch > maxpitch) {
             pitch = randomfloatrange(maxpitch, min(pitch, 90));
         }
-        var_41ae2fa1.angles = (pitch, var_41ae2fa1.angles[1], var_41ae2fa1.angles[2]);
-        wait(0.05);
+        spike.angles = (pitch, spike.angles[1], spike.angles[2]);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfe739314, Offset: 0x51b8
 // Size: 0xc8
@@ -1097,7 +1097,7 @@ function function_db9ecada() {
     }
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 0, eflags: 0x1 linked
 // Checksum 0x48cba058, Offset: 0x5288
 // Size: 0x118
@@ -1112,11 +1112,11 @@ function function_d7ef4d80() {
                 ai_zombie thread namespace_57695b4d::function_1b1bb1b();
             }
         }
-        wait(0.25);
+        wait 0.25;
     }
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5bd40020, Offset: 0x53a8
 // Size: 0x39c
@@ -1148,10 +1148,10 @@ function function_dfc5ede1(targetent) {
     self thread function_db9ecada();
     for (i = 0; i < 3; i++) {
         self waittill(#"hash_685ef1dd");
-        var_41ae2fa1 = self fireweapon(2);
+        spike = self fireweapon(2);
         self clearturrettarget();
-        if (isdefined(var_41ae2fa1)) {
-            self thread function_ab984a0f(var_41ae2fa1, target);
+        if (isdefined(spike)) {
+            self thread function_ab984a0f(spike, target);
         }
     }
     self function_bb5f9faa(1);
@@ -1165,7 +1165,7 @@ function function_dfc5ede1(targetent) {
     self vehicle_ai::set_state("combat");
 }
 
-// Namespace namespace_48757881
+// Namespace siegebot_nikolai
 // Params 1, eflags: 0x0
 // Checksum 0x913eef54, Offset: 0x5750
 // Size: 0xd8

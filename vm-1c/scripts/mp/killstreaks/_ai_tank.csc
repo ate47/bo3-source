@@ -81,7 +81,7 @@ function missile_fire(localclientnum, oldval, newval, bnewent, binitialsnap, fie
 // Size: 0xb4
 function update_hud(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"disconnect");
-    wait(0.016);
+    wait 0.016;
     vehicle = getplayervehicle(self);
     if (isdefined(vehicle)) {
         self update_ui_model_ammo_count(localclientnum, vehicle clientfield::get("ai_tank_missile_fire"));

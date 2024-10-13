@@ -10,9 +10,9 @@
 #using scripts/cp/_load;
 #using scripts/codescripts/struct;
 
-#namespace namespace_8e9083ff;
+#namespace zurich_util;
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 0, eflags: 0x2
 // Checksum 0xf171115a, Offset: 0x1978
 // Size: 0x34
@@ -20,7 +20,7 @@ function autoexec function_2dc19561() {
     system::register("zurich_util", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0x76da813c, Offset: 0x19b8
 // Size: 0x4c
@@ -32,7 +32,7 @@ function __init__() {
     function_ba0b35c();
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1bd8b27b, Offset: 0x1a10
 // Size: 0x8ec
@@ -52,27 +52,27 @@ function init_clientfields() {
     clientfield::register("scriptmover", "raven_teleport_in_effect", 1, 1, "counter", &function_c39ee0a8, 0, 0);
     clientfield::register("toplayer", "player_weather", 1, var_2d20335b, "int", &function_6120ef33, 0, 0);
     clientfield::register("toplayer", "vortex_teleport", 1, 1, "counter", &function_560fbdb4, 0, 0);
-    clientfield::register("toplayer", "postfx_futz", 1, 1, "counter", &function_baae4949, 0, 0);
-    clientfield::register("toplayer", "postfx_futz_mild", 1, 1, "counter", &function_bf8650ca, 0, 0);
-    clientfield::register("toplayer", "postfx_transition", 1, 1, "counter", &function_edf5c801, 0, 0);
-    clientfield::register("world", "zurich_city_ambience", 1, 1, "int", &function_14b2ccdd, 0, 0);
+    clientfield::register("toplayer", "postfx_futz", 1, 1, "counter", &postfx_futz, 0, 0);
+    clientfield::register("toplayer", "postfx_futz_mild", 1, 1, "counter", &postfx_futz_mild, 0, 0);
+    clientfield::register("toplayer", "postfx_transition", 1, 1, "counter", &postfx_transition, 0, 0);
+    clientfield::register("world", "zurich_city_ambience", 1, 1, "int", &zurich_city_ambience, 0, 0);
     clientfield::register("actor", "skin_transition_melt", 1, 1, "int", &function_28572b48, 0, 1);
     clientfield::register("scriptmover", "corvus_body_fx", 1, 1, "int", &function_b5037219, 0, 0);
     clientfield::register("actor", "raven_ai_rez", 1, 1, "int", &function_91c7508e, 0, 0);
     clientfield::register("scriptmover", "raven_ai_rez", 1, 1, "int", &function_91c7508e, 0, 0);
-    clientfield::register("toplayer", "zurich_server_cam", 1, 1, "int", &function_9596c4e, 0, 0);
-    clientfield::register("world", "set_exposure_bank", 1, 1, "int", &function_1e832062, 0, 0);
+    clientfield::register("toplayer", "zurich_server_cam", 1, 1, "int", &zurich_server_cam, 0, 0);
+    clientfield::register("world", "set_exposure_bank", 1, 1, "int", &set_exposure_bank, 0, 0);
     clientfield::register("scriptmover", "corvus_tree_shader", 1, 1, "int", &function_51e77d4f, 0, 0);
     clientfield::register("actor", "hero_cold_breath", 1, 1, "int", &function_33714f9b, 0, 0);
-    clientfield::register("world", "set_post_color_grade_bank", 1, 1, "int", &function_7b22d9c9, 0, 0);
-    clientfield::register("toplayer", "postfx_hallucinations", 1, 1, "counter", &function_6ec9825e, 0, 0);
+    clientfield::register("world", "set_post_color_grade_bank", 1, 1, "int", &set_post_color_grade_bank, 0, 0);
+    clientfield::register("toplayer", "postfx_hallucinations", 1, 1, "counter", &postfx_hallucinations, 0, 0);
     clientfield::register("toplayer", "player_water_transition", 1, 1, "int", &function_70a9fa32, 0, 0);
-    clientfield::register("toplayer", "raven_hallucinations", 1, 1, "int", &function_8f5cd506, 0, 0);
-    clientfield::register("scriptmover", "quadtank_raven_explosion", 1, 1, "int", &function_45e22343, 0, 0);
-    clientfield::register("scriptmover", "raven_fade_out", 1, 1, "int", &function_629bf9a7, 0, 0);
+    clientfield::register("toplayer", "raven_hallucinations", 1, 1, "int", &raven_hallucinations, 0, 0);
+    clientfield::register("scriptmover", "quadtank_raven_explosion", 1, 1, "int", &quadtank_raven_explosion, 0, 0);
+    clientfield::register("scriptmover", "raven_fade_out", 1, 1, "int", &raven_fade_out, 0, 0);
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbfbbe807, Offset: 0x2308
 // Size: 0x756
@@ -146,7 +146,7 @@ function function_ba0b35c() {
     level._effect["raven_fade_out_fx"] = "animals/fx_bio_raven_dni_rez_out_dirty";
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 2, eflags: 0x1 linked
 // Checksum 0x969554d4, Offset: 0x2a68
 // Size: 0x14
@@ -154,24 +154,24 @@ function function_5bcd68f2(str_objective, var_74cd64bc) {
     
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 2, eflags: 0x1 linked
 // Checksum 0xeddbacc4, Offset: 0x2a88
 // Size: 0x538
 function function_3bf27f88(str_objective, var_74cd64bc) {
     if (str_objective == "plaza_battle") {
-        wait(1);
+        wait 1;
         level struct::function_368120a1("scene", "p7_fxanim_cp_zurich_wasp_swarm_bundle");
         return;
     }
     if (str_objective == "root_zurich_vortex") {
-        wait(1);
+        wait 1;
         level struct::function_368120a1("scene", "p7_fxanim_cp_zurich_root_wall_01_bundle");
         level struct::function_368120a1("scene", "p7_fxanim_cp_zurich_root_wall_02_bundle");
         return;
     }
     if (str_objective == "root_cairo_vortex") {
-        wait(1);
+        wait 1;
         level struct::function_368120a1("scene", "p7_fxanim_cp_zurich_cairo_b_collapse_01_bundle");
         level struct::function_368120a1("scene", "p7_fxanim_cp_zurich_cairo_b_collapse_02_bundle");
         level struct::function_368120a1("scene", "p7_fxanim_cp_zurich_cairo_b_collapse_03_bundle");
@@ -181,7 +181,7 @@ function function_3bf27f88(str_objective, var_74cd64bc) {
         return;
     }
     if (str_objective == "clearing_hub_3") {
-        wait(1);
+        wait 1;
         level struct::function_368120a1("scene", "p7_fxanim_cp_zurich_root_door_center_bundle");
         level struct::function_368120a1("scene", "p7_fxanim_cp_zurich_root_door_left_bundle");
         level struct::function_368120a1("scene", "p7_fxanim_cp_zurich_root_door_right_bundle");
@@ -192,7 +192,7 @@ function function_3bf27f88(str_objective, var_74cd64bc) {
         return;
     }
     if (str_objective == "root_singapore_vortex") {
-        wait(1);
+        wait 1;
         level struct::function_368120a1("scene", "cin_zur_16_02_singapore_hanging_shortrope");
         level struct::function_368120a1("scene", "cin_zur_16_02_singapore_hanging_shortrope_2");
         level struct::function_368120a1("scene", "cin_zur_16_02_singapore_vign_bodies01");
@@ -210,7 +210,7 @@ function function_3bf27f88(str_objective, var_74cd64bc) {
     }
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 2, eflags: 0x1 linked
 // Checksum 0x1970f0e6, Offset: 0x2fc8
 // Size: 0xfa
@@ -228,7 +228,7 @@ function function_4dd02a03(a_ents, str_notify) {
     }
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3dbd7747, Offset: 0x30d0
 // Size: 0x13c
@@ -239,12 +239,12 @@ function function_b3f0d569(localclientnum, oldval, newval, bnewent, binitialsnap
         fxobj = util::spawn_model(localclientnum, "tag_origin", pos, angles);
         playfxontag(localclientnum, level._effect["exploding_death"], fxobj, "tag_origin");
         fxobj playsound(localclientnum, "evt_ai_explode");
-        wait(6);
+        wait 6;
         fxobj delete();
     }
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3c9ac8f5, Offset: 0x3218
 // Size: 0x494
@@ -277,7 +277,7 @@ function function_78bd19c4(localclientnum, oldval, newval, bnewent, binitialsnap
     playfxontag(localclientnum, level._effect["hero_out_fx_waist"], self, "j_spinelower");
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xfb023139, Offset: 0x36b8
 // Size: 0x8c
@@ -286,7 +286,7 @@ function function_f026ccfa(localclientnum, oldval, newval, bnewent, binitialsnap
     self playsound(localclientnum, "evt_ai_raven_spawn");
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xef036dba, Offset: 0x3750
 // Size: 0xc4
@@ -300,11 +300,11 @@ function function_346468e3(localclientnum, oldval, newval, bnewent, binitialsnap
     setworldfogactivebank(localclientnum, 1);
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x575cdb17, Offset: 0x3820
 // Size: 0x7c
-function function_1e832062(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function set_exposure_bank(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         setexposureactivebank(localclientnum, 4);
         return;
@@ -312,11 +312,11 @@ function function_1e832062(localclientnum, oldval, newval, bnewent, binitialsnap
     setexposureactivebank(localclientnum, 1);
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x170e32f4, Offset: 0x38a8
 // Size: 0x7c
-function function_7b22d9c9(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function set_post_color_grade_bank(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         setpbgactivebank(localclientnum, 2);
         return;
@@ -324,7 +324,7 @@ function function_7b22d9c9(localclientnum, oldval, newval, bnewent, binitialsnap
     setpbgactivebank(localclientnum, 1);
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1133bdfc, Offset: 0x3930
 // Size: 0x8c
@@ -333,7 +333,7 @@ function function_69d5dc62(localclientnum, oldval, newval, bnewent, binitialsnap
     self playsound(localclientnum, "evt_ai_juke");
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x123f4407, Offset: 0x39c8
 // Size: 0x1bc
@@ -348,7 +348,7 @@ function function_d559bc1d(localclientnum, oldval, newval, bnewent, binitialsnap
     playfxontag(localclientnum, level._effect["raven_juke_effect_leg_ri"], self, "j_hip_ri");
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x887de8f2, Offset: 0x3b90
 // Size: 0x8c
@@ -357,7 +357,7 @@ function function_cb609334(localclientnum, oldval, newval, bnewent, binitialsnap
     self playsound(localclientnum, "evt_ai_teleoprt");
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x305e7544, Offset: 0x3c28
 // Size: 0x1bc
@@ -372,7 +372,7 @@ function function_496c80db(localclientnum, oldval, newval, bnewent, binitialsnap
     playfxontag(localclientnum, level._effect["raven_teleport_effect_leg_ri"], self, "j_hip_ri");
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x17103743, Offset: 0x3df0
 // Size: 0x8c
@@ -381,17 +381,17 @@ function function_c39ee0a8(localclientnum, oldval, newval, bnewent, binitialsnap
     self playsound(localclientnum, "evt_ai_teleport_in");
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa225f7d4, Offset: 0x3e88
 // Size: 0xb4
 function function_560fbdb4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    wait(0.1);
+    wait 0.1;
     var_c3a24c78 = self.origin + (0, 0, 32) + anglestoforward(self.angles) * 12;
     playfx(localclientnum, level._effect["vortex_explode"], var_c3a24c78);
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x9366a702, Offset: 0x3f48
 // Size: 0x494
@@ -424,7 +424,7 @@ function function_91c7508e(localclientnum, oldval, newval, bnewent, binitialsnap
     playfxontag(localclientnum, level._effect["raven_out_fx_waist"], self, "j_spinelower");
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa8d5dff9, Offset: 0x43e8
 // Size: 0x3be
@@ -453,7 +453,7 @@ function function_b5037219(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2d935d1f, Offset: 0x47b0
 // Size: 0x1fc
@@ -493,7 +493,7 @@ function function_6120ef33(localclientnum, oldval, newval, bnewent, binitialsnap
     self function_a0b8d731(localclientnum);
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 3, eflags: 0x1 linked
 // Checksum 0xd3b9e95f, Offset: 0x49b8
 // Size: 0xa2
@@ -505,7 +505,7 @@ function function_965fdae0(localclientnum, str_fx, n_delay) {
     level.var_18402cb[localclientnum] = playfxoncamera(localclientnum, level._effect[str_fx], (0, 0, 0), (1, 0, 0), (0, 0, 1));
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x104e69d2, Offset: 0x4a68
 // Size: 0x60
@@ -517,40 +517,40 @@ function function_a0b8d731(localclientnum) {
     }
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x77eb88a, Offset: 0x4ad0
 // Size: 0xa4
-function function_baae4949(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function postfx_futz(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     player = getlocalplayer(localclientnum);
     playsound(localclientnum, "evt_dni_interrupt", (0, 0, 0));
     player postfx::playpostfxbundle("pstfx_dni_screen_futz");
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa5d61993, Offset: 0x4b80
 // Size: 0x7c
-function function_edf5c801(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function postfx_transition(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     player = getlocalplayer(localclientnum);
     player thread postfx::playpostfxbundle("pstfx_cp_transition_sprite_zur");
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb760fd57, Offset: 0x4c08
 // Size: 0xa4
-function function_bf8650ca(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function postfx_futz_mild(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     player = getlocalplayer(localclientnum);
     playsound(localclientnum, "evt_dni_interrupt", (0, 0, 0));
     player postfx::playpostfxbundle("pstfx_dni_interrupt_mild");
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc3c79a4e, Offset: 0x4cb8
 // Size: 0x8c
-function function_14b2ccdd(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function zurich_city_ambience(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         level thread scene::play("p7_fxanim_cp_zurich_wasp_swarm_bundle");
         return;
@@ -558,7 +558,7 @@ function function_14b2ccdd(localclientnum, oldval, newval, bnewent, binitialsnap
     level scene::stop("p7_fxanim_cp_zurich_wasp_swarm_bundle", 1);
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x87169302, Offset: 0x4d50
 // Size: 0x120
@@ -574,12 +574,12 @@ function function_28572b48(localclientnum, oldval, newval, bnewent, binitialsnap
             }
             var_daad71ff = 1 * var_348e23ad / 4;
             self mapshaderconstant(localclientnum, 0, "scriptVector0", var_daad71ff, var_daad71ff, 0);
-            wait(0.01);
+            wait 0.01;
         }
     }
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x595ed69, Offset: 0x4e78
 // Size: 0x9e
@@ -589,18 +589,18 @@ function function_51e77d4f(localclientnum, oldval, newval, bnewent, binitialsnap
             return;
         }
         self.var_540c25e7 = 1;
-        self thread function_276d0d02();
+        self thread corvus_tree_shader();
         return;
     }
     self.var_540c25e7 = undefined;
     self notify(#"stop_shader");
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd4b5e7aa, Offset: 0x4f20
 // Size: 0x1ba
-function function_276d0d02() {
+function corvus_tree_shader() {
     self endon(#"stop_shader");
     n_increment = 0.1;
     var_94af3e50 = 1;
@@ -612,23 +612,23 @@ function function_276d0d02() {
         while (n_pulse < var_94af3e50 && isdefined(self)) {
             self mapshaderconstant(0, 0, "scriptVector0", 1, n_pulse, 0, 0);
             n_pulse += n_pulse_increment;
-            wait(n_increment);
+            wait n_increment;
         }
         n_cycle_time = randomfloatrange(2, 8);
         n_pulse_increment = (var_94af3e50 - var_2271cae) / n_cycle_time / n_increment;
         while (var_2271cae < n_pulse && isdefined(self)) {
             self mapshaderconstant(0, 0, "scriptVector0", 1, n_pulse, 0, 0);
             n_pulse -= n_pulse_increment;
-            wait(n_increment);
+            wait n_increment;
         }
     }
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xac9bcd1f, Offset: 0x50e8
 // Size: 0xc4
-function function_9596c4e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function zurich_server_cam(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         s_align = struct::get("tag_align_coalescence_return_server");
         playmaincamxcam(localclientnum, "c_zur_20_01_plaza_1st_fight_it_shooting_cam", 0, "", "", s_align.origin, s_align.angles);
@@ -637,7 +637,7 @@ function function_9596c4e(localclientnum, oldval, newval, bnewent, binitialsnap,
     stopmaincamxcam(localclientnum);
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6f45a5d9, Offset: 0x51b8
 // Size: 0x84
@@ -649,7 +649,7 @@ function function_70a9fa32(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread postfx::playpostfxbundle("pstfx_blood_t_out");
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xce218a76, Offset: 0x5248
 // Size: 0x6e
@@ -661,7 +661,7 @@ function function_33714f9b(localclientnum, oldval, newval, bnewent, binitialsnap
     self notify(#"disable_breath_fx");
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6a7deac6, Offset: 0x52c0
 // Size: 0x78
@@ -670,50 +670,50 @@ function function_1cb0f58c(localclientnum) {
     self endon(#"entityshutdown");
     while (true) {
         playfxontag(localclientnum, level._effect["hero_cold_breath"], self, "j_head");
-        wait(randomintrange(6, 8));
+        wait randomintrange(6, 8);
     }
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xee9b3bcb, Offset: 0x5340
 // Size: 0x134
-function function_6ec9825e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function postfx_hallucinations(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"entityshutdown");
     if (newval == 1) {
         self playsound(0, "evt_dni_interrupt");
         self thread postfx::playpostfxbundle("pstfx_dni_screen_futz_short");
-        wait(0.5);
+        wait 0.5;
         self thread postfx::exitpostfxbundle();
-        wait(0.3);
+        wait 0.3;
         self thread postfx::playpostfxbundle("pstfx_raven_loop");
-        wait(0.5);
+        wait 0.5;
         self playsound(0, "evt_dni_interrupt");
         self thread postfx::exitpostfxbundle();
     }
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe725e3f2, Offset: 0x5480
 // Size: 0x114
-function function_8f5cd506(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function raven_hallucinations(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"entityshutdown");
     if (newval) {
         self thread function_b5adc0ad(localclientnum);
         self thread postfx::playpostfxbundle("pstfx_dni_screen_futz_short");
-        wait(0.5);
+        wait 0.5;
         self thread postfx::exitpostfxbundle();
         return;
     }
     self notify(#"hash_5ca6609a");
-    wait(1.5);
+    wait 1.5;
     self thread postfx::playpostfxbundle("pstfx_dni_screen_futz_short");
-    wait(0.15);
+    wait 0.15;
     self thread postfx::exitpostfxbundle();
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4061ad7c, Offset: 0x55a0
 // Size: 0x68
@@ -722,26 +722,26 @@ function function_b5adc0ad(localclientnum) {
     self endon(#"hash_5ca6609a");
     while (true) {
         playfxoncamera(localclientnum, level._effect["raven_hallucination_fx"], (0, 0, 0), (1, 0, 0), (0, 0, 1));
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x61affa11, Offset: 0x5610
 // Size: 0x7c
-function function_629bf9a7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function raven_fade_out(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"entityshutdown");
     if (newval) {
         playfxontag(localclientnum, level._effect["raven_fade_out_fx"], self, "j_spine_2");
     }
 }
 
-// Namespace namespace_8e9083ff
+// Namespace zurich_util
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3d7fa06a, Offset: 0x5698
 // Size: 0x94
-function function_45e22343(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function quadtank_raven_explosion(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         playfxontag(localclientnum, level._effect["quadtank_explosion_fx"], self, "tag_origin");
         self playsound(0, "veh_quadtank_crowsplosion");

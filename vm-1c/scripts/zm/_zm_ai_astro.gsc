@@ -55,7 +55,7 @@ function autoexec init() {
     level.zombie_total_set_func = &function_b4471748;
     zm_spawner::register_zombie_damage_callback(&function_3d0b0628);
     while (!isdefined(level.custom_ai_spawn_check_funcs)) {
-        wait(0.05);
+        wait 0.05;
     }
     zm::register_custom_ai_spawn_check("astro", &function_64229c1f, &function_870ce941, &function_13189f7a);
 }
@@ -71,7 +71,7 @@ function function_c1d5663e() {
     blackboard::registerblackboardattribute(self, "_locomotion_speed", "locomotion_speed_walk", &zombiebehavior::function_f8ae4008);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("astroTargetService");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
     self.___archetypeonanimscriptedcallback = &function_11b12c90;
@@ -94,7 +94,7 @@ function private function_11b12c90(entity) {
 // Checksum 0x664e962, Offset: 0xa48
 // Size: 0x74
 function private function_ecd296a1() {
-    behaviortreenetworkutility::registerbehaviortreescriptapi("astroTargetService", &function_fa8c98de);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("astroTargetService", &astroTargetService);
     behaviortreenetworkutility::registerbehaviortreeaction("moonAstroProceduralTraversal", &function_1dd16458, &robotsoldierbehavior::robotproceduraltraversalupdate, &function_da0d7bfb);
 }
 
@@ -111,7 +111,7 @@ function function_608d24f2() {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb6672acb, Offset: 0xb08
 // Size: 0x248
-function function_fa8c98de(entity) {
+function astroTargetService(entity) {
     if (isdefined(entity.ignoreall) && entity.ignoreall) {
         return 0;
     }
@@ -255,21 +255,21 @@ function function_573f0339() {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd785b6df, Offset: 0x1158
 // Size: 0x100
-function function_396473db(var_e44e9ddb) {
+function function_396473db(astro_zombie) {
     self.script_moveoverride = 1;
     if (!isdefined(level.var_107ab7d7)) {
         level.var_107ab7d7 = 0;
     }
     level.var_107ab7d7++;
-    var_e44e9ddb.has_legs = 1;
+    astro_zombie.has_legs = 1;
     self.count = 100;
     playsoundatposition("evt_astro_spawn", self.origin);
-    var_e44e9ddb.deathfunction = &function_16a70fd4;
-    var_e44e9ddb.animname = "astro_zombie";
-    var_e44e9ddb.loopsound = "evt_astro_gasmask_loop";
-    var_e44e9ddb thread function_63a252ea();
+    astro_zombie.deathfunction = &function_16a70fd4;
+    astro_zombie.animname = "astro_zombie";
+    astro_zombie.loopsound = "evt_astro_gasmask_loop";
+    astro_zombie thread function_63a252ea();
     function_9c51dcdd("astro spawned in " + level.round_number);
-    return var_e44e9ddb;
+    return astro_zombie;
 }
 
 // Namespace namespace_c0afbdaf
@@ -316,7 +316,7 @@ function function_26a9618e() {
     self.var_8ee1d008 = gettime() + level.var_ce54f4d4;
     while (true) {
         if (!isdefined(self.enemy)) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         if (!self.var_a2ffee41 && gettime() > self.var_8ee1d008) {
@@ -324,29 +324,29 @@ function function_26a9618e() {
             test_origin = self.enemy geteye();
             dist_sqr = distancesquared(origin, test_origin);
             if (dist_sqr > level.var_a781f972) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             yaw = zombie_utility::getyawtoorigin(self.enemy.origin);
             if (abs(yaw) > 45) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             if (!bullettracepassed(origin, test_origin, 0, undefined)) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             self.var_a2ffee41 = 1;
             self thread function_c08df578();
-            var_d1086830 = self animmappingsearch(istring("anim_astro_headbutt"));
-            time = getanimlength(var_d1086830);
+            headbutt_anim = self animmappingsearch(istring("anim_astro_headbutt"));
+            time = getanimlength(headbutt_anim);
             self.var_8d3d04ec thread function_c2e771ff(time);
             self animscripted("headbutt_anim", self.origin, self.angles, "ai_zm_dlc5_zombie_astro_headbutt");
-            wait(time);
+            wait time;
             self.var_8ee1d008 = gettime() + level.var_ce54f4d4;
             self.var_a2ffee41 = 0;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -356,7 +356,7 @@ function function_26a9618e() {
 // Size: 0x7c
 function function_c2e771ff(time) {
     self endon(#"disconnect");
-    wait(time);
+    wait time;
     self allowjump(1);
     self allowprone(1);
     self allowcrouch(1);
@@ -401,7 +401,7 @@ function function_c08df578() {
     var_e78b4163 = vectornormalize(player.origin - self.origin);
     link_org = self.origin + 40 * var_e78b4163;
     player function_c396f2d4(link_org, var_7aa0b3b, lerp_time, 1);
-    wait(lerp_time);
+    wait lerp_time;
     player freezecontrols(0);
     player allowjump(0);
     player allowstand(1);
@@ -443,12 +443,12 @@ function function_c396f2d4(origin, angles, lerptime, fraction, var_73e5663c, var
 // Params 1, eflags: 0x1 linked
 // Checksum 0xaa5f3417, Offset: 0x1c88
 // Size: 0xa4
-function function_ec52ceb(var_9061b3e2) {
+function function_ec52ceb(astro) {
     self endon(#"released");
     self endon(#"disconnect");
-    animlen = var_9061b3e2 getanimlengthfromasd("zm_headbutt", 0);
+    animlen = astro getanimlengthfromasd("zm_headbutt", 0);
     time = 0.5 + animlen;
-    var_9061b3e2 util::waittill_notify_or_timeout("death", time);
+    astro util::waittill_notify_or_timeout("death", time);
     self freezecontrols(0);
 }
 
@@ -526,12 +526,12 @@ function function_44110cda() {
 // Params 2, eflags: 0x1 linked
 // Checksum 0x69e4f563, Offset: 0x2170
 // Size: 0x9c
-function function_e3c9f05c(var_9061b3e2, org) {
+function function_e3c9f05c(astro, org) {
     self endon(#"disconnect");
-    self waittill(#"hash_3d708932");
+    self waittill(#"perk_lost");
     damage = self.health - 1;
-    if (isdefined(var_9061b3e2)) {
-        self dodamage(damage, var_9061b3e2.origin, var_9061b3e2);
+    if (isdefined(astro)) {
+        self dodamage(damage, astro.origin, astro);
         return;
     }
     self dodamage(damage, org);
@@ -636,9 +636,9 @@ function function_df565004() {
     self endon(#"death");
     self setplayercollision(0);
     self thread zombie_utility::zombie_eye_glow_stop();
-    wait(0.05);
+    wait 0.05;
     self ghost();
-    wait(0.05);
+    wait 0.05;
     self delete();
 }
 
@@ -656,8 +656,8 @@ function function_703ac718() {
         self.var_8d3d04ec allowprone(1);
         self.var_8d3d04ec allowcrouch(1);
         self.var_8d3d04ec unlink();
-        wait(0.05);
-        wait(0.05);
+        wait 0.05;
+        wait 0.05;
     }
     players = getplayers();
     for (i = 0; i < players.size; i++) {
@@ -706,8 +706,8 @@ function function_703ac718() {
 function function_daaa8ee8(inflictor, attacker, damage, flags, meansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex) {
     self endon(#"death");
     switch (weapon.name) {
-    case 46:
-    case 47:
+    case "microwavegundw_upgraded_zm":
+    case "microwavegundw_zm":
         damage = 0;
         break;
     }
@@ -774,9 +774,9 @@ function function_f1d8fe46() {
     self endon(#"death");
     while (true) {
         /#
-            iprintln("astroTargetService" + self.health);
+            iprintln("<dev string:x3a>" + self.health);
         #/
-        wait(1);
+        wait 1;
     }
 }
 

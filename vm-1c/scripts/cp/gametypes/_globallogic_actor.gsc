@@ -84,7 +84,7 @@ function callback_actordamage(einflictor, eattacker, idamage, idflags, smeansofd
             idamage = self [[ damagecallback ]](einflictor, eattacker, idamage, idflags, smeansofdeath, weapon, vpoint, vdir, shitloc, psoffsettime, boneindex, modelindex);
         }
     }
-    assert(isdefined(idamage), "riotshield");
+    assert(isdefined(idamage), "<dev string:x28>");
     if (!isdefined(vdir)) {
         idflags |= 4;
     }
@@ -113,7 +113,7 @@ function callback_actordamage(einflictor, eattacker, idamage, idflags, smeansofd
             eattacker = eattacker.driver;
         }
         if (isplayer(eattacker)) {
-            println("riotshield" + weapon.name + "riotshield" + smeansofdeath);
+            println("<dev string:x61>" + weapon.name + "<dev string:x7b>" + smeansofdeath);
             if (self.team != eattacker.team) {
                 if (smeansofdeath == "MOD_MELEE") {
                     eattacker notify(#"melee_kill");

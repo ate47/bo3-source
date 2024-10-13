@@ -203,7 +203,7 @@ function refire_player_downed() {
     self endon(#"player_revived");
     self endon(#"death");
     self endon(#"disconnect");
-    wait(1);
+    wait 1;
     if (self.num_perks) {
         self notify(#"player_downed");
     }
@@ -393,7 +393,7 @@ function wait_switch_weapon(n_delay, w_weapon) {
     self endon(#"player_suicide");
     self endon(#"zombified");
     self endon(#"disconnect");
-    wait(n_delay);
+    wait n_delay;
     self switchtoweapon(w_weapon);
 }
 
@@ -428,16 +428,16 @@ function laststand_bleedout(delay) {
             }
         }
         self.bleedout_time -= 1;
-        wait(1);
+        wait 1;
     }
     visionset_mgr::activate("visionset", "zombie_death", self, delay * 0.5);
     while (self.bleedout_time > 0) {
         self.bleedout_time -= 1;
         level clientfield::increment("laststand_update" + self getentitynumber(), self.bleedout_time + 1);
-        wait(1);
+        wait 1;
     }
     while (isdefined(self.revivetrigger) && isdefined(self.revivetrigger.beingrevived) && self.revivetrigger.beingrevived == 1) {
-        wait(0.1);
+        wait 0.1;
     }
     self notify(#"bled_out");
     util::wait_network_frame();
@@ -519,13 +519,13 @@ function function_5c3b9a2f() {
     self thread laststand::function_9a3e66fc();
     self thread laststand::function_a5c40dbc();
     while (self usebuttonpressed()) {
-        wait(1);
+        wait 1;
     }
     if (!isdefined(self.suicideprompt)) {
         return;
     }
     while (true) {
-        wait(0.1);
+        wait 0.1;
         if (!isdefined(self.suicideprompt)) {
             continue;
         }
@@ -586,7 +586,7 @@ function function_51ede748(duration) {
     self.var_292c9541.hidewheninmenu = 1;
     self.var_292c9541 settext(%ZOMBIE_SUICIDING);
     while (self is_suiciding()) {
-        wait(0.05);
+        wait 0.05;
         timer += 0.05;
         if (timer >= var_6d12a464) {
             var_5da69e51 = 1;
@@ -670,7 +670,7 @@ function revive_trigger_think(t_secondary) {
     level endon(#"end_game");
     self endon(#"death");
     while (true) {
-        wait(0.05);
+        wait 0.05;
         if (isdefined(t_secondary)) {
             t_revive = t_secondary;
         } else {
@@ -935,7 +935,7 @@ function revive_do_revive(e_revivee, w_reviver, w_revive_tool, t_secondary) {
     self.var_fca62492 settext(%ZOMBIE_REVIVING);
     self thread check_for_failed_revive(e_revivee);
     while (self is_reviving(e_revivee, t_secondary)) {
-        wait(0.05);
+        wait 0.05;
         timer += 0.05;
         if (self laststand::player_is_in_laststand()) {
             break;
@@ -1032,7 +1032,7 @@ function auto_revive(reviver, var_358f18e0) {
         }
     }
     self notify(#"player_revived", reviver);
-    wait(0.05);
+    wait 0.05;
     if (!isdefined(var_358f18e0) || var_358f18e0 == 0) {
         self laststand_enable_player_weapons();
     }
@@ -1095,7 +1095,7 @@ function revive_success(reviver, b_track_stats) {
     self util::delay(2, "death", &set_ignoreme, 0);
     visionset_mgr::deactivate("visionset", "zombie_last_stand", self);
     visionset_mgr::deactivate("visionset", "zombie_death", self);
-    wait(0.05);
+    wait 0.05;
     self laststand_enable_player_weapons();
 }
 
@@ -1150,7 +1150,7 @@ function revive_force_revive(reviver) {
 // Checksum 0xf69ce144, Offset: 0x45f0
 // Size: 0x54
 function function_590a49b2() {
-    println("zombie_last_stand");
+    println("<dev string:x28>");
     self.var_5ad7ff7e = spawnstruct();
     self.var_5ad7ff7e.var_5aa0f5d3 = level.var_638daea0;
 }
@@ -1162,7 +1162,7 @@ function function_590a49b2() {
 function function_38c5da09() {
     self endon(#"player_revived");
     self endon(#"disconnect");
-    println("zombie_last_stand");
+    println("<dev string:x48>");
     self laststand::function_cd85ffaf(0);
     self clientfield::set("zmbLastStand", 1);
     self.var_5ad7ff7e.var_8b479de8 = level.var_47df2be6;
@@ -1170,7 +1170,7 @@ function function_38c5da09() {
     self thread function_5d050fca();
     while (self.var_5ad7ff7e.var_8b479de8 < 1) {
         self.var_5ad7ff7e.var_8b479de8 += level.var_82457459;
-        wait(0.05);
+        wait 0.05;
     }
     self auto_revive(self);
     self clientfield::set("zmbLastStand", 0);

@@ -3,9 +3,9 @@
 #using scripts/shared/array_shared;
 #using scripts/shared/aat_shared;
 
-#namespace namespace_2abc80c6;
+#namespace zm_aat_turned;
 
-// Namespace namespace_2abc80c6
+// Namespace zm_aat_turned
 // Params 0, eflags: 0x2
 // Checksum 0xf81d8648, Offset: 0x190
 // Size: 0x34
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
     system::register("zm_aat_turned", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_2abc80c6
+// Namespace zm_aat_turned
 // Params 0, eflags: 0x1 linked
 // Checksum 0x392d117a, Offset: 0x1d0
 // Size: 0x8c
@@ -25,7 +25,7 @@ function __init__() {
     clientfield::register("actor", "zm_aat_turned", 1, 1, "int", &function_47a93e3e, 0, 0);
 }
 
-// Namespace namespace_2abc80c6
+// Namespace zm_aat_turned
 // Params 7, eflags: 0x1 linked
 // Checksum 0xdf75bb67, Offset: 0x268
 // Size: 0x166

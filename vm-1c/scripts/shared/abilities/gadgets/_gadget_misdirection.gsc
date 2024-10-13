@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_de31e0b7;
+#namespace _gadget_misdirection;
 
-// Namespace namespace_de31e0b7
+// Namespace _gadget_misdirection
 // Params 0, eflags: 0x2
 // Checksum 0x366f72b5, Offset: 0x200
 // Size: 0x34
@@ -18,12 +18,12 @@ function autoexec function_2dc19561() {
     system::register("gadget_misdirection", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_de31e0b7
+// Namespace _gadget_misdirection
 // Params 0, eflags: 0x1 linked
 // Checksum 0xba529d87, Offset: 0x240
 // Size: 0x104
 function __init__() {
-    ability_player::register_gadget_activation_callbacks(37, &function_6167a54, &function_53a55062);
+    ability_player::register_gadget_activation_callbacks(37, &gadget_misdirection_on, &function_53a55062);
     ability_player::register_gadget_possession_callbacks(37, &function_3149bee8, &function_7884e9fe);
     ability_player::register_gadget_flicker_callbacks(37, &function_44f18e39);
     ability_player::register_gadget_is_inuse_callbacks(37, &function_7f86bbdc);
@@ -32,7 +32,7 @@ function __init__() {
     callback::on_connect(&function_8270f877);
 }
 
-// Namespace namespace_de31e0b7
+// Namespace _gadget_misdirection
 // Params 1, eflags: 0x1 linked
 // Checksum 0x810594ca, Offset: 0x350
 // Size: 0x2a
@@ -40,7 +40,7 @@ function function_7f86bbdc(slot) {
     return self flagsys::get("gadget_misdirection_on");
 }
 
-// Namespace namespace_de31e0b7
+// Namespace _gadget_misdirection
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb6ba7d7e, Offset: 0x388
 // Size: 0x52
@@ -51,7 +51,7 @@ function function_a3f0292(slot) {
     return 0;
 }
 
-// Namespace namespace_de31e0b7
+// Namespace _gadget_misdirection
 // Params 2, eflags: 0x1 linked
 // Checksum 0xd2b46ed1, Offset: 0x3e8
 // Size: 0x5c
@@ -61,7 +61,7 @@ function function_44f18e39(slot, weapon) {
     }
 }
 
-// Namespace namespace_de31e0b7
+// Namespace _gadget_misdirection
 // Params 2, eflags: 0x1 linked
 // Checksum 0xcd4741d1, Offset: 0x450
 // Size: 0x5c
@@ -71,7 +71,7 @@ function function_3149bee8(slot, weapon) {
     }
 }
 
-// Namespace namespace_de31e0b7
+// Namespace _gadget_misdirection
 // Params 2, eflags: 0x1 linked
 // Checksum 0x77169789, Offset: 0x4b8
 // Size: 0x5c
@@ -81,7 +81,7 @@ function function_7884e9fe(slot, weapon) {
     }
 }
 
-// Namespace namespace_de31e0b7
+// Namespace _gadget_misdirection
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa5f3ae98, Offset: 0x520
 // Size: 0x44
@@ -91,18 +91,18 @@ function function_8270f877() {
     }
 }
 
-// Namespace namespace_de31e0b7
+// Namespace _gadget_misdirection
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc4a7ca46, Offset: 0x570
 // Size: 0x7c
-function function_6167a54(slot, weapon) {
+function gadget_misdirection_on(slot, weapon) {
     self flagsys::set("gadget_misdirection_on");
     if (isdefined(level.cybercom) && isdefined(level.cybercom.misdirection)) {
         self [[ level.cybercom.misdirection._on ]](slot, weapon);
     }
 }
 
-// Namespace namespace_de31e0b7
+// Namespace _gadget_misdirection
 // Params 2, eflags: 0x1 linked
 // Checksum 0xdbba940, Offset: 0x5f8
 // Size: 0x7c
@@ -113,7 +113,7 @@ function function_53a55062(slot, weapon) {
     }
 }
 
-// Namespace namespace_de31e0b7
+// Namespace _gadget_misdirection
 // Params 2, eflags: 0x1 linked
 // Checksum 0x852be4f8, Offset: 0x680
 // Size: 0x5c

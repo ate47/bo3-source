@@ -106,7 +106,7 @@ function watch_player_drowning() {
             self.lastwaterdamagetime = self getlastoutwatertime();
             self deactivate_player_health_visionset();
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

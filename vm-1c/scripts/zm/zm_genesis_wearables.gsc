@@ -150,15 +150,15 @@ function function_a16ce474(str_model, var_475b0a4e, str_tag) {
     self.var_bc5f242a.str_tag = str_tag;
     self attach(self.var_bc5f242a.str_model, str_tag);
     self playsound("zmb_craftable_pickup");
-    self notify(#"hash_cd399793", var_475b0a4e);
+    self notify(#"changed_wearable", var_475b0a4e);
     self thread function_2436f867();
     switch (var_475b0a4e) {
-    case 36:
+    case "s_weasels_hat":
         self playsound("zmb_wearable_weasel_wear");
         self function_b712ee6f(1);
         self function_30fb8e63(0);
         break;
-    case 32:
+    case "s_helm_of_siegfried":
         self playsound("zmb_wearable_siegfried_wear");
         self thread function_edd475ab(20, 10, "c_zom_dlc4_player_siegfried_helmet");
         self.var_5feb5a44 = 45;
@@ -166,7 +166,7 @@ function function_a16ce474(str_model, var_475b0a4e, str_tag) {
         self function_b712ee6f(2);
         self function_30fb8e63(2);
         break;
-    case 33:
+    case "s_helm_of_the_king":
         self playsound("zmb_wearable_mechz_wear");
         self.var_e1384d1e = 0.5;
         self.var_ad21546 = 0.5;
@@ -177,14 +177,14 @@ function function_a16ce474(str_model, var_475b0a4e, str_tag) {
         self function_b712ee6f(4);
         self function_30fb8e63(1);
         break;
-    case 30:
+    case "s_dire_wolf_head":
         self playsound("zmb_wearable_wolf_wear");
         self setperk("specialty_tombstone");
         self thread function_edd475ab(20, 10, "c_zom_dlc4_player_direwolf_helmet");
         self function_b712ee6f(7);
         self function_30fb8e63(1);
         break;
-    case 35:
+    case "s_margwa_head":
         self playsound("zmb_wearable_margwa_wear");
         self.var_e1384d1e = 0.5;
         self.var_13804b27 = 1.33;
@@ -192,7 +192,7 @@ function function_a16ce474(str_model, var_475b0a4e, str_tag) {
         self function_b712ee6f(6);
         self function_30fb8e63(1);
         break;
-    case 34:
+    case "s_keeper_skull_head":
         self playsound("zmb_wearable_keeper_wear");
         self.var_5feb5a44 = 45;
         self zm_perks::function_78f42790("health_reboot", 0, 0);
@@ -202,7 +202,7 @@ function function_a16ce474(str_model, var_475b0a4e, str_tag) {
         self function_b712ee6f(5);
         self function_30fb8e63(2);
         break;
-    case 29:
+    case "s_apothicon_mask":
         self playsound("zmb_wearable_apothigod_wear");
         self.var_e8e8daad = 1;
         self.var_bcff1de = 1;
@@ -214,7 +214,7 @@ function function_a16ce474(str_model, var_475b0a4e, str_tag) {
         self function_b712ee6f(3);
         self function_30fb8e63(3);
         break;
-    case 31:
+    case "s_fury_head":
         self playsound("zmb_wearable_fury_wear");
         self.var_eef0616b = 0.66;
         self.var_15c79ed8 = 1;
@@ -233,10 +233,10 @@ function function_a16ce474(str_model, var_475b0a4e, str_tag) {
 function function_e5515520() {
     var_77268fe9 = self getcharacterbodymodel();
     switch (var_77268fe9) {
-    case 37:
+    case "c_zom_dlc3_nikolai_mpc_fb":
         self setcharacterbodystyle(2);
         break;
-    case 38:
+    case "c_zom_dlc3_takeo_mpc_fb":
         self setcharacterbodystyle(2);
         break;
     }
@@ -308,7 +308,7 @@ function function_b4575902() {
     }
     playsoundatposition("zmb_wearable_siegfried_horn_1", (0, 0, 0));
     /#
-        iprintlnbold("world");
+        iprintlnbold("<dev string:x28>");
     #/
     function_f6b20985("s_helm_of_siegfried", "c_zom_dlc4_player_siegfried_helmet", "j_head", 0);
 }
@@ -394,14 +394,14 @@ function function_b8449f8c(var_5a533244) {
             var_6b63f67e = 256;
         }
         if (n_closest_dist <= var_6b63f67e) {
-            namespace_4c9147::function_dfd0ecb2(var_61dd0ed7 + (0, 0, 50), (0, 0, 0), var_688f490b.origin, 0.75);
+            zm_genesis_power::function_dfd0ecb2(var_61dd0ed7 + (0, 0, 50), (0, 0, 0), var_688f490b.origin, 0.75);
             var_688f490b.var_b4a21360--;
             if (var_688f490b.var_b4a21360 <= 0) {
                 var_688f490b clientfield::set("battery_fx", 2);
                 arrayremovevalue(var_5a533244, var_688f490b);
                 var_688f490b playsound("zmb_wearable_siegfried_battery_charged");
                 /#
-                    iprintlnbold("world");
+                    iprintlnbold("<dev string:x43>");
                 #/
             }
         }
@@ -433,10 +433,10 @@ function function_edd475ab(var_dd087d43, var_33c3e058, var_e7d196cc) {
         var_fce7f186++;
         if (var_fce7f186 >= var_dd087d43) {
             switch (var_e7d196cc) {
-            case 19:
+            case "c_zom_dlc4_player_siegfried_helmet":
                 self playsoundtoplayer("zmb_wearable_siegfried_horn_2", self);
                 break;
-            case 24:
+            case "c_zom_dlc4_player_direwolf_helmet":
                 self playsoundtoplayer("zmb_wearable_wolf_howl", self);
                 break;
             }
@@ -499,7 +499,7 @@ function function_a4ae62cc(str_flag) {
 // Size: 0x44
 function function_c81a7efa() {
     /#
-        iprintlnbold("world");
+        iprintlnbold("<dev string:x54>");
     #/
     playsoundatposition("zmb_wearable_mechz_step", (0, 0, 0));
 }
@@ -515,7 +515,7 @@ function function_796904fd() {
     level thread function_f4caac35("keeper_skull_turret_flag");
     level flag::wait_till_all(array("keeper_skull_dg4_flag", "keeper_skull_turret_flag"));
     /#
-        iprintlnbold("world");
+        iprintlnbold("<dev string:x74>");
     #/
     playsoundatposition("zmb_wearable_wolf_howl_finish", (0, 0, 0));
     function_f6b20985("s_dire_wolf_head", "c_zom_dlc4_player_direwolf_helmet", "j_head", 0);
@@ -559,7 +559,7 @@ function function_f4caac35(str_flag) {
             mdl_skull playsound("zmb_wearable_wolf_skull_land");
             break;
         }
-        wait(n_time - 0.05);
+        wait n_time - 0.05;
     }
     mdl_skull thread function_579caadc();
     level.var_a92f045 = 1;
@@ -568,7 +568,7 @@ function function_f4caac35(str_flag) {
         level waittill(#"hash_3171c43f");
     }
     level.var_a92f045 = 0;
-    wait(0.2);
+    wait 0.2;
     mdl_skull delete();
     level flag::set(str_flag);
 }
@@ -602,10 +602,10 @@ function function_579caadc() {
         }
         if (level flag::get("low_grav_on") && !var_504ff975) {
             self rotateto(self.angles + (0, 180, 0), 0.5);
-            wait(0.45);
+            wait 0.45;
             continue;
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -623,7 +623,7 @@ function function_3167c564() {
     level flag::wait_till_all(array("keeper_skull_turret_flag", "keeper_skull_zombie_flag"));
     level.var_1c301ed2 = 0;
     /#
-        iprintlnbold("world");
+        iprintlnbold("<dev string:x8d>");
     #/
     playsoundatposition("zmb_wearable_keeper_complete", (0, 0, 0));
     function_f6b20985("s_keeper_skull_head", "c_zom_dlc4_player_keeper_helmet", "j_head", 0);
@@ -670,7 +670,7 @@ function function_4fddc919() {
     level.var_16f4dfa5 = 0;
     level.var_64a92274 = undefined;
     /#
-        iprintlnbold("world");
+        iprintlnbold("<dev string:xa9>");
     #/
     playsoundatposition("zmb_wearable_margwa_complete", (0, 0, 0));
     function_f6b20985("s_margwa_head", "c_zom_dlc4_player_margwa_helmet", "j_head", 0);
@@ -756,7 +756,7 @@ function function_37ba4813() {
     level flag::wait_till_all(array("apothicon_mask_all_zombies_killed", "apothicon_mask_all_wasps_killed", "apothicon_mask_all_spiders_killed", "apothicon_mask_all_margwas_killed", "apothicon_mask_all_fury_killed", "apothicon_mask_all_keepers_killed"));
     level.var_26af7b39 = 0;
     /#
-        iprintlnbold("world");
+        iprintlnbold("<dev string:xbf>");
     #/
     playsoundatposition("zmb_wearable_apothigod_complete", (0, 0, 0));
     function_f6b20985("s_apothicon_mask", "c_zom_dlc4_player_apothican_helmet", "j_head", -30);
@@ -840,10 +840,10 @@ function function_a94b36fd(var_776628b2) {
 // Size: 0x7c
 function function_70b329b3() {
     /#
-        iprintlnbold("world");
+        iprintlnbold("<dev string:xd7>");
     #/
     playsoundatposition("zmb_wearable_apothigod_step", (0, 0, 0));
-    level thread namespace_cb655c88::function_2a0bc326(level.var_b1471d99, 0.65, 2, 800, 4);
+    level thread zm_genesis_util::function_2a0bc326(level.var_b1471d99, 0.65, 2, 800, 4);
 }
 
 // Namespace namespace_6b38abe3
@@ -857,7 +857,7 @@ function function_6d72c0dc() {
     level flag::wait_till("fury_head_sniper_kill");
     level.var_2bb34f66 = 0;
     /#
-        iprintlnbold("world");
+        iprintlnbold("<dev string:xee>");
     #/
     playsoundatposition("zmb_wearable_fury_complete", (0, 0, 0));
     function_f6b20985("s_fury_head", "c_zom_dlc4_player_fury_helmet", "j_head", -30);
@@ -870,7 +870,7 @@ function function_6d72c0dc() {
 function function_f1691f03(var_776628b2) {
     level flag::wait_till_all(array("power_on1", "power_on2", "power_on3", "power_on4"));
     for (var_fce7f186 = 0; var_fce7f186 < 40; var_fce7f186++) {
-        level waittill(#"hash_b3ec7413");
+        level waittill(#"fury_head_sniper_kill");
     }
     level flag::set(var_776628b2);
     level thread function_716f6548();
@@ -903,19 +903,19 @@ function function_9d85b9ce(e_attacker) {
         if (e_attacker istouching(var_46927a7e) && self istouching(var_46927a7e)) {
             if (isdefined(self.archetype)) {
                 switch (self.archetype) {
-                case 105:
+                case "parasite":
                     level notify(#"hash_b7ed57c7");
                     break;
-                case 104:
+                case "margwa":
                     level notify(#"hash_6571fc3d");
                     break;
-                case 106:
+                case "zombie":
                     level notify(#"hash_69f0d192");
                     break;
-                case 103:
+                case "keeper":
                     level notify(#"hash_6a066b2e");
                     break;
-                case 102:
+                case "apothicon_fury":
                     level notify(#"hash_67009580");
                     break;
                 }
@@ -945,7 +945,7 @@ function function_9d85b9ce(e_attacker) {
             var_d0c30abc = level.var_ab7d79d8.origin;
             n_dist = distance(var_d0c30abc, self.origin);
             if (n_dist <= 256) {
-                level thread namespace_4c9147::function_dfd0ecb2(self.origin + (0, 0, 50), self.angles, var_d0c30abc, 1);
+                level thread zm_genesis_power::function_dfd0ecb2(self.origin + (0, 0, 50), self.angles, var_d0c30abc, 1);
                 level notify(#"hash_3171c43f");
             }
         }
@@ -953,7 +953,7 @@ function function_9d85b9ce(e_attacker) {
     if (isdefined(level.var_2bb34f66) && level.var_2bb34f66) {
         if (isdefined(self.archetype) && self.archetype == "apothicon_fury") {
             if (isdefined(self.damageweapon) && self.damageweapon.isbulletweapon) {
-                level notify(#"hash_b3ec7413");
+                level notify(#"fury_head_sniper_kill");
             }
         }
     }
@@ -987,22 +987,22 @@ function function_cb27f92e(mod, hit_location, var_8a2b6fe5, player, amount, weap
     // Checksum 0x11c41e5c, Offset: 0x43f8
     // Size: 0x244
     function function_e8a31296() {
-        adddebugcommand("world" + "world" + "world");
-        adddebugcommand("world" + "world" + "world");
-        adddebugcommand("world" + "world" + "world");
-        adddebugcommand("world" + "world" + "world");
-        adddebugcommand("world" + "world" + "world");
-        adddebugcommand("world" + "world" + "world");
-        adddebugcommand("world" + "world" + "world");
-        adddebugcommand("world" + "world" + "world");
-        adddebugcommand("world");
-        adddebugcommand("world");
-        adddebugcommand("world");
-        adddebugcommand("world");
-        adddebugcommand("world");
-        adddebugcommand("world");
-        adddebugcommand("world");
-        adddebugcommand("world");
+        adddebugcommand("<dev string:x101>" + "<dev string:x143>" + "<dev string:x151>");
+        adddebugcommand("<dev string:x154>" + "<dev string:x19c>" + "<dev string:x151>");
+        adddebugcommand("<dev string:x1b0>" + "<dev string:x1f5>" + "<dev string:x151>");
+        adddebugcommand("<dev string:x206>" + "<dev string:x24d>" + "<dev string:x151>");
+        adddebugcommand("<dev string:x260>" + "<dev string:x2a8>" + "<dev string:x151>");
+        adddebugcommand("<dev string:x2bc>" + "<dev string:x2fe>" + "<dev string:x151>");
+        adddebugcommand("<dev string:x30c>" + "<dev string:x351>" + "<dev string:x151>");
+        adddebugcommand("<dev string:x362>" + "<dev string:x3a2>" + "<dev string:x151>");
+        adddebugcommand("<dev string:x3ae>");
+        adddebugcommand("<dev string:x40d>");
+        adddebugcommand("<dev string:x478>");
+        adddebugcommand("<dev string:x4dd>");
+        adddebugcommand("<dev string:x546>");
+        adddebugcommand("<dev string:x5b1>");
+        adddebugcommand("<dev string:x610>");
+        adddebugcommand("<dev string:x675>");
     }
 
     // Namespace namespace_6b38abe3
@@ -1010,7 +1010,7 @@ function function_cb27f92e(mod, hit_location, var_8a2b6fe5, player, amount, weap
     // Checksum 0x92cd238e, Offset: 0x4648
     // Size: 0x9c
     function function_b03acf4e(var_b3ecaf28) {
-        s_loc = struct::get(var_b3ecaf28, "world");
+        s_loc = struct::get(var_b3ecaf28, "<dev string:x6d0>");
         var_9f8b01da = getclosestpointonnavmesh(s_loc.origin, 100);
         if (!isdefined(var_9f8b01da)) {
             var_9f8b01da = s_loc.origin;
@@ -1025,53 +1025,53 @@ function function_cb27f92e(mod, hit_location, var_8a2b6fe5, player, amount, weap
     function function_82e9c58d(cmd) {
         player = level.players[0];
         switch (cmd) {
-        case 8:
-            function_f6b20985("world", "world", "world", 0);
+        case "<dev string:x143>":
+            function_f6b20985("<dev string:x143>", "<dev string:x6db>", "<dev string:x6fe>", 0);
             break;
-        case 8:
-            function_f6b20985("world", "world", "world", 0);
+        case "<dev string:x19c>":
+            function_f6b20985("<dev string:x19c>", "<dev string:x705>", "<dev string:x6fe>", 0);
             break;
-        case 8:
-            function_f6b20985("world", "world", "world", 0);
+        case "<dev string:x1f5>":
+            function_f6b20985("<dev string:x1f5>", "<dev string:x728>", "<dev string:x6fe>", 0);
             break;
-        case 8:
-            function_f6b20985("world", "world", "world", 0);
+        case "<dev string:x24d>":
+            function_f6b20985("<dev string:x24d>", "<dev string:x74b>", "<dev string:x6fe>", 0);
             break;
-        case 8:
-            function_f6b20985("world", "world", "world", 0);
+        case "<dev string:x2a8>":
+            function_f6b20985("<dev string:x2a8>", "<dev string:x769>", "<dev string:x6fe>", 0);
             break;
-        case 8:
-            function_f6b20985("world", "world", "world", 0);
+        case "<dev string:x2fe>":
+            function_f6b20985("<dev string:x2fe>", "<dev string:x789>", "<dev string:x6fe>", 0);
             break;
-        case 8:
-            function_f6b20985("world", "world", "world", 0);
+        case "<dev string:x351>":
+            function_f6b20985("<dev string:x351>", "<dev string:x7a9>", "<dev string:x6fe>", 0);
             break;
-        case 8:
-            function_f6b20985("world", "world", "world", 0);
+        case "<dev string:x3a2>":
+            function_f6b20985("<dev string:x3a2>", "<dev string:x7cb>", "<dev string:x6fe>", 0);
             break;
-        case 8:
-            player function_b03acf4e("world");
+        case "<dev string:x7e9>":
+            player function_b03acf4e("<dev string:x143>");
             break;
-        case 8:
-            player function_b03acf4e("world");
+        case "<dev string:x7fe>":
+            player function_b03acf4e("<dev string:x19c>");
             break;
-        case 8:
-            player function_b03acf4e("world");
+        case "<dev string:x819>":
+            player function_b03acf4e("<dev string:x1f5>");
             break;
-        case 8:
-            player function_b03acf4e("world");
+        case "<dev string:x831>":
+            player function_b03acf4e("<dev string:x24d>");
             break;
-        case 8:
-            player function_b03acf4e("world");
+        case "<dev string:x84b>":
+            player function_b03acf4e("<dev string:x2a8>");
             break;
-        case 8:
-            player function_b03acf4e("world");
+        case "<dev string:x866>":
+            player function_b03acf4e("<dev string:x2fe>");
             break;
-        case 8:
-            player function_b03acf4e("world");
+        case "<dev string:x87b>":
+            player function_b03acf4e("<dev string:x351>");
             break;
-        case 8:
-            player function_b03acf4e("world");
+        case "<dev string:x893>":
+            player function_b03acf4e("<dev string:x3a2>");
             break;
         }
     }

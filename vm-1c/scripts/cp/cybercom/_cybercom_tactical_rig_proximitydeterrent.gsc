@@ -135,7 +135,7 @@ function function_f5590749() {
         } else {
             self clientfield::set_player_uimodel("playerAbilities.proximityIndicatorIntensity", 0);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -206,9 +206,9 @@ function private function_55b9d032(player, attacker, upgraded) {
         return;
     }
     switch (attacker.archetype) {
-    case 20:
-    case 21:
-    case 24:
+    case "human":
+    case "human_riotshield":
+    case "zombie":
         var_36a3e6ad = "J_Wrist_LE";
         fx = level._effect["es_effect_human"];
         tag = "j_spine4";
@@ -218,7 +218,7 @@ function private function_55b9d032(player, attacker, upgraded) {
             attacker thread battlechatter::function_81d8fcf2(attacker.voiceprefix + attacker.var_273d3e89 + "_exert_electrocution", 1);
         }
         break;
-    case 22:
+    case "robot":
         var_36a3e6ad = "J_Wrist_LE";
         fx = level._effect["es_effect_robot"];
         attacker playsound("fly_bot_disable");
@@ -226,14 +226,14 @@ function private function_55b9d032(player, attacker, upgraded) {
         damage = attacker.health;
         weapon = player.cybercom.var_f4b9137e;
         break;
-    case 23:
+    case "warlord":
         var_36a3e6ad = "J_Wrist_LE";
         fx = level._effect["es_effect_warlord"];
         tag = "j_spine4";
         damage = getdvarint("scr_proximity_stun_damage_to_warlord", 60);
         weapon = player.cybercom.var_a9774972;
         break;
-    case 19:
+    case "direwolf":
         var_36a3e6ad = "J_Wrist_LE";
         fx = level._effect["es_effect_generic"];
         tag = "tag_origin";
@@ -327,25 +327,25 @@ function private function_a38f70a1(player, target) {
     target playsound("gdt_cybercore_rig_prox_imp");
     damage = getdvarint("scr_proximity_stun_damage", 20);
     switch (target.archetype) {
-    case 20:
-    case 21:
-    case 24:
+    case "human":
+    case "human_riotshield":
+    case "zombie":
         fx = level._effect["es_effect_human"];
         tag = "j_spine4";
         target dodamage(damage, player.origin, player, player, "none", "MOD_UNKNOWN", 0, player.cybercom.var_a9774972, -1, 1);
         target notify(#"bhtn_action_notify", "electrocute");
         break;
-    case 22:
+    case "robot":
         fx = level._effect["es_effect_robot"];
         tag = "j_spine4";
         target thread namespace_528b4613::system_overload(player);
         break;
-    case 23:
+    case "warlord":
         fx = level._effect["es_effect_warlord"];
         tag = "j_spine4";
         target dodamage(damage, player.origin, player, player, "none", "MOD_UNKNOWN", 0, player.cybercom.var_a9774972, -1, 1);
         break;
-    case 19:
+    case "direwolf":
         fx = level._effect["es_effect_generic"];
         tag = "tag_origin";
         target dodamage(damage, player.origin, player, player, "none", "MOD_UNKNOWN", 0, player.cybercom.var_a9774972, -1, 1);

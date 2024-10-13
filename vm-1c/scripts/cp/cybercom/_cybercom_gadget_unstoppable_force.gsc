@@ -124,7 +124,7 @@ function _off(slot, weapon) {
 // Size: 0x44
 function private function_1852a14f(slot, weapon) {
     self endon(#"weapon_melee_juke");
-    wait(0.5);
+    wait 0.5;
     self gadgetpowerchange(slot, -100);
 }
 
@@ -171,7 +171,7 @@ function private function_875f1595(slot, weapon) {
     self endon(#"disconnect");
     self endon(#"hash_1f17ce9a");
     self clientfield::set_to_player("unstoppableforce_state", 1);
-    wait(0.05);
+    wait 0.05;
     if (self isswitchingweapons()) {
         self waittill(#"weapon_change_complete");
     }
@@ -251,7 +251,7 @@ function private hit_vehicle(enemy, weapon) {
     if (enemy cybercom::islinked()) {
         enemy unlink();
     }
-    enemy notify(#"hash_f8c5dd60", weapon, self);
+    enemy notify(#"cybercom_action", weapon, self);
     if (enemy.scriptvehicletype == "quadtank" || enemy.scriptvehicletype == "siegebot") {
         enemy dodamage(getdvarint("scr_unstoppable_heavy_vehicle_damage", 300), self.origin, self, self, "none", "MOD_IMPACT", 512, level.cybercom.unstoppable_force.weapon, -1, 1);
         self function_40b93b78();
@@ -282,7 +282,7 @@ function hit_enemy(guy, weapon) {
     if (guy cybercom::islinked()) {
         guy unlink();
     }
-    guy notify(#"hash_f8c5dd60", weapon, self);
+    guy notify(#"cybercom_action", weapon, self);
     if (guy.archetype == "warlord") {
         if (isdefined(guy.is_disabled) && guy.is_disabled) {
             guy dodamage(guy.health, self.origin, self, self, "none", "MOD_IMPACT", 512, level.cybercom.unstoppable_force.var_bf0de5fb, -1, 1);
@@ -327,7 +327,7 @@ function function_941861e(weapon) {
             earthquake(1, 0.75, self.origin, 100);
             self playrumbleonentity("damage_heavy");
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

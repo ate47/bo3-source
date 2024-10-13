@@ -114,15 +114,15 @@ function add(skipto, func, str_name, cleanup_func, var_46c5ea43, var_c3efda96, v
         level.var_574eb415 = skipto;
     }
     if (is_dev(skipto)) {
-        errormsg("cp_mi_sing_blackstation");
+        errormsg("<dev string:x28>");
         return;
     }
     if (isdefined(var_46c5ea43) || isdefined(var_c3efda96)) {
-        errormsg("cp_mi_sing_blackstation");
+        errormsg("<dev string:x4c>");
         return;
     }
     if (level flag::get("level_has_skipto_branches")) {
-        errormsg("cp_mi_sing_blackstation");
+        errormsg("<dev string:x86>");
     }
     if (!isdefined(var_46c5ea43)) {
         if (isdefined(level.var_8b767436)) {
@@ -143,7 +143,7 @@ function add(skipto, func, str_name, cleanup_func, var_46c5ea43, var_c3efda96, v
         level.var_8b767436 = skipto;
     }
     if (!isdefined(func)) {
-        assert(isdefined(func), "cp_mi_sing_blackstation");
+        assert(isdefined(func), "<dev string:xd6>");
     }
     struct = function_fcea19f2(skipto, func, str_name, cleanup_func, var_46c5ea43, var_c3efda96, var_2bc8bbd9);
     struct.public = 1;
@@ -167,11 +167,11 @@ function function_731571ad(skipto, func, str_name, cleanup_func, var_46c5ea43, v
         level.var_574eb415 = skipto;
     }
     if (is_dev(skipto)) {
-        errormsg("cp_mi_sing_blackstation");
+        errormsg("<dev string:x28>");
         return;
     }
     if (!isdefined(var_46c5ea43) && !isdefined(var_c3efda96)) {
-        errormsg("cp_mi_sing_blackstation");
+        errormsg("<dev string:x104>");
         return;
     }
     if (!isdefined(var_46c5ea43)) {
@@ -193,7 +193,7 @@ function function_731571ad(skipto, func, str_name, cleanup_func, var_46c5ea43, v
         level.var_8b767436 = skipto;
     }
     if (!isdefined(func)) {
-        assert(isdefined(func), "cp_mi_sing_blackstation");
+        assert(isdefined(func), "<dev string:xd6>");
     }
     struct = function_fcea19f2(skipto, func, str_name, cleanup_func, var_46c5ea43, var_c3efda96);
     struct.public = 1;
@@ -226,7 +226,7 @@ function add_dev(skipto, func, str_name, cleanup_func, var_46c5ea43, var_c3efda9
         struct.var_3c612393 = 1;
         return;
     }
-    errormsg("cp_mi_sing_blackstation");
+    errormsg("<dev string:x136>");
 }
 
 // Namespace skipto
@@ -235,7 +235,7 @@ function add_dev(skipto, func, str_name, cleanup_func, var_46c5ea43, var_c3efda9
 // Size: 0xfa
 function function_8ada4a91(skipto) {
     if (!isdefined(level.var_e07f6589[skipto])) {
-        assertmsg("cp_mi_sing_blackstation" + skipto + "cp_mi_sing_blackstation");
+        assertmsg("<dev string:x15f>" + skipto + "<dev string:x182>");
         return;
     }
     level.var_e07f6589[skipto].var_f001de64 = 0;
@@ -260,7 +260,7 @@ function function_955393e(skipto, event_name, event_type, event_size, var_e201e1
 // Checksum 0x9cbeee9d, Offset: 0x1eb8
 // Size: 0x108
 function function_fcea19f2(msg, func, str_name, cleanup_func, var_46c5ea43, var_c3efda96, var_2bc8bbd9) {
-    assert(!isdefined(level._loadstarted), "cp_mi_sing_blackstation");
+    assert(!isdefined(level._loadstarted), "<dev string:x1b7>");
     msg = tolower(msg);
     struct = function_b545fa58(msg, func, str_name, cleanup_func, var_46c5ea43, var_c3efda96, var_2bc8bbd9);
     level.var_e07f6589[msg] = struct;
@@ -377,7 +377,7 @@ function function_b6a4291e(instring) {
         if (var_dccf2883 == 0 && c == "&") {
             if (op == "|") {
                 /#
-                    function_c3caf25("cp_mi_sing_blackstation" + instring);
+                    function_c3caf25("<dev string:x1d8>" + instring);
                 #/
             }
             op = "&";
@@ -388,7 +388,7 @@ function function_b6a4291e(instring) {
         if (var_dccf2883 == 0 && c == "|") {
             if (op == "&") {
                 /#
-                    function_c3caf25("cp_mi_sing_blackstation" + instring);
+                    function_c3caf25("<dev string:x1d8>" + instring);
                 #/
             }
             op = "|";
@@ -400,7 +400,7 @@ function function_b6a4291e(instring) {
     }
     if (var_dccf2883 != 0) {
         /#
-            function_c3caf25("cp_mi_sing_blackstation" + instring);
+            function_c3caf25("<dev string:x204>" + instring);
         #/
     }
     for (j = 0; j <= outindex; j++) {
@@ -423,7 +423,7 @@ function function_e3af1c7b(instring) {
         c2 = getsubstr(instring, instring.size - 1, instring.size);
         if (c2 != ")") {
             /#
-                function_c3caf25("cp_mi_sing_blackstation" + instring);
+                function_c3caf25("<dev string:x204>" + instring);
             #/
         }
         s = getsubstr(instring, 1, instring.size - 1);
@@ -657,28 +657,28 @@ function function_1b5a2a11() {
     // Checksum 0x9a685c4f, Offset: 0x3608
     // Size: 0x1f4
     function function_d71418c8(skipto, index) {
-        if (isdefined(getdvarstring("cp_mi_sing_blackstation")) && getdvarint("cp_mi_sing_blackstation")) {
+        if (isdefined(getdvarstring("<dev string:x22f>")) && getdvarint("<dev string:x22f>")) {
             return;
         }
         hudelem = newhudelem();
-        hudelem.alignx = "cp_mi_sing_blackstation";
-        hudelem.aligny = "cp_mi_sing_blackstation";
+        hudelem.alignx = "<dev string:x241>";
+        hudelem.aligny = "<dev string:x246>";
         hudelem.x = 125;
         hudelem.y = 20 * (index + 2);
         hudelem.fontscale = 1.5;
         hudelem.sort = 20;
         hudelem.alpha = 0;
         hudelem.color = (0.8, 0.8, 0.8);
-        hudelem.font = "cp_mi_sing_blackstation";
+        hudelem.font = "<dev string:x24a>";
         hudelem settext(skipto);
-        wait(0.25 * (index + 1));
+        wait 0.25 * (index + 1);
         hudelem fadeovertime(0.25);
         hudelem.alpha = 1;
-        wait(0.25);
-        wait(3);
+        wait 0.25;
+        wait 3;
         hudelem fadeovertime(0.75);
         hudelem.alpha = 0;
-        wait(0.75);
+        wait 0.75;
         hudelem destroy();
     }
 
@@ -718,7 +718,7 @@ function handle() {
         setdvar("skipto_jump", "");
     }
     skiptos = function_bd4daf7b(skiptos);
-    assert(isdefined(level.first_frame) && level.first_frame, "cp_mi_sing_blackstation");
+    assert(isdefined(level.first_frame) && level.first_frame, "<dev string:x250>");
     if (isdefined(level.var_31aefea8)) {
         skiptos = [];
         skiptos[0] = level.var_31aefea8;
@@ -832,7 +832,7 @@ function devgui() {
             setdvar("skipto_complete", "");
             level function_be8adfb8(complete, getplayers()[0]);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -843,20 +843,20 @@ function devgui() {
     // Checksum 0xa6dd03b9, Offset: 0x4120
     // Size: 0x160
     function menu() {
-        level flag::wait_till("cp_mi_sing_blackstation");
+        level flag::wait_till("<dev string:x265>");
         player = getplayers()[0];
-        while (isdefined(player) && player buttonpressed("cp_mi_sing_blackstation")) {
-            wait(0.05);
+        while (isdefined(player) && player buttonpressed("<dev string:x279>")) {
+            wait 0.05;
         }
         level thread function_32d804dd();
         for (;;) {
-            if (isdefined(getdvarint("cp_mi_sing_blackstation")) && getdvarint("cp_mi_sing_blackstation")) {
-                setdvar("cp_mi_sing_blackstation", 0);
+            if (isdefined(getdvarint("<dev string:x282>")) && getdvarint("<dev string:x282>")) {
+                setdvar("<dev string:x282>", 0);
                 getplayers()[0] allowjump(0);
                 display();
                 getplayers()[0] allowjump(1);
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -881,11 +881,11 @@ function function_5a20eade() {
 function function_32d804dd() {
     for (;;) {
         while (!function_5a20eade()) {
-            wait(0.05);
+            wait 0.05;
         }
         setdvar("debug_skipto", 1);
         while (function_5a20eade()) {
-            wait(0.05);
+            wait 0.05;
         }
     }
 }
@@ -996,7 +996,7 @@ function display() {
             map_restart();
             return;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1069,10 +1069,10 @@ function function_f70934af() {
     hudelem.alpha = 1;
     hudelem.fontscale = 1.8;
     hudelem.color = (1, 0.55, 0);
-    wait(7);
+    wait 7;
     hudelem fadeovertime(1);
     hudelem.alpha = 0;
-    wait(1);
+    wait 1;
     hudelem destroy();
 }
 
@@ -1169,7 +1169,7 @@ function teleport_ai(skipto_name, var_b8e76549) {
     }
     var_b8e76549 = array::remove_dead(var_b8e76549);
     var_40021c00 = arraycopy(struct::get_array(skipto_name + "_ai", "targetname"));
-    assert(var_40021c00.size >= var_b8e76549.size, "cp_mi_sing_blackstation" + skipto_name + "cp_mi_sing_blackstation" + var_b8e76549.size + "cp_mi_sing_blackstation" + var_40021c00.size + "cp_mi_sing_blackstation");
+    assert(var_40021c00.size >= var_b8e76549.size, "<dev string:x28f>" + skipto_name + "<dev string:x2b5>" + var_b8e76549.size + "<dev string:x2cb>" + var_40021c00.size + "<dev string:x2d8>");
     if (!var_40021c00.size) {
         return;
     }
@@ -1219,7 +1219,7 @@ function function_d9b1ee00(var_6945be17) {
 function teleport_players(skipto_name, var_46031771) {
     level flag::wait_till("all_players_spawned");
     var_9dba424d = function_3529c409(skipto_name, var_46031771);
-    assert(var_9dba424d.size >= level.players.size, "cp_mi_sing_blackstation");
+    assert(var_9dba424d.size >= level.players.size, "<dev string:x2e1>");
     for (i = 0; i < level.players.size; i++) {
         var_ac126ac5 = var_9dba424d[i].origin;
         var_ac126ac5 = level.players[i] player::get_snapped_spot_origin(var_ac126ac5);
@@ -1246,8 +1246,8 @@ function function_3529c409(skipto_name, var_46031771) {
     if (var_46031771) {
         for (i = 0; i < var_9dba424d.size; i++) {
             for (j = i; j < var_9dba424d.size; j++) {
-                assert(isdefined(var_9dba424d[j].script_int), "cp_mi_sing_blackstation" + var_9dba424d[j].origin + "cp_mi_sing_blackstation");
-                assert(isdefined(var_9dba424d[i].script_int), "cp_mi_sing_blackstation" + var_9dba424d[i].origin + "cp_mi_sing_blackstation");
+                assert(isdefined(var_9dba424d[j].script_int), "<dev string:x309>" + var_9dba424d[j].origin + "<dev string:x323>");
+                assert(isdefined(var_9dba424d[i].script_int), "<dev string:x309>" + var_9dba424d[i].origin + "<dev string:x323>");
                 if (var_9dba424d[j].script_int < var_9dba424d[i].script_int) {
                     temp = var_9dba424d[i];
                     var_9dba424d[i] = var_9dba424d[j];
@@ -1334,7 +1334,7 @@ function function_f2b024f8() {
     self endon(#"disconnect");
     while (true) {
         self function_a5a105e8();
-        wait(5);
+        wait 5;
     }
 }
 
@@ -1474,13 +1474,13 @@ function on_player_connect() {
     self thread function_f2b024f8();
     if (getdvarint("ui_blocksaves") == 0) {
         if (self ishost()) {
-            var_85f70d3f = 1;
+            scoreboard_migrated = 1;
             if (sessionmodeisonlinegame()) {
-                var_85f70d3f = isdefined(self getdstat("scoreboard_migrated")) && self getdstat("scoreboard_migrated");
+                scoreboard_migrated = isdefined(self getdstat("scoreboard_migrated")) && self getdstat("scoreboard_migrated");
             } else {
-                var_85f70d3f = isdefined(self getdstat("reserveBools", 0)) && self getdstat("reserveBools", 0);
+                scoreboard_migrated = isdefined(self getdstat("reserveBools", 0)) && self getdstat("reserveBools", 0);
             }
-            if (!var_85f70d3f) {
+            if (!scoreboard_migrated) {
                 self savegame::set_player_data("savegame_score", self function_df7ef426("SCORE"));
                 self savegame::set_player_data("savegame_kills", self function_df7ef426("KILLS"));
                 self savegame::set_player_data("savegame_assists", self function_df7ef426("ASSISTS"));
@@ -1528,7 +1528,7 @@ function on_player_connect() {
 // Checksum 0x6c067933, Offset: 0x6f70
 // Size: 0x29c
 function function_be8adfb8(name, player) {
-    assert(isdefined(level.var_e07f6589[name]), "cp_mi_sing_blackstation" + name + "cp_mi_sing_blackstation");
+    assert(isdefined(level.var_e07f6589[name]), "<dev string:x351>" + name + "<dev string:x362>");
     setdvar("NPCDeathTracking_Save", 1);
     foreach (statplayer in level.players) {
         if (statplayer istestclient()) {
@@ -1561,7 +1561,7 @@ function function_be8adfb8(name, player) {
 // Size: 0xa2
 function private function_52904bc9() {
     foreach (trig in trigger::get_all()) {
-        if (isdefined(trig.var_22c28736)) {
+        if (isdefined(trig.scriptgroup_playerspawns_regroup)) {
             trig thread function_87fe8621();
         }
     }
@@ -1574,8 +1574,8 @@ function private function_52904bc9() {
 function private function_87fe8621() {
     self endon(#"death");
     level flag::wait_till("all_players_spawned");
-    var_717810f = function_659bb22b(self.var_22c28736);
-    assert(var_717810f.size >= 3, "cp_mi_sing_blackstation");
+    var_717810f = function_659bb22b(self.scriptgroup_playerspawns_regroup);
+    assert(var_717810f.size >= 3, "<dev string:x38b>");
     while (true) {
         lead_player = self waittill(#"trigger");
         if (isplayer(lead_player)) {
@@ -1610,7 +1610,7 @@ function function_659bb22b(var_3a36166b) {
     a_ret = [];
     var_717810f = spawnlogic::function_93d52c4f(1);
     foreach (loc in var_717810f) {
-        if (loc.var_22c28736 === var_3a36166b) {
+        if (loc.scriptgroup_playerspawns_regroup === var_3a36166b) {
             if (!isdefined(a_ret)) {
                 a_ret = [];
             } else if (!isarray(a_ret)) {
@@ -1650,7 +1650,7 @@ function private function_61843b91(var_717810f, var_cacbf7e2) {
     }
     if (isdefined(self getlinkedent())) {
         self unlink();
-        wait(0.1);
+        wait 0.1;
     }
     foreach (loc in var_717810f) {
         if (!(isdefined(loc.b_used) && loc.b_used)) {
@@ -1663,7 +1663,7 @@ function private function_61843b91(var_717810f, var_cacbf7e2) {
             } else {
                 clientfield::increment_to_player("postfx_igc", 1);
             }
-            wait(0.5);
+            wait 0.5;
             self setorigin(loc.origin);
             if (isdefined(loc.angles)) {
                 util::delay_network_frames(2, "disconnect", &setplayerangles, loc.angles);
@@ -1672,14 +1672,14 @@ function private function_61843b91(var_717810f, var_cacbf7e2) {
             break;
         }
     }
-    wait(2);
+    wait 2;
     self freezecontrols(0);
-    wait(0.05);
+    wait 0.05;
     if (isdefined(level.var_1895e0f9)) {
         self [[ level.var_1895e0f9 ]]();
     }
     self util::streamer_wait(undefined, 0, 5);
-    wait(5);
+    wait 5;
     self.b_teleport_invulnerability = undefined;
 }
 
@@ -1690,7 +1690,7 @@ function private function_61843b91(var_717810f, var_cacbf7e2) {
     // Checksum 0x4c8f1864, Offset: 0x7a58
     // Size: 0x12c
     function function_de4f5ef8(objectives) {
-        setdvar("cp_mi_sing_blackstation", 1);
+        setdvar("<dev string:x3b6>", 1);
         index = 0;
         foreach (name in objectives) {
             var_c52d91a9 = level.var_e07f6589[name];
@@ -1699,7 +1699,7 @@ function private function_61843b91(var_717810f, var_cacbf7e2) {
                 index++;
             }
         }
-        setdvar("cp_mi_sing_blackstation", 0);
+        setdvar("<dev string:x3b6>", 0);
     }
 
 #/
@@ -1955,7 +1955,7 @@ function function_b0e512a3() {
         switchmap_preload(str_next_map);
         return;
     }
-    assert(0, "cp_mi_sing_blackstation");
+    assert(0, "<dev string:x3d2>");
 }
 
 // Namespace skipto
@@ -1969,7 +1969,7 @@ function function_2711019f() {
             level flag::set("all_players_closed_aar");
             break;
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -1981,9 +1981,9 @@ function function_f380969b() {
     self endon(#"disconnect");
     self endon(#"hash_33722592");
     var_67bda5a5 = self getdstat("currentRankXP");
-    var_72c4032 = self rank::getrankxpstat();
-    var_9e54448b = self getdstat("hasSeenMaxLevelNotification");
-    if (var_9e54448b != 1 && var_72c4032 >= rank::getrankinfominxp(level.ranktable.size - 1)) {
+    currentRankXP = self rank::getrankxpstat();
+    hasSeenMaxLevelNotification = self getdstat("hasSeenMaxLevelNotification");
+    if (hasSeenMaxLevelNotification != 1 && currentRankXP >= rank::getrankinfominxp(level.ranktable.size - 1)) {
         self.var_a4c14d95 = self openluimenu("CPMaxLevelNotification");
         self setdstat("hasSeenMaxLevelNotification", 1);
     } else {
@@ -2046,7 +2046,7 @@ function function_ab286e9e(stat_name) {
 function function_61688376() {
     self endon(#"disconnect");
     assert(isdefined(level.var_a7c3eb6f));
-    assert(level flag::exists("cp_mi_sing_blackstation"));
+    assert(level flag::exists("<dev string:x414>"));
     self function_a5a105e8();
     util::waittill_notify_or_timeout("stats_changed", 2);
     level.var_a7c3eb6f++;
@@ -2131,8 +2131,8 @@ function function_eb66277b(skipto, starting) {
     }
     if (isdefined(str_next_map)) {
         /#
-            if (skipto == "cp_mi_sing_blackstation" && starting) {
-                wait(4);
+            if (skipto == "<dev string:x433>" && starting) {
+                wait 4;
             }
         #/
         world.next_map = str_next_map;
@@ -2347,7 +2347,7 @@ function function_eb66277b(skipto, starting) {
         } else {
             level notify(#"hash_504f6a41");
             music::setmusicstate("death");
-            wait(1);
+            wait 1;
             if (sessionmodeiscampaignzombiesgame()) {
                 uploadstats();
                 exitlevel(0);
@@ -2370,7 +2370,7 @@ function function_3d23f76a() {
     self endon(#"disconnect");
     while (true) {
         self freezecontrols(1);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -2419,11 +2419,11 @@ function function_4aa085d7() {
 // Size: 0x6c
 function function_9a7d9229() {
     level endon(#"hash_504f6a41");
-    wait(59);
+    wait 59;
     music::setmusicstate("unstoppable_credits");
-    wait(-108);
+    wait -108;
     music::setmusicstate("credits_song_3");
-    wait(85);
+    wait 85;
     music::setmusicstate("credits_song_loop");
 }
 
@@ -2617,7 +2617,7 @@ function private function_77ff537d(skipto, starting, direct, player) {
     level flag::clear(skipto);
     level flag::set(skipto + "_completed");
     if (!isdefined(level.var_e07f6589[skipto])) {
-        assertmsg("cp_mi_sing_blackstation" + skipto);
+        assertmsg("<dev string:x439>" + skipto);
     }
     if (!(isdefined(level.var_f6ded45a) && level.var_f6ded45a)) {
         waittillframeend();
@@ -2796,7 +2796,7 @@ function function_1c1454cd(mover) {
                 speed = 0.05;
                 continue;
             }
-            assert(var_2c2e94d1 == target.var_86803507, "cp_mi_sing_blackstation");
+            assert(var_2c2e94d1 == target.var_86803507, "<dev string:x452>");
         }
         if (!isdefined(var_2c2e94d1) || var_2c2e94d1 == mover) {
             return;
@@ -2864,10 +2864,10 @@ function function_92b261a3() {
     // Checksum 0xce9aa465, Offset: 0xcf68
     // Size: 0xe2
     function function_27c2dde4() {
-        if (isdefined(level.var_3f831f3b) && isdefined(level.var_3f831f3b["cp_mi_sing_blackstation"])) {
-            foreach (scene in level.var_3f831f3b["cp_mi_sing_blackstation"]) {
+        if (isdefined(level.scriptbundles) && isdefined(level.scriptbundles["<dev string:x489>"])) {
+            foreach (scene in level.scriptbundles["<dev string:x489>"]) {
                 if (!isdefined(scene.used)) {
-                    println("cp_mi_sing_blackstation" + scene.name);
+                    println("<dev string:x48f>" + scene.name);
                 }
             }
         }
@@ -2892,9 +2892,9 @@ function function_92b261a3() {
                         player notify(#"hash_7b06f432");
                     }
                 } else {
-                    assert(level.var_c79b41f2 == level.var_81fdc5c1[level.var_c0e97bd][1], "cp_mi_sing_blackstation");
-                    assert(level.var_5f835655 == level.var_81fdc5c1[level.var_c0e97bd][2], "cp_mi_sing_blackstation");
-                    assert(level.var_8debf51 == level.var_81fdc5c1[level.var_c0e97bd][3], "cp_mi_sing_blackstation");
+                    assert(level.var_c79b41f2 == level.var_81fdc5c1[level.var_c0e97bd][1], "<dev string:x4b9>");
+                    assert(level.var_5f835655 == level.var_81fdc5c1[level.var_c0e97bd][2], "<dev string:x4ed>");
+                    assert(level.var_8debf51 == level.var_81fdc5c1[level.var_c0e97bd][3], "<dev string:x521>");
                 }
             }
             level waittill(#"hash_7b06f432");
@@ -2910,23 +2910,23 @@ function function_92b261a3() {
         lui_menu = undefined;
         while (true) {
             if (isdefined(level.var_f2898bd7)) {
-                if (level.var_f2898bd7 == "cp_mi_sing_blackstation") {
+                if (level.var_f2898bd7 == "<dev string:x556>") {
                     if (isdefined(lui_menu)) {
                         self closeluimenu(lui_menu);
                         lui_menu = undefined;
                     }
                 } else {
                     if (!isdefined(lui_menu)) {
-                        lui_menu = self openluimenu("cp_mi_sing_blackstation");
+                        lui_menu = self openluimenu("<dev string:x55c>");
                     }
-                    self lui::play_animation(lui_menu, "cp_mi_sing_blackstation");
+                    self lui::play_animation(lui_menu, "<dev string:x571>");
                     if (isdefined(level.var_8debf51)) {
-                        self setluimenudata(lui_menu, "cp_mi_sing_blackstation", level.var_f2898bd7 + "cp_mi_sing_blackstation" + level.var_8debf51 + "cp_mi_sing_blackstation");
+                        self setluimenudata(lui_menu, "<dev string:x578>", level.var_f2898bd7 + "<dev string:x57d>" + level.var_8debf51 + "<dev string:x580>");
                     } else {
-                        self setluimenudata(lui_menu, "cp_mi_sing_blackstation", level.var_f2898bd7);
+                        self setluimenudata(lui_menu, "<dev string:x578>", level.var_f2898bd7);
                     }
-                    self setluimenudata(lui_menu, "cp_mi_sing_blackstation", level.var_c79b41f2);
-                    self setluimenudata(lui_menu, "cp_mi_sing_blackstation", level.var_5f835655);
+                    self setluimenudata(lui_menu, "<dev string:x582>", level.var_c79b41f2);
+                    self setluimenudata(lui_menu, "<dev string:x587>", level.var_5f835655);
                 }
             }
             self waittill(#"hash_7b06f432");

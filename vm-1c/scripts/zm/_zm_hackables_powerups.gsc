@@ -15,11 +15,11 @@
 function function_a3cb1732(name) {
     ret = 0;
     switch (name) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
+    case "bonus_points_player":
+    case "bonus_points_team":
+    case "lose_points_team":
+    case "random_weapon":
+    case "ww_grenade":
         ret = 1;
         break;
     }
@@ -42,7 +42,7 @@ function function_5c836466() {
             struct.script_int = 5000;
             struct.powerup = powerup;
             powerup thread function_6f4d246b(struct);
-            namespace_6d813654::function_66764564(struct, &function_2d16ef55);
+            zm_equip_hacker::function_66764564(struct, &function_2d16ef55);
         }
     }
 }
@@ -54,7 +54,7 @@ function function_5c836466() {
 function function_6f4d246b(var_b8ec5af9) {
     self endon(#"hacked");
     self waittill(#"death");
-    namespace_6d813654::function_fcbe2f17(var_b8ec5af9);
+    zm_equip_hacker::function_fcbe2f17(var_b8ec5af9);
 }
 
 // Namespace namespace_27e18f93
@@ -79,6 +79,6 @@ function function_2d16ef55(hacker) {
     } else {
         self.powerup zm_powerups::powerup_setup("full_ammo");
     }
-    namespace_6d813654::function_fcbe2f17(self);
+    zm_equip_hacker::function_fcbe2f17(self);
 }
 

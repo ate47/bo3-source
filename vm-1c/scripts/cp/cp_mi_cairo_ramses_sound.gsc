@@ -5,22 +5,22 @@
 #using scripts/shared/music_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_39972b4;
+#namespace cp_mi_cairo_ramses_sound;
 
-// Namespace namespace_39972b4
+// Namespace cp_mi_cairo_ramses_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x97c896de, Offset: 0x1b0
 // Size: 0x84
 function main() {
-    namespace_aa1e4213::init_voice();
-    namespace_db167d30::init_voice();
+    voice_ramses::init_voice();
+    voice_ramses1::init_voice();
     level thread function_785c9e9c();
     level thread function_1af9b46e();
     level thread function_b23a802b();
     level thread function_aa79274f();
 }
 
-// Namespace namespace_39972b4
+// Namespace cp_mi_cairo_ramses_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf66de9ce, Offset: 0x240
 // Size: 0x2c
@@ -29,7 +29,7 @@ function function_785c9e9c() {
     music::setmusicstate("menendez_stinger");
 }
 
-// Namespace namespace_39972b4
+// Namespace cp_mi_cairo_ramses_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x19b40246, Offset: 0x278
 // Size: 0x24
@@ -38,7 +38,7 @@ function function_1af9b46e() {
     level thread namespace_e4c0c552::function_973b77f9();
 }
 
-// Namespace namespace_39972b4
+// Namespace cp_mi_cairo_ramses_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2e1583ce, Offset: 0x2a8
 // Size: 0x2c
@@ -47,7 +47,7 @@ function function_aa79274f() {
     music::setmusicstate("raps_intro");
 }
 
-// Namespace namespace_39972b4
+// Namespace cp_mi_cairo_ramses_sound
 // Params 0, eflags: 0x0
 // Checksum 0xf4ad8a04, Offset: 0x2e0
 // Size: 0x2c
@@ -56,7 +56,7 @@ function function_abcd4714() {
     music::setmusicstate("none");
 }
 
-// Namespace namespace_39972b4
+// Namespace cp_mi_cairo_ramses_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc2a49871, Offset: 0x318
 // Size: 0x2c
@@ -88,7 +88,7 @@ function function_53de5c02() {
 // Checksum 0xac9ca406, Offset: 0x3a0
 // Size: 0x24
 function function_f444bf8e() {
-    wait(5);
+    wait 5;
     music::setmusicstate("station_defend");
 }
 

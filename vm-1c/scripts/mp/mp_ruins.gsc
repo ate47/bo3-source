@@ -6,9 +6,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_ee9254d2;
+#namespace mp_ruins;
 
-// Namespace namespace_ee9254d2
+// Namespace mp_ruins
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfe616a9a, Offset: 0x178
 // Size: 0x1bc
@@ -19,8 +19,8 @@ function main() {
     level.counter_uav_position_z_offset = 3000;
     level.cuav_map_x_offset = 3700;
     level.uav_z_offset = 3000;
-    namespace_7d071377::main();
-    namespace_cf0d49e::main();
+    mp_ruins_fx::main();
+    mp_ruins_sound::main();
     load::main();
     compass::setupminimap("compass_map_mp_ruins");
     setdvar("compassmaxrange", "2100");
@@ -29,7 +29,7 @@ function main() {
     level.cleandepositpoints = array((-1019.26, 288.645, 128.125), (903.005, -1312.42, 169.069), (655.802, 921.63, 122.651), (-1427.32, -1488.28, 112.125));
 }
 
-// Namespace namespace_ee9254d2
+// Namespace mp_ruins
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x340
 // Size: 0x4

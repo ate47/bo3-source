@@ -9,9 +9,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_128a1bda;
+#namespace zm_bgb_eye_candy;
 
-// Namespace namespace_128a1bda
+// Namespace zm_bgb_eye_candy
 // Params 0, eflags: 0x2
 // Checksum 0xa8463548, Offset: 0x300
 // Size: 0x34
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_eye_candy", &__init__, undefined, "bgb");
 }
 
-// Namespace namespace_128a1bda
+// Namespace zm_bgb_eye_candy
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfd7be37, Offset: 0x340
 // Size: 0x3fc
@@ -68,7 +68,7 @@ function __init__() {
     spawner::add_global_spawn_function("axis", &function_b390826f);
 }
 
-// Namespace namespace_128a1bda
+// Namespace zm_bgb_eye_candy
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3b229375, Offset: 0x748
 // Size: 0x34
@@ -76,7 +76,7 @@ function validation() {
     return !(isdefined(self bgb::get_active()) && self bgb::get_active());
 }
 
-// Namespace namespace_128a1bda
+// Namespace zm_bgb_eye_candy
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc12d5e34, Offset: 0x788
 // Size: 0x1ec
@@ -87,10 +87,10 @@ function activation() {
         self.var_29cebda6 = arraycopy(level.var_29cebda6);
         self.var_29cebda6 = array::randomize(self.var_29cebda6);
     } else {
-        wait(0.05);
+        wait 0.05;
         self.var_e20073c4++;
     }
-    self notify(#"hash_9979acd5");
+    self notify(#"bgb_eye_candy_activation");
     if (self.var_e20073c4 >= 4) {
         return;
     }
@@ -99,16 +99,16 @@ function activation() {
     visionset_mgr::activate("overlay", self.var_29cebda6[self.var_e20073c4], self);
     var_78f89ecc = 0;
     switch (self.var_29cebda6[self.var_e20073c4]) {
-    case 3:
+    case "zm_bgb_eye_candy_vs_1":
         var_78f89ecc = 1;
         break;
-    case 6:
+    case "zm_bgb_eye_candy_vs_2":
         var_78f89ecc = 2;
         break;
-    case 7:
+    case "zm_bgb_eye_candy_vs_3":
         var_78f89ecc = 3;
         break;
-    case 8:
+    case "zm_bgb_eye_candy_vs_4":
         var_78f89ecc = 4;
         break;
     }
@@ -116,7 +116,7 @@ function activation() {
     self thread function_48adddeb(self.var_29cebda6[self.var_e20073c4]);
 }
 
-// Namespace namespace_128a1bda
+// Namespace zm_bgb_eye_candy
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb6f58f6f, Offset: 0x980
 // Size: 0x124
@@ -135,7 +135,7 @@ function function_48adddeb(str_vision) {
     }
 }
 
-// Namespace namespace_128a1bda
+// Namespace zm_bgb_eye_candy
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbdff86a5, Offset: 0xab0
 // Size: 0x3c
@@ -144,7 +144,7 @@ function function_b390826f() {
     self thread function_3b5b1f1e();
 }
 
-// Namespace namespace_128a1bda
+// Namespace zm_bgb_eye_candy
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf4f368b9, Offset: 0xaf8
 // Size: 0x3c
@@ -156,7 +156,7 @@ function function_3b5b1f1e() {
     }
 }
 
-// Namespace namespace_128a1bda
+// Namespace zm_bgb_eye_candy
 // Params 0, eflags: 0x1 linked
 // Checksum 0xeb50c618, Offset: 0xb40
 // Size: 0x32

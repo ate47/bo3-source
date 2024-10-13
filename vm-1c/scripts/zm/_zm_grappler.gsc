@@ -84,7 +84,7 @@ function start_grapple(var_683c052c, e_grapplee, n_type, n_speed) {
 // Size: 0x28
 function private function_b7c692b0() {
     while (isdefined(level.var_5b94112c) && level.var_5b94112c) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 

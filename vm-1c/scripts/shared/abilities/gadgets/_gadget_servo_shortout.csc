@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e965786f;
+#namespace _gadget_servo_shortout;
 
-// Namespace namespace_e965786f
+// Namespace _gadget_servo_shortout
 // Params 0, eflags: 0x2
 // Checksum 0x2c289ab4, Offset: 0x1f0
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_servo_shortout", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_e965786f
+// Namespace _gadget_servo_shortout
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x230
 // Size: 0x4

@@ -66,7 +66,7 @@ function init() {
     constrain_map_size(level.mapsize);
     for (;;) {
         update();
-        wait(5);
+        wait 5;
     }
 }
 

@@ -105,10 +105,10 @@ function setup_wc_extracam_settings(localclientnum, extracam_data_struct) {
     position = extracam_data_struct.weapon_position;
     camera_ent playextracamxcam(extracam_data_struct.xcam, 0, extracam_data_struct.subxcam, extracam_data_struct.notetrack, position.origin, position.angles, extracam_data_struct.weapon_script_model, position.origin, position.angles);
     while (!extracam_data_struct.weapon_script_model isstreamed()) {
-        wait(0.016);
+        wait 0.016;
     }
     if (extracam_data_struct.loadoutslot == "default_camo_render") {
-        wait(0.5);
+        wait 0.5;
     } else {
         level util::waittill_notify_or_timeout("paintshop_ready_" + extracam_data_struct.jobindex, 5);
     }
@@ -162,10 +162,10 @@ function get_safehouse_position_struct() {
     position = spawnstruct();
     position.angles = (0, 0, 0);
     switch (tolower(getdvarstring("mapname"))) {
-    case 14:
+    case "cp_sh_cairo":
         position.origin = (-527, 1569, -25);
         break;
-    case 15:
+    case "cp_sh_singapore":
         position.origin = (-1215, 2464, -66);
         break;
     default:

@@ -29,15 +29,15 @@ function __init__() {
 // Size: 0x404
 function init() {
     /#
-        if (getdvarstring("classname") == "classname") {
-            setdvar("classname", 0);
+        if (getdvarstring("<dev string:x28>") == "<dev string:x3c>") {
+            setdvar("<dev string:x28>", 0);
         }
-        level.storespawndata = getdvarint("classname");
-        if (getdvarstring("classname") == "classname") {
-            setdvar("classname", 0);
+        level.storespawndata = getdvarint("<dev string:x28>");
+        if (getdvarstring("<dev string:x3d>") == "<dev string:x3c>") {
+            setdvar("<dev string:x3d>", 0);
         }
-        if (getdvarstring("classname") == "classname") {
-            setdvar("classname", 0.25);
+        if (getdvarstring("<dev string:x4a>") == "<dev string:x3c>") {
+            setdvar("<dev string:x4a>", 0.25);
         }
         thread function_d320505c();
     #/
@@ -48,7 +48,7 @@ function init() {
     level.pipebombs = [];
     level.numplayerswaitingtoenterkillcam = 0;
     level.convert_spawns_to_structs = getdvarint("spawnsystem_convert_spawns_to_structs");
-    println("classname");
+    println("<dev string:x5b>");
     level.spawnmins = (0, 0, 0);
     level.spawnmaxs = (0, 0, 0);
     level.spawnminsmaxsprimed = 0;
@@ -64,13 +64,13 @@ function init() {
         setdvar("scr_spawn_enemyavoidweight", "0");
     }
     /#
-        if (getdvarstring("classname") == "classname") {
-            setdvar("classname", "classname");
+        if (getdvarstring("<dev string:x8f>") == "<dev string:x3c>") {
+            setdvar("<dev string:x8f>", "<dev string:x9f>");
         }
-        if (getdvarstring("classname") == "classname") {
-            setdvar("classname", "classname");
+        if (getdvarstring("<dev string:xa1>") == "<dev string:x3c>") {
+            setdvar("<dev string:xa1>", "<dev string:x9f>");
         }
-        if (getdvarint("classname") > 0) {
+        if (getdvarint("<dev string:xa1>") > 0) {
             thread function_76bb9fb8();
             thread function_403f0d14();
             thread function_9ce570b0();
@@ -78,8 +78,8 @@ function init() {
         if (level.storespawndata) {
             thread function_8384886e();
         }
-        if (getdvarstring("classname") == "classname") {
-            setdvar("classname", "classname");
+        if (getdvarstring("<dev string:xb5>") == "<dev string:x3c>") {
+            setdvar("<dev string:xb5>", "<dev string:x9f>");
         }
         thread function_f415b14();
         thread function_e2e4ca72();
@@ -146,8 +146,8 @@ function add_spawn_points(team, spawnpointname) {
     add_spawn_point_team_classname(team, spawnpointname);
     add_spawn_points_internal(team, get_spawnpoint_array(spawnpointname));
     if (!level.teamspawnpoints[team].size) {
-        assert(level.teamspawnpoints[team].size, "classname" + spawnpointname + "classname");
-        wait(1);
+        assert(level.teamspawnpoints[team].size, "<dev string:xc6>" + spawnpointname + "<dev string:xd3>");
+        wait 1;
         return;
     }
 }
@@ -176,10 +176,10 @@ function place_spawn_points(spawnpointname) {
         }
     #/
     if (!spawnpoints.size) {
-        println("classname" + spawnpointname + "classname");
-        assert(spawnpoints.size, "classname" + spawnpointname + "classname");
+        println("<dev string:xf0>" + spawnpointname + "<dev string:xd3>");
+        assert(spawnpoints.size, "<dev string:xf0>" + spawnpointname + "<dev string:xd3>");
         callback::abort_level();
-        wait(1);
+        wait 1;
         return;
     }
     for (index = 0; index < spawnpoints.size; index++) {
@@ -198,7 +198,7 @@ function place_spawn_points(spawnpointname) {
 function drop_spawn_points(spawnpointname) {
     spawnpoints = get_spawnpoint_array(spawnpointname);
     if (!spawnpoints.size) {
-        println("classname" + spawnpointname + "classname");
+        println("<dev string:xf0>" + spawnpointname + "<dev string:xd3>");
         return;
     }
     for (index = 0; index < spawnpoints.size; index++) {
@@ -406,7 +406,7 @@ function function_f714995a(spawnpoints) {
         penalty = function_e40b0d5e();
         /#
             if (level.storespawndata || level.debugspawning) {
-                bestspawnpoint.spawndata[bestspawnpoint.spawndata.size] = "classname" + penalty;
+                bestspawnpoint.spawndata[bestspawnpoint.spawndata.size] = "<dev string:xf6>" + penalty;
             }
         #/
         bestspawnpoint.weight -= penalty;
@@ -421,9 +421,9 @@ function function_f714995a(spawnpoints) {
     // Checksum 0xd5c1c19b, Offset: 0x1770
     // Size: 0x156
     function function_d46f7aa7(spawnpoint) {
-                for (i = 0; i < level.players.size; i++) {
+        for (i = 0; i < level.players.size; i++) {
             player = level.players[i];
-            if (!isalive(player) || player.sessionstate != "classname") {
+            if (!isalive(player) || player.sessionstate != "<dev string:x111>") {
                 continue;
             }
             if (level.teambased && player.team == self.team) {
@@ -444,9 +444,9 @@ function function_f714995a(spawnpoints) {
         dist = distance(start, end);
         for (i = 0; i < -56; i++) {
             line(start, end, (1, 0, 0));
-            print3d(start, "classname" + name1 + "classname" + dist);
+            print3d(start, "<dev string:x119>" + name1 + "<dev string:x125>" + dist);
             print3d(end, name2);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -458,7 +458,7 @@ function function_f714995a(spawnpoints) {
         if (!isdefined(level.storespawndata) || !level.storespawndata) {
             return;
         }
-        level.storespawndata = getdvarint("classname");
+        level.storespawndata = getdvarint("<dev string:x28>");
         if (!level.storespawndata) {
             return;
         }
@@ -466,23 +466,23 @@ function function_f714995a(spawnpoints) {
             level.spawngameid = randomint(100);
             level.spawnid = 0;
         }
-        if (bestspawnpoint.classname == "classname") {
+        if (bestspawnpoint.classname == "<dev string:x12f>") {
             return;
         }
         level.spawnid++;
-        file = openfile("classname", "classname");
-        fprintfields(file, level.spawngameid + "classname" + level.spawnid + "classname" + spawnpoints.size + "classname" + self.name);
+        file = openfile("<dev string:x146>", "<dev string:x154>");
+        fprintfields(file, level.spawngameid + "<dev string:x15b>" + level.spawnid + "<dev string:x15d>" + spawnpoints.size + "<dev string:x15d>" + self.name);
         for (i = 0; i < spawnpoints.size; i++) {
-            str = function_88dd1973(spawnpoints[i].origin) + "classname";
+            str = function_88dd1973(spawnpoints[i].origin) + "<dev string:x15d>";
             if (spawnpoints[i] == bestspawnpoint) {
-                str += "classname";
+                str += "<dev string:x15f>";
             } else {
-                str += "classname";
+                str += "<dev string:x162>";
             }
             if (!useweights) {
-                str += "classname";
+                str += "<dev string:x162>";
             } else {
-                str += spawnpoints[i].weight + "classname";
+                str += spawnpoints[i].weight + "<dev string:x15d>";
             }
             if (!isdefined(spawnpoints[i].spawndata)) {
                 spawnpoints[i].spawndata = [];
@@ -490,13 +490,13 @@ function function_f714995a(spawnpoints) {
             if (!isdefined(spawnpoints[i].sightchecks)) {
                 spawnpoints[i].sightchecks = [];
             }
-            str += spawnpoints[i].spawndata.size + "classname";
+            str += spawnpoints[i].spawndata.size + "<dev string:x15d>";
             for (j = 0; j < spawnpoints[i].spawndata.size; j++) {
-                str += spawnpoints[i].spawndata[j] + "classname";
+                str += spawnpoints[i].spawndata[j] + "<dev string:x15d>";
             }
-            str += spawnpoints[i].sightchecks.size + "classname";
+            str += spawnpoints[i].sightchecks.size + "<dev string:x15d>";
             for (j = 0; j < spawnpoints[i].sightchecks.size; j++) {
-                str += spawnpoints[i].sightchecks[j].penalty + "classname" + function_88dd1973(spawnpoints[i].origin) + "classname";
+                str += spawnpoints[i].sightchecks[j].penalty + "<dev string:x15d>" + function_88dd1973(spawnpoints[i].origin) + "<dev string:x15d>";
             }
             fprintfields(file, str);
         }
@@ -504,47 +504,47 @@ function function_f714995a(spawnpoints) {
         function_b8bbe7f3(obj);
         numallies = 0;
         numenemies = 0;
-        str = "classname";
+        str = "<dev string:x3c>";
         for (i = 0; i < obj.allies.size; i++) {
             if (obj.allies[i] == self) {
                 continue;
             }
             numallies++;
-            str += function_88dd1973(obj.allies[i].origin) + "classname";
+            str += function_88dd1973(obj.allies[i].origin) + "<dev string:x15d>";
         }
         for (i = 0; i < obj.enemies.size; i++) {
             numenemies++;
-            str += function_88dd1973(obj.enemies[i].origin) + "classname";
+            str += function_88dd1973(obj.enemies[i].origin) + "<dev string:x15d>";
         }
-        str = numallies + "classname" + numenemies + "classname" + str;
+        str = numallies + "<dev string:x15d>" + numenemies + "<dev string:x15d>" + str;
         fprintfields(file, str);
         otherdata = [];
         if (isdefined(level.bombguy)) {
             index = otherdata.size;
             otherdata[index] = spawnstruct();
             otherdata[index].origin = level.bombguy.origin + (0, 0, 20);
-            otherdata[index].text = "classname";
+            otherdata[index].text = "<dev string:x165>";
         } else if (isdefined(level.bombpos)) {
             index = otherdata.size;
             otherdata[index] = spawnstruct();
             otherdata[index].origin = level.bombpos;
-            otherdata[index].text = "classname";
+            otherdata[index].text = "<dev string:x171>";
         }
         if (isdefined(level.flags)) {
             for (i = 0; i < level.flags.size; i++) {
                 index = otherdata.size;
                 otherdata[index] = spawnstruct();
                 otherdata[index].origin = level.flags[i].origin;
-                otherdata[index].text = level.flags[i].useobj gameobjects::get_owner_team() + "classname";
+                otherdata[index].text = level.flags[i].useobj gameobjects::get_owner_team() + "<dev string:x176>";
             }
         }
-        str = otherdata.size + "classname";
+        str = otherdata.size + "<dev string:x15d>";
         for (i = 0; i < otherdata.size; i++) {
-            str += function_88dd1973(otherdata[i].origin) + "classname" + otherdata[i].text + "classname";
+            str += function_88dd1973(otherdata[i].origin) + "<dev string:x15d>" + otherdata[i].text + "<dev string:x15d>";
         }
         fprintfields(file, str);
         closefile(file);
-        thisspawnid = level.spawngameid + "classname" + level.spawnid;
+        thisspawnid = level.spawngameid + "<dev string:x15b>" + level.spawnid;
         if (isdefined(self.thisspawnid)) {
         }
         self.thisspawnid = thisspawnid;
@@ -555,7 +555,7 @@ function function_f714995a(spawnpoints) {
     // Checksum 0xa56dd7bf, Offset: 0x2258
     // Size: 0xb34
     function function_78353cbc(desiredid, relativepos) {
-        file = openfile("classname", "classname");
+        file = openfile("<dev string:x146>", "<dev string:x17c>");
         if (file < 0) {
             return;
         }
@@ -666,24 +666,24 @@ function function_f714995a(spawnpoints) {
                 data.otherdata[data.otherdata.size] = otherdata;
             }
             if (isdefined(relativepos)) {
-                if (relativepos == "classname") {
+                if (relativepos == "<dev string:x181>") {
                     if (data.id == oldspawndata.id) {
                         level.curspawndata = prevthisplayer;
                         break;
                     }
-                } else if (relativepos == "classname") {
+                } else if (relativepos == "<dev string:x190>") {
                     if (data.id == oldspawndata.id) {
                         level.curspawndata = prev;
                         break;
                     }
-                } else if (relativepos == "classname") {
+                } else if (relativepos == "<dev string:x195>") {
                     if (lookingfornextthisplayer) {
                         level.curspawndata = data;
                         break;
                     } else if (data.id == oldspawndata.id) {
                         lookingfornextthisplayer = 1;
                     }
-                } else if (relativepos == "classname") {
+                } else if (relativepos == "<dev string:x1a4>") {
                     if (lookingfornext) {
                         level.curspawndata = data;
                         break;
@@ -713,14 +713,14 @@ function function_f714995a(spawnpoints) {
         textoffset = (0, 0, -12);
         while (true) {
             if (!isdefined(level.curspawndata)) {
-                wait(0.5);
+                wait 0.5;
                 continue;
             }
             for (i = 0; i < level.curspawndata.friends.size; i++) {
-                print3d(level.curspawndata.friends[i], "classname", (0.5, 1, 0.5), 1, 5);
+                print3d(level.curspawndata.friends[i], "<dev string:x1a9>", (0.5, 1, 0.5), 1, 5);
             }
             for (i = 0; i < level.curspawndata.enemies.size; i++) {
-                print3d(level.curspawndata.enemies[i], "classname", (1, 0.5, 0.5), 1, 5);
+                print3d(level.curspawndata.enemies[i], "<dev string:x1ac>", (1, 0.5, 0.5), 1, 5);
             }
             for (i = 0; i < level.curspawndata.otherdata.size; i++) {
                 print3d(level.curspawndata.otherdata[i].origin, level.curspawndata.otherdata[i].text, (0.5, 0.75, 1), 1, 2);
@@ -729,22 +729,22 @@ function function_f714995a(spawnpoints) {
                 sp = level.curspawndata.spawnpoints[i];
                 orig = sp.sighttracepoint;
                 if (sp.winner) {
-                    print3d(orig, level.curspawndata.playername + "classname", (0.5, 0.5, 1), 1, 2);
+                    print3d(orig, level.curspawndata.playername + "<dev string:x1af>", (0.5, 0.5, 1), 1, 2);
                     orig += textoffset;
                 }
                 amnt = (sp.weight - level.curspawndata.minweight) / (level.curspawndata.maxweight - level.curspawndata.minweight);
-                print3d(orig, "classname" + sp.weight, (1 - amnt, amnt, 0.5));
+                print3d(orig, "<dev string:x1bd>" + sp.weight, (1 - amnt, amnt, 0.5));
                 orig += textoffset;
                 for (j = 0; j < sp.data.size; j++) {
                     print3d(orig, sp.data[j], (1, 1, 1));
                     orig += textoffset;
                 }
                 for (j = 0; j < sp.sightchecks.size; j++) {
-                    print3d(orig, "classname" + sp.sightchecks[j].penalty, (1, 0.5, 0.5));
+                    print3d(orig, "<dev string:x1c6>" + sp.sightchecks[j].penalty, (1, 0.5, 0.5));
                     orig += textoffset;
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -753,7 +753,7 @@ function function_f714995a(spawnpoints) {
     // Checksum 0x97659e9e, Offset: 0x3218
     // Size: 0x7e
     function function_88dd1973(vec) {
-        return int(vec[0]) + "classname" + int(vec[1]) + "classname" + int(vec[2]);
+        return int(vec[0]) + "<dev string:x1d5>" + int(vec[1]) + "<dev string:x1d5>" + int(vec[2]);
     }
 
     // Namespace spawnlogic
@@ -761,7 +761,7 @@ function function_f714995a(spawnpoints) {
     // Checksum 0xbb6b17a6, Offset: 0x32a0
     // Size: 0x9e
     function function_a76187dd(str) {
-        parts = strtok(str, "classname");
+        parts = strtok(str, "<dev string:x1d5>");
         if (parts.size != 3) {
             return (0, 0, 0);
         }
@@ -863,10 +863,10 @@ function function_a8b6ae24(spawnpoints, favoredspawnpoints) {
         return undefined;
     }
     /#
-        if (getdvarstring("classname") == "classname") {
-            setdvar("classname", "classname");
+        if (getdvarstring("<dev string:x1d7>") == "<dev string:x3c>") {
+            setdvar("<dev string:x1d7>", "<dev string:x9f>");
         }
-        if (getdvarstring("classname") == "classname") {
+        if (getdvarstring("<dev string:x1d7>") == "<dev string:x1ea>") {
             return get_spawnpoint_random(spawnpoints);
         }
     #/
@@ -892,7 +892,7 @@ function function_a8b6ae24(spawnpoints, favoredspawnpoints) {
             spawnpoint.weight = (enemydistsum - allieddistanceweight * allydistsum) / spawnpoint.numplayersatlastupdate;
             /#
                 if (level.storespawndata || level.debugspawning) {
-                    spawnpoint.spawndata[spawnpoint.spawndata.size] = "classname" + int(spawnpoint.weight) + "classname" + int(enemydistsum) + "classname" + allieddistanceweight + "classname" + int(allydistsum) + "classname" + spawnpoint.numplayersatlastupdate;
+                    spawnpoint.spawndata[spawnpoint.spawndata.size] = "<dev string:x1ec>" + int(spawnpoint.weight) + "<dev string:x1fa>" + int(enemydistsum) + "<dev string:x1ff>" + allieddistanceweight + "<dev string:x203>" + int(allydistsum) + "<dev string:x205>" + spawnpoint.numplayersatlastupdate;
                 }
             #/
             continue;
@@ -900,7 +900,7 @@ function function_a8b6ae24(spawnpoints, favoredspawnpoints) {
         spawnpoint.weight = 0;
         /#
             if (level.storespawndata || level.debugspawning) {
-                spawnpoint.spawndata[spawnpoint.spawndata.size] = "classname";
+                spawnpoint.spawndata[spawnpoint.spawndata.size] = "<dev string:x20a>";
             }
         #/
     }
@@ -919,10 +919,10 @@ function function_a8b6ae24(spawnpoints, favoredspawnpoints) {
     function_ab118dbe(spawnpoints, 1);
     result = get_spawnpoint_final(spawnpoints);
     /#
-        if (getdvarstring("classname") == "classname") {
-            setdvar("classname", "classname");
+        if (getdvarstring("<dev string:x219>") == "<dev string:x3c>") {
+            setdvar("<dev string:x219>", "<dev string:x9f>");
         }
-        if (getdvarstring("classname") == "classname") {
+        if (getdvarstring("<dev string:x219>") == "<dev string:x1ea>") {
             function_d46f7aa7(result);
         }
     #/
@@ -972,8 +972,8 @@ function function_a1a08e8b(spawnpoints) {
 // Size: 0x50
 function begin() {
     /#
-        level.storespawndata = getdvarint("classname");
-        level.debugspawning = getdvarint("classname") > 0;
+        level.storespawndata = getdvarint("<dev string:x28>");
+        level.debugspawning = getdvarint("<dev string:xa1>") > 0;
     #/
 }
 
@@ -986,17 +986,17 @@ function begin() {
     function function_f415b14() {
         while (true) {
             while (true) {
-                if (getdvarint("classname") > 0) {
+                if (getdvarint("<dev string:xb5>") > 0) {
                     break;
                 }
-                wait(0.05);
+                wait 0.05;
             }
             thread function_91a6180();
             while (true) {
-                if (getdvarint("classname") <= 0) {
+                if (getdvarint("<dev string:xb5>") <= 0) {
                     break;
                 }
-                wait(0.05);
+                wait 0.05;
             }
             level notify(#"stop_spawn_profile");
         }
@@ -1020,7 +1020,7 @@ function begin() {
                 }
                 player function_a8b6ae24(level.spawnpoints);
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1030,8 +1030,8 @@ function begin() {
     // Size: 0x5a
     function function_e2e4ca72() {
         while (true) {
-            if (getdvarint("classname") < 1) {
-                wait(3);
+            if (getdvarint("<dev string:x22b>") < 1) {
+                wait 3;
                 continue;
             }
             thread function_ee9ff5a7();
@@ -1048,9 +1048,9 @@ function begin() {
         h = 20;
         weightscale = 0.1;
         fakespawnpoints = [];
-        corners = getentarray("classname", "classname");
+        corners = getentarray("<dev string:x23a>", "<dev string:x249>");
         if (corners.size != 2) {
-            println("classname");
+            println("<dev string:x254>");
             return;
         }
         min = corners[0].origin;
@@ -1083,7 +1083,7 @@ function begin() {
             spawni = 0;
             numiters = 5;
             for (i = 0; i < numiters; i++) {
-                if (!level.players.size || !isdefined(level.players[0].team) || level.players[0].team == "classname" || !isdefined(level.players[0].curclass)) {
+                if (!level.players.size || !isdefined(level.players[0].team) || level.players[0].team == "<dev string:x27d>" || !isdefined(level.players[0].curclass)) {
                     break;
                 }
                 endspawni = spawni + fakespawnpoints.size / numiters;
@@ -1097,10 +1097,10 @@ function begin() {
                 if (didweights) {
                     level.players[0] function_714f6572(fakespawnpoints, w, h, weightscale);
                 }
-                wait(0.05);
+                wait 0.05;
             }
-            if (!level.players.size || !isdefined(level.players[0].team) || level.players[0].team == "classname" || !isdefined(level.players[0].curclass)) {
-                wait(1);
+            if (!level.players.size || !isdefined(level.players[0].team) || level.players[0].team == "<dev string:x27d>" || !isdefined(level.players[0].curclass)) {
+                wait 1;
                 continue;
             }
             level.players[0] function_a8b6ae24(fakespawnpoints);
@@ -1109,7 +1109,7 @@ function begin() {
             }
             didweights = 1;
             level.players[0] function_714f6572(fakespawnpoints, w, h, weightscale);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1164,12 +1164,12 @@ function begin() {
     // Size: 0x374
     function function_d320505c() {
         while (true) {
-            if (getdvarint("classname") < 1) {
-                wait(3);
+            if (getdvarint("<dev string:x3d>") < 1) {
+                wait 3;
                 continue;
             }
             if (!isdefined(level.players)) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             bots = [];
@@ -1177,32 +1177,32 @@ function begin() {
                 if (!isdefined(level.players[i])) {
                     continue;
                 }
-                if (level.players[i].sessionstate == "classname" && issubstr(level.players[i].name, "classname")) {
+                if (level.players[i].sessionstate == "<dev string:x111>" && issubstr(level.players[i].name, "<dev string:x287>")) {
                     bots[bots.size] = level.players[i];
                 }
             }
             if (bots.size > 0) {
-                if (getdvarint("classname") == 1) {
+                if (getdvarint("<dev string:x3d>") == 1) {
                     killer = bots[randomint(bots.size)];
                     victim = bots[randomint(bots.size)];
-                    victim thread [[ level.callbackplayerdamage ]](killer, killer, 1000, 0, "classname", level.weaponnone, (0, 0, 0), (0, 0, 0), "classname", (0, 0, 0), 0, 0, (1, 0, 0));
+                    victim thread [[ level.callbackplayerdamage ]](killer, killer, 1000, 0, "<dev string:x28b>", level.weaponnone, (0, 0, 0), (0, 0, 0), "<dev string:x29c>", (0, 0, 0), 0, 0, (1, 0, 0));
                 } else {
-                    numkills = getdvarint("classname");
+                    numkills = getdvarint("<dev string:x3d>");
                     lastvictim = undefined;
                     for (index = 0; index < numkills; index++) {
                         killer = bots[randomint(bots.size)];
                         for (victim = bots[randomint(bots.size)]; isdefined(lastvictim) && victim == lastvictim; victim = bots[randomint(bots.size)]) {
                         }
-                        victim thread [[ level.callbackplayerdamage ]](killer, killer, 1000, 0, "classname", "classname", (0, 0, 0), (0, 0, 0), "classname", (0, 0, 0), 0, 0, (1, 0, 0));
+                        victim thread [[ level.callbackplayerdamage ]](killer, killer, 1000, 0, "<dev string:x28b>", "<dev string:x29c>", (0, 0, 0), (0, 0, 0), "<dev string:x29c>", (0, 0, 0), 0, 0, (1, 0, 0));
                         lastvictim = victim;
                     }
                 }
             }
-            if (getdvarstring("classname") != "classname") {
-                wait(getdvarfloat("classname"));
+            if (getdvarstring("<dev string:x4a>") != "<dev string:x3c>") {
+                wait getdvarfloat("<dev string:x4a>");
                 continue;
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1211,19 +1211,19 @@ function begin() {
     // Checksum 0xd34b4281, Offset: 0x4eb0
     // Size: 0x1e8
     function function_8384886e() {
-        setdvar("classname", "classname");
-        prevval = getdvarstring("classname");
-        prevrelval = getdvarstring("classname");
+        setdvar("<dev string:x2a1>", "<dev string:x3c>");
+        prevval = getdvarstring("<dev string:x2a1>");
+        prevrelval = getdvarstring("<dev string:x2b1>");
         readthistime = 0;
         while (true) {
-            val = getdvarstring("classname");
+            val = getdvarstring("<dev string:x2a1>");
             relval = undefined;
             if (!isdefined(val) || val == prevval) {
-                relval = getdvarstring("classname");
-                if (isdefined(relval) && relval != "classname") {
-                    setdvar("classname", "classname");
+                relval = getdvarstring("<dev string:x2b1>");
+                if (isdefined(relval) && relval != "<dev string:x3c>") {
+                    setdvar("<dev string:x2b1>", "<dev string:x3c>");
                 } else {
-                    wait(0.5);
+                    wait 0.5;
                     continue;
                 }
             }
@@ -1231,9 +1231,9 @@ function begin() {
             readthistime = 0;
             function_78353cbc(val, relval);
             if (!isdefined(level.curspawndata)) {
-                println("classname");
+                println("<dev string:x2c2>");
             } else {
-                println("classname" + level.curspawndata.id);
+                println("<dev string:x2d9>" + level.curspawndata.id);
             }
             thread function_363025a();
         }
@@ -1245,8 +1245,8 @@ function begin() {
     // Size: 0x4b0
     function function_76bb9fb8() {
         while (true) {
-            if (getdvarstring("classname") == "classname") {
-                wait(3);
+            if (getdvarstring("<dev string:xa1>") == "<dev string:x9f>") {
+                wait 3;
                 continue;
             }
             time = gettime();
@@ -1276,17 +1276,17 @@ function begin() {
                 if (spawnkill.var_349bc34) {
                     line(spawnkill.spawnpointorigin, spawnkill.dierorigin, (0.4, 0.5, 0.4));
                     line(spawnkill.dierorigin, spawnkill.killerorigin, (0, 1, 1));
-                    print3d(spawnkill.dierorigin + (0, 0, 32), "classname", (0, 1, 1));
+                    print3d(spawnkill.dierorigin + (0, 0, 32), "<dev string:x2eb>", (0, 1, 1));
                 } else {
                     line(spawnkill.spawnpointorigin, spawnkill.killerorigin, (0.4, 0.5, 0.4));
                     line(spawnkill.killerorigin, spawnkill.dierorigin, (0, 1, 1));
-                    print3d(spawnkill.dierorigin + (0, 0, 32), "classname", (0, 1, 1));
+                    print3d(spawnkill.dierorigin + (0, 0, 32), "<dev string:x2f8>", (0, 1, 1));
                 }
                 if (time - spawnkill.time < 60000) {
                     level.spawnlogic_spawnkills[level.spawnlogic_spawnkills.size] = oldspawnkills[i];
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1299,11 +1299,11 @@ function begin() {
 function function_403f0d14() {
     while (true) {
         if (getdvarstring("scr_spawnpointdebug") == "0") {
-            wait(3);
+            wait 3;
             continue;
         }
         function_1acf6a5c();
-        wait(3);
+        wait 3;
     }
 }
 
@@ -1316,8 +1316,8 @@ function function_f5751b11(spawnpoints) {
     level endon(#"stop_spawn_weight_debug");
     /#
         while (true) {
-            if (getdvarstring("classname") == "classname") {
-                wait(3);
+            if (getdvarstring("<dev string:xa1>") == "<dev string:x9f>") {
+                wait 3;
                 continue;
             }
             textoffset = (0, 0, -12);
@@ -1343,12 +1343,12 @@ function function_f5751b11(spawnpoints) {
                         if (spawnpoints[i].sightchecks[j].penalty == 0) {
                             continue;
                         }
-                        print3d(orig, "classname" + spawnpoints[i].sightchecks[j].penalty, (0.5, 0.5, 0.5));
+                        print3d(orig, "<dev string:x303>" + spawnpoints[i].sightchecks[j].penalty, (0.5, 0.5, 0.5));
                         orig += textoffset;
                     }
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     #/
 }
@@ -1360,7 +1360,7 @@ function function_f5751b11(spawnpoints) {
 function function_9ce570b0() {
     while (true) {
         if (getdvarstring("scr_spawnpointprofile") != "1") {
-            wait(3);
+            wait 3;
             continue;
         }
         for (i = 0; i < level.spawnpoints.size; i++) {
@@ -1369,7 +1369,7 @@ function function_9ce570b0() {
         if (level.players.size > 0) {
             level.players[randomint(level.players.size)] function_a8b6ae24(level.spawnpoints);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1380,7 +1380,7 @@ function function_9ce570b0() {
     // Checksum 0x496761bb, Offset: 0x59d0
     // Size: 0xe0
     function function_d98d4227(players, origin) {
-        if (getdvarstring("classname") == "classname") {
+        if (getdvarstring("<dev string:xa1>") == "<dev string:x9f>") {
             return;
         }
         starttime = gettime();
@@ -1391,7 +1391,7 @@ function function_9ce570b0() {
             if (gettime() - starttime > 5000) {
                 return;
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1491,7 +1491,7 @@ function function_3ed62c9(spawnpoints) {
                 spawnpoints[i].weight = spawnpoints[i].weight - weapondamagepenalty;
                 /#
                     if (level.storespawndata || level.debugspawning) {
-                        spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "classname" + int(weapondamagepenalty);
+                        spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "<dev string:x315>" + int(weapondamagepenalty);
                     }
                 #/
             }
@@ -1506,7 +1506,7 @@ function function_3ed62c9(spawnpoints) {
 function function_d43d261c() {
     spawnpointindex = 0;
     while (true) {
-        wait(0.05);
+        wait 0.05;
         if (!isdefined(level.spawnpoints)) {
             return;
         }
@@ -1567,7 +1567,7 @@ function function_bb6a45e8(spawnpoint) {
     spawnpointdir = spawnpoint.forward;
     debug = 0;
     /#
-        debug = getdvarint("classname") > 0;
+        debug = getdvarint("<dev string:xa1>") > 0;
     #/
     mindist = [];
     distsum = [];
@@ -1766,7 +1766,7 @@ function function_ab118dbe(spawnpoints, teambased) {
                     spawnpoints[i].weight = spawnpoints[i].weight - penalty;
                     /#
                         if (level.storespawndata || level.debugspawning) {
-                            spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "classname" + int(spawnpoints[i].minenemydist[mindistteam]) + "classname" + int(penalty);
+                            spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "<dev string:x329>" + int(spawnpoints[i].minenemydist[mindistteam]) + "<dev string:x33b>" + int(penalty);
                         }
                     #/
                 }
@@ -1805,7 +1805,7 @@ function function_147ebda5(spawnpoints, teambased) {
                 spawnpoint.weight -= worsen;
                 /#
                     if (level.storespawndata || level.debugspawning) {
-                        spawnpoint.spawndata[spawnpoint.spawndata.size] = "classname" + worsen;
+                        spawnpoint.spawndata[spawnpoint.spawndata.size] = "<dev string:x345>" + worsen;
                     }
                 #/
             } else {
@@ -1833,7 +1833,7 @@ function function_ad490295(spawnpoints) {
             spawnpoints[i].weight = spawnpoints[i].weight - 50000;
             /#
                 if (level.storespawndata || level.debugspawning) {
-                    spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "classname";
+                    spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "<dev string:x35a>";
                 }
             #/
             break;

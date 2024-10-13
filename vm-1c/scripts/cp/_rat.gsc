@@ -12,7 +12,7 @@
     // Checksum 0xc8065075, Offset: 0xd8
     // Size: 0x34
     function autoexec function_2dc19561() {
-        system::register("<unknown string>", &__init__, undefined, undefined);
+        system::register("<dev string:x28>", &__init__, undefined, undefined);
     }
 
     // Namespace rat

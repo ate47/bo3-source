@@ -73,7 +73,7 @@ function function_8e835895(einflictor, attacker, idamage, smeansofdeath, weapon,
 function function_812435e3() {
     self endon(#"disconnect");
     self thread util::function_67cfce72("Press USE button to watch KillCam", undefined, undefined, -56, 10000);
-    wait(3);
+    wait 3;
     self thread util::function_79f9f98d();
 }
 
@@ -125,7 +125,7 @@ function is_falling(position) {
 // Size: 0x97c
 function function_c003e53f(vdir, tweentime, var_f40ed68d, var_9aadeff9, var_933bfc9b, var_67ca400f, var_f06dc6a2, var_b633f381, lookdir, var_213955be, var_956c7382) {
     self endon(#"disconnect");
-    self endon(#"hash_d3468831");
+    self endon(#"cp_deathcam_ended");
     epsilon = getdvarint("movecamera_epsilon", 2);
     original_position = self getplayercamerapos();
     position = original_position;
@@ -212,7 +212,7 @@ function function_c003e53f(vdir, tweentime, var_f40ed68d, var_9aadeff9, var_933b
         if (tweentime > 0) {
             self startcameratween(tweentime, 1);
             self camerasetposition(position, angles);
-            wait(tweentime);
+            wait tweentime;
         } else {
             thread function_a0c37dda(position, angles, var_956c7382);
         }
@@ -222,16 +222,16 @@ function function_c003e53f(vdir, tweentime, var_f40ed68d, var_9aadeff9, var_933b
         var_2fedf129 = length(position - original_position);
         var_e25845de = var_2fedf129 * tweentime;
         player_speed = max(player_speed, var_e25845de);
-        var_c0917add = getdvarint("move_max_falling_height", -2000);
-        var_1f7dab73 = getdvarint("move_min_falling_speed", 500);
-        var_b63780dc = function_b1d0850f(position, position + (0, 0, var_c0917add));
+        move_max_falling_height = getdvarint("move_max_falling_height", -2000);
+        move_min_falling_speed = getdvarint("move_min_falling_speed", 500);
+        var_b63780dc = function_b1d0850f(position, position + (0, 0, move_max_falling_height));
         var_ce9f61c5 = length(var_b63780dc - position);
         var_3be21125 = (-88, absangleclamp360(angles[1]), 0);
-        var_d46b4656 = max(player_speed, var_1f7dab73);
+        var_d46b4656 = max(player_speed, move_min_falling_speed);
         var_1c64d606 = var_ce9f61c5 / var_d46b4656;
         self camerasetposition(var_b63780dc, var_3be21125);
         self startcameratween(var_1c64d606, 1);
-        wait(var_1c64d606);
+        wait var_1c64d606;
         function_956c7382(var_b63780dc);
     }
 }
@@ -241,10 +241,10 @@ function function_c003e53f(vdir, tweentime, var_f40ed68d, var_9aadeff9, var_933b
 // Checksum 0x2c93fdab, Offset: 0x1560
 // Size: 0xb4
 function function_956c7382(position) {
-    var_ceb19c17 = getdvarfloat("dc_quake_scale", 0.4);
-    var_1b0dac7b = getdvarfloat("dc_quake_duration", 0.1);
-    var_450561c5 = getdvarfloat("dc_quake_radius", 5);
-    earthquake(var_ceb19c17, var_1b0dac7b, position, var_450561c5);
+    dc_quake_scale = getdvarfloat("dc_quake_scale", 0.4);
+    dc_quake_duration = getdvarfloat("dc_quake_duration", 0.1);
+    dc_quake_radius = getdvarfloat("dc_quake_radius", 5);
+    earthquake(dc_quake_scale, dc_quake_duration, position, dc_quake_radius);
 }
 
 // Namespace namespace_5f11fb0b
@@ -253,14 +253,14 @@ function function_956c7382(position) {
 // Size: 0x12c
 function function_a0c37dda(position, angles, var_956c7382) {
     self endon(#"disconnect");
-    var_12327db5 = getdvarfloat("dc_drop_length", 10);
-    var_43c0c3c7 = position + (0, 0, var_12327db5);
+    dc_drop_length = getdvarfloat("dc_drop_length", 10);
+    var_43c0c3c7 = position + (0, 0, dc_drop_length);
     self camerasetposition(var_43c0c3c7, angles);
-    wait(0.05);
-    var_2e0ea125 = getdvarfloat("dc_drop_quickly_tween_time", 0.1);
+    wait 0.05;
+    dc_drop_quickly_tween_time = getdvarfloat("dc_drop_quickly_tween_time", 0.1);
     self camerasetposition(position, angles);
-    self startcameratween(var_2e0ea125, 1);
-    wait(var_2e0ea125);
+    self startcameratween(dc_drop_quickly_tween_time, 1);
+    wait dc_drop_quickly_tween_time;
     if (isdefined(var_956c7382) && var_956c7382) {
         function_956c7382(position);
     }
@@ -293,8 +293,8 @@ function function_f05a5931(einflictor, attacker, idamage, weapon, vdir, shitloc)
     sign = self function_22196132();
     thread function_c003e53f(vdir, 0, var_f40ed68d, var_9aadeff9, var_933bfc9b, var_67ca400f, undefined, 60 * sign, undefined, undefined, 1);
     self playrumbleonentity("damage_heavy");
-    wait(var_1031303c);
-    self notify(#"hash_d3468831");
+    wait var_1031303c;
+    self notify(#"cp_deathcam_ended");
 }
 
 // Namespace namespace_5f11fb0b
@@ -312,8 +312,8 @@ function function_6e880b57(einflictor, attacker, idamage, weapon, vdir, shitloc)
     sign = self function_22196132();
     self playrumbleonentity("damage_heavy");
     thread function_c003e53f(vdir, 0, var_f40ed68d, var_9aadeff9, var_933bfc9b, var_67ca400f, undefined, 60 * sign);
-    wait(var_1031303c);
-    self notify(#"hash_d3468831");
+    wait var_1031303c;
+    self notify(#"cp_deathcam_ended");
 }
 
 // Namespace namespace_5f11fb0b
@@ -331,8 +331,8 @@ function function_1e43c03b(einflictor, attacker, idamage, weapon, vdir, shitloc)
     var_1031303c = getdvarfloat("cam_bullet_end_wait", 2.75);
     thread function_c003e53f(undefined, 0, var_f40ed68d, var_9aadeff9, var_933bfc9b, var_67ca400f, undefined, 60 * sign, undefined, undefined, 1);
     self playrumbleonentity("damage_heavy");
-    wait(var_1031303c);
-    self notify(#"hash_d3468831");
+    wait var_1031303c;
+    self notify(#"cp_deathcam_ended");
 }
 
 // Namespace namespace_5f11fb0b
@@ -361,8 +361,8 @@ function function_7a3707a6(einflictor, attacker, idamage, weapon, vdir, shitloc)
     sign = self function_22196132();
     thread function_c003e53f(vdir, 0, var_f40ed68d, var_9aadeff9, var_933bfc9b, var_67ca400f, undefined, 60 * sign, lookdir, undefined, 1);
     self playrumbleonentity("damage_heavy");
-    wait(var_30ffabcb);
-    self notify(#"hash_d3468831");
+    wait var_30ffabcb;
+    self notify(#"cp_deathcam_ended");
 }
 
 // Namespace namespace_5f11fb0b
@@ -378,11 +378,11 @@ function function_1c006469(einflictor, attacker, idamage, weapon, vdir, shitloc)
     var_67ca400f = getdvarfloat("cam_explosion_position_z_speed", 10);
     sign = self function_22196132();
     thread function_c003e53f(undefined, 0.2, 0, var_9aadeff9, 0, var_67ca400f, undefined, 50 * sign, forwarddir);
-    wait(2);
+    wait 2;
     self.var_3c94a047 = 1;
     self thread lui::screen_fade(1, 1, 0, "white", 0);
-    wait(1);
-    self notify(#"hash_d3468831");
+    wait 1;
+    self notify(#"cp_deathcam_ended");
 }
 
 // Namespace namespace_5f11fb0b
@@ -398,9 +398,9 @@ function function_514913aa(einflictor, attacker, idamage, weapon, vdir, shitloc)
     var_67ca400f = getdvarfloat("cam_explosion_position_z_speed", 10);
     thread function_c003e53f(undefined, 3, 0, var_9aadeff9, 0, var_67ca400f, undefined, undefined, forwarddir);
     var_253910ca = getdvarfloat("cam_bubbles_wait", 3);
-    wait(var_253910ca);
+    wait var_253910ca;
     self clientfield::set_to_player("player_cam_bubbles", 0);
-    self notify(#"hash_d3468831");
+    self notify(#"cp_deathcam_ended");
 }
 
 // Namespace namespace_5f11fb0b
@@ -415,7 +415,7 @@ function function_fd6ad16(einflictor, attacker, idamage, weapon, vdir, shitloc) 
     var_f40ed68d = getdvarfloat("cam_fall_max_f_length", 0);
     var_1031303c = getdvarfloat("cam_fall_end_wait", 2);
     thread function_c003e53f(undefined, 1, undefined, var_9aadeff9, 0, var_67ca400f, -88, 1, undefined, 1, 1);
-    wait(var_1031303c);
-    self notify(#"hash_d3468831");
+    wait var_1031303c;
+    self notify(#"cp_deathcam_ended");
 }
 

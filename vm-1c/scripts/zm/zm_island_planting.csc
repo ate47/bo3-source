@@ -7,31 +7,31 @@
 #using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_7550a904;
+#namespace zm_island_planting;
 
-// Namespace namespace_7550a904
+// Namespace zm_island_planting
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfbbe0173, Offset: 0x610
 // Size: 0x31c
 function init() {
-    clientfield::register("scriptmover", "plant_growth_siege_anims", 9000, 2, "int", &function_4539a4cd, 0, 0);
+    clientfield::register("scriptmover", "plant_growth_siege_anims", 9000, 2, "int", &plant_growth_siege_anims, 0, 0);
     clientfield::register("scriptmover", "cache_plant_interact_fx", 9000, 1, "int", &function_d6804e46, 0, 0);
-    clientfield::register("scriptmover", "plant_hit_with_ww_fx", 9000, 1, "int", &function_c2c4b7be, 0, 0);
-    clientfield::register("scriptmover", "plant_watered_fx", 9000, 1, "int", &function_8fcaa237, 0, 0);
-    clientfield::register("scriptmover", "planter_model_watered", 9000, 1, "int", &function_a7073474, 0, 0);
-    clientfield::register("scriptmover", "babysitter_plant_fx", 9000, 1, "int", &function_b8cf2db, 0, 0);
-    clientfield::register("scriptmover", "trap_plant_fx", 9000, 1, "int", &function_22008d73, 0, 0);
-    clientfield::register("toplayer", "player_spawned_from_clone_plant", 9000, 1, "int", &function_316f5fd4, 0, 0);
-    clientfield::register("toplayer", "player_cloned_fx", 9000, 1, "int", &function_60a2a795, 0, 0);
-    clientfield::register("scriptmover", "zombie_or_grenade_spawned_from_minor_cache_plant", 9000, 2, "int", &function_6acdc163, 0, 0);
-    clientfield::register("allplayers", "player_vomit_fx", 9000, 1, "int", &function_f244344b, 0, 0);
+    clientfield::register("scriptmover", "plant_hit_with_ww_fx", 9000, 1, "int", &plant_hit_with_ww, 0, 0);
+    clientfield::register("scriptmover", "plant_watered_fx", 9000, 1, "int", &plant_watered, 0, 0);
+    clientfield::register("scriptmover", "planter_model_watered", 9000, 1, "int", &planter_model_watered, 0, 0);
+    clientfield::register("scriptmover", "babysitter_plant_fx", 9000, 1, "int", &babysitter_plant_fx, 0, 0);
+    clientfield::register("scriptmover", "trap_plant_fx", 9000, 1, "int", &trap_plant_fx, 0, 0);
+    clientfield::register("toplayer", "player_spawned_from_clone_plant", 9000, 1, "int", &player_spawned_from_clone_plant, 0, 0);
+    clientfield::register("toplayer", "player_cloned_fx", 9000, 1, "int", &player_cloned_fx, 0, 0);
+    clientfield::register("scriptmover", "zombie_or_grenade_spawned_from_minor_cache_plant", 9000, 2, "int", &zombie_or_grenade_spawned_from_minor_cache_plant, 0, 0);
+    clientfield::register("allplayers", "player_vomit_fx", 9000, 1, "int", &player_vomit_fx, 0, 0);
 }
 
-// Namespace namespace_7550a904
+// Namespace zm_island_planting
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6f02f9eb, Offset: 0x938
 // Size: 0x37c
-function function_4539a4cd(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function plant_growth_siege_anims(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (!isdefined(self.var_600eec00)) {
         self.var_600eec00 = util::spawn_model(localclientnum, "p7_fxanim_zm_island_plant_bulb_smod", self.origin, self.angles);
     }
@@ -43,7 +43,7 @@ function function_4539a4cd(localclientnum, oldval, newval, bnewent, binitialsnap
         self.var_600eec00 siegecmd("set_anim", "p7_fxanim_zm_island_plant_bulb_grow1_sanim", "unloop");
         self.var_a32dfd4 siegecmd("set_anim", "p7_fxanim_zm_island_plant_roots_grow1_sanim", "unloop");
         n_wait_time = getanimlength("p7_fxanim_zm_island_plant_bulb_grow1_sanim");
-        wait(n_wait_time);
+        wait n_wait_time;
         self.var_600eec00 siegecmd("set_anim", "p7_fxanim_zm_island_plant_bulb_grow1_idle_sanim", "loop");
         self.var_a32dfd4 siegecmd("set_anim", "p7_fxanim_zm_island_plant_roots_grow1_idle_sanim", "loop");
         return;
@@ -54,7 +54,7 @@ function function_4539a4cd(localclientnum, oldval, newval, bnewent, binitialsnap
         self.var_600eec00 siegecmd("set_anim", "p7_fxanim_zm_island_plant_bulb_grow2_sanim", "unloop");
         self.var_a32dfd4 siegecmd("set_anim", "p7_fxanim_zm_island_plant_roots_grow2_sanim", "unloop");
         n_wait_time = getanimlength("p7_fxanim_zm_island_plant_bulb_grow2_sanim");
-        wait(n_wait_time);
+        wait n_wait_time;
         self.var_600eec00 siegecmd("set_anim", "p7_fxanim_zm_island_plant_bulb_grow2_idle_sanim", "loop");
         self.var_a32dfd4 siegecmd("set_anim", "p7_fxanim_zm_island_plant_roots_grow2_idle_sanim", "loop");
         return;
@@ -68,7 +68,7 @@ function function_4539a4cd(localclientnum, oldval, newval, bnewent, binitialsnap
     self.var_600eec00 siegecmd("set_anim", "p7_fxanim_zm_island_plant_bulb_dead_sanim", "unloop");
 }
 
-// Namespace namespace_7550a904
+// Namespace zm_island_planting
 // Params 7, eflags: 0x1 linked
 // Checksum 0x31e7e1d, Offset: 0xcc0
 // Size: 0xbc
@@ -83,41 +83,41 @@ function function_d6804e46(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_7550a904
+// Namespace zm_island_planting
 // Params 7, eflags: 0x1 linked
 // Checksum 0xca083f16, Offset: 0xd88
 // Size: 0xbe
-function function_b8cf2db(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function babysitter_plant_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
-        self.var_b8cf2db = playfxontag(localclientnum, level._effect["babysitter_plant"], self, "tag_origin");
+        self.babysitter_plant_fx = playfxontag(localclientnum, level._effect["babysitter_plant"], self, "tag_origin");
         return;
     }
-    if (isdefined(self.var_b8cf2db)) {
-        deletefx(localclientnum, self.var_b8cf2db, 0);
-        self.var_b8cf2db = undefined;
+    if (isdefined(self.babysitter_plant_fx)) {
+        deletefx(localclientnum, self.babysitter_plant_fx, 0);
+        self.babysitter_plant_fx = undefined;
     }
 }
 
-// Namespace namespace_7550a904
+// Namespace zm_island_planting
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4c0965db, Offset: 0xe50
 // Size: 0xbe
-function function_22008d73(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function trap_plant_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
-        self.var_22008d73 = playfxontag(localclientnum, level._effect["trap_plant"], self, "tag_origin");
+        self.trap_plant_fx = playfxontag(localclientnum, level._effect["trap_plant"], self, "tag_origin");
         return;
     }
-    if (isdefined(self.var_22008d73)) {
-        deletefx(localclientnum, self.var_22008d73, 0);
-        self.var_22008d73 = undefined;
+    if (isdefined(self.trap_plant_fx)) {
+        deletefx(localclientnum, self.trap_plant_fx, 0);
+        self.trap_plant_fx = undefined;
     }
 }
 
-// Namespace namespace_7550a904
+// Namespace zm_island_planting
 // Params 7, eflags: 0x1 linked
 // Checksum 0x966fda38, Offset: 0xf18
 // Size: 0xce
-function function_c2c4b7be(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function plant_hit_with_ww(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_c00f8b20 = playfx(localclientnum, level._effect["plant_hit_with_ww"], self.origin + (0, 0, 8));
         return;
@@ -128,11 +128,11 @@ function function_c2c4b7be(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_7550a904
+// Namespace zm_island_planting
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe84e4693, Offset: 0xff0
 // Size: 0xa4
-function function_8fcaa237(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function plant_watered(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self notify(#"hash_15110cf6");
     if (isdefined(self.var_5257f4ba)) {
         deletefx(localclientnum, self.var_5257f4ba, 0);
@@ -143,7 +143,7 @@ function function_8fcaa237(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_7550a904
+// Namespace zm_island_planting
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc0dcfc71, Offset: 0x10a0
 // Size: 0xc4
@@ -151,17 +151,17 @@ function function_2179698b(localclientnum) {
     level endon(#"demo_jump");
     self endon(#"hash_15110cf6");
     self.var_5257f4ba = playfx(localclientnum, level._effect["plant_watered_startup"], self.origin + (0, 0, 8));
-    wait(2);
+    wait 2;
     if (isdefined(self)) {
         self.var_5257f4ba = playfx(localclientnum, level._effect["plant_watered"], self.origin + (0, 0, 8));
     }
 }
 
-// Namespace namespace_7550a904
+// Namespace zm_island_planting
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc2bc7107, Offset: 0x1170
 // Size: 0x84
-function function_a7073474(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function planter_model_watered(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self thread function_b8ba462e(localclientnum, 1);
         return;
@@ -169,7 +169,7 @@ function function_a7073474(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread function_b8ba462e(localclientnum, 0);
 }
 
-// Namespace namespace_7550a904
+// Namespace zm_island_planting
 // Params 2, eflags: 0x1 linked
 // Checksum 0xd90db32, Offset: 0x1200
 // Size: 0x1d0
@@ -200,15 +200,15 @@ function function_b8ba462e(localclientnum, b_on) {
             n_shader_value = mapfloat(n_start_time, n_end_time, n_min, n_max, n_time);
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, n_shader_value, 0);
-        wait(0.01);
+        wait 0.01;
     }
 }
 
-// Namespace namespace_7550a904
+// Namespace zm_island_planting
 // Params 7, eflags: 0x1 linked
 // Checksum 0x9fe6b0ba, Offset: 0x13d8
 // Size: 0x8c
-function function_316f5fd4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function player_spawned_from_clone_plant(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self thread postfx::playpostfxbundle("pstfx_thrasher_stomach");
         return;
@@ -218,11 +218,11 @@ function function_316f5fd4(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_7550a904
+// Namespace zm_island_planting
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6fb72d5c, Offset: 0x1470
 // Size: 0xbe
-function function_60a2a795(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function player_cloned_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_23200cb7 = playfxontag(localclientnum, level._effect["clone_plant_emerge"], self, "tag_camera");
         return;
@@ -233,11 +233,11 @@ function function_60a2a795(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_7550a904
+// Namespace zm_island_planting
 // Params 7, eflags: 0x1 linked
 // Checksum 0x70305d3a, Offset: 0x1538
 // Size: 0x106
-function function_6acdc163(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function zombie_or_grenade_spawned_from_minor_cache_plant(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_7fec15a0 = playfxontag(localclientnum, level._effect["cache_slime"], self, "plant_cache_major_feeler_03_03_jnt");
         return;
@@ -252,11 +252,11 @@ function function_6acdc163(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_7550a904
+// Namespace zm_island_planting
 // Params 7, eflags: 0x1 linked
 // Checksum 0xddb6b668, Offset: 0x1648
 // Size: 0xbe
-function function_f244344b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function player_vomit_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_a56aa1f9 = playfxontag(localclientnum, level._effect["fruit_plant_vomit"], self, "j_neck");
         return;

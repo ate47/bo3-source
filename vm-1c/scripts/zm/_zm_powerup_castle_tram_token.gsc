@@ -19,9 +19,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_cb5bc243;
+#namespace zm_powerup_castle_tram_token;
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 0, eflags: 0x2
 // Checksum 0x2e501cf0, Offset: 0x4a8
 // Size: 0x34
@@ -29,7 +29,7 @@ function autoexec function_2dc19561() {
     system::register("zm_powerup_castle_tram_token", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 0, eflags: 0x1 linked
 // Checksum 0xab69cef7, Offset: 0x4e8
 // Size: 0x124
@@ -47,7 +47,7 @@ function __init__() {
     #/
 }
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 0, eflags: 0x1 linked
 // Checksum 0x78d66c26, Offset: 0x618
 // Size: 0x154
@@ -62,7 +62,7 @@ function register_clientfields() {
     clientfield::register("clientuimodel", "zmInventory.widget_sprayer", 1, 1, "int");
 }
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 1, eflags: 0x1 linked
 // Checksum 0x798b76e6, Offset: 0x778
 // Size: 0x148
@@ -81,19 +81,19 @@ function function_bcb6924e(player) {
     }
 }
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb4525982, Offset: 0x8c8
 // Size: 0x44
 function function_ed4d87a3(player) {
     if (player clientfield::get_to_player("has_castle_tram_token")) {
-        player notify(#"hash_52136095");
+        player notify(#"tram_token_used");
         return true;
     }
     return false;
 }
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf8fbfff0, Offset: 0x918
 // Size: 0x2a
@@ -101,7 +101,7 @@ function function_83ef471e(player) {
     return player clientfield::get_to_player("has_castle_tram_token");
 }
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc1b84e3c, Offset: 0x950
 // Size: 0x8e
@@ -113,7 +113,7 @@ function function_56739ab1() {
     return var_db175e;
 }
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 0, eflags: 0x1 linked
 // Checksum 0x63e22053, Offset: 0x9e8
 // Size: 0x26
@@ -123,22 +123,22 @@ function function_4c1f0ef2() {
     level.var_6e2e91a0 = undefined;
 }
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 2, eflags: 0x1 linked
 // Checksum 0x6c63c548, Offset: 0xa18
 // Size: 0x54
 function function_69e0fb83(var_55ce4248, n_duration) {
     self clientfield::set_to_player(var_55ce4248, 1);
-    wait(n_duration);
+    wait n_duration;
     self clientfield::set_to_player(var_55ce4248, 0);
 }
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 3, eflags: 0x5 linked
 // Checksum 0x7f685ec3, Offset: 0xa78
 // Size: 0xe4
 function private function_1cb39173(var_1d640f59, var_86a3391a, var_18bfcc38) {
-    level notify(#"hash_28a4818d");
+    level notify(#"widget_ui_override");
     self endon(#"disconnect");
     if (var_18bfcc38) {
         if (isdefined(var_1d640f59)) {
@@ -153,7 +153,7 @@ function private function_1cb39173(var_1d640f59, var_86a3391a, var_18bfcc38) {
     self thread clientfield::set_player_uimodel(var_86a3391a, 0);
 }
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbbe942a8, Offset: 0xb68
 // Size: 0xdc
@@ -167,7 +167,7 @@ function function_a52da515(player) {
     level clientfield::set("player" + var_507b79e0 + "hasItem", 0);
 }
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9dabe6f2, Offset: 0xc50
 // Size: 0x10
@@ -175,7 +175,7 @@ function on_player_connect() {
     self.var_dc5e13e5 = 0;
 }
 
-// Namespace namespace_cb5bc243
+// Namespace zm_powerup_castle_tram_token
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe9ff3ae7, Offset: 0xc68
 // Size: 0x26
@@ -186,19 +186,19 @@ function on_player_spawned() {
 
 /#
 
-    // Namespace namespace_cb5bc243
+    // Namespace zm_powerup_castle_tram_token
     // Params 0, eflags: 0x1 linked
     // Checksum 0xdc3ec1ff, Offset: 0xc98
     // Size: 0x7c
     function function_6dd86f90() {
-        level flagsys::wait_till("toplayer");
-        wait(1);
+        level flagsys::wait_till("<dev string:x28>");
+        wait 1;
         zm_devgui::add_custom_devgui_callback(&function_9293606a);
-        adddebugcommand("toplayer");
-        adddebugcommand("toplayer");
+        adddebugcommand("<dev string:x41>");
+        adddebugcommand("<dev string:x93>");
     }
 
-    // Namespace namespace_cb5bc243
+    // Namespace zm_powerup_castle_tram_token
     // Params 1, eflags: 0x1 linked
     // Checksum 0x4238e20d, Offset: 0xd20
     // Size: 0xb4
@@ -206,10 +206,10 @@ function on_player_spawned() {
         players = getplayers();
         retval = 0;
         switch (cmd) {
-        case 8:
+        case "<dev string:xed>":
             zm_devgui::zombie_devgui_give_powerup(cmd, 1);
             break;
-        case 8:
+        case "<dev string:xff>":
             zm_devgui::zombie_devgui_give_powerup(getsubstr(cmd, 5), 0);
             break;
         }

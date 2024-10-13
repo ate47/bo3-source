@@ -68,7 +68,7 @@ function load() {
 // Size: 0x78
 function function_8c0c4b3a(name) {
     if (isdefined(level.var_31b95173) && level.var_31b95173 != name) {
-        errormsg("saved_weapondata" + level.var_31b95173 + "saved_weapondata" + name + "saved_weapondata");
+        errormsg("<dev string:x28>" + level.var_31b95173 + "<dev string:x4e>" + name + "<dev string:x53>");
     }
     level.var_31b95173 = name;
 }
@@ -263,8 +263,8 @@ function private function_74fcb9ca() {
     level endon(#"checkpoint_save");
     level endon(#"save_restore");
     checkpointcreate();
-    wait(0.05);
-    wait(0.05);
+    wait 0.05;
+    wait 0.05;
     checkpointcommit();
     function_d5bb3a54();
     level thread function_152fdd8c(0);
@@ -305,7 +305,7 @@ function function_d5bb3a54() {
 // Size: 0x29c
 function function_152fdd8c(delay) {
     if (function_f6ab8f28()) {
-        wait(0.2);
+        wait 0.2;
         foreach (player in level.players) {
             player player::generate_weapon_data();
             player set_player_data("saved_weapon", player._generated_current_weapon.name);
@@ -323,7 +323,7 @@ function function_152fdd8c(delay) {
             player set_player_data("savegame_revives", player.pers["revives"]);
         }
         savegame_create();
-        wait(delay);
+        wait delay;
         if (isdefined(player)) {
             util::function_964b7eb7(player, %COOP_REACHED_SKIPTO);
         }
@@ -374,17 +374,17 @@ function private function_1add9d4a(var_c36855a9) {
     level endon(#"hash_1add9d4a");
     level endon(#"hash_7be398c7");
     level endon(#"save_restore");
-    wait(0.1);
+    wait 0.1;
     while (true) {
         if (function_147f4ca3()) {
-            wait(0.1);
+            wait 0.1;
             checkpointcreate();
-            wait(6);
+            wait 6;
             for (check_count = 0; check_count < 5; check_count++) {
                 if (function_319d38eb()) {
                     break;
                 }
-                wait(1);
+                wait 1;
             }
             if (check_count == 5) {
                 continue;
@@ -396,7 +396,7 @@ function private function_1add9d4a(var_c36855a9) {
             }
             return;
         }
-        wait(1);
+        wait 1;
     }
 }
 

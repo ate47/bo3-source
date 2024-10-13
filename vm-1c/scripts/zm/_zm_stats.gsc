@@ -129,7 +129,7 @@ function player_stats_init() {
     self.score = self.pers["score"];
     self incrementplayerstat("score", self.score);
     self add_map_stat("score", self.score);
-    self.var_f191a1fc = 0;
+    self.bgb_tokens_gained_this_game = 0;
     self globallogic_score::initpersstat("zteam", 0);
     if (isdefined(level.var_7a4e6515)) {
         [[ level.var_7a4e6515 ]]();
@@ -187,7 +187,7 @@ function update_players_stats_at_match_end(players) {
         }
         player set_global_stat("total_points", player.score_total);
         player set_global_stat("rounds", level.round_number);
-        player set_global_stat("bgb_tokens_gained_this_game", player.var_f191a1fc);
+        player set_global_stat("bgb_tokens_gained_this_game", player.bgb_tokens_gained_this_game);
         if (level.onlinegame) {
             player highwater_global_stat("HIGHEST_ROUND_REACHED", level.round_number);
             player highwater_map_stat("HIGHEST_ROUND_REACHED", level.round_number);
@@ -708,7 +708,7 @@ function initializematchstats() {
 // Size: 0x64
 function adjustrecentstats() {
     /#
-        if (getdvarint("bgb_tokens_gained_this_game") == 1 || getdvarint("bgb_tokens_gained_this_game") == 1) {
+        if (getdvarint("<dev string:x28>") == 1 || getdvarint("<dev string:x3f>") == 1) {
             return;
         }
     #/
@@ -723,7 +723,7 @@ function uploadstatssoon() {
     self notify(#"upload_stats_soon");
     self endon(#"upload_stats_soon");
     self endon(#"disconnect");
-    wait(1);
+    wait 1;
     uploadstats(self);
 }
 

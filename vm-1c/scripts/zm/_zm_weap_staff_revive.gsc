@@ -11,9 +11,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/callbacks_shared;
 
-#namespace namespace_db493cf;
+#namespace zm_weap_staff_revive;
 
-// Namespace namespace_db493cf
+// Namespace zm_weap_staff_revive
 // Params 0, eflags: 0x2
 // Checksum 0x266fe419, Offset: 0x260
 // Size: 0x34
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
     system::register("zm_weap_staff_revive", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_db493cf
+// Namespace zm_weap_staff_revive
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb5506179, Offset: 0x2a0
 // Size: 0x24
@@ -29,7 +29,7 @@ function __init__() {
     callback::on_spawned(&onplayerspawned);
 }
 
-// Namespace namespace_db493cf
+// Namespace zm_weap_staff_revive
 // Params 0, eflags: 0x1 linked
 // Checksum 0x30301e9a, Offset: 0x2d0
 // Size: 0x24
@@ -38,7 +38,7 @@ function onplayerspawned() {
     self thread function_bd596582();
 }
 
-// Namespace namespace_db493cf
+// Namespace zm_weap_staff_revive
 // Params 0, eflags: 0x1 linked
 // Checksum 0x631868f, Offset: 0x300
 // Size: 0xc0
@@ -54,7 +54,7 @@ function function_bd596582() {
     }
 }
 
-// Namespace namespace_db493cf
+// Namespace zm_weap_staff_revive
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdaf0c075, Offset: 0x3c8
 // Size: 0x19a
@@ -76,7 +76,7 @@ function function_e94d3934(var_836ef144) {
     if (isdefined(e_closest_player)) {
         e_closest_player notify(#"remote_revive", self);
         e_closest_player playsoundtoplayer("wpn_revivestaff_revive_plr", e_player);
-        self notify(#"hash_981f818b");
+        self notify(#"revived_player_with_upgraded_staff");
     }
 }
 

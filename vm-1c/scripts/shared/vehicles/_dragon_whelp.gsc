@@ -16,9 +16,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_e81d2518;
+#namespace dragon;
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 0, eflags: 0x2
 // Checksum 0x95a02dce, Offset: 0x330
 // Size: 0x34
@@ -26,7 +26,7 @@ function autoexec function_2dc19561() {
     system::register("dragon", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 0, eflags: 0x1 linked
 // Checksum 0x19735ddb, Offset: 0x370
 // Size: 0x2c
@@ -34,7 +34,7 @@ function __init__() {
     vehicle::add_main_callback("dragon", &function_20bd34e1);
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6e1fc824, Offset: 0x3a8
 // Size: 0x23c
@@ -67,7 +67,7 @@ function function_20bd34e1() {
     defaultrole();
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb07a22bd, Offset: 0x5f0
 // Size: 0x178
@@ -81,14 +81,14 @@ function defaultrole() {
         self vehicle_ai::add_utility_connection("power_up", "combat");
     }
     /#
-        setdvar("sentinel_drone", 0);
+        setdvar("<dev string:x28>", 0);
     #/
     self thread function_cd3112cf();
     vehicle_ai::startinitialstate("combat");
     self.starttime = gettime();
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 1, eflags: 0x5 linked
 // Checksum 0x301a319a, Offset: 0x770
 // Size: 0x1be
@@ -126,7 +126,7 @@ function private function_cb8b2163(target) {
     return false;
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 0, eflags: 0x5 linked
 // Checksum 0xc3db2b33, Offset: 0x938
 // Size: 0x29c
@@ -156,7 +156,7 @@ function private function_e2991906() {
     return var_4faf77e2;
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 0, eflags: 0x5 linked
 // Checksum 0x9ce7bf64, Offset: 0xbe0
 // Size: 0x100
@@ -164,15 +164,15 @@ function private function_cd3112cf() {
     self endon(#"death");
     for (;;) {
         if (!isdefined(self.owner)) {
-            wait(0.25);
+            wait 0.25;
             continue;
         }
         if (isdefined(self.ignoreall) && self.ignoreall) {
-            wait(0.25);
+            wait 0.25;
             continue;
         }
         /#
-            if (getdvarint("sentinel_drone", 0)) {
+            if (getdvarint("<dev string:x28>", 0)) {
                 if (isdefined(self.var_a924686c)) {
                     line(self.origin, self.var_a924686c.origin, (1, 0, 0), 1, 0, 5);
                 }
@@ -184,11 +184,11 @@ function private function_cd3112cf() {
         } else {
             self.var_a924686c = target;
         }
-        wait(0.25);
+        wait 0.25;
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6ac2c56b, Offset: 0xce8
 // Size: 0x264
@@ -223,7 +223,7 @@ function function_b9f1655e(params) {
     self vehicle_ai::evaluate_connections();
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 3, eflags: 0x1 linked
 // Checksum 0x5c589533, Offset: 0xf58
 // Size: 0x5a
@@ -240,7 +240,7 @@ function function_1d2da0bd(from_state, to_state, connection) {
     return true;
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 1, eflags: 0x1 linked
 // Checksum 0x170a7e76, Offset: 0xfc0
 // Size: 0x850
@@ -250,7 +250,7 @@ function state_combat_update(params) {
     var_b609e490 = 300;
     self asmrequestsubstate("locomotion@movement");
     while (!isdefined(self.owner)) {
-        wait(0.05);
+        wait 0.05;
     }
     self thread function_a7242558();
     for (;;) {
@@ -261,7 +261,7 @@ function state_combat_update(params) {
                 self.current_pathto_pos = self getclosestpointonnavvolume(self.origin, 100);
             }
             self setvehgoalpos(self.current_pathto_pos, 1, 0);
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (isdefined(self.owner)) {
@@ -283,7 +283,7 @@ function state_combat_update(params) {
                             if (!isdefined(point._scoredebug)) {
                                 point._scoredebug = [];
                             }
-                            point._scoredebug["sentinel_drone"] = sqrt(distsqr) * -1 * 2;
+                            point._scoredebug["<dev string:x46>"] = sqrt(distsqr) * -1 * 2;
                         #/
                         point.score += sqrt(distsqr) * -1 * 2;
                     }
@@ -293,7 +293,7 @@ function state_combat_update(params) {
                                 if (!isdefined(point._scoredebug)) {
                                     point._scoredebug = [];
                                 }
-                                point._scoredebug["sentinel_drone"] = 400;
+                                point._scoredebug["<dev string:x52>"] = 400;
                             #/
                             point.score += 400;
                         }
@@ -306,7 +306,7 @@ function state_combat_update(params) {
                                 if (!isdefined(point._scoredebug)) {
                                     point._scoredebug = [];
                                 }
-                                point._scoredebug["sentinel_drone"] = 300;
+                                point._scoredebug["<dev string:x5d>"] = 300;
                             #/
                             point.score += 300;
                         } else if (abs(var_21402bcb[2]) < -56) {
@@ -314,7 +314,7 @@ function state_combat_update(params) {
                                 if (!isdefined(point._scoredebug)) {
                                     point._scoredebug = [];
                                 }
-                                point._scoredebug["sentinel_drone"] = 100;
+                                point._scoredebug["<dev string:x5d>"] = 100;
                             #/
                             point.score += 100;
                         }
@@ -327,7 +327,7 @@ function state_combat_update(params) {
                 self vehicle_ai::positionquery_debugscores(queryresult);
                 if (isdefined(best_point)) {
                     /#
-                        if (isdefined(getdvarint("sentinel_drone")) && getdvarint("sentinel_drone")) {
+                        if (isdefined(getdvarint("<dev string:x6b>")) && getdvarint("<dev string:x6b>")) {
                             recordline(self.origin, best_point.origin, (0.3, 1, 0));
                             recordline(self.origin, self.owner.origin, (1, 0, 0.4));
                         }
@@ -344,11 +344,11 @@ function state_combat_update(params) {
                 function_3f19103d();
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 0, eflags: 0x1 linked
 // Checksum 0x36fdcf4, Offset: 0x1818
 // Size: 0x250
@@ -356,7 +356,7 @@ function function_a7242558() {
     self endon(#"change_state");
     self endon(#"death");
     for (;;) {
-        wait(0.1);
+        wait 0.1;
         self vehicle_ai::evaluate_connections();
         if (!self vehicle_ai::iscooldownready("attack")) {
             continue;
@@ -378,7 +378,7 @@ function function_a7242558() {
         }
         aimoffset = self.var_a924686c getvelocity() * 0.3 - eyeoffset;
         self setturrettargetent(self.var_a924686c, aimoffset);
-        wait(0.2);
+        wait 0.2;
         if (isdefined(self.var_a924686c)) {
             self fireweapon(0, self.var_a924686c, (0, 0, 0), self);
             self vehicle_ai::cooldown("attack", 1);
@@ -386,7 +386,7 @@ function function_a7242558() {
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 0, eflags: 0x1 linked
 // Checksum 0x43d208c4, Offset: 0x1a70
 // Size: 0x2ac
@@ -418,7 +418,7 @@ function function_3f19103d() {
     }
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 4, eflags: 0x1 linked
 // Checksum 0xf44b4151, Offset: 0x1d28
 // Size: 0x26
@@ -426,7 +426,7 @@ function function_cce3e8b4(einflictor, eattacker, smeansofdeath, weapon) {
     return false;
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 15, eflags: 0x1 linked
 // Checksum 0x5610bcb2, Offset: 0x1d58
 // Size: 0x94
@@ -437,7 +437,7 @@ function function_110bfc7e(einflictor, eattacker, idamage, idflags, smeansofdeat
     return idamage;
 }
 
-// Namespace namespace_e81d2518
+// Namespace dragon
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb059842e, Offset: 0x1df8
 // Size: 0xfc
@@ -449,7 +449,7 @@ function state_death_update(params) {
     }
     if (isai(attacker) || (!isdefined(self.owner) || attacker !== self && self.owner !== attacker) && isplayer(attacker)) {
         self.damage_on_death = 0;
-        wait(0.05);
+        wait 0.05;
         attacker = params.inflictor;
         if (!isdefined(attacker)) {
             attacker = params.attacker;

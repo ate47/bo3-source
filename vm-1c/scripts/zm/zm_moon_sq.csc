@@ -9,9 +9,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_fa702a65;
+#namespace zm_moon_sq;
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb3ad3c70, Offset: 0x4b8
 // Size: 0x44c
@@ -23,51 +23,51 @@ function init_clientfields() {
     namespace_6e97c459::function_225a92d6("cgenerator", 21000);
     namespace_6e97c459::function_225a92d6("wire", 21000);
     namespace_6e97c459::function_225a92d6("datalog", 21000);
-    clientfield::register("world", "raise_rockets", 21000, 1, "counter", &function_14b62279, 0, 0);
-    clientfield::register("world", "rocket_launch", 21000, 1, "counter", &function_e8eaac79, 0, 0);
+    clientfield::register("world", "raise_rockets", 21000, 1, "counter", &raise_rockets, 0, 0);
+    clientfield::register("world", "rocket_launch", 21000, 1, "counter", &rocket_launch, 0, 0);
     clientfield::register("world", "rocket_explode", 21000, 1, "counter", &rocket_explode, 0, 0);
-    clientfield::register("world", "charge_tank_1", 21000, 1, "counter", &function_4df9054c, 0, 0);
-    clientfield::register("world", "charge_tank_2", 21000, 1, "counter", &function_c0007487, 0, 0);
-    clientfield::register("world", "charge_tank_cleanup", 21000, 1, "counter", &function_94570121, 0, 0);
-    clientfield::register("world", "sam_vo_rumble", 21000, 1, "int", &function_dcfded2c, 0, 0);
-    clientfield::register("world", "charge_vril_init", 21000, 1, "int", &function_334865c, 0, 0);
-    clientfield::register("world", "sq_wire_init", 21000, 1, "int", &function_224816ac, 0, 0);
-    clientfield::register("world", "sam_init", 21000, 1, "int", &function_39a1d07f, 0, 0);
+    clientfield::register("world", "charge_tank_1", 21000, 1, "counter", &charge_tank_1, 0, 0);
+    clientfield::register("world", "charge_tank_2", 21000, 1, "counter", &charge_tank_2, 0, 0);
+    clientfield::register("world", "charge_tank_cleanup", 21000, 1, "counter", &charge_tank_cleanup, 0, 0);
+    clientfield::register("world", "sam_vo_rumble", 21000, 1, "int", &sam_vo_rumble, 0, 0);
+    clientfield::register("world", "charge_vril_init", 21000, 1, "int", &charge_vril_init, 0, 0);
+    clientfield::register("world", "sq_wire_init", 21000, 1, "int", &sq_wire_init, 0, 0);
+    clientfield::register("world", "sam_init", 21000, 1, "int", &sam_init, 0, 0);
     n_bits = getminbitcountfornum(4);
-    clientfield::register("world", "vril_generator", 21000, n_bits, "int", &function_bd20fe8, 0, 0);
-    clientfield::register("world", "sam_end_rumble", 21000, 1, "int", &function_b134b86c, 0, 0);
+    clientfield::register("world", "vril_generator", 21000, n_bits, "int", &vril_generator, 0, 0);
+    clientfield::register("world", "sam_end_rumble", 21000, 1, "int", &sam_end_rumble, 0, 0);
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1787f7b3, Offset: 0x910
 // Size: 0x4
-function function_1975569c() {
+function rocket_test() {
     
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 7, eflags: 0x1 linked
 // Checksum 0x930e7d30, Offset: 0x920
 // Size: 0x48
-function function_94570121(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function charge_tank_cleanup(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     level.var_d224bbf0 = [];
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 1, eflags: 0x0
 // Checksum 0x3586d40a, Offset: 0x970
 // Size: 0x4e
 function function_13789e51(dest) {
     while (true) {
         /#
-            print3d(dest, "world", (255, 0, 0), 30);
+            print3d(dest, "<dev string:x28>", (255, 0, 0), 30);
         #/
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8bb418f4, Offset: 0x9c8
 // Size: 0x1ec
@@ -85,21 +85,21 @@ function function_62979c5b() {
     delta = 0.064;
     amount = 1;
     setdvar("r_poisonFX_debug_amount", amount);
-    wait(3);
+    wait 3;
     while (amount > 0) {
         amount = max(amount - delta, 0);
         setdvar("r_poisonFX_debug_amount", amount);
-        wait(0.016);
+        wait 0.016;
     }
     setdvar("r_poisonFX_debug_amount", 0);
     setdvar("r_poisonFX_debug_enable", 0);
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1fe40261, Offset: 0xbc0
 // Size: 0x25e
-function function_538468b2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function soul_swap(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     if (localclientnum != 0) {
         return;
     }
@@ -128,7 +128,7 @@ function function_538468b2(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 3, eflags: 0x1 linked
 // Checksum 0x558491b7, Offset: 0xe28
 // Size: 0xb4
@@ -140,7 +140,7 @@ function function_384d443e(localclientnum, fx_name, dest) {
     self delete();
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb518d361, Offset: 0xee8
 // Size: 0x264
@@ -158,7 +158,7 @@ function function_86a718a9(localclientnum, oldval, newval, bnewent, binitialsnap
         }
     }
     if (isdefined(closest)) {
-        println("world" + self.origin + "world" + closest.origin);
+        println("<dev string:x2a>" + self.origin + "<dev string:x34>" + closest.origin);
         for (i = 0; i < getlocalplayers().size; i++) {
             e = spawn(i, self.origin + (0, 0, 24), "script_model");
             e setmodel("tag_origin");
@@ -169,17 +169,17 @@ function function_86a718a9(localclientnum, oldval, newval, bnewent, binitialsnap
         }
         return;
     }
-    println("world");
+    println("<dev string:x39>");
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 2, eflags: 0x1 linked
 // Checksum 0xceddb7ab, Offset: 0x1158
 // Size: 0x1e8
 function function_7013f302(var_689a45ac, var_fcc3f768) {
     var_19c24e40 = [];
     tanks = struct::get_array(var_689a45ac, "targetname");
-    println("world");
+    println("<dev string:x5a>");
     for (i = 0; i < tanks.size; i++) {
         tank = tanks[i];
         var_2b6ee6a7 = struct::get(tank.target, "targetname");
@@ -198,11 +198,11 @@ function function_7013f302(var_689a45ac, var_fcc3f768) {
     return var_19c24e40;
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe37a84ee, Offset: 0x1348
 // Size: 0x11e
-function function_334865c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function charge_vril_init(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     if (newval) {
         var_cefa6d0 = struct::get_array("sq_cp_final", "targetname");
         for (i = 0; i < var_cefa6d0.size; i++) {
@@ -213,11 +213,11 @@ function function_334865c(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6f84c5f0, Offset: 0x1470
 // Size: 0xdc
-function function_224816ac(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function sq_wire_init(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     if (newval) {
         targ = struct::get("sq_wire_final", "targetname");
         var_93d55a25 = util::spawn_model(localclientnum, targ.model, targ.origin, targ.angles);
@@ -225,7 +225,7 @@ function function_224816ac(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc97e5afc, Offset: 0x1558
 // Size: 0x150
@@ -243,15 +243,15 @@ function function_1e7e25e0(struct) {
         var_c4ad35e3 = amplitude * var_a2bbb4cc;
         self.origin = start_z + (0, 0, var_c4ad35e3);
         t += 0.016;
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 7, eflags: 0x1 linked
 // Checksum 0xec7f178a, Offset: 0x16b0
 // Size: 0x124
-function function_39a1d07f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function sam_init(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     if (newval) {
         targ = struct::get("sq_sam", "targetname");
         var_93d55a25 = util::spawn_model(localclientnum, targ.model, targ.origin, targ.angles);
@@ -261,7 +261,7 @@ function function_39a1d07f(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 0, eflags: 0x1 linked
 // Checksum 0xce9e6f97, Offset: 0x17e0
 // Size: 0xe0
@@ -276,15 +276,15 @@ function function_346ea5d8() {
         var_c4ad35e3 = amplitude * var_a2bbb4cc;
         self.origin = start_z + (0, 0, var_c4ad35e3);
         t += 0.016;
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 7, eflags: 0x1 linked
 // Checksum 0xee4a25cb, Offset: 0x18c8
 // Size: 0x2f2
-function function_bd20fe8(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function vril_generator(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     targ = struct::get("sq_charge_vg_pos", "targetname");
     if (!isdefined(level.a_ents)) {
         level.a_ents = [];
@@ -319,27 +319,27 @@ function function_bd20fe8(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 7, eflags: 0x1 linked
 // Checksum 0xcf01b906, Offset: 0x1bc8
 // Size: 0x5c
-function function_4df9054c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function charge_tank_1(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     level.var_d224bbf0 = function_7013f302("sq_first_tank");
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 7, eflags: 0x1 linked
 // Checksum 0x9499ed76, Offset: 0x1c30
 // Size: 0x64
-function function_c0007487(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function charge_tank_2(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     level.var_d224bbf0 = function_7013f302("sq_second_tank", "sq_first_tank");
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd58008bb, Offset: 0x1ca0
 // Size: 0x76
-function function_b134b86c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function sam_end_rumble(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     if (newval == 1) {
         level thread function_da7234e2(localclientnum);
         return;
@@ -347,7 +347,7 @@ function function_b134b86c(localclientnum, oldval, newval, bnewent, binitialsnap
     level notify(#"hash_f9b2abc9");
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc650302b, Offset: 0x1d20
 // Size: 0x138
@@ -364,15 +364,15 @@ function function_da7234e2(localclientnum) {
                 a_players[i] playrumbleonentity(localclientnum, "slide_rumble");
             }
         }
-        wait(randomfloatrange(0.05, 0.15));
+        wait randomfloatrange(0.05, 0.15);
     }
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 7, eflags: 0x1 linked
 // Checksum 0xaa1a7b90, Offset: 0x1e60
 // Size: 0x8e
-function function_dcfded2c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function sam_vo_rumble(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     if (newval) {
         array::thread_all(getlocalplayers(), &function_9b1295b1, localclientnum);
         return;
@@ -380,7 +380,7 @@ function function_dcfded2c(localclientnum, oldval, newval, bnewent, binitialsnap
     level notify(#"hash_306cf2d4");
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd533178d, Offset: 0x1ef8
 // Size: 0xb0
@@ -390,21 +390,21 @@ function function_9b1295b1(localclientnum) {
     while (true) {
         self earthquake(randomfloatrange(0.2, 0.25), 5, self.origin, 100);
         self playrumbleonentity(localclientnum, "slide_rumble");
-        wait(randomfloatrange(0.1, 0.15));
+        wait randomfloatrange(0.1, 0.15);
     }
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 7, eflags: 0x1 linked
 // Checksum 0xbfdd5e48, Offset: 0x1fb0
 // Size: 0x6a
-function function_14b62279(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function raise_rockets(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     level thread function_563a98ff();
-    wait(4.5);
+    wait 4.5;
     level notify(#"hash_a8151d8f");
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfeca1520, Offset: 0x2028
 // Size: 0x100
@@ -419,21 +419,21 @@ function function_563a98ff() {
             player earthquake(randomfloatrange(0.15, 0.2), 5, player.origin, 100);
             player playrumbleonentity(i, "slide_rumble");
         }
-        wait(randomfloatrange(0.1, 0.15));
+        wait randomfloatrange(0.1, 0.15);
     }
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 7, eflags: 0x1 linked
 // Checksum 0x921b9621, Offset: 0x2130
 // Size: 0x66
-function function_e8eaac79(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
+function rocket_launch(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     level thread function_d2199485();
-    wait(6);
+    wait 6;
     level notify(#"hash_93f26bd1");
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfb2814c2, Offset: 0x21a0
 // Size: 0x100
@@ -448,23 +448,23 @@ function function_d2199485() {
             player earthquake(randomfloatrange(0.26, 0.31), 5, player.origin, 100);
             player playrumbleonentity(i, "damage_light");
         }
-        wait(randomfloatrange(0.1, 0.15));
+        wait randomfloatrange(0.1, 0.15);
     }
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 7, eflags: 0x1 linked
 // Checksum 0x91afdd3b, Offset: 0x22a8
 // Size: 0x76
 function rocket_explode(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwasdemojump) {
     level.var_abc92c08 = 1;
-    wait(3.5);
+    wait 3.5;
     level thread function_5df2c048();
-    wait(4);
+    wait 4;
     level notify(#"hash_e43026d6");
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 0, eflags: 0x1 linked
 // Checksum 0x793e2651, Offset: 0x2328
 // Size: 0x1c0
@@ -478,7 +478,7 @@ function function_5df2c048() {
         player earthquake(randomfloatrange(0.4, 0.45), 5, player.origin, 100);
         player playrumbleonentity(i, "damage_heavy");
     }
-    wait(0.2);
+    wait 0.2;
     while (true) {
         for (i = 0; i < level.localplayers.size; i++) {
             player = getlocalplayers()[i];
@@ -488,11 +488,11 @@ function function_5df2c048() {
             player earthquake(randomfloatrange(0.35, 0.4), 5, player.origin, 100);
             player playrumbleonentity(i, "damage_light");
         }
-        wait(randomfloatrange(0.1, 0.15));
+        wait randomfloatrange(0.1, 0.15);
     }
 }
 
-// Namespace namespace_fa702a65
+// Namespace zm_moon_sq
 // Params 7, eflags: 0x1 linked
 // Checksum 0x74636dae, Offset: 0x24f0
 // Size: 0x124

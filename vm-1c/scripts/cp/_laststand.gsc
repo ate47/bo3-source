@@ -101,7 +101,7 @@ function increment_downed_stat() {
 // Size: 0x38
 function private force_last_stand() {
     /#
-        if (getdvarstring("") == "") {
+        if (getdvarstring("<dev string:x28>") == "<dev string:x37>") {
             return true;
         }
     #/
@@ -222,7 +222,7 @@ function refire_player_downed() {
     self endon(#"player_revived");
     self endon(#"death");
     self endon(#"disconnect");
-    wait(1);
+    wait 1;
     self notify(#"player_downed");
 }
 
@@ -233,7 +233,7 @@ function refire_player_downed() {
 function function_515f3287() {
     self endon(#"weapon_change");
     while (!self attackbuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -382,9 +382,9 @@ function laststand_give_pistol() {
 // Size: 0x64
 function function_ee6922c8() {
     self.bleedout_time -= 1;
-    wait(1);
+    wait 1;
     while (isdefined(self.revivetrigger) && isdefined(self.revivetrigger.beingrevived) && self.revivetrigger.beingrevived == 1) {
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -483,7 +483,7 @@ function bleed_out() {
         var_6afb4351 = getdvarfloat("bleed_out_screen_fade_speed", 1.5);
         self playlocalsound("chr_health_laststand_bleedout");
         self lui::screen_fade(var_6afb4351, 1, 0, "black", 0);
-        wait(var_6afb4351 + 0.2);
+        wait var_6afb4351 + 0.2;
     }
     self function_4a66f284();
     if (isdefined(self.revivetrigger)) {
@@ -518,7 +518,7 @@ function respawn_player_after_time(n_time_seconds) {
     self waittill(#"spawned_spectator");
     self endon(#"spawned");
     level endon(#"objective_changed");
-    wait(n_time_seconds);
+    wait n_time_seconds;
     if (self.sessionstate == "spectator") {
         self thread globallogic_spawn::waitandspawnclient();
     }
@@ -562,13 +562,13 @@ function function_5c3b9a2f() {
     self thread function_9a3e66fc();
     self thread function_a5c40dbc();
     while (self usebuttonpressed()) {
-        wait(1);
+        wait 1;
     }
     if (!isdefined(self.suicideprompt)) {
         return;
     }
     while (true) {
-        wait(0.1);
+        wait 0.1;
         if (!isdefined(self.suicideprompt)) {
             continue;
         }
@@ -629,7 +629,7 @@ function function_51ede748(duration) {
     self.var_292c9541 settext(%COOP_SUICIDING);
     bb::function_945c54c5("last_stand_suicide", self);
     while (self is_suiciding()) {
-        wait(0.05);
+        wait 0.05;
         timer += 0.05;
         if (timer >= var_6d12a464) {
             var_5da69e51 = 1;
@@ -708,7 +708,7 @@ function revive_trigger_think() {
     level endon(#"game_ended");
     self endon(#"death");
     while (true) {
-        wait(0.1);
+        wait 0.1;
         if (!isdefined(self.revivetrigger)) {
             self notify(#"stop_revive_trigger");
         }
@@ -890,7 +890,7 @@ function revive_do_revive(playerbeingrevived, var_3012e872) {
     self thread check_for_failed_revive(playerbeingrevived);
     self playlocalsound("chr_revive_start");
     while (self is_reviving(playerbeingrevived)) {
-        wait(0.05);
+        wait 0.05;
         timer += 0.05;
         if (self player_is_in_laststand()) {
             break;
@@ -1076,7 +1076,7 @@ function revive_force_revive(reviver) {
 function revive_hud_think() {
     level endon(#"game_ended");
     while (true) {
-        wait(0.1);
+        wait 0.1;
         if (!player_any_player_in_laststand()) {
             continue;
         }
@@ -1103,7 +1103,7 @@ function revive_hud_think() {
             }
         }
         if (revived) {
-            wait(3.5);
+            wait 3.5;
         }
     }
 }
@@ -1127,7 +1127,7 @@ function faderevivemessageover(playertorevive, time) {
 function function_38c5da09() {
     self endon(#"player_revived");
     self endon(#"disconnect");
-    println("");
+    println("<dev string:x48>");
     self function_cd85ffaf(0);
     self clientfield::set_to_player("sndHealth", 2);
     self.var_5ad7ff7e.var_8b479de8 = 0.5;
@@ -1135,7 +1135,7 @@ function function_38c5da09() {
     self thread function_5d050fca();
     while (self.var_5ad7ff7e.var_8b479de8 < 1) {
         self.var_5ad7ff7e.var_8b479de8 += 0.0025;
-        wait(0.05);
+        wait 0.05;
     }
     self auto_revive(self);
     bb::function_945c54c5("last_stand_getup", self);

@@ -3,9 +3,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e0f9e0c4;
+#namespace zm_tomb_fx;
 
-// Namespace namespace_e0f9e0c4
+// Namespace zm_tomb_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe6ee5416, Offset: 0x10e0
 // Size: 0x3c
@@ -15,7 +15,7 @@ function main() {
     level thread function_f205a5f1();
 }
 
-// Namespace namespace_e0f9e0c4
+// Namespace zm_tomb_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc1a06d3d, Offset: 0x1128
 // Size: 0x382
@@ -54,7 +54,7 @@ function function_f45953c() {
     level._effect["poltergeist"] = "tools/fx_null";
 }
 
-// Namespace namespace_e0f9e0c4
+// Namespace zm_tomb_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x390a24e2, Offset: 0x14b8
 // Size: 0x40e
@@ -98,7 +98,7 @@ function function_e6258024() {
     level._effect["fx_tomb_skybox_vortex"] = "maps/zombie_tomb/fx_tomb_skybox_vortex";
 }
 
-// Namespace namespace_e0f9e0c4
+// Namespace zm_tomb_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe2e65d39, Offset: 0x18d0
 // Size: 0x102

@@ -125,7 +125,7 @@ function set_state(name, state_params) {
         return false;
     }
     if (!isdefined(state)) {
-        assertmsg("<unknown string>" + name + "<unknown string>" + self.name);
+        assertmsg("<dev string:x28>" + name + "<dev string:x44>" + self.name);
         return false;
     }
     reenter = self.current_state === state;

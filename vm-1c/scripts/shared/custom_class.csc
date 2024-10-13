@@ -230,7 +230,7 @@ function custom_class_attachment_select_focus(localclientnum) {
     if (isdefined(donotmovecamera) && donotmovecamera) {
         if (isdefined(var_dacb3c7)) {
             preload_weapon_model(localclientnum, var_dacb3c7, 0);
-            wait(initialdelay);
+            wait initialdelay;
             wait_preload_weapon(localclientnum);
             update_weapon_script_model(localclientnum, var_dacb3c7, 0);
         }
@@ -501,7 +501,7 @@ function preload_weapon_watcher(localclientnum) {
             level notify("preload_weapon_complete_" + localclientnum);
             return;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -522,10 +522,10 @@ function preload_weapon_model(localclientnum, newweaponstring, should_update_wea
         return;
     }
     if (isdefined(current_weapon.frontendmodel)) {
-        println("CustomClass_update" + current_weapon.name + "CustomClass_update" + current_weapon.frontendmodel);
+        println("<dev string:x28>" + current_weapon.name + "<dev string:x50>" + current_weapon.frontendmodel);
         level.preload_weapon_model[localclientnum] useweaponmodel(current_weapon, current_weapon.frontendmodel);
     } else {
-        println("CustomClass_update" + current_weapon.name);
+        println("<dev string:x28>" + current_weapon.name);
         level.preload_weapon_model[localclientnum] useweaponmodel(current_weapon);
     }
     if (isdefined(level.preload_weapon_model[localclientnum])) {
@@ -568,10 +568,10 @@ function update_weapon_script_model(localclientnum, newweaponstring, should_upda
         return;
     }
     if (isdefined(level.current_weapon[localclientnum].frontendmodel)) {
-        println("CustomClass_update" + level.current_weapon[localclientnum].name + "CustomClass_update" + level.current_weapon[localclientnum].frontendmodel);
+        println("<dev string:x63>" + level.current_weapon[localclientnum].name + "<dev string:x50>" + level.current_weapon[localclientnum].frontendmodel);
         level.weapon_script_model[localclientnum] useweaponmodel(level.current_weapon[localclientnum], level.current_weapon[localclientnum].frontendmodel);
     } else {
-        println("CustomClass_update" + level.current_weapon[localclientnum].name);
+        println("<dev string:x63>" + level.current_weapon[localclientnum].name);
         level.weapon_script_model[localclientnum] useweaponmodel(level.current_weapon[localclientnum]);
     }
     if (isdefined(level.weapon_script_model[localclientnum])) {
@@ -602,10 +602,10 @@ function transition_camera(localclientnum, weapontype, camera, subxcam, initiald
     if (isdefined(newweaponstring)) {
         preload_weapon_model(localclientnum, newweaponstring, should_update_weapon_options);
     }
-    wait(initialdelay);
+    wait initialdelay;
     transition_camera_immediate(localclientnum, weapontype, camera, subxcam, lerpduration, notetrack);
     if (isdefined(newweaponstring)) {
-        wait(lerpduration / 1000);
+        wait lerpduration / 1000;
         wait_preload_weapon(localclientnum);
         update_weapon_script_model(localclientnum, newweaponstring, should_update_weapon_options);
     }
@@ -665,13 +665,13 @@ function function_db76bfd5(localclientnum) {
                 var_f19f1a0d = 0;
             }
             switch (var_d01f310b) {
-            case 46:
+            case "camo":
                 level.camo_index[localclientnum] = int(var_f19f1a0d);
                 break;
-            case 48:
+            case "reticle":
                 level.reticle_index[localclientnum] = int(var_f19f1a0d);
                 break;
-            case 47:
+            case "paintjob":
                 level.show_paintshop[localclientnum] = int(var_f19f1a0d);
                 break;
             default:

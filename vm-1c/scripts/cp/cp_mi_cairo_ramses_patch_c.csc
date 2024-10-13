@@ -10,9 +10,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_98e946e1;
+#namespace cp_mi_cairo_ramses_patch_c;
 
-// Namespace namespace_98e946e1
+// Namespace cp_mi_cairo_ramses_patch_c
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x1d0
 // Size: 0x4

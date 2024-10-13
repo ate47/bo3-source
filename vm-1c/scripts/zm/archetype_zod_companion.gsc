@@ -101,19 +101,19 @@ function private archetypezodcompanionblackboardinit() {
     blackboard::registerblackboardattribute(self, "_locomotion_speed", "locomotion_speed_sprint", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zodCompanionDelayMovement");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_move_mode", "normal", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zodCompanionDelayMovement");
+            self trackblackboardattribute("<dev string:x3a>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_gibbed_limbs", undefined, &function_c82dd93c);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("zodCompanionDelayMovement");
+            self trackblackboardattribute("<dev string:x45>");
         #/
     }
     /#
@@ -198,7 +198,7 @@ function zodcompanioncanpreemptivejuke(entity) {
     if (distancesquared(entity.origin, entity.enemy.origin) < 360000) {
         angledifference = absangleclamp180(entity.angles[1] - entity.enemy.angles[1]);
         /#
-            record3dtext(angledifference, entity.origin + (0, 0, 5), (0, 1, 0), "zodCompanionDelayMovement");
+            record3dtext(angledifference, entity.origin + (0, 0, 5), (0, 1, 0), "<dev string:x53>");
         #/
         if (angledifference > -121) {
             enemyangles = entity.enemy getgunangles();
@@ -206,7 +206,7 @@ function zodcompanioncanpreemptivejuke(entity) {
             forward = anglestoforward(enemyangles);
             dotproduct = abs(vectordot(vectornormalize(toenemy), forward));
             /#
-                record3dtext(acos(dotproduct), entity.origin + (0, 0, 10), (0, 1, 0), "zodCompanionDelayMovement");
+                record3dtext(acos(dotproduct), entity.origin + (0, 0, 10), (0, 1, 0), "<dev string:x53>");
             #/
             if (dotproduct > 0.9848) {
                 return zodcompanioncanjuke(entity);
@@ -536,7 +536,7 @@ function private zodcompanioncollisionservice(entity) {
 function private function_d04291cf() {
     self endon(#"death");
     self function_1762804b(0);
-    wait(2);
+    wait 2;
     self function_1762804b(1);
 }
 
@@ -570,7 +570,7 @@ function private function_34117adf(var_5935e1b9) {
     self.var_53ce2a4e = 1;
     self setgoal(var_5935e1b9, 1);
     self waittill(#"goal");
-    wait(1);
+    wait 1;
     self.var_53ce2a4e = 0;
 }
 
@@ -584,7 +584,7 @@ function private function_3463b8c2(var_ee6ad78e) {
     var_292fba5b = arraygetclosest(var_ee6ad78e, var_c9277d64);
     self setgoal(var_292fba5b.origin, 1);
     self waittill(#"goal");
-    wait(1);
+    wait 1;
     self.var_c0e8df41 = 0;
 }
 
@@ -662,7 +662,7 @@ function zod_companion_revive_player(player) {
     angles = vectortoangles(vector);
     self teleport(self.origin, angles);
     self thread animation::play("ai_robot_base_stn_exposed_revive", self, angles, 1.5);
-    wait(0.67);
+    wait 0.67;
     player clientfield::set("being_robot_revived", 1);
     self waittill(#"robot_revive_complete");
     if (level.players.size == 1 && level flag::get("solo_game")) {
@@ -698,7 +698,7 @@ function zod_companion_monitor_revive_attempt(player) {
         if (!(isdefined(player laststand::player_is_in_laststand()) && player laststand::player_is_in_laststand())) {
             self zod_companion_revive_cleanup(player);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -969,7 +969,7 @@ function manage_companion() {
                 self define_new_leader();
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 

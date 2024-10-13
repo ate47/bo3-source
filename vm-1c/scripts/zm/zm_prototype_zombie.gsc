@@ -20,16 +20,16 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b61b7316;
+#namespace zm_prototype_zombie;
 
-// Namespace namespace_b61b7316
+// Namespace zm_prototype_zombie
 // Params 0, eflags: 0x2
 // Checksum 0xdd362c52, Offset: 0x3a8
 // Size: 0x64
 function autoexec init() {
     setdvar("scr_zm_use_code_enemy_selection", 0);
-    level.closest_player_override = &namespace_1d57720d::function_3ff94b60;
-    level thread namespace_1d57720d::function_72e6c1d6();
+    level.closest_player_override = &zm_remaster_zombie::function_3ff94b60;
+    level thread zm_remaster_zombie::function_72e6c1d6();
     level.var_11c66679 = 1;
     level.var_1ace2307 = 2;
 }

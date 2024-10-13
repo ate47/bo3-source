@@ -167,8 +167,8 @@ function function_535bb383() {
 function function_8c91c0f() {
     if (isdefined(level.var_52f5a971) && level.var_52f5a971) {
         level.var_1d4251ad = 6;
-        level.var_c2b8652d = 3;
-        namespace_d93d7691::function_8562a0f6("perk_lose", &function_30223dca, "pers_perk_lose_counter", level.var_c2b8652d, 0);
+        level.pers_perk_lose_counter = 3;
+        namespace_d93d7691::function_8562a0f6("perk_lose", &function_30223dca, "pers_perk_lose_counter", level.pers_perk_lose_counter, 0);
     }
 }
 
@@ -180,8 +180,8 @@ function function_aaa88abe() {
     if (isdefined(level.var_cfce124) && level.var_cfce124) {
         level.var_a4afe255 = 8;
         level.var_5d181faf = 0.25;
-        level.var_1a14ee1c = 1;
-        namespace_d93d7691::function_8562a0f6("pistol_points", &function_27be4a71, "pers_pistol_points_counter", level.var_1a14ee1c, 0);
+        level.pers_pistol_points_counter = 1;
+        namespace_d93d7691::function_8562a0f6("pistol_points", &function_27be4a71, "pers_pistol_points_counter", level.pers_pistol_points_counter, 0);
     }
 }
 
@@ -192,8 +192,8 @@ function function_aaa88abe() {
 function function_13a98c70() {
     if (isdefined(level.var_10626b86) && level.var_10626b86) {
         level.var_2ce89398 = 2500;
-        level.var_537193e6 = 1;
-        namespace_d93d7691::function_8562a0f6("double_points", &function_b8b4fcdb, "pers_double_points_counter", level.var_537193e6, 0);
+        level.pers_double_points_counter = 1;
+        namespace_d93d7691::function_8562a0f6("double_points", &function_b8b4fcdb, "pers_double_points_counter", level.pers_double_points_counter, 0);
     }
 }
 
@@ -205,9 +205,9 @@ function function_25915a30() {
     if (isdefined(level.var_2eafd286) && level.var_2eafd286) {
         level.var_98b6d77b = 5;
         level.var_441ad7ba = 800;
-        level.var_b33490f8 = 1;
+        level.pers_sniper_counter = 1;
         level.var_4de1c840 = 3;
-        namespace_d93d7691::function_8562a0f6("sniper", &function_729cf9db, "pers_sniper_counter", level.var_b33490f8, 0);
+        namespace_d93d7691::function_8562a0f6("sniper", &function_729cf9db, "pers_sniper_counter", level.pers_sniper_counter, 0);
     }
 }
 
@@ -217,9 +217,9 @@ function function_25915a30() {
 // Size: 0x6c
 function function_71bfadf() {
     if (isdefined(level.var_55d2ea99) && level.var_55d2ea99) {
-        level.var_efb7c0b3 = 5;
+        level.pers_box_weapon_counter = 5;
         level.var_21500b7f = 10;
-        namespace_d93d7691::function_8562a0f6("box_weapon", &function_f7fb14e2, "pers_box_weapon_counter", level.var_efb7c0b3, 0);
+        namespace_d93d7691::function_8562a0f6("box_weapon", &function_f7fb14e2, "pers_box_weapon_counter", level.pers_box_weapon_counter, 0);
     }
 }
 
@@ -229,10 +229,10 @@ function function_71bfadf() {
 // Size: 0x7c
 function function_ac121789() {
     if (isdefined(level.var_f4735dd3) && level.var_f4735dd3) {
-        level.var_b3a19bd1 = 1;
+        level.pers_nube_counter = 1;
         level.var_ea5b9bd9 = 10;
         level.var_8d9746cc = 5;
-        namespace_d93d7691::function_8562a0f6("nube", &function_e69589a4, "pers_nube_counter", level.var_b3a19bd1, 0);
+        namespace_d93d7691::function_8562a0f6("nube", &function_e69589a4, "pers_nube_counter", level.pers_nube_counter, 0);
     }
 }
 
@@ -298,13 +298,13 @@ function function_29534a7e() {
 // Size: 0xd2
 function function_c29eb071() {
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     /#
     #/
-    wait(0.5);
+    wait 0.5;
     while (true) {
         self waittill(#"hash_56b30d01");
-        wait(0.1);
+        wait 0.1;
         /#
         #/
         if (function_69f37d91()) {
@@ -313,7 +313,7 @@ function function_c29eb071() {
                 self zm_stats::zero_client_stat("pers_cash_back_bought", 0);
                 self zm_stats::zero_client_stat("pers_cash_back_prone", 0);
                 self.var_a82a23e8 = 0;
-                wait(0.4);
+                wait 0.4;
                 /#
                 #/
                 return;
@@ -328,10 +328,10 @@ function function_c29eb071() {
 // Size: 0x158
 function function_744187f0() {
     self endon(#"disconnect");
-    wait(0.2);
+    wait 0.2;
     /#
     #/
-    wait(0.2);
+    wait 0.2;
     while (true) {
         self waittill(#"hash_35c06a37");
         if (function_69f37d91()) {
@@ -348,7 +348,7 @@ function function_744187f0() {
     }
     self zm_stats::zero_client_stat("pers_insta_kill", 0);
     self function_ea7d0979();
-    wait(0.4);
+    wait 0.4;
     /#
     #/
 }
@@ -374,10 +374,10 @@ function function_4332a58a() {
 // Size: 0x134
 function function_7f74d80b() {
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     /#
     #/
-    wait(0.5);
+    wait 0.5;
     self zm_perks::function_78f42790("jugg_upgrade", 1, 0);
     while (true) {
         level waittill(#"start_of_round");
@@ -386,7 +386,7 @@ function function_7f74d80b() {
                 /#
                 #/
                 self zm_stats::increment_client_stat("pers_jugg_downgrade_count", 0);
-                wait(0.5);
+                wait 0.5;
                 if (self.pers["pers_jugg_downgrade_count"] >= level.var_64717f34) {
                     break;
                 }
@@ -406,10 +406,10 @@ function function_7f74d80b() {
 // Size: 0xb8
 function function_3737e5a() {
     self endon(#"disconnect");
-    wait(0.2);
+    wait 0.2;
     /#
     #/
-    wait(0.2);
+    wait 0.2;
     level waittill(#"carpenter_finished");
     self.var_7b43d46f = undefined;
     while (true) {
@@ -424,7 +424,7 @@ function function_3737e5a() {
         self.var_7b43d46f = undefined;
     }
     self zm_stats::zero_client_stat("pers_carpenter", 0);
-    wait(0.4);
+    wait 0.4;
     /#
     #/
 }
@@ -466,7 +466,7 @@ function function_ce147d1() {
                     }
                 }
             }
-            wait(0.01);
+            wait 0.01;
         }
         self notify(#"hash_b182e276");
         self.var_b8ccb8b1 = undefined;
@@ -512,7 +512,7 @@ function function_4217fc1f() {
     self endon(#"disconnect");
     self endon(#"hash_ea7d0979");
     while (self.zombie_vars["zombie_powerup_insta_kill_ug_time"] >= 0) {
-        wait(0.05);
+        wait 0.05;
         self.zombie_vars["zombie_powerup_insta_kill_ug_time"] = self.zombie_vars["zombie_powerup_insta_kill_ug_time"] - 0.05;
     }
     self function_ea7d0979();
@@ -535,15 +535,15 @@ function function_ea7d0979() {
 // Size: 0x94
 function function_30223dca() {
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     /#
-        iprintlnbold("pers_cash_back_bought");
+        iprintlnbold("<dev string:x28>");
     #/
-    wait(0.5);
+    wait 0.5;
     self.var_5f32df0c = level.round_number;
     self waittill(#"hash_5c51868d");
     /#
-        iprintlnbold("pers_cash_back_bought");
+        iprintlnbold("<dev string:x4d>");
     #/
     self zm_stats::zero_client_stat("pers_perk_lose_counter", 0);
 }
@@ -554,11 +554,11 @@ function function_30223dca() {
 // Size: 0xc4
 function function_27be4a71() {
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     /#
-        iprintlnbold("pers_cash_back_bought");
+        iprintlnbold("<dev string:x73>");
     #/
-    wait(0.5);
+    wait 0.5;
     while (true) {
         self waittill(#"hash_5e5bb250");
         accuracy = self namespace_25f8c2ad::function_eac49a00();
@@ -567,7 +567,7 @@ function function_27be4a71() {
         }
     }
     /#
-        iprintlnbold("pers_cash_back_bought");
+        iprintlnbold("<dev string:x9c>");
     #/
     self zm_stats::zero_client_stat("pers_pistol_points_counter", 0);
 }
@@ -578,14 +578,14 @@ function function_27be4a71() {
 // Size: 0x84
 function function_b8b4fcdb() {
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     /#
-        iprintlnbold("pers_cash_back_bought");
+        iprintlnbold("<dev string:xc6>");
     #/
-    wait(0.5);
+    wait 0.5;
     self waittill(#"hash_b985df1d");
     /#
-        iprintlnbold("pers_cash_back_bought");
+        iprintlnbold("<dev string:xef>");
     #/
     self zm_stats::zero_client_stat("pers_double_points_counter", 0);
 }
@@ -596,14 +596,14 @@ function function_b8b4fcdb() {
 // Size: 0x84
 function function_729cf9db() {
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     /#
-        iprintlnbold("pers_cash_back_bought");
+        iprintlnbold("<dev string:x119>");
     #/
-    wait(0.5);
+    wait 0.5;
     self waittill(#"hash_d83e52c6");
     /#
-        iprintlnbold("pers_cash_back_bought");
+        iprintlnbold("<dev string:x13b>");
     #/
     self zm_stats::zero_client_stat("pers_sniper_counter", 0);
 }
@@ -614,12 +614,12 @@ function function_729cf9db() {
 // Size: 0xe4
 function function_f7fb14e2() {
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     /#
-        iprintlnbold("pers_cash_back_bought");
+        iprintlnbold("<dev string:x15e>");
     #/
     self thread namespace_25f8c2ad::function_85e94769();
-    wait(0.5);
+    wait 0.5;
     self.var_bf349207 = 1;
     while (true) {
         level waittill(#"start_of_round");
@@ -630,7 +630,7 @@ function function_f7fb14e2() {
         }
     }
     /#
-        iprintlnbold("pers_cash_back_bought");
+        iprintlnbold("<dev string:x184>");
     #/
     self zm_stats::zero_client_stat("pers_box_weapon_counter", 0);
 }
@@ -641,11 +641,11 @@ function function_f7fb14e2() {
 // Size: 0xc4
 function function_e69589a4() {
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     /#
-        iprintlnbold("pers_cash_back_bought");
+        iprintlnbold("<dev string:x1ab>");
     #/
-    wait(0.5);
+    wait 0.5;
     while (true) {
         level waittill(#"start_of_round");
         if (function_69f37d91()) {
@@ -655,7 +655,7 @@ function function_e69589a4() {
         }
     }
     /#
-        iprintlnbold("pers_cash_back_bought");
+        iprintlnbold("<dev string:x1cb>");
     #/
     self zm_stats::zero_client_stat("pers_nube_counter", 0);
 }

@@ -17,31 +17,31 @@ function function_31efa8fd() {
     registerblackboardattribute(self, "_tactical_arrival_facing_yaw", undefined, &bb_gettacticalarrivalfacingyaw);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("disablesprint");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
     registerblackboardattribute(self, "_human_locomotion_movement_type", undefined, &bb_getlocomotionmovementtype);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("disablesprint");
+            self trackblackboardattribute("<dev string:x45>");
         #/
     }
     registerblackboardattribute(self, "_human_cover_flankability", undefined, &bb_getcoverflankability);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("disablesprint");
+            self trackblackboardattribute("<dev string:x65>");
         #/
     }
     registerblackboardattribute(self, "_arrival_type", undefined, &bb_getarrivaltype);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("disablesprint");
+            self trackblackboardattribute("<dev string:x7f>");
         #/
     }
     registerblackboardattribute(self, "_human_locomotion_variation", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("disablesprint");
+            self trackblackboardattribute("<dev string:x8d>");
         #/
     }
 }

@@ -3,9 +3,9 @@
 #using scripts/shared/system_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f54133b9;
+#namespace zm_powerup_genesis_random_weapon;
 
-// Namespace namespace_f54133b9
+// Namespace zm_powerup_genesis_random_weapon
 // Params 0, eflags: 0x2
 // Checksum 0x8b64d9ee, Offset: 0x188
 // Size: 0x34
@@ -13,7 +13,7 @@ function autoexec function_2dc19561() {
     system::register("zm_powerup_genesis_random_weapon", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_f54133b9
+// Namespace zm_powerup_genesis_random_weapon
 // Params 0, eflags: 0x1 linked
 // Checksum 0x55209953, Offset: 0x1c8
 // Size: 0x7c
@@ -23,7 +23,7 @@ function __init__() {
     zm_powerups::add_zombie_powerup("genesis_random_weapon");
 }
 
-// Namespace namespace_f54133b9
+// Namespace zm_powerup_genesis_random_weapon
 // Params 7, eflags: 0x1 linked
 // Checksum 0xcad2fce0, Offset: 0x250
 // Size: 0x6c

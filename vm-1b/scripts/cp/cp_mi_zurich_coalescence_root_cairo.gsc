@@ -22,9 +22,9 @@
 #using scripts/cp/gametypes/_save;
 #using scripts/codescripts/struct;
 
-#namespace namespace_73dbe018;
+#namespace root_cairo;
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0x7630c14a, Offset: 0xc40
 // Size: 0xf2
@@ -39,7 +39,7 @@ function main() {
     scene::add_scene_func("p7_fxanim_cp_zurich_checkpoint_wall_01_bundle", &namespace_8e9083ff::function_9f90bc0f, "done", "cairo_root_completed");
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0x31004991, Offset: 0xd40
 // Size: 0x52
@@ -48,7 +48,7 @@ function init_clientfields() {
     clientfield::register("world", "cairo_client_ents", 1, 1, "int");
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 2, eflags: 0x0
 // Checksum 0x355253b1, Offset: 0xda0
 // Size: 0x222
@@ -65,7 +65,7 @@ function function_9c1fc2fd(str_objective, var_74cd64bc) {
     var_4ccf970 = namespace_8e9083ff::function_a00fa665(str_objective);
     namespace_8e9083ff::function_4d032f25(1, 0.5);
     spawner::add_spawn_function_group("raven_ambush_ai", "script_parameters", &namespace_8e9083ff::function_aceff870);
-    spawner::add_spawn_function_group("raven_spawn_teleport", "script_parameters", &namespace_8e9083ff::function_3287bea1);
+    spawner::add_spawn_function_group("raven_spawn_teleport", "script_parameters", &namespace_8e9083ff::raven_spawn_teleport);
     level thread namespace_67110270::function_1935b4aa();
     level thread function_42dddb91(str_objective);
     level clientfield::set("cairo_client_ents", 1);
@@ -80,7 +80,7 @@ function function_9c1fc2fd(str_objective, var_74cd64bc) {
     level thread function_95b88092("root_cairo_vortex", 0);
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 2, eflags: 0x0
 // Checksum 0xea1570c9, Offset: 0xfd0
 // Size: 0x1ca
@@ -107,24 +107,24 @@ function function_95b88092(str_objective, var_74cd64bc) {
     var_8fb0849a = namespace_8e9083ff::function_a1851f86(str_objective);
     var_8fb0849a waittill(#"hash_40b1a9d9");
     level thread namespace_bbb4ee72::function_b319df2(str_objective, var_8fb0849a.var_90971f20.e_player);
-    level notify(#"hash_ef6331cc");
+    level notify(#"accolade_8_raps_check");
     videostop("cp_zurich_env_corvusmonitor");
     exploder::stop_exploder("weather_lightning_exp");
     level util::clientnotify("stp_mus");
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 4, eflags: 0x0
 // Checksum 0x4fcd8c84, Offset: 0x11a8
 // Size: 0x72
 function function_1a4dfaaa(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
-    level notify(#"hash_83eebac0");
+    level notify(#"cairo_root_completed");
     level thread namespace_8e9083ff::function_4a00a473("root_cairo");
     exploder::stop_exploder("weather_lightning_exp");
     level clientfield::set("cairo_client_ents", 0);
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0x70814ca3, Offset: 0x1228
 // Size: 0x2aa
@@ -160,7 +160,7 @@ function function_7cdb6ab4() {
     level flag::set("flag_cairo_root_monologue_04_done");
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0xcf94de98, Offset: 0x14e0
 // Size: 0x72
@@ -171,25 +171,25 @@ function function_2dbeaba5() {
     level dialog::remote("salm_over_the_last_centur_0", 1, "NO_DNI");
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 1, eflags: 0x0
 // Checksum 0xd0d913e9, Offset: 0x1560
 // Size: 0xfa
 function function_d3f1996d(str_objective) {
     level endon(str_objective + "enter_vortex");
     level flag::wait_till("flag_diaz_first_path_complete_vo_done");
-    wait(3);
+    wait 3;
     level notify(#"hash_d3c69346");
     level.var_1c26230b dialog::say("tayr_diaz_and_maretti_i_0", 1);
     level.var_1c26230b dialog::say("tayr_they_were_trying_to_0", 1);
     level.var_1c26230b dialog::say("tayr_it_couldn_t_control_1", 1);
-    wait(5);
+    wait 5;
     level thread function_7cdb6ab4();
     level flag::wait_till("flag_taylor_vo_never_give_up");
     level.var_1c26230b dialog::say("tayr_don_t_give_up_be_0", 1);
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 1, eflags: 0x0
 // Checksum 0x6fbedb0, Offset: 0x1668
 // Size: 0x1ba
@@ -214,7 +214,7 @@ function function_962eebf2(str_objective) {
     level thread function_d3f1996d(str_objective);
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0x7dfc621, Offset: 0x1830
 // Size: 0x10a
@@ -226,14 +226,14 @@ function function_4cca3b70() {
     var_15ecae1 waittill(#"trigger");
     level thread scene::play("p7_fxanim_cp_zurich_wall_drop_bundle");
     level waittill(#"hash_883eae52");
-    wait(3);
+    wait 3;
     level notify(#"hash_4dbdcce4");
     level flag::wait_till("flag_cairo_start_wall_spawn");
     spawn_manager::enable("sm_vtol_wall");
     savegame::checkpoint_save();
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 1, eflags: 0x0
 // Checksum 0xdfd86c8a, Offset: 0x1948
 // Size: 0x82
@@ -247,7 +247,7 @@ function function_fe87d3eb(a_ents) {
     spawn_manager::enable("sm_doors_open");
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0xac577c81, Offset: 0x19d8
 // Size: 0x4a
@@ -257,7 +257,7 @@ function function_ef1ee0c7() {
     level flag::set("vtol_dropped_wall");
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 1, eflags: 0x0
 // Checksum 0x6dfae40a, Offset: 0x1a30
 // Size: 0xc9
@@ -272,19 +272,19 @@ function function_e3c9dd29(a_ents) {
     }
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0x40b18c36, Offset: 0x1b08
 // Size: 0x32
 function function_899f9f96() {
     self clientfield::increment("vtol_spawn_fx");
-    wait(3);
+    wait 3;
     if (isdefined(self)) {
         self delete();
     }
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0xa6ee8f0e, Offset: 0x1b48
 // Size: 0x11a
@@ -301,27 +301,27 @@ function function_6559d2b2() {
     spawn_manager::disable("sm_cairo_ambush");
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0xe0827962, Offset: 0x1c70
 // Size: 0x22
 function function_8c7755d2() {
-    level endon(#"hash_fc5ed004");
-    wait(60);
+    level endon(#"flag_cairo_arena_complete");
+    wait 60;
     level flag::set("flag_cairo_arena_complete");
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0xe26b5968, Offset: 0x1ca0
 // Size: 0x3a
 function function_46b4203d() {
-    level endon(#"hash_fc5ed004");
+    level endon(#"flag_cairo_arena_complete");
     spawn_manager::function_27bf2e8("sm_cairo_wall_02", 2);
     level flag::set("flag_cairo_arena_complete");
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 1, eflags: 0x0
 // Checksum 0x6cdbb043, Offset: 0x1ce8
 // Size: 0x63
@@ -331,7 +331,7 @@ function function_c5b12ba9(a_ents) {
     }
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 1, eflags: 0x0
 // Checksum 0xa752930a, Offset: 0x1d58
 // Size: 0x152
@@ -351,7 +351,7 @@ function function_73238a8(a_ents) {
     }
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0x1e323c8e, Offset: 0x1eb8
 // Size: 0x92
@@ -366,13 +366,13 @@ function function_54b0174d() {
     }
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0xc7f16bd9, Offset: 0x1f58
 // Size: 0x157
 function function_1a9fae41() {
-    var_70cf920f = getent("t_lotus_sink", "script_noteworthy");
-    var_70cf920f waittill(#"trigger");
+    t_lotus_sink = getent("t_lotus_sink", "script_noteworthy");
+    t_lotus_sink waittill(#"trigger");
     s_start = self;
     playfx(level._effect["explosion_large"], self.origin);
     for (s_next = struct::get(self.target, "targetname"); isdefined(s_next); s_next = struct::get(s_start.target, "targetname")) {
@@ -388,13 +388,13 @@ function function_1a9fae41() {
     }
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 1, eflags: 0x0
 // Checksum 0x8e635366, Offset: 0x20b8
 // Size: 0xc2
 function function_42dddb91(str_objective) {
     level endon(str_objective + "_done");
-    level endon(#"hash_83eebac0");
+    level endon(#"cairo_root_completed");
     objectives::breadcrumb("t_breadcrumb_cairoroot_1");
     trigger::wait_till("t_breadcrumb_cairoroot_1");
     level notify(#"next_checkpoint");
@@ -406,7 +406,7 @@ function function_42dddb91(str_objective) {
     objectives::breadcrumb("t_breadcrumb_cairoroot_3");
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0xc50b81f5, Offset: 0x2188
 // Size: 0x4a
@@ -415,7 +415,7 @@ function function_c3dca267() {
     array::thread_all(var_765ae49e, &function_24c08a2f);
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0x9d8ea6ee, Offset: 0x21e0
 // Size: 0xf1
@@ -435,7 +435,7 @@ function function_24c08a2f() {
     }
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0x2dfa7829, Offset: 0x22e0
 // Size: 0x6a
@@ -447,7 +447,7 @@ function function_54c51e5b() {
     self raps::detonate();
 }
 
-// Namespace namespace_73dbe018
+// Namespace root_cairo
 // Params 0, eflags: 0x0
 // Checksum 0xccd2d4b3, Offset: 0x2358
 // Size: 0x85
@@ -459,7 +459,7 @@ function function_20541efa() {
             self vehicle_ai::set_state("combat");
             return;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 

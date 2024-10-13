@@ -5,9 +5,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_a26e93d0;
+#namespace zm_stalingrad_eye_beam_trap;
 
-// Namespace namespace_a26e93d0
+// Namespace zm_stalingrad_eye_beam_trap
 // Params 0, eflags: 0x2
 // Checksum 0x4ee396ee, Offset: 0x228
 // Size: 0x34
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
     system::register("zm_stalingrad_eye_beam_trap", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_a26e93d0
+// Namespace zm_stalingrad_eye_beam_trap
 // Params 0, eflags: 0x1 linked
 // Checksum 0x736fe9cd, Offset: 0x268
 // Size: 0xdc
@@ -25,7 +25,7 @@ function __init__() {
     clientfield::register("world", "eye_beam_rumble_library", 12000, 1, "int", &function_ea1e41d4, 0, 0);
 }
 
-// Namespace namespace_a26e93d0
+// Namespace zm_stalingrad_eye_beam_trap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc918714a, Offset: 0x350
 // Size: 0x7c
@@ -37,7 +37,7 @@ function function_822dbe7f(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread postfx::stoppostfxbundle();
 }
 
-// Namespace namespace_a26e93d0
+// Namespace zm_stalingrad_eye_beam_trap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x133b4d5a, Offset: 0x3d8
 // Size: 0xf4
@@ -53,7 +53,7 @@ function function_3d1860f(localclientnum, oldval, newval, bnewent, binitialsnap,
     }
 }
 
-// Namespace namespace_a26e93d0
+// Namespace zm_stalingrad_eye_beam_trap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xccd8526, Offset: 0x4d8
 // Size: 0xf4
@@ -69,7 +69,7 @@ function function_ea1e41d4(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_a26e93d0
+// Namespace zm_stalingrad_eye_beam_trap
 // Params 2, eflags: 0x1 linked
 // Checksum 0x9b6fd2a6, Offset: 0x5d8
 // Size: 0xa8

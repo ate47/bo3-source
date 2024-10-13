@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_a0549db3;
+#namespace _gadget_sensory_overload;
 
-// Namespace namespace_a0549db3
+// Namespace _gadget_sensory_overload
 // Params 0, eflags: 0x2
 // Checksum 0xf277f895, Offset: 0x208
 // Size: 0x34
@@ -18,12 +18,12 @@ function autoexec function_2dc19561() {
     system::register("gadget_sensory_overload", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_a0549db3
+// Namespace _gadget_sensory_overload
 // Params 0, eflags: 0x1 linked
 // Checksum 0x43aef0c1, Offset: 0x248
 // Size: 0x104
 function __init__() {
-    ability_player::register_gadget_activation_callbacks(32, &function_15e437b0, &function_c1d76ffe);
+    ability_player::register_gadget_activation_callbacks(32, &gadget_sensory_overload_on, &function_c1d76ffe);
     ability_player::register_gadget_possession_callbacks(32, &function_b0d7efec, &function_d9c4129a);
     ability_player::register_gadget_flicker_callbacks(32, &function_ceab21e5);
     ability_player::register_gadget_is_inuse_callbacks(32, &function_1a766e18);
@@ -32,7 +32,7 @@ function __init__() {
     callback::on_connect(&function_e100d1c3);
 }
 
-// Namespace namespace_a0549db3
+// Namespace _gadget_sensory_overload
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7e9dcdfa, Offset: 0x358
 // Size: 0x2a
@@ -40,7 +40,7 @@ function function_1a766e18(slot) {
     return self flagsys::get("gadget_sensory_overload_on");
 }
 
-// Namespace namespace_a0549db3
+// Namespace _gadget_sensory_overload
 // Params 1, eflags: 0x1 linked
 // Checksum 0x439f93ed, Offset: 0x390
 // Size: 0x50
@@ -50,7 +50,7 @@ function function_d34dd456(slot) {
     }
 }
 
-// Namespace namespace_a0549db3
+// Namespace _gadget_sensory_overload
 // Params 2, eflags: 0x1 linked
 // Checksum 0x703c057d, Offset: 0x3e8
 // Size: 0x5c
@@ -60,7 +60,7 @@ function function_ceab21e5(slot, weapon) {
     }
 }
 
-// Namespace namespace_a0549db3
+// Namespace _gadget_sensory_overload
 // Params 2, eflags: 0x1 linked
 // Checksum 0x52cb46d2, Offset: 0x450
 // Size: 0x5c
@@ -70,7 +70,7 @@ function function_b0d7efec(slot, weapon) {
     }
 }
 
-// Namespace namespace_a0549db3
+// Namespace _gadget_sensory_overload
 // Params 2, eflags: 0x1 linked
 // Checksum 0xd0450bbe, Offset: 0x4b8
 // Size: 0x5c
@@ -80,7 +80,7 @@ function function_d9c4129a(slot, weapon) {
     }
 }
 
-// Namespace namespace_a0549db3
+// Namespace _gadget_sensory_overload
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa60e45dd, Offset: 0x520
 // Size: 0x44
@@ -90,18 +90,18 @@ function function_e100d1c3() {
     }
 }
 
-// Namespace namespace_a0549db3
+// Namespace _gadget_sensory_overload
 // Params 2, eflags: 0x1 linked
 // Checksum 0xac573097, Offset: 0x570
 // Size: 0x7c
-function function_15e437b0(slot, weapon) {
+function gadget_sensory_overload_on(slot, weapon) {
     self flagsys::set("gadget_sensory_overload_on");
     if (isdefined(level.cybercom) && isdefined(level.cybercom.sensory_overload)) {
         self [[ level.cybercom.sensory_overload._on ]](slot, weapon);
     }
 }
 
-// Namespace namespace_a0549db3
+// Namespace _gadget_sensory_overload
 // Params 2, eflags: 0x1 linked
 // Checksum 0xfbc541f9, Offset: 0x5f8
 // Size: 0x7c
@@ -112,7 +112,7 @@ function function_c1d76ffe(slot, weapon) {
     }
 }
 
-// Namespace namespace_a0549db3
+// Namespace _gadget_sensory_overload
 // Params 2, eflags: 0x1 linked
 // Checksum 0xfd203c50, Offset: 0x680
 // Size: 0x5c

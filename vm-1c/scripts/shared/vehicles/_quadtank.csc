@@ -68,7 +68,7 @@ function function_48b14d9d(localclientnum, amount, fadeouttime) {
         ratio = (gettime() - starttime) / fadeouttime * 1000;
         currentvalue = lerpfloat(amount, 0, ratio);
         setfilterpassconstant(localclientnum, 4, 0, 0, currentvalue);
-        wait(0.016);
+        wait 0.016;
     }
     setfilterpassenabled(localclientnum, 4, 0, 0);
 }
@@ -109,11 +109,11 @@ function function_e9d5fa52(localclientnum, ison) {
             if (isdefined(settings.var_cfdb54fe) && isdefined(settings.var_f1c13278)) {
                 self.var_f2d14c03 = playfxontag(localclientnum, settings.var_cfdb54fe, self, settings.var_f1c13278);
             }
-            wait(0.05);
+            wait 0.05;
             if (isdefined(self.var_f2d14c03)) {
                 stopfx(localclientnum, self.var_f2d14c03);
             }
-            wait(max(interval, 0.05));
+            wait max(interval, 0.05);
         }
         if (isdefined(settings.var_cfdb54fe) && isdefined(settings.var_f1c13278)) {
             self.var_f2d14c03 = playfxontag(localclientnum, settings.var_cfdb54fe, self, settings.var_f1c13278);
@@ -124,7 +124,7 @@ function function_e9d5fa52(localclientnum, ison) {
         while (isdefined(settings.var_b93b90fc) && rate < 1) {
             rate += 0.02;
             self setanim(settings.var_b93b90fc, 1, 0.1, rate);
-            wait(0.016);
+            wait 0.016;
         }
         self setanim(settings.var_b93b90fc, 1, 0.1, 1);
         return;

@@ -10,9 +10,9 @@
 #using scripts/shared/math_shared;
 #using scripts/shared/gameobjects_shared;
 
-#namespace namespace_fc10b9aa;
+#namespace pur;
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 0, eflags: 0x0
 // Checksum 0x54a61887, Offset: 0x410
 // Size: 0x2d4
@@ -46,7 +46,7 @@ function main() {
     globallogic::setvisiblescoreboardcolumns("score", "kills", "deaths", "kdratio", "assists");
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 0, eflags: 0x0
 // Checksum 0x930182aa, Offset: 0x6f0
 // Size: 0x39c
@@ -93,17 +93,17 @@ function onstartgametype() {
     }
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 0, eflags: 0x0
 // Checksum 0x74146a10, Offset: 0xa98
 // Size: 0x24
 function function_78a36e4c() {
     while (self.sessionstate == "dead") {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 1, eflags: 0x0
 // Checksum 0x664f3717, Offset: 0xac8
 // Size: 0x84
@@ -117,7 +117,7 @@ function onspawnplayer(predictedspawn) {
     spawning::onspawnplayer(predictedspawn);
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 2, eflags: 0x0
 // Checksum 0x71533485, Offset: 0xb58
 // Size: 0x2c
@@ -125,7 +125,7 @@ function function_67248e13(winningteam, endreasontext) {
     thread globallogic::endgame(winningteam, endreasontext);
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 1, eflags: 0x0
 // Checksum 0x1d68fb80, Offset: 0xb90
 // Size: 0x24
@@ -133,7 +133,7 @@ function onalivecountchange(team) {
     level thread function_446c8d00(team);
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 1, eflags: 0x0
 // Checksum 0x6104d4c8, Offset: 0xbc0
 // Size: 0xe4
@@ -151,7 +151,7 @@ function onlastteamaliveevent(team) {
     }
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 1, eflags: 0x0
 // Checksum 0xeda0f431, Offset: 0xcb0
 // Size: 0x4c
@@ -161,7 +161,7 @@ function ondeadevent(team) {
     }
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 1, eflags: 0x0
 // Checksum 0xd34ea38c, Offset: 0xd08
 // Size: 0x44
@@ -171,7 +171,7 @@ function onendgame(winningteam) {
     }
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 0, eflags: 0x0
 // Checksum 0x781d1b6f, Offset: 0xd58
 // Size: 0xba
@@ -184,7 +184,7 @@ function onroundswitch() {
     }
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 1, eflags: 0x0
 // Checksum 0xb73f6456, Offset: 0xe20
 // Size: 0xec
@@ -200,7 +200,7 @@ function onroundendgame(roundwinner) {
     return winner;
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 0, eflags: 0x0
 // Checksum 0xc10e2734, Offset: 0xf18
 // Size: 0x1d8
@@ -229,11 +229,11 @@ function onscoreclosemusic() {
             thread globallogic_audio::set_music_on_team("timeOut");
             return;
         }
-        wait(1);
+        wait 1;
     }
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 2, eflags: 0x0
 // Checksum 0x4334df6, Offset: 0x10f8
 // Size: 0x1c4
@@ -254,7 +254,7 @@ function function_66ffb804(team, y_pos) {
     self.var_5e316eb1[team].label = %MP_PURGATORY_ENEMY_COUNT;
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 0, eflags: 0x0
 // Checksum 0x17465b07, Offset: 0x12c8
 // Size: 0x394
@@ -297,7 +297,7 @@ function function_92fa676f() {
     self thread function_f62e26bc();
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 0, eflags: 0x0
 // Checksum 0x15d6c360, Offset: 0x1668
 // Size: 0x138
@@ -314,11 +314,11 @@ function function_f62e26bc() {
                 self.var_5e316eb1[team] setvalue(level.alivecount[team]);
             }
         }
-        wait(0.25);
+        wait 0.25;
     }
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 0, eflags: 0x0
 // Checksum 0xcf227ed3, Offset: 0x17a8
 // Size: 0x92
@@ -329,7 +329,7 @@ function function_5891e6ab() {
     }
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 0, eflags: 0x0
 // Checksum 0xf5633ae2, Offset: 0x1848
 // Size: 0x94
@@ -347,7 +347,7 @@ function function_32ac38fb() {
     self util::function_9468e63a(%MP_PURGATORY_NEXT_SPAWN, undefined, 0);
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 0, eflags: 0x0
 // Checksum 0x83a81fb8, Offset: 0x18e8
 // Size: 0x14
@@ -355,7 +355,7 @@ function function_71ebb03f() {
     util::waittillslowprocessallowed();
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 2, eflags: 0x0
 // Checksum 0x9966a59, Offset: 0x1908
 // Size: 0x44
@@ -364,7 +364,7 @@ function onspawnspectator(origin, angles) {
     globallogic_defaults::default_onspawnspectator(origin, angles);
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 1, eflags: 0x0
 // Checksum 0x932f4e0e, Offset: 0x1958
 // Size: 0xf6
@@ -381,7 +381,7 @@ function function_446c8d00(team) {
     }
 }
 
-// Namespace namespace_fc10b9aa
+// Namespace pur
 // Params 0, eflags: 0x0
 // Checksum 0x5525f0b1, Offset: 0x1a58
 // Size: 0x16

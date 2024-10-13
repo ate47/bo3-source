@@ -67,7 +67,7 @@ function updatesitrepscan() {
         self oed_sitrepscan_setradius(level.sitrepscan2_setradius, 1);
         self oed_sitrepscan_setfalloff(level.sitrepscan2_setfalloff, 1);
         self oed_sitrepscan_setdesat(level.sitrepscan2_setdesat, 1);
-        wait(1);
+        wait 1;
     }
 }
 
@@ -79,22 +79,22 @@ function updatesitrepscan() {
     // Size: 0x278
     function updatedvars() {
         while (true) {
-            level.sitrepscan1_enable = getdvarint("scr_sitrepscan1_setradius", level.sitrepscan1_enable);
-            level.sitrepscan1_setoutline = getdvarint("scr_sitrepscan1_setradius", level.sitrepscan1_setoutline);
-            level.sitrepscan1_setsolid = getdvarint("scr_sitrepscan1_setradius", level.sitrepscan1_setsolid);
-            level.sitrepscan1_setlinewidth = getdvarint("scr_sitrepscan1_setradius", level.sitrepscan1_setlinewidth);
-            level.sitrepscan1_setradius = getdvarint("scr_sitrepscan1_setradius", level.sitrepscan1_setradius);
-            level.sitrepscan1_setfalloff = getdvarfloat("scr_sitrepscan1_setradius", level.sitrepscan1_setfalloff);
-            level.sitrepscan1_setdesat = getdvarfloat("scr_sitrepscan1_setradius", level.sitrepscan1_setdesat);
-            level.sitrepscan2_enable = getdvarint("scr_sitrepscan1_setradius", level.sitrepscan2_enable);
-            level.sitrepscan2_setoutline = getdvarint("scr_sitrepscan1_setradius", level.sitrepscan2_setoutline);
-            level.sitrepscan2_setsolid = getdvarint("scr_sitrepscan1_setradius", level.sitrepscan2_setsolid);
-            level.sitrepscan2_setlinewidth = getdvarint("scr_sitrepscan1_setradius", level.sitrepscan2_setlinewidth);
-            level.sitrepscan2_setradius = getdvarint("scr_sitrepscan1_setradius", level.sitrepscan2_setradius);
-            level.sitrepscan2_setfalloff = getdvarfloat("scr_sitrepscan1_setradius", level.sitrepscan2_setfalloff);
-            level.sitrepscan2_setdesat = getdvarfloat("scr_sitrepscan1_setradius", level.sitrepscan2_setdesat);
-            level.friendlycontentoutlines = getdvarint("scr_sitrepscan1_setradius", level.friendlycontentoutlines);
-            wait(1);
+            level.sitrepscan1_enable = getdvarint("<dev string:x28>", level.sitrepscan1_enable);
+            level.sitrepscan1_setoutline = getdvarint("<dev string:x3f>", level.sitrepscan1_setoutline);
+            level.sitrepscan1_setsolid = getdvarint("<dev string:x5a>", level.sitrepscan1_setsolid);
+            level.sitrepscan1_setlinewidth = getdvarint("<dev string:x73>", level.sitrepscan1_setlinewidth);
+            level.sitrepscan1_setradius = getdvarint("<dev string:x90>", level.sitrepscan1_setradius);
+            level.sitrepscan1_setfalloff = getdvarfloat("<dev string:xaa>", level.sitrepscan1_setfalloff);
+            level.sitrepscan1_setdesat = getdvarfloat("<dev string:xc5>", level.sitrepscan1_setdesat);
+            level.sitrepscan2_enable = getdvarint("<dev string:xde>", level.sitrepscan2_enable);
+            level.sitrepscan2_setoutline = getdvarint("<dev string:xf5>", level.sitrepscan2_setoutline);
+            level.sitrepscan2_setsolid = getdvarint("<dev string:x110>", level.sitrepscan2_setsolid);
+            level.sitrepscan2_setlinewidth = getdvarint("<dev string:x129>", level.sitrepscan2_setlinewidth);
+            level.sitrepscan2_setradius = getdvarint("<dev string:x146>", level.sitrepscan2_setradius);
+            level.sitrepscan2_setfalloff = getdvarfloat("<dev string:x160>", level.sitrepscan2_setfalloff);
+            level.sitrepscan2_setdesat = getdvarfloat("<dev string:x17b>", level.sitrepscan2_setdesat);
+            level.friendlycontentoutlines = getdvarint("<dev string:x194>", level.friendlycontentoutlines);
+            wait 1;
         }
     }
 
@@ -188,7 +188,7 @@ function on_player_spawned(local_client_num) {
                 self.last_perks = perks;
                 self notify(#"perks_changed");
             }
-            wait(1);
+            wait 1;
         }
     }
 
@@ -224,7 +224,7 @@ function monitor_tracker_existing_players(local_client_num) {
         if (isdefined(player) && player != self) {
             player thread monitor_tracker_perk(local_client_num);
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -258,7 +258,7 @@ function monitor_tracker_perk_killcam(local_client_num) {
         return;
     }
     for (;;) {
-        wait(0.05);
+        wait 0.05;
         positionandrotationstruct = self gettrackerfxposition(local_client_num);
         if (isdefined(positionandrotationstruct)) {
             positionandrotationstruct.time = getservertime(local_client_num);
@@ -287,7 +287,7 @@ function monitor_tracker_perk(local_client_num) {
     offset = (0, 0, getdvarfloat("perk_tracker_fx_foot_height", 0));
     dist2 = 1024;
     while (isdefined(self)) {
-        wait(0.05);
+        wait 0.05;
         watcher = getlocalplayer(local_client_num);
         if (!isdefined(watcher) || self == watcher) {
             return;
@@ -564,7 +564,7 @@ function monitor_detectnearbyenemies(local_client_num) {
             }
             enemylosttime += 0.05;
         }
-        wait(0.05);
+        wait 0.05;
     }
     setuimodelvalue(var_36ec76e6, 0);
 }

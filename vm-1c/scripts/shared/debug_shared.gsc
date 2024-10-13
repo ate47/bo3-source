@@ -11,7 +11,7 @@
     // Checksum 0x7638e90, Offset: 0xd0
     // Size: 0x34
     function autoexec function_2dc19561() {
-        system::register("<unknown string>", &__init__, undefined, undefined);
+        system::register("<dev string:x28>", &__init__, undefined, undefined);
     }
 
     // Namespace debug
@@ -31,11 +31,11 @@
         v_text_position = (0, 0, 0);
         n_text_scale = 1;
         while (true) {
-            n_sphere_radius = getdvarfloat("<unknown string>", 0);
+            n_sphere_radius = getdvarfloat("<dev string:x2e>", 0);
             while (n_sphere_radius >= 1) {
                 players = getplayers();
                 if (isdefined(players[0])) {
-                    n_sphere_radius = getdvarfloat("<unknown string>", 0);
+                    n_sphere_radius = getdvarfloat("<dev string:x2e>", 0);
                     circle(players[0].origin, n_sphere_radius, (1, 0, 0), 0, 1, 16);
                     n_text_scale = sqrt(n_sphere_radius * 2.5) / 2;
                     vforward = anglestoforward(players[0].angles);
@@ -44,9 +44,9 @@
                     sphere(v_text_position, n_text_scale, (1, 0, 0), 1, 1, sides, 16);
                     print3d(v_text_position + (0, 0, 20), n_sphere_radius, (1, 0, 0), 1, n_text_scale / 14, 16);
                 }
-                wait(0.05);
+                wait 0.05;
             }
-            wait(1);
+            wait 1;
         }
     }
 

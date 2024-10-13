@@ -62,7 +62,7 @@ function on_player_spawned(local_client_num) {
     self.currentdrfilter = [];
     self change_dr_flags(local_client_num);
     if (!level flagsys::get("duplicaterender_registry_ready")) {
-        wait(0.016);
+        wait 0.016;
         level flagsys::set("duplicaterender_registry_ready");
     }
 }
@@ -83,7 +83,7 @@ function wait_team_changed(localclientnum) {
     while (true) {
         level waittill(#"team_changed");
         while (!isdefined(getlocalplayer(localclientnum))) {
-            wait(0.05);
+            wait 0.05;
         }
         player = getlocalplayer(localclientnum);
         player codcaster_keyline_enable(0);
@@ -181,7 +181,7 @@ function register_filter_materials(filter) {
         if (isstring(value)) {
             if (!isdefined(playercount)) {
                 while (!isdefined(level.localplayers) && !isdefined(level.frontendclientconnected)) {
-                    wait(0.016);
+                    wait 0.016;
                 }
                 if (isdefined(level.frontendclientconnected)) {
                     playercount = 1;
@@ -369,16 +369,16 @@ function apply_filter(localclientnum, filter, filterset) {
         }
     }
     /#
-        if (getdvarint("mc/hud_keyline_retrievable")) {
-            name = "mc/hud_keyline_retrievable";
+        if (getdvarint("<dev string:x28>")) {
+            name = "<dev string:x42>";
             if (self isplayer()) {
                 if (isdefined(self.name)) {
-                    name = "mc/hud_keyline_retrievable" + self.name;
+                    name = "<dev string:x4b>" + self.name;
                 }
             } else if (isdefined(self.model)) {
-                name += "mc/hud_keyline_retrievable" + self.model;
+                name += "<dev string:x53>" + self.model;
             }
-            msg = "mc/hud_keyline_retrievable" + filter.name + "mc/hud_keyline_retrievable" + name + "mc/hud_keyline_retrievable" + filterset;
+            msg = "<dev string:x55>" + filter.name + "<dev string:x77>" + name + "<dev string:x7c>" + filterset;
             println(msg);
         }
     #/

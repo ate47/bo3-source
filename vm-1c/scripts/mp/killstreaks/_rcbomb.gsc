@@ -80,13 +80,13 @@ function waitremotecontrol() {
     if (remote_controlled) {
         notifystring = self util::waittill_any_return("remote_weapon_end", "rcbomb_shutdown");
         if (notifystring == "remote_weapon_end") {
-            self waittill(#"hash_dc4432bd");
+            self waittill(#"rcbomb_shutdown");
         } else {
             self waittill(#"remote_weapon_end");
         }
         return;
     }
-    self waittill(#"hash_dc4432bd");
+    self waittill(#"rcbomb_shutdown");
 }
 
 // Namespace rcbomb
@@ -98,7 +98,7 @@ function function_36195336(time) {
     self endon(#"hash_d69ba374");
     rcbomb = self;
     rcbomb endon(#"death");
-    wait(time);
+    wait time;
     rcbomb clientfield::set("toggle_lights", 0);
 }
 
@@ -178,7 +178,7 @@ function function_67f918a7(hardpointtype) {
     if (isdefined(player.laststand) && (!isdefined(player) || !isalive(player) || player.laststand) || player isempjammed()) {
         if (isdefined(rcbomb)) {
             rcbomb notify(#"remote_weapon_shutdown");
-            rcbomb notify(#"hash_dc4432bd");
+            rcbomb notify(#"rcbomb_shutdown");
         }
         return false;
     }
@@ -222,7 +222,7 @@ function function_c821591c(rcbomb) {
 // Size: 0x6c
 function function_28a576cd(rcbomb, exitrequestedbyowner) {
     if (exitrequestedbyowner == 0) {
-        rcbomb notify(#"hash_dc4432bd");
+        rcbomb notify(#"rcbomb_shutdown");
         rcbomb thread audio::sndupdatevehiclecontext(0);
     }
     rcbomb clientfield::set("vehicletransition", 0);
@@ -234,12 +234,12 @@ function function_28a576cd(rcbomb, exitrequestedbyowner) {
 // Size: 0x6c
 function function_80579239() {
     rcbomb = self;
-    rcbomb endon(#"hash_dc4432bd");
+    rcbomb endon(#"rcbomb_shutdown");
     rcbomb endon(#"death");
     while (!rcbomb.owner attackbuttonpressed()) {
-        wait(0.05);
+        wait 0.05;
     }
-    rcbomb notify(#"hash_dc4432bd");
+    rcbomb notify(#"rcbomb_shutdown");
 }
 
 // Namespace rcbomb
@@ -247,13 +247,13 @@ function function_80579239() {
 // Checksum 0x5d08fce1, Offset: 0x1578
 // Size: 0xd2
 function watchwater() {
-    self endon(#"hash_dc4432bd");
+    self endon(#"rcbomb_shutdown");
     for (inwater = 0; !inwater; inwater = trace["fraction"] < 1) {
-        wait(0.5);
+        wait 0.5;
         trace = physicstrace(self.origin + (0, 0, 10), self.origin + (0, 0, 6), (-2, -2, -2), (2, 2, 2), self, 4);
     }
     self.abandoned = 1;
-    self notify(#"hash_dc4432bd");
+    self notify(#"rcbomb_shutdown");
 }
 
 // Namespace rcbomb
@@ -264,10 +264,10 @@ function watchownergameevents() {
     self notify(#"watchownergameevents_singleton");
     self endon(#"watchownergameevents_singleton");
     rcbomb = self;
-    rcbomb endon(#"hash_dc4432bd");
+    rcbomb endon(#"rcbomb_shutdown");
     rcbomb.owner util::waittill_any("joined_team", "disconnect", "joined_spectators");
     rcbomb.abandoned = 1;
-    rcbomb notify(#"hash_dc4432bd");
+    rcbomb notify(#"rcbomb_shutdown");
 }
 
 // Namespace rcbomb
@@ -285,7 +285,7 @@ function function_f07bb203() {
 // Size: 0x24
 function function_bc26dfed() {
     rcbomb = self;
-    rcbomb notify(#"hash_dc4432bd");
+    rcbomb notify(#"rcbomb_shutdown");
 }
 
 // Namespace rcbomb
@@ -295,10 +295,10 @@ function function_bc26dfed() {
 function watchshutdown() {
     rcbomb = self;
     rcbomb endon(#"death");
-    rcbomb waittill(#"hash_dc4432bd");
+    rcbomb waittill(#"rcbomb_shutdown");
     if (isdefined(rcbomb.activatingkillstreak) && rcbomb.activatingkillstreak) {
         killstreakrules::killstreakstop("rcbomb", rcbomb.originalteam, rcbomb.killstreak_id);
-        rcbomb notify(#"hash_dc4432bd");
+        rcbomb notify(#"rcbomb_shutdown");
         rcbomb delete();
         return;
     }
@@ -312,11 +312,11 @@ function watchshutdown() {
 // Size: 0xa0
 function function_e973aa66() {
     rcbomb = self;
-    rcbomb endon(#"hash_dc4432bd");
+    rcbomb endon(#"rcbomb_shutdown");
     while (true) {
         ent = rcbomb waittill(#"touch");
         if (ent.classname == "trigger_hurt" || isdefined(ent.classname) && ent.classname == "trigger_out_of_bounds") {
-            rcbomb notify(#"hash_dc4432bd");
+            rcbomb notify(#"rcbomb_shutdown");
         }
     }
 }
@@ -362,13 +362,13 @@ function ondeath(einflictor, eattacker, idamage, smeansofdeath, weapon, vdir, sh
     if (isdefined(player)) {
         player util::freeze_player_controls(1);
         rcbomb thread function_1637172a(var_49b26bf6);
-        wait(0.2);
+        wait 0.2;
         player util::freeze_player_controls(0);
     } else {
         rcbomb thread function_1637172a(var_49b26bf6);
     }
     if (isdefined(rcbomb)) {
-        rcbomb notify(#"hash_dc4432bd");
+        rcbomb notify(#"rcbomb_shutdown");
     }
 }
 
@@ -382,7 +382,7 @@ function watchgameended() {
     level waittill(#"game_ended");
     rcbomb.abandoned = 1;
     rcbomb.selfdestruct = 1;
-    rcbomb notify(#"hash_dc4432bd");
+    rcbomb notify(#"rcbomb_shutdown");
 }
 
 // Namespace rcbomb
@@ -391,7 +391,7 @@ function watchgameended() {
 // Size: 0x34
 function function_1637172a(waittime) {
     self endon(#"death");
-    wait(waittime);
+    wait waittime;
     self setinvisibletoall();
 }
 
@@ -451,10 +451,10 @@ function function_59e927a3(einflictor, eattacker, smeansofdeath, weapon) {
 function function_c8500421() {
     startheight = 50;
     switch (self getstance()) {
-    case 47:
+    case "crouch":
         startheight = 30;
         break;
-    case 48:
+    case "prone":
         startheight = 15;
         break;
     }

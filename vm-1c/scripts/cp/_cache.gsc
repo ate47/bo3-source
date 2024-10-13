@@ -60,7 +60,7 @@ function function_2f6eaad8() {
     self endon(#"hash_b6ecc65b");
     var_b0fde15b = self function_5d73924();
     if (isdefined(var_b0fde15b.script_string) && var_b0fde15b.script_string == "no_grenade") {
-        var_b0fde15b.var_947d7e0b = 1;
+        var_b0fde15b.no_grenade = 1;
     }
     var_b0fde15b sethintstring(%SCRIPT_AMMO_REFILL);
     var_b0fde15b setcursorhint("HINT_NOICON");
@@ -68,10 +68,10 @@ function function_2f6eaad8() {
         e_player = var_b0fde15b waittill(#"trigger");
         e_player disableweapons();
         e_player playsound("fly_ammo_crate_refill");
-        wait(2);
+        wait 2;
         a_weapons = e_player getweaponslist();
         foreach (weapon in a_weapons) {
-            if (isdefined(var_b0fde15b.var_947d7e0b) && var_b0fde15b.var_947d7e0b && weapons::is_grenade(weapon)) {
+            if (isdefined(var_b0fde15b.no_grenade) && var_b0fde15b.no_grenade && weapons::is_grenade(weapon)) {
                 continue;
             }
             e_player givemaxammo(weapon);
@@ -116,8 +116,8 @@ function function_5ad8638a() {
         var_c1e132ef.angles = self gettagangles("loadOut_B") + (0, -90, 0);
     }
     switch (self.model) {
-    case 20:
-    case 21:
+    case "p6_weapon_resupply_future_01":
+    case "p6_weapon_resupply_future_02":
         var_47db02d5 = -3;
         break;
     default:
@@ -147,7 +147,7 @@ function function_5ad8638a() {
 function function_acb5494d() {
     if (isdefined(self.var_175017a9)) {
         var_10d1f7d8 = self gettagorigin("auxilary_A");
-        assert(isdefined(var_10d1f7d8), "no_grenade");
+        assert(isdefined(var_10d1f7d8), "<dev string:x28>");
         switch (self.model) {
         default:
             var_d31f6c52 = anglestoright(self gettagangles("auxilary_A")) * 5;
@@ -159,7 +159,7 @@ function function_acb5494d() {
     }
     if (isdefined(self.var_3d529212)) {
         var_10d1f7d8 = self gettagorigin("secondary_A");
-        assert(isdefined(var_10d1f7d8), "no_grenade");
+        assert(isdefined(var_10d1f7d8), "<dev string:x28>");
         var_d31f6c52 = anglestoforward(self gettagangles("secondary_A")) * 10;
         var_c1e132ef = spawn("weapon_" + self.var_3d529212 + level.game_mode_suffix, var_10d1f7d8 + var_d31f6c52 + (0, 0, 10), 8);
         var_c1e132ef.angles = self gettagangles("secondary_A");
@@ -175,14 +175,14 @@ function function_acb5494d() {
     // Size: 0x142
     function function_fdbce913() {
         tag_array = [];
-        tag_array[tag_array.size] = "no_grenade";
-        tag_array[tag_array.size] = "no_grenade";
-        tag_array[tag_array.size] = "no_grenade";
-        tag_array[tag_array.size] = "no_grenade";
-        tag_array[tag_array.size] = "no_grenade";
-        tag_array[tag_array.size] = "no_grenade";
-        tag_array[tag_array.size] = "no_grenade";
-        tag_array[tag_array.size] = "no_grenade";
+        tag_array[tag_array.size] = "<dev string:x6d>";
+        tag_array[tag_array.size] = "<dev string:x74>";
+        tag_array[tag_array.size] = "<dev string:x7b>";
+        tag_array[tag_array.size] = "<dev string:x86>";
+        tag_array[tag_array.size] = "<dev string:x91>";
+        tag_array[tag_array.size] = "<dev string:x99>";
+        tag_array[tag_array.size] = "<dev string:xa3>";
+        tag_array[tag_array.size] = "<dev string:xad>";
         foreach (tag in tag_array) {
             self thread function_4fe8e0cc(tag);
         }
@@ -197,7 +197,7 @@ function function_acb5494d() {
             if (isdefined(self gettagorigin(tag))) {
                 print3d(self gettagorigin(tag), tag, (1, 1, 1), 1, 0.15);
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -209,9 +209,9 @@ function function_acb5494d() {
 // Size: 0x104
 function function_b6ecc65b(var_e9338998) {
     var_301cff54 = getentarray(var_e9338998, "script_noteworthy");
-    assert(isdefined(var_301cff54), "no_grenade" + var_e9338998 + "no_grenade");
+    assert(isdefined(var_301cff54), "<dev string:xb9>" + var_e9338998 + "<dev string:xed>");
     if (var_301cff54.size > 1) {
-        assertmsg("no_grenade" + var_e9338998 + "no_grenade");
+        assertmsg("<dev string:x113>" + var_e9338998 + "<dev string:x152>");
     }
     var_301cff54[0] notify(#"hash_b6ecc65b");
     var_b0fde15b = var_301cff54[0] function_5d73924();
@@ -224,12 +224,12 @@ function function_b6ecc65b(var_e9338998) {
 // Size: 0x2dc
 function function_7189f668(var_c59a5f80, w_weapon) {
     if (var_c59a5f80 < 1 || var_c59a5f80 > 2) {
-        assertmsg("no_grenade");
+        assertmsg("<dev string:x174>");
     }
-    assert(isdefined(w_weapon), "no_grenade");
+    assert(isdefined(w_weapon), "<dev string:x1a3>");
     if (var_c59a5f80 == 1) {
         var_10d1f7d8 = self gettagorigin("auxilary_A");
-        assert(isdefined(var_10d1f7d8), "no_grenade");
+        assert(isdefined(var_10d1f7d8), "<dev string:x28>");
         var_d31f6c52 = anglestoright(self gettagangles("auxilary_A")) * 5;
         var_c1e132ef = spawn("weapon_" + w_weapon.name + level.game_mode_suffix, var_10d1f7d8 + var_d31f6c52 + (0, 0, 10), 8);
         var_c1e132ef.angles = self gettagangles("auxilary_A") + (0, -90, 0);
@@ -237,7 +237,7 @@ function function_7189f668(var_c59a5f80, w_weapon) {
     }
     if (var_c59a5f80 == 2) {
         var_10d1f7d8 = self gettagorigin("secondary_A");
-        assert(isdefined(var_10d1f7d8), "no_grenade");
+        assert(isdefined(var_10d1f7d8), "<dev string:x1b9>");
         var_d31f6c52 = anglestoforward(self gettagangles("secondary_A")) * 7;
         var_c1e132ef = spawn("weapon_" + w_weapon.name + level.game_mode_suffix, var_10d1f7d8 + var_d31f6c52 + (0, 0, 10), 8);
         var_c1e132ef.angles = self gettagangles("secondary_A");

@@ -3,27 +3,27 @@
 #using scripts/cp/_util;
 #using scripts/codescripts/struct;
 
-#namespace namespace_9750c824;
+#namespace cp_mi_cairo_lotus_sound;
 
-// Namespace namespace_9750c824
+// Namespace cp_mi_cairo_lotus_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb4b6074b, Offset: 0x1a8
 // Size: 0x34
 function main() {
-    level thread function_cf637cc();
+    level thread start_battle();
     level thread function_ba59ec78();
 }
 
-// Namespace namespace_9750c824
+// Namespace cp_mi_cairo_lotus_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf899ac1b, Offset: 0x1e8
 // Size: 0x2c
-function function_cf637cc() {
+function start_battle() {
     level waittill(#"hash_72d53556");
     level util::clientnotify("start_battle_sound");
 }
 
-// Namespace namespace_9750c824
+// Namespace cp_mi_cairo_lotus_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x19e4574d, Offset: 0x220
 // Size: 0x2c
@@ -63,7 +63,7 @@ function function_f3bdd599() {
 // Checksum 0xc238b5b0, Offset: 0x2d0
 // Size: 0x24
 function function_d116b1d8() {
-    wait(10);
+    wait 10;
     music::setmusicstate("battle_one_part_two");
 }
 
@@ -73,9 +73,9 @@ function function_d116b1d8() {
 // Size: 0x5c
 function function_f2d3d939() {
     music::setmusicstate("air_duct");
-    wait(15);
+    wait 15;
     util::clientnotify("sndRampair");
-    wait(25);
+    wait 25;
     util::clientnotify("sndRampEnd");
 }
 
@@ -84,7 +84,7 @@ function function_f2d3d939() {
 // Checksum 0x3cfa9b48, Offset: 0x368
 // Size: 0x24
 function function_86781870() {
-    wait(0.5);
+    wait 0.5;
     music::setmusicstate("hq_battle");
 }
 

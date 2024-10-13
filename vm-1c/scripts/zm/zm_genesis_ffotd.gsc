@@ -11,9 +11,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b6963cd7;
+#namespace zm_genesis_ffotd;
 
-// Namespace namespace_b6963cd7
+// Namespace zm_genesis_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbf7c2db2, Offset: 0x358
 // Size: 0xc8
@@ -25,7 +25,7 @@ function main_start() {
     level.var_92a78c17.angles = (0, 317.8, 0);
 }
 
-// Namespace namespace_b6963cd7
+// Namespace zm_genesis_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7d649f02, Offset: 0x428
 // Size: 0x10c
@@ -38,7 +38,7 @@ function main_end() {
     level thread function_d7b99564();
 }
 
-// Namespace namespace_b6963cd7
+// Namespace zm_genesis_ffotd
 // Params 1, eflags: 0x1 linked
 // Checksum 0x82d8d4a, Offset: 0x540
 // Size: 0x210
@@ -47,7 +47,7 @@ function function_dce2d8a9(str_zone) {
         return true;
     }
     switch (str_zone) {
-    case 7:
+    case "zm_theater_zone":
         foreach (player in level.activeplayers) {
             x = player.origin[0];
             y = player.origin[1];
@@ -57,7 +57,7 @@ function function_dce2d8a9(str_zone) {
             }
         }
         break;
-    case 6:
+    case "zm_castle_power_zone":
         foreach (player in level.activeplayers) {
             if (player istouching(level.var_92a78c17)) {
                 return true;
@@ -68,7 +68,7 @@ function function_dce2d8a9(str_zone) {
     return false;
 }
 
-// Namespace namespace_b6963cd7
+// Namespace zm_genesis_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x11154f23, Offset: 0x758
 // Size: 0xd6
@@ -85,7 +85,7 @@ function function_d51867e() {
     return false;
 }
 
-// Namespace namespace_b6963cd7
+// Namespace zm_genesis_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4d7a0aba, Offset: 0x838
 // Size: 0x188
@@ -109,7 +109,7 @@ function function_8921895f() {
     return var_d7a75a6e[0];
 }
 
-// Namespace namespace_b6963cd7
+// Namespace zm_genesis_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcf32072c, Offset: 0x9c8
 // Size: 0x45c

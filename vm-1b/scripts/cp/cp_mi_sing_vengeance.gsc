@@ -38,9 +38,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_5a0096b2;
+#namespace cp_mi_sing_vengeance;
 
-// Namespace namespace_5a0096b2
+// Namespace cp_mi_sing_vengeance
 // Params 0, eflags: 0x0
 // Checksum 0xe09f41db, Offset: 0x1480
 // Size: 0x32
@@ -49,7 +49,7 @@ function function_243693d4() {
     util::add_gametype("cpzm");
 }
 
-// Namespace namespace_5a0096b2
+// Namespace cp_mi_sing_vengeance
 // Params 0, eflags: 0x0
 // Checksum 0x52db1a10, Offset: 0x14c0
 // Size: 0x3fa
@@ -64,8 +64,8 @@ function main() {
     init_clientfields();
     init_flags();
     function_673254cc();
-    namespace_a1cfe497::main();
-    namespace_7c587e3e::main();
+    cp_mi_sing_vengeance_fx::main();
+    cp_mi_sing_vengeance_sound::main();
     util::function_286a5010(8);
     savegame::function_8c0c4b3a("vengeance");
     load::main();
@@ -97,7 +97,7 @@ function main() {
     collectibles::function_37aecd21();
 }
 
-// Namespace namespace_5a0096b2
+// Namespace cp_mi_sing_vengeance
 // Params 0, eflags: 0x0
 // Checksum 0xd0b82bd8, Offset: 0x18c8
 // Size: 0x93
@@ -110,7 +110,7 @@ function precache() {
     level._effect["fx_fuel_pour_far_ven"] = "water/fx_fuel_pour_far_ven";
 }
 
-// Namespace namespace_5a0096b2
+// Namespace cp_mi_sing_vengeance
 // Params 0, eflags: 0x0
 // Checksum 0xe1bd6a24, Offset: 0x1968
 // Size: 0x232
@@ -131,7 +131,7 @@ function init_clientfields() {
     clientfield::register("world", "fxanims_safehouse_explodes", 1, 1, "int");
 }
 
-// Namespace namespace_5a0096b2
+// Namespace cp_mi_sing_vengeance
 // Params 0, eflags: 0x0
 // Checksum 0xb6cbe213, Offset: 0x1ba8
 // Size: 0x8d2
@@ -232,7 +232,7 @@ function init_flags() {
     level flag::init("starting_igc_12");
 }
 
-// Namespace namespace_5a0096b2
+// Namespace cp_mi_sing_vengeance
 // Params 0, eflags: 0x0
 // Checksum 0x2a948105, Offset: 0x2488
 // Size: 0x4ef
@@ -253,9 +253,9 @@ function function_673254cc() {
     skipto::add_dev("dev_safehouse_interior", &namespace_ce9d9fc1::function_29dad6e8, "Safehouse Interior", &namespace_ce9d9fc1::function_6bc33c8e);
     skipto::function_d68e678e("panic_room", &namespace_ce9d9fc1::function_6d9a830c, "Panic Room Scene", &namespace_ce9d9fc1::function_c328b12);
     /#
-        skipto::add_dev("kill_qt_alley_light", &namespace_8776ed6e::function_616e9ab6, "apartment_enemy_dead");
-        skipto::add_dev("move_killing_streets_hendricks_node_05", &namespace_8776ed6e::function_8771151f, "show_temple_gather");
-        skipto::add_dev("kill_sniper_nags", &namespace_8776ed6e::function_7d5fbc40, "plaza_hendricks_jump");
+        skipto::add_dev("<dev string:x28>", &namespace_8776ed6e::function_616e9ab6, "<dev string:x3d>");
+        skipto::add_dev("<dev string:x4f>", &namespace_8776ed6e::function_8771151f, "<dev string:x64>");
+        skipto::add_dev("<dev string:x76>", &namespace_8776ed6e::function_7d5fbc40, "<dev string:x8b>");
     #/
     level.var_6b6097c5 = [];
     a_trigs = getentarray("objective", "targetname");
@@ -266,7 +266,7 @@ function function_673254cc() {
     }
 }
 
-// Namespace namespace_5a0096b2
+// Namespace cp_mi_sing_vengeance
 // Params 0, eflags: 0x0
 // Checksum 0x2db9c50c, Offset: 0x2980
 // Size: 0x3a

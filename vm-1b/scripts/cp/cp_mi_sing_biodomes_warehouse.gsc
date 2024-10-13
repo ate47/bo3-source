@@ -36,9 +36,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_23646cee;
+#namespace cp_mi_sing_biodomes_warehouse;
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x2f9b131b, Offset: 0x13a0
 // Size: 0x342
@@ -57,12 +57,12 @@ function function_3a3ef2a() {
     spawner::add_spawn_function_group("warehouse_enemy_warlord", "targetname", &function_4940548b);
     var_3d912af2 = getentarray("spawn_trigger", "script_parameters");
     array::thread_all(var_3d912af2, &function_26edc5d7);
-    wait(0.5);
-    level thread function_cc539146();
-    level thread function_54ba2021();
+    wait 0.5;
+    level thread container_crash();
+    level thread container_done();
     level thread function_16ff311a();
     level thread function_b1942036();
-    level thread function_652f488c();
+    level thread warehouse_warlord_friendly_goal();
     level thread wait_for_objective_complete();
     level thread function_ecf3cf41();
     level thread function_afee5825();
@@ -72,12 +72,12 @@ function function_3a3ef2a() {
     level.var_2fd26037 thread function_d02d38d();
     level.var_2fd26037 thread function_c2f6ee2c("right");
     level.var_2fd26037 thread function_c2f6ee2c("left");
-    namespace_27a45d31::function_a22e7052(0, "warehouse_robot_exit_traversal", "targetname");
+    cp_mi_sing_biodomes_util::function_a22e7052(0, "warehouse_robot_exit_traversal", "targetname");
     trigger::wait_till("trig_back_door_close");
     level function_4812aaa();
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0xe9c07cd6, Offset: 0x16f0
 // Size: 0x2
@@ -85,51 +85,51 @@ function precache() {
     
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 2, eflags: 0x0
 // Checksum 0x282cd791, Offset: 0x1700
 // Size: 0x262
-function function_98f8d85b(str_objective, var_74cd64bc) {
-    namespace_27a45d31::function_ddb0eeea("objective_warehouse_init");
+function objective_warehouse_init(str_objective, var_74cd64bc) {
+    cp_mi_sing_biodomes_util::function_ddb0eeea("objective_warehouse_init");
     objectives::set("cp_waypoint_breadcrumb", struct::get("breadcrumb_warehouse"));
     objectives::hide("cp_waypoint_breadcrumb");
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_27a45d31::function_bff1a867(str_objective);
-        namespace_55d2f1be::function_cef897cf(str_objective);
-        level thread namespace_27a45d31::function_753a859(str_objective);
+        cp_mi_sing_biodomes_util::function_bff1a867(str_objective);
+        cp_mi_sing_biodomes::function_cef897cf(str_objective);
+        level thread cp_mi_sing_biodomes_util::function_753a859(str_objective);
         objectives::set("cp_level_biodomes_cloud_mountain");
         trigger::use("trig_markets2_colors_end_2");
         array::delete_all(getentarray("triggers_markets1", "script_noteworthy"));
         array::delete_all(getentarray("triggers_markets2", "script_noteworthy"));
         level thread namespace_f1b4cbbc::function_fa2e45b8();
-        level thread namespace_27a45d31::function_cc20e187("markets2");
-        level thread namespace_27a45d31::function_cc20e187("warehouse", 1);
+        level thread cp_mi_sing_biodomes_util::function_cc20e187("markets2");
+        level thread cp_mi_sing_biodomes_util::function_cc20e187("warehouse", 1);
         var_6ecc8f2b = getent("markets2_bridge_collision", "targetname");
         var_6ecc8f2b delete();
         load::function_a2995f22();
     }
-    level thread namespace_27a45d31::function_cc20e187("cloudmountain", 1);
+    level thread cp_mi_sing_biodomes_util::function_cc20e187("cloudmountain", 1);
     level.var_996e05eb = "friendly_spawns_warehouse_entrance";
     hidemiscmodels("fxanim_markets1");
     hidemiscmodels("fxanim_nursery");
     showmiscmodels("fxanim_cloud_mountain");
-    namespace_73fc8448::function_dbb91fcf();
+    cp_mi_sing_biodomes_markets::function_dbb91fcf();
     level thread function_3a3ef2a();
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 4, eflags: 0x0
 // Checksum 0x6ce981d3, Offset: 0x1970
 // Size: 0x8b
-function function_4d15fa71(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
-    namespace_27a45d31::function_ddb0eeea("objective_warehouse_done");
+function objective_warehouse_done(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
+    cp_mi_sing_biodomes_util::function_ddb0eeea("objective_warehouse_done");
     objectives::complete("cp_waypoint_breadcrumb", struct::get("breadcrumb_warehouse"));
     objectives::complete("cp_level_biodomes_cloud_mountain");
     level notify(#"hash_43a6ada4");
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 2, eflags: 0x0
 // Checksum 0xa624c5de, Offset: 0x1a08
 // Size: 0x2a
@@ -137,7 +137,7 @@ function function_5e699ca2(str_objective, var_74cd64bc) {
     level thread function_79241926(str_objective, 2);
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 2, eflags: 0x0
 // Checksum 0x76697152, Offset: 0x1a40
 // Size: 0x2a
@@ -145,26 +145,26 @@ function function_9989cb45(str_objective, var_74cd64bc) {
     level thread function_79241926(str_objective, 1);
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 2, eflags: 0x0
 // Checksum 0xa1987992, Offset: 0x1a78
 // Size: 0x15a
 function function_79241926(str_objective, var_23d9a41a) {
-    namespace_27a45d31::function_bff1a867(str_objective);
-    level namespace_55d2f1be::function_cef897cf(str_objective, var_23d9a41a);
+    cp_mi_sing_biodomes_util::function_bff1a867(str_objective);
+    level cp_mi_sing_biodomes::function_cef897cf(str_objective, var_23d9a41a);
     level flag::wait_till("first_player_spawned");
-    wait(2);
+    wait 2;
     spawner::simple_spawn("warehouse_enemy_warlord", &function_dfbb625c);
     level flag::set("warehouse_warlord");
     level thread clientfield::set("warehouse_window_break", 1);
     getent("warehouse_overwatch_window", "targetname") delete();
     s_container = struct::get("warehouse_surprise");
     earthquake(0.25, 0.5, s_container.origin, 1200);
-    namespace_27a45d31::function_a22e7052(0, "warehouse_robot_exit_traversal", "targetname");
+    cp_mi_sing_biodomes_util::function_a22e7052(0, "warehouse_robot_exit_traversal", "targetname");
     level function_4812aaa();
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0xb94ce319, Offset: 0x1be0
 // Size: 0x42
@@ -175,7 +175,7 @@ function function_dfbb625c() {
     level flag::set("sm_warehouse_enemy_warlord_manager_cleared");
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0xf9055517, Offset: 0x1c30
 // Size: 0x30
@@ -186,12 +186,12 @@ function function_d02d38d() {
     }
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x15e67b33, Offset: 0x1c68
 // Size: 0x15a
 function function_16ff311a() {
-    level waittill(#"hash_54ba2021");
+    level waittill(#"container_done");
     level spawn_manager::wait_till_cleared("sm_warehouse_robot_jumpdown");
     if (!level flag::get("left_path") && !level flag::get("right_path") && !level flag::get("center_path")) {
         level flag::set("warehouse_intro_vo_started");
@@ -206,32 +206,32 @@ function function_16ff311a() {
     level flag::set("warehouse_intro_vo_done");
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x57c94a0, Offset: 0x1dd0
 // Size: 0x6a
 function function_1050699d() {
-    level endon(#"hash_6794c924");
-    level endon(#"hash_13ba8371");
-    level endon(#"hash_9aade370");
-    wait(14);
+    level endon(#"left_path");
+    level endon(#"right_path");
+    level endon(#"center_path");
+    wait 14;
     var_2d3d7b7 = [];
     var_2d3d7b7[0] = "hend_what_s_the_plan_lef_0";
     var_2d3d7b7[1] = "hend_c_mon_we_gotta_move_0";
-    level.var_2fd26037 dialog::say(namespace_27a45d31::function_7ff50323(var_2d3d7b7));
+    level.var_2fd26037 dialog::say(cp_mi_sing_biodomes_util::function_7ff50323(var_2d3d7b7));
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0xf3079979, Offset: 0x1e48
 // Size: 0x3a
 function function_2a08e741() {
-    level endon(#"hash_e85e589a");
+    level endon(#"back_door_closed");
     level flag::wait_till("xiulan_loudspeaker_go");
     spawn_manager::enable("warehouse_right_rear_runners");
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x9632ebd7, Offset: 0x1e90
 // Size: 0x6a
@@ -244,7 +244,7 @@ function function_9bf4e185() {
     self thread function_9ec04302();
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x6e9bcfad, Offset: 0x1f08
 // Size: 0x10d
@@ -263,11 +263,11 @@ function function_9ec04302() {
                 self notify(#"hash_a3a542bc");
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x9e9ee8d7, Offset: 0x2020
 // Size: 0x146
@@ -287,12 +287,12 @@ function function_afee5825() {
     [[ var_1a84f71e ]]->initialize("phanalx_wedge", var_e1f76987, var_25d2a1d8, 2, var_1b6ee6b2);
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0xf7285775, Offset: 0x2170
 // Size: 0x17a
 function function_3c56dee4() {
-    level endon(#"hash_9aade370");
+    level endon(#"center_path");
     a_flags = [];
     a_flags[0] = "xiulan_loudspeaker_go";
     if (level flag::get("warehouse_intro_vo_started")) {
@@ -313,7 +313,7 @@ function function_3c56dee4() {
     battlechatter::function_d9f49fba(1);
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0xadf5cc52, Offset: 0x22f8
 // Size: 0x17a
@@ -341,17 +341,17 @@ function function_d3621fb() {
     }
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x4b827c93, Offset: 0x2480
 // Size: 0x3a
 function function_6fb5d6ef() {
-    level endon(#"hash_652f488c");
+    level endon(#"warehouse_warlord_friendly_goal");
     trigger::wait_for_either("trig_warehouse_friendly_spawns_left", "trig_warehouse_friendly_spawns_right");
     level.var_996e05eb = "friendly_spawns_warehouse_corner";
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0xe349883c, Offset: 0x24c8
 // Size: 0xe5
@@ -365,25 +365,25 @@ function function_26edc5d7() {
     }
     var_694b7da = self.script_string;
     switch (var_694b7da) {
-    case 78:
+    case "spawner":
         str_spawner = self.script_noteworthy;
         spawner::simple_spawn(str_spawner);
         break;
-    case 77:
+    case "spawn_manager":
         spawn_manager::enable(self.script_noteworthy, 1);
         break;
     }
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 1, eflags: 0x0
 // Checksum 0x2cf36f98, Offset: 0x25b8
 // Size: 0x1b2
 function function_c2f6ee2c(var_c11c02b4) {
     if (var_c11c02b4 == "right") {
-        level endon(#"hash_6794c924");
+        level endon(#"left_path");
     } else {
-        level endon(#"hash_13ba8371");
+        level endon(#"right_path");
     }
     level trigger::wait_till("trig_hero_sprint_" + var_c11c02b4);
     if (level flag::get("warehouse_intro_vo_done")) {
@@ -403,7 +403,7 @@ function function_c2f6ee2c(var_c11c02b4) {
     level.var_2fd26037 clearforcedgoal();
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 1, eflags: 0x0
 // Checksum 0xfac187e8, Offset: 0x2778
 // Size: 0x2a
@@ -412,7 +412,7 @@ function function_2b42cba3(str_scene) {
     level scene::stop(str_scene);
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x3c5f3aed, Offset: 0x27b0
 // Size: 0xe2
@@ -431,7 +431,7 @@ function function_89e35d86() {
     level function_1b03da0e();
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x8d2ec39e, Offset: 0x28a0
 // Size: 0x9a
@@ -446,7 +446,7 @@ function function_cb52a73() {
     trigger::use("trig_siegebot_hendricks_b0", "targetname");
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x6a0443aa, Offset: 0x2948
 // Size: 0x153
@@ -465,7 +465,7 @@ function function_1b03da0e() {
     }
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x79aaf0ef, Offset: 0x2aa8
 // Size: 0x252
@@ -499,20 +499,20 @@ function function_ac9359ee() {
     }
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0xcb2fa48b, Offset: 0x2d08
 // Size: 0x22
-function function_54ba2021() {
-    level waittill(#"hash_54ba2021");
+function container_done() {
+    level waittill(#"container_done");
     level flag::set("container_done");
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0xfb16ad51, Offset: 0x2d38
 // Size: 0x15a
-function function_cc539146() {
+function container_crash() {
     var_7954a18f = getent("container_drop_clip", "targetname");
     var_d76c34c9 = getent("container_pre_drop_clip", "targetname");
     var_7954a18f connectpaths();
@@ -524,13 +524,13 @@ function function_cc539146() {
     var_d76c34c9 delete();
     level thread function_1636c832();
     var_7954a18f disconnectpaths();
-    wait(0.25);
+    wait 0.25;
     s_container = struct::get("container_crash");
     playsoundatposition("evt_warlord_door_smash", s_container.origin);
     playrumbleonposition("cp_biodomes_warehouse_container_rumble", s_container.origin);
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x1cbbdfd5, Offset: 0x2ea0
 // Size: 0x8a
@@ -543,7 +543,7 @@ function function_5491de58() {
     objectives::show("cp_waypoint_breadcrumb");
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0xcd4d227b, Offset: 0x2f38
 // Size: 0xc5
@@ -560,7 +560,7 @@ function function_1636c832() {
     var_61a19dc6 = [];
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x7a10457d, Offset: 0x3008
 // Size: 0xe2
@@ -573,11 +573,11 @@ function function_c06efd40() {
     self setgoal(nd_target, 1);
     self waittill(#"goal");
     self ai::set_behavior_attribute("move_mode", "normal");
-    wait(10);
+    wait 10;
     self setgoal(self.origin, 0, 1200);
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 1, eflags: 0x0
 // Checksum 0xa234411c, Offset: 0x30f8
 // Size: 0x12a
@@ -596,20 +596,20 @@ function glass_break(str_trigger_name) {
     }
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x24052b6f, Offset: 0x3230
 // Size: 0x72
 function function_d1e71c2c() {
-    level endon(#"hash_6794c924");
-    level endon(#"hash_9aade370");
+    level endon(#"left_path");
+    level endon(#"center_path");
     level flag::wait_till("right_path");
     level scene::init("cin_bio_05_02_warehouse_vign_forklift_move");
     trigger::wait_till("forklift_vignette_start");
     level scene::play("cin_bio_05_02_warehouse_vign_forklift_move");
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x703e7a02, Offset: 0x32b0
 // Size: 0x32
@@ -618,7 +618,7 @@ function wait_for_objective_complete() {
     skipto::function_be8adfb8("objective_warehouse");
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x895a0d55, Offset: 0x32f0
 // Size: 0x7a
@@ -628,7 +628,7 @@ function function_ecf3cf41() {
     getent("back_door_look_trigger", "script_noteworthy") triggerenable(1);
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x424936d3, Offset: 0x3378
 // Size: 0x29a
@@ -655,12 +655,12 @@ function function_4812aaa() {
         [[ level.var_c4dba52c ]]();
     }
     level thread function_bd5615c2();
-    level thread function_76ca6777();
+    level thread cloud_mountain_crows();
     level thread function_89e35d86();
     level function_db58f411();
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x660348be, Offset: 0x3620
 // Size: 0x222
@@ -676,7 +676,7 @@ function function_d9982dc0() {
     level.var_7f103643 waittill(#"movedone");
     level.var_e6a85ae8 playsound("evt_warehouse_door_close_stop");
     level.var_e6a85ae8 stoploopsound(0.5);
-    wait(3);
+    wait 3;
     level flag::set("back_door_opened");
     var_ec935bdb = getent("back_door_player_clip", "targetname");
     if (isdefined(var_ec935bdb)) {
@@ -692,7 +692,7 @@ function function_d9982dc0() {
     }
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x8e9b10d8, Offset: 0x3850
 // Size: 0xea
@@ -706,23 +706,23 @@ function function_c001cefd() {
     self.overridevehicledamage = &siegebot::function_3b05fc1b;
     self ai::set_ignoreme(0);
     self ai::set_ignoreall(0);
-    wait(0.5);
+    wait 0.5;
     trigger::use("trig_warehouse_objective_complete", "targetname", level.activeplayers[0], 0);
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0xd87d142, Offset: 0x3948
 // Size: 0x4a
 function function_994b4243() {
-    self endon(#"hash_b38d1391");
-    self endon(#"hash_b35c4231");
+    self endon(#"back_door_opened");
+    self endon(#"siegebot_alerted");
     self endon(#"death");
     hijackingplayer = self waittill(#"ccom_lock_being_targeted");
     trigger::use("trig_siegebot_alerted", "targetname");
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 15, eflags: 0x0
 // Checksum 0x69ed9eda, Offset: 0x39a0
 // Size: 0xb4
@@ -732,19 +732,19 @@ function function_c60cca3f(e_inflictor, e_attacker, n_damage, n_dflags, str_mean
     return n_damage;
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x92d962b8, Offset: 0x3a60
 // Size: 0x5a
 function function_4a9bba52() {
-    level endon(#"hash_b38d1391");
+    level endon(#"back_door_opened");
     self setcandamage(0);
     level flag::wait_till("siegebot_damage_enabled");
     self setcandamage(1);
     self.overridevehicledamage = &function_c60cca3f;
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x5f003cd8, Offset: 0x3ac8
 // Size: 0x1d3
@@ -764,7 +764,7 @@ function function_bd5615c2() {
             var_68fb9693 setgoal(var_ec273240, 1);
         }
     }
-    wait(10);
+    wait 10;
     foreach (var_68fb9693 in var_95ad8660) {
         if (isalive(var_68fb9693)) {
             var_68fb9693.ignoreall = 0;
@@ -772,31 +772,31 @@ function function_bd5615c2() {
     }
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x7e3da7b6, Offset: 0x3ca8
 // Size: 0x7a
 function function_e7b0cb8e() {
     self endon(#"death");
     self waittill(#"enemy");
-    wait(0.05);
+    wait 0.05;
     while (isdefined(self.enemy) && !self cansee(self.enemy)) {
-        wait(0.5);
+        wait 0.5;
     }
     self setgoal(getent("entire_warehouse_setgoal_volume", "targetname"));
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x91981435, Offset: 0x3d30
 // Size: 0x17a
 function function_b1942036() {
-    level endon(#"hash_54e7636b");
+    level endon(#"warehouse_warlord_retreated");
     trigger::wait_till("trig_back_door_close");
     savegame::checkpoint_save();
-    wait(1.5);
+    wait 1.5;
     spawn_manager::enable("warehouse_enemy_warlord_manager");
-    level waittill(#"hash_c42f328d");
+    level waittill(#"warehouse_window_break");
     level thread clientfield::set("warehouse_window_break", 1);
     level flag::set("warehouse_warlord");
     objectives::hide("cp_waypoint_breadcrumb");
@@ -809,11 +809,11 @@ function function_b1942036() {
     level flag::set("warehouse_warlord_dead");
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0xf217948d, Offset: 0x3eb8
 // Size: 0xd2
-function function_652f488c() {
+function warehouse_warlord_friendly_goal() {
     level flag::wait_till("warehouse_warlord_friendly_goal");
     level.var_996e05eb = "friendly_spawns_warehouse_door";
     var_ab891f49 = getent("warehouse_warlord_friendly_volume", "targetname");
@@ -823,18 +823,18 @@ function function_652f488c() {
     level.var_2fd26037 setgoal(var_ab891f49, 1);
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x189c6933, Offset: 0x3f98
 // Size: 0x22
 function function_29b416ff() {
     self endon(#"death");
     self.ignoreall = 1;
-    wait(1);
+    wait 1;
     self.ignoreall = 0;
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0xd983db23, Offset: 0x3fc8
 // Size: 0xc2
@@ -844,30 +844,30 @@ function function_4940548b() {
     level scene::play("cin_bio_05_02_warehouse_aie_jump", self);
     self.goalradius = 2048;
     self.goalheight = 320;
-    self namespace_27a45d31::function_f61c0df8("node_warlord_warehouse_preferred", 1, 3);
-    wait(0.25);
+    self cp_mi_sing_biodomes_util::function_f61c0df8("node_warlord_warehouse_preferred", 1, 3);
+    wait 0.25;
     self.ignoreall = 0;
     self trigger::wait_till("trig_siegebot_alerted");
     self namespace_69ee7109::function_94b1213d();
-    self namespace_27a45d31::function_f61c0df8("node_warlord_mountain_entrance_preferred", 1, 2);
+    self cp_mi_sing_biodomes_util::function_f61c0df8("node_warlord_mountain_entrance_preferred", 1, 2);
     self waittill(#"death");
     self namespace_69ee7109::function_94b1213d();
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x851a2bd9, Offset: 0x4098
 // Size: 0x62
 function function_62523f1d() {
-    level endon(#"hash_b9c5f11d");
+    level endon(#"warehouse_warlord_dead");
     trigger::wait_till("trig_siegebot_alerted");
     for (var_7b95742a = 1; var_7b95742a; var_7b95742a = function_5ecd2f63()) {
-        wait(1);
+        wait 1;
     }
     level flag::set("warehouse_warlord_retreated");
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x90ff2b85, Offset: 0x4108
 // Size: 0xb2
@@ -882,7 +882,7 @@ function function_5ecd2f63() {
     return false;
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x71b6c883, Offset: 0x41c8
 // Size: 0x42
@@ -891,7 +891,7 @@ function function_db58f411() {
     level thread namespace_36171bd3::function_bb612155(var_526a0aed);
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x7a93fe66, Offset: 0x4218
 // Size: 0x5d
@@ -904,17 +904,17 @@ function function_3460d45c() {
     }
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0x5646e0f6, Offset: 0x4280
 // Size: 0x62
-function function_76ca6777() {
+function cloud_mountain_crows() {
     level thread clientfield::set("cloud_mountain_crows", 1);
     level flag::wait_till_any(array("back_door_opened", "siegebot_damage_enabled"));
     level thread clientfield::set("cloud_mountain_crows", 2);
 }
 
-// Namespace namespace_23646cee
+// Namespace cp_mi_sing_biodomes_warehouse
 // Params 0, eflags: 0x0
 // Checksum 0xe9c07cd6, Offset: 0x42f0
 // Size: 0x2

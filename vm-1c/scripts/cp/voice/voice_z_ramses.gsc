@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_c1b94c1e;
+#namespace voice_z_ramses;
 
-// Namespace namespace_c1b94c1e
+// Namespace voice_z_ramses
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1815a6a5, Offset: 0x1328
 // Size: 0xc04

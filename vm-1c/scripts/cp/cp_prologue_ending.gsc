@@ -32,11 +32,11 @@ function function_48700afe(objective, var_74cd64bc) {
     cp_mi_eth_prologue::function_77d9dff("objective_prologue_ending_init");
     if (var_74cd64bc) {
         load::function_73adcefc();
-        level thread namespace_2cb3876f::function_cfabe921();
+        level thread cp_prologue_util::function_cfabe921();
         objectives::hide("cp_level_prologue_goto_exfil");
         objectives::complete("cp_level_prologue_defend_pod");
         objectives::set("cp_level_prologue_get_out_alive");
-        level namespace_2cb3876f::function_6a5f89cb("skipto_end");
+        level cp_prologue_util::function_6a5f89cb("skipto_end");
         level.var_d3659748 = vehicle::simple_spawn_single("apc");
         level.var_d3659748.animname = "apc_escape";
         level.var_2fd26037 = util::function_740f8516("hendricks");
@@ -60,7 +60,7 @@ function function_a12cfbf4(str_notetrack, n_damage, str_mod) {
     while (true) {
         level waittill(str_notetrack);
         level thread function_cddb4b1f(n_damage, str_mod);
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -115,7 +115,7 @@ function function_c68f0034(var_74cd64bc) {
     foreach (var_a57773f5 in var_27606155) {
         var_a57773f5 triggerenable(0);
     }
-    namespace_2cb3876f::function_b50f5d52();
+    cp_prologue_util::function_b50f5d52();
     if (!var_74cd64bc) {
         if (isdefined(level.var_d36c1286)) {
             level thread [[ level.var_d36c1286 ]]();
@@ -150,12 +150,12 @@ function function_c68f0034(var_74cd64bc) {
     if (!scene::function_b1f75ee9()) {
         level util::screen_fade_out(0.1, "black", "cinematic_fader");
         level util::screen_fade_in(0.1, "black", "cinematic_fader");
-        wait(0.8);
+        wait 0.8;
         level util::screen_fade_out(0.1, "black", "cinematic_fader");
         level util::screen_fade_in(0.2, "black", "cinematic_fader");
-        wait(0.8);
+        wait 0.8;
         level util::screen_fade_out(1.4, "black", "cinematic_fader");
-        wait(2);
+        wait 2;
     } else {
         level thread util::function_7d553ac6();
     }
@@ -167,7 +167,7 @@ function function_c68f0034(var_74cd64bc) {
     level thread audio::unlockfrontendmusic("mus_prologue_battle_intro");
     level.allowhitmarkers = 1;
     level notify(#"hash_cbaff304");
-    wait(2);
+    wait 2;
     skipto::function_be8adfb8("skipto_prologue_ending");
 }
 
@@ -237,7 +237,7 @@ function function_886ee9f1(einflictor, eattacker, idamage, idflags, smeansofdeat
 // Size: 0xc4
 function function_58c753e3() {
     while (!scene::is_ready("cin_pro_20_01_squished_1st_rippedapart_aftermath_pt1")) {
-        wait(0.05);
+        wait 0.05;
     }
     level thread util::delay(1, undefined, &util::screen_fade_in, 3, "black", "cinematic_fader");
     level waittill(#"hash_9947aa2e");

@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_c8dba3e6;
+#namespace voice_z_lotus;
 
-// Namespace namespace_c8dba3e6
+// Namespace voice_z_lotus
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2355bc8e, Offset: 0xe10
 // Size: 0x8a4

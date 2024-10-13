@@ -1,9 +1,9 @@
 #using scripts/shared/fx_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_dff03fd3;
+#namespace cp_mi_cairo_infection_fx;
 
-// Namespace namespace_dff03fd3
+// Namespace cp_mi_cairo_infection_fx
 // Params 0, eflags: 0x0
 // Checksum 0xe9c07cd6, Offset: 0xb8
 // Size: 0x2

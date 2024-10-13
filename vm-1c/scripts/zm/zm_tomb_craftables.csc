@@ -6,41 +6,41 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f7a613cf;
+#namespace zm_tomb_craftables;
 
-// Namespace namespace_f7a613cf
+// Namespace zm_tomb_craftables
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4fa199f3, Offset: 0x680
 // Size: 0xf4
 function function_95743e9f() {
     level.var_90238c9a = 4;
-    namespace_f37770c8::function_8421d708("equip_dieseldrone");
-    namespace_f37770c8::function_8421d708("shovel");
-    namespace_f37770c8::function_8421d708("elemental_staff_fire");
-    namespace_f37770c8::function_8421d708("elemental_staff_air");
-    namespace_f37770c8::function_8421d708("elemental_staff_water");
-    namespace_f37770c8::function_8421d708("elemental_staff_lightning");
-    namespace_f37770c8::function_8421d708("gramophone");
+    zm_craftables::function_8421d708("equip_dieseldrone");
+    zm_craftables::function_8421d708("shovel");
+    zm_craftables::function_8421d708("elemental_staff_fire");
+    zm_craftables::function_8421d708("elemental_staff_air");
+    zm_craftables::function_8421d708("elemental_staff_water");
+    zm_craftables::function_8421d708("elemental_staff_lightning");
+    zm_craftables::function_8421d708("gramophone");
     function_3ebec56b();
     register_clientfields();
-    level thread namespace_f37770c8::function_5654f132();
+    level thread zm_craftables::function_5654f132();
 }
 
-// Namespace namespace_f7a613cf
+// Namespace zm_tomb_craftables
 // Params 0, eflags: 0x1 linked
 // Checksum 0x848867a4, Offset: 0x780
 // Size: 0xac
 function function_3ebec56b() {
-    namespace_f37770c8::function_ac4e44a7("equip_dieseldrone");
-    namespace_f37770c8::function_ac4e44a7("shovel");
-    namespace_f37770c8::function_ac4e44a7("elemental_staff_fire");
-    namespace_f37770c8::function_ac4e44a7("elemental_staff_air");
-    namespace_f37770c8::function_ac4e44a7("elemental_staff_water");
-    namespace_f37770c8::function_ac4e44a7("elemental_staff_lightning");
-    namespace_f37770c8::function_ac4e44a7("gramophone");
+    zm_craftables::function_ac4e44a7("equip_dieseldrone");
+    zm_craftables::function_ac4e44a7("shovel");
+    zm_craftables::function_ac4e44a7("elemental_staff_fire");
+    zm_craftables::function_ac4e44a7("elemental_staff_air");
+    zm_craftables::function_ac4e44a7("elemental_staff_water");
+    zm_craftables::function_ac4e44a7("elemental_staff_lightning");
+    zm_craftables::function_ac4e44a7("gramophone");
 }
 
-// Namespace namespace_f7a613cf
+// Namespace zm_tomb_craftables
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9a15b3b8, Offset: 0x838
 // Size: 0xbcc

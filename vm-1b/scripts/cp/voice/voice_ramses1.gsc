@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_db167d30;
+#namespace voice_ramses1;
 
-// Namespace namespace_db167d30
+// Namespace voice_ramses1
 // Params 0, eflags: 0x0
 // Checksum 0x1ab767a3, Offset: 0x1bd8
 // Size: 0x1142

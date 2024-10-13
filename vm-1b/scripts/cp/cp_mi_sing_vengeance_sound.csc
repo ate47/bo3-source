@@ -2,9 +2,9 @@
 #using scripts/shared/audio_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_7c587e3e;
+#namespace cp_mi_sing_vengeance_sound;
 
-// Namespace namespace_7c587e3e
+// Namespace cp_mi_sing_vengeance_sound
 // Params 0, eflags: 0x0
 // Checksum 0x4dfb3166, Offset: 0x238
 // Size: 0x7a
@@ -16,7 +16,7 @@ function main() {
     level thread function_a0c5a719();
 }
 
-// Namespace namespace_7c587e3e
+// Namespace cp_mi_sing_vengeance_sound
 // Params 7, eflags: 0x0
 // Checksum 0x9bbc2583, Offset: 0x2c0
 // Size: 0x72
@@ -28,29 +28,29 @@ function function_41d671f5(localclientnum, oldval, newval, bnewent, binitialsnap
     audio::snd_set_snapshot("default");
 }
 
-// Namespace namespace_7c587e3e
+// Namespace cp_mi_sing_vengeance_sound
 // Params 0, eflags: 0x0
 // Checksum 0xbf351ea6, Offset: 0x340
 // Size: 0x5a
 function function_dcd7454a() {
-    level waittill(#"hash_52a22e61");
-    level endon(#"hash_c2155d7e");
+    level waittill(#"sndCafe");
+    level endon(#"sndCafeOR");
     level thread function_cc438941();
     audio::snd_set_snapshot("cp_vengeance_cafe");
-    level waittill(#"hash_d240c7d8");
+    level waittill(#"sndCafeEnd");
     audio::snd_set_snapshot("default");
 }
 
-// Namespace namespace_7c587e3e
+// Namespace cp_mi_sing_vengeance_sound
 // Params 0, eflags: 0x0
 // Checksum 0x2517248f, Offset: 0x3a8
 // Size: 0x22
 function function_cc438941() {
-    level waittill(#"hash_c2155d7e");
+    level waittill(#"sndCafeOR");
     audio::snd_set_snapshot("default");
 }
 
-// Namespace namespace_7c587e3e
+// Namespace cp_mi_sing_vengeance_sound
 // Params 0, eflags: 0x0
 // Checksum 0x1fdeb4e5, Offset: 0x3d8
 // Size: 0x1a2
@@ -70,7 +70,7 @@ function function_38ba2136() {
     audio::playloopat("amb_tv_static", (21856, 8521, -47));
 }
 
-// Namespace namespace_7c587e3e
+// Namespace cp_mi_sing_vengeance_sound
 // Params 0, eflags: 0x0
 // Checksum 0xefc935e5, Offset: 0x588
 // Size: 0x91
@@ -88,7 +88,7 @@ function function_4035bef1() {
     }
 }
 
-// Namespace namespace_7c587e3e
+// Namespace cp_mi_sing_vengeance_sound
 // Params 0, eflags: 0x0
 // Checksum 0x5a0ce321, Offset: 0x628
 // Size: 0x12
@@ -96,7 +96,7 @@ function function_a0c5a719() {
     level thread function_759e7aaa();
 }
 
-// Namespace namespace_7c587e3e
+// Namespace cp_mi_sing_vengeance_sound
 // Params 0, eflags: 0x0
 // Checksum 0x6635cde2, Offset: 0x648
 // Size: 0x92
@@ -109,18 +109,18 @@ function function_759e7aaa() {
     level function_8b5fd6e1(player, target_origin, "mus_assassination_layer_1", 0, 1, -6, 600, "mus_assassination_layer_2", 0, 1, 50, 400, "mus_assassination_stinger");
 }
 
-// Namespace namespace_7c587e3e
+// Namespace cp_mi_sing_vengeance_sound
 // Params 0, eflags: 0x0
 // Checksum 0xaafac6a7, Offset: 0x6e8
 // Size: 0x1f
 function function_60df3271() {
-    level waittill(#"hash_8409b4c");
-    wait(3);
+    level waittill(#"sndLRstop");
+    wait 3;
     level.var_69a1bedf = 0;
     level notify(#"hash_1842ee53");
 }
 
-// Namespace namespace_7c587e3e
+// Namespace cp_mi_sing_vengeance_sound
 // Params 13, eflags: 0x0
 // Checksum 0x553b12f9, Offset: 0x710
 // Size: 0x2ea
@@ -168,7 +168,7 @@ function function_8b5fd6e1(player, target_origin, alias1, min_vol1, max_vol1, va
             volume2 = abs(1 - volume2);
             setsoundvolume(var_59b1545e, volume2);
         }
-        wait(0.1);
+        wait 0.1;
     }
     level notify(#"hash_61477803");
     if (isdefined(var_d8bcfff1)) {
@@ -181,7 +181,7 @@ function function_8b5fd6e1(player, target_origin, alias1, min_vol1, max_vol1, va
     }
 }
 
-// Namespace namespace_7c587e3e
+// Namespace cp_mi_sing_vengeance_sound
 // Params 4, eflags: 0x0
 // Checksum 0xd2eff320, Offset: 0xa08
 // Size: 0xca
@@ -193,7 +193,7 @@ function function_860d167b(ent1, ent2, id1, id2) {
     id1 = undefined;
     id2 = undefined;
     target_origin = (21636, -1368, -28);
-    wait(2);
+    wait 2;
     player = getlocalplayer(0);
     if (isdefined(player)) {
         level thread function_8b5fd6e1(player, target_origin, "mus_assassination_layer_1", 0, 1, -6, 1300, "mus_assassination_layer_2", 0, 1, 50, 700, "mus_assassination_stinger");

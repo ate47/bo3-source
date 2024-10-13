@@ -41,7 +41,7 @@ function autoexec function_2dc19561() {
 // Checksum 0xb747212e, Offset: 0x9a0
 // Size: 0x49c
 function __init__() {
-    namespace_abd96e8b::init("craft_shield_zm", "dragonshield", "wpn_t7_zmb_dlc3_dragon_shield_dmg0_world", %ZOMBIE_DRAGON_SHIELD_CRAFT, %ZOMBIE_DRAGON_SHIELD_TAKEN, %ZOMBIE_DRAGON_SHIELD_PICKUP);
+    zm_craft_shield::init("craft_shield_zm", "dragonshield", "wpn_t7_zmb_dlc3_dragon_shield_dmg0_world", %ZOMBIE_DRAGON_SHIELD_CRAFT, %ZOMBIE_DRAGON_SHIELD_TAKEN, %ZOMBIE_DRAGON_SHIELD_PICKUP);
     clientfield::register("allplayers", "ds_ammo", 12000, 1, "int");
     clientfield::register("allplayers", "burninate", 12000, 1, "counter");
     clientfield::register("allplayers", "burninate_upgraded", 12000, 1, "counter");
@@ -180,7 +180,7 @@ function function_3fbc315a() {
     self endon(#"hash_3fbc315a");
     for (;;) {
         self waittill(#"zmb_max_ammo");
-        wait(0.05);
+        wait 0.05;
         if (isdefined(self.hasriotshield) && self.hasriotshield) {
             self thread function_7221d39f(self.weaponriotshield);
         }
@@ -192,7 +192,7 @@ function function_3fbc315a() {
 // Checksum 0xcc871d15, Offset: 0x1320
 // Size: 0x64
 function function_7221d39f(weapon) {
-    wait(0.05);
+    wait 0.05;
     if (isdefined(self)) {
         ammo = self getweaponammoclip(weapon);
         self clientfield::set("ds_ammo", ammo);
@@ -249,7 +249,7 @@ function function_71d88f26(weapon) {
     if (ammo > 0 && !disabled) {
         self zm_equipment::change_ammo(weapon, -1);
         self thread function_f894ad3e();
-        self thread function_d7451ef9(weapon);
+        self thread burninate(weapon);
         self thread function_7221d39f(weapon);
         return;
     }
@@ -305,7 +305,7 @@ function function_3f5e8a65() {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd887d42b, Offset: 0x18a8
 // Size: 0xa6
-function function_d7451ef9(w_weapon) {
+function burninate(w_weapon) {
     physicsexplosioncylinder(self.origin, 600, -16, 1);
     if (w_weapon == getweapon("dragonshield_upgraded")) {
         n_clientfield = 2;
@@ -370,11 +370,11 @@ function function_459dacdd() {
     forward_view_angles = self getweaponforwarddir();
     end_pos = view_pos + vectorscale(forward_view_angles, level.zombie_vars["dragonshield_knockdown_range"]);
     /#
-        if (2 == getdvarint("ds_ammo")) {
+        if (2 == getdvarint("<dev string:x28>")) {
             near_circle_pos = view_pos + vectorscale(forward_view_angles, 2);
-            circle(near_circle_pos, level.zombie_vars["ds_ammo"], (1, 0, 0), 0, 0, 100);
+            circle(near_circle_pos, level.zombie_vars["<dev string:x3f>"], (1, 0, 0), 0, 0, 100);
             line(near_circle_pos, end_pos, (0, 0, 1), 1, 0, 100);
-            circle(end_pos, level.zombie_vars["ds_ammo"], (1, 0, 0), 0, 0, 100);
+            circle(end_pos, level.zombie_vars["<dev string:x3f>"], (1, 0, 0), 0, 0, 100);
         }
     #/
     for (i = 0; i < zombies.size; i++) {
@@ -459,7 +459,7 @@ function function_459dacdd() {
 // Size: 0x8c
 function function_8e9a1613(msg, color) {
     /#
-        if (!getdvarint("ds_ammo")) {
+        if (!getdvarint("<dev string:x28>")) {
             return;
         }
         if (!isdefined(color)) {
@@ -476,7 +476,7 @@ function function_8e9a1613(msg, color) {
 function function_64bd9bf5(player, fling_vec, index) {
     delay = self.var_d8486721;
     if (isdefined(delay) && delay > 0.05) {
-        wait(delay);
+        wait delay;
     }
     if (!isdefined(self) || !isalive(self)) {
         return;
@@ -510,7 +510,7 @@ function function_64bd9bf5(player, fling_vec, index) {
 function zombie_knockdown(player, gib) {
     delay = self.var_d8486721;
     if (isdefined(delay) && delay > 0.05) {
-        wait(delay);
+        wait delay;
     }
     if (!isdefined(self) || !isalive(self)) {
         return;
@@ -633,14 +633,14 @@ function function_41f7c503(player, fling, gib, knockdown) {
     // Checksum 0xca396bb6, Offset: 0x2da8
     // Size: 0xcc
     function function_a3a9c2dc() {
-        level flagsys::wait_till("ds_ammo");
-        wait(1);
+        level flagsys::wait_till("<dev string:x5c>");
+        wait 1;
         zm_devgui::add_custom_devgui_callback(&function_6f901616);
-        adddebugcommand("ds_ammo");
-        adddebugcommand("ds_ammo");
-        adddebugcommand("ds_ammo");
-        if (getdvarint("ds_ammo") > 0) {
-            adddebugcommand("ds_ammo");
+        adddebugcommand("<dev string:x75>");
+        adddebugcommand("<dev string:xc9>");
+        adddebugcommand("<dev string:x130>");
+        if (getdvarint("<dev string:x194>") > 0) {
+            adddebugcommand("<dev string:x1a1>");
         }
     }
 
@@ -652,19 +652,19 @@ function function_41f7c503(player, fling, gib, knockdown) {
         players = getplayers();
         retval = 0;
         switch (cmd) {
-        case 8:
-            array::thread_all(players, &zm_devgui::zombie_devgui_equipment_give, "ds_ammo");
+        case "<dev string:x207>":
+            array::thread_all(players, &zm_devgui::zombie_devgui_equipment_give, "<dev string:x219>");
             retval = 1;
             break;
-        case 8:
-            array::thread_all(players, &zm_devgui::zombie_devgui_equipment_give, "ds_ammo");
+        case "<dev string:x226>":
+            array::thread_all(players, &zm_devgui::zombie_devgui_equipment_give, "<dev string:x241>");
             retval = 1;
             break;
-        case 8:
+        case "<dev string:x257>":
             array::thread_all(players, &function_f685a6db);
             retval = 1;
             break;
-        case 8:
+        case "<dev string:x26b>":
             array::thread_all(players, &function_eeac5a22);
             retval = 1;
             break;
@@ -696,7 +696,7 @@ function function_41f7c503(player, fling, gib, knockdown) {
         }
         self notify(#"hash_f685a6db");
         self endon(#"hash_f685a6db");
-        level flagsys::wait_till("ds_ammo");
+        level flagsys::wait_till("<dev string:x5c>");
         self.var_f685a6db = !(isdefined(self.var_f685a6db) && self.var_f685a6db);
         if (self.var_f685a6db) {
             while (isdefined(self)) {
@@ -710,7 +710,7 @@ function function_41f7c503(player, fling, gib, knockdown) {
                 } else {
                     shieldhealth = self damageriotshield(int(damagemax / 10));
                 }
-                wait(0.5);
+                wait 0.5;
             }
         }
     }
@@ -725,7 +725,7 @@ function function_41f7c503(player, fling, gib, knockdown) {
         }
         self notify(#"hash_eeac5a22");
         self endon(#"hash_eeac5a22");
-        level flagsys::wait_till("ds_ammo");
+        level flagsys::wait_till("<dev string:x5c>");
         self.var_eeac5a22 = !(isdefined(self.var_eeac5a22) && self.var_eeac5a22);
         if (self.var_eeac5a22) {
             while (isdefined(self)) {
@@ -733,7 +733,7 @@ function function_41f7c503(player, fling, gib, knockdown) {
                     self zm_equipment::change_ammo(self.weaponriotshield, 1);
                     self thread function_7221d39f(self.weaponriotshield);
                 }
-                wait(1);
+                wait 1;
             }
         }
     }

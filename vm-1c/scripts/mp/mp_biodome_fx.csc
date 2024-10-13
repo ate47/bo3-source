@@ -1,9 +1,9 @@
 #using scripts/shared/fx_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_d22f7529;
+#namespace mp_biodome_fx;
 
-// Namespace namespace_d22f7529
+// Namespace mp_biodome_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xb0
 // Size: 0x4

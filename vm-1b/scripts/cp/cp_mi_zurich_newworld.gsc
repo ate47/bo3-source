@@ -30,9 +30,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b78a5cd7;
+#namespace newworld;
 
-// Namespace namespace_b78a5cd7
+// Namespace newworld
 // Params 0, eflags: 0x0
 // Checksum 0x1dbf0795, Offset: 0xea0
 // Size: 0x32
@@ -41,7 +41,7 @@ function function_243693d4() {
     util::add_gametype("cpzm");
 }
 
-// Namespace namespace_b78a5cd7
+// Namespace newworld
 // Params 0, eflags: 0x0
 // Checksum 0xc635e347, Offset: 0xee0
 // Size: 0x17a
@@ -58,8 +58,8 @@ function main() {
     init_clientfields();
     init_flags();
     init_fx();
-    namespace_bbfcd64f::main();
-    namespace_b5a65bd6::main();
+    cp_mi_zurich_newworld_fx::main();
+    cp_mi_zurich_newworld_sound::main();
     function_673254cc();
     util::function_286a5010(10);
     callback::on_spawned(&on_player_spawn);
@@ -67,10 +67,10 @@ function main() {
     callback::on_loadout(&namespace_ce0e5f06::on_player_loadout);
     load::main();
     level thread function_4b0856b();
-    namespace_ce0e5f06::function_3383b379();
+    namespace_ce0e5f06::player_snow_fx();
 }
 
-// Namespace namespace_b78a5cd7
+// Namespace newworld
 // Params 0, eflags: 0x0
 // Checksum 0x961d60a, Offset: 0x1068
 // Size: 0x1b
@@ -78,7 +78,7 @@ function init_fx() {
     level._effect["smk_idle_cauldron"] = "smoke/fx_smk_idle_cauldron";
 }
 
-// Namespace namespace_b78a5cd7
+// Namespace newworld
 // Params 0, eflags: 0x0
 // Checksum 0x8a4dcaee, Offset: 0x1090
 // Size: 0x84a
@@ -138,7 +138,7 @@ function init_clientfields() {
     clientfield::register("toplayer", "train_rumble_loop", 1, 1, "int");
 }
 
-// Namespace namespace_b78a5cd7
+// Namespace newworld
 // Params 0, eflags: 0x0
 // Checksum 0x2b692a5d, Offset: 0x18e8
 // Size: 0x7a
@@ -150,7 +150,7 @@ function init_flags() {
     level flag::init("infinite_white_transition");
 }
 
-// Namespace namespace_b78a5cd7
+// Namespace newworld
 // Params 0, eflags: 0x0
 // Checksum 0x9161c39, Offset: 0x1970
 // Size: 0xf2
@@ -163,7 +163,7 @@ function function_4b0856b() {
     callback::on_ai_killed(&namespace_ce0e5f06::function_606dbca2);
 }
 
-// Namespace namespace_b78a5cd7
+// Namespace newworld
 // Params 0, eflags: 0x0
 // Checksum 0xe6ae8efa, Offset: 0x1a70
 // Size: 0x4a
@@ -175,7 +175,7 @@ function on_player_spawn() {
     }
 }
 
-// Namespace namespace_b78a5cd7
+// Namespace newworld
 // Params 0, eflags: 0x0
 // Checksum 0x5a1b822, Offset: 0x1ac8
 // Size: 0x12
@@ -183,7 +183,7 @@ function on_player_connect() {
     self namespace_ce0e5f06::function_70176ad6();
 }
 
-// Namespace namespace_b78a5cd7
+// Namespace newworld
 // Params 0, eflags: 0x0
 // Checksum 0xc9dddd33, Offset: 0x1ae8
 // Size: 0x6f2
@@ -218,7 +218,7 @@ function function_673254cc() {
     skipto::add_dev("dev_lab", &namespace_d2831417::function_8f94ea53, "DEV:  Lab");
 }
 
-// Namespace namespace_b78a5cd7
+// Namespace newworld
 // Params 0, eflags: 0x0
 // Checksum 0x839d64e5, Offset: 0x21e8
 // Size: 0x7a
@@ -233,7 +233,7 @@ function function_efcad701() {
     self thread namespace_ce0e5f06::function_523cdc93();
 }
 
-// Namespace namespace_b78a5cd7
+// Namespace newworld
 // Params 1, eflags: 0x0
 // Checksum 0x9de7939b, Offset: 0x2270
 // Size: 0x8a
@@ -249,7 +249,7 @@ function function_3840d81a(var_368248f2) {
     namespace_ce0e5f06::function_523cdc93(0);
 }
 
-// Namespace namespace_b78a5cd7
+// Namespace newworld
 // Params 0, eflags: 0x0
 // Checksum 0xe166bb9a, Offset: 0x2308
 // Size: 0x69
@@ -268,7 +268,7 @@ function function_1554ffe9() {
     }
 }
 
-// Namespace namespace_b78a5cd7
+// Namespace newworld
 // Params 1, eflags: 0x0
 // Checksum 0x75095c0c, Offset: 0x2380
 // Size: 0x22

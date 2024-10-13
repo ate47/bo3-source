@@ -9,9 +9,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_689d3383;
+#namespace zm_factory_ffotd;
 
-// Namespace namespace_689d3383
+// Namespace zm_factory_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf9d6b859, Offset: 0x2d8
 // Size: 0x10
@@ -19,7 +19,7 @@ function main_start() {
     level.var_42792b8b = 1;
 }
 
-// Namespace namespace_689d3383
+// Namespace zm_factory_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc6a0efd2, Offset: 0x2f0
 // Size: 0x4b4
@@ -48,7 +48,7 @@ function main_end() {
     level thread function_1c45822c();
 }
 
-// Namespace namespace_689d3383
+// Namespace zm_factory_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2f3cf534, Offset: 0x7b0
 // Size: 0x148

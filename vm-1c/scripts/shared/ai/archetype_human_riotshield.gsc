@@ -17,9 +17,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/ai_shared;
 
-#namespace namespace_a0beb106;
+#namespace archetype_human_riotshield;
 
-// Namespace namespace_a0beb106
+// Namespace archetype_human_riotshield
 // Params 0, eflags: 0x2
 // Checksum 0xa139f5f, Offset: 0x560
 // Size: 0x74
@@ -37,16 +37,16 @@ function autoexec main() {
 // Checksum 0x399f3948, Offset: 0x5e0
 // Size: 0x194
 function registerbehaviorscriptfunctions() {
-    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldShouldTacticalWalk", &function_5e70f8d);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldNonCombatLocomotionCondition", &function_97d02621);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldShouldTacticalWalk", &riotshieldShouldTacticalWalk);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldNonCombatLocomotionCondition", &riotshieldNonCombatLocomotionCondition);
     behaviortreenetworkutility::registerbehaviortreescriptapi("unarmedWalkAction", &function_6bf49b30);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldTacticalWalkStart", &function_32695b48);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldAdvanceOnEnemyService", &function_8ff24c5c);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldShouldFlinch", &function_d32282d7);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldIncrementFlinchCount", &function_23fe9c46);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldClearFlinchCount", &function_64075986);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldUnarmedTargetService", &function_e8d37bce);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldUnarmedAdvanceOnEnemyService", &function_27823c66);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldTacticalWalkStart", &riotshieldTacticalWalkStart);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldAdvanceOnEnemyService", &riotshieldAdvanceOnEnemyService);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldShouldFlinch", &riotshieldShouldFlinch);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldIncrementFlinchCount", &riotshieldIncrementFlinchCount);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldClearFlinchCount", &riotshieldClearFlinchCount);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldUnarmedTargetService", &riotshieldUnarmedTargetService);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("riotshieldUnarmedAdvanceOnEnemyService", &riotshieldUnarmedAdvanceOnEnemyService);
 }
 
 // Namespace namespace_6e11afc3
@@ -65,7 +65,7 @@ function private function_bd56fc7d() {
     blackboard::registerblackboardattribute(self, "_move_mode", "normal", &function_ef5bd70a);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("riotshieldClearFlinchCount");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
 }
@@ -95,7 +95,7 @@ function private function_ef5bd70a() {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x2bb56f5a, Offset: 0x910
 // Size: 0xc4
-function private function_d32282d7(entity) {
+function private riotshieldShouldFlinch(entity) {
     if (entity haspath() && entity ai::get_behavior_attribute("phalanx")) {
         return true;
     }
@@ -112,7 +112,7 @@ function private function_d32282d7(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xeb7efa1c, Offset: 0x9e0
 // Size: 0x2c
-function private function_23fe9c46(entity) {
+function private riotshieldIncrementFlinchCount(entity) {
     entity.var_33646074++;
     entity.var_b6532634 = gettime();
 }
@@ -121,7 +121,7 @@ function private function_23fe9c46(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe64dadaf, Offset: 0xa18
 // Size: 0x2c
-function private function_64075986(entity) {
+function private riotshieldClearFlinchCount(entity) {
     entity.var_b6532634 = gettime();
     entity.var_33646074 = 0;
 }
@@ -130,7 +130,7 @@ function private function_64075986(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x5854faad, Offset: 0xa50
 // Size: 0x10
-function private function_5e70f8d(behaviortreeentity) {
+function private riotshieldShouldTacticalWalk(behaviortreeentity) {
     return true;
 }
 
@@ -138,7 +138,7 @@ function private function_5e70f8d(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x6d867ab7, Offset: 0xa68
 // Size: 0x70
-function private function_97d02621(behaviortreeentity) {
+function private riotshieldNonCombatLocomotionCondition(behaviortreeentity) {
     if (isdefined(behaviortreeentity.enemy)) {
         if (distancesquared(behaviortreeentity.origin, behaviortreeentity lastknownpos(behaviortreeentity.enemy)) > 490000) {
             return true;
@@ -151,7 +151,7 @@ function private function_97d02621(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x279d9f40, Offset: 0xae0
 // Size: 0x38e
-function private function_8ff24c5c(behaviortreeentity) {
+function private riotshieldAdvanceOnEnemyService(behaviortreeentity) {
     itsbeenawhile = gettime() > behaviortreeentity.nextfindbestcovertime;
     isatscriptgoal = behaviortreeentity isatgoal();
     var_89889720 = 0;
@@ -204,7 +204,7 @@ function private function_8ff24c5c(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xbd03ad94, Offset: 0xe78
 // Size: 0x84
-function private function_32695b48(behaviortreeentity) {
+function private riotshieldTacticalWalkStart(behaviortreeentity) {
     aiutility::resetcoverparameters(behaviortreeentity);
     aiutility::setcanbeflanked(behaviortreeentity, 0);
     blackboard::setblackboardattribute(behaviortreeentity, "_stance", "stand");
@@ -215,7 +215,7 @@ function private function_32695b48(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x82351f01, Offset: 0xf08
 // Size: 0x31c
-function private function_e8d37bce(behaviortreeentity) {
+function private riotshieldUnarmedTargetService(behaviortreeentity) {
     if (!aiutility::shouldmutexmelee(behaviortreeentity)) {
         return false;
     }
@@ -267,13 +267,13 @@ function private function_e8d37bce(behaviortreeentity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x11bcfcc0, Offset: 0x1230
 // Size: 0x13e
-function private function_27823c66(behaviortreeentity) {
+function private riotshieldUnarmedAdvanceOnEnemyService(behaviortreeentity) {
     if (gettime() < behaviortreeentity.nextfindbestcovertime) {
         return false;
     }
     if (isdefined(behaviortreeentity.favoriteenemy)) {
         /#
-            recordline(behaviortreeentity.favoriteenemy.origin, behaviortreeentity.origin, (1, 0.5, 0), "riotshieldClearFlinchCount", behaviortreeentity);
+            recordline(behaviortreeentity.favoriteenemy.origin, behaviortreeentity.origin, (1, 0.5, 0), "<dev string:x33>", behaviortreeentity);
         #/
         enemydistance = distancesquared(behaviortreeentity.favoriteenemy.origin, behaviortreeentity.origin);
         if (enemydistance < behaviortreeentity.goalradius * behaviortreeentity.goalradius) {
@@ -311,7 +311,7 @@ function private function_f6b6cd67(inflictor, attacker, damage, meansofdeath, we
 function private function_b12197(einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon, vpoint, vdir, shitloc, psoffsettime, boneindex, modelindex) {
     entity = self;
     if (shitloc == "riotshield") {
-        function_23fe9c46(entity);
+        riotshieldIncrementFlinchCount(entity);
         entity.health += 1;
         return 1;
     }
@@ -335,6 +335,6 @@ function function_6cd135fd() {
     entity.ignorerunandgundist = 1;
     aiutility::addaioverridedamagecallback(entity, &namespace_6e11afc3::function_b12197);
     aiutility::addaioverridekilledcallback(entity, &namespace_6e11afc3::function_f6b6cd67);
-    namespace_6e11afc3::function_64075986(entity);
+    namespace_6e11afc3::riotshieldClearFlinchCount(entity);
 }
 

@@ -85,8 +85,8 @@ function function_471d1403() {
 // Checksum 0xbcb28abc, Offset: 0x870
 // Size: 0x2d6
 function private function_4952be41(room) {
-    level endon(#"hash_16154574");
-    level endon(#"hash_d1f5acf7");
+    level endon(#"player_challenge_success");
+    level endon(#"player_challenge_failure");
     level endon(#"hash_8194e795");
     level flag::wait_till("doa_challenge_running");
     var_bd205c6c = 1;
@@ -117,13 +117,13 @@ function private function_4952be41(room) {
                 level clientfield::set("pumpBannerBar", data);
             }
             var_bd205c6c = ratio;
-            wait(0.1);
+            wait 0.1;
         }
         if (isdefined(room.banner)) {
             level clientfield::set("pumpBannerBar", 0);
         }
         if (!(isdefined(room.var_674e3329) && room.var_674e3329)) {
-            level notify(#"hash_d1f5acf7");
+            level notify(#"player_challenge_failure");
         }
     }
 }
@@ -140,7 +140,7 @@ function function_15a0c9b5(room) {
     level thread namespace_d88e3a06::function_116bb43();
     level thread namespace_a7e6beb5::function_c1869ec8();
     level waittill(#"hash_229914a6");
-    level notify(#"hash_4d952f70");
+    level notify(#"kill_guardians");
     if (isdefined(room.var_6f369ab4) && room.var_57ce7582.size >= room.var_6f369ab4) {
         arrayremovevalue(level.doa.var_ec2bff7b, room, 0);
     }
@@ -148,7 +148,7 @@ function function_15a0c9b5(room) {
     foreach (player in getplayers()) {
         player notify(#"hash_d28ba89d");
     }
-    wait(0.25);
+    wait 0.25;
     namespace_cdb9a8fe::function_55762a85(namespace_831a4a7c::function_68ece679().origin);
     level clientfield::set("flipCamera", 0);
     level clientfield::increment("killweather");
@@ -165,7 +165,7 @@ function function_15a0c9b5(room) {
     level thread namespace_49107f3a::function_c5f3ece8(%DOA_PLAYER_CHALLENGE_ROOM, undefined, 6);
     level.voice playsoundwithnotify("vox_doaa_silverback_challenge", "soundDone");
     level.voice waittill(#"sounddone");
-    wait(0.75);
+    wait 0.75;
     level thread namespace_49107f3a::function_37fb5c23(room.text);
     if (isdefined(room.vox)) {
         level.voice playsound(room.vox);
@@ -188,11 +188,11 @@ function function_15a0c9b5(room) {
     } else {
         msg = level util::waittill_any_return("doa_game_is_over", "player_challenge_failure", "player_challenge_success");
     }
-    wait(1);
+    wait 1;
     if (msg == "player_challenge_failure") {
         if (!level flag::get("doa_game_is_over")) {
             level thread namespace_49107f3a::function_c5f3ece8(%DOA_PLAYER_CHALLENGE_ROOM_FAILED);
-            wait(1);
+            wait 1;
             level thread namespace_49107f3a::function_37fb5c23(isdefined(room.var_25c09afd) ? room.var_25c09afd : %DOA_PLAYER_CHALLENGE_ROOM_FAILED2);
         }
         if (isdefined(room.var_1cd9eda)) {
@@ -200,7 +200,7 @@ function function_15a0c9b5(room) {
         }
     } else if (msg == "player_challenge_success") {
         level thread namespace_49107f3a::function_c5f3ece8(%DOA_PLAYER_CHALLENGE_ROOM_SUCCESS);
-        wait(1);
+        wait 1;
         level thread namespace_49107f3a::function_37fb5c23(isdefined(room.var_25c09afd) ? room.var_25c09afd : %DOA_PLAYER_CHALLENGE_ROOM_SUCCESS2);
         if (isdefined(room.var_2530dc89)) {
             level [[ room.var_2530dc89 ]](room);
@@ -208,11 +208,11 @@ function function_15a0c9b5(room) {
     } else if (msg == "timeout") {
         level notify(room.name + "_challenge_timeout");
         level thread namespace_49107f3a::function_c5f3ece8(%DOA_PLAYER_CHALLENGE_ROOM_TIMEUP);
-        wait(1);
+        wait 1;
         level thread namespace_49107f3a::function_37fb5c23(isdefined(room.var_25c09afd) ? room.var_25c09afd : %DOA_PLAYER_CHALLENGE_ROOM_TIMEUP2);
     }
     if (!level flag::get("doa_game_is_over")) {
-        wait(5);
+        wait 5;
         namespace_49107f3a::function_44eb090b();
         if (level.doa.flipped) {
             level clientfield::set("flipCamera", 1);

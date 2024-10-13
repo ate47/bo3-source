@@ -311,7 +311,7 @@ function function_6dcb1bbc(name, type, tag, unique) {
     if (!isdefined(unique)) {
         unique = 1;
     }
-    assert(type < -128, "zombie/fx_marker_player_down_yellow_doa");
+    assert(type < -128, "<dev string:x28>");
     if (!isdefined(level.var_1142e0a2)) {
         level.var_1142e0a2 = [];
     }
@@ -327,7 +327,7 @@ function function_6dcb1bbc(name, type, tag, unique) {
 // Checksum 0xa2328501, Offset: 0x4120
 // Size: 0x52
 function function_9e6fe7c3(type) {
-    assert(isdefined(level.var_1142e0a2[type]), "zombie/fx_marker_player_down_yellow_doa");
+    assert(isdefined(level.var_1142e0a2[type]), "<dev string:x3b>");
     return level.var_1142e0a2[type].name;
 }
 
@@ -336,7 +336,7 @@ function function_9e6fe7c3(type) {
 // Checksum 0x5278af6a, Offset: 0x4180
 // Size: 0x52
 function function_28a90644(type) {
-    assert(isdefined(level.var_1142e0a2[type]), "zombie/fx_marker_player_down_yellow_doa");
+    assert(isdefined(level.var_1142e0a2[type]), "<dev string:x3b>");
     return level.var_1142e0a2[type].tag;
 }
 
@@ -345,7 +345,7 @@ function function_28a90644(type) {
 // Checksum 0x68b41003, Offset: 0x41e0
 // Size: 0x52
 function function_7664cc94(type) {
-    assert(isdefined(level.var_1142e0a2[type]), "zombie/fx_marker_player_down_yellow_doa");
+    assert(isdefined(level.var_1142e0a2[type]), "<dev string:x3b>");
     return level.var_1142e0a2[type].unique;
 }
 
@@ -359,7 +359,7 @@ function function_e68e3c0d(localclientnum, name, off, tag, kill) {
     }
     self endon(#"entityshutdown");
     while (!clienthassnapshot(localclientnum)) {
-        wait(0.016);
+        wait 0.016;
     }
     self util::waittill_dobj(localclientnum);
     if (!isdefined(self.var_ec1cda64)) {
@@ -368,11 +368,11 @@ function function_e68e3c0d(localclientnum, name, off, tag, kill) {
     if (!isdefined(self.var_ca61d2d6)) {
         self.var_ca61d2d6 = [];
     }
-    assert(!(self isplayer() && name == "zombie/fx_marker_player_down_yellow_doa"));
-    assert(!(self isplayer() && name == "zombie/fx_marker_player_down_yellow_doa"));
+    assert(!(self isplayer() && name == "<dev string:x60>"));
+    assert(!(self isplayer() && name == "<dev string:x73>"));
     if (self isplayer()) {
         /#
-            namespace_693feb87::debugmsg("zombie/fx_marker_player_down_yellow_doa" + (isdefined(self.name) ? self.name : "zombie/fx_marker_player_down_yellow_doa") + "zombie/fx_marker_player_down_yellow_doa" + name + "zombie/fx_marker_player_down_yellow_doa" + (isdefined(tag) ? tag : "zombie/fx_marker_player_down_yellow_doa") + "zombie/fx_marker_player_down_yellow_doa" + (off ? "zombie/fx_marker_player_down_yellow_doa" : "zombie/fx_marker_player_down_yellow_doa") + "zombie/fx_marker_player_down_yellow_doa" + localclientnum);
+            namespace_693feb87::debugmsg("<dev string:x87>" + (isdefined(self.name) ? self.name : "<dev string:x90>") + "<dev string:x94>" + name + "<dev string:x9f>" + (isdefined(tag) ? tag : "<dev string:xa6>") + "<dev string:xb1>" + (off ? "<dev string:xb6>" : "<dev string:xbc>") + "<dev string:xc1>" + localclientnum);
         #/
     }
     if (off) {
@@ -434,7 +434,7 @@ function function_b71a778a(localclientnum, name, off, tag) {
         return;
     }
     switch (name) {
-    case 236:
+    case "cow_sacred":
         self.var_6f5948cb[name] = [];
         self.var_6f5948cb[name][self.var_6f5948cb[name].size] = playfxontag(localclientnum, level._effect["cow_sacred"], self, "j_belly");
         self.var_6f5948cb[name][self.var_6f5948cb[name].size] = playfxontag(localclientnum, level._effect["cow_hoof"], self, "j_ankle_le");
@@ -442,12 +442,12 @@ function function_b71a778a(localclientnum, name, off, tag) {
         self.var_6f5948cb[name][self.var_6f5948cb[name].size] = playfxontag(localclientnum, level._effect["cow_hoof"], self, "j_wrist_le");
         self.var_6f5948cb[name][self.var_6f5948cb[name].size] = playfxontag(localclientnum, level._effect["cow_hoof"], self, "j_wrist_ri");
         break;
-    case 271:
+    case "shadow_appear":
         playfx(localclientnum, level._effect["shadow_appear"], self.origin);
         playfx(localclientnum, level._effect["shadow_rez_in"], self.origin);
         playfx(localclientnum, level._effect["shadow_emerge"], self.origin);
         break;
-    case 273:
+    case "shadow_die":
         playfx(localclientnum, level._effect["shadow_fade"], self.origin);
         playfx(localclientnum, level._effect["heart_explode"], self.origin);
         playfx(localclientnum, level._effect["shadow_rez_out"], self.origin);
@@ -493,7 +493,7 @@ function function_1c0d0290(parent) {
     self endon(#"entityshutdown");
     while (isdefined(parent)) {
         self.origin = parent.origin;
-        wait(0.016);
+        wait 0.016;
     }
     self delete();
 }
@@ -596,12 +596,12 @@ function function_7829d7af(localclientnum, mask) {
 // Params 7, eflags: 0x1 linked
 // Checksum 0x55c75edb, Offset: 0x5098
 // Size: 0xe2
-function function_7aac5112(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function burnType(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (!self hasdobj(localclientnum)) {
         return;
     }
-    self.var_7aac5112 = newval;
-    switch (self.var_7aac5112) {
+    self.burnType = newval;
+    switch (self.burnType) {
     case 0:
         self.var_a1063df8 = undefined;
         break;
@@ -621,7 +621,7 @@ function function_7aac5112(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x7466241e, Offset: 0x5188
 // Size: 0xec
-function function_f6008bb4(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function burnZombie(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (!self hasdobj(localclientnum)) {
         return;
     }
@@ -640,6 +640,6 @@ function function_f6008bb4(localclientnum, oldval, newval, bnewent, binitialsnap
 // Checksum 0x5f843d8a, Offset: 0x5280
 // Size: 0x6c
 function burncorpse(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    function_f6008bb4(localclientnum, oldval, 666, bnewent, binitialsnap, fieldname, bwastimejump);
+    burnZombie(localclientnum, oldval, 666, bnewent, binitialsnap, fieldname, bwastimejump);
 }
 

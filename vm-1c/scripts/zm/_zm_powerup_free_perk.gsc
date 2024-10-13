@@ -76,7 +76,7 @@ function function_bce49437(item) {
 function function_6754a666(perk) {
     self endon(#"disconnect");
     if (isdefined(perk)) {
-        wait(0.1);
+        wait 0.1;
         if (!level flag::get("power_on")) {
             a_players = getplayers();
             if (isdefined(a_players) && a_players.size == 1 && perk == "specialty_quickrevive") {

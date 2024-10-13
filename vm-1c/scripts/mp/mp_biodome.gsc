@@ -7,17 +7,17 @@
 #using scripts/shared/_oob;
 #using scripts/codescripts/struct;
 
-#namespace namespace_86fa17e8;
+#namespace mp_biodome;
 
-// Namespace namespace_86fa17e8
+// Namespace mp_biodome
 // Params 0, eflags: 0x1 linked
 // Checksum 0xba58c87e, Offset: 0x390
 // Size: 0x6fc
 function main() {
     precache();
     setdvar("phys_buoyancy", 1);
-    namespace_d22f7529::main();
-    namespace_8911e65c::main();
+    mp_biodome_fx::main();
+    mp_biodome_sound::main();
     level.remotemissile_kill_z = -130 + 50;
     load::main();
     compass::setupminimap("compass_map_mp_biodome");
@@ -59,7 +59,7 @@ function main() {
     level.cleandepositpoints = array((-52.4927, 1252.1, 104.125), (330.408, 2402.64, 232.204), (-139.434, -303.555, 138.836), (-362.325, 325.108, 104.125));
 }
 
-// Namespace namespace_86fa17e8
+// Namespace mp_biodome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xa98
 // Size: 0x4
@@ -67,7 +67,7 @@ function precache() {
     
 }
 
-// Namespace namespace_86fa17e8
+// Namespace mp_biodome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9e942f27, Offset: 0xaa8
 // Size: 0x13c
@@ -82,7 +82,7 @@ function spawnkilltrigger() {
     trigger thread watchkilltrigger();
 }
 
-// Namespace namespace_86fa17e8
+// Namespace mp_biodome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8c913160, Offset: 0xbf0
 // Size: 0x90

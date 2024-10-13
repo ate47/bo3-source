@@ -259,7 +259,7 @@ function private function_d87d3ccf(localclientnum, oldvalue, newvalue, bnewent, 
 // Size: 0x9c
 function private function_6ced7db8(localclientnum) {
     self endon(#"entityshutdown");
-    wait(0.6);
+    wait 0.6;
     if (isdefined(self.var_c848921f)) {
         stopfx(localclientnum, self.var_c848921f);
     }
@@ -340,7 +340,7 @@ function private function_201bc8e4(localclientnum) {
                 player playrumbleonentity(localclientnum, "tank_rumble");
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

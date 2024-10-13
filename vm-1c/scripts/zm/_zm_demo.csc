@@ -5,9 +5,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_98a305bf;
+#namespace _zm_demo;
 
-// Namespace namespace_98a305bf
+// Namespace _zm_demo
 // Params 0, eflags: 0x2
 // Checksum 0xa96465a8, Offset: 0x168
 // Size: 0x34
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
     system::register("zm_demo", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_98a305bf
+// Namespace _zm_demo
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd9c3bdfb, Offset: 0x1a8
 // Size: 0x54
@@ -28,7 +28,7 @@ function __init__() {
     }
 }
 
-// Namespace namespace_98a305bf
+// Namespace _zm_demo
 // Params 1, eflags: 0x1 linked
 // Checksum 0x838493f1, Offset: 0x208
 // Size: 0x24
@@ -36,7 +36,7 @@ function player_on_connect(localclientnum) {
     level thread watch_predicted_player_changes(localclientnum);
 }
 
-// Namespace namespace_98a305bf
+// Namespace _zm_demo
 // Params 1, eflags: 0x1 linked
 // Checksum 0x3af5d63d, Offset: 0x238
 // Size: 0x214
@@ -57,7 +57,7 @@ function watch_predicted_player_changes(localclientnum) {
             level notify("demo_plplayer_change" + localclientnum, level.demolocalclients[localclientnum].predicted_local_player, predicted_local_player);
             level.demolocalclients[localclientnum].predicted_local_player = predicted_local_player;
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 

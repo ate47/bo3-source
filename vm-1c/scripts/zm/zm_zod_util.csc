@@ -5,13 +5,13 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_8e578893;
+#namespace zm_zod_util;
 
-// Namespace namespace_8e578893
+// Namespace zm_zod_util
 // Params 7, eflags: 0x0
 // Checksum 0x7873f0d8, Offset: 0x180
 // Size: 0x276
-function function_f118a0e7(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function player_rumble_and_shake(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self endon(#"disconnect");
     if (newval == 5) {
         self thread function_878b1e6c(localclientnum, 1);
@@ -49,7 +49,7 @@ function function_f118a0e7(localclientnum, oldval, newval, bnewent, binitialsnap
     self notify(#"hash_f9095a82");
 }
 
-// Namespace namespace_8e578893
+// Namespace zm_zod_util
 // Params 3, eflags: 0x0
 // Checksum 0xdaf0a5d6, Offset: 0x400
 // Size: 0x180
@@ -68,7 +68,7 @@ function function_878b1e6c(localclientnum, var_4be1e559, var_d2e77e71) {
                     self earthquake(0.2, 1, self.origin, 100);
                 }
                 self playrumbleonentity(localclientnum, "reload_small");
-                wait(0.05);
+                wait 0.05;
             } else {
                 if (var_d2e77e71) {
                     self earthquake(0.3, 1, self.origin, 100);
@@ -76,7 +76,7 @@ function function_878b1e6c(localclientnum, var_4be1e559, var_d2e77e71) {
                 self playrumbleonentity(localclientnum, "damage_light");
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 

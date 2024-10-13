@@ -43,7 +43,7 @@ function perks_register_clientfield() {
 // Checksum 0x8bec9b24, Offset: 0x340
 // Size: 0xb6
 function perk_init_code_callbacks() {
-    wait(0.1);
+    wait 0.1;
     if (level._custom_perks.size > 0) {
         a_keys = getarraykeys(level._custom_perks);
         for (i = 0; i < a_keys.size; i++) {
@@ -150,7 +150,7 @@ function init_perk_machines_fx(localclientnum) {
     if (!level.enable_magic) {
         return;
     }
-    wait(0.1);
+    wait 0.1;
     machines = struct::get_array("zm_perk_machine", "targetname");
     array::thread_all(machines, &perk_start_up);
 }
@@ -180,7 +180,7 @@ function perk_start_up() {
         if (timer >= 3) {
             break;
         }
-        wait(duration);
+        wait duration;
     }
 }
 
@@ -203,7 +203,7 @@ function play_perk_fx_on_client(client_num, fx_light, duration) {
     fxobj = spawn(client_num, self.origin + (0, 0, -50), "script_model");
     fxobj setmodel("tag_origin");
     playfxontag(client_num, level._effect[fx_light], fxobj, "tag_origin");
-    wait(duration);
+    wait duration;
     fxobj delete();
 }
 

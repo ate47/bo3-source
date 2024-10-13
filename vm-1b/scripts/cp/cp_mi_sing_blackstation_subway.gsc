@@ -21,9 +21,9 @@
 #using scripts/cp/_dialog;
 #using scripts/codescripts/struct;
 
-#namespace namespace_3dc5b645;
+#namespace cp_mi_sing_blackstation_subway;
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x0
 // Checksum 0x326e0a81, Offset: 0x760
 // Size: 0x1da
@@ -53,7 +53,7 @@ function function_822cae8a() {
     exploder::exploder("fx_expl_tanker_splashes_mist");
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x0
 // Checksum 0x5494e5ae, Offset: 0x948
 // Size: 0x62
@@ -64,7 +64,7 @@ function function_eb060258() {
     level dialog::function_13b3b16a("plyr_understood_1");
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x0
 // Checksum 0xb22d1591, Offset: 0x9b8
 // Size: 0xc2
@@ -77,7 +77,7 @@ function function_27e6ca54() {
     var_40eadcd7 thread function_62437267();
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x0
 // Checksum 0x960626cb, Offset: 0xa88
 // Size: 0x1a
@@ -85,7 +85,7 @@ function function_62437267() {
     self thread scene::play(self.script_noteworthy, self);
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x0
 // Checksum 0xb702fadc, Offset: 0xab0
 // Size: 0x32
@@ -94,7 +94,7 @@ function function_c7ea2242() {
     clientfield::set("subway_tiles", 1);
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x0
 // Checksum 0x85702090, Offset: 0xaf0
 // Size: 0x123
@@ -103,7 +103,7 @@ function function_99f304f0() {
     self.var_15caaa0c = 0;
     while (!level flag::get("flag_kane_intro_complete")) {
         while (!self isplayerunderwater()) {
-            wait(0.1);
+            wait 0.1;
         }
         if (!self.var_15caaa0c) {
             self.var_15caaa0c = 1;
@@ -112,17 +112,17 @@ function function_99f304f0() {
         self clientfield::set_to_player("play_bubbles", 1);
         self fx::play("bubbles", self.origin, (0, 0, 0), "swim_done", 1, "j_spineupper");
         while (self isplayerunderwater()) {
-            wait(0.1);
+            wait 0.1;
         }
         self clientfield::set_to_player("play_bubbles", 0);
         self notify(#"swim_done");
-        wait(0.1);
+        wait 0.1;
     }
     self clientfield::set_to_player("play_bubbles", 0);
     self notify(#"swim_done");
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x0
 // Checksum 0xe7c32a16, Offset: 0xc20
 // Size: 0x52
@@ -132,28 +132,28 @@ function function_d721f6c3() {
     level objectives::breadcrumb("trigger_breadcrumb_police_street", "cp_level_blackstation_climb");
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x0
 // Checksum 0x6ab8c20d, Offset: 0xc80
 // Size: 0x4a
 function function_5c54db13() {
     level flag::wait_till("flag_waypoint_subway01");
-    wait(2);
+    wait 2;
     level thread scene::play("p7_fxanim_cp_blackstation_subway_stair_debris_bundle");
     skipto::function_be8adfb8("objective_subway");
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x0
 // Checksum 0xe28bf734, Offset: 0xcd8
 // Size: 0x3a
 function function_4ad8a5f1() {
     trigger::wait_till("trig_hendricks_swim");
     level thread namespace_4297372::function_37f7c98d();
-    level thread namespace_933eb669::function_a7bb8a82();
+    level thread cp_mi_sing_blackstation_police_station::function_a7bb8a82();
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x0
 // Checksum 0x96e96a94, Offset: 0xd20
 // Size: 0x1aa
@@ -176,16 +176,16 @@ function function_95e21012() {
     level.var_2fd26037 ai::set_behavior_attribute("forceTacticalWalk", 0);
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 1, eflags: 0x0
 // Checksum 0x698f445e, Offset: 0xed8
 // Size: 0x4a
 function function_561cae8a(a_ents) {
-    wait(2);
+    wait 2;
     level.var_2fd26037 fx::play("bubbles", level.var_2fd26037.origin, (0, 0, 0), "swim_done", 1, "j_spineupper");
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 1, eflags: 0x0
 // Checksum 0x19c27201, Offset: 0xf30
 // Size: 0x1a
@@ -193,7 +193,7 @@ function function_5f8ce82c(a_ents) {
     level.var_2fd26037 notify(#"swim_done");
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x0
 // Checksum 0x22119b6a, Offset: 0xf58
 // Size: 0x52
@@ -203,7 +203,7 @@ function function_9d32ab8e() {
     array::thread_all(var_11d618f2, &function_f9af1ae2);
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x0
 // Checksum 0x6a3486ee, Offset: 0xfb8
 // Size: 0x55
@@ -214,11 +214,11 @@ function function_f9af1ae2() {
     n_rotate_angle = 60;
     while (true) {
         e_body rotatepitch(n_rotate_angle, 5);
-        wait(4.5);
+        wait 4.5;
     }
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x0
 // Checksum 0x7f44a8ec, Offset: 0x1018
 // Size: 0x182
@@ -241,7 +241,7 @@ function function_70ff0b50() {
     e_linkto moveto(e_corpse.origin - (0, 50, 25), 5);
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x0
 // Checksum 0x1a538ea5, Offset: 0x11a8
 // Size: 0xda
@@ -258,7 +258,7 @@ function function_e3067a8b() {
     e_corpse moveto(e_corpse.origin - (0, -50, 50), 5);
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 0, eflags: 0x0
 // Checksum 0xe1c68b5f, Offset: 0x1290
 // Size: 0xda
@@ -274,7 +274,7 @@ function function_bd040022() {
     e_corpse moveto(e_corpse.origin - (25, 25, 75), 5);
 }
 
-// Namespace namespace_3dc5b645
+// Namespace cp_mi_sing_blackstation_subway
 // Params 1, eflags: 0x0
 // Checksum 0x58dda311, Offset: 0x1378
 // Size: 0x13

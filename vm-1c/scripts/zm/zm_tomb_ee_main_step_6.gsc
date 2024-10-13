@@ -11,9 +11,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/array_shared;
 
-#namespace namespace_5f660a0e;
+#namespace zm_tomb_ee_main_step_6;
 
-// Namespace namespace_5f660a0e
+// Namespace zm_tomb_ee_main_step_6
 // Params 0, eflags: 0x1 linked
 // Checksum 0x371b8720, Offset: 0x2f8
 // Size: 0x54
@@ -21,7 +21,7 @@ function init() {
     namespace_6e97c459::function_5a90ed82("little_girl_lost", "step_6", &init_stage, &function_7747c56, &function_cc3f3f6a);
 }
 
-// Namespace namespace_5f660a0e
+// Namespace zm_tomb_ee_main_step_6
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6bd11303, Offset: 0x358
 // Size: 0x34
@@ -30,20 +30,20 @@ function init_stage() {
     zm_spawner::add_custom_zombie_spawn_logic(&function_4aee6e96);
 }
 
-// Namespace namespace_5f660a0e
+// Namespace zm_tomb_ee_main_step_6
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcbee04c9, Offset: 0x398
 // Size: 0x7c
 function function_7747c56() {
     /#
-        iprintln(level.var_ca733eed + "tag_origin");
+        iprintln(level.var_ca733eed + "<dev string:x28>");
     #/
     level flag::wait_till("ee_all_players_upgraded_punch");
     util::wait_network_frame();
     namespace_6e97c459::function_2f3ced1f("little_girl_lost", level.var_ca733eed);
 }
 
-// Namespace namespace_5f660a0e
+// Namespace zm_tomb_ee_main_step_6
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4f9359c8, Offset: 0x420
 // Size: 0x1a
@@ -51,7 +51,7 @@ function function_cc3f3f6a(success) {
     level notify(#"hash_ee01811f");
 }
 
-// Namespace namespace_5f660a0e
+// Namespace zm_tomb_ee_main_step_6
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc8cf38d2, Offset: 0x448
 // Size: 0x240
@@ -60,7 +60,7 @@ function function_4aee6e96() {
         return;
     }
     if (isdefined(self.zone_name) && self.zone_name == "ug_bottom_zone") {
-        wait(0.1);
+        wait 0.1;
         self clientfield::set("ee_zombie_fist_fx", 1);
         self.var_1c6bd2ab = 1;
         while (isalive(self)) {
@@ -82,7 +82,7 @@ function function_4aee6e96() {
     }
 }
 
-// Namespace namespace_5f660a0e
+// Namespace zm_tomb_ee_main_step_6
 // Params 2, eflags: 0x1 linked
 // Checksum 0x73dbbd53, Offset: 0x690
 // Size: 0x5ec
@@ -100,7 +100,7 @@ function function_3bcfc005(v_origin, e_player) {
     var_8365f931 setinvisibletoall();
     var_8365f931 setvisibletoplayer(e_player);
     while (isdefined(e_player) && !e_player istouching(var_8365f931)) {
-        wait(0.05);
+        wait 0.05;
     }
     var_8365f931 delete();
     m_fx delete();
@@ -111,10 +111,10 @@ function function_3bcfc005(v_origin, e_player) {
         foreach (zombie in a_zombies) {
             if (isdefined(zombie.completed_emerging_into_playable_area) && distance2dsquared(e_player.origin, zombie.origin) < 65536 && !(isdefined(zombie.is_mechz) && zombie.is_mechz) && !(isdefined(zombie.missinglegs) && zombie.missinglegs) && zombie.completed_emerging_into_playable_area) {
                 zombie.var_36a949c6 = e_player.origin;
-                zombie animcustom(&namespace_c70bea9a::function_60897a18);
+                zombie animcustom(&_zm_weap_one_inch_punch::function_60897a18);
             }
         }
-        wait(1);
+        wait 1;
         e_player.var_21412003 = 1;
         foreach (mdl_staff in level.var_66561721) {
             if (e_player hasweapon(mdl_staff.w_weapon)) {
@@ -124,8 +124,8 @@ function function_3bcfc005(v_origin, e_player) {
         if (!isdefined(e_player.var_b37dabd2)) {
             e_player.var_b37dabd2 = "upgraded";
         }
-        e_player thread namespace_c70bea9a::function_3898d995();
-        e_player thread namespace_c70bea9a::function_3898d995();
+        e_player thread _zm_weap_one_inch_punch::function_3898d995();
+        e_player thread _zm_weap_one_inch_punch::function_3898d995();
         a_players = getplayers();
         foreach (player in a_players) {
             if (!isdefined(player.var_21412003) || !player.var_21412003) {
@@ -136,7 +136,7 @@ function function_3bcfc005(v_origin, e_player) {
     }
 }
 
-// Namespace namespace_5f660a0e
+// Namespace zm_tomb_ee_main_step_6
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5af0206f, Offset: 0xc88
 // Size: 0x44

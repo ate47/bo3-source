@@ -88,24 +88,24 @@ function autoexec init() {
 // Checksum 0xd5fdb009, Offset: 0xcc8
 // Size: 0x464
 function private function_951f2929() {
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconCanJuke", &function_d56a72a7);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconJukeInit", &function_5d6a8bf3);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconPreemptiveJukeService", &function_9148e6d9);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconPreemptiveJukePending", &function_741eeaa1);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconPreemptiveJukeDone", &function_6ca3d080);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconMoveStart", &function_29c4b423);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconMoveUpdate", &function_f9d34dc6);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconCanMeleeAttack", &function_e28d10bc);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconShouldMeleeCondition", &function_846947d8);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconCanBamf", &function_6faf5c02);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconCanBamfAfterJuke", &function_dfb1e4f7);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconBamfInit", &function_97e56cce);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconShouldTauntAtPlayer", &function_3926ee39);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconTauntAtPlayerEvent", &function_f5222bfe);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconFuriousModeInit", &function_ee6717e6);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconKnockdownService", &function_556629b3);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconDeathStart", &function_dbc8bb18);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconDeathTerminate", &function_3640f9c1);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconCanJuke", &apothiconCanJuke);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconJukeInit", &apothiconJukeInit);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconPreemptiveJukeService", &apothiconPreemptiveJukeService);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconPreemptiveJukePending", &apothiconPreemptiveJukePending);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconPreemptiveJukeDone", &apothiconPreemptiveJukeDone);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconMoveStart", &apothiconMoveStart);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconMoveUpdate", &apothiconMoveUpdate);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconCanMeleeAttack", &apothiconCanMeleeAttack);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconShouldMeleeCondition", &apothiconShouldMeleeCondition);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconCanBamf", &apothiconCanBamf);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconCanBamfAfterJuke", &apothiconCanBamfAfterJuke);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconBamfInit", &apothiconBamfInit);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconShouldTauntAtPlayer", &apothiconShouldTauntAtPlayer);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconTauntAtPlayerEvent", &apothiconTauntAtPlayerEvent);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconFuriousModeInit", &apothiconFuriousModeInit);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconKnockdownService", &apothiconKnockdownService);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconDeathStart", &apothiconDeathStart);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("apothiconDeathTerminate", &apothiconDeathTerminate);
     animationstatenetwork::registeranimationmocomp("mocomp_teleport@apothicon_fury", &function_ada7c6a6, undefined, &function_c5c85a6d);
     animationstatenetwork::registeranimationmocomp("mocomp_juke@apothicon_fury", &function_f7b15804, &function_9a6bdbed, &function_7db60953);
     animationstatenetwork::registeranimationmocomp("mocomp_bamf@apothicon_fury", &function_7e253d5, &function_320356b8, &function_2dbbd110);
@@ -125,25 +125,25 @@ function private function_cc9eaa0f() {
     blackboard::registerblackboardattribute(self, "_locomotion_speed", "locomotion_speed_run", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("juke_active");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_apothicon_bamf_distance", undefined, &function_a6019ee6);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("juke_active");
+            self trackblackboardattribute("<dev string:x3a>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_idgun_damage_direction", "back", &bb_idgungetdamagedirection);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("juke_active");
+            self trackblackboardattribute("<dev string:x53>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_variant_type", 0, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("juke_active");
+            self trackblackboardattribute("<dev string:x6b>");
         #/
     }
     self aiutility::function_89e1fc16();
@@ -272,35 +272,35 @@ function function_f7b15804(entity, mocompanim, mocompanimblendouttime, mocompani
     velocity = entity getvelocity();
     predictedpos = entity.origin + velocity * 0.1;
     /#
-        recordcircle(landpos, 8, (0, 0, 1), "juke_active", entity);
-        record3dtext("juke_active" + distance(predictedpos, landpos), landpos, (0, 0, 1), "juke_active");
+        recordcircle(landpos, 8, (0, 0, 1), "<dev string:x79>", entity);
+        record3dtext("<dev string:x80>" + distance(predictedpos, landpos), landpos, (0, 0, 1), "<dev string:x79>");
     #/
     var_c23f776 = entity.jukeinfo.var_c23f776;
     heightdiff = var_c23f776[2] - landpos[2];
     /#
-        recordcircle(var_c23f776, 8, (0, 1, 0), "juke_active", entity);
-        recordline(landpos, var_c23f776, (0, 1, 0), "juke_active", entity);
+        recordcircle(var_c23f776, 8, (0, 1, 0), "<dev string:x79>", entity);
+        recordline(landpos, var_c23f776, (0, 1, 0), "<dev string:x79>", entity);
     #/
-    assert(animhasnotetrack(mocompanim, "juke_active"));
+    assert(animhasnotetrack(mocompanim, "<dev string:x81>"));
     starttime = getnotetracktimes(mocompanim, "start_effect")[0];
     var_df235bea = getmovedelta(mocompanim, 0, starttime, entity);
     startpos = entity localtoworldcoords(var_df235bea);
-    assert(animhasnotetrack(mocompanim, "juke_active"));
+    assert(animhasnotetrack(mocompanim, "<dev string:x8e>"));
     stoptime = getnotetracktimes(mocompanim, "end_effect")[0];
     var_5becc98c = getmovedelta(mocompanim, 0, stoptime, entity);
     stoppos = entity localtoworldcoords(var_5becc98c);
     /#
-        recordsphere(startpos, 3, (0, 0, 1), "juke_active", entity);
-        recordsphere(stoppos, 3, (0, 0, 1), "juke_active", entity);
-        recordline(predictedpos, startpos, (0, 0, 1), "juke_active", entity);
-        recordline(startpos, stoppos, (0, 0, 1), "juke_active", entity);
-        recordline(stoppos, landpos, (0, 0, 1), "juke_active", entity);
+        recordsphere(startpos, 3, (0, 0, 1), "<dev string:x79>", entity);
+        recordsphere(stoppos, 3, (0, 0, 1), "<dev string:x79>", entity);
+        recordline(predictedpos, startpos, (0, 0, 1), "<dev string:x79>", entity);
+        recordline(startpos, stoppos, (0, 0, 1), "<dev string:x79>", entity);
+        recordline(stoppos, landpos, (0, 0, 1), "<dev string:x79>", entity);
     #/
     var_bf7e71d5 = stoppos + (0, 0, heightdiff);
     /#
-        recordline(startpos, var_bf7e71d5, (1, 1, 0), "juke_active", entity);
-        recordline(var_bf7e71d5, var_c23f776, (1, 1, 0), "juke_active", entity);
-        recordsphere(var_bf7e71d5, 3, (1, 1, 0), "juke_active", entity);
+        recordline(startpos, var_bf7e71d5, (1, 1, 0), "<dev string:x79>", entity);
+        recordline(var_bf7e71d5, var_c23f776, (1, 1, 0), "<dev string:x79>", entity);
+        recordsphere(var_bf7e71d5, 3, (1, 1, 0), "<dev string:x79>", entity);
     #/
     entity.var_7d30a04a = undefined;
     entity.var_7d30a04a = new class_7d30a04a();
@@ -317,10 +317,10 @@ function function_f7b15804(entity, mocompanim, mocompanimblendouttime, mocompani
     entity.var_7d30a04a.var_c23f776 = var_c23f776;
     /#
         if (heightdiff < 0) {
-            record3dtext("juke_active" + distance(landpos, var_c23f776) + "juke_active" + entity.var_7d30a04a.stepsize + "juke_active" + adjustduration, var_c23f776, (1, 0.5, 0), "juke_active");
+            record3dtext("<dev string:x99>" + distance(landpos, var_c23f776) + "<dev string:x9b>" + entity.var_7d30a04a.stepsize + "<dev string:x9b>" + adjustduration, var_c23f776, (1, 0.5, 0), "<dev string:x79>");
             return;
         }
-        record3dtext("juke_active" + distance(landpos, var_c23f776) + "juke_active" + entity.var_7d30a04a.stepsize + "juke_active" + adjustduration, var_c23f776, (1, 0.5, 0), "juke_active");
+        record3dtext("<dev string:x9d>" + distance(landpos, var_c23f776) + "<dev string:x9b>" + entity.var_7d30a04a.stepsize + "<dev string:x9b>" + adjustduration, var_c23f776, (1, 0.5, 0), "<dev string:x79>");
     #/
 }
 
@@ -346,7 +346,7 @@ function function_9a6bdbed(entity, mocompanim, mocompanimblendouttime, mocompani
         entity orientmode("face direction", entity.enemy.origin - entity.origin);
     }
     /#
-        recordcircle(entity.var_7d30a04a.var_c23f776, 8, (0, 1, 0), "juke_active", entity);
+        recordcircle(entity.var_7d30a04a.var_c23f776, 8, (0, 1, 0), "<dev string:x79>", entity);
     #/
 }
 
@@ -363,7 +363,7 @@ function function_7db60953(entity, mocompanim, mocompanimblendouttime, mocompani
     entity.pushable = 1;
     entity.jukeinfo = undefined;
     /#
-        recordcircle(entity.var_7d30a04a.var_c23f776, 8, (0, 1, 0), "juke_active", entity);
+        recordcircle(entity.var_7d30a04a.var_c23f776, 8, (0, 1, 0), "<dev string:x79>", entity);
     #/
     if (isdefined(entity.enemy)) {
         entity orientmode("face direction", entity.enemy.origin - entity.origin);
@@ -417,8 +417,8 @@ function private function_f6c42fd2(entity, mocompanim, mocompanimblendouttime, m
         }
         landpos = entity.var_7d30a04a.var_c23f776;
         /#
-            recordcircle(var_5288fe83, 8, (0, 1, 1), "juke_active", entity);
-            recordcircle(landpos, 8, (0, 0, 1), "juke_active", entity);
+            recordcircle(var_5288fe83, 8, (0, 1, 1), "<dev string:x79>", entity);
+            recordcircle(landpos, 8, (0, 0, 1), "<dev string:x79>", entity);
         #/
         zdiff = landpos[2] - var_5288fe83[2];
         tracestart = undefined;
@@ -439,8 +439,8 @@ function private function_f6c42fd2(entity, mocompanim, mocompanimblendouttime, m
             return;
         }
         /#
-            recordcircle(var_c23f776, 8, (0, 1, 0), "juke_active", entity);
-            recordline(landpos, var_c23f776, (0, 1, 0), "juke_active", entity);
+            recordcircle(var_c23f776, 8, (0, 1, 0), "<dev string:x79>", entity);
+            recordline(landpos, var_c23f776, (0, 1, 0), "<dev string:x79>", entity);
         #/
         assert(isdefined(entity.var_7d30a04a));
         starttime = var_cd2a2a0b;
@@ -459,9 +459,9 @@ function private function_f6c42fd2(entity, mocompanim, mocompanimblendouttime, m
         entity.var_31fe535c.stepsize = heightdiff / adjustduration;
         /#
             if (heightdiff < 0) {
-                record3dtext("juke_active" + entity.var_31fe535c.stepsize + "juke_active" + adjustduration, var_c23f776, (1, 0.5, 0), "juke_active");
+                record3dtext("<dev string:x9f>" + entity.var_31fe535c.stepsize + "<dev string:x9b>" + adjustduration, var_c23f776, (1, 0.5, 0), "<dev string:x79>");
             } else {
-                record3dtext("juke_active" + entity.var_31fe535c.stepsize + "juke_active" + adjustduration, var_c23f776, (1, 0.5, 0), "juke_active");
+                record3dtext("<dev string:xa2>" + entity.var_31fe535c.stepsize + "<dev string:x9b>" + adjustduration, var_c23f776, (1, 0.5, 0), "<dev string:x79>");
             }
         #/
         var_5288fe83 = (var_5288fe83[0], var_5288fe83[1], landpos[2]);
@@ -474,7 +474,7 @@ function private function_f6c42fd2(entity, mocompanim, mocompanimblendouttime, m
         entity.var_f62488b9.var_cc809cdf = var_cc809cdf;
         entity.var_f62488b9.adjustmentstarted = 1;
         /#
-            record3dtext("juke_active" + var_74b721bd + "juke_active" + entity.var_f62488b9.stepsize + "juke_active", var_5288fe83, (0, 0, 1), "juke_active");
+            record3dtext("<dev string:x80>" + var_74b721bd + "<dev string:xa5>" + entity.var_f62488b9.stepsize + "<dev string:xad>", var_5288fe83, (0, 0, 1), "<dev string:x79>");
         #/
         entity.var_7d30a04a.var_dfd59afa = 1;
     }
@@ -503,10 +503,10 @@ function function_7e253d5(entity, mocompanim, mocompanimblendouttime, mocompanim
     var_26689e5d = getmovedelta(mocompanim, 0, 1, entity);
     landpos = entity localtoworldcoords(var_26689e5d);
     /#
-        recordcircle(entity.enemy.origin, 8, (0, 1, 1), "juke_active", entity);
-        recordline(landpos, entity.enemy.origin, (0, 1, 1), "juke_active", entity);
-        recordcircle(landpos, 8, (0, 0, 1), "juke_active", entity);
-        record3dtext("juke_active" + distance(entity.origin, landpos), landpos, (0, 0, 1), "juke_active");
+        recordcircle(entity.enemy.origin, 8, (0, 1, 1), "<dev string:x79>", entity);
+        recordline(landpos, entity.enemy.origin, (0, 1, 1), "<dev string:x79>", entity);
+        recordcircle(landpos, 8, (0, 0, 1), "<dev string:x79>", entity);
+        record3dtext("<dev string:x80>" + distance(entity.origin, landpos), landpos, (0, 0, 1), "<dev string:x79>");
     #/
     zdiff = entity.origin[2] - entity.enemy.origin[2];
     tracestart = undefined;
@@ -527,30 +527,30 @@ function function_7e253d5(entity, mocompanim, mocompanimblendouttime, mocompanim
         var_c23f776 = entity.enemy.origin;
     }
     /#
-        recordcircle(var_c23f776, 8, (0, 1, 0), "juke_active", entity);
-        recordline(landpos, var_c23f776, (0, 1, 0), "juke_active", entity);
+        recordcircle(var_c23f776, 8, (0, 1, 0), "<dev string:x79>", entity);
+        recordline(landpos, var_c23f776, (0, 1, 0), "<dev string:x79>", entity);
     #/
     heightdiff = var_c23f776[2] - landpos[2];
-    assert(animhasnotetrack(mocompanim, "juke_active"));
+    assert(animhasnotetrack(mocompanim, "<dev string:x81>"));
     starttime = getnotetracktimes(mocompanim, "start_effect")[0];
     var_df235bea = getmovedelta(mocompanim, 0, starttime, entity);
     startpos = entity localtoworldcoords(var_df235bea);
-    assert(animhasnotetrack(mocompanim, "juke_active"));
+    assert(animhasnotetrack(mocompanim, "<dev string:x8e>"));
     stoptime = getnotetracktimes(mocompanim, "end_effect")[0];
     var_5becc98c = getmovedelta(mocompanim, 0, stoptime, entity);
     stoppos = entity localtoworldcoords(var_5becc98c);
     /#
-        recordsphere(startpos, 3, (0, 0, 1), "juke_active", entity);
-        recordsphere(stoppos, 3, (0, 0, 1), "juke_active", entity);
-        recordline(entity.origin, startpos, (0, 0, 1), "juke_active", entity);
-        recordline(startpos, stoppos, (0, 0, 1), "juke_active", entity);
-        recordline(stoppos, landpos, (0, 0, 1), "juke_active", entity);
+        recordsphere(startpos, 3, (0, 0, 1), "<dev string:x79>", entity);
+        recordsphere(stoppos, 3, (0, 0, 1), "<dev string:x79>", entity);
+        recordline(entity.origin, startpos, (0, 0, 1), "<dev string:x79>", entity);
+        recordline(startpos, stoppos, (0, 0, 1), "<dev string:x79>", entity);
+        recordline(stoppos, landpos, (0, 0, 1), "<dev string:x79>", entity);
     #/
     var_bf7e71d5 = stoppos + (0, 0, heightdiff);
     /#
-        recordline(startpos, var_bf7e71d5, (0, 1, 0), "juke_active", entity);
-        recordline(var_bf7e71d5, var_c23f776, (0, 1, 0), "juke_active", entity);
-        recordsphere(var_bf7e71d5, 3, (0, 1, 0), "juke_active", entity);
+        recordline(startpos, var_bf7e71d5, (0, 1, 0), "<dev string:x79>", entity);
+        recordline(var_bf7e71d5, var_c23f776, (0, 1, 0), "<dev string:x79>", entity);
+        recordsphere(var_bf7e71d5, 3, (0, 1, 0), "<dev string:x79>", entity);
     #/
     entity.var_7d30a04a = new class_7d30a04a();
     entity.var_7d30a04a.starttime = starttime;
@@ -566,10 +566,10 @@ function function_7e253d5(entity, mocompanim, mocompanimblendouttime, mocompanim
     entity.var_7d30a04a.var_c23f776 = var_c23f776;
     /#
         if (heightdiff < 0) {
-            record3dtext("juke_active" + distance(landpos, var_c23f776) + "juke_active" + entity.var_7d30a04a.stepsize + "juke_active" + adjustduration, var_c23f776, (1, 0.5, 0), "juke_active");
+            record3dtext("<dev string:x99>" + distance(landpos, var_c23f776) + "<dev string:x9b>" + entity.var_7d30a04a.stepsize + "<dev string:x9b>" + adjustduration, var_c23f776, (1, 0.5, 0), "<dev string:x79>");
             return;
         }
-        record3dtext("juke_active" + distance(landpos, var_c23f776) + "juke_active" + entity.var_7d30a04a.stepsize + "juke_active" + adjustduration, var_c23f776, (1, 0.5, 0), "juke_active");
+        record3dtext("<dev string:x9d>" + distance(landpos, var_c23f776) + "<dev string:x9b>" + entity.var_7d30a04a.stepsize + "<dev string:x9b>" + adjustduration, var_c23f776, (1, 0.5, 0), "<dev string:x79>");
     #/
 }
 
@@ -635,15 +635,15 @@ function function_2dbbd110(entity, mocompanim, mocompanimblendouttime, mocompani
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2bb21308, Offset: 0x3ed8
 // Size: 0x3a
-function function_e28d10bc(entity) {
-    return function_6faf5c02(entity) || function_846947d8(entity);
+function apothiconCanMeleeAttack(entity) {
+    return apothiconCanBamf(entity) || apothiconShouldMeleeCondition(entity);
 }
 
 // Namespace namespace_53429ee4
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa2bba148, Offset: 0x3f20
 // Size: 0x164
-function function_846947d8(behaviortreeentity) {
+function apothiconShouldMeleeCondition(behaviortreeentity) {
     if (isdefined(behaviortreeentity.enemyoverride) && isdefined(behaviortreeentity.enemyoverride[1])) {
         return false;
     }
@@ -670,7 +670,7 @@ function function_846947d8(behaviortreeentity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xad513294, Offset: 0x4090
 // Size: 0x22
-function function_dfb1e4f7(entity) {
+function apothiconCanBamfAfterJuke(entity) {
     return function_d0f50cb1(entity);
 }
 
@@ -678,7 +678,7 @@ function function_dfb1e4f7(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x1fea1b65, Offset: 0x40c0
 // Size: 0x22
-function function_6faf5c02(entity) {
+function apothiconCanBamf(entity) {
     return function_d0f50cb1(entity);
 }
 
@@ -773,7 +773,7 @@ function function_a6019ee6(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x95fa6968, Offset: 0x4628
 // Size: 0xf4
-function function_97e56cce(entity) {
+function apothiconBamfInit(entity) {
     jukeinfo = spawnstruct();
     jukeinfo.origin = entity.origin;
     jukeinfo.entity = entity;
@@ -789,7 +789,7 @@ function function_97e56cce(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x37f2eead, Offset: 0x4728
 // Size: 0x4c
-function function_3926ee39(entity) {
+function apothiconShouldTauntAtPlayer(entity) {
     var_3f463f4c = blackboard::getblackboardevents("apothicon_fury_taunt");
     if (isdefined(var_3f463f4c) && var_3f463f4c.size) {
         return false;
@@ -801,7 +801,7 @@ function function_3926ee39(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe69994ed, Offset: 0x4780
 // Size: 0x7c
-function function_f5222bfe(entity) {
+function apothiconTauntAtPlayerEvent(entity) {
     jukeinfo = spawnstruct();
     jukeinfo.origin = entity.origin;
     jukeinfo.entity = entity;
@@ -841,7 +841,7 @@ function function_eac19177(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x15902495, Offset: 0x49c8
 // Size: 0x38
-function function_29c4b423(entity) {
+function apothiconMoveStart(entity) {
     entity.movetime = gettime();
     entity.moveorigin = entity.origin;
 }
@@ -850,7 +850,7 @@ function function_29c4b423(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdcf170d, Offset: 0x4a08
 // Size: 0x138
-function function_f9d34dc6(entity) {
+function apothiconMoveUpdate(entity) {
     if (isdefined(entity.move_anim_end_time) && gettime() >= entity.move_anim_end_time) {
         entity.move_anim_end_time = undefined;
         return;
@@ -873,7 +873,7 @@ function function_f9d34dc6(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe5457c01, Offset: 0x4b48
 // Size: 0x20a
-function function_556629b3(entity) {
+function apothiconKnockdownService(entity) {
     if (isdefined(entity.isjuking) && entity.isjuking) {
         return;
     }
@@ -996,7 +996,7 @@ function function_fca24ca2(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa45e8cb6, Offset: 0x5398
 // Size: 0x140
-function function_ee6717e6(entity) {
+function apothiconFuriousModeInit(entity) {
     if (!function_fca24ca2(entity)) {
         return;
     }
@@ -1015,7 +1015,7 @@ function function_ee6717e6(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7b68c4df, Offset: 0x5590
 // Size: 0xf8
-function function_9148e6d9(entity) {
+function apothiconPreemptiveJukeService(entity) {
     if (!(isdefined(entity.var_e78a1124) && entity.var_e78a1124)) {
         return 0;
     }
@@ -1030,7 +1030,7 @@ function function_9148e6d9(entity) {
             return 0;
         }
     }
-    if (function_d56a72a7(entity)) {
+    if (apothiconCanJuke(entity)) {
         entity.var_e88acff0 = 1;
     }
 }
@@ -1039,7 +1039,7 @@ function function_9148e6d9(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xaf69401, Offset: 0x5690
 // Size: 0x2e
-function function_741eeaa1(entity) {
+function apothiconPreemptiveJukePending(entity) {
     return isdefined(entity.var_e88acff0) && entity.var_e88acff0;
 }
 
@@ -1047,7 +1047,7 @@ function function_741eeaa1(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4dcf272b, Offset: 0x56c8
 // Size: 0x1c
-function function_6ca3d080(entity) {
+function apothiconPreemptiveJukeDone(entity) {
     entity.var_e88acff0 = 0;
 }
 
@@ -1055,7 +1055,7 @@ function function_6ca3d080(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2052786d, Offset: 0x56f0
 // Size: 0x37a
-function function_d56a72a7(entity) {
+function apothiconCanJuke(entity) {
     if (!ai::getaiattribute(entity, "can_juke")) {
         return false;
     }
@@ -1104,7 +1104,7 @@ function function_d56a72a7(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x49f6c65e, Offset: 0x5a78
 // Size: 0x1dc
-function function_5d6a8bf3(entity) {
+function apothiconJukeInit(entity) {
     jukeinfo = function_e01b0078(entity);
     assert(isdefined(jukeinfo));
     blackboard::setblackboardattribute(entity, "_juke_distance", jukeinfo.jukedistance);
@@ -1145,21 +1145,21 @@ function function_13fcf9f0(entity, entityradius, var_e7c0926f) {
         return undefined;
     }
     /#
-        recordline(entity.origin, predictedpos, (0, 1, 0), "juke_active", entity);
+        recordline(entity.origin, predictedpos, (0, 1, 0), "<dev string:x79>", entity);
     #/
     /#
-        recordsphere(var_a7e9532d, 2, (1, 0, 0), "juke_active", entity);
+        recordsphere(var_a7e9532d, 2, (1, 0, 0), "<dev string:x79>", entity);
     #/
     /#
-        recordline(predictedpos, var_a7e9532d, (1, 0, 0), "juke_active", entity);
+        recordline(predictedpos, var_a7e9532d, (1, 0, 0), "<dev string:x79>", entity);
     #/
     if (ispointonnavmesh(var_c23f776, entity.entityradius * 2.5) && tracepassedonnavmesh(predictedpos, var_c23f776, entity.entityradius)) {
         if (!entity isposinclaimedlocation(var_c23f776) && entity maymovefrompointtopoint(predictedpos, var_c23f776, 0, 0)) {
             /#
-                recordsphere(var_c23f776, 2, (0, 1, 0), "juke_active", entity);
+                recordsphere(var_c23f776, 2, (0, 1, 0), "<dev string:x79>", entity);
             #/
             /#
-                recordline(predictedpos, var_c23f776, (0, 1, 0), "juke_active", entity);
+                recordline(predictedpos, var_c23f776, (0, 1, 0), "<dev string:x79>", entity);
             #/
             return var_c23f776;
         }
@@ -1314,7 +1314,7 @@ function function_59f30845(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa5c82bb0, Offset: 0x6990
 // Size: 0x64
-function function_dbc8bb18(entity) {
+function apothiconDeathStart(entity) {
     entity setmodel("c_zom_dlc4_apothicon_fury_dissolve");
     entity clientfield::set("apothicon_fury_death", 2);
     entity notsolid();
@@ -1324,7 +1324,7 @@ function function_dbc8bb18(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf2a9c16, Offset: 0x6a00
 // Size: 0xc
-function function_3640f9c1(entity) {
+function apothiconDeathTerminate(entity) {
     
 }
 
@@ -1393,16 +1393,16 @@ function function_20a7d744(entity, attribute, oldvalue, value) {
         return;
     }
     switch (value) {
-    case 94:
+    case "walk":
         blackboard::setblackboardattribute(entity, "_locomotion_speed", "locomotion_speed_walk");
         break;
-    case 91:
+    case "run":
         blackboard::setblackboardattribute(entity, "_locomotion_speed", "locomotion_speed_run");
         break;
-    case 92:
+    case "sprint":
         blackboard::setblackboardattribute(entity, "_locomotion_speed", "locomotion_speed_sprint");
         break;
-    case 93:
+    case "super_sprint":
         blackboard::setblackboardattribute(entity, "_locomotion_speed", "locomotion_speed_super_sprint");
         break;
     default:

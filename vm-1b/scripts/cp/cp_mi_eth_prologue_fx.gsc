@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_34e37984;
+#namespace cp_mi_eth_prologue_fx;
 
-// Namespace namespace_34e37984
+// Namespace cp_mi_eth_prologue_fx
 // Params 0, eflags: 0x0
 // Checksum 0xea47657c, Offset: 0x2d0
 // Size: 0x10b

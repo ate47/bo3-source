@@ -3,9 +3,9 @@
 #using scripts/shared/scene_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_6b1ea3e0;
+#namespace mp_miniature_ladybug;
 
-// Namespace namespace_6b1ea3e0
+// Namespace mp_miniature_ladybug
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb750ebe4, Offset: 0x4f8
 // Size: 0x27a
@@ -23,7 +23,7 @@ function main() {
     }
 }
 
-// Namespace namespace_6b1ea3e0
+// Namespace mp_miniature_ladybug
 // Params 2, eflags: 0x1 linked
 // Checksum 0xe82ec69a, Offset: 0x780
 // Size: 0x12c

@@ -1,9 +1,9 @@
 #using scripts/shared/fx_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_5633db91;
+#namespace mp_cryogen_fx;
 
-// Namespace namespace_5633db91
+// Namespace mp_cryogen_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xb0
 // Size: 0x4

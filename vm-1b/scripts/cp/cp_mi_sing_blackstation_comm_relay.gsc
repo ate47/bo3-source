@@ -24,9 +24,9 @@
 #using scripts/cp/_dialog;
 #using scripts/codescripts/struct;
 
-#namespace namespace_641b22d4;
+#namespace cp_mi_sing_blackstation_comm_relay;
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 2, eflags: 0x0
 // Checksum 0xa27ece96, Offset: 0xd58
 // Size: 0x19a
@@ -50,7 +50,7 @@ function function_c9040e7d(str_objective, var_74cd64bc) {
     function_d04ca07c();
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 4, eflags: 0x0
 // Checksum 0x24eb4dac, Offset: 0xf00
 // Size: 0x22
@@ -58,7 +58,7 @@ function function_311be427(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0xfd507ea4, Offset: 0xf30
 // Size: 0xaa
@@ -75,7 +75,7 @@ function function_d04ca07c() {
     skipto::function_be8adfb8("objective_comm_relay_traverse");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 2, eflags: 0x0
 // Checksum 0xd7f9e56d, Offset: 0xfe8
 // Size: 0x152
@@ -99,7 +99,7 @@ function function_a2073f94(str_objective, var_74cd64bc) {
     function_20386e5d();
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x2dcad632, Offset: 0x1148
 // Size: 0x15a
@@ -115,7 +115,7 @@ function function_6c97cd4() {
     spawner::simple_spawn("comm_relay_awaken_robot3", &function_1cf52369);
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 4, eflags: 0x0
 // Checksum 0x15850b3d, Offset: 0x12b0
 // Size: 0x82
@@ -126,7 +126,7 @@ function function_7e7b796a(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     objectives::set("cp_level_blackstation_rendezvous");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x19d5e1ef, Offset: 0x1340
 // Size: 0x1b2
@@ -134,7 +134,7 @@ function function_20386e5d() {
     level thread function_76732cae();
     level thread function_5c3fb5af();
     level thread function_e011018();
-    level thread function_bcbf009b();
+    level thread table_flip();
     level thread function_5470e1dd();
     array::thread_all(level.activeplayers, &namespace_79e1cd97::function_d870e0, "trig_comm_relay_approach");
     array::thread_all(level.activeplayers, &namespace_79e1cd97::function_d870e0, "comm_relay_interior_hendricks");
@@ -149,7 +149,7 @@ function function_20386e5d() {
     level.var_2fd26037 notify(#"hash_d60979de");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x1aae142a, Offset: 0x1500
 // Size: 0x62
@@ -159,16 +159,16 @@ function function_76732cae() {
     glassradiusdamage(var_ca17143d.origin, 10, 5000, 5000);
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x256c14da, Offset: 0x1570
 // Size: 0x12
 function function_7b57f76b() {
-    wait(5);
+    wait 5;
     self delete();
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x4cb3ced5, Offset: 0x1590
 // Size: 0x82
@@ -180,7 +180,7 @@ function function_3cd30cbd() {
     level objectives::breadcrumb("waypoint_comm_relay");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0xdb2db22d, Offset: 0x1620
 // Size: 0x32
@@ -189,13 +189,13 @@ function function_9e1e35a() {
     level objectives::breadcrumb("waypoint_comm_relay");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0xb788cf9e, Offset: 0x1660
 // Size: 0xea
 function function_e312f792() {
     level thread function_9520d9e4();
-    level endon(#"hash_90257695");
+    level endon(#"comm_relay_engaged");
     trigger::wait_till("t_comms_vo");
     level.var_2fd26037 dialog::say("hend_so_kane_now_that_t_0");
     level dialog::remote("kane_strike_and_strip_b_0", 0.5);
@@ -205,7 +205,7 @@ function function_e312f792() {
     level.var_2fd26037 dialog::say("hend_kane_we_re_approac_0");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 1, eflags: 0x0
 // Checksum 0xeae5dfa3, Offset: 0x1758
 // Size: 0x92
@@ -221,19 +221,19 @@ function function_9520d9e4(var_74cd64bc) {
     level objectives::complete("cp_waypoint_breadcrumb");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x1805b45a, Offset: 0x17f8
 // Size: 0x4a
 function function_8f139027() {
     level endon(#"hash_60ad62af");
-    wait(25);
+    wait 25;
     level.var_2fd26037 dialog::say("hend_come_on_get_to_work_0");
-    wait(15);
+    wait 15;
     level.var_2fd26037 dialog::say("hend_we_don_t_got_all_day_0");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x733d932, Offset: 0x1850
 // Size: 0x272
@@ -254,7 +254,7 @@ function function_6d389c01() {
     level flag::set("comm_relay_engaged");
     self.fovcosine = 0;
     while (self.health > var_ebfa948) {
-        wait(0.05);
+        wait 0.05;
     }
     level thread scene::play("cin_bla_11_06_comm_vign_scramble_destroyrobot", self);
     e_clip delete();
@@ -271,7 +271,7 @@ function function_6d389c01() {
     util::function_14518e76(var_f0e94a11, %cp_level_blackstation_hack_relay, %CP_MI_SING_BLACKSTATION_MOVE_ROBOT, &function_af9d4545, self);
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 1, eflags: 0x0
 // Checksum 0x9518401b, Offset: 0x1ad0
 // Size: 0x19a
@@ -296,7 +296,7 @@ function function_af9d4545(e_player) {
     level flag::set("comm_relay_hacked");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 1, eflags: 0x0
 // Checksum 0x87f2cd0f, Offset: 0x1c78
 // Size: 0x75
@@ -306,11 +306,11 @@ function function_77ccb9da(a_ents) {
     e_player = a_ents["player 1"];
     while (!level flag::get("comm_relay_pulse")) {
         e_player cybercom::function_f8669cbf(1);
-        wait(3.05);
+        wait 3.05;
     }
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0xef898301, Offset: 0x1cf8
 // Size: 0x22
@@ -319,7 +319,7 @@ function function_53f20e51() {
     level flag::set("comm_relay_pulse");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x98c99d9c, Offset: 0x1d28
 // Size: 0x25a
@@ -328,7 +328,7 @@ function function_5be784f3() {
     getent("com_rugged_on", "targetname") delete();
     getent("com_curve_glitch_1", "targetname") show();
     getent("com_rugged_glitch_1", "targetname") show();
-    wait(7);
+    wait 7;
     getent("com_curve_glitch_1", "targetname") delete();
     getent("com_rugged_glitch_1", "targetname") delete();
     getent("com_curve_glitch_2", "targetname") show();
@@ -340,7 +340,7 @@ function function_5be784f3() {
     getent("com_rugged_off", "targetname") show();
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 1, eflags: 0x0
 // Checksum 0x8f37fa0d, Offset: 0x1f90
 // Size: 0x6a
@@ -354,18 +354,18 @@ function function_104ecb4b(a_ents) {
     level thread scene::play("cin_bla_11_01_comm_vign_scramble_hendricks_talk2kane");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0xf0f45541, Offset: 0x2008
 // Size: 0x42
 function function_4c16ca2b() {
-    level endon(#"hash_549a5f32");
+    level endon(#"comm_relay_hacked");
     self waittill(#"death");
     level flag::set("comm_relay_hacked");
     level.var_2fd26037 stopanimscripted();
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0xab5bab18, Offset: 0x2058
 // Size: 0x2a
@@ -374,7 +374,7 @@ function function_6c35b4f3() {
     level thread namespace_4297372::function_6c35b4f3();
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0xc9120f03, Offset: 0x2090
 // Size: 0x10a
@@ -392,31 +392,31 @@ function function_9ead7187() {
     level thread scene::play("cin_bla_11_02_comm_vign_doorkick", level.var_2fd26037);
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 1, eflags: 0x0
 // Checksum 0x9787dda9, Offset: 0x21a8
 // Size: 0xca
 function function_6eaf20ba(a_ents) {
-    wait(0.5);
+    wait 0.5;
     level.var_2fd26037 colors::enable();
     trigger::use("triggercolor_walkway");
-    wait(0.5);
+    wait 0.5;
     getent("comrelay_door_clip_right", "targetname") delete();
     getent("comrelay_door_clip_left", "targetname") delete();
     level.var_2fd26037 ai::set_behavior_attribute("cqb", 0);
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x7bb31b48, Offset: 0x2280
 // Size: 0x3a
 function function_aadd72bd() {
     self endon(#"death");
-    wait(randomint(5));
+    wait randomint(5);
     self ai::set_behavior_attribute("move_mode", "rusher");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0xd443e6d7, Offset: 0x22c8
 // Size: 0x11a
@@ -435,17 +435,17 @@ function function_8d47a6e7() {
     }
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x3c326588, Offset: 0x23f0
 // Size: 0x33
 function function_862c1664() {
     self endon(#"death");
     trigger::wait_till("trig_comm_relay_proximity", "targetname");
-    self notify(#"hash_2bab7a99");
+    self notify(#"comm_relay_proximity");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0xfe459877, Offset: 0x2430
 // Size: 0x2a
@@ -454,26 +454,26 @@ function function_3245f6e9() {
     self ai::set_behavior_attribute("move_mode", "rambo");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0xfbfbab03, Offset: 0x2468
 // Size: 0xeb
 function function_e3e0028() {
     self endon(#"death");
-    level endon(#"hash_90257695");
+    level endon(#"comm_relay_engaged");
     next_node = getnearestnode(self.origin);
     do {
         self ai::force_goal(next_node, 4);
         self waittill(#"goal");
         if (isdefined(next_node.script_wait_min) && isdefined(next_node.script_wait_max)) {
             self ai::force_goal(self.origin + anglestoforward(next_node.angles) * 16, 4);
-            wait(randomfloatrange(next_node.script_wait_min, next_node.script_wait_max));
+            wait randomfloatrange(next_node.script_wait_min, next_node.script_wait_max);
         }
         next_node = getnode(next_node.target, "targetname");
     } while (isdefined(next_node));
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x408a0a0c, Offset: 0x2560
 // Size: 0x52
@@ -483,13 +483,13 @@ function function_70643fc() {
     self setgoal(getent("comm_relay_back_volume", "targetname"), 1);
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x983568f7, Offset: 0x25c0
 // Size: 0x1e2
 function function_1cf52369() {
     self endon(#"death");
-    level endon(#"hash_4c3316ac");
+    level endon(#"relay_room_clear");
     self.script_noteworthy = "awakened_robot";
     s_scene = struct::get(self.target);
     s_scene scene::init(s_scene.scriptbundlename, self);
@@ -497,7 +497,7 @@ function function_1cf52369() {
     mdl_origin scene::init("p7_fxanim_cp_sgen_charging_station_open_01_bundle");
     level flag::wait_till("comm_relay_engaged");
     level util::waittill_any_timeout(45, "comm_relay_back_room", "defenders_low");
-    wait(randomfloatrange(2.5, 4));
+    wait randomfloatrange(2.5, 4);
     level scene::add_scene_func(s_scene.scriptbundlename, &function_48aa6d93, "done");
     s_scene thread scene::play(s_scene.scriptbundlename, self);
     level flag::set("awakening_begun");
@@ -507,7 +507,7 @@ function function_1cf52369() {
     self setgoal(getent("comm_relay_back_volume", "targetname"));
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 1, eflags: 0x0
 // Checksum 0xf0e5e137, Offset: 0x27b0
 // Size: 0x5f
@@ -517,7 +517,7 @@ function function_48aa6d93(a_ents) {
     }
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x2c40025d, Offset: 0x2818
 // Size: 0xda
@@ -536,24 +536,24 @@ function function_5c3fb5af() {
     level flag::set("relay_room_clear");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0xfbb1cf6e, Offset: 0x2900
 // Size: 0x3b
 function function_66606bc7() {
     level flag::wait_till("comm_relay_engaged");
     spawner::waittill_ai_group_count("comm_relay_defenders", 4);
-    level notify(#"hash_50f53660");
+    level notify(#"defenders_low");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x5233c475, Offset: 0x2948
 // Size: 0x85
 function function_5458238e() {
-    level endon(#"hash_4c3316ac");
+    level endon(#"relay_room_clear");
     while (true) {
-        wait(0.25);
+        wait 0.25;
         level.var_1cf6a131 = getaiarray("awakened_robot", "script_noteworthy");
         if (level.var_1cf6a131.size > 0) {
             level flag::set_val("no_awakened_robots", 0);
@@ -563,7 +563,7 @@ function function_5458238e() {
     }
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x11f414de, Offset: 0x29d8
 // Size: 0x52
@@ -572,12 +572,12 @@ function function_5470e1dd() {
     array::thread_all(level.activeplayers, &function_48e2699d, var_e0d020c4);
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 1, eflags: 0x0
 // Checksum 0x5192d89a, Offset: 0x2a38
 // Size: 0x95
 function function_48e2699d(var_27fbdccf) {
-    level endon(#"hash_bcbf009b");
+    level endon(#"table_flip");
     self endon(#"death");
     n_distsq = 250000;
     while (true) {
@@ -585,11 +585,11 @@ function function_48e2699d(var_27fbdccf) {
         if (distance2dsquared(self.origin, var_27fbdccf.origin) <= n_distsq) {
             level flag::set("go_flippers");
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x68691860, Offset: 0x2ad8
 // Size: 0x42
@@ -598,7 +598,7 @@ function function_e011018() {
     spawner::simple_spawn("comm_relay_table_flippers", &function_34bb534a);
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0xe373cad7, Offset: 0x2b28
 // Size: 0x72
@@ -612,11 +612,11 @@ function function_34bb534a() {
     self ai::set_behavior_attribute("sprint", 0);
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0x5e5c7a14, Offset: 0x2ba8
 // Size: 0x11a
-function function_bcbf009b() {
+function table_flip() {
     level flag::wait_till("table_flip");
     a_table = getentarray("com_relay_table", "targetname");
     namespace_79e1cd97::function_da77906f(a_table, "connect");
@@ -629,7 +629,7 @@ function function_bcbf009b() {
     namespace_79e1cd97::function_da77906f(a_table, "disconnect");
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0xb2f0a648, Offset: 0x2cd0
 // Size: 0x42
@@ -637,7 +637,7 @@ function function_e762f0f7() {
     array::thread_all(getentarray("trig_atrium_glass", "targetname"), &function_be761c1);
 }
 
-// Namespace namespace_641b22d4
+// Namespace cp_mi_sing_blackstation_comm_relay
 // Params 0, eflags: 0x0
 // Checksum 0xed3533ba, Offset: 0x2d20
 // Size: 0x8a

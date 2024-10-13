@@ -36,7 +36,7 @@ function init() {
     callback::on_player_killed(&on_player_killed);
     for (;;) {
         updatefriendiconsettings();
-        wait(5);
+        wait 5;
     }
 }
 

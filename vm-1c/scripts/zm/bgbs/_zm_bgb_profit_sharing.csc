@@ -6,9 +6,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_19b2be8a;
+#namespace zm_bgb_profit_sharing;
 
-// Namespace namespace_19b2be8a
+// Namespace zm_bgb_profit_sharing
 // Params 0, eflags: 0x2
 // Checksum 0x7fa579b3, Offset: 0x1f8
 // Size: 0x34
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_profit_sharing", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_19b2be8a
+// Namespace zm_bgb_profit_sharing
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8cf3600f, Offset: 0x238
 // Size: 0xd8
@@ -30,7 +30,7 @@ function __init__() {
     level.var_75dff42 = [];
 }
 
-// Namespace namespace_19b2be8a
+// Namespace zm_bgb_profit_sharing
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8a6bb27d, Offset: 0x318
 // Size: 0x128
@@ -54,7 +54,7 @@ function function_df72a623(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_19b2be8a
+// Namespace zm_bgb_profit_sharing
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6b98415e, Offset: 0x448
 // Size: 0xf8

@@ -59,7 +59,7 @@ class class_b4b9e1e4 {
         var_ab455203 showpart("tag_weapons_03_jnt");
         var_ab455203 showpart("tag_weapons_04_jnt");
         var_ab455203 scene::play("p7_fxanim_gp_mobile_armory_open_bundle", var_ab455203);
-        wait(1);
+        wait 1;
         var_d3571721 = 1;
         while (var_d3571721 > 0) {
             var_d3571721 = 0;
@@ -69,7 +69,7 @@ class class_b4b9e1e4 {
                     var_d3571721++;
                 }
             }
-            wait(0.5);
+            wait 0.5;
         }
         var_ab455203 scene::play("p7_fxanim_gp_mobile_armory_close_bundle", var_ab455203);
         var_ab455203 hidepart("tag_weapons_01_jnt");
@@ -111,7 +111,7 @@ class class_b4b9e1e4 {
         item = self dropitem(weapon, "tag_origin");
         if (!isdefined(item)) {
             /#
-                iprintlnbold("HINT_INTERACTIVE_PROMPT" + weapon.name + "HINT_INTERACTIVE_PROMPT");
+                iprintlnbold("<dev string:x40>" + weapon.name + "<dev string:x67>");
             #/
             return;
         }
@@ -129,7 +129,7 @@ class class_b4b9e1e4 {
     function function_afd39ac7(e_player) {
         self.var_ab455203.gameobject.var_6f180198 = &function_66708329;
         self.var_ab455203.gameobject.var_3df2554f = e_player;
-        wait(0.25);
+        wait 0.25;
         self.var_ab455203.gameobject.var_6f180198 = undefined;
     }
 
@@ -177,7 +177,7 @@ class class_b4b9e1e4 {
             }
             if (weapon != var_5b2a650 && (weapon.inventorytype == "primary" || e_player function_76f34311("cybercom_copycat") && weapon.inventorytype == "secondary") && weapon != var_95cf88cc) {
                 /#
-                    iprintln("HINT_INTERACTIVE_PROMPT");
+                    iprintln("<dev string:x28>");
                 #/
                 if (response != "cancel") {
                     e_player function_6b1fa4df(weapon);
@@ -234,7 +234,7 @@ class class_b4b9e1e4 {
             self thread function_afd39ac7(e_player);
             e_player hideviewmodel();
             e_player disableweapons(1);
-            wait(0.5);
+            wait 0.5;
             e_player showviewmodel();
             e_player util::function_ee182f5d();
         }
@@ -353,7 +353,7 @@ function __main__() {
     } else if (isdefined(level.var_40b3237f)) {
         [[ level.var_40b3237f ]]();
     }
-    wait(0.05);
+    wait 0.05;
     var_9f34c934 = getentarray("mobile_armory", "script_noteworthy");
     foreach (var_96eb5b14 in var_9f34c934) {
         mobile_armory = new class_b4b9e1e4();

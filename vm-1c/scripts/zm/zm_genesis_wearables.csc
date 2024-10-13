@@ -2,9 +2,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_50411410;
+#namespace zm_genesis_wearables;
 
-// Namespace namespace_50411410
+// Namespace zm_genesis_wearables
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf78e7320, Offset: 0x160
 // Size: 0xf4
@@ -16,7 +16,7 @@ function function_ad78a144() {
     clientfield::register("scriptmover", "battery_fx", 15000, 2, "int", &function_f51349bf, 0, 0);
 }
 
-// Namespace namespace_50411410
+// Namespace zm_genesis_wearables
 // Params 7, eflags: 0x1 linked
 // Checksum 0x58548947, Offset: 0x260
 // Size: 0x19c

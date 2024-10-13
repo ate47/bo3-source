@@ -71,7 +71,7 @@ function boost_blur(localclientnum) {
     self endon(#"entityshutdown");
     if (isdefined(self.owner) && self.owner islocalplayer()) {
         enablespeedblur(localclientnum, getdvarfloat("scr_rcbomb_amount", 0.1), getdvarfloat("scr_rcbomb_inner_radius", 0.5), getdvarfloat("scr_rcbomb_outer_radius", 0.75), 0, 0);
-        wait(getdvarfloat("scr_rcbomb_duration", 1));
+        wait getdvarfloat("scr_rcbomb_duration", 1);
         disablespeedblur(localclientnum);
     }
 }
@@ -189,7 +189,7 @@ function play_stunned_fx_handler(localclientnum) {
     self endon(#"not_stunned");
     while (true) {
         playfxontag(localclientnum, level._effect["rcbomb_stunned"], self, "tag_origin");
-        wait(0.5);
+        wait 0.5;
     }
 }
 

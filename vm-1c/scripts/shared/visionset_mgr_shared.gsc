@@ -34,7 +34,7 @@ function __init__() {
 // Checksum 0xb386f735, Offset: 0x278
 // Size: 0x1a0
 function register_info(type, name, version, priority, lerp_step_count, should_activate_per_player, lerp_thread, ref_count_lerp_thread) {
-    assert(level.vsmgr_initializing, "float");
+    assert(level.vsmgr_initializing, "<dev string:x28>");
     lower_name = tolower(name);
     validate_info(type, lower_name, priority);
     add_sorted_name_key(type, lower_name);
@@ -130,7 +130,7 @@ function timeout_lerp_thread(timeout, opt_param_2, opt_param_3) {
     for (player_index = 0; player_index < players.size; player_index++) {
         self set_state_active(players[player_index], 1);
     }
-    wait(timeout);
+    wait timeout;
     deactivate(self.type, self.name);
 }
 
@@ -140,7 +140,7 @@ function timeout_lerp_thread(timeout, opt_param_2, opt_param_3) {
 // Size: 0x6c
 function timeout_lerp_thread_per_player(player, timeout, opt_param_2, opt_param_3) {
     self set_state_active(player, 1);
-    wait(timeout);
+    wait timeout;
     deactivate_per_player(self.type, self.name, player);
 }
 
@@ -163,7 +163,7 @@ function duration_lerp_thread(duration, max_duration) {
         for (player_index = 0; player_index < players.size; player_index++) {
             self set_state_active(players[player_index], lerp);
         }
-        wait(0.05);
+        wait 0.05;
     }
     deactivate(self.type, self.name);
 }
@@ -184,7 +184,7 @@ function duration_lerp_thread_per_player(player, duration, max_duration) {
             break;
         }
         self set_state_active(player, lerp);
-        wait(0.05);
+        wait 0.05;
     }
     deactivate_per_player(self.type, self.name, player);
 }
@@ -202,7 +202,7 @@ function ramp_in_thread_per_player(player, duration) {
             break;
         }
         self set_state_active(player, lerp);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -216,7 +216,7 @@ function ramp_in_out_thread_hold_func() {
         for (player_index = 0; player_index < level.players.size; player_index++) {
             self set_state_active(level.players[player_index], 1);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -236,13 +236,13 @@ function ramp_in_out_thread(ramp_in, full_period, ramp_out) {
         for (player_index = 0; player_index < players.size; player_index++) {
             self set_state_active(players[player_index], lerp);
         }
-        wait(0.05);
+        wait 0.05;
     }
     self thread ramp_in_out_thread_hold_func();
     if (isfunctionptr(full_period)) {
         self [[ full_period ]]();
     } else {
-        wait(full_period);
+        wait full_period;
     }
     level notify(#"kill_ramp_in_out_thread_hold_func");
     start_time = gettime();
@@ -256,7 +256,7 @@ function ramp_in_out_thread(ramp_in, full_period, ramp_out) {
         for (player_index = 0; player_index < players.size; player_index++) {
             self set_state_active(players[player_index], lerp);
         }
-        wait(0.05);
+        wait 0.05;
     }
     deactivate(self.type, self.name);
 }
@@ -274,13 +274,13 @@ function ramp_in_out_thread_per_player_internal(player, ramp_in, full_period, ra
             break;
         }
         self set_state_active(player, lerp);
-        wait(0.05);
+        wait 0.05;
     }
     self set_state_active(player, lerp);
     if (isfunctionptr(full_period)) {
         player [[ full_period ]]();
     } else {
-        wait(full_period);
+        wait full_period;
     }
     start_time = gettime();
     end_time = start_time + int(ramp_out * 1000);
@@ -290,7 +290,7 @@ function ramp_in_out_thread_per_player_internal(player, ramp_in, full_period, ra
             break;
         }
         self set_state_active(player, lerp);
-        wait(0.05);
+        wait 0.05;
     }
     deactivate_per_player(self.type, self.name, player);
 }
@@ -361,7 +361,7 @@ function finalize_clientfields() {
 // Checksum 0x1a29ad9, Offset: 0x14b8
 // Size: 0x264
 function finalize_type_clientfields() {
-    println("float" + self.type + "float");
+    println("<dev string:x9d>" + self.type + "<dev string:xad>");
     if (1 >= self.info.size) {
         return;
     }
@@ -373,7 +373,7 @@ function finalize_type_clientfields() {
         if (self.info[self.sorted_name_keys[i]].lerp_bit_count > self.cf_lerp_bit_count) {
             self.cf_lerp_bit_count = self.info[self.sorted_name_keys[i]].lerp_bit_count;
         }
-        println("float" + self.info[self.sorted_name_keys[i]].name + "float" + self.info[self.sorted_name_keys[i]].version + "float" + self.info[self.sorted_name_keys[i]].lerp_step_count + "float");
+        println("<dev string:xc5>" + self.info[self.sorted_name_keys[i]].name + "<dev string:xd0>" + self.info[self.sorted_name_keys[i]].version + "<dev string:xdc>" + self.info[self.sorted_name_keys[i]].lerp_step_count + "<dev string:xf0>");
     }
     clientfield::register("toplayer", self.cf_slot_name, self.highest_version, self.cf_slot_bit_count, "int");
     if (1 < self.cf_lerp_bit_count) {
@@ -392,11 +392,11 @@ function validate_info(type, name, priority) {
             break;
         }
     }
-    assert(i < keys.size, "float" + type + "float");
+    assert(i < keys.size, "<dev string:xf1>" + type + "<dev string:x10a>");
     keys = getarraykeys(level.vsmgr[type].info);
     for (i = 0; i < keys.size; i++) {
-        assert(level.vsmgr[type].info[keys[i]].name != name, "float" + type + "float" + name + "float");
-        assert(level.vsmgr[type].info[keys[i]].priority != priority, "float" + type + "float" + priority + "float" + name + "float" + level.vsmgr[type].info[keys[i]].name + "float");
+        assert(level.vsmgr[type].info[keys[i]].name != name, "<dev string:x116>" + type + "<dev string:x131>" + name + "<dev string:x13b>");
+        assert(level.vsmgr[type].info[keys[i]].priority != priority, "<dev string:x116>" + type + "<dev string:x15c>" + priority + "<dev string:x16a>" + name + "<dev string:x181>" + level.vsmgr[type].info[keys[i]].name + "<dev string:x1af>");
     }
 }
 
@@ -510,11 +510,11 @@ function player_shutdown() {
 // Size: 0x144
 function monitor() {
     while (level.vsmgr_initializing) {
-        wait(0.05);
+        wait 0.05;
     }
     typekeys = getarraykeys(level.vsmgr);
     while (true) {
-        wait(0.05);
+        wait 0.05;
         waittillframeend();
         players = getplayers();
         for (type_index = 0; type_index < typekeys.size; type_index++) {

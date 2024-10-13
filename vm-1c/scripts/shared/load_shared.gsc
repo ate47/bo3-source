@@ -34,7 +34,7 @@ function autoexec function_2dc19561() {
 // Size: 0x22
 function autoexec first_frame() {
     level.first_frame = 1;
-    wait(0.05);
+    wait 0.05;
     level.first_frame = undefined;
 }
 
@@ -116,7 +116,7 @@ function count_network_frames() {
 function keep_time() {
     while (true) {
         level.time = gettime();
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -140,13 +140,13 @@ function keep_time() {
     // Checksum 0xdec56495, Offset: 0xc40
     // Size: 0xfc
     function function_bce02ad1() {
-        level.var_ed1cf314 = array("all_players_connected", "all_players_connected", "all_players_connected");
-        wait(1);
-        println("all_players_connected");
+        level.var_ed1cf314 = array("<dev string:x28>", "<dev string:x2a>", "<dev string:x2c>");
+        wait 1;
+        println("<dev string:x2e>");
         foreach (msg in level.var_ed1cf314) {
-            println("all_players_connected");
+            println("<dev string:x7d>");
         }
-        println("all_players_connected");
+        println("<dev string:x82>");
     }
 
     // Namespace load
@@ -155,9 +155,9 @@ function keep_time() {
     // Size: 0x110
     function level_notify_listener() {
         while (true) {
-            val = getdvarstring("all_players_connected");
-            if (val != "all_players_connected") {
-                toks = strtok(val, "all_players_connected");
+            val = getdvarstring("<dev string:xd2>");
+            if (val != "<dev string:xdf>") {
+                toks = strtok(val, "<dev string:xe0>");
                 if (toks.size == 3) {
                     level notify(toks[0], toks[1], toks[2]);
                 } else if (toks.size == 2) {
@@ -165,9 +165,9 @@ function keep_time() {
                 } else {
                     level notify(toks[0]);
                 }
-                setdvar("all_players_connected", "all_players_connected");
+                setdvar("<dev string:xd2>", "<dev string:xdf>");
             }
-            wait(0.2);
+            wait 0.2;
         }
     }
 
@@ -177,12 +177,12 @@ function keep_time() {
     // Size: 0x88
     function client_notify_listener() {
         while (true) {
-            val = getdvarstring("all_players_connected");
-            if (val != "all_players_connected") {
+            val = getdvarstring("<dev string:xe2>");
+            if (val != "<dev string:xdf>") {
                 util::clientnotify(val);
-                setdvar("all_players_connected", "all_players_connected");
+                setdvar("<dev string:xe2>", "<dev string:xdf>");
             }
-            wait(0.2);
+            wait 0.2;
         }
     }
 
@@ -233,10 +233,10 @@ function weapon_ammo() {
             }
             if (change_ammo) {
                 if (!isdefined(clip)) {
-                    assertmsg("all_players_connected" + weap.classname + "all_players_connected" + weap.origin + "all_players_connected");
+                    assertmsg("<dev string:xf0>" + weap.classname + "<dev string:xf9>" + weap.origin + "<dev string:xfb>");
                 }
                 if (!isdefined(extra)) {
-                    assertmsg("all_players_connected" + weap.classname + "all_players_connected" + weap.origin + "all_players_connected");
+                    assertmsg("<dev string:xf0>" + weap.classname + "<dev string:xf9>" + weap.origin + "<dev string:x12c>");
                 }
                 weap itemweaponsetammo(clip, extra);
                 weap itemweaponsetammo(clip, extra, 1);
@@ -299,11 +299,11 @@ function player_throwgrenade_timer() {
     self.lastgrenadetime = 0;
     while (true) {
         while (!self isthrowinggrenade()) {
-            wait(0.05);
+            wait 0.05;
         }
         self.lastgrenadetime = gettime();
         while (self isthrowinggrenade()) {
-            wait(0.05);
+            wait 0.05;
         }
     }
 }
@@ -371,7 +371,7 @@ function function_cebdcdf7() {
 function function_fed824a2(var_a211332b, var_3009c3f0) {
     self.failingmission = 1;
     setdvar("ui_deadquote", "");
-    wait(0.5);
+    wait 0.5;
     fontelem = newhudelem();
     fontelem.elemtype = "font";
     fontelem.font = "default";
@@ -414,7 +414,7 @@ function function_fed824a2(var_a211332b, var_3009c3f0) {
 // Size: 0x284
 function function_49fc0e66() {
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     var_e1479b80 = newclienthudelem(self);
     var_e1479b80.x = 0;
     var_e1479b80.y = 68;
@@ -450,7 +450,7 @@ function function_49fc0e66() {
 // Size: 0x284
 function function_f67aaa2d() {
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     var_e1479b80 = newclienthudelem(self);
     var_e1479b80.x = 0;
     var_e1479b80.y = 68;
@@ -486,7 +486,7 @@ function function_f67aaa2d() {
 // Size: 0x284
 function function_d88a3ecf() {
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     var_e1479b80 = newclienthudelem(self);
     var_e1479b80.x = 0;
     var_e1479b80.y = 68;
@@ -522,7 +522,7 @@ function function_d88a3ecf() {
 // Size: 0x284
 function function_a2ec9313() {
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     var_e1479b80 = newclienthudelem(self);
     var_e1479b80.x = 0;
     var_e1479b80.y = 68;
@@ -558,7 +558,7 @@ function function_a2ec9313() {
 // Size: 0x17c
 function function_8229d210() {
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     var_e1479b80 = newclienthudelem(self);
     var_e1479b80.x = 0;
     var_e1479b80.y = -10;
@@ -595,7 +595,7 @@ function function_e152ebb3(shader, iwidth, var_40c0cdd3, fdelay, x, y) {
     if (!isdefined(fdelay)) {
         fdelay = 0.5;
     }
-    wait(fdelay);
+    wait fdelay;
     overlay = newclienthudelem(self);
     if (isdefined(x)) {
         overlay.x = x;
@@ -644,7 +644,7 @@ function water_think() {
     level.depth_allow_crouch = 33;
     level.depth_allow_stand = 50;
     while (true) {
-        wait(0.05);
+        wait 0.05;
         players = getplayers();
         for (i = 0; i < players.size; i++) {
             if (players[i].inwater) {
@@ -693,9 +693,9 @@ function water_think() {
             if (players_in_water_count == 0) {
                 break;
             }
-            wait(0.5);
+            wait 0.5;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -712,13 +712,13 @@ function indicate_start(start) {
     hudelem.label = start;
     hudelem.alpha = 0;
     hudelem.fontscale = 3;
-    wait(1);
+    wait 1;
     hudelem fadeovertime(1);
     hudelem.alpha = 1;
-    wait(5);
+    wait 5;
     hudelem fadeovertime(1);
     hudelem.alpha = 0;
-    wait(1);
+    wait 1;
     hudelem destroy();
 }
 
@@ -738,7 +738,7 @@ function calculate_map_center() {
         }
         for (index = 0; index < nodes.size; index++) {
             if (nodes[index].type == "BAD NODE") {
-                println("all_players_connected", nodes[index].origin);
+                println("<dev string:x15d>", nodes[index].origin);
                 continue;
             }
             origin = nodes[index].origin;
@@ -746,7 +746,7 @@ function calculate_map_center() {
             level.nodesmaxs = math::expand_maxs(level.nodesmaxs, origin);
         }
         level.mapcenter = math::find_box_center(level.nodesmins, level.nodesmaxs);
-        println("all_players_connected", level.mapcenter);
+        println("<dev string:x19f>", level.mapcenter);
         setmapcenter(level.mapcenter);
     }
 }
@@ -778,7 +778,7 @@ function lerp_trigger_dvar_value(trigger, dvar, value, time) {
     for (i = 0; i < steps; i++) {
         curr_value -= diff;
         setsaveddvar(dvar, curr_value);
-        wait(0.05);
+        wait 0.05;
     }
     setsaveddvar(dvar, value);
     trigger.lerping_dvar[dvar] = 0;
@@ -803,7 +803,7 @@ function set_fog_progress(progress) {
     // Checksum 0xa50b7b47, Offset: 0x32d0
     // Size: 0x24
     function ascii_logo() {
-        println("all_players_connected");
+        println("<dev string:x1ac>");
     }
 
 #/
@@ -818,7 +818,7 @@ function all_players_spawned() {
     level.host = util::gethostplayer();
     while (true) {
         if (getnumconnectedplayers() == 0) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         players = getplayers();
@@ -828,7 +828,7 @@ function all_players_spawned() {
                 count++;
             }
         }
-        wait(0.05);
+        wait 0.05;
         if (count > 0) {
             level flag::set("first_player_spawned");
         }
@@ -926,7 +926,7 @@ function on_spawned() {
             self thread shock_ondeath();
             self thread shock_onpain();
         }
-        wait(0.05);
+        wait 0.05;
         if (isdefined(self)) {
             self.player_inited = 1;
         }
@@ -956,11 +956,11 @@ function link_ents() {
 function art_review() {
     str_dvar = getdvarstring("art_review");
     switch (str_dvar) {
-    case 6:
+    case "":
         setdvar("art_review", "0");
         break;
-    case 13:
-    case 69:
+    case "1":
+    case "2":
         hud = hud::createserverfontstring("objective", 1.2);
         hud hud::setpoint("CENTER", "CENTER", 0, -200);
         hud.sort = 1001;

@@ -211,7 +211,7 @@ function function_1f3cbfd1() {
     self endon(#"disconnect");
     var_b8ac8cce = 0;
     while (true) {
-        self waittill(#"hash_cdef60d1");
+        self waittill(#"margwa_kill");
         if (var_b8ac8cce == 0) {
             var_a07758ed = level.round_number;
         } else if (var_a07758ed != level.round_number) {

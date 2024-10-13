@@ -32,9 +32,9 @@
 #using scripts/cp/_load;
 #using scripts/cp/gametypes/_save;
 
-#namespace namespace_73fc8448;
+#namespace cp_mi_sing_biodomes_markets;
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xeda5d5e9, Offset: 0x1a30
 // Size: 0x242
@@ -44,18 +44,18 @@ function main() {
     spawner::add_spawn_function_group("sp_markets1_warlord", "targetname", &function_7ff66080);
     spawner::add_spawn_function_group("sp_markets2_warlord", "targetname", &function_ff2bafac);
     spawner::add_spawn_function_group("headpop_guys", "script_noteworthy", &function_2a1badc);
-    spawner::add_spawn_function_group("markets2_rpg_tower", "script_noteworthy", &function_898e1184);
-    spawner::add_spawn_function_group("markets2_ambush_guys", "script_noteworthy", &function_d89d2fa0);
+    spawner::add_spawn_function_group("markets2_rpg_tower", "script_noteworthy", &markets2_rpg_tower);
+    spawner::add_spawn_function_group("markets2_ambush_guys", "script_noteworthy", &markets2_ambush_guys);
     spawner::add_spawn_function_group("sp_markets2_bridge_retreat", "targetname", &function_f4ed98ea);
-    spawner::add_spawn_function_group("markets2_robot_rushers", "script_noteworthy", &function_23089a30);
+    spawner::add_spawn_function_group("markets2_robot_rushers", "script_noteworthy", &markets2_robot_rushers);
     level.var_9198e8fa = [];
     spawner::add_spawn_function_group("sp_markets1_start_anim", "script_noteworthy", &ai::force_goal, undefined, 64);
     spawner::add_spawn_function_group("sp_markets1_weapongrab_leader", "targetname", &function_4a0994ae);
-    spawner::add_spawn_function_group("markets1_magic_rpg", "script_noteworthy", &function_d999a915);
+    spawner::add_spawn_function_group("markets1_magic_rpg", "script_noteworthy", &markets1_magic_rpg);
     function_7b244c18();
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xc6627074, Offset: 0x1c80
 // Size: 0x92
@@ -65,7 +65,7 @@ function function_7b244c18() {
     level scene::add_scene_func("cin_bio_04_01_market2_vign_explode", &function_b27f1679, "play");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 1, eflags: 0x0
 // Checksum 0x1b6eb9a5, Offset: 0x1d20
 // Size: 0x1c2
@@ -91,7 +91,7 @@ function function_afd92016(str_side) {
     var_1d92694f disconnectpaths();
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 2, eflags: 0x0
 // Checksum 0xfced729f, Offset: 0x1ef0
 // Size: 0x4a
@@ -102,7 +102,7 @@ function function_73bcc8bf(var_a715f176, var_1d92694f) {
     var_1d92694f disconnectpaths();
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 1, eflags: 0x0
 // Checksum 0x8723ffc, Offset: 0x1f48
 // Size: 0x1ca
@@ -129,7 +129,7 @@ function function_d3cdcc7a(str_side) {
     var_db712e4f thread function_1d148f52();
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 2, eflags: 0x0
 // Checksum 0xfb03fc2, Offset: 0x2120
 // Size: 0x4a
@@ -140,7 +140,7 @@ function function_2188c8d1(var_7f7b2bb8, var_db712e4f) {
     var_db712e4f disconnectpaths();
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x6759ea3d, Offset: 0x2178
 // Size: 0x1a
@@ -149,7 +149,7 @@ function function_1d148f52() {
     self disconnectpaths();
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x68383ce2, Offset: 0x21a0
 // Size: 0x3b1
@@ -202,11 +202,11 @@ function function_174b2742() {
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xe0c73380, Offset: 0x2560
 // Size: 0x13d
@@ -215,7 +215,7 @@ function function_7ff66080() {
     self thread function_5a24feff();
     self.e_target = undefined;
     self.var_8fa11c4a = undefined;
-    self namespace_27a45d31::function_f61c0df8("nd_market1_warlord", 2, 3);
+    self cp_mi_sing_biodomes_util::function_f61c0df8("nd_market1_warlord", 2, 3);
     var_e812ecff = getent("vol_markets1_warlord_last", "targetname");
     a_volumes = getentarray("vol_markets1_warlord", "script_noteworthy");
     while (true) {
@@ -230,17 +230,17 @@ function function_7ff66080() {
                 self setgoal(self.var_8fa11c4a, 1);
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x7d2bac78, Offset: 0x26a8
 // Size: 0xf3
 function function_5a24feff() {
     self endon(#"death");
-    level endon(#"hash_8057891");
+    level endon(#"warlord_vo_done");
     var_9f460d03 = 0;
     while (!var_9f460d03) {
         foreach (player in level.activeplayers) {
@@ -249,25 +249,25 @@ function function_5a24feff() {
                 break;
             }
         }
-        wait(0.25);
+        wait 0.25;
     }
     level util::delay_notify(5, "warlord_vo_done");
     level flag::wait_till("markets1_intro_dialogue_done");
     level thread dialog::remote("kane_warlord_get_to_cove_0");
-    level notify(#"hash_8057891");
+    level notify(#"warlord_vo_done");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 2, eflags: 0x0
 // Checksum 0x2c9322fa, Offset: 0x27a8
 // Size: 0x3d2
-function function_768ccc86(str_objective, var_74cd64bc) {
+function objective_markets_start_init(str_objective, var_74cd64bc) {
     objectives::set("cp_level_biodomes_cloud_mountain");
-    namespace_27a45d31::function_ddb0eeea("objective_markets_start_init");
+    cp_mi_sing_biodomes_util::function_ddb0eeea("objective_markets_start_init");
     if (var_74cd64bc) {
-        namespace_27a45d31::function_bff1a867(str_objective);
-        level thread namespace_55d2f1be::function_69468f09(1);
-        level thread namespace_27a45d31::function_753a859(str_objective);
+        cp_mi_sing_biodomes_util::function_bff1a867(str_objective);
+        level thread cp_mi_sing_biodomes::function_69468f09(1);
+        level thread cp_mi_sing_biodomes_util::function_753a859(str_objective);
         level waittill(#"end_igc");
         streamerrequest("clear", "cin_bio_02_04_gunplay_vign_stab");
         level thread namespace_f1b4cbbc::function_fa2e45b8();
@@ -275,7 +275,7 @@ function function_768ccc86(str_objective, var_74cd64bc) {
     if (isdefined(level.var_f22c67b)) {
         level thread [[ level.var_f22c67b ]]();
     }
-    level thread namespace_27a45d31::function_cc20e187("markets1", 1);
+    level thread cp_mi_sing_biodomes_util::function_cc20e187("markets1", 1);
     level.var_996e05eb = "friendly_spawns_markets_start";
     trigger::use("trig_hendricks_color_marketst1");
     level flag::set("markets1_enemies_alert");
@@ -289,18 +289,18 @@ function function_768ccc86(str_objective, var_74cd64bc) {
     level thread function_afd92016("right");
     level thread function_d3cdcc7a("right");
     trigger::wait_till("trig_markets1_combat2");
-    level thread namespace_27a45d31::function_a1669688("markets1_retreaters_left", "info_volume_markets1_left", 2, 4);
-    level thread namespace_27a45d31::function_a1669688("markets1_retreaters_right", "info_volume_markets1_right", 2, 4);
+    level thread cp_mi_sing_biodomes_util::function_a1669688("markets1_retreaters_left", "info_volume_markets1_left", 2, 4);
+    level thread cp_mi_sing_biodomes_util::function_a1669688("markets1_retreaters_right", "info_volume_markets1_right", 2, 4);
     trigger::wait_till("trig_markets1_pushback");
     spawn_manager::kill("sm_markets1_combat0");
     spawn_manager::kill("sm_markets1_combat1");
     spawn_manager::kill("sm_markets1_combat2");
     spawn_manager::kill("sm_markets1_combat3");
-    level thread namespace_27a45d31::function_a1669688("markets1_snipers", "info_volume_markets1_rear", 1, 4);
-    level thread namespace_27a45d31::function_a1669688("markets1_retreaters", "info_volume_markets1_rear", 1, 4);
-    level thread namespace_27a45d31::function_a1669688("markets1_retreaters_left", "info_volume_markets1_rear", 2, 4);
-    level thread namespace_27a45d31::function_a1669688("markets1_retreaters_right", "info_volume_markets1_rear", 1, 3);
-    level thread namespace_27a45d31::function_a1669688("markets1_retreaters_last", "info_volume_markets1_rear", 3, 6);
+    level thread cp_mi_sing_biodomes_util::function_a1669688("markets1_snipers", "info_volume_markets1_rear", 1, 4);
+    level thread cp_mi_sing_biodomes_util::function_a1669688("markets1_retreaters", "info_volume_markets1_rear", 1, 4);
+    level thread cp_mi_sing_biodomes_util::function_a1669688("markets1_retreaters_left", "info_volume_markets1_rear", 2, 4);
+    level thread cp_mi_sing_biodomes_util::function_a1669688("markets1_retreaters_right", "info_volume_markets1_rear", 1, 3);
+    level thread cp_mi_sing_biodomes_util::function_a1669688("markets1_retreaters_last", "info_volume_markets1_rear", 3, 6);
     level scene::init("p7_fxanim_cp_biodomes_cafe_window_break_right_bundle");
     level scene::init("p7_fxanim_cp_biodomes_cafe_window_break_left_bundle");
     trigger::wait_till("trig_markets_rpg");
@@ -308,7 +308,7 @@ function function_768ccc86(str_objective, var_74cd64bc) {
     level skipto::function_be8adfb8("objective_markets_start");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x71ef2df9, Offset: 0x2b88
 // Size: 0x3a
@@ -319,7 +319,7 @@ function function_4a0994ae() {
     }
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xc0b120f1, Offset: 0x2bd0
 // Size: 0x16a
@@ -329,20 +329,20 @@ function function_8387168c() {
     spawner::simple_spawn("sp_markets1_friendly_robot_start");
     spawn_manager::enable("sm_markets1_combat0");
     spawn_manager::enable("sm_markets1_combat1");
-    level.var_1675f12a = spawner::simple_spawn_single("turret_markets1");
-    level.var_1675f12a thread function_70da4f9b();
+    level.turret_markets1 = spawner::simple_spawn_single("turret_markets1");
+    level.turret_markets1 thread function_70da4f9b();
     level thread function_5d4c2323();
     level thread function_b1e84c2();
     trigger::use("trig_markets1_combat1");
     level thread scene::play("cin_bio_03_01_market_vign_engage");
     level thread scene::play("cin_bio_03_01_market_aie_weapons");
     level thread scene::play("cin_gen_aie_table_react");
-    wait(2);
+    wait 2;
     level flag::set("markets1_enemies_alert");
     level clientfield::set("sndIGCsnapshot", 0);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 1, eflags: 0x0
 // Checksum 0x4cb7e292, Offset: 0x2d48
 // Size: 0xf5
@@ -357,17 +357,17 @@ function function_d87e0a34(var_78850f88) {
                 break;
             }
         }
-        wait(0.25);
+        wait 0.25;
     }
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x47e72f67, Offset: 0x2e48
 // Size: 0x19a
 function function_5d4c2323() {
     while (!isdefined(level.var_2fd26037)) {
-        wait(0.05);
+        wait 0.05;
     }
     battlechatter::function_d9f49fba(0);
     level dialog::function_13b3b16a("plyr_plan_b_0");
@@ -386,7 +386,7 @@ function function_5d4c2323() {
     level flag::set("markets1_intro_dialogue_done");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x665f2ff5, Offset: 0x2ff0
 // Size: 0x15a
@@ -398,7 +398,7 @@ function function_b1e84c2() {
         var_2d3d7b7[0] = "hend_i_got_eyes_on_a_snip_0";
         var_2d3d7b7[1] = "hend_hostile_sniper_ahead_0";
         var_2d3d7b7[2] = "hend_eyes_up_sniper_in_p_0";
-        level.var_2fd26037 dialog::say(namespace_27a45d31::function_7ff50323(var_2d3d7b7), 3);
+        level.var_2fd26037 dialog::say(cp_mi_sing_biodomes_util::function_7ff50323(var_2d3d7b7), 3);
     }
     var_207c708e = spawner::get_ai_group_sentient_count("markets1_riotshields");
     if (var_207c708e > 0) {
@@ -406,13 +406,13 @@ function function_b1e84c2() {
         var_2d3d7b7[0] = "hend_riot_gear_incoming_0";
         var_2d3d7b7[1] = "hend_eyes_on_riot_gear_0";
         var_2d3d7b7[2] = "hend_riot_shields_comin_0";
-        level.var_2fd26037 dialog::say(namespace_27a45d31::function_7ff50323(var_2d3d7b7), 3);
+        level.var_2fd26037 dialog::say(cp_mi_sing_biodomes_util::function_7ff50323(var_2d3d7b7), 3);
     }
     level flag::wait_till("markets1_enemies_retreating");
     level.var_2fd26037 thread dialog::say("hend_they_re_falling_back_0", 5);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x26cd65e3, Offset: 0x3158
 // Size: 0x85
@@ -429,16 +429,16 @@ function function_ddde0fc3() {
     }
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 1, eflags: 0x0
 // Checksum 0xdd08b8e3, Offset: 0x31e8
 // Size: 0xa2
 function function_563bb5b3(var_87b2bbe5) {
     switch (var_87b2bbe5) {
-    case 98:
+    case "nd_hendricks_wok1":
         level.var_2fd26037 thread function_1485f7dc();
         break;
-    case 97:
+    case "nd_hendricks_shelves":
         level.var_2fd26037 thread function_a67aaa62();
         break;
     default:
@@ -450,7 +450,7 @@ function function_563bb5b3(var_87b2bbe5) {
     }
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xe843c381, Offset: 0x3298
 // Size: 0x32
@@ -460,7 +460,7 @@ function function_a67aaa62() {
     function_2e1ac4d4();
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x2dc5e542, Offset: 0x32d8
 // Size: 0xda
@@ -477,7 +477,7 @@ function function_2e1ac4d4() {
     level thread function_a3bac88("cin_bio_03_01_market_vign_hendricksmoment_rush", undefined, var_d36f9bf);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 1, eflags: 0x0
 // Checksum 0x6e3f5df1, Offset: 0x33c0
 // Size: 0x22
@@ -485,7 +485,7 @@ function function_3a8d91fc(a_ents) {
     level scene::play("cin_bio_03_01_market_vign_hendricksmoment_rush");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xfde44f78, Offset: 0x33f0
 // Size: 0x6a
@@ -496,7 +496,7 @@ function function_1485f7dc() {
     level scene::init("cin_bio_03_01_market_vign_hendricksmoment_throw");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 1, eflags: 0x0
 // Checksum 0xc73b1b5a, Offset: 0x3468
 // Size: 0xca
@@ -512,7 +512,7 @@ function function_b347511d(a_ents) {
     level thread function_a3bac88("cin_bio_03_01_market_vign_hendricksmoment_throw", undefined, var_d36f9bf);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 1, eflags: 0x0
 // Checksum 0xe78bcde0, Offset: 0x3540
 // Size: 0x52
@@ -522,7 +522,7 @@ function function_af620536(a_ents) {
     level.var_2fd26037 ai::set_ignoreme(0);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 3, eflags: 0x0
 // Checksum 0xd83d60b0, Offset: 0x35a0
 // Size: 0x9a
@@ -531,13 +531,13 @@ function function_a3bac88(str_scene, ai_enemy, var_d36f9bf) {
         ai_enemy waittill(#"death");
     }
     level scene::stop(str_scene);
-    wait(0.15);
+    wait 0.15;
     level.var_2fd26037 ai::set_ignoreall(0);
     level.var_2fd26037 ai::set_ignoreme(0);
     trigger::use(var_d36f9bf, "targetname", undefined, 0);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 1, eflags: 0x0
 // Checksum 0xd02cac0e, Offset: 0x3648
 // Size: 0x14
@@ -545,7 +545,7 @@ function function_a5040920(a_ents) {
     level waittill(#"hash_d1c9c0a9");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 1, eflags: 0x0
 // Checksum 0x79a42d7a, Offset: 0x3668
 // Size: 0x62
@@ -556,7 +556,7 @@ function function_f4e90efd(a_ents) {
     level scene::play("p7_fxanim_cp_newworld_plaster_walls_01_bundle");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 1, eflags: 0x0
 // Checksum 0xef69d7ae, Offset: 0x36d8
 // Size: 0x42
@@ -567,7 +567,7 @@ function function_1589a392(str_scene) {
     level scene::stop(str_scene);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 1, eflags: 0x0
 // Checksum 0x44b0d01e, Offset: 0x3728
 // Size: 0x7a
@@ -578,34 +578,34 @@ function function_c7cb9a93(a_ents) {
     var_27fbdccf disconnectpaths();
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 4, eflags: 0x0
 // Checksum 0x2fa1c0a6, Offset: 0x37b0
 // Size: 0x3a
-function function_1bc4d710(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
-    namespace_27a45d31::function_ddb0eeea("objective_markets_start_done");
+function objective_markets_start_done(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
+    cp_mi_sing_biodomes_util::function_ddb0eeea("objective_markets_start_done");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 2, eflags: 0x0
 // Checksum 0xcbb792fb, Offset: 0x37f8
 // Size: 0x2fa
-function function_df0ba879(str_objective, var_74cd64bc) {
-    namespace_27a45d31::function_ddb0eeea("objective_markets_rpg_init");
+function objective_markets_rpg_init(str_objective, var_74cd64bc) {
+    cp_mi_sing_biodomes_util::function_ddb0eeea("objective_markets_rpg_init");
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_27a45d31::function_bff1a867(str_objective);
-        namespace_55d2f1be::function_cef897cf(str_objective);
+        cp_mi_sing_biodomes_util::function_bff1a867(str_objective);
+        cp_mi_sing_biodomes::function_cef897cf(str_objective);
         level scene::init("p7_fxanim_cp_biodomes_cafe_window_break_right_bundle");
         level scene::init("p7_fxanim_cp_biodomes_cafe_window_break_left_bundle");
-        level.var_1675f12a = spawner::simple_spawn_single("turret_markets1");
-        level.var_1675f12a thread function_70da4f9b();
+        level.turret_markets1 = spawner::simple_spawn_single("turret_markets1");
+        level.turret_markets1 thread function_70da4f9b();
         level thread clientfield::set("party_house_shutter", 1);
         level thread clientfield::set("party_house_destruction", 1);
-        level thread namespace_27a45d31::function_753a859(str_objective);
+        level thread cp_mi_sing_biodomes_util::function_753a859(str_objective);
         objectives::set("cp_level_biodomes_cloud_mountain");
         objectives::set("cp_waypoint_breadcrumb", struct::get("breadcrumb_markets1"));
-        level thread namespace_27a45d31::function_cc20e187("markets1");
+        level thread cp_mi_sing_biodomes_util::function_cc20e187("markets1");
         load::function_a2995f22();
         trigger::use("t_pre_turret1");
         level thread namespace_f1b4cbbc::function_fa2e45b8();
@@ -615,20 +615,20 @@ function function_df0ba879(str_objective, var_74cd64bc) {
     showmiscmodels("fxanim_markets2");
     spawner::add_spawn_function_group("markets1_rpgguy", "script_noteworthy", &function_c008e227);
     trigger::wait_till("trig_markets_rpg");
-    spawner::simple_spawn_single("sp_markets_rpg_dome_break", &function_d999a915);
+    spawner::simple_spawn_single("sp_markets_rpg_dome_break", &markets1_magic_rpg);
     spawn_manager::enable("sm_markets_rpg_nest");
     level thread function_1711aacb();
     level thread function_e7229eec();
-    wait(0.5);
-    if (isalive(level.var_1675f12a)) {
-        level.var_1675f12a thread function_ac861f96();
+    wait 0.5;
+    if (isalive(level.turret_markets1)) {
+        level.turret_markets1 thread function_ac861f96();
     }
     trigger::wait_till("trig_markets2_start");
     level notify(#"hash_4893df48");
     level skipto::function_be8adfb8("objective_markets_rpg");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x12893091, Offset: 0x3b00
 // Size: 0xfa
@@ -647,7 +647,7 @@ function function_ac861f96() {
     level scene::play("p7_fxanim_cp_biodomes_cafe_window_break_right_bundle");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xea84fe6d, Offset: 0x3c08
 // Size: 0x5a
@@ -658,25 +658,25 @@ function function_c008e227() {
     level scene::play("p7_fxanim_cp_biodomes_cafe_window_break_left_bundle");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xbb9a9cf2, Offset: 0x3c70
 // Size: 0xc2
 function function_1711aacb() {
-    level endon(#"hash_c791a545");
+    level endon(#"turret1_dead");
     level endon(#"hash_4893df48");
     level flag::wait_till("turret1");
     level.var_2fd26037 dialog::say("hend_take_out_that_turret_1", 1);
     level thread namespace_36171bd3::function_9c52a47e("floor_collapse");
-    wait(6);
+    wait 6;
     level.var_2fd26037 dialog::say("hend_we_gotta_take_out_th_1");
-    wait(8);
+    wait 8;
     level.var_2fd26037 dialog::say("hend_we_ain_t_movin_with_0");
-    wait(10);
+    wait 10;
     level.var_2fd26037 dialog::say("hend_bring_down_that_turr_0");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xf6fe4633, Offset: 0x3d40
 // Size: 0x5a
@@ -687,7 +687,7 @@ function function_e7229eec() {
     level.var_2fd26037 dialog::say("hend_area_clear_0");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x563110d4, Offset: 0x3da8
 // Size: 0xa2
@@ -700,15 +700,15 @@ function function_20e9cee4() {
     var_d8861eed delete();
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 1, eflags: 0x0
 // Checksum 0x1a31ad20, Offset: 0x3e58
 // Size: 0x122
 function function_254ce088(str_model) {
     var_197ca77b = getent(str_model, "targetname");
-    assert(isdefined(var_197ca77b), str_model + "cin_bio_02_04_gunplay_vign_stab");
+    assert(isdefined(var_197ca77b), str_model + "<dev string:x28>");
     var_d4cf8d4e = struct::get(var_197ca77b.target, "targetname");
-    assert(isdefined(var_d4cf8d4e), str_model + "cin_gen_aie_table_react");
+    assert(isdefined(var_d4cf8d4e), str_model + "<dev string:x46>");
     if (isdefined(var_197ca77b) && isdefined(var_d4cf8d4e)) {
         var_d246e703 = var_197ca77b.angles - (0, 90, 0);
         var_197ca77b fx::play("dirt_impact", var_197ca77b.origin, var_d246e703, 4);
@@ -717,11 +717,11 @@ function function_254ce088(str_model) {
     }
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x8e8fef2c, Offset: 0x3f88
 // Size: 0x122
-function function_d999a915() {
+function markets1_magic_rpg() {
     self waittill(#"death");
     var_9faa0c88 = getweapon("smaw");
     var_1987d48e = self gettagorigin("tag_aim");
@@ -734,21 +734,21 @@ function function_d999a915() {
     var_1842712c delete();
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 4, eflags: 0x0
 // Checksum 0x3597bb9e, Offset: 0x40b8
 // Size: 0x6a
-function function_c80a0733(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
-    namespace_27a45d31::function_ddb0eeea("objective_markets_rpg_done");
+function objective_markets_rpg_done(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
+    cp_mi_sing_biodomes_util::function_ddb0eeea("objective_markets_rpg_done");
     objectives::complete("cp_waypoint_breadcrumb", struct::get("breadcrumb_markets1"));
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 2, eflags: 0x0
 // Checksum 0xb5c3c906, Offset: 0x4130
 // Size: 0x3b2
-function function_bf0a0e50(str_objective, var_74cd64bc) {
-    namespace_27a45d31::function_ddb0eeea("objective_markets2_start_init");
+function objective_markets2_start_init(str_objective, var_74cd64bc) {
+    cp_mi_sing_biodomes_util::function_ddb0eeea("objective_markets2_start_init");
     level thread function_11549ce5();
     level thread function_f5120a68();
     level thread function_4ef9f5db();
@@ -756,15 +756,15 @@ function function_bf0a0e50(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         load::function_73adcefc();
         array::delete_all(getentarray("triggers_markets1", "script_noteworthy"));
-        namespace_27a45d31::function_bff1a867(str_objective);
-        namespace_55d2f1be::function_cef897cf(str_objective);
+        cp_mi_sing_biodomes_util::function_bff1a867(str_objective);
+        cp_mi_sing_biodomes::function_cef897cf(str_objective);
         level thread clientfield::set("party_house_shutter", 1);
         level thread clientfield::set("party_house_destruction", 1);
-        level.var_1675f12a = spawner::simple_spawn_single("turret_markets1");
-        level.var_1675f12a kill();
+        level.turret_markets1 = spawner::simple_spawn_single("turret_markets1");
+        level.turret_markets1 kill();
         thread function_20e9cee4();
-        level thread namespace_27a45d31::function_753a859(str_objective);
-        level thread namespace_27a45d31::function_cc20e187("markets1");
+        level thread cp_mi_sing_biodomes_util::function_753a859(str_objective);
+        level thread cp_mi_sing_biodomes_util::function_cc20e187("markets1");
         objectives::set("cp_level_biodomes_cloud_mountain");
         load::function_a2995f22();
         level thread namespace_f1b4cbbc::function_fa2e45b8();
@@ -772,32 +772,32 @@ function function_bf0a0e50(str_objective, var_74cd64bc) {
     if (isdefined(level.var_8b9b1711)) {
         level thread [[ level.var_8b9b1711 ]]();
     }
-    level thread namespace_27a45d31::function_cc20e187("markets2", 1);
-    level thread namespace_27a45d31::function_cc20e187("warehouse", 1);
+    level thread cp_mi_sing_biodomes_util::function_cc20e187("markets2", 1);
+    level thread cp_mi_sing_biodomes_util::function_cc20e187("warehouse", 1);
     level.var_996e05eb = "friendly_spawns_markets2_tunnel";
     level scene::init("p7_fxanim_cp_biodomes_market_bridge_bundle");
     function_a7548a8f();
-    namespace_27a45d31::function_a22e7052(0, "markets2_bridge_traversals", "script_noteworthy");
+    cp_mi_sing_biodomes_util::function_a22e7052(0, "markets2_bridge_traversals", "script_noteworthy");
     hidemiscmodels("fxanim_party_house");
     showmiscmodels("fxanim_warehouse");
     trigger::wait_till("trig_warehouse_entrance");
-    namespace_27a45d31::function_1c1462ee("sm_markets1_combat0");
-    namespace_27a45d31::function_1c1462ee("sm_markets1_combat1");
-    namespace_27a45d31::function_1c1462ee("sm_markets1_combat2");
-    namespace_27a45d31::function_1c1462ee("sm_markets1_combat3");
-    namespace_27a45d31::function_1c1462ee("sm_markets_rpg_nest");
-    if (isalive(level.var_1675f12a)) {
-        level.var_1675f12a util::stop_magic_bullet_shield();
-        level.var_1675f12a kill();
+    cp_mi_sing_biodomes_util::function_1c1462ee("sm_markets1_combat0");
+    cp_mi_sing_biodomes_util::function_1c1462ee("sm_markets1_combat1");
+    cp_mi_sing_biodomes_util::function_1c1462ee("sm_markets1_combat2");
+    cp_mi_sing_biodomes_util::function_1c1462ee("sm_markets1_combat3");
+    cp_mi_sing_biodomes_util::function_1c1462ee("sm_markets_rpg_nest");
+    if (isalive(level.turret_markets1)) {
+        level.turret_markets1 util::stop_magic_bullet_shield();
+        level.turret_markets1 kill();
     }
-    if (isalive(level.var_f07376c1)) {
-        level.var_f07376c1 util::stop_magic_bullet_shield();
-        level.var_f07376c1 kill();
+    if (isalive(level.turret_markets2)) {
+        level.turret_markets2 util::stop_magic_bullet_shield();
+        level.turret_markets2 kill();
     }
     level skipto::function_be8adfb8("objective_markets2_start");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xcea46fff, Offset: 0x44f0
 // Size: 0x1e2
@@ -816,7 +816,7 @@ function function_11549ce5() {
     objectives::complete("cp_waypoint_breadcrumb", struct::get("breadcrumb_markets2_end"));
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x98cff34e, Offset: 0x46e0
 // Size: 0x1ba
@@ -825,12 +825,12 @@ function function_a7548a8f() {
     trigger::wait_till("trig_markets2_hendricks_pit");
     trigger::use("trig_hendricks_color_markets2_pit");
     spawn_manager::enable("sm_markets2_combat0");
-    level.var_f07376c1 = spawner::simple_spawn_single("turret_markets2");
-    level.var_f07376c1 thread function_9e873c98();
-    level.var_f07376c1 thread function_45ec4c38();
+    level.turret_markets2 = spawner::simple_spawn_single("turret_markets2");
+    level.turret_markets2 thread function_9e873c98();
+    level.turret_markets2 thread function_45ec4c38();
     level flag::set("turret2");
     trigger::wait_till("trig_markets2_combat2");
-    level.var_2fd26037 notify(#"hash_fa1b759e");
+    level.var_2fd26037 notify(#"player_in_pit");
     level.var_2fd26037 notify(#"hash_ce815b72");
     level notify(#"hash_79fccdae");
     level.var_2fd26037 thread function_802808a0();
@@ -840,26 +840,26 @@ function function_a7548a8f() {
     spawn_manager::enable("sm_markets2_warlord");
     level thread function_306c7d29();
     level.var_2fd26037 notify(#"hash_e0a6f6d8");
-    level thread namespace_27a45d31::function_a1669688("markets2_retreaters", "info_volume_markets2_rear", 0, 0.1);
+    level thread cp_mi_sing_biodomes_util::function_a1669688("markets2_retreaters", "info_volume_markets2_rear", 0, 0.1);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xf833d380, Offset: 0x48a8
 // Size: 0xaa
-function function_d89d2fa0() {
+function markets2_ambush_guys() {
     self endon(#"death");
     self ai::set_ignoreall(1);
     self ai::set_ignoreme(1);
     self ai::set_behavior_attribute("coverIdleOnly", 1);
     level util::waittill_notify_or_timeout("player_in_pit", 5);
-    wait(randomfloatrange(0, 0.5));
+    wait randomfloatrange(0, 0.5);
     self ai::set_behavior_attribute("coverIdleOnly", 0);
     self ai::set_ignoreall(0);
     self ai::set_ignoreme(0);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x90d58588, Offset: 0x4960
 // Size: 0x1ca
@@ -881,7 +881,7 @@ function function_802808a0() {
     self ai::set_ignoreme(0);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 2, eflags: 0x0
 // Checksum 0xd4dedd88, Offset: 0x4b38
 // Size: 0x72
@@ -897,18 +897,18 @@ function function_8fcead5c(str_scene, var_5d5638aa) {
     level scene::stop(str_scene);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 1, eflags: 0x0
 // Checksum 0x9ae22a67, Offset: 0x4bb8
 // Size: 0x3a
 function function_4eb79d4f(var_a92ac318) {
     level endon(#"hash_54ba776e");
     self waittill(#"death");
-    wait(0.5);
+    wait 0.5;
     level scene::stop(var_a92ac318, "targetname");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x1cac7f, Offset: 0x4c00
 // Size: 0xfa
@@ -923,12 +923,12 @@ function function_eb44b3e8() {
     if (!level flag::get("markets2_tower_destroyed")) {
         level thread dialog::function_13b3b16a("plyr_got_an_rpg_in_that_t_0");
     }
-    level endon(#"hash_7ca50f0");
-    wait(8);
+    level endon(#"turret2_dead");
+    wait 8;
     level.var_2fd26037 dialog::say("hend_we_gotta_take_out_th_1");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 1, eflags: 0x0
 // Checksum 0x203a4729, Offset: 0x4d08
 // Size: 0x59
@@ -939,7 +939,7 @@ function function_b27f1679(a_ents) {
     }
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x87ec233a, Offset: 0x4d70
 // Size: 0x15a
@@ -961,7 +961,7 @@ function function_2a1badc() {
     gibserverutils::gibhead(self);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x544739dd, Offset: 0x4ed8
 // Size: 0x182
@@ -994,7 +994,7 @@ function function_1c8db87() {
     level scene::play("cin_bio_04_01_market2_vign_caged", var_72e94765);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xa170b8c9, Offset: 0x5068
 // Size: 0x183
@@ -1012,13 +1012,13 @@ function function_4ef9f5db() {
             str_scene_name = "cin_bio_04_01_market2_vign_bound_civ02";
         }
         s_align thread scene::play(str_scene_name, var_83491dca);
-        wait(1);
+        wait 1;
         var_83491dca kill();
-        wait(randomfloatrange(0, 2));
+        wait randomfloatrange(0, 2);
     }
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x5b2f8c81, Offset: 0x51f8
 // Size: 0x8b
@@ -1029,7 +1029,7 @@ function function_dbb91fcf() {
     }
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 15, eflags: 0x0
 // Checksum 0xfd7a9735, Offset: 0x5290
 // Size: 0xeb
@@ -1041,27 +1041,27 @@ function function_c1c247f6(e_inflictor, e_attacker, n_damage, n_dflags, str_mean
     return n_damage;
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xddb897b5, Offset: 0x5388
 // Size: 0xea
 function function_45ec4c38() {
     self endon(#"death");
     trigger::wait_till("trig_markets2_turret_intro");
-    var_b6bd02bb = struct::get("s_markets2_turret_target", "targetname");
-    var_975c918d = util::spawn_model("tag_origin", var_b6bd02bb.origin, var_b6bd02bb.angles);
-    level.var_f07376c1 turret::set_target(var_975c918d, (0, 0, 0), 0);
+    s_markets2_turret_target = struct::get("s_markets2_turret_target", "targetname");
+    var_975c918d = util::spawn_model("tag_origin", s_markets2_turret_target.origin, s_markets2_turret_target.angles);
+    level.turret_markets2 turret::set_target(var_975c918d, (0, 0, 0), 0);
     var_975c918d movex(40, 3);
     var_975c918d movey(-200, 3);
     var_975c918d waittill(#"movedone");
-    level.var_f07376c1 turret::clear_target(0);
+    level.turret_markets2 turret::clear_target(0);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x649fbfe9, Offset: 0x5480
 // Size: 0x152
-function function_898e1184() {
+function markets2_rpg_tower() {
     level thread function_226ac1e4();
     self waittill(#"death");
     var_9faa0c88 = getweapon("smaw");
@@ -1074,9 +1074,9 @@ function function_898e1184() {
     v_origin = self.origin;
     var_2f7fd5db = self.damageweapon;
     if (var_2f7fd5db == getweapon("gadget_mrpukey")) {
-        wait(2);
+        wait 2;
     } else {
-        wait(0.5);
+        wait 0.5;
     }
     magicbullet(var_9faa0c88, var_1987d48e, v_origin);
     playrumbleonposition("cp_biodomes_rpg_tower_rumble", v_origin);
@@ -1086,7 +1086,7 @@ function function_898e1184() {
     namespace_769dc23f::function_b5cf7b68();
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x2414e253, Offset: 0x55e0
 // Size: 0xb4
@@ -1098,7 +1098,7 @@ function function_226ac1e4() {
     var_3c91fda1 = magicbullet(var_9faa0c88, var_11fd5f3f.origin, var_6beedec9.origin);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xf37f7525, Offset: 0x56a0
 // Size: 0x9a
@@ -1115,7 +1115,7 @@ function function_f4ed98ea() {
     self ai::set_ignoreall(0);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xa2d36531, Offset: 0x5748
 // Size: 0x3a
@@ -1127,16 +1127,16 @@ function function_e143a359() {
     self clearforcedgoal();
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xfc276d10, Offset: 0x5790
 // Size: 0x2a
-function function_23089a30() {
+function markets2_robot_rushers() {
     self endon(#"death");
     self ai::set_behavior_attribute("move_mode", "rusher");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x4f1f220, Offset: 0x57c8
 // Size: 0x272
@@ -1169,10 +1169,10 @@ function function_f5120a68() {
         var_29c45e93 disconnectpaths();
     }
     level notify(#"hash_f7452abe");
-    namespace_27a45d31::function_a22e7052(1, "markets2_bridge_traversals", "script_noteworthy");
+    cp_mi_sing_biodomes_util::function_a22e7052(1, "markets2_bridge_traversals", "script_noteworthy");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xf5932511, Offset: 0x5a48
 // Size: 0xd2
@@ -1189,7 +1189,7 @@ function function_306c7d29() {
     [[ phalanx ]]->initialize("phanalx_wedge", v_start, v_end, 2, var_1b6ee6b2);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xffa0ec9, Offset: 0x5b28
 // Size: 0x5a
@@ -1197,37 +1197,37 @@ function function_ff2bafac() {
     self endon(#"death");
     self setthreatbiasgroup("warlords");
     setthreatbias("heroes", "warlords", -9999);
-    self namespace_27a45d31::function_f61c0df8("node_warlord_markets2_preferred", 1, 2);
+    self cp_mi_sing_biodomes_util::function_f61c0df8("node_warlord_markets2_preferred", 1, 2);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 4, eflags: 0x0
 // Checksum 0x187de42d, Offset: 0x5b90
 // Size: 0x43
-function function_4fd7cfe6(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
-    namespace_27a45d31::function_ddb0eeea("objective_markets2_start_done");
+function objective_markets2_start_done(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
+    cp_mi_sing_biodomes_util::function_ddb0eeea("objective_markets2_start_done");
     level notify(#"hash_3fe031c0");
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0x4d6be7fe, Offset: 0x5be0
 // Size: 0xda
 function function_70da4f9b() {
     self.var_2ddc2ef9 = 0;
     self.var_38c1e4c8 = 0;
-    level.var_1675f12a.ignoreall = 1;
-    level.var_1675f12a.ignoreme = 1;
+    level.turret_markets1.ignoreall = 1;
+    level.turret_markets1.ignoreme = 1;
     self cybercom::function_59965309("cybercom_hijack");
     self.script_noteworthy = "floor_collapse";
-    level.var_1675f12a turret::set_on_target_angle(1, 0);
+    level.turret_markets1 turret::set_on_target_angle(1, 0);
     self waittill(#"death");
     level flag::set("turret1_dead");
     var_dfcbd82b = getnode("cover_hendricks_headpopper", "targetname");
     level.var_2fd26037 setgoal(var_dfcbd82b, 1);
 }
 
-// Namespace namespace_73fc8448
+// Namespace cp_mi_sing_biodomes_markets
 // Params 0, eflags: 0x0
 // Checksum 0xa5fda9f3, Offset: 0x5cc8
 // Size: 0x32

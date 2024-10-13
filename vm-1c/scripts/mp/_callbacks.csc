@@ -60,7 +60,7 @@ function set_default_callbacks() {
 // Checksum 0x810d3b7, Offset: 0x598
 // Size: 0x74
 function localclientconnect(localclientnum) {
-    println("japanese" + localclientnum);
+    println("<dev string:x28>" + localclientnum);
     if (isdefined(level.charactercustomizationsetup)) {
         [[ level.charactercustomizationsetup ]](localclientnum);
     }
@@ -83,7 +83,7 @@ function playerspawned(localclientnum) {
         self thread [[ level._playerspawned_override ]](localclientnum);
         return;
     }
-    println("japanese");
+    println("<dev string:x55>");
     if (self islocalplayer()) {
         callback(#"hash_842e788a", localclientnum);
     }
@@ -106,7 +106,7 @@ function entityspawned(localclientnum) {
         return;
     }
     if (!isdefined(self.type)) {
-        println("japanese");
+        println("<dev string:x64>");
         return;
     }
     if (self.type == "missile") {
@@ -143,43 +143,43 @@ function entityspawned(localclientnum) {
 function airsupport(localclientnum, x, y, z, type, yaw, team, teamfaction, owner, exittype, time, height) {
     pos = (x, y, z);
     switch (teamfaction) {
-    case 17:
+    case "v":
         teamfaction = "vietcong";
         break;
-    case 14:
-    case 7:
+    case "n":
+    case "nva":
         teamfaction = "nva";
         break;
-    case 12:
+    case "j":
         teamfaction = "japanese";
         break;
-    case 13:
+    case "m":
         teamfaction = "marines";
         break;
-    case 16:
+    case "s":
         teamfaction = "specops";
         break;
-    case 15:
+    case "r":
         teamfaction = "russian";
         break;
     default:
-        println("japanese");
-        println("japanese" + teamfaction + "japanese");
+        println("<dev string:x7b>");
+        println("<dev string:xb5>" + teamfaction + "<dev string:xcc>");
         teamfaction = "marines";
         break;
     }
     switch (team) {
-    case 22:
+    case "x":
         team = "axis";
         break;
-    case 21:
+    case "l":
         team = "allies";
         break;
-    case 15:
+    case "r":
         team = "free";
         break;
     default:
-        println("japanese" + team + "japanese");
+        println("<dev string:xce>" + team + "<dev string:xcc>");
         team = "allies";
         break;
     }
@@ -222,10 +222,10 @@ function airsupport(localclientnum, x, y, z, type, yaw, team, teamfaction, owner
         return;
     }
     /#
-        println("japanese");
-        println("japanese");
+        println("<dev string:x101>");
+        println("<dev string:x102>");
         println(type);
-        println("japanese");
+        println("<dev string:x101>");
     #/
     return;
 }
@@ -244,7 +244,7 @@ function creating_corpse(localclientnum, player) {
 // Size: 0x8a
 function callback_stunned(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self.stunned = newval;
-    println("japanese");
+    println("<dev string:x149>");
     if (newval) {
         self notify(#"stunned");
         return;
@@ -258,7 +258,7 @@ function callback_stunned(localclientnum, oldval, newval, bnewent, binitialsnap,
 // Size: 0x8a
 function callback_emp(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     self.emp = newval;
-    println("japanese");
+    println("<dev string:x15a>");
     if (newval) {
         self notify(#"emp");
         return;

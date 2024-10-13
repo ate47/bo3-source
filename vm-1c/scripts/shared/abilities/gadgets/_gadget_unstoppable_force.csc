@@ -9,9 +9,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_11c3c67a;
+#namespace _gadget_unstoppable_force;
 
-// Namespace namespace_11c3c67a
+// Namespace _gadget_unstoppable_force
 // Params 0, eflags: 0x2
 // Checksum 0x8a3ac9eb, Offset: 0x400
 // Size: 0x34
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_unstoppable_force", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_11c3c67a
+// Namespace _gadget_unstoppable_force
 // Params 0, eflags: 0x1 linked
 // Checksum 0x696b3347, Offset: 0x440
 // Size: 0x6c
@@ -28,7 +28,7 @@ function __init__() {
     clientfield::register("toplayer", "unstoppableforce_state", 1, 1, "int", &function_8f92edb4, 0, 1);
 }
 
-// Namespace namespace_11c3c67a
+// Namespace _gadget_unstoppable_force
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4601b7b, Offset: 0x4b8
 // Size: 0x24
@@ -36,7 +36,7 @@ function on_localplayer_shutdown(localclientnum) {
     function_26d7266e(localclientnum);
 }
 
-// Namespace namespace_11c3c67a
+// Namespace _gadget_unstoppable_force
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd388cba4, Offset: 0x4e8
 // Size: 0x202
@@ -57,18 +57,18 @@ function function_8f92edb4(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_11c3c67a
+// Namespace _gadget_unstoppable_force
 // Params 1, eflags: 0x1 linked
 // Checksum 0x3f45a0ba, Offset: 0x6f8
 // Size: 0x11c
 function function_435df4ae(localclientnum) {
     self util::waittill_any_timeout(getdvarfloat("scr_unstoppableforce_activation_delay", 0.35), "unstoppableforce_arm_cross_end");
     lui::screen_fade(getdvarfloat("scr_unstoppableforce_flash_fade_in_time", 0.075), getdvarfloat("scr_unstoppableforce_flash_alpha", 0.6), 0, "white");
-    wait(getdvarfloat("scr_unstoppableforce_flash_fade_in_time", 0.075));
+    wait getdvarfloat("scr_unstoppableforce_flash_fade_in_time", 0.075);
     lui::screen_fade(getdvarfloat("scr_unstoppableforce_flash_fade_out_time", 0.9), 0, getdvarfloat("scr_unstoppableforce_flash_alpha", 0.6), "white");
 }
 
-// Namespace namespace_11c3c67a
+// Namespace _gadget_unstoppable_force
 // Params 1, eflags: 0x1 linked
 // Checksum 0x36d6bd01, Offset: 0x820
 // Size: 0x3c
@@ -76,7 +76,7 @@ function function_f8cd963(localclientnum) {
     self.var_5b712cc2 = playfxoncamera(localclientnum, "player/fx_plyr_ability_screen_blur_overdrive", (0, 0, 0), (1, 0, 0), (0, 0, 1));
 }
 
-// Namespace namespace_11c3c67a
+// Namespace _gadget_unstoppable_force
 // Params 1, eflags: 0x1 linked
 // Checksum 0xad92a861, Offset: 0x868
 // Size: 0x3e
@@ -87,7 +87,7 @@ function function_26d7266e(localclientnum) {
     }
 }
 
-// Namespace namespace_11c3c67a
+// Namespace _gadget_unstoppable_force
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd6d4fab3, Offset: 0x8b0
 // Size: 0x62
@@ -98,7 +98,7 @@ function function_4ba988e2(localclientnum) {
     self notify(#"hash_82017c20");
 }
 
-// Namespace namespace_11c3c67a
+// Namespace _gadget_unstoppable_force
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb760393a, Offset: 0x920
 // Size: 0x190
@@ -120,7 +120,7 @@ function function_7f9030dd(localclientnum) {
         } else if (isdefined(self.var_5b712cc2)) {
             self function_26d7266e(localclientnum);
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 

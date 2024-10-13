@@ -5,15 +5,15 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_49ee819c;
+#namespace mp_freerun_01;
 
-// Namespace namespace_49ee819c
+// Namespace mp_freerun_01
 // Params 0, eflags: 0x0
 // Checksum 0xf21b9a, Offset: 0x140
 // Size: 0x8c
 function main() {
-    namespace_b046f355::main();
-    namespace_db5bc658::main();
+    mp_freerun_01_fx::main();
+    mp_freerun_01_sound::main();
     setdvar("phys_buoyancy", 1);
     setdvar("phys_ragdoll_buoyancy", 1);
     load::main();

@@ -80,12 +80,12 @@ function on_player_connect() {
     // Size: 0x54
     function devgui_notif_getgunleveltablename() {
         if (sessionmodeiscampaigngame()) {
-            return "type";
+            return "<dev string:x28>";
         }
         if (sessionmodeiszombiesgame()) {
-            return "type";
+            return "<dev string:x4d>";
         }
-        return "type";
+        return "<dev string:x72>";
     }
 
     // Namespace popups
@@ -108,12 +108,12 @@ function on_player_connect() {
     // Size: 0x8a
     function devgui_notif_getchallengestablename(tableid) {
         if (sessionmodeiscampaigngame()) {
-            return ("type" + tableid + "type");
+            return ("<dev string:x97>" + tableid + "<dev string:xb9>");
         }
         if (sessionmodeiszombiesgame()) {
-            return ("type" + tableid + "type");
+            return ("<dev string:xbe>" + tableid + "<dev string:xb9>");
         }
-        return "type" + tableid + "type";
+        return "<dev string:xe0>" + tableid + "<dev string:xb9>";
     }
 
     // Namespace popups
@@ -140,14 +140,14 @@ function on_player_connect() {
             var_c04d8f24 = tablelookuprownum(level.var_f543dad1, 0, i);
             if (var_c04d8f24 > -1) {
                 group_s = tablelookupcolumnforrow(level.var_f543dad1, var_c04d8f24, 2);
-                if (issubstr(group_s, "type") || group_s == "type") {
+                if (issubstr(group_s, "<dev string:x102>") || group_s == "<dev string:x10a>") {
                     reference_s = tablelookupcolumnforrow(level.var_f543dad1, var_c04d8f24, 4);
-                    if (reference_s != "type") {
+                    if (reference_s != "<dev string:x10f>") {
                         weapon = getweapon(reference_s);
-                        level.tbl_weaponids[i]["type"] = reference_s;
-                        level.tbl_weaponids[i]["type"] = group_s;
-                        level.tbl_weaponids[i]["type"] = int(tablelookupcolumnforrow(level.var_f543dad1, var_c04d8f24, 5));
-                        level.tbl_weaponids[i]["type"] = tablelookupcolumnforrow(level.var_f543dad1, var_c04d8f24, 8);
+                        level.tbl_weaponids[i]["<dev string:x110>"] = reference_s;
+                        level.tbl_weaponids[i]["<dev string:x11a>"] = group_s;
+                        level.tbl_weaponids[i]["<dev string:x120>"] = int(tablelookupcolumnforrow(level.var_f543dad1, var_c04d8f24, 5));
+                        level.tbl_weaponids[i]["<dev string:x126>"] = tablelookupcolumnforrow(level.var_f543dad1, var_c04d8f24, 8);
                     }
                 }
             }
@@ -162,18 +162,18 @@ function on_player_connect() {
         if (isdedicated()) {
             return;
         }
-        if (getdvarint("type", -999) == -999) {
-            setdvar("type", 0);
+        if (getdvarint("<dev string:x131>", -999) == -999) {
+            setdvar("<dev string:x131>", 0);
         }
-        var_deda26ca = "type";
-        util::add_devgui(var_deda26ca + "type", "type" + "type" + "type");
+        var_deda26ca = "<dev string:x14e>";
+        util::add_devgui(var_deda26ca + "<dev string:x15f>", "<dev string:x170>" + "<dev string:x131>" + "<dev string:x175>");
         while (true) {
-            if (getdvarint("type", 0) > 0) {
+            if (getdvarint("<dev string:x131>", 0) > 0) {
                 util::remove_devgui(var_deda26ca);
                 level thread devgui_notif_init();
                 break;
             }
-            wait(1);
+            wait 1;
         }
     }
 
@@ -182,11 +182,11 @@ function on_player_connect() {
     // Checksum 0x6c6630a3, Offset: 0x9e0
     // Size: 0xec
     function devgui_notif_init() {
-        setdvar("type", 0);
-        setdvar("type", 0);
-        setdvar("type", 0);
-        setdvar("type", 0);
-        setdvar("type", 0);
+        setdvar("<dev string:x178>", 0);
+        setdvar("<dev string:x18e>", 0);
+        setdvar("<dev string:x1aa>", 0);
+        setdvar("<dev string:x1d4>", 0);
+        setdvar("<dev string:x1f8>", 0);
         if (isdedicated()) {
             return;
         }
@@ -205,18 +205,18 @@ function on_player_connect() {
         if (!isdefined(level.ranktable)) {
             return;
         }
-        notif_rank_devgui_base = "type";
+        notif_rank_devgui_base = "<dev string:x219>";
         for (i = 1; i < level.ranktable.size; i++) {
             display_level = i + 1;
             if (display_level < 10) {
-                display_level = "type" + display_level;
+                display_level = "<dev string:x242>" + display_level;
             }
-            adddebugcommand(notif_rank_devgui_base + display_level + "type" + "type" + "type" + "type" + i + "type");
+            adddebugcommand(notif_rank_devgui_base + display_level + "<dev string:x244>" + "<dev string:x247>" + "<dev string:x178>" + "<dev string:x249>" + i + "<dev string:x24b>");
             if (i % 10 == 0) {
-                wait(0.05);
+                wait 0.05;
             }
         }
-        wait(0.05);
+        wait 0.05;
         level thread notif_devgui_rank_up_think();
     }
 
@@ -226,14 +226,14 @@ function on_player_connect() {
     // Size: 0x96
     function notif_devgui_rank_up_think() {
         for (;;) {
-            rank_number = getdvarint("type");
+            rank_number = getdvarint("<dev string:x178>");
             if (rank_number == 0) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             level.players[0] rank::codecallback_rankup(rank_number, 0, 1);
-            setdvar("type", 0);
-            wait(1);
+            setdvar("<dev string:x178>", 0);
+            wait 1;
         }
     }
 
@@ -242,12 +242,12 @@ function on_player_connect() {
     // Checksum 0x3982cb3b, Offset: 0xca8
     // Size: 0x7fc
     function notif_devgui_gun_rank() {
-        notif_gun_rank_devgui_base = "type";
+        notif_gun_rank_devgui_base = "<dev string:x24f>";
         gunlevel_rankid_col = 0;
         gunlevel_gunref_col = 2;
         gunlevel_attachment_unlock_col = 3;
         gunlevel_xpgained_col = 4;
-        level flag::wait_till("type");
+        level flag::wait_till("<dev string:x277>");
         if (!isdefined(level.tbl_weaponids)) {
             devgui_create_weapon_levels_table();
         }
@@ -255,53 +255,53 @@ function on_player_connect() {
             return;
         }
         a_weapons = [];
-        a_weapons["type"] = [];
-        a_weapons["type"] = [];
-        a_weapons["type"] = [];
-        a_weapons["type"] = [];
-        a_weapons["type"] = [];
-        a_weapons["type"] = [];
-        a_weapons["type"] = [];
-        a_weapons["type"] = [];
+        a_weapons["<dev string:x28b>"] = [];
+        a_weapons["<dev string:x293>"] = [];
+        a_weapons["<dev string:x297>"] = [];
+        a_weapons["<dev string:x29b>"] = [];
+        a_weapons["<dev string:x2a3>"] = [];
+        a_weapons["<dev string:x2aa>"] = [];
+        a_weapons["<dev string:x2b1>"] = [];
+        a_weapons["<dev string:x2ba>"] = [];
         gun_levels_table = devgui_notif_getgunleveltablename();
         foreach (weapon in level.tbl_weaponids) {
             gun = [];
-            gun["type"] = weapon["type"];
-            gun["type"] = getitemindexfromref(weapon["type"]);
-            gun["type"] = [];
-            gun_weapon_attachments = strtok(weapon["type"], "type");
+            gun["<dev string:x2c0>"] = weapon["<dev string:x110>"];
+            gun["<dev string:x2c4>"] = getitemindexfromref(weapon["<dev string:x110>"]);
+            gun["<dev string:x2ce>"] = [];
+            gun_weapon_attachments = strtok(weapon["<dev string:x126>"], "<dev string:x249>");
             foreach (attachment in gun_weapon_attachments) {
-                gun["type"][attachment] = [];
-                gun["type"][attachment]["type"] = getattachmenttableindex(attachment);
-                gun["type"][attachment]["type"] = tablelookup(gun_levels_table, gunlevel_gunref_col, gun["type"], gunlevel_attachment_unlock_col, attachment, gunlevel_rankid_col);
-                gun["type"][attachment]["type"] = tablelookup(gun_levels_table, gunlevel_gunref_col, gun["type"], gunlevel_attachment_unlock_col, attachment, gunlevel_xpgained_col);
+                gun["<dev string:x2ce>"][attachment] = [];
+                gun["<dev string:x2ce>"][attachment]["<dev string:x2c4>"] = getattachmenttableindex(attachment);
+                gun["<dev string:x2ce>"][attachment]["<dev string:x2da>"] = tablelookup(gun_levels_table, gunlevel_gunref_col, gun["<dev string:x2c0>"], gunlevel_attachment_unlock_col, attachment, gunlevel_rankid_col);
+                gun["<dev string:x2ce>"][attachment]["<dev string:x2e1>"] = tablelookup(gun_levels_table, gunlevel_gunref_col, gun["<dev string:x2c0>"], gunlevel_attachment_unlock_col, attachment, gunlevel_xpgained_col);
             }
-            switch (weapon["type"]) {
-            case 8:
-                if (weapon["type"] != "type") {
-                    arrayinsert(a_weapons["type"], gun, 0);
+            switch (weapon["<dev string:x11a>"]) {
+            case "<dev string:x2e4>":
+                if (weapon["<dev string:x110>"] != "<dev string:x2f2>") {
+                    arrayinsert(a_weapons["<dev string:x2aa>"], gun, 0);
                 }
                 break;
-            case 8:
-                arrayinsert(a_weapons["type"], gun, 0);
+            case "<dev string:x2fe>":
+                arrayinsert(a_weapons["<dev string:x2b1>"], gun, 0);
                 break;
-            case 8:
-                arrayinsert(a_weapons["type"], gun, 0);
+            case "<dev string:x30e>":
+                arrayinsert(a_weapons["<dev string:x28b>"], gun, 0);
                 break;
-            case 8:
-                arrayinsert(a_weapons["type"], gun, 0);
+            case "<dev string:x31d>":
+                arrayinsert(a_weapons["<dev string:x293>"], gun, 0);
                 break;
-            case 8:
-                arrayinsert(a_weapons["type"], gun, 0);
+            case "<dev string:x328>":
+                arrayinsert(a_weapons["<dev string:x297>"], gun, 0);
                 break;
-            case 8:
-                arrayinsert(a_weapons["type"], gun, 0);
+            case "<dev string:x333>":
+                arrayinsert(a_weapons["<dev string:x29b>"], gun, 0);
                 break;
-            case 8:
-                arrayinsert(a_weapons["type"], gun, 0);
+            case "<dev string:x33e>":
+                arrayinsert(a_weapons["<dev string:x2a3>"], gun, 0);
                 break;
-            case 8:
-                arrayinsert(a_weapons["type"], gun, 0);
+            case "<dev string:x34c>":
+                arrayinsert(a_weapons["<dev string:x2ba>"], gun, 0);
                 break;
             default:
                 break;
@@ -309,12 +309,12 @@ function on_player_connect() {
         }
         foreach (group_name, gun_group in a_weapons) {
             foreach (gun, attachment_group in gun_group) {
-                foreach (attachment, attachment_data in attachment_group["type"]) {
-                    devgui_cmd_gun_path = notif_gun_rank_devgui_base + group_name + "type" + gun_group[gun]["type"] + "type" + attachment;
-                    adddebugcommand(devgui_cmd_gun_path + "type" + "type" + "type" + "type" + "type" + attachment_data["type"] + "type" + "type" + "type" + attachment_data["type"] + "type" + "type" + "type" + gun_group[gun]["type"] + "type" + "type" + "type" + attachment_data["type"] + "type");
+                foreach (attachment, attachment_data in attachment_group["<dev string:x2ce>"]) {
+                    devgui_cmd_gun_path = notif_gun_rank_devgui_base + group_name + "<dev string:x359>" + gun_group[gun]["<dev string:x2c0>"] + "<dev string:x359>" + attachment;
+                    adddebugcommand(devgui_cmd_gun_path + "<dev string:x244>" + "<dev string:x247>" + "<dev string:x35b>" + "<dev string:x18e>" + "<dev string:x249>" + attachment_data["<dev string:x2e1>"] + "<dev string:x35b>" + "<dev string:x1aa>" + "<dev string:x249>" + attachment_data["<dev string:x2c4>"] + "<dev string:x35b>" + "<dev string:x1d4>" + "<dev string:x249>" + gun_group[gun]["<dev string:x2c4>"] + "<dev string:x35b>" + "<dev string:x1f8>" + "<dev string:x249>" + attachment_data["<dev string:x2da>"] + "<dev string:x24b>");
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
         level thread notif_devgui_gun_level_think();
     }
@@ -325,20 +325,20 @@ function on_player_connect() {
     // Size: 0x156
     function notif_devgui_gun_level_think() {
         for (;;) {
-            weapon_item_index = getdvarint("type");
+            weapon_item_index = getdvarint("<dev string:x1d4>");
             if (weapon_item_index == 0) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
-            xp_reward = getdvarint("type");
-            attachment_index = getdvarint("type");
-            rank_id = getdvarint("type");
+            xp_reward = getdvarint("<dev string:x18e>");
+            attachment_index = getdvarint("<dev string:x1aa>");
+            rank_id = getdvarint("<dev string:x1f8>");
             level.players[0] persistence::codecallback_gunchallengecomplete(xp_reward, attachment_index, weapon_item_index, rank_id);
-            setdvar("type", 0);
-            setdvar("type", 0);
-            setdvar("type", 0);
-            setdvar("type", 0);
-            wait(1);
+            setdvar("<dev string:x18e>", 0);
+            setdvar("<dev string:x1aa>", 0);
+            setdvar("<dev string:x1d4>", 0);
+            setdvar("<dev string:x1f8>", 0);
+            wait 1;
         }
     }
 
@@ -347,25 +347,25 @@ function on_player_connect() {
     // Checksum 0xe91159f8, Offset: 0x1610
     // Size: 0x32c
     function notif_devgui_challenges() {
-        notif_challenges_devgui_base = "type";
+        notif_challenges_devgui_base = "<dev string:x361>";
         for (i = 1; i <= devgui_notif_getchallengestablecount(); i++) {
             tablename = devgui_notif_getchallengestablename(i);
             rows = tablelookuprowcount(tablename);
             for (j = 1; j < rows; j++) {
                 challengeid = tablelookupcolumnforrow(tablename, j, 0);
-                if (challengeid != "type" && strisint(tablelookupcolumnforrow(tablename, j, 0))) {
+                if (challengeid != "<dev string:x10f>" && strisint(tablelookupcolumnforrow(tablename, j, 0))) {
                     challengestring = tablelookupcolumnforrow(tablename, j, 5);
                     type = tablelookupcolumnforrow(tablename, j, 3);
                     challengetier = int(tablelookupcolumnforrow(tablename, j, 1));
-                    challengetierstring = "type" + challengetier;
+                    challengetierstring = "<dev string:x10f>" + challengetier;
                     if (challengetier < 10) {
-                        challengetierstring = "type" + challengetier;
+                        challengetierstring = "<dev string:x242>" + challengetier;
                     }
                     name = tablelookupcolumnforrow(tablename, j, 5);
-                    devgui_cmd_challenge_path = notif_challenges_devgui_base + type + "type" + makelocalizedstring(name) + "type" + challengetierstring + "type" + challengeid;
-                    adddebugcommand(devgui_cmd_challenge_path + "type" + "type" + "type" + "type" + "type" + j + "type" + "type" + "type" + i + "type");
+                    devgui_cmd_challenge_path = notif_challenges_devgui_base + type + "<dev string:x359>" + makelocalizedstring(name) + "<dev string:x359>" + challengetierstring + "<dev string:x38a>" + challengeid;
+                    adddebugcommand(devgui_cmd_challenge_path + "<dev string:x244>" + "<dev string:x247>" + "<dev string:x35b>" + "<dev string:x390>" + "<dev string:x249>" + j + "<dev string:x35b>" + "<dev string:x3af>" + "<dev string:x249>" + i + "<dev string:x24b>");
                     if (int(challengeid) % 10 == 0) {
-                        wait(0.05);
+                        wait 0.05;
                     }
                 }
             }
@@ -378,33 +378,33 @@ function on_player_connect() {
     // Checksum 0xb79669bd, Offset: 0x1948
     // Size: 0x346
     function notif_devgui_challenges_think() {
-        setdvar("type", 0);
-        setdvar("type", 0);
+        setdvar("<dev string:x390>", 0);
+        setdvar("<dev string:x3af>", 0);
         for (;;) {
-            row = getdvarint("type");
-            table = getdvarint("type");
+            row = getdvarint("<dev string:x390>");
+            table = getdvarint("<dev string:x3af>");
             if (table < 1 || table > devgui_notif_getchallengestablecount()) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             tablename = devgui_notif_getchallengestablename(table);
             if (row < 1 || row > tablelookuprowcount(tablename)) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             type = tablelookupcolumnforrow(tablename, row, 3);
             itemindex = 0;
-            if (type == "type") {
+            if (type == "<dev string:x3d0>") {
                 type = 0;
-            } else if (type == "type") {
+            } else if (type == "<dev string:x11a>") {
                 itemindex = 4;
                 type = 3;
-            } else if (type == "type") {
+            } else if (type == "<dev string:x126>") {
                 itemindex = 1;
                 type = 4;
-            } else if (type == "type") {
+            } else if (type == "<dev string:x3d7>") {
                 type = 2;
-            } else if (type == "type") {
+            } else if (type == "<dev string:x3e0>") {
                 type = 5;
             } else {
                 itemindex = 23;
@@ -414,9 +414,9 @@ function on_player_connect() {
             challengeid = int(tablelookupcolumnforrow(tablename, row, 0));
             maxvalue = int(tablelookupcolumnforrow(tablename, row, 2));
             level.players[0] persistence::codecallback_challengecomplete(xpreward, maxvalue, row, table - 1, type, itemindex, challengeid);
-            setdvar("type", 0);
-            setdvar("type", 0);
-            wait(1);
+            setdvar("<dev string:x390>", 0);
+            setdvar("<dev string:x3af>", 0);
+            wait 1;
         }
     }
 
@@ -426,20 +426,20 @@ function on_player_connect() {
     // Size: 0x6a8
     function popupsfromconsole() {
         while (true) {
-            timeout = getdvarfloat("type", 1);
+            timeout = getdvarfloat("<dev string:x3eb>", 1);
             if (timeout == 0) {
                 timeout = 1;
             }
-            wait(timeout);
-            medal = getdvarint("type", 0);
-            challenge = getdvarint("type", 0);
-            rank = getdvarint("type", 0);
-            gun = getdvarint("type", 0);
-            contractpass = getdvarint("type", 0);
-            contractfail = getdvarint("type", 0);
-            gamemodemsg = getdvarint("type", 0);
-            teammsg = getdvarint("type", 0);
-            challengeindex = getdvarint("type", 1);
+            wait timeout;
+            medal = getdvarint("<dev string:x3f9>", 0);
+            challenge = getdvarint("<dev string:x408>", 0);
+            rank = getdvarint("<dev string:x41b>", 0);
+            gun = getdvarint("<dev string:x429>", 0);
+            contractpass = getdvarint("<dev string:x436>", 0);
+            contractfail = getdvarint("<dev string:x44c>", 0);
+            gamemodemsg = getdvarint("<dev string:x462>", 0);
+            teammsg = getdvarint("<dev string:x477>", 0);
+            challengeindex = getdvarint("<dev string:x488>", 1);
             for (i = 0; i < medal; i++) {
                 level.players[0] medals::codecallback_medal(86);
             }
@@ -484,33 +484,33 @@ function on_player_connect() {
                 if (isdefined(level.players[1])) {
                     player = level.players[1];
                 }
-                level.players[0] displayteammessagetoall(%type, player);
+                level.players[0] displayteammessagetoall(%"<dev string:x49b>", player);
             }
-            reset = getdvarint("type", 1);
+            reset = getdvarint("<dev string:x4bb>", 1);
             if (reset) {
                 if (medal) {
-                    setdvar("type", 0);
+                    setdvar("<dev string:x3f9>", 0);
                 }
                 if (challenge) {
-                    setdvar("type", 0);
+                    setdvar("<dev string:x408>", 0);
                 }
                 if (gun) {
-                    setdvar("type", 0);
+                    setdvar("<dev string:x429>", 0);
                 }
                 if (rank) {
-                    setdvar("type", 0);
+                    setdvar("<dev string:x41b>", 0);
                 }
                 if (contractpass) {
-                    setdvar("type", 0);
+                    setdvar("<dev string:x436>", 0);
                 }
                 if (contractfail) {
-                    setdvar("type", 0);
+                    setdvar("<dev string:x44c>", 0);
                 }
                 if (gamemodemsg) {
-                    setdvar("type", 0);
+                    setdvar("<dev string:x462>", 0);
                 }
                 if (teammsg) {
-                    setdvar("type", 0);
+                    setdvar("<dev string:x477>", 0);
                 }
             }
         }
@@ -636,7 +636,7 @@ function function_57624cb5() {
             }
             self luinotifyevent(%player_callout, 2, nextnotifydata.message, nextnotifydata.player.entnum);
         }
-        wait(level.teammessage.waittime);
+        wait level.teammessage.waittime;
     }
 }
 
@@ -682,7 +682,7 @@ function function_d3829eca() {
                 duration = level.startmessagedefaultduration;
             }
             self hud_message::function_3cb967ea(nextnotifydata, duration);
-            wait(duration);
+            wait duration;
             continue;
         }
         if (self.var_4c9e757e.size > 0) {
@@ -696,7 +696,7 @@ function function_d3829eca() {
             self hud_message::function_3cb967ea(nextnotifydata, duration);
             continue;
         }
-        wait(1);
+        wait 1;
     }
 }
 

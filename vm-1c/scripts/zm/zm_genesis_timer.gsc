@@ -15,9 +15,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_6cd5f23f;
+#namespace zm_genesis_timer;
 
-// Namespace namespace_6cd5f23f
+// Namespace zm_genesis_timer
 // Params 0, eflags: 0x2
 // Checksum 0xbf77c7fd, Offset: 0x348
 // Size: 0x3c
@@ -25,7 +25,7 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_timer", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_6cd5f23f
+// Namespace zm_genesis_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x390
 // Size: 0x4
@@ -33,7 +33,7 @@ function __init__() {
     
 }
 
-// Namespace namespace_6cd5f23f
+// Namespace zm_genesis_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3da6be8d, Offset: 0x3a0
 // Size: 0x14c
@@ -51,7 +51,7 @@ function __main__() {
     level thread function_86419da();
 }
 
-// Namespace namespace_6cd5f23f
+// Namespace zm_genesis_timer
 // Params 1, eflags: 0x1 linked
 // Checksum 0x12384f36, Offset: 0x4f8
 // Size: 0xf0
@@ -66,7 +66,7 @@ function function_6ac3689a(player) {
     return 0;
 }
 
-// Namespace namespace_6cd5f23f
+// Namespace zm_genesis_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6883f9dc, Offset: 0x5f0
 // Size: 0x322
@@ -157,7 +157,7 @@ function function_86419da() {
     } while (var_99870abd < 50);
 }
 
-// Namespace namespace_6cd5f23f
+// Namespace zm_genesis_timer
 // Params 1, eflags: 0x1 linked
 // Checksum 0xda77ac43, Offset: 0x920
 // Size: 0x27c

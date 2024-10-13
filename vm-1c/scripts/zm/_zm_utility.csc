@@ -13,9 +13,9 @@ function ignore_triggers(timer) {
     self endon(#"death");
     self.ignoretriggers = 1;
     if (isdefined(timer)) {
-        wait(timer);
+        wait timer;
     } else {
-        wait(0.5);
+        wait 0.5;
     }
     self.ignoretriggers = 0;
 }
@@ -189,7 +189,7 @@ function umbra_fix_logic(localclientnum) {
         if (in_fix_area == 0) {
             umbra_settometrigger(localclientnum, "");
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

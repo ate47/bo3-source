@@ -61,8 +61,8 @@ function function_52c9c74a(str_id, var_56503a18) {
         return;
     }
     /#
-        printtoprightln("CP_COMPLETE_INFECTION" + str_id, (1, 1, 1));
-        println("CP_COMPLETE_INFECTION" + str_id);
+        printtoprightln("<dev string:x28>" + str_id, (1, 1, 1));
+        println("<dev string:x28>" + str_id);
     #/
     self giveachievement(str_id);
 }
@@ -215,7 +215,7 @@ function private function_1121f26a(var_c856ad1d, evictim) {
         var_46907f23 = var_c856ad1d getdstat("Achievements", "CP_DISTANCE_KILL");
         var_46907f23++;
         /#
-            printtoprightln("CP_COMPLETE_INFECTION" + var_1efe785f + "CP_COMPLETE_INFECTION" + var_46907f23, (1, 1, 1));
+            printtoprightln("<dev string:x3f>" + var_1efe785f + "<dev string:x40>" + var_46907f23, (1, 1, 1));
         #/
         if (var_46907f23 >= 5) {
             var_c856ad1d function_52c9c74a("CP_DISTANCE_KILL");

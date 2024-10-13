@@ -236,7 +236,7 @@ function function_350e74f7(attacker, upgraded, weapon) {
     self endon(#"death");
     self clientfield::set("cybercom_shortout", upgraded ? 2 : 1);
     util::wait_network_frame();
-    wait(0.5);
+    wait 0.5;
     if (issubstr(self.vehicletype, "wasp")) {
         if (isalive(self)) {
             self.death_type = "gibbed";
@@ -280,12 +280,12 @@ function servo_shortout(attacker, weapon, upgraded, var_66a2f0cf, damage) {
     if (!isdefined(weapon)) {
         weapon = getweapon("gadget_servo_shortout");
     }
-    self notify(#"hash_f8c5dd60", weapon, attacker);
+    self notify(#"cybercom_action", weapon, attacker);
     if (isvehicle(self)) {
         self thread function_350e74f7(attacker, upgraded, weapon);
         return;
     }
-    assert(self.archetype == "cybercom_uses_control");
+    assert(self.archetype == "<dev string:x28>");
     self clientfield::set("cybercom_shortout", 1);
     if (!cybercom::function_76e3026d(self)) {
         self kill(self.origin, isdefined(attacker) ? attacker : undefined, undefined, weapon);
@@ -295,13 +295,13 @@ function servo_shortout(attacker, weapon, upgraded, var_66a2f0cf, damage) {
         self kill(self.origin, isdefined(attacker) ? attacker : undefined, undefined, weapon);
         return;
     }
-    wait(randomfloatrange(0, 0.35));
+    wait randomfloatrange(0, 0.35);
     self.is_disabled = 1;
     self dodamage(damage, self.origin, isdefined(attacker) ? attacker : undefined, undefined, "none", "MOD_UNKNOWN", 0, weapon, -1, 1);
     time = randomfloatrange(0.8, 2.1);
     for (i = 0; i < 2; i++) {
         destructserverutils::destructnumberrandompieces(self, randomintrange(1, 3));
-        wait(time / 3);
+        wait time / 3;
     }
     if (isalive(self)) {
         if (isdefined(var_66a2f0cf) && var_66a2f0cf) {
@@ -346,7 +346,7 @@ function function_b1101fa6(target, var_9bc2efcb) {
         type = self cybercom::function_5e3d3aa();
         self orientmode("face default");
         self animscripted("ai_cybercom_anim", self.origin, self.angles, "ai_base_rifle_" + type + "_exposed_cybercom_activate");
-        self waittillmatch(#"hash_39fa7e38", "fire");
+        self waittillmatch(#"ai_cybercom_anim", "fire");
     }
     weapon = getweapon("gadget_servo_shortout");
     foreach (guy in validtargets) {
@@ -354,7 +354,7 @@ function function_b1101fa6(target, var_9bc2efcb) {
             continue;
         }
         guy thread servo_shortout(self);
-        wait(0.05);
+        wait 0.05;
     }
 }
 

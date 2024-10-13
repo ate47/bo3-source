@@ -33,10 +33,10 @@ function function_862bc532() {
         struct.script_float = 2;
         struct.script_int = 3000;
         struct.wallbuy = weapon_spawns[i];
-        namespace_6d813654::function_66764564(struct, &function_c9123339);
+        zm_equip_hacker::function_66764564(struct, &function_c9123339);
     }
     var_d4970e0b = getentarray("bowie_upgrade", "targetname");
-    array::thread_all(var_d4970e0b, &namespace_6d813654::function_4edfe9fb);
+    array::thread_all(var_d4970e0b, &zm_equip_hacker::function_4edfe9fb);
 }
 
 // Namespace namespace_359e846b
@@ -47,6 +47,6 @@ function function_c9123339(hacker) {
     self.wallbuy.trigger_stub.hacked = 1;
     self.clientfieldname = self.wallbuy.zombie_weapon_upgrade + "_" + self.origin;
     level clientfield::set(self.clientfieldname, 2);
-    namespace_6d813654::function_fcbe2f17(self);
+    zm_equip_hacker::function_fcbe2f17(self);
 }
 

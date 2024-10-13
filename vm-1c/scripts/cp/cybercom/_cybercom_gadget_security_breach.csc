@@ -30,9 +30,9 @@ function init() {
 function init_clientfields() {
     clientfield::register("toplayer", "hijack_vehicle_transition", 1, 2, "int", &function_214501b2, 0, 0);
     clientfield::register("toplayer", "hijack_static_effect", 1, 7, "float", &function_25525279, 0, 0);
-    clientfield::register("toplayer", "sndInDrivableVehicle", 1, 1, "int", &function_4755b60c, 0, 0);
+    clientfield::register("toplayer", "sndInDrivableVehicle", 1, 1, "int", &sndInDrivableVehicle, 0, 0);
     clientfield::register("vehicle", "vehicle_hijacked", 1, 1, "int", &function_9eb354f0, 0, 0);
-    clientfield::register("toplayer", "vehicle_hijacked", 1, 1, "int", &function_8ac3077f, 0, 0);
+    clientfield::register("toplayer", "vehicle_hijacked", 1, 1, "int", &player_hijacked_vehicle, 0, 0);
     clientfield::register("toplayer", "hijack_spectate", 1, 1, "int", &function_5684f6e8, 0, 0);
     clientfield::register("toplayer", "hijack_static_ramp_up", 1, 1, "int", &function_8e1516cf, 0, 0);
     visionset_mgr::register_visionset_info("hijack_vehicle", 1, 7, undefined, "vehicle_transition");
@@ -105,7 +105,7 @@ function function_8e1516cf(localclientnum, oldval, newval, bnewent, binitialsnap
             var_e48333a4 = gettime();
             var_303b5d2b = math::linear_map(var_e48333a4, timestart, timeend, var_9667361, 1);
             filter::set_filter_vehicle_hijack_oor_amount(self, 0, var_303b5d2b);
-            wait(0.01);
+            wait 0.01;
         }
         return;
     }
@@ -141,7 +141,7 @@ function function_49ec9e85(vehicle) {
     while (isalive(vehicle)) {
         self.var_fbad6cb4 = self getcampos();
         self.var_f28a7256 = self getcamangles();
-        wait(0.01);
+        wait 0.01;
     }
 }
 
@@ -149,7 +149,7 @@ function function_49ec9e85(vehicle) {
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4b3b418e, Offset: 0xbd0
 // Size: 0xbc
-function function_8ac3077f(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function player_hijacked_vehicle(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         self tmodeenable(0);
         self oed::function_3b4d6db0(localclientnum);
@@ -217,7 +217,7 @@ function function_748fddf7(val) {
 // Params 7, eflags: 0x1 linked
 // Checksum 0x9f8e75b9, Offset: 0xf50
 // Size: 0xe6
-function function_4755b60c(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function sndInDrivableVehicle(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         if (!isdefined(level.var_9ddb7247)) {
             level.var_9ddb7247 = spawn(0, self.origin, "script_origin");

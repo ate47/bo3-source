@@ -73,7 +73,7 @@ function private function_d975d303() {
         for (index = 0; index < var_d96f8b8b.size; index++) {
             var_d96f8b8b[index] delete();
         }
-        wait(var_c55cca1f / 1000 / 2);
+        wait var_c55cca1f / 1000 / 2;
     }
 }
 
@@ -158,7 +158,7 @@ function private function_b63444c3(robot) {
         } else {
             robot asmsetanimationrate(1);
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -187,7 +187,7 @@ function private function_fdcdff00(robot) {
             robot ai::set_behavior_attribute("escort_position", predicitedposition);
             robot ai::set_behavior_attribute("move_mode", "escort");
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -198,7 +198,7 @@ function private function_fdcdff00(robot) {
 function private function_3620ca05(robot, enemy) {
     robot endon(#"death");
     robot setignoreent(enemy, 1);
-    wait(5);
+    wait 5;
     robot setignoreent(enemy, 0);
 }
 
@@ -227,7 +227,7 @@ function private function_8dd17cee(robot, position) {
         if (!var_3d3be3d) {
             robot ai::set_behavior_attribute("move_mode", "guard");
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -238,7 +238,7 @@ function private function_8dd17cee(robot, position) {
 function function_122e3e3d(robot, player) {
     robot endon(#"death");
     for (var_62dc55bd = gettime(); true; var_62dc55bd = gettime() + 1000) {
-        wait(0.05);
+        wait 0.05;
         if (!isdefined(robot.usetrigger)) {
             continue;
         }
@@ -342,7 +342,7 @@ function function_71cf3d3a() {
     while (true) {
         robot supplydrop::is_touching_crate();
         robot supplydrop::is_clone_touching_crate();
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -448,13 +448,13 @@ function epilog(context) {
     // Checksum 0x5f2834fb, Offset: 0x2598
     // Size: 0x90
     function function_5ce7891f() {
-        var_1171cea0 = getdvarint("KILLSTREAK_COMBAT_ROBOT_EARNED", 0);
+        var_1171cea0 = getdvarint("<dev string:x28>", 0);
         while (var_1171cea0 > 0) {
-            iprintlnbold("KILLSTREAK_COMBAT_ROBOT_EARNED" + var_1171cea0);
-            wait(1);
+            iprintlnbold("<dev string:x48>" + var_1171cea0);
+            wait 1;
             var_1171cea0--;
             if (var_1171cea0 == 0) {
-                iprintlnbold("KILLSTREAK_COMBAT_ROBOT_EARNED");
+                iprintlnbold("<dev string:x59>");
             }
         }
     }
@@ -466,7 +466,7 @@ function epilog(context) {
 // Checksum 0x7437dbeb, Offset: 0x2630
 // Size: 0x30
 function function_99494c4a(var_f191039f, delete_after_destruction_wait_time) {
-    wait(var_f191039f);
+    wait var_f191039f;
     if (isdefined(self)) {
         self.delete_after_destruction_wait_time = delete_after_destruction_wait_time;
     }
@@ -506,7 +506,7 @@ function function_f298031d(helicopter) {
 function function_f91732d7(context) {
     robot = context.robot;
     while (isdefined(robot) && isdefined(context.marker) && robot flagsys::get("in_vehicle")) {
-        wait(1);
+        wait 1;
     }
     if (isdefined(context.marker)) {
         context.marker delete();
@@ -525,7 +525,7 @@ function function_f91732d7(context) {
 // Size: 0x1bc
 function function_8ce7b744() {
     combatrobot = self;
-    combatrobot endon(#"hash_8afbc8b9");
+    combatrobot endon(#"combat_robot_shutdown");
     callback::remove_on_spawned(&function_74f7f285, combatrobot);
     attacker, damagefromunderneath, weapon = combatrobot waittill(#"death");
     attacker = self [[ level.figure_out_attacker ]](attacker);
@@ -536,7 +536,7 @@ function function_8ce7b744() {
         luinotifyevent(%player_callout, 2, %KILLSTREAK_DESTROYED_COMBAT_ROBOT, attacker.entnum);
     }
     combatrobot killstreaks::play_destroyed_dialog_on_owner("combat_robot", combatrobot.killstreak_id);
-    combatrobot notify(#"hash_8afbc8b9");
+    combatrobot notify(#"combat_robot_shutdown");
 }
 
 // Namespace combat_robot
@@ -546,9 +546,9 @@ function function_8ce7b744() {
 function function_6ebc9ffb() {
     robot = self;
     robot endon(#"death");
-    robot endon(#"hash_8afbc8b9");
+    robot endon(#"combat_robot_shutdown");
     while (robot flagsys::get("in_vehicle")) {
-        wait(1);
+        wait 1;
     }
     robot notify(#"combat_robot_land");
     robot.ignoretriggerdamage = 0;
@@ -561,7 +561,7 @@ function function_6ebc9ffb() {
         robot function_dfd80445(player);
         return;
     }
-    robot notify(#"hash_8afbc8b9");
+    robot notify(#"combat_robot_shutdown");
 }
 
 // Namespace combat_robot
@@ -594,9 +594,9 @@ function function_d4f822d5(player) {
     combatrobot = self;
     combatrobot notify(#"hash_7b2f894b");
     combatrobot endon(#"hash_7b2f894b");
-    combatrobot endon(#"hash_8afbc8b9");
+    combatrobot endon(#"combat_robot_shutdown");
     player util::waittill_any("joined_team", "disconnect", "joined_spectators");
-    combatrobot notify(#"hash_8afbc8b9");
+    combatrobot notify(#"combat_robot_shutdown");
 }
 
 // Namespace combat_robot
@@ -637,7 +637,7 @@ function function_772b64d7() {
     combatrobot = self;
     combatrobot killstreaks::play_pilot_dialog_on_owner("timeout", "combat_robot");
     combatrobot ai::set_behavior_attribute("shutdown", 1);
-    wait(randomfloatrange(3, 4.5));
+    wait randomfloatrange(3, 4.5);
     function_39f8e7ed(combatrobot);
     params = level.killstreakbundle["combat_robot"];
     if (isdefined(params.ksexplosionfx)) {
@@ -666,8 +666,8 @@ function function_772b64d7() {
             combatrobot.owner playrumbleonentity(params.ksexplosionrumble);
         }
     }
-    wait(0.2);
-    combatrobot notify(#"hash_8afbc8b9");
+    wait 0.2;
+    combatrobot notify(#"combat_robot_shutdown");
 }
 
 // Namespace combat_robot
@@ -678,7 +678,7 @@ function function_e4b3aaa0() {
     combatrobot = self;
     var_5bf4a57c = combatrobot.originalteam;
     var_90ede466 = combatrobot.killstreak_id;
-    combatrobot waittill(#"hash_8afbc8b9");
+    combatrobot waittill(#"combat_robot_shutdown");
     combatrobot playsound("evt_combat_bot_mech_fail_explode");
     if (isdefined(combatrobot.usetrigger)) {
         combatrobot.usetrigger delete();
@@ -707,23 +707,23 @@ function function_e4b3aaa0() {
 // Size: 0x100
 function function_7d3ed5b7() {
     combatrobot = self;
-    combatrobot endon(#"hash_8afbc8b9");
+    combatrobot endon(#"combat_robot_shutdown");
     combatrobot endon(#"death");
     combatrobot playsoundontag("vox_robot_chatter", "j_head");
     while (true) {
         soundalias = undefined;
         notify_string = combatrobot waittill(#"bhtn_action_notify");
         switch (notify_string) {
-        case 74:
-        case 75:
-        case 76:
-        case 43:
+        case "attack_kill":
+        case "attack_melee":
+        case "charge":
+        case "modeSwap":
             soundalias = "vox_robot_chatter";
             break;
         }
         if (isdefined(soundalias)) {
             combatrobot playsoundontag(soundalias, "j_head");
-            wait(1.2);
+            wait 1.2;
         }
     }
 }
@@ -734,7 +734,7 @@ function function_7d3ed5b7() {
 // Size: 0x54
 function function_b610d7e7() {
     combatrobot = self;
-    combatrobot endon(#"hash_8afbc8b9");
+    combatrobot endon(#"combat_robot_shutdown");
     combatrobot endon(#"death");
     combatrobot waittill(#"exiting_vehicle");
     combatrobot playsound("veh_vtol_supply_robot_launch");
@@ -746,12 +746,12 @@ function function_b610d7e7() {
 // Size: 0x94
 function function_bf49f6cc() {
     combatrobot = self;
-    combatrobot endon(#"hash_8afbc8b9");
+    combatrobot endon(#"combat_robot_shutdown");
     combatrobot endon(#"death");
     falltime = combatrobot waittill(#"falling");
     wait_time = falltime - 0.5;
     if (wait_time > 0) {
-        wait(wait_time);
+        wait wait_time;
     }
     combatrobot playsound("veh_vtol_supply_robot_land");
 }
@@ -762,10 +762,10 @@ function function_bf49f6cc() {
 // Size: 0x64
 function function_888d5088() {
     combatrobot = self;
-    combatrobot endon(#"hash_8afbc8b9");
+    combatrobot endon(#"combat_robot_shutdown");
     combatrobot endon(#"death");
     combatrobot waittill(#"landing");
-    wait(0.1);
+    wait 0.1;
     combatrobot playsound("veh_vtol_supply_robot_activate");
 }
 

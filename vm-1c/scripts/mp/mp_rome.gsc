@@ -7,16 +7,16 @@
 #using scripts/shared/_oob;
 #using scripts/codescripts/struct;
 
-#namespace namespace_3a8ca1c2;
+#namespace mp_rome;
 
-// Namespace namespace_3a8ca1c2
+// Namespace mp_rome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x29a8bb2a, Offset: 0x210
 // Size: 0xadc
 function main() {
     precache();
-    namespace_d475c887::main();
-    namespace_2d0e822e::main();
+    mp_rome_fx::main();
+    mp_rome_sound::main();
     trigger = spawn("trigger_radius_out_of_bounds", (-1062.5, -257.5, 348), 0, 21, -128);
     trigger thread oob::run_oob_trigger();
     trigger = spawn("trigger_radius_out_of_bounds", (264.5, -2177.5, -51), 0, 400, -128);
@@ -76,7 +76,7 @@ function main() {
     level.cleandepositpoints = array((1178.15, -2020.82, 294.125), (2647.03, -119.764, 216.125), (249.819, 944.336, 180.125), (-378.629, -1073.84, 352.125));
 }
 
-// Namespace namespace_3a8ca1c2
+// Namespace mp_rome
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xcf8
 // Size: 0x4

@@ -17,17 +17,17 @@ function autoexec function_2dc19561() {
 // Size: 0x234
 function __init__() {
     /#
-        if (getdvarstring(" ") == " " || getdvarstring(" ") == " ") {
-            setdvar(" ", 0);
+        if (getdvarstring("<dev string:x28>") == "<dev string:x36>" || getdvarstring("<dev string:x28>") == "<dev string:x37>") {
+            setdvar("<dev string:x28>", 0);
         }
-        if (getdvarstring(" ") == " ") {
-            setdvar(" ", " ");
+        if (getdvarstring("<dev string:x39>") == "<dev string:x36>") {
+            setdvar("<dev string:x39>", "<dev string:x48>");
         }
-        if (getdvarstring(" ") == " ") {
-            setdvar(" ", " ");
+        if (getdvarstring("<dev string:x4a>") == "<dev string:x36>") {
+            setdvar("<dev string:x4a>", "<dev string:x48>");
         }
-        if (getdvarstring(" ") == " " && isdefined(level.script)) {
-            setdvar(" ", level.script);
+        if (getdvarstring("<dev string:x62>") == "<dev string:x36>" && isdefined(level.script)) {
+            setdvar("<dev string:x62>", level.script);
         }
     #/
     if (!isdefined(level.dofdefault)) {
@@ -113,66 +113,66 @@ function setfogsliders() {
         if (!isdefined(level.tweakfile)) {
             level.tweakfile = 0;
         }
-        if (getdvarstring(" ") == " ") {
-            setdvar(" ", " ");
-            setdvar(" ", " ");
-            setdvar(" ", " ");
-            setdvar(" ", " ");
+        if (getdvarstring("<dev string:x75>") == "<dev string:x36>") {
+            setdvar("<dev string:x88>", "<dev string:x9e>");
+            setdvar("<dev string:xa2>", "<dev string:x9e>");
+            setdvar("<dev string:xb9>", "<dev string:x37>");
+            setdvar("<dev string:x75>", "<dev string:x37>");
         }
-        setdvar(" ", " ");
-        setdvar(" ", " ");
-        setdvar(" ", " ");
-        setdvar(" ", level.dofdefault[" "]);
-        setdvar(" ", level.dofdefault[" "]);
-        setdvar(" ", level.dofdefault[" "]);
-        setdvar(" ", level.dofdefault[" "]);
-        setdvar(" ", level.dofdefault[" "]);
-        setdvar(" ", level.dofdefault[" "]);
+        setdvar("<dev string:xcb>", "<dev string:xdc>");
+        setdvar("<dev string:xe0>", "<dev string:x37>");
+        setdvar("<dev string:xed>", "<dev string:x37>");
+        setdvar("<dev string:x105>", level.dofdefault["<dev string:x117>"]);
+        setdvar("<dev string:x121>", level.dofdefault["<dev string:x131>"]);
+        setdvar("<dev string:x139>", level.dofdefault["<dev string:x14a>"]);
+        setdvar("<dev string:x153>", level.dofdefault["<dev string:x162>"]);
+        setdvar("<dev string:x169>", level.dofdefault["<dev string:x17a>"]);
+        setdvar("<dev string:x183>", level.dofdefault["<dev string:x193>"]);
         file = undefined;
         filename = undefined;
         tweak_toggle = 1;
         for (;;) {
-            while (getdvarint(" ") == 0) {
+            while (getdvarint("<dev string:x28>") == 0) {
                 tweak_toggle = 1;
-                wait(0.05);
+                wait 0.05;
             }
             if (tweak_toggle) {
                 tweak_toggle = 0;
                 fogsettings = getfogsettings();
-                setdvar(" ", fogsettings[0]);
-                setdvar(" ", fogsettings[1]);
-                setdvar(" ", fogsettings[3]);
-                setdvar(" ", fogsettings[2]);
-                setdvar(" ", fogsettings[4] + " " + fogsettings[5] + " " + fogsettings[6]);
-                setdvar(" ", fogsettings[7]);
-                setdvar(" ", fogsettings[8] + " " + fogsettings[9] + " " + fogsettings[10]);
+                setdvar("<dev string:xb9>", fogsettings[0]);
+                setdvar("<dev string:x88>", fogsettings[1]);
+                setdvar("<dev string:xa2>", fogsettings[3]);
+                setdvar("<dev string:x75>", fogsettings[2]);
+                setdvar("<dev string:x19b>", fogsettings[4] + "<dev string:x1a9>" + fogsettings[5] + "<dev string:x1a9>" + fogsettings[6]);
+                setdvar("<dev string:x1ab>", fogsettings[7]);
+                setdvar("<dev string:x1bf>", fogsettings[8] + "<dev string:x1a9>" + fogsettings[9] + "<dev string:x1a9>" + fogsettings[10]);
                 level.fogsundir = [];
                 level.fogsundir[0] = fogsettings[11];
                 level.fogsundir[1] = fogsettings[12];
                 level.fogsundir[2] = fogsettings[13];
-                setdvar(" ", fogsettings[14]);
-                setdvar(" ", fogsettings[15]);
-                setdvar(" ", fogsettings[16]);
+                setdvar("<dev string:x1d1>", fogsettings[14]);
+                setdvar("<dev string:x1e9>", fogsettings[15]);
+                setdvar("<dev string:x1ff>", fogsettings[16]);
             }
-            level.fogexphalfplane = getdvarfloat(" ");
-            level.fogexphalfheight = getdvarfloat(" ");
-            level.fognearplane = getdvarfloat(" ");
-            level.fogbaseheight = getdvarfloat(" ");
-            colors = strtok(getdvarstring(" "), " ");
+            level.fogexphalfplane = getdvarfloat("<dev string:x88>");
+            level.fogexphalfheight = getdvarfloat("<dev string:xa2>");
+            level.fognearplane = getdvarfloat("<dev string:xb9>");
+            level.fogbaseheight = getdvarfloat("<dev string:x75>");
+            colors = strtok(getdvarstring("<dev string:x19b>"), "<dev string:x1a9>");
             level.fogcolorred = int(colors[0]);
             level.fogcolorgreen = int(colors[1]);
             level.fogcolorblue = int(colors[2]);
-            level.fogcolorscale = getdvarfloat(" ");
-            colors = strtok(getdvarstring(" "), " ");
+            level.fogcolorscale = getdvarfloat("<dev string:x1ab>");
+            colors = strtok(getdvarstring("<dev string:x1bf>"), "<dev string:x1a9>");
             level.sunfogcolorred = int(colors[0]);
             level.sunfogcolorgreen = int(colors[1]);
             level.sunfogcolorblue = int(colors[2]);
-            level.sunstartangle = getdvarfloat(" ");
-            level.sunendangle = getdvarfloat(" ");
-            level.fogmaxopacity = getdvarfloat(" ");
-            if (getdvarint(" ")) {
-                setdvar(" ", " ");
-                println(" ");
+            level.sunstartangle = getdvarfloat("<dev string:x1d1>");
+            level.sunendangle = getdvarfloat("<dev string:x1e9>");
+            level.fogmaxopacity = getdvarfloat("<dev string:x1ff>");
+            if (getdvarint("<dev string:xed>")) {
+                setdvar("<dev string:xed>", "<dev string:x37>");
+                println("<dev string:x213>");
                 players = getplayers();
                 dir = vectornormalize(anglestoforward(players[0] getplayerangles()));
                 level.fogsundir = [];
@@ -182,7 +182,7 @@ function setfogsliders() {
             }
             fovslidercheck();
             dumpsettings();
-            if (!getdvarint(" ")) {
+            if (!getdvarint("<dev string:x241>")) {
                 if (!isdefined(level.fogsundir)) {
                     level.fogsundir = [];
                     level.fogsundir[0] = 1;
@@ -193,7 +193,7 @@ function setfogsliders() {
             } else {
                 setexpfog(100000000, 100000001, 0, 0, 0, 0);
             }
-            wait(0.1);
+            wait 0.1;
         }
     }
 
@@ -237,30 +237,30 @@ function fovslidercheck() {
     // Checksum 0x2c6d0dd2, Offset: 0x1360
     // Size: 0x404
     function dumpsettings() {
-        if (getdvarstring(" ") != " ") {
-            println(" " + level.fognearplane + " ");
-            println(" " + level.fogexphalfplane + " ");
-            println(" " + level.fogexphalfheight + " ");
-            println(" " + level.fogbaseheight + " ");
-            println(" " + level.fogcolorred + " ");
-            println(" " + level.fogcolorgreen + " ");
-            println(" " + level.fogcolorblue + " ");
-            println(" " + level.fogcolorscale + " ");
-            println(" " + level.sunfogcolorred + " ");
-            println(" " + level.sunfogcolorgreen + " ");
-            println(" " + level.sunfogcolorblue + " ");
-            println(" " + level.fogsundir[0] + " ");
-            println(" " + level.fogsundir[1] + " ");
-            println(" " + level.fogsundir[2] + " ");
-            println(" " + level.sunstartangle + " ");
-            println(" " + level.sunendangle + " ");
-            println(" ");
-            println(" " + level.fogmaxopacity + " ");
-            println(" ");
-            println(" ");
-            println(" ");
-            println(" ");
-            setdvar(" ", " ");
+        if (getdvarstring("<dev string:xe0>") != "<dev string:x37>") {
+            println("<dev string:x251>" + level.fognearplane + "<dev string:x260>");
+            println("<dev string:x262>" + level.fogexphalfplane + "<dev string:x260>");
+            println("<dev string:x270>" + level.fogexphalfheight + "<dev string:x260>");
+            println("<dev string:x280>" + level.fogbaseheight + "<dev string:x260>");
+            println("<dev string:x290>" + level.fogcolorred + "<dev string:x260>");
+            println("<dev string:x29a>" + level.fogcolorgreen + "<dev string:x260>");
+            println("<dev string:x2a4>" + level.fogcolorblue + "<dev string:x260>");
+            println("<dev string:x2ae>" + level.fogcolorscale + "<dev string:x260>");
+            println("<dev string:x2bc>" + level.sunfogcolorred + "<dev string:x260>");
+            println("<dev string:x2ca>" + level.sunfogcolorgreen + "<dev string:x260>");
+            println("<dev string:x2d8>" + level.sunfogcolorblue + "<dev string:x260>");
+            println("<dev string:x2e6>" + level.fogsundir[0] + "<dev string:x260>");
+            println("<dev string:x2f4>" + level.fogsundir[1] + "<dev string:x260>");
+            println("<dev string:x302>" + level.fogsundir[2] + "<dev string:x260>");
+            println("<dev string:x310>" + level.sunstartangle + "<dev string:x260>");
+            println("<dev string:x322>" + level.sunendangle + "<dev string:x260>");
+            println("<dev string:x333>");
+            println("<dev string:x33e>" + level.fogmaxopacity + "<dev string:x260>");
+            println("<dev string:x36>");
+            println("<dev string:x352>");
+            println("<dev string:x3ae>");
+            println("<dev string:x402>");
+            setdvar("<dev string:xe0>", "<dev string:x37>");
         }
     }
 

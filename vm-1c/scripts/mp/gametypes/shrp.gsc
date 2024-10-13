@@ -89,11 +89,11 @@ function onstartgametype() {
     spawnpoint = spawnlogic::get_random_intermission_point();
     setdemointermissionpoint(spawnpoint.origin, spawnpoint.angles);
     level.usestartspawns = 0;
-    namespace_93432369::function_3a002997("specialty_bulletflinch", "perk", %PERKS_TOUGHNESS, "perk_warrior");
-    namespace_93432369::function_3a002997("specialty_movefaster", "perk", %PERKS_LIGHTWEIGHT, "perk_lightweight");
-    namespace_93432369::function_3a002997("specialty_fallheight", "perk", %PERKS_LIGHTWEIGHT, "perk_lightweight");
-    namespace_93432369::function_3a002997("specialty_longersprint", "perk", %PERKS_EXTREME_CONDITIONING, "perk_marathon");
-    namespace_93432369::function_3a002997(2, "score_multiplier", %PERKS_SCORE_MULTIPLIER, "perk_times_two");
+    wager::function_3a002997("specialty_bulletflinch", "perk", %PERKS_TOUGHNESS, "perk_warrior");
+    wager::function_3a002997("specialty_movefaster", "perk", %PERKS_LIGHTWEIGHT, "perk_lightweight");
+    wager::function_3a002997("specialty_fallheight", "perk", %PERKS_LIGHTWEIGHT, "perk_lightweight");
+    wager::function_3a002997("specialty_longersprint", "perk", %PERKS_EXTREME_CONDITIONING, "perk_marathon");
+    wager::function_3a002997(2, "score_multiplier", %PERKS_SCORE_MULTIPLIER, "perk_times_two");
     level.var_1755e798 = hud::createservertimer("extrasmall", 1.2);
     level.var_1755e798.horzalign = "user_left";
     level.var_1755e798.vertalign = "user_top";
@@ -150,7 +150,7 @@ function function_47c621e8() {
         size = level.gunprogression.size;
     }
     /#
-        var_1b8d68e9 = getdvarstring("PERKS_TOUGHNESS");
+        var_1b8d68e9 = getdvarstring("<dev string:x28>");
     #/
     var_5e774679 = 1;
     players = getplayers();
@@ -208,7 +208,7 @@ function function_47c621e8() {
         }
         level.var_3a8aba68[level.var_3a8aba68.size] = baseweaponname;
         /#
-            if (var_1b8d68e9 != "") {
+            if (var_1b8d68e9 != "<dev string:x3e>") {
                 weaponname = var_1b8d68e9;
             }
         #/
@@ -271,9 +271,9 @@ function waitlongdurationwithhostmigrationpause(var_38c2b1f9, duration) {
             totaltimepassed += timepassed;
             endtime += timepassed;
             /#
-                println("group" + timepassed);
-                println("uin_timer_wager_beep" + totaltimepassed);
-                println("<unknown string>" + level.discardtime);
+                println("<dev string:x3f>" + timepassed);
+                println("<dev string:x54>" + totaltimepassed);
+                println("<dev string:x6e>" + level.discardtime);
             #/
             setdvar("ui_guncycle", var_38c2b1f9 + totaltimepassed);
         }
@@ -304,7 +304,7 @@ function function_93c42307(var_38c2b1f9, waittime) {
         level.players[i] playlocalsound("uin_timer_wager_last_beep");
     }
     if (var_38c2b1f9 - gettime() > 0) {
-        wait((var_38c2b1f9 - gettime()) / 1000);
+        wait (var_38c2b1f9 - gettime()) / 1000;
     }
     level.var_10f06d47 = getweapon(function_47c621e8());
     for (i = 0; i < level.players.size; i++) {
@@ -341,16 +341,16 @@ function function_2651a506() {
         for (i = 0; i < level.players.size; i++) {
             player = level.players[i];
             if (var_41032cc9 + 1 == var_5453392a) {
-                player namespace_93432369::announcer("wm_final_weapon");
+                player wager::announcer("wm_final_weapon");
             } else {
-                player namespace_93432369::announcer("wm_weapons_cycled");
+                player wager::announcer("wm_weapons_cycled");
             }
             player function_2e17d934();
         }
         if (var_d629deb1) {
             level.var_a7f2a2a4 = 2;
             for (i = 0; i < level.players.size; i++) {
-                level.players[i] thread namespace_93432369::function_972d1b69(%MP_SHRP_PENULTIMATE_RND, 0, %MP_SHRP_PENULTIMATE_MULTIPLIER, "wm_bonus_rnd");
+                level.players[i] thread wager::function_972d1b69(%MP_SHRP_PENULTIMATE_RND, 0, %MP_SHRP_PENULTIMATE_MULTIPLIER, "wm_bonus_rnd");
             }
         } else if (var_ccd9ab33) {
             var_6d3adedc = level.var_a7f2a2a4;
@@ -361,7 +361,7 @@ function function_2651a506() {
             setdvar("ui_guncycle", 0);
             level.var_1755e798.alpha = 0;
             for (i = 0; i < level.players.size; i++) {
-                level.players[i] thread namespace_93432369::function_972d1b69(%MP_SHRP_RND, 0, %MP_SHRP_FINAL_MULTIPLIER, "wm_shrp_rnd");
+                level.players[i] thread wager::function_972d1b69(%MP_SHRP_RND, 0, %MP_SHRP_FINAL_MULTIPLIER, "wm_shrp_rnd");
             }
             break;
         } else {
@@ -403,7 +403,7 @@ function givecustomloadout(takeallweapons, alreadyspawned) {
     if (!isdefined(alreadyspawned) || !alreadyspawned) {
         var_a9b5caef = 1;
     }
-    self namespace_93432369::function_937040bd(takeallweapons, var_a9b5caef, level.var_10f06d47);
+    self wager::function_937040bd(takeallweapons, var_a9b5caef, level.var_10f06d47);
     self disableweaponcycling();
     self giveweapon(level.var_10f06d47);
     self switchtoweapon(level.var_10f06d47);
@@ -453,14 +453,14 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
             } else {
                 attacker.pers["x2kills"]++;
             }
-            attacker.var_7718d67a = attacker.pers["x2kills"];
+            attacker.x2kills = attacker.pers["x2kills"];
         } else if (isdefined(level.var_a7f2a2a4) && level.var_a7f2a2a4 == 3) {
             if (!isdefined(attacker.pers["x3kills"])) {
                 attacker.pers["x3kills"] = 1;
             } else {
                 attacker.pers["x3kills"]++;
             }
-            attacker.var_7718d67a = attacker.pers["x3kills"];
+            attacker.x2kills = attacker.pers["x3kills"];
         }
         if (isdefined(self.scoremultiplier) && self.scoremultiplier >= 2) {
             scoreevents::processscoreevent("kill_x2_score_shrp", attacker, self, weapon);
@@ -470,8 +470,8 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
             var_6cca6195 = 0;
         }
         if (var_6cca6195 < level.poweruplist.size) {
-            attacker namespace_93432369::give_powerup(level.poweruplist[var_6cca6195]);
-            attacker thread namespace_93432369::announcer("wm_bonus" + var_6cca6195);
+            attacker wager::give_powerup(level.poweruplist[var_6cca6195]);
+            attacker thread wager::announcer("wm_bonus" + var_6cca6195);
             if (level.poweruplist[var_6cca6195].type == "score_multiplier" && attacker.scoremultiplier == 2) {
                 scoreevents::processscoreevent("x2_score_shrp", attacker, self, weapon);
             }
@@ -480,7 +480,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
         }
         if (var_6cca6195 >= level.poweruplist.size) {
             if (isdefined(attacker.powerups) && isdefined(attacker.powerups.size) && attacker.powerups.size > 0) {
-                attacker thread namespace_93432369::function_b5a047c7(attacker.powerups.size - 1);
+                attacker thread wager::function_b5a047c7(attacker.powerups.size - 1);
             }
         }
         scoremultiplier = 1;
@@ -521,7 +521,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
     }
     self.var_6cca6195 = 0;
     self.scoremultiplier = 1;
-    self namespace_93432369::function_903348b0();
+    self wager::function_903348b0();
 }
 
 // Namespace shrp
@@ -541,7 +541,7 @@ function infiniteammo() {
     self endon(#"death");
     self endon(#"disconnect");
     for (;;) {
-        wait(0.1);
+        wait 0.1;
         weapon = self getcurrentweapon();
         self givemaxammo(weapon);
     }
@@ -552,11 +552,11 @@ function infiniteammo() {
 // Checksum 0x3300c120, Offset: 0x2b10
 // Size: 0x124
 function function_8619115e() {
-    var_7718d67a = self globallogic_score::getpersstat("x2kills");
-    if (!isdefined(var_7718d67a)) {
-        var_7718d67a = 0;
+    x2kills = self globallogic_score::getpersstat("x2kills");
+    if (!isdefined(x2kills)) {
+        x2kills = 0;
     }
-    self persistence::function_2eb5e93("wagerAwards", var_7718d67a, 0);
+    self persistence::function_2eb5e93("wagerAwards", x2kills, 0);
     headshots = self globallogic_score::getpersstat("headshots");
     if (!isdefined(headshots)) {
         headshots = 0;
@@ -577,7 +577,7 @@ function function_6cbc2f85() {
     level waittill(#"game_ended");
     for (i = 0; i < level.players.size; i++) {
         player = level.players[i];
-        player namespace_93432369::function_903348b0();
+        player wager::function_903348b0();
     }
 }
 

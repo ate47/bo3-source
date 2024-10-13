@@ -6,9 +6,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_864e5d9b;
+#namespace zm_moon_ai_astro;
 
-// Namespace namespace_864e5d9b
+// Namespace zm_moon_ai_astro
 // Params 0, eflags: 0x0
 // Checksum 0xeeea9004, Offset: 0x240
 // Size: 0xe8
@@ -21,7 +21,7 @@ function init() {
     level.aat["zm_aat_turned"].validation_func = &function_82c2a8f1;
 }
 
-// Namespace namespace_864e5d9b
+// Namespace zm_moon_ai_astro
 // Params 0, eflags: 0x0
 // Checksum 0x755cdd, Offset: 0x330
 // Size: 0x24
@@ -29,7 +29,7 @@ function function_76aae567() {
     self setzombiename("SpaceZom");
 }
 
-// Namespace namespace_864e5d9b
+// Namespace zm_moon_ai_astro
 // Params 0, eflags: 0x0
 // Checksum 0xc1061c52, Offset: 0x360
 // Size: 0x34
@@ -40,7 +40,7 @@ function function_82c2a8f1() {
     return true;
 }
 
-// Namespace namespace_864e5d9b
+// Namespace zm_moon_ai_astro
 // Params 0, eflags: 0x0
 // Checksum 0x9697d9bb, Offset: 0x3a0
 // Size: 0x1b4
@@ -65,7 +65,7 @@ function function_9c835776() {
     self show();
 }
 
-// Namespace namespace_864e5d9b
+// Namespace zm_moon_ai_astro
 // Params 0, eflags: 0x0
 // Checksum 0x7c143243, Offset: 0x560
 // Size: 0xe0
@@ -82,7 +82,7 @@ function function_84b2ceb9() {
     }
 }
 
-// Namespace namespace_864e5d9b
+// Namespace zm_moon_ai_astro
 // Params 0, eflags: 0x0
 // Checksum 0x98b44feb, Offset: 0x648
 // Size: 0x216

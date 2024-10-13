@@ -33,9 +33,9 @@
 #using scripts/cp/gametypes/_save;
 #using scripts/codescripts/struct;
 
-#namespace namespace_ae122cd0;
+#namespace cp_mi_cairo_ramses;
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 0, eflags: 0x0
 // Checksum 0xe4511bd8, Offset: 0x980
 // Size: 0x34
@@ -44,7 +44,7 @@ function function_243693d4() {
     util::add_gametype("cpzm");
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5a57b5b8, Offset: 0x9c0
 // Size: 0x23c
@@ -68,20 +68,20 @@ function main() {
     callback::on_connect(&on_player_connect);
     callback::on_spawned(&on_player_spawned);
     vehicle::add_spawn_function("station_fight_turret", &function_66f28952);
-    namespace_b9254c21::main();
-    namespace_39972b4::main();
+    cp_mi_cairo_ramses_fx::main();
+    cp_mi_cairo_ramses_sound::main();
     load::main();
     setdvar("compassmaxrange", "12000");
     level clientfield::set("ramses_station_lamps", 1);
     /#
-        execdevgui("hide_station_miscmodels");
+        execdevgui("<dev string:x28>");
     #/
     level thread function_2b543535();
     level.var_dc236bc8 = 1;
-    namespace_e9e39773::function_7403e82b();
+    cp_mi_cairo_ramses_patch::function_7403e82b();
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xc08
 // Size: 0x4
@@ -89,7 +89,7 @@ function precache() {
     
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 0, eflags: 0x1 linked
 // Checksum 0x368b3596, Offset: 0xc18
 // Size: 0x1b4
@@ -105,7 +105,7 @@ function init_clientfields() {
     clientfield::register("toplayer", "filter_ev_interference_toggle", 1, 1, "int");
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 0, eflags: 0x1 linked
 // Checksum 0xcfbc5f8e, Offset: 0xdd8
 // Size: 0x204
@@ -128,7 +128,7 @@ function init_flags() {
     level flag::init("flak_vtol_ride_stop");
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd8cf3ca, Offset: 0xfe8
 // Size: 0xcc
@@ -142,7 +142,7 @@ function init_level() {
     level.var_2b205f01 = arraycombine(var_69e9c588, var_301cff54, 0, 0);
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa8a6a400, Offset: 0x10c0
 // Size: 0x14
@@ -150,7 +150,7 @@ function function_66f28952() {
     self.team = "allies";
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1f861082, Offset: 0x10e0
 // Size: 0x194
@@ -159,11 +159,11 @@ function function_673254cc() {
     skipto::add("rs_walk_through", &function_4513d788, "rs_walk_through", &function_86fc3d2e);
     skipto::function_d68e678e("interview_dr_nasser", &function_ac4ae5cc, "interview_dr_nasser", &function_5b5ae0d2);
     skipto::function_d68e678e("defend_ramses_station", &namespace_bedc6a60::init, "defend_ramses_station", &namespace_bedc6a60::done);
-    skipto::function_d68e678e("vtol_ride", &namespace_80a43443::init, "vtol_ride", &namespace_80a43443::done);
+    skipto::function_d68e678e("vtol_ride", &vtol_ride::init, "vtol_ride", &vtol_ride::done);
     skipto::add_dev("dev_defend_station_test", &namespace_bedc6a60::function_f27ea617, "Defend Station Test", &namespace_bedc6a60::function_93364e1b, "", "");
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe367e22c, Offset: 0x1280
 // Size: 0x24
@@ -171,7 +171,7 @@ function on_player_connect() {
     self flag::init("linked_to_truck");
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd200b48a, Offset: 0x12b0
 // Size: 0x1c
@@ -179,15 +179,15 @@ function on_player_spawned() {
     self namespace_391e4301::function_ff06e7ac();
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 2, eflags: 0x1 linked
 // Checksum 0xa6c1e55c, Offset: 0x12d8
 // Size: 0x164
 function function_e4f36ca2(str_objective, var_74cd64bc) {
-    callback::on_spawned(&namespace_50196384::function_e9d1564a);
+    callback::on_spawned(&level_start::function_e9d1564a);
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_50196384::function_e29f0dd6(str_objective);
+        level_start::function_e29f0dd6(str_objective);
         namespace_391e4301::function_75734d29();
     }
     objectives::set("cp_level_ramses_determine_what_salim_knows");
@@ -198,10 +198,10 @@ function function_e4f36ca2(str_objective, var_74cd64bc) {
     level.var_7a9855f3 sethighdetail(1);
     namespace_bedc6a60::function_f7abd273();
     namespace_bedc6a60::function_f21c9162("_combat");
-    namespace_50196384::main();
+    level_start::main();
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 4, eflags: 0x1 linked
 // Checksum 0x10485df1, Offset: 0x1448
 // Size: 0xcc
@@ -217,7 +217,7 @@ function function_781ed89c(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     level thread namespace_391e4301::function_a0a9f927();
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 2, eflags: 0x1 linked
 // Checksum 0xec8335c9, Offset: 0x1520
 // Size: 0x184
@@ -226,19 +226,19 @@ function function_4513d788(str_objective, var_74cd64bc) {
     level.var_9db406db sethighdetail(1);
     if (var_74cd64bc) {
         load::function_73adcefc();
-        callback::on_spawned(&namespace_50196384::function_e9d1564a);
-        namespace_7434c6b7::function_e29f0dd6(str_objective);
+        callback::on_spawned(&level_start::function_e9d1564a);
+        cp_mi_cairo_ramses_station_walk::function_e29f0dd6(str_objective);
         array::thread_all(level.var_2b205f01, &oed::function_14ec2d71);
         load::function_a2995f22();
         util::screen_fade_out(0, "black", "skipto_fade");
         util::delay(1, undefined, &util::screen_fade_in, 1, "black", "skipto_fade");
     }
-    namespace_e55eaf53::function_c99967dc(0);
+    cp_mi_cairo_ramses_nasser_interview::function_c99967dc(0);
     namespace_391e4301::function_7255e66(0);
-    namespace_7434c6b7::main();
+    cp_mi_cairo_ramses_station_walk::main();
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 4, eflags: 0x1 linked
 // Checksum 0xefb488d2, Offset: 0x16b0
 // Size: 0x54
@@ -247,15 +247,15 @@ function function_86fc3d2e(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     objectives::complete("cp_level_ramses_meet_with_khalil");
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 2, eflags: 0x1 linked
 // Checksum 0x8786490d, Offset: 0x1710
 // Size: 0x12c
 function function_ac4ae5cc(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_e55eaf53::function_e29f0dd6();
-        callback::on_spawned(&namespace_e55eaf53::function_1bcd464b);
+        cp_mi_cairo_ramses_nasser_interview::function_e29f0dd6();
+        callback::on_spawned(&cp_mi_cairo_ramses_nasser_interview::function_1bcd464b);
         array::thread_all(level.var_2b205f01, &oed::function_14ec2d71);
         level.var_9db406db sethighdetail(1);
         level.var_7a9855f3 sethighdetail(1);
@@ -263,10 +263,10 @@ function function_ac4ae5cc(str_objective, var_74cd64bc) {
     }
     objectives::set("cp_level_ramses_interrogate_salim");
     namespace_391e4301::function_7255e66(1);
-    namespace_e55eaf53::main(var_74cd64bc);
+    cp_mi_cairo_ramses_nasser_interview::main(var_74cd64bc);
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 4, eflags: 0x1 linked
 // Checksum 0xb918aee8, Offset: 0x1848
 // Size: 0x144
@@ -277,7 +277,7 @@ function function_5b5ae0d2(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
         objectives::complete("cp_level_ramses_determine_what_salim_knows");
         objectives::set("cp_level_ramses_protect_salim");
     }
-    namespace_7434c6b7::function_51f408f1();
+    cp_mi_cairo_ramses_station_walk::function_51f408f1();
     level util::clientnotify("walla_off");
     oed::function_f0f40bb5();
     oed::function_b3c589a6();
@@ -286,7 +286,7 @@ function function_5b5ae0d2(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     namespace_391e4301::function_e7ebe596(0);
 }
 
-// Namespace namespace_ae122cd0
+// Namespace cp_mi_cairo_ramses
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6e5e2da, Offset: 0x1998
 // Size: 0x2c

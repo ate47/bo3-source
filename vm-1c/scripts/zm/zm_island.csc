@@ -78,8 +78,8 @@ function autoexec opt_in() {
 // Checksum 0x1f89a3f9, Offset: 0x1b30
 // Size: 0x29c
 function main() {
-    namespace_711c2fc8::main_start();
-    namespace_1a868593::main();
+    zm_island_ffotd::main_start();
+    zm_island_fx::main();
     callback::on_localplayer_spawned(&on_localplayer_spawned);
     level.setupcustomcharacterexerts = &setup_personality_character_exerts;
     level._uses_sticky_grenades = 1;
@@ -87,35 +87,35 @@ function main() {
     register_clientfields();
     include_weapons();
     level thread function_be61cf5a();
-    namespace_e73c08bc::function_3ebec56b();
-    namespace_e73c08bc::function_95743e9f();
-    namespace_14c8b75c::init();
-    namespace_eaae7728::init_quest();
-    namespace_7550a904::init();
-    namespace_f3e3de78::init();
-    namespace_14b4d4ab::init();
-    namespace_34c58dc::init();
-    namespace_7a07aa2f::init();
-    namespace_c8222934::init();
+    zm_island_craftables::function_3ebec56b();
+    zm_island_craftables::function_95743e9f();
+    zm_island_dogfights::init();
+    zm_island_ww_quest::init_quest();
+    zm_island_planting::init();
+    zm_island_power::init();
+    zm_island_traps::init();
+    zm_island_transport::init();
+    zm_island_spores::init();
+    zm_island_perks::init();
     namespace_5f2c95ae::init();
-    namespace_78528370::init_quest();
-    namespace_9d2fabb6::init();
-    namespace_f7d4f63b::init();
-    namespace_48e6dffb::init();
-    namespace_13425205::init();
-    namespace_bbfc4da3::init();
-    namespace_6c640490::init();
-    namespace_28a54cd6::init();
-    namespace_f777c489::init();
-    namespace_fdccf5c4::init();
-    namespace_79fcd4bc::init();
-    namespace_5a453011::init();
+    zm_island_main_ee_quest::init_quest();
+    zm_island_zones::init();
+    zm_island_pap_quest::init();
+    zm_island_inventory::init();
+    zm_island_spider_quest::init();
+    zm_island_challenges::init();
+    zm_island_side_ee_distant_monster::init();
+    zm_island_side_ee_doppleganger::init();
+    zm_island_side_ee_good_thrasher::init();
+    zm_island_spider_ee_quest::init();
+    zm_island_side_ee_golden_bucket::init();
+    zm_island_side_ee_secret_maxammo::init();
     load::main();
-    level thread namespace_f67badb7::main();
-    level thread namespace_9d2fabb6::main();
+    level thread zm_island_amb::main();
+    level thread zm_island_zones::main();
     util::waitforclient(0);
     level thread function_3a429aee();
-    namespace_711c2fc8::main_end();
+    zm_island_ffotd::main_end();
 }
 
 // Namespace zm_island
@@ -126,16 +126,16 @@ function register_clientfields() {
     var_ddba80d7 = getminbitcountfornum(3);
     clientfield::register("clientuimodel", "zmInventory.widget_shield_parts", 9000, 1, "int", undefined, 0, 0);
     clientfield::register("clientuimodel", "zmInventory.player_crafted_shield", 9000, 1, "int", undefined, 0, 0);
-    clientfield::register("toplayer", "postfx_futz_mild", 9000, 1, "counter", &function_bf8650ca, 0, 0);
-    clientfield::register("toplayer", "water_motes", 9000, 1, "int", &function_5cefaf77, 0, 0);
+    clientfield::register("toplayer", "postfx_futz_mild", 9000, 1, "counter", &postfx_futz_mild, 0, 0);
+    clientfield::register("toplayer", "water_motes", 9000, 1, "int", &water_motes, 0, 0);
     clientfield::register("toplayer", "play_bubbles", 9000, 1, "int", &function_58e931d1, 0, 0);
     clientfield::register("toplayer", "set_world_fog", 9000, var_ddba80d7, "int", &function_346468e3, 0, 0);
     clientfield::register("toplayer", "speed_burst", 9000, 1, "int", &function_d6b43cb, 0, 1);
     clientfield::register("toplayer", "tp_water_sheeting", 9000, 1, "int", &function_6be6da89, 0, 0);
     clientfield::register("toplayer", "wind_blur", 9000, 1, "int", &function_4a01cc4e, 0, 0);
-    clientfield::register("scriptmover", "set_heavy_web_fade_material", 9000, 1, "int", &function_e0aec577, 0, 0);
-    clientfield::register("world", "force_stream_spiders", 9001, 1, "int", &function_e0410522, 0, 0);
-    clientfield::register("world", "force_stream_takeo_arms", 11001, 1, "int", &function_e4587332, 0, 0);
+    clientfield::register("scriptmover", "set_heavy_web_fade_material", 9000, 1, "int", &set_heavy_web_fade_material, 0, 0);
+    clientfield::register("world", "force_stream_spiders", 9001, 1, "int", &force_stream_spiders, 0, 0);
+    clientfield::register("world", "force_stream_takeo_arms", 11001, 1, "int", &force_stream_takeo_arms, 0, 0);
 }
 
 // Namespace zm_island
@@ -270,7 +270,7 @@ function setup_personality_character_exerts() {
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1d1ed365, Offset: 0x32a8
 // Size: 0x7c
-function function_bf8650ca(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function postfx_futz_mild(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     player = getlocalplayer(localclientnum);
     player postfx::playpostfxbundle("pstfx_dni_interrupt_mild");
 }
@@ -279,8 +279,8 @@ function function_bf8650ca(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x55b5f4ef, Offset: 0x3330
 // Size: 0xde
-function function_5cefaf77(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    wait(0.1);
+function water_motes(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+    wait 0.1;
     if (newval) {
         if (isdefined(self) && !isdefined(self.var_8e8c7340)) {
             self.var_8e8c7340 = playviewmodelfx(localclientnum, level._effect["water_motes"], "tag_camera");
@@ -427,7 +427,7 @@ function function_4a01cc4e(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xe9ee77a, Offset: 0x39c8
 // Size: 0x16c
-function function_e0aec577(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function set_heavy_web_fade_material(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 1, 1, 1, 0);
         return;
@@ -438,7 +438,7 @@ function function_e0aec577(localclientnum, oldval, newval, bnewent, binitialsnap
     for (i = 1; i > var_bbfa5d7d; i -= var_b05b3457) {
         if (isdefined(self)) {
             self mapshaderconstant(localclientnum, 0, "scriptVector2", i, i, i, 0);
-            wait(var_b05b3457);
+            wait var_b05b3457;
             continue;
         }
         break;
@@ -502,7 +502,7 @@ function function_3a429aee() {
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd960d244, Offset: 0x3f08
 // Size: 0x7c
-function function_e0410522(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function force_stream_spiders(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         forcestreamxmodel("c_zom_dlc2_spider");
         return;
@@ -514,7 +514,7 @@ function function_e0410522(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa5b5d80d, Offset: 0x3f90
 // Size: 0x10c
-function function_e4587332(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function force_stream_takeo_arms(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         forcestreamxmodel("p7_fxanim_zm_island_takeo_arm1_mod");
         forcestreamxmodel("p7_fxanim_zm_island_takeo_arm2_mod");

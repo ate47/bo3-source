@@ -19,7 +19,7 @@
 // Checksum 0xb59fc317, Offset: 0x3f0
 // Size: 0x48
 function set_ignoreme(val) {
-    assert(issentient(self), "next_shot_kills");
+    assert(issentient(self), "<dev string:x28>");
     self.ignoreme = val;
 }
 
@@ -28,7 +28,7 @@ function set_ignoreme(val) {
 // Checksum 0x3a6658f7, Offset: 0x440
 // Size: 0x48
 function set_ignoreall(val) {
-    assert(issentient(self), "next_shot_kills");
+    assert(issentient(self), "<dev string:x45>");
     self.ignoreall = val;
 }
 
@@ -37,7 +37,7 @@ function set_ignoreall(val) {
 // Checksum 0x27a29b78, Offset: 0x490
 // Size: 0x48
 function set_pacifist(val) {
-    assert(issentient(self), "next_shot_kills");
+    assert(issentient(self), "<dev string:x63>");
     self.pacifist = val;
 }
 
@@ -46,7 +46,7 @@ function set_pacifist(val) {
 // Checksum 0xa458b23a, Offset: 0x4e0
 // Size: 0x40
 function disable_pain() {
-    assert(isalive(self), "next_shot_kills");
+    assert(isalive(self), "<dev string:x80>");
     self.allowpain = 0;
 }
 
@@ -55,7 +55,7 @@ function disable_pain() {
 // Checksum 0x55d9eaf7, Offset: 0x528
 // Size: 0x40
 function enable_pain() {
-    assert(isalive(self), "next_shot_kills");
+    assert(isalive(self), "<dev string:xa2>");
     self.allowpain = 1;
 }
 
@@ -139,7 +139,7 @@ function waittill_dead(guys, num, timeoutlength) {
         allalive = 0;
         break;
     }
-    assert(allalive, "next_shot_kills");
+    assert(allalive, "<dev string:xc3>");
     if (!allalive) {
         newarray = [];
         for (i = 0; i < guys.size; i++) {
@@ -216,7 +216,7 @@ function waittill_dead_or_dying_thread(ent) {
 // Checksum 0x5be3679a, Offset: 0xbd0
 // Size: 0x1e
 function waittill_dead_timeout(timeoutlength) {
-    wait(timeoutlength);
+    wait timeoutlength;
     self notify(#"thread_timed_out");
 }
 
@@ -241,12 +241,12 @@ function private wait_for_shoot() {
 function shoot_at_target(mode, target, tag, duration, sethealth, ignorefirstshotwait) {
     self endon(#"death");
     self endon(#"stop_shoot_at_target");
-    assert(isdefined(target), "next_shot_kills");
-    assert(isdefined(mode), "next_shot_kills");
+    assert(isdefined(target), "<dev string:x11e>");
+    assert(isdefined(mode), "<dev string:x14d>");
     mode_flag = mode === "normal" || mode === "shoot_until_target_dead" || mode === "kill_within_time";
-    assert(mode_flag, "next_shot_kills");
+    assert(mode_flag, "<dev string:x186>");
     if (isdefined(duration)) {
-        assert(duration >= 0, "next_shot_kills");
+        assert(duration >= 0, "<dev string:x1df>");
     } else {
         duration = 0;
     }
@@ -264,12 +264,12 @@ function shoot_at_target(mode, target, tag, duration, sethealth, ignorefirstshot
     self.var_752147e1 = 1;
     self.start_duration_comp = 0;
     switch (mode) {
-    case 4:
+    case "normal":
         break;
-    case 5:
+    case "shoot_until_target_dead":
         duration = -1;
         break;
-    case 6:
+    case "kill_within_time":
         target damagemode("next_shot_kills");
         break;
     }
@@ -289,7 +289,7 @@ function shoot_at_target(mode, target, tag, duration, sethealth, ignorefirstshot
                 if (!(isdefined(self.start_duration_comp) && self.start_duration_comp)) {
                     elapsed = 0;
                 }
-                wait(0.05);
+                wait 0.05;
             }
             if (isdefined(target) && mode == "kill_within_time") {
                 self.perfectaim = 1;
@@ -324,7 +324,7 @@ function stop_shoot_at_target() {
 function wait_until_done_speaking() {
     self endon(#"death");
     while (self.isspeaking) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -396,7 +396,7 @@ function _force_goal(s_tracker, goto, n_radius, b_shoot, str_end_on, b_keep_colo
     flagsys::set("force_goal");
     goalradius = self.goalradius;
     if (isdefined(n_radius)) {
-        assert(isfloat(n_radius) || isint(n_radius), "next_shot_kills");
+        assert(isfloat(n_radius) || isint(n_radius), "<dev string:x20e>");
         self.goalradius = n_radius;
     }
     color_enabled = 0;
@@ -424,7 +424,7 @@ function _force_goal(s_tracker, goto, n_radius, b_shoot, str_end_on, b_keep_colo
     self pushplayer(1);
     if (isdefined(goto)) {
         if (isdefined(n_radius)) {
-            assert(isfloat(n_radius) || isint(n_radius), "next_shot_kills");
+            assert(isfloat(n_radius) || isint(n_radius), "<dev string:x20e>");
             self setgoal(goto);
         } else {
             self setgoal(goto, 1);
@@ -483,7 +483,7 @@ function painwaitinterval(msec) {
     while (isalive(self)) {
         self waittill(#"pain");
         self.allowpain = 0;
-        wait(msec / 1000);
+        wait msec / 1000;
         self.allowpain = 1;
     }
 }
@@ -495,16 +495,16 @@ function painwaitinterval(msec) {
 function patrol(start_path_node) {
     self endon(#"death");
     self endon(#"stop_patrolling");
-    assert(isdefined(start_path_node), self.targetname + "next_shot_kills");
+    assert(isdefined(start_path_node), self.targetname + "<dev string:x24e>");
     if (start_path_node.type == "BAD NODE") {
         /#
-            errormsg = "next_shot_kills" + start_path_node.targetname + "next_shot_kills" + int(start_path_node.origin[0]) + "next_shot_kills" + int(start_path_node.origin[1]) + "next_shot_kills" + int(start_path_node.origin[2]) + "next_shot_kills";
+            errormsg = "<dev string:x2a8>" + start_path_node.targetname + "<dev string:x2bd>" + int(start_path_node.origin[0]) + "<dev string:x2c1>" + int(start_path_node.origin[1]) + "<dev string:x2c1>" + int(start_path_node.origin[2]) + "<dev string:x2c3>";
             iprintln(errormsg);
             logprint(errormsg);
         #/
         return;
     }
-    assert(start_path_node.type == "next_shot_kills" || isdefined(start_path_node.scriptbundlename), "next_shot_kills" + start_path_node.targetname + "next_shot_kills");
+    assert(start_path_node.type == "<dev string:x2d3>" || isdefined(start_path_node.scriptbundlename), "<dev string:x2d8>" + start_path_node.targetname + "<dev string:x2ed>");
     self notify(#"go_to_spawner_target");
     self.target = undefined;
     self.old_goal_radius = self.goalradius;
@@ -535,12 +535,12 @@ function patrol(start_path_node) {
             if (!isdefined(self.currentgoal.script_wait_max)) {
                 self.currentgoal.script_wait_max = 0;
             }
-            assert(self.currentgoal.script_wait_min <= self.currentgoal.script_wait_max, "next_shot_kills" + self.currentgoal.targetname);
+            assert(self.currentgoal.script_wait_min <= self.currentgoal.script_wait_max, "<dev string:x32b>" + self.currentgoal.targetname);
             if (!isdefined(self.currentgoal.scriptbundlename)) {
                 wait_variability = self.currentgoal.script_wait_max - self.currentgoal.script_wait_min;
                 wait_time = self.currentgoal.script_wait_min + randomfloat(wait_variability);
                 self notify(#"patrol_goal", self.currentgoal);
-                wait(wait_time);
+                wait wait_time;
             } else {
                 self scene::play(self.currentgoal.scriptbundlename, self);
             }
@@ -584,7 +584,7 @@ function end_patrol_on_enemy_targetting() {
         if (isdefined(self.enemy) || self.should_stop_patrolling === 1) {
             self end_and_clean_patrol_behaviors();
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -623,13 +623,13 @@ function bloody_death(n_delay, hit_loc) {
     }
     self.__bloody_death = 1;
     if (isdefined(n_delay)) {
-        wait(n_delay);
+        wait n_delay;
     }
     if (!isdefined(self) || !isalive(self)) {
         return;
     }
     if (isdefined(hit_loc)) {
-        assert(isinarray(array("next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills", "next_shot_kills"), hit_loc), "next_shot_kills");
+        assert(isinarray(array("<dev string:x359>", "<dev string:x360>", "<dev string:x365>", "<dev string:x36a>", "<dev string:x376>", "<dev string:x380>", "<dev string:x38c>", "<dev string:x39c>", "<dev string:x3ab>", "<dev string:x3bb>", "<dev string:x3ca>", "<dev string:x3d5>", "<dev string:x3df>", "<dev string:x3ef>", "<dev string:x3fe>", "<dev string:x40e>", "<dev string:x41d>", "<dev string:x428>", "<dev string:x432>", "<dev string:x436>"), hit_loc), "<dev string:x441>");
     } else {
         hit_loc = array::random(array("helmet", "head", "neck", "torso_upper", "torso_mid", "torso_lower", "right_arm_upper", "left_arm_upper", "right_arm_lower", "left_arm_lower", "right_hand", "left_hand", "right_leg_upper", "left_leg_upper", "right_leg_lower", "left_leg_lower", "right_foot", "left_foot", "gun", "riotshield"));
     }

@@ -9,9 +9,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_9dd35181;
+#namespace zm_bgb_killing_time;
 
-// Namespace namespace_9dd35181
+// Namespace zm_bgb_killing_time
 // Params 0, eflags: 0x2
 // Checksum 0x5c5c62ec, Offset: 0x288
 // Size: 0x34
@@ -19,7 +19,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_killing_time", &__init__, undefined, "bgb");
 }
 
-// Namespace namespace_9dd35181
+// Namespace zm_bgb_killing_time
 // Params 0, eflags: 0x1 linked
 // Checksum 0xde1d1345, Offset: 0x2c8
 // Size: 0x12c
@@ -35,7 +35,7 @@ function __init__() {
     clientfield::register("toplayer", "instakill_upgraded_fx", 1, 1, "int");
 }
 
-// Namespace namespace_9dd35181
+// Namespace zm_bgb_killing_time
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa7f568d7, Offset: 0x400
 // Size: 0x1c
@@ -43,7 +43,7 @@ function activation() {
     self function_eb0b4e74();
 }
 
-// Namespace namespace_9dd35181
+// Namespace zm_bgb_killing_time
 // Params 0, eflags: 0x1 linked
 // Checksum 0x76f082ab, Offset: 0x428
 // Size: 0x44
@@ -57,7 +57,7 @@ function validation() {
     return 1;
 }
 
-// Namespace namespace_9dd35181
+// Namespace zm_bgb_killing_time
 // Params 13, eflags: 0x5 linked
 // Checksum 0xaafc20f0, Offset: 0x478
 // Size: 0x1fe
@@ -87,7 +87,7 @@ function private actor_damage_override(einflictor, eattacker, idamage, idflags, 
     return idamage;
 }
 
-// Namespace namespace_9dd35181
+// Namespace zm_bgb_killing_time
 // Params 15, eflags: 0x5 linked
 // Checksum 0xb76ca299, Offset: 0x680
 // Size: 0x19e
@@ -111,7 +111,7 @@ function private vehicle_damage_override(einflictor, eattacker, idamage, idflags
     return idamage;
 }
 
-// Namespace namespace_9dd35181
+// Namespace zm_bgb_killing_time
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd8f430f8, Offset: 0x828
 // Size: 0x19a
@@ -131,10 +131,10 @@ function function_eb0b4e74() {
     setpauseworld(1);
     self thread function_f2925308();
     self bgb::run_timer(20);
-    self notify(#"hash_19c1b90c");
+    self notify(#"killing_time_done");
 }
 
-// Namespace namespace_9dd35181
+// Namespace zm_bgb_killing_time
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7493596e, Offset: 0x9d0
 // Size: 0x27c

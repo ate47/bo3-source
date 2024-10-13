@@ -84,7 +84,7 @@ function init(weapon_name, flourish_weapon_name, var_ae3c4699, var_92998c6a, cos
     /#
         if (!isdefined(level.zombie_weapons[weapon])) {
             if (isdefined(level.devgui_add_weapon)) {
-                [[ level.devgui_add_weapon ]](weapon, "weapon_change_complete", weapon_name, cost);
+                [[ level.devgui_add_weapon ]](weapon, "<dev string:x28>", weapon_name, cost);
             }
         }
     #/
@@ -407,33 +407,33 @@ function melee_weapon_think(weapon, cost, flourish_fn, vo_dialog_id, flourish_we
             continue;
         }
         if (player zm_utility::in_revive_trigger()) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (player isthrowinggrenade()) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (player.is_drinking > 0) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         player_has_weapon = player hasweapon(weapon);
         if (player_has_weapon || player zm_utility::has_powerup_weapon()) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (player isswitchingweapons()) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         current_weapon = player getcurrentweapon();
         if (zm_utility::is_placeable_mine(current_weapon) || zm_equipment::is_equipment(current_weapon)) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (isdefined(player.intermission) && (player laststand::player_is_in_laststand() || player.intermission)) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (isdefined(player.check_override_melee_wallbuy_purchase)) {
@@ -489,7 +489,7 @@ function melee_weapon_show(player) {
     }
     self.og_origin = self.origin;
     self.origin += anglestoforward((0, yaw, 0)) * 8;
-    wait(0.05);
+    wait 0.05;
     self show();
     zm_utility::play_sound_at_pos("weapon_show", self.origin, self);
     time = 1;

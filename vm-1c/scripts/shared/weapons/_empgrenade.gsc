@@ -85,7 +85,7 @@ function applyemp(attacker, explosionpoint) {
     self endon(#"applyemp");
     self endon(#"disconnect");
     self endon(#"death");
-    wait(0.05);
+    wait 0.05;
     if (!(isdefined(self) && isalive(self))) {
         return;
     }
@@ -121,7 +121,7 @@ function applyemp(attacker, explosionpoint) {
     self thread empgrenadedeathwaiter();
     self thread function_2be0d392();
     if (self.empduration > 0) {
-        wait(self.empduration);
+        wait self.empduration;
     }
     if (isdefined(self)) {
         self notify(#"empgrenadetimedout");
@@ -151,7 +151,7 @@ function function_2be0d392() {
     self notify(#"hash_2be0d392");
     self endon(#"hash_2be0d392");
     self endon(#"empgrenadetimedout");
-    self waittill(#"hash_c6be0179");
+    self waittill(#"gadget_cleanse_on");
     if (isdefined(self)) {
         self checktoturnoffemp();
     }
@@ -194,7 +194,7 @@ function emprumbleloop(duration) {
     goaltime = gettime() + duration * 1000;
     while (gettime() < goaltime) {
         self playrumbleonentity("damage_heavy");
-        wait(0.05);
+        wait 0.05;
     }
 }
 

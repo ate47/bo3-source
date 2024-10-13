@@ -32,10 +32,10 @@ function function_f14e371a() {
     self endon(#"death");
     level endon(#"game_ended");
     while (self isonground()) {
-        wait(0.05);
+        wait 0.05;
     }
     while (!self isonground()) {
-        wait(0.05);
+        wait 0.05;
     }
     self botreleasemanualcontrol();
 }
@@ -76,14 +76,14 @@ function function_5cd60c9f() {
         if (self namespace_5cd60c9f::function_231137e6()) {
             self namespace_5cd60c9f::function_dc473bdb();
         }
-        var_fc1e100f = namespace_5cd60c9f::function_9c78ebae(level.var_93fffa7b.meleerange);
+        var_fc1e100f = namespace_5cd60c9f::function_9c78ebae(level.botsettings.meleerange);
         if (isdefined(var_fc1e100f)) {
             angles = self getplayerangles();
             fwd = anglestoforward(angles);
             var_a0e8586a = var_fc1e100f.origin - self.origin;
             var_a0e8586a = vectornormalize(var_a0e8586a);
             dot = vectordot(fwd, var_a0e8586a);
-            if (dot > level.var_93fffa7b.var_d7047444) {
+            if (dot > level.botsettings.var_d7047444) {
                 self bot::function_6e37f7f0();
             }
         }

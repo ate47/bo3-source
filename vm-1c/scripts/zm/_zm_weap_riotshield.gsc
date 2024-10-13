@@ -152,7 +152,7 @@ function should_shield_absorb_damage(einflictor, eattacker, idamage, idflags, sm
                     return level.zombie_vars["riotshield_stowed_block_fraction"];
                 }
             } else {
-                assert(!isdefined(self.riotshieldentity), "riotshield_gib_damage");
+                assert(!isdefined(self.riotshieldentity), "<dev string:x28>");
             }
         }
     }
@@ -338,11 +338,11 @@ function riotshield_get_enemies_in_range() {
     forward_view_angles = self getweaponforwarddir();
     end_pos = view_pos + vectorscale(forward_view_angles, level.zombie_vars["riotshield_knockdown_range"]);
     /#
-        if (2 == getdvarint("riotshield_gib_damage")) {
+        if (2 == getdvarint("<dev string:x50>")) {
             near_circle_pos = view_pos + vectorscale(forward_view_angles, 2);
-            circle(near_circle_pos, level.zombie_vars["riotshield_gib_damage"], (1, 0, 0), 0, 0, 100);
+            circle(near_circle_pos, level.zombie_vars["<dev string:x65>"], (1, 0, 0), 0, 0, 100);
             line(near_circle_pos, end_pos, (0, 0, 1), 1, 0, 100);
-            circle(end_pos, level.zombie_vars["riotshield_gib_damage"], (1, 0, 0), 0, 0, 100);
+            circle(end_pos, level.zombie_vars["<dev string:x65>"], (1, 0, 0), 0, 0, 100);
         }
     #/
     for (i = 0; i < zombies.size; i++) {
@@ -439,7 +439,7 @@ function riotshield_melee(weapon) {
 // Checksum 0x405b2ff5, Offset: 0x1d18
 // Size: 0x1d4
 function updateriotshieldmodel() {
-    wait(0.05);
+    wait 0.05;
     self.hasriotshield = 0;
     self.weaponriotshield = level.weaponnone;
     foreach (weapon in self getweaponslist(1)) {

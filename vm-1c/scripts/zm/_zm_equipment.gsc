@@ -180,7 +180,7 @@ function init_upgrade() {
 // Checksum 0x8e1f0d08, Offset: 0xb88
 // Size: 0x5a
 function get_hint(equipment) {
-    assert(isdefined(level.zombie_equipment[equipment]), equipment.name + "_pickup");
+    assert(isdefined(level.zombie_equipment[equipment]), equipment.name + "<dev string:x28>");
     return level.zombie_equipment[equipment].hint;
 }
 
@@ -189,7 +189,7 @@ function get_hint(equipment) {
 // Checksum 0x940ed5f8, Offset: 0xbf0
 // Size: 0x5a
 function get_howto_hint(equipment) {
-    assert(isdefined(level.zombie_equipment[equipment]), equipment.name + "_pickup");
+    assert(isdefined(level.zombie_equipment[equipment]), equipment.name + "<dev string:x28>");
     return level.zombie_equipment[equipment].howto_hint;
 }
 
@@ -198,7 +198,7 @@ function get_howto_hint(equipment) {
 // Checksum 0x5484ac22, Offset: 0xc58
 // Size: 0x5a
 function get_icon(equipment) {
-    assert(isdefined(level.zombie_equipment[equipment]), equipment.name + "_pickup");
+    assert(isdefined(level.zombie_equipment[equipment]), equipment.name + "<dev string:x28>");
     return level.zombie_equipment[equipment].hint_icon;
 }
 
@@ -207,7 +207,7 @@ function get_icon(equipment) {
 // Checksum 0x5a59121d, Offset: 0xcc0
 // Size: 0x5a
 function get_notify_strings(equipment) {
-    assert(isdefined(level.zombie_equipment[equipment]), equipment.name + "_pickup");
+    assert(isdefined(level.zombie_equipment[equipment]), equipment.name + "<dev string:x28>");
     return level.zombie_equipment[equipment].notify_strings;
 }
 
@@ -216,7 +216,7 @@ function get_notify_strings(equipment) {
 // Checksum 0x59ebeb44, Offset: 0xd28
 // Size: 0xce
 function add_to_trigger_list(equipment) {
-    assert(isdefined(level.zombie_equipment[equipment]), equipment.name + "_pickup");
+    assert(isdefined(level.zombie_equipment[equipment]), equipment.name + "<dev string:x28>");
     level.zombie_equipment[equipment].triggers[level.zombie_equipment[equipment].triggers.size] = self;
     level.zombie_equipment[equipment].models[level.zombie_equipment[equipment].models.size] = getent(self.target, "targetname");
 }
@@ -229,7 +229,7 @@ function equipment_spawn_think() {
     for (;;) {
         player = self waittill(#"trigger");
         if (player zm_utility::in_revive_trigger() || player.is_drinking > 0) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (!is_limited(self.equipment) || !limited_in_use(self.equipment)) {
@@ -246,7 +246,7 @@ function equipment_spawn_think() {
             player give(self.equipment);
             continue;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -294,7 +294,7 @@ function take(equipment) {
     if (equipment == self getcurrentweapon()) {
         current_weapon = 1;
     }
-    println("_pickup" + self.name + "_pickup" + equipment.name + "_pickup");
+    println("<dev string:x6a>" + self.name + "<dev string:x79>" + equipment.name + "<dev string:x80>");
     notify_strings = get_notify_strings(equipment);
     if (isdefined(self.current_equipment_active[equipment]) && self.current_equipment_active[equipment]) {
         self.current_equipment_active[equipment] = 0;
@@ -330,7 +330,7 @@ function give(equipment) {
     if (self has_player_equipment(equipment)) {
         return;
     }
-    println("_pickup" + self.name + "_pickup" + equipment.name + "_pickup");
+    println("<dev string:x6a>" + self.name + "<dev string:x82>" + equipment.name + "<dev string:x80>");
     curr_weapon = self getcurrentweapon();
     curr_weapon_was_curr_equipment = self is_player_equipment(curr_weapon);
     self take();
@@ -353,7 +353,7 @@ function buy(equipment) {
     if (isstring(equipment)) {
         equipment = getweapon(equipment);
     }
-    println("_pickup" + self.name + "_pickup" + equipment.name + "_pickup");
+    println("<dev string:x6a>" + self.name + "<dev string:x88>" + equipment.name + "<dev string:x80>");
     if (isdefined(self.current_equipment) && equipment != self.current_equipment && self.current_equipment != level.weaponnone) {
         self take(self.current_equipment);
     }
@@ -543,7 +543,7 @@ function show_hint(equipment) {
     if (isdefined(self.do_not_display_equipment_pickup_hint) && self.do_not_display_equipment_pickup_hint) {
         return;
     }
-    wait(0.5);
+    wait 0.5;
     text = get_howto_hint(equipment);
     self show_hint_text(text);
 }
@@ -563,7 +563,7 @@ function show_hint_text(text, show_for_time, font_scale, ypos) {
         ypos = -36;
     }
     self notify(#"hide_equipment_hint_text");
-    wait(0.05);
+    wait 0.05;
     self setup_client_hintelem(ypos, font_scale);
     self.hintelem settext(text);
     self.hintelem.alpha = 1;
@@ -631,7 +631,7 @@ function function_c9a8ab09(origin, fx, angles) {
     } else {
         playfx(effect, origin);
     }
-    wait(1.1);
+    wait 1.1;
 }
 
 // Namespace zm_equipment
@@ -759,17 +759,17 @@ function init_player_equipment() {
     // Checksum 0x43d090f1, Offset: 0x27e8
     // Size: 0x1e0
     function function_f30ee99e() {
-        setdvar("_pickup", "_pickup");
-        wait(0.05);
-        level flag::wait_till("_pickup");
-        wait(0.05);
-        str_cmd = "_pickup" + "_pickup" + "_pickup";
+        setdvar("<dev string:x91>", "<dev string:xa0>");
+        wait 0.05;
+        level flag::wait_till("<dev string:xa1>");
+        wait 0.05;
+        str_cmd = "<dev string:xba>" + "<dev string:xf4>" + "<dev string:xf9>";
         adddebugcommand(str_cmd);
         while (true) {
-            equipment_id = getdvarstring("_pickup");
-            if (equipment_id != "_pickup") {
+            equipment_id = getdvarstring("<dev string:x91>");
+            if (equipment_id != "<dev string:xa0>") {
                 foreach (player in getplayers()) {
-                    if (equipment_id == "_pickup") {
+                    if (equipment_id == "<dev string:xf4>") {
                         player take();
                         continue;
                     }
@@ -777,9 +777,9 @@ function init_player_equipment() {
                         player buy(equipment_id);
                     }
                 }
-                setdvar("_pickup", "_pickup");
+                setdvar("<dev string:x91>", "<dev string:xa0>");
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -788,12 +788,12 @@ function init_player_equipment() {
     // Checksum 0x373f622d, Offset: 0x29d0
     // Size: 0xac
     function function_de79cac6(equipment) {
-        wait(0.05);
-        level flag::wait_till("_pickup");
-        wait(0.05);
+        wait 0.05;
+        level flag::wait_till("<dev string:xa1>");
+        wait 0.05;
         if (isdefined(equipment)) {
             equipment_id = equipment.name;
-            str_cmd = "_pickup" + equipment_id + "_pickup" + equipment_id + "_pickup";
+            str_cmd = "<dev string:xfc>" + equipment_id + "<dev string:x116>" + equipment_id + "<dev string:xf9>";
             adddebugcommand(str_cmd);
         }
     }

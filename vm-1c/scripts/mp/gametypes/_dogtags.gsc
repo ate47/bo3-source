@@ -194,7 +194,7 @@ function clear_on_victim_disconnect(victim) {
         level.dogtags[guid] gameobjects::allow_use("none");
         playfx("ui/fx_kill_confirmed_vanish", level.dogtags[guid].curorigin);
         level.dogtags[guid] notify(#"reset");
-        wait(0.05);
+        wait 0.05;
         if (isdefined(level.dogtags[guid])) {
             foreach (team in level.teams) {
                 objective_delete(level.dogtags[guid].objid[team]);
@@ -274,12 +274,12 @@ function bounce() {
         self.visuals[0] rotateyaw(-76, 0.5);
         self.visuals[1] moveto(toppos, 0.5, 0.15, 0.15);
         self.visuals[1] rotateyaw(-76, 0.5);
-        wait(0.5);
+        wait 0.5;
         self.visuals[0] moveto(bottompos, 0.5, 0.15, 0.15);
         self.visuals[0] rotateyaw(-76, 0.5);
         self.visuals[1] moveto(bottompos, 0.5, 0.15, 0.15);
         self.visuals[1] rotateyaw(-76, 0.5);
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -289,7 +289,7 @@ function bounce() {
 // Size: 0x2c
 function checkallowspectating() {
     self endon(#"disconnect");
-    wait(0.05);
+    wait 0.05;
     spectating::update_settings();
 }
 
@@ -346,7 +346,7 @@ function dt_respawn() {
 // Size: 0x72
 function waittillcanspawnclient() {
     for (;;) {
-        wait(0.05);
+        wait 0.05;
         if (self.sessionstate == "spectator" || isdefined(self) && !isalive(self)) {
             self.pers["lives"] = 1;
             self thread [[ level.spawnclient ]]();

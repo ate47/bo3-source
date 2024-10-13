@@ -151,12 +151,12 @@ function deployempturret(emp) {
     emp.vehicle setanim(mp_emp_power_core%o_turret_emp_core_deploy, 1);
     length = getanimlength(mp_emp_power_core%o_turret_emp_core_deploy);
     emp.vehicle clientfield::set("emp_turret_deploy", 1);
-    wait(length * 0.75);
+    wait length * 0.75;
     emp.vehicle thread playempfx();
     emp.vehicle playsound("mpl_emp_turret_activate");
     emp.vehicle setanim(mp_emp_power_core%o_turret_emp_core_spin, 1);
     player thread emp_jamenemies(emp, 0);
-    wait(length * 0.25);
+    wait length * 0.25;
     emp.vehicle clearanim(mp_emp_power_core%o_turret_emp_core_deploy, 0);
 }
 
@@ -195,7 +195,7 @@ function doneempfx(fxtagorigin) {
 function playempfx() {
     emp_vehicle = self;
     emp_vehicle playloopsound("mpl_emp_turret_loop_close");
-    wait(0.05);
+    wait 0.05;
 }
 
 // Namespace emp
@@ -407,7 +407,7 @@ function emp_jamenemies(empent, hacked) {
     level notify(#"emp_updated");
     level notify(#"emp_deployed");
     visionsetnaked("flash_grenade", 1.5);
-    wait(0.1);
+    wait 0.1;
     visionsetnaked("flash_grenade", 0);
     visionsetnaked(getdvarstring("mapname"), 5);
     empkillstreakweapon = getweapon("emp");

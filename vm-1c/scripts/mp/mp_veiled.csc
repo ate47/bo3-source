@@ -5,15 +5,15 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b949d622;
+#namespace mp_veiled;
 
-// Namespace namespace_b949d622
+// Namespace mp_veiled
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5daef1e1, Offset: 0x128
 // Size: 0x5c
 function main() {
-    namespace_f7008227::main();
-    namespace_8f273e4e::main();
+    mp_veiled_fx::main();
+    mp_veiled_sound::main();
     load::main();
     util::waitforclient(0);
     level.endgamexcamname = "ui_cam_endgame_mp_veiled";

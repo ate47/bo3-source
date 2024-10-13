@@ -8,9 +8,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_50c3fea6;
+#namespace zm_sumpf_ffotd;
 
-// Namespace namespace_50c3fea6
+// Namespace zm_sumpf_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4f665b91, Offset: 0x288
 // Size: 0x1c
@@ -18,7 +18,7 @@ function main_start() {
     level thread function_b620b1d6();
 }
 
-// Namespace namespace_50c3fea6
+// Namespace zm_sumpf_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9de33bef, Offset: 0x2b0
 // Size: 0x464
@@ -43,7 +43,7 @@ function main_end() {
     spawncollision("collision_player_slick_wall_256x256x10", "collider", (8786.69, 1996.15, -404), (0, 314.194, 0));
 }
 
-// Namespace namespace_50c3fea6
+// Namespace zm_sumpf_ffotd
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5ff83a99, Offset: 0x720
 // Size: 0x3a

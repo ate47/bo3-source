@@ -4,9 +4,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_47b9c241;
+#namespace zm_zod_fx;
 
-// Namespace namespace_47b9c241
+// Namespace zm_zod_fx
 // Params 0, eflags: 0x0
 // Checksum 0x7b618d5d, Offset: 0x648
 // Size: 0x44
@@ -16,7 +16,7 @@ function main() {
     callback::on_localclient_connect(&function_129a815f);
 }
 
-// Namespace namespace_47b9c241
+// Namespace zm_zod_fx
 // Params 0, eflags: 0x0
 // Checksum 0xb2c8e393, Offset: 0x698
 // Size: 0x26a
@@ -45,7 +45,7 @@ function function_f45953c() {
     level._effect["gateworm_basin_quest_complete"] = "zombie/fx_ritual_pap_basin_fire_lg_zod_zmb";
 }
 
-// Namespace namespace_47b9c241
+// Namespace zm_zod_fx
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x910
 // Size: 0x4
@@ -53,7 +53,7 @@ function function_e6258024() {
     
 }
 
-// Namespace namespace_47b9c241
+// Namespace zm_zod_fx
 // Params 1, eflags: 0x0
 // Checksum 0x3ad0a71d, Offset: 0x920
 // Size: 0x24
@@ -61,7 +61,7 @@ function function_129a815f(localclientnum) {
     thread function_47ecaed4(localclientnum);
 }
 
-// Namespace namespace_47b9c241
+// Namespace zm_zod_fx
 // Params 1, eflags: 0x0
 // Checksum 0x4099864b, Offset: 0x950
 // Size: 0x1e8
@@ -74,26 +74,26 @@ function function_47ecaed4(localclientnum) {
     }
     for (;;) {
         function_e9849e59(localclientnum);
-        wait(1);
+        wait 1;
         for (i = 0; i < 4; i++) {
             level.var_ff4acd38[i] show();
             exploder::exploder("lighthouse_light_ring_" + i + 1);
-            wait(0.5);
+            wait 0.5;
         }
         exploder::exploder("lighthouse_light_spotlight");
-        wait(1);
+        wait 1;
         function_e9849e59(localclientnum);
-        wait(0.5);
+        wait 0.5;
         function_fe8322ed(localclientnum);
-        wait(0.25);
+        wait 0.25;
         function_e9849e59(localclientnum);
-        wait(0.25);
+        wait 0.25;
         function_fe8322ed(localclientnum);
-        wait(1.25);
+        wait 1.25;
     }
 }
 
-// Namespace namespace_47b9c241
+// Namespace zm_zod_fx
 // Params 1, eflags: 0x0
 // Checksum 0x5ce81e5d, Offset: 0xb40
 // Size: 0x94
@@ -105,7 +105,7 @@ function function_e9849e59(localclientnum) {
     exploder::stop_exploder("lighthouse_light_spotlight");
 }
 
-// Namespace namespace_47b9c241
+// Namespace zm_zod_fx
 // Params 1, eflags: 0x0
 // Checksum 0xf3d3b111, Offset: 0xbe0
 // Size: 0x94

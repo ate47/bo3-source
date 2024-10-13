@@ -50,7 +50,7 @@ function function_1146dd0e(weapon) {
 // Params 3, eflags: 0x1 linked
 // Checksum 0x6d3a70d9, Offset: 0x418
 // Size: 0x1c
-function function_5be8b6af(weapon, options, var_65ce895e) {
+function function_5be8b6af(weapon, options, acvi) {
     
 }
 
@@ -58,11 +58,11 @@ function function_5be8b6af(weapon, options, var_65ce895e) {
 // Params 3, eflags: 0x0
 // Checksum 0x1d0dc094, Offset: 0x440
 // Size: 0xe6
-function bestweapon_init(weapon, options, var_65ce895e) {
+function bestweapon_init(weapon, options, acvi) {
     weapon_data = [];
     weapon_data["weapon"] = weapon;
     weapon_data["options"] = options;
-    weapon_data["acvi"] = var_65ce895e;
+    weapon_data["acvi"] = acvi;
     weapon_data["kill_count"] = 0;
     weapon_data["spawned_with"] = 0;
     key = self.pers["bestWeapon"][weapon.name].size;
@@ -74,7 +74,7 @@ function bestweapon_init(weapon, options, var_65ce895e) {
 // Params 3, eflags: 0x0
 // Checksum 0xfbd35e31, Offset: 0x530
 // Size: 0x192
-function bestweapon_find(weapon, options, var_65ce895e) {
+function bestweapon_find(weapon, options, acvi) {
     if (!isdefined(self.pers["bestWeapon"])) {
         self.pers["bestWeapon"] = [];
     }
@@ -84,7 +84,7 @@ function bestweapon_find(weapon, options, var_65ce895e) {
     name = weapon.name;
     size = self.pers["bestWeapon"][name].size;
     for (index = 0; index < size; index++) {
-        if (self.pers["bestWeapon"][name][index]["weapon"] == weapon && self.pers["bestWeapon"][name][index]["options"] == options && self.pers["bestWeapon"][name][index]["acvi"] == var_65ce895e) {
+        if (self.pers["bestWeapon"][name][index]["weapon"] == weapon && self.pers["bestWeapon"][name][index]["options"] == options && self.pers["bestWeapon"][name][index]["acvi"] == acvi) {
             return index;
         }
     }

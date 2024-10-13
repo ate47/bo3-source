@@ -5,9 +5,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_efc40536;
+#namespace acousticsensor;
 
-// Namespace namespace_efc40536
+// Namespace acousticsensor
 // Params 0, eflags: 0x2
 // Checksum 0xfd806b19, Offset: 0x148
 // Size: 0x34
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
     system::register("acousticsensor", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_efc40536
+// Namespace acousticsensor
 // Params 0, eflags: 0x0
 // Checksum 0x4e3c330c, Offset: 0x188
 // Size: 0x14

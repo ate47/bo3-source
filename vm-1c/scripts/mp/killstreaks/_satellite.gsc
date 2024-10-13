@@ -154,7 +154,7 @@ function rotate(duration) {
     self endon(#"death");
     while (true) {
         self rotateyaw(-360, duration);
-        wait(duration);
+        wait duration;
     }
 }
 
@@ -183,7 +183,7 @@ function ontimeout() {
     self.leaving = 1;
     self function_2a11ce46();
     airsupport::leave(10);
-    wait(10);
+    wait 10;
     if (target_istarget(self)) {
         target_remove(self);
     }
@@ -228,7 +228,7 @@ function function_7ea6b1cc(attacker, weapon) {
     if (target_istarget(self)) {
         target_remove(self);
     }
-    wait(0.5);
+    wait 0.5;
     if (!self.leaving) {
         self function_2a11ce46();
     }

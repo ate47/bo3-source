@@ -116,7 +116,7 @@ function get_hacked_timeout_duration_ms() {
     killstreak = self;
     timeout = killstreak killstreak_bundles::get_hack_timeout();
     if (!isdefined(timeout) || timeout <= 0) {
-        assertmsg("<unknown string>" + killstreak.killstreaktype + "<unknown string>");
+        assertmsg("<dev string:x28>" + killstreak.killstreaktype + "<dev string:x50>");
         return;
     }
     return timeout * 1000;
@@ -155,7 +155,7 @@ function _update_health(hacker) {
         return;
     }
     /#
-        hacker iprintlnbold("<unknown string>");
+        hacker iprintlnbold("<dev string:x87>");
     #/
 }
 
@@ -179,12 +179,12 @@ function _update_health(hacker) {
         killstreakentity notify(#"killstreak_switch_team_singleton");
         killstreakentity endon(#"killstreak_switch_team_singleton");
         killstreakentity endon(#"death");
-        setdvar("<unknown string>", "<unknown string>");
+        setdvar("<dev string:xae>", "<dev string:xc9>");
         while (true) {
-            wait(0.5);
-            devgui_int = getdvarint("<unknown string>");
+            wait 0.5;
+            devgui_int = getdvarint("<dev string:xae>");
             if (devgui_int != 0) {
-                team = "<unknown string>";
+                team = "<dev string:xca>";
                 if (isdefined(level.getenemyteam) && isdefined(owner) && isdefined(owner.team)) {
                     team = [[ level.getenemyteam ]](owner.team);
                 }
@@ -192,21 +192,21 @@ function _update_health(hacker) {
                     player = [[ level.devongetormakebot ]](team);
                 }
                 if (!isdefined(player)) {
-                    println("<unknown string>");
-                    wait(1);
+                    println("<dev string:xd5>");
+                    wait 1;
                     continue;
                 }
                 if (!isdefined(killstreakentity.killstreak_hackedcallback)) {
                     /#
-                        iprintlnbold("<unknown string>");
+                        iprintlnbold("<dev string:xef>");
                     #/
                     return;
                 }
                 killstreakentity notify(#"killstreak_hacked", player);
                 killstreakentity.previouslyhacked = 1;
                 killstreakentity [[ killstreakentity.killstreak_hackedcallback ]](player);
-                wait(0.5);
-                setdvar("<unknown string>", "<unknown string>");
+                wait 0.5;
+                setdvar("<dev string:xae>", "<dev string:x107>");
                 return;
             }
         }

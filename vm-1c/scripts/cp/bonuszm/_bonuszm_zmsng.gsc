@@ -51,7 +51,7 @@ function __main__() {
 // Checksum 0xad974ede, Offset: 0x720
 // Size: 0x20c
 function function_ab60ef67() {
-    wait(2);
+    wait 2;
     level.var_8a9d11b = 0;
     level.var_7e93a355 = 0;
     level.collectibles = [];
@@ -189,54 +189,54 @@ function onuse(e_player) {
         state = undefined;
         unlockname = undefined;
         switch (mapname) {
-        case 43:
+        case "cp_mi_cairo_aquifer_nightmares":
             state = "zm_abra";
             unlockname = "mus_abra_cadavre_intro";
             break;
-        case 45:
+        case "cp_mi_cairo_lotus_nightmares":
             state = "zm_always_running";
             unlockname = "mus_always_running_intro";
             break;
-        case 46:
+        case "cp_mi_cairo_ramses_nightmares":
             state = "zm_wafd";
             unlockname = "mus_we_all_fall_down_intro";
             break;
-        case 47:
+        case "cp_mi_eth_prologue_nightmares":
             state = "zm_pareidolia";
             unlockname = "mus_pareidolia_intro";
             break;
-        case 48:
+        case "cp_mi_sing_biodomes_nightmares":
             state = "zm_boa";
             unlockname = "mus_beauty_of_annihilation_intro";
             break;
-        case 49:
+        case "cp_mi_sing_blackstation_nightmares":
             state = "zm_carrion";
             unlockname = "mus_carrion_intro";
             break;
-        case 50:
+        case "cp_mi_sing_sgen_nightmares":
             state = "zm_lullaby";
             unlockname = "mus_lullaby_for_a_dead_man_intro";
             break;
-        case 51:
+        case "cp_mi_sing_vengeance_nightmares":
             state = "zm_coming_home";
             unlockname = "mus_coming_home_intro";
             break;
-        case 52:
+        case "cp_mi_zurich_coalescence_nightmares":
             state = "zm_archangel";
             unlockname = "mus_archangel_intro";
             break;
-        case 53:
+        case "cp_mi_zurich_newworld_nightmares":
             state = "zm_the_one";
             unlockname = "mus_the_one_intro";
             break;
-        case 44:
+        case "cp_mi_cairo_infection_nightmares":
             state = "zm_wawg";
             unlockname = "mus_where_are_we_going_intro";
             break;
         }
         if (isdefined(state)) {
             /#
-                iprintln("trigger_radius_use" + unlockname);
+                iprintln("<dev string:x28>" + unlockname);
             #/
             music::setmusicstate(state);
             level.var_effda531 = 1;
@@ -262,7 +262,7 @@ function function_d789d2e(state) {
     } else {
         waittime = playbacktime * 0.001;
     }
-    wait(waittime);
+    wait waittime;
     level.var_effda531 = 0;
 }
 
@@ -282,8 +282,8 @@ function onbeginuse(e_player) {
     // Size: 0x58
     function function_c7d0d818(origin1) {
         while (true) {
-            recordline(origin1, origin1 + (0, 0, 2000), (1, 1, 1), "trigger_radius_use");
-            wait(0.05);
+            recordline(origin1, origin1 + (0, 0, 2000), (1, 1, 1), "<dev string:x33>");
+            wait 0.05;
         }
     }
 

@@ -261,7 +261,7 @@ class cdoor {
         if (isdefined(self.m_n_door_connect_paths) && self.m_n_door_connect_paths) {
             self.m_e_door connectpaths();
         }
-        wait(self.m_s_bundle.door_open_time);
+        wait self.m_s_bundle.door_open_time;
         if (isdefined(self.m_s_bundle.b_loop_sound) && self.m_s_bundle.b_loop_sound) {
             sndent delete();
         }
@@ -304,7 +304,7 @@ class cdoor {
             v_angle = (self.m_e_door.angles[0], self.m_e_door.angles[1] - angle, self.m_e_door.angles[2]);
             self.m_e_door rotateto(v_angle, self.m_s_bundle.door_open_time);
         }
-        wait(self.m_s_bundle.door_open_time);
+        wait self.m_s_bundle.door_open_time;
         if (isdefined(self.m_n_door_connect_paths) && self.m_n_door_connect_paths) {
             self.m_e_door disconnectpaths();
         }
@@ -459,7 +459,7 @@ function init() {
     if (!isdefined(self.angles)) {
         self.angles = (0, 0, 0);
     }
-    s_door_bundle = level.var_3f831f3b["doors"][self.scriptbundlename];
+    s_door_bundle = level.scriptbundles["doors"][self.scriptbundlename];
     return function_5c37f26b(s_door_bundle, self);
 }
 
@@ -579,7 +579,7 @@ function door_open_update(c_door) {
                     door_wait_until_clear(c_door, e_who);
                     [[ c_door ]]->close();
                     if (b_hold_open) {
-                        wait(0.05);
+                        wait 0.05;
                         c_door flag::wait_till_clear("animating");
                         e_who player_freeze_in_place(0);
                         e_who enableweapons();
@@ -628,7 +628,7 @@ function door_update(c_door) {
         c_door flag::wait_till("open");
         if (c_door.m_door_open_delay_time > 0) {
             c_door.m_e_door notify(#"door_waiting_to_open", c_door.m_e_trigger_player);
-            wait(c_door.m_door_open_delay_time);
+            wait c_door.m_door_open_delay_time;
         }
         [[ c_door ]]->open_internal();
         c_door flag::wait_till_clear("open");
@@ -636,7 +636,7 @@ function door_update(c_door) {
         if (!(isdefined(c_door.m_s_bundle.door_closes) && c_door.m_s_bundle.door_closes)) {
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
     c_door.m_e_trigger delete();
     c_door.m_e_trigger = undefined;
@@ -696,7 +696,7 @@ function trigger_wait_until_clear(c_door) {
         if (dt >= 0.3) {
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
     self notify(str_kill_trigger_notify);
 }
@@ -709,12 +709,12 @@ function door_wait_until_user_release(c_door, e_triggerer, str_kill_on_door_noti
     if (isdefined(str_kill_on_door_notify)) {
         c_door endon(str_kill_on_door_notify);
     }
-    wait(0.25);
+    wait 0.25;
     max_dist_sq = c_door.m_s_bundle.door_trigger_radius * c_door.m_s_bundle.door_trigger_radius;
     b_pressed = 1;
     n_dist = 0;
     do {
-        wait(0.05);
+        wait 0.05;
         b_pressed = e_triggerer usebuttonpressed();
         n_dist = distancesquared(e_triggerer.origin, self.origin);
     } while (b_pressed && n_dist < max_dist_sq);
@@ -771,7 +771,7 @@ function door_debug_line(v_origin) {
         /#
             line(v_start, v_end, (0, 0, 1));
         #/
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -812,7 +812,7 @@ function function_522fd170() {
     self endon(#"death");
     while (true) {
         self rotateyaw(-76, 3);
-        wait(2.5);
+        wait 2.5;
     }
 }
 
@@ -825,7 +825,7 @@ function function_a7e476f0(var_3501c4df, e_trigger, e_model) {
     if (var_3501c4df < 5) {
         var_3501c4df = 5 + 1;
     }
-    wait(var_3501c4df - 5);
+    wait var_3501c4df - 5;
     var_2bc4d9d5 = 0.5;
     b_on = 1;
     for (f = 0; f < 5; f += var_2bc4d9d5) {
@@ -835,7 +835,7 @@ function function_a7e476f0(var_3501c4df, e_trigger, e_model) {
             e_model show();
         }
         b_on = !b_on;
-        wait(var_2bc4d9d5);
+        wait var_2bc4d9d5;
         if (var_2bc4d9d5 > 0.15) {
             var_2bc4d9d5 *= 0.9;
         }
@@ -860,10 +860,10 @@ function function_380dd131(var_3501c4df, var_b48f50dd) {
     while (isalive(self)) {
         e_model moveto(self.origin + (0, 0, 80), 0.2);
         e_model rotateyaw(30, 0.2);
-        wait(0.1);
+        wait 0.1;
     }
     e_model movez(-60, 1);
-    wait(1);
+    wait 1;
     e_model thread function_522fd170();
     e_trigger = spawn("trigger_radius", e_model.origin, 0, 25, 100);
     if (isdefined(var_3501c4df)) {
@@ -892,7 +892,7 @@ function function_4c16e397(var_3501c4df, var_b48f50dd) {
     if (!isdefined(var_b48f50dd)) {
         var_b48f50dd = "door";
     }
-    assert(isdefined(level.var_96a4595f), "locked");
+    assert(isdefined(level.var_96a4595f), "<dev string:x28>");
     self thread function_380dd131(var_3501c4df, var_b48f50dd);
 }
 
@@ -904,7 +904,7 @@ function function_fc201a7a(var_b48f50dd) {
     if (!isdefined(var_b48f50dd)) {
         var_b48f50dd = "door";
     }
-    assert(isdefined(level.var_10ac440b), "locked");
+    assert(isdefined(level.var_10ac440b), "<dev string:x81>");
     if (!isdefined(self.var_1166c5fc)) {
         self.var_1166c5fc = [];
     }

@@ -4,20 +4,20 @@
 #using scripts/cp/voice/voice_aquifer;
 #using scripts/codescripts/struct;
 
-#namespace namespace_1d1d22be;
+#namespace cp_mi_cairo_aquifer_sound;
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x37dbc884, Offset: 0xd28
 // Size: 0x44
 function main() {
-    namespace_b9b93cab::init_voice();
+    voice_aquifer::init_voice();
     thread function_609d3ec();
     thread function_cd85d22a();
     thread function_4fb4bdc3();
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x63d158d1, Offset: 0xd78
 // Size: 0xcc
@@ -29,7 +29,7 @@ function function_4fb4bdc3() {
     level.var_7b4d6a36 = spawn("script_origin", (16820, 3947, 2047));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0xe50
 // Size: 0x4
@@ -37,7 +37,7 @@ function function_30ce85d2() {
     
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xe60
 // Size: 0x4
@@ -45,7 +45,7 @@ function function_609d3ec() {
     
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8f8c0b54, Offset: 0xe70
 // Size: 0x4c
@@ -54,7 +54,7 @@ function function_77b5283a(player) {
     player playsoundtoplayer("veh_vtol_exit_foley", player);
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 2, eflags: 0x1 linked
 // Checksum 0x56425d29, Offset: 0xec8
 // Size: 0x5c
@@ -63,7 +63,7 @@ function function_976c341d(player, zone) {
     playsoundatposition("veh_vtol_land", zone.origin);
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd53333be, Offset: 0xf30
 // Size: 0xb2
@@ -74,7 +74,7 @@ function function_c800052a() {
     }
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd3c8b28e, Offset: 0xff0
 // Size: 0x24
@@ -82,7 +82,7 @@ function function_fc716128() {
     playsoundatposition("evt_water_vo_lyr_01", (0, 0, 0));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4de9958e, Offset: 0x1020
 // Size: 0x24
@@ -90,7 +90,7 @@ function function_6e78d063() {
     playsoundatposition("evt_water_vo_lyr_02", (0, 0, 0));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbacc479d, Offset: 0x1050
 // Size: 0x24
@@ -98,7 +98,7 @@ function function_487655fa() {
     playsoundatposition("evt_water_vo_lyr_03", (0, 0, 0));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2827020c, Offset: 0x1080
 // Size: 0x24
@@ -106,7 +106,7 @@ function function_decbd389() {
     playsoundatposition("evt_drown_blink_01", (0, 0, 0));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x4b763bfc, Offset: 0x10b0
 // Size: 0x24
@@ -114,7 +114,7 @@ function function_4ce4df2() {
     playsoundatposition("evt_drown_blink_02", (0, 0, 0));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x44cc556d, Offset: 0x10e0
 // Size: 0x24
@@ -122,7 +122,7 @@ function function_2ad0c85b() {
     playsoundatposition("evt_drown_blink_03", (0, 0, 0));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe05d0b0e, Offset: 0x1110
 // Size: 0x24
@@ -130,7 +130,7 @@ function function_69386a6b() {
     playsoundatposition("evt_drown", (0, 0, 0));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6f9687d8, Offset: 0x1140
 // Size: 0x2c
@@ -138,7 +138,7 @@ function function_ed6114d2() {
     playsoundatposition("evt_door_kick", (12620, 836, 2979));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb4fd81e6, Offset: 0x1178
 // Size: 0x4c
@@ -147,7 +147,7 @@ function function_ceaeaa5a() {
     level util::clientnotify("sndWR");
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdfcdefb3, Offset: 0x11d0
 // Size: 0x34
@@ -155,7 +155,7 @@ function function_c3d203d6() {
     playsoundatposition("evt_lower_combat_exp_snap", (17220.8, -3074.75, 3528.5));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5102b988, Offset: 0x1210
 // Size: 0x34
@@ -163,31 +163,31 @@ function function_5dcd1d9() {
     playsoundatposition("evt_scripted_jet", (17220.8, -3074.75, 3528.5));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x16759b83, Offset: 0x1250
 // Size: 0xdc
 function function_4e875e0d() {
     playsoundatposition("evt_breach_gunfire", (0, 0, 0));
-    wait(3.24);
+    wait 3.24;
     playsoundatposition("evt_breach_missile_zip", (15047, 13, 3121));
-    wait(0.8);
+    wait 0.8;
     playsoundatposition("evt_breach_exp", (15088, 19, 2942));
-    wait(1.2);
+    wait 1.2;
     playsoundatposition("evt_breach_debris_left", (15286, 391, 2913));
     playsoundatposition("evt_breach_debris_right", (15308, -453, 2914));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb0b3e6c6, Offset: 0x1338
 // Size: 0x2c
 function function_16a46955() {
-    wait(4.1);
+    wait 4.1;
     playsoundatposition("evt_breach_slowmo", (0, 0, 0));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3f5991d8, Offset: 0x1370
 // Size: 0xb0
@@ -203,7 +203,7 @@ function function_ad15f6f5() {
     }
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6b5a5320, Offset: 0x1428
 // Size: 0x110
@@ -223,7 +223,7 @@ function function_1024da0a() {
     }
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x79524140, Offset: 0x1540
 // Size: 0x140
@@ -234,7 +234,7 @@ function function_e76f158() {
         thread function_30d6c739();
         level.var_554aefcd stoploopsound();
         level.var_554aefcd playsound("evt_generator_release_panel");
-        wait(0.1);
+        wait 0.1;
         level.var_fc9a3509 = 2;
         return;
     }
@@ -247,25 +247,25 @@ function function_e76f158() {
     }
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc9bc37de, Offset: 0x1688
 // Size: 0x34
 function function_30d6c739() {
-    wait(1.5);
+    wait 1.5;
     playsoundatposition("evt_boss_exp_elec", (16678, 2893, 2276));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5f51dfc8, Offset: 0x16c8
 // Size: 0x34
 function function_56d941a2() {
-    wait(1.5);
+    wait 1.5;
     playsoundatposition("evt_boss_exp_elec", (16126, 4352, 2279));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6bf0cfc9, Offset: 0x1708
 // Size: 0x24
@@ -273,7 +273,7 @@ function function_f8835fe9() {
     playsoundatposition("evt_escape_exp_sml", (0, 0, 0));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf90eeef8, Offset: 0x1738
 // Size: 0x24
@@ -281,13 +281,13 @@ function function_5d0cee98() {
     playsoundatposition("evt_escape_exp_lrg", (0, 0, 0));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2a5eea65, Offset: 0x1768
 // Size: 0x32c
 function function_b01c9f8() {
     playsoundatposition("evt_runout_first_exp", (0, 0, 0));
-    wait(0.5);
+    wait 0.5;
     var_1d84d980 = spawn("script_origin", (16357, 1454, 2140));
     var_1d84d980 playloopsound("evt_runout_alarm_01");
     var_8f8c48bb = spawn("script_origin", (16548, 1041, 2561));
@@ -310,34 +310,34 @@ function function_b01c9f8() {
     playsoundatposition("evt_runout_corridor_exp", (15862, 1444, 2090));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd5249e51, Offset: 0x1aa0
 // Size: 0x1e4
 function function_850c7ab7() {
-    wait(0.5);
+    wait 0.5;
     playsoundatposition("evt_exfil_elec_exp", (15827, -117, 3144));
-    wait(0.5);
+    wait 0.5;
     playsoundatposition("evt_exfil_exp_01", (15930, 978, 2815));
-    wait(14.2);
+    wait 14.2;
     playsoundatposition("evt_exfil_exp_02", (15725, 56, 2889));
-    wait(0.6);
+    wait 0.6;
     playsoundatposition("evt_exfil_exp_03", (15425, 287, 2846));
-    wait(0.9);
+    wait 0.9;
     playsoundatposition("evt_exfil_exp_04", (15039, 820, 3270));
-    wait(0.7);
+    wait 0.7;
     playsoundatposition("evt_exfil_exp_05", (14347, 2257, 2468));
-    wait(1.3);
+    wait 1.3;
     playsoundatposition("evt_exfil_exp_06", (15038, 4150, 2915));
-    wait(0.4);
+    wait 0.4;
     playsoundatposition("evt_exfil_exp_07", (15180, 2305, 3093));
-    wait(2.2);
+    wait 2.2;
     playsoundatposition("evt_exfil_exp_08", (14142, 6656, 3856));
-    wait(0.4);
+    wait 0.4;
     playsoundatposition("evt_exfil_exp_09", (15063, 6200, 3213));
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf771a109, Offset: 0x1c90
 // Size: 0x768
@@ -414,12 +414,12 @@ function function_fbfb4dae() {
     level.var_7dc8a9bd[15][4] = "vox_aqui_130_150_005_esol";
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9380f2bf, Offset: 0x2400
 // Size: 0x1f8
 function function_cd85d22a() {
-    wait(5);
+    wait 5;
     if (isdefined(level.var_cca43db2)) {
         return;
     }
@@ -437,15 +437,15 @@ function function_cd85d22a() {
             t = soundgetplaybacktime(alias);
             level.var_cca43db2 playsound(alias);
             if (t > 0) {
-                wait(t / 1000);
+                wait t / 1000;
             }
-            wait(randomfloatrange(0.3, 1));
+            wait randomfloatrange(0.3, 1);
         }
-        wait(randomfloatrange(1.5, 3.5));
+        wait randomfloatrange(1.5, 3.5);
     }
 }
 
-// Namespace namespace_1d1d22be
+// Namespace cp_mi_cairo_aquifer_sound
 // Params 1, eflags: 0x1 linked
 // Checksum 0x401ee5df, Offset: 0x2600
 // Size: 0x64
@@ -515,7 +515,7 @@ function function_ca2c6d9f() {
 // Checksum 0xb6159bea, Offset: 0x2760
 // Size: 0x24
 function function_bb8ce831() {
-    wait(7);
+    wait 7;
     music::setmusicstate("tension_loop_1");
 }
 

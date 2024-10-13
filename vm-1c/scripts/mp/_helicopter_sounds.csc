@@ -44,8 +44,8 @@ function __init__() {
     init_heli_sound_values("heli_guard", "turbine", 10, 0.9, 1, 30, 0.9, 1.05);
     init_heli_sound_values("heli_guard", "rotor", 10, 0.9, 1, 30, 0.9, 1.1);
     /#
-        if (getdvarstring("wind_rt") == "wind_rt") {
-            setdvar("wind_rt", "wind_rt");
+        if (getdvarstring("<dev string:x28>") == "<dev string:x33>") {
+            setdvar("<dev string:x28>", "<dev string:x33>");
         }
         level thread command_parser();
     #/
@@ -56,7 +56,7 @@ function __init__() {
 // Checksum 0xf367c73f, Offset: 0xc58
 // Size: 0x8c
 function vehicle_is_firing_function(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    println("wind_rt" + newval);
+    println("<dev string:x34>" + newval);
     if (newval == 0) {
         self.isfiring = 0;
         return;
@@ -82,15 +82,15 @@ function init_heli_sound_values(heli_type, part_type, max_speed_vol, min_vol, ma
     level.helisoundvalues[heli_type][part_type].pitchmin = min_pitch;
     level.helisoundvalues[heli_type][part_type].pitchmax = max_pitch;
     /#
-        if (getdvarint("wind_rt") > 0) {
-            println("wind_rt" + heli_type);
-            println("wind_rt" + part_type);
-            println("wind_rt" + max_speed_vol);
-            println("wind_rt" + min_vol);
-            println("wind_rt" + max_vol);
-            println("wind_rt" + max_speed_pitch);
-            println("wind_rt" + min_pitch);
-            println("wind_rt" + max_pitch);
+        if (getdvarint("<dev string:x49>") > 0) {
+            println("<dev string:x54>" + heli_type);
+            println("<dev string:x71>" + part_type);
+            println("<dev string:x8e>" + max_speed_vol);
+            println("<dev string:xaf>" + min_vol);
+            println("<dev string:xca>" + max_vol);
+            println("<dev string:xe5>" + max_speed_pitch);
+            println("<dev string:x108>" + min_pitch);
+            println("<dev string:x125>" + max_pitch);
         }
     #/
 }
@@ -103,33 +103,33 @@ function init_heli_sound_values(heli_type, part_type, max_speed_vol, min_vol, ma
     // Size: 0x558
     function command_parser() {
         while (true) {
-            command = getdvarstring("wind_rt");
-            if (command != "wind_rt") {
+            command = getdvarstring("<dev string:x28>");
+            if (command != "<dev string:x33>") {
                 success = 1;
-                tokens = strtok(command, "wind_rt");
+                tokens = strtok(command, "<dev string:x142>");
                 if (!isdefined(tokens[0]) || !isdefined(level.helisoundvalues[tokens[0]])) {
                     if (isdefined(tokens[0])) {
-                        println("wind_rt" + tokens[0]);
+                        println("<dev string:x144>" + tokens[0]);
                     } else {
-                        println("wind_rt");
+                        println("<dev string:x174>");
                     }
-                    println("wind_rt");
+                    println("<dev string:x1a1>");
                     success = 0;
                 } else if (!isdefined(tokens[1])) {
                     if (isdefined(tokens[1])) {
-                        println("wind_rt" + tokens[0] + "wind_rt" + tokens[1]);
+                        println("<dev string:x1eb>" + tokens[0] + "<dev string:x21b>" + tokens[1]);
                     } else {
-                        println("wind_rt" + tokens[0]);
+                        println("<dev string:x227>" + tokens[0]);
                     }
-                    println("wind_rt");
+                    println("<dev string:x1a1>");
                     success = 0;
                 } else if (!isdefined(tokens[2])) {
-                    println("wind_rt" + tokens[0] + "wind_rt" + tokens[1]);
-                    println("wind_rt");
+                    println("<dev string:x25f>" + tokens[0] + "<dev string:x29c>" + tokens[1]);
+                    println("<dev string:x1a1>");
                     success = 0;
                 } else if (!isdefined(tokens[3])) {
-                    println("wind_rt" + tokens[0] + "wind_rt" + tokens[1]);
-                    println("wind_rt");
+                    println("<dev string:x2a4>" + tokens[0] + "<dev string:x29c>" + tokens[1]);
+                    println("<dev string:x1a1>");
                     success = 0;
                 }
                 if (success) {
@@ -138,38 +138,38 @@ function init_heli_sound_values(heli_type, part_type, max_speed_vol, min_vol, ma
                     value_name = tokens[2];
                     value = float(tokens[3]);
                     switch (value_name) {
-                    case 8:
+                    case "<dev string:x2dc>":
                         level.helisoundvalues[heli_type][heli_part].volumemin = value;
-                        println("wind_rt" + value);
+                        println("<dev string:x2e6>" + value);
                         break;
-                    case 8:
+                    case "<dev string:x2fc>":
                         level.helisoundvalues[heli_type][heli_part].volumemax = value;
-                        println("wind_rt" + value);
+                        println("<dev string:x306>" + value);
                         break;
-                    case 8:
+                    case "<dev string:x31c>":
                         level.helisoundvalues[heli_type][heli_part].pitchmin = value;
-                        println("wind_rt" + value);
+                        println("<dev string:x325>" + value);
                         break;
-                    case 8:
+                    case "<dev string:x33a>":
                         level.helisoundvalues[heli_type][heli_part].pitchmax = value;
-                        println("wind_rt" + value);
+                        println("<dev string:x343>" + value);
                         break;
-                    case 8:
+                    case "<dev string:x358>":
                         level.helisoundvalues[heli_type][heli_part].speedvolumemax = value;
-                        println("wind_rt" + value);
+                        println("<dev string:x367>" + value);
                         break;
-                    case 8:
+                    case "<dev string:x382>":
                         level.helisoundvalues[heli_type][heli_part].speedpitchmax = value;
-                        println("wind_rt" + value);
+                        println("<dev string:x390>" + value);
                         break;
                     default:
-                        println("wind_rt");
+                        println("<dev string:x3aa>");
                         break;
                     }
                 }
-                setdvar("wind_rt", "wind_rt");
+                setdvar("<dev string:x28>", "<dev string:x33>");
             }
-            wait(0.1);
+            wait 0.1;
         }
     }
 
@@ -350,32 +350,32 @@ function start_helicopter_sounds(localclientnum) {
         self.speed_of_wind = 20;
         self.idle_run_trans_speed = 5;
         switch (self.sounddef) {
-        case 68:
+        case "veh_heli_ai_mp":
             break;
-        case 69:
+        case "veh_heli_guard_mp":
             break;
-        case 72:
+        case "veh_heli_supplydrop_mp":
             break;
-        case 70:
+        case "veh_heli_gunner_mp":
             break;
-        case 71:
+        case "veh_heli_player_gunner_mp":
             break;
-        case 67:
+        case "veh_drn_qrdrone_mp":
             break;
         default:
-            println("wind_rt" + self.vehicletype + "wind_rt");
+            println("<dev string:x404>" + self.vehicletype + "<dev string:x418>");
             break;
         }
         self init_terrain_sounds();
         self thread terrain_trace();
         /#
-            if (getdvarint("wind_rt") > 0) {
-                iprintlnbold("wind_rt" + self.vehicletype + "wind_rt");
+            if (getdvarint("<dev string:x49>") > 0) {
+                iprintlnbold("<dev string:x443>" + self.vehicletype + "<dev string:x455>");
             }
         #/
         return;
     }
-    println("wind_rt");
+    println("<dev string:x462>");
 }
 
 // Namespace helicopter_sounds
@@ -403,13 +403,13 @@ function heli_linkto_sound_ents_delete(localclientnum, entity) {
 // Size: 0xbe
 function heli_sound_play(heli_bone) {
     switch (heli_bone.sound_type) {
-    case 18:
+    case "engine":
         heli_bone.run playloopsound(heli_bone.run.alias, 2);
         break;
-    case 73:
+    case "wind":
         break;
     default:
-        println("wind_rt" + heli_bone.type + "wind_rt");
+        println("<dev string:x49b>" + heli_bone.type + "<dev string:x4b8>");
         break;
     }
 }
@@ -491,7 +491,7 @@ function heli_idle_run_transition(heli_type, heli_part, wait_time, updown) {
     }
     while (isdefined(self)) {
         if (!isdefined(level.helisoundvalues[heli_type]) || !isdefined(level.helisoundvalues[heli_type][heli_part])) {
-            println("wind_rt");
+            println("<dev string:x4d6>");
             return;
         }
         max_speed_vol = level.helisoundvalues[heli_type][heli_part].speedvolumemax;
@@ -514,15 +514,15 @@ function heli_idle_run_transition(heli_type, heli_part, wait_time, updown) {
         if (isdefined(run_volume) && isdefined(run_pitch)) {
             heli_bone.run setloopstate(heli_bone.run.alias, run_volume, run_pitch, 1, 0.15);
             /#
-                if (getdvarint("wind_rt") > 0) {
-                    println("wind_rt" + self.cur_speed);
-                    println("wind_rt" + run_pitch);
-                    println("wind_rt" + self.cur_speed);
-                    println("wind_rt" + run_volume);
+                if (getdvarint("<dev string:x49>") > 0) {
+                    println("<dev string:x505>" + self.cur_speed);
+                    println("<dev string:x51b>" + run_pitch);
+                    println("<dev string:x505>" + self.cur_speed);
+                    println("<dev string:x52c>" + run_volume);
                 }
             #/
         }
-        wait(wait_time);
+        wait wait_time;
     }
 }
 
@@ -543,7 +543,7 @@ function terrain_trace_brass() {
     trace_real_ent = undefined;
     pre_origin = (100000, 100000, 100000);
     while (isdefined(self)) {
-        wait(1 + randomfloatrange(0, 0.2));
+        wait 1 + randomfloatrange(0, 0.2);
         if (distancesquared(pre_origin, trace_ent.origin) < -112) {
             continue;
         }
@@ -602,7 +602,7 @@ function terrain_trace() {
     trace_real_ent = undefined;
     pre_origin = (100000, 100000, 100000);
     while (isdefined(self)) {
-        wait(1 + randomfloatrange(0, 0.2));
+        wait 1 + randomfloatrange(0, 0.2);
         if (distancesquared(pre_origin, trace_ent.origin) < -112) {
             continue;
         }
@@ -649,7 +649,7 @@ function terrain_trace() {
 // Checksum 0x26fbc07a, Offset: 0x32c8
 // Size: 0x3f0
 function aircraft_dustkick(localclientnum) {
-    println("wind_rt");
+    println("<dev string:x53d>");
     self endon(#"entityshutdown");
     maxheight = 1200;
     minheight = 350;
@@ -705,10 +705,10 @@ function aircraft_dustkick(localclientnum) {
         if (!isdefined(self.treadfxnamearray) || !isdefined(self.treadfxnamearray[trace["surfacetype"]])) {
             /#
                 if (isdefined(self.vehicletype)) {
-                    println("wind_rt" + trace["wind_rt"] + "wind_rt" + self.vehicletype);
+                    println("<dev string:x557>" + trace["<dev string:x57b>"] + "<dev string:x587>" + self.vehicletype);
                     return;
                 }
-                println("wind_rt" + trace["wind_rt"] + "wind_rt");
+                println("<dev string:x557>" + trace["<dev string:x57b>"] + "<dev string:x59a>");
             #/
             return;
         }
@@ -844,7 +844,7 @@ function drone_up_down_transition() {
     self thread drone_button_watch();
     while (true) {
         last_pos = self.origin[2];
-        wait(0.1);
+        wait 0.1;
         self.qrdrone_z_difference = last_pos - self.origin[2];
         if (self.qrdrone_z_difference < 0) {
             up_difference = self.qrdrone_z_difference * -1;
@@ -891,7 +891,7 @@ function drone_rotate_angle(heli_type, heli_part) {
     qr_ent_angle linkto(self, tag);
     while (true) {
         last_angle = abs(self.angles[1]);
-        wait(0.1);
+        wait 0.1;
         turning_speed = last_angle - abs(self.angles[1]);
         abs_turning_speed = abs(turning_speed);
         jet_stick_vol = audio::scale_speed(0, 5, 0, 0.4, abs_turning_speed);
@@ -915,7 +915,7 @@ function drone_button_watch() {
         } else if (abs(self.qrdrone_z_difference) < 5 && !return_to_zero) {
             return_to_zero = 1;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 

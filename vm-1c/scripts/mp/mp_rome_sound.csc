@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_2d0e822e;
+#namespace mp_rome_sound;
 
-// Namespace namespace_2d0e822e
+// Namespace mp_rome_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x90
 // Size: 0x4

@@ -3,9 +3,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_e0f9e0c4;
+#namespace zm_tomb_fx;
 
-// Namespace namespace_e0f9e0c4
+// Namespace zm_tomb_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x1d68
 // Size: 0x4
@@ -13,7 +13,7 @@ function function_8d0ec42e() {
     
 }
 
-// Namespace namespace_e0f9e0c4
+// Namespace zm_tomb_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd3a0c32, Offset: 0x1d78
 // Size: 0xa12
@@ -112,7 +112,7 @@ function function_f45953c() {
     level._effect["perk_machine_light_green"] = "dlc5/zmhd/fx_wonder_fizz_light_green";
 }
 
-// Namespace namespace_e0f9e0c4
+// Namespace zm_tomb_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbabe1f6b, Offset: 0x2798
 // Size: 0x40e
@@ -156,7 +156,7 @@ function function_e6258024() {
     level._effect["fx_tomb_skybox_vortex"] = "maps/zombie_tomb/fx_tomb_skybox_vortex";
 }
 
-// Namespace namespace_e0f9e0c4
+// Namespace zm_tomb_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x51e2c202, Offset: 0x2bb0
 // Size: 0x9c
@@ -170,7 +170,7 @@ function main() {
     level thread trap_fx_monitor("flame_trap", "str_flame_trap");
 }
 
-// Namespace namespace_e0f9e0c4
+// Namespace zm_tomb_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x205f1e3b, Offset: 0x2c58
 // Size: 0x34
@@ -179,16 +179,16 @@ function function_75cc0fd3() {
     level thread function_df3bdbab();
 }
 
-// Namespace namespace_e0f9e0c4
+// Namespace zm_tomb_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb817ef89, Offset: 0x2c98
 // Size: 0x54
 function function_df3bdbab() {
-    var_56728a17 = struct::get_array("fxanim_chamber_rocks", "targetname");
-    array::thread_all(var_56728a17, &function_1c1d65fb);
+    fxanim_props = struct::get_array("fxanim_chamber_rocks", "targetname");
+    array::thread_all(fxanim_props, &function_1c1d65fb);
 }
 
-// Namespace namespace_e0f9e0c4
+// Namespace zm_tomb_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc466133c, Offset: 0x2cf8
 // Size: 0x80
@@ -197,11 +197,11 @@ function function_1c1d65fb() {
     scene::add_scene_func(self.scriptbundlename, &function_b9b12551, "done");
     while (true) {
         self scene::play(self.scriptbundlename);
-        wait(randomfloatrange(10, 30));
+        wait randomfloatrange(10, 30);
     }
 }
 
-// Namespace namespace_e0f9e0c4
+// Namespace zm_tomb_fx
 // Params 1, eflags: 0x1 linked
 // Checksum 0x32e3d0b3, Offset: 0x2d80
 // Size: 0x92
@@ -211,7 +211,7 @@ function function_b9b12551(a_ents) {
     }
 }
 
-// Namespace namespace_e0f9e0c4
+// Namespace zm_tomb_fx
 // Params 2, eflags: 0x1 linked
 // Checksum 0x2c283d7f, Offset: 0x2e20
 // Size: 0xb2
@@ -227,7 +227,7 @@ function trap_fx_monitor(str_name, str_side) {
     }
 }
 
-// Namespace namespace_e0f9e0c4
+// Namespace zm_tomb_fx
 // Params 2, eflags: 0x1 linked
 // Checksum 0x8654c2a5, Offset: 0x2ee0
 // Size: 0x280
@@ -246,15 +246,15 @@ function function_ea3d061(str_name, str_side) {
     a_players = getlocalplayers();
     for (i = 0; i < a_players.size; i++) {
         self.var_6d5392e9[i] = playfx(i, level._effect["flame_trap_start"], self.origin, var_7f39b8a3);
-        wait(1);
+        wait 1;
         level.var_d9c7b303 = 1;
         level thread function_b8462abd();
         while (level.var_d9c7b303) {
             self.var_6d5392e9[i] = playfx(i, level._effect["flame_trap_loop"], self.origin, var_7f39b8a3);
-            wait(1);
+            wait 1;
         }
         self.var_6d5392e9[i] = playfx(i, level._effect["flame_trap_start"], self.origin, var_7f39b8a3);
-        wait(1);
+        wait 1;
     }
     level waittill(str_side + "off");
     for (i = 0; i < self.var_6d5392e9.size; i++) {
@@ -263,12 +263,12 @@ function function_ea3d061(str_name, str_side) {
     self.var_6d5392e9 = [];
 }
 
-// Namespace namespace_e0f9e0c4
+// Namespace zm_tomb_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa91dad0f, Offset: 0x3168
 // Size: 0x14
 function function_b8462abd() {
-    wait(25);
+    wait 25;
     level.var_d9c7b303 = 0;
 }
 

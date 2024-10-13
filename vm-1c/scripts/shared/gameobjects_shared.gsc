@@ -45,7 +45,7 @@ function main() {
         level.allowedgameobjects = [];
     }
     /#
-        if (level.script == "targetname") {
+        if (level.script == "<dev string:x28>") {
             level.vehiclesenabled = 1;
         }
     #/
@@ -453,7 +453,7 @@ function pickup_object_delay(origin) {
         if (distancesquared(self.origin, origin) > 4096) {
             break;
         }
-        wait(0.2);
+        wait 0.2;
     }
     self.canpickupobject = 1;
 }
@@ -580,7 +580,7 @@ function function_27369edd() {
             self.curorigin = self.carrier.origin + (0, 0, 75);
             self.objpoints[level.nonteambasedteam] objpoints::function_88e59487(self.curorigin);
             objective_position(self.objid[level.nonteambasedteam], self.curorigin);
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         if (level.teambased) {
@@ -590,7 +590,7 @@ function function_27369edd() {
         } else {
             self.objpoints[level.nonteambasedteam] objpoints::function_88e59487(self.curorigin + self.offset3d);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -613,7 +613,7 @@ function update_carry_object_objective_origin() {
             continue;
         }
         objective_position(self.objectiveid, self.curorigin);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -632,7 +632,7 @@ function give_object(object) {
         count = 0;
         while (self ismeleeing() && count < 10) {
             count++;
-            wait(0.2);
+            wait 0.2;
         }
         self giveweapon(object.carryweapon);
         if (self isswitchingweapons()) {
@@ -928,7 +928,7 @@ function should_be_reset(minz, maxz, var_5a190e09) {
 function pickup_timeout(minz, maxz) {
     self endon(#"pickup_object");
     self endon(#"reset");
-    wait(0.05);
+    wait 0.05;
     if (self should_be_reset(minz, maxz, 1)) {
         self thread return_home();
         return;
@@ -938,7 +938,7 @@ function pickup_timeout(minz, maxz) {
         return;
     }
     if (isdefined(self.autoresettime)) {
-        wait(self.autoresettime);
+        wait self.autoresettime;
         if (!isdefined(self.carrier)) {
             self thread return_home();
         }
@@ -1000,7 +1000,7 @@ function take_object(object) {
 // Size: 0x64
 function wait_take_carry_weapon(weapon) {
     self thread take_carry_weapon_on_death(weapon);
-    wait(max(0, weapon.firetime - 0.1));
+    wait max(0, weapon.firetime - 0.1);
     self take_carry_weapon(weapon);
 }
 
@@ -1044,7 +1044,7 @@ function track_carrier(object) {
     self endon(#"disconnect");
     self endon(#"death");
     self endon(#"drop_object");
-    wait(0.05);
+    wait 0.05;
     while (isdefined(object.carrier) && object.carrier == self && isalive(self)) {
         if (self isonground()) {
             trace = bullettrace(self.origin + (0, 0, 20), self.origin - (0, 0, 20), 0, undefined);
@@ -1052,7 +1052,7 @@ function track_carrier(object) {
                 object.safeorigin = trace["position"];
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1067,10 +1067,10 @@ function manual_drop_think() {
     self endon(#"drop_object");
     for (;;) {
         while (self attackbuttonpressed() || self fragbuttonpressed() || self secondaryoffhandbuttonpressed() || self meleebuttonpressed()) {
-            wait(0.05);
+            wait 0.05;
         }
         while (!self attackbuttonpressed() && !self fragbuttonpressed() && !self secondaryoffhandbuttonpressed() && !self meleebuttonpressed()) {
-            wait(0.05);
+            wait 0.05;
         }
         if (isdefined(self.carryobject) && !self usebuttonpressed()) {
             self.carryobject thread set_dropped();
@@ -1315,7 +1315,7 @@ function use_object_onuse(player) {
 // Checksum 0xa1c05ed9, Offset: 0x50f8
 // Size: 0x14a
 function get_earliest_claim_player() {
-    assert(self.claimteam != "targetname");
+    assert(self.claimteam != "<dev string:x38>");
     team = self.claimteam;
     earliestplayer = self.claimplayer;
     if (self.touchlist[team].size > 0) {
@@ -1442,7 +1442,7 @@ function use_object_prox_think() {
                 }
             }
         }
-        wait(0.05);
+        wait 0.05;
         hostmigration::waittillhostmigrationdone();
     }
 }
@@ -1663,7 +1663,7 @@ function trigger_touch_think(object) {
         if (object.usetime) {
             self function_968ffa3c(object, 0);
         }
-        wait(0.05);
+        wait 0.05;
     }
     if (isdefined(self)) {
         if (object.usetime) {
@@ -1900,7 +1900,7 @@ function waitthenfreezeplayercontrolsifgameendedstill(wait_time) {
         wait_time = 1;
     }
     player = self;
-    wait(wait_time);
+    wait wait_time;
     if (isdefined(player) && level.gameended) {
         player freezecontrols(1);
     }
@@ -1916,7 +1916,7 @@ function take_use_weapon(useweapon) {
     self endon(#"disconnect");
     level endon(#"game_ended");
     while (self getcurrentweapon() == useweapon && !self.throwinggrenade) {
-        wait(0.05);
+        wait 0.05;
     }
     self takeweapon(useweapon);
 }
@@ -2013,9 +2013,9 @@ function use_hold_think_loop(player) {
             if (self.curprogress >= usetime) {
                 return true;
             }
-            wait(0.05);
+            wait 0.05;
         } else {
-            wait(0.05);
+            wait 0.05;
             if (self.curprogress >= usetime) {
                 util::wait_network_frame();
                 return true;
@@ -2076,7 +2076,7 @@ function function_2229ae63(object) {
         }
         lastrate = object.userate;
         var_95ca4da0 = isdefined(level.hostmigrationtimer);
-        wait(0.05);
+        wait 0.05;
     }
     self.usebar hud::destroyelem();
     self.var_6adb8298 hud::destroyelem();
@@ -2295,7 +2295,7 @@ function function_700c62d(relativeteam, showicon) {
 // Size: 0x8c
 function hide_waypoint(e_player) {
     if (isdefined(e_player)) {
-        assert(isplayer(e_player), "targetname");
+        assert(isplayer(e_player), "<dev string:x3d>");
         objective_setinvisibletoplayer(self.objectiveid, e_player);
         return;
     }
@@ -2308,7 +2308,7 @@ function hide_waypoint(e_player) {
 // Size: 0x8c
 function show_waypoint(e_player) {
     if (isdefined(e_player)) {
-        assert(isplayer(e_player), "targetname");
+        assert(isplayer(e_player), "<dev string:x3d>");
         objective_setvisibletoplayer(self.objectiveid, e_player);
         return;
     }
@@ -2539,7 +2539,7 @@ function make_solid() {
             self solid();
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -2713,7 +2713,7 @@ function function_e0e2d0fe(v_color, var_ea9602c1, var_9c1499b4, ignore_ent) {
         } else {
             self function_53c833e5("friendly", v_color, 1);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -2722,7 +2722,7 @@ function function_e0e2d0fe(v_color, var_ea9602c1, var_9c1499b4, ignore_ent) {
 // Checksum 0xd8e0aebf, Offset: 0x9a58
 // Size: 0x240
 function gameobject_is_player_looking_at(origin, dot, do_trace, ignore_ent, ignore_trace_distance) {
-    assert(isplayer(self), "targetname");
+    assert(isplayer(self), "<dev string:x7a>");
     if (!isdefined(dot)) {
         dot = 0.7;
     }
@@ -2816,7 +2816,7 @@ function set_3d_is_waypoint(relativeteam, waypoint) {
 // Checksum 0xa8b7e38f, Offset: 0x9f20
 // Size: 0x48
 function set_carry_icon(shader) {
-    assert(self.type == "targetname", "targetname");
+    assert(self.type == "<dev string:xa8>", "<dev string:xb4>");
     self.carryicon = shader;
 }
 
@@ -2952,11 +2952,11 @@ function can_interact_with(player) {
     }
     team = player.pers["team"];
     switch (self.interactteam) {
-    case 21:
+    case "none":
         return false;
-    case 26:
+    case "any":
         return true;
-    case 25:
+    case "friendly":
         if (level.teambased) {
             if (team == self.ownerteam) {
                 return true;
@@ -2968,7 +2968,7 @@ function can_interact_with(player) {
         } else {
             return false;
         }
-    case 27:
+    case "enemy":
         if (level.teambased) {
             if (team != self.ownerteam) {
                 return true;
@@ -2983,7 +2983,7 @@ function can_interact_with(player) {
             return false;
         }
     default:
-        assert(0, "targetname");
+        assert(0, "<dev string:xe2>");
         return false;
     }
 }
@@ -2994,9 +2994,9 @@ function can_interact_with(player) {
 // Size: 0x5a
 function is_team(team) {
     switch (team) {
-    case 26:
-    case 22:
-    case 21:
+    case "any":
+    case "neutral":
+    case "none":
         return true;
     }
     if (isdefined(level.teams[team])) {
@@ -3011,10 +3011,10 @@ function is_team(team) {
 // Size: 0x56
 function is_relative_team(relativeteam) {
     switch (relativeteam) {
-    case 26:
-    case 27:
-    case 25:
-    case 21:
+    case "any":
+    case "enemy":
+    case "friendly":
+    case "none":
         return 1;
     default:
         return 0;
@@ -3027,9 +3027,9 @@ function is_relative_team(relativeteam) {
 // Size: 0x5a
 function get_enemy_team(team) {
     switch (team) {
-    case 22:
+    case "neutral":
         return "none";
-    case 4:
+    case "allies":
         return "axis";
     default:
         return "allies";
@@ -3051,7 +3051,7 @@ function get_next_obj_id() {
     }
     /#
         if (nextid >= -128) {
-            println("targetname");
+            println("<dev string:xf7>");
         }
     #/
     if (nextid > 127) {
@@ -3149,7 +3149,7 @@ function create_pack_object(ownerteam, trigger, visuals, offset, objectivename) 
     if (!isdefined(level.max_packobjects)) {
         level.max_packobjects = 4;
     }
-    assert(level.max_packobjects < 5, "targetname");
+    assert(level.max_packobjects < 5, "<dev string:x122>");
     packobject = spawnstruct();
     packobject.type = "packObject";
     packobject.curorigin = trigger.origin;
@@ -3325,7 +3325,7 @@ function adjust_remaining_packicons() {
 // Checksum 0xc66754aa, Offset: 0xb7c0
 // Size: 0x48
 function set_pack_icon(shader) {
-    assert(self.type == "targetname", "targetname");
+    assert(self.type == "<dev string:x169>", "<dev string:x174>");
     self.packicon = shader;
 }
 

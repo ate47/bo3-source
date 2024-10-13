@@ -84,7 +84,7 @@ function unitrigger_origin() {
 // Size: 0x454
 function register_unitrigger_internal(unitrigger_stub, trigger_func) {
     if (!isdefined(unitrigger_stub.script_unitrigger_type)) {
-        println("trigger_radius");
+        println("<dev string:x28>");
         return;
     }
     if (isdefined(trigger_func)) {
@@ -93,8 +93,8 @@ function register_unitrigger_internal(unitrigger_stub, trigger_func) {
         unitrigger_stub.trigger_func = level._unitriggers.var_e1e4cb2b[unitrigger_stub.var_509dbcad];
     }
     switch (unitrigger_stub.script_unitrigger_type) {
-    case 4:
-    case 3:
+    case "unitrigger_radius":
+    case "unitrigger_radius_use":
         if (!isdefined(unitrigger_stub.radius)) {
             unitrigger_stub.radius = 32;
         }
@@ -103,8 +103,8 @@ function register_unitrigger_internal(unitrigger_stub, trigger_func) {
         }
         unitrigger_stub.test_radius_sq = (unitrigger_stub.radius + 15) * (unitrigger_stub.radius + 15);
         break;
-    case 2:
-    case 1:
+    case "unitrigger_box":
+    case "unitrigger_box_use":
         if (!isdefined(unitrigger_stub.script_width)) {
             unitrigger_stub.script_width = 64;
         }
@@ -121,7 +121,7 @@ function register_unitrigger_internal(unitrigger_stub, trigger_func) {
         unitrigger_stub.test_radius_sq = (box_radius + 15) * (box_radius + 15);
         break;
     default:
-        println("trigger_radius" + unitrigger_stub.targetname + "trigger_radius");
+        println("<dev string:x70>" + unitrigger_stub.targetname + "<dev string:x96>");
         return;
     }
     if (unitrigger_stub.radius > level._unitriggers.largest_radius) {
@@ -197,7 +197,7 @@ function unregister_unitrigger_internal(unitrigger_stub) {
 function function_ab72f23() {
     self.last_used_time = 0;
     while (true) {
-        wait(1);
+        wait 1;
         if (gettime() - self.last_used_time > 1000) {
             self delete();
             level._unitriggers.var_ffa8a87d = undefined;
@@ -279,7 +279,7 @@ function reregister_unitrigger_as_dynamic(unitrigger_stub) {
 function debug_unitriggers() {
     /#
         while (true) {
-            if (getdvarint("trigger_radius") > 0) {
+            if (getdvarint("<dev string:xa3>") > 0) {
                 for (i = 0; i < level._unitriggers.trigger_stubs.size; i++) {
                     triggerstub = level._unitriggers.trigger_stubs[i];
                     color = (0.75, 0, 0);
@@ -296,8 +296,8 @@ function debug_unitriggers() {
                     }
                     origin = triggerstub unitrigger_origin();
                     switch (triggerstub.script_unitrigger_type) {
-                    case 8:
-                    case 8:
+                    case "<dev string:xb4>":
+                    case "<dev string:xc6>":
                         if (triggerstub.radius) {
                             circle(origin, triggerstub.radius, color, 0, 0, 1);
                         }
@@ -305,15 +305,15 @@ function debug_unitriggers() {
                             line(origin, origin + (0, 0, triggerstub.script_height), color, 0, 1);
                         }
                         break;
-                    case 8:
-                    case 8:
+                    case "<dev string:xdc>":
+                    case "<dev string:xeb>":
                         vec = (triggerstub.script_width / 2, triggerstub.script_length / 2, triggerstub.script_height / 2);
                         box(origin, vec * -1, vec, triggerstub.angles[1], color, 1, 0, 1);
                         break;
                     }
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     #/
 }
@@ -383,7 +383,7 @@ function main() {
     valid_range = level._unitriggers.largest_radius + 15;
     valid_range_sq = valid_range * valid_range;
     while (!isdefined(level.active_zone_names)) {
-        wait(0.1);
+        wait 0.1;
     }
     while (true) {
         waited = 0;
@@ -485,7 +485,7 @@ function main() {
                 }
                 index++;
                 waited = 1;
-                wait(0.05);
+                wait 0.05;
             }
             if (!isdefined(player)) {
                 continue;
@@ -514,7 +514,7 @@ function main() {
             }
         }
         if (!waited) {
-            wait(0.05);
+            wait 0.05;
         }
     }
 }
@@ -608,16 +608,16 @@ function build_trigger_from_unitrigger_stub(stub, player) {
     trigger = undefined;
     origin = stub unitrigger_origin();
     switch (stub.script_unitrigger_type) {
-    case 4:
+    case "unitrigger_radius":
         trigger = spawn("trigger_radius", origin, 0, radius, script_height);
         break;
-    case 3:
+    case "unitrigger_radius_use":
         trigger = spawn("trigger_radius_use", origin, 0, radius, script_height);
         break;
-    case 2:
+    case "unitrigger_box":
         trigger = spawn("trigger_box", origin, 0, script_width, script_length, script_height);
         break;
-    case 1:
+    case "unitrigger_box_use":
         trigger = spawn("trigger_box_use", origin, 0, script_width, script_length, script_height);
         break;
     }

@@ -109,7 +109,7 @@ function autoexec opt_in() {
 // Checksum 0x97da93e1, Offset: 0x24c0
 // Size: 0x14
 function function_831dc0fa() {
-    namespace_e74556c1::init();
+    zm_island_gamemodes::init();
 }
 
 // Namespace zm_island
@@ -134,22 +134,22 @@ function dummy() {
 // Checksum 0x27bb76f1, Offset: 0x2580
 // Size: 0x13ac
 function main() {
-    namespace_711c2fc8::main_start();
+    zm_island_ffotd::main_start();
     setup_weapons();
     init_flags();
     level.var_b955c8e7 = &function_490a2312;
     level._uses_sticky_grenades = 1;
     level._uses_taser_knuckles = 1;
-    scene::add_scene_func("p7_fxanim_zm_island_power_plant_on_bundle", &namespace_f3e3de78::function_f0a1682d, "init");
-    scene::add_scene_func("p7_fxanim_zm_island_power_plant_on_bundle", &namespace_f3e3de78::function_c1edfb09, "play");
-    level.temporary_power_switch_logic = &namespace_f3e3de78::function_156f973e;
+    scene::add_scene_func("p7_fxanim_zm_island_power_plant_on_bundle", &zm_island_power::function_f0a1682d, "init");
+    scene::add_scene_func("p7_fxanim_zm_island_power_plant_on_bundle", &zm_island_power::function_c1edfb09, "play");
+    level.temporary_power_switch_logic = &zm_island_power::function_156f973e;
     level.var_7b5a9e65 = 120;
     level.var_7ccadaab = getdvarint("loc_language");
     zm::init_fx();
     callback::on_spawned(&on_player_spawned);
-    callback::on_connect(&namespace_bbfc4da3::on_player_connect);
+    callback::on_connect(&zm_island_challenges::on_player_connect);
     callback::on_disconnect(&namespace_5f2c95ae::function_c7cd5585);
-    callback::on_disconnect(&namespace_bbfc4da3::on_player_disconnect);
+    callback::on_disconnect(&zm_island_challenges::on_player_disconnect);
     callback::on_ai_spawned(&function_e50fed59);
     var_ddba80d7 = getminbitcountfornum(3);
     var_d1cfa380 = getminbitcountfornum(7);
@@ -220,37 +220,37 @@ function main() {
     level.zombiemode_reusing_pack_a_punch = 1;
     level.dont_unset_perk_when_machine_paused = 1;
     level.var_cfc8eddf = &function_f51a1980;
-    level thread namespace_f694d9ca::init();
+    level thread zm_island_bgb::init();
     level thread custom_add_vox();
     level thread setup_personality_character_exerts();
     level.do_randomized_zigzag_path = 1;
-    namespace_f37770c8::init();
-    namespace_e73c08bc::function_3ebec56b();
-    namespace_e73c08bc::function_95743e9f();
-    namespace_eaae7728::init_quest();
+    zm_craftables::init();
+    zm_island_craftables::function_3ebec56b();
+    zm_island_craftables::function_95743e9f();
+    zm_island_ww_quest::init_quest();
     main_quest::init_quest();
-    namespace_f7d4f63b::init();
+    zm_island_pap_quest::init();
     namespace_1aa6bd0c::init();
     namespace_d9f30fb4::init();
-    namespace_48e6dffb::init();
-    level thread namespace_14c8b75c::init();
-    namespace_7550a904::main();
-    namespace_c8222934::init();
-    namespace_af029029::function_8e89793a();
+    zm_island_inventory::init();
+    level thread zm_island_dogfights::init();
+    zm_island_planting::main();
+    zm_island_perks::init();
+    zm_island_spiders::function_8e89793a();
     spawner::add_global_spawn_function("axis", &function_b487bafd);
     load::main();
-    namespace_f492499a::init();
-    namespace_570c8452::init();
+    _zm_weap_bowie::init();
+    _zm_weap_cymbal_monkey::init();
     level._round_start_func = &zm::round_start;
     init_sounds();
     level.no_target_override = &no_target_override;
     level.player_intersection_tracker_override = &function_4fc0dcb3;
-    level.fn_custom_round_ai_spawn = &namespace_af029029::function_33aa4940;
+    level.fn_custom_round_ai_spawn = &zm_island_spiders::function_33aa4940;
     level thread namespace_27f8b154::function_d2716ad8();
-    level.var_5f1b87ca = &namespace_f333593c::function_5f161c52;
+    level.var_5f1b87ca = &zm_island_vo::function_5f161c52;
     level function_1b14c4b0();
     level thread namespace_756d2c3d::function_5e5433d8();
-    level thread namespace_9d2fabb6::main();
+    level thread zm_island_zones::main();
     level thread function_1f00b569();
     level thread function_b39e79fa();
     zm_powerups::powerup_remove_from_regular_drops("bonus_points_player");
@@ -260,31 +260,31 @@ function main() {
     level._custom_powerups["ww_grenade"].setup_powerup = &function_8608b597;
     level.var_352c26bc = &function_66e965d8;
     level flag::wait_till("start_zombie_round_logic");
-    level thread namespace_c8222934::function_c97259e9();
+    level thread zm_island_perks::function_c97259e9();
     level thread zm_perks::spare_change();
-    level thread namespace_14b4d4ab::function_7309e48();
+    level thread zm_island_traps::function_7309e48();
     level thread sndfunctions();
-    level thread namespace_1a868593::main();
-    level thread namespace_13425205::init();
-    level thread namespace_7a07aa2f::init();
-    level thread namespace_f7d4f63b::main();
-    level thread namespace_eaae7728::main();
-    level thread namespace_34c58dc::init();
-    level thread namespace_f3e3de78::main();
+    level thread zm_island_fx::main();
+    level thread zm_island_spider_quest::init();
+    level thread zm_island_spores::init();
+    level thread zm_island_pap_quest::main();
+    level thread zm_island_ww_quest::main();
+    level thread zm_island_transport::init();
+    level thread zm_island_power::main();
     level thread main_quest::main();
-    level thread namespace_52f9507e::function_16616103();
+    level thread zm_island_portals::function_16616103();
     level thread namespace_5f2c95ae::main();
     level thread namespace_27f8b154::function_b4fb1b85();
-    level thread namespace_4e4a096c::main();
-    level thread namespace_14c8b75c::main();
-    level thread namespace_bbfc4da3::main();
+    level thread zm_island_takeo_fight::main();
+    level thread zm_island_dogfights::main();
+    level thread zm_island_challenges::main();
     level thread namespace_1aa6bd0c::main();
-    level thread namespace_6c640490::main();
-    level thread namespace_28a54cd6::main();
-    level thread namespace_f777c489::main();
-    level thread namespace_5a453011::main();
-    level thread namespace_716ba43f::main();
-    level thread namespace_c63a0940::main();
+    level thread zm_island_side_ee_distant_monster::main();
+    level thread zm_island_side_ee_doppleganger::main();
+    level thread zm_island_side_ee_good_thrasher::main();
+    level thread zm_island_side_ee_secret_maxammo::main();
+    level thread zm_island_side_ee_song::main();
+    level thread zm_island_side_ee_spore_hallucinations::main();
     level thread namespace_d9f30fb4::main();
     level thread function_94fc6a19();
     level thread function_8a2a48bb();
@@ -293,8 +293,8 @@ function main() {
     setdvar("player_useWaterWadeScale", "0");
     setdvar("r_waveWaterNewFormula", 1);
     setdvar("hkai_pathfindIterationLimit", 1200);
-    level thread namespace_f333593c::main();
-    namespace_711c2fc8::main_end();
+    level thread zm_island_vo::main();
+    zm_island_ffotd::main_end();
 }
 
 // Namespace zm_island
@@ -423,10 +423,10 @@ function private function_dc683d01(var_b52b26b9) {
 function private function_30b905e5() {
     self endon(#"death");
     while (isdefined(self.var_c74f5ce8) && self.var_c74f5ce8) {
-        wait(randomfloatrange(0.2, 0.5));
+        wait randomfloatrange(0.2, 0.5);
         if (self function_9de8a8db()) {
             self.var_c74f5ce8 = undefined;
-            self notify(#"hash_c68d373");
+            self notify(#"reaquire_player");
             return;
         }
     }
@@ -452,7 +452,7 @@ function private function_9de8a8db() {
 function on_player_spawned() {
     if (level flag::get("flag_play_outro_cutscene")) {
         if (self.characterindex != 2) {
-            wait(0.1);
+            wait 0.1;
             self setcharacterbodystyle(1);
         }
     }
@@ -463,8 +463,8 @@ function on_player_spawned() {
     self thread function_3363c147();
     self thread function_94ed46a2();
     self thread function_708908ca();
-    self thread namespace_48e6dffb::function_1a9a4375();
-    self thread namespace_f7d4f63b::on_player_spawned();
+    self thread zm_island_inventory::function_1a9a4375();
+    self thread zm_island_pap_quest::on_player_spawned();
     self thread function_6ca6d73d();
     self.tesla_network_death_choke = 0;
     self.var_7149fc41 = 0;
@@ -496,7 +496,7 @@ function function_b487bafd() {
     self.var_5ea9c8b7 = 0;
     var_1282bf51 = getentarray("trigger_underwater", "targetname");
     foreach (var_d68fe9f1 in var_1282bf51) {
-        self thread namespace_f7d4f63b::function_83af0b87(var_d68fe9f1);
+        self thread zm_island_pap_quest::function_83af0b87(var_d68fe9f1);
     }
 }
 
@@ -511,10 +511,10 @@ function function_708908ca() {
         str_notify = self util::function_ec87322b(array("perk_acquired", "perk_lost", "disconnect"));
         if (str_notify == "perk_acquired" && self hasperk("specialty_staminup") && !self.var_b5f30643) {
             self.var_b5f30643 = 1;
-            self notify(#"hash_36c37d57");
+            self notify(#"player_has_staminup");
         } else if (str_notify == "perk_lost" && self.var_b5f30643) {
             self.var_b5f30643 = 0;
-            self notify(#"hash_ce47444f");
+            self notify(#"player_lost_staminup");
         }
         str_notify = undefined;
     }
@@ -556,7 +556,7 @@ function function_3363c147() {
             }
             self notify(#"swim_done");
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -773,8 +773,8 @@ function givecustomcharacters() {
     self.favorite_wall_weapons_list = [];
     self.talks_in_danger = 0;
     /#
-        if (getdvarstring("clientuimodel") != "clientuimodel") {
-            self.characterindex = getdvarint("clientuimodel");
+        if (getdvarstring("<dev string:x28>") != "<dev string:x33>") {
+            self.characterindex = getdvarint("<dev string:x28>");
         }
     #/
     self setcharacterbodytype(self.characterindex);
@@ -998,7 +998,7 @@ function function_3ef1c13e() {
     if (!(isdefined(self.var_521815d8) && self.var_521815d8)) {
         self.var_521815d8 = 1;
         self thread zm_equipment::show_hint_text(%ZM_ISLAND_SEED_POWERUP_DENIED, 3);
-        wait(6);
+        wait 6;
         self.var_521815d8 = undefined;
     }
 }
@@ -1089,7 +1089,7 @@ function function_726351cf() {
             }
             self clientfield::set("set_heavy_web_fade_material", 0);
             self notsolid();
-            wait(3);
+            wait 3;
             self delete();
             e_clip delete();
             break;
@@ -1103,20 +1103,20 @@ function function_726351cf() {
 // Size: 0x158
 function function_1f00b569() {
     level flag::wait_till("first_player_spawned");
-    wait(5);
+    wait 5;
     level thread exploder::exploder("ex_lightning_start");
     e_player = array::random(level.activeplayers);
     e_player playsound("zmb_island_lightning_first");
-    wait(3);
+    wait 3;
     level notify(#"hash_5574fd9b");
     level thread exploder::exploder("ex_lightning_start");
     e_player = array::random(level.activeplayers);
     e_player playsound("zmb_island_lightning_first");
-    wait(8);
+    wait 8;
     while (true) {
         e_player = array::random(level.activeplayers);
         e_player thread function_37f2c48b();
-        wait(randomfloatrange(30, 60));
+        wait randomfloatrange(30, 60);
     }
 }
 
@@ -1128,27 +1128,27 @@ function function_37f2c48b() {
     var_f97c401 = self zm_utility::get_current_zone();
     if (isdefined(var_f97c401)) {
         switch (var_f97c401) {
-        case 284:
-        case 285:
-        case 102:
+        case "zone_start":
+        case "zone_start_2":
+        case "zone_start_water":
             var_c490d0cd = "ex_lightning_start";
             break;
-        case 283:
+        case "zone_ruins":
             var_c490d0cd = "ex_lightning_ruins";
             break;
-        case 286:
-        case 287:
-        case 288:
+        case "zone_swamp":
+        case "zone_swamp_lab":
+        case "zone_swamp_lab_underneath":
             var_c490d0cd = "ex_lightning_swamp";
             break;
-        case 281:
-        case 282:
+        case "zone_jungle":
+        case "zone_jungle_lab":
             var_c490d0cd = "ex_lightning_jungle";
             break;
-        case 279:
+        case "zone_bunker_exterior":
             var_c490d0cd = "ex_lightning_bunkerTop";
             break;
-        case 280:
+        case "zone_crash_site":
             var_c490d0cd = "ex_lightning_crash";
             break;
         }
@@ -1164,7 +1164,7 @@ function function_37f2c48b() {
 // Size: 0xc6
 function function_bf1537b3(var_c490d0cd, e_player) {
     for (i = 0; i < randomintrange(3, 7); i++) {
-        wait(randomfloatrange(0.8, 1.3));
+        wait randomfloatrange(0.8, 1.3);
         if (math::cointoss()) {
             if (isdefined(e_player)) {
                 e_player playsound("zmb_island_lightning");
@@ -1185,9 +1185,9 @@ function function_6ca6d73d() {
         if (self util::attack_button_held() && self namespace_f55b6585::function_97d08b97()) {
             self thread function_a9938318();
             self playrumbleonentity("zm_island_skull_reveal");
-            wait(2);
+            wait 2;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1200,7 +1200,7 @@ function function_a9938318() {
     self endon(#"disconnect");
     self endon(#"hash_54edbfd4");
     while (self util::attack_button_held()) {
-        wait(0.05);
+        wait 0.05;
     }
     self stoprumble("zm_island_skull_reveal");
 }
@@ -1274,7 +1274,7 @@ function function_6c2447b1(var_df0dbc71) {
     self endon(#"disconnect");
     self endon(#"player_downed");
     self.var_32ad034f = 1;
-    wait(2);
+    wait 2;
     if (!self istouching(var_df0dbc71)) {
         self.var_32ad034f = 0;
         return;
@@ -1323,7 +1323,7 @@ function function_41c3dc27(var_771ec2b) {
     array::add(var_8b72a0e, var_6f0fc5fe);
     array::add(var_8b72a0e, var_b10361f1);
     self.var_66064486 = 1;
-    wait(2);
+    wait 2;
     if (!self istouching(var_771ec2b)) {
         self.var_66064486 = 0;
         return;

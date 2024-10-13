@@ -54,7 +54,7 @@ function player_enter(localclientnum) {
         if (self islocalclientdriver(localclientnum)) {
             self sethighdetail(1);
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -70,7 +70,7 @@ function player_exit(localclientnum) {
         if (isdefined(player) && player islocalplayer()) {
             self sethighdetail(0);
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -110,7 +110,7 @@ function function_48b14d9d(localclientnum, amount, fadeouttime) {
         ratio = (gettime() - starttime) / fadeouttime * 1000;
         currentvalue = lerpfloat(amount, 0, ratio);
         setfilterpassconstant(localclientnum, 4, 0, 0, currentvalue);
-        wait(0.016);
+        wait 0.016;
     }
     setfilterpassenabled(localclientnum, 4, 0, 0);
 }

@@ -4,9 +4,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_6cd5f23f;
+#namespace zm_genesis_timer;
 
-// Namespace namespace_6cd5f23f
+// Namespace zm_genesis_timer
 // Params 0, eflags: 0x2
 // Checksum 0x7d77c56c, Offset: 0x1d8
 // Size: 0x3c
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_timer", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_6cd5f23f
+// Namespace zm_genesis_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x220
 // Size: 0x4
@@ -22,7 +22,7 @@ function __init__() {
     
 }
 
-// Namespace namespace_6cd5f23f
+// Namespace zm_genesis_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x393961b1, Offset: 0x230
 // Size: 0x64
@@ -31,7 +31,7 @@ function __main__() {
     level.var_606e6080 = &function_3ec869e2;
 }
 
-// Namespace namespace_6cd5f23f
+// Namespace zm_genesis_timer
 // Params 7, eflags: 0x1 linked
 // Checksum 0x10087577, Offset: 0x2a0
 // Size: 0x48
@@ -39,7 +39,7 @@ function function_b94ee48a(var_6575414d, var_3bf16bb3, n_new_val, var_f16ed138, 
     level.var_dd724c18 = n_new_val;
 }
 
-// Namespace namespace_6cd5f23f
+// Namespace zm_genesis_timer
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5c64d2c9, Offset: 0x2f0
 // Size: 0x224

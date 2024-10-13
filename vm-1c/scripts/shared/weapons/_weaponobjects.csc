@@ -196,7 +196,7 @@ function watch_perks_changed(local_client_num) {
     self endon(#"disconnect");
     self endon(#"entityshutdown");
     while (isdefined(self)) {
-        wait(0.016);
+        wait 0.016;
         util::clean_deleted(level.retrievable);
         util::clean_deleted(level.enemyequip);
         array::thread_all(level.retrievable, &updateretrievable, local_client_num, 1);
@@ -241,7 +241,7 @@ function equipmentteamobject(localclientnum) {
     }
     self endon(#"entityshutdown");
     self util::waittill_dobj(localclientnum);
-    wait(0.05);
+    wait 0.05;
     fx_handle = self thread playflarefx(localclientnum);
     self thread equipmentwatchteamfx(localclientnum, fx_handle);
     self thread equipmentwatchplayerteamchanged(localclientnum, fx_handle);

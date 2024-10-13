@@ -105,7 +105,7 @@ function function_e6cfa209() {
         if (self util::ads_button_held()) {
             if (self getcurrentweapon() !== level.var_c003f5b) {
                 while (self adsbuttonpressed()) {
-                    wait(0.05);
+                    wait 0.05;
                 }
             } else if (self getammocount(level.var_c003f5b)) {
                 if (self namespace_f55b6585::function_3f3f64e9(e_clip) && self namespace_f55b6585::function_5fa274c1(e_clip)) {
@@ -113,7 +113,7 @@ function function_e6cfa209() {
                 }
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
     level thread function_26f677a6(e_clip);
     callback::remove_on_spawned(&function_e6cfa209);
@@ -128,7 +128,7 @@ function function_26f677a6(e_clip) {
     level clientfield::set("reveal_golden_bucket_planting_location", 1);
     playsoundatposition("zmb_wpn_skullgun_discover", e_clip.origin);
     exploder::exploder("fxexp_515");
-    wait(3);
+    wait 3;
     e_clip delete();
     var_a87feedd = struct::get("planting_spot_golden_bucket", "targetname");
     var_a87feedd.script_unitrigger_type = "unitrigger_box_use";
@@ -184,7 +184,7 @@ function function_870bdfee() {
 // Size: 0x144
 function function_9b3bd7c4(e_player) {
     level flag::set("bucket_planted");
-    e_player thread namespace_f3e3de78::function_4b057b64();
+    e_player thread zm_island_power::function_4b057b64();
     self.stub.var_f2a52ffa.model setmodel("p7_fxanim_zm_island_plant_seed_mod");
     self.stub.var_f2a52ffa.model show();
     self.stub.var_f2a52ffa.model notsolid();
@@ -200,7 +200,7 @@ function function_9b3bd7c4(e_player) {
 function function_4cebde70() {
     level thread function_c2dab6c5();
     exploder::exploder("fxexp_800");
-    wait(2);
+    wait 2;
     var_fc72ce0a = struct::get_array("planting_spot_golden_bucket_challenge", "targetname");
     foreach (var_a87feedd in var_fc72ce0a) {
         var_a87feedd.model = util::spawn_model("p7_zm_isl_plant_planter", var_a87feedd.origin, var_a87feedd.angles);
@@ -218,7 +218,7 @@ function function_4cebde70() {
 function function_152720d8(var_fc72ce0a) {
     foreach (var_8c46024b in var_fc72ce0a) {
         var_8c46024b.origin = var_8c46024b.model.origin;
-        var_8c46024b namespace_7550a904::function_fedc998b(1);
+        var_8c46024b zm_island_planting::function_fedc998b(1);
     }
     level.var_ac51aa3c = arraycombine(level.var_ac51aa3c, var_fc72ce0a, 0, 0);
 }
@@ -234,7 +234,7 @@ function function_c2dab6c5() {
             if (function_9a2f5188(e_volume) && function_e630b27f()) {
                 break;
             }
-            wait(1);
+            wait 1;
         }
         level thread function_64b86454();
         level thread function_738acad6();
@@ -267,7 +267,7 @@ function function_64b86454() {
         if (!function_e630b27f()) {
             break;
         }
-        wait(1);
+        wait 1;
     }
     level notify(#"hash_247c3608");
 }
@@ -279,7 +279,7 @@ function function_64b86454() {
 function function_738acad6() {
     level endon(#"hash_247c3608");
     level endon(#"hash_4d1841e4");
-    wait(600);
+    wait 600;
     level thread function_72c0a344();
 }
 
@@ -301,9 +301,9 @@ function function_f0d8de1d() {
                 level thread function_72c0a344();
                 level notify(#"hash_62e8dbc1");
             }
-            wait(1);
+            wait 1;
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -315,7 +315,7 @@ function function_72c0a344() {
     var_fc72ce0a = struct::get_array("planting_spot_golden_bucket_challenge", "targetname");
     foreach (var_8c46024b in var_fc72ce0a) {
         var_8c46024b thread function_c1f64636(0);
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -359,7 +359,7 @@ function function_4d1841e4() {
     var_fc72ce0a = struct::get_array("planting_spot_golden_bucket_challenge", "targetname");
     foreach (var_8c46024b in var_fc72ce0a) {
         var_8c46024b thread function_c1f64636(1);
-        wait(0.05);
+        wait 0.05;
     }
     level flag::wait_till("golden_bucket_planters_empty");
     function_41280a71();
@@ -367,13 +367,13 @@ function function_4d1841e4() {
     var_a87feedd.var_f2a52ffa.model clientfield::set("plant_growth_siege_anims", 1);
     var_a87feedd scene::play("p7_fxanim_zm_island_plant_stage1_bundle", var_a87feedd.var_f2a52ffa.model);
     var_a87feedd.var_f2a52ffa.model playsound("evt_island_seed_grow_stage_2");
-    wait(2);
+    wait 2;
     var_a87feedd.var_f2a52ffa.model solid();
     var_a87feedd.var_f2a52ffa.model disconnectpaths();
     var_a87feedd.var_f2a52ffa.model clientfield::set("plant_growth_siege_anims", 2);
     var_a87feedd scene::play("p7_fxanim_zm_island_plant_stage2_bundle", var_a87feedd.var_f2a52ffa.model);
     var_a87feedd.var_f2a52ffa.model playsound("evt_island_seed_grow_stage_3");
-    wait(2);
+    wait 2;
     var_a87feedd.var_f2a52ffa.model clientfield::set("plant_growth_siege_anims", 3);
     var_a87feedd thread scene::play("p7_fxanim_zm_island_plant_stage3_bundle", var_a87feedd.var_f2a52ffa.model);
     var_a87feedd.var_f2a52ffa.model waittill(#"hash_116e737b");
@@ -391,7 +391,7 @@ function function_4d1841e4() {
     var_a003a924 = util::spawn_model("p7_zm_isl_bucket_115_gold", var_a87feedd.origin + (0, 0, 36), var_a87feedd.angles);
     var_a003a924 clientfield::set("golden_bucket_glow_fx", 1);
     playsoundatposition("zmb_golden_bucket_appear", var_a87feedd.origin + (0, 0, 36));
-    wait(1);
+    wait 1;
     var_a87feedd.prompt_and_visibility_func = &function_53296cde;
     zm_unitrigger::register_static_unitrigger(var_a87feedd, &function_da9c118b);
 }
@@ -407,7 +407,7 @@ function function_c1f64636(b_completed) {
             self.var_f2a52ffa.var_b454101b zm_attackables::deactivate();
             self notify(#"hash_4729ad2");
         }
-        wait(3);
+        wait 3;
         while (true) {
             if (isdefined(self.var_f2a52ffa) && isdefined(self.var_f2a52ffa.var_b454101b)) {
                 self.var_f2a52ffa.var_b454101b zm_attackables::do_damage(self.var_f2a52ffa.var_b454101b.health);
@@ -416,7 +416,7 @@ function function_c1f64636(b_completed) {
                 self notify(#"hash_7a0cef7b");
                 break;
             }
-            wait(0.1);
+            wait 0.1;
         }
         level notify(#"hash_46080242");
         arrayremovevalue(level.var_ac51aa3c, self);
@@ -524,7 +524,7 @@ function function_da9c118b() {
 function function_bbd146a7() {
     self endon(#"disconnect");
     self.var_b6a244f9 = 1;
-    self namespace_f3e3de78::function_d570abb();
+    self zm_island_power::function_d570abb();
     self thread function_da0bbc71();
 }
 
@@ -534,30 +534,30 @@ function function_bbd146a7() {
 // Size: 0x11c
 function function_da0bbc71() {
     self endon(#"disconnect");
-    wait(3.75);
+    wait 3.75;
     while (true) {
         if (self meleebuttonpressed() && self sprintbuttonpressed()) {
             if (self zm_utility::in_revive_trigger()) {
-                wait(0.1);
+                wait 0.1;
                 continue;
             }
             if (self.is_drinking > 0) {
-                wait(0.1);
+                wait 0.1;
                 continue;
             }
             if (!zm_utility::is_player_valid(self)) {
-                wait(0.1);
+                wait 0.1;
                 continue;
             }
             self.var_c6cad973 += 1;
             if (self.var_c6cad973 > 3) {
                 self.var_c6cad973 = 1;
             }
-            self thread namespace_f3e3de78::function_a84a1aec(self.var_c6cad973, 0);
-            wait(3.75);
+            self thread zm_island_power::function_a84a1aec(self.var_c6cad973, 0);
+            wait 3.75;
             continue;
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -569,9 +569,9 @@ function function_da0bbc71() {
     // Size: 0x74
     function function_66eeac50() {
         zm_devgui::add_custom_devgui_callback(&function_3655d28a);
-        adddebugcommand("targetname");
-        adddebugcommand("targetname");
-        adddebugcommand("targetname");
+        adddebugcommand("<dev string:x28>");
+        adddebugcommand("<dev string:x7e>");
+        adddebugcommand("<dev string:xe6>");
     }
 
     // Namespace namespace_d9f30fb4
@@ -580,18 +580,18 @@ function function_da0bbc71() {
     // Size: 0x1a2
     function function_3655d28a(cmd) {
         switch (cmd) {
-        case 8:
-            level flag::set("targetname");
-            level flag::set("targetname");
+        case "<dev string:x149>":
+            level flag::set("<dev string:x155>");
+            level flag::set("<dev string:x17a>");
             return 1;
-        case 8:
-            level flag::set("targetname");
-            level flag::set("targetname");
-            e_clip = getent("targetname", "targetname");
+        case "<dev string:x18f>":
+            level flag::set("<dev string:x155>");
+            level flag::set("<dev string:x17a>");
+            e_clip = getent("<dev string:x1a4>", "<dev string:x1bf>");
             level thread function_26f677a6(e_clip);
             level notify(#"hash_e6cfa209");
             return 1;
-        case 8:
+        case "<dev string:x1ca>":
             foreach (player in level.players) {
                 player thread function_bbd146a7();
             }

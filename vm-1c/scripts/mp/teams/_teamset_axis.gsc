@@ -1,24 +1,24 @@
 #using scripts/mp/teams/_teamset;
 #using scripts/codescripts/struct;
 
-#namespace namespace_d58dbe33;
+#namespace _teamset_axis;
 
-// Namespace namespace_d58dbe33
+// Namespace _teamset_axis
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd26a60ae, Offset: 0x2b8
 // Size: 0x3c
 function main() {
     init("axis");
-    namespace_5fc59ced::customteam_init();
+    _teamset::customteam_init();
     precache();
 }
 
-// Namespace namespace_d58dbe33
+// Namespace _teamset_axis
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb0e82f6a, Offset: 0x300
 // Size: 0x30a
 function init(team) {
-    namespace_5fc59ced::init();
+    _teamset::init();
     game[team] = "axis";
     game["defenders"] = team;
     game["entity_headicon_" + team] = "faction_axis";
@@ -45,7 +45,7 @@ function init(team) {
     game["flagmodels"]["neutral"] = "p7_mp_flag_neutral";
 }
 
-// Namespace namespace_d58dbe33
+// Namespace _teamset_axis
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x618
 // Size: 0x4

@@ -58,7 +58,7 @@ function init() {
     callback::on_spawned(&onplayerspawned);
     callback::on_joined_team(&onplayerjoinedteam);
     /#
-        if (getdvarint("KILLSTREAK_EARNED_COUNTERUAV")) {
+        if (getdvarint("<dev string:x28>")) {
             level thread waitanddebugdrawoffsetlist();
         }
     #/
@@ -123,7 +123,7 @@ function movementmanagerthink(teamorentnum) {
             destination = level.counter_uav_positions[newindex];
             level.counter_uav_position_index[teamorentnum] = newindex;
             level notify("counter_uav_move_" + teamorentnum);
-            wait(5 + randomintrange(5, 10));
+            wait 5 + randomintrange(5, 10);
         }
     }
 }
@@ -167,7 +167,7 @@ function getfirstavailableoffsetindex() {
         }
     }
     /#
-        util::warning("KILLSTREAK_EARNED_COUNTERUAV");
+        util::warning("<dev string:x3e>");
     #/
     return 0;
 }
@@ -192,7 +192,7 @@ function maintaincouteruaventities() {
     // Size: 0x2c
     function waitanddebugdrawoffsetlist() {
         level endon(#"game_ended");
-        wait(10);
+        wait 10;
         debugdrawoffsetlist();
     }
 
@@ -357,7 +357,7 @@ function counteruavmove() {
 // Size: 0x4c
 function playfx(name) {
     self endon(#"death");
-    wait(0.1);
+    wait 0.1;
     if (isdefined(self)) {
         playfxontag(name, self, "tag_origin");
     }
@@ -399,7 +399,7 @@ function ontimeout() {
     self.leaving = 1;
     self killstreaks::play_pilot_dialog_on_owner("timeout", "counteruav");
     self airsupport::leave(5);
-    wait(5);
+    wait 5;
     self removeactivecounteruav();
     target_remove(self);
     self delete();
@@ -454,11 +454,11 @@ function deletecounteruav() {
     if (isdefined(params.ksexplosionfx) && isdefined(self)) {
         self thread playfx(params.ksexplosionfx);
     }
-    wait(0.1);
+    wait 0.1;
     if (isdefined(self)) {
         self setmodel("tag_origin");
     }
-    wait(0.2);
+    wait 0.2;
     if (isdefined(self)) {
         self notify(#"delete");
         self delete();

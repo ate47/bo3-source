@@ -13,9 +13,9 @@
 #using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_2abc80c6;
+#namespace zm_aat_turned;
 
-// Namespace namespace_2abc80c6
+// Namespace zm_aat_turned
 // Params 0, eflags: 0x2
 // Checksum 0x73dab5c, Offset: 0x2c0
 // Size: 0x34
@@ -23,7 +23,7 @@ function autoexec function_2dc19561() {
     system::register("zm_aat_turned", &__init__, undefined, "aat");
 }
 
-// Namespace namespace_2abc80c6
+// Namespace zm_aat_turned
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1eab11b, Offset: 0x300
 // Size: 0xa4
@@ -35,7 +35,7 @@ function __init__() {
     clientfield::register("actor", "zm_aat_turned", 1, 1, "int");
 }
 
-// Namespace namespace_2abc80c6
+// Namespace zm_aat_turned
 // Params 4, eflags: 0x1 linked
 // Checksum 0xbbb572b6, Offset: 0x3b0
 // Size: 0x1ac
@@ -67,7 +67,7 @@ function result(death, attacker, mod, weapon) {
     self thread zombie_kill_tracker(attacker);
 }
 
-// Namespace namespace_2abc80c6
+// Namespace zm_aat_turned
 // Params 1, eflags: 0x1 linked
 // Checksum 0xd47befed, Offset: 0x568
 // Size: 0x2ee
@@ -105,7 +105,7 @@ function function_9781a8a4(attacker) {
     }
 }
 
-// Namespace namespace_2abc80c6
+// Namespace zm_aat_turned
 // Params 0, eflags: 0x1 linked
 // Checksum 0x27fb16e3, Offset: 0x860
 // Size: 0xf4
@@ -131,20 +131,20 @@ function function_8d19e8ea() {
     return true;
 }
 
-// Namespace namespace_2abc80c6
+// Namespace zm_aat_turned
 // Params 1, eflags: 0x1 linked
 // Checksum 0x52150375, Offset: 0x960
 // Size: 0x6c
 function zombie_death_time_limit(e_attacker) {
     self endon(#"death");
     self endon(#"entityshutdown");
-    wait(20);
+    wait 20;
     self clientfield::set("zm_aat_turned", 0);
     self.allowdeath = 1;
     self zombie_death_gib(e_attacker);
 }
 
-// Namespace namespace_2abc80c6
+// Namespace zm_aat_turned
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbd0059c6, Offset: 0x9d8
 // Size: 0x8c
@@ -152,15 +152,15 @@ function zombie_kill_tracker(e_attacker) {
     self endon(#"death");
     self endon(#"entityshutdown");
     while (self.n_aat_turned_zombie_kills < 12) {
-        wait(0.05);
+        wait 0.05;
     }
-    wait(0.5);
+    wait 0.5;
     self clientfield::set("zm_aat_turned", 0);
     self.allowdeath = 1;
     self zombie_death_gib(e_attacker);
 }
 
-// Namespace namespace_2abc80c6
+// Namespace zm_aat_turned
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4380c991, Offset: 0xa70
 // Size: 0xa4

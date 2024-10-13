@@ -8,9 +8,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_48e6dffb;
+#namespace zm_island_inventory;
 
-// Namespace namespace_48e6dffb
+// Namespace zm_island_inventory
 // Params 0, eflags: 0x1 linked
 // Checksum 0x57e55c70, Offset: 0x4d0
 // Size: 0x494
@@ -39,7 +39,7 @@ function init() {
     clientfield::register("toplayer", "wonderweapon_part_wwiii", 9000, 1, "int");
 }
 
-// Namespace namespace_48e6dffb
+// Namespace zm_island_inventory
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x970
 // Size: 0x4
@@ -47,7 +47,7 @@ function main() {
     
 }
 
-// Namespace namespace_48e6dffb
+// Namespace zm_island_inventory
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5e3951e9, Offset: 0x980
 // Size: 0x166
@@ -56,25 +56,25 @@ function function_1a9a4375() {
     self.var_df4182b1 = 0;
     self.var_4d1c77e5 = 0;
     while (true) {
-        self waittill(#"hash_b5ecf1dd");
+        self waittill(#"player_has_gasmask");
         self thread function_2cc6bcea();
         self playsoundtoplayer("zmb_gasmask_pickup", self);
         self thread function_8801a9c5();
         var_ba18d83c = 10;
-        self thread namespace_f37770c8::function_97be99b3(undefined, "zmInventory.gaskmask_gasmask_active", 0);
+        self thread zm_craftables::function_97be99b3(undefined, "zmInventory.gaskmask_gasmask_active", 0);
         self clientfield::set_to_player("gaskmask_gasmask_progress", var_ba18d83c);
         while (isdefined(self.var_df4182b1) && self.var_df4182b1 && var_ba18d83c > 0) {
             self waittill(#"hash_b56a74a8");
             self playsoundtoplayer("zmb_gasmask_use", self);
             var_ba18d83c -= 1;
             self thread function_6649823b(var_ba18d83c);
-            wait(1);
+            wait 1;
         }
-        self notify(#"hash_7cbf7e55");
+        self notify(#"player_lost_gasmask");
     }
 }
 
-// Namespace namespace_48e6dffb
+// Namespace zm_island_inventory
 // Params 0, eflags: 0x1 linked
 // Checksum 0x26b41f7f, Offset: 0xaf0
 // Size: 0x170
@@ -82,16 +82,16 @@ function function_2cc6bcea() {
     self endon(#"disconnect");
     mdl_body = self getcharacterbodymodel();
     switch (mdl_body) {
-    case 32:
+    case "c_zom_der_nikolai_mpc_fb":
         str_character = "nikolai";
         break;
-    case 31:
+    case "c_zom_der_dempsey_mpc_fb":
         str_character = "dempsey";
         break;
-    case 33:
+    case "c_zom_der_richtofen_mpc_fb":
         str_character = "richtofen";
         break;
-    case 34:
+    case "c_zom_der_takeo_mpc_fb":
         str_character = "takeo";
         break;
     }
@@ -106,7 +106,7 @@ function function_2cc6bcea() {
     }
 }
 
-// Namespace namespace_48e6dffb
+// Namespace zm_island_inventory
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa8424f3f, Offset: 0xc68
 // Size: 0x9c
@@ -120,7 +120,7 @@ function function_6649823b(var_ba18d83c) {
     self thread clientfield::set_player_uimodel("zmInventory.gaskmask_gasmask_active", 0);
 }
 
-// Namespace namespace_48e6dffb
+// Namespace zm_island_inventory
 // Params 0, eflags: 0x1 linked
 // Checksum 0x87bd9d5, Offset: 0xd10
 // Size: 0x60

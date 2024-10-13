@@ -5,9 +5,9 @@
 #using scripts/shared/flag_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_2f637cea;
+#namespace zm_bgb_slaughter_slide;
 
-// Namespace namespace_2f637cea
+// Namespace zm_bgb_slaughter_slide
 // Params 0, eflags: 0x2
 // Checksum 0x7a3a96b, Offset: 0x170
 // Size: 0x34
@@ -15,7 +15,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_slaughter_slide", &__init__, undefined, "bgb");
 }
 
-// Namespace namespace_2f637cea
+// Namespace zm_bgb_slaughter_slide
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd3822a92, Offset: 0x1b0
 // Size: 0xc4
@@ -29,7 +29,7 @@ function __init__() {
     level.var_77eb3698 = getweapon("frag_grenade_slaughter_slide");
 }
 
-// Namespace namespace_2f637cea
+// Namespace zm_bgb_slaughter_slide
 // Params 0, eflags: 0x1 linked
 // Checksum 0xecf54b59, Offset: 0x280
 // Size: 0xb8
@@ -43,14 +43,14 @@ function event() {
         if (var_2a23ce90) {
             self thread function_42722ac4();
             while (self issliding()) {
-                wait(0.2);
+                wait 0.2;
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_2f637cea
+// Namespace zm_bgb_slaughter_slide
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbc1fb679, Offset: 0x340
 // Size: 0x66
@@ -58,12 +58,12 @@ function function_40d43ce(n_count) {
     var_2a23ce90 = 0;
     for (x = 0; x < n_count; x++) {
         var_2a23ce90 = self issliding();
-        wait(0.05);
+        wait 0.05;
     }
     return var_2a23ce90;
 }
 
-// Namespace namespace_2f637cea
+// Namespace zm_bgb_slaughter_slide
 // Params 0, eflags: 0x1 linked
 // Checksum 0x85313658, Offset: 0x3b0
 // Size: 0x164
@@ -79,7 +79,7 @@ function function_42722ac4() {
     self bgb::set_timer(self.var_abd23dd0, 6);
 }
 
-// Namespace namespace_2f637cea
+// Namespace zm_bgb_slaughter_slide
 // Params 12, eflags: 0x1 linked
 // Checksum 0x4be7629a, Offset: 0x520
 // Size: 0xce
@@ -93,7 +93,7 @@ function actor_damage_override(inflictor, attacker, damage, flags, meansofdeath,
     return damage;
 }
 
-// Namespace namespace_2f637cea
+// Namespace zm_bgb_slaughter_slide
 // Params 15, eflags: 0x1 linked
 // Checksum 0x5428ec4d, Offset: 0x5f8
 // Size: 0xe6

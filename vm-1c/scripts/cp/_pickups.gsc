@@ -72,7 +72,7 @@ class class_9ae542c5 : class_d63e16f5 {
             return;
         }
         if (self.var_b40c8b78 > 0) {
-            wait(self.var_b40c8b78);
+            wait self.var_b40c8b78;
         }
     }
 
@@ -94,7 +94,7 @@ class class_9ae542c5 : class_d63e16f5 {
             /#
                 print3d(self.var_a6c557b4.origin + (0, 0, 15), n_time_remaining, (1, 0, 0), 1, 1, 20);
             #/
-            wait(1);
+            wait 1;
         }
     }
 
@@ -108,7 +108,7 @@ class class_9ae542c5 : class_d63e16f5 {
             return;
         }
         self thread function_ac20c633();
-        wait(self.var_dcf4479e);
+        wait self.var_dcf4479e;
         if (isdefined(self.var_c07a933c)) {
             [[ self.var_c07a933c ]]();
             return;
@@ -233,9 +233,9 @@ class class_d63e16f5 {
     // Checksum 0x6eb896d7, Offset: 0x2188
     // Size: 0x168
     function spawn_interact_trigger(v_origin, n_radius, n_height, str_hint) {
-        assert(isdefined(v_origin), "<unknown string>");
-        assert(isdefined(n_radius), "<unknown string>");
-        assert(isdefined(n_height), "<unknown string>");
+        assert(isdefined(v_origin), "<dev string:x28>");
+        assert(isdefined(n_radius), "<dev string:x56>");
+        assert(isdefined(n_height), "<dev string:x84>");
         e_trigger = spawn("trigger_radius", v_origin, 0, n_radius, n_height);
         e_trigger triggerignoreteam();
         e_trigger setvisibletoall();
@@ -286,7 +286,7 @@ class class_d63e16f5 {
     function function_979623bc() {
         self endon(#"player_downed");
         while (self usebuttonpressed()) {
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -295,7 +295,7 @@ class class_d63e16f5 {
     // Checksum 0x7ecaf472, Offset: 0x1fc0
     // Size: 0x3e
     function function_c9dff8e3() {
-        self endon(#"hash_3f7b661c");
+        self endon(#"death_or_disconnect");
         self.var_8407f02a = 1;
         self function_979623bc();
         var_8407f02a = undefined;
@@ -396,7 +396,7 @@ class class_d63e16f5 {
             v_player_angles = anglestoforward(v_player_angles);
             self.var_ce54c88c.angles = e_triggerer.angles + self.var_af900c85;
             self.var_ce54c88c.origin = var_b9f3ddcc + v_player_angles * self.var_2655604d;
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -410,10 +410,10 @@ class class_d63e16f5 {
         e_triggerer endon(#"player_downed");
         self thread drop_on_death(e_triggerer);
         while (e_triggerer usebuttonpressed()) {
-            wait(0.05);
+            wait 0.05;
         }
         while (!e_triggerer usebuttonpressed()) {
-            wait(0.05);
+            wait 0.05;
         }
         self thread drop(e_triggerer);
     }
@@ -437,7 +437,7 @@ class class_d63e16f5 {
         player endon(#"hash_8d73907f");
         while (true) {
             player util::function_67cfce72(function_5d22fd8a(), undefined, undefined, 0, 0.35);
-            wait(0.35);
+            wait 0.35;
         }
     }
 
@@ -469,7 +469,7 @@ class class_d63e16f5 {
         self.var_52e14d7c notify(#"hash_4e236be4", 0);
         self notify(#"hash_2f46dd38");
         e_triggerer disableweapons();
-        wait(0.5);
+        wait 0.5;
         if (isdefined(self.var_5c6e11a4)) {
             foreach (var_f9c63f75 in self.var_5c6e11a4) {
                 self thread [[ var_f9c63f75 ]](e_triggerer);
@@ -491,7 +491,7 @@ class class_d63e16f5 {
         self endon(#"hash_a72a316b");
         self endon(#"unmake");
         while (true) {
-            wait(0.05);
+            wait 0.05;
             if (!isdefined(self.var_52e14d7c)) {
                 return;
             }
@@ -569,7 +569,7 @@ class class_d63e16f5 {
                 [[ player.var_11120dca ]]->remove(player);
                 [[ self.var_352ef9 ]](player);
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -596,10 +596,10 @@ class class_d63e16f5 {
         while (isdefined(self.var_52e14d7c)) {
             if (!self.var_caa76426) {
                 self.var_52e14d7c sethintstring("Bring Toolbox to repair");
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 

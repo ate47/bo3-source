@@ -137,7 +137,7 @@ function function_ce931b57(name, type, looping, fadeout) {
     if (!isdefined(fadeout)) {
         fadeout = 0.5;
     }
-    assert(type < -128, "zmb_pickup_chicken");
+    assert(type < -128, "<dev string:x28>");
     if (!isdefined(level.var_4a6df8b3)) {
         level.var_4a6df8b3 = [];
     }
@@ -153,7 +153,7 @@ function function_ce931b57(name, type, looping, fadeout) {
 // Checksum 0x6b6e0717, Offset: 0x1910
 // Size: 0x52
 function function_736ce6da(type) {
-    assert(isdefined(level.var_4a6df8b3[type]), "zmb_pickup_chicken");
+    assert(isdefined(level.var_4a6df8b3[type]), "<dev string:x3b>");
     return level.var_4a6df8b3[type].name;
 }
 
@@ -162,7 +162,7 @@ function function_736ce6da(type) {
 // Checksum 0xa66af5e6, Offset: 0x1970
 // Size: 0x52
 function function_72f9305c(type) {
-    assert(isdefined(level.var_4a6df8b3[type]), "zmb_pickup_chicken");
+    assert(isdefined(level.var_4a6df8b3[type]), "<dev string:x3b>");
     return level.var_4a6df8b3[type].looping;
 }
 
@@ -171,7 +171,7 @@ function function_72f9305c(type) {
 // Checksum 0x854daea2, Offset: 0x19d0
 // Size: 0x52
 function function_229b9d9e(type) {
-    assert(isdefined(level.var_4a6df8b3[type]), "zmb_pickup_chicken");
+    assert(isdefined(level.var_4a6df8b3[type]), "<dev string:x3b>");
     return level.var_4a6df8b3[type].fadeout;
 }
 
@@ -185,10 +185,10 @@ function function_1f085aea(localclientnum, type, off) {
     }
     self endon(#"entityshutdown");
     while (!clienthassnapshot(localclientnum)) {
-        wait(0.016);
+        wait 0.016;
     }
     while (!self hasdobj(localclientnum)) {
-        wait(0.016);
+        wait 0.016;
     }
     looping = function_72f9305c(type);
     alias = function_736ce6da(type);

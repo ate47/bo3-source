@@ -20,14 +20,14 @@ function main() {
     setdvar("phys_ragdoll_buoyancy", 1);
     load::main();
     util::waitforclient(0);
-    callback::on_localplayer_spawned(&function_5c196beb);
+    callback::on_localplayer_spawned(&player_rain);
 }
 
 // Namespace mp_freerun_04
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6fc6fc28, Offset: 0x280
 // Size: 0xcc
-function function_5c196beb(localclientnum) {
+function player_rain(localclientnum) {
     self.e_link = spawn(localclientnum, self.origin, "script_model");
     self.e_link setmodel("tag_origin");
     self.e_link.angles = self.angles;

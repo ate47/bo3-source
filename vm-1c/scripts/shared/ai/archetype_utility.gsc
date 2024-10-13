@@ -17,10 +17,10 @@
 // Checksum 0x81c2cedf, Offset: 0x11f8
 // Size: 0xbc4
 function autoexec registerbehaviorscriptfunctions() {
-    behaviortreenetworkutility::registerbehaviortreescriptapi("forceRagdoll", &function_ba976497);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("forceRagdoll", &forceRagdoll);
     behaviortreenetworkutility::registerbehaviortreescriptapi("hasAmmo", &hasammo);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("hasLowAmmo", &function_23529b81);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("hasEnemy", &function_90d01729);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("hasLowAmmo", &hasLowAmmo);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("hasEnemy", &hasEnemy);
     behaviortreenetworkutility::registerbehaviortreescriptapi("isSafeFromGrenades", &issafefromgrenades);
     behaviortreenetworkutility::registerbehaviortreescriptapi("inGrenadeBlastRadius", &ingrenadeblastradius);
     behaviortreenetworkutility::registerbehaviortreescriptapi("recentlySawEnemy", &recentlysawenemy);
@@ -103,331 +103,331 @@ function function_89e1fc16() {
     blackboard::registerblackboardattribute(self, "_arrival_stance", undefined, &bb_getarrivalstance);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_context", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x38>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_context2", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x41>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_cover_concealed", undefined, &bb_getcoverconcealed);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x4b>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_cover_direction", "cover_front_direction", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x5c>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_cover_mode", "cover_mode_none", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x6d>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_cover_type", undefined, &bb_getcurrentcovernodetype);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x79>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_current_location_cover_type", undefined, &bb_getcurrentlocationcovernodetype);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x85>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_exposed_type", undefined, &bb_getcurrentexposedtype);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:xa2>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_damage_direction", undefined, &bb_getdamagedirection);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:xb0>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_damage_location", undefined, &bb_actorgetdamagelocation);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:xc2>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_damage_weapon_class", undefined, &bb_getdamageweaponclass);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:xd3>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_damage_weapon", undefined, &bb_getdamageweapon);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:xe8>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_damage_mod", undefined, &bb_getdamagemod);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:xf7>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_damage_taken", undefined, &bb_getdamagetaken);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x103>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_desired_stance", "stand", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x111>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_enemy", undefined, &bb_actorhasenemy);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x121>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_enemy_yaw", undefined, &bb_actorgetenemyyaw);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x128>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_react_yaw", undefined, &bb_actorgetreactyaw);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x133>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_fatal_damage_location", undefined, &bb_actorgetfataldamagelocation);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x13e>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_fire_mode", undefined, &getfiremode);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x155>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_gib_location", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x160>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_juke_direction", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x16e>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_juke_distance", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x17e>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_arrival_distance", undefined, &bb_getlocomotionarrivaldistance);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x18d>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_arrival_yaw", undefined, &bb_getlocomotionarrivalyaw);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x1aa>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_exit_yaw", undefined, &bb_getlocomotionexityaw);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x1c2>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_face_enemy_quadrant", "locomotion_face_enemy_none", &bb_getlocomotionfaceenemyquadrant);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x1d7>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_motion_angle", undefined, &bb_getlocomotionmotionangle);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x1f7>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_face_enemy_quadrant_previous", "locomotion_face_enemy_none", &bb_getlocomotionfaceenemyquadrantprevious);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x210>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_pain_type", undefined, &bb_getlocomotionpaintype);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x239>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_turn_yaw", undefined, &bb_getlocomotionturnyaw);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x24f>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_lookahead_angle", undefined, &bb_getlookaheadangle);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x264>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_patrol", undefined, &bb_actorispatroling);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x275>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_perfect_enemy_yaw", undefined, &bb_actorgetperfectenemyyaw);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x27d>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_previous_cover_direction", "cover_front_direction", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x290>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_previous_cover_mode", "cover_mode_none", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x2aa>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_previous_cover_type", undefined, &bb_getpreviouscovernodetype);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x2bf>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_stance", "stand", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x2d4>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_traversal_type", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x2dc>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_melee_distance", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x2ec>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_tracking_turn_yaw", undefined, &bb_actorgettrackingturnyaw);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x2fc>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_weapon_class", "rifle", &bb_getweaponclass);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x30f>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_throw_distance", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x31d>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_yaw_to_cover", undefined, &bb_getyawtocovernode);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x32d>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_special_death", "none", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x33b>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_awareness", "combat", &bb_getawareness);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x34a>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_awareness_prev", "combat", &bb_getawarenessprevious);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x355>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_melee_enemy_type", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x365>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_staircase_num_steps", 0, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x377>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_staircase_num_total_steps", 0, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x38c>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_staircase_state", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x3a7>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_staircase_direction", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x3b8>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_staircase_exit_type", undefined, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x3cd>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_staircase_skip_num", undefined, &bb_getstairsnumskipsteps);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("shouldOnlyFireAccurately");
+            self trackblackboardattribute("<dev string:x3e2>");
         #/
     }
     /#
@@ -853,7 +853,7 @@ function bb_actorgetperfectenemyyaw() {
     toenemyyaw = vectortoangles(enemy.origin - self.origin)[1] - self.angles[1];
     toenemyyaw = absangleclamp360(toenemyyaw);
     /#
-        recordenttext("shouldOnlyFireAccurately" + toenemyyaw, self, (1, 0, 0), "shouldOnlyFireAccurately");
+        recordenttext("<dev string:x3f6>" + toenemyyaw, self, (1, 0, 0), "<dev string:x401>");
     #/
     return toenemyyaw;
 }
@@ -996,7 +996,7 @@ function bb_getlocomotionexityaw(blackboard, yaw) {
     }
     /#
         if (isdefined(exityaw)) {
-            record3dtext("shouldOnlyFireAccurately" + int(exityaw), self.origin - (0, 0, 5), (1, 0, 0), "shouldOnlyFireAccurately", undefined, 0.4);
+            record3dtext("<dev string:x40c>" + int(exityaw), self.origin - (0, 0, 5), (1, 0, 0), "<dev string:x401>", undefined, 0.4);
         }
     #/
     return exityaw;
@@ -1008,14 +1008,14 @@ function bb_getlocomotionexityaw(blackboard, yaw) {
 // Size: 0xfe
 function bb_getlocomotionfaceenemyquadrant() {
     /#
-        walkstring = getdvarstring("shouldOnlyFireAccurately");
+        walkstring = getdvarstring("<dev string:x417>");
         switch (walkstring) {
-        case 8:
-            return "shouldOnlyFireAccurately";
-        case 8:
-            return "shouldOnlyFireAccurately";
-        case 8:
-            return "shouldOnlyFireAccurately";
+        case "<dev string:x42d>":
+            return "<dev string:x433>";
+        case "<dev string:x44f>":
+            return "<dev string:x454>";
+        case "<dev string:x46f>":
+            return "<dev string:x474>";
         }
     #/
     if (isdefined(self.relativedir)) {
@@ -1204,7 +1204,7 @@ function updatefrustrationlevel(entity) {
         return false;
     }
     /#
-        record3dtext("shouldOnlyFireAccurately" + entity.frustrationlevel, entity.origin, (1, 0.5, 0), "shouldOnlyFireAccurately");
+        record3dtext("<dev string:x48f>" + entity.frustrationlevel, entity.origin, (1, 0.5, 0), "<dev string:x401>");
     #/
     if (isactor(entity.enemy) || isplayer(entity.enemy)) {
         if (entity.aggressivemode) {
@@ -1500,7 +1500,7 @@ function shouldchoosebettercover(behaviortreeentity) {
             } else {
                 color = (1, 0, 0);
             }
-            recordenttext("shouldOnlyFireAccurately" + shouldusecovernoderesult + "shouldOnlyFireAccurately" + islookingaroundforenemy + "shouldOnlyFireAccurately" + abouttoarriveatcover + "shouldOnlyFireAccurately" + iswithineffectiverangealready + "shouldOnlyFireAccurately" + shouldbeboredatcurrentcover, behaviortreeentity, color, "shouldOnlyFireAccurately");
+            recordenttext("<dev string:x4a1>" + shouldusecovernoderesult + "<dev string:x4bf>" + islookingaroundforenemy + "<dev string:x4c5>" + abouttoarriveatcover + "<dev string:x4cb>" + iswithineffectiverangealready + "<dev string:x4d1>" + shouldbeboredatcurrentcover, behaviortreeentity, color, "<dev string:x401>");
         #/
     } else {
         return !(behaviortreeentity shouldusecovernode() && behaviortreeentity isapproachinggoal());
@@ -1583,7 +1583,7 @@ function hasammo(behaviortreeentity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xb9bc8ddd, Offset: 0x7088
 // Size: 0x5a
-function function_23529b81(behaviortreeentity) {
+function hasLowAmmo(behaviortreeentity) {
     if (behaviortreeentity.weapon != level.weaponnone) {
         return (behaviortreeentity.bulletsinclip < behaviortreeentity.weapon.clipsize * 0.2);
     }
@@ -1594,7 +1594,7 @@ function function_23529b81(behaviortreeentity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x174d6034, Offset: 0x70f0
 // Size: 0x28
-function function_90d01729(behaviortreeentity) {
+function hasEnemy(behaviortreeentity) {
     if (isdefined(behaviortreeentity.enemy)) {
         return true;
     }
@@ -1764,7 +1764,7 @@ function gethighestnodestance(node) {
     if (isdefined(node.spawnflags) && (node.spawnflags & 16) == 16) {
         return "prone";
     }
-    errormsg(node.type + "shouldOnlyFireAccurately" + node.origin + "shouldOnlyFireAccurately");
+    errormsg(node.type + "<dev string:x4d7>" + node.origin + "<dev string:x4e0>");
     if (node.type == "Cover Crouch" || node.type == "Cover Crouch Window" || node.type == "Conceal Crouch") {
         return "crouch";
     }
@@ -1823,7 +1823,7 @@ function setcurrentweapon(weapon) {
     self.weapon = weapon;
     self.weaponclass = weapon.weapclass;
     if (weapon != level.weaponnone) {
-        assert(isdefined(weapon.worldmodel), "shouldOnlyFireAccurately" + weapon.name + "shouldOnlyFireAccurately");
+        assert(isdefined(weapon.worldmodel), "<dev string:x4f5>" + weapon.name + "<dev string:x4fe>");
     }
     self.weaponmodel = weapon.worldmodel;
 }
@@ -1836,7 +1836,7 @@ function setprimaryweapon(weapon) {
     self.primaryweapon = weapon;
     self.primaryweaponclass = weapon.weapclass;
     if (weapon != level.weaponnone) {
-        assert(isdefined(weapon.worldmodel), "shouldOnlyFireAccurately" + weapon.name + "shouldOnlyFireAccurately");
+        assert(isdefined(weapon.worldmodel), "<dev string:x4f5>" + weapon.name + "<dev string:x4fe>");
     }
 }
 
@@ -1848,7 +1848,7 @@ function setsecondaryweapon(weapon) {
     self.secondaryweapon = weapon;
     self.secondaryweaponclass = weapon.weapclass;
     if (weapon != level.weaponnone) {
-        assert(isdefined(weapon.worldmodel), "shouldOnlyFireAccurately" + weapon.name + "shouldOnlyFireAccurately");
+        assert(isdefined(weapon.worldmodel), "<dev string:x4f5>" + weapon.name + "<dev string:x4fe>");
     }
 }
 
@@ -2501,7 +2501,7 @@ function isunarmed(behaviortreeentity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4351a17b, Offset: 0xa008
 // Size: 0x24
-function function_ba976497(entity) {
+function forceRagdoll(entity) {
     entity startragdoll();
 }
 
@@ -2527,7 +2527,7 @@ function preshootlaserandglinton(ai) {
                     continue;
                 }
                 type = isdefined(ai.classname) ? "" + ai.classname : "";
-                println("shouldOnlyFireAccurately" + type + "shouldOnlyFireAccurately");
+                println("<dev string:x51e>" + type + "<dev string:x522>");
                 playfxontag(sniper_glint, ai, "tag_eye");
             }
         }
@@ -2565,9 +2565,9 @@ function private isinphalanxstance(entity) {
     phalanxstance = entity ai::get_behavior_attribute("phalanx_force_stance");
     currentstance = blackboard::getblackboardattribute(entity, "_stance");
     switch (phalanxstance) {
-    case 86:
+    case "stand":
         return (currentstance == "stand");
-    case 207:
+    case "crouch":
         return (currentstance == "crouch");
     }
     return true;
@@ -2580,10 +2580,10 @@ function private isinphalanxstance(entity) {
 function private togglephalanxstance(entity) {
     phalanxstance = entity ai::get_behavior_attribute("phalanx_force_stance");
     switch (phalanxstance) {
-    case 86:
+    case "stand":
         blackboard::setblackboardattribute(entity, "_desired_stance", "stand");
         break;
-    case 207:
+    case "crouch":
         blackboard::setblackboardattribute(entity, "_desired_stance", "crouch");
         break;
     }

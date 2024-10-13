@@ -8,15 +8,15 @@
 #using scripts/mp/gametypes/_spawning;
 #using scripts/codescripts/struct;
 
-#namespace namespace_5a98f96a;
+#namespace mp_spire;
 
-// Namespace namespace_5a98f96a
+// Namespace mp_spire
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6ff256db, Offset: 0x3b0
 // Size: 0xc2c
 function main() {
     clientfield::register("world", "mpSpireExteriorBillboard", 1, 2, "int");
-    namespace_d4c614ff::main();
+    mp_spire_fx::main();
     level.var_c9aa825e = &function_c9aa825e;
     load::main();
     compass::setupminimap("compass_map_mp_spire");
@@ -58,7 +58,7 @@ function main() {
     if (util::isprophuntgametype()) {
         spawncollision("collision_clip_wall_256x256x10", "collider", (1641, -796, 76), (0, 0, 0));
     }
-    namespace_69104eab::main();
+    mp_spire_amb::main();
     setdvar("compassmaxrange", "2100");
     game["strings"]["war_callsign_a"] = %MPUI_CALLSIGN_MAPNAME_A;
     game["strings"]["war_callsign_b"] = %MPUI_CALLSIGN_MAPNAME_B;
@@ -75,21 +75,21 @@ function main() {
     level spawnkilltrigger();
 }
 
-// Namespace namespace_5a98f96a
+// Namespace mp_spire
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5f225608, Offset: 0xfe8
 // Size: 0x7a
 function function_6abc7e64() {
     for (var_70fb23df = randomint(4); true; var_70fb23df = 0) {
         level clientfield::set("mpSpireExteriorBillboard", var_70fb23df);
-        wait(6);
+        wait 6;
         var_70fb23df++;
         if (var_70fb23df >= 4) {
         }
     }
 }
 
-// Namespace namespace_5a98f96a
+// Namespace mp_spire
 // Params 1, eflags: 0x1 linked
 // Checksum 0xdb01e8ae, Offset: 0x1070
 // Size: 0x214
@@ -126,7 +126,7 @@ function function_c9aa825e(&var_6480c733) {
     var_6480c733[var_6480c733.size] = (2434, 1093, 67);
 }
 
-// Namespace namespace_5a98f96a
+// Namespace mp_spire
 // Params 0, eflags: 0x1 linked
 // Checksum 0x434201cd, Offset: 0x1290
 // Size: 0x324
@@ -155,7 +155,7 @@ function spawnkilltrigger() {
     trigger thread watchkilltrigger();
 }
 
-// Namespace namespace_5a98f96a
+// Namespace mp_spire
 // Params 0, eflags: 0x1 linked
 // Checksum 0x28f59f8b, Offset: 0x15c0
 // Size: 0x90

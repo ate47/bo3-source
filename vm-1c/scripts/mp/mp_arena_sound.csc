@@ -2,9 +2,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_1b1d095e;
+#namespace mp_arena_sound;
 
-// Namespace namespace_1b1d095e
+// Namespace mp_arena_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdac53549, Offset: 0x2f8
 // Size: 0x312
@@ -42,7 +42,7 @@ function main() {
     level.var_5e22bf08[2] = "vox_rmec_winner_red_resp";
 }
 
-// Namespace namespace_1b1d095e
+// Namespace mp_arena_sound
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1e8bee69, Offset: 0x618
 // Size: 0x48
@@ -50,7 +50,7 @@ function function_8cf0b2(localclientnum, oldval, newval, bnewent, binitialsnap, 
     level.var_4655dffd = newval;
 }
 
-// Namespace namespace_1b1d095e
+// Namespace mp_arena_sound
 // Params 7, eflags: 0x1 linked
 // Checksum 0x52f97342, Offset: 0x668
 // Size: 0x48
@@ -58,7 +58,7 @@ function function_a7d453ed(localclientnum, oldval, newval, bnewent, binitialsnap
     level.var_7bb6ffcd = newval;
 }
 
-// Namespace namespace_1b1d095e
+// Namespace mp_arena_sound
 // Params 7, eflags: 0x1 linked
 // Checksum 0x27efeccd, Offset: 0x6b8
 // Size: 0x48
@@ -66,7 +66,7 @@ function function_234a7ab8(localclientnum, oldval, newval, bnewent, binitialsnap
     level.var_74b8c7 = newval;
 }
 
-// Namespace namespace_1b1d095e
+// Namespace mp_arena_sound
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3e26bd49, Offset: 0x708
 // Size: 0x1fe
@@ -74,30 +74,30 @@ function function_2ed4e576(localclientnum, oldval, newval, bnewent, binitialsnap
     if (newval <= oldval) {
         return;
     }
-    wait(0.016);
+    wait 0.016;
     switch (newval) {
     case 1:
         function_aea157a4(localclientnum, "vox_ancr_welcome_welcome", level.var_4655dffd);
         break;
     case 2:
         function_aea157a4(localclientnum, level.var_4150d7c2[level.var_7bb6ffcd], level.var_4655dffd);
-        wait(0.8);
+        wait 0.8;
         function_aea157a4(localclientnum, level.var_2d1171d1[level.var_7bb6ffcd], level.var_74b8c7);
         break;
     case 3:
         function_aea157a4(localclientnum, level.var_7f62efbf[level.var_7bb6ffcd], level.var_4655dffd);
-        wait(0.8);
+        wait 0.8;
         function_aea157a4(localclientnum, level.var_8b72e790[level.var_7bb6ffcd], level.var_74b8c7);
         break;
     case 4:
         function_aea157a4(localclientnum, level.var_59bdd7e1[level.var_7bb6ffcd], level.var_4655dffd);
-        wait(0.8);
+        wait 0.8;
         function_aea157a4(localclientnum, level.var_5e22bf08[level.var_7bb6ffcd], level.var_74b8c7);
         break;
     }
 }
 
-// Namespace namespace_1b1d095e
+// Namespace mp_arena_sound
 // Params 3, eflags: 0x1 linked
 // Checksum 0x4152ca9b, Offset: 0x910
 // Size: 0x178
@@ -109,15 +109,15 @@ function function_aea157a4(localclientnum, alias, line) {
         return;
     }
     for (length = getknownlength(playbackid); soundplaying(playbackid) && !length; length = getknownlength(playbackid)) {
-        wait(0.05);
+        wait 0.05;
     }
     var_5bbf1727 = max(0, length - 3000);
     while (soundplaying(playbackid) && getplaybacktime(playbackid) < var_5bbf1727) {
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_1b1d095e
+// Namespace mp_arena_sound
 // Params 2, eflags: 0x1 linked
 // Checksum 0x98e4b52a, Offset: 0xa90
 // Size: 0x24c
@@ -128,14 +128,14 @@ function function_22fabb0b(var_cfdadf12, localclientnum) {
     var_42b2155b[3] = spawn(localclientnum, (-477, 1760, 1300));
     player = getlocalplayer(localclientnum);
     var_55ff0d0d = array::get_all_closest(player.origin, var_42b2155b);
-    wait(0.3);
+    wait 0.3;
     playsound(localclientnum, var_cfdadf12, var_55ff0d0d[0].origin);
     playsound(localclientnum, var_cfdadf12, var_55ff0d0d[2].origin);
-    wait(0.3);
+    wait 0.3;
     playsound(localclientnum, var_cfdadf12, var_55ff0d0d[1].origin);
     var_f64fdbeb = playsound(localclientnum, var_cfdadf12, var_55ff0d0d[3].origin);
     while (soundplaying(var_f64fdbeb)) {
-        wait(0.05);
+        wait 0.05;
     }
     array::thread_all(var_42b2155b, &struct::delete);
 }

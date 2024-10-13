@@ -7,9 +7,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_4566f62;
+#namespace zm_bgb_im_feelin_lucky;
 
-// Namespace namespace_4566f62
+// Namespace zm_bgb_im_feelin_lucky
 // Params 0, eflags: 0x2
 // Checksum 0x3327b3a5, Offset: 0x198
 // Size: 0x34
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
     system::register("zm_bgb_im_feelin_lucky", &__init__, undefined, "bgb");
 }
 
-// Namespace namespace_4566f62
+// Namespace zm_bgb_im_feelin_lucky
 // Params 0, eflags: 0x1 linked
 // Checksum 0x618abac6, Offset: 0x1d8
 // Size: 0x54
@@ -28,7 +28,7 @@ function __init__() {
     bgb::register("zm_bgb_im_feelin_lucky", "activated", 2, undefined, undefined, undefined, &activation);
 }
 
-// Namespace namespace_4566f62
+// Namespace zm_bgb_im_feelin_lucky
 // Params 0, eflags: 0x1 linked
 // Checksum 0x13e16015, Offset: 0x238
 // Size: 0x1bc
@@ -54,13 +54,13 @@ function activation() {
         e_powerup = zm_powerups::specific_powerup_drop(str_powerup, powerup_origin, undefined, undefined, undefined, self);
     }
     var_bc1994bd = zm_utility::check_point_in_enabled_zone(e_powerup.origin, undefined, undefined);
-    wait(1);
+    wait 1;
     if (!var_bc1994bd) {
         level thread bgb::function_434235f9(e_powerup);
     }
 }
 
-// Namespace namespace_4566f62
+// Namespace zm_bgb_im_feelin_lucky
 // Params 0, eflags: 0x1 linked
 // Checksum 0x43562edc, Offset: 0x400
 // Size: 0xf2

@@ -27,15 +27,15 @@ function __init__() {
 // Size: 0x3bc
 function main() {
     /#
-        if (getdvarstring("scr_spawnsimple") == "scr_spawnsimple") {
-            setdvar("scr_spawnsimple", 0);
+        if (getdvarstring("<dev string:x28>") == "<dev string:x3c>") {
+            setdvar("<dev string:x28>", 0);
         }
-        level.storespawndata = getdvarint("scr_spawnsimple");
-        if (getdvarstring("scr_spawnsimple") == "scr_spawnsimple") {
-            setdvar("scr_spawnsimple", 0);
+        level.storespawndata = getdvarint("<dev string:x28>");
+        if (getdvarstring("<dev string:x3d>") == "<dev string:x3c>") {
+            setdvar("<dev string:x3d>", 0);
         }
-        if (getdvarstring("scr_spawnsimple") == "scr_spawnsimple") {
-            setdvar("scr_spawnsimple", 0.25);
+        if (getdvarstring("<dev string:x4a>") == "<dev string:x3c>") {
+            setdvar("<dev string:x4a>", 0.25);
         }
         thread loopbotspawns();
     #/
@@ -59,13 +59,13 @@ function main() {
         setdvar("scr_spawn_enemyavoidweight", "0");
     }
     /#
-        if (getdvarstring("scr_spawnsimple") == "scr_spawnsimple") {
-            setdvar("scr_spawnsimple", "scr_spawnsimple");
+        if (getdvarstring("<dev string:x5b>") == "<dev string:x3c>") {
+            setdvar("<dev string:x5b>", "<dev string:x6b>");
         }
-        if (getdvarstring("scr_spawnsimple") == "scr_spawnsimple") {
-            setdvar("scr_spawnsimple", "scr_spawnsimple");
+        if (getdvarstring("<dev string:x6d>") == "<dev string:x3c>") {
+            setdvar("<dev string:x6d>", "<dev string:x6b>");
         }
-        if (getdvarint("scr_spawnsimple") > 0) {
+        if (getdvarint("<dev string:x6d>") > 0) {
             thread showdeathsdebug();
             thread updatedeathinfodebug();
             thread profiledebug();
@@ -73,8 +73,8 @@ function main() {
         if (level.storespawndata) {
             thread allowspawndatareading();
         }
-        if (getdvarstring("scr_spawnsimple") == "scr_spawnsimple") {
-            setdvar("scr_spawnsimple", "scr_spawnsimple");
+        if (getdvarstring("<dev string:x81>") == "<dev string:x3c>") {
+            setdvar("<dev string:x81>", "<dev string:x6b>");
         }
         thread watchspawnprofile();
         thread spawngraphcheck();
@@ -153,9 +153,9 @@ function addspawnpointsinternal(team, spawnpointname) {
         level.teamspawnpoints[team][level.teamspawnpoints[team].size] = oldspawnpoints[index];
     }
     if (!level.teamspawnpoints[team].size) {
-        println("scr_spawnsimple" + spawnpointname + "scr_spawnsimple");
+        println("<dev string:x92>" + spawnpointname + "<dev string:x9f>");
         callback::abort_level();
-        wait(1);
+        wait 1;
         return;
     }
 }
@@ -206,9 +206,9 @@ function placespawnpoints(spawnpointname) {
         }
     #/
     if (!spawnpoints.size) {
-        println("scr_spawnsimple" + spawnpointname + "scr_spawnsimple");
+        println("<dev string:xbc>" + spawnpointname + "<dev string:x9f>");
         callback::abort_level();
-        wait(1);
+        wait 1;
         return;
     }
     for (index = 0; index < spawnpoints.size; index++) {
@@ -227,7 +227,7 @@ function placespawnpoints(spawnpointname) {
 function dropspawnpoints(spawnpointname) {
     spawnpoints = getspawnpointarray(spawnpointname);
     if (!spawnpoints.size) {
-        println("scr_spawnsimple" + spawnpointname + "scr_spawnsimple");
+        println("<dev string:xbc>" + spawnpointname + "<dev string:x9f>");
         return;
     }
     for (index = 0; index < spawnpoints.size; index++) {
@@ -404,7 +404,7 @@ function getbestweightedspawnpoint(spawnpoints) {
         penalty = getlospenalty();
         /#
             if (level.storespawndata || level.debugspawning) {
-                bestspawnpoint.spawndata[bestspawnpoint.spawndata.size] = "scr_spawnsimple" + penalty;
+                bestspawnpoint.spawndata[bestspawnpoint.spawndata.size] = "<dev string:xc2>" + penalty;
             }
         #/
         bestspawnpoint.weight -= penalty;
@@ -419,9 +419,9 @@ function getbestweightedspawnpoint(spawnpoints) {
     // Checksum 0x7de1d6ab, Offset: 0x1660
     // Size: 0x156
     function checkbad(spawnpoint) {
-                for (i = 0; i < level.players.size; i++) {
+        for (i = 0; i < level.players.size; i++) {
             player = level.players[i];
-            if (!isalive(player) || player.sessionstate != "scr_spawnsimple") {
+            if (!isalive(player) || player.sessionstate != "<dev string:xdd>") {
                 continue;
             }
             if (level.teambased && player.team == self.team) {
@@ -442,9 +442,9 @@ function getbestweightedspawnpoint(spawnpoints) {
         dist = distance(start, end);
         for (i = 0; i < -56; i++) {
             line(start, end, (1, 0, 0));
-            print3d(start, "scr_spawnsimple" + name1 + "scr_spawnsimple" + dist);
+            print3d(start, "<dev string:xe5>" + name1 + "<dev string:xf1>" + dist);
             print3d(end, name2);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -456,7 +456,7 @@ function getbestweightedspawnpoint(spawnpoints) {
         if (!isdefined(level.storespawndata) || !level.storespawndata) {
             return;
         }
-        level.storespawndata = getdvarint("scr_spawnsimple");
+        level.storespawndata = getdvarint("<dev string:x28>");
         if (!level.storespawndata) {
             return;
         }
@@ -464,23 +464,23 @@ function getbestweightedspawnpoint(spawnpoints) {
             level.spawngameid = randomint(100);
             level.spawnid = 0;
         }
-        if (bestspawnpoint.classname == "scr_spawnsimple") {
+        if (bestspawnpoint.classname == "<dev string:xfb>") {
             return;
         }
         level.spawnid++;
-        file = openfile("scr_spawnsimple", "scr_spawnsimple");
-        fprintfields(file, level.spawngameid + "scr_spawnsimple" + level.spawnid + "scr_spawnsimple" + spawnpoints.size + "scr_spawnsimple" + self.name);
+        file = openfile("<dev string:x112>", "<dev string:x120>");
+        fprintfields(file, level.spawngameid + "<dev string:x127>" + level.spawnid + "<dev string:x129>" + spawnpoints.size + "<dev string:x129>" + self.name);
         for (i = 0; i < spawnpoints.size; i++) {
-            str = vectostr(spawnpoints[i].origin) + "scr_spawnsimple";
+            str = vectostr(spawnpoints[i].origin) + "<dev string:x129>";
             if (spawnpoints[i] == bestspawnpoint) {
-                str += "scr_spawnsimple";
+                str += "<dev string:x12b>";
             } else {
-                str += "scr_spawnsimple";
+                str += "<dev string:x12e>";
             }
             if (!useweights) {
-                str += "scr_spawnsimple";
+                str += "<dev string:x12e>";
             } else {
-                str += spawnpoints[i].weight + "scr_spawnsimple";
+                str += spawnpoints[i].weight + "<dev string:x129>";
             }
             if (!isdefined(spawnpoints[i].spawndata)) {
                 spawnpoints[i].spawndata = [];
@@ -488,13 +488,13 @@ function getbestweightedspawnpoint(spawnpoints) {
             if (!isdefined(spawnpoints[i].sightchecks)) {
                 spawnpoints[i].sightchecks = [];
             }
-            str += spawnpoints[i].spawndata.size + "scr_spawnsimple";
+            str += spawnpoints[i].spawndata.size + "<dev string:x129>";
             for (j = 0; j < spawnpoints[i].spawndata.size; j++) {
-                str += spawnpoints[i].spawndata[j] + "scr_spawnsimple";
+                str += spawnpoints[i].spawndata[j] + "<dev string:x129>";
             }
-            str += spawnpoints[i].sightchecks.size + "scr_spawnsimple";
+            str += spawnpoints[i].sightchecks.size + "<dev string:x129>";
             for (j = 0; j < spawnpoints[i].sightchecks.size; j++) {
-                str += spawnpoints[i].sightchecks[j].penalty + "scr_spawnsimple" + vectostr(spawnpoints[i].origin) + "scr_spawnsimple";
+                str += spawnpoints[i].sightchecks[j].penalty + "<dev string:x129>" + vectostr(spawnpoints[i].origin) + "<dev string:x129>";
             }
             fprintfields(file, str);
         }
@@ -502,47 +502,47 @@ function getbestweightedspawnpoint(spawnpoints) {
         getallalliedandenemyplayers(obj);
         numallies = 0;
         numenemies = 0;
-        str = "scr_spawnsimple";
+        str = "<dev string:x3c>";
         for (i = 0; i < obj.allies.size; i++) {
             if (obj.allies[i] == self) {
                 continue;
             }
             numallies++;
-            str += vectostr(obj.allies[i].origin) + "scr_spawnsimple";
+            str += vectostr(obj.allies[i].origin) + "<dev string:x129>";
         }
         for (i = 0; i < obj.enemies.size; i++) {
             numenemies++;
-            str += vectostr(obj.enemies[i].origin) + "scr_spawnsimple";
+            str += vectostr(obj.enemies[i].origin) + "<dev string:x129>";
         }
-        str = numallies + "scr_spawnsimple" + numenemies + "scr_spawnsimple" + str;
+        str = numallies + "<dev string:x129>" + numenemies + "<dev string:x129>" + str;
         fprintfields(file, str);
         otherdata = [];
         if (isdefined(level.bombguy)) {
             index = otherdata.size;
             otherdata[index] = spawnstruct();
             otherdata[index].origin = level.bombguy.origin + (0, 0, 20);
-            otherdata[index].text = "scr_spawnsimple";
+            otherdata[index].text = "<dev string:x131>";
         } else if (isdefined(level.bombpos)) {
             index = otherdata.size;
             otherdata[index] = spawnstruct();
             otherdata[index].origin = level.bombpos;
-            otherdata[index].text = "scr_spawnsimple";
+            otherdata[index].text = "<dev string:x13d>";
         }
         if (isdefined(level.flags)) {
             for (i = 0; i < level.flags.size; i++) {
                 index = otherdata.size;
                 otherdata[index] = spawnstruct();
                 otherdata[index].origin = level.flags[i].origin;
-                otherdata[index].text = level.flags[i].useobj gameobjects::get_owner_team() + "scr_spawnsimple";
+                otherdata[index].text = level.flags[i].useobj gameobjects::get_owner_team() + "<dev string:x142>";
             }
         }
-        str = otherdata.size + "scr_spawnsimple";
+        str = otherdata.size + "<dev string:x129>";
         for (i = 0; i < otherdata.size; i++) {
-            str += vectostr(otherdata[i].origin) + "scr_spawnsimple" + otherdata[i].text + "scr_spawnsimple";
+            str += vectostr(otherdata[i].origin) + "<dev string:x129>" + otherdata[i].text + "<dev string:x129>";
         }
         fprintfields(file, str);
         closefile(file);
-        thisspawnid = level.spawngameid + "scr_spawnsimple" + level.spawnid;
+        thisspawnid = level.spawngameid + "<dev string:x127>" + level.spawnid;
         if (isdefined(self.thisspawnid)) {
         }
         self.thisspawnid = thisspawnid;
@@ -553,7 +553,7 @@ function getbestweightedspawnpoint(spawnpoints) {
     // Checksum 0x8a29c334, Offset: 0x2148
     // Size: 0xb34
     function readspawndata(desiredid, relativepos) {
-        file = openfile("scr_spawnsimple", "scr_spawnsimple");
+        file = openfile("<dev string:x112>", "<dev string:x148>");
         if (file < 0) {
             return;
         }
@@ -664,24 +664,24 @@ function getbestweightedspawnpoint(spawnpoints) {
                 data.otherdata[data.otherdata.size] = otherdata;
             }
             if (isdefined(relativepos)) {
-                if (relativepos == "scr_spawnsimple") {
+                if (relativepos == "<dev string:x14d>") {
                     if (data.id == oldspawndata.id) {
                         level.curspawndata = prevthisplayer;
                         break;
                     }
-                } else if (relativepos == "scr_spawnsimple") {
+                } else if (relativepos == "<dev string:x15c>") {
                     if (data.id == oldspawndata.id) {
                         level.curspawndata = prev;
                         break;
                     }
-                } else if (relativepos == "scr_spawnsimple") {
+                } else if (relativepos == "<dev string:x161>") {
                     if (lookingfornextthisplayer) {
                         level.curspawndata = data;
                         break;
                     } else if (data.id == oldspawndata.id) {
                         lookingfornextthisplayer = 1;
                     }
-                } else if (relativepos == "scr_spawnsimple") {
+                } else if (relativepos == "<dev string:x170>") {
                     if (lookingfornext) {
                         level.curspawndata = data;
                         break;
@@ -711,14 +711,14 @@ function getbestweightedspawnpoint(spawnpoints) {
         textoffset = (0, 0, -12);
         while (true) {
             if (!isdefined(level.curspawndata)) {
-                wait(0.5);
+                wait 0.5;
                 continue;
             }
             for (i = 0; i < level.curspawndata.friends.size; i++) {
-                print3d(level.curspawndata.friends[i], "scr_spawnsimple", (0.5, 1, 0.5), 1, 5);
+                print3d(level.curspawndata.friends[i], "<dev string:x175>", (0.5, 1, 0.5), 1, 5);
             }
             for (i = 0; i < level.curspawndata.enemies.size; i++) {
-                print3d(level.curspawndata.enemies[i], "scr_spawnsimple", (1, 0.5, 0.5), 1, 5);
+                print3d(level.curspawndata.enemies[i], "<dev string:x178>", (1, 0.5, 0.5), 1, 5);
             }
             for (i = 0; i < level.curspawndata.otherdata.size; i++) {
                 print3d(level.curspawndata.otherdata[i].origin, level.curspawndata.otherdata[i].text, (0.5, 0.75, 1), 1, 2);
@@ -727,22 +727,22 @@ function getbestweightedspawnpoint(spawnpoints) {
                 sp = level.curspawndata.spawnpoints[i];
                 orig = sp.sighttracepoint;
                 if (sp.winner) {
-                    print3d(orig, level.curspawndata.playername + "scr_spawnsimple", (0.5, 0.5, 1), 1, 2);
+                    print3d(orig, level.curspawndata.playername + "<dev string:x17b>", (0.5, 0.5, 1), 1, 2);
                     orig += textoffset;
                 }
                 amnt = (sp.weight - level.curspawndata.minweight) / (level.curspawndata.maxweight - level.curspawndata.minweight);
-                print3d(orig, "scr_spawnsimple" + sp.weight, (1 - amnt, amnt, 0.5));
+                print3d(orig, "<dev string:x189>" + sp.weight, (1 - amnt, amnt, 0.5));
                 orig += textoffset;
                 for (j = 0; j < sp.data.size; j++) {
                     print3d(orig, sp.data[j], (1, 1, 1));
                     orig += textoffset;
                 }
                 for (j = 0; j < sp.sightchecks.size; j++) {
-                    print3d(orig, "scr_spawnsimple" + sp.sightchecks[j].penalty, (1, 0.5, 0.5));
+                    print3d(orig, "<dev string:x192>" + sp.sightchecks[j].penalty, (1, 0.5, 0.5));
                     orig += textoffset;
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -751,7 +751,7 @@ function getbestweightedspawnpoint(spawnpoints) {
     // Checksum 0xb721d12e, Offset: 0x3108
     // Size: 0x7e
     function vectostr(vec) {
-        return int(vec[0]) + "scr_spawnsimple" + int(vec[1]) + "scr_spawnsimple" + int(vec[2]);
+        return int(vec[0]) + "<dev string:x1a1>" + int(vec[1]) + "<dev string:x1a1>" + int(vec[2]);
     }
 
     // Namespace spawnlogic
@@ -759,7 +759,7 @@ function getbestweightedspawnpoint(spawnpoints) {
     // Checksum 0x38eda5a8, Offset: 0x3190
     // Size: 0x9e
     function strtovec(str) {
-        parts = strtok(str, "scr_spawnsimple");
+        parts = strtok(str, "<dev string:x1a1>");
         if (parts.size != 3) {
             return (0, 0, 0);
         }
@@ -903,10 +903,10 @@ function getspawnpoint_nearteam(spawnpoints, favoredspawnpoints, forceallydistan
         return undefined;
     }
     /#
-        if (getdvarstring("scr_spawnsimple") == "scr_spawnsimple") {
-            setdvar("scr_spawnsimple", "scr_spawnsimple");
+        if (getdvarstring("<dev string:x1a3>") == "<dev string:x3c>") {
+            setdvar("<dev string:x1a3>", "<dev string:x6b>");
         }
-        if (getdvarstring("scr_spawnsimple") == "scr_spawnsimple") {
+        if (getdvarstring("<dev string:x1a3>") == "<dev string:x1b6>") {
             return getspawnpoint_random(spawnpoints);
         }
     #/
@@ -940,7 +940,7 @@ function getspawnpoint_nearteam(spawnpoints, favoredspawnpoints, forceallydistan
             spawnpoint.weight = (enemydistanceweight * enemydistsum - allieddistanceweight * allydistsum) / spawnpoint.numplayersatlastupdate;
             /#
                 if (level.storespawndata || level.debugspawning) {
-                    spawnpoint.spawndata[spawnpoint.spawndata.size] = "scr_spawnsimple" + int(spawnpoint.weight) + "scr_spawnsimple" + enemydistanceweight + "scr_spawnsimple" + int(enemydistsum) + "scr_spawnsimple" + allieddistanceweight + "scr_spawnsimple" + int(allydistsum) + "scr_spawnsimple" + spawnpoint.numplayersatlastupdate;
+                    spawnpoint.spawndata[spawnpoint.spawndata.size] = "<dev string:x1b8>" + int(spawnpoint.weight) + "<dev string:x1c6>" + enemydistanceweight + "<dev string:x1cb>" + int(enemydistsum) + "<dev string:x1cd>" + allieddistanceweight + "<dev string:x1cb>" + int(allydistsum) + "<dev string:x1d1>" + spawnpoint.numplayersatlastupdate;
                 }
             #/
             continue;
@@ -948,7 +948,7 @@ function getspawnpoint_nearteam(spawnpoints, favoredspawnpoints, forceallydistan
         spawnpoint.weight = 0;
         /#
             if (level.storespawndata || level.debugspawning) {
-                spawnpoint.spawndata[spawnpoint.spawndata.size] = "scr_spawnsimple";
+                spawnpoint.spawndata[spawnpoint.spawndata.size] = "<dev string:x1d6>";
             }
         #/
     }
@@ -967,10 +967,10 @@ function getspawnpoint_nearteam(spawnpoints, favoredspawnpoints, forceallydistan
     avoidvisibleenemies(spawnpoints, 1);
     result = getspawnpoint_final(spawnpoints);
     /#
-        if (getdvarstring("scr_spawnsimple") == "scr_spawnsimple") {
-            setdvar("scr_spawnsimple", "scr_spawnsimple");
+        if (getdvarstring("<dev string:x1e5>") == "<dev string:x3c>") {
+            setdvar("<dev string:x1e5>", "<dev string:x6b>");
         }
-        if (getdvarstring("scr_spawnsimple") == "scr_spawnsimple") {
+        if (getdvarstring("<dev string:x1e5>") == "<dev string:x1b6>") {
             checkbad(result);
         }
     #/
@@ -1076,8 +1076,8 @@ function getspawnpoint_turned(spawnpoints, idealdist, baddist, idealdistteam, ba
 // Size: 0x50
 function spawnlogic_begin() {
     /#
-        level.storespawndata = getdvarint("scr_spawnsimple");
-        level.debugspawning = getdvarint("scr_spawnsimple") > 0;
+        level.storespawndata = getdvarint("<dev string:x28>");
+        level.debugspawning = getdvarint("<dev string:x6d>") > 0;
     #/
 }
 
@@ -1090,17 +1090,17 @@ function spawnlogic_begin() {
     function watchspawnprofile() {
         while (true) {
             while (true) {
-                if (getdvarint("scr_spawnsimple") > 0) {
+                if (getdvarint("<dev string:x81>") > 0) {
                     break;
                 }
-                wait(0.05);
+                wait 0.05;
             }
             thread spawnprofile();
             while (true) {
-                if (getdvarint("scr_spawnsimple") <= 0) {
+                if (getdvarint("<dev string:x81>") <= 0) {
                     break;
                 }
-                wait(0.05);
+                wait 0.05;
             }
             level notify(#"stop_spawn_profile");
         }
@@ -1124,7 +1124,7 @@ function spawnlogic_begin() {
                 }
                 player getspawnpoint_nearteam(level.spawnpoints);
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1134,8 +1134,8 @@ function spawnlogic_begin() {
     // Size: 0x5a
     function spawngraphcheck() {
         while (true) {
-            if (getdvarint("scr_spawnsimple") < 1) {
-                wait(3);
+            if (getdvarint("<dev string:x1f7>") < 1) {
+                wait 3;
                 continue;
             }
             thread spawngraph();
@@ -1152,9 +1152,9 @@ function spawnlogic_begin() {
         h = 20;
         weightscale = 0.1;
         fakespawnpoints = [];
-        corners = getentarray("scr_spawnsimple", "scr_spawnsimple");
+        corners = getentarray("<dev string:x206>", "<dev string:x215>");
         if (corners.size != 2) {
-            println("scr_spawnsimple");
+            println("<dev string:x220>");
             return;
         }
         min = corners[0].origin;
@@ -1187,7 +1187,7 @@ function spawnlogic_begin() {
             spawni = 0;
             numiters = 5;
             for (i = 0; i < numiters; i++) {
-                if (!level.players.size || !isdefined(level.players[0].team) || level.players[0].team == "scr_spawnsimple" || !isdefined(level.players[0].curclass)) {
+                if (!level.players.size || !isdefined(level.players[0].team) || level.players[0].team == "<dev string:x249>" || !isdefined(level.players[0].curclass)) {
                     break;
                 }
                 endspawni = spawni + fakespawnpoints.size / numiters;
@@ -1201,10 +1201,10 @@ function spawnlogic_begin() {
                 if (didweights) {
                     level.players[0] drawspawngraph(fakespawnpoints, w, h, weightscale);
                 }
-                wait(0.05);
+                wait 0.05;
             }
-            if (!level.players.size || !isdefined(level.players[0].team) || level.players[0].team == "scr_spawnsimple" || !isdefined(level.players[0].curclass)) {
-                wait(1);
+            if (!level.players.size || !isdefined(level.players[0].team) || level.players[0].team == "<dev string:x249>" || !isdefined(level.players[0].curclass)) {
+                wait 1;
                 continue;
             }
             level.players[0] getspawnpoint_nearteam(fakespawnpoints);
@@ -1213,7 +1213,7 @@ function spawnlogic_begin() {
             }
             didweights = 1;
             level.players[0] drawspawngraph(fakespawnpoints, w, h, weightscale);
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1268,12 +1268,12 @@ function spawnlogic_begin() {
     // Size: 0x364
     function loopbotspawns() {
         while (true) {
-            if (getdvarint("scr_spawnsimple") < 1) {
-                wait(3);
+            if (getdvarint("<dev string:x3d>") < 1) {
+                wait 3;
                 continue;
             }
             if (!isdefined(level.players)) {
-                wait(0.05);
+                wait 0.05;
                 continue;
             }
             bots = [];
@@ -1281,32 +1281,32 @@ function spawnlogic_begin() {
                 if (!isdefined(level.players[i])) {
                     continue;
                 }
-                if (level.players[i].sessionstate == "scr_spawnsimple" && issubstr(level.players[i].name, "scr_spawnsimple")) {
+                if (level.players[i].sessionstate == "<dev string:xdd>" && issubstr(level.players[i].name, "<dev string:x253>")) {
                     bots[bots.size] = level.players[i];
                 }
             }
             if (bots.size > 0) {
-                if (getdvarint("scr_spawnsimple") == 1) {
+                if (getdvarint("<dev string:x3d>") == 1) {
                     killer = bots[randomint(bots.size)];
                     victim = bots[randomint(bots.size)];
-                    victim thread [[ level.callbackplayerdamage ]](killer, killer, 1000, 0, "scr_spawnsimple", level.weaponnone, (0, 0, 0), (0, 0, 0), "scr_spawnsimple", 0, 0);
+                    victim thread [[ level.callbackplayerdamage ]](killer, killer, 1000, 0, "<dev string:x257>", level.weaponnone, (0, 0, 0), (0, 0, 0), "<dev string:x268>", 0, 0);
                 } else {
-                    numkills = getdvarint("scr_spawnsimple");
+                    numkills = getdvarint("<dev string:x3d>");
                     lastvictim = undefined;
                     for (index = 0; index < numkills; index++) {
                         killer = bots[randomint(bots.size)];
                         for (victim = bots[randomint(bots.size)]; isdefined(lastvictim) && victim == lastvictim; victim = bots[randomint(bots.size)]) {
                         }
-                        victim thread [[ level.callbackplayerdamage ]](killer, killer, 1000, 0, "scr_spawnsimple", level.weaponnone, (0, 0, 0), (0, 0, 0), "scr_spawnsimple", 0, 0);
+                        victim thread [[ level.callbackplayerdamage ]](killer, killer, 1000, 0, "<dev string:x257>", level.weaponnone, (0, 0, 0), (0, 0, 0), "<dev string:x268>", 0, 0);
                         lastvictim = victim;
                     }
                 }
             }
-            if (getdvarstring("scr_spawnsimple") != "scr_spawnsimple") {
-                wait(getdvarfloat("scr_spawnsimple"));
+            if (getdvarstring("<dev string:x4a>") != "<dev string:x3c>") {
+                wait getdvarfloat("<dev string:x4a>");
                 continue;
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1315,19 +1315,19 @@ function spawnlogic_begin() {
     // Checksum 0xd7c6a2f5, Offset: 0x5408
     // Size: 0x1e8
     function allowspawndatareading() {
-        setdvar("scr_spawnsimple", "scr_spawnsimple");
-        prevval = getdvarstring("scr_spawnsimple");
-        prevrelval = getdvarstring("scr_spawnsimple");
+        setdvar("<dev string:x26d>", "<dev string:x3c>");
+        prevval = getdvarstring("<dev string:x26d>");
+        prevrelval = getdvarstring("<dev string:x27d>");
         readthistime = 0;
         while (true) {
-            val = getdvarstring("scr_spawnsimple");
+            val = getdvarstring("<dev string:x26d>");
             relval = undefined;
             if (!isdefined(val) || val == prevval) {
-                relval = getdvarstring("scr_spawnsimple");
-                if (isdefined(relval) && relval != "scr_spawnsimple") {
-                    setdvar("scr_spawnsimple", "scr_spawnsimple");
+                relval = getdvarstring("<dev string:x27d>");
+                if (isdefined(relval) && relval != "<dev string:x3c>") {
+                    setdvar("<dev string:x27d>", "<dev string:x3c>");
                 } else {
-                    wait(0.5);
+                    wait 0.5;
                     continue;
                 }
             }
@@ -1335,9 +1335,9 @@ function spawnlogic_begin() {
             readthistime = 0;
             readspawndata(val, relval);
             if (!isdefined(level.curspawndata)) {
-                println("scr_spawnsimple");
+                println("<dev string:x28e>");
             } else {
-                println("scr_spawnsimple" + level.curspawndata.id);
+                println("<dev string:x2a5>" + level.curspawndata.id);
             }
             thread drawspawndata();
         }
@@ -1349,8 +1349,8 @@ function spawnlogic_begin() {
     // Size: 0x4b0
     function showdeathsdebug() {
         while (true) {
-            if (getdvarstring("scr_spawnsimple") == "scr_spawnsimple") {
-                wait(3);
+            if (getdvarstring("<dev string:x6d>") == "<dev string:x6b>") {
+                wait 3;
                 continue;
             }
             time = gettime();
@@ -1380,17 +1380,17 @@ function spawnlogic_begin() {
                 if (spawnkill.var_349bc34) {
                     line(spawnkill.spawnpointorigin, spawnkill.dierorigin, (0.4, 0.5, 0.4));
                     line(spawnkill.dierorigin, spawnkill.killerorigin, (0, 1, 1));
-                    print3d(spawnkill.dierorigin + (0, 0, 32), "scr_spawnsimple", (0, 1, 1));
+                    print3d(spawnkill.dierorigin + (0, 0, 32), "<dev string:x2b7>", (0, 1, 1));
                 } else {
                     line(spawnkill.spawnpointorigin, spawnkill.killerorigin, (0.4, 0.5, 0.4));
                     line(spawnkill.killerorigin, spawnkill.dierorigin, (0, 1, 1));
-                    print3d(spawnkill.dierorigin + (0, 0, 32), "scr_spawnsimple", (0, 1, 1));
+                    print3d(spawnkill.dierorigin + (0, 0, 32), "<dev string:x2c4>", (0, 1, 1));
                 }
                 if (time - spawnkill.time < 60000) {
                     level.spawnlogic_spawnkills[level.spawnlogic_spawnkills.size] = oldspawnkills[i];
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1403,11 +1403,11 @@ function spawnlogic_begin() {
 function updatedeathinfodebug() {
     while (true) {
         if (getdvarstring("scr_spawnpointdebug") == "0") {
-            wait(3);
+            wait 3;
             continue;
         }
         updatedeathinfo();
-        wait(3);
+        wait 3;
     }
 }
 
@@ -1420,8 +1420,8 @@ function spawnweightdebug(spawnpoints) {
     level endon(#"stop_spawn_weight_debug");
     /#
         while (true) {
-            if (getdvarstring("scr_spawnsimple") == "scr_spawnsimple") {
-                wait(3);
+            if (getdvarstring("<dev string:x6d>") == "<dev string:x6b>") {
+                wait 3;
                 continue;
             }
             textoffset = (0, 0, -12);
@@ -1447,12 +1447,12 @@ function spawnweightdebug(spawnpoints) {
                         if (spawnpoints[i].sightchecks[j].penalty == 0) {
                             continue;
                         }
-                        print3d(orig, "scr_spawnsimple" + spawnpoints[i].sightchecks[j].penalty, (0.5, 0.5, 0.5));
+                        print3d(orig, "<dev string:x2cf>" + spawnpoints[i].sightchecks[j].penalty, (0.5, 0.5, 0.5));
                         orig += textoffset;
                     }
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
     #/
 }
@@ -1464,7 +1464,7 @@ function spawnweightdebug(spawnpoints) {
 function profiledebug() {
     while (true) {
         if (getdvarstring("scr_spawnpointprofile") != "1") {
-            wait(3);
+            wait 3;
             continue;
         }
         for (i = 0; i < level.spawnpoints.size; i++) {
@@ -1473,7 +1473,7 @@ function profiledebug() {
         if (level.players.size > 0) {
             level.players[randomint(level.players.size)] getspawnpoint_nearteam(level.spawnpoints);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -1484,7 +1484,7 @@ function profiledebug() {
     // Checksum 0x7ba1d82, Offset: 0x5f28
     // Size: 0xe0
     function debugnearbyplayers(players, origin) {
-        if (getdvarstring("scr_spawnsimple") == "scr_spawnsimple") {
+        if (getdvarstring("<dev string:x6d>") == "<dev string:x6b>") {
             return;
         }
         starttime = gettime();
@@ -1495,7 +1495,7 @@ function profiledebug() {
             if (gettime() - starttime > 5000) {
                 return;
             }
-            wait(0.05);
+            wait 0.05;
         }
     }
 
@@ -1595,7 +1595,7 @@ function avoidweapondamage(spawnpoints) {
                 spawnpoints[i].weight = spawnpoints[i].weight - weapondamagepenalty;
                 /#
                     if (level.storespawndata || level.debugspawning) {
-                        spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "scr_spawnsimple" + int(weapondamagepenalty);
+                        spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "<dev string:x2e1>" + int(weapondamagepenalty);
                     }
                 #/
             }
@@ -1610,7 +1610,7 @@ function avoidweapondamage(spawnpoints) {
 function spawnperframeupdate() {
     spawnpointindex = 0;
     while (true) {
-        wait(0.05);
+        wait 0.05;
         if (!isdefined(level.spawnpoints)) {
             return;
         }
@@ -1671,7 +1671,7 @@ function spawnpointupdate(spawnpoint) {
     spawnpointdir = spawnpoint.forward;
     debug = 0;
     /#
-        debug = getdvarint("scr_spawnsimple") > 0;
+        debug = getdvarint("<dev string:x6d>") > 0;
     #/
     mindist = [];
     distsum = [];
@@ -1870,7 +1870,7 @@ function avoidvisibleenemies(spawnpoints, teambased) {
                     spawnpoints[i].weight = spawnpoints[i].weight - penalty;
                     /#
                         if (level.storespawndata || level.debugspawning) {
-                            spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "scr_spawnsimple" + int(spawnpoints[i].minenemydist[mindistteam]) + "scr_spawnsimple" + int(penalty);
+                            spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "<dev string:x2f5>" + int(spawnpoints[i].minenemydist[mindistteam]) + "<dev string:x307>" + int(penalty);
                         }
                     #/
                 }
@@ -1909,7 +1909,7 @@ function avoidspawnreuse(spawnpoints, teambased) {
                 spawnpoint.weight -= worsen;
                 /#
                     if (level.storespawndata || level.debugspawning) {
-                        spawnpoint.spawndata[spawnpoint.spawndata.size] = "scr_spawnsimple" + worsen;
+                        spawnpoint.spawndata[spawnpoint.spawndata.size] = "<dev string:x311>" + worsen;
                     }
                 #/
             } else {
@@ -1937,7 +1937,7 @@ function avoidsamespawn(spawnpoints) {
             spawnpoints[i].weight = spawnpoints[i].weight - 50000;
             /#
                 if (level.storespawndata || level.debugspawning) {
-                    spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "scr_spawnsimple";
+                    spawnpoints[i].spawndata[spawnpoints[i].spawndata.size] = "<dev string:x326>";
                 }
             #/
             break;

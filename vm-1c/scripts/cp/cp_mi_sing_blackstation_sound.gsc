@@ -2,9 +2,9 @@
 #using scripts/shared/music_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_7a033503;
+#namespace cp_mi_sing_blackstation_sound;
 
-// Namespace namespace_7a033503
+// Namespace cp_mi_sing_blackstation_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x57ea5086, Offset: 0x218
 // Size: 0x7c
@@ -15,7 +15,7 @@ function main() {
     clientfield::register("toplayer", "slowmo_duck_active", 1, 2, "int");
 }
 
-// Namespace namespace_7a033503
+// Namespace cp_mi_sing_blackstation_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6fd6c53d, Offset: 0x2a0
 // Size: 0x2c
@@ -24,17 +24,17 @@ function function_8a682a34() {
     music::setmusicstate("military_action");
 }
 
-// Namespace namespace_7a033503
+// Namespace cp_mi_sing_blackstation_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x780b2ad0, Offset: 0x2d8
 // Size: 0x34
 function function_70f35bef() {
     level waittill(#"hash_9074b8ad");
-    wait(1.85);
+    wait 1.85;
     music::setmusicstate("none");
 }
 
-// Namespace namespace_7a033503
+// Namespace cp_mi_sing_blackstation_sound
 // Params 0, eflags: 0x1 linked
 // Checksum 0x113976a, Offset: 0x318
 // Size: 0x2c
@@ -58,7 +58,7 @@ function function_973b77f9() {
 // Checksum 0xb8de633b, Offset: 0x378
 // Size: 0x24
 function function_fcea1d9() {
-    wait(3);
+    wait 3;
     music::setmusicstate("none");
 }
 
@@ -139,7 +139,7 @@ function function_cde82250() {
 // Checksum 0x1e7c8f83, Offset: 0x510
 // Size: 0x24
 function function_f152b1dc() {
-    wait(3);
+    wait 3;
     music::setmusicstate("zip_line");
 }
 
@@ -164,7 +164,7 @@ function function_37f7c98d() {
 // Checksum 0xf75d65f3, Offset: 0x590
 // Size: 0x24
 function function_bed0eaad() {
-    wait(9);
+    wait 9;
     music::setmusicstate("police_station");
 }
 

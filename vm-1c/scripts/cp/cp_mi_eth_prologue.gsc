@@ -83,9 +83,9 @@ function main() {
     precache();
     function_d446a137();
     setdvar("bullet_ricochetBaseChance", 0);
-    namespace_34e37984::main();
-    namespace_7685657b::main();
-    namespace_feda6b63::init_voice();
+    cp_mi_eth_prologue_fx::main();
+    cp_mi_eth_prologue_sound::main();
+    voice_prologue::init_voice();
     level.var_1e983b11 = 0;
     level.var_d829fe9f = 0;
     level.var_d086f08f = 1;
@@ -97,7 +97,7 @@ function main() {
     }
     load::main();
     setgametypesetting("trm_maxHeight", 50);
-    namespace_8cf14dc8::function_7403e82b();
+    cp_mi_eth_prologue_patch::function_7403e82b();
     setdvar("cg_viewVehicleInfluenceGunner_mode", 2);
 }
 
@@ -207,7 +207,7 @@ function init_flags() {
 // Size: 0x4c
 function on_player_connect() {
     self flag::init("custom_loadout");
-    if (!self namespace_2cb3876f::function_72e9bdb8()) {
+    if (!self cp_prologue_util::function_72e9bdb8()) {
         self.disableclassselection = 1;
     }
 }
@@ -219,7 +219,7 @@ function on_player_connect() {
 function on_player_spawned() {
     if (!sessionmodeiscampaignzombiesgame()) {
         self oed::function_35ce409(0);
-        if (!self namespace_2cb3876f::function_72e9bdb8()) {
+        if (!self cp_prologue_util::function_72e9bdb8()) {
             self thread function_95517e0b();
         }
     }
@@ -238,7 +238,7 @@ function on_player_spawned() {
         self oed::function_35ce409(1);
     }
     if (!sessionmodeiscampaignzombiesgame()) {
-        if (!self namespace_2cb3876f::function_72e9bdb8()) {
+        if (!self cp_prologue_util::function_72e9bdb8()) {
             self.var_8dcb3948 = 1;
             var_e1e06c8 = getcharacterbodystyleindex(0, "CPUI_OUTFIT_PROLOGUE");
             self setcharacterbodystyle(var_e1e06c8);
@@ -255,7 +255,7 @@ function on_player_spawned() {
         }
     }
     if (var_7476c97b) {
-        level namespace_2cb3876f::function_6a5f89cb(level.var_c0e97bd, 0);
+        level cp_prologue_util::function_6a5f89cb(level.var_c0e97bd, 0);
     }
     if (level flag::get("players_are_in_apc")) {
         self apc::function_fc1b1b72();
@@ -280,10 +280,10 @@ function function_95517e0b() {
 // Checksum 0x1c93e773, Offset: 0x3658
 // Size: 0xac
 function on_player_loadout() {
-    if (!self namespace_2cb3876f::function_72e9bdb8() && !sessionmodeiscampaignzombiesgame()) {
+    if (!self cp_prologue_util::function_72e9bdb8() && !sessionmodeiscampaignzombiesgame()) {
         level notify(#"disable_cybercom", self, 1);
         self cybercom_tacrig::function_78908229();
-        self namespace_2cb3876f::function_4e6a4d54();
+        self cp_prologue_util::function_4e6a4d54();
     } else {
         self flag::set("custom_loadout");
     }
@@ -410,7 +410,7 @@ function function_5bf6196d(str_objective, var_74cd64bc) {
     }
     objectives::set("cp_level_prologue_locate_the_security_room");
     function_77d9dff("objective_nrc_knocking_init");
-    namespace_bd91a0fd::function_1605fd36();
+    cp_prologue_enter_base::function_1605fd36();
 }
 
 // Namespace cp_mi_eth_prologue
@@ -448,11 +448,11 @@ function function_9afd1f40(str_objective, var_74cd64bc) {
         exploder::exploder("fx_exploder_plane_exp");
         array::run_all(level.players, &util::function_16c71b8, 1);
         array::thread_all(level.players, &function_7072c5d8);
-        level thread namespace_bd91a0fd::function_6bad1a34();
+        level thread cp_prologue_enter_base::function_6bad1a34();
     }
     videostop("cp_prologue_env_post_crash");
     function_77d9dff("objective_blend_in_init");
-    namespace_bd91a0fd::function_568a781d();
+    cp_prologue_enter_base::function_568a781d();
 }
 
 // Namespace cp_mi_eth_prologue
@@ -465,7 +465,7 @@ function function_a856a753(name, var_74cd64bc, var_e4cd2b8b, player) {
         level thread scene::init("cin_pro_05_01_securitycam_1st_stealth_kill_movetodoor");
     }
     function_77d9dff("objective_blend_in_done");
-    level notify(#"hash_beaa69f3");
+    level notify(#"objective_blend_in_done");
 }
 
 // Namespace cp_mi_eth_prologue
@@ -492,7 +492,7 @@ function function_6977d5a4(str_objective, var_74cd64bc) {
         scene::init("cin_pro_03_02_blendin_vign_tarmac_cross_end_idle");
         load::function_a2995f22();
     }
-    namespace_bd91a0fd::function_e38f7be3();
+    cp_prologue_enter_base::function_e38f7be3();
 }
 
 // Namespace cp_mi_eth_prologue
@@ -501,7 +501,7 @@ function function_6977d5a4(str_objective, var_74cd64bc) {
 // Size: 0x154
 function function_33e74d97(name, var_74cd64bc, var_e4cd2b8b, player) {
     function_77d9dff("objective_take_out_guards_done");
-    level notify(#"hash_f70290fd");
+    level notify(#"objective_take_out_guards_done");
     if (var_74cd64bc) {
         level struct::function_368120a1("scene", "p7_fxanim_cp_prologue_control_tower_tarmac_turbine_bundle");
         level struct::function_368120a1("scene", "cin_pro_03_02_blendin_vign_destruction_injured");
@@ -562,7 +562,7 @@ function function_e9c19f80(name, var_74cd64bc, var_e4cd2b8b, player) {
 function function_f70ba4de(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_2cb3876f::function_34acbf2();
+        cp_prologue_util::function_34acbf2();
         level flag::set("hendricks_exit_cam_room");
         level thread namespace_21b2c1f2::function_baefe66d();
         level thread scene::skipto_end_noai("cin_pro_05_01_securitycam_1st_stealth_kill");
@@ -585,7 +585,7 @@ function function_b8ac064d(name, var_a334437f, var_e4cd2b8b, player) {
     var_88e2cef7 = getent("trig_open_weapons_room", "targetname");
     var_88e2cef7 triggerenable(0);
     function_77d9dff("hostage_1_done");
-    level notify(#"hash_ba0d25af");
+    level notify(#"hostage_1_done");
 }
 
 // Namespace cp_mi_eth_prologue
@@ -596,7 +596,7 @@ function function_563809d0(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         load::function_73adcefc();
         level scene::init("cin_pro_06_03_hostage_vign_breach_hendrickscover");
-        namespace_2cb3876f::function_34acbf2();
+        cp_prologue_util::function_34acbf2();
         level thread namespace_21b2c1f2::function_d4c52995();
         load::function_a2995f22();
     }
@@ -627,9 +627,9 @@ function function_cb5e9ce9(str_objective, var_74cd64bc) {
     namespace_52f8de11::function_bfe70f02();
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_2cb3876f::function_34acbf2();
-        namespace_2cb3876f::function_df278013();
-        namespace_2cb3876f::function_9d35b20d();
+        cp_prologue_util::function_34acbf2();
+        cp_prologue_util::function_df278013();
+        cp_prologue_util::function_9d35b20d();
         objectives::set("cp_level_prologue_get_to_the_surface");
         level thread objectives::breadcrumb("post_prison_breadcrumb_start");
         level.var_2fd26037 = util::function_740f8516("hendricks");
@@ -664,9 +664,9 @@ function function_9a16286(name, var_74cd64bc, var_e4cd2b8b, player) {
 function function_129dd7aa(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_2cb3876f::function_34acbf2();
-        namespace_2cb3876f::function_df278013();
-        namespace_2cb3876f::function_9d35b20d();
+        cp_prologue_util::function_34acbf2();
+        cp_prologue_util::function_df278013();
+        cp_prologue_util::function_9d35b20d();
         objectives::set("cp_level_prologue_get_to_the_surface");
         level thread namespace_21b2c1f2::function_6c35b4f3();
         level thread objectives::breadcrumb("post_prison_breadcrumb_1");
@@ -708,9 +708,9 @@ function function_8b6d4df5(str_objective, var_74cd64bc) {
     function_77d9dff("objective_intro_cyber_soldiers_init");
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_2cb3876f::function_34acbf2();
-        namespace_2cb3876f::function_df278013();
-        namespace_2cb3876f::function_9d35b20d();
+        cp_prologue_util::function_34acbf2();
+        cp_prologue_util::function_df278013();
+        cp_prologue_util::function_9d35b20d();
         objectives::set("cp_level_prologue_get_to_the_surface");
         level.var_2fd26037 = util::function_740f8516("hendricks");
         level.var_4d5a4697 = util::function_740f8516("minister");
@@ -743,8 +743,8 @@ function function_2cf07fc2(name, var_74cd64bc, var_e4cd2b8b, player) {
     scene::init("bridge_tent_02", "targetname");
     scene::init("bridge_tent_03", "targetname");
     level thread scene::skipto_end("p7_fxanim_cp_prologue_hangar_doors_02_bundle");
-    level thread namespace_d51ba4::function_ce858cd3(0);
-    callback::on_actor_killed(&namespace_d51ba4::function_d3c9b1d1);
+    level thread Hangar::function_ce858cd3(0);
+    callback::on_actor_killed(&Hangar::function_d3c9b1d1);
     function_77d9dff("intro_cyber_soldiers_done");
 }
 
@@ -761,9 +761,9 @@ function function_5eddb104(str_objective, var_74cd64bc) {
         level.var_f58c9f31 thread namespace_dccf27b3::function_9110a277(1, 0);
         level.var_92d245e2 thread namespace_dccf27b3::function_9110a277(1, 0);
         level.var_5d4087a6 thread namespace_dccf27b3::function_9110a277(1, 0);
-        namespace_2cb3876f::function_34acbf2();
-        namespace_2cb3876f::function_df278013();
-        namespace_2cb3876f::function_9d35b20d();
+        cp_prologue_util::function_34acbf2();
+        cp_prologue_util::function_df278013();
+        cp_prologue_util::function_9d35b20d();
         objectives::set("cp_level_prologue_get_to_the_surface");
         level.var_2fd26037 = util::function_740f8516("hendricks");
         level.var_9db406db = util::function_740f8516("khalil");
@@ -777,7 +777,7 @@ function function_5eddb104(str_objective, var_74cd64bc) {
     level thread objectives::breadcrumb("hangar_breadcrumb_start");
     level thread namespace_21b2c1f2::function_46333a8a();
     function_77d9dff("objective_hangar_init");
-    namespace_d51ba4::function_83921c71();
+    Hangar::function_83921c71();
 }
 
 // Namespace cp_mi_eth_prologue
@@ -786,7 +786,7 @@ function function_5eddb104(str_objective, var_74cd64bc) {
 // Size: 0x7c
 function function_45eb05f7(name, var_74cd64bc, var_e4cd2b8b, player) {
     level thread scene::skipto_end("p7_fxanim_cp_prologue_hangar_doors_03_bundle");
-    callback::remove_on_actor_killed(&namespace_d51ba4::function_d3c9b1d1);
+    callback::remove_on_actor_killed(&Hangar::function_d3c9b1d1);
     function_77d9dff("hangar_done");
 }
 
@@ -798,9 +798,9 @@ function function_d797037e(str_objective, var_74cd64bc) {
     level.var_92d245e2 = util::function_740f8516("prometheus");
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_2cb3876f::function_34acbf2();
-        namespace_2cb3876f::function_df278013();
-        namespace_2cb3876f::function_9d35b20d();
+        cp_prologue_util::function_34acbf2();
+        cp_prologue_util::function_df278013();
+        cp_prologue_util::function_9d35b20d();
         objectives::set("cp_level_prologue_get_to_the_surface");
         level.var_2fd26037 = util::function_740f8516("hendricks");
         level.var_9db406db = util::function_740f8516("khalil");
@@ -809,18 +809,18 @@ function function_d797037e(str_objective, var_74cd64bc) {
         level thread scene::skipto_end("cin_pro_10_04_hangar_vign_leap_new_wing2window");
         level flag::set("pallas_at_window");
         level.var_fac57550 = vehicle::simple_spawn_single("vtol_collapse_apc_initial");
-        wait(0.15);
-        level.var_2fd26037 thread namespace_d51ba4::function_d418516(level.var_fac57550);
-        level.var_9db406db thread namespace_d51ba4::function_d418516(level.var_fac57550);
+        wait 0.15;
+        level.var_2fd26037 thread Hangar::function_d418516(level.var_fac57550);
+        level.var_9db406db thread Hangar::function_d418516(level.var_fac57550);
         trigger::use("hangar_end_move_allies", "targetname", undefined, 0);
-        level namespace_d51ba4::function_10ab649();
+        level Hangar::function_10ab649();
         level clientfield::set("diaz_break_1", 2);
         skipto::teleport_ai(str_objective, level.heroes);
         load::function_a2995f22();
     }
     level thread objectives::breadcrumb("hangar_breadcrumb_4");
     function_77d9dff("objective_vtol_collapse_init");
-    namespace_d51ba4::function_31427ccd();
+    Hangar::function_31427ccd();
 }
 
 // Namespace cp_mi_eth_prologue
@@ -833,14 +833,14 @@ function function_9af4a8ed(name, var_74cd64bc, var_e4cd2b8b, player) {
     var_9c7511b4 = struct::get("hangar_gate_move_pos_l", "targetname");
     var_205c499a = struct::get("hangar_gate_move_pos_r", "targetname");
     var_c2777dd9 = "p7_fxanim_cp_prologue_hangar_door_bundle";
-    level namespace_d51ba4::function_a8cd091b(1, var_280d5f68, var_3c301126, var_9c7511b4, var_205c499a, var_c2777dd9);
+    level Hangar::function_a8cd091b(1, var_280d5f68, var_3c301126, var_9c7511b4, var_205c499a, var_c2777dd9);
     exploder::exploder("light_exploder_darkbattle");
     exploder::exploder("light_exploder_defend_radio_tower");
     umbragate_set("umbra_gate_hangar_02", 0);
     umbragate_set("umbra_gate_hangar_03", 0);
     umbragate_set("umbra_gate_hangar_04", 0);
     if (name == "skipto_jeep_alley" && var_74cd64bc) {
-        namespace_30207c6f::function_fcc9ed10();
+        jeep_alley::function_fcc9ed10();
     }
     level notify(#"hash_73facd66");
     function_77d9dff("vtol_collapse_done");
@@ -854,14 +854,14 @@ function function_ddf114c9(str_objective, var_74cd64bc) {
     level.var_f58c9f31 = util::function_740f8516("theia");
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_2cb3876f::function_34acbf2();
-        namespace_2cb3876f::function_df278013();
-        namespace_2cb3876f::function_9d35b20d();
+        cp_prologue_util::function_34acbf2();
+        cp_prologue_util::function_df278013();
+        cp_prologue_util::function_9d35b20d();
         level thread scene::skipto_end("p7_fxanim_cp_prologue_vtol_hangar_bundle");
         var_2ef9d306 = getent("vtol_hangar_drop", "targetname");
-        var_2ef9d306 thread namespace_2cb3876f::function_d723979e("swap_vtol_to_destroyed", "veh_t7_mil_vtol_nrc_no_interior_d", "vtol_collapse_done");
-        level notify(#"hash_1d072da3");
-        level util::delay(0.5, undefined, &namespace_d51ba4::function_ce858cd3, 1);
+        var_2ef9d306 thread cp_prologue_util::function_d723979e("swap_vtol_to_destroyed", "veh_t7_mil_vtol_nrc_no_interior_d", "vtol_collapse_done");
+        level notify(#"vtol_collapse_done");
+        level util::delay(0.5, undefined, &Hangar::function_ce858cd3, 1);
         var_ac769486 = getent("clip_player_vtol_collapse_backtrack_doorway", "targetname");
         var_ac769486 movez(100 * -1, 0.05);
         mdl_door_left = getent("vtol_hangar_in_l", "targetname");
@@ -878,7 +878,7 @@ function function_ddf114c9(str_objective, var_74cd64bc) {
     }
     level thread scene::play("p7_fxanim_cp_prologue_plane_hanger_pristine_bundle");
     function_77d9dff("objective_jeep_alley_init");
-    namespace_30207c6f::function_910f2aa();
+    jeep_alley::function_910f2aa();
 }
 
 // Namespace cp_mi_eth_prologue
@@ -900,16 +900,16 @@ function function_d714762b(str_objective, var_74cd64bc) {
     level.var_5d4087a6 shared::stowweapon(var_61b253a2, (-8, 4, 14), (90, 0, 0));
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_2cb3876f::function_34acbf2();
-        namespace_2cb3876f::function_df278013();
-        namespace_2cb3876f::function_9d35b20d();
+        cp_prologue_util::function_34acbf2();
+        cp_prologue_util::function_df278013();
+        cp_prologue_util::function_9d35b20d();
         level.var_f58c9f31 = util::function_740f8516("theia");
         level.var_9db406db = util::function_740f8516("khalil");
         level.var_4d5a4697 = util::function_740f8516("minister");
         level.var_2fd26037 = util::function_740f8516("hendricks");
         skipto::teleport_ai(str_objective, level.heroes);
-        level scene::add_scene_func("cin_pro_11_01_jeepalley_vign_engage_attack", &namespace_30207c6f::function_cf946de6);
-        level scene::add_scene_func("cin_pro_11_01_jeepalley_vign_engage_attack", &namespace_30207c6f::function_7af067f4, "done");
+        level scene::add_scene_func("cin_pro_11_01_jeepalley_vign_engage_attack", &jeep_alley::function_cf946de6);
+        level scene::add_scene_func("cin_pro_11_01_jeepalley_vign_engage_attack", &jeep_alley::function_7af067f4, "done");
         level thread scene::skipto_end("cin_pro_11_01_jeepalley_vign_engage_attack", undefined, undefined, 0.8);
         scene::play("p7_fxanim_cp_prologue_plane_hanger_explode_bundle");
         level.var_35c12e63 = struct::get("bridge_obj", "targetname");
@@ -918,7 +918,7 @@ function function_d714762b(str_objective, var_74cd64bc) {
         trigger::use("jeep_alley_allies_move", "targetname");
     }
     function_77d9dff("objective_bridge_battle_init");
-    namespace_dc79b4d3::function_b86981e6();
+    bridge_battle::function_b86981e6();
 }
 
 // Namespace cp_mi_eth_prologue
@@ -945,7 +945,7 @@ function function_47b85bb4(name, var_74cd64bc, var_e4cd2b8b, player) {
         var_8de6057e delete();
     }
     showmiscmodels("fxanim_bridge_static2");
-    level notify(#"hash_800cbac6");
+    level notify(#"bridge_battle_done");
     function_77d9dff("bridge_battle_done");
 }
 
@@ -956,9 +956,9 @@ function function_47b85bb4(name, var_74cd64bc, var_e4cd2b8b, player) {
 function function_32dc1c24(str_objective, var_74cd64bc) {
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_2cb3876f::function_34acbf2();
-        namespace_2cb3876f::function_df278013();
-        namespace_2cb3876f::function_9d35b20d();
+        cp_prologue_util::function_34acbf2();
+        cp_prologue_util::function_df278013();
+        cp_prologue_util::function_9d35b20d();
         level.var_5d4087a6 = util::function_740f8516("hyperion");
         level.var_9db406db = util::function_740f8516("khalil");
         level.var_4d5a4697 = util::function_740f8516("minister");
@@ -971,7 +971,7 @@ function function_32dc1c24(str_objective, var_74cd64bc) {
         skipto::teleport_ai(str_objective, level.heroes);
     }
     function_77d9dff("objective_dark_battle_init");
-    namespace_36e484c6::function_6feca657();
+    dark_battle::function_6feca657();
 }
 
 // Namespace cp_mi_eth_prologue
@@ -1008,18 +1008,18 @@ function function_5ee97c17(name, var_74cd64bc, var_e4cd2b8b, player) {
     e_collision = getent("hangar_vtol_crash_clip", "targetname");
     e_collision connectpaths();
     e_collision delete();
-    wait(0.05);
+    wait 0.05;
     e_door = getent("hall_door_slide_right", "targetname");
     e_door connectpaths();
     e_door delete();
-    wait(0.05);
+    wait 0.05;
     e_door = getent("hall_door_slide_left", "targetname");
     e_door connectpaths();
     e_door delete();
     trigger::use("t_motorpool_spawns_disable", "targetname");
-    var_9a246ea8 = getent("t_robot_horde_oob", "targetname");
-    if (isdefined(var_9a246ea8)) {
-        var_9a246ea8 triggerenable(0);
+    t_robot_horde_oob = getent("t_robot_horde_oob", "targetname");
+    if (isdefined(t_robot_horde_oob)) {
+        t_robot_horde_oob triggerenable(0);
     }
 }
 
@@ -1031,9 +1031,9 @@ function function_30f4cc7b(str_objective, var_74cd64bc) {
     level.var_92d245e2 = util::function_740f8516("prometheus");
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_2cb3876f::function_34acbf2();
-        namespace_2cb3876f::function_df278013();
-        namespace_2cb3876f::function_9d35b20d();
+        cp_prologue_util::function_34acbf2();
+        cp_prologue_util::function_df278013();
+        cp_prologue_util::function_9d35b20d();
         objectives::complete("cp_level_prologue_escort_data_center");
         objectives::set("cp_level_prologue_find_vehicle");
         level.var_2fd26037 = util::function_740f8516("hendricks");
@@ -1042,13 +1042,13 @@ function function_30f4cc7b(str_objective, var_74cd64bc) {
         level.var_4d5a4697 = util::function_740f8516("minister");
         var_61b253a2 = getweapon("sniper_fastbolt_hero", "extclip", "fastreload");
         level.var_5d4087a6 shared::stowweapon(var_61b253a2, (-8, 4, 14), (90, 0, 0));
-        level thread namespace_36e484c6::function_25c6144e();
+        level thread dark_battle::function_25c6144e();
         level scene::init("p7_fxanim_cp_prologue_vtol_tackle_windows_bundle");
         load::function_a2995f22();
         array::thread_all(level.players, &clientfield::set_to_player, "turn_off_tacmode_vfx", 1);
         array::thread_all(level.players, &oed::function_35ce409, 0);
         array::thread_all(level.players, &oed::function_12a9df06, 0);
-        spawner::add_spawn_function_group("initial_vtol_guys", "targetname", &namespace_2cb3876f::function_35be2939, "vtol_has_crashed");
+        spawner::add_spawn_function_group("initial_vtol_guys", "targetname", &cp_prologue_util::function_35be2939, "vtol_has_crashed");
         spawn_manager::enable("vtol_tackle_spwn_mgr2");
         skipto::teleport_ai(str_objective, level.heroes);
     }
@@ -1062,7 +1062,7 @@ function function_30f4cc7b(str_objective, var_74cd64bc) {
 // Checksum 0x52963da3, Offset: 0x74c8
 // Size: 0xb4
 function function_c16332e4(name, var_74cd64bc, var_e4cd2b8b, player) {
-    s_door = level.var_3f831f3b["scene"]["cin_pro_15_01_opendoor_vign_getinside_new_hendricks_and_prometheus"].objects[2];
+    s_door = level.scriptbundles["scene"]["cin_pro_15_01_opendoor_vign_getinside_new_hendricks_and_prometheus"].objects[2];
     s_door.firstframe = 1;
     s_door.spawnoninit = 1;
     level scene::init("cin_pro_15_01_opendoor_vign_getinside_new_hendricks_and_prometheus");
@@ -1078,9 +1078,9 @@ function function_34495a26(str_objective, var_74cd64bc) {
     level.var_f58c9f31 = util::function_740f8516("theia");
     if (var_74cd64bc) {
         load::function_73adcefc();
-        namespace_2cb3876f::function_34acbf2();
-        namespace_2cb3876f::function_df278013();
-        namespace_2cb3876f::function_9d35b20d();
+        cp_prologue_util::function_34acbf2();
+        cp_prologue_util::function_df278013();
+        cp_prologue_util::function_9d35b20d();
         objectives::complete("cp_level_prologue_escort_data_center");
         objectives::set("cp_level_prologue_find_vehicle");
         level.var_f58c9f31 = util::function_740f8516("theia");
@@ -1090,7 +1090,7 @@ function function_34495a26(str_objective, var_74cd64bc) {
         level.var_2fd26037 = util::function_740f8516("hendricks");
         level.var_92d245e2 = util::function_740f8516("prometheus");
         skipto::teleport_ai(str_objective, level.heroes);
-        level namespace_2cb3876f::function_6a5f89cb("skipto_robot_horde_ai");
+        level cp_prologue_util::function_6a5f89cb("skipto_robot_horde_ai");
         load::function_a2995f22();
     }
     function_77d9dff("objective_robot_horde_init");
@@ -1113,7 +1113,7 @@ function function_373c7d0a(str_objective, var_74cd64bc) {
     function_77d9dff("objective_robot_defend_init");
     if (var_74cd64bc) {
         load::function_73adcefc();
-        level thread namespace_2cb3876f::function_cfabe921();
+        level thread cp_prologue_util::function_cfabe921();
         level.var_2fd26037 = util::function_740f8516("hendricks");
         level.var_4d5a4697 = util::function_740f8516("minister");
         level.var_9db406db = util::function_740f8516("khalil");
@@ -1121,10 +1121,10 @@ function function_373c7d0a(str_objective, var_74cd64bc) {
         level.apc vehicle::lights_off();
         level thread scene::skipto_end("cin_pro_17_01_robotdefend_vign_apc_exit_apc");
         load::function_a2995f22();
-        level namespace_2cb3876f::function_6a5f89cb("skipto_robot_defend");
+        level cp_prologue_util::function_6a5f89cb("skipto_robot_defend");
         level flag::set("apc_done");
-        var_c1767e6 = getent("m_tunnel_vtol_death", "targetname");
-        var_c1767e6 show();
+        m_tunnel_vtol_death = getent("m_tunnel_vtol_death", "targetname");
+        m_tunnel_vtol_death show();
         exploder::exploder("fx_exploder_vtol_crash_rail");
         level flag::set("apc_unlocked");
         level thread apc::function_599ebca1();
@@ -1165,7 +1165,7 @@ function function_b5502f69() {
 // Size: 0x4a
 function function_d287c569(name, var_74cd64bc, var_e4cd2b8b, player) {
     function_77d9dff("robot_defend_done");
-    level notify(#"hash_7d7d7481");
+    level notify(#"robot_defend_done");
 }
 
 // Namespace cp_mi_eth_prologue
@@ -1173,7 +1173,7 @@ function function_d287c569(name, var_74cd64bc, var_e4cd2b8b, player) {
 // Checksum 0x30762fa6, Offset: 0x7ce8
 // Size: 0x34
 function function_77d9dff(msg) {
-    println("cg_viewVehicleInfluenceGunner_mode" + msg);
+    println("<dev string:x28>" + msg);
 }
 
 // Namespace cp_mi_eth_prologue

@@ -8,9 +8,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_33ed1c33;
+#namespace _gadget_ravage_core;
 
-// Namespace namespace_33ed1c33
+// Namespace _gadget_ravage_core
 // Params 0, eflags: 0x2
 // Checksum 0x78ca9466, Offset: 0x1f0
 // Size: 0x34
@@ -18,7 +18,7 @@ function autoexec function_2dc19561() {
     system::register("gadget_ravage_core", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_33ed1c33
+// Namespace _gadget_ravage_core
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x230
 // Size: 0x4

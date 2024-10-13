@@ -16,9 +16,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_c75c206a;
+#namespace zm_tomb_ee_main_step_2;
 
-// Namespace namespace_c75c206a
+// Namespace zm_tomb_ee_main_step_2
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfca571da, Offset: 0x408
 // Size: 0x54
@@ -26,7 +26,7 @@ function init() {
     namespace_6e97c459::function_5a90ed82("little_girl_lost", "step_2", &init_stage, &function_7747c56, &function_cc3f3f6a);
 }
 
-// Namespace namespace_c75c206a
+// Namespace zm_tomb_ee_main_step_2
 // Params 0, eflags: 0x1 linked
 // Checksum 0x536546da, Offset: 0x468
 // Size: 0xfa
@@ -41,22 +41,22 @@ function init_stage() {
     }
 }
 
-// Namespace namespace_c75c206a
+// Namespace zm_tomb_ee_main_step_2
 // Params 0, eflags: 0x1 linked
 // Checksum 0x57fad352, Offset: 0x570
 // Size: 0xac
 function function_7747c56() {
     /#
-        iprintln(level.var_ca733eed + "unitrigger_radius_use");
+        iprintln(level.var_ca733eed + "<dev string:x28>");
     #/
     level flag::wait_till("ee_all_staffs_placed");
     playsoundatposition("zmb_squest_robot_alarm_blast", (-14, -1, 871));
-    wait(3);
+    wait 3;
     util::wait_network_frame();
     namespace_6e97c459::function_2f3ced1f("little_girl_lost", level.var_ca733eed);
 }
 
-// Namespace namespace_c75c206a
+// Namespace zm_tomb_ee_main_step_2
 // Params 1, eflags: 0x1 linked
 // Checksum 0xcb690c82, Offset: 0x628
 // Size: 0x1a2
@@ -69,20 +69,20 @@ function function_cc3f3f6a(success) {
         util::wait_network_frame();
     }
     foreach (var_5ec0aa73 in level.var_b0d8f1fe) {
-        var_59fc9a02 = namespace_f7a613cf::function_9b485a9(var_5ec0aa73.w_weapon, 0);
+        var_59fc9a02 = zm_tomb_craftables::function_9b485a9(var_5ec0aa73.w_weapon, 0);
         var_59fc9a02.var_260a328b = undefined;
     }
     level notify(#"hash_4c5352e3");
 }
 
-// Namespace namespace_c75c206a
+// Namespace zm_tomb_ee_main_step_2
 // Params 0, eflags: 0x1 linked
 // Checksum 0x809eb3bb, Offset: 0x7d8
 // Size: 0x16c
 function function_fa6a0ef1() {
     playfx(level._effect["teleport_1p"], self.var_80ee51c0.origin);
     playsoundatposition("zmb_footprintbox_disappear", self.var_80ee51c0.origin);
-    wait(3);
+    wait 3;
     if (isdefined(self.var_80ee51c0.var_6226d45)) {
         self.var_80ee51c0.var_6226d45 unlink();
         self.var_80ee51c0.var_6226d45.origin = self.var_80ee51c0.var_8ebd504;
@@ -95,14 +95,14 @@ function function_fa6a0ef1() {
     zm_unitrigger::unregister_unitrigger(self);
 }
 
-// Namespace namespace_c75c206a
+// Namespace zm_tomb_ee_main_step_2
 // Params 1, eflags: 0x1 linked
 // Checksum 0xfb7ba83d, Offset: 0x950
 // Size: 0x414
 function function_db8d80b0(unitrigger_stub) {
     playfx(level._effect["teleport_1p"], unitrigger_stub.origin);
     playsoundatposition("zmb_footprintbox_disappear", unitrigger_stub.origin);
-    wait(3);
+    wait 3;
     unitrigger_stub.radius = 50;
     unitrigger_stub.height = 256;
     unitrigger_stub.script_unitrigger_type = "unitrigger_radius_use";
@@ -125,16 +125,16 @@ function function_db8d80b0(unitrigger_stub) {
     var_8c08a132 hidepart("j_lightning");
     var_8c08a132 hidepart("j_wind");
     switch (unitrigger_stub.script_noteworthy) {
-    case 20:
+    case "fire":
         var_8c08a132 showpart("j_fire");
         break;
-    case 22:
+    case "water":
         var_8c08a132 showpart("j_ice");
         break;
-    case 21:
+    case "lightning":
         var_8c08a132 showpart("j_lightning");
         break;
-    case 19:
+    case "air":
         var_8c08a132 showpart("j_wind");
         break;
     }
@@ -144,7 +144,7 @@ function function_db8d80b0(unitrigger_stub) {
     zm_unitrigger::register_static_unitrigger(unitrigger_stub, &function_62339bcc);
 }
 
-// Namespace namespace_c75c206a
+// Namespace zm_tomb_ee_main_step_2
 // Params 0, eflags: 0x1 linked
 // Checksum 0xa962f0fb, Offset: 0xd70
 // Size: 0x178
@@ -152,13 +152,13 @@ function function_62339bcc() {
     self endon(#"kill_trigger");
     var_94300349 = "staff_" + self.script_noteworthy;
     var_5ec0aa73 = level.var_b0d8f1fe[var_94300349].w_weapon;
-    var_59fc9a02 = namespace_f7a613cf::function_9b485a9(var_5ec0aa73, 0);
+    var_59fc9a02 = zm_tomb_craftables::function_9b485a9(var_5ec0aa73, 0);
     while (true) {
         player = self waittill(#"trigger");
         if (player hasweapon(var_59fc9a02.w_weapon)) {
             var_59fc9a02.var_260a328b = 1;
             player takeweapon(var_59fc9a02.w_weapon);
-            namespace_f7a613cf::function_abd72df3(var_59fc9a02.w_weapon);
+            zm_tomb_craftables::function_abd72df3(var_59fc9a02.w_weapon);
             level.var_5ec263fe++;
             if (level.var_5ec263fe == 4) {
                 level flag::set("ee_all_staffs_placed");
@@ -168,7 +168,7 @@ function function_62339bcc() {
     }
 }
 
-// Namespace namespace_c75c206a
+// Namespace zm_tomb_ee_main_step_2
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7fed698d, Offset: 0xef0
 // Size: 0x114

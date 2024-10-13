@@ -245,7 +245,7 @@ function is_wallbuy(w_to_check) {
 // Size: 0x1c4
 function wallbuy_player_connect(localclientnum) {
     keys = getarraykeys(level._active_wallbuys);
-    println("sickle_upgrade" + localclientnum);
+    println("<dev string:x28>" + localclientnum);
     for (i = 0; i < keys.size; i++) {
         wallbuy = level._active_wallbuys[keys[i]];
         fx = level._effect["870mcs_zm_fx"];
@@ -267,11 +267,11 @@ function wallbuy_player_connect(localclientnum) {
 function wallbuy_callback(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (binitialsnap) {
         while (!isdefined(level._active_wallbuys) || !isdefined(level._active_wallbuys[fieldname])) {
-            wait(0.05);
+            wait 0.05;
         }
     }
     struct = level._active_wallbuys[fieldname];
-    println("sickle_upgrade" + localclientnum);
+    println("<dev string:x3e>" + localclientnum);
     switch (newval) {
     case 0:
         struct.models[localclientnum].origin = struct.models[localclientnum].parent_struct.origin;
@@ -282,16 +282,16 @@ function wallbuy_callback(localclientnum, oldval, newval, bnewent, binitialsnap,
         if (binitialsnap) {
             if (!isdefined(struct.models)) {
                 while (!isdefined(struct.models)) {
-                    wait(0.05);
+                    wait 0.05;
                 }
                 while (!isdefined(struct.models[localclientnum])) {
-                    wait(0.05);
+                    wait 0.05;
                 }
             }
             struct.models[localclientnum] show();
             struct.models[localclientnum].origin = struct.models[localclientnum].parent_struct.origin;
         } else {
-            wait(0.05);
+            wait 0.05;
             if (localclientnum == 0) {
                 playsound(0, "zmb_weap_wall", struct.origin);
             }

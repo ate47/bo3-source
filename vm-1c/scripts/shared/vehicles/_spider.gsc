@@ -31,7 +31,7 @@ function autoexec function_2dc19561() {
 function __init__() {
     vehicle::add_main_callback("spider", &function_324383cf);
     /#
-        setdvar("meleeCombat", 0);
+        setdvar("<dev string:x28>", 0);
     #/
 }
 
@@ -143,7 +143,7 @@ function function_4a95b514(enemy) {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["meleeCombat"] = mapfloat(0, prefereddistawayfromorigin, 0, 300, point.disttoorigin2d);
+            point._scoredebug["<dev string:x3e>"] = mapfloat(0, prefereddistawayfromorigin, 0, 300, point.disttoorigin2d);
         #/
         point.score += mapfloat(0, prefereddistawayfromorigin, 0, 300, point.disttoorigin2d);
         if (point.inclaimedlocation) {
@@ -151,7 +151,7 @@ function function_4a95b514(enemy) {
                 if (!isdefined(point._scoredebug)) {
                     point._scoredebug = [];
                 }
-                point._scoredebug["meleeCombat"] = -500;
+                point._scoredebug["<dev string:x4b>"] = -500;
             #/
             point.score += -500;
         }
@@ -159,14 +159,14 @@ function function_4a95b514(enemy) {
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["meleeCombat"] = randomfloatrange(0, randomness);
+            point._scoredebug["<dev string:x5d>"] = randomfloatrange(0, randomness);
         #/
         point.score += randomfloatrange(0, randomness);
         /#
             if (!isdefined(point._scoredebug)) {
                 point._scoredebug = [];
             }
-            point._scoredebug["meleeCombat"] = point.distawayfromengagementarea * -1;
+            point._scoredebug["<dev string:x64>"] = point.distawayfromengagementarea * -1;
         #/
         point.score += point.distawayfromengagementarea * -1;
         if (point.score > best_score) {
@@ -182,7 +182,7 @@ function function_4a95b514(enemy) {
         return undefined;
     }
     /#
-        if (isdefined(getdvarint("meleeCombat")) && getdvarint("meleeCombat")) {
+        if (isdefined(getdvarint("<dev string:x73>")) && getdvarint("<dev string:x73>")) {
             recordline(self.origin, best_point.origin, (0.3, 1, 0));
             recordline(self.origin, enemy.origin, (1, 0, 0.4));
         }
@@ -214,15 +214,15 @@ function function_871ab92b(params) {
     for (;;) {
         if (!isdefined(self.enemy)) {
             self force_get_enemies();
-            wait(0.1);
+            wait 0.1;
             continue;
         } else if (self.dont_move === 1) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (isdefined(self.var_26115c14)) {
             if (!self [[ self.var_26115c14 ]]()) {
-                wait(0.1);
+                wait 0.1;
                 continue;
             }
         }
@@ -236,7 +236,7 @@ function function_871ab92b(params) {
                 self vehicle_ai::waittill_pathing_done();
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -249,7 +249,7 @@ function function_fba2b8dc() {
     self endon(#"death");
     for (;;) {
         if (!isdefined(self.enemy)) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         state_params = spawnstruct();
@@ -271,10 +271,10 @@ function function_fba2b8dc() {
             }
             if (distance2dsquared(self.origin, self.enemy.origin) < self.settings.engagementdistmax * 1.5 * self.settings.engagementdistmax * 1.5 && vehicle_ai::iscooldownready("rocket") && self function_4246bc05(self.enemy)) {
                 self function_8959bf3f(self.enemy);
-                wait(0.5);
+                wait 0.5;
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -296,7 +296,7 @@ function function_8959bf3f(enemy) {
     var_278525e3 = gettime();
     while (anglediff > var_cd8c9d1a && vehicle_ai::timesince(var_278525e3) < 0.8) {
         anglediff = absangleclamp180(self.angles[1] - goalangles[1]);
-        wait(0.05);
+        wait 0.05;
     }
     self vehicle_ai::clearallmovement(1);
     if (anglediff <= var_cd8c9d1a) {
@@ -363,7 +363,7 @@ function function_1336e598(params) {
     self setspeed(self.settings.defaultmovespeed * 1.5);
     self asmrequestsubstate("locomotion@aggressive");
     self.dont_move = undefined;
-    wait(0.5);
+    wait 0.5;
     for (;;) {
         foreach (player in level.players) {
             self getperfectinfo(player, 1);
@@ -373,15 +373,15 @@ function function_1336e598(params) {
         }
         if (!isdefined(self.enemy)) {
             self force_get_enemies();
-            wait(0.1);
+            wait 0.1;
             continue;
         } else if (self.dont_move === 1) {
-            wait(0.1);
+            wait 0.1;
             continue;
         }
         if (isdefined(self.var_26115c14)) {
             if (!self [[ self.var_26115c14 ]]()) {
-                wait(0.1);
+                wait 0.1;
                 continue;
             }
         }
@@ -398,14 +398,14 @@ function function_1336e598(params) {
                         if (!isdefined(point._scoredebug)) {
                             point._scoredebug = [];
                         }
-                        point._scoredebug["meleeCombat"] = mapfloat(0, -56, 0, -200, distance(point.origin, queryresult.origin));
+                        point._scoredebug["<dev string:x3e>"] = mapfloat(0, -56, 0, -200, distance(point.origin, queryresult.origin));
                     #/
                     point.score += mapfloat(0, -56, 0, -200, distance(point.origin, queryresult.origin));
                     /#
                         if (!isdefined(point._scoredebug)) {
                             point._scoredebug = [];
                         }
-                        point._scoredebug["meleeCombat"] = mapfloat(50, -56, 0, -200, abs(point.origin[2] - queryresult.origin[2]));
+                        point._scoredebug["<dev string:x8b>"] = mapfloat(50, -56, 0, -200, abs(point.origin[2] - queryresult.origin[2]));
                     #/
                     point.score += mapfloat(50, -56, 0, -200, abs(point.origin[2] - queryresult.origin[2]));
                     if (point.inclaimedlocation === 1) {
@@ -413,7 +413,7 @@ function function_1336e598(params) {
                             if (!isdefined(point._scoredebug)) {
                                 point._scoredebug = [];
                             }
-                            point._scoredebug["meleeCombat"] = -500;
+                            point._scoredebug["<dev string:x4b>"] = -500;
                         #/
                         point.score += -500;
                     }
@@ -443,18 +443,18 @@ function function_1336e598(params) {
                     self setpersonalthreatbias(self.enemy, -2000, 5);
                 }
             }
-            wait(0.1);
+            wait 0.1;
             queryresult = positionquery_source_navigation(self.origin, 0, self.settings.max_move_dist, self.settings.max_move_dist, self.radius, self);
             if (queryresult.data.size) {
                 point = queryresult.data[randomint(queryresult.data.size)];
                 self setvehgoalpos(point.origin, 0, 0);
                 self.current_pathto_pos = undefined;
                 self thread function_cb06aa1d();
-                wait(2);
+                wait 2;
                 self notify(#"near_goal");
             }
         }
-        wait(0.2);
+        wait 0.2;
     }
 }
 
@@ -469,7 +469,7 @@ function function_ba139f03() {
         state_params = spawnstruct();
         state_params.var_9665e95e = 1;
         if (!isdefined(self.enemy)) {
-            wait(0.1);
+            wait 0.1;
             self vehicle_ai::evaluate_connections(undefined, state_params);
             continue;
         }
@@ -481,10 +481,10 @@ function function_ba139f03() {
         if (distance2dsquared(self.origin, self.enemy.origin) < self.settings.var_52e9fd3c * self.settings.var_52e9fd3c && self function_4246bc05(self.enemy)) {
             if (bullettracepassed(self.origin + (0, 0, 10), self.enemy.origin + (0, 0, 20), 0, self, self.enemy, 0, 1)) {
                 self function_e0748df2(self.enemy);
-                wait(0.5);
+                wait 0.5;
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -542,7 +542,7 @@ function prevent_stuck() {
     self endon(#"death");
     self notify(#"end_prevent_stuck");
     self endon(#"end_prevent_stuck");
-    wait(2);
+    wait 2;
     count = 0;
     previous_origin = undefined;
     while (true) {
@@ -555,7 +555,7 @@ function prevent_stuck() {
         if (count > 10) {
             self.pathfailcount = 10;
         }
-        wait(1);
+        wait 1;
     }
 }
 
@@ -624,18 +624,18 @@ function function_cb06aa1d() {
     self endon(#"reached_end_node");
     self notify(#"hash_5ce56002");
     self endon(#"hash_5ce56002");
-    wait(0.1);
+    wait 0.1;
     while (true) {
         if (isdefined(self.current_pathto_pos)) {
             if (distance2dsquared(self.current_pathto_pos, self.goalpos) > self.goalradius * self.goalradius) {
-                wait(0.5);
+                wait 0.5;
                 self notify(#"near_goal");
             }
             targetpos = function_c56b4eb5();
             if (isdefined(targetpos)) {
                 if (distancesquared(self.origin, targetpos) > 1000 * 1000) {
                     repath_range = self.settings.repath_range * 2;
-                    wait(0.1);
+                    wait 0.1;
                 } else {
                     repath_range = self.settings.repath_range;
                 }
@@ -656,10 +656,10 @@ function function_cb06aa1d() {
                 speedtouse = self.settings.defaultmovespeed * 2;
                 self setspeed(speedtouse);
             }
-            wait(0.2);
+            wait 0.2;
             continue;
         }
-        wait(0.4);
+        wait 0.4;
     }
 }
 

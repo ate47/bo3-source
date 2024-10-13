@@ -23,7 +23,7 @@ class cscriptbundleobjectbase {
             if ([[ self.var_190b1ea2 ]]->is_testing()) {
                 scriptbundle::error_on_screen(str_msg);
             } else {
-                assertmsg([[ self.var_190b1ea2 ]]->get_type() + "<unknown string>" + [[ self.var_190b1ea2 ]]->get_name() + "<unknown string>" + (isdefined("<unknown string>") ? "<unknown string>" + "<unknown string>" : isdefined(self._s.name) ? "<unknown string>" + self._s.name : "<unknown string>") + "<unknown string>" + str_msg);
+                assertmsg([[ self.var_190b1ea2 ]]->get_type() + "<dev string:x46>" + [[ self.var_190b1ea2 ]]->get_name() + "<dev string:x48>" + (isdefined("<dev string:x4d>") ? "<dev string:x4c>" + "<dev string:x4d>" : isdefined(self._s.name) ? "<dev string:x4c>" + self._s.name : "<dev string:x4c>") + "<dev string:x55>" + str_msg);
             }
             thread [[ self.var_190b1ea2 ]]->on_error();
             return true;
@@ -36,7 +36,7 @@ class cscriptbundleobjectbase {
     // Checksum 0xb01247da, Offset: 0x1c8
     // Size: 0xbc
     function log(str_msg) {
-        println([[ self.var_190b1ea2 ]]->get_type() + "<unknown string>" + [[ self.var_190b1ea2 ]]->get_name() + "<unknown string>" + (isdefined("<unknown string>") ? "<unknown string>" + "<unknown string>" : isdefined(self._s.name) ? "<unknown string>" + self._s.name : "<unknown string>") + "<unknown string>" + str_msg);
+        println([[ self.var_190b1ea2 ]]->get_type() + "<dev string:x46>" + [[ self.var_190b1ea2 ]]->get_name() + "<dev string:x48>" + (isdefined("<dev string:x4d>") ? "<dev string:x4c>" + "<dev string:x4d>" : isdefined(self._s.name) ? "<dev string:x4c>" + self._s.name : "<dev string:x4c>") + "<dev string:x55>" + str_msg);
     }
 
     // Namespace cscriptbundleobjectbase
@@ -47,7 +47,7 @@ class cscriptbundleobjectbase {
         self._s = s_objdef;
         self.var_190b1ea2 = o_bundle;
         if (isdefined(e_ent)) {
-            assert(!isdefined(localclientnum) || e_ent.localclientnum == localclientnum, "<unknown string>");
+            assert(!isdefined(localclientnum) || e_ent.localclientnum == localclientnum, "<dev string:x28>");
             self._n_clientnum = e_ent.localclientnum;
             self._e_array[self._n_clientnum] = e_ent;
             return;
@@ -81,7 +81,7 @@ class cscriptbundlebase {
         if (condition) {
             if (self._testing) {
             } else {
-                assertmsg(self._s.type + "<unknown string>" + self._str_name + "<unknown string>" + str_msg);
+                assertmsg(self._s.type + "<dev string:x46>" + self._str_name + "<dev string:x58>" + str_msg);
             }
             thread on_error();
             return true;
@@ -94,7 +94,7 @@ class cscriptbundlebase {
     // Checksum 0xa969e1b3, Offset: 0x710
     // Size: 0x54
     function log(str_msg) {
-        println(self._s.type + "<unknown string>" + self._str_name + "<unknown string>" + str_msg);
+        println(self._s.type + "<dev string:x46>" + self._str_name + "<dev string:x58>" + str_msg);
     }
 
     // Namespace cscriptbundlebase

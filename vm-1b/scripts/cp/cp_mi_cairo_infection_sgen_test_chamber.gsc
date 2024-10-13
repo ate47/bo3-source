@@ -17,21 +17,21 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_9ac99a6e;
+#namespace sgen_test_chamber;
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 0, eflags: 0x0
 // Checksum 0x9509f345, Offset: 0x6a8
 // Size: 0x3a
 function main() {
     /#
-        iprintlnbold("c_spc_decayman_stage3_fb");
+        iprintlnbold("<dev string:x28>");
     #/
     init_client_field_callback_funcs();
     function_7b244c18();
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 0, eflags: 0x0
 // Checksum 0x19cc8ee0, Offset: 0x6f0
 // Size: 0xca
@@ -43,7 +43,7 @@ function init_client_field_callback_funcs() {
     clientfield::register("world", "fxanim_time_lapse_objects", 1, 1, "int");
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 0, eflags: 0x0
 // Checksum 0x1db39b6c, Offset: 0x7c8
 // Size: 0x152
@@ -57,7 +57,7 @@ function function_7b244c18() {
     scene::add_scene_func("cin_inf_04_humanlabdeath_3rd_sh150", &function_c43d862, "play");
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 0, eflags: 0x0
 // Checksum 0x61dc954a, Offset: 0x928
 // Size: 0x6b
@@ -67,7 +67,7 @@ function function_c467cbf() {
     }
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 1, eflags: 0x0
 // Checksum 0x54b2984d, Offset: 0x9a0
 // Size: 0x13
@@ -75,7 +75,7 @@ function function_ee093b22(var_38fa6e84) {
     level notify(#"hash_b4468c2e");
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 1, eflags: 0x0
 // Checksum 0x94bb160b, Offset: 0x9c0
 // Size: 0x1a
@@ -83,7 +83,7 @@ function function_eabb935c(var_38fa6e84) {
     level util::function_d8eaed3d(6);
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 1, eflags: 0x0
 // Checksum 0xd9d423f5, Offset: 0x9e8
 // Size: 0x4a
@@ -95,7 +95,7 @@ function function_c43d862(var_38fa6e84) {
     }
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 1, eflags: 0x0
 // Checksum 0x941d703a, Offset: 0xa40
 // Size: 0x103
@@ -110,7 +110,7 @@ function function_fd16dd41(var_38fa6e84) {
     }
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 0, eflags: 0x0
 // Checksum 0x6375ba67, Offset: 0xb50
 // Size: 0x1a
@@ -118,13 +118,13 @@ function function_a29f7cbd() {
     level scene::init("cin_inf_04_humanlabdeath_3rd_sh010");
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 2, eflags: 0x0
 // Checksum 0xb885904, Offset: 0xb78
 // Size: 0x1ea
 function function_c568c95b(str_objective, var_74cd64bc) {
     /#
-        iprintlnbold("<unknown string>");
+        iprintlnbold("<dev string:x40>");
     #/
     level clientfield::set("sgen_test_chamber_pod_graphics", 1);
     if (var_74cd64bc) {
@@ -148,7 +148,7 @@ function function_c568c95b(str_objective, var_74cd64bc) {
     skipto::function_be8adfb8("sgen_test_chamber");
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 0, eflags: 0x0
 // Checksum 0xd6aebf6a, Offset: 0xd70
 // Size: 0x52
@@ -161,23 +161,23 @@ function function_7711faaf() {
 
 /#
 
-    // Namespace namespace_9ac99a6e
+    // Namespace sgen_test_chamber
     // Params 4, eflags: 0x0
     // Checksum 0xadd0743f, Offset: 0xdd0
     // Size: 0x3a
     function function_7985eb71(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
-        iprintlnbold("<unknown string>");
+        iprintlnbold("<dev string:x57>");
     }
 
 #/
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 2, eflags: 0x0
 // Checksum 0xd6648e62, Offset: 0xe18
 // Size: 0x10a
 function function_21e8c919(str_objective, var_74cd64bc) {
     /#
-        iprintlnbold("<unknown string>");
+        iprintlnbold("<dev string:x6e>");
     #/
     if (!var_74cd64bc) {
         videostop("cp_infection_env_timelapse_fail");
@@ -196,7 +196,7 @@ function function_21e8c919(str_objective, var_74cd64bc) {
     skipto::function_be8adfb8("time_lapse");
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 0, eflags: 0x0
 // Checksum 0x6cb820fb, Offset: 0xf30
 // Size: 0xa2
@@ -205,17 +205,17 @@ function function_b99b8b97() {
     scene::add_scene_func("cin_inf_04_humanlabdeath_3rd_sh150", &function_d469a3e9, "done");
     level thread scene::play("cin_inf_04_humanlabdeath_3rd_sh150");
     level waittill(#"hash_c6e56c65");
-    wait(1);
+    wait 1;
     clientfield::set("sgen_test_chamber_time_lapse", 1);
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 1, eflags: 0x0
 // Checksum 0xb2790a59, Offset: 0xfe0
 // Size: 0x7a
 function function_888bbd49(a_ents) {
     /#
-        iprintlnbold("<unknown string>");
+        iprintlnbold("<dev string:x7e>");
     #/
     level thread function_a2b1036();
     var_bc282e3d = a_ents["decayedman"];
@@ -224,7 +224,7 @@ function function_888bbd49(a_ents) {
     util::screen_fade_out(0, "white");
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 0, eflags: 0x0
 // Checksum 0xa36de143, Offset: 0x1068
 // Size: 0x112
@@ -232,24 +232,24 @@ function function_ccc1a59f() {
     level endon(#"hash_d469a3e9");
     self waittill(#"hash_21b0eee7");
     level notify(#"hash_c6e56c65");
-    wait(1);
+    wait 1;
     self setmodel("c_spc_decayman_stage1_tout_fb");
     self clientfield::set("sgen_test_guys_decay", 1);
-    wait(1);
+    wait 1;
     self setmodel("c_spc_decayman_stage2_tin_fb");
-    wait(1);
+    wait 1;
     self setmodel("c_spc_decayman_stage2_fb");
-    wait(1);
+    wait 1;
     self setmodel("c_spc_decayman_stage2_tout_fb");
-    wait(1);
+    wait 1;
     self setmodel("c_spc_decayman_stage3_tin_fb");
-    wait(1);
+    wait 1;
     self setmodel("c_spc_decayman_stage3_fb");
-    wait(1.5);
+    wait 1.5;
     self setmodel("c_spc_decayman_stage4_fb");
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 1, eflags: 0x0
 // Checksum 0x7abd1aa2, Offset: 0x1188
 // Size: 0x13
@@ -257,7 +257,7 @@ function function_d469a3e9(a_ents) {
     level notify(#"hash_d469a3e9");
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 0, eflags: 0x0
 // Checksum 0x22f7a8ef, Offset: 0x11a8
 // Size: 0x1a
@@ -265,18 +265,18 @@ function function_27249631() {
     level thread clientfield::set("fxanim_time_lapse_objects", 1);
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 4, eflags: 0x0
 // Checksum 0xb39ce91e, Offset: 0x11d0
 // Size: 0x52
 function function_f7f4cbd3(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     /#
-        iprintlnbold("<unknown string>");
+        iprintlnbold("<dev string:x8b>");
     #/
     videostop("cp_infection_env_raventimelapse_ravens");
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 0, eflags: 0x0
 // Checksum 0x90144e51, Offset: 0x1230
 // Size: 0x1a
@@ -284,13 +284,13 @@ function function_a2b1036() {
     level scene::init("cin_inf_04_02_sarah_vign_01");
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 2, eflags: 0x0
 // Checksum 0x21861aee, Offset: 0x1258
 // Size: 0x1a2
 function function_621e0975(str_objective, var_74cd64bc) {
     /#
-        iprintlnbold("<unknown string>");
+        iprintlnbold("<dev string:x9b>");
     #/
     level util::function_d8eaed3d(3);
     videostart("cp_infection_env_timelapse_fail", 1);
@@ -318,18 +318,18 @@ function function_621e0975(str_objective, var_74cd64bc) {
     skipto::function_be8adfb8("cyber_soliders_invest");
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 4, eflags: 0x0
 // Checksum 0x37b6e709, Offset: 0x1408
 // Size: 0x52
 function function_790aa7af(str_objective, var_74cd64bc, var_e4cd2b8b, player) {
     /#
-        iprintlnbold("<unknown string>");
+        iprintlnbold("<dev string:xb6>");
     #/
     videostop("cp_infection_env_timelapse_fail");
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 1, eflags: 0x0
 // Checksum 0x96ecd40, Offset: 0x1468
 // Size: 0x52
@@ -341,7 +341,7 @@ function function_11c1cade(var_38fa6e84) {
     }
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 1, eflags: 0x0
 // Checksum 0xadcf626c, Offset: 0x14c8
 // Size: 0x5a
@@ -353,7 +353,7 @@ function function_6b291c0d(var_38fa6e84) {
     }
 }
 
-// Namespace namespace_9ac99a6e
+// Namespace sgen_test_chamber
 // Params 1, eflags: 0x0
 // Checksum 0xea7dae9c, Offset: 0x1530
 // Size: 0x32

@@ -189,7 +189,7 @@ function revive_hud_show_n_fade(time) {
 // Checksum 0xa29137ba, Offset: 0xa78
 // Size: 0x7e
 function function_fa369ede() {
-    assert(level.var_da98bf76, "bottom");
+    assert(level.var_da98bf76, "<dev string:x28>");
     if (level.var_da98bf76 && isdefined(self.var_5ad7ff7e) && isdefined(self.var_5ad7ff7e.var_5aa0f5d3)) {
         return max(0, self.var_5ad7ff7e.var_5aa0f5d3);
     }
@@ -201,8 +201,8 @@ function function_fa369ede() {
 // Checksum 0x8eab02c1, Offset: 0xb00
 // Size: 0xda
 function function_cd85ffaf(increment) {
-    assert(level.var_da98bf76, "bottom");
-    assert(isdefined(increment), "bottom");
+    assert(level.var_da98bf76, "<dev string:x28>");
+    assert(isdefined(increment), "<dev string:x56>");
     increment = isdefined(increment) ? increment : 0;
     self.var_5ad7ff7e.var_5aa0f5d3 = max(0, increment ? self.var_5ad7ff7e.var_5aa0f5d3 + 1 : self.var_5ad7ff7e.var_5aa0f5d3 - 1);
     self notify(#"hash_e4b1bf1f");
@@ -213,7 +213,7 @@ function function_cd85ffaf(increment) {
 // Checksum 0xb0221d88, Offset: 0xbe8
 // Size: 0x50
 function function_590a49b2() {
-    println("bottom");
+    println("<dev string:x7b>");
     self.var_5ad7ff7e = spawnstruct();
     self.var_5ad7ff7e.var_5aa0f5d3 = 0;
 }
@@ -258,7 +258,7 @@ function function_5006c91f() {
     self thread function_fed0ee90(hudelem);
     while (true) {
         hudelem setvalue(self.var_5ad7ff7e.var_8b479de8);
-        wait(0.05);
+        wait 0.05;
     }
 }
 

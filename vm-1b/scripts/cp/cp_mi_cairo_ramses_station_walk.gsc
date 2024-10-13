@@ -20,9 +20,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_7434c6b7;
+#namespace cp_mi_cairo_ramses_station_walk;
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 0, eflags: 0x0
 // Checksum 0xcae308fa, Offset: 0x1aa0
 // Size: 0xca
@@ -40,7 +40,7 @@ function main() {
     level skipto::function_be8adfb8("rs_walk_through");
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 0, eflags: 0x0
 // Checksum 0x489cbd28, Offset: 0x1b78
 // Size: 0x1e1
@@ -65,7 +65,7 @@ function function_dd2cc06c() {
                 player.var_2e3d01f0 = 0;
             }
         }
-        wait(1);
+        wait 1;
     }
     objectives::complete(str_objective, level.var_9db406db);
     foreach (player in level.players) {
@@ -73,7 +73,7 @@ function function_dd2cc06c() {
     }
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 1, eflags: 0x0
 // Checksum 0xaa4c3cca, Offset: 0x1d68
 // Size: 0x7a
@@ -84,7 +84,7 @@ function function_e29f0dd6(str_objective) {
     skipto::teleport_ai(str_objective);
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 0, eflags: 0x0
 // Checksum 0xe9c07cd6, Offset: 0x1df0
 // Size: 0x2
@@ -92,7 +92,7 @@ function function_93d2e417() {
     
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 0, eflags: 0x0
 // Checksum 0x641e7fc5, Offset: 0x1e00
 // Size: 0x34a
@@ -114,21 +114,21 @@ function function_eef5b755() {
     scene::play("cin_ram_02_04_walk_1st_introduce_02");
     scene::play("cin_ram_02_04_walk_1st_introduce_03");
     level thread function_bc43c2f8();
-    level thread namespace_e55eaf53::function_2ed0dd8e();
+    level thread cp_mi_cairo_ramses_nasser_interview::function_2ed0dd8e();
     namespace_391e4301::function_e7ebe596();
     level thread scene::play("cin_ram_02_04_walk_1st_introduce_04");
     var_80f9be56 = getent("armory_door_collision", "targetname");
     var_80f9be56 notsolid();
     level waittill(#"hash_db50bccb");
     foreach (player in level.activeplayers) {
-        player thread namespace_e55eaf53::function_1bcd464b();
+        player thread cp_mi_cairo_ramses_nasser_interview::function_1bcd464b();
     }
     level flag::set("khalil_walk_done");
-    namespace_e55eaf53::function_b760b954();
+    cp_mi_cairo_ramses_nasser_interview::function_b760b954();
     trigger::wait_till("trig_close_main_station_door");
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 1, eflags: 0x0
 // Checksum 0x61ebbce0, Offset: 0x2158
 // Size: 0x22
@@ -136,7 +136,7 @@ function function_4c91219b(a_ents) {
     level flag::set("station_walk_past_stairs");
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 1, eflags: 0x0
 // Checksum 0xa691b8bf, Offset: 0x2188
 // Size: 0x42
@@ -146,7 +146,7 @@ function function_1ec9cc48(a_ents) {
     objectives::set("cp_level_ramses_go_to_holding_room");
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 1, eflags: 0x0
 // Checksum 0x1a3e474b, Offset: 0x21d8
 // Size: 0x2a
@@ -155,7 +155,7 @@ function function_fa1c2163(a_ents) {
     level dialog::function_13b3b16a("plyr_winslow_accord_resou_0");
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 1, eflags: 0x0
 // Checksum 0x3411862d, Offset: 0x2210
 // Size: 0x152
@@ -176,16 +176,16 @@ function function_bc43c2f8(var_c4db808e) {
     level.var_9db406db ai::set_behavior_attribute("vignette_mode", "off");
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 1, eflags: 0x0
 // Checksum 0xf249ffd5, Offset: 0x2370
 // Size: 0x2a
 function function_19a13445(a_ents) {
-    level waittill(#"hash_5292a904");
+    level waittill(#"play_interview_guards");
     level flag::set("station_walk_complete");
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 0, eflags: 0x0
 // Checksum 0x8e35de42, Offset: 0x23a8
 // Size: 0x5f3
@@ -239,7 +239,7 @@ function function_317364f4() {
     level notify(#"hash_bfb2bcf2");
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 0, eflags: 0x0
 // Checksum 0x967f23f1, Offset: 0x29a8
 // Size: 0x34b
@@ -283,7 +283,7 @@ function function_3a8a502() {
     level notify(#"hash_1980f74e");
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 0, eflags: 0x0
 // Checksum 0x2ff70e91, Offset: 0x2d00
 // Size: 0x123
@@ -300,10 +300,10 @@ function function_e9be9fb3() {
     level thread scene::play("cin_ram_02_03_station_vign_consoling");
     level thread scene::init("cin_ram_02_03_station_vign_triage_gurney_elevated_main");
     level thread util::delay("play_triage_enter", "station_walk_cleanup", &scene::play, "cin_ram_02_03_station_vign_triage_gurney_elevated_main");
-    level notify(#"hash_5f07aa77");
+    level notify(#"unaligned_walk_anims_init_done");
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 1, eflags: 0x0
 // Checksum 0x3ba21c33, Offset: 0x2e30
 // Size: 0x22
@@ -311,7 +311,7 @@ function function_d86d27dc(a_ents) {
     level flag::set("end_tunneltalk_pt1");
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 0, eflags: 0x0
 // Checksum 0x64091fac, Offset: 0x2e60
 // Size: 0x1a
@@ -319,7 +319,7 @@ function function_2badd8cd() {
     level scene::play("cin_ram_02_03_interview_vign_forklift_passes");
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 0, eflags: 0x0
 // Checksum 0x29484457, Offset: 0x2e88
 // Size: 0x1c2
@@ -332,20 +332,20 @@ function function_a99e5acb() {
     do {
         var_d806b4f5 = 1;
         while (util::any_player_is_touching(var_65d86eb9, "allies") || util::any_player_is_touching(var_889ac756, "allies") || util::any_player_is_touching(var_13d98121, "allies")) {
-            wait(0.25);
+            wait 0.25;
         }
         foreach (player in level.players) {
             if (player util::is_looking_at(var_7bb6a6b6, 0.5)) {
                 var_d806b4f5 = 0;
             }
         }
-        wait(0.25);
+        wait 0.25;
     } while (var_d806b4f5 == 0);
     function_51f408f1();
     level scene::play("cin_ram_02_03_station_vign_gate_guard_derive");
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 0, eflags: 0x0
 // Checksum 0x9ac351f9, Offset: 0x3058
 // Size: 0x102
@@ -361,7 +361,7 @@ function function_51f408f1() {
     level thread function_7768c0ae();
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 0, eflags: 0x0
 // Checksum 0x68f41e21, Offset: 0x3168
 // Size: 0xcd
@@ -377,7 +377,7 @@ function function_7768c0ae() {
     }
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 1, eflags: 0x0
 // Checksum 0xfda37999, Offset: 0x3240
 // Size: 0x1acb
@@ -388,9 +388,9 @@ function function_bbd12ed2(var_6dc777dc) {
     if (var_6dc777dc) {
         level flag::wait_till("station_walk_cleanup");
     } else {
-        wait(0.05);
+        wait 0.05;
     }
-    level notify(#"hash_39d63594");
+    level notify(#"station_walk_cleanup");
     a_str_scenes = [];
     if (!isdefined(a_str_scenes)) {
         a_str_scenes = [];
@@ -950,19 +950,19 @@ function function_bbd12ed2(var_6dc777dc) {
             level thread scene::stop(str_scene, 1);
             n_cycles++;
             if (n_cycles > 4) {
-                wait(0.05);
+                wait 0.05;
                 n_cycles = 0;
             }
         }
     }
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 0, eflags: 0x0
 // Checksum 0x49eb9899, Offset: 0x4d18
 // Size: 0x145
 function function_6b91ca4() {
-    level endon(#"hash_39d63594");
+    level endon(#"station_walk_cleanup");
     var_dc1935e1 = struct::get_array("walk_flyover_vtol", "targetname");
     var_795e65b4 = struct::get_array("struct_station_fly_end", "targetname");
     while (true) {
@@ -975,11 +975,11 @@ function function_6b91ca4() {
         angles = vectortoangles(var_84574b1);
         var_2ef9d306.angles = angles;
         var_2ef9d306 thread function_4fec5052(v_end_pos);
-        wait(randomfloatrange(12, 15));
+        wait randomfloatrange(12, 15);
     }
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 1, eflags: 0x0
 // Checksum 0xf91edd73, Offset: 0x4e68
 // Size: 0x3a
@@ -989,7 +989,7 @@ function function_4fec5052(v_end_pos) {
     self delete();
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 0, eflags: 0x0
 // Checksum 0xb03f9e8c, Offset: 0x4eb0
 // Size: 0x172
@@ -1004,7 +1004,7 @@ function function_78528b3d() {
     level thread function_671a7a61();
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 6, eflags: 0x0
 // Checksum 0x69ea0512, Offset: 0x5030
 // Size: 0xd2
@@ -1026,7 +1026,7 @@ function function_54d1b8f8(var_562e5771, sndorigin, alias1, alias2, alias3, alia
     }
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 1, eflags: 0x0
 // Checksum 0x841a0b40, Offset: 0x5110
 // Size: 0x4e
@@ -1034,13 +1034,13 @@ function function_e43e1d61(soundalias) {
     playbacktime = soundgetplaybacktime(soundalias);
     if (playbacktime >= 0) {
         waittime = playbacktime * 0.001;
-        wait(waittime);
+        wait waittime;
         return;
     }
-    wait(1);
+    wait 1;
 }
 
-// Namespace namespace_7434c6b7
+// Namespace cp_mi_cairo_ramses_station_walk
 // Params 0, eflags: 0x0
 // Checksum 0xb1aa7640, Offset: 0x5168
 // Size: 0x55

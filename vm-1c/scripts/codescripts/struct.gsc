@@ -18,7 +18,7 @@ function autoexec __init__() {
 // Size: 0xea
 function init_structs() {
     level.struct = [];
-    level.var_3f831f3b = [];
+    level.scriptbundles = [];
     level.var_570603 = [];
     level.struct_class_names = [];
     level.struct_class_names["target"] = [];
@@ -58,19 +58,19 @@ function createstruct(struct, type, name) {
     }
     if (isdefined(type)) {
         var_d64c42bd = getdvarstring("mapname") == "core_frontend";
-        if (!isdefined(level.var_3f831f3b[type])) {
-            level.var_3f831f3b[type] = [];
+        if (!isdefined(level.scriptbundles[type])) {
+            level.scriptbundles[type] = [];
         }
-        if (isdefined(level.var_3f831f3b[type][name])) {
-            return level.var_3f831f3b[type][name];
+        if (isdefined(level.scriptbundles[type][name])) {
+            return level.scriptbundles[type][name];
         }
         if (type == "scene") {
-            level.var_3f831f3b[type][name] = scene::remove_invalid_scene_objects(struct);
+            level.scriptbundles[type][name] = scene::remove_invalid_scene_objects(struct);
         } else if (!(sessionmodeismultiplayergame() || var_d64c42bd) && type == "mpdialog_player") {
         } else if (!(sessionmodeismultiplayergame() || var_d64c42bd) && type == "gibcharacterdef" && issubstr(name, "c_t7_mp_")) {
         } else if (!(sessionmodeiscampaigngame() || var_d64c42bd) && type == "collectibles") {
         } else {
-            level.var_3f831f3b[type][name] = struct;
+            level.scriptbundles[type][name] = struct;
         }
         function_aa4875d1(struct);
         return;
@@ -128,7 +128,7 @@ function init() {
         level.struct_class_names["script_noteworthy"][self.script_noteworthy][level.struct_class_names["script_noteworthy"][self.script_noteworthy].size] = self;
     }
     if (isdefined(self.script_linkname)) {
-        assert(!isdefined(level.struct_class_names["prefabname"][self.script_linkname]), "prefabname");
+        assert(!isdefined(level.struct_class_names["<dev string:x28>"][self.script_linkname]), "<dev string:x38>");
         level.struct_class_names["script_linkname"][self.script_linkname][0] = self;
     }
     if (isdefined(self.script_label)) {
@@ -184,7 +184,7 @@ function get(kvp_value, kvp_key) {
     if (isdefined(level.struct_class_names[kvp_key]) && isdefined(level.struct_class_names[kvp_key][kvp_value])) {
         /#
             if (level.struct_class_names[kvp_key][kvp_value].size > 1) {
-                assertmsg("prefabname" + kvp_key + "prefabname" + kvp_value + "prefabname");
+                assertmsg("<dev string:x5b>" + kvp_key + "<dev string:x90>" + kvp_value + "<dev string:x96>");
                 return undefined;
             }
         #/
@@ -262,8 +262,8 @@ function delete() {
 // Checksum 0xf37a50f0, Offset: 0x12a8
 // Size: 0x54
 function get_script_bundle(str_type, str_name) {
-    if (isdefined(level.var_3f831f3b[str_type]) && isdefined(level.var_3f831f3b[str_type][str_name])) {
-        return level.var_3f831f3b[str_type][str_name];
+    if (isdefined(level.scriptbundles[str_type]) && isdefined(level.scriptbundles[str_type][str_name])) {
+        return level.scriptbundles[str_type][str_name];
     }
 }
 
@@ -272,8 +272,8 @@ function get_script_bundle(str_type, str_name) {
 // Checksum 0x8f5993ba, Offset: 0x1308
 // Size: 0x52
 function function_368120a1(str_type, str_name) {
-    if (isdefined(level.var_3f831f3b[str_type]) && isdefined(level.var_3f831f3b[str_type][str_name])) {
-        level.var_3f831f3b[str_type][str_name] = undefined;
+    if (isdefined(level.scriptbundles[str_type]) && isdefined(level.scriptbundles[str_type][str_name])) {
+        level.scriptbundles[str_type][str_name] = undefined;
     }
 }
 
@@ -282,8 +282,8 @@ function function_368120a1(str_type, str_name) {
 // Checksum 0xacd6eaeb, Offset: 0x1368
 // Size: 0x3c
 function get_script_bundles(str_type) {
-    if (isdefined(level.var_3f831f3b) && isdefined(level.var_3f831f3b[str_type])) {
-        return level.var_3f831f3b[str_type];
+    if (isdefined(level.scriptbundles) && isdefined(level.scriptbundles[str_type])) {
+        return level.scriptbundles[str_type];
     }
     return [];
 }

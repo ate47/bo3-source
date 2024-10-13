@@ -6,9 +6,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/ai_shared;
 
-#namespace namespace_57695b4d;
+#namespace zm_elemental_zombie;
 
-// Namespace namespace_57695b4d
+// Namespace zm_elemental_zombie
 // Params 0, eflags: 0x2
 // Checksum 0xf94b5e8d, Offset: 0x460
 // Size: 0x34
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
     system::register("zm_elemental_zombie", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_57695b4d
+// Namespace zm_elemental_zombie
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6ed37b1c, Offset: 0x4a0
 // Size: 0x24
@@ -25,7 +25,7 @@ function __init__() {
     register_clientfields();
 }
 
-// Namespace namespace_57695b4d
+// Namespace zm_elemental_zombie
 // Params 0, eflags: 0x1 linked
 // Checksum 0x52286618, Offset: 0x4d0
 // Size: 0xaa
@@ -38,7 +38,7 @@ function init_fx() {
     level._effect["elemental_electric_spark"] = "electric/fx_elec_sparks_burst_blue_optim";
 }
 
-// Namespace namespace_57695b4d
+// Namespace zm_elemental_zombie
 // Params 0, eflags: 0x1 linked
 // Checksum 0x305769ef, Offset: 0x588
 // Size: 0x1b4
@@ -51,7 +51,7 @@ function register_clientfields() {
     clientfield::register("actor", "napalm_sfx", 11000, 1, "int", &function_b542950d, 0, 0);
 }
 
-// Namespace namespace_57695b4d
+// Namespace zm_elemental_zombie
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8ed8958d, Offset: 0x748
 // Size: 0xd4
@@ -66,7 +66,7 @@ function function_56ad3a27(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_57695b4d
+// Namespace zm_elemental_zombie
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6ed3dfa, Offset: 0x828
 // Size: 0x144
@@ -86,7 +86,7 @@ function function_16467cb6(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_57695b4d
+// Namespace zm_elemental_zombie
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6fa79339, Offset: 0x978
 // Size: 0x84
@@ -98,7 +98,7 @@ function function_b542950d(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_57695b4d
+// Namespace zm_elemental_zombie
 // Params 7, eflags: 0x1 linked
 // Checksum 0xc7d0424f, Offset: 0xa08
 // Size: 0x1bc
@@ -129,7 +129,7 @@ function function_de563d9b(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_57695b4d
+// Namespace zm_elemental_zombie
 // Params 7, eflags: 0x1 linked
 // Checksum 0x5d70c624, Offset: 0xbd0
 // Size: 0xb4
@@ -140,7 +140,7 @@ function function_d0886efe(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_57695b4d
+// Namespace zm_elemental_zombie
 // Params 7, eflags: 0x1 linked
 // Checksum 0xf088265f, Offset: 0xc90
 // Size: 0x12c

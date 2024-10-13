@@ -16,9 +16,9 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_57c513b2;
+#namespace zm_genesis_apothicon_god;
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd27640a5, Offset: 0x550
 // Size: 0x7c
@@ -29,27 +29,27 @@ function main() {
     level thread function_e30ec73e();
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 0, eflags: 0x1 linked
 // Checksum 0x49463e, Offset: 0x5d8
 // Size: 0xbc
 function function_6dd507bc() {
     self endon(#"death");
-    level endon(#"hash_b14df48f");
+    level endon(#"apothicon_trapped");
     while (true) {
         if (isdefined(level.hostmigrationtimer) && level.hostmigrationtimer) {
             util::wait_network_frame();
             continue;
         }
         self function_3dd4e95e("zm_genesis_apothicon_rumble");
-        wait(0.1);
+        wait 0.1;
         while (level flag::get("apothicon_near_trap")) {
             util::wait_network_frame();
         }
     }
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 0, eflags: 0x1 linked
 // Checksum 0x28b39e5d, Offset: 0x6a0
 // Size: 0xb0
@@ -61,17 +61,17 @@ function function_16364bba() {
     self waittill(#"hash_c091a029");
     while (!level flag::get("pap_room_open")) {
         self function_3dd4e95e("zm_genesis_apothicon_rumble");
-        wait(0.1);
+        wait 0.1;
     }
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa89a3415, Offset: 0x758
 // Size: 0x10a
 function function_3dd4e95e(str_rumble) {
     self endon(#"death");
-    level endon(#"hash_b14df48f");
+    level endon(#"apothicon_trapped");
     var_41666ff0 = 5000 * 5000;
     foreach (e_player in level.activeplayers) {
         n_dist = distancesquared(e_player.origin, self.origin);
@@ -81,7 +81,7 @@ function function_3dd4e95e(str_rumble) {
     }
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 0, eflags: 0x1 linked
 // Checksum 0x306ae56a, Offset: 0x870
 // Size: 0xec
@@ -92,11 +92,11 @@ function function_e30ec73e() {
     level thread scene::init("cin_genesis_apothicon_papintro");
     level waittill(#"start_zombie_round_logic");
     level thread function_4fa16b52();
-    wait(3);
+    wait 3;
     level thread scene::play("cin_genesis_apothicon_papintro");
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 1, eflags: 0x1 linked
 // Checksum 0x35cd083c, Offset: 0x968
 // Size: 0x3c
@@ -105,7 +105,7 @@ function function_860971ff(a_ents) {
     level.var_e7e8e5d6 thread function_6dd507bc();
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 1, eflags: 0x1 linked
 // Checksum 0xcc3ddaba, Offset: 0x9b0
 // Size: 0x2c
@@ -113,7 +113,7 @@ function function_a2294b99(a_ents) {
     a_ents["zm_apothicon_god"] thread function_65305393();
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9d72e5e1, Offset: 0x9e8
 // Size: 0x124
@@ -128,7 +128,7 @@ function function_4fa16b52() {
     var_cf61f0f8 thread function_16d77af();
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfaa8d5d, Offset: 0xb18
 // Size: 0x21a
@@ -160,7 +160,7 @@ function function_d5419c08() {
     }
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 1, eflags: 0x1 linked
 // Checksum 0x71c7cc51, Offset: 0xd40
 // Size: 0x64
@@ -170,7 +170,7 @@ function function_a15e0860(s_unitrigger) {
     zm_unitrigger::unregister_unitrigger(s_unitrigger);
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 1, eflags: 0x1 linked
 // Checksum 0x8a6aa93, Offset: 0xdb0
 // Size: 0x90
@@ -183,7 +183,7 @@ function function_f94d9124(e_player) {
     return true;
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 1, eflags: 0x1 linked
 // Checksum 0x2d596ddd, Offset: 0xe48
 // Size: 0x70
@@ -196,7 +196,7 @@ function function_d9879865(e_player) {
     return true;
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 0, eflags: 0x1 linked
 // Checksum 0x147f592d, Offset: 0xec0
 // Size: 0x3c
@@ -205,7 +205,7 @@ function function_16d77af() {
     zm_unitrigger::unregister_unitrigger(self);
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc232f695, Offset: 0xf08
 // Size: 0x6c
@@ -216,7 +216,7 @@ function function_65305393() {
     self thread function_b89b1260();
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9b67bf19, Offset: 0xf80
 // Size: 0xc4
@@ -231,7 +231,7 @@ function function_d6eeedf0(n_state) {
     var_329d83b2 hidepart("j_flash_on");
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 1, eflags: 0x1 linked
 // Checksum 0x64c2feff, Offset: 0x1050
 // Size: 0xc6
@@ -247,7 +247,7 @@ function function_81a3e18f(b_on) {
     }
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 0, eflags: 0x1 linked
 // Checksum 0x12a52b91, Offset: 0x1120
 // Size: 0x1fc
@@ -261,12 +261,12 @@ function function_78f98ad9() {
             hidemiscmodels("apothicon_trap_power_on" + i);
             showmiscmodels("apothicon_trap_power_off" + i);
         }
-        wait(0.2);
+        wait 0.2;
         for (i = 1; i < 5; i++) {
             hidemiscmodels("apothicon_trap_power_off" + i);
             showmiscmodels("apothicon_trap_power_on" + i);
         }
-        wait(0.2);
+        wait 0.2;
         if (level flag::get("apothicon_trapped")) {
             break;
         }
@@ -276,13 +276,13 @@ function function_78f98ad9() {
     var_329d83b2 playsound("zmb_deathray_console_unavailable");
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 0, eflags: 0x1 linked
 // Checksum 0x901d033e, Offset: 0x1328
 // Size: 0x18a
 function function_b89b1260() {
     level endon(#"hash_b89b1260");
-    level endon(#"hash_b14df48f");
+    level endon(#"apothicon_trapped");
     var_217ba6c8 = struct::get("apothicon_approach_tesla", "targetname");
     var_329d83b2 = getent("tesla_trap_console", "targetname");
     while (true) {
@@ -301,19 +301,19 @@ function function_b89b1260() {
     }
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 0, eflags: 0x1 linked
 // Checksum 0x96138b2a, Offset: 0x14c0
 // Size: 0x58
 function function_3187e8a6() {
-    level endon(#"hash_b14df48f");
+    level endon(#"apothicon_trapped");
     while (true) {
         level scene::play("cin_genesis_apothicon_flightpath", self);
         level function_1ff56fb0("cin_genesis_apothicon_flightpath");
     }
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe147cb38, Offset: 0x1520
 // Size: 0x13c
@@ -332,7 +332,7 @@ function function_73f1531() {
     namespace_3ddd867f::function_8d5c3682();
 }
 
-// Namespace namespace_57c513b2
+// Namespace zm_genesis_apothicon_god
 // Params 1, eflags: 0x1 linked
 // Checksum 0x60042743, Offset: 0x1668
 // Size: 0x54

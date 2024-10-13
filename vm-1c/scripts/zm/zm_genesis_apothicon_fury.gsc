@@ -24,9 +24,9 @@
 #using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_c21dfba4;
+#namespace zm_genesis_apothicon_fury;
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 0, eflags: 0x2
 // Checksum 0xfb65af02, Offset: 0x5f8
 // Size: 0x34
@@ -34,7 +34,7 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_apothicon_fury", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 0, eflags: 0x1 linked
 // Checksum 0x31d89297, Offset: 0x638
 // Size: 0xfc
@@ -46,12 +46,12 @@ function __init__() {
         clientfield::register("scriptmover", "apothicon_fury_spawn_meteor", 15000, 2, "int");
     }
     /#
-        execdevgui("fury");
+        execdevgui("<dev string:x28>");
         level thread function_bc2e7a98();
     #/
 }
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 0, eflags: 0x1 linked
 // Checksum 0x95908dfb, Offset: 0x740
 // Size: 0x64
@@ -60,11 +60,11 @@ function function_51dd865c() {
     level thread aat::register_immunity("zm_aat_thunder_wall", "apothicon_fury", 1, 1, 1);
 }
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 0, eflags: 0x1 linked
 // Checksum 0x28527a94, Offset: 0x7b0
 // Size: 0x74
-function function_d7808406() {
+function apothicon_fury_death() {
     e_attacker = self waittill(#"death");
     if (isdefined(e_attacker) && isdefined(e_attacker.var_4d307aef)) {
         e_attacker.var_4d307aef++;
@@ -74,7 +74,7 @@ function function_d7808406() {
     }
 }
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 3, eflags: 0x1 linked
 // Checksum 0x77605070, Offset: 0x830
 // Size: 0x208
@@ -86,7 +86,7 @@ function function_21bbe70d(v_origin, v_angles, var_8d71b2b8) {
         e_boss.var_1cba9ac3 = 1;
         e_boss.heroweapon_kill_power = 2;
         e_boss.completed_emerging_into_playable_area = 1;
-        e_boss thread function_d7808406();
+        e_boss thread apothicon_fury_death();
         e_boss thread zm::update_zone_name();
         level thread zm_spawner::zombie_death_event(e_boss);
         e_boss thread zm_spawner::function_1612a0b8();
@@ -101,7 +101,7 @@ function function_21bbe70d(v_origin, v_angles, var_8d71b2b8) {
             e_boss thread function_ab27e73a();
         #/
         if (isdefined(var_8d71b2b8) && var_8d71b2b8) {
-            wait(1);
+            wait 1;
             e_boss.zombie_think_done = 1;
         }
         return e_boss;
@@ -109,7 +109,7 @@ function function_21bbe70d(v_origin, v_angles, var_8d71b2b8) {
     return undefined;
 }
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 0, eflags: 0x5 linked
 // Checksum 0x6d3572c1, Offset: 0xa40
 // Size: 0x124
@@ -132,7 +132,7 @@ function private function_7ba80ea7() {
     self.health = int(self.maxhealth);
 }
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 0, eflags: 0x5 linked
 // Checksum 0x5408839c, Offset: 0xb70
 // Size: 0xb8
@@ -147,11 +147,11 @@ function private function_1be68e3f() {
                 }
             }
         }
-        wait(0.25);
+        wait 0.25;
     }
 }
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 0, eflags: 0x1 linked
 // Checksum 0x97e79d02, Offset: 0xc30
 // Size: 0xa0
@@ -163,14 +163,14 @@ function function_ab27e73a() {
     while (true) {
         if (isdefined(level.var_2db0d4e8) && level.var_2db0d4e8) {
             /#
-                print3d(self.origin, "fury" + self.health, (0, 0, 1), 1.2);
+                print3d(self.origin, "<dev string:x4e>" + self.health, (0, 0, 1), 1.2);
             #/
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 6, eflags: 0x0
 // Checksum 0xa0dc8d7a, Offset: 0xcd8
 // Size: 0xa8
@@ -179,13 +179,13 @@ function function_16beb600(var_8cc26a7f, var_7ab4c34a, var_535f5919, var_13d4cd8
         var_8d71b2b8 = 0;
     }
     function_b55fb314(var_8cc26a7f, var_7ab4c34a, var_535f5919, var_13d4cd83, var_3988ba7b);
-    var_165d8ccd = function_21bbe70d(var_13d4cd83, var_3988ba7b, var_8d71b2b8);
-    if (isdefined(var_165d8ccd)) {
-        return var_165d8ccd;
+    apothicon_fury = function_21bbe70d(var_13d4cd83, var_3988ba7b, var_8d71b2b8);
+    if (isdefined(apothicon_fury)) {
+        return apothicon_fury;
     }
 }
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 5, eflags: 0x1 linked
 // Checksum 0x8ca681e2, Offset: 0xd88
 // Size: 0x494
@@ -225,7 +225,7 @@ function function_b55fb314(var_8cc26a7f, var_7ab4c34a, var_535f5919, var_13d4cd8
     var_be9b92b3 delete();
 }
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 0, eflags: 0x1 linked
 // Checksum 0x38900f55, Offset: 0x1228
 // Size: 0x1c
@@ -233,7 +233,7 @@ function function_2c871f46() {
     self aat::aat_cooldown_init();
 }
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7858aadf, Offset: 0x1250
 // Size: 0x118
@@ -258,7 +258,7 @@ function function_e5e94978() {
     }
 }
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3e2c8af1, Offset: 0x1370
 // Size: 0xa8
@@ -276,18 +276,18 @@ function function_1dcdd145() {
 
 /#
 
-    // Namespace namespace_c21dfba4
+    // Namespace zm_genesis_apothicon_fury
     // Params 0, eflags: 0x5 linked
     // Checksum 0xfa5d2dc8, Offset: 0x1420
     // Size: 0x44
     function private function_bc2e7a98() {
-        level flagsys::wait_till("fury");
+        level flagsys::wait_till("<dev string:x4f>");
         zm_devgui::add_custom_devgui_callback(&function_744725d0);
     }
 
 #/
 
-// Namespace namespace_c21dfba4
+// Namespace zm_genesis_apothicon_fury
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe7339969, Offset: 0x1470
 // Size: 0x6c6
@@ -324,7 +324,7 @@ function private function_744725d0(cmd) {
         ais = getaiarchetypearray("apothicon_fury");
         foreach (ai in ais) {
             if (!(isdefined(ai.var_e78a1124) && ai.var_e78a1124)) {
-                namespace_53429ee4::function_ee6717e6(ai);
+                namespace_53429ee4::apothiconFuriousModeInit(ai);
             }
         }
     } else if (cmd == "apothicon_fury_debug_health") {

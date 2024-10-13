@@ -8,9 +8,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b73b7f62;
+#namespace zm_cosmodrome_ai_monkey;
 
-// Namespace namespace_b73b7f62
+// Namespace zm_cosmodrome_ai_monkey
 // Params 0, eflags: 0x1 linked
 // Checksum 0x889d33bc, Offset: 0x1f8
 // Size: 0x1c
@@ -18,7 +18,7 @@ function init() {
     level.var_7deb01db = &function_9ddb51fd;
 }
 
-// Namespace namespace_b73b7f62
+// Namespace zm_cosmodrome_ai_monkey
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6e75e3ce, Offset: 0x220
 // Size: 0x27c
@@ -38,28 +38,28 @@ function function_9ddb51fd() {
     lander clientfield::set("COSMO_MONKEY_LANDER_FX", 1);
     self forceteleport(lander.origin);
     self linkto(lander);
-    wait(2.5);
+    wait 2.5;
     lander show();
     lander moveto(end.origin, 0.6);
     lander waittill(#"movedone");
     lander clientfield::set("COSMO_MONKEY_LANDER_FX", 0);
-    wait(2);
+    wait 2;
     self unlink();
     self show();
 }
 
-// Namespace namespace_b73b7f62
+// Namespace zm_cosmodrome_ai_monkey
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9ce6af15, Offset: 0x4a8
 // Size: 0x4c
 function function_1c5d6c69() {
-    wait(8);
+    wait 8;
     self movez(-100, 0.5);
     self waittill(#"movedone");
     self delete();
 }
 
-// Namespace namespace_b73b7f62
+// Namespace zm_cosmodrome_ai_monkey
 // Params 0, eflags: 0x1 linked
 // Checksum 0xb076b3ad, Offset: 0x500
 // Size: 0x1d2
@@ -88,7 +88,7 @@ function function_886be33d() {
     return choice;
 }
 
-// Namespace namespace_b73b7f62
+// Namespace zm_cosmodrome_ai_monkey
 // Params 0, eflags: 0x1 linked
 // Checksum 0x95d900d3, Offset: 0x6e0
 // Size: 0x1c
@@ -96,7 +96,7 @@ function function_3cc4d318() {
     self.var_4bd2ae84 = &function_bf828621;
 }
 
-// Namespace namespace_b73b7f62
+// Namespace zm_cosmodrome_ai_monkey
 // Params 0, eflags: 0x0
 // Checksum 0xc9abffa7, Offset: 0x708
 // Size: 0xa4
@@ -108,13 +108,13 @@ function function_f5562f17() {
                 break;
             }
         }
-        wait(1);
+        wait 1;
     }
-    assertmsg("<unknown string>" + self.origin);
+    assertmsg("<dev string:x28>" + self.origin);
     self dodamage(self.health + 100, self.origin);
 }
 
-// Namespace namespace_b73b7f62
+// Namespace zm_cosmodrome_ai_monkey
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd83ed238, Offset: 0x7b8
 // Size: 0x6c

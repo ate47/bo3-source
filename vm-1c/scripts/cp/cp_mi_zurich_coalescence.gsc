@@ -26,9 +26,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/shared/array_shared;
 
-#namespace namespace_f165e60d;
+#namespace cp_mi_zurich_coalescence;
 
-// Namespace namespace_f165e60d
+// Namespace cp_mi_zurich_coalescence
 // Params 0, eflags: 0x0
 // Checksum 0xba3f0c8e, Offset: 0xc30
 // Size: 0x34
@@ -37,7 +37,7 @@ function function_243693d4() {
     util::add_gametype("cpzm");
 }
 
-// Namespace namespace_f165e60d
+// Namespace cp_mi_zurich_coalescence
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbd4bd025, Offset: 0xc70
 // Size: 0x234
@@ -48,12 +48,12 @@ function main() {
     flag_init();
     level.var_75ba074a = 1;
     util::function_286a5010(9);
-    namespace_2ebd997a::main();
-    namespace_b301a1fd::main();
+    cp_mi_zurich_coalescence_fx::main();
+    cp_mi_zurich_coalescence_sound::main();
     namespace_bbb4ee72::main();
-    namespace_3d19ef22::main();
-    namespace_6a04e6cd::main();
-    namespace_73dbe018::main();
+    root_singapore::main();
+    root_zurich::main();
+    root_cairo::main();
     namespace_29799936::main();
     namespace_1beb9396::main();
     skipto::function_272e1c8d();
@@ -62,16 +62,16 @@ function main() {
     collectibles::function_93523442("p7_nc_zur_coa_03", 60, (-10, 0, -10));
     collectibles::function_93523442("p7_nc_zur_coa_04", 60, (0, 0, 10));
     namespace_e9d9fb34::function_4d39a2af();
-    level thread namespace_8e9083ff::function_4e396e71();
-    level thread namespace_8e9083ff::function_be06d646();
-    level thread namespace_8e9083ff::function_91d852fa();
-    level thread namespace_8e9083ff::function_a7b5b565();
+    level thread zurich_util::function_4e396e71();
+    level thread zurich_util::function_be06d646();
+    level thread zurich_util::function_91d852fa();
+    level thread zurich_util::function_a7b5b565();
     load::main();
-    namespace_98d4ffda::function_7403e82b();
+    cp_mi_zurich_coalescence_patch::function_7403e82b();
     level.oob_timelimit_ms = getdvarint("oob_timelimit_ms", 3000);
 }
 
-// Namespace namespace_f165e60d
+// Namespace cp_mi_zurich_coalescence
 // Params 0, eflags: 0x1 linked
 // Checksum 0xd2c8647f, Offset: 0xeb0
 // Size: 0x124
@@ -84,7 +84,7 @@ function init_clientfields() {
     clientfield::register("world", "clearing_hide_ferris_wheel", 1, 1, "int");
 }
 
-// Namespace namespace_f165e60d
+// Namespace cp_mi_zurich_coalescence
 // Params 0, eflags: 0x1 linked
 // Checksum 0x9b586f68, Offset: 0xfe0
 // Size: 0x614
@@ -103,20 +103,20 @@ function function_673254cc() {
     skipto::function_d68e678e("clearing_waterfall", &namespace_29799936::function_5be0c18c, "Clearing Waterfall", &namespace_29799936::function_132beeb7);
     skipto::function_d68e678e("clearing_path_choice", &namespace_29799936::function_21b82e1f, "Clearing Path Choice", undefined);
     skipto::add("clearing_hub", &namespace_29799936::function_1270c207, "Clearing Hub", &namespace_29799936::function_44c2b6a);
-    skipto::function_d68e678e("root_zurich_start", &namespace_6a04e6cd::function_9c1fc2fd, "Zurich Root", undefined);
-    skipto::function_d68e678e("root_zurich_vortex", &namespace_6a04e6cd::function_95b88092, "Zurich Root Vortex", &namespace_6a04e6cd::function_1a4dfaaa);
+    skipto::function_d68e678e("root_zurich_start", &root_zurich::function_9c1fc2fd, "Zurich Root", undefined);
+    skipto::function_d68e678e("root_zurich_vortex", &root_zurich::function_95b88092, "Zurich Root Vortex", &root_zurich::function_1a4dfaaa);
     skipto::function_d68e678e("clearing_hub_2", &namespace_29799936::function_1270c207, "Clearing Hub", &namespace_29799936::function_600acf3f);
-    skipto::function_d68e678e("root_cairo_start", &namespace_73dbe018::function_9c1fc2fd, "Cairo Root", undefined);
-    skipto::function_d68e678e("root_cairo_vortex", &namespace_73dbe018::function_95b88092, "Cairo Root Vortex", &namespace_73dbe018::function_1a4dfaaa);
+    skipto::function_d68e678e("root_cairo_start", &root_cairo::function_9c1fc2fd, "Cairo Root", undefined);
+    skipto::function_d68e678e("root_cairo_vortex", &root_cairo::function_95b88092, "Cairo Root Vortex", &root_cairo::function_1a4dfaaa);
     skipto::function_d68e678e("clearing_hub_3", &namespace_29799936::function_1270c207, "Clearing Hub", &namespace_29799936::function_b42e7a80);
-    skipto::function_d68e678e("root_singapore_start", &namespace_3d19ef22::function_9c1fc2fd, "Singapore Root", &namespace_3d19ef22::function_c68a0705);
-    skipto::function_d68e678e("root_singapore_vortex", &namespace_3d19ef22::function_95b88092, "Singapore Root Vortex", &namespace_3d19ef22::function_53a05865);
-    skipto::function_d68e678e("outro_movie", &namespace_34c3982c::function_8c381165, "Outro Movie", &namespace_34c3982c::function_7c294f88);
-    skipto::add("server_interior", &namespace_34c3982c::function_618d5a98, "Server Interior", &namespace_34c3982c::function_d9ccb9e3);
-    skipto::add("zurich_outro", &namespace_34c3982c::function_313f113, "Outro", &namespace_34c3982c::function_f2f0f1ec);
+    skipto::function_d68e678e("root_singapore_start", &root_singapore::function_9c1fc2fd, "Singapore Root", &root_singapore::function_c68a0705);
+    skipto::function_d68e678e("root_singapore_vortex", &root_singapore::function_95b88092, "Singapore Root Vortex", &root_singapore::function_53a05865);
+    skipto::function_d68e678e("outro_movie", &zurich_outro::function_8c381165, "Outro Movie", &zurich_outro::function_7c294f88);
+    skipto::add("server_interior", &zurich_outro::function_618d5a98, "Server Interior", &zurich_outro::function_d9ccb9e3);
+    skipto::add("zurich_outro", &zurich_outro::function_313f113, "Outro", &zurich_outro::function_f2f0f1ec);
 }
 
-// Namespace namespace_f165e60d
+// Namespace cp_mi_zurich_coalescence
 // Params 0, eflags: 0x1 linked
 // Checksum 0x536589f2, Offset: 0x1600
 // Size: 0x24
@@ -124,7 +124,7 @@ function init_level_vars() {
     setdvar("player_swimTime", 5000);
 }
 
-// Namespace namespace_f165e60d
+// Namespace cp_mi_zurich_coalescence
 // Params 0, eflags: 0x1 linked
 // Checksum 0xce7f4080, Offset: 0x1630
 // Size: 0x404

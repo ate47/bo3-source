@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_6ff07a70;
+#namespace voice_z_infection;
 
-// Namespace namespace_6ff07a70
+// Namespace voice_z_infection
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbf865770, Offset: 0x11d0
 // Size: 0xb04

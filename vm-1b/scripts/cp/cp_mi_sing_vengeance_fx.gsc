@@ -1,8 +1,8 @@
 #using scripts/codescripts/struct;
 
-#namespace namespace_a1cfe497;
+#namespace cp_mi_sing_vengeance_fx;
 
-// Namespace namespace_a1cfe497
+// Namespace cp_mi_sing_vengeance_fx
 // Params 0, eflags: 0x0
 // Checksum 0xe9c07cd6, Offset: 0x98
 // Size: 0x2

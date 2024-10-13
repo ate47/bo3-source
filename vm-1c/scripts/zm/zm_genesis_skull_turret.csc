@@ -6,9 +6,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_3e86c990;
+#namespace zm_genesis_skull_turret;
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 0, eflags: 0x2
 // Checksum 0x83b9515a, Offset: 0x4b8
 // Size: 0x3c
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_skull_turret", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8bf4825, Offset: 0x500
 // Size: 0x206
@@ -24,15 +24,15 @@ function __init__() {
     clientfield::register("vehicle", "skull_turret", 15000, 2, "int", &function_aeaa2ee6, 0, 0);
     clientfield::register("vehicle", "skull_turret_beam_fire", 15000, 1, "int", &skull_turret_beam_fire, 0, 0);
     clientfield::register("vehicle", "turret_beam_fire_crystal", 15000, 1, "int", &function_a70748cf, 0, 0);
-    clientfield::register("actor", "skull_turret_shock_fx", 15000, 1, "int", &function_1f2f5b1b, 0, 0);
-    clientfield::register("actor", "skull_turret_shock_eye_fx", 15000, 1, "int", &function_81fa6c61, 0, 0);
-    clientfield::register("actor", "skull_turret_explode_fx", 15000, 1, "counter", &function_c70e1d30, 0, 0);
+    clientfield::register("actor", "skull_turret_shock_fx", 15000, 1, "int", &skull_turret_shock_fx, 0, 0);
+    clientfield::register("actor", "skull_turret_shock_eye_fx", 15000, 1, "int", &skull_turret_shock_eye_fx, 0, 0);
+    clientfield::register("actor", "skull_turret_explode_fx", 15000, 1, "counter", &skull_turret_explode_fx, 0, 0);
     level._effect["turret_zombie_shock"] = "dlc4/genesis/fx_tesla_trap_body_shock_red";
     level._effect["turret_zombie_explode"] = "dlc4/genesis/fx_tesla_trap_body_exp_red";
     level._effect["skull_turret_shock_eyes"] = "dlc4/genesis/fx_tesla_shock_eyes_zmb_red";
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x710
 // Size: 0x4
@@ -40,7 +40,7 @@ function __main__() {
     
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 7, eflags: 0x1 linked
 // Checksum 0x273334ec, Offset: 0x720
 // Size: 0xd4
@@ -58,7 +58,7 @@ function function_aeaa2ee6(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread function_6e443da4(localclientnum, 0, 0);
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 3, eflags: 0x1 linked
 // Checksum 0xc8c460e5, Offset: 0x800
 // Size: 0x144
@@ -81,12 +81,12 @@ function function_6e443da4(localclientnum, var_fcb37269, tint) {
             }
         }
         self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, self.var_392865b9, tint, 0);
-        wait(0.016);
+        wait 0.016;
     }
     self mapshaderconstant(localclientnum, 0, "scriptVector2", 0, self.var_392865b9, tint, 0);
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 7, eflags: 0x1 linked
 // Checksum 0x9735cd0f, Offset: 0x950
 // Size: 0xa4
@@ -98,7 +98,7 @@ function skull_turret_beam_fire(localclientnum, oldval, newval, bnewent, binitia
     }
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 1, eflags: 0x1 linked
 // Checksum 0x73b72c68, Offset: 0xa00
 // Size: 0x96
@@ -112,7 +112,7 @@ function function_1046b72f(localclientnum) {
     }
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 1, eflags: 0x1 linked
 // Checksum 0x9b123824, Offset: 0xaa0
 // Size: 0x7e
@@ -125,7 +125,7 @@ function function_6c8292ba(localclientnum) {
     }
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 3, eflags: 0x1 linked
 // Checksum 0x4b1a5672, Offset: 0xb28
 // Size: 0x160
@@ -146,7 +146,7 @@ function function_1b1753c0(localclientnum, origin, var_263c10ef) {
     self.var_805863e3.origin = origin;
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb8e72368, Offset: 0xc90
 // Size: 0x100
@@ -157,11 +157,11 @@ function function_463d46bd(localclientnum, oldval, newval, bnewent, binitialsnap
     level beam::launch(self, "tag_flash", self.var_f929ecf4, "tag_origin", "dlc4_skull_turret_beam");
     while (isdefined(self)) {
         function_b578a840(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump);
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 7, eflags: 0x1 linked
 // Checksum 0x1b9f9d31, Offset: 0xd98
 // Size: 0x42c
@@ -204,7 +204,7 @@ function function_b578a840(localclientnum, oldval, newval, bnewent, binitialsnap
     function_6c8292ba(localclientnum);
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 2, eflags: 0x1 linked
 // Checksum 0x7b2f3661, Offset: 0x11d0
 // Size: 0x64
@@ -214,7 +214,7 @@ function reflect_shot(d, n) {
     return var_e47d2859;
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 2, eflags: 0x1 linked
 // Checksum 0x4b285fb, Offset: 0x1240
 // Size: 0x64
@@ -226,7 +226,7 @@ function render_debug_sphere(origin, color) {
     }
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 3, eflags: 0x1 linked
 // Checksum 0x82520e08, Offset: 0x12b0
 // Size: 0x64
@@ -238,7 +238,7 @@ function function_cd048702(origin1, origin2, color) {
     }
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 7, eflags: 0x1 linked
 // Checksum 0xa90b8f75, Offset: 0x1320
 // Size: 0x76
@@ -250,7 +250,7 @@ function function_a70748cf(localclientnum, oldval, newval, bnewent, binitialsnap
     level notify(#"hash_bd0e918");
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 1, eflags: 0x1 linked
 // Checksum 0xa26d3b1b, Offset: 0x13a0
 // Size: 0x284
@@ -272,11 +272,11 @@ function function_9f90a4b0(localclientnum) {
     var_b4e42dd3 delete();
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2f085b7f, Offset: 0x1630
 // Size: 0xfe
-function function_1f2f5b1b(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function skull_turret_shock_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         if (!isdefined(self.var_2fdeee05)) {
             str_tag = "J_SpineUpper";
@@ -293,11 +293,11 @@ function function_1f2f5b1b(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6d1ba75, Offset: 0x1738
 // Size: 0x116
-function function_81fa6c61(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function skull_turret_shock_eye_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         if (!isdefined(self.var_9724eab9)) {
             self.var_9724eab9 = playfxontag(localclientnum, level._effect["skull_turret_shock_eyes"], self, "J_Eyeball_LE");
@@ -310,16 +310,16 @@ function function_81fa6c61(localclientnum, oldval, newval, bnewent, binitialsnap
     self.var_9724eab9 = undefined;
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 7, eflags: 0x1 linked
 // Checksum 0x61c0d840, Offset: 0x1858
 // Size: 0x94
-function function_c70e1d30(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function skull_turret_explode_fx(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     playfxontag(localclientnum, level._effect["turret_zombie_explode"], self, "j_spine4");
     playsound(0, "zmb_zombie_skull_explode", self.origin);
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 2, eflags: 0x1 linked
 // Checksum 0x15c4f34c, Offset: 0x18f8
 // Size: 0x7c
@@ -333,7 +333,7 @@ function function_6818044b(localclientnum, var_365c612) {
     }
 }
 
-// Namespace namespace_3e86c990
+// Namespace zm_genesis_skull_turret
 // Params 2, eflags: 0x1 linked
 // Checksum 0x17ea1b06, Offset: 0x1980
 // Size: 0x7c

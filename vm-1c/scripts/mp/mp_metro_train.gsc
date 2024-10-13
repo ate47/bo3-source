@@ -9,9 +9,9 @@
 #using scripts/mp/_util;
 #using scripts/mp/_events;
 
-#namespace namespace_1931cdeb;
+#namespace mp_metro_train;
 
-// Namespace namespace_1931cdeb
+// Namespace mp_metro_train
 // Params 0, eflags: 0x1 linked
 // Checksum 0x835624a, Offset: 0x738
 // Size: 0x624
@@ -54,7 +54,7 @@ function init() {
         events::add_round_score_event(int(level.roundscorelimit * 0.25), "train_start_1");
         events::add_round_score_event(int(level.roundscorelimit * 0.75), "train_start_2");
     }
-    wait(1);
+    wait 1;
     if (level.gametype == "escort") {
         return;
     }
@@ -62,7 +62,7 @@ function init() {
     level thread function_91ce410(var_9626af0e, var_4d45e997, "train_start_2", var_41f085cf, var_7ce6af9e, var_5159825b, var_e1604af1, var_c318a1b9, var_d1439c1d, var_fe600fa3, var_1ec2db3f, "left");
 }
 
-// Namespace namespace_1931cdeb
+// Namespace mp_metro_train
 // Params 2, eflags: 0x0
 // Checksum 0x5858f9e7, Offset: 0xd68
 // Size: 0x7c
@@ -73,7 +73,7 @@ function function_c19bbc3e(gate, var_8d1e404b) {
     gate.var_8d1e404b linkto(gate);
 }
 
-// Namespace namespace_1931cdeb
+// Namespace mp_metro_train
 // Params 4, eflags: 0x1 linked
 // Checksum 0x5cc4dbac, Offset: 0xdf0
 // Size: 0x276
@@ -99,16 +99,16 @@ function function_c5b797fc(&cars, &var_c4643bb7, start, name) {
     }
 }
 
-// Namespace namespace_1931cdeb
+// Namespace mp_metro_train
 // Params 1, eflags: 0x1 linked
 // Checksum 0x7ddb3bbc, Offset: 0x1070
 // Size: 0x24
 function function_656e58c3(time) {
-    wait(time);
+    wait time;
     self show();
 }
 
-// Namespace namespace_1931cdeb
+// Namespace mp_metro_train
 // Params 5, eflags: 0x1 linked
 // Checksum 0x5f7af435, Offset: 0x10a0
 // Size: 0x1a4
@@ -117,20 +117,20 @@ function function_1b3e50b5(var_50a9e5d9, waittime, rotatetime, var_b646c3f4, var
     foreach (var_4a3ded66 in var_50a9e5d9) {
         if (!skip) {
             var_4a3ded66 rotateto(var_4a3ded66.originalangles + var_b646c3f4, rotatetime);
-            wait(waittime);
+            wait waittime;
         }
         skip = !skip;
     }
     foreach (var_4a3ded66 in var_50a9e5d9) {
         if (!skip) {
             var_4a3ded66 rotateto(var_4a3ded66.originalangles + var_b646c3f4, rotatetime);
-            wait(waittime);
+            wait waittime;
         }
         skip = !skip;
     }
 }
 
-// Namespace namespace_1931cdeb
+// Namespace mp_metro_train
 // Params 12, eflags: 0x1 linked
 // Checksum 0x7f8d3134, Offset: 0x1250
 // Size: 0xc70
@@ -157,21 +157,21 @@ function function_91ce410(cars, var_c4643bb7, var_c7166e37, start, var_c3f523d4,
         foreach (speaker in var_c4ecec2) {
             playsoundatposition("vox_metr_metro_approaching", speaker.origin);
         }
-        var_b2aeb942 = getdvarfloat("metro_vox_wait_time", 4);
-        wait(var_b2aeb942);
-        var_1d13e8a8 = getdvarfloat("gate_move_time", 2);
-        var_7de518c6 = getdvarfloat("gate_end_move_time", 1);
+        metro_vox_wait_time = getdvarfloat("metro_vox_wait_time", 4);
+        wait metro_vox_wait_time;
+        gate_move_time = getdvarfloat("gate_move_time", 2);
+        gate_end_move_time = getdvarfloat("gate_end_move_time", 1);
         var_b909fdbf = getdvarfloat("gate_wait_time", 0.3);
         var_c3f523d4[0] playloopsound("amb_train_alarm");
         var_35fc930f[0] playloopsound("amb_train_alarm");
-        var_ab9b4fda = getdvarfloat("barrier_move_time", 2);
-        var_bfc17530 = getdvarfloat("barrier_move_height", 30);
+        barrier_move_time = getdvarfloat("barrier_move_time", 2);
+        barrier_move_height = getdvarfloat("barrier_move_height", 30);
         foreach (barrier in var_fbb2796a) {
-            barrier moveto(barrier.origin + (0, 0, var_bfc17530), var_ab9b4fda);
+            barrier moveto(barrier.origin + (0, 0, barrier_move_height), barrier_move_time);
             barrier playsound("evt_wall_up");
         }
-        var_cab3ee31 = getdvarfloat("gate_wait_train_time", 5);
-        wait(var_cab3ee31);
+        gate_wait_train_time = getdvarfloat("gate_wait_train_time", 5);
+        wait gate_wait_train_time;
         cars[0] attachpath(start);
         cars[0] startpath();
         cars[0] function_656e58c3(0.1);
@@ -179,10 +179,10 @@ function function_91ce410(cars, var_c4643bb7, var_c7166e37, start, var_c3f523d4,
         cars[0] playloopsound("amb_train_by");
         var_9807fb5d = getdvarint("train_length", 10);
         for (i = 1; i < var_9807fb5d; i++) {
-            wait(0.3);
+            wait 0.3;
             var_c4643bb7[i] thread function_881473ff(var_4b395157);
             var_c4643bb7[i] thread function_ac1ac4d2();
-            wait(0.3);
+            wait 0.3;
             cars[i] thread function_881473ff(var_4b395157);
             cars[i] thread function_ac1ac4d2();
             cars[i] playloopsound("amb_train_by");
@@ -190,27 +190,27 @@ function function_91ce410(cars, var_c4643bb7, var_c7166e37, start, var_c3f523d4,
         foreach (speaker in var_c4ecec2) {
             playsoundatposition("vox_metr_metro_gap", speaker.origin);
         }
-        level thread function_1b3e50b5(var_9071646e, 1, var_7de518c6, var_ddb7f7d7 * -1, 0);
+        level thread function_1b3e50b5(var_9071646e, 1, gate_end_move_time, var_ddb7f7d7 * -1, 0);
         var_9071646e[0] playsound("evt_gate_open");
-        var_5f47c084 function_a202446a(0, 0, var_7de518c6);
-        level thread function_1b3e50b5(var_c3f523d4, var_b909fdbf, var_1d13e8a8, var_ddb7f7d7, 0);
+        var_5f47c084 function_a202446a(0, 0, gate_end_move_time);
+        level thread function_1b3e50b5(var_c3f523d4, var_b909fdbf, gate_move_time, var_ddb7f7d7, 0);
         var_c3f523d4[0] playsound("evt_gate_open");
-        level thread function_1b3e50b5(var_35fc930f, var_b909fdbf, var_1d13e8a8, var_ddb7f7d7, 1);
+        level thread function_1b3e50b5(var_35fc930f, var_b909fdbf, gate_move_time, var_ddb7f7d7, 1);
         var_35fc930f[0] playsound("evt_gate_open");
-        var_4eb99366 function_a202446a(1, 0, var_1d13e8a8);
-        wait(getdvarfloat("gate_wait_close_door_end", 8));
-        level thread function_1b3e50b5(var_9071646e, 1, var_1d13e8a8, (0, 0, 0), 0);
+        var_4eb99366 function_a202446a(1, 0, gate_move_time);
+        wait getdvarfloat("gate_wait_close_door_end", 8);
+        level thread function_1b3e50b5(var_9071646e, 1, gate_move_time, (0, 0, 0), 0);
         var_9071646e[0] playsound("evt_gate_close");
-        var_5f47c084 function_a202446a(0, 0, var_1d13e8a8);
-        wait(getdvarfloat("gate_wait_close_doors", 4));
-        level thread function_1b3e50b5(var_c3f523d4, var_b909fdbf, var_1d13e8a8, (0, 0, 0), 0);
+        var_5f47c084 function_a202446a(0, 0, gate_move_time);
+        wait getdvarfloat("gate_wait_close_doors", 4);
+        level thread function_1b3e50b5(var_c3f523d4, var_b909fdbf, gate_move_time, (0, 0, 0), 0);
         var_c3f523d4[0] playsound("evt_gate_close");
-        level thread function_1b3e50b5(var_35fc930f, var_b909fdbf, var_1d13e8a8, (0, 0, 0), 1);
+        level thread function_1b3e50b5(var_35fc930f, var_b909fdbf, gate_move_time, (0, 0, 0), 1);
         var_35fc930f[0] playsound("evt_gate_close");
-        var_4eb99366 function_a202446a(0, 0, var_1d13e8a8);
-        var_4eb99366 function_a202446a(1, var_1d13e8a8, 0.25);
+        var_4eb99366 function_a202446a(0, 0, gate_move_time);
+        var_4eb99366 function_a202446a(1, gate_move_time, 0.25);
         foreach (barrier in var_fbb2796a) {
-            barrier moveto(barrier.originalorigin, var_ab9b4fda);
+            barrier moveto(barrier.originalorigin, barrier_move_time);
             barrier playsound("evt_wall_down");
         }
         var_c3f523d4[0] stoploopsound(2);
@@ -229,7 +229,7 @@ function function_91ce410(cars, var_c4643bb7, var_c7166e37, start, var_c3f523d4,
     }
 }
 
-// Namespace namespace_1931cdeb
+// Namespace mp_metro_train
 // Params 1, eflags: 0x1 linked
 // Checksum 0x24112229, Offset: 0x1ec8
 // Size: 0x2c8
@@ -263,22 +263,22 @@ function function_b08d0f63(tracknum) {
         } else if (level.var_86638a28[tracknum].size == var_6c3d9728) {
             level thread function_d196b0a5(3, tracknum);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
-// Namespace namespace_1931cdeb
+// Namespace mp_metro_train
 // Params 2, eflags: 0x1 linked
 // Checksum 0x428d0496, Offset: 0x2198
 // Size: 0x74
 function function_d196b0a5(index, var_4b395157) {
     explodername = "Train_dust_kickup_" + index + "_" + var_4b395157;
     exploder::exploder(explodername);
-    wait(5.5);
+    wait 5.5;
     exploder::stop_exploder(explodername);
 }
 
-// Namespace namespace_1931cdeb
+// Namespace mp_metro_train
 // Params 1, eflags: 0x1 linked
 // Checksum 0x29fc7808, Offset: 0x2218
 // Size: 0x186
@@ -298,14 +298,14 @@ function function_881473ff(tracknum) {
         if (isdefined(self.var_48adb15) && self.var_48adb15 == 1) {
             self.angles += (0, 180, 0);
         }
-        wait(0.05);
+        wait 0.05;
         if (i == 4) {
             self show();
         }
     }
 }
 
-// Namespace namespace_1931cdeb
+// Namespace mp_metro_train
 // Params 0, eflags: 0x1 linked
 // Checksum 0x92cb1ca2, Offset: 0x23a8
 // Size: 0xb8
@@ -323,7 +323,7 @@ function function_ac1ac4d2() {
     }
 }
 
-// Namespace namespace_1931cdeb
+// Namespace mp_metro_train
 // Params 0, eflags: 0x0
 // Checksum 0xc1d2a140, Offset: 0x2468
 // Size: 0x140
@@ -340,7 +340,7 @@ function function_2d719a60() {
     return true;
 }
 
-// Namespace namespace_1931cdeb
+// Namespace mp_metro_train
 // Params 3, eflags: 0x1 linked
 // Checksum 0x964a41, Offset: 0x25b0
 // Size: 0x660
@@ -350,11 +350,11 @@ function function_a202446a(var_6b9180f5, waittime, var_24d445fd) {
     door = self;
     var_cd78fc15 = 0;
     if (waittime > 0) {
-        wait(waittime);
+        wait waittime;
     }
     var_791e12da = 0;
     while (var_24d445fd > var_791e12da) {
-        wait(0.2);
+        wait 0.2;
         var_791e12da += 0.2;
         entities = getdamageableentarray(self.origin, -56);
         foreach (entity in entities) {
@@ -435,7 +435,7 @@ function function_a202446a(var_6b9180f5, waittime, var_24d445fd) {
     }
 }
 
-// Namespace namespace_1931cdeb
+// Namespace mp_metro_train
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6544780f, Offset: 0x2c18
 // Size: 0x15a
@@ -446,14 +446,14 @@ function function_efb0f9a4() {
             if (crate istouching(self)) {
                 playfx(level._supply_drop_explosion_fx, crate.origin);
                 playsoundatposition("wpn_grenade_explode", crate.origin);
-                wait(0.1);
+                wait 0.1;
                 crate supplydrop::cratedelete();
             }
         }
     }
 }
 
-// Namespace namespace_1931cdeb
+// Namespace mp_metro_train
 // Params 0, eflags: 0x1 linked
 // Checksum 0xadd7fbc9, Offset: 0x2d80
 // Size: 0x9e
@@ -466,7 +466,7 @@ function function_dde749cf() {
     }
 }
 
-// Namespace namespace_1931cdeb
+// Namespace mp_metro_train
 // Params 2, eflags: 0x0
 // Checksum 0x42bb6cb9, Offset: 0x2e28
 // Size: 0xf2

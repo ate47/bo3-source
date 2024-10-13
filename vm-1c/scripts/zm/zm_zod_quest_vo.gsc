@@ -7,9 +7,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_6294c69f;
+#namespace zm_zod_quest_vo;
 
-// Namespace namespace_6294c69f
+// Namespace zm_zod_quest_vo
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x1b0
 // Size: 0x4
@@ -17,7 +17,7 @@ function function_ba281e3f() {
     
 }
 
-// Namespace namespace_6294c69f
+// Namespace zm_zod_quest_vo
 // Params 0, eflags: 0x0
 // Checksum 0x99ec1590, Offset: 0x1c0
 // Size: 0x4
@@ -25,13 +25,13 @@ function function_3e539ffc() {
     
 }
 
-// Namespace namespace_6294c69f
+// Namespace zm_zod_quest_vo
 // Params 1, eflags: 0x0
 // Checksum 0x10947887, Offset: 0x1d0
 // Size: 0x20a
 function function_16d66993(convo) {
     self endon(#"disconnect");
-    assert(isdefined(convo), "plr_1");
+    assert(isdefined(convo), "<dev string:x28>");
     if (!level flag::get("story_vo_playing")) {
         level flag::set("story_vo_playing");
         self thread function_b80e4987();
@@ -48,7 +48,7 @@ function function_16d66993(convo) {
                 self playsoundwithnotify(convo[i], "sound_done" + convo[i]);
                 self waittill("sound_done" + convo[i]);
             }
-            wait(1);
+            wait 1;
         }
         self.dontspeak = 0;
         self clientfield::set_to_player("isspeaking", 0);
@@ -57,7 +57,7 @@ function function_16d66993(convo) {
     }
 }
 
-// Namespace namespace_6294c69f
+// Namespace zm_zod_quest_vo
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfb29d215, Offset: 0x3e8
 // Size: 0x3c
@@ -67,12 +67,12 @@ function function_b80e4987() {
     level flag::clear("story_vo_playing");
 }
 
-// Namespace namespace_6294c69f
+// Namespace zm_zod_quest_vo
 // Params 1, eflags: 0x0
 // Checksum 0xfbd773cd, Offset: 0x430
 // Size: 0x704
 function function_b1c2ac2a(convo) {
-    assert(isdefined(convo), "plr_1");
+    assert(isdefined(convo), "<dev string:x28>");
     players = getplayers();
     if (players.size == 4 && !level flag::get("story_vo_playing")) {
         level flag::set("story_vo_playing");
@@ -87,16 +87,16 @@ function function_b1c2ac2a(convo) {
         foreach (player in players) {
             if (isdefined(player)) {
                 switch (player.var_f7af1630) {
-                case 3:
+                case "Arlington":
                     var_4cd6b5cb = player;
                     break;
-                case 6:
+                case "Sal":
                     var_dacf4690 = player;
                     break;
-                case 4:
+                case "Billy":
                     var_d1c0f9 = player;
                     break;
-                case 5:
+                case "Finn":
                     var_bede2506 = player;
                     break;
                 }
@@ -150,7 +150,7 @@ function function_b1c2ac2a(convo) {
                 var_3b1f0101 waittill("sound_done" + convo[i]);
                 var_c49044df = var_3b1f0101;
             }
-            wait(1);
+            wait 1;
         }
         foreach (player in players) {
             if (isdefined(player)) {

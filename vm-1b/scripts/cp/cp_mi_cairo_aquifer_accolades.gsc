@@ -69,7 +69,7 @@ function function_c27610f9(var_8e087689, var_70b01bd3, var_513753b4) {
         player.var_ec496e8b[var_8e087689]++;
         player notify(var_8e087689);
         /#
-            iprintln("hack_terminal_left_completed" + var_8e087689 + "sniper_boss_damage" + player.var_ec496e8b[var_8e087689] + "<unknown string>" + level.var_bb70984c[var_8e087689]);
+            iprintln("<dev string:x28>" + var_8e087689 + "<dev string:x32>" + player.var_ec496e8b[var_8e087689] + "<dev string:x35>" + level.var_bb70984c[var_8e087689]);
         #/
     }
 }
@@ -249,7 +249,7 @@ function function_e3e41d63(params) {
         }
         player.var_c3919891[player.var_c3919891.size] = t + 2000;
         /#
-            iprintln("<unknown string>" + player.var_c3919891.size);
+            iprintln("<dev string:x3a>" + player.var_c3919891.size);
         #/
         if (player.var_c3919891.size >= 10) {
             player.var_2aec500b = 1;
@@ -280,10 +280,10 @@ function function_3b8b405() {
     flag::wait_till("destroy_defenses_completed");
     foreach (player in var_e4047762) {
         if (array::contains(level.activeplayers, player)) {
-            player notify(#"hash_c843f11");
+            player notify(#"destroy_defenses_completed");
         }
     }
-    wait(1);
+    wait 1;
     level notify(#"hash_ebe4266");
 }
 
@@ -378,10 +378,10 @@ function function_f42b5fa1() {
     level flag::wait_till("end_battle");
     foreach (player in var_e4047762) {
         if (array::contains(level.activeplayers, player)) {
-            player notify(#"hash_8c7ead91");
+            player notify(#"accolades_boss_done");
         }
     }
-    wait(1);
+    wait 1;
     level notify(#"hash_2899a2c7");
 }
 
@@ -410,7 +410,7 @@ function function_c2ba8da() {
     while (attacker != level.sniper_boss) {
         damage, attacker, dir, loc, type, model, tag, part, weapon, flags = self waittill(#"damage");
     }
-    self notify(#"hash_703e1e78");
+    self notify(#"sniper_boss_damage");
 }
 
 // Namespace namespace_b5b83650

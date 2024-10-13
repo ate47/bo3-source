@@ -8,9 +8,9 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_da1f6db5;
+#namespace mp_redwood;
 
-// Namespace namespace_da1f6db5
+// Namespace mp_redwood
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7a848f9f, Offset: 0x240
 // Size: 0x314
@@ -32,8 +32,8 @@ function main() {
     trigger thread oob::run_oob_trigger();
     trigger = spawn("trigger_radius_out_of_bounds", (-1449, -22, -302), 0, 256, 300);
     trigger thread oob::run_oob_trigger();
-    namespace_ed44fd32::main();
-    namespace_a11fdab5::main();
+    mp_redwood_fx::main();
+    mp_redwood_sound::main();
     load::main();
     compass::setupminimap("compass_map_mp_redwood");
     setdvar("compassmaxrange", "2100");
@@ -45,7 +45,7 @@ function main() {
     function_9f6a9d3f();
 }
 
-// Namespace namespace_da1f6db5
+// Namespace mp_redwood
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x560
 // Size: 0x4
@@ -53,7 +53,7 @@ function precache() {
     
 }
 
-// Namespace namespace_da1f6db5
+// Namespace mp_redwood
 // Params 0, eflags: 0x1 linked
 // Checksum 0x8187cf12, Offset: 0x570
 // Size: 0x2d4
@@ -80,7 +80,7 @@ function spawnkilltrigger() {
     trigger thread watchkilltrigger();
 }
 
-// Namespace namespace_da1f6db5
+// Namespace mp_redwood
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3749d84c, Offset: 0x850
 // Size: 0x90
@@ -93,7 +93,7 @@ function watchkilltrigger() {
     }
 }
 
-// Namespace namespace_da1f6db5
+// Namespace mp_redwood
 // Params 0, eflags: 0x1 linked
 // Checksum 0x163a8e35, Offset: 0x8e8
 // Size: 0x224

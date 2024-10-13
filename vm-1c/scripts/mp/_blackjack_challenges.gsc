@@ -114,10 +114,10 @@ function on_hero_ability_kill(ability, victimability) {
     // Checksum 0xd8e576b2, Offset: 0x980
     // Size: 0x44
     function debug_print_already_earned() {
-        if (getdvarint("special_card_earned", 0) == 0) {
+        if (getdvarint("<dev string:x28>", 0) == 0) {
             return;
         }
-        iprintln("special_card_earned");
+        iprintln("<dev string:x44>");
     }
 
     // Namespace blackjack_challenges
@@ -125,11 +125,11 @@ function on_hero_ability_kill(ability, victimability) {
     // Checksum 0x24c67f26, Offset: 0x9d0
     // Size: 0x8c
     function debug_print_kill_info() {
-        if (getdvarint("special_card_earned", 0) == 0) {
+        if (getdvarint("<dev string:x28>", 0) == 0) {
             return;
         }
         player = self;
-        iprintln("special_card_earned" + player.pers["special_card_earned"] + "special_card_earned" + player.pers["special_card_earned"]);
+        iprintln("<dev string:x71>" + player.pers["<dev string:x8c>"] + "<dev string:xa7>" + player.pers["<dev string:xb3>"]);
     }
 
     // Namespace blackjack_challenges
@@ -137,10 +137,10 @@ function on_hero_ability_kill(ability, victimability) {
     // Checksum 0x16f15520, Offset: 0xa68
     // Size: 0x44
     function debug_print_earned() {
-        if (getdvarint("special_card_earned", 0) == 0) {
+        if (getdvarint("<dev string:x28>", 0) == 0) {
             return;
         }
-        iprintln("special_card_earned");
+        iprintln("<dev string:xd5>");
     }
 
 #/
@@ -236,30 +236,30 @@ function get_hero_weapon_mask(attacker, weapon) {
         return 0;
     }
     switch (weapon.name) {
-    case 27:
-    case 28:
+    case "hero_minigun":
+    case "hero_minigun_body3":
         return 1;
-    case 23:
+    case "hero_flamethrower":
         return 2;
-    case 25:
-    case 26:
+    case "hero_lightninggun":
+    case "hero_lightninggun_arc":
         return 4;
-    case 21:
-    case 22:
+    case "hero_chemicalgelgun":
+    case "hero_firefly_swarm":
         return 8;
-    case 29:
-    case 30:
+    case "hero_pineapple_grenade":
+    case "hero_pineapplegun":
         return 16;
-    case 16:
+    case "hero_armblade":
         return 32;
-    case 17:
-    case 18:
-    case 19:
-    case 20:
+    case "hero_bowlauncher":
+    case "hero_bowlauncher2":
+    case "hero_bowlauncher3":
+    case "hero_bowlauncher4":
         return 64;
-    case 24:
+    case "hero_gravityspikes":
         return -128;
-    case 15:
+    case "hero_annihilator":
         return 256;
     default:
         return 0;
@@ -275,23 +275,23 @@ function get_hero_ability_mask(ability) {
         return 0;
     }
     switch (ability.name) {
-    case 33:
+    case "gadget_clone":
         return 1;
-    case 36:
+    case "gadget_heat_wave":
         return 2;
-    case 35:
+    case "gadget_flashback":
         return 4;
-    case 37:
+    case "gadget_resurrect":
         return 8;
-    case 31:
+    case "gadget_armor":
         return 16;
-    case 32:
+    case "gadget_camo":
         return 32;
-    case 39:
+    case "gadget_vision_pulse":
         return 64;
-    case 38:
+    case "gadget_speed_burst":
         return -128;
-    case 34:
+    case "gadget_combat_efficiency":
         return 256;
     default:
         return 0;
@@ -361,7 +361,7 @@ function track_blackjack_consumable() {
     }
     while (isdefined(player)) {
         random_wait_time = getdvarfloat("mp_blackjack_consumable_wait", 20) + randomfloatrange(-5, 5);
-        wait(random_wait_time);
+        wait random_wait_time;
         player report_consumable();
     }
 }

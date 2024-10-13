@@ -4,9 +4,9 @@
 #using scripts/cp/_load;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f2cf86cc;
+#namespace stealth_client;
 
-// Namespace namespace_f2cf86cc
+// Namespace stealth_client
 // Params 0, eflags: 0x2
 // Checksum 0x887ef46d, Offset: 0x170
 // Size: 0x2a
@@ -14,7 +14,7 @@ function autoexec function_2dc19561() {
     system::register("stealth_client", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_f2cf86cc
+// Namespace stealth_client
 // Params 0, eflags: 0x0
 // Checksum 0xf51c77a7, Offset: 0x1a8
 // Size: 0x22
@@ -24,7 +24,7 @@ function __init__() {
     level.var_ba40d63 = 0;
 }
 
-// Namespace namespace_f2cf86cc
+// Namespace stealth_client
 // Params 0, eflags: 0x0
 // Checksum 0x9c26ca72, Offset: 0x1d8
 // Size: 0x72
@@ -33,7 +33,7 @@ function init_clientfields() {
     clientfield::register("toplayer", "stealth_alerted", 1, 1, "int", &function_b1ff0e4c, 0, 0);
 }
 
-// Namespace namespace_f2cf86cc
+// Namespace stealth_client
 // Params 7, eflags: 0x0
 // Checksum 0xa59ddd3f, Offset: 0x258
 // Size: 0x87
@@ -49,7 +49,7 @@ function function_f35fe4e2(localclientnum, oldval, newval, bnewent, binitialsnap
     self notify(#"hash_72012023");
 }
 
-// Namespace namespace_f2cf86cc
+// Namespace stealth_client
 // Params 7, eflags: 0x0
 // Checksum 0xe976f154, Offset: 0x2e8
 // Size: 0x7e
@@ -65,7 +65,7 @@ function function_b1ff0e4c(localclientnum, oldval, newval, bnewent, binitialsnap
     level.var_39a2f1a5 = 0;
 }
 
-// Namespace namespace_f2cf86cc
+// Namespace stealth_client
 // Params 0, eflags: 0x0
 // Checksum 0x738c876, Offset: 0x370
 // Size: 0x69
@@ -81,11 +81,11 @@ function function_b557fc53() {
     }
     while (isdefined(self)) {
         self playsound(self, "uin_stealth_beep");
-        wait(var_c6b203b0);
+        wait var_c6b203b0;
     }
 }
 
-// Namespace namespace_f2cf86cc
+// Namespace stealth_client
 // Params 0, eflags: 0x0
 // Checksum 0xf72d1225, Offset: 0x3e8
 // Size: 0x4d
@@ -98,7 +98,7 @@ function function_d473128e() {
         self playsound(self, "uin_stealth_hint");
     }
     while (isdefined(self)) {
-        wait(4);
+        wait 4;
     }
 }
 

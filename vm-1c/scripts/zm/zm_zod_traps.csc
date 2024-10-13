@@ -13,9 +13,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_d8d03071;
+#namespace zm_zod_traps;
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 0, eflags: 0x2
 // Checksum 0xb7499ad7, Offset: 0x528
 // Size: 0x34
@@ -23,7 +23,7 @@ function autoexec function_2dc19561() {
     system::register("zm_zod_traps", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 0, eflags: 0x0
 // Checksum 0x54cbfddc, Offset: 0x568
 // Size: 0x94
@@ -32,7 +32,7 @@ function __init__() {
     clientfield::register("scriptmover", "trap_chain_location", 1, 2, "int", &function_4903bbf5, 0, 0);
 }
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 7, eflags: 0x0
 // Checksum 0xf418ab20, Offset: 0x608
 // Size: 0x17c
@@ -51,7 +51,7 @@ function function_470e01bb(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 7, eflags: 0x0
 // Checksum 0x87806552, Offset: 0x790
 // Size: 0x3c
@@ -59,7 +59,7 @@ function function_4903bbf5(localclientnum, oldval, newval, bnewent, binitialsnap
     
 }
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 2, eflags: 0x0
 // Checksum 0x131b17f7, Offset: 0x7d8
 // Size: 0x34
@@ -70,7 +70,7 @@ function function_1bfbfa4c(e_entity, var_d42f02cf) {
     return true;
 }
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 7, eflags: 0x0
 // Checksum 0x632ce833, Offset: 0x818
 // Size: 0x18e
@@ -93,15 +93,15 @@ function function_53aebe0a(localclientnum, oldval, newval, bnewent, binitialsnap
         var_9f9d6054 thread function_a89bd6f9();
         break;
     case 3:
-        while (isdefined(self.var_d8823dfd)) {
-            wait(0.01);
+        while (isdefined(self.trap_active)) {
+            wait 0.01;
         }
         self thread scene_play("p7_fxanim_zm_zod_chain_trap_symbol_off_bundle", self);
         break;
     }
 }
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 2, eflags: 0x0
 // Checksum 0xd7013c9d, Offset: 0x9b0
 // Size: 0x7c
@@ -113,7 +113,7 @@ function scene_play(scene, mdl_pod) {
     self scene::stop();
 }
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 2, eflags: 0x0
 // Checksum 0x532443a6, Offset: 0xa38
 // Size: 0x3c
@@ -122,12 +122,12 @@ function function_6221b6b9(scene, mdl_pod) {
     self scene::play(scene, mdl_pod);
 }
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 0, eflags: 0x0
 // Checksum 0x3ae9d485, Offset: 0xa80
 // Size: 0x1ce
 function function_a89bd6f9() {
-    self.var_d8823dfd = 1;
+    self.trap_active = 1;
     self stopallloopsounds();
     self playsound(0, "evt_chaintrap_start");
     self playloopsound("evt_chaintrap_loop", 0.5);
@@ -138,37 +138,37 @@ function function_a89bd6f9() {
     n_start_time = getanimlength(self.var_b33065b0);
     var_b13eaf00 = getanimlength(self.var_aec39a66);
     n_time = 15;
-    wait(n_time);
+    wait n_time;
     scene::stop(self.var_68a0b25);
     scene::play(self.var_aec39a66, self);
     self thread scene::play("p7_fxanim_zm_zod_chain_trap_symbol_off_bundle", self);
     self stopallloopsounds(0.5);
     self playloopsound("evt_chaintrap_idle");
-    self.var_d8823dfd = undefined;
+    self.trap_active = undefined;
 }
 
-// Namespace namespace_d8d03071
+// Namespace zm_zod_traps
 // Params 0, eflags: 0x0
 // Checksum 0xe7d8a97f, Offset: 0xc58
 // Size: 0x112
 function function_3f7430db() {
     switch (self.script_noteworthy) {
-    case 8:
+    case "pap":
         self.var_b33065b0 = "p7_fxanim_zm_zod_chain_trap_pap_start_bundle";
         self.var_68a0b25 = "p7_fxanim_zm_zod_chain_trap_pap_on_bundle";
         self.var_aec39a66 = "p7_fxanim_zm_zod_chain_trap_pap_end_bundle";
         break;
-    case 7:
+    case "canals":
         self.var_b33065b0 = "p7_fxanim_zm_zod_chain_trap_canal_start_bundle";
         self.var_68a0b25 = "p7_fxanim_zm_zod_chain_trap_canal_on_bundle";
         self.var_aec39a66 = "p7_fxanim_zm_zod_chain_trap_canal_end_bundle";
         break;
-    case 6:
+    case "slums":
         self.var_b33065b0 = "p7_fxanim_zm_zod_chain_trap_waterfront_start_bundle";
         self.var_68a0b25 = "p7_fxanim_zm_zod_chain_trap_waterfront_on_bundle";
         self.var_aec39a66 = "p7_fxanim_zm_zod_chain_trap_waterfront_end_bundle";
         break;
-    case 5:
+    case "theater":
     default:
         self.var_b33065b0 = "p7_fxanim_zm_zod_chain_trap_footlight_start_bundle";
         self.var_68a0b25 = "p7_fxanim_zm_zod_chain_trap_footlight_on_bundle";

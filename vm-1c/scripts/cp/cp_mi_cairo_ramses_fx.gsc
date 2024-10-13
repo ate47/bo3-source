@@ -1,9 +1,9 @@
 #using scripts/shared/clientfield_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b9254c21;
+#namespace cp_mi_cairo_ramses_fx;
 
-// Namespace namespace_b9254c21
+// Namespace cp_mi_cairo_ramses_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x421c3635, Offset: 0x118
 // Size: 0x7e

@@ -232,7 +232,7 @@ function playnotifyloop(duration) {
     if (duration < 1) {
         duration = 1;
     }
-    wait(duration);
+    wait duration;
     playnotifyloop delete();
 }
 
@@ -354,10 +354,10 @@ function function_3cb967ea(var_b444826e, duration) {
 function function_6ecb638b(waittime) {
     interval = 0.05;
     while (!self function_a8d99e50()) {
-        wait(interval);
+        wait interval;
     }
     while (waittime > 0) {
-        wait(interval);
+        wait interval;
         if (self function_a8d99e50()) {
             waittime -= interval;
         }
@@ -527,7 +527,7 @@ function function_c830b4d0() {
             }
         }
         if (var_42cafb41) {
-            wait(0.2);
+            wait 0.2;
         }
     }
 }

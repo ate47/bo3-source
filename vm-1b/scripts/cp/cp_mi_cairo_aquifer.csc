@@ -12,21 +12,21 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_19487f32;
+#namespace cp_mi_cairo_aquifer;
 
-// Namespace namespace_19487f32
+// Namespace cp_mi_cairo_aquifer
 // Params 0, eflags: 0x0
 // Checksum 0x7e719d08, Offset: 0x360
 // Size: 0x62
 function main() {
     util::function_57b966c8(&function_71f88fc, 11);
-    namespace_d6728217::main();
-    namespace_1d1d22be::main();
+    cp_mi_cairo_aquifer_fx::main();
+    cp_mi_cairo_aquifer_sound::main();
     load::main();
     util::waitforclient(0);
 }
 
-// Namespace namespace_19487f32
+// Namespace cp_mi_cairo_aquifer
 // Params 1, eflags: 0x0
 // Checksum 0x26419970, Offset: 0x3d0
 // Size: 0x189
@@ -69,7 +69,7 @@ function function_71f88fc(n_zone) {
     }
 }
 
-// Namespace namespace_19487f32
+// Namespace cp_mi_cairo_aquifer
 // Params 3, eflags: 0x0
 // Checksum 0xedb3a650, Offset: 0x568
 // Size: 0x6a
@@ -78,7 +78,7 @@ function function_93df2062(player, filterid, var_5a938650) {
     setfilterpassenabled(player.localclientnum, filterid, 0, 1);
 }
 
-// Namespace namespace_19487f32
+// Namespace cp_mi_cairo_aquifer
 // Params 1, eflags: 0x0
 // Checksum 0x4e8dc932, Offset: 0x5e0
 // Size: 0x26

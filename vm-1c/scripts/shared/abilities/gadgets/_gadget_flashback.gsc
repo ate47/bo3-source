@@ -28,7 +28,7 @@ function __init__() {
     clientfield::register("scriptmover", "flashback_trail_fx", 1, 1, "int");
     clientfield::register("playercorpse", "flashback_clone", 1, 1, "int");
     clientfield::register("allplayers", "flashback_activated", 1, 1, "int");
-    ability_player::register_gadget_activation_callbacks(16, &function_368b57d1, &function_c23cb11d);
+    ability_player::register_gadget_activation_callbacks(16, &gadget_flashback_on, &function_c23cb11d);
     ability_player::register_gadget_possession_callbacks(16, &function_42bd2787, &function_d5e07d1d);
     ability_player::register_gadget_flicker_callbacks(16, &function_51535640);
     ability_player::register_gadget_is_inuse_callbacks(16, &function_90fcd171);
@@ -104,7 +104,7 @@ function function_65109c96() {
 // Size: 0x4c
 function function_dcca4d3b() {
     self endon(#"death");
-    wait(1);
+    wait 1;
     self clientfield::set("flashback_clone", 0);
     self ghost();
 }
@@ -164,7 +164,7 @@ function unlink_grenades(oldpos) {
 // Params 2, eflags: 0x1 linked
 // Checksum 0x3ef755f4, Offset: 0xa10
 // Size: 0x264
-function function_368b57d1(slot, weapon) {
+function gadget_flashback_on(slot, weapon) {
     self flagsys::set("gadget_flashback_on");
     self gadgetsetactivatetime(slot, gettime());
     visionset_mgr::activate("overlay", "flashback_warp", self, 0.8, 0.8);
@@ -252,7 +252,7 @@ function function_62618cfe(slot, weapon, oldpos, newpos) {
     tagpos = self gettagorigin("j_spineupper");
     fxorg moveto(tagpos, 0.1);
     fxorg waittill(#"movedone");
-    wait(1);
+    wait 1;
     fxorg clientfield::set("flashback_trail_fx", 0);
     util::wait_network_frame();
     fxorg delete();

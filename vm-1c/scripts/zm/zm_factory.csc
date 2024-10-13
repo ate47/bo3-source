@@ -53,10 +53,10 @@ function autoexec opt_in() {
     level._effect["zm_bgb_machine_bulb_time"] = "zombie/fx_bgb_machine_bulb_time_factory_zmb";
     level._effect["zm_bgb_machine_light_interior"] = "zombie/fx_bgb_machine_light_interior_factory_zmb";
     level._effect["zm_bgb_machine_light_interior_away"] = "zombie/fx_bgb_machine_light_interior_away_factory_zmb";
-    clientfield::register("world", "console_blue", 1, 1, "int", &function_31018bf3, 0, 0);
-    clientfield::register("world", "console_green", 1, 1, "int", &function_200762b0, 0, 0);
-    clientfield::register("world", "console_red", 1, 1, "int", &function_fe3e7230, 0, 0);
-    clientfield::register("world", "console_start", 1, 1, "int", &function_6eaba579, 0, 0);
+    clientfield::register("world", "console_blue", 1, 1, "int", &console_blue, 0, 0);
+    clientfield::register("world", "console_green", 1, 1, "int", &console_green, 0, 0);
+    clientfield::register("world", "console_red", 1, 1, "int", &console_red, 0, 0);
+    clientfield::register("world", "console_start", 1, 1, "int", &console_start, 0, 0);
     clientfield::register("toplayer", "lightning_strike", 1, 1, "counter", &lightning_strike, 0, 0);
 }
 
@@ -65,8 +65,8 @@ function autoexec opt_in() {
 // Checksum 0xfa7111d3, Offset: 0x12e8
 // Size: 0x254
 function main() {
-    namespace_689d3383::main_start();
-    namespace_e59f4632::main();
+    zm_factory_ffotd::main_start();
+    zm_factory_fx::main();
     level.setupcustomcharacterexerts = &setup_personality_character_exerts;
     level.legacy_cymbal_monkey = 1;
     level._effect["eye_glow"] = "zombie/fx_glow_eye_orange";
@@ -82,16 +82,16 @@ function main() {
     include_weapons();
     function_50a4ff91();
     load::main();
-    namespace_570c8452::init();
-    namespace_40b4687d::init();
-    level thread namespace_7f5de500::main();
+    _zm_weap_cymbal_monkey::init();
+    _zm_weap_tesla::init();
+    level thread zm_factory_amb::main();
     level thread function_dba1e8f1();
     callback::on_localclient_connect(&on_player_connected);
     callback::on_spawned(&on_player_spawned);
     level thread function_e0500062();
-    namespace_689d3383::main_end();
+    zm_factory_ffotd::main_end();
     util::waitforclient(0);
-    println("zombie/fx_bgb_machine_bulb_event_factory_zmb");
+    println("<dev string:x28>");
 }
 
 // Namespace zm_factory
@@ -102,7 +102,7 @@ function on_player_connected(localclientnum) {
     if (1 != getdvarint("movie_intro")) {
         return;
     }
-    wait(0.05);
+    wait 0.05;
     keys = getarraykeys(level._active_wallbuys);
     for (i = 0; i < keys.size; i++) {
         wallbuy = level._active_wallbuys[keys[i]];
@@ -153,7 +153,7 @@ function function_9788e0f3(localclientnum) {
         }
         fxid = playfx(localclientnum, level._effect["player_snow"], self.origin);
         setfxoutdoor(localclientnum, fxid);
-        wait(0.25);
+        wait 0.25;
     }
 }
 
@@ -232,7 +232,7 @@ function function_f205a5f1() {
 // Checksum 0x24030f8f, Offset: 0x1ee0
 // Size: 0x64
 function function_e0500062() {
-    level waittill(#"hash_e61d99fd");
+    level waittill(#"sndSB");
     playsound(0, "zmb_robothead_laser", (-434, 706, 439));
     playsound(0, "zmb_robothead_reflection_laser", (-451, -397, 294));
 }
@@ -241,7 +241,7 @@ function function_e0500062() {
 // Params 7, eflags: 0x1 linked
 // Checksum 0x757639e8, Offset: 0x1f50
 // Size: 0x104
-function function_31018bf3(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function console_blue(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     s_scene = struct::get("top_dial");
     if (newval) {
         exploder::kill_exploder("teleporter_controller_red_light_1");
@@ -258,7 +258,7 @@ function function_31018bf3(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2d090ec0, Offset: 0x2060
 // Size: 0x104
-function function_200762b0(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function console_green(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     s_scene = struct::get("middle_dial");
     if (newval) {
         exploder::kill_exploder("teleporter_controller_red_light_2");
@@ -275,7 +275,7 @@ function function_200762b0(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xcfb23f84, Offset: 0x2170
 // Size: 0x104
-function function_fe3e7230(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function console_red(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     s_scene = struct::get("bottom_dial");
     if (newval) {
         exploder::kill_exploder("teleporter_controller_red_light_3");
@@ -292,7 +292,7 @@ function function_fe3e7230(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xd687f83d, Offset: 0x2280
 // Size: 0x8c
-function function_6eaba579(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function console_start(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval) {
         exploder::exploder("teleporter_controller_red_light_1");
         exploder::exploder("teleporter_controller_red_light_2");
@@ -307,19 +307,19 @@ function function_6eaba579(localclientnum, oldval, newval, bnewent, binitialsnap
 function lightning_strike(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     setukkoscriptindex(localclientnum, 1, 1);
     playsound(0, "amb_lightning_dist_low", (0, 0, 0));
-    wait(0.02);
+    wait 0.02;
     setukkoscriptindex(localclientnum, 3, 1);
-    wait(0.15);
+    wait 0.15;
     setukkoscriptindex(localclientnum, 1, 1);
-    wait(0.1);
+    wait 0.1;
     setukkoscriptindex(localclientnum, 4, 1);
-    wait(0.1);
+    wait 0.1;
     setukkoscriptindex(localclientnum, 3, 1);
-    wait(0.25);
+    wait 0.25;
     setukkoscriptindex(localclientnum, 1, 1);
-    wait(0.15);
+    wait 0.15;
     setukkoscriptindex(localclientnum, 3, 1);
-    wait(0.15);
+    wait 0.15;
     setukkoscriptindex(localclientnum, 1, 1);
 }
 

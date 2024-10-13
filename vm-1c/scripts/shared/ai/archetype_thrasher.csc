@@ -7,9 +7,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_88aa1b1a;
+#namespace archetype_thrasher;
 
-// Namespace namespace_88aa1b1a
+// Namespace archetype_thrasher
 // Params 0, eflags: 0x2
 // Checksum 0xb33a4207, Offset: 0x608
 // Size: 0x34
@@ -17,7 +17,7 @@ function autoexec function_2dc19561() {
     system::register("thrasher", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_88aa1b1a
+// Namespace archetype_thrasher
 // Params 0, eflags: 0x1 linked
 // Checksum 0x383e2169, Offset: 0x648
 // Size: 0x27c
@@ -27,7 +27,7 @@ function __init__() {
         clientfield::register("actor", "thrasher_spore_state", 5000, 3, "int", &namespace_4329c852::function_15e61dc, 0, 0);
         clientfield::register("actor", "thrasher_berserk_state", 5000, 1, "int", &namespace_4329c852::function_d5c67375, 0, 1);
         clientfield::register("actor", "thrasher_player_hide", 8000, 4, "int", &namespace_4329c852::function_6291f979, 0, 0);
-        clientfield::register("toplayer", "sndPlayerConsumed", 10000, 1, "int", &namespace_4329c852::function_358dc87b, 0, 1);
+        clientfield::register("toplayer", "sndPlayerConsumed", 10000, 1, "int", &namespace_4329c852::sndPlayerConsumed, 0, 1);
         foreach (spore in array(1, 2, 4)) {
             clientfield::register("actor", "thrasher_spore_impact" + spore, 8000, 1, "counter", &namespace_4329c852::function_4b871d5b, 0, 0);
         }
@@ -37,7 +37,7 @@ function __init__() {
     level thread namespace_4329c852::function_2f3aacf4();
 }
 
-// Namespace namespace_88aa1b1a
+// Namespace archetype_thrasher
 // Params 0, eflags: 0x2
 // Checksum 0x19bf02cf, Offset: 0x8d0
 // Size: 0x18a
@@ -89,7 +89,7 @@ function private function_2f3aacf4() {
             }
             level.var_978978e9[level.var_978978e9.size] = var_92a6e9bb;
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -233,7 +233,7 @@ function private function_4b871d5b(localclientnum, oldvalue, newvalue, bnewent, 
     entity = self;
     var_4d368c9c = undefined;
     var_dc3c7a86 = array(1, 2, 4);
-    assert(var_dc3c7a86.size == array("sndPlayerConsumed", "sndPlayerConsumed", "sndPlayerConsumed").size);
+    assert(var_dc3c7a86.size == array("<dev string:x28>", "<dev string:x38>", "<dev string:x47>").size);
     for (index = 0; index < var_dc3c7a86.size; index++) {
         if (fieldname == "thrasher_spore_impact" + var_dc3c7a86[index]) {
             var_4d368c9c = array("tag_spore_chest", "tag_spore_back", "tag_spore_leg")[index];
@@ -261,7 +261,7 @@ function private function_1ce9e0de(localclientnum, entity, gibflag) {
 // Params 7, eflags: 0x5 linked
 // Checksum 0x10d145c6, Offset: 0x18b0
 // Size: 0x1dc
-function private function_358dc87b(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
+function private sndPlayerConsumed(localclientnum, oldvalue, newvalue, bnewent, binitialsnap, fieldname, wasdemojump) {
     if (newvalue) {
         if (!isdefined(self.var_e7618574)) {
             self.var_e7618574 = self playloopsound("zmb_thrasher_consumed_lp", 5);

@@ -66,13 +66,13 @@ function play_vehicle_anim(localclientnum, oldval, newval, bnewent, binitialsnap
     foreach (s_rider in s_bundle.objects) {
         if (s_rider.position == str_pos) {
             switch (str_action) {
-            case 7:
+            case "enter":
                 str_vh_anim = s_rider.vehicleenteranim;
                 break;
-            case 8:
+            case "exit":
                 str_vh_anim = s_rider.vehicleexitanim;
                 break;
-            case 9:
+            case "death":
                 str_vh_anim = s_rider.vehicleriderdeathanim;
                 break;
             }

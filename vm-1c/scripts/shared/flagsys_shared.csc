@@ -22,7 +22,7 @@ function set_for_time(n_time, str_flag) {
     self notify("__flag::set_for_time__" + str_flag);
     self endon("__flag::set_for_time__" + str_flag);
     set(str_flag);
-    wait(n_time);
+    wait n_time;
     clear(str_flag);
 }
 
@@ -42,7 +42,7 @@ function clear(str_flag) {
 // Checksum 0x350188a2, Offset: 0x1d0
 // Size: 0x74
 function set_val(str_flag, b_val) {
-    assert(isdefined(b_val), "<unknown string>");
+    assert(isdefined(b_val), "<dev string:x28>");
     if (b_val) {
         set(str_flag);
         return;

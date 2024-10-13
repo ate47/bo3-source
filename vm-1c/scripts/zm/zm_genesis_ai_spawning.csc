@@ -19,9 +19,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_484ba32a;
+#namespace zm_genesis_ai_spawning;
 
-// Namespace namespace_484ba32a
+// Namespace zm_genesis_ai_spawning
 // Params 0, eflags: 0x2
 // Checksum 0x87b0eb1d, Offset: 0x4a0
 // Size: 0x34
@@ -29,13 +29,13 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_ai_spawning", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_484ba32a
+// Namespace zm_genesis_ai_spawning
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc08fb0de, Offset: 0x4e0
 // Size: 0x178
 function __init__() {
-    clientfield::register("toplayer", "chaos_postfx_set", 15000, 1, "int", &function_74187aaf, 0, 0);
-    clientfield::register("world", "chaos_fog_bank_switch", 15000, 1, "int", &function_ab98524a, 0, 0);
+    clientfield::register("toplayer", "chaos_postfx_set", 15000, 1, "int", &chaos_postfx_set, 0, 0);
+    clientfield::register("world", "chaos_fog_bank_switch", 15000, 1, "int", &chaos_fog_bank_switch, 0, 0);
     visionset_mgr::register_visionset_info("zm_chaos_organge", 15000, 1, undefined, "zm_chaos_organge");
     ai::add_archetype_spawn_function("keeper", &function_5ea6033e);
     level._effect["chaos_1p_light"] = "zombie/fx_bmode_tent_light_zod_zmb";
@@ -46,11 +46,11 @@ function __init__() {
     level.var_b7572a82 = 0;
 }
 
-// Namespace namespace_484ba32a
+// Namespace zm_genesis_ai_spawning
 // Params 7, eflags: 0x1 linked
 // Checksum 0xb6629f7d, Offset: 0x660
 // Size: 0xfc
-function function_74187aaf(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function chaos_postfx_set(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         self.var_d8f5e78d = playfxoncamera(localclientnum, level._effect["chaos_1p_light"]);
         function_3c75e14b(localclientnum, 1);
@@ -64,7 +64,7 @@ function function_74187aaf(localclientnum, oldval, newval, bnewent, binitialsnap
     self thread postfx::exitpostfxbundle();
 }
 
-// Namespace namespace_484ba32a
+// Namespace zm_genesis_ai_spawning
 // Params 2, eflags: 0x1 linked
 // Checksum 0x9d968c9c, Offset: 0x768
 // Size: 0xdc
@@ -84,11 +84,11 @@ function function_3c75e14b(localclientnum, onoff) {
     }
 }
 
-// Namespace namespace_484ba32a
+// Namespace zm_genesis_ai_spawning
 // Params 7, eflags: 0x1 linked
 // Checksum 0xfc6157a9, Offset: 0x850
 // Size: 0x140
-function function_ab98524a(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function chaos_fog_bank_switch(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (newval == 1) {
         level.var_b7572a82 = 1;
         for (localclientnum = 0; localclientnum < level.localplayers.size; localclientnum++) {
@@ -110,7 +110,7 @@ function function_ab98524a(localclientnum, oldval, newval, bnewent, binitialsnap
     level.var_b7572a82 = 0;
 }
 
-// Namespace namespace_484ba32a
+// Namespace zm_genesis_ai_spawning
 // Params 1, eflags: 0x1 linked
 // Checksum 0x45c16de3, Offset: 0x998
 // Size: 0x104
@@ -124,7 +124,7 @@ function function_5ea6033e(localclientnum) {
     self callback::on_shutdown(&function_4dc56cc7);
 }
 
-// Namespace namespace_484ba32a
+// Namespace zm_genesis_ai_spawning
 // Params 1, eflags: 0x1 linked
 // Checksum 0x3f7795df, Offset: 0xaa8
 // Size: 0x17c

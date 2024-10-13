@@ -61,7 +61,7 @@ function function_c2e280cb(model, oldvalue, newvalue) {
         timesincelastupdate = (getrealtime() - starttime) / 1000;
         var_81ef2a5 = lerpfloat(oldvalue, newvalue, timesincelastupdate) / 30;
         setuimodelvalue(model, var_81ef2a5);
-        wait(0.016);
+        wait 0.016;
     }
 }
 

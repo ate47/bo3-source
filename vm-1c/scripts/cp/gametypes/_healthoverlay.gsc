@@ -58,7 +58,7 @@ function function_ec5615ca(duration) {
     self.var_78f63664 = 0;
     self setcontrolleruimodelvalue("hudItems.regenDelayProgress", self.var_78f63664);
     while (remaining > 0) {
-        wait(duration / 5);
+        wait duration / 5;
         remaining -= duration / 5;
         self.var_78f63664 = 1 - remaining / duration + 0.05;
         if (self.var_78f63664 > 1) {
@@ -92,7 +92,7 @@ function player_health_regen() {
     hurttime = 0;
     newhealth = 0;
     for (;;) {
-        wait(0.05);
+        wait 0.05;
         if (isdefined(player.regenrate)) {
             regenrate = player.regenrate;
             usetrueregen = 1;
@@ -210,10 +210,10 @@ function decay_player_damages(decay) {
 // Size: 0xca
 function player_breathing_sound(healthcap) {
     self endon(#"end_healthregen");
-    wait(2);
+    wait 2;
     player = self;
     for (;;) {
-        wait(0.2);
+        wait 0.2;
         if (player.health <= 0) {
             return;
         }
@@ -224,8 +224,8 @@ function player_breathing_sound(healthcap) {
             continue;
         }
         player notify(#"snd_breathing_hurt");
-        wait(0.784);
-        wait(0.1 + randomfloat(0.8));
+        wait 0.784;
+        wait 0.1 + randomfloat(0.8);
     }
 }
 
@@ -242,7 +242,7 @@ function function_1373098a(healthcap) {
             self.var_1373098a = 1;
             self clientfield::set_to_player("sndHealth", 1);
             while (self.health <= healthcap) {
-                wait(0.1);
+                wait 0.1;
             }
         }
         if (self.var_1373098a) {
@@ -251,7 +251,7 @@ function function_1373098a(healthcap) {
                 self clientfield::set_to_player("sndHealth", 0);
             }
         }
-        wait(0.1);
+        wait 0.1;
     }
 }
 

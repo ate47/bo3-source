@@ -1,8 +1,8 @@
 #using scripts/shared/util_shared;
 
-#namespace namespace_5a142e53;
+#namespace zm_temple_fx;
 
-// Namespace namespace_5a142e53
+// Namespace zm_temple_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdfa613f8, Offset: 0x1948
 // Size: 0x84
@@ -16,7 +16,7 @@ function main() {
     }
 }
 
-// Namespace namespace_5a142e53
+// Namespace zm_temple_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc26523b8, Offset: 0x19d8
 // Size: 0xc6
@@ -30,7 +30,7 @@ function function_8d0ec42e() {
     level._effect["animscript_gibtrail_fx"] = "trail/fx_trail_blood_streak";
 }
 
-// Namespace namespace_5a142e53
+// Namespace zm_temple_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x56d1d50a, Offset: 0x1aa8
 // Size: 0x18a
@@ -51,7 +51,7 @@ function function_f45953c() {
     level._effect["perk_machine_light_green"] = "dlc5/zmhd/fx_wonder_fizz_light_green";
 }
 
-// Namespace namespace_5a142e53
+// Namespace zm_temple_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x66f6eb8e, Offset: 0x1c40
 // Size: 0x96a
@@ -144,7 +144,7 @@ function function_e6258024() {
     level._effect["fx_crystal_water_trail"] = "dlc5/temple/fx_ztem_meteorite_splash_run";
 }
 
-// Namespace namespace_5a142e53
+// Namespace zm_temple_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x60bd856c, Offset: 0x25b8
 // Size: 0x3a

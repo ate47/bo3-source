@@ -63,27 +63,27 @@ function __init__() {
 // Checksum 0xd3f9fa18, Offset: 0xc38
 // Size: 0x374
 function private function_d83c7355() {
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherRageService", &function_db7ff69e);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherTargetService", &function_bc6753c6);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherKnockdownService", &function_e4c4feab);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherAttackableObjectService", &function_57d6d5c4);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherShouldBeStunned", &function_b4e95fd);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherShouldMelee", &function_4fdbf15);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherShouldShowPain", &function_56b22ed8);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherShouldTurnBerserk", &function_3d0c02cc);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherShouldTeleport", &function_ab95703e);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherShouldConsumePlayer", &function_3bcfda18);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherShouldConsumeZombie", &function_fdcdd8a5);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherConsumePlayer", &function_f8c0f4f7);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherConsumeZombie", &function_394b19ee);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherPlayedBerserkIntro", &namespace_5d6075c6::function_2284c497);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherTeleport", &namespace_5d6075c6::function_28290043);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherTeleportOut", &namespace_5d6075c6::function_3e5b31b1);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherDeath", &function_506069f4);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherStartTraverse", &namespace_5d6075c6::function_87d9384);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherTerminateTraverse", &namespace_5d6075c6::function_69ba668d);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherStunInitialize", &namespace_5d6075c6::function_32c6ffcc);
-    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherStunUpdate", &namespace_5d6075c6::function_1d49555);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherRageService", &thrasherRageService);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherTargetService", &thrasherTargetService);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherKnockdownService", &thrasherKnockdownService);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherAttackableObjectService", &thrasherAttackableObjectService);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherShouldBeStunned", &thrasherShouldBeStunned);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherShouldMelee", &thrasherShouldMelee);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherShouldShowPain", &thrasherShouldShowPain);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherShouldTurnBerserk", &thrasherShouldTurnBerserk);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherShouldTeleport", &thrasherShouldTeleport);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherShouldConsumePlayer", &thrasherShouldConsumePlayer);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherShouldConsumeZombie", &thrasherShouldConsumeZombie);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherConsumePlayer", &thrasherConsumePlayer);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherConsumeZombie", &thrasherConsumeZombie);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherPlayedBerserkIntro", &namespace_5d6075c6::thrasherPlayedBerserkIntro);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherTeleport", &namespace_5d6075c6::thrasherTeleport);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherTeleportOut", &namespace_5d6075c6::thrasherTeleportOut);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherDeath", &thrasherDeath);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherStartTraverse", &namespace_5d6075c6::thrasherStartTraverse);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherTerminateTraverse", &namespace_5d6075c6::thrasherTerminateTraverse);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherStunInitialize", &namespace_5d6075c6::thrasherStunInitialize);
+    behaviortreenetworkutility::registerbehaviortreescriptapi("thrasherStunUpdate", &namespace_5d6075c6::thrasherStunUpdate);
     animationstatenetwork::registernotetrackhandlerfunction("thrasher_melee", &function_cb3596fd);
 }
 
@@ -103,19 +103,19 @@ function private function_66ddd4b8() {
     blackboard::registerblackboardattribute(self, "_locomotion_speed", var_93da56da, undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("sndPlayerConsumed");
+            self trackblackboardattribute("<dev string:x28>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_locomotion_should_turn", "should_not_turn", &bb_getshouldturn);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("sndPlayerConsumed");
+            self trackblackboardattribute("<dev string:x3a>");
         #/
     }
     blackboard::registerblackboardattribute(self, "_zombie_damageweapon_type", "regular", undefined);
     if (isactor(self)) {
         /#
-            self trackblackboardattribute("sndPlayerConsumed");
+            self trackblackboardattribute("<dev string:x52>");
         #/
     }
     entity.___archetypeonanimscriptedcallback = &function_5215214e;
@@ -176,7 +176,7 @@ function private bb_getshouldturn() {
 // Size: 0x218
 function private function_a035ff2a() {
     entity = self;
-    assert(array("sndPlayerConsumed", "sndPlayerConsumed", "sndPlayerConsumed").size == array(1, 2, 4).size);
+    assert(array("<dev string:x6c>", "<dev string:x7c>", "<dev string:x8b>").size == array(1, 2, 4).size);
     var_64d28ed0 = array("tag_spore_chest", "tag_spore_back", "tag_spore_leg");
     var_8df8cc2d = array(12, 18, 12);
     var_5a5190cc = array(1, 2, 4);
@@ -247,7 +247,7 @@ function private function_62caf126(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xdf486965, Offset: 0x18d8
 // Size: 0x74
-function private function_db7ff69e(entity) {
+function private thrasherRageService(entity) {
     entity.var_1bb31a5a += entity.var_e1f82635 * 1 + 1;
     if (entity.var_1bb31a5a >= -56) {
         namespace_5d6075c6::function_6c2bbf66(entity);
@@ -258,7 +258,7 @@ function private function_db7ff69e(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x1302c530, Offset: 0x1958
 // Size: 0x428
-function private function_bc6753c6(entity) {
+function private thrasherTargetService(entity) {
     if (isdefined(entity.ignoreall) && entity.ignoreall) {
         return 0;
     }
@@ -317,7 +317,7 @@ function private function_bc6753c6(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4cc09f9, Offset: 0x1d88
 // Size: 0x3a
-function private function_57d6d5c4(entity) {
+function private thrasherAttackableObjectService(entity) {
     if (isdefined(entity.var_67a1573a)) {
         return [[ entity.var_67a1573a ]](entity);
     }
@@ -328,7 +328,7 @@ function private function_57d6d5c4(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xf8674b3f, Offset: 0x1dd0
 // Size: 0x1ba
-function private function_e4c4feab(entity) {
+function private thrasherKnockdownService(entity) {
     velocity = entity getvelocity();
     var_43502fbc = 0.3;
     predicted_pos = entity.origin + velocity * var_43502fbc;
@@ -376,7 +376,7 @@ function private function_ae899104(zombie, thrasher, predicted_pos) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x4693d96a, Offset: 0x2150
 // Size: 0xee
-function function_4fdbf15(entity) {
+function thrasherShouldMelee(entity) {
     if (!isdefined(entity.favoriteenemy)) {
         return false;
     }
@@ -400,7 +400,7 @@ function function_4fdbf15(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x231b7965, Offset: 0x2248
 // Size: 0xe
-function private function_56b22ed8(entity) {
+function private thrasherShouldShowPain(entity) {
     return false;
 }
 
@@ -408,7 +408,7 @@ function private function_56b22ed8(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xc3065116, Offset: 0x2260
 // Size: 0x2c
-function private function_3d0c02cc(entity) {
+function private thrasherShouldTurnBerserk(entity) {
     return entity.var_5fedb470 && !entity.var_5b105946;
 }
 
@@ -416,7 +416,7 @@ function private function_3d0c02cc(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xfc1b23e8, Offset: 0x2298
 // Size: 0xec
-function private function_ab95703e(entity) {
+function private thrasherShouldTeleport(entity) {
     if (!isdefined(entity.favoriteenemy)) {
         return false;
     }
@@ -437,7 +437,7 @@ function private function_ab95703e(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xbcd705a9, Offset: 0x2390
 // Size: 0x124
-function private function_3bcfda18(entity) {
+function private thrasherShouldConsumePlayer(entity) {
     if (!isdefined(entity.favoriteenemy)) {
         return false;
     }
@@ -464,7 +464,7 @@ function private function_3bcfda18(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xd09001f7, Offset: 0x24c0
 // Size: 0x12a
-function private function_fdcdd8a5(entity) {
+function private thrasherShouldConsumeZombie(entity) {
     if (entity.var_a54844b5 >= entity.var_3a60f862) {
         return 0;
     }
@@ -491,7 +491,7 @@ function private function_fdcdd8a5(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x11dc2b78, Offset: 0x25f8
 // Size: 0x54
-function private function_f8c0f4f7(entity) {
+function private thrasherConsumePlayer(entity) {
     if (isplayer(entity.favoriteenemy)) {
         entity thread namespace_5d6075c6::function_aaaf7923(entity, entity.favoriteenemy);
     }
@@ -501,7 +501,7 @@ function private function_f8c0f4f7(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x1720b8f9, Offset: 0x2658
 // Size: 0x24
-function private function_506069f4(entity) {
+function private thrasherDeath(entity) {
     gibserverutils::annihilate(entity);
 }
 
@@ -509,7 +509,7 @@ function private function_506069f4(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xb2b27cf3, Offset: 0x2688
 // Size: 0x58
-function private function_394b19ee(entity) {
+function private thrasherConsumeZombie(entity) {
     if (isdefined(entity.var_c1f12967)) {
         if ([[ entity.var_c1f12967 ]](entity)) {
             entity.var_a54844b5++;
@@ -522,7 +522,7 @@ function private function_394b19ee(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0xe89546dc, Offset: 0x26e8
 // Size: 0x2a
-function private function_b4e95fd(entity) {
+function private thrasherShouldBeStunned(entity) {
     return entity ai::get_behavior_attribute("stunned");
 }
 
@@ -584,7 +584,7 @@ function function_6c2bbf66(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x1fb02543, Offset: 0x2a98
 // Size: 0xc4
-function private function_2284c497(entity) {
+function private thrasherPlayedBerserkIntro(entity) {
     entity.var_5b105946 = 1;
     meleeweapon = getweapon("thrasher_melee_enraged");
     entity.meleeweapon = getweapon("thrasher_melee_enraged");
@@ -640,7 +640,7 @@ function function_55ee3ac(inflictor, attacker, damage, dflags, mod, weapon, poin
 function private function_5aaa10f7(n_time) {
     entity = self;
     entity endon(#"death");
-    entity notify(#"hash_59b1cbf8");
+    entity notify(#"end_invulnerability");
     entity.var_ba462582 = 1;
     entity util::waittill_notify_or_timeout("end_invulnerability", n_time);
     entity.var_ba462582 = 0;
@@ -681,7 +681,7 @@ function function_c411135f(inflictor, attacker, damage, dflags, mod, weapon, poi
                 damage = entity.maxhealth / array("tag_spore_chest", "tag_spore_back", "tag_spore_leg").size;
             }
             /#
-                recordsphere(tagorigin, var_2e98e037.dist, (1, 1, 0), "sndPlayerConsumed", entity);
+                recordsphere(tagorigin, var_2e98e037.dist, (1, 1, 0), "<dev string:x99>", entity);
             #/
         }
         if (var_2e98e037.health > 0) {
@@ -698,7 +698,7 @@ function function_c411135f(inflictor, attacker, damage, dflags, mod, weapon, poi
 // Params 1, eflags: 0x5 linked
 // Checksum 0x2935c7b9, Offset: 0x32c0
 // Size: 0x3c
-function private function_3e5b31b1(entity) {
+function private thrasherTeleportOut(entity) {
     if (isdefined(entity.var_5622f976)) {
         entity thread [[ entity.var_5622f976 ]](entity);
     }
@@ -708,7 +708,7 @@ function private function_3e5b31b1(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc024d678, Offset: 0x3308
 // Size: 0x54
-function function_87d9384(entity) {
+function thrasherStartTraverse(entity) {
     aiutility::traversesetup(entity);
     if (isdefined(entity.var_87097485)) {
         entity [[ entity.var_87097485 ]](entity);
@@ -719,7 +719,7 @@ function function_87d9384(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0xf8b7153, Offset: 0x3368
 // Size: 0x3c
-function function_69ba668d(entity) {
+function thrasherTerminateTraverse(entity) {
     if (isdefined(entity.var_8c38eef8)) {
         entity [[ entity.var_8c38eef8 ]](entity);
     }
@@ -729,9 +729,9 @@ function function_69ba668d(entity) {
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5043328d, Offset: 0x33b0
 // Size: 0x32c
-function function_28290043(entity) {
+function thrasherTeleport(entity) {
     if (!isdefined(entity.favoriteenemy)) {
-        println("sndPlayerConsumed");
+        println("<dev string:xa0>");
         return;
     }
     points = util::positionquery_pointarray(entity.favoriteenemy.origin, -128, 256, 32, 64, entity);
@@ -768,7 +768,7 @@ function function_28290043(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x4e326dad, Offset: 0x36e8
 // Size: 0x1c
-function private function_32c6ffcc(entity) {
+function private thrasherStunInitialize(entity) {
     entity.var_e2dee6f5 = gettime();
 }
 
@@ -776,7 +776,7 @@ function private function_32c6ffcc(entity) {
 // Params 1, eflags: 0x5 linked
 // Checksum 0x666e896e, Offset: 0x3710
 // Size: 0x58
-function private function_1d49555(entity) {
+function private thrasherStunUpdate(entity) {
     if (entity.var_e2dee6f5 + 1000 < gettime()) {
         entity ai::set_behavior_attribute("stunned", 0);
         entity.var_ef0082a4 = 3000;
@@ -884,7 +884,7 @@ function function_3c72ff88(player) {
 // Size: 0x44
 function function_fc5c5afd(thrasher, player) {
     player endon(#"death");
-    player waittill(#"hash_7d8c80e4");
+    player waittill(#"hide_body");
     player hide();
 }
 
@@ -935,7 +935,7 @@ function private function_cf9a26c1(thrasher, playerclone) {
 // Size: 0x5d4
 function function_aaaf7923(thrasher, player) {
     assert(isactor(thrasher));
-    assert(thrasher.archetype == "sndPlayerConsumed");
+    assert(thrasher.archetype == "<dev string:xf0>");
     assert(isplayer(player));
     thrasher endon(#"hash_20979ae");
     if (isdefined(player.var_9d35623c) && player.var_9d35623c) {

@@ -8,9 +8,9 @@
 #using scripts/shared/music_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_f67badb7;
+#namespace zm_island_amb;
 
-// Namespace namespace_f67badb7
+// Namespace zm_island_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x1374c0a9, Offset: 0x320
 // Size: 0x34
@@ -20,7 +20,7 @@ function main() {
     thread function_bab3ea62();
 }
 
-// Namespace namespace_f67badb7
+// Namespace zm_island_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfd1505ad, Offset: 0x360
 // Size: 0x2c
@@ -28,7 +28,7 @@ function function_d1abcaef() {
     audio::playloopat("zmb_meteor_site_loop", (3222, 2237, -599));
 }
 
-// Namespace namespace_f67badb7
+// Namespace zm_island_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbe775534, Offset: 0x398
 // Size: 0x15c
@@ -37,27 +37,27 @@ function startzmbspawnersoundloops() {
     if (isdefined(loopers) && loopers.size > 0) {
         delay = 0;
         /#
-            if (getdvarint("spider_lair") > 0) {
-                println("spider_lair" + loopers.size + "spider_lair");
+            if (getdvarint("<dev string:x28>") > 0) {
+                println("<dev string:x34>" + loopers.size + "<dev string:x6c>");
             }
         #/
         for (i = 0; i < loopers.size; i++) {
             loopers[i] thread soundloopthink();
             delay += 1;
             if (delay % 20 == 0) {
-                wait(0.016);
+                wait 0.016;
             }
         }
         return;
     }
     /#
-        if (getdvarint("spider_lair") > 0) {
-            println("spider_lair");
+        if (getdvarint("<dev string:x28>") > 0) {
+            println("<dev string:x77>");
         }
     #/
 }
 
-// Namespace namespace_f67badb7
+// Namespace zm_island_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0xe949b689, Offset: 0x500
 // Size: 0x16c
@@ -94,12 +94,12 @@ function soundloopthink() {
     }
 }
 
-// Namespace namespace_f67badb7
+// Namespace zm_island_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x5c8c598, Offset: 0x678
 // Size: 0xfc
 function function_bab3ea62() {
-    wait(3);
+    wait 3;
     level.var_65d981dd = "spider_lair_active";
     level.var_2d9f200e = "takeo_battle_inactive";
     level thread function_ab8dfbdf();
@@ -108,14 +108,14 @@ function function_bab3ea62() {
     level thread function_610a705b();
     level thread function_53b9afad();
     var_29085ef = getentarray(0, "sndMusicTrig", "targetname");
-    array::thread_all(var_29085ef, &function_95d61fc1);
+    array::thread_all(var_29085ef, &sndMusicTrig);
 }
 
-// Namespace namespace_f67badb7
+// Namespace zm_island_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x51b0df74, Offset: 0x780
 // Size: 0xf4
-function function_95d61fc1() {
+function sndMusicTrig() {
     while (true) {
         trigplayer = self waittill(#"trigger");
         if (trigplayer islocalplayer()) {
@@ -127,15 +127,15 @@ function function_95d61fc1() {
                 level notify(#"hash_51d7bc7c", self.script_sound);
             }
             while (isdefined(trigplayer) && trigplayer istouching(self)) {
-                wait(0.016);
+                wait 0.016;
             }
             continue;
         }
-        wait(0.016);
+        wait 0.016;
     }
 }
 
-// Namespace namespace_f67badb7
+// Namespace zm_island_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2c14fde8, Offset: 0x880
 // Size: 0xf8
@@ -154,18 +154,18 @@ function function_53b9afad() {
     }
 }
 
-// Namespace namespace_f67badb7
+// Namespace zm_island_amb
 // Params 1, eflags: 0x1 linked
 // Checksum 0xfda86f04, Offset: 0x980
 // Size: 0x64
 function function_51d7bc7c(var_6d9d81aa) {
     level endon(#"hash_51d7bc7c");
     level.var_eb526c90 stopallloopsounds(2);
-    wait(1);
+    wait 1;
     level.var_9433cf5a = level.var_eb526c90 playloopsound(var_6d9d81aa, 2);
 }
 
-// Namespace namespace_f67badb7
+// Namespace zm_island_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x3ae69385, Offset: 0x9f0
 // Size: 0x4a
@@ -177,7 +177,7 @@ function function_ab8dfbdf() {
     }
 }
 
-// Namespace namespace_f67badb7
+// Namespace zm_island_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x59fc5b2, Offset: 0xa48
 // Size: 0x56
@@ -190,7 +190,7 @@ function function_17e798e9() {
     }
 }
 
-// Namespace namespace_f67badb7
+// Namespace zm_island_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2a0f20f9, Offset: 0xaa8
 // Size: 0x4a
@@ -202,7 +202,7 @@ function function_7a83b09a() {
     }
 }
 
-// Namespace namespace_f67badb7
+// Namespace zm_island_amb
 // Params 0, eflags: 0x1 linked
 // Checksum 0x34f13abb, Offset: 0xb00
 // Size: 0x32

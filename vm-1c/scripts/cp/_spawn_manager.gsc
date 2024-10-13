@@ -45,18 +45,18 @@ function __init__() {
 function function_8180b524() {
     assert(isdefined(self));
     assert(isdefined(self.target));
-    assert(self.var_20149b34 >= self.var_4d210f7a, "_killed" + self.sm_id);
+    assert(self.var_20149b34 >= self.var_4d210f7a, "<dev string:x28>" + self.sm_id);
     if (!isdefined(self.var_8f471bf9) || self.var_8f471bf9 > self.var_d8202611.size) {
         self.var_8f471bf9 = self.var_d8202611.size;
     }
     if (!isdefined(self.var_ec676387) || self.var_ec676387 > self.var_d8202611.size) {
         self.var_ec676387 = self.var_d8202611.size;
     }
-    assert(self.var_ec676387 >= self.var_8f471bf9, "_killed" + self.sm_id);
+    assert(self.var_ec676387 >= self.var_8f471bf9, "<dev string:x28>" + self.sm_id);
     self.var_bc2f37e4 = randomintrange(self.var_8f471bf9, self.var_ec676387 + 1);
     self.spawners = self function_826b96e5();
     function_b72dc5ae();
-    assert(self.var_4d210f7a <= self.var_e290d32d, "_killed");
+    assert(self.var_4d210f7a <= self.var_e290d32d, "<dev string:x7d>");
     if (!isdefined(self.script_forcespawn)) {
         self.script_forcespawn = 0;
     }
@@ -71,7 +71,7 @@ function function_2ce178dd(var_43f783bc) {
     var_3b349fcd = self.var_e290d32d - self.var_e5c2eec1.size;
     var_7f9a0c9b = var_3b349fcd >= var_43f783bc && totalfree >= var_43f783bc && var_43f783bc > 0;
     var_e636b61e = level.var_b5b6bce6 - level.var_ad131964;
-    assert(self.enable == level flag::get("_killed" + self.sm_id + "_killed"), "_killed");
+    assert(self.enable == level flag::get("<dev string:xad>" + self.sm_id + "<dev string:xb1>"), "<dev string:xba>");
     if (self.script_forcespawn == 0) {
         return (totalfree > 0 && var_3b349fcd > 0 && var_e636b61e > 0 && var_7f9a0c9b && self.enable);
     }
@@ -90,7 +90,7 @@ function spawn_manager_spawn(maxdelay) {
         if (isdefined(ai) || gettime() - start > 1000 * maxdelay) {
             return ai;
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
@@ -189,11 +189,11 @@ function function_b088c390() {
     // Checksum 0x617d5545, Offset: 0xbe0
     // Size: 0x13a
     function function_a89a3a33(str_name) {
-        var_2b309d3d = getentarray("_killed", "_killed");
+        var_2b309d3d = getentarray("<dev string:xf5>", "<dev string:x103>");
         foreach (sm in var_2b309d3d) {
             if (sm != self) {
                 if (sm.targetname === str_name || sm.name === str_name) {
-                    assertmsg("_killed" + str_name + "_killed" + self.origin + "_killed" + sm.origin);
+                    assertmsg("<dev string:x10d>" + str_name + "<dev string:x13a>" + self.origin + "<dev string:x150>" + sm.origin);
                 }
             }
         }
@@ -343,11 +343,11 @@ function function_798a2c2() {
         self.var_83f92d46 = 0;
     }
     if (self.var_83f92d46 > 0 && self.var_83f92d46 > self.var_29534eb8) {
-        wait(randomfloatrange(self.var_29534eb8, self.var_83f92d46));
+        wait randomfloatrange(self.var_29534eb8, self.var_83f92d46);
         return;
     }
     if (self.var_29534eb8 > 0) {
-        wait(self.var_29534eb8);
+        wait self.var_29534eb8;
     }
 }
 
@@ -366,7 +366,7 @@ function function_4f3c7857() {
     self.spawncount = 0;
     isfirsttime = 1;
     self.var_d8202611 = getentarray(self.target, "targetname");
-    assert(self.var_d8202611.size, "_killed" + self.sm_id + "_killed");
+    assert(self.var_d8202611.size, "<dev string:x158>" + self.sm_id + "<dev string:x168>");
     level flag::wait_till("sm_" + self.sm_id + "_enabled");
     util::script_delay();
     self function_8180b524();
@@ -383,7 +383,7 @@ function function_4f3c7857() {
             var_2032c6ef = 0;
         }
         if (!var_2032c6ef) {
-            wait(0.05);
+            wait 0.05;
             continue;
         }
         self function_96547d01();
@@ -453,14 +453,14 @@ function function_4f3c7857() {
                     }
                 }
             }
-            wait(0.05);
+            wait 0.05;
         }
-        wait(0.05);
-        assert(!level flag::get("_killed" + self.sm_id + "_killed"), "_killed");
-        assert(!level flag::get("_killed" + self.sm_id + "_killed"), "_killed");
+        wait 0.05;
+        assert(!level flag::get("<dev string:xad>" + self.sm_id + "<dev string:x187>"), "<dev string:xba>");
+        assert(!level flag::get("<dev string:xad>" + self.sm_id + "<dev string:x18f>"), "<dev string:xba>");
         if (!(isdefined(self.script_forcespawn) && self.script_forcespawn)) {
             numplayers = max(getplayers().size, 1);
-            wait(laststand::player_num_in_laststand() / numplayers * 8);
+            wait laststand::player_num_in_laststand() / numplayers * 8;
         }
     }
     self function_a192045f();
@@ -644,7 +644,7 @@ function function_49adc3a9() {
 // Size: 0x194
 function function_960bbce6() {
     if (isdefined(self.script_wait)) {
-        wait(self.script_wait);
+        wait self.script_wait;
         if (isdefined(self.script_wait_add)) {
             self.script_wait += self.script_wait_add;
         }
@@ -662,9 +662,9 @@ function function_960bbce6() {
         }
         diff = self.script_wait_max - self.script_wait_min;
         if (abs(diff) > 0) {
-            wait(randomfloatrange(self.script_wait_min, self.script_wait_min + diff * var_714358d));
+            wait randomfloatrange(self.script_wait_min, self.script_wait_min + diff * var_714358d);
         } else {
-            wait(self.script_wait_min);
+            wait self.script_wait_min;
         }
         if (isdefined(self.script_wait_add)) {
             self.script_wait_min += self.script_wait_add;
@@ -689,7 +689,7 @@ function function_180dd5b8() {
 // Checksum 0xd66492a6, Offset: 0x26e8
 // Size: 0x7c
 function function_a4c90661() {
-    assert(!level flag::get("_killed" + self.sm_id + "_killed"), "_killed");
+    assert(!level flag::get("<dev string:xad>" + self.sm_id + "<dev string:xb1>"), "<dev string:xba>");
     level flag::set("sm_" + self.sm_id + "_enabled");
 }
 
@@ -707,7 +707,7 @@ function function_4f80fcc2() {
 // Checksum 0x15daa95c, Offset: 0x27b8
 // Size: 0x7c
 function function_b2ad4aa9() {
-    assert(!level flag::get("_killed" + self.sm_id + "_killed"), "_killed");
+    assert(!level flag::get("<dev string:xad>" + self.sm_id + "<dev string:x187>"), "<dev string:xba>");
     level flag::set("sm_" + self.sm_id + "_killed");
 }
 
@@ -716,7 +716,7 @@ function function_b2ad4aa9() {
 // Checksum 0xcd78f4a9, Offset: 0x2840
 // Size: 0x7c
 function function_a192045f() {
-    assert(!level flag::get("_killed" + self.sm_id + "_killed"), "_killed");
+    assert(!level flag::get("<dev string:xad>" + self.sm_id + "<dev string:x18f>"), "<dev string:xba>");
     level flag::set("sm_" + self.sm_id + "_complete");
 }
 
@@ -725,7 +725,7 @@ function function_a192045f() {
 // Checksum 0xa0247fc5, Offset: 0x28c8
 // Size: 0x7c
 function function_752c456a() {
-    assert(!level flag::get("_killed" + self.sm_id + "_killed"), "_killed");
+    assert(!level flag::get("<dev string:xad>" + self.sm_id + "<dev string:x199>"), "<dev string:xba>");
     level flag::set("sm_" + self.sm_id + "_cleared");
 }
 
@@ -734,7 +734,7 @@ function function_752c456a() {
 // Checksum 0x646173e4, Offset: 0x2950
 // Size: 0x40
 function function_41cd3a68(var_703b8c9a) {
-    assert(var_703b8c9a <= 32, "_killed");
+    assert(var_703b8c9a <= 32, "<dev string:x1a2>");
     level.var_b5b6bce6 = var_703b8c9a;
 }
 
@@ -745,7 +745,7 @@ function function_41cd3a68(var_703b8c9a) {
 function function_a226cc(var_12173487, trig_name, var_8f641cf, var_6f97d0a3) {
     if (isdefined(var_6f97d0a3) && var_6f97d0a3) {
         trigger = getent(trig_name, var_8f641cf);
-        assert(isdefined(trigger), "_killed" + var_8f641cf + "_killed" + trig_name + "_killed");
+        assert(isdefined(trigger), "<dev string:x1df>" + var_8f641cf + "<dev string:x1ec>" + trig_name + "<dev string:x1f0>");
         trigger endon(#"trigger");
     }
     if (level flag::exists("sm_" + var_12173487 + "_enabled")) {
@@ -753,7 +753,7 @@ function function_a226cc(var_12173487, trig_name, var_8f641cf, var_6f97d0a3) {
         trigger::use(trig_name, var_8f641cf);
         return;
     }
-    assertmsg("_killed" + var_12173487 + "_killed");
+    assertmsg("<dev string:x201>" + var_12173487 + "<dev string:x229>");
 }
 
 // Namespace spawn_manager
@@ -763,7 +763,7 @@ function function_a226cc(var_12173487, trig_name, var_8f641cf, var_6f97d0a3) {
 function function_d1d8e99b(var_12173487, trig_name, var_8f641cf, var_6f97d0a3) {
     if (isdefined(var_6f97d0a3) && var_6f97d0a3) {
         trigger = getent(trig_name, var_8f641cf);
-        assert(isdefined(trigger), "_killed" + var_8f641cf + "_killed" + trig_name + "_killed");
+        assert(isdefined(trigger), "<dev string:x1df>" + var_8f641cf + "<dev string:x1ec>" + trig_name + "<dev string:x1f0>");
         trigger endon(#"trigger");
     }
     if (level flag::exists("sm_" + var_12173487 + "_enabled")) {
@@ -771,7 +771,7 @@ function function_d1d8e99b(var_12173487, trig_name, var_8f641cf, var_6f97d0a3) {
         trigger::use(trig_name, var_8f641cf);
         return;
     }
-    assertmsg("_killed" + var_12173487 + "_killed");
+    assertmsg("<dev string:x236>" + var_12173487 + "<dev string:x229>");
 }
 
 // Namespace spawn_manager
@@ -781,7 +781,7 @@ function function_d1d8e99b(var_12173487, trig_name, var_8f641cf, var_6f97d0a3) {
 function function_1da22674(var_12173487, trig_name, var_8f641cf, var_6f97d0a3) {
     if (isdefined(var_6f97d0a3) && var_6f97d0a3) {
         trigger = getent(trig_name, var_8f641cf);
-        assert(isdefined(trigger), "_killed" + var_8f641cf + "_killed" + trig_name + "_killed");
+        assert(isdefined(trigger), "<dev string:x1df>" + var_8f641cf + "<dev string:x1ec>" + trig_name + "<dev string:x1f0>");
         trigger endon(#"trigger");
     }
     if (level flag::exists("sm_" + var_12173487 + "_enabled")) {
@@ -789,7 +789,7 @@ function function_1da22674(var_12173487, trig_name, var_8f641cf, var_6f97d0a3) {
         trigger::use(trig_name, var_8f641cf);
         return;
     }
-    assertmsg("_killed" + var_12173487 + "_killed");
+    assertmsg("<dev string:x236>" + var_12173487 + "<dev string:x229>");
 }
 
 // Namespace spawn_manager
@@ -797,8 +797,8 @@ function function_1da22674(var_12173487, trig_name, var_8f641cf, var_6f97d0a3) {
 // Checksum 0x292ca172, Offset: 0x2da0
 // Size: 0x10c
 function function_5000af1e(var_12173487, process, ent, var1, var2, var3, var4, var5) {
-    assert(isdefined(process), "_killed");
-    assert(level flag::exists("_killed" + var_12173487 + "_killed"), "_killed" + var_12173487 + "_killed");
+    assert(isdefined(process), "<dev string:x260>");
+    assert(level flag::exists("<dev string:xad>" + var_12173487 + "<dev string:xb1>"), "<dev string:x294>" + var_12173487 + "<dev string:x229>");
     wait_till_complete(var_12173487);
     util::single_func(ent, process, var1, var2, var3, var4, var5);
 }
@@ -808,8 +808,8 @@ function function_5000af1e(var_12173487, process, ent, var1, var2, var3, var4, v
 // Checksum 0xed260135, Offset: 0x2eb8
 // Size: 0x10c
 function function_16c424d1(var_12173487, process, ent, var1, var2, var3, var4, var5) {
-    assert(isdefined(process), "_killed");
-    assert(level flag::exists("_killed" + var_12173487 + "_killed"), "_killed" + var_12173487 + "_killed");
+    assert(isdefined(process), "<dev string:x2bc>");
+    assert(level flag::exists("<dev string:xad>" + var_12173487 + "<dev string:xb1>"), "<dev string:x2ef>" + var_12173487 + "<dev string:x229>");
     wait_till_cleared(var_12173487);
     util::single_func(ent, process, var1, var2, var3, var4, var5);
 }
@@ -819,8 +819,8 @@ function function_16c424d1(var_12173487, process, ent, var1, var2, var3, var4, v
 // Checksum 0xa8013596, Offset: 0x2fd0
 // Size: 0x10c
 function function_617b3ed2(var_12173487, process, ent, var1, var2, var3, var4, var5) {
-    assert(isdefined(process), "_killed");
-    assert(level flag::exists("_killed" + var_12173487 + "_killed"), "_killed" + var_12173487 + "_killed");
+    assert(isdefined(process), "<dev string:x316>");
+    assert(level flag::exists("<dev string:xad>" + var_12173487 + "<dev string:xb1>"), "<dev string:x349>" + var_12173487 + "<dev string:x229>");
     function_22e86a7e(var_12173487);
     util::single_func(ent, process, var1, var2, var3, var4, var5);
 }
@@ -840,7 +840,7 @@ function enable(var_12173487, var_aa7c8545) {
         return;
     }
     if (!(isdefined(var_aa7c8545) && var_aa7c8545)) {
-        assertmsg("_killed" + var_12173487 + "_killed");
+        assertmsg("<dev string:x370>" + var_12173487 + "<dev string:x229>");
     }
 }
 
@@ -859,7 +859,7 @@ function disable(var_12173487, var_aa7c8545) {
         return;
     }
     if (!(isdefined(var_aa7c8545) && var_aa7c8545)) {
-        assertmsg("_killed" + var_12173487 + "_killed");
+        assertmsg("<dev string:x388>" + var_12173487 + "<dev string:x229>");
     }
 }
 
@@ -879,7 +879,7 @@ function kill(var_12173487, var_aa7c8545) {
         return;
     }
     if (!(isdefined(var_aa7c8545) && var_aa7c8545)) {
-        assertmsg("_killed" + var_12173487 + "_killed");
+        assertmsg("<dev string:x3a1>" + var_12173487 + "<dev string:x229>");
     }
 }
 
@@ -894,7 +894,7 @@ function is_enabled(var_12173487) {
         }
         return 0;
     }
-    assertmsg("_killed" + var_12173487 + "_killed");
+    assertmsg("<dev string:x3b7>" + var_12173487 + "<dev string:x229>");
 }
 
 // Namespace spawn_manager
@@ -908,7 +908,7 @@ function is_complete(var_12173487) {
         }
         return 0;
     }
-    assertmsg("_killed" + var_12173487 + "_killed");
+    assertmsg("<dev string:x3d3>" + var_12173487 + "<dev string:x229>");
 }
 
 // Namespace spawn_manager
@@ -922,7 +922,7 @@ function function_b02fc450(var_12173487) {
         }
         return 0;
     }
-    assertmsg("_killed" + var_12173487 + "_killed");
+    assertmsg("<dev string:x3f0>" + var_12173487 + "<dev string:x229>");
 }
 
 // Namespace spawn_manager
@@ -936,7 +936,7 @@ function is_killed(var_12173487) {
         }
         return 0;
     }
-    assertmsg("_killed" + var_12173487 + "_killed");
+    assertmsg("<dev string:x40c>" + var_12173487 + "<dev string:x229>");
 }
 
 // Namespace spawn_manager
@@ -948,7 +948,7 @@ function wait_till_cleared(var_12173487) {
         level flag::wait_till("sm_" + var_12173487 + "_cleared");
         return;
     }
-    assertmsg("_killed" + var_12173487 + "_killed");
+    assertmsg("<dev string:x427>" + var_12173487 + "<dev string:x229>");
 }
 
 // Namespace spawn_manager
@@ -956,18 +956,18 @@ function wait_till_cleared(var_12173487) {
 // Checksum 0x42954ba5, Offset: 0x37d8
 // Size: 0x134
 function function_27bf2e8(var_12173487, var_41cac60e) {
-    assert(isdefined(var_41cac60e), "_killed");
-    assert(var_41cac60e, "_killed");
+    assert(isdefined(var_41cac60e), "<dev string:x44a>");
+    assert(var_41cac60e, "<dev string:x490>");
     if (level flag::exists("sm_" + var_12173487 + "_enabled")) {
         level flag::wait_till("sm_" + var_12173487 + "_complete");
     } else {
-        assertmsg("_killed" + var_12173487 + "_killed");
+        assertmsg("<dev string:x4ee>" + var_12173487 + "<dev string:x229>");
     }
     if (level flag::get("sm_" + var_12173487 + "_cleared")) {
         return;
     }
     while (function_423eae50(var_12173487).size > var_41cac60e) {
-        wait(0.1);
+        wait 0.1;
     }
 }
 
@@ -980,7 +980,7 @@ function wait_till_complete(var_12173487) {
         level flag::wait_till("sm_" + var_12173487 + "_complete");
         return;
     }
-    assertmsg("_killed" + var_12173487 + "_killed");
+    assertmsg("<dev string:x516>" + var_12173487 + "<dev string:x229>");
 }
 
 // Namespace spawn_manager
@@ -992,7 +992,7 @@ function function_22e86a7e(var_12173487) {
         level flag::wait_till("sm_" + var_12173487 + "_enabled");
         return;
     }
-    assertmsg("_killed" + var_12173487 + "_killed");
+    assertmsg("<dev string:x53a>" + var_12173487 + "<dev string:x229>");
 }
 
 // Namespace spawn_manager
@@ -1003,14 +1003,14 @@ function function_740ea7ff(var_12173487, count) {
     if (level flag::exists("sm_" + var_12173487 + "_enabled")) {
         level flag::wait_till("sm_" + var_12173487 + "_enabled");
     } else {
-        assertmsg("_killed" + var_12173487 + "_killed");
+        assertmsg("<dev string:x55d>" + var_12173487 + "<dev string:x229>");
     }
     spawn_manager = function_1d528fc9(var_12173487);
-    assert(spawn_manager.size, "_killed");
-    assert(spawn_manager.size == 1, "_killed");
+    assert(spawn_manager.size, "<dev string:x586>");
+    assert(spawn_manager.size == 1, "<dev string:x5cf>");
     while (true) {
         if (isdefined(spawn_manager[0].spawncount) && spawn_manager[0].spawncount < count && !is_killed(var_12173487)) {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
         break;

@@ -175,7 +175,7 @@ function function_256a0863() {
     for (;;) {
         weapon = self waittill(#"grenade_pullback");
         if (weapon.rootweapon == level.weaponhackertool) {
-            wait(0.05);
+            wait 0.05;
             currentoffhand = self getcurrentoffhand();
             if (self isusingoffhand() && currentoffhand.rootweapon == level.weaponhackertool) {
                 self thread hackertooltargetloop(weapon);
@@ -202,7 +202,7 @@ function watchhackertoolinterrupt(weapon) {
         if (self.hackertooltarget == var_65024d01) {
             clearhackertarget(weapon, 0, 0);
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -278,8 +278,8 @@ function hackertooltargetloop(weapon) {
     self clientfield::set_to_player("hacker_tool", 1);
     self playhackertoolsoundloop();
     while (true) {
-        wait(0.05);
-        wait(0.05);
+        wait 0.05;
+        wait 0.05;
         if (self.hackertoollockfinalized) {
             if (!self isvalidhackertooltarget(self.hackertooltarget, weapon, 0)) {
                 self clearhackertarget(weapon, 0, 0);
@@ -434,7 +434,7 @@ function getbesthackertooltarget(weapon) {
             continue;
         }
         /#
-            if (getdvarstring("locked_on_sound") == "locked_on_sound") {
+            if (getdvarstring("<dev string:x28>") == "<dev string:x35>") {
                 if (self iswithinhackertoolreticle(targetsall[idx], weapon)) {
                     targetsvalid[targetsvalid.size] = targetsall[idx];
                 }
@@ -522,9 +522,9 @@ function hackingtimescale(target) {
         scale = scale * scale * scale * scale;
         hacktime = lerpfloat(gethackoutertime(target), gethacktime(target), scale);
         /#
-            hackertooldebugtext = getdvarint("locked_on_sound", 0);
+            hackertooldebugtext = getdvarint("<dev string:x37>", 0);
             if (hackertooldebugtext) {
-                print3d(target.origin, "locked_on_sound" + scale + "locked_on_sound" + radiusinner + "locked_on_sound" + radiusouter, (0, 0, 0), 1, hackertooldebugtext, 2);
+                print3d(target.origin, "<dev string:x4b>" + scale + "<dev string:x53>" + radiusinner + "<dev string:x5c>" + radiusouter, (0, 0, 0), 1, hackertooldebugtext, 2);
             }
             assert(hacktime > 0);
         #/
@@ -828,10 +828,10 @@ function getlockontime(target, weapon) {
     // Size: 0x90
     function tunables() {
         while (true) {
-            level.hackertoollostsightlimitms = getdvarint("locked_on_sound", 1000);
-            level.hackertoollockonradius = getdvarfloat("locked_on_sound", 20);
-            level.hackertoollockonfov = getdvarint("locked_on_sound", 65);
-            wait(1);
+            level.hackertoollostsightlimitms = getdvarint("<dev string:x65>", 1000);
+            level.hackertoollockonradius = getdvarfloat("<dev string:x84>", 20);
+            level.hackertoollockonfov = getdvarint("<dev string:x9f>", 65);
+            wait 1;
         }
     }
 

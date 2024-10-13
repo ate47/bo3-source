@@ -6,9 +6,9 @@
 #using scripts/shared/callbacks_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_2318f091;
+#namespace zm_weap_glaive;
 
-// Namespace namespace_2318f091
+// Namespace zm_weap_glaive
 // Params 0, eflags: 0x2
 // Checksum 0xb0bf3911, Offset: 0x3d8
 // Size: 0x34
@@ -16,7 +16,7 @@ function autoexec function_2dc19561() {
     system::register("zm_weap_glaive", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_2318f091
+// Namespace zm_weap_glaive
 // Params 0, eflags: 0x0
 // Checksum 0xd86598c6, Offset: 0x418
 // Size: 0x2ae
@@ -38,33 +38,33 @@ function __init__() {
     level._effect["sword_lvl2_throw"] = "zombie/fx_sword_lvl2_throw_1p_zod_zmb";
 }
 
-// Namespace namespace_2318f091
+// Namespace zm_weap_glaive
 // Params 7, eflags: 0x0
 // Checksum 0x14c14bce, Offset: 0x6d0
 // Size: 0xec
 function function_b881d4aa(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     owner = self getowner(localclientnum);
     if (isdefined(owner) && owner == getlocalplayer(localclientnum)) {
-        var_a0bb60fa = playviewmodelfx(localclientnum, level._effect["sword_swipe_1p"], "tag_flash");
-        wait(3);
-        deletefx(localclientnum, var_a0bb60fa, 1);
+        swipe_fx = playviewmodelfx(localclientnum, level._effect["sword_swipe_1p"], "tag_flash");
+        wait 3;
+        deletefx(localclientnum, swipe_fx, 1);
     }
 }
 
-// Namespace namespace_2318f091
+// Namespace zm_weap_glaive
 // Params 7, eflags: 0x0
 // Checksum 0x84b7450a, Offset: 0x7c8
 // Size: 0xec
 function function_647dc27d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     owner = self getowner(localclientnum);
     if (isdefined(owner) && owner == getlocalplayer(localclientnum)) {
-        var_f2f7c3ad = playviewmodelfx(localclientnum, level._effect["sword_swipe_lv2_1p"], "tag_flash");
-        wait(3);
-        deletefx(localclientnum, var_f2f7c3ad, 1);
+        swipe_lv2_fx = playviewmodelfx(localclientnum, level._effect["sword_swipe_lv2_1p"], "tag_flash");
+        wait 3;
+        deletefx(localclientnum, swipe_lv2_fx, 1);
     }
 }
 
-// Namespace namespace_2318f091
+// Namespace zm_weap_glaive
 // Params 7, eflags: 0x0
 // Checksum 0xe4cc7b1c, Offset: 0x8c0
 // Size: 0x104
@@ -79,7 +79,7 @@ function function_bbeb4c2c(localclientnum, oldval, newval, bnewent, binitialsnap
     self playsound(0, "zmb_sword_zombie_explode");
 }
 
-// Namespace namespace_2318f091
+// Namespace zm_weap_glaive
 // Params 7, eflags: 0x0
 // Checksum 0x69290ad2, Offset: 0x9d0
 // Size: 0x104
@@ -94,7 +94,7 @@ function function_38924d95(localclientnum, oldval, newval, bnewent, binitialsnap
     self playsound(0, "zmb_sword_zombie_explode");
 }
 
-// Namespace namespace_2318f091
+// Namespace zm_weap_glaive
 // Params 7, eflags: 0x0
 // Checksum 0x639f2132, Offset: 0xae0
 // Size: 0x5c
@@ -102,7 +102,7 @@ function function_69a90263(localclientnum, oldval, newval, bnewent, binitialsnap
     thread do_gravity_spike_fx(localclientnum, self, self.origin);
 }
 
-// Namespace namespace_2318f091
+// Namespace zm_weap_glaive
 // Params 7, eflags: 0x0
 // Checksum 0x3a70cc4d, Offset: 0xb48
 // Size: 0xec
@@ -110,12 +110,12 @@ function function_6b6e650c(localclientnum, oldval, newval, bnewent, binitialsnap
     owner = self getowner(localclientnum);
     if (isdefined(owner) && owner == getlocalplayer(localclientnum)) {
         var_b7fb3c1b = playfxoncamera(localclientnum, level._effect["sword_lvl2_throw"], (0, 0, 0), (0, 1, 0), (0, 0, 1));
-        wait(3);
+        wait 3;
         deletefx(localclientnum, var_b7fb3c1b, 1);
     }
 }
 
-// Namespace namespace_2318f091
+// Namespace zm_weap_glaive
 // Params 3, eflags: 0x0
 // Checksum 0x1e70591a, Offset: 0xc40
 // Size: 0x19c
@@ -137,7 +137,7 @@ function do_gravity_spike_fx(localclientnum, owner, position) {
     playfx(localclientnum, fx, position, fwd);
 }
 
-// Namespace namespace_2318f091
+// Namespace zm_weap_glaive
 // Params 5, eflags: 0x0
 // Checksum 0x5e85fb25, Offset: 0xde8
 // Size: 0xb6
@@ -148,7 +148,7 @@ function getideallocationforfx(startpos, fxindex, fxcount, defaultdistance, rota
     return startpos + (defaultdistance * coscurrent, defaultdistance * sincurrent, 0);
 }
 
-// Namespace namespace_2318f091
+// Namespace zm_weap_glaive
 // Params 3, eflags: 0x0
 // Checksum 0x75a51745, Offset: 0xea8
 // Size: 0xe2
@@ -160,7 +160,7 @@ function randomizelocation(startpos, max_x_offset, max_y_offset) {
     return startpos + (rand_x, rand_y, 0);
 }
 
-// Namespace namespace_2318f091
+// Namespace zm_weap_glaive
 // Params 2, eflags: 0x0
 // Checksum 0x4fd5a9d4, Offset: 0xf98
 // Size: 0x72

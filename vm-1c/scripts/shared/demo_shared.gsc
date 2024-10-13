@@ -140,10 +140,10 @@ function add_actor_bookmark_kill_time() {
 function watch_actor_bookmarks() {
     while (true) {
         if (!isdefined(level.actorbookmarkparamsinitialized)) {
-            wait(0.5);
+            wait 0.5;
             continue;
         }
-        wait(0.05);
+        wait 0.05;
         waittillframeend();
         now = gettime();
         oldest_allowed = now - level.actor_bookmark_kill_times_msec;
@@ -151,7 +151,7 @@ function watch_actor_bookmarks() {
         for (player_index = 0; player_index < players.size; player_index++) {
             player = players[player_index];
             /#
-                if (isdefined(player.pers["<unknown string>"]) && player.pers["<unknown string>"]) {
+                if (isdefined(player.pers["<dev string:x28>"]) && player.pers["<dev string:x28>"]) {
                     continue;
                 }
             #/

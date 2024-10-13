@@ -16,9 +16,9 @@
 
 #using_animtree("generic");
 
-#namespace namespace_de48615;
+#namespace zm_zod_stairs;
 
-// Namespace namespace_de48615
+// Namespace zm_zod_stairs
 // Method(s) 12 Total 12
 class class_3f5d3dd7 {
 
@@ -28,7 +28,7 @@ class class_3f5d3dd7 {
     // Size: 0x44
     function function_64c24459() {
         self moveto(self.origin - (0, 0, 10000), 0.05);
-        wait(0.05);
+        wait 0.05;
     }
 
     // Namespace namespace_3f5d3dd7
@@ -90,10 +90,10 @@ class class_3f5d3dd7 {
                 self thread function_fe51d425(var_6de2b083, var_ebe89e4d, var_6de2b083.script_int, var_8cf4ae15);
             }
             if (isdefined(self.var_5db129b)) {
-                wait(self.var_5db129b);
+                wait self.var_5db129b;
             }
         }
-        wait(var_8cf4ae15);
+        wait var_8cf4ae15;
         if (var_ebe89e4d) {
             foreach (e_blocker in self.var_1c98028c) {
                 self thread function_fe51d425(e_blocker, !var_ebe89e4d, 64, var_3bdcaf84);
@@ -184,7 +184,7 @@ class class_3f5d3dd7 {
 
 }
 
-// Namespace namespace_de48615
+// Namespace zm_zod_stairs
 // Params 0, eflags: 0x2
 // Checksum 0x40bb9f1f, Offset: 0x340
 // Size: 0x2c
@@ -192,7 +192,7 @@ function autoexec function_2dc19561() {
     system::register("zm_zod_stairs", undefined, &__main__, undefined);
 }
 
-// Namespace namespace_de48615
+// Namespace zm_zod_stairs
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6057b528, Offset: 0x378
 // Size: 0x1c
@@ -200,7 +200,7 @@ function __main__() {
     level thread function_680ab134();
 }
 
-// Namespace namespace_de48615
+// Namespace zm_zod_stairs
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc9fa6b54, Offset: 0x3a0
 // Size: 0xdc
@@ -216,7 +216,7 @@ function function_680ab134() {
     }
 }
 
-// Namespace namespace_de48615
+// Namespace zm_zod_stairs
 // Params 2, eflags: 0x1 linked
 // Checksum 0xef2aa094, Offset: 0x488
 // Size: 0x84

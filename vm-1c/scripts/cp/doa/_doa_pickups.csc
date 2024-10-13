@@ -18,9 +18,9 @@
 // Size: 0x9ac
 function init() {
     clientfield::register("scriptmover", "pickuptype", 1, 10, "int", &function_892b2a87, 0, 0);
-    clientfield::register("scriptmover", "pickupwobble", 1, 1, "int", &function_77c1258e, 0, 0);
+    clientfield::register("scriptmover", "pickupwobble", 1, 1, "int", &pickupwobble, 0, 0);
     clientfield::register("scriptmover", "pickuprotate", 1, 1, "int", &pickuprotate, 0, 0);
-    clientfield::register("scriptmover", "pickupscale", 1, 8, "int", &function_b3289e6d, 0, 0);
+    clientfield::register("scriptmover", "pickupscale", 1, 8, "int", &pickupscale, 0, 0);
     clientfield::register("scriptmover", "pickupvisibility", 1, 1, "int", &function_68ad0d79, 0, 0);
     clientfield::register("scriptmover", "pickupmoveto", 1, 4, "int", &function_474724d7, 0, 0);
     level.doa.pickups = [];
@@ -89,7 +89,7 @@ function function_f7726690(parent) {
     self endon(#"entityshutdown");
     while (true) {
         self.origin = parent.origin;
-        wait(0.016);
+        wait 0.016;
     }
 }
 
@@ -123,7 +123,7 @@ function function_ee036ce4() {
         }
         yaw = self.angles[1] + yaw;
         self rotateto((-20 + randomint(40), yaw, -90 + randomint(-76)), waittime, waittime * 0.5, waittime * 0.5);
-        wait(randomfloat(waittime - 0.1));
+        wait randomfloat(waittime - 0.1);
     }
 }
 
@@ -131,7 +131,7 @@ function function_ee036ce4() {
 // Params 7, eflags: 0x1 linked
 // Checksum 0x2ddefc28, Offset: 0x1298
 // Size: 0x9c
-function function_77c1258e(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function pickupwobble(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (!isdefined(self.var_eba9b631)) {
         return;
     }
@@ -158,7 +158,7 @@ function function_6093755a() {
     time = randomfloatrange(3, 7);
     while (isdefined(self)) {
         self rotateto(self.angles + (0, dir, 0), time);
-        wait(time);
+        wait time;
     }
 }
 
@@ -199,7 +199,7 @@ function function_68ad0d79(localclientnum, oldval, newval, bnewent, binitialsnap
 // Params 7, eflags: 0x1 linked
 // Checksum 0xfc6cfe4d, Offset: 0x1560
 // Size: 0xac
-function function_b3289e6d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function pickupscale(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     if (!isdefined(self.var_eba9b631)) {
         return;
     }
@@ -239,9 +239,9 @@ function function_6b4a5f81(player) {
     } else {
         var_70adda17 = self.origin + (0, 0, 3000);
     }
-    wait(0.016);
+    wait 0.016;
     self moveto(var_70adda17, 2, 0, 0);
-    wait(2);
+    wait 2;
     self delete();
 }
 

@@ -283,7 +283,7 @@ function onplayerkilled(einflictor, attacker, idamage, smeansofdeath, weapon, vd
 // Size: 0x11c
 function checkallowspectating() {
     self endon(#"disconnect");
-    wait(0.05);
+    wait 0.05;
     update = 0;
     livesleft = !(level.numlives && !self.pers["lives"]);
     if (!level.alivecount[game["attackers"]] && !livesleft) {
@@ -419,7 +419,7 @@ function givelastattackerwarning(team) {
         } else {
             fullhealthtime += interval;
         }
-        wait(interval);
+        wait interval;
         if (self.health == self.maxhealth && fullhealthtime >= 3) {
             break;
         }
@@ -454,14 +454,14 @@ function bombs() {
     trigger = getent("sd_bomb_pickup_trig", "targetname");
     if (!isdefined(trigger)) {
         /#
-            util::error("OBJECTIVES_SD_DEFENDER_SCORE");
+            util::error("<dev string:x28>");
         #/
         return;
     }
     visuals[0] = getent("sd_bomb", "targetname");
     if (!isdefined(visuals[0])) {
         /#
-            util::error("compass_waypoint_target");
+            util::error("<dev string:x55>");
         #/
         return;
     }
@@ -623,7 +623,7 @@ function onuseplantobject(player) {
         self gameobjects::set_flags(1);
         level thread bombplanted(self, player);
         /#
-            print("position" + self.label);
+            print("<dev string:x7b>" + self.label);
         #/
         for (index = 0; index < level.bombzones.size; index++) {
             if (level.bombzones[index] == self) {
@@ -655,7 +655,7 @@ function onusedefuseobject(player) {
     self gameobjects::set_flags(0);
     player notify(#"bomb_defused");
     /#
-        print("mpl_sd_exp_suitcase_bomb_main" + self.label);
+        print("<dev string:x8a>" + self.label);
     #/
     bbprint("mpobjective", "gametime %d objtype %s label %s team %s playerx %d playery %d playerz %d", gettime(), "sd_bombdefuse", self.label, player.pers["team"], player.origin);
     level thread bombdefused(self, player);
@@ -689,9 +689,9 @@ function ondrop(player) {
         globallogic_audio::leader_dialog("bombFriendlyDropped", game["attackers"]);
         /#
             if (isdefined(player)) {
-                print("<unknown string>");
+                print("<dev string:x99>");
             } else {
-                print("<unknown string>");
+                print("<dev string:x99>");
             }
         #/
     }
@@ -719,7 +719,7 @@ function onpickup(player) {
         otherteam = util::getotherteam(team);
         globallogic_audio::leader_dialog("bombFriendlyTaken", game["attackers"]);
         /#
-            print("<unknown string>");
+            print("<dev string:xa6>");
         #/
     }
     player playsound("fly_bomb_pickup_plr");
@@ -748,12 +748,12 @@ function bombplantedmusicdelay() {
     level endon(#"bomb_defused");
     time = level.bombtimer - 30;
     /#
-        if (getdvarint("<unknown string>") > 0) {
-            println("<unknown string>" + time);
+        if (getdvarint("<dev string:xb1>") > 0) {
+            println("<dev string:xbd>" + time);
         }
     #/
     if (time > 1) {
-        wait(time);
+        wait time;
         thread globallogic_audio::set_music_on_team("timeOutQuiet");
     }
 }
@@ -865,7 +865,7 @@ function bombplanted(destroyedobj, player) {
         zone gameobjects::disable_object();
     }
     setgameendtime(0);
-    wait(3);
+    wait 3;
     sd_endgame(game["attackers"], game["strings"]["target_destroyed"]);
 }
 
@@ -894,7 +894,7 @@ function bombdefused(defusedobject, player) {
     player playbombdefuse();
     level notify(#"bomb_defused");
     thread globallogic_audio::set_music_on_team("silent");
-    wait(1.5);
+    wait 1.5;
     setgameendtime(0);
     sd_endgame(game["defenders"], game["strings"]["bomb_defused"]);
 }

@@ -14,9 +14,9 @@
 #using scripts/shared/animation_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_df27fee4;
+#namespace zm_genesis_minor_ee;
 
-// Namespace namespace_df27fee4
+// Namespace zm_genesis_minor_ee
 // Params 0, eflags: 0x2
 // Checksum 0x3caff76, Offset: 0x268
 // Size: 0x3c
@@ -24,7 +24,7 @@ function autoexec function_2dc19561() {
     system::register("zm_genesis_minor_ee", &__init__, &__main__, undefined);
 }
 
-// Namespace namespace_df27fee4
+// Namespace zm_genesis_minor_ee
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0x2b0
 // Size: 0x4
@@ -32,7 +32,7 @@ function __init__() {
     
 }
 
-// Namespace namespace_df27fee4
+// Namespace zm_genesis_minor_ee
 // Params 0, eflags: 0x1 linked
 // Checksum 0xc4f59970, Offset: 0x2c0
 // Size: 0x28

@@ -19,7 +19,7 @@ function init(str_flag, b_val, b_is_trigger) {
     }
     /#
         if (!isdefined(level.first_frame)) {
-            assert(!isdefined(self.flag[str_flag]), "<unknown string>" + str_flag + "<unknown string>");
+            assert(!isdefined(self.flag[str_flag]), "<dev string:x28>" + str_flag + "<dev string:x50>");
         }
     #/
     self.flag[str_flag] = b_val;
@@ -48,7 +48,7 @@ function exists(str_flag) {
 // Checksum 0x5100b753, Offset: 0x220
 // Size: 0x7c
 function set(str_flag) {
-    assert(exists(str_flag), "<unknown string>" + str_flag + "<unknown string>");
+    assert(exists(str_flag), "<dev string:x5d>" + str_flag + "<dev string:x78>");
     self.flag[str_flag] = 1;
     self notify(str_flag);
     trigger::set_flag_permissions(str_flag);
@@ -71,7 +71,7 @@ function _delay_set(n_delay, str_flag, str_cancel) {
         self endon(str_cancel);
     }
     self endon(#"death");
-    wait(n_delay);
+    wait n_delay;
     set(str_flag);
 }
 
@@ -80,7 +80,7 @@ function _delay_set(n_delay, str_flag, str_cancel) {
 // Checksum 0xf4117306, Offset: 0x350
 // Size: 0x74
 function set_val(str_flag, b_val) {
-    assert(isdefined(b_val), "<unknown string>");
+    assert(isdefined(b_val), "<dev string:x92>");
     if (b_val) {
         set(str_flag);
         return;
@@ -96,7 +96,7 @@ function set_for_time(n_time, str_flag) {
     self notify("__flag::set_for_time__" + str_flag);
     self endon("__flag::set_for_time__" + str_flag);
     set(str_flag);
-    wait(n_time);
+    wait n_time;
     clear(str_flag);
 }
 
@@ -105,7 +105,7 @@ function set_for_time(n_time, str_flag) {
 // Checksum 0x1c0c5805, Offset: 0x448
 // Size: 0x8c
 function clear(str_flag) {
-    assert(exists(str_flag), "<unknown string>" + str_flag + "<unknown string>");
+    assert(exists(str_flag), "<dev string:xbe>" + str_flag + "<dev string:x78>");
     if (self.flag[str_flag]) {
         self.flag[str_flag] = 0;
         self notify(str_flag);
@@ -130,7 +130,7 @@ function toggle(str_flag) {
 // Checksum 0xcd6a653a, Offset: 0x540
 // Size: 0x58
 function get(str_flag) {
-    assert(exists(str_flag), "<unknown string>" + str_flag + "<unknown string>");
+    assert(exists(str_flag), "<dev string:xdb>" + str_flag + "<dev string:x78>");
     return self.flag[str_flag];
 }
 
@@ -316,7 +316,7 @@ function delete(str_flag) {
         self.flag[str_flag] = undefined;
         return;
     }
-    println("<unknown string>" + str_flag);
+    println("<dev string:xef>" + str_flag);
 }
 
 // Namespace flag

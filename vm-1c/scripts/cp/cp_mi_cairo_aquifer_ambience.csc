@@ -8,9 +8,9 @@
 #using scripts/shared/scene_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_1254c007;
+#namespace aquifer_ambience;
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 0, eflags: 0x2
 // Checksum 0x192961e2, Offset: 0x430
 // Size: 0x34
@@ -18,21 +18,21 @@ function autoexec function_2dc19561() {
     system::register("aquifer_ambience", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 0, eflags: 0x1 linked
 // Checksum 0xaf1e6420, Offset: 0x470
 // Size: 0x1cc
 function __init__() {
-    clientfield::register("toplayer", "show_sand_storm", 1, 1, "int", &function_7ddc918d, 0, 0);
-    clientfield::register("world", "hide_sand_storm", 1, 1, "int", &function_e5def758, 0, 0);
-    clientfield::register("world", "play_trucks", 1, 1, "int", &function_91528afa, 0, 0);
-    clientfield::register("world", "start_ambience", 1, 1, "int", &function_134f3566, 0, 0);
-    clientfield::register("world", "stop_ambience", 1, 1, "int", &function_ad396d58, 0, 0);
-    clientfield::register("world", "kill_ambience", 1, 1, "int", &function_9ba61e20, 0, 0);
+    clientfield::register("toplayer", "show_sand_storm", 1, 1, "int", &show_sand_storm, 0, 0);
+    clientfield::register("world", "hide_sand_storm", 1, 1, "int", &hide_sand_storm, 0, 0);
+    clientfield::register("world", "play_trucks", 1, 1, "int", &play_trucks, 0, 0);
+    clientfield::register("world", "start_ambience", 1, 1, "int", &start_ambience, 0, 0);
+    clientfield::register("world", "stop_ambience", 1, 1, "int", &stop_ambience, 0, 0);
+    clientfield::register("world", "kill_ambience", 1, 1, "int", &kill_ambience, 0, 0);
     level thread function_89b52898();
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 1, eflags: 0x0
 // Checksum 0xd226eeaf, Offset: 0x648
 // Size: 0xc
@@ -40,12 +40,12 @@ function main(localclientnum) {
     
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 7, eflags: 0x1 linked
 // Checksum 0x6d3a76b3, Offset: 0x660
 // Size: 0x172
-function function_134f3566(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    if (!isdefined(level.var_3f831f3b["scene"]["p7_fxanim_cp_aqu_war_dogfight_main_loop_a_bundle_client"])) {
+function start_ambience(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+    if (!isdefined(level.scriptbundles["scene"]["p7_fxanim_cp_aqu_war_dogfight_main_loop_a_bundle_client"])) {
         return;
     }
     thread function_ca056d7e();
@@ -57,11 +57,11 @@ function function_134f3566(localclientnum, oldval, newval, bnewent, binitialsnap
     }
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 7, eflags: 0x1 linked
 // Checksum 0x385f71ec, Offset: 0x7e0
 // Size: 0x2cc
-function function_ad396d58(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function stop_ambience(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level notify(#"hash_9e245bdd");
     if (!isdefined(level.var_c2750169)) {
         level.var_c2750169 = [];
@@ -84,11 +84,11 @@ function function_ad396d58(localclientnum, oldval, newval, bnewent, binitialsnap
     array::run_all(level.var_c2750169, &scene::stop, 1);
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 7, eflags: 0x1 linked
 // Checksum 0x91e51f21, Offset: 0xab8
 // Size: 0x344
-function function_9ba61e20(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function kill_ambience(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     level notify(#"hash_9e245bdd");
     if (isdefined(level.var_c2750169)) {
         foreach (jet in level.var_c2750169) {
@@ -115,7 +115,7 @@ function function_9ba61e20(localclientnum, oldval, newval, bnewent, binitialsnap
     struct::function_368120a1("scene", "p7_fxanim_cp_aqu_war_flyover_b_jet_bundle");
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 0, eflags: 0x1 linked
 // Checksum 0x97e01c72, Offset: 0xe08
 // Size: 0x23e
@@ -146,41 +146,41 @@ function function_ca056d7e() {
     }
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 2, eflags: 0x1 linked
 // Checksum 0x127d9830, Offset: 0x1050
 // Size: 0x54
 function function_5794dab9(s_bundle, delay) {
     level endon(#"hash_9e245bdd");
-    level endon(#"hash_2d1d861f");
-    level endon(#"hash_c2988129");
-    wait(delay);
+    level endon(#"inside_aquifer");
+    level endon(#"inside_water_room");
+    wait delay;
     self thread scene::play(s_bundle);
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 7, eflags: 0x1 linked
 // Checksum 0x3110c74d, Offset: 0x10b0
 // Size: 0xa4
-function function_e5def758(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function hide_sand_storm(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     var_76968f56 = getentarray(localclientnum, "sand_storm", "targetname");
     if (var_76968f56.size > 0) {
         array::run_all(var_76968f56, &visible, 0);
     }
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 7, eflags: 0x1 linked
 // Checksum 0x4d1ad5dd, Offset: 0x1160
 // Size: 0xa4
-function function_7ddc918d(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function show_sand_storm(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     var_76968f56 = getentarray(localclientnum, "sand_storm", "targetname");
     if (var_76968f56.size > 0) {
         array::run_all(var_76968f56, &visible, 1);
     }
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 1, eflags: 0x1 linked
 // Checksum 0x802451d1, Offset: 0x1210
 // Size: 0x44
@@ -192,12 +192,12 @@ function visible(bool) {
     self hide();
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 7, eflags: 0x1 linked
 // Checksum 0x8a4a502, Offset: 0x1260
 // Size: 0xec
-function function_91528afa(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
-    if (!isdefined(level.var_3f831f3b["scene"]["p7_fxanim_cp_aqu_war_groundassault_bundle"])) {
+function play_trucks(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+    if (!isdefined(level.scriptbundles["scene"]["p7_fxanim_cp_aqu_war_groundassault_bundle"])) {
         return;
     }
     pos = getent(localclientnum, "dogfighting_scene_client_side", "targetname");
@@ -207,12 +207,12 @@ function function_91528afa(localclientnum, oldval, newval, bnewent, binitialsnap
     struct::function_368120a1("scene", "p7_fxanim_cp_aqu_war_groundassault_bundle");
 }
 
-// Namespace namespace_1254c007
+// Namespace aquifer_ambience
 // Params 0, eflags: 0x1 linked
 // Checksum 0x33e438b1, Offset: 0x1358
 // Size: 0x34
 function function_89b52898() {
-    level waittill(#"hash_496d3ee1");
+    level waittill(#"sndWR");
     audio::playloopat("amb_postwateroom_weird_lp", (12618, 1364, 2949));
 }
 

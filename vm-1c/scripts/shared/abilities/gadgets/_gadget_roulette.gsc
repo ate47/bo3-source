@@ -44,7 +44,7 @@ function __init__() {
         level.var_645f7522[0] = 0;
         level.var_645f7522[1] = 0;
         level.weaponnone = getweapon("none");
-        level.var_a7d38b50 = getweapon("gadget_roulette");
+        level.gadget_roulette = getweapon("gadget_roulette");
         function_96a406d2("gadget_flashback", 1, 1);
         function_96a406d2("gadget_combat_efficiency", 1, 1);
         function_96a406d2("gadget_heat_wave", 1, 1);
@@ -67,7 +67,7 @@ function __init__() {
     // Size: 0x1c
     function updatedvars() {
         while (true) {
-            wait(1);
+            wait 1;
         }
     }
 
@@ -197,7 +197,7 @@ function function_834ca490(duration) {
     self endon(#"disconnect");
     self endon(#"hash_d1bf2e9");
     self disableoffhandspecial();
-    wait(duration);
+    wait duration;
     self enableoffhandspecial();
 }
 
@@ -226,7 +226,7 @@ function function_e3065835(weapon) {
     }
     self thread function_921cfa96();
     self clientfield::set_to_player("roulette_state", 1);
-    wait(getdvarfloat("scr_roulette_pre_respin_wait_time", 1.3));
+    wait getdvarfloat("scr_roulette_pre_respin_wait_time", 1.3);
     while (true) {
         if (!isdefined(self)) {
             break;
@@ -242,7 +242,7 @@ function function_e3065835(weapon) {
             self thread function_9746c63b();
             break;
         }
-        wait(0.05);
+        wait 0.05;
     }
     if (isdefined(self)) {
         self notify(#"hash_921cfa96");
@@ -255,7 +255,7 @@ function function_e3065835(weapon) {
 // Size: 0x34
 function function_12fae26() {
     self endon(#"hash_ab02b20c");
-    wait(3);
+    wait 3;
     if (isdefined(self)) {
         self enableoffhandspecial();
     }
@@ -268,7 +268,7 @@ function function_12fae26() {
 function function_9746c63b() {
     self endon(#"death");
     self endon(#"disconnect");
-    wait(0.5);
+    wait 0.5;
     self clientfield::set_to_player("roulette_state", 0);
 }
 
@@ -341,7 +341,7 @@ function function_27bf03c4(weapon) {
         }
     }
     if (isdefined(self)) {
-        self giveweapon(level.var_a7d38b50);
+        self giveweapon(level.gadget_roulette);
         self.pers[#"hash_65987563"] = undefined;
     }
 }
@@ -409,7 +409,7 @@ function function_96a406d2(var_edf36e37, var_86166a51, var_c730de85) {
     gadgetweapon = getweapon(var_edf36e37);
     assert(isdefined(gadgetweapon));
     if (gadgetweapon == level.weaponnone) {
-        assertmsg(var_edf36e37 + "gadget_vision_pulse");
+        assertmsg(var_edf36e37 + "<dev string:x28>");
     }
     if (!isdefined(level.var_645f7522[gadgetweapon])) {
         level.var_645f7522[gadgetweapon] = [];

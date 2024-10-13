@@ -1,9 +1,9 @@
 #using scripts/shared/fx_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_b046f355;
+#namespace mp_freerun_01_fx;
 
-// Namespace namespace_b046f355
+// Namespace mp_freerun_01_fx
 // Params 0, eflags: 0x1 linked
 // Checksum 0x99ec1590, Offset: 0xb0
 // Size: 0x4

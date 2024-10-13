@@ -63,7 +63,7 @@ function statechange(localclientnum, oldval, newval, bnewent, binitialsnap, fiel
 // Size: 0x124
 function restartfx(localclientnum, blinkstage) {
     self notify(#"restart_fx");
-    println("killstreaks/fx_drgnfire_light_green_3p" + blinkstage);
+    println("<dev string:x28>" + blinkstage);
     switch (blinkstage) {
     case 0:
         self spawn_solid_fx(localclientnum);
@@ -302,7 +302,7 @@ function getminimumflyheight() {
     if (isdefined(airsupport_height)) {
         planeflyheight = airsupport_height.origin[2];
     } else {
-        println("killstreaks/fx_drgnfire_light_green_3p");
+        println("<dev string:x43>");
         planeflyheight = 850;
         if (isdefined(level.airsupportheightscale)) {
             level.airsupportheightscale = getdvarint("scr_airsupportHeightScale", level.airsupportheightscale);
@@ -347,12 +347,12 @@ function qrdrone_watch_distance() {
                 }
                 sid = soundent playloopsound("veh_qrdrone_static_lp", 0.2);
                 self vehicle::set_static_amount(staticalpha * 2);
-                wait(0.05);
+                wait 0.05;
             }
             self thread qrdrone_staticfade(staticalpha, soundent, sid);
         }
         inrangepos = self.origin;
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -385,7 +385,7 @@ function qrdrone_staticfade(staticalpha, sndent, sid) {
         setsoundvolumerate(sid, 0.6);
         setsoundvolume(sid, staticalpha);
         self vehicle::set_static_amount(staticalpha * 2);
-        wait(0.05);
+        wait 0.05;
     }
 }
 

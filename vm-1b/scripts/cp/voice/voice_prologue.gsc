@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_feda6b63;
+#namespace voice_prologue;
 
-// Namespace namespace_feda6b63
+// Namespace voice_prologue
 // Params 0, eflags: 0x0
 // Checksum 0x10cd59f7, Offset: 0x4dd0
 // Size: 0x3322

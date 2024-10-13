@@ -12,9 +12,9 @@
 #using scripts/shared/ai_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_2cce1885;
+#namespace zm_zod_robot;
 
-// Namespace namespace_2cce1885
+// Namespace zm_zod_robot
 // Params 0, eflags: 0x2
 // Checksum 0x34716b07, Offset: 0x2c0
 // Size: 0x34
@@ -22,17 +22,17 @@ function autoexec function_2dc19561() {
     system::register("zm_zod_robot", &__init__, undefined, undefined);
 }
 
-// Namespace namespace_2cce1885
+// Namespace zm_zod_robot
 // Params 0, eflags: 0x0
 // Checksum 0xe94728a4, Offset: 0x300
 // Size: 0xbc
 function __init__() {
-    clientfield::register("scriptmover", "robot_switch", 1, 1, "int", &function_16e00222, 0, 0);
+    clientfield::register("scriptmover", "robot_switch", 1, 1, "int", &robot_switch, 0, 0);
     clientfield::register("world", "robot_lights", 1, 2, "int", &robot_lights, 0, 0);
     ai::add_archetype_spawn_function("zod_companion", &function_a0b7ccbf);
 }
 
-// Namespace namespace_2cce1885
+// Namespace zm_zod_robot
 // Params 1, eflags: 0x4
 // Checksum 0x25ba1c5c, Offset: 0x3c8
 // Size: 0x3c
@@ -41,15 +41,15 @@ function private function_a0b7ccbf(localclientnum) {
     entity setdrawname(%ZM_ZOD_ROBOT_NAME);
 }
 
-// Namespace namespace_2cce1885
+// Namespace zm_zod_robot
 // Params 7, eflags: 0x0
 // Checksum 0x82129aed, Offset: 0x410
 // Size: 0x64
-function function_16e00222(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
+function robot_switch(localclientnum, oldval, newval, bnewent, binitialsnap, fieldname, bwastimejump) {
     playfx(localclientnum, "zombie/fx_fuse_master_switch_on_zod_zmb", self.origin);
 }
 
-// Namespace namespace_2cce1885
+// Namespace zm_zod_robot
 // Params 7, eflags: 0x0
 // Checksum 0xcc0e75ea, Offset: 0x480
 // Size: 0x1a6

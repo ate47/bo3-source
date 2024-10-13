@@ -16,9 +16,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_486b5371;
+#namespace zm_stalingrad_powered_bridge;
 
-// Namespace namespace_486b5371
+// Namespace zm_stalingrad_powered_bridge
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf808aa81, Offset: 0x540
 // Size: 0x222
@@ -40,7 +40,7 @@ function main() {
     }
 }
 
-// Namespace namespace_486b5371
+// Namespace zm_stalingrad_powered_bridge
 // Params 0, eflags: 0x1 linked
 // Checksum 0xccf99edc, Offset: 0x770
 // Size: 0x7c
@@ -54,7 +54,7 @@ function function_e457f1d() {
     zm_unitrigger::register_static_unitrigger(self, &function_5156e4d8);
 }
 
-// Namespace namespace_486b5371
+// Namespace zm_stalingrad_powered_bridge
 // Params 1, eflags: 0x1 linked
 // Checksum 0x282db357, Offset: 0x7f8
 // Size: 0xc2
@@ -71,7 +71,7 @@ function function_87d1b410(e_player) {
     return 1;
 }
 
-// Namespace namespace_486b5371
+// Namespace zm_stalingrad_powered_bridge
 // Params 0, eflags: 0x1 linked
 // Checksum 0xf727e037, Offset: 0x8c8
 // Size: 0x134
@@ -82,7 +82,7 @@ function function_5156e4d8() {
             if (e_player zm_score::can_player_purchase(500)) {
                 e_player clientfield::increment_to_player("interact_rumble");
                 e_player zm_score::minus_to_player_score(500);
-                level thread function_9aac06ba(e_player);
+                level thread activate_bridge(e_player);
                 continue;
             }
             zm_utility::play_sound_at_pos("no_purchase", self.origin);
@@ -96,12 +96,12 @@ function function_5156e4d8() {
     }
 }
 
-// Namespace namespace_486b5371
+// Namespace zm_stalingrad_powered_bridge
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc3bd44be, Offset: 0xa08
 // Size: 0x48c
-function function_9aac06ba(e_player) {
-    level thread namespace_48c05c81::function_903f6b36(1, "bridge_trap");
+function activate_bridge(e_player) {
+    level thread zm_stalingrad_util::function_903f6b36(1, "bridge_trap");
     level flag::set("bridge_in_use");
     level flag::set("activate_bridge");
     level.zones["powered_bridge_zone"].is_enabled = 1;
@@ -117,10 +117,10 @@ function function_9aac06ba(e_player) {
         linktraversal(var_8bd15b35);
     }
     level thread zm_zonemgr::zone_flag_wait("activate_bridge");
-    wait(3);
+    wait 3;
     playrumbleonposition("zm_stalingrad_bridge_closing", s_rumble.origin);
     level thread function_40ac3c12(e_player);
-    wait(3);
+    wait 3;
     level flag::set("bridge_jitter_stop");
     level flag::wait_till_clear("bridge_jitter_stop");
     e_gate movez(100, 0.05);
@@ -134,12 +134,12 @@ function function_9aac06ba(e_player) {
     level.zones["powered_bridge_A_zone"].adjacent_zones["powered_bridge_B_zone"].is_connected = 0;
     level.zones["powered_bridge_B_zone"].adjacent_zones["powered_bridge_A_zone"].is_connected = 0;
     function_462efa3d();
-    wait(5);
-    level namespace_48c05c81::function_903f6b36(0, "bridge_trap");
+    wait 5;
+    level zm_stalingrad_util::function_903f6b36(0, "bridge_trap");
     level flag::clear("bridge_in_use");
 }
 
-// Namespace namespace_486b5371
+// Namespace zm_stalingrad_powered_bridge
 // Params 0, eflags: 0x1 linked
 // Checksum 0x6b1e7cce, Offset: 0xea0
 // Size: 0xfa
@@ -153,7 +153,7 @@ function function_462efa3d() {
     }
 }
 
-// Namespace namespace_486b5371
+// Namespace zm_stalingrad_powered_bridge
 // Params 0, eflags: 0x1 linked
 // Checksum 0x210ee80, Offset: 0xfa8
 // Size: 0xba
@@ -165,7 +165,7 @@ function function_ef72d561() {
     var_8de6057e waittill(#"rotatedone");
 }
 
-// Namespace namespace_486b5371
+// Namespace zm_stalingrad_powered_bridge
 // Params 1, eflags: 0x1 linked
 // Checksum 0xeb5226d2, Offset: 0x1070
 // Size: 0x3ac
@@ -191,7 +191,7 @@ function function_40ac3c12(e_player) {
     function_54227761(var_edc0081d, var_55155900, e_player);
     var_fa30b172 rotatepitch(-90, 0.25);
     var_c83a1961 rotatepitch(90, 0.25);
-    wait(0.5);
+    wait 0.5;
     level flag::clear("bridge_jitter_stop");
     var_efdf0fee = getentarray("bridge_light_on", "targetname");
     array::run_all(var_efdf0fee, &hide);
@@ -200,7 +200,7 @@ function function_40ac3c12(e_player) {
     exploder::kill_exploder("bridge_lights_exploder");
 }
 
-// Namespace namespace_486b5371
+// Namespace zm_stalingrad_powered_bridge
 // Params 2, eflags: 0x1 linked
 // Checksum 0x180789c9, Offset: 0x1428
 // Size: 0x102
@@ -216,7 +216,7 @@ function function_e0c7ad1e(var_fa30b172, var_c83a1961) {
     }
 }
 
-// Namespace namespace_486b5371
+// Namespace zm_stalingrad_powered_bridge
 // Params 1, eflags: 0x1 linked
 // Checksum 0xc2731b22, Offset: 0x1538
 // Size: 0x1fc
@@ -237,13 +237,13 @@ function function_fce6cca8(str_side) {
     } else {
         n_time = var_848f1155 zm_utility::fake_physicslaunch(v_right, 400);
     }
-    wait(n_time);
+    wait n_time;
     self.var_fa6d2a24 = 0;
     self solid();
     var_848f1155 delete();
 }
 
-// Namespace namespace_486b5371
+// Namespace zm_stalingrad_powered_bridge
 // Params 3, eflags: 0x1 linked
 // Checksum 0xed56fac, Offset: 0x1740
 // Size: 0x20c
@@ -260,7 +260,7 @@ function function_54227761(var_fa30b172, var_c83a1961, e_player) {
             n_count++;
             n_kill_count++;
             if (n_count >= 3) {
-                wait(0.05);
+                wait 0.05;
                 n_count = 0;
             }
             continue;
@@ -271,7 +271,7 @@ function function_54227761(var_fa30b172, var_c83a1961, e_player) {
             n_count++;
             n_kill_count++;
             if (n_count >= 3) {
-                wait(0.05);
+                wait 0.05;
                 n_count = 0;
             }
         }
@@ -281,7 +281,7 @@ function function_54227761(var_fa30b172, var_c83a1961, e_player) {
     }
 }
 
-// Namespace namespace_486b5371
+// Namespace zm_stalingrad_powered_bridge
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5e77bd5c, Offset: 0x1958
 // Size: 0xdc

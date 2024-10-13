@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_67bf0840;
+#namespace voice_infection1;
 
-// Namespace namespace_67bf0840
+// Namespace voice_infection1
 // Params 0, eflags: 0x0
 // Checksum 0x3949851d, Offset: 0x1250
 // Size: 0xd42

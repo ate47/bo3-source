@@ -1,8 +1,8 @@
 #using scripts/cp/_dialog;
 
-#namespace namespace_398aada;
+#namespace voice_newworld;
 
-// Namespace namespace_398aada
+// Namespace voice_newworld
 // Params 0, eflags: 0x0
 // Checksum 0xe0dd78f9, Offset: 0x4030
 // Size: 0x2b02

@@ -99,9 +99,9 @@ function waitplaybacktime(soundalias) {
     playbacktime = soundgetplaybacktime(soundalias);
     if (playbacktime >= 0) {
         waittime = playbacktime * 0.001;
-        wait(waittime);
+        wait waittime;
     } else {
-        wait(1);
+        wait 1;
     }
     self notify(soundalias);
 }
@@ -113,7 +113,7 @@ function waitplaybacktime(soundalias) {
 function singleradarsweep() {
     self endon(#"disconnect");
     self endon(#"cancel_selection");
-    wait(0.5);
+    wait 0.5;
     self playlocalsound("mpl_killstreak_satellite");
     if (level.teambased) {
         var_23a6b9c5 = satellite::hassatellite(self.team);
@@ -131,7 +131,7 @@ function singleradarsweep() {
 // Size: 0x4c
 function doradarsweep() {
     self setclientuivisibilityflag("g_compassShowEnemies", 1);
-    wait(0.2);
+    wait 0.2;
     self setclientuivisibilityflag("g_compassShowEnemies", 0);
 }
 
@@ -163,7 +163,7 @@ function doplanemortar(positions, team, killstreak_id) {
     self endon(#"disconnect");
     yaw = randomintrange(0, 360);
     odd = 0;
-    wait(1.25);
+    wait 1.25;
     foreach (position in positions) {
         level spawning::create_enemy_influencer("artillery", position, team);
         self thread dobombrun(position, yaw, team);
@@ -173,10 +173,10 @@ function doplanemortar(positions, team, killstreak_id) {
             yaw = (yaw + 290) % 360;
         }
         odd = (odd + 1) % 2;
-        wait(0.8);
+        wait 0.8;
     }
     self notify(#"planemortarcomplete");
-    wait(1);
+    wait 1;
     self thread plane_mortar_bda_dialog();
 }
 
@@ -265,11 +265,11 @@ function dobombrun(position, yaw, team) {
     impact = bullettrace(start, start + (0, 0, -100000), 1, plane);
     plane moveto(endpoint, 2 * 5 / 4, 0, 0);
     plane.killcament thread followbomb(plane, position, direction, impact, player);
-    wait(2 / 2);
+    wait 2 / 2;
     if (isdefined(self)) {
         self thread dropbomb(plane, position);
     }
-    wait(2 * 3 / 4);
+    wait 2 * 3 / 4;
     plane plane_cleanupondeath();
 }
 
@@ -279,7 +279,7 @@ function dobombrun(position, yaw, team) {
 // Size: 0xc4
 function followbomb(plane, position, direction, impact, player) {
     player endon(#"emp_jammed");
-    wait(2 * 5 / 12);
+    wait 2 * 5 / 12;
     plane.killcament unlink();
     plane.killcament moveto(impact["position"] + (0, 0, 1000) + vectorscale(direction, -600), 0.8, 0, 0.2);
 }
@@ -292,7 +292,7 @@ function lookatexplosion(bomb) {
     while (isdefined(self) && isdefined(bomb)) {
         angles = vectortoangles(vectornormalize(bomb.origin - self.origin));
         self.angles = (max(angles[0], 15), angles[1], angles[2]);
-        wait(0.05);
+        wait 0.05;
     }
 }
 

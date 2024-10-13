@@ -5,15 +5,15 @@
 #using scripts/shared/util_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_58677593;
+#namespace mp_miniature;
 
-// Namespace namespace_58677593
+// Namespace mp_miniature
 // Params 0, eflags: 0x1 linked
 // Checksum 0xdd0ff53e, Offset: 0x1c0
 // Size: 0x8c
 function main() {
-    namespace_91ce62cc::main();
-    namespace_d016ed63::main();
+    mp_miniature_fx::main();
+    mp_miniature_sound::main();
     load::main();
     level.domflagbasefxoverride = &dom_flag_base_fx_override;
     level.domflagcapfxoverride = &dom_flag_cap_fx_override;
@@ -21,17 +21,17 @@ function main() {
     level.endgamexcamname = "ui_cam_endgame_mp_miniature";
 }
 
-// Namespace namespace_58677593
+// Namespace mp_miniature
 // Params 2, eflags: 0x1 linked
 // Checksum 0x626266db, Offset: 0x258
 // Size: 0x7a
 function dom_flag_base_fx_override(flag, team) {
     switch (flag.name) {
-    case 4:
+    case "a":
         break;
-    case 5:
+    case "b":
         break;
-    case 6:
+    case "c":
         if (team == "neutral") {
             return "ui/fx_dom_marker_neutral_r120";
         } else {
@@ -41,17 +41,17 @@ function dom_flag_base_fx_override(flag, team) {
     }
 }
 
-// Namespace namespace_58677593
+// Namespace mp_miniature
 // Params 2, eflags: 0x1 linked
 // Checksum 0x87fcd6f4, Offset: 0x2e0
 // Size: 0x7a
 function dom_flag_cap_fx_override(flag, team) {
     switch (flag.name) {
-    case 4:
+    case "a":
         break;
-    case 5:
+    case "b":
         break;
-    case 6:
+    case "c":
         if (team == "neutral") {
             return "ui/fx_dom_cap_indicator_neutral_r120";
         } else {

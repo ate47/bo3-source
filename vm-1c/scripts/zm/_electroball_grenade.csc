@@ -90,7 +90,7 @@ function function_72eeb2e6(localclientnum, oldval, newval, bnewent, binitialsnap
     tag = array::random(var_de7d63cb);
     if (isdefined(var_1ee145b0)) {
         var_d72ccbc = beamlaunch(localclientnum, var_1ee145b0, "tag_origin", ai_zombie, tag, "electric_arc_beam_electroball");
-        wait(1);
+        wait 1;
         if (isdefined(var_d72ccbc)) {
             beamkill(localclientnum, var_d72ccbc);
         }

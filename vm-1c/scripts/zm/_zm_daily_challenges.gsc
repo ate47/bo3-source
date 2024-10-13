@@ -83,31 +83,31 @@ function round_tracking() {
         case 10:
             self zm_stats::increment_challenge_stat("ZM_DAILY_ROUND_10");
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:x28>");
             #/
             break;
         case 15:
             self zm_stats::increment_challenge_stat("ZM_DAILY_ROUND_15");
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:x45>");
             #/
             break;
         case 20:
             self zm_stats::increment_challenge_stat("ZM_DAILY_ROUND_20");
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:x62>");
             #/
             break;
         case 25:
             self zm_stats::increment_challenge_stat("ZM_DAILY_ROUND_25");
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:x7f>");
             #/
             break;
         case 30:
             self zm_stats::increment_challenge_stat("ZM_DAILY_ROUND_30");
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:x9c>");
             #/
             break;
         }
@@ -126,7 +126,7 @@ function death_check_for_challenge_updates(e_attacker) {
         if (isdefined(e_attacker.activated_by_player)) {
             e_attacker.activated_by_player zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_TRAPS");
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:xb9>");
             #/
         }
     }
@@ -147,13 +147,13 @@ function death_check_for_challenge_updates(e_attacker) {
     if (zm_utility::is_headshot(w_damage, self.damagelocation, str_damagemod)) {
         e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_HEADSHOTS");
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:xcc>");
         #/
         e_attacker.a_daily_challenges[0]++;
         if (e_attacker.a_daily_challenges[0] == 20) {
             e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:xe3>");
             #/
         }
         if (getdvarint("ui_enablePromoTracking", 0) && sessionmodeisonlinegame()) {
@@ -165,128 +165,128 @@ function death_check_for_challenge_updates(e_attacker) {
     if (str_damagemod == "MOD_MELEE") {
         e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_MELEE");
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:x104>");
         #/
     }
     if (isdefined(level.zombie_vars[e_attacker.team]["zombie_insta_kill"]) && isdefined(level.zombie_vars[e_attacker.team]) && level.zombie_vars[e_attacker.team]["zombie_insta_kill"]) {
         e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_INSTAKILL");
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:x11f>");
         #/
         return;
     }
     if (zm_weapons::is_weapon_upgraded(w_damage)) {
         e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_PACKED");
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:x138>");
         #/
         if (level.zombie_weapons[level.start_weapon].upgrade === w_damage) {
             e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_PACKED_STARTING_PISTOL");
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:x154>");
             #/
         }
         switch (w_damage.weapclass) {
-        case 22:
+        case "mg":
             e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_PACKED_MG");
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:x179>");
             #/
             break;
-        case 23:
+        case "pistol":
             e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_PACKED_PISTOL");
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:x191>");
             #/
             break;
-        case 25:
+        case "smg":
             e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_PACKED_SMG");
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:x1ad>");
             #/
             break;
-        case 26:
+        case "spread":
             e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_PACKED_SHOTGUN");
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:x1c6>");
             #/
             break;
-        case 24:
+        case "rifle":
             if (w_damage.issniperweapon) {
                 e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_PACKED_SNIPER");
                 /#
-                    debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                    debug_print("<dev string:x1e3>");
                 #/
             } else {
                 e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_PACKED_RIFLE");
                 /#
-                    debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                    debug_print("<dev string:x1ff>");
                 #/
             }
             break;
         }
     }
     switch (w_damage.weapclass) {
-    case 22:
+    case "mg":
         e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_MG");
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:x21a>");
         #/
         break;
-    case 23:
+    case "pistol":
         e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_PISTOL");
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:x22b>");
         #/
         break;
-    case 24:
+    case "rifle":
         if (w_damage.issniperweapon) {
             e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_SNIPER");
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:x240>");
             #/
         } else {
             e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_RIFLE");
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:x255>");
             #/
         }
         break;
-    case 25:
+    case "smg":
         e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_SMG");
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:x269>");
         #/
         break;
-    case 26:
+    case "spread":
         e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_SHOTGUN");
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:x27b>");
         #/
         break;
     }
     switch (str_damagemod) {
-    case 34:
-    case 35:
-    case 36:
-    case 37:
-    case 38:
+    case "MOD_EXPLOSIVE":
+    case "MOD_GRENADE":
+    case "MOD_GRENADE_SPLASH":
+    case "MOD_PROJECTILE":
+    case "MOD_PROJECTILE_SPLASH":
         e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_EXPLOSIVE");
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:x291>");
         #/
         break;
     }
     if (w_damage == getweapon("bowie_knife")) {
         e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_BOWIE");
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:x2a9>");
         #/
     }
     if (w_damage == getweapon("bouncingbetty")) {
         e_attacker zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_BOUNCING_BETTY");
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:x2c3>");
         #/
     }
 }
@@ -303,7 +303,7 @@ function spent_points_tracking() {
         player zm_stats::increment_challenge_stat("ZM_DAILY_SPEND_25K", n_points);
         player zm_stats::increment_challenge_stat("ZM_DAILY_SPEND_50K", n_points);
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:x2e0>");
         #/
     }
 }
@@ -320,7 +320,7 @@ function earned_points_tracking() {
             player.a_daily_challenges[2] = player.a_daily_challenges[2] + n_points;
             player zm_stats::increment_challenge_stat("ZM_DAILY_EARN_5K_WITH_2X", n_points);
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:x2f5>");
             #/
         }
     }
@@ -336,7 +336,7 @@ function challenge_ingame_time_tracking() {
     self endon(#"stop_challenge_ingame_time_tracking");
     level flag::wait_till("start_zombie_round_logic");
     for (;;) {
-        wait(1);
+        wait 1;
         zm_stats::increment_client_stat("ZM_DAILY_CHALLENGE_INGAME_TIME");
     }
 }
@@ -371,11 +371,11 @@ function increment_windows_repaired(s_barrier) {
 function private rebuild_timer() {
     self endon(#"disconnect");
     self.b_dc_rebuild_timer_active = 1;
-    wait(45);
+    wait 45;
     if (self.n_dc_barriers_rebuilt >= 5) {
         self zm_stats::increment_challenge_stat("ZM_DAILY_REBUILD_WINDOWS");
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:x325>");
         #/
     }
     self.n_dc_barriers_rebuilt = 0;
@@ -391,12 +391,12 @@ function increment_magic_box() {
     if (isdefined(level.zombie_vars["zombie_powerup_fire_sale_on"]) && level.zombie_vars["zombie_powerup_fire_sale_on"]) {
         self zm_stats::increment_challenge_stat("ZM_DAILY_PURCHASE_FIRE_SALE_MAGIC_BOX");
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:x33e>");
         #/
     }
     self zm_stats::increment_challenge_stat("ZM_DAILY_PURCHASE_MAGIC_BOX");
     /#
-        debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+        debug_print("<dev string:x367>");
     #/
 }
 
@@ -409,7 +409,7 @@ function increment_nuked_zombie() {
         if (player.sessionstate != "spectator") {
             player zm_stats::increment_challenge_stat("ZM_DAILY_KILLS_NUKED");
             /#
-                debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+                debug_print("<dev string:x37f>");
             #/
         }
     }
@@ -425,7 +425,7 @@ function perk_purchase_tracking() {
         str_perk = self waittill(#"perk_purchased");
         self zm_stats::increment_challenge_stat("ZM_DAILY_PURCHASE_PERKS");
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:x395>");
         #/
     }
 }
@@ -440,7 +440,7 @@ function perk_drink_tracking() {
         self waittill(#"perk_bought");
         self zm_stats::increment_challenge_stat("ZM_DAILY_DRINK_PERKS");
         /#
-            debug_print("ZM_DAILY_KILLS_HEADSHOTS_IN_ROW");
+            debug_print("<dev string:x3ad>");
         #/
     }
 }

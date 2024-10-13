@@ -13,9 +13,9 @@
 #using scripts/shared/array_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_3a9c9f6;
+#namespace zm_temple_powerups;
 
-// Namespace namespace_3a9c9f6
+// Namespace zm_temple_powerups
 // Params 0, eflags: 0x1 linked
 // Checksum 0xfc4eec90, Offset: 0x388
 // Size: 0x9e
@@ -27,7 +27,7 @@ function init() {
     level._effect["zombie_kill"] = "impacts/fx_flesh_hit_body_fatal_lg_exit_mp";
 }
 
-// Namespace namespace_3a9c9f6
+// Namespace zm_temple_powerups
 // Params 1, eflags: 0x1 linked
 // Checksum 0x553d299f, Offset: 0x430
 // Size: 0x10
@@ -35,7 +35,7 @@ function function_2eebf279(powerup) {
     return true;
 }
 
-// Namespace namespace_3a9c9f6
+// Namespace zm_temple_powerups
 // Params 1, eflags: 0x1 linked
 // Checksum 0x78ff231, Offset: 0x448
 // Size: 0x62
@@ -44,19 +44,19 @@ function function_3542f800(powerup) {
         return;
     }
     switch (powerup.powerup_name) {
-    case 2:
-        level thread function_b4df5557(powerup);
+    case "monkey_swarm":
+        level thread monkey_swarm(powerup);
         break;
     default:
         break;
     }
 }
 
-// Namespace namespace_3a9c9f6
+// Namespace zm_temple_powerups
 // Params 1, eflags: 0x1 linked
 // Checksum 0x331e8a12, Offset: 0x4b8
 // Size: 0xfc
-function function_b4df5557(powerup) {
+function monkey_swarm(powerup) {
     var_43f396a6 = 2;
     level flag::clear("spawn_zombies");
     players = getplayers();
@@ -70,7 +70,7 @@ function function_b4df5557(powerup) {
     level flag::set("spawn_zombies");
 }
 
-// Namespace namespace_3a9c9f6
+// Namespace zm_temple_powerups
 // Params 1, eflags: 0x1 linked
 // Checksum 0xbd35dde9, Offset: 0x5c0
 // Size: 0x5ce
@@ -87,10 +87,10 @@ function function_ae946d1b(var_5fbde02b) {
     } else if (isdefined(self.var_680ede5d) && self.var_680ede5d) {
         var_1b4b9af = "waterfall_lower_zone";
     }
-    barriers = self namespace_cafc107d::function_f593d568(var_1b4b9af);
-    println("targetname" + var_5fbde02b);
+    barriers = self zm_temple_ai_monkey::function_f593d568(var_1b4b9af);
+    println("<dev string:x28>" + var_5fbde02b);
     for (i = 0; i < var_5fbde02b; i++) {
-        wait(randomfloatrange(1, 2));
+        wait randomfloatrange(1, 2);
         zombie = self function_b2850fe(300);
         if (!isdefined(zombie)) {
             zombie = self function_b2850fe();
@@ -117,14 +117,14 @@ function function_ae946d1b(var_5fbde02b) {
                     bestdist = dist2;
                 }
             }
-            spawnloc = namespace_cafc107d::function_2d0fbe55(best);
+            spawnloc = zm_temple_ai_monkey::function_2d0fbe55(best);
             spawnangles = best.angles;
         }
         level.var_59e046cd--;
-        println("targetname");
+        println("<dev string:x38>");
         monkey = zombie_utility::spawn_zombie(spawns[i]);
         if (spawner::spawn_failed(monkey)) {
-            println("targetname");
+            println("<dev string:x48>");
             continue;
         }
         spawns[i].count = 100;
@@ -147,15 +147,15 @@ function function_ae946d1b(var_5fbde02b) {
     }
 }
 
-// Namespace namespace_3a9c9f6
+// Namespace zm_temple_powerups
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbccb8931, Offset: 0xb98
 // Size: 0xbc
 function function_42449827() {
-    wait(60);
+    wait 60;
     self.timeout = 1;
     while (self.var_4bafe058) {
-        wait(0.1);
+        wait 0.1;
     }
     if (isdefined(self.zombie)) {
         self.zombie.var_3dd9b5b4 = 0;
@@ -166,13 +166,13 @@ function function_42449827() {
     self delete();
 }
 
-// Namespace namespace_3a9c9f6
+// Namespace zm_temple_powerups
 // Params 1, eflags: 0x1 linked
 // Checksum 0xacd17c8a, Offset: 0xc60
 // Size: 0x1a0
 function function_c96b4d62(player) {
     self endon(#"timeout");
-    wait(0.5);
+    wait 0.5;
     while (true) {
         if (isdefined(self.timeout) && self.timeout) {
             self waittill(#"forever");
@@ -195,11 +195,11 @@ function function_c96b4d62(player) {
                 self setgoalpos(self.origin);
             }
         }
-        wait(0.5);
+        wait 0.5;
     }
 }
 
-// Namespace namespace_3a9c9f6
+// Namespace zm_temple_powerups
 // Params 1, eflags: 0x1 linked
 // Checksum 0x6869a0f0, Offset: 0xe08
 // Size: 0x292
@@ -213,7 +213,7 @@ function function_6e41eda(zombie) {
     checkdist2 = self.goalradius * self.goalradius;
     while (true) {
         if (!isdefined(zombie) || !isalive(zombie)) {
-            self notify(#"hash_94c099e9");
+            self notify(#"zombie_killed");
             return;
         }
         dist2 = distancesquared(zombie.origin, self.origin);
@@ -237,10 +237,10 @@ function function_6e41eda(zombie) {
         }
     }
     self.zombie = undefined;
-    self notify(#"hash_94c099e9");
+    self notify(#"zombie_killed");
 }
 
-// Namespace namespace_3a9c9f6
+// Namespace zm_temple_powerups
 // Params 1, eflags: 0x1 linked
 // Checksum 0xe487a470, Offset: 0x10a8
 // Size: 0x1ea
@@ -276,7 +276,7 @@ function function_b2850fe(mindist) {
     return var_65865f59;
 }
 
-// Namespace namespace_3a9c9f6
+// Namespace zm_temple_powerups
 // Params 0, eflags: 0x1 linked
 // Checksum 0x7dbf2ba2, Offset: 0x12a0
 // Size: 0x58

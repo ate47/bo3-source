@@ -346,7 +346,7 @@ function function_d44c2ef0(params) {
 // Size: 0x16
 function function_d91eb48d() {
     self endon(#"death");
-    wait(1);
+    wait 1;
     self.var_310e9a7d = 0;
 }
 
@@ -540,7 +540,7 @@ function function_507d47d2(params) {
 function function_aad12c7() {
     self endon(#"death");
     while (self iswallrunning() || !self isonground()) {
-        wait(0.05);
+        wait 0.05;
     }
     self.var_6f2cedd3 = 0;
 }
@@ -604,14 +604,14 @@ function function_caaf5ba9() {
     self.var_56ffc45b = 0;
     while (true) {
         while (!self iswallrunning()) {
-            wait(0.05);
+            wait 0.05;
         }
         self.var_56ffc45b = 1;
         while (self iswallrunning()) {
-            wait(0.05);
+            wait 0.05;
         }
         while (!self isonground()) {
-            wait(0.05);
+            wait 0.05;
         }
         self.var_56ffc45b = 0;
     }
@@ -658,7 +658,7 @@ function function_1dc324f4() {
                 self notify(#"hash_f71b1ef0");
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -699,16 +699,16 @@ function function_fd243f30(params) {
         }
         if (isdefined(player.hijacked_vehicle_entity) && isdefined(player.hijacked_vehicle_entity.archetype)) {
             switch (player.hijacked_vehicle_entity.archetype) {
-            case 37:
+            case "raps":
                 player.var_4c1b77b6 = 1;
                 break;
-            case 36:
+            case "wasp":
                 player.var_a43dc1f = 1;
                 break;
-            case 53:
+            case "amws":
                 player.var_204359de = 1;
                 break;
-            case 52:
+            case "quadtank":
                 player.var_218b552 = 1;
                 break;
             default:

@@ -255,7 +255,7 @@ function private function_7c96ae94(slot, weapon) {
 // Checksum 0x109f5f2b, Offset: 0x1568
 // Size: 0xec
 function private function_cc8d5ab0(player, setname, delay, direction, duration) {
-    wait(delay);
+    wait delay;
     if (direction > 0) {
         visionset_mgr::activate("visionset", setname, player, duration, 0, 0);
         visionset_mgr::deactivate("visionset", setname, player);
@@ -286,7 +286,7 @@ function private function_637db461(player, weapon) {
 // Checksum 0x47545dc0, Offset: 0x16f0
 // Size: 0x61c
 function private function_ecfa108e(player, weapon) {
-    wait(getdvarfloat("scr_security_breach_activate_delay", 0.5));
+    wait getdvarfloat("scr_security_breach_activate_delay", 0.5);
     if (!isdefined(self)) {
         return;
     }
@@ -303,7 +303,7 @@ function private function_ecfa108e(player, weapon) {
         self setvehicletype(self.playerdrivenversion);
     }
     vehentnum = self getentitynumber();
-    self notify(#"hash_f8c5dd60", weapon, player);
+    self notify(#"cybercom_action", weapon, player);
     self notify(#"cloneandremoveentity", vehentnum);
     level notify(#"cloneandremoveentity", vehentnum);
     player gadgetpowerset(0, 0);
@@ -374,13 +374,13 @@ function function_dc86efaa(var_b6c35df6, str_state) {
     assert(isplayer(self));
     player = self;
     switch (str_state) {
-    case 34:
+    case "begin":
         player setcontrolleruimodelvalue("vehicle.outOfRange", 0);
         player enableinvulnerability();
         player cybercom::function_6c141a2d(1);
-        wait(0.1);
+        wait 0.1;
         return;
-    case 35:
+    case "cloak":
         var_b6c35df6.var_d45c1470 = player getstance();
         var_b6c35df6.var_e29151a8 = player.ignoreme;
         var_b6c35df6.var_d40d5a7d = player.var_1e983b11;
@@ -391,7 +391,7 @@ function function_dc86efaa(var_b6c35df6, str_state) {
         player clientfield::set("camo_shader", 2);
         player thread function_13f4170a(2);
         player thread function_cc8d5ab0(player, "hijack_vehicle", 0.1, 1, 0.1);
-        player waittill(#"hash_e08a6f71");
+        player waittill(#"transition_in_do_switch");
         player setlowready(1);
         visionset_mgr::activate("visionset", "hijack_vehicle_blur", player);
         player hide();
@@ -401,17 +401,17 @@ function function_dc86efaa(var_b6c35df6, str_state) {
         player clientfield::set_to_player("sndInDrivableVehicle", 1);
         player player::take_weapons();
         return;
-    case 38:
+    case "cloak_wait":
         player waittill(#"hash_58a3879b");
         player clientfield::set_to_player("vehicle_hijacked", 1);
         return "return_wait";
-    case 39:
-        player waittill(#"hash_c68b15c8");
+    case "return_wait":
+        player waittill(#"return_to_body");
         player player::give_back_weapons(1);
         player seteverhadweaponall(1);
         player thread function_cc8d5ab0(player, "hijack_vehicle", 0, -1, 0.1);
         return;
-    case 40:
+    case "finish":
         player show();
         player solid();
         player setplayercollision(1);
@@ -427,7 +427,7 @@ function function_dc86efaa(var_b6c35df6, str_state) {
         player.ignoreme = 0;
         player setclientuivisibilityflag("weapon_hud_visible", 1);
         player cybercom::function_e60e89fe();
-        wait(1);
+        wait 1;
         player clientfield::set("camo_shader", 0);
         player notify(#"hash_54dae2cc");
         return;
@@ -444,9 +444,9 @@ function function_13f4170a(direction) {
     self endon(#"hash_13f4170a");
     self clientfield::set_to_player("hijack_vehicle_transition", direction);
     util::wait_network_frame();
-    self notify(#"hash_e08a6f71");
-    wait(0.2);
-    wait(0.2);
+    self notify(#"transition_in_do_switch");
+    wait 0.2;
+    wait 0.2;
     self notify(#"hash_58a3879b");
     self clientfield::set_to_player("hijack_vehicle_transition", 1);
 }
@@ -484,11 +484,11 @@ function function_1233641() {
 // Size: 0x410
 function private function_4b91c7e5(player, anchor) {
     self endon(#"death");
-    player endon(#"hash_c68b15c8");
+    player endon(#"return_to_body");
     player endon(#"hash_ac145594");
     player endon(#"disconnect");
     player waittill(#"hash_58a3879b");
-    wait(0.1);
+    wait 0.1;
     var_7c5f9b37 = 0.95;
     var_af9c49a8 = undefined;
     while (true) {
@@ -539,7 +539,7 @@ function private function_4b91c7e5(player, anchor) {
                 self kill();
             }
         }
-        wait(0.05);
+        wait 0.05;
     }
 }
 
@@ -568,7 +568,7 @@ function private function_6adcb22e(vehicle) {
         self clientfield::set_to_player("hijack_spectate", 1);
     }
     self cameraactivate(1);
-    self waittill(#"hash_e08a6f71");
+    self waittill(#"transition_in_do_switch");
     self clientfield::set_to_player("hijack_static_ramp_up", 0);
     self cameraactivate(0);
     self clientfield::set_to_player("hijack_spectate", 0);
@@ -591,7 +591,7 @@ function private function_5d471974(vehicle) {
     }
     self startcameratween(1);
     origin = vehicle.origin;
-    wait(0.05);
+    wait 0.05;
     self camerasetposition(cam);
     if (isdefined(vehicle)) {
         self camerasetlookat(vehicle);
@@ -607,16 +607,16 @@ function private function_5d471974(vehicle) {
 // Checksum 0x6d9b32e1, Offset: 0x2d18
 // Size: 0xa8
 function private function_1a1b4f00(player) {
-    player endon(#"hash_c68b15c8");
+    player endon(#"return_to_body");
     self waittill(#"death");
     player thread function_6adcb22e(self);
-    wait(3);
+    wait 3;
     player notify(#"hash_ac145594");
     player thread function_13f4170a(3);
-    player waittill(#"hash_e08a6f71");
+    player waittill(#"transition_in_do_switch");
     waittillframeend();
     player unlink();
-    player notify(#"hash_c68b15c8", 1);
+    player notify(#"return_to_body", 1);
 }
 
 // Namespace namespace_7cb6cd95
@@ -625,7 +625,7 @@ function private function_1a1b4f00(player) {
 // Size: 0x10c
 function private function_5c5ecd44(player) {
     self endon(#"death");
-    player endon(#"hash_c68b15c8");
+    player endon(#"return_to_body");
     self util::waittill_any("unlink", "exit_vehicle");
     if (isdefined(level.gameended) && (game["state"] == "postgame" || level.gameended)) {
         return;
@@ -651,11 +651,11 @@ function private function_7da5b5d4(player) {
     original_angles = player.angles;
     player.cybercom.var_3fd69aad = 1;
     self.var_aafc8cd9 = 1;
-    reason = player waittill(#"hash_c68b15c8");
-    wait(0.05);
+    reason = player waittill(#"return_to_body");
+    wait 0.05;
     player setorigin(var_d2f6fb2e);
     player setplayerangles(original_angles);
-    wait(0.05);
+    wait 0.05;
     if (isdefined(self)) {
         self setteam("axis");
         self.takedamage = 1;
@@ -677,7 +677,7 @@ function clearusingremote() {
     self enableoffhandweapons();
     if (isdefined(self.lastweapon)) {
         self switchtoweapon(self.lastweapon);
-        wait(1);
+        wait 1;
     }
     self takeweapon(self.remoteweapon);
 }

@@ -11,9 +11,9 @@
 #using scripts/shared/aat_shared;
 #using scripts/codescripts/struct;
 
-#namespace namespace_a7e7ef63;
+#namespace zm_aat_fire_works;
 
-// Namespace namespace_a7e7ef63
+// Namespace zm_aat_fire_works
 // Params 0, eflags: 0x2
 // Checksum 0xc17731d1, Offset: 0x278
 // Size: 0x34
@@ -21,7 +21,7 @@ function autoexec function_2dc19561() {
     system::register("zm_aat_fire_works", &__init__, undefined, "aat");
 }
 
-// Namespace namespace_a7e7ef63
+// Namespace zm_aat_fire_works
 // Params 0, eflags: 0x1 linked
 // Checksum 0xbb18de24, Offset: 0x2b8
 // Size: 0xe4
@@ -35,7 +35,7 @@ function __init__() {
     zm_spawner::register_zombie_death_event_callback(&function_9b6b7072);
 }
 
-// Namespace namespace_a7e7ef63
+// Namespace zm_aat_fire_works
 // Params 4, eflags: 0x1 linked
 // Checksum 0xb159b0ab, Offset: 0x3a8
 // Size: 0x44
@@ -43,7 +43,7 @@ function result(death, attacker, mod, weapon) {
     self function_188d9054(attacker, weapon);
 }
 
-// Namespace namespace_a7e7ef63
+// Namespace zm_aat_fire_works
 // Params 0, eflags: 0x1 linked
 // Checksum 0x2e06d898, Offset: 0x3f8
 // Size: 0x86
@@ -63,7 +63,7 @@ function function_5ae7061b() {
     return true;
 }
 
-// Namespace namespace_a7e7ef63
+// Namespace zm_aat_fire_works
 // Params 2, eflags: 0x1 linked
 // Checksum 0xc8ecfecc, Offset: 0x488
 // Size: 0x3e4
@@ -104,10 +104,10 @@ function function_188d9054(e_player, w_weapon) {
     util::wait_network_frame();
     util::wait_network_frame();
     mdl_weapon delete();
-    wait(0.25);
+    wait 0.25;
 }
 
-// Namespace namespace_a7e7ef63
+// Namespace zm_aat_fire_works
 // Params 0, eflags: 0x1 linked
 // Checksum 0x67fa111b, Offset: 0x878
 // Size: 0x128
@@ -132,7 +132,7 @@ function function_5afeec5a() {
     return undefined;
 }
 
-// Namespace namespace_a7e7ef63
+// Namespace zm_aat_fire_works
 // Params 13, eflags: 0x1 linked
 // Checksum 0xb56be1fc, Offset: 0x9a8
 // Size: 0x11c
@@ -147,7 +147,7 @@ function function_446fe502(str_mod, var_5afff096, var_7c5a4ee4, e_attacker, n_am
     return false;
 }
 
-// Namespace namespace_a7e7ef63
+// Namespace zm_aat_fire_works
 // Params 1, eflags: 0x1 linked
 // Checksum 0x5c4dbb96, Offset: 0xad0
 // Size: 0x68
@@ -161,7 +161,7 @@ function function_9b6b7072(attacker) {
     }
 }
 
-// Namespace namespace_a7e7ef63
+// Namespace zm_aat_fire_works
 // Params 3, eflags: 0x1 linked
 // Checksum 0x9d35d25f, Offset: 0xb40
 // Size: 0x104
